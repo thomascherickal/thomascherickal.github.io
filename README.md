@@ -1,6 +1,6 @@
 # Project Portfolio
 
-### This repo contains eight of my projects ranging from machine learning to deep learning to quantum computing and even blockchain. And yes - in some places the coding was assisted by AI.
+This repo contains eight of my projects ranging from machine learning to deep learning to quantum computing and even blockchain. And yes - in some places the coding was assisted by AI.
 
  1. Raw Sonar Data Mines vs. Rocks Classification By Various Models of Scikit-Learn, A Classification Comparison.
  2. Same Data Model, but this time, classified using Deep Learning with TensorFlow and Keras.
