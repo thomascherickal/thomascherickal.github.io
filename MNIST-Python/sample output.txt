@@ -1,0 +1,91 @@
+C:\Users\ADMIN\OneDrive\My Projects\Coding-Portfolio\MNIST - Python>python MLP_MNIST.py
+Starting now:
+
+
+Epoch 0:
+Training Accuracy = 0.06386666666666667
+Test Accuracy = 0.0622
+
+
+Epoch 1:
+Training Accuracy = 0.8776333333333334
+Test Accuracy = 0.8787
+
+
+Epoch 2:
+Training Accuracy = 0.88515
+Test Accuracy = 0.8797
+
+
+Epoch 3:
+Training Accuracy = 0.8757666666666667
+Test Accuracy = 0.8718
+
+
+Epoch 4:
+Training Accuracy = 0.8839666666666667
+Test Accuracy = 0.8796
+
+
+Epoch 5:
+Training Accuracy = 0.8853666666666666
+Test Accuracy = 0.8789
+
+
+Epoch 6:
+Training Accuracy = 0.8795
+Test Accuracy = 0.8738
+
+
+Epoch 7:
+Training Accuracy = 0.8805
+Test Accuracy = 0.8699
+
+
+Epoch 8:
+Training Accuracy = 0.8855666666666666
+Test Accuracy = 0.8776
+
+
+Epoch 9:
+Training Accuracy = 0.8873833333333333
+Test Accuracy = 0.88
+
+
+Final Test Accuracy = 0.8802
+Learning Rate = 0.01
+Confusion Matrix :
+
+[[ 966    0    2    1    0    6    2    2    1    0]
+ [   0 1100    2    4    1    2    3    1   22    0]
+ [  10   45  805   92   11   11   13    3   34    8]
+ [   8    3   20  889    5   49    3    9   10   14]
+ [   4    2    2    1  890    0   10    0   16   57]
+ [  13    4    0   32   18  761    9    3   30   22]
+ [  19    5    6    0    8   29  889    0    2    0]
+ [   1   10   21   29   18    2    0  797   15  135]
+ [   9   30    7   72   23   39    7    5  761   21]
+ [   8    6    1   10   19    9    1    6    5  944]]
+
+Classification Report
+
+             precision    recall  f1-score   support
+
+        0.0       0.93      0.99      0.96       980
+        1.0       0.91      0.97      0.94      1135
+        2.0       0.93      0.78      0.85      1032
+        3.0       0.79      0.88      0.83      1010
+        4.0       0.90      0.91      0.90       982
+        5.0       0.84      0.85      0.85       892
+        6.0       0.95      0.93      0.94       958
+        7.0       0.96      0.78      0.86      1028
+        8.0       0.85      0.78      0.81       974
+        9.0       0.79      0.94      0.85      1009
+
+avg / total       0.89      0.88      0.88     10000
+
+
+
+Time taken: 136.20671772956848 seconds
+
+C:\Users\ADMIN\OneDrive\My Projects\Coding-Portfolio\MNIST - Python>

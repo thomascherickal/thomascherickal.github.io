@@ -1,0 +1,425 @@
+>>> # Code from the tutorial TensorFlow Tutorial | Deep Learning Using TensorFlow | Edureka
+... # Sonar Mines vs Rocks
+... # https://www.youtube.com/watch?v=yX8KuPZCAMo
+... # With small corrections and additions of missing parts by Claude COULOMBE - PhD candidate TÉLUQ / UQAM - Montréal
+... # Many errors - more modifications by @Developer Thomas M. Cherickal
+...
+>>> import matplotlib.pyplot as plt
+>>> import tensorflow as tf
+>>> import numpy as np
+>>> import pandas as pd
+>>> from sklearn.preprocessing import LabelEncoder
+>>> from sklearn.utils import shuffle
+>>>
+>>> from sklearn.model_selection import train_test_split
+>>> # Reading the dataset
+... # Get the dataset "sonar.csv" at
+... # https://archive.ics.uci.edu/ml/machine-learning-databases/undocumented/connectionist-bench/sonar/sonar.all-data
+... # Just save the file as sonar.csv
+...
+>>> def read_dataset():
+...     dir_path = ""
+...     df = pd.read_csv(dir_path+"sonar.csv")
+...     print("Nbr columns: ",len(df.columns))
+...     X = df[df.columns[0:60]].values
+...     y = df[df.columns[60]]
+...     # Encode the dependent variable
+...     encoder = LabelEncoder()
+...     encoder.fit(y)
+...     y = encoder.transform(y)
+...     Y = one_hot_encode(y)
+...     print("X.shape",X.shape)
+...     return (X,Y)
+... # Define the encoder function M => 1, R => 0
+...
+>>> def one_hot_encode(labels):
+...     n_labels = len(labels)
+...     n_unique_labels = len(np.unique(labels))
+...     one_hot_encode = np.zeros((n_labels,n_unique_labels))
+...     one_hot_encode[np.arange(n_labels),labels] = 1
+...     return one_hot_encode
+... # Read the dataset
+...
+>>> X, Y = read_dataset()
+Nbr columns:  61
+X.shape (207, 60)
+>>> # Shuffle the dataset to mix up the rows
+...
+>>> X, Y = shuffle(X, Y)
+>>> # Convert the dataset into train and test datasets
+...
+>>> train_x, test_x, train_y, test_y = train_test_split(X, Y, test_size=0.20)
+>>> # Inspect the shape of the train and test datasets
+...
+>>> print("train_x.shape",train_x.shape)
+train_x.shape (165, 60)
+>>> print("train_y.shape",train_y.shape)
+train_y.shape (165, 2)
+>>> print("test_x.shape",test_x.shape)
+test_x.shape (42, 60)
+>>>
+>>> print("test_y.shape",test_y.shape)
+test_y.shape (42, 2)
+>>> # Define the hyperparameters
+...
+>>> learning_rate = 0.1
+>>> training_epochs = 80
+>>>
+>>> cost_history = np.empty(shape=[1], dtype=float)
+>>> # Number of features <=> number of columns
+...
+>>> n_dim = X.shape[1]
+>>> print("n_dim",n_dim)
+n_dim 60
+>>> n_class = 2
+>>>
+>>> model_path = "C:\\Users\\ADMIN\\OneDrive\\My Projects\\Coding-Portfolio\\Deep Learning Sonar with TensorFlow\\model"
+>>> # Define the number of hidden layers and the
+... # number of neurons for each layer
+...
+>>> n_hidden_1 = 120
+>>> n_hidden_2 = 120
+>>> n_hidden_3 = 120
+>>>
+>>> n_hidden_4 = 120
+>>> # Inputs and outputs
+...
+>>> x = tf.placeholder(tf.float32,[None, n_dim])
+>>>
+>>> y_ = tf.placeholder(tf.float32,[None, n_class])
+>>> # Model parameters
+...
+>>> W = tf.Variable(tf.zeros([n_dim,n_class]))
+>>>
+>>> b = tf.Variable(tf.zeros([n_class]))
+>>> # Model
+...
+>>> def multilayer_perceptron(x, weights, biases):
+...     # Hidden layer with RELU activations
+...     layer_1 = tf.add(tf.matmul(x, weights['h1']), biases['b1'])
+...     layer_1 = tf.nn.relu(layer_1)
+...     # Hidden layer with sigmoid activations
+...     layer_2 = tf.add(tf.matmul(layer_1, weights['h2']), biases['b2'])
+...     layer_2 = tf.nn.sigmoid(layer_2)
+...     # Hidden layer with sigmoid activations
+...     layer_3 = tf.add(tf.matmul(layer_2, weights['h3']), biases['b3'])
+...     layer_3 = tf.nn.sigmoid(layer_3)
+...     # Hidden layer with sigmoid activations
+...     layer_4 = tf.add(tf.matmul(layer_3, weights['h4']), biases['b4'])
+...     layer_4 = tf.nn.sigmoid(layer_4)
+...     # Output layer with linear activations
+...     out_layer = tf.matmul(layer_4, weights['out']) + biases['out']
+...     return out_layer
+... # define the weights and the biases for each layer
+...
+>>> weights = {
+...     'h1': tf.Variable(tf.truncated_normal([n_dim, n_hidden_1])),
+...     'h2': tf.Variable(tf.truncated_normal([n_hidden_1, n_hidden_2])),
+...     'h3': tf.Variable(tf.truncated_normal([n_hidden_2, n_hidden_3])),
+...     'h4': tf.Variable(tf.truncated_normal([n_hidden_3, n_hidden_4])),
+...     'out': tf.Variable(tf.truncated_normal([n_hidden_4, n_class])),
+...     }
+>>>
+>>> biases = {
+...     'b1': tf.Variable(tf.truncated_normal([n_hidden_1])),
+...     'b2': tf.Variable(tf.truncated_normal([n_hidden_2])),
+...     'b3': tf.Variable(tf.truncated_normal([n_hidden_3])),
+...     'b4': tf.Variable(tf.truncated_normal([n_hidden_4])),
+...     'out': tf.Variable(tf.truncated_normal([n_class])),
+...     }
+>>> # Initialization
+...
+>>> init = tf.global_variables_initializer()
+>>>
+>>> saver = tf.train.Saver()
+>>> # Call your model defined
+...
+>>> y = multilayer_perceptron(x, weights, biases)
+>>> # Define the cost function and optimizer
+...
+>>> cost_function = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=y, labels=y_))
+WARNING:tensorflow:From <stdin>:1: softmax_cross_entropy_with_logits (from tensorflow.python.ops.nn_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+
+Future major versions of TensorFlow will allow gradients to flow
+into the labels input on backprop by default.
+
+See `tf.nn.softmax_cross_entropy_with_logits_v2`.
+
+>>>
+>>> training_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost_function)
+>>> # Launch the graph
+...
+>>> sess = tf.Session()
+2019-01-04 08:46:27.730467: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2
+2019-01-04 08:46:27.746207: I tensorflow/core/common_runtime/process_util.cc:69] Creating new thread pool with default inter op setting: 4. Tune using inter_op_parallelism_threads for best performance.
+>>>
+>>> sess.run(init)
+>>> # Calculate the cost and the accuracy for each epoch
+...
+>>> for epoch in range(training_epochs):
+...     sess.run(training_step, feed_dict={x:train_x, y_:train_y})
+...     cost = sess.run(cost_function,feed_dict={x:train_x, y_:train_y})
+...     pred_y = sess.run(y,feed_dict={x:train_x} )
+...     correct_prediction = tf.equal(tf.argmax(y,1),tf.argmax(y_,1))
+...     train_accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+...     print("Train Accuracy: ", (sess.run(train_accuracy, feed_dict={x:train_x, y_:train_y})))
+...     pred_y = sess.run(y,feed_dict={x:test_x} )
+...     correct_prediction = tf.equal(tf.argmax(y,1),tf.argmax(y_,1))
+...     test_accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+...     print("Test Accuracy: ", (sess.run(test_accuracy, feed_dict={x:test_x, y_:test_y})))
+...     mse = tf.reduce_mean(tf.square(pred_y - test_y))
+...     mse_ = sess.run(mse)
+...     print('epoch: ', epoch,' - ', 'cost: ', cost, " - MSE: ", mse_)
+...
+Train Accuracy:  0.4969697
+Test Accuracy:  0.33333334
+epoch:  0  -  cost:  5.730983  - MSE:  43.6169334185383
+Train Accuracy:  0.5272727
+Test Accuracy:  0.52380955
+epoch:  1  -  cost:  0.9133768  - MSE:  15.664249845293186
+Train Accuracy:  0.6
+Test Accuracy:  0.5952381
+epoch:  2  -  cost:  0.7605163  - MSE:  14.914261456933378
+Train Accuracy:  0.6606061
+Test Accuracy:  0.61904764
+epoch:  3  -  cost:  0.6640195  - MSE:  14.223051848583246
+Train Accuracy:  0.6484848
+Test Accuracy:  0.6666667
+epoch:  4  -  cost:  0.691753  - MSE:  14.102616758769138
+Train Accuracy:  0.5272727
+Test Accuracy:  0.4047619
+epoch:  5  -  cost:  1.0764549  - MSE:  14.886300451082068
+Train Accuracy:  0.5151515
+Test Accuracy:  0.6666667
+epoch:  6  -  cost:  1.7579484  - MSE:  17.92513479560092
+Train Accuracy:  0.4969697
+Test Accuracy:  0.35714287
+epoch:  7  -  cost:  1.4708351  - MSE:  15.504526696031483
+Train Accuracy:  0.5212121
+Test Accuracy:  0.6666667
+epoch:  8  -  cost:  1.4861919  - MSE:  16.447073372472833
+Train Accuracy:  0.5151515
+Test Accuracy:  0.35714287
+epoch:  9  -  cost:  1.2440373  - MSE:  14.120832760143912
+Train Accuracy:  0.53333336
+Test Accuracy:  0.6666667
+epoch:  10  -  cost:  1.2490318  - MSE:  15.299176566056943
+Train Accuracy:  0.5272727
+Test Accuracy:  0.35714287
+epoch:  11  -  cost:  1.0874879  - MSE:  13.423545032447201
+Train Accuracy:  0.54545456
+Test Accuracy:  0.6666667
+epoch:  12  -  cost:  1.1032994  - MSE:  14.616258138313098
+Train Accuracy:  0.55151516
+Test Accuracy:  0.35714287
+epoch:  13  -  cost:  0.9499669  - MSE:  12.875982097080335
+Train Accuracy:  0.5939394
+Test Accuracy:  0.71428573
+epoch:  14  -  cost:  0.97159517  - MSE:  14.057187077868269
+Train Accuracy:  0.58181816
+Test Accuracy:  0.3809524
+epoch:  15  -  cost:  0.8350743  - MSE:  12.514916144946543
+Train Accuracy:  0.6181818
+Test Accuracy:  0.71428573
+epoch:  16  -  cost:  0.86223036  - MSE:  13.639797761485863
+Train Accuracy:  0.6060606
+Test Accuracy:  0.42857143
+epoch:  17  -  cost:  0.74164087  - MSE:  12.27214732028859
+Train Accuracy:  0.6424242
+Test Accuracy:  0.7380952
+epoch:  18  -  cost:  0.7705552  - MSE:  13.31031919947449
+Train Accuracy:  0.630303
+Test Accuracy:  0.45238096
+epoch:  19  -  cost:  0.66330975  - MSE:  12.07075294682059
+Train Accuracy:  0.6848485
+Test Accuracy:  0.71428573
+epoch:  20  -  cost:  0.68892306  - MSE:  13.020721439894206
+Train Accuracy:  0.6848485
+Test Accuracy:  0.45238096
+epoch:  21  -  cost:  0.5957709  - MSE:  11.905160006940278
+Train Accuracy:  0.7090909
+Test Accuracy:  0.71428573
+epoch:  22  -  cost:  0.61633396  - MSE:  12.763319250104924
+Train Accuracy:  0.72121215
+Test Accuracy:  0.5
+epoch:  23  -  cost:  0.5371194  - MSE:  11.768771481159009
+Train Accuracy:  0.75151515
+Test Accuracy:  0.7380952
+epoch:  24  -  cost:  0.5517517  - MSE:  12.53706327741255
+Train Accuracy:  0.75757575
+Test Accuracy:  0.52380955
+epoch:  25  -  cost:  0.48563164  - MSE:  11.656531939456299
+Train Accuracy:  0.76969695
+Test Accuracy:  0.7619048
+epoch:  26  -  cost:  0.49455497  - MSE:  12.34487438659547
+Train Accuracy:  0.7818182
+Test Accuracy:  0.52380955
+epoch:  27  -  cost:  0.44000545  - MSE:  11.560029783108284
+Train Accuracy:  0.7878788
+Test Accuracy:  0.78571427
+epoch:  28  -  cost:  0.4434613  - MSE:  12.17594405767466
+Train Accuracy:  0.8121212
+Test Accuracy:  0.52380955
+epoch:  29  -  cost:  0.3988517  - MSE:  11.472172093206272
+Train Accuracy:  0.8060606
+Test Accuracy:  0.8095238
+epoch:  30  -  cost:  0.39788792  - MSE:  12.02566023614972
+Train Accuracy:  0.8424242
+Test Accuracy:  0.54761904
+epoch:  31  -  cost:  0.36146757  - MSE:  11.389949324719277
+Train Accuracy:  0.830303
+Test Accuracy:  0.8095238
+epoch:  32  -  cost:  0.35619134  - MSE:  11.888991267887729
+Train Accuracy:  0.8606061
+Test Accuracy:  0.54761904
+epoch:  33  -  cost:  0.32688507  - MSE:  11.313035073977824
+Train Accuracy:  0.8424242
+Test Accuracy:  0.8095238
+epoch:  34  -  cost:  0.3186887  - MSE:  11.760509323364694
+Train Accuracy:  0.8848485
+Test Accuracy:  0.5952381
+epoch:  35  -  cost:  0.29500806  - MSE:  11.234253776633006
+Train Accuracy:  0.8545455
+Test Accuracy:  0.8333333
+epoch:  36  -  cost:  0.2846982  - MSE:  11.638929765647585
+Train Accuracy:  0.8969697
+Test Accuracy:  0.64285713
+epoch:  37  -  cost:  0.26572537  - MSE:  11.165981765478463
+Train Accuracy:  0.8848485
+Test Accuracy:  0.8095238
+epoch:  38  -  cost:  0.2546111  - MSE:  11.527540945595973
+Train Accuracy:  0.92121214
+Test Accuracy:  0.6666667
+epoch:  39  -  cost:  0.23955108  - MSE:  11.110650592167742
+Train Accuracy:  0.92727274
+Test Accuracy:  0.8095238
+epoch:  40  -  cost:  0.22862674  - MSE:  11.430462585508277
+Train Accuracy:  0.93333334
+Test Accuracy:  0.6904762
+epoch:  41  -  cost:  0.21668035  - MSE:  11.067280015636003
+Train Accuracy:  0.93939394
+Test Accuracy:  0.8095238
+epoch:  42  -  cost:  0.20683758  - MSE:  11.347075471029857
+Train Accuracy:  0.93939394
+Test Accuracy:  0.6904762
+epoch:  43  -  cost:  0.19734696  - MSE:  11.038631351514587
+Train Accuracy:  0.93939394
+Test Accuracy:  0.8095238
+epoch:  44  -  cost:  0.18912195  - MSE:  11.274969804706899
+Train Accuracy:  0.93939394
+Test Accuracy:  0.71428573
+epoch:  45  -  cost:  0.181712  - MSE:  11.023226178134289
+Train Accuracy:  0.95151514
+Test Accuracy:  0.8333333
+epoch:  46  -  cost:  0.17520933  - MSE:  11.219203905332309
+Train Accuracy:  0.94545454
+Test Accuracy:  0.71428573
+epoch:  47  -  cost:  0.16955249  - MSE:  11.021607926576296
+Train Accuracy:  0.96363634
+Test Accuracy:  0.8095238
+epoch:  48  -  cost:  0.16458975  - MSE:  11.179053805002786
+Train Accuracy:  0.95757574
+Test Accuracy:  0.8095238
+epoch:  49  -  cost:  0.16029173  - MSE:  11.028554812838696
+Train Accuracy:  0.969697
+Test Accuracy:  0.8333333
+epoch:  50  -  cost:  0.15653135  - MSE:  11.150745452304491
+Train Accuracy:  0.969697
+Test Accuracy:  0.8333333
+epoch:  51  -  cost:  0.15323028  - MSE:  11.039304631585827
+Train Accuracy:  0.9757576
+Test Accuracy:  0.8333333
+epoch:  52  -  cost:  0.15028708  - MSE:  11.131569858834867
+Train Accuracy:  0.969697
+Test Accuracy:  0.85714287
+epoch:  53  -  cost:  0.14764611  - MSE:  11.051513090997062
+Train Accuracy:  0.9818182
+Test Accuracy:  0.8333333
+epoch:  54  -  cost:  0.14523947  - MSE:  11.119454849935982
+Train Accuracy:  0.969697
+Test Accuracy:  0.88095236
+epoch:  55  -  cost:  0.1430304  - MSE:  11.06465505589188
+Train Accuracy:  0.9818182
+Test Accuracy:  0.8333333
+epoch:  56  -  cost:  0.14098786  - MSE:  11.114250835927388
+Train Accuracy:  0.9757576
+Test Accuracy:  0.85714287
+epoch:  57  -  cost:  0.13906911  - MSE:  11.079071407963202
+Train Accuracy:  0.9818182
+Test Accuracy:  0.8333333
+epoch:  58  -  cost:  0.13724265  - MSE:  11.11313609591783
+Train Accuracy:  0.9818182
+Test Accuracy:  0.85714287
+epoch:  59  -  cost:  0.13548796  - MSE:  11.090823885864769
+Train Accuracy:  0.9818182
+Test Accuracy:  0.8333333
+epoch:  60  -  cost:  0.13379698  - MSE:  11.11414670212358
+Train Accuracy:  0.9818182
+Test Accuracy:  0.88095236
+epoch:  61  -  cost:  0.13216043  - MSE:  11.100807677383571
+Train Accuracy:  0.9878788
+Test Accuracy:  0.8333333
+epoch:  62  -  cost:  0.13056917  - MSE:  11.116336232639712
+Train Accuracy:  0.9878788
+Test Accuracy:  0.88095236
+epoch:  63  -  cost:  0.1290184  - MSE:  11.109421052974952
+Train Accuracy:  0.9878788
+Test Accuracy:  0.88095236
+epoch:  64  -  cost:  0.12750185  - MSE:  11.119951577726649
+Train Accuracy:  0.9939394
+Test Accuracy:  0.88095236
+epoch:  65  -  cost:  0.12601823  - MSE:  11.116727151963433
+Train Accuracy:  0.9939394
+Test Accuracy:  0.88095236
+epoch:  66  -  cost:  0.12456598  - MSE:  11.12422975905612
+Train Accuracy:  0.9939394
+Test Accuracy:  0.88095236
+epoch:  67  -  cost:  0.12314122  - MSE:  11.124250073847847
+Train Accuracy:  0.9939394
+Test Accuracy:  0.88095236
+epoch:  68  -  cost:  0.1217437  - MSE:  11.130458612281698
+Train Accuracy:  0.9939394
+Test Accuracy:  0.88095236
+epoch:  69  -  cost:  0.12037327  - MSE:  11.13281277659365
+Train Accuracy:  0.9939394
+Test Accuracy:  0.88095236
+epoch:  70  -  cost:  0.1190238  - MSE:  11.138598453157922
+Train Accuracy:  1.0
+Test Accuracy:  0.88095236
+epoch:  71  -  cost:  0.11769832  - MSE:  11.142539190159361
+Train Accuracy:  1.0
+Test Accuracy:  0.88095236
+epoch:  72  -  cost:  0.11639521  - MSE:  11.148216357507085
+Train Accuracy:  1.0
+Test Accuracy:  0.88095236
+epoch:  73  -  cost:  0.1151156  - MSE:  11.152988993859585
+Train Accuracy:  1.0
+Test Accuracy:  0.88095236
+epoch:  74  -  cost:  0.1138609  - MSE:  11.158812510459198
+Train Accuracy:  1.0
+Test Accuracy:  0.88095236
+epoch:  75  -  cost:  0.11263556  - MSE:  11.163940470926125
+Train Accuracy:  1.0
+Test Accuracy:  0.88095236
+epoch:  76  -  cost:  0.11143175  - MSE:  11.169685392807652
+Train Accuracy:  1.0
+Test Accuracy:  0.88095236
+epoch:  77  -  cost:  0.11024588  - MSE:  11.175155990173158
+Train Accuracy:  1.0
+Test Accuracy:  0.88095236
+epoch:  78  -  cost:  0.10907578  - MSE:  11.180675544491898
+Train Accuracy:  1.0
+Test Accuracy:  0.88095236
+epoch:  79  -  cost:  0.10792204  - MSE:  11.186244989231849
+>>> save_path = saver.save(sess, model_path)
+>>>
+>>> print("Model saved in file: %s", save_path)
+Model saved in file: %s C:\Users\ADMIN\OneDrive\My Projects\Coding-Portfolio\Deep Learning Sonar with TensorFlow\model
+>>> # Print the final mean square error
+...
+>>> pred_y = sess.run(y, feed_dict={x:test_x})
+>>> mse = tf.reduce_mean(tf.square(pred_y- test_y))
+>>> print("MSE: %.4f" % sess.run(mse))
+MSE: 11.1862
+>>>
