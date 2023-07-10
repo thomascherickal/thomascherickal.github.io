@@ -18,6 +18,3 @@ This repo contains four of my projects ranging from machine learning to deep lea
 * Scikit-Learn
 * TensorFlow
 * Keras
-
-
- 
