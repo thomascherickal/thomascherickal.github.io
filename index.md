@@ -1,3 +1,7 @@
+---
+layout: default
+title: Thomas Cherickal – The Digital Futurist
+---
 # Hi there! I'm Thomas Cherickal 👋
 
 **The Digital Futurist | Technical Content Writer | Independent Research Blogger**
