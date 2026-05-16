@@ -1,119 +1,99 @@
----
-layout: default
-title: Thomas Cherickal – The Digital Futurist
----
-# Hi there! I'm Thomas Cherickal 👋
+Thomas Cherickal — The Digital Futurist
 
-**The Digital Futurist | Technical Content Writer | Independent Research Blogger**
+// the digital futurist · est. 2018 · chennai, india
 
-Welcome to my digital garden! This repository serves as the central hub for my open-source projects, technical research, and deep dives into the bleeding edge of modern technology.
+AI Consultant · Developer · Author · Researcher
+Gen AI Developer Technical Author Rustacean Pythonista AI Consultant Research Blogger SLM Engineer Gopher AI Mentor Online Brand Builder
+I build at the bleeding edge of AI, systems programming, and technical storytelling. From engineering local LLM stacks to writing 10,000-word deep dives on frontier models: I turn complexity into clarity and code into production value. My mission: make Generative AI, Quantum AI, and Local AI accessible to everyone.
+🌐 Main Site · 📅 Book a Consult · 🐙 GitHub
 
-I specialize in breaking down complex computing paradigms into accessible, engaging playbooks, tutorials, and thought leadership articles for developers and tech enthusiasts alike. 
+By the Numbers
+500+8+10+8+∞Articles PublishedYears in TechPlatformsLanguagesFrontier Curiosity
 
-### 🛠️ Tech Stack & Core Expertise
+Roles & Capabilities
+I operate across multiple disciplines — from deep technical development to strategic content and AI mentoring.
+✍️ Technical Content Writer
+Crafting meticulously researched long-form articles, developer tutorials, comparison deep-dives, and strategic technology playbooks across HackerNoon, Medium, Substack, Hashnode, Dev.to, and Differ.
+💻 Open Source Developer
+Building production-ready intelligent systems in Rust, Python, and Go — including local LLM orchestration pipelines, AI agent frameworks, and SLM inference engines optimized for constrained hardware.
+📚 Technical Author
+Writing full-length books on AI career strategy and technology adoption. Current title: RECRUITED — a 12-week AI career playbook for professionals navigating the AI-first job market. Launching August 2026.
+🤖 AI Mentor & Trainer
+Working 1-on-1 with individuals and teams to accelerate adoption of frontier AI tools — prompt engineering, local LLM setup, agentic workflows, AI career development, and online brand building.
+🔬 Independent Research Blogger
+Investigating the latest in LLM benchmarks, agentic frameworks, quantum AI intersections, open-source tooling, and hardware acceleration under the brand The Digital Futurist.
+⚡ SLM Engineer
+Optimizing Small Language Models for local inference on constrained hardware. Experienced with LM Studio, Ollama, llama.cpp, Gemma 4 E4B, and Qwen — tuning quantized models for CPU-only environments with minimal VRAM.
+🧠 LLM Engineer
+Architecting cloud and hybrid LLM pipelines using OpenRouter, LangChain, LlamaIndex, and agentic OS frameworks including OpenFang — from RAG systems and vector DBs to multi-agent orchestration at scale.
+🏢 AI Consultant
+Delivering end-to-end AI transformation: office process automation with Python, website creation, custom AI app development, SEO/AEO/GEO strategy, and enterprise AI upskilling programs.
+🌍 Online Brand Builder
+Building digital visibility for professionals and students across LinkedIn, HackerNoon, Substack, GitHub, and personal sites — from zero to recognized voice in their niche.
+🌐 Website Builder
+Designing and deploying professional websites across every major platform — WordPress (thomascherickal.com), Wix, Framer, SITE123, GitHub Pages, and more. From landing pages to full personal brand sites with SEO, AEO, and GEO baked in.
 
-**Languages & Infrastructure** ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) 
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) 
-![Mojo](https://img.shields.io/badge/Mojo-FF4A00?style=for-the-badge) 
-![Open Source](https://img.shields.io/badge/Open%20Source-4CAF50?style=for-the-badge&logo=open-source-initiative&logoColor=white) 
+Tech Stack & Domains
+⚙️ Languages
+Rust Python Go Mojo JavaScript HTML/CSS SQL Bash
+🤖 AI & ML
+Generative AI Local LLMs AI Agents SLM Engineering Agentic AI Assistants Prompt Engineering LangChain LlamaIndex
+🛠️ Local AI Stack
+LM Studio Ollama OpenRouter OpenFang llama.cpp Open WebUI SearXNG Gemma 4 E4B
+🗄️ Data & Storage
+Vector DBs LanceDB Chroma SQLite PostgreSQL Redis
+📚 Domains
+Quantum Computing Blockchain QAI DeFi Web3 Cybersecurity Algorithms Metaheuristics
+🔧 Dev & Infra
+Linux Git / GitHub Tauri 2.0 GitLab Docker GitHub Pages WordPress Zorin OS
 
-**Artificial Intelligence** ![Generative AI](https://img.shields.io/badge/Generative%20AI-000000?style=for-the-badge&logo=openai&logoColor=white) 
-![LLMs](https://img.shields.io/badge/LLMs-FF9900?style=for-the-badge) 
-![Local LLMs](https://img.shields.io/badge/Local%20LLMs-FF9900?style=for-the-badge) 
-![AI Tools Mastery](https://img.shields.io/badge/AI%20Tools%20Mastery-8A2BE2?style=for-the-badge)
+Developer Showcase
 
-**Professional Services** ![Technical Content](https://img.shields.io/badge/Technical%20Content-00599C?style=for-the-badge) 
-![Research](https://img.shields.io/badge/Research-00599C?style=for-the-badge) 
-![AI Mentoring](https://img.shields.io/badge/AI%20Mentoring-E34F26?style=for-the-badge) 
-![AI Coaching](https://img.shields.io/badge/AI%20Coaching-E34F26?style=for-the-badge)
+Building at the intersection of AI, systems programming, and developer tooling.
 
----
+Upcoming Repos
+🦀 thomascherickal / slm-inference-engine
+High-performance Rust library for local SLM inference on CPU-only hardware. Optimized for 2–8 GB RAM targets with streaming support.
+Rust · Local AI · Upcoming Repo
+🐍 thomascherickal / ai-career-toolkit
+Python scripts, prompts, and automation tools accompanying the RECRUITED book — NotebookLM workflows, resume AI analysis, LinkedIn audit scripts.
+Python · GenAI · Upcoming Repo
+⚛️ thomascherickal / quantum-ai-experiments
+Research notebooks exploring QAI intersections — Qiskit, Q#, Quantinuum stack experiments, and quantum threat modeling for blockchain systems.
+Python · QAI · Upcoming Repo
+🌐 thomascherickal / digital-futurist-site
+Open-source GitHub Pages site with JSON-LD schema, SEO metadata, dark-mode design, and cross-platform social integration. The page you're reading now.
+HTML/CSS · SEO · Open Source Repo
 
-## 🚀 About Me
+Featured Writing
+🤖 Generative AI, LLMs & Agents
+#Article01Google Gemini vs Anthropic Claude vs OpenAI ChatGPT vs xAI Grok: The Ultimate Comparison02How to Run Your Own Local LLM — 2026 Edition03The OpenClaw Saga: How the Last Two Weeks Changed the Agentic AI World Forever04Introducing Code Wiki: Google's NotebookLM for Developers
+⚛️ Quantum Computing & QAI
+#Article01Quantum Computing Fundamentals Part I: 10 Easy Pieces02Comparing Quantum Frameworks: IBM Qiskit, Microsoft Q#, and Quantinuum's New Stack03How Quantum Computers Threaten Bitcoin and the Entire Internet: Simply Explained04QAI's Terrifying Fate That's Hiding in Plain Sight
+Read on HackerNoon → · Read on Medium → · Subscribe on Substack →
 
-I am a passionate technology researcher, writer, and AI coach, consistently exploring the frontiers where artificial intelligence, quantum mechanics, and decentralized web architectures intersect. 
+Books & Long-Form
 
-My core mission is to decode the future of computing for software engineers, business leaders, and curious tech enthusiasts who want to stay ahead of the curve.
+From 8,000-word deep dives to full-length career playbooks — substantive work for serious readers.
 
-* **Technical Content Writer & Researcher:** I craft meticulously researched long-form technical content, comprehensive developer tutorials, and strategic technology playbooks that drive industry conversations and champion the open-source community.
+📚 RECRUITED (Pre-Order · Releasing August 15, 2026)
+The 12-Week AI-Powered Career Playbook for Professionals Who Refuse to Be Left Behind
+A comprehensive 12-week transformation system showing professionals how to use frontier AI tools — ChatGPT, Claude, Gemini, NotebookLM, Perplexity — to accelerate their job search, rebuild their brand, and land roles that actually match their ambition. Real frameworks. Real tools. Real results.
+🎗 Pre-Order on Patreon · 🛒 Gumroad
+Full digital delivery · August 15, 2026 · 12-week interactive tool series activates immediately on joining.
 
-* **AI Mentor & Coach:** I work directly with individuals and teams to accelerate their adoption of frontier technologies, offering structured guidance on mastering AI tools, prompt engineering, and integrating generative models into daily workflows.
+Collaboration Services
+Open to meaningful partnerships across writing, development, and AI education. Reach out on LinkedIn for a free connect, chat, and consultation.
+ServiceDescription✍️Technical WritingLong-form articles, tutorials, developer guides, and whitepapers. HackerNoon-grade depth.🤝Sponsored ContentAuthentic, deeply researched sponsored articles and product deep dives for AI/dev tools.🏢AI ConsultingAI strategy, SLM implementation, AI agentic tools, and contract-based AI development and deployment.🎓Course CollaborationsCo-creating AI courses, live sessions, and curriculum for developers and non-technical audiences.👤AI Upskilling · Individuals1-on-1 mentoring to master frontier AI tools, build a personal AI stack, and accelerate your career.🏋️AI Mentoring · All LevelsFrom complete beginners to senior engineers — structured mentoring to unlock real AI productivity.💼LinkedIn Free ConsultConnect on LinkedIn for a free chat and consultation — fast reply guaranteed. No obligation.
+Work With Me
+PlatformLink🗓️1-on-1 Consultstopmate.io/thomascherickal🛒Digital Products & Playbooksthomascherickal.gumroad.com🎗Exclusive Member Contentpatreon.com/thomascherickal💼Free LinkedIn Consultlinkedin.com/in/thomascherickal
 
-* **Independent Research Blogger:** Operating under the widely recognized brand "The Digital Futurist," I investigate the latest developments in algorithmic innovation, open-source software, and hardware acceleration.
+Newsletter
+📧 The Digital Futurist Newsletter
+Deep-dives on AI upskilling, Local LLMs, AI Agents, Rust, Python, Mojo, and Online Brand Building.
+Subscribe Free →
 
-* **Overseas Education Consultant:** Beyond the keyboard, I am the leader of the technical team (planned) behind [Augmentron Consultancy](www.augmentronconsultancy.com), helping ambitious students navigate global educational opportunities and complex immigration pathways, and training students and professionals in AI Tools by mentoring and coaching.
+Find Me Online
+PlatformLink🌐 Profilethomascherickal.com💼 LinkedInlinkedin.com/in/thomascherickal🐙 GitHubgithub.com/thomascherickal🦊 GitLabgitlab.com/thomascherickal🗞 HackerNoonhackernoon.com/u/thomascherickal✍️ Mediumthomascherickal.medium.com🔷 Hashnodethomascherickal.hashnode.dev📬 Substackthesingularitypoint.substack.com📝 Differdiffer.blog/@thomascherickal🦋 Blueskybsky.app/profile/thomascherickal.bsky.social📓 Tumblrthomascherickal.tumblr.com🔗 Linktreelinktr.ee/thomascherickal🎗 Patreonpatreon.com/thomascherickal🛒 Gumroadthomascherickal.gumroad.com📅 Topmatetopmate.io/thomascherickal🏢 MuckRackmuckrack.com/thomascherickal📧 Newsletterthomascherickal.kit.com💡 LeetCodeleetcode.com/u/thomascherickal🏆 HackerRankhackerrank.com/profile/thomascherickal⬆️ TakeUForwardtakeuforward.org/profile/thomascherickal👩‍💻 DEV.todev.to/thomascherickal📰 Contentlycontently.com/thomascherickal
 
----
-
-## 🧠 Core Domains & Expertise
-
-My extensive portfolio of writing on HackerNoon spans several cutting-edge domains. I position myself at the critical intersection of academic theory and practical, real-world implementation.
-
-### 🤖 Generative AI, LLMs & Autonomous Agents
-
-* **[Google Gemini vs Anthropic Claude vs OpenAI ChatGPT vs xAI Grok: The Ultimate Comparison](https://hackernoon.com/google-gemini-vs-anthropic-claude-vs-openai-chatgpt-vs-xai-grok-the-ultimate-comparison)**
-    I conduct deep comparative analyses of frontier models, exploring the nuanced performance differences between industry-leading LLMs to determine their best use cases for enterprise and development.
-
-* **[How to Run Your Own Local LLM — 2026 Edition — Version 1](https://hackernoon.com/how-to-run-your-own-local-llm-2026-edition-version-1)**
-    I provide extensive, step-by-step Linux and Python-based guides on setting up and optimizing local Large Language Models for ultimate data privacy, diving into the exact hardware requirements necessary to run them smoothly.
-
-* **[The OpenClaw Saga: How the Last Two Weeks Changed the Agentic AI World Forever](https://hackernoon.com/the-openclaw-saga-how-the-last-two-weeks-changed-the-agentic-ai-world-forever)**
-    I closely track the rapid evolution of autonomous AI, from the chaotic emergence of experimental open-source tools to the fundamental shifts in how AI agents will eventually manage our daily workflows.
-
-* **[Never Write a Prompt Again: Introducing Recursive Prompting](https://hackernoon.com/never-write-a-prompt-again-introducing-recursive-prompting)**
-    I develop and test advanced methodologies like Recursive Prompting, teaching automated mastery to completely eliminate the need for manual, repetitive prompt writing in development pipelines.
-
-### ⚛️ Quantum Computing & QAI
-
-* **[Quantum Computing Fundamentals Part I: 10 Easy Pieces](https://hackernoon.com/quantum-computing-fundamentals-part-i-10-easy-pieces)**
-    I am dedicated to demystifying the complex principles of quantum mechanics applied to computing, making concepts like superposition and entanglement easily digestible for classical Python programmers.
-
-* **[Comparing Quantum Programming Frameworks: IBM Qiskit, Microsoft Q#, and Quantinuum's New Stack](https://hackernoon.com/comparing-quantum-programming-frameworks-ibm-qiskit-microsoft-q-and-quantinuums-new-stack)**
-    I rigorously evaluate and compare modern quantum frameworks, including IBM Qiskit, Microsoft Q#, Quantinuum's new stack, and highly specialized languages like Guppy to help developers choose the right toolset.
-
-* **[How Quantum Computers Threaten Bitcoin and the Entire Internet: Simply Explained](https://hackernoon.com/how-quantum-computers-threaten-bitcoin-and-the-entire-internet-simply-explained)**
-    I investigate the existential threats that powerful quantum computers pose to traditional encryption algorithms, blockchain assets like Bitcoin, and the broader security infrastructure of the internet.
-
-* **[QAI's Terrifying Fate That's Hiding in Plain Sight](https://hackernoon.com/qais-terrifying-fate-thats-hiding-in-plain-sight)**
-    I explore the incredible convergence of quantum processing capabilities and machine learning algorithms, analyzing the profound, and sometimes terrifying, implications of this upcoming technological synergy.
-
-### 🌐 Systems Architecture & Open Source Development
-
-* **[Mojo Aims to Unite the Computing Stack—from Cloud to Edge—with MLIR Power](https://hackernoon.com/mojo-aims-to-unite-the-computing-stack-from-cloud-to-edge-with-mlir-power)**
-    I analyze the long-term impact of new architectures on the future of development, focusing on how innovative languages like Mojo bridge the gap from heavy cloud-based AI training to lightweight edge deployment.
-
-* **[I Quit Chrome for Edge and Firefox—and I'm Not Going Back](https://hackernoon.com/i-quit-chrome-for-edge-and-firefox-and-im-not-going-back)**
-    I have a deep interest in the mechanics of web visibility and browsing efficiency, regularly exploring different toolsets and advocating for open-source ecosystems that foster privacy, speed, and collaborative advancement.
-
-* **[Introducing Code Wiki: Google's NotebookLM for Developers](https://hackernoon.com/introducing-code-wiki-googles-notebooklm-for-developers)**
-    I actively experiment with the latest AI-assisted development tools, breaking down how platforms like NotebookLM can radically alter how software engineers interact with and document large codebases.
-
----
-
-## 🛠️ Current Projects & Focus Areas
-
-I am constantly experimenting with new hardware, building out new systems, and writing my next big piece. Here is what is currently on my radar:
-
-* **Running Local LLMs at Scale:** Actively researching the complex cost-benefit analysis, Linux setup protocols, and raw performance metrics of deploying local server clusters, such as the NVIDIA DGX Spark, to run powerful open-source models independently.
-
-* **Authoring 'Recruited':** I am currently writing a comprehensive, 200-page playbook titled *Recruited*, which details advanced, highly effective inbound recruitment strategies leveraging the combined power of LinkedIn and artificial intelligence.
-
-* **Self-Publishing Ventures:** Navigating the intricacies of self-publishing platforms like Amazon KDP to bring my technical research, custom book covers, and strategic tech playbooks to a much broader global audience.
-
----
-
-## 🌍 Let's Connect
-
-I am always open to discussing collaborative technical writing opportunities, one-on-one AI coaching, or simply geeking out over the latest advancements in Quantum AI and local model deployment.
-
-* **Personal Website:** [thomascherickal.com](https://thomascherickal.com)
-
-* **Business Consultancy:** [www.augmentronconsultancy.com](https://www.augmentronconsultancy.com)
-
-* **HackerNoon Profile:** [@thomascherickal](https://hackernoon.com/u/thomascherickal)
-
-* **Location:** Based in the vibrant tech hub of Chennai, India.
-
----
-
-*Stay curious, stay decentralized, and welcome to the future of computing.*
+© 2026 Thomas Cherickal · The Digital Futurist · thomascherickal.com · Chennai, India 🇮🇳
