@@ -178,6 +178,8 @@ Open to meaningful partnerships across writing, development, and AI education.
 | 🏋️ **AI Mentoring · All Levels** | From complete beginners to senior engineers — structured mentoring to unlock real AI productivity. |
 | 💼 **LinkedIn Free Consult** | Connect on LinkedIn for a free chat and consultation — fast reply guaranteed. No obligation. |
 
+### — Online Sales & Digital Products —
+
 ### Work With Me
 
 | Platform | Link |
@@ -223,6 +225,14 @@ Open to meaningful partnerships across writing, development, and AI education.
 | 🏆 HackerRank | [hackerrank.com/profile/thomascherickal](https://hackerrank.com/profile/thomascherickal) |
 | ⬆️ TakeUForward | [takeuforward.org/profile/thomascherickal](https://takeuforward.org/profile/thomascherickal) |
 | 👩‍💻 DEV.to | [dev.to/thomascherickal](https://dev.to/thomascherickal) |
+| 📄 HubPages | [hubpages.com/@thomascherickal](https://hubpages.com/@thomascherickal) |
+| ☕ Ko-fi | [ko-fi.com/thomascherickal](https://ko-fi.com/thomascherickal) |
+| 🃏 Carrd | [thomascherickal.carrd.co](https://thomascherickal.carrd.co/) |
+| 🧩 Coderbyte | [coderbyte.com/profile/thomascherickal](https://coderbyte.com/profile/thomascherickal) |
+| ⚔️ Codewars | [codewars.com/users/thomascherickal](https://www.codewars.com/users/thomascherickal) |
+| 🌍 HackerEarth | [hackerearth.com/@thomascherickal](https://www.hackerearth.com/@thomascherickal/) |
+| 🏅 CodersRank | [profile.codersrank.io/user/thomascherickal](https://profile.codersrank.io/user/thomascherickal/) |
+| 🐝 Beecrowd | [judge.beecrowd.com/en/profile/805320](https://judge.beecrowd.com/en/profile/805320) |
 
 ---
 
