@@ -1221,6 +1221,31 @@
             gap: 1rem
         }
 
+        .collab-sub-header {
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem
+        }
+
+        .collab-sub-header::before,
+        .collab-sub-header::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border-gold))
+        }
+
+        .collab-sub-header::after {
+            background: linear-gradient(90deg, var(--border-gold), transparent)
+        }
+
         .footer-copy {
             font-family: var(--font-mono);
             font-size: 0.7rem;
@@ -1890,6 +1915,10 @@ client = <span class="ty">OpenAI</span>(
                     <div class="collab-text"><strong>Sponsored Content</strong>Authentic, deeply researched sponsored
                         articles and product deep dives for AI/dev tools.</div>
                 </div>
+                <div class="collab-item"><span class="collab-icon">🏢</span>
+                    <div class="collab-text"><strong>AI Consulting</strong>AI strategy, SLM implementation, AI agentic
+                        tools, and contract-based AI development and deployment.</div>
+                </div>
                 <div class="collab-item"><span class="collab-icon">🎓</span>
                     <div class="collab-text"><strong>Course Collaborations</strong>Co-creating AI courses, live
                         sessions, and curriculum for developers and non-technical audiences.</div>
@@ -1907,6 +1936,7 @@ client = <span class="ty">OpenAI</span>(
                         and consultation — fast reply guaranteed. No obligation.</div>
                 </div>
             </div>
+            <p class="collab-sub-header">Online Sales &amp; Digital Products</p>
             <div class="work-links">
                 <a href="https://topmate.io/thomascherickal" target="_blank" class="work-link"><span
                         class="work-link-emoji">🗓️</span><span class="work-link-name">1-on-1 Consults</span><span
@@ -1990,6 +2020,22 @@ client = <span class="ty">OpenAI</span>(
                         class="social-icon">👩‍💻</span>DEV.to</a>
                 <a href="https://thomascherickal.contently.com" target="_blank" class="social-link"><span
                         class="social-icon">📰</span>Contently</a>
+                <a href="https://hubpages.com/@thomascherickal" target="_blank" class="social-link"><span
+                        class="social-icon">📄</span>HubPages</a>
+                <a href="https://ko-fi.com/thomascherickal" target="_blank" class="social-link"><span
+                        class="social-icon">☕</span>Ko-fi</a>
+                <a href="https://thomascherickal.carrd.co/" target="_blank" class="social-link"><span
+                        class="social-icon">🃏</span>Carrd</a>
+                <a href="https://coderbyte.com/profile/thomascherickal" target="_blank" class="social-link"><span
+                        class="social-icon">🧩</span>Coderbyte</a>
+                <a href="https://www.codewars.com/users/thomascherickal" target="_blank" class="social-link"><span
+                        class="social-icon">⚔️</span>Codewars</a>
+                <a href="https://www.hackerearth.com/@thomascherickal/" target="_blank" class="social-link"><span
+                        class="social-icon">🌍</span>HackerEarth</a>
+                <a href="https://profile.codersrank.io/user/thomascherickal/" target="_blank" class="social-link"><span
+                        class="social-icon">🏅</span>CodersRank</a>
+                <a href="https://judge.beecrowd.com/en/profile/805320" target="_blank" class="social-link"><span
+                        class="social-icon">🐝</span>Beecrowd</a>
             </div>
             <div class="footer-divider"></div>
             <div class="footer-bottom">
