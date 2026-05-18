@@ -106,7 +106,7 @@ I operate across multiple disciplines — from deep technical development to str
 2. [The Startup That Will Change the Industrial World: The Decentralized Autonomous Supply Chain](https://hackernoon.com/the-startup-that-will-change-the-industrial-world-the-decentralized-autonomous-supply-chain)
 3. [7 Blockchain Startups That Could Generate Multibillion-Dollar Revenue Within 2 Years](https://hackernoon.com/7-blockchain-startups-that-could-generate-multibillion-dollar-revenue-within-2-years)
 4. [Classical Blockchain vs Hedera Hashgraph](https://hackernoon.com/classical-blockchain-vs-hedera-hashgraph)
-5. [Cut the Crap: 100 Complex Cryptocurrency Terminologies Explained in a Single Sentence](https://hackernoon.com/cut-the-crap-100-complex-cryptocurrency-terminologies-explained-in-a-single-sentence)
+5. [100 Complex Cryptocurrency Terminologies Explained in a Single Sentence](https://hackernoon.com/cut-the-crap-100-complex-cryptocurrency-terminologies-explained-in-a-single-sentence)
 
 ---
 
