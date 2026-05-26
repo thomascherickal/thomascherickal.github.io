@@ -2,7 +2,7 @@
 
 > *AI Consultant · Developer · Author · Independent Research Blogger*
 > 
-> *est. 2018 · Chennai, India 🇮🇳*
+> *est. 2020 · Chennai, India 🇮🇳*
 
 ---
 
