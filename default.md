@@ -1,12 +1,16 @@
-# Thomas Cherickal — The Digital Futurist
+# Thomas Cherickal
 
-> *AI Consultant · Developer · Author · Independent Research Blogger*
+> *Generative AI Consultant · Generative AI Developer · SLM Engineer · LLM Engineer · Independent Research Blogger*
 > 
-> *est. 2020 · Chennai, India 🇮🇳*
+> *est. 2020 · Chennai, India 🇮🇳 *
 
 ---
 
-I build at the bleeding edge of AI, systems programming, and technical storytelling. From engineering local LLM stacks to writing 10,000-word deep dives on frontier models — I turn complexity into clarity and code into production value. My mission: make Generative AI, Quantum AI, and Local AI accessible to everyone.
+I build at the bleeding edge of Generative AI, AI systems engineering, cross-domain
+expertise, SLM deployment, and technical research storytelling. From engineering local LLM stacks to
+writing 10,000-word deep dives on frontier models: I turn complexity into clarity and code into
+production value. My mission: make Generative AI, Blockchain AI, Quantum AI, and Local AI accessible to
+everyone.
 
 🌐 [thomascherickal.com](https://thomascherickal.com) · 📅 [Book a Consult](https://topmate.io/thomascherickal) · 🐙 [GitHub](https://github.com/thomascherickal) · 🗞 [HackerNoon](https://hackernoon.com/u/thomascherickal)
 
@@ -26,16 +30,19 @@ I operate across multiple disciplines — from deep technical development to str
 
 | Role | Description |
 |---|---|
-| ✍️ **Technical Content Writer** | Long-form articles, developer tutorials, comparison deep-dives, and strategic technology playbooks across HackerNoon, Medium, Substack, Hashnode, Dev.to, and Differ. |
-| 💻 **Open Source Developer** | Building production-ready intelligent systems in Rust, Python, and Go — including local LLM orchestration pipelines, AI agent frameworks, and SLM inference engines optimized for constrained hardware. |
-| 📚 **Technical Author** | Writing full-length books on AI career strategy. Current title: *RECRUITED* — a 12-week AI career playbook for professionals navigating the AI-first job market. Launching August 2026. |
-| 🤖 **AI Mentor & Trainer** | Working 1-on-1 with individuals and teams to accelerate adoption of frontier AI tools — prompt engineering, local LLM setup, agentic workflows, AI career development, and online brand building. |
-| 🔬 **Independent Research Blogger** | Investigating LLM benchmarks, agentic frameworks, quantum AI intersections, open-source tooling, and hardware acceleration under the brand *The Digital Futurist*. |
-| ⚡ **SLM Engineer** | Optimizing Small Language Models for local inference on constrained hardware. Experienced with LM Studio, Ollama, llama.cpp, Gemma 4 E4B, and Qwen. |
-| 🧠 **LLM Engineer** | Architecting cloud and hybrid LLM pipelines using OpenRouter, LangChain, LlamaIndex, and agentic OS frameworks including OpenFang — from RAG systems and vector DBs to multi-agent orchestration at scale. |
-| 🌐 **Website Builder** | Designing and deploying professional websites — WordPress, Wix, Framer, GitHub Pages, and more. Full personal brand sites with SEO, AEO, and GEO baked in. |
-| 🏢 **AI Consultant** | End-to-end AI transformation: office automation, custom AI apps, SEO/AEO/GEO strategy, and enterprise AI upskilling programs. |
-| 🌍 **Online Brand Builder** | Building digital visibility for professionals and students across LinkedIn, HackerNoon, Substack, GitHub, and personal sites — from zero to recognized voice in their niche. |
+| **Technical Content Writer** | Long-form articles, deep dives, and opinion pieces on AI, Quantum, Web3, and Cybersecurity |
+| **AI Mentor & Coach** | One-on-one guidance for individuals navigating AI tools, skills, and career transitions |
+| **Independent Research Blogger** | Original analysis and commentary on emerging technology trends |
+| **AI Consultant** | Strategic AI integration advisory for individuals and small teams |
+| **Developer** | Application development in Python, Golang, Rust, Mojo, and a broad multi-language stack |
+| **Generative AI Engineer** | Design and development of GenAI systems, AI workflows, autonomous agents, and multimodal applications |
+| **LLM Engineer** | Building, fine-tuning, optimizing, and deploying Large Language Model powered applications and pipelines |
+| **SLM Engineer** | Development and optimization of Small Language Models for efficient, lightweight, and edge-based AI systems |
+| **Local AI Engineer** | Deployment and optimization of private, offline, and self-hosted AI systems on local hardware environments |
+| **SLM Deployment Specialist** | Implementation, quantization, orchestration, and production deployment of Small Language Models across devices |
+| **Author-in-Progress** | *RECRUITED* — an AI-powered career development guide |
+| **Quantum Computing Researcher** | Research and writing on QC, QAI, and post-classical computing paradigms |
+| **Open Source Advocate** | Active contributor and evangelist for open source
 
 ---
 
@@ -144,23 +151,21 @@ I operate across multiple disciplines — from deep technical development to str
 
 ---
 
-## 📚 Books & Long-Form
+## 📚 Books
 
-### RECRUITED *(Pre-Order — August 15, 2026)*
+### RECRUITED
 
-> *The 12-Week AI-Powered Career Playbook for Professionals Who Refuse to Be Left Behind*
+> *The AI-Powered Career Playbook for Professionals Who Refuse to Be Left Behind*
 
-A comprehensive 12-week transformation system showing professionals how to use frontier AI tools — ChatGPT, Claude, Gemini, NotebookLM, Perplexity — to accelerate their job search, rebuild their brand, and land roles that actually match their ambition. Real frameworks. Real tools. Real results.
+A comprehensive transformation system showing professionals how to use frontier AI tools — ChatGPT, Claude, Gemini, NotebookLM, Perplexity — to accelerate their job search, rebuild their brand, and land roles that actually match their ambition. Real frameworks. Real tools. Real results.
 
 | Detail | Info |
 |---|---|
-| 📅 Release Date | August 15, 2026 |
-| 💰 Pre-Order Price | $10 USD *(free with active Patreon subscription)* |
-| 💰 Launch Price | $30 USD |
+| 💰 Pre-Order Price | $5 USD *(free with active Patreon subscription)* |
+| 💰 Launch Price | $10 USD |
 | 📦 Format | Full digital delivery |
-| 🎁 Bonus | 12-week interactive tool series activates immediately on joining |
 
-→ [Pre-Order on Patreon](https://patreon.com/thomascherickal) — $10 USD, or free with active Patreon subscription
+→ [Pre-Order on Patreon](https://patreon.com/thomascherickal) — $5 USD, or free with active Patreon subscription
 
 ---
 
@@ -201,41 +206,38 @@ Open to meaningful partnerships across writing, development, and AI education.
 
 ## 🌐 Find Me Online
 
-| Platform | Link |
-|---|---|
-| 🌐 Main Website | [thomascherickal.com](https://thomascherickal.com) |
-| 💼 LinkedIn | [linkedin.com/in/thomascherickal](https://linkedin.com/in/thomascherickal) |
-| 🐙 GitHub | [github.com/thomascherickal](https://github.com/thomascherickal) |
-| 🦊 GitLab | [gitlab.com/thomascherickal](https://gitlab.com/thomascherickal) |
-| 🗞 HackerNoon | [hackernoon.com/u/thomascherickal](https://hackernoon.com/u/thomascherickal) |
-| ✍️ Medium | [thomascherickal.medium.com](https://thomascherickal.medium.com) |
-| 🔷 Hashnode | [thomascherickal.hashnode.dev](https://thomascherickal.hashnode.dev) |
-| 📬 Substack | [thesingularitypoint.substack.com](https://thesingularitypoint.substack.com) |
-| 📝 Differ | [differ.blog/@thomascherickal](https://differ.blog/@thomascherickal) |
-| 🦋 Bluesky | [bsky.app/profile/thomascherickal.bsky.social](https://bsky.app/profile/thomascherickal.bsky.social) |
-| 📓 Tumblr | [thomascherickal.tumblr.com](https://thomascherickal.tumblr.com) |
-| 🔗 Linktree | [linktr.ee/thomascherickal](https://linktr.ee/thomascherickal) |
-| 🎗 Patreon | [patreon.com/thomascherickal](https://patreon.com/thomascherickal) |
-| 🛒 Gumroad | [thomascherickal.gumroad.com](https://thomascherickal.gumroad.com) |
-| 📅 Topmate | [topmate.io/thomascherickal](https://topmate.io/thomascherickal) |
-| 🏢 MuckRack | [muckrack.com/thomascherickal](https://muckrack.com/thomascherickal) |
-| 📰 Contently | [thomascherickal.contently.com](https://thomascherickal.contently.com) |
-| 📧 Newsletter | [thomascherickal.kit.com](https://thomascherickal.kit.com) |
-| 💡 LeetCode | [leetcode.com/u/thomascherickal](https://leetcode.com/u/thomascherickal) |
-| 🏆 HackerRank | [hackerrank.com/profile/thomascherickal](https://hackerrank.com/profile/thomascherickal) |
-| ⬆️ TakeUForward | [takeuforward.org/profile/thomascherickal](https://takeuforward.org/profile/thomascherickal) |
-| 👩‍💻 DEV.to | [dev.to/thomascherickal](https://dev.to/thomascherickal) |
-| 📄 HubPages | [hubpages.com/@thomascherickal](https://hubpages.com/@thomascherickal) |
-| ☕ Ko-fi | [ko-fi.com/thomascherickal](https://ko-fi.com/thomascherickal) |
-| 🃏 Carrd | [thomascherickal.carrd.co](https://thomascherickal.carrd.co/) |
-| 🧩 Coderbyte | [coderbyte.com/profile/thomascherickal](https://coderbyte.com/profile/thomascherickal) |
-| ⚔️ Codewars | [codewars.com/users/thomascherickal](https://www.codewars.com/users/thomascherickal) |
-| 🌍 HackerEarth | [hackerearth.com/@thomascherickal](https://www.hackerearth.com/@thomascherickal/) |
-| 🏅 CodersRank | [profile.codersrank.io/user/thomascherickal](https://profile.codersrank.io/user/thomascherickal/) |
-| 🐝 Beecrowd | [judge.beecrowd.com/en/profile/805320](https://judge.beecrowd.com/en/profile/805320) |
+Here is a complete inventory of my digital footprints and developer profiles.
+
+* 🌐 [Main Profile Website](https://thomascherickal.com)
+* 🛒 [Gumroad Products Store](https://thomascherickal.gumroad.com)
+* 📅 [Topmate Consulting](https://topmate.io/thomascherickal)
+* 💼 [LinkedIn Profile](https://linkedin.com/in/thomascherickal)
+* 📰 [MuckRack Portfolio](https://muckrack.com/thomascherickal)
+* ✍️ [Contently Portfolio](https://thomascherickal.contently.com)
+* 🐙 [GitHub Profile](https://github.com/thomascherickal)
+* 🦊 [GitLab Profile](https://gitlab.com/thomascherickal)
+* 🗞 [HackerNoon Editor](https://hackernoon.com/u/thomascherickal)
+* 📝 [Medium Channel](https://thomascherickal.medium.com)
+* 🏡 [Hashnode Blog](https://thomascherickal.hashnode.dev)
+* ✉️ [Substack Channel](https://thesingularitypoint.substack.com)
+* 🎨 [Differ Blog](https://differ.blog/@thomascherickal)
+* 💻 [DEV.to Blog](https://dev.to/thomascherickal)
+* 📖 [HubPages](https://hubpages.com/@thomascherickal)
+* 🤝 [Patreon Circle](https://patreon.com/thomascherickal)
+* ☕ [Buy Me A Coffee (Ko-fi)](https://ko-fi.com/thomascherickal)
+* 🦋 [Bluesky Social](https://bsky.app/profile/thomascherickal.bsky.social)
+* 📓 [Tumblr Journal](https://thomascherickal.tumblr.com)
+* 🌳 [Linktree Links](https://linktr.ee/thomascherickal)
+* 📇 [Carrd Portfolio](https://thomascherickal.carrd.co/)
+* 🏆 [LeetCode Profile](https://leetcode.com/u/thomascherickal)
+* 🎯 [HackerRank Profile](https://hackerrank.com/profile/thomascherickal)
+* 📈 [TakeUForward Profile](https://takeuforward.org/profile/thomascherickal)
+* 🥇 [Coderbyte Profile](https://coderbyte.com/profile/thomascherickal)
+* 🥋 [Codewars Profile](https://www.codewars.com/users/thomascherickal)
+* 🚀 [HackerEarth Profile](https://www.hackerearth.com/@thomascherickal/)
+* 🏅 [CodersRank Profile](https://profile.codersrank.io/user/thomascherickal/)
+* 🎓 [Code 360 Profile](https://www.naukri.com/code360/profile/thomascherickal)
 
 ---
 
-*© 2026 Thomas Cherickal · The Digital Futurist · [thomascherickal.com](https://thomascherickal.com) · Chennai, India 🇮🇳*
-
-> *"I mentor you to build your online brand."*
+© 2026 Thomas Cherickal · [thomascherickal.com](https://thomascherickal.com) · [thomascherickal.github.io](https://thomascherickal.github.io) Chennai, India
