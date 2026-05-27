@@ -198,7 +198,9 @@ Open to meaningful partnerships across writing, development, and AI education.
 
 ## 📧 Newsletter
 
-**The Digital Futurist Newsletter** — Deep-dives on AI upskilling, Local LLMs, AI Agents, Rust, Python, Mojo, and Online Brand Building.
+***The Singularity Point by the Digital Futurist***
+
+*The AI revolution isn't waiting—don't get left behind. We dissect bleeding-edge AI, modern coding, and quantum breakthroughs into crystal-clear, actionable intel. Stop chasing the future. Start building it.*
 
 → [Subscribe free at thomascherickal.kit.com](https://thomascherickal.kit.com)
 
