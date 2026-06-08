@@ -49,7 +49,7 @@ I operate across multiple disciplines — from deep technical development to str
 ## 🛠️ Tech Stack & Domains
 
 ### ⚙️ Languages
-`Rust` · `Python` · `Go` · `Mojo` · `JavaScript` · `HTML/CSS` · `SQL` · `Bash`
+`Rust` · `Python` · `Golang` · `Mojo` · `JavaScript` · `HTML/CSS` · `SQL` · `Bash` · `C` · `C++` · `C#` · `Julia` · `Java` · `Dart & Flutter`
 
 ### 🤖 AI & ML
 `Generative AI` · `Local LLMs` · `AI Agents` · `SLM Engineering` · `Agentic AI Assistants` · `Prompt Engineering` · `LangChain` · `LlamaIndex`
@@ -207,6 +207,7 @@ Open to meaningful partnerships across writing, development, and AI education.
 ---
 
 ## 🌐 Find Me Online
+
 
 Here is a complete inventory of my digital footprints and developer profiles.
 
