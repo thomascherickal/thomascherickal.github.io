@@ -1,6 +1,6 @@
 # Thomas Cherickal
 
-> *Generative AI Consultant · Generative AI Developer · SLM Engineer · Rust Engineer · Independent Research Blogger*
+> *Generative AI Consultant · Generative AI Developer · SLM Engineer · Rust AI Engineer · Independent Research Blogger*
 > 
 > *est. 2020 · Chennai, India 🇮🇳 *
 
@@ -36,7 +36,7 @@ I operate across multiple disciplines — from deep technical development to str
 | **AI Consultant** | Strategic AI integration advisory for individuals and small teams |
 | **Developer** | Application development in Python, Golang, Rust, Mojo, and a broad multi-language stack |
 | **Generative AI Engineer** | Design and development of GenAI systems, AI workflows, autonomous agents, and multimodal applications |
-| **Rust Engineer** | Building high-performance, memory-safe AI runtimes, custom bindings, and SIMD-accelerated systems programming libraries |
+| **Rust AI Engineer** | Building high-performance, memory-safe AI runtimes, custom bindings, and SIMD-accelerated systems programming libraries |
 | **SLM Engineer** | Development and optimization of Small Language Models for efficient, lightweight, and edge-based AI systems |
 | **Local AI Engineer** | Deployment and optimization of private, offline, and self-hosted AI systems on local hardware environments |
 | **SLM Deployment Specialist** | Implementation, quantization, orchestration, and production deployment of Small Language Models across devices |
