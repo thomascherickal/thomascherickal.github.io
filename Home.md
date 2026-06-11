@@ -353,6 +353,9 @@ Here is a complete inventory of my digital footprints and developer profiles.
 | 🎗 Patreon Community | [patreon.com/thomascherickal](https://www.patreon.com/thomascherickal) |
 | 🛒 Gumroad Store | [thomascherickal.gumroad.com](https://thomascherickal.gumroad.com) |
 | 📅 Topmate Consulting | [topmate.io/thomascherickal](https://topmate.io/thomascherickal) |
+| 🐳 Docker Hub Profile | [hub.docker.com/repositories/thomascherickal](https://hub.docker.com/repositories/thomascherickal) |
+| 🔥 daily.dev Profile | [app.daily.dev/thomascherickal](https://app.daily.dev/thomascherickal) |
+| 🎓 freeCodeCamp Profile | [freecodecamp.org/thomascherickal](https://www.freecodecamp.org/thomascherickal) |
 | 🏢 MuckRack Portfolio | [muckrack.com/thomascherickal](https://muckrack.com/thomascherickal) |
 | 📧 Kit Newsletter | [thomascherickal.kit.com](https://thomascherickal.kit.com) |
 | 💡 LeetCode Profile | [leetcode.com/u/thomascherickal](https://leetcode.com/u/thomascherickal) |
