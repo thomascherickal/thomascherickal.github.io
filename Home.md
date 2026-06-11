@@ -18,9 +18,9 @@ I build at the bleeding edge of Generative AI, AI systems engineering, cross-dom
 
 ## 📊 By The Numbers
 
-| 📈 **500+** | 💼 **8+** | 🌐 **10+** | 🗣️ **8+** | 🚀 **∞** |
+| 📈 **500+** | 💼 **8+** | 🌐 **10+** | 🗣️ **8+** | 🚀 **2000+** |
 |:---:|:---:|:---:|:---:|:---:|
-| Articles Published | Years in Tech | Platforms | Languages | Frontier Curiosity |
+| Articles Published | Years in Tech | Platforms | Languages | GitHub Repos |
 
 
 ---
