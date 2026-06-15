@@ -204,8 +204,7 @@
             color: var(--cyan);
             text-transform: uppercase;
             margin-bottom: 1.5rem;
-            opacity: 0;
-            animation: fadeUp 0.8s 0.2s ease forwards
+            opacity: 1
         }
 
         .hero-avatar {
@@ -215,8 +214,7 @@
             border: 2px solid var(--gold);
             box-shadow: var(--glow-gold), 0 0 0 6px rgba(255, 201, 71, 0.08);
             margin-bottom: 2rem;
-            opacity: 0;
-            animation: fadeUp 0.8s 0.1s ease forwards;
+            opacity: 1;
             object-fit: cover
         }
 
@@ -238,8 +236,7 @@
             background-clip: text;
             filter: drop-shadow(0 2px 28px rgba(255, 200, 0, 0.60));
             margin-bottom: 1.2rem;
-            opacity: 0;
-            animation: fadeUp 0.8s 0.3s ease forwards
+            opacity: 1
         }
 
         .hero-tagline {
@@ -250,8 +247,7 @@
             color: var(--gold);
             text-transform: uppercase;
             margin-bottom: 1.5rem;
-            opacity: 0;
-            animation: fadeUp 0.8s 0.45s ease forwards
+            opacity: 1
         }
 
         .hero-roles {
@@ -260,8 +256,7 @@
             justify-content: center;
             gap: 0.6rem;
             margin-bottom: 2.5rem;
-            opacity: 0;
-            animation: fadeUp 0.8s 0.55s ease forwards
+            opacity: 1
         }
 
         .role-chip {
@@ -316,8 +311,7 @@
             color: var(--text-secondary);
             line-height: 1.8;
             margin-bottom: 2.5rem;
-            opacity: 0;
-            animation: fadeUp 0.8s 0.65s ease forwards
+            opacity: 1
         }
 
         .hero-ctas {
@@ -325,8 +319,7 @@
             gap: 1rem;
             flex-wrap: wrap;
             justify-content: center;
-            opacity: 0;
-            animation: fadeUp 0.8s 0.75s ease forwards
+            opacity: 1
         }
 
         .btn {
@@ -870,48 +863,16 @@
             }
         }
 
-        .book-cover {
-            width: 160px;
+        .book-cover-img {
+            width: 240px;
+            max-width: 100%;
             aspect-ratio: 2/3;
-            background: linear-gradient(145deg, #1a1a2e, #16213e, #0f3460);
             border-radius: 8px;
             border: 1px solid rgba(255, 201, 71, 0.3);
             box-shadow: 8px 12px 40px rgba(0, 0, 0, 0.6), var(--glow-gold);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem 1rem;
-            text-align: center;
-            position: relative;
-            flex-shrink: 0
-        }
-
-        .book-cover-title {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            font-weight: 900;
-            color: var(--gold);
-            letter-spacing: 0.05em;
-            line-height: 1.2
-        }
-
-        .book-cover-sub {
-            font-family: var(--font-body);
-            font-size: 0.55rem;
-            color: var(--text-secondary);
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            margin-top: 0.6rem;
-            line-height: 1.5
-        }
-
-        .book-cover-author {
-            font-family: var(--font-mono);
-            font-size: 0.55rem;
-            color: var(--cyan);
-            letter-spacing: 0.1em;
-            margin-top: 1.5rem
+            flex-shrink: 0;
+            object-fit: cover;
+            display: block;
         }
 
         .book-badge {
@@ -1287,31 +1248,14 @@
             }
         }
 
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0)
-            }
-
-            50% {
-                transform: translateY(-8px)
-            }
-        }
-
-        .animate-float {
-            animation: float 4s ease-in-out infinite
-        }
-
         .reveal {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.6s ease, transform 0.6s ease
+            opacity: 1;
+            transform: none;
         }
 
         .reveal.visible {
             opacity: 1;
-            transform: translateY(0)
+            transform: none;
         }
 
         .back-top {
@@ -2128,11 +2072,9 @@ client = <span class="ty">OpenAI</span>(
                     serious readers.</p>
             </div>
             <div class="book-showcase" style="margin-bottom:2rem;">
-                <div class="book-cover animate-float">
+                <div style="position:relative; flex-shrink:0;">
+                    <img src="recruited-cover.jpg" alt="RECRUITED Book Cover" class="book-cover-img">
                     <span class="book-badge">PRE-ORDER</span>
-                    <p class="book-cover-title">RECRUITED</p>
-                    <p class="book-cover-sub">The AI-Powered<br>Career Playbook<br>for 2026</p>
-                    <p class="book-cover-author">Thomas Cherickal</p>
                 </div>
                 <div>
                     <span class="book-info-tag">📚 Working on the book RECRUITED</span>
@@ -2147,7 +2089,6 @@ client = <span class="ty">OpenAI</span>(
                         <a href="https://patreon.com/thomascherickal" target="_blank" class="btn btn-gold">🎗 Pre-Order
                             on Patreon</a>
                     </div>
-                    <p class="book-date">// New Digital Products Released Every Week</p>
                 </div>
             </div>
         </section>
@@ -2294,16 +2235,15 @@ client = <span class="ty">OpenAI</span>(
             const ctx = canvas.getContext('2d');
             let W, H, particles = [];
             function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight }
-            function rp() { return { x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3, r: Math.random() * 1.5 + 0.3, a: Math.random() * 0.6 + 0.1, hue: Math.random() < 0.6 ? 195 : 42 } }
+            function rp() { return { x: Math.random() * W, y: Math.random() * H, r: Math.random() * 1.5 + 0.3, a: Math.random() * 0.6 + 0.1, hue: Math.random() < 0.6 ? 195 : 42 } }
             function init() { particles = []; const c = Math.floor(W * H / 14000); for (let i = 0; i < c; i++)particles.push(rp()) }
             function draw() {
                 ctx.clearRect(0, 0, W, H);
                 for (let i = 0; i < particles.length; i++) { for (let j = i + 1; j < particles.length; j++) { const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y, d = Math.sqrt(dx * dx + dy * dy); if (d < 120) { ctx.beginPath(); ctx.strokeStyle = `hsla(195,100%,60%,${0.06 * (1 - d / 120)})`; ctx.lineWidth = 0.5; ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y); ctx.stroke() } } }
-                particles.forEach(p => { ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fillStyle = `hsla(${p.hue},100%,65%,${p.a})`; ctx.fill(); p.x += p.vx; p.y += p.vy; if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1 });
-                requestAnimationFrame(draw);
+                particles.forEach(p => { ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fillStyle = `hsla(${p.hue},100%,65%,${p.a})`; ctx.fill() });
             }
             resize(); init(); draw();
-            window.addEventListener('resize', () => { resize(); init() });
+            window.addEventListener('resize', () => { resize(); init(); draw() });
         })();
 
         const revealEls = document.querySelectorAll('.reveal');
@@ -2659,6 +2599,7 @@ client = <span class="ty">OpenAI</span>(
           "@type": "Book",
           "@id": "https://thomascherickal.github.io/#book-recruited",
           "name": "RECRUITED",
+          "image": "https://thomascherickal.github.io/recruited-cover.jpg",
           "alternateName": "RECRUITED: The AI-Powered Career Playbook for Professionals Who Refuse to Be Left Behind",
           "description": "A comprehensive transformation system showing professionals how to use frontier AI tools — ChatGPT, Claude, Gemini, NotebookLM, Perplexity — to accelerate their job search, rebuild their brand, and land roles that actually match their ambition. Real frameworks. Real tools. Real results.",
           "author": {
