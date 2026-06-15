@@ -53,7 +53,7 @@ I operate across multiple disciplines — from deep technical development to str
     *Investigating the latest in LLM benchmarks, agentic frameworks, quantum AI intersections, open-source tooling, and hardware acceleration under the brand *The Digital Futurist*.*
 
 *   ✍️ **Technical Content Writer**
-    *Crafting meticulously researched long-form articles, developer tutorials, comparison deep-dives, and strategic technology playbooks across HackerNoon, Medium, Substack, Hashnode, Dev.to, and Differ. Working on the book RECRUITED.*
+    *Crafting meticulously researched long-form articles, developer tutorials, comparison deep-dives, and strategic technology playbooks across HackerNoon, Medium, Substack, and Hashnode. Working on the book RECRUITED.*
 
 *   🌐 **Website Builder**
     *Designing and deploying professional websites across every major platform — WordPress (thomascherickal.com), Wix, Framer, SITE123, GitHub Pages, and more. From landing pages to full personal brand sites with SEO, AEO, and GEO baked in.*
@@ -75,9 +75,9 @@ I operate across multiple disciplines — from deep technical development to str
 | **🗄️ Data & Storage** | `Vector DBs` · `LanceDB` · `Chroma` · `SQLite` · `PostgreSQL` · `Redis` |
 | **📚 Domains** | `Quantum Computing` · `Blockchain` · `QAI` · `DeFi` · `Web3` · `Cybersecurity` · `Algorithms` · `Metaheuristics` |
 | **🧰 AI Tools** | `Google AI Studio` · `Claude Pro` · `NotebookLM` · `Google Gemini Pro` · `Code Wiki` · `Perplexity` · `ChatGPT Plus` · `NightCafe Studio` · `Kimi` · `DeepSeek` · `MiniMax` · `Muse Spark` |
-| **🔧 Dev & Infra** | `Linux` · `Git / GitHub` · `Tauri 2.0` · `GitLab` · `Docker` · `GitHub Pages` · `WordPress` · `Zorin OS` |
+| **🔧 Dev & Infra** | `Linux` · `Git / GitHub` · `Tauri 2.0` · `Docker` · `GitHub Pages` · `WordPress` · `Zorin OS` |
 | **🌐 Web Dev** | `HTML / CSS` · `SEO` · `AEO` · `GEO` · `JSON-LD` · `Open Graph` · `Responsive Design` · `Tailwind CSS` · `Wix` · `Framer` · `SITE123` · `Carrd` |
-| **✍️ Content** | `HackerNoon` · `Medium` · `Substack` · `Hashnode` · `Dev.to` · `Differ` · `Blogger` · `LinkedIn Articles` · `Markdown` · `Long-form Writing` · `Technical Docs` |
+| **✍️ Content** | `HackerNoon` · `Medium` · `Substack` · `Hashnode` · `Blogger` · `LinkedIn Articles` · `Markdown` · `Long-form Writing` · `Technical Docs` |
 | **🚀 Deployment** | `GitHub Pages` · `Vercel` · `Netlify` · `Cloudflare Pages` · `Render` · `Railway` · `Fly.io` · `Hugging Face Spaces` · `Replit` · `Glitch` · `Koyeb` · `Deno Deploy` |
 
 
@@ -341,36 +341,25 @@ Here is a complete inventory of my digital footprints and developer profiles.
 | 🌐 Main Profile Website | [thomascherickal.com](https://thomascherickal.com) |
 | 💼 LinkedIn Profile | [linkedin.com/in/thomascherickal](https://linkedin.com/in/thomascherickal) |
 | 🐙 GitHub Profile | [github.com/thomascherickal](https://github.com/thomascherickal) |
-| 🦊 GitLab Profile | [gitlab.com/thomascherickal](https://gitlab.com/thomascherickal) |
 | 🗞 HackerNoon Blog | [hackernoon.com/u/thomascherickal](https://hackernoon.com/u/thomascherickal) |
 | ✍️ Medium Channel | [thomascherickal.medium.com](https://thomascherickal.medium.com) |
 | 🔷 Hashnode Space | [thomascherickal.hashnode.dev](https://thomascherickal.hashnode.dev) |
 | 📬 Substack Channel | [thesingularitypoint.substack.com](https://thesingularitypoint.substack.com) |
-| 🎨 Differ Publication | [differ.blog/@thomascherickal](https://differ.blog/@thomascherickal) |
-| 🦋 Bluesky Social | [bsky.app/profile/thomascherickal.bsky.social](https://bsky.app/profile/thomascherickal.bsky.social) |
-| 📓 Tumblr Journal | [thomascherickal.tumblr.com](https://thomascherickal.tumblr.com) |
+| 💸 PayPal | [paypal.me/9884452724](https://paypal.me/9884452724) |
 | 🔗 Linktree Directory | [linktr.ee/thomascherickal](https://linktr.ee/thomascherickal) |
 | 🎗 Patreon Community | [patreon.com/thomascherickal](https://www.patreon.com/thomascherickal) |
 | 🛒 Gumroad Store | [thomascherickal.gumroad.com](https://thomascherickal.gumroad.com) |
 | 📅 Topmate Consulting | [topmate.io/thomascherickal](https://topmate.io/thomascherickal) |
 | 🐳 Docker Hub Profile | [hub.docker.com/repositories/thomascherickal](https://hub.docker.com/repositories/thomascherickal) |
-| 🔥 daily.dev Profile | [app.daily.dev/thomascherickal](https://app.daily.dev/thomascherickal) |
-| 🎓 freeCodeCamp Profile | [freecodecamp.org/thomascherickal](https://www.freecodecamp.org/thomascherickal) |
 | 🏢 MuckRack Portfolio | [muckrack.com/thomascherickal](https://muckrack.com/thomascherickal) |
 | 📧 Kit Newsletter | [thomascherickal.kit.com](https://thomascherickal.kit.com) |
 | 💡 LeetCode Profile | [leetcode.com/u/thomascherickal](https://leetcode.com/u/thomascherickal) |
 | 🏆 HackerRank Profile | [hackerrank.com/profile/thomascherickal](https://hackerrank.com/profile/thomascherickal) |
 | 🤓 GeeksforGeeks Profile | [geeksforgeeks.org/profile/thomascherickal](https://www.geeksforgeeks.org/profile/thomascherickal) |
-| 👩‍💻 DEV.to Space | [dev.to/thomascherickal](https://dev.to/thomascherickal) |
-| 📰 Contently Portfolio | [thomascherickal.contently.com](https://thomascherickal.contently.com) |
 | 📄 HubPages Blog | [hubpages.com/@thomascherickal](https://hubpages.com/@thomascherickal) |
 | ☕ Ko-fi Tips | [ko-fi.com/thomascherickal](https://ko-fi.com/thomascherickal) |
 | 🃏 Carrd Landing Page | [thomascherickal.carrd.co](https://thomascherickal.carrd.co/) |
-| 🧩 Coderbyte Profile | [coderbyte.com/profile/thomascherickal](https://coderbyte.com/profile/thomascherickal) |
-| ⚔️ Codewars Clan | [codewars.com/users/thomascherickal](https://www.codewars.com/users/thomascherickal) |
-| 🌍 HackerEarth Profile | [hackerearth.com/@thomascherickal](https://www.hackerearth.com/@thomascherickal/) |
 | 🏅 CodersRank Profile | [profile.codersrank.io/user/thomascherickal](https://profile.codersrank.io/user/thomascherickal/) |
-| 🥷 Code 360 Account | [naukri.com/code360/profile/thomascherickal](https://www.naukri.com/code360/profile/thomascherickal) |
 
 
 ---
