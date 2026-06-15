@@ -95,13 +95,7 @@
             border-radius: 2px
         }
 
-        #bg-canvas {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-            opacity: 0.45
-        }
+
 
         nav {
             position: fixed;
@@ -1316,7 +1310,6 @@
 
 <body>
 
-    <canvas id="bg-canvas"></canvas>
 
     <nav>
         <a href="#" class="nav-brand">Thomas Cherickal</a>
@@ -1484,8 +1477,7 @@
                             class="tech-tag highlight">Mojo</span><span class="tech-tag">JavaScript</span><span
                             class="tech-tag">HTML/CSS</span><span class="tech-tag">SQL</span><span
                             class="tech-tag">Bash</span><span class="tech-tag">C</span><span
-                            class="tech-tag">C++</span><span class="tech-tag">C#</span><span
-                            class="tech-tag">Julia</span><span class="tech-tag">Java</span><span class="tech-tag">Dart
+                            class="tech-tag">Julia</span><span class="tech-tag">Dart
                             &amp; Flutter</span></div>
                 </div>
                 <div class="tech-category">
@@ -1501,7 +1493,7 @@
                     <div class="tech-tags"><span class="tech-tag highlight">LM Studio</span><span
                             class="tech-tag highlight">Ollama</span><span class="tech-tag">OpenRouter</span><span
                             class="tech-tag">llama.cpp</span><span class="tech-tag">Open WebUI</span>
-                        <span class="tech-tag">Gemma 4 E42B</span>
+                        <span class="tech-tag">Gemma 4 E2B</span>
                     </div>
                 </div>
                 <div class="tech-category">
@@ -1542,8 +1534,8 @@
                     <div class="tech-tags"><span class="tech-tag highlight">HTML / CSS</span><span
                             class="tech-tag highlight">SEO</span><span class="tech-tag highlight">AEO</span><span
                             class="tech-tag">GEO</span><span class="tech-tag">JSON-LD</span><span class="tech-tag">Open
-                            Graph</span><span class="tech-tag">Responsive Design</span><span class="tech-tag">Tailwind
-                            CSS</span><span class="tech-tag">Wix</span><span class="tech-tag">Framer</span><span
+                            Graph</span><span class="tech-tag">Responsive Design</span><span
+                            class="tech-tag">Wix</span><span class="tech-tag">Framer</span><span
                             class="tech-tag">SITE123</span><span class="tech-tag">Carrd</span></div>
                 </div>
                 <div class="tech-category">
@@ -2230,21 +2222,7 @@ client = <span class="ty">OpenAI</span>(
     </main>
 
     <script>
-        (function () {
-            const canvas = document.getElementById('bg-canvas');
-            const ctx = canvas.getContext('2d');
-            let W, H, particles = [];
-            function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight }
-            function rp() { return { x: Math.random() * W, y: Math.random() * H, r: Math.random() * 1.5 + 0.3, a: Math.random() * 0.6 + 0.1, hue: Math.random() < 0.6 ? 195 : 42 } }
-            function init() { particles = []; const c = Math.floor(W * H / 14000); for (let i = 0; i < c; i++)particles.push(rp()) }
-            function draw() {
-                ctx.clearRect(0, 0, W, H);
-                for (let i = 0; i < particles.length; i++) { for (let j = i + 1; j < particles.length; j++) { const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y, d = Math.sqrt(dx * dx + dy * dy); if (d < 120) { ctx.beginPath(); ctx.strokeStyle = `hsla(195,100%,60%,${0.06 * (1 - d / 120)})`; ctx.lineWidth = 0.5; ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y); ctx.stroke() } } }
-                particles.forEach(p => { ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fillStyle = `hsla(${p.hue},100%,65%,${p.a})`; ctx.fill() });
-            }
-            resize(); init(); draw();
-            window.addEventListener('resize', () => { resize(); init(); draw() });
-        })();
+
 
         const revealEls = document.querySelectorAll('.reveal');
         const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target) } }) }, { threshold: 0.08 });
