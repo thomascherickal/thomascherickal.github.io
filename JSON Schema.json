@@ -8,7 +8,7 @@
       "url": "https://thomascherickal.github.io/",
       "name": "The Digital Futurist",
       "alternateName": "Thomas Cherickal",
-      "description": "The Digital Futurist — building Generative AI, SLMs, LLMs, Agentic AI Tools, Local AI, AI Agents, Quantum Computing, Blockchain, Web3, Python, Golang, Rust, and Mojo. Generative AI Engineer, Open-Source Developer, SLM Engineer, Local AI Engineer, Python AI Engineer, Rust AI Engineer, Researcher. I am also fluent in Claude Code and Google Antigravity.",
+      "description": "The Digital Futurist — building Generative AI, SLMs, LLMs, Agentic AI Tools, Local AI, AI Agents, Quantum Computing, Blockchain, Web3, Python, Rust. Generative AI Engineer, Open-Source Developer, SLM Engineer, Local AI Engineer, Python AI Engineer, Rust AI Engineer, Researcher. I am also fluent in Claude Code and Google Antigravity.",
       "inLanguage": "en-US",
       "publisher": {
         "@id": "https://thomascherickal.github.io/#organization"
@@ -60,20 +60,16 @@
         "Local AI Development",
         "Generative AI Development",
         "Python AI Engineering",
-        "Golang AI Engineering",
         "Rust AI Engineering",
-        "Mojo AI Engineering",
         "AI Consulting",
         "AI Mentoring",
         "Website Creation",
-        "Online Brand Building",
+        "LLM Engineering",
         "Blockchain and AI",
         "Web3 and AI",
         "Agentic AI Tools",
         "Python",
-        "Golang",
         "Rust",
-        "Mojo",
         "Quantum Computing",
         "Quantum AI",
         "Quantum Use-Cases"
@@ -175,7 +171,7 @@
       "mainEntityOfPage": {
         "@id": "https://thomascherickal.github.io/#profilepage"
       },
-      "description": "Generative AI Engineer, SLM Engineer, Rust AI Engineer, Local AI Engineer, Generative AI Consultant, AI Tools Expert, Prolific Technical Content Writer, Independent Research Blogger, with expertise in AI strategy, AI Agent development, Local LLMs, SLM deployment, AI Engineering, and Career Mentoring. Specializing in open-source Generative AI, SLMs, LLMs, AI Agents, Quantum Computing, QAI, Blockchain, Web3, Python AI Engineer, Golang AI Engineer, Rust AI Engineer, and Mojo AI Engineer.",
+      "description": "Generative AI Engineer, SLM Engineer, Rust AI Engineer, Local AI Engineer, Generative AI Consultant, AI Tools Expert, Prolific Technical Content Writer, Independent Research Blogger, with expertise in AI strategy, AI Agent development, Local LLMs, SLM deployment, AI Engineering, and Career Mentoring. Specializing in open-source Generative AI, SLMs, LLMs, AI Agents, Quantum Computing, QAI, Blockchain, Web3, Python AI Engineer, and Rust AI Engineer.",
       "image": {
         "@id": "https://thomascherickal.github.io/#primaryimage"
       },
@@ -222,13 +218,13 @@
           "@type": "Occupation",
           "name": "Generative AI Consultant",
           "description": "Provides Generative AI consulting for students and professionals to upskill in AI, build job-ready capabilities, and become future-proof in an AI-driven world.",
-          "skills": "Generative AI, AI Consulting, Career Mentoring, Online Brand Building, Upskilling Roadmaps"
+          "skills": "Generative AI, AI Consulting, Career Mentoring, LLM Engineering, Upskilling Roadmaps"
         },
         {
           "@type": "Occupation",
           "name": "Generative AI Engineer",
-          "description": "Builds open-source Generative AI projects in Python, Golang, Rust, and Mojo that implement leading LLM and SLM solutions locally, delivering enduring commercial value.",
-          "skills": "Python, Golang, Rust, Mojo, Generative AI, Rust Engineering, Open Source Development"
+          "description": "Builds open-source Generative AI projects in Python and Rust that implement leading LLM and SLM solutions locally, delivering enduring commercial value.",
+          "skills": "Python, Rust, Generative AI, Rust Engineering, Open Source Development"
         },
         {
           "@type": "Occupation",
@@ -268,9 +264,9 @@
         },
         {
           "@type": "Occupation",
-          "name": "Online Brand Builder",
-          "description": "Mentors individuals at all career stages to build an online brand with deep online visibility across platforms.",
-          "skills": "Personal Branding, Multi-platform Publishing, SEO, Content Strategy"
+          "name": "LLM Engineer",
+          "description": "Designs, fine-tunes, and deploys Large Language Models, optimizing inference workloads and orchestrating advanced RAG architectures.",
+          "skills": "LLM Fine-tuning, RAG Architectures, Model Evaluation, Inference Optimization"
         },
         {
           "@type": "Occupation",
@@ -298,15 +294,13 @@
         "Web3 AI",
         "Cybersecurity",
         "Python",
-        "Golang",
         "Rust",
-        "Mojo",
         "Open Source Software",
         "Technical Content Writing",
         "AI Consulting for SLMs",
         "Open Source Development",
         "AI Training and Mentoring",
-        "Online Brand Building",
+        "LLM Engineering",
         "Career Strategy",
         "SLM Engineering",
         "Rust Engineering"
@@ -945,9 +939,9 @@
       "@type": "ItemList",
       "@id": "https://thomascherickal.github.io/#software-repos",
       "name": "Open Source Developer Showcase — Thomas Cherickal",
-      "description": "Upcoming open-source repositories by Thomas Cherickal spanning Rust, Python, Go, and Mojo for AI, LLM infrastructure, and systems programming.",
+      "description": "Upcoming open-source repositories by Thomas Cherickal spanning Rust and Python for AI, LLM infrastructure, and systems programming.",
       "itemListOrder": "https://schema.org/ItemListOrderDescending",
-      "numberOfItems": 12,
+      "numberOfItems": 9,
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -1070,51 +1064,6 @@
             "description": "Long-term episodic and semantic memory layer for AI agents using LanceDB and Nomic embeddings — pluggable into LangChain, LlamaIndex, or any agentic framework.",
             "codeRepository": "https://github.com/thomascherickal/agent-memory-kit",
             "programmingLanguage": "Python",
-            "author": {
-              "@id": "https://thomascherickal.github.io/#person"
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 10,
-          "item": {
-            "@type": "SoftwareSourceCode",
-            "name": "mojo-python-bridge",
-            "description": "Seamless Python-Mojo interop toolkit — call Mojo kernels from Python notebooks, share NumPy-compatible buffers, and hot-swap critical inference paths for 10-50x speedups.",
-            "codeRepository": "https://github.com/thomascherickal/mojo-python-bridge",
-            "programmingLanguage": [
-              "Python",
-              "Mojo"
-            ],
-            "author": {
-              "@id": "https://thomascherickal.github.io/#person"
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 11,
-          "item": {
-            "@type": "SoftwareSourceCode",
-            "name": "llm-gateway",
-            "description": "Production-grade OpenAI-compatible API gateway in Go — multi-tenant auth, request logging, model aliasing, streaming proxying, and Prometheus metrics out of the box.",
-            "codeRepository": "https://github.com/thomascherickal/llm-gateway",
-            "programmingLanguage": "Go",
-            "author": {
-              "@id": "https://thomascherickal.github.io/#person"
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 12,
-          "item": {
-            "@type": "SoftwareSourceCode",
-            "name": "go-agent-sdk",
-            "description": "Lightweight Go SDK for building tool-calling AI agents — structured outputs, parallel tool execution, retry logic, and first-class support for OpenRouter and Ollama backends.",
-            "codeRepository": "https://github.com/thomascherickal/go-agent-sdk",
-            "programmingLanguage": "Go",
             "author": {
               "@id": "https://thomascherickal.github.io/#person"
             }

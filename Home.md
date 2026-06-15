@@ -38,16 +38,16 @@ I operate across multiple disciplines — from deep technical development to str
     *Designing, building, and deploying intelligent Generative AI systems, LLM-powered applications, and custom agentic workflows. Using AI Tools to optimize workflows programmatically.*
 
 *   🦀 **Rust AI Engineer**
-    *Building high-performance, memory-safe AI systems and systems tooling in Rust — from writing optimized tokenizers and tensor operations to developing blazing-fast local LLM runtimes, custom Python/Mojo bindings, and SIMD-accelerated libraries.*
+    *Building high-performance, memory-safe AI systems and systems tooling in Rust — from writing optimized tokenizers and tensor operations to developing blazing-fast local LLM runtimes, custom Python bindings, and SIMD-accelerated libraries.*
 
 *   ⚡ **SLM Engineer**
     *Optimizing Small Language Models for local inference on constrained hardware. Experienced with LM Studio, Ollama, llama.cpp, Gemma 4 E4B, and Qwen — tuning quantized models for CPU-only environments with minimal VRAM.*
 
 *   💻 **Open Source Developer**
-    *Building production-ready intelligent systems in Rust, Python, and Golang — including local LLM orchestration pipelines, AI agent frameworks, and SLM inference engines optimized for constrained hardware.*
+    *Building production-ready intelligent systems in Rust and Python — including local LLM orchestration pipelines, AI agent frameworks, and SLM inference engines optimized for constrained hardware.*
 
 *   🤖 **AI Mentor & Trainer**
-    *Working 1-on-1 with individuals and teams to accelerate adoption of frontier AI tools — prompt engineering, local LLM setup, agentic workflows, AI career development, and online brand building.*
+    *Working 1-on-1 with individuals and teams to accelerate adoption of frontier AI tools — prompt engineering, local LLM setup, agentic workflows, AI career development, and LLM engineering.*
 
 *   🔬 **Independent Research Blogger**
     *Investigating the latest in LLM benchmarks, agentic frameworks, quantum AI intersections, open-source tooling, and hardware acceleration under the brand *The Digital Futurist*.*
@@ -58,8 +58,8 @@ I operate across multiple disciplines — from deep technical development to str
 *   🌐 **Website Builder**
     *Designing and deploying professional websites across every major platform — WordPress (thomascherickal.com), Wix, Framer, SITE123, GitHub Pages, and more. From landing pages to full personal brand sites with SEO, AEO, and GEO baked in.*
 
-*   🌍 **Online Brand Builder**
-    *Building digital visibility for professionals and students across LinkedIn, HackerNoon, Substack, GitHub, and personal sites — from zero to recognized voice in their niche.*
+*   🌍 **LLM Engineer**
+    *Designing and fine-tuning Large Language Models, optimizing inference workloads, implementing robust evaluation frameworks, and orchestrating RAG systems to deliver state-of-the-art enterprise AI solutions.*
 
 
 ---
@@ -102,11 +102,7 @@ I operate across multiple disciplines — from deep technical development to str
 | 🦀 **[ai-cli](https://github.com/thomascherickal/ai-cli)** | `Rust` `CLI Tool` `Upcoming` | Terminal-native AI assistant built in Rust — streaming completions, tool-calling, local model support via llama.cpp bindings, and a plugin architecture for custom commands. |
 | 🐍 **[neural-bench](https://github.com/thomascherickal/neural-bench)** | `Python` `Benchmarks` `Upcoming` | Automated benchmarking suite for local LLM inference — latency, throughput, TTFT, and quality metrics with auto hardware detection and interactive leaderboard dashboard. |
 | 🐍 **[agent-memory-kit](https://github.com/thomascherickal/agent-memory-kit)** | `Python` `Agents` `Upcoming` | Long-term episodic and semantic memory layer for AI agents using LanceDB and Nomic embeddings — pluggable into LangChain, LlamaIndex, or any agentic framework. |
-| 🐍 **[mojo-python-bridge](https://github.com/thomascherickal/mojo-python-bridge)** | `Python` `Mojo` `Upcoming` | Seamless Python ↔ Mojo interop toolkit — call Mojo kernels from Python notebooks, share NumPy-compatible buffers, and hot-swap critical inference paths for 10–50× speedups. |
-| 🐹 **[llm-gateway](https://github.com/thomascherickal/llm-gateway)** | `Go` `API Gateway` `Upcoming` | Production-grade OpenAI-compatible API gateway in Go — multi-tenant auth, request logging, model aliasing, streaming proxying, and Prometheus metrics out of the box. |
-| 🐹 **[go-agent-sdk](https://github.com/thomascherickal/go-agent-sdk)** | `Go` `Agents` `Upcoming` | Lightweight Go SDK for building tool-calling AI agents — structured outputs, parallel tool execution, retry logic, and first-class support for OpenRouter and Ollama backends. |
-| 🔥 **[mojo-tensor-ops](https://github.com/thomascherickal/mojo-tensor-ops)** | `Mojo` `ML Kernels` `Upcoming` | GPU-accelerated tensor operations library written in Mojo — fused matmul, flash attention kernels, and BFloat16 support targeting MAX Engine and NVIDIA consumer GPUs. |
-| 🔥 **[mojo-llm-kernels](https://github.com/thomascherickal/mojo-llm-kernels)** | `Mojo` `LLM Ops` `Upcoming` | Hand-tuned Mojo implementations of LLM attention, KV-cache, and RoPE embeddings — designed as drop-in replacements for CUDA ops on Modular MAX, with hardware-adaptive dispatch. |
+
 
 
 ### 📂 Code Snippets
@@ -161,51 +157,6 @@ def benchmark_model(model_id: str, prompts: list):
 
 </details>
 
-<details>
-<summary><b>View llm_gateway.go (Go)</b></summary>
-
-```go
-// OpenAI-compatible gateway with multi-tenant auth
-package main
-
-import (
-  "net/http"
-  "net/http/httputil"
-)
-
-func ProxyHandler(w http.ResponseWriter,
-                      r *http.Request) {
-  tenant := r.Header.Get("X-Tenant-ID")
-  model  := resolveModel(tenant, r)
-  r.Header.Set("X-Model-Override", model)
-
-  proxy := &httputil.ReverseProxy{
-    Director: buildDirector(tenant),
-  }
-  proxy.ServeHTTP(w, r)
-}
-```
-
-</details>
-
-<details>
-<summary><b>View tensor_ops.mojo (Mojo)</b></summary>
-
-```mojo
-# Fused matmul kernel — MAX Engine target
-from tensor import Tensor, TensorShape
-from algorithm import vectorize, parallelize
-
-fn fused_matmul[dtype: DType](
-  a: Tensor[dtype], b: Tensor[dtype]
-) -> Tensor[dtype]:
-  var out = Tensor[dtype](TensorShape(
-    a.shape()[0], b.shape()[1]))
-  parallelize[compute_row](a.shape()[0])
-  return out
-```
-
-</details>
 
 <details>
 <summary><b>View vector_forge.rs (Rust)</b></summary>
