@@ -932,6 +932,9 @@
                 <option value="LinkedIn (Faster Response)">LinkedIn (Faster Response)</option>
                 <option value="Email Only">Email Only</option>
               </select>
+              <span id="linkedin-note" style="font-size: 0.72rem; color: var(--gold); font-family: var(--font-mono); margin-top: 0.3rem; display: block; line-height: 1.4;">
+                ⚠️ Note: Direct LinkedIn messaging requires manual auth. Selecting this sends an email copy and prompts you to connect on LinkedIn.
+              </span>
             </div>
 
             <div class="form-group" style="display: flex; flex-direction: column; flex-grow: 1; margin-bottom: 0.5rem;">
@@ -1068,6 +1071,18 @@
     // Contact Form submission via fetch/AJAX
     const contactForm = document.getElementById('contact-form-el');
     const formStatus = document.getElementById('form-status');
+    const destinationSelect = document.getElementById('contact-destination');
+    const linkedinNote = document.getElementById('linkedin-note');
+
+    if (destinationSelect && linkedinNote) {
+      destinationSelect.addEventListener('change', () => {
+        if (destinationSelect.value.includes('LinkedIn')) {
+          linkedinNote.style.display = 'block';
+        } else {
+          linkedinNote.style.display = 'none';
+        }
+      });
+    }
 
     if (contactForm) {
       contactForm.addEventListener('submit', async (e) => {
@@ -1081,6 +1096,7 @@
         submitBtnText.textContent = 'Sending...';
 
         const formData = new FormData(contactForm);
+        const destination = formData.get('send_to') || '';
 
         try {
           const response = await fetch(contactForm.action, {
@@ -1095,9 +1111,17 @@
 
           if (response.ok) {
             formStatus.className = 'form-status success';
-            formStatus.textContent = '✨ Message sent successfully! I will reach out soon.';
+            if (destination.includes('LinkedIn')) {
+              formStatus.innerHTML = '✨ Message sent to Email! Since LinkedIn requires authentication, please also visit my <a href="https://linkedin.com/in/thomascherickal" target="_blank" style="color: var(--cyan); text-decoration: underline; font-weight: bold;">LinkedIn profile</a> to send a message manually.';
+            } else {
+              formStatus.textContent = '✨ Message sent successfully! I will reach out soon.';
+            }
             formStatus.style.display = 'block';
             contactForm.reset();
+            if (destinationSelect && linkedinNote) {
+              // Reset the note display state based on the initial value
+              linkedinNote.style.display = destinationSelect.value.includes('LinkedIn') ? 'block' : 'none';
+            }
           } else {
             throw new Error(result.message || 'Submission failed.');
           }
