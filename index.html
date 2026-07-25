@@ -745,6 +745,39 @@
   </main>
 
   <script>
+    // Mobile Nav Toggle & Click Handling
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    if (navToggle) {
+      // Auto-close menu when clicking any nav link
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (navToggle.checked) {
+            navToggle.checked = false;
+            document.body.style.overflow = '';
+          }
+        });
+      });
+
+      // Toggle body scroll lock when mobile menu is active
+      navToggle.addEventListener('change', () => {
+        if (navToggle.checked) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      });
+
+      // Close menu on Escape key press
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navToggle.checked) {
+          navToggle.checked = false;
+          document.body.style.overflow = '';
+        }
+      });
+    }
+
     // Back to Top Button
     const backTopBtn = document.getElementById('backTop');
     if (backTopBtn) {
