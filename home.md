@@ -227,7 +227,7 @@ How to understand and build emerging technologies.
 - [📊 Kaggle (kaggle.com/thomascherickal)](https://www.kaggle.com/thomascherickal)
 - [🏅 CodersRank (profile.codersrank.io/user/thomascherickal)](https://profile.codersrank.io/user/thomascherickal/)
 - [🤓 Geek4Geeks (geeksforgeeks.org/profile/thomascherickal)](https://www.geeksforgeeks.org/profile/thomascherickal)
-- [💸 PayPal (paypal.me/9884452724)](https://paypal.me/9884452724)
+- [📄 HubPages (hubpages.com/@thomascherickal)](https://hubpages.com/@thomascherickal)
 - [🧠 Deep-ML (deep-ml.com/profile/thomascherickal)](https://www.deep-ml.com/profile/thomascherickal)
 - [🏆 HackerRank (hackerrank.com/profile/thomascherickal)](https://hackerrank.com/profile/thomascherickal)
 - [💡 LeetCode (leetcode.com/u/thomascherickal)](https://leetcode.com/u/thomascherickal)
