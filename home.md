@@ -38,7 +38,7 @@ I architect frontier AI systems and deliver hands-on executive briefings and tec
 
 ## Roles & Capabilities
 
-Empowering boards, executives, engineering teams, and professionals across Generative AI, Local LLM Consulting, and Emerging Tech Reviews.
+Empowering boards, executives, engineering teams, and professionals across Generative AI, LLM & SLM Engineering, and Local AI Consulting.
 
 ### 🎓 Generative AI Training
 Tiered, hands-on training programs for Board members, CXOs, Executive Leaders, Engineering Teams, and 1:1 Professionals. Master GenAI strategy, Claude Code, Copilot, Gemini workflows, and deployed agentic systems.
@@ -46,14 +46,17 @@ Tiered, hands-on training programs for Board members, CXOs, Executive Leaders, E
 ### ⚡ Local AI Consulting
 Designing, deploying, and optimizing privacy-preserving Local LLMs & SLMs (LM Studio, Ollama, llama.cpp, Qwen, Gemma) on local hardware. Architecture reviews and strategy for migrating companies to AI.
 
-### 🔮 Emerging Technology Reviews
-Strategic briefings and deep technical evaluations on Quantum Computing, post-quantum crypto risk, AGI trajectory, ASI predictions, and action plans for surviving the AI-first world.
+### 🎯 SLM Engineer
+Fine-tuning, quantizing, and deploying lightweight Small Language Models (Qwen, Gemma, Phi, Llama) for high-speed, resource-efficient edge and local AI applications.
 
 ### 🏢 Generative AI Consultant
 Delivering end-to-end AI transformation: process automation, website creation, custom AI app development, SEO/AEO/GEO strategy, and enterprise AI adoption roadmaps.
 
 ### 🤖 AI Mentor & Coach
 Working 1-on-1 via Topmate with individuals and teams to accelerate adoption of frontier AI tools — prompt engineering, local LLM setup, agentic workflows, and AI career development.
+
+### 🧠 LLM Engineer
+Architecting scalable Large Language Model solutions, RAG pipelines, custom agentic workflows, prompt engineering frameworks, and enterprise model integration.
 
 ### 🦀 Rust Systems Engineer
 Building ultra-performant, memory-safe backend services, CLI tools, and async network applications using Rust, Cargo, Tokio, and WebAssembly.
@@ -69,9 +72,6 @@ Crafting responsive, high-performance web experiences, modern CSS glassmorphism 
 
 ### 🚀 Deployment
 Deploying web applications, model demos, and automated workflows across GitHub Pages, Netlify, HuggingFace Spaces, and Kaggle.
-
-### 🖥️ Website Creation
-Designing, building, and deploying modern web solutions using WordPress, Wix, Framer, Google AI Studio, and SITE123.
 
 ---
 
