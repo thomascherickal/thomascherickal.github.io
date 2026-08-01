@@ -146,7 +146,10 @@
           "IBM Qiskit",
           "PennyLane",
           "Post-Quantum Cryptography",
-          "Technical SEO"
+          "Technical SEO",
+          "Diátaxis Framework",
+          "Diátaxis Documentation Methodology",
+          "Technical Documentation Architecture"
         ],
         "sameAs": [
           "https://thomascherickal.com",
@@ -172,6 +175,75 @@
           "https://patreon.com/thomascherickal",
           "https://thomascherickal.gumroad.com",
           "https://topmate.io/thomascherickal"
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://thomascherickal.github.io/#diataxis-framework",
+        "name": "Diátaxis Documentation Framework Components",
+        "description": "Systematic documentation architecture and components using Daniele Procida's Diátaxis framework and Gavin Didrichsen's diataxis CLI tool.",
+        "numberOfItems": 10,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Tutorials",
+            "description": "Learning-oriented, practical step-by-step lessons for newcomers to achieve immediate success with a software system through hands-on exercises."
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "How-To Guides",
+            "description": "Problem-oriented recipes guiding developers through real-world tasks, specific troubleshooting steps, and operational procedures."
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Reference Documentation",
+            "description": "Information-oriented, precise technical specifications, API parameters, schema definitions, and authoritative system facts."
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Explanation",
+            "description": "Understanding-oriented background articles exploring architectural design decisions, domain context, and high-level concepts."
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Architecture Decision Records (ADRs)",
+            "description": "Decision-oriented records capturing key architectural choices, context, trade-offs, and long-term technical consequences chronologically."
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Project Briefs",
+            "description": "Scope-oriented planning documents defining vision, key deliverables, success metrics, and stakeholder alignment before engineering execution."
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "Pull Request Summaries",
+            "description": "Review-oriented documentation providing code review context, verification steps, and testing proof for seamless pull request evaluation."
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "name": "5-Why Root-Cause Analyses",
+            "description": "Diagnostic-oriented incident post-mortems systematically tracing technical failures back to underlying systemic root causes."
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "name": "Handover Documents",
+            "description": "Transition-oriented operational transfer guides ensuring seamless domain knowledge handoff and runbooks across engineering teams."
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "name": "Developer Notes",
+            "description": "Context-oriented field notes, scratchpad observations, and meeting summaries capturing ongoing technical discovery and team syncs."
+          }
         ]
       }
     ]
@@ -217,15 +289,16 @@
         <span class="role-chip gold">Developer Documentation</span>
         <span class="role-chip cyan">Generative AI Systems</span>
         <span class="role-chip violet">Quantum Systems</span>
-        <span class="role-chip green">Developer Education</span>
+        <span class="role-chip green">End-User Education</span>
         <span class="role-chip red">Python-Verified Content</span>
       </div>
       <p class="hero-bio">PG in CS from Loyola College and an Established Online Technical Writer. 500+ published
         long-form technical articles across 10+ platforms since 2020. I produce documentation, deep dives, tutorials,
         and courses for Generative AI and quantum companies. Hands-on with LLMs and agent frameworks (Claude Code,
-        Google Antigravity, Ollama, LM Studio, Unsloth Studio, llama.cpp) and quantum SDKs (IBM Qiskit, PennyLane, QML).
-        Deep Python fluency is the connective thread across both domains — every code sample and quantum circuit is
-        executed and verified before publication. Fully remote and asynchronous.</p>
+        Google Antigravity, LM Studio, Unsloth Studio, llama.cpp) and Quantum SDKs (IBM Qiskit, Quantinuum Tech
+        Stack, PennyLane, QAI, QML). Fully remote and asynchronous. Skilled with Diataxis and building code-verified
+        technical content with Python and 5+ years of freelancing experience, 3+ years of that in Generative AI and
+        Quantum Computing.</p>
       <div class="hero-ctas">
         <a href="portfolio.html" class="btn btn-primary">📚 Read the Portfolio →</a>
         <a href="services.html#contact" class="btn btn-gold">📝 Commission Content →</a>
@@ -361,6 +434,157 @@
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;">
         <a href="portfolio.html" class="btn btn-primary">See the Work →</a>
         <a href="services.html#contact" class="btn btn-gold">Commission a Piece →</a>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- DIÁTAXIS DOCUMENTATION FRAMEWORK -->
+    <section class="home-nav-section reveal" id="diataxis">
+      <div class="section-header">
+        <p class="section-label">Documentation Architecture</p>
+        <h2 class="section-title">The <span class="accent-gold">Diátaxis</span> Framework &amp; Scaffolding</h2>
+        <p class="section-sub" style="max-width:820px;margin:1.25rem auto 0;line-height:1.8;">
+          Created by Daniele Procida and expanded by Gavin Didrichsen's open-source <code>diataxis</code> CLI tool,
+          <strong>Diátaxis</strong> is a systematic technical documentation framework that structures software docs
+          around
+          four core user needs: learning, problem-solving, information lookup, and deep understanding.
+        </p>
+        <p style="font-size:0.95rem;color:var(--text-secondary);max-width:820px;margin:1rem auto 0;line-height:1.8;">
+          By maintaining strict boundaries between these modes and extending them with operational engineering artifacts
+          like ADRs,
+          Project Briefs, and 5-Why Analyses, developer documentation remains maintainable, user-centric, and clear.
+          Explore the 10 core components of Diátaxis scaffolding below.
+        </p>
+        <p style="font-size:0.92rem;color:var(--cyan);margin-top:1.25rem;">
+          Reference Implementation: <a href="https://github.com/thomascherickal/diataxis/tree/main/lib/diataxis"
+            target="_blank" rel="noopener"
+            style="color:var(--gold);text-decoration:underline;font-weight:600;">thomascherickal/diataxis/lib/diataxis
+            ↗</a>
+        </p>
+      </div>
+
+      <div class="home-nav-grid"
+        style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;margin-top:2.5rem;">
+        <!-- Card 1: Tutorials -->
+        <a href="https://github.com/thomascherickal/diataxis/blob/main/features/document_types.feature" target="_blank"
+          rel="noopener" class="home-nav-card glow-cyan">
+          <div>
+            <span class="home-nav-icon">🎓</span>
+            <h3 class="home-nav-title">1. Tutorials</h3>
+            <p class="home-nav-desc">Learning-oriented, practical step-by-step lessons for newcomers to achieve
+              immediate success with a software system through hands-on exercises.</p>
+          </div>
+          <span class="home-nav-link">Explore Tutorials →</span>
+        </a>
+
+        <!-- Card 2: How-To Guides -->
+        <a href="https://github.com/thomascherickal/diataxis/blob/main/docs/how_to_add_a_new_document_template.md"
+          target="_blank" rel="noopener" class="home-nav-card glow-gold">
+          <div>
+            <span class="home-nav-icon">🛠️</span>
+            <h3 class="home-nav-title">2. How-To Guides</h3>
+            <p class="home-nav-desc">Problem-oriented recipes guiding developers through real-world tasks, specific
+              troubleshooting steps, and operational procedures.</p>
+          </div>
+          <span class="home-nav-link">Explore How-To Guides →</span>
+        </a>
+
+        <!-- Card 3: Reference -->
+        <a href="https://github.com/thomascherickal/diataxis/blob/main/lib/diataxis/document_types.rb" target="_blank"
+          rel="noopener" class="home-nav-card glow-cyan">
+          <div>
+            <span class="home-nav-icon">📖</span>
+            <h3 class="home-nav-title">3. Reference Docs</h3>
+            <p class="home-nav-desc">Information-oriented, precise technical specifications, API parameters, schema
+              definitions, and authoritative system facts.</p>
+          </div>
+          <span class="home-nav-link">Explore Reference →</span>
+        </a>
+
+        <!-- Card 4: Explanation -->
+        <a href="https://github.com/thomascherickal/diataxis/blob/main/docs/adr/0001-adopt-diataxis-documentation-framework.md"
+          target="_blank" rel="noopener" class="home-nav-card glow-gold">
+          <div>
+            <span class="home-nav-icon">💡</span>
+            <h3 class="home-nav-title">4. Explanation</h3>
+            <p class="home-nav-desc">Understanding-oriented background articles exploring architectural design
+              decisions, domain context, and high-level concepts.</p>
+          </div>
+          <span class="home-nav-link">Explore Explanation →</span>
+        </a>
+
+        <!-- Card 5: Architecture Decision Records (ADRs) -->
+        <a href="https://github.com/thomascherickal/diataxis/tree/main/docs/adr" target="_blank" rel="noopener"
+          class="home-nav-card glow-cyan">
+          <div>
+            <span class="home-nav-icon">🏛️</span>
+            <h3 class="home-nav-title">5. ADRs</h3>
+            <p class="home-nav-desc">Decision-oriented records capturing key architectural choices, context, trade-offs,
+              and long-term technical consequences chronologically.</p>
+          </div>
+          <span class="home-nav-link">Explore ADRs →</span>
+        </a>
+
+        <!-- Card 6: Project Briefs -->
+        <a href="https://github.com/thomascherickal/diataxis/tree/main/docs/_gtd" target="_blank" rel="noopener"
+          class="home-nav-card glow-gold">
+          <div>
+            <span class="home-nav-icon">📋</span>
+            <h3 class="home-nav-title">6. Project Briefs</h3>
+            <p class="home-nav-desc">Scope-oriented planning documents defining vision, key deliverables, success
+              metrics, and stakeholder alignment before engineering execution.</p>
+          </div>
+          <span class="home-nav-link">Explore Project Briefs →</span>
+        </a>
+
+        <!-- Card 7: Pull Request Summaries -->
+        <a href="https://github.com/thomascherickal/diataxis/blob/main/docs/adr/0005-use-purpose-driven-document-templates.md"
+          target="_blank" rel="noopener" class="home-nav-card glow-cyan">
+          <div>
+            <span class="home-nav-icon">🔀</span>
+            <h3 class="home-nav-title">7. PR Summaries</h3>
+            <p class="home-nav-desc">Review-oriented documentation providing code review context, verification steps,
+              and testing proof for seamless pull request evaluation.</p>
+          </div>
+          <span class="home-nav-link">Explore PR Summaries →</span>
+        </a>
+
+        <!-- Card 8: 5-Why Root-Cause Analyses -->
+        <a href="https://github.com/thomascherickal/diataxis/blob/main/docs/adr/0010-implement-custom-error-handling-system.md"
+          target="_blank" rel="noopener" class="home-nav-card glow-gold">
+          <div>
+            <span class="home-nav-icon">🔍</span>
+            <h3 class="home-nav-title">8. 5-Why Analyses</h3>
+            <p class="home-nav-desc">Diagnostic-oriented incident post-mortems systematically tracing technical failures
+              back to underlying systemic root causes.</p>
+          </div>
+          <span class="home-nav-link">Explore 5-Why Analyses →</span>
+        </a>
+
+        <!-- Card 9: Handover Documents -->
+        <a href="https://github.com/thomascherickal/diataxis/blob/main/docs/adr/0017-obsidian-not-github-is-now-the-primary-reading-surface.md"
+          target="_blank" rel="noopener" class="home-nav-card glow-cyan">
+          <div>
+            <span class="home-nav-icon">🤝</span>
+            <h3 class="home-nav-title">9. Handovers</h3>
+            <p class="home-nav-desc">Transition-oriented operational transfer guides ensuring seamless domain knowledge
+              handoff and runbooks across engineering teams.</p>
+          </div>
+          <span class="home-nav-link">Explore Handovers →</span>
+        </a>
+
+        <!-- Card 10: Developer Notes -->
+        <a href="https://github.com/thomascherickal/diataxis/blob/main/docs/adr/0004-use-linguistic-prefixes-for-document-classification.md"
+          target="_blank" rel="noopener" class="home-nav-card glow-gold">
+          <div>
+            <span class="home-nav-icon">📝</span>
+            <h3 class="home-nav-title">10. Developer Notes</h3>
+            <p class="home-nav-desc">Context-oriented field notes, scratchpad observations, and meeting summaries
+              capturing ongoing technical discovery and team syncs.</p>
+          </div>
+          <span class="home-nav-link">Explore Developer Notes →</span>
+        </a>
       </div>
     </section>
 
