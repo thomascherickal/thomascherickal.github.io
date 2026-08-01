@@ -362,59 +362,67 @@ main {
   border: none;
 }
 
+/* btn-primary: deep teal bg (#005f80) → white text ≈ 6:1 contrast ✓ */
 .btn-primary {
-  background: var(--cyan);
+  background: #005f80;
   color: #ffffff;
   font-weight: 700;
-  box-shadow: 0 4px 24px rgba(0, 212, 255, 0.55), inset 0 1px 0 rgba(255,255,255,0.25);
+  border: 2px solid #00d4ff;
+  box-shadow: 0 4px 24px rgba(0, 212, 255, 0.4), inset 0 1px 0 rgba(255,255,255,0.15);
 }
 
 .btn-primary:hover {
-  background: #40e8ff;
+  background: #007aa3;
   color: #ffffff;
-  box-shadow: 0 8px 36px rgba(0, 212, 255, 0.75), inset 0 1px 0 rgba(255,255,255,0.35);
+  border-color: #40e8ff;
+  box-shadow: 0 8px 36px rgba(0, 212, 255, 0.6), inset 0 1px 0 rgba(255,255,255,0.2);
   transform: translateY(-3px) scale(1.05);
 }
 
+/* btn-outline: near-transparent on dark bg → light text ≈ 18:1 contrast ✓ */
 .btn-outline {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   color: #e8eaf2;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.65);
   font-weight: 600;
 }
 
 .btn-outline:hover {
-  background: rgba(255, 201, 71, 0.18);
-  border-color: var(--gold);
-  color: #ffd770;
+  background: rgba(255, 201, 71, 0.15);
+  border-color: #ffc947;
+  color: #ffffff;
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 6px 28px rgba(255, 201, 71, 0.35);
 }
 
+/* btn-gold: dark amber bg (#8a5200) → white text ≈ 5.7:1 contrast ✓ */
 .btn-gold {
-  background: var(--gold);
+  background: #8a5200;
   color: #ffffff;
   font-weight: 700;
-  box-shadow: 0 4px 24px rgba(255, 201, 71, 0.55), inset 0 1px 0 rgba(255,255,255,0.3);
+  border: 2px solid #ffc947;
+  box-shadow: 0 4px 24px rgba(255, 201, 71, 0.45), inset 0 1px 0 rgba(255,255,255,0.15);
 }
 
 .btn-gold:hover {
-  background: #ffe484;
+  background: #9a5e00;
   color: #ffffff;
-  box-shadow: 0 8px 36px rgba(255, 201, 71, 0.75), inset 0 1px 0 rgba(255,255,255,0.4);
+  border-color: #ffe484;
+  box-shadow: 0 8px 36px rgba(255, 201, 71, 0.65), inset 0 1px 0 rgba(255,255,255,0.2);
   transform: translateY(-3px) scale(1.05);
 }
 
+/* btn-newsletter: dark violet bg → lavender text ≈ 11:1 contrast ✓ */
 .btn-newsletter {
-  background: rgba(139, 92, 246, 0.3);
+  background: rgba(109, 65, 217, 0.35);
   color: #ede9fe;
-  border: 2px solid rgba(139, 92, 246, 0.7);
+  border: 2px solid #8b5cf6;
   font-weight: 600;
   box-shadow: 0 4px 20px rgba(139, 92, 246, 0.35);
 }
 
 .btn-newsletter:hover {
-  background: var(--violet);
+  background: #5b21b6;
   color: #ffffff;
   border-color: #a78bfa;
   box-shadow: 0 8px 36px rgba(139, 92, 246, 0.65);
