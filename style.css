@@ -412,20 +412,29 @@ main {
   transform: translateY(-3px) scale(1.05);
 }
 
-/* btn-commission: black bg (#000) → gold text (#ffc947) ≈ 14:1 contrast ✓ — used for all services.html#contact CTAs */
+/* btn-commission: rich dark gradient → gold text ≈ 14:1 contrast ✓ — services#contact CTAs + Send Message */
 .btn-commission {
-  background: #000000;
+  background: radial-gradient(ellipse at 60% 40%, #1a1200 0%, #0a0800 45%, #000000 100%);
   color: #ffc947;
   font-weight: 700;
   border: 2px solid #ffc947;
-  box-shadow: 0 4px 20px rgba(255, 201, 71, 0.3), inset 0 1px 0 rgba(255, 201, 71, 0.1);
+  box-shadow:
+    0 4px 20px rgba(255, 201, 71, 0.35),
+    inset 0 1px 0 rgba(255, 201, 71, 0.18),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0 12px rgba(255, 201, 71, 0.4);
 }
 
 .btn-commission:hover {
-  background: #0d0d00;
+  background: radial-gradient(ellipse at 60% 40%, #2a1e00 0%, #140f00 45%, #000000 100%);
   color: #ffe484;
   border-color: #ffe484;
-  box-shadow: 0 8px 36px rgba(255, 201, 71, 0.6), inset 0 1px 0 rgba(255, 201, 71, 0.15);
+  box-shadow:
+    0 8px 36px rgba(255, 201, 71, 0.65),
+    0 0 0 1px rgba(255, 228, 132, 0.25),
+    inset 0 1px 0 rgba(255, 228, 132, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0 16px rgba(255, 228, 132, 0.6);
   transform: translateY(-3px) scale(1.05);
 }
 
