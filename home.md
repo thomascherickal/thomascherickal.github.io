@@ -1,25 +1,27 @@
-# Thomas Cherickal — Generative AI Consultant, Emerging Technologies Expert & AI Trainer
+# Thomas Cherickal — Technical Content Engineer & Developer Educator
 
-> `// The Digital Futurist · est. 2020 · chennai, india`
+> `// The Digital Futurist (2020–present) · Chennai, India`
 
 ![Thomas Cherickal](./assets/images/thomas-avatar.webp)
 
-**Generative AI Consultant, Emerging Technologies Expert, Generative AI Trainer**  
-*Premium 1:1 sessions available*
+**Technical Content Engineer & Developer Educator — Generative AI Systems & Quantum Systems**  
+*Documentation, deep dives, and developer education — AI-accelerated, verified in Python.*
 
 ### Core Focus Areas
-- `Generative AI Consultant`
-- `Emerging Tech Expert`
-- `Generative AI Trainer`
-- `Agentic AI & Local LLMs`
+- `Developer Documentation`
+- `Generative AI Systems`
+- `Quantum Systems`
+- `Developer Education`
+- `Python-Verified Content`
 
 ---
 
 ## Bio
-I architect frontier AI systems and deliver hands-on executive briefings and technical training. Leveraging state-of-the-art tools like Claude Code and Google Antigravity, I help leadership teams, engineers, and professionals master Generative AI, local LLM deployments, and custom agentic workflows.
+As a developer with a PG degree in CS and a seasoned online technical writer with a broad online presence, I sit directly in the intersection of both frontier domains — writing developer documentation, tutorials, and deep dives where every Python script, Generative AI project, and Qiskit circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. Hands-on with LLMs and agent frameworks (Claude Code, Google Antigravity, Ollama, LM Studio, llama.cpp) and quantum SDKs (IBM Qiskit, PennyLane, QML). Fully remote and asynchronous.
 
 ### Quick Actions
 - [🌐 Main Site](https://thomascherickal.com)
+- [📚 Portfolio & Case Studies](https://thomascherickal.github.io/portfolio.html)
 - [🐙 GitHub Profile](https://github.com/thomascherickal)
 - [📅 Book 1:1 Consult](https://topmate.io/thomascherickal)
 - [📧 Kit Newsletter](https://thomascherickal.kit.com)
@@ -30,185 +32,143 @@ I architect frontier AI systems and deliver hands-on executive briefings and tec
 | Metric | Value |
 | :--- | :--- |
 | **Articles Published** | 500+ |
-| **Years in Tech** | 8+ |
-| **Platforms** | 7+ |
-| **GitHub Repos** | 2000+ |
+| **Platforms** | 10+ |
+| **Years Technical Writing** | 6+ |
+| **Featured Deep Dives** | 24 |
+| **GitHub Repositories** | 2000+ |
+| **Python-Verified Code** | 100% |
 
 ---
 
-## Roles & Capabilities
+## Core Capabilities (10 Roles)
 
-Empowering boards, executives, engineering teams, and professionals across Generative AI, LLM & SLM Engineering, and Local AI Consulting.
+Empowering Generative AI and Quantum companies with Python-verified technical content and developer education.
 
-### 🎓 Generative AI Training
-Tiered, hands-on training programs for Board members, CXOs, Executive Leaders, Engineering Teams, and 1:1 Professionals. Master GenAI strategy, Claude Code, Copilot, Gemini workflows, and deployed agentic systems.
+### 📝 Developer Documentation
+API references, SDK guides, quickstarts, integration and migration guides, across Generative AI APIs and quantum SDKs.
 
-### ⚡ Local AI Consulting
-Designing, deploying, and optimizing privacy-preserving Local LLMs & SLMs (LM Studio, Ollama, llama.cpp, Qwen, Gemma) on local hardware. Architecture reviews and strategy for migrating companies to AI.
+### ⚛️ Quantum Computing & QML
+Hands-on IBM Qiskit and PennyLane. Quantum machine learning, variational circuits, quantum algorithms (Grover, Shor, VQE, QAOA), explained for working developers.
 
-### 🎯 SLM Engineer
-Fine-tuning, quantizing, and deploying lightweight Small Language Models (Qwen, Gemma, Phi, Llama) for high-speed, resource-efficient edge and local AI applications.
+### 🧠 LLM & Agent Systems
+RAG pipelines, agentic workflows, prompt frameworks, evaluation. Written from hands-on engineering use.
 
-### 🏢 Generative AI Consultant
-Delivering end-to-end AI transformation: process automation, website creation, custom AI app development, SEO/AEO/GEO strategy, and enterprise AI adoption roadmaps.
+### 🔐 Post-Quantum & Quantum Risk
+Post-quantum cryptography risk, the threat model against current encryption algorithms, and enterprise quantum-readiness briefings.
 
-### 🤖 AI Mentor & Coach
-Working 1-on-1 via Topmate with individuals and teams to accelerate adoption of frontier AI tools — prompt engineering, local LLM setup, agentic workflows, and AI career development.
+### ⚡ Local & Private AI
+Ollama, LM Studio, llama.cpp, GGUF, SLM fine-tuning and quantisation for private on-premise execution.
 
-### 🧠 LLM Engineer
-Architecting scalable Large Language Model solutions, RAG pipelines, custom agentic workflows, prompt engineering frameworks, and enterprise model integration.
+### 🐍 Python for AI & Quantum
+Deep Python fluency as the connective layer: PyTorch and FastAPI on the AI side, Qiskit SDK and PennyLane on the quantum side. Every example executed before publication.
 
-### 🦀 Rust Systems Engineer
-Building ultra-performant, memory-safe backend services, CLI tools, and async network applications using Rust, Cargo, Tokio, and WebAssembly.
+### 🎓 Developer Education
+Courses, tutorial series, structured learning paths, and interactive Jupyter notebook modules across both technical domains.
 
-### 🐍 Python AI/ML Engineer
-Engineering frontier AI/ML pipelines, custom LLM agents, fine-tuning workflows, PyTorch/TensorFlow models, and high-performance FastAPI backends.
+### 🔬 Technical Deep Dives
+Long-form explainers on LLM internals, agent architectures, and quantum algorithms. Researched, run, and benchmark-verified.
 
-### 🐹 Go Cloud Engineer
-Architecting cloud-native microservices, containerized infrastructure, high-throughput gRPC services, and Kubernetes systems with Golang.
+### 🤖 AI Tools Expertise
+Daily working fluency across the current frontier toolchain: Claude Code, Google Antigravity, Google AI Studio, NotebookLM, Microsoft Copilot.
 
-### 🌐 HTML/CSS/JavaScript
-Crafting responsive, high-performance web experiences, modern CSS glassmorphism design systems, and rich vanilla JavaScript applications.
-
-### 🚀 Deployment
-Deploying web applications, model demos, and automated workflows across GitHub Pages, Netlify, HuggingFace Spaces, and Kaggle.
+### 🗂️ Content Architecture
+Structuring documentation so it serves both a skimming developer and a retrieving AI agent alike — Diátaxis-pattern scaffolding and schema markup.
 
 ---
 
-## Tech Stack & Domains
+## Tech Stack & Tooling (10 Chip Groups)
 
-- **⚙️ Languages**: Rust, Python, Golang
-- **🤖 AI & ML**: Generative AI, Local LLMs, AI Agents, SLMs, Agentic AI Assistants, Prompt Engineering
-- **🛠️ Local AI Stack**: LM Studio, Ollama, OpenRouter, llama.cpp
-- **📚 Domains**: Quantum Computing, Blockchain, QAI, Cybersecurity, Algorithms, Metaheuristics
-- **🧰 AI Tools**: Google AI Studio, Claude Code, Gemini Notebook, Google Gemini
-- **🦀 Rust Systems Engineer**: Rust, Cargo, Memory Safety, Concurrency, Tokio / Async, WebAssembly
-- **🐍 Python AI/ML Engineer**: PyTorch, TensorFlow, scikit-learn, HuggingFace, FastAPI, LangChain
-- **🐹 Go Cloud Engineer**: Golang, Docker, Kubernetes, Microservices, gRPC, Cloud Native
-- **🌐 HTML/CSS/JavaScript**: HTML5, CSS3, JavaScript, Responsive Design, DOM Manipulation, Web Performance
-- **🚀 Deployment**: GitHub Pages, Netlify, HuggingFace Spaces, Kaggle, Vercel, CI/CD Workflows
+- **💻 Languages**: Python, Rust, Go, JavaScript, Bash
+- **🧠 Generative AI Systems**: Generative AI, LLMs, SLMs, Agentic AI, RAG
+- **⚛️ Quantum Systems**: IBM Qiskit, PennyLane, Quantum Machine Learning, Quantum Algorithms, Microsoft Q# / Quantinuum
+- **🤖 AI Tools Expertise**: Claude Code, Google Antigravity, Google AI Studio, NotebookLM, Microsoft Copilot
+- **⚡ Local & Private AI Stack**: Ollama, LM Studio, llama.cpp, GGUF, HuggingFace Hub
+- **🔬 Verification & Execution**: Jupyter, pytest, Qiskit Aer Simulator, Docker Sandboxes, REPL-Verified Examples
+- **🐍 Python Deep Stack**: PyTorch, NumPy, FastAPI, LangChain, Qiskit SDK
+- **📄 Content & Docs Engineering**: Markdown/MDX, Diátaxis Framework, OpenAPI, JSON-LD, Technical SEO
+- **🌐 Domains**: Generative AI, Quantum Computing, Cybersecurity, Post-Quantum Cryptography, Open Source
+- **🗂️ Content Architecture**: Structured Retrieval Patterns, Schema Markup, Information Architecture, Agent-Readable Docs, AEO/GEO Optimisation
 
 ---
 
-## Featured Writing & Published Articles
+## Why Technical Content Fails (The Technical Moat)
 
-Long-form technical content published on HackerNoon, Medium, Substack, Hashnode, LinkedIn, and more.
+Most developer content in Generative AI and Quantum Computing suffers from one of two flaws: it is either written by brilliant physicists and engineers who lack editorial clarity, or by generalist writers who cannot execute the code they document.
 
-### 🤖 Generative AI, LLMs & Agents
-1. [🥊 Google Gemini vs Anthropic Claude vs OpenAI ChatGPT vs xAI Grok: The Ultimate Comparison](https://hackernoon.com/google-gemini-vs-anthropic-claude-vs-openai-chatgpt-vs-xai-grok-the-ultimate-comparison)
-2. [🏃 How to Run Your Own Local LLM — 2026 Edition](https://hackernoon.com/how-to-run-your-own-local-llm-2026-edition-version-1)
-3. [🤖 The AI Agent Revolution: How to Build the Workforce of Tomorrow](https://hackernoon.com/the-ai-agent-revolution-how-to-build-the-workforce-of-tomorrow)
-4. [💪 The Case for Local AI Has Never Been Stronger](https://hackernoon.com/the-case-for-local-ai-has-never-been-stronger)
+As a developer with a PG degree in CS and a seasoned online technical writer with a broad online presence, I sit directly in the intersection of both frontier domains — writing developer documentation, tutorials, and deep dives where every Python script, Generative AI project, and Qiskit circuit is run and verified before publication.
 
-### ⚛️ Quantum Computing & QAI
-1. [🔬 Quantum Computing Fundamentals Part I: 10 Easy Pieces](https://hackernoon.com/quantum-computing-fundamentals-part-i-10-easy-pieces)
-2. [⚗️ Quantum Computing Fundamentals Part II: 10 Not-So Easy Pieces](https://hackernoon.com/quantum-computing-fundamentals-part-ii-10-not-so-easy-pieces)
-3. [⚖️ Comparing Quantum Frameworks: IBM Qiskit, Microsoft Q#, and Quantinuum's New Stack](https://hackernoon.com/comparing-quantum-programming-frameworks-ibm-qiskit-microsoft-q-and-quantinuums-new-stack)
-4. [⚡ How Quantum Computers Threaten Bitcoin and the Entire Internet: Simply Explained](https://hackernoon.com/how-quantum-computers-threaten-bitcoin-and-the-entire-internet-simply-explained)
+---
 
-### 🔗 Blockchain
-1. [💡 How Blockchain and Smart Contracts Revolutionize Content Monetization for Intellectual Property](https://hackernoon.com/how-blockchain-and-smart-contracts-revolutionize-content-monetization-for-intellectual-property)
-2. [🏭 The Startup That Will Change the Industrial World: The Decentralized Autonomous Supply Chain](https://hackernoon.com/the-startup-that-will-change-the-industrial-world-the-decentralized-autonomous-supply-chain)
-3. [🚀 7 Blockchain Startups That Could Generate Multibillion-Dollar Revenue Within 2 Years](https://hackernoon.com/7-blockchain-startups-that-could-generate-multibillion-dollar-revenue-within-2-years)
-4. [⚔️ Classical Blockchain vs Hedera Hashgraph](https://hackernoon.com/classical-blockchain-vs-hedera-hashgraph)
+## How This Actually Gets Made — The 50/50 Workflow Split
 
-### 🔮 Futurism & AGI
-1. [🏁 Why the Race to AGI is Humanity's Defining Moment](https://hackernoon.com/why-the-race-to-agi-is-humanitys-defining-moment)
-2. [🛡️ AI-Proof Your Career Future: The #1 Skill AI Agents Cannot Touch](https://hackernoon.com/ai-proof-your-career-future-the-1-skill-ai-agents-cannot-touch)
-3. [🔴 Code Red: Why China Is Well Positioned to Win the AI Race](https://hackernoon.com/code-red-why-china-is-well-positioned-to-win-the-ai-race)
-4. [💰 Small Language Models Have a Trillion-Dollar Future](https://hackernoon.com/small-language-models-have-a-trillion-dollar-future)
+Roughly half Generative AI-accelerated for speed, half hand-verified for technical accuracy.
 
-### 🦾 AI Agentic Assistants
-1. [🦀 The OpenClaw Saga: How the Last Two Weeks Changed the Agentic AI World Forever](https://hackernoon.com/the-openclaw-saga-how-the-last-two-weeks-changed-the-agentic-ai-world-forever)
-2. [OpenFang: The Game-Changing Open Source Agent OS That Replaces OpenClaw](https://hackernoon.com/openfangthe-game-changing-open-source-agent-operating-system-that-replaces-openclaw)
-3. [⚔️ Hermes Agent vs OpenClaw: Which AI Agent Framework Wins in 2026?](https://hackernoon.com/hermes-agent-vs-openclaw-which-ai-agent-framework-wins-in-2026)
-4. [💎 The Next Trillion-Dollar AI Shift: Why OpenClaw Changes Everything for LLMs](https://hackernoon.com/the-next-trillion-dollar-ai-shift-why-openclaw-changes-everything-for-llms)
+### ⚡ Automated with AI (Roughly 50%)
+1. First-draft generation from a brief, spec, or transcript
+2. Research aggregation and source discovery across documentation, changelogs, and papers
+3. Structural drafting — headings, section flow, Diátaxis-pattern scaffolding
+4. Style, terminology, and consistency linting against a house style guide
+5. Format conversion — Markdown to MDX/HTML, citation formatting, table generation
 
-### 🛠️ AI Tools & Productivity
-1. [🏅 The AI Olympics: Which $20 AI Subscription Plan Wins in 2026?](https://hackernoon.com/the-ai-olympics-which-20-usd-ai-subscription-plan-wins-in-2026)
-2. [📚 Introducing Code Wiki: Google's NotebookLM for Developers](https://hackernoon.com/introducing-code-wiki-googles-notebooklm-for-developers)
-3. [💬 The Internet Can't Stop Talking About Google NotebookLM](https://hackernoon.com/the-internet-cant-stop-talking-about-google-notebooklm)
-4. [🚀 Google Antigravity: 20 Game-Changing Prompts for Complete Automation](https://hackernoon.com/google-antigravity-20-game-changing-prompts-for-complete-automation)
+### ✓ Verified by Hand (The Mandatory Half)
+1. Executing every code sample against the live API, SDK, or local environment it documents
+2. Running every quantum circuit in a Qiskit Aer simulator or on real quantum hardware and checking the output against the claim in the text
+3. Cross-checking every benchmark, statistic, or comparative figure against its original source before it's cited
+4. Technical accuracy review against current product behaviour — catching the gap between what a spec says and what the system actually does
+5. Final judgment calls on structure, emphasis, and what's worth explaining at all — the editorial decisions a model has no stake in getting right
 
-#### More Writing Platforms
-- [Read on HackerNoon →](https://hackernoon.com/u/thomascherickal)
-- [Read on Medium →](https://thomascherickal.medium.com)
-- [Subscribe on Substack →](https://thomascherickal.substack.com)
+---
+
+## Featured Case Studies (Portfolio Highlights)
+
+1. [⚛️ Comparing Quantum Programming Frameworks](https://hackernoon.com/comparing-quantum-programming-frameworks-ibm-qiskit-microsoft-q-and-quantinuums-new-stack) — Comparative analysis of IBM Qiskit, Microsoft Q#, and Quantinuum.
+2. [⚛️ Quantum Computing Fundamentals Part I](https://hackernoon.com/quantum-computing-fundamentals-part-i-10-easy-pieces) — Educational learning path for senior engineers transitioning to quantum computing.
+3. [⚛️ Quantum Computing Fundamentals Part II](https://hackernoon.com/quantum-computing-fundamentals-part-ii-10-not-so-easy-pieces) — Advanced guide to QFT, phase estimation, and multi-qubit entanglement.
+4. [⚛️ How Quantum Computers Threaten Bitcoin](https://hackernoon.com/how-quantum-computers-threaten-bitcoin-and-the-entire-internet-simply-explained) — Post-quantum cryptography threat analysis and NIST candidate standards.
+5. [🧠 Running Local LLMs Guide](https://hackernoon.com/how-to-run-your-own-local-llm-2026-edition-version-1) — Technical deployment guide across Ollama, LM Studio, llama.cpp, and GGUF quantization.
+6. [🧠 Ultimate LLM Benchmark Comparison](https://hackernoon.com/google-gemini-vs-anthropic-claude-vs-openai-chatgpt-vs-xai-grok-the-ultimate-comparison) — Code-verified comparative analysis of Gemini, Claude, ChatGPT, and Grok.
+7. [🦾 The OpenClaw Saga](https://hackernoon.com/the-openclaw-saga-how-the-last-two-weeks-changed-the-agentic-ai-world-forever) — Fast-turnaround ecosystem deep dive into open-source multi-agent frameworks.
+8. [🦾 Hermes Agent vs OpenClaw](https://hackernoon.com/hermes-agent-vs-openclaw-which-ai-agent-framework-wins-in-2026) — Comparative architecture study of state graphs and multi-step reasoning loops.
 
 ---
 
 ## Books & Long-Form
 
-### RECRUITED — The AI-Powered Career Playbook for Professionals Who Refuse to Be Left Behind
-*(Pre-Order Status)*
+### RECRUITED — The Inbound Recruiter Blueprint: How to Make Recruiters Chase You
+*(Pre-Order Status — $5.00 USD pre-order · Free with an active Patreon subscription)*
 
 ![RECRUITED Book Cover](recruited-cover.jpg)
 
-A comprehensive transformation system showing professionals how to use frontier AI tools — ChatGPT, Claude, Gemini, NotebookLM, Perplexity — to accelerate their job search, rebuild their brand, and land roles that actually match their ambition. Real frameworks. Real tools. Real results.
+A comprehensive transformation system showing professionals how to use frontier AI tools — GitHub, LinkedIn, Perplexity, Claude, Google Antigravity, and NotebookLM — to rebuild their professional presence so that inbound recruiter offers find them.
 
 - [🎗 Pre-Order on Patreon](https://patreon.com/thomascherickal)
 
 ---
 
-## Generative AI Training Tiers
+## Service Offerings (10 Asynchronous Offers)
 
-Comprehensive AI training programs tailored for enterprise leadership, engineering teams, and individual professionals. Premium 1:1 sessions available.
-
-### Tier 4 — Executive Horizon: Board & CXO Horizon Briefing
-- **Format**: ⏱️ 2 Hours · Live & Remote · One Leadership Team
-- Emerging Tech Horizon Briefing & AI-First strategy
-- Quantum Computing & post-quantum crypto risk assessment
-- AGI trajectory & ASI predictions roadmap
-- How to Survive & Thrive in the AI-first world
-
-### Tier 3 — Leadership: Executive AI Programme
-- **Format**: ⏱️ 2 Hours · Live & Remote · 8–10 Leaders
-- GenAI strategy & executive leadership alignment
-- Hands-on Copilot, Claude Pro & Gemini apps
-- Ends in a deployed live workflow per participant
-- Practical AI tools governance & ROI tracking
-
-### Tier 2 — Engineering: Engineering Team Training
-- **Format**: ⏱️ 2 Hours · Live & Remote · Engineering Teams
-- Agentic AI development & multi-agent architectures
-- Local LLM deployment (Ollama, LM Studio, llama.cpp)
-- Claude Code terminal integration & TDD workflows
-- AI-assisted coding & testing workflows
-
-### Tier 1 — Individual 1:1: Mentoring & Coaching
-- **Format**: ⏱️ 2 Hours · Live 1-on-1 · Via Topmate
-- Personalized Generative AI & SLM/LLM training
-- Claude Code & AI-assisted development setup
-- Local LLM configuration on your hardware
-- Direct 1-on-1 Q&A and hands-on guidance
-
----
-
-## Collaboration Services
-
-- **✍️ Technical Writing**: Long-form articles, tutorials, developer guides, and whitepapers. HackerNoon-grade depth.
-- **🏢 AI Consulting**: AI strategy, Local LLM implementation, AI agentic tools, and enterprise AI transformation.
-- **🌐 Website Development**: Custom website design and deployment across major platforms, with SEO, AEO, and GEO built in from the ground up.
-- **👤 AI Upskilling · Individuals**: 1-on-1 mentoring to master frontier AI tools, build a personal AI stack, and accelerate your career.
-- **🏋️ AI Mentoring · All Levels**: From complete beginners to senior engineers — structured mentoring to unlock real AI productivity.
-- **💼 Executive Briefings**: Custom briefings for Boards, CXOs, and leadership teams on AGI, Quantum risk, and AI migration.
-
-### Online Sales & Digital Products
-- [🗓️ 1-on-1 Consults — topmate.io/thomascherickal](https://topmate.io/thomascherickal)
-- [🛒 Digital Products & Playbooks — thomascherickal.gumroad.com](https://thomascherickal.gumroad.com)
-- [🎗 Exclusive Member Content — patreon.com/thomascherickal](https://patreon.com/thomascherickal)
-- [💼 LinkedIn Profile — linkedin.com/in/thomascherickal](https://linkedin.com/in/thomascherickal)
+1. **Developer Documentation**: API references, SDK guides, quickstarts, and migration guides.
+2. **Technical Deep Dives**: Long-form technical explainers (2,000–8,000 words) with verified benchmarks.
+3. **Developer Education & Courses**: Tutorial series, structured learning paths, and interactive notebooks.
+4. **Quantum Developer Content**: IBM Qiskit & PennyLane tutorials, QML explainers, and algorithm walkthroughs.
+5. **AI-Accelerated Research & Drafting**: Standalone transparent first-pass drafting from specs.
+6. **Code & Circuit Benchmarking**: Standalone verification pass for your existing drafts.
+7. **Content Architecture**: Structuring docs for human developers and retrieval AI agents.
+8. **Launch & Migration Content**: Model, API, and SDK launch explainers on fast turnaround.
+9. **Remote Team Training**: Live remote enablement (2 hours, remote only) in GenAI or Quantum Readiness.
+10. **Books & Digital Products**: Published long-form works and playbooks via Patreon and Gumroad.
 
 ---
 
 ## Contact & Location
 
 - **Email**: [thomascherickal@gmail.com](mailto:thomascherickal@gmail.com)
-- **Location**: Chennai, India · Remote Worldwide
+- **Location**: Chennai, Tamil Nadu, India 🇮🇳 (Remote Worldwide)
+- **Direct Consults**: [Book via Topmate](https://topmate.io/thomascherickal)
 
 ---
 
-## Newsletter & Social Links
+## Newsletter & Links
 
 ### 📧 The Digital Futurist Newsletter
 How to understand and build emerging technologies.  
@@ -219,7 +179,6 @@ How to understand and build emerging technologies.
 - [🐙 GitHub (github.com/thomascherickal)](https://github.com/thomascherickal)
 - [💼 LinkedIn (in/thomascherickal)](https://linkedin.com/in/thomascherickal)
 - [🦊 GitLab (gitlab.com/thomascherickal)](https://gitlab.com/thomascherickal)
-- [☁️ Azure DevOps (dev.azure.com/thomascherickal)](https://dev.azure.com/thomascherickal)
 - [🗞 HackerNoon (u/thomascherickal)](https://hackernoon.com/u/thomascherickal)
 - [✍️ Medium (@thomascherickal)](https://thomascherickal.medium.com)
 - [🔷 Hashnode (thomascherickal.hashnode.dev)](https://thomascherickal.hashnode.dev)
@@ -235,10 +194,10 @@ How to understand and build emerging technologies.
 - [🏆 HackerRank (hackerrank.com/profile/thomascherickal)](https://hackerrank.com/profile/thomascherickal)
 - [💡 LeetCode (leetcode.com/u/thomascherickal)](https://leetcode.com/u/thomascherickal)
 - [🔗 Linktree (linktr.ee/thomascherickal)](https://linktr.ee/thomascherickal)
-- [🎗 Patreon (patreon.com/thomascherickal)](https://patreon.com/thomascherickal)
+- [🎨 Patreon (patreon.com/thomascherickal)](https://patreon.com/thomascherickal)
 - [🛒 Gumroad (thomascherickal.gumroad.com)](https://thomascherickal.gumroad.com)
 - [📅 Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)
 
 ---
-*© 2026 Thomas Cherickal · The Digital Futurist · Generative AI Consultant & Executive AI Trainer*  
-*📍 Chennai, India 🇮🇳 · Built with GitHub Pages*
+*© 2026 Thomas Cherickal · The Digital Futurist (2020–present) · Technical Content Engineer & Developer Educator*  
+*📍 Chennai, India 🇮🇳*

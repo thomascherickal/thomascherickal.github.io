@@ -1,0 +1,146 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://thomascherickal.github.io/services.html#webpage",
+      "url": "https://thomascherickal.github.io/services.html",
+      "name": "Services & Commissions — Thomas Cherickal",
+      "isPartOf": {
+        "@id": "https://thomascherickal.github.io/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://thomascherickal.github.io/services.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thomascherickal.github.io/services.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thomascherickal.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services & Commissions"
+        }
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://thomascherickal.github.io/services.html#service",
+      "name": "The Digital Futurist — Technical Content Engineering",
+      "url": "https://thomascherickal.github.io/services.html",
+      "description": "Developer documentation, technical deep dives, quantum developer content, developer education, and remote engineering-team training for Generative AI and Quantum companies. AI-accelerated drafting, hand-verified accuracy.",
+      "provider": {
+        "@id": "https://thomascherickal.github.io/#person"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide (remote)"
+      },
+      "availableLanguage": "English",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Technical Content & Developer Education Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Developer Documentation",
+              "description": "API references, SDK guides, quickstarts, integration and migration guides for Generative AI APIs and quantum SDKs. Every code sample run and verified.",
+              "serviceType": "Technical Documentation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Technical Deep Dives",
+              "description": "Commissioned long-form technical articles from 2,000 to 8,000 words across Generative AI Systems and Quantum Systems, with original research and verified benchmarks.",
+              "serviceType": "Technical Writing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Developer Education & Courses",
+              "description": "Tutorial series, structured learning paths, and workshop curricula with a working repository or notebook per module.",
+              "serviceType": "Developer Education"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Quantum Developer Content",
+              "description": "IBM Qiskit and PennyLane tutorials, quantum machine learning explainers, quantum algorithm walkthroughs, and post-quantum cryptography briefings, with every circuit executed in simulation before publication.",
+              "serviceType": "Technical Documentation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI-Accelerated Research & Drafting",
+              "description": "Fast, AI-assisted first drafts from a brief or spec, structured and style-consistent, ready for technical review.",
+              "serviceType": "Technical Writing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Code & Circuit Benchmarking",
+              "description": "A standalone verification pass on existing content: every code sample executed, every quantum circuit run and checked, every benchmark traced to source.",
+              "serviceType": "Technical Quality Assurance"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Content Architecture",
+              "description": "Restructuring documentation so it serves both a skimming developer and a retrieving AI agent, using Diátaxis patterns and schema markup.",
+              "serviceType": "Information Architecture"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Launch & Migration Content",
+              "description": "Model, API and SDK launch explainers, changelog deep dives, comparison pieces, and migration guides on launch-window turnaround.",
+              "serviceType": "Technical Content"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Remote Team Training",
+              "description": "Live remote enablement for engineering teams in Generative AI or Quantum Readiness, including post-quantum cryptography risk. Two hours, remote only.",
+              "serviceType": "Technical Training"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Books & Digital Products",
+              "description": "Long-form published works including the book RECRUITED and digital products distributed via Gumroad.",
+              "serviceType": "Publishing"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

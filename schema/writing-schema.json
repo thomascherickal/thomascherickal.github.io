@@ -1,0 +1,67 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://thomascherickal.github.io/writing.html#webpage",
+      "url": "https://thomascherickal.github.io/writing.html",
+      "name": "Publications — Thomas Cherickal",
+      "description": "Selected technical deep dives from 500+ published articles across 10+ platforms, covering Generative AI, agents, local inference, quantum computing and QML, plus the book RECRUITED.",
+      "isPartOf": {
+        "@id": "https://thomascherickal.github.io/#website"
+      },
+      "author": {
+        "@id": "https://thomascherickal.github.io/#person"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://thomascherickal.github.io/writing.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thomascherickal.github.io/writing.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thomascherickal.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Publications"
+        }
+      ]
+    },
+    {
+      "@type": "Book",
+      "@id": "https://thomascherickal.github.io/writing.html#recruited",
+      "name": "RECRUITED",
+      "alternativeHeadline": "The Inbound Recruiter Blueprint: How to Make Recruiters Chase You",
+      "author": {
+        "@id": "https://thomascherickal.github.io/#person"
+      },
+      "publisher": {
+        "@id": "https://thomascherickal.github.io/#organization"
+      },
+      "inLanguage": "en",
+      "bookFormat": "https://schema.org/EBook",
+      "image": "https://thomascherickal.github.io/recruited-cover.webp",
+      "description": "A system for using frontier AI tools — GitHub, LinkedIn, Perplexity, Claude, Google Antigravity, and NotebookLM — to rebuild your professional presence so that inbound offers find you.",
+      "url": "https://thomascherickal.com/recruited",
+      "offers": {
+        "@type": "Offer",
+        "price": "5.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/PreOrder",
+        "priceValidUntil": "2026-12-31",
+        "url": "https://patreon.com/thomascherickal",
+        "seller": {
+          "@id": "https://thomascherickal.github.io/#organization"
+        }
+      }
+    }
+  ]
+}
