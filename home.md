@@ -69,7 +69,7 @@ Courses, tutorial series, structured learning paths, and interactive Jupyter not
 Long-form explainers on LLM internals, agent architectures, and quantum algorithms. Researched, run, and benchmark-verified.
 
 ### 🤖 AI Tools Expertise
-Daily working fluency across the current frontier toolchain: Claude Code, Google Antigravity, Google AI Studio, NotebookLM, Microsoft Copilot.
+Daily working fluency across the current frontier toolchain: Claude Code, Google Antigravity, Google AI Studio, Gemini Notebook, CodeWiki.
 
 ### 🗂️ Content Architecture
 Structuring documentation so it serves both a skimming developer and a retrieving AI agent alike — Diátaxis-pattern scaffolding and schema markup.
@@ -81,7 +81,7 @@ Structuring documentation so it serves both a skimming developer and a retrievin
 - **💻 Languages**: Python, Rust, Go, JavaScript, Bash
 - **🧠 Generative AI Systems**: Generative AI, LLMs, SLMs, Agentic AI, RAG
 - **⚛️ Quantum Systems**: IBM Qiskit, PennyLane, Quantum Machine Learning, Quantum Algorithms, Microsoft Q# / Quantinuum
-- **🤖 AI Tools Expertise**: Claude Code, Google Antigravity, Google AI Studio, NotebookLM, Microsoft Copilot
+- **🤖 AI Tools Expertise**: Claude Code, Google Antigravity, Google AI Studio, Gemini Notebook, CodeWiki
 - **⚡ Local & Private AI Stack**: Ollama, LM Studio, llama.cpp, GGUF, HuggingFace Hub
 - **🔬 Verification & Execution**: Jupyter, pytest, Qiskit Aer Simulator, Docker Sandboxes, REPL-Verified Examples
 - **🐍 Python Deep Stack**: PyTorch, NumPy, FastAPI, LangChain, Qiskit SDK
@@ -139,7 +139,7 @@ Roughly half Generative AI-accelerated for speed, half hand-verified for technic
 
 ![RECRUITED Book Cover](recruited-cover.jpg)
 
-A comprehensive transformation system showing professionals how to use frontier AI tools — GitHub, LinkedIn, Perplexity, Claude, Google Antigravity, and NotebookLM — to rebuild their professional presence so that inbound recruiter offers find them.
+A comprehensive transformation system showing professionals how to use frontier AI tools — GitHub, LinkedIn, Perplexity, Claude, Google Antigravity, and Gemini Notebook — to rebuild their professional presence so that inbound recruiter offers find them.
 
 - [🎗 Pre-Order on Patreon](https://patreon.com/thomascherickal)
 
