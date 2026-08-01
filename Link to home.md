@@ -1,1 +1,0 @@
-/home/thomas/GitHub.io/thomascherickal.github.io/home.md
