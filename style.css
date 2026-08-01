@@ -364,56 +364,53 @@ main {
 
 .btn-primary {
   background: var(--cyan);
-  color: #000915;
+  color: #000000;
   font-weight: 700;
   box-shadow: 0 4px 24px rgba(0, 212, 255, 0.55), inset 0 1px 0 rgba(255,255,255,0.25);
 }
 
 .btn-primary:hover {
   background: #40e8ff;
-  color: #000;
+  color: #000000;
   box-shadow: 0 8px 36px rgba(0, 212, 255, 0.75), inset 0 1px 0 rgba(255,255,255,0.35);
   transform: translateY(-3px) scale(1.05);
 }
 
 .btn-outline {
-  background: rgba(232, 234, 242, 0.12);
-  color: #ffffff;
-  border: 2px solid rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.1);
+  color: #e8eaf2;
+  border: 2px solid rgba(255, 255, 255, 0.5);
   font-weight: 600;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
 
 .btn-outline:hover {
-  background: rgba(255, 201, 71, 0.2);
+  background: rgba(255, 201, 71, 0.18);
   border-color: var(--gold);
-  color: #ffe080;
-  text-shadow: 0 0 12px rgba(255, 201, 71, 0.6);
+  color: #ffd770;
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 6px 28px rgba(255, 201, 71, 0.35);
 }
 
 .btn-gold {
   background: var(--gold);
-  color: #0a0600;
+  color: #000000;
   font-weight: 700;
   box-shadow: 0 4px 24px rgba(255, 201, 71, 0.55), inset 0 1px 0 rgba(255,255,255,0.3);
 }
 
 .btn-gold:hover {
   background: #ffe484;
-  color: #000;
+  color: #000000;
   box-shadow: 0 8px 36px rgba(255, 201, 71, 0.75), inset 0 1px 0 rgba(255,255,255,0.4);
   transform: translateY(-3px) scale(1.05);
 }
 
 .btn-newsletter {
-  background: rgba(139, 92, 246, 0.22);
-  color: #e2d9ff;
-  border: 2px solid rgba(139, 92, 246, 0.65);
+  background: rgba(139, 92, 246, 0.3);
+  color: #ede9fe;
+  border: 2px solid rgba(139, 92, 246, 0.7);
   font-weight: 600;
-  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
-  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.35);
 }
 
 .btn-newsletter:hover {
