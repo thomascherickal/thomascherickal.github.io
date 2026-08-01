@@ -412,6 +412,23 @@ main {
   transform: translateY(-3px) scale(1.05);
 }
 
+/* btn-commission: black bg (#000) → gold text (#ffc947) ≈ 14:1 contrast ✓ — used for all services.html#contact CTAs */
+.btn-commission {
+  background: #000000;
+  color: #ffc947;
+  font-weight: 700;
+  border: 2px solid #ffc947;
+  box-shadow: 0 4px 20px rgba(255, 201, 71, 0.3), inset 0 1px 0 rgba(255, 201, 71, 0.1);
+}
+
+.btn-commission:hover {
+  background: #0d0d00;
+  color: #ffe484;
+  border-color: #ffe484;
+  box-shadow: 0 8px 36px rgba(255, 201, 71, 0.6), inset 0 1px 0 rgba(255, 201, 71, 0.15);
+  transform: translateY(-3px) scale(1.05);
+}
+
 /* btn-newsletter: dark violet bg → lavender text ≈ 11:1 contrast ✓ */
 .btn-newsletter {
   background: rgba(109, 65, 217, 0.35);
