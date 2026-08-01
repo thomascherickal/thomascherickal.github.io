@@ -406,6 +406,7 @@
 
       <div class="contact-grid">
         <div class="contact-info">
+          <!-- Card 1: Direct Channels -->
           <div class="contact-card glow-gold">
             <h3 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:0.5rem;color:var(--text-primary);">
               Direct Communication</h3>
@@ -434,6 +435,54 @@
               </div>
             </div>
           </div>
+
+          <!-- Card 2: Engagement Standards & Guarantees -->
+          <div class="contact-card border-cyan">
+            <h3 style="font-family:var(--font-display);font-size:1.05rem;margin-bottom:0.75rem;color:var(--cyan);">
+              Engagement Standards</h3>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);line-height:1.5;">
+              <div>
+                <strong style="color:var(--text-primary);display:block;margin-bottom:0.15rem;">⚡ 24-Hour SLA Guarantee</strong>
+                Guaranteed business-day response for all incoming project inquiries, scope requests, and training briefs.
+              </div>
+              <div>
+                <strong style="color:var(--text-primary);display:block;margin-bottom:0.15rem;">🌍 Asynchronous Worldwide Delivery</strong>
+                Seamless collaboration across US (PST/EST), European (CET), and APAC timezones via clear milestones.
+              </div>
+              <div>
+                <strong style="color:var(--text-primary);display:block;margin-bottom:0.15rem;">🧪 100% Code Runtime Verification</strong>
+                Zero unverified code: every API call, Python snippet, and Qiskit circuit is executed and verified in simulation.
+              </div>
+              <div>
+                <strong style="color:var(--text-primary);display:block;margin-bottom:0.15rem;">📐 Diátaxis &amp; AI Retrieval Architecture</strong>
+                Content structured for high readability by human software engineers and optimized for Generative AI RAG retrieval.
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Project Intake & Workflow -->
+          <div class="contact-card border-gold">
+            <h3 style="font-family:var(--font-display);font-size:1.05rem;margin-bottom:0.75rem;color:var(--gold);">
+              What Happens Next?</h3>
+            <div style="display:flex;flex-direction:column;gap:0.6rem;font-size:0.84rem;color:var(--text-secondary);">
+              <div style="display:flex;align-items:flex-start;gap:0.5rem;">
+                <span class="role-chip gold" style="font-size:0.7rem;padding:0.15rem 0.4rem;flex-shrink:0;">Step 1</span>
+                <span><strong>Brief Evaluation:</strong> In-depth review of your technical requirements and audience goals.</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:0.5rem;">
+                <span class="role-chip gold" style="font-size:0.7rem;padding:0.15rem 0.4rem;flex-shrink:0;">Step 2</span>
+                <span><strong>Scope &amp; Milestones:</strong> Transparent timeline, fixed proposal, and verification plan.</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:0.5rem;">
+                <span class="role-chip cyan" style="font-size:0.7rem;padding:0.15rem 0.4rem;flex-shrink:0;">Step 3</span>
+                <span><strong>AI Draft + Verification Pass:</strong> Rapid structural drafting combined with manual execution testing.</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:0.5rem;">
+                <span class="role-chip green" style="font-size:0.7rem;padding:0.15rem 0.4rem;flex-shrink:0;">Step 4</span>
+                <span><strong>Final Delivery:</strong> Production-ready Markdown/Jupyter deliverables with verified code snippets.</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div>
@@ -444,6 +493,7 @@
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_subject" value="Website Enquiry — thomascherickal.github.io" />
 
+            <!-- Row 1: Mandatory Name & Email -->
             <div class="form-row">
               <div class="form-group">
                 <label for="contact-name" class="form-label">Your Name *</label>
@@ -455,27 +505,86 @@
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="contact-project-type" class="form-label">Project Type *</label>
-              <select id="contact-project-type" name="project_type" required class="form-input" style="background:var(--bg-card);color:var(--text-primary);">
-                <option value="Documentation">Documentation</option>
-                <option value="Deep Dive / Article">Deep Dive / Article</option>
-                <option value="Quantum Content">Quantum Content</option>
-                <option value="Course / Tutorial Series">Course / Tutorial Series</option>
-                <option value="Verification Pass">Verification Pass</option>
-                <option value="Docs Architecture">Docs Architecture</option>
-                <option value="Launch Content">Launch Content</option>
-                <option value="Remote Team Training">Remote Team Training</option>
-                <option value="Other">Other</option>
-              </select>
+            <!-- Row 2: Mandatory Company & Target Timeline -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-org" class="form-label">Company / Organization *</label>
+                <input type="text" id="contact-org" name="organization" required placeholder="e.g. Acme AI, Stealth Startup" class="form-input" />
+              </div>
+              <div class="form-group">
+                <label for="contact-timeline" class="form-label">Target Timeline *</label>
+                <input type="text" id="contact-timeline" name="timeline" required placeholder="e.g. Q3 Launch, 2 weeks, ASAP" class="form-input" />
+              </div>
             </div>
 
-            <div class="form-group">
+            <!-- Row 3: Additional Optional Text Fields (1 & 2): Role & Website -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-role" class="form-label">Role / Job Title <span style="font-weight:400;opacity:0.75;">(Optional)</span></label>
+                <input type="text" id="contact-role" name="role" placeholder="e.g. VP of Engineering, DevRel Lead, Founder" class="form-input" />
+              </div>
+              <div class="form-group">
+                <label for="contact-url" class="form-label">Website / Project URL <span style="font-weight:400;opacity:0.75;">(Optional)</span></label>
+                <input type="url" id="contact-url" name="website" placeholder="https://example.com" class="form-input" />
+              </div>
+            </div>
+
+            <!-- Row 4: Additional Optional Text Fields (3 & 4): Tech Stack & Deliverable Formats -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-stack" class="form-label">Preferred Tech Stack / SDKs <span style="font-weight:400;opacity:0.75;">(Optional)</span></label>
+                <input type="text" id="contact-stack" name="tech_stack" placeholder="e.g. Python, PyTorch, Qiskit, Ollama, LangChain" class="form-input" />
+              </div>
+              <div class="form-group">
+                <label for="contact-format" class="form-label">Deliverable Format Preferences <span style="font-weight:400;opacity:0.75;">(Optional)</span></label>
+                <input type="text" id="contact-format" name="deliverable_format" placeholder="e.g. Markdown, Jupyter Notebooks, MDX, Notion" class="form-input" />
+              </div>
+            </div>
+
+            <!-- Row 5: Required Project Type (15 Options) & Estimated Scope Dropdowns -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-project-type" class="form-label">Project Type *</label>
+                <select id="contact-project-type" name="project_type" required class="form-input" style="background:var(--bg-card);color:var(--text-primary);">
+                  <option value="Generative AI Deep Dives" selected>🤖 Generative AI Deep Dives</option>
+                  <option value="Developer Documentation">📝 Developer Documentation</option>
+                  <option value="Quantum Developer Content">⚛️ Quantum Developer Content</option>
+                  <option value="Developer Education &amp; Courses">🎓 Developer Education &amp; Courses</option>
+                  <option value="Code &amp; Circuit Benchmarking Pass">🧪 Code &amp; Circuit Benchmarking Pass</option>
+                  <option value="Documentation Architecture Audit">🗂️ Documentation Architecture Audit</option>
+                  <option value="Launch &amp; Migration Content">🚀 Launch &amp; Migration Content</option>
+                  <option value="Remote Engineering Team Training">👥 Remote Engineering Team Training</option>
+                  <option value="AI Workflow Consulting">⚙️ AI Workflow Consulting</option>
+                  <option value="Post-Quantum Cryptography Risk Briefing">🛡️ Post-Quantum Cryptography Risk Briefing</option>
+                  <option value="Local LLM Deployment &amp; Benchmarking Guide">⚡ Local LLM Deployment &amp; Benchmarking Guide</option>
+                  <option value="Agentic AI Framework Comparison">🏎️ Agentic AI Framework Comparison</option>
+                  <option value="Technical Whitepaper &amp; Research Report">📊 Technical Whitepaper &amp; Research Report</option>
+                  <option value="Diátaxis Restructuring &amp; AI RAG Optimization">📐 Diátaxis Restructuring &amp; AI RAG Optimization</option>
+                  <option value="Other / Custom Inquiry">💡 Other / Custom Inquiry</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contact-budget" class="form-label">Estimated Scope / Budget <span style="font-weight:400;opacity:0.75;">(Optional)</span></label>
+                <select id="contact-budget" name="budget" class="form-input" style="background:var(--bg-card);color:var(--text-primary);">
+                  <option value="">Select Estimated Scope / Budget</option>
+                  <option value="Micro-Task / Verification Pass (&lt; $500 USD)">🌟 Micro-Task / Verification Pass (&lt; $500 USD)</option>
+                  <option value="Short Technical Article (&lt; $1,000 USD)">📄 Short Technical Article (&lt; $1,000 USD)</option>
+                  <option value="Standard Technical Deep Dive ($1,000 - $2,500 USD)">📘 Standard Technical Deep Dive ($1,000 – $2,500 USD)</option>
+                  <option value="Multi-Part Tutorial / Course Series ($2,500 - $5,000 USD)">📚 Multi-Part Tutorial / Course Series ($2,500 – $5,000 USD)</option>
+                  <option value="Full Developer Documentation Suite ($5,000 - $10,000 USD)">🚀 Full Developer Documentation Suite ($5,000 – $10,000 USD)</option>
+                  <option value="Monthly Content Partner Retainer ($3,000 - $8,000 / mo)">💼 Monthly Content Partner Retainer ($3,000 – $8,000 / mo)</option>
+                  <option value="Enterprise Training &amp; Custom Advisory ($10,000+ USD)">🏢 Enterprise Training &amp; Custom Advisory ($10,000+ USD)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Row 6: Message Box (Flex aligned on Desktop, Single Column 300px on Mobile) -->
+            <div class="form-group message-group">
               <label for="contact-message" class="form-label">Project Details &amp; Message *</label>
-              <textarea id="contact-message" name="message" required placeholder="Tell me about your technical content project or training requirements..." rows="5" class="form-input" style="resize:vertical;"></textarea>
+              <textarea id="contact-message" name="message" required placeholder="Tell me about your technical content project, documentation scope, quantum deep dive requirements, or remote engineering team training needs...&#10;&#10;Useful details to include:&#10;- Project goals & target audience (engineers, researchers, developers)&#10;- Scope (number of articles, API endpoints, course modules)&#10;- Preferred deliverable formats (Markdown, Jupyter Notebooks, Qiskit scripts)&#10;- Expected timeline / launch target" rows="12" class="form-input" style="resize:vertical;"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-gold" style="justify-content:center;padding:0.9rem 2rem;width:100%;">Send Message 🚀</button>
+            <button type="submit" class="btn btn-gold" style="justify-content:center;padding:0.95rem 2rem;width:100%;font-size:1.05rem;font-weight:600;">Send Message 🚀</button>
             <div class="form-status" id="form-status"></div>
           </form>
         </div>

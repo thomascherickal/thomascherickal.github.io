@@ -121,14 +121,14 @@ Roughly half Generative AI-accelerated for speed, half hand-verified for technic
 
 ## Featured Case Studies (Portfolio Highlights)
 
-1. [⚛️ Comparing Quantum Programming Frameworks](https://hackernoon.com/comparing-quantum-programming-frameworks-ibm-qiskit-microsoft-q-and-quantinuums-new-stack) — Comparative analysis of IBM Qiskit, Microsoft Q#, and Quantinuum.
-2. [⚛️ Quantum Computing Fundamentals Part I](https://hackernoon.com/quantum-computing-fundamentals-part-i-10-easy-pieces) — Educational learning path for senior engineers transitioning to quantum computing.
-3. [⚛️ Quantum Computing Fundamentals Part II](https://hackernoon.com/quantum-computing-fundamentals-part-ii-10-not-so-easy-pieces) — Advanced guide to QFT, phase estimation, and multi-qubit entanglement.
-4. [⚛️ How Quantum Computers Threaten Bitcoin](https://hackernoon.com/how-quantum-computers-threaten-bitcoin-and-the-entire-internet-simply-explained) — Post-quantum cryptography threat analysis and NIST candidate standards.
-5. [🧠 Running Local LLMs Guide](https://hackernoon.com/how-to-run-your-own-local-llm-2026-edition-version-1) — Technical deployment guide across Ollama, LM Studio, llama.cpp, and GGUF quantization.
-6. [🧠 Ultimate LLM Benchmark Comparison](https://hackernoon.com/google-gemini-vs-anthropic-claude-vs-openai-chatgpt-vs-xai-grok-the-ultimate-comparison) — Code-verified comparative analysis of Gemini, Claude, ChatGPT, and Grok.
-7. [🦾 The OpenClaw Saga](https://hackernoon.com/the-openclaw-saga-how-the-last-two-weeks-changed-the-agentic-ai-world-forever) — Fast-turnaround ecosystem deep dive into open-source multi-agent frameworks.
-8. [🦾 Hermes Agent vs OpenClaw](https://hackernoon.com/hermes-agent-vs-openclaw-which-ai-agent-framework-wins-in-2026) — Comparative architecture study of state graphs and multi-step reasoning loops.
+1. [⚛️ Comparing Quantum Programming Frameworks](https://hackernoon.com/comparing-quantum-programming-frameworks-ibm-qiskit-microsoft-q-and-quantinuums-new-stack) — Comparative analysis of IBM Qiskit, Microsoft Q#, and Quantinuum. *(Published: Sep 15, 2025 · 3,500 words)*
+2. [⚛️ Quantum Computing Fundamentals Part I](https://hackernoon.com/quantum-computing-fundamentals-part-i-10-easy-pieces) — Educational learning path for senior engineers transitioning to quantum computing. *(Published: Dec 29, 2025 · 4,200 words)*
+3. [⚛️ Quantum Computing Fundamentals Part II](https://hackernoon.com/quantum-computing-fundamentals-part-ii-10-not-so-easy-pieces) — Advanced guide to QFT, phase estimation, and multi-qubit entanglement. *(Published: Dec 31, 2025 · 4,500 words)*
+4. [⚛️ How Quantum Computers Threaten Bitcoin](https://hackernoon.com/how-quantum-computers-threaten-bitcoin-and-the-entire-internet-simply-explained) — Post-quantum cryptography threat analysis and NIST candidate standards. *(Published: Dec 7, 2025 · 3,200 words)*
+5. [🧠 Running Local LLMs Guide](https://hackernoon.com/how-to-run-your-own-local-llm-2026-edition-version-1) — Technical deployment guide across Ollama, LM Studio, llama.cpp, and GGUF quantization. *(Published: Mar 9, 2026 · 3,800 words)*
+6. [🧠 Ultimate LLM Benchmark Comparison](https://hackernoon.com/google-gemini-vs-anthropic-claude-vs-openai-chatgpt-vs-xai-grok-the-ultimate-comparison) — Code-verified comparative analysis of Gemini, Claude, ChatGPT, and Grok. *(Published: Mar 12, 2026 · 5,000 words)*
+7. [🦾 The OpenClaw Saga](https://hackernoon.com/the-openclaw-saga-how-the-last-two-weeks-changed-the-agentic-ai-world-forever) — Fast-turnaround ecosystem deep dive into open-source multi-agent frameworks. *(Published: Mar 2, 2026 · 3,600 words)*
+8. [🦾 Hermes Agent vs OpenClaw](https://hackernoon.com/hermes-agent-vs-openclaw-which-ai-agent-framework-wins-in-2026) — Comparative architecture study of state graphs and multi-step reasoning loops. *(Published: May 13, 2026 · 4,000 words)*
 
 ---
 
