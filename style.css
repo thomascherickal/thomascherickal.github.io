@@ -1479,6 +1479,22 @@ footer {
   transform: translateY(-3px) scale(1.05);
 }
 
+.social-link.highlight {
+  background: rgba(255, 201, 71, 0.08);
+  border-color: rgba(255, 201, 71, 0.35);
+  color: var(--gold);
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(255, 201, 71, 0.12);
+}
+
+.social-link.highlight:hover {
+  background: rgba(255, 201, 71, 0.2);
+  border-color: var(--gold);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(255, 201, 71, 0.4);
+  transform: translateY(-3px) scale(1.05);
+}
+
 .social-icon {
   font-size: 1rem;
   flex-shrink: 0;
