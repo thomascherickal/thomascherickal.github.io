@@ -2,7 +2,7 @@
 
 > `// The Digital Futurist (2020–present) · Chennai, India`
 
-![Thomas Cherickal](./assets/images/thomas-avatar.webp)
+![Thomas Cherickal](./assets/thomas-avatar.webp)
 
 **Technical Content Engineer & Developer Educator — Generative AI Systems & Quantum Systems**  
 *Documentation, deep dives, and developer education — AI-accelerated, verified in Python, Golang, and Rust.*
