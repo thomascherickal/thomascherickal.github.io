@@ -577,6 +577,7 @@ section {
 
 .section-header {
   margin-bottom: 3.5rem;
+  text-align: center;
 }
 
 .section-label {
@@ -587,6 +588,7 @@ section {
   color: var(--cyan);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
   margin-bottom: 0.8rem;
 }
@@ -620,6 +622,22 @@ section {
   font-size: 1rem;
   color: var(--text-secondary);
   max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Portfolio Page Left Alignment Override */
+body.portfolio-page .section-header {
+  text-align: left;
+}
+
+body.portfolio-page .section-label {
+  justify-content: flex-start;
+}
+
+body.portfolio-page .section-sub {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .divider {
