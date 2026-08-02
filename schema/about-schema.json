@@ -6,7 +6,7 @@
       "@id": "https://thomascherickal.github.io/about.html#webpage",
       "url": "https://thomascherickal.github.io/about.html",
       "name": "Capabilities & Tech Stack — Thomas Cherickal",
-      "description": "Developer documentation, technical deep dives, developer education, and AI tools expertise across Generative AI Systems and Quantum Systems, verified in Python.",
+      "description": "Developer documentation, technical deep dives, developer education, and AI tools expertise across Generative AI Systems and Quantum Systems, verified in Python, Golang, and Rust.",
       "isPartOf": {
         "@id": "https://thomascherickal.github.io/#website"
       },
@@ -48,7 +48,7 @@
           "name": "How is your technical content produced and verified?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Roughly 50% of the workflow is Generative AI-accelerated for drafting speed (first drafts, research aggregation, structural scaffolding, format conversion), while 100% of technical claims, code samples, and quantum circuits are manually executed and verified in Python REPLs or quantum simulators before publication."
+            "text": "Roughly 50% of the workflow is Generative AI-accelerated for drafting speed (first drafts, research aggregation, structural scaffolding, format conversion), while 100% of technical claims, code samples, and quantum circuits are manually executed and verified in Python REPLs, Go runtimes, Rust test runners, or quantum simulators before publication."
           }
         },
         {
@@ -56,7 +56,7 @@
           "name": "What are your core technical capabilities across AI and Quantum Systems?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Capabilities span 10 specialized roles: Developer Documentation, Quantum Computing & QML (IBM Qiskit, PennyLane), LLM & Agent Systems (RAG, agentic workflows), Post-Quantum & Quantum Risk, Local & Private AI (Ollama, LM Studio, llama.cpp), Python for AI & Quantum (PyTorch, FastAPI, Qiskit), Developer Education, Technical Deep Dives, AI Tools Expertise, and Content Architecture."
+            "text": "Capabilities span 10 specialized roles: Developer Documentation, Quantum Computing & QML (IBM Qiskit, PennyLane), LLM & Agent Systems (RAG, agentic workflows), Post-Quantum & Quantum Risk, Local & Private AI (Ollama, LM Studio, llama.cpp), Python, Golang & Rust Systems (PyTorch, FastAPI, gRPC, Tokio), Developer Education, Technical Deep Dives, AI Tools Expertise, and Content Architecture."
           }
         },
         {
@@ -64,7 +64,7 @@
           "name": "How are code samples and quantum circuits tested before publication?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Code samples are executed in a real Python REPL or sandboxed Docker environment before inclusion in deliverables. Quantum algorithms are run against Qiskit's Aer simulator or real IBM Quantum hardware, and actual measured execution outputs are published."
+            "text": "Code samples are executed in real Python REPLs, Go runtime environments, or Rust cargo test sandboxes before inclusion in deliverables. Quantum algorithms are run against Qiskit's Aer simulator or real IBM Quantum hardware, and actual measured execution outputs are published."
           }
         },
         {
@@ -125,8 +125,8 @@
         {
           "@type": "ListItem",
           "position": 6,
-          "name": "Python for AI & Quantum",
-          "description": "Deep Python fluency as the connective layer: PyTorch and FastAPI on the AI side, Qiskit SDK and PennyLane on the quantum side."
+          "name": "Python, Golang & Rust Systems",
+          "description": "Deep Python, Golang (Go), and Rust fluency as the core engineering layers: PyTorch, FastAPI, and Qiskit in Python; microservices and gRPC in Go; memory-safe Tokio and Wasm in Rust."
         },
         {
           "@type": "ListItem",
@@ -195,7 +195,7 @@
           "@type": "ListItem",
           "position": 6,
           "name": "Verification & Execution",
-          "description": "Jupyter, pytest, Qiskit Aer Simulator, Docker Sandboxes, REPL-Verified Examples"
+          "description": "pytest, go test, cargo test, Jupyter, Qiskit Aer Simulator, Docker Sandboxes, Runtime-Verified Examples"
         },
         {
           "@type": "ListItem",
