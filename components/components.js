@@ -70,7 +70,8 @@
 
     // Load Header
     if (headerContainer) {
-      fetch('components/header.html')
+      fetch('header.html')
+        .catch(() => fetch('components/header.html'))
         .then(res => {
           if (!res.ok) throw new Error('HTTP error');
           return res.text();
@@ -89,7 +90,8 @@
 
     // Load Footer
     if (footerContainer) {
-      fetch('components/footer.html')
+      fetch('footer.html')
+        .catch(() => fetch('components/footer.html'))
         .then(res => {
           if (!res.ok) throw new Error('HTTP error');
           return res.text();
