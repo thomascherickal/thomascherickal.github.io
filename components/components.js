@@ -10,8 +10,8 @@
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="writing.html">Publications</a></li>
-      <li><a href="about.html">Capabilities</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="about.html">Expertise</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="pricing.html">Pricing</a></li>
       <li><a href="faqs.html">FAQs</a></li>
