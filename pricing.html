@@ -603,7 +603,11 @@
   <script src="components/components.js"></script>
 
   <script>
-    // Interactive PPP Recalculation Script
+    // Interactive PPP Recalculation Script (Ceiling rounded to nearest 100)
+    function roundToHundred(val) {
+      return Math.ceil(val / 100) * 100;
+    }
+
     function setPPPTier(tierNum, factor, btn) {
       document.querySelectorAll('.ppp-tab').forEach(b => b.classList.remove('active'));
       if (btn) btn.classList.add('active');
@@ -611,11 +615,13 @@
       document.querySelectorAll('.price-amount').forEach(el => {
         if (el.hasAttribute('data-base')) {
           const base = parseFloat(el.getAttribute('data-base'));
-          const calc = Math.round(base * factor);
+          const calc = (factor === 1.0) ? base : roundToHundred(base * factor);
           el.textContent = (base >= 5000) ? `$${calc.toLocaleString()}+ USD` : `< $${calc.toLocaleString()} USD`;
         } else if (el.hasAttribute('data-base-min') && el.hasAttribute('data-base-max')) {
-          const min = Math.round(parseFloat(el.getAttribute('data-base-min')) * factor);
-          const max = Math.round(parseFloat(el.getAttribute('data-base-max')) * factor);
+          const rawMin = parseFloat(el.getAttribute('data-base-min'));
+          const rawMax = parseFloat(el.getAttribute('data-base-max'));
+          const min = (factor === 1.0) ? rawMin : roundToHundred(rawMin * factor);
+          const max = (factor === 1.0) ? rawMax : roundToHundred(rawMax * factor);
           el.textContent = `$${min.toLocaleString()} – $${max.toLocaleString()} USD`;
         }
       });
