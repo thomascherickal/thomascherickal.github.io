@@ -135,7 +135,7 @@ Roughly half Generative AI-accelerated for speed, half hand-verified for technic
 ## Books & Long-Form
 
 ### RECRUITED — The Inbound Recruiter Blueprint: How to Make Recruiters Chase You
-*(Pre-Order Status — $5.00 USD pre-order · Free with an active Patreon subscription)*
+*(Pre-Order Status — $10.00 USD pre-order ($20.00 USD after release) · Free with an active Patreon subscription)*
 
 ![RECRUITED Book Cover](recruited-cover.jpg)
 
