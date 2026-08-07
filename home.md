@@ -182,7 +182,7 @@ How to understand and build emerging technologies.
 - [✍️ Medium (@thomascherickal)](https://thomascherickal.medium.com)
 - [🔷 Hashnode (thomascherickal.hashnode.dev)](https://thomascherickal.hashnode.dev)
 - [📬 Substack (thesingularitypoint.substack.com)](https://thesingularitypoint.substack.com)
-- [🃏 Carrd (thomascherickal.carrd.co)](https://thomascherickal.carrd.co/)
+- [🦊 GitLab (gitlab.com/thomascherickal)](https://gitlab.com/thomascherickal)
 - [❓ Quora (thomascherickal.quora.com)](https://thomascherickal.quora.com)
 - [🤖 Reddit (reddit.com/user/thomascherickal)](https://reddit.com/user/thomascherickal)
 - [📊 Kaggle (kaggle.com/thomascherickal)](https://www.kaggle.com/thomascherickal)
