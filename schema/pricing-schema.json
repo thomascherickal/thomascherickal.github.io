@@ -3,7 +3,7 @@
   "@type": "OfferCatalog",
   "@id": "https://thomascherickal.github.io/pricing.html#offercatalog",
   "name": "Services Pricing & Purchasing Power Parity Index — Thomas Cherickal",
-  "description": "Transparent milestone pricing for technical writing, developer education, and quantum developer content adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (66%), Tier 3 Least Developed (33%).",
+  "description": "Transparent milestone pricing for technical writing, developer education, Generative AI engineering, and quantum developer content adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (66%), Tier 3 Least Developed (33%).",
   "url": "https://thomascherickal.github.io/pricing.html",
   "itemListElement": [
     {
@@ -13,12 +13,7 @@
       "priceSpecification": {
         "@type": "PriceSpecification",
         "price": "250.00",
-        "priceCurrency": "USD",
-        "eligibleQuantity": {
-          "@type": "QuantitativeValue",
-          "unitCode": "C62",
-          "value": 1
-        }
+        "priceCurrency": "USD"
       }
     },
     {
@@ -44,7 +39,51 @@
     },
     {
       "@type": "Offer",
-      "name": "Multi-Part Tutorial / Course Series",
+      "name": "AI Agent Orchestration",
+      "description": "Multi-agent orchestration guides, vector DB evaluation, and LangGraph/LlamaIndex code walkthroughs.",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": "1200.00",
+        "maxPrice": "2500.00",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Local LLM Fine-Tuning & Evaluation Suite",
+      "description": "Custom LoRA/QLoRA fine-tuning guides, evaluation harness code, and benchmark writeups.",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": "1500.00",
+        "maxPrice": "2800.00",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Quantum Circuit Verification",
+      "description": "Qiskit/PennyLane circuit transpilation benchmarks, gate count reduction analysis, and noise simulation reports.",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": "1000.00",
+        "maxPrice": "2200.00",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Post-Quantum Cryptography Migration Blueprint",
+      "description": "NIST PQC algorithm readiness analysis, hybrid key exchange implementation, and enterprise migration guides.",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": "1800.00",
+        "maxPrice": "3000.00",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Multi-Part Tutorial Series",
       "description": "Structured curriculum with executable Jupyter Notebooks per module.",
       "priceSpecification": {
         "@type": "PriceSpecification",
@@ -55,7 +94,7 @@
     },
     {
       "@type": "Offer",
-      "name": "Full Developer Documentation Suite",
+      "name": "Developer Documentation Suite",
       "description": "Complete API, SDK, and architecture docs suite.",
       "priceSpecification": {
         "@type": "PriceSpecification",
@@ -66,23 +105,12 @@
     },
     {
       "@type": "Offer",
-      "name": "Monthly Content Partner Retainer",
+      "name": "Monthly Content Partner",
       "description": "Dedicated monthly sprint capacity for articles, changelogs, and docs.",
       "priceSpecification": {
         "@type": "PriceSpecification",
         "minPrice": "1500.00",
         "maxPrice": "4000.00",
-        "priceCurrency": "USD",
-        "unitText": "MONTH"
-      }
-    },
-    {
-      "@type": "Offer",
-      "name": "Enterprise Training & Custom Advisory",
-      "description": "2-hour live remote team training on Gen AI and Quantum Computing.",
-      "priceSpecification": {
-        "@type": "PriceSpecification",
-        "minPrice": "5000.00",
         "priceCurrency": "USD"
       }
     }
