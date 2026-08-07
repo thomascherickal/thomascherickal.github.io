@@ -28,8 +28,7 @@
   <meta name="twitter:site" content="@thomascherickal" />
   <meta name="twitter:creator" content="@thomascherickal" />
   <meta name="twitter:title" content="Pricing &amp; Country Parity Index — Thomas Cherickal" />
-  <meta name="twitter:description"
-    content="Service pricing and 198-country Purchasing Power Parity (PPP) discounts." />
+  <meta name="twitter:description" content="Service pricing and 198-country Purchasing Power Parity (PPP) discounts." />
   <meta name="twitter:image" content="https://thomascherickal.github.io/assets/og-card.png" />
 
   <!-- Favicon & Icons -->
@@ -78,7 +77,8 @@
       transition: all 0.2s ease;
     }
 
-    .ppp-tab.active, .ppp-tab:hover {
+    .ppp-tab.active,
+    .ppp-tab:hover {
       background: var(--gold);
       color: #000;
       border-color: var(--gold);
@@ -177,9 +177,23 @@
       font-weight: 700;
     }
 
-    .tier-1 { background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.4); }
-    .tier-2 { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
-    .tier-3 { background: rgba(236, 72, 153, 0.2); color: #f472b6; border: 1px solid rgba(236, 72, 153, 0.4); }
+    .tier-1 {
+      background: rgba(59, 130, 246, 0.2);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.4);
+    }
+
+    .tier-2 {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+
+    .tier-3 {
+      background: rgba(236, 72, 153, 0.2);
+      color: #f472b6;
+      border: 1px solid rgba(236, 72, 153, 0.4);
+    }
 
     /* Startup Discount CTA */
     .startup-cta-box {
@@ -273,77 +287,91 @@
       <p class="section-label">// SCOPE &amp; GLOBAL EQUITY</p>
       <h1 class="section-title">Services <span class="accent-gold">Pricing</span> &amp; Parity Index</h1>
       <p class="section-sub" style="max-width:760px;margin:0.5rem auto 0 auto;">
-        Transparent milestone pricing adjusted for global Purchasing Power Parity (PPP) across 198 countries: Tier 1 (100%), Tier 2 (66%), Tier 3 (33%).
+        Transparent milestone pricing adjusted for global Purchasing Power Parity (PPP) across 198 countries: Tier 1
+        (100%), Tier 2 (66%), Tier 3 (33%).
       </p>
     </section>
 
     <!-- PPP TIER CALCULATOR SECTION -->
     <section class="reveal">
       <div class="ppp-container">
-        <h3 style="color:var(--gold);font-size:1.3rem;margin-bottom:0.5rem;">Interactive Purchasing Power Parity (PPP) Calculator</h3>
+        <h3 style="color:var(--gold);font-size:1.3rem;margin-bottom:0.5rem;">Interactive Purchasing Power Parity (PPP)
+          Calculator</h3>
         <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:1.25rem;">
           Select your country's designated tier to view instant parity pricing recalculations across all services.
         </p>
 
         <div class="ppp-tabs">
-          <button class="ppp-tab active" onclick="setPPPTier(1, 1.0, this)">Tier 1 — Developed Nations (100% Price)</button>
-          <button class="ppp-tab" onclick="setPPPTier(2, 0.66, this)">Tier 2 — Developing Nations (66% Price · 34% Off)</button>
-          <button class="ppp-tab" onclick="setPPPTier(3, 0.33, this)">Tier 3 — Least Developed Nations (33% Price · 67% Off)</button>
+          <button class="ppp-tab active" onclick="setPPPTier(1, 1.0, this)">Tier 1 — Developed Nations (100%
+            Price)</button>
+          <button class="ppp-tab" onclick="setPPPTier(2, 0.66, this)">Tier 2 — Developing Nations (66% Price)</button>
+          <button class="ppp-tab" onclick="setPPPTier(3, 0.33, this)">Tier 3 — Least Developed Nations (33%
+            Price)</button>
         </div>
 
         <div class="pricing-grid-faq">
           <div class="price-card-faq">
             <div class="price-card-title">🌟 Micro-Task / Verification Pass</div>
             <div class="price-amount" data-base="250">&lt; $250 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Code audit &amp; execution check</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Code audit &amp; execution
+              check</div>
           </div>
           <div class="price-card-faq">
             <div class="price-card-title">📄 Short Technical Article</div>
             <div class="price-amount" data-base="500">&lt; $500 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">1,500–2,500 words with code</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">1,500–2,500 words with code
+            </div>
           </div>
           <div class="price-card-faq">
             <div class="price-card-title">📘 Standard Technical Deep Dive</div>
             <div class="price-amount" data-base-min="500" data-base-max="1250">$500 – $1,250 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Long-form original benchmarks</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Long-form original benchmarks
+            </div>
           </div>
 
           <!-- 4 MID-LEVEL SERVICES ($1000 - $3000 RANGE): GENAI IN CYAN, QUANTUM IN VIOLET -->
           <div class="price-card-faq" style="border-color:rgba(6,182,212,0.3);">
             <div class="price-card-title" style="color:var(--cyan);">🤖 AI Agent Orchestration</div>
             <div class="price-amount" data-base-min="1200" data-base-max="2500">$1,200 – $2,500 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Multi-agent orchestration &amp; vector DB guides</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Multi-agent orchestration
+              &amp; vector DB guides</div>
           </div>
           <div class="price-card-faq" style="border-color:rgba(6,182,212,0.3);">
             <div class="price-card-title" style="color:var(--cyan);">⚙️ Local LLM Fine-Tuning Suite</div>
             <div class="price-amount" data-base-min="1500" data-base-max="2800">$1,500 – $2,800 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Custom LoRA/QLoRA harness &amp; benchmarks</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Custom LoRA/QLoRA harness
+              &amp; benchmarks</div>
           </div>
           <div class="price-card-faq" style="border-color:rgba(168,85,247,0.3);">
             <div class="price-card-title" style="color:var(--violet);">⚡ Quantum Circuit Verification</div>
             <div class="price-amount" data-base-min="1000" data-base-max="2200">$1,000 – $2,200 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Qiskit/PennyLane transpilation &amp; gate audits</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Qiskit/PennyLane transpilation
+              &amp; gate audits</div>
           </div>
           <div class="price-card-faq" style="border-color:rgba(168,85,247,0.3);">
             <div class="price-card-title" style="color:var(--violet);">🛡️ Post-Quantum Migration Blueprint</div>
             <div class="price-amount" data-base-min="1800" data-base-max="3000">$1,800 – $3,000 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">NIST PQC algorithm readiness &amp; hybrid keys</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">NIST PQC algorithm readiness
+              &amp; hybrid keys</div>
           </div>
 
           <div class="price-card-faq">
             <div class="price-card-title">📚 Multi-Part Tutorial Series</div>
             <div class="price-amount" data-base-min="1250" data-base-max="2500">$1,250 – $2,500 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Structured course notebooks</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Structured course notebooks
+            </div>
           </div>
           <div class="price-card-faq">
             <div class="price-card-title">🚀 Developer Documentation Suite</div>
             <div class="price-amount" data-base-min="2500" data-base-max="5000">$2,500 – $5,000 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Full API &amp; SDK docs suite</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Full API &amp; SDK docs suite
+            </div>
           </div>
           <div class="price-card-faq">
             <div class="price-card-title">💼 Monthly Content Partner</div>
             <div class="price-amount" data-base-min="1500" data-base-max="4000">$1,500 – $4,000 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Dedicated monthly sprint capacity</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Dedicated monthly sprint
+              capacity</div>
           </div>
         </div>
       </div>
@@ -356,10 +384,13 @@
       <div style="margin-top:1rem;">
         <h3 style="color:var(--gold);font-size:1.4rem;margin-bottom:0.75rem;">198-Country Parity Pricing Index</h3>
         <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">
-          Type your country name below to instantly view your nation's designated Purchasing Power Parity (PPP) Tier and discount rate.
+          Type your country name below to instantly view your nation's designated Purchasing Power Parity (PPP) Tier and
+          discount rate.
         </p>
 
-        <input type="text" id="countrySearch" class="search-box" placeholder="🔍 Search 198 countries (e.g. India, Brazil, Germany, Vietnam, Nigeria, Ukraine)..." onkeyup="filterParityTable()" />
+        <input type="text" id="countrySearch" class="search-box"
+          placeholder="🔍 Search 198 countries (e.g. India, Brazil, Germany, Vietnam, Nigeria, Ukraine)..."
+          onkeyup="filterParityTable()" />
 
         <div class="table-responsive">
           <table class="parity-table" id="parityTable">
@@ -372,204 +403,1194 @@
               </tr>
             </thead>
             <tbody>
-              <tr><td>1</td><td>United States</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>2</td><td>Canada</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>3</td><td>China</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>4</td><td>Japan</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>5</td><td>South Korea</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>6</td><td>Taiwan</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>7</td><td>Hong Kong SAR</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>8</td><td>Macau SAR</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>9</td><td>Singapore</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>10</td><td>Brunei</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>11</td><td>Australia</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>12</td><td>New Zealand</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>13</td><td>Israel</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>14</td><td>United Kingdom</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>15</td><td>Ireland</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>16</td><td>France</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>17</td><td>Germany</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>18</td><td>Netherlands</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>19</td><td>Belgium</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>20</td><td>Luxembourg</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>21</td><td>Switzerland</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>22</td><td>Austria</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>23</td><td>Liechtenstein</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>24</td><td>Monaco</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>25</td><td>Andorra</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>26</td><td>San Marino</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>27</td><td>Italy</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>28</td><td>Spain</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>29</td><td>Portugal</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>30</td><td>Greece</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>31</td><td>Malta</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>32</td><td>Cyprus</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>33</td><td>Denmark</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>34</td><td>Norway</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>35</td><td>Sweden</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>36</td><td>Finland</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>37</td><td>Iceland</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>38</td><td>Estonia</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>39</td><td>Latvia</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>40</td><td>Lithuania</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>41</td><td>Poland</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>42</td><td>Czechia</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>43</td><td>Slovakia</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>44</td><td>Slovenia</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>45</td><td>Hungary</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>46</td><td>Croatia</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>47</td><td>Romania</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>48</td><td>Bulgaria</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>49</td><td>Russia</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>50</td><td>Saudi Arabia</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>51</td><td>United Arab Emirates</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>52</td><td>Qatar</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>53</td><td>Kuwait</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>54</td><td>Bahrain</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>55</td><td>Oman</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>56</td><td>Chile</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>57</td><td>Uruguay</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>58</td><td>Panama</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>59</td><td>Guyana</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>60</td><td>Trinidad and Tobago</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>61</td><td>Bahamas</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>62</td><td>Barbados</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>63</td><td>Antigua and Barbuda</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>64</td><td>Saint Kitts and Nevis</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>65</td><td>Seychelles</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>66</td><td>Palau</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>67</td><td>Nauru</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
-              <tr><td>68</td><td>India</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>69</td><td>Brazil</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>70</td><td>Mexico</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>71</td><td>Argentina</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>72</td><td>Colombia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>73</td><td>Peru</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>74</td><td>Ecuador</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>75</td><td>Bolivia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>76</td><td>Paraguay</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>77</td><td>Venezuela</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>78</td><td>Guatemala</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>79</td><td>Honduras</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>80</td><td>El Salvador</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>81</td><td>Nicaragua</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>82</td><td>Costa Rica</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>83</td><td>Dominican Republic</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>84</td><td>Cuba</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>85</td><td>Jamaica</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>86</td><td>Belize</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>87</td><td>Suriname</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>88</td><td>Grenada</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>89</td><td>Saint Lucia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>90</td><td>Saint Vincent and the Grenadines</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>91</td><td>Dominica</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>92</td><td>Turkey</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>93</td><td>Albania</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>94</td><td>Bosnia and Herzegovina</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>95</td><td>North Macedonia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>96</td><td>Montenegro</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>97</td><td>Serbia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>98</td><td>Kosovo</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>99</td><td>Moldova</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>100</td><td>Ukraine</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>101</td><td>Belarus</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>102</td><td>Georgia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>103</td><td>Armenia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>104</td><td>Azerbaijan</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>105</td><td>Kazakhstan</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>106</td><td>Kyrgyzstan</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>107</td><td>Tajikistan</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>108</td><td>Turkmenistan</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>109</td><td>Uzbekistan</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>110</td><td>Mongolia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>111</td><td>Iran</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>112</td><td>Iraq</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>113</td><td>Jordan</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>114</td><td>Lebanon</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>115</td><td>Palestine</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>116</td><td>Egypt</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>117</td><td>Morocco</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>118</td><td>Tunisia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>119</td><td>Algeria</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>120</td><td>Libya</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>121</td><td>Pakistan</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>122</td><td>Sri Lanka</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>123</td><td>Maldives</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>124</td><td>Bhutan</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>125</td><td>Indonesia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>126</td><td>Malaysia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>127</td><td>Thailand</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>128</td><td>Philippines</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>129</td><td>Vietnam</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>130</td><td>Papua New Guinea</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>131</td><td>Fiji</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>132</td><td>Samoa</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>133</td><td>Tonga</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>134</td><td>Vanuatu</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>135</td><td>Micronesia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>136</td><td>Marshall Islands</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>137</td><td>South Africa</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>138</td><td>Namibia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>139</td><td>Botswana</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>140</td><td>Eswatini</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>141</td><td>Kenya</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>142</td><td>Ghana</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>143</td><td>Nigeria</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>144</td><td>Côte d'Ivoire</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>145</td><td>Cameroon</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>146</td><td>Republic of the Congo</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>147</td><td>Gabon</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>148</td><td>Equatorial Guinea</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>149</td><td>Cabo Verde</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>150</td><td>São Tomé and Príncipe</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>151</td><td>Zimbabwe</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>152</td><td>Mauritius</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>66% (34% Off)</td></tr>
-              <tr><td>153</td><td>Afghanistan</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>154</td><td>Angola</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>155</td><td>Bangladesh</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>156</td><td>Benin</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>157</td><td>Burkina Faso</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>158</td><td>Burundi</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>159</td><td>Cambodia</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>160</td><td>Central African Republic</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>161</td><td>Chad</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>162</td><td>Comoros</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>163</td><td>DR Congo</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>164</td><td>Djibouti</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>165</td><td>Eritrea</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>166</td><td>Ethiopia</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>167</td><td>Gambia</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>168</td><td>Guinea</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>169</td><td>Guinea-Bissau</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>170</td><td>Haiti</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>171</td><td>Kiribati</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>172</td><td>Laos</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>173</td><td>Lesotho</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>174</td><td>Liberia</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>175</td><td>Madagascar</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>176</td><td>Malawi</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>177</td><td>Mali</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>178</td><td>Mauritania</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>179</td><td>Mozambique</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>180</td><td>Myanmar</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>181</td><td>Nepal</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>182</td><td>Niger</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>183</td><td>North Korea</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>184</td><td>Rwanda</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>185</td><td>Senegal</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>186</td><td>Sierra Leone</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>187</td><td>Solomon Islands</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>188</td><td>Somalia</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>189</td><td>South Sudan</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>190</td><td>Sudan</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>191</td><td>Syria</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>192</td><td>Tanzania</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>193</td><td>Timor-Leste</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>194</td><td>Togo</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>195</td><td>Tuvalu</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>196</td><td>Uganda</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>197</td><td>Yemen</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
-              <tr><td>198</td><td>Zambia</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>33% (67% Off)</td></tr>
+              <tr>
+                <td>1</td>
+                <td>United States</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Canada</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>China</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Japan</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>South Korea</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Taiwan</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Hong Kong SAR</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Macau SAR</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Singapore</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Brunei</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Australia</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>New Zealand</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>Israel</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>United Kingdom</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>Ireland</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>France</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>Germany</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>Netherlands</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>Belgium</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>Luxembourg</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>21</td>
+                <td>Switzerland</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td>Austria</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>23</td>
+                <td>Liechtenstein</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>24</td>
+                <td>Monaco</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>25</td>
+                <td>Andorra</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>26</td>
+                <td>San Marino</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>27</td>
+                <td>Italy</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>28</td>
+                <td>Spain</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>29</td>
+                <td>Portugal</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>30</td>
+                <td>Greece</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>31</td>
+                <td>Malta</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>32</td>
+                <td>Cyprus</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>33</td>
+                <td>Denmark</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>34</td>
+                <td>Norway</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>35</td>
+                <td>Sweden</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>36</td>
+                <td>Finland</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>37</td>
+                <td>Iceland</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>38</td>
+                <td>Estonia</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>39</td>
+                <td>Latvia</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>40</td>
+                <td>Lithuania</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>41</td>
+                <td>Poland</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>42</td>
+                <td>Czechia</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>43</td>
+                <td>Slovakia</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>44</td>
+                <td>Slovenia</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>45</td>
+                <td>Hungary</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>46</td>
+                <td>Croatia</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>47</td>
+                <td>Romania</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>48</td>
+                <td>Bulgaria</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>49</td>
+                <td>Russia</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>50</td>
+                <td>Saudi Arabia</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>51</td>
+                <td>United Arab Emirates</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>52</td>
+                <td>Qatar</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>53</td>
+                <td>Kuwait</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>54</td>
+                <td>Bahrain</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>55</td>
+                <td>Oman</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>56</td>
+                <td>Chile</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>57</td>
+                <td>Uruguay</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>58</td>
+                <td>Panama</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>59</td>
+                <td>Guyana</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>60</td>
+                <td>Trinidad and Tobago</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>61</td>
+                <td>Bahamas</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>62</td>
+                <td>Barbados</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>63</td>
+                <td>Antigua and Barbuda</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>64</td>
+                <td>Saint Kitts and Nevis</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>65</td>
+                <td>Seychelles</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>66</td>
+                <td>Palau</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>67</td>
+                <td>Nauru</td>
+                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
+                <td>100% (Standard)</td>
+              </tr>
+              <tr>
+                <td>68</td>
+                <td>India</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>69</td>
+                <td>Brazil</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>70</td>
+                <td>Mexico</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>71</td>
+                <td>Argentina</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>72</td>
+                <td>Colombia</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>73</td>
+                <td>Peru</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>74</td>
+                <td>Ecuador</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>75</td>
+                <td>Bolivia</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>76</td>
+                <td>Paraguay</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>77</td>
+                <td>Venezuela</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>78</td>
+                <td>Guatemala</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>79</td>
+                <td>Honduras</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>80</td>
+                <td>El Salvador</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>81</td>
+                <td>Nicaragua</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>82</td>
+                <td>Costa Rica</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>83</td>
+                <td>Dominican Republic</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>84</td>
+                <td>Cuba</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>85</td>
+                <td>Jamaica</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>86</td>
+                <td>Belize</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>87</td>
+                <td>Suriname</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>88</td>
+                <td>Grenada</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>89</td>
+                <td>Saint Lucia</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>90</td>
+                <td>Saint Vincent and the Grenadines</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>91</td>
+                <td>Dominica</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>92</td>
+                <td>Turkey</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>93</td>
+                <td>Albania</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>94</td>
+                <td>Bosnia and Herzegovina</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>95</td>
+                <td>North Macedonia</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>96</td>
+                <td>Montenegro</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>97</td>
+                <td>Serbia</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>98</td>
+                <td>Kosovo</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>99</td>
+                <td>Moldova</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>100</td>
+                <td>Ukraine</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>101</td>
+                <td>Belarus</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>102</td>
+                <td>Georgia</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>103</td>
+                <td>Armenia</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>104</td>
+                <td>Azerbaijan</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>105</td>
+                <td>Kazakhstan</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>106</td>
+                <td>Kyrgyzstan</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>107</td>
+                <td>Tajikistan</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>108</td>
+                <td>Turkmenistan</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>109</td>
+                <td>Uzbekistan</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>110</td>
+                <td>Mongolia</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>111</td>
+                <td>Iran</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>112</td>
+                <td>Iraq</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>113</td>
+                <td>Jordan</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>114</td>
+                <td>Lebanon</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>115</td>
+                <td>Palestine</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>116</td>
+                <td>Egypt</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>117</td>
+                <td>Morocco</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>118</td>
+                <td>Tunisia</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>119</td>
+                <td>Algeria</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>120</td>
+                <td>Libya</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>121</td>
+                <td>Pakistan</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>122</td>
+                <td>Sri Lanka</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>123</td>
+                <td>Maldives</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>124</td>
+                <td>Bhutan</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>125</td>
+                <td>Indonesia</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>126</td>
+                <td>Malaysia</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>127</td>
+                <td>Thailand</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>128</td>
+                <td>Philippines</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>129</td>
+                <td>Vietnam</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>130</td>
+                <td>Papua New Guinea</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>131</td>
+                <td>Fiji</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>132</td>
+                <td>Samoa</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>133</td>
+                <td>Tonga</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>134</td>
+                <td>Vanuatu</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>135</td>
+                <td>Micronesia</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>136</td>
+                <td>Marshall Islands</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>137</td>
+                <td>South Africa</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>138</td>
+                <td>Namibia</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>139</td>
+                <td>Botswana</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>140</td>
+                <td>Eswatini</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>141</td>
+                <td>Kenya</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>142</td>
+                <td>Ghana</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>143</td>
+                <td>Nigeria</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>144</td>
+                <td>Côte d'Ivoire</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>145</td>
+                <td>Cameroon</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>146</td>
+                <td>Republic of the Congo</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>147</td>
+                <td>Gabon</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>148</td>
+                <td>Equatorial Guinea</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>149</td>
+                <td>Cabo Verde</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>150</td>
+                <td>São Tomé and Príncipe</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>151</td>
+                <td>Zimbabwe</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>152</td>
+                <td>Mauritius</td>
+                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
+                <td>66% (34% Off)</td>
+              </tr>
+              <tr>
+                <td>153</td>
+                <td>Afghanistan</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>154</td>
+                <td>Angola</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>155</td>
+                <td>Bangladesh</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>156</td>
+                <td>Benin</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>157</td>
+                <td>Burkina Faso</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>158</td>
+                <td>Burundi</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>159</td>
+                <td>Cambodia</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>160</td>
+                <td>Central African Republic</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>161</td>
+                <td>Chad</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>162</td>
+                <td>Comoros</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>163</td>
+                <td>DR Congo</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>164</td>
+                <td>Djibouti</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>165</td>
+                <td>Eritrea</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>166</td>
+                <td>Ethiopia</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>167</td>
+                <td>Gambia</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>168</td>
+                <td>Guinea</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>169</td>
+                <td>Guinea-Bissau</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>170</td>
+                <td>Haiti</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>171</td>
+                <td>Kiribati</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>172</td>
+                <td>Laos</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>173</td>
+                <td>Lesotho</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>174</td>
+                <td>Liberia</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>175</td>
+                <td>Madagascar</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>176</td>
+                <td>Malawi</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>177</td>
+                <td>Mali</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>178</td>
+                <td>Mauritania</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>179</td>
+                <td>Mozambique</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>180</td>
+                <td>Myanmar</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>181</td>
+                <td>Nepal</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>182</td>
+                <td>Niger</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>183</td>
+                <td>North Korea</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>184</td>
+                <td>Rwanda</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>185</td>
+                <td>Senegal</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>186</td>
+                <td>Sierra Leone</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>187</td>
+                <td>Solomon Islands</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>188</td>
+                <td>Somalia</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>189</td>
+                <td>South Sudan</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>190</td>
+                <td>Sudan</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>191</td>
+                <td>Syria</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>192</td>
+                <td>Tanzania</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>193</td>
+                <td>Timor-Leste</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>194</td>
+                <td>Togo</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>195</td>
+                <td>Tuvalu</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>196</td>
+                <td>Uganda</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>197</td>
+                <td>Yemen</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
+              <tr>
+                <td>198</td>
+                <td>Zambia</td>
+                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
+                <td>33% (67% Off)</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -583,13 +1604,16 @@
         <h2 style="font-size:2.2rem;font-weight:900;color:var(--text-primary);margin:0.5rem 0 1rem 0;">
           Building an Early-Stage <span class="accent-gold">AI or Quantum Startup?</span>
         </h2>
-        <p style="max-width:640px;margin:0 auto 2rem auto;color:var(--text-secondary);font-size:1.05rem;line-height:1.6;">
-          We empower Pre-Seed and Seed-stage engineering teams building frontier Generative AI infrastructure or quantum computing SDKs with an exclusive <strong>30% startup discount</strong>.
+        <p
+          style="max-width:640px;margin:0 auto 2rem auto;color:var(--text-secondary);font-size:1.05rem;line-height:1.6;">
+          We empower Pre-Seed and Seed-Stage engineering teams building frontier Generative AI Infrastructure or Quantum
+          Computing SDKs with an exclusive <strong>30% startup discount</strong>.
         </p>
 
         <!-- PROMINENT STARTUP DISCOUNT BUTTON (EXPLICIT USER MANDATE) -->
         <div>
-          <a href="services.html#contact" class="btn btn-commission" style="font-size:1.15rem;padding:1.15rem 2.5rem;box-shadow:0 0 20px rgba(255,215,0,0.3);">
+          <a href="services.html#contact" class="btn btn-commission"
+            style="font-size:1.15rem;padding:1.15rem 2.5rem;box-shadow:0 0 20px rgba(255,215,0,0.3);">
             30% Discount for Startups →
           </a>
         </div>
