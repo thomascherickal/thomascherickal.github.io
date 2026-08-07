@@ -13,6 +13,7 @@
       <li><a href="writing.html">Publications</a></li>
       <li><a href="about.html">Capabilities</a></li>
       <li><a href="services.html">Services</a></li>
+      <li><a href="FAQs.html">FAQs</a></li>
     </ul>
   </nav>`;
 
@@ -111,7 +112,9 @@
     const links = document.querySelectorAll('.nav-links a');
     links.forEach(link => {
       const href = link.getAttribute('href');
-      if (href === page || (page === 'index.html' && (href === 'index.html' || href === './'))) {
+      const lowerHref = href ? href.toLowerCase() : '';
+      const lowerPage = page ? page.toLowerCase() : '';
+      if (lowerHref === lowerPage || (lowerPage === 'index.html' && (lowerHref === 'index.html' || lowerHref === './'))) {
         link.classList.add('active');
         link.setAttribute('aria-current', 'page');
       } else {

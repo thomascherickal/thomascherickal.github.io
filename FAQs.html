@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQs &amp; Country Parity Pricing — Thomas Cherickal</title>
+  <meta name="description"
+    content="Frequently asked questions on technical writing, quantum developer education, infinite revisions, milestone payments, and 198-country Purchasing Power Parity (PPP) pricing." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://thomascherickal.github.io/FAQs.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thomascherickal.github.io/FAQs.html" />
+  <meta property="og:site_name" content="Thomas Cherickal — The Digital Futurist" />
+  <meta property="og:title" content="FAQs &amp; Country Parity Pricing — Thomas Cherickal" />
+  <meta property="og:description"
+    content="Answers on revisions, milestone payments, code verification, IP ownership, and country parity pricing across 198 nations." />
+  <meta property="og:image" content="https://thomascherickal.github.io/assets/og-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Thomas Cherickal — FAQs &amp; Parity Pricing" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@thomascherickal" />
+  <meta name="twitter:creator" content="@thomascherickal" />
+  <meta name="twitter:title" content="FAQs &amp; Parity Pricing — Thomas Cherickal" />
+  <meta name="twitter:description"
+    content="Infinite revisions, milestone payments, code verification, and global PPP parity pricing." />
+  <meta name="twitter:image" content="https://thomascherickal.github.io/assets/og-card.png" />
+
+  <!-- Favicon & Icons -->
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css?v=173e304adcb4" />
+
+  <style>
+    .faq-category-badge {
+      display: inline-block;
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .faq-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .faq-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .faq-num {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-question {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.85rem;
+      line-height: 1.35;
+    }
+
+    .faq-answer {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .faq-answer strong {
+      color: var(--gold);
+    }
+
+    /* PPP Tier Switcher */
+    .ppp-container {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 215, 0, 0.25);
+      border-radius: 14px;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .ppp-tabs {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .ppp-tab {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-primary);
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .ppp-tab.active, .ppp-tab:hover {
+      background: var(--gold);
+      color: #000;
+      border-color: var(--gold);
+      font-weight: 700;
+    }
+
+    .pricing-grid-faq {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .price-card-faq {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+
+    .price-card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .price-amount {
+      font-family: var(--font-mono);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    /* Parity Table */
+    .search-box {
+      width: 100%;
+      padding: 0.85rem 1.25rem;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 8px;
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      outline: none;
+    }
+
+    .search-box:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.2);
+    }
+
+    .table-responsive {
+      max-height: 480px;
+      overflow-y: auto;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+    }
+
+    .parity-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+
+    .parity-table th {
+      background: rgba(255, 215, 0, 0.1);
+      color: var(--gold);
+      font-family: var(--font-mono);
+      padding: 0.75rem 1rem;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+    }
+
+    .parity-table td {
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-primary);
+    }
+
+    .parity-table tr:hover td {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .tier-badge {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+    }
+
+    .tier-1 { background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.4); }
+    .tier-2 { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
+    .tier-3 { background: rgba(236, 72, 153, 0.2); color: #f472b6; border: 1px solid rgba(236, 72, 153, 0.4); }
+
+    /* Startup Discount CTA */
+    .startup-cta-box {
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
+      border: 2px solid var(--gold);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin-top: 3.5rem;
+      box-shadow: 0 12px 36px rgba(255, 215, 0, 0.15);
+    }
+  </style>
+
+  <!-- Structured Data (JSON-LD FAQPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many revisions till satisfied?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Infinite revisions. We work together continuously on every deliverable until you are 100% satisfied with the technical accuracy, clarity, and code execution."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are the payments handled?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Payments are handled by milestones, with every milestone having equal weightage on the final product."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who owns the intellectual property and copyright?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You retain 100% full IP ownership and copyright upon completion of every project milestone."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Purchasing Power Parity (PPP) / Country Parity Pricing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Parity pricing provides fair global access: Tier 1 (100% Standard Price), Tier 2 (75% Price / 25% Discount for Developing Nations), and Tier 3 (50% Price / 50% Discount for Least Developed Nations)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a discount for early-stage startups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Pre-Seed and Seed-stage startups receive a 50% discount across all technical content services."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <div id="site-header"></div>
+
+  <a href="#" class="back-top" id="backTop" title="Back to top" aria-label="Back to top">↑</a>
+
+  <main id="main">
+
+    <!-- PAGE HERO -->
+    <section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
+      <p class="section-label">// TRANSPARENCY &amp; GLOBAL PARITY</p>
+      <h1 class="section-title">Frequently Asked <span class="accent-gold">Questions</span> &amp; Pricing</h1>
+      <p class="section-sub" style="max-width:760px;margin:0.5rem auto 0 auto;">
+        Clear answers on infinite revisions, milestone payment structures, code verification, IP ownership, and our 198-country Purchasing Power Parity (PPP) discount system.
+      </p>
+    </section>
+
+    <!-- TOP SUMMARY HIGHLIGHT CARDS -->
+    <section>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:var(--bg-card);border:1px solid var(--gold);border-radius:12px;padding:1.5rem;text-align:center;">
+          <div style="font-size:2rem;margin-bottom:0.5rem;">🔄</div>
+          <h3 style="color:var(--gold);font-size:1.2rem;margin-bottom:0.4rem;">Infinite Revisions</h3>
+          <p style="color:var(--text-secondary);font-size:0.9rem;margin:0;">Until 100% satisfied with prose depth &amp; code accuracy.</p>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--gold);border-radius:12px;padding:1.5rem;text-align:center;">
+          <div style="font-size:2rem;margin-bottom:0.5rem;">⚖️</div>
+          <h3 style="color:var(--gold);font-size:1.2rem;margin-bottom:0.4rem;">Equal Milestones</h3>
+          <p style="color:var(--text-secondary);font-size:0.9rem;margin:0;">Payments handled strictly by equal-weight milestones.</p>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--gold);border-radius:12px;padding:1.5rem;text-align:center;">
+          <div style="font-size:2rem;margin-bottom:0.5rem;">🌐</div>
+          <h3 style="color:var(--gold);font-size:1.2rem;margin-bottom:0.4rem;">Global Parity Pricing</h3>
+          <p style="color:var(--text-secondary);font-size:0.9rem;margin:0;">Up to 50% discount based on Purchasing Power Parity.</p>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--gold);border-radius:12px;padding:1.5rem;text-align:center;">
+          <div style="font-size:2rem;margin-bottom:0.5rem;">🚀</div>
+          <h3 style="color:var(--gold);font-size:1.2rem;margin-bottom:0.4rem;">50% Startup Discount</h3>
+          <p style="color:var(--text-secondary);font-size:0.9rem;margin:0;">Special enablement discount for early-stage teams.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- 20 FAQs SECTION -->
+    <section class="reveal">
+      <div class="section-header">
+        <p class="section-label">20 Common Questions</p>
+        <h2 class="section-title">Everything You Need to <span class="accent-gold">Know</span></h2>
+        <p class="section-sub">Detailed answers covering engagement models, code execution guarantees, and intellectual property.</p>
+      </div>
+
+      <div class="faq-grid">
+
+        <!-- FAQ 1 (EXPLICIT USER MANDATE) -->
+        <div class="faq-card" style="border-color:var(--gold);">
+          <span class="faq-category-badge" style="background:rgba(255,215,0,0.15);color:var(--gold);">Mandate #1</span>
+          <div class="faq-num">FAQ #01 — Revision Policy</div>
+          <h3 class="faq-question">How many revisions till satisfied?</h3>
+          <p class="faq-answer">
+            <strong>Infinite revisions.</strong> We iterate continuously on every draft, technical guide, and code repository until your team is 100% satisfied with prose clarity, technical accuracy, and execution benchmarks.
+          </p>
+        </div>
+
+        <!-- FAQ 2 (EXPLICIT USER MANDATE) -->
+        <div class="faq-card" style="border-color:var(--gold);">
+          <span class="faq-category-badge" style="background:rgba(255,215,0,0.15);color:var(--gold);">Mandate #2</span>
+          <div class="faq-num">FAQ #02 — Billing &amp; Terms</div>
+          <h3 class="faq-question">How are the payments handled?</h3>
+          <p class="faq-answer">
+            <strong>Payments are handled by milestones, with every milestone having equal weightage on the final product.</strong> Whether split 50/50 for articles or 33/33/34 across multi-part suites, every phase carries equal weight.
+          </p>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-card">
+          <span class="faq-category-badge" style="background:rgba(59,130,246,0.15);color:#60a5fa;">Legal &amp; IP</span>
+          <div class="faq-num">FAQ #03 — IP Rights</div>
+          <h3 class="faq-question">Who owns the intellectual property and code repositories?</h3>
+          <p class="faq-answer">
+            You retain <strong>100% full IP ownership and copyright</strong> upon completion. All technical guides, notebooks, and sample code are delivered directly under your organization's open-source or proprietary licensing terms.
+          </p>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-card">
+          <span class="faq-category-badge" style="background:rgba(6,182,212,0.15);color:var(--cyan);">Quality Assurance</span>
+          <div class="faq-num">FAQ #04 — Code Verification</div>
+          <h3 class="faq-question">How is code execution and benchmark accuracy verified?</h3>
+          <p class="faq-answer">
+            Every code snippet, API request, PyTorch pipeline, and Qiskit quantum circuit is <strong>manually executed and verified</strong> in isolated containers or live hardware simulators prior to publication. No unverified boilerplate.
+          </p>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-card">
+          <span class="faq-category-badge" style="background:rgba(16,185,129,0.15);color:#34d399;">Global Equity</span>
+          <div class="faq-num">FAQ #05 — Purchasing Power Parity</div>
+          <h3 class="faq-question">What is Purchasing Power Parity (PPP) / Country Parity Pricing?</h3>
+          <p class="faq-answer">
+            PPP pricing ensures equal access for engineering teams globally. Clients in <strong>Tier 2 Developing Nations get 25% off (75% price)</strong> and <strong>Tier 3 Least Developed Nations get 50% off (50% price)</strong> based on World Bank indices.
+          </p>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-card">
+          <span class="faq-category-badge" style="background:rgba(236,72,153,0.15);color:#f472b6;">Startups</span>
+          <div class="faq-num">FAQ #06 — Startup Discounts</div>
+          <h3 class="faq-question">Is there a special discount for early-stage startups?</h3>
+          <p class="faq-answer">
+            Yes! Pre-Seed and Seed-stage startups receive a prominent <strong>50% discount across all technical content packages</strong> to accelerate developer acquisition during crucial launch windows.
+          </p>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-card">
+          <span class="faq-category-badge" style="background:rgba(168,85,247,0.15);color:#c084fc;">Tech Stacks</span>
+          <div class="faq-num">FAQ #07 — Supported Technologies</div>
+          <h3 class="faq-question">What technology stacks and frameworks do you cover?</h3>
+          <p class="faq-answer">
+            Generative AI (PyTorch, vLLM, Ollama, LangChain, LlamaIndex, Claude, Gemini APIs), Quantum Computing (IBM Qiskit, PennyLane, Cirq), and Core Systems (Python, Rust, Go, TypeScript).
+          </p>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="faq-card">
+          <span class="faq-category-badge" style="background:rgba(16,185,129,0.15);color:#34d399;">Delivery</span>
+          <div class="faq-num">FAQ #08 — Turnaround Times</div>
+          <h3 class="faq-question">What is the typical turnaround time for a deliverable?</h3>
+          <p class="faq-answer">
+            Short technical articles take <strong>3–5 business days</strong>; standard deep dives take <strong>5–8 business days</strong>; full developer documentation suites take <strong>14–21 business days</strong>.
+          </p>
+        </div>
+
+        <!-- FAQ 9 -->
+        <div class="faq-card">
+          <span class="faq-category-badge" style="background:rgba(59,130,246,0.15);color:#60a5fa;">Confidentiality</span>
+          <div class="faq-num">FAQ #09 — NDAs &amp; Security</div>
+          <h3 class="faq-question">Do you sign Non-Disclosure Agreements (NDAs)?</h3>
+          <p class="faq-answer">
+            <strong>Yes, absolutely.</strong> Standard mutual NDAs are executed prior to examining unreleased API endpoints, proprietary SDKs, or pre-launch model architecture documentation.
+          </p>
+        </div>
+
+        <!-- FAQ 10 -->
+        <div class="faq-card">
+          <span class="faq-category-badge" style="background:rgba(168,85,247,0.15);color:#c084fc;">Information Architecture</span>
+          <div class="faq-num">FAQ #10 — Multi-Audience Content</div>
+          <h3 class="faq-question">Can you write for both developers and executive leaders?</h3>
+          <p class="faq-answer">
+            Yes. Using the <strong>Diátaxis framework</strong>, content is structured with modular sections: quickstarts for busy engineers, benchmark deep dives for researchers, and executive summaries for decision-makers.
+          </p>
+        </div>
+
+        <!-- FAQ 11 -->
+        <div class="faq-card">
+          <span class="faq-category-badge" style="background:rgba(16,185,129,0.15);color:#34d399;">Formats</span>
+          <div class="faq-num">FAQ #11 — Deliverable Formats</div>
+          <h3 class="faq-question">In what file formats do you deliver content?</h3>
+          <p class="faq-answer">
+            Clean Markdown (`.md`), MDX, Jupyter Notebooks (`.ipynb`), executable Python/Qiskit scripts, OpenAPI/Swagger JSON specs, and direct GitHub Pull Requests to your repository.
+          </p>
+        </div>
+
+        <!-- FAQ 12 -->
+        <div class="faq-card">
+          <span class="faq-category-badge" style="background:rgba(168,85,247,0.15);color:#c084fc;">AI Methodology</span>
+          <div class="faq-num">FAQ #12 — AI Acceleration</div>
+          <h3 class="faq-question">How does AI acceleration work with 100% human verification?</h3>
+          <p class="faq-answer">
+            Frontier AI tools accelerate research aggregation and initial outline drafting. Every line of prose and code is then <strong>hand-written, manually tested, and line-by-line verified</strong> by Thomas Cherickal.
+          </p>
+        </div>
+
+        <!-- FAQ 13 -->
+        <div class="faq-card">
+          <span class="faq-category-badge" style="background:rgba(6,182,212,0.15);color:var(--cyan);">Training</span>
+          <div class="faq-num">FAQ #13 — Remote Enablement</div>
+          <h3 class="faq-question">What is included in Remote Engineering Team Training?</h3>
+          <p class="faq-answer">
+            2-hour interactive enablement workshops covering Generative AI architecture, local LLM inference deployment, and Post-Quantum Cryptography (PQC) transition risks, backed by hands-on notebooks.
+          </p>
+        </div>
+
+        <!-- FAQ 14 -->
+        <div class="faq-card">
+          <span class="faq-category-badge" style="background:rgba(255,215,0,0.15);color:var(--gold);">Partnerships</span>
+          <div class="faq-num">FAQ #14 — Retainers</div>
+          <h3 class="faq-question">Do you offer monthly content partner retainers?</h3>
+          <p class="faq-answer">
+            Yes. Monthly retainer partnerships provide dedicated sprint capacity for technical articles, changelogs, SDK update guides, and continuous documentation maintenance.
+          </p>
+        </div>
+
+        <!-- FAQ 15 -->
+        <div class="faq-card">
+          <span class="faq-category-badge" style="background:rgba(16,185,129,0.15);color:#34d399;">Support</span>
+          <div class="faq-num">FAQ #15 — Post-Launch Maintenance</div>
+          <h3 class="faq-question">What happens if an API version changes shortly after delivery?</h3>
+          <p class="faq-answer">
+            Minor code snippet updates and API breaking change patches are included free for <strong>60 days post-launch</strong> under our commitment to long-term content accuracy.
+          </p>
+        </div>
+
+        <!-- FAQ 16 -->
+        <div class="faq-card">
+          <span class="faq-category-badge" style="background:rgba(255,215,0,0.15);color:var(--gold);">Onboarding</span>
+          <div class="faq-num">FAQ #16 — Project Commencement</div>
+          <h3 class="faq-question">How do we get started on a project brief?</h3>
+          <p class="faq-answer">
+            Submit your requirements via the brief form on <a href="services.html#contact" style="color:var(--gold);text-decoration:underline;">services.html#contact</a>. We return a clear milestone scope proposal within 24 hours.
+          </p>
+        </div>
+
+        <!-- FAQ 17 -->
+        <div class="faq-card">
+          <span class="faq-category-badge" style="background:rgba(168,85,247,0.15);color:#c084fc;">Benchmarks</span>
+          <div class="faq-num">FAQ #17 — Reproducible Benchmarking</div>
+          <h3 class="faq-question">Can you author reproducible benchmark comparison reports?</h3>
+          <p class="faq-answer">
+            Yes. Standalone benchmarking passes include a dedicated GitHub repository with reproducible scripts for throughput, latency, memory utilization, and accuracy metrics.
+          </p>
+        </div>
+
+        <!-- FAQ 18 -->
+        <div class="faq-card">
+          <span class="faq-category-badge" style="background:rgba(6,182,212,0.15);color:var(--cyan);">Quantum Validation</span>
+          <div class="faq-num">FAQ #18 — Quantum Simulator vs Hardware</div>
+          <h3 class="faq-question">How are quantum algorithms verified on hardware?</h3>
+          <p class="faq-answer">
+            Quantum circuits are validated first on statevector simulators (Qiskit Aer / PennyLane), followed by noisy simulation models and execution on IBM Quantum hardware backend channels.
+          </p>
+        </div>
+
+        <!-- FAQ 19 -->
+        <div class="faq-card">
+          <span class="faq-category-badge" style="background:rgba(59,130,246,0.15);color:#60a5fa;">Localization</span>
+          <div class="faq-num">FAQ #19 — International Content</div>
+          <h3 class="faq-question">Do you support multi-language documentation translation?</h3>
+          <p class="faq-answer">
+            Primary content is authored in clear US English, structured semantically with clean HTML/Markdown for seamless translation via automated i18n pipelines.
+          </p>
+        </div>
+
+        <!-- FAQ 20 -->
+        <div class="faq-card">
+          <span class="faq-category-badge" style="background:rgba(255,215,0,0.15);color:var(--gold);">Payments</span>
+          <div class="faq-num">FAQ #20 — Payment Channels</div>
+          <h3 class="faq-question">What payment methods do you accept internationally?</h3>
+          <p class="faq-answer">
+            We accept International Wire Transfer (SWIFT / ACH), Stripe invoices, Wise, PayPal, and major Stablecoins (USDC / USDT) for seamless global settlement.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SERVICES PRICING & PARITY PRICING SECTION -->
+    <section class="reveal" id="pricing-parity">
+      <div class="section-header">
+        <p class="section-label">Scope &amp; Global Access</p>
+        <h2 class="section-title">Services <span class="accent-gold">Pricing</span> &amp; Country Parity</h2>
+        <p class="section-sub">Transparent milestone pricing adjusted for global Purchasing Power Parity (PPP).</p>
+      </div>
+
+      <div class="ppp-container">
+        <h3 style="color:var(--gold);font-size:1.3rem;margin-bottom:0.5rem;">Interactive Purchasing Power Parity (PPP) Selector</h3>
+        <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:1.25rem;">
+          Select your country's tier to view instant parity pricing recalculations across all services.
+        </p>
+
+        <div class="ppp-tabs">
+          <button class="ppp-tab active" onclick="setPPPTier(1, 1.0, this)">Tier 1 — Developed Nations (100% Price)</button>
+          <button class="ppp-tab" onclick="setPPPTier(2, 0.75, this)">Tier 2 — Developing Nations (75% Price · 25% Off)</button>
+          <button class="ppp-tab" onclick="setPPPTier(3, 0.50, this)">Tier 3 — Least Developed Nations (50% Price · 50% Off)</button>
+        </div>
+
+        <div class="pricing-grid-faq">
+          <div class="price-card-faq">
+            <div class="price-card-title">🌟 Micro-Task / Verification Pass</div>
+            <div class="price-amount" data-base="250">&lt; $250 USD</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Code audit &amp; execution check</div>
+          </div>
+          <div class="price-card-faq">
+            <div class="price-card-title">📄 Short Technical Article</div>
+            <div class="price-amount" data-base="500">&lt; $500 USD</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">1,500–2,500 words with code</div>
+          </div>
+          <div class="price-card-faq">
+            <div class="price-card-title">📘 Standard Technical Deep Dive</div>
+            <div class="price-amount" data-base-min="500" data-base-max="1250">$500 – $1,250 USD</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Long-form original benchmarks</div>
+          </div>
+          <div class="price-card-faq">
+            <div class="price-card-title">📚 Multi-Part Tutorial Series</div>
+            <div class="price-amount" data-base-min="1250" data-base-max="2500">$1,250 – $2,500 USD</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Structured course notebooks</div>
+          </div>
+          <div class="price-card-faq">
+            <div class="price-card-title">🚀 Developer Documentation Suite</div>
+            <div class="price-amount" data-base-min="2500" data-base-max="5000">$2,500 – $5,000 USD</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Full API &amp; SDK docs suite</div>
+          </div>
+          <div class="price-card-faq">
+            <div class="price-card-title">💼 Content Partner Retainer</div>
+            <div class="price-amount" data-base-min="1500" data-base-max="4000">$1,500 – $4,000 / mo</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Dedicated monthly sprint capacity</div>
+          </div>
+          <div class="price-card-faq">
+            <div class="price-card-title">🏢 Enterprise Training &amp; Advisory</div>
+            <div class="price-amount" data-base="5000">$5,000+ USD</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">2-hour live remote team training</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 198 COUNTRY PARITY SEARCH TABLE (HTML Display of parity pricing.md) -->
+      <div style="margin-top:3rem;">
+        <h3 style="color:var(--gold);font-size:1.25rem;margin-bottom:0.75rem;">198-Country Parity Pricing Index</h3>
+        <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:1rem;">
+          Type your country name below to instantly view your nation's designated Purchasing Power Parity (PPP) Tier and discount rate.
+        </p>
+
+        <input type="text" id="countrySearch" class="search-box" placeholder="🔍 Search 198 countries (e.g. India, Brazil, Germany, Vietnam, Nigeria, Ukraine)..." onkeyup="filterParityTable()" />
+
+        <div class="table-responsive">
+          <table class="parity-table" id="parityTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Country</th>
+                <th>Purchasing Power Tier</th>
+                <th>Parity Price Rate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>United States</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>2</td><td>Canada</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>3</td><td>China</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>4</td><td>Japan</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>5</td><td>South Korea</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>6</td><td>Taiwan</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>7</td><td>Hong Kong SAR</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>8</td><td>Macau SAR</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>9</td><td>Singapore</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>10</td><td>Brunei</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>11</td><td>Australia</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>12</td><td>New Zealand</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>13</td><td>Israel</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>14</td><td>United Kingdom</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>15</td><td>Ireland</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>16</td><td>France</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>17</td><td>Germany</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>18</td><td>Netherlands</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>19</td><td>Belgium</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>20</td><td>Luxembourg</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>21</td><td>Switzerland</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>22</td><td>Austria</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>23</td><td>Liechtenstein</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>24</td><td>Monaco</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>25</td><td>Andorra</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>26</td><td>San Marino</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>27</td><td>Italy</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>28</td><td>Spain</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>29</td><td>Portugal</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>30</td><td>Greece</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>31</td><td>Malta</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>32</td><td>Cyprus</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>33</td><td>Denmark</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>34</td><td>Norway</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>35</td><td>Sweden</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>36</td><td>Finland</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>37</td><td>Iceland</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>38</td><td>Estonia</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>39</td><td>Latvia</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>40</td><td>Lithuania</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>41</td><td>Poland</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>42</td><td>Czechia</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>43</td><td>Slovakia</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>44</td><td>Slovenia</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>45</td><td>Hungary</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>46</td><td>Croatia</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>47</td><td>Romania</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>48</td><td>Bulgaria</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>49</td><td>Russia</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>50</td><td>Saudi Arabia</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>51</td><td>United Arab Emirates</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>52</td><td>Qatar</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>53</td><td>Kuwait</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>54</td><td>Bahrain</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>55</td><td>Oman</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>56</td><td>Chile</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>57</td><td>Uruguay</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>58</td><td>Panama</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>59</td><td>Guyana</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>60</td><td>Trinidad and Tobago</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>61</td><td>Bahamas</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>62</td><td>Barbados</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>63</td><td>Antigua and Barbuda</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>64</td><td>Saint Kitts and Nevis</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>65</td><td>Seychelles</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>66</td><td>Palau</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>67</td><td>Nauru</td><td><span class="tier-badge tier-1">Tier 1 — Developed</span></td><td>100% (Standard)</td></tr>
+              <tr><td>68</td><td>India</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>69</td><td>Brazil</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>70</td><td>Mexico</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>71</td><td>Argentina</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>72</td><td>Colombia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>73</td><td>Peru</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>74</td><td>Ecuador</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>75</td><td>Bolivia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>76</td><td>Paraguay</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>77</td><td>Venezuela</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>78</td><td>Guatemala</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>79</td><td>Honduras</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>80</td><td>El Salvador</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>81</td><td>Nicaragua</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>82</td><td>Costa Rica</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>83</td><td>Dominican Republic</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>84</td><td>Cuba</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>85</td><td>Jamaica</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>86</td><td>Belize</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>87</td><td>Suriname</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>88</td><td>Grenada</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>89</td><td>Saint Lucia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>90</td><td>Saint Vincent and the Grenadines</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>91</td><td>Dominica</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>92</td><td>Turkey</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>93</td><td>Albania</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>94</td><td>Bosnia and Herzegovina</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>95</td><td>North Macedonia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>96</td><td>Montenegro</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>97</td><td>Serbia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>98</td><td>Kosovo</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>99</td><td>Moldova</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>100</td><td>Ukraine</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>101</td><td>Belarus</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>102</td><td>Georgia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>103</td><td>Armenia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>104</td><td>Azerbaijan</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>105</td><td>Kazakhstan</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>106</td><td>Kyrgyzstan</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>107</td><td>Tajikistan</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>108</td><td>Turkmenistan</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>109</td><td>Uzbekistan</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>110</td><td>Mongolia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>111</td><td>Iran</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>112</td><td>Iraq</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>113</td><td>Jordan</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>114</td><td>Lebanon</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>115</td><td>Palestine</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>116</td><td>Egypt</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>117</td><td>Morocco</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>118</td><td>Tunisia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>119</td><td>Algeria</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>120</td><td>Libya</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>121</td><td>Pakistan</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>122</td><td>Sri Lanka</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>123</td><td>Maldives</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>124</td><td>Bhutan</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>125</td><td>Indonesia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>126</td><td>Malaysia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>127</td><td>Thailand</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>128</td><td>Philippines</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>129</td><td>Vietnam</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>130</td><td>Papua New Guinea</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>131</td><td>Fiji</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>132</td><td>Samoa</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>133</td><td>Tonga</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>134</td><td>Vanuatu</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>135</td><td>Micronesia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>136</td><td>Marshall Islands</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>137</td><td>South Africa</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>138</td><td>Namibia</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>139</td><td>Botswana</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>140</td><td>Eswatini</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>141</td><td>Kenya</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>142</td><td>Ghana</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>143</td><td>Nigeria</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>144</td><td>Côte d'Ivoire</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>145</td><td>Cameroon</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>146</td><td>Republic of the Congo</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>147</td><td>Gabon</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>148</td><td>Equatorial Guinea</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>149</td><td>Cabo Verde</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>150</td><td>São Tomé and Príncipe</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>151</td><td>Zimbabwe</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>152</td><td>Mauritius</td><td><span class="tier-badge tier-2">Tier 2 — Developing</span></td><td>75% (25% Off)</td></tr>
+              <tr><td>153</td><td>Afghanistan</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>154</td><td>Angola</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>155</td><td>Bangladesh</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>156</td><td>Benin</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>157</td><td>Burkina Faso</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>158</td><td>Burundi</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>159</td><td>Cambodia</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>160</td><td>Central African Republic</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>161</td><td>Chad</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>162</td><td>Comoros</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>163</td><td>DR Congo</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>164</td><td>Djibouti</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>165</td><td>Eritrea</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>166</td><td>Ethiopia</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>167</td><td>Gambia</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>168</td><td>Guinea</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>169</td><td>Guinea-Bissau</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>170</td><td>Haiti</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>171</td><td>Kiribati</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>172</td><td>Laos</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>173</td><td>Lesotho</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>174</td><td>Liberia</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>175</td><td>Madagascar</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>176</td><td>Malawi</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>177</td><td>Mali</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>178</td><td>Mauritania</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>179</td><td>Mozambique</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>180</td><td>Myanmar</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>181</td><td>Nepal</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>182</td><td>Niger</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>183</td><td>North Korea</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>184</td><td>Rwanda</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>185</td><td>Senegal</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>186</td><td>Sierra Leone</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>187</td><td>Solomon Islands</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>188</td><td>Somalia</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>189</td><td>South Sudan</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>190</td><td>Sudan</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>191</td><td>Syria</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>192</td><td>Tanzania</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>193</td><td>Timor-Leste</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>194</td><td>Togo</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>195</td><td>Tuvalu</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>196</td><td>Uganda</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>197</td><td>Yemen</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+              <tr><td>198</td><td>Zambia</td><td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td><td>50% (50% Off)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMINENT STARTUP DISCOUNT CALLOUT -->
+    <section class="reveal">
+      <div class="startup-cta-box">
+        <p class="section-label" style="color:var(--gold);">// EARLY-STAGE ENABLEMENT</p>
+        <h2 style="font-size:2.2rem;font-weight:900;color:var(--text-primary);margin:0.5rem 0 1rem 0;">
+          Building an Early-Stage <span class="accent-gold">AI or Quantum Startup?</span>
+        </h2>
+        <p style="max-width:640px;margin:0 auto 2rem auto;color:var(--text-secondary);font-size:1.05rem;line-height:1.6;">
+          We empower Pre-Seed and Seed-stage engineering teams building frontier Generative AI infrastructure or quantum computing SDKs with an exclusive <strong>50% startup discount</strong>.
+        </p>
+
+        <!-- PROMINENT STARTUP DISCOUNT BUTTON (EXPLICIT USER MANDATE) -->
+        <div>
+          <a href="services.html#contact" class="btn btn-commission" style="font-size:1.15rem;padding:1.15rem 2.5rem;box-shadow:0 0 20px rgba(255,215,0,0.3);">
+            50% Discount for Startups →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div id="site-footer"></div>
+
+  </main>
+
+  <script src="components/components.js"></script>
+
+  <script>
+    // Interactive PPP Recalculation Script
+    function setPPPTier(tierNum, factor, btn) {
+      document.querySelectorAll('.ppp-tab').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      document.querySelectorAll('.price-amount').forEach(el => {
+        if (el.hasAttribute('data-base')) {
+          const base = parseFloat(el.getAttribute('data-base'));
+          const calc = Math.round(base * factor);
+          el.textContent = (base >= 5000) ? `$${calc.toLocaleString()}+ USD` : `< $${calc.toLocaleString()} USD`;
+        } else if (el.hasAttribute('data-base-min') && el.hasAttribute('data-base-max')) {
+          const min = Math.round(parseFloat(el.getAttribute('data-base-min')) * factor);
+          const max = Math.round(parseFloat(el.getAttribute('data-base-max')) * factor);
+          const isMonthly = el.textContent.includes('/ mo');
+          el.textContent = isMonthly ? `$${min.toLocaleString()} – $${max.toLocaleString()} / mo` : `$${min.toLocaleString()} – $${max.toLocaleString()} USD`;
+        }
+      });
+    }
+
+    // Parity Table Search Filter
+    function filterParityTable() {
+      const input = document.getElementById('countrySearch');
+      const filter = input.value.toLowerCase();
+      const table = document.getElementById('parityTable');
+      const trs = table.getElementsByTagName('tr');
+
+      for (let i = 1; i < trs.length; i++) {
+        const tdCountry = trs[i].getElementsByTagName('td')[1];
+        const tdTier = trs[i].getElementsByTagName('td')[2];
+        if (tdCountry || tdTier) {
+          const textCountry = tdCountry ? tdCountry.textContent || tdCountry.innerText : '';
+          const textTier = tdTier ? tdTier.textContent || tdTier.innerText : '';
+          if (textCountry.toLowerCase().indexOf(filter) > -1 || textTier.toLowerCase().indexOf(filter) > -1) {
+            trs[i].style.display = '';
+          } else {
+            trs[i].style.display = 'none';
+          }
+        }
+      }
+    }
+
+    // Scroll Reveal Observer
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+    }, observerOptions);
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+
+</html>
