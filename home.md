@@ -137,7 +137,7 @@ Roughly half Generative AI-accelerated for speed, half hand-verified for technic
 ### RECRUITED — The Inbound Recruiter Blueprint: How to Make Recruiters Chase You
 *(Pre-Order Status — $10.00 USD pre-order ($20.00 USD after release) · Free with an active Patreon subscription)*
 
-![RECRUITED Book Cover](recruited-cover.jpg)
+![RECRUITED Book Cover](assets/recruited-cover.jpg)
 
 A comprehensive transformation system showing professionals how to use frontier AI tools — GitHub, LinkedIn, Perplexity, Claude, Google Antigravity, and Gemini Notebook — to rebuild their professional presence so that inbound recruiter offers find them.
 
