@@ -1,0 +1,90 @@
+{
+  "@context": "https://schema.org",
+  "@type": "OfferCatalog",
+  "@id": "https://thomascherickal.github.io/Pricing.html#offercatalog",
+  "name": "Services Pricing & Purchasing Power Parity Index — Thomas Cherickal",
+  "description": "Transparent milestone pricing for technical writing, developer education, and quantum developer content adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (66%), Tier 3 Least Developed (33%).",
+  "url": "https://thomascherickal.github.io/Pricing.html",
+  "itemListElement": [
+    {
+      "@type": "Offer",
+      "name": "Micro-Task / Verification Pass",
+      "description": "Code audit, execution check, and technical accuracy verification pass.",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": "250.00",
+        "priceCurrency": "USD",
+        "eligibleQuantity": {
+          "@type": "QuantitativeValue",
+          "unitCode": "C62",
+          "value": 1
+        }
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Short Technical Article",
+      "description": "1,500 to 2,500-word explainer with executable code snippets.",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": "500.00",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Standard Technical Deep Dive",
+      "description": "Long-form original research, benchmarks, and architecture breakdown.",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": "500.00",
+        "maxPrice": "1250.00",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Multi-Part Tutorial / Course Series",
+      "description": "Structured curriculum with executable Jupyter Notebooks per module.",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": "1250.00",
+        "maxPrice": "2500.00",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Full Developer Documentation Suite",
+      "description": "Complete API, SDK, and architecture docs suite.",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": "2500.00",
+        "maxPrice": "5000.00",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Monthly Content Partner Retainer",
+      "description": "Dedicated monthly sprint capacity for articles, changelogs, and docs.",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": "1500.00",
+        "maxPrice": "4000.00",
+        "priceCurrency": "USD",
+        "unitText": "MONTH"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Enterprise Training & Custom Advisory",
+      "description": "2-hour live remote team training on Gen AI and Quantum Computing.",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": "5000.00",
+        "priceCurrency": "USD"
+      }
+    }
+  ]
+}
