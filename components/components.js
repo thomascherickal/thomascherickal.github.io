@@ -13,8 +13,8 @@
       <li><a href="writing.html">Publications</a></li>
       <li><a href="about.html">Capabilities</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="Pricing.html">Pricing</a></li>
-      <li><a href="FAQs.html">FAQs</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
     </ul>
   </nav>`;
 
