@@ -1,10 +1,10 @@
-# Thomas Cherickal — Technical Content Engineer & Developer Educator
+# Thomas Cherickal — Technical Writer & Developer Educator
 
 > `// The Digital Futurist (2020–present) · Chennai, India`
 
 ![Thomas Cherickal](./assets/thomas-avatar.webp)
 
-**Technical Content Engineer & Developer Educator — Generative AI Systems & Quantum Systems**  
+**Technical Writer & Developer Educator — Generative AI Systems & Quantum Systems**  
 *Documentation, deep dives, and developer education — AI-accelerated, verified in Python, Golang, and Rust.*
 
 ### Core Focus Areas
@@ -199,5 +199,5 @@ How to understand and build emerging technologies.
 - [📅 Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)
 
 ---
-*© 2026 Thomas Cherickal · The Digital Futurist (2020–present) · Technical Content Engineer & Developer Educator*  
+*© 2026 Thomas Cherickal · The Digital Futurist (2020–present) · Technical Writer & Developer Educator*  
 *📍 Chennai, India 🇮🇳*
