@@ -155,8 +155,8 @@ A comprehensive transformation system showing professionals how to use frontier 
 6. **Code & Circuit Benchmarking**: Standalone verification pass for your existing drafts.
 7. **Content Architecture**: Structuring docs for human developers and retrieval AI agents.
 8. **Launch & Migration Content**: Model, API, and SDK launch explainers on fast turnaround.
-9. **Remote Team Training**: Live remote enablement (2 hours, remote only) in GenAI or Quantum Readiness.
-10. **Books & Digital Products**: Published long-form works and playbooks via Patreon and Gumroad.
+9. **Generative AI Dev Content**: RAG pipelines, agentic workflows, prompt engineering frameworks, and SLM fine-tuning guides.
+10. **Monthly Content Retainer**: Dedicated monthly sprint capacity for devtool &amp; AI infra companies: guaranteed content volume, priority turnaround &amp; byline management.
 
 ---
 

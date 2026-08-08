@@ -1,0 +1,260 @@
+<!-- Thomas Cherickal — Article Services Footer (Light Mode with 3D Glow Effects) -->
+<style>
+  @keyframes tc-glow-pulse-light {
+
+    0%,
+    100% {
+      box-shadow: 0 10px 30px rgba(9, 105, 218, 0.15), inset 0 0 15px rgba(9, 105, 218, 0.03);
+    }
+
+    50% {
+      box-shadow: 0 10px 40px rgba(212, 167, 44, 0.22), inset 0 0 25px rgba(212, 167, 44, 0.05);
+    }
+  }
+
+  .tc-af-light-3d-container {
+    background: radial-gradient(circle at 50% 0%, rgba(9, 105, 218, 0.04) 0%, rgba(212, 167, 44, 0.03) 50%, #ffffff 100%);
+    border: 2px solid #0969da;
+    border-radius: 16px;
+    padding: 2.25rem;
+    margin: 3.5rem 0;
+    color: #1f2328;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    animation: tc-glow-pulse-light 6s infinite ease-in-out;
+    perspective: 1000px;
+  }
+
+  .tc-af-grid-5-3d-light {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 576px) {
+    .tc-af-grid-5-3d-light {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 992px) {
+    .tc-af-grid-5-3d-light {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  .tc-af-card-3d-light {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tc-af-card-3d-light:hover {
+    transform: translateY(-6px) rotateX(3deg) rotateY(-2deg) scale(1.02);
+  }
+
+  /* Specific Glowing Bright 2px Borders Light Mode */
+  .tc-glow-gold-light {
+    border: 2px solid #d4a72c;
+    box-shadow: 0 4px 14px rgba(212, 167, 44, 0.2);
+  }
+
+  .tc-glow-gold-light:hover {
+    border-color: #9a6700;
+    box-shadow: 0 10px 25px rgba(212, 167, 44, 0.45);
+  }
+
+  .tc-glow-blue-light {
+    border: 2px solid #0969da;
+    box-shadow: 0 4px 14px rgba(9, 105, 218, 0.2);
+  }
+
+  .tc-glow-blue-light:hover {
+    border-color: #0550ae;
+    box-shadow: 0 10px 25px rgba(9, 105, 218, 0.45);
+  }
+
+  .tc-glow-green-light {
+    border: 2px solid #1a7f37;
+    box-shadow: 0 4px 14px rgba(26, 127, 55, 0.2);
+  }
+
+  .tc-glow-green-light:hover {
+    border-color: #116329;
+    box-shadow: 0 10px 25px rgba(26, 127, 55, 0.45);
+  }
+
+  .tc-glow-purple-light {
+    border: 2px solid #8250df;
+    box-shadow: 0 4px 14px rgba(130, 80, 223, 0.2);
+  }
+
+  .tc-glow-purple-light:hover {
+    border-color: #6639ba;
+    box-shadow: 0 10px 25px rgba(130, 80, 223, 0.45);
+  }
+
+  .tc-glow-amber-light {
+    border: 2px solid #bf8700;
+    box-shadow: 0 4px 14px rgba(191, 135, 0, 0.2);
+  }
+
+  .tc-glow-amber-light:hover {
+    border-color: #9a6700;
+    box-shadow: 0 10px 25px rgba(191, 135, 0, 0.45);
+  }
+
+  .tc-glow-rose-light {
+    border: 2px solid #cf222e;
+    box-shadow: 0 4px 14px rgba(207, 34, 46, 0.2);
+  }
+
+  .tc-glow-rose-light:hover {
+    border-color: #a40e26;
+    box-shadow: 0 10px 25px rgba(207, 34, 46, 0.45);
+  }
+
+  .tc-af-title-3d-light {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .tc-af-desc-3d-light {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #656d76;
+    margin: 0;
+  }
+
+  .tc-btn-3d-light {
+    transition: all 0.25s ease;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 0.65rem 1.2rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .tc-btn-3d-light:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+</style>
+
+<div class="tc-af-light-3d-container">
+  <!-- Header Banner -->
+  <div
+    style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;border-bottom:1px solid #d0d7de;padding-bottom:1.1rem;">
+    <div>
+      <span style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:#0969da;">// B2B
+        Technical Credential</span>
+      <h3 style="font-size:1.45rem;margin:0.3rem 0 0 0;color:#0969da;font-weight:700;">Thomas Cherickal — Technical
+        Writing &amp; Developer Education</h3>
+    </div>
+    <span
+      style="background:#fff8c5;color:#9a6700;border:2px solid #d4a72c;padding:0.45rem 1rem;border-radius:20px;font-size:0.85rem;font-weight:600;box-shadow:0 2px 10px rgba(212,167,44,0.2);">Available
+      for Commissions</span>
+  </div>
+
+  <p style="font-size:0.96rem;line-height:1.6;color:#656d76;margin-bottom:1.75rem;">
+    Author of 500+ published technical articles across 10+ platforms. Every code sample and benchmark is executed and
+    hand-verified in Python, Golang &amp; Rust environments before publication.
+  </p>
+
+  <!-- 10 Services Grid (Exactly 5 Cards per Row on Desktop, Readable on Mobile) -->
+  <div class="tc-af-grid-5-3d-light">
+    <!-- Card 1 -->
+    <div class="tc-af-card-3d-light tc-glow-gold-light">
+      <h4 class="tc-af-title-3d-light" style="color:#9a6700;">📝 Dev Documentation</h4>
+      <p class="tc-af-desc-3d-light">API references, SDK guides, quickstarts, integration &amp; migration guides for
+        GenAI and quantum SDKs.</p>
+    </div>
+    <!-- Card 2 -->
+    <div class="tc-af-card-3d-light tc-glow-blue-light">
+      <h4 class="tc-af-title-3d-light" style="color:#0969da;">🔬 Deep Technical Dives</h4>
+      <p class="tc-af-desc-3d-light">Long-form explainers (2,000–8,000 words) featuring original research, architecture
+        &amp; verified benchmarks.</p>
+    </div>
+    <!-- Card 3 -->
+    <div class="tc-af-card-3d-light tc-glow-green-light">
+      <h4 class="tc-af-title-3d-light" style="color:#1a7f37;">🎓 Developer Education</h4>
+      <p class="tc-af-desc-3d-light">Multi-part tutorial series, structured learning paths &amp; workshop curricula with
+        executable notebooks.</p>
+    </div>
+    <!-- Card 4 -->
+    <div class="tc-af-card-3d-light tc-glow-purple-light">
+      <h4 class="tc-af-title-3d-light" style="color:#8250df;">⚛️ Quantum Dev Content</h4>
+      <p class="tc-af-desc-3d-light">IBM Qiskit &amp; PennyLane tutorials, QML explainers, simulator circuit benchmarks
+        &amp; post-quantum risk briefs.</p>
+    </div>
+    <!-- Card 5 -->
+    <div class="tc-af-card-3d-light tc-glow-amber-light">
+      <h4 class="tc-af-title-3d-light" style="color:#bf8700;">⚡ AI-Accelerated Research</h4>
+      <p class="tc-af-desc-3d-light">Fast-turnaround drafting from briefs and specs, providing fast structure for
+        internal technical review.</p>
+    </div>
+    <!-- Card 6 -->
+    <div class="tc-af-card-3d-light tc-glow-rose-light">
+      <h4 class="tc-af-title-3d-light" style="color:#cf222e;">✓ Code Benchmarking</h4>
+      <p class="tc-af-desc-3d-light">100% manual verification pass: code execution check, quantum circuit runs, and
+        hardware audits.</p>
+    </div>
+    <!-- Card 7 -->
+    <div class="tc-af-card-3d-light tc-glow-blue-light">
+      <h4 class="tc-af-title-3d-light" style="color:#0969da;">🗂️ Content Architecture</h4>
+      <p class="tc-af-desc-light">Diátaxis framework restructuring and Schema.org markup optimized for AI agents &amp;
+        developers.</p>
+    </div>
+    <!-- Card 8 -->
+    <div class="tc-af-card-3d-light tc-glow-green-light">
+      <h4 class="tc-af-title-3d-light" style="color:#1a7f37;">🚀 Launch &amp; Migration</h4>
+      <p class="tc-af-desc-3d-light">Model, API &amp; SDK launch explainers, fast-turnaround changelog dives, and
+        step-by-step migration guides.</p>
+    </div>
+    <!-- Card 9 -->
+    <div class="tc-af-card-3d-light tc-glow-purple-light">
+      <h4 class="tc-af-title-3d-light" style="color:#8250df;">🧠 GenAI Dev Content</h4>
+      <p class="tc-af-desc-3d-light">RAG pipelines, agentic workflows, prompt engineering frameworks, SLM fine-tuning
+        &amp; developer docs.</p>
+    </div>
+    <!-- Card 10 -->
+    <div class="tc-af-card-3d-light tc-glow-gold-light">
+      <h4 class="tc-af-title-3d-light" style="color:#9a6700;">💼 Monthly Content Retainer</h4>
+      <p class="tc-af-desc-3d-light">Dedicated monthly sprint capacity for devtools &amp; AI infra teams: priority turnaround &amp; guaranteed volume.</p>
+    </div>
+  </div>
+
+  <!-- Extended Tasteful Action Link Bar -->
+  <div
+    style="display:flex;gap:0.85rem;flex-wrap:wrap;align-items:center;justify-content:center;text-align:center;border-top:1px solid #d0d7de;padding-top:1.35rem;">
+    <a href="https://thomascherickal.github.io/services.html" target="_blank" rel="noopener" class="tc-btn-3d-light"
+      style="background:#fff8c5;color:#9a6700;font-weight:700;border:2px solid #d4a72c;box-shadow:0 2px 10px rgba(212,167,44,0.2);">🎯 Inspect
+      Offer Stack →</a>
+    <a href="https://thomascherickal.github.io/pricing.html" target="_blank" rel="noopener" class="tc-btn-3d-light"
+      style="background:#f6f8fa;color:#1f2328;border:2px solid #d0d7de;">🌐 Pricing &amp; Parity Index →</a>
+    <a href="https://thomascherickal.github.io/portfolio.html" target="_blank" rel="noopener" class="tc-btn-3d-light"
+      style="background:#dafbe1;color:#1a7f37;border:2px solid #1a7f37;">📂 View Portfolio Pieces →</a>
+    <a href="https://thomascherickal.github.io/writing.html" target="_blank" rel="noopener" class="tc-btn-3d-light"
+      style="background:#fbefff;color:#8250df;border:2px solid #8250df;">✍️ Published Articles →</a>
+    <a href="https://topmate.io/thomascherickal" target="_blank" rel="noopener" class="tc-btn-3d-light"
+      style="background:#ddf4ff;color:#0969da;border:2px solid #0969da;">📅 Book 1:1 Advisory →</a>
+    <a href="https://www.patreon.com/c/ThomasCherickal" target="_blank" rel="noopener" class="tc-btn-3d-light"
+      style="background:#ffebe9;color:#cf222e;border:2px solid #cf222e;">💎 Patreon Playbooks →</a>
+    <a href="mailto:thomascherickal@gmail.com" class="tc-btn-3d-light"
+      style="background:#ddf4ff;color:#0969da;border:2px solid #0969da;font-weight:700;text-decoration:none;">✉️ Direct Inquiry
+      Email →</a>
+  </div>
+</div>

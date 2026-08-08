@@ -1,0 +1,286 @@
+<!-- Thomas Cherickal — Article Services Footer (Dark Mode Pure Black with High Neon Glow) -->
+<style>
+  @keyframes tc-glow-pulse-dark {
+
+    0%,
+    100% {
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.35), inset 0 0 20px rgba(255, 215, 0, 0.08);
+    }
+
+    50% {
+      box-shadow: 0 0 45px rgba(6, 182, 212, 0.45), inset 0 0 30px rgba(6, 182, 212, 0.12);
+    }
+  }
+
+  .tc-af-dark-3d-container {
+    background: #000000;
+    border: 2px solid #ffd700;
+    border-radius: 16px;
+    padding: 2.25rem;
+    margin: 3.5rem 0;
+    color: #f0f6fc;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    animation: tc-glow-pulse-dark 5s infinite ease-in-out;
+    perspective: 1000px;
+  }
+
+  .tc-af-grid-5-3d {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.15rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 576px) {
+    .tc-af-grid-5-3d {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 992px) {
+    .tc-af-grid-5-3d {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  .tc-af-card-3d-dark {
+    background: #0d1117;
+    border-radius: 12px;
+    padding: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tc-af-card-3d-dark:hover {
+    transform: translateY(-7px) rotateX(3deg) rotateY(-2deg) scale(1.03);
+  }
+
+  /* Intense Neon Glow Bright 2px Borders */
+  .tc-glow-gold {
+    border: 2px solid #ffd700;
+    box-shadow: 0 0 18px rgba(255, 215, 0, 0.35);
+  }
+
+  .tc-glow-gold:hover {
+    border-color: #ffe44d;
+    box-shadow: 0 0 35px rgba(255, 215, 0, 0.75), 0 10px 25px rgba(0, 0, 0, 0.9);
+  }
+
+  .tc-glow-cyan {
+    border: 2px solid #06b6d4;
+    box-shadow: 0 0 18px rgba(6, 182, 212, 0.35);
+  }
+
+  .tc-glow-cyan:hover {
+    border-color: #38bdf8;
+    box-shadow: 0 0 35px rgba(6, 182, 212, 0.75), 0 10px 25px rgba(0, 0, 0, 0.9);
+  }
+
+  .tc-glow-emerald {
+    border: 2px solid #10b981;
+    box-shadow: 0 0 18px rgba(16, 185, 129, 0.35);
+  }
+
+  .tc-glow-emerald:hover {
+    border-color: #34d399;
+    box-shadow: 0 0 35px rgba(16, 185, 129, 0.75), 0 10px 25px rgba(0, 0, 0, 0.9);
+  }
+
+  .tc-glow-violet {
+    border: 2px solid #a855f7;
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.35);
+  }
+
+  .tc-glow-violet:hover {
+    border-color: #c084fc;
+    box-shadow: 0 0 35px rgba(168, 85, 247, 0.75), 0 10px 25px rgba(0, 0, 0, 0.9);
+  }
+
+  .tc-glow-amber {
+    border: 2px solid #f59e0b;
+    box-shadow: 0 0 18px rgba(245, 158, 11, 0.35);
+  }
+
+  .tc-glow-amber:hover {
+    border-color: #fbbf24;
+    box-shadow: 0 0 35px rgba(245, 158, 11, 0.75), 0 10px 25px rgba(0, 0, 0, 0.9);
+  }
+
+  .tc-glow-rose {
+    border: 2px solid #f43f5e;
+    box-shadow: 0 0 18px rgba(244, 63, 94, 0.35);
+  }
+
+  .tc-glow-rose:hover {
+    border-color: #fb7185;
+    box-shadow: 0 0 35px rgba(244, 63, 94, 0.75), 0 10px 25px rgba(0, 0, 0, 0.9);
+  }
+
+  .tc-glow-indigo {
+    border: 2px solid #6366f1;
+    box-shadow: 0 0 18px rgba(99, 102, 241, 0.35);
+  }
+
+  .tc-glow-indigo:hover {
+    border-color: #818cf8;
+    box-shadow: 0 0 35px rgba(99, 102, 241, 0.75), 0 10px 25px rgba(0, 0, 0, 0.9);
+  }
+
+  .tc-af-title-3d {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .tc-af-desc-3d {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #a0aec0;
+    margin: 0;
+  }
+
+  .tc-btn-3d {
+    transition: all 0.25s ease;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 0.65rem 1.2rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .tc-btn-3d:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+  }
+</style>
+
+<div class="tc-af-dark-3d-container">
+  <!-- Header Banner -->
+  <div
+    style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;border-bottom:1px solid rgba(255,255,255,0.12);padding-bottom:1.1rem;">
+    <div>
+      <span
+        style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:#06b6d4;text-shadow:0 0 12px rgba(6,182,212,0.6);">//
+        B2B Technical Credential</span>
+      <h3
+        style="font-size:1.45rem;margin:0.3rem 0 0 0;color:#ffd700;font-weight:700;text-shadow:0 0 15px rgba(255,215,0,0.5);">
+        Thomas Cherickal — Technical Writing &amp; Developer Education</h3>
+    </div>
+    <span
+      style="background:rgba(255,215,0,0.15);color:#ffd700;border:2px solid #ffd700;padding:0.45rem 1rem;border-radius:20px;font-size:0.85rem;font-weight:600;box-shadow:0 0 20px rgba(255,215,0,0.4);text-shadow:0 0 8px rgba(255,215,0,0.4);">Available
+      for Commissions</span>
+  </div>
+
+  <p style="font-size:0.96rem;line-height:1.6;color:#a0aec0;margin-bottom:1.75rem;">
+    Author of 500+ published technical articles across 10+ platforms. Every code sample and benchmark is executed and
+    hand-verified in Python, Golang &amp; Rust environments before publication.
+  </p>
+
+  <!-- 10 Services Grid (Exactly 5 Cards per Row on Desktop, Readable on Mobile) -->
+  <div class="tc-af-grid-5-3d">
+    <!-- Card 1 -->
+    <div class="tc-af-card-3d-dark tc-glow-gold">
+      <h4 class="tc-af-title-3d" style="color:#ffd700;text-shadow:0 0 8px rgba(255,215,0,0.4);">📝 Dev Documentation
+      </h4>
+      <p class="tc-af-desc-3d">API references, SDK guides, quickstarts, integration &amp; migration guides for GenAI and
+        quantum SDKs.</p>
+    </div>
+    <!-- Card 2 -->
+    <div class="tc-af-card-3d-dark tc-glow-cyan">
+      <h4 class="tc-af-title-3d" style="color:#06b6d4;text-shadow:0 0 8px rgba(6,182,212,0.4);">🔬 Deep Technical Dives
+      </h4>
+      <p class="tc-af-desc-3d">Long-form explainers (2,000–8,000 words) featuring original research, architecture &amp;
+        verified benchmarks.</p>
+    </div>
+    <!-- Card 3 -->
+    <div class="tc-af-card-3d-dark tc-glow-emerald">
+      <h4 class="tc-af-title-3d" style="color:#10b981;text-shadow:0 0 8px rgba(16,185,129,0.4);">🎓 Developer Education
+      </h4>
+      <p class="tc-af-desc-3d">Multi-part tutorial series, structured learning paths &amp; workshop curricula with
+        executable notebooks.</p>
+    </div>
+    <!-- Card 4 -->
+    <div class="tc-af-card-3d-dark tc-glow-violet">
+      <h4 class="tc-af-title-3d" style="color:#a855f7;text-shadow:0 0 8px rgba(168,85,247,0.4);">⚛️ Quantum Dev Content
+      </h4>
+      <p class="tc-af-desc-3d">IBM Qiskit &amp; PennyLane tutorials, QML explainers, simulator circuit benchmarks &amp;
+        post-quantum risk briefs.</p>
+    </div>
+    <!-- Card 5 -->
+    <div class="tc-af-card-3d-dark tc-glow-amber">
+      <h4 class="tc-af-title-3d" style="color:#f59e0b;text-shadow:0 0 8px rgba(245,158,11,0.4);">⚡ AI-Accelerated
+        Research</h4>
+      <p class="tc-af-desc-3d">Fast-turnaround drafting from briefs and specs, providing fast structure for internal
+        technical review.</p>
+    </div>
+    <!-- Card 6 -->
+    <div class="tc-af-card-3d-dark tc-glow-rose">
+      <h4 class="tc-af-title-3d" style="color:#f43f5e;text-shadow:0 0 8px rgba(244,63,94,0.4);">✓ Code Benchmarking</h4>
+      <p class="tc-af-desc-3d">100% manual verification pass: code execution check, quantum circuit runs, and hardware
+        audits.</p>
+    </div>
+    <!-- Card 7 -->
+    <div class="tc-af-card-3d-dark tc-glow-indigo">
+      <h4 class="tc-af-title-3d" style="color:#6366f1;text-shadow:0 0 8px rgba(99,102,241,0.4);">🗂️ Content
+        Architecture</h4>
+      <p class="tc-af-desc-3d">Diátaxis framework restructuring and Schema.org markup optimized for AI agents &amp;
+        developers.</p>
+    </div>
+    <!-- Card 8 -->
+    <div class="tc-af-card-3d-dark tc-glow-cyan">
+      <h4 class="tc-af-title-3d" style="color:#06b6d4;text-shadow:0 0 8px rgba(6,182,212,0.4);">🚀 Launch &amp;
+        Migration</h4>
+      <p class="tc-af-desc-3d">Model, API &amp; SDK launch explainers, fast-turnaround changelog dives, and step-by-step
+        migration guides.</p>
+    </div>
+    <!-- Card 9 -->
+    <div class="tc-af-card-3d-dark tc-glow-violet">
+      <h4 class="tc-af-title-3d" style="color:#a855f7;text-shadow:0 0 8px rgba(168,85,247,0.4);">🧠 GenAI Dev Content
+      </h4>
+      <p class="tc-af-desc-3d">RAG pipelines, agentic workflows, prompt engineering frameworks, SLM fine-tuning &amp;
+        developer docs.</p>
+    </div>
+    <!-- Card 10 -->
+    <div class="tc-af-card-3d-dark tc-glow-gold">
+      <h4 class="tc-af-title-3d" style="color:#ffd700;text-shadow:0 0 8px rgba(255,215,0,0.4);">💼 Monthly Content Retainer
+      </h4>
+      <p class="tc-af-desc-3d">Dedicated monthly sprint capacity for devtools &amp; AI infra teams: priority turnaround &amp; guaranteed volume.</p>
+    </div>
+  </div>
+
+  <!-- Extended Tasteful Action Link Bar -->
+  <div
+    style="display:flex;gap:0.85rem;flex-wrap:wrap;align-items:center;justify-content:center;text-align:center;border-top:1px solid rgba(255,255,255,0.12);padding-top:1.35rem;">
+    <a href="https://thomascherickal.github.io/services.html" target="_blank" rel="noopener" class="tc-btn-3d"
+      style="background:rgba(255,215,0,0.15);color:#ffd700;font-weight:700;border:2px solid #ffd700;box-shadow:0 0 15px rgba(255,215,0,0.3);text-shadow:0 0 8px rgba(255,215,0,0.4);">🎯 Inspect
+      Offer Stack →</a>
+    <a href="https://thomascherickal.github.io/pricing.html" target="_blank" rel="noopener" class="tc-btn-3d"
+      style="background:rgba(255,255,255,0.08);color:#f0f6fc;border:2px solid rgba(255,255,255,0.4);box-shadow:0 0 15px rgba(255,255,255,0.15);">🌐
+      Pricing &amp; Parity Index →</a>
+    <a href="https://thomascherickal.github.io/portfolio.html" target="_blank" rel="noopener" class="tc-btn-3d"
+      style="background:rgba(16,185,129,0.15);color:#10b981;border:2px solid #10b981;box-shadow:0 0 15px rgba(16,185,129,0.3);">📂
+      View Portfolio Pieces →</a>
+    <a href="https://thomascherickal.github.io/writing.html" target="_blank" rel="noopener" class="tc-btn-3d"
+      style="background:rgba(168,85,247,0.15);color:#a855f7;border:2px solid #a855f7;box-shadow:0 0 15px rgba(168,85,247,0.3);">✍️
+      Published Articles →</a>
+    <a href="https://topmate.io/thomascherickal" target="_blank" rel="noopener" class="tc-btn-3d"
+      style="background:rgba(6,182,212,0.15);color:#06b6d4;border:2px solid #06b6d4;box-shadow:0 0 15px rgba(6,182,212,0.3);">📅
+      Book 1:1 Advisory →</a>
+    <a href="https://www.patreon.com/c/ThomasCherickal" target="_blank" rel="noopener" class="tc-btn-3d"
+      style="background:rgba(244,63,94,0.15);color:#f43f5e;border:2px solid #f43f5e;box-shadow:0 0 15px rgba(244,63,94,0.3);">💎
+      Patreon Playbooks →</a>
+    <a href="mailto:thomascherickal@gmail.com" class="tc-btn-3d"
+      style="background:rgba(6,182,212,0.15);color:#06b6d4;border:2px solid #06b6d4;font-weight:700;text-decoration:none;box-shadow:0 0 15px rgba(6,182,212,0.3);text-shadow:0 0 12px rgba(6,182,212,0.6);">✉️ Direct
+      Inquiry Email →</a>
+  </div>
+</div>
