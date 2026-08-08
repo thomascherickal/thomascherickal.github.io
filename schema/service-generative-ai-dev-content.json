@@ -1,0 +1,78 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://thomascherickal.github.io/service-generative-ai-dev-content.html#webpage",
+      "url": "https://thomascherickal.github.io/service-generative-ai-dev-content.html",
+      "name": "Generative AI Dev Content \u2014 Service Specification | Thomas Cherickal",
+      "description": "Technical content for GenAI products: RAG pipelines, agentic workflows, prompt engineering frameworks, SLM fine-tuning guides, and verified AI architecture explainers.",
+      "isPartOf": {
+        "@id": "https://thomascherickal.github.io/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://thomascherickal.github.io/service-generative-ai-dev-content.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thomascherickal.github.io/service-generative-ai-dev-content.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thomascherickal.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://thomascherickal.github.io/services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Generative AI Dev Content",
+          "item": "https://thomascherickal.github.io/service-generative-ai-dev-content.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://thomascherickal.github.io/service-generative-ai-dev-content.html#service",
+      "name": "Generative AI Dev Content Service \u2014 Thomas Cherickal",
+      "serviceType": "Generative AI Content",
+      "description": "Technical content for GenAI products: RAG pipelines, agentic workflows, prompt engineering frameworks, SLM fine-tuning guides, and verified AI architecture explainers.",
+      "url": "https://thomascherickal.github.io/service-generative-ai-dev-content.html",
+      "provider": {
+        "@type": "Person",
+        "@id": "https://thomascherickal.github.io/#person",
+        "name": "Thomas Cherickal",
+        "jobTitle": "Technical Writer & Developer Educator",
+        "url": "https://thomascherickal.github.io"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide (remote)"
+      },
+      "availableLanguage": "English",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thomascherickal.github.io/service-generative-ai-dev-content.html",
+        "priceCurrency": "USD",
+        "price": "1500",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": "1500",
+          "maxPrice": "4000",
+          "priceCurrency": "USD",
+          "valueAddedTaxIncluded": "true"
+        },
+        "availability": "https://schema.org/InStock",
+        "eligibleRegion": "Worldwide"
+      }
+    }
+  ]
+}

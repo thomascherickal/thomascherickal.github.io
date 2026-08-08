@@ -1,11 +1,11 @@
 ---
-# Thomas Cherickal — Technical Writing & Developer Education Services
+# Thomas Cherickal — Technical Writer
 
 > **B2B Technical Credential**: Author of 500+ published technical articles across 10+ platforms. Every Python, Golang, or Rust code sample and benchmark is executed and hand-verified in live runtime environments before publication.
 
 ---
 
-### Technical Service Offerings
+### Technical Writing Services
 
 | Service Offering | Core Focus & Delivery | Detailed Description |
 | :--- | :--- | :--- |
@@ -16,7 +16,7 @@
 | **⚡ AI Assisted** | Standalone Drafting | Fast-turnaround drafting from briefs and specs, providing fast structure for internal technical review. |
 | **✓ Code Benchmarking** | Verification Pass | 100% manual verification pass: code execution check, quantum circuit runs, and hardware performance audits. |
 | **🗂️ Content Structure** | Diátaxis & Schema | Diátaxis framework restructuring and Schema.org markup optimized for AI agents & developers. |
-| **🚀 Launches** | Model, API & SDK | Model, API & SDK launch explainers, fast-turnaround changelog dives, and step-by-step migration guides. |
+| **📦 Local LLMs** | Quantization & Serving | Quantization, local inference setup, vLLM & Ollama deployment guides, and GGUF private model serving. |
 | **🧠 Generative AI Dev** | Agentic Workflows | RAG pipelines, agentic workflows, prompt engineering frameworks, SLM fine-tuning, and GenAI developer docs. |
 | **💼 Monthly Content** | Retainer & Sprint | Dedicated monthly sprint capacity for devtool & AI infra teams: priority turnaround, bylines & guaranteed volume. |
 

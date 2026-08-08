@@ -74,16 +74,85 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 12px;
       padding: 1.5rem;
-      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
       height: 100%;
     }
 
     .faq-card:hover {
-      transform: translateY(-3px);
-      border-color: var(--gold);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      transform: translateY(-5px) scale(1.01);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+    }
+
+    .faq-card.border-gold {
+      border: 1px solid var(--gold);
+    }
+
+    .faq-card.border-gold:hover {
+      border-color: #ffe484;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 201, 71, 0.45);
+    }
+
+    .faq-card.border-cyan {
+      border: 1px solid var(--cyan);
+    }
+
+    .faq-card.border-cyan:hover {
+      border-color: #40e8ff;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 212, 255, 0.45);
+    }
+
+    .faq-card.border-blue {
+      border: 1px solid #60a5fa;
+    }
+
+    .faq-card.border-blue:hover {
+      border-color: #93c5fd;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 25px rgba(96, 165, 250, 0.45);
+    }
+
+    .faq-card.border-green {
+      border: 1px solid #34d399;
+    }
+
+    .faq-card.border-green:hover {
+      border-color: #6ee7b7;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 25px rgba(52, 211, 153, 0.45);
+    }
+
+    .faq-card.border-purple {
+      border: 1px solid #c084fc;
+    }
+
+    .faq-card.border-purple:hover {
+      border-color: #e9d5ff;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 25px rgba(192, 132, 252, 0.45);
+    }
+
+    .faq-card.border-pink {
+      border: 1px solid #f472b6;
+    }
+
+    .faq-card.border-pink:hover {
+      border-color: #fbcfe8;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 25px rgba(244, 114, 182, 0.45);
+    }
+
+    .unanswered-question-card {
+      background: var(--bg-card);
+      border: 1px solid var(--gold);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 201, 71, 0.15);
+      text-align: center;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .unanswered-question-card:hover {
+      transform: translateY(-5px) scale(1.01);
+      border-color: #ffe484;
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.6), 0 0 35px rgba(255, 201, 71, 0.65), 0 0 10px rgba(255, 228, 132, 0.4);
     }
 
     .faq-num {
@@ -351,7 +420,7 @@
       <div class="faq-grid">
 
         <!-- FAQ 1 (EXPLICIT USER MANDATE) -->
-        <div class="faq-card" style="border-color:var(--gold);">
+        <div class="faq-card border-gold">
           <span class="faq-category-badge" style="background:rgba(255,215,0,0.15);color:var(--gold);">Mandate #1</span>
           <div class="faq-num">FAQ #01 — Revision Policy</div>
           <h3 class="faq-question">How many revisions till satisfied?</h3>
@@ -363,7 +432,7 @@
         </div>
 
         <!-- FAQ 2 (EXPLICIT USER MANDATE) -->
-        <div class="faq-card" style="border-color:var(--gold);">
+        <div class="faq-card border-gold">
           <span class="faq-category-badge" style="background:rgba(255,215,0,0.15);color:var(--gold);">Mandate #2</span>
           <div class="faq-num">FAQ #02 — Billing &amp; Terms</div>
           <h3 class="faq-question">How are the payments handled?</h3>
@@ -375,7 +444,7 @@
         </div>
 
         <!-- FAQ 3 -->
-        <div class="faq-card">
+        <div class="faq-card border-blue">
           <span class="faq-category-badge" style="background:rgba(59,130,246,0.15);color:#60a5fa;">Legal &amp; IP</span>
           <div class="faq-num">FAQ #03 — IP Rights</div>
           <h3 class="faq-question">Who owns the intellectual property and copyright?</h3>
@@ -387,7 +456,7 @@
         </div>
 
         <!-- FAQ 4 -->
-        <div class="faq-card">
+        <div class="faq-card border-cyan">
           <span class="faq-category-badge" style="background:rgba(6,182,212,0.15);color:var(--cyan);">Quality
             Assurance</span>
           <div class="faq-num">FAQ #04 — Code Verification</div>
@@ -400,7 +469,7 @@
         </div>
 
         <!-- FAQ 5 -->
-        <div class="faq-card">
+        <div class="faq-card border-green">
           <span class="faq-category-badge" style="background:rgba(16,185,129,0.15);color:#34d399;">Global Equity</span>
           <div class="faq-num">FAQ #05 — Purchasing Power Parity</div>
           <h3 class="faq-question">What is Purchasing Power Parity (PPP) / Country Parity Pricing?</h3>
@@ -412,7 +481,7 @@
         </div>
 
         <!-- FAQ 6 -->
-        <div class="faq-card">
+        <div class="faq-card border-pink">
           <span class="faq-category-badge" style="background:rgba(236,72,153,0.15);color:#f472b6;">Startups</span>
           <div class="faq-num">FAQ #06 — Startup Discounts</div>
           <h3 class="faq-question">Is there a special discount for early-stage startups?</h3>
@@ -423,7 +492,7 @@
         </div>
 
         <!-- FAQ 7 -->
-        <div class="faq-card">
+        <div class="faq-card border-purple">
           <span class="faq-category-badge" style="background:rgba(168,85,247,0.15);color:#c084fc;">Tech Stacks</span>
           <div class="faq-num">FAQ #07 — Supported Technologies</div>
           <h3 class="faq-question">What technology stacks and frameworks do you cover?</h3>
@@ -434,7 +503,7 @@
         </div>
 
         <!-- FAQ 8 -->
-        <div class="faq-card">
+        <div class="faq-card border-green">
           <span class="faq-category-badge" style="background:rgba(16,185,129,0.15);color:#34d399;">Delivery</span>
           <div class="faq-num">FAQ #08 — Turnaround Times</div>
           <h3 class="faq-question">What is the typical turnaround time for a deliverable?</h3>
@@ -445,7 +514,7 @@
         </div>
 
         <!-- FAQ 9 -->
-        <div class="faq-card">
+        <div class="faq-card border-blue">
           <span class="faq-category-badge"
             style="background:rgba(59,130,246,0.15);color:#60a5fa;">Confidentiality</span>
           <div class="faq-num">FAQ #09 — NDAs &amp; Security</div>
@@ -457,7 +526,7 @@
         </div>
 
         <!-- FAQ 10 -->
-        <div class="faq-card">
+        <div class="faq-card border-purple">
           <span class="faq-category-badge" style="background:rgba(168,85,247,0.15);color:#c084fc;">Information
             Architecture</span>
           <div class="faq-num">FAQ #10 — Multi-Audience Content</div>
@@ -469,7 +538,7 @@
         </div>
 
         <!-- FAQ 11 -->
-        <div class="faq-card">
+        <div class="faq-card border-green">
           <span class="faq-category-badge" style="background:rgba(16,185,129,0.15);color:#34d399;">Formats</span>
           <div class="faq-num">FAQ #11 — Deliverable Formats</div>
           <h3 class="faq-question">In what file formats do you deliver content?</h3>
@@ -480,7 +549,7 @@
         </div>
 
         <!-- FAQ 12 -->
-        <div class="faq-card">
+        <div class="faq-card border-purple">
           <span class="faq-category-badge" style="background:rgba(168,85,247,0.15);color:#c084fc;">AI Methodology</span>
           <div class="faq-num">FAQ #12 — AI Acceleration</div>
           <h3 class="faq-question">How does AI acceleration work with 100% human verification?</h3>
@@ -491,7 +560,7 @@
         </div>
 
         <!-- FAQ 13 -->
-        <div class="faq-card">
+        <div class="faq-card border-cyan">
           <span class="faq-category-badge" style="background:rgba(6,182,212,0.15);color:var(--cyan);">Training</span>
           <div class="faq-num">FAQ #13 — Remote Enablement</div>
           <h3 class="faq-question">What is included in Remote Engineering Team Training?</h3>
@@ -502,7 +571,7 @@
         </div>
 
         <!-- FAQ 14 -->
-        <div class="faq-card">
+        <div class="faq-card border-gold">
           <span class="faq-category-badge"
             style="background:rgba(255,215,0,0.15);color:var(--gold);">Partnerships</span>
           <div class="faq-num">FAQ #14 — Retainers</div>
@@ -514,7 +583,7 @@
         </div>
 
         <!-- FAQ 15 -->
-        <div class="faq-card">
+        <div class="faq-card border-green">
           <span class="faq-category-badge" style="background:rgba(16,185,129,0.15);color:#34d399;">Support</span>
           <div class="faq-num">FAQ #15 — Post-Launch Maintenance</div>
           <h3 class="faq-question">What happens if an API version changes shortly after delivery?</h3>
@@ -525,7 +594,7 @@
         </div>
 
         <!-- FAQ 16 -->
-        <div class="faq-card">
+        <div class="faq-card border-gold">
           <span class="faq-category-badge" style="background:rgba(255,215,0,0.15);color:var(--gold);">Onboarding</span>
           <div class="faq-num">FAQ #16 — Project Commencement</div>
           <h3 class="faq-question">How do we get started on a project brief?</h3>
@@ -537,7 +606,7 @@
         </div>
 
         <!-- FAQ 17 -->
-        <div class="faq-card">
+        <div class="faq-card border-purple">
           <span class="faq-category-badge" style="background:rgba(168,85,247,0.15);color:#c084fc;">Benchmarks</span>
           <div class="faq-num">FAQ #17 — Reproducible Benchmarking</div>
           <h3 class="faq-question">Can you author reproducible benchmark comparison reports?</h3>
@@ -548,7 +617,7 @@
         </div>
 
         <!-- FAQ 18 -->
-        <div class="faq-card">
+        <div class="faq-card border-cyan">
           <span class="faq-category-badge" style="background:rgba(6,182,212,0.15);color:var(--cyan);">Quantum
             Validation</span>
           <div class="faq-num">FAQ #18 — Quantum Simulator vs Hardware</div>
@@ -560,7 +629,7 @@
         </div>
 
         <!-- FAQ 19 -->
-        <div class="faq-card">
+        <div class="faq-card border-blue">
           <span class="faq-category-badge" style="background:rgba(59,130,246,0.15);color:#60a5fa;">Localization</span>
           <div class="faq-num">FAQ #19 — International Content</div>
           <h3 class="faq-question">Do you support multi-language documentation translation?</h3>
@@ -571,7 +640,7 @@
         </div>
 
         <!-- FAQ 20 -->
-        <div class="faq-card">
+        <div class="faq-card border-gold">
           <span class="faq-category-badge" style="background:rgba(255,215,0,0.15);color:var(--gold);">Payments</span>
           <div class="faq-num">FAQ #20 — Payment Channels</div>
           <h3 class="faq-question">What payment methods do you accept internationally?</h3>
@@ -587,8 +656,7 @@
     <!-- CENTERED ASK A QUESTION / CONTACT FORM SECTION -->
     <section class="reveal" id="ask-question">
       <div style="max-width:720px;margin:3rem auto 0 auto;">
-        <div
-          style="background:var(--bg-card);border:1px solid var(--gold);border-radius:16px;padding:2.5rem;box-shadow:0 12px 36px rgba(0,0,0,0.5);text-align:center;">
+        <div class="unanswered-question-card">
           <p class="section-label" style="color:var(--gold);">// DIRECT INQUIRIES</p>
           <h2 style="font-size:2rem;font-weight:900;color:var(--text-primary);margin:0.5rem 0 0.75rem 0;">
             Have an Unanswered <span class="accent-gold">Question?</span>

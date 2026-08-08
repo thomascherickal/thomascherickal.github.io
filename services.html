@@ -51,6 +51,108 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="./style.css?v=173e304adcb4" />
 
+  <!-- 3D Glow Card Styles for Service Offerings -->
+  <style>
+    .roles-grid {
+      perspective: 1200px;
+    }
+
+    .role-card {
+      position: relative;
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        box-shadow 0.4s ease,
+        border-color 0.4s ease,
+        background 0.4s ease;
+      backdrop-filter: blur(12px);
+    }
+
+    .role-card-icon {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .role-card:hover .role-card-icon {
+      transform: translateY(-6px) scale(1.25);
+    }
+
+    .role-card-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      transition: text-shadow 0.3s ease;
+    }
+
+    .role-card:hover .role-card-title {
+      text-shadow: 0 0 12px currentColor;
+    }
+
+    /* Gold 3D Card */
+    .role-card.border-gold {
+      background: linear-gradient(145deg, rgba(255, 201, 71, 0.16) 0%, rgba(26, 20, 8, 0.95) 100%);
+      border: 2px solid rgba(255, 201, 71, 0.45);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6),
+        0 0 15px rgba(255, 201, 71, 0.12),
+        inset 0 1px 0 rgba(255, 228, 132, 0.25);
+    }
+
+    .role-card.border-gold:hover {
+      transform: translateY(-8px) scale(1.03);
+      background: linear-gradient(145deg, rgba(255, 201, 71, 0.28) 0%, rgba(38, 28, 10, 0.98) 100%);
+      border-color: #ffe484;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75),
+        0 0 35px rgba(255, 201, 71, 0.65),
+        0 0 12px rgba(255, 228, 132, 0.4),
+        inset 0 1px 0 rgba(255, 240, 180, 0.6);
+    }
+
+    /* Cyan 3D Card */
+    .role-card.border-cyan {
+      background: linear-gradient(145deg, rgba(0, 212, 255, 0.16) 0%, rgba(6, 22, 30, 0.95) 100%);
+      border: 2px solid rgba(0, 212, 255, 0.45);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6),
+        0 0 15px rgba(0, 212, 255, 0.12),
+        inset 0 1px 0 rgba(180, 245, 255, 0.25);
+    }
+
+    .role-card.border-cyan:hover {
+      transform: translateY(-8px) scale(1.03);
+      background: linear-gradient(145deg, rgba(0, 212, 255, 0.28) 0%, rgba(10, 32, 44, 0.98) 100%);
+      border-color: #67e8f9;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75),
+        0 0 35px rgba(0, 212, 255, 0.65),
+        0 0 12px rgba(180, 245, 255, 0.4),
+        inset 0 1px 0 rgba(200, 250, 255, 0.6);
+    }
+
+    /* Violet 3D Card */
+    .role-card.border-violet {
+      background: linear-gradient(145deg, rgba(139, 92, 246, 0.18) 0%, rgba(20, 12, 36, 0.95) 100%);
+      border: 2px solid rgba(139, 92, 246, 0.45);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6),
+        0 0 15px rgba(139, 92, 246, 0.12),
+        inset 0 1px 0 rgba(220, 200, 255, 0.25);
+    }
+
+    .role-card.border-violet:hover {
+      transform: translateY(-8px) scale(1.03);
+      background: linear-gradient(145deg, rgba(139, 92, 246, 0.30) 0%, rgba(32, 18, 56, 0.98) 100%);
+      border-color: #c084fc;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75),
+        0 0 35px rgba(139, 92, 246, 0.65),
+        0 0 12px rgba(220, 200, 255, 0.4),
+        inset 0 1px 0 rgba(230, 210, 255, 0.6);
+    }
+  </style>
+
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
@@ -155,9 +257,9 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Launch & Migration Content",
-                "description": "Model, API and SDK launch explainers, changelog deep dives, comparison pieces, and migration guides on launch-window turnaround.",
-                "serviceType": "Technical Content"
+                "name": "Local LLM Deployment",
+                "description": "Quantization, local inference setup, vLLM and Ollama deployment guides, GGUF optimization, and private enterprise LLM serving specifications.",
+                "serviceType": "AI Infrastructure & Deployment"
               }
             },
             {
@@ -226,7 +328,8 @@
         <!-- Service 1 -->
         <div class="role-card border-gold" style="min-height:360px;">
           <span class="role-card-icon">📝</span>
-          <h3 class="role-card-title" style="color:var(--gold);">Developer Documentation</h3>
+          <h3 class="role-card-title" style="color:var(--gold);"><a href="service-developer-documentation.html"
+              style="color:inherit;text-decoration:none;">Developer Documentation</a></h3>
           <p class="role-card-desc">API references, SDK guides, quickstarts, integration and migration guides, across
             Generative AI APIs and quantum SDKs.</p>
           <div
@@ -234,15 +337,15 @@
             Drafted fast from specs; every code sample is executed
             against the live API before delivery.
           </div>
-          <a href="#contact" class="btn btn-commission"
-            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">Discuss a
-            Docs Project →</a>
+          <a href="service-developer-documentation.html" class="btn btn-commission"
+            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">View Specification →</a>
         </div>
 
         <!-- Service 2 -->
-        <div class="role-card border-gold" style="min-height:360px;">
+        <div class="role-card border-cyan" style="min-height:360px;">
           <span class="role-card-icon">🔬</span>
-          <h3 class="role-card-title" style="color:var(--gold);">Technical Deep Dives</h3>
+          <h3 class="role-card-title" style="color:var(--cyan);"><a href="service-technical-deep-dives.html"
+              style="color:inherit;text-decoration:none;">Technical Deep Dives</a></h3>
           <p class="role-card-desc">Commissioned long-form explainers (2,000–8,000 words) across Generative AI Systems
             and Quantum Systems with original research.</p>
           <div
@@ -250,15 +353,15 @@
             AI accelerates research aggregation; every cited statistic is
             traced to source by hand.
           </div>
-          <a href="#contact" class="btn btn-commission"
-            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">Commission
-            a Deep Dive →</a>
+          <a href="service-technical-deep-dives.html" class="btn btn-commission"
+            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">View Specification →</a>
         </div>
 
         <!-- Service 3 -->
         <div class="role-card border-gold" style="min-height:360px;">
           <span class="role-card-icon">🎓</span>
-          <h3 class="role-card-title" style="color:var(--gold);">Developer Education</h3>
+          <h3 class="role-card-title" style="color:var(--gold);"><a href="service-developer-education.html"
+              style="color:inherit;text-decoration:none;">Developer Education</a></h3>
           <p class="role-card-desc">Tutorial series, structured learning paths, and workshop curricula, with an
             executable repository or notebook per module.</p>
           <div
@@ -266,15 +369,15 @@
             AI scaffolds curriculum flow; every exercise and notebook is
             executed end-to-end.
           </div>
-          <a href="#contact" class="btn btn-commission"
-            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">Scope a
-            Course →</a>
+          <a href="service-developer-education.html" class="btn btn-commission"
+            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">View Specification →</a>
         </div>
 
         <!-- Service 4 -->
         <div class="role-card border-violet" style="min-height:360px;">
           <span class="role-card-icon">⚛️</span>
-          <h3 class="role-card-title" style="color:var(--violet);">Quantum Developer Content</h3>
+          <h3 class="role-card-title" style="color:var(--violet);"><a href="service-quantum-developer-content.html"
+              style="color:inherit;text-decoration:none;">Quantum Developer Content</a></h3>
           <p class="role-card-desc">IBM Qiskit and PennyLane tutorials, QML explainers, quantum algorithm walkthroughs,
             and post-quantum cryptography briefings.</p>
           <div
@@ -282,16 +385,15 @@
             Every quantum circuit is executed in a Qiskit Aer simulator;
             actual outputs get published.
           </div>
-          <a href="#contact" class="btn btn-commission"
-            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">Discuss
-            Quantum Content
-            →</a>
+          <a href="service-quantum-developer-content.html" class="btn btn-commission"
+            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">View Specification →</a>
         </div>
 
         <!-- Service 5 -->
         <div class="role-card border-cyan" style="min-height:360px;">
           <span class="role-card-icon">⚡</span>
-          <h3 class="role-card-title" style="color:var(--cyan);">AI-Accelerated Research</h3>
+          <h3 class="role-card-title" style="color:var(--cyan);"><a href="service-ai-accelerated-research.html"
+              style="color:inherit;text-decoration:none;">AI-Accelerated Research</a></h3>
           <p class="role-card-desc">A standalone offering for teams wanting rapid turnaround: Generative AI-assisted
             drafts structured for internal review.</p>
           <div
@@ -299,31 +401,31 @@
             Transparent drafting pass providing fast structure, ready for
             your team's subject-matter review.
           </div>
-          <a href="#contact" class="btn btn-commission"
-            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">Discuss
-            Fast Drafting →</a>
+          <a href="service-ai-accelerated-research.html" class="btn btn-commission"
+            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">View Specification →</a>
         </div>
 
         <!-- Service 6 -->
-        <div class="role-card border-gold" style="min-height:360px;">
+        <div class="role-card border-violet" style="min-height:360px;">
           <span class="role-card-icon">✓</span>
-          <h3 class="role-card-title" style="color:var(--gold);">Code &amp; Circuit Benchmarking</h3>
+          <h3 class="role-card-title" style="color:var(--violet);"><a href="service-code-circuit-benchmarking.html"
+              style="color:inherit;text-decoration:none;">Code &amp; Circuit Benchmarking</a></h3>
           <p class="role-card-desc">Standalone verification pass for existing technical content: every code sample
             executed, every claim checked.</p>
           <div
-            style="margin-top:1rem;padding-top:0.75rem;margin-bottom:1.25rem;border-top:1px solid rgba(255,255,255,0.08);font-size:0.85rem;color:var(--gold);">
+            style="margin-top:1rem;padding-top:0.75rem;margin-bottom:1.25rem;border-top:1px solid rgba(255,255,255,0.08);font-size:0.85rem;color:var(--violet);">
             Zero AI generation — 100% manual execution audit to establish
             trust for your published drafts.
           </div>
-          <a href="#contact" class="btn btn-commission"
-            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">Request
-            Verification →</a>
+          <a href="service-code-circuit-benchmarking.html" class="btn btn-commission"
+            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">View Specification →</a>
         </div>
 
         <!-- Service 7 -->
-        <div class="role-card border-gold" style="min-height:360px;">
+        <div class="role-card border-cyan" style="min-height:360px;">
           <span class="role-card-icon">🗂️</span>
-          <h3 class="role-card-title" style="color:var(--gold);">Content Architecture</h3>
+          <h3 class="role-card-title" style="color:var(--cyan);"><a href="service-content-architecture.html"
+              style="color:inherit;text-decoration:none;">Content Architecture</a></h3>
           <p class="role-card-desc">Restructuring existing documentation so it serves both a skimming human developer
             and a retrieving Generative AI agent alike.</p>
           <div
@@ -331,32 +433,31 @@
             Diátaxis-pattern organization and Schema.org markup verified
             for retrieval accuracy.
           </div>
-          <a href="#contact" class="btn btn-commission"
-            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">Audit Docs
-            Architecture
-            →</a>
+          <a href="service-content-architecture.html" class="btn btn-commission"
+            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">View Specification →</a>
         </div>
 
         <!-- Service 8 -->
         <div class="role-card border-gold" style="min-height:360px;">
-          <span class="role-card-icon">🚀</span>
-          <h3 class="role-card-title" style="color:var(--gold);">Launch &amp; Migration Content</h3>
-          <p class="role-card-desc">Model, API, and SDK launch explainers and changelog deep dives on launch turnaround.
+          <span class="role-card-icon">📦</span>
+          <h3 class="role-card-title" style="color:var(--gold);"><a href="service-local-llm-deployment.html"
+              style="color:inherit;text-decoration:none;">Local LLM Deployment</a></h3>
+          <p class="role-card-desc">Quantization, local inference setup, vLLM and Ollama deployment guides, GGUF
+            optimization, and private enterprise LLM serving.
           </p>
           <div
             style="margin-top:1rem;padding-top:0.75rem;margin-bottom:1.25rem;border-top:1px solid rgba(255,255,255,0.08);font-size:0.85rem;color:var(--cyan);">
-            Rapid drafting during embargoes, with mandatory runtime
-            verification.
+            Quantization &amp; serving pipelines 100% verified on live GPU / local hardware before publishing.
           </div>
-          <a href="#contact" class="btn btn-commission"
-            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">Discuss
-            Launch Content →</a>
+          <a href="service-local-llm-deployment.html" class="btn btn-commission"
+            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">View Specification →</a>
         </div>
 
         <!-- Service 9 -->
         <div class="role-card border-cyan" style="min-height:360px;">
           <span class="role-card-icon">🧠</span>
-          <h3 class="role-card-title" style="color:var(--cyan);">Generative AI Dev Content</h3>
+          <h3 class="role-card-title" style="color:var(--cyan);"><a href="service-generative-ai-dev-content.html"
+              style="color:inherit;text-decoration:none;">Generative AI Dev Content</a></h3>
           <p class="role-card-desc">RAG pipelines, agentic workflows, fine-tuning guides, and developer documentation
             for GenAI products.</p>
           <div
@@ -364,22 +465,23 @@
             Structural drafting assisted by AI; agent loops &amp; model outputs 100% verified in Python, Golang &amp;
             Rust.
           </div>
-          <a href="#contact" class="btn btn-commission"
-            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">Discuss GenAI Content →</a>
+          <a href="service-generative-ai-dev-content.html" class="btn btn-commission"
+            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">View Specification →</a>
         </div>
 
         <!-- Service 10 -->
         <div class="role-card border-gold" style="min-height:360px;">
           <span class="role-card-icon">💼</span>
-          <h3 class="role-card-title" style="color:var(--gold);">Monthly Content Retainer</h3>
+          <h3 class="role-card-title" style="color:var(--gold);"><a href="service-monthly-content-retainer.html"
+              style="color:inherit;text-decoration:none;">Monthly Content Retainer</a></h3>
           <p class="role-card-desc">Dedicated monthly sprint capacity for devtools &amp; AI infra companies: guaranteed
             technical content volume.</p>
           <div
             style="margin-top:1rem;padding-top:0.75rem;margin-bottom:1.25rem;border-top:1px solid rgba(255,255,255,0.08);font-size:0.85rem;color:var(--cyan);">
             Dedicated sprint bandwidth with mandatory 100% manual code execution checks.
           </div>
-          <a href="#contact" class="btn btn-commission"
-            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">Discuss Monthly Retainer →</a>
+          <a href="service-monthly-content-retainer.html" class="btn btn-commission"
+            style="margin-top:auto;width:100%;justify-content:center;font-size:0.75rem;">View Specification →</a>
         </div>
       </div>
 
@@ -639,18 +741,11 @@
                   <option value="Developer Education &amp; Courses">🎓 Developer Education &amp; Courses</option>
                   <option value="Code &amp; Circuit Benchmarking Pass">🧪 Code &amp; Circuit Benchmarking Pass</option>
                   <option value="Documentation Architecture Audit">🗂️ Documentation Architecture Audit</option>
-                  <option value="Launch &amp; Migration Content">🚀 Launch &amp; Migration Content</option>
-                  <option value="Remote Engineering Team Training">👥 Remote Engineering Team Training</option>
+                  <option value="Local LLM Deployment">📦 Local LLM Deployment</option>
                   <option value="AI Workflow Consulting">⚙️ AI Workflow Consulting</option>
-                  <option value="Post-Quantum Cryptography Risk Briefing">🛡️ Post-Quantum Cryptography Risk Briefing
+                  <option value="Post-Quantum Cryptography Risk Briefing">🛡️ Post-Quantum Cryptography Briefing
                   </option>
-                  <option value="Local LLM Deployment &amp; Benchmarking Guide">⚡ Local LLM Deployment &amp;
-                    Benchmarking Guide</option>
                   <option value="Agentic AI Framework Comparison">🏎️ Agentic AI Framework Comparison</option>
-                  <option value="Technical Whitepaper &amp; Research Report">📊 Technical Whitepaper &amp; Research
-                    Report</option>
-                  <option value="Diátaxis Restructuring &amp; AI RAG Optimization">📐 Diátaxis Restructuring &amp; AI
-                    RAG Optimization</option>
                   <option value="Other / Custom Inquiry">💡 Other / Custom Inquiry</option>
                 </select>
               </div>

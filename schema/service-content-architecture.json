@@ -1,0 +1,78 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://thomascherickal.github.io/service-content-architecture.html#webpage",
+      "url": "https://thomascherickal.github.io/service-content-architecture.html",
+      "name": "Content Architecture \u2014 Service Specification | Thomas Cherickal",
+      "description": "Restructuring technical documentation using the Di\u00e1taxis framework and Schema.org JSON-LD markup for human developer skimming and AI RAG retrieval accuracy.",
+      "isPartOf": {
+        "@id": "https://thomascherickal.github.io/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://thomascherickal.github.io/service-content-architecture.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thomascherickal.github.io/service-content-architecture.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thomascherickal.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://thomascherickal.github.io/services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Content Architecture",
+          "item": "https://thomascherickal.github.io/service-content-architecture.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://thomascherickal.github.io/service-content-architecture.html#service",
+      "name": "Content Architecture Service \u2014 Thomas Cherickal",
+      "serviceType": "Information Architecture",
+      "description": "Restructuring technical documentation using the Di\u00e1taxis framework and Schema.org JSON-LD markup for human developer skimming and AI RAG retrieval accuracy.",
+      "url": "https://thomascherickal.github.io/service-content-architecture.html",
+      "provider": {
+        "@type": "Person",
+        "@id": "https://thomascherickal.github.io/#person",
+        "name": "Thomas Cherickal",
+        "jobTitle": "Technical Writer & Developer Educator",
+        "url": "https://thomascherickal.github.io"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide (remote)"
+      },
+      "availableLanguage": "English",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thomascherickal.github.io/service-content-architecture.html",
+        "priceCurrency": "USD",
+        "price": "2000",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": "2000",
+          "maxPrice": "4500",
+          "priceCurrency": "USD",
+          "valueAddedTaxIncluded": "true"
+        },
+        "availability": "https://schema.org/InStock",
+        "eligibleRegion": "Worldwide"
+      }
+    }
+  ]
+}

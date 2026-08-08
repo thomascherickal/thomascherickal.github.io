@@ -12,7 +12,25 @@
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="writing.html">Writing</a></li>
       <li><a href="about.html">Expertise</a></li>
-      <li><a href="services.html">Services</a></li>
+      <li class="nav-dropdown">
+        <a href="services.html" class="nav-dropdown-toggle">
+          Services <span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html" class="dropdown-header-link">🎯 All Offerings</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="service-developer-documentation.html">📝 Developer Docs</a></li>
+          <li><a href="service-technical-deep-dives.html">🔬 Deep Dives</a></li>
+          <li><a href="service-developer-education.html">🎓 Dev Education</a></li>
+          <li><a href="service-quantum-developer-content.html">⚛️ Quantum Dev</a></li>
+          <li><a href="service-ai-accelerated-research.html">⚡ AI Research</a></li>
+          <li><a href="service-code-circuit-benchmarking.html">🧪 Code Benchmarking</a></li>
+          <li><a href="service-content-architecture.html">🗂️ Content Architecture</a></li>
+          <li><a href="service-local-llm-deployment.html">📦 Local LLMs</a></li>
+          <li><a href="service-generative-ai-dev-content.html">🧠 GenAI Dev</a></li>
+          <li><a href="service-monthly-content-retainer.html">💼 Monthly Retainer</a></li>
+        </ul>
+      </li>
       <li><a href="pricing.html">Pricing</a></li>
       <li><a href="faqs.html">FAQs</a></li>
     </ul>
@@ -22,7 +40,7 @@
     <div class="footer-top">
       <div>
         <p class="footer-brand-name">The Digital Futurist (2020–present)</p>
-        <p class="footer-brand-tagline">Thomas Cherickal · Technical Writer &amp; Developer Educator</p>
+        <p class="footer-brand-tagline">Thomas Cherickal · Technical Writer</p>
       </div>
       <div>
         <div class="newsletter-card">
@@ -110,17 +128,33 @@
     let page = path.substring(path.lastIndexOf('/') + 1);
     if (!page || page === '') page = 'index.html';
 
-    const links = document.querySelectorAll('.nav-links a');
+    const links = document.querySelectorAll('.nav-links > li > a');
     links.forEach(link => {
       const href = link.getAttribute('href');
       const lowerHref = href ? href.toLowerCase() : '';
       const lowerPage = page ? page.toLowerCase() : '';
-      if (lowerHref === lowerPage || (lowerPage === 'index.html' && (lowerHref === 'index.html' || lowerHref === './'))) {
+      if (
+        lowerHref === lowerPage || 
+        (lowerPage === 'index.html' && (lowerHref === 'index.html' || lowerHref === './')) ||
+        (lowerPage.startsWith('service-') && lowerHref === 'services.html')
+      ) {
         link.classList.add('active');
         link.setAttribute('aria-current', 'page');
       } else {
         link.classList.remove('active');
         link.removeAttribute('aria-current');
+      }
+    });
+
+    // Also highlight active item inside dropdown menu if exact match
+    const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
+    dropdownLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      const lowerHref = href ? href.toLowerCase() : '';
+      const lowerPage = page ? page.toLowerCase() : '';
+      if (lowerHref === lowerPage) {
+        link.style.color = 'var(--gold)';
+        link.style.background = 'rgba(255, 201, 71, 0.16)';
       }
     });
   }

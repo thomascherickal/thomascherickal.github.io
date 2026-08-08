@@ -1,0 +1,78 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://thomascherickal.github.io/service-developer-education.html#webpage",
+      "url": "https://thomascherickal.github.io/service-developer-education.html",
+      "name": "Developer Education \u2014 Service Specification | Thomas Cherickal",
+      "description": "Structured learning paths, multi-part tutorial series, and interactive workshop curricula with executable repositories per module.",
+      "isPartOf": {
+        "@id": "https://thomascherickal.github.io/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://thomascherickal.github.io/service-developer-education.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thomascherickal.github.io/service-developer-education.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thomascherickal.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://thomascherickal.github.io/services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Developer Education",
+          "item": "https://thomascherickal.github.io/service-developer-education.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://thomascherickal.github.io/service-developer-education.html#service",
+      "name": "Developer Education Service \u2014 Thomas Cherickal",
+      "serviceType": "Developer Education",
+      "description": "Structured learning paths, multi-part tutorial series, and interactive workshop curricula with executable repositories per module.",
+      "url": "https://thomascherickal.github.io/service-developer-education.html",
+      "provider": {
+        "@type": "Person",
+        "@id": "https://thomascherickal.github.io/#person",
+        "name": "Thomas Cherickal",
+        "jobTitle": "Technical Writer & Developer Educator",
+        "url": "https://thomascherickal.github.io"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide (remote)"
+      },
+      "availableLanguage": "English",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thomascherickal.github.io/service-developer-education.html",
+        "priceCurrency": "USD",
+        "price": "1500",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": "1500",
+          "maxPrice": "3500",
+          "priceCurrency": "USD",
+          "valueAddedTaxIncluded": "true"
+        },
+        "availability": "https://schema.org/InStock",
+        "eligibleRegion": "Worldwide"
+      }
+    }
+  ]
+}
