@@ -42,7 +42,7 @@ As a developer with a PG degree in CS and a seasoned online technical writer wit
 
 ## Core Capabilities (10 Roles)
 
-Empowering Generative AI and Quantum companies with Python, Go & Rust-verified technical content and developer education.
+Empowering Generative AI Companies and Quantum Computing Enterprises with Python, Go & Rust-verified technical content and developer education.
 
 ### 📝 Developer Documentation
 API references, SDK guides, quickstarts, integration and migration guides, across Generative AI APIs and quantum SDKs.
