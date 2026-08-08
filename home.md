@@ -5,19 +5,19 @@
 ![Thomas Cherickal](./assets/thomas-avatar.webp)
 
 **Technical Writer & Developer Educator — Generative AI Systems & Quantum Systems**  
-*Documentation, deep dives, and developer education — AI-accelerated, verified in Python, Golang, and Rust.*
+*Documentation, deep dives, and developer education — AI-accelerated, verified in Python and Rust.*
 
 ### Core Focus Areas
 - `Developer Documentation`
 - `Generative AI Systems`
 - `Quantum Systems`
 - `Developer Education`
-- `Python, Go & Rust-Verified Content`
+- `Python & Rust-Verified Content`
 
 ---
 
 ## Bio
-As a developer with a PG degree in CS and a seasoned online technical writer with a broad online presence, I sit directly in the intersection of both frontier domains — writing developer documentation, tutorials, and deep dives where every Python, Go, or Rust script, Generative AI project, and Qiskit circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. Hands-on with LLMs and agent frameworks (Claude Code, Google Antigravity, Ollama, LM Studio, llama.cpp) and quantum SDKs (IBM Qiskit, PennyLane, QML). Fully remote and asynchronous.
+As a developer with a PG degree in CS and a seasoned online technical writer with a broad online presence, I sit directly in the intersection of both frontier domains — writing developer documentation, tutorials, and deep dives where every Python or Rust script, Generative AI project, and Qiskit circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. Hands-on with LLMs and agent frameworks (Claude Code, Google Antigravity, Ollama, LM Studio, llama.cpp) and quantum SDKs (IBM Qiskit, PennyLane, QML). Fully remote and asynchronous.
 
 ### Quick Actions
 - [🌐 Main Site](https://thomascherickal.com)
@@ -36,13 +36,13 @@ As a developer with a PG degree in CS and a seasoned online technical writer wit
 | **Years Technical Writing** | 6+ |
 | **Featured Deep Dives** | 24 |
 | **GitHub Repositories** | 2000+ |
-| **Code Verified (Python/Go/Rust)** | 100% |
+| **Code Verified (Python/Rust)** | 100% |
 
 ---
 
 ## Core Capabilities (10 Roles)
 
-Empowering Generative AI Companies and Quantum Computing Enterprises with Python, Go & Rust-verified technical content and developer education.
+Empowering Generative AI Companies and Quantum Computing Enterprises with Python & Rust-verified technical content and developer education.
 
 ### 📝 Developer Documentation
 API references, SDK guides, quickstarts, integration and migration guides, across Generative AI APIs and quantum SDKs.
@@ -59,8 +59,8 @@ Post-quantum cryptography risk, the threat model against current encryption algo
 ### ⚡ Local & Private AI
 Ollama, LM Studio, llama.cpp, GGUF, SLM fine-tuning and quantisation for private on-premise execution.
 
-### 🐍 Python, Golang & Rust Systems
-Deep Python, Golang (Go), and Rust fluency as core engineering layers: PyTorch & FastAPI in Python; cloud microservices & gRPC in Go; memory-safe Tokio & Wasm in Rust. Every example executed before publication.
+### 🐍 Python & Rust Systems
+Deep Python and Rust fluency as core engineering layers: PyTorch & FastAPI in Python; memory-safe Tokio & Wasm in Rust. Every example executed before publication.
 
 ### 🎓 Developer Education
 Courses, tutorial series, structured learning paths, and interactive Jupyter notebook modules across both technical domains.
@@ -78,7 +78,7 @@ Structuring documentation so it serves both a skimming developer and a retrievin
 
 ## Tech Stack & Tooling (10 Chip Groups)
 
-- **💻 Languages**: Python, Rust, Go, JavaScript, Bash
+- **💻 Languages**: Python, Rust, JavaScript, Bash
 - **🧠 Generative AI Systems**: Generative AI, LLMs, SLMs, Agentic AI, RAG
 - **⚛️ Quantum Systems**: IBM Qiskit, PennyLane, Quantum Machine Learning, Quantum Algorithms, Microsoft Q# / Quantinuum
 - **🤖 AI Tools Expertise**: Claude Code, Google Antigravity, Google AI Studio, Gemini Notebook, CodeWiki
@@ -95,7 +95,7 @@ Structuring documentation so it serves both a skimming developer and a retrievin
 
 Most developer content in Generative AI and Quantum Computing suffers from one of two flaws: it is either written by brilliant physicists and engineers who lack editorial clarity, or by generalist writers who cannot execute the code they document.
 
-As a developer with a PG degree in CS and a seasoned online technical writer with a broad online presence, I sit directly in the intersection of both frontier domains — writing developer documentation, tutorials, and deep dives where every Python, Go, or Rust script, Generative AI project, and Qiskit circuit is run and verified before publication.
+As a developer with a PG degree in CS and a seasoned online technical writer with a broad online presence, I sit directly in the intersection of both frontier domains — writing developer documentation, tutorials, and deep dives where every Python or Rust script, Generative AI project, and Qiskit circuit is run and verified before publication.
 
 ---
 
@@ -151,7 +151,7 @@ A comprehensive transformation system showing professionals how to use frontier 
 2. **Technical Deep Dives**: Long-form technical explainers (2,000–8,000 words) with verified benchmarks.
 3. **Developer Education & Courses**: Tutorial series, structured learning paths, and interactive notebooks.
 4. **Quantum Developer Content**: IBM Qiskit & PennyLane tutorials, QML explainers, and algorithm walkthroughs.
-5. **AI-Accelerated Research & Drafting**: Standalone transparent first-pass drafting from specs.
+5. **Quantum AI & Quantum ML**: Quantum Neural Networks (QNNs), Quantum Kernel methods, VQE/QAOA algorithms, and hybrid PyTorch/PennyLane QML developer guides.
 6. **Code & Circuit Benchmarking**: Standalone verification pass for your existing drafts.
 7. **Content Architecture**: Structuring docs for human developers and retrieval AI agents.
 8. **Local LLM Deployment**: Quantization, local inference setup, vLLM & Ollama deployment guides.
