@@ -37,7 +37,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css?v=173e304adcb4" />
+  <link rel="stylesheet" href="./style.css?v=562685955c11" />
 
   <!-- Structured Data (JSON-LD) for Google Rich Results -->
   <script type="application/ld+json">
@@ -48,10 +48,13 @@
       "@type": "ContactPage",
       "@id": "https://thomascherickal.github.io/contact.html#webpage",
       "url": "https://thomascherickal.github.io/contact.html",
-      "name": "Contact & Project Intake — Thomas Cherickal",
-      "description": "Submit your technical content project brief, API documentation inquiry, quantum deep dive request, or developer education training scope.",
+      "name": "Contact & Project Intake — Thomas Cherickal | The Digital Futurist",
+      "description": "Submit your technical content project brief, API documentation inquiry, quantum deep dive request, or developer education training scope. 24-hour response SLA.",
       "isPartOf": {
         "@id": "https://thomascherickal.github.io/#website"
+      },
+      "mainEntity": {
+        "@id": "https://thomascherickal.github.io/contact.html#service"
       },
       "inLanguage": "en-US",
       "breadcrumb": {
@@ -81,13 +84,39 @@
       "@id": "https://thomascherickal.github.io/contact.html#service",
       "name": "Thomas Cherickal — Technical Writing & Developer Education",
       "url": "https://thomascherickal.github.io/contact.html",
-      "email": "mailto:thomascherickal@gmail.com",
+      "image": "https://thomascherickal.github.io/assets/site-icon.webp",
+      "logo": "https://thomascherickal.github.io/assets/site-icon.webp",
+      "priceRange": "$$",
+      "description": "Submit your technical content project brief, API documentation inquiry, quantum deep dive request, or developer education training scope. 24-hour response SLA.",
+      "email": "thomascherickal@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600015",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "thomascherickal@gmail.com",
+        "url": "https://topmate.io/thomascherickal",
+        "availableLanguage": "English"
+      },
       "provider": {
         "@type": "Person",
         "@id": "https://thomascherickal.github.io/#person",
         "name": "Thomas Cherickal",
         "jobTitle": "Technical Writer & Developer Educator",
-        "url": "https://thomascherickal.github.io"
+        "url": "https://thomascherickal.github.io",
+        "sameAs": [
+          "https://thomascherickal.com",
+          "https://github.com/thomascherickal",
+          "https://linkedin.com/in/thomascherickal",
+          "https://topmate.io/thomascherickal",
+          "https://hackernoon.com/u/thomascherickal",
+          "https://thomascherickal.medium.com"
+        ]
       },
       "areaServed": {
         "@type": "Place",
@@ -132,8 +161,7 @@
                 <div class="contact-method-icon">📧</div>
                 <div class="contact-method-text">
                   <span class="contact-method-label">Email</span>
-                  <a href="mailto:thomascherickal@gmail.com"
-                    class="contact-method-val">thomascherickal@gmail.com</a>
+                  <a href="mailto:thomascherickal@gmail.com" class="contact-method-val">thomascherickal@gmail.com</a>
                 </div>
               </div>
               <div class="contact-method-item">
@@ -298,7 +326,8 @@
                   <option value="Documentation Architecture Audit">🗂️ Documentation Architecture Audit</option>
                   <option value="Local LLM Deployment">📦 Local LLM Deployment</option>
                   <option value="AI Workflow Consulting">⚙️ AI Workflow Consulting</option>
-                  <option value="Post-Quantum Cryptography Risk Briefing">🛡️ Post-Quantum Cryptography Risk Briefing</option>
+                  <option value="Post-Quantum Cryptography Risk Briefing">🛡️ Post-Quantum Cryptography Risk Briefing
+                  </option>
                   <option value="Agentic AI Framework Comparison">🏎️ Agentic AI Framework Comparison</option>
                   <option value="Other / Custom Inquiry">💡 Other / Custom Inquiry</option>
                 </select>
@@ -306,7 +335,8 @@
               <div class="form-group">
                 <label for="contact-budget" class="form-label">Estimated Scope <span
                     style="font-weight:400;opacity:0.75;">(<a href="pricing.html"
-                      style="color:var(--gold);text-decoration:underline;">View Country Parity Pricing</a>)</span></label>
+                      style="color:var(--gold);text-decoration:underline;">View Country Parity
+                      Pricing</a>)</span></label>
                 <select id="contact-budget" name="budget" class="form-input"
                   style="background:var(--bg-card);color:var(--text-primary);">
                   <option value="">Select Estimated Scope</option>
@@ -316,7 +346,8 @@
                   <option value="Multi-Part Tutorial / Course Series">📚 Multi-Part Tutorial / Course Series</option>
                   <option value="Full Developer Documentation Suite">🚀 Full Developer Documentation Suite</option>
                   <option value="Monthly Content Partner Retainer">💼 Monthly Content Partner Retainer</option>
-                  <option value="Enterprise Training &amp; Custom Advisory">🏢 Enterprise Training &amp; Custom Advisory</option>
+                  <option value="Enterprise Training &amp; Custom Advisory">🏢 Enterprise Training &amp; Custom Advisory
+                  </option>
                 </select>
               </div>
             </div>
