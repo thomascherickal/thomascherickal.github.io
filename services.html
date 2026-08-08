@@ -717,69 +717,21 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="contact-stack" class="form-label">Preferred Tech Stack / SDKs <span
-                    style="font-weight:400;opacity:0.75;">(Optional)</span></label>
-                <input type="text" id="contact-stack" name="tech_stack"
-                  placeholder="e.g. Python, Golang, Rust, PyTorch, Qiskit, Ollama, LangChain" class="form-input" />
-              </div>
-              <div class="form-group">
-                <label for="contact-format" class="form-label">Deliverable Format Preferences <span
-                    style="font-weight:400;opacity:0.75;">(Optional)</span></label>
-                <input type="text" id="contact-format" name="deliverable_format"
-                  placeholder="e.g. Markdown, Jupyter Notebooks, MDX, Notion" class="form-input" />
-              </div>
-            </div>
-
-            <!-- Row 5: Required Project Type (15 Options) & Estimated Scope Dropdowns -->
-            <div class="form-row">
-              <div class="form-group">
-                <label for="contact-project-type" class="form-label">Project Type *</label>
-                <select id="contact-project-type" name="project_type" required class="form-input"
-                  style="background:var(--bg-card);color:var(--text-primary);">
-                  <option value="Generative AI Deep Dives" selected>🤖 Generative AI Deep Dives</option>
-                  <option value="Developer Documentation">📝 Developer Documentation</option>
-                  <option value="Quantum Developer Content">⚛️ Quantum Developer Content</option>
-                  <option value="Developer Education &amp; Courses">🎓 Developer Education &amp; Courses</option>
-                  <option value="Code &amp; Circuit Benchmarking Pass">🧪 Code &amp; Circuit Benchmarking Pass</option>
-                  <option value="Documentation Architecture Audit">🗂️ Documentation Architecture Audit</option>
-                  <option value="Local LLM Deployment">📦 Local LLM Deployment</option>
-                  <option value="AI Workflow Consulting">⚙️ AI Workflow Consulting</option>
-                  <option value="Post-Quantum Cryptography Risk Briefing">🛡️ Post-Quantum Cryptography Briefing
-                  </option>
-                  <option value="Agentic AI Framework Comparison">🏎️ Agentic AI Framework Comparison</option>
-                  <option value="Other / Custom Inquiry">💡 Other / Custom Inquiry</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="contact-budget" class="form-label">Estimated Scope <span
-                    style="font-weight:400;opacity:0.75;">(<a href="pricing.html"
-                      style="color:var(--gold);text-decoration:underline;">View Country Parity
-                      Pricing</a>)</span></label>
-                <select id="contact-budget" name="budget" class="form-input"
-                  style="background:var(--bg-card);color:var(--text-primary);">
-                  <option value="">Select Estimated Scope</option>
-                  <option value="Micro-Task / Verification Pass">🌟 Micro-Task / Verification Pass</option>
-                  <option value="Short Technical Article">📄 Short Technical Article</option>
-                  <option value="Standard Technical Deep Dive">📘 Standard Technical Deep Dive</option>
-                  <option value="Multi-Part Tutorial / Course Series">📚 Multi-Part Tutorial / Course Series</option>
-                  <option value="Full Developer Documentation Suite">🚀 Full Developer Documentation Suite</option>
-                  <option value="Monthly Content Partner Retainer">💼 Monthly Content Partner Retainer</option>
-                  <option value="Enterprise Training &amp; Custom Advisory">🏢 Enterprise Training &amp; Custom Advisory
-                  </option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Row 6: Message Box (Flex aligned on Desktop, Single Column 300px on Mobile) -->
-            <div class="form-group message-group">
-              <label for="contact-message" class="form-label">Project Details &amp; Message *</label>
-              <textarea id="contact-message" name="message" required
-                placeholder="Tell me about your technical content project, documentation scope, quantum deep dive requirements, or remote engineering team training needs...&#10;&#10;Useful details to include:&#10;- Project goals & target audience (engineers, researchers, developers)&#10;- Scope (number of articles, API endpoints, course modules)&#10;- Preferred deliverable formats (Markdown, Jupyter Notebooks, Qiskit scripts)&#10;- Expected timeline / launch target"
-                rows="12" class="form-input" style="resize:vertical;"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-commission btn-lg btn-full">Send Message 🚀</button>
-            <div class="form-status" id="form-status"></div>
-          </form>
+    <!-- CONTACT CTA SECTION -->
+    <section class="reveal" style="max-width:960px;margin:0 auto;padding-bottom:4rem;">
+      <div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:3rem 2rem;text-align:center;box-shadow:var(--glow-gold);">
+        <p class="section-label" style="margin-bottom:0.5rem;">READY TO GET STARTED?</p>
+        <h2 class="section-title" style="margin-bottom:1rem;">Start a <span class="accent-gold">Conversation</span></h2>
+        <p class="section-sub" style="max-width:640px;margin:0 auto 2rem;color:var(--text-secondary);">
+          Have a documentation project, a technical deep dive to commission, quantum content to write, or a team to train? Submit your project brief on our dedicated Contact page.
+        </p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-commission btn-lg">
+            🚀 Go to Project Brief Form →
+          </a>
+          <a href="pricing.html" class="btn btn-lg" style="background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text-primary);">
+            🌐 View Country Parity Pricing →
+          </a>
         </div>
       </div>
     </section>
@@ -815,50 +767,6 @@
     }, observerOptions);
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Contact Form Handler
-    const contactForm = document.getElementById('contact-form-el');
-    const formStatus = document.getElementById('form-status');
-
-    if (contactForm) {
-      contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        if (submitBtn) submitBtn.disabled = true;
-
-        if (formStatus) {
-          formStatus.style.display = 'block';
-          formStatus.className = 'form-status info';
-          formStatus.textContent = 'Sending message...';
-        }
-
-        const formData = new FormData(contactForm);
-
-        fetch(contactForm.action, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        })
-          .then(response => response.json())
-          .then(data => {
-            if (formStatus) {
-              formStatus.className = 'form-status success';
-              formStatus.textContent = 'Thank you! Your message has been sent successfully.';
-            }
-            contactForm.reset();
-          })
-          .catch(error => {
-            if (formStatus) {
-              formStatus.className = 'form-status error';
-              formStatus.textContent = 'Oops! There was a problem sending your message. Please try again.';
-            }
-          })
-          .finally(() => {
-            if (submitBtn) submitBtn.disabled = false;
-          });
-      });
     }
   </script>
 

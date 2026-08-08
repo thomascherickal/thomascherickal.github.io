@@ -1,0 +1,55 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://thomascherickal.github.io/contact.html#webpage",
+      "url": "https://thomascherickal.github.io/contact.html",
+      "name": "Contact & Project Intake — Thomas Cherickal",
+      "description": "Submit your technical content project brief, API documentation inquiry, quantum deep dive request, or developer education training scope.",
+      "isPartOf": {
+        "@id": "https://thomascherickal.github.io/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://thomascherickal.github.io/contact.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thomascherickal.github.io/contact.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thomascherickal.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://thomascherickal.github.io/contact.html"
+        }
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://thomascherickal.github.io/contact.html#service",
+      "name": "Thomas Cherickal — Technical Writing & Developer Education",
+      "url": "https://thomascherickal.github.io/contact.html",
+      "email": "mailto:thomascherickal@gmail.com",
+      "provider": {
+        "@type": "Person",
+        "@id": "https://thomascherickal.github.io/#person",
+        "name": "Thomas Cherickal",
+        "jobTitle": "Technical Writer & Developer Educator",
+        "url": "https://thomascherickal.github.io"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide (remote)"
+      }
+    }
+  ]
+}
