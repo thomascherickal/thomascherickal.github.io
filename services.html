@@ -80,7 +80,7 @@
     }
 
     .role-card:hover .role-card-icon {
-      transform: translateY(-6px) scale(1.25);
+      transform: translateY(-2px);
     }
 
     .role-card-title {
@@ -88,68 +88,53 @@
       font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 0.75rem;
-      transition: text-shadow 0.3s ease;
+      transition: color 0.25s ease;
     }
 
     .role-card:hover .role-card-title {
-      text-shadow: 0 0 12px currentColor;
+      text-shadow: none;
     }
 
-    /* Gold 3D Card */
+    /* Gold Card */
     .role-card.border-gold {
-      background: linear-gradient(145deg, rgba(255, 201, 71, 0.16) 0%, rgba(26, 20, 8, 0.95) 100%);
-      border: 2px solid rgba(255, 201, 71, 0.45);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6),
-        0 0 15px rgba(255, 201, 71, 0.12),
-        inset 0 1px 0 rgba(255, 228, 132, 0.25);
+      background: var(--bg-card);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
     }
 
     .role-card.border-gold:hover {
-      transform: translateY(-8px) scale(1.03);
-      background: linear-gradient(145deg, rgba(255, 201, 71, 0.28) 0%, rgba(38, 28, 10, 0.98) 100%);
-      border-color: #ffe484;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75),
-        0 0 35px rgba(255, 201, 71, 0.65),
-        0 0 12px rgba(255, 228, 132, 0.4),
-        inset 0 1px 0 rgba(255, 240, 180, 0.6);
+      transform: translateY(-3px);
+      background: var(--bg-card-hover);
+      border-color: #f59e0b;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 12px rgba(245, 158, 11, 0.12);
     }
 
-    /* Cyan 3D Card */
+    /* Cyan Card */
     .role-card.border-cyan {
-      background: linear-gradient(145deg, rgba(0, 212, 255, 0.16) 0%, rgba(6, 22, 30, 0.95) 100%);
-      border: 2px solid rgba(0, 212, 255, 0.45);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6),
-        0 0 15px rgba(0, 212, 255, 0.12),
-        inset 0 1px 0 rgba(180, 245, 255, 0.25);
+      background: var(--bg-card);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
     }
 
     .role-card.border-cyan:hover {
-      transform: translateY(-8px) scale(1.03);
-      background: linear-gradient(145deg, rgba(0, 212, 255, 0.28) 0%, rgba(10, 32, 44, 0.98) 100%);
-      border-color: #67e8f9;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75),
-        0 0 35px rgba(0, 212, 255, 0.65),
-        0 0 12px rgba(180, 245, 255, 0.4),
-        inset 0 1px 0 rgba(200, 250, 255, 0.6);
+      transform: translateY(-3px);
+      background: var(--bg-card-hover);
+      border-color: #38bdf8;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 12px rgba(56, 189, 248, 0.12);
     }
 
-    /* Violet 3D Card */
+    /* Violet Card */
     .role-card.border-violet {
-      background: linear-gradient(145deg, rgba(139, 92, 246, 0.18) 0%, rgba(20, 12, 36, 0.95) 100%);
-      border: 2px solid rgba(139, 92, 246, 0.45);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6),
-        0 0 15px rgba(139, 92, 246, 0.12),
-        inset 0 1px 0 rgba(220, 200, 255, 0.25);
+      background: var(--bg-card);
+      border: 1px solid rgba(129, 140, 248, 0.25);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
     }
 
     .role-card.border-violet:hover {
-      transform: translateY(-8px) scale(1.03);
-      background: linear-gradient(145deg, rgba(139, 92, 246, 0.30) 0%, rgba(32, 18, 56, 0.98) 100%);
-      border-color: #c084fc;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75),
-        0 0 35px rgba(139, 92, 246, 0.65),
-        0 0 12px rgba(220, 200, 255, 0.4),
-        inset 0 1px 0 rgba(230, 210, 255, 0.6);
+      transform: translateY(-3px);
+      background: var(--bg-card-hover);
+      border-color: #818cf8;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 12px rgba(129, 140, 248, 0.12);
     }
   </style>
 
