@@ -2334,13 +2334,115 @@ footer {
   box-shadow: 0 4px 18px rgba(139, 92, 246, 0.6);
 }
 
+/* Diátaxis Cards - Retaining Classic Formatting */
+.diataxis-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1rem;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.diataxis-card.glow-gold {
+  border-color: var(--border-gold);
+}
+
+.diataxis-card.glow-cyan {
+  border-color: var(--border);
+}
+
+.diataxis-card:hover {
+  background: var(--bg-card-hover);
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.diataxis-card.glow-gold:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), var(--glow-gold);
+}
+
+.diataxis-card.glow-cyan:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), var(--glow-cyan);
+}
+
+.diataxis-card .home-nav-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.diataxis-card:hover .home-nav-icon {
+  transform: none;
+}
+
+.diataxis-card .home-nav-title {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+}
+
+.diataxis-card:hover .home-nav-title {
+  text-shadow: none;
+}
+
+.diataxis-card .home-nav-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 0.85rem;
+}
+
+.diataxis-card .home-nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  transition: color 0.2s ease, transform 0.2s ease;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-top: 0;
+  width: auto;
+}
+
+.diataxis-card.glow-gold .home-nav-link {
+  color: var(--gold);
+}
+
+.diataxis-card:hover .home-nav-link {
+  transform: translateX(4px);
+  background: transparent;
+  color: var(--cyan);
+  box-shadow: none;
+}
+
+.diataxis-card.glow-gold:hover .home-nav-link {
+  color: var(--gold);
+}
+
 /* Responsive Media Queries for home-nav-grid */
 @media (max-width: 1100px) {
   .home-nav-grid {
     grid-template-columns: repeat(5, 1fr);
     gap: 0.75rem;
   }
-  .home-nav-card {
+  .home-nav-card,
+  .diataxis-card {
     padding: 1rem 0.8rem;
   }
   .home-nav-title {
@@ -2356,7 +2458,8 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
-  .home-nav-card {
+  .home-nav-card,
+  .diataxis-card {
     padding: 1.25rem 1rem;
   }
   .home-nav-title {
@@ -2372,7 +2475,8 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.85rem;
   }
-  .home-nav-card {
+  .home-nav-card,
+  .diataxis-card {
     padding: 1rem 0.85rem;
   }
 }
