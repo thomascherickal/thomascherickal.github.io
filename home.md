@@ -9,10 +9,9 @@
 
 ### Core Focus Areas
 - `Developer Documentation`
-- `Generative AI Systems`
-- `Quantum Systems`
+- `Generative AI Content`
+- `Quantum Computation Tech`
 - `Developer Education`
-- `Python & Rust-Verified Content`
 
 ---
 
@@ -36,13 +35,13 @@ As a developer with a PG degree in CS and a seasoned online technical writer wit
 | **Years Technical Writing** | 6+ |
 | **Featured Deep Dives** | 24 |
 | **GitHub Repositories** | 2000+ |
-| **Code Verified (Python/Rust)** | 100% |
+| **Generative AI & Quantum Computation Tech** | Primary Focus |
 
 ---
 
 ## Core Capabilities (10 Roles)
 
-Empowering Generative AI Companies and Quantum Computing Enterprises with Python & Rust-verified technical content and developer education.
+Empowering Generative AI Companies and Quantum Computing Enterprises with Generative AI Content & Quantum Computation Tech documentation and developer education.
 
 ### 📝 Developer Documentation
 API references, SDK guides, quickstarts, integration and migration guides, across Generative AI APIs and quantum SDKs.
@@ -126,7 +125,7 @@ Roughly half Generative AI-accelerated for speed, half hand-verified for technic
 3. [⚛️ Quantum Computing Fundamentals Part II](https://hackernoon.com/quantum-computing-fundamentals-part-ii-10-not-so-easy-pieces) — Advanced guide to QFT, phase estimation, and multi-qubit entanglement. *(Published: Dec 31, 2025 · 4,500 words)*
 4. [⚛️ How Quantum Computers Threaten Bitcoin](https://hackernoon.com/how-quantum-computers-threaten-bitcoin-and-the-entire-internet-simply-explained) — Post-quantum cryptography threat analysis and NIST candidate standards. *(Published: Dec 7, 2025 · 3,200 words)*
 5. [🧠 Running Local LLMs Guide](https://hackernoon.com/how-to-run-your-own-local-llm-2026-edition-version-1) — Technical deployment guide across Ollama, LM Studio, llama.cpp, and GGUF quantization. *(Published: Mar 9, 2026 · 3,800 words)*
-6. [🧠 Ultimate LLM Benchmark Comparison](https://hackernoon.com/google-gemini-vs-anthropic-claude-vs-openai-chatgpt-vs-xai-grok-the-ultimate-comparison) — Code-verified comparative analysis of Gemini, Claude, ChatGPT, and Grok. *(Published: Mar 12, 2026 · 5,000 words)*
+6. [🧠 Ultimate LLM Benchmark Comparison](https://hackernoon.com/google-gemini-vs-anthropic-claude-vs-openai-chatgpt-vs-xai-grok-the-ultimate-comparison) — Comparative benchmark analysis of Gemini, Claude, ChatGPT, and Grok. *(Published: Mar 12, 2026 · 5,000 words)*
 7. [🦾 The OpenClaw Saga](https://hackernoon.com/the-openclaw-saga-how-the-last-two-weeks-changed-the-agentic-ai-world-forever) — Fast-turnaround ecosystem deep dive into open-source multi-agent frameworks. *(Published: Mar 2, 2026 · 3,600 words)*
 8. [🦾 Hermes Agent vs OpenClaw](https://hackernoon.com/hermes-agent-vs-openclaw-which-ai-agent-framework-wins-in-2026) — Comparative architecture study of state graphs and multi-step reasoning loops. *(Published: May 13, 2026 · 4,000 words)*
 

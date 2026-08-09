@@ -1,7 +1,7 @@
 ---
 # Thomas Cherickal — Technical Writer
 
-> **B2B Technical Credential**: Author of 500+ published technical articles across 10+ platforms. Every Python or Rust code sample and benchmark is executed and hand-verified in live runtime environments before publication.
+> **B2B Technical Credential**: Author of 500+ published technical articles across 10+ platforms. Specializing in Generative AI Content and Quantum Computation Tech.
 
 ---
 
