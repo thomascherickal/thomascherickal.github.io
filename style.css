@@ -21,10 +21,10 @@
   --glow-violet: 0 0 24px rgba(165, 180, 252, 0.22);
   --radius: 10px;
   --radius-lg: 14px;
-  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Times New Roman', Times, serif;
+  --font-body: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', 'Courier New', monospace;
-  --font-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Times New Roman', Times, serif;
   --transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -49,6 +49,24 @@ body {
   overflow-x: hidden;
   cursor: default;
   transition: background 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.hero-name,
+.book-title,
+.book-subtitle,
+.role-card-title,
+.home-nav-title,
+.case-study-title,
+.tier-title,
+.tech-cat-title,
+.writing-category-title,
+.workflow-card-header,
+.contact-card-header,
+.newsletter-name,
+.faq-question {
+  font-family: var(--font-display);
 }
 
 ::selection {
