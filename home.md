@@ -5,18 +5,18 @@
 **Email**: [thomascherickal@gmail.com](mailto:thomascherickal@gmail.com)  
 
 **Emerging Technologies Educator & Developer Educator — Generative AI Systems & Quantum Systems**  
-*Training in Generative AI and Quantum Computing, automated documentation, deep dives, and developer education — AI-accelerated, verified in Python and Rust.*
+*Training in Generative AI and Quantum Computing, AI agent orchestration, deep dives, and developer education — AI-accelerated, verified in Python and Rust.*
 
 **Core Capabilities**:
 - `Training in Generative AI`
 - `Training in Quantum Computing`
-- `Automated Documentation`
+- `AI Agent Orchestration`
 - `Developer Education`
 
 ---
 
 ## Bio
-As a developer with a PG degree in CS and a seasoned online emerging technologies educator with a broad online presence, I sit directly in the intersection of both frontier domains — producing training programs, writing automated documentation, tutorials, and deep dives where every Python or Rust script, Generative AI project, and Qiskit circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. Hands-on with LLMs and agent frameworks (Claude Code, Google Antigravity, Ollama, LM Studio, llama.cpp) and quantum SDKs (IBM Qiskit, PennyLane, QML). Skilled with leading Automated Documentation Tools (Docsify, Hugo, Fern, Redoc, OpenAPI 3.1, GitBook, Doxygen, Docusaurus, Mintlify, Sphinx) and automated documentation architecture. Fully remote and flexible.
+As a developer with a PG degree in CS and a seasoned online emerging technologies educator with a broad online presence, I sit directly in the intersection of both frontier domains — producing training programs, building AI agent orchestration, tutorials, and deep dives where every Python or Rust script, Generative AI project, and Qiskit circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. Hands-on with LLMs and agent frameworks (Claude Code, Google Antigravity, Ollama, LM Studio, llama.cpp) and quantum SDKs (IBM Qiskit, PennyLane, QML). Skilled with multi-agent orchestration frameworks (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent) and agentic workflow architecture. Fully remote and flexible.
 
 ### Quick Actions
 - [🌐 Main Site](https://thomascherickal.com)
@@ -49,8 +49,8 @@ Interactive virtual training, custom team bootcamps, agentic AI architecture wor
 ### ⚛️ Training in Quantum Computing
 Interactive virtual workshops, Qiskit & PennyLane labs, VQE/QAOA algorithm masterclasses, and executive quantum readiness bootcamps.
 
-### 📝 Automated Documentation
-API references, SDK guides, quickstarts, integration and migration suites built with leading automated documentation tools (Docsify, Hugo, Fern, Redoc, OpenAPI 3.1, GitBook, Doxygen, Docusaurus, Mintlify, Sphinx).
+### 🤖 AI Agent Orchestration
+Multi-agent architecture design, tool-calling loops, agent swarms, autonomous task routing, and agentic workflows (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent).
 
 ### ⚛️ Quantum Computing & QML
 Hands-on IBM Qiskit and PennyLane. Quantum machine learning, variational circuits, quantum algorithms (Grover, Shor, VQE, QAOA), explained for working developers.
@@ -90,7 +90,7 @@ Structuring documentation so it serves both a skimming developer and a retrievin
 - **⚡ Local & Private AI Stack**: Ollama, LM Studio, llama.cpp, GGUF, HuggingFace Hub
 - **🔬 Verification & Execution**: Jupyter, pytest, Qiskit Aer Simulator, Docker Sandboxes, REPL-Verified Examples
 - **🐍 Python & Rust Deep Stack**: PyTorch, NumPy, FastAPI, LangChain, Qiskit SDK
-- **📄 Leading Automated Docs Tools**: Docsify, Hugo, Fern, Redoc, OpenAPI 3.1, GitBook, Doxygen, Docusaurus, Mintlify, MDX, Technical SEO
+- **🤖 AI Agent Orchestration**: LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent, Microsoft Agent Framework, MCP Servers, Agent Swarms
 - **🌐 Domains**: Generative AI, Quantum Computing, Cybersecurity, Post-Quantum Cryptography, Open Source
 - **🗂️ Content Architecture**: Structured Retrieval Patterns, Schema Markup, Information Architecture, Agent-Readable Docs, AEO/GEO Optimisation
 
@@ -100,7 +100,7 @@ Structuring documentation so it serves both a skimming developer and a retrievin
 
 Most developer education in Generative AI and Quantum Computing suffers from one of two flaws: it is either delivered by brilliant physicists and engineers who lack educational clarity, or by generalist educators who cannot execute the code they teach.
 
-As a developer with a PG degree in CS and a seasoned online emerging technologies educator with a broad online presence, I sit directly in the intersection of both frontier domains — providing remote and live training, automated documentation, tutorials, and deep dives where every Python or Rust script, Generative AI project, and Qiskit circuit is run and verified before publication.
+As a developer with a PG degree in CS and a seasoned online emerging technologies educator with a broad online presence, I sit directly in the intersection of both frontier domains — providing remote and live training, AI agent orchestration, tutorials, and deep dives where every Python or Rust script, Generative AI project, and Qiskit circuit is run and verified before publication.
 
 ---
 
@@ -154,7 +154,7 @@ A comprehensive transformation system showing professionals how to use frontier 
 
 1. **Training in Generative AI**: Interactive virtual workshops, custom team bootcamps, and LLM/agent labs.
 2. **Training in Quantum Computing**: Interactive virtual workshops, Qiskit/PennyLane labs, and algorithm masterclasses.
-3. **Automated Documentation**: API references, SDK guides, quickstarts, and migration portals using leading docs tools.
+3. **AI Agent Orchestration**: Agent swarms, tool-calling loops, and agentic workflows (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent).
 4. **Technical Deep Dives**: Long-form technical explainers (2,000–8,000 words) with verified benchmarks.
 5. **Developer Education & Courses**: Tutorial series, structured learning paths, and interactive notebooks.
 6. **Quantum Developer Content**: IBM Qiskit & PennyLane tutorials, QML explainers, and algorithm walkthroughs.

@@ -1,6 +1,6 @@
 # Thomas Cherickal — Emerging Technologies Educator
 
-> **B2B Technical Credential**: Author of 500+ published technical articles across 10+ platforms. Specializing in Training in Generative AI and Quantum Computing, automated documentation, and verified technical deep dives.
+> **B2B Technical Credential**: Author of 500+ published technical articles across 10+ platforms. Specializing in Training in Generative AI and Quantum Computing, AI agent orchestration, and verified technical deep dives.
 
 ---
 
@@ -8,7 +8,7 @@
 
 | Service Offering | Core Focus & Delivery | Detailed Description |
 | :--- | :--- | :--- |
-| **📝 Automated Docs** | DevTools & APIs | API references, SDK guides, quickstarts, integration tutorials, and migration guides built using leading automated docs tools. |
+| **🤖 AI Agent Orchestration** | Agent Systems | Multi-agent architecture design, tool-calling loops, agent swarms, and autonomous agentic workflows. |
 | **🔬 Deep Dives** | Long-Form Explainers | Commissioned long-form technical explainers (2,000–8,000 words) featuring research, architecture & verified benchmarks. |
 | **🎓 Developer Education** | Curricula & Courses | Multi-part tutorial series, structured learning paths, and workshop curricula with executable Jupyter & GitHub repos. |
 | **⚛️ Quantum Dev** | Qiskit & PennyLane | IBM Qiskit and PennyLane tutorials, QML algorithm walkthroughs, simulator benchmarks, and post-quantum risk briefs. |
