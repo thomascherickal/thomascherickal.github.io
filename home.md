@@ -154,14 +154,14 @@ A comprehensive transformation system showing professionals how to use frontier 
 
 1. **Training in Generative AI**: Interactive virtual workshops, custom team bootcamps, and LLM/agent labs.
 2. **Training in Quantum Computing**: Interactive virtual workshops, Qiskit/PennyLane labs, and algorithm masterclasses.
-3. **AI Agent Orchestration**: Agent swarms, tool-calling loops, and agentic workflows (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent).
+3. **AI Agent Orchestration Training & Content**: Interactive training workshops, architecture guides, and technical content on agent swarms, tool-calling loops, and agentic workflows (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent).
 4. **Technical Deep Dives**: Long-form technical explainers (2,000–8,000 words) with verified benchmarks.
 5. **Developer Education & Courses**: Tutorial series, structured learning paths, and interactive notebooks.
 6. **Quantum Developer Content**: IBM Qiskit & PennyLane tutorials, QML explainers, and algorithm walkthroughs.
-7. **Quantum AI & Quantum ML**: Quantum Neural Networks (QNNs), Quantum Kernel methods, VQE/QAOA algorithms, and hybrid PyTorch/PennyLane QML developer guides.
-8. **Local LLM Deployment**: Quantization, local inference setup, vLLM & Ollama deployment guides.
+7. **Quantum AI & Quantum ML Training & Content**: Interactive workshops, tutorials, and guides for Quantum Neural Networks (QNNs), Quantum Kernel methods, VQE/QAOA algorithms, and hybrid PyTorch/PennyLane QML.
+8. **Local LLM Deployment Training & Guides**: Interactive workshops, step-by-step setup guides, vLLM & Ollama deployment tutorials and documentation.
 9. **Generative AI Dev Content**: RAG pipelines, agentic workflows, prompt engineering frameworks, and SLM fine-tuning guides.
-10. **Monthly Content Retainer**: Dedicated monthly sprint capacity for devtools and AI infra companies.: guaranteed content volume, priority turnaround &amp; byline management.
+10. **Monthly Content Retainer**: Dedicated monthly sprint capacity for devtools and AI infra companies: guaranteed content volume, priority turnaround & byline management.
 
 ---
 

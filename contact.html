@@ -187,7 +187,8 @@
 
   <a href="#main" class="skip-link">Skip to content</a>
 
-  <iframe src="header.html" id="header-frame" title="Header Navigation" style="width:100%;border:none;overflow:hidden;display:block;" scrolling="no"></iframe>
+  <iframe src="header.html" id="header-frame" title="Header Navigation"
+    style="width:100%;border:none;overflow:hidden;display:block;" scrolling="no"></iframe>
 
   <a href="#" class="back-top" id="backTop" title="Back to top" aria-label="Back to top">↑</a>
 
@@ -198,7 +199,8 @@
       <div class="section-header">
         <p class="section-label">Get in Touch</p>
         <h1 class="section-title">Start a <span class="accent-gold">Conversation</span></h1>
-        <p class="section-sub">Have a live training program to schedule, an AI agent orchestration project, a deep dive to commission, or quantum content to write?
+        <p class="section-sub">Have a live training program to schedule, an AI agent orchestration project, a deep dive
+          to commission, or quantum content to write?
           Send a message or reach out directly.</p>
       </div>
 
@@ -251,7 +253,8 @@
                 briefs.
               </div>
               <div>
-                <strong style="color:var(--text-primary);display:block;margin-bottom:0.15rem;">🌍 Asynchronous &amp; Live Remote Delivery</strong>
+                <strong style="color:var(--text-primary);display:block;margin-bottom:0.15rem;">🌍 Asynchronous &amp;
+                  Live Remote Delivery</strong>
                 Seamless collaboration across US (PST/EST), European (CET), and APAC timezones via clear milestones.
               </div>
               <div>
@@ -362,7 +365,8 @@
                 <label for="contact-format" class="form-label">Deliverable Format Preferences <span
                     style="font-weight:400;opacity:0.75;">(Optional)</span></label>
                 <input type="text" id="contact-format" name="deliverable_format"
-                  placeholder="e.g. Markdown, Jupyter Notebooks, Live Zoom Sessions, GitHub Repository" class="form-input" />
+                  placeholder="e.g. Markdown, Jupyter Notebooks, Live Zoom Sessions, GitHub Repository"
+                  class="form-input" />
               </div>
             </div>
 
@@ -371,19 +375,36 @@
               <div class="form-group">
                 <label for="contact-project-type" class="form-label">Project Type *</label>
                 <select id="contact-project-type" name="project_type" required class="form-input"
-                  style="background:var(--bg-card);color:var(--text-primary);">
-                  <option value="Training in Generative AI" selected>🎓 Training in Generative AI</option>
-                  <option value="Training in Quantum Computing">⚛️ Training in Quantum Computing</option>
-                  <option value="AI Agent Orchestration">🤖 AI Agent Orchestration</option>
-                  <option value="Generative AI Deep Dives">🤖 Generative AI Deep Dives</option>
-                  <option value="Quantum Developer Content">⚛️ Quantum Developer Content</option>
-                  <option value="Developer Education &amp; Courses">🎓 Developer Education &amp; Courses</option>
-                  <option value="Local LLM Deployment">📦 Local LLM Deployment</option>
-                  <option value="AI Workflow Consulting">⚙️ AI Workflow Consulting</option>
-                  <option value="Post-Quantum Cryptography Risk Briefing">🛡️ Post-Quantum Cryptography Risk Briefing
+                  style="background:var(--bg-card);color:var(--text-primary);color-scheme:dark;">
+                  <option value="Training in Generative AI" selected style="background:#0b0f19;color:#ffffff;">🎓
+                    Training in Generative AI</option>
+                  <option value="Training in Quantum Computing" style="background:#0b0f19;color:#ffffff;">⚛️ Training in
+                    Quantum Computing</option>
+                  <option value="AI Agent Orchestration (Training &amp; Content)"
+                    style="background:#0b0f19;color:#ffffff;">🤖 AI Agent Orchestration (Training &amp; Content)
                   </option>
-                  <option value="Agentic AI Framework Comparison">🏎️ Agentic AI Framework Comparison</option>
-                  <option value="Other / Custom Inquiry">💡 Other / Custom Inquiry</option>
+                  <option value="Technical Deep Dives (Content)" style="background:#0b0f19;color:#ffffff;">🔬 Technical
+                    Deep Dives (Content)</option>
+                  <option value="Developer Education (Training &amp; Content)"
+                    style="background:#0b0f19;color:#ffffff;">🎓 Developer Education (Training &amp; Content)</option>
+                  <option value="Quantum Developer Content" style="background:#0b0f19;color:#ffffff;">⚛️ Quantum
+                    Developer Content</option>
+                  <option value="Quantum AI &amp; QML (Training &amp; Content)"
+                    style="background:#0b0f19;color:#ffffff;">⚛️ Quantum AI &amp; QML (Training &amp; Content)</option>
+                  <option value="Local LLM Deployment (Training &amp; Guides)"
+                    style="background:#0b0f19;color:#ffffff;">📦 Local LLM Deployment (Training &amp; Guides)</option>
+                  <option value="Generative AI Dev Content" style="background:#0b0f19;color:#ffffff;">🧠 Generative AI
+                    Dev Content</option>
+                  <option value="Monthly Content Retainer" style="background:#0b0f19;color:#ffffff;">💼 Monthly Content
+                    Retainer</option>
+                  <option value="AI Workflow Training" style="background:#0b0f19;color:#ffffff;">⚙️ AI Workflow Training
+                  </option>
+                  <option value="Post-Quantum Cryptography Risk Briefing" style="background:#0b0f19;color:#ffffff;">🛡️
+                    Post-Quantum Cryptography Risk Briefing</option>
+                  <option value="Agentic AI Framework Comparison" style="background:#0b0f19;color:#ffffff;">🏎️ Agentic
+                    AI Framework Comparison</option>
+                  <option value="Other / Custom Inquiry" style="background:#0b0f19;color:#ffffff;">💡 Other / Custom
+                    Inquiry</option>
                 </select>
               </div>
               <div class="form-group">
@@ -392,16 +413,22 @@
                       style="color:var(--gold);text-decoration:underline;">View Country Parity
                       Pricing</a>)</span></label>
                 <select id="contact-budget" name="budget" class="form-input"
-                  style="background:var(--bg-card);color:var(--text-primary);">
-                  <option value="">Select Estimated Scope</option>
-                  <option value="Micro-Task / Verification Pass">🌟 Micro-Task / Verification Pass</option>
-                  <option value="Short Technical Article">📄 Short Technical Article</option>
-                  <option value="Standard Technical Deep Dive">📘 Standard Technical Deep Dive</option>
-                  <option value="Multi-Part Tutorial / Course Series">📚 Multi-Part Tutorial / Course Series</option>
-                  <option value="AI Agent Orchestration Workflow">🚀 AI Agent Orchestration Workflow</option>
-                  <option value="Monthly Content Partner Retainer">💼 Monthly Content Partner Retainer</option>
-                  <option value="Enterprise Training &amp; Custom Advisory">🏢 Enterprise Training &amp; Custom Advisory
-                  </option>
+                  style="background:var(--bg-card);color:var(--text-primary);color-scheme:dark;">
+                  <option value="" style="background:#0b0f19;color:#ffffff;">Select Estimated Scope</option>
+                  <option value="Micro-Task / Verification Pass" style="background:#0b0f19;color:#ffffff;">🌟 Micro-Task
+                    / Verification Pass</option>
+                  <option value="Short Technical Article" style="background:#0b0f19;color:#ffffff;">📄 Short Technical
+                    Article</option>
+                  <option value="Standard Technical Deep Dive" style="background:#0b0f19;color:#ffffff;">📘 Standard
+                    Technical Deep Dive</option>
+                  <option value="Multi-Part Tutorial / Course Series" style="background:#0b0f19;color:#ffffff;">📚
+                    Multi-Part Tutorial / Course Series</option>
+                  <option value="AI Agent Orchestration Content and Training" style="background:#0b0f19;color:#ffffff;">
+                    🚀 AI Agent Orchestration Workflow</option>
+                  <option value="Monthly Content Partner Retainer" style="background:#0b0f19;color:#ffffff;">💼 Monthly
+                    Content Partner Retainer</option>
+                  <option value="Enterprise Training &amp; Long-Term Contracts"
+                    style="background:#0b0f19;color:#ffffff;">🏢 Enterprise Training &amp; Custom Advisory</option>
                 </select>
               </div>
             </div>
@@ -423,7 +450,8 @@
 
     <div class="divider"></div>
 
-    <iframe src="footer.html" id="footer-frame" title="Footer Navigation" style="width:100%;border:none;overflow:hidden;display:block;" scrolling="no"></iframe>
+    <iframe src="footer.html" id="footer-frame" title="Footer Navigation"
+      style="width:100%;border:none;overflow:hidden;display:block;" scrolling="no"></iframe>
 
   </main>
 

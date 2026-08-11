@@ -229,7 +229,8 @@ nav {
   border: 1px solid var(--border-gold);
   border-radius: var(--radius-lg);
   padding: 0.6rem 0;
-  min-width: 240px;
+  min-width: 320px;
+  max-width: 90vw;
   list-style: none;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 12px rgba(245, 158, 11, 0.08);
   backdrop-filter: blur(16px);
@@ -1446,6 +1447,9 @@ select.form-input {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  color-scheme: dark;
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
   background-image: url("data:image/svg+xml;utf8,<svg fill='%23f59e0b' height='28' viewBox='0 0 24 24' width='28' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") !important;
   background-repeat: no-repeat !important;
   background-position: right 1rem center !important;
@@ -1462,8 +1466,8 @@ select.form-input:hover {
 }
 
 select.form-input option {
-  background: var(--bg-card);
-  color: var(--text-primary);
+  background-color: #0b0f19 !important;
+  color: #ffffff !important;
   padding: 0.6rem 1rem;
 }
 

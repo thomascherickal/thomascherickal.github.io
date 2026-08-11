@@ -46,6 +46,13 @@
       .dropdown-menu {
         max-height: none !important;
         overflow-y: visible !important;
+        white-space: normal !important;
+      }
+
+      .dropdown-menu a {
+        white-space: normal !important;
+        text-align: center;
+        justify-content: center;
       }
     }
   </style>
@@ -72,15 +79,15 @@
         <ul class="dropdown-menu">
           <li><a href="services.html" class="dropdown-header-link">🎯 All Offerings</a></li>
           <li class="dropdown-divider"></li>
-          <li><a href="service-generative-ai-training.html">🤖 Generative AI Training</a></li>
-          <li><a href="service-quantum-computing-training.html">⚛️ Quantum Computing Training</a></li>
-          <li><a href="service-ai-agents-orchestration.html">🤖 AI Agent Orchestration</a></li>
-          <li><a href="service-technical-deep-dives.html">🔬 Technical Deep Dives</a></li>
-          <li><a href="service-developer-education.html">🎓 Developer Education</a></li>
+          <li><a href="service-generative-ai-training.html">🎓 Training in Generative AI</a></li>
+          <li><a href="service-quantum-computing-training.html">⚛️ Training in Quantum Computing</a></li>
+          <li><a href="service-ai-agents-orchestration.html">🤖 AI Agent Orchestration (Training &amp; Content)</a></li>
+          <li><a href="service-technical-deep-dives.html">🔬 Technical Deep Dives (Content)</a></li>
+          <li><a href="service-developer-education.html">🎓 Developer Education (Training &amp; Content)</a></li>
           <li><a href="service-quantum-developer-content.html">⚛️ Quantum Developer Content</a></li>
-          <li><a href="service-quantum-AI-and-quantum-ML.html">⚛️ Quantum AI &amp; Quantum ML</a></li>
-          <li><a href="service-local-llm-deployment.html">📦 Local LLM Deployment</a></li>
-          <li><a href="service-generative-ai-dev-content.html">🧠 Generative AI Developer Content</a></li>
+          <li><a href="service-quantum-AI-and-quantum-ML.html">⚛️ Quantum AI &amp; QML (Training &amp; Content)</a></li>
+          <li><a href="service-local-llm-deployment.html">📦 Local LLM Deployment (Training &amp; Guides)</a></li>
+          <li><a href="service-generative-ai-dev-content.html">🧠 Generative AI Dev Content</a></li>
           <li><a href="service-monthly-content-retainer.html">💼 Monthly Content Retainer</a></li>
         </ul>
       </li>
@@ -93,7 +100,7 @@
   <script>
     (function () {
       var NAV_HEIGHT = 64;
-      var DROPDOWN_HEIGHT = 460;
+      var DROPDOWN_HEIGHT = 520;
       var parentViewportH = screen.height || 800;
 
       var isDropdownOpen = false;
