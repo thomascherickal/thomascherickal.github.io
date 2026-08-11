@@ -5,17 +5,17 @@
       "@type": "WebPage",
       "@id": "https://thomascherickal.github.io/services.html#webpage",
       "url": "https://thomascherickal.github.io/services.html",
-      "name": "Services & Commissions — Thomas Cherickal | Generative AI Systems & Quantum Systems",
-      "description": "Developer documentation, technical deep dives, quantum developer content, user education, and remote engineering training for Generative AI and Quantum Computing.",
+      "name": "Services & Commissions — Thomas Cherickal",
+      "description": "10 Service Offerings: Training in GenAI & Quantum Computing, Automated Documentation, Technical Deep Dives, Developer Education, Quantum Content, Local LLM Deployment, and Monthly Retainers.",
       "isPartOf": {
         "@id": "https://thomascherickal.github.io/#website"
-      },
-      "mainEntity": {
-        "@id": "https://thomascherickal.github.io/services.html#service"
       },
       "inLanguage": "en-US",
       "breadcrumb": {
         "@id": "https://thomascherickal.github.io/services.html#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://thomascherickal.github.io/services.html#servicecatalog"
       }
     },
     {
@@ -31,148 +31,132 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Services & Commissions",
+          "name": "Services",
           "item": "https://thomascherickal.github.io/services.html"
         }
       ]
     },
     {
-      "@type": "ProfessionalService",
-      "@id": "https://thomascherickal.github.io/services.html#service",
-      "name": "The Digital Futurist — Technical Writing & Developer Education",
+      "@type": "OfferCatalog",
+      "@id": "https://thomascherickal.github.io/services.html#servicecatalog",
+      "name": "Service Offerings & Commissions — Thomas Cherickal",
+      "description": "10 Service Offerings covering Training in GenAI & Quantum Computing, Automated Documentation, Technical Deep Dives, Developer Education, and Local LLM Deployment.",
       "url": "https://thomascherickal.github.io/services.html",
-      "image": "https://thomascherickal.github.io/assets/site-icon.webp",
-      "logo": "https://thomascherickal.github.io/assets/site-icon.webp",
-      "priceRange": "$$",
-      "description": "Developer documentation, technical deep dives, quantum developer content, developer education, and remote engineering training for Generative AI Companies and Quantum Computing Enterprises. AI-accelerated drafting, hand-verified accuracy.",
-      "provider": {
-        "@type": "Person",
-        "@id": "https://thomascherickal.github.io/#person",
-        "name": "Thomas Cherickal",
-        "jobTitle": "Technical Writer & Developer Educator",
-        "url": "https://thomascherickal.github.io"
+      "offeredBy": {
+        "@id": "https://thomascherickal.github.io/#person"
       },
-      "areaServed": {
-        "@type": "Place",
-        "name": "Worldwide (remote)"
-      },
-      "availableLanguage": "English",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Technical Content & Developer Education Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "url": "https://thomascherickal.github.io/service-developer-documentation.html",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Developer Documentation",
-              "url": "https://thomascherickal.github.io/service-developer-documentation.html",
-              "description": "API references, SDK guides, quickstarts, integration and migration guides for Generative AI APIs and quantum SDKs. Every code sample run and verified.",
-              "serviceType": "Technical Documentation"
-            }
-          },
-          {
-            "@type": "Offer",
-            "url": "https://thomascherickal.github.io/service-technical-deep-dives.html",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Technical Deep Dives",
-              "url": "https://thomascherickal.github.io/service-technical-deep-dives.html",
-              "description": "Commissioned long-form technical articles from 2,000 to 8,000 words across Generative AI Systems and Quantum Systems, with original research and verified benchmarks.",
-              "serviceType": "Technical Writing"
-            }
-          },
-          {
-            "@type": "Offer",
-            "url": "https://thomascherickal.github.io/service-developer-education.html",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Developer Education",
-              "url": "https://thomascherickal.github.io/service-developer-education.html",
-              "description": "Tutorial series, structured learning paths, and workshop curricula with an executable repository or notebook per module.",
-              "serviceType": "Developer Education"
-            }
-          },
-          {
-            "@type": "Offer",
-            "url": "https://thomascherickal.github.io/service-quantum-developer-content.html",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Quantum Developer Content",
-              "url": "https://thomascherickal.github.io/service-quantum-developer-content.html",
-              "description": "IBM Qiskit and PennyLane tutorials, quantum machine learning explainers, quantum algorithm walkthroughs, and post-quantum cryptography briefings, with every circuit executed in simulation before publication.",
-              "serviceType": "Technical Documentation"
-            }
-          },
-          {
-            "@type": "Offer",
-            "url": "https://thomascherickal.github.io/service-quantum-AI-and-quantum-ML.html",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Quantum AI & Quantum ML",
-              "url": "https://thomascherickal.github.io/service-quantum-AI-and-quantum-ML.html",
-              "description": "Quantum Neural Networks (QNNs), Quantum Kernel methods, Variational Quantum Algorithms (VQE, QAOA), and hybrid PyTorch/PennyLane QML developer guides.",
-              "serviceType": "Technical Writing & Developer Content"
-            }
-          },
-          {
-            "@type": "Offer",
-            "url": "https://thomascherickal.github.io/service-code-circuit-benchmarking.html",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Code & Circuit Benchmarking",
-              "url": "https://thomascherickal.github.io/service-code-circuit-benchmarking.html",
-              "description": "A standalone verification pass on existing content: every code sample executed, every quantum circuit run and checked, every benchmark traced to source.",
-              "serviceType": "Technical Quality Assurance"
-            }
-          },
-          {
-            "@type": "Offer",
-            "url": "https://thomascherickal.github.io/service-content-architecture.html",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Content Architecture",
-              "url": "https://thomascherickal.github.io/service-content-architecture.html",
-              "description": "Restructuring documentation so it serves both a skimming developer and a retrieving AI agent, using Diátaxis patterns and schema markup.",
-              "serviceType": "Information Architecture"
-            }
-          },
-          {
-            "@type": "Offer",
-            "url": "https://thomascherickal.github.io/service-local-llm-deployment.html",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Local LLM Deployment",
-              "url": "https://thomascherickal.github.io/service-local-llm-deployment.html",
-              "description": "Quantization, local inference setup, vLLM and Ollama deployment guides, GGUF optimization, and private enterprise LLM serving specifications.",
-              "serviceType": "AI Infrastructure & Deployment"
-            }
-          },
-          {
-            "@type": "Offer",
-            "url": "https://thomascherickal.github.io/service-generative-ai-dev-content.html",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Generative AI Dev Content",
-              "url": "https://thomascherickal.github.io/service-generative-ai-dev-content.html",
-              "description": "RAG pipelines, agentic workflows, prompt engineering frameworks, SLM fine-tuning guides, and developer documentation for GenAI products.",
-              "serviceType": "Developer Content"
-            }
-          },
-          {
-            "@type": "Offer",
-            "url": "https://thomascherickal.github.io/service-monthly-content-retainer.html",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Monthly Content Retainer",
-              "url": "https://thomascherickal.github.io/service-monthly-content-retainer.html",
-              "description": "Dedicated monthly sprint capacity for devtools and AI infra companies: guaranteed technical content volume, priority turnaround, and byline management.",
-              "serviceType": "Technical Writing Retainer"
-            }
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "url": "https://thomascherickal.github.io/service-generative-ai-training.html",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Training in Generative AI",
+            "url": "https://thomascherickal.github.io/service-generative-ai-training.html",
+            "description": "Interactive virtual training, custom corporate workshops, LLM & agent architecture bootcamps, prompt engineering frameworks, and hands-on lab sessions.",
+            "serviceType": "Technical Training & Education"
           }
-        ]
-      }
+        },
+        {
+          "@type": "Offer",
+          "url": "https://thomascherickal.github.io/service-quantum-computing-training.html",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Training in Quantum Computing",
+            "url": "https://thomascherickal.github.io/service-quantum-computing-training.html",
+            "description": "Interactive virtual training, custom team workshops, Qiskit & PennyLane labs, Quantum Algorithm (VQE/QAOA) masterclasses, and executive quantum readiness bootcamps.",
+            "serviceType": "Technical Training & Education"
+          }
+        },
+        {
+          "@type": "Offer",
+          "url": "https://thomascherickal.github.io/service-developer-documentation.html",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Automated Documentation",
+            "url": "https://thomascherickal.github.io/service-developer-documentation.html",
+            "description": "API references, SDK guides, quickstarts, integration, and migration suites using leading tools (Docsify, Hugo, Fern, Redoc, OpenAPI 3.1, GitBook, Doxygen, Docusaurus, Mintlify, Sphinx).",
+            "serviceType": "Automated Documentation Tools"
+          }
+        },
+        {
+          "@type": "Offer",
+          "url": "https://thomascherickal.github.io/service-technical-deep-dives.html",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Technical Deep Dives",
+            "url": "https://thomascherickal.github.io/service-technical-deep-dives.html",
+            "description": "Commissioned long-form technical articles from 2,000 to 8,000 words across Generative AI Systems and Quantum Systems, with original research and verified benchmarks.",
+            "serviceType": "Emerging Tech Content"
+          }
+        },
+        {
+          "@type": "Offer",
+          "url": "https://thomascherickal.github.io/service-developer-education.html",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Developer Education",
+            "url": "https://thomascherickal.github.io/service-developer-education.html",
+            "description": "Tutorial series, structured learning paths, and workshop curricula with an executable repository or notebook per module.",
+            "serviceType": "Developer Education"
+          }
+        },
+        {
+          "@type": "Offer",
+          "url": "https://thomascherickal.github.io/service-quantum-developer-content.html",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Quantum Developer Content",
+            "url": "https://thomascherickal.github.io/service-quantum-developer-content.html",
+            "description": "IBM Qiskit and PennyLane tutorials, quantum machine learning explainers, quantum algorithm walkthroughs, and post-quantum cryptography briefings.",
+            "serviceType": "Technical Documentation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "url": "https://thomascherickal.github.io/service-quantum-AI-and-quantum-ML.html",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Quantum AI & Quantum ML",
+            "url": "https://thomascherickal.github.io/service-quantum-AI-and-quantum-ML.html",
+            "description": "Quantum Neural Networks, Quantum Kernel methods, Variational Quantum Algorithms (VQE, QAOA), and hybrid PyTorch/PennyLane QML developer guides.",
+            "serviceType": "Developer Content"
+          }
+        },
+        {
+          "@type": "Offer",
+          "url": "https://thomascherickal.github.io/service-local-llm-deployment.html",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Local LLM Deployment",
+            "url": "https://thomascherickal.github.io/service-local-llm-deployment.html",
+            "description": "Quantization, local inference setup, vLLM and Ollama deployment guides, GGUF optimization, and private enterprise LLM serving specifications.",
+            "serviceType": "AI Infrastructure & Deployment"
+          }
+        },
+        {
+          "@type": "Offer",
+          "url": "https://thomascherickal.github.io/service-generative-ai-dev-content.html",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Generative AI Dev Content",
+            "url": "https://thomascherickal.github.io/service-generative-ai-dev-content.html",
+            "description": "RAG pipelines, agentic workflows, prompt engineering frameworks, SLM fine-tuning guides, and automated documentation for GenAI products.",
+            "serviceType": "Developer Content"
+          }
+        },
+        {
+          "@type": "Offer",
+          "url": "https://thomascherickal.github.io/service-monthly-content-retainer.html",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Monthly Content Retainer",
+            "url": "https://thomascherickal.github.io/service-monthly-content-retainer.html",
+            "description": "Dedicated monthly sprint capacity for devtools and AI infra companies: guaranteed technical content volume, priority turnaround, and byline management.",
+            "serviceType": "Education & Retainer Sprints"
+          }
+        }
+      ]
     }
   ]
 }

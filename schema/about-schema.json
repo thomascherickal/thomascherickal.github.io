@@ -5,20 +5,17 @@
       "@type": "AboutPage",
       "@id": "https://thomascherickal.github.io/about.html#webpage",
       "url": "https://thomascherickal.github.io/about.html",
-      "name": "Capabilities & Tech Stack — Thomas Cherickal",
-      "description": "Developer documentation, technical deep dives, developer education, and AI tools expertise across Generative AI Systems and Quantum Systems, verified in Python and Rust.",
+      "name": "Capabilities, Coverage & Tech Stack — Thomas Cherickal",
+      "description": "10 Specialized technical capability areas and 10 curated tech-stack chip groups across Generative AI Systems and Quantum Systems.",
       "isPartOf": {
         "@id": "https://thomascherickal.github.io/#website"
-      },
-      "about": {
-        "@id": "https://thomascherickal.github.io/#person"
-      },
-      "mainEntity": {
-        "@id": "https://thomascherickal.github.io/#person"
       },
       "inLanguage": "en-US",
       "breadcrumb": {
         "@id": "https://thomascherickal.github.io/about.html#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://thomascherickal.github.io/#person"
       }
     },
     {
@@ -34,192 +31,76 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Capabilities & Tech Stack",
+          "name": "Expertise & Capabilities",
           "item": "https://thomascherickal.github.io/about.html"
         }
       ]
     },
     {
-      "@type": "FAQPage",
-      "@id": "https://thomascherickal.github.io/about.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How is your technical content produced and verified?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Roughly 50% of the workflow is Generative AI-accelerated for drafting speed (first drafts, research aggregation, structural scaffolding, format conversion), while 100% of technical claims, code samples, and quantum circuits are manually executed and verified in Python REPLs, Rust test runners, or quantum simulators before publication."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are your core technical capabilities across AI and Quantum Systems?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Capabilities span 10 specialized roles: Developer Documentation, Quantum Computing & QML (IBM Qiskit, PennyLane), LLM & Agent Systems (RAG, agentic workflows), Post-Quantum & Quantum Risk, Local & Private AI (Ollama, LM Studio, llama.cpp), Python & Rust Systems (PyTorch, FastAPI, Tokio), Developer Education, Technical Deep Dives, AI Tools Expertise, and Content Architecture."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How are code samples and quantum circuits tested before publication?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Code samples are executed in real Python REPLs or Rust cargo test sandboxes before inclusion in deliverables. Quantum algorithms are run against Qiskit's Aer simulator or real IBM Quantum hardware, and actual measured execution outputs are published."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What frontier AI tools do you utilize in your daily engineering workflow?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Daily working fluency across the current frontier toolchain: Claude Code, Google Antigravity, Google AI Studio, Gemini Notebook, and CodeWiki."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does your workflow address AI hallucinations in technical documentation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "By maintaining strict separation between AI-assisted drafting and manual technical verification. AI accelerates execution speed without touching technical truth; every API response, benchmark statistic, and quantum state is verified against live runtime environments before release."
-          }
-        }
-      ]
-    },
-    {
       "@type": "ItemList",
-      "@id": "https://thomascherickal.github.io/about.html#core-capabilities",
-      "name": "Core Technical Capabilities",
-      "description": "10 specialized technical roles covering Generative AI Systems, Quantum SDKs, developer education, and technical verification.",
+      "@id": "https://thomascherickal.github.io/about.html#capabilities",
+      "name": "Specialized Technical Capabilities",
       "numberOfItems": 10,
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Developer Documentation",
-          "description": "API references, SDK guides, quickstarts, integration and migration guides across Generative AI APIs and quantum SDKs."
+          "name": "Automated Documentation",
+          "description": "API references, SDK guides, quickstarts, integration and migration guides using leading automated docs tools."
         },
         {
           "@type": "ListItem",
           "position": 2,
+          "name": "Training in Generative AI",
+          "description": "Interactive virtual live training, custom corporate workshops, LLM & agent bootcamps."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Training in Quantum Computing",
+          "description": "Interactive virtual live training, Qiskit & PennyLane workshops, VQE/QAOA masterclasses."
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
           "name": "Quantum Computing & QML",
-          "description": "Hands-on IBM Qiskit and PennyLane. Quantum machine learning, variational circuits, quantum algorithms (Grover, Shor, VQE, QAOA)."
+          "description": "Hands-on IBM Qiskit and PennyLane. Quantum machine learning, variational circuits, quantum algorithms."
         },
         {
           "@type": "ListItem",
-          "position": 3,
+          "position": 5,
           "name": "LLM & Agent Systems",
-          "description": "RAG pipelines, agentic workflows, prompt frameworks, evaluation. Written from hands-on engineering use."
+          "description": "RAG pipelines, agentic workflows, prompt frameworks, evaluation."
         },
         {
           "@type": "ListItem",
-          "position": 4,
+          "position": 6,
           "name": "Post-Quantum & Quantum Risk",
-          "description": "Post-quantum cryptography risk, the threat model against current encryption algorithms, and enterprise quantum-readiness briefings."
+          "description": "Post-quantum cryptography risk, threat modeling, and enterprise quantum-readiness briefings."
         },
         {
           "@type": "ListItem",
-          "position": 5,
+          "position": 7,
           "name": "Local & Private AI",
-          "description": "Ollama, LM Studio, llama.cpp, GGUF, SLM fine-tuning and quantisation for private on-premise execution."
+          "description": "Ollama, LM Studio, llama.cpp, GGUF, SLM fine-tuning and quantisation."
         },
         {
           "@type": "ListItem",
-          "position": 6,
+          "position": 8,
           "name": "Python & Rust Systems",
-          "description": "Deep Python and Rust fluency as the core engineering layers: PyTorch, FastAPI, and Qiskit in Python; memory-safe Tokio and Wasm in Rust."
+          "description": "Deep Python and Rust fluency as core engineering layers: PyTorch & FastAPI; Tokio & Wasm."
         },
         {
           "@type": "ListItem",
-          "position": 7,
+          "position": 9,
           "name": "Developer Education",
-          "description": "Courses, tutorial series, structured learning paths, and interactive Jupyter notebook modules across both technical domains."
+          "description": "Courses, tutorial series, structured learning paths, and interactive Jupyter notebook modules."
         },
         {
           "@type": "ListItem",
-          "position": 8,
+          "position": 10,
           "name": "Technical Deep Dives",
-          "description": "Long-form explainers on LLM internals, agent architectures, and quantum algorithms. Researched, run, and benchmark-verified."
-        },
-        {
-          "@type": "ListItem",
-          "position": 9,
-          "name": "AI Tools Expertise",
-          "description": "Daily working fluency across the current frontier toolchain: Claude Code, Google Antigravity, Google AI Studio, Gemini Notebook, CodeWiki."
-        },
-        {
-          "@type": "ListItem",
-          "position": 10,
-          "name": "Content Architecture",
-          "description": "Structuring documentation so it serves both a skimming developer and a retrieving AI agent alike — Diátaxis-pattern scaffolding and schema markup."
-        }
-      ]
-    },
-    {
-      "@type": "ItemList",
-      "@id": "https://thomascherickal.github.io/about.html#tech-stack",
-      "name": "Tooling & Infrastructure Tech Stack",
-      "description": "10 tech-stack chip groups across Generative AI Systems and Quantum Systems.",
-      "numberOfItems": 10,
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Languages I Code & Write In",
-          "description": "Python, Rust, JavaScript, Bash"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Generative AI Systems",
-          "description": "Generative AI, LLMs, SLMs, Agentic AI, RAG"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Quantum Systems",
-          "description": "IBM Qiskit, PennyLane, Quantum Machine Learning, Quantum Algorithms, Microsoft Q# / Quantinuum"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "AI Tools Expertise",
-          "description": "Claude Code, Google Antigravity, Google AI Studio, Gemini Notebook, CodeWiki"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Local & Private AI Stack",
-          "description": "Ollama, LM Studio, llama.cpp, GGUF, HuggingFace Hub"
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "name": "Verification & Execution",
-          "description": "Jupyter, pytest, Qiskit Aer Simulator, Docker Sandboxes, REPL-Verified Examples"
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "name": "Python Deep Stack",
-          "description": "PyTorch, NumPy, FastAPI, LangChain, Qiskit SDK"
-        },
-        {
-          "@type": "ListItem",
-          "position": 8,
-          "name": "Content & Docs Engineering",
-          "description": "Markdown/MDX, Diátaxis Framework, OpenAPI, JSON-LD, Technical SEO"
-        },
-        {
-          "@type": "ListItem",
-          "position": 9,
-          "name": "Domains",
-          "description": "Generative AI, Quantum Computing, Cybersecurity, Post-Quantum Cryptography, Open Source"
-        },
-        {
-          "@type": "ListItem",
-          "position": 10,
-          "name": "Content Architecture",
-          "description": "Structured Retrieval Patterns, Schema Markup, Information Architecture, Agent-Readable Docs, AEO/GEO Optimisation"
+          "description": "Long-form explainers on LLM internals, agent architectures, and quantum algorithms."
         }
       ]
     }

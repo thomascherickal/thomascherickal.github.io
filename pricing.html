@@ -217,7 +217,7 @@
         "@id": "https://thomascherickal.github.io/pricing.html#webpage",
         "url": "https://thomascherickal.github.io/pricing.html",
         "name": "Services Pricing & Purchasing Power Parity Index — Thomas Cherickal",
-        "description": "Transparent milestone pricing for technical writing, developer education, Generative AI engineering, and quantum developer content adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%).",
+        "description": "Transparent milestone pricing for emerging technologies education, training in GenAI & Quantum Computing, automated documentation, and quantum developer content adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%).",
         "isPartOf": { "@id": "https://thomascherickal.github.io/#website" },
         "inLanguage": "en-US",
         "breadcrumb": { "@id": "https://thomascherickal.github.io/pricing.html#breadcrumb" },
@@ -235,14 +235,26 @@
         "@type": "OfferCatalog",
         "@id": "https://thomascherickal.github.io/pricing.html#offercatalog",
         "name": "Services Pricing & Purchasing Power Parity Index — Thomas Cherickal",
-        "description": "Transparent milestone pricing for technical writing, developer education, Generative AI engineering, and quantum developer content adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%).",
+        "description": "Transparent milestone pricing for emerging technologies education, training in GenAI & Quantum Computing, automated documentation, and quantum developer content adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%).",
         "url": "https://thomascherickal.github.io/pricing.html",
         "offeredBy": { "@id": "https://thomascherickal.github.io/#person" },
         "itemListElement": [
           {
             "@type": "Offer",
-            "name": "Developer Documentation",
-            "description": "Full API references, SDK guides, quickstarts, integration, and migration suites across Generative AI and quantum SDKs.",
+            "name": "Training in Generative AI",
+            "description": "Interactive live virtual training, custom corporate workshops, LLM & agent architecture bootcamps, prompt engineering frameworks, and hands-on lab sessions.",
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "600.00", "maxPrice": "1200.00", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Training in Quantum Computing",
+            "description": "Interactive live virtual training, custom team workshops, Qiskit & PennyLane labs, Quantum Algorithm (VQE/QAOA) masterclasses, and executive quantum readiness bootcamps.",
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "600.00", "maxPrice": "1200.00", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Automated Documentation",
+            "description": "Full API references, SDK guides, quickstarts, and automated documentation portals using leading tools (Docsify, Hugo, Fern, Redoc, OpenAPI 3.1, GitBook, Doxygen, Docusaurus, Mintlify).",
             "priceSpecification": { "@type": "PriceSpecification", "minPrice": "600.00", "maxPrice": "1000.00", "priceCurrency": "USD" }
           },
           {
@@ -268,18 +280,6 @@
             "name": "Quantum AI & Quantum ML",
             "description": "Quantum Neural Networks, Quantum Kernel methods, VQE/QAOA algorithms, and hybrid PyTorch/PennyLane QML developer guides.",
             "priceSpecification": { "@type": "PriceSpecification", "minPrice": "500.00", "maxPrice": "900.00", "priceCurrency": "USD" }
-          },
-          {
-            "@type": "Offer",
-            "name": "Code & Circuit Benchmarking",
-            "description": "100% manual verification pass for existing technical content: code execution check, quantum circuit runs, and hardware audits.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "300.00", "maxPrice": "600.00", "priceCurrency": "USD" }
-          },
-          {
-            "@type": "Offer",
-            "name": "Content Architecture",
-            "description": "Diátaxis framework restructuring and Schema.org markup optimized for AI agents and human developers.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "500.00", "maxPrice": "800.00", "priceCurrency": "USD" }
           },
           {
             "@type": "Offer",
@@ -345,12 +345,23 @@
         </div>
 
         <div class="pricing-grid-faq">
+          <!-- Training 1 -->
+          <div class="price-card-faq" style="border-color:rgba(56,189,248,0.3);">
+            <div class="price-card-title" style="color:var(--cyan);">🎓 Training in Generative AI</div>
+            <div class="price-amount" data-base-min="600" data-base-max="1200">$600 – $1,200 USD</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Interactive workshops, LLM &amp; agent bootcamps</div>
+          </div>
+          <!-- Training 2 -->
+          <div class="price-card-faq" style="border-color:rgba(165,180,252,0.3);">
+            <div class="price-card-title" style="color:var(--violet);">⚛️ Training in Quantum Computing</div>
+            <div class="price-amount" data-base-min="600" data-base-max="1200">$600 – $1,200 USD</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Qiskit &amp; PennyLane masterclasses &amp; QML labs</div>
+          </div>
           <!-- Service 1 -->
           <div class="price-card-faq">
-            <div class="price-card-title">📝 Developer Documentation</div>
+            <div class="price-card-title">📝 Automated Documentation</div>
             <div class="price-amount" data-base-min="600" data-base-max="1000">$600 – $1,000 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Full API references, SDK
-              guides, quickstarts &amp; suites</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Full API references &amp; leading docs tool suites</div>
           </div>
           <!-- Service 2 -->
           <div class="price-card-faq">
@@ -378,20 +389,6 @@
             <div class="price-card-title" style="color:var(--violet);">⚛️ Quantum AI &amp; Quantum ML</div>
             <div class="price-amount" data-base-min="500" data-base-max="900">$500 – $900 USD</div>
             <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">QNNs, VQE/QAOA &amp; hybrid PyTorch/PennyLane QML guides</div>
-          </div>
-          <!-- Service 6 -->
-          <div class="price-card-faq">
-            <div class="price-card-title">✓ Code &amp; Circuit Benchmarking</div>
-            <div class="price-amount" data-base-min="300" data-base-max="600">$300 – $600 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">100% manual code execution
-              &amp; circuit audit pass</div>
-          </div>
-          <!-- Service 7 -->
-          <div class="price-card-faq">
-            <div class="price-card-title">🗂️ Content Architecture</div>
-            <div class="price-amount" data-base-min="500" data-base-max="800">$500 – $800 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Diátaxis restructuring &amp;
-              Schema.org optimization</div>
           </div>
           <!-- Service 8 -->
           <div class="price-card-faq">

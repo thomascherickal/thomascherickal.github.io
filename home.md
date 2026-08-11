@@ -1,22 +1,22 @@
-# Thomas Cherickal — Technical Writer & Developer Educator
+# Thomas Cherickal — Emerging Technologies Educator & Developer Educator
 
-> `// The Digital Futurist (2020–present) · Chennai, India`
+**Location**: Chennai, India (Remote — Worldwide)  
+**Brand**: The Digital Futurist (2020–present)  
+**Email**: [thomascherickal@gmail.com](mailto:thomascherickal@gmail.com)  
 
-![Thomas Cherickal](./assets/thomas-avatar.webp)
+**Emerging Technologies Educator & Developer Educator — Generative AI Systems & Quantum Systems**  
+*Training in Generative AI and Quantum Computing, automated documentation, deep dives, and developer education — AI-accelerated, verified in Python and Rust.*
 
-**Technical Writer & Developer Educator — Generative AI Systems & Quantum Systems**  
-*Documentation, deep dives, and developer education — AI-accelerated, verified in Python and Rust.*
-
-### Core Focus Areas
-- `Developer Documentation`
-- `Generative AI Content`
-- `Quantum Computation Tech`
+**Core Capabilities**:
+- `Training in Generative AI`
+- `Training in Quantum Computing`
+- `Automated Documentation`
 - `Developer Education`
 
 ---
 
 ## Bio
-As a developer with a PG degree in CS and a seasoned online technical writer with a broad online presence, I sit directly in the intersection of both frontier domains — writing developer documentation, tutorials, and deep dives where every Python or Rust script, Generative AI project, and Qiskit circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. Hands-on with LLMs and agent frameworks (Claude Code, Google Antigravity, Ollama, LM Studio, llama.cpp) and quantum SDKs (IBM Qiskit, PennyLane, QML). Fully remote and asynchronous.
+As a developer with a PG degree in CS and a seasoned online emerging technologies educator with a broad online presence, I sit directly in the intersection of both frontier domains — producing training programs, writing automated documentation, tutorials, and deep dives where every Python or Rust script, Generative AI project, and Qiskit circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. Hands-on with LLMs and agent frameworks (Claude Code, Google Antigravity, Ollama, LM Studio, llama.cpp) and quantum SDKs (IBM Qiskit, PennyLane, QML). Skilled with leading Automated Documentation Tools (Docsify, Hugo, Fern, Redoc, OpenAPI 3.1, GitBook, Doxygen, Docusaurus, Mintlify, Sphinx) and automated documentation architecture. Fully remote and flexible.
 
 ### Quick Actions
 - [🌐 Main Site](https://thomascherickal.com)
@@ -32,19 +32,25 @@ As a developer with a PG degree in CS and a seasoned online technical writer wit
 | :--- | :--- |
 | **Articles Published** | 500+ |
 | **Platforms** | 10+ |
-| **Years Technical Writing** | 6+ |
+| **Years Emerging Tech Education** | 6+ |
 | **Featured Deep Dives** | 24 |
 | **GitHub Repositories** | 2000+ |
-| **Generative AI & Quantum Computation Tech** | Primary Focus |
+| **Generative AI & Quantum Systems Education** | Primary Focus |
 
 ---
 
-## Core Capabilities (10 Roles)
+## Core Capabilities (10 Offerings)
 
-Empowering Generative AI Companies and Quantum Computing Enterprises with Generative AI Content & Quantum Computation Tech documentation and developer education.
+Empowering Generative AI Companies and Quantum Computing Enterprises with Training, Automated Documentation, and developer education.
 
-### 📝 Developer Documentation
-API references, SDK guides, quickstarts, integration and migration guides, across Generative AI APIs and quantum SDKs.
+### 🎓 Training in Generative AI
+Interactive virtual training, custom team bootcamps, agentic AI architecture workshops, RAG pipelines, and executable notebook labs.
+
+### ⚛️ Training in Quantum Computing
+Interactive virtual workshops, Qiskit & PennyLane labs, VQE/QAOA algorithm masterclasses, and executive quantum readiness bootcamps.
+
+### 📝 Automated Documentation
+API references, SDK guides, quickstarts, integration and migration suites built with leading automated documentation tools (Docsify, Hugo, Fern, Redoc, OpenAPI 3.1, GitBook, Doxygen, Docusaurus, Mintlify, Sphinx).
 
 ### ⚛️ Quantum Computing & QML
 Hands-on IBM Qiskit and PennyLane. Quantum machine learning, variational circuits, quantum algorithms (Grover, Shor, VQE, QAOA), explained for working developers.
@@ -78,23 +84,23 @@ Structuring documentation so it serves both a skimming developer and a retrievin
 ## Tech Stack & Tooling (10 Chip Groups)
 
 - **💻 Languages**: Python, Rust, JavaScript, Bash
-- **🧠 Generative AI Systems**: Generative AI, LLMs, SLMs, Agentic AI, RAG
-- **⚛️ Quantum Systems**: IBM Qiskit, PennyLane, Quantum Machine Learning, Quantum Algorithms, Microsoft Q# / Quantinuum
+- **🧠 Generative AI Systems**: Generative AI, LLMs, SLMs, Agentic AI, RAG, Remote & Live GenAI Training
+- **⚛️ Quantum Systems**: IBM Qiskit, PennyLane, Quantum Machine Learning, Quantum Algorithms, Microsoft Q# / Quantinuum, Live Quantum Workshops
 - **🤖 AI Tools Expertise**: Claude Code, Google Antigravity, Google AI Studio, Gemini Notebook, CodeWiki
 - **⚡ Local & Private AI Stack**: Ollama, LM Studio, llama.cpp, GGUF, HuggingFace Hub
 - **🔬 Verification & Execution**: Jupyter, pytest, Qiskit Aer Simulator, Docker Sandboxes, REPL-Verified Examples
-- **🐍 Python Deep Stack**: PyTorch, NumPy, FastAPI, LangChain, Qiskit SDK
-- **📄 Content & Docs Engineering**: Markdown/MDX, Diátaxis Framework, OpenAPI, JSON-LD, Technical SEO
+- **🐍 Python & Rust Deep Stack**: PyTorch, NumPy, FastAPI, LangChain, Qiskit SDK
+- **📄 Leading Automated Docs Tools**: Docsify, Hugo, Fern, Redoc, OpenAPI 3.1, GitBook, Doxygen, Docusaurus, Mintlify, MDX, Technical SEO
 - **🌐 Domains**: Generative AI, Quantum Computing, Cybersecurity, Post-Quantum Cryptography, Open Source
 - **🗂️ Content Architecture**: Structured Retrieval Patterns, Schema Markup, Information Architecture, Agent-Readable Docs, AEO/GEO Optimisation
 
 ---
 
-## Why Technical Content Fails (The Technical Moat)
+## Why Emerging Tech Education Fails (The Technical Moat)
 
-Most developer content in Generative AI and Quantum Computing suffers from one of two flaws: it is either written by brilliant physicists and engineers who lack editorial clarity, or by generalist writers who cannot execute the code they document.
+Most developer education in Generative AI and Quantum Computing suffers from one of two flaws: it is either delivered by brilliant physicists and engineers who lack educational clarity, or by generalist educators who cannot execute the code they teach.
 
-As a developer with a PG degree in CS and a seasoned online technical writer with a broad online presence, I sit directly in the intersection of both frontier domains — writing developer documentation, tutorials, and deep dives where every Python or Rust script, Generative AI project, and Qiskit circuit is run and verified before publication.
+As a developer with a PG degree in CS and a seasoned online emerging technologies educator with a broad online presence, I sit directly in the intersection of both frontier domains — providing remote and live training, automated documentation, tutorials, and deep dives where every Python or Rust script, Generative AI project, and Qiskit circuit is run and verified before publication.
 
 ---
 
@@ -144,18 +150,18 @@ A comprehensive transformation system showing professionals how to use frontier 
 
 ---
 
-## Service Offerings (10 Asynchronous Offers)
+## Service Offerings (10 Offerings)
 
-1. **Developer Documentation**: API references, SDK guides, quickstarts, and migration guides.
-2. **Technical Deep Dives**: Long-form technical explainers (2,000–8,000 words) with verified benchmarks.
-3. **Developer Education & Courses**: Tutorial series, structured learning paths, and interactive notebooks.
-4. **Quantum Developer Content**: IBM Qiskit & PennyLane tutorials, QML explainers, and algorithm walkthroughs.
-5. **Quantum AI & Quantum ML**: Quantum Neural Networks (QNNs), Quantum Kernel methods, VQE/QAOA algorithms, and hybrid PyTorch/PennyLane QML developer guides.
-6. **Code & Circuit Benchmarking**: Standalone verification pass for your existing drafts.
-7. **Content Architecture**: Structuring docs for human developers and retrieval AI agents.
+1. **Training in Generative AI**: Interactive virtual workshops, custom team bootcamps, and LLM/agent labs.
+2. **Training in Quantum Computing**: Interactive virtual workshops, Qiskit/PennyLane labs, and algorithm masterclasses.
+3. **Automated Documentation**: API references, SDK guides, quickstarts, and migration portals using leading docs tools.
+4. **Technical Deep Dives**: Long-form technical explainers (2,000–8,000 words) with verified benchmarks.
+5. **Developer Education & Courses**: Tutorial series, structured learning paths, and interactive notebooks.
+6. **Quantum Developer Content**: IBM Qiskit & PennyLane tutorials, QML explainers, and algorithm walkthroughs.
+7. **Quantum AI & Quantum ML**: Quantum Neural Networks (QNNs), Quantum Kernel methods, VQE/QAOA algorithms, and hybrid PyTorch/PennyLane QML developer guides.
 8. **Local LLM Deployment**: Quantization, local inference setup, vLLM & Ollama deployment guides.
 9. **Generative AI Dev Content**: RAG pipelines, agentic workflows, prompt engineering frameworks, and SLM fine-tuning guides.
-10. **Monthly Content Retainer**: Dedicated monthly sprint capacity for devtool &amp; AI infra companies: guaranteed content volume, priority turnaround &amp; byline management.
+10. **Monthly Content Retainer**: Dedicated monthly sprint capacity for devtools and AI infra companies.: guaranteed content volume, priority turnaround &amp; byline management.
 
 ---
 
@@ -198,5 +204,5 @@ How to understand and build emerging technologies.
 - [📅 Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)
 
 ---
-*© 2026 Thomas Cherickal · The Digital Futurist (2020–present) · Technical Writer & Developer Educator*  
+*© 2026 Thomas Cherickal · The Digital Futurist (2020–present) · Emerging Technologies Educator & Developer Educator*  
 *📍 Chennai, India 🇮🇳*

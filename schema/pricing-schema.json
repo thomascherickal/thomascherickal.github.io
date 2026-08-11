@@ -6,7 +6,7 @@
       "@id": "https://thomascherickal.github.io/pricing.html#webpage",
       "url": "https://thomascherickal.github.io/pricing.html",
       "name": "Services Pricing & Purchasing Power Parity Index — Thomas Cherickal",
-      "description": "Transparent milestone pricing for technical writing, developer education, Generative AI engineering, and quantum developer content adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%).",
+      "description": "Transparent milestone pricing for 10 service offerings: emerging technologies education, training in GenAI & Quantum Computing, automated documentation, and quantum developer content adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%).",
       "isPartOf": {
         "@id": "https://thomascherickal.github.io/#website"
       },
@@ -40,7 +40,7 @@
       "@type": "OfferCatalog",
       "@id": "https://thomascherickal.github.io/pricing.html#offercatalog",
       "name": "Services Pricing & Purchasing Power Parity Index — Thomas Cherickal",
-      "description": "Transparent milestone pricing for technical writing, developer education, Generative AI engineering, and quantum developer content adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%).",
+      "description": "Transparent milestone pricing for 10 service offerings: emerging technologies education, training in GenAI & Quantum Computing, automated documentation, and quantum developer content adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%).",
       "url": "https://thomascherickal.github.io/pricing.html",
       "offeredBy": {
         "@id": "https://thomascherickal.github.io/#person"
@@ -48,8 +48,30 @@
       "itemListElement": [
         {
           "@type": "Offer",
-          "name": "Developer Documentation",
-          "description": "Full API references, SDK guides, quickstarts, integration, and migration suites across Generative AI and quantum SDKs.",
+          "name": "Training in Generative AI",
+          "description": "Interactive virtual training, custom corporate workshops, LLM & agent architecture bootcamps, prompt engineering frameworks, and hands-on lab sessions.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "600.00",
+            "maxPrice": "1200.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Training in Quantum Computing",
+          "description": "Interactive virtual training, custom team workshops, Qiskit & PennyLane labs, Quantum Algorithm (VQE/QAOA) masterclasses, and executive quantum readiness bootcamps.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "600.00",
+            "maxPrice": "1200.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Automated Documentation",
+          "description": "Full API references, SDK guides, quickstarts, and automated documentation portals built with leading tools (Docsify, Hugo, Fern, Redoc, OpenAPI 3.1, GitBook, Doxygen, Docusaurus, Mintlify, Sphinx).",
           "priceSpecification": {
             "@type": "PriceSpecification",
             "minPrice": "600.00",
@@ -93,33 +115,11 @@
         {
           "@type": "Offer",
           "name": "Quantum AI & Quantum ML",
-          "description": "Quantum Neural Networks (QNNs), Quantum Kernel methods, VQE/QAOA algorithms, and hybrid PyTorch/PennyLane QML developer guides.",
+          "description": "Quantum Neural Networks, Quantum Kernel methods, VQE/QAOA algorithms, and hybrid PyTorch/PennyLane QML developer guides.",
           "priceSpecification": {
             "@type": "PriceSpecification",
             "minPrice": "500.00",
             "maxPrice": "900.00",
-            "priceCurrency": "USD"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Code & Circuit Benchmarking",
-          "description": "100% manual verification pass for existing technical content: code execution check, quantum circuit runs, and hardware audits.",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "300.00",
-            "maxPrice": "600.00",
-            "priceCurrency": "USD"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Content Architecture",
-          "description": "Diátaxis framework restructuring and Schema.org markup optimized for AI agents and human developers.",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "500.00",
-            "maxPrice": "800.00",
             "priceCurrency": "USD"
           }
         },
