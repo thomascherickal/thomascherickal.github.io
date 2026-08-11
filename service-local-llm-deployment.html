@@ -37,7 +37,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css?v=6c9ca50b5a22" />
+  <link rel="stylesheet" href="./style.css?v=8ca33df5d698" />
 
   <!-- Structured Data (JSON-LD) for Google Rich Results -->
   <script type="application/ld+json">
@@ -105,11 +105,11 @@
         "@type": "Offer",
         "url": "https://thomascherickal.github.io/service-local-llm-deployment.html",
         "priceCurrency": "USD",
-        "price": "1250",
+        "price": "700",
         "priceSpecification": {
           "@type": "PriceSpecification",
-          "minPrice": "400",
-          "maxPrice": "800",
+          "minPrice": "350",
+          "maxPrice": "700",
           "priceCurrency": "USD",
           "valueAddedTaxIncluded": "true"
         },
@@ -136,6 +136,9 @@
     <section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
       <p class="section-label">// SERVICE SPECIFICATION 08</p>
       <h1 class="section-title">📦 Local LLM <span class="accent-gold">Deployment</span></h1>
+      <p class="section-sub" style="max-width:760px;margin:0.75rem auto 0;line-height:1.8;">
+        Step-by-step guides on running AI models locally, reducing cloud API costs, and ensuring complete data privacy.
+      </p>
       <div style="margin-top:1.5rem;">
         <a href="contact.html" class="btn btn-commission" style="padding:0.75rem 1.5rem;font-size:0.85rem;">
           🚀 Discuss Local LLM Deployment →
@@ -152,86 +155,63 @@
 
         <h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">1. Service Overview &amp; Scope</h2>
         <ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;">
-          <li>End-to-end technical documentation and deployment guides for serving local open-weights LLMs and SLMs:
-            <ol style="margin-left:1.5rem;margin-top:0.5rem;">
-              <li>Model quantization walkthroughs (GGUF, AWQ, GPTQ, EXL2) for VRAM footprint reduction.</li>
-              <li>High-throughput local inference engine setup guides (vLLM, Ollama, llama.cpp, TGI, TensorRT-LLM).</li>
-              <li>Air-gapped private enterprise deployment and zero-data-leakage architecture specs.</li>
-              <li>Benchmarking latency (tokens/sec), VRAM utilization, and multi-GPU tensor parallelism.</li>
-            </ol>
-          </li>
-          <li>Target Scenario:
+          <li>Local Model Setup Guides:
             <ul style="margin-left:1.5rem;margin-top:0.5rem;">
-              <li>Enabling enterprises and developer teams to deploy cost-effective, private, on-premise AI inference servers.</li>
+              <li>Setting up local AI inference engines (Ollama, vLLM, LM Studio).</li>
+              <li>Selecting lightweight, quantized models (GGUF) for standard hardware.</li>
+              <li>Air-gapped private model deployment for enterprise data security.</li>
+            </ul>
+          </li>
+          <li>Key Benefits:
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;">
+              <li>Zero data sent to third-party cloud APIs, reduced latency, and lower monthly API bills.</li>
             </ul>
           </li>
         </ul>
 
-        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">2. Technical References &amp; Serving Engines</h2>
+        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">2. Supported Tools &amp; Hardware</h2>
         <ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;">
-          <li>Inference Serving Engines &amp; Frameworks:
-            <ol style="margin-left:1.5rem;margin-top:0.5rem;">
-              <li>vLLM (PagedAttention, Continuous Batching, OpenAI API compatible endpoint serving).</li>
-              <li>Ollama (Local model registry management, Modelfile configuration, REST API integration).</li>
-              <li>llama.cpp &amp; llama-cpp-python (CPU / Metal / CUDA offloading kernels).</li>
-              <li>Docker containerization &amp; Ray Serve multi-node orchestrations.</li>
-            </ol>
-          </li>
-          <li>Model Architectures &amp; Hardware Targets:
+          <li>Tools &amp; Serving Engines:
             <ul style="margin-left:1.5rem;margin-top:0.5rem;">
-              <li>Llama 3.1, Mistral / Mixtral, Phi-3, Qwen 2.5, Gemma 2 models.</li>
-              <li>NVIDIA CUDA GPUs (A100, H100, RTX 4090), Apple Silicon Unified Memory, AMD ROCm.</li>
+              <li>Ollama, vLLM, and Docker containers.</li>
+              <li>Open-weight models (Llama 3, Mistral, Phi-3, Gemma).</li>
+            </ul>
+          </li>
+          <li>Hardware Requirements:
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;">
+              <li>Standard consumer GPUs, Mac Laptops (Apple Silicon), or basic cloud servers.</li>
             </ul>
           </li>
         </ul>
 
-        <h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">3. Deliverable Examples &amp; Case Studies</h2>
+        <h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">3. Deliverable Examples</h2>
         <ol style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;">
-          <li>High-Throughput vLLM Local Serving Guide for Enterprise RAG:
+          <li>Local Ollama Deployment Guide:
             <ul style="margin-left:1.5rem;margin-top:0.5rem;">
-              <li>Step-by-step production setup of Llama-3-70B AWQ quantized model on 2x RTX 4090 GPUs.</li>
-              <li>Benchmark results demonstrating 4.5x throughput improvement over standard Hugging Face pipelines.</li>
+              <li>Step-by-step setup script for running local models on desktop or server.</li>
             </ul>
           </li>
-          <li>Air-Gapped Private Ollama Deployment Walkthrough:
+          <li>Private Document Search Assistant:
             <ul style="margin-left:1.5rem;margin-top:0.5rem;">
-              <li>Complete air-gapped Docker Compose deployment stack with custom Modelfiles for financial compliance.</li>
+              <li>Walkthrough for connecting a local LLM to internal company documents.</li>
             </ul>
           </li>
         </ol>
 
-        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">4. Standard Guarantees &amp; Quality Commitments</h2>
+        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">4. Guarantees &amp; Commitments</h2>
         <ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;">
-          <li><strong>Infinite Revisions Guarantee:</strong>
-            <ul style="margin-left:1.5rem;margin-top:0.5rem;">
-              <li>Continuous revision updates on deployment scripts, Dockerfiles, and documentation until team sign-off.</li>
-            </ul>
-          </li>
-          <li><strong>100% Runtime Execution Verification:</strong>
-            <ul style="margin-left:1.5rem;margin-top:0.5rem;">
-              <li>Every Dockerfile, vLLM command, and Ollama Modelfile executed top-to-bottom on hardware prior to delivery.</li>
-            </ul>
-          </li>
-          <li><strong>Full IP &amp; Security Transfer:</strong>
-            <ul style="margin-left:1.5rem;margin-top:0.5rem;">
-              <li>100% intellectual property and code ownership transferred upon delivery.</li>
-            </ul>
-          </li>
-          <li><strong>60-Day Post-Launch Support:</strong>
-            <ul style="margin-left:1.5rem;margin-top:0.5rem;">
-              <li>Includes free maintenance updates for inference engine breaking version releases for 60 days.</li>
-            </ul>
-          </li>
+          <li><strong>Tested Installation Scripts:</strong> Every command and script is tested for error-free execution.</li>
+          <li><strong>60-Day Maintenance Support:</strong> Included follow-up support for model updates.</li>
         </ul>
 
         <h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">5. Investment &amp; Pricing Quote</h2>
         <ol style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;">
-          <li>Base Investment Range: <strong>$400 – $800 USD</strong> (per deployment guide package).</li>
+          <li>Base Investment Range: <strong>$350 – $700 USD</strong> (per deployment guide package).</li>
           <li>Purchasing Power Parity (PPP) Tier Adjustments:
             <ul style="margin-left:1.5rem;margin-top:0.5rem;">
-              <li><strong>Tier 1 (Developed Nations - USA, EU, UK):</strong> 100% Base Price ($400 – $800 USD).</li>
-              <li><strong>Tier 2 (Developing Nations - India, Brazil, SEA):</strong> 75% Parity Price ($300 – $600 USD).</li>
-              <li><strong>Tier 3 (Least Developed Nations - Haiti, Sub-Saharan Africa):</strong> 50% Parity Price ($200 – $400 USD).</li>
+              <li><strong>Tier 1 (Developed Nations - USA, EU, UK):</strong> 100% Base Price ($350 – $700 USD).</li>
+              <li><strong>Tier 2 (Developing Nations - India, Brazil, SEA):</strong> 75% Parity Price ($265 – $525 USD).</li>
+              <li><strong>Tier 3 (Least Developed Nations - Haiti, Sub-Saharan Africa):</strong> 50% Parity Price ($175 – $350 USD).</li>
             </ul>
           </li>
           <li>Payment Schedule:

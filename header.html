@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <base target="_parent" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=6c9ca50b5a22" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=8ca33df5d698" />
   <style>
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
       background: transparent;
       overflow: visible;
     }
+
     nav {
       position: relative !important;
       top: auto !important;
     }
+
     @media (max-width: 768px) {
       .nav-links {
         position: absolute !important;
@@ -36,6 +42,7 @@
         justify-content: flex-start !important;
         align-items: center !important;
       }
+
       .dropdown-menu {
         max-height: none !important;
         overflow-y: visible !important;
@@ -43,6 +50,7 @@
     }
   </style>
 </head>
+
 <body>
   <nav aria-label="Main navigation">
     <a href="index.html" class="nav-brand" data-nav="index.html">Thomas Cherickal</a>
@@ -64,8 +72,8 @@
         <ul class="dropdown-menu">
           <li><a href="services.html" class="dropdown-header-link">🎯 All Offerings</a></li>
           <li class="dropdown-divider"></li>
-          <li><a href="service-generative-ai-training.html">🎓 GenAI Training</a></li>
-          <li><a href="service-quantum-computing-training.html">⚛️ Quantum Training</a></li>
+          <li><a href="service-generative-ai-training.html">🤖 Generative AI Training</a></li>
+          <li><a href="service-quantum-computing-training.html">⚛️ Quantum Computing Training</a></li>
           <li><a href="service-developer-documentation.html">📝 Automated Documentation</a></li>
           <li><a href="service-technical-deep-dives.html">🔬 Technical Deep Dives</a></li>
           <li><a href="service-developer-education.html">🎓 Developer Education</a></li>
@@ -83,7 +91,7 @@
   </nav>
 
   <script>
-    (function() {
+    (function () {
       var NAV_HEIGHT = 64;
       var DROPDOWN_HEIGHT = 460;
       var parentViewportH = screen.height || 800;
@@ -117,7 +125,7 @@
         if (isMobile() && isMobileMenuOpen) {
           sendHeight(parentViewportH);
           // Wait for the iframe to resize, then set pixel height
-          requestAnimationFrame(function() {
+          requestAnimationFrame(function () {
             setTimeout(setMobileNavHeight, 50);
           });
         } else if (!isMobile() && isDropdownOpen) {
@@ -129,7 +137,7 @@
       }
 
       // Listen for the parent sending its actual viewport height
-      window.addEventListener('message', function(e) {
+      window.addEventListener('message', function (e) {
         if (e.data && e.data.type === 'parentViewportHeight' && e.data.height) {
           parentViewportH = e.data.height;
           if (isMobileMenuOpen) {
@@ -141,18 +149,18 @@
       // Desktop dropdown hover/focus
       var navDropdown = document.querySelector('.nav-dropdown');
       if (navDropdown) {
-        navDropdown.addEventListener('mouseenter', function() {
+        navDropdown.addEventListener('mouseenter', function () {
           if (!isMobile()) { isDropdownOpen = true; recalcHeight(); }
         });
-        navDropdown.addEventListener('mouseleave', function() {
+        navDropdown.addEventListener('mouseleave', function () {
           if (!isMobile()) { isDropdownOpen = false; recalcHeight(); }
         });
-        navDropdown.addEventListener('focusin', function() {
+        navDropdown.addEventListener('focusin', function () {
           if (!isMobile()) { isDropdownOpen = true; recalcHeight(); }
         });
-        navDropdown.addEventListener('focusout', function() {
+        navDropdown.addEventListener('focusout', function () {
           if (!isMobile()) {
-            setTimeout(function() {
+            setTimeout(function () {
               if (!navDropdown.contains(document.activeElement)) {
                 isDropdownOpen = false;
                 recalcHeight();
@@ -165,14 +173,14 @@
       // Mobile hamburger toggle
       var navToggle = document.getElementById('nav-toggle');
       if (navToggle) {
-        navToggle.addEventListener('change', function() {
+        navToggle.addEventListener('change', function () {
           isMobileMenuOpen = navToggle.checked;
           recalcHeight();
         });
       }
 
       // Window resize — also update mobile nav panel height
-      window.addEventListener('resize', function() {
+      window.addEventListener('resize', function () {
         if (!isMobile()) {
           isMobileMenuOpen = false;
           if (navLinks) navLinks.style.height = '';
@@ -185,4 +193,5 @@
     })();
   </script>
 </body>
+
 </html>
