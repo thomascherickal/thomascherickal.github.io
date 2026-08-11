@@ -12,8 +12,8 @@
 | **🔬 Deep Dives** | Long-Form Explainers | Commissioned long-form technical explainers (2,000–8,000 words) featuring research, architecture & verified benchmarks. |
 | **🎓 Developer Education** | Curricula & Courses | Multi-part tutorial series, structured learning paths, and workshop curricula with executable Jupyter & GitHub repos. |
 | **⚛️ Quantum Dev** | Qiskit & PennyLane | IBM Qiskit and PennyLane tutorials, QML algorithm walkthroughs, simulator benchmarks, and post-quantum risk briefs. |
-| **⚡ AI Assisted** | Standalone Drafting | Fast-turnaround drafting from briefs and specs, providing fast structure for internal technical review. |
-| **🎓 GenAI Training** | Live Virtual Workshops | Interactive masterclasses, LLM & agent bootcamps, prompt engineering, and lab sessions. |
+| **🤖 Agentic AI Systems** | Autonomous Agents | Multi-agent workflows, autonomous task execution, and agentic tool-calling systems covering tools like OpenClaw and Hermes Agent. |
+| **🎓 Generative AI Training** | Live Virtual Workshops | Interactive masterclasses, LLM & agent bootcamps, prompt engineering, and lab sessions. |
 | **⚛️ Quantum Training** | Qiskit & PennyLane | Live interactive workshops, VQE/QAOA masterclasses, and executive quantum bootcamps. |
 | **📦 Local LLMs** | Quantization & Serving | Quantization, local inference setup, vLLM & Ollama deployment guides, and GGUF private model serving. |
 | **🧠 Generative AI Dev** | Agentic Workflows | RAG pipelines, agentic workflows, prompt engineering frameworks, SLM fine-tuning, and GenAI developer docs. |
