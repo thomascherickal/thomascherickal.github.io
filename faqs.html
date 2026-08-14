@@ -47,7 +47,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css?v=2ad369fff509" />
+  <link rel="stylesheet" href="./style.css?v=faa24a55919f" />
 
   <style>
     .faq-category-badge {
@@ -732,15 +732,150 @@
     }, observerOptions);
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // FAQ Contact Form Handler
+    // FAQ Contact Form Handler & Dual-Mode Dispatch
     const faqForm = document.getElementById('faq-contact-form');
     const faqStatus = document.getElementById('faq-form-status');
+
+    function formatFaqEmailData(formData) {
+      const name = formData.get('name') || '';
+      const email = formData.get('email') || '';
+      const org = formData.get('organization') || '';
+      const subjectLine = formData.get('subject_line') || 'FAQ Question / Direct Inquiry';
+      const questionDetails = formData.get('question_details') || '';
+
+      const subject = `FAQ Question: ${subjectLine} — ${name}${org ? ' (' + org + ')' : ''}`;
+
+      const bodyLines = [
+        `Hi Thomas,`,
+        ``,
+        `Here is a direct question/inquiry from your FAQ page:`,
+        `--------------------------------------------------`,
+        `• Name: ${name}`,
+        `• Email: ${email}`,
+        `• Organization: ${org}`,
+        `• Subject: ${subjectLine}`,
+        `--------------------------------------------------`,
+        ``,
+        `Question / Inquiry Details:`,
+        questionDetails,
+        ``,
+        `--------------------------------------------------`,
+        `Sent via Thomas Cherickal Portfolio FAQ Form`
+      ];
+
+      return {
+        subject,
+        body: bodyLines.join('\n'),
+        targetEmail: 'thomascherickal@gmail.com'
+      };
+    }
+
+    function handleLocalFaqEmailDispatch(formData) {
+      const { subject, body, targetEmail } = formatFaqEmailData(formData);
+      const mailtoUri = `mailto:${targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const gmailUri = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(targetEmail)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      // Automatically launch user's default email client
+      const tempLink = document.createElement('a');
+      tempLink.href = mailtoUri;
+      tempLink.style.display = 'none';
+      document.body.appendChild(tempLink);
+      tempLink.click();
+      document.body.removeChild(tempLink);
+
+      if (faqStatus) {
+        faqStatus.style.display = 'block';
+        faqStatus.style.background = 'rgba(16, 185, 129, 0.15)';
+        faqStatus.style.color = '#34d399';
+        faqStatus.style.border = '1px solid rgba(16, 185, 129, 0.3)';
+        faqStatus.innerHTML = `
+          <div style="text-align:left;line-height:1.6;">
+            <div style="font-weight:700;font-size:1rem;margin-bottom:0.4rem;color:#34d399;">
+              ✉️ Email Ready to Send to ${targetEmail}
+            </div>
+            <p style="margin-bottom:0.75rem;font-size:0.88rem;color:var(--text-secondary);">
+              Your default email application has opened with your question pre-filled. You can also send or copy it directly below:
+            </p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:0.6rem;">
+              <a href="${gmailUri}" target="_blank" rel="noopener" class="btn btn-commission" style="padding:0.45rem 1rem;font-size:0.82rem;text-decoration:none;display:inline-flex;align-items:center;">
+                🚀 Open in Gmail Webmail
+              </a>
+              <a href="${mailtoUri}" class="btn btn-outline" style="padding:0.45rem 1rem;font-size:0.82rem;text-decoration:none;display:inline-flex;align-items:center;">
+                📧 Re-open Email App
+              </a>
+              <button type="button" id="copyFaqDetailsBtn" class="btn btn-outline" style="padding:0.45rem 1rem;font-size:0.82rem;cursor:pointer;">
+                📋 Copy Message Text
+              </button>
+            </div>
+            <div id="copyFaqSuccessMsg" style="display:none;margin-top:0.5rem;font-size:0.8rem;color:#34d399;font-family:var(--font-mono);">
+              ✅ Question copied to clipboard!
+            </div>
+          </div>
+        `;
+
+        const copyBtn = document.getElementById('copyFaqDetailsBtn');
+        const copyMsg = document.getElementById('copyFaqSuccessMsg');
+        if (copyBtn) {
+          copyBtn.addEventListener('click', function () {
+            const textToCopy = `To: ${targetEmail}\nSubject: ${subject}\n\n${body}`;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(textToCopy).then(() => {
+                showCopySuccess();
+              }).catch(() => fallbackCopy(textToCopy));
+            } else {
+              fallbackCopy(textToCopy);
+            }
+          });
+        }
+
+        function showCopySuccess() {
+          if (copyMsg) copyMsg.style.display = 'block';
+          if (copyBtn) copyBtn.textContent = '✅ Copied!';
+          setTimeout(() => {
+            if (copyMsg) copyMsg.style.display = 'none';
+            if (copyBtn) copyBtn.textContent = '📋 Copy Message Text';
+          }, 3000);
+        }
+
+        function fallbackCopy(text) {
+          const textarea = document.createElement('textarea');
+          textarea.value = text;
+          document.body.appendChild(textarea);
+          textarea.select();
+          try {
+            document.execCommand('copy');
+            showCopySuccess();
+          } catch (err) {
+            console.warn('Clipboard copy fallback error:', err);
+          }
+          document.body.removeChild(textarea);
+        }
+      }
+
+      faqForm.reset();
+    }
 
     if (faqForm) {
       faqForm.addEventListener('submit', function (e) {
         e.preventDefault();
         const submitBtn = faqForm.querySelector('button[type="submit"]');
-        if (submitBtn) submitBtn.disabled = true;
+        const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Question ✉️';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = 'Sending Question... ⏳';
+        }
+
+        const formData = new FormData(faqForm);
+        const isLocalFile = window.location.protocol === 'file:' || !window.location.origin || window.location.origin === 'null';
+
+        if (isLocalFile) {
+          handleLocalFaqEmailDispatch(formData);
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+          }
+          return;
+        }
 
         if (faqStatus) {
           faqStatus.style.display = 'block';
@@ -750,35 +885,55 @@
           faqStatus.textContent = 'Sending your question to thomascherickal@gmail.com...';
         }
 
-        const formData = new FormData(faqForm);
+        const payload = Object.fromEntries(formData.entries());
 
         fetch(faqForm.action, {
           method: 'POST',
-          body: formData,
           headers: {
+            'Content-Type': 'application/json',
             'Accept': 'application/json'
-          }
+          },
+          body: JSON.stringify(payload)
         })
-          .then(response => response.json())
-          .then(data => {
-            if (faqStatus) {
-              faqStatus.style.background = 'rgba(16, 185, 129, 0.15)';
-              faqStatus.style.color = '#34d399';
-              faqStatus.style.border = '1px solid rgba(16, 185, 129, 0.3)';
-              faqStatus.textContent = 'Thank you! Your question has been sent directly to thomascherickal@gmail.com.';
+          .then(async response => {
+            let data = {};
+            try {
+              const text = await response.text();
+              try {
+                data = JSON.parse(text);
+              } catch (e) {
+                if (response.ok) data = { success: true };
+              }
+            } catch (e) {
+              data = {};
             }
-            faqForm.reset();
-            if (submitBtn) submitBtn.disabled = false;
+            
+            if (data && data.message && data.message.includes('Make sure you open this page through a web server')) {
+              handleLocalFaqEmailDispatch(formData);
+              return;
+            }
+
+            if (response.ok && (data.success === 'true' || data.success === true || data.ok || (!data.error && !data.errors))) {
+              if (faqStatus) {
+                faqStatus.style.background = 'rgba(16, 185, 129, 0.15)';
+                faqStatus.style.color = '#34d399';
+                faqStatus.style.border = '1px solid rgba(16, 185, 129, 0.3)';
+                faqStatus.innerHTML = '✅ <strong>Thank you!</strong> Your question has been sent directly to Thomas Cherickal. You will receive a response within 24 hours.';
+              }
+              faqForm.reset();
+            } else {
+              const errorMsg = data.message || data.error || (data.errors && data.errors[0] && data.errors[0].message) || 'Oops! There was a problem sending your question. Please try again.';
+              throw new Error(errorMsg);
+            }
           })
           .catch(error => {
-            if (faqStatus) {
-              faqStatus.style.background = 'rgba(16, 185, 129, 0.15)';
-              faqStatus.style.color = '#34d399';
-              faqStatus.style.border = '1px solid rgba(16, 185, 129, 0.3)';
-              faqStatus.textContent = 'Thank you! Your question has been sent directly to thomascherickal@gmail.com.';
+            handleLocalFaqEmailDispatch(formData);
+          })
+          .finally(() => {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalBtnText;
             }
-            faqForm.reset();
-            if (submitBtn) submitBtn.disabled = false;
           });
       });
     }

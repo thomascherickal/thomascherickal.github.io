@@ -37,7 +37,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Open+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css?v=2ad369fff509" />
+  <link rel="stylesheet" href="./style.css?v=faa24a55919f" />
 
   <!-- Structured Data (JSON-LD) for Google Rich Results -->
   <script type="application/ld+json">
@@ -306,9 +306,12 @@
         </div>
 
         <div>
-          <form action="https://formspree.io/f/xbjnqkyw" method="POST" id="contact-form-el" class="contact-form">
-            <!-- Anti-spam Honeypot -->
+          <form action="https://formsubmit.co/ajax/thomascherickal@gmail.com" method="POST" id="contact-form-el" class="contact-form">
+            <!-- Anti-spam Honeypot & FormSubmit Config -->
             <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_subject" value="Project Intake / Contact Inquiry — Thomas Cherickal Portfolio" />
 
             <!-- Row 1: Mandatory Name & Email -->
             <div class="form-row">
@@ -483,47 +486,217 @@
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Contact Form Handler
+    // Contact Form Handler & Dual-Mode Dispatch
     const contactForm = document.getElementById('contact-form-el');
     const formStatus = document.getElementById('form-status');
+
+    function formatContactEmailData(formData) {
+      const name = formData.get('name') || '';
+      const email = formData.get('email') || '';
+      const org = formData.get('organization') || '';
+      const timeline = formData.get('timeline') || '';
+      const role = formData.get('role') || 'Not specified';
+      const website = formData.get('website') || 'Not specified';
+      const techStack = formData.get('tech_stack') || 'Not specified';
+      const deliverableFormat = formData.get('deliverable_format') || 'Not specified';
+      const projectType = formData.get('project_type') || 'General Inquiry';
+      const budget = formData.get('budget') || 'Not specified';
+      const message = formData.get('message') || '';
+
+      const subject = `Project Intake: ${projectType} — ${name}${org ? ' (' + org + ')' : ''}`;
+
+      const bodyLines = [
+        `Hi Thomas,`,
+        ``,
+        `Here are my project intake and inquiry details:`,
+        `--------------------------------------------------`,
+        `• Name: ${name}`,
+        `• Email: ${email}`,
+        `• Organization: ${org}`,
+        `• Target Timeline: ${timeline}`,
+        `• Role / Title: ${role}`,
+        `• Website / URL: ${website}`,
+        `• Preferred Tech Stack: ${techStack}`,
+        `• Deliverable Formats: ${deliverableFormat}`,
+        `• Project Type: ${projectType}`,
+        `• Estimated Scope: ${budget}`,
+        `--------------------------------------------------`,
+        ``,
+        `Project Details & Message:`,
+        message,
+        ``,
+        `--------------------------------------------------`,
+        `Sent via Thomas Cherickal Portfolio Contact Form`
+      ];
+
+      return {
+        subject,
+        body: bodyLines.join('\n'),
+        targetEmail: 'thomascherickal@gmail.com'
+      };
+    }
+
+    function handleLocalFileEmailDispatch(formData) {
+      const { subject, body, targetEmail } = formatContactEmailData(formData);
+      const mailtoUri = `mailto:${targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const gmailUri = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(targetEmail)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      // Automatically launch user's default email client
+      const tempLink = document.createElement('a');
+      tempLink.href = mailtoUri;
+      tempLink.style.display = 'none';
+      document.body.appendChild(tempLink);
+      tempLink.click();
+      document.body.removeChild(tempLink);
+
+      if (formStatus) {
+        formStatus.style.display = 'block';
+        formStatus.className = 'form-status success';
+        formStatus.innerHTML = `
+          <div style="text-align:left;line-height:1.6;">
+            <div style="font-weight:700;font-size:1rem;margin-bottom:0.4rem;color:var(--green);">
+              ✉️ Email Ready to Send to ${targetEmail}
+            </div>
+            <p style="margin-bottom:0.75rem;font-size:0.88rem;color:var(--text-secondary);">
+              Your default email application has opened with your project brief pre-filled. You can also send or copy it directly below:
+            </p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:0.6rem;">
+              <a href="${gmailUri}" target="_blank" rel="noopener" class="btn btn-commission" style="padding:0.45rem 1rem;font-size:0.82rem;text-decoration:none;display:inline-flex;align-items:center;">
+                🚀 Open in Gmail Webmail
+              </a>
+              <a href="${mailtoUri}" class="btn btn-outline" style="padding:0.45rem 1rem;font-size:0.82rem;text-decoration:none;display:inline-flex;align-items:center;">
+                📧 Re-open Email App
+              </a>
+              <button type="button" id="copyDetailsBtn" class="btn btn-outline" style="padding:0.45rem 1rem;font-size:0.82rem;cursor:pointer;">
+                📋 Copy Message Text
+              </button>
+            </div>
+            <div id="copySuccessMsg" style="display:none;margin-top:0.5rem;font-size:0.8rem;color:var(--green);font-family:var(--font-mono);">
+              ✅ Message copied to clipboard!
+            </div>
+          </div>
+        `;
+
+        const copyBtn = document.getElementById('copyDetailsBtn');
+        const copyMsg = document.getElementById('copySuccessMsg');
+        if (copyBtn) {
+          copyBtn.addEventListener('click', function () {
+            const textToCopy = `To: ${targetEmail}\nSubject: ${subject}\n\n${body}`;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(textToCopy).then(() => {
+                showCopySuccess();
+              }).catch(() => fallbackCopy(textToCopy));
+            } else {
+              fallbackCopy(textToCopy);
+            }
+          });
+        }
+
+        function showCopySuccess() {
+          if (copyMsg) copyMsg.style.display = 'block';
+          if (copyBtn) copyBtn.textContent = '✅ Copied!';
+          setTimeout(() => {
+            if (copyMsg) copyMsg.style.display = 'none';
+            if (copyBtn) copyBtn.textContent = '📋 Copy Message Text';
+          }, 3000);
+        }
+
+        function fallbackCopy(text) {
+          const textarea = document.createElement('textarea');
+          textarea.value = text;
+          document.body.appendChild(textarea);
+          textarea.select();
+          try {
+            document.execCommand('copy');
+            showCopySuccess();
+          } catch (err) {
+            console.warn('Clipboard copy fallback error:', err);
+          }
+          document.body.removeChild(textarea);
+        }
+      }
+
+      contactForm.reset();
+    }
 
     if (contactForm) {
       contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
         const submitBtn = contactForm.querySelector('button[type="submit"]');
-        if (submitBtn) submitBtn.disabled = true;
+        const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Message 🚀';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = 'Sending Message... ⏳';
+        }
+
+        const formData = new FormData(contactForm);
+        const isLocalFile = window.location.protocol === 'file:' || !window.location.origin || window.location.origin === 'null';
+
+        // Direct local file protocol dispatch (prevents CORS & FormSubmit web server restrictions)
+        if (isLocalFile) {
+          handleLocalFileEmailDispatch(formData);
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+          }
+          return;
+        }
 
         if (formStatus) {
           formStatus.style.display = 'block';
           formStatus.className = 'form-status info';
-          formStatus.textContent = 'Sending message...';
+          formStatus.textContent = 'Sending message to thomascherickal@gmail.com...';
         }
 
-        const formData = new FormData(contactForm);
+        const payload = Object.fromEntries(formData.entries());
 
         fetch(contactForm.action, {
           method: 'POST',
-          body: formData,
           headers: {
+            'Content-Type': 'application/json',
             'Accept': 'application/json'
-          }
+          },
+          body: JSON.stringify(payload)
         })
-          .then(response => response.json())
-          .then(data => {
-            if (formStatus) {
-              formStatus.className = 'form-status success';
-              formStatus.textContent = 'Thank you! Your message has been sent successfully.';
+          .then(async response => {
+            let data = {};
+            try {
+              const text = await response.text();
+              try {
+                data = JSON.parse(text);
+              } catch (e) {
+                if (response.ok) data = { success: true };
+              }
+            } catch (e) {
+              data = {};
             }
-            contactForm.reset();
+            
+            // Check if backend rejected due to plain HTML / local file browsing
+            if (data && data.message && data.message.includes('Make sure you open this page through a web server')) {
+              handleLocalFileEmailDispatch(formData);
+              return;
+            }
+
+            if (response.ok && (data.success === 'true' || data.success === true || data.ok || (!data.error && !data.errors))) {
+              if (formStatus) {
+                formStatus.className = 'form-status success';
+                formStatus.innerHTML = '✅ <strong>Thank you!</strong> Your message has been sent successfully to Thomas Cherickal. You will receive a response within 24 hours.';
+              }
+              contactForm.reset();
+            } else {
+              const errorMsg = data.message || data.error || (data.errors && data.errors[0] && data.errors[0].message) || 'Oops! There was a problem sending your message. Please try again.';
+              throw new Error(errorMsg);
+            }
           })
           .catch(error => {
-            if (formStatus) {
-              formStatus.className = 'form-status error';
-              formStatus.textContent = 'Oops! There was a problem sending your message. Please try again.';
-            }
+            // If network failure, adblocker block, or CORS block occurs, gracefully fall back to local email dispatch
+            handleLocalFileEmailDispatch(formData);
           })
           .finally(() => {
-            if (submitBtn) submitBtn.disabled = false;
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalBtnText;
+            }
           });
       });
     }
