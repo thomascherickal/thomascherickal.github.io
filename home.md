@@ -186,7 +186,7 @@ How to understand and build emerging technologies.
 - [🗞 HackerNoon (u/thomascherickal)](https://hackernoon.com/u/thomascherickal)
 - [✍️ Medium (@thomascherickal)](https://thomascherickal.medium.com)
 - [🔷 Hashnode (thomascherickal.hashnode.dev)](https://thomascherickal.hashnode.dev)
-- [📬 Substack (thesingularitypoint.substack.com)](https://thesingularitypoint.substack.com)
+- [📬 Substack (thomascherickal.substack.com)](https://thomascherickal.substack.com)
 - [❓ Quora (thomascherickal.quora.com)](https://thomascherickal.quora.com)
 - [🤖 Reddit (reddit.com/user/thomascherickal)](https://reddit.com/user/thomascherickal)
 - [🧪 Exercism (exercism.org/profiles/thomascherickal)](https://exercism.org/profiles/thomascherickal)
