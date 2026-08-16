@@ -210,8 +210,8 @@
             <h3
               style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:0.5rem;color:var(--text-primary);">
               Direct Communication</h3>
-            <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.6;">Typical response within 24 hours.
-              Specializing in Generative AI Content &amp; Quantum Computing Technology. Remote and flexible.</p>
+            <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.6;">Typical response within 24–48
+              hours. Specializing in Generative AI Content &amp; Quantum Computing Technology. Remote and flexible.</p>
             <div class="contact-method-list">
               <div class="contact-method-item">
                 <div class="contact-method-icon">📧</div>
@@ -246,7 +246,7 @@
             <div
               style="display:flex;flex-direction:column;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);line-height:1.5;">
               <div>
-                <strong style="color:var(--text-primary);display:block;margin-bottom:0.15rem;">⚡ 24-Hour SLA
+                <strong style="color:var(--text-primary);display:block;margin-bottom:0.15rem;">⚡ 48-Hour SLA
                   Guarantee</strong>
                 Guaranteed business-day response for all incoming project inquiries, scope requests, and training
                 briefs.
@@ -264,10 +264,9 @@
                 runtime environments.
               </div>
               <div>
-                <strong style="color:var(--text-primary);display:block;margin-bottom:0.15rem;">📐 Diátaxis &amp; AI
-                  Retrieval Architecture</strong>
-                Content structured for high readability by human software engineers and optimized for Generative AI RAG
-                retrieval.
+                <strong style="color:var(--text-primary);display:block;margin-bottom:0.15rem;">⚛️ Quantum AI &amp;
+                  Hybrid Architecture</strong>
+                Rigorous quantum-classical workflows, Quantum Neural Networks (QNNs), and PennyLane/PyTorch pipelines.
               </div>
             </div>
           </div>
@@ -305,12 +304,14 @@
         </div>
 
         <div>
-          <form action="https://formsubmit.co/ajax/thomascherickal@gmail.com" method="POST" id="contact-form-el" class="contact-form">
+          <form action="https://formsubmit.co/ajax/thomascherickal@gmail.com" method="POST" id="contact-form-el"
+            class="contact-form">
             <!-- Anti-spam Honeypot & FormSubmit Config -->
             <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_subject" value="Project Intake / Contact Inquiry — Thomas Cherickal Portfolio" />
+            <input type="hidden" name="_subject"
+              value="Project Intake / Contact Inquiry — Thomas Cherickal Portfolio" />
 
             <!-- Row 1: Mandatory Name & Email -->
             <div class="form-row">
@@ -669,7 +670,7 @@
             } catch (e) {
               data = {};
             }
-            
+
             // Check if backend rejected due to plain HTML / local file browsing
             if (data && data.message && data.message.includes('Make sure you open this page through a web server')) {
               handleLocalFileEmailDispatch(formData);
