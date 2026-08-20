@@ -51,7 +51,6 @@
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Open+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="./style.css?v=faa24a55919f" />
-  <link rel="stylesheet" href="./reviews.css" />
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -706,101 +705,6 @@
         </a>
       </div>
     </section>
-
-    <!-- CLIENT & PEER REVIEWS CAROUSEL SECTION -->
-    <section class="reviews-section reveal" id="reviews" style="display: none;">
-      <div class="section-header">
-        <p class="section-label">Client &amp; Peer Testimonials</p>
-        <h2 class="section-title">Verified <span class="accent-gold">Reviews</span></h2>
-        <p class="section-sub">Feedback from tech leaders, developer advocates, and enterprise clients on Generative AI,
-          AI Agent Orchestration, and Quantum Computing education.</p>
-      </div>
-
-      <div class="reviews-carousel-wrapper">
-        <button class="carousel-nav carousel-prev" id="reviewsPrev" aria-label="Previous Review">❮</button>
-        <div class="reviews-carousel-track-container">
-          <div class="reviews-carousel-track" id="reviewsTrack">
-            <!-- Dynamic Carousel Cards rendered via components.js -->
-          </div>
-        </div>
-        <button class="carousel-nav carousel-next" id="reviewsNext" aria-label="Next Review">❯</button>
-      </div>
-
-      <!-- Carousel Navigation Dots -->
-      <div class="carousel-dots" id="reviewsDots"></div>
-
-      <!-- Carousel Actions -->
-      <div class="add-review-cta">
-        <button class="btn btn-gold" id="openReviewModalBtn">✍️ Add a Review</button>
-        <button class="btn btn-outline" id="toggleAdminBtn" style="font-size:0.7rem;padding:0.45rem 0.9rem;">
-          🛡️ Moderate Reviews (<span id="pendingCount">0</span>)
-        </button>
-      </div>
-    </section>
-
-    <!-- ADD REVIEW MODAL -->
-    <div class="review-modal-backdrop" id="reviewModalBackdrop" aria-hidden="true">
-      <div class="review-modal" role="dialog" aria-labelledby="modalTitle">
-        <button class="review-modal-close" id="closeReviewModalBtn" aria-label="Close modal">&times;</button>
-        <h3 id="modalTitle" class="review-modal-title">Share Your Review</h3>
-        <p class="review-modal-sub">Submit your feedback on Thomas Cherickal's technical content, developer education,
-          or AI/Quantum services. <strong>Note:</strong> All reviews are reviewed &amp; approved before appearing on the
-          carousel.</p>
-
-        <form id="addReviewForm" class="review-form">
-          <div class="form-group">
-            <label for="reviewName">Full Name <span class="required">*</span></label>
-            <input type="text" id="reviewName" class="form-control" placeholder="e.g. Dr. Elena Rostova" required />
-          </div>
-
-          <div class="form-group">
-            <label for="reviewRole">Role / Organization <span class="required">*</span></label>
-            <input type="text" id="reviewRole" class="form-control"
-              placeholder="e.g. Principal AI Architect at Nexus Scale" required />
-          </div>
-
-          <div class="form-group">
-            <label>Rating <span class="required">*</span></label>
-            <div class="star-rating-select" id="starRatingSelect">
-              <span class="star-btn active" data-rating="1">★</span>
-              <span class="star-btn active" data-rating="2">★</span>
-              <span class="star-btn active" data-rating="3">★</span>
-              <span class="star-btn active" data-rating="4">★</span>
-              <span class="star-btn active" data-rating="5">★</span>
-            </div>
-            <input type="hidden" id="reviewRating" value="5" />
-          </div>
-
-          <div class="form-group">
-            <label for="reviewText">Review Content <span class="required">*</span></label>
-            <textarea id="reviewText" class="form-control" rows="4"
-              placeholder="Write your review about the technical accuracy, writing quality, AI agent frameworks, or quantum tutorials..."
-              required></textarea>
-          </div>
-
-          <div class="form-status" id="reviewFormStatus"></div>
-
-          <div class="form-actions">
-            <button type="button" class="btn btn-outline" id="cancelReviewBtn">Cancel</button>
-            <button type="submit" class="btn btn-primary" id="submitReviewBtn">Submit Review for Approval</button>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <!-- MODERATION ADMIN PANEL MODAL -->
-    <div class="review-modal-backdrop" id="adminModalBackdrop" aria-hidden="true">
-      <div class="review-modal admin-modal" role="dialog" aria-labelledby="adminModalTitle">
-        <button class="review-modal-close" id="closeAdminModalBtn" aria-label="Close modal">&times;</button>
-        <h3 id="adminModalTitle" class="review-modal-title">🛡️ Review Moderation Panel</h3>
-        <p class="review-modal-sub">Approve or reject submitted reviews. Only approved reviews will be displayed
-          publicly on the homepage carousel.</p>
-
-        <div id="pendingReviewsList" class="pending-reviews-list">
-          <!-- Dynamic pending review items rendered via components.js -->
-        </div>
-      </div>
-    </div>
 
     <div class="divider"></div>
 
