@@ -50,7 +50,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Open+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css?v=faa24a55919f" />
+  <link rel="stylesheet" href="./style.css?v=a338d7fc1908" />
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -425,7 +425,1070 @@
 
     <div class="divider"></div>
 
-    <!-- DESTINATION CARDS (10 Curated Destinations) -->
+    <!-- 24 FEATURED ARTICLES CONTINUOUS SCROLLING CAROUSEL -->
+    <section class="articles-carousel-section reveal" id="articles-carousel">
+      <div class="articles-carousel-header">
+        <div class="section-header">
+          <p class="section-label">Selected Publications</p>
+          <h2 class="section-title">Featured <span class="accent-cyan">Technical Deep Dives</span></h2>
+          <p class="section-sub">24 published long-form technical deep dives across Generative AI, AI Agents, Quantum Computing, and Distributed Systems.</p>
+        </div>
+        <div class="articles-carousel-controls">
+          <a href="writing.html" class="btn btn-outline" style="font-size:0.85rem;padding:0.55rem 1.15rem;">View All 24 Publications ↗</a>
+        </div>
+      </div>
+
+      <div class="articles-marquee-container" id="articlesMarqueeContainer">
+        <div class="articles-marquee-track" id="articlesMarqueeTrack">
+
+          <!-- SET 1 (24 Cards) -->
+          <!-- Card 1 -->
+          <a href="https://hackernoon.com/google-gemini-vs-anthropic-claude-vs-openai-chatgpt-vs-xai-grok-the-ultimate-comparison" target="_blank" rel="noopener" class="article-carousel-card">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge">🤖 Generative AI</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Mar 12, 2026</span> · <span>5,000 words</span>
+              </div>
+              <h3 class="article-carousel-title">Google Gemini vs Anthropic Claude vs OpenAI ChatGPT vs xAI Grok: The Ultimate Comparison</h3>
+              <p class="article-carousel-summary">Comprehensive comparative benchmark evaluating reasoning, writing, coding, enterprise safety, and live tool performance across the top frontier AI models.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#1</span>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="https://hackernoon.com/how-to-run-your-own-local-llm-2026-edition-version-1" target="_blank" rel="noopener" class="article-carousel-card">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge">🤖 Local LLMs</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Mar 9, 2026</span> · <span>3,800 words</span>
+              </div>
+              <h3 class="article-carousel-title">How to Run Your Own Local LLM — 2026 Edition</h3>
+              <p class="article-carousel-summary">Technical deployment guide benchmarking top open-weight LLMs, GGUF quantization, and high-density memory clusters for private, offline enterprise inference.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#2</span>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="https://hackernoon.com/the-ai-agent-revolution-how-to-build-the-workforce-of-tomorrow" target="_blank" rel="noopener" class="article-carousel-card border-gold">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge gold">🦾 AI Agents</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Nov 10, 2025</span> · <span>3,200 words</span>
+              </div>
+              <h3 class="article-carousel-title">The AI Agent Revolution: How to Build the Workforce of Tomorrow</h3>
+              <p class="article-carousel-summary">Architectural blueprint for building autonomous agent swarms, tool-calling loops, and multi-agent workflows that transform enterprise engineering teams.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#3</span>
+            </div>
+          </a>
+
+          <!-- Card 4 -->
+          <a href="https://hackernoon.com/the-case-for-local-ai-has-never-been-stronger" target="_blank" rel="noopener" class="article-carousel-card">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge">🤖 Private AI</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Oct 5, 2025</span> · <span>2,800 words</span>
+              </div>
+              <h3 class="article-carousel-title">The Case for Local AI Has Never Been Stronger</h3>
+              <p class="article-carousel-summary">Strategic analysis of data sovereignty, zero cloud latency, and economics driving enterprise migration from cloud APIs to on-premise SLMs.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#4</span>
+            </div>
+          </a>
+
+          <!-- Card 5 -->
+          <a href="https://hackernoon.com/comparing-quantum-programming-frameworks-ibm-qiskit-microsoft-q-and-quantinuums-new-stack" target="_blank" rel="noopener" class="article-carousel-card border-violet">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge violet">⚛️ Quantum Stack</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Sep 15, 2025</span> · <span>3,500 words</span>
+              </div>
+              <h3 class="article-carousel-title">Comparing Quantum Frameworks: IBM Qiskit, Microsoft Q#, and Quantinuum's New Stack</h3>
+              <p class="article-carousel-summary">In-depth comparative study of IBM Qiskit, Microsoft Q#, and Quantinuum stacks evaluating VQE algorithms, compilation throughput, and circuit depth.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#5</span>
+            </div>
+          </a>
+
+          <!-- Card 6 -->
+          <a href="https://hackernoon.com/quantum-computing-fundamentals-part-i-10-easy-pieces" target="_blank" rel="noopener" class="article-carousel-card border-violet">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge violet">⚛️ Quantum Basics</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Dec 29, 2025</span> · <span>4,200 words</span>
+              </div>
+              <h3 class="article-carousel-title">Quantum Computing Fundamentals Part I: 10 Easy Pieces</h3>
+              <p class="article-carousel-summary">Foundational guide breaking down qubits, superposition, Bloch spheres, Bell states, and quantum gates with executable Qiskit Python and Rust code.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#6</span>
+            </div>
+          </a>
+
+          <!-- Card 7 -->
+          <a href="https://hackernoon.com/quantum-computing-fundamentals-part-ii-10-not-so-easy-pieces" target="_blank" rel="noopener" class="article-carousel-card border-violet">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge violet">⚛️ Quantum Algo</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Dec 31, 2025</span> · <span>4,500 words</span>
+              </div>
+              <h3 class="article-carousel-title">Quantum Computing Fundamentals Part II: 10 Not-So Easy Pieces</h3>
+              <p class="article-carousel-summary">Advanced deep dive into Shor's algorithm, Quantum Fourier Transform, Phase Estimation, and Hamiltonian simulation with verified circuit implementations.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#7</span>
+            </div>
+          </a>
+
+          <!-- Card 8 -->
+          <a href="https://hackernoon.com/how-quantum-computers-threaten-bitcoin-and-the-entire-internet-simply-explained" target="_blank" rel="noopener" class="article-carousel-card border-violet">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge violet">⚛️ Post-Quantum</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Dec 7, 2025</span> · <span>3,200 words</span>
+              </div>
+              <h3 class="article-carousel-title">How Quantum Computers Threaten Bitcoin and the Entire Internet: Simply Explained</h3>
+              <p class="article-carousel-summary">Crucial analysis of quantum decryption threats against RSA and elliptic-curve cryptography, outlining mandatory migration to NIST post-quantum standards.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#8</span>
+            </div>
+          </a>
+
+          <!-- Card 9 -->
+          <a href="https://hackernoon.com/the-openclaw-saga-how-the-last-two-weeks-changed-the-agentic-ai-world-forever" target="_blank" rel="noopener" class="article-carousel-card border-gold">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge gold">🦾 Agentic AI</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Mar 2, 2026</span> · <span>3,600 words</span>
+              </div>
+              <h3 class="article-carousel-title">The OpenClaw Saga: How the Last Two Weeks Changed the Agentic AI World Forever</h3>
+              <p class="article-carousel-summary">Chronicle of the OpenClaw open-source agentic revolution, examining persistent vector memory, sub-agent routing, and critical security patch fixes.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#9</span>
+            </div>
+          </a>
+
+          <!-- Card 10 -->
+          <a href="https://hackernoon.com/openfangthe-game-changing-open-source-agent-operating-system-that-replaces-openclaw" target="_blank" rel="noopener" class="article-carousel-card border-gold">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge gold">🦾 Agent OS</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Feb 15, 2026</span> · <span>3,400 words</span>
+              </div>
+              <h3 class="article-carousel-title">OpenFang: The Game-Changing Open Source Agent OS That Replaces OpenClaw</h3>
+              <p class="article-carousel-summary">Systematic breakdown of the OpenFang agent operating system, detailing process isolation, daemon management, and model-agnostic execution layers.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#10</span>
+            </div>
+          </a>
+
+          <!-- Card 11 -->
+          <a href="https://hackernoon.com/hermes-agent-vs-openclaw-which-ai-agent-framework-wins-in-2026" target="_blank" rel="noopener" class="article-carousel-card border-gold">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge gold">🦾 Agent Frameworks</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>May 13, 2026</span> · <span>4,000 words</span>
+              </div>
+              <h3 class="article-carousel-title">Hermes Agent vs OpenClaw: Which AI Agent Framework Wins in 2026?</h3>
+              <p class="article-carousel-summary">Architectural comparison of Nous Research Hermes Agent and OpenClaw, evaluating trajectory optimization, RL pipelines, and sandbox security isolation.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#11</span>
+            </div>
+          </a>
+
+          <!-- Card 12 -->
+          <a href="https://hackernoon.com/the-next-trillion-dollar-ai-shift-why-openclaw-changes-everything-for-llms" target="_blank" rel="noopener" class="article-carousel-card border-gold">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge gold">🦾 Agent Economics</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jan 28, 2026</span> · <span>3,100 words</span>
+              </div>
+              <h3 class="article-carousel-title">The Next Trillion-Dollar AI Shift: Why OpenClaw Changes Everything for LLMs</h3>
+              <p class="article-carousel-summary">Macroeconomic analysis of how decentralized, autonomous agent frameworks disrupt centralized big-tech API monopolies and reshape developer tooling.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#12</span>
+            </div>
+          </a>
+
+          <!-- Card 13 -->
+          <a href="https://hackernoon.com/the-ai-olympics-which-20-usd-ai-subscription-plan-wins-in-2026" target="_blank" rel="noopener" class="article-carousel-card border-green">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge green">🛠️ AI Tooling</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jan 5, 2026</span> · <span>3,500 words</span>
+              </div>
+              <h3 class="article-carousel-title">The AI Olympics: Which $20 AI Subscription Plan Wins in 2026?</h3>
+              <p class="article-carousel-summary">Direct showdown comparing ChatGPT Plus, Claude Pro, Gemini Advanced, and Grok Premium on coding, reasoning, and context window limits.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#13</span>
+            </div>
+          </a>
+
+          <!-- Card 14 -->
+          <a href="https://hackernoon.com/introducing-code-wiki-googles-notebooklm-for-developers" target="_blank" rel="noopener" class="article-carousel-card border-green">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge green">🛠️ Developer Tools</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Dec 12, 2025</span> · <span>2,900 words</span>
+              </div>
+              <h3 class="article-carousel-title">Introducing Code Wiki: Google's Gemini Notebook for Developers</h3>
+              <p class="article-carousel-summary">Hands-on exploration of Google's Code Wiki, turning complex codebase architectures into conversational, interactive developer documentation hubs.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#14</span>
+            </div>
+          </a>
+
+          <!-- Card 15 -->
+          <a href="https://hackernoon.com/the-internet-cant-stop-talking-about-google-notebooklm" target="_blank" rel="noopener" class="article-carousel-card border-green">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge green">🛠️ AI Workflows</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Nov 20, 2025</span> · <span>2,700 words</span>
+              </div>
+              <h3 class="article-carousel-title">The Internet Can't Stop Talking About Google Gemini Notebook</h3>
+              <p class="article-carousel-summary">Guide to leveraging Gemini Notebook for grounded multimodal synthesis, automated technical audio briefings, and high-speed research aggregation.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#15</span>
+            </div>
+          </a>
+
+          <!-- Card 16 -->
+          <a href="https://hackernoon.com/google-antigravity-20-game-changing-prompts-for-complete-automation" target="_blank" rel="noopener" class="article-carousel-card border-green">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge green">🛠️ Automation</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Feb 5, 2026</span> · <span>3,300 words</span>
+              </div>
+              <h3 class="article-carousel-title">Google Antigravity: 20 Game-Changing Prompts for Complete Automation</h3>
+              <p class="article-carousel-summary">Curated playbook of 20 high-leverage prompts unlocking automated multi-file code refactoring, test generation, and complex DevOps deployments.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#16</span>
+            </div>
+          </a>
+
+          <!-- Card 17 -->
+          <a href="https://hackernoon.com/why-the-race-to-agi-is-humanitys-defining-moment" target="_blank" rel="noopener" class="article-carousel-card border-pink">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge pink">🔮 Futurism &amp; AGI</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Sep 14, 2025</span> · <span>3,600 words</span>
+              </div>
+              <h3 class="article-carousel-title">Why the Race to AGI is Humanity's Defining Moment</h3>
+              <p class="article-carousel-summary">Philosophical and technological exploration of artificial general intelligence trajectories, compute scaling limits, and societal alignment imperatives.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#17</span>
+            </div>
+          </a>
+
+          <!-- Card 18 -->
+          <a href="https://hackernoon.com/ai-proof-your-career-future-the-1-skill-ai-agents-cannot-touch" target="_blank" rel="noopener" class="article-carousel-card border-pink">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge pink">🔮 Career Strategy</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Aug 1, 2025</span> · <span>2,800 words</span>
+              </div>
+              <h3 class="article-carousel-title">AI-Proof Your Career Future: The #1 Skill AI Agents Cannot Touch</h3>
+              <p class="article-carousel-summary">Career strategy guide identifying human verification, systems-level architecture, and editorial judgment as immune to autonomous agent automation.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#18</span>
+            </div>
+          </a>
+
+          <!-- Card 19 -->
+          <a href="https://hackernoon.com/code-red-why-china-is-well-positioned-to-win-the-ai-race" target="_blank" rel="noopener" class="article-carousel-card border-pink">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge pink">🔮 Geopolitics</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jul 10, 2025</span> · <span>3,100 words</span>
+              </div>
+              <h3 class="article-carousel-title">Code Red: Why China Is Well Positioned to Win the AI Race</h3>
+              <p class="article-carousel-summary">In-depth geopolitical and technical review of open-source model ecosystems, compute infrastructure, and engineering talent driving global AI competition.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#19</span>
+            </div>
+          </a>
+
+          <!-- Card 20 -->
+          <a href="https://hackernoon.com/small-language-models-have-a-trillion-dollar-future" target="_blank" rel="noopener" class="article-carousel-card border-pink">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge pink">🔮 Edge SLMs</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jun 18, 2025</span> · <span>3,000 words</span>
+              </div>
+              <h3 class="article-carousel-title">Small Language Models Have a Trillion-Dollar Future</h3>
+              <p class="article-carousel-summary">Technical analysis of compact, fine-tuned SLMs outperforming frontier models on domain-specific edge devices with fractional compute costs.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#20</span>
+            </div>
+          </a>
+
+          <!-- Card 21 -->
+          <a href="https://hackernoon.com/how-blockchain-and-smart-contracts-revolutionize-content-monetization-for-intellectual-property" target="_blank" rel="noopener" class="article-carousel-card border-red">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge red">🔗 Web3 &amp; IP</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Mar 12, 2024</span> · <span>2,900 words</span>
+              </div>
+              <h3 class="article-carousel-title">How Blockchain and Smart Contracts Revolutionize Content Monetization</h3>
+              <p class="article-carousel-summary">Deep dive into decentralized intellectual property protocols, micro-royalties, and programmatic monetization frameworks for digital content creators.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#21</span>
+            </div>
+          </a>
+
+          <!-- Card 22 -->
+          <a href="https://hackernoon.com/the-startup-that-will-change-the-industrial-world-the-decentralized-autonomous-supply-chain" target="_blank" rel="noopener" class="article-carousel-card border-red">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge red">🔗 Supply Chain</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Nov 5, 2023</span> · <span>3,200 words</span>
+              </div>
+              <h3 class="article-carousel-title">The Startup That Will Change the Industrial World: The Decentralized Supply Chain</h3>
+              <p class="article-carousel-summary">Industrial case study on trustless multi-party logistics, cryptographic ledger tracking, and automated smart-contract inventory settlement.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#22</span>
+            </div>
+          </a>
+
+          <!-- Card 23 -->
+          <a href="https://hackernoon.com/7-blockchain-startups-that-could-generate-multibillion-dollar-revenue-within-2-years" target="_blank" rel="noopener" class="article-carousel-card border-red">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge red">🔗 Startups</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Sep 18, 2023</span> · <span>3,400 words</span>
+              </div>
+              <h3 class="article-carousel-title">7 Blockchain Startups That Could Generate Multibillion-Dollar Revenue</h3>
+              <p class="article-carousel-summary">Venture analysis of 7 high-impact blockchain architectures solving enterprise privacy, cross-chain liquidity, and zero-knowledge verification.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#23</span>
+            </div>
+          </a>
+
+          <!-- Card 24 -->
+          <a href="https://hackernoon.com/classical-blockchain-vs-hedera-hashgraph" target="_blank" rel="noopener" class="article-carousel-card border-red">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge red">🔗 Distributed Tech</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jun 22, 2023</span> · <span>2,800 words</span>
+              </div>
+              <h3 class="article-carousel-title">Classical Blockchain vs Hedera Hashgraph</h3>
+              <p class="article-carousel-summary">Comparative architecture study contrasting traditional proof-of-work consensus with asynchronous Byzantine Fault Tolerant directed acyclic graphs.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#24</span>
+            </div>
+          </a>
+
+          <!-- SET 2 (Duplicated for Seamless 100% Continuous Loop) -->
+          <!-- Card 1 (Dup) -->
+          <a href="https://hackernoon.com/google-gemini-vs-anthropic-claude-vs-openai-chatgpt-vs-xai-grok-the-ultimate-comparison" target="_blank" rel="noopener" class="article-carousel-card" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge">🤖 Generative AI</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Mar 12, 2026</span> · <span>5,000 words</span>
+              </div>
+              <div class="article-carousel-title">Google Gemini vs Anthropic Claude vs OpenAI ChatGPT vs xAI Grok: The Ultimate Comparison</div>
+              <p class="article-carousel-summary">Comprehensive comparative benchmark evaluating reasoning, writing, coding, enterprise safety, and live tool performance across the top frontier AI models.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#1</span>
+            </div>
+          </a>
+
+          <!-- Card 2 (Dup) -->
+          <a href="https://hackernoon.com/how-to-run-your-own-local-llm-2026-edition-version-1" target="_blank" rel="noopener" class="article-carousel-card" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge">🤖 Local LLMs</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Mar 9, 2026</span> · <span>3,800 words</span>
+              </div>
+              <div class="article-carousel-title">How to Run Your Own Local LLM — 2026 Edition</div>
+              <p class="article-carousel-summary">Technical deployment guide benchmarking top open-weight LLMs, GGUF quantization, and high-density memory clusters for private, offline enterprise inference.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#2</span>
+            </div>
+          </a>
+
+          <!-- Card 3 (Dup) -->
+          <a href="https://hackernoon.com/the-ai-agent-revolution-how-to-build-the-workforce-of-tomorrow" target="_blank" rel="noopener" class="article-carousel-card border-gold" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge gold">🦾 AI Agents</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Nov 10, 2025</span> · <span>3,200 words</span>
+              </div>
+              <div class="article-carousel-title">The AI Agent Revolution: How to Build the Workforce of Tomorrow</div>
+              <p class="article-carousel-summary">Architectural blueprint for building autonomous agent swarms, tool-calling loops, and multi-agent workflows that transform enterprise engineering teams.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#3</span>
+            </div>
+          </a>
+
+          <!-- Card 4 (Dup) -->
+          <a href="https://hackernoon.com/the-case-for-local-ai-has-never-been-stronger" target="_blank" rel="noopener" class="article-carousel-card" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge">🤖 Private AI</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Oct 5, 2025</span> · <span>2,800 words</span>
+              </div>
+              <div class="article-carousel-title">The Case for Local AI Has Never Been Stronger</div>
+              <p class="article-carousel-summary">Strategic analysis of data sovereignty, zero cloud latency, and economics driving enterprise migration from cloud APIs to on-premise SLMs.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#4</span>
+            </div>
+          </a>
+
+          <!-- Card 5 (Dup) -->
+          <a href="https://hackernoon.com/comparing-quantum-programming-frameworks-ibm-qiskit-microsoft-q-and-quantinuums-new-stack" target="_blank" rel="noopener" class="article-carousel-card border-violet" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge violet">⚛️ Quantum Stack</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Sep 15, 2025</span> · <span>3,500 words</span>
+              </div>
+              <div class="article-carousel-title">Comparing Quantum Frameworks: IBM Qiskit, Microsoft Q#, and Quantinuum's New Stack</div>
+              <p class="article-carousel-summary">In-depth comparative study of IBM Qiskit, Microsoft Q#, and Quantinuum stacks evaluating VQE algorithms, compilation throughput, and circuit depth.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#5</span>
+            </div>
+          </a>
+
+          <!-- Card 6 (Dup) -->
+          <a href="https://hackernoon.com/quantum-computing-fundamentals-part-i-10-easy-pieces" target="_blank" rel="noopener" class="article-carousel-card border-violet" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge violet">⚛️ Quantum Basics</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Dec 29, 2025</span> · <span>4,200 words</span>
+              </div>
+              <div class="article-carousel-title">Quantum Computing Fundamentals Part I: 10 Easy Pieces</div>
+              <p class="article-carousel-summary">Foundational guide breaking down qubits, superposition, Bloch spheres, Bell states, and quantum gates with executable Qiskit Python and Rust code.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#6</span>
+            </div>
+          </a>
+
+          <!-- Card 7 (Dup) -->
+          <a href="https://hackernoon.com/quantum-computing-fundamentals-part-ii-10-not-so-easy-pieces" target="_blank" rel="noopener" class="article-carousel-card border-violet" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge violet">⚛️ Quantum Algo</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Dec 31, 2025</span> · <span>4,500 words</span>
+              </div>
+              <div class="article-carousel-title">Quantum Computing Fundamentals Part II: 10 Not-So Easy Pieces</div>
+              <p class="article-carousel-summary">Advanced deep dive into Shor's algorithm, Quantum Fourier Transform, Phase Estimation, and Hamiltonian simulation with verified circuit implementations.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#7</span>
+            </div>
+          </a>
+
+          <!-- Card 8 (Dup) -->
+          <a href="https://hackernoon.com/how-quantum-computers-threaten-bitcoin-and-the-entire-internet-simply-explained" target="_blank" rel="noopener" class="article-carousel-card border-violet" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge violet">⚛️ Post-Quantum</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Dec 7, 2025</span> · <span>3,200 words</span>
+              </div>
+              <div class="article-carousel-title">How Quantum Computers Threaten Bitcoin and the Entire Internet: Simply Explained</div>
+              <p class="article-carousel-summary">Crucial analysis of quantum decryption threats against RSA and elliptic-curve cryptography, outlining mandatory migration to NIST post-quantum standards.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#8</span>
+            </div>
+          </a>
+
+          <!-- Card 9 (Dup) -->
+          <a href="https://hackernoon.com/the-openclaw-saga-how-the-last-two-weeks-changed-the-agentic-ai-world-forever" target="_blank" rel="noopener" class="article-carousel-card border-gold" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge gold">🦾 Agentic AI</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Mar 2, 2026</span> · <span>3,600 words</span>
+              </div>
+              <div class="article-carousel-title">The OpenClaw Saga: How the Last Two Weeks Changed the Agentic AI World Forever</div>
+              <p class="article-carousel-summary">Chronicle of the OpenClaw open-source agentic revolution, examining persistent vector memory, sub-agent routing, and critical security patch fixes.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#9</span>
+            </div>
+          </a>
+
+          <!-- Card 10 (Dup) -->
+          <a href="https://hackernoon.com/openfangthe-game-changing-open-source-agent-operating-system-that-replaces-openclaw" target="_blank" rel="noopener" class="article-carousel-card border-gold" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge gold">🦾 Agent OS</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Feb 15, 2026</span> · <span>3,400 words</span>
+              </div>
+              <div class="article-carousel-title">OpenFang: The Game-Changing Open Source Agent OS That Replaces OpenClaw</div>
+              <p class="article-carousel-summary">Systematic breakdown of the OpenFang agent operating system, detailing process isolation, daemon management, and model-agnostic execution layers.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#10</span>
+            </div>
+          </a>
+
+          <!-- Card 11 (Dup) -->
+          <a href="https://hackernoon.com/hermes-agent-vs-openclaw-which-ai-agent-framework-wins-in-2026" target="_blank" rel="noopener" class="article-carousel-card border-gold" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge gold">🦾 Agent Frameworks</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>May 13, 2026</span> · <span>4,000 words</span>
+              </div>
+              <div class="article-carousel-title">Hermes Agent vs OpenClaw: Which AI Agent Framework Wins in 2026?</div>
+              <p class="article-carousel-summary">Architectural comparison of Nous Research Hermes Agent and OpenClaw, evaluating trajectory optimization, RL pipelines, and sandbox security isolation.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#11</span>
+            </div>
+          </a>
+
+          <!-- Card 12 (Dup) -->
+          <a href="https://hackernoon.com/the-next-trillion-dollar-ai-shift-why-openclaw-changes-everything-for-llms" target="_blank" rel="noopener" class="article-carousel-card border-gold" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge gold">🦾 Agent Economics</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jan 28, 2026</span> · <span>3,100 words</span>
+              </div>
+              <div class="article-carousel-title">The Next Trillion-Dollar AI Shift: Why OpenClaw Changes Everything for LLMs</div>
+              <p class="article-carousel-summary">Macroeconomic analysis of how decentralized, autonomous agent frameworks disrupt centralized big-tech API monopolies and reshape developer tooling.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#12</span>
+            </div>
+          </a>
+
+          <!-- Card 13 (Dup) -->
+          <a href="https://hackernoon.com/the-ai-olympics-which-20-usd-ai-subscription-plan-wins-in-2026" target="_blank" rel="noopener" class="article-carousel-card border-green" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge green">🛠️ AI Tooling</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jan 5, 2026</span> · <span>3,500 words</span>
+              </div>
+              <div class="article-carousel-title">The AI Olympics: Which $20 AI Subscription Plan Wins in 2026?</div>
+              <p class="article-carousel-summary">Direct showdown comparing ChatGPT Plus, Claude Pro, Gemini Advanced, and Grok Premium on coding, reasoning, and context window limits.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#13</span>
+            </div>
+          </a>
+
+          <!-- Card 14 (Dup) -->
+          <a href="https://hackernoon.com/introducing-code-wiki-googles-notebooklm-for-developers" target="_blank" rel="noopener" class="article-carousel-card border-green" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge green">🛠️ Developer Tools</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Dec 12, 2025</span> · <span>2,900 words</span>
+              </div>
+              <div class="article-carousel-title">Introducing Code Wiki: Google's Gemini Notebook for Developers</div>
+              <p class="article-carousel-summary">Hands-on exploration of Google's Code Wiki, turning complex codebase architectures into conversational, interactive developer documentation hubs.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#14</span>
+            </div>
+          </a>
+
+          <!-- Card 15 (Dup) -->
+          <a href="https://hackernoon.com/the-internet-cant-stop-talking-about-google-notebooklm" target="_blank" rel="noopener" class="article-carousel-card border-green" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge green">🛠️ AI Workflows</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Nov 20, 2025</span> · <span>2,700 words</span>
+              </div>
+              <div class="article-carousel-title">The Internet Can't Stop Talking About Google Gemini Notebook</div>
+              <p class="article-carousel-summary">Guide to leveraging Gemini Notebook for grounded multimodal synthesis, automated technical audio briefings, and high-speed research aggregation.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#15</span>
+            </div>
+          </a>
+
+          <!-- Card 16 (Dup) -->
+          <a href="https://hackernoon.com/google-antigravity-20-game-changing-prompts-for-complete-automation" target="_blank" rel="noopener" class="article-carousel-card border-green" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge green">🛠️ Automation</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Feb 5, 2026</span> · <span>3,300 words</span>
+              </div>
+              <div class="article-carousel-title">Google Antigravity: 20 Game-Changing Prompts for Complete Automation</div>
+              <p class="article-carousel-summary">Curated playbook of 20 high-leverage prompts unlocking automated multi-file code refactoring, test generation, and complex DevOps deployments.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#16</span>
+            </div>
+          </a>
+
+          <!-- Card 17 (Dup) -->
+          <a href="https://hackernoon.com/why-the-race-to-agi-is-humanitys-defining-moment" target="_blank" rel="noopener" class="article-carousel-card border-pink" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge pink">🔮 Futurism &amp; AGI</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Sep 14, 2025</span> · <span>3,600 words</span>
+              </div>
+              <div class="article-carousel-title">Why the Race to AGI is Humanity's Defining Moment</div>
+              <p class="article-carousel-summary">Philosophical and technological exploration of artificial general intelligence trajectories, compute scaling limits, and societal alignment imperatives.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#17</span>
+            </div>
+          </a>
+
+          <!-- Card 18 (Dup) -->
+          <a href="https://hackernoon.com/ai-proof-your-career-future-the-1-skill-ai-agents-cannot-touch" target="_blank" rel="noopener" class="article-carousel-card border-pink" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge pink">🔮 Career Strategy</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Aug 1, 2025</span> · <span>2,800 words</span>
+              </div>
+              <div class="article-carousel-title">AI-Proof Your Career Future: The #1 Skill AI Agents Cannot Touch</div>
+              <p class="article-carousel-summary">Career strategy guide identifying human verification, systems-level architecture, and editorial judgment as immune to autonomous agent automation.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#18</span>
+            </div>
+          </a>
+
+          <!-- Card 19 (Dup) -->
+          <a href="https://hackernoon.com/code-red-why-china-is-well-positioned-to-win-the-ai-race" target="_blank" rel="noopener" class="article-carousel-card border-pink" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge pink">🔮 Geopolitics</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jul 10, 2025</span> · <span>3,100 words</span>
+              </div>
+              <div class="article-carousel-title">Code Red: Why China Is Well Positioned to Win the AI Race</div>
+              <p class="article-carousel-summary">In-depth geopolitical and technical review of open-source model ecosystems, compute infrastructure, and engineering talent driving global AI competition.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#19</span>
+            </div>
+          </a>
+
+          <!-- Card 20 (Dup) -->
+          <a href="https://hackernoon.com/small-language-models-have-a-trillion-dollar-future" target="_blank" rel="noopener" class="article-carousel-card border-pink" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge pink">🔮 Edge SLMs</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jun 18, 2025</span> · <span>3,000 words</span>
+              </div>
+              <div class="article-carousel-title">Small Language Models Have a Trillion-Dollar Future</div>
+              <p class="article-carousel-summary">Technical analysis of compact, fine-tuned SLMs outperforming frontier models on domain-specific edge devices with fractional compute costs.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#20</span>
+            </div>
+          </a>
+
+          <!-- Card 21 (Dup) -->
+          <a href="https://hackernoon.com/how-blockchain-and-smart-contracts-revolutionize-content-monetization-for-intellectual-property" target="_blank" rel="noopener" class="article-carousel-card border-red" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge red">🔗 Web3 &amp; IP</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Mar 12, 2024</span> · <span>2,900 words</span>
+              </div>
+              <div class="article-carousel-title">How Blockchain and Smart Contracts Revolutionize Content Monetization</div>
+              <p class="article-carousel-summary">Deep dive into decentralized intellectual property protocols, micro-royalties, and programmatic monetization frameworks for digital content creators.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#21</span>
+            </div>
+          </a>
+
+          <!-- Card 22 (Dup) -->
+          <a href="https://hackernoon.com/the-startup-that-will-change-the-industrial-world-the-decentralized-autonomous-supply-chain" target="_blank" rel="noopener" class="article-carousel-card border-red" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge red">🔗 Supply Chain</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Nov 5, 2023</span> · <span>3,200 words</span>
+              </div>
+              <div class="article-carousel-title">The Startup That Will Change the Industrial World: The Decentralized Supply Chain</div>
+              <p class="article-carousel-summary">Industrial case study on trustless multi-party logistics, cryptographic ledger tracking, and automated smart-contract inventory settlement.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#22</span>
+            </div>
+          </a>
+
+          <!-- Card 23 (Dup) -->
+          <a href="https://hackernoon.com/7-blockchain-startups-that-could-generate-multibillion-dollar-revenue-within-2-years" target="_blank" rel="noopener" class="article-carousel-card border-red" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge red">🔗 Startups</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Sep 18, 2023</span> · <span>3,400 words</span>
+              </div>
+              <div class="article-carousel-title">7 Blockchain Startups That Could Generate Multibillion-Dollar Revenue</div>
+              <p class="article-carousel-summary">Venture analysis of 7 high-impact blockchain architectures solving enterprise privacy, cross-chain liquidity, and zero-knowledge verification.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#23</span>
+            </div>
+          </a>
+
+          <!-- Card 24 (Dup) -->
+          <a href="https://hackernoon.com/classical-blockchain-vs-hedera-hashgraph" target="_blank" rel="noopener" class="article-carousel-card border-red" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge red">🔗 Distributed Tech</span>
+                <span class="meta-pill platform">HackerNoon</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jun 22, 2023</span> · <span>2,800 words</span>
+              </div>
+              <div class="article-carousel-title">Classical Blockchain vs Hedera Hashgraph</div>
+              <p class="article-carousel-summary">Comparative architecture study contrasting traditional proof-of-work consensus with asynchronous Byzantine Fault Tolerant directed acyclic graphs.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on HackerNoon ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#24</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- 100% HUMAN-WRITTEN EDITORIAL MANIFESTO SECTION -->
+    <section class="human-manifesto-section reveal" id="human-manifesto">
+      <div class="human-manifesto-header">
+        <span class="human-manifesto-badge">🛡️ The Editorial Manifesto</span>
+        <h2 class="section-title">100% Human-Authored <span class="accent-gold">&amp; Runtime-Verified</span></h2>
+        <p class="human-manifesto-intro">
+          Why generative AI text from LLMs is actively destroying technical credibility—and my uncompromising promise to deliver authentic, production-grade human craftsmanship with zero slop.
+        </p>
+      </div>
+
+      <div class="human-manifesto-columns">
+        <!-- Card 1: The Cost of LLM Slop -->
+        <div class="manifesto-card hazard-card">
+          <div class="manifesto-card-header">
+            <span style="font-size:1.6rem;">⚠️</span>
+            <h3>The Fatal Damage Done by AI Text &amp; LLM Slop</h3>
+          </div>
+          <div class="manifesto-item-list">
+            <div class="manifesto-item">
+              <span class="manifesto-item-icon">🚨</span>
+              <div class="manifesto-item-content">
+                <h4>Hallucinated Code &amp; Broken Runtimes</h4>
+                <p>LLMs generate plausible-looking scripts that silently fail at runtime, invent nonexistent API arguments, and crash in production compilers—wasting expensive developer hours.</p>
+              </div>
+            </div>
+            <div class="manifesto-item">
+              <span class="manifesto-item-icon">📉</span>
+              <div class="manifesto-item-content">
+                <h4>Search Engine Devaluation &amp; Brand Dilution</h4>
+                <p>Search engines actively down-rank generic, synthetic boilerplate. Publishing automated LLM fluff signals low engineering investment and destroys enterprise domain authority.</p>
+              </div>
+            </div>
+            <div class="manifesto-item">
+              <span class="manifesto-item-icon">🥱</span>
+              <div class="manifesto-item-content">
+                <h4>Homogenized, Soulless Filler</h4>
+                <p>Formulaic AI prose stuffed with repetitive clichés ("delve into", "tapestry", "in today's rapidly evolving landscape") repels senior engineers and kills engagement within seconds.</p>
+              </div>
+            </div>
+            <div class="manifesto-item">
+              <span class="manifesto-item-icon">❌</span>
+              <div class="manifesto-item-content">
+                <h4>Zero Accountability &amp; Context Blindness</h4>
+                <p>AI models have no skin in the game. They cannot execute quantum circuits on NISQ hardware, profile cluster VRAM constraints, or evaluate enterprise security vulnerabilities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: The Human Craftsmanship Guarantee -->
+        <div class="manifesto-card promise-card">
+          <div class="manifesto-card-header">
+            <span style="font-size:1.6rem;">✨</span>
+            <h3>The Uncompromising Client Guarantee</h3>
+          </div>
+          <div class="manifesto-item-list">
+            <div class="manifesto-item">
+              <span class="manifesto-item-icon">✍️</span>
+              <div class="manifesto-item-content">
+                <h4>100% Hand-Crafted Prose &amp; Pedagogy</h4>
+                <p>Every single paragraph, narrative thread, and technical analogy is original and written directly by a computer science post-graduate with 500+ published deep dives.</p>
+              </div>
+            </div>
+            <div class="manifesto-item">
+              <span class="manifesto-item-icon">⚡</span>
+              <div class="manifesto-item-content">
+                <h4>100% Verified in Live Python &amp; Rust Runtimes</h4>
+                <p>Every code snippet, Qiskit quantum circuit, REST/WebSocket API call, and container deployment is executed and tested in isolated local runtimes prior to publication.</p>
+              </div>
+            </div>
+            <div class="manifesto-item">
+              <span class="manifesto-item-icon">📊</span>
+              <div class="manifesto-item-content">
+                <h4>AI Strictly for Sourced Claims &amp; Stats</h4>
+                <p>Frontier AI tools are leveraged exclusively for finding primary arXiv papers, official hardware specs, and historical statistics—never for drafting prose or code.</p>
+              </div>
+            </div>
+            <div class="manifesto-item">
+              <span class="manifesto-item-icon">🏆</span>
+              <div class="manifesto-item-content">
+                <h4>Authority Senior Engineers Respect</h4>
+                <p>Deep domain explanations that solve actual engineering roadblocks, articulate architectural tradeoffs, and build enduring market reputation for your brand.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison Box -->
+      <div class="manifesto-comparison-box">
+        <h3 style="font-family:var(--font-display);font-size:1.25rem;color:var(--gold);text-align:center;margin-bottom:0.5rem;">
+          Side-by-Side Standard Comparison
+        </h3>
+        <p style="text-align:center;font-size:0.9rem;color:var(--text-muted);margin-bottom:1.5rem;">
+          The clear distinction between automated commodity output and verified technical thought leadership.
+        </p>
+        <div class="manifesto-comparison-grid">
+          <div class="comparison-side slop">
+            <h4>❌ Generic AI-Generated Output</h4>
+            <ul class="comparison-list">
+              <li><span>⚠️ Unverified code copied from training weights</span></li>
+              <li><span>⚠️ Generic surface-level summaries with zero depth</span></li>
+              <li><span>⚠️ Hallucinated benchmark figures and fake citations</span></li>
+              <li><span>⚠️ High bounce rates and search algorithm penalties</span></li>
+              <li><span>⚠️ Instant loss of credibility with senior developers</span></li>
+            </ul>
+          </div>
+          <div class="comparison-side human">
+            <h4>✅ Thomas Cherickal Technical Content</h4>
+            <ul class="comparison-list">
+              <li><span>✓ 100% executable code tested against live SDKs &amp; APIs</span></li>
+              <li><span>✓ High-craft narrative with architectural nuance &amp; rigor</span></li>
+              <li><span>✓ Primary-source verified statistics, papers &amp; citations</span></li>
+              <li><span>✓ High dwell time, organic social sharing &amp; SEO equity</span></li>
+              <li><span>✓ Unrivaled authority that technical leaders trust</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action CTA Bar -->
+      <div class="manifesto-cta-bar">
+        <a href="contact.html" class="btn btn-primary" style="padding:0.75rem 1.5rem;font-size:0.9rem;">📝 Commission Human-Authored Content →</a>
+        <a href="about.html#how-this-gets-made" class="btn btn-outline" style="padding:0.75rem 1.5rem;font-size:0.9rem;">Inspect Editorial Standards →</a>
+      </div>
+    </section>
+
+    <div class="divider"></div>
     <section class="home-nav-section reveal">
       <div class="section-header">
         <p class="section-label">Explore My Work</p>
@@ -482,12 +1545,12 @@
         <!-- Card 5 -->
         <a href="about.html#how-this-gets-made" class="home-nav-card glow-cyan">
           <div>
-            <span class="home-nav-icon">🔬</span>
-            <h3 class="home-nav-title">How This Gets Made</h3>
-            <p class="home-nav-desc">Roughly half Generative AI-accelerated, half hand-verified. See exactly how the
-              workflow split protects technical truth.</p>
+            <span class="home-nav-icon">✍️</span>
+            <h3 class="home-nav-title">100% Human-Written</h3>
+            <p class="home-nav-desc">100% human-written and 100% verified before publishing. AI used solely for
+              sourced claims and statistics, never for writing.</p>
           </div>
-          <span class="home-nav-btn">See Workflow Split →</span>
+          <span class="home-nav-btn">Inspect Standards →</span>
         </a>
 
         <!-- Card 6 -->
@@ -569,8 +1632,8 @@
           verified before publication.
         </p>
         <p style="font-size:0.92rem;color:var(--cyan);margin-top:1.5rem;">
-          Learn how the automate/verify split protects technical accuracy: <a href="about.html#how-this-gets-made"
-            style="color:var(--gold);text-decoration:underline;font-weight:600;">The AI-Proof Advantage →</a>
+          Learn how 100% human writing and verification protect technical accuracy: <a href="about.html#how-this-gets-made"
+            style="color:var(--gold);text-decoration:underline;font-weight:600;">The Human-Authored Standard →</a>
         </p>
       </div>
 

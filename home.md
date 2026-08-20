@@ -5,7 +5,7 @@
 **Email**: [thomascherickal@gmail.com](mailto:thomascherickal@gmail.com)  
 
 **Emerging Technologies Educator & Developer Educator — Generative AI Systems & Quantum Systems**  
-*Training in Generative AI and Quantum Computing, AI agent orchestration, deep dives, and developer education — AI-accelerated, verified in Python and Rust.*
+*Training in Generative AI and Quantum Computing, AI agent orchestration, deep dives, and developer education — 100% human-written, 100% verified in Python and Rust.*
 
 **Core Capabilities**:
 - `Training in Generative AI`
@@ -104,23 +104,23 @@ As a developer with a PG degree in CS and a seasoned online emerging technologie
 
 ---
 
-## How This Actually Gets Made — The 50/50 Workflow Split
+## How This Actually Gets Made — 100% Human-Written & 100% Verified
 
-Roughly half Generative AI-accelerated for speed, half hand-verified for technical accuracy.
+100% human-written prose and 100% verified in runtime environments before publishing. AI used solely for sourced claims and statistics, never for writing itself.
 
-### ⚡ Automated with AI (Roughly 50%)
-1. First-draft generation from a brief, spec, or transcript
-2. Research aggregation and source discovery across documentation, changelogs, and papers
-3. Structural drafting — headings, section flow, Diátaxis-pattern scaffolding
-4. Style, terminology, and consistency linting against a house style guide
-5. Format conversion — Markdown to MDX/HTML, citation formatting, table generation
+### 📊 AI for Sourced Claims & Statistics
+1. Sourced claim discovery and paper retrieval across arXiv, docs, and changelogs
+2. Benchmark data aggregation and statistical cross-referencing
+3. Exploring primary documentation archives, APIs, and release notes
+4. Identifying relevant technical specifications and standards
+5. Citation discovery and primary source link verification
 
-### ✓ Verified by Hand (The Mandatory Half)
-1. Executing every code sample against the live API, SDK, or local environment it documents
-2. Running every quantum circuit in a Qiskit Aer simulator or on real quantum hardware and checking the output against the claim in the text
-3. Cross-checking every benchmark, statistic, or comparative figure against its original source before it's cited
-4. Technical accuracy review against current product behaviour — catching the gap between what a spec says and what the system actually does
-5. Final judgment calls on structure, emphasis, and what's worth explaining at all — the editorial decisions a model has no stake in getting right
+### ✍️ 100% Human-Written & Verified
+1. 100% human-crafted prose, narrative flow, and pedagogical structure
+2. Executing every code sample against live APIs, SDKs, and local environments
+3. Running every quantum circuit in Qiskit simulators or real quantum hardware
+4. Hand-verifying all statistics, benchmark charts, and mathematical claims
+5. Deep domain editorial insight that eliminates generic AI slop entirely
 
 ---
 
