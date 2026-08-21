@@ -326,6 +326,8 @@ main {
   color: var(--cyan);
   text-transform: uppercase;
   margin-bottom: 1.5rem;
+  text-align: center;
+  width: 100%;
   opacity: 1;
 }
 
@@ -335,9 +337,10 @@ main {
   border-radius: 50%;
   border: 2px solid var(--gold);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 0 4px rgba(245, 158, 11, 0.12);
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem auto;
   opacity: 1;
   object-fit: cover;
+  display: block;
   transition: var(--transition);
 }
 
@@ -358,6 +361,8 @@ main {
   background-clip: text;
   filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.4));
   margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
   opacity: 1;
 }
 
@@ -368,7 +373,17 @@ main {
   color: var(--cyan);
   margin-bottom: 1.2rem;
   letter-spacing: 0.02em;
+  text-align: center;
+  width: 100%;
   opacity: 1;
+}
+
+.hero h3,
+.hero-role-title {
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-tagline {
@@ -379,6 +394,11 @@ main {
   color: var(--gold);
   text-transform: uppercase;
   margin-bottom: 1.5rem;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
   opacity: 1;
 }
 
@@ -386,8 +406,14 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 0.6rem;
   margin-bottom: 2.5rem;
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
   opacity: 1;
 }
 
@@ -444,6 +470,9 @@ main {
   color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   opacity: 1;
 }
 
@@ -452,6 +481,10 @@ main {
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   opacity: 1;
 }
 
@@ -1128,10 +1161,16 @@ body.portfolio-page .section-sub {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 0;
+  text-align: center;
+  justify-content: center;
 }
 
 .stat-item {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 2.5rem 1rem;
   border-right: 1px solid var(--border);
   position: relative;
@@ -1156,6 +1195,8 @@ body.portfolio-page .section-sub {
   background-clip: text;
   line-height: 1;
   margin-bottom: 0.4rem;
+  text-align: center;
+  width: 100%;
 }
 
 .stat-label {
@@ -1164,6 +1205,8 @@ body.portfolio-page .section-sub {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
+  text-align: center;
+  width: 100%;
 }
 
 .collab-grid {
@@ -2935,22 +2978,31 @@ footer {
 
 .articles-carousel-header {
   max-width: 1280px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 2.5rem;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 1.25rem;
 }
 
 .articles-carousel-header .section-header {
   margin-bottom: 0;
-  text-align: left;
+  text-align: center;
+}
+
+.articles-carousel-header .section-sub {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  text-align: center;
 }
 
 .articles-carousel-controls {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
   flex-wrap: wrap;
 }
@@ -3048,7 +3100,8 @@ footer {
 
   .articles-carousel-header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     gap: 1rem;
     padding: 0 0.75rem;
     margin-bottom: 1.25rem;
@@ -3056,11 +3109,12 @@ footer {
 
   .articles-carousel-header .section-header {
     width: 100%;
+    text-align: center;
   }
 
   .articles-carousel-controls {
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .article-carousel-card {

@@ -1,10 +1,10 @@
-# Thomas Cherickal — Emerging Technologies Educator & Developer Educator
+# Thomas Cherickal — Emerging Technologies Educator
 
 **Location**: Chennai, India (Remote — Worldwide)  
 **Brand**: The Digital Futurist 
 **Email**: [thomascherickal@gmail.com](mailto:thomascherickal@gmail.com)  
 
-**Emerging Technologies Educator & Developer Educator — Generative AI Systems & Quantum Systems**  
+**Emerging Technologies Educator — Generative AI Systems & Quantum Systems**  
 *Training in Generative AI and Quantum Computing, AI agent orchestration, deep dives, and developer education — 100% human-written, 100% verified in Python and Rust.*
 
 **Core Capabilities**:
@@ -202,5 +202,5 @@ How to understand and build emerging technologies.
 - [📅 Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)
 
 ---
-*© 2026 Thomas Cherickal · The Digital Futurist · Emerging Technologies Educator & Developer Educator*  
+*© 2026 Thomas Cherickal · The Digital Futurist · Emerging Technologies Educator*  
 *📍 Chennai, India 🇮🇳*
