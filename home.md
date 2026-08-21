@@ -11,7 +11,10 @@
 - `Training in Generative AI`
 - `Training in Quantum Computing`
 - `AI Agent Orchestration`
-- `Developer Education`
+- `Generative AI Content`
+- `Quantum Computing Content`
+- `Emerging Technology Analysis`
+- `CXO Advisory & Briefing`
 
 ---
 
@@ -20,7 +23,7 @@ As a developer with a PG degree in CS and a seasoned online emerging technologie
 
 ### Quick Actions
 - [🌐 Main Site](https://thomascherickal.com)
-- [📚 Portfolio & Case Studies](https://thomascherickal.github.io/portfolio.html)
+- [📚 Portfolio](https://thomascherickal.github.io/)
 - [🐙 GitHub Profile](https://github.com/thomascherickal)
 - [📅 Book 1:1 Consult](https://topmate.io/thomascherickal)
 - [📧 Kit Newsletter](https://thomascherickal.kit.com)
@@ -81,7 +84,7 @@ Structuring documentation so it serves both a skimming developer and a retrievin
 
 ---
 
-## Tech Stack & Tooling (10 Chip Groups)
+## Tech Stack & Tooling
 
 - **💻 Languages**: Python, Rust, JavaScript, Bash
 - **🧠 Generative AI Systems**: Generative AI, LLMs, SLMs, Agentic AI, RAG, Remote & Live GenAI Training
@@ -188,14 +191,14 @@ How to understand and build emerging technologies.
 - [🔷 Hashnode (thomascherickal.hashnode.dev)](https://thomascherickal.hashnode.dev)
 - [📬 Substack (thomascherickal.substack.com)](https://thomascherickal.substack.com)
 - [❓ Quora (thomascherickal.quora.com)](https://thomascherickal.quora.com)
-- [🤖 Reddit (reddit.com/user/thomascherickal)](https://reddit.com/user/thomascherickal)
+- [🤖 Reddit (reddit.com/user/thomascherickal1)](https://reddit.com/user/thomascherickal1)
 - [🧪 Exercism (exercism.org/profiles/thomascherickal)](https://exercism.org/profiles/thomascherickal)
 - [🏅 CodersRank (profile.codersrank.io/user/thomascherickal)](https://profile.codersrank.io/user/thomascherickal/)
-- [🦊 GitLab (gitlab.com/thomascherickal)](https://gitlab.com/thomascherickal)
-- [📄 HubPages (hubpages.com/@thomascherickal)](https://hubpages.com/@thomascherickal)
 - [🧠 Deep-ML (deep-ml.com/profile/thomascherickal)](https://www.deep-ml.com/profile/thomascherickal)
 - [🏆 HackerRank (hackerrank.com/profile/thomascherickal)](https://hackerrank.com/profile/thomascherickal)
+- [🌍 HackerEarth (hackerearth.com/@thomascherickal)](https://www.hackerearth.com/@thomascherickal)
 - [💡 LeetCode (leetcode.com/u/thomascherickal)](https://leetcode.com/u/thomascherickal)
+- [💻 Code360 (naukri.com/code360/profile/thomascherickal)](https://www.naukri.com/code360/profile/thomascherickal)
 - [🔗 Linktree (linktr.ee/thomascherickal)](https://linktr.ee/thomascherickal)
 - [🎨 Patreon (patreon.com/thomascherickal)](https://patreon.com/thomascherickal)
 - [🛒 Gumroad (thomascherickal.gumroad.com)](https://thomascherickal.gumroad.com)
