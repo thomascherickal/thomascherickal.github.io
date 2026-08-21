@@ -5,7 +5,7 @@
 **Email**: [thomascherickal@gmail.com](mailto:thomascherickal@gmail.com)  
 
 **Emerging Technologies Educator — Generative AI Systems & Quantum Systems**  
-*Training in Generative AI and Quantum Computing, AI agent orchestration, deep dives, and developer education — 100% human-written, 100% verified in Python and Rust.*
+*Training in Generative AI and Quantum Computing, AI agent orchestration, deep dives, and developer education — 100% human-written, 100% verified in Python, Golang, and Rust.*
 
 **Core Capabilities**:
 - `Training in Generative AI`
@@ -19,7 +19,7 @@
 ---
 
 ## Bio
-As a developer with a PG degree in CS and a seasoned online emerging technologies educator with a broad online presence, I sit directly in the intersection of both frontier domains — producing training programs, building AI agent orchestration, tutorials, and deep dives where every Python or Rust script, Generative AI project, and Qiskit circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. Hands-on with LLMs and agent frameworks (Claude Code, Google Antigravity, Ollama, LM Studio, llama.cpp) and quantum SDKs (IBM Qiskit, PennyLane, QML). Skilled with multi-agent orchestration frameworks (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent) and agentic workflow architecture. Fully remote and flexible.
+As a developer with a PG degree in CS and a seasoned online emerging technologies educator with a broad online presence, I sit directly in the intersection of both frontier domains — producing training programs, building AI agent orchestration, tutorials, and deep dives where every Python, Golang, or Rust script, Generative AI project, and Qiskit circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. Hands-on with LLMs and agent frameworks (Claude Code, Google Antigravity, Ollama, LM Studio, llama.cpp) and quantum SDKs (IBM Qiskit, PennyLane, QML). Skilled with multi-agent orchestration frameworks (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent) and agentic workflow architecture. Fully remote and flexible.
 
 ### Quick Actions
 - [🌐 Main Site](https://thomascherickal.com)
@@ -67,8 +67,8 @@ Post-quantum cryptography risk, the threat model against current encryption algo
 ### ⚡ Local & Private AI
 Ollama, LM Studio, llama.cpp, GGUF, SLM fine-tuning and quantisation for private on-premise execution.
 
-### 🐍 Python & Rust Systems
-Deep Python and Rust fluency as core engineering layers: PyTorch & FastAPI in Python; memory-safe Tokio & Wasm in Rust. Every example executed before publication.
+### 🐍 Python, Golang, Rust
+Deep Python, Golang, and Rust fluency as core engineering layers: PyTorch & FastAPI in Python; concurrent microservices in Golang; memory-safe Tokio & Wasm in Rust. Every example executed before publication.
 
 ### 🎓 Developer Education
 Courses, tutorial series, structured learning paths, and interactive Jupyter notebook modules across both technical domains.
@@ -79,23 +79,23 @@ Long-form explainers on LLM internals, agent architectures, and quantum algorith
 ### 🤖 AI Tools Expertise
 Daily working fluency across the current frontier toolchain: Claude Code, Google Antigravity, Google AI Studio, Gemini Notebook, CodeWiki.
 
-### 🗂️ Content Architecture
-Structuring documentation so it serves both a skimming developer and a retrieving AI agent alike — Diátaxis-pattern scaffolding and schema markup.
+### ✍️ 100% Human-Written
+100% human-authored prose and 100% runtime-verified code with responsible AI use. AI tools are strictly leveraged for discovering sourced claims, datasets, and statistical verification—never for drafting prose or generating code.
 
 ---
 
 ## Tech Stack & Tooling
 
-- **💻 Languages**: Python, Rust, JavaScript, Bash
+- **💻 Languages**: Python, Golang, Rust, JavaScript, Bash
 - **🧠 Generative AI Systems**: Generative AI, LLMs, SLMs, Agentic AI, RAG, Remote & Live GenAI Training
 - **⚛️ Quantum Systems**: IBM Qiskit, PennyLane, Quantum Machine Learning, Quantum Algorithms, Microsoft Q# / Quantinuum, Live Quantum Workshops
 - **🤖 AI Tools Expertise**: Claude Code, Google Antigravity, Google AI Studio, Gemini Notebook, CodeWiki
 - **⚡ Local & Private AI Stack**: Ollama, LM Studio, llama.cpp, GGUF, HuggingFace Hub
 - **🔬 Verification & Execution**: Jupyter, pytest, Qiskit Aer Simulator, Docker Sandboxes, REPL-Verified Examples
-- **🐍 Python & Rust Deep Stack**: PyTorch, NumPy, FastAPI, LangChain, Qiskit SDK
+- **🐍 Python, Golang, Rust Deep Stack**: PyTorch, NumPy, FastAPI, Gin, gRPC, Tokio, LangChain, Qiskit SDK
 - **🤖 AI Agent Orchestration**: LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent, Microsoft Agent Framework, MCP Servers, Agent Swarms
 - **🌐 Domains**: Generative AI, Quantum Computing, Cybersecurity, Post-Quantum Cryptography, Open Source
-- **🗂️ Content Architecture**: Structured Retrieval Patterns, Schema Markup, Information Architecture, Agent-Readable Docs, AEO/GEO Optimisation
+- **✍️ 100% Human-Written**: Responsible AI Use, Human-Authored Prose, Runtime Code Verification, Sourced Claims Discovery, Zero-Hallucination Standard, Fact-Checking & Primary Citations
 
 ---
 
@@ -103,7 +103,7 @@ Structuring documentation so it serves both a skimming developer and a retrievin
 
 Most developer education in Generative AI and Quantum Computing suffers from one of two flaws: it is either delivered by brilliant physicists and engineers who lack educational clarity, or by generalist educators who cannot execute the code they teach.
 
-As a developer with a PG degree in CS and a seasoned online emerging technologies educator with a broad online presence, I sit directly in the intersection of both frontier domains — providing remote and live training, AI agent orchestration, tutorials, and deep dives where every Python or Rust script, Generative AI project, and Qiskit circuit is run and verified before publication.
+As a developer with a PG degree in CS and a seasoned online emerging technologies educator with a broad online presence, I sit directly in the intersection of both frontier domains — providing remote and live training, AI agent orchestration, tutorials, and deep dives where every Python, Golang, or Rust script, Generative AI project, and Qiskit circuit is run and verified before publication.
 
 ---
 
