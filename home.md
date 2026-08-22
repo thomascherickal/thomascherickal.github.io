@@ -70,13 +70,15 @@ All technical documentation deliverables follow the Diátaxis framework structur
 3. **Reference Docs**: Information-oriented, precise technical specifications, API parameters, and schema definitions.
 4. **Explanation**: Understanding-oriented background articles exploring architectural design decisions, domain context, and high-level concepts.
 
-### 6 Extended Engineering Documentation Artifacts
+### 8 Extended Engineering Documentation Artifacts
 5. **Architecture Decision Records (ADRs)**: Capturing key architectural choices, trade-offs, and consequences chronologically.
 6. **Project Briefs**: Scope-oriented planning documents defining vision, deliverables, and success metrics.
 7. **PR Summaries**: Review-oriented documentation providing code review context, verification steps, and testing proof.
 8. **5-Why Root-Cause Analyses**: Incident post-mortems tracing technical failures to underlying systemic root causes.
 9. **Handover Documents**: Transition-oriented operational transfer guides ensuring seamless domain knowledge handoff.
 10. **Developer Notes**: Context-oriented field notes, scratchpad observations, and sync summaries.
+11. **Runbooks & SOPs**: Execution-oriented operational playbooks and runbooks detailing routine procedures, incident recovery, and failover protocols.
+12. **RFCs & Tech Specs**: Proposal-oriented technical specifications detailing system design changes, API contracts, and consensus-building before development.
 
 ---
 
