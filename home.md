@@ -1,25 +1,26 @@
-# Thomas Cherickal — Emerging Technologies Educator
+# Thomas Cherickal — Emerging Technologies Educator, Consultant & Documentation Expert
 
 **Location**: Chennai, India (Remote — Worldwide)  
-**Brand**: The Digital Futurist 
+**Brand**: The Digital Futurist  
 **Email**: [thomascherickal@gmail.com](mailto:thomascherickal@gmail.com)  
 
-**Emerging Technologies Educator — Generative AI Systems & Quantum Systems**  
-*Training in Generative AI and Quantum Computing, AI agent orchestration, deep dives, and developer education — 100% human-written, 100% verified in Python, Golang, and Rust.*
+**Emerging Technologies Educator, Trainer, Consultant, Documentation Expert & Executive Advisory — Generative AI Systems & Quantum Systems**  
+*Training in Generative AI and Quantum Computing, Diátaxis documentation architecture, technical deep dives, executive advisory, and developer education — 100% human-written, 100% verified with working code in Python, Golang, and Rust.*
 
 **Core Capabilities**:
-- `Training in Generative AI`
-- `Training in Quantum Computing`
-- `AI Agent Orchestration`
-- `Generative AI Content`
-- `Quantum Computing Content`
-- `Emerging Technology Analysis`
-- `CXO Advisory & Briefing`
+- `Emerging Technology Education & Corporate Training`
+- `Documentation Architecture (Diátaxis Framework)`
+- `Executive Advisory & CXO Tech Strategy`
+- `AI Agent Orchestration & Architecture Guides`
+- `Generative AI & Quantum Computing Content`
+- `100% Runtime-Verified Working Code Artifacts`
 
 ---
 
 ## Bio
-As a developer with a PG degree in CS and a seasoned online emerging technologies educator with a broad online presence, I sit directly in the intersection of both frontier domains — producing training programs, building AI agent orchestration, tutorials, and deep dives where every Python, Golang, or Rust script, Generative AI project, and Qiskit circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. Hands-on with LLMs and agent frameworks (Claude Code, Google Antigravity, Ollama, LM Studio, llama.cpp) and quantum SDKs (IBM Qiskit, PennyLane, QML). Skilled with multi-agent orchestration frameworks (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent) and agentic workflow architecture. Fully remote and flexible.
+With a post-graduate degree in Computer Science from Loyola College and an established career as an online Emerging Technology Educator, Consultant, Documentation Expert, and Executive Advisory, I sit directly in the intersection of frontier emerging technology domains. I author authoritative Diátaxis technical documentation, design training programs, provide executive advisory, and produce deep dives where every Python, Golang, or Rust script and Quantum circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. 
+
+> **Important Positioning Note**: I operate as an educator, consultant, and documentation specialist—I do not develop custom production codebases or software applications for hire. I deliver world-class documentation, training courses, advisory roadmaps, and working, tested code artifacts.
 
 ### Quick Actions
 - [🌐 Main Site](https://thomascherickal.com)
@@ -36,74 +37,67 @@ As a developer with a PG degree in CS and a seasoned online emerging technologie
 | **Articles Published** | 500+ |
 | **Platforms** | 10+ |
 | **Years Emerging Tech Education** | 6+ |
-| **Featured Deep Dives** | 24 |
+| **Featured Deep Dives** | 32 |
 | **GitHub Repositories** | 2000+ |
-| **Generative AI & Quantum Systems Education** | Primary Focus |
+| **Verified Code Runtimes** | 100% |
 
 ---
 
-## Core Capabilities (10 Offerings)
+## Core Capabilities & Specialized Roles (12 Areas)
 
-Empowering Generative AI Companies and Quantum Computing Enterprises with Training, Automated Documentation, and developer education.
+1. **AI Agent Orchestration (Architecture & Guides)**: Multi-agent systems, tool-calling loops, agent swarms, and persistent workflows (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent).
+2. **Quantum Computing & QML (Education & Training)**: Hands-on IBM Qiskit, PennyLane, variational circuits, and quantum algorithms (Grover, Shor, VQE, QAOA) for developers and students.
+3. **LLM & Agent Systems (Documentation & Evaluation)**: RAG pipelines, agentic workflows, prompt engineering frameworks, and evaluation benchmarks.
+4. **Post-Quantum Cryptography & Quantum Risk (Executive Advisory)**: PQC transition roadmaps, NIST standard migrations (Kyber/Dilithium), and enterprise risk assessments.
+5. **Local & Private AI (Deployment Guides & Benchmarks)**: Ollama, LM Studio, llama.cpp, GGUF quantization, and private SLM deployment tutorials.
+6. **Python AI Systems & Code Verification**: Executable PyTorch pipelines, LangGraph workflows, and FastAPI tutorials with 100% verified code runtimes.
+7. **Go Cloud Systems & API Documentation**: High-concurrency gRPC, REST, and distributed systems architecture documentation and benchmark suites in Go.
+8. **Rust Systems & Performance Benchmarks**: Tokio async guides, Burn/Candle ML tutorials, and performance benchmarks with verified Rust crates.
+9. **Corporate & Developer Education**: Custom curricula, interactive workshops, structured learning paths, and hands-on Jupyter notebook modules.
+10. **Technical Deep Dives & Explainers**: Comprehensive explainers on LLM internals, agent architectures, and quantum algorithms. Researched, executed, and verified.
+11. **Executive Advisory & Tech Strategy**: Strategic technology consulting, emerging tech roadmaps, and GenAI adoption blueprints for C-suite and engineering leaders.
+12. **Documentation Architecture (Diátaxis)**: Structuring developer portals, API references, and internal knowledge bases using the Diátaxis framework.
 
-### 🎓 Training in Generative AI
-Interactive virtual training, custom team bootcamps, agentic AI architecture workshops, RAG pipelines, and executable notebook labs.
+---
 
-### ⚛️ Training in Quantum Computing
-Interactive virtual workshops, Qiskit & PennyLane labs, VQE/QAOA algorithm masterclasses, and executive quantum readiness bootcamps.
+## The Diátaxis Documentation Framework
 
-### 🤖 AI Agent Orchestration
-Multi-agent architecture design, tool-calling loops, agent swarms, autonomous task routing, and agentic workflows (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent).
+All technical documentation deliverables follow the Diátaxis framework structure (Open Reference Implementation: [thomascherickal/diataxis](https://github.com/thomascherickal/diataxis)):
 
-### ⚛️ Quantum Computing & QML
-Hands-on IBM Qiskit and PennyLane. Quantum machine learning, variational circuits, quantum algorithms (Grover, Shor, VQE, QAOA), explained for working developers.
+### 4 Core Documentation Pillars
+1. **Tutorials**: Learning-oriented, practical step-by-step lessons for newcomers to achieve immediate success through hands-on exercises.
+2. **How-To Guides**: Problem-oriented recipes guiding developers through real-world tasks and operational procedures.
+3. **Reference Docs**: Information-oriented, precise technical specifications, API parameters, and schema definitions.
+4. **Explanation**: Understanding-oriented background articles exploring architectural design decisions, domain context, and high-level concepts.
 
-### 🧠 LLM & Agent Systems
-RAG pipelines, agentic workflows, prompt frameworks, evaluation. Written from hands-on engineering use.
-
-### 🔐 Post-Quantum & Quantum Risk
-Post-quantum cryptography risk, the threat model against current encryption algorithms, and enterprise quantum-readiness briefings.
-
-### ⚡ Local & Private AI
-Ollama, LM Studio, llama.cpp, GGUF, SLM fine-tuning and quantisation for private on-premise execution.
-
-### 🐍 Python, Golang, Rust
-Deep Python, Golang, and Rust fluency as core engineering layers: PyTorch & FastAPI in Python; concurrent microservices in Golang; memory-safe Tokio & Wasm in Rust. Every example executed before publication.
-
-### 🎓 Developer Education
-Courses, tutorial series, structured learning paths, and interactive Jupyter notebook modules across both technical domains.
-
-### 🔬 Technical Deep Dives
-Long-form explainers on LLM internals, agent architectures, and quantum algorithms. Researched, run, and benchmark-verified.
-
-### 🤖 AI Tools Expertise
-Daily working fluency across the current frontier toolchain: Claude Code, Google Antigravity, Google AI Studio, Gemini Notebook, CodeWiki.
-
-### ✍️ 100% Human-Written
-100% human-authored prose and 100% runtime-verified code with responsible AI use. AI tools are strictly leveraged for discovering sourced claims, datasets, and statistical verification—never for drafting prose or generating code.
+### 6 Extended Engineering Documentation Artifacts
+5. **Architecture Decision Records (ADRs)**: Capturing key architectural choices, trade-offs, and consequences chronologically.
+6. **Project Briefs**: Scope-oriented planning documents defining vision, deliverables, and success metrics.
+7. **PR Summaries**: Review-oriented documentation providing code review context, verification steps, and testing proof.
+8. **5-Why Root-Cause Analyses**: Incident post-mortems tracing technical failures to underlying systemic root causes.
+9. **Handover Documents**: Transition-oriented operational transfer guides ensuring seamless domain knowledge handoff.
+10. **Developer Notes**: Context-oriented field notes, scratchpad observations, and sync summaries.
 
 ---
 
 ## Tech Stack & Tooling
 
-- **💻 Languages**: Python, Golang, Rust, HTML,CSS, JavaScript, Bash
-- **🧠 Generative AI Systems**: Generative AI, LLMs, SLMs, Agentic AI, RAG, Remote & Live GenAI Training
-- **⚛️ Quantum Systems**: IBM Qiskit, PennyLane, Quantum Machine Learning, Quantum Algorithms, Microsoft Q# / Quantinuum, Live Quantum Workshops
+- **💻 Languages (for verification & code artifacts)**: Python, Golang, Rust, JavaScript, Bash
+- **🧠 Generative AI Systems**: LLMs, SLMs, Agentic AI, RAG, Remote & Live GenAI Training
+- **⚛️ Quantum Systems**: IBM Qiskit, PennyLane, Quantum Machine Learning, Quantum Algorithms, Microsoft Q# / Quantinuum
 - **🤖 AI Tools Expertise**: Claude Code, Google Antigravity, Google AI Studio, Gemini Notebook, CodeWiki
 - **⚡ Local & Private AI Stack**: Ollama, LM Studio, llama.cpp, GGUF, HuggingFace Hub
-- **🔬 Verification & Execution**: Jupyter, pytest, Qiskit Aer Simulator, Docker Sandboxes, REPL-Verified Examples
-- **🐍 Python, Golang, Rust Deep Stack**: PyTorch, NumPy, FastAPI, Gin, gRPC, Tokio, LangChain, Qiskit SDK
-- **🤖 AI Agent Orchestration**: LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent, Microsoft Agent Framework, MCP Servers, Agent Swarms
-- **🌐 Domains**: Generative AI, Quantum Computing, Cybersecurity, Post-Quantum Cryptography, Open Source
-- **✍️ 100% Human-Written**: Responsible AI Use, Human-Authored Prose, Runtime Code Verification, Sourced Claims Discovery, Zero-Hallucination Standard, Fact-Checking & Primary Citations
+- **🔬 Verification & Execution**: Jupyter, pytest, cargo test, Qiskit Aer Simulator, Docker Sandboxes
+- **📐 Documentation Frameworks**: Diátaxis, Markdown/MDX, OpenAPI / Swagger JSON Specs, Jupyter Notebooks (`.ipynb`)
+- **✍️ 100% Human-Written**: Responsible AI Use, Human-Authored Prose, Runtime Code Verification, Sourced Claims Discovery, Zero-Hallucination Standard
 
 ---
 
-## Why Emerging Tech Education Fails (The Technical Moat)
+## Why Technical Content Fails (The Technical Moat)
 
-Most developer education in Generative AI and Quantum Computing suffers from one of two flaws: it is either delivered by brilliant physicists and engineers who lack educational clarity, or by generalist educators who cannot execute the code they teach.
+Most developer content in Generative AI and Quantum Computing suffers from one of two flaws: it is either delivered by brilliant physicists and engineers who lack educational clarity, or by generalist writers who cannot execute the code they document.
 
-As a developer with a PG degree in CS and a seasoned online emerging technologies educator with a broad online presence, I sit directly in the intersection of both frontier domains — providing remote and live training, AI agent orchestration, tutorials, and deep dives where every Python, Golang, or Rust script, Generative AI project, and Qiskit circuit is run and verified before publication.
+With a post-graduate degree in Computer Science, extensive technical training experience, and deep domain mastery across Generative AI and Quantum Systems, I operate as an educator, consultant, and documentation specialist rather than a production software developer. I bridge the gap between engineering complexity and stakeholder comprehension — delivering training workshops, executive advisory, and Diátaxis-structured technical documentation where every Python, Golang, or Rust script and Quantum circuit is run and verified before publication.
 
 ---
 
@@ -163,7 +157,7 @@ A comprehensive transformation system showing professionals how to use frontier 
 6. **Quantum Developer Content**: IBM Qiskit & PennyLane tutorials, QML explainers, and algorithm walkthroughs.
 7. **Quantum AI & Quantum ML Training & Content**: Interactive workshops, tutorials, and guides for Quantum Neural Networks (QNNs), Quantum Kernel methods, VQE/QAOA algorithms, and hybrid PyTorch/PennyLane QML.
 8. **Local LLM Deployment Training & Guides**: Interactive workshops, step-by-step setup guides, vLLM & Ollama deployment tutorials and documentation.
-9. **Generative AI Dev Content**: RAG pipelines, agentic workflows, prompt engineering frameworks, and SLM fine-tuning guides.
+9. **Generative AI Developer Content**: RAG pipelines, agentic workflows, prompt engineering frameworks, and SLM fine-tuning guides.
 10. **Monthly Content Retainer**: Dedicated monthly sprint capacity for devtools and AI infra companies: guaranteed content volume, priority turnaround & byline management.
 
 ---
@@ -205,5 +199,5 @@ How to understand and build emerging technologies.
 - [📅 Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)
 
 ---
-*© 2026 Thomas Cherickal · The Digital Futurist · Emerging Technologies Educator*  
+*© 2026 Thomas Cherickal · The Digital Futurist · Emerging Technologies Educator, Consultant & Documentation Expert*  
 *📍 Chennai, India 🇮🇳*
