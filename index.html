@@ -642,8 +642,8 @@
       background: linear-gradient(180deg, #0284c7 0%, #0369a1 100%);
       color: #ffffff;
       font-weight: 600;
-      border: 1px solid #38bdf8;
-      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.2);
+      border: 4px solid #38bdf8;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.7), 0 0 8px #38bdf8, 0 4px 14px rgba(2, 132, 199, 0.4);
       text-shadow: none;
     }
 
@@ -651,7 +651,7 @@
       background: linear-gradient(180deg, #0369a1 0%, #075985 100%);
       color: #ffffff;
       border-color: #7dd3fc;
-      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+      box-shadow: 0 0 30px rgba(125, 211, 252, 0.95), 0 0 12px #38bdf8, 0 6px 20px rgba(2, 132, 199, 0.5);
       transform: translateY(-2px);
     }
 
@@ -659,17 +659,17 @@
     .btn-outline {
       background: rgba(255, 255, 255, 0.04);
       color: #f8fafc;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 4px solid #38bdf8;
       font-weight: 600;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.65), 0 0 8px rgba(56, 189, 248, 0.8), inset 0 0 10px rgba(56, 189, 248, 0.2);
       text-shadow: none;
     }
 
     .btn-outline:hover {
-      background: rgba(245, 158, 11, 0.1);
-      border-color: #f59e0b;
-      color: #f8fafc;
-      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+      background: rgba(245, 158, 11, 0.15);
+      border-color: #fbbf24;
+      color: #ffffff;
+      box-shadow: 0 0 30px rgba(251, 191, 36, 0.95), 0 0 12px #fbbf24;
       transform: translateY(-2px);
     }
 
@@ -678,16 +678,16 @@
       background: linear-gradient(180deg, #d97706 0%, #b45309 100%);
       color: #ffffff;
       font-weight: 600;
-      border: 1px solid #f59e0b;
-      box-shadow: 0 2px 8px rgba(180, 83, 9, 0.2);
+      border: 4px solid #fbbf24;
+      box-shadow: 0 0 20px rgba(251, 191, 36, 0.75), 0 0 8px #fbbf24, 0 4px 14px rgba(180, 83, 9, 0.4);
       text-shadow: none;
     }
 
     .btn-gold:hover {
       background: linear-gradient(180deg, #b45309 0%, #92400e 100%);
       color: #ffffff;
-      border-color: #fbbf24;
-      box-shadow: 0 4px 14px rgba(180, 83, 9, 0.3);
+      border-color: #fde047;
+      box-shadow: 0 0 32px rgba(253, 224, 71, 0.95), 0 0 14px #fbbf24, 0 6px 20px rgba(180, 83, 9, 0.5);
       transform: translateY(-2px);
     }
 
@@ -696,8 +696,8 @@
       background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
       color: #f59e0b;
       font-weight: 700;
-      border: 1px solid #f59e0b;
-      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
+      border: 4px solid #f59e0b;
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.7), 0 0 8px #f59e0b, 0 4px 14px rgba(0, 0, 0, 0.6);
       text-shadow: none;
     }
 
@@ -705,7 +705,7 @@
       background: linear-gradient(180deg, #334155 0%, #1e293b 100%);
       color: #fbbf24;
       border-color: #fbbf24;
-      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
+      box-shadow: 0 0 32px rgba(251, 191, 36, 0.95), 0 0 14px #fbbf24, 0 6px 20px rgba(245, 158, 11, 0.4);
       transform: translateY(-2px);
     }
 
@@ -713,17 +713,17 @@
     .btn-newsletter {
       background: linear-gradient(180deg, #4f46e5 0%, #4338ca 100%);
       color: #ffffff;
-      border: 1px solid #818cf8;
+      border: 4px solid #818cf8;
       font-weight: 600;
-      box-shadow: 0 2px 8px rgba(79, 70, 229, 0.2);
+      box-shadow: 0 0 20px rgba(129, 140, 248, 0.7), 0 0 8px #818cf8, 0 4px 14px rgba(79, 70, 229, 0.4);
       text-shadow: none;
     }
 
     .btn-newsletter:hover {
       background: linear-gradient(180deg, #4338ca 0%, #3730a3 100%);
       color: #ffffff;
-      border-color: #a5b4fc;
-      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
+      border-color: #c7d2fe;
+      box-shadow: 0 0 32px rgba(199, 210, 254, 0.95), 0 0 14px #818cf8, 0 6px 20px rgba(79, 70, 229, 0.5);
       transform: translateY(-2px);
     }
 
@@ -811,7 +811,7 @@
 
     .role-card {
       background: var(--bg-card);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 2px solid rgba(255, 255, 255, 0.2);
       border-radius: var(--radius);
       padding: 1.75rem;
       transition: var(--transition);
@@ -861,7 +861,69 @@
       transform: scaleX(1);
     }
 
-    .role-card-icon {
+    .role-card.border-gold {
+  border: 2px solid rgba(251, 191, 36, 0.7) !important;
+  box-shadow: 0 0 16px rgba(251, 191, 36, 0.25), 0 10px 30px rgba(0, 0, 0, 0.8) !important;
+}
+
+.role-card.border-gold:hover {
+  border-color: #fbbf24 !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.9), 0 0 28px rgba(251, 191, 36, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+.role-card.border-cyan {
+  border: 2px solid rgba(56, 189, 248, 0.7) !important;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.25), 0 10px 30px rgba(0, 0, 0, 0.8) !important;
+}
+
+.role-card.border-cyan:hover {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.9), 0 0 28px rgba(56, 189, 248, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+.role-card.border-violet {
+  border: 2px solid rgba(165, 180, 252, 0.7) !important;
+  box-shadow: 0 0 16px rgba(165, 180, 252, 0.25), 0 10px 30px rgba(0, 0, 0, 0.8) !important;
+}
+
+.role-card.border-violet:hover {
+  border-color: #a5b4fc !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.9), 0 0 28px rgba(165, 180, 252, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+.role-card.border-emerald,
+.role-card.border-green {
+  border: 2px solid rgba(52, 211, 153, 0.7) !important;
+  box-shadow: 0 0 16px rgba(52, 211, 153, 0.25), 0 10px 30px rgba(0, 0, 0, 0.8) !important;
+}
+
+.role-card.border-emerald:hover,
+.role-card.border-green:hover {
+  border-color: #34d399 !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.9), 0 0 28px rgba(52, 211, 153, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+.role-card.border-brown {
+  border: 2px solid rgba(212, 163, 115, 0.7) !important;
+  box-shadow: 0 0 16px rgba(212, 163, 115, 0.25), 0 10px 30px rgba(0, 0, 0, 0.8) !important;
+}
+
+.role-card.border-brown:hover {
+  border-color: #d4a373 !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.9), 0 0 28px rgba(212, 163, 115, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+.role-card.border-maroon {
+  border: 2px solid rgba(226, 115, 143, 0.7) !important;
+  box-shadow: 0 0 16px rgba(226, 115, 143, 0.25), 0 10px 30px rgba(0, 0, 0, 0.8) !important;
+}
+
+.role-card.border-maroon:hover {
+  border-color: #e2738f !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.9), 0 0 28px rgba(226, 115, 143, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+.role-card-icon {
       font-size: 2rem;
       margin-bottom: 1rem;
       display: block;
@@ -895,15 +957,45 @@
     }
 
     .tech-category {
-      background: var(--bg-card);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: var(--radius);
-      padding: 1.75rem;
-      transition: var(--transition);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.8);
-    }
+  background: var(--bg-card);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  transition: var(--transition);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8),
+              inset 0 1px 0 rgba(255, 255, 255, 0.08),
+              inset 0 -1px 0 rgba(0, 0, 0, 0.8);
+}
+
+.tech-category.border-gold {
+  border: 2px solid rgba(251, 191, 36, 0.6) !important;
+  box-shadow: 0 0 16px rgba(251, 191, 36, 0.15), 0 10px 30px rgba(0, 0, 0, 0.8) !important;
+}
+
+.tech-category.border-cyan {
+  border: 2px solid rgba(56, 189, 248, 0.6) !important;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.15), 0 10px 30px rgba(0, 0, 0, 0.8) !important;
+}
+
+.tech-category.border-violet {
+  border: 2px solid rgba(165, 180, 252, 0.6) !important;
+  box-shadow: 0 0 16px rgba(165, 180, 252, 0.15), 0 10px 30px rgba(0, 0, 0, 0.8) !important;
+}
+
+.tech-category.border-brown {
+  border: 2px solid rgba(212, 163, 115, 0.6) !important;
+  box-shadow: 0 0 16px rgba(212, 163, 115, 0.15), 0 10px 30px rgba(0, 0, 0, 0.8) !important;
+}
+
+.tech-category.border-maroon {
+  border: 2px solid rgba(226, 115, 143, 0.6) !important;
+  box-shadow: 0 0 16px rgba(226, 115, 143, 0.15), 0 10px 30px rgba(0, 0, 0, 0.8) !important;
+}
+
+.tech-category.border-emerald {
+  border: 2px solid rgba(52, 211, 153, 0.6) !important;
+  box-shadow: 0 0 16px rgba(52, 211, 153, 0.15), 0 10px 30px rgba(0, 0, 0, 0.8) !important;
+}
 
     .tech-category:hover {
       background: var(--bg-card-hover);
@@ -1652,43 +1744,45 @@
     }
 
     .social-link {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.6rem 0.9rem;
-      background: var(--bg-card);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: var(--radius);
-      text-decoration: none;
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--text-secondary);
-      letter-spacing: 0.04em;
-      transition: var(--transition);
-    }
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.9rem;
+  background: var(--bg-card);
+  border: 2px solid rgba(56, 189, 248, 0.45);
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.15), 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+}
 
-    .social-link:hover {
-      background: var(--bg-card-hover);
-      border-color: rgba(56, 189, 248, 0.3);
-      color: var(--cyan);
-      transform: translateY(-2px);
-    }
+.social-link:hover {
+  background: var(--bg-card-hover);
+  border-color: #38bdf8;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.6), 0 4px 14px rgba(0, 0, 0, 0.4);
+}
 
-    .social-link.highlight {
-      background: rgba(245, 158, 11, 0.1);
-      border-color: rgba(245, 158, 11, 0.3);
-      color: var(--gold);
-      font-weight: 600;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    }
+.social-link.highlight {
+  background: rgba(245, 158, 11, 0.1);
+  border: 2px solid rgba(251, 191, 36, 0.7);
+  color: var(--gold);
+  font-weight: 600;
+  box-shadow: 0 0 14px rgba(251, 191, 36, 0.25), 0 2px 8px rgba(0, 0, 0, 0.3);
+}
 
-    .social-link.highlight:hover {
-      background: rgba(245, 158, 11, 0.2);
-      border-color: var(--gold);
-      color: #ffffff;
-      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
-      transform: translateY(-2px);
-    }
+.social-link.highlight:hover {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: #fbbf24;
+  color: #ffffff;
+  box-shadow: 0 0 24px rgba(251, 191, 36, 0.75), 0 4px 14px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
 
     .social-icon {
       font-size: 1rem;
@@ -1841,7 +1935,7 @@
       color: #ffffff;
       border-color: #7dd3fc;
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 32px rgba(125, 211, 252, 0.95), 0 0 14px #38bdf8, 0 6px 18px rgba(0, 0, 0, 0.6);
     }
 
     /* MEDIA QUERIES FOR FULL MOBILE/TABLET RESPONSIVENESS */
@@ -2443,25 +2537,25 @@
     .home-nav-card.glow-gold .home-nav-btn,
     .home-nav-card.glow-gold .home-nav-link {
       background: rgba(251, 191, 36, 0.12);
-      border: 1px solid rgba(251, 191, 36, 0.35);
+      border: 4px solid #fbbf24;
       color: var(--gold);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 18px rgba(251, 191, 36, 0.65), 0 0 6px #fbbf24, inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
 
     .home-nav-card.glow-cyan .home-nav-btn,
     .home-nav-card.glow-cyan .home-nav-link {
       background: rgba(56, 189, 248, 0.12);
-      border: 1px solid rgba(56, 189, 248, 0.35);
+      border: 4px solid #38bdf8;
       color: var(--cyan);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.65), 0 0 6px #38bdf8, inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
 
     .home-nav-card.glow-violet .home-nav-btn,
     .home-nav-card.glow-violet .home-nav-link {
       background: rgba(165, 180, 252, 0.12);
-      border: 1px solid rgba(165, 180, 252, 0.35);
+      border: 4px solid #a5b4fc;
       color: var(--violet);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 18px rgba(165, 180, 252, 0.65), 0 0 6px #a5b4fc, inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
 
     .home-nav-card:hover .home-nav-btn,
@@ -2473,24 +2567,24 @@
     .home-nav-card.glow-gold:hover .home-nav-link {
       background: var(--gold);
       color: #04060c;
-      border-color: #fbbf24;
-      box-shadow: 0 4px 14px rgba(251, 191, 36, 0.3);
+      border-color: #fde047;
+      box-shadow: 0 0 28px rgba(251, 191, 36, 0.95), 0 0 10px #fbbf24;
     }
 
     .home-nav-card.glow-cyan:hover .home-nav-btn,
     .home-nav-card.glow-cyan:hover .home-nav-link {
       background: var(--cyan);
       color: #04060c;
-      border-color: #38bdf8;
-      box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+      border-color: #7dd3fc;
+      box-shadow: 0 0 28px rgba(56, 189, 248, 0.95), 0 0 10px #38bdf8;
     }
 
     .home-nav-card.glow-violet:hover .home-nav-btn,
     .home-nav-card.glow-violet:hover .home-nav-link {
       background: var(--violet);
       color: #04060c;
-      border-color: #a5b4fc;
-      box-shadow: 0 4px 14px rgba(165, 180, 252, 0.3);
+      border-color: #c7d2fe;
+      box-shadow: 0 0 28px rgba(165, 180, 252, 0.95), 0 0 10px #a5b4fc;
     }
 
     /* Diátaxis & Agentic Linked 3D Cards */
@@ -3085,7 +3179,7 @@
       display: flex;
       gap: 1.5rem;
       width: max-content;
-      animation: scroll-articles-marquee 110s linear infinite;
+      animation: scroll-articles-marquee 145s linear infinite;
       will-change: transform;
     }
 
@@ -3141,7 +3235,7 @@
 
       .articles-marquee-track {
         gap: 1.25rem;
-        animation-duration: 95s;
+        animation-duration: 125s;
       }
 
       .article-carousel-title {
@@ -3193,7 +3287,7 @@
 
       .articles-marquee-track {
         gap: 1.15rem;
-        animation-duration: 90s;
+        animation-duration: 115s;
       }
 
       .article-carousel-title {
@@ -3275,6 +3369,16 @@
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 24px rgba(251, 113, 133, 0.18);
     }
 
+    .article-carousel-card.border-brown:hover {
+      border-color: #d4a373;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 24px rgba(212, 163, 115, 0.18);
+    }
+
+    .article-carousel-card.border-maroon:hover {
+      border-color: #e2738f;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 24px rgba(226, 115, 143, 0.18);
+    }
+
     .article-card-top {
       display: flex;
       justify-content: space-between;
@@ -3326,6 +3430,18 @@
       background: rgba(251, 113, 133, 0.12);
       color: var(--red);
       border-color: rgba(251, 113, 133, 0.25);
+    }
+
+    .article-badge.brown {
+      background: rgba(212, 163, 115, 0.12);
+      color: #d4a373;
+      border-color: rgba(212, 163, 115, 0.25);
+    }
+
+    .article-badge.maroon {
+      background: rgba(226, 115, 143, 0.12);
+      color: #e2738f;
+      border-color: rgba(226, 115, 143, 0.25);
     }
 
     .article-card-meta-line {
@@ -3702,6 +3818,7 @@
         },
         "knowsAbout": [
           "Emerging Technologies Education",
+          "AI Agent Orchestration",
           "Emerging Technology Content",
           "Developer Education",
           "Python Programming",
@@ -3719,6 +3836,7 @@
           "Large Language Models",
           "Small Language Models",
           "HuggingFace",
+          "Open Source",
           "Agentic AI",
           "OpenClaw",
           "Hermes Agent",
@@ -3753,6 +3871,10 @@
           "https://www.hackerearth.com/@thomascherickal",
           "https://leetcode.com/u/thomascherickal",
           "https://www.naukri.com/code360/profile/thomascherickal",
+          "https://www.kaggle.com/thomascherickal",
+          "https://www.codewars.com/users/thomascherickal",
+          "https://hubpages.com/@thomascherickal",
+          "https://thomascherickal.contently.com",
           "https://thomascherickal.quora.com",
           "https://reddit.com/user/thomascherickal1",
           "https://exercism.org/profiles/thomascherickal",
@@ -3761,65 +3883,8 @@
           "https://patreon.com/thomascherickal",
           "https://thomascherickal.gumroad.com",
           "https://topmate.io/thomascherickal"
-        ],
-        "knowsAbout": [
-        "Emerging Technologies Education",
-        "AI Agent Orchestration",
-        "Emerging Technology Content",
-        "Developer Education",
-        "Python Programming",
-        "Scikit-Learn Stack",
-        "PyTorch",
-        "AI Agents",
-        "Microsoft Agent Framework",
-        "Rust Programming",
-        "Candle",
-        "Burn",
-        "AI Engineering",
-        "Systems Engineering",
-        "Test-Driven Development(TDD)",
-        "Generative AI",
-        "Large Language Models",
-        "Small Language Models",
-        "HuggingFace",
-        "Open Source",
-        "Quantum Computing",
-        "Quantum Machine Learning",
-        "Quantum Technologies",
-        "Quantum Algorithms",
-        "IBM Qiskit",
-        "Microsoft Q#",
-        "Quantinuum Stack",
-        "PennyLane",
-        "Google Cirq",
-        "TensorFlow Quantum",
-        "Post-Quantum Cryptography",
-        "SEO | AEO | GEO",
-        "Git | GitHub | GitLab"
-      ],
-      "sameAs": [
-        "https://thomascherickal.com",
-        "https://github.com/thomascherickal",
-        "https://linkedin.com/in/thomascherickal",
-        "https://thomascherickal.medium.com",
-        "https://thomascherickal.hashnode.dev",
-        "https://hackernoon.com/u/thomascherickal",
-        "https://thomascherickal.substack.com",
-        "https://www.deep-ml.com/profile/thomascherickal",
-        "https://hackerrank.com/profile/thomascherickal",
-        "https://www.hackerearth.com/@thomascherickal",
-        "https://leetcode.com/u/thomascherickal",
-        "https://www.naukri.com/code360/profile/thomascherickal",
-        "https://thomascherickal.quora.com",
-        "https://reddit.com/user/thomascherickal1",
-        "https://exercism.org/profiles/thomascherickal",
-        "https://profile.codersrank.io/user/thomascherickal/",
-        "https://linktr.ee/thomascherickal",
-        "https://patreon.com/thomascherickal",
-        "https://thomascherickal.gumroad.com",
-        "https://topmate.io/thomascherickal"
-      ]
-    },
+        ]
+      },
     {
       "@type": "ItemList",
       "@id": "https://thomascherickal.github.io/#emerging-technologies",
@@ -3987,7 +4052,7 @@
         <div class="stat-label">Years Emerging Technologies</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">24</div>
+        <div class="stat-num">32</div>
         <div class="stat-label">Featured Deep Dives</div>
       </div>
       <div class="stat-item">
@@ -4002,18 +4067,18 @@
 
     <div class="divider"></div>
 
-    <!-- 24 FEATURED ARTICLES CONTINUOUS SCROLLING CAROUSEL -->
+    <!-- 32 FEATURED ARTICLES CONTINUOUS SCROLLING CAROUSEL -->
     <section class="articles-carousel-section reveal" id="articles-carousel">
       <div class="articles-carousel-header">
         <div class="section-header">
           <p class="section-label">Selected Publications</p>
           <h2 class="section-title">Featured <span class="accent-cyan">Technical Deep Dives</span></h2>
-          <p class="section-sub">24 featured long-form technical deep dives across Generative AI, AI Agents, Local AI,
+          <p class="section-sub">Featured long-form technical deep dives across Generative AI, AI Agents, Local AI,
             Agentic AI Assistants, Quantum
             Computing, Quantum AI, Blockchain, and AI Tools Expertise.</p>
         </div>
         <div class="articles-carousel-controls">
-          <a href="writing.html" class="btn btn-outline" style="font-size:0.85rem;padding:0.55rem 1.15rem;">View All 24
+          <a href="writing.html" class="btn btn-outline" style="font-size:0.85rem;padding:0.55rem 1.15rem;">View All 32
             Featured Publications ↗</a>
         </div>
       </div>
@@ -4536,6 +4601,174 @@
             </div>
           </a>
 
+          <!-- Card 25 -->
+          <a href="https://thomascherickal.com/2026/06/04/rust-is-eating-python-in-generative-ai/" target="_blank"
+            rel="noopener" class="article-carousel-card border-brown">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge brown">🦀 Rust</span>
+                <span class="meta-pill platform">thomascherickal.com</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jun 4, 2026</span> · <span>2,000 words</span>
+              </div>
+              <h3 class="article-carousel-title">Rust Is Eating Python in Generative AI</h3>
+              <p class="article-carousel-summary">Deep dive into why high-throughput GenAI workloads and inference
+                engines are migrating from Python to Rust, Candle, and Burn.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on Blog ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#25</span>
+            </div>
+          </a>
+
+          <!-- Card 26 -->
+          <a href="https://thomascherickal.com/2026/06/04/rust-doesnt-do-inheritance-thats-exactly-why-it-wins-at-game-engines-and-robotics-and-ai/" target="_blank"
+            rel="noopener" class="article-carousel-card border-brown">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge brown">🦀 Rust</span>
+                <span class="meta-pill platform">thomascherickal.com</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jun 4, 2026</span> · <span>2,800 words</span>
+              </div>
+              <h3 class="article-carousel-title">Rust Doesn't Do Inheritance: Why It Wins at Game Engines, Robotics &amp; AI</h3>
+              <p class="article-carousel-summary">Architectural analysis of composition over inheritance in Rust, and why
+                ECS and trait patterns outperform traditional OOP in robotics and AI.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on Blog ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#26</span>
+            </div>
+          </a>
+
+          <!-- Card 27 -->
+          <a href="https://thomascherickal.com/2026/08/22/how-rust-runs-natively-on-windows-linux-mac-android-ios-web-iot-and-edge/" target="_blank"
+            rel="noopener" class="article-carousel-card border-brown">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge brown">🦀 Rust</span>
+                <span class="meta-pill platform">thomascherickal.com</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Aug 22, 2026</span> · <span>1,400 words</span>
+              </div>
+              <h3 class="article-carousel-title">How Rust Runs Natively: Windows, Linux, Mac, Mobile, Web, IoT &amp; Edge</h3>
+              <p class="article-carousel-summary">Cross-compilation blueprint demonstrating zero-overhead native execution
+                across desktop, mobile, WebAssembly, and bare-metal IoT.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on Blog ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#27</span>
+            </div>
+          </a>
+
+          <!-- Card 28 -->
+          <a href="https://thomascherickal.com/2026/08/22/heres-how-you-can-use-ai-to-teach-you-rust/" target="_blank"
+            rel="noopener" class="article-carousel-card border-brown">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge brown">🦀 Rust</span>
+                <span class="meta-pill platform">thomascherickal.com</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Aug 22, 2026</span> · <span>5,000 words</span>
+              </div>
+              <h3 class="article-carousel-title">Here’s How You Can Use AI to Teach You Rust</h3>
+              <p class="article-carousel-summary">Practical methodology using conversational LLMs, compiler error
+                dissection, and interactive feedback loops to master Rust rapidly.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on Blog ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#28</span>
+            </div>
+          </a>
+
+          <!-- Card 29 -->
+          <a href="https://thomascherickal.com/2026/07/31/nobody-knows-how-llms-work-unless-you-look-at-them-as-non-linear-dynamical-systems/" target="_blank"
+            rel="noopener" class="article-carousel-card border-maroon">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge maroon">🧠 AI Engineering</span>
+                <span class="meta-pill platform">thomascherickal.com</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jul 31, 2026</span> · <span>4,500 words</span>
+              </div>
+              <h3 class="article-carousel-title">Nobody Knows How LLMs Work – Unless You Treat Them as Dynamical Systems</h3>
+              <p class="article-carousel-summary">Mathematical analysis of transformer attention dynamics, non-linear
+                trajectories, and attractor landscapes in LLM cognition.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on Blog ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#29</span>
+            </div>
+          </a>
+
+          <!-- Card 30 -->
+          <a href="https://thomascherickal.com/2026/07/15/the-hidden-geometry-of-generative-ai-how-manifold-theory-explains-the-mysteries-nobody-explained-to-you/" target="_blank"
+            rel="noopener" class="article-carousel-card border-maroon">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge maroon">🧠 AI Engineering</span>
+                <span class="meta-pill platform">thomascherickal.com</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jul 15, 2026</span> · <span>9,100 words</span>
+              </div>
+              <h3 class="article-carousel-title">The Hidden Geometry of GenAI: How Manifold Theory Explains LLMs</h3>
+              <p class="article-carousel-summary">Geometric exploration of high-dimensional latent manifolds, topological
+                representations, and deep learning generalization mechanics.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on Blog ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#30</span>
+            </div>
+          </a>
+
+          <!-- Card 31 -->
+          <a href="https://thomascherickal.com/2026/06/24/the-ai-engineers-guide-to-the-top-10-genuinely-free-ai-inference-providers-in-2026/" target="_blank"
+            rel="noopener" class="article-carousel-card border-maroon">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge maroon">🧠 AI Engineering</span>
+                <span class="meta-pill platform">thomascherickal.com</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jun 24, 2026</span> · <span>8,200 words</span>
+              </div>
+              <h3 class="article-carousel-title">The AI Engineer's Guide to Top 10 Free AI Inference Providers in 2026</h3>
+              <p class="article-carousel-summary">Comprehensive benchmark, rate limit comparison, and deployment guide
+                for the top 10 zero-cost AI model inference providers.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on Blog ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#31</span>
+            </div>
+          </a>
+
+          <!-- Card 32 -->
+          <a href="https://thomascherickal.com/2026/06/12/the-silicon-symphony-the-top-10-best-alternatives-to-claude-code/" target="_blank"
+            rel="noopener" class="article-carousel-card border-maroon">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge maroon">🧠 AI Engineering</span>
+                <span class="meta-pill platform">thomascherickal.com</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jun 12, 2026</span> · <span>7,500 words</span>
+              </div>
+              <h3 class="article-carousel-title">The Silicon Symphony: Top 10 Best Alternatives to Claude Code</h3>
+              <p class="article-carousel-summary">Exhaustive architectural evaluation, developer benchmarks, and deployment
+                comparison for modern autonomous coding assistants.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on Blog ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#32</span>
+            </div>
+          </a>
+
           <!-- SET 2 (Duplicated for Seamless 100% Continuous Loop) -->
           <!-- Card 1 (Dup) -->
           <a href="https://hackernoon.com/google-gemini-vs-anthropic-claude-vs-openai-chatgpt-vs-xai-grok-the-ultimate-comparison"
@@ -5048,6 +5281,174 @@
             <div class="article-carousel-footer">
               <span class="article-read-btn">Read on HackerNoon ↗</span>
               <span style="font-size:0.75rem;color:var(--text-muted);">#24</span>
+            </div>
+          </a>
+
+          <!-- Card 25 (Dup) -->
+          <a href="https://thomascherickal.com/2026/06/04/rust-is-eating-python-in-generative-ai/" target="_blank"
+            rel="noopener" class="article-carousel-card border-brown" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge brown">🦀 Rust</span>
+                <span class="meta-pill platform">thomascherickal.com</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jun 4, 2026</span> · <span>2,000 words</span>
+              </div>
+              <div class="article-carousel-title">Rust Is Eating Python in Generative AI</div>
+              <p class="article-carousel-summary">Deep dive into why high-throughput GenAI workloads and inference
+                engines are migrating from Python to Rust, Candle, and Burn.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on Blog ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#25</span>
+            </div>
+          </a>
+
+          <!-- Card 26 (Dup) -->
+          <a href="https://thomascherickal.com/2026/06/04/rust-doesnt-do-inheritance-thats-exactly-why-it-wins-at-game-engines-and-robotics-and-ai/" target="_blank"
+            rel="noopener" class="article-carousel-card border-brown" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge brown">🦀 Rust</span>
+                <span class="meta-pill platform">thomascherickal.com</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jun 4, 2026</span> · <span>2,800 words</span>
+              </div>
+              <div class="article-carousel-title">Rust Doesn't Do Inheritance: Why It Wins at Game Engines, Robotics &amp; AI</div>
+              <p class="article-carousel-summary">Architectural analysis of composition over inheritance in Rust, and why
+                ECS and trait patterns outperform traditional OOP in robotics and AI.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on Blog ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#26</span>
+            </div>
+          </a>
+
+          <!-- Card 27 (Dup) -->
+          <a href="https://thomascherickal.com/2026/08/22/how-rust-runs-natively-on-windows-linux-mac-android-ios-web-iot-and-edge/" target="_blank"
+            rel="noopener" class="article-carousel-card border-brown" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge brown">🦀 Rust</span>
+                <span class="meta-pill platform">thomascherickal.com</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Aug 22, 2026</span> · <span>1,400 words</span>
+              </div>
+              <div class="article-carousel-title">How Rust Runs Natively: Windows, Linux, Mac, Mobile, Web, IoT &amp; Edge</div>
+              <p class="article-carousel-summary">Cross-compilation blueprint demonstrating zero-overhead native execution
+                across desktop, mobile, WebAssembly, and bare-metal IoT.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on Blog ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#27</span>
+            </div>
+          </a>
+
+          <!-- Card 28 (Dup) -->
+          <a href="https://thomascherickal.com/2026/08/22/heres-how-you-can-use-ai-to-teach-you-rust/" target="_blank"
+            rel="noopener" class="article-carousel-card border-brown" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge brown">🦀 Rust</span>
+                <span class="meta-pill platform">thomascherickal.com</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Aug 22, 2026</span> · <span>5,000 words</span>
+              </div>
+              <div class="article-carousel-title">Here’s How You Can Use AI to Teach You Rust</div>
+              <p class="article-carousel-summary">Practical methodology using conversational LLMs, compiler error
+                dissection, and interactive feedback loops to master Rust rapidly.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on Blog ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#28</span>
+            </div>
+          </a>
+
+          <!-- Card 29 (Dup) -->
+          <a href="https://thomascherickal.com/2026/07/31/nobody-knows-how-llms-work-unless-you-look-at-them-as-non-linear-dynamical-systems/" target="_blank"
+            rel="noopener" class="article-carousel-card border-maroon" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge maroon">🧠 AI Engineering</span>
+                <span class="meta-pill platform">thomascherickal.com</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jul 31, 2026</span> · <span>4,500 words</span>
+              </div>
+              <div class="article-carousel-title">Nobody Knows How LLMs Work – Unless You Treat Them as Dynamical Systems</div>
+              <p class="article-carousel-summary">Mathematical analysis of transformer attention dynamics, non-linear
+                trajectories, and attractor landscapes in LLM cognition.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on Blog ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#29</span>
+            </div>
+          </a>
+
+          <!-- Card 30 (Dup) -->
+          <a href="https://thomascherickal.com/2026/07/15/the-hidden-geometry-of-generative-ai-how-manifold-theory-explains-the-mysteries-nobody-explained-to-you/" target="_blank"
+            rel="noopener" class="article-carousel-card border-maroon" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge maroon">🧠 AI Engineering</span>
+                <span class="meta-pill platform">thomascherickal.com</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jul 15, 2026</span> · <span>9,100 words</span>
+              </div>
+              <div class="article-carousel-title">The Hidden Geometry of GenAI: How Manifold Theory Explains LLMs</div>
+              <p class="article-carousel-summary">Geometric exploration of high-dimensional latent manifolds, topological
+                representations, and deep learning generalization mechanics.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on Blog ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#30</span>
+            </div>
+          </a>
+
+          <!-- Card 31 (Dup) -->
+          <a href="https://thomascherickal.com/2026/06/24/the-ai-engineers-guide-to-the-top-10-genuinely-free-ai-inference-providers-in-2026/" target="_blank"
+            rel="noopener" class="article-carousel-card border-maroon" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge maroon">🧠 AI Engineering</span>
+                <span class="meta-pill platform">thomascherickal.com</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jun 24, 2026</span> · <span>8,200 words</span>
+              </div>
+              <div class="article-carousel-title">The AI Engineer's Guide to Top 10 Free AI Inference Providers in 2026</div>
+              <p class="article-carousel-summary">Comprehensive benchmark, rate limit comparison, and deployment guide
+                for the top 10 zero-cost AI model inference providers.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on Blog ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#31</span>
+            </div>
+          </a>
+
+          <!-- Card 32 (Dup) -->
+          <a href="https://thomascherickal.com/2026/06/12/the-silicon-symphony-the-top-10-best-alternatives-to-claude-code/" target="_blank"
+            rel="noopener" class="article-carousel-card border-maroon" aria-hidden="true" tabindex="-1">
+            <div>
+              <div class="article-card-top">
+                <span class="article-badge maroon">🧠 AI Engineering</span>
+                <span class="meta-pill platform">thomascherickal.com</span>
+              </div>
+              <div class="article-card-meta-line">
+                <span>Jun 12, 2026</span> · <span>7,500 words</span>
+              </div>
+              <div class="article-carousel-title">The Silicon Symphony: Top 10 Best Alternatives to Claude Code</div>
+              <p class="article-carousel-summary">Exhaustive architectural evaluation, developer benchmarks, and deployment
+                comparison for modern autonomous coding assistants.</p>
+            </div>
+            <div class="article-carousel-footer">
+              <span class="article-read-btn">Read on Blog ↗</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">#32</span>
             </div>
           </a>
 

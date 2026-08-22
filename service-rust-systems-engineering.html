@@ -4,31 +4,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAQs — Frequently Asked Questions | Thomas Cherickal</title>
+  <title>Rust for AI & High-Performance Systems (Training & Guides) — Service Specification | Thomas Cherickal</title>
   <meta name="description"
-    content="20 Frequently asked questions on emerging technologies education, live training in GenAI &amp; Quantum Computing, automated documentation, infinite revision guarantees, and milestone payment structures." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://thomascherickal.github.io/faqs.html" />
+    content="Workshops, production codebases, and deep technical guides for Rust AI inference, Candle & Burn ML tensor engines, PyO3 Python acceleration, and memory-safe Tokio microservices." />
+  <meta name="author" content="Thomas Cherickal" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://thomascherickal.github.io/service-rust-systems-engineering.html" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://thomascherickal.github.io/faqs.html" />
+  <meta property="og:url" content="https://thomascherickal.github.io/service-rust-systems-engineering.html" />
   <meta property="og:site_name" content="Thomas Cherickal — The Digital Futurist" />
-  <meta property="og:title" content="FAQs — Frequently Asked Questions | Thomas Cherickal" />
+  <meta property="og:title" content="Rust for AI & High-Performance Systems (Training & Guides) — Thomas Cherickal" />
   <meta property="og:description"
-    content="Answers on revisions, milestone payments, code verification guarantees, IP ownership, and technical documentation." />
+    content="Workshops, production codebases, and technical guides for Rust AI inference, Candle & Burn ML engines, PyO3 Python acceleration, and Tokio microservices." />
   <meta property="og:image" content="https://thomascherickal.github.io/assets/og-card.png" />
-  <meta property="og:image:alt" content="Thomas Cherickal — FAQs" />
   <meta property="og:locale" content="en_US" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@thomascherickal" />
-  <meta name="twitter:creator" content="@thomascherickal" />
-  <meta name="twitter:title" content="FAQs — Frequently Asked Questions | Thomas Cherickal" />
-  <meta name="twitter:description"
-    content="Infinite revisions, milestone payments, code verification, and technical documentation answers." />
-  <meta name="twitter:image" content="https://thomascherickal.github.io/assets/og-card.png" />
 
   <!-- Favicon & Icons -->
   <link rel="icon" href="assets/favicon.ico" sizes="any" />
@@ -3699,344 +3691,86 @@ footer {
   margin-top: 2rem;
 }
   </style>
-<style>
-    .faq-category-badge {
-      display: inline-block;
-      padding: 0.25rem 0.65rem;
-      border-radius: 4px;
-      font-size: 0.75rem;
-      font-family: var(--font-mono);
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-
-    .faq-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .faq-card {
-      background: var(--bg-card);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      padding: 1.5rem;
-      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-
-    .faq-card:hover {
-      transform: translateY(-5px) scale(1.01);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
-    }
-
-    .faq-card.border-gold {
-      border: 1px solid var(--gold);
-    }
-
-    .faq-card.border-gold:hover {
-      border-color: #ffe484;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 201, 71, 0.45);
-    }
-
-    .faq-card.border-cyan {
-      border: 1px solid var(--cyan);
-    }
-
-    .faq-card.border-cyan:hover {
-      border-color: #40e8ff;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 212, 255, 0.45);
-    }
-
-    .faq-card.border-blue {
-      border: 1px solid #60a5fa;
-    }
-
-    .faq-card.border-blue:hover {
-      border-color: #93c5fd;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 25px rgba(96, 165, 250, 0.45);
-    }
-
-    .faq-card.border-green {
-      border: 1px solid #34d399;
-    }
-
-    .faq-card.border-green:hover {
-      border-color: #6ee7b7;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 25px rgba(52, 211, 153, 0.45);
-    }
-
-    .faq-card.border-purple {
-      border: 1px solid #c084fc;
-    }
-
-    .faq-card.border-purple:hover {
-      border-color: #e9d5ff;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 25px rgba(192, 132, 252, 0.45);
-    }
-
-    .faq-card.border-pink {
-      border: 1px solid #f472b6;
-    }
-
-    .faq-card.border-pink:hover {
-      border-color: #fbcfe8;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 25px rgba(244, 114, 182, 0.45);
-    }
-
-    .unanswered-question-card {
-      background: var(--bg-card);
-      border: 1px solid var(--gold);
-      border-radius: 16px;
-      padding: 2.5rem;
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 201, 71, 0.15);
-      text-align: center;
-      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .unanswered-question-card:hover {
-      transform: translateY(-5px) scale(1.01);
-      border-color: #ffe484;
-      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.6), 0 0 35px rgba(255, 201, 71, 0.65), 0 0 10px rgba(255, 228, 132, 0.4);
-    }
-
-    .faq-num {
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      margin-bottom: 0.5rem;
-    }
-
-    .faq-question {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 0.85rem;
-      line-height: 1.35;
-    }
-
-    .faq-answer {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
-    .faq-answer strong {
-      color: var(--gold);
-    }
-
-    /* Startup Discount CTA */
-    .startup-cta-box {
-      background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
-      border: 2px solid var(--gold);
-      border-radius: 16px;
-      padding: 3rem 2rem;
-      text-align: center;
-      margin-top: 3.5rem;
-      box-shadow: 0 12px 36px rgba(255, 215, 0, 0.15);
-    }
-  </style>
-
-  <!-- Structured Data (JSON-LD FAQPage & WebPage) -->
+<!-- Structured Data (JSON-LD) for Google Rich Results -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://thomascherickal.github.io/faqs.html#webpage",
-        "url": "https://thomascherickal.github.io/faqs.html",
-        "name": "Frequently Asked Questions — Thomas Cherickal",
-        "description": "20 Frequently asked questions on emerging technologies education, developer courses, quantum content, infinite revision guarantees, and milestone payment structures.",
-        "isPartOf": { "@id": "https://thomascherickal.github.io/#website" },
-        "inLanguage": "en-US",
-        "breadcrumb": { "@id": "https://thomascherickal.github.io/faqs.html#breadcrumb" },
-        "mainEntity": { "@id": "https://thomascherickal.github.io/faqs.html#faqpage" }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://thomascherickal.github.io/service-rust-systems-engineering.html#webpage",
+      "url": "https://thomascherickal.github.io/service-rust-systems-engineering.html",
+      "name": "Rust for AI & High-Performance Systems (Training & Guides) \u2014 Service Specification | Thomas Cherickal",
+      "description": "Workshops, production codebases, and deep technical guides for Rust AI inference, Candle & Burn ML tensor engines, PyO3 Python acceleration, and memory-safe Tokio microservices.",
+      "isPartOf": {
+        "@id": "https://thomascherickal.github.io/#website"
       },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://thomascherickal.github.io/faqs.html#breadcrumb",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://thomascherickal.github.io/" },
-          { "@type": "ListItem", "position": 2, "name": "Frequently Asked Questions", "item": "https://thomascherickal.github.io/faqs.html" }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://thomascherickal.github.io/faqs.html#faqpage",
-        "name": "Frequently Asked Questions — Thomas Cherickal",
-        "description": "20 Frequently asked questions on emerging technologies education, developer courses, quantum content, infinite revision guarantees, and milestone payment structures.",
-        "url": "https://thomascherickal.github.io/faqs.html",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How many revisions till satisfied?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Infinite revisions. We iterate continuously on every draft, technical guide, and code repository until your team is 100% satisfied with prose clarity, technical accuracy, and execution benchmarks."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How are the payments handled?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Payments are handled by milestones, with every milestone having equal weightage on the final product. Whether split 50/50 for articles or 33/33/34 across multi-part suites, every phase carries equal weight."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Who owns the intellectual property and copyright?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You retain 100% full IP ownership and copyright upon completion. All technical guides, notebooks, and sample code are delivered directly under your organization's open-source or proprietary licensing terms."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How is code execution and quantum circuit accuracy verified?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Every code snippet, API request, PyTorch pipeline, and Qiskit quantum circuit is manually executed and verified in isolated virtual environments or simulator/hardware backends before publishing. No unverified boilerplate."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is Purchasing Power Parity (PPP) / Country Parity Pricing?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "PPP pricing ensures equal access for engineering teams globally. Clients in Tier 2 Developing Nations get 25% off (75% price) and Tier 3 Least Developed Nations get 50% off (50% price) based on World Bank indices."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is there a special discount for early-stage startups?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes! Pre-Seed and Seed-stage startups receive a prominent 50% discount across all technical content packages to accelerate developer acquisition during crucial launch windows."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What technology stacks and frameworks do you cover?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Generative AI (PyTorch, vLLM, Ollama, LangChain, LlamaIndex, Claude, Gemini APIs), Quantum Computing (IBM Qiskit, PennyLane, Cirq), and Core Systems (Python, Golang, and Rust)."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the typical turnaround time for a deliverable?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Short technical articles take 3–5 business days; standard deep dives take 5–8 business days; full automated documentation suites take 14–21 business days."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you sign Non-Disclosure Agreements (NDAs)?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, absolutely. Standard mutual NDAs are executed prior to examining unreleased API endpoints, proprietary SDKs, or pre-launch model architecture documentation."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can you write for both developers and executive leaders?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Using the Diátaxis framework, content is structured with modular sections: quickstarts for busy engineers, benchmark deep dives for researchers, and executive summaries for decision-makers."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "In what file formats do you deliver content?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Clean Markdown (.md), MDX, Jupyter Notebooks (.ipynb), executable Python/Qiskit scripts, OpenAPI/Swagger JSON specs, and direct GitHub Pull Requests to your repository."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Are your technical articles and training materials 100% human-written?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. All content is 100% human-written and 100% verified in runtime environments before publishing. AI tools are used solely for sourced claims and statistical data discovery, never for writing prose or code."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do you cover Quantum Machine Learning (QML) and hybrid algorithms?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We author end-to-end technical guides covering Quantum Neural Networks (QNNs), Quantum Kernel Methods, and Variational Quantum Eigensolvers (VQE/QAOA) executed via PennyLane and IBM Qiskit Aer."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you offer monthly content partner retainers?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Monthly retainer partnerships provide dedicated sprint capacity for technical articles, changelogs, SDK update guides, and continuous documentation maintenance."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What happens if an API version changes shortly after delivery?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Minor code snippet updates and API breaking change patches are included free for 60 days post-launch under our commitment to long-term content accuracy."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do we get started on a project brief?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Submit your requirements via the brief form on contact.html. We return a clear milestone scope proposal within 24 hours."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can you author reproducible benchmark comparison reports?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Standalone benchmarking passes include a dedicated GitHub repository with reproducible scripts for throughput, latency, memory utilization, and accuracy metrics."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How are quantum algorithms verified on hardware?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Quantum circuits are validated first on statevector simulators (Qiskit Aer / PennyLane), followed by noisy simulation models and execution on IBM Quantum hardware backend channels."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do you cover Post-Quantum Cryptography (PQC) and quantum security?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We author technical whitepapers, migration guides, and automated documentation covering NIST PQC standards (ML-KEM/Kyber, ML-DSA/Dilithium), hybrid lattice cryptography, and quantum risk assessment frameworks."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do you document quantum circuit optimization and error mitigation?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We detail pulse-level control, zero-noise extrapolation (ZNE), dynamical decoupling, and compiler transpilation passes in Qiskit and PennyLane to help developers minimize decoherence on noisy hardware."
-            }
-          }
-        ]
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://thomascherickal.github.io/service-rust-systems-engineering.html#breadcrumb"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thomascherickal.github.io/service-rust-systems-engineering.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thomascherickal.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://thomascherickal.github.io/services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rust for AI & High-Performance Systems",
+          "item": "https://thomascherickal.github.io/service-rust-systems-engineering.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://thomascherickal.github.io/service-rust-systems-engineering.html#service",
+      "name": "Rust for AI & High-Performance Systems (Training & Guides) \u2014 Thomas Cherickal",
+      "serviceType": "Technical Training & Guides",
+      "url": "https://thomascherickal.github.io/service-rust-systems-engineering.html",
+      "description": "Workshops, production codebases, and deep technical guides for Rust AI inference, Candle & Burn ML tensor engines, PyO3 Python acceleration, and memory-safe Tokio microservices.",
+      "provider": {
+        "@type": "Person",
+        "@id": "https://thomascherickal.github.io/#person",
+        "name": "Thomas Cherickal",
+        "jobTitle": "Emerging Technologies Educator",
+        "url": "https://thomascherickal.github.io"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide (remote)"
+      },
+      "availableLanguage": "English",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thomascherickal.github.io/service-rust-systems-engineering.html",
+        "priceCurrency": "USD",
+        "price": "375",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": "175",
+          "maxPrice": "375",
+          "priceCurrency": "USD",
+          "valueAddedTaxIncluded": "true"
+        },
+        "availability": "https://schema.org/InStock",
+        "eligibleRegion": "Worldwide"
+      }
+    }
+  ]
+}
   </script>
 </head>
 
@@ -4044,550 +3778,143 @@ footer {
 
   <a href="#main" class="skip-link">Skip to content</a>
 
-  <iframe src="header.html" id="header-frame" title="Header Navigation" style="width:100%;border:none;overflow:hidden;display:block;" scrolling="no"></iframe>
+  <iframe src="header.html" id="header-frame" title="Header Navigation"
+    style="width:100%;border:none;overflow:hidden;display:block;" scrolling="no"></iframe>
 
   <a href="#" class="back-top" id="backTop" title="Back to top" aria-label="Back to top">↑</a>
 
   <main id="main">
 
-    <!-- PAGE HERO -->
+    <!-- PAGE HERO HEADER -->
     <section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
-      <p class="section-label">// KNOWLEDGE &amp; TRANSPARENCY</p>
-      <h1 class="section-title">Frequently Asked <span class="accent-gold">Questions</span></h1>
-      <p class="section-sub" style="max-width:760px;margin:0.5rem auto 0 auto;">
-        Clear answers on infinite revision policies, milestone payment structures, code verification guarantees, and IP
-        ownership.
+      <p class="section-label">// SERVICE SPECIFICATION 12</p>
+      <h1 class="section-title">🦀 Rust for AI <span class="accent-gold">&amp; High-Performance Systems</span></h1>
+      <p class="section-sub" style="max-width:760px;margin:0.75rem auto 0;line-height:1.8;">
+        Interactive workshops, production architectures, and deep technical guides covering Rust AI inference pipelines, Candle &amp; Burn ML tensor engines, PyO3 Python acceleration, and memory-safe Tokio microservices.
       </p>
       <div style="margin-top:1.5rem;">
-        <a href="pricing.html" class="btn btn-commission" style="padding:0.75rem 1.5rem;font-size:0.9rem;">
-          🌐 View Pricing &amp; Country Parity Index →
+        <a href="contact.html?service=rust-for-ai" class="btn btn-commission" style="padding:0.75rem 1.5rem;font-size:0.85rem;">
+          ⚡ Request Rust for AI Systems Training →
         </a>
       </div>
     </section>
 
-    <!-- 20 FAQs SECTION -->
-    <section class="reveal">
-      <div class="faq-grid">
+    <div class="divider"></div>
 
-        <!-- FAQ 1 (EXPLICIT USER MANDATE) -->
-        <div class="faq-card border-gold">
-          <span class="faq-category-badge" style="background:rgba(255,215,0,0.15);color:var(--gold);">Mandate #1</span>
-          <div class="faq-num">FAQ #01 — Revision Policy</div>
-          <h3 class="faq-question">How many revisions till satisfied?</h3>
-          <p class="faq-answer">
-            <strong>Infinite revisions.</strong> We iterate continuously on every draft, technical guide, and code
-            repository until your team is 100% satisfied with prose clarity, technical accuracy, and execution
-            benchmarks.
-          </p>
-        </div>
+    <!-- STRUCTURED SPECIFICATION LISTS ONLY -->
+    <section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
 
-        <!-- FAQ 2 (EXPLICIT USER MANDATE) -->
-        <div class="faq-card border-gold">
-          <span class="faq-category-badge" style="background:rgba(255,215,0,0.15);color:var(--gold);">Mandate #2</span>
-          <div class="faq-num">FAQ #02 — Billing &amp; Terms</div>
-          <h3 class="faq-question">How are the payments handled?</h3>
-          <p class="faq-answer">
-            <strong>Payments are handled by milestones, with every milestone having equal weightage on the final
-              product.</strong> Whether split 50/50 for articles or 33/33/34 across multi-part suites, every phase
-            carries equal weight.
-          </p>
-        </div>
+      <div
+        style="background:var(--bg-card);border:2px solid rgba(251, 191, 36, 0.6);border-radius:16px;padding:2.5rem;box-shadow:var(--glow-gold);">
 
-        <!-- FAQ 3 -->
-        <div class="faq-card border-blue">
-          <span class="faq-category-badge" style="background:rgba(59,130,246,0.15);color:#60a5fa;">Legal &amp; IP</span>
-          <div class="faq-num">FAQ #03 — IP Rights</div>
-          <h3 class="faq-question">Who owns the intellectual property and copyright?</h3>
-          <p class="faq-answer">
-            You retain <strong>100% full IP ownership and copyright</strong> upon completion. All technical guides,
-            notebooks, and sample code are delivered directly under your organization's open-source or proprietary
-            licensing terms.
-          </p>
-        </div>
+        <h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">1. Service
+          Overview &amp; Scope</h2>
+        <ul
+          style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;">
+          <li>Rust AI Inference &amp; Tensor Engines:
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;">
+              <li>Hugging Face Candle and Burn framework deep dives for pure-Rust model inference.</li>
+              <li>GGUF model loading, CPU/GPU quantized tensor compute, and SIMD hardware acceleration.</li>
+              <li>Zero-copy tensor transformations and memory-efficient batch processing.</li>
+            </ul>
+          </li>
+          <li>Python / Rust Interoperability (PyO3):
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;">
+              <li>Accelerating Python AI hot loops with native Rust extensions via PyO3 and Maturin.</li>
+              <li>Zero-overhead data exchange with NumPy arrays and PyTorch tensors.</li>
+            </ul>
+          </li>
+          <li>High-Concurrency Cloud &amp; Edge Systems:
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;">
+              <li>Async network microservices using Tokio, Axum, and Tonic (gRPC).</li>
+              <li>Compiling Rust to WebAssembly (Wasm) for in-browser and edge-runtime inference.</li>
+            </ul>
+          </li>
+        </ul>
 
-        <!-- FAQ 4 -->
-        <div class="faq-card border-cyan">
-          <span class="faq-category-badge" style="background:rgba(6,182,212,0.15);color:var(--cyan);">Quality
-            Assurance</span>
-          <div class="faq-num">FAQ #04 — Code Verification</div>
-          <h3 class="faq-question">How is code execution and benchmark accuracy verified?</h3>
-          <p class="faq-answer">
-            Every code snippet, API request, PyTorch pipeline, and Qiskit quantum circuit is <strong>manually executed
-              and verified</strong> in isolated virtual environments or simulator/hardware backends before publishing.
-            No unverified boilerplate.
-          </p>
-        </div>
+        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">2. Standard
+          Architecture &amp; Tools</h2>
+        <ul
+          style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;">
+          <li>Toolchain &amp; Libraries:
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;">
+              <li>Tokio, Rayon, Serde, PyO3, Candle, Burn, Axum, Tonic (gRPC), Wasm-pack, and Criterion.rs.</li>
+              <li>Memory safety guarantees, fearless concurrency, cache locality, and zero-cost abstractions.</li>
+            </ul>
+          </li>
+          <li>Execution Runtime &amp; Verification:
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;">
+              <li>100% executable cargo test suites, benchmark harnesses, and verified Docker/CI environments.</li>
+            </ul>
+          </li>
+        </ul>
 
-        <!-- FAQ 5 -->
-        <div class="faq-card border-green">
-          <span class="faq-category-badge" style="background:rgba(16,185,129,0.15);color:#34d399;">Global Equity</span>
-          <div class="faq-num">FAQ #05 — Purchasing Power Parity</div>
-          <h3 class="faq-question">What is Purchasing Power Parity (PPP) / Country Parity Pricing?</h3>
-          <p class="faq-answer">
-            PPP pricing ensures equal access for engineering teams globally. Clients in <strong>Tier 2 Developing
-              Nations get 25% off (75% price)</strong> and <strong>Tier 3 Least Developed Nations get 50% off (50%
-              price)</strong> based on World Bank indices.
-          </p>
-        </div>
+        <h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">3.
+          Deliverable Examples</h2>
+        <ol
+          style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;">
+          <li>Interactive Workshops &amp; Training Repositories:
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;">
+              <li>Step-by-step modular codebases with full unit tests, CLI utilities, and live coding exercises.</li>
+            </ul>
+          </li>
+          <li>PyO3 Python Acceleration Case Studies:
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;">
+              <li>End-to-end benchmarks demonstrating 10x-50x speedups over pure Python implementations.</li>
+            </ul>
+          </li>
+          <li>Production Blueprints &amp; Architecture Guides:
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;">
+              <li>Production-grade Rust service blueprints with structured tracing, OpenTelemetry, and Prometheus metrics.</li>
+            </ul>
+          </li>
+        </ol>
 
-        <!-- FAQ 6 -->
-        <div class="faq-card border-pink">
-          <span class="faq-category-badge" style="background:rgba(236,72,153,0.15);color:#f472b6;">Startups</span>
-          <div class="faq-num">FAQ #06 — Startup Discounts</div>
-          <h3 class="faq-question">Is there a special discount for early-stage startups?</h3>
-          <p class="faq-answer">
-            Yes! Pre-Seed and Seed-stage startups receive a prominent <strong>50% discount across all technical content
-              packages</strong> to accelerate developer acquisition during crucial launch windows.
-          </p>
-        </div>
+        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">4. Guarantees
+          &amp; Commitments</h2>
+        <ul
+          style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;">
+          <li><strong>100% Cargo Test Runtime Verification:</strong> Every exercise and code block compiles cleanly on stable Rust and passes automated tests before delivery.</li>
+          <li><strong>30-Day Post-Engagement Q&amp;A Support:</strong> Direct email support for build configurations and architectural questions.</li>
+        </ul>
 
-        <!-- FAQ 7 -->
-        <div class="faq-card border-purple">
-          <span class="faq-category-badge" style="background:rgba(168,85,247,0.15);color:#c084fc;">Tech Stacks</span>
-          <div class="faq-num">FAQ #07 — Supported Technologies</div>
-          <h3 class="faq-question">What technology stacks and frameworks do you cover?</h3>
-          <p class="faq-answer">
-            Generative AI (PyTorch, vLLM, Ollama, LangChain, LlamaIndex, Claude, Gemini APIs), Quantum Computing (IBM
-            Qiskit, PennyLane, Cirq), and Core Systems (Python, Golang, and Rust).
-          </p>
-        </div>
+        <h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">5. Investment
+          &amp; Pricing Quote</h2>
+        <ol style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;">
+          <li>Base Investment Range: <strong>$175 – $375 USD</strong> (per workshop module / technical code package).</li>
+          <li>Purchasing Power Parity (PPP) Tier Adjustments:
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;">
+              <li><strong>Tier 1 (Developed Nations - USA, EU, UK):</strong> 100% Base Price ($175 – $375 USD).</li>
+              <li><strong>Tier 2 (Developing Nations - India, Brazil, SEA):</strong> 75% Parity Price ($130 – $280 USD).</li>
+              <li><strong>Tier 3 (Least Developed Nations - Haiti, Sub-Saharan Africa):</strong> 50% Parity Price ($90 – $190 USD).</li>
+            </ul>
+          </li>
+          <li>Payment Schedule:
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;">
+              <li>50% upfront initialization / 50% upon completed technical deliverable & verified code.</li>
+            </ul>
+          </li>
+        </ol>
 
-        <!-- FAQ 8 -->
-        <div class="faq-card border-green">
-          <span class="faq-category-badge" style="background:rgba(16,185,129,0.15);color:#34d399;">Delivery</span>
-          <div class="faq-num">FAQ #08 — Turnaround Times</div>
-          <h3 class="faq-question">What is the typical turnaround time for a deliverable?</h3>
-          <p class="faq-answer">
-            Short technical articles take <strong>3–5 business days</strong>; standard deep dives take <strong>5–8
-              business days</strong>; full automated documentation suites take <strong>14–21 business days</strong>.
-          </p>
-        </div>
-
-        <!-- FAQ 9 -->
-        <div class="faq-card border-blue">
-          <span class="faq-category-badge"
-            style="background:rgba(59,130,246,0.15);color:#60a5fa;">Confidentiality</span>
-          <div class="faq-num">FAQ #09 — NDAs &amp; Security</div>
-          <h3 class="faq-question">Do you sign Non-Disclosure Agreements (NDAs)?</h3>
-          <p class="faq-answer">
-            <strong>Yes, absolutely.</strong> Standard mutual NDAs are executed prior to examining unreleased API
-            endpoints, proprietary SDKs, or pre-launch model architecture documentation.
-          </p>
-        </div>
-
-        <!-- FAQ 10 -->
-        <div class="faq-card border-purple">
-          <span class="faq-category-badge" style="background:rgba(168,85,247,0.15);color:#c084fc;">Information
-            Architecture</span>
-          <div class="faq-num">FAQ #10 — Multi-Audience Content</div>
-          <h3 class="faq-question">Can you write for both developers and executive leaders?</h3>
-          <p class="faq-answer">
-            Yes. Using <strong>structured documentation architecture</strong>, content is structured with modular sections: quickstarts
-            for busy engineers, benchmark deep dives for researchers, and executive summaries for decision-makers.
-          </p>
-        </div>
-
-        <!-- FAQ 11 -->
-        <div class="faq-card border-green">
-          <span class="faq-category-badge" style="background:rgba(16,185,129,0.15);color:#34d399;">Formats</span>
-          <div class="faq-num">FAQ #11 — Deliverable Formats</div>
-          <h3 class="faq-question">In what file formats do you deliver content?</h3>
-          <p class="faq-answer">
-            Clean Markdown (`.md`), MDX, Jupyter Notebooks (`.ipynb`), executable Python/Qiskit scripts, OpenAPI/Swagger
-            JSON specs, and direct GitHub Pull Requests to your repository.
-          </p>
-        </div>
-
-        <!-- FAQ 12 -->
-        <div class="faq-card border-purple">
-          <span class="faq-category-badge" style="background:rgba(168,85,247,0.15);color:#c084fc;">Human Quality</span>
-          <div class="faq-num">FAQ #12 — 100% Human Writing</div>
-          <h3 class="faq-question">Are your technical articles and training materials 100% human-written?</h3>
-          <p class="faq-answer">
-            Yes. Every line of prose and code is <strong>100% human-written and 100% verified in runtime environments</strong>
-            before publishing. AI is used solely for sourced claims and statistical research, never for the writing itself.
-          </p>
-        </div>
-
-        <!-- FAQ 13 -->
-        <div class="faq-card border-cyan">
-          <span class="faq-category-badge" style="background:rgba(6,182,212,0.15);color:var(--cyan);">Quantum Tech</span>
-          <div class="faq-num">FAQ #13 — Quantum Machine Learning</div>
-          <h3 class="faq-question">How do you cover Quantum Machine Learning (QML) and hybrid algorithms?</h3>
-          <p class="faq-answer">
-            We author end-to-end technical guides covering <strong>Quantum Neural Networks (QNNs)</strong>, Quantum Kernel Methods, and <strong>Variational Quantum Eigensolvers (VQE/QAOA)</strong> executed via PennyLane and IBM Qiskit Aer.
-          </p>
-        </div>
-
-        <!-- FAQ 14 -->
-        <div class="faq-card border-gold">
-          <span class="faq-category-badge"
-            style="background:rgba(255,215,0,0.15);color:var(--gold);">Partnerships</span>
-          <div class="faq-num">FAQ #14 — Retainers</div>
-          <h3 class="faq-question">Do you offer monthly content partner retainers?</h3>
-          <p class="faq-answer">
-            Yes. Monthly retainer partnerships provide dedicated sprint capacity for technical articles, changelogs, SDK
-            update guides, and continuous documentation maintenance.
-          </p>
-        </div>
-
-        <!-- FAQ 15 -->
-        <div class="faq-card border-green">
-          <span class="faq-category-badge" style="background:rgba(16,185,129,0.15);color:#34d399;">Support</span>
-          <div class="faq-num">FAQ #15 — Post-Launch Maintenance</div>
-          <h3 class="faq-question">What happens if an API version changes shortly after delivery?</h3>
-          <p class="faq-answer">
-            Minor code snippet updates and API breaking change patches are included free for <strong>60 days
-              post-launch</strong> under our commitment to long-term content accuracy.
-          </p>
-        </div>
-
-        <!-- FAQ 16 -->
-        <div class="faq-card border-gold">
-          <span class="faq-category-badge" style="background:rgba(255,215,0,0.15);color:var(--gold);">Onboarding</span>
-          <div class="faq-num">FAQ #16 — Project Commencement</div>
-          <h3 class="faq-question">How do we get started on a project brief?</h3>
-          <p class="faq-answer">
-            Submit your requirements via the brief form on <a href="contact.html"
-              style="color:var(--gold);text-decoration:underline;">contact.html</a>. We return a clear
-            milestone scope proposal within 24 hours.
-          </p>
-        </div>
-
-        <!-- FAQ 17 -->
-        <div class="faq-card border-purple">
-          <span class="faq-category-badge" style="background:rgba(168,85,247,0.15);color:#c084fc;">Benchmarks</span>
-          <div class="faq-num">FAQ #17 — Reproducible Benchmarking</div>
-          <h3 class="faq-question">Can you author reproducible benchmark comparison reports?</h3>
-          <p class="faq-answer">
-            Yes. Standalone benchmarking passes include a dedicated GitHub repository with reproducible scripts for
-            throughput, latency, memory utilization, and accuracy metrics.
-          </p>
-        </div>
-
-        <!-- FAQ 18 -->
-        <div class="faq-card border-cyan">
-          <span class="faq-category-badge" style="background:rgba(6,182,212,0.15);color:var(--cyan);">Quantum
-            Validation</span>
-          <div class="faq-num">FAQ #18 — Quantum Simulator vs Hardware</div>
-          <h3 class="faq-question">How are quantum algorithms verified on hardware?</h3>
-          <p class="faq-answer">
-            Quantum circuits are validated first on statevector simulators (Qiskit Aer / PennyLane), followed by noisy
-            simulation models and execution on IBM Quantum hardware backend channels.
-          </p>
-        </div>
-
-        <!-- FAQ 19 -->
-        <div class="faq-card border-purple">
-          <span class="faq-category-badge" style="background:rgba(168,85,247,0.15);color:#c084fc;">Quantum Security</span>
-          <div class="faq-num">FAQ #19 — Post-Quantum Cryptography</div>
-          <h3 class="faq-question">How do you cover Post-Quantum Cryptography (PQC) and quantum security?</h3>
-          <p class="faq-answer">
-            We author technical whitepapers, migration guides, and automated documentation covering <strong>NIST PQC standards (ML-KEM/Kyber, ML-DSA/Dilithium)</strong>, hybrid lattice cryptography, and quantum risk assessment frameworks.
-          </p>
-        </div>
-
-        <!-- FAQ 20 -->
-        <div class="faq-card border-gold">
-          <span class="faq-category-badge" style="background:rgba(255,215,0,0.15);color:var(--gold);">Quantum Systems</span>
-          <div class="faq-num">FAQ #20 — Quantum Circuit Optimization</div>
-          <h3 class="faq-question">How do you document quantum circuit optimization and error mitigation?</h3>
-          <p class="faq-answer">
-            We detail <strong>pulse-level control</strong>, zero-noise extrapolation (ZNE), <strong>dynamical decoupling</strong>, and compiler transpilation passes in Qiskit and PennyLane to help developers minimize decoherence on noisy hardware.
-          </p>
+        <div style="margin-top:2.5rem;text-align:center;">
+          <a href="contact.html?service=rust-for-ai" class="btn btn-commission btn-lg"
+            style="width:100%;max-width:480px;justify-content:center;">
+            Book Rust for AI Systems Training →
+          </a>
         </div>
 
       </div>
+
     </section>
 
-    <!-- CENTERED ASK A QUESTION / CONTACT FORM SECTION -->
-    <section class="reveal" id="ask-question">
-      <div style="max-width:720px;margin:3rem auto 0 auto;">
-        <div class="unanswered-question-card">
-          <p class="section-label" style="color:var(--gold);">// DIRECT INQUIRIES</p>
-          <h2 style="font-size:2rem;font-weight:900;color:var(--text-primary);margin:0.5rem 0 0.75rem 0;">
-            Have an Unanswered <span class="accent-gold">Question?</span>
-          </h2>
-          <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6;margin-bottom:2rem;">
-            Submit your question directly to Thomas Cherickal via email. You will receive a detailed response within 24
-            hours.
-          </p>
+    <div class="divider" style="margin-top:3rem;"></div>
 
-          <form action="https://formsubmit.co/ajax/thomascherickal@gmail.com" method="POST" id="faq-contact-form"
-            class="contact-form" style="text-align:left;">
-            <!-- Anti-spam Honeypot & FormSubmit Config -->
-            <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_subject" value="FAQ Question / Direct Inquiry — Thomas Cherickal Portfolio" />
-
-            <!-- Row 1: Name & Email -->
-            <div class="form-row">
-              <div class="form-group">
-                <label for="faq-name" class="form-label">Your Name *</label>
-                <input type="text" id="faq-name" name="name" required placeholder="John Doe" class="form-input" />
-              </div>
-              <div class="form-group">
-                <label for="faq-email" class="form-label">Email Address *</label>
-                <input type="email" id="faq-email" name="email" required placeholder="john@example.com"
-                  class="form-input" />
-              </div>
-            </div>
-
-            <!-- Row 2: Organization & Subject Line -->
-            <div class="form-row">
-              <div class="form-group">
-                <label for="faq-org" class="form-label">Company / Organization *</label>
-                <input type="text" id="faq-org" name="organization" required
-                  placeholder="e.g. OpenAI, Stealth Startup, Independent Researcher" class="form-input" />
-              </div>
-              <div class="form-group">
-                <label for="faq-subject" class="form-label">Inquiry Subject *</label>
-                <input type="text" id="faq-subject" name="subject_line" required
-                  placeholder="e.g. Qiskit Quantum Verification / Deep Dive Scope" class="form-input" />
-              </div>
-            </div>
-
-            <!-- Row 3: Question / Details -->
-            <div class="form-group message-group">
-              <label for="faq-message" class="form-label">Your Question or Inquiry Details *</label>
-              <textarea id="faq-message" name="question_details" required
-                placeholder="Please describe your question or requirements in detail...&#10;&#10;Useful details to include:&#10;- Specific technical topics or API benchmarks&#10;- Quantum circuit verification or automated documentation needs&#10;- Timeline or deliverables expected"
-                rows="7" class="form-input" style="resize:vertical;"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-commission btn-lg btn-full"
-              style="justify-content:center;font-size:1.05rem;">
-              Send Question ✉️
-            </button>
-            <div class="form-status" id="faq-form-status"
-              style="margin-top:1rem;display:none;padding:0.85rem;border-radius:8px;text-align:center;font-size:0.9rem;">
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <iframe src="footer.html" id="footer-frame" title="Footer Navigation" style="width:100%;border:none;overflow:hidden;display:block;" scrolling="no"></iframe>
+    <iframe src="footer.html" id="footer-frame" title="Footer Navigation"
+      style="width:100%;border:none;overflow:hidden;display:block;" scrolling="no"></iframe>
 
   </main>
 
   <script src="components.js"></script>
-
-  <script>
-    // Scroll Reveal Observer
-    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
-    }, observerOptions);
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // FAQ Contact Form Handler & Dual-Mode Dispatch
-    const faqForm = document.getElementById('faq-contact-form');
-    const faqStatus = document.getElementById('faq-form-status');
-
-    function formatFaqEmailData(formData) {
-      const name = formData.get('name') || '';
-      const email = formData.get('email') || '';
-      const org = formData.get('organization') || '';
-      const subjectLine = formData.get('subject_line') || 'FAQ Question / Direct Inquiry';
-      const questionDetails = formData.get('question_details') || '';
-
-      const subject = `FAQ Question: ${subjectLine} — ${name}${org ? ' (' + org + ')' : ''}`;
-
-      const bodyLines = [
-        `Hi Thomas,`,
-        ``,
-        `Here is a direct question/inquiry from your FAQ page:`,
-        `--------------------------------------------------`,
-        `• Name: ${name}`,
-        `• Email: ${email}`,
-        `• Organization: ${org}`,
-        `• Subject: ${subjectLine}`,
-        `--------------------------------------------------`,
-        ``,
-        `Question / Inquiry Details:`,
-        questionDetails,
-        ``,
-        `--------------------------------------------------`,
-        `Sent via Thomas Cherickal Portfolio FAQ Form`
-      ];
-
-      return {
-        subject,
-        body: bodyLines.join('\n'),
-        targetEmail: 'thomascherickal@gmail.com'
-      };
-    }
-
-    function handleLocalFaqEmailDispatch(formData) {
-      const { subject, body, targetEmail } = formatFaqEmailData(formData);
-      const mailtoUri = `mailto:${targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      const gmailUri = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(targetEmail)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-      // Automatically launch user's default email client
-      const tempLink = document.createElement('a');
-      tempLink.href = mailtoUri;
-      tempLink.style.display = 'none';
-      document.body.appendChild(tempLink);
-      tempLink.click();
-      document.body.removeChild(tempLink);
-
-      if (faqStatus) {
-        faqStatus.style.display = 'block';
-        faqStatus.style.background = 'rgba(16, 185, 129, 0.15)';
-        faqStatus.style.color = '#34d399';
-        faqStatus.style.border = '1px solid rgba(16, 185, 129, 0.3)';
-        faqStatus.innerHTML = `
-          <div style="text-align:left;line-height:1.6;">
-            <div style="font-weight:700;font-size:1rem;margin-bottom:0.4rem;color:#34d399;">
-              ✉️ Email Ready to Send to ${targetEmail}
-            </div>
-            <p style="margin-bottom:0.75rem;font-size:0.88rem;color:var(--text-secondary);">
-              Your default email application has opened with your question pre-filled. You can also send or copy it directly below:
-            </p>
-            <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:0.6rem;">
-              <a href="${gmailUri}" target="_blank" rel="noopener" class="btn btn-commission" style="padding:0.45rem 1rem;font-size:0.82rem;text-decoration:none;display:inline-flex;align-items:center;">
-                🚀 Open in Gmail Webmail
-              </a>
-              <a href="${mailtoUri}" class="btn btn-outline" style="padding:0.45rem 1rem;font-size:0.82rem;text-decoration:none;display:inline-flex;align-items:center;">
-                📧 Re-open Email App
-              </a>
-              <button type="button" id="copyFaqDetailsBtn" class="btn btn-outline" style="padding:0.45rem 1rem;font-size:0.82rem;cursor:pointer;">
-                📋 Copy Message Text
-              </button>
-            </div>
-            <div id="copyFaqSuccessMsg" style="display:none;margin-top:0.5rem;font-size:0.8rem;color:#34d399;font-family:var(--font-mono);">
-              ✅ Question copied to clipboard!
-            </div>
-          </div>
-        `;
-
-        const copyBtn = document.getElementById('copyFaqDetailsBtn');
-        const copyMsg = document.getElementById('copyFaqSuccessMsg');
-        if (copyBtn) {
-          copyBtn.addEventListener('click', function () {
-            const textToCopy = `To: ${targetEmail}\nSubject: ${subject}\n\n${body}`;
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-              navigator.clipboard.writeText(textToCopy).then(() => {
-                showCopySuccess();
-              }).catch(() => fallbackCopy(textToCopy));
-            } else {
-              fallbackCopy(textToCopy);
-            }
-          });
-        }
-
-        function showCopySuccess() {
-          if (copyMsg) copyMsg.style.display = 'block';
-          if (copyBtn) copyBtn.textContent = '✅ Copied!';
-          setTimeout(() => {
-            if (copyMsg) copyMsg.style.display = 'none';
-            if (copyBtn) copyBtn.textContent = '📋 Copy Message Text';
-          }, 3000);
-        }
-
-        function fallbackCopy(text) {
-          const textarea = document.createElement('textarea');
-          textarea.value = text;
-          document.body.appendChild(textarea);
-          textarea.select();
-          try {
-            document.execCommand('copy');
-            showCopySuccess();
-          } catch (err) {
-            console.warn('Clipboard copy fallback error:', err);
-          }
-          document.body.removeChild(textarea);
-        }
-      }
-
-      faqForm.reset();
-    }
-
-    if (faqForm) {
-      faqForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        const submitBtn = faqForm.querySelector('button[type="submit"]');
-        const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Question ✉️';
-        if (submitBtn) {
-          submitBtn.disabled = true;
-          submitBtn.innerHTML = 'Sending Question... ⏳';
-        }
-
-        const formData = new FormData(faqForm);
-        const isLocalFile = window.location.protocol === 'file:' || !window.location.origin || window.location.origin === 'null';
-
-        if (isLocalFile) {
-          handleLocalFaqEmailDispatch(formData);
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalBtnText;
-          }
-          return;
-        }
-
-        if (faqStatus) {
-          faqStatus.style.display = 'block';
-          faqStatus.style.background = 'rgba(59, 130, 246, 0.15)';
-          faqStatus.style.color = '#60a5fa';
-          faqStatus.style.border = '1px solid rgba(59, 130, 246, 0.3)';
-          faqStatus.textContent = 'Sending your question to thomascherickal@gmail.com...';
-        }
-
-        const payload = Object.fromEntries(formData.entries());
-
-        fetch(faqForm.action, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify(payload)
-        })
-          .then(async response => {
-            let data = {};
-            try {
-              const text = await response.text();
-              try {
-                data = JSON.parse(text);
-              } catch (e) {
-                if (response.ok) data = { success: true };
-              }
-            } catch (e) {
-              data = {};
-            }
-            
-            if (data && data.message && data.message.includes('Make sure you open this page through a web server')) {
-              handleLocalFaqEmailDispatch(formData);
-              return;
-            }
-
-            if (response.ok && (data.success === 'true' || data.success === true || data.ok || (!data.error && !data.errors))) {
-              if (faqStatus) {
-                faqStatus.style.background = 'rgba(16, 185, 129, 0.15)';
-                faqStatus.style.color = '#34d399';
-                faqStatus.style.border = '1px solid rgba(16, 185, 129, 0.3)';
-                faqStatus.innerHTML = '✅ <strong>Thank you!</strong> Your question has been sent directly to Thomas Cherickal. You will receive a response within 24 hours.';
-              }
-              faqForm.reset();
-            } else {
-              const errorMsg = data.message || data.error || (data.errors && data.errors[0] && data.errors[0].message) || 'Oops! There was a problem sending your question. Please try again.';
-              throw new Error(errorMsg);
-            }
-          })
-          .catch(error => {
-            handleLocalFaqEmailDispatch(formData);
-          })
-          .finally(() => {
-            if (submitBtn) {
-              submitBtn.disabled = false;
-              submitBtn.innerHTML = originalBtnText;
-            }
-          });
-      });
-    }
-  </script>
 
 </body>
 
