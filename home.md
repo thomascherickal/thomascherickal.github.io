@@ -86,7 +86,7 @@ Daily working fluency across the current frontier toolchain: Claude Code, Google
 
 ## Tech Stack & Tooling
 
-- **💻 Languages**: Python, Golang, Rust, JavaScript, Bash
+- **💻 Languages**: Python, Golang, Rust, HTML,CSS, JavaScript, Bash
 - **🧠 Generative AI Systems**: Generative AI, LLMs, SLMs, Agentic AI, RAG, Remote & Live GenAI Training
 - **⚛️ Quantum Systems**: IBM Qiskit, PennyLane, Quantum Machine Learning, Quantum Algorithms, Microsoft Q# / Quantinuum, Live Quantum Workshops
 - **🤖 AI Tools Expertise**: Claude Code, Google Antigravity, Google AI Studio, Gemini Notebook, CodeWiki
