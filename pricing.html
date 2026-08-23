@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pricing &amp; Country Parity Index — Thomas Cherickal</title>
+  <title>Pricing & Rates — Thomas Cherickal</title>
   <meta name="description"
-    content="Transparent service scope pricing and 198-country Purchasing Power Parity (PPP) index. Tier 1 (100%), Tier 2 (75%), Tier 3 (50%) parity discounts." />
+    content="Transparent tier-based pricing for all 12 services with global purchasing power parity discounts across 198 countries for startups and enterprises." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://thomascherickal.github.io/pricing.html" />
 
@@ -14,9 +14,9 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://thomascherickal.github.io/pricing.html" />
   <meta property="og:site_name" content="Thomas Cherickal — The Digital Futurist" />
-  <meta property="og:title" content="Pricing &amp; Country Parity Index — Thomas Cherickal" />
+  <meta property="og:title" content="Pricing & Rates — Thomas Cherickal" />
   <meta property="og:description"
-    content="Transparent milestone pricing adjusted for global Purchasing Power Parity across 198 countries." />
+    content="Transparent tier-based pricing for all 12 services with global purchasing power parity discounts across 198 countries for startups and enterprises." />
   <meta property="og:image" content="https://thomascherickal.github.io/assets/og-card.png" />
   <meta property="og:image:alt" content="Thomas Cherickal — Pricing &amp; Parity" />
   <meta property="og:locale" content="en_US" />
@@ -25,8 +25,9 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@thomascherickal" />
   <meta name="twitter:creator" content="@thomascherickal" />
-  <meta name="twitter:title" content="Pricing &amp; Country Parity Index — Thomas Cherickal" />
-  <meta name="twitter:description" content="Service pricing and 198-country Purchasing Power Parity (PPP) discounts." />
+  <meta name="twitter:title" content="Pricing & Rates — Thomas Cherickal" />
+  <meta name="twitter:description"
+    content="Transparent tier-based pricing for all 12 services with global purchasing power parity discounts across 198 countries for startups and enterprises." />
   <meta name="twitter:image" content="https://thomascherickal.github.io/assets/og-card.png" />
 
   <!-- Favicon & Icons -->
@@ -3767,10 +3768,14 @@
       background: var(--bg-card);
       border: 2px solid rgba(255, 255, 255, 0.2);
       border-radius: 12px;
-      padding: 1.25rem;
+      padding: 1.5rem 1.25rem;
       text-align: center;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
       transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 230px;
     }
 
     .price-card-faq:hover {
@@ -3921,8 +3926,8 @@
         "@type": "WebPage",
         "@id": "https://thomascherickal.github.io/pricing.html#webpage",
         "url": "https://thomascherickal.github.io/pricing.html",
-        "name": "Services Pricing & Purchasing Power Parity Index — Thomas Cherickal",
-        "description": "Transparent milestone pricing for emerging technologies education, training in GenAI & Quantum Computing, AI agent orchestration, and quantum developer content adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%).",
+        "name": "Services Pricing & Engagement Packages — Thomas Cherickal",
+        "description": "Transparent milestone pricing for 3 strategic packages (Single Engagement, Monthly Sprint, Embedded Partner) and 12 specialized service offerings across Generative AI, Quantum Computing, and Systems Architecture.",
         "isPartOf": { "@id": "https://thomascherickal.github.io/#website" },
         "inLanguage": "en-US",
         "breadcrumb": { "@id": "https://thomascherickal.github.io/pricing.html#breadcrumb" },
@@ -3933,88 +3938,106 @@
         "@id": "https://thomascherickal.github.io/pricing.html#breadcrumb",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://thomascherickal.github.io/" },
-          { "@type": "ListItem", "position": 2, "name": "Pricing & Country Parity Index", "item": "https://thomascherickal.github.io/pricing.html" }
+          { "@type": "ListItem", "position": 2, "name": "Pricing & Rates", "item": "https://thomascherickal.github.io/pricing.html" }
         ]
       },
       {
         "@type": "OfferCatalog",
         "@id": "https://thomascherickal.github.io/pricing.html#offercatalog",
-        "name": "Services Pricing & Purchasing Power Parity Index — Thomas Cherickal",
-        "description": "Transparent milestone pricing for 12 service offerings: emerging technologies education, training in GenAI & Quantum Computing, AI agent orchestration, post-quantum cryptography, Rust for AI, and quantum developer content adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%).",
+        "name": "Services Pricing & Engagement Packages — Thomas Cherickal",
+        "description": "Transparent milestone pricing for 3 engagement packages and 12 service offerings across emerging technologies education, Generative AI, and Quantum Computing.",
         "url": "https://thomascherickal.github.io/pricing.html",
         "offeredBy": { "@id": "https://thomascherickal.github.io/#person" },
         "itemListElement": [
           {
             "@type": "Offer",
+            "name": "Single Engagement",
+            "description": "One high-impact technical deep dive (2,000–5,000 words) or intensive virtual workshop with 100% verified code.",
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "2000.00", "maxPrice": "4000.00", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Monthly Sprint (Most Popular)",
+            "description": "Dedicated monthly engineering capacity: 2 long-form technical deep dives, 1 workshop/tutorial series, full Diataxis docs, and weekly syncs.",
+            "priceSpecification": { "@type": "PriceSpecification", "price": "5000.00", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Enterprise & Embedded Partner",
+            "description": "Quarterly strategic advisory anchor: complete documentation engine, monthly executive briefings, unlimited workshops, and <4h async SLA.",
+            "priceSpecification": { "@type": "PriceSpecification", "price": "12000.00", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "Offer",
             "name": "Training in Generative AI",
             "description": "Interactive live virtual training, custom corporate workshops, LLM & agent architecture bootcamps, prompt engineering frameworks, and hands-on lab sessions.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "500.00", "maxPrice": "1000.00", "priceCurrency": "USD" }
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "2000.00", "maxPrice": "4000.00", "priceCurrency": "USD" }
           },
           {
             "@type": "Offer",
             "name": "Training in Quantum Computing",
             "description": "Interactive live virtual training, custom team workshops, Qiskit & PennyLane labs, Quantum Algorithm (VQE/QAOA) masterclasses, and executive quantum readiness bootcamps.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "500.00", "maxPrice": "1000.00", "priceCurrency": "USD" }
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "2000.00", "maxPrice": "4000.00", "priceCurrency": "USD" }
           },
           {
             "@type": "Offer",
             "name": "AI Agent Orchestration (Training & Content)",
             "description": "Interactive training, masterclasses, and technical content on multi-agent architectures, tool-calling loops, agent swarms, and agentic workflows (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent).",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "400.00", "maxPrice": "800.00", "priceCurrency": "USD" }
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500.00", "maxPrice": "3000.00", "priceCurrency": "USD" }
           },
           {
             "@type": "Offer",
             "name": "Technical Deep Dives (Content)",
-            "description": "Long-form technical explainers (2,000–8,000 words) featuring original research, architecture breakdown, and verified benchmarks.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "300.00", "maxPrice": "600.00", "priceCurrency": "USD" }
+            "description": "Long-form technical explainers (2,000–8,000 words) priced per 1,000 words featuring original research, architecture breakdown, and verified benchmarks.",
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "800.00", "maxPrice": "1200.00", "priceCurrency": "USD" }
           },
           {
             "@type": "Offer",
             "name": "Developer Education (Training & Content)",
             "description": "Multi-part tutorial series, structured learning paths, and workshop curricula with executable notebooks per module.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "350.00", "maxPrice": "750.00", "priceCurrency": "USD" }
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500.00", "maxPrice": "3000.00", "priceCurrency": "USD" }
           },
           {
             "@type": "Offer",
             "name": "Quantum Developer Content",
             "description": "IBM Qiskit and PennyLane tutorials, QML explainers, simulator circuit benchmarks, and post-quantum risk briefs.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "400.00", "maxPrice": "850.00", "priceCurrency": "USD" }
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500.00", "maxPrice": "3500.00", "priceCurrency": "USD" }
           },
           {
             "@type": "Offer",
             "name": "Quantum AI & QML (Training & Content)",
             "description": "Workshops, tutorials, and developer guides for Quantum Neural Networks, Quantum Kernel methods, VQE/QAOA algorithms, and hybrid PyTorch/PennyLane QML.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "450.00", "maxPrice": "900.00", "priceCurrency": "USD" }
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "2000.00", "maxPrice": "4000.00", "priceCurrency": "USD" }
           },
           {
             "@type": "Offer",
             "name": "Local LLM Deployment (Training & Guides)",
             "description": "Interactive workshops, step-by-step setup guides, and technical tutorials on quantization, local inference, vLLM, Ollama, GGUF optimization, and private LLM serving.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "350.00", "maxPrice": "700.00", "priceCurrency": "USD" }
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500.00", "maxPrice": "3000.00", "priceCurrency": "USD" }
           },
           {
             "@type": "Offer",
             "name": "Generative AI Dev Content",
             "description": "RAG pipelines, agentic workflows, prompt engineering frameworks, SLM fine-tuning guides, and developer docs.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "350.00", "maxPrice": "800.00", "priceCurrency": "USD" }
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500.00", "maxPrice": "3000.00", "priceCurrency": "USD" }
           },
           {
             "@type": "Offer",
             "name": "Monthly Content Retainer",
             "description": "Dedicated monthly sprint capacity for devtools and AI infrastructure companies: priority turnaround, guaranteed content volume, and byline management.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "500.00", "maxPrice": "1000.00", "priceCurrency": "USD" }
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "6000.00", "maxPrice": "8000.00", "priceCurrency": "USD" }
           },
           {
             "@type": "Offer",
             "name": "Post-Quantum Cryptography & Quantum Risk (Briefings & Training)",
             "description": "Enterprise quantum readiness audits, threat modeling against RSA/ECC cryptographic infrastructure, NIST post-quantum migration roadmaps (ML-KEM, ML-DSA), and executive briefings.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "400.00", "maxPrice": "900.00", "priceCurrency": "USD" }
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "2000.00", "maxPrice": "4000.00", "priceCurrency": "USD" }
           },
           {
             "@type": "Offer",
             "name": "Rust for AI & High-Performance Systems (Training & Guides)",
             "description": "Workshops, production codebases, and deep technical guides for Rust AI inference, Candle & Burn ML tensor engines, PyO3 Python acceleration, and memory-safe Tokio microservices.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "350.00", "maxPrice": "750.00", "priceCurrency": "USD" }
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500.00", "maxPrice": "3000.00", "priceCurrency": "USD" }
           }
         ]
       }
@@ -4035,1362 +4058,427 @@
   <main id="main">
 
     <!-- PAGE HERO -->
-    <section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
-      <p class="section-label">// SCOPE &amp; GLOBAL EQUITY</p>
-      <h1 class="section-title">Services <span class="accent-gold">Pricing</span> &amp; Parity Index</h1>
-      <p class="section-sub" style="max-width:760px;margin:0.5rem auto 0 auto;">
-        Transparent milestone pricing adjusted for global Purchasing Power Parity (PPP) across 198 countries: Tier 1
-        (100%), Tier 2 (75%), Tier 3 (50%).
+    <section style="padding-top:4.5rem;padding-bottom:2.5rem;text-align:center;">
+      <p class="section-label">// PACKAGES &amp; INVESTMENT</p>
+      <h1 class="section-title">Packages &amp; <span class="accent-gold">Transparent Pricing</span></h1>
+      <p class="section-sub" style="max-width:760px;margin:0.75rem auto 0 auto;line-height:1.8;">
+        High-impact technical deliverables, executive workshops, and dedicated engineering capacity. 100% human-crafted
+        prose, 100% runtime-verified code in Python, Golang, and Rust.
       </p>
     </section>
 
-    <!-- PPP TIER CALCULATOR SECTION -->
-    <section class="reveal">
-      <div class="ppp-container">
-        <h3 style="color:var(--gold);font-size:1.3rem;margin-bottom:0.5rem;">Interactive Purchasing Power Parity (PPP)
-          Calculator</h3>
-        <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:1.25rem;">
-          Select your country's designated tier to view instant parity pricing recalculations across all services.
-        </p>
+    <!-- 3-CARD PACKAGES SECTION -->
+    <section class="reveal" id="packages" style="margin-bottom:3rem;">
+      <div class="packages-grid"
+        style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:2rem;max-width:1240px;margin:0 auto;padding:0 1.5rem;align-items:stretch;">
 
-        <div class="ppp-tabs">
-          <button class="ppp-tab active" onclick="setPPPTier(1, 1.0, this)">Tier 1 — Developed Nations</button>
-          <button class="ppp-tab" onclick="setPPPTier(2, 0.75, this)">Tier 2 — Developing Nations</button>
-          <button class="ppp-tab" onclick="setPPPTier(3, 0.50, this)">Tier 3 — Least Developed Nations</button>
+        <!-- Tier 1 Package: Single Engagement -->
+        <div class="package-card border-cyan"
+          style="background:var(--bg-card);border:2px solid rgba(56, 189, 248, 0.75);border-radius:var(--radius-lg);padding:2.5rem 2rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:var(--transition);box-shadow:0 0 22px rgba(56, 189, 248, 0.2), 0 10px 30px rgba(0,0,0,0.6);">
+          <div>
+            <span class="role-chip cyan"
+              style="font-size:0.75rem;font-weight:700;letter-spacing:0.06em;margin-bottom:1rem;display:inline-block;">TIER
+              1 · PROJECT SCOPE</span>
+            <h3 style="font-size:1.65rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">Single
+              Engagement</h3>
+            <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;line-height:1.6;">One high-impact
+              technical deep dive or team workshop</p>
+
+            <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(56, 189, 248, 0.25);">
+              <div
+                style="font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:var(--cyan);line-height:1;">
+                $2,000 – $4,000</div>
+              <span
+                style="font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);letter-spacing:0.05em;">USD
+                / FLAT RATE</span>
+            </div>
+
+            <ul
+              style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;font-size:0.92rem;color:var(--text-secondary);line-height:1.6;">
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:var(--cyan);font-weight:bold;">✓</span>
+                <span><strong>1 Deep Dive</strong> (2,000–5,000 words) <em>or</em> <strong>1 Virtual Masterclass /
+                    Workshop</strong></span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:var(--cyan);font-weight:bold;">✓</span>
+                <span><strong>100% Runtime-Verified Code</strong> in Python, Golang, or Rust</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:var(--cyan);font-weight:bold;">✓</span>
+                <span>Diátaxis Architecture &amp; Custom Technical Diagrams</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:var(--cyan);font-weight:bold;">✓</span>
+                <span>2 Iterative Review Rounds &amp; 60-Day Post-Delivery Support</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:var(--cyan);font-weight:bold;">⏱</span>
+                <span><strong>Turnaround:</strong> 5–7 business days</span>
+              </li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-outline"
+            style="width:100%;justify-content:center;padding:0.85rem 1.5rem;">Book Single Engagement →</a>
         </div>
 
-        <div class="pricing-grid-faq">
-          <!-- Training 1 -->
-          <div class="price-card-faq border-cyan">
-            <div class="price-card-title" style="color:var(--cyan);">🎓 Training in Generative AI</div>
-            <div class="price-amount" data-base-min="500" data-base-max="1000">$500 – $1,000 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Interactive workshops, LLM
-              &amp; agent bootcamps</div>
+        <!-- Tier 2 Package: Monthly Sprint (MOST POPULAR) -->
+        <div class="package-card popular-card border-gold"
+          style="background:linear-gradient(145deg, #131d2e 0%, #080c16 100%);border:2px solid #fbbf24;border-radius:var(--radius-lg);padding:2.5rem 2rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;box-shadow:0 0 35px rgba(251,191,36,0.32), 0 12px 35px rgba(0,0,0,0.8);transform:scale(1.02);transition:var(--transition);">
+          <div
+            style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);color:#000000;font-family:var(--font-mono);font-size:0.75rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 1rem;border-radius:9999px;box-shadow:0 2px 10px rgba(0,0,0,0.5);white-space:nowrap;">
+            ★ MOST POPULAR
           </div>
-          <!-- Training 2 -->
-          <div class="price-card-faq border-violet">
-            <div class="price-card-title" style="color:var(--violet);">⚛️ Training in Quantum Computing</div>
-            <div class="price-amount" data-base-min="500" data-base-max="1000">$500 – $1,000 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Qiskit &amp; PennyLane
-              masterclasses &amp; QML labs</div>
-          </div>
-          <!-- Service 1 -->
-          <div class="price-card-faq border-gold">
-            <div class="price-card-title" style="color:var(--gold);">🤖 AI Agent Orchestration (Training &amp; Content)
+          <div>
+            <span class="role-chip gold"
+              style="font-size:0.75rem;font-weight:700;letter-spacing:0.06em;margin-bottom:1rem;display:inline-block;">TIER
+              2 · MONTHLY CAPACITY</span>
+            <h3 style="font-size:1.65rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">Monthly Sprint
+            </h3>
+            <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;line-height:1.6;">A dedicated,
+              high-velocity month of technical execution</p>
+
+            <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(251,191,36,0.25);">
+              <div
+                style="font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:var(--gold);line-height:1;">
+                $5,000</div>
+              <span
+                style="font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);letter-spacing:0.05em;">USD
+                / MONTH</span>
             </div>
-            <div class="price-amount" data-base-min="400" data-base-max="800">$400 – $800 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Agent swarms &amp;
-              tool-calling loops</div>
+
+            <ul
+              style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;font-size:0.92rem;color:var(--text-secondary);line-height:1.6;">
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:var(--gold);font-weight:bold;">✓</span>
+                <span><strong>2 Long-Form Technical Deep Dives</strong> + <strong>1 Team Workshop / Tutorial
+                    Series</strong></span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:var(--gold);font-weight:bold;">✓</span>
+                <span>Full Diátaxis Documentation Suite (Tutorial, How-To, Reference, Explanation)</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:var(--gold);font-weight:bold;">✓</span>
+                <span>Production-Tested Code Repositories &amp; CI Sandbox Environments</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:var(--gold);font-weight:bold;">✓</span>
+                <span>Dedicated Slack/Discord Async Channel &amp; Weekly Strategy Sync</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:var(--gold);font-weight:bold;">✓</span>
+                <span>Continuous Iterative Revisions &amp; Priority Scheduling</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:var(--gold);font-weight:bold;">⏱</span>
+                <span><strong>Turnaround:</strong> 4-week dedicated sprint cadence</span>
+              </li>
+            </ul>
           </div>
-          <!-- Service 2 -->
-          <div class="price-card-faq border-cyan">
-            <div class="price-card-title" style="color:var(--cyan);">🔬 Technical Deep Dives (Content)</div>
-            <div class="price-amount" data-base-min="300" data-base-max="600">$300 – $600 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Long-form explainers
-              (2,000–8,000 words) &amp; benchmarks</div>
-          </div>
-          <!-- Service 3 -->
-          <div class="price-card-faq border-gold">
-            <div class="price-card-title" style="color:var(--gold);">🎓 Developer Education (Training &amp; Content)
+          <a href="contact.html" class="btn btn-commission"
+            style="width:100%;justify-content:center;padding:0.85rem 1.5rem;box-shadow:0 0 20px rgba(251,191,36,0.45);">Start
+            Monthly Sprint →</a>
+        </div>
+
+        <!-- Tier 3 Package: Enterprise Partner -->
+        <div class="package-card border-violet"
+          style="background:var(--bg-card);border:2px solid rgba(165, 180, 252, 0.75);border-radius:var(--radius-lg);padding:2.5rem 2rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:var(--transition);box-shadow:0 0 22px rgba(165, 180, 252, 0.2), 0 10px 30px rgba(0,0,0,0.6);">
+          <div>
+            <span class="role-chip violet"
+              style="font-size:0.75rem;font-weight:700;letter-spacing:0.06em;margin-bottom:1rem;display:inline-block;">TIER
+              3 · ENTERPRISE RETAINER</span>
+            <h3 style="font-size:1.65rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">Enterprise
+              Partner</h3>
+            <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;line-height:1.6;">Strategic
+              quarterly advisory &amp; complete technical documentation leadership</p>
+
+            <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(165, 180, 252, 0.25);">
+              <div
+                style="font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:var(--violet);line-height:1;">
+                $12,000</div>
+              <span
+                style="font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);letter-spacing:0.05em;">USD
+                / QUARTER</span>
             </div>
-            <div class="price-amount" data-base-min="350" data-base-max="750">$350 – $750 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Structured course series,
-              learning paths &amp; notebooks</div>
+
+            <ul
+              style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;font-size:0.92rem;color:var(--text-secondary);line-height:1.6;">
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:var(--violet);font-weight:bold;">✓</span>
+                <span><strong>Complete Documentation Engine</strong> &amp; Continuous Developer Guides</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:var(--violet);font-weight:bold;">✓</span>
+                <span><strong>Monthly Executive Advisory</strong> &amp; Emerging Technology Radar Briefings</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:var(--violet);font-weight:bold;">✓</span>
+                <span>Unlimited Engineering Workshops &amp; Team Masterclasses</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:var(--violet);font-weight:bold;">✓</span>
+                <span>Direct Lead Byline / Ghostwriting &amp; Industry Positioning</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:var(--violet);font-weight:bold;">✓</span>
+                <span>Guaranteed &lt;4-hour async response SLA on private channel</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:var(--violet);font-weight:bold;">⏱</span>
+                <span><strong>Turnaround:</strong> Quarterly Retainer (3 Months)</span>
+              </li>
+            </ul>
           </div>
-          <!-- Service 4 -->
-          <div class="price-card-faq border-violet">
-            <div class="price-card-title" style="color:var(--violet);">⚛️ Quantum Developer Content</div>
-            <div class="price-amount" data-base-min="400" data-base-max="850">$400 – $850 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Qiskit/PennyLane tutorials
-              &amp; simulator audits</div>
+          <a href="contact.html" class="btn btn-outline"
+            style="width:100%;justify-content:center;padding:0.85rem 1.5rem;">Engage as Partner →</a>
+        </div>
+
+      </div>
+
+      <!-- PROMINENT GOLDEN-HIGHLIGHTED GLOBAL PARITY & STARTUP OFFERS BOX -->
+      <div class="parity-startup-box"
+        style="background:linear-gradient(145deg, rgba(251, 191, 36, 0.12) 0%, rgba(13, 19, 33, 0.95) 100%);border:2px solid var(--gold);border-radius:var(--radius-lg);padding:3.25rem 2.25rem;text-align:center;box-shadow:0 0 35px rgba(251, 191, 36, 0.28), 0 12px 40px rgba(0, 0, 0, 0.8);max-width:1150px;margin:3.5rem auto 1.5rem auto;position:relative;">
+
+        <span class="role-chip gold"
+          style="font-size:0.85rem;font-weight:800;letter-spacing:0.1em;padding:0.45rem 1.35rem;margin-bottom:1.35rem;display:inline-block;box-shadow:0 0 15px rgba(251,191,36,0.3);">
+          ★ GLOBAL EQUITY &amp; STARTUP OFFERS — UP TO 50% OFF
+        </span>
+
+        <h2
+          style="font-family:var(--font-display);font-size:clamp(1.85rem, 3.8vw, 2.5rem);font-weight:900;color:var(--text-primary);margin:0.5rem 0 1.25rem 0;line-height:1.3;">
+          Purchasing Power Parity &amp; <span class="accent-gold">Startup Enablement</span>
+        </h2>
+
+        <div
+          style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:2rem;margin:2.25rem 0;text-align:left;">
+          <!-- Parity Pricing Column -->
+          <div
+            style="background:rgba(0, 0, 0, 0.55);border:1px solid rgba(251, 191, 36, 0.35);border-radius:var(--radius);padding:2rem;box-shadow:inset 0 1px 0 rgba(255,255,255,0.05);">
+            <h3
+              style="color:var(--gold);font-size:1.3rem;font-weight:800;margin-bottom:0.85rem;display:flex;align-items:center;gap:0.6rem;">
+              <span>🌐</span> Purchasing Power Parity (PPP)
+            </h3>
+            <p style="color:var(--text-secondary);font-size:1.08rem;line-height:1.75;margin-bottom:0.85rem;">
+              Adjusted rates of <strong>up to 50% off</strong> are available for engineering teams, universities, and
+              institutions located outside Tier 1 developed economies.
+            </p>
+            <p style="color:var(--text-muted);font-size:0.98rem;line-height:1.65;">
+              Custom country-specific quotes tailored to local purchasing power are provided upon request during project
+              intake.
+            </p>
           </div>
-          <!-- Service 5 -->
-          <div class="price-card-faq border-violet">
-            <div class="price-card-title" style="color:var(--violet);">⚛️ Quantum AI &amp; QML (Training &amp; Content)
-            </div>
-            <div class="price-amount" data-base-min="450" data-base-max="900">$450 – $900 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">QNNs, VQE/QAOA &amp; hybrid
-              PyTorch/PennyLane QML guides</div>
-          </div>
-          <!-- Service 8 -->
-          <div class="price-card-faq border-gold">
-            <div class="price-card-title" style="color:var(--gold);">📦 Local LLM Deployment (Training &amp; Guides)
-            </div>
-            <div class="price-amount" data-base-min="350" data-base-max="700">$350 – $700 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Quantization, local inference
-              setup &amp; vLLM/Ollama deployment guides</div>
-          </div>
-          <!-- Service 9 -->
-          <div class="price-card-faq border-cyan">
-            <div class="price-card-title" style="color:var(--cyan);">🧠 Generative AI Dev Content</div>
-            <div class="price-amount" data-base-min="350" data-base-max="800">$350 – $800 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">RAG pipelines, agentic
-              workflows &amp; SLM guides</div>
-          </div>
-          <!-- Service 10 -->
-          <div class="price-card-faq border-gold">
-            <div class="price-card-title" style="color:var(--gold);">💼 Monthly Content Retainer</div>
-            <div class="price-amount" data-base-min="500" data-base-max="1000">$500 – $1,000 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Dedicated monthly sprint
-              capacity for devtool &amp; AI infra teams</div>
-          </div>
-          <!-- Service 11 -->
-          <div class="price-card-faq border-violet">
-            <div class="price-card-title" style="color:var(--violet);">🔐 Post-Quantum Cryptography &amp; Risk</div>
-            <div class="price-amount" data-base-min="400" data-base-max="900">$400 – $900 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">NIST PQC migrations, threat
-              modeling &amp; executive briefings</div>
-          </div>
-          <!-- Service 12 -->
-          <div class="price-card-faq border-gold">
-            <div class="price-card-title" style="color:var(--gold);">🦀 Rust for AI &amp; High-Performance Systems</div>
-            <div class="price-amount" data-base-min="350" data-base-max="750">$350 – $750 USD</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.4rem;">Candle &amp; Burn ML engines,
-              PyO3 bindings &amp; Tokio systems</div>
+
+          <!-- Startup Discount Column -->
+          <div
+            style="background:rgba(0, 0, 0, 0.55);border:1px solid rgba(251, 191, 36, 0.35);border-radius:var(--radius);padding:2rem;box-shadow:inset 0 1px 0 rgba(255,255,255,0.05);">
+            <h3
+              style="color:var(--gold);font-size:1.3rem;font-weight:800;margin-bottom:0.85rem;display:flex;align-items:center;gap:0.6rem;">
+              <span>🚀</span> Early-Stage AI &amp; Quantum Startups
+            </h3>
+            <p style="color:var(--text-secondary);font-size:1.08rem;line-height:1.75;margin-bottom:0.85rem;">
+              I empower Pre-Seed and Seed-Stage engineering teams building frontier Generative AI Infrastructure or
+              Quantum Computing SDKs with an exclusive <strong>50% startup discount</strong>.
+            </p>
+            <p style="color:var(--text-muted);font-size:0.98rem;line-height:1.65;font-style:italic;">
+              Startup pricing is applied instead of, not in addition to, parity pricing.
+            </p>
           </div>
         </div>
+
+        <!-- Contact Email & Custom Quote Inquiries -->
+        <div style="border-top:1px solid rgba(251, 191, 36, 0.25);padding-top:2.25rem;margin-top:1rem;">
+          <p style="font-size:1.18rem;color:var(--text-primary);font-weight:700;margin-bottom:1.35rem;line-height:1.6;">
+            Need a custom country quote or early-stage startup enablement?
+          </p>
+          <div style="display:flex;gap:1.25rem;justify-content:center;align-items:center;flex-wrap:wrap;">
+            <a href="mailto:thomascherickal@gmail.com?subject=Custom%20Country%20Parity%20%2F%20Startup%20Quote%20Inquiry"
+              class="btn btn-commission"
+              style="font-size:1.08rem;padding:0.95rem 2.2rem;box-shadow:0 0 24px rgba(251, 191, 36, 0.5);">
+              📧 Email thomascherickal@gmail.com for Custom Quote →
+            </a>
+            <a href="contact.html" class="btn btn-outline" style="font-size:1.08rem;padding:0.95rem 2.2rem;">
+              📝 Submit Intake Form →
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
 
     <div class="divider"></div>
 
-    <!-- 198 COUNTRY PARITY SEARCH TABLE (HTML Display of parity pricing.md) -->
-    <section class="reveal">
-      <div style="margin-top:1rem;">
-        <h3 style="color:var(--gold);font-size:1.4rem;margin-bottom:0.75rem;">198-Country Parity Pricing Index</h3>
-        <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">
-          Type your country name below to instantly view your nation's designated Purchasing Power Parity (PPP) Tier and
-          discount rate.
-        </p>
-
-        <input type="text" id="countrySearch" class="search-box"
-          placeholder="🔍 Search 198 countries (e.g. India, Brazil, Germany, Vietnam, Nigeria, Ukraine)..."
-          onkeyup="filterParityTable()" />
-
-        <div class="table-responsive">
-          <table class="parity-table" id="parityTable">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Country</th>
-                <th>Purchasing Power Tier</th>
-                <th>Parity Price Rate</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>United States</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Canada</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>China</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Japan</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>South Korea</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Taiwan</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>Hong Kong SAR</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>Macau SAR</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>Singapore</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>Brunei</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>11</td>
-                <td>Australia</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>12</td>
-                <td>New Zealand</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>13</td>
-                <td>Israel</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>14</td>
-                <td>United Kingdom</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>15</td>
-                <td>Ireland</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>16</td>
-                <td>France</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>17</td>
-                <td>Germany</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>18</td>
-                <td>Netherlands</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>19</td>
-                <td>Belgium</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>20</td>
-                <td>Luxembourg</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>21</td>
-                <td>Switzerland</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>22</td>
-                <td>Austria</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>23</td>
-                <td>Liechtenstein</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>24</td>
-                <td>Monaco</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>25</td>
-                <td>Andorra</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>26</td>
-                <td>San Marino</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>27</td>
-                <td>Italy</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>28</td>
-                <td>Spain</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>29</td>
-                <td>Portugal</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>30</td>
-                <td>Greece</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>31</td>
-                <td>Malta</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>32</td>
-                <td>Cyprus</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>33</td>
-                <td>Denmark</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>34</td>
-                <td>Norway</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>35</td>
-                <td>Sweden</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>36</td>
-                <td>Finland</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>37</td>
-                <td>Iceland</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>38</td>
-                <td>Estonia</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>39</td>
-                <td>Latvia</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>40</td>
-                <td>Lithuania</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>41</td>
-                <td>Poland</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>42</td>
-                <td>Czechia</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>43</td>
-                <td>Slovakia</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>44</td>
-                <td>Slovenia</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>45</td>
-                <td>Hungary</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>46</td>
-                <td>Croatia</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>47</td>
-                <td>Romania</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>48</td>
-                <td>Bulgaria</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>49</td>
-                <td>Russia</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>50</td>
-                <td>Saudi Arabia</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>51</td>
-                <td>United Arab Emirates</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>52</td>
-                <td>Qatar</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>53</td>
-                <td>Kuwait</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>54</td>
-                <td>Bahrain</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>55</td>
-                <td>Oman</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>56</td>
-                <td>Chile</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>57</td>
-                <td>Uruguay</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>58</td>
-                <td>Panama</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>59</td>
-                <td>Guyana</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>60</td>
-                <td>Trinidad and Tobago</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>61</td>
-                <td>Bahamas</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>62</td>
-                <td>Barbados</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>63</td>
-                <td>Antigua and Barbuda</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>64</td>
-                <td>Saint Kitts and Nevis</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>65</td>
-                <td>Seychelles</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>66</td>
-                <td>Palau</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>67</td>
-                <td>Nauru</td>
-                <td><span class="tier-badge tier-1">Tier 1 — Developed</span></td>
-                <td>100% (Standard)</td>
-              </tr>
-              <tr>
-                <td>68</td>
-                <td>India</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>69</td>
-                <td>Brazil</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>70</td>
-                <td>Mexico</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>71</td>
-                <td>Argentina</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>72</td>
-                <td>Colombia</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>73</td>
-                <td>Peru</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>74</td>
-                <td>Ecuador</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>75</td>
-                <td>Bolivia</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>76</td>
-                <td>Paraguay</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>77</td>
-                <td>Venezuela</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>78</td>
-                <td>Guatemala</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>79</td>
-                <td>Honduras</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>80</td>
-                <td>El Salvador</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>81</td>
-                <td>Nicaragua</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>82</td>
-                <td>Costa Rica</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>83</td>
-                <td>Dominican Republic</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>84</td>
-                <td>Cuba</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>85</td>
-                <td>Jamaica</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>86</td>
-                <td>Belize</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>87</td>
-                <td>Suriname</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>88</td>
-                <td>Grenada</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>89</td>
-                <td>Saint Lucia</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>90</td>
-                <td>Saint Vincent and the Grenadines</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>91</td>
-                <td>Dominica</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>92</td>
-                <td>Turkey</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>93</td>
-                <td>Albania</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>94</td>
-                <td>Bosnia and Herzegovina</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>95</td>
-                <td>North Macedonia</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>96</td>
-                <td>Montenegro</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>97</td>
-                <td>Serbia</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>98</td>
-                <td>Kosovo</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>99</td>
-                <td>Moldova</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>100</td>
-                <td>Ukraine</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>101</td>
-                <td>Belarus</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>102</td>
-                <td>Georgia</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>103</td>
-                <td>Armenia</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>104</td>
-                <td>Azerbaijan</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>105</td>
-                <td>Kazakhstan</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>106</td>
-                <td>Kyrgyzstan</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>107</td>
-                <td>Tajikistan</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>108</td>
-                <td>Turkmenistan</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>109</td>
-                <td>Uzbekistan</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>110</td>
-                <td>Mongolia</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>111</td>
-                <td>Iran</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>112</td>
-                <td>Iraq</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>113</td>
-                <td>Jordan</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>114</td>
-                <td>Lebanon</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>115</td>
-                <td>Palestine</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>116</td>
-                <td>Egypt</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>117</td>
-                <td>Morocco</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>118</td>
-                <td>Tunisia</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>119</td>
-                <td>Algeria</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>120</td>
-                <td>Libya</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>121</td>
-                <td>Pakistan</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>122</td>
-                <td>Sri Lanka</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>123</td>
-                <td>Maldives</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>124</td>
-                <td>Bhutan</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>125</td>
-                <td>Indonesia</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>126</td>
-                <td>Malaysia</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>127</td>
-                <td>Thailand</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>128</td>
-                <td>Philippines</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>129</td>
-                <td>Vietnam</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>130</td>
-                <td>Papua New Guinea</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>131</td>
-                <td>Fiji</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>132</td>
-                <td>Samoa</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>133</td>
-                <td>Tonga</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>134</td>
-                <td>Vanuatu</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>135</td>
-                <td>Micronesia</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>136</td>
-                <td>Marshall Islands</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>137</td>
-                <td>South Africa</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>138</td>
-                <td>Namibia</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>139</td>
-                <td>Botswana</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>140</td>
-                <td>Eswatini</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>141</td>
-                <td>Kenya</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>142</td>
-                <td>Ghana</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>143</td>
-                <td>Nigeria</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>144</td>
-                <td>Côte d'Ivoire</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>145</td>
-                <td>Cameroon</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>146</td>
-                <td>Republic of the Congo</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>147</td>
-                <td>Gabon</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>148</td>
-                <td>Equatorial Guinea</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>149</td>
-                <td>Cabo Verde</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>150</td>
-                <td>São Tomé and Príncipe</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>151</td>
-                <td>Zimbabwe</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>152</td>
-                <td>Mauritius</td>
-                <td><span class="tier-badge tier-2">Tier 2 — Developing</span></td>
-                <td>75% (25% Off)</td>
-              </tr>
-              <tr>
-                <td>153</td>
-                <td>Afghanistan</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>154</td>
-                <td>Angola</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>155</td>
-                <td>Bangladesh</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>156</td>
-                <td>Benin</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>157</td>
-                <td>Burkina Faso</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>158</td>
-                <td>Burundi</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>159</td>
-                <td>Cambodia</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>160</td>
-                <td>Central African Republic</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>161</td>
-                <td>Chad</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>162</td>
-                <td>Comoros</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>163</td>
-                <td>DR Congo</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>164</td>
-                <td>Djibouti</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>165</td>
-                <td>Eritrea</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>166</td>
-                <td>Ethiopia</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>167</td>
-                <td>Gambia</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>168</td>
-                <td>Guinea</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>169</td>
-                <td>Guinea-Bissau</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>170</td>
-                <td>Haiti</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>171</td>
-                <td>Kiribati</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>172</td>
-                <td>Laos</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>173</td>
-                <td>Lesotho</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>174</td>
-                <td>Liberia</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>175</td>
-                <td>Madagascar</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>176</td>
-                <td>Malawi</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>177</td>
-                <td>Mali</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>178</td>
-                <td>Mauritania</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>179</td>
-                <td>Mozambique</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>180</td>
-                <td>Myanmar</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>181</td>
-                <td>Nepal</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>182</td>
-                <td>Niger</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>183</td>
-                <td>North Korea</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>184</td>
-                <td>Rwanda</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>185</td>
-                <td>Senegal</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>186</td>
-                <td>Sierra Leone</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>187</td>
-                <td>Solomon Islands</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>188</td>
-                <td>Somalia</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>189</td>
-                <td>South Sudan</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>190</td>
-                <td>Sudan</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>191</td>
-                <td>Syria</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>192</td>
-                <td>Tanzania</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>193</td>
-                <td>Timor-Leste</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>194</td>
-                <td>Togo</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>195</td>
-                <td>Tuvalu</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>196</td>
-                <td>Uganda</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>197</td>
-                <td>Yemen</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-              <tr>
-                <td>198</td>
-                <td>Zambia</td>
-                <td><span class="tier-badge tier-3">Tier 3 — Least Developed</span></td>
-                <td>50% (50% Off)</td>
-              </tr>
-            </tbody>
-          </table>
+    <!-- INDIVIDUAL SERVICES & REFERENCE RATES -->
+    <section class="reveal" id="service-rates">
+      <div style="max-width:1240px;margin:0 auto;padding:0 1.5rem;">
+        <div style="text-align:center;margin-bottom:2.5rem;">
+          <p class="section-label">// REFERENCE SPECIFICATIONS</p>
+          <h2 class="section-title">Individual Services &amp; <span class="accent-cyan">Base Rates</span></h2>
+          <p class="section-sub" style="max-width:760px;margin:0.5rem auto 0 auto;line-height:1.7;">
+            A la carte specifications across white papers, technical how-tos, developer content, and workshops for
+            standalone commissions.
+          </p>
         </div>
-      </div>
-    </section>
 
-    <!-- PROMINENT STARTUP DISCOUNT CALLOUT -->
-    <section class="reveal">
-      <div class="startup-cta-box">
-        <p class="section-label" style="color:var(--gold);">// EARLY-STAGE ENABLEMENT</p>
-        <h2 style="font-size:2.2rem;font-weight:900;color:var(--text-primary);margin:0.5rem 0 1rem 0;">
-          Building an Early-Stage <span class="accent-gold">AI or Quantum Startup?</span>
-        </h2>
-        <p
-          style="max-width:640px;margin:0 auto 2rem auto;color:var(--text-secondary);font-size:1.05rem;line-height:1.6;">
-          We empower Pre-Seed and Seed-Stage engineering teams building frontier Generative AI Infrastructure or Quantum
-          Computing SDKs with an exclusive <strong>50% startup discount</strong>.
-        </p>
-
-        <!-- PROMINENT STARTUP DISCOUNT BUTTON (EXPLICIT USER MANDATE) -->
-        <div>
-          <a href="contact.html" class="btn btn-commission"
-            style="font-size:1.15rem;padding:1.15rem 2.5rem;box-shadow:0 0 20px rgba(255,215,0,0.3);">
-            50% Discount for Startups →
-          </a>
+        <div class="pricing-grid-faq">
+          <!-- Item 1 -->
+          <div class="price-card-faq border-cyan">
+            <div class="price-card-title"
+              style="color:var(--cyan);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
+              🎓 GenAI Training &amp; Masterclasses</div>
+            <div class="price-amount"
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$2,000 – $4,000 USD
+            </div>
+            <div
+              style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
+              Interactive team workshops, LLM architecture bootcamps, prompt engineering labs &amp; curriculum design.
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="price-card-faq border-violet">
+            <div class="price-card-title"
+              style="color:var(--violet);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
+              ⚛️ Quantum Computing Masterclasses</div>
+            <div class="price-amount"
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$2,000 – $4,000 USD
+            </div>
+            <div
+              style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
+              Qiskit &amp; PennyLane hands-on workshops, VQE/QAOA algorithm labs &amp; executive quantum readiness
+              briefings.</div>
+          </div>
+          <!-- Item 3 -->
+          <div class="price-card-faq border-gold">
+            <div class="price-card-title"
+              style="color:var(--gold);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
+              🤖 AI Agent Guides &amp; Architecture</div>
+            <div class="price-amount"
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$1,500 – $3,000 USD
+            </div>
+            <div
+              style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
+              Multi-agent architecture whitepapers, tool-calling how-tos &amp; swarm orchestration guides (LangGraph,
+              CrewAI).</div>
+          </div>
+          <!-- Item 4 -->
+          <div class="price-card-faq border-cyan">
+            <div class="price-card-title"
+              style="color:var(--cyan);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
+              🔬 Technical Whitepapers &amp; Deep Dives</div>
+            <div class="price-amount"
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$800 – $1,200 USD
+              <span style="font-size:0.75rem;font-weight:400;color:var(--text-muted);">/ 1k words</span>
+            </div>
+            <div
+              style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
+              Authoritative long-form explainers (2,000–8,000 words), architecture teardowns &amp; benchmark
+              whitepapers.</div>
+          </div>
+          <!-- Item 5 -->
+          <div class="price-card-faq border-gold">
+            <div class="price-card-title"
+              style="color:var(--gold);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
+              📚 Developer Courseware &amp; Tutorials</div>
+            <div class="price-amount"
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$1,500 – $3,000 USD
+            </div>
+            <div
+              style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
+              Multi-part developer tutorial series, structured learning paths &amp; executable Jupyter notebook
+              courseware.</div>
+          </div>
+          <!-- Item 6 -->
+          <div class="price-card-faq border-violet">
+            <div class="price-card-title"
+              style="color:var(--violet);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
+              ⚛️ Quantum SDK Developer Content</div>
+            <div class="price-amount"
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$1,500 – $3,500 USD
+            </div>
+            <div
+              style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
+              Qiskit/PennyLane developer how-to guides, quantum circuit benchmarks &amp; algorithm developer
+              documentation.</div>
+          </div>
+          <!-- Item 7 -->
+          <div class="price-card-faq border-violet">
+            <div class="price-card-title"
+              style="color:var(--violet);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
+              🧠 Quantum AI &amp; QML Whitepapers</div>
+            <div class="price-amount"
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$2,000 – $4,000 USD
+            </div>
+            <div
+              style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
+              Quantum Neural Network research whitepapers, hybrid PyTorch/PennyLane how-tos &amp; QML kernel guides.
+            </div>
+          </div>
+          <!-- Item 8 -->
+          <div class="price-card-faq border-gold">
+            <div class="price-card-title"
+              style="color:var(--gold);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
+              📦 Local LLM Deployment How-Tos</div>
+            <div class="price-amount"
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$1,500 – $3,000 USD
+            </div>
+            <div
+              style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
+              Model quantization how-to guides, private local inference setups &amp; vLLM/Ollama deployment
+              documentation.</div>
+          </div>
+          <!-- Item 9 -->
+          <div class="price-card-faq border-cyan">
+            <div class="price-card-title"
+              style="color:var(--cyan);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
+              🧠 GenAI Developer Docs &amp; RFCs</div>
+            <div class="price-amount"
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$1,500 – $3,000 USD
+            </div>
+            <div
+              style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
+              Production RAG pipeline how-to guides, agentic workflow tutorials, model fine-tuning RFCs &amp; API docs.
+            </div>
+          </div>
+          <!-- Item 10 -->
+          <div class="price-card-faq border-gold">
+            <div class="price-card-title"
+              style="color:var(--gold);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
+              💼 Monthly Developer Content Retainer</div>
+            <div class="price-amount"
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$6,000 – $8,000 USD
+              <span style="font-size:0.75rem;font-weight:400;color:var(--text-muted);">/ mo</span>
+            </div>
+            <div
+              style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
+              Dedicated monthly sprint capacity for whitepapers, how-tos, developer guides &amp; verified code
+              repositories.</div>
+          </div>
+          <!-- Item 11 -->
+          <div class="price-card-faq border-violet">
+            <div class="price-card-title"
+              style="color:var(--violet);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
+              🔐 Post-Quantum Cryptography Whitepapers</div>
+            <div class="price-amount"
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$2,000 – $4,000 USD
+            </div>
+            <div
+              style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
+              NIST PQC migration roadmaps (ML-KEM/ML-DSA), cryptographic threat assessments &amp; executive whitepapers.
+            </div>
+          </div>
+          <!-- Item 12 -->
+          <div class="price-card-faq border-gold">
+            <div class="price-card-title"
+              style="color:var(--gold);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
+              🦀 Rust for AI Systems &amp; How-Tos</div>
+            <div class="price-amount"
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$1,500 – $3,000 USD
+            </div>
+            <div
+              style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
+              Candle/Burn tensor engine tutorials, PyO3 acceleration how-tos &amp; high-throughput Tokio systems guides.
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -5403,58 +4491,12 @@
   <script src="components.js"></script>
 
   <script>
-    // Interactive PPP Recalculation Script (Ceiling rounded to nearest 50)
-    function roundToFifty(val) {
-      return Math.ceil(val / 50) * 50;
-    }
-
-    function setPPPTier(tierNum, factor, btn) {
-      document.querySelectorAll('.ppp-tab').forEach(b => b.classList.remove('active'));
-      if (btn) btn.classList.add('active');
-
-      document.querySelectorAll('.price-amount').forEach(el => {
-        if (el.hasAttribute('data-base')) {
-          const base = parseFloat(el.getAttribute('data-base'));
-          const calc = (factor === 1.0) ? base : roundToFifty(base * factor);
-          el.textContent = (base >= 5000) ? `$${calc.toLocaleString()}+ USD` : `< $${calc.toLocaleString()} USD`;
-        } else if (el.hasAttribute('data-base-min') && el.hasAttribute('data-base-max')) {
-          const rawMin = parseFloat(el.getAttribute('data-base-min'));
-          const rawMax = parseFloat(el.getAttribute('data-base-max'));
-          const min = (factor === 1.0) ? rawMin : roundToFifty(rawMin * factor);
-          const max = (factor === 1.0) ? rawMax : roundToFifty(rawMax * factor);
-          el.textContent = `$${min.toLocaleString()} – $${max.toLocaleString()} USD`;
-        }
-      });
-    }
-
-    // Parity Table Search Filter
-    function filterParityTable() {
-      const input = document.getElementById('countrySearch');
-      const filter = input.value.toLowerCase();
-      const table = document.getElementById('parityTable');
-      const trs = table.getElementsByTagName('tr');
-
-      for (let i = 1; i < trs.length; i++) {
-        const tdCountry = trs[i].getElementsByTagName('td')[1];
-        const tdTier = trs[i].getElementsByTagName('td')[2];
-        if (tdCountry || tdTier) {
-          const textCountry = tdCountry ? tdCountry.textContent || tdCountry.innerText : '';
-          const textTier = tdTier ? tdTier.textContent || tdTier.innerText : '';
-          if (textCountry.toLowerCase().indexOf(filter) > -1 || textTier.toLowerCase().indexOf(filter) > -1) {
-            trs[i].style.display = '';
-          } else {
-            trs[i].style.display = 'none';
-          }
-        }
-      }
-    }
-
     // Scroll Reveal Observer
-    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add("active"); });
     }, observerOptions);
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
   </script>
 
 </body>

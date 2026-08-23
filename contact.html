@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact &amp; Project Intake — Thomas Cherickal | The Digital Futurist</title>
-  <meta name="description"
-    content="Submit your technical content project brief, Emerging Technology Content inquiry, or quantum deep dive request. 24-hour response SLA." />
+  <title>Contact & Commissions — Thomas Cherickal</title>
+  <meta name="description" content="Commission technical documentation, schedule corporate workshops, or book an executive advisory session with educator and consultant Thomas Cherickal." />
   <meta name="author" content="Thomas Cherickal" />
 
   <!-- Canonical URL -->
@@ -16,9 +15,10 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://thomascherickal.github.io/contact.html" />
   <meta property="og:site_name" content="Thomas Cherickal — The Digital Futurist" />
-  <meta property="og:title" content="Contact &amp; Project Intake — Thomas Cherickal" />
-  <meta property="og:description"
-    content="Submit a project brief for technical documentation, deep dives, or quantum developer content." />
+  <meta property="og:title" content="Contact & Commissions — Thomas Cherickal" />
+  <meta property="og:description" content="Commission technical documentation, schedule corporate workshops, or book an executive advisory session with educator and consultant Thomas Cherickal." />
+  <meta name="twitter:title" content="Contact & Commissions — Thomas Cherickal" />
+  <meta name="twitter:description" content="Commission technical documentation, schedule corporate workshops, or book an executive advisory session with educator and consultant Thomas Cherickal." />
   <meta property="og:image" content="https://thomascherickal.github.io/assets/og-card.png" />
   <meta property="og:locale" content="en_US" />
 
@@ -3962,8 +3962,8 @@ footer {
         <div>
           <form action="https://formsubmit.co/ajax/thomascherickal@gmail.com" method="POST" id="contact-form-el"
             class="contact-form">
-            <!-- Anti-spam Honeypot & FormSubmit Config -->
-            <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off" />
+            <!-- Anti-spam Honeypot & FormSubmit Config (per FormSubmit spam docs) -->
+            <input type="text" name="_honey" style="display:none !important;" tabindex="-1" autocomplete="off" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_subject"
@@ -4101,7 +4101,7 @@ footer {
             </div>
 
             <button type="submit" class="btn btn-commission btn-lg btn-full">Send Message 🚀</button>
-            <div class="form-status" id="form-status"></div>
+            <div class="form-status" id="form-status" style="margin-top:1rem;display:none;padding:1rem;border-radius:8px;font-size:0.92rem;line-height:1.6;"></div>
           </form>
         </div>
       </div>
@@ -4301,7 +4301,7 @@ footer {
         if (formStatus) {
           formStatus.style.display = 'block';
           formStatus.className = 'form-status info';
-          formStatus.textContent = 'Sending message to thomascherickal@gmail.com...';
+          formStatus.innerHTML = '⏳ <strong>Sending project brief...</strong> Please wait while your submission is processed.';
         }
 
         const payload = Object.fromEntries(formData.entries());
@@ -4335,18 +4335,22 @@ footer {
 
             if (response.ok && (data.success === 'true' || data.success === true || data.ok || (!data.error && !data.errors))) {
               if (formStatus) {
+                formStatus.style.display = 'block';
                 formStatus.className = 'form-status success';
-                formStatus.innerHTML = '✅ <strong>Thank you!</strong> Your message has been sent successfully to Thomas Cherickal. You will receive a response within 24 hours.';
+                formStatus.innerHTML = '✅ <strong>Thank you!</strong> Your message has been sent successfully. I will review your requirements and respond within 24 hours.';
               }
               contactForm.reset();
             } else {
-              const errorMsg = data.message || data.error || (data.errors && data.errors[0] && data.errors[0].message) || 'Oops! There was a problem sending your message. Please try again.';
+              const errorMsg = data.message || data.error || (data.errors && data.errors[0] && data.errors[0].message) || 'There was a problem sending your message. Please verify your connection or try again.';
               throw new Error(errorMsg);
             }
           })
           .catch(error => {
-            // If network failure, adblocker block, or CORS block occurs, gracefully fall back to local email dispatch
-            handleLocalFileEmailDispatch(formData);
+            if (formStatus) {
+              formStatus.style.display = 'block';
+              formStatus.className = 'form-status error';
+              formStatus.innerHTML = `⚠️ <strong>Submission Failed:</strong> ${error.message || 'Unable to reach the submission server.'} You can also email me directly at <a href="mailto:thomascherickal@gmail.com" style="color:var(--gold);text-decoration:underline;font-weight:700;">thomascherickal@gmail.com</a>.`;
+            }
           })
           .finally(() => {
             if (submitBtn) {
