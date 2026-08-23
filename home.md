@@ -82,12 +82,13 @@ All technical documentation deliverables follow the Diátaxis framework structur
 
 ## Tech Stack & Tooling
 
-- **💻 Languages (for verification & code artifacts)**: Python, Golang, Rust, JavaScript, Bash
-- **🧠 Generative AI Systems**: LLMs, SLMs, Agentic AI, RAG, Remote & Live GenAI Training
+- **💻 Languages (for verification & code artifacts)**: Python, Golang, Rust, SQL, JavaScript, Bash
+- **🧠 Generative AI Systems**: LLMs, SLMs, Agentic AI, RAG, Vector Databases, Remote & Live GenAI Training
 - **⚛️ Quantum Systems**: IBM Qiskit, PennyLane, Quantum Machine Learning, Quantum Algorithms, Microsoft Q# / Quantinuum
 - **🤖 AI Tools Expertise**: Claude Code, Google Antigravity, Google AI Studio, Gemini Notebook, CodeWiki
-- **⚡ Local & Private AI Stack**: Ollama, LM Studio, llama.cpp, GGUF, HuggingFace Hub
-- **🔬 Verification & Execution**: Jupyter, pytest, cargo test, Qiskit Aer Simulator, Docker Sandboxes
+- **⚡ Local & Private AI Stack**: Ollama, LM Studio, llama.cpp, GGUF, LanceDB, HuggingFace Hub
+- **🔬 Verification & Execution**: Jupyter, pytest, cargo test, Qiskit Aer Simulator, Docker Sandboxes, Google Cloud Platform
+- **🗄️ Databases & Vector Stores**: Vector Databases, pgvector, Qdrant, LanceDB, SQL, MySQL, SQLite
 - **📐 Documentation Frameworks**: Diátaxis, Markdown/MDX, OpenAPI / Swagger JSON Specs, Jupyter Notebooks (`.ipynb`)
 - **✍️ 100% Human-Written**: Responsible AI Use, Human-Authored Prose, Runtime Code Verification, Sourced Claims Discovery, Zero-Hallucination Standard
 
