@@ -2872,27 +2872,37 @@ footer {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.6rem 1.3rem;
-  background: linear-gradient(180deg, #d97706 0%, #b45309 100%);
-  color: #ffffff;
-  border: 1px solid #f59e0b;
+  padding: 0.55rem 1.25rem;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: #000000;
+  border: 4px solid #fef08a;
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   border-radius: var(--radius);
   text-decoration: none;
   transition: var(--transition);
-  box-shadow: 0 2px 8px rgba(180, 83, 9, 0.2);
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.6), inset 0 1px 3px rgba(255, 255, 255, 0.8), 0 4px 10px rgba(0, 0, 0, 0.35);
 }
 
 .case-study-cta-left:hover {
-  background: linear-gradient(180deg, #b45309 0%, #92400e 100%);
-  color: #ffffff;
-  border-color: #fbbf24;
+  background: linear-gradient(135deg, #fef08a 0%, #fbbf24 100%);
+  color: #000000;
+  border-color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(180, 83, 9, 0.3);
+  box-shadow: 0 0 32px rgba(251, 191, 36, 0.95), 0 0 12px rgba(255, 255, 255, 0.9), inset 0 2px 4px rgba(255, 255, 255, 0.9);
+}
+
+.case-study-cta-left:focus,
+.case-study-cta-left:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+  border-color: #ffffff;
+  background: linear-gradient(135deg, #fef08a 0%, #fbbf24 100%);
+  color: #000000;
+  box-shadow: 0 0 38px rgba(251, 191, 36, 1), 0 0 16px #ffffff, inset 0 2px 4px rgba(255, 255, 255, 0.95);
 }
 
 .case-study-badges {
@@ -3877,8 +3887,8 @@ footer {
       <p class="section-label">Verified Case Studies</p>
       <h1 class="section-title">Portfolio &amp; <span class="accent-gold">Case Studies</span></h1>
       <p class="section-sub" style="max-width:760px;margin-top:1rem;line-height:1.8;">
-        Not a link list. The brief, the approach, and what shipped — 8 verified case studies across Quantum Computing
-        (4), Generative AI (2), and Agentic AI (2).
+        Not a link list. The brief, the approach, and what shipped — 8 verified, 100% human-written case studies across Quantum Computing
+        (4), Generative AI (2), and Agentic AI (2), backed by 100% runtime-verified code.
       </p>
     </section>
 
@@ -4336,8 +4346,7 @@ footer {
       <h2 style="font-family:var(--font-display);font-size:1.8rem;color:var(--text-primary);margin-bottom:1rem;">Need
         Something Like This Written?</h2>
       <p style="font-size:1rem;color:var(--text-secondary);max-width:640px;margin:0 auto 2rem;">
-        Documentation, deep dives, courses, and quantum content — focusing on Generative AI Content &amp; Quantum
-        Computing Technology.
+        100% human-authored documentation, deep dives, courses, and quantum content — backed by runtime-verified code in Python, Golang, and Rust.
       </p>
       <a href="contact.html" class="btn btn-commission btn-lg">Start a Conversation →</a>
     </section>
