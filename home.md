@@ -139,7 +139,7 @@ With a post-graduate degree in Computer Science, extensive technical training ex
 ## Books & Long-Form
 
 ### RECRUITED — The Inbound Recruiter Blueprint: How to Make Recruiters Chase You
-*(Pre-Order Status — $10.00 USD pre-order ($20.00 USD after release) · Free with an active Patreon subscription)*
+*(Pre-Order Status — $20.00 USD pre-order ($40.00 USD after release) · Free with an active Patreon subscription)*
 
 ![RECRUITED Book Cover](assets/recruited-cover.jpg)
 

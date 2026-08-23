@@ -5,46 +5,96 @@
       "@type": "WebSite",
       "@id": "https://thomascherickal.github.io/#website",
       "url": "https://thomascherickal.github.io/",
-      "name": "Thomas Cherickal — Emerging Technologies Educator",
-      "description": "Emerging Technologies Educator specializing in Generative AI Systems, Local LLMs, AI Agents, Agentic AI, HuggingFace, Open Source, and Quantum Systems.",
+      "name": "Thomas Cherickal \u2014 The Digital Futurist",
+      "description": "Emerging Technology Educator, Trainer, Consultant, Documentation Expert (Di\u00e1taxis), and Executive Advisory for Generative AI Companies and Quantum Computing Enterprises.",
       "publisher": {
+        "@id": "https://thomascherickal.github.io/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://thomascherickal.github.io/#organization",
+      "name": "The Digital Futurist",
+      "alternateName": "Thomas Cherickal \u2014 The Digital Futurist",
+      "url": "https://thomascherickal.com",
+      "foundingDate": "2020",
+      "founder": {
+        "@id": "https://thomascherickal.github.io/#person"
+      },
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://thomascherickal.github.io/assets/site-icon.webp",
+        "width": 512,
+        "height": 512
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600015",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://thomascherickal.github.io/#profilepage",
+      "url": "https://thomascherickal.github.io/",
+      "name": "Thomas Cherickal \u2014 Emerging Technologies Educator, Consultant, Mentor, Trainer, Executive Advisory, Technical Documentation Automation, and Domain Expert in Generative AI, Quantum Computing, and Quantum-AI Synergy",
+      "isPartOf": {
+        "@id": "https://thomascherickal.github.io/#website"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://thomascherickal.github.io/#primaryimage"
+      },
+      "mainEntity": {
         "@id": "https://thomascherickal.github.io/#person"
       },
       "inLanguage": "en-US"
     },
     {
-      "@type": "WebPage",
-      "@id": "https://thomascherickal.github.io/#webpage",
-      "url": "https://thomascherickal.github.io/",
-      "name": "Thomas Cherickal — Emerging Technologies Educator",
-      "description": "Portfolio, training catalog, and technical deep dives by Thomas Cherickal, Emerging Technologies Educator across Generative AI Systems and Quantum Systems.",
-      "isPartOf": {
-        "@id": "https://thomascherickal.github.io/#website"
-      },
-      "about": {
-        "@id": "https://thomascherickal.github.io/#person"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://thomascherickal.github.io/assets/thomas-cherickal.webp",
-        "caption": "Thomas Cherickal — Emerging Technologies Educator"
-      },
-      "inLanguage": "en-US"
+      "@type": "ImageObject",
+      "@id": "https://thomascherickal.github.io/#primaryimage",
+      "url": "https://thomascherickal.github.io/assets/thomas-avatar.webp",
+      "caption": "Thomas Cherickal",
+      "width": 512,
+      "height": 512
     },
     {
       "@type": "Person",
       "@id": "https://thomascherickal.github.io/#person",
       "name": "Thomas Cherickal",
-      "givenName": "Thomas",
-      "familyName": "Cherickal",
+      "alternateName": [
+        "Thomas Mathew Cherickal",
+        "The Digital Futurist"
+      ],
+      "url": "https://thomascherickal.com",
+      "mainEntityOfPage": {
+        "@id": "https://thomascherickal.github.io/#profilepage"
+      },
+      "image": {
+        "@id": "https://thomascherickal.github.io/#primaryimage"
+      },
       "jobTitle": "Emerging Technologies Educator, Consultant, Mentor, Trainer, Executive Advisory, Technical Documentation Automation, and Domain Expert in Generative AI, Quantum Computing, and Quantum-AI Synergy",
-      "description": "Emerging Technologies Educator, Consultant, Mentor, Trainer, Executive Advisory, Technical Documentation Automation, and Domain Expert in Generative AI, Quantum Computing, and Quantum-AI Synergy for Generative AI Companies and Quantum Computing Enterprises. Authoritative Diátaxis documentation, deep dives, training programs, and executive advisory with 100% runtime-verified code across Python, Golang, and Rust. 500+ published technical articles across 10+ platforms since 2020.",
-      "url": "https://thomascherickal.github.io",
-      "image": "https://thomascherickal.github.io/assets/thomas-cherickal.webp",
-      "email": "mailto:thomascherickal@gmail.com",
+      "description": "Emerging Technologies Educator, Consultant, Mentor, Trainer, Executive Advisory, Technical Documentation Automation, and Domain Expert in Generative AI, Quantum Computing, and Quantum-AI Synergy for Generative AI Companies and Quantum Computing Enterprises. Authoritative Di\u00e1taxis documentation, deep dives, training programs, and executive advisory with 100% runtime-verified code across Python, Golang, and Rust. 500+ published technical articles across 10+ platforms since 2020.",
+      "email": "thomascherickal@gmail.com",
+      "nationality": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "worksFor": {
+        "@id": "https://thomascherickal.github.io/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600015",
+        "addressCountry": "IN"
+      },
       "knowsAbout": [
         "Emerging Technologies Education",
-        "Automated Documentation",
+        "AI Agent Orchestration",
         "Emerging Technology Content",
         "Developer Education",
         "Python Programming",
@@ -62,6 +112,7 @@
         "Large Language Models",
         "Small Language Models",
         "HuggingFace",
+        "Open Source",
         "Agentic AI",
         "OpenClaw",
         "Hermes Agent",
@@ -84,6 +135,7 @@
       ],
       "sameAs": [
         "https://thomascherickal.com",
+        "https://thomascherickal.github.io",
         "https://github.com/thomascherickal",
         "https://linkedin.com/in/thomascherickal",
         "https://thomascherickal.medium.com",
@@ -112,7 +164,7 @@
     {
       "@type": "ItemList",
       "@id": "https://thomascherickal.github.io/#emerging-technologies",
-      "name": "10 Emerging Technologies Covered",
+      "name": "Emerging Technologies Covered",
       "description": "Core technical specializations across Generative AI Systems and Quantum Systems.",
       "numberOfItems": 10,
       "itemListElement": [
@@ -184,18 +236,24 @@
       "name": "RECRUITED",
       "url": "https://patreon.com/thomascherickal",
       "image": "https://thomascherickal.github.io/assets/recruited-cover.webp",
-      "alternateName": "RECRUITED — The Inbound Recruiter Blueprint: How to Make Recruiters Chase You",
-      "description": "A practical career transformation system showing developers and professionals how to use frontier AI tools — GitHub, LinkedIn, Perplexity, Claude, Google Antigravity, and Gemini Notebook — to rebuild their online presence so that high-tier recruiters chase them.",
-      "author": { "@id": "https://thomascherickal.github.io/#person" },
-      "publisher": { "@id": "https://thomascherickal.github.io/#organization" },
+      "alternateName": "RECRUITED \u2014 The Inbound Recruiter Blueprint: How to Make Recruiters Chase You",
+      "description": "A practical career transformation system showing developers and professionals how to use frontier AI tools \u2014 GitHub, LinkedIn, Perplexity, Claude, Google Antigravity, and Gemini Notebook \u2014 to rebuild their online presence so that high-tier recruiters chase them.",
+      "author": {
+        "@id": "https://thomascherickal.github.io/#person"
+      },
+      "publisher": {
+        "@id": "https://thomascherickal.github.io/#organization"
+      },
       "inLanguage": "en-US",
       "genre": "Career Development",
+      "bookFormat": "https://schema.org/EBook",
       "offers": {
         "@type": "Offer",
-        "url": "https://patreon.com/thomascherickal",
-        "price": "0",
+        "price": "20.00",
         "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
+        "availability": "https://schema.org/PreOrder",
+        "url": "https://patreon.com/thomascherickal",
+        "priceValidUntil": "2026-12-31"
       }
     }
   ]
