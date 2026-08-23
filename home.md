@@ -36,10 +36,8 @@ With a post-graduate degree in Computer Science from Loyola College and an estab
 | :--- | :--- |
 | **Articles Published** | 500+ |
 | **Platforms** | 10+ |
-| **Years Emerging Tech Education** | 6+ |
-| **Featured Deep Dives** | 32 |
-| **GitHub Repositories** | 2000+ |
-| **Verified Code Runtimes** | 100% |
+| **Emerging Tech Education** | 2020— |
+| **Featured Deep Dives** | 40 |
 
 ---
 
@@ -62,7 +60,7 @@ With a post-graduate degree in Computer Science from Loyola College and an estab
 
 ## The Diátaxis Documentation Framework
 
-All technical documentation deliverables follow the Diátaxis framework structure (Open Reference Implementation: [thomascherickal/diataxis](https://github.com/thomascherickal/diataxis)):
+All technical documentation deliverables follow the Diátaxis framework structure created by [Daniele Procida](https://diataxis.fr/):
 
 ### 4 Core Documentation Pillars
 1. **Tutorials**: Learning-oriented, practical step-by-step lessons for newcomers to achieve immediate success through hands-on exercises.
@@ -149,7 +147,7 @@ A comprehensive transformation system showing professionals how to use frontier 
 
 ---
 
-## Service Offerings (10 Offerings)
+## Service Offerings (12 Offerings)
 
 1. **Training in Generative AI**: Interactive virtual workshops, custom team bootcamps, and LLM/agent labs.
 2. **Training in Quantum Computing**: Interactive virtual workshops, Qiskit/PennyLane labs, and algorithm masterclasses.
@@ -161,6 +159,8 @@ A comprehensive transformation system showing professionals how to use frontier 
 8. **Local LLM Deployment Training & Guides**: Interactive workshops, step-by-step setup guides, vLLM & Ollama deployment tutorials and documentation.
 9. **Generative AI Developer Content**: RAG pipelines, agentic workflows, prompt engineering frameworks, and SLM fine-tuning guides.
 10. **Monthly Content Retainer**: Dedicated monthly sprint capacity for devtools and AI infra companies: guaranteed content volume, priority turnaround & byline management.
+11. **Post-Quantum Cryptography & Quantum Risk**: Enterprise quantum readiness audits, threat modeling against RSA/ECC infrastructure, NIST PQC migration roadmaps, and executive briefings.
+12. **Rust for AI & High-Performance Systems**: Interactive workshops and technical guides for Rust AI inference, Candle & Burn ML tensor engines, PyO3 acceleration, and memory-safe Tokio microservices.
 
 ---
 

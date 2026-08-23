@@ -1247,7 +1247,7 @@ body.portfolio-page .section-sub {
 
 .stats-strip {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 0;
   background: var(--bg-card);
   border-top: 1px solid var(--border);
@@ -1279,16 +1279,17 @@ body.portfolio-page .section-sub {
 
 .stat-num {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(1.6rem, 3.8vw, 2.8rem);
   font-weight: 900;
   background: linear-gradient(135deg, var(--cyan), var(--gold));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  line-height: 1;
+  line-height: 1.1;
   margin-bottom: 0.4rem;
   text-align: center;
   width: 100%;
+  white-space: nowrap;
 }
 
 .stat-label {
@@ -2028,30 +2029,24 @@ footer {
     border-right: none;
   }
 
-  .stat-item:nth-child(5),
-  .stat-item:nth-child(6) {
+  .stat-item:nth-child(3),
+  .stat-item:nth-child(4) {
     border-bottom: none;
   }
 }
 
 @media(max-width: 1024px) and (min-width: 769px) {
   .stats-strip {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .stat-item {
     border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-  }
-
-  .stat-item:nth-child(3n) {
-    border-right: none;
-  }
-
-  .stat-item:nth-child(4),
-  .stat-item:nth-child(5),
-  .stat-item:nth-child(6) {
     border-bottom: none;
+  }
+
+  .stat-item:last-child {
+    border-right: none;
   }
 }
 

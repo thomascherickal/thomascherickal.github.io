@@ -1307,7 +1307,7 @@
 
     .stats-strip {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 0;
       background: var(--bg-card);
       border-top: 1px solid var(--border);
@@ -1339,16 +1339,17 @@
 
     .stat-num {
       font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-size: clamp(1.6rem, 3.8vw, 2.8rem);
       font-weight: 900;
       background: linear-gradient(135deg, var(--cyan), var(--gold));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      line-height: 1;
+      line-height: 1.1;
       margin-bottom: 0.4rem;
       text-align: center;
       width: 100%;
+      white-space: nowrap;
     }
 
     .stat-label {
@@ -2089,30 +2090,24 @@
         border-right: none;
       }
 
-      .stat-item:nth-child(5),
-      .stat-item:nth-child(6) {
+      .stat-item:nth-child(3),
+      .stat-item:nth-child(4) {
         border-bottom: none;
       }
     }
 
     @media(max-width: 1024px) and (min-width: 769px) {
       .stats-strip {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
       }
 
       .stat-item {
         border-right: 1px solid var(--border);
-        border-bottom: 1px solid var(--border);
-      }
-
-      .stat-item:nth-child(3n) {
-        border-right: none;
-      }
-
-      .stat-item:nth-child(4),
-      .stat-item:nth-child(5),
-      .stat-item:nth-child(6) {
         border-bottom: none;
+      }
+
+      .stat-item:last-child {
+        border-right: none;
       }
     }
 
@@ -4042,7 +4037,7 @@
       </div>
     </section>
 
-    <!-- STATS (6 Factual Achievements) -->
+    <!-- STATS (4 Factual Achievements) -->
     <div class="stats-strip">
       <div class="stat-item">
         <div class="stat-num">500+</div>
@@ -4053,20 +4048,12 @@
         <div class="stat-label">Platforms</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">6+</div>
-        <div class="stat-label">Years Emerging Technologies</div>
+        <div class="stat-num">2020—</div>
+        <div class="stat-label">Emerging Technologies</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">32</div>
+        <div class="stat-num">40</div>
         <div class="stat-label">Featured Deep Dives</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">2000+</div>
-        <div class="stat-label">GitHub Repositories</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">100%</div>
-        <div class="stat-label">Verified Code</div>
       </div>
     </div>
 
@@ -5975,7 +5962,7 @@
           <div>
             <span class="home-nav-icon">⚡</span>
             <h3 class="home-nav-title">Capabilities &amp; Tech Stack</h3>
-            <p class="home-nav-desc">10 specialized capability areas, 10 curated tech-stack chip groups, and the Python,
+            <p class="home-nav-desc">12 specialized capability areas, 12 curated tech-stack chip groups, and the Python,
               Golang, &amp; Rust execution tooling behind every piece.</p>
           </div>
           <span class="home-nav-btn">Explore Capabilities →</span>
@@ -5986,8 +5973,8 @@
           <div>
             <span class="home-nav-icon">🎯</span>
             <h3 class="home-nav-title">Services &amp; Commissions</h3>
-            <p class="home-nav-desc">10 asynchronous service offerings — AI agent orchestration, deep dives, courses,
-              quantum content, and Generative AI developer content.</p>
+            <p class="home-nav-desc">12 asynchronous service offerings — AI agent orchestration, deep dives, courses,
+              quantum content, PQC risk, Rust for AI, and Generative AI developer content.</p>
           </div>
           <span class="home-nav-btn">Inspect Services →</span>
         </a>
@@ -6104,162 +6091,135 @@
         <h2 class="section-title">The <span class="accent-gold">Diátaxis</span> Framework &amp; Engineering Artifacts
         </h2>
         <p class="section-sub" style="max-width:820px;margin:1.25rem auto 0;line-height:1.8;">
-          A systematic technical documentation architecture categorizing content by developer need and intent. Every
-          deliverable is structured according to the 4 core Diátaxis modes and 8 extended engineering documentation
+          A systematic technical documentation architecture categorizing content by developer need and intent.
+          The Diátaxis framework was created by <a href="https://diataxis.fr/" target="_blank" rel="noopener"
+            style="color:var(--gold);text-decoration:underline;font-weight:600;">Daniele Procida</a> to solve documentation fragmentation.
+          Every deliverable is structured according to the 4 canonical Diátaxis modes and 8 extended engineering documentation
           artifacts with 100% verified, executable code.
-        </p>
-        <p style="font-size:0.92rem;color:var(--cyan);margin-top:1rem;">
-          Open Reference Implementation: <a href="https://github.com/thomascherickal/diataxis" target="_blank"
-            rel="noopener" style="color:var(--gold);text-decoration:underline;font-weight:600;">thomascherickal/diataxis
-            ↗</a>
         </p>
       </div>
 
       <div class="home-nav-grid"
         style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;margin-top:2.5rem;">
         <!-- Card 1: Tutorials -->
-        <a href="https://github.com/thomascherickal/diataxis/blob/main/features/document_types.feature" target="_blank"
-          rel="noopener" class="home-nav-card glow-cyan">
+        <div class="home-nav-card glow-cyan">
           <div>
             <span class="home-nav-icon">🎓</span>
             <h3 class="home-nav-title">1. Tutorials</h3>
             <p class="home-nav-desc">Learning-oriented, practical step-by-step lessons for newcomers to achieve
               immediate success with a software system through hands-on exercises.</p>
           </div>
-          <span class="home-nav-btn">Explore Tutorials ↗</span>
-        </a>
+        </div>
 
         <!-- Card 2: How-To Guides -->
-        <a href="https://github.com/thomascherickal/diataxis/blob/main/docs/how_to_add_a_new_document_template.md"
-          target="_blank" rel="noopener" class="home-nav-card glow-gold">
+        <div class="home-nav-card glow-gold">
           <div>
             <span class="home-nav-icon">🛠️</span>
             <h3 class="home-nav-title">2. How-To Guides</h3>
             <p class="home-nav-desc">Problem-oriented recipes guiding developers through real-world tasks, specific
               troubleshooting steps, and operational procedures.</p>
           </div>
-          <span class="home-nav-btn">Explore How-To Guides ↗</span>
-        </a>
+        </div>
 
         <!-- Card 3: Reference -->
-        <a href="https://github.com/thomascherickal/diataxis/blob/main/lib/diataxis/document_types.rb" target="_blank"
-          rel="noopener" class="home-nav-card glow-cyan">
+        <div class="home-nav-card glow-cyan">
           <div>
             <span class="home-nav-icon">📖</span>
             <h3 class="home-nav-title">3. Reference Docs</h3>
             <p class="home-nav-desc">Information-oriented, precise technical specifications, API parameters, schema
               definitions, and authoritative system facts.</p>
           </div>
-          <span class="home-nav-btn">Explore Reference ↗</span>
-        </a>
+        </div>
 
         <!-- Card 4: Explanation -->
-        <a href="https://github.com/thomascherickal/diataxis/blob/main/docs/adr/0001-adopt-diataxis-documentation-framework.md"
-          target="_blank" rel="noopener" class="home-nav-card glow-gold">
+        <div class="home-nav-card glow-gold">
           <div>
             <span class="home-nav-icon">💡</span>
             <h3 class="home-nav-title">4. Explanation</h3>
             <p class="home-nav-desc">Understanding-oriented background articles exploring architectural design
               decisions, domain context, and high-level concepts.</p>
           </div>
-          <span class="home-nav-btn">Explore Explanation ↗</span>
-        </a>
+        </div>
 
         <!-- Card 5: Architecture Decision Records (ADRs) -->
-        <a href="https://github.com/thomascherickal/diataxis/tree/main/docs/adr" target="_blank" rel="noopener"
-          class="home-nav-card glow-cyan">
+        <div class="home-nav-card glow-cyan">
           <div>
             <span class="home-nav-icon">🏛️</span>
             <h3 class="home-nav-title">5. ADRs</h3>
             <p class="home-nav-desc">Decision-oriented records capturing key architectural choices, context, trade-offs,
               and long-term technical consequences chronologically.</p>
           </div>
-          <span class="home-nav-btn">Explore ADRs ↗</span>
-        </a>
+        </div>
 
-        <!-- Card 6: Project Briefs -->
-        <a href="https://github.com/thomascherickal/diataxis/tree/main/docs/_gtd" target="_blank" rel="noopener"
-          class="home-nav-card glow-gold">
-          <div>
-            <span class="home-nav-icon">📋</span>
-            <h3 class="home-nav-title">6. Project Briefs</h3>
-            <p class="home-nav-desc">Scope-oriented planning documents defining vision, key deliverables, success
-              metrics, and stakeholder alignment before engineering execution.</p>
-          </div>
-          <span class="home-nav-btn">Explore Project Briefs ↗</span>
-        </a>
-
-        <!-- Card 7: Pull Request Summaries -->
-        <a href="https://github.com/thomascherickal/diataxis/blob/main/docs/adr/0005-use-purpose-driven-document-templates.md"
-          target="_blank" rel="noopener" class="home-nav-card glow-cyan">
-          <div>
-            <span class="home-nav-icon">🔀</span>
-            <h3 class="home-nav-title">7. PR Summaries</h3>
-            <p class="home-nav-desc">Review-oriented documentation providing code review context, verification steps,
-              and testing proof for seamless pull request evaluation.</p>
-          </div>
-          <span class="home-nav-btn">Explore PR Summaries ↗</span>
-        </a>
-
-        <!-- Card 8: 5-Why Root-Cause Analyses -->
-        <a href="https://github.com/thomascherickal/diataxis/blob/main/docs/adr/0010-implement-custom-error-handling-system.md"
-          target="_blank" rel="noopener" class="home-nav-card glow-gold">
-          <div>
-            <span class="home-nav-icon">🔍</span>
-            <h3 class="home-nav-title">8. 5-Why Analyses</h3>
-            <p class="home-nav-desc">Diagnostic-oriented incident post-mortems systematically tracing technical failures
-              back to underlying systemic root causes.</p>
-          </div>
-          <span class="home-nav-btn">Explore 5-Why Analyses ↗</span>
-        </a>
-
-        <!-- Card 9: Handover Documents -->
-        <a href="https://github.com/thomascherickal/diataxis/blob/main/docs/adr/0017-obsidian-not-github-is-now-the-primary-reading-surface.md"
-          target="_blank" rel="noopener" class="home-nav-card glow-cyan">
-          <div>
-            <span class="home-nav-icon">🤝</span>
-            <h3 class="home-nav-title">9. Handovers</h3>
-            <p class="home-nav-desc">Transition-oriented operational transfer guides ensuring seamless domain knowledge
-              handoff and runbooks across engineering teams.</p>
-          </div>
-          <span class="home-nav-btn">Explore Handovers ↗</span>
-        </a>
-
-        <!-- Card 10: Developer Notes -->
-        <a href="https://github.com/thomascherickal/diataxis/blob/main/docs/adr/0004-use-linguistic-prefixes-for-document-classification.md"
-          target="_blank" rel="noopener" class="home-nav-card glow-gold">
-          <div>
-            <span class="home-nav-icon">📝</span>
-            <h3 class="home-nav-title">10. Developer Notes</h3>
-            <p class="home-nav-desc">Context-oriented field notes, scratchpad observations, and meeting summaries
-              capturing ongoing technical discovery and team syncs.</p>
-          </div>
-          <span class="home-nav-btn">Explore Developer Notes ↗</span>
-        </a>
-
-        <!-- Card 11: Runbooks & SOPs -->
-        <a href="https://github.com/thomascherickal/diataxis/tree/main/docs" target="_blank" rel="noopener"
-          class="home-nav-card glow-cyan">
+        <!-- Card 6: Runbooks & SOPs -->
+        <div class="home-nav-card glow-gold">
           <div>
             <span class="home-nav-icon">⚙️</span>
-            <h3 class="home-nav-title">11. Runbooks &amp; SOPs</h3>
-            <p class="home-nav-desc">Execution-oriented operational playbooks and runbooks detailing routine procedures,
+            <h3 class="home-nav-title">6. Runbooks &amp; SOPs</h3>
+            <p class="home-nav-desc">Execution-oriented operational playbooks and standard operating procedures detailing routine procedures,
               incident recovery steps, and failover protocols.</p>
           </div>
-          <span class="home-nav-btn">Explore Runbooks ↗</span>
-        </a>
+        </div>
 
-        <!-- Card 12: RFCs & Tech Specs -->
-        <a href="https://github.com/thomascherickal/diataxis/tree/main/docs" target="_blank" rel="noopener"
-          class="home-nav-card glow-gold">
+        <!-- Card 7: RFCs & Tech Specs -->
+        <div class="home-nav-card glow-cyan">
           <div>
             <span class="home-nav-icon">📐</span>
-            <h3 class="home-nav-title">12. RFCs &amp; Tech Specs</h3>
+            <h3 class="home-nav-title">7. RFCs &amp; Tech Specs</h3>
             <p class="home-nav-desc">Proposal-oriented technical specifications detailing system design changes, API
               contracts, and consensus-building before development.</p>
           </div>
-          <span class="home-nav-btn">Explore Tech Specs ↗</span>
-        </a>
+        </div>
+
+        <!-- Card 8: Handover Documents -->
+        <div class="home-nav-card glow-gold">
+          <div>
+            <span class="home-nav-icon">🤝</span>
+            <h3 class="home-nav-title">8. Handovers</h3>
+            <p class="home-nav-desc">Transition-oriented operational transfer guides ensuring seamless domain knowledge
+              handoff and runbooks across engineering teams.</p>
+          </div>
+        </div>
+
+        <!-- Card 9: Project Briefs -->
+        <div class="home-nav-card glow-cyan">
+          <div>
+            <span class="home-nav-icon">📋</span>
+            <h3 class="home-nav-title">9. Project Briefs</h3>
+            <p class="home-nav-desc">Scope-oriented planning documents defining product vision, key deliverables, success
+              metrics, and stakeholder alignment before engineering execution.</p>
+          </div>
+        </div>
+
+        <!-- Card 10: Pull Request Summaries -->
+        <div class="home-nav-card glow-gold">
+          <div>
+            <span class="home-nav-icon">🔀</span>
+            <h3 class="home-nav-title">10. PR Summaries</h3>
+            <p class="home-nav-desc">Review-oriented documentation providing code review context, verification steps,
+              and testing proof for seamless pull request evaluation.</p>
+          </div>
+        </div>
+
+        <!-- Card 11: 5-Why Root-Cause Analyses -->
+        <div class="home-nav-card glow-cyan">
+          <div>
+            <span class="home-nav-icon">🔍</span>
+            <h3 class="home-nav-title">11. 5-Why Analyses</h3>
+            <p class="home-nav-desc">Diagnostic-oriented incident post-mortems systematically tracing technical failures
+              and bugs back to underlying systemic root causes.</p>
+          </div>
+        </div>
+
+        <!-- Card 12: Developer Notes -->
+        <div class="home-nav-card glow-gold">
+          <div>
+            <span class="home-nav-icon">📝</span>
+            <h3 class="home-nav-title">12. Developer Notes</h3>
+            <p class="home-nav-desc">Context-oriented field notes, scratchpad observations, and meeting summaries
+              capturing ongoing technical discovery and team syncs.</p>
+          </div>
+        </div>
       </div>
     </section>
 
