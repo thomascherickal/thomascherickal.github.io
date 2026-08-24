@@ -1347,161 +1347,176 @@ body.portfolio-page .section-sub {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 0.85rem 1rem;
-  max-width: 1150px;
+/* SECONDARY PROOF STRIP: PLATFORMS WORDMARKS MARQUEE */
+.platforms-proof-strip {
+  background: rgba(13, 19, 33, 0.65);
+  border-bottom: 1px solid var(--border);
+  padding: 2.25rem 0 2.5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.platforms-proof-inner {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.platforms-proof-label {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.platforms-proof-label::before,
+.platforms-proof-label::after {
+  content: '';
+  flex: 1;
+  max-width: 140px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border));
+}
+
+.platforms-proof-label::after {
+  background: linear-gradient(90deg, var(--border), transparent);
+}
+
+.platforms-marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0.85rem 0;
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+
+.platforms-marquee-track {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 1.35rem;
+  width: max-content;
+  animation: scroll-platforms-marquee 35s linear infinite;
+  -webkit-animation: scroll-platforms-marquee 35s linear infinite;
+  will-change: transform;
+}
+
+.platforms-marquee-container:hover .platforms-marquee-track {
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+
+@keyframes scroll-platforms-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@-webkit-keyframes scroll-platforms-marquee {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+  }
 }
 
 .platform-wordmark {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
-  padding: 0.55rem 1.15rem;
-  background: rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 0.85rem;
+  padding: 0.72rem 1.6rem;
+  background: rgba(15, 23, 42, 0.82);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
   border-radius: 9999px;
-  font-size: 1.02rem;
-  font-weight: 600;
-  color: var(--text-secondary);
+  font-size: 1.14rem;
+  font-weight: 700;
+  color: var(--text-primary);
   text-decoration: none;
   letter-spacing: 0.01em;
-  transition: var(--transition);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .platform-wordmark:hover,
 .platform-wordmark:focus,
 .platform-wordmark:focus-visible {
-  color: var(--text-primary);
-  background: rgba(56, 189, 248, 0.08);
-  border-color: rgba(56, 189, 248, 0.4);
-  box-shadow: 0 0 16px rgba(56, 189, 248, 0.25);
-  transform: translateY(-2px);
+  color: #ffffff;
+  background: rgba(30, 41, 59, 0.95);
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 0 24px rgba(56, 189, 248, 0.4), 0 6px 20px rgba(0, 0, 0, 0.6);
+  transform: translateY(-3px) scale(1.04);
   outline: none;
 }
 
 .platform-wordmark:focus-visible {
   outline: 2px solid var(--cyan);
-  outline-offset: 3px;
+  outline-offset: 4px;
 }
 
-.wordmark-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.95em;
-  line-height: 1;
+.wordmark-svg {
+  width: 26px;
+  height: 26px;
   flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 5px;
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
 
-.icon-hn {
-  color: #00eb47;
-  font-family: var(--font-mono);
-  font-weight: 900;
-  letter-spacing: -0.05em;
+.platform-wordmark:hover .wordmark-svg {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
 }
 
-.icon-medium {
-  font-family: 'Newsreader', serif, Georgia;
-  font-weight: 900;
-  font-style: italic;
-  color: var(--text-primary);
-}
-
-.icon-substack {
-  color: #ff6719;
-  font-weight: 900;
-  transform: scaleY(0.85);
-}
-
-.icon-hashnode {
-  color: #2962ff;
-  font-weight: 900;
-}
-
-.icon-wordpress {
-  color: #21759b;
-  font-family: serif, Georgia;
-  font-weight: 900;
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
-  width: 1.25em;
-  height: 1.25em;
-  font-size: 0.8em;
-}
-
-.icon-linkedin {
-  color: #0a66c2;
-  font-weight: 900;
-  background: rgba(10, 102, 194, 0.15);
-  border: 1px solid #0a66c2;
-  border-radius: 4px;
-  padding: 0.05rem 0.25rem;
-  font-size: 0.75em;
-  font-family: sans-serif;
-}
-
-.icon-quora {
-  color: #b92b27;
-  font-family: serif, Georgia;
-  font-weight: 900;
-}
-
-.icon-mastodon {
-  font-size: 1em;
-}
-
-.icon-tumblr {
-  color: #38bdf8;
-  font-family: serif, Georgia;
-  font-weight: 900;
-  font-size: 1.1em;
-}
-
-.icon-differ {
-  color: #f59e0b;
-  font-family: var(--font-mono);
-  font-weight: 900;
-}
-
-.icon-bluesky {
-  font-size: 1em;
-}
-
-.icon-patreon {
-  color: #ff424d;
-  font-weight: 900;
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
-  width: 1.2em;
-  height: 1.2em;
-  font-size: 0.8em;
-}
-
-.icon-hubpages {
-  color: #10b981;
-  font-weight: 900;
-  border: 1px solid #10b981;
-  border-radius: 4px;
-  padding: 0.05rem 0.25rem;
-  font-size: 0.75em;
-}
-
-.icon-more {
-  color: var(--gold);
-}
+/* Platform Hover Accent Glows */
+.wordmark-hackernoon:hover { border-color: #00eb47 !important; box-shadow: 0 0 24px rgba(0, 235, 71, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
+.wordmark-medium:hover { border-color: #ffffff !important; box-shadow: 0 0 24px rgba(255, 255, 255, 0.4), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
+.wordmark-substack:hover { border-color: #ff6719 !important; box-shadow: 0 0 24px rgba(255, 103, 25, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
+.wordmark-hashnode:hover { border-color: #2962ff !important; box-shadow: 0 0 24px rgba(41, 98, 255, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
+.wordmark-wordpress:hover { border-color: #21759b !important; box-shadow: 0 0 24px rgba(33, 117, 155, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
+.wordmark-linkedin:hover { border-color: #0a66c2 !important; box-shadow: 0 0 24px rgba(10, 102, 194, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
+.wordmark-reddit:hover { border-color: #ff4500 !important; box-shadow: 0 0 24px rgba(255, 69, 0, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
+.wordmark-gumroad:hover { border-color: #ff90e8 !important; box-shadow: 0 0 24px rgba(255, 144, 232, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
+.wordmark-topmate:hover { border-color: #f43f5e !important; box-shadow: 0 0 24px rgba(244, 63, 94, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
+.wordmark-muckrack:hover { border-color: #00a3e0 !important; box-shadow: 0 0 24px rgba(0, 163, 224, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
+.wordmark-quora:hover { border-color: #b92b27 !important; box-shadow: 0 0 24px rgba(185, 43, 39, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
+.wordmark-bluesky:hover { border-color: #0285ff !important; box-shadow: 0 0 24px rgba(2, 133, 255, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
+.wordmark-mastodon:hover { border-color: #6364ff !important; box-shadow: 0 0 24px rgba(99, 100, 255, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
+.wordmark-tumblr:hover { border-color: #38bdf8 !important; box-shadow: 0 0 24px rgba(56, 189, 248, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
+.wordmark-differ:hover { border-color: #f59e0b !important; box-shadow: 0 0 24px rgba(245, 158, 11, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
+.wordmark-patreon:hover { border-color: #ff424d !important; box-shadow: 0 0 24px rgba(255, 66, 77, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
+.wordmark-hubpages:hover { border-color: #10b981 !important; box-shadow: 0 0 24px rgba(16, 185, 129, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
 
 .platform-wordmark.wordmark-more {
   color: var(--gold);
-  border-color: rgba(245, 158, 11, 0.3);
-  background: rgba(245, 158, 11, 0.05);
-  font-weight: 700;
+  border-color: rgba(245, 158, 11, 0.35);
+  background: rgba(245, 158, 11, 0.08);
+  font-weight: 800;
 }
 
 .platform-wordmark.wordmark-more:hover {
-  border-color: var(--gold);
-  box-shadow: 0 0 16px rgba(245, 158, 11, 0.4);
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 24px rgba(245, 158, 11, 0.5), 0 6px 20px rgba(0, 0, 0, 0.6) !important;
+  color: #ffffff !important;
 }
 
 .collab-grid {
