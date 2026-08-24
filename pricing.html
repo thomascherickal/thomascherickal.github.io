@@ -3927,7 +3927,7 @@
         "@id": "https://thomascherickal.github.io/pricing.html#webpage",
         "url": "https://thomascherickal.github.io/pricing.html",
         "name": "Services Pricing & Engagement Packages — Thomas Cherickal",
-        "description": "Transparent milestone pricing for 3 strategic packages (Single Engagement, Monthly Sprint, Embedded Partner) and 12 specialized service offerings across Generative AI, Quantum Computing, and Systems Architecture.",
+        "description": "Transparent milestone pricing for 4 strategic packages (Single Engagement, Fortnightly Sprint, Monthly Sprint, Enterprise Partner) and 12 specialized service offerings across Generative AI, Quantum Computing, and Systems Architecture.",
         "isPartOf": { "@id": "https://thomascherickal.github.io/#website" },
         "inLanguage": "en-US",
         "breadcrumb": { "@id": "https://thomascherickal.github.io/pricing.html#breadcrumb" },
@@ -3945,25 +3945,31 @@
         "@type": "OfferCatalog",
         "@id": "https://thomascherickal.github.io/pricing.html#offercatalog",
         "name": "Services Pricing & Engagement Packages — Thomas Cherickal",
-        "description": "Transparent milestone pricing for 3 engagement packages and 12 service offerings across emerging technologies education, Generative AI, and Quantum Computing adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%), Tier 4 Custom Pricing (Non-Profits, Educational Institutions, Startups, Underprivileged Clients).",
+        "description": "Transparent milestone pricing for 4 engagement packages and 12 service offerings across emerging technologies education, Generative AI, and Quantum Computing adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%), Tier 4 Startups (50% Off), Tier 5 Custom Pricing (Non-Profits, Educational Institutions, Underprivileged Clients).",
         "url": "https://thomascherickal.github.io/pricing.html",
         "offeredBy": { "@id": "https://thomascherickal.github.io/#person" },
         "itemListElement": [
           {
             "@type": "Offer",
-            "name": "Single Engagement",
+            "name": "Single Engagement (Tier 1)",
             "description": "One high-impact technical deep dive (2,000–5,000 words) or intensive virtual workshop with 100% verified code.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "2000.00", "maxPrice": "4000.00", "priceCurrency": "USD" }
+            "priceSpecification": { "@type": "PriceSpecification", "price": "2000.00", "priceCurrency": "USD" }
           },
           {
             "@type": "Offer",
-            "name": "Monthly Sprint (Most Popular)",
+            "name": "Fortnightly Sprint (Tier 2 · Value for Money)",
+            "description": "2-week dedicated sprint: 1 long-form technical deep dive + 1 hands-on workshop/how-to guide with runtime-verified code and async channel access.",
+            "priceSpecification": { "@type": "PriceSpecification", "price": "3000.00", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Monthly Sprint (Tier 3 · Most Popular)",
             "description": "Dedicated monthly engineering capacity: 2 long-form technical deep dives, 1 workshop/tutorial series, full Diataxis docs, and weekly syncs.",
             "priceSpecification": { "@type": "PriceSpecification", "price": "5000.00", "priceCurrency": "USD" }
           },
           {
             "@type": "Offer",
-            "name": "Enterprise & Embedded Partner",
+            "name": "Enterprise & Embedded Partner (Tier 4)",
             "description": "Quarterly strategic advisory anchor: complete documentation engine, monthly executive briefings, unlimited workshops, and <4h async SLA.",
             "priceSpecification": { "@type": "PriceSpecification", "price": "12000.00", "priceCurrency": "USD" }
           },
@@ -4067,171 +4073,214 @@
       </p>
     </section>
 
-    <!-- 3-CARD PACKAGES SECTION -->
+    <!-- 4-CARD PACKAGES SECTION -->
     <section class="reveal" id="packages" style="margin-bottom:3rem;">
       <div class="packages-grid"
-        style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:2rem;max-width:1240px;margin:0 auto;padding:0 1.5rem;align-items:stretch;">
+        style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.75rem;max-width:1380px;margin:0 auto;padding:0 1.5rem;align-items:stretch;">
 
         <!-- Tier 1 Package: Single Engagement -->
         <div class="package-card border-cyan"
-          style="background:var(--bg-card);border:2px solid rgba(56, 189, 248, 0.75);border-radius:var(--radius-lg);padding:2.5rem 2rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:var(--transition);box-shadow:0 0 22px rgba(56, 189, 248, 0.2), 0 10px 30px rgba(0,0,0,0.6);">
+          style="background:linear-gradient(155deg, rgba(8, 25, 45, 0.95) 0%, rgba(3, 7, 18, 0.98) 100%);border:2px solid #00d2ff;border-radius:var(--radius-lg);padding:2.5rem 1.75rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:var(--transition);box-shadow:0 0 26px rgba(0, 210, 255, 0.3), 0 10px 30px rgba(0,0,0,0.7);">
           <div>
-            <span class="role-chip cyan"
-              style="font-size:0.75rem;font-weight:700;letter-spacing:0.06em;margin-bottom:1rem;display:inline-block;">TIER
+            <span
+              style="font-size:0.75rem;font-weight:800;letter-spacing:0.07em;margin-bottom:1rem;display:inline-block;background:rgba(0, 210, 255, 0.18);border:1px solid #00d2ff;color:#00f0ff;padding:0.35rem 0.85rem;border-radius:6px;">TIER
               1 · PROJECT SCOPE</span>
-            <h3 style="font-size:1.65rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">Single
+            <h3 style="font-size:1.55rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">Single
               Engagement</h3>
-            <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;line-height:1.6;">One high-impact
+            <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:1.5rem;line-height:1.6;">One high-impact
               technical deep dive or team workshop</p>
 
-            <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(56, 189, 248, 0.25);">
+            <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(0, 210, 255, 0.3);">
               <div
-                style="font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:var(--cyan);line-height:1;">
-                $2,000 – $4,000</div>
+                style="font-family:var(--font-display);font-size:2.4rem;font-weight:900;color:#00f0ff;line-height:1;text-shadow:0 0 16px rgba(0, 240, 255, 0.4);">
+                $2,000</div>
               <span
-                style="font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);letter-spacing:0.05em;">USD
+                style="font-family:var(--font-mono);font-size:0.8rem;color:#7dd3fc;letter-spacing:0.06em;font-weight:700;">USD
                 / FLAT RATE</span>
             </div>
 
             <ul
-              style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;font-size:0.92rem;color:var(--text-secondary);line-height:1.6;">
+              style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;font-size:0.9rem;color:var(--text-secondary);line-height:1.55;">
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:var(--cyan);font-weight:bold;">✓</span>
-                <span><strong>1 Deep Dive</strong> (2,000–5,000 words) <em>or</em> <strong>1 Virtual Masterclass /
-                    Workshop</strong></span>
+                <span style="color:#00f0ff;font-weight:bold;">✓</span>
+                <span><strong>1 Deep Dive</strong> (2k–5k words) <em>or</em> <strong>1 Virtual Workshop</strong></span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:var(--cyan);font-weight:bold;">✓</span>
+                <span style="color:#00f0ff;font-weight:bold;">✓</span>
                 <span><strong>100% Runtime-Verified Code</strong> in Python, Golang, or Rust</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:var(--cyan);font-weight:bold;">✓</span>
+                <span style="color:#00f0ff;font-weight:bold;">✓</span>
                 <span>Diátaxis Architecture &amp; Custom Technical Diagrams</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:var(--cyan);font-weight:bold;">✓</span>
+                <span style="color:#00f0ff;font-weight:bold;">✓</span>
                 <span>2 Iterative Review Rounds &amp; 60-Day Post-Delivery Support</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:var(--cyan);font-weight:bold;">⏱</span>
+                <span style="color:#00f0ff;font-weight:bold;">⏱</span>
                 <span><strong>Turnaround:</strong> 5–7 business days</span>
               </li>
             </ul>
           </div>
           <a href="contact.html" class="btn btn-outline"
-            style="width:100%;justify-content:center;padding:0.85rem 1.5rem;">Book Single Engagement →</a>
+            style="width:100%;justify-content:center;padding:0.85rem 1.25rem;border:1.5px solid #00d2ff;color:#00f0ff;box-shadow:0 0 15px rgba(0, 210, 255, 0.25);">Book Single Engagement →</a>
         </div>
 
-        <!-- Tier 2 Package: Monthly Sprint (MOST POPULAR) -->
-        <div class="package-card popular-card border-gold"
-          style="background:linear-gradient(145deg, #131d2e 0%, #080c16 100%);border:2px solid #fbbf24;border-radius:var(--radius-lg);padding:2.5rem 2rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;box-shadow:0 0 35px rgba(251,191,36,0.32), 0 12px 35px rgba(0,0,0,0.8);transform:scale(1.02);transition:var(--transition);">
+        <!-- Tier 2 Package: Fortnightly Sprint (VALUE FOR MONEY) -->
+        <div class="package-card border-cyan"
+          style="background:linear-gradient(155deg, rgba(4, 38, 26, 0.95) 0%, rgba(2, 18, 12, 0.98) 100%);border:2px solid #10b981;border-radius:var(--radius-lg);padding:2.5rem 1.75rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;box-shadow:0 0 35px rgba(16, 185, 129, 0.4), 0 12px 35px rgba(0,0,0,0.8);transform:scale(1.02);transition:var(--transition);">
           <div
-            style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);color:#000000;font-family:var(--font-mono);font-size:0.75rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 1rem;border-radius:9999px;box-shadow:0 2px 10px rgba(0,0,0,0.5);white-space:nowrap;">
+            style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg, #10b981 0%, #06b6d4 100%);color:#000000;font-family:var(--font-mono);font-size:0.75rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 1.1rem;border-radius:9999px;box-shadow:0 0 18px rgba(16, 185, 129, 0.65);white-space:nowrap;">
+            ★ VALUE FOR MONEY
+          </div>
+          <div>
+            <span
+              style="font-size:0.75rem;font-weight:800;letter-spacing:0.07em;margin-bottom:1rem;display:inline-block;background:rgba(16, 185, 129, 0.2);border:1px solid #10b981;color:#34d399;padding:0.35rem 0.85rem;border-radius:6px;">TIER
+              2 · 2-WEEK SPRINT</span>
+            <h3 style="font-size:1.55rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">Fortnightly Sprint</h3>
+            <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:1.5rem;line-height:1.6;">High-velocity
+              2-week sprint for fast-moving teams</p>
+
+            <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(16, 185, 129, 0.3);">
+              <div
+                style="font-family:var(--font-display);font-size:2.4rem;font-weight:900;color:#34d399;line-height:1;text-shadow:0 0 16px rgba(52, 211, 153, 0.45);">
+                $3,000</div>
+              <span
+                style="font-family:var(--font-mono);font-size:0.8rem;color:#6ee7b7;letter-spacing:0.06em;font-weight:700;">USD
+                / 2 WEEKS</span>
+            </div>
+
+            <ul
+              style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;font-size:0.9rem;color:var(--text-secondary);line-height:1.55;">
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#10b981;font-weight:bold;">✓</span>
+                <span><strong>1 Technical Deep Dive</strong> + <strong>1 Hands-On Workshop / Guide</strong></span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#10b981;font-weight:bold;">✓</span>
+                <span><strong>100% Runtime-Verified Code</strong> Repositories &amp; Sandboxes</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#10b981;font-weight:bold;">✓</span>
+                <span>Diátaxis Architecture, Custom Diagrams &amp; Benchmarks</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#10b981;font-weight:bold;">✓</span>
+                <span>Dedicated Async Channel (Slack/Discord) + Mid-Sprint Sync</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#10b981;font-weight:bold;">⏱</span>
+                <span><strong>Turnaround:</strong> 2-week dedicated sprint cadence</span>
+              </li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-commission"
+            style="width:100%;justify-content:center;padding:0.85rem 1.25rem;background:linear-gradient(135deg, #10b981 0%, #059669 100%);color:#ffffff;font-weight:800;border:none;border-radius:var(--radius);box-shadow:0 0 22px rgba(16, 185, 129, 0.5);display:flex;align-items:center;text-decoration:none;transition:var(--transition);">Start
+            Fortnightly Sprint →</a>
+        </div>
+
+        <!-- Tier 3 Package: Monthly Sprint (MOST POPULAR) -->
+        <div class="package-card popular-card border-gold"
+          style="background:linear-gradient(155deg, rgba(40, 30, 8, 0.95) 0%, rgba(15, 11, 2, 0.98) 100%);border:2px solid #fbbf24;border-radius:var(--radius-lg);padding:2.5rem 1.75rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;box-shadow:0 0 35px rgba(251, 191, 36, 0.4), 0 12px 35px rgba(0,0,0,0.8);transform:scale(1.02);transition:var(--transition);">
+          <div
+            style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);color:#000000;font-family:var(--font-mono);font-size:0.75rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 1.1rem;border-radius:9999px;box-shadow:0 0 18px rgba(251, 191, 36, 0.65);white-space:nowrap;">
             ★ MOST POPULAR
           </div>
           <div>
-            <span class="role-chip gold"
-              style="font-size:0.75rem;font-weight:700;letter-spacing:0.06em;margin-bottom:1rem;display:inline-block;">TIER
-              2 · MONTHLY CAPACITY</span>
-            <h3 style="font-size:1.65rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">Monthly Sprint
+            <span
+              style="font-size:0.75rem;font-weight:800;letter-spacing:0.07em;margin-bottom:1rem;display:inline-block;background:rgba(251, 191, 36, 0.2);border:1px solid #fbbf24;color:#fbbf24;padding:0.35rem 0.85rem;border-radius:6px;">TIER
+              3 · MONTHLY CAPACITY</span>
+            <h3 style="font-size:1.55rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">Monthly Sprint
             </h3>
-            <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;line-height:1.6;">A dedicated,
+            <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:1.5rem;line-height:1.6;">A dedicated,
               high-velocity month of technical execution</p>
 
-            <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(251,191,36,0.25);">
+            <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(251,191,36,0.3);">
               <div
-                style="font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:var(--gold);line-height:1;">
+                style="font-family:var(--font-display);font-size:2.4rem;font-weight:900;color:#fbbf24;line-height:1;text-shadow:0 0 16px rgba(251, 191, 36, 0.45);">
                 $5,000</div>
               <span
-                style="font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);letter-spacing:0.05em;">USD
+                style="font-family:var(--font-mono);font-size:0.8rem;color:#fde68a;letter-spacing:0.06em;font-weight:700;">USD
                 / MONTH</span>
             </div>
 
             <ul
-              style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;font-size:0.92rem;color:var(--text-secondary);line-height:1.6;">
+              style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;font-size:0.9rem;color:var(--text-secondary);line-height:1.55;">
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:var(--gold);font-weight:bold;">✓</span>
-                <span><strong>2 Long-Form Technical Deep Dives</strong> + <strong>1 Team Workshop / Tutorial
-                    Series</strong></span>
+                <span style="color:#fbbf24;font-weight:bold;">✓</span>
+                <span><strong>2 Long-Form Deep Dives</strong> + <strong>1 Team Workshop / Series</strong></span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:var(--gold);font-weight:bold;">✓</span>
+                <span style="color:#fbbf24;font-weight:bold;">✓</span>
                 <span>Full Diátaxis Documentation Suite (Tutorial, How-To, Reference, Explanation)</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:var(--gold);font-weight:bold;">✓</span>
-                <span>Production-Tested Code Repositories &amp; CI Sandbox Environments</span>
+                <span style="color:#fbbf24;font-weight:bold;">✓</span>
+                <span>Production-Tested Code Repositories &amp; CI Sandboxes</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:var(--gold);font-weight:bold;">✓</span>
-                <span>Dedicated Slack/Discord Async Channel &amp; Weekly Strategy Sync</span>
+                <span style="color:#fbbf24;font-weight:bold;">✓</span>
+                <span>Dedicated Slack/Discord Channel &amp; Weekly Strategy Sync</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:var(--gold);font-weight:bold;">✓</span>
-                <span>Continuous Iterative Revisions &amp; Priority Scheduling</span>
-              </li>
-              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:var(--gold);font-weight:bold;">⏱</span>
+                <span style="color:#fbbf24;font-weight:bold;">⏱</span>
                 <span><strong>Turnaround:</strong> 4-week dedicated sprint cadence</span>
               </li>
             </ul>
           </div>
           <a href="contact.html" class="btn btn-commission"
-            style="width:100%;justify-content:center;padding:0.85rem 1.5rem;box-shadow:0 0 20px rgba(251,191,36,0.45);">Start
+            style="width:100%;justify-content:center;padding:0.85rem 1.25rem;background:linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);color:#000000;font-weight:800;border:none;border-radius:var(--radius);box-shadow:0 0 22px rgba(251, 191, 36, 0.5);display:flex;align-items:center;text-decoration:none;transition:var(--transition);">Start
             Monthly Sprint →</a>
         </div>
 
-        <!-- Tier 3 Package: Enterprise Partner -->
+        <!-- Tier 4 Package: Enterprise Partner -->
         <div class="package-card border-violet"
-          style="background:var(--bg-card);border:2px solid rgba(165, 180, 252, 0.75);border-radius:var(--radius-lg);padding:2.5rem 2rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:var(--transition);box-shadow:0 0 22px rgba(165, 180, 252, 0.2), 0 10px 30px rgba(0,0,0,0.6);">
+          style="background:linear-gradient(155deg, rgba(32, 14, 52, 0.95) 0%, rgba(12, 5, 20, 0.98) 100%);border:2px solid #a855f7;border-radius:var(--radius-lg);padding:2.5rem 1.75rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:var(--transition);box-shadow:0 0 28px rgba(168, 85, 247, 0.35), 0 10px 30px rgba(0,0,0,0.7);">
           <div>
-            <span class="role-chip violet"
-              style="font-size:0.75rem;font-weight:700;letter-spacing:0.06em;margin-bottom:1rem;display:inline-block;">TIER
-              3 · ENTERPRISE RETAINER</span>
-            <h3 style="font-size:1.65rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">Enterprise
+            <span
+              style="font-size:0.75rem;font-weight:800;letter-spacing:0.07em;margin-bottom:1rem;display:inline-block;background:rgba(168, 85, 247, 0.2);border:1px solid #a855f7;color:#c084fc;padding:0.35rem 0.85rem;border-radius:6px;">TIER
+              4 · ENTERPRISE RETAINER</span>
+            <h3 style="font-size:1.55rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">Enterprise
               Partner</h3>
-            <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;line-height:1.6;">Strategic
-              quarterly advisory &amp; complete technical documentation leadership</p>
+            <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:1.5rem;line-height:1.6;">Strategic
+              quarterly advisory &amp; technical documentation leadership</p>
 
-            <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(165, 180, 252, 0.25);">
+            <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(168, 85, 247, 0.3);">
               <div
-                style="font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:var(--violet);line-height:1;">
+                style="font-family:var(--font-display);font-size:2.4rem;font-weight:900;color:#c084fc;line-height:1;text-shadow:0 0 16px rgba(192, 132, 252, 0.45);">
                 $12,000</div>
               <span
-                style="font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);letter-spacing:0.05em;">USD
+                style="font-family:var(--font-mono);font-size:0.8rem;color:#e9d5ff;letter-spacing:0.06em;font-weight:700;">USD
                 / QUARTER</span>
             </div>
 
             <ul
-              style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;font-size:0.92rem;color:var(--text-secondary);line-height:1.6;">
+              style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;font-size:0.9rem;color:var(--text-secondary);line-height:1.55;">
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:var(--violet);font-weight:bold;">✓</span>
-                <span><strong>Complete Documentation Engine</strong> &amp; Continuous Developer Guides</span>
+                <span style="color:#c084fc;font-weight:bold;">✓</span>
+                <span><strong>Complete Documentation Engine</strong> &amp; Developer Guides</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:var(--violet);font-weight:bold;">✓</span>
-                <span><strong>Monthly Executive Advisory</strong> &amp; Emerging Technology Radar Briefings</span>
+                <span style="color:#c084fc;font-weight:bold;">✓</span>
+                <span><strong>Monthly Executive Advisory</strong> &amp; Tech Radar Briefings</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:var(--violet);font-weight:bold;">✓</span>
+                <span style="color:#c084fc;font-weight:bold;">✓</span>
                 <span>Unlimited Engineering Workshops &amp; Team Masterclasses</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:var(--violet);font-weight:bold;">✓</span>
-                <span>Direct Lead Byline / Ghostwriting &amp; Industry Positioning</span>
-              </li>
-              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:var(--violet);font-weight:bold;">✓</span>
+                <span style="color:#c084fc;font-weight:bold;">✓</span>
                 <span>Guaranteed &lt;4-hour async response SLA on private channel</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:var(--violet);font-weight:bold;">⏱</span>
+                <span style="color:#c084fc;font-weight:bold;">⏱</span>
                 <span><strong>Turnaround:</strong> Quarterly Retainer (3 Months)</span>
               </li>
             </ul>
           </div>
           <a href="contact.html" class="btn btn-outline"
-            style="width:100%;justify-content:center;padding:0.85rem 1.5rem;">Engage as Partner →</a>
+            style="width:100%;justify-content:center;padding:0.85rem 1.25rem;border:1.5px solid #a855f7;color:#c084fc;box-shadow:0 0 15px rgba(168, 85, 247, 0.25);">Engage as Partner →</a>
         </div>
 
       </div>
@@ -4242,7 +4291,7 @@
 
         <span class="role-chip gold"
           style="font-size:0.85rem;font-weight:800;letter-spacing:0.1em;padding:0.45rem 1.35rem;margin-bottom:1.35rem;display:inline-block;box-shadow:0 0 15px rgba(251,191,36,0.3);">
-          ★ GLOBAL EQUITY, STARTUPS &amp; CUSTOM TIERS — TIERS 1–4
+          ★ GLOBAL EQUITY, STARTUPS &amp; CUSTOM TIERS — TIERS 1–5
         </span>
 
         <h2
@@ -4273,12 +4322,12 @@
             </p>
           </div>
 
-          <!-- Startup Discount Column -->
+          <!-- Tier 4: Startup Discount Column -->
           <div
             style="background:rgba(0, 0, 0, 0.55);border:1px solid rgba(251, 191, 36, 0.35);border-radius:var(--radius);padding:1.75rem;box-shadow:inset 0 1px 0 rgba(255,255,255,0.05);display:flex;flex-direction:column;">
             <h3
               style="color:var(--gold);font-size:1.25rem;font-weight:800;margin-bottom:0.85rem;display:flex;align-items:center;gap:0.6rem;">
-              <span>🚀</span> Early-Stage AI &amp; Quantum Startups
+              <span>🚀</span> Tier 4: Early-Stage Startups
             </h3>
             <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.7;margin-bottom:0.85rem;">
               I empower Pre-Seed and Seed-Stage engineering teams building frontier Generative AI Infrastructure or
@@ -4289,12 +4338,12 @@
             </p>
           </div>
 
-          <!-- Tier 4: Custom Pricing Column -->
+          <!-- Tier 5: Custom Pricing Column -->
           <div
             style="background:rgba(0, 0, 0, 0.55);border:1px solid rgba(251, 191, 36, 0.35);border-radius:var(--radius);padding:1.75rem;box-shadow:inset 0 1px 0 rgba(255,255,255,0.05);display:flex;flex-direction:column;">
             <h3
               style="color:var(--gold);font-size:1.25rem;font-weight:800;margin-bottom:0.85rem;display:flex;align-items:center;gap:0.6rem;">
-              <span>🤝</span> Tier 4: Custom Pricing
+              <span>🤝</span> Tier 5: Custom Pricing
             </h3>
             <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.7;margin-bottom:0.85rem;">
               Tailored custom pricing and special accommodations are available for <strong>non-profits, educational
@@ -4309,10 +4358,10 @@
         <!-- Contact Email & Custom Quote Inquiries -->
         <div style="border-top:1px solid rgba(251, 191, 36, 0.25);padding-top:2.25rem;margin-top:1rem;">
           <p style="font-size:1.18rem;color:var(--text-primary);font-weight:700;margin-bottom:1.35rem;line-height:1.6;">
-            Need a country parity quote, startup enablement, or Tier 4 custom pricing?
+            Need a country parity quote, startup enablement, or Tier 5 custom pricing?
           </p>
           <div style="display:flex;gap:1.25rem;justify-content:center;align-items:center;flex-wrap:wrap;">
-            <a href="mailto:thomascherickal@gmail.com?subject=Custom%20Country%20Parity%20%2F%20Startup%20%2F%20Tier%204%20Quote%20Inquiry"
+            <a href="mailto:thomascherickal@gmail.com?subject=Custom%20Country%20Parity%20%2F%20Startup%20%2F%20Tier%205%20Quote%20Inquiry"
               class="btn btn-commission"
               style="font-size:1.08rem;padding:0.95rem 2.2rem;box-shadow:0 0 24px rgba(251, 191, 36, 0.5);">
               📧 Email for Custom Quote →
@@ -4347,7 +4396,7 @@
               style="color:var(--cyan);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               🎓 GenAI Training &amp; Masterclasses</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$2,000 – $4,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">$2,000 – $4,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4360,7 +4409,7 @@
               style="color:var(--violet);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               ⚛️ Quantum Computing Masterclasses</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$2,000 – $4,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#c084fc;text-shadow:0 0 12px rgba(192,132,252,0.35);">$2,000 – $4,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4373,7 +4422,7 @@
               style="color:var(--gold);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               🤖 AI Agent Guides &amp; Architecture</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$1,500 – $3,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">$1,500 – $3,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4386,7 +4435,7 @@
               style="color:var(--cyan);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               🔬 Technical Whitepapers &amp; Deep Dives</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$800 – $1,200 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">$800 – $1,200 USD
               <span style="font-size:0.75rem;font-weight:400;color:var(--text-muted);">/ 1k words</span>
             </div>
             <div
@@ -4400,7 +4449,7 @@
               style="color:var(--gold);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               📚 Developer Courseware &amp; Tutorials</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$1,500 – $3,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">$1,500 – $3,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4413,7 +4462,7 @@
               style="color:var(--violet);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               ⚛️ Quantum SDK Developer Content</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$1,500 – $3,500 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#c084fc;text-shadow:0 0 12px rgba(192,132,252,0.35);">$1,500 – $3,500 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4426,7 +4475,7 @@
               style="color:var(--violet);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               🧠 Quantum AI &amp; QML Whitepapers</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$2,000 – $4,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#c084fc;text-shadow:0 0 12px rgba(192,132,252,0.35);">$2,000 – $4,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4439,7 +4488,7 @@
               style="color:var(--gold);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               📦 Local LLM Deployment How-Tos</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$1,500 – $3,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">$1,500 – $3,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4452,7 +4501,7 @@
               style="color:var(--cyan);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               🧠 GenAI Developer Docs &amp; RFCs</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$1,500 – $3,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">$1,500 – $3,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4465,7 +4514,7 @@
               style="color:var(--gold);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               💼 Monthly Developer Content Retainer</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$6,000 – $8,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">$6,000 – $8,000 USD
               <span style="font-size:0.75rem;font-weight:400;color:var(--text-muted);">/ mo</span>
             </div>
             <div
@@ -4479,7 +4528,7 @@
               style="color:var(--violet);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               🔐 Post-Quantum Cryptography Whitepapers</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$2,000 – $4,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#c084fc;text-shadow:0 0 12px rgba(192,132,252,0.35);">$2,000 – $4,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4492,7 +4541,7 @@
               style="color:var(--gold);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               🦀 Rust for AI Systems &amp; How-Tos</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:var(--text-primary);">$1,500 – $3,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">$1,500 – $3,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">

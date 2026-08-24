@@ -5,8 +5,8 @@
       "@type": "WebPage",
       "@id": "https://thomascherickal.github.io/pricing.html#webpage",
       "url": "https://thomascherickal.github.io/pricing.html",
-      "name": "Services Pricing & Purchasing Power Parity Index \u2014 Thomas Cherickal",
-      "description": "Transparent milestone pricing for emerging technologies education, training in GenAI & Quantum Computing, AI agent orchestration, and quantum developer content adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%), Tier 4 Custom Pricing (Non-Profits, Educational Institutions, Startups, Underprivileged Clients).",
+      "name": "Services Pricing & Purchasing Power Parity Index — Thomas Cherickal",
+      "description": "Transparent milestone pricing for 4 strategic packages (Single Engagement, Fortnightly Sprint, Monthly Sprint, Enterprise Partner) and 12 specialized service offerings across Generative AI, Quantum Computing, and Systems Architecture adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%), Tier 4 Startups (50% Off), Tier 5 Custom Pricing (Non-Profits, Educational Institutions, Underprivileged Clients).",
       "isPartOf": {
         "@id": "https://thomascherickal.github.io/#website"
       },
@@ -39,13 +39,53 @@
     {
       "@type": "OfferCatalog",
       "@id": "https://thomascherickal.github.io/pricing.html#offercatalog",
-      "name": "Services Pricing & Purchasing Power Parity Index \u2014 Thomas Cherickal",
-      "description": "Transparent milestone pricing for 12 service offerings: emerging technologies education, training in GenAI & Quantum Computing, AI agent orchestration, post-quantum cryptography, Rust for AI, and quantum developer content adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%), Tier 4 Custom Pricing (Non-Profits, Educational Institutions, Startups, Underprivileged Clients).",
+      "name": "Services Pricing & Purchasing Power Parity Index — Thomas Cherickal",
+      "description": "Transparent milestone pricing for 4 strategic engagement packages and 12 service offerings: emerging technologies education, training in GenAI & Quantum Computing, AI agent orchestration, post-quantum cryptography, Rust for AI, and quantum developer content adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%), Tier 4 Startups (50% Off), Tier 5 Custom Pricing (Non-Profits, Educational Institutions, Underprivileged Clients).",
       "url": "https://thomascherickal.github.io/pricing.html",
       "offeredBy": {
         "@id": "https://thomascherickal.github.io/#person"
       },
       "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Single Engagement (Tier 1)",
+          "description": "One high-impact technical deep dive (2,000–5,000 words) or intensive virtual workshop with 100% verified code.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "2000.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Fortnightly Sprint (Tier 2 · Value for Money)",
+          "description": "2-week dedicated sprint: 1 long-form technical deep dive + 1 hands-on workshop/how-to guide with runtime-verified code and async channel access.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "3000.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Monthly Sprint (Tier 3 · Most Popular)",
+          "description": "Dedicated monthly engineering capacity: 2 long-form technical deep dives, 1 workshop/tutorial series, full Diataxis docs, and weekly syncs.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "5000.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Enterprise & Embedded Partner (Tier 4)",
+          "description": "Quarterly strategic advisory anchor: complete documentation engine, monthly executive briefings, unlimited workshops, and <4h async SLA.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "12000.00",
+            "priceCurrency": "USD"
+          }
+        },
         {
           "@type": "Offer",
           "name": "Training in Generative AI",
