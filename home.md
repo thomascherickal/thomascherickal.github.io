@@ -18,7 +18,7 @@
 ---
 
 ## Bio
-With a post-graduate degree in Computer Science from Loyola College and an established career as an online Emerging Technologies Educator, Consultant, Mentor, Trainer, Executive Advisory, Technical Documentation Automation, and Domain Expert in Generative AI, Quantum Computing, and Quantum-AI Synergy, I sit directly in the intersection of frontier emerging technology domains. I author authoritative Diátaxis technical documentation, design training programs, provide executive advisory, and produce deep dives where every Python, Golang, or Rust script and Quantum circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. 
+With a post-graduate degree in Computer Science from Loyola College and an established career as an online Emerging Technologies Educator, Consultant, Mentor, Trainer, Executive Advisory, Technical Documentation Automation, and Domain Expert in Generative AI, Quantum Computing, and Quantum-AI Synergy, I sit directly in the intersection of frontier emerging technology domains. I author authoritative Diátaxis technical documentation, design training programs, provide executive advisory, and produce deep dives where every Python, Golang, or Rust script and Quantum circuit is run and verified before publication. 500+ published long-form technical articles across 20+ platforms since 2020. 
 
 > **Important Positioning Note**: I operate as an educator, consultant, mentor, trainer, advisory, technical documentation automation specialist, and domain expert in Generative AI, Quantum Computing, and Quantum-AI Synergy—I do not develop custom production codebases or software applications for hire. I deliver world-class documentation, training courses, advisory roadmaps, and working, tested code artifacts.
 
@@ -35,7 +35,7 @@ With a post-graduate degree in Computer Science from Loyola College and an estab
 | Metric | Value |
 | :--- | :--- |
 | **Articles Published** | 500+ |
-| **Platforms** | 10+ |
+| **Platforms** | 20+ |
 | **Emerging Tech Education** | 2020— |
 | **Featured Deep Dives** | 40 |
 
