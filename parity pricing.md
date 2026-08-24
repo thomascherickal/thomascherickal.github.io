@@ -1,3 +1,13 @@
+# Purchasing Power Parity (PPP) Country Tiers & Custom Pricing Index
+
+### Pricing Tier Structure:
+- **Tier 1 — Developed Nations (100% Price)**: Standard pricing for developed economies.
+- **Tier 2 — Developing Nations (75% Price / 25% Discount)**: Middle-income and emerging economies.
+- **Tier 3 — Least Developed Nations (50% Price / 50% Discount)**: Developing and low-income economies.
+- **Tier 4 — Custom Pricing Tier**: Custom pricing and special accommodations for non-profits, educational institutions, early-stage startups, under-privileged institutions, and underprivileged clients. Contact `thomascherickal@gmail.com` or submit a brief on the contact page.
+
+---
+
 | #   | Country                          | Tier                     | Price |
 |-----|----------------------------------|--------------------------|-------|
 | 1   | United States                    | Tier 1 — Developed       | 100%  |
@@ -198,3 +208,8 @@
 | 196 | Uganda                           | Tier 3 — Least Developed | 50%   |
 | 197 | Yemen                            | Tier 3 — Least Developed | 50%   |
 | 198 | Zambia                           | Tier 3 — Least Developed | 50%   |
+
+---
+
+### Tier 4 — Custom Pricing & Underprivileged Client Inquiries:
+For non-profit organizations, educational institutions, universities, early-stage startups, under-privileged institutions, or underprivileged individual clients, custom pricing arrangements and flexible milestone terms are available upon request. Contact `thomascherickal@gmail.com` or submit a brief at `https://thomascherickal.github.io/contact.html`.
