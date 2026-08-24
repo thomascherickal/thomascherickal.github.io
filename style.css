@@ -1439,37 +1439,43 @@ body.portfolio-page .section-sub {
   align-items: center;
   gap: 0.85rem;
   padding: 0.72rem 1.6rem;
-  background: rgba(15, 23, 42, 0.82);
-  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  background: rgba(15, 23, 42, 0.85);
+  border: 1.5px solid rgba(245, 158, 11, 0.35);
   border-radius: 9999px;
   font-size: 1.14rem;
   font-weight: 700;
   color: var(--text-primary);
   text-decoration: none;
   letter-spacing: 0.01em;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
   white-space: nowrap;
   flex-shrink: 0;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45), 0 0 12px rgba(245, 158, 11, 0.12);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
-.platform-wordmark:hover,
-.platform-wordmark:focus,
-.platform-wordmark:focus-visible {
-  color: #ffffff;
-  background: rgba(30, 41, 59, 0.95);
-  border-color: rgba(56, 189, 248, 0.6);
-  box-shadow: 0 0 24px rgba(56, 189, 248, 0.4), 0 6px 20px rgba(0, 0, 0, 0.6);
-  transform: translateY(-3px) scale(1.04);
+.platform-wordmark:hover {
+  color: #ffffff !important;
+  background: rgba(245, 158, 11, 0.14) !important;
+  border-color: #f59e0b !important;
+  box-shadow: 0 0 28px rgba(245, 158, 11, 0.6), 0 0 50px rgba(245, 158, 11, 0.28), 0 8px 24px rgba(0, 0, 0, 0.65) !important;
+  transform: translateY(-4px) scale(1.06) !important;
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.7);
   outline: none;
 }
 
+.platform-wordmark:focus,
 .platform-wordmark:focus-visible {
-  outline: 2px solid var(--cyan);
-  outline-offset: 4px;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.32), rgba(251, 191, 36, 0.2)) !important;
+  border-color: #ffd700 !important;
+  box-shadow: 0 0 0 3.5px rgba(245, 158, 11, 0.5), 0 0 35px rgba(245, 158, 11, 0.9), 0 0 75px rgba(251, 191, 36, 0.6), 0 8px 32px rgba(0, 0, 0, 0.85) !important;
+  transform: translateY(-5px) scale(1.09) !important;
+  outline: 2px solid #ffd700 !important;
+  outline-offset: 4px !important;
+  text-shadow: 0 0 14px rgba(255, 215, 0, 0.95), 0 0 28px rgba(245, 158, 11, 0.75) !important;
 }
 
 .wordmark-svg {
@@ -1479,43 +1485,30 @@ body.portfolio-page .section-sub {
   display: inline-block;
   vertical-align: middle;
   border-radius: 5px;
-  transition: transform 0.25s ease, filter 0.25s ease;
+  transition: transform 0.28s ease, filter 0.28s ease;
 }
 
 .platform-wordmark:hover .wordmark-svg {
-  transform: scale(1.2);
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+  transform: scale(1.22);
+  filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.85));
 }
 
-/* Platform Hover Accent Glows */
-.wordmark-hackernoon:hover { border-color: #00eb47 !important; box-shadow: 0 0 24px rgba(0, 235, 71, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
-.wordmark-medium:hover { border-color: #ffffff !important; box-shadow: 0 0 24px rgba(255, 255, 255, 0.4), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
-.wordmark-substack:hover { border-color: #ff6719 !important; box-shadow: 0 0 24px rgba(255, 103, 25, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
-.wordmark-hashnode:hover { border-color: #2962ff !important; box-shadow: 0 0 24px rgba(41, 98, 255, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
-.wordmark-wordpress:hover { border-color: #21759b !important; box-shadow: 0 0 24px rgba(33, 117, 155, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
-.wordmark-linkedin:hover { border-color: #0a66c2 !important; box-shadow: 0 0 24px rgba(10, 102, 194, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
-.wordmark-reddit:hover { border-color: #ff4500 !important; box-shadow: 0 0 24px rgba(255, 69, 0, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
-.wordmark-gumroad:hover { border-color: #ff90e8 !important; box-shadow: 0 0 24px rgba(255, 144, 232, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
-.wordmark-topmate:hover { border-color: #f43f5e !important; box-shadow: 0 0 24px rgba(244, 63, 94, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
-.wordmark-muckrack:hover { border-color: #00a3e0 !important; box-shadow: 0 0 24px rgba(0, 163, 224, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
-.wordmark-quora:hover { border-color: #b92b27 !important; box-shadow: 0 0 24px rgba(185, 43, 39, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
-.wordmark-bluesky:hover { border-color: #0285ff !important; box-shadow: 0 0 24px rgba(2, 133, 255, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
-.wordmark-mastodon:hover { border-color: #6364ff !important; box-shadow: 0 0 24px rgba(99, 100, 255, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
-.wordmark-tumblr:hover { border-color: #38bdf8 !important; box-shadow: 0 0 24px rgba(56, 189, 248, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
-.wordmark-differ:hover { border-color: #f59e0b !important; box-shadow: 0 0 24px rgba(245, 158, 11, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
-.wordmark-patreon:hover { border-color: #ff424d !important; box-shadow: 0 0 24px rgba(255, 66, 77, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
-.wordmark-hubpages:hover { border-color: #10b981 !important; box-shadow: 0 0 24px rgba(16, 185, 129, 0.45), 0 6px 20px rgba(0, 0, 0, 0.6) !important; color: #ffffff !important; }
+.platform-wordmark:focus .wordmark-svg,
+.platform-wordmark:focus-visible .wordmark-svg {
+  transform: scale(1.28) !important;
+  filter: drop-shadow(0 0 12px rgba(255, 215, 0, 1)) drop-shadow(0 0 22px rgba(245, 158, 11, 0.8)) !important;
+}
 
 .platform-wordmark.wordmark-more {
   color: var(--gold);
-  border-color: rgba(245, 158, 11, 0.35);
-  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.5);
+  background: rgba(245, 158, 11, 0.12);
   font-weight: 800;
 }
 
 .platform-wordmark.wordmark-more:hover {
   border-color: var(--gold) !important;
-  box-shadow: 0 0 24px rgba(245, 158, 11, 0.5), 0 6px 20px rgba(0, 0, 0, 0.6) !important;
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.7), 0 0 55px rgba(245, 158, 11, 0.35), 0 8px 24px rgba(0, 0, 0, 0.65) !important;
   color: #ffffff !important;
 }
 
