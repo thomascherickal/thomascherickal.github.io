@@ -634,95 +634,220 @@
       justify-content: center;
     }
 
-    /* btn-primary: Professional Slate-Blue Button */
-    .btn-primary {
-      background: linear-gradient(180deg, #0284c7 0%, #0369a1 100%);
-      color: #ffffff;
-      font-weight: 600;
-      border: 4px solid #38bdf8;
-      box-shadow: 0 0 20px rgba(56, 189, 248, 0.7), 0 0 8px #38bdf8, 0 4px 14px rgba(2, 132, 199, 0.4);
-      text-shadow: none;
+    /* btn-primary / btn-glow-cyan: Solid Electric Cyan Glowing Button with 4px Border */
+    .btn-primary,
+    .btn-glow-cyan {
+      background: #0284c7 !important;
+      color: #ffffff !important;
+      font-weight: 800 !important;
+      border: 4px solid #00f0ff !important;
+      border-radius: var(--radius) !important;
+      box-shadow: 0 0 28px rgba(0, 240, 255, 0.8), 0 0 10px #00f0ff, 0 4px 15px rgba(2, 132, 199, 0.6) !important;
+      text-shadow: none !important;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      text-transform: none !important;
+      white-space: normal !important;
+      text-align: center !important;
+      line-height: 1.35 !important;
+      box-sizing: border-box !important;
+      max-width: 100% !important;
     }
 
-    .btn-primary:hover {
-      background: linear-gradient(180deg, #0369a1 0%, #075985 100%);
-      color: #ffffff;
-      border-color: #7dd3fc;
-      box-shadow: 0 0 30px rgba(125, 211, 252, 0.95), 0 0 12px #38bdf8, 0 6px 20px rgba(2, 132, 199, 0.5);
+    .btn-primary:hover,
+    .btn-glow-cyan:hover {
+      background: #0369a1 !important;
+      color: #ffffff !important;
+      border-color: #7dd3fc !important;
+      box-shadow: 0 0 38px rgba(0, 240, 255, 1), 0 0 16px #00f0ff, 0 6px 22px rgba(2, 132, 199, 0.7) !important;
       transform: translateY(-2px);
     }
 
-    /* btn-outline: Sleek Semi-Transparent Corporate Button */
-    .btn-outline {
-      background: rgba(255, 255, 255, 0.04);
-      color: #f8fafc;
-      border: 4px solid #38bdf8;
-      font-weight: 600;
-      box-shadow: 0 0 20px rgba(56, 189, 248, 0.65), 0 0 8px rgba(56, 189, 248, 0.8), inset 0 0 10px rgba(56, 189, 248, 0.2);
-      text-shadow: none;
+    /* btn-glow-emerald: Solid Vivid Emerald Glowing Button with 4px Border */
+    .btn-glow-emerald {
+      background: #059669 !important;
+      color: #ffffff !important;
+      font-weight: 800 !important;
+      border: 4px solid #34d399 !important;
+      border-radius: var(--radius) !important;
+      box-shadow: 0 0 28px rgba(52, 211, 153, 0.85), 0 0 10px #34d399, 0 4px 15px rgba(5, 150, 105, 0.6) !important;
+      text-shadow: none !important;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      text-transform: none !important;
+      white-space: normal !important;
+      text-align: center !important;
+      line-height: 1.35 !important;
+      box-sizing: border-box !important;
+      max-width: 100% !important;
     }
 
-    .btn-outline:hover {
-      background: rgba(245, 158, 11, 0.15);
-      border-color: #fbbf24;
-      color: #ffffff;
-      box-shadow: 0 0 30px rgba(251, 191, 36, 0.95), 0 0 12px #fbbf24;
+    .btn-glow-emerald:hover {
+      background: #047857 !important;
+      color: #ffffff !important;
+      border-color: #6ee7b7 !important;
+      box-shadow: 0 0 38px rgba(52, 211, 153, 1), 0 0 16px #34d399, 0 6px 22px rgba(5, 150, 105, 0.7) !important;
       transform: translateY(-2px);
     }
 
-    /* btn-gold: Refined Amber Gold Button */
-    .btn-gold {
-      background: linear-gradient(180deg, #d97706 0%, #b45309 100%);
-      color: #ffffff;
-      font-weight: 600;
-      border: 4px solid #fbbf24;
-      box-shadow: 0 0 20px rgba(251, 191, 36, 0.75), 0 0 8px #fbbf24, 0 4px 14px rgba(180, 83, 9, 0.4);
-      text-shadow: none;
+    /* btn-gold / btn-glow-gold: Solid Vivid Amber Gold Glowing Button with 4px Border */
+    .btn-gold,
+    .btn-glow-gold {
+      background: #d97706 !important;
+      color: #ffffff !important;
+      font-weight: 800 !important;
+      border: 4px solid #fbbf24 !important;
+      border-radius: var(--radius) !important;
+      box-shadow: 0 0 28px rgba(251, 191, 36, 0.85), 0 0 10px #fbbf24, 0 4px 15px rgba(217, 119, 6, 0.6) !important;
+      text-shadow: none !important;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      text-transform: none !important;
+      white-space: normal !important;
+      text-align: center !important;
+      line-height: 1.35 !important;
+      box-sizing: border-box !important;
+      max-width: 100% !important;
     }
 
-    .btn-gold:hover {
-      background: linear-gradient(180deg, #b45309 0%, #92400e 100%);
-      color: #ffffff;
-      border-color: #fde047;
-      box-shadow: 0 0 32px rgba(253, 224, 71, 0.95), 0 0 14px #fbbf24, 0 6px 20px rgba(180, 83, 9, 0.5);
+    .btn-gold:hover,
+    .btn-glow-gold:hover {
+      background: #b45309 !important;
+      color: #ffffff !important;
+      border-color: #fde047 !important;
+      box-shadow: 0 0 38px rgba(251, 191, 36, 1), 0 0 16px #fbbf24, 0 6px 22px rgba(217, 119, 6, 0.7) !important;
       transform: translateY(-2px);
     }
 
-    /* btn-commission: Executive Dark Slate & Gold Button */
+    /* btn-glow-violet: Solid Royal Purple Glowing Button with 4px Border */
+    .btn-glow-violet {
+      background: #7e22ce !important;
+      color: #ffffff !important;
+      font-weight: 800 !important;
+      border: 4px solid #c084fc !important;
+      border-radius: var(--radius) !important;
+      box-shadow: 0 0 28px rgba(192, 132, 252, 0.85), 0 0 10px #c084fc, 0 4px 15px rgba(126, 34, 206, 0.6) !important;
+      text-shadow: none !important;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      text-transform: none !important;
+      white-space: normal !important;
+      text-align: center !important;
+      line-height: 1.35 !important;
+      box-sizing: border-box !important;
+      max-width: 100% !important;
+    }
+
+    .btn-glow-violet:hover {
+      background: #6b21a8 !important;
+      color: #ffffff !important;
+      border-color: #e9d5ff !important;
+      box-shadow: 0 0 38px rgba(192, 132, 252, 1), 0 0 16px #c084fc, 0 6px 22px rgba(126, 34, 206, 0.7) !important;
+      transform: translateY(-2px);
+    }
+
+    /* btn-commission: Solid Deep Amber & Gold Button with 4px Border */
     .btn-commission {
-      background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
-      color: #f59e0b;
-      font-weight: 700;
-      border: 4px solid #f59e0b;
-      box-shadow: 0 0 20px rgba(245, 158, 11, 0.7), 0 0 8px #f59e0b, 0 4px 14px rgba(0, 0, 0, 0.6);
-      text-shadow: none;
+      background: #b45309 !important;
+      color: #ffffff !important;
+      font-weight: 800 !important;
+      border: 4px solid #fbbf24 !important;
+      border-radius: var(--radius) !important;
+      box-shadow: 0 0 28px rgba(251, 191, 36, 0.85), 0 0 10px #fbbf24, 0 4px 15px rgba(180, 83, 9, 0.6) !important;
+      text-shadow: none !important;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      text-transform: none !important;
+      white-space: normal !important;
+      text-align: center !important;
+      line-height: 1.35 !important;
+      box-sizing: border-box !important;
+      max-width: 100% !important;
     }
 
     .btn-commission:hover {
-      background: linear-gradient(180deg, #334155 0%, #1e293b 100%);
-      color: #fbbf24;
-      border-color: #fbbf24;
-      box-shadow: 0 0 32px rgba(251, 191, 36, 0.95), 0 0 14px #fbbf24, 0 6px 20px rgba(245, 158, 11, 0.4);
+      background: #92400e !important;
+      color: #ffffff !important;
+      border-color: #fde047 !important;
+      box-shadow: 0 0 38px rgba(251, 191, 36, 1), 0 0 16px #fbbf24, 0 6px 22px rgba(180, 83, 9, 0.7) !important;
       transform: translateY(-2px);
     }
 
-    /* btn-newsletter: Executive Indigo Button */
+    /* btn-outline: Solid Deep Slate with Cyan 4px Border & Glow */
+    .btn-outline {
+      background: #082f49 !important;
+      color: #ffffff !important;
+      border: 4px solid #00f0ff !important;
+      border-radius: var(--radius) !important;
+      font-weight: 800 !important;
+      box-shadow: 0 0 28px rgba(0, 240, 255, 0.8), 0 0 10px #00f0ff, 0 4px 15px rgba(8, 47, 73, 0.6) !important;
+      text-shadow: none !important;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      text-transform: none !important;
+      white-space: normal !important;
+      text-align: center !important;
+      line-height: 1.35 !important;
+      box-sizing: border-box !important;
+      max-width: 100% !important;
+    }
+
+    .btn-outline:hover {
+      background: #0c4a6e !important;
+      border-color: #7dd3fc !important;
+      color: #ffffff !important;
+      box-shadow: 0 0 38px rgba(0, 240, 255, 1), 0 0 16px #7dd3fc, 0 6px 22px rgba(12, 74, 110, 0.7) !important;
+      transform: translateY(-2px);
+    }
+
+    /* btn-newsletter: Solid Indigo Glowing Button with 4px Border */
     .btn-newsletter {
-      background: linear-gradient(180deg, #4f46e5 0%, #4338ca 100%);
-      color: #ffffff;
-      border: 4px solid #818cf8;
-      font-weight: 600;
-      box-shadow: 0 0 20px rgba(129, 140, 248, 0.7), 0 0 8px #818cf8, 0 4px 14px rgba(79, 70, 229, 0.4);
-      text-shadow: none;
+      background: #4f46e5 !important;
+      color: #ffffff !important;
+      border: 4px solid #818cf8 !important;
+      border-radius: var(--radius) !important;
+      font-weight: 800 !important;
+      box-shadow: 0 0 28px rgba(129, 140, 248, 0.8), 0 0 10px #818cf8, 0 4px 15px rgba(79, 70, 229, 0.5) !important;
+      text-shadow: none !important;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      text-transform: none !important;
+      white-space: normal !important;
+      text-align: center !important;
+      line-height: 1.35 !important;
+      box-sizing: border-box !important;
+      max-width: 100% !important;
     }
 
     .btn-newsletter:hover {
-      background: linear-gradient(180deg, #4338ca 0%, #3730a3 100%);
-      color: #ffffff;
-      border-color: #c7d2fe;
-      box-shadow: 0 0 32px rgba(199, 210, 254, 0.95), 0 0 14px #818cf8, 0 6px 20px rgba(79, 70, 229, 0.5);
+      background: #4338ca !important;
+      color: #ffffff !important;
+      border-color: #c7d2fe !important;
+      box-shadow: 0 0 38px rgba(199, 210, 254, 1), 0 0 16px #818cf8, 0 6px 22px rgba(79, 70, 229, 0.6) !important;
       transform: translateY(-2px);
     }
+
 
     section {
       padding: 6rem clamp(1.5rem, 8vw, 8rem);
@@ -4123,8 +4248,9 @@
               </li>
             </ul>
           </div>
-          <a href="contact.html" class="btn btn-outline"
-            style="width:100%;justify-content:center;padding:0.85rem 1.25rem;border:1.5px solid #00d2ff;color:#00f0ff;box-shadow:0 0 15px rgba(0, 210, 255, 0.25);">Book Single Engagement →</a>
+          <a href="contact.html" class="btn btn-glow-cyan"
+            style="width:100%;justify-content:center;padding:0.75rem 0.85rem;font-size:clamp(0.8rem, 0.95vw, 0.88rem);font-weight:800;letter-spacing:0.01em;border:4px solid #00d2ff;">Book
+            a One-Time Engagement →</a>
         </div>
 
         <!-- Tier 2 Package: Fortnightly Sprint (VALUE FOR MONEY) -->
@@ -4138,7 +4264,8 @@
             <span
               style="font-size:0.75rem;font-weight:800;letter-spacing:0.07em;margin-bottom:1rem;display:inline-block;background:rgba(16, 185, 129, 0.2);border:1px solid #10b981;color:#34d399;padding:0.35rem 0.85rem;border-radius:6px;">TIER
               2 · 2-WEEK SPRINT</span>
-            <h3 style="font-size:1.55rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">Fortnightly Sprint</h3>
+            <h3 style="font-size:1.55rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">Fortnightly
+              Sprint</h3>
             <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:1.5rem;line-height:1.6;">High-velocity
               2-week sprint for fast-moving teams</p>
 
@@ -4175,9 +4302,9 @@
               </li>
             </ul>
           </div>
-          <a href="contact.html" class="btn btn-commission"
-            style="width:100%;justify-content:center;padding:0.85rem 1.25rem;background:linear-gradient(135deg, #10b981 0%, #059669 100%);color:#ffffff;font-weight:800;border:none;border-radius:var(--radius);box-shadow:0 0 22px rgba(16, 185, 129, 0.5);display:flex;align-items:center;text-decoration:none;transition:var(--transition);">Start
-            Fortnightly Sprint →</a>
+          <a href="contact.html" class="btn btn-glow-emerald"
+            style="width:100%;justify-content:center;padding:0.75rem 0.85rem;font-size:clamp(0.8rem, 0.95vw, 0.88rem);font-weight:800;letter-spacing:0.01em;border:4px solid #34d399;">Start
+            a Fortnightly Sprint →</a>
         </div>
 
         <!-- Tier 3 Package: Monthly Sprint (MOST POPULAR) -->
@@ -4229,8 +4356,9 @@
               </li>
             </ul>
           </div>
-          <a href="contact.html" class="btn btn-commission"
-            style="width:100%;justify-content:center;padding:0.85rem 1.25rem;background:linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);color:#000000;font-weight:800;border:none;border-radius:var(--radius);box-shadow:0 0 22px rgba(251, 191, 36, 0.5);display:flex;align-items:center;text-decoration:none;transition:var(--transition);">Start
+          <a href="contact.html" class="btn btn-glow-gold"
+            style="width:100%;justify-content:center;padding:0.75rem 0.85rem;font-size:clamp(0.8rem, 0.95vw, 0.88rem);font-weight:800;letter-spacing:0.01em;border:4px solid #fbbf24;">Start
+            a Full
             Monthly Sprint →</a>
         </div>
 
@@ -4279,8 +4407,9 @@
               </li>
             </ul>
           </div>
-          <a href="contact.html" class="btn btn-outline"
-            style="width:100%;justify-content:center;padding:0.85rem 1.25rem;border:1.5px solid #a855f7;color:#c084fc;box-shadow:0 0 15px rgba(168, 85, 247, 0.25);">Engage as Partner →</a>
+          <a href="contact.html" class="btn btn-glow-violet"
+            style="width:100%;justify-content:center;padding:0.75rem 0.85rem;font-size:clamp(0.8rem, 0.95vw, 0.88rem);font-weight:800;letter-spacing:0.01em;border:4px solid #c084fc;">Engage
+            as Enterprise Partner →</a>
         </div>
 
       </div>
@@ -4362,14 +4491,16 @@
           </p>
           <div style="display:flex;gap:1.25rem;justify-content:center;align-items:center;flex-wrap:wrap;">
             <a href="mailto:thomascherickal@gmail.com?subject=Custom%20Country%20Parity%20%2F%20Startup%20%2F%20Tier%205%20Quote%20Inquiry"
-              class="btn btn-commission"
-              style="font-size:1.08rem;padding:0.95rem 2.2rem;box-shadow:0 0 24px rgba(251, 191, 36, 0.5);">
+              class="btn btn-glow-gold"
+              style="font-size:clamp(0.85rem, 1.1vw, 0.95rem);padding:0.8rem 1.6rem;font-weight:800;border:4px solid #fbbf24;">
               📧 Email for Custom Quote →
             </a>
-            <a href="contact.html" class="btn btn-outline" style="font-size:1.08rem;padding:0.95rem 2.2rem;">
+            <a href="contact.html" class="btn btn-glow-cyan"
+              style="font-size:clamp(0.85rem, 1.1vw, 0.95rem);padding:0.8rem 1.6rem;font-weight:800;border:4px solid #00f0ff;">
               📝 Submit Intake Form →
             </a>
           </div>
+
         </div>
 
       </div>
@@ -4396,7 +4527,8 @@
               style="color:var(--cyan);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               🎓 GenAI Training &amp; Masterclasses</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">$2,000 – $4,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
+              $2,000 – $4,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4409,7 +4541,8 @@
               style="color:var(--violet);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               ⚛️ Quantum Computing Masterclasses</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#c084fc;text-shadow:0 0 12px rgba(192,132,252,0.35);">$2,000 – $4,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#c084fc;text-shadow:0 0 12px rgba(192,132,252,0.35);">
+              $2,000 – $4,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4422,7 +4555,8 @@
               style="color:var(--gold);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               🤖 AI Agent Guides &amp; Architecture</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">$1,500 – $3,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
+              $1,500 – $3,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4435,7 +4569,8 @@
               style="color:var(--cyan);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               🔬 Technical Whitepapers &amp; Deep Dives</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">$800 – $1,200 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
+              $800 – $1,200 USD
               <span style="font-size:0.75rem;font-weight:400;color:var(--text-muted);">/ 1k words</span>
             </div>
             <div
@@ -4449,7 +4584,8 @@
               style="color:var(--gold);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               📚 Developer Courseware &amp; Tutorials</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">$1,500 – $3,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
+              $1,500 – $3,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4462,7 +4598,8 @@
               style="color:var(--violet);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               ⚛️ Quantum SDK Developer Content</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#c084fc;text-shadow:0 0 12px rgba(192,132,252,0.35);">$1,500 – $3,500 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#c084fc;text-shadow:0 0 12px rgba(192,132,252,0.35);">
+              $1,500 – $3,500 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4475,7 +4612,8 @@
               style="color:var(--violet);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               🧠 Quantum AI &amp; QML Whitepapers</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#c084fc;text-shadow:0 0 12px rgba(192,132,252,0.35);">$2,000 – $4,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#c084fc;text-shadow:0 0 12px rgba(192,132,252,0.35);">
+              $2,000 – $4,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4488,7 +4626,8 @@
               style="color:var(--gold);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               📦 Local LLM Deployment How-Tos</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">$1,500 – $3,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
+              $1,500 – $3,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4501,7 +4640,8 @@
               style="color:var(--cyan);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               🧠 GenAI Developer Docs &amp; RFCs</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">$1,500 – $3,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
+              $1,500 – $3,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4514,7 +4654,8 @@
               style="color:var(--gold);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               💼 Monthly Developer Content Retainer</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">$6,000 – $8,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
+              $6,000 – $8,000 USD
               <span style="font-size:0.75rem;font-weight:400;color:var(--text-muted);">/ mo</span>
             </div>
             <div
@@ -4528,7 +4669,8 @@
               style="color:var(--violet);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               🔐 Post-Quantum Cryptography Whitepapers</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#c084fc;text-shadow:0 0 12px rgba(192,132,252,0.35);">$2,000 – $4,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#c084fc;text-shadow:0 0 12px rgba(192,132,252,0.35);">
+              $2,000 – $4,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4541,7 +4683,8 @@
               style="color:var(--gold);font-weight:700;font-size:1.02rem;min-height:2.75rem;display:flex;align-items:center;justify-content:center;">
               🦀 Rust for AI Systems &amp; How-Tos</div>
             <div class="price-amount"
-              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">$1,500 – $3,000 USD
+              style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
+              $1,500 – $3,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
