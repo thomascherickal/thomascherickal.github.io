@@ -1302,51 +1302,6 @@ body.portfolio-page .section-sub {
   width: 100%;
 }
 
-/* SECONDARY PROOF STRIP: PLATFORMS WORDMARKS */
-.platforms-proof-strip {
-  background: rgba(13, 19, 33, 0.65);
-  border-bottom: 1px solid var(--border);
-  padding: 2rem 1.5rem;
-  text-align: center;
-  position: relative;
-}
-
-.platforms-proof-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.platforms-proof-label {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 1.4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.platforms-proof-label::before,
-.platforms-proof-label::after {
-  content: '';
-  flex: 1;
-  max-width: 120px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--border));
-}
-
-.platforms-proof-label::after {
-  background: linear-gradient(90deg, var(--border), transparent);
-}
-
-.platforms-wordmarks-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 /* SECONDARY PROOF STRIP: PLATFORMS WORDMARKS MARQUEE */
 .platforms-proof-strip {
   background: rgba(13, 19, 33, 0.65);
@@ -1406,8 +1361,8 @@ body.portfolio-page .section-sub {
   align-items: center;
   gap: 1.35rem;
   width: max-content;
-  animation: scroll-platforms-marquee 35s linear infinite;
-  -webkit-animation: scroll-platforms-marquee 35s linear infinite;
+  animation: scroll-platforms-marquee 42s linear infinite;
+  -webkit-animation: scroll-platforms-marquee 42s linear infinite;
   will-change: transform;
 }
 
