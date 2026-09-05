@@ -1,6 +1,6 @@
 # Thomas Cherickal — Emerging Technologies Educator, Consultant, Mentor, Trainer, Executive Advisory, Technical Documentation Automation, and Domain Expert in Generative AI, Quantum Computing, and Quantum-AI Synergy
 
-> **B2B Technical Credential**: Author of 500+ published technical articles across 20+ platforms. Specializing in Training in Generative AI and Quantum Computing, AI agent orchestration, and verified technical deep dives.
+> **B2B Technical Credential**: Author of 500+ published technical articles across 10+ platforms. Specializing in Training in Generative AI and Quantum Computing, AI agent orchestration, and verified technical deep dives.
 
 ---
 

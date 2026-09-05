@@ -3808,7 +3808,7 @@ footer {
           "https://thomascherickal.medium.com",
           "https://thomascherickal.hashnode.dev",
           "https://hackernoon.com/u/thomascherickal",
-          "https://thomascherickal.substack.com",
+          "https://thesingularitypoint.substack.com",
           "https://www.deep-ml.com/profile/thomascherickal",
           "https://hackerrank.com/profile/thomascherickal",
           "https://www.hackerearth.com/@thomascherickal",
@@ -4145,6 +4145,39 @@ footer {
     // Contact Form Handler & Dual-Mode Dispatch
     const contactForm = document.getElementById('contact-form-el');
     const formStatus = document.getElementById('form-status');
+
+    // Auto-select project type dropdown if ?service= is provided in URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceParam = urlParams.get('service');
+    if (serviceParam) {
+      const selectEl = document.getElementById('contact-project-type');
+      if (selectEl) {
+        const serviceMap = {
+          'post-quantum-cryptography': 'Post-Quantum Cryptography',
+          'rust-for-ai': 'Rust for High-Performance AI Systems',
+          'generative-ai-training': 'Training in Generative AI',
+          'quantum-computing-training': 'Training in Quantum Computing',
+          'ai-agents-orchestration': 'AI Agent Orchestration',
+          'technical-deep-dives': 'Technical Deep Dives',
+          'developer-education': 'Developer Education',
+          'quantum-developer-content': 'Quantum Developer Content',
+          'quantum-ai': 'Quantum AI & Quantum ML',
+          'local-llm-deployment': 'Local LLM Deployment',
+          'generative-ai-developer-content': 'Generative AI Developer Content',
+          'monthly-content-retainer': 'Monthly Content Retainer'
+        };
+        const key = serviceParam.toLowerCase();
+        const matched = serviceMap[key];
+        if (matched) {
+          for (let opt of selectEl.options) {
+            if (opt.value.includes(matched) || opt.text.includes(matched)) {
+              opt.selected = true;
+              break;
+            }
+          }
+        }
+      }
+    }
 
     function formatContactEmailData(formData) {
       const name = formData.get('name') || '';

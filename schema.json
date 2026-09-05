@@ -67,7 +67,7 @@
         "https://thomascherickal.medium.com",
         "https://thomascherickal.hashnode.dev",
         "https://hackernoon.com/u/thomascherickal",
-        "https://thomascherickal.substack.com",
+        "https://thesingularitypoint.substack.com",
         "https://www.deep-ml.com/profile/thomascherickal",
         "https://hackerrank.com/profile/thomascherickal",
         "https://www.hackerearth.com/@thomascherickal",
@@ -86,51 +86,200 @@
         "https://thomascherickal.gumroad.com",
         "https://topmate.io/thomascherickal",
         "https://thesingularitypoint.blogspot.com/",
-        "https://dev.to/thomascherickal",
         "https://thomascherickal.kit.com/",
-        "https://muckrack.com/thomas-cherickal"
+        "https://muckrack.com/thomas-cherickal",
+        "https://www.printables.com/@ThomasCherickal",
+        "https://www.thingiverse.com/thomascherickal/designs",
+        "https://poly.pizza/u/ThomasCherickal",
+        "https://sketchfab.com/thomascherickal",
+        "https://www.behance.net/thomascherickal",
+        "https://dribbble.com/thomascherickal",
+        "https://www.artstation.com/thomascherickal",
+        "https://www.fiverr.com/thomascherickal",
+        "https://www.upwork.com/freelancers/~0134f0b213b29c1589"
       ]
     },
     {
       "@type": "OfferCatalog",
-      "@id": "https://thomascherickal.github.io/#servicecatalog",
-      "name": "Generative AI Training Tiers & Consulting Services",
+      "@id": "https://thomascherickal.github.io/pricing.html#offercatalog",
+      "name": "Services Pricing & Purchasing Power Parity Index — Thomas Cherickal",
+      "description": "Transparent milestone pricing for 4 strategic engagement packages and 12 service offerings: emerging technologies education, training in GenAI & Quantum Computing, AI agent orchestration, post-quantum cryptography, Rust for AI, and quantum developer content adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%), Tier 4 Startups (50% Off), Tier 5 Custom Pricing (Non-Profits, Educational Institutions, Underprivileged Clients).",
+      "url": "https://thomascherickal.github.io/pricing.html",
+      "offeredBy": {
+        "@id": "https://thomascherickal.github.io/#person"
+      },
       "itemListElement": [
         {
           "@type": "Offer",
-          "name": "Tier 4 \u2014 Board & CXO: Emerging Tech Horizon Briefing",
-          "description": "2 hours live remote briefing for one leadership team covering Emerging Tech Horizon Briefing & AI-First strategy, Quantum Computing & post-quantum crypto risk assessment, AGI trajectory & ASI predictions roadmap, and How to Survive & Thrive in the AI-first world.",
-          "price": "100000.00",
-          "priceCurrency": "INR",
-          "url": "https://thomascherickal.github.io/#training",
-          "category": "Executive Briefing"
+          "name": "Single Engagement (Tier 1)",
+          "description": "One high-impact technical deep dive (2,000–5,000 words) or intensive virtual workshop with 100% verified code.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "2000.00",
+            "priceCurrency": "USD"
+          }
         },
         {
           "@type": "Offer",
-          "name": "Tier 3 \u2014 Executive AI Programme",
-          "description": "2 hours live remote session for 8\u201310 leaders covering GenAI strategy & executive leadership alignment, hands-on CodeWiki, Claude Pro & Gemini apps, ending in a deployed live workflow per participant, with practical AI tools governance & ROI tracking.",
-          "price": "50000.00",
-          "priceCurrency": "INR",
-          "url": "https://thomascherickal.github.io/#training",
-          "category": "Corporate Training"
+          "name": "Fortnightly Sprint (Tier 2 · Value for Money)",
+          "description": "2-week dedicated sprint: 1 long-form technical deep dive + 1 hands-on workshop/how-to guide with runtime-verified code and async channel access.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "3000.00",
+            "priceCurrency": "USD"
+          }
         },
         {
           "@type": "Offer",
-          "name": "Tier 2 \u2014 Engineering Team Training",
-          "description": "2 hours live remote training for engineering teams covering agentic AI development & multi-agent architectures, local LLM deployment (Ollama, LM Studio, llama.cpp), Claude Code terminal integration & TDD workflows, and AI-assisted coding & testing workflows.",
-          "price": "40000.00",
-          "priceCurrency": "INR",
-          "url": "https://thomascherickal.github.io/#training",
-          "category": "Engineering Workshop"
+          "name": "Monthly Sprint (Tier 3 · Most Popular)",
+          "description": "Dedicated monthly engineering capacity: 2 long-form technical deep dives, 1 workshop/tutorial series, full Diataxis docs, and weekly syncs.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "5000.00",
+            "priceCurrency": "USD"
+          }
         },
         {
           "@type": "Offer",
-          "name": "Tier 1 \u2014 Individual 1:1 Mentoring & Coaching",
-          "description": "2 hours live 1:1 session via Topmate covering personalized Generative AI & SLM/LLM training, Claude Code & AI-assisted development setup, local LLM configuration on your hardware, and direct 1-on-1 Q&A and hands-on guidance.",
-          "price": "20000.00",
-          "priceCurrency": "INR",
-          "url": "https://topmate.io/thomascherickal",
-          "category": "1:1 Mentoring"
+          "name": "Enterprise & Embedded Partner (Tier 4)",
+          "description": "Quarterly strategic advisory anchor: complete documentation engine, monthly executive briefings, unlimited workshops, and <4h async SLA.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "12000.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Training in Generative AI",
+          "description": "Interactive live virtual training, custom corporate workshops, LLM & agent architecture bootcamps, prompt engineering frameworks, and hands-on lab sessions.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "500.00",
+            "maxPrice": "1000.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Training in Quantum Computing",
+          "description": "Interactive live virtual training, custom team workshops, Qiskit & PennyLane labs, Quantum Algorithm (VQE/QAOA) masterclasses, and executive quantum readiness bootcamps.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "500.00",
+            "maxPrice": "1000.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "AI Agent Orchestration (Training & Content)",
+          "description": "Interactive training, masterclasses, and technical content on multi-agent architectures, tool-calling loops, agent swarms, and agentic workflows (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent).",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "400.00",
+            "maxPrice": "800.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Technical Deep Dives (Content)",
+          "description": "Long-form technical explainers (2,000–8,000 words) featuring original research, architecture breakdown, and verified benchmarks.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "300.00",
+            "maxPrice": "600.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Developer Education (Training & Content)",
+          "description": "Multi-part tutorial series, structured learning paths, and workshop curricula with executable notebooks per module.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "350.00",
+            "maxPrice": "750.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Quantum Developer Content",
+          "description": "IBM Qiskit and PennyLane tutorials, QML explainers, simulator circuit benchmarks, and post-quantum risk briefs.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "400.00",
+            "maxPrice": "850.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Quantum AI & QML (Training & Content)",
+          "description": "Workshops, tutorials, and developer guides for Quantum Neural Networks, Quantum Kernel methods, VQE/QAOA algorithms, and hybrid PyTorch/PennyLane QML.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "450.00",
+            "maxPrice": "900.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Local LLM Deployment (Training & Guides)",
+          "description": "Interactive workshops, step-by-step setup guides, and technical tutorials on quantization, local inference, vLLM, Ollama, GGUF optimization, and private LLM serving.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "350.00",
+            "maxPrice": "700.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Generative AI Dev Content",
+          "description": "RAG pipelines, agentic workflows, prompt engineering frameworks, SLM fine-tuning guides, and developer docs.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "350.00",
+            "maxPrice": "800.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Monthly Content Retainer",
+          "description": "Dedicated monthly sprint capacity for devtools and AI infrastructure companies: priority turnaround, guaranteed content volume, and byline management.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "500.00",
+            "maxPrice": "1000.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Post-Quantum Cryptography & Quantum Risk (Briefings & Training)",
+          "description": "Enterprise quantum readiness audits, threat modeling against RSA/ECC cryptographic infrastructure, NIST post-quantum migration roadmaps (ML-KEM, ML-DSA), and executive briefings.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "400.00",
+            "maxPrice": "900.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Rust for AI & High-Performance Systems (Training & Guides)",
+          "description": "Workshops, production codebases, and deep technical guides for Rust AI inference, Candle & Burn ML tensor engines, PyO3 Python acceleration, and memory-safe Tokio microservices.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "350.00",
+            "maxPrice": "750.00",
+            "priceCurrency": "USD"
+          }
         }
       ]
     },
@@ -341,7 +490,7 @@
         "https://thomascherickal.medium.com",
         "https://thomascherickal.hashnode.dev",
         "https://hackernoon.com/u/thomascherickal",
-        "https://thomascherickal.substack.com",
+        "https://thesingularitypoint.substack.com",
         "https://www.deep-ml.com/profile/thomascherickal",
         "https://hackerrank.com/profile/thomascherickal",
         "https://www.hackerearth.com/@thomascherickal",
@@ -360,7 +509,6 @@
         "https://thomascherickal.gumroad.com",
         "https://topmate.io/thomascherickal",
         "https://thesingularitypoint.blogspot.com/",
-        "https://dev.to/thomascherickal",
         "https://thomascherickal.kit.com/",
         "https://muckrack.com/thomas-cherickal"
       ]
@@ -371,7 +519,7 @@
       "name": "RECRUITED",
       "url": "https://patreon.com/thomascherickal",
       "image": "https://thomascherickal.github.io/assets/recruited-cover.jpg",
-      "alternateName": "RECRUITED: The AI-Powered Career Playbook for Professionals Who Refuse to Be Left Behind",
+      "alternateName": "RECRUITED — The Inbound Recruiter Blueprint: How to Make Recruiters Chase You",
       "description": "A comprehensive transformation system showing professionals how to use frontier AI tools \u2014 ChatGPT, Claude, Gemini, Gemini Notebook, Perplexity \u2014 to accelerate their job search, rebuild their brand, and land roles that actually match their ambition. Real frameworks. Real tools. Real results.",
       "author": {
         "@id": "https://thomascherickal.github.io/#person"

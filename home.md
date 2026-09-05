@@ -138,7 +138,7 @@ With a post-graduate degree in Computer Science, extensive technical training ex
 ## Books & Long-Form
 
 ### RECRUITED — The Inbound Recruiter Blueprint: How to Make Recruiters Chase You
-*(Pre-Order Status — $20.00 USD pre-order ($40.00 USD after release) · Free with an active Patreon subscription)*
+*(Pre-Order Status — $20.00 USD pre-release until December 31, 2026 ($40.00 USD after release) · Free with an active Patreon subscription)*
 
 ![RECRUITED Book Cover](assets/recruited-cover.jpg)
 
@@ -188,14 +188,10 @@ How to understand and build emerging technologies.
 - [🔷 Hashnode (thomascherickal.hashnode.dev)](https://thomascherickal.hashnode.dev)
 - [📬 Substack (thesingularitypoint.substack.com)](https://thesingularitypoint.substack.com)
 - [🟧 Blogger (thesingularitypoint.blogspot.com)](https://thesingularitypoint.blogspot.com/)
-- [👩‍💻 DEV (dev.to/thomascherickal)](https://dev.to/thomascherickal)
 - [❓ Quora (thomascherickal.quora.com)](https://thomascherickal.quora.com)
 - [🤖 Reddit (reddit.com/user/thomascherickal1)](https://reddit.com/user/thomascherickal1)
 - [📰 Muck Rack (muckrack.com/thomas-cherickal)](https://muckrack.com/thomas-cherickal)
-- [🦋 Bluesky (bsky.app/profile/thomascherickal.bsky.social)](https://bsky.app/profile/thomascherickal.bsky.social)
 - [🐘 Mastodon (mastodon.social/@thomascherickal)](https://mastodon.social/@thomascherickal)
-- [📱 Tumblr (thomascherickal.tumblr.com)](https://thomascherickal.tumblr.com)
-- [📝 Differ.blog (differ.blog/@thomascherickal)](https://differ.blog/@thomascherickal)
 - [📧 Kit (thomascherickal.kit.com)](https://thomascherickal.kit.com)
 - [🧪 Exercism (exercism.org/profiles/thomascherickal)](https://exercism.org/profiles/thomascherickal)
 - [🏅 CodersRank (profile.codersrank.io/user/thomascherickal)](https://profile.codersrank.io/user/thomascherickal/)
