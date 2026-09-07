@@ -1,11 +1,11 @@
-# Thomas Cherickal — Emerging Technologies Educator, Consultant, Mentor, Trainer, Executive Advisory, Technical Documentation Automation, and Domain Expert in Generative AI, Quantum Computing, and Quantum-AI Synergy
+# Thomas Cherickal — Emerging Technologies Educator and Domain Expert in Generative AI, Quantum Computing, and Quantum-AI Synergy
 
 **Location**: Chennai, India (Remote — Worldwide)  
 **Brand**: The Digital Futurist  
 **Email**: [thomascherickal@gmail.com](mailto:thomascherickal@gmail.com)  
 
-**Emerging Technologies Educator, Consultant, Mentor, Trainer, Executive Advisory, Technical Documentation Automation, and Domain Expert in Generative AI, Quantum Computing, and Quantum-AI Synergy — Generative AI Systems & Quantum Systems**  
-*Training in Generative AI and Quantum Computing, Diátaxis documentation architecture, technical deep dives, executive advisory, and developer education — AI-assisted, human-directed, and runtime-verified with working code in Python, Golang, and Rust.*
+**Emerging Technologies Educator and Domain Expert in Generative AI, Quantum Computing, and Quantum-AI Synergy**
+
 
 **Core Capabilities**:
 - `Emerging Technology Education & Corporate Training`
@@ -142,8 +142,10 @@ I use frontier AI tools for research, synthesis, exploration, ideation, and edit
 4. [⚛️ How Quantum Computers Threaten Bitcoin](https://hackernoon.com/how-quantum-computers-threaten-bitcoin-and-the-entire-internet-simply-explained) — Post-quantum cryptography threat analysis and NIST candidate standards. *(Published: Dec 7, 2025 · 3,200 words)*
 5. [🧠 Running Local LLMs Guide](https://hackernoon.com/how-to-run-your-own-local-llm-2026-edition-version-1) — Technical deployment guide across Ollama, LM Studio, llama.cpp, and GGUF quantization. *(Published: Mar 9, 2026 · 3,800 words)*
 6. [🧠 Ultimate LLM Benchmark Comparison](https://hackernoon.com/google-gemini-vs-anthropic-claude-vs-openai-chatgpt-vs-xai-grok-the-ultimate-comparison) — Comparative benchmark analysis of Gemini, Claude, ChatGPT, and Grok. *(Published: Mar 12, 2026 · 5,000 words)*
-7. [🦾 The OpenClaw Saga](https://hackernoon.com/the-openclaw-saga-how-the-last-two-weeks-changed-the-agentic-ai-world-forever) — Fast-turnaround ecosystem deep dive into open-source multi-agent frameworks. *(Published: Mar 2, 2026 · 3,600 words)*
-8. [🦾 Hermes Agent vs OpenClaw](https://hackernoon.com/hermes-agent-vs-openclaw-which-ai-agent-framework-wins-in-2026) — Comparative architecture study of state graphs and multi-step reasoning loops. *(Published: May 13, 2026 · 4,000 words)*
+7. [🧠 The Hidden Geometry of Generative AI](https://thomascherickal.com/2026/07/15/the-hidden-geometry-of-generative-ai-how-manifold-theory-explains-the-mysteries-nobody-explained-to-you/) — Solving 7 mysteries of deep learning via differential geometry and manifold theory. *(Published: Jul 15, 2026 · 9,100 words)*
+8. [🧠 Nobody Knows How LLMs Work Unless You Look as Dynamical Systems](https://thomascherickal.com/2026/07/31/nobody-knows-how-llms-work-unless-you-look-at-them-as-non-linear-dynamical-systems/) — Mathematical analysis of emergence, grokking, and attractor dynamics in transformers. *(Published: Jul 31, 2026 · 4,500 words)*
+9. [🦾 The OpenClaw Saga](https://hackernoon.com/the-openclaw-saga-how-the-last-two-weeks-changed-the-agentic-ai-world-forever) — Fast-turnaround ecosystem deep dive into open-source multi-agent frameworks. *(Published: Mar 2, 2026 · 3,600 words)*
+10. [🦾 Hermes Agent vs OpenClaw](https://hackernoon.com/hermes-agent-vs-openclaw-which-ai-agent-framework-wins-in-2026) — Comparative architecture study of state graphs, GRPO RL, and multi-step reasoning loops. *(Published: May 13, 2026 · 4,000 words)*
 
 ---
 
@@ -222,5 +224,5 @@ How to understand and build emerging technologies.
 - [📅 Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)
 
 ---
-*© 2026 Thomas Cherickal · The Digital Futurist · Emerging Technologies Educator, Consultant, Mentor, Trainer, Executive Advisory, Technical Documentation Automation, and Domain Expert in Generative AI, Quantum Computing, and Quantum-AI Synergy*  
+*© 2026 Thomas Cherickal · The Digital Futurist · Emerging Technologies Educator and Domain Expert in Generative AI, Quantum Computing, and Quantum-AI Synergy*  
 *📍 Chennai, India 🇮🇳*
