@@ -5,7 +5,7 @@
 **Email**: [thomascherickal@gmail.com](mailto:thomascherickal@gmail.com)  
 
 **Emerging Technologies Educator, Consultant, Mentor, Trainer, Executive Advisory, Technical Documentation Automation, and Domain Expert in Generative AI, Quantum Computing, and Quantum-AI Synergy — Generative AI Systems & Quantum Systems**  
-*Training in Generative AI and Quantum Computing, Diátaxis documentation architecture, technical deep dives, executive advisory, and developer education — 100% human-written, 100% verified with working code in Python, Golang, and Rust.*
+*Training in Generative AI and Quantum Computing, Diátaxis documentation architecture, technical deep dives, executive advisory, and developer education — AI-assisted, human-directed, and runtime-verified with working code in Python, Golang, and Rust.*
 
 **Core Capabilities**:
 - `Emerging Technology Education & Corporate Training`
@@ -90,7 +90,7 @@ All technical documentation deliverables follow the Diátaxis framework structur
 - **🔬 Verification & Execution**: Jupyter, pytest, cargo test, Qiskit Aer Simulator, Docker Sandboxes, Google Cloud Platform
 - **🗄️ Databases & Vector Stores**: Vector Databases, pgvector, Qdrant, LanceDB, SQL, MySQL, SQLite
 - **📐 Documentation Frameworks**: Diátaxis, Markdown/MDX, OpenAPI / Swagger JSON Specs, Jupyter Notebooks (`.ipynb`)
-- **✍️ 100% Human-Written**: Responsible AI Use, Human-Authored Prose, Runtime Code Verification, Sourced Claims Discovery, Zero-Hallucination Standard
+- **🛡️ Editorial & Verification Standards**: Human Direction, Runtime Verification, Primary Source Research, Responsible AI Use
 
 ---
 
@@ -102,23 +102,35 @@ With a post-graduate degree in Computer Science, extensive technical training ex
 
 ---
 
-## How This Actually Gets Made — 100% Human-Written & 100% Verified
+## How This Actually Gets Made — AI-Assisted, Human-Directed, Runtime-Verified
 
-100% human-written prose and 100% verified in runtime environments before publishing. AI used solely for sourced claims and statistics, never for writing itself.
+I use frontier AI tools for research, synthesis, exploration, ideation, and editorial acceleration — while applying human judgment, technical expertise, and independent verification to the final work. Credibility comes from expertise, evidence, judgment, and verification — not from whether a particular sentence was typed by a human or generated with AI assistance.
 
-### 📊 AI for Sourced Claims & Statistics
-1. Sourced claim discovery and paper retrieval across arXiv, docs, and changelogs
-2. Benchmark data aggregation and statistical cross-referencing
-3. Exploring primary documentation archives, APIs, and release notes
-4. Identifying relevant technical specifications and standards
-5. Citation discovery and primary source link verification
+### 1. Research
+1. Primary arXiv research papers, preprints, and academic conference publications
+2. Official hardware architecture specifications, whitepapers, and engineering manuals
+3. Direct inspection of SDK codebases, official documentation, and API changelogs
+4. Reproducible benchmark suites, datasets, and historical performance metrics
 
-### ✍️ 100% Human-Written & Verified
-1. 100% human-crafted prose, narrative flow, and pedagogical structure
-2. Executing every code sample against live APIs, SDKs, and local environments
-3. Running every quantum circuit in Qiskit simulators or real quantum hardware
-4. Hand-verifying all statistics, benchmark charts, and mathematical claims
-5. Deep domain editorial insight that eliminates generic AI slop entirely
+### 2. AI-Assisted Exploration
+1. Rapid literature discovery, paper synthesis, and documentation cross-referencing
+2. Exploring code patterns, API surfaces, and architectural alternatives
+3. Brainstorming pedagogical structures and alternative explanatory analogies
+4. Stress-testing outlines and identifying technical questions worth investigating
+
+### 3. Human Direction
+1. Strategic topic selection, conceptual framing, and audience calibration
+2. Technical judgment and architectural nuance that AI tools cannot provide
+3. Critical skepticism, fact-checking, and narrative prioritization
+4. Domain intuition built across 500+ published technical deep dives
+5. Single-point intellectual responsibility for every deliverable
+
+### 4. Verification
+1. Executing Python, Golang, and Rust code in isolated sandbox environments
+2. Testing quantum circuits in Qiskit Aer simulators or on real IBM Quantum hardware
+3. Validating REST, gRPC, and WebSocket endpoints against live servers
+4. Tracing comparative benchmark claims directly to verifiable primary sources
+5. Unit-testing and linting with pytest, cargo test, and containerized CI suites
 
 ---
 
