@@ -698,6 +698,24 @@ input:disabled,
   transform: translateY(-2px);
 }
 
+/* btn-linkedin: Executive Slate & LinkedIn Blue Button */
+.btn-linkedin {
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  color: #38bdf8;
+  font-weight: 700;
+  border: 4px solid #0a66c2;
+  box-shadow: 0 0 20px rgba(10, 102, 194, 0.7), 0 0 8px #0a66c2, 0 4px 14px rgba(0, 0, 0, 0.6);
+  text-shadow: none;
+}
+
+.btn-linkedin:hover {
+  background: linear-gradient(180deg, #1e3a5f 0%, #0f2744 100%);
+  color: #ffffff;
+  border-color: #38bdf8;
+  box-shadow: 0 0 32px rgba(56, 189, 248, 0.95), 0 0 14px #0a66c2, 0 6px 20px rgba(10, 102, 194, 0.4);
+  transform: translateY(-2px);
+}
+
 /* btn-newsletter: Executive Indigo Button */
 .btn-newsletter {
   background: linear-gradient(180deg, #4f46e5 0%, #4338ca 100%);
@@ -4394,10 +4412,16 @@ footer {
           <h2 style="font-size:2rem;font-weight:900;color:var(--text-primary);margin:0.5rem 0 0.75rem 0;">
             Have an Unanswered <span class="accent-gold">Question?</span>
           </h2>
-          <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6;margin-bottom:2rem;">
+          <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6;margin-bottom:1.25rem;">
             Submit your question directly to me via email. You will receive a detailed response within 24
             hours.
           </p>
+          <div style="margin-bottom:2rem;text-align:center;">
+            <a href="https://linkedin.com/in/thomascherickal" target="_blank" rel="noopener" class="btn btn-linkedin"
+              style="padding:0.75rem 1.75rem;font-size:0.92rem;display:inline-flex;align-items:center;gap:0.5rem;">
+              Free LinkedIn Consultation ↗
+            </a>
+          </div>
 
           <form action="https://formsubmit.co/ajax/thomascherickal@gmail.com" method="POST" id="faq-contact-form"
             class="contact-form" style="text-align:left;">

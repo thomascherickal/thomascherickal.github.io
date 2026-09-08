@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ways to Collaborate — Thomas Cherickal</title>
+  <meta name="description"
+    content="Explore 12 flexible collaboration models across live technical training, Diátaxis documentation, content retainers, developer education, and editorial workflows with Thomas Cherickal." />
+  <meta name="author" content="Thomas Cherickal" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://thomascherickal.github.io/collaboration.html" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thomascherickal.github.io/collaboration.html" />
+  <meta property="og:site_name" content="Thomas Cherickal — The Digital Futurist" />
+  <meta property="og:title" content="Ways to Collaborate — Thomas Cherickal" />
+  <meta property="og:description"
+    content="Explore 12 flexible collaboration models across live technical training, Diátaxis documentation, content retainers, developer education, and editorial workflows." />
+  <meta property="og:image" content="https://thomascherickal.github.io/assets/og-card.png" />
+  <meta property="og:image:alt" content="Thomas Cherickal — Ways to Collaborate" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@thomascherickal" />
+  <meta name="twitter:creator" content="@thomascherickal" />
+  <meta name="twitter:title" content="Ways to Collaborate — Thomas Cherickal" />
+  <meta name="twitter:description"
+    content="Explore 12 flexible collaboration models across live technical training, Diátaxis documentation, content retainers, developer education, and editorial workflows." />
+  <meta name="twitter:image" content="https://thomascherickal.github.io/assets/og-card.png" />
+
+  <!-- Favicon & Icons -->
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=05ed78d8112e" />
+
+  <style>
+    :root {
+      --bg-0: #020408;
+      --bg-1: #060912;
+      --bg-2: #0b0f19;
+      --bg-card: linear-gradient(145deg, #0c111d 0%, #04060c 100%);
+      --bg-card-hover: linear-gradient(145deg, #131a2b 0%, #070a14 100%);
+      --cyan: #38bdf8;
+      --cyan-dim: #0284c7;
+      --gold: #fbbf24;
+      --gold-dim: #d97706;
+      --violet: #a5b4fc;
+      --green: #34d399;
+      --red: #fb7185;
+      --text-primary: #ffffff;
+      --text-secondary: #e2e8f0;
+      --text-muted: #94a3b8;
+      --border: rgba(56, 189, 248, 0.45);
+      --border-gold: rgba(251, 191, 36, 0.55);
+      --glow-cyan: 0 0 24px rgba(56, 189, 248, 0.35);
+      --glow-gold: 0 0 24px rgba(251, 191, 36, 0.35);
+      --glow-violet: 0 0 24px rgba(165, 180, 252, 0.35);
+      --radius: 10px;
+      --radius-lg: 14px;
+      --font-display: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-body: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+    }
+
+    /* Page-specific styling enhancements */
+    .metric-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      max-width: 1200px;
+      margin: 2.5rem auto 3.5rem;
+      padding: 0 1rem;
+    }
+
+    .metric-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-gold);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .metric-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+      box-shadow: var(--glow-gold);
+    }
+
+    .metric-num {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1.1;
+      margin-bottom: 0.35rem;
+    }
+
+    .metric-label {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      font-family: var(--font-mono);
+      letter-spacing: 0.02em;
+    }
+
+    .collab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.5rem;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .collab-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    }
+
+    .collab-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .border-gold,
+    .collab-card.border-gold {
+      border: 1.5px solid var(--border-gold);
+    }
+
+    .border-gold:hover,
+    .collab-card.border-gold:hover {
+      border-color: var(--gold);
+      box-shadow: var(--glow-gold);
+    }
+
+    .border-cyan,
+    .collab-card.border-cyan {
+      border: 1.5px solid var(--border);
+    }
+
+    .border-cyan:hover,
+    .collab-card.border-cyan:hover {
+      border-color: var(--cyan);
+      box-shadow: var(--glow-cyan);
+    }
+
+    .border-violet,
+    .collab-card.border-violet {
+      border: 1.5px solid rgba(165, 180, 252, 0.45);
+    }
+
+    .border-violet:hover,
+    .collab-card.border-violet:hover {
+      border-color: var(--violet);
+      box-shadow: var(--glow-violet);
+    }
+
+    .border-red,
+    .collab-card.border-red {
+      border: 1.5px solid rgba(251, 113, 133, 0.45);
+    }
+
+    .border-red:hover,
+    .collab-card.border-red:hover {
+      border-color: var(--red);
+      box-shadow: 0 0 24px rgba(251, 113, 133, 0.4);
+    }
+
+    .btn-linkedin {
+      background: rgba(10, 102, 194, 0.22);
+      border: 1.5px solid #0a66c2;
+      color: #ffffff !important;
+      font-weight: 700;
+      transition: all 0.25s ease;
+    }
+
+    .btn-linkedin:hover {
+      background: #0a66c2 !important;
+      box-shadow: 0 0 20px rgba(10, 102, 194, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .collab-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      display: inline-block;
+      width: fit-content;
+      margin-bottom: 1rem;
+    }
+
+    .tag-gold {
+      background: rgba(251, 191, 36, 0.12);
+      color: var(--gold);
+      border: 1px solid rgba(251, 191, 36, 0.25);
+    }
+
+    .tag-cyan {
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--cyan);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    .tag-violet {
+      background: rgba(165, 180, 252, 0.12);
+      color: var(--violet);
+      border: 1px solid rgba(165, 180, 252, 0.25);
+    }
+
+    .tag-red {
+      background: rgba(251, 113, 133, 0.12);
+      color: var(--red);
+      border: 1px solid rgba(251, 113, 133, 0.25);
+    }
+
+    .collab-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+    }
+
+    .collab-title {
+      font-size: 1.28rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      line-height: 1.35;
+    }
+
+    .collab-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.68;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .collab-deliverables {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 1rem;
+      margin-top: auto;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .deliverables-title {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--cyan);
+      margin-bottom: 0.4rem;
+    }
+
+    /* Lifecycle Steps */
+    .lifecycle-container {
+      max-width: 1100px;
+      margin: 3.5rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .step-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.25rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+      box-shadow: var(--glow-gold);
+    }
+
+    .step-number {
+      font-family: var(--font-mono);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+      display: inline-block;
+    }
+
+    .step-heading {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .step-body {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* FAQ accordion styling */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 2.5rem auto 0;
+      padding: 0 1rem;
+    }
+
+    @media (max-width: 640px) {
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+      .collab-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .faq-card {
+      background: var(--bg-card);
+      border: 1.5px solid rgba(255, 255, 255, 0.25);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.5rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .faq-card:hover {
+      border-color: var(--gold);
+      box-shadow: var(--glow-gold);
+    }
+
+    .faq-question {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+      line-height: 1.4;
+    }
+
+    .faq-answer {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* Audience Grid */
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      max-width: 1160px;
+      margin: 2.5rem auto 0;
+      padding: 0 1rem;
+    }
+
+    .audience-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-gold);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 1.5rem;
+      text-align: left;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .audience-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--cyan);
+      box-shadow: var(--glow-cyan);
+    }
+
+    .role-card {
+      border-radius: var(--radius-lg);
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .audience-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .audience-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--cyan);
+      margin-bottom: 0.5rem;
+    }
+
+    .audience-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+  </style>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://thomascherickal.github.io/collaboration.html#webpage",
+        "url": "https://thomascherickal.github.io/collaboration.html",
+        "name": "Ways to Collaborate — Thomas Cherickal | Generative AI & Quantum Systems",
+        "description": "Explore 12 flexible collaboration models across live technical training, Diátaxis documentation, content retainers, developer education, and editorial workflows with Thomas Cherickal.",
+        "isPartOf": {
+          "@id": "https://thomascherickal.github.io/#website"
+        },
+        "mainEntity": {
+          "@id": "https://thomascherickal.github.io/collaboration.html#service"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+          "@id": "https://thomascherickal.github.io/collaboration.html#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://thomascherickal.github.io/collaboration.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://thomascherickal.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://thomascherickal.github.io/services.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Ways to Collaborate",
+            "item": "https://thomascherickal.github.io/collaboration.html"
+          }
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://thomascherickal.github.io/collaboration.html#service",
+        "name": "The Digital Futurist — Strategic Technical Collaboration & Engagement Models",
+        "url": "https://thomascherickal.github.io/collaboration.html",
+        "image": "https://thomascherickal.github.io/assets/og-card.png",
+        "logo": "https://thomascherickal.github.io/assets/site-icon.webp",
+        "description": "Flexible collaboration models for Generative AI toolmakers, quantum computing SDK vendors, and enterprise engineering teams across corporate live training, technical documentation, monthly retainers, and editorial integrity advisory. Featuring an 8-step lifecycle with Unlimited Revisions, 60-Day Free Modifications, Tier 4 Startup Enablement (50% off), and Tier 6 Third-World & Underprivileged Equity (75% off).",
+        "provider": {
+          "@type": "Person",
+          "@id": "https://thomascherickal.github.io/#person",
+          "name": "Thomas Cherickal",
+          "jobTitle": "Emerging Technologies Educator",
+          "url": "https://thomascherickal.github.io"
+        },
+        "availableLanguage": "English",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Ways to Collaborate — 12 Strategic Engagement Models",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Remote & Live Training",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Remote & Live Training",
+                "description": "Interactive live masterclasses, hands-on corporate team workshops, executive technology briefings, and live coding labs across Generative AI architectures, multi-agent frameworks, and quantum computing SDKs.",
+                "serviceType": "Technical Training & Workshops"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Developer Education",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Developer Education",
+                "description": "Structured developer onboarding paths, multi-part deep-dive tutorial series, and production reference codebases engineered to accelerate tool adoption and ecosystem growth.",
+                "serviceType": "Developer Education & Onboarding"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Content Partnerships & Retainers",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Content Partnerships & Retainers",
+                "description": "Dedicated monthly sprint capacity delivering continuous technical thought leadership, release coverage, and architectural guides for devtool platforms and quantum software enterprises.",
+                "serviceType": "Dedicated Sprint Retainers"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Technical Content Strategy",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Technical Content Strategy",
+                "description": "Developer documentation audits, information architecture reviews, competitive developer benchmarking, and high-impact quarterly technical publication roadmaps.",
+                "serviceType": "Content Strategy & Documentation Audits"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Editorial Workflows & Verification CI",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Editorial Workflows & Verification CI",
+                "description": "Consulting engineering and content teams on adopting AI-native technical workflows, automated code snippet verification pipelines, reproducible test sandboxes, and rigorous editorial standards.",
+                "serviceType": "Editorial Infrastructure & CI/CD"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "High-Authority Guest Publications",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "High-Authority Guest Publications",
+                "description": "Deeply technical, research-grounded articles and architectural perspectives written under my byline for publication on corporate engineering blogs, Medium publications, Substack, or industry journals.",
+                "serviceType": "Commissioned Technical Thought Leadership"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Joint Technical Collaboration",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Joint Technical Collaboration",
+                "description": "Collaborative engineering investigations, co-authored architectural teardowns, performance benchmarks, and joint case studies cross-promoted across developer ecosystems.",
+                "serviceType": "Co-Authored Research & Benchmarks"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Sponsored Deep Dives in Newsletter",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Sponsored Deep Dives in Newsletter",
+                "description": "Dedicated deep-dive feature issues, sponsored architectural breakdowns, and curated technical spotlights delivered directly to high-intent AI researchers, software engineers, and founders via The Digital Futurist.",
+                "serviceType": "Sponsored Newsletter Publication"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Open Source Documentation Suites",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Open Source Documentation Suites",
+                "description": "Production-grade documentation ecosystems, comprehensive API references, runnable quickstart guides, architectural diagrams, and contributor onboarding docs for open-source frameworks and SDKs.",
+                "serviceType": "Open Source Documentation Architecture"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Enterprise Training Materials & Kits",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Enterprise Training Materials & Kits",
+                "description": "Comprehensive corporate upskilling collateral, including keynote slide decks, hands-on lab notebooks, runnable starter codebases, cheat sheets, and evaluation rubrics.",
+                "serviceType": "Corporate Training Collateral"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Interactive Course Curriculum Authoring",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Interactive Course Curriculum Authoring",
+                "description": "End-to-end curriculum authoring, step-by-step coding walkthroughs, verified GitHub repositories, and interactive problem sets designed for online academies, bootcamps, and learning platforms.",
+                "serviceType": "Curriculum Design & Course Authoring"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Editorial Integrity (No Ghostwriting)",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Editorial Integrity (No Ghostwriting)",
+                "description": "Strict editorial integrity policy: all commissioned technical write-ups, benchmarks, and guides carry authentic bylines and author attribution; ghostwritten works are never accepted.",
+                "serviceType": "Authentic Technical Attribution"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://thomascherickal.github.io/collaboration.html#faq",
+        "name": "Collaboration Frequently Asked Questions — Thomas Cherickal",
+        "description": "Frequently asked questions regarding technical collaboration, scheduling, communication channels, runtime code verification, IP ownership, ghostwriting policies, and Purchasing Power Parity.",
+        "url": "https://thomascherickal.github.io/collaboration.html",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How quickly can an engagement start?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Single engagements and workshops can typically be scheduled within 5 to 10 business days of scope approval. Monthly retainers and multi-part educational curricula are scheduled based on current sprint capacity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What communication channels do you support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Communication is conducted asynchronously via shared Slack or Discord channels, email, and GitHub Pull Requests. For live training, interactive sessions are hosted on Zoom, Google Meet, or Microsoft Teams."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does runtime code verification work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every code sample included in tutorials, documentation, and training modules is tested in live execution environments (Python REPLs, cargo test sandboxes, go test suites, or Mojo test runners) before delivery."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who owns the intellectual property (IP)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Upon milestone payment completion, full commercial publication rights to the commissioned technical deliverables transfer to your organization, with author byline attribution preserved under our editorial policy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you accept ghostwriting commissions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. I operate under a strict editorial integrity policy: all articles, guides, and technical benchmarks carry my authentic byline. This preserves developer trust and maximizes authentic social and domain authority."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the 6 Tiers of Payment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pricing is organized across 6 tiers of payment: Tier 1 Developed Nations (100%), Tier 2 Developing Nations (75%), Tier 3 Least Developed Nations (50%), Tier 4 Startups (50% off), Tier 5 Non-Profits & Academia (subsidized custom rates), and Tier 6 Third-World Countries & Underprivileged Individuals (75% off)."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Header Navigation Frame -->
+  <iframe src="header.html" id="header-frame" title="Header Navigation"
+    style="width:100%;border:none;overflow:hidden;display:block;" scrolling="no"></iframe>
+
+  <a href="#" class="back-top" id="backTop" title="Back to top" aria-label="Back to top">↑</a>
+
+  <main id="main">
+
+    <!-- PAGE HERO -->
+    <section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
+      <p class="section-label">Engagement Models &amp; Partnerships</p>
+      <h1 class="section-title">Ways to <span class="accent-gold">Collaborate</span></h1>
+      <p class="section-sub" style="max-width:800px;margin:1.25rem auto 0;line-height:1.8;font-size:1.05rem;">
+        Structured collaboration frameworks designed for Generative AI toolmakers, quantum SDK vendors, high-growth devtool startups, and enterprise engineering teams.
+      </p>
+      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2rem;">
+        <a href="contact.html" class="btn btn-commission" style="padding:0.85rem 1.75rem;font-size:0.92rem;">
+          ✉️ Initiate a Collaboration Brief →
+        </a>
+        <a href="pricing.html" class="btn"
+          style="background:rgba(255,255,255,0.05);border:1px solid var(--border-gold);color:var(--text-primary);padding:0.85rem 1.75rem;font-size:0.92rem;">
+          🌐 View 6-Pillar Pricing &amp; Sprints →
+        </a>
+        <a href="services.html" class="btn"
+          style="background:rgba(56,189,248,0.08);border:1px solid var(--border);color:var(--cyan);padding:0.85rem 1.75rem;font-size:0.92rem;">
+          🎯 Browse All 12 Technical Services →
+        </a>
+      </div>
+    </section>
+
+    <!-- TRUST & PROOF METRICS STRIP -->
+    <div class="metric-strip reveal">
+      <div class="metric-card">
+        <div class="metric-num">500+</div>
+        <div class="metric-label">Published Articles across 10+ Platforms</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">100%</div>
+        <div class="metric-label">Runtime-Verified Code (Python, Go, Rust, Mojo)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">0%</div>
+        <div class="metric-label">Ghostwriting Policy · Byline Authority Only</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">6</div>
+        <div class="metric-label">Tiers of Payment</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 12 COLLABORATION MODES SECTION -->
+    <section class="reveal" style="padding: 2rem 0;">
+      <div class="section-header">
+        <p class="section-label">Strategic Engagement Models</p>
+        <h2 class="section-title">12 Ways We Can <span class="accent-cyan">Work Together</span></h2>
+        <p class="section-sub" style="max-width:760px;margin:0.75rem auto 2.5rem;">
+          From interactive masterclasses and developer onboarding suites to monthly retainers and editorial governance, select the model that best matches your engineering objectives.
+        </p>
+      </div>
+
+      <div class="collab-grid">
+
+        <!-- 01. Remote & Live Training -->
+        <div class="collab-card border-gold">
+          <span class="collab-tag tag-gold">Live Education</span>
+          <span class="collab-icon">🎓</span>
+          <h3 class="collab-title" style="color:var(--gold);">01. Remote &amp; Live Training</h3>
+          <p class="collab-desc">
+            Interactive live masterclasses, hands-on corporate team workshops, executive technology briefings, and live coding labs across Generative AI architectures, multi-agent frameworks, and quantum computing SDKs.
+          </p>
+          <div class="collab-deliverables">
+            <div class="deliverables-title">Key Deliverables:</div>
+            Live virtual delivery, executable Jupyter notebook labs per module, session recordings, follow-up Q&amp;A office hours.
+          </div>
+        </div>
+
+        <!-- 02. Developer Education -->
+        <div class="collab-card border-cyan">
+          <span class="collab-tag tag-cyan">Ecosystem Adoption</span>
+          <span class="collab-icon">📚</span>
+          <h3 class="collab-title" style="color:var(--cyan);">02. Developer Education</h3>
+          <p class="collab-desc">
+            Structured developer onboarding paths, multi-part deep-dive tutorial series, and production reference codebases engineered to accelerate tool adoption, reduce integration friction, and nurture open-source ecosystems.
+          </p>
+          <div class="collab-deliverables">
+            <div class="deliverables-title">Key Deliverables:</div>
+            Sequenced onboarding guides, runnable GitHub starter repos, interactive Google Colab links, and troubleshooting FAQs.
+          </div>
+        </div>
+
+        <!-- 03. Content Partnerships & Retainers -->
+        <div class="collab-card border-violet">
+          <span class="collab-tag tag-violet">Sprint Retainer</span>
+          <span class="collab-icon">🤝</span>
+          <h3 class="collab-title" style="color:var(--violet);">03. Content Partnerships &amp; Retainers</h3>
+          <p class="collab-desc">
+            Dedicated monthly sprint capacity delivering continuous technical thought leadership, release coverage, and architectural guides for fast-moving devtool creators and quantum enterprise vendors.
+          </p>
+          <div class="collab-deliverables">
+            <div class="deliverables-title">Key Deliverables:</div>
+            2 to 4 in-depth technical publications per month, priority scheduling, dedicated async Slack/Discord channel access.
+          </div>
+        </div>
+
+        <!-- 04. Developer Content Strategy -->
+        <div class="collab-card border-cyan">
+          <span class="collab-tag tag-cyan">Strategic Advisory</span>
+          <span class="collab-icon">🎯</span>
+          <h3 class="collab-title" style="color:var(--green);">04. Technical Content Strategy</h3>
+          <p class="collab-desc">
+            Developer documentation audits, information architecture reviews, competitive developer benchmarking, and high-impact quarterly technical publication roadmaps tailored for developer-first teams.
+          </p>
+          <div class="collab-deliverables">
+            <div class="deliverables-title">Key Deliverables:</div>
+            Diátaxis documentation audit report, developer journey mapping, content gap analysis matrix, and quarterly editorial roadmap.
+          </div>
+        </div>
+
+        <!-- 05. AI-Native Editorial Workflows -->
+        <div class="collab-card border-gold">
+          <span class="collab-tag tag-gold">Quality &amp; CI/CD</span>
+          <span class="collab-icon">⚙️</span>
+          <h3 class="collab-title" style="color:var(--gold);">05. Editorial Workflows &amp; Verification CI</h3>
+          <p class="collab-desc">
+            Consulting engineering and content teams on adopting AI-native technical workflows, automated code snippet verification pipelines, reproducible test sandboxes, and rigorous editorial quality standards.
+          </p>
+          <div class="collab-deliverables">
+            <div class="deliverables-title">Key Deliverables:</div>
+            Automated CI snippet verification scripts (GitHub Actions), syntax/runtime testing harnesses, and style guide documentation.
+          </div>
+        </div>
+
+        <!-- 06. High-Authority Guest Posts -->
+        <div class="collab-card border-cyan">
+          <span class="collab-tag tag-cyan">Thought Leadership</span>
+          <span class="collab-icon">✍️</span>
+          <h3 class="collab-title" style="color:var(--cyan);">06. High-Authority Guest Publications</h3>
+          <p class="collab-desc">
+            Deeply technical, research-grounded articles and architectural perspectives written under my byline for publication on your corporate engineering blog, Medium publication, Substack, or industry journals.
+          </p>
+          <div class="collab-deliverables">
+            <div class="deliverables-title">Key Deliverables:</div>
+            2,500–5,000 word technical deep dive, custom Mermaid architectural diagrams, verified code repositories, and publication rights.
+          </div>
+        </div>
+
+        <!-- 07. Joint Technical Collaboration -->
+        <div class="collab-card border-violet">
+          <span class="collab-tag tag-violet">Co-Authored Research</span>
+          <span class="collab-icon">👥</span>
+          <h3 class="collab-title" style="color:var(--violet);">07. Joint Technical Collaboration</h3>
+          <p class="collab-desc">
+            Collaborative engineering investigations, co-authored architectural teardowns, performance benchmarks, and joint case studies cross-promoted across developer ecosystems and social platforms.
+          </p>
+          <div class="collab-deliverables">
+            <div class="deliverables-title">Key Deliverables:</div>
+            Co-authored technical teardown, reproducible benchmark methodology repo, coordinated release schedule, and dual distribution.
+          </div>
+        </div>
+
+        <!-- 08. Sponsored Newsletter Features -->
+        <div class="collab-card border-gold">
+          <span class="collab-tag tag-gold">Direct Audience</span>
+          <span class="collab-icon">📬</span>
+          <h3 class="collab-title" style="color:var(--gold);">08. Sponsored Deep Dives in Newsletter</h3>
+          <p class="collab-desc">
+            Dedicated deep-dive feature issues, sponsored architectural breakdowns, and curated technical spotlights delivered directly to high-intent AI researchers, software engineers, and founders via *The Digital Futurist*.
+          </p>
+          <div class="collab-deliverables">
+            <div class="deliverables-title">Key Deliverables:</div>
+            1 dedicated deep-dive issue (2,000+ words), primary sponsor banner, permanent web archive placement, and social distribution.
+          </div>
+        </div>
+
+        <!-- 09. Open Source Documentation -->
+        <div class="collab-card border-cyan">
+          <span class="collab-tag tag-cyan">Open Source</span>
+          <span class="collab-icon">📖</span>
+          <h3 class="collab-title" style="color:var(--cyan);">09. Open Source Documentation Suites</h3>
+          <p class="collab-desc">
+            Production-grade documentation ecosystems, comprehensive API references, runnable quickstart guides, architectural diagrams, and contributor onboarding docs for open-source frameworks and SDKs.
+          </p>
+          <div class="collab-deliverables">
+            <div class="deliverables-title">Key Deliverables:</div>
+            Full Diátaxis restructuring (Tutorials, How-Tos, Reference, Explanation), runnable quickstarts, OpenAPI/Swagger alignment.
+          </div>
+        </div>
+
+        <!-- 10. Enterprise Training Materials -->
+        <div class="collab-card border-gold">
+          <span class="collab-tag tag-gold">Corporate Enablement</span>
+          <span class="collab-icon">🛠️</span>
+          <h3 class="collab-title" style="color:var(--gold);">10. Enterprise Training Materials &amp; Kits</h3>
+          <p class="collab-desc">
+            Comprehensive corporate upskilling collateral, including keynote slide decks, hands-on lab notebooks, runnable starter codebases, cheat sheets, and evaluation rubrics for enterprise engineering teams.
+          </p>
+          <div class="collab-deliverables">
+            <div class="deliverables-title">Key Deliverables:</div>
+            Editable presentation slides, containerized lab environments (Docker/Dev Containers), interactive problem sets, and cheat sheets.
+          </div>
+        </div>
+
+        <!-- 11. Interactive Course Curriculum -->
+        <div class="collab-card border-violet">
+          <span class="collab-tag tag-violet">Curriculum Design</span>
+          <span class="collab-icon">🎬</span>
+          <h3 class="collab-title" style="color:var(--violet);">11. Interactive Course Curriculum Authoring</h3>
+          <p class="collab-desc">
+            End-to-end curriculum authoring, step-by-step coding walkthroughs, verified GitHub repositories, and interactive problem sets designed for online academies, bootcamps, and technical learning platforms.
+          </p>
+          <div class="collab-deliverables">
+            <div class="deliverables-title">Key Deliverables:</div>
+            Complete syllabus outline, script &amp; lesson text, milestone repository with automated test evaluation, and project rubrics.
+          </div>
+        </div>
+
+        <!-- 12. Strict Editorial Integrity -->
+        <div class="collab-card border-red">
+          <span class="collab-tag tag-red">Core Principle</span>
+          <span class="collab-icon">✒️</span>
+          <h3 class="collab-title" style="color:var(--red);">12. Editorial Integrity (No Ghostwriting)</h3>
+          <p class="collab-desc">
+            Strict editorial integrity policy: all commissioned technical write-ups, benchmarks, and guides carry my authentic byline and author attribution; ghostwritten marketing pieces are never accepted.
+          </p>
+          <div class="collab-deliverables">
+            <div class="deliverables-title">Why This Matters:</div>
+            Authentic domain expert bylines build deep developer credibility and trust that anonymous or ghostwritten marketing copy can never deliver.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ENGAGEMENT LIFECYCLE SECTION -->
+    <section class="reveal" style="padding: 2rem 0;">
+      <div class="section-header">
+        <p class="section-label">Execution Framework</p>
+        <h2 class="section-title">How We Collaborate: <span class="accent-gold">8-Step Lifecycle</span></h2>
+        <p class="section-sub" style="max-width:760px;margin:0.75rem auto;">
+          A transparent, predictable process with Unlimited Revisions, 60-Day Free Modifications, and live code verification.
+        </p>
+      </div>
+
+      <div class="lifecycle-container">
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h3 class="step-heading">Scope &amp; Technical Briefing</h3>
+          <p class="step-body">
+            We align on engineering objectives, audience depth, and deliverables via an async intake brief or a focused 30-minute scoping discussion.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h3 class="step-heading">Milestone Agreement &amp; 6 Payment Tiers</h3>
+          <p class="step-body">
+            Transparent proposal with fixed deliverables across 6 payment tiers — including Tier 4 for Startups (50% off) and Tier 6 for third-world countries and underprivileged individuals (75% off).
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h3 class="step-heading">Primary Research &amp; Architecture</h3>
+          <p class="step-body">
+            Frontier AI accelerates literature synthesis and structural drafting, followed by outline review, architectural diagrams, and Diátaxis structure alignment.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-card">
+          <div class="step-number">04</div>
+          <h3 class="step-heading">Live Sandbox Code Verification</h3>
+          <p class="step-body">
+            Every code artifact, API request, and quantum circuit is executed in live Python REPLs, <code>cargo test</code>, <code>go test</code>, or Mojo test harnesses with real output logs.
+          </p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="step-card" style="border-color: var(--gold);">
+          <div class="step-number">05</div>
+          <h3 class="step-heading" style="color: var(--gold);">Unlimited Revisions</h3>
+          <p class="step-body">
+            Continuous, collaborative iteration on every technical draft, architectural schematic, and repository until your engineering leadership is 100% satisfied.
+          </p>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="step-card">
+          <div class="step-number">06</div>
+          <h3 class="step-heading">Milestone Sign-Off &amp; IP Transfer</h3>
+          <p class="step-body">
+            Full commercial publication rights, copyright transfer, and clean repository handover granted immediately upon milestone sign-off with authentic byline attribution.
+          </p>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="step-card">
+          <div class="step-number">07</div>
+          <h3 class="step-heading">Multi-Platform Launch &amp; Distribution</h3>
+          <p class="step-body">
+            Final deliverables are published with active cross-promotion across developer social networks, Substack (*The Digital Futurist*), HackerNoon, and LinkedIn.
+          </p>
+        </div>
+
+        <!-- Step 8 -->
+        <div class="step-card" style="border-color: var(--cyan);">
+          <div class="step-number">08</div>
+          <h3 class="step-heading" style="color: var(--cyan);">60-Day Free Modifications</h3>
+          <p class="step-body">
+            Continued post-launch peace of mind with 60 days of free minor code patches, upstream SDK breaking-change updates, and ongoing technical maintenance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- AUDIENCE: WHO I COLLABORATE WITH -->
+    <section class="reveal" style="padding: 2rem 0;">
+      <div class="section-header">
+        <p class="section-label">Ideal Fit</p>
+        <h2 class="section-title">Who I <span class="accent-cyan">Collaborate With</span></h2>
+        <p class="section-sub" style="max-width:700px;margin:0.75rem auto;">
+          Partnering with organizations and engineers building the foundational technologies of the next decade.
+        </p>
+      </div>
+
+      <div class="audience-grid">
+        <div class="audience-card">
+          <div class="audience-icon">🤖</div>
+          <h3 class="audience-title">GenAI &amp; LLM Toolmakers</h3>
+          <p class="audience-desc">
+            RAG infrastructure, agentic frameworks, fine-tuning platforms, and vector databases seeking authoritative technical documentation and developer tutorials.
+          </p>
+        </div>
+
+        <div class="audience-card">
+          <div class="audience-icon">⚛️</div>
+          <h3 class="audience-title">Quantum SDK &amp; Hardware Vendors</h3>
+          <p class="audience-desc">
+            Quantum computing platforms, QML framework authors, and post-quantum security providers needing algorithm walkthroughs and executive briefings.
+          </p>
+        </div>
+
+        <div class="audience-card">
+          <div class="audience-icon">⚡</div>
+          <h3 class="audience-title">AI Infrastructure &amp; Compute Platforms</h3>
+          <p class="audience-desc">
+            GPU cloud providers, model serving engines (vLLM, Ollama, TensorRT-LLM), and inference acceleration runtimes requiring benchmark teardowns and architecture guides.
+          </p>
+        </div>
+
+        <div class="audience-card">
+          <div class="audience-icon">🏢</div>
+          <h3 class="audience-title">Enterprise Engineering &amp; Systems Teams</h3>
+          <p class="audience-desc">
+            Engineering departments in high-stakes industries navigating private enterprise LLMs, Post-Quantum Cryptography (PQC) audits, or high-performance Rust systems.
+          </p>
+        </div>
+
+        <div class="audience-card">
+          <div class="audience-icon">🎓</div>
+          <h3 class="audience-title">Technical EdTech &amp; Developer Media</h3>
+          <p class="audience-desc">
+            Developer publications, online academies, and technical learning platforms seeking production-verified curricula, interactive coding labs, and course authoring.
+          </p>
+        </div>
+
+        <div class="audience-card" style="border-color: #fbbf24;">
+          <div class="audience-icon">🚀</div>
+          <h3 class="audience-title" style="color: #fbbf24;">Tier 4: Developer Tool Startups (50% Off)</h3>
+          <p class="audience-desc">
+            Pre-seed, seed-stage, and bootstrapped engineering startups building developer momentum. Eligible for <strong>50% off standard rates</strong> under Startup Enablement.
+          </p>
+        </div>
+
+        <div class="audience-card" style="border-color: #00d2ff;">
+          <div class="audience-icon">🌍</div>
+          <h3 class="audience-title" style="color: #00d2ff;">Tier 6: Third-World &amp; Underprivileged (75% Off)</h3>
+          <p class="audience-desc">
+            Dedicated <strong>75% discount</strong> for engineering teams, startups, researchers, and underprivileged individuals in third-world countries to ensure universal access to world-class technical education.
+          </p>
+        </div>
+
+        <div class="audience-card">
+          <div class="audience-icon">🏛️</div>
+          <h3 class="audience-title">Tier 5: Non-Profits &amp; Academia</h3>
+          <p class="audience-desc">
+            Open research initiatives, educational institutions, universities, and mission-driven open-source communities supported through subsidized custom pricing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- COLLABORATION FAQS -->
+    <section class="reveal" style="padding: 2rem 0;">
+      <div class="section-header">
+        <p class="section-label">Common Questions</p>
+        <h2 class="section-title">Collaboration <span class="accent-gold">FAQs</span></h2>
+        <p class="section-sub" style="max-width:680px;margin:0.75rem auto;">
+          Transparent answers about process, scheduling, intellectual property, and communication.
+        </p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-card">
+          <h3 class="faq-question">How quickly can an engagement start?</h3>
+          <p class="faq-answer">
+            Single engagements and workshops can typically be scheduled within 5 to 10 business days of scope approval. Monthly retainers and multi-part educational curricula are scheduled based on current sprint capacity.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3 class="faq-question">What communication channels do you support?</h3>
+          <p class="faq-answer">
+            Communication is conducted asynchronously via shared Slack or Discord channels, email, and GitHub Pull Requests. For live training, interactive sessions are hosted on Zoom, Google Meet, or Microsoft Teams.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3 class="faq-question">How does runtime code verification work?</h3>
+          <p class="faq-answer">
+            Every code sample included in tutorials, documentation, and training modules is tested in live execution environments (Python REPLs, <code>cargo test</code> sandboxes, <code>go test</code> suites, or Mojo test runners) before delivery.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3 class="faq-question">Who owns the intellectual property (IP)?</h3>
+          <p class="faq-answer">
+            Upon milestone payment completion, full commercial publication rights to the commissioned technical deliverables transfer to your organization, with author byline attribution preserved under our editorial policy.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3 class="faq-question">Do you accept ghostwriting commissions?</h3>
+          <p class="faq-answer">
+            No. I operate under a strict editorial integrity policy: all articles, guides, and technical benchmarks carry my authentic byline. This preserves developer trust and maximizes authentic social and domain authority.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3 class="faq-question">What are the 6 Tiers of Payment?</h3>
+          <p class="faq-answer">
+            Pricing is organized across 6 tiers of payment: Tier 1 Developed Nations (100%), Tier 2 Developing Nations (75%), Tier 3 Least Developed Nations (50%), Tier 4 Startups (50% off), Tier 5 Non-Profits &amp; Academia (subsidized custom rates), and Tier 6 Third-World Countries &amp; Underprivileged Individuals (75% off).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- CALL TO ACTION SECTION -->
+    <section class="reveal" style="padding: 3.5rem 1rem 4rem; text-align: center;">
+      <div class="role-card border-gold"
+        style="max-width: 960px; margin: 0 auto; padding: 3rem 2rem; background: radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.1) 0%, rgba(12, 17, 29, 0.98) 100%);">
+        <span class="role-card-icon" style="font-size: 2.5rem; display: inline-block; margin-bottom: 0.75rem;">🚀</span>
+        <h2 class="section-title" style="font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1rem;">
+          Ready to Start a <span class="accent-gold">Collaboration?</span>
+        </h2>
+        <p class="section-sub"
+          style="max-width: 680px; margin: 0 auto 2rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.75;">
+          Whether you need a live corporate masterclass, a dedicated content sprint retainer, or an end-to-end Diátaxis documentation architecture, let's discuss your engineering milestones.
+        </p>
+
+        <div style="display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
+          <a href="contact.html" class="btn btn-commission" style="padding: 0.95rem 2rem; font-size: 0.95rem;">
+            Initiate Collaboration Brief →
+          </a>
+          <a href="https://linkedin.com/in/thomascherickal" target="_blank" rel="noopener" class="btn btn-linkedin"
+            style="padding: 0.95rem 2rem; font-size: 0.95rem;">
+            Free LinkedIn Consultation ↗
+          </a>
+          <a href="https://topmate.io/thomascherickal" target="_blank" rel="noopener" class="btn"
+            style="background: rgba(228, 67, 50, 0.15); border: 1px solid #e44332; color: #ffffff; padding: 0.95rem 2rem; font-size: 0.95rem;">
+            Book 1:1 Advisory on Topmate ↗
+          </a>
+          <a href="pricing.html" class="btn"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-gold); color: var(--text-primary); padding: 0.95rem 2rem; font-size: 0.95rem;">
+            Check Milestone Pricing →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Footer Frame Embed -->
+    <iframe src="footer.html" id="footer-frame" title="Footer Navigation"
+      style="width:100%;border:none;overflow:hidden;display:block;" scrolling="no"></iframe>
+
+  </main>
+
+  <script src="components.js"></script>
+  <script>
+    const backTopBtn = document.getElementById('backTop');
+    if (backTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+          backTopBtn.classList.add('visible');
+        } else {
+          backTopBtn.classList.remove('visible');
+        }
+      });
+    }
+
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+
+</html>

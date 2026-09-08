@@ -42,7 +42,7 @@
             if (
               lowerHref === lowerPage || 
               (lowerPage === 'index.html' && (lowerHref === 'index.html' || lowerHref === './' || lowerHref === '/')) ||
-              (lowerPage.startsWith('service-') && lowerHref === 'services.html')
+              ((lowerPage.startsWith('service-') || lowerPage === 'collaboration.html') && lowerHref === 'services.html')
             ) {
               link.classList.add('active');
               link.setAttribute('aria-current', 'page');

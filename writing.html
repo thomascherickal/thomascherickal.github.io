@@ -705,6 +705,24 @@
       transform: translateY(-2px);
     }
 
+    /* btn-linkedin: Executive Slate & LinkedIn Blue Button */
+    .btn-linkedin {
+      background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+      color: #38bdf8;
+      font-weight: 700;
+      border: 4px solid #0a66c2;
+      box-shadow: 0 0 20px rgba(10, 102, 194, 0.7), 0 0 8px #0a66c2, 0 4px 14px rgba(0, 0, 0, 0.6);
+      text-shadow: none;
+    }
+
+    .btn-linkedin:hover {
+      background: linear-gradient(180deg, #1e3a5f 0%, #0f2744 100%);
+      color: #ffffff;
+      border-color: #38bdf8;
+      box-shadow: 0 0 32px rgba(56, 189, 248, 0.95), 0 0 14px #0a66c2, 0 6px 20px rgba(10, 102, 194, 0.4);
+      transform: translateY(-2px);
+    }
+
     /* btn-newsletter: Executive Indigo Button */
     .btn-newsletter {
       background: linear-gradient(180deg, #4f46e5 0%, #4338ca 100%);
@@ -4933,7 +4951,10 @@
     <section class="reveal" style="text-align:center;padding:3rem 1.5rem;">
       <p style="font-size:1.1rem;color:var(--text-primary);margin-bottom:1rem;">Commissioning technical content or
         tutorials for your company?</p>
-      <a href="contact.html" class="btn btn-commission">See Services &amp; Rates →</a>
+      <div style="display:flex;justify-content:center;gap:1.25rem;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-commission">See Services &amp; Rates →</a>
+        <a href="https://linkedin.com/in/thomascherickal" target="_blank" rel="noopener" class="btn btn-linkedin">Free LinkedIn Consultation ↗</a>
+      </div>
     </section>
 
     <iframe src="footer.html" id="footer-frame" title="Footer Navigation"
