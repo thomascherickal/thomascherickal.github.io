@@ -47,7 +47,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Open+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=05ed78d8112e" />
+  <link rel="stylesheet" href="style.css?v=10b202153baa" />
 
   <style>
     :root {
@@ -202,6 +202,163 @@
       transform: translateY(-2px);
     }
 
+    .btn-topmate {
+      background: rgba(228, 67, 50, 0.15) !important;
+      border: 1.5px solid #e44332 !important;
+      color: #ffffff !important;
+      font-weight: 700;
+      transition: all 0.28s ease;
+    }
+
+    .btn-topmate:hover {
+      background: #e44332 !important;
+      border-color: #ff6b5b !important;
+      box-shadow: 0 0 24px rgba(228, 67, 50, 0.7), 0 6px 18px rgba(0, 0, 0, 0.5) !important;
+      transform: translateY(-2.5px) scale(1.02);
+    }
+
+    .btn-pricing-cta {
+      background: rgba(255, 255, 255, 0.05) !important;
+      border: 1.5px solid var(--border-gold) !important;
+      color: var(--text-primary) !important;
+      font-weight: 700;
+      transition: all 0.28s ease;
+    }
+
+    .btn-pricing-cta:hover {
+      background: rgba(251, 191, 36, 0.16) !important;
+      border-color: var(--gold) !important;
+      color: #ffffff !important;
+      box-shadow: 0 0 24px rgba(251, 191, 36, 0.7), 0 6px 18px rgba(0, 0, 0, 0.5) !important;
+      transform: translateY(-2.5px) scale(1.02);
+    }
+
+    /* Top Action Hero Buttons Animations */
+    @keyframes heroBtnEntrance {
+      0% {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulseGlowGold {
+      0%, 100% {
+        box-shadow: 0 0 16px rgba(245, 158, 11, 0.4), 0 0 6px #f59e0b, 0 4px 14px rgba(0, 0, 0, 0.6);
+        border-color: #f59e0b;
+      }
+      50% {
+        box-shadow: 0 0 30px rgba(251, 191, 36, 0.85), 0 0 12px #fbbf24, 0 6px 20px rgba(245, 158, 11, 0.5);
+        border-color: #fbbf24;
+      }
+    }
+
+    @keyframes pulseGlowAmber {
+      0%, 100% {
+        box-shadow: 0 0 12px rgba(251, 191, 36, 0.25), 0 4px 12px rgba(0, 0, 0, 0.5);
+        border-color: rgba(251, 191, 36, 0.5);
+      }
+      50% {
+        box-shadow: 0 0 24px rgba(251, 191, 36, 0.65), 0 4px 16px rgba(0, 0, 0, 0.6);
+        border-color: rgba(251, 191, 36, 0.9);
+      }
+    }
+
+    @keyframes pulseGlowCyan {
+      0%, 100% {
+        box-shadow: 0 0 12px rgba(56, 189, 248, 0.25), 0 4px 12px rgba(0, 0, 0, 0.5);
+        border-color: rgba(56, 189, 248, 0.45);
+      }
+      50% {
+        box-shadow: 0 0 24px rgba(56, 189, 248, 0.75), 0 4px 16px rgba(0, 0, 0, 0.6);
+        border-color: rgba(56, 189, 248, 0.9);
+      }
+    }
+
+    @keyframes btnShineSweep {
+      0% {
+        left: -120%;
+      }
+      20%, 100% {
+        left: 140%;
+      }
+    }
+
+    .top-hero-btn {
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.28s ease, border-color 0.28s ease, background 0.28s ease, color 0.28s ease;
+      will-change: transform, box-shadow;
+    }
+
+    .top-hero-btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+      transform: skewX(-20deg);
+      pointer-events: none;
+      animation: btnShineSweep 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    .top-hero-btn:hover {
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    .top-hero-btn:active {
+      transform: translateY(0px) scale(0.98);
+    }
+
+    .top-hero-btn-1 {
+      animation: heroBtnEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s backwards, pulseGlowGold 3.2s ease-in-out infinite 0.7s;
+    }
+
+    .top-hero-btn-1::after {
+      animation-delay: 1.5s;
+    }
+
+    .top-hero-btn-2 {
+      animation: heroBtnEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.22s backwards, pulseGlowAmber 3.6s ease-in-out infinite 0.85s;
+    }
+
+    .top-hero-btn-2::after {
+      animation-delay: 3.5s;
+    }
+
+    .top-hero-btn-2:hover {
+      background: rgba(251, 191, 36, 0.16) !important;
+      border-color: var(--gold) !important;
+      color: #ffffff !important;
+      box-shadow: 0 0 28px rgba(251, 191, 36, 0.8), 0 6px 20px rgba(0, 0, 0, 0.6) !important;
+    }
+
+    .top-hero-btn-3 {
+      animation: heroBtnEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.34s backwards, pulseGlowCyan 3.4s ease-in-out infinite 1s;
+    }
+
+    .top-hero-btn-3::after {
+      animation-delay: 5.5s;
+    }
+
+    .top-hero-btn-3:hover {
+      background: rgba(56, 189, 248, 0.2) !important;
+      border-color: var(--cyan) !important;
+      color: #ffffff !important;
+      box-shadow: 0 0 28px rgba(56, 189, 248, 0.8), 0 6px 20px rgba(0, 0, 0, 0.6) !important;
+    }
+
     .collab-tag {
       font-family: var(--font-mono);
       font-size: 0.72rem;
@@ -339,6 +496,7 @@
       .faq-grid {
         grid-template-columns: 1fr;
       }
+
       .collab-grid {
         grid-template-columns: 1fr;
       }
@@ -690,18 +848,19 @@
       <p class="section-label">Engagement Models &amp; Partnerships</p>
       <h1 class="section-title">Ways to <span class="accent-gold">Collaborate</span></h1>
       <p class="section-sub" style="max-width:800px;margin:1.25rem auto 0;line-height:1.8;font-size:1.05rem;">
-        Structured collaboration frameworks designed for Generative AI toolmakers, quantum SDK vendors, high-growth devtool startups, and enterprise engineering teams.
+        Structured collaboration frameworks designed for Generative AI toolmakers, quantum SDK vendors, high-growth
+        devtool startups, and enterprise engineering teams.
       </p>
       <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2rem;">
-        <a href="contact.html" class="btn btn-commission" style="padding:0.85rem 1.75rem;font-size:0.92rem;">
+        <a href="contact.html" class="btn btn-commission top-hero-btn top-hero-btn-1" style="padding:0.85rem 1.75rem;font-size:0.92rem;">
           ✉️ Initiate a Collaboration Brief →
         </a>
-        <a href="pricing.html" class="btn"
-          style="background:rgba(255,255,255,0.05);border:1px solid var(--border-gold);color:var(--text-primary);padding:0.85rem 1.75rem;font-size:0.92rem;">
+        <a href="pricing.html" class="btn top-hero-btn top-hero-btn-2"
+          style="background:rgba(255,255,255,0.05);border:1.5px solid var(--border-gold);color:var(--text-primary);padding:0.85rem 1.75rem;font-size:0.92rem;">
           🌐 View 6-Pillar Pricing &amp; Sprints →
         </a>
-        <a href="services.html" class="btn"
-          style="background:rgba(56,189,248,0.08);border:1px solid var(--border);color:var(--cyan);padding:0.85rem 1.75rem;font-size:0.92rem;">
+        <a href="services.html" class="btn top-hero-btn top-hero-btn-3"
+          style="background:rgba(56,189,248,0.08);border:1.5px solid var(--border);color:var(--cyan);padding:0.85rem 1.75rem;font-size:0.92rem;">
           🎯 Browse All 12 Technical Services →
         </a>
       </div>
@@ -735,7 +894,8 @@
         <p class="section-label">Strategic Engagement Models</p>
         <h2 class="section-title">12 Ways We Can <span class="accent-cyan">Work Together</span></h2>
         <p class="section-sub" style="max-width:760px;margin:0.75rem auto 2.5rem;">
-          From interactive masterclasses and developer onboarding suites to monthly retainers and editorial governance, select the model that best matches your engineering objectives.
+          From interactive masterclasses and developer onboarding suites to monthly retainers and editorial governance,
+          select the model that best matches your engineering objectives.
         </p>
       </div>
 
@@ -747,11 +907,13 @@
           <span class="collab-icon">🎓</span>
           <h3 class="collab-title" style="color:var(--gold);">01. Remote &amp; Live Training</h3>
           <p class="collab-desc">
-            Interactive live masterclasses, hands-on corporate team workshops, executive technology briefings, and live coding labs across Generative AI architectures, multi-agent frameworks, and quantum computing SDKs.
+            Interactive live masterclasses, hands-on corporate team workshops, executive technology briefings, and live
+            coding labs across Generative AI architectures, multi-agent frameworks, and quantum computing SDKs.
           </p>
           <div class="collab-deliverables">
             <div class="deliverables-title">Key Deliverables:</div>
-            Live virtual delivery, executable Jupyter notebook labs per module, session recordings, follow-up Q&amp;A office hours.
+            Live virtual delivery, executable Jupyter notebook labs per module, session recordings, follow-up Q&amp;A
+            office hours.
           </div>
         </div>
 
@@ -761,11 +923,14 @@
           <span class="collab-icon">📚</span>
           <h3 class="collab-title" style="color:var(--cyan);">02. Developer Education</h3>
           <p class="collab-desc">
-            Structured developer onboarding paths, multi-part deep-dive tutorial series, and production reference codebases engineered to accelerate tool adoption, reduce integration friction, and nurture open-source ecosystems.
+            Structured developer onboarding paths, multi-part deep-dive tutorial series, and production reference
+            codebases engineered to accelerate tool adoption, reduce integration friction, and nurture open-source
+            ecosystems.
           </p>
           <div class="collab-deliverables">
             <div class="deliverables-title">Key Deliverables:</div>
-            Sequenced onboarding guides, runnable GitHub starter repos, interactive Google Colab links, and troubleshooting FAQs.
+            Sequenced onboarding guides, runnable GitHub starter repos, interactive Google Colab links, and
+            troubleshooting FAQs.
           </div>
         </div>
 
@@ -775,11 +940,13 @@
           <span class="collab-icon">🤝</span>
           <h3 class="collab-title" style="color:var(--violet);">03. Content Partnerships &amp; Retainers</h3>
           <p class="collab-desc">
-            Dedicated monthly sprint capacity delivering continuous technical thought leadership, release coverage, and architectural guides for fast-moving devtool creators and quantum enterprise vendors.
+            Dedicated monthly sprint capacity delivering continuous technical thought leadership, release coverage, and
+            architectural guides for fast-moving devtool creators and quantum enterprise vendors.
           </p>
           <div class="collab-deliverables">
             <div class="deliverables-title">Key Deliverables:</div>
-            2 to 4 in-depth technical publications per month, priority scheduling, dedicated async Slack/Discord channel access.
+            2 to 4 in-depth technical publications per month, priority scheduling, dedicated async Slack/Discord channel
+            access.
           </div>
         </div>
 
@@ -789,11 +956,13 @@
           <span class="collab-icon">🎯</span>
           <h3 class="collab-title" style="color:var(--green);">04. Technical Content Strategy</h3>
           <p class="collab-desc">
-            Developer documentation audits, information architecture reviews, competitive developer benchmarking, and high-impact quarterly technical publication roadmaps tailored for developer-first teams.
+            Developer documentation audits, information architecture reviews, competitive developer benchmarking, and
+            high-impact quarterly technical publication roadmaps tailored for developer-first teams.
           </p>
           <div class="collab-deliverables">
             <div class="deliverables-title">Key Deliverables:</div>
-            Diátaxis documentation audit report, developer journey mapping, content gap analysis matrix, and quarterly editorial roadmap.
+            Diátaxis documentation audit report, developer journey mapping, content gap analysis matrix, and quarterly
+            editorial roadmap.
           </div>
         </div>
 
@@ -803,11 +972,13 @@
           <span class="collab-icon">⚙️</span>
           <h3 class="collab-title" style="color:var(--gold);">05. Editorial Workflows &amp; Verification CI</h3>
           <p class="collab-desc">
-            Consulting engineering and content teams on adopting AI-native technical workflows, automated code snippet verification pipelines, reproducible test sandboxes, and rigorous editorial quality standards.
+            Consulting engineering and content teams on adopting AI-native technical workflows, automated code snippet
+            verification pipelines, reproducible test sandboxes, and rigorous editorial quality standards.
           </p>
           <div class="collab-deliverables">
             <div class="deliverables-title">Key Deliverables:</div>
-            Automated CI snippet verification scripts (GitHub Actions), syntax/runtime testing harnesses, and style guide documentation.
+            Automated CI snippet verification scripts (GitHub Actions), syntax/runtime testing harnesses, and style
+            guide documentation.
           </div>
         </div>
 
@@ -817,11 +988,13 @@
           <span class="collab-icon">✍️</span>
           <h3 class="collab-title" style="color:var(--cyan);">06. High-Authority Guest Publications</h3>
           <p class="collab-desc">
-            Deeply technical, research-grounded articles and architectural perspectives written under my byline for publication on your corporate engineering blog, Medium publication, Substack, or industry journals.
+            Deeply technical, research-grounded articles and architectural perspectives written under my byline for
+            publication on your corporate engineering blog, Medium publication, Substack, or industry journals.
           </p>
           <div class="collab-deliverables">
             <div class="deliverables-title">Key Deliverables:</div>
-            2,500–5,000 word technical deep dive, custom Mermaid architectural diagrams, verified code repositories, and publication rights.
+            2,500–5,000 word technical deep dive, custom Mermaid architectural diagrams, verified code repositories, and
+            publication rights.
           </div>
         </div>
 
@@ -831,11 +1004,13 @@
           <span class="collab-icon">👥</span>
           <h3 class="collab-title" style="color:var(--violet);">07. Joint Technical Collaboration</h3>
           <p class="collab-desc">
-            Collaborative engineering investigations, co-authored architectural teardowns, performance benchmarks, and joint case studies cross-promoted across developer ecosystems and social platforms.
+            Collaborative engineering investigations, co-authored architectural teardowns, performance benchmarks, and
+            joint case studies cross-promoted across developer ecosystems and social platforms.
           </p>
           <div class="collab-deliverables">
             <div class="deliverables-title">Key Deliverables:</div>
-            Co-authored technical teardown, reproducible benchmark methodology repo, coordinated release schedule, and dual distribution.
+            Co-authored technical teardown, reproducible benchmark methodology repo, coordinated release schedule, and
+            dual distribution.
           </div>
         </div>
 
@@ -845,11 +1020,14 @@
           <span class="collab-icon">📬</span>
           <h3 class="collab-title" style="color:var(--gold);">08. Sponsored Deep Dives in Newsletter</h3>
           <p class="collab-desc">
-            Dedicated deep-dive feature issues, sponsored architectural breakdowns, and curated technical spotlights delivered directly to high-intent AI researchers, software engineers, and founders via *The Digital Futurist*.
+            Dedicated deep-dive feature issues, sponsored architectural breakdowns, and curated technical spotlights
+            delivered directly to high-intent AI researchers, software engineers, and founders via *The Digital
+            Futurist*.
           </p>
           <div class="collab-deliverables">
             <div class="deliverables-title">Key Deliverables:</div>
-            1 dedicated deep-dive issue (2,000+ words), primary sponsor banner, permanent web archive placement, and social distribution.
+            1 dedicated deep-dive issue (2,000+ words), primary sponsor banner, permanent web archive placement, and
+            social distribution.
           </div>
         </div>
 
@@ -859,11 +1037,13 @@
           <span class="collab-icon">📖</span>
           <h3 class="collab-title" style="color:var(--cyan);">09. Open Source Documentation Suites</h3>
           <p class="collab-desc">
-            Production-grade documentation ecosystems, comprehensive API references, runnable quickstart guides, architectural diagrams, and contributor onboarding docs for open-source frameworks and SDKs.
+            Production-grade documentation ecosystems, comprehensive API references, runnable quickstart guides,
+            architectural diagrams, and contributor onboarding docs for open-source frameworks and SDKs.
           </p>
           <div class="collab-deliverables">
             <div class="deliverables-title">Key Deliverables:</div>
-            Full Diátaxis restructuring (Tutorials, How-Tos, Reference, Explanation), runnable quickstarts, OpenAPI/Swagger alignment.
+            Full Diátaxis restructuring (Tutorials, How-Tos, Reference, Explanation), runnable quickstarts,
+            OpenAPI/Swagger alignment.
           </div>
         </div>
 
@@ -873,11 +1053,13 @@
           <span class="collab-icon">🛠️</span>
           <h3 class="collab-title" style="color:var(--gold);">10. Enterprise Training Materials &amp; Kits</h3>
           <p class="collab-desc">
-            Comprehensive corporate upskilling collateral, including keynote slide decks, hands-on lab notebooks, runnable starter codebases, cheat sheets, and evaluation rubrics for enterprise engineering teams.
+            Comprehensive corporate upskilling collateral, including keynote slide decks, hands-on lab notebooks,
+            runnable starter codebases, cheat sheets, and evaluation rubrics for enterprise engineering teams.
           </p>
           <div class="collab-deliverables">
             <div class="deliverables-title">Key Deliverables:</div>
-            Editable presentation slides, containerized lab environments (Docker/Dev Containers), interactive problem sets, and cheat sheets.
+            Editable presentation slides, containerized lab environments (Docker/Dev Containers), interactive problem
+            sets, and cheat sheets.
           </div>
         </div>
 
@@ -887,11 +1069,13 @@
           <span class="collab-icon">🎬</span>
           <h3 class="collab-title" style="color:var(--violet);">11. Interactive Course Curriculum Authoring</h3>
           <p class="collab-desc">
-            End-to-end curriculum authoring, step-by-step coding walkthroughs, verified GitHub repositories, and interactive problem sets designed for online academies, bootcamps, and technical learning platforms.
+            End-to-end curriculum authoring, step-by-step coding walkthroughs, verified GitHub repositories, and
+            interactive problem sets designed for online academies, bootcamps, and technical learning platforms.
           </p>
           <div class="collab-deliverables">
             <div class="deliverables-title">Key Deliverables:</div>
-            Complete syllabus outline, script &amp; lesson text, milestone repository with automated test evaluation, and project rubrics.
+            Complete syllabus outline, script &amp; lesson text, milestone repository with automated test evaluation,
+            and project rubrics.
           </div>
         </div>
 
@@ -901,11 +1085,13 @@
           <span class="collab-icon">✒️</span>
           <h3 class="collab-title" style="color:var(--red);">12. Editorial Integrity (No Ghostwriting)</h3>
           <p class="collab-desc">
-            Strict editorial integrity policy: all commissioned technical write-ups, benchmarks, and guides carry my authentic byline and author attribution; ghostwritten marketing pieces are never accepted.
+            Strict editorial integrity policy: all commissioned technical write-ups, benchmarks, and guides carry my
+            authentic byline and author attribution; ghostwritten marketing pieces are never accepted.
           </p>
           <div class="collab-deliverables">
             <div class="deliverables-title">Why This Matters:</div>
-            Authentic domain expert bylines build deep developer credibility and trust that anonymous or ghostwritten marketing copy can never deliver.
+            Authentic domain expert bylines build deep developer credibility and trust that anonymous or ghostwritten
+            marketing copy can never deliver.
           </div>
         </div>
 
@@ -920,7 +1106,8 @@
         <p class="section-label">Execution Framework</p>
         <h2 class="section-title">How We Collaborate: <span class="accent-gold">8-Step Lifecycle</span></h2>
         <p class="section-sub" style="max-width:760px;margin:0.75rem auto;">
-          A transparent, predictable process with Unlimited Revisions, 60-Day Free Modifications, and live code verification.
+          A transparent, predictable process with Unlimited Revisions, 60-Day Free Modifications, and live code
+          verification.
         </p>
       </div>
 
@@ -930,7 +1117,8 @@
           <div class="step-number">01</div>
           <h3 class="step-heading">Scope &amp; Technical Briefing</h3>
           <p class="step-body">
-            We align on engineering objectives, audience depth, and deliverables via an async intake brief or a focused 30-minute scoping discussion.
+            We align on engineering objectives, audience depth, and deliverables via an async intake brief or a focused
+            30-minute scoping discussion.
           </p>
         </div>
 
@@ -939,7 +1127,8 @@
           <div class="step-number">02</div>
           <h3 class="step-heading">Milestone Agreement &amp; 6 Payment Tiers</h3>
           <p class="step-body">
-            Transparent proposal with fixed deliverables across 6 payment tiers — including Tier 4 for Startups (50% off) and Tier 6 for third-world countries and underprivileged individuals (75% off).
+            Transparent proposal with fixed deliverables across 6 payment tiers — including Tier 4 for Startups (50%
+            off) and Tier 6 for third-world countries and underprivileged individuals (75% off).
           </p>
         </div>
 
@@ -948,7 +1137,8 @@
           <div class="step-number">03</div>
           <h3 class="step-heading">Primary Research &amp; Architecture</h3>
           <p class="step-body">
-            Frontier AI accelerates literature synthesis and structural drafting, followed by outline review, architectural diagrams, and Diátaxis structure alignment.
+            Frontier AI accelerates literature synthesis and structural drafting, followed by outline review,
+            architectural diagrams, and Diátaxis structure alignment.
           </p>
         </div>
 
@@ -957,7 +1147,8 @@
           <div class="step-number">04</div>
           <h3 class="step-heading">Live Sandbox Code Verification</h3>
           <p class="step-body">
-            Every code artifact, API request, and quantum circuit is executed in live Python REPLs, <code>cargo test</code>, <code>go test</code>, or Mojo test harnesses with real output logs.
+            Every code artifact, API request, and quantum circuit is executed in live Python REPLs,
+            <code>cargo test</code>, <code>go test</code>, or Mojo test harnesses with real output logs.
           </p>
         </div>
 
@@ -966,7 +1157,8 @@
           <div class="step-number">05</div>
           <h3 class="step-heading" style="color: var(--gold);">Unlimited Revisions</h3>
           <p class="step-body">
-            Continuous, collaborative iteration on every technical draft, architectural schematic, and repository until your engineering leadership is 100% satisfied.
+            Continuous, collaborative iteration on every technical draft, architectural schematic, and repository until
+            your engineering leadership is 100% satisfied.
           </p>
         </div>
 
@@ -975,7 +1167,8 @@
           <div class="step-number">06</div>
           <h3 class="step-heading">Milestone Sign-Off &amp; IP Transfer</h3>
           <p class="step-body">
-            Full commercial publication rights, copyright transfer, and clean repository handover granted immediately upon milestone sign-off with authentic byline attribution.
+            Full commercial publication rights, copyright transfer, and clean repository handover granted immediately
+            upon milestone sign-off with authentic byline attribution.
           </p>
         </div>
 
@@ -984,7 +1177,8 @@
           <div class="step-number">07</div>
           <h3 class="step-heading">Multi-Platform Launch &amp; Distribution</h3>
           <p class="step-body">
-            Final deliverables are published with active cross-promotion across developer social networks, Substack (*The Digital Futurist*), HackerNoon, and LinkedIn.
+            Final deliverables are published with active cross-promotion across developer social networks, Substack
+            (*The Digital Futurist*), HackerNoon, and LinkedIn.
           </p>
         </div>
 
@@ -993,7 +1187,8 @@
           <div class="step-number">08</div>
           <h3 class="step-heading" style="color: var(--cyan);">60-Day Free Modifications</h3>
           <p class="step-body">
-            Continued post-launch peace of mind with 60 days of free minor code patches, upstream SDK breaking-change updates, and ongoing technical maintenance.
+            Continued post-launch peace of mind with 60 days of free minor code patches, upstream SDK breaking-change
+            updates, and ongoing technical maintenance.
           </p>
         </div>
       </div>
@@ -1016,7 +1211,8 @@
           <div class="audience-icon">🤖</div>
           <h3 class="audience-title">GenAI &amp; LLM Toolmakers</h3>
           <p class="audience-desc">
-            RAG infrastructure, agentic frameworks, fine-tuning platforms, and vector databases seeking authoritative technical documentation and developer tutorials.
+            RAG infrastructure, agentic frameworks, fine-tuning platforms, and vector databases seeking authoritative
+            technical documentation and developer tutorials.
           </p>
         </div>
 
@@ -1024,7 +1220,8 @@
           <div class="audience-icon">⚛️</div>
           <h3 class="audience-title">Quantum SDK &amp; Hardware Vendors</h3>
           <p class="audience-desc">
-            Quantum computing platforms, QML framework authors, and post-quantum security providers needing algorithm walkthroughs and executive briefings.
+            Quantum computing platforms, QML framework authors, and post-quantum security providers needing algorithm
+            walkthroughs and executive briefings.
           </p>
         </div>
 
@@ -1032,7 +1229,8 @@
           <div class="audience-icon">⚡</div>
           <h3 class="audience-title">AI Infrastructure &amp; Compute Platforms</h3>
           <p class="audience-desc">
-            GPU cloud providers, model serving engines (vLLM, Ollama, TensorRT-LLM), and inference acceleration runtimes requiring benchmark teardowns and architecture guides.
+            GPU cloud providers, model serving engines (vLLM, Ollama, TensorRT-LLM), and inference acceleration runtimes
+            requiring benchmark teardowns and architecture guides.
           </p>
         </div>
 
@@ -1040,7 +1238,8 @@
           <div class="audience-icon">🏢</div>
           <h3 class="audience-title">Enterprise Engineering &amp; Systems Teams</h3>
           <p class="audience-desc">
-            Engineering departments in high-stakes industries navigating private enterprise LLMs, Post-Quantum Cryptography (PQC) audits, or high-performance Rust systems.
+            Engineering departments in high-stakes industries navigating private enterprise LLMs, Post-Quantum
+            Cryptography (PQC) audits, or high-performance Rust systems.
           </p>
         </div>
 
@@ -1048,7 +1247,8 @@
           <div class="audience-icon">🎓</div>
           <h3 class="audience-title">Technical EdTech &amp; Developer Media</h3>
           <p class="audience-desc">
-            Developer publications, online academies, and technical learning platforms seeking production-verified curricula, interactive coding labs, and course authoring.
+            Developer publications, online academies, and technical learning platforms seeking production-verified
+            curricula, interactive coding labs, and course authoring.
           </p>
         </div>
 
@@ -1056,15 +1256,8 @@
           <div class="audience-icon">🚀</div>
           <h3 class="audience-title" style="color: #fbbf24;">Tier 4: Developer Tool Startups (50% Off)</h3>
           <p class="audience-desc">
-            Pre-seed, seed-stage, and bootstrapped engineering startups building developer momentum. Eligible for <strong>50% off standard rates</strong> under Startup Enablement.
-          </p>
-        </div>
-
-        <div class="audience-card" style="border-color: #00d2ff;">
-          <div class="audience-icon">🌍</div>
-          <h3 class="audience-title" style="color: #00d2ff;">Tier 6: Third-World &amp; Underprivileged (75% Off)</h3>
-          <p class="audience-desc">
-            Dedicated <strong>75% discount</strong> for engineering teams, startups, researchers, and underprivileged individuals in third-world countries to ensure universal access to world-class technical education.
+            Pre-seed, seed-stage, and bootstrapped engineering startups building developer momentum. Eligible for
+            <strong>50% off standard rates</strong> under Startup Enablement.
           </p>
         </div>
 
@@ -1072,9 +1265,20 @@
           <div class="audience-icon">🏛️</div>
           <h3 class="audience-title">Tier 5: Non-Profits &amp; Academia</h3>
           <p class="audience-desc">
-            Open research initiatives, educational institutions, universities, and mission-driven open-source communities supported through subsidized custom pricing.
+            Open research initiatives, educational institutions, universities, and mission-driven open-source
+            communities supported through subsidized custom pricing.
           </p>
         </div>
+
+        <div class="audience-card" style="border-color: #00d2ff;">
+          <div class="audience-icon">🌍</div>
+          <h3 class="audience-title" style="color: #00d2ff;">Tier 6: Third-World &amp; Underprivileged (75% Off)</h3>
+          <p class="audience-desc">
+            Dedicated <strong>75% discount</strong> for engineering teams, startups, researchers, and underprivileged
+            individuals in third-world countries to ensure universal access to world-class technical education.
+          </p>
+        </div>
+
       </div>
     </section>
 
@@ -1094,42 +1298,52 @@
         <div class="faq-card">
           <h3 class="faq-question">How quickly can an engagement start?</h3>
           <p class="faq-answer">
-            Single engagements and workshops can typically be scheduled within 5 to 10 business days of scope approval. Monthly retainers and multi-part educational curricula are scheduled based on current sprint capacity.
+            Single engagements and workshops can typically be scheduled within 5 to 10 business days of scope approval.
+            Monthly retainers and multi-part educational curricula are scheduled based on current sprint capacity.
           </p>
         </div>
 
         <div class="faq-card">
           <h3 class="faq-question">What communication channels do you support?</h3>
           <p class="faq-answer">
-            Communication is conducted asynchronously via shared Slack or Discord channels, email, and GitHub Pull Requests. For live training, interactive sessions are hosted on Zoom, Google Meet, or Microsoft Teams.
+            Communication is conducted asynchronously via shared Slack or Discord channels, email, and GitHub Pull
+            Requests. For live training, interactive sessions are hosted on Zoom, Google Meet, or Microsoft Teams.
           </p>
         </div>
 
         <div class="faq-card">
           <h3 class="faq-question">How does runtime code verification work?</h3>
           <p class="faq-answer">
-            Every code sample included in tutorials, documentation, and training modules is tested in live execution environments (Python REPLs, <code>cargo test</code> sandboxes, <code>go test</code> suites, or Mojo test runners) before delivery.
+            Every code sample included in tutorials, documentation, and training modules is tested in live execution
+            environments (Python REPLs, <code>cargo test</code> sandboxes, <code>go test</code> suites, or Mojo test
+            runners) before delivery.
           </p>
         </div>
 
         <div class="faq-card">
           <h3 class="faq-question">Who owns the intellectual property (IP)?</h3>
           <p class="faq-answer">
-            Upon milestone payment completion, full commercial publication rights to the commissioned technical deliverables transfer to your organization, with author byline attribution preserved under our editorial policy.
+            Upon milestone payment completion, full commercial publication rights to the commissioned technical
+            deliverables transfer to your organization, with author byline attribution preserved under our editorial
+            policy.
           </p>
         </div>
 
         <div class="faq-card">
           <h3 class="faq-question">Do you accept ghostwriting commissions?</h3>
           <p class="faq-answer">
-            No. I operate under a strict editorial integrity policy: all articles, guides, and technical benchmarks carry my authentic byline. This preserves developer trust and maximizes authentic social and domain authority.
+            No. I operate under a strict editorial integrity policy: all articles, guides, and technical benchmarks
+            carry my authentic byline. This preserves developer trust and maximizes authentic social and domain
+            authority.
           </p>
         </div>
 
         <div class="faq-card">
           <h3 class="faq-question">What are the 6 Tiers of Payment?</h3>
           <p class="faq-answer">
-            Pricing is organized across 6 tiers of payment: Tier 1 Developed Nations (100%), Tier 2 Developing Nations (75%), Tier 3 Least Developed Nations (50%), Tier 4 Startups (50% off), Tier 5 Non-Profits &amp; Academia (subsidized custom rates), and Tier 6 Third-World Countries &amp; Underprivileged Individuals (75% off).
+            Pricing is organized across 6 tiers of payment: Tier 1 Developed Nations (100%), Tier 2 Developing Nations
+            (75%), Tier 3 Least Developed Nations (50%), Tier 4 Startups (50% off), Tier 5 Non-Profits &amp; Academia
+            (subsidized custom rates), and Tier 6 Third-World Countries &amp; Underprivileged Individuals (75% off).
           </p>
         </div>
       </div>
@@ -1147,23 +1361,24 @@
         </h2>
         <p class="section-sub"
           style="max-width: 680px; margin: 0 auto 2rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.75;">
-          Whether you need a live corporate masterclass, a dedicated content sprint retainer, or an end-to-end Diátaxis documentation architecture, let's discuss your engineering milestones.
+          Whether you need a live corporate masterclass, a dedicated content sprint retainer, or an end-to-end Diátaxis
+          documentation architecture, let's discuss your engineering milestones.
         </p>
 
         <div style="display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
-          <a href="contact.html" class="btn btn-commission" style="padding: 0.95rem 2rem; font-size: 0.95rem;">
+          <a href="contact.html" class="btn btn-commission top-hero-btn" style="padding: 0.95rem 2rem; font-size: 0.95rem;">
             Initiate Collaboration Brief →
           </a>
-          <a href="https://linkedin.com/in/thomascherickal" target="_blank" rel="noopener" class="btn btn-linkedin"
+          <a href="https://linkedin.com/in/thomascherickal" target="_blank" rel="noopener" class="btn btn-linkedin top-hero-btn"
             style="padding: 0.95rem 2rem; font-size: 0.95rem;">
             Free LinkedIn Consultation ↗
           </a>
-          <a href="https://topmate.io/thomascherickal" target="_blank" rel="noopener" class="btn"
-            style="background: rgba(228, 67, 50, 0.15); border: 1px solid #e44332; color: #ffffff; padding: 0.95rem 2rem; font-size: 0.95rem;">
+          <a href="https://topmate.io/thomascherickal" target="_blank" rel="noopener" class="btn btn-topmate top-hero-btn"
+            style="padding: 0.95rem 2rem; font-size: 0.95rem;">
             Book 1:1 Advisory on Topmate ↗
           </a>
-          <a href="pricing.html" class="btn"
-            style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-gold); color: var(--text-primary); padding: 0.95rem 2rem; font-size: 0.95rem;">
+          <a href="pricing.html" class="btn btn-pricing-cta top-hero-btn"
+            style="padding: 0.95rem 2rem; font-size: 0.95rem;">
             Check Milestone Pricing →
           </a>
         </div>
