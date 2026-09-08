@@ -41,7 +41,7 @@
             var lowerPage = page ? page.toLowerCase() : '';
             if (
               lowerHref === lowerPage || 
-              (lowerPage === 'index.html' && (lowerHref === 'index.html' || lowerHref === './')) ||
+              (lowerPage === 'index.html' && (lowerHref === 'index.html' || lowerHref === './' || lowerHref === '/')) ||
               (lowerPage.startsWith('service-') && lowerHref === 'services.html')
             ) {
               link.classList.add('active');
