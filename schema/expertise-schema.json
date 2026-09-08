@@ -56,7 +56,7 @@
           "name": "What are your core technical capabilities across AI and Quantum Systems?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Capabilities span 12 specialized roles: AI Agent Orchestration, Quantum Computing & QML (IBM Qiskit, PennyLane), LLM & Agent Systems (RAG, agentic workflows), Post-Quantum & Quantum Risk, Local & Private AI (Ollama, LM Studio, llama.cpp), Python AI Engineer (PyTorch, FastAPI, LangChain), Go Cloud Engineer (Gin, gRPC, high-concurrency microservices), Rust Systems Engineer (Tokio, Candle, Burn, PyO3), Developer Education, Technical Deep Dives, AI Tools Expertise, and Documentation Architecture (Diátaxis)."
+            "text": "Capabilities span 12 specialized roles: AI Agent Orchestration, Quantum Computing & QML (IBM Qiskit, PennyLane), LLM & Agent Systems (RAG, agentic workflows), Post-Quantum & Quantum Risk, Local & Private AI (Ollama, LM Studio, llama.cpp), Python AI Engineer (PyTorch, FastAPI, LangChain), Go Cloud Engineer (Gin, gRPC, high-concurrency microservices), Rust Systems Engineer (Tokio, Candle, Burn, PyO3), Developer Education, Mojo Documentation Specialist (MAX Engine, SIMD, MAX Graph), Executive Advisory, and Documentation Architecture (Diátaxis)."
           }
         },
         {
@@ -64,7 +64,7 @@
           "name": "How are code samples and quantum circuits tested before publication?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Code samples are executed in real Python REPLs, Golang test suites, or Rust cargo test sandboxes before inclusion in deliverables. Quantum algorithms are run against Qiskit's Aer simulator or real IBM Quantum hardware, and actual measured execution outputs are published."
+            "text": "Code samples are executed in real Python REPLs, Golang test suites, Rust cargo test, or Mojo test sandboxes before inclusion in deliverables. Quantum algorithms are run against Qiskit's Aer simulator or real IBM Quantum hardware, and actual measured execution outputs are published."
           }
         },
         {
@@ -80,7 +80,7 @@
           "name": "How does your workflow address AI hallucinations in technical documentation?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "By grounding deliverables in human technical judgment, primary-source research papers, and mandatory runtime verification. Code samples are executed in Python, Golang, and Rust sandboxes, and quantum circuits are tested in Qiskit Aer simulators before release."
+            "text": "By grounding deliverables in human technical judgment, primary-source research papers, and mandatory runtime verification. Code samples are executed in Python, Golang, Rust, and Mojo sandboxes, and quantum circuits are tested in Qiskit Aer simulators before release."
           }
         }
       ]
@@ -177,7 +177,7 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Languages I Code & Write In",
-          "description": "Python, Golang, Rust, SQL"
+          "description": "Python, Golang, Rust, Mojo, SQL"
         },
         {
           "@type": "ListItem",
@@ -206,26 +206,26 @@
         {
           "@type": "ListItem",
           "position": 6,
-          "name": "Verification & Execution",
-          "description": "pytest / cargo test, Qiskit Aer Simulator, Docker, Runtime-Verified Examples"
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "name": "Python AI Engineer",
+          "name": "Python AI Stack",
           "description": "PyTorch, FastAPI, LangChain, NumPy"
         },
         {
           "@type": "ListItem",
-          "position": 8,
-          "name": "Go Cloud Engineer",
+          "position": 7,
+          "name": "Go Cloud Stack",
           "description": "Google Cloud Platform, Gin, gRPC, Go Concurrency"
         },
         {
           "@type": "ListItem",
-          "position": 9,
-          "name": "Rust Systems Engineer",
+          "position": 8,
+          "name": "Rust Systems Stack",
           "description": "Tokio, Candle, Burn, PyO3"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Mojo AI Systems Stack",
+          "description": "MAX Engine, MAX Graph, Mojo SIMD, Python Interop, Lightbug"
         },
         {
           "@type": "ListItem",

@@ -18,7 +18,7 @@
 ---
 
 ## Bio
-With a post-graduate degree in Computer Science from Loyola College and an established career as an online Emerging Technologies Educator and Domain Expert in Generative AI and Quantum Computing, I sit directly in the intersection of frontier emerging technology domains. I author authoritative Diátaxis technical documentation, design training programs, provide executive advisory, and produce deep dives where every Python, Golang, or Rust script and Quantum circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. 
+With a post-graduate degree in Computer Science from Loyola College and an established career as an online Emerging Technologies Educator and Domain Expert in Generative AI and Quantum Computing, I sit directly in the intersection of frontier emerging technology domains. I author authoritative Diátaxis technical documentation, design training programs, provide executive advisory, and produce deep dives where every Python, Golang, Rust, or Mojo script and Quantum circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. 
 
 > **Important Positioning Note**: I operate as an educator and domain expert in Generative AI and Quantum Computing—I do not develop custom production codebases or software applications for hire. I deliver world-class documentation, training courses, advisory roadmaps, and working, tested code artifacts.
 
@@ -26,7 +26,7 @@ With a post-graduate degree in Computer Science from Loyola College and an estab
 **AI accelerates the workflow. Human verification owns the result.**
 1. **Research and source discovery**: Primary arXiv papers, documentation archives, hardware specifications.
 2. **Structural drafting**: Pedagogical structure, outline stress-testing, Diátaxis modularization.
-3. **Executable implementation**: Production-grade code artifacts in Python, Golang, Rust, and Qiskit.
+3. **Executable implementation**: Production-grade code artifacts in Python, Golang, Rust, Mojo, and Qiskit.
 4. **Runtime verification**: Live sandbox execution, test suites, and quantum simulators/hardware.
 5. **Human technical/editorial judgment**: Single-point intellectual accountability and domain precision.
 
@@ -90,7 +90,7 @@ All technical documentation deliverables follow the Diátaxis framework structur
 
 ## Tech Stack & Tooling
 
-- **💻 Languages (for verification & code artifacts)**: Python, Golang, Rust, SQL, JavaScript, Bash
+- **💻 Languages (for verification & code artifacts)**: Python, Golang, Rust, Mojo, SQL, JavaScript, Bash
 - **🧠 Generative AI Systems**: LLMs, SLMs, Agentic AI, RAG, Vector Databases, Remote & Live GenAI Training
 - **⚛️ Quantum Systems**: IBM Qiskit, PennyLane, Quantum Machine Learning, Quantum Algorithms, Microsoft Q# / Quantinuum
 - **🤖 AI Tools Expertise**: Claude Code, Google Antigravity, Google AI Studio, Gemini Notebook, CodeWiki
@@ -106,7 +106,7 @@ All technical documentation deliverables follow the Diátaxis framework structur
 
 Most developer content in Generative AI and Quantum Computing suffers from one of two flaws: it is either delivered by brilliant physicists and engineers who lack educational clarity, or by generalist writers who cannot execute the code they document.
 
-With a post-graduate degree in Computer Science, extensive technical training experience, and deep domain mastery across Generative AI and Quantum Systems, I operate as an educator, consultant, and documentation specialist rather than a production software developer. I bridge the gap between engineering complexity and stakeholder comprehension — delivering training workshops, executive advisory, and Diátaxis-structured technical documentation where every Python, Golang, or Rust script and Quantum circuit is run and verified before publication.
+With a post-graduate degree in Computer Science, extensive technical training experience, and deep domain mastery across Generative AI and Quantum Systems, I operate as an educator, consultant, and documentation specialist rather than a production software developer. I bridge the gap between engineering complexity and stakeholder comprehension — delivering training workshops, executive advisory, and Diátaxis-structured technical documentation where every Python, Golang, Rust, or Mojo script and Quantum circuit is run and verified before publication.
 
 ---
 
@@ -134,7 +134,7 @@ I use frontier AI tools for research, synthesis, exploration, ideation, and edit
 5. Single-point intellectual responsibility for every deliverable
 
 ### 4. Verification
-1. Executing Python, Golang, and Rust code in isolated sandbox environments
+1. Executing Python, Golang, Rust, and Mojo code in isolated sandbox environments
 2. Testing quantum circuits in Qiskit Aer simulators or on real IBM Quantum hardware
 3. Validating REST, gRPC, and WebSocket endpoints against live servers
 4. Tracing comparative benchmark claims directly to verifiable primary sources

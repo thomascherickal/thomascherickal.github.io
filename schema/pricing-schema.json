@@ -5,8 +5,8 @@
       "@type": "WebPage",
       "@id": "https://thomascherickal.github.io/pricing.html#webpage",
       "url": "https://thomascherickal.github.io/pricing.html",
-      "name": "Services Pricing & Purchasing Power Parity Index — Thomas Cherickal",
-      "description": "Transparent milestone pricing for 4 strategic packages (Single Engagement, Fortnightly Sprint, Monthly Sprint, Enterprise Partner) and 12 specialized service offerings across Generative AI, Quantum Computing, and Systems Architecture adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%), Tier 4 Startups (50% Off), Tier 5 Custom Pricing (Non-Profits, Educational Institutions, Underprivileged Clients).",
+      "name": "Services Pricing & Engagement Packages — Thomas Cherickal",
+      "description": "Transparent milestone pricing across 6 core pillars: 01 Technical Training, 02 Technical Documentation, 03 Technical Advisory, 04 Dedicated Sprints & Retainers, 05 Startup Enablement (50% Off), and 06 Global Equity & Custom Pricing (Purchasing Power Parity for 198 countries, Non-Profits, and Underprivileged Teams).",
       "isPartOf": {
         "@id": "https://thomascherickal.github.io/#website"
       },
@@ -31,7 +31,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Pricing & Country Parity Index",
+          "name": "Pricing & Rates",
           "item": "https://thomascherickal.github.io/pricing.html"
         }
       ]
@@ -39,8 +39,8 @@
     {
       "@type": "OfferCatalog",
       "@id": "https://thomascherickal.github.io/pricing.html#offercatalog",
-      "name": "Services Pricing & Purchasing Power Parity Index — Thomas Cherickal",
-      "description": "Transparent milestone pricing for 4 strategic engagement packages and 12 service offerings: emerging technologies education, training in GenAI & Quantum Computing, AI agent orchestration, post-quantum cryptography, Rust for AI, and quantum developer content adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%), Tier 4 Startups (50% Off), Tier 5 Custom Pricing (Non-Profits, Educational Institutions, Underprivileged Clients).",
+      "name": "Services Pricing & 6-Pillar Engagement Packages — Thomas Cherickal",
+      "description": "Transparent milestone pricing across 6 core pillars: 01 Technical Training, 02 Technical Documentation, 03 Technical Advisory, 04 Dedicated Sprints & Retainers, 05 Startup Enablement (50% Off), and 06 Global Equity & Custom Pricing (Purchasing Power Parity for 198 countries, Non-Profits, and Underprivileged Teams).",
       "url": "https://thomascherickal.github.io/pricing.html",
       "offeredBy": {
         "@id": "https://thomascherickal.github.io/#person"
@@ -48,8 +48,19 @@
       "itemListElement": [
         {
           "@type": "Offer",
-          "name": "Single Engagement (Tier 1)",
-          "description": "One high-impact technical deep dive (2,000–5,000 words) or intensive virtual workshop with runtime-verified code.",
+          "name": "01 — Technical Training",
+          "description": "Interactive live virtual workshops, corporate bootcamps, developer courses, and runnable Jupyter notebook labs in Generative AI, agentic systems, and Quantum Computing SDKs.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "2000.00",
+            "maxPrice": "3500.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "02 — Technical Documentation",
+          "description": "Authoritative Diátaxis technical documentation, deep dives (2,000–8,000 words), tutorials, references, architecture blueprints, and runtime-verified code in Python, Golang, Rust, and Mojo.",
           "priceSpecification": {
             "@type": "PriceSpecification",
             "price": "2000.00",
@@ -58,163 +69,44 @@
         },
         {
           "@type": "Offer",
-          "name": "Fortnightly Sprint (Tier 2 · Value for Money)",
-          "description": "2-week dedicated sprint: 1 long-form technical deep dive + 1 hands-on workshop/how-to guide with runtime-verified code and async channel access.",
+          "name": "03 — Technical Advisory",
+          "description": "AI systems architecture reviews, executive briefings, Post-Quantum Cryptography (PQC) transition roadmaps, and strategic technology radar guidance for leadership.",
           "priceSpecification": {
             "@type": "PriceSpecification",
-            "price": "3000.00",
+            "minPrice": "2500.00",
+            "maxPrice": "4000.00",
             "priceCurrency": "USD"
           }
         },
         {
           "@type": "Offer",
-          "name": "Monthly Sprint (Tier 3 · Most Popular)",
-          "description": "Dedicated monthly engineering capacity: 2 long-form technical deep dives, 1 workshop/tutorial series, full Diataxis docs, and weekly syncs.",
+          "name": "04 — Dedicated Sprints & Retainers",
+          "description": "Dedicated engineering capacity and rapid turnaround: Fortnightly Sprints ($3,000/2-wks), Monthly Retainers ($5,000/mo), and Enterprise Quarterly Retainers ($12,000/qtr) with private Slack/Discord channel access.",
           "priceSpecification": {
             "@type": "PriceSpecification",
-            "price": "5000.00",
+            "minPrice": "3000.00",
+            "maxPrice": "12000.00",
             "priceCurrency": "USD"
           }
         },
         {
           "@type": "Offer",
-          "name": "Enterprise & Embedded Partner (Tier 4)",
-          "description": "Quarterly strategic advisory anchor: complete documentation engine, monthly executive briefings, unlimited workshops, and <4h async SLA.",
+          "name": "05 — Startup Enablement (50% Off)",
+          "description": "Flat 50% discount on any of the above offerings (Technical Training, Documentation, Advisory, or Dedicated Retainers) for Pre-Seed, Seed-stage, and bootstrapped startups.",
           "priceSpecification": {
             "@type": "PriceSpecification",
-            "price": "12000.00",
+            "minPrice": "1000.00",
+            "maxPrice": "6000.00",
             "priceCurrency": "USD"
           }
         },
         {
           "@type": "Offer",
-          "name": "Training in Generative AI",
-          "description": "Interactive live virtual training, custom corporate workshops, LLM & agent architecture bootcamps, prompt engineering frameworks, and hands-on lab sessions.",
+          "name": "06 — Global Equity & Custom Pricing",
+          "description": "Purchasing Power Parity discounts (Tier 1: 100%, Tier 2: 75%, Tier 3: 50%) across 198 countries, with custom subsidized pricing for non-profits, universities, and underprivileged clients.",
           "priceSpecification": {
             "@type": "PriceSpecification",
-            "minPrice": "500.00",
-            "maxPrice": "1000.00",
-            "priceCurrency": "USD"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Training in Quantum Computing",
-          "description": "Interactive live virtual training, custom team workshops, Qiskit & PennyLane labs, Quantum Algorithm (VQE/QAOA) masterclasses, and executive quantum readiness bootcamps.",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "500.00",
-            "maxPrice": "1000.00",
-            "priceCurrency": "USD"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "AI Agent Orchestration (Training & Content)",
-          "description": "Interactive training, masterclasses, and technical content on multi-agent architectures, tool-calling loops, agent swarms, and agentic workflows (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent).",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "400.00",
-            "maxPrice": "800.00",
-            "priceCurrency": "USD"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Technical Deep Dives (Content)",
-          "description": "Long-form technical explainers (2,000\u20138,000 words) featuring original research, architecture breakdown, and verified benchmarks.",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "300.00",
-            "maxPrice": "600.00",
-            "priceCurrency": "USD"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Developer Education (Training & Content)",
-          "description": "Multi-part tutorial series, structured learning paths, and workshop curricula with executable notebooks per module.",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "350.00",
-            "maxPrice": "750.00",
-            "priceCurrency": "USD"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Quantum Developer Content",
-          "description": "IBM Qiskit and PennyLane tutorials, QML explainers, simulator circuit benchmarks, and post-quantum risk briefs.",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "400.00",
-            "maxPrice": "850.00",
-            "priceCurrency": "USD"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Quantum AI & QML (Training & Content)",
-          "description": "Workshops, tutorials, and developer guides for Quantum Neural Networks, Quantum Kernel methods, VQE/QAOA algorithms, and hybrid PyTorch/PennyLane QML.",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "450.00",
-            "maxPrice": "900.00",
-            "priceCurrency": "USD"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Local LLM Deployment (Training & Guides)",
-          "description": "Interactive workshops, step-by-step setup guides, and technical tutorials on quantization, local inference, vLLM, Ollama, GGUF optimization, and private LLM serving.",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "350.00",
-            "maxPrice": "700.00",
-            "priceCurrency": "USD"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Generative AI Dev Content",
-          "description": "RAG pipelines, agentic workflows, prompt engineering frameworks, SLM fine-tuning guides, and developer docs.",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "350.00",
-            "maxPrice": "800.00",
-            "priceCurrency": "USD"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Monthly Content Retainer",
-          "description": "Dedicated monthly sprint capacity for devtools and AI infrastructure companies: priority turnaround, guaranteed content volume, and byline management.",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "500.00",
-            "maxPrice": "1000.00",
-            "priceCurrency": "USD"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Post-Quantum Cryptography & Quantum Risk (Briefings & Training)",
-          "description": "Enterprise quantum readiness audits, threat modeling against RSA/ECC cryptographic infrastructure, NIST post-quantum migration roadmaps (ML-KEM, ML-DSA), and executive briefings.",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "400.00",
-            "maxPrice": "900.00",
-            "priceCurrency": "USD"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Rust for AI & High-Performance Systems (Training & Guides)",
-          "description": "Workshops, production codebases, and deep technical guides for Rust AI inference, Candle & Burn ML tensor engines, PyO3 Python acceleration, and memory-safe Tokio microservices.",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "350.00",
-            "maxPrice": "750.00",
+            "price": "0.00",
             "priceCurrency": "USD"
           }
         }

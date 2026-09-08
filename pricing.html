@@ -404,7 +404,7 @@
 
     .hero-name {
       font-family: var(--font-display);
-      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      font-size: clamp(2.24rem, 6.4vw, 4.4rem);
       font-weight: 800;
       letter-spacing: -0.03em;
       line-height: 1.05;
@@ -421,7 +421,7 @@
 
     .hero-subtitle {
       font-family: var(--font-display);
-      font-size: clamp(1.2rem, 3.5vw, 1.85rem);
+      font-size: clamp(0.96rem, 2.8vw, 1.48rem);
       font-weight: 700;
       color: var(--cyan);
       margin-bottom: 1.2rem;
@@ -4052,7 +4052,7 @@
         "@id": "https://thomascherickal.github.io/pricing.html#webpage",
         "url": "https://thomascherickal.github.io/pricing.html",
         "name": "Services Pricing & Engagement Packages — Thomas Cherickal",
-        "description": "Transparent milestone pricing for 4 strategic packages (Single Engagement, Fortnightly Sprint, Monthly Sprint, Enterprise Partner) and 12 specialized service offerings across Generative AI, Quantum Computing, and Systems Architecture.",
+        "description": "Transparent milestone pricing across 6 core pillars: 01 Technical Training, 02 Technical Documentation, 03 Technical Advisory, 04 Dedicated Sprints & Retainers, 05 Startup Enablement (50% Off), and 06 Global Equity & Custom Pricing (Purchasing Power Parity for 198 countries, Non-Profits, and Underprivileged Teams).",
         "isPartOf": { "@id": "https://thomascherickal.github.io/#website" },
         "inLanguage": "en-US",
         "breadcrumb": { "@id": "https://thomascherickal.github.io/pricing.html#breadcrumb" },
@@ -4069,106 +4069,46 @@
       {
         "@type": "OfferCatalog",
         "@id": "https://thomascherickal.github.io/pricing.html#offercatalog",
-        "name": "Services Pricing & Engagement Packages — Thomas Cherickal",
-        "description": "Transparent milestone pricing for 4 engagement packages and 12 service offerings across emerging technologies education, Generative AI, and Quantum Computing adjusted for 198-country Purchasing Power Parity (PPP). Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%), Tier 4 Startups (50% Off), Tier 5 Custom Pricing (Non-Profits, Educational Institutions, Underprivileged Clients).",
+        "name": "Services Pricing & 6-Pillar Engagement Packages — Thomas Cherickal",
+        "description": "Transparent milestone pricing across 6 core pillars: 01 Technical Training, 02 Technical Documentation, 03 Technical Advisory, 04 Dedicated Sprints & Retainers, 05 Startup Enablement (50% Off), and 06 Global Equity & Custom Pricing (Purchasing Power Parity for 198 countries, Non-Profits, and Underprivileged Teams).",
         "url": "https://thomascherickal.github.io/pricing.html",
         "offeredBy": { "@id": "https://thomascherickal.github.io/#person" },
         "itemListElement": [
           {
             "@type": "Offer",
-            "name": "Single Engagement (Tier 1)",
-            "description": "One high-impact technical deep dive (2,000–5,000 words) or intensive virtual workshop with runtime-verified code.",
+            "name": "01 — Technical Training",
+            "description": "Interactive live virtual workshops, corporate bootcamps, developer courses, and runnable Jupyter notebook labs in Generative AI, agentic systems, and Quantum Computing SDKs.",
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "2000.00", "maxPrice": "3500.00", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "Offer",
+            "name": "02 — Technical Documentation",
+            "description": "Authoritative Diátaxis technical documentation, deep dives (2,000–8,000 words), tutorials, references, architecture blueprints, and runtime-verified code in Python, Golang, Rust, and Mojo.",
             "priceSpecification": { "@type": "PriceSpecification", "price": "2000.00", "priceCurrency": "USD" }
           },
           {
             "@type": "Offer",
-            "name": "Fortnightly Sprint (Tier 2 · Value for Money)",
-            "description": "2-week dedicated sprint: 1 long-form technical deep dive + 1 hands-on workshop/how-to guide with runtime-verified code and async channel access.",
-            "priceSpecification": { "@type": "PriceSpecification", "price": "3000.00", "priceCurrency": "USD" }
+            "name": "03 — Technical Advisory",
+            "description": "AI systems architecture reviews, executive briefings, Post-Quantum Cryptography (PQC) transition roadmaps, and strategic technology radar guidance for leadership.",
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "2500.00", "maxPrice": "4000.00", "priceCurrency": "USD" }
           },
           {
             "@type": "Offer",
-            "name": "Monthly Sprint (Tier 3 · Most Popular)",
-            "description": "Dedicated monthly engineering capacity: 2 long-form technical deep dives, 1 workshop/tutorial series, full Diataxis docs, and weekly syncs.",
-            "priceSpecification": { "@type": "PriceSpecification", "price": "5000.00", "priceCurrency": "USD" }
+            "name": "04 — Dedicated Sprints & Retainers",
+            "description": "Dedicated engineering capacity and rapid turnaround: Fortnightly Sprints ($3,000/2-wks), Monthly Retainers ($5,000/mo), and Enterprise Quarterly Retainers ($12,000/qtr) with private Slack/Discord channel access.",
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "3000.00", "maxPrice": "12000.00", "priceCurrency": "USD" }
           },
           {
             "@type": "Offer",
-            "name": "Enterprise & Embedded Partner (Tier 4)",
-            "description": "Quarterly strategic advisory anchor: complete documentation engine, monthly executive briefings, unlimited workshops, and <4h async SLA.",
-            "priceSpecification": { "@type": "PriceSpecification", "price": "12000.00", "priceCurrency": "USD" }
+            "name": "05 — Startup Enablement (50% Off)",
+            "description": "Flat 50% discount on any of the above offerings (Technical Training, Documentation, Advisory, or Dedicated Retainers) for Pre-Seed, Seed-stage, and bootstrapped startups.",
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1000.00", "maxPrice": "6000.00", "priceCurrency": "USD" }
           },
           {
             "@type": "Offer",
-            "name": "Training in Generative AI",
-            "description": "Interactive live virtual training, custom corporate workshops, LLM & agent architecture bootcamps, prompt engineering frameworks, and hands-on lab sessions.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "2000.00", "maxPrice": "4000.00", "priceCurrency": "USD" }
-          },
-          {
-            "@type": "Offer",
-            "name": "Training in Quantum Computing",
-            "description": "Interactive live virtual training, custom team workshops, Qiskit & PennyLane labs, Quantum Algorithm (VQE/QAOA) masterclasses, and executive quantum readiness bootcamps.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "2000.00", "maxPrice": "4000.00", "priceCurrency": "USD" }
-          },
-          {
-            "@type": "Offer",
-            "name": "AI Agent Orchestration (Training & Content)",
-            "description": "Interactive training, masterclasses, and technical content on multi-agent architectures, tool-calling loops, agent swarms, and agentic workflows (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent).",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500.00", "maxPrice": "3000.00", "priceCurrency": "USD" }
-          },
-          {
-            "@type": "Offer",
-            "name": "Technical Deep Dives (Content)",
-            "description": "Long-form technical explainers (2,000–8,000 words) priced per 1,000 words featuring original research, architecture breakdown, and verified benchmarks.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "800.00", "maxPrice": "1200.00", "priceCurrency": "USD" }
-          },
-          {
-            "@type": "Offer",
-            "name": "Developer Education (Training & Content)",
-            "description": "Multi-part tutorial series, structured learning paths, and workshop curricula with executable notebooks per module.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500.00", "maxPrice": "3000.00", "priceCurrency": "USD" }
-          },
-          {
-            "@type": "Offer",
-            "name": "Quantum Developer Content",
-            "description": "IBM Qiskit and PennyLane tutorials, QML explainers, simulator circuit benchmarks, and post-quantum risk briefs.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500.00", "maxPrice": "3500.00", "priceCurrency": "USD" }
-          },
-          {
-            "@type": "Offer",
-            "name": "Quantum AI & QML (Training & Content)",
-            "description": "Workshops, tutorials, and developer guides for Quantum Neural Networks, Quantum Kernel methods, VQE/QAOA algorithms, and hybrid PyTorch/PennyLane QML.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "2000.00", "maxPrice": "4000.00", "priceCurrency": "USD" }
-          },
-          {
-            "@type": "Offer",
-            "name": "Local LLM Deployment (Training & Guides)",
-            "description": "Interactive workshops, step-by-step setup guides, and technical tutorials on quantization, local inference, vLLM, Ollama, GGUF optimization, and private LLM serving.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500.00", "maxPrice": "3000.00", "priceCurrency": "USD" }
-          },
-          {
-            "@type": "Offer",
-            "name": "Generative AI Dev Content",
-            "description": "RAG pipelines, agentic workflows, prompt engineering frameworks, SLM fine-tuning guides, and developer docs.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500.00", "maxPrice": "3000.00", "priceCurrency": "USD" }
-          },
-          {
-            "@type": "Offer",
-            "name": "Monthly Content Retainer",
-            "description": "Dedicated monthly sprint capacity for devtools and AI infrastructure companies: priority turnaround, guaranteed content volume, and byline management.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "6000.00", "maxPrice": "8000.00", "priceCurrency": "USD" }
-          },
-          {
-            "@type": "Offer",
-            "name": "Post-Quantum Cryptography & Quantum Risk (Briefings & Training)",
-            "description": "Enterprise quantum readiness audits, threat modeling against RSA/ECC cryptographic infrastructure, NIST post-quantum migration roadmaps (ML-KEM, ML-DSA), and executive briefings.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "2000.00", "maxPrice": "4000.00", "priceCurrency": "USD" }
-          },
-          {
-            "@type": "Offer",
-            "name": "Rust for AI & High-Performance Systems (Training & Guides)",
-            "description": "Workshops, production codebases, and deep technical guides for Rust AI inference, Candle & Burn ML tensor engines, PyO3 Python acceleration, and memory-safe Tokio microservices.",
-            "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500.00", "maxPrice": "3000.00", "priceCurrency": "USD" }
+            "name": "06 — Global Equity & Custom Pricing",
+            "description": "Purchasing Power Parity discounts (Tier 1: 100%, Tier 2: 75%, Tier 3: 50%) across 198 countries, with custom subsidized pricing for non-profits, universities, and underprivileged clients.",
+            "priceSpecification": { "@type": "PriceSpecification", "price": "0.00", "priceCurrency": "USD" }
           }
         ]
       }
@@ -4193,324 +4133,432 @@
       <p class="section-label">// PACKAGES &amp; INVESTMENT</p>
       <h1 class="section-title">Packages &amp; <span class="accent-gold">Transparent Pricing</span></h1>
       <p class="section-sub" style="max-width:760px;margin:0.75rem auto 0 auto;line-height:1.8;">
-        High-impact technical deliverables, executive workshops, and dedicated engineering capacity. Human-reviewed technical writing. Runtime-verified code in Python, Golang, and Rust. Every delivered code artifact is runtime-tested before publication.
+        High-impact technical deliverables, executive workshops, and dedicated engineering capacity. Human-reviewed
+        technical writing. Runtime-verified code in Python, Golang, Rust, and Mojo. Every delivered code artifact is
+        runtime-tested before publication.
       </p>
     </section>
 
-    <!-- 4-CARD PACKAGES SECTION -->
-    <section class="reveal" id="packages" style="margin-bottom:3rem;">
+    <!-- 6-PILLAR PRICING SECTION -->
+    <section class="reveal" id="pricing-pillars" style="margin-bottom:3.5rem;">
       <div class="packages-grid"
-        style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.75rem;max-width:1380px;margin:0 auto;padding:0 1.5rem;align-items:stretch;">
+        style="display:grid;grid-template-columns:repeat(auto-fit, minmax(340px, 1fr));gap:2.5rem 2rem;max-width:1380px;margin:0 auto;padding:1rem 1.5rem 0 1.5rem;align-items:stretch;">
 
-        <!-- Tier 1 Package: Single Engagement -->
-        <div class="package-card border-cyan"
-          style="background:linear-gradient(155deg, rgba(8, 25, 45, 0.95) 0%, rgba(3, 7, 18, 0.98) 100%);border:2px solid #00d2ff;border-radius:var(--radius-lg);padding:2.5rem 1.75rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:var(--transition);box-shadow:0 0 26px rgba(0, 210, 255, 0.3), 0 10px 30px rgba(0,0,0,0.7);">
-          <div>
-            <span
-              style="font-size:0.75rem;font-weight:800;letter-spacing:0.07em;margin-bottom:1rem;display:inline-block;background:rgba(0, 210, 255, 0.18);border:1px solid #00d2ff;color:#00f0ff;padding:0.35rem 0.85rem;border-radius:6px;">TIER
-              1 · PROJECT SCOPE</span>
-            <h3 style="font-size:1.55rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">The Single
-              Engagement</h3>
-            <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:1.5rem;line-height:1.6;">One high-impact
-              technical deep dive or team workshop</p>
-
-            <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(0, 210, 255, 0.3);">
-              <div
-                style="font-family:var(--font-display);font-size:2.4rem;font-weight:900;color:#00f0ff;line-height:1;text-shadow:0 0 16px rgba(0, 240, 255, 0.4);">
-                $2,000</div>
-              <span
-                style="font-family:var(--font-mono);font-size:0.8rem;color:#7dd3fc;letter-spacing:0.06em;font-weight:700;">USD
-                / FLAT RATE</span>
-            </div>
-
-            <ul
-              style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;font-size:0.9rem;color:var(--text-secondary);line-height:1.55;">
-              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:#00f0ff;font-weight:bold;">✓</span>
-                <span><strong>1 Deep Dive</strong> (2k–5k words) <em>or</em> <strong>1 Virtual Workshop</strong></span>
-              </li>
-              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:#00f0ff;font-weight:bold;">✓</span>
-                <span><strong>Runtime-Verified Code</strong> in Python, Golang, or Rust</span>
-              </li>
-              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:#00f0ff;font-weight:bold;">✓</span>
-                <span>Diátaxis Architecture &amp; Custom Technical Diagrams</span>
-              </li>
-              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:#00f0ff;font-weight:bold;">✓</span>
-                <span>2 Iterative Review Rounds &amp; 60-Day Post-Delivery Support</span>
-              </li>
-              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:#00f0ff;font-weight:bold;">⏱</span>
-                <span><strong>Turnaround:</strong> 5–7 business days</span>
-              </li>
-            </ul>
-          </div>
-          <a href="contact.html" class="btn btn-glow-cyan"
-            style="width:100%;justify-content:center;padding:0.75rem 0.85rem;font-size:clamp(0.8rem, 0.95vw, 0.88rem);font-weight:800;letter-spacing:0.01em;border:4px solid #00d2ff;">Book
-            a One-Time Engagement →</a>
-        </div>
-
-        <!-- Tier 2 Package: Fortnightly Sprint (VALUE FOR MONEY) -->
-        <div class="package-card border-cyan"
-          style="background:linear-gradient(155deg, rgba(4, 38, 26, 0.95) 0%, rgba(2, 18, 12, 0.98) 100%);border:2px solid #10b981;border-radius:var(--radius-lg);padding:2.5rem 1.75rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;box-shadow:0 0 35px rgba(16, 185, 129, 0.4), 0 12px 35px rgba(0,0,0,0.8);transform:scale(1.02);transition:var(--transition);">
+        <!-- Pillar 01: Technical Training -->
+        <div class="package-card popular-card border-cyan"
+          style="background:linear-gradient(155deg, rgba(8, 25, 45, 0.95) 0%, rgba(3, 7, 18, 0.98) 100%);border:2px solid #00d2ff;border-radius:var(--radius-lg);padding:2.5rem 1.85rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:var(--transition);box-shadow:0 0 28px rgba(0, 210, 255, 0.25), 0 10px 30px rgba(0,0,0,0.7);">
           <div
-            style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg, #10b981 0%, #06b6d4 100%);color:#000000;font-family:var(--font-mono);font-size:0.75rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 1.1rem;border-radius:9999px;box-shadow:0 0 18px rgba(16, 185, 129, 0.65);white-space:nowrap;">
-            ★ VALUE FOR MONEY
-          </div>
-          <div>
-            <span
-              style="font-size:0.75rem;font-weight:800;letter-spacing:0.07em;margin-bottom:1rem;display:inline-block;background:rgba(16, 185, 129, 0.2);border:1px solid #10b981;color:#34d399;padding:0.35rem 0.85rem;border-radius:6px;">TIER
-              2 · 2-WEEK SPRINT</span>
-            <h3 style="font-size:1.55rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">The
-              Fortnightly
-              Sprint</h3>
-            <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:1.5rem;line-height:1.6;">High-velocity
-              2-week sprint for fast-moving teams</p>
-
-            <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(16, 185, 129, 0.3);">
-              <div
-                style="font-family:var(--font-display);font-size:2.4rem;font-weight:900;color:#34d399;line-height:1;text-shadow:0 0 16px rgba(52, 211, 153, 0.45);">
-                $3,000</div>
-              <span
-                style="font-family:var(--font-mono);font-size:0.8rem;color:#6ee7b7;letter-spacing:0.06em;font-weight:700;">USD
-                / 2 WEEKS</span>
-            </div>
-
-            <ul
-              style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;font-size:0.9rem;color:var(--text-secondary);line-height:1.55;">
-              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:#10b981;font-weight:bold;">✓</span>
-                <span><strong>1 Technical Deep Dive</strong> + <strong>1 Hands-On Workshop / Guide</strong></span>
-              </li>
-              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:#10b981;font-weight:bold;">✓</span>
-                <span><strong>Runtime-Verified Code</strong> Repositories &amp; Sandboxes</span>
-              </li>
-              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:#10b981;font-weight:bold;">✓</span>
-                <span>Diátaxis Architecture, Custom Diagrams &amp; Benchmarks</span>
-              </li>
-              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:#10b981;font-weight:bold;">✓</span>
-                <span>Dedicated Async Channel (Slack/Discord) + Mid-Sprint Sync</span>
-              </li>
-              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
-                <span style="color:#10b981;font-weight:bold;">⏱</span>
-                <span><strong>Turnaround:</strong> 2-week dedicated sprint cadence</span>
-              </li>
-            </ul>
-          </div>
-          <a href="contact.html" class="btn btn-glow-emerald"
-            style="width:100%;justify-content:center;padding:0.75rem 0.85rem;font-size:clamp(0.8rem, 0.95vw, 0.88rem);font-weight:800;letter-spacing:0.01em;border:4px solid #34d399;">Start
-            a Fortnightly Sprint →</a>
-        </div>
-
-        <!-- Tier 3 Package: Monthly Sprint (MOST POPULAR) -->
-        <div class="package-card popular-card border-gold"
-          style="background:linear-gradient(155deg, rgba(40, 30, 8, 0.95) 0%, rgba(15, 11, 2, 0.98) 100%);border:2px solid #fbbf24;border-radius:var(--radius-lg);padding:2.5rem 1.75rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;box-shadow:0 0 35px rgba(251, 191, 36, 0.4), 0 12px 35px rgba(0,0,0,0.8);transform:scale(1.02);transition:var(--transition);">
-          <div
-            style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);color:#000000;font-family:var(--font-mono);font-size:0.75rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 1.1rem;border-radius:9999px;box-shadow:0 0 18px rgba(251, 191, 36, 0.65);white-space:nowrap;">
+            style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg, #00d2ff 0%, #0284c7 100%);color:#000000;font-family:var(--font-mono);font-size:0.75rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 1.1rem;border-radius:9999px;box-shadow:0 0 18px rgba(0, 210, 255, 0.65);white-space:nowrap;">
             ★ MOST POPULAR
           </div>
           <div>
             <span
-              style="font-size:0.75rem;font-weight:800;letter-spacing:0.07em;margin-bottom:1rem;display:inline-block;background:rgba(251, 191, 36, 0.2);border:1px solid #fbbf24;color:#fbbf24;padding:0.35rem 0.85rem;border-radius:6px;">TIER
-              3 · MONTHLY CAPACITY</span>
-            <h3 style="font-size:1.55rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">The Monthly
-              Sprint
-            </h3>
-            <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:1.5rem;line-height:1.6;">A dedicated,
-              high-velocity month of technical execution</p>
+              style="font-size:0.75rem;font-weight:800;letter-spacing:0.07em;margin-bottom:1rem;display:inline-block;background:rgba(0, 210, 255, 0.18);border:1px solid #00d2ff;color:#00f0ff;padding:0.35rem 0.85rem;border-radius:6px;">01
+              · WORKSHOPS &amp; EDUCATION</span>
+            <h3 style="font-size:1.6rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">Technical
+              Training</h3>
+            <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;line-height:1.6;">Workshops,
+              courses, and developer education for engineering teams.</p>
 
-            <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(251,191,36,0.3);">
+            <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(0, 210, 255, 0.3);">
               <div
-                style="font-family:var(--font-display);font-size:2.4rem;font-weight:900;color:#fbbf24;line-height:1;text-shadow:0 0 16px rgba(251, 191, 36, 0.45);">
-                $5,000</div>
+                style="font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:#00f0ff;line-height:1.1;text-shadow:0 0 16px rgba(0, 240, 255, 0.4);">
+                $2,000 – $3,500</div>
               <span
-                style="font-family:var(--font-mono);font-size:0.8rem;color:#fde68a;letter-spacing:0.06em;font-weight:700;">USD
-                / MONTH</span>
+                style="font-family:var(--font-mono);font-size:0.78rem;color:#7dd3fc;letter-spacing:0.06em;font-weight:700;">USD
+                / WORKSHOP OR MODULE</span>
+            </div>
+
+            <ul
+              style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;font-size:0.9rem;color:var(--text-secondary);line-height:1.55;">
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#00f0ff;font-weight:bold;">✓</span>
+                <span><strong>Live Interactive Remote Sessions:</strong> Masterclasses recorded for permanent internal
+                  team onboarding.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#00f0ff;font-weight:bold;">✓</span>
+                <span><strong>Executable Notebook Labs:</strong> Hands-on Jupyter notebooks tested top-to-bottom in live
+                  runtimes.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#00f0ff;font-weight:bold;">✓</span>
+                <span><strong>Step-by-Step Code Repositories:</strong> Modular exercises across Python, Golang, Rust,
+                  Mojo, and Qiskit.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#00f0ff;font-weight:bold;">✓</span>
+                <span><strong>30-Day Attendee Support:</strong> Dedicated async email Q&amp;A for attendees following
+                  completion.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#00f0ff;font-weight:bold;">⏱</span>
+                <span><strong>Cadence:</strong> Coordinated with team calendar / 1–2 week modular curriculum.</span>
+              </li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-glow-cyan"
+            style="width:100%;justify-content:center;padding:0.85rem 1rem;font-size:0.88rem;font-weight:800;letter-spacing:0.02em;border:3px solid #00d2ff;">Book
+            Technical Training →</a>
+        </div>
+
+        <!-- Pillar 02: Technical Documentation -->
+        <div class="package-card border-gold"
+          style="background:linear-gradient(155deg, rgba(35, 26, 6, 0.95) 0%, rgba(12, 9, 2, 0.98) 100%);border:2px solid #fbbf24;border-radius:var(--radius-lg);padding:2.5rem 1.85rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:var(--transition);box-shadow:0 0 28px rgba(251, 191, 36, 0.25), 0 10px 30px rgba(0,0,0,0.7);">
+          <div
+            style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);color:#000000;font-family:var(--font-mono);font-size:0.75rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 1.1rem;border-radius:9999px;box-shadow:0 0 18px rgba(251, 191, 36, 0.65);white-space:nowrap;">
+            ★ VALUE FOR MONEY
+          </div>
+          <div>
+            <span
+              style="font-size:0.75rem;font-weight:800;letter-spacing:0.07em;margin-bottom:1rem;display:inline-block;background:rgba(251, 191, 36, 0.18);border:1px solid #fbbf24;color:#fde047;padding:0.35rem 0.85rem;border-radius:6px;">02
+              · DIÁTAXIS ARCHITECTURE</span>
+            <h3 style="font-size:1.6rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">Technical
+              Documentation</h3>
+            <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;line-height:1.6;">Deep dives,
+              tutorials, references, architecture and Diátaxis.</p>
+
+            <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(251, 191, 36, 0.3);">
+              <div
+                style="font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:#fbbf24;line-height:1.1;text-shadow:0 0 16px rgba(251, 191, 36, 0.4);">
+                $2,000</div>
+              <span
+                style="font-family:var(--font-mono);font-size:0.78rem;color:#fde68a;letter-spacing:0.06em;font-weight:700;">USD
+                / FLAT RATE (OR $800–$1.2K / 1K WORDS)</span>
             </div>
 
             <ul
               style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;font-size:0.9rem;color:var(--text-secondary);line-height:1.55;">
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
                 <span style="color:#fbbf24;font-weight:bold;">✓</span>
-                <span><strong>2 Long-Form Deep Dives</strong> + <strong>1 Team Workshop / Series</strong></span>
+                <span><strong>Diátaxis Quadrants &amp; Deep Dives:</strong> 2k–5k words authored with editorial and
+                  mathematical precision.</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
                 <span style="color:#fbbf24;font-weight:bold;">✓</span>
-                <span>Full Diátaxis Documentation Suite (Tutorial, How-To, Reference, Explanation)</span>
+                <span><strong>Runtime-Verified Code:</strong> Every code block and script tested for zero runtime errors
+                  before publication.</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
                 <span style="color:#fbbf24;font-weight:bold;">✓</span>
-                <span>Production-Tested Code Repositories &amp; CI Sandboxes</span>
+                <span><strong>Custom System Diagrams:</strong> High-resolution architectural schematics and data flow
+                  diagrams.</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
                 <span style="color:#fbbf24;font-weight:bold;">✓</span>
-                <span>Dedicated Slack/Discord Channel &amp; Weekly Strategy Sync</span>
+                <span><strong>Full IP Ownership:</strong> Complete intellectual property and copyright transfer upon
+                  sign-off.</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
                 <span style="color:#fbbf24;font-weight:bold;">⏱</span>
-                <span><strong>Turnaround:</strong> 4-week dedicated sprint cadence</span>
+                <span><strong>Turnaround:</strong> 5–7 business days per deliverable with 2 review rounds.</span>
               </li>
             </ul>
           </div>
           <a href="contact.html" class="btn btn-glow-gold"
-            style="width:100%;justify-content:center;padding:0.75rem 0.85rem;font-size:clamp(0.8rem, 0.95vw, 0.88rem);font-weight:800;letter-spacing:0.01em;border:4px solid #fbbf24;">Start
-            a Full
-            Monthly Sprint →</a>
+            style="width:100%;justify-content:center;padding:0.85rem 1rem;font-size:0.88rem;font-weight:800;letter-spacing:0.02em;border:3px solid #fbbf24;">Commission
+            Documentation →</a>
         </div>
 
-        <!-- Tier 4 Package: Enterprise Partner -->
+        <!-- Pillar 03: Technical Advisory -->
         <div class="package-card border-violet"
-          style="background:linear-gradient(155deg, rgba(32, 14, 52, 0.95) 0%, rgba(12, 5, 20, 0.98) 100%);border:2px solid #a855f7;border-radius:var(--radius-lg);padding:2.5rem 1.75rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:var(--transition);box-shadow:0 0 28px rgba(168, 85, 247, 0.35), 0 10px 30px rgba(0,0,0,0.7);">
+          style="background:linear-gradient(155deg, rgba(30, 12, 48, 0.95) 0%, rgba(10, 4, 18, 0.98) 100%);border:2px solid #a855f7;border-radius:var(--radius-lg);padding:2.5rem 1.85rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:var(--transition);box-shadow:0 0 28px rgba(168, 85, 247, 0.25), 0 10px 30px rgba(0,0,0,0.7);">
+          <div
+            style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg, #c084fc 0%, #9333ea 100%);color:#000000;font-family:var(--font-mono);font-size:0.75rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 1.1rem;border-radius:9999px;box-shadow:0 0 18px rgba(168, 85, 247, 0.65);white-space:nowrap;">
+            ★ EXECUTIVE OFFERING
+          </div>
           <div>
             <span
-              style="font-size:0.75rem;font-weight:800;letter-spacing:0.07em;margin-bottom:1rem;display:inline-block;background:rgba(168, 85, 247, 0.2);border:1px solid #a855f7;color:#c084fc;padding:0.35rem 0.85rem;border-radius:6px;">TIER
-              4 · ENTERPRISE RETAINER</span>
-            <h3 style="font-size:1.55rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">The Enterprise
-              Partner</h3>
-            <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:1.5rem;line-height:1.6;">Strategic
-              quarterly advisory &amp; technical documentation leadership</p>
+              style="font-size:0.75rem;font-weight:800;letter-spacing:0.07em;margin-bottom:1rem;display:inline-block;background:rgba(168, 85, 247, 0.18);border:1px solid #a855f7;color:#d8b4fe;padding:0.35rem 0.85rem;border-radius:6px;">03
+              · EXECUTIVE STRATEGY</span>
+            <h3 style="font-size:1.6rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">Technical
+              Advisory</h3>
+            <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;line-height:1.6;">AI systems,
+              emerging computing and executive briefings.</p>
 
             <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(168, 85, 247, 0.3);">
               <div
-                style="font-family:var(--font-display);font-size:2.4rem;font-weight:900;color:#c084fc;line-height:1;text-shadow:0 0 16px rgba(192, 132, 252, 0.45);">
-                $12,000</div>
+                style="font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:#c084fc;line-height:1.1;text-shadow:0 0 16px rgba(192, 132, 252, 0.4);">
+                $2,500 – $4,000</div>
               <span
-                style="font-family:var(--font-mono);font-size:0.8rem;color:#e9d5ff;letter-spacing:0.06em;font-weight:700;">USD
-                / QUARTER</span>
+                style="font-family:var(--font-mono);font-size:0.78rem;color:#e9d5ff;letter-spacing:0.06em;font-weight:700;">USD
+                / ENGAGEMENT</span>
             </div>
 
             <ul
               style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;font-size:0.9rem;color:var(--text-secondary);line-height:1.55;">
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
                 <span style="color:#c084fc;font-weight:bold;">✓</span>
-                <span><strong>Complete Documentation Engine</strong> &amp; Developer Guides</span>
+                <span><strong>CXO &amp; Board Briefings:</strong> Comprehensive tech radar slide decks and strategic
+                  horizon roadmaps.</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
                 <span style="color:#c084fc;font-weight:bold;">✓</span>
-                <span><strong>Monthly Executive Advisory</strong> &amp; Tech Radar Briefings</span>
+                <span><strong>AI Systems Architecture:</strong> Deep evaluations of Agentic swarms, persistent memory,
+                  and RAG pipelines.</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
                 <span style="color:#c084fc;font-weight:bold;">✓</span>
-                <span>Unlimited Engineering Workshops &amp; Team Masterclasses</span>
+                <span><strong>Post-Quantum Threat Modeling:</strong> NIST PQC migration roadmaps (ML-KEM/ML-DSA) and
+                  cryptographic audits.</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
                 <span style="color:#c084fc;font-weight:bold;">✓</span>
-                <span>Guaranteed &lt;4-hour async response SLA on private channel</span>
+                <span><strong>Direct Leadership Access:</strong> Structured 1-on-1 strategy sessions for engineering
+                  founders and executives.</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
                 <span style="color:#c084fc;font-weight:bold;">⏱</span>
-                <span><strong>Turnaround:</strong> Quarterly Retainer (3 Months)</span>
+                <span><strong>Turnaround:</strong> Delivered across focused milestone reviews with actionable
+                  documentation.</span>
               </li>
             </ul>
           </div>
           <a href="contact.html" class="btn btn-glow-violet"
-            style="width:100%;justify-content:center;padding:0.75rem 0.85rem;font-size:clamp(0.8rem, 0.95vw, 0.88rem);font-weight:800;letter-spacing:0.01em;border:4px solid #c084fc;">Engage
-            as Enterprise Partner →</a>
+            style="width:100%;justify-content:center;padding:0.85rem 1rem;font-size:0.88rem;font-weight:800;letter-spacing:0.02em;border:3px solid #c084fc;">Engage
+            for Advisory →</a>
+        </div>
+
+        <!-- Pillar 04: Dedicated Sprints & Retainers -->
+        <div class="package-card border-emerald"
+          style="background:linear-gradient(155deg, rgba(4, 38, 26, 0.95) 0%, rgba(2, 18, 12, 0.98) 100%);border:2px solid #10b981;border-radius:var(--radius-lg);padding:2.5rem 1.85rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:var(--transition);box-shadow:0 0 28px rgba(16, 185, 129, 0.25), 0 10px 30px rgba(0,0,0,0.7);">
+          <div
+            style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg, #34d399 0%, #059669 100%);color:#000000;font-family:var(--font-mono);font-size:0.75rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 1.1rem;border-radius:9999px;box-shadow:0 0 18px rgba(16, 185, 129, 0.65);white-space:nowrap;">
+            ★ DEDICATED SUPPORT
+          </div>
+          <div>
+            <span
+              style="font-size:0.75rem;font-weight:800;letter-spacing:0.07em;margin-bottom:1rem;display:inline-block;background:rgba(16, 185, 129, 0.2);border:1px solid #10b981;color:#34d399;padding:0.35rem 0.85rem;border-radius:6px;">04
+              · CONTINUOUS EXECUTION</span>
+            <h3 style="font-size:1.6rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">Dedicated
+              Sprints</h3>
+            <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;line-height:1.6;">Embedded
+              engineering capacity, rapid turnaround and ongoing execution.</p>
+
+            <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(16, 185, 129, 0.3);">
+              <div
+                style="font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:#34d399;line-height:1.1;text-shadow:0 0 16px rgba(52, 211, 153, 0.45);">
+                $3,000 – $12,000</div>
+              <span
+                style="font-family:var(--font-mono);font-size:0.78rem;color:#6ee7b7;letter-spacing:0.06em;font-weight:700;">USD
+                / SPRINT CADENCE ($3k / 2-wks · $5k / mo · $12k / qtr)</span>
+            </div>
+
+            <ul
+              style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;font-size:0.9rem;color:var(--text-secondary);line-height:1.55;">
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#10b981;font-weight:bold;">✓</span>
+                <span><strong>Guaranteed Sprint Bandwidth:</strong> Reserved capacity for continuous whitepapers,
+                  tutorials, and guides.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#10b981;font-weight:bold;">✓</span>
+                <span><strong>Private Async Channel:</strong> Dedicated Slack/Discord communication with rapid
+                  &lt;4-hour response SLA.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#10b981;font-weight:bold;">✓</span>
+                <span><strong>Weekly Strategy Sync:</strong> Regular backlog refinement, technical alignment, and
+                  roadmap steering.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#10b981;font-weight:bold;">✓</span>
+                <span><strong>Production Codebases:</strong> Maintained repositories, verified benchmarks, and complete
+                  Diátaxis docs.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#10b981;font-weight:bold;">⏱</span>
+                <span><strong>Turnaround:</strong> Ongoing dedicated cadence: 2-week sprint, monthly, or quarterly
+                  partnership.</span>
+              </li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-glow-emerald"
+            style="width:100%;justify-content:center;padding:0.85rem 1rem;font-size:0.88rem;font-weight:800;letter-spacing:0.02em;border:3px solid #34d399;">Reserve
+            Sprint Capacity →</a>
+        </div>
+
+        <!-- Pillar 05: Startup Enablement (50% Off) -->
+        <div class="package-card popular-card border-gold"
+          style="background:linear-gradient(155deg, rgba(40, 30, 8, 0.96) 0%, rgba(15, 11, 2, 0.98) 100%);border:2px solid #fbbf24;border-radius:var(--radius-lg);padding:2.5rem 1.85rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:var(--transition);box-shadow:0 0 35px rgba(251, 191, 36, 0.4), 0 12px 35px rgba(0,0,0,0.8);transform:scale(1.02);">
+          <div
+            style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);color:#000000;font-family:var(--font-mono);font-size:0.75rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 1.1rem;border-radius:9999px;box-shadow:0 0 18px rgba(251, 191, 36, 0.65);white-space:nowrap;">
+            ★ 50% STARTUP DISCOUNT
+          </div>
+          <div>
+            <span
+              style="font-size:0.75rem;font-weight:800;letter-spacing:0.07em;margin-bottom:1rem;display:inline-block;background:rgba(251, 191, 36, 0.25);border:1px solid #fbbf24;color:#fde047;padding:0.35rem 0.85rem;border-radius:6px;">05
+              · EARLY-STAGE ENABLEMENT</span>
+            <h3 style="font-size:1.6rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">Startup
+              Enablement</h3>
+            <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;line-height:1.6;">50% off any of the
+              above offerings for early-stage teams.</p>
+
+            <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(251, 191, 36, 0.3);">
+              <div
+                style="font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:#fbbf24;line-height:1.1;text-shadow:0 0 16px rgba(251, 191, 36, 0.45);">
+                50% OFF</div>
+              <span
+                style="font-family:var(--font-mono);font-size:0.78rem;color:#fde68a;letter-spacing:0.06em;font-weight:700;">FLAT
+                DISCOUNT ON PILLARS 01, 02, 03 &amp; 04</span>
+            </div>
+
+            <ul
+              style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;font-size:0.9rem;color:var(--text-secondary);line-height:1.55;">
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#fbbf24;font-weight:bold;">✓</span>
+                <span><strong>Applies to Any Offering:</strong> Half-price across Technical Training, Documentation,
+                  Advisory, or Retainers.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#fbbf24;font-weight:bold;">✓</span>
+                <span><strong>Accessible Price Points:</strong> Training from <strong>$1,000</strong>, Deep Dives at
+                  <strong>$1,000</strong>, Monthly Retainer at <strong>$2,500</strong>.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#fbbf24;font-weight:bold;">✓</span>
+                <span><strong>Frontier Tech Focus:</strong> For teams building Generative AI infrastructure, agent
+                  swarms, or quantum systems.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#fbbf24;font-weight:bold;">✓</span>
+                <span><strong>Cumulative Equity:</strong> Stacks seamlessly on top of country parity pricing for
+                  international founders.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#fbbf24;font-weight:bold;">🚀</span>
+                <span><strong>Eligibility:</strong> Pre-Seed, Seed-stage, or bootstrapped startups with under $1M total
+                  funding raised.</span>
+              </li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-glow-gold"
+            style="width:100%;justify-content:center;padding:0.85rem 1rem;font-size:0.88rem;font-weight:800;letter-spacing:0.02em;border:3px solid #fbbf24;">Apply
+            for Startup Pricing →</a>
+        </div>
+
+        <!-- Pillar 06: Global Equity & Custom Tier -->
+        <div class="package-card popular-card border-cyan"
+          style="background:linear-gradient(155deg, rgba(8, 25, 45, 0.96) 0%, rgba(3, 7, 18, 0.98) 100%);border:2px solid #00d2ff;border-radius:var(--radius-lg);padding:2.5rem 1.85rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:var(--transition);box-shadow:0 0 35px rgba(0, 210, 255, 0.4), 0 12px 35px rgba(0,0,0,0.8);transform:scale(1.02);">
+          <div
+            style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg, #00d2ff 0%, #3b82f6 100%);color:#000000;font-family:var(--font-mono);font-size:0.75rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 1.1rem;border-radius:9999px;box-shadow:0 0 18px rgba(0, 210, 255, 0.65);white-space:nowrap;">
+            🌐 PARITY PRICING &amp; SUBSIDIZED
+          </div>
+          <div>
+            <span
+              style="font-size:0.75rem;font-weight:800;letter-spacing:0.07em;margin-bottom:1rem;display:inline-block;background:rgba(0, 210, 255, 0.25);border:1px solid #00d2ff;color:#00f0ff;padding:0.35rem 0.85rem;border-radius:6px;">06
+              · CUSTOM TIERS</span>
+            <h3 style="font-size:1.6rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">Custom Tier
+            </h3>
+            <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;line-height:1.6;">Purchasing Power
+              Parity and custom pricing for developing nations and underprivileged clients.</p>
+
+            <div style="margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(0, 210, 255, 0.3);">
+              <div
+                style="font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:#00f0ff;line-height:1.1;text-shadow:0 0 16px rgba(0, 240, 255, 0.45);">
+                25% – 75% OFF</div>
+              <span
+                style="font-family:var(--font-mono);font-size:0.78rem;color:#7dd3fc;letter-spacing:0.06em;font-weight:700;">+
+                CUSTOM SUBSIDIZED PRICING FOR ACADEMIA &amp; NON-PROFITS</span>
+            </div>
+
+            <ul
+              style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;font-size:0.9rem;color:var(--text-secondary);line-height:1.55;">
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#00f0ff;font-weight:bold;">✓</span>
+                <span><strong>Tier 1 (Developed Nations):</strong> Standard rate (100% base price) for high-income
+                  economies.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#00f0ff;font-weight:bold;">✓</span>
+                <span><strong>Tier 2 (Developing Nations):</strong> Automatic 25% discount (75% price) based on World
+                  Bank indices.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#00f0ff;font-weight:bold;">✓</span>
+                <span><strong>Tier 3 (Least Developed Nations):</strong> Automatic 50% discount (50% price) for emerging
+                  ecosystems.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#00f0ff;font-weight:bold;">✓</span>
+                <span><strong>Custom Subsidized Accommodations:</strong> Custom discounts for non-profits, universities,
+                  research labs, and underprivileged teams.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;">
+                <span style="color:#00f0ff;font-weight:bold;">🤝</span>
+                <span><strong>Direct Intake:</strong> Mention your country or institution during intake; quotes are
+                  tailored with zero bureaucracy.</span>
+              </li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-glow-cyan"
+            style="width:100%;justify-content:center;padding:0.85rem 1rem;font-size:0.88rem;font-weight:800;letter-spacing:0.02em;border:3px solid #00d2ff;">Request
+            Parity / Custom Quote →</a>
         </div>
 
       </div>
+    </section>
 
-      <!-- PROMINENT GOLDEN-HIGHLIGHTED GLOBAL PARITY & STARTUP OFFERS BOX -->
-      <div class="parity-startup-box"
-        style="background:linear-gradient(145deg, rgba(251, 191, 36, 0.12) 0%, rgba(13, 19, 33, 0.95) 100%);border:2px solid var(--gold);border-radius:var(--radius-lg);padding:3.25rem 2.25rem;text-align:center;box-shadow:0 0 35px rgba(251, 191, 36, 0.28), 0 12px 40px rgba(0, 0, 0, 0.8);max-width:1150px;margin:3.5rem auto 1.5rem auto;position:relative;">
-
-        <span class="role-chip gold"
-          style="font-size:0.85rem;font-weight:800;letter-spacing:0.1em;padding:0.45rem 1.35rem;margin-bottom:1.35rem;display:inline-block;box-shadow:0 0 15px rgba(251,191,36,0.3);">
-          ★ GLOBAL EQUITY, STARTUPS &amp; CUSTOM TIERS — TIERS 1–5
-        </span>
-
-        <h2
-          style="font-family:var(--font-display);font-size:clamp(1.85rem, 3.8vw, 2.5rem);font-weight:900;color:var(--text-primary);margin:0.5rem 0 1.25rem 0;line-height:1.3;">
-          Purchasing Power Parity &amp; <span class="accent-gold">Custom Pricing Tiers</span>
-        </h2>
-
-        <div
-          style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:1.75rem;margin:2.25rem 0;text-align:left;">
-          <!-- Parity Pricing Column (Tiers 1-3) -->
-          <div
-            style="background:rgba(0, 0, 0, 0.55);border:1px solid rgba(251, 191, 36, 0.35);border-radius:var(--radius);padding:1.75rem;box-shadow:inset 0 1px 0 rgba(255,255,255,0.05);display:flex;flex-direction:column;">
-            <h3
-              style="color:var(--gold);font-size:1.25rem;font-weight:800;margin-bottom:0.85rem;display:flex;align-items:center;gap:0.6rem;">
-              <span>🌐</span> Tiers 1–3: Purchasing Power Parity
-            </h3>
-            <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.7;margin-bottom:0.75rem;">
-              Adjusted rates based on World Bank country indices across 198 countries:
-            </p>
-            <ul
-              style="color:var(--text-secondary);font-size:0.9rem;line-height:1.65;margin-left:1.25rem;margin-bottom:0.75rem;">
-              <li><strong>Tier 1 (Developed)</strong>: 100% standard pricing.</li>
-              <li><strong>Tier 2 (Developing)</strong>: 25% off (75% price).</li>
-              <li><strong>Tier 3 (Least Developed)</strong>: 50% off (50% price).</li>
-            </ul>
-            <p style="color:var(--text-muted);font-size:0.85rem;line-height:1.5;margin-top:auto;">
-              Custom country-specific quotes tailored to local purchasing power are provided during intake.
-            </p>
-          </div>
-
-          <!-- Tier 4: Startup Discount Column -->
-          <div
-            style="background:rgba(0, 0, 0, 0.55);border:1px solid rgba(251, 191, 36, 0.35);border-radius:var(--radius);padding:1.75rem;box-shadow:inset 0 1px 0 rgba(255,255,255,0.05);display:flex;flex-direction:column;">
-            <h3
-              style="color:var(--gold);font-size:1.25rem;font-weight:800;margin-bottom:0.85rem;display:flex;align-items:center;gap:0.6rem;">
-              <span>🚀</span> Tier 4: Early-Stage Startups
-            </h3>
-            <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.7;margin-bottom:0.85rem;">
-              I empower Pre-Seed and Seed-Stage engineering teams building frontier Generative AI Infrastructure or
-              Quantum Computing SDKs with an exclusive <strong>50% startup discount</strong>.
-            </p>
-            <p style="color:var(--text-muted);font-size:0.85rem;line-height:1.5;margin-top:auto;">
-              Startup pricing is applied in addition to country parity pricing. The offer builds on itself.
-            </p>
-          </div>
-
-          <!-- Tier 5: Custom Pricing Column -->
-          <div
-            style="background:rgba(0, 0, 0, 0.55);border:1px solid rgba(251, 191, 36, 0.35);border-radius:var(--radius);padding:1.75rem;box-shadow:inset 0 1px 0 rgba(255,255,255,0.05);display:flex;flex-direction:column;">
-            <h3
-              style="color:var(--gold);font-size:1.25rem;font-weight:800;margin-bottom:0.85rem;display:flex;align-items:center;gap:0.6rem;">
-              <span>🤝</span> Tier 5: Custom Pricing
-            </h3>
-            <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.7;margin-bottom:0.85rem;">
-              Tailored custom pricing and special accommodations are available for <strong>non-profits, educational
-                institutions, universities, under-privileged institutions, and underprivileged clients</strong>.
-            </p>
-            <p style="color:var(--text-muted);font-size:0.85rem;line-height:1.5;margin-top:auto;">
-              Inquire during project intake or email directly to discuss custom project scope and subsidized rates.
-            </p>
-          </div>
+    <!-- COMMERCIAL GUARANTEES STRIP -->
+    <section class="reveal" style="max-width:1380px;margin:0 auto 3.5rem auto;padding:0 1.5rem;">
+      <div
+        style="background:linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(10, 15, 28, 0.9) 100%);border:1px solid rgba(255, 255, 255, 0.1);border-radius:var(--radius-lg);padding:2.5rem 2rem;box-shadow:0 10px 30px rgba(0,0,0,0.6);">
+        <div style="text-align:center;margin-bottom:2rem;">
+          <p class="section-label">// COMMERCIAL INTEGRITY</p>
+          <h2
+            style="font-family:var(--font-display);font-size:clamp(1.5rem, 3vw, 2rem);font-weight:800;color:var(--text-primary);margin-top:0.35rem;">
+            Foundational <span class="accent-gold">Guarantees</span> on Every Engagement
+          </h2>
         </div>
 
-        <!-- Contact Email & Custom Quote Inquiries -->
-        <div style="border-top:1px solid rgba(251, 191, 36, 0.25);padding-top:2.25rem;margin-top:1rem;">
-          <p style="font-size:1.18rem;color:var(--text-primary);font-weight:700;margin-bottom:1.35rem;line-height:1.6;">
-            Need a country parity quote, startup enablement, or Tier 5 custom pricing?
-          </p>
-          <div style="display:flex;gap:1.25rem;justify-content:center;align-items:center;flex-wrap:wrap;">
-            <a href="mailto:thomascherickal@gmail.com?subject=Custom%20Country%20Parity%20%2F%20Startup%20%2F%20Tier%205%20Quote%20Inquiry"
-              class="btn btn-glow-gold"
-              style="font-size:clamp(0.85rem, 1.1vw, 0.95rem);padding:0.8rem 1.6rem;font-weight:800;border:4px solid #fbbf24;">
-              📧 Email for Custom Quote →
-            </a>
-            <a href="contact.html" class="btn btn-glow-cyan"
-              style="font-size:clamp(0.85rem, 1.1vw, 0.95rem);padding:0.8rem 1.6rem;font-weight:800;border:4px solid #00f0ff;">
-              📝 Submit Intake Form →
-            </a>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1.75rem;">
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <div style="font-size:1.8rem;line-height:1;">🧪</div>
+            <div>
+              <h3 style="font-size:1.05rem;font-weight:700;color:var(--text-primary);margin-bottom:0.3rem;">
+                Runtime-Verified Code</h3>
+              <p style="font-size:0.86rem;color:var(--text-muted);line-height:1.6;">Every delivered code artifact is
+                executed and tested in live environments before publication.</p>
+            </div>
           </div>
 
-        </div>
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <div style="font-size:1.8rem;line-height:1;">🔄</div>
+            <div>
+              <h3 style="font-size:1.05rem;font-weight:700;color:var(--text-primary);margin-bottom:0.3rem;">Infinite
+                Revisions</h3>
+              <p style="font-size:0.86rem;color:var(--text-muted);line-height:1.6;">Continuous iteration on drafts,
+                whitepapers, and guides until your team is fully satisfied.</p>
+            </div>
+          </div>
 
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <div style="font-size:1.8rem;line-height:1;">⚖️</div>
+            <div>
+              <h3 style="font-size:1.05rem;font-weight:700;color:var(--text-primary);margin-bottom:0.3rem;">Equal-Weight
+                Milestones</h3>
+              <p style="font-size:0.86rem;color:var(--text-muted);line-height:1.6;">Payments handled by milestones with
+                equal weightage across all delivery phases.</p>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <div style="font-size:1.8rem;line-height:1;">📜</div>
+            <div>
+              <h3 style="font-size:1.05rem;font-weight:700;color:var(--text-primary);margin-bottom:0.3rem;">Complete IP
+                Transfer</h3>
+              <p style="font-size:0.86rem;color:var(--text-muted);line-height:1.6;">You retain complete intellectual
+                property and copyright ownership upon completion.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <div class="divider"></div>
 
     <!-- INDIVIDUAL SERVICES & REFERENCE RATES -->
-    <section class="reveal" id="service-rates">
+    <section class="reveal" id="service-rates" style="margin-bottom:4.5rem;">
       <div style="max-width:1240px;margin:0 auto;padding:0 1.5rem;">
         <div style="text-align:center;margin-bottom:2.5rem;">
           <p class="section-label">// REFERENCE SPECIFICATIONS</p>
@@ -4529,7 +4577,7 @@
               🎓 GenAI Training &amp; Masterclasses</div>
             <div class="price-amount"
               style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
-              $2,000 – $4,000 USD
+              $1,500 – $3,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4543,7 +4591,7 @@
               ⚛️ Quantum Computing Masterclasses</div>
             <div class="price-amount"
               style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#c084fc;text-shadow:0 0 12px rgba(192,132,252,0.35);">
-              $2,000 – $4,000 USD
+              $1,500 – $3,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4557,7 +4605,7 @@
               🤖 AI Agent Guides &amp; Architecture</div>
             <div class="price-amount"
               style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
-              $1,500 – $3,000 USD
+              $1,000 – $2,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4571,7 +4619,7 @@
               🔬 Technical Whitepapers &amp; Deep Dives</div>
             <div class="price-amount"
               style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
-              $800 – $1,200 USD
+              $500 – $1,000 USD
               <span style="font-size:0.75rem;font-weight:400;color:var(--text-muted);">/ 1k words</span>
             </div>
             <div
@@ -4586,7 +4634,7 @@
               📚 Developer Courseware &amp; Tutorials</div>
             <div class="price-amount"
               style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
-              $1,500 – $3,000 USD
+              $1,000 – $2,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4600,7 +4648,7 @@
               ⚛️ Quantum SDK Developer Content</div>
             <div class="price-amount"
               style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#c084fc;text-shadow:0 0 12px rgba(192,132,252,0.35);">
-              $1,500 – $3,500 USD
+              $1,000 – $2,500 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4614,7 +4662,7 @@
               🧠 Quantum AI &amp; QML Whitepapers</div>
             <div class="price-amount"
               style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#c084fc;text-shadow:0 0 12px rgba(192,132,252,0.35);">
-              $2,000 – $4,000 USD
+              $1,500 – $3,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4628,7 +4676,7 @@
               📦 Local LLM Deployment How-Tos</div>
             <div class="price-amount"
               style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
-              $1,500 – $3,000 USD
+              $1,000 – $2,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4642,7 +4690,7 @@
               🧠 GenAI Developer Docs &amp; RFCs</div>
             <div class="price-amount"
               style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
-              $1,500 – $3,000 USD
+              $1,000 – $2,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4656,7 +4704,7 @@
               💼 Monthly Developer Content Retainer</div>
             <div class="price-amount"
               style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
-              $6,000 – $8,000 USD
+              $4,500 – $6,000 USD
               <span style="font-size:0.75rem;font-weight:400;color:var(--text-muted);">/ mo</span>
             </div>
             <div
@@ -4671,7 +4719,7 @@
               🔐 Post-Quantum Cryptography Whitepapers</div>
             <div class="price-amount"
               style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#c084fc;text-shadow:0 0 12px rgba(192,132,252,0.35);">
-              $2,000 – $4,000 USD
+              $1,500 – $3,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
@@ -4685,13 +4733,44 @@
               🦀 Rust for AI Systems &amp; How-Tos</div>
             <div class="price-amount"
               style="font-size:1.35rem;font-weight:800;margin:0.6rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
-              $1,500 – $3,000 USD
+              $1,000 – $2,000 USD
             </div>
             <div
               style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;flex-grow:1;display:flex;align-items:center;justify-content:center;">
               Candle/Burn tensor engine tutorials, PyO3 acceleration how-tos &amp; high-throughput Tokio systems guides.
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTAKE & ACTION SECTION -->
+    <section class="reveal" style="max-width:1150px;margin:0 auto 4rem auto;padding:0 1.5rem;">
+      <div
+        style="background:linear-gradient(145deg, rgba(251, 191, 36, 0.1) 0%, rgba(13, 19, 33, 0.95) 100%);border:2px solid var(--gold);border-radius:var(--radius-lg);padding:3rem 2rem;text-align:center;box-shadow:0 0 35px rgba(251, 191, 36, 0.25), 0 12px 40px rgba(0, 0, 0, 0.8);">
+        <span class="role-chip gold"
+          style="font-size:0.85rem;font-weight:800;letter-spacing:0.1em;padding:0.45rem 1.35rem;margin-bottom:1.25rem;display:inline-block;">
+          ★ START A PROJECT TODAY
+        </span>
+        <h2
+          style="font-family:var(--font-display);font-size:clamp(1.75rem, 3.5vw, 2.35rem);font-weight:900;color:var(--text-primary);margin:0.35rem 0 1rem 0;line-height:1.3;">
+          Ready to Commission Content, Training, or Advisory?
+        </h2>
+        <p style="color:var(--text-secondary);font-size:1rem;line-height:1.7;max-width:720px;margin:0 auto 2rem auto;">
+          Whether you need a single deep dive, a team training masterclass, dedicated retainer capacity, startup
+          enablement, or a custom parity quote, submit a brief or email directly.
+        </p>
+
+        <div style="display:flex;gap:1.25rem;justify-content:center;align-items:center;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-glow-gold"
+            style="font-size:clamp(0.85rem, 1.1vw, 0.95rem);padding:0.85rem 1.75rem;font-weight:800;border:3px solid #fbbf24;">
+            📝 Submit Project Intake Form →
+          </a>
+          <a href="mailto:thomascherickal@gmail.com?subject=Project%20Inquiry%20%2F%20Custom%20Pricing%20Quote"
+            class="btn btn-glow-cyan"
+            style="font-size:clamp(0.85rem, 1.1vw, 0.95rem);padding:0.85rem 1.75rem;font-weight:800;border:3px solid #00f0ff;">
+            📧 Email Directly for Custom Quote →
+          </a>
         </div>
       </div>
     </section>
