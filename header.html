@@ -552,63 +552,64 @@
       position: relative;
       overflow: hidden;
       transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
-                  box-shadow 0.28s ease,
-                  background 0.28s ease,
-                  border-color 0.28s ease,
-                  color 0.28s ease,
-                  filter 0.28s ease;
+        box-shadow 0.28s ease,
+        background 0.28s ease,
+        border-color 0.28s ease,
+        color 0.28s ease,
+        filter 0.28s ease;
       will-change: transform, box-shadow;
     }
 
-/* Universal Button Animation System: Hover Lift, Glow Bloom & Specular Sheen */
-@keyframes btnSheenSweep {
-  0% {
-    left: -140%;
-  }
-  100% {
-    left: 140%;
-  }
-}
+    /* Universal Button Animation System: Hover Lift, Glow Bloom & Specular Sheen */
+    @keyframes btnSheenSweep {
+      0% {
+        left: -140%;
+      }
 
-button:hover,
-input[type="button"]:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-.btn:hover,
-a.btn:hover,
-a.tier-btn:hover {
-  transform: translateY(-2.5px) scale(1.02);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 16px rgba(56, 189, 248, 0.35);
-}
+      100% {
+        left: 140%;
+      }
+    }
 
-button::after,
-input[type="button"]::after,
-input[type="submit"]::after,
-input[type="reset"]::after,
-.btn::after,
-a.btn::after,
-a.tier-btn::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -140%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
-  transform: skewX(-22deg);
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
+    button:hover,
+    input[type="button"]:hover,
+    input[type="submit"]:hover,
+    input[type="reset"]:hover,
+    .btn:hover,
+    a.btn:hover,
+    a.tier-btn:hover {
+      transform: translateY(-2.5px) scale(1.02);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 16px rgba(56, 189, 248, 0.35);
+    }
 
-button:hover::after,
-input[type="button"]:hover::after,
-input[type="submit"]:hover::after,
-input[type="reset"]:hover::after,
-.btn:hover::after,
-a.btn:hover::after,
-a.tier-btn:hover::after {
-  animation: btnSheenSweep 1.1s cubic-bezier(0.4, 0, 0.2, 1);
-}
+    button::after,
+    input[type="button"]::after,
+    input[type="submit"]::after,
+    input[type="reset"]::after,
+    .btn::after,
+    a.btn::after,
+    a.tier-btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -140%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+      transform: skewX(-22deg);
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    button:hover::after,
+    input[type="button"]:hover::after,
+    input[type="submit"]:hover::after,
+    input[type="reset"]:hover::after,
+    .btn:hover::after,
+    a.btn:hover::after,
+    a.tier-btn:hover::after {
+      animation: btnSheenSweep 1.1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
     /* Universal Focus State for Accessibility */
     button:focus-visible,
@@ -631,7 +632,7 @@ a.tier-btn:hover::after {
     .case-study-cta-left:active {
       transform: translateY(1px) scale(0.98) !important;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
- }
+    }
 
     /* Disabled State Across All Browsers */
     button:disabled,
@@ -3752,6 +3753,7 @@ a.tier-btn:hover::after {
     nav {
       position: relative !important;
       top: auto !important;
+      justify-content: flex-end !important;
     }
 
     @media (max-width: 768px) {
@@ -3789,7 +3791,6 @@ a.tier-btn:hover::after {
 
 <body>
   <nav aria-label="Main navigation">
-    <a href="index.html" class="nav-brand" data-nav="index.html">Thomas Cherickal</a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <div class="nav-right-container">
       <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle Navigation Menu">
@@ -3807,7 +3808,6 @@ a.tier-btn:hover::after {
         </a>
         <ul class="dropdown-menu">
           <li><a href="services.html" class="dropdown-header-link">🎯 All Services</a></li>
-          <li><a href="collaboration.html" class="dropdown-header-link">🤝 Ways To Collaborate</a></li>
           <li class="dropdown-divider"></li>
           <li><a href="service-generative-ai-training.html">🎓 Training in Generative AI</a></li>
           <li><a href="service-quantum-computing-training.html">⚛️ Training in Quantum Computing</a></li>
@@ -3823,6 +3823,7 @@ a.tier-btn:hover::after {
           <li><a href="service-rust-systems-engineering.html">🦀 Rust for High-Performance AI Systems Content</a></li>
         </ul>
       </li>
+      <li><a href="collaboration.html" data-nav="collaboration.html">Collaborate</a></li>
       <li><a href="pricing.html" data-nav="pricing.html">Pricing</a></li>
       <li><a href="faqs.html" data-nav="faqs.html">FAQs</a></li>
       <li><a href="contact.html" data-nav="contact.html">Contact</a></li>
