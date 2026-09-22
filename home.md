@@ -96,7 +96,7 @@ All technical documentation deliverables follow the Diátaxis framework structur
 
 Most developer content in Generative AI and Quantum Computing suffers from one of two flaws: it is either delivered by brilliant physicists and engineers who lack educational clarity, or by generalist writers who cannot execute the code they document.
 
-With a post-graduate degree in Computer Science, extensive technical training experience, and deep domain mastery across Generative AI and Quantum Systems, I operate as an educator, consultant, and documentation specialist rather than a production software developer. I bridge the gap between engineering complexity and stakeholder comprehension — delivering training workshops, executive advisory, and Diátaxis-structured technical documentation where every Python or Rust script and Quantum circuit is run and verified before publication.
+With a post-graduate degree in Computer Science, extensive technical training experience, and deep domain mastery across Generative AI and Quantum Systems, I operate as an educator, consultant, and documentation specialist. I bridge the gap between engineering complexity and stakeholder comprehension — delivering training workshops, executive advisory, and Diátaxis-structured technical documentation where every Python or Rust script and Quantum circuit is run and verified before publication.
 
 ---
 
