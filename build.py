@@ -115,11 +115,11 @@ def build():
 
     # Regex patterns for iframe or existing include block
     header_pattern = re.compile(
-        r'(<!-- START:HEADER -->[\s\S]*?<!-- END:HEADER -->|<iframe\s+src="header\.html"[\s\S]*?</iframe>)',
+        r'([ \t]*<!-- START:HEADER -->[\s\S]*?<!-- END:HEADER -->|[ \t]*<iframe\s+src="header\.html"[\s\S]*?</iframe>)',
         re.IGNORECASE
     )
     footer_pattern = re.compile(
-        r'(<!-- START:FOOTER -->[\s\S]*?<!-- END:FOOTER -->|<iframe\s+src="footer\.html"[\s\S]*?</iframe>)',
+        r'([ \t]*<!-- START:FOOTER -->[\s\S]*?<!-- END:FOOTER -->|[ \t]*<iframe\s+src="footer\.html"[\s\S]*?</iframe>)',
         re.IGNORECASE
     )
 
