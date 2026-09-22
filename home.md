@@ -18,7 +18,7 @@
 ---
 
 ## Bio
-With a post-graduate degree in Computer Science from Loyola College and an established career as an online Emerging Technologies Educator and Domain Expert in Generative AI and Quantum Computing, I sit directly in the intersection of frontier emerging technology domains. I author authoritative Diátaxis technical documentation, design training programs, provide executive advisory, and produce deep dives where every Python, Golang, Rust, or Mojo script and Quantum circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. 
+With a post-graduate degree in Computer Science from Loyola College and an established career as an online Emerging Technologies Educator and Domain Expert in Generative AI and Quantum Computing, I sit directly in the intersection of frontier emerging technology domains. I author authoritative Diátaxis technical documentation, design training programs, provide executive advisory, and produce deep dives where every Python or Rust script and Quantum circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. 
 
 > **Important Positioning Note**: I operate as an educator and domain expert in Generative AI and Quantum Computing—I do not develop custom production codebases or software applications for hire. I deliver world-class documentation, training courses, advisory roadmaps, and working, tested code artifacts.
 
@@ -26,7 +26,7 @@ With a post-graduate degree in Computer Science from Loyola College and an estab
 **AI accelerates the workflow. Human verification owns the result.**
 1. **Research and source discovery**: Primary arXiv papers, documentation archives, hardware specifications.
 2. **Structural drafting**: Pedagogical structure, outline stress-testing, Diátaxis modularization.
-3. **Executable implementation**: Production-grade code artifacts in Python, Golang, Rust, Mojo, and Qiskit.
+3. **Executable implementation**: Production-grade code artifacts in Python, Rust, and Qiskit.
 4. **Runtime verification**: Live sandbox execution, test suites, and quantum simulators/hardware.
 5. **Human technical/editorial judgment**: Single-point intellectual accountability and domain precision.
 
@@ -49,49 +49,39 @@ With a post-graduate degree in Computer Science from Loyola College and an estab
 
 ---
 
-## Core Capabilities & Specialized Roles (12 Areas)
+## Core Capabilities & Specialized Roles (10 Areas)
 
 1. **AI Agent Orchestration (Architecture & Guides)**: Multi-agent systems, tool-calling loops, agent swarms, and persistent workflows (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent).
 2. **Quantum Computing & QML (Education & Training)**: Hands-on IBM Qiskit, PennyLane, variational circuits, and quantum algorithms (Grover, Shor, VQE, QAOA) for developers and students.
 3. **LLM & Agent Systems (Documentation & Evaluation)**: RAG pipelines, agentic workflows, prompt engineering frameworks, and evaluation benchmarks.
 4. **Post-Quantum Cryptography & Quantum Risk (Executive Advisory)**: PQC transition roadmaps, NIST standard migrations (Kyber/Dilithium), and enterprise risk assessments.
 5. **Local & Private AI (Deployment Guides & Benchmarks)**: Ollama, LM Studio, llama.cpp, GGUF quantization, and private SLM deployment tutorials.
-6. **Python AI Systems & Code Verification**: Executable PyTorch pipelines, LangGraph workflows, and FastAPI tutorials with runtime-verified code.
-7. **Go Cloud Systems & API Documentation**: High-concurrency gRPC, REST, and distributed systems architecture documentation and benchmark suites in Go.
+6. **Python AI Systems & Code Verification**: Executable PyTorch pipelines, Hugging Face Transformers, and FastAPI tutorials with runtime-verified code.
+7. **Model Engineering (Fine-Tuning & Alignment)**: Supervised fine-tuning (SFT), parameter-efficient adaptations (LoRA, QLoRA), direct preference optimization (DPO, GRPO), and production model customization (Unsloth, Hugging Face TRL, PEFT, DeepSpeed).
 8. **Rust Systems & Performance Benchmarks**: Tokio async guides, Burn/Candle ML tutorials, and performance benchmarks with verified Rust crates.
-9. **Corporate & Developer Education**: Custom curricula, interactive workshops, structured learning paths, and hands-on Jupyter notebook modules.
-10. **Technical Deep Dives & Explainers**: Comprehensive explainers on LLM internals, agent architectures, and quantum algorithms. Researched, executed, and verified.
-11. **Executive Advisory & Tech Strategy**: Strategic technology consulting, emerging tech roadmaps, and GenAI adoption blueprints for C-suite and engineering leaders.
-12. **Documentation Architecture (Diátaxis)**: Structuring developer portals, API references, and internal knowledge bases using the Diátaxis framework.
+9. **Corporate Education & Executive Advisory**: Custom curricula, interactive workshops, executive roadmaps, structured learning paths, and hands-on Jupyter notebook modules.
+10. **LLM Evaluation & Safety Guardrails**: Automated evaluation harnesses, hallucination benchmarks, unit-test suites for RAG and agentic workflows, deterministic safety guardrails, and production evaluation observability (Ragas, DeepEval, NeMo Guardrails, Langfuse, Promptfoo).
 
 ---
 
-## The Diátaxis Documentation Framework
+## The Diátaxis Documentation Framework (5 In-Depth Role Cards)
 
-All technical documentation deliverables follow the Diátaxis framework structure created by [Daniele Procida](https://diataxis.fr/):
+All technical documentation deliverables follow the Diátaxis framework structure created by [Daniele Procida](https://diataxis.fr/), architected across 5 comprehensive, verified documentation roles:
 
-### 4 Core Documentation Pillars
-1. **Tutorials**: Learning-oriented, practical step-by-step lessons for newcomers to achieve immediate success through hands-on exercises.
-2. **How-To Guides**: Problem-oriented recipes guiding developers through real-world tasks and operational procedures.
-3. **Reference Docs**: Information-oriented, precise technical specifications, API parameters, and schema definitions.
-4. **Explanation**: Understanding-oriented background articles exploring architectural design decisions, domain context, and high-level concepts.
-
-### 8 Extended Engineering Documentation Artifacts
-5. **Architecture Decision Records (ADRs)**: Capturing key architectural choices, trade-offs, and consequences chronologically.
-6. **Project Briefs**: Scope-oriented planning documents defining vision, deliverables, and success metrics.
-7. **PR Summaries**: Review-oriented documentation providing code review context, verification steps, and testing proof.
-8. **5-Why Root-Cause Analyses**: Incident post-mortems tracing technical failures to underlying systemic root causes.
-9. **Handover Documents**: Transition-oriented operational transfer guides ensuring seamless domain knowledge handoff.
-10. **Developer Notes**: Context-oriented field notes, scratchpad observations, and sync summaries.
-11. **Runbooks & SOPs**: Execution-oriented operational playbooks and runbooks detailing routine procedures, incident recovery, and failover protocols.
-12. **RFCs & Tech Specs**: Proposal-oriented technical specifications detailing system design changes, API contracts, and consensus-building before development.
+1. **Tutorials (Learning-Oriented)**: Taking newcomers by the hand to achieve immediate, dependable success from zero knowledge. Structured as progressive, step-by-step journeys without digressions or alternative paths. Backed by fully verified, reproducible Jupyter notebooks and starter repositories where every dependency is pinned and all code executes cleanly on first run.
+2. **How-To Guides (Problem-Oriented)**: Real-world recipes guiding active practitioners through solving specific, concrete engineering problems. Focuses on production edge cases, performance optimization, multi-framework integrations, error-recovery routines, and practical troubleshooting steps with copy-pasteable, verified implementations.
+3. **Reference Documentation (Information-Oriented)**: Austere, precise, and authoritative technical descriptions of software machinery, API endpoints, function signatures, schema definitions, and system invariants. Designed for instantaneous retrieval, complete parameter accuracy, and zero opinion or narrative clutter.
+4. **Explanation & Architecture (Understanding-Oriented)**: Illuminating the "why"—providing high-level domain context, architectural reasoning, trade-off analyses, and design philosophy. Supported by verified Mermaid architecture diagrams, mathematical formulations, and comparative benchmark curves that clarify system boundaries and technical choices.
+5. **Architecture Decision Records (ADRs) & Engineering Artifacts (Decision-Oriented)**: Chronologically documenting pivotal architectural choices, context, evaluated alternatives, and long-term technical consequences (MADR format). Encompasses RFCs, production runbooks, post-mortem 5-Why root-cause analyses, and cross-team handover guides ensuring permanent engineering alignment.
 
 ---
 
 ## Tech Stack & Tooling
 
-- **💻 Languages (for verification & code artifacts)**: Python, Golang, Rust, Mojo, SQL, JavaScript, Bash
+- **💻 Languages (for verification & code artifacts)**: Python, Rust, SQL, TypeScript, JavaScript, Bash
 - **🧠 Generative AI Systems**: LLMs, SLMs, Agentic AI, RAG, Vector Databases, Remote & Live GenAI Training
+- **🎯 Model Engineering**: LoRA / QLoRA, Unsloth, PEFT, Hugging Face TRL, DPO / GRPO
+- **📊 LLM Evaluation**: Ragas, DeepEval, NeMo Guardrails, Langfuse, Promptfoo
 - **⚛️ Quantum Systems**: IBM Qiskit, PennyLane, Quantum Machine Learning, Quantum Algorithms, Microsoft Q# / Quantinuum
 - **🤖 AI Tools Expertise**: Claude Code, Google Antigravity, Google AI Studio, Gemini Notebook, CodeWiki
 - **⚡ Local & Private AI Stack**: Ollama, LM Studio, llama.cpp, GGUF, LanceDB, HuggingFace Hub
@@ -106,7 +96,7 @@ All technical documentation deliverables follow the Diátaxis framework structur
 
 Most developer content in Generative AI and Quantum Computing suffers from one of two flaws: it is either delivered by brilliant physicists and engineers who lack educational clarity, or by generalist writers who cannot execute the code they document.
 
-With a post-graduate degree in Computer Science, extensive technical training experience, and deep domain mastery across Generative AI and Quantum Systems, I operate as an educator, consultant, and documentation specialist rather than a production software developer. I bridge the gap between engineering complexity and stakeholder comprehension — delivering training workshops, executive advisory, and Diátaxis-structured technical documentation where every Python, Golang, Rust, or Mojo script and Quantum circuit is run and verified before publication.
+With a post-graduate degree in Computer Science, extensive technical training experience, and deep domain mastery across Generative AI and Quantum Systems, I operate as an educator, consultant, and documentation specialist rather than a production software developer. I bridge the gap between engineering complexity and stakeholder comprehension — delivering training workshops, executive advisory, and Diátaxis-structured technical documentation where every Python or Rust script and Quantum circuit is run and verified before publication.
 
 ---
 
@@ -134,7 +124,7 @@ I use frontier AI tools for research, synthesis, exploration, ideation, and edit
 5. Single-point intellectual responsibility for every deliverable
 
 ### 4. Verification
-1. Executing Python, Golang, Rust, and Mojo code in isolated sandbox environments
+1. Executing Python and Rust code in isolated sandbox environments
 2. Testing quantum circuits in Qiskit Aer simulators or on real IBM Quantum hardware
 3. Validating REST, gRPC, and WebSocket endpoints against live servers
 4. Tracing comparative benchmark claims directly to verifiable primary sources
@@ -170,20 +160,18 @@ A comprehensive transformation system showing professionals how to use frontier 
 
 ---
 
-## Service Offerings (12 Offerings)
+## Service Offerings (10 Offerings)
 
 1. **Training in Generative AI**: Interactive virtual workshops, custom team bootcamps, and LLM/agent labs.
 2. **Training in Quantum Computing**: Interactive virtual workshops, Qiskit/PennyLane labs, and algorithm masterclasses.
 3. **AI Agent Orchestration Training & Content**: Interactive training workshops, architecture guides, and technical content on agent swarms, tool-calling loops, and agentic workflows (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent).
 4. **Technical Deep Dives**: Long-form technical explainers (2,000–8,000 words) with verified benchmarks.
 5. **Developer Education & Courses**: Tutorial series, structured learning paths, and interactive notebooks.
-6. **Quantum Developer Content**: IBM Qiskit & PennyLane tutorials, QML explainers, and algorithm walkthroughs.
-7. **Quantum AI & Quantum ML Training & Content**: Interactive workshops, tutorials, and guides for Quantum Neural Networks (QNNs), Quantum Kernel methods, VQE/QAOA algorithms, and hybrid PyTorch/PennyLane QML.
-8. **Local LLM Deployment Training & Guides**: Interactive workshops, step-by-step setup guides, vLLM & Ollama deployment tutorials and documentation.
-9. **Generative AI Developer Content**: RAG pipelines, agentic workflows, prompt engineering frameworks, and SLM fine-tuning guides.
-10. **Monthly Content Retainer**: Dedicated monthly sprint capacity for devtools and AI infra companies: guaranteed content volume, priority turnaround & byline management.
-11. **Post-Quantum Cryptography & Quantum Risk**: Enterprise quantum readiness audits, threat modeling against RSA/ECC infrastructure, NIST PQC migration roadmaps, and executive briefings.
-12. **Rust for AI & High-Performance Systems**: Interactive workshops and technical guides for Rust AI inference, Candle & Burn ML tensor engines, PyO3 acceleration, and memory-safe Tokio microservices.
+6. **Local LLM Deployment Training & Guides**: Interactive workshops, step-by-step setup guides, vLLM & Ollama deployment tutorials and documentation.
+7. **Generative AI Developer Content**: RAG pipelines, agentic workflows, prompt engineering frameworks, and SLM fine-tuning guides.
+8. **Monthly Content Retainer**: Dedicated monthly sprint capacity for devtools and AI infra companies: guaranteed content volume, priority turnaround & byline management.
+9. **Post-Quantum Cryptography & Quantum Risk**: Enterprise quantum readiness audits, threat modeling against RSA/ECC infrastructure, NIST PQC migration roadmaps, and executive briefings.
+10. **Rust for AI & High-Performance Systems**: Interactive workshops and technical guides for Rust AI inference, Candle & Burn ML tensor engines, PyO3 acceleration, and memory-safe Tokio microservices.
 
 ---
 
@@ -223,9 +211,7 @@ How to understand and build emerging technologies.
 - [💡 LeetCode (leetcode.com/u/thomascherickal)](https://leetcode.com/u/thomascherickal)
 - [💻 Code360 (naukri.com/code360/profile/thomascherickal)](https://www.naukri.com/code360/profile/thomascherickal)
 - [📊 Kaggle (kaggle.com/thomascherickal)](https://www.kaggle.com/thomascherickal)
-- [⚔️ CodeWars (codewars.com/users/thomascherickal)](https://www.codewars.com/users/thomascherickal)
-- [📄 HubPages (hubpages.com/@thomascherickal)](https://hubpages.com/@thomascherickal)
-- [🖋️ Contently (thomascherickal.contently.com)](https://thomascherickal.contently.com)
+- [⚔️ CodeWars (codewars.com/users/thomascherickal)](https://codewars.com/users/thomascherickal)
 - [🔗 Linktree (linktr.ee/thomascherickal)](https://linktr.ee/thomascherickal)
 - [🎨 Patreon (patreon.com/thomascherickal)](https://patreon.com/thomascherickal)
 - [🛒 Gumroad (thomascherickal.gumroad.com)](https://thomascherickal.gumroad.com)
