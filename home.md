@@ -1,10 +1,8 @@
-# Thomas Cherickal — Emerging Technologies Educator and Domain Expert in Generative AI and Quantum Computing
+# Thomas Cherickal — Generative AI Consultant
 
 **Location**: Chennai, India (Remote — Worldwide)  
 **Brand**: The Digital Futurist  
 **Email**: [thomascherickal@gmail.com](mailto:thomascherickal@gmail.com)  
-
-**Emerging Technologies Educator and Domain Expert in Generative AI and Quantum Computing**
 
 
 **Core Capabilities**:
@@ -12,15 +10,14 @@
 - `Documentation Architecture (Diátaxis Framework)`
 - `Executive Advisory & CXO Tech Strategy`
 - `AI Agent Orchestration & Architecture Guides`
-- `Generative AI & Quantum Computing Content`
+- `Generative AI Consultant`
 - `Runtime-Verified Code Artifacts`
 
 ---
 
 ## Bio
-With a post-graduate degree in Computer Science from Loyola College and an established career as an online Emerging Technologies Educator and Domain Expert in Generative AI and Quantum Computing, I sit directly in the intersection of frontier emerging technology domains. I author authoritative Diátaxis technical documentation, design training programs, provide executive advisory, and produce deep dives where every Python or Rust script and Quantum circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. 
+With a post-graduate degree in Computer Science from Loyola College and an established career as an online Emerging Technologies Educator and Domain Expert in Generative AI and Quantum Computing, I sit directly in the intersection of frontier emerging technology domains. I author authoritative Diátaxis technical documentation, design training programs, provide executive advisory, and produce deep dives where every Python or Rust script and Quantum Circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. 
 
-> **Important Positioning Note**: I operate as an educator and domain expert in Generative AI and Quantum Computing—I do not develop custom production codebases or software applications for hire. I deliver world-class documentation, training courses, advisory roadmaps, and working, tested code artifacts.
 
 ### Workflow & Methodology: Research → Build → Run → Verify → Explain
 **AI accelerates the workflow. Human verification owns the result.**
@@ -32,7 +29,7 @@ With a post-graduate degree in Computer Science from Loyola College and an estab
 
 ### Quick Actions
 - [🌐 Main Site](https://thomascherickal.com)
-- [📚 Portfolio](https://thomascherickal.github.io/)
+- [📚 Business Site](https://thomascherickal.github.io/)
 - [🐙 GitHub Profile](https://github.com/thomascherickal)
 - [📅 Book 1:1 Consult](https://topmate.io/thomascherickal)
 - [📧 Kit Newsletter](https://thomascherickal.kit.com)
@@ -44,7 +41,7 @@ With a post-graduate degree in Computer Science from Loyola College and an estab
 | :--- | :--- |
 | **Articles Published** | 500+ |
 | **Platforms** | 10+ |
-| **Emerging Tech Education** | 2020— |
+| **Niche Audience Reach** | 250,000+ |
 | **Featured Deep Dives** | 40 |
 
 ---
@@ -218,5 +215,5 @@ How to understand and build emerging technologies.
 - [📅 Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)
 
 ---
-*© 2026 Thomas Cherickal · The Digital Futurist · Emerging Technologies Educator and Domain Expert in Generative AI and Quantum Computing*  
+*© 2026 Thomas Cherickal · The Digital Futurist · Generative AI Consultant*  
 *📍 Chennai, India 🇮🇳*
