@@ -1,4 +1,5 @@
-# Thomas Cherickal — Generative AI Consultant
+# Thomas Cherickal — Technical Writer
+## Generative AI Consultant · Quantum Systems Explorer
 
 **Location**: Chennai, India (Remote — Worldwide)  
 **Brand**: The Digital Futurist  
@@ -6,24 +7,24 @@
 
 
 **Core Capabilities**:
-- `Emerging Technology Education & Corporate Training`
+- `Technical Writer`
 - `Documentation Architecture (Diátaxis Framework)`
-- `Executive Advisory & CXO Tech Strategy`
-- `AI Agent Orchestration & Architecture Guides`
 - `Generative AI Consultant`
-- `Runtime-Verified Code Artifacts`
+- `Quantum Systems Explorer`
+- `Python & Rust Systems Coding`
+- `Runtime-Verified Content Artifacts`
 
 ---
 
 ## Bio
-With a post-graduate degree in Computer Science from Loyola College and an established career as an online Emerging Technologies Educator and Domain Expert in Generative AI and Quantum Computing, I sit directly in the intersection of frontier emerging technology domains. I author authoritative Diátaxis technical documentation, design training programs, provide executive advisory, and produce deep dives where every Python or Rust script and Quantum Circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. 
+With a post-graduate degree in Computer Science from Loyola College and an established career as a Technical Writer, Generative AI Consultant, and Quantum Systems Explorer, I sit directly in the intersection of frontier emerging technology domains. I author authoritative Diátaxis technical documentation, author high-impact content in Python and Rust, provide architectural consulting, and produce deep dives where every Python or Rust script and Quantum Circuit is run and verified before publication. 500+ published long-form technical articles across 10+ platforms since 2020. 
 
 
 ### Workflow & Methodology: Research → Build → Run → Verify → Explain
 **AI accelerates the workflow. Human verification owns the result.**
 1. **Research and source discovery**: Primary arXiv papers, documentation archives, hardware specifications.
 2. **Structural drafting**: Pedagogical structure, outline stress-testing, Diátaxis modularization.
-3. **Executable implementation**: Production-grade code artifacts in Python, Rust, and Qiskit.
+3. **Executable implementation**: High-impact content artifacts in Python, Rust, and Qiskit.
 4. **Runtime verification**: Live sandbox execution, test suites, and quantum simulators/hardware.
 5. **Human technical/editorial judgment**: Single-point intellectual accountability and domain precision.
 
@@ -49,14 +50,14 @@ With a post-graduate degree in Computer Science from Loyola College and an estab
 ## Core Capabilities & Specialized Roles (10 Areas)
 
 1. **AI Agent Orchestration (Architecture & Guides)**: Multi-agent systems, tool-calling loops, agent swarms, and persistent workflows (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent).
-2. **Quantum Computing & QML (Education & Training)**: Hands-on IBM Qiskit, PennyLane, variational circuits, and quantum algorithms (Grover, Shor, VQE, QAOA) for developers and students.
+2. **Quantum Computing & QML (Architecture & SDKs)**: Hands-on IBM Qiskit, PennyLane, variational circuits, and quantum algorithms (Grover, Shor, VQE, QAOA) for developers and engineers.
 3. **LLM & Agent Systems (Documentation & Evaluation)**: RAG pipelines, agentic workflows, prompt engineering frameworks, and evaluation benchmarks.
-4. **Post-Quantum Cryptography & Quantum Risk (Executive Advisory)**: PQC transition roadmaps, NIST standard migrations (Kyber/Dilithium), and enterprise risk assessments.
+4. **Post-Quantum Cryptography & Quantum Risk (Consulting & Architecture)**: PQC transition roadmaps, NIST standard migrations (Kyber/Dilithium), and enterprise risk assessments.
 5. **Local & Private AI (Deployment Guides & Benchmarks)**: Ollama, LM Studio, llama.cpp, GGUF quantization, and private SLM deployment tutorials.
 6. **Python AI Systems & Code Verification**: Executable PyTorch pipelines, Hugging Face Transformers, and FastAPI tutorials with runtime-verified code.
 7. **Model Engineering (Fine-Tuning & Alignment)**: Supervised fine-tuning (SFT), parameter-efficient adaptations (LoRA, QLoRA), direct preference optimization (DPO, GRPO), and production model customization (Unsloth, Hugging Face TRL, PEFT, DeepSpeed).
 8. **Rust Systems & Performance Benchmarks**: Tokio async guides, Burn/Candle ML tutorials, and performance benchmarks with verified Rust crates.
-9. **Corporate Education & Executive Advisory**: Custom curricula, interactive workshops, executive roadmaps, structured learning paths, and hands-on Jupyter notebook modules.
+9. **Systems Architecture & Technical Consulting**: Custom technical roadmaps, architectural reviews, structured Diátaxis documentation, and hands-on Jupyter notebook modules.
 10. **LLM Evaluation & Safety Guardrails**: Automated evaluation harnesses, hallucination benchmarks, unit-test suites for RAG and agentic workflows, deterministic safety guardrails, and production evaluation observability (Ragas, DeepEval, NeMo Guardrails, Langfuse, Promptfoo).
 
 ---
@@ -76,7 +77,7 @@ All technical documentation deliverables follow the Diátaxis framework structur
 ## Tech Stack & Tooling
 
 - **💻 Languages (for verification & code artifacts)**: Python, Rust, SQL, TypeScript, JavaScript, Bash
-- **🧠 Generative AI Systems**: LLMs, SLMs, Agentic AI, RAG, Vector Databases, Remote & Live GenAI Training
+- **🧠 Generative AI Systems**: LLMs, SLMs, Agentic AI, RAG, Vector Databases, Systems Architecture & Coding
 - **🎯 Model Engineering**: LoRA / QLoRA, Unsloth, PEFT, Hugging Face TRL, DPO / GRPO
 - **📊 LLM Evaluation**: Ragas, DeepEval, NeMo Guardrails, Langfuse, Promptfoo
 - **⚛️ Quantum Systems**: IBM Qiskit, PennyLane, Quantum Machine Learning, Quantum Algorithms, Microsoft Q# / Quantinuum
@@ -91,9 +92,9 @@ All technical documentation deliverables follow the Diátaxis framework structur
 
 ## Why Technical Content Fails (The Technical Moat)
 
-Most developer content in Generative AI and Quantum Computing suffers from one of two flaws: it is either delivered by brilliant physicists and engineers who lack educational clarity, or by generalist writers who cannot execute the code they document.
+Most developer content in Generative AI and Quantum Computing suffers from one of two flaws: it is either delivered by brilliant physicists and engineers who lack explanatory clarity, or by generalist writers who cannot execute the code they document.
 
-With a post-graduate degree in Computer Science, extensive technical training experience, and deep domain mastery across Generative AI and Quantum Systems, I operate as an educator, consultant, and documentation specialist. I bridge the gap between engineering complexity and stakeholder comprehension — delivering training workshops, executive advisory, and Diátaxis-structured technical documentation where every Python or Rust script and Quantum circuit is run and verified before publication.
+With a post-graduate degree in Computer Science, extensive systems content experience, and deep domain mastery across Generative AI and Quantum Systems, I operate as a technical writer, consultant, and systems specialist. I bridge the gap between engineering complexity and stakeholder comprehension — delivering architectural consulting, high-impact content, and Diátaxis-structured technical documentation where every Python or Rust script and Quantum circuit is run and verified before publication.
 
 ---
 
@@ -132,7 +133,7 @@ I use frontier AI tools for research, synthesis, exploration, ideation, and edit
 ## Featured Case Studies (Portfolio Highlights)
 
 1. [⚛️ Comparing Quantum Programming Frameworks](https://hackernoon.com/comparing-quantum-programming-frameworks-ibm-qiskit-microsoft-q-and-quantinuums-new-stack) — Comparative analysis of IBM Qiskit, Microsoft Q#, and Quantinuum. *(Published: Sep 15, 2025 · 3,500 words)*
-2. [⚛️ Quantum Computing Fundamentals Part I](https://hackernoon.com/quantum-computing-fundamentals-part-i-10-easy-pieces) — Educational learning path for senior engineers transitioning to quantum computing. *(Published: Dec 29, 2025 · 4,200 words)*
+2. [⚛️ Quantum Computing Fundamentals Part I](https://hackernoon.com/quantum-computing-fundamentals-part-i-10-easy-pieces) — Technical guide for senior engineers transitioning to quantum computing. *(Published: Dec 29, 2025 · 4,200 words)*
 3. [⚛️ Quantum Computing Fundamentals Part II](https://hackernoon.com/quantum-computing-fundamentals-part-ii-10-not-so-easy-pieces) — Advanced guide to QFT, phase estimation, and multi-qubit entanglement. *(Published: Dec 31, 2025 · 4,500 words)*
 4. [⚛️ How Quantum Computers Threaten Bitcoin](https://hackernoon.com/how-quantum-computers-threaten-bitcoin-and-the-entire-internet-simply-explained) — Post-quantum cryptography threat analysis and NIST candidate standards. *(Published: Dec 7, 2025 · 3,200 words)*
 5. [🧠 Running Local LLMs Guide](https://hackernoon.com/how-to-run-your-own-local-llm-2026-edition-version-1) — Technical deployment guide across Ollama, LM Studio, llama.cpp, and GGUF quantization. *(Published: Mar 9, 2026 · 3,800 words)*
@@ -159,16 +160,16 @@ A comprehensive transformation system showing professionals how to use frontier 
 
 ## Service Offerings (10 Offerings)
 
-1. **Training in Generative AI**: Interactive virtual workshops, custom team bootcamps, and LLM/agent labs.
-2. **Training in Quantum Computing**: Interactive virtual workshops, Qiskit/PennyLane labs, and algorithm masterclasses.
-3. **AI Agent Orchestration Training & Content**: Interactive training workshops, architecture guides, and technical content on agent swarms, tool-calling loops, and agentic workflows (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent).
-4. **Technical Deep Dives**: Long-form technical explainers (2,000–8,000 words) with verified benchmarks.
-5. **Developer Education & Courses**: Tutorial series, structured learning paths, and interactive notebooks.
-6. **Local LLM Deployment Training & Guides**: Interactive workshops, step-by-step setup guides, vLLM & Ollama deployment tutorials and documentation.
-7. **Generative AI Developer Content**: RAG pipelines, agentic workflows, prompt engineering frameworks, and SLM fine-tuning guides.
-8. **Monthly Content Retainer**: Dedicated monthly sprint capacity for devtools and AI infra companies: guaranteed content volume, priority turnaround & byline management.
-9. **Post-Quantum Cryptography & Quantum Risk**: Enterprise quantum readiness audits, threat modeling against RSA/ECC infrastructure, NIST PQC migration roadmaps, and executive briefings.
-10. **Rust for AI & High-Performance Systems**: Interactive workshops and technical guides for Rust AI inference, Candle & Burn ML tensor engines, PyO3 acceleration, and memory-safe Tokio microservices.
+1. **Systems & AI Coding (Python / Rust)**: Production-grade codebases, algorithmic benchmarks, PyO3 acceleration, and runnable Jupyter notebook repos.
+2. **Generative AI Systems Consulting**: Architectural design, LLM orchestration frameworks, persistent memory systems & prompt/pipeline optimization.
+3. **Quantum Computing Consulting**: Qiskit & PennyLane algorithm design, VQE/QAOA implementations & quantum readiness consulting.
+4. **AI Agent Orchestration & Architecture**: Architecture guides, multi-agent swarms, tool-calling loops, and agentic workflows (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent).
+5. **Technical Deep Dives & Whitepapers**: Long-form technical explainers (2,000–8,000 words) with verified benchmarks.
+6. **Developer Documentation & Tutorials**: Diátaxis documentation, multi-part tutorial series, structured learning paths, and interactive notebooks.
+7. **Local LLM Deployment Systems & Guides**: Step-by-step setup guides, vLLM & Ollama deployment tutorials, quantization, and private model serving.
+8. **Generative AI Developer Content**: RAG pipelines, agentic workflows, prompt engineering frameworks, and SLM fine-tuning guides.
+9. **Monthly Dedicated Sprint Retainer**: Dedicated monthly sprint capacity for devtools and AI infra companies: guaranteed content volume, priority turnaround & byline management.
+10. **Post-Quantum Cryptography & Quantum Risk**: Enterprise quantum readiness audits, threat modeling against RSA/ECC infrastructure, NIST PQC migration roadmaps, and architectural consulting.
 
 ---
 

@@ -368,14 +368,34 @@ main {
 
 .hero-subtitle {
   font-family: var(--font-display);
-  font-size: clamp(0.96rem, 2.8vw, 1.48rem);
+  font-size: clamp(1.4rem, 4.2vw, 2.35rem);
   font-weight: 700;
   color: var(--cyan);
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.6rem;
   letter-spacing: 0.02em;
   text-align: center;
   width: 100%;
   opacity: 1;
+}
+
+.hero-subsubtitles {
+  font-family: var(--font-display);
+  font-size: clamp(0.92rem, 2.4vw, 1.25rem);
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.03em;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.hero-subsubtitles .subsubtitle-sep {
+  display: none;
 }
 
 .hero h3,
