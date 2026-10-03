@@ -158,18 +158,54 @@ A comprehensive transformation system showing professionals how to use frontier 
 
 ---
 
-## Service Offerings (10 Offerings)
+## Service Offerings (5 Offerings)
 
-1. **Systems & AI Coding (Python / Rust)**: Production-grade codebases, algorithmic benchmarks, PyO3 acceleration, and runnable Jupyter notebook repos.
-2. **Generative AI Systems Consulting**: Architectural design, LLM orchestration frameworks, persistent memory systems & prompt/pipeline optimization.
-3. **Quantum Computing Consulting**: Qiskit & PennyLane algorithm design, VQE/QAOA implementations & quantum readiness consulting.
-4. **AI Agent Orchestration & Architecture**: Architecture guides, multi-agent swarms, tool-calling loops, and agentic workflows (LangGraph, CrewAI, AutoGen, OpenClaw, Hermes Agent).
-5. **Technical Deep Dives & Whitepapers**: Long-form technical explainers (2,000–8,000 words) with verified benchmarks.
-6. **Developer Documentation & Tutorials**: Diátaxis documentation, multi-part tutorial series, structured learning paths, and interactive notebooks.
-7. **Local LLM Deployment Systems & Guides**: Step-by-step setup guides, vLLM & Ollama deployment tutorials, quantization, and private model serving.
-8. **Generative AI Developer Content**: RAG pipelines, agentic workflows, prompt engineering frameworks, and SLM fine-tuning guides.
-9. **Monthly Dedicated Sprint Retainer**: Dedicated monthly sprint capacity for devtools and AI infra companies: guaranteed content volume, priority turnaround & byline management.
-10. **Post-Quantum Cryptography & Quantum Risk**: Enterprise quantum readiness audits, threat modeling against RSA/ECC infrastructure, NIST PQC migration roadmaps, and architectural consulting.
+1. **AI Agent Orchestration (Consulting & Content)**: Architectural consulting and technical guides on multi-agent systems, tool-calling loops, agent swarms, and production agentic workflows. Multi-agent swarms and tool loops runtime-verified in live environments before delivery.
+2. **Technical Deep Dives (Content)**: Commissioned long-form explainers (2,000–8,000 words) across Generative AI architectures and Quantum Systems with original research. AI-accelerated synthesis and primary research; human-directed analysis and verified code repos.
+3. **Local LLM Deployment (Consulting & Guides)**: Deployment walkthroughs, vLLM and Ollama setup guides, GGUF optimization, and private enterprise LLM serving documentation. Quantization and serving blueprints verified on live GPU and local hardware runtimes.
+4. **Generative AI Developer Content**: Production RAG pipelines, agentic workflows, fine-tuning guides, and automated developer documentation for frontier GenAI products. Architectural drafting assisted by AI; code logic runtime-verified in Python and Rust.
+5. **Monthly Content Retainer**: Dedicated monthly sprint capacity for devtools and AI infrastructure companies, providing guaranteed technical content volume. Dedicated monthly sprint bandwidth with mandatory manual code execution checks.
+
+---
+
+## Strategic Collaboration & Engagement Models
+
+Structured collaboration frameworks for Generative AI toolmakers, quantum SDK vendors, devtool creators, and enterprise engineering teams.
+
+### 9 Ways We Can Work Together
+
+1. **Systems Architecture Consulting & Content Verification**: Deep architectural reviews, Generative AI agent swarm design, Post-Quantum migration blueprints, runtime benchmark verification, and containerized sandbox testing.
+2. **Developer Tutorials & Documentation**: Structured developer onboarding paths, multi-part deep-dive tutorial series, and production reference codebases to accelerate developer adoption and nurture ecosystems.
+3. **Content Partnerships & Retainers**: Dedicated monthly sprint capacity delivering continuous technical thought leadership, release coverage, and architectural guides with async Slack/Discord collaboration.
+4. **Technical Content Strategy**: Diátaxis documentation audits, developer journey mapping, competitive benchmarking, and quarterly technical publication roadmaps.
+5. **Editorial Workflows & Verification CI**: Consulting engineering and content teams on AI-native workflows, automated code snippet verification pipelines (GitHub Actions), syntax/runtime testing harnesses, and style guides.
+6. **High-Authority Guest Publications**: In-depth research-grounded articles (2,500–5,000 words), custom Mermaid diagrams, and verified code repositories under authentic byline for corporate engineering blogs or industry publications.
+7. **Joint Technical Collaboration**: Co-authored engineering investigations, architectural teardowns, reproducible benchmarks, and joint case studies cross-promoted across developer ecosystems.
+8. **Sponsored Deep Dives in Newsletter**: Dedicated feature issues (2,000+ words), sponsored architectural breakdowns, and curated technical spotlights in *The Digital Futurist*.
+9. **Open Source Documentation Suites**: Production-grade documentation ecosystems, comprehensive API references, runnable quickstarts, and contributor onboarding docs for open-source frameworks and SDKs under Diátaxis.
+
+### Editorial Integrity Standard
+
+- **100% Authentic Bylines (No Ghostwriting)**: All commissioned write-ups, deep dives, tutorials, and benchmarks carry my authentic domain-expert byline; ghostwritten marketing pieces are never accepted, preserving developer credibility and trust.
+
+### 8-Step Collaboration Lifecycle
+
+1. **Scope & Technical Briefing**: Aligning on engineering objectives, audience depth, and deliverables via an async intake brief or scoping call.
+2. **Milestone Agreement**: Transparent project proposal with clearly defined scope and milestone deliverables.
+3. **Primary Research & Architecture**: AI-accelerated literature synthesis, outline review, architectural schematics, and Diátaxis structure alignment.
+4. **Live Sandbox Code Verification**: Testing all code samples in live Python REPLs, `pytest`, `cargo test` sandboxes, or Qiskit simulators with real execution output logs.
+5. **Unlimited Revisions**: Continuous, collaborative iteration on drafts, diagrams, and repositories until engineering leadership is fully satisfied.
+6. **Milestone Sign-Off & IP Transfer**: Full commercial publication rights and clean repository handover granted upon milestone sign-off with authentic author attribution.
+7. **Multi-Platform Launch & Distribution**: Coordinated release and active cross-promotion across developer networks, Substack (*The Digital Futurist*), HackerNoon, and LinkedIn.
+8. **60-Day Free Modifications**: Post-launch support including minor code patches, upstream SDK breaking-change updates, and ongoing technical maintenance.
+
+### Who I Collaborate With
+
+- **GenAI & LLM Toolmakers**: RAG infrastructure, agentic frameworks, fine-tuning platforms, and vector database teams.
+- **Quantum SDK & Hardware Vendors**: Quantum computing platforms, QML framework developers, and post-quantum security providers.
+- **AI Infrastructure & Compute Platforms**: GPU clouds, model serving engines (vLLM, Ollama), and inference acceleration runtimes.
+- **Enterprise Engineering & Systems Teams**: Organizations implementing private enterprise LLMs, PQC migrations, or high-performance Rust systems.
+- **Technical Publications & Open Source Communities**: Developer platforms, open research teams, academic initiatives, and devtool startups.
 
 ---
 
@@ -198,23 +234,17 @@ How to understand and build emerging technologies.
 - [🟧 Blogger (thesingularitypoint.blogspot.com)](https://thesingularitypoint.blogspot.com/)
 - [❓ Quora (thomascherickal.quora.com)](https://thomascherickal.quora.com)
 - [🤖 Reddit (reddit.com/user/thomascherickal1)](https://reddit.com/user/thomascherickal1)
-- [📰 Muck Rack (muckrack.com/thomas-cherickal)](https://muckrack.com/thomas-cherickal)
-- [🐘 Mastodon (mastodon.social/@thomascherickal)](https://mastodon.social/@thomascherickal)
 - [📧 Kit (thomascherickal.kit.com)](https://thomascherickal.kit.com)
 - [🧪 Exercism (exercism.org/profiles/thomascherickal)](https://exercism.org/profiles/thomascherickal)
 - [🏅 CodersRank (profile.codersrank.io/user/thomascherickal)](https://profile.codersrank.io/user/thomascherickal/)
 - [🧠 Deep-ML (deep-ml.com/profile/thomascherickal)](https://www.deep-ml.com/profile/thomascherickal)
 - [🏆 HackerRank (hackerrank.com/profile/thomascherickal)](https://hackerrank.com/profile/thomascherickal)
-- [🌍 HackerEarth (hackerearth.com/@thomascherickal)](https://www.hackerearth.com/@thomascherickal)
 - [💡 LeetCode (leetcode.com/u/thomascherickal)](https://leetcode.com/u/thomascherickal)
 - [💻 Code360 (naukri.com/code360/profile/thomascherickal)](https://www.naukri.com/code360/profile/thomascherickal)
-- [📊 Kaggle (kaggle.com/thomascherickal)](https://www.kaggle.com/thomascherickal)
 - [⚔️ CodeWars (codewars.com/users/thomascherickal)](https://codewars.com/users/thomascherickal)
 - [🔗 Linktree (linktr.ee/thomascherickal)](https://linktr.ee/thomascherickal)
 - [🎨 Patreon (patreon.com/thomascherickal)](https://patreon.com/thomascherickal)
-- [🛒 Gumroad (thomascherickal.gumroad.com)](https://thomascherickal.gumroad.com)
-- [📅 Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)
+- [ Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)
 
 ---
-*© 2026 Thomas Cherickal · The Digital Futurist · Generative AI Consultant*  
-*📍 Chennai, India 🇮🇳*
+*© 2026 Thomas Cherickal · The Digital Futurist · Generative AI Consultant · Quantum Systems Explorer · Technical Writer*  

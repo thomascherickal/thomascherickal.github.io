@@ -424,11 +424,12 @@
 
     .hero-subtitle {
       font-family: var(--font-display);
-      font-size: clamp(1.1rem, 3.2vw, 1.68rem);
-      font-weight: 700;
+      font-size: clamp(1.85rem, 5.2vw, 3.2rem);
+      font-weight: 800;
       color: var(--cyan);
-      margin-bottom: 0.4rem;
-      letter-spacing: 0.02em;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
       text-align: center;
       width: 100%;
       opacity: 1;
@@ -436,10 +437,10 @@
 
     .hero-subsubtitles {
       font-family: var(--font-display);
-      font-size: clamp(0.92rem, 2.4vw, 1.25rem);
+      font-size: clamp(0.95rem, 2.5vw, 1.3rem);
       font-weight: 600;
       color: var(--gold);
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.25rem;
       letter-spacing: 0.03em;
       text-align: center;
       width: 100%;
@@ -451,8 +452,10 @@
     }
 
     .hero-subsubtitles .subsubtitle-sep {
-      opacity: 0.45;
+      opacity: 0.55;
       color: var(--text-muted);
+      user-select: none;
+      padding: 0 0.15rem;
     }
 
     .hero h3,
@@ -2472,6 +2475,15 @@
         height: 120px;
       }
 
+      .hero-subsubtitles {
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+
+      .hero-subsubtitles .subsubtitle-sep {
+        display: none;
+      }
+
       .newsletter-card {
         padding: 1.25rem 1rem;
         gap: 1rem;
@@ -4086,12 +4098,6 @@
           "url": "https://thomascherickal.github.io/assets/site-icon.webp",
           "width": 512,
           "height": 512
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Chennai",
-          "addressRegion": "Tamil Nadu",
-          "addressCountry": "IN"
         }
       },
       {
@@ -4122,14 +4128,7 @@
         "image": { "@id": "https://thomascherickal.github.io/#primaryimage" },
         "jobTitle": "Technical Writer & Generative AI Consultant",
         "description": "Technical Writer, Generative AI Consultant, and Quantum Systems Explorer. Authoritative Diátaxis documentation, deep dives, architectural consulting, and systems content with runtime-verified high-impact content across Python and Rust. Every delivered content artifact is runtime-tested before publication. 500+ published technical articles across 10+ platforms since 2020.",
-        "nationality": { "@type": "Country", "name": "India" },
         "worksFor": { "@id": "https://thomascherickal.github.io/#organization" },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Chennai",
-          "addressRegion": "Tamil Nadu",
-          "addressCountry": "IN"
-        },
         "knowsAbout": [
           "Technical Writing",
           "AI Agent Orchestration",
@@ -4339,7 +4338,7 @@
 
     <!-- HERO -->
     <section class="hero" id="top">
-      <p class="hero-eyebrow">// The Digital Futurist · Chennai, India</p>
+      <p class="hero-eyebrow">// The Digital Futurist · Remote Worldwide</p>
       <img src="./assets/thomas-photo.webp"
         alt="Thomas Cherickal — Technical Writer, Generative AI Consultant, and Quantum Systems Explorer"
         class="hero-avatar" width="150" height="150" />
@@ -4347,11 +4346,13 @@
       <h2 class="hero-subtitle">Technical Writer</h2>
       <div class="hero-subsubtitles">
         <span>Generative AI Consultant</span>
+        <span class="subsubtitle-sep" aria-hidden="true">·</span>
         <span>Quantum Systems Explorer</span>
+        <span class="subsubtitle-sep" aria-hidden="true">·</span>
         <span>Documentation Architect</span>
       </div>
       <p class="hero-tagline">I author high-impact content, and create Diátaxis documentation for Generative AI,
-        AI Agents, Python, Rust, Qiskit, and many other technologies.</p>
+        AI Agents, Python, Rust, and other technologies.</p>
       <div class="hero-roles">
         <span class="role-chip gold">Technical Writer</span>
         <span class="role-chip cyan">Generative AI Consultant</span>
@@ -7159,7 +7160,7 @@
     <div class="footer-divider"></div>
     <div class="footer-bottom">
       <p class="footer-copy">© 2026 Thomas Cherickal · The Digital Futurist</p>
-      <p class="footer-location"><svg class="location-svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Chennai, India</p>
+      <p class="footer-location"><svg class="location-svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Remote Worldwide</p>
     </div>
   </footer>
     <!-- END:FOOTER -->
