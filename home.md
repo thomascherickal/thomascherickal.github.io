@@ -33,7 +33,6 @@ With a post-graduate degree in Computer Science from Loyola College and an estab
 - [📚 Business Site](https://thomascherickal.github.io/)
 - [🐙 GitHub Profile](https://github.com/thomascherickal)
 - [📅 Book 1:1 Consult](https://topmate.io/thomascherickal)
-- [📧 Kit Newsletter](https://thomascherickal.kit.com)
 
 ---
 
@@ -217,11 +216,7 @@ Structured collaboration frameworks for Generative AI toolmakers, quantum SDK ve
 
 ---
 
-## Newsletter & Links
-
-### 📧 The Digital Futurist Newsletter
-How to understand and build emerging technologies.  
-[Subscribe Free →](https://thomascherickal.kit.com)
+## Links
 
 ### Find Me Online
 - [🌐 Profile (thomascherickal.com)](https://thomascherickal.com)
@@ -234,7 +229,6 @@ How to understand and build emerging technologies.
 - [🟧 Blogger (thesingularitypoint.blogspot.com)](https://thesingularitypoint.blogspot.com/)
 - [❓ Quora (thomascherickal.quora.com)](https://thomascherickal.quora.com)
 - [🤖 Reddit (reddit.com/user/thomascherickal1)](https://reddit.com/user/thomascherickal1)
-- [📧 Kit (thomascherickal.kit.com)](https://thomascherickal.kit.com)
 - [🧪 Exercism (exercism.org/profiles/thomascherickal)](https://exercism.org/profiles/thomascherickal)
 - [🏅 CodersRank (profile.codersrank.io/user/thomascherickal)](https://profile.codersrank.io/user/thomascherickal/)
 - [🧠 Deep-ML (deep-ml.com/profile/thomascherickal)](https://www.deep-ml.com/profile/thomascherickal)
