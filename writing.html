@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publications & Deep Dives — Thomas Cherickal</title>
-  <meta name="description" content="Browse 500+ published technical deep dives and guides on Generative AI, Quantum Computing, and AI agents across HackerNoon, Medium, and Substack." />
+  <meta name="description"
+    content="Browse 500+ published technical deep dives and guides on Generative AI, Quantum Computing, and AI agents across HackerNoon, Medium, and Substack." />
   <meta name="author" content="Thomas Cherickal" />
 
   <!-- Canonical URL -->
@@ -16,7 +17,8 @@
   <meta property="og:url" content="https://thomascherickal.github.io/writing.html" />
   <meta property="og:site_name" content="Thomas Cherickal — The Digital Futurist" />
   <meta property="og:title" content="Publications & Deep Dives — Thomas Cherickal" />
-  <meta property="og:description" content="Browse 500+ published technical deep dives and guides on Generative AI, Quantum Computing, and AI agents across HackerNoon, Medium, and Substack." />
+  <meta property="og:description"
+    content="Browse 500+ published technical deep dives and guides on Generative AI, Quantum Computing, and AI agents across HackerNoon, Medium, and Substack." />
   <meta property="og:image" content="https://thomascherickal.github.io/assets/og-card-book-BASE.png" />
   <meta property="og:image:alt" content="RECRUITED — The Inbound Recruiter Blueprint by Thomas Cherickal" />
   <meta property="og:locale" content="en_US" />
@@ -26,7 +28,8 @@
   <meta name="twitter:site" content="@thomascherickal" />
   <meta name="twitter:creator" content="@thomascherickal" />
   <meta name="twitter:title" content="Publications & Deep Dives — Thomas Cherickal" />
-  <meta name="twitter:description" content="Browse 500+ published technical deep dives and guides on Generative AI, Quantum Computing, and AI agents across HackerNoon, Medium, and Substack." />
+  <meta name="twitter:description"
+    content="Browse 500+ published technical deep dives and guides on Generative AI, Quantum Computing, and AI agents across HackerNoon, Medium, and Substack." />
   <meta name="twitter:image" content="https://thomascherickal.github.io/assets/og-card-book-BASE.png" />
 
   <!-- Favicon & Icons -->
@@ -585,63 +588,64 @@
       position: relative;
       overflow: hidden;
       transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
-                  box-shadow 0.28s ease,
-                  background 0.28s ease,
-                  border-color 0.28s ease,
-                  color 0.28s ease,
-                  filter 0.28s ease;
+        box-shadow 0.28s ease,
+        background 0.28s ease,
+        border-color 0.28s ease,
+        color 0.28s ease,
+        filter 0.28s ease;
       will-change: transform, box-shadow;
     }
 
-/* Universal Button Animation System: Hover Lift, Glow Bloom & Specular Sheen */
-@keyframes btnSheenSweep {
-  0% {
-    left: -140%;
-  }
-  100% {
-    left: 140%;
-  }
-}
+    /* Universal Button Animation System: Hover Lift, Glow Bloom & Specular Sheen */
+    @keyframes btnSheenSweep {
+      0% {
+        left: -140%;
+      }
 
-button:hover,
-input[type="button"]:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-.btn:hover,
-a.btn:hover,
-a.tier-btn:hover {
-  transform: translateY(-2.5px) scale(1.02);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 16px rgba(56, 189, 248, 0.35);
-}
+      100% {
+        left: 140%;
+      }
+    }
 
-button::after,
-input[type="button"]::after,
-input[type="submit"]::after,
-input[type="reset"]::after,
-.btn::after,
-a.btn::after,
-a.tier-btn::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -140%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
-  transform: skewX(-22deg);
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
+    button:hover,
+    input[type="button"]:hover,
+    input[type="submit"]:hover,
+    input[type="reset"]:hover,
+    .btn:hover,
+    a.btn:hover,
+    a.tier-btn:hover {
+      transform: translateY(-2.5px) scale(1.02);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 16px rgba(56, 189, 248, 0.35);
+    }
 
-button:hover::after,
-input[type="button"]:hover::after,
-input[type="submit"]:hover::after,
-input[type="reset"]:hover::after,
-.btn:hover::after,
-a.btn:hover::after,
-a.tier-btn:hover::after {
-  animation: btnSheenSweep 1.1s cubic-bezier(0.4, 0, 0.2, 1);
-}
+    button::after,
+    input[type="button"]::after,
+    input[type="submit"]::after,
+    input[type="reset"]::after,
+    .btn::after,
+    a.btn::after,
+    a.tier-btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -140%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+      transform: skewX(-22deg);
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    button:hover::after,
+    input[type="button"]:hover::after,
+    input[type="submit"]:hover::after,
+    input[type="reset"]:hover::after,
+    .btn:hover::after,
+    a.btn:hover::after,
+    a.tier-btn:hover::after {
+      animation: btnSheenSweep 1.1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
     /* Universal Focus State for Accessibility */
     button:focus-visible,
@@ -664,7 +668,7 @@ a.tier-btn:hover::after {
     .case-study-cta-left:active {
       transform: translateY(1px) scale(0.98) !important;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
- }
+    }
 
     /* Disabled State Across All Browsers */
     button:disabled,
@@ -3863,7 +3867,7 @@ a.tier-btn:hover::after {
         "@type": "ItemList",
         "@id": "https://thomascherickal.github.io/writing.html#articles",
         "name": "Featured Technical Publications",
-        "numberOfItems": 40,
+        "numberOfItems": 48,
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -4344,6 +4348,102 @@ a.tier-btn:hover::after {
               "wordCount": 3400,
               "author": { "@id": "https://thomascherickal.github.io/#person" }
             }
+          },
+          {
+            "@type": "ListItem",
+            "position": 41,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "Jev: Why Decision Models Will Transform the World Itself",
+              "url": "https://thomascherickal.com/2026/10/02/jev-why-decision-models-will-transform-the-world-itself/",
+              "datePublished": "2026-10-02",
+              "wordCount": 12400,
+              "author": { "@id": "https://thomascherickal.github.io/#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 42,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "Gemini Spark versus Hermes Agent versus OpenClaw: Who Wins and Why?",
+              "url": "https://thomascherickal.com/2026/08/21/gemini-spark-versus-hermes-agent-versus-openclaw-who-wins-and-why/",
+              "datePublished": "2026-08-21",
+              "wordCount": 8200,
+              "author": { "@id": "https://thomascherickal.github.io/#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 43,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "20 Ways to Use Gemini Spark to Automate Your Daily Workflow",
+              "url": "https://thomascherickal.com/2026/09/08/20-ways-to-use-gemini-spark-to-automate-your-daily-workflow/",
+              "datePublished": "2026-09-08",
+              "wordCount": 5800,
+              "author": { "@id": "https://thomascherickal.github.io/#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 44,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "Relying On Cloud AI Is Dangerous But Sovereign Local AI Is An Unstoppable Force",
+              "url": "https://thomascherickal.com/2026/08/21/relying-on-cloud-ai-is-dangerous-but-sovereign-local-ai-is-an-unstoppable-force/",
+              "datePublished": "2026-08-21",
+              "wordCount": 5800,
+              "author": { "@id": "https://thomascherickal.github.io/#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 45,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "Publicly Adaptable Cryptographic Systems (PACS) – Solving PQC in the Age of AI Agent Cryptanalysts",
+              "url": "https://thomascherickal.com/2026/09/13/publicly-adaptable-cryptographic-systems-pacs-solving-pqc-in-the-age-of-ai-agent-cryptanalysts/",
+              "datePublished": "2026-09-13",
+              "wordCount": 7100,
+              "author": { "@id": "https://thomascherickal.github.io/#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 46,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "The Solution to Post-Quantum Cryptography: A Showstopping Problem Today",
+              "url": "https://thomascherickal.com/2026/09/17/the-solution-to-post-quantum-cryptography-a-showstopping-problem-today/",
+              "datePublished": "2026-09-17",
+              "wordCount": 2300,
+              "author": { "@id": "https://thomascherickal.github.io/#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 47,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "How (and when) to Fine-Tune SLMs for Your Business Domain-Specific Use Case",
+              "url": "https://thomascherickal.com/2026/09/06/how-and-when-to-fine-tune-google-gemma-4-for-your-business-domain-specific-use-case/",
+              "datePublished": "2026-09-06",
+              "wordCount": 10800,
+              "author": { "@id": "https://thomascherickal.github.io/#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 48,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "The Ultimate Comparison Over 20 Modern Professions: Choosing Between Claude and ChatGPT",
+              "url": "https://thomascherickal.com/2026/09/25/chatgpt-versus-claude-the-ultimate-comparison/",
+              "datePublished": "2026-09-25",
+              "wordCount": 10300,
+              "author": { "@id": "https://thomascherickal.github.io/#person" }
+            }
           }
         ]
       }
@@ -4430,7 +4530,8 @@ a.tier-btn:hover::after {
           </p>
           <div
             style="font-family:var(--font-mono);font-size:0.95rem;color:var(--gold);margin-bottom:1.5rem;font-weight:600;">
-            $20.00 USD — pre-release until Dec 31, 2026 ($40.00 USD after release) · Free with an active Patreon subscription
+            $20.00 USD — pre-release until Dec 31, 2026 ($40.00 USD after release) · Free with an active Patreon
+            subscription
           </div>
           <div style="display:flex;gap:1.25rem;flex-wrap:wrap;align-items:center;">
             <a href="https://patreon.com/thomascherickal" target="_blank" rel="noopener" class="btn btn-gold">🎨
@@ -4920,11 +5021,12 @@ a.tier-btn:hover::after {
         </div>
       </div>
 
-      <!-- ROW 5: CATEGORY 9 (Quantum Basics - Violet) & CATEGORY 10 (Research Technology - Green) -->
+      <!-- ROW 5: CATEGORY 9 (Quantum Research - Violet) & CATEGORY 10 (Research Technology - Green) -->
       <div class="writing-columns-wide" style="margin-top:2.5rem;">
-        <!-- Category 9: Quantum Basics (Violet) -->
+        <!-- Category 9: Quantum Research (Violet) -->
         <div>
-          <h3 class="writing-category-title" style="color:var(--violet);border-bottom-color:rgba(165,180,252,0.3);">⚛️ Quantum Basics</h3>
+          <h3 class="writing-category-title" style="color:var(--violet);border-bottom-color:rgba(165,180,252,0.3);">⚛️
+            Quantum Research</h3>
           <div class="article-list">
             <a href="https://medium.com/technology-hits/jensen-huang-admitted-he-was-wrong-about-quantum-computing-fb1ba748a773"
               target="_blank" rel="noopener" class="article-card">
@@ -4942,7 +5044,8 @@ a.tier-btn:hover::after {
               target="_blank" rel="noopener" class="article-card">
               <span class="article-bullet" style="color:var(--violet);font-size:1.2rem;line-height:1.2;">•</span>
               <div>
-                <div class="article-title">The Ultimate Quantum Computing Battle: 7 Technologies Racing to Change Everything</div>
+                <div class="article-title">The Ultimate Quantum Computing Battle: 7 Technologies Racing to Change
+                  Everything</div>
                 <div class="article-card-meta">
                   <span class="meta-pill date">Mar 15, 2025</span>
                   <span class="meta-pill platform">Medium</span>
@@ -4979,13 +5082,15 @@ a.tier-btn:hover::after {
 
         <!-- Category 10: Research Technology (Green) -->
         <div>
-          <h3 class="writing-category-title" style="color:var(--green);border-bottom-color:rgba(52,211,153,0.3);">🔬 Research Technology</h3>
+          <h3 class="writing-category-title" style="color:var(--green);border-bottom-color:rgba(52,211,153,0.3);">🔬
+            Research Technology</h3>
           <div class="article-list">
-            <a href="https://thesingularitypoint.substack.com/p/depin-technology-explained-a-beginners"
-              target="_blank" rel="noopener" class="article-card">
+            <a href="https://thesingularitypoint.substack.com/p/depin-technology-explained-a-beginners" target="_blank"
+              rel="noopener" class="article-card">
               <span class="article-bullet" style="color:var(--green);font-size:1.2rem;line-height:1.2;">•</span>
               <div>
-                <div class="article-title">DePIN Technology Explained: A Beginner's Guide to Getting Involved Immediately</div>
+                <div class="article-title">DePIN Technology Explained: A Beginner's Guide to Getting Involved
+                  Immediately</div>
                 <div class="article-card-meta">
                   <span class="meta-pill date">Jun 5, 2025</span>
                   <span class="meta-pill platform">Substack</span>
@@ -4993,11 +5098,12 @@ a.tier-btn:hover::after {
                 </div>
               </div>
             </a>
-            <a href="https://thesingularitypoint.substack.com/p/alphaevolve-deepminds-evolutionary"
-              target="_blank" rel="noopener" class="article-card">
+            <a href="https://thesingularitypoint.substack.com/p/alphaevolve-deepminds-evolutionary" target="_blank"
+              rel="noopener" class="article-card">
               <span class="article-bullet" style="color:var(--green);font-size:1.2rem;line-height:1.2;">•</span>
               <div>
-                <div class="article-title">AlphaEvolve: DeepMind’s Evolutionary Leap in Scientific Algorithmic Discovery</div>
+                <div class="article-title">AlphaEvolve: DeepMind’s Evolutionary Leap in Scientific Algorithmic Discovery
+                </div>
                 <div class="article-card-meta">
                   <span class="meta-pill date">May 19, 2025</span>
                   <span class="meta-pill platform">Substack</span>
@@ -5005,8 +5111,8 @@ a.tier-btn:hover::after {
                 </div>
               </div>
             </a>
-            <a href="https://thesingularitypoint.substack.com/p/space-technology-could-be-bigger"
-              target="_blank" rel="noopener" class="article-card">
+            <a href="https://thesingularitypoint.substack.com/p/space-technology-could-be-bigger" target="_blank"
+              rel="noopener" class="article-card">
               <span class="article-bullet" style="color:var(--green);font-size:1.2rem;line-height:1.2;">•</span>
               <div>
                 <div class="article-title">Space Technology Could Be Bigger than Google</div>
@@ -5017,8 +5123,8 @@ a.tier-btn:hover::after {
                 </div>
               </div>
             </a>
-            <a href="https://thesingularitypoint.substack.com/p/ai-meets-blockchain-20-mind-bending"
-              target="_blank" rel="noopener" class="article-card">
+            <a href="https://thesingularitypoint.substack.com/p/ai-meets-blockchain-20-mind-bending" target="_blank"
+              rel="noopener" class="article-card">
               <span class="article-bullet" style="color:var(--green);font-size:1.2rem;line-height:1.2;">•</span>
               <div>
                 <div class="article-title">AI Meets Blockchain: 20 Mind-Bending Use-Cases Of The Future!</div>
@@ -5026,6 +5132,121 @@ a.tier-btn:hover::after {
                   <span class="meta-pill date">Apr 9, 2025</span>
                   <span class="meta-pill platform">Substack</span>
                   <span class="meta-pill words">3,400 words</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 6: CATEGORY 11 (Decision Models & Autonomous Agents - Gold) & CATEGORY 12 (Post-Quantum Cryptography & Applied AI - Violet) -->
+      <div class="writing-columns-wide" style="margin-top:2.5rem;">
+        <!-- Category 11: Frontier Decision Models & Autonomous Agents (Gold) -->
+        <div>
+          <h3 class="writing-category-title" style="color:var(--gold);border-bottom-color:rgba(255,201,71,0.3);">⚡
+            Frontier Decision Models &amp; Autonomous Agents</h3>
+          <div class="article-list">
+            <a href="https://thomascherickal.com/2026/10/02/jev-why-decision-models-will-transform-the-world-itself/"
+              target="_blank" rel="noopener" class="article-card">
+              <span class="article-bullet" style="color:var(--gold);font-size:1.2rem;line-height:1.2;">•</span>
+              <div>
+                <div class="article-title">Jev: Why Decision Models Will Transform the World Itself</div>
+                <div class="article-card-meta">
+                  <span class="meta-pill date">Oct 2, 2026</span>
+                  <span class="meta-pill platform">thomascherickal.com</span>
+                  <span class="meta-pill words">12,400 words</span>
+                </div>
+              </div>
+            </a>
+            <a href="https://thomascherickal.com/2026/08/21/gemini-spark-versus-hermes-agent-versus-openclaw-who-wins-and-why/"
+              target="_blank" rel="noopener" class="article-card">
+              <span class="article-bullet" style="color:var(--gold);font-size:1.2rem;line-height:1.2;">•</span>
+              <div>
+                <div class="article-title">Gemini Spark versus Hermes Agent versus OpenClaw: Who Wins and Why?</div>
+                <div class="article-card-meta">
+                  <span class="meta-pill date">Aug 21, 2026</span>
+                  <span class="meta-pill platform">thomascherickal.com</span>
+                  <span class="meta-pill words">8,200 words</span>
+                </div>
+              </div>
+            </a>
+            <a href="https://thomascherickal.com/2026/09/08/20-ways-to-use-gemini-spark-to-automate-your-daily-workflow/"
+              target="_blank" rel="noopener" class="article-card">
+              <span class="article-bullet" style="color:var(--gold);font-size:1.2rem;line-height:1.2;">•</span>
+              <div>
+                <div class="article-title">20 Ways to Use Gemini Spark to Automate Your Daily Workflow</div>
+                <div class="article-card-meta">
+                  <span class="meta-pill date">Sep 8, 2026</span>
+                  <span class="meta-pill platform">thomascherickal.com</span>
+                  <span class="meta-pill words">5,800 words</span>
+                </div>
+              </div>
+            </a>
+            <a href="https://thomascherickal.com/2026/08/21/relying-on-cloud-ai-is-dangerous-but-sovereign-local-ai-is-an-unstoppable-force/"
+              target="_blank" rel="noopener" class="article-card">
+              <span class="article-bullet" style="color:var(--gold);font-size:1.2rem;line-height:1.2;">•</span>
+              <div>
+                <div class="article-title">Relying On Cloud AI Is Dangerous But Sovereign Local AI Is An Unstoppable Force</div>
+                <div class="article-card-meta">
+                  <span class="meta-pill date">Aug 21, 2026</span>
+                  <span class="meta-pill platform">thomascherickal.com</span>
+                  <span class="meta-pill words">5,800 words</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Category 12: Post-Quantum Cryptography & Applied AI (Violet) -->
+        <div>
+          <h3 class="writing-category-title" style="color:var(--violet);border-bottom-color:rgba(139,92,246,0.3);">🛡️
+            Post-Quantum Cryptography &amp; Applied AI</h3>
+          <div class="article-list">
+            <a href="https://thomascherickal.com/2026/09/13/publicly-adaptable-cryptographic-systems-pacs-solving-pqc-in-the-age-of-ai-agent-cryptanalysts/"
+              target="_blank" rel="noopener" class="article-card">
+              <span class="article-bullet" style="color:var(--violet);font-size:1.2rem;line-height:1.2;">•</span>
+              <div>
+                <div class="article-title">Publicly Adaptable Cryptographic Systems (PACS) – Solving PQC in the Age of AI Agent Cryptanalysts</div>
+                <div class="article-card-meta">
+                  <span class="meta-pill date">Sep 13, 2026</span>
+                  <span class="meta-pill platform">thomascherickal.com</span>
+                  <span class="meta-pill words">7,100 words</span>
+                </div>
+              </div>
+            </a>
+            <a href="https://thomascherickal.com/2026/09/17/the-solution-to-post-quantum-cryptography-a-showstopping-problem-today/"
+              target="_blank" rel="noopener" class="article-card">
+              <span class="article-bullet" style="color:var(--violet);font-size:1.2rem;line-height:1.2;">•</span>
+              <div>
+                <div class="article-title">The Solution to Post-Quantum Cryptography: A Showstopping Problem Today</div>
+                <div class="article-card-meta">
+                  <span class="meta-pill date">Sep 17, 2026</span>
+                  <span class="meta-pill platform">thomascherickal.com</span>
+                  <span class="meta-pill words">2,300 words</span>
+                </div>
+              </div>
+            </a>
+            <a href="https://thomascherickal.com/2026/09/06/how-and-when-to-fine-tune-google-gemma-4-for-your-business-domain-specific-use-case/"
+              target="_blank" rel="noopener" class="article-card">
+              <span class="article-bullet" style="color:var(--violet);font-size:1.2rem;line-height:1.2;">•</span>
+              <div>
+                <div class="article-title">How (and when) to Fine-Tune SLMs for Your Business Domain-Specific Use Case</div>
+                <div class="article-card-meta">
+                  <span class="meta-pill date">Sep 6, 2026</span>
+                  <span class="meta-pill platform">thomascherickal.com</span>
+                  <span class="meta-pill words">10,800 words</span>
+                </div>
+              </div>
+            </a>
+            <a href="https://thomascherickal.com/2026/09/25/chatgpt-versus-claude-the-ultimate-comparison/"
+              target="_blank" rel="noopener" class="article-card">
+              <span class="article-bullet" style="color:var(--violet);font-size:1.2rem;line-height:1.2;">•</span>
+              <div>
+                <div class="article-title">The Ultimate Comparison Over 20 Modern Professions: Choosing Between Claude and ChatGPT</div>
+                <div class="article-card-meta">
+                  <span class="meta-pill date">Sep 25, 2026</span>
+                  <span class="meta-pill platform">thomascherickal.com</span>
+                  <span class="meta-pill words">10,300 words</span>
                 </div>
               </div>
             </a>
@@ -5042,7 +5263,8 @@ a.tier-btn:hover::after {
         tutorials for your company?</p>
       <div style="display:flex;justify-content:center;gap:1.25rem;flex-wrap:wrap;">
         <a href="contact.html" class="btn btn-commission">See Services &amp; Rates →</a>
-        <a href="https://linkedin.com/in/thomascherickal" target="_blank" rel="noopener" class="btn btn-linkedin">Free LinkedIn Consultation ↗</a>
+        <a href="https://linkedin.com/in/thomascherickal" target="_blank" rel="noopener" class="btn btn-linkedin">Free
+          LinkedIn Consultation ↗</a>
       </div>
     </section>
 
