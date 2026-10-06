@@ -1,5 +1,5 @@
-# Thomas Cherickal — Technical Writer
-## Generative AI Consultant · Quantum Systems Explorer · Python AI Engineer · Rust Systems Engineer
+# Thomas Cherickal
+## Technical Writer · Generative AI Consultant · Quantum Systems Explorer · Python AI Engineer · Rust Systems Engineer
 
 > **I author high-impact content, and create high-impact code for Generative AI, AI Agents, Python, Rust, and other technologies.**
 
@@ -9,8 +9,8 @@
 
 **Core Capabilities**:
 - `Technical Writer`
-- `Python AI Engineer & Systems Coding`
-- `Rust Systems Engineer & Performance`
+- `Python AI Engineer`
+- `Rust Systems Engineer`
 - `Generative AI Consultant`
 - `Quantum Systems Explorer`
 - `Code-First Runtime-Verified Artifacts`
