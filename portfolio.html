@@ -474,7 +474,7 @@
 
     .role-chip {
       font-family: var(--font-mono);
-      font-size: 0.68rem;
+      font-size: calc(0.68rem + 3px);
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -1101,7 +1101,7 @@
 
     .tech-tag {
       font-family: var(--font-mono);
-      font-size: 0.72rem;
+      font-size: calc(0.72rem + 3px);
       padding: 0.3rem 0.7rem;
       border-radius: 6px;
       background: var(--bg-card);
@@ -1175,7 +1175,7 @@
 
     .article-bullet {
       font-family: var(--font-mono);
-      font-size: 0.9rem;
+      font-size: calc(0.9rem + 3px);
       color: var(--gold);
       flex-shrink: 0;
       line-height: 1.5;
@@ -1187,7 +1187,7 @@
     }
 
     .article-title {
-      font-size: 0.92rem;
+      font-size: calc(0.92rem + 3px);
       font-weight: 600;
       color: var(--text-primary);
       line-height: 1.5;
@@ -1205,7 +1205,7 @@
       flex-wrap: wrap;
       margin-top: 0.45rem;
       font-family: var(--font-mono);
-      font-size: 0.72rem;
+      font-size: calc(0.72rem + 3px);
     }
 
     .article-card-meta .meta-pill {
@@ -2881,6 +2881,7 @@
       border-radius: var(--radius);
       padding: 2rem;
       margin-bottom: 2rem;
+      font-size: calc(0.92rem + 3px);
       transition: var(--transition);
       position: relative;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8),
@@ -2966,7 +2967,7 @@
       color: #000000;
       border: 4px solid #fef08a;
       font-family: var(--font-mono);
-      font-size: 0.8rem;
+      font-size: calc(0.8rem + 3px);
       font-weight: 800;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -3023,7 +3024,7 @@
 
     .case-study-cover-img {
       width: 100%;
-      height: 280px;
+      height: 560px;
       object-fit: cover;
       object-position: center;
       display: block;
@@ -3084,7 +3085,7 @@
 
     @media (max-width: 992px) {
       .case-study-cover-img {
-        height: 240px;
+        height: 480px;
       }
     }
 
@@ -3094,19 +3095,19 @@
       }
 
       .case-study-cover-img {
-        height: 200px;
+        height: 400px;
       }
     }
 
     @media (max-width: 480px) {
       .case-study-cover-img {
-        height: 160px;
+        height: 320px;
       }
     }
 
     .case-study-title {
       font-family: var(--font-display);
-      font-size: 1.45rem;
+      font-size: calc(1.45rem + 3px);
       font-weight: 700;
       margin-bottom: 0.4rem;
       color: var(--text-primary);
@@ -3119,7 +3120,7 @@
       gap: 0.5rem;
       flex-wrap: wrap;
       font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: calc(0.78rem + 3px);
       color: var(--cyan);
       margin-bottom: 1rem;
     }
@@ -3134,14 +3135,14 @@
       padding: 0.75rem 1rem;
       border-radius: 0 var(--radius) var(--radius) 0;
       margin: 0.85rem 0 1.25rem;
-      font-size: 0.94rem;
+      font-size: calc(0.94rem + 3px);
       color: var(--text-primary);
       line-height: 1.6;
     }
 
     .case-study-section-title {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
+      font-size: calc(0.75rem + 3px);
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--gold);
@@ -3149,11 +3150,18 @@
       margin-bottom: 0.5rem;
     }
 
+    .case-study-desc {
+      font-size: calc(0.92rem + 3px);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
     .case-study-bullets {
       list-style: disc;
       padding-left: 1.25rem;
       margin-bottom: 1.25rem;
-      font-size: 0.92rem;
+      font-size: calc(0.92rem + 3px);
       color: var(--text-secondary);
       line-height: 1.7;
     }
@@ -3167,10 +3175,19 @@
       border: 1px solid rgba(0, 212, 255, 0.18);
       border-radius: 6px;
       padding: 0.85rem 1.1rem;
-      font-size: 0.88rem;
+      font-size: calc(0.88rem + 3px);
       color: var(--text-primary);
       margin: 1.25rem 0;
       line-height: 1.6;
+    }
+
+    .case-study-card .role-chip,
+    .case-study-badges .role-chip {
+      font-size: calc(0.68rem + 3px);
+    }
+
+    .case-study-card .tech-tag {
+      font-size: calc(0.72rem + 3px);
     }
 
     .case-study-card.border-violet .case-study-verify-callout {
@@ -3428,7 +3445,7 @@
       }
 
       .article-carousel-title {
-        font-size: 1.1rem;
+        font-size: calc(1.1rem + 3px);
         line-height: 1.42;
         margin-bottom: 0.75rem;
         display: block;
@@ -3436,7 +3453,7 @@
       }
 
       .article-carousel-summary {
-        font-size: 0.9rem;
+        font-size: calc(0.9rem + 3px);
         line-height: 1.6;
         margin-bottom: 1.35rem;
       }
@@ -3480,7 +3497,7 @@
       }
 
       .article-carousel-title {
-        font-size: 1.05rem;
+        font-size: calc(1.05rem + 3px);
         line-height: 1.4;
         margin-bottom: 0.7rem;
         display: block;
@@ -3489,7 +3506,7 @@
       }
 
       .article-carousel-summary {
-        font-size: 0.88rem;
+        font-size: calc(0.88rem + 3px);
         line-height: 1.55;
         margin-bottom: 1.25rem;
         display: block;
@@ -3502,7 +3519,7 @@
       }
 
       .article-badge {
-        font-size: 0.72rem;
+        font-size: calc(0.72rem + 3px);
         padding: 0.18rem 0.5rem;
       }
     }
@@ -3517,12 +3534,12 @@
       }
 
       .article-carousel-title {
-        font-size: 1rem;
+        font-size: calc(1rem + 3px);
         line-height: 1.38;
       }
 
       .article-carousel-summary {
-        font-size: 0.84rem;
+        font-size: calc(0.84rem + 3px);
         line-height: 1.5;
       }
     }
@@ -3571,7 +3588,7 @@
       align-items: center;
       gap: 0.35rem;
       font-family: var(--font-mono);
-      font-size: 0.72rem;
+      font-size: calc(0.72rem + 3px);
       font-weight: 600;
       padding: 0.2rem 0.55rem;
       border-radius: 6px;
@@ -3616,14 +3633,14 @@
       align-items: center;
       gap: 0.5rem;
       font-family: var(--font-mono);
-      font-size: 0.72rem;
+      font-size: calc(0.72rem + 3px);
       color: var(--text-muted);
       margin-bottom: 0.75rem;
     }
 
     .article-carousel-title {
       font-family: var(--font-display);
-      font-size: 1.15rem;
+      font-size: calc(1.15rem + 3px);
       font-weight: 700;
       color: var(--text-primary);
       line-height: 1.45;
@@ -3635,7 +3652,7 @@
     }
 
     .article-carousel-summary {
-      font-size: 0.92rem;
+      font-size: calc(0.92rem + 3px);
       color: var(--text-secondary);
       line-height: 1.65;
       margin-bottom: 1.5rem;
@@ -3648,12 +3665,12 @@
       align-items: center;
       padding-top: 0.85rem;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
-      font-size: 0.82rem;
+      font-size: calc(0.82rem + 3px);
     }
 
     .article-read-btn {
       font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: calc(0.78rem + 3px);
       color: var(--cyan);
       display: inline-flex;
       align-items: center;
@@ -4251,17 +4268,16 @@
   <main id="main">
 
     <!-- PAGE HEADER -->
-    <section style="padding-top:4rem;padding-bottom:3rem;">
+    <section style="padding-top:1rem;padding-bottom:1rem;">
       <p class="section-label">Verified Case Studies</p>
       <h1 class="section-title">Portfolio &amp; <span class="accent-gold">Case Studies</span></h1>
-      <p class="section-sub" style="max-width:760px;margin-top:1rem;line-height:1.8;">
-        Not a link list. The brief, the approach, and what shipped — 14 verified, human-directed case studies across
-        Generative AI (6), Agentic AI (4), and Quantum Computing (4), backed by runtime-verified code.
+      <p class="section-sub" style="max-width:1500px;margin-top:1rem;line-height:1.8;">
+        The brief, the approach, and what shipped — 14 verified, human-directed case studies across
+        Generative AI (6), Agentic AI (4), and Quantum Computing (4), backed by runtime-verified code, deep analysis,
+        and equally deep insights.
       </p>
     </section>
-
     <div class="divider"></div>
-
     <!-- CASE STUDIES SECTION -->
     <section class="reveal">
       <!--
@@ -5119,7 +5135,8 @@
               class="case-study-cover-img" width="1672" height="940" loading="lazy" decoding="async" />
           </a>
         </div>
-        <h2 class="case-study-title">Inside Jev: How Decision Models Trade Text Generation for Typed, Calibrated Answers</h2>
+        <h2 class="case-study-title">Inside Jev: How Decision Models Trade Text Generation for Typed, Calibrated Answers
+        </h2>
         <div class="case-study-meta">
           <span>Published: October 4, 2026</span> · <span class="meta-item">HackerNoon</span> · <span
             class="meta-item">4,500 words</span> · <span class="meta-item">18 min read</span>
@@ -5134,7 +5151,8 @@
 
         <div class="case-study-section-title">The Brief</div>
         <p class="case-study-desc">
-          A technical investigation into why agentic AI workflows fail when forcing System 2 reasoning LLMs into fast reflex
+          A technical investigation into why agentic AI workflows fail when forcing System 2 reasoning LLMs into fast
+          reflex
           tasks, and how typed decision primitives eliminate parsing errors and inference latency.
         </p>
 
@@ -5142,12 +5160,17 @@
         <ul class="case-study-bullets">
           <li>Framed decision models through Daniel Kahneman's System 1 (fast, parallel, reflexive) vs System 2 (slow,
             sequential, deliberative) paradigm, diagnosing why LLMs fail inside tight agent execution loops.</li>
-          <li>Deconstructed Jev's three core AI primitives: Choice (up to 255 discrete options with probability distribution),
-            Score (calibrated 2–10 level ordinal rubrics), and Noul (calibrated continuous [0, 1] truth probabilities).</li>
-          <li>Analyzed the underlying architecture: parallel sampling evaluating all questions simultaneously, post-training
+          <li>Deconstructed Jev's three core AI primitives: Choice (up to 255 discrete options with probability
+            distribution),
+            Score (calibrated 2–10 level ordinal rubrics), and Noul (calibrated continuous [0, 1] truth probabilities).
+          </li>
+          <li>Analyzed the underlying architecture: parallel sampling evaluating all questions simultaneously,
+            post-training
             via Reinforcement Learning for Calibrated Decisions (RLCD), and zero output token fees.</li>
-          <li>Quantified enterprise cost and speed gains: 70–500ms execution vs 10–86s LLM loops, 73% total workflow cost
-            reduction on agent decision steps, and Jevons paradox implications for pervasive autonomous intelligence.</li>
+          <li>Quantified enterprise cost and speed gains: 70–500ms execution vs 10–86s LLM loops, 73% total workflow
+            cost
+            reduction on agent decision steps, and Jevons paradox implications for pervasive autonomous intelligence.
+          </li>
         </ul>
 
         <div class="case-study-section-title">What Shipped</div>
@@ -5197,7 +5220,8 @@
         </div>
 
         <div class="case-study-summary">
-          <strong>Executive Summary:</strong> A definitive 3-way architectural shootout contrasting Google's managed 24/7
+          <strong>Executive Summary:</strong> A definitive 3-way architectural shootout contrasting Google's managed
+          24/7
           cloud agent (Gemini Spark), Nous Research's open-source self-improving agent (Hermes Agent), and the viral
           gateway pioneer (OpenClaw)—evaluating security posture, persistent memory architectures, runtime autonomy, and
           enterprise viability.
@@ -5205,15 +5229,18 @@
 
         <div class="case-study-section-title">The Brief</div>
         <p class="case-study-desc">
-          A comparative architectural evaluation of the three dominant agentic paradigms in 2026: managed cloud hyper-scale
+          A comparative architectural evaluation of the three dominant agentic paradigms in 2026: managed cloud
+          hyper-scale
           (Google), decentralized self-evolution (Nous Research), and community gateway orchestration (OpenClaw).
         </p>
 
         <div class="case-study-section-title">The Approach</div>
         <ul class="case-study-bullets">
           <li>Contrasted core architectures: Spark's headless Google Cloud VM runtime wired to Workspace APIs, Hermes
-            Agent's closed genetic learning loop with SQLite FTS5/Honcho memory, and OpenClaw's 30+ channel routing gateway.</li>
-          <li>Audited security and operational boundaries: Spark's ask-first permission model vs OpenClaw's CVE-2026-25253/NemoClaw
+            Agent's closed genetic learning loop with SQLite FTS5/Honcho memory, and OpenClaw's 30+ channel routing
+            gateway.</li>
+          <li>Audited security and operational boundaries: Spark's ask-first permission model vs OpenClaw's
+            CVE-2026-25253/NemoClaw
             hardening vs Hermes Agent's isolated sub-agent sandboxing.</li>
           <li>Benchmarked 30 real-world autonomous use cases: unattended inbox zero, multi-agent fleet coordination,
             autonomous coding managers, continuous lead enrichment, and live deal monitoring.</li>
@@ -5268,27 +5295,33 @@
         </div>
 
         <div class="case-study-summary">
-          <strong>Executive Summary:</strong> An exhaustive multi-vendor showdown evaluating nine $20/month AI subscription
+          <strong>Executive Summary:</strong> An exhaustive multi-vendor showdown evaluating nine $20/month AI
+          subscription
           plans across 10 empirical categories—benchmarking ChatGPT Plus, Claude Pro, Google AI Pro, SuperGrok, Kimi
-          Moderato, Meta AI (Muse Spark), MiniMax Plus, Copilot Pro, and Perplexity Pro across coding, writing, research,
+          Moderato, Meta AI (Muse Spark), MiniMax Plus, Copilot Pro, and Perplexity Pro across coding, writing,
+          research,
           and multimodal generation.
         </div>
 
         <div class="case-study-section-title">The Brief</div>
         <p class="case-study-desc">
-          A rigorous consumer and developer buyer's guide dissecting the features, hidden rate limits, coding benchmarks,
+          A rigorous consumer and developer buyer's guide dissecting the features, hidden rate limits, coding
+          benchmarks,
           and value economics of leading frontier AI subscriptions in 2026.
         </p>
 
         <div class="case-study-section-title">The Approach</div>
         <ul class="case-study-bullets">
           <li>Profiled 9 top plans across 10 evaluation categories: plan features, coding ability, long-form writing,
-            benchmarks (SWE-bench Verified/Pro, LiveCodeBench, GPQA, AIME), multimodality, autonomous agents, and ecosystem value.</li>
+            benchmarks (SWE-bench Verified/Pro, LiveCodeBench, GPQA, AIME), multimodality, autonomous agents, and
+            ecosystem value.</li>
           <li>Evaluated frontier model performance: GPT-5.5 (Terminal-Bench 82.7%), Claude Opus 4.7 (SWE-bench Verified
             87.6%), Gemini 3.1 Pro (ARC-AGI-2 77.1%), and Kimi K2.6 Agent Swarm.</li>
-          <li>Analyzed the disruption of Meta's free Muse Spark (scoring 89.5% on GPQA Diamond and #1 on HealthBench Hard)
+          <li>Analyzed the disruption of Meta's free Muse Spark (scoring 89.5% on GPQA Diamond and #1 on HealthBench
+            Hard)
             reframing consumer value.</li>
-          <li>Factored in developer ergonomics: Claude Code CLI, OpenAI Codex Agent, Google Jules async agent, and MiniMax
+          <li>Factored in developer ergonomics: Claude Code CLI, OpenAI Codex Agent, Google Jules async agent, and
+            MiniMax
             M2.7 dev tool integrations.</li>
         </ul>
 
