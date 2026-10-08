@@ -203,13 +203,14 @@
   .footer-dark .wl {
     border: .5px solid #3f3f46;
     border-radius: 10px;
-    padding: 14px 15px;
+    padding: 12px 14px;
     text-decoration: none;
     color: #fafafa;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 3px;
     background: #18181b;
+    min-width: 0;
     transition: background .12s, border-color .12s, transform .1s;
   }
 
@@ -220,29 +221,37 @@
   }
 
   .footer-dark .wl-ic {
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
     border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
+    flex-shrink: 0;
   }
 
   .footer-dark .wl-ic img {
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
     display: block;
     object-fit: cover;
   }
 
   .footer-dark .wl-name {
-    font-size: 19px;
+    font-size: 15px;
     font-weight: 600;
     color: #fafafa;
+    line-height: 1.35;
+    overflow-wrap: break-word;
   }
 
   .footer-dark .wl-url {
-    font-size: 16px;
+    font-size: 12.5px;
     color: #71717a;
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
   }
 
   .footer-dark .tc-copy {
@@ -272,6 +281,12 @@
     margin: 0 7px;
   }
 
+  @media(max-width:720px) {
+    .footer-dark .wg {
+      grid-template-columns: 1fr;
+    }
+  }
+
   @media(max-width:600px) {
     .footer-dark {
       padding: 14px;
@@ -279,10 +294,6 @@
 
     .footer-dark .pg {
       grid-template-columns: repeat(2, 1fr);
-    }
-
-    .footer-dark .wg {
-      grid-template-columns: 1fr;
     }
 
     .footer-dark .tc-name {
@@ -303,9 +314,16 @@
       gap: 8px;
     }
 
+    .footer-dark .wl {
+      padding: 11px 12px;
+    }
 
     .footer-dark .wl-name {
-      font-size: 18px;
+      font-size: 14px;
+    }
+
+    .footer-dark .wl-url {
+      font-size: 12px;
     }
 
     .footer-dark .tc-collab-title {
@@ -319,13 +337,12 @@
   <div class="tc-top-bar"></div>
   <p class="tc-label">About the author</p>
   <p class="tc-name">Thomas Cherickal</p>
-  <p class="tc-roles"><strong>Generative AI Consultant · Quantum Computing Explorer · Python AI Engineer · Rust AI
-      Engineer</strong></p>
+  <p class="tc-roles"><strong>Generative AI Consultant · Python AI Engineer · Rust Systems Engineer</strong></p>
   <p class="tc-tagline">Thomas Cherickal is a Technical Writer upskilling to Python AI Engineering and Rust Systems
     Engineering
     acting as a Generative AI Consultant and a Quantum Computing Explorer available for work globally, on a remote
     basis. He
-    has 500+ published articles across 10+ platforms covering AI, agentic systems, quantum computing, LLMs, Local AI,
+    has 500+ publications across 10+ platforms covering AI, agentic systems, quantum computing, LLMs, Local AI,
     and other
     emerging technologies, for which he acts as a consultant in Python and Rust. Find his work at
     <a href="https://thomascherickal.com" target="_blank" rel="noopener noreferrer">thomascherickal.com</a>

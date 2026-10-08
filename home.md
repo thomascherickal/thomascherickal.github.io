@@ -40,7 +40,7 @@ PG in CS from Loyola College; Technical Writer, Generative AI Consultant, Quantu
 ## Key Metrics
 | Metric | Value |
 | :--- | :--- |
-| **Articles Published** | 500+ |
+| **Publications** | 500+ |
 | **Platforms** | 10+ |
 | **Niche Audience Reach** | 250,000+ |
 | **Featured Deep Dives** | 48 |

@@ -1,7 +1,7 @@
 # Thomas Cherickal
 ## Generative AI Consultant · Quantum Computing Explorer · Python AI Engineer · Rust AI Engineer
 
-> **About the Author**: Thomas Cherickal is a Technical Writer upskilling to Python AI Engineering and Rust Systems Engineering, acting as a Generative AI Consultant and a Quantum Computing Explorer available for work globally, on a remote basis. He has 500+ published articles across 10+ platforms covering AI, agentic systems, quantum computing, LLMs, Local AI, and other emerging technologies, for which he acts as a consultant in Python and Rust. Find his work at [thomascherickal.com](https://thomascherickal.com) and [thomascherickal.github.io](https://thomascherickal.github.io).
+> **About the Author**: Thomas Cherickal is a Technical Writer upskilling to Python AI Engineering and Rust Systems Engineering, acting as a Generative AI Consultant and a Quantum Computing Explorer available for work globally, on a remote basis. He has 500+ publications across 10+ platforms covering AI, agentic systems, quantum computing, LLMs, Local AI, and other emerging technologies, for which he acts as a consultant in Python and Rust. Find his work at [thomascherickal.com](https://thomascherickal.com) and [thomascherickal.github.io](https://thomascherickal.github.io).
 
 ---
 
