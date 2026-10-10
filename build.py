@@ -73,6 +73,33 @@ def build():
       border-color: #fbbf24 !important;
       box-shadow: 0 0 26px rgba(251, 191, 36, 0.85), 0 4px 14px rgba(0, 0, 0, 0.5) !important;
     }
+    .footer-top .newsletter-card {
+      margin-top: 0;
+    }
+    .newsletter-card {
+      border: 2px solid rgba(251, 191, 36, 0.5) !important;
+      box-shadow: 0 0 16px rgba(251, 191, 36, 0.15) !important;
+    }
+    .newsletter-name {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .newsletter-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      color: #F87171;
+      flex-shrink: 0;
+    }
+    .newsletter-svg {
+      width: 18px;
+      height: 18px;
+      fill: #F87171;
+      display: block;
+    }
     .location-svg {
       width: 14px;
       height: 14px;
@@ -107,6 +134,8 @@ def build():
         if os.path.abspath(file_path) in excluded:
             continue
         if os.path.basename(file_path).startswith("google"):
+            continue
+        if "footer" in os.path.basename(file_path).lower():
             continue
 
         with open(file_path, "r", encoding="utf-8") as f:

@@ -215,13 +215,13 @@ Structured collaboration frameworks for Generative AI toolmakers, quantum SDK ve
 - [🧪 Exercism (exercism.org/profiles/thomascherickal)](https://exercism.org/profiles/thomascherickal)
 - [🏅 CodersRank (profile.codersrank.io/user/thomascherickal)](https://profile.codersrank.io/user/thomascherickal/)
 - [🧠 Deep-ML (deep-ml.com/profile/thomascherickal)](https://www.deep-ml.com/profile/thomascherickal)
-- [🏆 HackerRank (hackerrank.com/profile/thomascherickal)](https://hackerrank.com/profile/thomascherickal)
-- [💡 LeetCode (leetcode.com/u/thomascherickal)](https://leetcode.com/u/thomascherickal)
-- [💻 Code360 (naukri.com/code360/profile/thomascherickal)](https://www.naukri.com/code360/profile/thomascherickal)
-- [⚔️ CodeWars (codewars.com/users/thomascherickal)](https://codewars.com/users/thomascherickal)
+- [✖️ X (@thomazcherickal)](https://x.com/thomazcherickal)
+- [👩‍💻 DEV (dev.to/thomascherickal)](https://dev.to/thomascherickal)
+- [🦊 GitLab (gitlab.com/thomascherickal)](https://gitlab.com/thomascherickal)
+- [✉️ Kit (thomascherickal.kit.com)](https://thomascherickal.kit.com)
 - [🔗 Linktree (linktr.ee/thomascherickal)](https://linktr.ee/thomascherickal)
 - [🎨 Patreon (patreon.com/thomascherickal)](https://patreon.com/thomascherickal)
-- [ Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)
+- [🤝 Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)
 
 ---
 *© 2026 Thomas Cherickal · The Digital Futurist · Generative AI Consultant · Quantum Systems Explorer · Python AI Engineer · Rust Systems Engineer · Technical Writer*
