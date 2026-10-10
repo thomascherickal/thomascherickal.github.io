@@ -2019,43 +2019,69 @@
 
       /* Hamburger layout */
       .nav-toggle-label {
-        display: block;
-        z-index: 110;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        min-height: 44px;
+        padding: 0.6rem;
+        cursor: pointer;
+        z-index: 120;
       }
 
       .nav-links {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100vw;
-        height: 100dvh;
-        background: rgba(5, 8, 16, 0.96);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1.25rem;
-        padding: 5rem 2rem 2rem;
-        overflow-y: auto;
-        z-index: 105;
-        transform: translateY(-100%);
-        opacity: 0;
-        pointer-events: none;
-        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100dvh !important;
+        background: rgba(5, 8, 16, 0.98) !important;
+        backdrop-filter: blur(24px) !important;
+        -webkit-backdrop-filter: blur(24px) !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 0.85rem !important;
+        padding: 5rem 1.25rem 3.5rem !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        overscroll-behavior: contain !important;
+        touch-action: pan-y !important;
+        z-index: 110 !important;
+        transform: translateY(-100%) !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease !important;
+      }
+
+      .nav-links li {
+        width: 100%;
+        max-width: 440px;
+        text-align: center;
       }
 
       .nav-links a {
-        font-size: 1.25rem;
-        padding: 0.5rem 1rem;
-        display: inline-block;
+        font-size: 1.15rem !important;
+        min-height: 44px;
+        padding: 0.6rem 1rem !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100%;
+        box-sizing: border-box;
       }
 
       .nav-dropdown {
-        width: 100%;
-        text-align: center;
+        width: 100% !important;
+        max-width: 440px !important;
+        text-align: center !important;
+      }
+
+      .nav-dropdown-toggle {
+        cursor: pointer;
+        user-select: none;
       }
 
       .dropdown-menu {
@@ -2066,40 +2092,59 @@
         pointer-events: auto !important;
         background: rgba(255, 255, 255, 0.03) !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: var(--radius) !important;
         box-shadow: none !important;
-        margin-top: 0.5rem;
+        margin-top: 0.4rem !important;
+        width: 100% !important;
         min-width: 100% !important;
+        max-width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        max-height: 240px;
-        overflow-y: auto;
+        max-height: none !important;
+        overflow: visible !important;
+        padding: 0.5rem 0.25rem !important;
+      }
+
+      .dropdown-menu.mobile-hidden {
+        display: none !important;
+      }
+
+      .dropdown-menu li {
+        width: 100% !important;
       }
 
       .dropdown-menu a {
-        justify-content: center;
-        font-size: 0.82rem !important;
-        padding: 0.4rem 1rem !important;
+        min-height: 44px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        font-size: 0.84rem !important;
+        padding: 0.5rem 0.75rem !important;
+        white-space: normal !important;
+        line-height: 1.35 !important;
+        border-radius: 6px;
       }
 
       .nav-toggle:checked~.nav-links {
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: auto;
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
       }
 
       .nav-toggle:checked~.nav-right-container .nav-toggle-label span {
-        background: transparent;
+        background: transparent !important;
       }
 
       .nav-toggle:checked~.nav-right-container .nav-toggle-label span::before {
-        transform: rotate(45deg);
-        top: 0;
+        transform: rotate(45deg) !important;
+        top: 0 !important;
       }
 
       .nav-toggle:checked~.nav-right-container .nav-toggle-label span::after {
-        transform: rotate(-45deg);
-        top: 0;
+        transform: rotate(-45deg) !important;
+        top: 0 !important;
       }
 
       .stats-strip {
@@ -3767,7 +3812,7 @@
       justify-content: space-between !important;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       .nav-links {
         position: absolute !important;
         top: 64px !important;
@@ -3791,10 +3836,15 @@
         white-space: normal !important;
       }
 
+      .dropdown-menu.mobile-hidden {
+        display: none !important;
+      }
+
       .dropdown-menu a {
         white-space: normal !important;
         text-align: center;
         justify-content: center;
+        min-height: 44px !important;
       }
     }
   </style>

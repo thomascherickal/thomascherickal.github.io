@@ -2,7 +2,10 @@
 ## Generative AI Consultant
 
 > **// The Digital Futurist · Remote Worldwide**  
-> **Generative AI Consultant specializing in transforming traditional businesses to an AI-first & AI-native organization, by providing live and remote training, teaching freshers, developers, staff, architects, management, and CXOs to become AI-enabled and experts in AI agent orchestration with local LLM deployments to reduce costs.**
+> **Generative AI Consultant specializing in transforming traditional businesses to an
+ AI-first & AI-native organization, by providing live and remote training, teaching freshers, developers,
+ staff, architects, management, and CXOs to become AI-enabled and experts in AI agent orchestration with local
+ LLMs to reduce costs.**
 
 **Location**: Chennai, India (Remote — Worldwide)  
 **Brand**: The Digital Futurist  
@@ -12,7 +15,7 @@
 - `Generative AI Consultant`
 - `Agentic AI Architect`
 - `AI Automation Expert`
-- `AI Trainer Live & Remote`
+- `AI Training Live & Remote`
 - `Enterprise AI Integration`
 - `Local LLM Deployment`
 - `AI Agent Orchestration`
@@ -20,7 +23,11 @@
 ---
 
 ## Bio
-PG in CS from Loyola College; Generative AI Consultant specializing in helping enterprises adopt AI automation and training their employees to become AI-native citizens. Understanding that cost is a problem, I also specialize in deploying high-quality Local LLMs to remove AI inference costs using local hardware. Expert in Enterprise AI Transformation, Generative AI, LLMs, AI Agent orchestration, Local LLM deployment, AI Training and AI Consulting.
+PG in CS from Loyola College; Generative AI Consultant specializing in helping enterprises
+ adopt AI automation and training their employees to become AI-native citizens. Understanding that cost is a
+ problem, I also specialize in deploying high-quality Local LLMs to remove AI inference costs using local
+ hardware. Expert in Enterprise AI Transformation, Generative AI, LLMs, AI Agent orchestration, Local LLM
+ deployment, AI Training and AI Consulting.
 
 ### Quick Actions
 - [📚 Portfolio](portfolio.html)

@@ -41,6 +41,9 @@
     var navLinks = document.querySelectorAll('.nav-links a');
     if (navToggle) {
       navLinks.forEach(function (link) {
+        if (link.classList.contains('nav-dropdown-toggle') || !link.getAttribute('href')) {
+          return;
+        }
         link.addEventListener('click', function () {
           if (navToggle.checked) {
             navToggle.checked = false;
@@ -48,6 +51,26 @@
           }
         });
       });
+
+      var dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+      var dropdownMenu = document.querySelector('.dropdown-menu');
+      if (dropdownToggle && dropdownMenu) {
+        dropdownToggle.addEventListener('click', function (e) {
+          if (window.innerWidth <= 1024) {
+            e.preventDefault();
+            e.stopPropagation();
+            var isHidden = dropdownMenu.classList.contains('mobile-hidden');
+            var caret = dropdownToggle.querySelector('.dropdown-caret');
+            if (isHidden) {
+              dropdownMenu.classList.remove('mobile-hidden');
+              if (caret) caret.style.transform = 'rotate(180deg)';
+            } else {
+              dropdownMenu.classList.add('mobile-hidden');
+              if (caret) caret.style.transform = 'rotate(0deg)';
+            }
+          }
+        });
+      }
 
       navToggle.addEventListener('change', function () {
         document.body.style.overflow = navToggle.checked ? 'hidden' : '';
