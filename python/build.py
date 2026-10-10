@@ -10,7 +10,9 @@ import os
 import re
 import sys
 
-REPO_DIR = os.path.dirname(os.path.abspath(__file__))
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_DIR = os.path.dirname(SCRIPT_DIR)
+sys.path.insert(0, SCRIPT_DIR)
 
 HEADER_SRC = os.path.join(REPO_DIR, "header.html")
 FOOTER_SRC = os.path.join(REPO_DIR, "footer.html")
@@ -153,6 +155,12 @@ def build():
             print(f"No changes needed: {os.path.basename(file_path)}")
 
     print(f"\nBuild complete. Successfully updated {updated_count} HTML files.")
+    
+    try:
+        import md_html_sync
+        md_html_sync.run_sync()
+    except Exception as e:
+        print(f"Warning: MD-HTML sync step failed: {e}")
 
 if __name__ == "__main__":
     build()

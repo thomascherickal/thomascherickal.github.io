@@ -6,7 +6,7 @@
       "@id": "https://thomascherickal.github.io/pricing.html#webpage",
       "url": "https://thomascherickal.github.io/pricing.html",
       "name": "Services Pricing & Engagement Packages — Thomas Cherickal",
-      "description": "Transparent milestone pricing across 6 core pillars: 01 Systems & AI Coding, 02 Technical Documentation, 03 Technical Consulting, 04 Dedicated Sprints & Retainers, 05 Startup Enablement (50% Off), and 06 Global Equity & Custom Pricing (Purchasing Power Parity for 198 countries, Non-Profits, and Underprivileged Teams).",
+      "description": "Transparent milestone pricing across 6 core pillars: 01 AI Agent Mastery, 02 Workforce Training, 03 Local LLMs & Cost Slashing, 04 Dedicated AI Sprints, 05 Startup Enablement (50% Off), and 06 Global Equity & Parity Tiers (Purchasing Power Parity for 198 countries, Non-Profits, and Underprivileged Teams).",
       "isPartOf": {
         "@id": "https://thomascherickal.github.io/#website"
       },
@@ -40,7 +40,7 @@
       "@type": "OfferCatalog",
       "@id": "https://thomascherickal.github.io/pricing.html#offercatalog",
       "name": "Services Pricing & Engagement Packages — Thomas Cherickal",
-      "description": "Transparent milestone pricing across 6 core pillars: 01 Systems & AI Content, 02 Technical Documentation, 03 Technical Consulting, 04 Dedicated Sprints & Retainers, 05 Startup Enablement (50% Off), and 06 Global Equity & Custom Pricing (Purchasing Power Parity for 198 countries, Non-Profits, and Underprivileged Teams).",
+      "description": "Transparent milestone pricing across 6 core pillars: 01 AI Agent Mastery, 02 Workforce AI Training, 03 Local LLMs & Cost Slashing, 04 Dedicated AI Sprints, 05 Startup Enablement (50% Off), and 06 Global Equity (6 Tiers of Payment & Parity).",
       "url": "https://thomascherickal.github.io/pricing.html",
       "offeredBy": {
         "@id": "https://thomascherickal.github.io/#person"
@@ -48,62 +48,63 @@
       "itemListElement": [
         {
           "@type": "Offer",
-          "name": "01 — Systems & AI Content",
-          "description": "Custom Python & Rust implementations, AI agent architectures, and runnable Jupyter notebook labs in Generative AI, agentic systems, and Quantum Computing SDKs.",
+          "name": "01 — AI Agent Mastery",
+          "description": "Create teams of AI agents with Claude, OpenAI, Gemini, or Grok. Learn in-depth orchestration principles, understand deep agent constraints, and perform multi-person tasks requiring domain knowledge.",
           "priceSpecification": {
             "@type": "PriceSpecification",
-            "minPrice": "2000.00",
-            "maxPrice": "3500.00",
+            "minPrice": "5000.00",
+            "maxPrice": "10000.00",
             "priceCurrency": "USD"
           }
         },
         {
           "@type": "Offer",
-          "name": "02 — Technical Documentation",
-          "description": "Authoritative Diátaxis technical documentation, deep dives (2,000–8,000 words), tutorials, references, architecture blueprints, and runtime-verified content in Python and Rust.",
+          "name": "02 — Workforce AI Training (Live & Remote)",
+          "description": "Hands-on workshops, training modules, prompt craft, and AI-assisted TDD bootcamps for Employees, Developers, Corporate Staff, and CXOs.",
           "priceSpecification": {
             "@type": "PriceSpecification",
-            "price": "2000.00",
+            "minPrice": "4000.00",
+            "maxPrice": "8000.00",
             "priceCurrency": "USD"
           }
         },
         {
           "@type": "Offer",
-          "name": "03 — Technical Consulting",
-          "description": "AI systems architecture reviews, technical strategy, SLM & local inference deployment roadmaps, and systems evaluations.",
+          "name": "03 — Local LLM Deployment & Inference Cost Slashing",
+          "description": "Slashing AI API costs 60–90% with open-weight model serving guides (vLLM, Ollama, llama.cpp), quantization tutorials, and zero-egress demonstrations.",
           "priceSpecification": {
             "@type": "PriceSpecification",
-            "minPrice": "2500.00",
-            "maxPrice": "4000.00",
+            "minPrice": "5000.00",
+            "maxPrice": "9000.00",
             "priceCurrency": "USD"
           }
         },
         {
           "@type": "Offer",
-          "name": "04 — Dedicated Sprints & Retainers",
-          "description": "Dedicated engineering capacity and rapid turnaround: Fortnightly Sprints ($3,000/2-wks), Monthly Retainers ($5,000/mo), and Enterprise Quarterly Retainers ($12,000/qtr) with private Slack/Discord channel access.",
+          "name": "04 — Dedicated AI Sprints",
+          "description": "Continuous engineering capacity for agent swarms, AI workflows, and TDD transformation: Fortnightly Sprints ($6,000/2-wks), Monthly Retainers ($10,000/mo), and Enterprise Quarterly Retainers ($25,000/qtr).",
           "priceSpecification": {
             "@type": "PriceSpecification",
-            "minPrice": "3000.00",
-            "maxPrice": "12000.00",
+            "minPrice": "6000.00",
+            "maxPrice": "25000.00",
             "priceCurrency": "USD"
           }
         },
         {
           "@type": "Offer",
           "name": "05 — Startup Enablement (50% Off)",
-          "description": "Flat 50% discount on any of the above offerings (Systems Content, Documentation, Consulting, or Dedicated Retainers) for Pre-Seed, Seed-stage, and bootstrapped startups.",
+          "description": "Flat 50% discount on any of the above consulting, training modules, or sample project sprint packages for early-stage startups.",
           "priceSpecification": {
             "@type": "PriceSpecification",
-            "minPrice": "1000.00",
-            "maxPrice": "6000.00",
+            "minPrice": "2000.00",
+            "maxPrice": "12500.00",
             "priceCurrency": "USD"
           }
         },
         {
           "@type": "Offer",
-          "name": "06 — Global Equity & Custom Pricing",
-          "description": "Purchasing Power Parity discounts (Tier 1: 100%, Tier 2: 75%, Tier 3: 50%) across 198 countries, with custom subsidized pricing for non-profits, universities, and underprivileged clients.",
+          "name": "06 — Global Equity & Parity Tiers",
+          "description": "6 Tiers of Payment & Parity: Tier 1 Developed (100%), Tier 2 Developing (75%), Tier 3 Least Developed (50%), Tier 4 Startups (50% off), Tier 5 Non-Profits & Academia (75% off), Tier 6 Underprivileged & Backward Nations (Custom subsidized quote).",
           "priceSpecification": {
             "@type": "PriceSpecification",
             "price": "0.00",

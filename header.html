@@ -123,13 +123,23 @@
     }
 
     .nav-brand {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
+      font-family: var(--font-mono);
+      font-size: clamp(0.9rem, 1.25vw, 1.05rem);
       font-weight: 700;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       color: var(--cyan);
       text-decoration: none;
-      text-transform: uppercase;
+      text-transform: none;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-brand:hover {
+      color: var(--gold);
+      opacity: 0.95;
+      transform: translateY(-1px);
     }
 
     .nav-right-container {
@@ -3752,7 +3762,9 @@
     nav {
       position: relative !important;
       top: auto !important;
-      justify-content: flex-end !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
     }
 
     @media (max-width: 768px) {
@@ -3790,6 +3802,7 @@
 
 <body>
   <nav aria-label="Main navigation">
+    <a href="https://thomascherickal.com" class="nav-brand">Thomas Cherickal</a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <div class="nav-right-container">
       <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle Navigation Menu">
@@ -3808,11 +3821,18 @@
         <ul class="dropdown-menu">
           <li><a href="services.html" class="dropdown-header-link">🎯 All Services</a></li>
           <li class="dropdown-divider"></li>
-          <li><a href="service-ai-agents-orchestration.html">🤖 AI Agent Orchestration (Consulting &amp; Content)</a></li>
-          <li><a href="service-technical-deep-dives.html">🔬 Technical Deep Dives (Content)</a></li>
-          <li><a href="service-local-llm-deployment.html">📦 Local LLM Deployment (Consulting &amp; Guides)</a></li>
-          <li><a href="service-generative-ai-developer-content.html">🧠 Generative AI Developer Content</a></li>
-          <li><a href="service-monthly-content-retainer.html">💼 Monthly Content Retainer</a></li>
+          <li><a href="service-generative-ai-transformation.html">🧠 Generative AI Transformation</a></li>
+          <li><a href="service-local-llms-cost-slashing.html">📦 Local LLMs &amp; Cost Slashing</a></li>
+          <li><a href="service-ai-agents-orchestration.html">🤖 AI Agent Orchestration Fundamentals</a></li>
+          <li><a href="service-agentic-ai-systems.html">🏎️ Agentic AI Assistants (Hermes Agent)</a></li>
+          <li><a href="service-enterprise-coding-model-optimization.html">🤗 Enterprise Coding Model Optimization</a>
+          </li>
+          <li><a href="service-training-for-workflows-automations.html">🌐 Training for WorkFlows Automations</a></li>
+          <li><a href="service-quantum-applications.html">⚛️ Quantum Applications (Experimental)</a></li>
+          <li><a href="service-low-code-no-code-automation-training.html">⚙️ Low Code and No Code Enterprise Automation
+              Training</a></li>
+          <li><a href="service-ai-budget-cost-limits-training.html">💲 AI Budget &amp; Cost Limits Training</a></li>
+          <li><a href="service-enterprise-workforce-ai-training.html">🛡️ Enterprise Workforce AI Training</a></li>
         </ul>
       </li>
       <li><a href="collaboration.html" data-nav="collaboration.html">Collaborate</a></li>

@@ -6,7 +6,7 @@
       "@id": "https://thomascherickal.github.io/faqs.html#webpage",
       "url": "https://thomascherickal.github.io/faqs.html",
       "name": "Frequently Asked Questions \u2014 Thomas Cherickal",
-      "description": "24 Frequently asked questions on emerging technologies thought leadership, technical whitepapers, how-to guides, developer documentation, quantum computing research, infinite revision guarantees, and milestone payment structures.",
+      "description": "28 Frequently asked questions on Generative AI consulting, AI Agent Mastery, local LLM cost optimization, multi-agent orchestration, enterprise data privacy, MCP integration, workforce training, infinite revisions, and milestone payments.",
       "isPartOf": {
         "@id": "https://thomascherickal.github.io/#website"
       },
@@ -40,7 +40,7 @@
       "@type": "FAQPage",
       "@id": "https://thomascherickal.github.io/faqs.html#faqpage",
       "name": "Frequently Asked Questions \u2014 Thomas Cherickal",
-      "description": "24 Frequently asked questions on emerging technologies thought leadership, technical whitepapers, how-to guides, developer documentation, quantum computing research, infinite revision guarantees, and milestone payment structures.",
+      "description": "28 Frequently asked questions on Generative AI consulting, AI Agent Mastery, local LLM cost optimization, multi-agent orchestration, enterprise data privacy, MCP integration, workforce training, infinite revisions, and milestone payments.",
       "url": "https://thomascherickal.github.io/faqs.html",
       "mainEntity": [
         {
@@ -233,6 +233,30 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "I author high-impact systems content, algorithms, and integration harnesses in Python and Rust. Every deliverable includes battle-tested, runtime-verified content artifacts with pinned dependencies and reproducible execution sandboxes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you ensure enterprise data privacy, security, and compliance with regulations like the EU AI Act or SOC 2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All architectures adhere to strict enterprise security standards: zero-data-retention (ZDR) commercial API agreements, end-to-end encryption in transit and at rest, private VPC isolation, and automated PII sanitization pipelines. For organizations operating under the EU AI Act, SOC 2, HIPAA, or strict financial compliance, we prioritize sovereign local LLM deployments (Ollama, vLLM) and deterministic safety guardrails (NeMo Guardrails, Llama Guard) so your proprietary data never leaks or trains external foundational models."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you use the Model Context Protocol (MCP) to connect AI agents with enterprise tools and databases?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Model Context Protocol (MCP) standardizes how autonomous agents and AI assistants (Claude Code, Google Antigravity, OpenCode) discover and interact with enterprise resources. Instead of fragile, custom API glue code, I architect secure MCP client-server harnesses that connect reasoning models directly to internal databases (PostgreSQL/pgvector), code repositories, issue trackers, and internal microservices under strict least-privilege permissions and sandbox auditing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you decide between RAG, Fine-Tuning (LoRA/QLoRA), and Long-Context models for enterprise use cases?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We apply a rigorous decision matrix based on data volatility, latency, and cost: RAG (Retrieval-Augmented Generation) is recommended when knowledge changes frequently and source attribution is non-negotiable; Fine-Tuning (LoRA/QLoRA, Unsloth) is selected when models must master highly specialized terminology, structured schema outputs, or internal coding styles while slashing prompt token overhead; and Long-Context Windowing is leveraged for deep, exploratory synthesis across multi-hundred-page documents without vector chunking artifacts. Often, a hybrid architecture yields the highest ROI."
           }
         }
       ]
