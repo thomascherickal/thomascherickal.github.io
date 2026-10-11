@@ -49,6 +49,44 @@ def build():
       height: auto;
     }
 
+    .nav-brand {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-brand-logo {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      object-fit: cover;
+      display: inline-block;
+      flex-shrink: 0;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      box-shadow: 0 0 8px rgba(56, 189, 248, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .nav-brand:hover {
+      color: var(--cyan);
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+
+    .nav-brand:hover .nav-brand-logo {
+      transform: scale(1.08);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+    }
+
     /* Prevent iOS Safari automatic zoom on form input focus */
     @media (max-width: 768px) {
       input, select, textarea {
@@ -233,6 +271,23 @@ def build():
   </style>"""
 
     footer_styles = """  <style id="footer-styles">
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .footer-brand-logo {
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.25);
+      flex-shrink: 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .footer-brand:hover .footer-brand-logo {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.45);
+    }
     .social-icon {
       font-size: 1rem;
       flex-shrink: 0;

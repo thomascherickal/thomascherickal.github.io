@@ -336,7 +336,13 @@ def sync_md_to_html(md_name: str, html_name: str):
         if tagline_match:
             eyebrow = soup.find("p", class_="hero-eyebrow")
             if eyebrow:
-                eyebrow.string = tagline_match.group(1)
+                img_tag = eyebrow.find("img")
+                if img_tag:
+                    eyebrow.clear()
+                    eyebrow.append(img_tag)
+                    eyebrow.append(tagline_match.group(1))
+                else:
+                    eyebrow.string = tagline_match.group(1)
             tagline = soup.find("p", class_="hero-tagline")
             if tagline:
                 tagline.string = tagline_match.group(2)
