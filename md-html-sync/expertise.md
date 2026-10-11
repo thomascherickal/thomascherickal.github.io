@@ -77,8 +77,8 @@ In-depth technical systems design covering Tokio async runtimes, Burn & Candle
 
 ## Tech-Stack Expertise (10 Curated Chip Groups)
 
-### 💻 Languages I Author & Write
-`Python` · `Rust` · `SQL` · `Bash` · `TypeScript`
+### 💻 Languages I Code & Write
+`Python` · `Rust` · `SQL` · `Bash` · `TypeScript` · `Golang` · `Mojo` · `C` · `Julia` · `MPI`
 
 ### 🧠 Generative AI Systems & Vector
  Stores
