@@ -1,7 +1,8 @@
 # Thomas Cherickal
 ## Generative AI Consultant
 
-> **// The Digital Futurist · Remote Worldwide**  
+> **//
+ The Digital Futurist · Remote Worldwide**  
 > **Generative AI Consultant specializing in transforming traditional businesses to an
  AI-first & AI-native organization, by providing live and remote training, teaching freshers, developers,
  staff, architects, management, and CXOs to become AI-enabled and experts in AI agent orchestration with local
@@ -43,7 +44,7 @@ PG in CS from Loyola College; Generative AI Consultant specializing in helping e
 | **Publications** | 500+ |
 | **Platforms** | 10+ |
 | **Years in AI** | 5+ |
-| **AI Agent Teams** | 5+ |
+| **Local LLMs** | 10+ |
 
 ---
 

@@ -58,6 +58,9 @@ Here is a complete inventory of my digital footprints and developer profiles.
 | ✍️ Medium Channel | [thomascherickal.medium.com](https://thomascherickal.medium.com) |
 | 🔷 Hashnode Space | [thomascherickal.hashnode.dev](https://thomascherickal.hashnode.dev) |
 | 📬 Substack Channel | [thesingularitypoint.substack.com](https://thesingularitypoint.substack.com) |
+| 📊 Kaggle Profile | [kaggle.com/thomascherickal](https://www.kaggle.com/thomascherickal) |
+| 🌍 HackerEarth Profile | [hackerearth.com/@thomascherickal](https://www.hackerearth.com/@thomascherickal) |
+| 📄 HubPages Profile | [hubpages.com/@thomascherickal](https://hubpages.com/@thomascherickal) |
 | 🔗 Linktree Directory | [linktr.ee/thomascherickal](https://linktr.ee/thomascherickal) |
 | 🎗 Patreon Community | [patreon.com/thomascherickal](https://patreon.com/thomascherickal) |
 | 🛒 Gumroad Store | [thomascherickal.gumroad.com](https://thomascherickal.gumroad.com) |
@@ -69,4 +72,4 @@ Here is a complete inventory of my digital footprints and developer profiles.
 
 ---
 
-© 2026 Thomas Cherickal · The Digital Futurist · [thomascherickal.com](https://thomascherickal.com) · [https://thomascherickal.github.io](https://thomascherickal.github.io)
+© 2026 Thomas Cherickal · The Digital Futurist · Generative AI Consultant · [thomascherickal.com](https://thomascherickal.com) · [https://thomascherickal.github.io](https://thomascherickal.github.io)

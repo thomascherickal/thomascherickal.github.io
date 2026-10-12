@@ -211,7 +211,7 @@ Absolutely. Every corporate workshop, developer masterclass, and CXO briefing is
 
 ### 23. Do you write, deploy, or maintain code directly in client infrastructure?
 *Operating
- Mandate · FAQ #24 — Enterprise Code Policy*  
+ Mandate · FAQ #23 — Enterprise Code Policy*  
 We focus on enterprise AI transformation, comprehensive training, sample code guides,
  technical explainers, sample projects, and training modules. We empower, upskill, and equip your internal
  engineering team to write, inspect, and deploy code within your own environments.
@@ -219,7 +219,7 @@ We focus on enterprise AI transformation, comprehensive training, sample code gu
 ---
 
 ### 24. How do we get started on an AI consulting or training engagement?
-*Onboarding · FAQ #25 — Project Commencement*  
+*Onboarding · FAQ #24 — Project Commencement*  
 Submit your AI agent objectives, team upskilling targets, or workforce training
  requirements via the form on contact.html. I return a tailored architecture outline, milestone scope, and
  country-parity quote within 24 hours.
