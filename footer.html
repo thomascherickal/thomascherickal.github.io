@@ -827,10 +827,13 @@
       margin-right: 0;
     }
 
-    .divider {
+            .divider {
       height: 1px;
-      background: linear-gradient(90deg, transparent, var(--border), var(--border-gold), var(--border), transparent);
-      margin: 0 clamp(1.5rem, 8vw, 8rem);
+      background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.05) 20%, rgba(255, 255, 255, 0.05) 80%, transparent 100%);
+      box-shadow: none;
+      margin: 3.5rem clamp(1.5rem, 8vw, 8rem);
+      border: none;
+      opacity: 0.6;
     }
 
     .roles-grid {
@@ -2087,8 +2090,8 @@
         padding: 3.5rem 1.25rem;
       }
 
-      .divider {
-        margin: 0 1.25rem;
+            .divider {
+        margin: 2.5rem 1.25rem;
       }
 
       .hero {
@@ -4271,7 +4274,7 @@
           <span class="wl-name">Pricing &amp; Parity</span>
         </div>
         <p class="wl-desc">Transparent milestone rates &amp; 198-country PPP index.</p>
-        <span class="wl-url">thomascherickal.github.io/pricing.html</span>
+        <span class="wl-url">thomascherickal.github.io/pricing</span>
       </a>
 
       <!-- Direct Email Inquiry -->

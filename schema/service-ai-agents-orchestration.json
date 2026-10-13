@@ -5,7 +5,7 @@
       "@type": "WebPage",
       "@id": "https://thomascherickal.github.io/service-ai-agents-orchestration.html#webpage",
       "url": "https://thomascherickal.github.io/service-ai-agents-orchestration.html",
-      "name": "AI Agent Orchestration Fundamentals \u2014 Service Specification | Thomas Cherickal",
+      "name": "AI Agent Orchestration Fundamentals — Service Specification | Thomas Cherickal",
       "description": "Principles of AI agent orchestration and releasing agent swarms at scale. Building multi-agent workflows that automate complex enterprise operations, even on constrained budgets.",
       "isPartOf": {
         "@id": "https://thomascherickal.github.io/#website"
@@ -42,7 +42,7 @@
     {
       "@type": "Service",
       "@id": "https://thomascherickal.github.io/service-ai-agents-orchestration.html#service",
-      "name": "AI Agent Orchestration Fundamentals \u2014 Thomas Cherickal",
+      "name": "AI Agent Orchestration Fundamentals — Thomas Cherickal",
       "serviceType": "Autonomous Agent Swarms & Orchestration",
       "url": "https://thomascherickal.github.io/service-ai-agents-orchestration.html",
       "description": "Principles of AI agent orchestration and releasing agent swarms at scale. Building multi-agent workflows that automate complex enterprise operations, even on constrained budgets.",
@@ -62,14 +62,44 @@
         "@type": "Offer",
         "url": "https://thomascherickal.github.io/service-ai-agents-orchestration.html",
         "priceCurrency": "USD",
-        "price": "2000.00",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": "2000.00",
-          "maxPrice": "4500.00",
-          "priceCurrency": "USD",
-          "valueAddedTaxIncluded": "true"
-        },
+        "price": "3000.00",
+        "priceSpecification": [
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 1 (Standard / 100%)",
+            "minPrice": "3000.00",
+            "maxPrice": "6000.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 2 (Developing / 25% Off)",
+            "minPrice": "2250.00",
+            "maxPrice": "4500.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 3 & 4 (Least Developed & Startups / 50% Off)",
+            "minPrice": "1500.00",
+            "maxPrice": "3000.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 5 (Academia & Non-Profits / 75% Off)",
+            "minPrice": "750.00",
+            "maxPrice": "1500.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 6 (Underprivileged & Backward Nations)",
+            "price": "0.00",
+            "priceCurrency": "USD",
+            "description": "Custom subsidized quotes for underprivileged teams"
+          }
+        ],
         "availability": "https://schema.org/InStock",
         "eligibleRegion": "Worldwide"
       }

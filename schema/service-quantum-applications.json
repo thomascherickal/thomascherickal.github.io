@@ -5,7 +5,7 @@
       "@type": "WebPage",
       "@id": "https://thomascherickal.github.io/service-quantum-applications.html#webpage",
       "url": "https://thomascherickal.github.io/service-quantum-applications.html",
-      "name": "Quantum Applications (Experimental) \u2014 Service Specification | Thomas Cherickal",
+      "name": "Quantum Applications (Experimental) — Service Specification | Thomas Cherickal",
       "description": "Exploratory quantum computing advisory for practical enterprise use cases, algorithm simulation with IBM Qiskit and PennyLane, and post-quantum readiness.",
       "isPartOf": {
         "@id": "https://thomascherickal.github.io/#website"
@@ -42,7 +42,7 @@
     {
       "@type": "Service",
       "@id": "https://thomascherickal.github.io/service-quantum-applications.html#service",
-      "name": "Quantum Applications (Experimental) \u2014 Thomas Cherickal",
+      "name": "Quantum Applications (Experimental) — Thomas Cherickal",
       "serviceType": "Quantum Computing & Post-Quantum Advisory",
       "url": "https://thomascherickal.github.io/service-quantum-applications.html",
       "description": "Exploratory quantum computing advisory for practical enterprise use cases, algorithm simulation with IBM Qiskit and PennyLane, and post-quantum readiness.",
@@ -62,14 +62,44 @@
         "@type": "Offer",
         "url": "https://thomascherickal.github.io/service-quantum-applications.html",
         "priceCurrency": "USD",
-        "price": "2000.00",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": "2000.00",
-          "maxPrice": "4500.00",
-          "priceCurrency": "USD",
-          "valueAddedTaxIncluded": "true"
-        },
+        "price": "1000.00",
+        "priceSpecification": [
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 1 (Standard / 100%)",
+            "minPrice": "1000.00",
+            "maxPrice": "3000.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 2 (Developing / 25% Off)",
+            "minPrice": "750.00",
+            "maxPrice": "2250.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 3 & 4 (Least Developed & Startups / 50% Off)",
+            "minPrice": "500.00",
+            "maxPrice": "1500.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 5 (Academia & Non-Profits / 75% Off)",
+            "minPrice": "250.00",
+            "maxPrice": "750.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 6 (Underprivileged & Backward Nations)",
+            "price": "0.00",
+            "priceCurrency": "USD",
+            "description": "Custom subsidized quotes for underprivileged teams"
+          }
+        ],
         "availability": "https://schema.org/InStock",
         "eligibleRegion": "Worldwide"
       }

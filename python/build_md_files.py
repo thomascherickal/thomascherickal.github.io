@@ -260,15 +260,13 @@ def convert_services() -> str:
     lines.append("## Dedicated Enterprise AI Transformation Service Pages")
     lines.append("")
     lines.append("1. [🧠 Generative AI Transformation](service-generative-ai-transformation.html) — Agentic workflows, metrics, safeguards.")
-    lines.append("2. [📦 Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — 60–90% inference savings via Ollama, vLLM, llama.cpp.")
-    lines.append("3. [🤖 AI Agent Orchestration Fundamentals](service-ai-agents-orchestration.html) — Scalable swarms & low budgets.")
+    lines.append("2. [📦 Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — High-throughput private inference via Ollama, vLLM, llama.cpp.")
+    lines.append("3. [🤖 AI Agent Orchestration Fundamentals](service-ai-agents-orchestration.html) — Scalable swarms & state machines.")
     lines.append("4. [🏎️ Agentic AI Assistants (Hermes Agent)](service-agentic-ai-systems.html) — Persistent memory & autonomous loops.")
-    lines.append("5. [🤗 Enterprise Coding Model Optimization](service-enterprise-coding-model-optimization.html) — Claude Code, Antigravity, Codex.")
-    lines.append("6. [🌐 Training for WorkFlows Automations](service-training-for-workflows-automations.html) — Self-hosted n8n automations.")
-    lines.append("7. [⚛️ Quantum Applications (Experimental)](service-quantum-applications.html) — Enterprise quantum readiness.")
-    lines.append("8. [⚙️ Low Code and No Code Enterprise Automation Training](service-low-code-no-code-automation-training.html) — 50% daily work automated.")
-    lines.append("9. [💲 AI Budget & Cost Limits Training](service-ai-budget-cost-limits-training.html) — Token governance & free models.")
-    lines.append("10. [🛡️ Enterprise Workforce AI Training](service-enterprise-workforce-ai-training.html) — Freshers, Devs & CXOs.")
+    lines.append("5. [🌐 Training for WorkFlows Automations](service-training-for-workflows-automations.html) — Self-hosted n8n automations.")
+    lines.append("6. [⚛️ Quantum Applications (Experimental)](service-quantum-applications.html) — Enterprise quantum readiness.")
+    lines.append("7. [💲 AI Budget & Cost Limits Training](service-ai-budget-cost-limits-training.html) — Token governance & free models.")
+    lines.append("8. [🛡️ Enterprise Workforce AI Training](service-enterprise-workforce-ai-training.html) — Freshers, Devs & CXOs.")
     lines.append("")
     
     return "\n".join(lines).strip() + "\n"
@@ -447,15 +445,34 @@ def convert_pricing() -> str:
         
     lines.append("---")
     lines.append("")
-    lines.append("## Global Equity: Purchasing Power Parity (PPP) Tiers")
+    lines.append("## Global Equity: Purchasing Power Parity (PPP) Six Tiers")
     lines.append("Rates are automatically indexed across 198 countries to ensure fair pricing worldwide across 6 Parity Tiers:")
-    lines.append("- **Tier 1 (Base, 100%)**: US, UK, EU, Canada, Australia, Singapore, etc.")
-    lines.append("- **Tier 2 (75%)**: Japan, South Korea, UAE, Israel, New Zealand, etc.")
-    lines.append("- **Tier 3 (50%)**: Eastern Europe, Latin America, South Africa, Malaysia, etc.")
-    lines.append("- **Tier 4 (50% Off / Startups)**: Pre-Seed, Seed-stage, and bootstrapped startups globally.")
-    lines.append("- **Tier 5 (75% Off / Non-Profits & Academia)**: Non-profits, educational institutions, universities, and academia.")
-    lines.append("- **Tier 6 (Custom Quote / Backward Nations)**: Customized subsidized quotes for underprivileged and backward nations.")
     lines.append("")
+    parity_cards = soup.find_all("div", class_="parity-tier-card")
+    if parity_cards:
+        for pc in parity_cards:
+            p_badge = clean_text(pc.find(class_="parity-badge").get_text()) if pc.find(class_="parity-badge") else ""
+            p_title = clean_text(pc.find(class_="parity-title").get_text()) if pc.find(class_="parity-title") else ""
+            p_sub = clean_text(pc.find(class_="parity-subtitle").get_text()) if pc.find(class_="parity-subtitle") else ""
+            p_rate = clean_text(pc.find(class_="parity-rate-val").get_text()) if pc.find(class_="parity-rate-val") else ""
+            p_ratesub = clean_text(pc.find(class_="parity-rate-sub").get_text()) if pc.find(class_="parity-rate-sub") else ""
+            p_desc = clean_text(pc.find(class_="parity-desc").get_text()) if pc.find(class_="parity-desc") else ""
+            
+            lines.append(f"### {p_title}")
+            if p_badge:
+                lines.append(f"*{p_badge}* — {p_sub}  ")
+            lines.append(f"**Rate**: `{p_rate}` ({p_ratesub})  ")
+            if p_desc:
+                lines.append(p_desc)
+            lines.append("")
+    else:
+        lines.append("- **Tier 1 (Base, 100%)**: US, UK, EU, Canada, Australia, Singapore, etc.")
+        lines.append("- **Tier 2 (75%)**: India, Brazil, Mexico, South Africa, Malaysia, Poland, Turkey, etc.")
+        lines.append("- **Tier 3 (50%)**: Bangladesh, Kenya, Nigeria, Pakistan, Vietnam, Egypt, etc.")
+        lines.append("- **Tier 4 (50% Off / Startups)**: Pre-Seed, Seed-stage, and bootstrapped startups globally (<$1M raised).")
+        lines.append("- **Tier 5 (75% Off / Non-Profits & Academia)**: Non-profits, educational institutions, universities, and academia.")
+        lines.append("- **Tier 6 (Custom Quote / Underprivileged)**: Customized subsidized quotes and micro-rates.")
+        lines.append("")
     lines.append("- [Check your country on the interactive calculator](pricing.html)")
     lines.append("- [Start intake conversation](contact.html)")
     
@@ -619,19 +636,22 @@ def convert_faqs() -> str:
     return "\n".join(lines).strip() + "\n"
 
 def convert_404() -> str:
-    return """# 404 — Quantum State Collapse
+    return """# 404 — Context Window Exhausted
 ## Page Not Found
 
-> **// 404 — QUANTUM STATE COLLAPSE**  
-> **The requested URL was not found on this server. The measurement collapsed the wave function into an undefined state.**
+> **// 404 — CONTEXT WINDOW EXHAUSTED**  
+> **High-Temperature Hallucination Detected**  
+> **Even with a 2-million-token context window, our autonomous multi-agent swarm couldn’t ground this route. Either your prompt drifted into unmapped latent space at temperature 2.0, our RAG retrieval scored zero cosine similarity, or an overconfident LLM hallucinated a URL that was never trained into the weights.**
+> 
+> *Don’t waste your token budget wandering the void. Re-ground your attention weights below:*
 
 ---
 
 ### Navigation Options
-- [Return to Homepage →](index.html)
-- [Read Portfolio & Case Studies →](portfolio.html)
+- [Return to Home →](index.html)
+- [Explore Services & Capabilities →](services.html)
+- [Transparent Pricing & Parity Tiers →](pricing.html)
 - [Explore Publications & Deep Dives →](writing.html)
-- [View Services & Capabilities →](services.html)
 - [Contact via Email →](contact.html)
 
 ---

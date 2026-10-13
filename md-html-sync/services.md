@@ -14,112 +14,237 @@
 
 Hands-on mastery, configuration, and developer pair-programming across industry-standard AI development environments and foundation APIs:
 
-`Claude Code` · `Google Antigravity` · `ChatGPT` · `HuggingFace Spaces` · `OpenAI Codex` · `Google Gemini Notebook` · `Google AI Studio` · `OpenCode` · `OpenRouter` · `Ollama & vLLM` · `IBM Qiskit`
+`Claude Code` · `Google Antigravity` · `ChatGPT` · `HuggingFace Spaces` · `OpenAI Codex` · `Google Gemini Notebook` · `Google AI Studio` · `OpenCode` · `OpenRouter` · `Ollama & vLLM` · `IBM Qiskit` · `Agentic
+ Workflows & Enterprise Transition` · `60–90%
+ Inference Savings & Privacy` · `Multi-Agent
+ Swarms & Low Budgets` · `Persistent
+ Memory & Security Sandboxes` · `Self-Hosted
+ n8n & 50% Work Automation` · `Quantum
+ Algorithms & Post-Quantum Crypto` · `Token
+ Governance & Spending Caps` · `Freshers,
+ Devs, Staff & CXO Enablement`
 
 ---
 
 ## Core Capabilities & Advisory Offerings
 
-### 1. 🤖 AI Agent Mastery & Team Orchestration
-Create teams of AI agents with Claude or Grok. Learn the in-depth principles that make AI
- agent orchestration successful, understand deep agent constraints, and perform the tasks of multiple people
- with a coordinated team of agents. Master domain-knowledge grounding without which multi-agent execution
- fails.
+### 1. 🧠 Generative AI Transformation
+Convert your business from isolated conversational chatbot windows into a proactive, agent-driven
+ organization. Orchestrate coordinated teams of AI agents powered by Claude, OpenAI, Gemini, or Grok to
+ execute complex, multi-person operational workloads grounded in domain-specific boundaries.
 
-> **Focus**: Multi-agent architecture blueprints, cross-model orchestration (Claude, OpenAI, Gemini, Grok), deep agent
- constraint analysis, and domain-grounded task distribution guides.
+- ▸Chatbot-to-Agent
+ Evolution: Multi-step autonomous reasoning graphs & internal API tooling.
+- ▸Deep Constraint
+ Grounding: Model Context Protocol (MCP) servers & context degradation prevention.
+- ▸Evaluation &
+ Safeguards: Quantitative eval scoring (Ragas, DeepEval) & sensitive data firewalls.
 
-**Action**: [Master AI Agents →](contact.html)
+> **Focus**: // Core Capabilities & Stack
 
----
+▸Chatbot-to-Agent
+ Evolution: Multi-step autonomous reasoning graphs & internal API tooling.
+▸Deep Constraint
+ Grounding: Model Context Protocol (MCP) servers & context degradation prevention.
+▸Evaluation &
+ Safeguards: Quantitative eval scoring (Ragas, DeepEval) & sensitive data firewalls.
 
-### 2. 🎓 Corporate & Developer AI Training (Live &
- Remote)
-👥 Employees: AI adoption, prompt craft, and daily productivity workflows.
-💻 Developers: AI-assisted development, Test-Driven Development (TDD) with AI, and pair
- programming.
-💼 Corporate Staff: AI workflow automation, cross-department efficiency, and
- governance.
-👔 CXOs: AI transformation strategy, technology radar, ROI maximization, and evaluation
- metrics.
-
-Book Training Sessions →
-
-- 👥 Employees: AI adoption, prompt craft, and daily productivity workflows.
-- 💻 Developers: AI-assisted development, Test-Driven Development (TDD) with AI, and pair
- programming.
-- 💼 Corporate Staff: AI workflow automation, cross-department efficiency, and
- governance.
-- 👔 CXOs: AI transformation strategy, technology radar, ROI maximization, and evaluation
- metrics.
-
-**Action**: [Book Training Sessions →](contact.html)
+**Action**: [Explore Transformation
+ Blueprint →](service-generative-ai-transformation.html)
 
 ---
 
-### 3. 📦 Local LLM Deployment & Cost Optimization
-Slashing recurring cloud AI inference bills by 60–90% by deploying private open-weight models (Llama 3,
- DeepSeek, Mistral, Qwen) on local workstations, private on-premise clusters, or hybrid cloud setups.
+### 2. 📦 Local LLMs & Cost Slashing
+Drastically slash recurring cloud AI inference invoices by 60% to 90% by deploying private open-weight
+ models (Llama 3, DeepSeek, Mistral, Qwen). Serve high-throughput models on local developer workstations,
+ private clusters, or hybrid enterprise infrastructure with zero per-token cloud billing.
 
-> **Focus**: Setup and tuning with Ollama, vLLM, and llama.cpp; GGUF, AWQ, and EXL2 quantization for zero data egress and
- zero external API fees.
+- ▸Spend Audit & TCO
+ Analysis: Cloud invoice audits isolating high-volume tasks for local offloading.
+- ▸High-Throughput
+ Serving: Production tuning with Ollama, vLLM, and llama.cpp via PagedAttention.
+- ▸Quantization &
+ Privacy: 4-bit/8-bit GGUF, AWQ, and EXL2 quantization ensuring complete air-gapped security.
 
-**Action**: [Reduce Inference Costs →](contact.html)
+> **Focus**: // Core Capabilities & Stack
 
----
+▸Spend Audit & TCO
+ Analysis: Cloud invoice audits isolating high-volume tasks for local offloading.
+▸High-Throughput
+ Serving: Production tuning with Ollama, vLLM, and llama.cpp via PagedAttention.
+▸Quantization &
+ Privacy: 4-bit/8-bit GGUF, AWQ, and EXL2 quantization ensuring complete air-gapped security.
 
-### 4. 🤖 AI Agent Orchestration & Autonomous Workflows
-Architecting multi-agent swarm demonstrations, autonomous tool-calling loops, and multi-step reasoning
- systems using LangGraph, CrewAI, AutoGen, and custom state machines.
-
-> **Focus**: Dynamic task routing, self-correcting agent chains, structured JSON outputs, and human-in-the-loop review
- guardrails.
-
-**Action**: [Orchestrate Agent Swarms →](contact.html)
-
----
-
-### 5. 🧪 AI-Assisted Dev & Test-Driven Development (TDD)
-Transforming software delivery with AI pair-programming tools (Claude Code, Google Antigravity, OpenAI
- Codex, OpenCode). Embedding strict test-driven development (TDD) methodologies.
-
-> **Focus**: Automated test-generation (pytest, cargo test), invariant test harnesses, AI code refactoring, and CI/CD
- test automation.
-
-**Action**: [Implement AI TDD →](contact.html)
+**Action**: [Explore Cost Slashing
+ Blueprint →](service-local-llms-cost-slashing.html)
 
 ---
 
-### 6. 📊 AI Benchmarks, Evaluation Metrics & Evals
-Quantitative evaluation harnesses and benchmarking frameworks (Ragas, DeepEval, Promptfoo, Langfuse).
- Replacing subjective prompt guessing with deterministic metrics.
+### 3. 🤖 AI Agent Orchestration Fundamentals
+Master the core software principles required to release multi-agent swarms at enterprise scale without
+ runaway costs. Build supervisor-worker hierarchies, consensus voting networks, and autonomous tool-calling
+ loops engineered for dependable operational execution.
 
-> **Focus**: Hallucination scoring, latency vs. accuracy profiling, cost-per-token audits, safety guardrails, and
- quantifiable ROI tracking.
+- ▸Swarm Topologies:
+ Hierarchical, mesh, and peer-to-peer supervisor-worker graphs via LangGraph & AutoGen.
+- ▸Budget-Conscious
+ Architectures: Hard token budgets, early loop exits, and dynamic cheap-model fallback.
+- ▸Robust Tool Calling:
+ Strict JSON schema validation, scoped executor permissions, and review guardrails.
 
-**Action**: [Build AI Evals →](contact.html)
+> **Focus**: // Core Capabilities & Stack
+
+▸Swarm Topologies:
+ Hierarchical, mesh, and peer-to-peer supervisor-worker graphs via LangGraph & AutoGen.
+▸Budget-Conscious
+ Architectures: Hard token budgets, early loop exits, and dynamic cheap-model fallback.
+▸Robust Tool Calling:
+ Strict JSON schema validation, scoped executor permissions, and review guardrails.
+
+**Action**: [Explore Agent Swarms
+ Blueprint →](service-ai-agents-orchestration.html)
 
 ---
 
-### 7. ⚛️ Early Quantum Systems Exploration & Advisory
-Pioneering quantum algorithm formulation, variational circuits (VQE, QAOA), and Quantum Machine Learning
- (QML) using IBM Qiskit and PennyLane simulators and hardware backends.
+### 4. 🏎️ Agentic AI Assistants (Hermes Agent)
+Enterprise deployment of autonomously improving agentic assistants featuring long-term persistent vector
+ memory and continuous episodic learning. Built on Nous Research Hermes 3, OpenClaw, and OpenFang runners for
+ 24/7 background operation in hardened isolation containers.
 
-> **Focus**: Enterprise quantum-readiness roadmaps, hybrid quantum-classical algorithms, and post-quantum migration
- consulting.
+- ▸Dual-Tier Memory: Dense
+ vector indexing (Qdrant HNSW) paired with episodic SQLite/DuckDB interaction storage.
+- ▸Sandboxed Tool
+ Isolation: Hardened gVisor and Docker runtimes with dropped privileges and zero data egress.
+- ▸Institutional
+ Consolidation: Daily episodic synthesis pipelines turning operational events into evolving
+ memory.
 
-**Action**: [Explore Quantum Systems →](contact.html)
+> **Focus**: // Core Capabilities & Stack
+
+▸Dual-Tier Memory: Dense
+ vector indexing (Qdrant HNSW) paired with episodic SQLite/DuckDB interaction storage.
+▸Sandboxed Tool
+ Isolation: Hardened gVisor and Docker runtimes with dropped privileges and zero data egress.
+
+▸Institutional
+ Consolidation: Daily episodic synthesis pipelines turning operational events into evolving
+ memory.
+
+**Action**: [Explore Hermes Agent
+ Blueprint →](service-agentic-ai-systems.html)
 
 ---
 
-### 8. 🛠️ Frontier AI Tools & Model Routing
-Multi-model orchestration and unified gateway routing using OpenRouter, Google AI Studio, Google Gemini
- Notebook, and HuggingFace Spaces.
+### 5. 🌐 Training for WorkFlows Automations
+Comprehensive hands-on training for building, self-hosting, and operating enterprise n8n workflow
+ automations. Automate 50% of recurring daily operations across operations, engineering, and support with
+ full data governance, zero per-seat SaaS lock-in, and private AI node integration.
 
-> **Focus**: Intelligent fallback routing, cost-optimized token allocation across proprietary and open models, and rapid
- prototyping in sandbox environments.
+- ▸Self-Hosted n8n
+ Infrastructure: High-availability Docker & K8s setups backed by PostgreSQL and Redis
+ queues.
+- ▸Cognitive AI Nodes:
+ Embedding local LLMs, dynamic webhooks, automated document parsing, and API bridges.
+- ▸Enterprise Governance:
+ Secret vaulting, role-based access, automated queue retries, and Prometheus monitoring.
 
-**Action**: [Configure AI Tools →](contact.html)
+> **Focus**: // Core Capabilities & Stack
+
+▸Self-Hosted n8n
+ Infrastructure: High-availability Docker & K8s setups backed by PostgreSQL and Redis
+ queues.
+▸Cognitive AI Nodes:
+ Embedding local LLMs, dynamic webhooks, automated document parsing, and API bridges.
+▸Enterprise Governance:
+ Secret vaulting, role-based access, automated queue retries, and Prometheus monitoring.
+
+**Action**: [Explore Workflow
+ Automation Blueprint →](service-training-for-workflows-automations.html)
+
+---
+
+### 6. ⚛️ Quantum Applications (Experimental)
+Exploratory quantum computing advisory and circuit simulation for forward-looking enterprises. Objectively
+ evaluate computational viability across combinatorial optimization, portfolio risk modeling, and materials
+ science while preparing cryptographic infrastructure for the post-quantum era.
+
+- ▸Feasibility
+ Assessment: Mathematical evaluations separating commercial reality from hype across target
+ domains.
+- ▸Circuit Simulation:
+ Variational algorithms (VQE, QAOA) and Quantum Machine Learning via IBM Qiskit & PennyLane.
+- ▸Post-Quantum
+ Cryptography: Infrastructure vulnerability audits and migration planning for NIST PQC
+ standards.
+
+> **Focus**: // Core Capabilities & Stack
+
+▸Feasibility
+ Assessment: Mathematical evaluations separating commercial reality from hype across target
+ domains.
+▸Circuit Simulation:
+ Variational algorithms (VQE, QAOA) and Quantum Machine Learning via IBM Qiskit & PennyLane.
+▸Post-Quantum
+ Cryptography: Infrastructure vulnerability audits and migration planning for NIST PQC
+ standards.
+
+**Action**: [Explore Quantum
+ Applications Blueprint →](service-quantum-applications.html)
+
+---
+
+### 7. 💲 AI Budget & Cost Limits Training
+Educate employees, developers, and department heads on financial AI literacy and token governance. Establish
+ hard spending caps, enforce API budgeting proxies, compress prompt overhead, and automatically route
+ low-complexity tasks to high-quality free foundation models.
+
+- ▸Token Economics
+ Literacy: Demystify context window inflation, recursive agent cost risks, and pricing tiers.
+- ▸Quota & Proxy
+ Gateways: LiteLLM and OpenRouter proxy architectures enforcing per-team budgets &
+ kill-switches.
+- ▸Free Model Offloading:
+ Automated routing rules offloading routine tasks to Google AI Studio and free models.
+
+> **Focus**: // Core Capabilities & Stack
+
+▸Token Economics
+ Literacy: Demystify context window inflation, recursive agent cost risks, and pricing tiers.
+
+▸Quota & Proxy
+ Gateways: LiteLLM and OpenRouter proxy architectures enforcing per-team budgets &
+ kill-switches.
+▸Free Model Offloading:
+ Automated routing rules offloading routine tasks to Google AI Studio and free models.
+
+**Action**: [Explore AI Budgeting
+ Blueprint →](service-ai-budget-cost-limits-training.html)
+
+---
+
+### 8. 🛡️ Enterprise Workforce AI Training
+Live and remote corporate AI training delivered across four distinct organizational tiers. From new-hire
+ onboarding and developer AI-assisted TDD to operational workflow automation and executive CXO strategic AI
+ roadmaps, build lasting institutional capability.
+
+- ▸Freshers & Staff (Tiers 1
+ & 3): Daily productivity workflows, prompt craft, research synthesis, and safety.
+- ▸Developers & Engineers (Tier
+ 2): AI pair-programming, Test-Driven Development (TDD) harnesses, and agentic coding.
+- ▸CXOs & Leadership (Tier
+ 4): Executive transformation roadmaps, technology radar briefings, and ROI benchmarks.
+
+> **Focus**: // Core Capabilities & Stack
+
+▸Freshers & Staff (Tiers 1
+ & 3): Daily productivity workflows, prompt craft, research synthesis, and safety.
+▸Developers & Engineers (Tier
+ 2): AI pair-programming, Test-Driven Development (TDD) harnesses, and agentic coding.
+▸CXOs & Leadership (Tier
+ 4): Executive transformation roadmaps, technology radar briefings, and ROI benchmarks.
+
+**Action**: [Explore Workforce
+ Training Blueprint →](service-enterprise-workforce-ai-training.html)
 
 ---
 
@@ -131,12 +256,10 @@ Multi-model orchestration and unified gateway routing using OpenRouter, Google A
 ## Dedicated Enterprise AI Transformation Service Pages
 
 1. [🧠 Generative AI Transformation](service-generative-ai-transformation.html) — Agentic workflows, metrics, safeguards.
-2. [📦 Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — 60–90% inference savings via Ollama, vLLM, llama.cpp.
-3. [🤖 AI Agent Orchestration Fundamentals](service-ai-agents-orchestration.html) — Scalable swarms & low budgets.
+2. [📦 Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — High-throughput private inference via Ollama, vLLM, llama.cpp.
+3. [🤖 AI Agent Orchestration Fundamentals](service-ai-agents-orchestration.html) — Scalable swarms & state machines.
 4. [🏎️ Agentic AI Assistants (Hermes Agent)](service-agentic-ai-systems.html) — Persistent memory & autonomous loops.
-5. [🤗 Enterprise Coding Model Optimization](service-enterprise-coding-model-optimization.html) — Claude Code, Antigravity, Codex.
-6. [🌐 Training for WorkFlows Automations](service-training-for-workflows-automations.html) — Self-hosted n8n automations.
-7. [⚛️ Quantum Applications (Experimental)](service-quantum-applications.html) — Enterprise quantum readiness.
-8. [⚙️ Low Code and No Code Enterprise Automation Training](service-low-code-no-code-automation-training.html) — 50% daily work automated.
-9. [💲 AI Budget & Cost Limits Training](service-ai-budget-cost-limits-training.html) — Token governance & free models.
-10. [🛡️ Enterprise Workforce AI Training](service-enterprise-workforce-ai-training.html) — Freshers, Devs & CXOs.
+5. [🌐 Training for WorkFlows Automations](service-training-for-workflows-automations.html) — Self-hosted n8n automations.
+6. [⚛️ Quantum Applications (Experimental)](service-quantum-applications.html) — Enterprise quantum readiness.
+7. [💲 AI Budget & Cost Limits Training](service-ai-budget-cost-limits-training.html) — Token governance & free models.
+8. [🛡️ Enterprise Workforce AI Training](service-enterprise-workforce-ai-training.html) — Freshers, Devs & CXOs.

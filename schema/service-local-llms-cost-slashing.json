@@ -5,8 +5,8 @@
       "@type": "WebPage",
       "@id": "https://thomascherickal.github.io/service-local-llms-cost-slashing.html#webpage",
       "url": "https://thomascherickal.github.io/service-local-llms-cost-slashing.html",
-      "name": "Local LLMs & Cost Slashing \u2014 Service Specification | Thomas Cherickal",
-      "description": "Slashing recurring cloud API bills by 60\u201390% via Ollama, vLLM, llama.cpp, GGUF quantization, and private on-premise model serving.",
+      "name": "Local LLMs & Cost Slashing — Service Specification | Thomas Cherickal",
+      "description": "Slashing recurring cloud API bills by 60–90% via Ollama, vLLM, llama.cpp, GGUF quantization, and private on-premise model serving.",
       "isPartOf": {
         "@id": "https://thomascherickal.github.io/#website"
       },
@@ -42,10 +42,10 @@
     {
       "@type": "Service",
       "@id": "https://thomascherickal.github.io/service-local-llms-cost-slashing.html#service",
-      "name": "Local LLMs & Cost Slashing \u2014 Thomas Cherickal",
+      "name": "Local LLMs & Cost Slashing — Thomas Cherickal",
       "serviceType": "On-Premise AI Deployment & Cost Optimization",
       "url": "https://thomascherickal.github.io/service-local-llms-cost-slashing.html",
-      "description": "Slashing recurring cloud API bills by 60\u201390% via Ollama, vLLM, llama.cpp, GGUF quantization, and private on-premise model serving.",
+      "description": "Slashing recurring cloud API bills by 60–90% via Ollama, vLLM, llama.cpp, GGUF quantization, and private on-premise model serving.",
       "provider": {
         "@type": "Person",
         "@id": "https://thomascherickal.github.io/#person",
@@ -62,14 +62,44 @@
         "@type": "Offer",
         "url": "https://thomascherickal.github.io/service-local-llms-cost-slashing.html",
         "priceCurrency": "USD",
-        "price": "2000.00",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": "2000.00",
-          "maxPrice": "4000.00",
-          "priceCurrency": "USD",
-          "valueAddedTaxIncluded": "true"
-        },
+        "price": "3000.00",
+        "priceSpecification": [
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 1 (Standard / 100%)",
+            "minPrice": "3000.00",
+            "maxPrice": "5000.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 2 (Developing / 25% Off)",
+            "minPrice": "2250.00",
+            "maxPrice": "3750.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 3 & 4 (Least Developed & Startups / 50% Off)",
+            "minPrice": "1500.00",
+            "maxPrice": "2500.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 5 (Academia & Non-Profits / 75% Off)",
+            "minPrice": "750.00",
+            "maxPrice": "1250.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 6 (Underprivileged & Backward Nations)",
+            "price": "0.00",
+            "priceCurrency": "USD",
+            "description": "Custom subsidized quotes for underprivileged teams"
+          }
+        ],
         "availability": "https://schema.org/InStock",
         "eligibleRegion": "Worldwide"
       }

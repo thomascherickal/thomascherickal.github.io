@@ -850,11 +850,14 @@ body.portfolio-page .section-sub {
   margin-right: 0;
 }
 
-.divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--border), var(--border-gold), var(--border), transparent);
-  margin: 0 clamp(1.5rem, 8vw, 8rem);
-}
+        .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.05) 20%, rgba(255, 255, 255, 0.05) 80%, transparent 100%);
+      box-shadow: none;
+      margin: 3.5rem clamp(1.5rem, 8vw, 8rem);
+      border: none;
+      opacity: 0.6;
+    }
 
 .roles-grid {
   display: grid;
@@ -1949,6 +1952,8 @@ footer {
     box-shadow: 0 0 28px rgba(56, 189, 248, 0.55), 0 0 16px rgba(245, 158, 11, 0.4), 0 0 0 1.5px rgba(245, 158, 11, 0.45);
     filter: brightness(1.12) drop-shadow(0 4px 14px rgba(245, 158, 11, 0.35));
   }
+}
+
 .footer-brand-logo-link {
   display: inline-flex;
   text-decoration: none;
@@ -2307,9 +2312,9 @@ footer {
     padding: 3.5rem 1.25rem;
   }
 
-  .divider {
-    margin: 0 1.25rem;
-  }
+        .divider {
+        margin: 2.5rem 1.25rem;
+      }
 
   .hero {
     min-height: calc(100vh - 64px);

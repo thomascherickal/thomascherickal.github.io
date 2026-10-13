@@ -272,6 +272,17 @@ def build():
   </style>"""
 
     footer_styles = """  <style id="footer-styles">
+    footer {
+      background: var(--bg-1, #060912);
+      border-top: 1px solid var(--border, rgba(56, 189, 248, 0.18));
+      padding: 5rem clamp(1.5rem, 8vw, 8rem) 3rem;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
     .footer-brand {
       display: flex;
       align-items: center;
@@ -316,6 +327,32 @@ def build():
         animation: none;
       }
     }
+    .footer-brand-name {
+      font-family: var(--font-display, 'Open Sans', sans-serif);
+      font-size: 1.8rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--cyan, #38bdf8), var(--gold, #fbbf24));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+    .footer-brand-tagline {
+      font-family: var(--font-mono, monospace);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      color: var(--text-muted, #94a3b8);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .footer-label {
+      font-family: var(--font-mono, monospace);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cyan, #38bdf8);
+      margin-bottom: 1.25rem;
+    }
     .social-icon {
       font-size: 1rem;
       flex-shrink: 0;
@@ -339,6 +376,12 @@ def build():
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.45));
     }
     .social-link {
+      background: var(--bg-card, linear-gradient(145deg, #0c111d 0%, #04060c 100%));
+      border-radius: var(--radius, 10px);
+      text-decoration: none;
+      font-family: var(--font-mono, monospace);
+      letter-spacing: 0.03em;
+      color: var(--text-secondary, #e2e8f0);
       border: 2px solid rgba(56, 189, 248, 0.55) !important;
       box-shadow: 0 0 14px rgba(56, 189, 248, 0.35), 0 0 28px rgba(56, 189, 248, 0.18), 0 2px 8px rgba(0, 0, 0, 0.4) !important;
       min-height: 44px;
@@ -347,18 +390,27 @@ def build():
       gap: 0.6rem;
       padding: 0.6rem 0.85rem !important;
       font-size: 0.82rem !important;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .social-link:hover {
       border-color: #38bdf8 !important;
       box-shadow: 0 0 26px rgba(56, 189, 248, 0.9), 0 0 45px rgba(56, 189, 248, 0.5), 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+      color: #ffffff;
+      transform: translateY(-2px);
     }
     .social-link.highlight {
+      background: rgba(245, 158, 11, 0.1);
       border: 2px solid rgba(251, 191, 36, 0.75) !important;
       box-shadow: 0 0 14px rgba(251, 191, 36, 0.3), 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+      color: var(--gold, #fbbf24);
+      font-weight: 600;
     }
     .social-link.highlight:hover {
+      background: rgba(245, 158, 11, 0.2);
       border-color: #fbbf24 !important;
       box-shadow: 0 0 26px rgba(251, 191, 36, 0.85), 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+      color: #ffffff;
+      transform: translateY(-2px);
     }
     .social-grid {
       display: grid;
@@ -374,8 +426,24 @@ def build():
       margin-top: 0;
     }
     .newsletter-card {
+      margin-top: 2.5rem;
+      padding: 1.5rem 2rem;
+      background: var(--bg-card, linear-gradient(145deg, #0c111d 0%, #04060c 100%));
       border: 2px solid rgba(251, 191, 36, 0.5) !important;
-      box-shadow: 0 0 16px rgba(251, 191, 36, 0.15) !important;
+      border-radius: var(--radius-lg, 14px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      box-shadow: 0 0 16px rgba(251, 191, 36, 0.15), 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+    }
+    .newsletter-info {
+      flex: 1;
+    }
+    .newsletter-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted, #94a3b8);
+      margin-top: 0.25rem;
     }
     .newsletter-name {
       display: flex;
@@ -595,6 +663,12 @@ def build():
 
     print(f"\nBuild complete. Successfully updated {updated_count} HTML files.")
     
+    try:
+        import sync_pricing
+        sync_pricing.sync_all_pricing()
+    except Exception as e:
+        print(f"Warning: Pricing sync step failed: {e}")
+
     try:
         import md_html_sync
         md_html_sync.run_sync()

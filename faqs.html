@@ -884,10 +884,13 @@
       margin-right: 0;
     }
 
-    .divider {
+            .divider {
       height: 1px;
-      background: linear-gradient(90deg, transparent, var(--border), var(--border-gold), var(--border), transparent);
-      margin: 0 clamp(1.5rem, 8vw, 8rem);
+      background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.05) 20%, rgba(255, 255, 255, 0.05) 80%, transparent 100%);
+      box-shadow: none;
+      margin: 3.5rem clamp(1.5rem, 8vw, 8rem);
+      border: none;
+      opacity: 0.6;
     }
 
     .roles-grid {
@@ -2065,8 +2068,8 @@
         padding: 3.5rem 1.25rem;
       }
 
-      .divider {
-        margin: 0 1.25rem;
+            .divider {
+        margin: 2.5rem 1.25rem;
       }
 
       .hero {
@@ -4474,12 +4477,8 @@
           <li><a href="service-local-llms-cost-slashing.html">📦 Local LLMs &amp; Cost Slashing</a></li>
           <li><a href="service-ai-agents-orchestration.html">🤖 AI Agent Orchestration Fundamentals</a></li>
           <li><a href="service-agentic-ai-systems.html">🏎️ Agentic AI Assistants (Hermes Agent)</a></li>
-          <li><a href="service-enterprise-coding-model-optimization.html">🤗 Enterprise Coding Model Optimization</a>
-          </li>
           <li><a href="service-training-for-workflows-automations.html">🌐 Training for WorkFlows Automations</a></li>
           <li><a href="service-quantum-applications.html">⚛️ Quantum Applications (Experimental)</a></li>
-          <li><a href="service-low-code-no-code-automation-training.html">⚙️ Low Code and No Code Enterprise Automation
-              Training</a></li>
           <li><a href="service-ai-budget-cost-limits-training.html">💲 AI Budget &amp; Cost Limits Training</a></li>
           <li><a href="service-enterprise-workforce-ai-training.html">🛡️ Enterprise Workforce AI Training</a></li>
         </ul>
@@ -4507,6 +4506,7 @@
         </a>
       </div>
     </section>
+    <div class="divider"></div>
     <!-- 28 FAQs SECTION -->
     <section class="reveal">
       <div class="faq-grid">
@@ -4759,6 +4759,7 @@
         </div>
       </div>
     </section>
+    <div class="divider"></div>
     <!-- CENTERED ASK A QUESTION / CONTACT FORM SECTION -->
     <section class="reveal" id="ask-question">
       <div style="max-width:720px;margin:3rem auto 0 auto;">
@@ -4836,8 +4837,20 @@ Useful details to include:
         </div>
       </div>
     </section>
+    <div class="divider"></div>
     <!-- START:FOOTER -->
   <style id="footer-styles">
+    footer {
+      background: var(--bg-1, #060912);
+      border-top: 1px solid var(--border, rgba(56, 189, 248, 0.18));
+      padding: 5rem clamp(1.5rem, 8vw, 8rem) 3rem;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
     .footer-brand {
       display: flex;
       align-items: center;
@@ -4882,6 +4895,32 @@ Useful details to include:
         animation: none;
       }
     }
+    .footer-brand-name {
+      font-family: var(--font-display, 'Open Sans', sans-serif);
+      font-size: 1.8rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--cyan, #38bdf8), var(--gold, #fbbf24));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+    .footer-brand-tagline {
+      font-family: var(--font-mono, monospace);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      color: var(--text-muted, #94a3b8);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .footer-label {
+      font-family: var(--font-mono, monospace);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cyan, #38bdf8);
+      margin-bottom: 1.25rem;
+    }
     .social-icon {
       font-size: 1rem;
       flex-shrink: 0;
@@ -4905,6 +4944,12 @@ Useful details to include:
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.45));
     }
     .social-link {
+      background: var(--bg-card, linear-gradient(145deg, #0c111d 0%, #04060c 100%));
+      border-radius: var(--radius, 10px);
+      text-decoration: none;
+      font-family: var(--font-mono, monospace);
+      letter-spacing: 0.03em;
+      color: var(--text-secondary, #e2e8f0);
       border: 2px solid rgba(56, 189, 248, 0.55) !important;
       box-shadow: 0 0 14px rgba(56, 189, 248, 0.35), 0 0 28px rgba(56, 189, 248, 0.18), 0 2px 8px rgba(0, 0, 0, 0.4) !important;
       min-height: 44px;
@@ -4913,18 +4958,27 @@ Useful details to include:
       gap: 0.6rem;
       padding: 0.6rem 0.85rem !important;
       font-size: 0.82rem !important;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .social-link:hover {
       border-color: #38bdf8 !important;
       box-shadow: 0 0 26px rgba(56, 189, 248, 0.9), 0 0 45px rgba(56, 189, 248, 0.5), 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+      color: #ffffff;
+      transform: translateY(-2px);
     }
     .social-link.highlight {
+      background: rgba(245, 158, 11, 0.1);
       border: 2px solid rgba(251, 191, 36, 0.75) !important;
       box-shadow: 0 0 14px rgba(251, 191, 36, 0.3), 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+      color: var(--gold, #fbbf24);
+      font-weight: 600;
     }
     .social-link.highlight:hover {
+      background: rgba(245, 158, 11, 0.2);
       border-color: #fbbf24 !important;
       box-shadow: 0 0 26px rgba(251, 191, 36, 0.85), 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+      color: #ffffff;
+      transform: translateY(-2px);
     }
     .social-grid {
       display: grid;
@@ -4940,8 +4994,24 @@ Useful details to include:
       margin-top: 0;
     }
     .newsletter-card {
+      margin-top: 2.5rem;
+      padding: 1.5rem 2rem;
+      background: var(--bg-card, linear-gradient(145deg, #0c111d 0%, #04060c 100%));
       border: 2px solid rgba(251, 191, 36, 0.5) !important;
-      box-shadow: 0 0 16px rgba(251, 191, 36, 0.15) !important;
+      border-radius: var(--radius-lg, 14px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      box-shadow: 0 0 16px rgba(251, 191, 36, 0.15), 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+    }
+    .newsletter-info {
+      flex: 1;
+    }
+    .newsletter-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted, #94a3b8);
+      margin-top: 0.25rem;
     }
     .newsletter-name {
       display: flex;
@@ -5355,7 +5425,7 @@ Useful details to include:
           <span class="wl-name">Pricing &amp; Parity</span>
         </div>
         <p class="wl-desc">Transparent milestone rates &amp; 198-country PPP index.</p>
-        <span class="wl-url">thomascherickal.github.io/pricing.html</span>
+        <span class="wl-url">thomascherickal.github.io/pricing</span>
       </a>
 
       <!-- Direct Email Inquiry -->
