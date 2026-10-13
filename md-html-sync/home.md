@@ -44,7 +44,7 @@ PG in CS from Loyola College; Generative AI Consultant specializing in helping e
 | **Publications** | 500+ |
 | **Platforms** | 10+ |
 | **Years in AI** | 5+ |
-| **Local LLMs** | 10+ |
+| **Local LLMs** | 20+ |
 
 ---
 

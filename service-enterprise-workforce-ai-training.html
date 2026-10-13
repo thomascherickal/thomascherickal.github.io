@@ -4320,6 +4320,8 @@ footer {
       display: flex;
       align-items: center;
       gap: 0.6rem;
+      padding: 0.6rem 0.85rem !important;
+      font-size: 0.82rem !important;
     }
     .social-link:hover {
       border-color: #38bdf8 !important;
@@ -4335,8 +4337,13 @@ footer {
     }
     .social-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(min(100%, 130px), 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
       gap: 0.6rem;
+    }
+    @media (min-width: 1750px) {
+      .social-grid {
+        grid-template-columns: repeat(10, 1fr);
+      }
     }
     .footer-top .newsletter-card {
       margin-top: 0;
@@ -4521,9 +4528,10 @@ footer {
     <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="https://thomascherickal.com" target="_blank" rel="noopener noreferrer" class="footer-brand-logo-link" aria-label="Thomas Cherickal - The Digital Futurist">
-          <img src="assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo" class="footer-brand-logo" width="46"
-            height="46" />
+        <a href="https://thomascherickal.com" target="_blank" rel="noopener noreferrer" class="footer-brand-logo-link"
+          aria-label="Thomas Cherickal - The Digital Futurist">
+          <img src="assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo" class="footer-brand-logo"
+            width="46" height="46" />
         </a>
         <div>
           <p class="footer-brand-name">The Digital Futurist</p>
@@ -4782,6 +4790,7 @@ footer {
     <p class="tc-copy">
       © 2026 <a href="https://linkedin.com/in/thomascherickal" target="_blank" rel="noopener noreferrer">Thomas
         Cherickal</a>
+      <span class="tc-sep"></span> The Digital Futurist
       <span class="tc-sep"></span> Generative AI Consultant
       <span class="tc-sep"></span> <a href="https://thomascherickal.com" target="_blank"
         rel="noopener noreferrer">thomascherickal.com</a>

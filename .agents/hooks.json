@@ -1,0 +1,15 @@
+{
+  "auto-build-components": {
+    "PostToolUse": [
+      {
+        "matcher": "replace_file_content|multi_replace_file_content|write_to_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ../python/hooks/post_edit_hook.py"
+          }
+        ]
+      }
+    ]
+  }
+}

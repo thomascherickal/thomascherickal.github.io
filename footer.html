@@ -1822,23 +1822,29 @@
 
     .social-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
       gap: 0.6rem;
+    }
+
+    @media (min-width: 1750px) {
+      .social-grid {
+        grid-template-columns: repeat(10, 1fr);
+      }
     }
 
     .social-link {
       display: flex;
       align-items: center;
       gap: 0.6rem;
-      padding: 0.6rem 0.9rem;
+      padding: 0.6rem 0.85rem;
       background: var(--bg-card);
       border: 2px solid rgba(56, 189, 248, 0.55);
       border-radius: var(--radius);
       text-decoration: none;
       font-family: var(--font-mono);
-      font-size: 0.72rem;
+      font-size: 0.82rem;
       color: var(--text-secondary);
-      letter-spacing: 0.04em;
+      letter-spacing: 0.03em;
       box-shadow: 0 0 14px rgba(56, 189, 248, 0.35), 0 0 28px rgba(56, 189, 248, 0.18), 0 2px 8px rgba(0, 0, 0, 0.4);
       transition: var(--transition);
     }
@@ -3834,6 +3840,7 @@
     .social-link {
       border: 2px solid rgba(56, 189, 248, 0.55) !important;
       box-shadow: 0 0 14px rgba(56, 189, 248, 0.35), 0 0 28px rgba(56, 189, 248, 0.18), 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+      font-size: 0.82rem !important;
     }
 
     .social-link:hover {
@@ -3984,7 +3991,7 @@
 
     .tc-copy {
       text-align: center;
-      font-size: 14.5px;
+      font-size: 13px;
       color: #94a3b8;
       line-height: 1.7;
     }
@@ -4028,9 +4035,10 @@
   <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="https://thomascherickal.com" target="_blank" rel="noopener noreferrer" class="footer-brand-logo-link" aria-label="Thomas Cherickal - The Digital Futurist">
-          <img src="assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo" class="footer-brand-logo" width="46"
-            height="46" />
+        <a href="https://thomascherickal.com" target="_blank" rel="noopener noreferrer" class="footer-brand-logo-link"
+          aria-label="Thomas Cherickal - The Digital Futurist">
+          <img src="assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo" class="footer-brand-logo"
+            width="46" height="46" />
         </a>
         <div>
           <p class="footer-brand-name">The Digital Futurist</p>
@@ -4289,6 +4297,7 @@
     <p class="tc-copy">
       © 2026 <a href="https://linkedin.com/in/thomascherickal" target="_blank" rel="noopener noreferrer">Thomas
         Cherickal</a>
+      <span class="tc-sep"></span> The Digital Futurist
       <span class="tc-sep"></span> Generative AI Consultant
       <span class="tc-sep"></span> <a href="https://thomascherickal.com" target="_blank"
         rel="noopener noreferrer">thomascherickal.com</a>

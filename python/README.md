@@ -4,10 +4,14 @@ All Python build, sync, and automation scripts for this repository are stored in
 
 ## Scripts
 
-- **`build.py`**:
+- **`build_components.py`** (alias: `build.py`):
   Build-time component includer for `thomascherickal.github.io`. Inlines `<nav>` from `header.html` and `<footer>` from `footer.html` across all HTML pages, and triggers `md_html_sync.run_sync()`.
   ```bash
-  python3 python/build.py
+  # Single run
+  python3 python/build_components.py
+
+  # Continuous watch mode (auto-rebuilds on save to header.html or footer.html)
+  python3 python/build_components.py --watch
   ```
 
 - **`md_html_sync.py`**:
