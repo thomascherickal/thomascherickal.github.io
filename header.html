@@ -845,7 +845,7 @@
       margin-right: 0;
     }
 
-            .divider {
+    .divider {
       height: 1px;
       background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.05) 20%, rgba(255, 255, 255, 0.05) 80%, transparent 100%);
       box-shadow: none;
@@ -2029,7 +2029,7 @@
         padding: 3.5rem 1.25rem;
       }
 
-            .divider {
+      .divider {
         margin: 2.5rem 1.25rem;
       }
 
@@ -3873,7 +3873,8 @@
 
 <body>
   <nav aria-label="Main navigation">
-    <a href="https://thomascherickal.com" class="nav-brand"><img src="assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo" class="nav-brand-logo" width="20" height="20">Thomas Cherickal</a>
+    <a href="https://thomascherickal.com" class="nav-brand"><img src="assets/digital-futurist-logo.jpg"
+        alt="The Digital Futurist Logo" class="nav-brand-logo" width="20" height="20">Thomas Cherickal</a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <div class="nav-right-container">
       <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle Navigation Menu">
@@ -3882,6 +3883,23 @@
     </div>
     <ul class="nav-links">
       <li><a href="index.html" data-nav="index.html">Home</a></li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          AI-Agents <span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="agents-all-agentic-providers.html" class="dropdown-header-link">🌐 All Agentic Providers</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="agents-claude-agents.html">🟣 Claude Agents</a></li>
+          <li><a href="agents-grok-bot.html">⚡ Grok Bot</a></li>
+          <li><a href="agents-openai-dots.html">🟢 OpenAI Dots</a></li>
+          <li><a href="agent-gemini-spark.html">✨ Gemini Spark</a></li>
+          <li><a href="agents-github-copilot.html">🐙 GitHub Copilot</a></li>
+          <li><a href="agents-hermes-agent.html">🏎️ Hermes Agent</a></li>
+          <li><a href="agents-opencode-free.html">💻 OpenCode Free</a></li>
+          <li><a href="agents-meta-muse.html">♾️ Meta Muse</a></li>
+        </ul>
+      </li>
       <li><a href="portfolio.html" data-nav="portfolio.html">Portfolio</a></li>
       <li><a href="writing.html" data-nav="writing.html">Writing</a></li>
       <li><a href="expertise.html" data-nav="expertise.html">Expertise</a></li>
@@ -3966,8 +3984,8 @@
       });
 
       // Desktop dropdown hover/focus
-      var navDropdown = document.querySelector('.nav-dropdown');
-      if (navDropdown) {
+      var navDropdowns = document.querySelectorAll('.nav-dropdown');
+      navDropdowns.forEach(function (navDropdown) {
         navDropdown.addEventListener('mouseenter', function () {
           if (!isMobile()) { isDropdownOpen = true; recalcHeight(); }
         });
@@ -3980,14 +3998,18 @@
         navDropdown.addEventListener('focusout', function () {
           if (!isMobile()) {
             setTimeout(function () {
-              if (!navDropdown.contains(document.activeElement)) {
+              var anyOpen = false;
+              navDropdowns.forEach(function (dd) {
+                if (dd.contains(document.activeElement)) anyOpen = true;
+              });
+              if (!anyOpen) {
                 isDropdownOpen = false;
                 recalcHeight();
               }
             }, 100);
           }
         });
-      }
+      });
 
       // Mobile hamburger toggle
       var navToggle = document.getElementById('nav-toggle');

@@ -50,12 +50,32 @@ def build():
       height: auto;
     }
 
+    /* Core Desktop Navigation Bar */
+    nav[aria-label="Main navigation"],
+    nav:not(.provider-nav-grid) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+      height: 64px;
+      background: rgba(15, 23, 42, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border, rgba(56, 189, 248, 0.18));
+      transition: background 0.3s;
+    }
+
     .nav-brand {
-      font-family: var(--font-mono);
+      font-family: var(--font-mono, monospace);
       font-size: 0.72rem;
       font-weight: 500;
       letter-spacing: 0.08em;
-      color: var(--text-secondary);
+      color: var(--text-secondary, #e2e8f0);
       text-decoration: none;
       text-transform: uppercase;
       white-space: nowrap;
@@ -78,7 +98,7 @@ def build():
     }
 
     .nav-brand:hover {
-      color: var(--cyan);
+      color: var(--cyan, #38bdf8);
       opacity: 0.95;
       transform: translateY(-1px);
     }
@@ -86,6 +106,200 @@ def build():
     .nav-brand:hover .nav-brand-logo {
       transform: scale(1.08);
       box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+    }
+
+    .nav-right-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      z-index: 110;
+    }
+
+    /* Checkbox hamburger menu */
+    .nav-toggle {
+      display: none;
+    }
+
+    .nav-toggle-label {
+      display: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      display: block;
+      background: var(--text-primary, #ffffff);
+      height: 2px;
+      width: 22px;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      content: '';
+      position: absolute;
+    }
+
+    .nav-toggle-label span::before {
+      top: -6px;
+    }
+
+    .nav-toggle-label span::after {
+      top: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-mono, monospace);
+      font-size: 0.72rem;
+      color: var(--text-secondary, #e2e8f0);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--cyan, #38bdf8);
+      transform: scaleX(0);
+      transition: transform 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan, #38bdf8);
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .nav-links a.active {
+      color: var(--gold, #fbbf24);
+    }
+
+    .nav-links a.active::after {
+      background: var(--gold, #fbbf24);
+      transform: scaleX(1);
+    }
+
+    /* Services & Orchestration Dropdown Submenu Styling */
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown-toggle {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .dropdown-caret {
+      font-size: 0.7em;
+      margin-left: 3px;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    .nav-dropdown:hover .dropdown-caret {
+      transform: rotate(180deg);
+      color: var(--cyan, #38bdf8);
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid var(--border-gold, rgba(251, 191, 36, 0.25));
+      border-radius: var(--radius-lg, 14px);
+      padding: 0.6rem 0;
+      min-width: 320px;
+      max-width: 90vw;
+      list-style: none;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 12px rgba(245, 158, 11, 0.08);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+      z-index: 200;
+      margin: 0;
+    }
+
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .dropdown-menu li {
+      width: 100%;
+      list-style: none;
+    }
+
+    .dropdown-menu a {
+      display: flex !important;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1.1rem !important;
+      font-family: var(--font-mono, monospace) !important;
+      font-size: 0.75rem !important;
+      color: var(--text-secondary, #e2e8f0) !important;
+      text-decoration: none !important;
+      text-transform: none !important;
+      letter-spacing: 0.02em !important;
+      white-space: nowrap;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .dropdown-menu a:hover {
+      background: rgba(255, 201, 71, 0.14) !important;
+      color: var(--gold, #fbbf24) !important;
+    }
+
+    .dropdown-menu a::after {
+      display: none !important;
+    }
+
+    .dropdown-header-link {
+      font-weight: 700 !important;
+      color: var(--gold, #fbbf24) !important;
+    }
+
+    .dropdown-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.1);
+      margin: 0.35rem 0;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      padding-top: 64px;
     }
 
     /* Prevent iOS Safari automatic zoom on form input focus */
@@ -650,8 +864,32 @@ def build():
         with open(file_path, "r", encoding="utf-8") as f:
             content = f.read()
 
-        new_content = header_pattern.sub(header_block, content)
-        new_content = footer_pattern.sub(footer_block, new_content)
+        if header_pattern.search(content):
+            new_content = header_pattern.sub(header_block, content)
+        else:
+            if "<body" in content:
+                skip_match = re.search(r'(<a\s+[^>]*class="skip-link"[^>]*>[\s\S]*?</a>)', content, re.IGNORECASE)
+                if skip_match:
+                    new_content = content[:skip_match.end()] + "\n" + header_block + content[skip_match.end():]
+                else:
+                    body_match = re.search(r'(<body\b[^>]*>)', content, re.IGNORECASE)
+                    new_content = content[:body_match.end()] + "\n" + header_block + content[body_match.end():]
+            else:
+                new_content = content
+
+        if footer_pattern.search(new_content):
+            new_content = footer_pattern.sub(footer_block, new_content)
+        else:
+            if "</main>" in new_content:
+                main_close = new_content.rfind("</main>")
+                new_content = new_content[:main_close] + "\n" + footer_block + "\n" + new_content[main_close:]
+            elif "</body>" in new_content:
+                body_close = new_content.rfind("</body>")
+                new_content = new_content[:body_close] + "\n" + footer_block + "\n" + new_content[body_close:]
+
+        if "components.js" not in new_content and "</body>" in new_content:
+            body_close = new_content.rfind("</body>")
+            new_content = new_content[:body_close] + '<script src="components.js"></script>\n' + new_content[body_close:]
 
         if new_content != content:
             with open(file_path, "w", encoding="utf-8") as f:

@@ -26,13 +26,37 @@
     var dropdownLinks = document.querySelectorAll('.dropdown-menu a');
     dropdownLinks.forEach(function (link) {
       var href = link.getAttribute('href');
-      var lowerHref = href ? href.toLowerCase() : '';
-      var lowerPage = page ? page.toLowerCase() : '';
+      var lowerHref = href ? decodeURIComponent(href).toLowerCase() : '';
+      var lowerPage = page ? decodeURIComponent(page).toLowerCase() : '';
       if (lowerHref === lowerPage) {
         link.style.color = 'var(--gold)';
         link.style.background = 'rgba(255, 201, 71, 0.16)';
       }
     });
+
+    // Highlight category toggle if inside that category
+    var lowerDecodedPage = page ? decodeURIComponent(page).toLowerCase() : '';
+    var orchestrationPages = [
+      'agents-all-agentic-providers.html',
+      'agents-claude-agents.html',
+      'agents-grok-bot.html',
+      'agents-openai-dots.html',
+      'agent-gemini-spark.html',
+      'agents-gemini-spark.html',
+      'agents-github-copilot.html',
+      'agents-hermes-agent.html',
+      'agents-opencode-free.html',
+      'agents-meta-muse.html'
+    ];
+    if (orchestrationPages.indexOf(lowerDecodedPage) !== -1) {
+      var orchToggles = document.querySelectorAll('.nav-dropdown');
+      orchToggles.forEach(function(dd) {
+        var toggle = dd.querySelector('.nav-dropdown-toggle');
+        if (toggle && toggle.textContent.indexOf('Orchestration') !== -1) {
+          toggle.style.color = 'var(--gold)';
+        }
+      });
+    }
   }
 
   // Bind mobile navigation events
@@ -52,25 +76,37 @@
         });
       });
 
-      var dropdownToggle = document.querySelector('.nav-dropdown-toggle');
-      var dropdownMenu = document.querySelector('.dropdown-menu');
-      if (dropdownToggle && dropdownMenu) {
-        dropdownToggle.addEventListener('click', function (e) {
-          if (window.innerWidth <= 1024) {
-            e.preventDefault();
-            e.stopPropagation();
-            var isHidden = dropdownMenu.classList.contains('mobile-hidden');
-            var caret = dropdownToggle.querySelector('.dropdown-caret');
-            if (isHidden) {
-              dropdownMenu.classList.remove('mobile-hidden');
-              if (caret) caret.style.transform = 'rotate(180deg)';
-            } else {
-              dropdownMenu.classList.add('mobile-hidden');
-              if (caret) caret.style.transform = 'rotate(0deg)';
+      var dropdownParents = document.querySelectorAll('.nav-dropdown');
+      dropdownParents.forEach(function (parent) {
+        var toggle = parent.querySelector('.nav-dropdown-toggle');
+        var menu = parent.querySelector('.dropdown-menu');
+        if (toggle && menu) {
+          toggle.addEventListener('click', function (e) {
+            if (window.innerWidth <= 1024) {
+              e.preventDefault();
+              e.stopPropagation();
+              // Close sibling dropdowns
+              dropdownParents.forEach(function (otherParent) {
+                if (otherParent !== parent) {
+                  var otherMenu = otherParent.querySelector('.dropdown-menu');
+                  var otherCaret = otherParent.querySelector('.dropdown-caret');
+                  if (otherMenu) otherMenu.classList.add('mobile-hidden');
+                  if (otherCaret) otherCaret.style.transform = 'rotate(0deg)';
+                }
+              });
+              var isHidden = menu.classList.contains('mobile-hidden');
+              var caret = toggle.querySelector('.dropdown-caret');
+              if (isHidden) {
+                menu.classList.remove('mobile-hidden');
+                if (caret) caret.style.transform = 'rotate(180deg)';
+              } else {
+                menu.classList.add('mobile-hidden');
+                if (caret) caret.style.transform = 'rotate(0deg)';
+              }
             }
-          }
-        });
-      }
+          });
+        }
+      });
 
       navToggle.addEventListener('change', function () {
         document.body.style.overflow = navToggle.checked ? 'hidden' : '';
