@@ -732,6 +732,266 @@ def convert_service_page(file_path: str) -> str:
     
     return "\n".join(lines).strip() + "\n"
 
+def html_table_to_md(table) -> str:
+    rows = table.find_all("tr")
+    if not rows:
+        return ""
+    md_rows = []
+    headers = []
+    th_cells = rows[0].find_all(["th", "td"])
+    for th in th_cells:
+        headers.append(clean_text(th.get_text()))
+    if headers:
+        md_rows.append("| " + " | ".join(headers) + " |")
+        md_rows.append("| " + " | ".join([":---"] * len(headers)) + " |")
+    
+    start_idx = 1 if headers and rows[0].find("th") else 0
+    for r in rows[start_idx:]:
+        cells = r.find_all(["td", "th"])
+        if not cells:
+            continue
+        row_vals = [clean_text(c.get_text()) for c in cells]
+        md_rows.append("| " + " | ".join(row_vals) + " |")
+    return "\n".join(md_rows)
+
+def convert_agents_all_providers(file_path: str) -> str:
+    with open(file_path, "r", encoding="utf-8") as f:
+        soup = BeautifulSoup(f.read(), "html.parser")
+
+    h1_el = soup.find("h1")
+    h1 = clean_text(h1_el.get_text()) if h1_el else "All Agentic Providers"
+    badge_el = soup.find("p", class_="hero-badge")
+    badge = clean_text(badge_el.get_text()) if badge_el else "// ORCHESTRATION ARCHITECTURE PLAYBOOK"
+    
+    hero_p = soup.find("header", class_="hero")
+    sub = ""
+    if hero_p:
+        for p in hero_p.find_all("p"):
+            if "hero-badge" not in p.get("class", []):
+                sub = clean_text(p.get_text())
+                break
+
+    lines = [
+        f"# {h1}",
+        f"## Enterprise Agentic AI Playbook — Thomas Cherickal",
+        "",
+        f"> **{badge}**  ",
+        f"> **{sub}**" if sub else "> **Architectural comparison across 8 frontier agent platforms.**",
+        "",
+        "---",
+        "",
+        "## Quick Provider Navigation",
+        ""
+    ]
+
+    nav_cards = soup.find_all("a", class_="provider-nav-card")
+    for nc in nav_cards:
+        href = nc.get("href", "#")
+        name = clean_text(nc.find("span", class_="nav-card-name").get_text()) if nc.find("span", class_="nav-card-name") else "Provider"
+        price = clean_text(nc.find("span", class_="nav-card-price").get_text()) if nc.find("span", class_="nav-card-price") else ""
+        lines.append(f"- [{name}]({href}) — *{price}*")
+    lines.append("")
+    lines.append("---")
+    lines.append("")
+
+    matrix_table = soup.find("table", class_="provider-matrix-table")
+    if matrix_table:
+        lines.append("## Master Provider Comparison Matrix")
+        lines.append("")
+        lines.append(html_table_to_md(matrix_table))
+        lines.append("")
+        lines.append("---")
+        lines.append("")
+
+    arch_cards = soup.find_all("article", class_="arch-card")
+    if arch_cards:
+        lines.append("## Architectural Paradigms & System Design")
+        lines.append("")
+        for ac in arch_cards:
+            h3 = ac.find("h3")
+            if h3:
+                lines.append(f"### {clean_text(h3.get_text())}")
+                lines.append("")
+            for p in ac.find_all("p"):
+                lines.append(clean_text(p.get_text()))
+                lines.append("")
+            ul = ac.find("ul")
+            if ul:
+                for li in ul.find_all("li"):
+                    lines.append(f"- {clean_text(li.get_text())}")
+                lines.append("")
+        lines.append("---")
+        lines.append("")
+
+    deep_cards = soup.find_all("article", class_="provider-deep-card")
+    if deep_cards:
+        lines.append("## Detailed Provider Architectural Deep Dives")
+        lines.append("")
+        for dc in deep_cards:
+            h3 = dc.find("h3", class_="deep-card-title")
+            if h3:
+                lines.append(f"### {clean_text(h3.get_text())}")
+                lines.append("")
+            pill = dc.find("span", class_="pricing-pill")
+            if pill:
+                lines.append(f"**Minimum Access**: `{clean_text(pill.get_text())}`  ")
+            
+            for p in dc.find_all("p"):
+                lines.append(clean_text(p.get_text()))
+                lines.append("")
+            
+            meta_items = dc.find_all("li", class_="deep-meta-item")
+            if meta_items:
+                lines.append("**Key Metadata & Links**:")
+                for mi in meta_items:
+                    lines.append(f"- {clean_text(mi.get_text())}")
+                lines.append("")
+            lines.append("---")
+            lines.append("")
+
+    code_win = soup.find("div", class_="code-window")
+    if code_win:
+        bar = code_win.find("div", class_="code-bar")
+        filename = clean_text(bar.find("span").get_text()) if bar and bar.find("span") else "multi_agent_router.py"
+        code_tag = code_win.find("code")
+        if code_tag:
+            lines.append("## Production Multi-Agent Orchestration Script")
+            lines.append(f"#### `{filename}`")
+            lines.append("```python")
+            lines.append(code_tag.get_text().strip())
+            lines.append("```")
+            lines.append("")
+            lines.append("---")
+            lines.append("")
+
+    roadmap_cards = soup.find_all("div", class_="roadmap-card")
+    if roadmap_cards:
+        lines.append("## Enterprise Implementation Roadmap")
+        lines.append("")
+        for rc in roadmap_cards:
+            step = clean_text(rc.find("div", class_="roadmap-step").get_text()) if rc.find("div", class_="roadmap-step") else ""
+            h4 = clean_text(rc.find("h4").get_text()) if rc.find("h4") else ""
+            lines.append(f"### Step {step}: {h4}")
+            for p in rc.find_all("p"):
+                lines.append(clean_text(p.get_text()))
+            lines.append("")
+        lines.append("---")
+        lines.append("")
+
+    lines.append("### Ready to Deploy Autonomous AI Agent Teams?")
+    lines.append("- [Schedule Strategy Consultation via Email →](collaboration.html)")
+    lines.append("- [View Advisory Packages & Rates](pricing.html)")
+    lines.append("- [Explore Contact Page](contact.html)")
+    lines.append("")
+
+    return "\n".join(lines).strip() + "\n"
+
+def convert_agent_deepdive(file_path: str) -> str:
+    with open(file_path, "r", encoding="utf-8") as f:
+        soup = BeautifulSoup(f.read(), "html.parser")
+        
+    h1_el = soup.find("h1")
+    h1 = clean_text(h1_el.get_text()) if h1_el else "AI Agent Orchestration"
+    
+    badge_el = soup.find("p", class_="hero-badge")
+    badge = clean_text(badge_el.get_text()) if badge_el else "// PROVIDER DEEP DIVE"
+    
+    hero_p = soup.find("header", class_="hero")
+    sub = ""
+    if hero_p:
+        for p in hero_p.find_all("p"):
+            if "hero-badge" not in p.get("class", []):
+                sub = clean_text(p.get_text())
+                break
+                
+    lines = [
+        f"# {h1}",
+        f"## AI Agent Architecture & Orchestration — Thomas Cherickal",
+        "",
+        f"> **{badge}**  ",
+        f"> **{sub}**" if sub else "> **Production architecture, protocols, and implementation.**",
+        "",
+        "---",
+        ""
+    ]
+    
+    pricing = soup.find("div", class_="pricing-hero-card")
+    if pricing:
+        val_el = pricing.find("span", class_="pricing-val")
+        val = clean_text(val_el.get_text()) if val_el else ""
+        desc_spans = pricing.find_all("span")
+        notes = []
+        for s in desc_spans:
+            t = clean_text(s.get_text())
+            if t and t != val and "Minimum" not in t:
+                notes.append(t)
+        lines.append("## Minimum Subscription & Access Pricing")
+        lines.append(f"**Starting Price**: `{val}`  ")
+        if notes:
+            lines.append(f"*{' · '.join(notes)}*")
+        lines.append("")
+        lines.append("---")
+        lines.append("")
+
+    main = soup.find("main") or soup
+    cards = main.find_all("article", class_="content-card")
+    for card in cards:
+        h2 = card.find("h2")
+        if not h2:
+            continue
+        h2_text = clean_text(h2.get_text())
+        lines.append(f"## {h2_text}")
+        lines.append("")
+        
+        for elem in card.children:
+            if not getattr(elem, 'name', None):
+                continue
+            if elem.name == "h2":
+                continue
+            elif elem.name == "h3":
+                lines.append(f"### {clean_text(elem.get_text())}")
+                lines.append("")
+            elif elem.name == "p":
+                p_text = clean_text(elem.get_text())
+                if p_text:
+                    lines.append(p_text)
+                    lines.append("")
+            elif elem.name in ["ul", "ol"]:
+                is_num = (elem.name == "ol")
+                for i, li in enumerate(elem.find_all("li", recursive=False), 1):
+                    prefix = f"{i}. " if is_num else "- "
+                    lines.append(f"{prefix}{clean_text(li.get_text())}")
+                lines.append("")
+            elif elem.name == "div" and "code-window" in elem.get("class", []):
+                bar = elem.find("div", class_="code-bar")
+                filename = clean_text(bar.find("span").get_text()) if bar and bar.find("span") else "script.py"
+                code_tag = elem.find("code")
+                code_text = code_tag.get_text() if code_tag else ""
+                lines.append(f"#### `{filename}`")
+                lines.append("```python")
+                lines.append(code_text.strip())
+                lines.append("```")
+                lines.append("")
+            elif elem.name == "div" and "table-container" in elem.get("class", []):
+                tbl = elem.find("table")
+                if tbl:
+                    lines.append(html_table_to_md(tbl))
+                    lines.append("")
+            elif elem.name == "table":
+                lines.append(html_table_to_md(elem))
+                lines.append("")
+
+        lines.append("---")
+        lines.append("")
+        
+    lines.append("### Ready to Orchestrate Production AI Agent Teams?")
+    lines.append("- [Schedule Strategy Consultation via Email →](collaboration.html)")
+    lines.append("- [View Advisory Packages & Rates](pricing.html)")
+    lines.append("- [Explore All Agent Providers Matrix](agents-all-agentic-providers.html)")
+    lines.append("")
+    
+    return "\n".join(lines).strip() + "\n"
+
 def main():
     print(f"Generating Markdown files in: {SYNC_DIR}")
     
@@ -762,6 +1022,20 @@ def main():
         dest = os.path.join(SYNC_DIR, md_name)
         print(f"Building {md_name} from {base}...")
         content = convert_service_page(s_path)
+        with open(dest, "w", encoding="utf-8") as f:
+            f.write(content)
+        print(f"  -> Wrote {len(content.splitlines())} lines to {md_name}")
+
+    agent_files = sorted(glob.glob(os.path.join(REPO_DIR, "agents-*.html")))
+    for a_path in agent_files:
+        base = os.path.basename(a_path)
+        md_name = base.replace(".html", ".md")
+        dest = os.path.join(SYNC_DIR, md_name)
+        print(f"Building {md_name} from {base}...")
+        if base == "agents-all-agentic-providers.html":
+            content = convert_agents_all_providers(a_path)
+        else:
+            content = convert_agent_deepdive(a_path)
         with open(dest, "w", encoding="utf-8") as f:
             f.write(content)
         print(f"  -> Wrote {len(content.splitlines())} lines to {md_name}")

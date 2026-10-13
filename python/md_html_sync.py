@@ -49,6 +49,12 @@ for s in service_files:
     base = os.path.basename(s)
     PAGE_MAPPINGS[base] = base.replace(".html", ".md")
 
+# Auto-discover agent orchestration pages
+agent_files = sorted(glob.glob(os.path.join(REPO_DIR, "agents-*.html")))
+for a in agent_files:
+    base = os.path.basename(a)
+    PAGE_MAPPINGS[base] = base.replace(".html", ".md")
+
 def get_file_hash(path: str) -> str:
     if not os.path.exists(path):
         return ""
@@ -282,6 +288,10 @@ def sync_html_to_md(html_name: str, md_name: str):
         content = build_md_files.convert_404()
     elif html_name.startswith("service-"):
         content = build_md_files.convert_service_page(html_path)
+    elif html_name == "agents-all-agentic-providers.html":
+        content = build_md_files.convert_agents_all_providers(html_path)
+    elif html_name.startswith("agents-") or html_name.startswith("agent-"):
+        content = build_md_files.convert_agent_deepdive(html_path)
     else:
         return False
         
@@ -381,6 +391,12 @@ def sync_md_to_html(md_name: str, html_name: str):
                 price_div.string = price_val.replace(" USD", "")
                 
     elif html_name.startswith("service-"):
+        # Sync H1
+        if md_h1_match:
+            h1_el = soup.find("h1")
+            if h1_el:
+                h1_el.string = clean_text(md_h1_match.group(1))
+    elif html_name.startswith("agents-") or html_name.startswith("agent-"):
         # Sync H1
         if md_h1_match:
             h1_el = soup.find("h1")

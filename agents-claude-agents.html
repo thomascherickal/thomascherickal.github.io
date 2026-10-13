@@ -1,32 +1,33 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Claude Agents Architecture &amp; Orchestration Guide | Thomas Cherickal</title>
-  <meta content="Deploy Anthropic Claude Agents, Claude 3.7 Sonnet, Computer Use, and Model Context Protocol (MCP) in enterprise workflows." name="description" />
-  <meta content="Thomas Cherickal" name="author" />
-  <link href="https://thomascherickal.github.io/agents-claude-agents.html" rel="canonical" />
-  <!-- Open Graph -->
-  <meta content="website" property="og:type" />
-  <meta content="https://thomascherickal.github.io/agents-claude-agents.html" property="og:url" />
-  <meta content="Thomas Cherickal — The Digital Futurist" property="og:site_name" />
-  <meta content="Claude Agents Architecture &amp; Orchestration Guide | Thomas Cherickal" property="og:title" />
-  <meta content="Deploy Anthropic Claude Agents, Claude 3.7 Sonnet, Computer Use, and Model Context Protocol (MCP) in enterprise workflows." property="og:description" />
-  <meta content="https://thomascherickal.github.io/assets/og-card.png" property="og:image" />
-  <meta content="en_US" property="og:locale" />
-  <!-- Favicons -->
-  <link href="assets/favicon.ico" rel="icon" sizes="any" />
-  <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
-  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-  <link href="/site.webmanifest" rel="manifest" />
-  <meta content="#000000" name="theme-color" />
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- JSON-LD Schema -->
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Claude Agents Architecture &amp; Orchestration Guide | Thomas Cherickal</title>
+<meta content="Deploy Anthropic Claude Agents, Claude Sonnet 5.5, Computer Use, and Model Context Protocol (MCP) in enterprise workflows." name="description"/>
+<meta content="Thomas Cherickal" name="author"/>
+<link href="https://thomascherickal.github.io/agents-claude-agents.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="https://thomascherickal.github.io/agents-claude-agents.html" property="og:url"/>
+<meta content="Thomas Cherickal — The Digital Futurist" property="og:site_name"/>
+<meta content="Claude Agents Architecture &amp; Orchestration Guide | Thomas Cherickal" property="og:title"/>
+<meta content="Deploy Anthropic Claude Agents, Claude Sonnet 5.5, Computer Use, and Model Context Protocol (MCP) in enterprise workflows." property="og:description"/>
+<meta content="https://thomascherickal.github.io/assets/og-card.png" property="og:image"/>
+<meta content="en_US" property="og:locale"/>
+<!-- Favicons -->
+<link href="assets/favicon.ico" rel="icon" sizes="any"/>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<meta content="#000000" name="theme-color"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- JSON-LD Schema -->
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
@@ -35,7 +36,7 @@
         "@id": "https://thomascherickal.github.io/agents-claude-agents.html#webpage",
         "url": "https://thomascherickal.github.io/agents-claude-agents.html",
         "name": "Claude Agents Architecture & Orchestration Guide | Thomas Cherickal",
-        "description": "In-depth guide to orchestrating Anthropic Claude Agents, Claude 3.7 Sonnet, Computer Use, and Model Context Protocol (MCP) in enterprise workflows.",
+        "description": "In-depth guide to orchestrating Anthropic Claude Agents, Claude Sonnet 5.5, Computer Use, and Model Context Protocol (MCP) in enterprise workflows.",
         "isPartOf": {
           "@id": "https://thomascherickal.github.io/#website"
         },
@@ -71,8 +72,8 @@
       {
         "@type": "TechArticle",
         "@id": "https://thomascherickal.github.io/agents-claude-agents.html#article",
-        "headline": "Anthropic Claude Agents: Computer Use, MCP Tooling, and Multi-Agent Orchestration",
-        "description": "Production engineering guide to deploying Claude 3.7 Sonnet AI agent teams, tool calling loops, and enterprise access tier pricing.",
+        "headline": "Anthropic Claude Agents: Claude Sonnet 5.5, Computer Use, MCP Tooling, and Multi-Agent Orchestration",
+        "description": "Production engineering guide to deploying Claude Sonnet 5.5 AI agent teams, tool calling loops, and enterprise access tier pricing.",
         "author": {
           "@type": "Person",
           "@id": "https://thomascherickal.github.io/#person",
@@ -85,7 +86,7 @@
     ]
   }
   </script>
-  <style>
+<style>
     :root {
       --bg-0: #020408;
       --bg-1: #060912;
@@ -130,7 +131,6 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
   <!-- START:HEADER -->
   <style id="header-styles">
     /* Global Root Mobile & Tablet Safeguards */
@@ -592,7 +592,7 @@
       <li><a href="index.html" data-nav="index.html">Home</a></li>
       <li class="nav-dropdown">
         <a class="nav-dropdown-toggle">
-          AI-Agents <span class="dropdown-caret">▾</span>
+          Agents <span class="dropdown-caret">▾</span>
         </a>
         <ul class="dropdown-menu">
           <li><a href="agents-all-agentic-providers.html" class="dropdown-header-link">🌐 All Agentic Providers</a></li>
@@ -600,7 +600,7 @@
           <li><a href="agents-claude-agents.html">🟣 Claude Agents</a></li>
           <li><a href="agents-grok-bot.html">⚡ Grok Bot</a></li>
           <li><a href="agents-openai-dots.html">🟢 OpenAI Dots</a></li>
-          <li><a href="agent-gemini-spark.html">✨ Gemini Spark</a></li>
+          <li><a href="agents-gemini-spark.html">✨ Gemini Spark</a></li>
           <li><a href="agents-github-copilot.html">🐙 GitHub Copilot</a></li>
           <li><a href="agents-hermes-agent.html">🏎️ Hermes Agent</a></li>
           <li><a href="agents-opencode-free.html">💻 OpenCode Free</a></li>
@@ -634,116 +634,108 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-
 <a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
-
 <main id="main">
-  <div class="container">
-    <header class="hero">
-      <div class="hero-logo-box">
-        <svg viewBox="0 0 24 24" fill="#D97757" width="46" height="46" aria-hidden="true">
-          <circle cx="12" cy="12" r="10" fill="#D97757"/>
-          <path d="M12 5l2.2 4.5 4.8.7-3.5 3.4.8 4.9-4.3-2.3-4.3 2.3.8-4.9-3.5-3.4 4.8-.7L12 5z" fill="#FFFFFF"/>
-        </svg>
-      </div>
-      <p class="hero-badge">// PROVIDER DEEP DIVE · ANTHROPIC</p>
-      <h1 class="hero-title">Claude Agents Architecture &amp; Orchestration</h1>
-      <p style="color:#94a3b8;max-width:740px;margin:0 auto 1.5rem;">
-        Harnessing Claude 3.7 Sonnet, hybrid extended thinking, Computer Use GUI interactions, 
+<div class="container">
+<header class="hero">
+<div class="hero-logo-box">
+<svg aria-hidden="true" fill="#D97757" height="46" viewbox="0 0 24 24" width="46">
+<circle cx="12" cy="12" fill="#D97757" r="10"></circle>
+<path d="M12 5l2.2 4.5 4.8.7-3.5 3.4.8 4.9-4.3-2.3-4.3 2.3.8-4.9-3.5-3.4 4.8-.7L12 5z" fill="#FFFFFF"></path>
+</svg>
+</div>
+<p class="hero-badge">// PROVIDER DEEP DIVE · ANTHROPIC</p>
+<h1 class="hero-title">Claude Agents Architecture &amp; Orchestration</h1>
+<p style="color:#94a3b8;max-width:740px;margin:0 auto 1.5rem;">
+        Harnessing Claude Sonnet 5.5, hybrid extended thinking, Computer Use GUI interactions, 
         and the open Model Context Protocol (MCP) for enterprise AI agent teams.
       </p>
-
-      <!-- MINIMUM ACCESS PRICE HERO CARD -->
-      <div class="pricing-hero-card">
-        <div>
-          <span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);text-transform:uppercase;display:block;">Minimum Subscription / Access Price</span>
-          <span class="pricing-val">$20 / month</span>
-          <span style="color:#94a3b8;font-size:0.85rem;display:block;margin-top:0.2rem;">Claude Pro or $5.00 min API deposit on Anthropic Console</span>
-        </div>
-        <div>
-          <a class="btn btn-primary" href="#code">View Orchestration Code ↓</a>
-        </div>
-      </div>
-    </header>
-
-    <!-- SECTION 1: ARCHITECTURAL OVERVIEW -->
-    <article class="content-card">
-      <h2>1. Executive Summary &amp; Frontier Agentic Capabilities</h2>
-      <p>
-        Anthropic’s Claude models—headlined by Claude 3.7 Sonnet and the lightweight Claude 3.5 Haiku—represent the 
+<!-- MINIMUM ACCESS PRICE HERO CARD -->
+<div class="pricing-hero-card">
+<div>
+<span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);text-transform:uppercase;display:block;">Minimum Subscription / Access Price</span>
+<span class="pricing-val">$20 / month</span>
+<span style="color:#94a3b8;font-size:0.85rem;display:block;margin-top:0.2rem;">Claude Pro or $5.00 min API deposit on Anthropic Console</span>
+</div>
+<div>
+<a class="btn btn-primary" href="#code">View Orchestration Code ↓</a>
+</div>
+</div>
+</header>
+<!-- SECTION 1: ARCHITECTURAL OVERVIEW -->
+<article class="content-card">
+<h2>1. Executive Summary &amp; Frontier Agentic Capabilities</h2>
+<p>
+        Anthropic’s Claude models—headlined by Claude Sonnet 5.5 and the lightweight Claude Haiku 5.5 (alongside frontier Claude Opus 5.5)—represent the 
         premier frontier intelligence engine for complex software engineering, multi-turn reasoning, and direct 
         graphical user interface (GUI) control. In benchmarks across SWE-bench Verified, HumanEval, and Tau-bench, 
         Claude consistently establishes the state-of-the-art standard for deterministic tool invocation and autonomous 
         code refactoring.
       </p>
-      <p>
+<p>
         The differentiator of the Claude agentic architecture lies in its philosophical balance between unconstrained 
         reasoning and strict JSON schema guarantees. Unlike models that suffer from format drift across long execution loops, 
         Claude adheres rigorously to typed parameter constraints while utilizing extended thinking scratchpads to formulate 
         self-correcting execution strategies before committing state mutations.
       </p>
-      <h3>Foundational Agentic Capabilities</h3>
-      <ul>
-        <li><strong>Hybrid Extended Thinking:</strong> Developers can dynamically configure an explicit reasoning token budget (e.g., 2,048 to 16,000 tokens), enabling the agent to deliberate over edge cases, decompose dependency graphs, and verify logic before outputting tool calls.</li>
-        <li><strong>Native Computer Use API:</strong> Out-of-the-box system tools allow Claude to inspect full-resolution desktop displays, map interface elements to virtual (x, y) coordinates, click and drag GUI controls, and execute shell instructions inside sandboxed virtual machines.</li>
-        <li><strong>Model Context Protocol (MCP) Integration:</strong> Anthropic's co-authored open protocol allows Claude Agents to bridge dynamically with Postgres databases, Git repositories, Slack workspaces, and local filesystem servers without proprietary wrapper middleware.</li>
-        <li><strong>Prompt Caching Optimization:</strong> Caching system instructions and tool definitions drops recursive multi-turn input token costs by up to 90% and reduces time-to-first-token (TTFT) latency by 85%.</li>
-      </ul>
-    </article>
-
-    <!-- SECTION 2: COMPUTER USE MECHANICS -->
-    <article class="content-card">
-      <h2>2. Computer Use Mechanics, Screen Scaling &amp; OS Automation</h2>
-      <p>
+<h3>Foundational Agentic Capabilities</h3>
+<ul>
+<li><strong>Hybrid Extended Thinking:</strong> Developers can dynamically configure an explicit reasoning token budget (e.g., 2,048 to 16,000 tokens), enabling the agent to deliberate over edge cases, decompose dependency graphs, and verify logic before outputting tool calls.</li>
+<li><strong>Native Computer Use API:</strong> Out-of-the-box system tools allow Claude to inspect full-resolution desktop displays, map interface elements to virtual (x, y) coordinates, click and drag GUI controls, and execute shell instructions inside sandboxed virtual machines.</li>
+<li><strong>Model Context Protocol (MCP) Integration:</strong> Anthropic's co-authored open protocol allows Claude Agents to bridge dynamically with Postgres databases, Git repositories, Slack workspaces, and local filesystem servers without proprietary wrapper middleware.</li>
+<li><strong>Prompt Caching Optimization:</strong> Caching system instructions and tool definitions drops recursive multi-turn input token costs by up to 90% and reduces time-to-first-token (TTFT) latency by 85%.</li>
+</ul>
+</article>
+<!-- SECTION 2: COMPUTER USE MECHANICS -->
+<article class="content-card">
+<h2>2. Computer Use Mechanics, Screen Scaling &amp; OS Automation</h2>
+<p>
         Claude’s Computer Use represents a paradigm shift from traditional headless API interactions: it equips the model 
         to interact directly with legacy enterprise software that lacks public REST or GraphQL endpoints.
       </p>
-      <h3>The Computer Use Execution Loop</h3>
-      <ol>
-        <li><strong>Screen Observation:</strong> The local agent harness captures an OS screenshot (scaled to recommended resolutions such as 1024x768 or 1280x800) and passes it to Claude as a base64 image block.</li>
-        <li><strong>Visual Grounding:</strong> Claude’s multimodal vision encoder analyzes UI controls, buttons, form fields, and modal dialogs, outputting specific coordinate actions (e.g., <code>mouse_move(x=452, y=318)</code> followed by <code>left_click()</code>).</li>
-        <li><strong>Keyboard &amp; Keystroke Emulation:</strong> For text input, Claude emits typed keystroke commands with support for modifier shortcuts (<code>Ctrl+C</code>, <code>Alt+Tab</code>, <code>Enter</code>).</li>
-        <li><strong>Visual State Verification:</strong> Following action dispatch, a successor screenshot is ingested to verify that the UI responded predictably (e.g., confirming a modal closed or a progress bar completed).</li>
-      </ol>
-      <p>
+<h3>The Computer Use Execution Loop</h3>
+<ol>
+<li><strong>Screen Observation:</strong> The local agent harness captures an OS screenshot (scaled to recommended resolutions such as 1024x768 or 1280x800) and passes it to Claude as a base64 image block.</li>
+<li><strong>Visual Grounding:</strong> Claude’s multimodal vision encoder analyzes UI controls, buttons, form fields, and modal dialogs, outputting specific coordinate actions (e.g., <code>mouse_move(x=452, y=318)</code> followed by <code>left_click()</code>).</li>
+<li><strong>Keyboard &amp; Keystroke Emulation:</strong> For text input, Claude emits typed keystroke commands with support for modifier shortcuts (<code>Ctrl+C</code>, <code>Alt+Tab</code>, <code>Enter</code>).</li>
+<li><strong>Visual State Verification:</strong> Following action dispatch, a successor screenshot is ingested to verify that the UI responded predictably (e.g., confirming a modal closed or a progress bar completed).</li>
+</ol>
+<p>
         To prevent destructive runaway loops, enterprise deployments configure bounding boxes, require secondary human confirmation 
         gates for financial or admin screens, and enforce strict execution timeouts.
       </p>
-    </article>
-
-    <!-- SECTION 3: MODEL CONTEXT PROTOCOL (MCP) -->
-    <article class="content-card">
-      <h2>3. Model Context Protocol (MCP) Architecture &amp; Transports</h2>
-      <p>
+</article>
+<!-- SECTION 3: MODEL CONTEXT PROTOCOL (MCP) -->
+<article class="content-card">
+<h2>3. Model Context Protocol (MCP) Architecture &amp; Transports</h2>
+<p>
         The Model Context Protocol (MCP) resolves the "M-by-N" integration nightmare: connecting M distinct AI models 
         to N enterprise data stores. MCP establishes an open, bidirectional JSON-RPC 2.0 communication standard separating 
         host clients (the agent runtime) from tool servers.
       </p>
-      <h3>MCP Transport Mechanisms</h3>
-      <ul>
-        <li><strong>Standard I/O (stdio):</strong> The host process spawns local tool servers as child processes (e.g., <code>npx -y @modelcontextprotocol/server-postgres</code>), communicating via stdin/stdout pipes with near-zero network latency.</li>
-        <li><strong>Server-Sent Events (SSE):</strong> Used for distributed microservices, allowing cloud-hosted MCP servers to push tool updates and resource updates over persistent HTTP connections.</li>
-      </ul>
-      <p>
+<h3>MCP Transport Mechanisms</h3>
+<ul>
+<li><strong>Standard I/O (stdio):</strong> The host process spawns local tool servers as child processes (e.g., <code>npx -y @modelcontextprotocol/server-postgres</code>), communicating via stdin/stdout pipes with near-zero network latency.</li>
+<li><strong>Server-Sent Events (SSE):</strong> Used for distributed microservices, allowing cloud-hosted MCP servers to push tool updates and resource updates over persistent HTTP connections.</li>
+</ul>
+<p>
         Through MCP, a single Claude agent can dynamically discover tools on startup, inspect input schemas, subscribe 
         to live database log streams, and maintain clean separation of privileges across departmental boundaries.
       </p>
-    </article>
-
-    <!-- SECTION 4: PRODUCTION SOURCE CODE -->
-    <article class="content-card" id="code">
-      <h2>4. Production Source Code (Async Python Claude Agent Loop)</h2>
-      <p>
-        This complete asynchronous script demonstrates an enterprise Claude 3.7 Sonnet agent loop featuring dynamic tool 
+</article>
+<!-- SECTION 4: PRODUCTION SOURCE CODE -->
+<article class="content-card" id="code">
+<h2>4. Production Source Code (Async Python Claude Agent Loop)</h2>
+<p>
+        This complete asynchronous script demonstrates an enterprise Claude Sonnet 5.5 agent loop featuring dynamic tool 
         invocations, error trapping, automated recursive turns, and prompt caching configuration.
       </p>
-
-      <div class="code-window">
-        <div class="code-bar">
-          <span>claude_production_agent.py</span>
-          <button class="copy-btn" onclick="copySnippet('claudeCode')">Copy Code</button>
-        </div>
-        <pre class="code-pre" id="claudeCode"><code>import asyncio
+<div class="code-window">
+<div class="code-bar">
+<span>claude_production_agent.py</span>
+<button class="copy-btn" onclick="copySnippet('claudeCode')">Copy Code</button>
+</div>
+<pre class="code-pre" id="claudeCode"><code>import asyncio
 import os
 import json
 from typing import Any, Dict, List
@@ -779,7 +771,7 @@ TOOLS = [
     }
 ]
 
-async def execute_tool_call(name: str, args: Dict[str, Any]) -> str:
+async def execute_tool_call(name: str, args: Dict[str, Any]) -&gt; str:
     """Dispatches execution to local handlers."""
     if name == "query_enterprise_warehouse":
         return json.dumps({
@@ -798,7 +790,7 @@ async def run_claude_agent(goal: str, max_turns: int = 6):
         {
             "type": "text",
             "text": (
-                "You are an autonomous Senior Systems Engineer powered by Claude 3.7 Sonnet. "
+                "You are an autonomous Senior Systems Engineer powered by Claude Sonnet 5.5. "
                 "Deliberate methodically, execute tools to verify system state, and produce clean, "
                 "executive-ready reports."
             ),
@@ -810,9 +802,9 @@ async def run_claude_agent(goal: str, max_turns: int = 6):
     messages = [{"role": "user", "content": goal}]
     
     for turn in range(max_turns):
-        print(f"[*] Turn {turn + 1}: Querying Claude 3.7 Sonnet...")
+        print(f"[*] Turn {turn + 1}: Querying Claude Sonnet 5.5...")
         response = await client.messages.create(
-            model="claude-3-7-sonnet-20250219",
+            model="claude-sonnet-5-5",
             max_tokens=4096,
             system=system_instruction,
             tools=TOOLS,
@@ -846,136 +838,127 @@ async def run_claude_agent(goal: str, max_turns: int = 6):
 
 if __name__ == "__main__":
     asyncio.run(run_claude_agent("Audit the active AI agent team workers and post an alert to #ops-telemetry."))</code></pre>
-      </div>
-    </article>
-
-    <!-- SECTION 5: MULTI-AI AGENT TEAM TOPOLOGY -->
-    <article class="content-card">
-      <h2>5. Hierarchical Multi-AI Agent Team Topologies</h2>
-      <p>
+</div>
+</article>
+<!-- SECTION 5: MULTI-AI AGENT TEAM TOPOLOGY -->
+<article class="content-card">
+<h2>5. Hierarchical Multi-AI Agent Team Topologies</h2>
+<p>
         In enterprise deployments, relying on a single agent instance to handle an entire complex workflow introduces 
         cognitive saturation. Claude architectures excel when arranged into specialized multi-agent hierarchies:
       </p>
-      <h3>The Supervisor-Worker AI Agent Team Pattern</h3>
-      <ul>
-        <li><strong>Supervisor Agent (Claude 3.7 Sonnet with Extended Thinking):</strong> Ingests high-level enterprise goals, formulates a Directed Acyclic Graph (DAG) of sub-tasks, assigns worker roles, and evaluates intermediate deliverables.</li>
-        <li><strong>Code Worker (Claude 3.7 Sonnet):</strong> Specialized in reading AST graphs, writing modular unit tests, and applying non-contiguous file replacements.</li>
-        <li><strong>Triage &amp; Parsing Worker (Claude 3.5 Haiku):</strong> Low-cost, sub-second latency model handling fast regex classification, log parsing, and JSON formatting for pennies per thousand turns.</li>
-      </ul>
-      <p>
+<h3>The Supervisor-Worker AI Agent Team Pattern</h3>
+<ul>
+<li><strong>Supervisor Agent (Claude Sonnet 5.5 with Extended Thinking):</strong> Ingests high-level enterprise goals, formulates a Directed Acyclic Graph (DAG) of sub-tasks, assigns worker roles, and evaluates intermediate deliverables.</li>
+<li><strong>Code Worker (Claude Sonnet 5.5 / Claude Opus 5.5):</strong> Specialized in reading AST graphs, writing modular unit tests, and applying non-contiguous file replacements.</li>
+<li><strong>Triage &amp; Parsing Worker (Claude Haiku 5.5):</strong> Low-cost, sub-second latency model handling fast regex classification, log parsing, and JSON formatting for pennies per thousand turns.</li>
+</ul>
+<p>
         This division of labor preserves the supervisor's reasoning context while offloading token-heavy mechanical 
         work to specialized sub-agents.
       </p>
-
-      <h3>Real-World SWE-bench Refactoring Workflows</h3>
-      <p>
-        On real-world software maintenance benchmarks such as SWE-bench Verified, Claude 3.7 Sonnet consistently resolves 
+<h3>Real-World SWE-bench Refactoring Workflows</h3>
+<p>
+        On real-world software maintenance benchmarks such as SWE-bench Verified, Claude Sonnet 5.5 consistently resolves 
         over 70% of complex multi-file bug reports. A standardized enterprise code repair pipeline follows this trajectory:
       </p>
-      <ol>
-        <li><strong>Reproduction Phase:</strong> Claude writes an isolated unit test reproducing the reported issue, executing it via terminal bash tools to confirm reproduction with a failing exit code.</li>
-        <li><strong>Localization Phase:</strong> Using grep and AST file browsing tools, the agent navigates callers and callees, identifying the exact root-cause function without reading extraneous files.</li>
-        <li><strong>Patch Application:</strong> The agent applies minimal contiguous diffs to resolve the bug while preserving surrounding formatting and comments.</li>
-        <li><strong>Verification &amp; Regression Suite:</strong> The agent re-runs the reproduction test to verify it passes, then executes the broader repository test suite to guarantee zero unintended regressions before generating a git commit.</li>
-      </ol>
-    </article>
-
-    <!-- SECTION 6: TOOL CALIBRATION & PROMPT PATTERNS -->
-    <article class="content-card">
-      <h2>6. System Prompt Engineering &amp; Few-Shot Tool Calibration</h2>
-      <p>
+<ol>
+<li><strong>Reproduction Phase:</strong> Claude writes an isolated unit test reproducing the reported issue, executing it via terminal bash tools to confirm reproduction with a failing exit code.</li>
+<li><strong>Localization Phase:</strong> Using grep and AST file browsing tools, the agent navigates callers and callees, identifying the exact root-cause function without reading extraneous files.</li>
+<li><strong>Patch Application:</strong> The agent applies minimal contiguous diffs to resolve the bug while preserving surrounding formatting and comments.</li>
+<li><strong>Verification &amp; Regression Suite:</strong> The agent re-runs the reproduction test to verify it passes, then executes the broader repository test suite to guarantee zero unintended regressions before generating a git commit.</li>
+</ol>
+</article>
+<!-- SECTION 6: TOOL CALIBRATION & PROMPT PATTERNS -->
+<article class="content-card">
+<h2>6. System Prompt Engineering &amp; Few-Shot Tool Calibration</h2>
+<p>
         To achieve 99.9%+ tool calling reliability in mission-critical applications, system prompt calibration is essential. 
         Claude responds exceptionally well to clear, deterministic behavioral contracts:
       </p>
-      <ul>
-        <li><strong>Negative Tool Guidance:</strong> Explicitly specify when <em>not</em> to invoke a tool (e.g., "Do not invoke database write queries if the requested data can be found in the current session memory").</li>
-        <li><strong>Two-Turn Few-Shot Demonstration:</strong> Provide a realistic synthetic tool interaction within the system prompt showing a tool call, a mock database response, and the desired analytical summary format.</li>
-        <li><strong>Self-Correction Instructions:</strong> Direct the agent: "If a tool returns an error code or validation exception, inspect the error message carefully, modify parameter formatting, and retry with corrected arguments up to three times."</li>
-      </ul>
-      <p>
+<ul>
+<li><strong>Negative Tool Guidance:</strong> Explicitly specify when <em>not</em> to invoke a tool (e.g., "Do not invoke database write queries if the requested data can be found in the current session memory").</li>
+<li><strong>Two-Turn Few-Shot Demonstration:</strong> Provide a realistic synthetic tool interaction within the system prompt showing a tool call, a mock database response, and the desired analytical summary format.</li>
+<li><strong>Self-Correction Instructions:</strong> Direct the agent: "If a tool returns an error code or validation exception, inspect the error message carefully, modify parameter formatting, and retry with corrected arguments up to three times."</li>
+</ul>
+<p>
         By anchoring tools with structured JSON schemas and defensive prompts, enterprise AI agent teams eliminate runtime format 
         hallucinations and prevent unexpected failures.
       </p>
-    </article>
-
-    <!-- SECTION 7: SESSION STATE SERIALIZATION -->
-    <article class="content-card">
-      <h2>7. Long-Term Memory &amp; Session Checkpoint Serialization</h2>
-      <p>
+</article>
+<!-- SECTION 7: SESSION STATE SERIALIZATION -->
+<article class="content-card">
+<h2>7. Long-Term Memory &amp; Session Checkpoint Serialization</h2>
+<p>
         Production agents operating over complex corporate workflows cannot rely on volatile in-memory message lists. 
         If a server node terminates, or if a user returns to a conversation 48 hours later, the entire execution 
         trajectory must be reconstructable without repeating costly reasoning turns.
       </p>
-      <h3>ACID-Compliant Trajectory Storage</h3>
-      <p>
+<h3>ACID-Compliant Trajectory Storage</h3>
+<p>
         Enterprise Claude architectures implement state persistence by serializing the complete turn graph into 
         PostgreSQL or DynamoDB backing stores after every interaction:
       </p>
-      <ul>
-        <li><strong>Turn Snapshots:</strong> Storing raw JSON payloads of user prompts, assistant thinking traces, <code>tool_use</code> requests, and execution <code>tool_result</code> blocks with monotonic sequence IDs.</li>
-        <li><strong>Differential State Hashing:</strong> Calculating SHA-256 hashes of modified files and environment variables, allowing instant rollback if an agent's code refactoring fails automated integration tests.</li>
-        <li><strong>Context Pruning on Restore:</strong> When restoring a checkpoint with 30+ prior turns, an automated summarizer compresses early discussion history while preserving exact parameter schemas and active tool IDs.</li>
-      </ul>
-      <p>
+<ul>
+<li><strong>Turn Snapshots:</strong> Storing raw JSON payloads of user prompts, assistant thinking traces, <code>tool_use</code> requests, and execution <code>tool_result</code> blocks with monotonic sequence IDs.</li>
+<li><strong>Differential State Hashing:</strong> Calculating SHA-256 hashes of modified files and environment variables, allowing instant rollback if an agent's code refactoring fails automated integration tests.</li>
+<li><strong>Context Pruning on Restore:</strong> When restoring a checkpoint with 30+ prior turns, an automated summarizer compresses early discussion history while preserving exact parameter schemas and active tool IDs.</li>
+</ul>
+<p>
         This persistence layer enables seamless human-in-the-loop workflows where an engineer can review a proposed 
         infrastructure diff, approve it via Slack or dashboard, and resume the agent's execution hours later.
       </p>
-    </article>
-
-    <!-- SECTION 8: MINIMUM PRICING & TCO ANALYSIS -->
-    <article class="content-card">
-      <h2>8. Minimum Subscription &amp; Access Pricing TCO Analysis</h2>
-      <p>
+</article>
+<!-- SECTION 8: MINIMUM PRICING & TCO ANALYSIS -->
+<article class="content-card">
+<h2>8. Minimum Subscription &amp; Access Pricing TCO Analysis</h2>
+<p>
         Anthropic offers multiple onboarding paths depending on whether your organization requires interactive web 
         tools or raw programmatic API throughput:
       </p>
-      <ul>
-        <li><strong>Claude Pro ($20/month):</strong> Web GUI, artifacts workspace, and priority bandwidth during peak hours with Claude Code access. Ideal for individual engineers and rapid prototyping.</li>
-        <li><strong>Anthropic Console API (Pay-as-you-go, $5 minimum deposit):</strong> Programmatic access to Claude 3.7 Sonnet ($3.00/M input tokens, $15.00/M output tokens) and Claude 3.5 Haiku ($0.80/M input, $4.00/M output). Activation is instantaneous upon loading a $5 minimum balance.</li>
-        <li><strong>Prompt Caching Savings:</strong> Cached prompt tokens cost only $0.30/M read (a 90% discount over standard input tokens) and $3.75/M write, drastically slashing operating expenditures for recursive agent loops.</li>
-        <li><strong>Claude Team / Enterprise ($25–$30/user/month):</strong> Centralized admin console, 200K token shared workspaces, HIPAA/SOC-2 compliance, and contractual guarantees that customer data is never used to train Anthropic models.</li>
-      </ul>
-    </article>
-
-    <!-- SECTION 7: ENTERPRISE GUARDRAILS -->
-    <article class="content-card">
-      <h2>7. Enterprise Production Guardrails &amp; Security Sandboxing</h2>
-      <p>
+<ul>
+<li><strong>Claude Pro ($20/month):</strong> Web GUI, artifacts workspace, and priority bandwidth during peak hours with Claude Code access. Ideal for individual engineers and rapid prototyping.</li>
+<li><strong>Anthropic Console API (Pay-as-you-go, $5 minimum deposit):</strong> Programmatic access to Claude Sonnet 5.5 ($3.00/M input tokens, $15.00/M output tokens) and Claude Haiku 5.5 ($0.80/M input, $4.00/M output). Activation is instantaneous upon loading a $5 minimum balance.</li>
+<li><strong>Prompt Caching Savings:</strong> Cached prompt tokens cost only $0.30/M read (a 90% discount over standard input tokens) and $3.75/M write, drastically slashing operating expenditures for recursive agent loops.</li>
+<li><strong>Claude Team / Enterprise ($25–$30/user/month):</strong> Centralized admin console, 200K token shared workspaces, HIPAA/SOC-2 compliance, and contractual guarantees that customer data is never used to train Anthropic models.</li>
+</ul>
+</article>
+<!-- SECTION 7: ENTERPRISE GUARDRAILS -->
+<article class="content-card">
+<h2>7. Enterprise Production Guardrails &amp; Security Sandboxing</h2>
+<p>
         Giving an autonomous agent computer use or code execution capabilities requires strict perimeter security:
       </p>
-      <ul>
-        <li><strong>Ephemeral Docker Sandboxes:</strong> Run computer use agents inside containerized virtual displays (Xvfb / VNC) mounted with read-only root filesystems and disposable scratch volumes.</li>
-        <li><strong>Egress Network Firewalls:</strong> Restrict agent internet access via proxy whitelists to prevent malicious packages from exfiltrating environment variables or database credentials.</li>
-        <li><strong>Dual-Key Human Approval:</strong> Intercept high-risk tool calls (e.g., executing database migrations, deleting S3 buckets, sending customer emails) with mandatory human authorization modals.</li>
-        <li><strong>Context Window Truncation:</strong> Automatically summarize earlier conversational turns to prevent token bloat from degrading reasoning fidelity after 15+ turns.</li>
-      </ul>
-    </article>
-
-    <!-- SECTION 8: TROUBLESHOOTING & GOTCHAS -->
-    <article class="content-card">
-      <h2>8. Production Troubleshooting, Latency Optimization &amp; Gotchas</h2>
-      <p>
+<ul>
+<li><strong>Ephemeral Docker Sandboxes:</strong> Run computer use agents inside containerized virtual displays (Xvfb / VNC) mounted with read-only root filesystems and disposable scratch volumes.</li>
+<li><strong>Egress Network Firewalls:</strong> Restrict agent internet access via proxy whitelists to prevent malicious packages from exfiltrating environment variables or database credentials.</li>
+<li><strong>Dual-Key Human Approval:</strong> Intercept high-risk tool calls (e.g., executing database migrations, deleting S3 buckets, sending customer emails) with mandatory human authorization modals.</li>
+<li><strong>Context Window Truncation:</strong> Automatically summarize earlier conversational turns to prevent token bloat from degrading reasoning fidelity after 15+ turns.</li>
+</ul>
+</article>
+<!-- SECTION 8: TROUBLESHOOTING & GOTCHAS -->
+<article class="content-card">
+<h2>8. Production Troubleshooting, Latency Optimization &amp; Gotchas</h2>
+<p>
         Key operational insights from production Claude agent engineering:
       </p>
-      <ul>
-        <li><strong>Extended Thinking Token Allocation:</strong> Ensure <code>max_tokens</code> exceeds your thinking budget; if you configure <code>thinking_budget=4000</code>, set <code>max_tokens=6000</code> to leave headroom for final text generation.</li>
-        <li><strong>Tool Parameter Normalization:</strong> Always validate tool inputs with Pydantic; if an argument fails validation, return the descriptive validation error string directly in the <code>tool_result</code> so Claude can self-correct.</li>
-        <li><strong>Streaming for UI Responsiveness:</strong> Use the streaming API (<code>client.messages.stream()</code>) in client-facing UIs to display incremental thinking blocks, preventing the perception of interface freezing during multi-second deliberations.</li>
-      </ul>
-    </article>
-
-    <!-- CTA BANNER -->
-    <div class="cta-banner">
-      <h2 style="color:#fff;font-size:1.8rem;margin-bottom:0.75rem;">Scale Autonomous Claude Agents in Your Enterprise</h2>
-      <p style="color:#94a3b8;max-width:640px;margin:0 auto 1.5rem;font-size:0.95rem;">
+<ul>
+<li><strong>Extended Thinking Token Allocation:</strong> Ensure <code>max_tokens</code> exceeds your thinking budget; if you configure <code>thinking_budget=4000</code>, set <code>max_tokens=6000</code> to leave headroom for final text generation.</li>
+<li><strong>Tool Parameter Normalization:</strong> Always validate tool inputs with Pydantic; if an argument fails validation, return the descriptive validation error string directly in the <code>tool_result</code> so Claude can self-correct.</li>
+<li><strong>Streaming for UI Responsiveness:</strong> Use the streaming API (<code>client.messages.stream()</code>) in client-facing UIs to display incremental thinking blocks, preventing the perception of interface freezing during multi-second deliberations.</li>
+</ul>
+</article>
+<!-- CTA BANNER -->
+<div class="cta-banner">
+<h2 style="color:#fff;font-size:1.8rem;margin-bottom:0.75rem;">Scale Autonomous Claude Agents in Your Enterprise</h2>
+<p style="color:#94a3b8;max-width:640px;margin:0 auto 1.5rem;font-size:0.95rem;">
         Need expert advisory to build custom Model Context Protocol servers, Computer Use automation sandboxes, 
         or high-throughput Claude AI agent teams? Connect for a dedicated technical consultation.
       </p>
-      <a class="btn btn-primary" href="contact.html">Commission Claude AI Agent Team →</a>
-      <a class="btn btn-outline" href="agents-all-agentic-providers.html">← Back to All Providers</a>
-    </div>
-  </div>
-
+<a class="btn btn-primary" href="contact.html">Commission Claude AI Agent Team →</a>
+<a class="btn btn-outline" href="agents-all-agentic-providers.html">← Back to All Providers</a>
+</div>
+</div>
     <!-- START:FOOTER -->
   <style id="footer-styles">
     footer {
@@ -1605,7 +1588,6 @@ if __name__ == "__main__":
   </footer>
     <!-- END:FOOTER -->
 </main>
-
 <script src="components.js"></script>
 <script>
   function copySnippet(id) {
