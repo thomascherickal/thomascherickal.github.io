@@ -212,7 +212,7 @@ def sync_html_to_md(html_name: str, md_name: str):
             "2. [📦 Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — High-throughput private open-weight model serving via Ollama, vLLM, and llama.cpp with zero external data egress.",
             "3. [🤖 AI Agent Orchestration Fundamentals](service-ai-agents-orchestration.html) — Principles of AI agent orchestration, releasing agent swarms at scale, using AI agents with deterministic state machines.",
             "4. [🏎️ Agentic AI Assistants (Hermes Agent)](service-agentic-ai-systems.html) — Enterprise deployment of autonomously improving agentic assistants with persistent vector memory.",
-            "5. [🌐 Training for WorkFlows Automations](service-training-for-workflows-automations.html) — Training in setting up n8n automations, self-hosted, to automate routine recurring workflows.",
+            "5. [🌐 Training for WorkFlows Automations](service-training-for-workflow-automations.html) — Training in setting up n8n automations, self-hosted, to automate routine recurring workflows.",
             "6. [⚛️ Quantum Applications (Experimental)](service-quantum-applications.html) — Exploring quantum systems for enterprise business case uses, algorithm simulation, and practical applications.",
             "7. [💲 AI Budget and Cost Limits Training](service-ai-budget-cost-limits-training.html) — Training employees at all levels on token governance, prompt efficiency, and intelligent model routing.",
             "8. [🛡️ Enterprise Workforce AI Training](service-enterprise-workforce-ai-training.html) — Live and remote corporate training for freshers, employees, developers (AI TDD), and CXOs, alongside executive briefings and AI roadmaps.",

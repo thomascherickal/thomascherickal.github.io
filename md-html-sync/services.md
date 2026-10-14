@@ -14,15 +14,15 @@
 
 Hands-on mastery, configuration, and developer pair-programming across industry-standard AI development environments and foundation APIs:
 
-`Claude Code` · `Google Antigravity` · `ChatGPT` · `HuggingFace Spaces` · `OpenAI Codex` · `Google Gemini Notebook` · `Google AI Studio` · `OpenCode` · `OpenRouter` · `Ollama & vLLM` · `IBM Qiskit` · `Agentic
- Workflows & Enterprise Transition` · `60–90%
- Inference Savings & Privacy` · `Multi-Agent
- Swarms & Low Budgets` · `Persistent
- Memory & Security Sandboxes` · `Self-Hosted
- n8n & 50% Work Automation` · `Quantum
- Algorithms & Post-Quantum Crypto` · `Token
- Governance & Spending Caps` · `Freshers,
- Devs, Staff & CXO Enablement`
+`Claude Code` · `Google Antigravity` · `ChatGPT` · `HuggingFace Spaces` · `OpenAI Codex` · `Google Gemini Notebook` · `Google AI Studio` · `OpenCode` · `OpenRouter` · `Ollama & vLLM` · `IBM Qiskit` · `Enterprise
+ Transition` · `60%
+ Inference Savings & Privacy` · `Multi-Agents
+ On Budget` · `Persistent
+ Memory` · `Self-Hosted
+ n8n` · `Post-Quantum
+ Crypto` · `Spending
+ Caps` · `Freshers,
+ Devs, Staff & CXO`
 
 ---
 
@@ -80,7 +80,7 @@ Drastically slash recurring cloud AI inference invoices by 60% to 90% by deployi
 
 ---
 
-### 3. 🤖 AI Agent Orchestration Fundamentals
+### 3. 🤖 AI Agent Orchestration
 Master the core software principles required to release multi-agent swarms at enterprise scale without
  runaway costs. Build supervisor-worker hierarchies, consensus voting networks, and autonomous tool-calling
  loops engineered for dependable operational execution.
@@ -106,7 +106,7 @@ Master the core software principles required to release multi-agent swarms at en
 
 ---
 
-### 4. 🏎️ Agentic AI Assistants (Hermes Agent)
+### 4. 🏎️ Hermes Agent
 Enterprise deployment of autonomously improving agentic assistants featuring long-term persistent vector
  memory and continuous episodic learning. Built on Nous Research Hermes 3, OpenClaw, and OpenFang runners for
  24/7 background operation in hardened isolation containers.
@@ -135,35 +135,33 @@ Enterprise deployment of autonomously improving agentic assistants featuring lon
 
 ---
 
-### 5. 🌐 Training for WorkFlows Automations
+### 5. 🌐 WorkFlow Automations
 Comprehensive hands-on training for building, self-hosting, and operating enterprise n8n workflow
  automations. Automate 50% of recurring daily operations across operations, engineering, and support with
  full data governance, zero per-seat SaaS lock-in, and private AI node integration.
 
 - ▸Self-Hosted n8n
- Infrastructure: High-availability Docker & K8s setups backed by PostgreSQL and Redis
- queues.
+ Infrastructure: High-availability Docker setups backed by PostgreSQL.
 - ▸Cognitive AI Nodes:
  Embedding local LLMs, dynamic webhooks, automated document parsing, and API bridges.
 - ▸Enterprise Governance:
- Secret vaulting, role-based access, automated queue retries, and Prometheus monitoring.
+ Secret vaulting, role-based access, automated queue retries, and monitoring.
 
 > **Focus**: // Core Capabilities & Stack
 
 ▸Self-Hosted n8n
- Infrastructure: High-availability Docker & K8s setups backed by PostgreSQL and Redis
- queues.
+ Infrastructure: High-availability Docker setups backed by PostgreSQL.
 ▸Cognitive AI Nodes:
  Embedding local LLMs, dynamic webhooks, automated document parsing, and API bridges.
 ▸Enterprise Governance:
- Secret vaulting, role-based access, automated queue retries, and Prometheus monitoring.
+ Secret vaulting, role-based access, automated queue retries, and monitoring.
 
-**Action**: [Explore Workflow
- Automation Blueprint →](service-training-for-workflows-automations.html)
+**Action**: [Workflow
+ Automation →](service-training-for-workflow-automations.html)
 
 ---
 
-### 6. ⚛️ Quantum Applications (Experimental)
+### 6. ⚛️ Applied Quantum (Experimental)
 Exploratory quantum computing advisory and circuit simulation for forward-looking enterprises. Objectively
  evaluate computational viability across combinatorial optimization, portfolio risk modeling, and materials
  science while preparing cryptographic infrastructure for the post-quantum era.
@@ -193,7 +191,7 @@ Exploratory quantum computing advisory and circuit simulation for forward-lookin
 
 ---
 
-### 7. 💲 AI Budget & Cost Limits Training
+### 7. 💲 AI Budget Training
 Educate employees, developers, and department heads on financial AI literacy and token governance. Establish
  hard spending caps, enforce API budgeting proxies, compress prompt overhead, and automatically route
  low-complexity tasks to high-quality free foundation models.
@@ -222,7 +220,7 @@ Educate employees, developers, and department heads on financial AI literacy and
 
 ---
 
-### 8. 🛡️ Enterprise Workforce AI Training
+### 8. 🛡️ Enterprise AI Training
 Live and remote corporate AI training delivered across four distinct organizational tiers. From new-hire
  onboarding and developer AI-assisted TDD to operational workflow automation and executive CXO strategic AI
  roadmaps, build lasting institutional capability.
@@ -259,7 +257,7 @@ Live and remote corporate AI training delivered across four distinct organizatio
 2. [📦 Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — High-throughput private inference via Ollama, vLLM, llama.cpp.
 3. [🤖 AI Agent Orchestration Fundamentals](service-ai-agents-orchestration.html) — Scalable swarms & state machines.
 4. [🏎️ Agentic AI Assistants (Hermes Agent)](service-agentic-ai-systems.html) — Persistent memory & autonomous loops.
-5. [🌐 Training for WorkFlows Automations](service-training-for-workflows-automations.html) — Self-hosted n8n automations.
+5. [🌐 Training for WorkFlows Automations](service-training-for-workflow-automations.html) — Self-hosted n8n automations.
 6. [⚛️ Quantum Applications (Experimental)](service-quantum-applications.html) — Enterprise quantum readiness.
 7. [💲 AI Budget & Cost Limits Training](service-ai-budget-cost-limits-training.html) — Token governance & free models.
 8. [🛡️ Enterprise Workforce AI Training](service-enterprise-workforce-ai-training.html) — Freshers, Devs & CXOs.

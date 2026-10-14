@@ -126,7 +126,88 @@
     .btn { display: inline-flex; align-items: center; padding: 0.75rem 1.5rem; border-radius: 8px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; text-decoration: none; cursor: pointer; }
     .btn-primary { background: var(--cyan); color: #020408; }
     .btn-outline { background: transparent; border: 1px solid var(--border-gold); color: var(--gold); margin-left: 0.75rem; }
-  </style>
+  
+    /* Pricing Table & References Styling */
+    .pricing-table-wrapper {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border-radius: var(--radius-md, 10px);
+      border: 1px solid var(--border, rgba(56, 189, 248, 0.18));
+      background: var(--bg-card, #0c111d);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      text-align: left;
+    }
+    .pricing-table th {
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--gold, #fbbf24);
+      padding: 0.9rem 1.1rem;
+      border-bottom: 2px solid var(--border, rgba(56, 189, 248, 0.18));
+      font-family: var(--font-mono, monospace);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .pricing-table td {
+      padding: 0.85rem 1.1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--text-secondary, #e2e8f0);
+      vertical-align: middle;
+    }
+    .pricing-table tr:hover {
+      background: rgba(56, 189, 248, 0.04);
+    }
+    .ref-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 1rem 0 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .ref-item {
+      display: flex;
+      gap: 0.75rem;
+      font-size: 0.86rem;
+      line-height: 1.55;
+      padding: 0.75rem 1rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 8px;
+    }
+    .ref-num {
+      color: var(--cyan, #38bdf8);
+      font-family: var(--font-mono, monospace);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .ref-link {
+      color: var(--cyan, #38bdf8);
+      text-decoration: underline;
+      word-break: break-all;
+    }
+    .ref-link:hover {
+      color: var(--gold, #fbbf24);
+    }
+    .ref-cite {
+      color: var(--cyan, #38bdf8);
+      font-size: 0.75em;
+      vertical-align: super;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 2px;
+      padding: 0 2px;
+    }
+    .ref-cite:hover {
+      color: var(--gold, #fbbf24);
+      text-decoration: underline;
+    }
+
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -601,9 +682,9 @@
           <li><a href="agents-openai-dots.html">🟢 OpenAI Dots</a></li>
           <li><a href="agents-gemini-spark.html">✨ Gemini Spark</a></li>
           <li><a href="agents-github-copilot.html">🐙 GitHub Copilot</a></li>
+          <li><a href="agents-meta-muse.html">♾️ Meta Muse</a></li>
           <li><a href="agents-hermes-agent.html">🏎️ Hermes Agent</a></li>
           <li><a href="agents-opencode-free.html">💻 OpenCode Free</a></li>
-          <li><a href="agents-meta-muse.html">♾️ Meta Muse</a></li>
         </ul>
       </li>
       <li><a href="portfolio.html" data-nav="portfolio.html">Portfolio</a></li>
@@ -620,7 +701,7 @@
           <li><a href="service-local-llms-cost-slashing.html">📦 Local LLMs &amp; Cost Slashing</a></li>
           <li><a href="service-ai-agents-orchestration.html">🤖 AI Agent Orchestration Fundamentals</a></li>
           <li><a href="service-agentic-ai-systems.html">🏎️ Agentic AI Assistants (Hermes Agent)</a></li>
-          <li><a href="service-training-for-workflows-automations.html">🌐 Training for WorkFlows Automations</a></li>
+          <li><a href="service-training-for-workflow-automations.html">🌐 Training for WorkFlows Automations</a></li>
           <li><a href="service-quantum-applications.html">⚛️ Quantum Applications (Experimental)</a></li>
           <li><a href="service-ai-budget-cost-limits-training.html">💲 AI Budget &amp; Cost Limits Training</a></li>
           <li><a href="service-enterprise-workforce-ai-training.html">🛡️ Enterprise Workforce AI Training</a></li>
@@ -645,18 +726,18 @@
 <p class="hero-badge">// PROVIDER DEEP DIVE · GITHUB &amp; MICROSOFT</p>
 <h1 class="hero-title">GitHub Copilot Orchestration</h1>
 <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;">
-        Harnessing Copilot Agent Mode, Copilot Workspace, custom GitHub Extensions, 
+        Harnessing Copilot Agent Mode, Copilot Workspace <a href="#ref-4" class="ref-cite">[4]</a>, custom GitHub Extensions, 
         and full-repository autonomous Pull Request lifecycles.
       </p>
 <!-- MINIMUM ACCESS PRICE HERO CARD -->
-<div class="pricing-hero-card">
+<div class="pricing-hero-card" id="pricing-hero">
 <div>
-<span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);text-transform:uppercase;display:block;">Minimum Subscription / Access Price</span>
-<span class="pricing-val">$10 / month</span>
-<span style="color:#94a3b8;font-size:0.85rem;display:block;margin-top:0.2rem;">Copilot Individual ($100/yr) or $19/user/mo Copilot Business</span>
+<span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);text-transform:uppercase;display:block;">Verified Monthly &amp; Yearly Subscriptions (Oct 2026)</span>
+<span class="pricing-val">$10 / mo · $100 / yr</span>
+<span style="color:#94a3b8;font-size:0.85rem;display:block;margin-top:0.2rem;">Copilot Free ($0) · Pro ($10/mo, $100/yr) · Business ($19/user/mo, $228/yr) · Enterprise ($39/mo, $468/yr)</span>
 </div>
 <div>
-<a class="btn btn-primary" href="#code">View Orchestration Code ↓</a>
+<a class="btn btn-primary" href="#pricing">View Subscription Matrix ↓</a>
 </div>
 </div>
 </header>
@@ -665,20 +746,20 @@
 <h2>1. Overview &amp; Repository-Level Agent Mode</h2>
 <p>
         GitHub Copilot has evolved from inline code autocomplete into a full-fledged autonomous software engineer. 
-        Through Copilot Agent Mode and Copilot Workspace, agents possess full read/write access to the repository graph, 
+        Through Copilot Agent Mode and Copilot Workspace <a href="#ref-4" class="ref-cite">[4]</a>, agents possess full read/write access to the repository graph, 
         enabling multi-file refactoring, local test execution, and CI/CD triage directly within VS Code, JetBrains, or GitHub.com.
       </p>
 <ul>
 <li><strong>Full Repo Comprehension:</strong> Indexes semantic symbol definitions, dependency manifests, and git blame history to form context-rich plans before touching disk.</li>
 <li><strong>Autonomous Verification:</strong> Copilot agents run the test runner (e.g., <code>pytest</code>, <code>npm test</code>), inspect failures, adjust code, and iterate until green.</li>
-<li><strong>Copilot Extensions Ecosystem:</strong> Integrates enterprise tools like Sentry, Datadog, Jira, and Octopus Deploy into natural language agent conversations.</li>
+<li><strong>Copilot Extensions <a href="#ref-3" class="ref-cite">[3]</a> Ecosystem:</strong> Integrates enterprise tools like Sentry, Datadog, Jira, and Octopus Deploy into natural language agent conversations.</li>
 </ul>
 </article>
 <!-- SECTION 2: EXTENSIONS & AGENT PROTOCOLS -->
 <article class="content-card">
 <h2>2. Copilot Extension Protocols, LSP Traversal &amp; Context Gathering</h2>
 <p>
-        Developers can extend Copilot by building custom Copilot Extensions. Using the GitHub Apps architecture, 
+        Developers can extend Copilot by building custom Copilot Extensions <a href="#ref-3" class="ref-cite">[3]</a>. Using the GitHub Apps architecture, 
         extensions receive user prompts signed with an RSA private key, query enterprise internal systems, 
         and stream responses or tool results back via the Server-Sent Events (SSE) protocol.
       </p>
@@ -761,17 +842,70 @@ if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8080)</code></pre>
 </div>
 </article>
-<!-- SECTION 4: ACCESS TIERS & PRICING -->
-<article class="content-card">
-<h2>4. Minimum Subscription &amp; Access Pricing</h2>
+<!-- SECTION 4: MONTHLY & YEARLY SUBSCRIPTIONS & TCO -->
+<article class="content-card" id="pricing">
+<h2>4. Verified Monthly &amp; Yearly Subscriptions &amp; TCO Analysis</h2>
 <p>
-        GitHub Copilot is accessed through standard individual or organization developer subscriptions:
-      </p>
-<ul>
-<li><strong>GitHub Copilot Individual ($10/month or $100/year):</strong> Individual developer license unlocking VS Code &amp; JetBrains Agent Mode, multi-file code editing, and CLI integration. Free for verified students and popular open-source maintainers.</li>
-<li><strong>GitHub Copilot Business ($19/user/month):</strong> Enterprise organization management, policy controls, IP indemnification, Copilot Extensions deployment, and zero training on private code.</li>
-<li><strong>GitHub Copilot Enterprise ($39/user/month):</strong> Deep integration with GitHub.com, custom fine-tuned indexing of organization codebases, and PR summarization at scale.</li>
-</ul>
+  GitHub Copilot operates a tiered subscription structure with token-based GitHub AI Credits for multi-model choice and agent executions <a href="#ref-1" class="ref-cite">[1]</a> <a href="#ref-2" class="ref-cite">[2]</a>. Verified as of October 13, 2026:
+</p>
+
+<div class="pricing-table-wrapper">
+  <table class="pricing-table">
+    <thead>
+      <tr>
+        <th>Subscription Tier</th>
+        <th>Monthly Rate</th>
+        <th>Yearly Rate</th>
+        <th>Included Scope &amp; Quotas</th>
+        <th>Target Persona</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Copilot Free</strong></td>
+        <td>$0 / mo</td>
+        <td>$0 / yr</td>
+        <td>2,000 code completions/mo, limited chat &amp; agent requests. Free for students, educators &amp; OSS maintainers <a href="#ref-1" class="ref-cite">[1]</a>.</td>
+        <td>Students &amp; open-source builders</td>
+      </tr>
+      <tr>
+        <td><strong>Copilot Pro (Individual)</strong></td>
+        <td><strong>$10 / mo</strong></td>
+        <td><strong>$100 / yr</strong><br><span style="font-size:0.75rem;color:var(--cyan);">(Save $20/yr)</span></td>
+        <td>Unlimited code completions, monthly AI Credits pool (~$15 value), multi-model selection (Claude 3.5 Sonnet, GPT-4o, Gemini) <a href="#ref-5" class="ref-cite">[5]</a>.</td>
+        <td>Professional individual developers</td>
+      </tr>
+      <tr>
+        <td><strong>Copilot Pro+</strong></td>
+        <td><strong>$39 / mo</strong></td>
+        <td><strong>$468 / yr</strong></td>
+        <td>Expanded AI Credits for sustained autonomous agent loops, CLI commands &amp; multi-file refactoring <a href="#ref-2" class="ref-cite">[2]</a>.</td>
+        <td>High-volume developers &amp; power users</td>
+      </tr>
+      <tr>
+        <td><strong>Copilot Max</strong></td>
+        <td><strong>$100 / mo</strong></td>
+        <td><strong>$1,200 / yr</strong></td>
+        <td>Maximum personal credit allowance for continuous background agent execution and large codebase auditing.</td>
+        <td>Technical leads &amp; architect power users</td>
+      </tr>
+      <tr>
+        <td><strong>Copilot Business</strong></td>
+        <td><strong>$19 / user / mo</strong></td>
+        <td><strong>$228 / user / yr</strong></td>
+        <td>Organization-wide seat management, policy controls, commercial IP indemnification, 1,900 shared credits/seat <a href="#ref-6" class="ref-cite">[6]</a>.</td>
+        <td>Startups &amp; growing engineering teams</td>
+      </tr>
+      <tr>
+        <td><strong>Copilot Enterprise</strong></td>
+        <td><strong>$39 / user / mo</strong></td>
+        <td><strong>$468 / user / yr</strong></td>
+        <td>Deep GitHub.com codebase indexing, custom PR summarization, organization knowledge bases, 3,900 shared credits/seat <a href="#ref-10" class="ref-cite">[10]</a>.</td>
+        <td>Large enterprise engineering divisions</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </article>
 <!-- SECTION 5: ENTERPRISE BEST PRACTICES -->
 <article class="content-card">
@@ -782,14 +916,14 @@ if __name__ == "__main__":
 <ul>
 <li><strong>Mandatory Branch Protection:</strong> Ensure agents can only push to dedicated feature branches (e.g., <code>copilot/*</code>) with mandatory CI status checks and peer reviews before merging to <code>main</code>.</li>
 <li><strong>Pre-Commit Linter Verification:</strong> Equip agents with hooks that execute local formatters (Prettier, Ruff, Black) automatically before staging git diffs.</li>
-<li><strong>Secret Scanning Integration:</strong> Block agent commits containing potential API tokens or private keys using GitHub Secret Scanning push protection.</li>
+<li><strong>Secret Scanning <a href="#ref-8" class="ref-cite">[8]</a> Integration:</strong> Block agent commits containing potential API tokens or private keys using GitHub Secret Scanning <a href="#ref-8" class="ref-cite">[8]</a> push protection.</li>
 </ul>
 </article>
 <!-- SECTION 6: COPILOT WORKSPACE LIFECYCLE -->
 <article class="content-card">
-<h2>6. Copilot Workspace: Autonomous Issue-to-Pull-Request Lifecycles</h2>
+<h2>6. Copilot Workspace <a href="#ref-4" class="ref-cite">[4]</a>: Autonomous Issue-to-Pull-Request Lifecycles</h2>
 <p>
-        Copilot Workspace re-engineers how software engineering teams transition from a backlog ticket to merged production code. Rather than forcing developers to manually clone repos, branch, explore dependencies, write boilerplate, and write tests, Workspace establishes an end-to-end autonomous pipeline:
+        Copilot Workspace <a href="#ref-4" class="ref-cite">[4]</a> re-engineers how software engineering teams transition from a backlog ticket to merged production code. Rather than forcing developers to manually clone repos, branch, explore dependencies, write boilerplate, and write tests, Workspace establishes an end-to-end autonomous pipeline:
       </p>
 <ul>
 <li><strong>Specification Synthesis from Issues:</strong> When a developer triggers Workspace on a GitHub Issue, the agent reads the bug description, customer reproduction steps, and linked discussions. It synthesizes a human-readable Specification detailing the expected behavior change.</li>
@@ -815,19 +949,19 @@ if __name__ == "__main__":
 </article>
 <!-- SECTION 8: CODEQL, AUTOFIX & SECRET SCANNING -->
 <article class="content-card">
-<h2>8. CodeQL Static Analysis, Copilot Autofix &amp; Secret Scanning Guardrails</h2>
+<h2>8. CodeQL Static Analysis, Copilot Autofix &amp; Secret Scanning <a href="#ref-8" class="ref-cite">[8]</a> Guardrails</h2>
 <p>
         Autonomous code generation without rigorous automated security oversight introduces severe technical debt. GitHub integrates enterprise security directly into the Copilot agent lifecycle:
       </p>
 <ul>
 <li><strong>Copilot Autofix with CodeQL:</strong> When GitHub Advanced Security detects a SQL injection, Cross-Site Scripting (XSS), or buffer overflow vulnerability via CodeQL semantic analysis, Copilot Autofix automatically generates a targeted patch with an explanation of the underlying security flaw and proposed test cases.</li>
-<li><strong>Push Protection Against Leaked Credentials:</strong> If an autonomous agent attempts to stage a commit containing API keys, private certificates, or cloud credentials, GitHub Secret Scanning blocks the git push before the commit reaches the remote server.</li>
+<li><strong>Push Protection Against Leaked Credentials:</strong> If an autonomous agent attempts to stage a commit containing API keys, private certificates, or cloud credentials, GitHub Secret Scanning <a href="#ref-8" class="ref-cite">[8]</a> blocks the git push before the commit reaches the remote server.</li>
 <li><strong>Dependency Review &amp; Dependabot Remediation:</strong> Agents automatically upgrade compromised package versions in <code>package.json</code> or <code>requirements.txt</code>, testing build compatibility in ephemeral containers before opening PRs.</li>
 </ul>
 </article>
 <!-- SECTION 9: COPILOT CLI & TERMINAL WORKFLOWS -->
 <article class="content-card">
-<h2>9. Copilot CLI &amp; Autonomous Terminal Automation Workflows</h2>
+<h2>9. Copilot CLI <a href="#ref-7" class="ref-cite">[7]</a> &amp; Autonomous Terminal Automation Workflows</h2>
 <p>
         Software development happens extensively inside the command line. GitHub Copilot in the CLI (<code>gh copilot</code>) bridges natural language intent with POSIX shell operations:
       </p>
@@ -900,14 +1034,94 @@ if __name__ == "__main__":
 <ul>
 <li><strong>Phase 1 — Interactive Copilot Chat &amp; CLI:</strong> Onboard development squads to conversational debugging, unit test scaffolding, and CLI assistance to build developer trust in model recommendations.</li>
 <li><strong>Phase 2 — Agent Mode &amp; Automated PR Reviews:</strong> Enable multi-file Agent Mode in IDEs, accompanied by mandatory branch protection policies, pre-commit linters, and automated GitHub Actions review bots.</li>
-<li><strong>Phase 3 — Fully Autonomous Workspace Pipelines:</strong> Deploy Copilot Workspace for automated issue triage, background bug fixing, and continuous dependency security patching, unlocking 40%+ productivity gains across core development backlogs.</li>
+<li><strong>Phase 3 — Fully Autonomous Workspace Pipelines:</strong> Deploy Copilot Workspace <a href="#ref-4" class="ref-cite">[4]</a> for automated issue triage, background bug fixing, and continuous dependency security patching, unlocking 40%+ productivity gains <a href="#ref-9" class="ref-cite">[9]</a> across core development backlogs.</li>
 </ul>
 </article>
+<!-- SECTION 7: REFERENCES & GROUNDED SOURCES -->
+<article class="content-card" id="references">
+<h2>7. References &amp; Authoritative Grounding Sources (October 13, 2026)</h2>
+<p>
+  Verified against current GitHub documentation, enterprise terms, and official research:
+</p>
+<ul class="ref-list">
+  <li class="ref-item" id="ref-1">
+    <span class="ref-num">[1]</span>
+    <div>
+      <strong>GitHub Copilot Plans &amp; Subscription Pricing</strong> — GitHub Official Pricing (October 2026). Verified individual, business, and enterprise rate schedules. <br>
+      <a class="ref-link" href="https://github.com/pricing#copilot" target="_blank" rel="noopener noreferrer">https://github.com/pricing#copilot</a>
+    </div>
+  </li>
+  <li class="ref-item" id="ref-2">
+    <span class="ref-num">[2]</span>
+    <div>
+      <strong>GitHub AI Credits System &amp; Metering Architecture</strong> — GitHub Documentation (2026). Token credit pools, model consumption multipliers, and overage policies. <br>
+      <a class="ref-link" href="https://docs.github.com/en/copilot/about-github-copilot/about-github-ai-credits" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/copilot/about-github-copilot/about-github-ai-credits</a>
+    </div>
+  </li>
+  <li class="ref-item" id="ref-3">
+    <span class="ref-num">[3]</span>
+    <div>
+      <strong>GitHub Copilot Extensions &amp; Protocol Specification</strong> — GitHub Developer Platform (2026). Developing third-party agent extensions and tools. <br>
+      <a class="ref-link" href="https://docs.github.com/en/copilot/building-copilot-extensions" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/copilot/building-copilot-extensions</a>
+    </div>
+  </li>
+  <li class="ref-item" id="ref-4">
+    <span class="ref-num">[4]</span>
+    <div>
+      <strong>Copilot Workspace: Autonomous Issue-to-Pull-Request Lifecycle</strong> — GitHub Next Research (2024–2026). Full-repo multi-file plan-and-execute developer workflows. <br>
+      <a class="ref-link" href="https://github.blog/news-insights/product-news/github-copilot-workspace/" target="_blank" rel="noopener noreferrer">https://github.blog/news-insights/product-news/github-copilot-workspace/</a>
+    </div>
+  </li>
+  <li class="ref-item" id="ref-5">
+    <span class="ref-num">[5]</span>
+    <div>
+      <strong>Multi-Model Support in Copilot (Claude 3.5 Sonnet, GPT-4o, Gemini)</strong> — GitHub Blog (2026). Bringing multi-vendor model selection to the developer IDE. <br>
+      <a class="ref-link" href="https://github.blog/news-insights/product-news/bringing-developer-choice-to-copilot/" target="_blank" rel="noopener noreferrer">https://github.blog/news-insights/product-news/bringing-developer-choice-to-copilot/</a>
+    </div>
+  </li>
+  <li class="ref-item" id="ref-6">
+    <span class="ref-num">[6]</span>
+    <div>
+      <strong>GitHub Copilot Trust Center &amp; Commercial IP Indemnity</strong> — GitHub Resources (2026). Enterprise data privacy, SOC 2 compliance, and zero code retention. <br>
+      <a class="ref-link" href="https://resources.github.com/copilot-trust-center/" target="_blank" rel="noopener noreferrer">https://resources.github.com/copilot-trust-center/</a>
+    </div>
+  </li>
+  <li class="ref-item" id="ref-7">
+    <span class="ref-num">[7]</span>
+    <div>
+      <strong>Copilot in the CLI: Terminal Command Synthesis &amp; Debugging</strong> — GitHub Documentation (2026). Shell script generation and explanation tools. <br>
+      <a class="ref-link" href="https://docs.github.com/en/copilot/github-copilot-in-the-cli" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/copilot/github-copilot-in-the-cli</a>
+    </div>
+  </li>
+  <li class="ref-item" id="ref-8">
+    <span class="ref-num">[8]</span>
+    <div>
+      <strong>GitHub Secret Scanning Push Protection &amp; Security Controls</strong> — GitHub Security (2026). Preventing credential exfiltration in automated commits. <br>
+      <a class="ref-link" href="https://docs.github.com/en/code-security/secret-scanning" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/code-security/secret-scanning</a>
+    </div>
+  </li>
+  <li class="ref-item" id="ref-9">
+    <span class="ref-num">[9]</span>
+    <div>
+      <strong>Measuring Developer Velocity &amp; Code Quality with GitHub Copilot</strong> — Harvard Business School &amp; MIT Research (2025–2026). Empirical velocity benchmarks. <br>
+      <a class="ref-link" href="https://github.blog/news-insights/research/research-quantifying-github-copilots-impact/" target="_blank" rel="noopener noreferrer">https://github.blog/news-insights/research/research-quantifying-github-copilots-impact/</a>
+    </div>
+  </li>
+  <li class="ref-item" id="ref-10">
+    <span class="ref-num">[10]</span>
+    <div>
+      <strong>GitHub Copilot Enterprise Deployment Guide for Engineering Leadership</strong> — GitHub Enterprise (2026). Organization rollout best practices and metric tracking. <br>
+      <a class="ref-link" href="https://resources.github.com/enterprise-ai/" target="_blank" rel="noopener noreferrer">https://resources.github.com/enterprise-ai/</a>
+    </div>
+  </li>
+</ul>
+</article>
+
 <!-- CTA BANNER -->
 <div class="cta-banner">
 <h2 style="color:#fff;font-size:1.8rem;margin-bottom:0.75rem;">Scale Autonomous Software Engineering</h2>
 <p style="color:#94a3b8;max-width:620px;margin:0 auto 1.5rem;font-size:0.95rem;">
-        Looking to deploy custom GitHub Copilot Extensions or automate repetitive issue-to-PR pipelines? 
+        Looking to deploy custom GitHub Copilot Extensions <a href="#ref-3" class="ref-cite">[3]</a> or automate repetitive issue-to-PR pipelines? 
         Let’s build your repository agents.
       </p>
 <a class="btn btn-primary" href="contact.html">Commission Copilot AI Agent Team →</a>

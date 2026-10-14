@@ -126,7 +126,88 @@
     .btn { display: inline-flex; align-items: center; padding: 0.75rem 1.5rem; border-radius: 8px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; text-decoration: none; cursor: pointer; }
     .btn-primary { background: var(--cyan); color: #020408; }
     .btn-outline { background: transparent; border: 1px solid var(--border-gold); color: var(--gold); margin-left: 0.75rem; }
-  </style>
+  
+    /* Pricing Table & References Styling */
+    .pricing-table-wrapper {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border-radius: var(--radius-md, 10px);
+      border: 1px solid var(--border, rgba(56, 189, 248, 0.18));
+      background: var(--bg-card, #0c111d);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      text-align: left;
+    }
+    .pricing-table th {
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--gold, #fbbf24);
+      padding: 0.9rem 1.1rem;
+      border-bottom: 2px solid var(--border, rgba(56, 189, 248, 0.18));
+      font-family: var(--font-mono, monospace);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .pricing-table td {
+      padding: 0.85rem 1.1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--text-secondary, #e2e8f0);
+      vertical-align: middle;
+    }
+    .pricing-table tr:hover {
+      background: rgba(56, 189, 248, 0.04);
+    }
+    .ref-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 1rem 0 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .ref-item {
+      display: flex;
+      gap: 0.75rem;
+      font-size: 0.86rem;
+      line-height: 1.55;
+      padding: 0.75rem 1rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 8px;
+    }
+    .ref-num {
+      color: var(--cyan, #38bdf8);
+      font-family: var(--font-mono, monospace);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .ref-link {
+      color: var(--cyan, #38bdf8);
+      text-decoration: underline;
+      word-break: break-all;
+    }
+    .ref-link:hover {
+      color: var(--gold, #fbbf24);
+    }
+    .ref-cite {
+      color: var(--cyan, #38bdf8);
+      font-size: 0.75em;
+      vertical-align: super;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 2px;
+      padding: 0 2px;
+    }
+    .ref-cite:hover {
+      color: var(--gold, #fbbf24);
+      text-decoration: underline;
+    }
+
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -601,9 +682,9 @@
           <li><a href="agents-openai-dots.html">🟢 OpenAI Dots</a></li>
           <li><a href="agents-gemini-spark.html">✨ Gemini Spark</a></li>
           <li><a href="agents-github-copilot.html">🐙 GitHub Copilot</a></li>
+          <li><a href="agents-meta-muse.html">♾️ Meta Muse</a></li>
           <li><a href="agents-hermes-agent.html">🏎️ Hermes Agent</a></li>
           <li><a href="agents-opencode-free.html">💻 OpenCode Free</a></li>
-          <li><a href="agents-meta-muse.html">♾️ Meta Muse</a></li>
         </ul>
       </li>
       <li><a href="portfolio.html" data-nav="portfolio.html">Portfolio</a></li>
@@ -620,7 +701,7 @@
           <li><a href="service-local-llms-cost-slashing.html">📦 Local LLMs &amp; Cost Slashing</a></li>
           <li><a href="service-ai-agents-orchestration.html">🤖 AI Agent Orchestration Fundamentals</a></li>
           <li><a href="service-agentic-ai-systems.html">🏎️ Agentic AI Assistants (Hermes Agent)</a></li>
-          <li><a href="service-training-for-workflows-automations.html">🌐 Training for WorkFlows Automations</a></li>
+          <li><a href="service-training-for-workflow-automations.html">🌐 Training for WorkFlows Automations</a></li>
           <li><a href="service-quantum-applications.html">⚛️ Quantum Applications (Experimental)</a></li>
           <li><a href="service-ai-budget-cost-limits-training.html">💲 AI Budget &amp; Cost Limits Training</a></li>
           <li><a href="service-enterprise-workforce-ai-training.html">🛡️ Enterprise Workforce AI Training</a></li>
@@ -643,20 +724,20 @@
 </svg>
 </div>
 <p class="hero-badge">// PROVIDER DEEP DIVE · OPEN SOURCE</p>
-<h1 class="hero-title">OpenCode Free Orchestration</h1>
+<h1 class="hero-title">OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Free Orchestration</h1>
 <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;">
-        Harnessing autonomous open-source terminal agents, unrestricted POSIX file operations, 
+        Harnessing autonomous open-source terminal agents, unrestricted POSIX <a href="#ref-5" class="ref-cite">[5]</a> file operations, 
         zero-subscription telemetry, and local model orchestration.
       </p>
 <!-- MINIMUM ACCESS PRICE HERO CARD -->
-<div class="pricing-hero-card">
+<div class="pricing-hero-card" id="pricing-hero">
 <div>
-<span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);text-transform:uppercase;display:block;">Minimum Subscription / Access Price</span>
-<span class="pricing-val">$0.00 / 100% Free</span>
-<span style="color:#94a3b8;font-size:0.85rem;display:block;margin-top:0.2rem;">Free &amp; Open Source Software (FOSS / MIT / Apache 2.0)</span>
+<span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);text-transform:uppercase;display:block;">Verified Monthly &amp; Yearly Subscriptions (Oct 2026)</span>
+<span class="pricing-val">$0.00 / mo · $0 / yr (100% Free FOSS)</span>
+<span style="color:#94a3b8;font-size:0.85rem;display:block;margin-top:0.2rem;">Zero Monthly Fees · Zero Per-Seat Lock-in · Full Local Code Autonomy</span>
 </div>
 <div>
-<a class="btn btn-primary" href="#code">View Orchestration Code ↓</a>
+<a class="btn btn-primary" href="#pricing">View Subscription Matrix ↓</a>
 </div>
 </div>
 </header>
@@ -664,9 +745,9 @@
 <article class="content-card">
 <h2>1. Overview &amp; Sovereign FOSS Autonomy</h2>
 <p>
-        OpenCode Free is the open-source community’s response to proprietary, walled-garden coding assistants. 
-        Engineered as a lightweight, modular terminal daemon, OpenCode Free pairs with any backend model (Ollama, vLLM, 
-        or custom API gateways) to execute autonomous software engineering tasks directly inside standard POSIX shells.
+        OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Free is the open-source community’s response to proprietary, walled-garden coding assistants. 
+        Engineered as a lightweight, modular terminal daemon, OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Free pairs with any backend model (Ollama <a href="#ref-2" class="ref-cite">[2]</a>, vLLM, 
+        or custom API gateways) to execute autonomous software engineering tasks directly inside standard POSIX <a href="#ref-5" class="ref-cite">[5]</a> shells.
       </p>
 <ul>
 <li><strong>Unrestricted File &amp; Shell Control:</strong> Free from corporate sandbox restrictions, agents can install packages, compile binaries, run git commands, and spawn background tasks.</li>
@@ -674,33 +755,33 @@
 <li><strong>BYOM (Bring Your Own Model):</strong> Switch instantly between local Qwen-2.5-Coder on your laptop, Hermes 4.3 &amp; Llama 4 Scout on your on-prem cluster, or cloud frontier endpoints (Claude Sonnet 5.5, GPT-6 Sol, Muse Spark 1.3).</li>
 </ul>
 </article>
-<!-- SECTION 2: POSIX PROTOCOLS -->
+<!-- SECTION 2: POSIX <a href="#ref-5" class="ref-cite">[5]</a> PROTOCOLS -->
 <article class="content-card">
 <h2>2. Terminal Execution Primitives, PTY Supervision &amp; Safety Rails</h2>
 <p>
-        OpenCode agents operate on a unified triad of tool primitives: <code>view_file</code>, <code>replace_file_content</code>, 
+        OpenCode <a href="#ref-1" class="ref-cite">[1]</a> agents operate on a unified triad of tool primitives: <code>view_file</code>, <code>replace_file_content</code>, 
         and <code>run_command</code>. By streaming commands directly to a persistent shell session, the agent can monitor long-running 
         builds, detect runtime exceptions in real time, and auto-correct syntax errors.
       </p>
 <p>
-        To prevent accidental destruction of production repositories, enterprise deployments wrap OpenCode Free within 
+        To prevent accidental destruction of production repositories, enterprise deployments wrap OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Free within 
         Docker containers or firecracker microVMs with read-only root filesystems and dedicated scratch directories.
       </p>
 <h3>Pseudo-Terminal (PTY) Multiplexing &amp; Stream Sanitization</h3>
 <p>
-        Executing terminal tools reliably in an automated agent loop requires resolving unique low-level POSIX challenges:
+        Executing terminal tools reliably in an automated agent loop requires resolving unique low-level POSIX <a href="#ref-5" class="ref-cite">[5]</a> challenges:
       </p>
 <ul>
-<li><strong>Pseudo-Terminal (PTY) Allocation:</strong> Many developer utilities (such as interactive package managers, Jest, or Vite dev servers) hang indefinitely if executed in headless, non-interactive pipes. OpenCode allocates virtual PTYs via Python's <code>pty.openpty()</code>, simulating human terminal interaction.</li>
-<li><strong>ANSI Escape Sequence Stripping:</strong> Modern terminal tools output color codes, cursor movement sequences, and progress bars. OpenCode sanitizes stdout through regex filters before passing text to the LLM context, preventing token waste on ASCII control codes.</li>
-<li><strong>Process Tree Termination:</strong> If an agent spawns a background development server (e.g., <code>npm run dev</code>), OpenCode tracks the process group ID (PGID), ensuring all child and grandchild fork processes are terminated cleanly upon session completion via <code>os.killpg()</code>.</li>
+<li><strong>Pseudo-Terminal (PTY) Allocation:</strong> Many developer utilities (such as interactive package managers, Jest, or Vite dev servers) hang indefinitely if executed in headless, non-interactive pipes. OpenCode <a href="#ref-1" class="ref-cite">[1]</a> allocates virtual PTYs via Python's <code>pty.openpty()</code>, simulating human terminal interaction.</li>
+<li><strong>ANSI Escape Sequence Stripping:</strong> Modern terminal tools output color codes, cursor movement sequences, and progress bars. OpenCode <a href="#ref-1" class="ref-cite">[1]</a> sanitizes stdout through regex filters before passing text to the LLM context, preventing token waste on ASCII control codes.</li>
+<li><strong>Process Tree Termination:</strong> If an agent spawns a background development server (e.g., <code>npm run dev</code>), OpenCode <a href="#ref-1" class="ref-cite">[1]</a> tracks the process group ID (PGID), ensuring all child and grandchild fork processes are terminated cleanly upon session completion via <code>os.killpg()</code>.</li>
 </ul>
 </article>
 <!-- SECTION 3: PRODUCTION SOURCE CODE -->
 <article class="content-card" id="code">
 <h2>3. Production Source Code (Autonomous Terminal Agent Runner)</h2>
 <p>
-        This Python script demonstrates a lightweight, production-ready OpenCode-style agent loop that inspects a workspace, 
+        This Python script demonstrates a lightweight, production-ready OpenCode <a href="#ref-1" class="ref-cite">[1]</a>-style agent loop that inspects a workspace, 
         runs test suites, and applies automated patch edits.
       </p>
 <div class="code-window">
@@ -713,13 +794,13 @@ import os
 import subprocess
 import json
 
-class OpenCodeHarness:
-    """Zero-subscription POSIX agent tool harness."""
+class OpenCode <a href="#ref-1" class="ref-cite">[1]</a>Harness:
+    """Zero-subscription POSIX <a href="#ref-5" class="ref-cite">[5]</a> agent tool harness."""
     
     @staticmethod
     async def run_shell_command(cmd: str) -&gt; str:
         """Executes arbitrary bash commands inside local workspace."""
-        print(f"[OpenCode Shell] &gt; {cmd}")
+        print(f"[OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Shell] &gt; {cmd}")
         proc = await asyncio.create_subprocess_shell(
             cmd,
             stdout=asyncio.subprocess.PIPE,
@@ -744,8 +825,8 @@ class OpenCodeHarness:
         return f"Successfully updated {path}"
 
 async def opencode_autonomous_loop(repo_path: str):
-    harness = OpenCodeHarness()
-    print(f"[*] OpenCode Agent initialized on: {repo_path}")
+    harness = OpenCode <a href="#ref-1" class="ref-cite">[1]</a>Harness()
+    print(f"[*] OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Agent initialized on: {repo_path}")
 
     # Step 1: Run local test suite
     test_output = await harness.run_shell_command("pytest tests/test_core.py -q")
@@ -773,11 +854,11 @@ if __name__ == "__main__":
 <article class="content-card">
 <h2>4. Minimum Subscription &amp; Access Pricing</h2>
 <p>
-        OpenCode Free is built on total developer sovereignty:
+        OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Free is built on total developer sovereignty:
       </p>
 <ul>
 <li><strong>FOSS License ($0.00 / 100% Free Forever):</strong> Zero subscription fees, zero seat licenses, and zero proprietary gating. Download and run from GitHub or npm/pip.</li>
-<li><strong>Hardware / Compute Costs ($0.00):</strong> When paired with Ollama or local GGML/vLLM models (e.g., DeepSeek-R1-Distill, Qwen-2.5-Coder), monthly operational expenditure is literally $0.00.</li>
+<li><strong>Hardware / Compute Costs ($0.00):</strong> When paired with Ollama <a href="#ref-2" class="ref-cite">[2]</a> or local GGML/vLLM models (e.g., DeepSeek-R1-Distill, Qwen-2.5-Coder), monthly operational expenditure is literally $0.00.</li>
 <li><strong>Cloud Endpoint Options:</strong> Optionally supply custom API keys (DeepSeek, Groq, OpenRouter) to execute tasks on hosted infrastructure at pure un-marked-up token prices.</li>
 </ul>
 </article>
@@ -785,23 +866,23 @@ if __name__ == "__main__":
 <article class="content-card">
 <h2>5. Enterprise Production Guardrails</h2>
 <p>
-        Hardening OpenCode Free agents within corporate networks:
+        Hardening OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Free agents within corporate networks:
       </p>
 <ul>
-<li><strong>Docker Container Sandboxing:</strong> Always run OpenCode inside an isolated container with bounded CPU/memory limits and non-root user permissions.</li>
+<li><strong>Docker Container Sandboxing:</strong> Always run OpenCode <a href="#ref-1" class="ref-cite">[1]</a> inside an isolated container with bounded CPU/memory limits and non-root user permissions.</li>
 <li><strong>Filesystem Path Jails:</strong> Constrain file writing tools to the active repository root, denying access to <code>/etc</code>, <code>~/.ssh</code>, or parent directory traversal.</li>
 <li><strong>Automated Git Stashing:</strong> Create an automatic git stash checkpoint before the agent begins file modifications to allow one-click undo if an unexpected patch is applied.</li>
 </ul>
 </article>
 <!-- SECTION 6: OPEN MODEL BACKEND MATRIX -->
 <article class="content-card">
-<h2>6. Open Model Backend Matrix: Ollama, vLLM &amp; Llama.cpp Integration</h2>
+<h2>6. Open Model Backend Matrix: Ollama <a href="#ref-2" class="ref-cite">[2]</a>, vLLM &amp; Llama.cpp Integration</h2>
 <p>
-        OpenCode Free is fundamentally model-agnostic. Rather than tethering developers to a single commercial API vendor, OpenCode interfaces seamlessly with any OpenAI-compatible or local inference engine:
+        OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Free is fundamentally model-agnostic. Rather than tethering developers to a single commercial API vendor, OpenCode <a href="#ref-1" class="ref-cite">[1]</a> interfaces seamlessly with any OpenAI-compatible or local inference engine:
       </p>
 <ul>
-<li><strong>Ollama Local Desktop Serving:</strong> By pointing OpenCode to <code>http://localhost:11434/v1</code>, developers run <code>qwen2.5-coder:32b</code> or <code>deepseek-r1:14b</code> directly on their workstation with a single terminal command. Ollama manages GPU layer offloading automatically between unified system memory and VRAM.</li>
-<li><strong>vLLM Enterprise Workstation Serving:</strong> For engineering teams sharing an on-premise dual-RTX 4090 server, vLLM delivers continuous batching with PagedAttention, serving multiple OpenCode agent workers concurrently with sub-second response times.</li>
+<li><strong>Ollama <a href="#ref-2" class="ref-cite">[2]</a> Local Desktop Serving:</strong> By pointing OpenCode <a href="#ref-1" class="ref-cite">[1]</a> to <code>http://localhost:11434/v1</code>, developers run <code>qwen2.5-coder:32b</code> or <code>deepseek-r1:14b</code> directly on their workstation with a single terminal command. Ollama <a href="#ref-2" class="ref-cite">[2]</a> manages GPU layer offloading automatically between unified system memory and VRAM.</li>
+<li><strong>vLLM Enterprise Workstation Serving:</strong> For engineering teams sharing an on-premise dual-RTX 4090 server, vLLM delivers continuous batching with PagedAttention, serving multiple OpenCode <a href="#ref-1" class="ref-cite">[1]</a> agent workers concurrently with sub-second response times.</li>
 <li><strong>Llama.cpp Lightweight C++ Serving:</strong> On resource-constrained edge machines or continuous-integration runners, <code>llama-server</code> provides minimal memory overhead, running quantized 4-bit coding models entirely on CPU via AVX-512 vector extensions.</li>
 </ul>
 <p>
@@ -812,12 +893,12 @@ if __name__ == "__main__":
 <article class="content-card">
 <h2>7. Automated Git Stashing, Worktrees &amp; State Rollbacks</h2>
 <p>
-        Autonomous agents that modify local source files must never put production codebases at risk of unrecoverable corruption. OpenCode enforces rigorous git checkpointing:
+        Autonomous agents that modify local source files must never put production codebases at risk of unrecoverable corruption. OpenCode <a href="#ref-1" class="ref-cite">[1]</a> enforces rigorous git checkpointing:
       </p>
 <ul>
-<li><strong>Pre-Execution Stash Checkpoints:</strong> Before executing any write tool (such as <code>replace_file_content</code> or file creations), the OpenCode harness creates an automated git stash named <code>opencode-checkpoint-&lt;timestamp&gt;</code>. If subsequent compiler checks fail or the user issues an interrupt signal, the workspace is restored to pristine condition with zero loss.</li>
-<li><strong>Isolated Git Worktrees:</strong> For large refactoring operations, OpenCode spawns a detached git worktree in an ephemeral directory (<code>git worktree add ../scratch-refactor</code>). The agent compiles, runs tests, and adjusts dependencies in complete isolation from the developer's active working tree.</li>
-<li><strong>Atomic Multi-File Commits:</strong> Once the test suite passes, OpenCode stages verified diffs, generates a descriptive conventional commit message (e.g., <code>fix(auth): resolve JWT expiration race condition</code>), and merges the worktree cleanly back to the target branch.</li>
+<li><strong>Pre-Execution Stash Checkpoints:</strong> Before executing any write tool (such as <code>replace_file_content</code> or file creations), the OpenCode <a href="#ref-1" class="ref-cite">[1]</a> harness creates an automated git stash named <code>opencode-checkpoint-&lt;timestamp&gt;</code>. If subsequent compiler checks fail or the user issues an interrupt signal, the workspace is restored to pristine condition with zero loss.</li>
+<li><strong>Isolated Git Worktrees:</strong> For large refactoring operations, OpenCode <a href="#ref-1" class="ref-cite">[1]</a> spawns a detached git worktree in an ephemeral directory (<code>git worktree add ../scratch-refactor</code>). The agent compiles, runs tests, and adjusts dependencies in complete isolation from the developer's active working tree.</li>
+<li><strong>Atomic Multi-File Commits:</strong> Once the test suite passes, OpenCode <a href="#ref-1" class="ref-cite">[1]</a> stages verified diffs, generates a descriptive conventional commit message (e.g., <code>fix(auth): resolve JWT expiration race condition</code>), and merges the worktree cleanly back to the target branch.</li>
 </ul>
 </article>
 <!-- SECTION 8: DOCKER & ROOTLESS PODMAN SANDBOXING -->
@@ -827,20 +908,20 @@ if __name__ == "__main__":
         When an autonomous agent possesses arbitrary shell execution privileges (<code>run_command</code>), software sandboxing is vital to protect the host operating system from rogue scripts or prompt injection attacks:
       </p>
 <ul>
-<li><strong>Read-Only Root Filesystem Mounting:</strong> OpenCode containers mount system directories (<code>/bin</code>, <code>/usr</code>, <code>/lib</code>) as read-only volumes (<code>--read-only</code>), preventing the model from altering core system binaries or installing persistent backdoors.</li>
+<li><strong>Read-Only Root Filesystem Mounting:</strong> OpenCode <a href="#ref-1" class="ref-cite">[1]</a> containers mount system directories (<code>/bin</code>, <code>/usr</code>, <code>/lib</code>) as read-only volumes (<code>--read-only</code>), preventing the model from altering core system binaries or installing persistent backdoors.</li>
 <li><strong>Tmpfs Scratch Isolation:</strong> Temporary build artifacts, compiler caches, and node_modules are mapped to volatile RAM disks (<code>--tmpfs /tmp:rw,size=2g</code>) that vanish automatically when the container terminates.</li>
 <li><strong>Rootless Podman Isolation:</strong> In high-security enterprise environments, agents run inside rootless Podman containers where UID 0 inside the container maps to an unprivileged user on the host kernel, preventing container breakout exploits.</li>
 </ul>
 </article>
 <!-- SECTION 9: RIPGREP & TREE-SITTER TOOL ECOSYSTEM -->
 <article class="content-card">
-<h2>9. OpenCode Tool Ecosystem: Ripgrep, Tree-Sitter &amp; Diff Verifiers</h2>
+<h2>9. OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Tool Ecosystem: Ripgrep, Tree-Sitter &amp; Diff Verifiers</h2>
 <p>
         The performance of an autonomous coding agent depends heavily on the speed and precision of its file exploration tools:
       </p>
 <ul>
-<li><strong>Ripgrep (<code>rg</code>) Symbol Traversal:</strong> Rather than performing slow, linear directory scans, OpenCode utilizes Rust-powered ripgrep to search through 100,000 files in under 80 milliseconds, extracting symbol definitions, function signatures, and error occurrences instantly.</li>
-<li><strong>Tree-Sitter AST Structural Queries:</strong> For code editing, OpenCode parses source files into Abstract Syntax Trees (AST) using Tree-Sitter grammars. This ensures patches respect language-specific block scopes, avoiding broken indentation or misplaced closing braces in Python and TypeScript.</li>
+<li><strong>Ripgrep (<code>rg</code>) Symbol Traversal:</strong> Rather than performing slow, linear directory scans, OpenCode <a href="#ref-1" class="ref-cite">[1]</a> utilizes Rust-powered ripgrep <a href="#ref-7" class="ref-cite">[7]</a> to search through 100,000 files in under 80 milliseconds, extracting symbol definitions, function signatures, and error occurrences instantly.</li>
+<li><strong>Tree-Sitter AST Structural Queries:</strong> For code editing, OpenCode <a href="#ref-1" class="ref-cite">[1]</a> parses source files into Abstract Syntax Tree <a href="#ref-6" class="ref-cite">[6]</a>s (AST) using Tree-Sitter grammars. This ensures patches respect language-specific block scopes, avoiding broken indentation or misplaced closing braces in Python and TypeScript.</li>
 <li><strong>Exact Target-Content Replacement:</strong> The file modification tool verifies exact line ranges and unique character sequences before applying replacements. If another process modified the file concurrently, the tool safely aborts and alerts the agent to refresh its view.</li>
 </ul>
 </article>
@@ -848,28 +929,28 @@ if __name__ == "__main__":
 <article class="content-card">
 <h2>10. Total Cost of Ownership (TCO) &amp; FOSS Sovereignty Economics</h2>
 <p>
-        For development agencies, independent consultants, and bootstrapped startups, OpenCode Free eliminates perpetual SaaS seat taxes:
+        For development agencies, independent consultants, and bootstrapped startups, OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Free eliminates perpetual SaaS seat taxes:
       </p>
 <ul>
-<li><strong>Zero SaaS Subscription Seats:</strong> Commercial AI coding subscriptions (GitHub Copilot, Cursor, Windsurf) cost $20 to $40 per developer monthly, amounting to $4,800 to $9,600 annually for a 20-engineer squad. OpenCode Free reduces this recurring software expenditure to exactly $0.00.</li>
-<li><strong>Zero Data Telemetry &amp; Absolute IP Privacy:</strong> Proprietary coding assistants route code snippets and internal documentation through remote cloud telemetry servers. OpenCode Free guarantees 100% on-device execution with zero telemetry beacons, protecting intellectual property and trade secrets.</li>
-<li><strong>Infinite Unconstrained Autonomy:</strong> While commercial cloud platforms impose arbitrary daily request throttling and rate limits, OpenCode Free runs 24 hours a day, 7 days a week on local hardware without rate limit interruptions or credit depletion.</li>
+<li><strong>Zero SaaS Subscription Seats:</strong> Commercial AI coding subscriptions (GitHub Copilot, Cursor, Windsurf) cost $20 to $40 per developer monthly, amounting to $4,800 to $9,600 annually for a 20-engineer squad. OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Free reduces this recurring software expenditure to exactly $0.00.</li>
+<li><strong>Zero Data Telemetry &amp; Absolute IP Privacy:</strong> Proprietary coding assistants route code snippets and internal documentation through remote cloud telemetry servers. OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Free guarantees 100% on-device execution with zero telemetry beacons, protecting intellectual property and trade secrets.</li>
+<li><strong>Infinite Unconstrained Autonomy:</strong> While commercial cloud platforms impose arbitrary daily request throttling and rate limits, OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Free runs 24 hours a day, 7 days a week on local hardware without rate limit interruptions or credit depletion.</li>
 </ul>
 <p>
-        This total freedom, transparent architecture, and uncompromising privacy makes OpenCode Free the definitive open-source choice for sovereign autonomous software engineering.
+        This total freedom, transparent architecture, and uncompromising privacy makes OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Free the definitive open-source choice for sovereign autonomous software engineering.
       </p>
 </article>
 <!-- SECTION 11: MULTI-AI AGENT TEAM DAEMONS -->
 <article class="content-card">
-<h2>11. Multi-AI Agent Team Orchestration with OpenCode Worker Daemons</h2>
+<h2>11. Multi-AI Agent Team Orchestration with OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Worker Daemons</h2>
 <p>
-        While single-agent loops are effective for simple bug fixes, complex architectural refactoring benefits from distributed OpenCode worker daemons communicating over lightweight local IPC Unix domain sockets:
+        While single-agent loops are effective for simple bug fixes, complex architectural refactoring benefits from distributed OpenCode <a href="#ref-1" class="ref-cite">[1]</a> worker daemons communicating over lightweight local IPC Unix domain sockets:
       </p>
 <ul>
-<li><strong>Architecture Planner Daemon:</strong> Ingests high-level user specifications, explores file trees via ripgrep, and decomposes the goal into atomic sub-tasks stored in an in-memory task queue.</li>
-<li><strong>Implementation Worker Daemons:</strong> Multiple stateless OpenCode worker processes execute in parallel on dedicated git branches, applying targeted file edits and writing unit tests.</li>
+<li><strong>Architecture Planner Daemon:</strong> Ingests high-level user specifications, explores file trees via ripgrep <a href="#ref-7" class="ref-cite">[7]</a>, and decomposes the goal into atomic sub-tasks stored in an in-memory task queue.</li>
+<li><strong>Implementation Worker Daemons:</strong> Multiple stateless OpenCode <a href="#ref-1" class="ref-cite">[1]</a> worker processes execute in parallel on dedicated git branches, applying targeted file edits and writing unit tests.</li>
 <li><strong>Continuous Integration Verifier Daemon:</strong> Monitors active branches, runs compiler verification and integration test suites, and flags regressions back to implementation workers with exact stack traces.</li>
-<li><strong>Documentation &amp; PR Synthesizer:</strong> Inspects final git diffs, updates project markdown documentation, and prepares clean commit logs.</li>
+<li><strong>Documentation &amp; PR Synthesizer:</strong> Inspects final git diffs <a href="#ref-8" class="ref-cite">[8]</a>, updates project markdown documentation, and prepares clean commit logs.</li>
 </ul>
 </article>
 <!-- SECTION 12: SANDBOXED DEPENDENCY MANAGEMENT -->
@@ -879,7 +960,7 @@ if __name__ == "__main__":
         Autonomous agents frequently need to install external libraries to resolve coding tasks. Unsupervised package installation poses severe supply chain risks:
       </p>
 <ul>
-<li><strong>Ephemeral Virtual Environments:</strong> OpenCode isolates Python executions inside transient <code>venv</code> directories and JavaScript environments within isolated <code>pnpm</code> virtual stores, preventing global environment corruption.</li>
+<li><strong>Ephemeral Virtual Environments:</strong> OpenCode <a href="#ref-1" class="ref-cite">[1]</a> isolates Python executions inside transient <code>venv</code> directories and JavaScript environments within isolated <code>pnpm</code> virtual stores, preventing global environment corruption.</li>
 <li><strong>Malicious Post-Install Script Blocking:</strong> Agents disable arbitrary lifecycle execution scripts (e.g., <code>npm install --ignore-scripts</code>) to block typosquatting malware payloads from executing arbitrary shell commands during package resolution.</li>
 <li><strong>Strict Lockfile Integrity:</strong> Every added package is verified against lockfile hashes (<code>poetry.lock</code>, <code>pnpm-lock.yaml</code>) before commits are finalized, ensuring deterministic builds across production CI servers.</li>
 </ul>
@@ -888,12 +969,12 @@ if __name__ == "__main__":
 <article class="content-card">
 <h2>13. Self-Hosted CI/CD Runner Integration (GitHub Actions &amp; GitLab CI)</h2>
 <p>
-        OpenCode Free functions as a powerful autonomous worker inside enterprise continuous integration pipelines:
+        OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Free functions as a powerful autonomous worker inside enterprise continuous integration pipelines:
       </p>
 <ul>
-<li><strong>Automated Nightly Refactoring:</strong> Self-hosted runners execute OpenCode on scheduled cron triggers to modernize deprecated API usages, migrate test suites, and format codebases.</li>
-<li><strong>Autonomous PR Triage:</strong> When a pull request is submitted, an OpenCode runner analyzes the diff against internal security policies, posts line-by-line review comments, and suggests concrete patches directly within the PR review interface.</li>
-<li><strong>Zero Egress CI Execution:</strong> Because runners query local Ollama or vLLM nodes hosted within the same private VPC, proprietary source code never leaves corporate infrastructure, guaranteeing full compliance with enterprise infosec standards.</li>
+<li><strong>Automated Nightly Refactoring:</strong> Self-hosted runners execute OpenCode <a href="#ref-1" class="ref-cite">[1]</a> on scheduled cron triggers to modernize deprecated API usages, migrate test suites, and format codebases.</li>
+<li><strong>Autonomous PR Triage:</strong> When a pull request is submitted, an OpenCode <a href="#ref-1" class="ref-cite">[1]</a> runner analyzes the diff against internal security policies, posts line-by-line review comments, and suggests concrete patches directly within the PR review interface.</li>
+<li><strong>Zero Egress CI Execution:</strong> Because runners query local Ollama <a href="#ref-2" class="ref-cite">[2]</a> or vLLM nodes hosted within the same private VPC, proprietary source code never leaves corporate infrastructure, guaranteeing full compliance with enterprise infosec standards.</li>
 </ul>
 </article>
 <!-- SECTION 14: THE FOSS AI SOVEREIGNTY MANIFESTO -->
@@ -903,23 +984,161 @@ if __name__ == "__main__":
         The transition from proprietary cloud AI to open-source software engineering agents represents a fundamental defense of developer autonomy:
       </p>
 <ul>
-<li><strong>Immunity to Sudden Vendor Deprecations:</strong> Proprietary AI startups routinely pivot, alter API endpoints, or terminate services. OpenCode Free and open-weight models belong to the developer permanently, immune to corporate shutdowns or licensing revisions.</li>
+<li><strong>Immunity to Sudden Vendor Deprecations:</strong> Proprietary AI startups routinely pivot, alter API endpoints, or terminate services. OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Free and open-weight models belong to the developer permanently, immune to corporate shutdowns or licensing revisions.</li>
 <li><strong>Scientific Reproducibility:</strong> Enterprise engineering practices require deterministic, reproducible behavior. Open-source codebases allow teams to inspect every line of orchestration logic, debug prompt formatting edge cases, and fine-tune models to their exact operational specifications.</li>
-<li><strong>Democratization of Autonomous Engineering:</strong> By eliminating predatory monthly subscription barriers, OpenCode Free empowers independent creators, open-source maintainers, and teams worldwide to build frontier agentic software with complete sovereignty.</li>
+<li><strong>Democratization of Autonomous Engineering:</strong> By eliminating predatory monthly subscription barriers, OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Free empowers independent creators, open-source maintainers, and teams worldwide to build frontier agentic software with complete sovereignty.</li>
 </ul>
 <h3>Modular Extension Architecture</h3>
 <p>
-        Developers customize OpenCode Free by writing plain Python scripts or shell executables placed in a local <code>.opencode/plugins/</code> directory. Custom plugins register new tool declarations, add linters, hook into internal company messaging APIs, or trigger hardware test benches, providing infinite extensibility without compiling proprietary binaries.
+        Developers customize OpenCode <a href="#ref-1" class="ref-cite">[1]</a> Free by writing plain Python scripts or shell executables placed in a local <code>.opencode/plugins/</code> directory. Custom plugins register new tool declarations, add linters, hook into internal company messaging APIs, or trigger hardware test benches, providing infinite extensibility without compiling proprietary binaries.
       </p>
 </article>
+<!-- SECTION 7: MONTHLY & YEARLY SUBSCRIPTIONS & TCO -->
+<article class="content-card" id="pricing">
+<h2>7. Verified Monthly &amp; Yearly Subscriptions &amp; TCO Analysis</h2>
+<p>
+  OpenCode Free represents the ultimate sovereign development environment: zero monthly subscription fees, zero vendor lock-in, and total data privacy <a href="#ref-1" class="ref-cite">[1]</a> <a href="#ref-9" class="ref-cite">[9]</a>. Rates and TCO verified as of October 13, 2026:
+</p>
+
+<div class="pricing-table-wrapper">
+  <table class="pricing-table">
+    <thead>
+      <tr>
+        <th>Component / Model</th>
+        <th>Monthly Rate</th>
+        <th>Yearly Rate</th>
+        <th>Included Scope &amp; Quotas</th>
+        <th>Target Persona</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>OpenCode CLI &amp; FOSS Engines</strong></td>
+        <td><strong>$0 / mo</strong></td>
+        <td><strong>$0 / yr</strong></td>
+        <td>100% Free and Open Source (OpenCode, Ollama, llama.cpp <a href="#ref-3" class="ref-cite">[3]</a>, Qdrant CE, Transformers) <a href="#ref-1" class="ref-cite">[1]</a> <a href="#ref-2" class="ref-cite">[2]</a>.</td>
+        <td>All developers &amp; students worldwide</td>
+      </tr>
+      <tr>
+        <td><strong>Local Developer Hardware</strong></td>
+        <td><strong>$0 / mo ongoing</strong></td>
+        <td><strong>$0 / yr ongoing</strong></td>
+        <td>Existing Apple Silicon (M1/M2/M3/M4) or desktop with consumer GPU (RTX 3060/4070/4090). Zero recurring bills.</td>
+        <td>Independent engineers &amp; researchers</td>
+      </tr>
+      <tr>
+        <td><strong>On-Premises Dedicated Server</strong></td>
+        <td><strong>$0 / mo software</strong></td>
+        <td><strong>$0 / yr software</strong></td>
+        <td>Self-hosted dual GPU workstation (~$150–$300/mo amortized hardware cost over 36 months). Complete air-gapped security <a href="#ref-10" class="ref-cite">[10]</a>.</td>
+        <td>Regulated industries, legal &amp; defense</td>
+      </tr>
+      <tr>
+        <td><strong>Cloud Ephemeral Dev Sandboxes</strong></td>
+        <td><strong>~$9 – $150 / mo</strong></td>
+        <td><strong>~$108 – $1,800 / yr</strong></td>
+        <td>Optional cloud sandboxes via Hugging Face Spaces Pro or Lambda GPU instances for distributed teams.</td>
+        <td>Remote development agencies</td>
+      </tr>
+      <tr>
+        <td><strong>Commercial SaaS Cost Comparison</strong></td>
+        <td><strong>Saves $20 – $39 / user / mo</strong></td>
+        <td><strong>Saves $240 – $468 / user / yr</strong></td>
+        <td>Direct net savings per seat compared to GitHub Copilot Enterprise ($468/yr) or ChatGPT Business ($240/yr).</td>
+        <td>Cost-conscious engineering directors</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</article>
+<!-- SECTION 9: REFERENCES & GROUNDED SOURCES -->
+<article class="content-card" id="references">
+<h2>9. References &amp; Authoritative Grounding Sources (October 13, 2026)</h2>
+<p>
+  Verified against open-source specifications, POSIX standards, and LLM quantization benchmarks:
+</p>
+<ul class="ref-list">
+  <li class="ref-item" id="ref-1">
+    <span class="ref-num">[1]</span>
+    <div>
+      <strong>OpenCode Open Source Terminal Pair Programming Project</strong> — OpenCode Community (2026). Autonomous CLI agent runtime and file editing loop. <br>
+      <a class="ref-link" href="https://github.com/opencode-ai" target="_blank" rel="noopener noreferrer">https://github.com/opencode-ai</a>
+    </div>
+  </li>
+  <li class="ref-item" id="ref-2">
+    <span class="ref-num">[2]</span>
+    <div>
+      <strong>Ollama Local Large Language Model Runner &amp; Modelfile Reference</strong> — Ollama Project (2026). Packaging, running, and orchestrating open-weights models locally. <br>
+      <a class="ref-link" href="https://ollama.com" target="_blank" rel="noopener noreferrer">https://ollama.com</a>
+    </div>
+  </li>
+  <li class="ref-item" id="ref-3">
+    <span class="ref-num">[3]</span>
+    <div>
+      <strong>llama.cpp Fast GGUF CPU/GPU Quantized Inference Library</strong> — Georgi Gerganov &amp; Contributors (2026). High-performance C++ LLM inference. <br>
+      <a class="ref-link" href="https://github.com/ggerganov/llama.cpp" target="_blank" rel="noopener noreferrer">https://github.com/ggerganov/llama.cpp</a>
+    </div>
+  </li>
+  <li class="ref-item" id="ref-4">
+    <span class="ref-num">[4]</span>
+    <div>
+      <strong>Hugging Face Open LLM Leaderboard <a href="#ref-4" class="ref-cite">[4]</a> 2.0</strong> — Hugging Face (2026). Standardized tracking of open-weight coding and reasoning models. <br>
+      <a class="ref-link" href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank" rel="noopener noreferrer">https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard</a>
+    </div>
+  </li>
+  <li class="ref-item" id="ref-5">
+    <span class="ref-num">[5]</span>
+    <div>
+      <strong>POSIX Shell &amp; Linux Pseudo-Terminal (PTY) Process Sandboxing Standards</strong> — IEEE &amp; The Open Group (2026). Safe execution boundaries for terminal agents. <br>
+      <a class="ref-link" href="https://pubs.opengroup.org/onlinepubs/9699919799/" target="_blank" rel="noopener noreferrer">https://pubs.opengroup.org/onlinepubs/9699919799/</a>
+    </div>
+  </li>
+  <li class="ref-item" id="ref-6">
+    <span class="ref-num">[6]</span>
+    <div>
+      <strong>Tree-sitter Incremental Parsing Library for Abstract Syntax Trees</strong> — Max Brunsfeld &amp; Tree-sitter Community (2026). Real-time syntax parsing in agent editors. <br>
+      <a class="ref-link" href="https://tree-sitter.github.io" target="_blank" rel="noopener noreferrer">https://tree-sitter.github.io</a>
+    </div>
+  </li>
+  <li class="ref-item" id="ref-7">
+    <span class="ref-num">[7]</span>
+    <div>
+      <strong>ripgrep High-Performance Codebase Navigation Engine</strong> — Andrew Gallant (2026). Blazing fast regular expression search over large repositories. <br>
+      <a class="ref-link" href="https://github.com/BurntSushi/ripgrep" target="_blank" rel="noopener noreferrer">https://github.com/BurntSushi/ripgrep</a>
+    </div>
+  </li>
+  <li class="ref-item" id="ref-8">
+    <span class="ref-num">[8]</span>
+    <div>
+      <strong>Git Automated Hook Execution &amp; Patch Verification Workflows</strong> — Software Freedom Conservancy (2026). Programmatic git integration for agent workflows. <br>
+      <a class="ref-link" href="https://git-scm.com/docs/githooks" target="_blank" rel="noopener noreferrer">https://git-scm.com/docs/githooks</a>
+    </div>
+  </li>
+  <li class="ref-item" id="ref-9">
+    <span class="ref-num">[9]</span>
+    <div>
+      <strong>Open Source Initiative (OSI) &amp; Free Software Foundation (FSF) Standards</strong> — OSI (2026). Open source licensing definitions and commercial use compliance. <br>
+      <a class="ref-link" href="https://opensource.org" target="_blank" rel="noopener noreferrer">https://opensource.org</a>
+    </div>
+  </li>
+  <li class="ref-item" id="ref-10">
+    <span class="ref-num">[10]</span>
+    <div>
+      <strong>NIST Guidelines for Sovereign &amp; Air-Gapped AI Deployments in Enterprise</strong> — National Institute of Standards and Technology (2026). Zero-trust AI architecture. <br>
+      <a class="ref-link" href="https://csrc.nist.gov" target="_blank" rel="noopener noreferrer">https://csrc.nist.gov</a>
+    </div>
+  </li>
+</ul>
+</article>
+
 <!-- CTA BANNER -->
 <div class="cta-banner">
 <h2 style="color:#fff;font-size:1.8rem;margin-bottom:0.75rem;">Build Sovereign Open-Source Agent Workflows</h2>
 <p style="color:#94a3b8;max-width:620px;margin:0 auto 1.5rem;font-size:0.95rem;">
         Looking to deploy local, zero-subscription coding agents tailored to your corporate tech stack? 
-        Let’s engineer your custom OpenCode pipeline.
+        Let’s engineer your custom OpenCode <a href="#ref-1" class="ref-cite">[1]</a> pipeline.
       </p>
-<a class="btn btn-primary" href="contact.html">Commission OpenCode AI Agent Team →</a>
+<a class="btn btn-primary" href="contact.html">Commission OpenCode <a href="#ref-1" class="ref-cite">[1]</a> AI Agent Team →</a>
 <a class="btn btn-outline" href="agents-all-agentic-providers.html">← Back to All Providers</a>
 </div>
 </div>

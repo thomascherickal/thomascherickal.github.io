@@ -6,7 +6,7 @@
       "@id": "https://thomascherickal.github.io/pricing.html#webpage",
       "url": "https://thomascherickal.github.io/pricing.html",
       "name": "Services Pricing & Engagement Packages — Thomas Cherickal",
-      "description": "Transparent milestone pricing across 6 core pillars: 01 AI Agent Mastery, 02 Workforce Training, 03 Local LLMs & Cost Slashing, 04 Dedicated AI Sprints, 05 Startup Enablement (50% Off), and 06 Global Equity & Parity Tiers (Purchasing Power Parity for 198 countries, Non-Profits, and Underprivileged Teams).",
+      "description": "Transparent flat-rate pricing across Enterprise Services: 01 AI Agent Mastery, 02 Workforce AI Training, 03 Local LLMs & Inference Cost Slashing with Global Parity across 198 countries.",
       "isPartOf": {
         "@id": "https://thomascherickal.github.io/#website"
       },
@@ -40,7 +40,7 @@
       "@type": "OfferCatalog",
       "@id": "https://thomascherickal.github.io/pricing.html#offercatalog",
       "name": "Services Pricing & Engagement Packages — Thomas Cherickal",
-      "description": "Transparent milestone pricing across 6 core pillars: 01 AI Agent Mastery, 02 Workforce AI Training, 03 Local LLMs & Cost Slashing, 04 Dedicated AI Sprints, 05 Startup Enablement (50% Off), and 06 Global Equity (6 Tiers of Payment & Parity).",
+      "description": "Transparent flat-rate pricing across Enterprise Services: 01 AI Agent Mastery, 02 Workforce AI Training, 03 Local LLMs & Inference Cost Slashing with Global Parity across 198 countries.",
       "url": "https://thomascherickal.github.io/pricing.html",
       "offeredBy": {
         "@id": "https://thomascherickal.github.io/#person"
@@ -49,34 +49,32 @@
         {
           "@type": "Offer",
           "name": "01 — AI Agent Mastery",
-          "description": "Create teams of AI agents with Claude, OpenAI, Gemini, or Grok. Standard Sprint: $3,000 USD | Full Deployment: $6,000 USD. Parity rates: Tier 2 (25% off) $2,250 / $4,500; Tier 3 & 4 (50% off) $1,500 / $3,000; Tier 5 (75% off) $750 / $1,500; Tier 6 custom subsidized relief.",
+          "description": "Create teams of AI agents with Claude, OpenAI, Gemini, or Grok. Flat base rate: $2,000 USD. Parity rates: Tier 2 (25% off) $1,500; Tier 3 & 4 (50% off) $1,000; Tier 5 (75% off) $500; Tier 6 custom subsidized relief across 198 countries.",
+          "price": "2000.00",
+          "priceCurrency": "USD",
           "priceSpecification": [
             {
               "@type": "PriceSpecification",
               "name": "Tier 1 (Standard / 100%)",
-              "minPrice": "3000.00",
-              "maxPrice": "6000.00",
+              "price": "2000.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
               "name": "Tier 2 (Developing / 25% Off)",
-              "minPrice": "2250.00",
-              "maxPrice": "4500.00",
+              "price": "1500.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
               "name": "Tier 3 & 4 (Least Developed & Startups / 50% Off)",
-              "minPrice": "1500.00",
-              "maxPrice": "3000.00",
+              "price": "1000.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
               "name": "Tier 5 (Academia & Non-Profits / 75% Off)",
-              "minPrice": "750.00",
-              "maxPrice": "1500.00",
+              "price": "500.00",
               "priceCurrency": "USD"
             },
             {
@@ -91,34 +89,32 @@
         {
           "@type": "Offer",
           "name": "02 — Workforce AI Training (Live & Remote)",
-          "description": "Live and remote training for Employees, Developers, Staff, and CXOs. Standard Cohort: $4,000 USD | Enterprise Cohorts: $8,000 USD. Parity rates: Tier 2 (25% off) $3,000 / $6,000; Tier 3 & 4 (50% off) $2,000 / $4,000; Tier 5 (75% off) $1,000 / $2,000; Tier 6 custom subsidized relief.",
+          "description": "Live and remote training tailored for Employees, Developers, Corporate Staff, and CXOs. Flat base rate: $2,000 USD. Parity rates: Tier 2 (25% off) $1,500; Tier 3 & 4 (50% off) $1,000; Tier 5 (75% off) $500; Tier 6 custom subsidized relief across 198 countries.",
+          "price": "2000.00",
+          "priceCurrency": "USD",
           "priceSpecification": [
             {
               "@type": "PriceSpecification",
               "name": "Tier 1 (Standard / 100%)",
-              "minPrice": "4000.00",
-              "maxPrice": "8000.00",
+              "price": "2000.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
               "name": "Tier 2 (Developing / 25% Off)",
-              "minPrice": "3000.00",
-              "maxPrice": "6000.00",
+              "price": "1500.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
               "name": "Tier 3 & 4 (Least Developed & Startups / 50% Off)",
-              "minPrice": "2000.00",
-              "maxPrice": "4000.00",
+              "price": "1000.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
               "name": "Tier 5 (Academia & Non-Profits / 75% Off)",
-              "minPrice": "1000.00",
-              "maxPrice": "2000.00",
+              "price": "500.00",
               "priceCurrency": "USD"
             },
             {
@@ -133,34 +129,32 @@
         {
           "@type": "Offer",
           "name": "03 — Local LLM Deployment & Inference Cost Slashing",
-          "description": "Slashing recurring AI API costs 60–90% with open-weight model serving (vLLM, Ollama, llama.cpp), quantization, and zero-egress pipelines. Private Cluster Setup: $3,000 USD | Full Production Pipeline: $5,000 USD. Parity rates: Tier 2 (25% off) $2,250 / $3,750; Tier 3 & 4 (50% off) $1,500 / $2,500; Tier 5 (75% off) $750 / $1,250; Tier 6 custom subsidized relief.",
+          "description": "Slashing recurring AI inference costs by deploying private open-weight models on local/on-prem hardware. Flat base rate: $2,000 USD. Parity rates: Tier 2 (25% off) $1,500; Tier 3 & 4 (50% off) $1,000; Tier 5 (75% off) $500; Tier 6 custom subsidized relief across 198 countries.",
+          "price": "2000.00",
+          "priceCurrency": "USD",
           "priceSpecification": [
             {
               "@type": "PriceSpecification",
               "name": "Tier 1 (Standard / 100%)",
-              "minPrice": "3000.00",
-              "maxPrice": "5000.00",
+              "price": "2000.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
               "name": "Tier 2 (Developing / 25% Off)",
-              "minPrice": "2250.00",
-              "maxPrice": "3750.00",
+              "price": "1500.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
               "name": "Tier 3 & 4 (Least Developed & Startups / 50% Off)",
-              "minPrice": "1500.00",
-              "maxPrice": "2500.00",
+              "price": "1000.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
               "name": "Tier 5 (Academia & Non-Profits / 75% Off)",
-              "minPrice": "750.00",
-              "maxPrice": "1250.00",
+              "price": "500.00",
               "priceCurrency": "USD"
             },
             {
@@ -169,104 +163,6 @@
               "price": "0.00",
               "priceCurrency": "USD",
               "description": "Micro-rates and customized quotes for underprivileged teams"
-            }
-          ]
-        },
-        {
-          "@type": "Offer",
-          "name": "04 — Dedicated AI Sprints",
-          "description": "Continuous engineering capacity for agent swarms, AI workflows, and TDD transformation: Fortnightly Sprints ($3,000/2-wks), Monthly Retainers ($5,000/mo), and Enterprise Quarterly Retainers ($10,000/qtr). Parity rates: Tier 2 (25% off) $2,250 / $3,750 / $7,500; Tier 3 & 4 (50% off) $1,500 / $2,500 / $5,000; Tier 5 (75% off) $750 / $1,250 / $2,500; Tier 6 custom subsidized relief.",
-          "priceSpecification": [
-            {
-              "@type": "PriceSpecification",
-              "name": "Tier 1 (Standard / 100%)",
-              "minPrice": "3000.00",
-              "maxPrice": "10000.00",
-              "priceCurrency": "USD"
-            },
-            {
-              "@type": "PriceSpecification",
-              "name": "Tier 2 (Developing / 25% Off)",
-              "minPrice": "2250.00",
-              "maxPrice": "7500.00",
-              "priceCurrency": "USD"
-            },
-            {
-              "@type": "PriceSpecification",
-              "name": "Tier 3 & 4 (Least Developed & Startups / 50% Off)",
-              "minPrice": "1500.00",
-              "maxPrice": "5000.00",
-              "priceCurrency": "USD"
-            },
-            {
-              "@type": "PriceSpecification",
-              "name": "Tier 5 (Academia & Non-Profits / 75% Off)",
-              "minPrice": "750.00",
-              "maxPrice": "2500.00",
-              "priceCurrency": "USD"
-            },
-            {
-              "@type": "PriceSpecification",
-              "name": "Tier 6 (Custom Subsidized Relief)",
-              "price": "0.00",
-              "priceCurrency": "USD",
-              "description": "Micro-rates and customized quotes for underprivileged teams"
-            }
-          ]
-        },
-        {
-          "@type": "Offer",
-          "name": "05 — Startup Enablement (50% Off)",
-          "description": "Flat 50% discount on any consulting, training, or development sprint package for early-stage startups with <$1M funding raised. Rates from $1,500 USD (Sprints) to $5,000 USD (Quarterly). Stacks with regional Purchasing Power Parity.",
-          "priceSpecification": [
-            {
-              "@type": "PriceSpecification",
-              "name": "Tier 1 (Standard / 100%)",
-              "minPrice": "1500.00",
-              "maxPrice": "5000.00",
-              "priceCurrency": "USD"
-            },
-            {
-              "@type": "PriceSpecification",
-              "name": "Tier 2 (Developing / 25% Off)",
-              "minPrice": "1125.00",
-              "maxPrice": "3750.00",
-              "priceCurrency": "USD"
-            },
-            {
-              "@type": "PriceSpecification",
-              "name": "Tier 3 & 4 (Least Developed & Startups / 50% Off)",
-              "minPrice": "750.00",
-              "maxPrice": "2500.00",
-              "priceCurrency": "USD"
-            },
-            {
-              "@type": "PriceSpecification",
-              "name": "Tier 5 (Academia & Non-Profits / 75% Off)",
-              "minPrice": "375.00",
-              "maxPrice": "1250.00",
-              "priceCurrency": "USD"
-            },
-            {
-              "@type": "PriceSpecification",
-              "name": "Tier 6 (Custom Subsidized Relief)",
-              "price": "0.00",
-              "priceCurrency": "USD",
-              "description": "Micro-rates and customized quotes for underprivileged teams"
-            }
-          ]
-        },
-        {
-          "@type": "Offer",
-          "name": "06 — Global Equity & Parity Tiers",
-          "description": "6 Tiers of Payment & Parity: Tier 1 Developed (100%), Tier 2 Developing (75% / 25% off), Tier 3 Least Developed (50% / 50% off), Tier 4 Startups (50% off), Tier 5 Non-Profits & Academia (25% / 75% off), Tier 6 Underprivileged & Backward Nations (Custom subsidized quote).",
-          "priceSpecification": [
-            {
-              "@type": "PriceSpecification",
-              "name": "Tier 6 Underprivileged & Backward Nations",
-              "price": "0.00",
-              "priceCurrency": "USD",
-              "description": "Custom subsidized quotes and micro-rates across 198 countries"
             }
           ]
         }

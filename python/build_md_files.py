@@ -263,7 +263,7 @@ def convert_services() -> str:
     lines.append("2. [📦 Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — High-throughput private inference via Ollama, vLLM, llama.cpp.")
     lines.append("3. [🤖 AI Agent Orchestration Fundamentals](service-ai-agents-orchestration.html) — Scalable swarms & state machines.")
     lines.append("4. [🏎️ Agentic AI Assistants (Hermes Agent)](service-agentic-ai-systems.html) — Persistent memory & autonomous loops.")
-    lines.append("5. [🌐 Training for WorkFlows Automations](service-training-for-workflows-automations.html) — Self-hosted n8n automations.")
+    lines.append("5. [🌐 Training for WorkFlows Automations](service-training-for-workflow-automations.html) — Self-hosted n8n automations.")
     lines.append("6. [⚛️ Quantum Applications (Experimental)](service-quantum-applications.html) — Enterprise quantum readiness.")
     lines.append("7. [💲 AI Budget & Cost Limits Training](service-ai-budget-cost-limits-training.html) — Token governance & free models.")
     lines.append("8. [🛡️ Enterprise Workforce AI Training](service-enterprise-workforce-ai-training.html) — Freshers, Devs & CXOs.")
@@ -371,7 +371,7 @@ def convert_pricing() -> str:
         "",
         "---",
         "",
-        "## Generative AI Engagement Packages",
+        "## Enterprise Services",
         ""
     ]
     
@@ -384,7 +384,7 @@ def convert_pricing() -> str:
         price_val = ""
         for div in pkg.find_all("div"):
             txt = clean_text(div.get_text())
-            if ("$" in txt or "% OFF" in txt or "OFF" in txt) and len(txt) < 30 and ("–" in txt or "-" in txt or "/mo" in txt or "OFF" in txt):
+            if ("$" in txt or "% OFF" in txt or "OFF" in txt) and len(txt) < 30 and ("–" in txt or "-" in txt or "/mo" in txt or "OFF" in txt or "USD" in txt or txt.strip().startswith("$")):
                 price_val = txt
                 break
         if not price_val:
@@ -396,7 +396,8 @@ def convert_pricing() -> str:
         if badge:
             lines.append(f"*{badge}*  ")
         if "$" in price_val:
-            lines.append(f"**Investment**: `{price_val} USD`")
+            inv = price_val if "USD" in price_val else f"{price_val} USD"
+            lines.append(f"**Investment**: `{inv}`")
         else:
             lines.append(f"**Investment**: `{price_val}`")
         lines.append("")
