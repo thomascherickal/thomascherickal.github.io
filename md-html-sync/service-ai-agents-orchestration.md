@@ -1,8 +1,8 @@
-# 🤖 AI Agent Orchestration Fundamentals (Scalable Swarms & Low Budgets)
+# 🤖 Claude AI Agent Orchestration Fundamentals (Scalable Swarms & Low Budgets)
 ## Enterprise AI Transformation Service — Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 03**  
-> **Principles of AI agent orchestration and releasing agent swarms at scale. Building autonomous multi-agent workflows that automate complex enterprise operations, even on constrained budgets.**
+> **Principles of Claude AI agent orchestration and releasing agent swarms at scale. Building autonomous multi-agent workflows that automate complex enterprise operations, even on constrained budgets.**
 
 ---
 

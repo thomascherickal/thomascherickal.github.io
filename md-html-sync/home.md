@@ -5,7 +5,7 @@
  The Digital Futurist · Remote Worldwide**  
 > **Generative AI Consultant specializing in transforming traditional businesses to an
  AI-first & AI-native organization, by providing live and remote training, teaching freshers, developers,
- staff, architects, management, and CXOs to become AI-enabled and experts in AI agent orchestration with local
+ staff, architects, management, and CXOs to become AI-enabled and experts in Claude AI agent orchestration with local
  LLMs to reduce costs.**
 
 **Location**: Chennai, India (Remote — Worldwide)  
@@ -19,7 +19,7 @@
 - `AI Training Live & Remote`
 - `Enterprise AI Integration`
 - `Local LLM Deployment`
-- `AI Agent Orchestration`
+- `Claude AI Agent Orchestration`
 - `Agentic Workflows`
 
 ---
@@ -28,7 +28,7 @@
 PG in CS from Loyola College; Generative AI Consultant specializing in helping enterprises
  adopt AI automation and training their employees to become AI-native citizens. Understanding that cost is a
  problem, I also specialize in deploying high-quality Local LLMs to remove AI inference costs using local
- hardware. Expert in Enterprise AI Transformation, Generative AI, LLMs, AI Agent orchestration, Local LLM
+ hardware. Expert in Enterprise AI Transformation, Generative AI, LLMs, Claude AI Agent orchestration, Local LLM
  deployment, AI Training and AI Consulting.
 
 ### Quick Actions
@@ -59,11 +59,11 @@ HackerNoon · Medium · Hashnode · Substack · LinkedIn · Reddit · Quora · W
 1. [📚 Portfolio & Case Studies](portfolio.html) — Detailed case studies across Generative AI Systems and Quantum Systems — the brief, the approach, and what shipped, verified in Python and Rust.
 2. [✍️ Publications](writing.html) — Selected work from 500+ publications across 10+ platforms since 2020, plus the book RECRUITED.
 3. [⚡ Capabilities & Tech Stack](expertise.html) — 10 specialized capability areas, 10 curated tech-stack chip groups, and the Python & Rust execution tooling behind every piece.
-4. [🎯 Services & Commissions](services.html) — Service offerings — AI agent orchestration, deep dives, courses, training, mentoring, enterprise LLM deployment, and Generative AI developer content.
+4. [🎯 Services & Commissions](services.html) — Service offerings — Claude AI agent orchestration, deep dives, courses, training, mentoring, enterprise LLM deployment, and Generative AI developer content.
 5. [🔬 Workflow & Verification](expertise.html#how-this-gets-made) — Research → Build → Run → Verify → Explain. AI accelerates the workflow, while human verification owns the result.
 6. [💳 Pricing & Parity Index](pricing.html) — Transparent milestone rates and an interactive 198-country Purchasing Power Parity (PPP) calculator for global equity.
 7. [❓ Frequently Asked Questions](faqs.html) — Turnaround timelines, code verification standards, AI workflows, daily service fee calculator, and collaboration details.
-8. [📬 Contact & Training](contact.html) — Commission custom emerging technologies training, AI agent orchestration, developer courses, or retainer sprints directly.
+8. [📬 Contact & Training](contact.html) — Commission custom emerging technologies training, Claude AI agent orchestration, developer courses, or retainer sprints directly.
 9. [📰 HackerNoon Profile](https://hackernoon.com/u/thomascherickal) — Explore featured deep dives, AI exploration, and published articles on HackerNoon covering AI models and devtools.
 10. [🐙 GitHub Profile](https://github.com/thomascherickal) — Inspect open-source code bases, Python and Rust scripts, quantum circuit benchmarks, and custom repositories for content.
 
@@ -71,7 +71,7 @@ HackerNoon · Medium · Hashnode · Substack · LinkedIn · Reddit · Quora · W
 
 ## Ready to Begin Your Enterprise AI Transformation?
 
-Enterprise AI transformation, AI agent orchestration, technical deep dives, generative AI agent consulting, generative AI agent training.
+Enterprise AI transformation, Claude AI agent orchestration, technical deep dives, generative AI agent consulting, generative AI agent training.
 - [Start a Conversation via Email →](contact.html)
 - [Free LinkedIn Consultation ↗](https://linkedin.com/in/thomascherickal)
 - [Commission an Enterprise AI Transformation →](contact.html)
@@ -84,7 +84,7 @@ Enterprise AI transformation, AI agent orchestration, technical deep dives, gene
 
 1. [🧠 Generative AI Transformation](service-generative-ai-transformation.html) — Convert an entire business that uses AI as a chatbot to one that works with agents, with metrics and safeguards.
 2. [📦 Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — High-throughput private open-weight model serving via Ollama, vLLM, and llama.cpp with zero external data egress.
-3. [🤖 AI Agent Orchestration Fundamentals](service-ai-agents-orchestration.html) — Principles of AI agent orchestration, releasing agent swarms at scale, using AI agents with deterministic state machines.
+3. [🤖 Claude AI Agent Orchestration Fundamentals](service-ai-agents-orchestration.html) — Principles of Claude AI agent orchestration, releasing agent swarms at scale, using AI agents with deterministic state machines.
 4. [🏎️ Agentic AI Assistants (Hermes Agent)](service-agentic-ai-systems.html) — Enterprise deployment of autonomously improving agentic assistants with persistent vector memory.
 5. [🌐 Training for WorkFlows Automations](service-training-for-workflow-automations.html) — Training in setting up n8n automations, self-hosted, to automate routine recurring workflows.
 6. [⚛️ Quantum Applications (Experimental)](service-quantum-applications.html) — Exploring quantum systems for enterprise business case uses, algorithm simulation, and practical applications.
@@ -138,4 +138,4 @@ A comprehensive transformation system showing professionals how to use frontier 
 - [🤝 Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)
 
 ---
-*© 2026 Thomas Cherickal · The Digital Futurist · Generative AI Consultant · Agentic AI Architect · AI Automation Expert · AI Trainer Live & Remote · Enterprise AI Integration · Local LLM Deployment · AI Agent Orchestration · Remote Worldwide*
+*© 2026 Thomas Cherickal · The Digital Futurist · Generative AI Consultant · Agentic AI Architect · AI Automation Expert · AI Trainer Live & Remote · Enterprise AI Integration · Local LLM Deployment · Claude AI Agent Orchestration · Remote Worldwide*

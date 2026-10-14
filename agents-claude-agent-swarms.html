@@ -1,216 +1,311 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>GitHub Copilot Architecture &amp; Orchestration Guide | Thomas Cherickal</title>
-<meta content="Architecting GitHub Copilot Agent Mode, Copilot Workspace, Extensions protocol, and automated repository pull request workflows." name="description"/>
-<meta content="Thomas Cherickal" name="author"/>
-<link href="https://thomascherickal.github.io/agents-github-copilot.html" rel="canonical"/>
-<!-- Open Graph -->
-<meta content="website" property="og:type"/>
-<meta content="https://thomascherickal.github.io/agents-github-copilot.html" property="og:url"/>
-<meta content="Thomas Cherickal — The Digital Futurist" property="og:site_name"/>
-<meta content="GitHub Copilot Architecture &amp; Orchestration Guide | Thomas Cherickal" property="og:title"/>
-<meta content="Architecting GitHub Copilot Agent Mode, Copilot Workspace, Extensions protocol, and automated repository pull request workflows." property="og:description"/>
-<meta content="https://thomascherickal.github.io/assets/og-card.png" property="og:image"/>
-<meta content="en_US" property="og:locale"/>
-<!-- Favicons -->
-<link href="assets/favicon.ico" rel="icon" sizes="any"/>
-<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<link href="/site.webmanifest" rel="manifest"/>
-<meta content="#000000" name="theme-color"/>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<!-- JSON-LD Schema -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://thomascherickal.github.io/agents-github-copilot.html#webpage",
-        "url": "https://thomascherickal.github.io/agents-github-copilot.html",
-        "name": "GitHub Copilot Architecture & Orchestration Guide | Thomas Cherickal",
-        "description": "Architecting GitHub Copilot Agent Mode, Copilot Workspace, Extensions protocol, and automated repository pull request workflows.",
-        "isPartOf": {
-          "@id": "https://thomascherickal.github.io/#website"
-        },
-        "inLanguage": "en-US",
-        "breadcrumb": {
-          "@id": "https://thomascherickal.github.io/agents-github-copilot.html#breadcrumb"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://thomascherickal.github.io/agents-github-copilot.html#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://thomascherickal.github.io/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Orchestration",
-            "item": "https://thomascherickal.github.io/agents-all-agentic-providers.html"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "GitHub Copilot",
-            "item": "https://thomascherickal.github.io/agents-github-copilot.html"
-          }
-        ]
-      },
-      {
-        "@type": "TechArticle",
-        "@id": "https://thomascherickal.github.io/agents-github-copilot.html#article",
-        "headline": "GitHub Copilot: Agent Mode, Workspace AI Agent Teams, and Custom Extension Protocols",
-        "description": "Deep engineering guide to orchestrating GitHub Copilot Agent Mode, automated CI/CD bug resolution, and enterprise licensing costs.",
-        "author": {
-          "@type": "Person",
-          "@id": "https://thomascherickal.github.io/#person",
-          "name": "Thomas Cherickal",
-          "jobTitle": "Generative AI Consultant"
-        },
-        "datePublished": "2026-10-13",
-        "inLanguage": "en-US"
-      }
-    ]
-  }
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Claude Agent Swarms: Horizontal Fan-Out & Parallel Execution | Thomas Cherickal</title>
+  <meta content="Scale Claude agents horizontally into massive swarms. Map-reduce pipelines, parallel document scanning, rate-limit governors, and fault-tolerant queue workers." name="description" />
+  <meta content="Thomas Cherickal" name="author" />
+  <link href="https://thomascherickal.github.io/agents-claude-agent-swarms.html" rel="canonical" />
+  <!-- Open Graph -->
+  <meta content="website" property="og:type" />
+  <meta content="https://thomascherickal.github.io/agents-claude-agent-swarms.html" property="og:url" />
+  <meta content="Thomas Cherickal — The Digital Futurist" property="og:site_name" />
+  <meta content="Claude Agent Swarms: Horizontal Fan-Out & Parallel Execution | Thomas Cherickal" property="og:title" />
+  <meta content="Scale Claude agents horizontally into massive swarms. Map-reduce pipelines, parallel document scanning, rate-limit governors, and fault-tolerant queue workers." property="og:description" />
+  <meta content="https://thomascherickal.github.io/assets/og-card.png" property="og:image" />
+  <meta content="en_US" property="og:locale" />
+  <!-- Favicons -->
+  <link href="assets/favicon.ico" rel="icon" sizes="any" />
+  <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
+  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="/site.webmanifest" rel="manifest" />
+  <meta content="#020408" name="theme-color" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      mermaid.initialize({ startOnLoad: true, theme: 'dark', themeVariables: { 'primaryColor': '#0c111d', 'primaryTextColor': '#38bdf8', 'primaryBorderColor': '#38bdf8', 'lineColor': '#fbbf24', 'secondaryColor': '#060912', 'tertiaryColor': '#131926' } });
+    });
   </script>
-<style>
+  <style>
     :root {
       --bg-0: #020408;
       --bg-1: #060912;
       --bg-2: #0b0f19;
-      --bg-card: linear-gradient(145deg, #0c111d 0%, #04060c 100%);
+      --bg-card: #0c111d;
+      --border: rgba(56, 189, 248, 0.2);
+      --border-gold: rgba(251, 191, 36, 0.35);
       --cyan: #38bdf8;
       --gold: #fbbf24;
-      --border: rgba(56, 189, 248, 0.18);
-      --border-gold: rgba(251, 191, 36, 0.25);
-      --glow-cyan: 0 0 24px rgba(56, 189, 248, 0.22);
-      --glow-gold: 0 0 24px rgba(251, 191, 36, 0.22);
-      --font-body: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --claude-accent: #D97757;
+      --claude-light: #F38B6C;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --font-main: 'Inter', -apple-system, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: var(--bg-0); color: #fff; font-family: var(--font-body); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
-    .container { max-width: 1040px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 2.5rem); }
-    .skip-link { position: absolute; top: -100px; left: 1rem; background: var(--cyan); color: #000; padding: 0.5rem 1rem; z-index: 9999; }
-    .skip-link:focus { top: 1rem; }
-    .back-top { position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px; border-radius: 50%; background: rgba(15, 23, 42, 0.85); border: 1px solid var(--border); color: var(--cyan); display: flex; align-items: center; justify-content: center; text-decoration: none; font-weight: 700; z-index: 90; }
-    .hero { padding: 4.5rem 0 2.5rem; text-align: center; }
-    .hero-badge { font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.15em; color: #8957E5; text-transform: uppercase; margin-bottom: 0.75rem; }
-    .hero-title { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.25; margin-bottom: 1rem; }
-    .hero-logo-box { display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; background: rgba(110, 64, 201, 0.12); border: 1.5px solid rgba(137, 87, 229, 0.45); border-radius: 20px; margin-bottom: 1.25rem; box-shadow: 0 0 24px rgba(110, 64, 201, 0.25); }
-    .pricing-hero-card { background: linear-gradient(135deg, rgba(110, 64, 201, 0.08) 0%, rgba(251, 191, 36, 0.05) 100%); border: 1.5px solid var(--border-gold); border-radius: 14px; padding: 1.5rem 2rem; margin: 2rem auto; max-width: 780px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
-    .pricing-val { font-size: 1.8rem; font-weight: 800; color: var(--gold); font-family: var(--font-mono); }
-    .content-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 2.25rem; margin-bottom: 2.25rem; }
-    .content-card h2 { color: var(--gold); font-size: 1.4rem; margin-bottom: 1rem; }
-    .content-card p { color: #e2e8f0; font-size: 0.96rem; margin-bottom: 1rem; line-height: 1.75; }
-    .content-card ul { color: #cbd5e1; font-size: 0.94rem; margin-left: 1.5rem; margin-bottom: 1.25rem; line-height: 1.75; }
-    .code-window { background: #040711; border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 12px; margin: 1.75rem 0; overflow: hidden; }
-    .code-bar { display: flex; align-items: center; justify-content: space-between; padding: 0.65rem 1.25rem; background: rgba(15, 23, 42, 0.95); border-bottom: 1px solid rgba(56, 189, 248, 0.15); font-family: var(--font-mono); font-size: 0.78rem; color: #94a3b8; }
-    .code-pre { padding: 1.25rem 1.5rem; overflow-x: auto; font-family: var(--font-mono); font-size: 0.86rem; line-height: 1.65; color: #e2e8f0; }
-    .copy-btn { background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: var(--cyan); font-family: var(--font-mono); font-size: 0.72rem; padding: 0.3rem 0.75rem; border-radius: 6px; cursor: pointer; }
-    .copy-btn:hover { background: var(--cyan); color: #020408; font-weight: 700; }
-    .cta-banner { background: #070c18; border: 1.5px solid var(--border-gold); border-radius: 16px; padding: 3rem 2rem; text-align: center; margin: 3rem 0 2rem; }
-    .btn { display: inline-flex; align-items: center; padding: 0.75rem 1.5rem; border-radius: 8px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; text-decoration: none; cursor: pointer; }
-    .btn-primary { background: var(--cyan); color: #020408; }
-    .btn-outline { background: transparent; border: 1px solid var(--border-gold); color: var(--gold); margin-left: 0.75rem; }
-  
-    /* Pricing Table & References Styling */
-    .pricing-table-wrapper {
-      overflow-x: auto;
-      margin: 1.5rem 0;
-      border-radius: var(--radius-md, 10px);
-      border: 1px solid var(--border, rgba(56, 189, 248, 0.18));
-      background: var(--bg-card, #0c111d);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    }
-    .pricing-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.88rem;
-      text-align: left;
-    }
-    .pricing-table th {
-      background: rgba(15, 23, 42, 0.95);
-      color: var(--gold, #fbbf24);
-      padding: 0.9rem 1.1rem;
-      border-bottom: 2px solid var(--border, rgba(56, 189, 248, 0.18));
-      font-family: var(--font-mono, monospace);
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-    .pricing-table td {
-      padding: 0.85rem 1.1rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      color: var(--text-secondary, #e2e8f0);
-      vertical-align: middle;
-    }
-    .pricing-table tr:hover {
-      background: rgba(56, 189, 248, 0.04);
-    }
-    .ref-list {
-      list-style: none;
-      padding-left: 0;
-      margin: 1rem 0 0 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-    }
-    .ref-item {
-      display: flex;
-      gap: 0.75rem;
-      font-size: 0.86rem;
-      line-height: 1.55;
-      padding: 0.75rem 1rem;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 8px;
-    }
-    .ref-num {
-      color: var(--cyan, #38bdf8);
-      font-family: var(--font-mono, monospace);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-    .ref-link {
-      color: var(--cyan, #38bdf8);
-      text-decoration: underline;
-      word-break: break-all;
-    }
-    .ref-link:hover {
-      color: var(--gold, #fbbf24);
-    }
-    .ref-cite {
-      color: var(--cyan, #38bdf8);
-      font-size: 0.75em;
-      vertical-align: super;
-      text-decoration: none;
-      font-weight: 600;
-      margin-left: 2px;
-      padding: 0 2px;
-    }
-    .ref-cite:hover {
-      color: var(--gold, #fbbf24);
-      text-decoration: underline;
+      --font-display: 'Cinzel', serif;
     }
 
-</style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-0);
+      color: var(--text);
+      font-family: var(--font-main);
+      line-height: 1.65;
+      padding-top: 72px;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+    }
+
+    .hero {
+      padding: 4.5rem 0 2.5rem;
+      text-align: center;
+    }
+
+    .hero-badge {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      color: var(--claude-accent);
+      text-transform: uppercase;
+      margin-bottom: 0.85rem;
+      font-weight: 700;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 1.15rem;
+      background: linear-gradient(135deg, #ffffff 40%, #e2e8f0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      color: #94a3b8;
+      max-width: 780px;
+      margin: 0 auto 1.75rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+
+    .content-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2.5rem;
+      margin-bottom: 2.25rem;
+      text-align: left;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .content-card h2 {
+      color: var(--gold);
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      line-height: 1.35;
+      border-bottom: 1px solid rgba(251, 191, 36, 0.15);
+      padding-bottom: 0.6rem;
+    }
+
+    .content-card h3 {
+      color: var(--cyan);
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 1.85rem 0 0.85rem;
+      line-height: 1.4;
+    }
+
+    .content-card p {
+      color: #e2e8f0;
+      font-size: 0.98rem;
+      margin-bottom: 1.15rem;
+      line-height: 1.8;
+    }
+
+    .content-card ul, .content-card ol {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+      margin-left: 1.6rem;
+      margin-bottom: 1.35rem;
+      line-height: 1.8;
+    }
+
+    .content-card li {
+      margin-bottom: 0.75rem;
+    }
+
+    .content-card strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .content-card a {
+      color: var(--gold);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .content-card a:hover {
+      color: var(--cyan);
+    }
+
+    code:not(pre code) {
+      font-family: var(--font-mono);
+      font-size: 0.88em;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.22);
+      color: #7dd3fc;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      word-break: break-word;
+    }
+
+    .code-window {
+      background: #040711;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 12px;
+      margin: 1.85rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+    }
+
+    .code-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.25rem;
+      background: rgba(15, 23, 42, 0.95);
+      border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    .code-pre {
+      padding: 1.35rem 1.6rem;
+      overflow-x: auto;
+      font-family: var(--font-mono);
+      font-size: 0.86rem;
+      line-height: 1.68;
+      color: #e2e8f0;
+      tab-size: 4;
+    }
+
+    .mermaid-container {
+      background: #050814;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.75rem 0;
+      text-align: center;
+      overflow-x: auto;
+    }
+
+    .step-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .step-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 10px;
+      padding: 1.25rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--cyan);
+    }
+
+    .step-num {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--cyan);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .step-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-desc {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      line-height: 1.55;
+    }
+
+    .cta-banner {
+      background: #070c18;
+      border: 1.5px solid var(--border-gold);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 3rem 0 2rem;
+      box-shadow: 0 0 28px rgba(251, 191, 36, 0.18);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.65rem;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: var(--cyan);
+      color: #020408 !important;
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.3);
+    }
+    .btn-primary:hover {
+      background: #7dd3fc;
+      box-shadow: 0 0 24px rgba(56, 189, 248, 0.5);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--border-gold);
+      color: var(--gold) !important;
+      box-shadow: 0 0 12px rgba(251, 191, 36, 0.15);
+      margin-left: 0.85rem;
+    }
+    .btn-outline:hover {
+      background: rgba(251, 191, 36, 0.12);
+      border-color: var(--gold);
+    }
+  </style>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+
   <!-- START:HEADER -->
   <style id="header-styles">
     /* Global Root Mobile & Tablet Safeguards */
@@ -675,16 +770,18 @@
           Agents <span class="dropdown-caret">▾</span>
         </a>
         <ul class="dropdown-menu">
-          <li><a href="agents-all-agentic-providers.html" class="dropdown-header-link">🌐 All Agentic Providers</a></li>
+          <li><a href="agents-claude-101.html" class="dropdown-header-link">🟣 Claude Agents Suite</a></li>
           <li class="dropdown-divider"></li>
-          <li><a href="agents-claude-agents.html">🟣 Claude Agents</a></li>
-          <li><a href="agents-grok-bot.html">⚡ Grok Bot</a></li>
-          <li><a href="agents-openai-dots.html">🟢 OpenAI Dots</a></li>
-          <li><a href="agents-gemini-spark.html">✨ Gemini Spark</a></li>
-          <li><a href="agents-github-copilot.html">🐙 GitHub Copilot</a></li>
-          <li><a href="agents-meta-muse.html">♾️ Meta Muse</a></li>
-          <li><a href="agents-hermes-agent.html">🏎️ Hermes Agent</a></li>
-          <li><a href="agents-opencode-free.html">💻 OpenCode Free</a></li>
+          <li><a href="agents-claude-101.html">🚀 Claude Agents 101</a></li>
+          <li><a href="agents-claude-code.html">💻 Claude Code CLI</a></li>
+          <li><a href="agents-claude-skills.html">🧩 Claude Skills &amp; Extensibility</a></li>
+          <li><a href="agents-claude-cowork.html">🖥️ Claude Cowork &amp; Computer Use</a></li>
+          <li><a href="agents-claude-mcp.html">🔌 Model Context Protocol (MCP)</a></li>
+          <li><a href="agents-claude-agent-teams.html">👥 Claude Agent Teams</a></li>
+          <li><a href="agents-claude-agent-swarms.html">🐝 Claude Agent Swarms</a></li>
+          <li><a href="agents-claude-design.html">📐 Claude Agent Design Patterns</a></li>
+          <li><a href="agents-claude-budget-limits.html">💲 Claude Budget Limits &amp; Caching</a></li>
+          <li><a href="agents-claude-local-llms.html">📦 Claude &amp; Local LLM Hybrids</a></li>
         </ul>
       </li>
       <li><a href="portfolio.html" data-nav="portfolio.html">Portfolio</a></li>
@@ -699,7 +796,7 @@
           <li class="dropdown-divider"></li>
           <li><a href="service-generative-ai-transformation.html">🧠 Generative AI Transformation</a></li>
           <li><a href="service-local-llms-cost-slashing.html">📦 Local LLMs &amp; Cost Slashing</a></li>
-          <li><a href="service-ai-agents-orchestration.html">🤖 AI Agent Orchestration Fundamentals</a></li>
+          <li><a href="service-ai-agents-orchestration.html">🤖 Claude AI Agent Orchestration Fundamentals</a></li>
           <li><a href="service-agentic-ai-systems.html">🏎️ Agentic AI Assistants (Hermes Agent)</a></li>
           <li><a href="service-training-for-workflow-automations.html">🌐 Training for WorkFlows Automations</a></li>
           <li><a href="service-quantum-applications.html">⚛️ Quantum Applications (Experimental)</a></li>
@@ -714,421 +811,89 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-<a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
-<main id="main">
-<div class="container">
-<header class="hero">
-<div class="hero-logo-box">
-<svg aria-hidden="true" fill="#FFFFFF" height="46" viewbox="0 0 24 24" width="46">
-<path d="M12 5a7 7 0 00-7 7c0 3.1 2 5.7 4.8 6.6.35.06.48-.15.48-.34v-1.2c-1.95.42-2.36-.94-2.36-.94-.32-.81-.78-1.03-.78-1.03-.64-.44.05-.43.05-.43.7.05 1.07.72 1.07.72.63 1.08 1.64.77 2.04.59.06-.46.25-.77.45-.95-1.56-.18-3.2-.78-3.2-3.48 0-.77.27-1.4.72-1.89-.07-.18-.31-.9.07-1.87 0 0 .59-.19 1.94.72a6.8 6.8 0 013.53 0c1.35-.91 1.94-.72 1.94-.72.38.97.14 1.69.07 1.87.45.49.72 1.12.72 1.89 0 2.71-1.64 3.3-3.21 3.47.25.22.48.65.48 1.3v1.93c0 .19.13.4.49.34A7 7 0 0019 12a7 7 0 00-7-7z" fill="#FFF"></path>
-</svg>
-</div>
-<p class="hero-badge">// PROVIDER DEEP DIVE · GITHUB &amp; MICROSOFT</p>
-<h1 class="hero-title">GitHub Copilot Orchestration</h1>
-<p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;">
-        Harnessing Copilot Agent Mode, Copilot Workspace <a href="#ref-4" class="ref-cite">[4]</a>, custom GitHub Extensions, 
-        and full-repository autonomous Pull Request lifecycles.
-      </p>
-<!-- MINIMUM ACCESS PRICE HERO CARD -->
-<div class="pricing-hero-card" id="pricing-hero">
-<div>
-<span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);text-transform:uppercase;display:block;">Verified Monthly &amp; Yearly Subscriptions (Oct 2026)</span>
-<span class="pricing-val">$10 / mo · $100 / yr</span>
-<span style="color:#94a3b8;font-size:0.85rem;display:block;margin-top:0.2rem;">Copilot Free ($0) · Pro ($10/mo, $100/yr) · Business ($19/user/mo, $228/yr) · Enterprise ($39/mo, $468/yr)</span>
-</div>
-<div>
-<a class="btn btn-primary" href="#pricing">View Subscription Matrix ↓</a>
-</div>
-</div>
-</header>
-<!-- SECTION 1: ARCHITECTURAL OVERVIEW -->
-<article class="content-card">
-<h2>1. Overview &amp; Repository-Level Agent Mode</h2>
-<p>
-        GitHub Copilot has evolved from inline code autocomplete into a full-fledged autonomous software engineer. 
-        Through Copilot Agent Mode and Copilot Workspace <a href="#ref-4" class="ref-cite">[4]</a>, agents possess full read/write access to the repository graph, 
-        enabling multi-file refactoring, local test execution, and CI/CD triage directly within VS Code, JetBrains, or GitHub.com.
-      </p>
-<ul>
-<li><strong>Full Repo Comprehension:</strong> Indexes semantic symbol definitions, dependency manifests, and git blame history to form context-rich plans before touching disk.</li>
-<li><strong>Autonomous Verification:</strong> Copilot agents run the test runner (e.g., <code>pytest</code>, <code>npm test</code>), inspect failures, adjust code, and iterate until green.</li>
-<li><strong>Copilot Extensions <a href="#ref-3" class="ref-cite">[3]</a> Ecosystem:</strong> Integrates enterprise tools like Sentry, Datadog, Jira, and Octopus Deploy into natural language agent conversations.</li>
-</ul>
-</article>
-<!-- SECTION 2: EXTENSIONS & AGENT PROTOCOLS -->
-<article class="content-card">
-<h2>2. Copilot Extension Protocols, LSP Traversal &amp; Context Gathering</h2>
-<p>
-        Developers can extend Copilot by building custom Copilot Extensions <a href="#ref-3" class="ref-cite">[3]</a>. Using the GitHub Apps architecture, 
-        extensions receive user prompts signed with an RSA private key, query enterprise internal systems, 
-        and stream responses or tool results back via the Server-Sent Events (SSE) protocol.
-      </p>
-<p>
-        In enterprise setups, this allows organizations to orchestrate agents that enforce corporate security scans, 
-        verify infrastructure-as-code Terraform plans, and validate compliance rules before generating pull requests.
-      </p>
-<h3>Intelligent Context Assembly via Language Server Protocol (LSP)</h3>
-<p>
-        Unlike naive LLM wrappers that dump entire folders into prompt context, Copilot Agent Mode employs sophisticated local heuristics to build high-relevance prompt contexts:
-      </p>
-<ul>
-<li><strong>Active Neighboring Tabs:</strong> Tracks open editor buffers, calculating Jaccard similarity between active cursor positions and recently viewed files to infer active developer focus.</li>
-<li><strong>Language Server Protocol (LSP) Symbol Indexing:</strong> Queries the IDE's internal LSP engine to trace interface implementations, imported type definitions, and call hierarchies across the workspace, pulling in exact symbol declarations.</li>
-<li><strong>Semantic Prompt Crafting:</strong> Strips extraneous comment blocks and boilerplate imports to maximize token efficiency, reserving context capacity for test cases and core business logic.</li>
-</ul>
-</article>
-<!-- SECTION 3: PRODUCTION SOURCE CODE -->
-<article class="content-card" id="code">
-<h2>3. Production Source Code (Custom Copilot Extension Agent)</h2>
-<p>
-        This FastAPI Python microservice implements a custom GitHub Copilot Extension agent endpoint that handles 
-        context streaming, verifies GitHub signatures, and triggers automated repository audit routines.
-      </p>
-<div class="code-window">
-<div class="code-bar">
-<span>copilot_extension_agent.py</span>
-<button class="copy-btn" onclick="copySnippet('copilotCode')">Copy Code</button>
-</div>
-<pre class="code-pre" id="copilotCode"><code>from fastapi import FastAPI, Request, Header, HTTPException
-from fastapi.responses import StreamingResponse
-import hmac
-import hashlib
-import json
-import asyncio
+
+  <div class="container">
+    <header class="hero">
+      <p class="hero-badge">// CLAUDE AGENTS · PARALLEL SWARMS</p>
+      <h1 class="hero-title">Claude Agent Swarms: Horizontal Fan-Out & Parallel Execution</h1>
+      <p class="hero-desc">Learn how to orchestrate high-density agent swarms with Claude Haiku 5.5 and Sonnet 5.5: fanning out hundreds of concurrent workers across large file trees, security scanning, and synthetic data pipelines.</p>
+
+    </header>
+    <article class="content-card">
+      <h2>1. Swarms vs Teams: Horizontal Scaling Mechanics</h2>
+<p>While an Agent Team operates as a small council of specialized experts, an <strong>Agent Swarm</strong> is composed of dozens or hundreds of homogenous worker instances executing parallel operations across distributed data shards:</p>
+                <div class="mermaid-container">
+                  <pre class="mermaid">
+flowchart TD
+    Queue[Task Queue: 10,000 Source Files] --> Gov[Token & Rate-Limit Governor]
+    Gov --> W1[Worker Agent 1: Haiku 5.5]
+    Gov --> W2[Worker Agent 2: Haiku 5.5]
+    Gov --> W3[Worker Agent 3: Haiku 5.5]
+    Gov --> Wn[Worker Agent N: Haiku 5.5]
+    W1 --> Res1[Extracted AST Telemetry]
+    W2 --> Res2[Extracted AST Telemetry]
+    W3 --> Res3[Extracted AST Telemetry]
+    Wn --> Resn[Extracted AST Telemetry]
+    Res1 --> Reducer[Consolidator Agent: Sonnet 5.5]
+    Res2 --> Reducer
+    Res3 --> Reducer
+    Resn --> Reducer
+    Reducer --> Report[Master Enterprise Audit Matrix]
+                  </pre>
+                </div>
+    </article>
+    <article class="content-card">
+      <h2>2. High-Throughput Concurrency Governor</h2>
+<p>Executing hundreds of concurrent agent requests against the Anthropic API requires a rate-limit token bucket governor to maximize throughput without triggering HTTP 429 backpressure:</p>
+                <div class="code-window">
+                  <div class="code-bar">
+                    <span>swarm_governor.py</span>
+                    <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-window').querySelector('pre').innerText)">Copy Code</button>
+                  </div>
+                  <pre class="code-pre"><code>import asyncio
 import os
+from anthropic import AsyncAnthropic
 
-app = FastAPI(title="Enterprise Copilot Agent Extension")
-GITHUB_SECRET = os.getenv("GITHUB_COPILOT_EXTENSION_SECRET", "super-secret-key")
+client = AsyncAnthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
-def verify_github_signature(payload: bytes, signature_header: str) -&gt; bool:
-    """Validates that incoming webhook originated legitimately from GitHub."""
-    if not signature_header:
-        return False
-    mac = hmac.new(GITHUB_SECRET.encode(), payload, hashlib.sha256)
-    expected = "sha256=" + mac.hexdigest()
-    return hmac.compare_digest(expected, signature_header)
+async def worker_task(file_id: int, semaphore: asyncio.Semaphore):
+    async with semaphore:
+        # Claude Haiku 5.5 handles high-velocity parallel scanning
+        response = await client.messages.create(
+            model="claude-3-5-haiku-20241022",
+            max_tokens=512,
+            messages=[{
+                "role": "user",
+                "content": f"Scan mock document #{file_id} for exposed secrets or credentials. Return JSON: {{'clean': bool, 'findings': []}}"
+            }]
+        )
+        print(f"[WORKER {file_id:03d}]: Finished audit")
+        return response.content[0].text
 
-async def stream_copilot_agent_actions(prompt_text: str):
-    """Streams SSE events back to the developer's VS Code Copilot Chat."""
-    yield f"data: {json.dumps({'choices': [{'delta': {'content': '🤖 Copilot Agent initializing audit on workspace...\\n'}}]}}\n\n"
-    await asyncio.sleep(0.4)
-    
-    yield f"data: {json.dumps({'choices': [{'delta': {'content': '✓ Parsing AST across 124 files\\n'}}]}}\n\n"
-    await asyncio.sleep(0.4)
-
-    # Simulated tool execution finding
-    yield f"data: {json.dumps({'choices': [{'delta': {'content': '✓ Running automated test suite: 48 passed, 0 failed\\n\\n'}}]}}\n\n"
-    yield f"data: {json.dumps({'choices': [{'delta': {'content': f'Audit Complete for: \"{prompt_text}\". Code meets enterprise security guidelines.'}}]}}\n\n"
-    yield "data: [DONE]\n\n"
-
-@app.post("/agent")
-async def handle_copilot_prompt(request: Request, x_hub_signature_256: str = Header(None)):
-    body = await request.body()
-    # In production, verify signature:
-    # if not verify_github_signature(body, x_hub_signature_256):
-    #     raise HTTPException(status_code=401, detail="Invalid GitHub Signature")
-    
-    data = json.loads(body)
-    messages = data.get("messages", [])
-    user_query = messages[-1].get("content", "Review repository status") if messages else "Review"
-
-    return StreamingResponse(
-        stream_copilot_agent_actions(user_query),
-        media_type="text/event-stream"
-    )
+async def run_swarm(total_tasks=50, max_concurrent=10):
+    semaphore = asyncio.Semaphore(max_concurrent)
+    tasks = [worker_task(i, semaphore) for i in range(1, total_tasks + 1)]
+    results = await asyncio.gather(*tasks)
+    print(f"\nSwarm complete: Processed {len(results)} tasks concurrently.")
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8080)</code></pre>
-</div>
-</article>
-<!-- SECTION 4: MONTHLY & YEARLY SUBSCRIPTIONS & TCO -->
-<article class="content-card" id="pricing">
-<h2>4. Verified Monthly &amp; Yearly Subscriptions &amp; TCO Analysis</h2>
-<p>
-  GitHub Copilot operates a tiered subscription structure with token-based GitHub AI Credits for multi-model choice and agent executions <a href="#ref-1" class="ref-cite">[1]</a> <a href="#ref-2" class="ref-cite">[2]</a>. Verified as of October 13, 2026:
-</p>
+    asyncio.run(run_swarm(30, 8))
+</code></pre>
+                </div>
+    </article>
 
-<div class="pricing-table-wrapper">
-  <table class="pricing-table">
-    <thead>
-      <tr>
-        <th>Subscription Tier</th>
-        <th>Monthly Rate</th>
-        <th>Yearly Rate</th>
-        <th>Included Scope &amp; Quotas</th>
-        <th>Target Persona</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Copilot Free</strong></td>
-        <td>$0 / mo</td>
-        <td>$0 / yr</td>
-        <td>2,000 code completions/mo, limited chat &amp; agent requests. Free for students, educators &amp; OSS maintainers <a href="#ref-1" class="ref-cite">[1]</a>.</td>
-        <td>Students &amp; open-source builders</td>
-      </tr>
-      <tr>
-        <td><strong>Copilot Pro (Individual)</strong></td>
-        <td><strong>$10 / mo</strong></td>
-        <td><strong>$100 / yr</strong><br><span style="font-size:0.75rem;color:var(--cyan);">(Save $20/yr)</span></td>
-        <td>Unlimited code completions, monthly AI Credits pool (~$15 value), multi-model selection (Claude 3.5 Sonnet, GPT-4o, Gemini) <a href="#ref-5" class="ref-cite">[5]</a>.</td>
-        <td>Professional individual developers</td>
-      </tr>
-      <tr>
-        <td><strong>Copilot Pro+</strong></td>
-        <td><strong>$39 / mo</strong></td>
-        <td><strong>$468 / yr</strong></td>
-        <td>Expanded AI Credits for sustained autonomous agent loops, CLI commands &amp; multi-file refactoring <a href="#ref-2" class="ref-cite">[2]</a>.</td>
-        <td>High-volume developers &amp; power users</td>
-      </tr>
-      <tr>
-        <td><strong>Copilot Max</strong></td>
-        <td><strong>$100 / mo</strong></td>
-        <td><strong>$1,200 / yr</strong></td>
-        <td>Maximum personal credit allowance for continuous background agent execution and large codebase auditing.</td>
-        <td>Technical leads &amp; architect power users</td>
-      </tr>
-      <tr>
-        <td><strong>Copilot Business</strong></td>
-        <td><strong>$19 / user / mo</strong></td>
-        <td><strong>$228 / user / yr</strong></td>
-        <td>Organization-wide seat management, policy controls, commercial IP indemnification, 1,900 shared credits/seat <a href="#ref-6" class="ref-cite">[6]</a>.</td>
-        <td>Startups &amp; growing engineering teams</td>
-      </tr>
-      <tr>
-        <td><strong>Copilot Enterprise</strong></td>
-        <td><strong>$39 / user / mo</strong></td>
-        <td><strong>$468 / user / yr</strong></td>
-        <td>Deep GitHub.com codebase indexing, custom PR summarization, organization knowledge bases, 3,900 shared credits/seat <a href="#ref-10" class="ref-cite">[10]</a>.</td>
-        <td>Large enterprise engineering divisions</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-</article>
-<!-- SECTION 5: ENTERPRISE BEST PRACTICES -->
-<article class="content-card">
-<h2>5. Enterprise Production Guardrails</h2>
-<p>
-        Guidelines for integrating Copilot Agent Mode safely within developer teams:
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+      <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Deploy Production Claude Agent Systems</h2>
+      <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
+        Looking to architect custom Claude Opus 5.5 / Sonnet 5.5 multi-agent teams, self-healing Claude Code workflows, or hybrid local LLM routing? Let's design your enterprise roadmap.
       </p>
-<ul>
-<li><strong>Mandatory Branch Protection:</strong> Ensure agents can only push to dedicated feature branches (e.g., <code>copilot/*</code>) with mandatory CI status checks and peer reviews before merging to <code>main</code>.</li>
-<li><strong>Pre-Commit Linter Verification:</strong> Equip agents with hooks that execute local formatters (Prettier, Ruff, Black) automatically before staging git diffs.</li>
-<li><strong>Secret Scanning <a href="#ref-8" class="ref-cite">[8]</a> Integration:</strong> Block agent commits containing potential API tokens or private keys using GitHub Secret Scanning <a href="#ref-8" class="ref-cite">[8]</a> push protection.</li>
-</ul>
-</article>
-<!-- SECTION 6: COPILOT WORKSPACE LIFECYCLE -->
-<article class="content-card">
-<h2>6. Copilot Workspace <a href="#ref-4" class="ref-cite">[4]</a>: Autonomous Issue-to-Pull-Request Lifecycles</h2>
-<p>
-        Copilot Workspace <a href="#ref-4" class="ref-cite">[4]</a> re-engineers how software engineering teams transition from a backlog ticket to merged production code. Rather than forcing developers to manually clone repos, branch, explore dependencies, write boilerplate, and write tests, Workspace establishes an end-to-end autonomous pipeline:
-      </p>
-<ul>
-<li><strong>Specification Synthesis from Issues:</strong> When a developer triggers Workspace on a GitHub Issue, the agent reads the bug description, customer reproduction steps, and linked discussions. It synthesizes a human-readable Specification detailing the expected behavior change.</li>
-<li><strong>Interactive Step-by-Step Plan:</strong> The agent generates an editable checklist of changes across multiple repositories and services. Developers can reorder, add constraints, or delete sub-tasks before code generation begins.</li>
-<li><strong>Isolated Ephemeral Dev Environments:</strong> Workspace provisions a secure cloud GitHub Codespace container. The agent makes file modifications, runs the local test suite (e.g., <code>pytest</code>, <code>cargo test</code>, or <code>vitest</code>), inspects stack traces, and iterates autonomously until all unit and regression tests pass.</li>
-<li><strong>Pull Request Publishing:</strong> Once verified, the agent packages the branch into a comprehensive Pull Request complete with architectural rationale, before/after diff explanations, and linked issue closing keywords.</li>
-</ul>
-</article>
-<!-- SECTION 7: GITHUB MODELS MARKETPLACE -->
-<article class="content-card">
-<h2>7. GitHub Models Marketplace &amp; Multi-Model Frontier Selection</h2>
-<p>
-        GitHub Copilot has broken free from single-model vendor lock-in. Through GitHub Models, developers and enterprise administrators can choose the exact intelligence engine suited to their specific codebase challenges:
-      </p>
-<ul>
-<li><strong>Anthropic Claude Sonnet 5.5 &amp; Opus 5.5:</strong> The premier choice for complex architectural refactoring, legacy codebase modernization, and multi-file dependency restructuring where deep reasoning scratchpads prevent regression bugs.</li>
-<li><strong>OpenAI GPT-6 Series (GPT-6 Sol, GPT-6 Terra, GPT-6 Luna &amp; GPT-6 Astra):</strong> Deployed for high-end frontier reasoning, deep multi-repository refactoring, algorithmic optimization, and cryptographic verification, with GPT-6 Luna delivering sub-200ms completions and GPT-6 Sol providing rigorous deep-thinking security audits.</li>
-<li><strong>Google Gemini 3.8 Flash &amp; 3.7 Flash:</strong> Leveraged for massive repository indexing, whole-project cross-referencing, and rapid test-generation passes utilizing million-token context caches.</li>
-</ul>
-<p>
-        Developers can toggle between models directly inside VS Code Copilot Chat using the model switcher, tailoring token economics and reasoning latency to the immediate task at hand.
-      </p>
-</article>
-<!-- SECTION 8: CODEQL, AUTOFIX & SECRET SCANNING -->
-<article class="content-card">
-<h2>8. CodeQL Static Analysis, Copilot Autofix &amp; Secret Scanning <a href="#ref-8" class="ref-cite">[8]</a> Guardrails</h2>
-<p>
-        Autonomous code generation without rigorous automated security oversight introduces severe technical debt. GitHub integrates enterprise security directly into the Copilot agent lifecycle:
-      </p>
-<ul>
-<li><strong>Copilot Autofix with CodeQL:</strong> When GitHub Advanced Security detects a SQL injection, Cross-Site Scripting (XSS), or buffer overflow vulnerability via CodeQL semantic analysis, Copilot Autofix automatically generates a targeted patch with an explanation of the underlying security flaw and proposed test cases.</li>
-<li><strong>Push Protection Against Leaked Credentials:</strong> If an autonomous agent attempts to stage a commit containing API keys, private certificates, or cloud credentials, GitHub Secret Scanning <a href="#ref-8" class="ref-cite">[8]</a> blocks the git push before the commit reaches the remote server.</li>
-<li><strong>Dependency Review &amp; Dependabot Remediation:</strong> Agents automatically upgrade compromised package versions in <code>package.json</code> or <code>requirements.txt</code>, testing build compatibility in ephemeral containers before opening PRs.</li>
-</ul>
-</article>
-<!-- SECTION 9: COPILOT CLI & TERMINAL WORKFLOWS -->
-<article class="content-card">
-<h2>9. Copilot CLI <a href="#ref-7" class="ref-cite">[7]</a> &amp; Autonomous Terminal Automation Workflows</h2>
-<p>
-        Software development happens extensively inside the command line. GitHub Copilot in the CLI (<code>gh copilot</code>) bridges natural language intent with POSIX shell operations:
-      </p>
-<ul>
-<li><strong>Command Generation (<code>gh copilot suggest</code>):</strong> Translates operational requests (e.g., "Find all Docker containers using more than 2GB RAM and restart them with 1GB memory limits") into safe, validated shell scripts.</li>
-<li><strong>Terminal Output Explanation (<code>gh copilot explain</code>):</strong> Ingests complex cryptic compiler errors, Kubernetes pod crash dumps, or regex parsing failures and provides clear diagnostics with suggested remediation commands.</li>
-<li><strong>Git Merge Conflict Resolution:</strong> Autonomous terminal agents analyze three-way git merge conflicts, identifying semantic intent across conflicting branches and proposing cleanly reconciled diffs that pass unit tests.</li>
-</ul>
-</article>
-<!-- SECTION 10: VELOCITY ROI & TCO ECONOMICS -->
-<article class="content-card">
-<h2>10. Developer Velocity ROI &amp; Enterprise Seat Licensing Economics</h2>
-<p>
-        Unlike raw API token billing that introduces unpredictable operational budget swings, GitHub Copilot utilizes a predictable per-seat licensing model:
-      </p>
-<ul>
-<li><strong>55% Faster Task Completion:</strong> Independent studies published by Harvard Business Review and Microsoft Research demonstrate that developers equipped with Copilot complete complex coding tasks 55% faster, reporting an 88% increase in overall job satisfaction and flow state retention.</li>
-<li><strong>Predictable Budget Forecasting:</strong> At $19/user/month (Business) or $39/user/month (Enterprise), engineering leadership eliminates the risk of runaway token billing spikes caused by recursive agent loops. Organizations gain unlimited conversational turns and autocomplete suggestions under predictable monthly billing.</li>
-<li><strong>Enterprise IP Indemnification:</strong> GitHub provides commercial enterprise customers with full copyright and intellectual property indemnification defense for unfiltered suggestions, ensuring enterprise legal compliance across proprietary software products.</li>
-</ul>
-<p>
-        This combination of deep repository context, enterprise security controls, and predictable seat pricing makes GitHub Copilot the enterprise standard for developer agent deployment.
-      </p>
-</article>
-<!-- SECTION 11: ENTERPRISE CUSTOM INDEXING -->
-<article class="content-card">
-<h2>11. Enterprise Knowledge Base Grounding &amp; Custom Codebase Indexing</h2>
-<p>
-        For multinational enterprises with millions of lines of legacy code and bespoke internal frameworks, general public training datasets offer limited guidance. GitHub Copilot Enterprise resolves this challenge through proprietary knowledge base indexing:
-      </p>
-<ul>
-<li><strong>Custom Organization Knowledge Bases:</strong> Engineering leaders connect private internal documentation repositories, architectural design records (ADRs), coding style manuals, and API gateways. When developers or autonomous agents query Copilot, answers cite internal documentation with direct source repository links.</li>
-<li><strong>Fine-Grained Context Scoping:</strong> Agents can be restricted to specific organizational boundaries (e.g., scoping payment processing agents strictly to PCI-DSS compliant repositories, while mobile agents access only iOS and Android codebases).</li>
-<li><strong>Continuous Index Re-Synchronisation:</strong> As internal engineering teams merge PRs to main branches, GitHub's background indexing workers incrementally update vector representations, ensuring agents never generate recommendations against deprecated internal SDK methods.</li>
-</ul>
-</article>
-<!-- SECTION 12: AGENTIC ACTIONS & CI/CD HEALING -->
-<article class="content-card">
-<h2>12. Autonomous CI/CD Self-Healing Loops with GitHub Actions</h2>
-<p>
-        The combination of GitHub Actions and Copilot Agent Mode enables continuous integration pipelines to diagnose and heal build failures autonomously:
-      </p>
-<ul>
-<li><strong>Automated Test Failure Diagnostics:</strong> When a pull request CI pipeline fails due to an uncaught regression or broken mock fixture, a GitHub Action triggers the Copilot agent with the exact failure stack trace and the triggering git commit diff.</li>
-<li><strong>Autonomous Patch Synthesis:</strong> The agent loads the offending test file, isolates the unhandled exception, creates an isolated fix branch, and submits a targeted commit with an explanation of why the test broke.</li>
-<li><strong>Flaky Test Isolation:</strong> If a test fails non-deterministically across multiple runs, the agent detects the timing race condition, generates an issue report with thread concurrency analysis, and temporarily applies quarantine annotations pending team lead review.</li>
-</ul>
-</article>
-<!-- SECTION 13: ON-PREMISE GHES & AIR-GAPPED SECURITY -->
-<article class="content-card">
-<h2>13. GitHub Enterprise Server (GHES) &amp; Air-Gapped Security Sandboxing</h2>
-<p>
-        Defense contractors, high-security financial institutions, and government agencies operate under strict data residency mandates requiring on-premises code hosting:
-      </p>
-<ul>
-<li><strong>GitHub Enterprise Server (GHES) Integration:</strong> Copilot connects securely to on-premise GHES clusters via encrypted outbound proxy tunnels, allowing enterprise developers to enjoy modern agentic features while ensuring source code never leaves corporate firewalls.</li>
-<li><strong>Granular Telemetry Auditing:</strong> Security teams stream all agent completion requests, tool invocations, and user queries to central enterprise SIEM solutions (Splunk, Elastic, Microsoft Sentinel) for real-time audit logging and threat detection.</li>
-<li><strong>Role-Based Policy Enforcement:</strong> IT administrators centrally disable public code matching, enforce strict branch protection policies, and revoke extension privileges across global engineering teams with a single click.</li>
-</ul>
-<p>
-        By bridging local developer IDE workflows with centralized governance and automated CI healing, GitHub Copilot delivers the most unified software engineering agent ecosystem on the market today.
-      </p>
-</article>
-<!-- SECTION 14: MIGRATION ROADMAP -->
-<article class="content-card">
-<h2>14. Enterprise Roadmap: Transitioning from Autocomplete to Autonomous Agent Pipelines</h2>
-<p>
-        Moving an engineering organization from passive code autocompletion to autonomous repository-level agents requires a deliberate phased migration strategy:
-      </p>
-<ul>
-<li><strong>Phase 1 — Interactive Copilot Chat &amp; CLI:</strong> Onboard development squads to conversational debugging, unit test scaffolding, and CLI assistance to build developer trust in model recommendations.</li>
-<li><strong>Phase 2 — Agent Mode &amp; Automated PR Reviews:</strong> Enable multi-file Agent Mode in IDEs, accompanied by mandatory branch protection policies, pre-commit linters, and automated GitHub Actions review bots.</li>
-<li><strong>Phase 3 — Fully Autonomous Workspace Pipelines:</strong> Deploy Copilot Workspace <a href="#ref-4" class="ref-cite">[4]</a> for automated issue triage, background bug fixing, and continuous dependency security patching, unlocking 40%+ productivity gains <a href="#ref-9" class="ref-cite">[9]</a> across core development backlogs.</li>
-</ul>
-</article>
-<!-- SECTION 7: REFERENCES & GROUNDED SOURCES -->
-<article class="content-card" id="references">
-<h2>7. References &amp; Authoritative Grounding Sources (October 13, 2026)</h2>
-<p>
-  Verified against current GitHub documentation, enterprise terms, and official research:
-</p>
-<ul class="ref-list">
-  <li class="ref-item" id="ref-1">
-    <span class="ref-num">[1]</span>
-    <div>
-      <strong>GitHub Copilot Plans &amp; Subscription Pricing</strong> — GitHub Official Pricing (October 2026). Verified individual, business, and enterprise rate schedules. <br>
-      <a class="ref-link" href="https://github.com/pricing#copilot" target="_blank" rel="noopener noreferrer">https://github.com/pricing#copilot</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-2">
-    <span class="ref-num">[2]</span>
-    <div>
-      <strong>GitHub AI Credits System &amp; Metering Architecture</strong> — GitHub Documentation (2026). Token credit pools, model consumption multipliers, and overage policies. <br>
-      <a class="ref-link" href="https://docs.github.com/en/copilot/about-github-copilot/about-github-ai-credits" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/copilot/about-github-copilot/about-github-ai-credits</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-3">
-    <span class="ref-num">[3]</span>
-    <div>
-      <strong>GitHub Copilot Extensions &amp; Protocol Specification</strong> — GitHub Developer Platform (2026). Developing third-party agent extensions and tools. <br>
-      <a class="ref-link" href="https://docs.github.com/en/copilot/building-copilot-extensions" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/copilot/building-copilot-extensions</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-4">
-    <span class="ref-num">[4]</span>
-    <div>
-      <strong>Copilot Workspace: Autonomous Issue-to-Pull-Request Lifecycle</strong> — GitHub Next Research (2024–2026). Full-repo multi-file plan-and-execute developer workflows. <br>
-      <a class="ref-link" href="https://github.blog/news-insights/product-news/github-copilot-workspace/" target="_blank" rel="noopener noreferrer">https://github.blog/news-insights/product-news/github-copilot-workspace/</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-5">
-    <span class="ref-num">[5]</span>
-    <div>
-      <strong>Multi-Model Support in Copilot (Claude 3.5 Sonnet, GPT-4o, Gemini)</strong> — GitHub Blog (2026). Bringing multi-vendor model selection to the developer IDE. <br>
-      <a class="ref-link" href="https://github.blog/news-insights/product-news/bringing-developer-choice-to-copilot/" target="_blank" rel="noopener noreferrer">https://github.blog/news-insights/product-news/bringing-developer-choice-to-copilot/</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-6">
-    <span class="ref-num">[6]</span>
-    <div>
-      <strong>GitHub Copilot Trust Center &amp; Commercial IP Indemnity</strong> — GitHub Resources (2026). Enterprise data privacy, SOC 2 compliance, and zero code retention. <br>
-      <a class="ref-link" href="https://resources.github.com/copilot-trust-center/" target="_blank" rel="noopener noreferrer">https://resources.github.com/copilot-trust-center/</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-7">
-    <span class="ref-num">[7]</span>
-    <div>
-      <strong>Copilot in the CLI: Terminal Command Synthesis &amp; Debugging</strong> — GitHub Documentation (2026). Shell script generation and explanation tools. <br>
-      <a class="ref-link" href="https://docs.github.com/en/copilot/github-copilot-in-the-cli" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/copilot/github-copilot-in-the-cli</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-8">
-    <span class="ref-num">[8]</span>
-    <div>
-      <strong>GitHub Secret Scanning Push Protection &amp; Security Controls</strong> — GitHub Security (2026). Preventing credential exfiltration in automated commits. <br>
-      <a class="ref-link" href="https://docs.github.com/en/code-security/secret-scanning" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/code-security/secret-scanning</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-9">
-    <span class="ref-num">[9]</span>
-    <div>
-      <strong>Measuring Developer Velocity &amp; Code Quality with GitHub Copilot</strong> — Harvard Business School &amp; MIT Research (2025–2026). Empirical velocity benchmarks. <br>
-      <a class="ref-link" href="https://github.blog/news-insights/research/research-quantifying-github-copilots-impact/" target="_blank" rel="noopener noreferrer">https://github.blog/news-insights/research/research-quantifying-github-copilots-impact/</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-10">
-    <span class="ref-num">[10]</span>
-    <div>
-      <strong>GitHub Copilot Enterprise Deployment Guide for Engineering Leadership</strong> — GitHub Enterprise (2026). Organization rollout best practices and metric tracking. <br>
-      <a class="ref-link" href="https://resources.github.com/enterprise-ai/" target="_blank" rel="noopener noreferrer">https://resources.github.com/enterprise-ai/</a>
-    </div>
-  </li>
-</ul>
-</article>
-
-<!-- CTA BANNER -->
-<div class="cta-banner">
-<h2 style="color:#fff;font-size:1.8rem;margin-bottom:0.75rem;">Scale Autonomous Software Engineering</h2>
-<p style="color:#94a3b8;max-width:620px;margin:0 auto 1.5rem;font-size:0.95rem;">
-        Looking to deploy custom GitHub Copilot Extensions <a href="#ref-3" class="ref-cite">[3]</a> or automate repetitive issue-to-PR pipelines? 
-        Let’s build your repository agents.
-      </p>
-<a class="btn btn-primary" href="contact.html">Commission Copilot AI Agent Team →</a>
-<a class="btn btn-outline" href="agents-all-agentic-providers.html">← Back to All Providers</a>
-</div>
-</div>
-</main>
+      <div>
+        <a class="btn btn-primary" href="collaboration.html">Schedule Architecture Consultation →</a>
+        <a class="btn btn-outline" href="pricing.html">View Advisory Packages</a>
+      </div>
+    </section>
+  </div>
     <!-- START:FOOTER -->
   <style id="footer-styles">
     footer {
@@ -1757,23 +1522,6 @@ if __name__ == "__main__":
     </p>
   </footer>
     <!-- END:FOOTER -->
-
 <script src="components.js"></script>
-<script>
-  function copySnippet(id) {
-    var el = document.getElementById(id);
-    if (!el) return;
-    navigator.clipboard.writeText(el.innerText).then(function() {
-      var btn = el.closest('.code-window').querySelector('.copy-btn');
-      if (btn) {
-        var orig = btn.innerText;
-        btn.innerText = 'Copied!';
-        btn.style.background = '#34d399';
-        btn.style.color = '#000';
-        setTimeout(function() { btn.innerText = orig; btn.style.background = ''; btn.style.color = ''; }, 2000);
-      }
-    });
-  }
-</script>
 </body>
 </html>

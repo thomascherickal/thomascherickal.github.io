@@ -85,7 +85,7 @@ Live & remote workshops for Employees (adoption), Developers (TDD pairing), Staf
 **Base Rate**: `$1,000 USD`  
 Lowering AI inference costs 60–90% with Ollama, vLLM, llama.cpp, GGUF quantization & on-prem private clusters.
 
-### 🤖 AI Agent Orchestration & Tool Loops
+### 🤖 Claude AI Agent Orchestration & Tool Loops
 **Base Rate**: `$1,000 USD`  
 Multi-agent architecture design, LangGraph, CrewAI, AutoGen, OpenClaw, tool calling & stateful workflows.
 

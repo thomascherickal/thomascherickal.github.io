@@ -10,7 +10,7 @@
 
 ### 1. 🤖 AI Agent Mastery & Team Orchestration
 Create teams of AI agents with Claude, OpenAI, Gemini, or Grok. Learn the in-depth
- principles that make AI agent orchestration successful, understand deep agent constraints, and perform the
+ principles that make Claude AI agent orchestration successful, understand deep agent constraints, and perform the
  tasks of multiple people with coordinated agent teams grounded in basic domain knowledge.
 
 ---
@@ -29,7 +29,7 @@ Lowering recurring cloud AI inference bills by 60–90% using open-weight local 
 
 ---
 
-### 4. 🤖 AI Agent Orchestration
+### 4. 🤖 Claude AI Agent Orchestration
 Multi-agent architecture design, tool-calling loops, agent swarms, autonomous task
  routing, and resilient state machines (LangGraph, CrewAI, AutoGen, OpenClaw) with human-in-the-loop
  oversight.

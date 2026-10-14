@@ -192,7 +192,7 @@ def convert_services() -> str:
         "## AI Agent Mastery, Corporate AI Training & Autonomous Systems",
         "",
         "> **// GENERATIVE AI CONSULTANT & QUANTUM SYSTEMS EXPLORER**  ",
-        "> **AI Agent Mastery: create teams of AI agents with Claude, OpenAI, Gemini, or Grok. Learn the in-depth principles that make AI agent orchestration successful, understand deep agent constraints, and perform the tasks of multiple people with an agent team — grounded in essential task domain knowledge. Comprehensive live and remote workforce training (Employees, Developers, Staff, CXOs), Local LLM cost optimization, agent orchestration, AI-assisted TDD, and early quantum systems exploration.**",
+        "> **AI Agent Mastery: create teams of AI agents with Claude, OpenAI, Gemini, or Grok. Learn the in-depth principles that make Claude AI agent orchestration successful, understand deep agent constraints, and perform the tasks of multiple people with an agent team — grounded in essential task domain knowledge. Comprehensive live and remote workforce training (Employees, Developers, Staff, CXOs), Local LLM cost optimization, agent orchestration, AI-assisted TDD, and early quantum systems exploration.**",
         "",
         "**Quick Actions**:",
         "- [✉️ Book a Strategy Consultation](contact.html)",
@@ -261,7 +261,7 @@ def convert_services() -> str:
     lines.append("")
     lines.append("1. [🧠 Generative AI Transformation](service-generative-ai-transformation.html) — Agentic workflows, metrics, safeguards.")
     lines.append("2. [📦 Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — High-throughput private inference via Ollama, vLLM, llama.cpp.")
-    lines.append("3. [🤖 AI Agent Orchestration Fundamentals](service-ai-agents-orchestration.html) — Scalable swarms & state machines.")
+    lines.append("3. [🤖 Claude AI Agent Orchestration Fundamentals](service-ai-agents-orchestration.html) — Scalable swarms & state machines.")
     lines.append("4. [🏎️ Agentic AI Assistants (Hermes Agent)](service-agentic-ai-systems.html) — Persistent memory & autonomous loops.")
     lines.append("5. [🌐 Training for WorkFlows Automations](service-training-for-workflow-automations.html) — Self-hosted n8n automations.")
     lines.append("6. [⚛️ Quantum Applications (Experimental)](service-quantum-applications.html) — Enterprise quantum readiness.")
@@ -892,7 +892,7 @@ def convert_agent_deepdive(file_path: str) -> str:
         soup = BeautifulSoup(f.read(), "html.parser")
         
     h1_el = soup.find("h1")
-    h1 = clean_text(h1_el.get_text()) if h1_el else "AI Agent Orchestration"
+    h1 = clean_text(h1_el.get_text()) if h1_el else "Claude AI Agent Orchestration"
     
     badge_el = soup.find("p", class_="hero-badge")
     badge = clean_text(badge_el.get_text()) if badge_el else "// PROVIDER DEEP DIVE"
@@ -973,10 +973,24 @@ def convert_agent_deepdive(file_path: str) -> str:
                 lines.append(code_text.strip())
                 lines.append("```")
                 lines.append("")
-            elif elem.name == "div" and "table-container" in elem.get("class", []):
+            elif elem.name == "div" and any(c in elem.get("class", []) for c in ["table-container", "pricing-table-wrapper"]):
                 tbl = elem.find("table")
                 if tbl:
                     lines.append(html_table_to_md(tbl))
+                    lines.append("")
+            elif elem.name == "div" and "step-grid" in elem.get("class", []):
+                for card_el in elem.find_all("div", class_="step-card"):
+                    num_el = card_el.find("div", class_="step-num")
+                    title_el = card_el.find("div", class_="step-title")
+                    desc_el = card_el.find("div", class_="step-desc")
+                    s_num = clean_text(num_el.get_text()) if num_el else ""
+                    s_title = clean_text(title_el.get_text()) if title_el else ""
+                    s_desc = clean_text(desc_el.get_text()) if desc_el else ""
+                    heading_parts = [p for p in [s_num, s_title] if p]
+                    if heading_parts:
+                        lines.append(f"#### {' — '.join(heading_parts)}")
+                    if s_desc:
+                        lines.append(s_desc)
                     lines.append("")
             elif elem.name == "table":
                 lines.append(html_table_to_md(elem))
@@ -985,10 +999,10 @@ def convert_agent_deepdive(file_path: str) -> str:
         lines.append("---")
         lines.append("")
         
-    lines.append("### Ready to Orchestrate Production AI Agent Teams?")
+    lines.append("### Ready to Orchestrate Production Claude AI Agent Teams?")
     lines.append("- [Schedule Strategy Consultation via Email →](collaboration.html)")
     lines.append("- [View Advisory Packages & Rates](pricing.html)")
-    lines.append("- [Explore All Agent Providers Matrix](agents-all-agentic-providers.html)")
+    lines.append("- [Explore Claude Agents Suite](agents-claude-101.html)")
     lines.append("")
     
     return "\n".join(lines).strip() + "\n"

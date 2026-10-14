@@ -26,7 +26,7 @@ Thomas writes and codes for power users, developers, enterprises, and executive 
 | **🧠 Generative AI Consulting** | Complex GenAI Systems | Building complex Generative AI systems with Test-Driven Development (TDD), RAG architectures, and fine-tuning. |
 | **⚛️ Quantum Consulting** | Quantum Systems & SDKs | Building complex quantum computing systems with TDD, IBM Qiskit and PennyLane circuits, algorithms, and simulation. |
 | **📝 Technical Writing** | Deep Long-Form Content | Deep, sourced, developer-grade technical writing, architecture deep dives, and systems documentation. |
-| **🤖 AI Agent Orchestration** | Agent Systems | Multi-agent architecture design, tool-calling loops, agent swarms, and autonomous agentic workflows (OpenClaw, Hermes Agent). |
+| **🤖 Claude AI Agent Orchestration** | Agent Systems | Multi-agent architecture design, tool-calling loops, agent swarms, and autonomous agentic workflows (OpenClaw, Hermes Agent). |
 | **📦 Local LLMs & Inference** | Quantization & Serving | Quantization, local inference setup, vLLM & Ollama deployment guides, and GGUF private model serving. |
 | **💼 Monthly Sprints & Retainers** | Retainer & Sprint | Dedicated monthly sprint capacity for devtool & AI infra teams: priority turnaround, bylines & guaranteed code/content volume. |
 

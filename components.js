@@ -37,22 +37,23 @@
     // Highlight category toggle if inside that category
     var lowerDecodedPage = page ? decodeURIComponent(page).toLowerCase() : '';
     var orchestrationPages = [
-      'agents-all-agentic-providers.html',
-      'agents-claude-agents.html',
-      'agents-grok-bot.html',
-      'agents-openai-dots.html',
-      'agent-gemini-spark.html',
-      'agents-gemini-spark.html',
-      'agents-github-copilot.html',
-      'agents-hermes-agent.html',
-      'agents-opencode-free.html',
-      'agents-meta-muse.html'
+      'agents-claude-101.html',
+      'agents-claude-code.html',
+      'agents-claude-skills.html',
+      'agents-claude-cowork.html',
+      'agents-claude-mcp.html',
+      'agents-claude-MCP.html',
+      'agents-claude-agent-teams.html',
+      'agents-claude-agent-swarms.html',
+      'agents-claude-design.html',
+      'agents-claude-budget-limits.html',
+      'agents-claude-local-llms.html'
     ];
     if (orchestrationPages.indexOf(lowerDecodedPage) !== -1) {
       var orchToggles = document.querySelectorAll('.nav-dropdown');
       orchToggles.forEach(function(dd) {
         var toggle = dd.querySelector('.nav-dropdown-toggle');
-        if (toggle && toggle.textContent.indexOf('Orchestration') !== -1) {
+        if (toggle && (toggle.textContent.indexOf('Agents') !== -1 || toggle.textContent.indexOf('Orchestration') !== -1)) {
           toggle.style.color = 'var(--gold)';
         }
       });

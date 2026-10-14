@@ -1,216 +1,311 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>OpenAI Dots Architecture &amp; Orchestration Guide | Thomas Cherickal</title>
-<meta content="Production guide to orchestrating OpenAI Dots, OpenAI Swarm hand-offs, Responses API, and structured tool calling." name="description"/>
-<meta content="Thomas Cherickal" name="author"/>
-<link href="https://thomascherickal.github.io/agents-openai-dots.html" rel="canonical"/>
-<!-- Open Graph -->
-<meta content="website" property="og:type"/>
-<meta content="https://thomascherickal.github.io/agents-openai-dots.html" property="og:url"/>
-<meta content="Thomas Cherickal — The Digital Futurist" property="og:site_name"/>
-<meta content="OpenAI Dots Architecture &amp; Orchestration Guide | Thomas Cherickal" property="og:title"/>
-<meta content="Production guide to orchestrating OpenAI Dots, OpenAI Swarm hand-offs, Responses API, and structured tool calling." property="og:description"/>
-<meta content="https://thomascherickal.github.io/assets/og-card.png" property="og:image"/>
-<meta content="en_US" property="og:locale"/>
-<!-- Favicons -->
-<link href="assets/favicon.ico" rel="icon" sizes="any"/>
-<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<link href="/site.webmanifest" rel="manifest"/>
-<meta content="#000000" name="theme-color"/>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<!-- JSON-LD Schema -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://thomascherickal.github.io/agents-openai-dots.html#webpage",
-        "url": "https://thomascherickal.github.io/agents-openai-dots.html",
-        "name": "OpenAI Dots Architecture & Orchestration Guide | Thomas Cherickal",
-        "description": "Production guide to orchestrating OpenAI Dots, OpenAI Swarm hand-offs, Responses API, and structured tool calling.",
-        "isPartOf": {
-          "@id": "https://thomascherickal.github.io/#website"
-        },
-        "inLanguage": "en-US",
-        "breadcrumb": {
-          "@id": "https://thomascherickal.github.io/agents-openai-dots.html#breadcrumb"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://thomascherickal.github.io/agents-openai-dots.html#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://thomascherickal.github.io/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Orchestration",
-            "item": "https://thomascherickal.github.io/agents-all-agentic-providers.html"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "OpenAI Dots",
-            "item": "https://thomascherickal.github.io/agents-openai-dots.html"
-          }
-        ]
-      },
-      {
-        "@type": "TechArticle",
-        "@id": "https://thomascherickal.github.io/agents-openai-dots.html#article",
-        "headline": "OpenAI Dots: Multi-Agent AI Team Orchestration, Operator Tools, and Enterprise Workflows",
-        "description": "Architectural breakdown and production code for deploying OpenAI Swarm agent routines with deterministic Structured Outputs.",
-        "author": {
-          "@type": "Person",
-          "@id": "https://thomascherickal.github.io/#person",
-          "name": "Thomas Cherickal",
-          "jobTitle": "Generative AI Consultant"
-        },
-        "datePublished": "2026-10-13",
-        "inLanguage": "en-US"
-      }
-    ]
-  }
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Claude Agent Teams: Hierarchical Multi-Agent Orchestration | Thomas Cherickal</title>
+  <meta content="Architect scalable multi-agent teams with Claude. Hierarchical manager-worker patterns, inter-agent messaging protocols, role specialization, and consensus scoring." name="description" />
+  <meta content="Thomas Cherickal" name="author" />
+  <link href="https://thomascherickal.github.io/agents-claude-agent-teams.html" rel="canonical" />
+  <!-- Open Graph -->
+  <meta content="website" property="og:type" />
+  <meta content="https://thomascherickal.github.io/agents-claude-agent-teams.html" property="og:url" />
+  <meta content="Thomas Cherickal — The Digital Futurist" property="og:site_name" />
+  <meta content="Claude Agent Teams: Hierarchical Multi-Agent Orchestration | Thomas Cherickal" property="og:title" />
+  <meta content="Architect scalable multi-agent teams with Claude. Hierarchical manager-worker patterns, inter-agent messaging protocols, role specialization, and consensus scoring." property="og:description" />
+  <meta content="https://thomascherickal.github.io/assets/og-card.png" property="og:image" />
+  <meta content="en_US" property="og:locale" />
+  <!-- Favicons -->
+  <link href="assets/favicon.ico" rel="icon" sizes="any" />
+  <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
+  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="/site.webmanifest" rel="manifest" />
+  <meta content="#020408" name="theme-color" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      mermaid.initialize({ startOnLoad: true, theme: 'dark', themeVariables: { 'primaryColor': '#0c111d', 'primaryTextColor': '#38bdf8', 'primaryBorderColor': '#38bdf8', 'lineColor': '#fbbf24', 'secondaryColor': '#060912', 'tertiaryColor': '#131926' } });
+    });
   </script>
-<style>
+  <style>
     :root {
       --bg-0: #020408;
       --bg-1: #060912;
       --bg-2: #0b0f19;
-      --bg-card: linear-gradient(145deg, #0c111d 0%, #04060c 100%);
+      --bg-card: #0c111d;
+      --border: rgba(56, 189, 248, 0.2);
+      --border-gold: rgba(251, 191, 36, 0.35);
       --cyan: #38bdf8;
       --gold: #fbbf24;
-      --border: rgba(56, 189, 248, 0.18);
-      --border-gold: rgba(251, 191, 36, 0.25);
-      --glow-cyan: 0 0 24px rgba(56, 189, 248, 0.22);
-      --glow-gold: 0 0 24px rgba(251, 191, 36, 0.22);
-      --font-body: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --claude-accent: #D97757;
+      --claude-light: #F38B6C;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --font-main: 'Inter', -apple-system, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: var(--bg-0); color: #fff; font-family: var(--font-body); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
-    .container { max-width: 1040px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 2.5rem); }
-    .skip-link { position: absolute; top: -100px; left: 1rem; background: var(--cyan); color: #000; padding: 0.5rem 1rem; z-index: 9999; }
-    .skip-link:focus { top: 1rem; }
-    .back-top { position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px; border-radius: 50%; background: rgba(15, 23, 42, 0.85); border: 1px solid var(--border); color: var(--cyan); display: flex; align-items: center; justify-content: center; text-decoration: none; font-weight: 700; z-index: 90; }
-    .hero { padding: 4.5rem 0 2.5rem; text-align: center; }
-    .hero-badge { font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.15em; color: #10A37F; text-transform: uppercase; margin-bottom: 0.75rem; }
-    .hero-title { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.25; margin-bottom: 1rem; }
-    .hero-logo-box { display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; background: rgba(16, 163, 127, 0.12); border: 1.5px solid rgba(16, 163, 127, 0.45); border-radius: 20px; margin-bottom: 1.25rem; box-shadow: 0 0 24px rgba(16, 163, 127, 0.25); }
-    .pricing-hero-card { background: linear-gradient(135deg, rgba(16, 163, 127, 0.08) 0%, rgba(251, 191, 36, 0.05) 100%); border: 1.5px solid var(--border-gold); border-radius: 14px; padding: 1.5rem 2rem; margin: 2rem auto; max-width: 780px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
-    .pricing-val { font-size: 1.8rem; font-weight: 800; color: var(--gold); font-family: var(--font-mono); }
-    .content-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 2.25rem; margin-bottom: 2.25rem; }
-    .content-card h2 { color: var(--gold); font-size: 1.4rem; margin-bottom: 1rem; }
-    .content-card p { color: #e2e8f0; font-size: 0.96rem; margin-bottom: 1rem; line-height: 1.75; }
-    .content-card ul { color: #cbd5e1; font-size: 0.94rem; margin-left: 1.5rem; margin-bottom: 1.25rem; line-height: 1.75; }
-    .code-window { background: #040711; border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 12px; margin: 1.75rem 0; overflow: hidden; }
-    .code-bar { display: flex; align-items: center; justify-content: space-between; padding: 0.65rem 1.25rem; background: rgba(15, 23, 42, 0.95); border-bottom: 1px solid rgba(56, 189, 248, 0.15); font-family: var(--font-mono); font-size: 0.78rem; color: #94a3b8; }
-    .code-pre { padding: 1.25rem 1.5rem; overflow-x: auto; font-family: var(--font-mono); font-size: 0.86rem; line-height: 1.65; color: #e2e8f0; }
-    .copy-btn { background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: var(--cyan); font-family: var(--font-mono); font-size: 0.72rem; padding: 0.3rem 0.75rem; border-radius: 6px; cursor: pointer; }
-    .copy-btn:hover { background: var(--cyan); color: #020408; font-weight: 700; }
-    .cta-banner { background: #070c18; border: 1.5px solid var(--border-gold); border-radius: 16px; padding: 3rem 2rem; text-align: center; margin: 3rem 0 2rem; }
-    .btn { display: inline-flex; align-items: center; padding: 0.75rem 1.5rem; border-radius: 8px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; text-decoration: none; cursor: pointer; }
-    .btn-primary { background: var(--cyan); color: #020408; }
-    .btn-outline { background: transparent; border: 1px solid var(--border-gold); color: var(--gold); margin-left: 0.75rem; }
-  
-    /* Pricing Table & References Styling */
-    .pricing-table-wrapper {
-      overflow-x: auto;
-      margin: 1.5rem 0;
-      border-radius: var(--radius-md, 10px);
-      border: 1px solid var(--border, rgba(56, 189, 248, 0.18));
-      background: var(--bg-card, #0c111d);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    }
-    .pricing-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.88rem;
-      text-align: left;
-    }
-    .pricing-table th {
-      background: rgba(15, 23, 42, 0.95);
-      color: var(--gold, #fbbf24);
-      padding: 0.9rem 1.1rem;
-      border-bottom: 2px solid var(--border, rgba(56, 189, 248, 0.18));
-      font-family: var(--font-mono, monospace);
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-    .pricing-table td {
-      padding: 0.85rem 1.1rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      color: var(--text-secondary, #e2e8f0);
-      vertical-align: middle;
-    }
-    .pricing-table tr:hover {
-      background: rgba(56, 189, 248, 0.04);
-    }
-    .ref-list {
-      list-style: none;
-      padding-left: 0;
-      margin: 1rem 0 0 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-    }
-    .ref-item {
-      display: flex;
-      gap: 0.75rem;
-      font-size: 0.86rem;
-      line-height: 1.55;
-      padding: 0.75rem 1rem;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 8px;
-    }
-    .ref-num {
-      color: var(--cyan, #38bdf8);
-      font-family: var(--font-mono, monospace);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-    .ref-link {
-      color: var(--cyan, #38bdf8);
-      text-decoration: underline;
-      word-break: break-all;
-    }
-    .ref-link:hover {
-      color: var(--gold, #fbbf24);
-    }
-    .ref-cite {
-      color: var(--cyan, #38bdf8);
-      font-size: 0.75em;
-      vertical-align: super;
-      text-decoration: none;
-      font-weight: 600;
-      margin-left: 2px;
-      padding: 0 2px;
-    }
-    .ref-cite:hover {
-      color: var(--gold, #fbbf24);
-      text-decoration: underline;
+      --font-display: 'Cinzel', serif;
     }
 
-</style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-0);
+      color: var(--text);
+      font-family: var(--font-main);
+      line-height: 1.65;
+      padding-top: 72px;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+    }
+
+    .hero {
+      padding: 4.5rem 0 2.5rem;
+      text-align: center;
+    }
+
+    .hero-badge {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      color: var(--claude-accent);
+      text-transform: uppercase;
+      margin-bottom: 0.85rem;
+      font-weight: 700;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 1.15rem;
+      background: linear-gradient(135deg, #ffffff 40%, #e2e8f0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      color: #94a3b8;
+      max-width: 780px;
+      margin: 0 auto 1.75rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+
+    .content-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2.5rem;
+      margin-bottom: 2.25rem;
+      text-align: left;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .content-card h2 {
+      color: var(--gold);
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      line-height: 1.35;
+      border-bottom: 1px solid rgba(251, 191, 36, 0.15);
+      padding-bottom: 0.6rem;
+    }
+
+    .content-card h3 {
+      color: var(--cyan);
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 1.85rem 0 0.85rem;
+      line-height: 1.4;
+    }
+
+    .content-card p {
+      color: #e2e8f0;
+      font-size: 0.98rem;
+      margin-bottom: 1.15rem;
+      line-height: 1.8;
+    }
+
+    .content-card ul, .content-card ol {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+      margin-left: 1.6rem;
+      margin-bottom: 1.35rem;
+      line-height: 1.8;
+    }
+
+    .content-card li {
+      margin-bottom: 0.75rem;
+    }
+
+    .content-card strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .content-card a {
+      color: var(--gold);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .content-card a:hover {
+      color: var(--cyan);
+    }
+
+    code:not(pre code) {
+      font-family: var(--font-mono);
+      font-size: 0.88em;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.22);
+      color: #7dd3fc;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      word-break: break-word;
+    }
+
+    .code-window {
+      background: #040711;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 12px;
+      margin: 1.85rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+    }
+
+    .code-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.25rem;
+      background: rgba(15, 23, 42, 0.95);
+      border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    .code-pre {
+      padding: 1.35rem 1.6rem;
+      overflow-x: auto;
+      font-family: var(--font-mono);
+      font-size: 0.86rem;
+      line-height: 1.68;
+      color: #e2e8f0;
+      tab-size: 4;
+    }
+
+    .mermaid-container {
+      background: #050814;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.75rem 0;
+      text-align: center;
+      overflow-x: auto;
+    }
+
+    .step-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .step-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 10px;
+      padding: 1.25rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--cyan);
+    }
+
+    .step-num {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--cyan);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .step-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-desc {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      line-height: 1.55;
+    }
+
+    .cta-banner {
+      background: #070c18;
+      border: 1.5px solid var(--border-gold);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 3rem 0 2rem;
+      box-shadow: 0 0 28px rgba(251, 191, 36, 0.18);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.65rem;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: var(--cyan);
+      color: #020408 !important;
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.3);
+    }
+    .btn-primary:hover {
+      background: #7dd3fc;
+      box-shadow: 0 0 24px rgba(56, 189, 248, 0.5);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--border-gold);
+      color: var(--gold) !important;
+      box-shadow: 0 0 12px rgba(251, 191, 36, 0.15);
+      margin-left: 0.85rem;
+    }
+    .btn-outline:hover {
+      background: rgba(251, 191, 36, 0.12);
+      border-color: var(--gold);
+    }
+  </style>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+
   <!-- START:HEADER -->
   <style id="header-styles">
     /* Global Root Mobile & Tablet Safeguards */
@@ -675,16 +770,18 @@
           Agents <span class="dropdown-caret">▾</span>
         </a>
         <ul class="dropdown-menu">
-          <li><a href="agents-all-agentic-providers.html" class="dropdown-header-link">🌐 All Agentic Providers</a></li>
+          <li><a href="agents-claude-101.html" class="dropdown-header-link">🟣 Claude Agents Suite</a></li>
           <li class="dropdown-divider"></li>
-          <li><a href="agents-claude-agents.html">🟣 Claude Agents</a></li>
-          <li><a href="agents-grok-bot.html">⚡ Grok Bot</a></li>
-          <li><a href="agents-openai-dots.html">🟢 OpenAI Dots</a></li>
-          <li><a href="agents-gemini-spark.html">✨ Gemini Spark</a></li>
-          <li><a href="agents-github-copilot.html">🐙 GitHub Copilot</a></li>
-          <li><a href="agents-meta-muse.html">♾️ Meta Muse</a></li>
-          <li><a href="agents-hermes-agent.html">🏎️ Hermes Agent</a></li>
-          <li><a href="agents-opencode-free.html">💻 OpenCode Free</a></li>
+          <li><a href="agents-claude-101.html">🚀 Claude Agents 101</a></li>
+          <li><a href="agents-claude-code.html">💻 Claude Code CLI</a></li>
+          <li><a href="agents-claude-skills.html">🧩 Claude Skills &amp; Extensibility</a></li>
+          <li><a href="agents-claude-cowork.html">🖥️ Claude Cowork &amp; Computer Use</a></li>
+          <li><a href="agents-claude-mcp.html">🔌 Model Context Protocol (MCP)</a></li>
+          <li><a href="agents-claude-agent-teams.html">👥 Claude Agent Teams</a></li>
+          <li><a href="agents-claude-agent-swarms.html">🐝 Claude Agent Swarms</a></li>
+          <li><a href="agents-claude-design.html">📐 Claude Agent Design Patterns</a></li>
+          <li><a href="agents-claude-budget-limits.html">💲 Claude Budget Limits &amp; Caching</a></li>
+          <li><a href="agents-claude-local-llms.html">📦 Claude &amp; Local LLM Hybrids</a></li>
         </ul>
       </li>
       <li><a href="portfolio.html" data-nav="portfolio.html">Portfolio</a></li>
@@ -699,7 +796,7 @@
           <li class="dropdown-divider"></li>
           <li><a href="service-generative-ai-transformation.html">🧠 Generative AI Transformation</a></li>
           <li><a href="service-local-llms-cost-slashing.html">📦 Local LLMs &amp; Cost Slashing</a></li>
-          <li><a href="service-ai-agents-orchestration.html">🤖 AI Agent Orchestration Fundamentals</a></li>
+          <li><a href="service-ai-agents-orchestration.html">🤖 Claude AI Agent Orchestration Fundamentals</a></li>
           <li><a href="service-agentic-ai-systems.html">🏎️ Agentic AI Assistants (Hermes Agent)</a></li>
           <li><a href="service-training-for-workflow-automations.html">🌐 Training for WorkFlows Automations</a></li>
           <li><a href="service-quantum-applications.html">⚛️ Quantum Applications (Experimental)</a></li>
@@ -714,445 +811,113 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-<a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
-<main id="main">
-<div class="container">
-<header class="hero">
-<div class="hero-logo-box">
-<svg aria-hidden="true" fill="#10A37F" height="46" viewbox="0 0 24 24" width="46">
-<circle cx="12" cy="12" fill="#10A37F" r="10"></circle>
-<circle cx="12" cy="7" fill="#FFFFFF" r="1.5"></circle>
-<circle cx="16" cy="9.5" fill="#FFFFFF" r="1.5"></circle>
-<circle cx="16" cy="14.5" fill="#FFFFFF" r="1.5"></circle>
-<circle cx="12" cy="17" fill="#FFFFFF" r="1.5"></circle>
-<circle cx="8" cy="14.5" fill="#FFFFFF" r="1.5"></circle>
-<circle cx="8" cy="9.5" fill="#FFFFFF" r="1.5"></circle>
-</svg>
-</div>
-<p class="hero-badge">// PROVIDER DEEP DIVE · OPENAI</p>
-<h1 class="hero-title">OpenAI Dots Orchestration</h1>
-<p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;">
-        Orchestrating autonomous AI agent teams, Operator browser tools, 
-        Responses API <a href="#ref-3" class="ref-cite">[3]</a> integrations, and 100% deterministic Structured Outputs <a href="#ref-5" class="ref-cite">[5]</a>.
-      </p>
-<!-- MINIMUM ACCESS PRICE HERO CARD -->
-<div class="pricing-hero-card" id="pricing-hero">
-<div>
-<span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);text-transform:uppercase;display:block;">Verified Monthly &amp; Yearly Subscriptions (Oct 2026)</span>
-<span class="pricing-val">$20 / mo · $240 / yr</span>
-<span style="color:#94a3b8;font-size:0.85rem;display:block;margin-top:0.2rem;">ChatGPT Plus ($20/mo, $240/yr) · Business ($20–$25/user/mo, $240/yr) · Pro ($100–$200/mo)</span>
-</div>
-<div>
-<a class="btn btn-primary" href="#pricing">View Subscription Matrix ↓</a>
-</div>
-</div>
-</header>
-<!-- SECTION 1: ARCHITECTURAL OVERVIEW -->
-<article class="content-card">
-<h2>1. Overview &amp; AI Agent Team Architecture</h2>
-<p>
-        OpenAI’s agentic paradigm centers around lightweight, stateless multi-agent hand-offs. 
-        Through the experimental OpenAI Swarm framework <a href="#ref-4" class="ref-cite">[4]</a> and the official Responses API <a href="#ref-3" class="ref-cite">[3]</a>, agents are modeled 
-        as autonomous actors that possess instructions, registered tools, and the capability to transfer execution 
-        directly to another specialized agent without central supervisor bottlenecks.
-      </p>
-<ul>
-<li><strong>Stateless Agent Hand-offs:</strong> When a customer support agent determines a refund is needed, it invokes a Python function that directly returns the <code>RefundAgent</code>, seamlessly handing off conversation state.</li>
-<li><strong>Guaranteed Structured Outputs <a href="#ref-5" class="ref-cite">[5]</a>:</strong> With JSON schema enforcement (Strict Mode), OpenAI models guarantee 100% adherence to complex Pydantic structures <a href="#ref-10" class="ref-cite">[10]</a> with zero syntax errors.</li>
-<li><strong>Reasoning Engines (GPT-6 Sol &amp; GPT-6 Astra):</strong> Delivers low-latency chain-of-thought verification for security-critical validation steps.</li>
-</ul>
-</article>
-<!-- SECTION 2: HAND-OFF PROTOCOLS -->
-<article class="content-card">
-<h2>2. Hand-off Protocols, Structured Outputs <a href="#ref-5" class="ref-cite">[5]</a> &amp; Execution Primitives</h2>
-<p>
-        In OpenAI Swarm architecture, hand-offs are fundamentally implemented as tool calls. 
-        An agent does not merely return a string message; it returns a new <code>Agent</code> instance with its 
-        own specific system prompt and filtered tool set.
-      </p>
-<p>
-        This prevents context bloat: instead of passing 50 different enterprise tools in every request, 
-        the active agent only receives the 3 tools relevant to its specific domain.
-      </p>
-<h3>Strict Mode Structured Outputs <a href="#ref-5" class="ref-cite">[5]</a> Mechanics</h3>
-<p>
-        When building production systems where tools trigger real-world mutations—such as initiating database updates, executing wire transfers, or dispatching customer emails—hallucinated parameter schemas cannot be tolerated. OpenAI's Structured Outputs <a href="#ref-5" class="ref-cite">[5]</a> (Strict Mode) provides formal guarantees:
-      </p>
-<ul>
-<li><strong>Grammar-Constrained Decoding:</strong> By passing <code>"strict": true</code> within tool definitions, OpenAI constrains the model's token sampling logits during generation. The model is mathematically incapable of generating tokens that violate the JSON schema AST.</li>
-<li><strong>Pydantic v2 Schema Generation:</strong> Rather than authoring manual JSON schemas, engineers pass standard Pydantic models to the SDK, ensuring automatic type casting, enum constraint enforcement, and zero runtime syntax exceptions.</li>
-<li><strong>Zero Format Drift:</strong> Across multi-turn agent loops spanning dozens of autonomous tool invocations, the output schema remains 100% compliant, eliminating the need for brittle regex retry wrappers.</li>
-</ul>
-</article>
-<!-- SECTION 3: PRODUCTION SOURCE CODE -->
-<article class="content-card" id="code">
-<h2>3. Production Source Code (OpenAI Multi-AI Agent Team)</h2>
-<p>
-        This production-ready Python script demonstrates an autonomous triage and escalation AI agent team using 
-        the official OpenAI Python SDK with function hand-offs.
-      </p>
-<div class="code-window">
-<div class="code-bar">
-<span>openai_swarm_pipeline.py</span>
-<button class="copy-btn" onclick="copySnippet('openaiCode')">Copy Code</button>
-</div>
-<pre class="code-pre" id="openaiCode"><code>import asyncio
-import os
-import json
-from openai import AsyncOpenAI
-from pydantic import BaseModel
 
-client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+  <div class="container">
+    <header class="hero">
+      <p class="hero-badge">// CLAUDE AGENTS · MULTI-AGENT TEAMS</p>
+      <h1 class="hero-title">Claude Agent Teams: Hierarchical Multi-Agent Orchestration</h1>
+      <p class="hero-desc">Move beyond single-agent scripts to orchestrated multi-agent teams: defining distinct roles for Architect, Coder, Security Auditor, and Reviewer to solve large-scale enterprise engineering problems collaboratively.</p>
 
-# Hand-off definitions
-def transfer_to_billing_agent():
-    """Hands control over to the specialized billing agent."""
-    return {"status": "HANDOFF", "target_agent": "BillingAgent"}
+    </header>
+    <article class="content-card">
+      <h2>1. Multi-Agent Team Topologies</h2>
+<p>Effective multi-agent architectures mirror high-performing human engineering squads. Rather than having one model attempt everything, distinct agents take specialized responsibilities with explicit handoff criteria:</p>
+                <div class="mermaid-container">
+                  <pre class="mermaid">
+flowchart TD
+    UserReq[Enterprise Feature Specification] --> Lead[Lead Architect Agent: Claude Opus 5.5]
+    Lead --> TaskGraph[Generate Directed Acyclic Graph DAG]
+    TaskGraph --> Dev[Full-Stack Engineer: Claude Sonnet 5.5]
+    Dev --> TestGen[QA Test Engineer: Claude Sonnet 5.5]
+    Dev --> CodeArtifacts[Code Changes & Schemas]
+    TestGen --> TestSuite[Automated Test Suite]
+    CodeArtifacts --> SecReview[Security Auditor: Claude Sonnet 5.5]
+    TestSuite --> SecReview
+    SecReview -- Vulnerability Detected --> Dev
+    SecReview -- Approved --> Lead
+    Lead --> PR[Final Pull Request & RFC Synthesis]
+                  </pre>
+                </div>
+    </article>
+    <article class="content-card">
+      <h2>2. Specialist Role Definitions</h2>
+<div class="step-grid">
+                  <div class="step-card">
+                    <div class="step-num">Role A · Strategy</div>
+                    <div class="step-title">Lead Architect (Opus 5.5)</div>
+                    <div class="step-desc">Deconstructs broad requests into atomic subtasks, verifies schema compatibility, and makes binding architectural trade-offs.</div>
+                  </div>
+                  <div class="step-card">
+                    <div class="step-num">Role B · Construction</div>
+                    <div class="step-title">Core Developer (Sonnet 5.5)</div>
+                    <div class="step-desc">Writes production-grade, typed implementations adhering to codebase conventions and design patterns.</div>
+                  </div>
+                  <div class="step-card">
+                    <div class="step-num">Role C · Verification</div>
+                    <div class="step-title">QA & Testing (Sonnet 5.5)</div>
+                    <div class="step-desc">Generates adversarial test cases, edge condition mocks, and stress-tests boundary limits.</div>
+                  </div>
+                  <div class="step-card">
+                    <div class="step-num">Role D · Compliance</div>
+                    <div class="step-title">Security Auditor (Sonnet 5.5)</div>
+                    <div class="step-desc">Audits code for OWASP Top 10 vulnerabilities, unauthorized credential egress, and cryptographic weaknesses.</div>
+                  </div>
+                </div>
+    </article>
+    <article class="content-card">
+      <h2>3. Tutorial: Inter-Agent Handoff Protocol in Python</h2>
+<p>Here is an orchestration engine dispatching structured messages between an Architect agent and a Developer agent with typed JSON handoffs:</p>
+                <div class="code-window">
+                  <div class="code-bar">
+                    <span>multi_agent_team.py</span>
+                    <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-window').querySelector('pre').innerText)">Copy Code</button>
+                  </div>
+                  <pre class="code-pre"><code>import os
+from anthropic import Anthropic
 
-def transfer_to_tech_support():
-    """Hands control over to the specialized technical support agent."""
-    return {"status": "HANDOFF", "target_agent": "TechSupportAgent"}
+client = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
-TOOLS = [
-    {
-        "type": "function",
-        "function": {
-            "name": "transfer_to_billing_agent",
-            "description": "Call this when the user asks about invoices, pricing, or refund requests."
-        }
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "transfer_to_tech_support",
-            "description": "Call this when the user encounters server errors, API bug reports, or crash logs."
-        }
-    }
-]
-
-async def run_triage_loop(user_input: str):
-    messages = [
-        {"role": "system", "content": "You are the primary Front-Desk Triage Agent. Route users immediately."},
-        {"role": "user", "content": user_input}
-    ]
-
-    response = await client.chat.completions.create(
-        model="gpt-6-luna",
-        messages=messages,
-        tools=TOOLS,
-        tool_choice="auto"
+def run_agent_squad(task_description: str):
+    # Step 1: Architect decomposes the task
+    architect_resp = client.messages.create(
+        model="claude-3-7-sonnet-20250219",
+        max_tokens=2048,
+        system="You are the Lead Software Architect. Break down features into explicit technical specifications.",
+        messages=[{"role": "user", "content": f"Architect a solution for: {task_description}"}]
     )
+    spec = architect_resp.content[0].text
+    print(f"\n[ARCHITECT SPECIFICATION]:\n{spec[:300]}...\n")
 
-    choice = response.choices[0].message
-    if choice.tool_calls:
-        fn_name = choice.tool_calls[0].function.name
-        print(f"[*] Triage Decision: Executing Hand-off -&gt; {fn_name}()")
-        
-        if fn_name == "transfer_to_billing_agent":
-            # Hand off to billing agent with specialized prompt
-            billing_prompt = [
-                {"role": "system", "content": "You are the Senior Billing Resolution Agent. Process queries with high precision."},
-                {"role": "user", "content": user_input}
-            ]
-            billing_res = await client.chat.completions.create(
-                model="gpt-6-sol",
-                messages=billing_prompt
-            )
-            print(f"\n[Billing Agent Output]:\n{billing_res.choices[0].message.content}")
-    else:
-        print(f"[Direct Resolution]: {choice.content}")
+    # Step 2: Coder receives spec and implements code
+    coder_resp = client.messages.create(
+        model="claude-3-7-sonnet-20250219",
+        max_tokens=4096,
+        system="You are a Senior Python Engineer. Implement the exact architectural spec with robust typing.",
+        messages=[
+            {"role": "user", "content": f"Implement this specification in production Python code:\n\n{spec}"}
+        ]
+    )
+    code = coder_resp.content[0].text
+    print(f"\n[ENGINEER IMPLEMENTATION]:\n{code[:300]}...\n")
 
 if __name__ == "__main__":
-    asyncio.run(run_triage_loop("I noticed an incorrect $450 charge on my enterprise invoice #INV-9021."))</code></pre>
-</div>
-</article>
-<!-- SECTION 4: MONTHLY & YEARLY SUBSCRIPTIONS & TCO -->
-<article class="content-card" id="pricing">
-<h2>4. Verified Monthly &amp; Yearly Subscriptions &amp; TCO Analysis</h2>
-<p>
-  OpenAI structures its agentic access across individual consumer tiers, power user tiers, organizational workspaces (ChatGPT Business, formerly Team), enterprise deployments, and developer API credits <a href="#ref-1" class="ref-cite">[1]</a> <a href="#ref-8" class="ref-cite">[8]</a>. Rates verified as of October 13, 2026:
-</p>
+    run_agent_squad("High-throughput token bucket rate limiter with Redis backend.")
+</code></pre>
+                </div>
+    </article>
 
-<div class="pricing-table-wrapper">
-  <table class="pricing-table">
-    <thead>
-      <tr>
-        <th>Subscription Tier</th>
-        <th>Monthly Rate</th>
-        <th>Yearly Rate</th>
-        <th>Included Scope &amp; Quotas</th>
-        <th>Target Persona</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Free Tier</strong></td>
-        <td>$0 / mo</td>
-        <td>$0 / yr</td>
-        <td>Standard access to mini models, basic browsing, limited memory turns.</td>
-        <td>General public &amp; students</td>
-      </tr>
-      <tr>
-        <td><strong>ChatGPT Plus</strong></td>
-        <td><strong>$20 / mo</strong></td>
-        <td><strong>$240 / yr</strong></td>
-        <td>Access to GPT-6 Sol / Terra / Luna, Deep Research <a href="#ref-6" class="ref-cite">[6]</a>, Advanced Voice, Operator web preview, Canvas &amp; Projects.</td>
-        <td>Individual builders &amp; creators</td>
-      </tr>
-      <tr>
-        <td><strong>ChatGPT Pro 100</strong></td>
-        <td><strong>$100 / mo</strong></td>
-        <td><strong>$1,200 / yr</strong></td>
-        <td>5x higher usage allowances, expanded thinking budget compute, priority server allocations.</td>
-        <td>Software engineers &amp; researchers</td>
-      </tr>
-      <tr>
-        <td><strong>ChatGPT Pro 200</strong></td>
-        <td><strong>$200 / mo</strong></td>
-        <td><strong>$2,400 / yr</strong></td>
-        <td>20x higher usage limits, sustained complex mathematical / full-repository reasoning compute.</td>
-        <td>AI researchers &amp; power devs</td>
-      </tr>
-      <tr>
-        <td><strong>ChatGPT Pro 500</strong></td>
-        <td><strong>$500 / mo</strong></td>
-        <td><strong>$6,000 / yr</strong></td>
-        <td>Maximum personal allowance, dedicated ultrafast model capacity, continuous agentic runs.</td>
-        <td>High-throughput technical leads</td>
-      </tr>
-      <tr>
-        <td><strong>ChatGPT Business (formerly Team)</strong></td>
-        <td><strong>$25 / user / mo</strong></td>
-        <td><strong>$240 / user / yr</strong><br><span style="font-size:0.75rem;color:var(--cyan);">($20/user/mo billed annually)</span></td>
-        <td>Centralized admin console, workspace collaboration, Codex access <a href="#ref-9" class="ref-cite">[9]</a>, zero training on business data (2-seat min) <a href="#ref-1" class="ref-cite">[1]</a>.</td>
-        <td>Startups &amp; corporate departments</td>
-      </tr>
-      <tr>
-        <td><strong>ChatGPT Enterprise</strong></td>
-        <td>Custom quote<br><span style="font-size:0.75rem;color:#94a3b8;">(~$60–$100+/user/mo)</span></td>
-        <td>Annual enterprise contract</td>
-        <td>Enterprise security, EKM encryption, SSO/SCIM, compliance DLP, dedicated support (~150-seat min) <a href="#ref-7" class="ref-cite">[7]</a>.</td>
-        <td>Global enterprises &amp; institutions</td>
-      </tr>
-      <tr>
-        <td><strong>OpenAI Platform API</strong></td>
-        <td>$5 min balance deposit</td>
-        <td>Metered consumption</td>
-        <td>GPT-6 Sol, Terra, Luna token endpoints, Strict Mode Structured Outputs <a href="#ref-5" class="ref-cite">[5]</a>, Responses API <a href="#ref-3" class="ref-cite">[3]</a>.</td>
-        <td>Autonomous backend swarms</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-</article>
-<!-- SECTION 5: ENTERPRISE BEST PRACTICES -->
-<article class="content-card">
-<h2>5. Enterprise Production Guardrails</h2>
-<p>
-        Key operational practices for deploying OpenAI AI agent teams at scale:
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+      <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Deploy Production Claude Agent Systems</h2>
+      <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
+        Looking to architect custom Claude Opus 5.5 / Sonnet 5.5 multi-agent teams, self-healing Claude Code workflows, or hybrid local LLM routing? Let's design your enterprise roadmap.
       </p>
-<ul>
-<li><strong>Strict Schema Enforcement:</strong> Always pass <code>strict: true</code> in function definitions to prevent hallucinations in mission-critical parameter structures.</li>
-<li><strong>Tiered Cost Distribution:</strong> Use ultra-fast <code>gpt-6-luna</code> for high-volume triage and classification hand-offs, balanced <code>gpt-6-terra</code> for everyday tasks, and invoke flagship <code>gpt-6-sol</code> when deep reasoning is needed.</li>
-<li><strong>Circuit Breaker Hand-off Counters:</strong> Maintain an integer counter in metadata to prevent cyclic ping-pong transfers between mutual sub-agents.</li>
-</ul>
-</article>
-<!-- SECTION 6: OPENAI OPERATOR & BROWSER EXECUTION -->
-<article class="content-card">
-<h2>6. OpenAI Operator, Computer-Using Agent (CUA) <a href="#ref-2" class="ref-cite">[2]</a> &amp; Browser Automation</h2>
-<p>
-        OpenAI’s Operator platform marks the evolution of agentic AI from text-based API integrations to visual and programmatic web interaction. Built atop OpenAI's Computer-Using Agent (CUA) <a href="#ref-2" class="ref-cite">[2]</a> models, Operator navigates arbitrary web interfaces, SaaS portals, and legacy enterprise software without requiring pre-existing APIs:
-      </p>
-<ul>
-<li><strong>Visual and DOM Hybrid Traversal:</strong> Rather than relying solely on raw screenshot coordinates, Operator marries visual screen understanding with DOM accessibility tree parsing. It identifies clickable buttons, dropdowns, and form fields by their semantic ARIA labels while visually verifying rendered layout geometry.</li>
-<li><strong>Ephemeral Browser Sandboxing:</strong> Each Operator session runs within an isolated, headless Chromium container hosted in a secure virtual enclave. The container enforces strict outbound firewall egress rules, preventing unauthorized cross-origin data leaks while capturing full audit screencasts for compliance verification.</li>
-<li><strong>Human-in-the-Loop Gateway Gates:</strong> When Operator encounters security barriers—such as multi-factor authentication (MFA) push notifications, CAPTCHA challenges, or sensitive wire-transfer confirmation screens—the execution loop pauses asynchronously, pinging human supervisors via mobile push notification to authorize or complete the high-risk transaction step.</li>
-</ul>
-<p>
-        For enterprise operations teams, Operator automates cross-platform workflows such as reconciling vendor invoices across outdated accounting portals, provisioning employee SaaS credentials, and scraping dynamic procurement catalogs.
-      </p>
-</article>
-<!-- SECTION 7: O-SERIES REASONING VERIFICATION GATES -->
-<article class="content-card">
-<h2>7. Advanced Frontier Reasoning (GPT-6 Sol &amp; GPT-6 Astra) Chain-of-Thought Verification Gates</h2>
-<p>
-        One of the greatest hazards in autonomous agent architecture is premature tool execution: an agent making hasty assumptions and executing irreversible mutations before fully understanding system state. OpenAI’s reasoning models (<code>GPT-6 Sol</code> and <code>GPT-6 Astra</code>) introduce deliberate test-time compute:
-      </p>
-<ul>
-<li><strong>Configurable Reasoning Effort:</strong> Developers dynamically set the <code>reasoning_effort</code> parameter (<code>low</code>, <code>medium</code>, or <code>high</code>). For simple data lookup tasks, <code>low</code> effort minimizes token overhead; for mission-critical code refactoring or security policy checks, <code>high</code> effort activates deep multi-branch planning.</li>
-<li><strong>Pre-Commit Architectural Verification:</strong> In a production AI agent team, front-line agents like <code>gpt-6-luna</code> gather raw user inputs and proposed SQL migrations. Before that SQL touches production schemas, a specialized verification agent powered by <code>gpt-6-sol</code> audits the plan, methodically tracing constraint violations, index locks, and cascade risks before giving cryptographic sign-off.</li>
-<li><strong>Algorithmic Backtracking:</strong> When reasoning models identify a logical inconsistency during internal deliberations, they self-correct and explore alternative resolution paths prior to emitting external tool calls, drastically lowering catastrophic agent failure rates.</li>
-</ul>
-</article>
-<!-- SECTION 8: STATEFUL ASSISTANTS VS STATELESS AI AGENT TEAMS -->
-<article class="content-card">
-<h2>8. Stateful Assistants API Threads vs. Client-Side Stateless AI Agent Teams</h2>
-<p>
-        Architects implementing OpenAI agent systems must choose between two distinct runtime patterns:
-      </p>
-<ul>
-<li><strong>OpenAI Assistants API (Server-Managed):</strong> OpenAI manages session state, conversation threads, uploaded vector stores, and execution runs directly on its servers. Ideal for rapid prototyping and low-infrastructure backends, but introduces run-polling latency overhead (typically 1.5 to 3.0 seconds per turn) and locks session history into OpenAI's cloud.</li>
-<li><strong>OpenAI Swarm Primitives (Client-Managed):</strong> The client retains complete ownership over message lists, state context, and agent hand-offs. Agent objects are lightweight, stateless descriptors. Hand-offs happen instantly in memory via local function dispatch with zero database latency, making Swarm vastly superior for high-throughput, low-latency microservices.</li>
-</ul>
-<p>
-        Enterprise architectures frequently adopt a hybrid strategy: using local AI agent team orchestration for sub-second internal agent routing, while delegating persistent document retrieval to specialized vector indexing microservices.
-      </p>
-</article>
-<!-- SECTION 9: ERROR RECOVERY & CIRCUIT BREAKERS -->
-<article class="content-card">
-<h2>9. Production Error Recovery, Cyclic Hand-off Mitigation &amp; Circuit Breakers</h2>
-<p>
-        Multi-agent hand-offs introduce distributed systems failure modes that require active runtime supervision:
-      </p>
-<ul>
-<li><strong>Cyclic Ping-Pong Hand-offs:</strong> If Agent A hands off to Agent B, and Agent B immediately hands back to Agent A, a runaway execution loop can consume thousands of dollars in tokens within minutes. AI agent team harnesses maintain a <code>visited_agents</code> stack and terminate hand-offs if the hop count exceeds a configurable threshold (e.g., maximum 5 hops per turn).</li>
-<li><strong>Graceful Degradation Fallbacks:</strong> If a downstream specialized agent fails to respond or throws an unhandled exception, the orchestrator catches the error, rolls back conversation context to the previous stable checkpoint, and returns a graceful notification to the user or human operator.</li>
-<li><strong>Context Window Truncation:</strong> In extended multi-turn conversations, older conversation turns are summarized using <code>gpt-6-luna</code> and compressed into a high-level briefing block, ensuring the active context remains well beneath model token limits.</li>
-</ul>
-</article>
-<!-- SECTION 10: TCO & MULTI-MILLION TOKEN ECONOMICS -->
-<article class="content-card">
-<h2>10. Total Cost of Ownership (TCO) &amp; Multi-Million Token Economics</h2>
-<p>
-        Building scalable AI agent teams requires disciplined cost modeling across the OpenAI model matrix:
-      </p>
-<ul>
-<li><strong>Tiered Routing Economics:</strong> By positioning <code>gpt-6-luna</code> as the front-line gatekeeper, balanced <code>gpt-6-terra</code> for everyday processing, and reserving flagship <code>gpt-6-sol</code> strictly for escalated complex queries, organizations filter out 80% of routine inquiries at negligible cost. This reduces monthly token expenditures by over 78%.</li>
-<li><strong>OpenAI Prompt Caching:</strong> For prompts exceeding 1,024 tokens with identical prefixes (such as persistent system instructions and tool definitions), OpenAI automatically applies a 50% discount on cached input tokens, cutting recursive turn latency by up to 80%.</li>
-<li><strong>Batch API for Asynchronous Jobs:</strong> Non-urgent background auditing tasks, overnight batch code reviews, and dataset labeling can be submitted via the OpenAI Batch API, slashing token bills by 50% in exchange for a 24-hour turnaround SLA.</li>
-</ul>
-<p>
-        This financial flexibility makes OpenAI's ecosystem an exceptionally cost-effective platform when architected with proper tiered routing and structured output constraints.
-      </p>
-</article>
-<!-- SECTION 11: ENTERPRISE SUPPORT AI AGENT TEAM BLUEPRINT -->
-<article class="content-card">
-<h2>11. Enterprise Customer Support AI Agent Team Architecture Blueprint</h2>
-<p>
-        To visualize how stateless hand-offs operate in mission-critical environments, consider a tier-1 telecommunications or fintech customer support architecture deployed across five interconnected agents:
-      </p>
-<ul>
-<li><strong>Triage &amp; Intent Classifier:</strong> Powered by <code>gpt-6-luna</code>, this front-line sentinel greets the user, extracts key identifying metadata (account numbers, issue summaries, emotional urgency), and routes the session to a specialized department within 250 milliseconds.</li>
-<li><strong>Security &amp; Identity Verification Agent:</strong> Interfaces with internal OAuth 2.0 Identity Providers, triggering out-of-band push verification. Only once identity tokens are validated does this agent transfer the session context to operational execution agents.</li>
-<li><strong>Account &amp; Billing Resolution Agent:</strong> Equipped with transactional SQL and Stripe/Zuora tools, this agent processes invoice disputes, updates payment methods, and issues service credits under strict business rule constraints.</li>
-<li><strong>Technical Diagnostic Specialist:</strong> Ingests network error codes, traces modem telemetry, and queries internal knowledge bases using hybrid semantic search before scheduling on-site field engineering visits.</li>
-<li><strong>Autonomous Quality Assurance Sentinel:</strong> Running asynchronously in the background, a supervisory agent evaluates conversation transcripts against brand guidelines and regulatory compliance requirements, flagging negative sentiment anomalies to human team leads in real time.</li>
-</ul>
-<p>
-        Because each agent maintains its own dedicated system prompt and strict tool definitions, no single agent suffers from prompt pollution or confused tool selections, guaranteeing high resolution accuracy.
-      </p>
-</article>
-<!-- SECTION 12: MODEL DISTILLATION & ENTERPRISE ADAPTATION -->
-<article class="content-card">
-<h2>12. Model Distillation, Domain Adaptation &amp; Guardrail Monitoring</h2>
-<p>
-        High-volume enterprises handling millions of daily agent queries frequently transition from frontier general-purpose models to specialized, distilled checkpoints:
-      </p>
-<ul>
-<li><strong>Supervised Fine-Tuning (SFT) from AI Agent Team Traces:</strong> By capturing thousands of successful multi-turn tool hand-off trajectories executed by GPT-6 Sol and GPT-6 Terra, engineering teams fine-tune custom domain-specific <code>gpt-6-luna</code> models. The distilled model matches frontier reasoning accuracy on company-specific workflows at 90% lower inference cost.</li>
-<li><strong>Reinforcement Learning from Human Feedback (RLHF) Alignment:</strong> Enterprise reward models score multi-agent interactions, penalizing unnecessary hand-offs, overly verbose explanations, and unauthorized data disclosures.</li>
-<li><strong>Comprehensive Audit Telemetry:</strong> Every tool execution payload, latency milestone, and hand-off event is emitted to enterprise observability platforms (OpenTelemetry / Datadog), providing deep visibility into AI agent team bottlenecks and operational costs.</li>
-</ul>
-<p>
-        This structured engineering methodology transforms raw model intelligence into durable, predictable corporate assets capable of scaling across global organizations.
-      </p>
-<h3>Zero-Downtime Blue/Green AI Agent Team Upgrades</h3>
-<p>
-        Upgrading an active AI agent team in production requires zero disruption to active customer conversation threads. By tagging each agent definition with a semantic version number and directing traffic through an ingress router, organizations deploy new prompt instructions and tool declarations via blue/green canary splits, rolling back instantly if real-time error telemetry exceeds 0.05% of active sessions.
-      </p>
-</article>
-<!-- SECTION 8: REFERENCES & GROUNDED SOURCES -->
-<article class="content-card" id="references">
-<h2>8. References &amp; Authoritative Grounding Sources (October 13, 2026)</h2>
-<p>
-  Verified against current production documentation, official API telemetry, and engineering publications:
-</p>
-<ul class="ref-list">
-  <li class="ref-item" id="ref-1">
-    <span class="ref-num">[1]</span>
-    <div>
-      <strong>OpenAI ChatGPT Pricing Architecture: Plus, Pro &amp; Business Plans</strong> — OpenAI Official Product Pricing (October 2026). Verified individual and organizational subscription tiers. <br>
-      <a class="ref-link" href="https://openai.com/chatgpt/pricing/" target="_blank" rel="noopener noreferrer">https://openai.com/chatgpt/pricing/</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-2">
-    <span class="ref-num">[2]</span>
-    <div>
-      <strong>OpenAI Operator &amp; Computer-Using Agent (CUA) Architecture</strong> — OpenAI Research (2025–2026). Multimodal vision and headless Chromium browser execution. <br>
-      <a class="ref-link" href="https://openai.com/index/introducing-operator/" target="_blank" rel="noopener noreferrer">https://openai.com/index/introducing-operator/</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-3">
-    <span class="ref-num">[3]</span>
-    <div>
-      <strong>OpenAI Responses API &amp; Function Calling Documentation</strong> — OpenAI Platform Documentation (2026). Universal tool dispatch and autonomous state hand-offs. <br>
-      <a class="ref-link" href="https://platform.openai.com/docs/guides/function-calling" target="_blank" rel="noopener noreferrer">https://platform.openai.com/docs/guides/function-calling</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-4">
-    <span class="ref-num">[4]</span>
-    <div>
-      <strong>OpenAI Swarm Framework: Multi-Agent Orchestration Patterns</strong> — OpenAI Experimental Repository (2024–2026). Stateless hand-off primitives and peer coordination. <br>
-      <a class="ref-link" href="https://github.com/openai/swarm" target="_blank" rel="noopener noreferrer">https://github.com/openai/swarm</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-5">
-    <span class="ref-num">[5]</span>
-    <div>
-      <strong>Guaranteed Structured Outputs via Constrained Decoding (Strict Mode)</strong> — OpenAI Engineering (2024–2026). Mathematical grammar-based token sampling for 100% JSON schema adherence. <br>
-      <a class="ref-link" href="https://openai.com/index/introducing-structured-outputs-in-the-api/" target="_blank" rel="noopener noreferrer">https://openai.com/index/introducing-structured-outputs-in-the-api/</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-6">
-    <span class="ref-num">[6]</span>
-    <div>
-      <strong>Deep Research &amp; Deliberative Reasoning Engine Overview</strong> — OpenAI Science (2025–2026). Autonomous multi-turn web search, document cross-referencing, and synthesis. <br>
-      <a class="ref-link" href="https://openai.com/index/introducing-deep-research/" target="_blank" rel="noopener noreferrer">https://openai.com/index/introducing-deep-research/</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-7">
-    <span class="ref-num">[7]</span>
-    <div>
-      <strong>OpenAI Enterprise Trust, Security &amp; Compliance Portal</strong> — OpenAI Trust Center (2026). SOC 2 Type II compliance, HIPAA BAA eligibility, and zero customer data retention. <br>
-      <a class="ref-link" href="https://trust.openai.com" target="_blank" rel="noopener noreferrer">https://trust.openai.com</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-8">
-    <span class="ref-num">[8]</span>
-    <div>
-      <strong>OpenAI Developer Platform Console &amp; Token Pricing</strong> — OpenAI Platform (October 2026). Token rate card, prompt caching parameters, and Tier 1–5 rate limits. <br>
-      <a class="ref-link" href="https://platform.openai.com/docs/pricing" target="_blank" rel="noopener noreferrer">https://platform.openai.com/docs/pricing</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-9">
-    <span class="ref-num">[9]</span>
-    <div>
-      <strong>OpenAI Codex &amp; Agentic Code Generation Benchmarks</strong> — OpenAI Technical Reports (2026). High-throughput Python/Rust code generation and automated test verification. <br>
-      <a class="ref-link" href="https://openai.com/research/codex" target="_blank" rel="noopener noreferrer">https://openai.com/research/codex</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-10">
-    <span class="ref-num">[10]</span>
-    <div>
-      <strong>Pydantic Data Validation in Python Agent Loops</strong> — Pydantic Open Source Project (2026). Strict schema validation and JSON serialization. <br>
-      <a class="ref-link" href="https://docs.pydantic.dev" target="_blank" rel="noopener noreferrer">https://docs.pydantic.dev</a>
-    </div>
-  </li>
-</ul>
-</article>
-
-<!-- CTA BANNER -->
-<div class="cta-banner">
-<h2 style="color:#fff;font-size:1.8rem;margin-bottom:0.75rem;">Implement OpenAI AI Agent Teams in Your Organization</h2>
-<p style="color:#94a3b8;max-width:620px;margin:0 auto 1.5rem;font-size:0.95rem;">
-        Looking to replace bulky, monolithic customer workflows with ultra-fast OpenAI AI agent team pipelines? 
-        Let’s build your production system.
-      </p>
-<a class="btn btn-primary" href="contact.html">Commission OpenAI AI Agent Team →</a>
-<a class="btn btn-outline" href="agents-all-agentic-providers.html">← Back to All Providers</a>
-</div>
-</div>
-</main>
+      <div>
+        <a class="btn btn-primary" href="collaboration.html">Schedule Architecture Consultation →</a>
+        <a class="btn btn-outline" href="pricing.html">View Advisory Packages</a>
+      </div>
+    </section>
+  </div>
     <!-- START:FOOTER -->
   <style id="footer-styles">
     footer {
@@ -1781,23 +1546,6 @@ if __name__ == "__main__":
     </p>
   </footer>
     <!-- END:FOOTER -->
-
 <script src="components.js"></script>
-<script>
-  function copySnippet(id) {
-    var el = document.getElementById(id);
-    if (!el) return;
-    navigator.clipboard.writeText(el.innerText).then(function() {
-      var btn = el.closest('.code-window').querySelector('.copy-btn');
-      if (btn) {
-        var orig = btn.innerText;
-        btn.innerText = 'Copied!';
-        btn.style.background = '#34d399';
-        btn.style.color = '#000';
-        setTimeout(function() { btn.innerText = orig; btn.style.background = ''; btn.style.color = ''; }, 2000);
-      }
-    });
-  }
-</script>
 </body>
 </html>

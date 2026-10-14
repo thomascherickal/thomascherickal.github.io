@@ -38,7 +38,7 @@ You retain complete IP ownership and copyright upon completion. All training cur
  Mastery · FAQ #04 — Multi-Agent Team Orchestration*  
 AI Agent Mastery teaches you how to create coordinated teams of AI agents using Claude
  or Grok to perform the tasks of multiple people. You will learn the in-depth principles that
- make AI agent orchestration successful and understand deep agent constraints (context degradation, execution
+ make Claude AI agent orchestration successful and understand deep agent constraints (context degradation, execution
  loops, tool-calling boundaries). Crucially, multi-agent orchestration is impossible without basic domain
  knowledge of the given task, so curriculums ground agents in domain-specific schemas, evaluation metrics,
  and sandbox verification.
@@ -110,7 +110,7 @@ I possess deep, hands-on technical expertise across Claude Code, Google Antigrav
 
 ---
 
-### 12. How do you architect autonomous AI agent orchestration and multi-agent workflows?
+### 12. How do you architect autonomous Claude AI agent orchestration and multi-agent workflows?
 *Autonomous
  Systems · FAQ #12 — Agent Orchestration*  
 I architect multi-agent systems using LangGraph, CrewAI, AutoGen, and the Model Context

@@ -76,7 +76,7 @@ A_LA_CARTE = [
     {"num": 1, "name": "🤖 AI Agent Mastery & Team Orchestration", "price": 1000, "per": "", "color": "gold"},
     {"num": 2, "name": "🎓 Corporate & Dev Training (Live & Remote)", "price": 1000, "per": "", "color": "cyan"},
     {"num": 3, "name": "📦 Local LLM Deployment & Cost Slashing", "price": 1000, "per": "", "color": "gold"},
-    {"num": 4, "name": "🤖 AI Agent Orchestration & Tool Loops", "price": 1000, "per": "", "color": "violet"},
+    {"num": 4, "name": "🤖 Claude AI Agent Orchestration & Tool Loops", "price": 1000, "per": "", "color": "violet"},
     {"num": 5, "name": "🧪 AI-Assisted Dev & Test-Driven Dev (TDD)", "price": 1000, "per": "", "color": "cyan"},
     {"num": 6, "name": "📊 AI Benchmarks & Evaluation Metrics (Evals)", "price": 1000, "per": "", "color": "gold"},
     {"num": 7, "name": "⚛️ Early Quantum Systems & Qiskit Labs", "price": 1000, "per": "", "color": "violet"},
@@ -94,7 +94,7 @@ STANDALONE_SERVICES = {
         "unit": "per system rollout"
     },
     "service-ai-agents-orchestration": {
-        "title": "AI Agent Orchestration & Tool Loops",
+        "title": "Claude AI Agent Orchestration & Tool Loops",
         "min": 3000,
         "max": 6000,
         "unit": "per agent swarm milestone"
@@ -566,7 +566,7 @@ def sync_pricing_html_cards():
           <div class="price-card-faq border-violet">
             <div class="price-card-title"
               style="color:var(--violet);font-weight:700;font-size:0.98rem;min-height:2.6rem;display:flex;align-items:center;justify-content:center;">
-              🤖 AI Agent Orchestration &amp; Tool Loops</div>
+              🤖 Claude AI Agent Orchestration &amp; Tool Loops</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#c084fc;text-shadow:0 0 12px rgba(192,132,252,0.35);">
               $1,000 USD

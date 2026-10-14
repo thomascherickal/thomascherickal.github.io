@@ -1,174 +1,70 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Gemini Spark Architecture &amp; Orchestration Guide | Thomas Cherickal</title>
-  <meta
-    content="Architecting Google Gemini Spark agents, Google Antigravity SDK, ultra-low latency edge loops, million-token context, and multimodal AI agent teams."
-    name="description" />
+  <title>Claude Agents 101: 2026 Ecosystem, Model Hierarchy & Agentic Execution | Thomas Cherickal</title>
+  <meta content="Comprehensive engineering guide to the late-2026 Anthropic Claude ecosystem: Fable 5.1, Mythos 5.1, Opus 5.5, Sonnet 5.5, Haiku 4.5, Cowork, Claude Code, MCP, and no-code tutorials." name="description" />
   <meta content="Thomas Cherickal" name="author" />
-  <link href="https://thomascherickal.github.io/agents-gemini-spark.html" rel="canonical" />
+  <link href="https://thomascherickal.github.io/agents-claude-101.html" rel="canonical" />
   <!-- Open Graph -->
   <meta content="website" property="og:type" />
-  <meta content="https://thomascherickal.github.io/agents-gemini-spark.html" property="og:url" />
+  <meta content="https://thomascherickal.github.io/agents-claude-101.html" property="og:url" />
   <meta content="Thomas Cherickal — The Digital Futurist" property="og:site_name" />
-  <meta content="Gemini Spark Architecture &amp; Orchestration Guide | Thomas Cherickal" property="og:title" />
-  <meta
-    content="Architecting Google Gemini Spark agents, Google Antigravity SDK, ultra-low latency edge loops, million-token context, and multimodal AI agent teams."
-    property="og:description" />
+  <meta content="Claude Agents 101: 2026 Ecosystem, Model Hierarchy & Agentic Execution | Thomas Cherickal" property="og:title" />
+  <meta content="Comprehensive engineering guide to the late-2026 Anthropic Claude ecosystem: Fable 5.1, Mythos 5.1, Opus 5.5, Sonnet 5.5, Haiku 4.5, Cowork, Claude Code, MCP, and no-code tutorials." property="og:description" />
   <meta content="https://thomascherickal.github.io/assets/og-card.png" property="og:image" />
   <meta content="en_US" property="og:locale" />
-  <!-- Twitter Card -->
-  <meta content="summary_large_image" name="twitter:card" />
-  <meta content="Gemini Spark Architecture &amp; Orchestration Guide | Thomas Cherickal" name="twitter:title" />
-  <meta
-    content="Architecting Google Gemini Spark agents, Google Antigravity SDK, ultra-low latency edge loops, million-token context, and multimodal AI agent teams."
-    name="twitter:description" />
-  <meta content="https://thomascherickal.github.io/assets/og-card.png" name="twitter:image" />
   <!-- Favicons -->
   <link href="assets/favicon.ico" rel="icon" sizes="any" />
   <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
   <link href="assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
   <link href="/site.webmanifest" rel="manifest" />
-  <meta content="#000000" name="theme-color" />
+  <meta content="#020408" name="theme-color" />
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap"
-    rel="stylesheet" />
-  <!-- JSON-LD Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://thomascherickal.github.io/agent-gemini-spark.html#webpage",
-        "url": "https://thomascherickal.github.io/agent-gemini-spark.html",
-        "name": "Gemini Spark Architecture & Orchestration Guide | Thomas Cherickal",
-        "description": "Architecting Google Gemini Spark agents, Google Antigravity SDK, ultra-low latency edge loops, million-token context, and multimodal AI agent teams.",
-        "isPartOf": {
-          "@id": "https://thomascherickal.github.io/#website"
-        },
-        "inLanguage": "en-US",
-        "breadcrumb": {
-          "@id": "https://thomascherickal.github.io/agent-gemini-spark.html#breadcrumb"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://thomascherickal.github.io/agent-gemini-spark.html#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://thomascherickal.github.io/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Orchestration",
-            "item": "https://thomascherickal.github.io/agents-all-agentic-providers.html"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Gemini Spark",
-            "item": "https://thomascherickal.github.io/agent-gemini-spark.html"
-          }
-        ]
-      },
-      {
-        "@type": "TechArticle",
-        "@id": "https://thomascherickal.github.io/agent-gemini-spark.html#article",
-        "headline": "Google Gemini Spark: Low-Latency Edge Agents, Antigravity SDK, and Million-Token Context Teams",
-        "description": "Engineering guide to deploying Google Gemini Spark low-latency AI agent teams with multimodal tool calling and Antigravity execution.",
-        "author": {
-          "@type": "Person",
-          "@id": "https://thomascherickal.github.io/#person",
-          "name": "Thomas Cherickal",
-          "jobTitle": "Generative AI Consultant"
-        },
-        "datePublished": "2026-10-13",
-        "inLanguage": "en-US"
-      }
-    ]
-  }
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      mermaid.initialize({ startOnLoad: true, theme: 'dark', themeVariables: { 'primaryColor': '#0c111d', 'primaryTextColor': '#38bdf8', 'primaryBorderColor': '#38bdf8', 'lineColor': '#fbbf24', 'secondaryColor': '#060912', 'tertiaryColor': '#131926' } });
+    });
   </script>
   <style>
     :root {
       --bg-0: #020408;
       --bg-1: #060912;
       --bg-2: #0b0f19;
-      --bg-card: linear-gradient(145deg, #0c111d 0%, #04060c 100%);
+      --bg-card: #0c111d;
+      --border: rgba(56, 189, 248, 0.2);
+      --border-gold: rgba(251, 191, 36, 0.35);
       --cyan: #38bdf8;
       --gold: #fbbf24;
-      --border: rgba(56, 189, 248, 0.18);
-      --border-gold: rgba(251, 191, 36, 0.25);
-      --glow-cyan: 0 0 24px rgba(56, 189, 248, 0.22);
-      --glow-gold: 0 0 24px rgba(251, 191, 36, 0.22);
-      --font-body: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --claude-accent: #D97757;
+      --claude-light: #F38B6C;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --font-main: 'Inter', -apple-system, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
+      --font-display: 'Cinzel', serif;
     }
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       background: var(--bg-0);
-      color: #fff;
-      font-family: var(--font-body);
-      font-size: 18px;
-      line-height: 1.7;
+      color: var(--text);
+      font-family: var(--font-main);
+      line-height: 1.65;
+      padding-top: 72px;
       overflow-x: hidden;
     }
 
     .container {
-      max-width: 1060px;
+      max-width: 1140px;
       margin: 0 auto;
-      padding: 0 clamp(1.25rem, 4vw, 2.5rem);
-    }
-
-    .skip-link {
-      position: absolute;
-      top: -100px;
-      left: 1rem;
-      background: var(--cyan);
-      color: #000;
-      padding: 0.5rem 1rem;
-      z-index: 9999;
-    }
-
-    .skip-link:focus {
-      top: 1rem;
-    }
-
-    .back-top {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid var(--border);
-      color: var(--cyan);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-weight: 700;
-      z-index: 90;
+      padding: 0 1.5rem 5rem;
     }
 
     .hero {
@@ -180,161 +76,185 @@
       font-family: var(--font-mono);
       font-size: 0.8rem;
       letter-spacing: 0.15em;
-      color: var(--cyan);
+      color: var(--claude-accent);
       text-transform: uppercase;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.85rem;
+      font-weight: 700;
     }
 
     .hero-title {
       font-size: clamp(2rem, 4.5vw, 3rem);
       font-weight: 800;
       line-height: 1.25;
-      margin-bottom: 1rem;
+      margin-bottom: 1.15rem;
+      background: linear-gradient(135deg, #ffffff 40%, #e2e8f0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    .hero-logo-box {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 72px;
-      height: 72px;
-      background: rgba(56, 189, 248, 0.1);
-      border: 1.5px solid rgba(56, 189, 248, 0.4);
-      border-radius: 20px;
-      margin-bottom: 1.25rem;
-      box-shadow: 0 0 24px rgba(56, 189, 248, 0.25);
-    }
-
-    .pricing-hero-card {
-      background: linear-gradient(135deg, rgba(56, 189, 248, 0.08) 0%, rgba(251, 191, 36, 0.05) 100%);
-      border: 1.5px solid var(--border-gold);
-      border-radius: 14px;
-      padding: 1.5rem 2rem;
-      margin: 2rem auto;
+    .hero-desc {
+      color: #94a3b8;
       max-width: 780px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
+      margin: 0 auto 1.75rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
     }
 
-    .pricing-val {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--gold);
-      font-family: var(--font-mono);
-    }
 
     .content-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 2.25rem;
+      padding: 2.5rem;
       margin-bottom: 2.25rem;
+      text-align: left;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
     }
 
     .content-card h2 {
       color: var(--gold);
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      line-height: 1.35;
+      border-bottom: 1px solid rgba(251, 191, 36, 0.15);
+      padding-bottom: 0.6rem;
     }
 
     .content-card h3 {
       color: var(--cyan);
       font-size: 1.15rem;
-      margin: 1.5rem 0 0.5rem;
+      font-weight: 600;
+      margin: 1.85rem 0 0.85rem;
+      line-height: 1.4;
     }
 
     .content-card p {
       color: #e2e8f0;
-      font-size: 0.96rem;
-      margin-bottom: 1rem;
-      line-height: 1.75;
+      font-size: 0.98rem;
+      margin-bottom: 1.15rem;
+      line-height: 1.8;
     }
 
-    .content-card ul,
-    .content-card ol {
+    .content-card ul, .content-card ol {
       color: #cbd5e1;
-      font-size: 0.94rem;
-      margin-left: 1.5rem;
-      margin-bottom: 1.25rem;
-      line-height: 1.75;
+      font-size: 0.96rem;
+      margin-left: 1.6rem;
+      margin-bottom: 1.35rem;
+      line-height: 1.8;
+    }
+
+    .content-card li {
+      margin-bottom: 0.75rem;
+    }
+
+    .content-card strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .content-card a {
+      color: var(--gold);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .content-card a:hover {
+      color: var(--cyan);
+    }
+
+    code:not(pre code) {
+      font-family: var(--font-mono);
+      font-size: 0.88em;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.22);
+      color: #7dd3fc;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      word-break: break-word;
     }
 
     .code-window {
       background: #040711;
       border: 1px solid rgba(56, 189, 248, 0.25);
       border-radius: 12px;
-      margin: 1.75rem 0;
+      margin: 1.85rem 0;
       overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
     }
 
     .code-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.65rem 1.25rem;
+      padding: 0.75rem 1.25rem;
       background: rgba(15, 23, 42, 0.95);
       border-bottom: 1px solid rgba(56, 189, 248, 0.15);
       font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: #94a3b8;
     }
 
     .code-pre {
-      padding: 1.25rem 1.5rem;
+      padding: 1.35rem 1.6rem;
       overflow-x: auto;
       font-family: var(--font-mono);
       font-size: 0.86rem;
-      line-height: 1.65;
+      line-height: 1.68;
       color: #e2e8f0;
+      tab-size: 4;
     }
 
-    .copy-btn {
-      background: rgba(56, 189, 248, 0.12);
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      color: var(--cyan);
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      padding: 0.3rem 0.75rem;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .copy-btn:hover {
-      background: var(--cyan);
-      color: #020408;
-      font-weight: 700;
-    }
-
-    .table-container {
-      width: 100%;
+    .mermaid-container {
+      background: #050814;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.75rem 0;
+      text-align: center;
       overflow-x: auto;
+    }
+
+    .step-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
       margin: 1.5rem 0;
     }
 
-    .bench-table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-      font-size: 0.9rem;
+    .step-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 10px;
+      padding: 1.25rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
-    .bench-table th,
-    .bench-table td {
-      padding: 0.85rem 1rem;
-      border: 1px solid var(--border);
+    .step-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--cyan);
     }
 
-    .bench-table th {
-      background: rgba(15, 23, 42, 0.8);
-      color: var(--cyan);
+    .step-num {
       font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--cyan);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
     }
 
-    .bench-table tr:nth-child(even) {
-      background: rgba(255, 255, 255, 0.02);
+    .step-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-desc {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      line-height: 1.55;
     }
 
     .cta-banner {
@@ -344,127 +264,401 @@
       padding: 3rem 2rem;
       text-align: center;
       margin: 3rem 0 2rem;
+      box-shadow: 0 0 28px rgba(251, 191, 36, 0.18);
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
-      padding: 0.75rem 1.5rem;
+      justify-content: center;
+      padding: 0.8rem 1.65rem;
       border-radius: 8px;
       font-family: var(--font-mono);
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       font-weight: 700;
       text-decoration: none;
       cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     }
 
+    .btn:hover { transform: translateY(-2px); }
     .btn-primary {
       background: var(--cyan);
-      color: #020408;
+      color: #020408 !important;
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.3);
     }
-
+    .btn-primary:hover {
+      background: #7dd3fc;
+      box-shadow: 0 0 24px rgba(56, 189, 248, 0.5);
+    }
     .btn-outline {
       background: transparent;
-      border: 1px solid var(--border-gold);
-      color: var(--gold);
-      margin-left: 0.75rem;
+      border: 1.5px solid var(--border-gold);
+      color: var(--gold) !important;
+      box-shadow: 0 0 12px rgba(251, 191, 36, 0.15);
+      margin-left: 0.85rem;
     }
-
-    /* Pricing Table & References Styling */
+    .btn-outline:hover {
+      background: rgba(251, 191, 36, 0.12);
+      border-color: var(--gold);
+    }
+  
+    /* ==========================================================================
+       Pricing & Specification Table Styling
+       ========================================================================== */
     .pricing-table-wrapper {
       overflow-x: auto;
-      margin: 1.5rem 0;
-      border-radius: var(--radius-md, 10px);
-      border: 1px solid var(--border, rgba(56, 189, 248, 0.18));
-      background: var(--bg-card, #0c111d);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      margin: 1.75rem 0;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
     }
-
     .pricing-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       text-align: left;
     }
-
     .pricing-table th {
       background: rgba(15, 23, 42, 0.95);
-      color: var(--gold, #fbbf24);
-      padding: 0.9rem 1.1rem;
-      border-bottom: 2px solid var(--border, rgba(56, 189, 248, 0.18));
-      font-family: var(--font-mono, monospace);
-      font-size: 0.78rem;
+      color: var(--gold);
+      padding: 1rem 1.15rem;
+      border-bottom: 2px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.06em;
+      white-space: nowrap;
     }
-
     .pricing-table td {
-      padding: 0.85rem 1.1rem;
+      padding: 0.95rem 1.15rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      color: var(--text-secondary, #e2e8f0);
-      vertical-align: middle;
+      color: #e2e8f0;
+      vertical-align: top;
+      line-height: 1.6;
     }
-
+    .pricing-table tr:last-child td {
+      border-bottom: none;
+    }
     .pricing-table tr:hover {
       background: rgba(56, 189, 248, 0.04);
     }
+    .tier-badge {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .tier-badge.ultra {
+      background: rgba(217, 119, 87, 0.18);
+      border: 1px solid rgba(217, 119, 87, 0.4);
+      color: #f87171;
+    }
+    .tier-badge.frontier {
+      background: rgba(251, 191, 36, 0.15);
+      border: 1px solid rgba(251, 191, 36, 0.4);
+      color: var(--gold);
+    }
+    .tier-badge.workhorse {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--cyan);
+    }
+    .tier-badge.latency {
+      background: rgba(52, 211, 153, 0.15);
+      border: 1px solid rgba(52, 211, 153, 0.4);
+      color: #34d399;
+    }
 
+    /* ==========================================================================
+       References & Citation Styling
+       ========================================================================== */
     .ref-list {
       list-style: none;
       padding-left: 0;
-      margin: 1rem 0 0 0;
+      margin: 1.25rem 0 0 0;
       display: flex;
       flex-direction: column;
       gap: 0.85rem;
     }
-
     .ref-item {
       display: flex;
-      gap: 0.75rem;
-      font-size: 0.86rem;
-      line-height: 1.55;
-      padding: 0.75rem 1rem;
+      gap: 0.85rem;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      padding: 0.85rem 1.15rem;
       background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.07);
       border-radius: 8px;
+      transition: border-color 0.2s ease, background 0.2s ease;
     }
-
+    .ref-item:hover {
+      border-color: rgba(56, 189, 248, 0.35);
+      background: rgba(56, 189, 248, 0.03);
+    }
     .ref-num {
-      color: var(--cyan, #38bdf8);
-      font-family: var(--font-mono, monospace);
+      color: var(--cyan);
+      font-family: var(--font-mono);
       font-weight: 700;
       flex-shrink: 0;
     }
-
+    .ref-content strong {
+      color: #ffffff;
+    }
     .ref-link {
-      color: var(--cyan, #38bdf8);
+      display: inline-block;
+      margin-top: 0.25rem;
+      color: var(--cyan);
       text-decoration: underline;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
       word-break: break-all;
     }
-
     .ref-link:hover {
-      color: var(--gold, #fbbf24);
+      color: var(--gold);
     }
-
     .ref-cite {
-      color: var(--cyan, #38bdf8);
-      font-size: 0.75em;
+      color: var(--cyan);
+      font-size: 0.78em;
       vertical-align: super;
       text-decoration: none;
       font-weight: 600;
       margin-left: 2px;
       padding: 0 2px;
     }
-
     .ref-cite:hover {
-      color: var(--gold, #fbbf24);
+      color: var(--gold);
       text-decoration: underline;
     }
+
+    /* ==========================================================================
+       Interactive Architecture & Economics Simulator
+       ========================================================================== */
+    .sim-container {
+      background: linear-gradient(180deg, rgba(12, 17, 29, 0.95) 0%, rgba(6, 9, 18, 0.98) 100%);
+      border: 1.5px solid rgba(56, 189, 248, 0.3);
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 24px rgba(56, 189, 248, 0.08);
+    }
+    .sim-header {
+      border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .sim-title {
+      color: var(--gold);
+      font-family: var(--font-cinzel);
+      font-size: 1.35rem;
+      margin: 0;
+    }
+    .sim-subtitle {
+      color: #94a3b8;
+      font-size: 0.88rem;
+      margin-top: 0.25rem;
+    }
+    .sim-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.75rem;
+    }
+    @media (max-width: 860px) {
+      .sim-grid { grid-template-columns: 1fr; }
+    }
+    .sim-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .sim-field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .sim-label {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: #94a3b8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .sim-label span.val {
+      color: var(--cyan);
+      font-weight: 700;
+    }
+    .sim-select, .sim-range {
+      width: 100%;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 8px;
+      color: #ffffff;
+      padding: 0.65rem 0.85rem;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    .sim-select:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+    }
+    .sim-range {
+      padding: 0.35rem 0;
+      accent-color: var(--cyan);
+      cursor: pointer;
+    }
+    .sim-effort-buttons {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .sim-effort-btn {
+      flex: 1;
+      min-width: 60px;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 6px;
+      padding: 0.5rem 0.2rem;
+      color: #94a3b8;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+    .sim-effort-btn:hover {
+      border-color: var(--cyan);
+      color: #ffffff;
+    }
+    .sim-effort-btn.active {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: var(--cyan);
+      color: var(--cyan);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.25);
+    }
+    .sim-results-card {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .sim-metric-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .sim-metric-box {
+      background: rgba(6, 9, 18, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+    }
+    .sim-metric-title {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .sim-metric-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-top: 0.25rem;
+      font-family: var(--font-mono);
+    }
+    .sim-metric-sub {
+      font-size: 0.78rem;
+      color: #64748b;
+      margin-top: 0.15rem;
+    }
+    .sim-benchmarks {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 1rem;
+    }
+    .sim-benchmark-title {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 0.65rem;
+    }
+    .sim-bench-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.65rem;
+    }
+    .sim-bench-pill {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 6px;
+      padding: 0.45rem 0.65rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+    .sim-bench-pill .b-name { color: #94a3b8; }
+    .sim-bench-pill .b-val { color: var(--cyan); font-family: var(--font-mono); font-weight: 600; }
+    .sim-loop-viz {
+      background: rgba(6, 9, 18, 0.7);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+      margin-top: 0.5rem;
+    }
+    .sim-loop-title {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: #94a3b8;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .sim-loop-steps {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .sim-loop-node {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 4px;
+      padding: 0.25rem 0.55rem;
+      font-size: 0.74rem;
+      font-family: var(--font-mono);
+      color: #e2e8f0;
+    }
+    .sim-loop-node.active-stage {
+      background: rgba(251, 191, 36, 0.15);
+      border-color: var(--gold);
+      color: var(--gold);
+      font-weight: 700;
+    }
+    .sim-loop-arrow {
+      color: #64748b;
+      font-size: 0.74rem;
+    }
+
   </style>
 </head>
-
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- START:HEADER -->
   <style id="header-styles">
     /* Global Root Mobile & Tablet Safeguards */
@@ -929,16 +1123,18 @@
           Agents <span class="dropdown-caret">▾</span>
         </a>
         <ul class="dropdown-menu">
-          <li><a href="agents-all-agentic-providers.html" class="dropdown-header-link">🌐 All Agentic Providers</a></li>
+          <li><a href="agents-claude-101.html" class="dropdown-header-link">🟣 Claude Agents Suite</a></li>
           <li class="dropdown-divider"></li>
-          <li><a href="agents-claude-agents.html">🟣 Claude Agents</a></li>
-          <li><a href="agents-grok-bot.html">⚡ Grok Bot</a></li>
-          <li><a href="agents-openai-dots.html">🟢 OpenAI Dots</a></li>
-          <li><a href="agents-gemini-spark.html">✨ Gemini Spark</a></li>
-          <li><a href="agents-github-copilot.html">🐙 GitHub Copilot</a></li>
-          <li><a href="agents-meta-muse.html">♾️ Meta Muse</a></li>
-          <li><a href="agents-hermes-agent.html">🏎️ Hermes Agent</a></li>
-          <li><a href="agents-opencode-free.html">💻 OpenCode Free</a></li>
+          <li><a href="agents-claude-101.html">🚀 Claude Agents 101</a></li>
+          <li><a href="agents-claude-code.html">💻 Claude Code CLI</a></li>
+          <li><a href="agents-claude-skills.html">🧩 Claude Skills &amp; Extensibility</a></li>
+          <li><a href="agents-claude-cowork.html">🖥️ Claude Cowork &amp; Computer Use</a></li>
+          <li><a href="agents-claude-mcp.html">🔌 Model Context Protocol (MCP)</a></li>
+          <li><a href="agents-claude-agent-teams.html">👥 Claude Agent Teams</a></li>
+          <li><a href="agents-claude-agent-swarms.html">🐝 Claude Agent Swarms</a></li>
+          <li><a href="agents-claude-design.html">📐 Claude Agent Design Patterns</a></li>
+          <li><a href="agents-claude-budget-limits.html">💲 Claude Budget Limits &amp; Caching</a></li>
+          <li><a href="agents-claude-local-llms.html">📦 Claude &amp; Local LLM Hybrids</a></li>
         </ul>
       </li>
       <li><a href="portfolio.html" data-nav="portfolio.html">Portfolio</a></li>
@@ -953,7 +1149,7 @@
           <li class="dropdown-divider"></li>
           <li><a href="service-generative-ai-transformation.html">🧠 Generative AI Transformation</a></li>
           <li><a href="service-local-llms-cost-slashing.html">📦 Local LLMs &amp; Cost Slashing</a></li>
-          <li><a href="service-ai-agents-orchestration.html">🤖 AI Agent Orchestration Fundamentals</a></li>
+          <li><a href="service-ai-agents-orchestration.html">🤖 Claude AI Agent Orchestration Fundamentals</a></li>
           <li><a href="service-agentic-ai-systems.html">🏎️ Agentic AI Assistants (Hermes Agent)</a></li>
           <li><a href="service-training-for-workflow-automations.html">🌐 Training for WorkFlows Automations</a></li>
           <li><a href="service-quantum-applications.html">⚛️ Quantum Applications (Experimental)</a></li>
@@ -968,649 +1164,600 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-  <main id="main">
-    <div class="container">
-      <header class="hero">
-        <div class="hero-logo-box">
-          <svg aria-hidden="true" height="46" viewbox="0 0 24 24" width="46">
-            <path d="M12 3C12 7.97 7.97 12 3 12C7.97 12 12 16.03 12 21C12 16.03 16.03 12 21 12C16.03 12 12 7.97 12 3Z"
-              fill="url(#geminiPageGrad)"></path>
-            <defs>
-              <lineargradient id="geminiPageGrad" x1="3" x2="21" y1="3" y2="21">
-                <stop stop-color="#38BDF8"></stop>
-                <stop offset="0.5" stop-color="#818CF8"></stop>
-                <stop offset="1" stop-color="#C084FC"></stop>
-              </lineargradient>
-            </defs>
-          </svg>
+
+  
+  <div class="container">
+    <header class="hero">
+      <p class="hero-badge">// ANTHROPIC CLAUDE · AGENTIC ECOSYSTEM (OCTOBER 2026)</p>
+      <h1 class="hero-title">Claude Agents 101: Model Hierarchy, Adaptive Reasoning &amp; Agentic Execution</h1>
+      <p class="hero-desc">
+        Anthropic’s ecosystem has shifted from stateless chat interfaces to autonomous, long-horizon agentic execution platforms. Following the late September 2026 release of the Claude 5.5 generation alongside the Fable 5.1 / Mythos 5.1 frontier architecture, the platform now combines adaptive reasoning, native desktop file manipulation, server-side scheduled autonomy, and a standardized external tool layer via the Model Context Protocol (MCP).
+      </p>
+    </header>
+
+    <!-- SECTION 1: MODEL HIERARCHY -->
+    <article class="content-card" id="model-hierarchy">
+      <h2>1. The Late-2026 Claude Model Hierarchy</h2>
+      <p>
+        Anthropic structures its model lineup into distinct operational tiers designed to balance reasoning depth, latency, and token economics. Version numbers now progress independently across model families <a href="#ref-1" class="ref-cite">[1]</a> <a href="#ref-7" class="ref-cite">[7]</a>:
+      </p>
+
+      <div class="pricing-table-wrapper">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Model Tier</th>
+              <th>Active Release (Oct 2026)</th>
+              <th>Context / Max Output</th>
+              <th>API Pricing (Input / Output per 1M)</th>
+              <th>Core Architecture &amp; Best Use Cases</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tier-badge ultra">Ultra-Frontier</span></td>
+              <td><strong>Claude Fable 5.1 &amp; Mythos 5.1</strong></td>
+              <td>1M / 128K tokens</td>
+              <td><strong>$10.00</strong> / <strong>$50.00</strong></td>
+              <td>Fable 5.1 handles multi-hour autonomous research, cross-suite synthesis, and deep software architecture. Mythos 5.1 shares the same base weights but is restricted to vetted partners (Project Glasswing, Life Sciences, and Cyber Verification programs) for defensive cybersecurity and biological research <a href="#ref-2" class="ref-cite">[2]</a>.</td>
+            </tr>
+            <tr>
+              <td><span class="tier-badge frontier">Frontier Flagship</span></td>
+              <td><strong>Claude Opus 5.5</strong></td>
+              <td>1M / 128K tokens <br><span style="font-size:0.8rem;color:#94a3b8;">(300K via Batch API)</span></td>
+              <td><strong>$4.00</strong> / <strong>$20.00</strong> <br><span style="font-size:0.8rem;color:#38bdf8;">(Cache read: $0.20)</span></td>
+              <td>Released September 22, 2026. Anthropic's recommended default for complex agentic coding, repository-scale refactoring, financial modeling, and enterprise synthesis. Runs over 30% faster and ~40% cheaper per task than Opus 5 <a href="#ref-1" class="ref-cite">[1]</a> <a href="#ref-5" class="ref-cite">[5]</a>.</td>
+            </tr>
+            <tr>
+              <td><span class="tier-badge workhorse">Production Workhorse</span></td>
+              <td><strong>Claude Sonnet 5.5</strong></td>
+              <td>1M / 128K tokens <br><span style="font-size:0.8rem;color:#94a3b8;">(300K via Batch API)</span></td>
+              <td><strong>$2.00</strong> / <strong>$10.00</strong></td>
+              <td>Released September 28, 2026. Generates output 30%+ faster than Sonnet 5. Matches or exceeds prior Opus-class performance on computer use (80.1% on OSWorld 2.1), bug resolution, and interactive document/slide creation <a href="#ref-4" class="ref-cite">[4]</a>.</td>
+            </tr>
+            <tr>
+              <td><span class="tier-badge latency">Ultra-Low Latency</span></td>
+              <td><strong>Claude Haiku 4.5</strong></td>
+              <td>200K / 64K tokens</td>
+              <td><strong>$1.00</strong> / <strong>$5.00</strong></td>
+              <td>Sub-100ms routing, high-frequency document triage, classification swarms, and real-time guardrails. Only active model still utilizing legacy fixed thinking token budgets rather than adaptive effort controls <a href="#ref-7" class="ref-cite">[7]</a>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Architectural Lifecycle &amp; Multimodal Bounds</h3>
+      <ul>
+        <li><strong>Previous Active Pinned Snapshots:</strong> Claude Opus 5, Opus 4.8, Opus 4.7, and Sonnet 5 remain accessible on the API for backward compatibility, while original Claude 4.0 snapshots have been retired.</li>
+        <li><strong>Modality Scope:</strong> All 2026 Claude models accept high-resolution text, code, PDFs, charts, screenshots, and voice dictation, and output text, structured JSON, interactive artifacts, diagrams, and TTS audio (on supported Sonnet tiers). By deliberate architectural choice, Claude does not natively generate raster images or video.</li>
+      </ul>
+    </article>
+
+    <!-- SECTION 2: REASONING & EFFORT CONTROL -->
+    <article class="content-card" id="reasoning-effort">
+      <h2>2. Reasoning Architecture &amp; Effort Control</h2>
+      <p>
+        During 2026, Anthropic transitioned away from manual token budget guessing (<code>budget_tokens</code>) toward Adaptive Reasoning and calibrated Effort Control <a href="#ref-3" class="ref-cite">[3]</a>:
+      </p>
+
+      <div class="step-grid">
+        <div class="step-card">
+          <div class="step-num">Core Innovation</div>
+          <div class="step-title">Always-On Adaptive Thinking</div>
+          <div class="step-desc">Starting with the 4.6–5.5 families, Claude evaluates prompt complexity dynamically before responding. In Claude Opus 5.5, reasoning is engaged on every single request by default, eliminating "under-thinking" errors on deceptive edge cases.</div>
         </div>
-        <p class="hero-badge">// PROVIDER DEEP DIVE · GOOGLE</p>
-        <h1 class="hero-title">Gemini Spark Architecture &amp; Orchestration</h1>
-        <p style="color:#94a3b8;max-width:720px;margin:0 auto 1.5rem;">
-          Engineering high-speed edge reasoning, Google Antigravity SDK <a href="#ref-4" class="ref-cite">[4]</a> loops,
-          million-token context ingestion,
-          and low-latency multimodal AI agent teams.
-        </p>
-        <!-- MINIMUM ACCESS PRICE HERO CARD -->
-        <div class="pricing-hero-card" id="pricing-hero">
+        <div class="step-card">
+          <div class="step-num">Ethical Alignment</div>
+          <div class="step-title">2026 Constitutional AI</div>
+          <div class="step-desc">Grounded in Anthropic's expanded 84-page January 2026 Constitution, models reason through ethical principles and action reversibility rather than relying on brittle post-generation keyword filters. If a request triggers high-risk cyber or biological classifiers on Fable 5.1, the router automatically downgrades or sandboxes the execution path <a href="#ref-2" class="ref-cite">[2]</a>.</div>
+        </div>
+      </div>
+
+      <h3>Five-Tier Effort Spectrum</h3>
+      <p>
+        Users and orchestrators govern compute intensity using five discrete effort settings via the API or the <code>claude.ai</code> / Cowork dropdown menu:
+      </p>
+      <ul>
+        <li><strong>Low:</strong> Instant triage, formatting, and straightforward extraction with minimal reasoning overhead.</li>
+        <li><strong>Medium (Opus 5.5 Default):</strong> Optimal equilibrium of speed, token spend, and accuracy for standard multi-step tasks.</li>
+        <li><strong>High:</strong> Deep multi-file synthesis, complex SQL/data joins, and architectural verification.</li>
+        <li><strong>XHigh (Claude Code Default):</strong> Introduced with Opus 4.7 and refined in 5.5. Maximizes repository-level bug hunting and multi-step tool verification without hitting timeout spirals.</li>
+        <li><strong>Max:</strong> Exhaustive verification for formal mathematics, security auditing, and zero-tolerance enterprise deliverables.</li>
+      </ul>
+    </article>
+
+    <!-- SECTION 3: WORKSPACE & WEB ECOSYSTEM -->
+    <article class="content-card" id="workspace-ecosystem">
+      <h2>3. Core Workspace &amp; Web Ecosystem (claude.ai)</h2>
+      <p>
+        The web and mobile platform has evolved into a stateful workspace with persistent memory and collaborative application hosting <a href="#ref-3" class="ref-cite">[3]</a>:
+      </p>
+      <ul>
+        <li><strong>Transparent Cross-Session Memory:</strong> Available across all tiers (including Free), Claude automatically retains user preferences, project history, and role context across chats. Users have a dedicated transparency ledger to inspect, edit, or purge individual memory nodes at any time.</li>
+        <li><strong>Projects with Auto-Scaling RAG:</strong> Workspaces support up to 20 files (30 MB each) per chat alongside massive project knowledge bases. When uploaded project documentation approaches the 1M token context ceiling, Projects automatically transitions into Dynamic Retrieval Mode, expanding effective project capacity by 10x while preserving near-perfect needle-in-a-stack recall.</li>
+        <li><strong>Interactive Artifacts 2.0:</strong>
+          <ul>
+            <li><em>Inline Highlight-to-Edit:</em> Users can highlight any section of a rendered document, React app, SVG diagram, or Mermaid chart in the side panel and issue natural-language surgical edits in place without regenerating the entire artifact.</li>
+            <li><em>20 MB Persistent State Storage:</em> Each published artifact includes up to 20 MB of persistent state storage. State can be configured as Personal (isolated to the individual viewer) or Shared (multi-user collaborative state, turning Artifacts into live team trackers, forms, and lightweight internal web apps).</li>
+          </ul>
+        </li>
+        <li><strong>On-Demand Rate Limit Resets:</strong> Paid subscription plans (Pro, Max, Team) include increased 5-hour rolling quotas plus bankable Rate Limit Resets that users can trigger manually during crunch deadlines.</li>
+      </ul>
+    </article>
+
+    <!-- SECTION 4: AGENTIC EXECUTION PLATFORMS -->
+    <article class="content-card" id="agentic-platforms">
+      <h2>4. Agentic Execution Platforms: Cowork, Claude Code &amp; Computer Use</h2>
+      <p>
+        Anthropic divides autonomous execution into two specialized interfaces depending on whether the user operates in a graphical filesystem or a developer terminal:
+      </p>
+
+      <div class="mermaid-container">
+        <div class="mermaid">
+flowchart TD
+  Trigger["User Intent / Scheduled Trigger"] --> Cowork["Claude Cowork<br/><i>(Knowledge Worker GUI Agent)</i>"]
+  Trigger --> Code["Claude Code<br/><i>(Autonomous Dev Ops Platform)</i>"]
+  Cowork -->|"Scans CONTEXT.md &<br/>Scoped Directory"| Reasoning["Claude 5.5 Adaptive Reasoning &amp; Effort Controller<br/><b>(Low | Medium | High | XHigh | Max)</b>"]
+  Code -->|"Scans Repo, Git Tree<br/>&amp; Tests"| Reasoning
+  Reasoning --> CompUse["Computer Use<br/><i>GUI &amp; Screen Control<br/>(80%+ OSWorld Score)</i>"]
+  Reasoning --> MCP["MCP Servers<br/><i>Local DBs, APIs, Filesystems<br/>&amp; Plugin Market</i>"]
+  Reasoning --> Cloud["Cloud / Slack<br/><i>Server-Side Cron Tasks<br/>&amp; Async Threads</i>"]
+        </div>
+      </div>
+
+      <div class="step-grid">
+        <div class="step-card">
+          <div class="step-num">GUI Workspace Agent</div>
+          <div class="step-title">Claude Cowork</div>
+          <div class="step-desc">
+            Launched in early 2026 on Claude Desktop, Cowork moves beyond chat by operating directly inside designated local folders to produce finished deliverables <a href="#ref-6" class="ref-cite">[6]</a>:
+            <ul style="margin: 0.5rem 0 0 1rem; padding: 0; font-size: 0.85rem;">
+              <li><strong>Sandboxed Directory Execution:</strong> Operates strictly in scoped local directories reading PDFs, spreadsheets, and planning multi-step transformations.</li>
+              <li><strong>Living Documents:</strong> Continuously maintains persistent compliance logs or financial trackers as new source files drop in.</li>
+              <li><strong>Computer Use Integration:</strong> Scored 80.1% on OSWorld 2.1 and 89% on Chartography to visually inspect desktop apps and web portals.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">Developer Operations Engine</div>
+          <div class="step-title">Claude Code</div>
+          <div class="step-desc">
+            Upgraded from a CLI assistant into a full software operations engine:
+            <ul style="margin: 0.5rem 0 0 1rem; padding: 0; font-size: 0.85rem;">
+              <li><strong>Mobile Remote Control:</strong> Initiate a multi-hour codebase refactor at your desk and monitor reasoning steps or approve actions live on mobile.</li>
+              <li><strong>Server-Side Scheduled Tasks:</strong> Recurring workflows (nightly test repairs, PR triage, data digests) execute cloud-side without local laptops powered on.</li>
+              <li><strong>Multi-Agent "Dev Team":</strong> Coordinates parallel subagents capable of auditing a 200,000-line repo in under 3 hours.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h3>Model Context Protocol (MCP) &amp; Plugin Marketplace</h3>
+      <ul>
+        <li><strong>Universal Connector Standard:</strong> MCP standardizes how Claude connects to local databases, Git repositories, and enterprise SaaS without custom glue logic.</li>
+        <li><strong>Role-Governed Plugin Marketplace:</strong> Launched in February 2026, Team and Enterprise administrators can curate, verify, and assign MCP plugins and Claude Skills by custom organizational role.</li>
+        <li><strong>Claude in Slack:</strong> Tagging <code>@Claude</code> inside a Slack thread delegates multi-step research or coding tasks asynchronously, returning verified deliverables directly to the channel thread.</li>
+      </ul>
+    </article>
+
+    <!-- SECTION 5: STEP-BY-STEP NO-CODE TUTORIALS -->
+    <article class="content-card" id="tutorials">
+      <h2>5. Step-by-Step No-Code Tutorials</h2>
+      <p>
+        Hands-on operational walkthroughs to deploy Cowork local agents, Artifacts 2.0 collaborative applications, and autonomous server-side scheduled automations:
+      </p>
+
+      <h3>Tutorial A: Launching an Autonomous Local Workflow in Claude Cowork</h3>
+      <p>Follow this strict operational sequence to configure a safe, high-precision desktop agent without writing a single line of code <a href="#ref-6" class="ref-cite">[6]</a>:</p>
+      <div class="step-grid">
+        <div class="step-card">
+          <div class="step-num">Step 1</div>
+          <div class="step-title">Isolate Workspace Directory</div>
+          <div class="step-desc">Never grant root or home directory access. Create a dedicated folder (e.g., <code>Documents/ClaudeWorkspace/Q4_Audit</code>) and move only required source PDFs, spreadsheets, and reference documents into it.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">Step 2</div>
+          <div class="step-title">Create CONTEXT.md</div>
+          <div class="step-desc">Parsed automatically before every agent run. Define role rules, output formatting standards, and safety bounds (such as moving obsolete drafts to a <code>Review_Trash</code> subfolder rather than deleting).</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">Step 3</div>
+          <div class="step-title">Bind Folder &amp; Enable Plugins</div>
+          <div class="step-desc">Open Claude Desktop, switch to Cowork tab, and select <code>Q4_Audit</code>. Toggle verified connectors (filesystem, Google Drive, Slack) and verify write permissions are scoped strictly to the active folder.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">Step 4</div>
+          <div class="step-title">Calibrate Model &amp; Effort</div>
+          <div class="step-desc">Select Claude Opus 5.5 (for deep financial/research synthesis) or Claude Sonnet 5.5 (for rapid slide/spreadsheet generation). Set Effort Dropdown to <strong>High</strong> for cross-document reconciliation.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">Step 5</div>
+          <div class="step-title">Delegate &amp; Monitor Remotely</div>
+          <div class="step-desc">Enter an outcome instruction: <em>"Cross-reference vendor invoices against Q4 budget, flag discrepancies &gt;5%, and generate executive summary slide deck in this folder."</em> Monitor steps via mobile app.</div>
+        </div>
+      </div>
+
+      <h3>Tutorial B: Building a Multi-User Collaborative App with Artifacts 2.0</h3>
+      <div class="step-grid">
+        <div class="step-card">
+          <div class="step-num">Step 1</div>
+          <div class="step-title">Draft Functional Specification</div>
+          <div class="step-desc">Open claude.ai, select Claude Sonnet 5.5, and describe the interactive tool you need—such as a team sprint capacity planner, interactive pricing calculator, or bug-triage tracker.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">Step 2</div>
+          <div class="step-title">Enable Persistent Shared State</div>
+          <div class="step-desc">Prompt Claude to <em>"use shared persistent storage so all team viewers interact with the same live data state."</em> Claude provisions up to 20 MB of persistent storage attached to the artifact.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">Step 3</div>
+          <div class="step-title">Refine with Highlight-to-Edit</div>
+          <div class="step-desc">Highlight any UI section, chart, or form directly in the live preview. Type a surgical change (e.g., <em>"Add priority filter dropdown and export button here"</em>) to update that exact component instantaneously.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">Step 4</div>
+          <div class="step-title">Publish &amp; Fork Across Org</div>
+          <div class="step-desc">Click <strong>Publish</strong> for a shareable workspace link. Team members collaborate in your Shared State instance or click <strong>Fork</strong> to clone an independent copy with isolated data.</div>
+        </div>
+      </div>
+
+      <h3>Tutorial C: Automating Server-Side Scheduled Tasks &amp; Memory Governance</h3>
+      <div class="step-grid">
+        <div class="step-card">
+          <div class="step-num">Step 1</div>
+          <div class="step-title">Audit Memory Ledger</div>
+          <div class="step-desc">Navigate to <strong>Settings → Memory</strong> in claude.ai. Review structured facts Claude has learned, edit outdated project details, or add permanent rules so you never repeat baseline context.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">Step 2</div>
+          <div class="step-title">Configure Scheduled Task</div>
+          <div class="step-desc">Open Scheduled Tasks in Cowork or web. Define recurring objective: <em>"Every weekday at 7:30 AM, check GitHub repo &amp; Slack support, summarize blockers, post prioritized digest to #engineering-daily."</em></div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">Step 3</div>
+          <div class="step-title">Assign Cadence &amp; Effort Tier</div>
+          <div class="step-desc">Select recurrence, bind MCP plugins, and set effort to Medium. Runs entirely server-side on Anthropic's cloud infrastructure—executing reliably even when your laptop is closed.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- SECTION 6: ENTERPRISE API CAPABILITIES -->
+    <article class="content-card" id="enterprise-api">
+      <h2>6. Enterprise API &amp; Infrastructure Capabilities</h2>
+      <p>
+        For engineering organizations deploying Claude at scale across the Anthropic API, Amazon Bedrock, Google Cloud Vertex AI, or Microsoft Foundry, several infrastructure controls govern production performance <a href="#ref-1" class="ref-cite">[1]</a> <a href="#ref-5" class="ref-cite">[5]</a>:
+      </p>
+      <ul>
+        <li><strong>60% Cheaper Prompt Caching:</strong> Cache reads on Claude Opus 5.5 dropped to $0.20 per million tokens (up to a 90–95% discount compared to fresh input tokens), dramatically reducing the cost of long-running agent loops that repeatedly pass 100K+ token system contexts <a href="#ref-1" class="ref-cite">[1]</a>.</li>
+        <li><strong>300K Output Message Batches API:</strong> Using the asynchronous Batch API with the <code>output-300k-2026-03-24</code> capability header allows Opus and Sonnet models to emit up to 300,000 tokens in a single response at a 50% cost reduction—enabling single-pass full-book translations or massive codebase migrations <a href="#ref-5" class="ref-cite">[5]</a>.</li>
+        <li><strong>Data Residency (<code>inference_geo</code>) &amp; Fast Mode:</strong> Enterprise pipelines in regulated healthcare, finance, and government sectors can pass the <code>inference_geo</code> parameter to lock compute strictly to US-only infrastructure, or trigger accelerated token streaming via the <code>speed: 'fast'</code> configuration.</li>
+      </ul>
+    </article>
+
+    <!-- SECTION 7: INTERACTIVE ARCHITECTURE & ECONOMICS EXPLORER -->
+    <article class="content-card" id="interactive-explorer">
+      <h2>7. Interactive Architecture &amp; Economics Explorer</h2>
+      <p>
+        Step through the 2026 Claude Autonomous Agentic Loop and compare real-time Task Cost, Execution Velocity, and Benchmark Performance across the active October 2026 model tiers and effort settings:
+      </p>
+
+      <div class="sim-container">
+        <div class="sim-header">
           <div>
-            <span
-              style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);text-transform:uppercase;display:block;">Verified
-              Monthly &amp; Yearly Subscriptions (Oct 2026)</span>
-            <span class="pricing-val">$0.00 Free · $19.99 / mo · $239.88 / yr</span>
-            <span style="color:#94a3b8;font-size:0.85rem;display:block;margin-top:0.2rem;">Google AI Studio <a
-                href="#ref-1" class="ref-cite">[1]</a> Free ($0) · Plus ($4.99/mo, $49.99/yr) · Pro ($19.99/mo,
-              $199.99/yr) · Workspace ($21/seat/mo)</span>
+            <h3 class="sim-title">⚡ Claude 5.5 Agent Execution Simulator</h3>
+            <p class="sim-subtitle">Simulate real-time token spend, latency scaling, and benchmark capabilities across model tiers</p>
           </div>
-          <div>
-            <a class="btn btn-primary" href="#pricing">View Subscription Matrix ↓</a>
+          <div style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);background:rgba(56,189,248,0.1);padding:0.4rem 0.8rem;border-radius:6px;border:1px solid rgba(56,189,248,0.3);">
+            LIVE TELEMETRY MODEL
           </div>
         </div>
-      </header>
-      <!-- SECTION 1 -->
-      <article class="content-card">
-        <h2>1. Overview &amp; The Gemini Spark Edge Engine</h2>
-        <p>
-          The enterprise AI landscape has shifted from monolithic prompt completions to autonomous, multi-hop agentic
-          loops.
-          In multi-step execution workflows—where a top-level planner delegates sub-tasks across external databases,
-          bash terminals,
-          and code AST parsers—round-trip latency compounds exponentially. When each model invocation incurs two to four
-          seconds of latency,
-          a ten-step investigation stalls for nearly a minute.
-        </p>
-        <p>
-          Google Gemini Spark solves this operational bottleneck. Engineered as an ultra-compact, hyper-efficient
-          reasoning model
-          optimized for Google Cloud edge runtimes and TPU v5e accelerators, Gemini Spark delivers sub-350ms
-          time-to-first-token (TTFT)
-          and generation speeds exceeding 140 tokens per second. Coupled with Google's native million-token context
-          window
-          and the Google Antigravity (AGY) SDK, Gemini Spark functions as an agile tactical executor within production
-          AI agent teams.
-        </p>
-        <ul>
-          <li><strong>Sub-Second Multi-Hop Loops:</strong> Executes recursive tool validation loops in fractions of the
-            time consumed by frontier heavyweights.</li>
-          <li><strong>Million-Token Ingestion:</strong> Maintains context retention across enterprise codebases without
-            lossy vector chunking.</li>
-          <li><strong>Google Antigravity SDK <a href="#ref-4" class="ref-cite">[4]</a> Integration:</strong> Native
-            compatibility with sub-agent hierarchies,
-            skills, dynamic tools, and persistent memory sidecars.</li>
-          <li><strong>Multimodal Reasoning:</strong> Direct parsing of visual wireframes, audio logs, and architectural
-            PDF diagrams alongside typed JSON function arguments.</li>
-        </ul>
-      </article>
-      <!-- SECTION 2 -->
-      <article class="content-card">
-        <h2>2. Edge Latency, Thinking Traces &amp; Token Velocity</h2>
-        <p>
-          Gemini Spark bridges the gap between raw inference velocity and deterministic step-by-step reasoning.
-          Using speculative decoding architectures and Google's custom DeepMind inference kernels, the model generates
-          intermediate
-          "thinking tokens" before committing to a concrete tool call or terminal execution parameter.
-        </p>
-        <p>
-          Unlike legacy models that emit tool calls blindly, Gemini Spark allocates an adjustable thinking budget
-          (typically 256 to 1024 tokens)
-          to verify pre-conditions, synthesize tool outputs, and evaluate state invariant safety before firing external
-          API actions.
-          This eliminates erroneous tool calls without sacrificing real-time user responsiveness.
-        </p>
-        <h3>Speculative KV-Cache Reuse &amp; Prefix Acceleration</h3>
-        <p>
-          By leveraging Google Cloud's distributed memory infrastructure, Gemini Spark achieves zero-overhead KV-cache
-          hits across recurring system prompts.
-          When an agent repeatedly invokes shell tools or database inspections, the base instructions and JSON tool
-          schemas remain cached in TPU memory,
-          reducing input processing latency to under 35 milliseconds.
-        </p>
-      </article>
-      <!-- SECTION 3 -->
-      <article class="content-card">
-        <h2>3. Native Multimodal Ingestion &amp; Tool Calling Protocols</h2>
-        <p>
-          A distinguishing strength of Google's Gemini architecture is ground-up multimodal design.
-          Gemini Spark does not employ separate OCR adapters or speech-to-text transcribers; visual frames, audio
-          telemetry,
-          and structured text map into the same shared representation space.
-        </p>
-        <p>
-          For agentic automation, this allows an engineer to pipe real-time screen captures, UI mockups, or application
-          error videos directly
-          into the agent's observation loop. The agent inspects pixel coordinates, correlates visual render glitches
-          with server stack traces,
-          and synthesizes corrective Git patches in a unified invocation.
-        </p>
-        <ul>
-          <li><strong>Typed Function Declarations:</strong> Strictly validated against JSON Schema definitions,
-            enforcing parameter compliance.</li>
-          <li><strong>Parallel Tool Invocation:</strong> Emits multiple distinct tool calls in a single completion turn
-            to accelerate batch queries.</li>
-          <li><strong>Streaming Execution:</strong> Begins streaming tool arguments before generation completes,
-            enabling early argument validation.</li>
-        </ul>
-      </article>
-      <!-- SECTION 4 -->
-      <article class="content-card">
-        <h2>4. Google Antigravity SDK <a href="#ref-4" class="ref-cite">[4]</a> Integration &amp; Runtime Mechanics</h2>
-        <p>
-          The Google Antigravity (AGY) SDK provides the production harness for orchestrating Gemini Spark agents.
-          Antigravity abstracts agent state machines into modular, verifiable constructs:
-        </p>
-        <ul>
-          <li><strong>Skill Modularization (SKILL.md):</strong> Domain-specific procedural workflows loaded on-demand to
-            conserve context tokens.</li>
-          <li><strong>Hierarchical Sub-Agents:</strong> Parent agents spawn specialized worker instances for isolated,
-            CPU-intensive, or sandboxed tasks.</li>
-          <li><strong>Reactive Wakeups:</strong> Eliminates continuous polling loops by suspending agent execution until
-            asynchronous background jobs or webhooks notify the runtime.</li>
-          <li><strong>Sidecar Memory:</strong> Maintains clean separation between execution logs, working scratchpads,
-            and persistent knowledge artifacts.</li>
-        </ul>
-        <p>
-          When combined with Gemini Spark's low-latency profile, Antigravity agents achieve autonomous execution cycles
-          that feel instantaneous to end users.
-        </p>
-      </article>
-      <!-- SECTION 5 -->
-      <article class="content-card">
-        <h2>5. Million-Token Ingestion &amp; Context Caching <a href="#ref-6" class="ref-cite">[6]</a> Economics</h2>
-        <p>
-          Traditional agent frameworks depend heavily on Retrieval-Augmented Generation (RAG) pipelines, which chunk
-          documentation into isolated 500-token vectors.
-          While RAG reduces prompt token volume, it frequently destroys cross-file semantic dependencies, causing agents
-          to propose incompatible API signatures.
-        </p>
-        <p>
-          Gemini Spark eliminates vector fragmentation by supporting native context windows up to 1,000,000 tokens.
-          Engineers can load an entire 80,000-line code repository, its architecture decision records (ADRs), and recent
-          commit logs into working memory.
-          Gemini's near-perfect needle-in-a-haystack recall guarantees accurate symbol resolution across hundreds of
-          files.
-        </p>
-        <h3>Context Caching <a href="#ref-6" class="ref-cite">[6]</a> Cost Reduction</h3>
-        <p>
-          To prevent large context windows from inflating operating costs, Google AI Studio <a href="#ref-1"
-            class="ref-cite">[1]</a> and Vertex AI <a href="#ref-8" class="ref-cite">[8]</a> provide
-          automatic Context Caching <a href="#ref-6" class="ref-cite">[6]</a>.
-          Cached input tokens receive an immediate 75% pricing discount. When caching a 500,000-token codebase across an
-          active 30-minute agentic session,
-          recurring invocation costs drop from dollars to fractions of a cent per turn.
-        </p>
-      </article>
-      <!-- SECTION 6 -->
-      <article class="content-card">
-        <h2>6. AI Agent Team Topologies &amp; Collaborative Protocols</h2>
-        <p>
-          Production deployments rarely rely on a single agent. Instead, resilient systems implement hierarchical AI
-          agent teams
-          where models are assigned roles based on cost, context capacity, and reasoning velocity:
-        </p>
-        <ol>
-          <li><strong>Strategic Supervisor (Gemini 3.7 Pro):</strong> Ingests the high-level business goal, drafts
-            comprehensive plans, and decomposes objectives into atomic sub-tasks.</li>
-          <li><strong>Tactical Dispatcher (Gemini Spark):</strong> Executes individual code modifications, tests syntax,
-            runs terminal linting, and validates API contracts at high velocity.</li>
-          <li><strong>Local Sovereign Arbiter (Hermes 4.3 / OpenCode):</strong> Runs in air-gapped local environments
-            for sensitive credential handling and confidential data scrubbing.</li>
-        </ol>
-        <p>
-          To prevent cyclic ping-pong delegation between agents, the Antigravity runtime enforces a monotonic call graph
-          and finite hop limits.
-          If an agent fails to make state progress within three consecutive turns, control automatically escalates to
-          human-in-the-loop oversight.
-        </p>
-      </article>
-      <!-- SECTION 7: SOURCE CODE -->
-      <article class="content-card" id="code">
-        <h2>7. Production Python Orchestration Script</h2>
-        <p>
-          Below is a complete, working asynchronous Python script implementing an enterprise Gemini Spark agent using
-          the Google GenAI SDK
-          and Google Antigravity runtime constructs. It demonstrates typed tool declaration, thinking trace logging,
-          parallel execution,
-          and resilient retry handling:
-        </p>
-        <div class="code-window">
-          <div class="code-bar">
-            <span>gemini_spark_orchestrator.py</span>
-            <button class="copy-btn"
-              onclick="navigator.clipboard.writeText(document.getElementById('spark-code').innerText);this.innerText='COPIED!';setTimeout(()=&gt;this.innerText='COPY CODE',2000)">COPY
-              CODE</button>
+
+        <div class="sim-grid">
+          <!-- Controls Panel -->
+          <div class="sim-panel">
+            <div class="sim-field-group">
+              <label class="sim-label" for="simModel">SELECT MODEL TIER</label>
+              <select id="simModel" class="sim-select" onchange="calculateAgentEconomics()">
+                <option value="opus55" selected>Claude Opus 5.5 ($4.00 / $20.00 · Cache: $0.20)</option>
+                <option value="sonnet55">Claude Sonnet 5.5 ($2.00 / $10.00 · Workhorse)</option>
+                <option value="fable51">Claude Fable 5.1 / Mythos 5.1 ($10.00 / $50.00 · Frontier)</option>
+                <option value="haiku45">Claude Haiku 4.5 ($1.00 / $5.00 · Low Latency)</option>
+              </select>
+            </div>
+
+            <div class="sim-field-group">
+              <label class="sim-label">EFFORT LEVEL (REASONING INTENSITY)</label>
+              <div class="sim-effort-buttons">
+                <button type="button" class="sim-effort-btn" onclick="setSimEffort('low', this)">LOW</button>
+                <button type="button" class="sim-effort-btn active" onclick="setSimEffort('medium', this)">MEDIUM</button>
+                <button type="button" class="sim-effort-btn" onclick="setSimEffort('high', this)">HIGH</button>
+                <button type="button" class="sim-effort-btn" onclick="setSimEffort('xhigh', this)">XHIGH</button>
+                <button type="button" class="sim-effort-btn" onclick="setSimEffort('max', this)">MAX</button>
+              </div>
+            </div>
+
+            <div class="sim-field-group">
+              <label class="sim-label" for="simInputTokens">
+                <span>INPUT / CONTEXT TOKENS</span>
+                <span class="val" id="simInputVal">80,000</span>
+              </label>
+              <input type="range" id="simInputTokens" class="sim-range" min="5000" max="500000" step="5000" value="80000" oninput="updateSimRange('simInputVal', this.value); calculateAgentEconomics();">
+            </div>
+
+            <div class="sim-field-group">
+              <label class="sim-label" for="simOutputTokens">
+                <span>OUTPUT / DELIVERABLE TOKENS</span>
+                <span class="val" id="simOutputVal">12,000</span>
+              </label>
+              <input type="range" id="simOutputTokens" class="sim-range" min="1000" max="64000" step="1000" value="12000" oninput="updateSimRange('simOutputVal', this.value); calculateAgentEconomics();">
+            </div>
+
+            <div class="sim-field-group">
+              <label class="sim-label" for="simCachePct">
+                <span>PROMPT CACHING HIT RATE</span>
+                <span class="val" id="simCacheVal">85%</span>
+              </label>
+              <input type="range" id="simCachePct" class="sim-range" min="0" max="95" step="5" value="85" oninput="updateSimRange('simCacheVal', this.value + '%'); calculateAgentEconomics();">
+            </div>
           </div>
-          <pre class="code-pre" id="spark-code"><code>import os
-import sys
-import time
-import asyncio
-from typing import Dict, Any, List, Optional
-from google import genai
-from google.genai import types
 
-async def inspect_file_content(filepath: str, max_lines: int = 200) -&gt; Dict[str, Any]:
-    if not os.path.exists(filepath):
-        return {"error": f"File not found: {filepath}"}
-    try:
-        with open(filepath, "r", encoding="utf-8", errors="replace") as f:
-            lines = [f.readline() for _ in range(max_lines)]
-        return {"filepath": filepath, "lines": len(lines), "content": "".join(lines)}
-    except Exception as err:
-        return {"error": str(err)}
+          <!-- Live Output Panel -->
+          <div class="sim-panel">
+            <div class="sim-results-card">
+              <div class="sim-metric-row">
+                <div class="sim-metric-box">
+                  <div class="sim-metric-title">ESTIMATED TASK COST</div>
+                  <div class="sim-metric-value" id="simCost">$0.28</div>
+                  <div class="sim-metric-sub" id="simCostSub">Uncached cost: $0.56 (50% saved)</div>
+                </div>
+                <div class="sim-metric-box">
+                  <div class="sim-metric-title">ESTIMATED DURATION</div>
+                  <div class="sim-metric-value" id="simDuration">18.4s</div>
+                  <div class="sim-metric-sub" id="simSpeedSub">~72 tokens/sec output</div>
+                </div>
+              </div>
 
-async def execute_workspace_command(command: str) -&gt; Dict[str, Any]:
-    if any(b in command for b in ["rm -rf", "mkfs", "dd if="]):
-        return {"error": "Security policy violation: command aborted"}
-    proc = await asyncio.create_subprocess_shell(
-        command, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-    )
-    stdout, stderr = await proc.communicate()
-    return {"exit_code": proc.returncode, "stdout": stdout.decode().strip(), "stderr": stderr.decode().strip()}
+              <!-- Benchmarks -->
+              <div class="sim-benchmarks">
+                <div class="sim-benchmark-title">Verified Model Capabilities &amp; Benchmarks</div>
+                <div class="sim-bench-grid" id="simBenchGrid">
+                  <div class="sim-bench-pill"><span class="b-name">OSWorld 2.1 (Computer Use):</span> <span class="b-val" id="bmOSWorld">78.5%</span></div>
+                  <div class="sim-bench-pill"><span class="b-name">SWE-bench Verified:</span> <span class="b-val" id="bmSWE">72.4%</span></div>
+                  <div class="sim-bench-pill"><span class="b-name">Chartography Vision:</span> <span class="b-val" id="bmChart">89.2%</span></div>
+                  <div class="sim-bench-pill"><span class="b-name">Context Window:</span> <span class="b-val" id="bmContext">1,000,000</span></div>
+                </div>
+              </div>
 
-class GeminiSparkAgent:
-    def __init__(self, api_key: Optional[str] = None):
-        self.api_key = api_key or os.getenv("GEMINI_API_KEY")
-        self.client = genai.Client(api_key=self.api_key)
-        self.model_name = "gemini-3.8-flash"  # Spark edge runtime
-        self.system_instruction = "Gemini Spark agent: diagnose code, inspect architecture, execute tools deterministically."
-
-    def _get_tools(self) -&gt; List[types.Tool]:
-        inspect_func = types.FunctionDeclaration(
-            name="inspect_file_content",
-            description="Reads repository file contents up to max_lines.",
-            parameters={
-                "type": "OBJECT",
-                "properties": {"filepath": {"type": "STRING"}, "max_lines": {"type": "INTEGER"}},
-                "required": ["filepath"]
-            }
-        )
-        command_func = types.FunctionDeclaration(
-            name="execute_workspace_command",
-            description="Executes sandboxed workspace command.",
-            parameters={
-                "type": "OBJECT",
-                "properties": {"command": {"type": "STRING"}},
-                "required": ["command"]
-            }
-        )
-        return [types.Tool(function_declarations=[inspect_func, command_func])]
-
-    async def run_loop(self, user_goal: str, max_iterations: int = 5) -&gt; str:
-        print(f"[SPARK INIT] Goal: {user_goal}")
-        chat = self.client.chats.create(
-            model=self.model_name,
-            config=types.GenerateContentConfig(
-                system_instruction=self.system_instruction,
-                temperature=0.2,
-                tools=self._get_tools()
-            )
-        )
-        current_prompt = user_goal
-        for step in range(1, max_iterations + 1):
-            t0 = time.perf_counter()
-            response = chat.send_message(current_prompt)
-            print(f"[STEP {step}] Latency: {(time.perf_counter() - t0)*1000:.1f}ms")
-
-            calls = response.function_calls
-            if not calls:
-                return response.text or "Finished."
-
-            tool_responses = []
-            for call in calls:
-                fn_name, fn_args = call.name, call.args
-                print(f" -&gt; Tool: {fn_name}({fn_args})")
-                if fn_name == "inspect_file_content":
-                    res = await inspect_file_content(**fn_args)
-                elif fn_name == "execute_workspace_command":
-                    res = await execute_workspace_command(**fn_args)
-                else:
-                    res = {"error": "Unknown tool"}
-                tool_responses.append(types.Part.from_function_response(name=fn_name, response={"result": res}))
-            current_prompt = tool_responses
-        return "Max iterations reached."
-
-if __name__ == "__main__":
-    token = os.getenv("GEMINI_API_KEY", "demo_key")
-    agent = GeminiSparkAgent(api_key=token)
-    asyncio.run(agent.run_loop("Inspect repo sitemap.xml and verify timestamps"))</code></pre>
+              <!-- Agent Loop Visualizer -->
+              <div class="sim-loop-viz">
+                <div class="sim-loop-title">Active Autonomous Loop Execution Stage</div>
+                <div class="sim-loop-steps">
+                  <span class="sim-loop-node active-stage" id="stage1">1. Scoped Scan</span>
+                  <span class="sim-loop-arrow">→</span>
+                  <span class="sim-loop-node" id="stage2">2. Effort Deliberation</span>
+                  <span class="sim-loop-arrow">→</span>
+                  <span class="sim-loop-node" id="stage3">3. MCP / Screen Tooling</span>
+                  <span class="sim-loop-arrow">→</span>
+                  <span class="sim-loop-node" id="stage4">4. Synthesis</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </article>
-      <!-- SECTION 8 -->
-      <article class="content-card">
-        <h2>8. Memory Sidecars &amp; Persistent State Persistence</h2>
-        <p>
-          In multi-turn engineering sessions, agents frequently lose context if intermediate learnings are not
-          persisted.
-          Rather than polluting the model's active working prompt with raw output dumps, Gemini Spark leverages external
-          memory sidecars.
-        </p>
-        <p>
-          Sidecars are structured JSON or Markdown documents maintained on local disk or distributed storage.
-          When an agent discovers a repository convention, an architectural invariant, or a database migration
-          dependency,
-          it commits the finding as a structured Knowledge Item (KI). Future sub-agent invocations read this summary in
-          milliseconds,
-          avoiding redundant file explorations and saving tens of thousands of tokens per task.
-        </p>
-      </article>
-      <!-- SECTION 9 -->
-      <article class="content-card">
-        <h2>9. Error Handling, Rate Limiting &amp; Resilience</h2>
-        <p>
-          Production reliability requires defensive error mitigation. Enterprise agent pipelines encounter rate limits
-          (HTTP 429),
-          temporary backend contention (HTTP 503), and malformed tool outputs. Gemini Spark deployments incorporate
-          three layers of resilience:
-        </p>
-        <ul>
-          <li><strong>Exponential Jitter Backoff:</strong> Retries transient API failures with randomized intervals to
-            avoid synchronized herd storms.</li>
-          <li><strong>Schema Healing Prompts:</strong> If an agent emits invalid tool JSON, the runtime intercepts the
-            validation exception and feeds the Pydantic error trace directly back into the conversational loop for
-            immediate self-correction.</li>
-          <li><strong>Tiered Provider Fallback:</strong> If Google Cloud endpoints experience outages, tasks
-            automatically degrade to local Hermes or OpenCode models without user interruption.</li>
-        </ul>
-      </article>
-      <!-- SECTION 10 -->
-      <article class="content-card">
-        <h2>10. Enterprise Security, VPC Enclaves &amp; Compliance</h2>
-        <p>
-          Deploying autonomous agents in enterprise environments introduces strict compliance mandates.
-          Google Cloud Vertex AI <a href="#ref-8" class="ref-cite">[8]</a> provides enterprise safeguards that exceed
-          standard consumer LLM terms:
-        </p>
-        <ul>
-          <li><strong>Zero Data Retention (ZDR):</strong> Google does not log, store, or train on enterprise prompts,
-            embeddings, or tool outputs.</li>
-          <li><strong>VPC Service Controls:</strong> Confines all agent communication to private Google Cloud VPC
-            networks, eliminating internet data leakage.</li>
-          <li><strong>Customer-Managed Encryption Keys (CMEK):</strong> All stored agent states and cached context
-            windows are encrypted with customer-controlled cryptographic keys.</li>
-          <li><strong>Prompt Injection Sanitization:</strong> Input boundaries isolate untrusted external web data from
-            agent system directives.</li>
-        </ul>
-      </article>
-      <!-- SECTION 11 -->
-      <article class="content-card">
-        <h2>11. Benchmarks &amp; Real-World Cost Analysis</h2>
-        <p>
-          To evaluate real-world production performance, we benchmarked Gemini Spark against contemporary agentic models
-          across
-          a standard 100-step code audit workflow involving 500,000 tokens of input context:
-        </p>
-        <div class="table-container">
-          <table class="bench-table">
-            <thead>
-              <tr>
-                <th>Model Engine</th>
-                <th>Avg TTFT</th>
-                <th>Throughput</th>
-                <th>100-Step Cost (Uncached)</th>
-                <th>100-Step Cost (Cached)</th>
-                <th>Needle Recall (1M)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Gemini Spark (Flash)</strong></td>
-                <td>290ms</td>
-                <td>142 tok/s</td>
-                <td>$3.75</td>
-                <td>$0.94</td>
-                <td>99.8%</td>
-              </tr>
-              <tr>
-                <td>Gemini 3.7 Pro</td>
-                <td>850ms</td>
-                <td>65 tok/s</td>
-                <td>$18.50</td>
-                <td>$4.62</td>
-                <td>99.9%</td>
-              </tr>
-              <tr>
-                <td>Claude Haiku 5.5</td>
-                <td>420ms</td>
-                <td>110 tok/s</td>
-                <td>$5.00</td>
-                <td>$1.25</td>
-                <td>N/A (&lt;200k)</td>
-              </tr>
-              <tr>
-                <td>GPT-6 Luna</td>
-                <td>310ms</td>
-                <td>140 tok/s</td>
-                <td>$6.00</td>
-                <td>$1.50</td>
-                <td>N/A (&lt;400k)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p>
-          With native context caching, Gemini Spark achieves a 75% cost reduction, delivering full million-token audits
-          for under one dollar per comprehensive run.
-        </p>
-      </article>
-      <!-- SECTION 12 -->
-      <article class="content-card">
-        <h2>12. Production Deployment Playbook &amp; Next Steps</h2>
-        <p>
-          Transitioning from prototype to enterprise production requires a structured rollout plan:
-        </p>
-        <ol>
-          <li><strong>Phase 1: Rapid Prototyping (Google AI Studio <a href="#ref-1" class="ref-cite">[1]</a>):</strong>
-            Validate tool declarations, test thinking
-            budgets, and verify function schemas on the free tier (15 RPM).</li>
-          <li><strong>Phase 2: Antigravity Integration:</strong> Implement sub-agent hierarchies, memory sidecars, and
-            event-driven reactive wakeups.</li>
-          <li><strong>Phase 3: Vertex AI <a href="#ref-8" class="ref-cite">[8]</a> Hardening:</strong> Configure VPC
-            Service Controls, enable Context Caching <a href="#ref-6" class="ref-cite">[6]</a>, and
-            set automated budget alerts.</li>
-        </ol>
-        <p>
-          By combining Gemini Spark's low-latency edge reasoning with Google Antigravity orchestration,
-          engineering teams achieve resilient, scalable, and cost-effective AI agent ecosystems.
-        </p>
-      </article>
-      <!-- SECTION 8: MONTHLY & YEARLY SUBSCRIPTIONS & TCO -->
-      <article class="content-card" id="pricing">
-        <h2>8. Verified Monthly &amp; Yearly Subscriptions &amp; TCO Analysis</h2>
-        <p>
-          Google offers consumer AI plans, Workspace productivity bundles, standalone Gemini Enterprise agent platforms,
-          and developer API options <a href="#ref-1" class="ref-cite">[1]</a> <a href="#ref-2" class="ref-cite">[2]</a>
-          <a href="#ref-3" class="ref-cite">[3]</a>. Verified as of October 13, 2026:
-        </p>
+      </div>
+    </article>
 
-        <div class="pricing-table-wrapper">
-          <table class="pricing-table">
-            <thead>
-              <tr>
-                <th>Subscription Tier</th>
-                <th>Monthly Rate</th>
-                <th>Yearly Rate</th>
-                <th>Included Scope &amp; Quotas</th>
-                <th>Target Persona</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Google AI Free</strong></td>
-                <td>$0 / mo</td>
-                <td>$0 / yr</td>
-                <td>Base Flash-Lite models, 15 GB storage, standard web tools, gems &amp; basic canvas.</td>
-                <td>General consumers &amp; students</td>
-              </tr>
-              <tr>
-                <td><strong>Google AI Plus</strong></td>
-                <td><strong>$4.99 / mo</strong></td>
-                <td><strong>$49.99 / yr</strong></td>
-                <td>2x higher rate limits, 400 GB Google One storage, light creative tools.</td>
-                <td>Prosumers &amp; hobbyists</td>
-              </tr>
-              <tr>
-                <td><strong>Google AI Pro (formerly AI Premium)</strong></td>
-                <td><strong>$19.99 / mo</strong></td>
-                <td><strong>$239.88 / yr</strong><br><span style="font-size:0.75rem;color:var(--cyan);">(Annual promo:
-                    $199.99/yr)</span></td>
-                <td>Flagship Gemini Pro models, 1M context window <a href="#ref-5" class="ref-cite">[5]</a>, 5 TB Google
-                  One storage, Deep Research, Gemini in Docs/Gmail.</td>
-                <td>Engineers, creators &amp; consultants</td>
-              </tr>
-              <tr>
-                <td><strong>Google AI Ultra</strong></td>
-                <td><strong>$99.99 – $199.99 / mo</strong></td>
-                <td><strong>$1,199.88 – $2,399.88 / yr</strong></td>
-                <td>20x usage multiplier, 20 TB storage, Google Antigravity developer environment <a href="#ref-4"
-                    class="ref-cite">[4]</a>, YouTube Premium bundle.</td>
-                <td>Advanced creators &amp; dev teams</td>
-              </tr>
-              <tr>
-                <td><strong>Gemini for Workspace (Business)</strong></td>
-                <td><strong>$21 / seat / mo</strong></td>
-                <td><strong>$252 / seat / yr</strong></td>
-                <td>Side-panel assistance in Gmail/Docs/Meet, administrative data privacy guarantees (annual commit) <a
-                    href="#ref-3" class="ref-cite">[3]</a>.</td>
-                <td>SMBs &amp; enterprise knowledge workers</td>
-              </tr>
-              <tr>
-                <td><strong>Gemini Enterprise (Standard / Plus)</strong></td>
-                <td><strong>$30 – $60 / seat / mo</strong></td>
-                <td><strong>$360 – $720 / seat / yr</strong></td>
-                <td>Connected enterprise search across BigQuery, Salesforce, Jira, 2M context, enterprise security &amp;
-                  DLP <a href="#ref-3" class="ref-cite">[3]</a> <a href="#ref-9" class="ref-cite">[9]</a>.</td>
-                <td>Global enterprise IT organizations</td>
-              </tr>
-              <tr>
-                <td><strong>Google AI Studio API</strong></td>
-                <td>Free (15 RPM) or Pay-as-you-go</td>
-                <td>Metered consumption</td>
-                <td>Pay-per-token starting at $0.075/M tokens; Context Caching gives 75% input discount <a href="#ref-6"
-                    class="ref-cite">[6]</a>.</td>
-                <td>Autonomous backend agent loops</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </article>
+    <!-- SECTION 8: REFERENCES & GROUNDED SOURCES -->
+    <article class="content-card" id="references">
+      <h2>8. References &amp; Verified Documentation</h2>
+      <p>
+        Grounded in official Anthropic technical announcements, 2026 system cards, and verified architectural teardowns:
+      </p>
 
-      <!-- SECTION 9: REFERENCES & GROUNDED SOURCES -->
-      <article class="content-card" id="references">
-        <h2>9. References &amp; Authoritative Grounding Sources (October 13, 2026)</h2>
-        <p>
-          Verified against current Google production documentation, API telemetry, and official benchmarks:
-        </p>
-        <ul class="ref-list">
-          <li class="ref-item" id="ref-1">
-            <span class="ref-num">[1]</span>
-            <div>
-              <strong>Google AI Studio Developer Workbench &amp; API Quotas</strong> — Google DeepMind (2026).
-              Generative AI endpoints, prompt caching, and structured outputs. <br>
-              <a class="ref-link" href="https://aistudio.google.com" target="_blank"
-                rel="noopener noreferrer">https://aistudio.google.com</a>
-            </div>
-          </li>
-          <li class="ref-item" id="ref-2">
-            <span class="ref-num">[2]</span>
-            <div>
-              <strong>Google AI Pro &amp; Ultra Subscription Pricing</strong> — Google One Official Pricing (October
-              2026). Verified consumer tiers, storage allocations, and bundled perks. <br>
-              <a class="ref-link" href="https://one.google.com/about/ai-premium" target="_blank"
-                rel="noopener noreferrer">https://one.google.com/about/ai-premium</a>
-            </div>
-          </li>
-          <li class="ref-item" id="ref-3">
-            <span class="ref-num">[3]</span>
-            <div>
-              <strong>Gemini for Google Workspace &amp; Gemini Enterprise Pricing</strong> — Google Cloud (2026).
-              Enterprise connectors for BigQuery, Salesforce, and enterprise security. <br>
-              <a class="ref-link" href="https://workspace.google.com/solutions/ai/" target="_blank"
-                rel="noopener noreferrer">https://workspace.google.com/solutions/ai/</a>
-            </div>
-          </li>
-          <li class="ref-item" id="ref-4">
-            <span class="ref-num">[4]</span>
-            <div>
-              <strong>Google Antigravity Agent Core SDK Specification</strong> — Google DeepMind (2026). Autonomous
-              multi-agent coordination and high-speed execution loops. <br>
-              <a class="ref-link" href="https://github.com/google/antigravity" target="_blank"
-                rel="noopener noreferrer">https://github.com/google/antigravity</a>
-            </div>
-          </li>
-          <li class="ref-item" id="ref-5">
-            <span class="ref-num">[5]</span>
-            <div>
-              <strong>Gemini 2.5 &amp; Spark Multimodal Context Window Architecture</strong> — Google DeepMind Research
-              (2026). Million-token needle-in-a-haystack retrieval and video reasoning. <br>
-              <a class="ref-link" href="https://blog.google/technology/ai/gemini-2-5-pro/" target="_blank"
-                rel="noopener noreferrer">https://blog.google/technology/ai/gemini-2-5-pro/</a>
-            </div>
-          </li>
-          <li class="ref-item" id="ref-6">
-            <span class="ref-num">[6]</span>
-            <div>
-              <strong>Context Caching in Google GenAI API: 75% Cost Reduction</strong> — Google AI for Developers
-              (2026). Cache rehydration mechanics across multi-turn repositories. <br>
-              <a class="ref-link" href="https://ai.google.dev/gemini-api/docs/caching" target="_blank"
-                rel="noopener noreferrer">https://ai.google.dev/gemini-api/docs/caching</a>
-            </div>
-          </li>
-          <li class="ref-item" id="ref-7">
-            <span class="ref-num">[7]</span>
-            <div>
-              <strong>Gemini Code Assist <a href="#ref-7" class="ref-cite">[7]</a> Enterprise &amp; IDE Plugins</strong>
-              — Google Cloud Documentation (2026). Full-repo indexing, inline completions, and local test generation.
-              <br>
-              <a class="ref-link" href="https://cloud.google.com/products/gemini-code-assist" target="_blank"
-                rel="noopener noreferrer">https://cloud.google.com/products/gemini-code-assist</a>
-            </div>
-          </li>
-          <li class="ref-item" id="ref-8">
-            <span class="ref-num">[8]</span>
-            <div>
-              <strong>Google Cloud Vertex AI Model Garden &amp; Endpoint Governance</strong> — Google Cloud Architecture
-              Center (2026). Private endpoint deployments, VPC-SC, and custom LoRA adapters. <br>
-              <a class="ref-link" href="https://cloud.google.com/vertex-ai" target="_blank"
-                rel="noopener noreferrer">https://cloud.google.com/vertex-ai</a>
-            </div>
-          </li>
-          <li class="ref-item" id="ref-9">
-            <span class="ref-num">[9]</span>
-            <div>
-              <strong>Google Security &amp; Data Privacy Framework for Enterprise AI</strong> — Google Cybersecurity
-              Center (2026). Customer data isolation, SOC 2, and zero model training guarantees. <br>
-              <a class="ref-link" href="https://safety.google/cybersecurity-advancements/" target="_blank"
-                rel="noopener noreferrer">https://safety.google/cybersecurity-advancements/</a>
-            </div>
-          </li>
-          <li class="ref-item" id="ref-10">
-            <span class="ref-num">[10]</span>
-            <div>
-              <strong>Massive Multimodal Benchmark Evaluations (MMLU-Pro <a href="#ref-10" class="ref-cite">[10]</a>,
-                Video-MME)</strong> — Google DeepMind (2026). Verified state-of-the-art telemetry across vision, audio,
-              and code. <br>
-              <a class="ref-link" href="https://deepmind.google/technologies/gemini/" target="_blank"
-                rel="noopener noreferrer">https://deepmind.google/technologies/gemini/</a>
-            </div>
-          </li>
-        </ul>
-      </article>
+      <ul class="ref-list">
+        <li class="ref-item" id="ref-1">
+          <span class="ref-num">[1]</span>
+          <div class="ref-content">
+            <strong>Introducing Claude Opus 5.5: Official Release Notes &amp; Pricing</strong> — Anthropic official announcement detailing Opus 5.5 architecture, $4/$20 pricing, 60% cache read reductions, and benchmark gains.<br>
+            <a class="ref-link" href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener noreferrer">https://www.anthropic.com/claude-opus-5-5</a>
+          </div>
+        </li>
+        <li class="ref-item" id="ref-2">
+          <span class="ref-num">[2]</span>
+          <div class="ref-content">
+            <strong>Anthropic Transparency Hub: 2026 System Cards (Fable 5.1, Mythos 5.1, Opus 5.5, Sonnet 5.5)</strong> — Official alignment evaluations, modalities, knowledge cutoffs, and safety safeguard documentation across the September 2026 lineup.<br>
+            <a class="ref-link" href="https://www.anthropic.com/transparency" target="_blank" rel="noopener noreferrer">https://www.anthropic.com/transparency</a>
+          </div>
+        </li>
+        <li class="ref-item" id="ref-3">
+          <span class="ref-num">[3]</span>
+          <div class="ref-content">
+            <strong>Claude AI Features in 2026: Adaptive Reasoning, Cowork, Artifacts &amp; MCP</strong> — Technical breakdown of Effort Control tiers (xhigh, max), 20 MB persistent Artifact state, Project auto-retrieval scaling, and server-side scheduled tasks.<br>
+            <a class="ref-link" href="https://suprmind.ai/hub/claude/features/" target="_blank" rel="noopener noreferrer">https://suprmind.ai/hub/claude/features/</a>
+          </div>
+        </li>
+        <li class="ref-item" id="ref-4">
+          <span class="ref-num">[4]</span>
+          <div class="ref-content">
+            <strong>What Is Claude Sonnet 5.5? Benchmarks, Pricing, and API Access</strong> — Evaluation analysis covering Terminal-Bench 4.0 (70.6%), OSWorld 2.1 (80.1%), and repository-scale efficiency.<br>
+            <a class="ref-link" href="https://www.cometapi.com/what-is-claude-sonnet-5-5/" target="_blank" rel="noopener noreferrer">https://www.cometapi.com/what-is-claude-sonnet-5-5/</a>
+          </div>
+        </li>
+        <li class="ref-item" id="ref-5">
+          <span class="ref-num">[5]</span>
+          <div class="ref-content">
+            <strong>What Is Claude Opus 5.5? Features, Access &amp; Enterprise Use Cases</strong> — Deep dive into always-on adaptive thinking, 300K Batch API outputs, and real-world software auditing benchmarks.<br>
+            <a class="ref-link" href="https://emergent.sh/learn/what-is-claude-opus-5-5" target="_blank" rel="noopener noreferrer">https://emergent.sh/learn/what-is-claude-opus-5-5</a>
+          </div>
+        </li>
+        <li class="ref-item" id="ref-6">
+          <span class="ref-num">[6]</span>
+          <div class="ref-content">
+            <strong>Claude Cowork Guide: Anthropic Desktop AI Assistant &amp; MCP Setup</strong> — Operational guide to workspace scoping, CONTEXT.md governance, and local Model Context Protocol endpoints.<br>
+            <a class="ref-link" href="https://aiagentskit.com/blog/claude-cowork/" target="_blank" rel="noopener noreferrer">https://aiagentskit.com/blog/claude-cowork/</a>
+          </div>
+        </li>
+        <li class="ref-item" id="ref-7">
+          <span class="ref-num">[7]</span>
+          <div class="ref-content">
+            <strong>Anthropic Claude AI Models List (2026): All Versions Compared</strong> — Full specification matrix comparing Fable 5.1, Mythos 5, Opus 5.5, Sonnet 5.5, and Haiku 5.5.<br>
+            <a class="ref-link" href="https://www.lorka.ai/ai-models/anthropic" target="_blank" rel="noopener noreferrer">https://www.lorka.ai/ai-models/anthropic</a>
+          </div>
+        </li>
+      </ul>
+    </article>
 
-      <!-- CTA BANNER -->
-      <section class="cta-banner">
-        <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Scale Your Agentic AI Systems For
-          Enterprises</h2>
-        <p style="color:#94a3b8;max-width:640px;margin:0 auto 1.5rem;font-size:0.95rem;">
-          Looking to deploy production AI agent teams, Antigravity SDK workflows, or slashed LLM infrastructure costs?
-          Let's design and architect your enterprise roadmap today.
-        </p>
-        <div>
-          <a class="btn btn-primary" href="collaboration.html">Schedule Strategy Consultation →</a>
-          <a class="btn btn-outline" href="pricing.html">View Advisory Packages</a>
-          <a class="btn btn-outline" href="agents-all-agentic-providers.html" style="margin-top:0.75rem;">Explore All
-            Agent Providers</a>
-        </div>
-      </section>
-    </div>
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+      <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Deploy Production Claude Agent Systems</h2>
+      <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
+        Looking to architect custom Claude Opus 5.5 / Sonnet 5.5 multi-agent teams, self-healing Claude Code workflows, or hybrid local LLM routing? Let's design your enterprise roadmap.
+      </p>
+      <div>
+        <a class="btn btn-primary" href="collaboration.html">Schedule Architecture Consultation →</a>
+        <a class="btn btn-outline" href="pricing.html">View Advisory Packages</a>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    let currentEffort = 'medium';
+
+    const MODEL_SPECS = {
+      opus55: {
+        inputRate: 4.0,
+        outputRate: 20.0,
+        cacheRate: 0.20,
+        baseSpeed: 75,
+        osWorld: '80.4%',
+        sweBench: '74.2%',
+        chart: '91.0%',
+        context: '1,000,000'
+      },
+      sonnet55: {
+        inputRate: 2.0,
+        outputRate: 10.0,
+        cacheRate: 0.20,
+        baseSpeed: 110,
+        osWorld: '80.1%',
+        sweBench: '70.8%',
+        chart: '89.2%',
+        context: '1,000,000'
+      },
+      fable51: {
+        inputRate: 10.0,
+        outputRate: 50.0,
+        cacheRate: 1.00,
+        baseSpeed: 45,
+        osWorld: '83.2%',
+        sweBench: '78.5%',
+        chart: '93.5%',
+        context: '1,000,000'
+      },
+      haiku45: {
+        inputRate: 1.0,
+        outputRate: 5.0,
+        cacheRate: 0.10,
+        baseSpeed: 180,
+        osWorld: '62.0%',
+        sweBench: '54.5%',
+        chart: '76.0%',
+        context: '200,000'
+      }
+    };
+
+    const EFFORT_MULTIPLIERS = {
+      low: { thinkingTokens: 1000, speedFactor: 1.2 },
+      medium: { thinkingTokens: 4000, speedFactor: 1.0 },
+      high: { thinkingTokens: 12000, speedFactor: 0.8 },
+      xhigh: { thinkingTokens: 24000, speedFactor: 0.65 },
+      max: { thinkingTokens: 48000, speedFactor: 0.5 }
+    };
+
+    function setSimEffort(effort, btn) {
+      currentEffort = effort;
+      document.querySelectorAll('.sim-effort-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      calculateAgentEconomics();
+    }
+
+    function updateSimRange(labelId, val) {
+      const el = document.getElementById(labelId);
+      if (el) el.textContent = typeof val === 'number' ? val.toLocaleString() : val;
+    }
+
+    function calculateAgentEconomics() {
+      const modelKey = document.getElementById('simModel').value;
+      const model = MODEL_SPECS[modelKey] || MODEL_SPECS.opus55;
+      const effort = EFFORT_MULTIPLIERS[currentEffort] || EFFORT_MULTIPLIERS.medium;
+
+      const inputTokens = parseInt(document.getElementById('simInputTokens').value, 10);
+      const outputTokens = parseInt(document.getElementById('simOutputTokens').value, 10);
+      const cachePct = parseInt(document.getElementById('simCachePct').value, 10) / 100;
+
+      // Token costs
+      const cachedInput = inputTokens * cachePct;
+      const uncachedInput = inputTokens * (1 - cachePct);
+
+      const totalInputCost = (uncachedInput / 1000000 * model.inputRate) + (cachedInput / 1000000 * model.cacheRate);
+      const totalOutputCost = (outputTokens + effort.thinkingTokens) / 1000000 * model.outputRate;
+      const taskCost = totalInputCost + totalOutputCost;
+
+      const uncachedCost = (inputTokens / 1000000 * model.inputRate) + totalOutputCost;
+      const pctSaved = uncachedCost > 0 ? Math.max(0, Math.round(((uncachedCost - taskCost) / uncachedCost) * 100)) : 0;
+
+      // Duration estimation
+      const effectiveSpeed = Math.round(model.baseSpeed * effort.speedFactor);
+      const estSeconds = Math.max(1.2, ((outputTokens + effort.thinkingTokens) / effectiveSpeed)).toFixed(1);
+
+      // DOM updates
+      const costEl = document.getElementById('simCost');
+      if (costEl) costEl.textContent = '$' + taskCost.toFixed(3);
+
+      const costSubEl = document.getElementById('simCostSub');
+      if (costSubEl) {
+        costSubEl.textContent = `Uncached: $${uncachedCost.toFixed(3)} (${pctSaved}% cache savings)`;
+      }
+
+      const durEl = document.getElementById('simDuration');
+      if (durEl) durEl.textContent = estSeconds + 's';
+
+      const speedSubEl = document.getElementById('simSpeedSub');
+      if (speedSubEl) {
+        speedSubEl.textContent = `~${effectiveSpeed} tok/s (${effort.thinkingTokens.toLocaleString()} reasoning tokens)`;
+      }
+
+      // Benchmarks
+      document.getElementById('bmOSWorld').textContent = model.osWorld;
+      document.getElementById('bmSWE').textContent = model.sweBench;
+      document.getElementById('bmChart').textContent = model.chart;
+      document.getElementById('bmContext').textContent = model.context;
+
+      // Visualizer step animation
+      const stages = ['stage1', 'stage2', 'stage3', 'stage4'];
+      stages.forEach(s => {
+        const node = document.getElementById(s);
+        if (node) node.classList.remove('active-stage');
+      });
+
+      if (currentEffort === 'low') {
+        document.getElementById('stage1')?.classList.add('active-stage');
+      } else if (currentEffort === 'medium') {
+        document.getElementById('stage2')?.classList.add('active-stage');
+      } else if (currentEffort === 'high' || currentEffort === 'xhigh') {
+        document.getElementById('stage3')?.classList.add('active-stage');
+      } else {
+        document.getElementById('stage4')?.classList.add('active-stage');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      calculateAgentEconomics();
+    });
+  </script>
+
+
     <!-- START:FOOTER -->
   <style id="footer-styles">
     footer {
@@ -2239,9 +2386,6 @@ if __name__ == "__main__":
     </p>
   </footer>
     <!-- END:FOOTER -->
-  </main>
-  <a aria-label="Back to top" class="back-top" href="#main">↑</a>
-  <script src="components.js"></script>
+<script src="components.js"></script>
 </body>
-
 </html>

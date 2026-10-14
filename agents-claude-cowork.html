@@ -1,217 +1,311 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Meta Muse Architecture &amp; Orchestration Guide | Thomas Cherickal</title>
-<meta content="Architecting Meta Muse, Muse Spark 1.3 &amp; 1.2 (1M context), Llama Stack Agent API, Llama 4 Scout &amp; Llama 3.3 AI agent teams, and sovereign enterprise orchestration." name="description"/>
-<meta content="Thomas Cherickal" name="author"/>
-<link href="https://thomascherickal.github.io/agents-meta-muse.html" rel="canonical"/>
-<!-- Open Graph -->
-<meta content="website" property="og:type"/>
-<meta content="https://thomascherickal.github.io/agents-meta-muse.html" property="og:url"/>
-<meta content="Thomas Cherickal — The Digital Futurist" property="og:site_name"/>
-<meta content="Meta Muse Architecture &amp; Orchestration Guide | Thomas Cherickal" property="og:title"/>
-<meta content="Architecting Meta Muse, Muse Spark 1.3 &amp; 1.2 (1M context), Llama Stack Agent API, Llama 4 Scout &amp; Llama 3.3 AI agent teams, and sovereign enterprise orchestration." property="og:description"/>
-<meta content="https://thomascherickal.github.io/assets/og-card.png" property="og:image"/>
-<meta content="en_US" property="og:locale"/>
-<!-- Favicons -->
-<link href="assets/favicon.ico" rel="icon" sizes="any"/>
-<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<link href="/site.webmanifest" rel="manifest"/>
-<meta content="#000000" name="theme-color"/>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<!-- JSON-LD Schema -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://thomascherickal.github.io/agents-meta-muse.html#webpage",
-        "url": "https://thomascherickal.github.io/agents-meta-muse.html",
-        "name": "Meta Muse Architecture & Orchestration Guide | Thomas Cherickal",
-        "description": "Architecting Meta Muse, Muse Spark 1.3 & 1.2 (1M context), Llama Stack Agent API, Llama 4 Scout & Llama 3.3 AI agent teams, and sovereign enterprise orchestration.",
-        "isPartOf": {
-          "@id": "https://thomascherickal.github.io/#website"
-        },
-        "inLanguage": "en-US",
-        "breadcrumb": {
-          "@id": "https://thomascherickal.github.io/agents-meta-muse.html#breadcrumb"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://thomascherickal.github.io/agents-meta-muse.html#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://thomascherickal.github.io/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Orchestration",
-            "item": "https://thomascherickal.github.io/agents-all-agentic-providers.html"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Meta Muse",
-            "item": "https://thomascherickal.github.io/agents-meta-muse.html"
-          }
-        ]
-      },
-      {
-        "@type": "TechArticle",
-        "@id": "https://thomascherickal.github.io/agents-meta-muse.html#article",
-        "headline": "Meta Muse: Muse Spark 1.3 & 1.2, Llama Stack Multi-Agent Architecture, Llama 4 Scout & Llama 3.3 AI Agent Teams",
-        "description": "In-depth enterprise guide to deploying Meta Muse agent loops using Muse Spark 1.3 & 1.2 (1M context MSL reasoning), Llama Stack Client SDK, Llama 4 Scout, and Llama Guard safety filters.",
-        "author": {
-          "@type": "Person",
-          "@id": "https://thomascherickal.github.io/#person",
-          "name": "Thomas Cherickal",
-          "jobTitle": "Generative AI Consultant"
-        },
-        "datePublished": "2026-10-13",
-        "inLanguage": "en-US"
-      }
-    ]
-  }
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Claude Cowork & Computer Use: OS Automation at Scale | Thomas Cherickal</title>
+  <meta content="Master Claude Computer Use and desktop coworker automation. Coordinate scaling, mouse/keyboard primitives, browser automation, and human-in-the-loop safeguards." name="description" />
+  <meta content="Thomas Cherickal" name="author" />
+  <link href="https://thomascherickal.github.io/agents-claude-cowork.html" rel="canonical" />
+  <!-- Open Graph -->
+  <meta content="website" property="og:type" />
+  <meta content="https://thomascherickal.github.io/agents-claude-cowork.html" property="og:url" />
+  <meta content="Thomas Cherickal — The Digital Futurist" property="og:site_name" />
+  <meta content="Claude Cowork & Computer Use: OS Automation at Scale | Thomas Cherickal" property="og:title" />
+  <meta content="Master Claude Computer Use and desktop coworker automation. Coordinate scaling, mouse/keyboard primitives, browser automation, and human-in-the-loop safeguards." property="og:description" />
+  <meta content="https://thomascherickal.github.io/assets/og-card.png" property="og:image" />
+  <meta content="en_US" property="og:locale" />
+  <!-- Favicons -->
+  <link href="assets/favicon.ico" rel="icon" sizes="any" />
+  <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
+  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="/site.webmanifest" rel="manifest" />
+  <meta content="#020408" name="theme-color" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      mermaid.initialize({ startOnLoad: true, theme: 'dark', themeVariables: { 'primaryColor': '#0c111d', 'primaryTextColor': '#38bdf8', 'primaryBorderColor': '#38bdf8', 'lineColor': '#fbbf24', 'secondaryColor': '#060912', 'tertiaryColor': '#131926' } });
+    });
   </script>
-<style>
+  <style>
     :root {
       --bg-0: #020408;
       --bg-1: #060912;
       --bg-2: #0b0f19;
-      --bg-card: linear-gradient(145deg, #0c111d 0%, #04060c 100%);
+      --bg-card: #0c111d;
+      --border: rgba(56, 189, 248, 0.2);
+      --border-gold: rgba(251, 191, 36, 0.35);
       --cyan: #38bdf8;
       --gold: #fbbf24;
-      --border: rgba(56, 189, 248, 0.18);
-      --border-gold: rgba(251, 191, 36, 0.25);
-      --glow-cyan: 0 0 24px rgba(56, 189, 248, 0.22);
-      --glow-gold: 0 0 24px rgba(251, 191, 36, 0.22);
-      --font-body: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --claude-accent: #D97757;
+      --claude-light: #F38B6C;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --font-main: 'Inter', -apple-system, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: var(--bg-0); color: #fff; font-family: var(--font-body); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
-    .container { max-width: 1060px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 2.5rem); }
-    .skip-link { position: absolute; top: -100px; left: 1rem; background: var(--cyan); color: #000; padding: 0.5rem 1rem; z-index: 9999; }
-    .skip-link:focus { top: 1rem; }
-    .back-top { position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px; border-radius: 50%; background: rgba(15, 23, 42, 0.85); border: 1px solid var(--border); color: var(--cyan); display: flex; align-items: center; justify-content: center; text-decoration: none; font-weight: 700; z-index: 90; }
-    .hero { padding: 4.5rem 0 2.5rem; text-align: center; }
-    .hero-badge { font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.15em; color: #0081FB; text-transform: uppercase; margin-bottom: 0.75rem; }
-    .hero-title { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.25; margin-bottom: 1rem; }
-    .hero-logo-box { display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; background: rgba(0, 129, 251, 0.12); border: 1.5px solid rgba(0, 129, 251, 0.45); border-radius: 20px; margin-bottom: 1.25rem; box-shadow: 0 0 24px rgba(0, 129, 251, 0.25); }
-    .pricing-hero-card { background: linear-gradient(135deg, rgba(0, 129, 251, 0.08) 0%, rgba(251, 191, 36, 0.05) 100%); border: 1.5px solid var(--border-gold); border-radius: 14px; padding: 1.5rem 2rem; margin: 2rem auto; max-width: 780px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
-    .pricing-val { font-size: 1.8rem; font-weight: 800; color: #38bdf8; font-family: var(--font-mono); }
-    .content-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 2.25rem; margin-bottom: 2.25rem; }
-    .content-card h2 { color: var(--gold); font-size: 1.4rem; margin-bottom: 1rem; }
-    .content-card h3 { color: var(--cyan); font-size: 1.15rem; margin: 1.5rem 0 0.5rem; }
-    .content-card p { color: #e2e8f0; font-size: 0.96rem; margin-bottom: 1rem; line-height: 1.75; }
-    .content-card ul, .content-card ol { color: #cbd5e1; font-size: 0.94rem; margin-left: 1.5rem; margin-bottom: 1.25rem; line-height: 1.75; }
-    .code-window { background: #040711; border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 12px; margin: 1.75rem 0; overflow: hidden; }
-    .code-bar { display: flex; align-items: center; justify-content: space-between; padding: 0.65rem 1.25rem; background: rgba(15, 23, 42, 0.95); border-bottom: 1px solid rgba(56, 189, 248, 0.15); font-family: var(--font-mono); font-size: 0.78rem; color: #94a3b8; }
-    .code-pre { padding: 1.25rem 1.5rem; overflow-x: auto; font-family: var(--font-mono); font-size: 0.86rem; line-height: 1.65; color: #e2e8f0; }
-    .copy-btn { background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: var(--cyan); font-family: var(--font-mono); font-size: 0.72rem; padding: 0.3rem 0.75rem; border-radius: 6px; cursor: pointer; }
-    .copy-btn:hover { background: var(--cyan); color: #020408; font-weight: 700; }
-    .cta-banner { background: #070c18; border: 1.5px solid var(--border-gold); border-radius: 16px; padding: 3rem 2rem; text-align: center; margin: 3rem 0 2rem; }
-    .btn { display: inline-flex; align-items: center; padding: 0.75rem 1.5rem; border-radius: 8px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; text-decoration: none; cursor: pointer; }
-    .btn-primary { background: var(--cyan); color: #020408; }
-    .btn-outline { background: transparent; border: 1px solid var(--border-gold); color: var(--gold); margin-left: 0.75rem; }
-  
-    /* Pricing Table & References Styling */
-    .pricing-table-wrapper {
-      overflow-x: auto;
-      margin: 1.5rem 0;
-      border-radius: var(--radius-md, 10px);
-      border: 1px solid var(--border, rgba(56, 189, 248, 0.18));
-      background: var(--bg-card, #0c111d);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    }
-    .pricing-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.88rem;
-      text-align: left;
-    }
-    .pricing-table th {
-      background: rgba(15, 23, 42, 0.95);
-      color: var(--gold, #fbbf24);
-      padding: 0.9rem 1.1rem;
-      border-bottom: 2px solid var(--border, rgba(56, 189, 248, 0.18));
-      font-family: var(--font-mono, monospace);
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-    .pricing-table td {
-      padding: 0.85rem 1.1rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      color: var(--text-secondary, #e2e8f0);
-      vertical-align: middle;
-    }
-    .pricing-table tr:hover {
-      background: rgba(56, 189, 248, 0.04);
-    }
-    .ref-list {
-      list-style: none;
-      padding-left: 0;
-      margin: 1rem 0 0 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-    }
-    .ref-item {
-      display: flex;
-      gap: 0.75rem;
-      font-size: 0.86rem;
-      line-height: 1.55;
-      padding: 0.75rem 1rem;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 8px;
-    }
-    .ref-num {
-      color: var(--cyan, #38bdf8);
-      font-family: var(--font-mono, monospace);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-    .ref-link {
-      color: var(--cyan, #38bdf8);
-      text-decoration: underline;
-      word-break: break-all;
-    }
-    .ref-link:hover {
-      color: var(--gold, #fbbf24);
-    }
-    .ref-cite {
-      color: var(--cyan, #38bdf8);
-      font-size: 0.75em;
-      vertical-align: super;
-      text-decoration: none;
-      font-weight: 600;
-      margin-left: 2px;
-      padding: 0 2px;
-    }
-    .ref-cite:hover {
-      color: var(--gold, #fbbf24);
-      text-decoration: underline;
+      --font-display: 'Cinzel', serif;
     }
 
-</style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-0);
+      color: var(--text);
+      font-family: var(--font-main);
+      line-height: 1.65;
+      padding-top: 72px;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+    }
+
+    .hero {
+      padding: 4.5rem 0 2.5rem;
+      text-align: center;
+    }
+
+    .hero-badge {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      color: var(--claude-accent);
+      text-transform: uppercase;
+      margin-bottom: 0.85rem;
+      font-weight: 700;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 1.15rem;
+      background: linear-gradient(135deg, #ffffff 40%, #e2e8f0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      color: #94a3b8;
+      max-width: 780px;
+      margin: 0 auto 1.75rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+
+    .content-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2.5rem;
+      margin-bottom: 2.25rem;
+      text-align: left;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .content-card h2 {
+      color: var(--gold);
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      line-height: 1.35;
+      border-bottom: 1px solid rgba(251, 191, 36, 0.15);
+      padding-bottom: 0.6rem;
+    }
+
+    .content-card h3 {
+      color: var(--cyan);
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 1.85rem 0 0.85rem;
+      line-height: 1.4;
+    }
+
+    .content-card p {
+      color: #e2e8f0;
+      font-size: 0.98rem;
+      margin-bottom: 1.15rem;
+      line-height: 1.8;
+    }
+
+    .content-card ul, .content-card ol {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+      margin-left: 1.6rem;
+      margin-bottom: 1.35rem;
+      line-height: 1.8;
+    }
+
+    .content-card li {
+      margin-bottom: 0.75rem;
+    }
+
+    .content-card strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .content-card a {
+      color: var(--gold);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .content-card a:hover {
+      color: var(--cyan);
+    }
+
+    code:not(pre code) {
+      font-family: var(--font-mono);
+      font-size: 0.88em;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.22);
+      color: #7dd3fc;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      word-break: break-word;
+    }
+
+    .code-window {
+      background: #040711;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 12px;
+      margin: 1.85rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+    }
+
+    .code-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.25rem;
+      background: rgba(15, 23, 42, 0.95);
+      border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    .code-pre {
+      padding: 1.35rem 1.6rem;
+      overflow-x: auto;
+      font-family: var(--font-mono);
+      font-size: 0.86rem;
+      line-height: 1.68;
+      color: #e2e8f0;
+      tab-size: 4;
+    }
+
+    .mermaid-container {
+      background: #050814;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.75rem 0;
+      text-align: center;
+      overflow-x: auto;
+    }
+
+    .step-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .step-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 10px;
+      padding: 1.25rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--cyan);
+    }
+
+    .step-num {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--cyan);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .step-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-desc {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      line-height: 1.55;
+    }
+
+    .cta-banner {
+      background: #070c18;
+      border: 1.5px solid var(--border-gold);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 3rem 0 2rem;
+      box-shadow: 0 0 28px rgba(251, 191, 36, 0.18);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.65rem;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: var(--cyan);
+      color: #020408 !important;
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.3);
+    }
+    .btn-primary:hover {
+      background: #7dd3fc;
+      box-shadow: 0 0 24px rgba(56, 189, 248, 0.5);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--border-gold);
+      color: var(--gold) !important;
+      box-shadow: 0 0 12px rgba(251, 191, 36, 0.15);
+      margin-left: 0.85rem;
+    }
+    .btn-outline:hover {
+      background: rgba(251, 191, 36, 0.12);
+      border-color: var(--gold);
+    }
+  </style>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+
   <!-- START:HEADER -->
   <style id="header-styles">
     /* Global Root Mobile & Tablet Safeguards */
@@ -676,16 +770,18 @@
           Agents <span class="dropdown-caret">▾</span>
         </a>
         <ul class="dropdown-menu">
-          <li><a href="agents-all-agentic-providers.html" class="dropdown-header-link">🌐 All Agentic Providers</a></li>
+          <li><a href="agents-claude-101.html" class="dropdown-header-link">🟣 Claude Agents Suite</a></li>
           <li class="dropdown-divider"></li>
-          <li><a href="agents-claude-agents.html">🟣 Claude Agents</a></li>
-          <li><a href="agents-grok-bot.html">⚡ Grok Bot</a></li>
-          <li><a href="agents-openai-dots.html">🟢 OpenAI Dots</a></li>
-          <li><a href="agents-gemini-spark.html">✨ Gemini Spark</a></li>
-          <li><a href="agents-github-copilot.html">🐙 GitHub Copilot</a></li>
-          <li><a href="agents-meta-muse.html">♾️ Meta Muse</a></li>
-          <li><a href="agents-hermes-agent.html">🏎️ Hermes Agent</a></li>
-          <li><a href="agents-opencode-free.html">💻 OpenCode Free</a></li>
+          <li><a href="agents-claude-101.html">🚀 Claude Agents 101</a></li>
+          <li><a href="agents-claude-code.html">💻 Claude Code CLI</a></li>
+          <li><a href="agents-claude-skills.html">🧩 Claude Skills &amp; Extensibility</a></li>
+          <li><a href="agents-claude-cowork.html">🖥️ Claude Cowork &amp; Computer Use</a></li>
+          <li><a href="agents-claude-mcp.html">🔌 Model Context Protocol (MCP)</a></li>
+          <li><a href="agents-claude-agent-teams.html">👥 Claude Agent Teams</a></li>
+          <li><a href="agents-claude-agent-swarms.html">🐝 Claude Agent Swarms</a></li>
+          <li><a href="agents-claude-design.html">📐 Claude Agent Design Patterns</a></li>
+          <li><a href="agents-claude-budget-limits.html">💲 Claude Budget Limits &amp; Caching</a></li>
+          <li><a href="agents-claude-local-llms.html">📦 Claude &amp; Local LLM Hybrids</a></li>
         </ul>
       </li>
       <li><a href="portfolio.html" data-nav="portfolio.html">Portfolio</a></li>
@@ -700,7 +796,7 @@
           <li class="dropdown-divider"></li>
           <li><a href="service-generative-ai-transformation.html">🧠 Generative AI Transformation</a></li>
           <li><a href="service-local-llms-cost-slashing.html">📦 Local LLMs &amp; Cost Slashing</a></li>
-          <li><a href="service-ai-agents-orchestration.html">🤖 AI Agent Orchestration Fundamentals</a></li>
+          <li><a href="service-ai-agents-orchestration.html">🤖 Claude AI Agent Orchestration Fundamentals</a></li>
           <li><a href="service-agentic-ai-systems.html">🏎️ Agentic AI Assistants (Hermes Agent)</a></li>
           <li><a href="service-training-for-workflow-automations.html">🌐 Training for WorkFlows Automations</a></li>
           <li><a href="service-quantum-applications.html">⚛️ Quantum Applications (Experimental)</a></li>
@@ -715,457 +811,112 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-<a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
-<main id="main">
-<div class="container">
-<header class="hero">
-<div class="hero-logo-box">
-<svg aria-hidden="true" fill="#0081FB" height="46" viewbox="0 0 24 24" width="46">
-<path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" fill="url(#metaMuseGrad)"></path>
-<defs>
-<lineargradient id="metaMuseGrad" x1="2" x2="22" y1="2" y2="22">
-<stop stop-color="#0081FB"></stop>
-<stop offset="0.5" stop-color="#0064E0"></stop>
-<stop offset="1" stop-color="#00C6FF"></stop>
-</lineargradient>
-</defs>
-</svg>
-</div>
-<p class="hero-badge">// PROVIDER DEEP DIVE · META AI &amp; LLAMA STACK</p>
-<h1 class="hero-title">Meta Muse Architecture &amp; Orchestration</h1>
-<p style="color:#94a3b8;max-width:740px;margin:0 auto 1.5rem;">
-        Mastering Meta Muse, powered by Muse Spark 1.3 <a href="#ref-3" class="ref-cite">[3]</a> &amp; 1.2 (1M-token multimodal reasoning), Llama Stack Agent API, Llama 4 Scout <a href="#ref-5" class="ref-cite">[5]</a> &amp; Llama 3.3 70B sovereign AI agent teams, 
-        and integrated Llama Guard 3 <a href="#ref-4" class="ref-cite">[4]</a> safety shields.
-      </p>
-<!-- MINIMUM ACCESS PRICE HERO CARD -->
-<div class="pricing-hero-card" id="pricing-hero">
-<div>
-<span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);text-transform:uppercase;display:block;">Verified Monthly &amp; Yearly Subscriptions (Oct 2026)</span>
-<span class="pricing-val">$0.00 / mo · $0 / yr (100% Free Open Weights)</span>
-<span style="color:#94a3b8;font-size:0.85rem;display:block;margin-top:0.2rem;">Permissive Llama 4 &amp; 3.3 License (0–700M users) · Cloud API from ~$0.15/M tokens · Self-host on-prem</span>
-</div>
-<div>
-<a class="btn btn-primary" href="#pricing">View Subscription Matrix ↓</a>
-</div>
-</div>
-</header>
-<!-- SECTION 1: EXECUTIVE SUMMARY & ARCHITECTURE -->
-<article class="content-card">
-<h2>1. Executive Summary &amp; Capabilities Architecture</h2>
-<p>
-        Meta Muse embodies the pinnacle of hybrid open-ecosystem agent engineering: combining Meta Superintelligence Labs’ (MSL) 
-        flagship <strong>Muse Spark 1.3 <a href="#ref-3" class="ref-cite">[3]</a></strong> and <strong>Muse Spark 1.2</strong> multimodal reasoning series (featuring a massive 
-        <strong>1,048,576 token (1M) context window</strong>) alongside open-weight Llama 4 Scout <a href="#ref-5" class="ref-cite">[5]</a> (109B MoE with 10M token context) 
-        and Llama 3.3 70B foundational models under the vendor-neutral <strong>Llama Stack</strong> architecture. 
-        Unlike closed commercial ecosystems that lock enterprises into proprietary walled gardens, Meta Muse enables organizations to run 
-        both high-throughput API agent teams and sovereign, self-hosted on-premise clusters.
-      </p>
-<p>
-        The core of Meta Muse is built upon three non-negotiable architectural pillars:
-      </p>
-<ul>
-<li><strong>Muse Spark 1.3 <a href="#ref-3" class="ref-cite">[3]</a> &amp; 1.2 Multimodal Reasoning Engine:</strong> Built by Meta Superintelligence Labs, Muse Spark 1.3 <a href="#ref-3" class="ref-cite">[3]</a> processes text, high-resolution imagery, full video streams, and enterprise PDFs across 1M tokens. Internal evaluations demonstrate Muse Spark 1.3 <a href="#ref-3" class="ref-cite">[3]</a> resolves complex developer tasks with <strong>20% fewer tool calls</strong> and <strong>25% fewer tokens</strong> than version 1.2, featuring refined max-reasoning tiers and drop-in API compatibility.</li>
-<li><strong>Unified Llama Stack Agent API <a href="#ref-2" class="ref-cite">[2]</a>:</strong> A standardized, open protocol defining how agents discover tools, manage conversational session states, interact with external vector memory providers, and execute multi-turn agentic loops without vendor lock-in.</li>
-<li><strong>Llama 4 Scout <a href="#ref-5" class="ref-cite">[5]</a> &amp; Sovereign On-Prem Execution:</strong> Delivering local benchmark reasoning with zero token license cost and complete weight customization rights, protected by native pre- and post-execution Llama Guard 3 <a href="#ref-4" class="ref-cite">[4]</a> safety shields.</li>
-</ul>
-<p>
-        By eliminating proprietary API seat fees and providing complete visibility into model weights, activation traces, 
-        and decoding strategies, Meta Muse provides the ideal foundation for regulated enterprises across banking, defense, 
-        and healthcare where data privacy and compliance make third-party cloud agents legally impermissible.
-      </p>
-</article>
-<!-- SECTION 2: LLAMA STACK MODULAR SUBSYSTEM -->
-<article class="content-card">
-<h2>2. Llama Stack Agent API &amp; Modular Subsystem Design</h2>
-<p>
-        Historically, open-source agent development suffered from fragmentation: different inference engines (vLLM <a href="#ref-7" class="ref-cite">[7]</a>, TGI, 
-        Ollama <a href="#ref-8" class="ref-cite">[8]</a>, TensorRT-LLM) implemented disparate tool schemas, forcing developers to rewrite prompt harnesses for every 
-        underlying server. The Llama Stack resolves this by standardizing the interface into modular, composable providers:
-      </p>
-<h3>The Core Llama Stack Building Blocks</h3>
-<ul>
-<li><strong>Inference Provider:</strong> Manages token streaming, continuous batching, and guided JSON schema decoding across local vLLM <a href="#ref-7" class="ref-cite">[7]</a> nodes or remote cloud endpoints.</li>
-<li><strong>Memory &amp; RAG Provider:</strong> Handles conversational checkpointing, long-term memory retrieval, and vector search embeddings (FAISS, Chroma, pgvector) with zero manual embedding pipeline setup.</li>
-<li><strong>Tool Execution Provider:</strong> Exposes local system tools (code interpreters, bash terminals, web search scrapers) and Model Context Protocol (MCP) servers to the model through standardized JSON manifests.</li>
-<li><strong>Safety Provider:</strong> Runs lightweight Llama Guard 3 <a href="#ref-4" class="ref-cite">[4]</a> classification passes in parallel with token generation, cutting execution instantly if malicious prompt injections or policy violations are detected.</li>
-</ul>
-<p>
-        This modularity means an enterprise can develop an agent once against the Llama Stack Client SDK, test it locally 
-        on an 8B quantization, and promote it to a multi-GPU 70B or 405B cluster in production without changing a single line 
-        of business orchestration code.
-      </p>
-</article>
-<!-- SECTION 3: TOOL PROTOCOLS & FUNCTION CALLING -->
-<article class="content-card">
-<h2>3. Tool Protocols, Execution Semantics &amp; Agentic RAG</h2>
-<p>
-        Meta Muse leverages Llama 4 Scout <a href="#ref-5" class="ref-cite">[5]</a> and Llama 3.3’s native fine-tuning for structured function calling. When presented with tool manifests, 
-        the model utilizes explicit thought tokens to evaluate prerequisites before emitting valid function call blocks.
-      </p>
-<h3>Deterministic Tool Turn Resolution</h3>
-<ol>
-<li><strong>Plan Formulation:</strong> The agent generates an internal reasoning trace outlining which tool is required to resolve the objective.</li>
-<li><strong>Structured Tool Invocation:</strong> The model outputs a typed JSON object specifying the target tool identifier and strictly typed parameter arguments conforming to JSON Schema Draft-07.</li>
-<li><strong>Asynchronous Dispatch:</strong> The Llama Stack agent runner executes the tool asynchronously, capturing stdout, stderr, execution duration, and exit status.</li>
-<li><strong>Synthesis &amp; Iteration:</strong> The tool response is injected back into the session history, prompting the agent to either formulate the final user answer or invoke sequential follow-up tools.</li>
-</ol>
-<p>
-        Through built-in Agentic RAG, the agent can autonomously query corporate knowledge bases, evaluate the semantic relevance 
-        of returned document chunks, and re-query with modified search terms if initial passages fail to satisfy factual constraints.
-      </p>
-</article>
-<!-- SECTION 4: SAFETY SHIELDS & LLAMA GUARD 3 -->
-<article class="content-card">
-<h2>4. Llama Guard 3 <a href="#ref-4" class="ref-cite">[4]</a> Safety Shields &amp; Prompt Injection Defenses</h2>
-<p>
-        In production agent deployments, autonomous tool execution introduces severe attack vectors: malicious users can craft 
-        adversarial prompts designed to trick the agent into executing arbitrary SQL commands, deleting cloud resources, 
-        or exfiltrating customer records.
-      </p>
-<p>
-        Meta Muse addresses this threat through native integration with <strong>Llama Guard 3 <a href="#ref-4" class="ref-cite">[4]</a></strong> (1B and 8B safety classifiers). 
-        Before user input ever reaches the primary reasoning agent, it passes through an inline security classification check. 
-        If an attempt at jailbreaking, system prompt extraction, or privilege escalation is detected, the turn is terminated 
-        before any tool invocation can be generated.
-      </p>
-<ul>
-<li><strong>Input Shielding:</strong> Intercepts adversarial jailbreaks, obfuscated base64 payloads, and indirect prompt injections embedded in scraped external web content.</li>
-<li><strong>Output Shielding:</strong> Verifies that generated agent summaries do not inadvertently reveal private API keys, internal network topologies, or PII.</li>
-<li><strong>Custom Policy Tuning:</strong> Enterprises can fine-tune safety taxonomies to enforce domain-specific constraints (e.g., forbidding financial advice in healthcare applications).</li>
-</ul>
-</article>
-<!-- SECTION 5: PRODUCTION SOURCE CODE -->
-<article class="content-card" id="code">
-<h2>5. Production Source Code (Python Async Llama Stack Agent)</h2>
-<p>
-        The following asynchronous Python script demonstrates deploying a production Meta Muse agent using the official 
-        <code>llama-stack-client</code> SDK. It configures an autonomous agent session, binds corporate SQL and filesystem tools, 
-        enables safety shields, and executes multi-turn tool loops.
-      </p>
-<div class="code-window">
-<div class="code-bar">
-<span>meta_muse_agent_runner.py</span>
-<button class="copy-btn" onclick="copySnippet('metaMuseCode')">Copy Code</button>
-</div>
-<pre class="code-pre" id="metaMuseCode"><code>import asyncio
+
+  <div class="container">
+    <header class="hero">
+      <p class="hero-badge">// CLAUDE AGENTS · DESKTOP AUTOMATION</p>
+      <h1 class="hero-title">Claude Cowork & Computer Use: OS Automation at Scale</h1>
+      <p class="hero-desc">Deploy autonomous desktop coworkers powered by Claude 5.5 Computer Use: inspecting user interfaces via screenshots, clicking native UI elements, filling forms across legacy ERPs, and automating workflows where APIs do not exist.</p>
+
+    </header>
+    <article class="content-card">
+      <h2>1. The Computer Use Paradigm</h2>
+<p>Anthropic's Computer Use API represents a breakthrough in digital process automation. Rather than requiring bespoke API integrations for every legacy desktop application, Claude directly interacts with graphical user interfaces (GUIs) just like a human knowledge worker:</p>
+                <div class="mermaid-container">
+                  <pre class="mermaid">
+sequenceDiagram
+    autonumber
+    participant Agent as Claude 5.5 Agent
+    participant Bridge as Computer Use Bridge
+    participant Desktop as OS / Virtual Desktop
+    participant Human as Human Supervisor
+
+    Agent->>Bridge: Action: take_screenshot()
+    Bridge->>Desktop: Capture FrameBuffer
+    Desktop-->>Bridge: Raw PNG Screen Data
+    Bridge-->>Agent: Scaled Screen Image (1024x768)
+    Agent->>Agent: Extended Thinking: Locate Submit Button at (540, 380)
+    alt Action is Sensitive (e.g. Wire Transfer)
+        Agent->>Human: Request Approval: Click Wire Transfer?
+        Human-->>Agent: Approved
+    end
+    Agent->>Bridge: Action: mouse_click(x=540, y=380)
+    Bridge->>Desktop: Dispatch Synthetic OS Click Event
+    Desktop-->>Bridge: State Updated
+                  </pre>
+                </div>
+    </article>
+    <article class="content-card">
+      <h2>2. Coordinate Scaling & Screen Normalization</h2>
+<p>Computer Use scales high-resolution displays down to standard aspect ratios (e.g., 1024x768 or 1280x800) to optimize vision tokens while retaining fine typographic details. The client library automatically normalizes synthetic click coordinates:</p>
+                <div class="step-grid">
+                  <div class="step-card">
+                    <div class="step-num">Step 1 · Frame Capture</div>
+                    <div class="step-title">Desktop Capture</div>
+                    <div class="step-desc">Captures virtual framebuffer (X11 / Wayland / Windows Desktop) via PyAutoGUI or scrot.</div>
+                  </div>
+                  <div class="step-card">
+                    <div class="step-num">Step 2 · Scaling</div>
+                    <div class="step-title">Aspect Normalization</div>
+                    <div class="step-desc">Downscales image while preserving pixel aspect ratio to fit within Claude's vision context budget.</div>
+                  </div>
+                  <div class="step-card">
+                    <div class="step-num">Step 3 · Coordinate Map</div>
+                    <div class="step-title">Inverse Projection</div>
+                    <div class="step-desc">Maps Claude's predicted target (x, y) back to native monitor resolution coordinates before executing mouse input.</div>
+                  </div>
+                </div>
+    </article>
+    <article class="content-card">
+      <h2>3. Tutorial: Python Desktop Automation Controller</h2>
+<p>Here is an architectural implementation of a safe, containerized desktop automation loop using the Anthropic computer tool declaration:</p>
+                <div class="code-window">
+                  <div class="code-bar">
+                    <span>python/computer_use_controller.py</span>
+                    <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-window').querySelector('pre').innerText)">Copy Code</button>
+                  </div>
+                  <pre class="code-pre"><code>import base64
 import os
-import json
-from typing import Any, Dict, List
-from llama_stack_client import LlamaStackClient
-from llama_stack_client.types import agent_create_params
+from anthropic import Anthropic
 
-# Initialize client connecting to local or VPC Llama Stack distribution endpoint
-client = LlamaStackClient(
-    base_url=os.getenv("LLAMA_STACK_ENDPOINT", "http://localhost:5000")
-)
+client = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
-# Define Custom Enterprise Tool Definition
-DATABASE_TOOL = {
-    "name": "query_inventory_database",
-    "description": "Executes read-only SQL queries to check corporate supply chain inventory levels.",
-    "parameters": {
-        "type": "object",
-        "properties": {
-            "warehouse_id": {"type": "string", "description": "Target warehouse code (e.g., WH-US-EAST)"},
-            "sku_filter": {"type": "string", "description": "Product SKU pattern to filter inventory"}
-        },
-        "required": ["warehouse_id"]
-    }
+# Official Computer Use tool declaration
+computer_tool = {
+    "type": "computer_20241022",
+    "name": "computer",
+    "display_width_px": 1024,
+    "display_height_px": 768,
+    "display_number": 1
 }
 
-async def execute_mock_inventory(warehouse_id: str, sku_filter: str = "") -&gt; Dict[str, Any]:
-    """Mock database execution tool."""
-    return {
-        "status": "success",
-        "warehouse": warehouse_id,
-        "items_in_stock": 1420,
-        "backorder_units": 0,
-        "health_score": "OPTIMAL"
-    }
+def capture_screen_base64() -> str:
+    """Simulate capturing a local desktop screenshot"""
+    # In production, use pyautogui.screenshot() or Xvfb capture
+    return "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
 
-async def run_meta_muse_agent(task_prompt: str):
-    print(f"[*] Initializing Meta Muse agent session for task: '{task_prompt}'")
-    
-    # 1. Create Agent Configuration with Muse Spark 1.3 <a href="#ref-3" class="ref-cite">[3]</a> (or Llama 4 Scout <a href="#ref-5" class="ref-cite">[5]</a>) and Llama Guard
-    agent_config = {
-        "model": "meta/muse-spark-1.3",
-        "instructions": (
-            "You are Meta Muse, an enterprise autonomous operations agent. "
-            "Deliberate carefully over user goals, invoke registered tools to verify "
-            "facts, and present concise, verified analytical summaries."
-        ),
-        "tools": [DATABASE_TOOL],
-        "input_shields": ["meta-llama/Llama-Guard-3-8B"],
-        "output_shields": ["meta-llama/Llama-Guard-3-8B"],
-        "max_infer_iters": 5
-    }
+def execute_desktop_action(action: str, coordinate=None, text=None):
+    print(f"[OS EVENT]: Action={action}, Coordinate={coordinate}, Text={text}")
+    # In production, dispatch via pyautogui: pyautogui.click(x=coordinate[0], y=coordinate[1])
+    return capture_screen_base64()
 
-    # 2. Instantiate Agent Session
-    agent_session = client.agents.create(agent_config=agent_config)
-    session_id = agent_session.agent_id
-    print(f"[✓] Agent Session instantiated successfully with ID: {session_id}")
+print("Computer Use Controller ready for enterprise coworker tasks.")
+</code></pre>
+                </div>
+    </article>
 
-    # 3. Create Conversational Turn
-    turn_response = client.agents.turns.create(
-        agent_id=session_id,
-        messages=[{"role": "user", "content": task_prompt}]
-    )
-
-    # 4. Evaluate Execution Steps
-    for step in turn_response.steps:
-        if step.step_type == "tool_execution":
-            print(f"[*] Tool Call Generated: {step.tool_name} with params: {step.tool_args}")
-            # Execute tool and submit result back
-            tool_data = await execute_mock_inventory(**step.tool_args)
-            print(f"[*] Tool Output Resolved: {json.dumps(tool_data)}")
-        elif step.step_type == "inference":
-            if step.model_response:
-                print(f"\n[Meta Muse Synthesis]:\n{step.model_response.content}")
-
-if __name__ == "__main__":
-    asyncio.run(run_meta_muse_agent("Audit inventory levels for SKU-GPU-H100 in warehouse WH-US-EAST."))</code></pre>
-</div>
-</article>
-<!-- SECTION 6: MEMORY & PERSISTENCE -->
-<article class="content-card">
-<h2>6. Memory Management, Session State &amp; Checkpointing</h2>
-<p>
-        A critical limitation of basic LLM tool wrappers is statelessness: when an agent turn crashes mid-loop, 
-        the entire conversational history and intermediate scratchpad work are lost. Meta Muse resolves this 
-        through native Llama Stack checkpointing.
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+      <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Deploy Production Claude Agent Systems</h2>
+      <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
+        Looking to architect custom Claude Opus 5.5 / Sonnet 5.5 multi-agent teams, self-healing Claude Code workflows, or hybrid local LLM routing? Let's design your enterprise roadmap.
       </p>
-<h3>Enterprise Session Persistence Capabilities</h3>
-<ul>
-<li><strong>Atomic Session Checkpoints:</strong> Every agent step (inference token generation, tool invocation, safety verdict) is committed to an ACID-compliant backing store (PostgreSQL or Redis), allowing seamless resumption after server restarts.</li>
-<li><strong>Long-Term Memory Banks:</strong> Integrates vector memory banks that dynamically persist user preferences, historical project decisions, and domain entity relationships across months of continuous operation.</li>
-<li><strong>Context Window Pruning:</strong> Automatically summarizes historical turns when sessions approach the 128K token boundary, retaining critical tool outputs while discarding redundant conversational pleasantries.</li>
-</ul>
-</article>
-<!-- SECTION 7: MONTHLY & YEARLY SUBSCRIPTIONS & TCO -->
-<article class="content-card" id="pricing">
-<h2>7. Verified Monthly &amp; Yearly Subscriptions &amp; TCO Analysis</h2>
-<p>
-  Meta's open-weights strategy eliminates recurring per-seat vendor tax, providing both zero-license self-hosted options and cost-effective cloud endpoints <a href="#ref-1" class="ref-cite">[1]</a> <a href="#ref-6" class="ref-cite">[6]</a>. Verified as of October 13, 2026:
-</p>
-
-<div class="pricing-table-wrapper">
-  <table class="pricing-table">
-    <thead>
-      <tr>
-        <th>Deployment Model</th>
-        <th>Monthly Rate</th>
-        <th>Yearly Rate</th>
-        <th>Included Scope &amp; Quotas</th>
-        <th>Target Persona</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Llama Open Weights (Self-Hosted)</strong></td>
-        <td><strong>$0 / mo</strong></td>
-        <td><strong>$0 / yr</strong></td>
-        <td>Royalty-free open weights under Llama Community License (free up to 700M monthly active users) <a href="#ref-1" class="ref-cite">[1]</a>.</td>
-        <td>Autonomous startups &amp; enterprises</td>
-      </tr>
-      <tr>
-        <td><strong>Meta AI Consumer (Web/App)</strong></td>
-        <td>$0 / mo</td>
-        <td>$0 / yr</td>
-        <td>Built into WhatsApp, Instagram, Messenger, and Ray-Ban Meta glasses <a href="#ref-9" class="ref-cite">[9]</a>.</td>
-        <td>General consumers</td>
-      </tr>
-      <tr>
-        <td><strong>Muse Spark Contributor Tier</strong></td>
-        <td>$0 / mo subscription</td>
-        <td>Pay-as-you-go tokens</td>
-        <td>Discounted API tokens with community feedback telemetry.</td>
-        <td>Researchers &amp; open-source developers</td>
-      </tr>
-      <tr>
-        <td><strong>Muse Spark Standard Tier</strong></td>
-        <td>$0 / mo subscription</td>
-        <td>Pay-as-you-go tokens</td>
-        <td>Full enterprise data isolation, 1M context window, zero customer training retention.</td>
-        <td>Enterprise API teams</td>
-      </tr>
-      <tr>
-        <td><strong>Local GPU Workstation (Self-Owned)</strong></td>
-        <td>$0 / mo ongoing</td>
-        <td>$0 / yr ongoing</td>
-        <td>One-time hardware (~$2,500 for dual RTX 3090/4090 48GB VRAM), runs 70B quantized or Llama 4 Scout.</td>
-        <td>Sovereign on-premise developers</td>
-      </tr>
-      <tr>
-        <td><strong>Cloud GPU Cluster (RunPod/Lambda)</strong></td>
-        <td>~$150 – $2,500 / mo</td>
-        <td>~$1,800 – $30,000 / yr</td>
-        <td>Single L4/A10G (~$150/mo) up to 4x/8x A100/H100 SXM5 nodes with vLLM <a href="#ref-7" class="ref-cite">[7]</a>.</td>
-        <td>Scale-up production clusters</td>
-      </tr>
-      <tr>
-        <td><strong>Serverless API (AWS Bedrock / Azure AI)</strong></td>
-        <td>$0 / mo base subscription</td>
-        <td>Metered consumption</td>
-        <td>~$0.15–$0.80/M input, ~$0.60–$2.50/M output; typical pilot runs ~$200–$800/mo ($2,400–$9,600/yr) <a href="#ref-6" class="ref-cite">[6]</a>.</td>
-        <td>Enterprise cloud applications</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-</article>
-<!-- SECTION 8: DEPLOYMENT TOPOLOGIES -->
-<article class="content-card">
-<h2>8. Enterprise Deployment Topologies &amp; On-Premise AI Agent Teams</h2>
-<p>
-        Organizations deploying Meta Muse typically adopt a tiered hierarchical AI agent team topology to balance throughput, 
-        hardware footprint, and analytical depth:
-      </p>
-<ol>
-<li><strong>Triage &amp; Safety Tier (Llama 3.2 3B + Llama Guard 3 <a href="#ref-4" class="ref-cite">[4]</a> 1B):</strong> Processes user queries with sub-100ms latency, filtering malicious inputs and classifying task complexity.</li>
-<li><strong>Multimodal Reasoning &amp; Worker Tier (Muse Spark 1.3 <a href="#ref-3" class="ref-cite">[3]</a> / Muse Spark 1.2 / Llama 4 Scout <a href="#ref-5" class="ref-cite">[5]</a> MoE):</strong> Handles high-context code generation, multimodal image/PDF/video ingestion across 1M tokens, SQL synthesis, and tool execution routines with 20% fewer tool calls.</li>
-<li><strong>Architect Tier (Muse Spark 1.3 <a href="#ref-3" class="ref-cite">[3]</a> Max-Reasoning or Llama 4 Maverick / 3.1 405B):</strong> Reserved exclusively for high-stakes strategic planning, cross-repository architecture design, and final sign-off.</li>
-</ol>
-<p>
-        This multi-tier approach ensures that 80%+ of daily agent interactions are serviced by lightweight local models, 
-        maximizing GPU utilization and preventing unnecessary compute bottlenecks.
-      </p>
-<h3>Multi-Agent Delegation &amp; Peer AI Agent Team Consensus</h3>
-<p>
-        Within the Llama Stack ecosystem, agents can be instantiated with specialized sub-agent handles. 
-        When a primary coordinator receives an ambiguous, multi-faceted enterprise problem—such as performing a financial 
-        audit of annual reports while cross-referencing recent regulatory changes—it delegates parallel tasks:
-      </p>
-<ul>
-<li><strong>Analyst Agent:</strong> Extracts balance sheet figures and calculates debt-to-equity ratios via the Python data analysis tool.</li>
-<li><strong>Compliance Agent:</strong> Queries internal vector memory to check ratio limits against current SEC and Basel III guidelines.</li>
-<li><strong>Arbiter Agent:</strong> Aggregates both findings, verifies mathematical consistency, and flags any discrepancy for executive human review.</li>
-</ul>
-<p>
-        Because all agents communicate through structured JSON events within the same memory cluster, hand-offs occur in 
-        sub-millisecond local network time without external latency penalties.
-      </p>
-</article>
-<!-- SECTION 9: BENCHMARKING & EVALUATION -->
-<article class="content-card">
-<h2>9. Benchmarking, Trajectory Evaluation &amp; Accuracy Metrics</h2>
-<p>
-        Deploying autonomous agents without continuous evaluation is a recipe for silent operational regressions. 
-        Meta Muse incorporates telemetry hooks compatible with standard agentic benchmarking harnesses:
-      </p>
-<ul>
-<li><strong>SWE-bench Verified:</strong> Llama 4 Scout <a href="#ref-5" class="ref-cite">[5]</a> and Llama 3.3 70B equipped with OpenCode/Llama Stack file-editing tools achieve industry-competitive resolution rates on genuine real-world GitHub issues.</li>
-<li><strong>Tau-bench Customer Interaction:</strong> Demonstrates high compliance in multi-turn customer support tasks, accurately honoring complex business policy logic and tool invocation order.</li>
-<li><strong>Tool-Call Strict Accuracy:</strong> Employs synthetic edge-case evaluation testing how models react when tools throw HTTP 500 errors or return corrupt JSON payloads, verifying that the agent self-heals rather than crashing.</li>
-</ul>
-<p>
-        Enterprise teams utilize the built-in Llama Stack evaluation provider to run automated regression test suites 
-        prior to promoting updated model quantizations or modified tool schemas to production environments.
-      </p>
-</article>
-<!-- SECTION 10: GOTCHAS & TROUBLESHOOTING -->
-<article class="content-card">
-<h2>10. Production Gotchas, Latency Tuning &amp; Best Practices</h2>
-<p>
-        Key engineering recommendations gathered from production Llama Stack deployments:
-      </p>
-<ul>
-<li><strong>KV-Cache Memory Tuning:</strong> When serving Llama 3.3 70B across long agent sessions, enable PagedAttention via vLLM <a href="#ref-7" class="ref-cite">[7]</a> with chunked prefill to prevent Out-Of-Memory (OOM) spikes during concurrent multi-turn tool loops.</li>
-<li><strong>Tool Schema Conciseness:</strong> Avoid excessively verbose parameter descriptions in tool manifests; keep schemas concise and provide explicit 2-turn few-shot examples in the system prompt to guarantee 100% JSON compliance.</li>
-<li><strong>Air-Gapped Tool Network Restrictions:</strong> When deploying bash or python code execution tools, enforce strict Docker network isolation (<code>--network none</code>) to ensure agents cannot transmit data outside local subnets.</li>
-<li><strong>Prompt Caching Acceleration:</strong> When using vLLM <a href="#ref-7" class="ref-cite">[7]</a> or SGLang, enable automatic prefix caching. Since the system prompt, tool schemas, and safety definitions are identical across turns, prefix caching reduces time-to-first-token (TTFT) by up to 80%.</li>
-</ul>
-</article>
-<!-- SECTION 10: REFERENCES & GROUNDED SOURCES -->
-<article class="content-card" id="references">
-<h2>10. References &amp; Authoritative Grounding Sources (October 13, 2026)</h2>
-<p>
-  Verified against Meta open-source releases, research whitepapers, and cloud provider rate cards:
-</p>
-<ul class="ref-list">
-  <li class="ref-item" id="ref-1">
-    <span class="ref-num">[1]</span>
-    <div>
-      <strong>Meta Llama 4 &amp; Llama 3.3 Community License Agreement</strong> — Meta Platforms (2026). Commercial licensing terms, acceptable use policy, and 700M MAU royalty threshold. <br>
-      <a class="ref-link" href="https://www.llama.com/llama-downloads/license/" target="_blank" rel="noopener noreferrer">https://www.llama.com/llama-downloads/license/</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-2">
-    <span class="ref-num">[2]</span>
-    <div>
-      <strong>Meta Llama Stack Architecture &amp; Open Agent API Specification</strong> — Meta Open Source (2026). Standardized client-server interfaces for tool execution, memory, and safety. <br>
-      <a class="ref-link" href="https://github.com/meta-llama/llama-stack" target="_blank" rel="noopener noreferrer">https://github.com/meta-llama/llama-stack</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-3">
-    <span class="ref-num">[3]</span>
-    <div>
-      <strong>Muse Spark Multimodal Reasoning Series (1M Token Context) Specification</strong> — Meta Superintelligence Labs (2026). High-context multimodal architecture. <br>
-      <a class="ref-link" href="https://ai.meta.com/research/" target="_blank" rel="noopener noreferrer">https://ai.meta.com/research/</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-4">
-    <span class="ref-num">[4]</span>
-    <div>
-      <strong>Llama Guard 3: Production Trust &amp; Safety Classifier Models</strong> — Meta AI Research (2024–2026). Sub-50ms input/output content filtering taxonomy. <br>
-      <a class="ref-link" href="https://huggingface.co/meta-llama/Llama-Guard-3-8B" target="_blank" rel="noopener noreferrer">https://huggingface.co/meta-llama/Llama-Guard-3-8B</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-5">
-    <span class="ref-num">[5]</span>
-    <div>
-      <strong>Meta Llama 4 Scout Mixture-of-Experts (MoE) Architecture Paper</strong> — Meta AI (2026). Sparsely-activated 109B MoE with 10M token context. <br>
-      <a class="ref-link" href="https://ai.meta.com/blog/" target="_blank" rel="noopener noreferrer">https://ai.meta.com/blog/</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-6">
-    <span class="ref-num">[6]</span>
-    <div>
-      <strong>AWS Bedrock Meta Llama Model Hosting &amp; Serverless Token Pricing</strong> — Amazon Web Services (October 2026). Hourly throughput and per-million token pricing. <br>
-      <a class="ref-link" href="https://aws.amazon.com/bedrock/pricing/" target="_blank" rel="noopener noreferrer">https://aws.amazon.com/bedrock/pricing/</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-7">
-    <span class="ref-num">[7]</span>
-    <div>
-      <strong>vLLM High-Throughput Distributed PagedAttention Inference Engine</strong> — UC Berkeley / vLLM Project (2026). Continuous batching and KV-cache optimization. <br>
-      <a class="ref-link" href="https://vllm.ai" target="_blank" rel="noopener noreferrer">https://vllm.ai</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-8">
-    <span class="ref-num">[8]</span>
-    <div>
-      <strong>Ollama Local Model Runtime &amp; GGUF Quantization Engine</strong> — Ollama Community (2026). Running 8B to 70B parameter models on macOS and Linux. <br>
-      <a class="ref-link" href="https://ollama.com" target="_blank" rel="noopener noreferrer">https://ollama.com</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-9">
-    <span class="ref-num">[9]</span>
-    <div>
-      <strong>Ray-Ban Meta Smart Glasses &amp; Multimodal Edge AI System</strong> — Meta Hardware &amp; Reality Labs (2026). Wearable agentic vision and voice assistance. <br>
-      <a class="ref-link" href="https://www.meta.com/smart-glasses/" target="_blank" rel="noopener noreferrer">https://www.meta.com/smart-glasses/</a>
-    </div>
-  </li>
-  <li class="ref-item" id="ref-10">
-    <span class="ref-num">[10]</span>
-    <div>
-      <strong>PyTorch 2.4 <a href="#ref-10" class="ref-cite">[10]</a>+ Distributed Pipeline Parallelism &amp; FSDP for Open Models</strong> — Linux Foundation / PyTorch (2026). Multi-GPU model serving and sharding. <br>
-      <a class="ref-link" href="https://pytorch.org" target="_blank" rel="noopener noreferrer">https://pytorch.org</a>
-    </div>
-  </li>
-</ul>
-</article>
-
-<!-- CTA BANNER -->
-<div class="cta-banner">
-<h2 style="color:#fff;font-size:1.8rem;margin-bottom:0.75rem;">Deploy Sovereign Meta Muse AI Agent Teams in Your Infrastructure</h2>
-<p style="color:#94a3b8;max-width:640px;margin:0 auto 1.5rem;font-size:0.95rem;">
-        Ready to build private, zero-subscription agentic systems with Meta Muse, Llama Stack, Llama 4 Scout <a href="#ref-5" class="ref-cite">[5]</a>, and Llama 3.3? 
-        Book an architecture advisory session or commission custom enterprise deployment.
-      </p>
-<a class="btn btn-primary" href="contact.html">Commission Meta Muse AI Agent Team →</a>
-<a class="btn btn-outline" href="agents-all-agentic-providers.html">← Back to All Providers</a>
-</div>
-</div>
+      <div>
+        <a class="btn btn-primary" href="collaboration.html">Schedule Architecture Consultation →</a>
+        <a class="btn btn-outline" href="pricing.html">View Advisory Packages</a>
+      </div>
+    </section>
+  </div>
     <!-- START:FOOTER -->
   <style id="footer-styles">
     footer {
@@ -1794,23 +1545,6 @@ if __name__ == "__main__":
     </p>
   </footer>
     <!-- END:FOOTER -->
-</main>
 <script src="components.js"></script>
-<script>
-  function copySnippet(id) {
-    var el = document.getElementById(id);
-    if (!el) return;
-    navigator.clipboard.writeText(el.innerText).then(function() {
-      var btn = el.closest('.code-window').querySelector('.copy-btn');
-      if (btn) {
-        var orig = btn.innerText;
-        btn.innerText = 'Copied!';
-        btn.style.background = '#34d399';
-        btn.style.color = '#000';
-        setTimeout(function() { btn.innerText = orig; btn.style.background = ''; btn.style.color = ''; }, 2000);
-      }
-    });
-  }
-</script>
 </body>
 </html>

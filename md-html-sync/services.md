@@ -2,7 +2,7 @@
 ## AI Agent Mastery, Corporate AI Training & Autonomous Systems
 
 > **// GENERATIVE AI CONSULTANT & QUANTUM SYSTEMS EXPLORER**  
-> **AI Agent Mastery: create teams of AI agents with Claude, OpenAI, Gemini, or Grok. Learn the in-depth principles that make AI agent orchestration successful, understand deep agent constraints, and perform the tasks of multiple people with an agent team — grounded in essential task domain knowledge. Comprehensive live and remote workforce training (Employees, Developers, Staff, CXOs), Local LLM cost optimization, agent orchestration, AI-assisted TDD, and early quantum systems exploration.**
+> **AI Agent Mastery: create teams of AI agents with Claude, OpenAI, Gemini, or Grok. Learn the in-depth principles that make Claude AI agent orchestration successful, understand deep agent constraints, and perform the tasks of multiple people with an agent team — grounded in essential task domain knowledge. Comprehensive live and remote workforce training (Employees, Developers, Staff, CXOs), Local LLM cost optimization, agent orchestration, AI-assisted TDD, and early quantum systems exploration.**
 
 **Quick Actions**:
 - [✉️ Book a Strategy Consultation](contact.html)
@@ -80,7 +80,7 @@ Drastically slash recurring cloud AI inference invoices by 60% to 90% by deployi
 
 ---
 
-### 3. 🤖 AI Agent Orchestration
+### 3. 🤖 Claude AI Agent Orchestration
 Master the core software principles required to release multi-agent swarms at enterprise scale without
  runaway costs. Build supervisor-worker hierarchies, consensus voting networks, and autonomous tool-calling
  loops engineered for dependable operational execution.
@@ -255,7 +255,7 @@ Live and remote corporate AI training delivered across four distinct organizatio
 
 1. [🧠 Generative AI Transformation](service-generative-ai-transformation.html) — Agentic workflows, metrics, safeguards.
 2. [📦 Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — High-throughput private inference via Ollama, vLLM, llama.cpp.
-3. [🤖 AI Agent Orchestration Fundamentals](service-ai-agents-orchestration.html) — Scalable swarms & state machines.
+3. [🤖 Claude AI Agent Orchestration Fundamentals](service-ai-agents-orchestration.html) — Scalable swarms & state machines.
 4. [🏎️ Agentic AI Assistants (Hermes Agent)](service-agentic-ai-systems.html) — Persistent memory & autonomous loops.
 5. [🌐 Training for WorkFlows Automations](service-training-for-workflow-automations.html) — Self-hosted n8n automations.
 6. [⚛️ Quantum Applications (Experimental)](service-quantum-applications.html) — Enterprise quantum readiness.
