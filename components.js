@@ -40,11 +40,8 @@
       'agents-claude-101.html',
       'agents-claude-code.html',
       'agents-claude-skills.html',
-      'agents-claude-cowork.html',
       'agents-claude-mcp.html',
-      'agents-claude-MCP.html',
       'agents-claude-agent-teams.html',
-      'agents-claude-agent-swarms.html',
       'agents-claude-design.html',
       'agents-claude-budget-limits.html',
       'agents-claude-local-llms.html'

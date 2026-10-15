@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Claude Agents 101: 2026 Ecosystem, Model Hierarchy & Agentic Execution | Thomas Cherickal</title>
-  <meta content="Comprehensive engineering guide to the late-2026 Anthropic Claude ecosystem: Fable 5.1, Mythos 5.1, Opus 5.5, Sonnet 5.5, Haiku 4.5, Cowork, Claude Code, MCP, and no-code tutorials." name="description" />
+  <meta
+    content="Comprehensive engineering guide to the late-2026 Anthropic Claude ecosystem: Fable 5.1, Mythos 5.1, Opus 5.5, Sonnet 5.5, Haiku 4.5, Cowork, Claude Code, MCP, and no-code tutorials."
+    name="description" />
   <meta content="Thomas Cherickal" name="author" />
   <link href="https://thomascherickal.github.io/agents-claude-101.html" rel="canonical" />
   <!-- Open Graph -->
   <meta content="website" property="og:type" />
   <meta content="https://thomascherickal.github.io/agents-claude-101.html" property="og:url" />
   <meta content="Thomas Cherickal — The Digital Futurist" property="og:site_name" />
-  <meta content="Claude Agents 101: 2026 Ecosystem, Model Hierarchy & Agentic Execution | Thomas Cherickal" property="og:title" />
-  <meta content="Comprehensive engineering guide to the late-2026 Anthropic Claude ecosystem: Fable 5.1, Mythos 5.1, Opus 5.5, Sonnet 5.5, Haiku 4.5, Cowork, Claude Code, MCP, and no-code tutorials." property="og:description" />
+  <meta content="Claude Agents 101: 2026 Ecosystem, Model Hierarchy & Agentic Execution | Thomas Cherickal"
+    property="og:title" />
+  <meta
+    content="Comprehensive engineering guide to the late-2026 Anthropic Claude ecosystem: Fable 5.1, Mythos 5.1, Opus 5.5, Sonnet 5.5, Haiku 4.5, Cowork, Claude Code, MCP, and no-code tutorials."
+    property="og:description" />
   <meta content="https://thomascherickal.github.io/assets/og-card.png" property="og:image" />
   <meta content="en_US" property="og:locale" />
   <!-- Favicons -->
@@ -24,12 +30,27 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
   <!-- Mermaid.js for diagrams -->
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      mermaid.initialize({ startOnLoad: true, theme: 'dark', themeVariables: { 'primaryColor': '#0c111d', 'primaryTextColor': '#38bdf8', 'primaryBorderColor': '#38bdf8', 'lineColor': '#fbbf24', 'secondaryColor': '#060912', 'tertiaryColor': '#131926' } });
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof mermaid !== "undefined") {
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: 'dark',
+          themeVariables: {
+            'primaryColor': '#0c111d',
+            'primaryTextColor': '#38bdf8',
+            'primaryBorderColor': '#38bdf8',
+            'lineColor': '#fbbf24',
+            'secondaryColor': '#060912',
+            'tertiaryColor': '#131926'
+          }
+        });
+      }
     });
   </script>
   <style>
@@ -51,7 +72,12 @@
       --font-display: 'Cinzel', serif;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       background: var(--bg-0);
       color: var(--text);
@@ -136,7 +162,8 @@
       line-height: 1.8;
     }
 
-    .content-card ul, .content-card ol {
+    .content-card ul,
+    .content-card ol {
       color: #cbd5e1;
       font-size: 0.96rem;
       margin-left: 1.6rem;
@@ -281,16 +308,21 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     }
 
-    .btn:hover { transform: translateY(-2px); }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
     .btn-primary {
       background: var(--cyan);
       color: #020408 !important;
       box-shadow: 0 0 16px rgba(56, 189, 248, 0.3);
     }
+
     .btn-primary:hover {
       background: #7dd3fc;
       box-shadow: 0 0 24px rgba(56, 189, 248, 0.5);
     }
+
     .btn-outline {
       background: transparent;
       border: 1.5px solid var(--border-gold);
@@ -298,11 +330,12 @@
       box-shadow: 0 0 12px rgba(251, 191, 36, 0.15);
       margin-left: 0.85rem;
     }
+
     .btn-outline:hover {
       background: rgba(251, 191, 36, 0.12);
       border-color: var(--gold);
     }
-  
+
     /* ==========================================================================
        Pricing & Specification Table Styling
        ========================================================================== */
@@ -314,12 +347,14 @@
       background: var(--bg-card);
       box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
     }
+
     .pricing-table {
       width: 100%;
       border-collapse: collapse;
       font-size: 0.9rem;
       text-align: left;
     }
+
     .pricing-table th {
       background: rgba(15, 23, 42, 0.95);
       color: var(--gold);
@@ -331,6 +366,7 @@
       letter-spacing: 0.06em;
       white-space: nowrap;
     }
+
     .pricing-table td {
       padding: 0.95rem 1.15rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -338,12 +374,15 @@
       vertical-align: top;
       line-height: 1.6;
     }
+
     .pricing-table tr:last-child td {
       border-bottom: none;
     }
+
     .pricing-table tr:hover {
       background: rgba(56, 189, 248, 0.04);
     }
+
     .tier-badge {
       display: inline-block;
       padding: 0.2rem 0.55rem;
@@ -354,21 +393,25 @@
       text-transform: uppercase;
       letter-spacing: 0.04em;
     }
+
     .tier-badge.ultra {
       background: rgba(217, 119, 87, 0.18);
       border: 1px solid rgba(217, 119, 87, 0.4);
       color: #f87171;
     }
+
     .tier-badge.frontier {
       background: rgba(251, 191, 36, 0.15);
       border: 1px solid rgba(251, 191, 36, 0.4);
       color: var(--gold);
     }
+
     .tier-badge.workhorse {
       background: rgba(56, 189, 248, 0.15);
       border: 1px solid rgba(56, 189, 248, 0.4);
       color: var(--cyan);
     }
+
     .tier-badge.latency {
       background: rgba(52, 211, 153, 0.15);
       border: 1px solid rgba(52, 211, 153, 0.4);
@@ -386,6 +429,7 @@
       flex-direction: column;
       gap: 0.85rem;
     }
+
     .ref-item {
       display: flex;
       gap: 0.85rem;
@@ -397,19 +441,23 @@
       border-radius: 8px;
       transition: border-color 0.2s ease, background 0.2s ease;
     }
+
     .ref-item:hover {
       border-color: rgba(56, 189, 248, 0.35);
       background: rgba(56, 189, 248, 0.03);
     }
+
     .ref-num {
       color: var(--cyan);
       font-family: var(--font-mono);
       font-weight: 700;
       flex-shrink: 0;
     }
+
     .ref-content strong {
       color: #ffffff;
     }
+
     .ref-link {
       display: inline-block;
       margin-top: 0.25rem;
@@ -419,9 +467,11 @@
       font-size: 0.82rem;
       word-break: break-all;
     }
+
     .ref-link:hover {
       color: var(--gold);
     }
+
     .ref-cite {
       color: var(--cyan);
       font-size: 0.78em;
@@ -431,6 +481,7 @@
       margin-left: 2px;
       padding: 0 2px;
     }
+
     .ref-cite:hover {
       color: var(--gold);
       text-decoration: underline;
@@ -447,6 +498,7 @@
       margin: 2rem 0;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 24px rgba(56, 189, 248, 0.08);
     }
+
     .sim-header {
       border-bottom: 1px solid rgba(56, 189, 248, 0.2);
       padding-bottom: 1.25rem;
@@ -457,35 +509,44 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
+
     .sim-title {
       color: var(--gold);
       font-family: var(--font-cinzel);
       font-size: 1.35rem;
       margin: 0;
     }
+
     .sim-subtitle {
       color: #94a3b8;
       font-size: 0.88rem;
       margin-top: 0.25rem;
     }
+
     .sim-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1.75rem;
     }
+
     @media (max-width: 860px) {
-      .sim-grid { grid-template-columns: 1fr; }
+      .sim-grid {
+        grid-template-columns: 1fr;
+      }
     }
+
     .sim-panel {
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
     }
+
     .sim-field-group {
       display: flex;
       flex-direction: column;
       gap: 0.45rem;
     }
+
     .sim-label {
       font-family: var(--font-mono);
       font-size: 0.82rem;
@@ -494,11 +555,14 @@
       justify-content: space-between;
       align-items: center;
     }
+
     .sim-label span.val {
       color: var(--cyan);
       font-weight: 700;
     }
-    .sim-select, .sim-range {
+
+    .sim-select,
+    .sim-range {
       width: 100%;
       background: rgba(15, 23, 42, 0.85);
       border: 1px solid rgba(56, 189, 248, 0.25);
@@ -510,20 +574,24 @@
       outline: none;
       transition: border-color 0.2s ease;
     }
+
     .sim-select:focus {
       border-color: var(--cyan);
       box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
     }
+
     .sim-range {
       padding: 0.35rem 0;
       accent-color: var(--cyan);
       cursor: pointer;
     }
+
     .sim-effort-buttons {
       display: flex;
       gap: 0.4rem;
       flex-wrap: wrap;
     }
+
     .sim-effort-btn {
       flex: 1;
       min-width: 60px;
@@ -539,16 +607,19 @@
       text-align: center;
       transition: all 0.2s ease;
     }
+
     .sim-effort-btn:hover {
       border-color: var(--cyan);
       color: #ffffff;
     }
+
     .sim-effort-btn.active {
       background: rgba(56, 189, 248, 0.2);
       border-color: var(--cyan);
       color: var(--cyan);
       box-shadow: 0 0 12px rgba(56, 189, 248, 0.25);
     }
+
     .sim-results-card {
       background: rgba(15, 23, 42, 0.85);
       border: 1px solid rgba(56, 189, 248, 0.25);
@@ -558,17 +629,20 @@
       flex-direction: column;
       gap: 1.25rem;
     }
+
     .sim-metric-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
+
     .sim-metric-box {
       background: rgba(6, 9, 18, 0.7);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 8px;
       padding: 0.85rem 1rem;
     }
+
     .sim-metric-title {
       font-family: var(--font-mono);
       font-size: 0.74rem;
@@ -576,6 +650,7 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
+
     .sim-metric-value {
       font-size: 1.5rem;
       font-weight: 700;
@@ -583,15 +658,18 @@
       margin-top: 0.25rem;
       font-family: var(--font-mono);
     }
+
     .sim-metric-sub {
       font-size: 0.78rem;
       color: #64748b;
       margin-top: 0.15rem;
     }
+
     .sim-benchmarks {
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       padding-top: 1rem;
     }
+
     .sim-benchmark-title {
       font-family: var(--font-mono);
       font-size: 0.76rem;
@@ -599,11 +677,13 @@
       text-transform: uppercase;
       margin-bottom: 0.65rem;
     }
+
     .sim-bench-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 0.65rem;
     }
+
     .sim-bench-pill {
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.06);
@@ -613,50 +693,157 @@
       justify-content: space-between;
       font-size: 0.8rem;
     }
-    .sim-bench-pill .b-name { color: #94a3b8; }
-    .sim-bench-pill .b-val { color: var(--cyan); font-family: var(--font-mono); font-weight: 600; }
-    .sim-loop-viz {
-      background: rgba(6, 9, 18, 0.7);
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      border-radius: 8px;
-      padding: 0.85rem 1rem;
-      margin-top: 0.5rem;
+
+    .sim-bench-pill .b-name {
+      color: #94a3b8;
     }
+
+    .sim-bench-pill .b-val {
+      color: var(--cyan);
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+
+    .sim-loop-viz {
+      background: rgba(6, 9, 18, 0.8);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 10px;
+      padding: 1rem 1.15rem;
+      margin-top: 0.75rem;
+    }
+
+    .sim-loop-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.65rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
     .sim-loop-title {
       font-family: var(--font-mono);
-      font-size: 0.74rem;
-      color: #94a3b8;
+      font-size: 0.76rem;
+      color: var(--gold);
       text-transform: uppercase;
-      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+      margin: 0;
     }
-    .sim-loop-steps {
+
+    .sim-step-ctrls {
       display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      flex-wrap: wrap;
+      gap: 0.35rem;
     }
-    .sim-loop-node {
-      background: rgba(56, 189, 248, 0.08);
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      border-radius: 4px;
-      padding: 0.25rem 0.55rem;
-      font-size: 0.74rem;
+
+    .sim-step-btn {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 5px;
+      color: var(--cyan);
       font-family: var(--font-mono);
-      color: #e2e8f0;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
     }
-    .sim-loop-node.active-stage {
+
+    .sim-step-btn:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--cyan);
+      color: #ffffff;
+    }
+
+    .sim-step-btn.play-btn {
+      color: var(--gold);
+      border-color: rgba(251, 191, 36, 0.4);
+    }
+
+    .sim-step-btn.play-btn:hover {
       background: rgba(251, 191, 36, 0.15);
+      border-color: var(--gold);
+    }
+
+    .sim-loop-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    @media (max-width: 640px) {
+      .sim-loop-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .sim-loop-node {
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 6px;
+      padding: 0.45rem 0.5rem;
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      color: #94a3b8;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+
+    .sim-loop-node:hover {
+      border-color: var(--cyan);
+      color: #ffffff;
+      background: rgba(56, 189, 248, 0.08);
+    }
+
+    .sim-loop-node.active-stage {
+      background: rgba(251, 191, 36, 0.16);
       border-color: var(--gold);
       color: var(--gold);
       font-weight: 700;
-    }
-    .sim-loop-arrow {
-      color: #64748b;
-      font-size: 0.74rem;
+      box-shadow: 0 0 10px rgba(251, 191, 36, 0.2);
     }
 
+    .sim-stage-detail {
+      background: rgba(12, 17, 29, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 0.75rem 0.95rem;
+    }
+
+    .sim-stage-badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 0.25rem;
+    }
+
+    .sim-stage-desc {
+      font-size: 0.82rem;
+      line-height: 1.55;
+      color: #e2e8f0;
+      margin: 0;
+    }
+
+    .sim-stage-meta {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 0.4rem;
+      font-size: 0.72rem;
+      color: #64748b;
+      font-family: var(--font-mono);
+    }
+
+    .sim-stage-meta span {
+      color: var(--gold);
+    }
   </style>
 </head>
+
 <body>
 
   <!-- START:HEADER -->
@@ -1120,21 +1307,17 @@
       <li><a href="index.html" data-nav="index.html">Home</a></li>
       <li class="nav-dropdown">
         <a class="nav-dropdown-toggle">
-          Agents <span class="dropdown-caret">▾</span>
+          Claude <span class="dropdown-caret">▾</span>
         </a>
         <ul class="dropdown-menu">
-          <li><a href="agents-claude-101.html" class="dropdown-header-link">🟣 Claude Agents Suite</a></li>
-          <li class="dropdown-divider"></li>
           <li><a href="agents-claude-101.html">🚀 Claude Agents 101</a></li>
-          <li><a href="agents-claude-code.html">💻 Claude Code CLI</a></li>
-          <li><a href="agents-claude-skills.html">🧩 Claude Skills &amp; Extensibility</a></li>
-          <li><a href="agents-claude-cowork.html">🖥️ Claude Cowork &amp; Computer Use</a></li>
-          <li><a href="agents-claude-mcp.html">🔌 Model Context Protocol (MCP)</a></li>
+          <li><a href="agents-claude-code.html">💻 Claude Code & Cowork</a></li>
+          <li><a href="agents-claude-skills.html">🧩 Claude Skills</a></li>
+          <li><a href="agents-claude-mcp.html">🔌 Claude MCP</a></li>
           <li><a href="agents-claude-agent-teams.html">👥 Claude Agent Teams</a></li>
-          <li><a href="agents-claude-agent-swarms.html">🐝 Claude Agent Swarms</a></li>
           <li><a href="agents-claude-design.html">📐 Claude Agent Design Patterns</a></li>
-          <li><a href="agents-claude-budget-limits.html">💲 Claude Budget Limits &amp; Caching</a></li>
-          <li><a href="agents-claude-local-llms.html">📦 Claude &amp; Local LLM Hybrids</a></li>
+          <li><a href="agents-claude-budget-limits.html">💲 Claude Budget Limits</a></li>
+          <li><a href="agents-claude-local-llms.html">📦 Claude With Local LLMs</a></li>
         </ul>
       </li>
       <li><a href="portfolio.html" data-nav="portfolio.html">Portfolio</a></li>
@@ -1149,9 +1332,9 @@
           <li class="dropdown-divider"></li>
           <li><a href="service-generative-ai-transformation.html">🧠 Generative AI Transformation</a></li>
           <li><a href="service-local-llms-cost-slashing.html">📦 Local LLMs &amp; Cost Slashing</a></li>
-          <li><a href="service-ai-agents-orchestration.html">🤖 Claude AI Agent Orchestration Fundamentals</a></li>
-          <li><a href="service-agentic-ai-systems.html">🏎️ Agentic AI Assistants (Hermes Agent)</a></li>
-          <li><a href="service-training-for-workflow-automations.html">🌐 Training for WorkFlows Automations</a></li>
+          <li><a href="service-ai-agents-orchestration.html">🤖 Claude AI Agent Orchestration</a></li>
+          <li><a href="service-agentic-ai-systems.html">🏎️ Hermes Agent Training</a></li>
+          <li><a href="service-training-for-workflow-automations.html">🌐 Training for WorkFlow Automations</a></li>
           <li><a href="service-quantum-applications.html">⚛️ Quantum Applications (Experimental)</a></li>
           <li><a href="service-ai-budget-cost-limits-training.html">💲 AI Budget &amp; Cost Limits Training</a></li>
           <li><a href="service-enterprise-workforce-ai-training.html">🛡️ Enterprise Workforce AI Training</a></li>
@@ -1165,13 +1348,17 @@
   </nav>
   <!-- END:HEADER -->
 
-  
+
   <div class="container">
     <header class="hero">
       <p class="hero-badge">// ANTHROPIC CLAUDE · AGENTIC ECOSYSTEM (OCTOBER 2026)</p>
       <h1 class="hero-title">Claude Agents 101: Model Hierarchy, Adaptive Reasoning &amp; Agentic Execution</h1>
       <p class="hero-desc">
-        Anthropic’s ecosystem has shifted from stateless chat interfaces to autonomous, long-horizon agentic execution platforms. Following the late September 2026 release of the Claude 5.5 generation alongside the Fable 5.1 / Mythos 5.1 frontier architecture, the platform now combines adaptive reasoning, native desktop file manipulation, server-side scheduled autonomy, and a standardized external tool layer via the Model Context Protocol (MCP).
+        Anthropic’s ecosystem has shifted from stateless chat interfaces to autonomous, long-horizon agentic execution
+        platforms. Following the late September 2026 release of the Claude 5.5 generation alongside the Fable 5.1 /
+        Mythos 5.1 frontier architecture, the platform now combines adaptive reasoning, native desktop file
+        manipulation, server-side scheduled autonomy, and a standardized external tool layer via the Model Context
+        Protocol (MCP).
       </p>
     </header>
 
@@ -1179,18 +1366,20 @@
     <article class="content-card" id="model-hierarchy">
       <h2>1. The Late-2026 Claude Model Hierarchy</h2>
       <p>
-        Anthropic structures its model lineup into distinct operational tiers designed to balance reasoning depth, latency, and token economics. Version numbers now progress independently across model families <a href="#ref-1" class="ref-cite">[1]</a> <a href="#ref-7" class="ref-cite">[7]</a>:
+        Anthropic structures its model lineup into distinct operational tiers designed to balance reasoning depth,
+        latency, and token economics. Version numbers now progress independently across model families <a href="#ref-1"
+          class="ref-cite">[1]</a> <a href="#ref-7" class="ref-cite">[7]</a>:
       </p>
 
       <div class="pricing-table-wrapper">
         <table class="pricing-table">
           <thead>
             <tr>
-              <th>Model Tier</th>
-              <th>Active Release (Oct 2026)</th>
-              <th>Context / Max Output</th>
-              <th>API Pricing (Input / Output per 1M)</th>
-              <th>Core Architecture &amp; Best Use Cases</th>
+              <th>Tier</th>
+              <th>Release</th>
+              <th>Context/Output</th>
+              <th>API Pricing</th>
+              <th>Architecture/Use Cases</th>
             </tr>
           </thead>
           <tbody>
@@ -1199,28 +1388,39 @@
               <td><strong>Claude Fable 5.1 &amp; Mythos 5.1</strong></td>
               <td>1M / 128K tokens</td>
               <td><strong>$10.00</strong> / <strong>$50.00</strong></td>
-              <td>Fable 5.1 handles multi-hour autonomous research, cross-suite synthesis, and deep software architecture. Mythos 5.1 shares the same base weights but is restricted to vetted partners (Project Glasswing, Life Sciences, and Cyber Verification programs) for defensive cybersecurity and biological research <a href="#ref-2" class="ref-cite">[2]</a>.</td>
+              <td>Fable 5.1 handles multi-hour autonomous research, cross-suite synthesis, and deep software
+                architecture. Mythos 5.1 shares the same base weights but is restricted to vetted partners (Project
+                Glasswing, Life Sciences, and Cyber Verification programs) for defensive cybersecurity and biological
+                research <a href="#ref-2" class="ref-cite">[2]</a>.</td>
             </tr>
             <tr>
               <td><span class="tier-badge frontier">Frontier Flagship</span></td>
               <td><strong>Claude Opus 5.5</strong></td>
               <td>1M / 128K tokens <br><span style="font-size:0.8rem;color:#94a3b8;">(300K via Batch API)</span></td>
-              <td><strong>$4.00</strong> / <strong>$20.00</strong> <br><span style="font-size:0.8rem;color:#38bdf8;">(Cache read: $0.20)</span></td>
-              <td>Released September 22, 2026. Anthropic's recommended default for complex agentic coding, repository-scale refactoring, financial modeling, and enterprise synthesis. Runs over 30% faster and ~40% cheaper per task than Opus 5 <a href="#ref-1" class="ref-cite">[1]</a> <a href="#ref-5" class="ref-cite">[5]</a>.</td>
+              <td><strong>$4.00</strong> / <strong>$20.00</strong> <br><span
+                  style="font-size:0.8rem;color:#38bdf8;">(Cache read: $0.20)</span></td>
+              <td>Released September 22, 2026. Anthropic's recommended default for complex agentic coding,
+                repository-scale refactoring, financial modeling, and enterprise synthesis. Runs over 30% faster and
+                ~40% cheaper per task than Opus 5 <a href="#ref-1" class="ref-cite">[1]</a> <a href="#ref-5"
+                  class="ref-cite">[5]</a>.</td>
             </tr>
             <tr>
               <td><span class="tier-badge workhorse">Production Workhorse</span></td>
               <td><strong>Claude Sonnet 5.5</strong></td>
               <td>1M / 128K tokens <br><span style="font-size:0.8rem;color:#94a3b8;">(300K via Batch API)</span></td>
               <td><strong>$2.00</strong> / <strong>$10.00</strong></td>
-              <td>Released September 28, 2026. Generates output 30%+ faster than Sonnet 5. Matches or exceeds prior Opus-class performance on computer use (80.1% on OSWorld 2.1), bug resolution, and interactive document/slide creation <a href="#ref-4" class="ref-cite">[4]</a>.</td>
+              <td>Released September 28, 2026. Generates output 30%+ faster than Sonnet 5. Matches or exceeds prior
+                Opus-class performance on computer use (80.1% on OSWorld 2.1), bug resolution, and interactive
+                document/slide creation <a href="#ref-4" class="ref-cite">[4]</a>.</td>
             </tr>
             <tr>
               <td><span class="tier-badge latency">Ultra-Low Latency</span></td>
               <td><strong>Claude Haiku 4.5</strong></td>
               <td>200K / 64K tokens</td>
               <td><strong>$1.00</strong> / <strong>$5.00</strong></td>
-              <td>Sub-100ms routing, high-frequency document triage, classification swarms, and real-time guardrails. Only active model still utilizing legacy fixed thinking token budgets rather than adaptive effort controls <a href="#ref-7" class="ref-cite">[7]</a>.</td>
+              <td>Sub-100ms routing, high-frequency document triage, classification swarms, and real-time guardrails.
+                Only active model still utilizing legacy fixed thinking token budgets rather than adaptive effort
+                controls <a href="#ref-7" class="ref-cite">[7]</a>.</td>
             </tr>
           </tbody>
         </table>
@@ -1228,8 +1428,12 @@
 
       <h3>Architectural Lifecycle &amp; Multimodal Bounds</h3>
       <ul>
-        <li><strong>Previous Active Pinned Snapshots:</strong> Claude Opus 5, Opus 4.8, Opus 4.7, and Sonnet 5 remain accessible on the API for backward compatibility, while original Claude 4.0 snapshots have been retired.</li>
-        <li><strong>Modality Scope:</strong> All 2026 Claude models accept high-resolution text, code, PDFs, charts, screenshots, and voice dictation, and output text, structured JSON, interactive artifacts, diagrams, and TTS audio (on supported Sonnet tiers). By deliberate architectural choice, Claude does not natively generate raster images or video.</li>
+        <li><strong>Previous Active Pinned Snapshots:</strong> Claude Opus 5, Opus 4.8, Opus 4.7, and Sonnet 5 remain
+          accessible on the API for backward compatibility, while original Claude 4.0 snapshots have been retired.</li>
+        <li><strong>Modality Scope:</strong> All 2026 Claude models accept high-resolution text, code, PDFs, charts,
+          screenshots, and voice dictation, and output text, structured JSON, interactive artifacts, diagrams, and TTS
+          audio (on supported Sonnet tiers). By deliberate architectural choice, Claude does not natively generate
+          raster images or video.</li>
       </ul>
     </article>
 
@@ -1237,32 +1441,44 @@
     <article class="content-card" id="reasoning-effort">
       <h2>2. Reasoning Architecture &amp; Effort Control</h2>
       <p>
-        During 2026, Anthropic transitioned away from manual token budget guessing (<code>budget_tokens</code>) toward Adaptive Reasoning and calibrated Effort Control <a href="#ref-3" class="ref-cite">[3]</a>:
+        During 2026, Anthropic transitioned away from manual token budget guessing (<code>budget_tokens</code>) toward
+        Adaptive Reasoning and calibrated Effort Control <a href="#ref-3" class="ref-cite">[3]</a>:
       </p>
 
       <div class="step-grid">
         <div class="step-card">
           <div class="step-num">Core Innovation</div>
           <div class="step-title">Always-On Adaptive Thinking</div>
-          <div class="step-desc">Starting with the 4.6–5.5 families, Claude evaluates prompt complexity dynamically before responding. In Claude Opus 5.5, reasoning is engaged on every single request by default, eliminating "under-thinking" errors on deceptive edge cases.</div>
+          <div class="step-desc">Starting with the 4.6–5.5 families, Claude evaluates prompt complexity dynamically
+            before responding. In Claude Opus 5.5, reasoning is engaged on every single request by default, eliminating
+            "under-thinking" errors on deceptive edge cases.</div>
         </div>
         <div class="step-card">
           <div class="step-num">Ethical Alignment</div>
           <div class="step-title">2026 Constitutional AI</div>
-          <div class="step-desc">Grounded in Anthropic's expanded 84-page January 2026 Constitution, models reason through ethical principles and action reversibility rather than relying on brittle post-generation keyword filters. If a request triggers high-risk cyber or biological classifiers on Fable 5.1, the router automatically downgrades or sandboxes the execution path <a href="#ref-2" class="ref-cite">[2]</a>.</div>
+          <div class="step-desc">Grounded in Anthropic's expanded 84-page January 2026 Constitution, models reason
+            through ethical principles and action reversibility rather than relying on brittle post-generation keyword
+            filters. If a request triggers high-risk cyber or biological classifiers on Fable 5.1, the router
+            automatically downgrades or sandboxes the execution path <a href="#ref-2" class="ref-cite">[2]</a>.</div>
         </div>
       </div>
 
       <h3>Five-Tier Effort Spectrum</h3>
       <p>
-        Users and orchestrators govern compute intensity using five discrete effort settings via the API or the <code>claude.ai</code> / Cowork dropdown menu:
+        Users and orchestrators govern compute intensity using five discrete effort settings via the API or the
+        <code>claude.ai</code> / Cowork dropdown menu:
       </p>
       <ul>
-        <li><strong>Low:</strong> Instant triage, formatting, and straightforward extraction with minimal reasoning overhead.</li>
-        <li><strong>Medium (Opus 5.5 Default):</strong> Optimal equilibrium of speed, token spend, and accuracy for standard multi-step tasks.</li>
-        <li><strong>High:</strong> Deep multi-file synthesis, complex SQL/data joins, and architectural verification.</li>
-        <li><strong>XHigh (Claude Code Default):</strong> Introduced with Opus 4.7 and refined in 5.5. Maximizes repository-level bug hunting and multi-step tool verification without hitting timeout spirals.</li>
-        <li><strong>Max:</strong> Exhaustive verification for formal mathematics, security auditing, and zero-tolerance enterprise deliverables.</li>
+        <li><strong>Low:</strong> Instant triage, formatting, and straightforward extraction with minimal reasoning
+          overhead.</li>
+        <li><strong>Medium (Opus 5.5 Default):</strong> Optimal equilibrium of speed, token spend, and accuracy for
+          standard multi-step tasks.</li>
+        <li><strong>High:</strong> Deep multi-file synthesis, complex SQL/data joins, and architectural verification.
+        </li>
+        <li><strong>XHigh (Claude Code Default):</strong> Introduced with Opus 4.7 and refined in 5.5. Maximizes
+          repository-level bug hunting and multi-step tool verification without hitting timeout spirals.</li>
+        <li><strong>Max:</strong> Exhaustive verification for formal mathematics, security auditing, and zero-tolerance
+          enterprise deliverables.</li>
       </ul>
     </article>
 
@@ -1270,18 +1486,31 @@
     <article class="content-card" id="workspace-ecosystem">
       <h2>3. Core Workspace &amp; Web Ecosystem (claude.ai)</h2>
       <p>
-        The web and mobile platform has evolved into a stateful workspace with persistent memory and collaborative application hosting <a href="#ref-3" class="ref-cite">[3]</a>:
+        The web and mobile platform has evolved into a stateful workspace with persistent memory and collaborative
+        application hosting <a href="#ref-3" class="ref-cite">[3]</a>:
       </p>
       <ul>
-        <li><strong>Transparent Cross-Session Memory:</strong> Available across all tiers (including Free), Claude automatically retains user preferences, project history, and role context across chats. Users have a dedicated transparency ledger to inspect, edit, or purge individual memory nodes at any time.</li>
-        <li><strong>Projects with Auto-Scaling RAG:</strong> Workspaces support up to 20 files (30 MB each) per chat alongside massive project knowledge bases. When uploaded project documentation approaches the 1M token context ceiling, Projects automatically transitions into Dynamic Retrieval Mode, expanding effective project capacity by 10x while preserving near-perfect needle-in-a-stack recall.</li>
+        <li><strong>Transparent Cross-Session Memory:</strong> Available across all tiers (including Free), Claude
+          automatically retains user preferences, project history, and role context across chats. Users have a dedicated
+          transparency ledger to inspect, edit, or purge individual memory nodes at any time.</li>
+        <li><strong>Projects with Auto-Scaling RAG:</strong> Workspaces support up to 20 files (30 MB each) per chat
+          alongside massive project knowledge bases. When uploaded project documentation approaches the 1M token context
+          ceiling, Projects automatically transitions into Dynamic Retrieval Mode, expanding effective project capacity
+          by 10x while preserving near-perfect needle-in-a-stack recall.</li>
         <li><strong>Interactive Artifacts 2.0:</strong>
           <ul>
-            <li><em>Inline Highlight-to-Edit:</em> Users can highlight any section of a rendered document, React app, SVG diagram, or Mermaid chart in the side panel and issue natural-language surgical edits in place without regenerating the entire artifact.</li>
-            <li><em>20 MB Persistent State Storage:</em> Each published artifact includes up to 20 MB of persistent state storage. State can be configured as Personal (isolated to the individual viewer) or Shared (multi-user collaborative state, turning Artifacts into live team trackers, forms, and lightweight internal web apps).</li>
+            <li><em>Inline Highlight-to-Edit:</em> Users can highlight any section of a rendered document, React app,
+              SVG diagram, or Mermaid chart in the side panel and issue natural-language surgical edits in place without
+              regenerating the entire artifact.</li>
+            <li><em>20 MB Persistent State Storage:</em> Each published artifact includes up to 20 MB of persistent
+              state storage. State can be configured as Personal (isolated to the individual viewer) or Shared
+              (multi-user collaborative state, turning Artifacts into live team trackers, forms, and lightweight
+              internal web apps).</li>
           </ul>
         </li>
-        <li><strong>On-Demand Rate Limit Resets:</strong> Paid subscription plans (Pro, Max, Team) include increased 5-hour rolling quotas plus bankable Rate Limit Resets that users can trigger manually during crunch deadlines.</li>
+        <li><strong>On-Demand Rate Limit Resets:</strong> Paid subscription plans (Pro, Max, Team) include increased
+          5-hour rolling quotas plus bankable Rate Limit Resets that users can trigger manually during crunch deadlines.
+        </li>
       </ul>
     </article>
 
@@ -1289,20 +1518,21 @@
     <article class="content-card" id="agentic-platforms">
       <h2>4. Agentic Execution Platforms: Cowork, Claude Code &amp; Computer Use</h2>
       <p>
-        Anthropic divides autonomous execution into two specialized interfaces depending on whether the user operates in a graphical filesystem or a developer terminal:
+        Anthropic divides autonomous execution into two specialized interfaces depending on whether the user operates in
+        a graphical filesystem or a developer terminal:
       </p>
 
       <div class="mermaid-container">
-        <div class="mermaid">
+        <pre class="mermaid">
 flowchart TD
-  Trigger["User Intent / Scheduled Trigger"] --> Cowork["Claude Cowork<br/><i>(Knowledge Worker GUI Agent)</i>"]
-  Trigger --> Code["Claude Code<br/><i>(Autonomous Dev Ops Platform)</i>"]
-  Cowork -->|"Scans CONTEXT.md &<br/>Scoped Directory"| Reasoning["Claude 5.5 Adaptive Reasoning &amp; Effort Controller<br/><b>(Low | Medium | High | XHigh | Max)</b>"]
-  Code -->|"Scans Repo, Git Tree<br/>&amp; Tests"| Reasoning
-  Reasoning --> CompUse["Computer Use<br/><i>GUI &amp; Screen Control<br/>(80%+ OSWorld Score)</i>"]
-  Reasoning --> MCP["MCP Servers<br/><i>Local DBs, APIs, Filesystems<br/>&amp; Plugin Market</i>"]
-  Reasoning --> Cloud["Cloud / Slack<br/><i>Server-Side Cron Tasks<br/>&amp; Async Threads</i>"]
-        </div>
+    Trigger[User Intent or Scheduled Cloud Trigger] --> Cowork[Claude Cowork: Desktop GUI Agent]
+    Trigger --> Code[Claude Code: Autonomous Dev Ops Engine]
+    Cowork -->|Scans CONTEXT.md and Scoped Directory| Reasoning[Claude 5.5 Adaptive Reasoning and Effort Controller]
+    Code -->|Scans Repo, Git Tree and Tests| Reasoning
+    Reasoning --> CompUse[Computer Use 2.1: Screen and GUI Control 80.1% OSWorld]
+    Reasoning --> MCP[Model Context Protocol: DBs, APIs, Filesystems and Plugins]
+    Reasoning --> Cloud[Cloud Infrastructure: Server-Side Cron Tasks and Slack Swarms]
+        </pre>
       </div>
 
       <div class="step-grid">
@@ -1310,11 +1540,15 @@ flowchart TD
           <div class="step-num">GUI Workspace Agent</div>
           <div class="step-title">Claude Cowork</div>
           <div class="step-desc">
-            Launched in early 2026 on Claude Desktop, Cowork moves beyond chat by operating directly inside designated local folders to produce finished deliverables <a href="#ref-6" class="ref-cite">[6]</a>:
+            Launched in early 2026 on Claude Desktop, Cowork moves beyond chat by operating directly inside designated
+            local folders to produce finished deliverables <a href="#ref-6" class="ref-cite">[6]</a>:
             <ul style="margin: 0.5rem 0 0 1rem; padding: 0; font-size: 0.85rem;">
-              <li><strong>Sandboxed Directory Execution:</strong> Operates strictly in scoped local directories reading PDFs, spreadsheets, and planning multi-step transformations.</li>
-              <li><strong>Living Documents:</strong> Continuously maintains persistent compliance logs or financial trackers as new source files drop in.</li>
-              <li><strong>Computer Use Integration:</strong> Scored 80.1% on OSWorld 2.1 and 89% on Chartography to visually inspect desktop apps and web portals.</li>
+              <li><strong>Sandboxed Directory Execution:</strong> Operates strictly in scoped local directories reading
+                PDFs, spreadsheets, and planning multi-step transformations.</li>
+              <li><strong>Living Documents:</strong> Continuously maintains persistent compliance logs or financial
+                trackers as new source files drop in.</li>
+              <li><strong>Computer Use Integration:</strong> Scored 80.1% on OSWorld 2.1 and 89% on Chartography to
+                visually inspect desktop apps and web portals.</li>
             </ul>
           </div>
         </div>
@@ -1325,9 +1559,12 @@ flowchart TD
           <div class="step-desc">
             Upgraded from a CLI assistant into a full software operations engine:
             <ul style="margin: 0.5rem 0 0 1rem; padding: 0; font-size: 0.85rem;">
-              <li><strong>Mobile Remote Control:</strong> Initiate a multi-hour codebase refactor at your desk and monitor reasoning steps or approve actions live on mobile.</li>
-              <li><strong>Server-Side Scheduled Tasks:</strong> Recurring workflows (nightly test repairs, PR triage, data digests) execute cloud-side without local laptops powered on.</li>
-              <li><strong>Multi-Agent "Dev Team":</strong> Coordinates parallel subagents capable of auditing a 200,000-line repo in under 3 hours.</li>
+              <li><strong>Mobile Remote Control:</strong> Initiate a multi-hour codebase refactor at your desk and
+                monitor reasoning steps or approve actions live on mobile.</li>
+              <li><strong>Server-Side Scheduled Tasks:</strong> Recurring workflows (nightly test repairs, PR triage,
+                data digests) execute cloud-side without local laptops powered on.</li>
+              <li><strong>Multi-Agent "Dev Team":</strong> Coordinates parallel subagents capable of auditing a
+                200,000-line repo in under 3 hours.</li>
             </ul>
           </div>
         </div>
@@ -1335,9 +1572,13 @@ flowchart TD
 
       <h3>Model Context Protocol (MCP) &amp; Plugin Marketplace</h3>
       <ul>
-        <li><strong>Universal Connector Standard:</strong> MCP standardizes how Claude connects to local databases, Git repositories, and enterprise SaaS without custom glue logic.</li>
-        <li><strong>Role-Governed Plugin Marketplace:</strong> Launched in February 2026, Team and Enterprise administrators can curate, verify, and assign MCP plugins and Claude Skills by custom organizational role.</li>
-        <li><strong>Claude in Slack:</strong> Tagging <code>@Claude</code> inside a Slack thread delegates multi-step research or coding tasks asynchronously, returning verified deliverables directly to the channel thread.</li>
+        <li><strong>Universal Connector Standard:</strong> MCP standardizes how Claude connects to local databases, Git
+          repositories, and enterprise SaaS without custom glue logic.</li>
+        <li><strong>Role-Governed Plugin Marketplace:</strong> Launched in February 2026, Team and Enterprise
+          administrators can curate, verify, and assign MCP plugins and Claude Skills by custom organizational role.
+        </li>
+        <li><strong>Claude in Slack:</strong> Tagging <code>@Claude</code> inside a Slack thread delegates multi-step
+          research or coding tasks asynchronously, returning verified deliverables directly to the channel thread.</li>
       </ul>
     </article>
 
@@ -1345,36 +1586,49 @@ flowchart TD
     <article class="content-card" id="tutorials">
       <h2>5. Step-by-Step No-Code Tutorials</h2>
       <p>
-        Hands-on operational walkthroughs to deploy Cowork local agents, Artifacts 2.0 collaborative applications, and autonomous server-side scheduled automations:
+        Hands-on operational walkthroughs to deploy Cowork local agents, Artifacts 2.0 collaborative applications, and
+        autonomous server-side scheduled automations:
       </p>
 
       <h3>Tutorial A: Launching an Autonomous Local Workflow in Claude Cowork</h3>
-      <p>Follow this strict operational sequence to configure a safe, high-precision desktop agent without writing a single line of code <a href="#ref-6" class="ref-cite">[6]</a>:</p>
+      <p>Follow this strict operational sequence to configure a safe, high-precision desktop agent without writing a
+        single line of code <a href="#ref-6" class="ref-cite">[6]</a>:</p>
       <div class="step-grid">
         <div class="step-card">
           <div class="step-num">Step 1</div>
           <div class="step-title">Isolate Workspace Directory</div>
-          <div class="step-desc">Never grant root or home directory access. Create a dedicated folder (e.g., <code>Documents/ClaudeWorkspace/Q4_Audit</code>) and move only required source PDFs, spreadsheets, and reference documents into it.</div>
+          <div class="step-desc">Never grant root or home directory access. Create a dedicated folder (e.g.,
+            <code>Documents/ClaudeWorkspace/Q4_Audit</code>) and move only required source PDFs, spreadsheets, and
+            reference documents into it.
+          </div>
         </div>
         <div class="step-card">
           <div class="step-num">Step 2</div>
           <div class="step-title">Create CONTEXT.md</div>
-          <div class="step-desc">Parsed automatically before every agent run. Define role rules, output formatting standards, and safety bounds (such as moving obsolete drafts to a <code>Review_Trash</code> subfolder rather than deleting).</div>
+          <div class="step-desc">Parsed automatically before every agent run. Define role rules, output formatting
+            standards, and safety bounds (such as moving obsolete drafts to a <code>Review_Trash</code> subfolder rather
+            than deleting).</div>
         </div>
         <div class="step-card">
           <div class="step-num">Step 3</div>
           <div class="step-title">Bind Folder &amp; Enable Plugins</div>
-          <div class="step-desc">Open Claude Desktop, switch to Cowork tab, and select <code>Q4_Audit</code>. Toggle verified connectors (filesystem, Google Drive, Slack) and verify write permissions are scoped strictly to the active folder.</div>
+          <div class="step-desc">Open Claude Desktop, switch to Cowork tab, and select <code>Q4_Audit</code>. Toggle
+            verified connectors (filesystem, Google Drive, Slack) and verify write permissions are scoped strictly to
+            the active folder.</div>
         </div>
         <div class="step-card">
           <div class="step-num">Step 4</div>
           <div class="step-title">Calibrate Model &amp; Effort</div>
-          <div class="step-desc">Select Claude Opus 5.5 (for deep financial/research synthesis) or Claude Sonnet 5.5 (for rapid slide/spreadsheet generation). Set Effort Dropdown to <strong>High</strong> for cross-document reconciliation.</div>
+          <div class="step-desc">Select Claude Opus 5.5 (for deep financial/research synthesis) or Claude Sonnet 5.5
+            (for rapid slide/spreadsheet generation). Set Effort Dropdown to <strong>High</strong> for cross-document
+            reconciliation.</div>
         </div>
         <div class="step-card">
           <div class="step-num">Step 5</div>
           <div class="step-title">Delegate &amp; Monitor Remotely</div>
-          <div class="step-desc">Enter an outcome instruction: <em>"Cross-reference vendor invoices against Q4 budget, flag discrepancies &gt;5%, and generate executive summary slide deck in this folder."</em> Monitor steps via mobile app.</div>
+          <div class="step-desc">Enter an outcome instruction: <em>"Cross-reference vendor invoices against Q4 budget,
+              flag discrepancies &gt;5%, and generate executive summary slide deck in this folder."</em> Monitor steps
+            via mobile app.</div>
         </div>
       </div>
 
@@ -1383,22 +1637,29 @@ flowchart TD
         <div class="step-card">
           <div class="step-num">Step 1</div>
           <div class="step-title">Draft Functional Specification</div>
-          <div class="step-desc">Open claude.ai, select Claude Sonnet 5.5, and describe the interactive tool you need—such as a team sprint capacity planner, interactive pricing calculator, or bug-triage tracker.</div>
+          <div class="step-desc">Open claude.ai, select Claude Sonnet 5.5, and describe the interactive tool you
+            need—such as a team sprint capacity planner, interactive pricing calculator, or bug-triage tracker.</div>
         </div>
         <div class="step-card">
           <div class="step-num">Step 2</div>
           <div class="step-title">Enable Persistent Shared State</div>
-          <div class="step-desc">Prompt Claude to <em>"use shared persistent storage so all team viewers interact with the same live data state."</em> Claude provisions up to 20 MB of persistent storage attached to the artifact.</div>
+          <div class="step-desc">Prompt Claude to <em>"use shared persistent storage so all team viewers interact with
+              the same live data state."</em> Claude provisions up to 20 MB of persistent storage attached to the
+            artifact.</div>
         </div>
         <div class="step-card">
           <div class="step-num">Step 3</div>
           <div class="step-title">Refine with Highlight-to-Edit</div>
-          <div class="step-desc">Highlight any UI section, chart, or form directly in the live preview. Type a surgical change (e.g., <em>"Add priority filter dropdown and export button here"</em>) to update that exact component instantaneously.</div>
+          <div class="step-desc">Highlight any UI section, chart, or form directly in the live preview. Type a surgical
+            change (e.g., <em>"Add priority filter dropdown and export button here"</em>) to update that exact component
+            instantaneously.</div>
         </div>
         <div class="step-card">
           <div class="step-num">Step 4</div>
           <div class="step-title">Publish &amp; Fork Across Org</div>
-          <div class="step-desc">Click <strong>Publish</strong> for a shareable workspace link. Team members collaborate in your Shared State instance or click <strong>Fork</strong> to clone an independent copy with isolated data.</div>
+          <div class="step-desc">Click <strong>Publish</strong> for a shareable workspace link. Team members collaborate
+            in your Shared State instance or click <strong>Fork</strong> to clone an independent copy with isolated
+            data.</div>
         </div>
       </div>
 
@@ -1407,17 +1668,22 @@ flowchart TD
         <div class="step-card">
           <div class="step-num">Step 1</div>
           <div class="step-title">Audit Memory Ledger</div>
-          <div class="step-desc">Navigate to <strong>Settings → Memory</strong> in claude.ai. Review structured facts Claude has learned, edit outdated project details, or add permanent rules so you never repeat baseline context.</div>
+          <div class="step-desc">Navigate to <strong>Settings → Memory</strong> in claude.ai. Review structured facts
+            Claude has learned, edit outdated project details, or add permanent rules so you never repeat baseline
+            context.</div>
         </div>
         <div class="step-card">
           <div class="step-num">Step 2</div>
           <div class="step-title">Configure Scheduled Task</div>
-          <div class="step-desc">Open Scheduled Tasks in Cowork or web. Define recurring objective: <em>"Every weekday at 7:30 AM, check GitHub repo &amp; Slack support, summarize blockers, post prioritized digest to #engineering-daily."</em></div>
+          <div class="step-desc">Open Scheduled Tasks in Cowork or web. Define recurring objective: <em>"Every weekday
+              at 7:30 AM, check GitHub repo &amp; Slack support, summarize blockers, post prioritized digest to
+              #engineering-daily."</em></div>
         </div>
         <div class="step-card">
           <div class="step-num">Step 3</div>
           <div class="step-title">Assign Cadence &amp; Effort Tier</div>
-          <div class="step-desc">Select recurrence, bind MCP plugins, and set effort to Medium. Runs entirely server-side on Anthropic's cloud infrastructure—executing reliably even when your laptop is closed.</div>
+          <div class="step-desc">Select recurrence, bind MCP plugins, and set effort to Medium. Runs entirely
+            server-side on Anthropic's cloud infrastructure—executing reliably even when your laptop is closed.</div>
         </div>
       </div>
     </article>
@@ -1426,12 +1692,25 @@ flowchart TD
     <article class="content-card" id="enterprise-api">
       <h2>6. Enterprise API &amp; Infrastructure Capabilities</h2>
       <p>
-        For engineering organizations deploying Claude at scale across the Anthropic API, Amazon Bedrock, Google Cloud Vertex AI, or Microsoft Foundry, several infrastructure controls govern production performance <a href="#ref-1" class="ref-cite">[1]</a> <a href="#ref-5" class="ref-cite">[5]</a>:
+        For engineering organizations deploying Claude at scale across the Anthropic API, Amazon Bedrock, Google Cloud
+        Vertex AI, or Microsoft Foundry, several infrastructure controls govern production performance <a href="#ref-1"
+          class="ref-cite">[1]</a> <a href="#ref-5" class="ref-cite">[5]</a>:
       </p>
       <ul>
-        <li><strong>60% Cheaper Prompt Caching:</strong> Cache reads on Claude Opus 5.5 dropped to $0.20 per million tokens (up to a 90–95% discount compared to fresh input tokens), dramatically reducing the cost of long-running agent loops that repeatedly pass 100K+ token system contexts <a href="#ref-1" class="ref-cite">[1]</a>.</li>
-        <li><strong>300K Output Message Batches API:</strong> Using the asynchronous Batch API with the <code>output-300k-2026-03-24</code> capability header allows Opus and Sonnet models to emit up to 300,000 tokens in a single response at a 50% cost reduction—enabling single-pass full-book translations or massive codebase migrations <a href="#ref-5" class="ref-cite">[5]</a>.</li>
-        <li><strong>Data Residency (<code>inference_geo</code>) &amp; Fast Mode:</strong> Enterprise pipelines in regulated healthcare, finance, and government sectors can pass the <code>inference_geo</code> parameter to lock compute strictly to US-only infrastructure, or trigger accelerated token streaming via the <code>speed: 'fast'</code> configuration.</li>
+        <li><strong>60% Cheaper Prompt Caching:</strong> Cache reads on Claude Opus 5.5 dropped to $0.20 per million
+          tokens (up to a 90–95% discount compared to fresh input tokens), dramatically reducing the cost of
+          long-running agent loops that repeatedly pass 100K+ token system contexts <a href="#ref-1"
+            class="ref-cite">[1]</a>.</li>
+        <li><strong>300K Output Message Batches API:</strong> Using the asynchronous Batch API with the
+          <code>output-300k-2026-03-24</code> capability header allows Opus and Sonnet models to emit up to 300,000
+          tokens in a single response at a 50% cost reduction—enabling single-pass full-book translations or massive
+          codebase migrations <a href="#ref-5" class="ref-cite">[5]</a>.
+        </li>
+        <li><strong>Data Residency (<code>inference_geo</code>) &amp; Fast Mode:</strong> Enterprise pipelines in
+          regulated healthcare, finance, and government sectors can pass the <code>inference_geo</code> parameter to
+          lock compute strictly to US-only infrastructure, or trigger accelerated token streaming via the
+          <code>speed: 'fast'</code> configuration.
+        </li>
       </ul>
     </article>
 
@@ -1439,16 +1718,19 @@ flowchart TD
     <article class="content-card" id="interactive-explorer">
       <h2>7. Interactive Architecture &amp; Economics Explorer</h2>
       <p>
-        Step through the 2026 Claude Autonomous Agentic Loop and compare real-time Task Cost, Execution Velocity, and Benchmark Performance across the active October 2026 model tiers and effort settings:
+        Step through the 2026 Claude Autonomous Agentic Loop and compare real-time Task Cost, Execution Velocity, and
+        Benchmark Performance across the active October 2026 model tiers and effort settings:
       </p>
 
       <div class="sim-container">
         <div class="sim-header">
           <div>
             <h3 class="sim-title">⚡ Claude 5.5 Agent Execution Simulator</h3>
-            <p class="sim-subtitle">Simulate real-time token spend, latency scaling, and benchmark capabilities across model tiers</p>
+            <p class="sim-subtitle">Simulate real-time token spend, latency scaling, and benchmark capabilities across
+              model tiers</p>
           </div>
-          <div style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);background:rgba(56,189,248,0.1);padding:0.4rem 0.8rem;border-radius:6px;border:1px solid rgba(56,189,248,0.3);">
+          <div
+            style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);background:rgba(56,189,248,0.1);padding:0.4rem 0.8rem;border-radius:6px;border:1px solid rgba(56,189,248,0.3);">
             LIVE TELEMETRY MODEL
           </div>
         </div>
@@ -1470,7 +1752,8 @@ flowchart TD
               <label class="sim-label">EFFORT LEVEL (REASONING INTENSITY)</label>
               <div class="sim-effort-buttons">
                 <button type="button" class="sim-effort-btn" onclick="setSimEffort('low', this)">LOW</button>
-                <button type="button" class="sim-effort-btn active" onclick="setSimEffort('medium', this)">MEDIUM</button>
+                <button type="button" class="sim-effort-btn active"
+                  onclick="setSimEffort('medium', this)">MEDIUM</button>
                 <button type="button" class="sim-effort-btn" onclick="setSimEffort('high', this)">HIGH</button>
                 <button type="button" class="sim-effort-btn" onclick="setSimEffort('xhigh', this)">XHIGH</button>
                 <button type="button" class="sim-effort-btn" onclick="setSimEffort('max', this)">MAX</button>
@@ -1482,7 +1765,8 @@ flowchart TD
                 <span>INPUT / CONTEXT TOKENS</span>
                 <span class="val" id="simInputVal">80,000</span>
               </label>
-              <input type="range" id="simInputTokens" class="sim-range" min="5000" max="500000" step="5000" value="80000" oninput="updateSimRange('simInputVal', this.value); calculateAgentEconomics();">
+              <input type="range" id="simInputTokens" class="sim-range" min="5000" max="500000" step="5000"
+                value="80000" oninput="updateSimRange('simInputVal', this.value); calculateAgentEconomics();">
             </div>
 
             <div class="sim-field-group">
@@ -1490,7 +1774,8 @@ flowchart TD
                 <span>OUTPUT / DELIVERABLE TOKENS</span>
                 <span class="val" id="simOutputVal">12,000</span>
               </label>
-              <input type="range" id="simOutputTokens" class="sim-range" min="1000" max="64000" step="1000" value="12000" oninput="updateSimRange('simOutputVal', this.value); calculateAgentEconomics();">
+              <input type="range" id="simOutputTokens" class="sim-range" min="1000" max="64000" step="1000"
+                value="12000" oninput="updateSimRange('simOutputVal', this.value); calculateAgentEconomics();">
             </div>
 
             <div class="sim-field-group">
@@ -1498,7 +1783,8 @@ flowchart TD
                 <span>PROMPT CACHING HIT RATE</span>
                 <span class="val" id="simCacheVal">85%</span>
               </label>
-              <input type="range" id="simCachePct" class="sim-range" min="0" max="95" step="5" value="85" oninput="updateSimRange('simCacheVal', this.value + '%'); calculateAgentEconomics();">
+              <input type="range" id="simCachePct" class="sim-range" min="0" max="95" step="5" value="85"
+                oninput="updateSimRange('simCacheVal', this.value + '%'); calculateAgentEconomics();">
             </div>
           </div>
 
@@ -1522,24 +1808,47 @@ flowchart TD
               <div class="sim-benchmarks">
                 <div class="sim-benchmark-title">Verified Model Capabilities &amp; Benchmarks</div>
                 <div class="sim-bench-grid" id="simBenchGrid">
-                  <div class="sim-bench-pill"><span class="b-name">OSWorld 2.1 (Computer Use):</span> <span class="b-val" id="bmOSWorld">78.5%</span></div>
-                  <div class="sim-bench-pill"><span class="b-name">SWE-bench Verified:</span> <span class="b-val" id="bmSWE">72.4%</span></div>
-                  <div class="sim-bench-pill"><span class="b-name">Chartography Vision:</span> <span class="b-val" id="bmChart">89.2%</span></div>
-                  <div class="sim-bench-pill"><span class="b-name">Context Window:</span> <span class="b-val" id="bmContext">1,000,000</span></div>
+                  <div class="sim-bench-pill"><span class="b-name">OSWorld 2.1 (Computer Use):</span> <span
+                      class="b-val" id="bmOSWorld">78.5%</span></div>
+                  <div class="sim-bench-pill"><span class="b-name">SWE-bench Verified:</span> <span class="b-val"
+                      id="bmSWE">72.4%</span></div>
+                  <div class="sim-bench-pill"><span class="b-name">Chartography Vision:</span> <span class="b-val"
+                      id="bmChart">89.2%</span></div>
+                  <div class="sim-bench-pill"><span class="b-name">Context Window:</span> <span class="b-val"
+                      id="bmContext">1,000,000</span></div>
                 </div>
               </div>
 
-              <!-- Agent Loop Visualizer -->
+              <!-- Interactive Step-Through Autonomous Loop Visualizer -->
               <div class="sim-loop-viz">
-                <div class="sim-loop-title">Active Autonomous Loop Execution Stage</div>
+                <div class="sim-loop-header">
+                  <p class="sim-loop-title">Autonomous Loop Telemetry Stepper</p>
+                  <div class="sim-step-ctrls">
+                    <button type="button" class="sim-step-btn" onclick="stepSimLoop(-1)"
+                      title="Previous Execution Phase">◀ Prev</button>
+                    <button type="button" class="sim-step-btn play-btn" id="simPlayBtn" onclick="toggleSimAutoPlay()"
+                      title="Auto-Play Step Loop">▶ Play</button>
+                    <button type="button" class="sim-step-btn" onclick="stepSimLoop(1)"
+                      title="Next Execution Phase">Next ▶</button>
+                  </div>
+                </div>
                 <div class="sim-loop-steps">
-                  <span class="sim-loop-node active-stage" id="stage1">1. Scoped Scan</span>
-                  <span class="sim-loop-arrow">→</span>
-                  <span class="sim-loop-node" id="stage2">2. Effort Deliberation</span>
-                  <span class="sim-loop-arrow">→</span>
-                  <span class="sim-loop-node" id="stage3">3. MCP / Screen Tooling</span>
-                  <span class="sim-loop-arrow">→</span>
-                  <span class="sim-loop-node" id="stage4">4. Synthesis</span>
+                  <div class="sim-loop-node active-stage" id="stage1" onclick="setSimStage(1)">1. Scope Scan</div>
+                  <div class="sim-loop-node" id="stage2" onclick="setSimStage(2)">2. Reasoning</div>
+                  <div class="sim-loop-node" id="stage3" onclick="setSimStage(3)">3. Tool Dispatch</div>
+                  <div class="sim-loop-node" id="stage4" onclick="setSimStage(4)">4. Deliverable</div>
+                </div>
+                <div class="sim-stage-detail" id="simStageDetail">
+                  <span class="sim-stage-badge" id="stageDetailBadge">Phase 1 · Scoped Context Ingestion</span>
+                  <p class="sim-stage-desc" id="stageDetailDesc">
+                    Scans local workspace directory and parses CONTEXT.md rules. Resolves role definitions, output
+                    formats, and safety boundaries before initiating reasoning.
+                  </p>
+                  <div class="sim-stage-meta">
+                    <div>Buffer: <span id="stageMetaTokens">80,000</span> tok</div>
+                    <div>Sandbox: <span id="stageMetaSandbox">Strict Local FS</span></div>
+                    <div>Safety: <span id="stageMetaSafety">Reversible</span></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1559,50 +1868,67 @@ flowchart TD
         <li class="ref-item" id="ref-1">
           <span class="ref-num">[1]</span>
           <div class="ref-content">
-            <strong>Introducing Claude Opus 5.5: Official Release Notes &amp; Pricing</strong> — Anthropic official announcement detailing Opus 5.5 architecture, $4/$20 pricing, 60% cache read reductions, and benchmark gains.<br>
-            <a class="ref-link" href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener noreferrer">https://www.anthropic.com/claude-opus-5-5</a>
+            <strong>Introducing Claude Opus 5.5: Official Release Notes &amp; Pricing</strong> — Anthropic official
+            announcement detailing Opus 5.5 architecture, $4/$20 pricing, 60% cache read reductions, and benchmark
+            gains.<br>
+            <a class="ref-link" href="https://www.anthropic.com/claude-opus-5-5" target="_blank"
+              rel="noopener noreferrer">https://www.anthropic.com/claude-opus-5-5</a>
           </div>
         </li>
         <li class="ref-item" id="ref-2">
           <span class="ref-num">[2]</span>
           <div class="ref-content">
-            <strong>Anthropic Transparency Hub: 2026 System Cards (Fable 5.1, Mythos 5.1, Opus 5.5, Sonnet 5.5)</strong> — Official alignment evaluations, modalities, knowledge cutoffs, and safety safeguard documentation across the September 2026 lineup.<br>
-            <a class="ref-link" href="https://www.anthropic.com/transparency" target="_blank" rel="noopener noreferrer">https://www.anthropic.com/transparency</a>
+            <strong>Anthropic Transparency Hub: 2026 System Cards (Fable 5.1, Mythos 5.1, Opus 5.5, Sonnet 5.5)</strong>
+            — Official alignment evaluations, modalities, knowledge cutoffs, and safety safeguard documentation across
+            the September 2026 lineup.<br>
+            <a class="ref-link" href="https://www.anthropic.com/transparency" target="_blank"
+              rel="noopener noreferrer">https://www.anthropic.com/transparency</a>
           </div>
         </li>
         <li class="ref-item" id="ref-3">
           <span class="ref-num">[3]</span>
           <div class="ref-content">
-            <strong>Claude AI Features in 2026: Adaptive Reasoning, Cowork, Artifacts &amp; MCP</strong> — Technical breakdown of Effort Control tiers (xhigh, max), 20 MB persistent Artifact state, Project auto-retrieval scaling, and server-side scheduled tasks.<br>
-            <a class="ref-link" href="https://suprmind.ai/hub/claude/features/" target="_blank" rel="noopener noreferrer">https://suprmind.ai/hub/claude/features/</a>
+            <strong>Claude AI Features in 2026: Adaptive Reasoning, Cowork, Artifacts &amp; MCP</strong> — Technical
+            breakdown of Effort Control tiers (xhigh, max), 20 MB persistent Artifact state, Project auto-retrieval
+            scaling, and server-side scheduled tasks.<br>
+            <a class="ref-link" href="https://suprmind.ai/hub/claude/features/" target="_blank"
+              rel="noopener noreferrer">https://suprmind.ai/hub/claude/features/</a>
           </div>
         </li>
         <li class="ref-item" id="ref-4">
           <span class="ref-num">[4]</span>
           <div class="ref-content">
-            <strong>What Is Claude Sonnet 5.5? Benchmarks, Pricing, and API Access</strong> — Evaluation analysis covering Terminal-Bench 4.0 (70.6%), OSWorld 2.1 (80.1%), and repository-scale efficiency.<br>
-            <a class="ref-link" href="https://www.cometapi.com/what-is-claude-sonnet-5-5/" target="_blank" rel="noopener noreferrer">https://www.cometapi.com/what-is-claude-sonnet-5-5/</a>
+            <strong>What Is Claude Sonnet 5.5? Benchmarks, Pricing, and API Access</strong> — Evaluation analysis
+            covering Terminal-Bench 4.0 (70.6%), OSWorld 2.1 (80.1%), and repository-scale efficiency.<br>
+            <a class="ref-link" href="https://www.cometapi.com/what-is-claude-sonnet-5-5/" target="_blank"
+              rel="noopener noreferrer">https://www.cometapi.com/what-is-claude-sonnet-5-5/</a>
           </div>
         </li>
         <li class="ref-item" id="ref-5">
           <span class="ref-num">[5]</span>
           <div class="ref-content">
-            <strong>What Is Claude Opus 5.5? Features, Access &amp; Enterprise Use Cases</strong> — Deep dive into always-on adaptive thinking, 300K Batch API outputs, and real-world software auditing benchmarks.<br>
-            <a class="ref-link" href="https://emergent.sh/learn/what-is-claude-opus-5-5" target="_blank" rel="noopener noreferrer">https://emergent.sh/learn/what-is-claude-opus-5-5</a>
+            <strong>What Is Claude Opus 5.5? Features, Access &amp; Enterprise Use Cases</strong> — Deep dive into
+            always-on adaptive thinking, 300K Batch API outputs, and real-world software auditing benchmarks.<br>
+            <a class="ref-link" href="https://emergent.sh/learn/what-is-claude-opus-5-5" target="_blank"
+              rel="noopener noreferrer">https://emergent.sh/learn/what-is-claude-opus-5-5</a>
           </div>
         </li>
         <li class="ref-item" id="ref-6">
           <span class="ref-num">[6]</span>
           <div class="ref-content">
-            <strong>Claude Cowork Guide: Anthropic Desktop AI Assistant &amp; MCP Setup</strong> — Operational guide to workspace scoping, CONTEXT.md governance, and local Model Context Protocol endpoints.<br>
-            <a class="ref-link" href="https://aiagentskit.com/blog/claude-cowork/" target="_blank" rel="noopener noreferrer">https://aiagentskit.com/blog/claude-cowork/</a>
+            <strong>Claude Cowork Guide: Anthropic Desktop AI Assistant &amp; MCP Setup</strong> — Operational guide to
+            workspace scoping, CONTEXT.md governance, and local Model Context Protocol endpoints.<br>
+            <a class="ref-link" href="https://aiagentskit.com/blog/claude-cowork/" target="_blank"
+              rel="noopener noreferrer">https://aiagentskit.com/blog/claude-cowork/</a>
           </div>
         </li>
         <li class="ref-item" id="ref-7">
           <span class="ref-num">[7]</span>
           <div class="ref-content">
-            <strong>Anthropic Claude AI Models List (2026): All Versions Compared</strong> — Full specification matrix comparing Fable 5.1, Mythos 5, Opus 5.5, Sonnet 5.5, and Haiku 5.5.<br>
-            <a class="ref-link" href="https://www.lorka.ai/ai-models/anthropic" target="_blank" rel="noopener noreferrer">https://www.lorka.ai/ai-models/anthropic</a>
+            <strong>Anthropic Claude AI Models List (2026): All Versions Compared</strong> — Full specification matrix
+            comparing Fable 5.1, Mythos 5, Opus 5.5, Sonnet 5.5, and Haiku 5.5.<br>
+            <a class="ref-link" href="https://www.lorka.ai/ai-models/anthropic" target="_blank"
+              rel="noopener noreferrer">https://www.lorka.ai/ai-models/anthropic</a>
           </div>
         </li>
       </ul>
@@ -1612,7 +1938,8 @@ flowchart TD
     <section class="cta-banner">
       <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Deploy Production Claude Agent Systems</h2>
       <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
-        Looking to architect custom Claude Opus 5.5 / Sonnet 5.5 multi-agent teams, self-healing Claude Code workflows, or hybrid local LLM routing? Let's design your enterprise roadmap.
+        Looking to architect custom Claude Opus 5.5 / Sonnet 5.5 multi-agent teams, self-healing Claude Code workflows,
+        or hybrid local LLM routing? Let's design your enterprise roadmap.
       </p>
       <div>
         <a class="btn btn-primary" href="collaboration.html">Schedule Architecture Consultation →</a>
@@ -1623,9 +1950,12 @@ flowchart TD
 
   <script>
     let currentEffort = 'medium';
+    let currentStage = 1;
+    let autoPlayTimer = null;
 
     const MODEL_SPECS = {
       opus55: {
+        name: 'Claude Opus 5.5',
         inputRate: 4.0,
         outputRate: 20.0,
         cacheRate: 0.20,
@@ -1633,9 +1963,11 @@ flowchart TD
         osWorld: '80.4%',
         sweBench: '74.2%',
         chart: '91.0%',
-        context: '1,000,000'
+        context: '1,000,000',
+        sandbox: 'Sandboxed FS + Mobile Remote'
       },
       sonnet55: {
+        name: 'Claude Sonnet 5.5',
         inputRate: 2.0,
         outputRate: 10.0,
         cacheRate: 0.20,
@@ -1643,9 +1975,11 @@ flowchart TD
         osWorld: '80.1%',
         sweBench: '70.8%',
         chart: '89.2%',
-        context: '1,000,000'
+        context: '1,000,000',
+        sandbox: 'Sandboxed FS + Terminal'
       },
       fable51: {
+        name: 'Claude Fable 5.1 / Mythos 5.1',
         inputRate: 10.0,
         outputRate: 50.0,
         cacheRate: 1.00,
@@ -1653,9 +1987,11 @@ flowchart TD
         osWorld: '83.2%',
         sweBench: '78.5%',
         chart: '93.5%',
-        context: '1,000,000'
+        context: '1,000,000',
+        sandbox: 'Vetted Partner Airgap'
       },
       haiku45: {
+        name: 'Claude Haiku 4.5',
         inputRate: 1.0,
         outputRate: 5.0,
         cacheRate: 0.10,
@@ -1663,38 +1999,143 @@ flowchart TD
         osWorld: '62.0%',
         sweBench: '54.5%',
         chart: '76.0%',
-        context: '200,000'
+        context: '200,000',
+        sandbox: 'Micro-Container Swarm'
       }
     };
 
     const EFFORT_MULTIPLIERS = {
-      low: { thinkingTokens: 1000, speedFactor: 1.2 },
-      medium: { thinkingTokens: 4000, speedFactor: 1.0 },
-      high: { thinkingTokens: 12000, speedFactor: 0.8 },
-      xhigh: { thinkingTokens: 24000, speedFactor: 0.65 },
-      max: { thinkingTokens: 48000, speedFactor: 0.5 }
+      low: { label: 'Low', thinkingTokens: 1000, speedFactor: 1.2, desc: 'Instant extraction & single-pass routing with minimal deliberative overhead.' },
+      medium: { label: 'Medium', thinkingTokens: 4000, speedFactor: 1.0, desc: 'Optimal equilibrium of velocity, token spend, and multi-step accuracy.' },
+      high: { label: 'High', thinkingTokens: 12000, speedFactor: 0.8, desc: 'Deep cross-document join reconciliation, architectural verification, and AST analysis.' },
+      xhigh: { label: 'XHigh', thinkingTokens: 24000, speedFactor: 0.65, desc: 'Repository-scale bug hunting and complex multi-tool verification chains without timeout spirals.' },
+      max: { label: 'Max', thinkingTokens: 48000, speedFactor: 0.5, desc: 'Exhaustive verification for formal mathematics, zero-tolerance compliance, and security audits.' }
     };
 
-    function setSimEffort(effort, btn) {
-      currentEffort = effort;
+    const STAGE_DEFINITIONS = {
+      1: {
+        badge: 'Phase 1 · Scoped Context Ingestion',
+        desc: (model, effort, inTok) => `Scans designated directory (${inTok.toLocaleString()} tokens) and parses CONTEXT.md rules. Validates file boundaries and tone definitions before triggering reasoning.`,
+        safety: 'Reversible (Read-Only)',
+        getTokens: (inTok, outTok, thinkTok) => inTok
+      },
+      2: {
+        badge: 'Phase 2 · Deliberative Reasoning & Planning',
+        desc: (model, effort, inTok, outTok, thinkTok) => `${model.name} activates ${effort.label} effort, allocating ${thinkTok.toLocaleString()} reasoning tokens. Synthesizes invariants against Anthropic 2026 Constitution.`,
+        safety: 'Sandboxed Deliberation',
+        getTokens: (inTok, outTok, thinkTok) => thinkTok
+      },
+      3: {
+        badge: 'Phase 3 · Tool Execution & MCP Integration',
+        desc: (model, effort) => `Dispatches structured tool calls via Model Context Protocol (MCP) or executes pixel-mapped GUI actions (${model.osWorld} OSWorld score). Intercepts sensitive actions with permission gates.`,
+        safety: 'Role-Scoped MCP Sandbox',
+        getTokens: (inTok, outTok, thinkTok) => Math.round(inTok * 0.15 + thinkTok)
+      },
+      4: {
+        badge: 'Phase 4 · Deliverable Synthesis & State Persist',
+        desc: (model, effort, inTok, outTok) => `Assembles final output deliverable (${outTok.toLocaleString()} tokens). Writes persistent living documents to disk or mounts live multi-user state into published Artifact 2.0.`,
+        safety: 'Verified & Committable',
+        getTokens: (inTok, outTok, thinkTok) => outTok
+      }
+    };
+
+    function setSimEffort(effortKey, btn) {
+      currentEffort = effortKey;
       document.querySelectorAll('.sim-effort-btn').forEach(b => b.classList.remove('active'));
       if (btn) btn.classList.add('active');
       calculateAgentEconomics();
     }
 
-    function updateSimRange(labelId, val) {
-      const el = document.getElementById(labelId);
-      if (el) el.textContent = typeof val === 'number' ? val.toLocaleString() : val;
+    function setSimStage(stageNum) {
+      currentStage = Math.max(1, Math.min(4, stageNum));
+      updateStageUI();
     }
 
-    function calculateAgentEconomics() {
-      const modelKey = document.getElementById('simModel').value;
+    function stepSimLoop(delta) {
+      let next = currentStage + delta;
+      if (next > 4) next = 1;
+      if (next < 1) next = 4;
+      setSimStage(next);
+    }
+
+    function toggleSimAutoPlay() {
+      const btn = document.getElementById('simPlayBtn');
+      if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = null;
+        if (btn) btn.textContent = '▶ Play';
+      } else {
+        stepSimLoop(1);
+        autoPlayTimer = setInterval(() => stepSimLoop(1), 2600);
+        if (btn) btn.textContent = '⏸ Pause';
+      }
+    }
+
+    function updateSimRange(labelId, val) {
+      const el = document.getElementById(labelId);
+      if (!el) return;
+      if (typeof val === 'string' && val.endsWith('%')) {
+        el.textContent = val;
+      } else {
+        const num = Number(val);
+        el.textContent = isNaN(num) ? val : num.toLocaleString();
+      }
+    }
+
+    function updateStageUI() {
+      const modelKey = document.getElementById('simModel')?.value || 'opus55';
       const model = MODEL_SPECS[modelKey] || MODEL_SPECS.opus55;
       const effort = EFFORT_MULTIPLIERS[currentEffort] || EFFORT_MULTIPLIERS.medium;
 
-      const inputTokens = parseInt(document.getElementById('simInputTokens').value, 10);
-      const outputTokens = parseInt(document.getElementById('simOutputTokens').value, 10);
-      const cachePct = parseInt(document.getElementById('simCachePct').value, 10) / 100;
+      const inputTokens = parseInt(document.getElementById('simInputTokens')?.value || 80000, 10);
+      const outputTokens = parseInt(document.getElementById('simOutputTokens')?.value || 12000, 10);
+      const thinkTokens = effort.thinkingTokens;
+
+      for (let i = 1; i <= 4; i++) {
+        const node = document.getElementById('stage' + i);
+        if (node) {
+          if (i === currentStage) {
+            node.classList.add('active-stage');
+          } else {
+            node.classList.remove('active-stage');
+          }
+        }
+      }
+
+      const st = STAGE_DEFINITIONS[currentStage];
+      if (st) {
+        const badgeEl = document.getElementById('stageDetailBadge');
+        if (badgeEl) badgeEl.textContent = st.badge;
+
+        const descEl = document.getElementById('stageDetailDesc');
+        if (descEl) descEl.textContent = st.desc(model, effort, inputTokens, outputTokens, thinkTokens);
+
+        const tokEl = document.getElementById('stageMetaTokens');
+        if (tokEl) tokEl.textContent = st.getTokens(inputTokens, outputTokens, thinkTokens).toLocaleString();
+
+        const sboxEl = document.getElementById('stageMetaSandbox');
+        if (sboxEl) sboxEl.textContent = model.sandbox;
+
+        const safeEl = document.getElementById('stageMetaSafety');
+        if (safeEl) safeEl.textContent = st.safety;
+      }
+    }
+
+    function calculateAgentEconomics() {
+      const modelEl = document.getElementById('simModel');
+      const inputEl = document.getElementById('simInputTokens');
+      const outputEl = document.getElementById('simOutputTokens');
+      const cacheEl = document.getElementById('simCachePct');
+
+      if (!modelEl || !inputEl || !outputEl || !cacheEl) return;
+
+      const modelKey = modelEl.value;
+      const model = MODEL_SPECS[modelKey] || MODEL_SPECS.opus55;
+      const effort = EFFORT_MULTIPLIERS[currentEffort] || EFFORT_MULTIPLIERS.medium;
+
+      const inputTokens = parseInt(inputEl.value, 10);
+      const outputTokens = parseInt(outputEl.value, 10);
+      const cachePct = parseInt(cacheEl.value, 10) / 100;
 
       // Token costs
       const cachedInput = inputTokens * cachePct;
@@ -1729,32 +2170,23 @@ flowchart TD
       }
 
       // Benchmarks
-      document.getElementById('bmOSWorld').textContent = model.osWorld;
-      document.getElementById('bmSWE').textContent = model.sweBench;
-      document.getElementById('bmChart').textContent = model.chart;
-      document.getElementById('bmContext').textContent = model.context;
+      const osEl = document.getElementById('bmOSWorld');
+      if (osEl) osEl.textContent = model.osWorld;
+      const sweEl = document.getElementById('bmSWE');
+      if (sweEl) sweEl.textContent = model.sweBench;
+      const chartEl = document.getElementById('bmChart');
+      if (chartEl) chartEl.textContent = model.chart;
+      const ctxEl = document.getElementById('bmContext');
+      if (ctxEl) ctxEl.textContent = model.context;
 
-      // Visualizer step animation
-      const stages = ['stage1', 'stage2', 'stage3', 'stage4'];
-      stages.forEach(s => {
-        const node = document.getElementById(s);
-        if (node) node.classList.remove('active-stage');
-      });
-
-      if (currentEffort === 'low') {
-        document.getElementById('stage1')?.classList.add('active-stage');
-      } else if (currentEffort === 'medium') {
-        document.getElementById('stage2')?.classList.add('active-stage');
-      } else if (currentEffort === 'high' || currentEffort === 'xhigh') {
-        document.getElementById('stage3')?.classList.add('active-stage');
-      } else {
-        document.getElementById('stage4')?.classList.add('active-stage');
-      }
+      updateStageUI();
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', calculateAgentEconomics);
+    } else {
       calculateAgentEconomics();
-    });
+    }
   </script>
 
 
@@ -2386,6 +2818,7 @@ flowchart TD
     </p>
   </footer>
     <!-- END:FOOTER -->
-<script src="components.js"></script>
+  <script src="components.js"></script>
 </body>
+
 </html>

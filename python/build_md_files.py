@@ -611,9 +611,9 @@ def convert_faqs() -> str:
         ""
     ]
     
-    faq_cards = soup.find_all("div", class_="faq-card")
+    faq_cards = soup.find_all(["div", "article"], class_="faq-card")
     for i, c in enumerate(faq_cards, 1):
-        num_el = c.find("div", class_="faq-num")
+        num_el = c.find("div", class_="faq-num") or c.find("span", class_="faq-num-pill")
         num = clean_text(num_el.get_text()) if num_el else f"FAQ #{i:02d}"
         
         badge_el = c.find("span", class_="faq-category-badge")
@@ -622,8 +622,26 @@ def convert_faqs() -> str:
         q_el = c.find(["h2", "h3"])
         q = clean_text(q_el.get_text()) if q_el else f"Question #{i}"
         
-        ans_el = c.find("p", class_="faq-answer") or c.find("p")
-        ans = clean_text(ans_el.get_text()) if ans_el else ""
+        ans_el = c.find(class_="faq-answer") or c.find("p")
+        if ans_el:
+            # Format paragraphs and lists nicely
+            ans_parts = []
+            for child in ans_el.children:
+                if child.name in ["p", "div"]:
+                    t = clean_text(child.get_text())
+                    if t:
+                        ans_parts.append(t)
+                elif child.name == "ul":
+                    for li in child.find_all("li"):
+                        t = clean_text(li.get_text())
+                        if t:
+                            ans_parts.append(f"- {t}")
+            if not ans_parts:
+                ans = clean_text(ans_el.get_text())
+            else:
+                ans = "\n\n".join(ans_parts)
+        else:
+            ans = ""
         
         lines.append(f"### {i}. {q}")
         if badge or num:

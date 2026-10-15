@@ -14,3 +14,11 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
   2. Standard in-content hyperlinks (cards, lists, or buttons) within the page body.
 - Never add bespoke `<nav>` elements, sticky topic strips, or secondary horizontal/vertical navigation bars to content pages.
 
+## Canonical Profile Categories & Business Website
+- **Business Website**: `https://thomascherickal.github.io`
+- Always categorize and list `https://thomascherickal.github.io` under the **Business Website** category across all profile registries, documentation, schemas, and links.
+
+## Canonical Site & Profile Description
+- **Canonical Description**: `"description": "Thomas Cherickal — Generative AI Consultant and The Digital Futurist."`
+- Always use `"Thomas Cherickal — Generative AI Consultant and The Digital Futurist."` as the primary site, author, and profile description across all HTML files, metadata, and schemas.
+
