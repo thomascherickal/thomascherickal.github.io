@@ -1249,7 +1249,7 @@
               <td>Production chat, summarization, RAG</td>
             </tr>
             <tr>
-              <td><span class="model-badge">Haiku 4.5</span></td>
+              <td><span class="model-badge">Haiku 5.5</span></td>
               <td>$1.00</td>
               <td>$5.00</td>
               <td>$0.10</td>
@@ -1302,7 +1302,7 @@ flowchart TD
     L1 -- "Budget Exceeded" --> R1["Reject: HTTP 400 / 402 (Budget Exceeded)"]
     L2 -- "Under Custom Spend Limit" --> L3["Layer 3: Anthropic Platform Usage Tier Ceiling"]
     L2 -- "Limit Exceeded" --> R2["Reject: HTTP 400 (invalid_request_error)"]
-    L3 -- "Under Monthly Max" --> Anthropic["Claude Foundation Models (Opus 5.5 / Sonnet 5.5 / Haiku 4.5)"]
+    L3 -- "Under Monthly Max" --> Anthropic["Claude Foundation Models (Opus 5.5 / Sonnet 5.5 / Haiku 5.5)"]
     L3 -- "Monthly Cap Exceeded" --> R3["Reject: HTTP 429 (No retry-after header)"]
 
     style Client fill:#0c111d,stroke:#38bdf8,stroke-width:1px,color:#ffffff
@@ -1649,7 +1649,7 @@ litellm_settings:
           <h4 style="color:#ffffff;font-size:1.05rem;">Handle Budget Exhaustion Gracefully in Client Code (Stop retries on 400 and 402 responses)</h4>
         </div>
         <p style="color:#cbd5e1;font-size:0.95rem;line-height:1.7;">
-          Update your application wrapper to catch budget limit errors from LiteLLM or Anthropic and immediately route to a fallback model (such as Claude Haiku 4.5) or alert the on-call engineer rather than retrying.
+          Update your application wrapper to catch budget limit errors from LiteLLM or Anthropic and immediately route to a fallback model (such as Claude Haiku 5.5) or alert the on-call engineer rather than retrying.
         </p>
         <div class="code-window">
           <div class="code-bar">
@@ -1691,7 +1691,7 @@ except APIStatusError as err:
           <div class="calc-model-pills" id="calc-model-selector">
             <button type="button" class="calc-model-btn active" data-model="sonnet-5-5">Claude Sonnet 5.5 ($2/$10)</button>
             <button type="button" class="calc-model-btn" data-model="opus-5-5">Claude Opus 5.5 ($4/$20)</button>
-            <button type="button" class="calc-model-btn" data-model="haiku-4-5">Claude Haiku 4.5 ($1/$5)</button>
+            <button type="button" class="calc-model-btn" data-model="haiku-5-5">Claude Haiku 5.5 ($1/$5)</button>
             <button type="button" class="calc-model-btn" data-model="fable-5-1">Claude Fable 5.1 ($10/$50)</button>
           </div>
         </div>
@@ -2448,7 +2448,7 @@ except APIStatusError as err:
       const MODEL_RATES = {
         'sonnet-5-5': { input: 2.00, cached: 0.20, output: 10.00 },
         'opus-5-5':   { input: 4.00, cached: 0.20, output: 20.00 },
-        'haiku-4-5':  { input: 1.00, cached: 0.10, output: 5.00 },
+        'haiku-5-5':  { input: 1.00, cached: 0.10, output: 5.00 },
         'fable-5-1':  { input: 10.00, cached: 0.25, output: 50.00 }
       };
 

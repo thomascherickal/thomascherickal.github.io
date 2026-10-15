@@ -13,23 +13,22 @@
 ## 1. The Late-2026 Claude Model Hierarchy
 
 Anthropic structures its model lineup into distinct operational tiers designed to balance reasoning depth,
- latency, and token economics. Version numbers now progress independently across model families [1] [7]:
+ latency, and token economics. As detailed in Anthropic's official release notes and the comparative model specification matrix, version numbers now progress independently across model families:
 
 | Tier | Release | Context/Output | API Pricing | Architecture/Use Cases |
 | :--- | :--- | :--- | :--- | :--- |
 | Ultra-Frontier | Claude Fable 5.1 & Mythos 5.1 | 1M / 128K tokens | $10.00 / $50.00 | Fable 5.1 handles multi-hour autonomous research, cross-suite synthesis, and deep software
  architecture. Mythos 5.1 shares the same base weights but is restricted to vetted partners (Project
  Glasswing, Life Sciences, and Cyber Verification programs) for defensive cybersecurity and biological
- research [2]. |
+ research detailed in Anthropic's official system cards. |
 | Frontier Flagship | Claude Opus 5.5 | 1M / 128K tokens (300K via Batch API) | $4.00 / $20.00 (Cache read: $0.20) | Released September 22, 2026. Anthropic's recommended default for complex agentic coding,
- repository-scale refactoring, financial modeling, and enterprise synthesis. Runs over 30% faster and
- ~40% cheaper per task than Opus 5 [1] [5]. |
+ repository-scale refactoring, financial modeling, and enterprise synthesis. It runs over 30% faster and
+ ~40% cheaper per task than Opus 5, verified in the Opus 5.5 release and enterprise architectural teardowns. |
 | Production Workhorse | Claude Sonnet 5.5 | 1M / 128K tokens (300K via Batch API) | $2.00 / $10.00 | Released September 28, 2026. Generates output 30%+ faster than Sonnet 5. Matches or exceeds prior
  Opus-class performance on computer use (80.1% on OSWorld 2.1), bug resolution, and interactive
- document/slide creation [4]. |
-| Ultra-Low Latency | Claude Haiku 4.5 | 200K / 64K tokens | $1.00 / $5.00 | Sub-100ms routing, high-frequency document triage, classification swarms, and real-time guardrails.
- Only active model still utilizing legacy fixed thinking token budgets rather than adaptive effort
- controls [7]. |
+ document/slide creation according to published Sonnet 5.5 benchmarks. |
+| Ultra-Low Latency | Claude Haiku 5.5 | 200K / 64K tokens | $1.00 / $5.00 | Sub-100ms routing, high-frequency document triage, classification swarms, and real-time guardrails.
+ As documented in the Claude version index, it is the only active model still utilizing legacy fixed thinking token budgets rather than adaptive effort controls. |
 
 ### Architectural Lifecycle & Multimodal Bounds
 
@@ -45,7 +44,7 @@ Anthropic structures its model lineup into distinct operational tiers designed t
 ## 2. Reasoning Architecture & Effort Control
 
 During 2026, Anthropic transitioned away from manual token budget guessing (budget_tokens) toward
- Adaptive Reasoning and calibrated Effort Control [3]:
+ Adaptive Reasoning and calibrated Effort Control, outlined across comprehensive Claude feature breakdowns:
 
 #### Core Innovation — Always-On Adaptive Thinking
 Starting with the 4.6–5.5 families, Claude evaluates prompt complexity dynamically
@@ -56,7 +55,7 @@ Starting with the 4.6–5.5 families, Claude evaluates prompt complexity dynamic
 Grounded in Anthropic's expanded 84-page January 2026 Constitution, models reason
  through ethical principles and action reversibility rather than relying on brittle post-generation keyword
  filters. If a request triggers high-risk cyber or biological classifiers on Fable 5.1, the router
- automatically downgrades or sandboxes the execution path [2].
+ automatically downgrades or sandboxes the execution path following Anthropic's transparency protocols.
 
 ### Five-Tier Effort Spectrum
 
@@ -78,7 +77,7 @@ Users and orchestrators govern compute intensity using five discrete effort sett
 ## 3. Core Workspace & Web Ecosystem (claude.ai)
 
 The web and mobile platform has evolved into a stateful workspace with persistent memory and collaborative
- application hosting [3]:
+ application hosting, documented across recent platform architecture updates:
 
 - Transparent Cross-Session Memory: Available across all tiers (including Free), Claude
  automatically retains user preferences, project history, and role context across chats. Users have a dedicated
@@ -108,7 +107,7 @@ Anthropic divides autonomous execution into two specialized interfaces depending
 
 #### GUI Workspace Agent — Claude Cowork
 Launched in early 2026 on Claude Desktop, Cowork moves beyond chat by operating directly inside designated
- local folders to produce finished deliverables [6]:
+ local folders to produce finished deliverables, explored in this comprehensive Claude Cowork guide:
 
 Sandboxed Directory Execution: Operates strictly in scoped local directories reading
  PDFs, spreadsheets, and planning multi-step transformations.
@@ -145,8 +144,7 @@ Hands-on operational walkthroughs to deploy Cowork local agents, Artifacts 2.0 c
 
 ### Tutorial A: Launching an Autonomous Local Workflow in Claude Cowork
 
-Follow this strict operational sequence to configure a safe, high-precision desktop agent without writing a
- single line of code [6]:
+Follow this operational sequence based on the verified Claude Cowork walkthrough to configure a safe, high-precision desktop agent without writing code:
 
 #### Step 1 — Isolate Workspace Directory
 Never grant root or home directory access. Create a dedicated folder (e.g.,
@@ -215,15 +213,14 @@ Select recurrence, bind MCP plugins, and set effort to Medium. Runs entirely
 ## 6. Enterprise API & Infrastructure Capabilities
 
 For engineering organizations deploying Claude at scale across the Anthropic API, Amazon Bedrock, Google Cloud
- Vertex AI, or Microsoft Foundry, several infrastructure controls govern production performance [1] [5]:
+ Vertex AI, or Microsoft Foundry, key infrastructure controls detailed across Anthropic API announcements and enterprise deployment analyses govern production performance:
 
 - 60% Cheaper Prompt Caching: Cache reads on Claude Opus 5.5 dropped to $0.20 per million
- tokens (up to a 90–95% discount compared to fresh input tokens), dramatically reducing the cost of
- long-running agent loops that repeatedly pass 100K+ token system contexts [1].
+ tokens (up to a 90–95% discount compared to fresh input tokens), which Anthropic benchmark reports demonstrate dramatically reduces the cost of
+ long-running agent loops repeatedly passing 100K+ token system contexts.
 - 300K Output Message Batches API: Using the asynchronous Batch API with the
  output-300k-2026-03-24 capability header allows Opus and Sonnet models to emit up to 300,000
- tokens in a single response at a 50% cost reduction—enabling single-pass full-book translations or massive
- codebase migrations [5].
+ tokens in a single response at a 50% cost reduction, designed for massive migrations detailed in Opus use cases.
 - Data Residency (inference_geo) & Fast Mode: Enterprise pipelines in
  regulated healthcare, finance, and government sectors can pass the inference_geo parameter to
  lock compute strictly to US-only infrastructure, or trigger accelerated token streaming via the

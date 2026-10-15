@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Claude Agents 101: 2026 Ecosystem, Model Hierarchy & Agentic Execution | Thomas Cherickal</title>
   <meta
-    content="Comprehensive engineering guide to the late-2026 Anthropic Claude ecosystem: Fable 5.1, Mythos 5.1, Opus 5.5, Sonnet 5.5, Haiku 4.5, Cowork, Claude Code, MCP, and no-code tutorials."
+    content="Comprehensive engineering guide to the late-2026 Anthropic Claude ecosystem: Fable 5.1, Mythos 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5, Cowork, Claude Code, MCP, and no-code tutorials."
     name="description" />
   <meta content="Thomas Cherickal" name="author" />
   <link href="https://thomascherickal.github.io/agents-claude-101.html" rel="canonical" />
@@ -17,7 +17,7 @@
   <meta content="Claude Agents 101: 2026 Ecosystem, Model Hierarchy & Agentic Execution | Thomas Cherickal"
     property="og:title" />
   <meta
-    content="Comprehensive engineering guide to the late-2026 Anthropic Claude ecosystem: Fable 5.1, Mythos 5.1, Opus 5.5, Sonnet 5.5, Haiku 4.5, Cowork, Claude Code, MCP, and no-code tutorials."
+    content="Comprehensive engineering guide to the late-2026 Anthropic Claude ecosystem: Fable 5.1, Mythos 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5, Cowork, Claude Code, MCP, and no-code tutorials."
     property="og:description" />
   <meta content="https://thomascherickal.github.io/assets/og-card.png" property="og:image" />
   <meta content="en_US" property="og:locale" />
@@ -849,13 +849,17 @@
   <!-- START:HEADER -->
   <style id="header-styles">
     /* Global Root Mobile & Tablet Safeguards */
-    html, body {
+    html,
+    body {
       max-width: 100%;
       overflow-x: hidden;
       position: relative;
     }
 
-    img, svg, video, iframe {
+    img,
+    svg,
+    video,
+    iframe {
       max-width: 100%;
       height: auto;
     }
@@ -1114,7 +1118,10 @@
 
     /* Prevent iOS Safari automatic zoom on form input focus */
     @media (max-width: 768px) {
-      input, select, textarea {
+
+      input,
+      select,
+      textarea {
         font-size: 16px !important;
       }
     }
@@ -1255,22 +1262,22 @@
         border-radius: 6px;
       }
 
-      .nav-toggle:checked ~ .nav-links {
+      .nav-toggle:checked~.nav-links {
         transform: translateY(0) !important;
         opacity: 1 !important;
         pointer-events: auto !important;
       }
 
-      .nav-toggle:checked ~ .nav-right-container .nav-toggle-label span {
+      .nav-toggle:checked~.nav-right-container .nav-toggle-label span {
         background: transparent !important;
       }
 
-      .nav-toggle:checked ~ .nav-right-container .nav-toggle-label span::before {
+      .nav-toggle:checked~.nav-right-container .nav-toggle-label span::before {
         transform: rotate(45deg) !important;
         top: 0 !important;
       }
 
-      .nav-toggle:checked ~ .nav-right-container .nav-toggle-label span::after {
+      .nav-toggle:checked~.nav-right-container .nav-toggle-label span::after {
         transform: rotate(-45deg) !important;
         top: 0 !important;
       }
@@ -1367,8 +1374,7 @@
       <h2>1. The Late-2026 Claude Model Hierarchy</h2>
       <p>
         Anthropic structures its model lineup into distinct operational tiers designed to balance reasoning depth,
-        latency, and token economics. Version numbers now progress independently across model families <a href="#ref-1"
-          class="ref-cite">[1]</a> <a href="#ref-7" class="ref-cite">[7]</a>:
+        latency, and token economics. As detailed in Anthropic's <a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">official release notes</a> and the comparative <a href="https://www.lorka.ai/ai-models/anthropic" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">model specification matrix</a>, version numbers now progress independently across model families:
       </p>
 
       <div class="pricing-table-wrapper">
@@ -1391,7 +1397,7 @@
               <td>Fable 5.1 handles multi-hour autonomous research, cross-suite synthesis, and deep software
                 architecture. Mythos 5.1 shares the same base weights but is restricted to vetted partners (Project
                 Glasswing, Life Sciences, and Cyber Verification programs) for defensive cybersecurity and biological
-                research <a href="#ref-2" class="ref-cite">[2]</a>.</td>
+                research detailed in Anthropic's <a href="https://www.anthropic.com/transparency" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">official system cards</a>.</td>
             </tr>
             <tr>
               <td><span class="tier-badge frontier">Frontier Flagship</span></td>
@@ -1400,9 +1406,8 @@
               <td><strong>$4.00</strong> / <strong>$20.00</strong> <br><span
                   style="font-size:0.8rem;color:#38bdf8;">(Cache read: $0.20)</span></td>
               <td>Released September 22, 2026. Anthropic's recommended default for complex agentic coding,
-                repository-scale refactoring, financial modeling, and enterprise synthesis. Runs over 30% faster and
-                ~40% cheaper per task than Opus 5 <a href="#ref-1" class="ref-cite">[1]</a> <a href="#ref-5"
-                  class="ref-cite">[5]</a>.</td>
+                repository-scale refactoring, financial modeling, and enterprise synthesis. It runs over 30% faster and
+                ~40% cheaper per task than Opus 5, verified in the <a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">Opus 5.5 release</a> and enterprise <a href="https://emergent.sh/learn/what-is-claude-opus-5-5" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">architectural teardowns</a>.</td>
             </tr>
             <tr>
               <td><span class="tier-badge workhorse">Production Workhorse</span></td>
@@ -1411,16 +1416,15 @@
               <td><strong>$2.00</strong> / <strong>$10.00</strong></td>
               <td>Released September 28, 2026. Generates output 30%+ faster than Sonnet 5. Matches or exceeds prior
                 Opus-class performance on computer use (80.1% on OSWorld 2.1), bug resolution, and interactive
-                document/slide creation <a href="#ref-4" class="ref-cite">[4]</a>.</td>
+                document/slide creation according to published <a href="https://www.cometapi.com/what-is-claude-sonnet-5-5/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">Sonnet 5.5 benchmarks</a>.</td>
             </tr>
             <tr>
               <td><span class="tier-badge latency">Ultra-Low Latency</span></td>
-              <td><strong>Claude Haiku 4.5</strong></td>
+              <td><strong>Claude Haiku 5.5</strong></td>
               <td>200K / 64K tokens</td>
               <td><strong>$1.00</strong> / <strong>$5.00</strong></td>
               <td>Sub-100ms routing, high-frequency document triage, classification swarms, and real-time guardrails.
-                Only active model still utilizing legacy fixed thinking token budgets rather than adaptive effort
-                controls <a href="#ref-7" class="ref-cite">[7]</a>.</td>
+                As documented in the <a href="https://www.lorka.ai/ai-models/anthropic" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">Claude version index</a>, it is the only active model still utilizing legacy fixed thinking token budgets rather than adaptive effort controls.</td>
             </tr>
           </tbody>
         </table>
@@ -1442,7 +1446,7 @@
       <h2>2. Reasoning Architecture &amp; Effort Control</h2>
       <p>
         During 2026, Anthropic transitioned away from manual token budget guessing (<code>budget_tokens</code>) toward
-        Adaptive Reasoning and calibrated Effort Control <a href="#ref-3" class="ref-cite">[3]</a>:
+        Adaptive Reasoning and calibrated Effort Control, outlined across comprehensive <a href="https://suprmind.ai/hub/claude/features/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">Claude feature breakdowns</a>:
       </p>
 
       <div class="step-grid">
@@ -1459,7 +1463,7 @@
           <div class="step-desc">Grounded in Anthropic's expanded 84-page January 2026 Constitution, models reason
             through ethical principles and action reversibility rather than relying on brittle post-generation keyword
             filters. If a request triggers high-risk cyber or biological classifiers on Fable 5.1, the router
-            automatically downgrades or sandboxes the execution path <a href="#ref-2" class="ref-cite">[2]</a>.</div>
+            automatically downgrades or sandboxes the execution path following Anthropic's <a href="https://www.anthropic.com/transparency" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">transparency protocols</a>.</div>
         </div>
       </div>
 
@@ -1487,7 +1491,7 @@
       <h2>3. Core Workspace &amp; Web Ecosystem (claude.ai)</h2>
       <p>
         The web and mobile platform has evolved into a stateful workspace with persistent memory and collaborative
-        application hosting <a href="#ref-3" class="ref-cite">[3]</a>:
+        application hosting, documented across recent <a href="https://suprmind.ai/hub/claude/features/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">platform architecture updates</a>:
       </p>
       <ul>
         <li><strong>Transparent Cross-Session Memory:</strong> Available across all tiers (including Free), Claude
@@ -1541,7 +1545,7 @@ flowchart TD
           <div class="step-title">Claude Cowork</div>
           <div class="step-desc">
             Launched in early 2026 on Claude Desktop, Cowork moves beyond chat by operating directly inside designated
-            local folders to produce finished deliverables <a href="#ref-6" class="ref-cite">[6]</a>:
+            local folders to produce finished deliverables, explored in this comprehensive <a href="https://aiagentskit.com/blog/claude-cowork/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">Claude Cowork guide</a>:
             <ul style="margin: 0.5rem 0 0 1rem; padding: 0; font-size: 0.85rem;">
               <li><strong>Sandboxed Directory Execution:</strong> Operates strictly in scoped local directories reading
                 PDFs, spreadsheets, and planning multi-step transformations.</li>
@@ -1591,8 +1595,7 @@ flowchart TD
       </p>
 
       <h3>Tutorial A: Launching an Autonomous Local Workflow in Claude Cowork</h3>
-      <p>Follow this strict operational sequence to configure a safe, high-precision desktop agent without writing a
-        single line of code <a href="#ref-6" class="ref-cite">[6]</a>:</p>
+      <p>Follow this operational sequence based on the verified <a href="https://aiagentskit.com/blog/claude-cowork/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">Claude Cowork walkthrough</a> to configure a safe, high-precision desktop agent without writing code:</p>
       <div class="step-grid">
         <div class="step-card">
           <div class="step-num">Step 1</div>
@@ -1693,18 +1696,15 @@ flowchart TD
       <h2>6. Enterprise API &amp; Infrastructure Capabilities</h2>
       <p>
         For engineering organizations deploying Claude at scale across the Anthropic API, Amazon Bedrock, Google Cloud
-        Vertex AI, or Microsoft Foundry, several infrastructure controls govern production performance <a href="#ref-1"
-          class="ref-cite">[1]</a> <a href="#ref-5" class="ref-cite">[5]</a>:
+        Vertex AI, or Microsoft Foundry, key infrastructure controls detailed across <a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">Anthropic API announcements</a> and <a href="https://emergent.sh/learn/what-is-claude-opus-5-5" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">enterprise deployment analyses</a> govern production performance:
       </p>
       <ul>
         <li><strong>60% Cheaper Prompt Caching:</strong> Cache reads on Claude Opus 5.5 dropped to $0.20 per million
-          tokens (up to a 90–95% discount compared to fresh input tokens), dramatically reducing the cost of
-          long-running agent loops that repeatedly pass 100K+ token system contexts <a href="#ref-1"
-            class="ref-cite">[1]</a>.</li>
+          tokens (up to a 90–95% discount compared to fresh input tokens), which <a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">Anthropic benchmark reports</a> demonstrate dramatically reduces the cost of
+          long-running agent loops repeatedly passing 100K+ token system contexts.</li>
         <li><strong>300K Output Message Batches API:</strong> Using the asynchronous Batch API with the
           <code>output-300k-2026-03-24</code> capability header allows Opus and Sonnet models to emit up to 300,000
-          tokens in a single response at a 50% cost reduction—enabling single-pass full-book translations or massive
-          codebase migrations <a href="#ref-5" class="ref-cite">[5]</a>.
+          tokens in a single response at a 50% cost reduction, designed for massive migrations detailed in <a href="https://emergent.sh/learn/what-is-claude-opus-5-5" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">Opus use cases</a>.
         </li>
         <li><strong>Data Residency (<code>inference_geo</code>) &amp; Fast Mode:</strong> Enterprise pipelines in
           regulated healthcare, finance, and government sectors can pass the <code>inference_geo</code> parameter to
@@ -1744,7 +1744,7 @@ flowchart TD
                 <option value="opus55" selected>Claude Opus 5.5 ($4.00 / $20.00 · Cache: $0.20)</option>
                 <option value="sonnet55">Claude Sonnet 5.5 ($2.00 / $10.00 · Workhorse)</option>
                 <option value="fable51">Claude Fable 5.1 / Mythos 5.1 ($10.00 / $50.00 · Frontier)</option>
-                <option value="haiku45">Claude Haiku 4.5 ($1.00 / $5.00 · Low Latency)</option>
+                <option value="haiku55">Claude Haiku 5.5 ($1.00 / $5.00 · Low Latency)</option>
               </select>
             </div>
 
@@ -1943,7 +1943,9 @@ flowchart TD
       </p>
       <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
         <a class="btn btn-primary" href="collaboration.html">Schedule Architecture Consultation →</a>
-        <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank" style="background:linear-gradient(180deg, #1e293b 0%, #0f172a 100%);color:#38bdf8 !important;border:2px solid #0a66c2;box-shadow:0 0 16px rgba(10,102,194,0.4);font-weight:700;">Free LinkedIn Consultation ↗</a>
+        <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank"
+          style="background:linear-gradient(180deg, #1e293b 0%, #0f172a 100%);color:#38bdf8 !important;border:2px solid #0a66c2;box-shadow:0 0 16px rgba(10,102,194,0.4);font-weight:700;">Free
+          LinkedIn Consultation ↗</a>
         <a class="btn btn-outline" href="pricing.html" style="margin-left:0;">View Advisory Packages</a>
       </div>
     </section>
@@ -1991,8 +1993,8 @@ flowchart TD
         context: '1,000,000',
         sandbox: 'Vetted Partner Airgap'
       },
-      haiku45: {
-        name: 'Claude Haiku 4.5',
+      haiku55: {
+        name: 'Claude Haiku 5.5',
         inputRate: 1.0,
         outputRate: 5.0,
         cacheRate: 0.10,
@@ -2191,34 +2193,41 @@ flowchart TD
   </script>
 
 
-    <!-- START:FOOTER -->
+  <!-- START:FOOTER -->
   <style id="footer-styles">
     footer {
       background: var(--bg-1, #060912);
       border-top: 1px solid var(--border, rgba(56, 189, 248, 0.22));
       padding: 5rem clamp(1.5rem, 8vw, 8rem) 3rem;
     }
+
     .footer-top-divider {
       display: none;
     }
+
     .footer-top {
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 3rem;
       margin-bottom: 3rem;
     }
+
     .footer-brand {
       display: flex;
       align-items: center;
       gap: 0.85rem;
     }
+
     @keyframes tcLogoPulse {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translateY(0) scale(1);
         border-color: rgba(56, 189, 248, 0.45);
         box-shadow: 0 0 16px rgba(56, 189, 248, 0.3), 0 0 0 1px rgba(56, 189, 248, 0.2);
         filter: brightness(1) drop-shadow(0 2px 8px rgba(56, 189, 248, 0.25));
       }
+
       50% {
         transform: translateY(-3px) scale(1.04);
         border-color: rgba(245, 158, 11, 0.8);
@@ -2226,11 +2235,13 @@ flowchart TD
         filter: brightness(1.12) drop-shadow(0 4px 14px rgba(245, 158, 11, 0.35));
       }
     }
+
     .footer-brand-logo-link {
       display: inline-flex;
       text-decoration: none;
       border-radius: 8px;
     }
+
     .footer-brand-logo {
       border-radius: 8px;
       object-fit: cover;
@@ -2241,16 +2252,19 @@ flowchart TD
       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
       will-change: transform, box-shadow;
     }
+
     .footer-brand:hover .footer-brand-logo {
       transform: translateY(-4px) scale(1.08);
       box-shadow: 0 0 32px rgba(56, 189, 248, 0.7), 0 0 18px rgba(245, 158, 11, 0.5);
       border-color: #38bdf8;
     }
+
     @media (prefers-reduced-motion: reduce) {
       .footer-brand-logo {
         animation: none;
       }
     }
+
     .footer-brand-name {
       font-family: var(--font-display, 'Open Sans', sans-serif);
       font-size: 1.8rem;
@@ -2261,6 +2275,7 @@ flowchart TD
       background-clip: text;
       margin-bottom: 0.5rem;
     }
+
     .footer-brand-tagline {
       font-family: var(--font-mono, monospace);
       font-size: 0.72rem;
@@ -2269,6 +2284,7 @@ flowchart TD
       text-transform: uppercase;
       margin-bottom: 1rem;
     }
+
     .footer-label {
       font-family: var(--font-mono, monospace);
       font-size: 0.65rem;
@@ -2277,6 +2293,7 @@ flowchart TD
       color: var(--cyan, #38bdf8);
       margin-bottom: 1.25rem;
     }
+
     .social-icon {
       font-size: 1rem;
       flex-shrink: 0;
@@ -2286,6 +2303,7 @@ flowchart TD
       width: 18px;
       height: 18px;
     }
+
     .social-icon svg,
     .social-svg {
       width: 18px;
@@ -2294,11 +2312,13 @@ flowchart TD
       flex-shrink: 0;
       transition: transform 0.28s ease, filter 0.28s ease;
     }
+
     .social-link:hover .social-icon svg,
     .social-link:hover .social-svg {
       transform: scale(1.22);
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.45));
     }
+
     .social-link {
       background: var(--bg-card, linear-gradient(145deg, #0c111d 0%, #04060c 100%));
       border-radius: var(--radius, 10px);
@@ -2316,12 +2336,14 @@ flowchart TD
       font-size: 0.82rem !important;
       transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     .social-link:hover {
       border-color: #38bdf8 !important;
       box-shadow: 0 0 26px rgba(56, 189, 248, 0.9), 0 0 45px rgba(56, 189, 248, 0.5), 0 4px 14px rgba(0, 0, 0, 0.5) !important;
       color: #ffffff;
       transform: translateY(-2px);
     }
+
     .social-link.highlight {
       background: rgba(245, 158, 11, 0.1);
       border: 2px solid rgba(251, 191, 36, 0.75) !important;
@@ -2329,6 +2351,7 @@ flowchart TD
       color: var(--gold, #fbbf24);
       font-weight: 600;
     }
+
     .social-link.highlight:hover {
       background: rgba(245, 158, 11, 0.2);
       border-color: #fbbf24 !important;
@@ -2336,19 +2359,23 @@ flowchart TD
       color: #ffffff;
       transform: translateY(-2px);
     }
+
     .social-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
       gap: 0.6rem;
     }
+
     @media (min-width: 1750px) {
       .social-grid {
         grid-template-columns: repeat(10, 1fr);
       }
     }
+
     .footer-top .newsletter-card {
       margin-top: 0;
     }
+
     .newsletter-card {
       margin-top: 2.5rem;
       padding: 1.5rem 2rem;
@@ -2361,19 +2388,23 @@ flowchart TD
       gap: 2rem;
       box-shadow: 0 0 16px rgba(251, 191, 36, 0.15), 0 4px 20px rgba(0, 0, 0, 0.3) !important;
     }
+
     .newsletter-info {
       flex: 1;
     }
+
     .newsletter-desc {
       font-size: 0.85rem;
       color: var(--text-muted, #94a3b8);
       margin-top: 0.25rem;
     }
+
     .newsletter-name {
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
+
     .newsletter-icon {
       display: inline-flex;
       align-items: center;
@@ -2383,12 +2414,14 @@ flowchart TD
       color: #F87171;
       flex-shrink: 0;
     }
+
     .newsletter-svg {
       width: 18px;
       height: 18px;
       fill: #F87171;
       display: block;
     }
+
     .location-svg {
       width: 14px;
       height: 14px;
@@ -2397,11 +2430,13 @@ flowchart TD
       fill: var(--cyan);
       margin-right: 4px;
     }
+
     @media (max-width: 600px) {
       .footer-top {
         grid-template-columns: 1fr;
         gap: 1.75rem;
       }
+
       .newsletter-card {
         flex-direction: column;
         align-items: stretch;
@@ -2409,11 +2444,13 @@ flowchart TD
         padding: 1.25rem 1rem !important;
         gap: 1rem;
       }
+
       .newsletter-card .btn {
         width: 100%;
         justify-content: center;
         min-height: 44px;
       }
+
       .footer-bottom {
         flex-direction: column;
         align-items: center;
@@ -2421,11 +2458,13 @@ flowchart TD
         gap: 0.75rem;
       }
     }
+
     .dv {
       border: none;
       border-top: 1px solid #232d42;
       margin: 1.45rem 0;
     }
+
     .tc-label {
       font-size: 13.5px;
       letter-spacing: .1em;
@@ -2437,12 +2476,14 @@ flowchart TD
       align-items: center;
       gap: 7px;
     }
+
     .wg {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 10px;
       margin-bottom: 1.5rem;
     }
+
     .wl {
       border: 1px solid #253147;
       border-radius: 10px;
@@ -2456,17 +2497,20 @@ flowchart TD
       min-width: 0;
       transition: background .14s, border-color .14s, transform .12s, box-shadow .14s;
     }
+
     .wl:hover {
       background: #1c2539;
       border-color: rgba(56, 189, 248, 0.5);
       transform: translateY(-2px);
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
     }
+
     .wl-head {
       display: flex;
       align-items: center;
       gap: 10px;
     }
+
     .wl-ic {
       width: 32px;
       height: 32px;
@@ -2477,21 +2521,25 @@ flowchart TD
       justify-content: center;
       flex-shrink: 0;
     }
+
     .wl-ic svg {
       display: block;
     }
+
     .wl-name {
       font-size: 15.5px;
       font-weight: 700;
       color: #ffffff;
       line-height: 1.25;
     }
+
     .wl-desc {
       font-size: 13.5px;
       color: #94a3b8;
       line-height: 1.45;
       margin: 0;
     }
+
     .wl-url {
       font-size: 12.5px;
       color: #38bdf8;
@@ -2500,10 +2548,12 @@ flowchart TD
       margin-top: auto;
       word-break: break-all;
     }
+
     .wl:hover .wl-url {
       opacity: 1;
       text-decoration: underline;
     }
+
     .tc-copy {
       text-align: center;
       font-size: 14px;
@@ -2512,16 +2562,19 @@ flowchart TD
       margin-top: 10px;
       padding: 0 10px;
     }
+
     .tc-copy a {
       color: #cbd5e1;
       text-decoration: none;
       font-weight: 600;
       transition: color .14s;
     }
+
     .tc-copy a:hover {
       color: #38bdf8;
       text-decoration: underline;
     }
+
     .tc-copy span.tc-sep {
       display: inline-block;
       width: 18px;
@@ -2531,18 +2584,20 @@ flowchart TD
       border-radius: 2px;
       margin: 0 8px;
     }
+
     @media (max-width: 820px) {
       .wg {
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
     @media (max-width: 640px) {
       .wg {
         grid-template-columns: 1fr;
       }
     }
   </style>
-    <footer id="links">
+  <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
         <a href="https://thomascherickal.com" target="_blank" rel="noopener noreferrer" class="footer-brand-logo-link"
@@ -2821,7 +2876,7 @@ flowchart TD
         </svg> Remote Worldwide</span>
     </p>
   </footer>
-    <!-- END:FOOTER -->
+  <!-- END:FOOTER -->
   <script src="components.js"></script>
 </body>
 
