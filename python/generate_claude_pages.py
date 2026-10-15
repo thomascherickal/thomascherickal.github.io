@@ -309,11 +309,23 @@ def get_head(title, description, canonical_url):
       border: 1.5px solid var(--border-gold);
       color: var(--gold) !important;
       box-shadow: 0 0 12px rgba(251, 191, 36, 0.15);
-      margin-left: 0.85rem;
     }}
     .btn-outline:hover {{
       background: rgba(251, 191, 36, 0.12);
       border-color: var(--gold);
+    }}
+    .btn-linkedin {{
+      background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+      color: #38bdf8 !important;
+      font-weight: 700;
+      border: 2px solid #0a66c2;
+      box-shadow: 0 0 16px rgba(10, 102, 194, 0.4);
+    }}
+    .btn-linkedin:hover {{
+      background: linear-gradient(180deg, #1e3a5f 0%, #0f2744 100%);
+      color: #ffffff !important;
+      border-color: #38bdf8;
+      box-shadow: 0 0 24px rgba(56, 189, 248, 0.6);
     }}
   </style>
 </head>
@@ -332,8 +344,9 @@ def get_footer_cta():
       <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
         Looking to architect custom Claude Opus 5.5 / Sonnet 5.5 multi-agent teams, self-healing Claude Code workflows, or hybrid local LLM routing? Let's design your enterprise roadmap.
       </p>
-      <div>
+      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
         <a class="btn btn-primary" href="collaboration.html">Schedule Architecture Consultation →</a>
+        <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
         <a class="btn btn-outline" href="pricing.html">View Advisory Packages</a>
       </div>
     </section>

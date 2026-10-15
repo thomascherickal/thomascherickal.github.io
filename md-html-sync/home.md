@@ -32,7 +32,7 @@ PG in CS from Loyola College; Generative AI Consultant specializing in helping e
  deployment, AI Training and AI Consulting.
 
 ### Quick Actions
-- [📚 Portfolio](portfolio.html)
+- [📚 Articles](articles.html)
 - [📝 Contact via Email](contact.html)
 - [🐙 GitHub Profile](https://github.com/thomascherickal)
 - [📅 Book 1:1 Consult](https://topmate.io/thomascherickal)
@@ -56,7 +56,7 @@ HackerNoon · Medium · Hashnode · Substack · LinkedIn · Reddit · Quora · W
 
 ## Explore My Work (Curated Destinations)
 
-1. [📚 Portfolio & Case Studies](portfolio.html) — Detailed case studies across Generative AI Systems and Quantum Systems — the brief, the approach, and what shipped, verified in Python and Rust.
+1. [📚 Articles & Case Studies](articles.html) — Detailed case studies across Generative AI Systems and Quantum Systems — the brief, the approach, and what shipped, verified in Python and Rust.
 2. [✍️ Publications](writing.html) — Selected work from 500+ publications across 10+ platforms since 2020, plus the book RECRUITED.
 3. [⚡ Capabilities & Tech Stack](expertise.html) — 10 specialized capability areas, 10 curated tech-stack chip groups, and the Python & Rust execution tooling behind every piece.
 4. [🎯 Services & Commissions](services.html) — Service offerings — Claude AI agent orchestration, deep dives, courses, training, mentoring, enterprise LLM deployment, and Generative AI developer content.
@@ -76,7 +76,7 @@ Enterprise AI transformation, Claude AI agent orchestration, technical deep dive
 - [Free LinkedIn Consultation ↗](https://linkedin.com/in/thomascherickal)
 - [Commission an Enterprise AI Transformation →](contact.html)
 - [Book a 1:1 Consultation →](https://topmate.io/thomascherickal)
-- [Explore My Portfolio →](portfolio.html)
+- [Explore My Articles →](articles.html)
 
 ---
 

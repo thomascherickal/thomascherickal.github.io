@@ -188,7 +188,7 @@ graph TD
 | Page | File | Description |
 | :--- | :--- | :--- |
 | **Home** | [`index.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/index.html) | Hero overview, role cards, client mandate philosophy, live ticker & portfolio preview. |
-| **Portfolio** | [`portfolio.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/portfolio.html) | Case studies in Multi-Agent Swarms, Local LLM Inference, Quantum Simulations & RAG. |
+| **Articles** | [`articles.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/articles.html) | Case studies in Multi-Agent Swarms, Local LLM Inference, Quantum Simulations & RAG. |
 | **Writing** | [`writing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/writing.html) | Publication library categorizing essays across HackerNoon, Medium, Substack & Hashnode. |
 | **Expertise** | [`expertise.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/expertise.html) | Technical radar detailing proficiencies across languages, frameworks, inference & quantum. |
 | **Services** | [`services.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/services.html) | Complete catalog of all 8 enterprise advisory and workforce training offerings. |

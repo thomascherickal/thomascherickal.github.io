@@ -488,8 +488,11 @@ def build():
     footer_styles = """  <style id="footer-styles">
     footer {
       background: var(--bg-1, #060912);
-      border-top: 1px solid var(--border, rgba(56, 189, 248, 0.18));
+      border-top: 1px solid var(--border, rgba(56, 189, 248, 0.22));
       padding: 5rem clamp(1.5rem, 8vw, 8rem) 3rem;
+    }
+    .footer-top-divider {
+      display: none;
     }
     .footer-top {
       display: grid;

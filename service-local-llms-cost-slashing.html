@@ -4347,9 +4347,10 @@ footer {
     </div>
     <ul class="nav-links">
       <li><a href="index.html" data-nav="index.html">Home</a></li>
+      <li><a href="expertise.html" data-nav="expertise.html">Expertise</a></li>
       <li class="nav-dropdown">
         <a class="nav-dropdown-toggle">
-          Claude <span class="dropdown-caret">▾</span>
+          Agents<span class="dropdown-caret">▾</span>
         </a>
         <ul class="dropdown-menu">
           <li><a href="agents-claude-101.html">🚀 Claude Agents 101</a></li>
@@ -4362,9 +4363,6 @@ footer {
           <li><a href="agents-claude-local-llms.html">📦 Claude With Local LLMs</a></li>
         </ul>
       </li>
-      <li><a href="portfolio.html" data-nav="portfolio.html">Portfolio</a></li>
-      <li><a href="writing.html" data-nav="writing.html">Writing</a></li>
-      <li><a href="expertise.html" data-nav="expertise.html">Expertise</a></li>
       <li class="nav-dropdown">
         <a class="nav-dropdown-toggle">
           Services <span class="dropdown-caret">▾</span>
@@ -4385,6 +4383,8 @@ footer {
       <li><a href="collaboration.html" data-nav="collaboration.html">Collaborate</a></li>
       <li><a href="pricing.html" data-nav="pricing.html">Pricing</a></li>
       <li><a href="faqs.html" data-nav="faqs.html">FAQs</a></li>
+      <li><a href="articles.html" data-nav="articles.html">Articles</a></li>
+      <li><a href="writing.html" data-nav="writing.html">Writing</a></li>
       <li><a href="contact.html" data-nav="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -4514,8 +4514,11 @@ footer {
   <style id="footer-styles">
     footer {
       background: var(--bg-1, #060912);
-      border-top: 1px solid var(--border, rgba(56, 189, 248, 0.18));
+      border-top: 1px solid var(--border, rgba(56, 189, 248, 0.22));
       padding: 5rem clamp(1.5rem, 8vw, 8rem) 3rem;
+    }
+    .footer-top-divider {
+      display: none;
     }
     .footer-top {
       display: grid;

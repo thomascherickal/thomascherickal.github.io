@@ -22,3 +22,8 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - **Canonical Description**: `"description": "Thomas Cherickal — Generative AI Consultant and The Digital Futurist."`
 - Always use `"Thomas Cherickal — Generative AI Consultant and The Digital Futurist."` as the primary site, author, and profile description across all HTML files, metadata, and schemas.
 
+## Call to Action (CTA) & Free LinkedIn Consultation Rule
+- **ALWAYS include the Free LinkedIn Consultation** link/button in **every Call to Action (CTA)** block, banner, or section created or updated across any page:
+  `<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>`
+- Ensure it is prominently featured alongside other primary actions (such as `collaboration.html` or `pricing.html`).
+

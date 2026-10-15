@@ -3,18 +3,52 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Claude Budget Limits, Cost Governance & Prompt Caching | Thomas Cherickal</title>
-  <meta content="How to govern Anthropic Claude token spend. Implementing Prompt Caching for 90% savings, dynamic model routing, and hard spend limits in production." name="description" />
+  <title>Mastering Financial Governance: Setting Daily, Weekly, and Monthly Budget Limits for Claude | Thomas Cherickal</title>
+  <meta content="Mastering Financial Governance: Setting Daily, Weekly, and Monthly Budget Limits for Claude. Architectural blueprint, Spend Limits API tutorials, LiteLLM proxy, and interactive FinOps calculator." name="description" />
   <meta content="Thomas Cherickal" name="author" />
   <link href="https://thomascherickal.github.io/agents-claude-budget-limits.html" rel="canonical" />
   <!-- Open Graph -->
   <meta content="website" property="og:type" />
   <meta content="https://thomascherickal.github.io/agents-claude-budget-limits.html" property="og:url" />
   <meta content="Thomas Cherickal — The Digital Futurist" property="og:site_name" />
-  <meta content="Claude Budget Limits, Cost Governance & Prompt Caching | Thomas Cherickal" property="og:title" />
-  <meta content="How to govern Anthropic Claude token spend. Implementing Prompt Caching for 90% savings, dynamic model routing, and hard spend limits in production." property="og:description" />
+  <meta content="Mastering Financial Governance: Setting Daily, Weekly, and Monthly Budget Limits for Claude | Thomas Cherickal" property="og:title" />
+  <meta content="Mastering Financial Governance: Setting Daily, Weekly, and Monthly Budget Limits for Claude. Architectural blueprint, Spend Limits API tutorials, LiteLLM proxy, and interactive FinOps calculator." property="og:description" />
   <meta content="https://thomascherickal.github.io/assets/og-card.png" property="og:image" />
   <meta content="en_US" property="og:locale" />
+  <!-- Twitter Card -->
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="@thomascherickal" name="twitter:site" />
+  <meta content="@thomascherickal" name="twitter:creator" />
+  <meta content="Mastering Financial Governance: Setting Daily, Weekly, and Monthly Budget Limits for Claude" name="twitter:title" />
+  <meta content="Setting Daily, Weekly, and Monthly Budget Limits for Claude. Architectural blueprint, Spend Limits API tutorials, LiteLLM proxy, and interactive FinOps calculator." name="twitter:description" />
+  <meta content="https://thomascherickal.github.io/assets/og-card.png" name="twitter:image" />
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Mastering Financial Governance: Setting Daily, Weekly, and Monthly Budget Limits for Claude",
+    "description": "Mastering Financial Governance: Setting Daily, Weekly, and Monthly Budget Limits for Claude. Architectural blueprint, Spend Limits API tutorials, LiteLLM proxy, and interactive FinOps calculator.",
+    "author": {
+      "@type": "Person",
+      "name": "Thomas Cherickal",
+      "jobTitle": "Generative AI Consultant and The Digital Futurist",
+      "url": "https://thomascherickal.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Thomas Cherickal — The Digital Futurist",
+      "url": "https://thomascherickal.github.io",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://thomascherickal.github.io/assets/digital-futurist-logo.jpg"
+      }
+    },
+    "mainEntityOfPage": "https://thomascherickal.github.io/agents-claude-budget-limits.html",
+    "datePublished": "2026-10-15",
+    "dateModified": "2026-10-15"
+  }
+  </script>
   <!-- Favicons -->
   <link href="assets/favicon.ico" rel="icon" sizes="any" />
   <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
@@ -153,14 +187,359 @@
       font-weight: 600;
     }
 
-    .content-card a {
-      color: var(--gold);
+    /* Hyperlinks: Strictly Gold per user specification */
+    .content-card a,
+    .references-list a,
+    .citation-note a,
+    .hero-desc a,
+    .tutorial-step a {
+      color: var(--gold) !important;
       text-decoration: underline;
       text-underline-offset: 3px;
+      font-weight: 600;
+      transition: color 0.2s ease, text-shadow 0.2s ease;
     }
 
-    .content-card a:hover {
+    .content-card a:hover,
+    .references-list a:hover,
+    .citation-note a:hover,
+    .hero-desc a:hover,
+    .tutorial-step a:hover {
+      color: #fde68a !important;
+      text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+    }
+
+    /* Responsive Compact Pricing Table with Shortened Headers */
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #060a14;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      text-align: left;
+    }
+
+    .pricing-table th {
+      background: #0c1220;
       color: var(--cyan);
+      padding: 0.8rem 0.95rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      border-bottom: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    .pricing-table td {
+      padding: 0.8rem 0.95rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      color: #e2e8f0;
+      font-size: 0.88rem;
+    }
+
+    .pricing-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .pricing-table tr:hover td {
+      background: rgba(56, 189, 248, 0.04);
+    }
+
+    .pricing-table .model-badge {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    /* Copy Button */
+    .copy-btn {
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--cyan);
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      background: rgba(56, 189, 248, 0.25);
+      color: #ffffff;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+    }
+
+    /* Status Code Cards */
+    .status-code-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin: 1.25rem 0 1.75rem;
+    }
+
+    .status-card {
+      background: rgba(15, 23, 42, 0.75);
+      border-radius: 8px;
+      padding: 1.15rem 1.25rem;
+      border: 1px solid rgba(56, 189, 248, 0.18);
+      border-left-width: 4px;
+    }
+
+    .status-card.err-400 { border-left-color: var(--gold); }
+    .status-card.err-402 { border-left-color: var(--cyan); }
+    .status-card.err-429 { border-left-color: #f87171; }
+
+    .status-code-title {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.92rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .status-desc {
+      font-size: 0.88rem;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    /* Tutorial Steps */
+    .tutorial-step {
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .tutorial-step:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .tutorial-step-header {
+      display: flex;
+      align-items: baseline;
+      gap: 0.65rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .step-badge {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--cyan);
+      background: rgba(56, 189, 248, 0.1);
+      padding: 0.15rem 0.55rem;
+      border-radius: 4px;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      flex-shrink: 0;
+    }
+
+    /* References List */
+    .references-list {
+      list-style: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .references-list li {
+      margin-bottom: 1.15rem !important;
+      padding-left: 1.5rem !important;
+      position: relative;
+      line-height: 1.65;
+      color: #cbd5e1;
+      font-size: 0.92rem;
+    }
+
+    .references-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-family: var(--font-mono);
+      font-weight: 700;
+    }
+
+    /* Interactive FinOps Calculator */
+    .finops-calc-card {
+      background: #060913;
+      border: 1.5px solid rgba(56, 189, 248, 0.35);
+      border-radius: 14px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55), 0 0 20px rgba(56, 189, 248, 0.12);
+    }
+
+    .calc-controls-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .calc-control-box {
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 10px;
+      padding: 1rem 1.15rem;
+    }
+
+    .calc-label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.65rem;
+    }
+
+    .calc-label {
+      font-size: 0.82rem;
+      color: #cbd5e1;
+      font-weight: 600;
+    }
+
+    .calc-val-display {
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--gold);
+      background: rgba(251, 191, 36, 0.1);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      border: 1px solid rgba(251, 191, 36, 0.25);
+    }
+
+    .calc-slider {
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: #1e293b;
+      outline: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+    }
+
+    .calc-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--cyan);
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+      transition: transform 0.1s;
+    }
+
+    .calc-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.2);
+    }
+
+    .calc-model-pills {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    .calc-model-btn {
+      background: #0f172a;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: #94a3b8;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .calc-model-btn:hover {
+      border-color: var(--cyan);
+      color: #ffffff;
+    }
+
+    .calc-model-btn.active {
+      background: rgba(56, 189, 248, 0.18);
+      border-color: var(--cyan);
+      color: #ffffff;
+      font-weight: 700;
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+    }
+
+    .calc-results-panel {
+      background: #0a0f1d;
+      border: 1px solid rgba(251, 191, 36, 0.28);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .calc-metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .calc-metric-card {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .calc-metric-card.highlight-gold {
+      border-color: rgba(251, 191, 36, 0.45);
+      background: rgba(251, 191, 36, 0.05);
+    }
+
+    .calc-metric-card.highlight-cyan {
+      border-color: rgba(56, 189, 248, 0.45);
+      background: rgba(56, 189, 248, 0.05);
+    }
+
+    .calc-metric-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #94a3b8;
+      font-family: var(--font-mono);
+      margin-bottom: 0.35rem;
+    }
+
+    .calc-metric-value {
+      font-family: var(--font-mono);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .calc-metric-sub {
+      font-size: 0.74rem;
+      color: #64748b;
+      margin-top: 0.25rem;
+    }
+
+    .calc-api-box {
+      background: #040711;
+      border: 1px dashed rgba(56, 189, 248, 0.35);
+      border-radius: 8px;
+      padding: 0.85rem 1.15rem;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
 
     code:not(pre code) {
@@ -765,9 +1144,10 @@
     </div>
     <ul class="nav-links">
       <li><a href="index.html" data-nav="index.html">Home</a></li>
+      <li><a href="expertise.html" data-nav="expertise.html">Expertise</a></li>
       <li class="nav-dropdown">
         <a class="nav-dropdown-toggle">
-          Claude <span class="dropdown-caret">▾</span>
+          Agents<span class="dropdown-caret">▾</span>
         </a>
         <ul class="dropdown-menu">
           <li><a href="agents-claude-101.html">🚀 Claude Agents 101</a></li>
@@ -780,9 +1160,6 @@
           <li><a href="agents-claude-local-llms.html">📦 Claude With Local LLMs</a></li>
         </ul>
       </li>
-      <li><a href="portfolio.html" data-nav="portfolio.html">Portfolio</a></li>
-      <li><a href="writing.html" data-nav="writing.html">Writing</a></li>
-      <li><a href="expertise.html" data-nav="expertise.html">Expertise</a></li>
       <li class="nav-dropdown">
         <a class="nav-dropdown-toggle">
           Services <span class="dropdown-caret">▾</span>
@@ -803,6 +1180,8 @@
       <li><a href="collaboration.html" data-nav="collaboration.html">Collaborate</a></li>
       <li><a href="pricing.html" data-nav="pricing.html">Pricing</a></li>
       <li><a href="faqs.html" data-nav="faqs.html">FAQs</a></li>
+      <li><a href="articles.html" data-nav="articles.html">Articles</a></li>
+      <li><a href="writing.html" data-nav="writing.html">Writing</a></li>
       <li><a href="contact.html" data-nav="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -810,90 +1189,612 @@
 
   <div class="container">
     <header class="hero">
-      <p class="hero-badge">// CLAUDE AGENTS · COST GOVERNANCE</p>
-      <h1 class="hero-title">Claude Budget Limits, Cost Governance & Prompt Caching</h1>
-      <p class="hero-desc">Enterprise token economics for autonomous agents: mastering Anthropic Prompt Caching mechanics, configuring tiered model cascades, enforcing hard spend circuit breakers, and reducing monthly TCO by up to 80%.</p>
-
+      <p class="hero-badge">// CLAUDE API · FINANCIAL GOVERNANCE &amp; FINOPS</p>
+      <h1 class="hero-title">Mastering Financial Governance: Setting Daily, Weekly, and Monthly Budget Limits for Claude</h1>
+      <p class="hero-desc">
+        Deploying large language models (LLMs) and autonomous coding agents into production introduces a distinct financial risk: unbound token consumption. Unlike traditional cloud infrastructure where compute instances bill at predictable hourly rates, generative AI workloads scale non-linearly with prompt length, reasoning depth, and autonomous retry loops. A single misconfigured agent running Claude Code or an infinite recursive loop querying flagship models can exhaust an entire month's engineering allocation in a matter of hours.
+      </p>
+      <p class="hero-desc">
+        To prevent "bill shock" while maintaining high availability for critical applications, engineering leaders and FinOps teams must implement multi-tiered budget limits across daily, weekly, and monthly horizons. This guide examines the financial architecture of the Claude API, compares time-horizon enforcement strategies, and provides three step-by-step technical tutorials for locking down spend across the Anthropic Console, the Claude Spend Limits API, and LiteLLM Proxy gateways.
+      </p>
     </header>
+
+    <!-- 1. The Economics of Claude: Why Multi-Tiered Budgets Matter -->
     <article class="content-card">
-      <h2>1. Prompt Caching: Slashing 90% of Input Token Costs</h2>
-<p>In multi-turn agent sessions, passing repository files or long documentation repeatedly quickly inflates operational expenses. Anthropic's <strong>Prompt Caching</strong> solves this: prefix tokens flagged with cache breakpoints receive an automatic 90% discount upon cache hits:</p>
-                <div class="mermaid-container">
-                  <pre class="mermaid">
-flowchart LR
-    Turn1[Turn 1: Ingest 100k Repo Context] --> WriteCache[Write to Cache: Standard Cost + 25%]
-    WriteCache --> CacheStore[(5-Minute TTL Cache Store)]
-    Turn2[Turn 2: Follow-up Question] --> CheckCache{Cache Hit?}
-    CheckCache -- Yes --> ReadCache[Read 100k Tokens: 90% DISCOUNT]
-    ReadCache --> Model[Generate Tool Response]
-    CheckCache -- No --> WriteCache
-                  </pre>
-                </div>
+      <h2>1. The Economics of Claude: Why Multi-Tiered Budgets Matter</h2>
+      <p>
+        Understanding token economics is the prerequisite to sizing your budget caps accurately. The Claude API bills strictly per million tokens (1M) processed, divided into input tokens (prompts, system instructions, and uploaded context) and output tokens (generated completions and internal reasoning chains). Furthermore, capabilities such as prompt caching, batch processing, and built-in web search ($10 per 1,000 searches) introduce secondary cost variables that must be factored into your ceiling calculations.
+      </p>
+
+      <!-- Shortened Table Headers to fit perfectly on the page -->
+      <div class="table-responsive">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th scope="col">Model</th>
+              <th scope="col">In / 1M</th>
+              <th scope="col">Out / 1M</th>
+              <th scope="col">Cache / 1M</th>
+              <th scope="col">Batch (In/Out)</th>
+              <th scope="col">Context</th>
+              <th scope="col">Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="model-badge">Fable 5.1</span></td>
+              <td>$10.00</td>
+              <td>$50.00</td>
+              <td>$0.25</td>
+              <td>$5.00 / $25.00</td>
+              <td>1M</td>
+              <td>Deep research, autonomous agents</td>
+            </tr>
+            <tr>
+              <td><span class="model-badge">Opus 5.5</span></td>
+              <td>$4.00</td>
+              <td>$20.00</td>
+              <td>$0.20</td>
+              <td>$2.00 / $10.00</td>
+              <td>1M</td>
+              <td>Complex coding, multi-file refactoring</td>
+            </tr>
+            <tr>
+              <td><span class="model-badge">Sonnet 5.5</span></td>
+              <td>$2.00</td>
+              <td>$10.00</td>
+              <td>$0.20</td>
+              <td>$1.00 / $5.00</td>
+              <td>1M</td>
+              <td>Production chat, summarization, RAG</td>
+            </tr>
+            <tr>
+              <td><span class="model-badge">Haiku 4.5</span></td>
+              <td>$1.00</td>
+              <td>$5.00</td>
+              <td>$0.10</td>
+              <td>$0.50 / $2.50</td>
+              <td>200K</td>
+              <td>Fast classification, routing, extraction</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="citation-note" style="font-size:0.86rem;color:#94a3b8;margin-top:0.4rem;">
+        Data sourced from the <a href="https://cabina.ai/blog/claude-api-pricing-guide/" target="_blank" rel="noopener noreferrer">Claude API Pricing Guide</a> and <a href="https://www.lindy.ai/blog/claude-pricing" target="_blank" rel="noopener noreferrer">Lindy AI Pricing Breakdown</a>.
+      </p>
+
+      <h3>The Danger of Single-Horizon Monthly Caps</h3>
+      <p>
+        Relying solely on a single monthly ceiling creates a dangerous vulnerability known as <strong>budget exhaustion velocity</strong>. If an engineering team configures a $3,000 monthly workspace limit on the first of the month, a runaway staging script deployed on the 2nd can burn through the entire $3,000 in 90 minutes. Not only is the financial allocation lost, but production services sharing that workspace are immediately throttled until an administrator manually intervenes.
+      </p>
+      <p>
+        To build resilient financial guardrails, FinOps teams layer three distinct temporal windows:
+      </p>
+      <ul>
+        <li>
+          <strong>Daily Limits (24-Hour Reset):</strong> Your blast-radius containment mechanism. Daily caps stop runaway infinite loops, DDoS attacks on public-facing chatbots, and unoptimized developer experiments within hours—preserving 95% of your monthly runway.
+        </li>
+        <li>
+          <strong>Weekly Limits (7-Day Reset):</strong> Your sprint-velocity stabilizer. Weekly budgets accommodate natural intra-week spikes (such as heavy engineering usage on Tuesdays through Thursdays during a product launch) without forcing administrators to micro-manage daily exceptions.
+        </li>
+        <li>
+          <strong>Monthly Limits (Calendar Reset at 00:00 UTC on the 1st):</strong> Your hard accounting boundary. Monthly caps align directly with corporate finance reconciliation, vendor invoicing, and Anthropic Usage Tiers.
+        </li>
+      </ul>
     </article>
+
+    <!-- 2. Architectural Blueprint of Multi-Window Enforcement -->
     <article class="content-card">
-      <h2>2. Tiered Model Cascading Matrix</h2>
-<p>Deploying Claude Opus 5.5 for every single ping is an anti-pattern. Smart routing routes routine triage to Haiku, standard workflows to Sonnet, and reserves Opus for deep verified reasoning:</p>
-                <div class="step-grid">
-                  <div class="step-card">
-                    <div class="step-num">Step 1 · Inbound Triage</div>
-                    <div class="step-title">Claude Haiku 5.5 ($0.25 / M tok)</div>
-                    <div class="step-desc">Classifies intent, extracts metadata, verifies permissions, and executes simple read operations.</div>
-                  </div>
-                  <div class="step-card">
-                    <div class="step-num">Step 2 · Core Engineering</div>
-                    <div class="step-title">Claude Sonnet 5.5 ($3.00 / M tok)</div>
-                    <div class="step-desc">Handles 85% of software engineering, tool calling, and multi-file code editing.</div>
-                  </div>
-                  <div class="step-card">
-                    <div class="step-num">Step 3 · Escalation</div>
-                    <div class="step-title">Claude Opus 5.5 ($15.00 / M tok)</div>
-                    <div class="step-desc">Escalated only when unit tests fail repeatedly or critical architectural validation is needed.</div>
-                  </div>
-                </div>
+      <h2>2. Architectural Blueprint of Multi-Window Enforcement</h2>
+      <p>
+        When an API request is dispatched from your application, it passes through multiple policy enforcement layers before tokens are generated. Designing a fault-tolerant architecture requires knowing which layer enforces which time window—and how your client code must react when a limit is breached.
+      </p>
+      <p>
+        As illustrated in the policy enforcement architecture below, placing an API gateway in front of upstream providers intercepts requests before they incur token charges:
+      </p>
+
+      <div class="mermaid-container">
+        <pre class="mermaid">
+flowchart TD
+    Client["Client App / Claude Code Agent"] --> L1["Layer 1: AI Gateway / Proxy (e.g., LiteLLM / OpenRouter)"]
+    L1 -- "Under Daily/Weekly Cap" --> L2["Layer 2: Anthropic Spend Limits API (Beta / Enterprise)"]
+    L1 -- "Budget Exceeded" --> R1["Reject: HTTP 400 / 402 (Budget Exceeded)"]
+    L2 -- "Under Custom Spend Limit" --> L3["Layer 3: Anthropic Platform Usage Tier Ceiling"]
+    L2 -- "Limit Exceeded" --> R2["Reject: HTTP 400 (invalid_request_error)"]
+    L3 -- "Under Monthly Max" --> Anthropic["Claude Foundation Models (Opus 5.5 / Sonnet 5.5 / Haiku 4.5)"]
+    L3 -- "Monthly Cap Exceeded" --> R3["Reject: HTTP 429 (No retry-after header)"]
+
+    style Client fill:#0c111d,stroke:#38bdf8,stroke-width:1px,color:#ffffff
+    style L1 fill:#131a2b,stroke:#38bdf8,stroke-width:2px,color:#ffffff
+    style L2 fill:#131a2b,stroke:#fbbf24,stroke-width:2px,color:#ffffff
+    style L3 fill:#131a2b,stroke:#f87171,stroke-width:2px,color:#ffffff
+    style Anthropic fill:#060912,stroke:#34d399,stroke-width:2px,color:#ffffff
+    style R1 fill:#261317,stroke:#f87171,color:#fca5a5
+    style R2 fill:#261317,stroke:#f87171,color:#fca5a5
+    style R3 fill:#261317,stroke:#f87171,color:#fca5a5
+        </pre>
+      </div>
+
+      <div class="code-window">
+        <div class="code-bar">
+          <span>multi_window_policy_architecture.txt</span>
+          <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-window').querySelector('code').innerText); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy Code', 2000);">Copy Blueprint</button>
+        </div>
+        <pre class="code-pre"><code>[Client App / Claude Code]
+│
+▼
+┌──────────────────────────────────────────────────────────┐
+│ Layer 1: AI Gateway / Proxy (e.g., LiteLLM / OpenRouter) │
+│ • Enforces Rolling Daily (24h) &amp; Weekly (7d) Key Caps    │
+│ • Rejects with HTTP 400 / 402 (Budget Exceeded)          │
+└──────────────────────────┬───────────────────────────────┘
+                           │ (If Under Daily/Weekly Cap)
+                           ▼
+┌──────────────────────────────────────────────────────────┐
+│ Layer 2: Anthropic Spend Limits API (Beta / Enterprise)  │
+│ • Enforces Per-User / Per-Workspace Daily, Weekly,       │
+│   and Monthly Caps (Minor Currency Units / Cents)        │
+│ • Rejects with HTTP 400 (invalid_request_error)          │
+└──────────────────────────┬───────────────────────────────┘
+                           │ (If Under Custom Spend Limit)
+                           ▼
+┌──────────────────────────────────────────────────────────┐
+│ Layer 3: Anthropic Platform Usage Tier Ceiling           │
+│ • Enforces Hard Org Monthly Max ($100 to $200,000/mo)    │
+│ • Rejects with HTTP 429 (No retry-after header)          │
+└──────────────────────────────────────────────────────────┘</code></pre>
+      </div>
+
+      <h3>Critical Client-Side Rule: Decoding Budget HTTP Status Codes</h3>
+      <p>
+        As documented in the <a href="https://atptoken.ai/en/blog/ai-spending-caps-that-work/" target="_blank" rel="noopener noreferrer">ATP Token AI Spending Caps Guide</a>, engineers frequently overlook how standard SDK retry logic interacts with budget limits:
+      </p>
+      <div class="status-code-grid">
+        <div class="status-card err-400">
+          <div class="status-code-title" style="color:var(--gold);">HTTP 400 (invalid_request_error)</div>
+          <div class="status-desc">Returned by the Anthropic Console when a custom workspace or organization spend limit is reached.</div>
+        </div>
+        <div class="status-card err-402">
+          <div class="status-code-title" style="color:var(--cyan);">HTTP 402 (Payment Required)</div>
+          <div class="status-desc">Returned by proxy routers and virtual key managers when a daily or weekly key allocation hits zero.</div>
+        </div>
+        <div class="status-card err-429">
+          <div class="status-code-title" style="color:#f87171;">HTTP 429 (rate_limit_error)</div>
+          <div class="status-desc">Returned when an organization hits its overarching platform Usage Tier ceiling. Because standard HTTP 429 responses usually signal temporary requests-per-minute (RPM) throttling, default SDKs automatically trigger exponential backoff retries. However, a spend-cap 429 carries no <code>retry-after</code> header—meaning naive retry loops will hammer the endpoint endlessly until the first of the next month. Always inspect the error payload body and halt execution immediately on budget errors.</div>
+        </div>
+      </div>
     </article>
+
+    <!-- 3. Tutorial 1: Setting Monthly Workspace & Organization Limits in the Anthropic Console -->
     <article class="content-card">
-      <h2>3. Tutorial: Automated Prompt Caching in Python</h2>
-<div class="code-window">
-                  <div class="code-bar">
-                    <span>prompt_cache_agent.py</span>
-                    <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-window').querySelector('pre').innerText)">Copy Code</button>
-                  </div>
-                  <pre class="code-pre"><code>import os
-from anthropic import Anthropic
+      <h2>3. Tutorial 1: Setting Monthly Workspace &amp; Organization Limits in the Anthropic Console</h2>
+      <p>
+        For teams using the native Anthropic Console, the fastest way to establish hard monthly boundaries and soft threshold alerts is by isolating workloads into dedicated Workspaces. Because you cannot apply custom spend limits to the "Default Workspace," you must create separate workspaces for Production, Staging, and R&amp;D.
+      </p>
+      <p>
+        Follow these five steps to configure your workspace caps:
+      </p>
 
-client = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+      <div class="tutorial-step">
+        <div class="tutorial-step-header">
+          <span class="step-badge">Step 1</span>
+          <h4 style="color:#ffffff;font-size:1.05rem;">Create Isolated Workspaces per Environment (Default Workspace cannot be capped)</h4>
+        </div>
+        <p style="color:#cbd5e1;font-size:0.95rem;line-height:1.7;">
+          Log in to the <a href="https://claude.com/resources/articles/workspaces" target="_blank" rel="noopener noreferrer">Anthropic Console</a> with an Organization Admin account. Navigate to <strong>Workspaces</strong> in the left sidebar and click <code>+ Add Workspace</code>. Create distinct workspaces for each workload (e.g., <code>prod-customer-chat</code>, <code>staging-ci</code>, and <code>dev-sandbox</code>) so a spike in staging never starves production traffic.
+        </p>
+      </div>
 
-def cached_agent_session():
-    # Long codebase documentation to cache across multi-turn sessions
-    heavy_documentation = "Enterprise API Documentation..." * 2000
+      <div class="tutorial-step">
+        <div class="tutorial-step-header">
+          <span class="step-badge">Step 2</span>
+          <h4 style="color:#ffffff;font-size:1.05rem;">Generate Scoped API Keys (One key per service)</h4>
+        </div>
+        <p style="color:#cbd5e1;font-size:0.95rem;line-height:1.7;">
+          Select your newly created workspace, go to the <strong>API Keys</strong> tab, and click <code>Create Key</code>. Bind each microservice or developer group to its respective workspace key. Remove active production traffic from any keys belonging to the uncapped Default Workspace.
+        </p>
+      </div>
 
+      <div class="tutorial-step">
+        <div class="tutorial-step-header">
+          <span class="step-badge">Step 3</span>
+          <h4 style="color:#ffffff;font-size:1.05rem;">Configure the Monthly Hard Spend Limit (Resets at 00:00 UTC on the 1st of every month)</h4>
+        </div>
+        <p style="color:#cbd5e1;font-size:0.95rem;line-height:1.7;">
+          Open the workspace settings, select the <strong>Limits</strong> or <strong>Plans &amp; billing</strong> tab, and input your Monthly Spend Limit in USD (for example, <code>$500.00</code> for <code>staging-ci</code>). Ensure that the sum of your workspace limits leaves an unallocated 10–15% buffer below your organization-wide ceiling to handle emergency traffic bursts.
+        </p>
+      </div>
+
+      <div class="tutorial-step">
+        <div class="tutorial-step-header">
+          <span class="step-badge">Step 4</span>
+          <h4 style="color:#ffffff;font-size:1.05rem;">Establish Multi-Threshold Email Alerts (Early warning before hard cutoff)</h4>
+        </div>
+        <p style="color:#cbd5e1;font-size:0.95rem;line-height:1.7;">
+          Navigate to <strong>Settings</strong> → <strong>Plans &amp; billing</strong> → <strong>Spend Alerts</strong>. Configure automated notification thresholds at 50%, 75%, and 90% of your monthly limit. Route these alerts to a shared FinOps Slack channel or PagerDuty webhook rather than a single individual's inbox so teams can investigate anomalies before HTTP 400 rejections begin.
+        </p>
+      </div>
+
+      <div class="tutorial-step">
+        <div class="tutorial-step-header">
+          <span class="step-badge">Step 5</span>
+          <h4 style="color:#ffffff;font-size:1.05rem;">Verify Claude Code Per-User Workspace Caps (Applies to automatic Claude Code workspace)</h4>
+        </div>
+        <p style="color:#cbd5e1;font-size:0.95rem;line-height:1.7;">
+          If your engineers use Claude Code via Console billing, open the automatically generated Claude Code workspace. Unlike standard workspaces that only support aggregate caps, this specialized workspace allows administrators to assign individual per-user monthly spend limits directly in the UI to prevent a single heavy coding session from draining team credits.
+        </p>
+      </div>
+    </article>
+
+    <!-- 4. Tutorial 2: Enforcing Daily, Weekly, and Monthly Caps via the Spend Limits API -->
+    <article class="content-card">
+      <h2>4. Tutorial 2: Enforcing Daily, Weekly, and Monthly Caps via the Spend Limits API</h2>
+      <p>
+        When managing dozens of engineers or automated services, manual UI configuration does not scale. Furthermore, organizations using the <a href="https://platform.claude.com/docs/en/manage-claude/spend-limits-api" target="_blank" rel="noopener noreferrer">Claude Spend Limits API</a> and the <a href="https://platform.claude.com/docs/en/api/beta/organization/spend_limits/set" target="_blank" rel="noopener noreferrer">Set Spend Limit Beta Endpoint</a> can programmatically enforce daily, weekly, and monthly caps at the user, workspace, or organization scope, alongside automated anomaly detection scripts.
+      </p>
+
+      <div class="tutorial-step">
+        <div class="tutorial-step-header">
+          <span class="step-badge">Step 1</span>
+          <h4 style="color:#ffffff;font-size:1.05rem;">Provision a Scoped Admin API Key (Requires Organization Admin privileges)</h4>
+        </div>
+        <p style="color:#cbd5e1;font-size:0.95rem;line-height:1.7;">
+          In your Claude Platform settings, generate an Admin API key (<code>ANTHROPIC_ADMIN_KEY</code>) and an Analytics API key (<code>ANALYTICS_API_KEY</code>). Store these securely in your secrets manager. Note that all API limit amounts must be passed as non-negative integer strings representing the minor unit of your billing currency (cents for USD—so <code>$50.00</code> is passed as <code>"5000"</code>).
+        </p>
+      </div>
+
+      <div class="tutorial-step">
+        <div class="tutorial-step-header">
+          <span class="step-badge">Step 2</span>
+          <h4 style="color:#ffffff;font-size:1.05rem;">Enforce a Daily Spend Limit (Upsert keyed on scope and period)</h4>
+        </div>
+        <p style="color:#cbd5e1;font-size:0.95rem;line-height:1.7;">
+          Use the Set Spend Limit Beta Endpoint (<code>POST /v1/organizations/spend_limits</code>) to apply a 24-hour cap. Because each <code>(scope, period)</code> pair resolves independently, setting a daily limit works concurrently with weekly and monthly limits.
+        </p>
+        <div class="code-window">
+          <div class="code-bar">
+            <span>bash — set_daily_limit.sh</span>
+            <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-window').querySelector('code').innerText); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy Code', 2000);">Copy Code</button>
+          </div>
+          <pre class="code-pre"><code># Set a $25.00/day (2500 cents) limit on a specific user or workspace
+curl https://api.anthropic.com/v1/organizations/spend_limits \
+  -H "Content-Type: application/json" \
+  -H "anthropic-version: 2023-06-01" \
+  -H "x-api-key: $ANTHROPIC_ADMIN_KEY" \
+  -d '{
+    "amount": "2500",
+    "scope": {
+      "type": "user",
+      "user_id": "user_01WCz1FkmYMm4gnmykNKUu3Q"
+    },
+    "period": "daily"
+  }'</code></pre>
+        </div>
+      </div>
+
+      <div class="tutorial-step">
+        <div class="tutorial-step-header">
+          <span class="step-badge">Step 3</span>
+          <h4 style="color:#ffffff;font-size:1.05rem;">Layer Weekly and Monthly Caps on the Same Scope (Strictest active limit wins)</h4>
+        </div>
+        <p style="color:#cbd5e1;font-size:0.95rem;line-height:1.7;">
+          Execute two additional POST requests for <code>"period": "weekly"</code> and <code>"period": "monthly"</code> on the exact same scope (user for Enterprise orgs, or workspace for Console orgs).
+        </p>
+        <div class="code-window">
+          <div class="code-bar">
+            <span>bash — layer_weekly_monthly.sh</span>
+            <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-window').querySelector('code').innerText); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy Code', 2000);">Copy Code</button>
+          </div>
+          <pre class="code-pre"><code># Layer a $100.00/week (10000 cents) cap
+curl https://api.anthropic.com/v1/organizations/spend_limits \
+  -H "Content-Type: application/json" \
+  -H "anthropic-version: 2023-06-01" \
+  -H "x-api-key: $ANTHROPIC_ADMIN_KEY" \
+  -d '{
+    "amount": "10000",
+    "scope": {
+      "type": "workspace",
+      "workspace_id": "wrkspc_01AbCdEfGhIjKlMnOpQrSt"
+    },
+    "period": "weekly"
+  }'
+
+# Layer a $300.00/month (30000 cents) hard ceiling
+curl https://api.anthropic.com/v1/organizations/spend_limits \
+  -H "Content-Type: application/json" \
+  -H "anthropic-version: 2023-06-01" \
+  -H "x-api-key: $ANTHROPIC_ADMIN_KEY" \
+  -d '{
+    "amount": "30000",
+    "scope": {
+      "type": "workspace",
+      "workspace_id": "wrkspc_01AbCdEfGhIjKlMnOpQrSt"
+    },
+    "period": "monthly"
+  }'</code></pre>
+        </div>
+      </div>
+
+      <div class="tutorial-step">
+        <div class="tutorial-step-header">
+          <span class="step-badge">Step 4</span>
+          <h4 style="color:#ffffff;font-size:1.05rem;">Automate Weekly Velocity &amp; Daily Spike Detection (Query the Analytics API)</h4>
+        </div>
+        <p style="color:#cbd5e1;font-size:0.95rem;line-height:1.7;">
+          Even if your tier relies on monthly enforcement, you can enforce custom daily and weekly circuit breakers by polling the Spend Limits &amp; Analytics API with a daily cron job. This Python script compares the most recent 7-day spend against the prior 7-day window and throttles users whose weekly velocity triples:
+        </p>
+        <div class="code-window">
+          <div class="code-bar">
+            <span>python — velocity_circuit_breaker.py</span>
+            <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-window').querySelector('code').innerText); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy Code', 2000);">Copy Code</button>
+          </div>
+          <pre class="code-pre"><code>import os, requests
+
+ADMIN_KEY = os.environ["ANTHROPIC_ADMIN_KEY"]
+HEADERS = {"x-api-key": ADMIN_KEY, "anthropic-version": "2023-06-01"}
+
+def enforce_rolling_caps(user_id: str, daily_spend_cents: int, week_ratio: float):
+    # If daily spend exceeds $20 (2000 cents) or weekly spend triples
+    if daily_spend_cents >= 2000 or week_ratio >= 3.0:
+        payload = {
+            "amount": str(daily_spend_cents),  # Freeze spend at current level
+            "scope": {"type": "user", "user_id": user_id},
+            "period": "monthly"
+        }
+        resp = requests.post(
+            "https://api.anthropic.com/v1/organizations/spend_limits",
+            headers=HEADERS,
+            json=payload
+        )
+        print(f"Circuit breaker tripped for {user_id}: HTTP {resp.status_code}")</code></pre>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5. Tutorial 3: Multi-Window Concurrent Budgets with LiteLLM Proxy -->
+    <article class="content-card">
+      <h2>5. Tutorial 3: Multi-Window Concurrent Budgets with LiteLLM Proxy</h2>
+      <p>
+        For engineering teams operating across standard self-serve API keys—or routing between direct Anthropic endpoints, AWS Bedrock, and Google Vertex AI—deploying an open-source LiteLLM Proxy is the industry standard. LiteLLM supports Multi-Window Budget Limits, allowing you to attach concurrent 24h (daily), 7d (weekly), and 30d (monthly) caps to a single virtual API key.
+      </p>
+      <p>
+        Follow these four steps to deploy multi-window virtual keys:
+      </p>
+
+      <div class="tutorial-step">
+        <div class="tutorial-step-header">
+          <span class="step-badge">Step 1</span>
+          <h4 style="color:#ffffff;font-size:1.05rem;">Configure Global Proxy Defaults in config.yaml (Define Claude models and master key)</h4>
+        </div>
+        <p style="color:#cbd5e1;font-size:0.95rem;line-height:1.7;">
+          Create a <code>config.yaml</code> file that maps your upstream Anthropic API key to Claude 5.5 and 4.5 models while initializing the PostgreSQL database required for persistent spend tracking.
+        </p>
+        <div class="code-window">
+          <div class="code-bar">
+            <span>yaml — config.yaml</span>
+            <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-window').querySelector('code').innerText); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy Code', 2000);">Copy Code</button>
+          </div>
+          <pre class="code-pre"><code>model_list:
+  - model_name: claude-sonnet-5-5
+    litellm_params:
+      model: anthropic/claude-sonnet-5-5-20260601
+      api_key: os.environ/ANTHROPIC_API_KEY
+  - model_name: claude-opus-5-5
+    litellm_params:
+      model: anthropic/claude-opus-5-5-20260601
+      api_key: os.environ/ANTHROPIC_API_KEY
+
+general_settings:
+  master_key: sk-litellm-master-prod-key
+  database_url: os.environ/DATABASE_URL
+
+litellm_settings:
+  max_budget: 2000.0 # Global proxy ceiling ($2,000 USD)
+  budget_duration: 30d</code></pre>
+        </div>
+      </div>
+
+      <div class="tutorial-step">
+        <div class="tutorial-step-header">
+          <span class="step-badge">Step 2</span>
+          <h4 style="color:#ffffff;font-size:1.05rem;">Launch the LiteLLM Gateway Server (Exposes local or containerized port 4000)</h4>
+        </div>
+        <p style="color:#cbd5e1;font-size:0.95rem;line-height:1.7;">
+          Start the proxy server using the LiteLLM CLI or Docker container so all internal applications route their Claude requests through <code>http://localhost:4000</code>.
+        </p>
+        <div class="code-window">
+          <div class="code-bar">
+            <span>bash — start_proxy.sh</span>
+            <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-window').querySelector('code').innerText); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy Code', 2000);">Copy Code</button>
+          </div>
+          <pre class="code-pre"><code>litellm --config /path/to/config.yaml --port 4000</code></pre>
+        </div>
+      </div>
+
+      <div class="tutorial-step">
+        <div class="tutorial-step-header">
+          <span class="step-badge">Step 3</span>
+          <h4 style="color:#ffffff;font-size:1.05rem;">Generate a Virtual Key with Daily, Weekly, and Monthly Caps (Resets at 00:00 UTC daily, Mondays weekly, and 1st monthly)</h4>
+        </div>
+        <p style="color:#cbd5e1;font-size:0.95rem;line-height:1.7;">
+          According to the <a href="https://docs.litellm.ai/docs/proxy/users" target="_blank" rel="noopener noreferrer">LiteLLM Budgets &amp; Rate Limits Documentation</a>, you can configure multiple budget windows on a single key via the Virtual Keys → Create Key → Optional Settings → Budget Windows dashboard UI, or via the <code>/key/generate</code> API endpoint. This ensures a bad day never burns your weekly or monthly allocation:
+        </p>
+        <div class="code-window">
+          <div class="code-bar">
+            <span>bash — generate_virtual_key.sh</span>
+            <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-window').querySelector('code').innerText); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy Code', 2000);">Copy Code</button>
+          </div>
+          <pre class="code-pre"><code>curl -X POST "http://localhost:4000/key/generate" \
+  -H "Authorization: Bearer sk-litellm-master-prod-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "models": ["claude-sonnet-5-5", "claude-opus-5-5"],
+    "metadata": {"team": "ai-platform", "env": "production"},
+    "budget_limits": [
+      {"max_budget": 15.0, "budget_duration": "24h"},
+      {"max_budget": 75.0, "budget_duration": "7d"},
+      {"max_budget": 250.0, "budget_duration": "30d"}
+    ],
+    "model_max_budget": {
+      "claude-opus-5-5": {"max_budget": 10.0, "budget_duration": "24h"}
+    }
+  }'</code></pre>
+        </div>
+      </div>
+
+      <div class="tutorial-step">
+        <div class="tutorial-step-header">
+          <span class="step-badge">Step 4</span>
+          <h4 style="color:#ffffff;font-size:1.05rem;">Handle Budget Exhaustion Gracefully in Client Code (Stop retries on 400 and 402 responses)</h4>
+        </div>
+        <p style="color:#cbd5e1;font-size:0.95rem;line-height:1.7;">
+          Update your application wrapper to catch budget limit errors from LiteLLM or Anthropic and immediately route to a fallback model (such as Claude Haiku 4.5) or alert the on-call engineer rather than retrying.
+        </p>
+        <div class="code-window">
+          <div class="code-bar">
+            <span>python — client_budget_handler.py</span>
+            <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-window').querySelector('code').innerText); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy Code', 2000);">Copy Code</button>
+          </div>
+          <pre class="code-pre"><code>from anthropic import Anthropic, APIStatusError
+
+client = Anthropic(
+    api_key="sk-virtual-key-from-litellm",
+    base_url="http://localhost:4000"
+)
+
+try:
     response = client.messages.create(
-        model="claude-3-7-sonnet-20250219",
+        model="claude-sonnet-5-5",
         max_tokens=1024,
-        system=[
-            {
-                "type": "text",
-                "text": "You are a specialized enterprise assistant for the internal API.",
-            },
-            {
-                "type": "text",
-                "text": heavy_documentation,
-                "cache_control": {"type": "ephemeral"} # Cache this block!
-            }
-        ],
-        messages=[
-            {"role": "user", "content": "How do I authenticate with the billing endpoint?"}
-        ]
+        messages=[{"role": "user", "content": "Summarize Q3 financial metrics."}]
     )
+except APIStatusError as err:
+    # 400 = Anthropic Spend Limit | 402 = Proxy Key Exhausted | 429 = Tier Cap
+    if err.status_code in (400, 402) or "budget" in str(err.message).lower():
+        raise SystemExit("CRITICAL: Budget ceiling reached. Halting retries.")
+    raise</code></pre>
+        </div>
+      </div>
+    </article>
 
-    print(f"Input Tokens: {response.usage.input_tokens}")
-    print(f"Cache Creation Tokens: {getattr(response.usage, 'cache_creation_input_tokens', 0)}")
-    print(f"Cache Read Tokens: {getattr(response.usage, 'cache_read_input_tokens', 0)}")
+    <!-- 6. Interactive Claude Budget & Token Cost Simulator -->
+    <article class="content-card">
+      <h2>6. Interactive Claude Budget &amp; Token Cost Simulator</h2>
+      <p>
+        To size your daily (24h), weekly (7d), and monthly (30d) guardrails accurately before pushing configurations to production, use the interactive calculator below. Adjust the daily request volume, average input/output token counts, and prompt cache hit rate to model how your projected spend compares against your target limits across all current Claude API models.
+      </p>
 
-if __name__ == "__main__":
-    cached_agent_session()
-</code></pre>
-                </div>
+      <div class="finops-calc-card">
+        <div style="margin-bottom:1.5rem;">
+          <span class="calc-label" style="display:block;margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--cyan);">Select Target Model:</span>
+          <div class="calc-model-pills" id="calc-model-selector">
+            <button type="button" class="calc-model-btn active" data-model="sonnet-5-5">Claude Sonnet 5.5 ($2/$10)</button>
+            <button type="button" class="calc-model-btn" data-model="opus-5-5">Claude Opus 5.5 ($4/$20)</button>
+            <button type="button" class="calc-model-btn" data-model="haiku-4-5">Claude Haiku 4.5 ($1/$5)</button>
+            <button type="button" class="calc-model-btn" data-model="fable-5-1">Claude Fable 5.1 ($10/$50)</button>
+          </div>
+        </div>
+
+        <div class="calc-controls-grid">
+          <div class="calc-control-box">
+            <div class="calc-label-row">
+              <span class="calc-label">Daily Request Volume</span>
+              <span class="calc-val-display" id="val-daily-requests">1,000</span>
+            </div>
+            <input type="range" class="calc-slider" id="calc-daily-requests" min="50" max="25000" step="50" value="1000" />
+          </div>
+
+          <div class="calc-control-box">
+            <div class="calc-label-row">
+              <span class="calc-label">Avg Input Context / Req</span>
+              <span class="calc-val-display" id="val-input-tokens">15k</span>
+            </div>
+            <input type="range" class="calc-slider" id="calc-input-tokens" min="1000" max="150000" step="1000" value="15000" />
+          </div>
+
+          <div class="calc-control-box">
+            <div class="calc-label-row">
+              <span class="calc-label">Avg Output Tokens / Req</span>
+              <span class="calc-val-display" id="val-output-tokens">1.5k</span>
+            </div>
+            <input type="range" class="calc-slider" id="calc-output-tokens" min="200" max="8000" step="100" value="1500" />
+          </div>
+
+          <div class="calc-control-box">
+            <div class="calc-label-row">
+              <span class="calc-label">Prompt Cache Hit %</span>
+              <span class="calc-val-display" id="val-cache-hit">75%</span>
+            </div>
+            <input type="range" class="calc-slider" id="calc-cache-hit" min="0" max="95" step="1" value="75" />
+          </div>
+        </div>
+
+        <div class="calc-results-panel">
+          <div class="calc-metrics-grid">
+            <div class="calc-metric-card highlight-cyan">
+              <div class="calc-metric-label">Daily Cap (24h Window)</div>
+              <div class="calc-metric-value" id="res-daily-cap" style="color:var(--cyan);">$32.00</div>
+              <div class="calc-metric-sub" id="res-daily-spend">Base Spend: $26.70 / day</div>
+            </div>
+
+            <div class="calc-metric-card highlight-gold">
+              <div class="calc-metric-label">Weekly Cap (7d Window)</div>
+              <div class="calc-metric-value" id="res-weekly-cap" style="color:var(--gold);">$215.00</div>
+              <div class="calc-metric-sub" id="res-weekly-spend">Base Spend: $186.90 / wk</div>
+            </div>
+
+            <div class="calc-metric-card highlight-cyan">
+              <div class="calc-metric-label">Monthly Ceiling (30d)</div>
+              <div class="calc-metric-value" id="res-monthly-cap" style="color:#34d399;">$880.00</div>
+              <div class="calc-metric-sub" id="res-monthly-spend">Base Spend: $801.00 / mo</div>
+            </div>
+
+            <div class="calc-metric-card">
+              <div class="calc-metric-label">Cache Cost Reduction</div>
+              <div class="calc-metric-value" id="res-cache-savings" style="color:#fde68a;">$607 / mo</div>
+              <div class="calc-metric-sub" id="res-cache-pct">60.5% Token Savings</div>
+            </div>
+          </div>
+
+          <div class="calc-api-box">
+            <span><strong>Spend Limits API Cents String:</strong></span>
+            <code id="api-cents-payload" style="color:var(--gold);background:rgba(251,191,36,0.1);padding:0.25rem 0.6rem;border-radius:4px;">"amount": "3200", "period": "daily"</code>
+            <button class="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('api-cents-payload').innerText); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy Cents', 2000);">Copy Cents</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 7. List of References -->
+    <article class="content-card">
+      <h2>7. List of References</h2>
+      <ul class="references-list">
+        <li>
+          Anthropic. (2024). <em>Workspaces in the Anthropic API Console</em>. Claude Resources. <a href="https://claude.com/resources/articles/workspaces" target="_blank" rel="noopener noreferrer">https://claude.com/resources/articles/workspaces</a>
+        </li>
+        <li>
+          Anthropic Platform Documentation. (2026). <em>Spend Limits API: Manage Organization and Member Spend Limits</em>. Claude Docs. <a href="https://platform.claude.com/docs/en/manage-claude/spend-limits-api" target="_blank" rel="noopener noreferrer">https://platform.claude.com/docs/en/manage-claude/spend-limits-api</a>
+        </li>
+        <li>
+          Anthropic API Reference. (2026). <em>Set Spend Limit (POST /v1/organizations/spend_limits)</em>. Claude Platform Beta Docs. <a href="https://platform.claude.com/docs/en/api/beta/organization/spend_limits/set" target="_blank" rel="noopener noreferrer">https://platform.claude.com/docs/en/api/beta/organization/spend_limits/set</a>
+        </li>
+        <li>
+          ATP Token Engineering. (2026). <em>AI API Spending Limits: OpenAI &amp; Claude (2026) — Designing Spending Caps That Work</em>. ATP Token Blog. <a href="https://atptoken.ai/en/blog/ai-spending-caps-that-work/" target="_blank" rel="noopener noreferrer">https://atptoken.ai/en/blog/ai-spending-caps-that-work/</a>
+        </li>
+        <li>
+          Cabina AI. (2026). <em>Claude API Pricing: Complete 2026 Cost Guide</em>. Cabina Blog. <a href="https://cabina.ai/blog/claude-api-pricing-guide/" target="_blank" rel="noopener noreferrer">https://cabina.ai/blog/claude-api-pricing-guide/</a>
+        </li>
+        <li>
+          Lindy AI. (2026). <em>Claude Pricing in 2026: Plans, API Costs &amp; Claude Code</em>. Lindy Blog. <a href="https://www.lindy.ai/blog/claude-pricing" target="_blank" rel="noopener noreferrer">https://www.lindy.ai/blog/claude-pricing</a>
+        </li>
+        <li>
+          LiteLLM Documentation. (2026). <em>Budgets, Rate Limits, and Multi-Window Virtual Keys</em>. LiteLLM Proxy Docs. <a href="https://docs.litellm.ai/docs/proxy/users" target="_blank" rel="noopener noreferrer">https://docs.litellm.ai/docs/proxy/users</a>
+        </li>
+        <li>
+          Opslyft. (2026). <em>Claude Pricing 2026: Plans, API Rates and Hidden Costs</em>. Opslyft Cloud FinOps Blog. <a href="https://www.opslyft.com/blog/claude-pricing-2026" target="_blank" rel="noopener noreferrer">https://www.opslyft.com/blog/claude-pricing-2026</a>
+        </li>
+      </ul>
     </article>
 
     <!-- CTA BANNER -->
@@ -902,9 +1803,10 @@ if __name__ == "__main__":
       <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
         Looking to architect custom Claude Opus 5.5 / Sonnet 5.5 multi-agent teams, self-healing Claude Code workflows, or hybrid local LLM routing? Let's design your enterprise roadmap.
       </p>
-      <div>
+      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
         <a class="btn btn-primary" href="collaboration.html">Schedule Architecture Consultation →</a>
-        <a class="btn btn-outline" href="pricing.html">View Advisory Packages</a>
+        <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank" style="background:linear-gradient(180deg, #1e293b 0%, #0f172a 100%);color:#38bdf8 !important;border:2px solid #0a66c2;box-shadow:0 0 16px rgba(10,102,194,0.4);font-weight:700;">Free LinkedIn Consultation ↗</a>
+        <a class="btn btn-outline" href="pricing.html" style="margin-left:0;">View Advisory Packages</a>
       </div>
     </section>
   </div>
@@ -912,8 +1814,11 @@ if __name__ == "__main__":
   <style id="footer-styles">
     footer {
       background: var(--bg-1, #060912);
-      border-top: 1px solid var(--border, rgba(56, 189, 248, 0.18));
+      border-top: 1px solid var(--border, rgba(56, 189, 248, 0.22));
       padding: 5rem clamp(1.5rem, 8vw, 8rem) 3rem;
+    }
+    .footer-top-divider {
+      display: none;
     }
     .footer-top {
       display: grid;
@@ -1536,6 +2441,112 @@ if __name__ == "__main__":
     </p>
   </footer>
     <!-- END:FOOTER -->
+
+  <!-- Interactive FinOps Budget Simulator Logic -->
+  <script>
+    (function() {
+      const MODEL_RATES = {
+        'sonnet-5-5': { input: 2.00, cached: 0.20, output: 10.00 },
+        'opus-5-5':   { input: 4.00, cached: 0.20, output: 20.00 },
+        'haiku-4-5':  { input: 1.00, cached: 0.10, output: 5.00 },
+        'fable-5-1':  { input: 10.00, cached: 0.25, output: 50.00 }
+      };
+
+      let activeModel = 'sonnet-5-5';
+
+      const reqSlider = document.getElementById('calc-daily-requests');
+      const inSlider = document.getElementById('calc-input-tokens');
+      const outSlider = document.getElementById('calc-output-tokens');
+      const cacheSlider = document.getElementById('calc-cache-hit');
+
+      const reqDisplay = document.getElementById('val-daily-requests');
+      const inDisplay = document.getElementById('val-input-tokens');
+      const outDisplay = document.getElementById('val-output-tokens');
+      const cacheDisplay = document.getElementById('val-cache-hit');
+
+      const resDailyCap = document.getElementById('res-daily-cap');
+      const resDailySpend = document.getElementById('res-daily-spend');
+      const resWeeklyCap = document.getElementById('res-weekly-cap');
+      const resWeeklySpend = document.getElementById('res-weekly-spend');
+      const resMonthlyCap = document.getElementById('res-monthly-cap');
+      const resMonthlySpend = document.getElementById('res-monthly-spend');
+      const resCacheSavings = document.getElementById('res-cache-savings');
+      const resCachePct = document.getElementById('res-cache-pct');
+      const apiPayload = document.getElementById('api-cents-payload');
+
+      const modelBtns = document.querySelectorAll('#calc-model-selector .calc-model-btn');
+      modelBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          modelBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeModel = btn.getAttribute('data-model');
+          updateCalculations();
+        });
+      });
+
+      function updateCalculations() {
+        if (!reqSlider) return;
+        const requests = parseFloat(reqSlider.value);
+        const inTokens = parseFloat(inSlider.value);
+        const outTokens = parseFloat(outSlider.value);
+        const cacheHit = parseFloat(cacheSlider.value) / 100;
+
+        if (reqDisplay) reqDisplay.textContent = requests.toLocaleString();
+        if (inDisplay) inDisplay.textContent = (inTokens >= 1000 ? (inTokens / 1000).toFixed(0) + 'k' : inTokens);
+        if (outDisplay) outDisplay.textContent = (outTokens >= 1000 ? (outTokens / 1000).toFixed(1) + 'k' : outTokens);
+        if (cacheDisplay) cacheDisplay.textContent = Math.round(cacheHit * 100) + '%';
+
+        const rate = MODEL_RATES[activeModel] || MODEL_RATES['sonnet-5-5'];
+
+        const dailyInputTotal = requests * inTokens;
+        const cachedInput = dailyInputTotal * cacheHit;
+        const uncachedInput = dailyInputTotal * (1 - cacheHit);
+        const dailyOutputTotal = requests * outTokens;
+
+        // Actual daily spend with prompt caching
+        const dailySpend = ((uncachedInput / 1e6) * rate.input) +
+                           ((cachedInput / 1e6) * rate.cached) +
+                           ((dailyOutputTotal / 1e6) * rate.output);
+
+        // Daily spend without caching
+        const rawDailySpend = ((dailyInputTotal / 1e6) * rate.input) +
+                              ((dailyOutputTotal / 1e6) * rate.output);
+
+        const dailySavings = Math.max(0, rawDailySpend - dailySpend);
+        const monthlySavings = dailySavings * 30;
+        const savingsPct = rawDailySpend > 0 ? (dailySavings / rawDailySpend) * 100 : 0;
+
+        // Recommended limits with safety headroom (Daily +20%, Weekly +15%, Monthly +10%)
+        const dailyCap = Math.max(5, Math.ceil(dailySpend * 1.20));
+        const weeklySpend = dailySpend * 7;
+        const weeklyCap = Math.max(25, Math.ceil(weeklySpend * 1.15));
+        const monthlySpend = dailySpend * 30;
+        const monthlyCap = Math.max(100, Math.ceil(monthlySpend * 1.10));
+
+        if (resDailyCap) resDailyCap.textContent = '$' + dailyCap.toLocaleString();
+        if (resDailySpend) resDailySpend.textContent = 'Base Spend: $' + dailySpend.toFixed(2) + ' / day';
+
+        if (resWeeklyCap) resWeeklyCap.textContent = '$' + weeklyCap.toLocaleString();
+        if (resWeeklySpend) resWeeklySpend.textContent = 'Base Spend: $' + weeklySpend.toFixed(2) + ' / wk';
+
+        if (resMonthlyCap) resMonthlyCap.textContent = '$' + monthlyCap.toLocaleString();
+        if (resMonthlySpend) resMonthlySpend.textContent = 'Base Spend: $' + monthlySpend.toFixed(2) + ' / mo';
+
+        if (resCacheSavings) resCacheSavings.textContent = '$' + Math.round(monthlySavings).toLocaleString() + ' / mo';
+        if (resCachePct) resCachePct.textContent = savingsPct.toFixed(1) + '% Token Savings';
+
+        const dailyCents = Math.round(dailyCap * 100);
+        if (apiPayload) apiPayload.textContent = `"amount": "${dailyCents}", "period": "daily"`;
+      }
+
+      [reqSlider, inSlider, outSlider, cacheSlider].forEach(slider => {
+        if (slider) slider.addEventListener('input', updateCalculations);
+      });
+
+      updateCalculations();
+    })();
+  </script>
+
 <script src="components.js"></script>
 </body>
 </html>

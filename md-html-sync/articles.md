@@ -1,4 +1,4 @@
-# Thomas Cherickal — Portfolio & Case Studies
+# Thomas Cherickal — Articles & Case Studies
 ## Generative AI Consultant
 
 > **// Verified Case Studies**  

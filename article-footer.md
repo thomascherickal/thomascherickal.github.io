@@ -35,7 +35,7 @@ Thomas writes and codes for power users, developers, enterprises, and executive 
 ### Action Links & Consulting
 - 🎯 **Inspect Full Offer Stack**: [https://thomascherickal.github.io/services.html](https://thomascherickal.github.io/services.html)
 - 🌐 **Pricing & Parity Index**: [https://thomascherickal.github.io/pricing.html](https://thomascherickal.github.io/pricing.html)
-- 📂 **View Portfolio & Case Studies**: [https://thomascherickal.github.io/portfolio.html](https://thomascherickal.github.io/portfolio.html)
+- 📂 **View Articles & Case Studies**: [https://thomascherickal.github.io/articles.html](https://thomascherickal.github.io/articles.html)
 - ✍️ **Browse Published Articles**: [https://thomascherickal.github.io/writing.html](https://thomascherickal.github.io/writing.html)
 - 📅 **Book 1:1 Consulting**: [https://topmate.io/thomascherickal](https://topmate.io/thomascherickal)
 - 💎 **Patreon Technical Playbooks**: [https://www.patreon.com/thomascherickal](https://www.patreon.com/thomascherickal)

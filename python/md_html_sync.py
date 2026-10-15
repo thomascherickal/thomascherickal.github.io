@@ -32,7 +32,7 @@ os.makedirs(SYNC_DIR, exist_ok=True)
 # Map HTML files to Markdown files in md-html-sync/
 PAGE_MAPPINGS = {
     "index.html": "home.md",
-    "portfolio.html": "portfolio.md",
+    "articles.html": "articles.md",
     "writing.html": "writing.md",
     "services.html": "services.md",
     "collaboration.html": "collaboration.md",
@@ -157,7 +157,7 @@ def sync_html_to_md(html_name: str, md_name: str):
             bio,
             "",
             "### Quick Actions",
-            "- [📚 Portfolio](portfolio.html)",
+            "- [📚 Articles](articles.html)",
             "- [📝 Contact via Email](contact.html)",
             "- [🐙 GitHub Profile](https://github.com/thomascherickal)",
             "- [📅 Book 1:1 Consult](https://topmate.io/thomascherickal)",
@@ -182,7 +182,7 @@ def sync_html_to_md(html_name: str, md_name: str):
             "",
             "## Explore My Work (Curated Destinations)",
             "",
-            "1. [📚 Portfolio & Case Studies](portfolio.html) — Detailed case studies across Generative AI Systems and Quantum Systems — the brief, the approach, and what shipped, verified in Python and Rust.",
+            "1. [📚 Articles & Case Studies](articles.html) — Detailed case studies across Generative AI Systems and Quantum Systems — the brief, the approach, and what shipped, verified in Python and Rust.",
             "2. [✍️ Publications](writing.html) — Selected work from 500+ publications across 10+ platforms since 2020, plus the book RECRUITED.",
             "3. [⚡ Capabilities & Tech Stack](expertise.html) — 10 specialized capability areas, 10 curated tech-stack chip groups, and the Python & Rust execution tooling behind every piece.",
             "4. [🎯 Services & Commissions](services.html) — Service offerings — Claude AI agent orchestration, deep dives, courses, training, mentoring, enterprise LLM deployment, and Generative AI developer content.",
@@ -202,7 +202,7 @@ def sync_html_to_md(html_name: str, md_name: str):
             "- [Free LinkedIn Consultation ↗](https://linkedin.com/in/thomascherickal)",
             "- [Commission an Enterprise AI Transformation →](contact.html)",
             "- [Book a 1:1 Consultation →](https://topmate.io/thomascherickal)",
-            "- [Explore My Portfolio →](portfolio.html)",
+            "- [Explore My Articles →](articles.html)",
             "",
             "---",
             "",
@@ -268,8 +268,8 @@ def sync_html_to_md(html_name: str, md_name: str):
             ""
         ])
         content = "\n".join(md_lines)
-    elif html_name == "portfolio.html":
-        content = build_md_files.convert_portfolio()
+    elif html_name == "articles.html":
+        content = build_md_files.convert_articles()
     elif html_name == "writing.html":
         content = build_md_files.convert_writing()
     elif html_name == "services.html":

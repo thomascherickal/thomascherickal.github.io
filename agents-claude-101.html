@@ -1305,9 +1305,10 @@
     </div>
     <ul class="nav-links">
       <li><a href="index.html" data-nav="index.html">Home</a></li>
+      <li><a href="expertise.html" data-nav="expertise.html">Expertise</a></li>
       <li class="nav-dropdown">
         <a class="nav-dropdown-toggle">
-          Claude <span class="dropdown-caret">▾</span>
+          Agents<span class="dropdown-caret">▾</span>
         </a>
         <ul class="dropdown-menu">
           <li><a href="agents-claude-101.html">🚀 Claude Agents 101</a></li>
@@ -1320,9 +1321,6 @@
           <li><a href="agents-claude-local-llms.html">📦 Claude With Local LLMs</a></li>
         </ul>
       </li>
-      <li><a href="portfolio.html" data-nav="portfolio.html">Portfolio</a></li>
-      <li><a href="writing.html" data-nav="writing.html">Writing</a></li>
-      <li><a href="expertise.html" data-nav="expertise.html">Expertise</a></li>
       <li class="nav-dropdown">
         <a class="nav-dropdown-toggle">
           Services <span class="dropdown-caret">▾</span>
@@ -1343,6 +1341,8 @@
       <li><a href="collaboration.html" data-nav="collaboration.html">Collaborate</a></li>
       <li><a href="pricing.html" data-nav="pricing.html">Pricing</a></li>
       <li><a href="faqs.html" data-nav="faqs.html">FAQs</a></li>
+      <li><a href="articles.html" data-nav="articles.html">Articles</a></li>
+      <li><a href="writing.html" data-nav="writing.html">Writing</a></li>
       <li><a href="contact.html" data-nav="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -1941,9 +1941,10 @@ flowchart TD
         Looking to architect custom Claude Opus 5.5 / Sonnet 5.5 multi-agent teams, self-healing Claude Code workflows,
         or hybrid local LLM routing? Let's design your enterprise roadmap.
       </p>
-      <div>
+      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
         <a class="btn btn-primary" href="collaboration.html">Schedule Architecture Consultation →</a>
-        <a class="btn btn-outline" href="pricing.html">View Advisory Packages</a>
+        <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank" style="background:linear-gradient(180deg, #1e293b 0%, #0f172a 100%);color:#38bdf8 !important;border:2px solid #0a66c2;box-shadow:0 0 16px rgba(10,102,194,0.4);font-weight:700;">Free LinkedIn Consultation ↗</a>
+        <a class="btn btn-outline" href="pricing.html" style="margin-left:0;">View Advisory Packages</a>
       </div>
     </section>
   </div>
@@ -2194,8 +2195,11 @@ flowchart TD
   <style id="footer-styles">
     footer {
       background: var(--bg-1, #060912);
-      border-top: 1px solid var(--border, rgba(56, 189, 248, 0.18));
+      border-top: 1px solid var(--border, rgba(56, 189, 248, 0.22));
       padding: 5rem clamp(1.5rem, 8vw, 8rem) 3rem;
+    }
+    .footer-top-divider {
+      display: none;
     }
     .footer-top {
       display: grid;

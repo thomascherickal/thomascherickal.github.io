@@ -21,13 +21,13 @@ def clean_text(text: str) -> str:
     text = re.sub(r'\n\s*\n', '\n\n', text)
     return text.strip()
 
-def convert_portfolio() -> str:
-    html_file = os.path.join(REPO_DIR, "portfolio.html")
+def convert_articles() -> str:
+    html_file = os.path.join(REPO_DIR, "articles.html")
     with open(html_file, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f.read(), "html.parser")
     
     lines = [
-        "# Thomas Cherickal — Portfolio & Case Studies",
+        "# Thomas Cherickal — Articles & Case Studies",
         "## Generative AI Consultant",
         "",
         "> **// Verified Case Studies**  ",
@@ -1022,14 +1022,16 @@ def convert_agent_deepdive(file_path: str) -> str:
     lines.append("- [View Advisory Packages & Rates](pricing.html)")
     lines.append("- [Explore Claude Agents Suite](agents-claude-101.html)")
     lines.append("")
-    
     return "\n".join(lines).strip() + "\n"
+    
+# Backward-compatibility alias
+convert_portfolio = convert_articles
 
 def main():
     print(f"Generating Markdown files in: {SYNC_DIR}")
     
     converters = {
-        "portfolio.html": ("portfolio.md", convert_portfolio),
+        "articles.html": ("articles.md", convert_articles),
         "writing.html": ("writing.md", convert_writing),
         "services.html": ("services.md", convert_services),
         "collaboration.html": ("collaboration.md", convert_collaboration),
