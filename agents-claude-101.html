@@ -849,17 +849,13 @@
   <!-- START:HEADER -->
   <style id="header-styles">
     /* Global Root Mobile & Tablet Safeguards */
-    html,
-    body {
+    html, body {
       max-width: 100%;
       overflow-x: hidden;
       position: relative;
     }
 
-    img,
-    svg,
-    video,
-    iframe {
+    img, svg, video, iframe {
       max-width: 100%;
       height: auto;
     }
@@ -1118,10 +1114,7 @@
 
     /* Prevent iOS Safari automatic zoom on form input focus */
     @media (max-width: 768px) {
-
-      input,
-      select,
-      textarea {
+      input, select, textarea {
         font-size: 16px !important;
       }
     }
@@ -1262,22 +1255,22 @@
         border-radius: 6px;
       }
 
-      .nav-toggle:checked~.nav-links {
+      .nav-toggle:checked ~ .nav-links {
         transform: translateY(0) !important;
         opacity: 1 !important;
         pointer-events: auto !important;
       }
 
-      .nav-toggle:checked~.nav-right-container .nav-toggle-label span {
+      .nav-toggle:checked ~ .nav-right-container .nav-toggle-label span {
         background: transparent !important;
       }
 
-      .nav-toggle:checked~.nav-right-container .nav-toggle-label span::before {
+      .nav-toggle:checked ~ .nav-right-container .nav-toggle-label span::before {
         transform: rotate(45deg) !important;
         top: 0 !important;
       }
 
-      .nav-toggle:checked~.nav-right-container .nav-toggle-label span::after {
+      .nav-toggle:checked ~ .nav-right-container .nav-toggle-label span::after {
         transform: rotate(-45deg) !important;
         top: 0 !important;
       }
@@ -1319,10 +1312,10 @@
         </a>
         <ul class="dropdown-menu">
           <li><a href="agents-claude-101.html">🚀 Claude Agents 101</a></li>
-          <li><a href="agents-claude-code.html">💻 Claude Code & Cowork</a></li>
+          <li><a href="agents-claude-code-cowork.html">💻 Claude Code & Cowork</a></li>
           <li><a href="agents-claude-skills.html">🧩 Claude Skills</a></li>
           <li><a href="agents-claude-mcp.html">🔌 Claude MCP</a></li>
-          <li><a href="agents-claude-agent-teams.html">👥 Claude Agent Teams</a></li>
+          <li><a href="agents-claude-agent-orchestration.html">👥 Claude Agent Orchestration</a></li>
           <li><a href="agents-claude-design.html">📐 Claude Agent Design Patterns</a></li>
           <li><a href="agents-claude-budget-limits.html">💲 Claude Budget Limits</a></li>
           <li><a href="agents-claude-local-llms.html">📦 Claude With Local LLMs</a></li>
@@ -2193,41 +2186,34 @@ flowchart TD
   </script>
 
 
-  <!-- START:FOOTER -->
+    <!-- START:FOOTER -->
   <style id="footer-styles">
     footer {
       background: var(--bg-1, #060912);
       border-top: 1px solid var(--border, rgba(56, 189, 248, 0.22));
       padding: 5rem clamp(1.5rem, 8vw, 8rem) 3rem;
     }
-
     .footer-top-divider {
       display: none;
     }
-
     .footer-top {
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 3rem;
       margin-bottom: 3rem;
     }
-
     .footer-brand {
       display: flex;
       align-items: center;
       gap: 0.85rem;
     }
-
     @keyframes tcLogoPulse {
-
-      0%,
-      100% {
+      0%, 100% {
         transform: translateY(0) scale(1);
         border-color: rgba(56, 189, 248, 0.45);
         box-shadow: 0 0 16px rgba(56, 189, 248, 0.3), 0 0 0 1px rgba(56, 189, 248, 0.2);
         filter: brightness(1) drop-shadow(0 2px 8px rgba(56, 189, 248, 0.25));
       }
-
       50% {
         transform: translateY(-3px) scale(1.04);
         border-color: rgba(245, 158, 11, 0.8);
@@ -2235,13 +2221,11 @@ flowchart TD
         filter: brightness(1.12) drop-shadow(0 4px 14px rgba(245, 158, 11, 0.35));
       }
     }
-
     .footer-brand-logo-link {
       display: inline-flex;
       text-decoration: none;
       border-radius: 8px;
     }
-
     .footer-brand-logo {
       border-radius: 8px;
       object-fit: cover;
@@ -2252,19 +2236,16 @@ flowchart TD
       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
       will-change: transform, box-shadow;
     }
-
     .footer-brand:hover .footer-brand-logo {
       transform: translateY(-4px) scale(1.08);
       box-shadow: 0 0 32px rgba(56, 189, 248, 0.7), 0 0 18px rgba(245, 158, 11, 0.5);
       border-color: #38bdf8;
     }
-
     @media (prefers-reduced-motion: reduce) {
       .footer-brand-logo {
         animation: none;
       }
     }
-
     .footer-brand-name {
       font-family: var(--font-display, 'Open Sans', sans-serif);
       font-size: 1.8rem;
@@ -2275,7 +2256,6 @@ flowchart TD
       background-clip: text;
       margin-bottom: 0.5rem;
     }
-
     .footer-brand-tagline {
       font-family: var(--font-mono, monospace);
       font-size: 0.72rem;
@@ -2284,7 +2264,6 @@ flowchart TD
       text-transform: uppercase;
       margin-bottom: 1rem;
     }
-
     .footer-label {
       font-family: var(--font-mono, monospace);
       font-size: 0.65rem;
@@ -2293,7 +2272,6 @@ flowchart TD
       color: var(--cyan, #38bdf8);
       margin-bottom: 1.25rem;
     }
-
     .social-icon {
       font-size: 1rem;
       flex-shrink: 0;
@@ -2303,7 +2281,6 @@ flowchart TD
       width: 18px;
       height: 18px;
     }
-
     .social-icon svg,
     .social-svg {
       width: 18px;
@@ -2312,13 +2289,11 @@ flowchart TD
       flex-shrink: 0;
       transition: transform 0.28s ease, filter 0.28s ease;
     }
-
     .social-link:hover .social-icon svg,
     .social-link:hover .social-svg {
       transform: scale(1.22);
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.45));
     }
-
     .social-link {
       background: var(--bg-card, linear-gradient(145deg, #0c111d 0%, #04060c 100%));
       border-radius: var(--radius, 10px);
@@ -2336,14 +2311,12 @@ flowchart TD
       font-size: 0.82rem !important;
       transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     }
-
     .social-link:hover {
       border-color: #38bdf8 !important;
       box-shadow: 0 0 26px rgba(56, 189, 248, 0.9), 0 0 45px rgba(56, 189, 248, 0.5), 0 4px 14px rgba(0, 0, 0, 0.5) !important;
       color: #ffffff;
       transform: translateY(-2px);
     }
-
     .social-link.highlight {
       background: rgba(245, 158, 11, 0.1);
       border: 2px solid rgba(251, 191, 36, 0.75) !important;
@@ -2351,7 +2324,6 @@ flowchart TD
       color: var(--gold, #fbbf24);
       font-weight: 600;
     }
-
     .social-link.highlight:hover {
       background: rgba(245, 158, 11, 0.2);
       border-color: #fbbf24 !important;
@@ -2359,23 +2331,19 @@ flowchart TD
       color: #ffffff;
       transform: translateY(-2px);
     }
-
     .social-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
       gap: 0.6rem;
     }
-
     @media (min-width: 1750px) {
       .social-grid {
         grid-template-columns: repeat(10, 1fr);
       }
     }
-
     .footer-top .newsletter-card {
       margin-top: 0;
     }
-
     .newsletter-card {
       margin-top: 2.5rem;
       padding: 1.5rem 2rem;
@@ -2388,23 +2356,19 @@ flowchart TD
       gap: 2rem;
       box-shadow: 0 0 16px rgba(251, 191, 36, 0.15), 0 4px 20px rgba(0, 0, 0, 0.3) !important;
     }
-
     .newsletter-info {
       flex: 1;
     }
-
     .newsletter-desc {
       font-size: 0.85rem;
       color: var(--text-muted, #94a3b8);
       margin-top: 0.25rem;
     }
-
     .newsletter-name {
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
-
     .newsletter-icon {
       display: inline-flex;
       align-items: center;
@@ -2414,14 +2378,12 @@ flowchart TD
       color: #F87171;
       flex-shrink: 0;
     }
-
     .newsletter-svg {
       width: 18px;
       height: 18px;
       fill: #F87171;
       display: block;
     }
-
     .location-svg {
       width: 14px;
       height: 14px;
@@ -2430,13 +2392,11 @@ flowchart TD
       fill: var(--cyan);
       margin-right: 4px;
     }
-
     @media (max-width: 600px) {
       .footer-top {
         grid-template-columns: 1fr;
         gap: 1.75rem;
       }
-
       .newsletter-card {
         flex-direction: column;
         align-items: stretch;
@@ -2444,13 +2404,11 @@ flowchart TD
         padding: 1.25rem 1rem !important;
         gap: 1rem;
       }
-
       .newsletter-card .btn {
         width: 100%;
         justify-content: center;
         min-height: 44px;
       }
-
       .footer-bottom {
         flex-direction: column;
         align-items: center;
@@ -2458,13 +2416,11 @@ flowchart TD
         gap: 0.75rem;
       }
     }
-
     .dv {
       border: none;
       border-top: 1px solid #232d42;
       margin: 1.45rem 0;
     }
-
     .tc-label {
       font-size: 13.5px;
       letter-spacing: .1em;
@@ -2476,14 +2432,12 @@ flowchart TD
       align-items: center;
       gap: 7px;
     }
-
     .wg {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 10px;
       margin-bottom: 1.5rem;
     }
-
     .wl {
       border: 1px solid #253147;
       border-radius: 10px;
@@ -2497,20 +2451,17 @@ flowchart TD
       min-width: 0;
       transition: background .14s, border-color .14s, transform .12s, box-shadow .14s;
     }
-
     .wl:hover {
       background: #1c2539;
       border-color: rgba(56, 189, 248, 0.5);
       transform: translateY(-2px);
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
     }
-
     .wl-head {
       display: flex;
       align-items: center;
       gap: 10px;
     }
-
     .wl-ic {
       width: 32px;
       height: 32px;
@@ -2521,25 +2472,21 @@ flowchart TD
       justify-content: center;
       flex-shrink: 0;
     }
-
     .wl-ic svg {
       display: block;
     }
-
     .wl-name {
       font-size: 15.5px;
       font-weight: 700;
       color: #ffffff;
       line-height: 1.25;
     }
-
     .wl-desc {
       font-size: 13.5px;
       color: #94a3b8;
       line-height: 1.45;
       margin: 0;
     }
-
     .wl-url {
       font-size: 12.5px;
       color: #38bdf8;
@@ -2548,12 +2495,10 @@ flowchart TD
       margin-top: auto;
       word-break: break-all;
     }
-
     .wl:hover .wl-url {
       opacity: 1;
       text-decoration: underline;
     }
-
     .tc-copy {
       text-align: center;
       font-size: 14px;
@@ -2562,19 +2507,16 @@ flowchart TD
       margin-top: 10px;
       padding: 0 10px;
     }
-
     .tc-copy a {
       color: #cbd5e1;
       text-decoration: none;
       font-weight: 600;
       transition: color .14s;
     }
-
     .tc-copy a:hover {
       color: #38bdf8;
       text-decoration: underline;
     }
-
     .tc-copy span.tc-sep {
       display: inline-block;
       width: 18px;
@@ -2584,20 +2526,18 @@ flowchart TD
       border-radius: 2px;
       margin: 0 8px;
     }
-
     @media (max-width: 820px) {
       .wg {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-
     @media (max-width: 640px) {
       .wg {
         grid-template-columns: 1fr;
       }
     }
   </style>
-  <footer id="links">
+    <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
         <a href="https://thomascherickal.com" target="_blank" rel="noopener noreferrer" class="footer-brand-logo-link"
@@ -2876,7 +2816,7 @@ flowchart TD
         </svg> Remote Worldwide</span>
     </p>
   </footer>
-  <!-- END:FOOTER -->
+    <!-- END:FOOTER -->
   <script src="components.js"></script>
 </body>
 

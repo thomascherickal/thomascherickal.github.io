@@ -38,10 +38,10 @@
     var lowerDecodedPage = page ? decodeURIComponent(page).toLowerCase() : '';
     var orchestrationPages = [
       'agents-claude-101.html',
-      'agents-claude-code.html',
+      'agents-claude-code-cowork.html',
       'agents-claude-skills.html',
       'agents-claude-mcp.html',
-      'agents-claude-agent-teams.html',
+      'agents-claude-agent-orchestration.html',
       'agents-claude-design.html',
       'agents-claude-budget-limits.html',
       'agents-claude-local-llms.html'

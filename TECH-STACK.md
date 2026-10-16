@@ -210,9 +210,9 @@ I engineered [`build_components.py`](file:///home/thomas/GitHub.io/thomascherick
 $ python3 python/build_components.py
 Included components in: 404.html
 Included components in: agents-claude-101.html
-Included components in: agents-claude-agent-teams.html
+Included components in: agents-claude-agent-orchestration.html
 Included components in: agents-claude-budget-limits.html
-Included components in: agents-claude-code.html
+Included components in: agents-claude-code-cowork.html
 Included components in: agents-claude-design.html
 Included components in: agents-claude-local-llms.html
 Included components in: agents-claude-mcp.html
@@ -365,9 +365,9 @@ Changes not staged for commit:
 	modified:   agents-claude-101.html
 	deleted:    agents-claude-MCP.html
 	deleted:    agents-claude-agent-swarms.html
-	modified:   agents-claude-agent-teams.html
+	modified:   agents-claude-agent-orchestration.html
 	modified:   agents-claude-budget-limits.html
-	modified:   agents-claude-code.html
+	modified:   agents-claude-code-cowork.html
 	deleted:    agents-claude-cowork.html
 	modified:   agents-claude-design.html
 	modified:   agents-claude-local-llms.html
