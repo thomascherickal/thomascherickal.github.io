@@ -49,8 +49,8 @@ for s in service_files:
     base = os.path.basename(s)
     PAGE_MAPPINGS[base] = base.replace(".html", ".md")
 
-# Auto-discover agent orchestration pages
-agent_files = sorted(glob.glob(os.path.join(REPO_DIR, "agents-*.html")))
+# Auto-discover agent orchestration & claude pages
+agent_files = sorted(glob.glob(os.path.join(REPO_DIR, "agents-*.html")) + glob.glob(os.path.join(REPO_DIR, "claude-*.html")))
 for a in agent_files:
     base = os.path.basename(a)
     PAGE_MAPPINGS[base] = base.replace(".html", ".md")
@@ -290,7 +290,7 @@ def sync_html_to_md(html_name: str, md_name: str):
         content = build_md_files.convert_service_page(html_path)
     elif html_name == "agents-all-agentic-providers.html":
         content = build_md_files.convert_agents_all_providers(html_path)
-    elif html_name.startswith("agents-") or html_name.startswith("agent-"):
+    elif html_name.startswith("agents-") or html_name.startswith("agent-") or html_name.startswith("claude-"):
         content = build_md_files.convert_agent_deepdive(html_path)
     else:
         return False

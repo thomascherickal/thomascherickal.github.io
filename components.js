@@ -36,21 +36,26 @@
 
     // Highlight category toggle if inside that category
     var lowerDecodedPage = page ? decodeURIComponent(page).toLowerCase() : '';
-    var orchestrationPages = [
-      'agents-claude-101.html',
-      'agents-claude-code-cowork.html',
-      'agents-claude-skills.html',
-      'agents-claude-mcp.html',
-      'agents-claude-agent-orchestration.html',
-      'agents-claude-design.html',
-      'agents-claude-budget-limits.html',
-      'agents-claude-local-llms.html'
+        var orchestrationPages = [
+      'claude-101.html',
+      'claude-features.html',
+      'claude-code.html',
+      'claude-cowork.html',
+      'claude-skills.html',
+      'claude-mcp.html',
+      'claude-plugins.html',
+      'claude-connectors.html',
+      'claude-orchestration.html',
+      'claude-design.html',
+      'claude-science.html',
+      'claude-local-llms.html',
+      'claude-budget-limits.html'
     ];
     if (orchestrationPages.indexOf(lowerDecodedPage) !== -1) {
       var orchToggles = document.querySelectorAll('.nav-dropdown');
       orchToggles.forEach(function(dd) {
         var toggle = dd.querySelector('.nav-dropdown-toggle');
-        if (toggle && (toggle.textContent.indexOf('Agents') !== -1 || toggle.textContent.indexOf('Orchestration') !== -1)) {
+        if (toggle && (toggle.textContent.indexOf('Agents') !== -1 || toggle.textContent.indexOf('Orchestration') !== -1 || toggle.textContent.indexOf('Claude') !== -1)) {
           toggle.style.color = 'var(--gold)';
         }
       });

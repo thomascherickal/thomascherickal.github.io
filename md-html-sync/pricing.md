@@ -73,46 +73,53 @@ Zero Data Egress: Fully air-gapped sovereign AI with zero external compliance ri
 
 ## Individual Services & Base Rates (A La Carte)
 
-### 🤖 AI Agent Mastery & Team Orchestration
+### 🧠 Generative AI Transformation
 **Base Rate**: `$1,000 USD`  
-Build multi-agent teams with Claude, OpenAI, Gemini, Grok; master orchestration rules & domain tasks.
+Convert your business from isolated chatbots into coordinated agent teams powered by Claude, OpenAI, Gemini, or Grok.
 
-### 🎓 Corporate & Dev Training (Live & Remote)
+### 📦 Local LLMs & Cost Slashing
 **Base Rate**: `$1,000 USD`  
-Live & remote workshops for Employees (adoption), Developers (TDD pairing), Staff, and Executive Leaders.
+Deploy self-hosted, private open-weight models (Llama 3.3, DeepSeek R1, Mistral, Qwen 2.5) to slash inference costs by 60–90%.
 
-### 📦 Local LLM Deployment & Cost Slashing
+### 🤖 Claude AI Agent Orchestration
 **Base Rate**: `$1,000 USD`  
-Lowering AI inference costs 60–90% with Ollama, vLLM, llama.cpp, GGUF quantization & on-prem private clusters.
+Architect autonomous multi-agent environments with Claude via Model Context Protocol (MCP) with robust budget limits and telemetry.
 
-### 🤖 Claude AI Agent Orchestration & Tool Loops
+### 🏎️ Hermes Agent
 **Base Rate**: `$1,000 USD`  
-Multi-agent architecture design, LangGraph, CrewAI, AutoGen, OpenClaw, tool calling & stateful workflows.
+Deploy Hermes Agent with persistent memory, autonomous tool selection, self-correcting execution loops, and structured outputs.
 
-### 🧪 AI-Assisted Dev & Test-Driven Dev (TDD)
+### 🌐 WorkFlow Automations
 **Base Rate**: `$1,000 USD`  
-Claude Code, Google Antigravity & OpenCode pairing, automated pytest/cargo test suites & TDD workflows.
+Build reliable self-hosted workflow automations connecting enterprise APIs, webhooks, databases, and LLM reasoning steps.
 
-### 📊 AI Benchmarks & Evaluation Metrics (Evals)
+### ⚛️ Applied Quantum (Experimental)
 **Base Rate**: `$1,000 USD`  
-Evaluation harnesses using Ragas, DeepEval, Promptfoo, Langfuse; latency, token cost & hallucination benchmarks.
+Explore quantum computing algorithms with Qiskit, quantum circuit simulation, optimization problems, and post-quantum crypto.
 
-### ⚛️ Early Quantum Systems & Qiskit Labs
+### 💲 AI Budget Training
 **Base Rate**: `$1,000 USD`  
-IBM Qiskit & PennyLane quantum circuits, variational algorithms (VQE, QAOA) & quantum readiness roadmaps.
+Establish enterprise token governance, hard budget ceilings, prompt caching optimizations, semantic routing, and spend analytics.
 
-### 🛠️ Frontier AI Tools Advisory
+### 🛡️ Enterprise AI Training
 **Base Rate**: `$1,000 USD`  
-Setup & advisory for Claude Code, Google Antigravity, ChatGPT, HuggingFace Spaces, OpenAI Codex & OpenCode.
+Comprehensive role-tailored AI literacy and engineering training: executive strategy, employee productivity, and developer pairing.
 
-### 💼 Monthly AI Consulting Retainer
-**Base Rate**: `$5,000 USD
- / mo`  
-Dedicated monthly engineering capacity for AI Agent Mastery, team upskilling, cost audits & architecture leadership.
-
-### 🔬 Technical Deep Dives & Architecture Docs
+### 💻 AI Developer Training
 **Base Rate**: `$1,000 USD`  
-Long-form architectural teardowns, technical whitepapers, Diátaxis documentation, training modules & code guides.
+Hands-on engineering bootcamps: Claude Code CLI, Google Antigravity SDK, custom MCP servers in Rust/TS, and AI-assisted TDD.
+
+### 🤖 Advanced AI Agents
+**Base Rate**: `$1,000 USD`  
+Production multi-agent swarms, reflective self-correction loops, stateful episodic memory, LangGraph, and Docker sandboxes.
+
+### ⚡ Claude Basic Training
+**Base Rate**: `$1,000 USD`  
+Foundations for staff: Claude models, XML prompt craft, Claude Projects team memory, and interactive Artifacts for office work.
+
+### 🚀 Claude Advanced Training
+**Base Rate**: `$1,000 USD`  
+Senior engineer masterclass: Claude Code CLI, Claude Cowork in Microsoft 365, custom Model Context Protocol (MCP) servers, and swarms.
 
 ---
 

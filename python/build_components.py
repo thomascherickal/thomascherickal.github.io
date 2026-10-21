@@ -236,6 +236,8 @@ def build():
       padding: 0.6rem 0;
       min-width: 320px;
       max-width: 90vw;
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
       list-style: none;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 12px rgba(245, 158, 11, 0.08);
       backdrop-filter: blur(16px);

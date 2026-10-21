@@ -1,0 +1,108 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://thomascherickal.github.io/service-ai-developer-training.html#webpage",
+      "url": "https://thomascherickal.github.io/service-ai-developer-training.html",
+      "name": "AI Developer Training — Service Specification | Thomas Cherickal",
+      "description": "Hands-on corporate training for software engineers: mastering CLI & IDE coding agents, AI-assisted Test-Driven Development (TDD), Model Context Protocol (MCP) servers, and zero-hallucination engineering.",
+      "isPartOf": {
+        "@id": "https://thomascherickal.github.io/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://thomascherickal.github.io/service-ai-developer-training.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thomascherickal.github.io/service-ai-developer-training.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thomascherickal.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://thomascherickal.github.io/services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI Developer Training",
+          "item": "https://thomascherickal.github.io/service-ai-developer-training.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://thomascherickal.github.io/service-ai-developer-training.html#service",
+      "name": "AI Developer Training — Thomas Cherickal",
+      "serviceType": "Software Engineering AI Training & Developer Enablement",
+      "url": "https://thomascherickal.github.io/service-ai-developer-training.html",
+      "description": "Hands-on corporate training for software engineers: mastering CLI & IDE coding agents, AI-assisted Test-Driven Development (TDD), Model Context Protocol (MCP) servers, and zero-hallucination engineering.",
+      "provider": {
+        "@type": "Person",
+        "@id": "https://thomascherickal.github.io/#person",
+        "name": "Thomas Cherickal",
+        "jobTitle": "Generative AI Consultant",
+        "url": "https://thomascherickal.github.io"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide (remote)"
+      },
+      "availableLanguage": "English",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thomascherickal.github.io/service-ai-developer-training.html",
+        "priceCurrency": "USD",
+        "price": "2000.00",
+        "priceSpecification": [
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 1 (Standard / 100%)",
+            "minPrice": "2000.00",
+            "maxPrice": "4000.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 2 (Developing / 25% Off)",
+            "minPrice": "1500.00",
+            "maxPrice": "3000.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 3 & 4 (Least Developed & Startups / 50% Off)",
+            "minPrice": "1000.00",
+            "maxPrice": "2000.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 5 (Academia & Non-Profits / 75% Off)",
+            "minPrice": "500.00",
+            "maxPrice": "1000.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 6 (Underprivileged & Backward Nations)",
+            "price": "0.00",
+            "priceCurrency": "USD",
+            "description": "Custom subsidized quotes for underprivileged teams"
+          }
+        ],
+        "availability": "https://schema.org/InStock",
+        "eligibleRegion": "Worldwide"
+      }
+    }
+  ]
+}

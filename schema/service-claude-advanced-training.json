@@ -1,0 +1,108 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://thomascherickal.github.io/service-claude-advanced-training.html#webpage",
+      "url": "https://thomascherickal.github.io/service-claude-advanced-training.html",
+      "name": "Claude Advanced Training — Service Specification | Thomas Cherickal",
+      "description": "Intensive technical masterclass for senior developers and architects: building with Claude Code CLI, Claude Cowork in Microsoft 365, custom Model Context Protocol (MCP) servers, and multi-agent swarms.",
+      "isPartOf": {
+        "@id": "https://thomascherickal.github.io/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://thomascherickal.github.io/service-claude-advanced-training.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thomascherickal.github.io/service-claude-advanced-training.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thomascherickal.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://thomascherickal.github.io/services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Advanced Training",
+          "item": "https://thomascherickal.github.io/service-claude-advanced-training.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://thomascherickal.github.io/service-claude-advanced-training.html#service",
+      "name": "Claude Advanced Training — Thomas Cherickal",
+      "serviceType": "Advanced Claude Architecture & Agentic Systems Engineering",
+      "url": "https://thomascherickal.github.io/service-claude-advanced-training.html",
+      "description": "Intensive technical masterclass for senior developers and architects: building with Claude Code CLI, Claude Cowork in Microsoft 365, custom Model Context Protocol (MCP) servers, and multi-agent swarms.",
+      "provider": {
+        "@type": "Person",
+        "@id": "https://thomascherickal.github.io/#person",
+        "name": "Thomas Cherickal",
+        "jobTitle": "Generative AI Consultant",
+        "url": "https://thomascherickal.github.io"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide (remote)"
+      },
+      "availableLanguage": "English",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thomascherickal.github.io/service-claude-advanced-training.html",
+        "priceCurrency": "USD",
+        "price": "2000.00",
+        "priceSpecification": [
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 1 (Standard / 100%)",
+            "minPrice": "2000.00",
+            "maxPrice": "5000.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 2 (Developing / 25% Off)",
+            "minPrice": "1500.00",
+            "maxPrice": "3750.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 3 & 4 (Least Developed & Startups / 50% Off)",
+            "minPrice": "1000.00",
+            "maxPrice": "2500.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 5 (Academia & Non-Profits / 75% Off)",
+            "minPrice": "500.00",
+            "maxPrice": "1250.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 6 (Underprivileged & Backward Nations)",
+            "price": "0.00",
+            "priceCurrency": "USD",
+            "description": "Custom subsidized quotes for underprivileged teams"
+          }
+        ],
+        "availability": "https://schema.org/InStock",
+        "eligibleRegion": "Worldwide"
+      }
+    }
+  ]
+}

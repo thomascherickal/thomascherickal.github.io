@@ -201,14 +201,14 @@ graph TD
 ### 2. The Claude Agent Suite (8 Dedicated Architectural Pages)
 | Architectural Guide | File | Core Engineering Focus |
 | :--- | :--- | :--- |
-| **🚀 Claude Agents 101** | [`agents-claude-101.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/agents-claude-101.html) | Autonomous agent loops, tool calling boundaries, reasoning traces & error recovery. |
-| **💻 Claude Code & Cowork** | [`agents-claude-code-cowork.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/agents-claude-code-cowork.html) | Terminal-native pair programming, codebase refactoring & desktop automation. |
-| **🧩 Claude Skills** | [`agents-claude-skills.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/agents-claude-skills.html) | Modular prompt extensions, domain schema injection & reusable skill encapsulation. |
-| **🔌 Claude MCP** | [`agents-claude-mcp.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/agents-claude-mcp.html) | Type-safe Model Context Protocol servers in Rust and TypeScript with sandboxed tools. |
-| **👥 Claude Agent Orchestration** | [`agents-claude-agent-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/agents-claude-agent-orchestration.html) | Hierarchical manager-worker agent teams, consensus voting & deterministic state routing. |
-| **📐 Claude Agent Design Patterns** | [`agents-claude-design.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/agents-claude-design.html) | Router, Evaluator-Optimizer, Orchestrator-Workers & Autonomous Loop patterns. |
-| **💲 Claude Budget Limits** | [`agents-claude-budget-limits.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/agents-claude-budget-limits.html) | Token caching, prompt compression, rate limit enforcement & recursive loop breakers. |
-| **📦 Claude With Local LLMs** | [`agents-claude-local-llms.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/agents-claude-local-llms.html) | Hybrid cloud-local orchestration pairing Claude reasoning with local high-throughput models. |
+| **🚀 Claude Agents 101** | [`claude-101.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-101.html) | Autonomous agent loops, tool calling boundaries, reasoning traces & error recovery. |
+| **💻 Claude Code & Cowork** | [`claude-code.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-code.html) | Terminal-native pair programming, codebase refactoring & desktop automation. |
+| **🧩 Claude Skills** | [`claude-skills.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-skills.html) | Modular prompt extensions, domain schema injection & reusable skill encapsulation. |
+| **🔌 Claude MCP** | [`claude-mcp.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-mcp.html) | Type-safe Model Context Protocol servers in Rust and TypeScript with sandboxed tools. |
+| **👥 Claude Agent Orchestration** | [`claude-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-orchestration.html) | Hierarchical manager-worker agent teams, consensus voting & deterministic state routing. |
+| **📐 Claude Agent Design Patterns** | [`claude-design.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-design.html) | Router, Evaluator-Optimizer, Orchestrator-Workers & Autonomous Loop patterns. |
+| **💲 Claude Budget Limits** | [`claude-budget-limits.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-budget-limits.html) | Token caching, prompt compression, rate limit enforcement & recursive loop breakers. |
+| **📦 Claude With Local LLMs** | [`claude-local-llms.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-local-llms.html) | Hybrid cloud-local orchestration pairing Claude reasoning with local high-throughput models. |
 
 ### 3. The 8 Standalone Enterprise Transformation Services
 | Enterprise Transformation Service | File | Transformation Objective |
@@ -289,14 +289,14 @@ $ python3 python/build_components.py
 
 ```text
 Included components in: 404.html
-Included components in: agents-claude-101.html
-Included components in: agents-claude-agent-orchestration.html
-Included components in: agents-claude-budget-limits.html
-Included components in: agents-claude-code-cowork.html
-Included components in: agents-claude-design.html
-Included components in: agents-claude-local-llms.html
-Included components in: agents-claude-mcp.html
-Included components in: agents-claude-skills.html
+Included components in: claude-101.html
+Included components in: claude-orchestration.html
+Included components in: claude-budget-limits.html
+Included components in: claude-code.html
+Included components in: claude-design.html
+Included components in: claude-local-llms.html
+Included components in: claude-mcp.html
+Included components in: claude-skills.html
 Included components in: collaboration.html
 Included components in: contact.html
 Included components in: expertise.html
@@ -344,14 +344,14 @@ Updated llms.txt
   [HTML -> MD] Syncing service-local-llms-cost-slashing.html -> md-html-sync/service-local-llms-cost-slashing.md...
   [HTML -> MD] Syncing service-quantum-applications.html -> md-html-sync/service-quantum-applications.md...
   [HTML -> MD] Syncing service-training-for-workflow-automations.html -> md-html-sync/service-training-for-workflow-automations.md...
-  [HTML -> MD] Syncing agents-claude-101.html -> md-html-sync/agents-claude-101.md...
-  [HTML -> MD] Syncing agents-claude-agent-orchestration.html -> md-html-sync/agents-claude-agent-orchestration.md...
-  [HTML -> MD] Syncing agents-claude-budget-limits.html -> md-html-sync/agents-claude-budget-limits.md...
-  [HTML -> MD] Syncing agents-claude-code-cowork.html -> md-html-sync/agents-claude-code-cowork.md...
-  [HTML -> MD] Syncing agents-claude-design.html -> md-html-sync/agents-claude-design.md...
-  [HTML -> MD] Syncing agents-claude-local-llms.html -> md-html-sync/agents-claude-local-llms.md...
-  [HTML -> MD] Syncing agents-claude-mcp.html -> md-html-sync/agents-claude-mcp.md...
-  [HTML -> MD] Syncing agents-claude-skills.html -> md-html-sync/agents-claude-skills.md...
+  [HTML -> MD] Syncing claude-101.html -> md-html-sync/claude-101.md...
+  [HTML -> MD] Syncing claude-orchestration.html -> md-html-sync/claude-orchestration.md...
+  [HTML -> MD] Syncing claude-budget-limits.html -> md-html-sync/claude-budget-limits.md...
+  [HTML -> MD] Syncing claude-code.html -> md-html-sync/claude-code.md...
+  [HTML -> MD] Syncing claude-design.html -> md-html-sync/claude-design.md...
+  [HTML -> MD] Syncing claude-local-llms.html -> md-html-sync/claude-local-llms.md...
+  [HTML -> MD] Syncing claude-mcp.html -> md-html-sync/claude-mcp.md...
+  [HTML -> MD] Syncing claude-skills.html -> md-html-sync/claude-skills.md...
 Sync complete. Synchronized 26 file pair(s).
 ```
 
@@ -360,14 +360,14 @@ And subsequent execution verifies complete idempotency:
 ```text
 $ python3 python/build_components.py
 No changes needed: 404.html
-No changes needed: agents-claude-101.html
-No changes needed: agents-claude-agent-orchestration.html
-No changes needed: agents-claude-budget-limits.html
-No changes needed: agents-claude-code-cowork.html
-No changes needed: agents-claude-design.html
-No changes needed: agents-claude-local-llms.html
-No changes needed: agents-claude-mcp.html
-No changes needed: agents-claude-skills.html
+No changes needed: claude-101.html
+No changes needed: claude-orchestration.html
+No changes needed: claude-budget-limits.html
+No changes needed: claude-code.html
+No changes needed: claude-design.html
+No changes needed: claude-local-llms.html
+No changes needed: claude-mcp.html
+No changes needed: claude-skills.html
 No changes needed: collaboration.html
 No changes needed: contact.html
 No changes needed: expertise.html

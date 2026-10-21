@@ -953,7 +953,7 @@ def convert_agent_deepdive(file_path: str) -> str:
         lines.append("")
 
     main = soup.find("main") or soup
-    cards = main.find_all("article", class_="content-card")
+    cards = main.find_all(["article", "div"], class_="content-card")
     for card in cards:
         h2 = card.find("h2")
         if not h2:
@@ -991,7 +991,7 @@ def convert_agent_deepdive(file_path: str) -> str:
                 lines.append(code_text.strip())
                 lines.append("```")
                 lines.append("")
-            elif elem.name == "div" and any(c in elem.get("class", []) for c in ["table-container", "pricing-table-wrapper"]):
+            elif elem.name == "div" and any(c in elem.get("class", []) for c in ["table-container", "pricing-table-wrapper", "table-wrap"]):
                 tbl = elem.find("table")
                 if tbl:
                     lines.append(html_table_to_md(tbl))
@@ -1020,7 +1020,7 @@ def convert_agent_deepdive(file_path: str) -> str:
     lines.append("### Ready to Orchestrate Production Claude AI Agent Teams?")
     lines.append("- [Schedule Strategy Consultation via Email →](collaboration.html)")
     lines.append("- [View Advisory Packages & Rates](pricing.html)")
-    lines.append("- [Explore Claude Agents Suite](agents-claude-101.html)")
+    lines.append("- [Explore Claude Agents Suite](claude-101.html)")
     lines.append("")
     return "\n".join(lines).strip() + "\n"
     
@@ -1061,7 +1061,7 @@ def main():
             f.write(content)
         print(f"  -> Wrote {len(content.splitlines())} lines to {md_name}")
 
-    agent_files = sorted(glob.glob(os.path.join(REPO_DIR, "agents-*.html")))
+    agent_files = sorted(glob.glob(os.path.join(REPO_DIR, "agents-*.html")) + glob.glob(os.path.join(REPO_DIR, "claude-*.html")))
     for a_path in agent_files:
         base = os.path.basename(a_path)
         md_name = base.replace(".html", ".md")

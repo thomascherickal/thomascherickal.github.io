@@ -26,5 +26,11 @@ All Python build, sync, and automation scripts for this repository are stored in
   python3 python/build_md_files.py
   ```
 
+- **`sync_pricing.py`**:
+  Centralized pricing & purchasing power parity (PPP) synchronization engine across all services, schemas, and pages.
+  ```bash
+  python3 python/sync_pricing.py
+  ```
+
 ## Guideline
 Save all future Python scripts in this `python/` directory.

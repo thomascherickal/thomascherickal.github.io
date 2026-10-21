@@ -22,7 +22,7 @@ Hands-on mastery, configuration, and developer pair-programming across industry-
  n8n` · `Post-Quantum
  Crypto` · `Spending
  Caps` · `Freshers,
- Devs, Staff & CXO`
+ Devs, Staff & CXO` · `Coding Agents & TDD` · `Swarms & Autonomy` · `Foundations & Office` · `Code, Cowork & MCP`
 
 ---
 
@@ -246,7 +246,79 @@ Live and remote corporate AI training delivered across four distinct organizatio
 
 ---
 
-### 9. 🤝 Service #9
+### 9. 💻 AI Developer Training
+Empower your engineering teams to build with cutting-edge CLI and IDE coding agents. Master Claude Code, Google Antigravity, and Aider, build custom Model Context Protocol (MCP) servers, and enforce strict AI-assisted Test-Driven Development (TDD) that eliminates hallucinations.
+
+- ▸Coding Agents: Claude Code, Google Antigravity SDK, Cursor, and terminal CLI automation.
+- ▸AI-Assisted TDD: Red-green-refactor cycles with failing test specs before code generation.
+- ▸Custom MCP Servers: Type-safe tool creation in TypeScript and Rust with zero-trust security.
+
+> **Focus**: // Core Capabilities & Stack
+
+▸Coding Agents: Claude Code, Google Antigravity SDK, Cursor, and terminal CLI automation.
+▸AI-Assisted TDD: Red-green-refactor cycles with failing test specs before code generation.
+▸Custom MCP Servers: Type-safe tool creation in TypeScript and Rust with zero-trust security.
+
+**Action**: [Explore Developer
+ Training Blueprint →](service-ai-developer-training.html)
+
+---
+
+### 10. 🤖 Advanced AI Agents
+Deploy production-grade autonomous agent systems designed for mission-critical enterprise workloads. Architect hierarchical supervisor-worker swarms, reflective self-correction loops, stateful episodic memory, and zero-trust sandboxed execution environments.
+
+- ▸Swarm Topologies: Hierarchical supervisor-worker graphs, consensus voting, and LangGraph state machines.
+- ▸Self-Correction Loops: Dynamic plan reformulation, tree-of-thought exploration, and runtime verification.
+- ▸Sandboxed Isolation: Ephemeral Docker tool runners, zero-trust token delegation, and Langfuse tracing.
+
+> **Focus**: // Core Capabilities & Stack
+
+▸Swarm Topologies: Hierarchical supervisor-worker graphs, consensus voting, and LangGraph state machines.
+▸Self-Correction Loops: Dynamic plan reformulation, tree-of-thought exploration, and runtime verification.
+▸Sandboxed Isolation: Ephemeral Docker tool runners, zero-trust token delegation, and Langfuse tracing.
+
+**Action**: [Explore Advanced
+ Agents Blueprint →](service-advanced-ai-agents.html)
+
+---
+
+### 11. ⚡ Claude Basic Training
+Empower corporate staff, knowledge workers, and freshers with fundamental Claude skills. Master structured XML prompt craft, model tier selection, Claude Projects knowledge persistence, and interactive Artifacts for high-velocity daily office productivity.
+
+- ▸Model Selection: Haiku, Sonnet & Opus tiering with 5-level thinking budgets.
+- ▸Structured Prompting: XML tagging, few-shot framing & hallucination elimination.
+- ▸Projects & Artifacts: Team memory workspaces, live documents & diagram generation.
+
+> **Focus**: // Core Capabilities & Stack
+
+▸Model Selection: Haiku, Sonnet & Opus tiering with 5-level thinking budgets.
+▸Structured Prompting: XML tagging, few-shot framing & hallucination elimination.
+▸Projects & Artifacts: Team memory workspaces, live documents & diagram generation.
+
+**Action**: [Explore Basic
+ Training Blueprint →](service-claude-basic-training.html)
+
+---
+
+### 12. 🚀 Claude Advanced Training
+Advanced engineering masterclass for senior developers and architects. Build terminal coding pipelines with Claude Code CLI, automate Microsoft 365 suites with Claude Cowork, engineer custom Model Context Protocol (MCP) servers, and orchestrate production multi-agent swarms.
+
+- ▸Claude Code CLI: Terminal-native coding, repo-wide refactoring & AI-assisted TDD.
+- ▸Claude Cowork: Word, Excel, PowerPoint & Outlook automation with Graph API.
+- ▸Custom MCP Servers: Type-safe tool creation in TypeScript and Rust with zero-trust RBAC.
+
+> **Focus**: // Core Capabilities & Stack
+
+▸Claude Code CLI: Terminal-native coding, repo-wide refactoring & AI-assisted TDD.
+▸Claude Cowork: Word, Excel, PowerPoint & Outlook automation with Graph API.
+▸Custom MCP Servers: Type-safe tool creation in TypeScript and Rust with zero-trust RBAC.
+
+**Action**: [Explore Advanced
+ Training Blueprint →](service-claude-advanced-training.html)
+
+---
+
+### 13. 🤝 Service #13
 **Action**: [Explore Ways to Collaborate →](collaboration.html)
 
 ---

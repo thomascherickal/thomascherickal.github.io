@@ -168,7 +168,6 @@ python/
 ├── sync_pricing.py          # Centralized pricing & parity calculations
 ├── md_html_sync.py          # Bidirectional HTML <---> Markdown sync engine
 ├── build_md_files.py        # BeautifulSoup AST-to-Markdown document compiler
-├── generate_claude_pages.py # Scaffold engine for Claude suite pages
 └── hooks/
     └── post_edit_hook.py    # Lifecycle agent hook for automated re-compilation
 ```
@@ -209,14 +208,14 @@ I engineered [`build_components.py`](file:///home/thomas/GitHub.io/thomascherick
 ```text
 $ python3 python/build_components.py
 Included components in: 404.html
-Included components in: agents-claude-101.html
-Included components in: agents-claude-agent-orchestration.html
-Included components in: agents-claude-budget-limits.html
-Included components in: agents-claude-code-cowork.html
-Included components in: agents-claude-design.html
-Included components in: agents-claude-local-llms.html
-Included components in: agents-claude-mcp.html
-Included components in: agents-claude-skills.html
+Included components in: claude-101.html
+Included components in: claude-orchestration.html
+Included components in: claude-budget-limits.html
+Included components in: claude-code.html
+Included components in: claude-design.html
+Included components in: claude-local-llms.html
+Included components in: claude-mcp.html
+Included components in: claude-skills.html
 Included components in: collaboration.html
 Included components in: contact.html
 Included components in: expertise.html
@@ -362,17 +361,17 @@ Changes not staged for commit:
   (use "git add/rm <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   404.html
-	modified:   agents-claude-101.html
-	deleted:    agents-claude-MCP.html
-	deleted:    agents-claude-agent-swarms.html
-	modified:   agents-claude-agent-orchestration.html
-	modified:   agents-claude-budget-limits.html
-	modified:   agents-claude-code-cowork.html
-	deleted:    agents-claude-cowork.html
-	modified:   agents-claude-design.html
-	modified:   agents-claude-local-llms.html
-	modified:   agents-claude-mcp.html
-	modified:   agents-claude-skills.html
+	modified:   claude-101.html
+	deleted:    claude-MCP.html
+	deleted:    claude-agent-swarms.html
+	modified:   claude-orchestration.html
+	modified:   claude-budget-limits.html
+	modified:   claude-code.html
+	deleted:    claude-cowork.html
+	modified:   claude-design.html
+	modified:   claude-local-llms.html
+	modified:   claude-mcp.html
+	modified:   claude-skills.html
 	modified:   collaboration.html
 	modified:   components.js
 	modified:   contact.html
@@ -382,18 +381,18 @@ Changes not staged for commit:
 	modified:   index.html
 	modified:   llms.txt
 	modified:   md-html-sync/.sync-state.json
-	modified:   md-html-sync/agents-claude-101.md
-	deleted:    md-html-sync/agents-claude-MCP.md
-	deleted:    md-html-sync/agents-claude-agent-swarms.md
-	deleted:    md-html-sync/agents-claude-cowork.md
+	modified:   md-html-sync/claude-101.md
+	deleted:    md-html-sync/claude-MCP.md
+	deleted:    md-html-sync/claude-agent-swarms.md
+	deleted:    md-html-sync/claude-cowork.md
 	modified:   md-html-sync/faqs.md
 	modified:   portfolio.html
 	modified:   pricing.html
 	modified:   python/build_md_files.py
 	modified:   schema.json
-	deleted:    schema/agents-claude-MCP.json
-	deleted:    schema/agents-claude-agent-swarms.json
-	deleted:    schema/agents-claude-cowork.json
+	deleted:    schema/claude-MCP.json
+	deleted:    schema/claude-agent-swarms.json
+	deleted:    schema/claude-cowork.json
 	modified:   service-agentic-ai-systems.html
 	modified:   service-ai-agents-orchestration.html
 	modified:   service-ai-budget-cost-limits-training.html
