@@ -6,7 +6,7 @@
 > **Specializing in transforming traditional businesses to an
  AI-first & AI-native organization, by providing live and remote training, teaching freshers, developers,
  staff, architects, management, and CXOs to become AI-enabled and experts in Claude AI agent orchestration with
- minmal investment and cost monitoring and budgeting, also using Local LLMs with investement in hardware.**
+ minimal investment and cost monitoring and budgeting, also using Local LLMs with investment in hardware.**
 
 **Location**: Chennai, India (Remote — Worldwide)  
 **Brand**: The Digital Futurist  
