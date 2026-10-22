@@ -28,7 +28,10 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - Ensure it is prominently featured alongside other primary actions (such as `collaboration.html` or `pricing.html`).
 
 ## Claude Model Version Numbers
-- **DO NOT include version numbers for Claude models** (e.g., avoid Claude 3, Claude 3.5, Claude 3.7, Claude 4, Claude 4.5, Claude 4.6, Claude 4.7, Claude 5, Claude 5.5, Sonnet 3.5/4/5.5, Opus 4/4.6/4.7/5.5, Haiku 3.5/4.5/5.5, Fable 5.1, Mythos 5.1, etc.) anywhere across the website, documentation, or schemas.
+- **DO NOT include version numbers for Claude models** (e.g., avoid Claude 3, Claude 3.5, Claude 3.7, Claude 4, Claude 4.5, Claude 4.6, Claude 4.7, Claude 5, Claude 5.5, Sonnet 3.5/4/5.5, Opus 4/4.6/4.7/5.5, Haiku 3.5/4.5/5.5, Fable 5.1, Mythos 5.1, etc.) anywhere across general website prose, documentation, or schemas.
 - Refer to Claude models exclusively by their model family names without version numbers: **Claude**, **Claude Opus** (or **Opus**), **Claude Sonnet** (or **Sonnet**), **Claude Haiku** (or **Haiku**), **Claude Fable** (or **Fable**), and **Claude Mythos** (or **Mythos**).
 - When describing model capabilities or architectures, use evergreen descriptions (e.g., "frontier Claude models", "Claude Opus lead with Claude Sonnet subagents", "the Claude model family").
+- **STRICT EXCEPTIONS (Model version numbers are permitted ONLY in these two cases)**:
+  1. **Endpoints and Model Strings in Code Examples**: Do NOT change model numbers in API endpoints, parameters, or model identifiers within code blocks, script samples, configuration snippets, or test payloads (e.g., `model="claude-opus-5-5"`, `MODEL = "claude-sonnet-5-5"`, `claude-haiku-5-5`, `anthropic/claude-sonnet-5-5`).
+  2. **Pricing Mentions**: When quoting specific pricing, token rates, cost calculations, pricing tables, or break-even analyses, always include the specific model version numbers tied to those prices (e.g., "Opus 5.5 ($4 / $20 per MTok)", "Sonnet 5.5 at $2/$10", "Haiku 5.5 at $0.10/$0.50", "Fable 5.1 at $10/$50").
 

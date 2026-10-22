@@ -1934,7 +1934,7 @@ claude mcp add integrity -- /absolute/path/to/integrity-mcp/target/release/integ
 client = anthropic.Anthropic()  <span class="c"># reads ANTHROPIC_API_KEY from the environment</span>
 
 response = client.beta.messages.create(
-    model=<span class="s">"claude-opus"</span>,
+    model=<span class="s">"claude-opus-5-5"</span>,
     max_tokens=1000,
     messages=[{<span class="s">"role"</span>: <span class="s">"user"</span>, <span class="s">"content"</span>: <span class="s">"Which of my monitored sites are down?"</span>}],
     <span class="c"># Where the remote server lives and how to authenticate to it</span>
