@@ -1,8 +1,10 @@
-# AI Agent Orchestration with Claude: Running Many Agents at Once Without Losing Control of Quality or Cost
+# AI Agent Orchestration with Claude: Running Many Agents at
+ Once Without Losing Control of Quality or Cost
 ## AI Agent Architecture & Orchestration — Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
-> **Five architectures, six hands-on tutorials and a set of spend limits that hold from a single session up to a full year.**
+> **Five architectures, six hands-on tutorials and a set of spend limits that hold from a single
+ session up to a full year.**
 
 ---
 
