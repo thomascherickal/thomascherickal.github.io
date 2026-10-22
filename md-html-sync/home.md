@@ -25,11 +25,11 @@
 ---
 
 ## Bio
-PG in CS from Loyola College; I specialize in helping enterprises
- adopt AI automation and training their employees to become AI-native citizens. Understanding that cost is a
- problem, I also specialize in deploying high-quality Local LLMs to remove AI inference costs using local
- hardware. Expert in Generative AI, LLMs, Claude AI Agent orchestration, Local LLM
- deployment, AI Training and AI Consulting.
+PG in CS from Loyola College; I help enterprises transform into AI-first, AI-native
+ organizations. My expertise spans Generative AI, Local LLM deployments for cost reduction, Claude AI agent
+ orchestration, and comprehensive AI training for all levels - from freshers to CXOs. With a focus on practical
+ application and budget-conscious implementation, I empower teams to become AI-native and drive real business
+ impact.
 
 ### Quick Actions
 - [📚 Articles](articles.html)

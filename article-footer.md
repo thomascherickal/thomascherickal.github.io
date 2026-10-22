@@ -12,7 +12,9 @@ Thomas writes and codes for power users, developers, enterprises, and executive 
 - 📝 **Technical Writing** — deep, sourced, developer-grade long-form content
 - 🧠 **Generative AI Consulting** — building complex Generative AI systems with TDD
 - ⚛️ **Quantum Consulting** — building complex quantum computing systems with TDD
+- 🤖 **Claude AI Consultant** — training, mentoring, and transforming individuals and cohorts to AI-native and AI-first leaders
 - 🐍 **Python AI Engineering** — building custom AI applications, tools, and pipelines
+- 🐹 **Golang Cloud Engineering** — building scalable cloud-native microservices, APIs, and concurrent distributed systems
 - 🦀 **Rust Systems Engineering** — building high-performance systems-level AI applications
 
 ---
@@ -21,7 +23,9 @@ Thomas writes and codes for power users, developers, enterprises, and executive 
 
 | Service Offering | Core Focus & Delivery | Detailed Description |
 | :--- | :--- | :--- |
+| **🤖 Claude AI Consultant** | Training & Transformation | Training, mentoring, and transforming individuals and cohorts to AI-native and AI-first leaders. |
 | **🐍 Python AI Engineering** | Custom AI & Pipelines | Custom AI applications, LLM/agent pipelines, PyTorch model integrations, and TDD-verified Python tools. |
+| **🐹 Golang Cloud Engineering** | Cloud-Native Systems & APIs | Scalable cloud services, high-concurrency microservices, Kubernetes tooling, and distributed backend architectures. |
 | **🦀 Rust Systems Engineering** | Systems-Level AI | High-performance systems-level AI applications, Tokio async runtimes, Burn & Candle ML inferences, and benchmarks. |
 | **🧠 Generative AI Consulting** | Complex GenAI Systems | Building complex Generative AI systems with Test-Driven Development (TDD), RAG architectures, and fine-tuning. |
 | **⚛️ Quantum Consulting** | Quantum Systems & SDKs | Building complex quantum computing systems with TDD, IBM Qiskit and PennyLane circuits, algorithms, and simulation. |
@@ -51,24 +55,32 @@ Here is a complete inventory of my digital footprints and developer profiles.
 | 💻 Platform | 🔗 Link / Profile |
 | :--- | :--- |
 | 🌐 Master Profile | [thomascherickal.com](https://thomascherickal.com) |
-| 🌐 Business Profile | [thomascherickal.github.io](https://thomascherickal.github.io) |
+| 🌐 Business Website | [thomascherickal.github.io](https://thomascherickal.github.io) |
 | 💼 LinkedIn Profile | [linkedin.com/in/thomascherickal](https://linkedin.com/in/thomascherickal) |
 | 🐙 GitHub Profile | [github.com/thomascherickal](https://github.com/thomascherickal) |
-| 🗞 HackerNoon Blog | [hackernoon.com/u/thomascherickal](https://hackernoon.com/u/thomascherickal) |
+| ✖️ X / Twitter | [x.com/thomazcherickal](https://x.com/thomazcherickal) |
+| 🗞️ HackerNoon Blog | [hackernoon.com/u/thomascherickal](https://hackernoon.com/u/thomascherickal) |
 | ✍️ Medium Channel | [thomascherickal.medium.com](https://thomascherickal.medium.com) |
 | 🔷 Hashnode Space | [thomascherickal.hashnode.dev](https://thomascherickal.hashnode.dev) |
 | 📬 Substack Channel | [thesingularitypoint.substack.com](https://thesingularitypoint.substack.com) |
-| 📊 Kaggle Profile | [kaggle.com/thomascherickal](https://www.kaggle.com/thomascherickal) |
-| 🌍 HackerEarth Profile | [hackerearth.com/@thomascherickal](https://www.hackerearth.com/@thomascherickal) |
+| 🔴 Quora Profile | [thomascherickal.quora.com](https://thomascherickal.quora.com) |
+| 🤖 Reddit Profile | [reddit.com/user/thomascherickal1](https://reddit.com/user/thomascherickal1) |
+| 🖋️ Contently Portfolio | [thomascherickal.contently.com](https://thomascherickal.contently.com) |
 | 📄 HubPages Profile | [hubpages.com/@thomascherickal](https://hubpages.com/@thomascherickal) |
-| 🔗 Linktree Directory | [linktr.ee/thomascherickal](https://linktr.ee/thomascherickal) |
-| 🎗 Patreon Community | [patreon.com/thomascherickal](https://patreon.com/thomascherickal) |
-| 🛒 Gumroad Store | [thomascherickal.gumroad.com](https://thomascherickal.gumroad.com) |
-| 📅 Topmate Consulting | [topmate.io/thomascherickal](https://topmate.io/thomascherickal) |
+| 💌 Kit Newsletter | [thomascherickal.kit.com](https://thomascherickal.kit.com) |
 | 💡 LeetCode Profile | [leetcode.com/u/thomascherickal](https://leetcode.com/u/thomascherickal) |
 | 🏆 HackerRank Profile | [hackerrank.com/profile/thomascherickal](https://hackerrank.com/profile/thomascherickal) |
-| 🏅 CodersRank Profile | [profile.codersrank.io/user/thomascherickal](https://profile.codersrank.io/user/thomascherickal/) |
+| ⚔️ CodeWars Profile | [codewars.com/users/thomascherickal](https://www.codewars.com/users/thomascherickal) |
+| 🧪 Exercism Profile | [exercism.org/profiles/thomascherickal](https://exercism.org/profiles/thomascherickal) |
+| 🧠 Deep-ML Profile | [deep-ml.com/profile/thomascherickal](https://www.deep-ml.com/profile/thomascherickal) |
 | 🥷 Code 360 Account | [naukri.com/code360/profile/thomascherickal](https://www.naukri.com/code360/profile/thomascherickal) |
+| 🌍 HackerEarth Profile | [hackerearth.com/@thomascherickal](https://hackerearth.com/@thomascherickal) |
+| 📊 Kaggle Profile | [kaggle.com/thomascherickal](https://www.kaggle.com/thomascherickal) |
+| 🏅 CodersRank Profile | [profile.codersrank.io/user/thomascherickal](https://profile.codersrank.io/user/thomascherickal/) |
+| 🔗 Linktree Directory | [linktr.ee/thomascherickal](https://linktr.ee/thomascherickal) |
+| 💎 Patreon Community | [patreon.com/thomascherickal](https://patreon.com/thomascherickal) |
+| 🛒 Gumroad Store | [thomascherickal.gumroad.com](https://thomascherickal.gumroad.com) |
+| 📅 Topmate Consulting | [topmate.io/thomascherickal](https://topmate.io/thomascherickal) |
 
 ---
 

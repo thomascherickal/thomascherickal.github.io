@@ -298,47 +298,295 @@
       margin-top: 3.5rem;
       box-shadow: 0 0 32px rgba(251, 191, 36, 0.1);
     }
-    .btn {
+    /* ==========================================================================
+       CROSS-BROWSER & CROSS-DEVICE BUTTON RESET FOUNDATION
+       ========================================================================== */
+
+    button,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    .btn,
+    a.btn,
+    a.tier-btn {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-clip: padding-box;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0.75rem 1.75rem;
+      min-height: 44px;
+      border-radius: var(--radius, 8px);
+      border: 1px solid transparent;
+      font-family: var(--font-mono, 'JetBrains Mono', monospace);
+      font-size: 0.78rem;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      white-space: nowrap;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.8rem 1.6rem;
-      font-size: 0.95rem;
-      font-weight: 600;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: all 0.25s ease;
+      justify-content: center;
+      gap: 0.55rem;
+      vertical-align: middle;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.28s ease,
+        background 0.28s ease,
+        border-color 0.28s ease,
+        color 0.28s ease,
+        filter 0.28s ease;
+      will-change: transform, box-shadow;
     }
+
+    /* Universal Button Animation System: Hover Lift, Glow Bloom & Specular Sheen */
+    @keyframes btnSheenSweep {
+      0% {
+        left: -140%;
+      }
+
+      100% {
+        left: 140%;
+      }
+    }
+
+    button:hover,
+    input[type="button"]:hover,
+    input[type="submit"]:hover,
+    input[type="reset"]:hover,
+    .btn:hover,
+    a.btn:hover,
+    a.tier-btn:hover {
+      transform: translateY(-2.5px) scale(1.02);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 16px rgba(56, 189, 248, 0.35);
+    }
+
+    button::after,
+    input[type="button"]::after,
+    input[type="submit"]::after,
+    input[type="reset"]::after,
+    .btn::after,
+    a.btn::after,
+    a.tier-btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -140%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+      transform: skewX(-22deg);
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    button:hover::after,
+    input[type="button"]:hover::after,
+    input[type="submit"]:hover::after,
+    input[type="reset"]:hover::after,
+    .btn:hover::after,
+    a.btn:hover::after,
+    a.tier-btn::after {
+      animation: btnSheenSweep 1.1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Universal Focus State for Accessibility */
+    button:focus-visible,
+    input[type="button"]:focus-visible,
+    input[type="submit"]:focus-visible,
+    input[type="reset"]:focus-visible,
+    .btn:focus-visible,
+    a.btn:focus-visible {
+      outline: 2px solid var(--cyan, #38bdf8);
+      outline-offset: 4px;
+    }
+
+    /* Active State */
+    button:active,
+    input[type="button"]:active,
+    input[type="submit"]:active,
+    input[type="reset"]:active,
+    .btn:active,
+    a.btn:active {
+      transform: translateY(1px) scale(0.98) !important;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    /* Disabled State Across All Browsers */
+    button:disabled,
+    input:disabled,
+    .btn.disabled,
+    .btn[disabled] {
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+      box-shadow: none;
+      transform: none;
+    }
+
+    /* Size & Placement Modifiers */
+    .btn-lg {
+      font-size: 0.88rem;
+      padding: 0.9rem 2.2rem;
+      min-height: 48px;
+    }
+
+    .btn-full {
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* btn-primary: Professional Slate-Blue Button */
     .btn-primary {
-      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      background: linear-gradient(180deg, #0284c7 0%, #0369a1 100%);
       color: #ffffff !important;
-      border: 1px solid var(--cyan);
+      font-weight: 600;
+      border: 4px solid #38bdf8;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.7), 0 0 8px #38bdf8, 0 4px 14px rgba(2, 132, 199, 0.4);
+      text-shadow: none;
     }
+
     .btn-primary:hover {
-      background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
-      box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
-    }
-    .btn-linkedin {
-      background: #0077b5;
+      background: linear-gradient(180deg, #0369a1 0%, #075985 100%);
       color: #ffffff !important;
-      font-weight: 700;
-      border: 2px solid #0a66c2;
-      box-shadow: 0 0 16px rgba(10, 102, 194, 0.4);
+      border-color: #7dd3fc;
+      box-shadow: 0 0 30px rgba(125, 211, 252, 0.95), 0 0 12px #38bdf8, 0 6px 20px rgba(2, 132, 199, 0.5);
+      transform: translateY(-2px);
     }
+
+    /* btn-outline: Sleek Semi-Transparent Corporate Button */
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.04);
+      color: #f8fafc !important;
+      border: 4px solid #38bdf8;
+      font-weight: 600;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.65), 0 0 8px rgba(56, 189, 248, 0.8), inset 0 0 10px rgba(56, 189, 248, 0.2);
+      text-shadow: none;
+    }
+
+    .btn-outline:hover {
+      background: rgba(245, 158, 11, 0.15);
+      border-color: #fbbf24;
+      color: #ffffff !important;
+      box-shadow: 0 0 30px rgba(251, 191, 36, 0.95), 0 0 12px #fbbf24;
+      transform: translateY(-2px);
+    }
+
+    /* btn-gold: Refined Amber Gold Button */
+    .btn-gold {
+      background: linear-gradient(180deg, #d97706 0%, #b45309 100%);
+      color: #ffffff !important;
+      font-weight: 600;
+      border: 4px solid #fbbf24;
+      box-shadow: 0 0 20px rgba(251, 191, 36, 0.75), 0 0 8px #fbbf24, 0 4px 14px rgba(180, 83, 9, 0.4);
+      text-shadow: none;
+    }
+
+    .btn-gold:hover {
+      background: linear-gradient(180deg, #b45309 0%, #92400e 100%);
+      color: #ffffff !important;
+      border-color: #fde047;
+      box-shadow: 0 0 32px rgba(253, 224, 71, 0.95), 0 0 14px #fbbf24, 0 6px 20px rgba(180, 83, 9, 0.5);
+      transform: translateY(-2px);
+    }
+
+    /* btn-commission: Executive Dark Slate & Gold Button */
+    .btn-commission {
+      background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+      color: #f59e0b !important;
+      font-weight: 700;
+      border: 4px solid #f59e0b;
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.7), 0 0 8px #f59e0b, 0 4px 14px rgba(0, 0, 0, 0.6);
+      text-shadow: none;
+    }
+
+    .btn-commission:hover {
+      background: linear-gradient(180deg, #334155 0%, #1e293b 100%);
+      color: #fbbf24 !important;
+      border-color: #fbbf24;
+      box-shadow: 0 0 32px rgba(251, 191, 36, 0.95), 0 0 14px #fbbf24, 0 6px 20px rgba(245, 158, 11, 0.4);
+      transform: translateY(-2px);
+    }
+
+    /* btn-linkedin: Executive Slate & LinkedIn Blue Button */
+    .btn-linkedin {
+      background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+      color: #38bdf8 !important;
+      font-weight: 700;
+      border: 4px solid #0a66c2;
+      box-shadow: 0 0 20px rgba(10, 102, 194, 0.7), 0 0 8px #0a66c2, 0 4px 14px rgba(0, 0, 0, 0.6);
+      text-shadow: none;
+    }
+
     .btn-linkedin:hover {
       background: linear-gradient(180deg, #1e3a5f 0%, #0f2744 100%);
-      border-color: #38bdf8;
-      box-shadow: 0 0 24px rgba(56, 189, 248, 0.6);
-    }
-    .btn-outline {
-      background: transparent;
       color: #ffffff !important;
-      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-color: #38bdf8;
+      box-shadow: 0 0 32px rgba(56, 189, 248, 0.95), 0 0 14px #0a66c2, 0 6px 20px rgba(10, 102, 194, 0.4);
+      transform: translateY(-2px);
     }
-    .btn-outline:hover {
-      border-color: var(--cyan);
-      background: rgba(56, 189, 248, 0.08);
+
+    /* Code block copy buttons safeguard */
+    button.copy {
+      min-height: auto !important;
+      padding: 0.25rem 0.5rem !important;
+      font-size: 0.7rem !important;
+      letter-spacing: normal !important;
+      text-transform: none !important;
+      border: 1px solid var(--border, rgba(56, 189, 248, 0.2)) !important;
+      box-shadow: none !important;
+      transform: none !important;
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
     }
+
+    button.copy:hover {
+      transform: none !important;
+      box-shadow: 0 0 8px rgba(56, 189, 248, 0.4) !important;
+    }
+
+    button.copy::after {
+      display: none !important;
+    }
+
+    @media (max-width: 640px) {
+      .btn,
+      a.btn {
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        white-space: normal;
+        word-break: break-word;
+      }
+    }
+
+    @media (max-width: 480px) {
+      button,
+      input[type="button"],
+      input[type="submit"],
+      input[type="reset"],
+      .btn,
+      a.btn {
+        padding: 0.7rem 1.25rem;
+        font-size: 0.74rem;
+        white-space: normal;
+        word-break: break-word;
+      }
+    }
+
   </style>
   <script type="application/ld+json">
 {
