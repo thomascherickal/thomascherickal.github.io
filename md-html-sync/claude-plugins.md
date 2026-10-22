@@ -6,7 +6,7 @@
 
 ---
 
-## Table Of Contents
+## Table of Contents
 
 A general assistant knows nothing about your company. It does not know how your finance team closes the month or what your legal team checks before signing an NDA, so every person re-explains the same process in every chat.
 

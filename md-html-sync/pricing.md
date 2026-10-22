@@ -8,60 +8,6 @@
 
 ## Enterprise Services
 
-### 1. AI Agent
- Mastery
-*★ AGENT ORCHESTRATION MASTERY*  
-**Investment**: `$2,000 USD`
-
-**Deliverables & Scope**:
-- ✓
-Multi-Agent Architecture: Coordinated teams using Claude, OpenAI, Gemini, or Grok.
-- ✓
-Constraint Navigation: Overcoming context degradation, tool loops & state drift.
-- ✓
-Sample Code & IP Transfer: Runnable Python/Rust repos, evals & 100% IP transfer.
-
-**Commission**: [Master
- AI Agents →](contact.html?package=AI%20Agent%20Mastery)
-
----
-
-### 2. Workforce AI
- Training
-*★ LIVE & REMOTE TRAINING*  
-**Investment**: `$2,000 USD`
-
-**Deliverables & Scope**:
-- ✓
-Employees & Staff: AI adoption, prompt craft, and daily productivity tool mastery.
-- ✓
-Engineering & TDD: AI-assisted dev, test-driven development & agentic loops.
-- ✓
-CXOs & Leaders: Strategic AI transformation, tech radars & ROI metrics frameworks.
-
-**Commission**: [Book
- Training Program →](contact.html?package=Workforce%20AI%20Training)
-
----
-
-### 3. Local LLM
- Deployment
-*★ COST SLASHING & PRIVACY*  
-**Investment**: `$2,000 USD`
-
-**Deliverables & Scope**:
-- ✓
-API Cost Audit: Quantitative assessment of token spend and 60–90% savings plan.
-- ✓
-Production Model Serving: vLLM, Ollama, AWQ/GGUF on consumer GPUs or servers.
-- ✓
-Zero Data Egress: Fully air-gapped sovereign AI with zero external compliance risk.
-
-**Commission**: [Slash
- Inference Costs →](contact.html?package=Local%20LLM%20Deployment)
-
----
-
 ## Foundational Guarantees on Every Engagement
 
 1. **Sandbox-Verified Demonstrations**: Every sample code guide, prompt pipeline, and agent orchestration demonstration is tested and verified in isolated sandboxes.

@@ -42,14 +42,13 @@
       'claude-code.html',
       'claude-cowork.html',
       'claude-skills.html',
-      'claude-mcp.html',
+      'claude-custom-mcp.html',
       'claude-plugins.html',
       'claude-connectors.html',
       'claude-orchestration.html',
       'claude-design.html',
       'claude-science.html',
-      'claude-local-llms.html',
-      'claude-budget-limits.html'
+      'claude-local-llms.html'
     ];
     if (orchestrationPages.indexOf(lowerDecodedPage) !== -1) {
       var orchToggles = document.querySelectorAll('.nav-dropdown');

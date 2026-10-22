@@ -6,7 +6,7 @@
 
 ---
 
-## Table Of Contents
+## Table of Contents
 
 Connectors give Claude permission-scoped access to the tools each team already uses. Here is how they work, how admins roll them out and three handoffs they fix.
 

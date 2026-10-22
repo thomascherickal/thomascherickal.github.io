@@ -3,10 +3,10 @@
 
 > **//
  The Digital Futurist · Remote Worldwide**  
-> **Generative AI Consultant specializing in transforming traditional businesses to an
+> **Specializing in transforming traditional businesses to an
  AI-first & AI-native organization, by providing live and remote training, teaching freshers, developers,
- staff, architects, management, and CXOs to become AI-enabled and experts in Claude AI agent orchestration with local
- LLMs to reduce costs.**
+ staff, architects, management, and CXOs to become AI-enabled and experts in Claude AI agent orchestration with
+ minmal investment and cost monitoring and budgeting, also using Local LLMs with investement in hardware.**
 
 **Location**: Chennai, India (Remote — Worldwide)  
 **Brand**: The Digital Futurist  
@@ -17,7 +17,7 @@
 - `Agentic AI Architect`
 - `AI Automation Expert`
 - `AI Training Live & Remote`
-- `Enterprise AI Integration`
+- `AI Integration`
 - `Local LLM Deployment`
 - `Claude AI Agent Orchestration`
 - `Agentic Workflows`
@@ -25,10 +25,10 @@
 ---
 
 ## Bio
-PG in CS from Loyola College; Generative AI Consultant specializing in helping enterprises
+PG in CS from Loyola College; I specialize in helping enterprises
  adopt AI automation and training their employees to become AI-native citizens. Understanding that cost is a
  problem, I also specialize in deploying high-quality Local LLMs to remove AI inference costs using local
- hardware. Expert in Enterprise AI Transformation, Generative AI, LLMs, Claude AI Agent orchestration, Local LLM
+ hardware. Expert in Generative AI, LLMs, Claude AI Agent orchestration, Local LLM
  deployment, AI Training and AI Consulting.
 
 ### Quick Actions

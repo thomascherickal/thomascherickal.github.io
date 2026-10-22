@@ -210,11 +210,10 @@ $ python3 python/build_components.py
 Included components in: 404.html
 Included components in: claude-101.html
 Included components in: claude-orchestration.html
-Included components in: claude-budget-limits.html
 Included components in: claude-code.html
 Included components in: claude-design.html
 Included components in: claude-local-llms.html
-Included components in: claude-mcp.html
+Included components in: claude-custom-mcp.html
 Included components in: claude-skills.html
 Included components in: collaboration.html
 Included components in: contact.html
@@ -365,12 +364,11 @@ Changes not staged for commit:
 	deleted:    claude-MCP.html
 	deleted:    claude-agent-swarms.html
 	modified:   claude-orchestration.html
-	modified:   claude-budget-limits.html
 	modified:   claude-code.html
 	deleted:    claude-cowork.html
 	modified:   claude-design.html
 	modified:   claude-local-llms.html
-	modified:   claude-mcp.html
+	modified:   claude-custom-mcp.html
 	modified:   claude-skills.html
 	modified:   collaboration.html
 	modified:   components.js

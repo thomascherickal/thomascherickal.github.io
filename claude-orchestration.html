@@ -3,54 +3,133 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Claude Multi-Agent Orchestration: Swarms & Consensus | Thomas Cherickal</title>
-  <meta content="Architect distributed multi-agent systems with Claude: supervisory delegation, blackboard state architectures, and Byzantine consensus protocols." name="description" />
+  <title>AI Agent Orchestration with Claude: Running Many Agents at Once | Thomas Cherickal</title>
+  <meta content="Running several Claude agents at once: five architectures, six tutorials, working cost tools and explicit spend limits from session to year." name="description" />
+  <meta content="Claude agent orchestration, multi-agent systems, Anthropic Claude, Claude Opus 5.5, Claude Sonnet 5.5, Claude Haiku 5.5, Claude Fable 5.1, subagents, prompt caching, batch processing, Agent SDK, spend limits" name="keywords" />
   <meta content="Thomas Cherickal" name="author" />
   <link href="https://thomascherickal.github.io/claude-orchestration.html" rel="canonical" />
+
   <!-- Open Graph -->
-  <meta content="website" property="og:type" />
+  <meta content="article" property="og:type" />
   <meta content="https://thomascherickal.github.io/claude-orchestration.html" property="og:url" />
   <meta content="Thomas Cherickal — The Digital Futurist" property="og:site_name" />
-  <meta content="Claude Multi-Agent Orchestration: Swarms & Consensus | Thomas Cherickal" property="og:title" />
-  <meta content="Architect distributed multi-agent systems with Claude: supervisory delegation, blackboard state architectures, and Byzantine consensus protocols." property="og:description" />
+  <meta content="AI Agent Orchestration with Claude: Running Many Agents at Once | Thomas Cherickal" property="og:title" />
+  <meta content="Five architectures, six hands-on tutorials and a set of spend limits that hold from a single session up to a full year." property="og:description" />
   <meta content="https://thomascherickal.github.io/assets/og-card.png" property="og:image" />
   <meta content="en_US" property="og:locale" />
+
   <!-- Twitter Card -->
   <meta content="summary_large_image" name="twitter:card" />
   <meta content="@thomascherickal" name="twitter:site" />
-  <meta content="Claude Multi-Agent Orchestration: Swarms & Consensus | Thomas Cherickal" name="twitter:title" />
-  <meta content="Architect distributed multi-agent systems with Claude: supervisory delegation, blackboard state architectures, and Byzantine consensus protocols." name="twitter:description" />
+  <meta content="AI Agent Orchestration with Claude: Running Many Agents at Once | Thomas Cherickal" name="twitter:title" />
+  <meta content="Five architectures, six hands-on tutorials and a set of spend limits that hold from a single session up to a full year." property="twitter:description" />
   <meta content="https://thomascherickal.github.io/assets/og-card.png" name="twitter:image" />
+
   <!-- Favicons -->
   <link href="assets/favicon.ico" rel="icon" sizes="any" />
   <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
   <link href="assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
   <link href="/site.webmanifest" rel="manifest" />
   <meta content="#020408" name="theme-color" />
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-  <!-- Mermaid.js for architecture diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      if (typeof mermaid !== "undefined") {
-        mermaid.initialize({
-          startOnLoad: true,
-          theme: 'dark',
-          themeVariables: {
-            'primaryColor': '#0c111d',
-            'primaryTextColor': '#38bdf8',
-            'primaryBorderColor': '#38bdf8',
-            'lineColor': '#fbbf24',
-            'secondaryColor': '#060912',
-            'tertiaryColor': '#131926'
-          }
-        });
-      }
-    });
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- JSON-LD Article Schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "TechArticle",
+        "Article"
+      ],
+      "@id": "https://thomascherickal.github.io/claude-orchestration.html#article",
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://thomascherickal.github.io/claude-orchestration.html",
+        "url": "https://thomascherickal.github.io/claude-orchestration.html",
+        "name": "AI Agent Orchestration with Claude: Running Many Agents at Once Without Losing Control of Quality or Cost | Thomas Cherickal"
+      },
+      "headline": "AI Agent Orchestration with Claude: Running Many Agents at Once Without Losing Control of Quality or Cost",
+      "description": "Running several Claude agents at once: five architectures, six tutorials, working cost tools and explicit spend limits from session to year.",
+      "image": [
+        "https://thomascherickal.github.io/assets/og-card.png"
+      ],
+      "datePublished": "2026-10-22T00:00:00+05:30",
+      "dateModified": "2026-10-22T00:00:00+05:30",
+      "inLanguage": "en-US",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://thomascherickal.github.io/claude-orchestration.html"
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://thomascherickal.github.io/#person",
+        "name": "Thomas Cherickal",
+        "jobTitle": "Generative AI Consultant and The Digital Futurist",
+        "url": "https://thomascherickal.github.io",
+        "description": "Thomas Cherickal — Generative AI Consultant and The Digital Futurist.",
+        "sameAs": [
+          "https://linkedin.com/in/thomascherickal",
+          "https://github.com/thomascherickal",
+          "https://x.com/thomascherickal"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://thomascherickal.github.io/#organization",
+        "name": "The Digital Futurist",
+        "url": "https://thomascherickal.github.io",
+        "description": "Thomas Cherickal — Generative AI Consultant and The Digital Futurist.",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://thomascherickal.github.io/assets/digital-futurist-logo.jpg",
+          "width": 256,
+          "height": 256
+        }
+      },
+      "articleSection": "Agentic AI Orchestration",
+      "keywords": [
+        "AI Agent Orchestration",
+        "Multi-Agent Systems",
+        "Claude Agents",
+        "Agent SDK",
+        "Prompt Caching",
+        "Cost Limits"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thomascherickal.github.io/claude-orchestration.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thomascherickal.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Writing",
+          "item": "https://thomascherickal.github.io/writing.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Agent Orchestration",
+          "item": "https://thomascherickal.github.io/claude-orchestration.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
   <style>
     :root {
       --bg-0: #020408;
@@ -61,21 +140,38 @@
       --border-gold: rgba(251, 191, 36, 0.35);
       --cyan: #38bdf8;
       --gold: #fbbf24;
+      --gold-soft: #f1d27f;
       --claude-accent: #d97757;
       --claude-light: #f38b6c;
+      --violet: #a5b4fc;
+      --green: #34d399;
+      --emerald: #34d399;
+      --pink: #f472b6;
+      --rose: #fb7185;
+      --coral: #fb7185;
+      --amber: #fbbf24;
+      --sky: #7dd3fc;
       --text: #f8fafc;
       --text-muted: #94a3b8;
       --font-main: 'Inter', -apple-system, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
       --font-display: 'Cinzel', serif;
+
+      --emerald-bg: rgba(52, 211, 153, 0.10);
+      --coral-bg: rgba(251, 113, 133, 0.10);
+      --amber-bg: rgba(251, 191, 36, 0.10);
+      --violet-bg: rgba(165, 180, 252, 0.10);
+      --cyan-bg: rgba(56, 189, 248, 0.10);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
     body {
       background: var(--bg-0);
       color: var(--text);
       font-family: var(--font-main);
-      line-height: 1.65;
+      line-height: 1.75;
       padding-top: 72px;
       overflow-x: hidden;
     }
@@ -91,6 +187,15 @@
       text-align: center;
     }
 
+    .hero-logo {
+      width: 110px;
+      height: 110px;
+      border-radius: 12px;
+      display: block;
+      margin: 0 auto 1.5rem;
+      box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.4), 0 12px 40px rgba(251, 191, 36, 0.2);
+    }
+
     .hero-badge {
       font-family: var(--font-mono);
       font-size: 0.8rem;
@@ -102,21 +207,52 @@
     }
 
     .hero-title {
-      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-size: clamp(2rem, 4.4vw, 3.1rem);
       font-weight: 800;
       line-height: 1.25;
       margin-bottom: 1.15rem;
-      background: linear-gradient(135deg, #ffffff 40%, #e2e8f0 100%);
+      background: linear-gradient(135deg, #ffffff 30%, #38bdf8 70%, #fbbf24 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+    .hero-title .hl {
+      color: var(--gold);
+      -webkit-text-fill-color: var(--gold);
     }
 
     .hero-desc {
       color: #94a3b8;
-      max-width: 780px;
+      max-width: 820px;
       margin: 0 auto 1.75rem;
       font-size: 1.05rem;
       line-height: 1.7;
+    }
+
+    .hero-byline {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .hero-byline strong {
+      color: var(--gold);
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 1.15rem;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      font-family: var(--font-mono);
+      padding: 4px 14px;
+      border-radius: 999px;
+      color: #e2e8f0;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.25);
     }
 
     .content-card {
@@ -129,163 +265,588 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
     }
 
-    .step-card:hover {
-      transform: translateY(-2px);
-      border-color: var(--cyan);
+    .toc-card {
+      border-left: 3px solid var(--cyan);
+    }
+    .toc-card h2 {
+      color: var(--gold);
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin-bottom: 1.15rem;
+      border-bottom: 1px solid rgba(251, 191, 36, 0.25);
+      padding-bottom: 0.5rem;
     }
 
-    .ref-link {
+    .toc-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.65rem;
+      margin-top: 1rem;
+      padding-left: 1.25rem;
+      list-style: none;
+      color: #cbd5e1;
+      font-size: 1.15rem;
+      line-height: 1.65;
+    }
+    .toc-list li {
+      margin: 0.2rem 0;
+    }
+    .toc-list li a {
       color: var(--cyan);
       text-decoration: none;
+      font-size: 1.15rem;
       transition: color 0.2s ease;
-      word-break: break-all;
     }
-    .ref-link:hover {
+    .toc-list li a:hover {
       color: var(--gold);
       text-decoration: underline;
     }
+    .toc-list ol {
+      padding-left: 1.4rem;
+      font-size: 1.02rem;
+      margin-top: 0.35rem;
+      margin-bottom: 0.35rem;
+      list-style: none;
+    }
+    .toc-list ol li a {
+      font-size: 1.02rem;
+    }
 
-    .data-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1.25rem 0;
-      font-size: 0.9rem;
-    }
-    .data-table th, .data-table td {
-      padding: 0.75rem 1rem;
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      text-align: left;
-    }
-    .data-table th {
-      background: rgba(15, 23, 42, 0.9);
+    .article-body h2 {
+      font-family: var(--font-display, serif);
       color: var(--gold);
-      font-family: var(--font-mono);
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 1.15rem;
+      border-bottom: 1px solid rgba(56, 189, 248, 0.25);
+      padding-bottom: 0.5rem;
+      scroll-margin-top: 85px;
     }
-    .data-table tr:nth-child(even) {
-      background: rgba(255, 255, 255, 0.02);
+    .article-body h2 .sec-num {
+      font-family: var(--font-mono);
+      font-size: 0.75em;
+      color: var(--cyan);
+      margin-right: 0.5rem;
+    }
+    .article-body h3 {
+      color: var(--sky);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 1.75rem;
+      margin-bottom: 0.85rem;
+      scroll-margin-top: 85px;
+    }
+    .article-body h4 {
+      font-size: 1.05rem;
+      margin: 1.25rem 0 0.5rem;
+      color: var(--gold);
     }
 
-    .code-window {
-      background: #040711;
+    .article-body p {
+      color: #e2e8f0;
+      margin-bottom: 1.25rem;
+      font-size: 0.98rem;
+      line-height: 1.8;
+    }
+
+    .article-body strong {
+      color: #ffffff;
+    }
+
+    .article-body a {
+      color: var(--cyan);
+      text-decoration: underline;
+      text-decoration-color: rgba(56, 189, 248, 0.4);
+      text-underline-offset: 3px;
+      transition: color 0.2s, text-decoration-color 0.2s;
+    }
+    .article-body a:hover {
+      color: var(--gold);
+      text-decoration-color: var(--gold);
+    }
+
+    .article-body ul, .article-body ol {
+      margin: 0.75rem 0 1.5rem 1.75rem;
+      color: #e2e8f0;
+      font-size: 0.98rem;
+    }
+    .article-body li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    .article-body li::marker {
+      color: var(--cyan);
+    }
+
+    /* Architecture Specs Box */
+    .arch {
+      background: rgba(11, 16, 32, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 12px;
+      padding: 1.15rem 1.5rem;
+      margin: 1.25rem 0 1.75rem;
+    }
+    .arch dl {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 0.65rem 1.25rem;
+    }
+    .arch dt {
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-family: var(--font-mono);
+      padding-top: 3px;
+    }
+    .arch dd {
+      color: #cbd5e1;
+      font-size: 0.94rem;
+      line-height: 1.65;
+    }
+    @media (max-width: 640px) {
+      .arch dl { grid-template-columns: 1fr; }
+      .arch dt { padding-top: 8px; }
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 2px 9px;
+      border-radius: 999px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .b-basic { background: var(--emerald-bg); color: var(--emerald); border: 1px solid rgba(52, 211, 153, 0.5); }
+    .b-inter { background: var(--cyan-bg); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.5); }
+    .b-adv { background: var(--coral-bg); color: var(--coral); border: 1px solid rgba(251, 113, 133, 0.5); }
+
+    .tut {
+      border-left: 3px solid rgba(56, 189, 248, 0.3);
+      padding-left: 1.25rem;
+      margin: 1.5rem 0 2.25rem;
+    }
+    .tut.basic { border-color: var(--emerald); }
+    .tut.inter { border-color: var(--cyan); }
+    .tut.adv { border-color: var(--coral); }
+    .meta { font-size: 0.92rem; color: #94a3b8; margin-bottom: 1rem; }
+    .meta b { color: #f8fafc; }
+
+    /* Callouts */
+    .callout {
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border: 1px solid;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .callout .lbl {
+      font-weight: 800;
+      font-size: 0.75rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 4px;
+      font-family: var(--font-mono);
+    }
+    .callout.tip { background: var(--emerald-bg); border-color: rgba(52, 211, 153, 0.45); }
+    .callout.tip .lbl { color: var(--emerald); }
+    .callout.warn { background: var(--coral-bg); border-color: rgba(251, 113, 133, 0.45); }
+    .callout.warn .lbl { color: var(--coral); }
+    .callout.cost { background: var(--amber-bg); border-color: rgba(251, 191, 36, 0.45); }
+    .callout.cost .lbl { color: var(--amber); }
+    .callout.sec { background: var(--violet-bg); border-color: rgba(165, 180, 252, 0.45); }
+    .callout.sec .lbl { color: var(--violet); }
+
+    /* Code Windows */
+    .codewrap {
+      position: relative;
+      margin: 1.25rem 0 1.75rem;
       border: 1px solid rgba(56, 189, 248, 0.25);
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
-      margin: 1.25rem 0;
     }
-    .code-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.65rem 1.15rem;
-      background: rgba(15, 23, 42, 0.95);
-      border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+    .codewrap .cap {
       font-family: var(--font-mono);
       font-size: 0.78rem;
       color: #94a3b8;
+      background: rgba(15, 23, 42, 0.95);
+      border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+      padding: 0.65rem 1.15rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .code-pre {
+    .copy {
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--cyan);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .copy:hover, .copy:focus-visible {
+      background: rgba(56, 189, 248, 0.25);
+      border-color: var(--cyan);
+      outline: none;
+    }
+    pre {
+      margin: 0;
+      background: #050814;
       padding: 1.15rem 1.35rem;
       overflow-x: auto;
       font-family: var(--font-mono);
-      font-size: 0.84rem;
+      font-size: 0.85rem;
       line-height: 1.65;
       color: #e2e8f0;
       tab-size: 4;
     }
-
-    .metric-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.15rem;
-      margin: 1.25rem 0;
-    }
-    .metric-card {
-      background: rgba(15, 23, 42, 0.7);
-      border: 1px solid rgba(56, 189, 248, 0.22);
-      border-radius: 12px;
-      padding: 1.35rem 1rem;
-      text-align: center;
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-    .metric-card:hover {
-      transform: translateY(-2px);
-      border-color: var(--cyan);
-    }
-    .metric-val {
+    code {
       font-family: var(--font-mono);
-      font-size: 1.85rem;
-      font-weight: 800;
-      color: var(--cyan);
-      margin-bottom: 0.35rem;
+      font-size: 0.88em;
     }
-    .metric-label {
+    :not(pre) > code {
+      background: #111827;
+      border: 1px solid var(--border);
+      padding: 2px 7px;
+      border-radius: 5px;
+      color: var(--sky);
+      word-break: break-word;
+    }
+
+    /* Tables */
+    .tablewrap {
+      overflow-x: auto;
+      margin: 1.25rem 0 1.75rem;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 12px;
+      background: #060912;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 620px;
+      font-size: 0.92rem;
+    }
+    th, td {
+      padding: 0.85rem 1.1rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+      vertical-align: top;
+    }
+    th {
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--gold);
+      font-family: var(--font-mono);
       font-size: 0.8rem;
-      color: #94a3b8;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      font-weight: 600;
+    }
+    tr:last-child td { border-bottom: 0; }
+    td.hi { color: var(--coral); font-weight: 600; }
+    td.mid { color: var(--amber); font-weight: 600; }
+    td.lo { color: var(--emerald); font-weight: 600; }
+    tr.r-solo td:first-child { border-left: 4px solid var(--emerald); }
+    tr.r-team td:first-child { border-left: 4px solid var(--cyan); }
+    tr.r-prod td:first-child { border-left: 4px solid var(--coral); }
+
+    /* Interactive Widgets */
+    .widget {
+      background: rgba(11, 16, 32, 0.9);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-top: 4px solid var(--cyan);
+      border-radius: 14px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+    .widget.w-gold { border-top-color: var(--gold); }
+    .widget.w-violet { border-top-color: var(--violet); }
+    .widget.w-emerald { border-top-color: var(--emerald); }
+    .widget.w-amber { border-top-color: var(--amber); }
+
+    .widget h4 {
+      margin: 0 0 6px;
+      font-size: 1.15rem;
+      color: #ffffff;
+      font-weight: 700;
+    }
+    .widget .note {
+      font-size: 0.84rem;
+      color: #94a3b8;
+      margin-bottom: 1.25rem;
+      line-height: 1.55;
     }
 
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px 16px;
+    }
+    .field label {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--cyan);
+      font-family: var(--font-mono);
+      margin-bottom: 4px;
+    }
+    .field input, .field select, .widget textarea {
+      width: 100%;
+      background: #040711;
+      color: #f8fafc;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-family: var(--font-main);
+      font-size: 0.92rem;
+      transition: border-color 0.2s, outline 0.2s;
+    }
+    .field input:focus, .field select:focus, .widget textarea:focus {
+      outline: 2px solid var(--cyan);
+      outline-offset: 1px;
+      border-color: var(--cyan);
+    }
+    .widget textarea {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      min-height: 130px;
+      resize: vertical;
+    }
+    .check {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: #cbd5e1;
+      margin-top: 22px;
+      cursor: pointer;
+    }
+    .btn {
+      background: var(--gold);
+      color: #020408;
+      border: 0;
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-family: var(--font-main);
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      margin-top: 14px;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+    .btn.alt {
+      background: transparent;
+      color: var(--cyan);
+      border: 1px solid var(--cyan);
+      margin-left: 8px;
+    }
+    .btn.alt:hover {
+      background: rgba(56, 189, 248, 0.1);
+    }
+
+    .out {
+      margin-top: 14px;
+      background: #040711;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      font-size: 0.92rem;
+    }
+    .out .kpis {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 10px;
+    }
+    .kpi {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(56, 189, 248, 0.15);
+      border-radius: 8px;
+      padding: 8px 12px;
+    }
+    .kpi .k {
+      font-size: 0.72rem;
+      color: var(--cyan);
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .kpi .v {
+      font-size: 1.2rem;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      color: #ffffff;
+      margin-top: 2px;
+    }
+    .ok { color: var(--emerald) !important; }
+    .bad { color: var(--coral) !important; }
+    .warnc { color: var(--amber) !important; }
+    .err { color: var(--coral); font-size: 0.85rem; margin-top: 6px; }
+
+    .prices { margin-top: 10px; }
+    .prices summary {
+      cursor: pointer;
+      color: var(--cyan);
+      font-size: 0.85rem;
+      font-family: var(--font-mono);
+    }
+
+    fieldset {
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 10px;
+      margin: 12px 0;
+      padding: 10px 14px;
+      background: rgba(4, 7, 17, 0.6);
+    }
+    legend {
+      color: var(--gold);
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0 6px;
+    }
+    fieldset label {
+      display: block;
+      font-size: 0.92rem;
+      margin: 5px 0;
+      cursor: pointer;
+      color: #e2e8f0;
+    }
+    fieldset input[type="radio"] {
+      margin-right: 8px;
+      accent-color: var(--cyan);
+    }
+
+    /* Diagram Containers */
+    .diagram-container {
+      background: #060912;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .fig-scroll {
+      overflow-x: auto;
+    }
+    .diagram-caption {
+      margin-top: 0.85rem;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      letter-spacing: 0.02em;
+      text-align: left;
+    }
+    .diagram-caption b {
+      color: var(--gold);
+    }
+
+    /* References */
+    ol.refs {
+      padding-left: 1.5rem;
+    }
+    ol.refs li {
+      margin: 0.65rem 0;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #cbd5e1;
+      scroll-margin-top: 85px;
+    }
+    ol.refs li:target {
+      background: rgba(251, 191, 36, 0.15);
+      border-radius: 6px;
+      padding: 4px 8px;
+    }
+
+    /* CTA Banner */
     .cta-banner {
-      background: #070c18;
-      border: 1.5px solid var(--border-gold);
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.12) 0%, rgba(251, 191, 36, 0.08) 100%);
+      border: 1px solid rgba(251, 191, 36, 0.35);
       border-radius: 16px;
       padding: 3rem 2rem;
+      margin: 3.5rem 0 2rem;
       text-align: center;
-      margin: 3rem 0 2rem;
-      box-shadow: 0 0 28px rgba(251, 191, 36, 0.18);
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.8rem 1.65rem;
-      border-radius: 8px;
-      font-family: var(--font-mono);
-      font-size: 0.86rem;
-      font-weight: 700;
-      text-decoration: none;
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary {
-      background: var(--cyan);
-      color: #020408 !important;
-      box-shadow: 0 0 16px rgba(56, 189, 248, 0.3);
-    }
-    .btn-primary:hover {
-      background: #7dd3fc;
-      box-shadow: 0 0 24px rgba(56, 189, 248, 0.5);
-    }
-    .btn-outline {
-      background: transparent;
-      border: 1.5px solid var(--border-gold);
-      color: var(--gold) !important;
-      box-shadow: 0 0 12px rgba(251, 191, 36, 0.15);
-    }
-    .btn-outline:hover {
-      background: rgba(251, 191, 36, 0.12);
-      border-color: var(--gold);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
     }
     .btn-linkedin {
-      background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
-      color: #38bdf8 !important;
-      font-weight: 700;
-      border: 2px solid #0a66c2;
-      box-shadow: 0 0 16px rgba(10, 102, 194, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #0077b5;
+      color: #ffffff;
+      font-family: var(--font-main);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.65rem 1.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
     }
     .btn-linkedin:hover {
-      background: linear-gradient(180deg, #1e3a5f 0%, #0f2744 100%);
-      color: #ffffff !important;
-      border-color: #38bdf8;
-      box-shadow: 0 0 24px rgba(56, 189, 248, 0.6);
+      background: #005582;
+      transform: translateY(-2px);
+      color: #ffffff;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+      color: #020408;
+      font-family: var(--font-main);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.65rem 1.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover {
+      opacity: 0.92;
+      transform: translateY(-2px);
+      color: #020408;
+    }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      font-family: var(--font-main);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.65rem 1.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-outline:hover {
+      background: rgba(251, 191, 36, 0.15);
+      transform: translateY(-2px);
+      color: var(--gold);
+    }
+
+    @media (max-width: 640px) {
+      .hero-title { font-size: 1.85rem; }
+      .content-card { padding: 1.5rem; }
+      .cta-banner { padding: 2rem 1.25rem; }
     }
   </style>
 </head>
@@ -762,14 +1323,13 @@
           <li><a href="claude-code.html">Claude Code</a></li>
           <li><a href="claude-cowork.html">Claude Cowork</a></li>
           <li><a href="claude-skills.html">Claude Skills </a></li>
-          <li><a href="claude-mcp.html">Claude MCP</a></li>
+          <li><a href="claude-custom-mcp.html">Claude Custom MCP</a></li>
           <li><a href="claude-plugins.html">Claude Plugins </a></li>
           <li><a href="claude-connectors.html">Claude Connectors</a></li>
           <li><a href="claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="claude-design.html">Claude Design</a></li>
           <li><a href="claude-science.html">Claude for Science</a></li>
           <li><a href="claude-local-llms.html">Claude With Local LLMs</a></li>
-          <li><a href="claude-budget-limits.html">Claude Budget Limits</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
@@ -805,125 +1365,1529 @@
 
   <main class="container">
     <header class="hero">
-      <div class="hero-badge">DISTRIBUTED MULTI-AGENT SWARMS</div>
-      <h1 class="hero-title">Claude Multi-Agent Orchestration: Swarms & Consensus</h1>
-      <p class="hero-desc">Coordinate complex multi-agent swarms with Claude: supervisory delegation, shared blackboard state architectures, and multi-agent consensus protocols.</p>
+      <img class="hero-logo" src="https://thomascherickal.com/wp-content/uploads/2026/10/digital-futurist-logo-large-640px-1.jpg" alt="The Digital Futurist logo: gold concentric rings around a gold sphere inside a gold square frame, with the wordmark THE DIGITAL FUTURIST" />
+      <div class="hero-badge">MULTI-AGENT TOPOLOGIES &amp; SPEND CONTROLS</div>
+      <h1 class="hero-title" id="top">AI Agent Orchestration with Claude: <span class="hl">Running Many Agents at Once</span> Without Losing Control of Quality or Cost</h1>
+      <p class="hero-desc">Five architectures, six hands-on tutorials and a set of spend limits that hold from a single session up to a full year.</p>
+      <div class="hero-byline">
+        By <strong>Thomas Cherickal</strong>, Generative AI Consultant, <span style="color:var(--gold);">The Digital Futurist</span> &bull; 22 October 2026 &bull; <code>thomascherickal.github.io</code>
+      </div>
+      <div class="pills">
+        <span class="pill">Claude Opus 5.5</span>
+        <span class="pill">Claude Sonnet 5.5</span>
+        <span class="pill">Claude Haiku 5.5</span>
+        <span class="pill">Claude Fable 5.1</span>
+        <span class="pill">Agent SDK</span>
+        <span class="pill">Managed Agents</span>
+        <span class="pill">Prompt Caching</span>
+        <span class="pill">Batches API</span>
+      </div>
     </header>
 
+    <!-- Table of Contents -->
+    <div class="content-card toc-card">
+      <h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
+      <ol class="toc-list" id="toc">
+        <li><a href="#intro">1. What orchestration means once agents run in parallel</a></li>
+        <li><a href="#concepts">2. Core concepts</a></li>
+        <li><a href="#architectures">3. Five multi-agent architectures</a>
+          <ol style="margin:4px 0 6px 14px;padding:0;list-style:none;">
+            <li>&bull; <a href="#arch-orch">Orchestrator-worker</a></li>
+            <li>&bull; <a href="#arch-hier">Hierarchical</a></li>
+            <li>&bull; <a href="#arch-pipe">Sequential pipeline</a></li>
+            <li>&bull; <a href="#arch-fan">Parallel fan-out and fan-in</a></li>
+            <li>&bull; <a href="#arch-router">Router</a></li>
+            <li>&bull; <a href="#arch-extra">Three more patterns</a></li>
+            <li>&bull; <a href="#arch-compare">Side-by-side comparison</a></li>
+          </ol>
+        </li>
+        <li><a href="#tutorials">4. Six tutorials</a>
+          <ol style="margin:4px 0 6px 14px;padding:0;list-style:none;">
+            <li>&bull; <a href="#t-b1">Basic 1: concurrent calls with asyncio</a></li>
+            <li>&bull; <a href="#t-b2">Basic 2: parallel subagents with restricted tools</a></li>
+            <li>&bull; <a href="#t-i1">Intermediate 1: orchestrator with validated workers</a></li>
+            <li>&bull; <a href="#t-i2">Intermediate 2: batch fan-out with prompt caching</a></li>
+            <li>&bull; <a href="#t-a1">Advanced 1: hierarchical teams with shared state and budgets</a></li>
+            <li>&bull; <a href="#t-a2">Advanced 2: concurrent cloud agents with a kill switch</a></li>
+          </ol>
+        </li>
+        <li><a href="#budget">5. Budgeting and controlling costs</a>
+          <ol style="margin:4px 0 6px 14px;padding:0;list-style:none;">
+            <li>&bull; <a href="#b-why">Why spend multiplies</a></li>
+            <li>&bull; <a href="#b-limits">Explicit limits at every level</a></li>
+            <li>&bull; <a href="#b-code">Enforcing limits in code</a></li>
+            <li>&bull; <a href="#b-platform">Enforcing limits on the platform</a></li>
+            <li>&bull; <a href="#b-cloud">Cloud agents and their cost</a></li>
+            <li>&bull; <a href="#b-reduce">Cutting the bill</a></li>
+            <li>&bull; <a href="#b-worked">Worked example: a five-agent research run</a></li>
+          </ol>
+        </li>
+        <li><a href="#ops">6. Observability, testing and failure handling</a></li>
+        <li><a href="#security">7. Security notes</a></li>
+        <li><a href="#choose">8. Choosing an architecture</a></li>
+        <li><a href="#refs">9. References</a></li>
+      </ol>
+    </div>
+
     <article class="article-body">
+      <!-- Section 1 -->
+      <section class="content-card" id="intro">
+        <h2><span class="sec-num">01</span>What orchestration means once agents run in parallel</h2>
+        <p>A single Claude agent is a loop: the model reads its context, calls a tool or answers, and repeats until it finishes or something stops it. Orchestration starts when several loops run together and you must decide who starts each one, what it can see, how results merge and what ends the run. Concurrency changes four things.</p>
+        <p><strong>Rate limits are shared.</strong> Limits apply per organization and model, so ten Sonnet 5.5 agents draw from one bucket: <a href="https://platform.claude.com/docs/en/api/rate-limits" target="_blank" rel="noopener noreferrer">on the Start tier</a>, 1,000 requests, 2,000,000 uncached input tokens and 400,000 output tokens per minute.</p>
+        <p><strong>State is shared.</strong> Two agents editing one file, or two workers that both think they own the plan, create conflicts a single loop never meets. <strong>Failures must be isolated.</strong> When one worker times out, the others should continue, and a long run should resume from a checkpoint rather than restart; <a href="https://www.anthropic.com/engineering/multi-agent-research-system" target="_blank" rel="noopener noreferrer">Anthropic's Research system</a> works this way.</p>
+        <p><strong>Cost multiplies.</strong> In Anthropic's data, agents use about four times the tokens of a chat and multi-agent systems about fifteen times. A Claude Opus 4 lead with Claude Sonnet 4 subagents beat a single Opus 4 agent by 90.2% on <a href="https://www.anthropic.com/engineering/multi-agent-research-system" target="_blank" rel="noopener noreferrer">an internal research evaluation</a>, and token usage alone explained 80% of performance variance on BrowseComp. Parallel agents buy quality with tokens, so the spending has to be deliberate.</p>
+        <p>The examples use the lineup current on 22 October 2026: Claude Fable 5.1 (<code>claude-fable-5-1</code>), Opus 5.5 (<code>claude-opus-5-5</code>), Sonnet 5.5 (<code>claude-sonnet-5-5</code>) and Haiku 5.5 (<code>claude-haiku-5-5</code>), all with 1M-token context and <a href="https://platform.claude.com/docs/en/models/overview" target="_blank" rel="noopener noreferrer">128K maximum output</a>.</p>
+      </section>
 
-    <div class="content-card">
-      <h2 style="color:var(--gold);font-size:1.35rem;font-weight:700;margin-bottom:1rem;line-height:1.35;border-bottom:1px solid rgba(251,191,36,0.18);padding-bottom:0.5rem;">Supervisory Hierarchies &amp; Task Decomposition</h2>
-      <p style="color:#e2e8f0;font-size:0.98rem;margin-bottom:1rem;line-height:1.8;">Complex enterprise operations exceed the single-turn context limits of individual LLMs. Claude multi-agent orchestration structures autonomous agents into supervisory hierarchies where a primary planner agent decomposes multi-faceted objectives, provisions specialized worker agents, and coordinates parallel execution. Claude Opus 5.5 operates as the master orchestrator, synthesizing top-level strategic intent into atomic execution graphs that run asynchronously across specialized Sonnet 5.5 sub-agents. Autonomous supervisors dynamically balance compute workloads, retry transient tool failures, and enforce global token budget caps.</p>
-      <ul style="color:#cbd5e1;font-size:0.96rem;margin-left:1.5rem;margin-bottom:1.25rem;line-height:1.75;">
-        <li><strong>Role Specialization</strong>: Dedicate distinct Claude instances to research, coding, compliance auditing, and security fuzzing.</li>
-        <li><strong>Dynamic Delegation</strong>: The supervisor routes tasks to workers based on domain expertise and monitors subtask progress asynchronously.</li>
-        <li><strong>Atomic State Synthesis</strong>: When workers finish subtasks, the supervisor merges outputs into a unified deliverable, discarding redundant working context.</li>
-      </ul>
-    </div>
+      <!-- Section 2 -->
+      <section class="content-card" id="concepts">
+        <h2><span class="sec-num">02</span>Core concepts</h2>
+        <p><strong>Orchestrator:</strong> whatever decides what work exists, who does it and when the run ends. It can be an agent, plain code, or code that asks an agent to plan. <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">Anthropic separates workflows</a>, where code fixes the path, from agents, where the model directs itself, and advises adding agentic control only when it measurably helps.</p>
+        <p><strong>Worker or subagent:</strong> a separate agent instance with its own context. In the Claude Agent SDK, <a href="https://code.claude.com/docs/en/agent-sdk/subagents" target="_blank" rel="noopener noreferrer">Claude starts subagents</a> through the <code>Agent</code> tool; each begins fresh, keeps its tool calls to itself and returns only its final message.</p>
+        <p><strong>Tools:</strong> functions the model can request. Client tools run in your process; server tools run on Anthropic's side and can cost extra (web search is <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">$10 per 1,000 searches</a>). The Model Context Protocol (MCP) is <a href="https://modelcontextprotocol.io/introduction" target="_blank" rel="noopener noreferrer">the open standard</a> for exposing tools and data to compatible clients.</p>
+        <p><strong>Handoffs:</strong> a subagent sees its own system prompt and the prompt string its parent passes, <a href="https://code.claude.com/docs/en/agent-sdk/subagents" target="_blank" rel="noopener noreferrer">never the parent's history</a>, so paths, errors and decisions must travel in that string.</p>
+        <p><strong>Shared memory:</strong> anything agents read and write outside their context windows, such as files, a database or a task board. Anthropic's Research lead <a href="https://www.anthropic.com/engineering/multi-agent-research-system" target="_blank" rel="noopener noreferrer">saves its plan to memory</a> and lets subagents write results to a filesystem and pass back references.</p>
+        <p><strong>Termination:</strong> every loop needs a stop besides the model deciding it is done. <a href="https://code.claude.com/docs/en/agent-sdk/agent-loop" target="_blank" rel="noopener noreferrer">The Agent SDK offers</a> <code>max_turns</code> and <code>max_budget_usd</code>, ending with <code>error_max_turns</code> or <code>error_max_budget_usd</code>. Managed Agents sessions <a href="https://platform.claude.com/docs/en/managed-agents/budgets" target="_blank" rel="noopener noreferrer">take a dollar budget</a> and go idle with <code>budget_reached</code>.</p>
 
-    <div class="content-card">
-      <h2 style="color:var(--gold);font-size:1.35rem;font-weight:700;margin-bottom:1rem;line-height:1.35;border-bottom:1px solid rgba(251,191,36,0.18);padding-bottom:0.5rem;">Shared Blackboard Memory &amp; State Synchronization</h2>
-      <p style="color:#e2e8f0;font-size:0.98rem;margin-bottom:1rem;line-height:1.8;">To avoid O(N^2) communication overhead between swarm agents, production systems implement a central blackboard memory store backed by Redis or Kafka. Workers read task specifications and publish structured findings to the blackboard using atomic transactions. This decoupled state architecture prevents message collisions and allows new worker agents to hydrate context instantly without replaying long conversation histories. The blackboard maintains transactional event logs and vector embeddings of intermediate agent outputs, triggering reactive worker routines without expensive polling loops.</p>
-    </div>
+        <!-- Diagram 1 -->
+        <div class="diagram-container">
+          <div class="fig-scroll">
+            <svg viewBox="0 0 800 380" role="img" aria-label="Agent loop: context feeds the model, the model either calls a tool whose result returns to context, or returns a final answer; a guard checks turns and budget before each model call">
+              <defs>
+                <marker id="ah1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#a9b1cf"/></marker>
+              </defs>
+              <rect x="20" y="40" width="200" height="120" rx="12" fill="rgba(52,211,153,.12)" stroke="#34d399" stroke-width="2"/>
+              <text x="120" y="70" text-anchor="middle" fill="#34d399" font-weight="700" font-size="16">Context window</text>
+              <text x="120" y="96" text-anchor="middle" fill="#e7eaf5" font-size="13">system prompt</text>
+              <text x="120" y="116" text-anchor="middle" fill="#e7eaf5" font-size="13">tool definitions</text>
+              <text x="120" y="136" text-anchor="middle" fill="#e7eaf5" font-size="13">history + tool results</text>
+              <rect x="300" y="40" width="200" height="120" rx="12" fill="rgba(242,193,78,.12)" stroke="#f2c14e" stroke-width="2"/>
+              <text x="400" y="80" text-anchor="middle" fill="#f2c14e" font-weight="700" font-size="16">Claude model</text>
+              <text x="400" y="106" text-anchor="middle" fill="#e7eaf5" font-size="13">reads context,</text>
+              <text x="400" y="126" text-anchor="middle" fill="#e7eaf5" font-size="13">decides next step</text>
+              <polygon points="650,60 730,100 650,140 570,100" fill="rgba(125,211,252,.12)" stroke="#7dd3fc" stroke-width="2"/>
+              <text x="650" y="96" text-anchor="middle" fill="#7dd3fc" font-weight="700" font-size="13">tool call</text>
+              <text x="650" y="113" text-anchor="middle" fill="#7dd3fc" font-weight="700" font-size="13">requested?</text>
+              <rect x="560" y="230" width="180" height="90" rx="12" fill="rgba(177,151,252,.12)" stroke="#b197fc" stroke-width="2"/>
+              <text x="650" y="265" text-anchor="middle" fill="#b197fc" font-weight="700" font-size="16">Tools</text>
+              <text x="650" y="290" text-anchor="middle" fill="#e7eaf5" font-size="13">Read, Bash, MCP, search</text>
+              <rect x="300" y="230" width="200" height="90" rx="12" fill="rgba(76,201,240,.12)" stroke="#4cc9f0" stroke-width="2"/>
+              <text x="400" y="265" text-anchor="middle" fill="#4cc9f0" font-weight="700" font-size="16">Final answer</text>
+              <text x="400" y="290" text-anchor="middle" fill="#e7eaf5" font-size="13">ResultMessage + cost</text>
+              <rect x="20" y="230" width="200" height="90" rx="12" fill="rgba(251,191,36,.12)" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6 4"/>
+              <text x="120" y="262" text-anchor="middle" fill="#fbbf24" font-weight="700" font-size="16">Stop guard</text>
+              <text x="120" y="286" text-anchor="middle" fill="#e7eaf5" font-size="13">max_turns</text>
+              <text x="120" y="304" text-anchor="middle" fill="#e7eaf5" font-size="13">max_budget_usd</text>
+              <line x1="220" y1="100" x2="296" y2="100" stroke="#a9b1cf" stroke-width="2" marker-end="url(#ah1)"/>
+              <line x1="500" y1="100" x2="566" y2="100" stroke="#a9b1cf" stroke-width="2" marker-end="url(#ah1)"/>
+              <line x1="650" y1="140" x2="650" y2="226" stroke="#a9b1cf" stroke-width="2" marker-end="url(#ah1)"/>
+              <text x="660" y="190" fill="#a9b1cf" font-size="12">yes</text>
+              <path d="M560,275 C470,200 300,190 220,140" fill="none" stroke="#b197fc" stroke-width="2" marker-end="url(#ah1)"/>
+              <text x="380" y="196" fill="#b197fc" font-size="12">result appended</text>
+              <path d="M600,120 C560,170 500,210 470,228" fill="none" stroke="#a9b1cf" stroke-width="2" marker-end="url(#ah1)"/>
+              <text x="520" y="172" fill="#a9b1cf" font-size="12">no</text>
+              <line x1="120" y1="230" x2="300" y2="140" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ah1)"/>
+              <g font-size="12" fill="#a9b1cf">
+                <rect x="20" y="345" width="12" height="12" fill="#34d399"/><text x="38" y="356">context / state</text>
+                <rect x="150" y="345" width="12" height="12" fill="#f2c14e"/><text x="168" y="356">model</text>
+                <rect x="230" y="345" width="12" height="12" fill="#b197fc"/><text x="248" y="356">tools</text>
+                <rect x="300" y="345" width="12" height="12" fill="#4cc9f0"/><text x="318" y="356">output</text>
+                <rect x="380" y="345" width="12" height="12" fill="#fbbf24"/><text x="398" y="356">budget guard</text>
+              </g>
+            </svg>
+          </div>
+          <p class="diagram-caption"><b>Diagram 1.</b> One agent loop. Each cycle of model call plus tool execution is one turn; the loop ends when the model replies without a tool call or a guard stops it. The context grows every turn, which is why long loops get expensive.</p>
+        </div>
+        <p>Every pattern below composes this loop: an orchestrator is a loop whose tools start other loops, and every cost problem traces back to the growing context box on the left.</p>
+      </section>
 
-    <div class="content-card">
-      <h2 style="color:var(--gold);font-size:1.35rem;font-weight:700;margin-bottom:1rem;line-height:1.35;border-bottom:1px solid rgba(251,191,36,0.18);padding-bottom:0.5rem;">Quorum Verification &amp; Adversarial Consensus</h2>
-      <p style="color:#e2e8f0;font-size:0.98rem;margin-bottom:1rem;line-height:1.8;">Single-agent hallucination risks are eliminated through multi-agent consensus protocols. Critical proposals undergo adversarial scrutiny by dedicated critic models that attempt to falsify assumptions. Requiring a 2-of-3 quorum consensus between generator, security auditor, and compliance arbiter guarantees high operational fidelity before committing irreversible enterprise transactions. By combining majority voting with formal mathematical constraints, multi-agent swarms achieve Byzantine fault tolerance across production data pipelines.</p>
-    </div>
+      <!-- Section 3 -->
+      <section class="content-card" id="architectures">
+        <h2><span class="sec-num">03</span>Five multi-agent architectures</h2>
+        <p>These five patterns cover the multi-agent designs that appear most often in published systems; <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">Anthropic's own names</a> for them are noted where they differ.</p>
 
-    <div class="content-card" style="padding:1.75rem;">
-      <h3 style="color:var(--cyan);font-size:1.15rem;font-weight:600;margin-bottom:0.85rem;">Distributed Multi-Agent State Machine &amp; Quorum Protocol</h3>
-      <div class="mermaid-container" style="background:#050814;border:1px solid rgba(56,189,248,0.22);border-radius:12px;padding:1.5rem 1rem;text-align:center;overflow-x:auto;">
-        <pre class="mermaid">
-stateDiagram-v2
-    [*] --> Decompose: Supervisor Plans Subtasks
-    Decompose --> Dispatch: Allocate to Claude Workers
-    state Dispatch {
-        WorkerA: Research & Data
-        WorkerB: Code Generation
-        WorkerC: Security Analysis
+        <!-- Diagram 2 -->
+        <div class="diagram-container">
+          <div class="fig-scroll">
+            <svg viewBox="0 0 800 420" role="img" aria-label="Five small diagrams: orchestrator-worker, hierarchical, sequential pipeline, fan-out fan-in, and router">
+              <defs><marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a9b1cf"/></marker></defs>
+              <g font-size="13" font-weight="700" text-anchor="middle">
+                <text x="133" y="22" fill="#f2c14e">1. Orchestrator-worker</text>
+                <text x="400" y="22" fill="#f2c14e">2. Hierarchical</text>
+                <text x="667" y="22" fill="#f2c14e">3. Sequential pipeline</text>
+                <text x="230" y="232" fill="#f2c14e">4. Fan-out / fan-in</text>
+                <text x="580" y="232" fill="#f2c14e">5. Router</text>
+              </g>
+              <!-- 1 -->
+              <rect x="98" y="38" width="70" height="30" rx="7" fill="rgba(242,193,78,.15)" stroke="#f2c14e"/><text x="133" y="58" text-anchor="middle" fill="#e7eaf5" font-size="12">lead</text>
+              <g fill="rgba(76,201,240,.15)" stroke="#4cc9f0"><rect x="28" y="120" width="60" height="28" rx="7"/><rect x="103" y="120" width="60" height="28" rx="7"/><rect x="178" y="120" width="60" height="28" rx="7"/></g>
+              <g fill="#e7eaf5" font-size="11" text-anchor="middle"><text x="58" y="138">worker</text><text x="133" y="138">worker</text><text x="208" y="138">worker</text></g>
+              <g stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah2)"><line x1="120" y1="68" x2="62" y2="117"/><line x1="133" y1="68" x2="133" y2="117"/><line x1="146" y1="68" x2="204" y2="117"/></g>
+              <rect x="68" y="178" width="130" height="24" rx="6" fill="rgba(52,211,153,.15)" stroke="#34d399"/><text x="133" y="194" text-anchor="middle" fill="#e7eaf5" font-size="11">shared store</text>
+              <!-- 2 -->
+              <rect x="368" y="38" width="64" height="28" rx="7" fill="rgba(242,193,78,.15)" stroke="#f2c14e"/><text x="400" y="56" text-anchor="middle" fill="#e7eaf5" font-size="11">director</text>
+              <g fill="rgba(242,193,78,.08)" stroke="#f2c14e" stroke-dasharray="4 3"><rect x="318" y="96" width="60" height="26" rx="7"/><rect x="422" y="96" width="60" height="26" rx="7"/></g>
+              <g fill="#e7eaf5" font-size="11" text-anchor="middle"><text x="348" y="113">lead A</text><text x="452" y="113">lead B</text></g>
+              <g fill="rgba(76,201,240,.15)" stroke="#4cc9f0"><rect x="290" y="156" width="50" height="24" rx="6"/><rect x="348" y="156" width="50" height="24" rx="6"/><rect x="404" y="156" width="50" height="24" rx="6"/><rect x="460" y="156" width="50" height="24" rx="6"/></g>
+              <g stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah2)"><line x1="390" y1="66" x2="356" y2="94"/><line x1="410" y1="66" x2="444" y2="94"/><line x1="340" y1="122" x2="318" y2="154"/><line x1="356" y1="122" x2="372" y2="154"/><line x1="444" y1="122" x2="430" y2="154"/><line x1="460" y1="122" x2="484" y2="154"/></g>
+              <!-- 3 -->
+              <g fill="rgba(76,201,240,.15)" stroke="#4cc9f0"><rect x="560" y="96" width="56" height="30" rx="7"/><rect x="640" y="96" width="56" height="30" rx="7"/><rect x="720" y="96" width="56" height="30" rx="7"/></g>
+              <g fill="#e7eaf5" font-size="11" text-anchor="middle"><text x="588" y="115">draft</text><text x="668" y="115">check</text><text x="748" y="115">polish</text></g>
+              <g stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah2)"><line x1="616" y1="111" x2="638" y2="111"/><line x1="696" y1="111" x2="718" y2="111"/></g>
+              <rect x="650" y="150" width="36" height="22" rx="5" fill="rgba(251,113,133,.15)" stroke="#fb7185"/><text x="668" y="165" text-anchor="middle" fill="#e7eaf5" font-size="10">gate</text>
+              <line x1="668" y1="126" x2="668" y2="148" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="3 3"/>
+              <!-- 4 -->
+              <rect x="60" y="300" width="70" height="30" rx="7" fill="rgba(242,193,78,.15)" stroke="#f2c14e"/><text x="95" y="320" text-anchor="middle" fill="#e7eaf5" font-size="11">split</text>
+              <g fill="rgba(76,201,240,.15)" stroke="#4cc9f0"><rect x="190" y="250" width="70" height="24" rx="6"/><rect x="190" y="285" width="70" height="24" rx="6"/><rect x="190" y="320" width="70" height="24" rx="6"/><rect x="190" y="355" width="70" height="24" rx="6"/></g>
+              <g fill="#e7eaf5" font-size="11" text-anchor="middle"><text x="225" y="266">map 1</text><text x="225" y="301">map 2</text><text x="225" y="336">map 3</text><text x="225" y="371">map n</text></g>
+              <rect x="320" y="300" width="70" height="30" rx="7" fill="rgba(242,193,78,.15)" stroke="#f2c14e"/><text x="355" y="320" text-anchor="middle" fill="#e7eaf5" font-size="11">reduce</text>
+              <g stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah2)"><line x1="130" y1="312" x2="188" y2="262"/><line x1="130" y1="314" x2="188" y2="297"/><line x1="130" y1="317" x2="188" y2="332"/><line x1="130" y1="320" x2="188" y2="366"/><line x1="260" y1="262" x2="318" y2="310"/><line x1="260" y1="297" x2="318" y2="313"/><line x1="260" y1="332" x2="318" y2="317"/><line x1="260" y1="366" x2="318" y2="322"/></g>
+              <!-- 5 -->
+              <rect x="470" y="300" width="70" height="30" rx="7" fill="rgba(125,211,252,.15)" stroke="#7dd3fc"/><text x="505" y="320" text-anchor="middle" fill="#e7eaf5" font-size="11">classify</text>
+              <g fill="rgba(76,201,240,.15)" stroke="#4cc9f0"><rect x="610" y="255" width="96" height="26" rx="6"/><rect x="610" y="302" width="96" height="26" rx="6"/><rect x="610" y="349" width="96" height="26" rx="6"/></g>
+              <g fill="#e7eaf5" font-size="11" text-anchor="middle"><text x="658" y="272">billing (Haiku)</text><text x="658" y="319">code (Sonnet)</text><text x="658" y="366">legal (Opus)</text></g>
+              <g stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah2)"><line x1="540" y1="310" x2="608" y2="270"/><line x1="540" y1="315" x2="608" y2="315"/><line x1="540" y1="320" x2="608" y2="360"/></g>
+              <g font-size="12" fill="#a9b1cf">
+                <rect x="20" y="398" width="12" height="12" fill="#f2c14e"/><text x="38" y="409">coordinator</text>
+                <rect x="130" y="398" width="12" height="12" fill="#4cc9f0"/><text x="148" y="409">worker</text>
+                <rect x="215" y="398" width="12" height="12" fill="#34d399"/><text x="233" y="409">shared state</text>
+                <rect x="325" y="398" width="12" height="12" fill="#fb7185"/><text x="343" y="409">quality gate</text>
+                <rect x="440" y="398" width="12" height="12" fill="#7dd3fc"/><text x="458" y="409">classifier</text>
+              </g>
+            </svg>
+          </div>
+          <p class="diagram-caption"><b>Diagram 2.</b> The five architectures in miniature. Gold boxes coordinate, cyan boxes do the work. The patterns combine: a fan-out step often sits inside one worker of an orchestrator-worker system.</p>
+        </div>
+
+        <h3 id="arch-orch">1. Orchestrator-worker</h3>
+        <p>A lead agent splits the task at run time, starts workers in parallel, reads their reports and decides whether more work is needed. <a href="https://www.anthropic.com/engineering/multi-agent-research-system" target="_blank" rel="noopener noreferrer">Anthropic's Research feature</a> works this way.</p>
+        <div class="arch"><dl>
+          <dt>Use when</dt><dd>Subtasks are unknown in advance and mostly independent: research, audits, vendor comparisons.</dd>
+          <dt>Avoid when</dt><dd>Workers must share most of their context. Most coding tasks have <a href="https://www.anthropic.com/engineering/multi-agent-research-system" target="_blank" rel="noopener noreferrer">fewer parallel parts than research</a>.</dd>
+          <dt>Cost profile</dt><dd>Roughly linear in workers, plus the lead's growing context. Cheaper worker models cut the slope.</dd>
+          <dt>Failure modes</dt><dd>Duplicated work from vague handoffs, and too many workers: early Anthropic agents spawned 50 subagents for simple queries.</dd>
+          <dt>Claude note</dt><dd>Define workers as <code>AgentDefinition</code> entries, allow the <code>Agent</code> tool, and cap depth, <a href="https://code.claude.com/docs/en/agent-sdk/subagents" target="_blank" rel="noopener noreferrer">concurrency (default 20)</a> and <code>max_budget_usd</code>.</dd>
+        </dl></div>
+
+        <!-- Diagram 3 -->
+        <div class="diagram-container">
+          <div class="fig-scroll">
+            <svg viewBox="0 0 800 400" role="img" aria-label="An orchestrator on Opus sends handoff prompts to four Sonnet workers in parallel; each worker has restricted tools; workers write to a shared store and return short reports; a budget guard spans the run; a human approval gate sits before any side effect">
+              <defs><marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a9b1cf"/></marker></defs>
+              <rect x="290" y="20" width="220" height="62" rx="12" fill="rgba(242,193,78,.14)" stroke="#f2c14e" stroke-width="2"/>
+              <text x="400" y="46" text-anchor="middle" fill="#f2c14e" font-weight="700" font-size="16">Orchestrator (Opus 5.5)</text>
+              <text x="400" y="68" text-anchor="middle" fill="#e7eaf5" font-size="12">plan &bull; delegate &bull; validate &bull; synthesise</text>
+              <g>
+                <rect x="30" y="140" width="160" height="70" rx="10" fill="rgba(76,201,240,.12)" stroke="#4cc9f0" stroke-width="2"/>
+                <rect x="220" y="140" width="160" height="70" rx="10" fill="rgba(76,201,240,.12)" stroke="#4cc9f0" stroke-width="2"/>
+                <rect x="410" y="140" width="160" height="70" rx="10" fill="rgba(76,201,240,.12)" stroke="#4cc9f0" stroke-width="2"/>
+                <rect x="600" y="140" width="160" height="70" rx="10" fill="rgba(76,201,240,.12)" stroke="#4cc9f0" stroke-width="2"/>
+              </g>
+              <g text-anchor="middle" font-size="14" font-weight="700" fill="#4cc9f0"><text x="110" y="168">Worker A</text><text x="300" y="168">Worker B</text><text x="490" y="168">Worker C</text><text x="680" y="168">Worker D</text></g>
+              <g text-anchor="middle" font-size="11" fill="#e7eaf5"><text x="110" y="190">Sonnet 5.5 &bull; own context</text><text x="300" y="190">Sonnet 5.5 &bull; own context</text><text x="490" y="190">Haiku 5.5 &bull; own context</text><text x="680" y="190">Sonnet 5.5 &bull; own context</text></g>
+              <g fill="rgba(177,151,252,.14)" stroke="#b197fc">
+                <rect x="45" y="226" width="60" height="22" rx="5"/><rect x="115" y="226" width="60" height="22" rx="5"/>
+                <rect x="235" y="226" width="60" height="22" rx="5"/><rect x="305" y="226" width="60" height="22" rx="5"/>
+                <rect x="425" y="226" width="130" height="22" rx="5"/>
+                <rect x="615" y="226" width="60" height="22" rx="5"/><rect x="685" y="226" width="60" height="22" rx="5"/>
+              </g>
+              <g text-anchor="middle" font-size="11" fill="#e7eaf5"><text x="75" y="241">Read</text><text x="145" y="241">Grep</text><text x="265" y="241">Search</text><text x="335" y="241">Fetch</text><text x="490" y="241">MCP: tickets (read-only)</text><text x="645" y="241">Read</text><text x="715" y="241">Bash</text></g>
+              <g stroke="#a9b1cf" stroke-width="1.6" marker-end="url(#ah3)"><line x1="330" y1="82" x2="120" y2="137"/><line x1="370" y1="82" x2="305" y2="137"/><line x1="430" y1="82" x2="485" y2="137"/><line x1="470" y1="82" x2="675" y2="137"/></g>
+              <rect x="300" y="100" width="200" height="20" rx="5" fill="#111832" stroke="#2a3566"/><text x="400" y="114" text-anchor="middle" fill="#a9b1cf" font-size="11">handoff prompt: goal, format, scope</text>
+              <rect x="180" y="290" width="440" height="40" rx="10" fill="rgba(52,211,153,.12)" stroke="#34d399" stroke-width="2"/>
+              <text x="400" y="315" text-anchor="middle" fill="#34d399" font-weight="700" font-size="14">Shared store: files, task board, findings (references, not copies)</text>
+              <g stroke="#34d399" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#ah3)"><line x1="110" y1="250" x2="230" y2="288"/><line x1="300" y1="250" x2="330" y2="288"/><line x1="490" y1="250" x2="470" y2="288"/><line x1="680" y1="250" x2="570" y2="288"/></g>
+              <rect x="640" y="20" width="140" height="62" rx="10" fill="rgba(251,113,133,.12)" stroke="#fb7185" stroke-width="2"/>
+              <text x="710" y="46" text-anchor="middle" fill="#fb7185" font-weight="700" font-size="14">Human gate</text>
+              <text x="710" y="66" text-anchor="middle" fill="#e7eaf5" font-size="11">before any write or send</text>
+              <line x1="510" y1="50" x2="636" y2="50" stroke="#fb7185" stroke-width="1.6" marker-end="url(#ah3)"/>
+              <rect x="20" y="20" width="200" height="62" rx="10" fill="rgba(251,191,36,.12)" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6 4"/>
+              <text x="120" y="46" text-anchor="middle" fill="#fbbf24" font-weight="700" font-size="14">Budget guard</text>
+              <text x="120" y="66" text-anchor="middle" fill="#e7eaf5" font-size="11">per-worker + per-run caps</text>
+              <g font-size="12" fill="#a9b1cf">
+                <rect x="20" y="365" width="12" height="12" fill="#f2c14e"/><text x="38" y="376">orchestrator</text>
+                <rect x="135" y="365" width="12" height="12" fill="#4cc9f0"/><text x="153" y="376">worker</text>
+                <rect x="215" y="365" width="12" height="12" fill="#b197fc"/><text x="233" y="376">tool (scoped)</text>
+                <rect x="330" y="365" width="12" height="12" fill="#34d399"/><text x="348" y="376">shared state</text>
+                <rect x="445" y="365" width="12" height="12" fill="#fb7185"/><text x="463" y="376">human approval</text>
+                <rect x="575" y="365" width="12" height="12" fill="#fbbf24"/><text x="593" y="376">budget guard</text>
+              </g>
+            </svg>
+          </div>
+          <p class="diagram-caption"><b>Diagram 3.</b> Orchestrator-worker in detail. Each worker gets only the tools its job needs, writes bulky output to the shared store and returns a short report. The lead cannot trigger a side effect without passing the human gate.</p>
+        </div>
+        <p>The handoff arrow matters most. <a href="https://www.anthropic.com/engineering/multi-agent-research-system" target="_blank" rel="noopener noreferrer">Anthropic found that each worker</a> needs an objective, an output format, tool guidance and clear boundaries, or workers duplicate each other.</p>
+
+        <h3 id="arch-hier">2. Hierarchical</h3>
+        <p>A director delegates to team leads, and each lead runs its own workers: orchestrator-worker applied twice.</p>
+        <div class="arch"><dl>
+          <dt>Use when</dt><dd>The work splits into domains that each need their own planning, such as security and documentation reviews of one release.</dd>
+          <dt>Avoid when</dt><dd>The task is small; each layer adds planning, summaries and latency.</dd>
+          <dt>Cost profile</dt><dd>Grows with leads &times; workers per lead.</dd>
+          <dt>Failure modes</dt><dd>Detail lost between layers, contradictory leads, runaway nesting.</dd>
+          <dt>Claude note</dt><dd>Subagents can <a href="https://code.claude.com/docs/en/agent-sdk/subagents" target="_blank" rel="noopener noreferrer">nest three layers deep</a> by default. For predictable cost, make the director plain Python that starts one budgeted SDK query per lead, as in Tutorial Advanced 1.</dd>
+        </dl></div>
+
+        <h3 id="arch-pipe">3. Sequential pipeline</h3>
+        <p>Agents run in a fixed order, each consuming the previous output, with programmatic gates between steps; <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">Anthropic calls this prompt chaining</a>. Many pipelines can run in parallel over different inputs.</p>
+        <div class="arch"><dl>
+          <dt>Use when</dt><dd>The same fixed steps apply every time and accuracy matters more than latency.</dd>
+          <dt>Avoid when</dt><dd>Later steps often send work back; that needs an evaluator loop.</dd>
+          <dt>Cost profile</dt><dd>The sum of the stages, which makes per-item caps easy.</dd>
+          <dt>Failure modes</dt><dd>Errors passed silently downstream, or gates so strict that everything fails.</dd>
+          <dt>Claude note</dt><dd>Plain Messages API calls suffice. Use a cheaper model on mechanical stages and cache shared instructions.</dd>
+        </dl></div>
+
+        <h3 id="arch-fan">4. Parallel fan-out and fan-in</h3>
+        <p>A splitter divides the input, identical workers process the pieces in parallel and a reducer merges the results. <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">Anthropic calls this parallelization</a>, in two forms: sectioning and voting.</p>
+        <div class="arch"><dl>
+          <dt>Use when</dt><dd>Thousands of similar items: classification, extraction, evaluation.</dd>
+          <dt>Avoid when</dt><dd>Items depend on each other, or answers are needed in seconds at volumes above your rate limits.</dd>
+          <dt>Cost profile</dt><dd>Linear in items and the cheapest per item, with <a href="https://platform.claude.com/docs/en/build-with-claude/batch-processing" target="_blank" rel="noopener noreferrer">batch pricing at 50% off</a> plus caching.</dd>
+          <dt>Failure modes</dt><dd>Rate-limit exhaustion and oversized items that break the budget.</dd>
+          <dt>Claude note</dt><dd>Batch results arrive in any order, so match on <code>custom_id</code>. A batch holds <a href="https://platform.claude.com/docs/en/build-with-claude/batch-processing" target="_blank" rel="noopener noreferrer">up to 100,000 requests</a> or 256 MB.</dd>
+        </dl></div>
+
+        <p>Fan-out is the pattern most likely to hit rate limits, so check the workload against your tier before you launch it.</p>
+
+        <!-- Widget 1: Rate limit estimator -->
+        <div class="widget w-violet" id="w-rate" role="region" aria-label="Widget 1: concurrency and rate-limit estimator">
+          <h4>Widget 1 &bull; Concurrency and rate-limit estimator</h4>
+          <p class="note">Uses the standard Messages API limits per model for each tier (Fable 5.1 shares a combined Fable bucket). Only uncached input counts toward the input-token limit on these models. Limits checked 22 October 2026.</p>
+          <div class="grid">
+            <div class="field"><label for="r-tier">Usage tier</label><select id="r-tier"><option value="start">Start</option><option value="build" selected>Build</option><option value="scale">Scale</option></select></div>
+            <div class="field"><label for="r-model">Model</label><select id="r-model"><option value="std" selected>Opus 5.5 / Sonnet 5.5 / Haiku 5.5</option><option value="fable">Fable 5.1</option></select></div>
+            <div class="field"><label for="r-agents">Concurrent agents</label><input id="r-agents" type="number" min="1" value="20" /></div>
+            <div class="field"><label for="r-rpm">Requests per minute per agent</label><input id="r-rpm" type="number" min="0.1" step="0.1" value="6" /></div>
+            <div class="field"><label for="r-in">Uncached input tokens per request</label><input id="r-in" type="number" min="0" value="6000" /></div>
+            <div class="field"><label for="r-out">Output tokens per request</label><input id="r-out" type="number" min="0" value="800" /></div>
+            <div class="field"><label for="r-total">Total requests in the job</label><input id="r-total" type="number" min="1" value="5000" /></div>
+          </div>
+          <button class="btn" id="r-go" type="button">Estimate</button>
+          <div class="err" id="r-err" role="alert"></div>
+          <div class="out" id="r-out" aria-live="polite"></div>
+        </div>
+
+        <h3 id="arch-router">5. Router</h3>
+        <p>A classifier hands each request to a specialist with its own prompt, tools and model, for example <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">small models for easy questions</a>.</p>
+        <div class="arch"><dl>
+          <dt>Use when</dt><dd>Traffic falls into distinct categories that classification separates accurately.</dd>
+          <dt>Avoid when</dt><dd>Categories overlap so much that misroutes are common.</dd>
+          <dt>Cost profile</dt><dd>Usually the cheapest per request. Haiku 5.5 input costs <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">$0.10 per million tokens</a> for prompts up to 100,000 tokens.</dd>
+          <dt>Failure modes</dt><dd>Hard work routed to a weak specialist, and drift as traffic changes.</dd>
+          <dt>Claude note</dt><dd>Log each routing decision and give the classifier an "unsure" route to a stronger model.</dd>
+        </dl></div>
+
+        <h3 id="arch-extra">Three more patterns</h3>
+        <p><strong>Peer-to-peer handoff</strong> passes control between agents without a lead, which cuts latency but complicates tracing and budgets. <strong>Blackboard</strong> systems share a workspace; Tutorial Advanced 1 uses one. <strong>Critic loops</strong> pair a generator with an evaluator until it accepts (<a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">Anthropic's evaluator-optimizer</a>). Cap the rounds: each one pays for both agents' context again.</p>
+
+        <h3 id="arch-compare">Side-by-side comparison</h3>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Architecture</th><th>Parallelism</th><th>Coordination overhead</th><th>Relative cost</th><th>Debuggability</th><th>Best fit</th></tr></thead>
+            <tbody>
+              <tr><td>Orchestrator-worker</td><td class="lo">High</td><td class="mid">Medium</td><td class="hi">High</td><td class="mid">Medium</td><td>Open-ended research and audits</td></tr>
+              <tr><td>Hierarchical</td><td class="lo">Very high</td><td class="hi">High</td><td class="hi">Highest</td><td class="hi">Low</td><td>Multi-domain programmes of work</td></tr>
+              <tr><td>Sequential pipeline</td><td class="hi">None per item</td><td class="lo">Low</td><td class="lo">Low to medium</td><td class="lo">High</td><td>Fixed, repeatable transformations</td></tr>
+              <tr><td>Fan-out / fan-in</td><td class="lo">Very high</td><td class="lo">Low</td><td class="lo">Lowest per item</td><td class="lo">High</td><td>Bulk classification and extraction</td></tr>
+              <tr><td>Router</td><td class="mid">Per request</td><td class="lo">Low</td><td class="lo">Low</td><td class="mid">Medium</td><td>Mixed traffic with clear categories</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:0.86rem;color:#94a3b8;">Green marks the favourable end of each column, red the unfavourable end. Relative cost assumes the same total work and model mix.</p>
+      </section>
+
+      <!-- Section 4 -->
+      <section class="content-card" id="tutorials">
+        <h2><span class="sec-num">04</span>Six tutorials</h2>
+        <p>Each tutorial runs several agents at once, reads the key from <code>ANTHROPIC_API_KEY</code>, records token usage and stops at a dollar cap. Cost estimates use <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">list prices checked</a> on 22 October 2026.</p>
+
+        <!-- Tut 1 -->
+        <div class="tut basic" id="t-b1">
+          <h3><span class="badge b-basic">Basic</span>1. Concurrent calls with asyncio</h3>
+          <p class="meta"><strong>Goal:</strong> send one document to three reviewer agents at once, then merge their output. <strong>Prerequisites:</strong> <a href="https://platform.claude.com/docs/en/api/sdks/python" target="_blank" rel="noopener noreferrer">Python 3.10+</a>, <code>pip install anthropic</code>, an API key.</p>
+          <ol class="steps">
+            <li>Run <code>python -m venv .venv &amp;&amp; source .venv/bin/activate &amp;&amp; pip install anthropic</code>, then <code>export ANTHROPIC_API_KEY=...</code>.</li>
+            <li>Save the code as <code>basic_parallel.py</code> and the text to review as <code>spec.md</code>.</li>
+            <li>Run <code>python basic_parallel.py spec.md</code>. Up to three calls run at once; each prints its tokens and the running cost.</li>
+            <li>Set <code>SESSION_CAP_USD = 0.01</code> and rerun to watch the ledger refuse the merge step.</li>
+          </ol>
+          <div class="codewrap">
+            <div class="cap"><span>basic_parallel.py</span><button class="copy" type="button" aria-label="Copy basic_parallel.py">Copy</button></div>
+            <pre><code class="language-python"># basic_parallel.py: three Claude calls at once, then one merge call.
+# Requires: pip install anthropic   (Python 3.10+). Key read from ANTHROPIC_API_KEY.
+import asyncio
+import sys
+
+from anthropic import AsyncAnthropic
+
+MODEL = "claude-sonnet-5-5"
+# USD per million tokens, from the Claude pricing page, checked 22 Oct 2026.
+PRICE = {"in": 2.00, "out": 10.00, "cache_write": 2.50, "cache_read": 0.10}
+SESSION_CAP_USD = 0.25          # hard stop for this whole run
+MAX_PARALLEL = 3                # stay well under your RPM limit
+
+client = AsyncAnthropic()       # retries 429 and 5xx twice by default
+
+
+class BudgetExceeded(RuntimeError):
+    pass
+
+
+class Ledger:
+    """Running cost total shared by every concurrent call."""
+
+    def __init__(self, cap_usd: float):
+        self.cap = cap_usd
+        self.spent = 0.0
+        self._lock = asyncio.Lock()
+
+    def check(self) -> None:
+        if self.spent >= self.cap:
+            raise BudgetExceeded(f"cap ${self.cap:.2f} reached (${self.spent:.4f} spent)")
+
+    async def charge(self, usage) -> float:
+        cost = (
+            usage.input_tokens * PRICE["in"]
+            + usage.output_tokens * PRICE["out"]
+            + (usage.cache_creation_input_tokens or 0) * PRICE["cache_write"]
+            + (usage.cache_read_input_tokens or 0) * PRICE["cache_read"]
+        ) / 1_000_000
+        async with self._lock:
+            self.spent += cost
+        return cost
+
+
+ledger = Ledger(SESSION_CAP_USD)
+gate = asyncio.Semaphore(MAX_PARALLEL)
+
+ROLES = {
+    "summary": "Summarise the document in five bullet points for an engineering manager.",
+    "risks": "List the technical and delivery risks the document implies, most severe first.",
+    "questions": "Write the five questions a sceptical reviewer would ask the author.",
+}
+
+
+async def run_agent(role: str, instruction: str, document: str) -> tuple[str, str]:
+    async with gate:
+        ledger.check()                          # refuse to start if the cap is gone
+        msg = await client.messages.create(
+            model=MODEL,
+            max_tokens=800,
+            system=f"You are the {role} agent in a review team. {instruction}",
+            messages=[{"role": "user", "content": document}],
+        )
+        cost = await ledger.charge(msg.usage)
+        print(f"[{role}] in={msg.usage.input_tokens} out={msg.usage.output_tokens} "
+              f"cost=${cost:.4f} total=${ledger.spent:.4f}")
+        text = "".join(b.text for b in msg.content if b.type == "text")
+        return role, text
+
+
+async def main(path: str) -> None:
+    document = open(path, encoding="utf-8").read()
+    results = await asyncio.gather(
+        *(run_agent(r, i, document) for r, i in ROLES.items()),
+        return_exceptions=True,
+    )
+    sections = []
+    for r in results:
+        if isinstance(r, Exception):
+            print(f"agent failed: {r!r}")      # one failure does not sink the others
+            continue
+        role, text = r
+        sections.append(f"## {role}\n{text}")
+
+    ledger.check()
+    merged = await client.messages.create(
+        model=MODEL,
+        max_tokens=1000,
+        system="Merge the review sections into one brief. Remove repetition. Keep every distinct risk.",
+        messages=[{"role": "user", "content": "\n\n".join(sections)}],
+    )
+    await ledger.charge(merged.usage)
+    print("".join(b.text for b in merged.content if b.type == "text"))
+    print(f"\nRun total: ${ledger.spent:.4f} of ${SESSION_CAP_USD:.2f} cap")
+
+
+if __name__ == "__main__":
+    asyncio.run(main(sys.argv[1]))</code></pre>
+          </div>
+          <p><strong>Expected output:</strong> three lines such as <code>[risks] in=2817 out=544 cost=$0.0111 total=$0.0222</code> in completion order, then the merged brief and the run total.</p>
+          <p><strong>What can go wrong:</strong> 429 errors when other workloads share your limits; <a href="https://platform.claude.com/docs/en/api/sdks/python" target="_blank" rel="noopener noreferrer">the SDK retries</a> 408, 409, 429 and 5xx twice with backoff. Replies can include thinking blocks, so the code keeps only <code>text</code> blocks.</p>
+          <p><strong>Estimated cost per run:</strong> about $0.05 for a 3,000-token document (11,500 input tokens at $2 per million, 2,600 output at $10).</p>
+        </div>
+
+        <!-- Tut 2 -->
+        <div class="tut basic" id="t-b2">
+          <h3><span class="badge b-basic">Basic</span>2. Parallel subagents with restricted tools</h3>
+          <p class="meta"><strong>Goal:</strong> one prompt that makes Claude start three read-only subagents in parallel over a code repository. <strong>Prerequisites:</strong> <code>pip install claude-agent-sdk</code>, a local repository, an API key.</p>
+          <ol class="steps">
+            <li>Run <code>pip install claude-agent-sdk</code>; the package bundles <a href="https://code.claude.com/docs/en/agent-sdk/agent-loop" target="_blank" rel="noopener noreferrer">a native Claude Code binary</a>.</li>
+            <li>Save the script in the repository root. Each worker lists only <code>Read</code>, <code>Grep</code> and <code>Glob</code>; any other tool is <a href="https://code.claude.com/docs/en/agent-sdk/subagents" target="_blank" rel="noopener noreferrer">absent from its session</a>.</li>
+            <li>Check the <code>env</code> block: depth <code>1</code> stops workers spawning workers, and concurrency <code>3</code> matches the three agents.</li>
+            <li>Run <code>python parallel_subagents.py</code>. <a href="https://code.claude.com/docs/en/agent-sdk/subagents" target="_blank" rel="noopener noreferrer">Subagents start in the background</a>, so the prompt tells Claude to wait for all three.</li>
+            <li>To reuse a worker in Claude Code, <a href="https://code.claude.com/docs/en/sub-agents" target="_blank" rel="noopener noreferrer">save it as Markdown</a> in <code>.claude/agents/</code>, as in the second snippet.</li>
+          </ol>
+          <div class="codewrap">
+            <div class="cap"><span>parallel_subagents.py</span><button class="copy" type="button" aria-label="Copy parallel_subagents.py">Copy</button></div>
+            <pre><code class="language-python"># parallel_subagents.py: one prompt, three read-only subagents running at once.
+# Requires: pip install claude-agent-sdk   Run it from the root of the repository to review.
+import asyncio
+
+from claude_agent_sdk import AgentDefinition, ClaudeAgentOptions, ResultMessage, query
+
+READ_ONLY = ["Read", "Grep", "Glob"]          # no Edit, Write or Bash for any worker
+
+AGENTS = {
+    "api-mapper": AgentDefinition(
+        description="Lists every public HTTP endpoint with its handler file.",
+        prompt="Find each route definition. Report path, method and handler file as a table. "
+               "Do not judge code quality.",
+        tools=READ_ONLY,
+        model="haiku",                         # mechanical search: smallest model
+    ),
+    "test-auditor": AgentDefinition(
+        description="Finds public functions that have no test covering them.",
+        prompt="Compare public functions in src/ with tests/. Report untested functions "
+               "with file and line. Maximum 25 items.",
+        tools=READ_ONLY,
+        model="sonnet",
+    ),
+    "secrets-scanner": AgentDefinition(
+        description="Looks for hard-coded credentials and unsafe config defaults.",
+        prompt="Search for API keys, tokens, passwords and debug flags left on. "
+               "Report file, line and why it matters. Never print a full secret.",
+        tools=READ_ONLY,
+        model="sonnet",
+    ),
+}
+
+PROMPT = (
+    "Run the api-mapper, test-auditor and secrets-scanner agents in parallel and wait for "
+    "all three. Then write one report with a section per agent and a short list of the "
+    "three most urgent fixes. Do not explore the code yourself."
+)
+
+
+async def main() -> None:
+    options = ClaudeAgentOptions(
+        allowed_tools=READ_ONLY + ["Agent"],   # Agent lets Claude start subagents
+        agents=AGENTS,
+        env={
+            "CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH": "1",   # workers cannot spawn workers
+            "CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS": "3",
+        },
+        max_budget_usd=1.50,                   # whole run, subagents included
+        max_turns=20,
+    )
+    try:
+        async for message in query(prompt=PROMPT, options=options):
+            if isinstance(message, ResultMessage):
+                print(message.result if message.subtype == "success" else f"Stopped: {message.subtype}")
+                print(f"Estimated cost: ${message.total_cost_usd or 0:.4f}")
+                for model, usage in (message.model_usage or {}).items():
+                    print(f"  {model}: {usage}")
+    except Exception as error:                 # query() raises after an error result
+        print(f"Run ended with an error: {error}")
+
+
+asyncio.run(main())</code></pre>
+          </div>
+          <div class="codewrap">
+            <div class="cap"><span>.claude/agents/secrets-scanner.md</span><button class="copy" type="button" aria-label="Copy .claude/agents/secrets-scanner.md">Copy</button></div>
+            <pre><code class="language-markdown">---
+name: secrets-scanner
+description: Looks for hard-coded credentials and unsafe config defaults. Use for security sweeps.
+tools: Read, Grep, Glob
+model: sonnet
+---
+
+Search the repository for API keys, tokens, passwords and debug flags left on.
+Report file, line and why it matters. Never print a full secret value.</code></pre>
+          </div>
+          <p><strong>Expected output:</strong> a three-section report, the estimated cost and one line per model; <code>model_usage</code> <a href="https://code.claude.com/docs/en/agent-sdk/cost-tracking" target="_blank" rel="noopener noreferrer">includes subagents</a> while <code>usage</code> does not.</p>
+          <p><strong>What can go wrong:</strong> Claude may answer directly; <a href="https://code.claude.com/docs/en/agent-sdk/subagents" target="_blank" rel="noopener noreferrer">naming the agents</a> in the prompt fixes it. <a href="https://code.claude.com/docs/en/agent-sdk/agent-loop" target="_blank" rel="noopener noreferrer">The budget is checked</a> after each response, so spend can pass the cap by one response.</p>
+          <p><strong>Estimated cost per run:</strong> around $1, capped at $1.50. <code>total_cost_usd</code> is <a href="https://code.claude.com/docs/en/agent-sdk/cost-tracking" target="_blank" rel="noopener noreferrer">a client-side estimate</a>; the Console is the billing record.</p>
+        </div>
+
+        <!-- Tut 3 -->
+        <div class="tut inter" id="t-i1">
+          <h3><span class="badge b-inter">Intermediate</span>1. Orchestrator with validated workers</h3>
+          <p class="meta"><strong>Goal:</strong> Opus plans, Sonnet workers research in parallel under their own caps, the orchestrator rejects malformed reports and synthesises the rest. <strong>Prerequisites:</strong> both SDKs from the basic tutorials.</p>
+          <ol class="steps">
+            <li><code>plan()</code> asks Opus for JSON subtasks, each with an objective, sources and an out-of-scope note, <a href="https://www.anthropic.com/engineering/multi-agent-research-system" target="_blank" rel="noopener noreferrer">the delegation format Anthropic recommends</a>. Malformed entries are dropped.</li>
+            <li><code>run_worker()</code> starts one Agent SDK session per subtask with only <code>WebSearch</code> and <code>WebFetch</code>, its own <code>max_budget_usd</code> and a turn cap.</li>
+            <li>The semaphore runs three workers at a time. Reports without a <code>FINDINGS:</code> section are rejected.</li>
+            <li>Run <code>python orchestrator.py "Compare managed vector databases that support hybrid search"</code> and read the per-worker stop reasons.</li>
+          </ol>
+          <div class="codewrap">
+            <div class="cap"><span>orchestrator.py</span><button class="copy" type="button" aria-label="Copy orchestrator.py">Copy</button></div>
+            <pre><code class="language-python"># orchestrator.py: plan with Opus, run Agent SDK workers in parallel, validate, synthesise.
+# Requires: pip install anthropic claude-agent-sdk
+import asyncio
+import json
+import sys
+
+from anthropic import AsyncAnthropic
+from claude_agent_sdk import ClaudeAgentOptions, ResultMessage, query
+
+LEAD_MODEL, WORKER_MODEL = "claude-opus-5-5", "claude-sonnet-5-5"
+OPUS = {"in": 4.00, "out": 20.00}          # USD per million tokens, checked 22 Oct 2026
+RUN_CAP_USD = 4.00                          # orchestrator + all workers
+WORKER_CAP_USD = 0.60                       # each worker stops itself here
+MAX_WORKERS, MAX_PARALLEL = 5, 3
+
+client = AsyncAnthropic()
+spent = 0.0
+
+
+def charge_lead(usage) -> None:
+    global spent
+    spent += (usage.input_tokens * OPUS["in"] + usage.output_tokens * OPUS["out"]) / 1e6
+    if spent >= RUN_CAP_USD:
+        raise RuntimeError(f"run cap hit at ${spent:.3f}")
+
+
+async def plan(question: str) -> list[dict]:
+    msg = await client.messages.create(
+        model=LEAD_MODEL,
+        max_tokens=1500,
+        system=(
+            "You plan research for parallel workers. Return only JSON: a list of at most "
+            f"{MAX_WORKERS} objects with keys 'id', 'objective', 'sources', 'out_of_scope'. "
+            "Subtasks must not overlap. Simple questions need one subtask."
+        ),
+        messages=[{"role": "user", "content": question}],
+    )
+    charge_lead(msg.usage)
+    text = "".join(b.text for b in msg.content if b.type == "text")
+    tasks = json.loads(text[text.find("["): text.rfind("]") + 1])
+    required = {"id", "objective", "sources", "out_of_scope"}
+    tasks = [t for t in tasks if required <= t.keys()][:MAX_WORKERS]
+    if not tasks:
+        raise ValueError("planner returned no valid subtasks")
+    return tasks
+
+
+async def run_worker(task: dict, gate: asyncio.Semaphore) -> dict:
+    global spent
+    prompt = (
+        f"Objective: {task['objective']}\nPreferred sources: {task['sources']}\n"
+        f"Out of scope (another worker covers it): {task['out_of_scope']}\n"
+        "Finish with a section headed FINDINGS: listing claims, each with a source URL."
+    )
+    options = ClaudeAgentOptions(
+        model=WORKER_MODEL,
+        allowed_tools=["WebSearch", "WebFetch"],
+        max_budget_usd=WORKER_CAP_USD,
+        max_turns=15,
+    )
+    async with gate:
+        if spent >= RUN_CAP_USD:
+            return {"id": task["id"], "ok": False, "reason": "run cap reached before start"}
+        result = None
+        try:
+            async for m in query(prompt=prompt, options=options):
+                if isinstance(m, ResultMessage):
+                    result = m
+        except Exception as error:              # error results raise after being yielded
+            if result is None:
+                return {"id": task["id"], "ok": False, "reason": repr(error)}
+        spent += result.total_cost_usd or 0     # SDK estimate; billing is authoritative
+        ok = result.subtype == "success" and "FINDINGS:" in (result.result or "")
+        return {"id": task["id"], "ok": ok, "reason": result.subtype,
+                "cost": result.total_cost_usd, "text": result.result or ""}
+
+
+async def main(question: str) -> None:
+    tasks = await plan(question)
+    print(f"Plan: {[t['id'] for t in tasks]}  (spent ${spent:.3f})")
+    gate = asyncio.Semaphore(MAX_PARALLEL)
+    reports = await asyncio.gather(*(run_worker(t, gate) for t in tasks))
+    for r in reports:
+        print(f"  {r['id']}: ok={r['ok']} reason={r['reason']} cost=${r.get('cost') or 0:.3f}")
+
+    good = [r for r in reports if r["ok"]]
+    if not good:
+        sys.exit("No worker produced valid findings; nothing to synthesise.")
+    findings = "\n\n".join(f"### {r['id']}\n{r['text']}" for r in good)
+    final = await client.messages.create(
+        model=LEAD_MODEL,
+        max_tokens=2500,
+        system="Synthesise the worker findings into one answer. Keep every source URL. "
+               "Flag claims that only one worker supports.",
+        messages=[{"role": "user", "content": f"Question: {question}\n\n{findings}"}],
+    )
+    charge_lead(final.usage)
+    print("".join(b.text for b in final.content if b.type == "text"))
+    print(f"\nRun total (estimate): ${spent:.3f} of ${RUN_CAP_USD:.2f}")
+
+
+if __name__ == "__main__":
+    asyncio.run(main(" ".join(sys.argv[1:])))</code></pre>
+          </div>
+          <p><strong>Expected output:</strong> plan ids, one status line per worker, a synthesised answer with source URLs and an estimated total.</p>
+          <p><strong>What can go wrong:</strong> the planner may wrap JSON in prose, hence the slice from the first <code>[</code> to the last <code>]</code>. <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Worker web searches add</a> $10 per 1,000. If workers overlap, tighten the out-of-scope wording.</p>
+          <p><strong>Estimated cost per run:</strong> about $1.90 (Opus planning and synthesis $0.13, five workers about $0.35 each), capped at $4.</p>
+        </div>
+
+        <!-- Tut 4 -->
+        <div class="tut inter" id="t-i2">
+          <h3><span class="badge b-inter">Intermediate</span>2. Batch fan-out with prompt caching</h3>
+          <p class="meta"><strong>Goal:</strong> classify 10,000 tickets through the Message Batches API with one cached rubric, and compare the bill with synchronous calls. <strong>Prerequisites:</strong> the <code>anthropic</code> SDK, a folder of <code>.txt</code> tickets and a <code>rubric.md</code> of at least 512 tokens, <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" target="_blank" rel="noopener noreferrer">the minimum cacheable length</a> on the 5.5 models.</p>
+          <ol class="steps">
+            <li>The rubric sits in the system prompt with a 1-hour <code>cache_control</code> TTL, which <a href="https://platform.claude.com/docs/en/build-with-claude/batch-processing" target="_blank" rel="noopener noreferrer">Anthropic recommends for batches</a>.</li>
+            <li>A pre-flight estimate refuses jobs over the cap, because a running batch cannot be capped; cancel is the emergency brake.</li>
+            <li>Run <code>python batch_fanout.py tickets/</code>. <a href="https://platform.claude.com/docs/en/build-with-claude/batch-processing" target="_blank" rel="noopener noreferrer">Most batches finish within</a> an hour and expire after 24.</li>
+            <li>Results arrive in any order; the script matches <code>custom_id</code>, sums usage, writes <code>labels.json</code> and prints both costs.</li>
+          </ol>
+          <div class="codewrap">
+            <div class="cap"><span>batch_fanout.py</span><button class="copy" type="button" aria-label="Copy batch_fanout.py">Copy</button></div>
+            <pre><code class="language-python"># batch_fanout.py: classify thousands of documents with the Message Batches API,
+# sharing one cached rubric, then compare the bill with synchronous calls.
+# Requires: pip install anthropic
+import json
+import pathlib
+import sys
+import time
+
+import anthropic
+from anthropic.types.message_create_params import MessageCreateParamsNonStreaming
+from anthropic.types.messages.batch_create_params import Request
+
+MODEL = "claude-haiku-5-5"
+# Haiku 5.5 list prices for prompts up to 100,000 tokens, USD per million (22 Oct 2026).
+P = {"in": 0.10, "out": 0.50, "write_1h": 0.20, "read": 0.01}
+BATCH_DISCOUNT = 0.5             # batch pricing is 50% of standard, caching stacks with it
+JOB_CAP_USD = 5.00
+CHARS_PER_TOKEN = 3              # deliberately pessimistic pre-flight estimate
+
+client = anthropic.Anthropic()
+rubric = pathlib.Path("rubric.md").read_text(encoding="utf-8")   # long, shared, cacheable
+docs = sorted(pathlib.Path(sys.argv[1]).glob("*.txt"))
+
+SYSTEM = [
+    {"type": "text", "text": "Classify the support ticket using the rubric. Reply with JSON."},
+    # 1-hour TTL because batch work can take longer than the default 5 minutes
+    {"type": "text", "text": rubric, "cache_control": {"type": "ephemeral", "ttl": "1h"}},
+]
+
+# Pre-flight: refuse to submit a job whose worst case is over the cap.
+est_in = sum(len(d.read_text(encoding="utf-8")) + len(rubric) for d in docs) / CHARS_PER_TOKEN
+est_out = 300 * len(docs)
+worst = (est_in * P["write_1h"] + est_out * P["out"]) / 1e6 * BATCH_DISCOUNT
+print(f"{len(docs)} docs, worst-case estimate ${worst:.2f}")
+if worst > JOB_CAP_USD:
+    sys.exit(f"Refusing to submit: estimate exceeds ${JOB_CAP_USD:.2f}")
+
+requests = [
+    Request(
+        custom_id=f"doc-{i:06d}",                       # results return in any order
+        params=MessageCreateParamsNonStreaming(
+            model=MODEL,
+            max_tokens=300,
+            system=SYSTEM,
+            messages=[{"role": "user", "content": d.read_text(encoding="utf-8")}],
+        ),
+    )
+    for i, d in enumerate(docs)
+]
+batch = client.messages.batches.create(requests=requests)   # up to 100,000 requests
+print("Submitted", batch.id)
+
+while True:
+    batch = client.messages.batches.retrieve(batch.id)
+    if batch.processing_status == "ended":
+        break
+    print("processing:", batch.request_counts)
+    time.sleep(60)
+
+tok = {"in": 0, "out": 0, "write": 0, "read": 0}
+labels, failed = {}, []
+for result in client.messages.batches.results(batch.id):
+    if result.result.type != "succeeded":
+        failed.append(result.custom_id)               # errored/expired requests are not billed
+        continue
+    msg = result.result.message
+    u = msg.usage
+    tok["in"] += u.input_tokens
+    tok["out"] += u.output_tokens
+    tok["write"] += u.cache_creation_input_tokens or 0
+    tok["read"] += u.cache_read_input_tokens or 0
+    labels[result.custom_id] = "".join(b.text for b in msg.content if b.type == "text")
+
+list_cost = (tok["in"] * P["in"] + tok["out"] * P["out"]
+             + tok["write"] * P["write_1h"] + tok["read"] * P["read"]) / 1e6
+batch_cost = list_cost * BATCH_DISCOUNT
+sync_no_cache = ((tok["in"] + tok["write"] + tok["read"]) * P["in"] + tok["out"] * P["out"]) / 1e6
+hit_rate = tok["read"] / max(1, tok["read"] + tok["write"])
+
+pathlib.Path("labels.json").write_text(json.dumps(labels, indent=1))
+print(json.dumps(tok), f"cache hit rate {hit_rate:.0%}")
+print(f"Batch + cache: ${batch_cost:.2f}   Synchronous, no cache: ${sync_no_cache:.2f}")
+print(f"Failed or expired: {len(failed)} (resubmit these ids)")</code></pre>
+          </div>
+
+          <!-- Diagram 4 -->
+          <div class="diagram-container">
+            <div class="fig-scroll">
+              <svg viewBox="0 0 800 330" role="img" aria-label="Ten thousand tickets are split into batch requests that share a cached rubric prefix; the Batches API processes them asynchronously at half price; results return as JSONL in any order and are matched by custom_id in a reducer">
+                <defs><marker id="ah4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a9b1cf"/></marker></defs>
+                <rect x="20" y="110" width="120" height="70" rx="10" fill="rgba(242,193,78,.14)" stroke="#f2c14e" stroke-width="2"/>
+                <text x="80" y="140" text-anchor="middle" fill="#f2c14e" font-weight="700" font-size="14">Splitter</text>
+                <text x="80" y="160" text-anchor="middle" fill="#e7eaf5" font-size="11">10,000 tickets</text>
+                <g>
+                  <rect x="190" y="40" width="210" height="40" rx="8" fill="rgba(76,201,240,.10)" stroke="#4cc9f0"/>
+                  <rect x="190" y="95" width="210" height="40" rx="8" fill="rgba(76,201,240,.10)" stroke="#4cc9f0"/>
+                  <rect x="190" y="150" width="210" height="40" rx="8" fill="rgba(76,201,240,.10)" stroke="#4cc9f0"/>
+                  <rect x="190" y="215" width="210" height="40" rx="8" fill="rgba(76,201,240,.10)" stroke="#4cc9f0"/>
+                  <rect x="196" y="46" width="110" height="28" rx="5" fill="rgba(52,211,153,.22)" stroke="#34d399"/>
+                  <rect x="196" y="101" width="110" height="28" rx="5" fill="rgba(52,211,153,.22)" stroke="#34d399"/>
+                  <rect x="196" y="156" width="110" height="28" rx="5" fill="rgba(52,211,153,.22)" stroke="#34d399"/>
+                  <rect x="196" y="221" width="110" height="28" rx="5" fill="rgba(52,211,153,.22)" stroke="#34d399"/>
+                </g>
+                <g font-size="11" fill="#e7eaf5"><text x="206" y="64">cached rubric</text><text x="206" y="119">cached rubric</text><text x="206" y="174">cached rubric</text><text x="206" y="239">cached rubric</text>
+                <text x="318" y="64">ticket 1</text><text x="318" y="119">ticket 2</text><text x="318" y="174">ticket 3</text><text x="318" y="239">ticket n</text></g>
+                <text x="295" y="206" text-anchor="middle" fill="#a9b1cf" font-size="14">&vellip;</text>
+                <g stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah4)"><line x1="140" y1="130" x2="188" y2="60"/><line x1="140" y1="140" x2="188" y2="115"/><line x1="140" y1="150" x2="188" y2="170"/><line x1="140" y1="160" x2="188" y2="235"/></g>
+                <rect x="440" y="80" width="150" height="140" rx="12" fill="rgba(177,151,252,.12)" stroke="#b197fc" stroke-width="2"/>
+                <text x="515" y="112" text-anchor="middle" fill="#b197fc" font-weight="700" font-size="14">Batches API</text>
+                <text x="515" y="136" text-anchor="middle" fill="#e7eaf5" font-size="11">50% of list price</text>
+                <text x="515" y="156" text-anchor="middle" fill="#e7eaf5" font-size="11">most done &lt; 1 hour</text>
+                <text x="515" y="176" text-anchor="middle" fill="#e7eaf5" font-size="11">expires at 24 hours</text>
+                <text x="515" y="196" text-anchor="middle" fill="#e7eaf5" font-size="11">cache hits best-effort</text>
+                <g stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah4)"><line x1="400" y1="60" x2="438" y2="110"/><line x1="400" y1="115" x2="438" y2="135"/><line x1="400" y1="170" x2="438" y2="165"/><line x1="400" y1="235" x2="438" y2="195"/></g>
+                <rect x="630" y="80" width="150" height="60" rx="10" fill="rgba(76,201,240,.12)" stroke="#4cc9f0" stroke-width="2"/>
+                <text x="705" y="106" text-anchor="middle" fill="#4cc9f0" font-weight="700" font-size="13">Results JSONL</text>
+                <text x="705" y="126" text-anchor="middle" fill="#e7eaf5" font-size="11">any order &bull; custom_id</text>
+                <rect x="630" y="170" width="150" height="60" rx="10" fill="rgba(242,193,78,.14)" stroke="#f2c14e" stroke-width="2"/>
+                <text x="705" y="196" text-anchor="middle" fill="#f2c14e" font-weight="700" font-size="13">Reducer</text>
+                <text x="705" y="216" text-anchor="middle" fill="#e7eaf5" font-size="11">labels + cost report</text>
+                <line x1="590" y1="140" x2="628" y2="112" stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah4)"/>
+                <line x1="705" y1="140" x2="705" y2="168" stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah4)"/>
+                <rect x="440" y="250" width="340" height="34" rx="8" fill="rgba(251,191,36,.12)" stroke="#fbbf24" stroke-dasharray="6 4"/>
+                <text x="610" y="272" text-anchor="middle" fill="#fbbf24" font-size="12" font-weight="700">Pre-flight estimate must fit the job cap before submit</text>
+                <g font-size="12" fill="#a9b1cf">
+                  <rect x="20" y="305" width="12" height="12" fill="#f2c14e"/><text x="38" y="316">coordinator</text>
+                  <rect x="130" y="305" width="12" height="12" fill="#4cc9f0"/><text x="148" y="316">request / result</text>
+                  <rect x="270" y="305" width="12" height="12" fill="#34d399"/><text x="288" y="316">cached prefix</text>
+                  <rect x="390" y="305" width="12" height="12" fill="#b197fc"/><text x="408" y="316">platform</text>
+                  <rect x="480" y="305" width="12" height="12" fill="#fbbf24"/><text x="498" y="316">budget guard</text>
+                </g>
+              </svg>
+            </div>
+            <p class="diagram-caption"><b>Diagram 4.</b> Fan-out and fan-in through the Batches API. The green prefix is identical in every request, so after the first write it is read from cache at a fraction of the input price; the 50% batch discount applies on top.</p>
+          </div>
+          <p><a href="https://platform.claude.com/docs/en/build-with-claude/batch-processing" target="_blank" rel="noopener noreferrer">Batch cache hits are best-effort</a>, between 30% and 98% depending on traffic, so the script reports your measured rate.</p>
+          <p><strong>What can go wrong:</strong> expired requests are not billed and need resubmitting, and batches can <a href="https://platform.claude.com/docs/en/build-with-claude/batch-processing" target="_blank" rel="noopener noreferrer">slightly overshoot a workspace</a> spend limit. Haiku 5.5 charges <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">five times its base rates</a> when a prompt exceeds 100,000 tokens.</p>
+          <p><strong>Estimated cost per run:</strong> for 1,500-token tickets, a 2,000-token rubric, 300 output tokens and an 80% hit rate, about $1.98 batched and cached against $5.00 synchronous: uncached input 15M &times; $0.05 = $0.75, cache reads 16M &times; $0.005 = $0.08, cache writes 4M &times; $0.10 = $0.40, output 3M &times; $0.25 = $0.75.</p>
+        </div>
+
+        <!-- Tut 5 -->
+        <div class="tut adv" id="t-a1">
+          <h3><span class="badge b-adv">Advanced</span>1. Hierarchical teams with shared state and budgets</h3>
+          <p class="meta"><strong>Goal:</strong> a Python director runs two team leads in parallel; each lead manages subagents under its own spend cap, all agents post to one MCP findings board, and every event goes to a JSON log. <strong>Prerequisites:</strong> the Agent SDK and a repository with <code>src/</code> and <code>docs/</code>.</p>
+          <ol class="steps">
+            <li><code>@tool</code> defines the board's two tools and <code>create_sdk_mcp_server</code> <a href="https://code.claude.com/docs/en/agent-sdk/custom-tools" target="_blank" rel="noopener noreferrer">serves them in-process</a>; agents call them as <code>mcp__board__post_finding</code> and <code>mcp__board__read_board</code>.</li>
+            <li>Each lead gets its own <code>max_budget_usd</code>, which covers its subagents: at the cap the SDK refuses new subagents, stops running ones and returns <code>error_max_budget_usd</code>. <a href="https://code.claude.com/docs/en/agent-sdk/subagents" target="_blank" rel="noopener noreferrer">Subagents also get</a> <code>maxTurns</code> (camelCase in Python).</li>
+            <li>Once the global cap is spent, <code>post_finding</code> returns <code>is_error</code>, so agents read <a href="https://code.claude.com/docs/en/agent-sdk/custom-tools" target="_blank" rel="noopener noreferrer">a clear refusal</a> and wrap up.</li>
+            <li>Run <code>python hierarchy.py</code> and inspect <code>run.jsonl</code>: lead starts, findings, lead ends with <code>model_usage</code>, and the run end.</li>
+          </ol>
+          <div class="codewrap">
+            <div class="cap"><span>hierarchy.py</span><button class="copy" type="button" aria-label="Copy hierarchy.py">Copy</button></div>
+            <pre><code class="language-python"># hierarchy.py: a Python director runs two team leads in parallel. Each lead is an Agent SDK
+# session with its own subagents, its own budget and access to a shared findings board
+# served as an in-process MCP server. Every event is logged as one JSON line.
+# Requires: pip install claude-agent-sdk
+import asyncio
+import json
+import time
+from typing import Any
+
+from claude_agent_sdk import (AgentDefinition, ClaudeAgentOptions, ResultMessage,
+                              create_sdk_mcp_server, query, tool)
+
+GLOBAL_CAP_USD = 6.00
+LEAD_CAP_USD = {"security": 3.00, "docs": 2.00}
+LOG = open("run.jsonl", "a", encoding="utf-8")
+
+
+def log(**event: Any) -> None:
+    event["ts"] = round(time.time(), 3)
+    LOG.write(json.dumps(event) + "\n")
+    LOG.flush()
+
+
+# ---- shared state: the blackboard ------------------------------------------------
+BOARD: list[dict] = []
+BOARD_LOCK = asyncio.Lock()
+SPENT = {"total": 0.0}
+
+
+@tool("post_finding", "Record one finding on the shared board. Call once per finding.",
+      {"author": str, "severity": str, "summary": str, "location": str})
+async def post_finding(args: dict[str, Any]) -> dict[str, Any]:
+    if SPENT["total"] >= GLOBAL_CAP_USD:          # the board refuses work once money is gone
+        return {"content": [{"type": "text", "text": "Budget exhausted: stop and report."}],
+                "is_error": True}
+    async with BOARD_LOCK:
+        BOARD.append(args)
+        n = len(BOARD)
+    log(event="finding", **args)
+    return {"content": [{"type": "text", "text": f"Recorded as finding #{n}."}]}
+
+
+@tool("read_board", "Read every finding posted so far by any team.", {})
+async def read_board(args: dict[str, Any]) -> dict[str, Any]:
+    async with BOARD_LOCK:
+        snapshot = json.dumps(BOARD, indent=1)
+    return {"content": [{"type": "text", "text": snapshot or "[]"}]}
+
+
+board = create_sdk_mcp_server(name="board", version="1.0.0", tools=[post_finding, read_board])
+BOARD_TOOLS = ["mcp__board__post_finding", "mcp__board__read_board"]
+READ = ["Read", "Grep", "Glob"]
+
+TEAMS = {
+    "security": {
+        "brief": "Audit authentication, input validation and secrets handling in src/.",
+        "workers": {
+            "authn-reviewer": AgentDefinition(
+                description="Reviews login, session and token code.",
+                prompt="Review authentication code. Post each issue with post_finding.",
+                tools=READ + BOARD_TOOLS, model="sonnet", maxTurns=12),
+            "input-reviewer": AgentDefinition(
+                description="Reviews request parsing and validation.",
+                prompt="Find unvalidated input paths. Post each issue with post_finding.",
+                tools=READ + BOARD_TOOLS, model="sonnet", maxTurns=12),
+        },
+    },
+    "docs": {
+        "brief": "Check that docs/ matches the public API in src/.",
+        "workers": {
+            "api-diff": AgentDefinition(
+                description="Compares documented endpoints with code.",
+                prompt="List endpoints that are undocumented or documented wrongly. "
+                       "Post each with post_finding.",
+                tools=READ + BOARD_TOOLS, model="haiku", maxTurns=10),
+        },
+    },
+}
+
+
+async def run_lead(team: str) -> dict:
+    spec = TEAMS[team]
+    options = ClaudeAgentOptions(
+        model="claude-sonnet-5-5",
+        mcp_servers={"board": board},
+        agents=spec["workers"],
+        allowed_tools=READ + BOARD_TOOLS + ["Agent"],
+        env={"CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH": "1",
+             "CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS": "3"},
+        max_budget_usd=LEAD_CAP_USD[team],      # halts this lead and its subagents
+        max_turns=25,
+    )
+    prompt = (f"You lead the {team} team. {spec['brief']} Delegate to your agents in "
+              f"parallel, wait for them, then read_board and write a team summary.")
+    log(event="lead_start", team=team, cap=LEAD_CAP_USD[team])
+    result = None
+    try:
+        async for m in query(prompt=prompt, options=options):
+            if isinstance(m, ResultMessage):
+                result = m
+    except Exception as error:
+        log(event="lead_error", team=team, error=repr(error))
+    cost = (result.total_cost_usd or 0) if result else 0
+    SPENT["total"] += cost
+    log(event="lead_end", team=team, subtype=result.subtype if result else "crash",
+        cost=cost, model_usage=result.model_usage if result else None)
+    return {"team": team, "summary": result.result if result and result.subtype == "success" else ""}
+
+
+async def director() -> None:
+    teams = await asyncio.gather(*(run_lead(t) for t in TEAMS))
+    log(event="teams_done", spent=SPENT["total"], findings=len(BOARD))
+    if SPENT["total"] >= GLOBAL_CAP_USD:
+        print("Global cap reached; skipping synthesis.")
+        return
+    summaries = "\n\n".join(f"## {t['team']}\n{t['summary']}" for t in teams)
+    async for m in query(
+        prompt=f"Merge these team summaries into one release-risk report:\n\n{summaries}",
+        options=ClaudeAgentOptions(model="claude-opus-5-5", allowed_tools=[],
+                                   max_budget_usd=GLOBAL_CAP_USD - SPENT["total"], max_turns=2),
+    ):
+        if isinstance(m, ResultMessage):
+            SPENT["total"] += m.total_cost_usd or 0
+            print(m.result)
+    log(event="run_end", spent=SPENT["total"])
+    print(f"Estimated spend ${SPENT['total']:.2f} of ${GLOBAL_CAP_USD:.2f}")
+
+
+asyncio.run(director())</code></pre>
+          </div>
+          <p><strong>Expected output:</strong> a merged release-risk report, an estimated spend line and a log that shows who found what at what cost.</p>
+          <p><strong>What can go wrong:</strong> the global total updates only when a lead finishes, so the per-lead caps are the mid-run control; keep their sum ($5) under the global cap ($6). Agents can post duplicate findings; deduplicate in synthesis.</p>
+          <p><strong>Estimated cost per run:</strong> $3 to $5 on a mid-sized repository, capped at $6.</p>
+        </div>
+
+        <!-- Tut 6 -->
+        <div class="tut adv" id="t-a2">
+          <h3><span class="badge b-adv">Advanced</span>2. Concurrent cloud agents with a kill switch</h3>
+          <p class="meta"><strong>Goal:</strong> run six Claude Managed Agents sessions, four at a time, in Anthropic-managed sandboxes, with per-session budgets, a fleet cap, rate-limit retries and a Ctrl+C kill switch. <strong>Prerequisites:</strong> <code>pip install anthropic</code>, the <code>ant</code> CLI and an API key. <a href="https://platform.claude.com/docs/en/managed-agents/overview" target="_blank" rel="noopener noreferrer">Managed Agents is in beta</a>; the SDK sets the required beta header.</p>
+          <ol class="steps">
+            <li><a href="https://platform.claude.com/docs/en/managed-agents/quickstart" target="_blank" rel="noopener noreferrer">Install the CLI</a> (<code>brew install anthropics/tap/ant</code> on macOS; Linux binaries are on GitHub).</li>
+            <li>Save the two files below and run <code>ant apply dependency-upgrader.md upgrade-env.yaml</code>; <a href="https://platform.claude.com/docs/en/managed-agents/quickstart" target="_blank" rel="noopener noreferrer">it prints both IDs</a>. Export them as <code>AGENT_ID</code> and <code>ENVIRONMENT_ID</code>.</li>
+            <li><code>reserve()</code> books each session's full budget before it starts and skips tasks that would pass the fleet cap, so the fleet cannot commit more than its cap.</li>
+            <li>Each session gets <code>budget={"type": "limit", "max_list_cost": {"amount": "150", "currency": "USD"}}</code>, in whole US cents. It covers tokens, web searches and $0.08 per running hour; at the limit <a href="https://platform.claude.com/docs/en/managed-agents/budgets" target="_blank" rel="noopener noreferrer">the session goes idle</a> with <code>budget_reached</code>.</li>
+            <li>Run <code>python fleet.py</code>. Ctrl+C <a href="https://platform.claude.com/docs/en/managed-agents/events-and-streaming" target="_blank" rel="noopener noreferrer">stops new sessions</a> and sends <code>user.interrupt</code> to running ones.</li>
+          </ol>
+          <div class="codewrap">
+            <div class="cap"><span>dependency-upgrader.md</span><button class="copy" type="button" aria-label="Copy dependency-upgrader.md">Copy</button></div>
+            <pre><code class="language-markdown">---
+name: Dependency Upgrader
+model: claude-sonnet-5-5
+tools:
+  - type: agent_toolset_20260401
+---
+
+You upgrade one dependency in the repository you are given. Run the test suite before
+and after. If tests fail after the upgrade, revert and explain why. Never push to a remote.</code></pre>
+          </div>
+          <div class="codewrap">
+            <div class="cap"><span>upgrade-env.yaml</span><button class="copy" type="button" aria-label="Copy upgrade-env.yaml">Copy</button></div>
+            <pre><code class="language-yaml"># yaml-language-server: $schema=https://platform.claude.com/schemas/ant/beta/environment.json
+name: upgrade-env
+config:
+  type: cloud
+  networking:
+    type: limited
+    allow_package_managers: true</code></pre>
+          </div>
+          <div class="codewrap">
+            <div class="cap"><span>fleet.py</span><button class="copy" type="button" aria-label="Copy fleet.py">Copy</button></div>
+            <pre><code class="language-python"># fleet.py: run several Claude Managed Agents sessions at once with a per-session dollar
+# budget, a global reservation-based cap, retries on rate limits and a kill switch.
+# Requires: pip install anthropic. AGENT_ID and ENVIRONMENT_ID come from `ant apply`.
+import os
+import random
+import signal
+import threading
+import time
+from concurrent.futures import ThreadPoolExecutor
+
+import anthropic
+
+client = anthropic.Anthropic()
+AGENT_ID, ENV_ID = os.environ["AGENT_ID"], os.environ["ENVIRONMENT_ID"]
+
+SESSION_CAP_CENTS = 150          # $1.50 per session: tokens + web search + $0.08/running hour
+GLOBAL_CAP_CENTS = 900           # $9.00 for the whole fleet
+MAX_CONCURRENT = 4               # create endpoints allow 300 requests/minute per org
+KILL = threading.Event()         # set by Ctrl+C, a file flag or your own alerting
+lock = threading.Lock()
+ledger = {"reserved": 0, "spent": 0}
+
+signal.signal(signal.SIGINT, lambda *_: KILL.set())
+
+
+def reserve(cents: int) -> bool:
+    """Reserve a session's whole budget before starting it, so the fleet can never
+    commit more than GLOBAL_CAP_CENTS even if every session spends its maximum."""
+    with lock:
+        if KILL.is_set() or ledger["reserved"] + cents > GLOBAL_CAP_CENTS:
+            return False
+        ledger["reserved"] += cents
+        return True
+
+
+def settle(reserved: int, actual: int) -> None:
+    with lock:
+        ledger["reserved"] -= reserved - actual   # release the unused part
+        ledger["spent"] += actual
+
+
+def with_retry(fn, attempts: int = 5):
+    for i in range(attempts):
+        try:
+            return fn()
+        except anthropic.RateLimitError:          # SDK already retried twice
+            time.sleep(min(60, 2 ** i) + random.random())
+    raise RuntimeError("rate limited after retries")
+
+
+def run_task(task: str) -> dict:
+    if not reserve(SESSION_CAP_CENTS):
+        return {"task": task, "status": "skipped: cap or kill switch"}
+    session = with_retry(lambda: client.beta.sessions.create(
+        agent=AGENT_ID,
+        environment_id=ENV_ID,
+        title=task[:60],
+        budget={"type": "limit",
+                "max_list_cost": {"amount": str(SESSION_CAP_CENTS), "currency": "USD"}},
+    ))
+    cost_cents, stop, interrupted = SESSION_CAP_CENTS, "unknown", False  # assume the worst
+    with client.beta.sessions.events.stream(session.id) as stream:
+        client.beta.sessions.events.send(session.id, events=[
+            {"type": "user.message", "content": [{"type": "text", "text": task}]}])
+        for event in stream:
+            if KILL.is_set() and not interrupted:  # stop work; keep reading until idle
+                client.beta.sessions.events.send(session.id, events=[{"type": "user.interrupt"}])
+                interrupted = True
+            if event.type == "session.usage":     # fires just before the session goes idle
+                cost_cents = int(event.usage.list_cost.amount)   # whole cents as a string
+            elif event.type == "session.status_idle":
+                stop = event.stop_reason.type     # end_turn, requires_action or budget_reached
+                break
+            elif event.type == "session.error":
+                stop = "error"
+                break
+    settle(SESSION_CAP_CENTS, cost_cents)
+    return {"task": task, "session": session.id, "stop": stop, "cents": cost_cents}
+
+
+TASKS = [f"Upgrade {pkg} to its latest minor version in repo ./service"
+         for pkg in ["requests", "pydantic", "sqlalchemy", "httpx", "rich", "click"]]
+
+with ThreadPoolExecutor(max_workers=MAX_CONCURRENT) as pool:
+    for r in pool.map(run_task, TASKS):
+        print(r)
+print(f"Fleet spent ${ledger['spent'] / 100:.2f} of ${GLOBAL_CAP_CENTS / 100:.2f}")</code></pre>
+          </div>
+          <p><strong>Expected output:</strong> one line per task with session id, stop reason and cost in cents, read from the <code>session.usage</code> event that <a href="https://platform.claude.com/docs/en/managed-agents/session-observability" target="_blank" rel="noopener noreferrer">fires just before each session</a> goes idle.</p>
+          <p><strong>What can go wrong:</strong> budgets are <a href="https://platform.claude.com/docs/en/managed-agents/budgets" target="_blank" rel="noopener noreferrer">checked between model requests</a>, so a 50-cent session can stop at 53. <a href="https://platform.claude.com/docs/en/api/rate-limits" target="_blank" rel="noopener noreferrer">Create endpoints allow</a> 300 requests per minute. Managed Agents runs on the Claude API and Claude Platform on AWS, <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">not Bedrock or Google Cloud</a>, and is not eligible for <a href="https://platform.claude.com/docs/en/managed-agents/overview" target="_blank" rel="noopener noreferrer">Zero Data Retention</a>.</p>
+          <p><strong>Estimated cost per run:</strong> at most $9; a 15-minute running session adds only 0.25 &times; $0.08 = $0.02 of runtime.</p>
+        </div>
+      </section>
+
+      <!-- Section 5 -->
+      <section class="content-card" id="budget">
+        <h2><span class="sec-num">05</span>Budgeting and controlling costs</h2>
+        <div class="callout cost">
+          <span class="lbl">Prices checked 22 October 2026</span>
+          Figures come from <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Anthropic's pricing page</a>, <a href="https://aws.amazon.com/bedrock/pricing/" target="_blank" rel="noopener noreferrer">Amazon Bedrock pricing</a> and <a href="https://aws.amazon.com/bedrock/agentcore/pricing/" target="_blank" rel="noopener noreferrer">AgentCore pricing</a>. Prices change, so every rate in the calculators below is editable.
+        </div>
+
+        <h3 id="b-why">Why spend multiplies</h3>
+        <p>Each agent carries its own context and re-sends all of it as input every turn, so five workers that load the same 8,000-token prompt pay for it five times unless the prefix is cached. Output costs <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">five times input</a> on every current model. Claude 4.7 and later models also produce about 30% more tokens for the same text, and declaring tools adds <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">hidden prompt tokens</a> (286 or more per request on the 5.5 models). Budget from measured usage, not character counts.</p>
+
+        <!-- Widget 2: Multi-agent cost calculator -->
+        <div class="widget w-gold" id="w-cost" role="region" aria-label="Widget 2: multi-agent cost calculator">
+          <h4>Widget 2 &bull; Multi-agent cost calculator</h4>
+          <p class="note">Assumes every agent re-reads its context each turn, the cached share is written once per agent per session and read on later turns, and batch pricing halves every token line. Prices checked 22 October 2026.</p>
+          <div class="grid">
+            <div class="field"><label for="c-model">Model</label><select id="c-model">
+              <option value="fable">Claude Fable 5.1</option><option value="opus">Claude Opus 5.5</option>
+              <option value="sonnet" selected>Claude Sonnet 5.5</option><option value="haiku">Claude Haiku 5.5 (prompt &le; 100k)</option>
+              <option value="haikulong">Claude Haiku 5.5 (prompt &gt; 100k)</option></select></div>
+            <div class="field"><label for="c-agents">Agents per session</label><input id="c-agents" type="number" min="1" max="500" value="5" /></div>
+            <div class="field"><label for="c-in">Input tokens per turn</label><input id="c-in" type="number" min="0" value="14000" /></div>
+            <div class="field"><label for="c-out">Output tokens per turn</label><input id="c-out" type="number" min="0" value="800" /></div>
+            <div class="field"><label for="c-turns">Turns per agent</label><input id="c-turns" type="number" min="1" value="10" /></div>
+            <div class="field"><label for="c-hit">Cached share of input (%)</label><input id="c-hit" type="number" min="0" max="100" value="55" /></div>
+            <div class="field"><label for="c-sess">Sessions per working day</label><input id="c-sess" type="number" min="0" value="20" /></div>
+            <div class="field"><label for="c-days">Working days per week</label><input id="c-days" type="number" min="1" max="7" value="5" /></div>
+            <div class="field"><label class="check"><input id="c-batch" type="checkbox" /> Batch API (50% off)</label></div>
+          </div>
+          <details class="prices"><summary>Edit prices (USD per million tokens)</summary>
+            <div class="grid" style="margin-top:8px">
+              <div class="field"><label for="c-pin">Input</label><input id="c-pin" type="number" step="0.001" min="0" /></div>
+              <div class="field"><label for="c-pout">Output</label><input id="c-pout" type="number" step="0.001" min="0" /></div>
+              <div class="field"><label for="c-pw">Cache write (5 min)</label><input id="c-pw" type="number" step="0.001" min="0" /></div>
+              <div class="field"><label for="c-pr">Cache read</label><input id="c-pr" type="number" step="0.001" min="0" /></div>
+            </div>
+          </details>
+          <button class="btn" id="c-go" type="button">Calculate</button>
+          <div class="err" id="c-err" role="alert"></div>
+          <div class="out" id="c-out" aria-live="polite"></div>
+        </div>
+
+        <h3 id="b-limits">Explicit limits at every level</h3>
+        <p>Set a cap at each of six levels, nest the lower ones inside the higher ones, and decide in advance what happens when each one trips. The figures are starting points, not recommendations.</p>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Profile</th><th>Per agent</th><th>Per session</th><th>Daily</th><th>Weekly</th><th>Monthly</th><th>Annual</th></tr></thead>
+            <tbody>
+              <tr class="r-solo"><td><strong>Solo developer</strong></td><td>$0.50</td><td>$2</td><td>$15</td><td>$60</td><td>$200</td><td>$2,000</td></tr>
+              <tr class="r-team"><td><strong>Small team</strong></td><td>$1.50</td><td>$5</td><td>$45</td><td>$200</td><td>$800</td><td>$9,000</td></tr>
+              <tr class="r-prod"><td><strong>Production workload</strong></td><td>$3</td><td>$10</td><td>$1,200</td><td>$7,000</td><td>$28,000</td><td>$300,000</td></tr>
+              <tr><td><strong>Enforced by</strong></td><td><code>max_budget_usd</code> per worker, <code>maxTurns</code></td><td>Run ledger, session <code>budget</code></td><td>Your ledger keyed by date</td><td>Your ledger plus Usage and Cost API</td><td>Console spend limit</td><td>Finance review, contract terms</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The daily cap sits above monthly &divide; working days so one busy day does not stop the team; the weekly cap catches a sustained run of them. The annual cap sits below twelve monthly caps to force a review before year end. The small-team monthly figure stays under $1,000, the Build tier's <a href="https://platform.claude.com/docs/en/api/rate-limits" target="_blank" rel="noopener noreferrer">monthly spend cap</a>; Start caps at $500 and Scale at $200,000.</p>
+
+        <!-- Widget 3: Budget cap planner -->
+        <div class="widget w-amber" id="w-cap" role="region" aria-label="Widget 3: budget cap planner">
+          <h4>Widget 3 &bull; Budget cap planner</h4>
+          <p class="note">Derives the other caps from one monthly budget. Daily = monthly &divide; working days &times; (1 + headroom); weekly = monthly &times; 12 &divide; 52; annual = monthly &times; 11 to force a review before year end.</p>
+          <div class="grid">
+            <div class="field"><label for="p-month">Monthly budget (USD)</label><input id="p-month" type="number" min="1" value="800" /></div>
+            <div class="field"><label for="p-wd">Working days per month</label><input id="p-wd" type="number" min="1" max="31" value="22" /></div>
+            <div class="field"><label for="p-sess">Sessions per working day</label><input id="p-sess" type="number" min="1" value="20" /></div>
+            <div class="field"><label for="p-agents">Agents per session</label><input id="p-agents" type="number" min="1" value="5" /></div>
+            <div class="field"><label for="p-head">Daily headroom (%)</label><input id="p-head" type="number" min="0" max="300" value="30" /></div>
+          </div>
+          <button class="btn" id="p-go" type="button">Plan caps</button>
+          <button class="btn alt" id="p-cmp" type="button">Check against Widget 2</button>
+          <div class="err" id="p-err" role="alert"></div>
+          <div class="out" id="p-out" aria-live="polite"></div>
+        </div>
+
+        <!-- Diagram 5 -->
+        <div class="diagram-container">
+          <div class="fig-scroll">
+            <svg viewBox="0 0 800 400" role="img" aria-label="Nested boxes: annual contains monthly contains weekly contains daily contains per-session contains per-agent. To the right, platform controls: Console spend limit, workspace limits, tier cap, cloud budgets, and an application kill switch">
+              <rect x="20" y="20" width="500" height="340" rx="14" fill="rgba(251,113,133,.06)" stroke="#fb7185" stroke-width="2"/>
+              <text x="36" y="44" fill="#fb7185" font-weight="700" font-size="14">Annual cap &bull; finance review</text>
+              <rect x="45" y="58" width="450" height="285" rx="12" fill="rgba(251,191,36,.06)" stroke="#fbbf24" stroke-width="2"/>
+              <text x="60" y="82" fill="#fbbf24" font-weight="700" font-size="14">Monthly cap &bull; Console spend limit</text>
+              <rect x="70" y="96" width="400" height="232" rx="12" fill="rgba(242,193,78,.07)" stroke="#f2c14e" stroke-width="2"/>
+              <text x="85" y="120" fill="#f2c14e" font-weight="700" font-size="14">Weekly cap &bull; usage report check</text>
+              <rect x="95" y="134" width="350" height="180" rx="12" fill="rgba(52,211,153,.07)" stroke="#34d399" stroke-width="2"/>
+              <text x="110" y="158" fill="#34d399" font-weight="700" font-size="14">Daily cap &bull; ledger by date</text>
+              <rect x="120" y="172" width="300" height="128" rx="12" fill="rgba(76,201,240,.08)" stroke="#4cc9f0" stroke-width="2"/>
+              <text x="135" y="196" fill="#4cc9f0" font-weight="700" font-size="14">Per-session cap &bull; run ledger / budget</text>
+              <rect x="145" y="210" width="250" height="76" rx="10" fill="rgba(177,151,252,.12)" stroke="#b197fc" stroke-width="2"/>
+              <text x="270" y="240" text-anchor="middle" fill="#b197fc" font-weight="700" font-size="14">Per-agent cap</text>
+              <text x="270" y="262" text-anchor="middle" fill="#e7eaf5" font-size="12">max_budget_usd &bull; maxTurns</text>
+              <g font-size="13">
+                <rect x="550" y="20" width="230" height="52" rx="10" fill="rgba(125,211,252,.10)" stroke="#7dd3fc"/>
+                <text x="665" y="42" text-anchor="middle" fill="#7dd3fc" font-weight="700">Organization spend limit</text>
+                <text x="665" y="61" text-anchor="middle" fill="#e7eaf5" font-size="11">HTTP 400 once reached</text>
+                <rect x="550" y="84" width="230" height="52" rx="10" fill="rgba(125,211,252,.10)" stroke="#7dd3fc"/>
+                <text x="665" y="106" text-anchor="middle" fill="#7dd3fc" font-weight="700">Workspace spend + rate limits</text>
+                <text x="665" y="125" text-anchor="middle" fill="#e7eaf5" font-size="11">isolate agents from other apps</text>
+                <rect x="550" y="148" width="230" height="52" rx="10" fill="rgba(125,211,252,.10)" stroke="#7dd3fc"/>
+                <text x="665" y="170" text-anchor="middle" fill="#7dd3fc" font-weight="700">Usage tier cap</text>
+                <text x="665" y="189" text-anchor="middle" fill="#e7eaf5" font-size="11">$500 &bull; $1,000 &bull; $200,000 / month</text>
+                <rect x="550" y="212" width="230" height="52" rx="10" fill="rgba(125,211,252,.10)" stroke="#7dd3fc"/>
+                <text x="665" y="234" text-anchor="middle" fill="#7dd3fc" font-weight="700">Cloud budgets</text>
+                <text x="665" y="253" text-anchor="middle" fill="#e7eaf5" font-size="11">AWS Budgets &bull; GCP budgets (alerts)</text>
+                <rect x="550" y="284" width="230" height="64" rx="10" fill="rgba(251,113,133,.14)" stroke="#fb7185" stroke-width="2"/>
+                <text x="665" y="310" text-anchor="middle" fill="#fb7185" font-weight="700">Kill switch</text>
+                <text x="665" y="330" text-anchor="middle" fill="#e7eaf5" font-size="11">stop launches &bull; interrupt &bull; cancel</text>
+              </g>
+              <g font-size="12" fill="#a9b1cf">
+                <rect x="20" y="378" width="12" height="12" fill="#b197fc"/><text x="38" y="389">agent</text>
+                <rect x="90" y="378" width="12" height="12" fill="#4cc9f0"/><text x="108" y="389">session</text>
+                <rect x="170" y="378" width="12" height="12" fill="#34d399"/><text x="188" y="389">daily</text>
+                <rect x="235" y="378" width="12" height="12" fill="#f2c14e"/><text x="253" y="389">weekly</text>
+                <rect x="310" y="378" width="12" height="12" fill="#fbbf24"/><text x="328" y="389">monthly</text>
+                <rect x="395" y="378" width="12" height="12" fill="#fb7185"/><text x="413" y="389">annual / kill</text>
+                <rect x="500" y="378" width="12" height="12" fill="#7dd3fc"/><text x="518" y="389">platform control</text>
+              </g>
+            </svg>
+          </div>
+          <p class="diagram-caption"><b>Diagram 5.</b> Cost-control layers. Application caps (left) nest from per-agent to annual; platform controls (right) are the backstop when application code has a bug. The kill switch belongs to you, not the platform.</p>
+        </div>
+        <p>The inner caps react within one model response, while cloud billing alerts can take most of a day. That gap is why the inner caps must live in code.</p>
+
+        <h3 id="b-code">Enforcing limits in code</h3>
+        <p>Each response's <code>usage</code> object <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" target="_blank" rel="noopener noreferrer">splits input into</a> <code>input_tokens</code>, <code>cache_creation_input_tokens</code> and <code>cache_read_input_tokens</code>. Price each one, add it to a ledger shared by all agents, and check the ledger before every call. Persist daily and weekly totals in a database keyed by date. In the Agent SDK, <code>max_budget_usd</code> <a href="https://code.claude.com/docs/en/agent-sdk/agent-loop" target="_blank" rel="noopener noreferrer">does this per query</a>, subagents included. The Rust dispatcher below applies the same idea to the raw Messages API.</p>
+
+        <div class="codewrap">
+          <div class="cap"><span>src/main.rs (Rust)</span><button class="copy" type="button" aria-label="Copy src/main.rs">Copy</button></div>
+          <pre><code class="language-rust">// src/main.rs: concurrent Claude dispatcher with a hard spend cap, written against the
+// raw Messages API. Cargo deps: tokio = { version = "1", features = ["full"] },
+// reqwest = { version = "0.12", features = ["json"] }, serde_json = "1", anyhow = "1"
+use std::sync::atomic::{AtomicU64, Ordering};
+use std::sync::Arc;
+use std::time::Duration;
+use tokio::sync::Semaphore;
+
+const MODEL: &str = "claude-haiku-5-5";
+// Micro-dollars per token = USD per million tokens (Haiku 5.5, prompts up to 100k tokens).
+const IN_PRICE: f64 = 0.10;
+const OUT_PRICE: f64 = 0.50;
+const CAP_MICRO_USD: u64 = 2_000_000; // $2.00 for the whole run
+const MAX_PARALLEL: usize = 8;
+
+struct Budget { spent: AtomicU64 } // micro-dollars, shared by every task
+
+impl Budget {
+    fn exhausted(&self) -> bool { self.spent.load(Ordering::Relaxed) >= CAP_MICRO_USD }
+    fn charge(&self, input: u64, output: u64) -> u64 {
+        let cost = (input as f64 * IN_PRICE + output as f64 * OUT_PRICE).ceil() as u64;
+        self.spent.fetch_add(cost, Ordering::Relaxed) + cost
     }
-    Dispatch --> Blackboard: Publish Findings to Shared Memory
-    Blackboard --> Quorum: Adversarial Consensus Gate
-    Quorum --> Verified: 2/3 Quorum Passed
-    Quorum --> Decompose: Rejection + Critique Feedback
-    Verified --> [*]
-        </pre>
-      </div>
-      <table class="data-table" style="margin-top:1.25rem;">
-        <thead>
-          <tr>
-            <th>Agent Role</th>
-            <th>Model Tier</th>
-            <th>Primary Function</th>
-            <th>Consensus Weight</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Supervisor Planner</strong></td>
-            <td>Claude Opus 5.5</td>
-            <td>Task Decomposition &amp; Routing</td>
-            <td>40%</td>
-          </tr>
-          <tr>
-            <td><strong>Worker Specialists</strong></td>
-            <td>Claude Sonnet 5.5</td>
-            <td>Execution of Domain Subtasks</td>
-            <td>30%</td>
-          </tr>
-          <tr>
-            <td><strong>Adversarial Critic</strong></td>
-            <td>Claude Sonnet 5.5</td>
-            <td>Red-Team Verification &amp; Quorum</td>
-            <td>30%</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+}
 
-    <div class="content-card">
-      <h2 style="color:var(--gold);font-size:1.35rem;font-weight:700;margin-bottom:1rem;line-height:1.35;border-bottom:1px solid rgba(251,191,36,0.18);padding-bottom:0.5rem;">Orchestration Deployment Playbook</h2>
-      <div class="step-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.15rem;margin-top:1rem;">
-        <div class="step-card" style="background:rgba(15,23,42,0.6);border:1px solid rgba(56,189,248,0.2);border-radius:10px;padding:1.25rem;">
-          <div class="step-num" style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);font-weight:700;text-transform:uppercase;margin-bottom:0.35rem;">Step 01</div>
-          <div class="step-title" style="font-size:1.02rem;font-weight:700;color:#ffffff;margin-bottom:0.45rem;">Configure Supervisor</div>
-          <div class="step-desc" style="font-size:0.88rem;color:#94a3b8;line-height:1.55;">Deploy Claude Opus 5.5 as the primary supervisor to dynamically plan subtasks and evaluate worker output.</div>
-        </div>
-        <div class="step-card" style="background:rgba(15,23,42,0.6);border:1px solid rgba(56,189,248,0.2);border-radius:10px;padding:1.25rem;">
-          <div class="step-num" style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);font-weight:700;text-transform:uppercase;margin-bottom:0.35rem;">Step 02</div>
-          <div class="step-title" style="font-size:1.02rem;font-weight:700;color:#ffffff;margin-bottom:0.45rem;">Deploy Blackboard Bus</div>
-          <div class="step-desc" style="font-size:0.88rem;color:#94a3b8;line-height:1.55;">Implement in-memory Redis or Kafka topics for asynchronous inter-agent state synchronization and logging.</div>
-        </div>
-        <div class="step-card" style="background:rgba(15,23,42,0.6);border:1px solid rgba(56,189,248,0.2);border-radius:10px;padding:1.25rem;">
-          <div class="step-num" style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);font-weight:700;text-transform:uppercase;margin-bottom:0.35rem;">Step 03</div>
-          <div class="step-title" style="font-size:1.02rem;font-weight:700;color:#ffffff;margin-bottom:0.45rem;">Enforce Quorum Gates</div>
-          <div class="step-desc" style="font-size:0.88rem;color:#94a3b8;line-height:1.55;">Mandate independent adversarial model validation before committing external database transactions or pull requests.</div>
-        </div>
-      </div>
-    </div>
+async fn call(http: &reqwest::Client, key: &str, prompt: &str) -> anyhow::Result<(String, u64, u64)> {
+    let body = serde_json::json!({
+        "model": MODEL, "max_tokens": 400,
+        "messages": [{ "role": "user", "content": prompt }]
+    });
+    for attempt in 0..5u32 {
+        let resp = http.post("https://api.anthropic.com/v1/messages")
+            .bearer_auth(key)
+            .header("anthropic-version", "2026-10-21")
+            .json(&body).send().await?;
+        if resp.status().as_u16() == 429 || resp.status().is_server_error() {
+            // Honour retry-after when present; spend-cap 429s carry none and will keep failing.
+            let wait = resp.headers().get("retry-after")
+                .and_then(|v| v.to_str().ok()).and_then(|s| s.parse::<u64>().ok())
+                .unwrap_or(1u64 << attempt);
+            tokio::time::sleep(Duration::from_secs(wait.min(60))).await;
+            continue;
+        }
+        let v: serde_json::Value = resp.error_for_status()?.json().await?;
+        let text = v["content"].as_array().into_iter().flatten()
+            .filter(|b| b["type"] == "text")          // skip thinking blocks
+            .filter_map(|b| b["text"].as_str()).collect::<Vec<_>>().join("");
+        let input = v["usage"]["input_tokens"].as_u64().unwrap_or(0);
+        let output = v["usage"]["output_tokens"].as_u64().unwrap_or(0);
+        return Ok((text, input, output));
+    }
+    anyhow::bail!("gave up after retries")
+}
 
-    <div class="content-card" style="border-color:rgba(251,191,36,0.3);">
-      <h3 style="color:var(--gold);font-size:1.1rem;font-weight:700;margin-bottom:0.75rem;">Verified Technical References</h3>
-      <ul style="color:#94a3b8;font-size:0.85rem;margin-left:1.4rem;line-height:1.7;">
-        <li><a class="ref-link" href="https://arxiv.org" target="_blank" rel="noopener">Multi-Agent Systems Research: Blackboard Architecture & Memory</a>.</li><li><a class="ref-link" href="https://www.anthropic.com/research" target="_blank" rel="noopener">Anthropic Systems Engineering: Distributed State Synchronization</a>.</li><li><a class="ref-link" href="https://dl.acm.org" target="_blank" rel="noopener">Consensus Protocols in AI: Quorum Verification & Critic Agents</a>.</li><li><a class="ref-link" href="https://computer.org" target="_blank" rel="noopener">IEEE Computer Society: Fault-Tolerant Autonomous Systems</a>.</li>
-      </ul>
-    </div>
+#[tokio::main]
+async fn main() -> anyhow::Result<()> {
+    let key = std::env::var("ANTHROPIC_API_KEY")?;
+    let http = reqwest::Client::builder().timeout(Duration::from_secs(120)).build()?;
+    let budget = Arc::new(Budget { spent: AtomicU64::new(0) });
+    let gate = Arc::new(Semaphore::new(MAX_PARALLEL));
+    let tickets: Vec<String> = std::fs::read_to_string("tickets.txt")?
+        .lines().map(str::to_owned).collect();
+
+    let mut handles = Vec::new();
+    for (i, t) in tickets.into_iter().enumerate() {
+        let (http, key, budget, gate) = (http.clone(), key.clone(), budget.clone(), gate.clone());
+        handles.push(tokio::spawn(async move {
+            let _permit = gate.acquire_owned().await.ok()?;
+            if budget.exhausted() { return None; } // stop starting new work at the cap
+            let prompt = format!("Label this ticket as bug, feature or question:\n{t}");
+            match call(&http, &key, &prompt).await {
+                Ok((label, inp, out)) => {
+                    let total = budget.charge(inp, out);
+                    println!("#{i} {label} (in {inp}, out {out}, run ${:.4})", total as f64 / 1e6);
+                    Some(label)
+                }
+                Err(e) => { eprintln!("#{i} failed: {e}"); None }
+            }
+        }));
+    }
+    let done = futures_count(handles).await;
+    println!("{done} labelled, spent ${:.4}", budget.spent.load(Ordering::Relaxed) as f64 / 1e6);
+    Ok(())
+}
+
+async fn futures_count(handles: Vec<tokio::task::JoinHandle<Option<String>>>) -> usize {
+    let mut n = 0;
+    for h in handles { if let Ok(Some(_)) = h.await { n += 1; } }
+    n
+}</code></pre>
+        </div>
+        <p>It sends the current <code>anthropic-version</code>, <code>2026-10-21</code>, which <a href="https://platform.claude.com/docs/en/api/versioning" target="_blank" rel="noopener noreferrer">also removes</a> <code>temperature</code>, <code>top_p</code> and <code>top_k</code>. A 429 caused by a spend cap has no <code>retry-after</code> header and carries the code <code>enforced_spend_limit_reached</code>; <a href="https://platform.claude.com/docs/en/api/rate-limits" target="_blank" rel="noopener noreferrer">treat it as a stop</a>, not a retry.</p>
+
+        <h3 id="b-platform">Enforcing limits on the platform</h3>
+        <p>Platform limits catch bugs in your own code. Set an organization spend limit below your tier cap on <a href="https://platform.claude.com/docs/en/api/rate-limits" target="_blank" rel="noopener noreferrer">the Console Billing page</a>; requests over it return HTTP 400. Run agents in their own workspace with its own spend and rate limits (the default workspace <a href="https://platform.claude.com/docs/en/api/rate-limits" target="_blank" rel="noopener noreferrer">cannot take a spend limit</a>). Reconcile with <a href="https://platform.claude.com/docs/en/build-with-claude/usage-cost-api" target="_blank" rel="noopener noreferrer">the Usage and Cost API</a>, which reports usage in buckets as small as one minute, usually within five minutes of a request. <a href="https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html" target="_blank" rel="noopener noreferrer">AWS Budgets can alert</a> and run budget actions but refreshes only up to three times a day, and <a href="https://docs.cloud.google.com/billing/docs/how-to/budgets" target="_blank" rel="noopener noreferrer">Google Cloud budgets alert</a> at 50%, 90% and 100% by default without stopping spend.</p>
+
+        <h3 id="b-cloud">Cloud agents and their cost</h3>
+        <p><strong>Bedrock and Google Cloud</strong> invoice you directly at their own prices, published on <a href="https://aws.amazon.com/bedrock/pricing/" target="_blank" rel="noopener noreferrer">the Bedrock pricing page</a> and <a href="https://cloud.google.com/vertex-ai/generative-ai/pricing" target="_blank" rel="noopener noreferrer">Google Cloud's pricing page</a>. For Claude 4.5 models and later, regional and multi-region endpoints <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">cost 10% more</a> than global ones. <a href="https://aws.amazon.com/bedrock/pricing/" target="_blank" rel="noopener noreferrer">Bedrock batch inference</a> is 50% below on-demand, and Bedrock cut Sonnet 5.5 cache-read prices by 50% from 7 October 2026.</p>
+        <p><strong>Claude Platform on AWS and Microsoft Foundry</strong> are Anthropic-operated and bill standard API rates through the cloud marketplace in <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">$0.01 consumption units</a>; US-only inference costs 1.1&times;.</p>
+        <p><strong>Managed Agents</strong> charge standard token rates plus $0.08 per running session-hour, with no batch discount. Outside Managed Agents, the code execution tool includes <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">1,550 free hours</a> a month, then costs $0.05 per container-hour.</p>
+        <p><strong>Self-hosted on Amazon Bedrock AgentCore Runtime</strong>, compute is billed apart from tokens: $0.1276 per vCPU-hour and $0.0169 per GB-hour on v2, per second, with no CPU charge during I/O wait. Web search there costs <a href="https://aws.amazon.com/bedrock/agentcore/pricing/" target="_blank" rel="noopener noreferrer">$7 per 1,000 queries</a>, logs bill at CloudWatch rates and data transfer at EC2 rates.</p>
+        <div class="callout tip">
+          <span class="lbl">Comparison</span>For the worked example below: direct API about <strong>$1.46</strong>; a 20-minute Managed Agents session about <strong>$1.48</strong>; on AgentCore, Bedrock token charges plus about <strong>$0.06</strong> of compute (five agents, 120 active CPU-seconds and 2 GB for 15 minutes each). Hosting is small next to tokens; model mix and caching decide the bill.
+        </div>
+
+        <h3 id="b-reduce">Cutting the bill</h3>
+        <p><strong>Caching:</strong> <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">reads cost 0.1&times; base input</a> on most models, 0.05&times; on Opus and Sonnet 5.5 and 0.025&times; on Fable 5.1, and do not count <a href="https://platform.claude.com/docs/en/api/rate-limits" target="_blank" rel="noopener noreferrer">toward input rate limits</a>. Start parallel agents after the first response begins so they can <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" target="_blank" rel="noopener noreferrer">hit the cache</a>. <strong>Batching:</strong> <a href="https://platform.claude.com/docs/en/build-with-claude/batch-processing" target="_blank" rel="noopener noreferrer">50% off</a>. <strong>Routing:</strong> Haiku 5.5 input <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">costs one twentieth</a> of Sonnet 5.5's. <strong>Trimming:</strong> a fetched documentation page runs <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">about 25,000 tokens</a>, so cap fetches with <code>max_content_tokens</code>. <strong>Capping:</strong> <code>max_turns</code>, lower <code>effort</code> and <a href="https://code.claude.com/docs/en/agent-sdk/agent-loop" target="_blank" rel="noopener noreferrer">automatic compaction</a> all cut tokens per run.</p>
+
+        <h3 id="b-worked">Worked example: a five-agent research run</h3>
+        <p>One Opus 5.5 lead runs 6 turns with a 12,000-token cached prefix, 4,000 new input and 1,500 output tokens per turn. Four Sonnet 5.5 workers run 10 turns each with an 8,000-token cached prefix, 6,000 new input and 800 output tokens per turn, and 5 web searches.</p>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Line</th><th>Arithmetic</th><th>Cost</th></tr></thead>
+            <tbody>
+              <tr><td>Lead cache write</td><td>12,000 &times; $5 / 1M</td><td>$0.0600</td></tr>
+              <tr><td>Lead cache reads</td><td>5 &times; 12,000 &times; $0.20 / 1M</td><td>$0.0120</td></tr>
+              <tr><td>Lead new input</td><td>6 &times; 4,000 &times; $4 / 1M</td><td>$0.0960</td></tr>
+              <tr><td>Lead output</td><td>6 &times; 1,500 &times; $20 / 1M</td><td>$0.1800</td></tr>
+              <tr><td>Worker cache writes</td><td>4 &times; 8,000 &times; $2.50 / 1M</td><td>$0.0800</td></tr>
+              <tr><td>Worker cache reads</td><td>4 &times; 9 &times; 8,000 &times; $0.10 / 1M</td><td>$0.0288</td></tr>
+              <tr><td>Worker new input</td><td>4 &times; 10 &times; 6,000 &times; $2 / 1M</td><td>$0.4800</td></tr>
+              <tr><td>Worker output</td><td>4 &times; 10 &times; 800 &times; $10 / 1M</td><td>$0.3200</td></tr>
+              <tr><td>Web searches</td><td>20 &times; $10 / 1,000</td><td>$0.2000</td></tr>
+              <tr><td><strong>Per session</strong></td><td></td><td><strong>$1.4568</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Uncached, the same run costs $2.20, so caching saves 34%. At 20 runs a day that is $29.14 a day, $145.68 a week, $640.99 a month (22 working days) and $7,691.90 a year. That fits the small-team caps except one: twenty sessions at the $5 session cap could reach $100 against a $45 daily cap. Lower the session cap to $2.25, or accept that the daily cap stops work after nine worst-case runs.</p>
+      </section>
+
+      <!-- Section 6 -->
+      <section class="content-card" id="ops">
+        <h2><span class="sec-num">06</span>Observability, testing and failure handling</h2>
+        <p><strong>Log every turn:</strong> agent, parent, model, the four usage fields, stop reason, tool, latency and cost. Subagent messages carry a <code>parent_tool_use_id</code> that <a href="https://code.claude.com/docs/en/agent-sdk/subagents" target="_blank" rel="noopener noreferrer">gives you the tree</a>, and the Python SDK emits <a href="https://github.com/anthropics/anthropic-sdk-python" target="_blank" rel="noopener noreferrer">an OpenTelemetry span</a> per API call once a tracer provider is registered. Anthropic credits <a href="https://www.anthropic.com/engineering/multi-agent-research-system" target="_blank" rel="noopener noreferrer">full production tracing</a> for diagnosing why its Research agents missed information.</p>
+        <p>Once those logs exist, paste a sample below to see which agent and which model the money went to.</p>
+
+        <!-- Widget 4: Run log analyser -->
+        <div class="widget w-emerald" id="w-log" role="region" aria-label="Widget 4: run log analyser">
+          <h4>Widget 4 &bull; Run log analyser</h4>
+          <p class="note">Paste one JSON object per line with <code>agent</code>, <code>model</code> and the usage fields from API responses. Costs use the price table in Widget 2's defaults for each model id.</p>
+          <textarea id="l-in" aria-label="JSON lines to analyse">{"agent":"lead","model":"claude-opus-5-5","input_tokens":4100,"output_tokens":1480,"cache_read_input_tokens":12000,"cache_creation_input_tokens":0}
+{"agent":"worker-1","model":"claude-sonnet-5-5","input_tokens":6020,"output_tokens":812,"cache_read_input_tokens":8000,"cache_creation_input_tokens":0}
+{"agent":"worker-2","model":"claude-sonnet-5-5","input_tokens":5870,"output_tokens":790,"cache_read_input_tokens":0,"cache_creation_input_tokens":8000}
+{"agent":"router","model":"claude-haiku-5-5","input_tokens":900,"output_tokens":40}</textarea>
+          <button class="btn" id="l-go" type="button">Analyse</button>
+          <div class="err" id="l-err" role="alert"></div>
+          <div class="out" id="l-out" aria-live="polite"></div>
+        </div>
+
+        <p><strong>Retries and timeouts:</strong> <a href="https://platform.claude.com/docs/en/api/sdks/python" target="_blank" rel="noopener noreferrer">the Python SDK retries</a> connection errors, 408, 409, 429 and 5xx twice with backoff and times out after ten minutes by default. Fleets <a href="https://platform.claude.com/docs/en/api/rate-limits" target="_blank" rel="noopener noreferrer">need their own backoff</a> on top, guided by <code>retry-after</code> when present.</p>
+        <p><strong>Circuit breakers:</strong> after repeated failures, stop calling a tool for a while and return an <code>is_error</code> result saying so; Claude can then wait, switch tools or <a href="https://code.claude.com/docs/en/agent-sdk/custom-tools" target="_blank" rel="noopener noreferrer">report the gap</a>. <a href="https://www.anthropic.com/engineering/multi-agent-research-system" target="_blank" rel="noopener noreferrer">Anthropic found that</a> telling an agent a tool is failing "works surprisingly well".</p>
+        <p><strong>Approval gates:</strong> anything that sends, merges, pays or deletes should pass a person first. The Agent SDK's <code>default</code> permission mode routes unapproved calls to your <code>canUseTool</code> callback, <code>dontAsk</code> denies them outright for headless agents, and <code>bypassPermissions</code> belongs only in <a href="https://code.claude.com/docs/en/agent-sdk/agent-loop" target="_blank" rel="noopener noreferrer">isolated containers</a>.</p>
+
+        <!-- Diagram 6 -->
+        <div class="diagram-container">
+          <div class="fig-scroll">
+            <svg viewBox="0 0 800 430" role="img" aria-label="Sequence diagram across Director, Lead, Worker A, Worker B, Tool or API, and Human lanes. Worker A hits a 429, backs off and retries. Worker B times out and returns a partial report. The lead asks a human before opening a pull request, then reports cost to the director.">
+              <defs>
+                <marker id="ah6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a9b1cf"/></marker>
+                <marker id="ah6r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#fb7185"/></marker>
+              </defs>
+              <g font-size="13" font-weight="700" text-anchor="middle">
+                <rect x="30" y="14" width="100" height="28" rx="7" fill="rgba(242,193,78,.15)" stroke="#f2c14e"/><text x="80" y="33" fill="#f2c14e">Director</text>
+                <rect x="160" y="14" width="100" height="28" rx="7" fill="rgba(242,193,78,.15)" stroke="#f2c14e" stroke-dasharray="4 3"/><text x="210" y="33" fill="#f2c14e">Lead</text>
+                <rect x="290" y="14" width="100" height="28" rx="7" fill="rgba(76,201,240,.15)" stroke="#4cc9f0"/><text x="340" y="33" fill="#4cc9f0">Worker A</text>
+                <rect x="420" y="14" width="100" height="28" rx="7" fill="rgba(76,201,240,.15)" stroke="#4cc9f0"/><text x="470" y="33" fill="#4cc9f0">Worker B</text>
+                <rect x="550" y="14" width="100" height="28" rx="7" fill="rgba(177,151,252,.15)" stroke="#b197fc"/><text x="600" y="33" fill="#b197fc">Tool / API</text>
+                <rect x="680" y="14" width="100" height="28" rx="7" fill="rgba(251,113,133,.15)" stroke="#fb7185"/><text x="730" y="33" fill="#fb7185">Human</text>
+              </g>
+              <g stroke="#2a3566" stroke-width="2"><line x1="80" y1="42" x2="80" y2="400"/><line x1="210" y1="42" x2="210" y2="400"/><line x1="340" y1="42" x2="340" y2="400"/><line x1="470" y1="42" x2="470" y2="400"/><line x1="600" y1="42" x2="600" y2="400"/><line x1="730" y1="42" x2="730" y2="400"/></g>
+              <g font-size="11" fill="#e7eaf5">
+                <line x1="80" y1="66" x2="206" y2="66" stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah6)"/><text x="90" y="60">start, cap $3</text>
+                <line x1="210" y1="94" x2="336" y2="94" stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah6)"/><text x="222" y="88">handoff A</text>
+                <line x1="210" y1="112" x2="466" y2="112" stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah6)"/><text x="360" y="107">handoff B</text>
+                <line x1="340" y1="138" x2="596" y2="138" stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah6)"/><text x="352" y="133">search</text>
+                <line x1="470" y1="154" x2="596" y2="154" stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah6)"/><text x="482" y="149">fetch</text>
+                <line x1="600" y1="176" x2="344" y2="176" stroke="#fb7185" stroke-width="1.5" marker-end="url(#ah6r)"/><text x="470" y="171" fill="#fb7185" text-anchor="middle">429 rate limit</text>
+                <rect x="300" y="186" width="80" height="20" rx="5" fill="rgba(251,191,36,.15)" stroke="#fbbf24"/><text x="340" y="200" text-anchor="middle" fill="#fbbf24">backoff</text>
+                <line x1="340" y1="222" x2="596" y2="222" stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah6)"/><text x="352" y="217">retry</text>
+                <line x1="600" y1="240" x2="344" y2="240" stroke="#34d399" stroke-width="1.5" marker-end="url(#ah6)"/><text x="470" y="236" fill="#34d399" text-anchor="middle">200 OK</text>
+                <line x1="600" y1="262" x2="474" y2="262" stroke="#fb7185" stroke-width="1.5" marker-end="url(#ah6r)"/><text x="536" y="257" fill="#fb7185" text-anchor="middle">timeout</text>
+                <line x1="470" y1="284" x2="214" y2="284" stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah6)"/><text x="340" y="279" text-anchor="middle">partial report + error</text>
+                <line x1="340" y1="304" x2="214" y2="304" stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah6)"/><text x="276" y="299" text-anchor="middle">report</text>
+                <line x1="210" y1="328" x2="726" y2="328" stroke="#fb7185" stroke-width="1.5" marker-end="url(#ah6r)"/><text x="470" y="323" fill="#fb7185" text-anchor="middle">approve: open pull request?</text>
+                <line x1="730" y1="348" x2="214" y2="348" stroke="#34d399" stroke-width="1.5" marker-end="url(#ah6)"/><text x="470" y="343" fill="#34d399" text-anchor="middle">approved</text>
+                <line x1="210" y1="368" x2="596" y2="368" stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah6)"/><text x="400" y="363" text-anchor="middle">create PR</text>
+                <line x1="210" y1="390" x2="84" y2="390" stroke="#a9b1cf" stroke-width="1.5" marker-end="url(#ah6)"/><text x="146" y="385" text-anchor="middle">summary + cost</text>
+              </g>
+              <g font-size="12" fill="#a9b1cf">
+                <rect x="30" y="412" width="12" height="12" fill="#f2c14e"/><text x="48" y="423">coordinators</text>
+                <rect x="150" y="412" width="12" height="12" fill="#4cc9f0"/><text x="168" y="423">workers</text>
+                <rect x="240" y="412" width="12" height="12" fill="#b197fc"/><text x="258" y="423">tools</text>
+                <rect x="310" y="412" width="12" height="12" fill="#fb7185"/><text x="328" y="423">failure / approval</text>
+                <rect x="460" y="412" width="12" height="12" fill="#34d399"/><text x="478" y="423">success</text>
+                <rect x="550" y="412" width="12" height="12" fill="#fbbf24"/><text x="568" y="423">backoff</text>
+              </g>
+            </svg>
+          </div>
+          <p class="diagram-caption"><b>Diagram 6.</b> A hierarchical run with two failures handled differently. Worker A retries a rate-limited call after backing off. Worker B's tool times out, so it returns a partial report and an explicit error instead of hanging. Nothing with side effects happens until a person approves it.</p>
+        </div>
+        <p><strong>Testing:</strong> Anthropic began with about 20 real queries, because early prompt changes moved success rates enough for a small set to detect, and graded outputs with one LLM judge scoring accuracy, citations, completeness, source quality and tool efficiency, backed by human testers. It judges state-changing agents on their end state and ships changes with <a href="https://www.anthropic.com/engineering/multi-agent-research-system" target="_blank" rel="noopener noreferrer">rainbow deployments</a> so runs in flight keep their old version.</p>
+      </section>
+
+      <!-- Section 7 -->
+      <section class="content-card" id="security">
+        <h2><span class="sec-num">07</span>Security notes</h2>
+        <p><strong>Least privilege:</strong> give each agent the smallest tool list its job needs. Omitted tools are absent from the session; a bare name in <code>disallowed_tools</code> removes a tool, and a scoped rule such as <code>Bash(rm *)</code> <a href="https://code.claude.com/docs/en/agent-sdk/custom-tools" target="_blank" rel="noopener noreferrer">blocks only matching calls</a>.</p>
+        <div class="callout sec">
+          <span class="lbl">Prompt injection</span>Web pages, tickets and email can contain instructions. Keep agents that read untrusted content away from write and send tools, and hand their findings to a separate agent that holds those tools. Claude Code v2.1.210 and later scan each subagent's final message for <a href="https://code.claude.com/docs/en/agent-sdk/subagents" target="_blank" rel="noopener noreferrer">instruction-shaped patterns</a> before the parent reads it; treat that as one layer, not a guarantee.
+        </div>
+        <p><strong>Secrets:</strong> load keys from environment variables or a secret manager, never from prompts, and run fleets in their own workspace with their own key; <a href="https://platform.claude.com/docs/en/api/overview" target="_blank" rel="noopener noreferrer">Anthropic recommends workspaces</a> for separating environments and spend.</p>
+        <p><strong>Retention:</strong> batch data is <a href="https://platform.claude.com/docs/en/build-with-claude/batch-processing" target="_blank" rel="noopener noreferrer">stored up to 29 days</a> unless deleted. Managed Agents stores session history and sandbox state server-side and is not currently eligible for Zero Data Retention or HIPAA BAA coverage; sessions and files can be <a href="https://platform.claude.com/docs/en/managed-agents/overview" target="_blank" rel="noopener noreferrer">deleted through the API</a>.</p>
+      </section>
+
+      <!-- Section 8 -->
+      <section class="content-card" id="choose">
+        <h2><span class="sec-num">08</span>Choosing an architecture</h2>
+        <p>Start simple. <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">Anthropic's advice is</a> that one well-prompted call with retrieval is often enough and that complexity belongs only where it measurably helps. If you do need several agents, answer the five questions below.</p>
+
+        <!-- Widget 5: Architecture picker -->
+        <div class="widget" id="w-arch" role="region" aria-label="Widget 5: architecture picker">
+          <h4>Widget 5 &bull; Architecture picker</h4>
+          <p class="note">Scores each architecture against your answers using the trade-offs in the comparison table. It is a starting point for design review, not a verdict.</p>
+          <fieldset><legend>1. Can you list the subtasks before the run starts?</legend>
+            <label><input type="radio" name="q1" value="fixed" checked /> Yes, the same steps every time</label>
+            <label><input type="radio" name="q1" value="items" /> Yes, it is one operation over many items</label>
+            <label><input type="radio" name="q1" value="dynamic" /> No, they depend on what the agents find</label>
+          </fieldset>
+          <fieldset><legend>2. How independent are the pieces of work?</legend>
+            <label><input type="radio" name="q2" value="indep" checked /> Fully independent</label>
+            <label><input type="radio" name="q2" value="domains" /> Grouped into separate domains or teams</label>
+            <label><input type="radio" name="q2" value="chained" /> Each step needs the previous step's output</label>
+            <label><input type="radio" name="q2" value="mixed" /> Requests differ in type, each handled alone</label>
+          </fieldset>
+          <fieldset><legend>3. Latency tolerance</legend>
+            <label><input type="radio" name="q3" value="seconds" checked /> Seconds (interactive)</label>
+            <label><input type="radio" name="q3" value="minutes" /> Minutes</label>
+            <label><input type="radio" name="q3" value="hours" /> Hours are fine</label>
+          </fieldset>
+          <fieldset><legend>4. Auditability</legend>
+            <label><input type="radio" name="q4" value="high" checked /> Every step must be traceable</label>
+            <label><input type="radio" name="q4" value="low" /> Final output quality is what matters</label>
+          </fieldset>
+          <fieldset><legend>5. Budget</legend>
+            <label><input type="radio" name="q5" value="tight" checked /> Tight: lowest cost per task</label>
+            <label><input type="radio" name="q5" value="loose" /> Quality first, within caps</label>
+          </fieldset>
+          <button class="btn" id="a-go" type="button">Recommend</button>
+          <div class="out" id="a-out" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!-- Section 9: References -->
+      <section class="content-card" id="refs">
+        <h2><span class="sec-num">09</span>References</h2>
+        <p style="font-size:0.86rem;color:#94a3b8;margin-bottom:1rem;">All links were opened and read on 22 October 2026.</p>
+        <ol class="refs">
+          <li id="ref-1"><a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Pricing</a>, Claude Platform Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-2"><a href="https://platform.claude.com/docs/en/models/overview" target="_blank" rel="noopener noreferrer">Models overview</a>, Claude Platform Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-3"><a href="https://platform.claude.com/docs/en/api/rate-limits" target="_blank" rel="noopener noreferrer">Rate limits</a>, Claude Platform Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-4"><a href="https://platform.claude.com/docs/en/build-with-claude/batch-processing" target="_blank" rel="noopener noreferrer">Batch processing</a>, Claude Platform Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-5"><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" target="_blank" rel="noopener noreferrer">Prompt caching</a>, Claude Platform Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-6"><a href="https://code.claude.com/docs/en/agent-sdk/subagents" target="_blank" rel="noopener noreferrer">Subagents in the SDK</a>, Claude Code Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-7"><a href="https://code.claude.com/docs/en/agent-sdk/agent-loop" target="_blank" rel="noopener noreferrer">How the agent loop works</a>, Claude Code Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-8"><a href="https://code.claude.com/docs/en/agent-sdk/cost-tracking" target="_blank" rel="noopener noreferrer">Track cost and usage</a>, Claude Code Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-9"><a href="https://code.claude.com/docs/en/agent-sdk/custom-tools" target="_blank" rel="noopener noreferrer">Give Claude custom tools</a>, Claude Code Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-10"><a href="https://code.claude.com/docs/en/sub-agents" target="_blank" rel="noopener noreferrer">Create custom subagents</a>, Claude Code Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-11"><a href="https://platform.claude.com/docs/en/managed-agents/overview" target="_blank" rel="noopener noreferrer">Claude Managed Agents overview</a>, Claude Platform Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-12"><a href="https://platform.claude.com/docs/en/managed-agents/quickstart" target="_blank" rel="noopener noreferrer">Get started with Claude Managed Agents</a>, Claude Platform Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-13"><a href="https://platform.claude.com/docs/en/managed-agents/budgets" target="_blank" rel="noopener noreferrer">Session budgets</a>, Claude Platform Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-14"><a href="https://platform.claude.com/docs/en/managed-agents/events-and-streaming" target="_blank" rel="noopener noreferrer">Session event stream</a>, Claude Platform Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-15"><a href="https://platform.claude.com/docs/en/managed-agents/session-observability" target="_blank" rel="noopener noreferrer">Inspect sessions and track usage</a>, Claude Platform Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-16"><a href="https://platform.claude.com/docs/en/api/overview" target="_blank" rel="noopener noreferrer">API overview</a>, Claude Platform Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-17"><a href="https://platform.claude.com/docs/en/api/versioning" target="_blank" rel="noopener noreferrer">Versions</a>, Claude Platform Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-18"><a href="https://platform.claude.com/docs/en/api/sdks/python" target="_blank" rel="noopener noreferrer">Python SDK</a>, Claude Platform Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-19"><a href="https://platform.claude.com/docs/en/build-with-claude/usage-cost-api" target="_blank" rel="noopener noreferrer">Usage and Cost API</a>, Claude Platform Docs, Anthropic. Accessed 22 Oct 2026.</li>
+          <li id="ref-20"><a href="https://www.anthropic.com/engineering/multi-agent-research-system" target="_blank" rel="noopener noreferrer">How we built our multi-agent research system</a>, Engineering at Anthropic, J. Hadfield et al., 13 June 2025. Accessed 22 Oct 2026.</li>
+          <li id="ref-21"><a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">Building effective agents</a>, Engineering at Anthropic, Erik S. and Barry Zhang, 19 December 2024. Accessed 22 Oct 2026.</li>
+          <li id="ref-22"><a href="https://modelcontextprotocol.io/introduction" target="_blank" rel="noopener noreferrer">What is the Model Context Protocol (MCP)?</a>, modelcontextprotocol.io. Accessed 22 Oct 2026.</li>
+          <li id="ref-23"><a href="https://aws.amazon.com/bedrock/pricing/" target="_blank" rel="noopener noreferrer">Amazon Bedrock pricing</a>, Amazon Web Services. Accessed 22 Oct 2026.</li>
+          <li id="ref-24"><a href="https://aws.amazon.com/bedrock/agentcore/pricing/" target="_blank" rel="noopener noreferrer">Amazon Bedrock AgentCore pricing</a>, Amazon Web Services. Accessed 22 Oct 2026.</li>
+          <li id="ref-25"><a href="https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html" target="_blank" rel="noopener noreferrer">Managing your costs with AWS Budgets</a>, AWS Documentation. Accessed 22 Oct 2026.</li>
+          <li id="ref-26"><a href="https://docs.cloud.google.com/billing/docs/how-to/budgets" target="_blank" rel="noopener noreferrer">Create, edit, or delete budgets and budget alerts</a>, Google Cloud Documentation. Accessed 22 Oct 2026.</li>
+          <li id="ref-27"><a href="https://github.com/anthropics/anthropic-sdk-python" target="_blank" rel="noopener noreferrer">anthropic-sdk-python</a>, Anthropic on GitHub. Accessed 22 Oct 2026.</li>
+          <li id="ref-28"><a href="https://cloud.google.com/vertex-ai/generative-ai/pricing" target="_blank" rel="noopener noreferrer">Generative AI on Vertex AI pricing</a>, Google Cloud. Accessed 22 Oct 2026.</li>
+        </ol>
+      </section>
+
+      <!-- CTA Banner -->
+      <section class="cta-banner">
+        <h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Scale Autonomous Multi-Agent Topologies Responsibly</h3>
+        <p style="color:#94a3b8;font-size:1.02rem;max-width:680px;margin:0 auto 1.75rem;line-height:1.7;">Architect resilient Claude agent swarms, manage concurrency and rate-limit budgets, and enforce multi-tier spend guards from prompt prototyping to enterprise production.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+          <a class="btn btn-primary" href="collaboration.html">Start An Orchestration Project &rarr;</a>
+          <a class="btn btn-outline" href="pricing.html">View Advisory Tiers &rarr;</a>
+        </div>
+      </section>
     </article>
-
-    <!-- RELEVANT CALL TO ACTION -->
-    <section class="cta-banner">
-      <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Orchestrate Enterprise Multi-Agent Swarms</h2>
-      <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
-        Unleash scalable, resilient multi-agent intelligence with supervisory delegation and multi-model quorum verification.
-      </p>
-      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
-        <a class="btn btn-primary" href="service-ai-agents-orchestration.html">Schedule Orchestration Session →</a>
-        <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
-        <a class="btn btn-outline" href="pricing.html">View Advisory Packages</a>
-      </div>
-    </section>
   </main>
 
     <!-- START:FOOTER -->
@@ -1557,6 +3521,240 @@ stateDiagram-v2
     </p>
   </footer>
     <!-- END:FOOTER -->
+
+  <script>
+  (function () {
+    "use strict";
+
+    // ---- Copy button handler ---------------------------------------------
+    document.querySelectorAll(".codewrap").forEach(function (wrap) {
+      var btn = wrap.querySelector(".copy");
+      var code = wrap.querySelector("code");
+      if (!btn || !code) return;
+      btn.addEventListener("click", function () {
+        var text = code.innerText;
+        var done = function () { btn.textContent = "Copied!"; setTimeout(function () { btn.textContent = "Copy"; }, 1500); };
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done, fallback);
+          } else { fallback(); }
+        } catch (e) { fallback(); }
+        function fallback() {
+          var ta = document.createElement("textarea");
+          ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+          document.body.appendChild(ta); ta.select();
+          try { document.execCommand("copy"); done(); } catch (err) { btn.textContent = "Select & copy"; }
+          document.body.removeChild(ta);
+        }
+      });
+    });
+
+    // ---- shared helpers ---------------------------------------------------
+    // USD per million tokens, Claude API list prices checked 22 October 2026.
+    var PRICES = {
+      fable:     { name: "Claude Fable 5.1",  id: "claude-fable-5-1",  inp: 10,   out: 50,   w: 12.5,  r: 0.25 },
+      opus:      { name: "Claude Opus 5.5",   id: "claude-opus-5-5",   inp: 4,    out: 20,   w: 5,     r: 0.20 },
+      sonnet:    { name: "Claude Sonnet 5.5", id: "claude-sonnet-5-5", inp: 2,    out: 10,   w: 2.5,   r: 0.10 },
+      haiku:     { name: "Claude Haiku 5.5",  id: "claude-haiku-5-5",  inp: 0.10, out: 0.50, w: 0.125, r: 0.01 },
+      haikulong: { name: "Claude Haiku 5.5 (>100k prompt)", id: "", inp: 0.50, out: 2.50, w: 0.625, r: 0.05 }
+    };
+    function $(id) { return document.getElementById(id); }
+    function num(id, min, max) {
+      var el = $(id), v = parseFloat(el.value);
+      if (!isFinite(v)) throw new Error(el.labels && el.labels[0] ? el.labels[0].textContent + " must be a number." : id + " must be a number.");
+      if (min !== undefined && v < min) throw new Error((el.labels && el.labels[0] ? el.labels[0].textContent : id) + " must be at least " + min + ".");
+      if (max !== undefined && v > max) throw new Error((el.labels && el.labels[0] ? el.labels[0].textContent : id) + " must be at most " + max + ".");
+      return v;
+    }
+    function money(x) {
+      if (!isFinite(x)) return "n/a";
+      if (Math.abs(x) < 1) return "$" + x.toFixed(4);
+      return "$" + x.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+    function kpi(label, value, cls) {
+      return '<div class="kpi"><div class="k">' + label + '</div><div class="v ' + (cls || "") + '">' + value + "</div></div>";
+    }
+    function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+    // ---- Widget 2: cost calculator ---------------------------------------
+    var last = null;
+    function loadPrices() {
+      var p = PRICES[$("c-model").value];
+      $("c-pin").value = p.inp; $("c-pout").value = p.out; $("c-pw").value = p.w; $("c-pr").value = p.r;
+    }
+    function calcCost() {
+      $("c-err").textContent = "";
+      try {
+        var agents = num("c-agents", 1, 500), inTok = num("c-in", 0), outTok = num("c-out", 0),
+            turns = num("c-turns", 1, 1000), hit = num("c-hit", 0, 100) / 100,
+            sess = num("c-sess", 0), days = num("c-days", 1, 7),
+            pin = num("c-pin", 0), pout = num("c-pout", 0), pw = num("c-pw", 0), pr = num("c-pr", 0);
+        var disc = $("c-batch").checked ? 0.5 : 1;
+        var cachedPerTurn = inTok * hit;
+        var writes = hit > 0 ? cachedPerTurn : 0;
+        var reads = hit > 0 ? cachedPerTurn * (turns - 1) : 0;
+        var uncached = turns * inTok - writes - reads;
+        var outAll = turns * outTok;
+        var perAgent = (uncached * pin + writes * pw + reads * pr + outAll * pout) / 1e6 * disc;
+        var noCache = (turns * inTok * pin + outAll * pout) / 1e6 * disc;
+        var session = perAgent * agents, daily = session * sess, weekly = daily * days;
+        var monthly = weekly * 52 / 12, annual = weekly * 52;
+        last = { perAgent: perAgent, session: session, daily: daily, weekly: weekly, monthly: monthly, annual: annual };
+        var saving = noCache > 0 ? (1 - perAgent / noCache) * 100 : 0;
+        $("c-out").innerHTML = '<div class="kpis">' +
+          kpi("Per agent", money(perAgent)) + kpi("Per session", money(session)) + kpi("Per day", money(daily)) +
+          kpi("Per week", money(weekly)) + kpi("Per month", money(monthly)) + kpi("Per year", money(annual), "warnc") +
+          '</div><p style="margin:10px 0 0">Caching saves <b class="ok">' + saving.toFixed(0) + "%</b> per agent against the same run with no cache (" +
+          money(noCache * agents) + " per session). Input tokens per agent: " + Math.round(turns * inTok).toLocaleString() +
+          ", of which " + Math.round(reads).toLocaleString() + " are cache reads.</p>";
+      } catch (e) { $("c-err").textContent = e.message; $("c-out").innerHTML = ""; }
+    }
+    $("c-model").addEventListener("change", function () { loadPrices(); calcCost(); });
+    $("c-go").addEventListener("click", calcCost);
+    loadPrices();
+
+    // ---- Widget 3: cap planner --------------------------------------------
+    var caps = null;
+    function planCaps() {
+      $("p-err").textContent = "";
+      try {
+        var m = num("p-month", 1), wd = num("p-wd", 1, 31), sess = num("p-sess", 1), agents = num("p-agents", 1), head = num("p-head", 0, 300) / 100;
+        var daily = m / wd * (1 + head), weekly = m * 12 / 52, annual = m * 11;
+        var perSession = daily / sess, perAgent = perSession / agents * 1.25;
+        caps = { perAgent: perAgent, session: perSession, daily: daily, weekly: weekly, monthly: m, annual: annual };
+        $("p-out").innerHTML = '<div class="kpis">' +
+          kpi("Per agent", money(perAgent)) + kpi("Per session", money(perSession)) + kpi("Daily", money(daily)) +
+          kpi("Weekly", money(weekly)) + kpi("Monthly", money(m)) + kpi("Annual", money(annual)) + "</div>" +
+          '<p style="margin:10px 0 0">Per-agent cap allows one agent 25% more than an even share. ' +
+          (m <= 500 ? "Fits under the Start tier cap ($500/month)." : m <= 1000 ? "Needs at least the Build tier ($1,000/month cap)." :
+            m <= 200000 ? "Needs the Scale tier ($200,000/month cap)." : "Above the Scale tier cap: talk to Anthropic about a custom tier.") + "</p>";
+        return true;
+      } catch (e) { $("p-err").textContent = e.message; $("p-out").innerHTML = ""; return false; }
+    }
+    function compareCaps() {
+      if (!planCaps()) return;
+      if (!last) { calcCost(); }
+      if (!last) { $("p-err").textContent = "Fix the inputs in Widget 2 first."; return; }
+      var rows = [["Per agent", "perAgent"], ["Per session", "session"], ["Daily", "daily"], ["Weekly", "weekly"], ["Monthly", "monthly"], ["Annual", "annual"]];
+      var html = '<div class="tablewrap"><table style="min-width:420px"><thead><tr><th>Level</th><th>Planned spend (Widget 2)</th><th>Cap</th><th>Status</th></tr></thead><tbody>';
+      var breaches = 0;
+      rows.forEach(function (r) {
+        var spend = last[r[1]], cap = caps[r[1]], ratio = cap > 0 ? spend / cap : Infinity;
+        var st = ratio > 1 ? '<span class="bad">breach (' + (ratio * 100).toFixed(0) + "%)</span>" : ratio > 0.8 ? '<span class="warnc">close (' + (ratio * 100).toFixed(0) + "%)</span>" : '<span class="ok">ok (' + (ratio * 100).toFixed(0) + "%)</span>";
+        if (ratio > 1) breaches++;
+        html += "<tr><td>" + r[0] + "</td><td>" + money(spend) + "</td><td>" + money(cap) + "</td><td>" + st + "</td></tr>";
+      });
+      html += "</tbody></table></div><p>" + (breaches ? '<b class="bad">' + breaches + " cap(s) would trip.</b> Lower agents, turns or sessions in Widget 2, or raise the budget." : '<b class="ok">Planned usage fits every cap.</b>') + "</p>";
+      $("p-out").innerHTML += html;
+    }
+    $("p-go").addEventListener("click", planCaps);
+    $("p-cmp").addEventListener("click", compareCaps);
+
+    // ---- Widget 1: rate-limit estimator -----------------------------------
+    var LIMITS = {
+      start: { std: [1000, 2000000, 400000], fable: [1000, 500000, 100000] },
+      build: { std: [5000, 5000000, 1000000], fable: [2000, 1500000, 300000] },
+      scale: { std: [10000, 10000000, 2000000], fable: [4000, 4000000, 800000] }
+    };
+    function estimateRate() {
+      $("r-err").textContent = "";
+      try {
+        var lim = LIMITS[$("r-tier").value][$("r-model").value];
+        var agents = num("r-agents", 1), rpa = num("r-rpm", 0.1), inT = num("r-in", 0), outT = num("r-out", 0), total = num("r-total", 1);
+        var rpm = agents * rpa, itpm = rpm * inT, otpm = rpm * outT;
+        var caps2 = [lim[0], inT > 0 ? lim[1] / inT : Infinity, outT > 0 ? lim[2] / outT : Infinity];
+        var names = ["requests per minute", "input tokens per minute", "output tokens per minute"];
+        var sustain = Math.min.apply(null, caps2), bott = names[caps2.indexOf(sustain)];
+        var eff = Math.min(rpm, sustain), minutes = total / eff;
+        function util(d, l) { var u = d / l * 100; var c = u > 100 ? "bad" : u > 80 ? "warnc" : "ok"; return '<span class="' + c + '">' + u.toFixed(0) + "%</span>"; }
+        var fits = rpm <= sustain;
+        $("r-out").innerHTML = '<div class="kpis">' +
+          kpi("Demand RPM", Math.round(rpm).toLocaleString()) + kpi("RPM use", util(rpm, lim[0])) +
+          kpi("Input TPM use", util(itpm, lim[1])) + kpi("Output TPM use", util(otpm, lim[2])) +
+          kpi("Job time", minutes < 120 ? minutes.toFixed(1) + " min" : (minutes / 60).toFixed(1) + " h") + "</div>" +
+          '<p style="margin:10px 0 0">' + (fits ? '<b class="ok">Fits.</b> ' : '<b class="bad">Does not fit:</b> expect 429 errors. ') +
+          "The binding limit is " + bott + ", which allows about " + Math.floor(sustain).toLocaleString() + " requests a minute. " +
+          "Limits are enforced over short intervals, so bursts can trip them even when the per-minute average fits. Cached input does not count toward the input limit.</p>";
+      } catch (e) { $("r-err").textContent = e.message; $("r-out").innerHTML = ""; }
+    }
+    $("r-go").addEventListener("click", estimateRate);
+
+    // ---- Widget 4: log analyser -------------------------------------------
+    function priceFor(model) {
+      var keys = ["fable", "opus", "sonnet", "haiku"];
+      for (var i = 0; i < keys.length; i++) { if (String(model).indexOf(PRICES[keys[i]].id) === 0) return PRICES[keys[i]]; }
+      return null;
+    }
+    function analyseLog() {
+      $("l-err").textContent = "";
+      var lines = $("l-in").value.split(/\r?\n/).filter(function (l) { return l.trim(); });
+      if (!lines.length) { $("l-err").textContent = "Paste at least one JSON line."; $("l-out").innerHTML = ""; return; }
+      var byAgent = {}, byModel = {}, bad = [], unknown = {};
+      lines.forEach(function (line, i) {
+        var o;
+        try { o = JSON.parse(line); } catch (e) { bad.push(i + 1); return; }
+        var p = priceFor(o.model);
+        if (!p) { unknown[o.model] = true; return; }
+        var inT = +o.input_tokens || 0, outT = +o.output_tokens || 0, cr = +o.cache_read_input_tokens || 0, cw = +o.cache_creation_input_tokens || 0;
+        var cost = (inT * p.inp + outT * p.out + cr * p.r + cw * p.w) / 1e6;
+        var a = o.agent || "(unnamed)";
+        [[byAgent, a], [byModel, p.name]].forEach(function (pair) {
+          var t = pair[0][pair[1]] || (pair[0][pair[1]] = { calls: 0, input: 0, output: 0, cost: 0 });
+          t.calls++; t.input += inT + cr + cw; t.output += outT; t.cost += cost;
+        });
+      });
+      function table(title, obj) {
+        var keys = Object.keys(obj).sort(function (x, y) { return obj[y].cost - obj[x].cost; });
+        var total = keys.reduce(function (s, k) { return s + obj[k].cost; }, 0);
+        var h = '<h4 style="margin-top:6px">' + title + '</h4><div class="tablewrap"><table style="min-width:420px"><thead><tr><th>' + title.replace("By ", "") + "</th><th>Calls</th><th>Input tokens</th><th>Output tokens</th><th>Cost</th></tr></thead><tbody>";
+        keys.forEach(function (k) { var t = obj[k]; h += "<tr><td>" + esc(k) + "</td><td>" + t.calls + "</td><td>" + t.input.toLocaleString() + "</td><td>" + t.output.toLocaleString() + "</td><td>" + money(t.cost) + "</td></tr>"; });
+        return h + "<tr><td><b>Total</b></td><td></td><td></td><td></td><td><b>" + money(total) + "</b></td></tr></tbody></table></div>";
+      }
+      var msg = "";
+      if (bad.length) msg += "Skipped invalid JSON on line(s) " + bad.join(", ") + ". ";
+      var u = Object.keys(unknown);
+      if (u.length) msg += "No price for model(s): " + u.map(esc).join(", ") + ". ";
+      $("l-err").textContent = msg;
+      $("l-out").innerHTML = Object.keys(byAgent).length ? table("By agent", byAgent) + table("By model", byModel) : "Nothing to total.";
+    }
+    $("l-go").addEventListener("click", analyseLog);
+
+    // ---- Widget 5: architecture picker ------------------------------------
+    var ARCH = {
+      orch: { name: "Orchestrator-worker", href: "#arch-orch" },
+      hier: { name: "Hierarchical", href: "#arch-hier" },
+      pipe: { name: "Sequential pipeline", href: "#arch-pipe" },
+      fan: { name: "Parallel fan-out / fan-in", href: "#arch-fan" },
+      router: { name: "Router", href: "#arch-router" }
+    };
+    var SCORES = {
+      q1: { fixed: { pipe: 3, router: 1 }, items: { fan: 3 }, dynamic: { orch: 3, hier: 2 } },
+      q2: { indep: { fan: 2, orch: 2 }, domains: { hier: 3, orch: 1 }, chained: { pipe: 3 }, mixed: { router: 3 } },
+      q3: { seconds: { router: 2, pipe: 1, fan: -2, hier: -1 }, minutes: { orch: 1, pipe: 1 }, hours: { fan: 2, hier: 1 } },
+      q4: { high: { pipe: 2, fan: 1, router: 1, hier: -1 }, low: { orch: 1, hier: 1 } },
+      q5: { tight: { fan: 2, router: 2, pipe: 1, hier: -2 }, loose: { orch: 2, hier: 1 } }
+    };
+    function pick() {
+      var total = { orch: 0, hier: 0, pipe: 0, fan: 0, router: 0 };
+      Object.keys(SCORES).forEach(function (q) {
+        var el = document.querySelector('input[name="' + q + '"]:checked');
+        if (!el) return;
+        var add = SCORES[q][el.value] || {};
+        Object.keys(add).forEach(function (k) { total[k] += add[k]; });
+      });
+      var ranked = Object.keys(total).sort(function (a, b) { return total[b] - total[a]; });
+      var top = ARCH[ranked[0]], second = ARCH[ranked[1]];
+      var close = total[ranked[0]] - total[ranked[1]] <= 1;
+      $("a-out").innerHTML = '<p style="margin:0">Recommended: <a href="' + top.href + '"><b>' + top.name + "</b></a> (score " + total[ranked[0]] + "). " +
+        (close ? 'Close second: <a href="' + second.href + '">' + second.name + "</a> (score " + total[ranked[1]] + "); prototype both on a small sample." :
+          'Runner-up: <a href="' + second.href + '">' + second.name + "</a> (score " + total[ranked[1]] + ").") + "</p>";
+    }
+    $("a-go").addEventListener("click", pick);
+
+    // Initial calculations so all widgets display immediate results on page load
+    calcCost(); planCaps(); estimateRate(); analyseLog(); pick();
+  })();
+  </script>
 <script src="components.js"></script>
 </body>
 </html>

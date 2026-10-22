@@ -6,7 +6,7 @@
 
 ---
 
-## Table of contents
+## Table of Contents
 
 Anthropic replaced its entire public model lineup between September 1 and October 7, 2026. Five models are current, and each one can run at five effort levels.
 

@@ -38,35 +38,95 @@
 
   <!-- JSON-LD Article Schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://thomascherickal.github.io/claude-plugins.html"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "TechArticle",
+        "Article"
+      ],
+      "@id": "https://thomascherickal.github.io/claude-plugins.html#article",
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://thomascherickal.github.io/claude-plugins.html",
+        "url": "https://thomascherickal.github.io/claude-plugins.html",
+        "name": "Claude Plugins: How One Install Turns Claude Into A Specialist For Any Job | Thomas Cherickal"
+      },
+      "headline": "Claude Plugins: How One Install Turns Claude Into A Specialist For Any Job",
+      "description": "What Claude plugins are, how they work across chat, Cowork and Claude Code, the major plugins available now, and how plugins could automate whole occupations.",
+      "image": [
+        "https://thomascherickal.github.io/assets/og-card.png"
+      ],
+      "datePublished": "2026-10-22T00:00:00+05:30",
+      "dateModified": "2026-10-22T00:00:00+05:30",
+      "inLanguage": "en-US",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://thomascherickal.github.io/claude-plugins.html"
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://thomascherickal.github.io/#person",
+        "name": "Thomas Cherickal",
+        "jobTitle": "Generative AI Consultant and The Digital Futurist",
+        "url": "https://thomascherickal.github.io",
+        "description": "Thomas Cherickal — Generative AI Consultant and The Digital Futurist.",
+        "sameAs": [
+          "https://linkedin.com/in/thomascherickal",
+          "https://github.com/thomascherickal",
+          "https://x.com/thomascherickal"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://thomascherickal.github.io/#organization",
+        "name": "The Digital Futurist",
+        "url": "https://thomascherickal.github.io",
+        "description": "Thomas Cherickal — Generative AI Consultant and The Digital Futurist.",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://thomascherickal.github.io/assets/digital-futurist-logo.jpg",
+          "width": 256,
+          "height": 256
+        }
+      },
+      "articleSection": "Enterprise AI Plugins",
+      "keywords": [
+        "Claude Plugins",
+        "Enterprise Extensibility",
+        "Cowork Plugins",
+        "Claude Code Plugins",
+        "Anthropic Plugins"
+      ]
     },
-    "headline": "Claude Plugins: How One Install Turns Claude Into A Specialist For Any Job",
-    "description": "What Claude plugins are, how they work across chat, Cowork and Claude Code, the major plugins available now, and how plugins could automate whole occupations.",
-    "author": {
-      "@type": "Person",
-      "name": "Thomas Cherickal",
-      "jobTitle": "Generative AI Consultant and The Digital Futurist",
-      "url": "https://thomascherickal.github.io"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "The Digital Futurist",
-      "url": "https://thomascherickal.github.io",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://thomascherickal.github.io/assets/digital-futurist-logo.jpg"
-      }
-    },
-    "datePublished": "2026-10-22",
-    "dateModified": "2026-10-22",
-    "image": "https://thomascherickal.github.io/assets/og-card.png"
-  }
-  </script>
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thomascherickal.github.io/claude-plugins.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thomascherickal.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Writing",
+          "item": "https://thomascherickal.github.io/writing.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Plugins",
+          "item": "https://thomascherickal.github.io/claude-plugins.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 
   <style>
     :root {
@@ -182,24 +242,49 @@
     .toc-card {
       border-left: 3px solid var(--gold);
     }
-
+    .toc-card h2 {
+      color: var(--gold);
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin-bottom: 1.15rem;
+      border-bottom: 1px solid rgba(251, 191, 36, 0.25);
+      padding-bottom: 0.5rem;
+    }
     .toc-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 0.65rem 1.5rem;
-      margin-top: 1rem;
-      padding-left: 1.25rem;
-      color: #cbd5e1;
-      font-size: 0.92rem;
+      margin: 0;
+      padding-left: 1.6rem;
+      columns: 1;
+    }
+    @media (max-width: 768px) {
+      .toc-list { columns: 1; }
+    }
+    .toc-list li {
+      margin: 0.55rem 0;
+      color: var(--gold);
     }
     .toc-list li a {
       color: var(--cyan);
       text-decoration: none;
+      font-size: 1.15rem;
+      line-height: 1.65;
       transition: color 0.2s ease;
     }
     .toc-list li a:hover {
       color: var(--gold);
       text-decoration: underline;
+    }
+    .toc-list ol {
+      padding-left: 1.4rem;
+      font-size: 1.02rem;
+      margin-top: 0.35rem;
+      margin-bottom: 0.35rem;
+    }
+    .toc-list ol li {
+      color: #94a3b8;
+      margin: 0.35rem 0;
+    }
+    .toc-list ol li a {
+      font-size: 1.02rem;
     }
 
     .article-body h2 {
@@ -422,7 +507,7 @@
       .container { padding: 0 1rem 3rem; }
       .content-card { padding: 1.5rem 1.25rem; }
       .hero { padding: 2.5rem 0 1.75rem; }
-      .toc-list { grid-template-columns: 1fr; }
+      .toc-list { columns: 1; }
       .cta-banner { padding: 2rem 1.25rem; }
       .data-table td:first-child { white-space: normal; }
     }
@@ -901,14 +986,13 @@
           <li><a href="claude-code.html">Claude Code</a></li>
           <li><a href="claude-cowork.html">Claude Cowork</a></li>
           <li><a href="claude-skills.html">Claude Skills </a></li>
-          <li><a href="claude-mcp.html">Claude MCP</a></li>
+          <li><a href="claude-custom-mcp.html">Claude Custom MCP</a></li>
           <li><a href="claude-plugins.html">Claude Plugins </a></li>
           <li><a href="claude-connectors.html">Claude Connectors</a></li>
           <li><a href="claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="claude-design.html">Claude Design</a></li>
           <li><a href="claude-science.html">Claude for Science</a></li>
           <li><a href="claude-local-llms.html">Claude With Local LLMs</a></li>
-          <li><a href="claude-budget-limits.html">Claude Budget Limits</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
@@ -970,7 +1054,7 @@
         
         <div class="rule"></div>
 
-        <h2 style="color:var(--gold);font-size:1.25rem;font-weight:700;margin-bottom:1rem;border-bottom:1px solid rgba(251,191,36,0.2);padding-bottom:0.5rem;">Table Of Contents</h2>
+        <h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
         <ol class="toc-list">
           <li><a href="#why">Why Plugins Exist</a></li>
           <li><a href="#what">What A Claude Plugin Is</a></li>

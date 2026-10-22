@@ -3,54 +3,132 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Claude Skills: Progressive Disclosure & Reusable Tool Repos | Thomas Cherickal</title>
-  <meta content="Architect enterprise skill repositories for Claude: vector-indexed tool libraries, progressive skill disclosure, and embedded test harnesses." name="description" />
+  <title>Claude Skills: Build Your Own, Use What Exists, and Plan for What Comes Next | Thomas Cherickal</title>
+  <meta content="How Claude skills work, how to write your own SKILL.md, the skills that already exist across Claude and the open Agent Skills standard, and what this extensibility means for automation and work." name="description" />
   <meta content="Thomas Cherickal" name="author" />
   <link href="https://thomascherickal.github.io/claude-skills.html" rel="canonical" />
+
   <!-- Open Graph -->
-  <meta content="website" property="og:type" />
+  <meta content="article" property="og:type" />
   <meta content="https://thomascherickal.github.io/claude-skills.html" property="og:url" />
   <meta content="Thomas Cherickal — The Digital Futurist" property="og:site_name" />
-  <meta content="Claude Skills: Progressive Disclosure & Reusable Tool Repos | Thomas Cherickal" property="og:title" />
-  <meta content="Architect enterprise skill repositories for Claude: vector-indexed tool libraries, progressive skill disclosure, and embedded test harnesses." property="og:description" />
+  <meta content="Claude Skills: Build Your Own, Use What Exists, and Plan for What Comes Next | Thomas Cherickal" property="og:title" />
+  <meta content="How Claude skills work, how to write your own SKILL.md, the skills that already exist across Claude and the open Agent Skills standard, and what this extensibility means for automation and work." property="og:description" />
   <meta content="https://thomascherickal.github.io/assets/og-card.png" property="og:image" />
   <meta content="en_US" property="og:locale" />
+
   <!-- Twitter Card -->
   <meta content="summary_large_image" name="twitter:card" />
   <meta content="@thomascherickal" name="twitter:site" />
-  <meta content="Claude Skills: Progressive Disclosure & Reusable Tool Repos | Thomas Cherickal" name="twitter:title" />
-  <meta content="Architect enterprise skill repositories for Claude: vector-indexed tool libraries, progressive skill disclosure, and embedded test harnesses." name="twitter:description" />
+  <meta content="Claude Skills: Build Your Own, Use What Exists, and Plan for What Comes Next | Thomas Cherickal" name="twitter:title" />
+  <meta content="How Claude skills work, how to write your own SKILL.md, the skills that already exist across Claude and the open Agent Skills standard, and what this extensibility means for automation and work." property="twitter:description" />
   <meta content="https://thomascherickal.github.io/assets/og-card.png" name="twitter:image" />
+
   <!-- Favicons -->
   <link href="assets/favicon.ico" rel="icon" sizes="any" />
   <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
   <link href="assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
   <link href="/site.webmanifest" rel="manifest" />
   <meta content="#020408" name="theme-color" />
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-  <!-- Mermaid.js for architecture diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      if (typeof mermaid !== "undefined") {
-        mermaid.initialize({
-          startOnLoad: true,
-          theme: 'dark',
-          themeVariables: {
-            'primaryColor': '#0c111d',
-            'primaryTextColor': '#38bdf8',
-            'primaryBorderColor': '#38bdf8',
-            'lineColor': '#fbbf24',
-            'secondaryColor': '#060912',
-            'tertiaryColor': '#131926'
-          }
-        });
-      }
-    });
-  </script>
+
+  <!-- JSON-LD Article Schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "TechArticle",
+        "Article"
+      ],
+      "@id": "https://thomascherickal.github.io/claude-skills.html#article",
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://thomascherickal.github.io/claude-skills.html",
+        "url": "https://thomascherickal.github.io/claude-skills.html",
+        "name": "Claude Skills: Build Your Own, Use What Exists, and Plan for What Comes Next | Thomas Cherickal"
+      },
+      "headline": "Claude Skills: Build Your Own, Use What Exists, and Plan for What Comes Next",
+      "description": "How Claude skills work, how to write your own SKILL.md, the skills that already exist across Claude and the open Agent Skills standard, and what this extensibility means for automation and work.",
+      "image": [
+        "https://thomascherickal.github.io/assets/og-card.png"
+      ],
+      "datePublished": "2026-10-22T00:00:00+05:30",
+      "dateModified": "2026-10-22T00:00:00+05:30",
+      "inLanguage": "en-US",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://thomascherickal.github.io/claude-skills.html"
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://thomascherickal.github.io/#person",
+        "name": "Thomas Cherickal",
+        "jobTitle": "Generative AI Consultant and The Digital Futurist",
+        "url": "https://thomascherickal.github.io",
+        "description": "Thomas Cherickal — Generative AI Consultant and The Digital Futurist.",
+        "sameAs": [
+          "https://linkedin.com/in/thomascherickal",
+          "https://github.com/thomascherickal",
+          "https://x.com/thomascherickal"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://thomascherickal.github.io/#organization",
+        "name": "The Digital Futurist",
+        "url": "https://thomascherickal.github.io",
+        "description": "Thomas Cherickal — Generative AI Consultant and The Digital Futurist.",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://thomascherickal.github.io/assets/digital-futurist-logo.jpg",
+          "width": 256,
+          "height": 256
+        }
+      },
+      "articleSection": "Agent Skills & Procedures",
+      "keywords": [
+        "Claude Skills",
+        "SKILL.md",
+        "Agent Skills Standard",
+        "Anthropic Skills",
+        "Custom AI Skills",
+        "Enterprise Agents"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thomascherickal.github.io/claude-skills.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thomascherickal.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Writing",
+          "item": "https://thomascherickal.github.io/writing.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Skills",
+          "item": "https://thomascherickal.github.io/claude-skills.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
   <style>
     :root {
       --bg-0: #020408;
@@ -61,8 +139,12 @@
       --border-gold: rgba(251, 191, 36, 0.35);
       --cyan: #38bdf8;
       --gold: #fbbf24;
+      --gold-soft: #f1d27f;
       --claude-accent: #d97757;
       --claude-light: #f38b6c;
+      --violet: #a5b4fc;
+      --green: #34d399;
+      --pink: #f472b6;
       --text: #f8fafc;
       --text-muted: #94a3b8;
       --font-main: 'Inter', -apple-system, sans-serif;
@@ -113,10 +195,37 @@
 
     .hero-desc {
       color: #94a3b8;
-      max-width: 780px;
+      max-width: 820px;
       margin: 0 auto 1.75rem;
       font-size: 1.05rem;
       line-height: 1.7;
+    }
+
+    .hero-byline {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .hero-byline strong {
+      color: var(--gold);
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 1.15rem;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      font-family: var(--font-mono);
+      padding: 4px 14px;
+      border-radius: 999px;
+      color: #e2e8f0;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.25);
     }
 
     .content-card {
@@ -129,43 +238,179 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
     }
 
-    .step-card:hover {
-      transform: translateY(-2px);
-      border-color: var(--cyan);
+    .toc-card {
+      border-left: 3px solid var(--cyan);
+    }
+    .toc-card h2 {
+      color: var(--gold);
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin-bottom: 1.15rem;
+      border-bottom: 1px solid rgba(251, 191, 36, 0.25);
+      padding-bottom: 0.5rem;
     }
 
-    .ref-link {
+    .toc-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.65rem;
+      margin-top: 1rem;
+      padding-left: 1.25rem;
+      list-style: none;
+      color: #cbd5e1;
+      font-size: 1.15rem;
+      line-height: 1.65;
+    }
+    .toc-list li {
+      margin: 0.2rem 0;
+    }
+    .toc-list li a {
       color: var(--cyan);
       text-decoration: none;
+      font-size: 1.15rem;
       transition: color 0.2s ease;
-      word-break: break-all;
     }
-    .ref-link:hover {
+    .toc-list li a:hover {
       color: var(--gold);
       text-decoration: underline;
     }
+    .toc-list ol {
+      padding-left: 1.4rem;
+      font-size: 1.02rem;
+      margin-top: 0.35rem;
+      margin-bottom: 0.35rem;
+      list-style: none;
+    }
+    .toc-list ol li a {
+      font-size: 1.02rem;
+    }
 
+    .article-body h2 {
+      font-family: var(--font-display, serif);
+      color: #ffffff;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 1.15rem;
+      border-bottom: 1px solid rgba(56, 189, 248, 0.25);
+      padding-bottom: 0.5rem;
+      scroll-margin-top: 85px;
+    }
+    .article-body h3 {
+      color: var(--cyan);
+      font-size: 1.18rem;
+      font-weight: 600;
+      margin-top: 1.75rem;
+      margin-bottom: 0.85rem;
+      scroll-margin-top: 85px;
+    }
+
+    .article-p {
+      color: #e2e8f0;
+      font-size: 0.98rem;
+      margin-bottom: 1.15rem;
+      line-height: 1.8;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-left: 3px solid var(--cyan);
+      border-radius: 10px;
+      padding: 1.35rem 1.5rem;
+      margin: 1.35rem 0;
+    }
+    .card.gold { border-left-color: var(--gold); }
+    .card.violet { border-left-color: var(--violet); }
+    .card.green { border-left-color: var(--green); }
+    .card.pink { border-left-color: var(--pink); }
+    .card .tag {
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.5rem;
+      font-family: var(--font-mono);
+    }
+    .card p:last-child { margin-bottom: 0; }
+
+    ul.article-list, ol.article-list {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+      margin-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.75;
+    }
+    ul.article-list li, ol.article-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1.25rem 0 1.75rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
     .data-table {
       width: 100%;
       border-collapse: collapse;
-      margin: 1.25rem 0;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
+      line-height: 1.55;
     }
     .data-table th, .data-table td {
       padding: 0.75rem 1rem;
-      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-bottom: 1px solid var(--border);
       text-align: left;
+      vertical-align: top;
     }
     .data-table th {
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(17, 22, 29, 0.85);
       color: var(--gold);
       font-family: var(--font-mono);
+      font-weight: 700;
       font-size: 0.82rem;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
     }
-    .data-table tr:nth-child(even) {
-      background: rgba(255, 255, 255, 0.02);
+    .data-table td:first-child {
+      color: var(--cyan);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .data-table tr:last-child td {
+      border-bottom: 0;
+    }
+    .data-table tbody tr:nth-child(even) td {
+      background: rgba(17, 22, 29, 0.45);
+    }
+
+    figure.article-figure {
+      background: #050814;
+      border: 1px solid rgba(56, 189, 248, 0.22);
+      border-radius: 12px;
+      padding: 1.5rem 1rem;
+      margin: 1.75rem 0;
+      overflow-x: auto;
+    }
+    figure.article-figure svg {
+      width: 100%;
+      min-width: 600px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    figcaption.article-figcaption {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-style: italic;
+      margin-top: 0.75rem;
+      text-align: center;
+    }
+    figcaption.article-figcaption b {
+      color: var(--gold);
+      font-weight: 600;
     }
 
     .code-window {
@@ -174,7 +419,7 @@
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
-      margin: 1.25rem 0;
+      margin: 1.25rem 0 1.5rem;
     }
     .code-bar {
       display: flex;
@@ -191,53 +436,59 @@
       padding: 1.15rem 1.35rem;
       overflow-x: auto;
       font-family: var(--font-mono);
-      font-size: 0.84rem;
+      font-size: 0.85rem;
       line-height: 1.65;
       color: #e2e8f0;
       tab-size: 4;
+      background: #050814;
+      margin: 0;
+    }
+    .code-pre .c { color: #7d7b84; }
+    .code-pre .k { color: var(--gold); }
+    code {
+      font-family: var(--font-mono);
+      font-size: 0.88em;
+      background: #11161d;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 6px;
+      color: var(--gold);
     }
 
-    .metric-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.15rem;
-      margin: 1.25rem 0;
-    }
-    .metric-card {
-      background: rgba(15, 23, 42, 0.7);
-      border: 1px solid rgba(56, 189, 248, 0.22);
-      border-radius: 12px;
-      padding: 1.35rem 1rem;
-      text-align: center;
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-    .metric-card:hover {
-      transform: translateY(-2px);
-      border-color: var(--cyan);
-    }
-    .metric-val {
-      font-family: var(--font-mono);
-      font-size: 1.85rem;
-      font-weight: 800;
+    .ref-link {
       color: var(--cyan);
-      margin-bottom: 0.35rem;
+      text-decoration: underline;
+      text-decoration-color: rgba(56, 189, 248, 0.35);
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
     }
-    .metric-label {
-      font-size: 0.8rem;
+    .ref-link:hover {
+      color: var(--gold);
+      text-decoration-color: var(--gold);
+    }
+
+    ol.refs {
       color: #94a3b8;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
+      font-size: 0.88rem;
+      margin-left: 1.4rem;
+      line-height: 1.8;
+      word-break: break-word;
+    }
+    ol.refs li {
+      margin-bottom: 0.55rem;
+    }
+    ol.refs li::marker {
+      color: var(--gold);
     }
 
     .cta-banner {
-      background: #070c18;
+      background: radial-gradient(circle at 50% 0%, rgba(217, 119, 87, 0.15) 0%, rgba(12, 17, 29, 0.98) 100%);
       border: 1.5px solid var(--border-gold);
       border-radius: 16px;
       padding: 3rem 2rem;
       text-align: center;
-      margin: 3rem 0 2rem;
-      box-shadow: 0 0 28px rgba(251, 191, 36, 0.18);
+      margin: 3.5rem 0 2rem;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.45);
     }
 
     .btn {
@@ -253,7 +504,6 @@
       cursor: pointer;
       transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     }
-
     .btn:hover { transform: translateY(-2px); }
     .btn-primary {
       background: var(--cyan);
@@ -286,6 +536,15 @@
       color: #ffffff !important;
       border-color: #38bdf8;
       box-shadow: 0 0 24px rgba(56, 189, 248, 0.6);
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 1rem 3rem; }
+      .content-card { padding: 1.5rem 1.25rem; }
+      .hero { padding: 2.5rem 0 1.75rem; }
+      .toc-list { grid-template-columns: 1fr; }
+      .cta-banner { padding: 2rem 1.25rem; }
+      .data-table td:first-child { white-space: normal; }
     }
   </style>
 </head>
@@ -762,14 +1021,13 @@
           <li><a href="claude-code.html">Claude Code</a></li>
           <li><a href="claude-cowork.html">Claude Cowork</a></li>
           <li><a href="claude-skills.html">Claude Skills </a></li>
-          <li><a href="claude-mcp.html">Claude MCP</a></li>
+          <li><a href="claude-custom-mcp.html">Claude Custom MCP</a></li>
           <li><a href="claude-plugins.html">Claude Plugins </a></li>
           <li><a href="claude-connectors.html">Claude Connectors</a></li>
           <li><a href="claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="claude-design.html">Claude Design</a></li>
           <li><a href="claude-science.html">Claude for Science</a></li>
           <li><a href="claude-local-llms.html">Claude With Local LLMs</a></li>
-          <li><a href="claude-budget-limits.html">Claude Budget Limits</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
@@ -805,129 +1063,828 @@
 
   <main class="container">
     <header class="hero">
-      <div class="hero-badge">MODULAR AGENT CAPABILITIES</div>
-      <h1 class="hero-title">Claude Skills: Progressive Disclosure & Tool Catalogs</h1>
-      <p class="hero-desc">Architect reusable, modular skill libraries for Claude: dynamic skill indexing, progressive tool disclosure, and automated evaluation harnesses.</p>
+      <div class="hero-badge">Agentic AI &middot; Skills Architecture</div>
+      <h1 class="hero-title">Claude Skills: Build Your Own, Use What Exists, and Plan for What Comes Next</h1>
+      <p class="hero-desc">How Claude skills work, how to write your own SKILL.md, the skills that already exist across Claude and the open Agent Skills standard, and what this extensibility means for automation and work.</p>
+      <div class="hero-byline">By <strong>Thomas Cherickal</strong>, Generative AI Consultant &middot; October 22, 2026</div>
+      <div class="pills">
+        <span class="pill">SKILL.md</span>
+        <span class="pill">Progressive Disclosure</span>
+        <span class="pill">Agent Skills Standard</span>
+        <span class="pill">Claude Code / API</span>
+        <span class="pill">Hands-On Tutorials</span>
+      </div>
     </header>
 
     <article class="article-body">
-
-    <div class="content-card">
-      <h2 style="color:var(--gold);font-size:1.35rem;font-weight:700;margin-bottom:1rem;line-height:1.35;border-bottom:1px solid rgba(251,191,36,0.18);padding-bottom:0.5rem;">Decoupling Skills from Agent Architectures</h2>
-      <p style="color:#e2e8f0;font-size:0.98rem;margin-bottom:1rem;line-height:1.8;">Building maintainable enterprise AI agents requires treating capabilities as reusable, modular skills rather than monolithic prompt instructions. A Claude skill encapsulates an explicit input schema, tool execution logic, environmental prerequisites, and self-contained assertion tests into a standardized package.</p>
-      <ul style="color:#cbd5e1;font-size:0.96rem;margin-left:1.5rem;margin-bottom:1.25rem;line-height:1.75;">
-        <li><strong>Atomic Encapsulation</strong>: Package single operations—such as reconciling an invoice, querying an elastic cluster, or compiling a C++ binary—into independent modules.</li>
-        <li><strong>Shared Enterprise Catalogs</strong>: Publish verified skills to an internal organizational registry, allowing cross-functional engineering teams to compose specialized agents rapidly.</li>
-        <li><strong>Runtime Independence</strong>: Skills remain decoupled from specific agent models, enabling seamless migration across Claude tiers (Haiku, Sonnet, Opus).</li>
-      </ul>
-    </div>
-
-    <div class="content-card">
-      <h2 style="color:var(--gold);font-size:1.35rem;font-weight:700;margin-bottom:1rem;line-height:1.35;border-bottom:1px solid rgba(251,191,36,0.18);padding-bottom:0.5rem;">Progressive Disclosure via Vector Indexing</h2>
-      <p style="color:#e2e8f0;font-size:0.98rem;margin-bottom:1rem;line-height:1.8;">Exposing dozens of skills simultaneously degrades model reasoning accuracy and consumes precious context tokens. Claude employs <em>progressive skill disclosure</em>. The agent maintains a compact semantic index of all available skills. Only when an incoming task matches a specific capability does the runtime dynamically inject the detailed tool schema into working memory, maintaining lean context windows and 90% prompt caching hit rates. Vector embeddings allow Claude to query thousands of enterprise skills in sub-50 milliseconds without token bloat.</p>
-    </div>
-
-    <div class="content-card">
-      <h2 style="color:var(--gold);font-size:1.35rem;font-weight:700;margin-bottom:1rem;line-height:1.35;border-bottom:1px solid rgba(251,191,36,0.18);padding-bottom:0.5rem;">Embedded Evaluation Harnesses &amp; Semantic Versioning</h2>
-      <p style="color:#e2e8f0;font-size:0.98rem;margin-bottom:1rem;line-height:1.8;">Every production skill module includes an embedded unit test suite. When skill code or system schemas change, automated regression harnesses execute test cases against live sandbox environments to verify parameter validation, edge-case recovery, and execution speed. Semantic versioning guarantees that downstream agent workflows never encounter breaking API changes unexpectedly. Automated regression pipelines run continuously across skill registries, verifying that updates to Claude prompt formatting never degrade tool invocation accuracy or corrupt output parsing.</p>
-    </div>
-
-    <div class="content-card" style="padding:1.75rem;">
-      <h3 style="color:var(--cyan);font-size:1.15rem;font-weight:600;margin-bottom:0.85rem;">Progressive Skill Retrieval &amp; Contract Definition</h3>
-      <div class="mermaid-container" style="background:#050814;border:1px solid rgba(56,189,248,0.22);border-radius:12px;padding:1.5rem 1rem;text-align:center;overflow-x:auto;">
-        <pre class="mermaid">
-flowchart TD
-    UserGoal[User Request / Objective] --> Search{Semantic Skill Vector Search}
-    Search --> Catalog[(Enterprise Skill Catalog: 100+ Skills)]
-    Catalog -->|Top-K Matching Skills| Inject[Progressive Schema Disclosure]
-    Inject --> Claude[Claude Working Memory Context]
-    Claude --> Execute[Execute Sandboxed Skill Module]
-    Execute --> Audit[Verify Output & Test Harness]
-    style Search fill:#0c111d,stroke:#38bdf8,stroke-width:2px,color:#fff
-    style Claude fill:#060912,stroke:#fbbf24,stroke-width:2px,color:#fff
-        </pre>
+      <!-- Table of Contents -->
+      <div class="content-card toc-card">
+        <h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
+        <ol class="toc-list">
+          <li><a href="#what">1. What A Claude Skill Is</a></li>
+          <li><a href="#where">2. Where Skills Run</a></li>
+          <li><a href="#create">3. Build Your Own Skill</a></li>
+          <li><a href="#tutorials">4. Hands-On Tutorials</a>
+            <ol style="margin-top:0.35rem;padding-left:1.2rem;list-style:lower-alpha;">
+              <li><a href="#tutorial-1">Meeting-Notes in Claude Apps</a></li>
+              <li><a href="#tutorial-2">Changelog Script in Claude Code</a></li>
+              <li><a href="#tutorial-3">Skills via Claude API</a></li>
+            </ol>
+          </li>
+          <li><a href="#existing">5. Existing Skills Catalog</a></li>
+          <li><a href="#security">6. Skill Security &amp; Safety</a></li>
+          <li><a href="#future">7. Automation Economics &amp; Impact</a></li>
+          <li><a href="#references">8. References</a></li>
+        </ol>
       </div>
-      <div class="code-window" style="margin-top:1.25rem;">
-        <div class="code-bar">
-          <span>skill-contract &mdash; git-branch-audit</span>
-          <span style="color:var(--cyan);">Skill v2.4.0</span>
-        </div>
-        <pre class="code-pre"><code>name: git_branch_security_audit
-version: "2.4.0"
-description: "Audits git commits for secrets, merge conflicts, and lint passes."
-inputs:
-  repository_url: { type: "string", format: "uri", required: true }
-  branch: { type: "string", default: "main" }
-test_harness: "pytest tests/skills/test_git_audit.py"
-safety_gate: "READ_ONLY_REPO_ACCESS"</code></pre>
-      </div>
-      <table class="data-table" style="margin-top:1.25rem;">
-        <thead>
-          <tr>
-            <th>Skill Category</th>
-            <th>Contract Schema</th>
-            <th>Execution Sandbox</th>
-            <th>Avg Latency</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Repository Audit</strong></td>
-            <td>JSON Schema v2020-12</td>
-            <td>Read-Only Ephemeral Container</td>
-            <td>1.2s</td>
-          </tr>
-          <tr>
-            <td><strong>Database Query</strong></td>
-            <td>SQL Parameterized AST</td>
-            <td>Restricted Read-Replica Pool</td>
-            <td>0.3s</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
 
-    <div class="content-card">
-      <h2 style="color:var(--gold);font-size:1.35rem;font-weight:700;margin-bottom:1rem;line-height:1.35;border-bottom:1px solid rgba(251,191,36,0.18);padding-bottom:0.5rem;">Skill Repository Implementation Playbook</h2>
-      <div class="step-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.15rem;margin-top:1rem;">
-        <div class="step-card" style="background:rgba(15,23,42,0.6);border:1px solid rgba(56,189,248,0.2);border-radius:10px;padding:1.25rem;">
-          <div class="step-num" style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);font-weight:700;text-transform:uppercase;margin-bottom:0.35rem;">Step 01</div>
-          <div class="step-title" style="font-size:1.02rem;font-weight:700;color:#ffffff;margin-bottom:0.45rem;">Define Skill Contracts</div>
-          <div class="step-desc" style="font-size:0.88rem;color:#94a3b8;line-height:1.55;">Package each tool capability with rigorous YAML/JSON input schemas, execution bounds, and unit tests.</div>
-        </div>
-        <div class="step-card" style="background:rgba(15,23,42,0.6);border:1px solid rgba(56,189,248,0.2);border-radius:10px;padding:1.25rem;">
-          <div class="step-num" style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);font-weight:700;text-transform:uppercase;margin-bottom:0.35rem;">Step 02</div>
-          <div class="step-title" style="font-size:1.02rem;font-weight:700;color:#ffffff;margin-bottom:0.45rem;">Deploy Vector Indexing</div>
-          <div class="step-desc" style="font-size:0.88rem;color:#94a3b8;line-height:1.55;">Index skill metadata in vector stores to dynamically disclose only relevant tool schemas when tasks are dispatched.</div>
-        </div>
-        <div class="step-card" style="background:rgba(15,23,42,0.6);border:1px solid rgba(56,189,248,0.2);border-radius:10px;padding:1.25rem;">
-          <div class="step-num" style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);font-weight:700;text-transform:uppercase;margin-bottom:0.35rem;">Step 03</div>
-          <div class="step-title" style="font-size:1.02rem;font-weight:700;color:#ffffff;margin-bottom:0.45rem;">Automate Regression Evals</div>
-          <div class="step-desc" style="font-size:0.88rem;color:#94a3b8;line-height:1.55;">Run CI assertion suites on every skill modification to maintain backward compatibility across agent deployments.</div>
+      <!-- Introduction & Section 1 -->
+      <div class="content-card" id="what">
+        <h2>1. What A Claude Skill Is</h2>
+        <p class="article-p" style="font-size:1.06rem;color:#f8fafc;font-weight:500;">A Claude skill is a folder. Inside it sits a Markdown file called <code>SKILL.md</code>, plus any scripts, templates or reference documents the task needs. Claude opens it only when a request matches what the skill says it does, then follows it like an onboarding guide for one specific job.</p>
+        <p class="article-p">Anthropic <a class="ref-link" href="https://claude.com/resources/articles/skills" target="_blank" rel="noopener noreferrer">introduced Agent Skills for Claude</a> on October 16, 2025, and published the format as an open standard on December 18, 2025. Skills now run in the Claude apps, Claude Code, the Claude API and the Agent SDK. This article explains how they work, walks through three hands-on tutorials, lists the skills that already exist, and looks at what this extensibility means for automation and for the people whose work gets automated.</p>
+        <p class="article-p">Anthropic's <a class="ref-link" href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" target="_blank" rel="noopener noreferrer">Agent Skills overview in the Claude docs</a> defines skills as modular capabilities that bundle instructions, metadata and optional resources, which Claude uses automatically when relevant. MCP connectors give Claude access to outside systems; a skill describes the procedure to follow once that access exists.</p>
+
+        <!-- Figure 1 -->
+        <figure class="article-figure">
+          <svg viewBox="0 0 760 360" role="img" aria-labelledby="f1t f1d" xmlns="http://www.w3.org/2000/svg">
+            <title id="f1t">Anatomy of a skill folder</title>
+            <desc id="f1d">A skill folder holds a required SKILL.md file plus optional references, scripts and assets folders, each loaded at a different time.</desc>
+            <defs>
+              <linearGradient id="g-f1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#141a29"/>
+                <stop offset="100%" stop-color="#0b0f19"/>
+              </linearGradient>
+            </defs>
+            <g font-family="Inter, system-ui, sans-serif">
+              <rect x="20" y="16" width="290" height="328" rx="12" fill="url(#g-f1)" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1.5"/>
+              <path d="M40 34 h14 l5 6 h19 v20 h-38 z" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linejoin="round"/>
+              <text x="90" y="56" fill="#fbbf24" font-size="18" font-weight="700" font-family="JetBrains Mono, monospace">meeting-notes/</text>
+
+              <rect x="40" y="82" width="250" height="52" rx="8" fill="#091b2b" stroke="#38bdf8" stroke-width="1.5"/>
+              <text x="58" y="114" fill="#ffffff" font-size="16" font-weight="600" font-family="JetBrains Mono, monospace">SKILL.md</text>
+              <rect x="204" y="96" width="74" height="24" rx="6" fill="rgba(56, 189, 248, 0.2)" stroke="#38bdf8"/>
+              <text x="241" y="112" fill="#38bdf8" font-size="11" font-weight="700" text-anchor="middle">REQUIRED</text>
+
+              <rect x="40" y="148" width="250" height="52" rx="8" fill="#181329" stroke="#a5b4fc" stroke-width="1.5"/>
+              <text x="58" y="180" fill="#e2e8f0" font-size="16" font-family="JetBrains Mono, monospace">references/</text>
+              <rect x="204" y="162" width="74" height="24" rx="6" fill="rgba(165, 180, 252, 0.15)" stroke="#a5b4fc"/>
+              <text x="241" y="178" fill="#a5b4fc" font-size="11" font-weight="600" text-anchor="middle">OPTIONAL</text>
+
+              <rect x="40" y="214" width="250" height="52" rx="8" fill="#08221a" stroke="#34d399" stroke-width="1.5"/>
+              <text x="58" y="246" fill="#e2e8f0" font-size="16" font-family="JetBrains Mono, monospace">scripts/</text>
+              <rect x="204" y="228" width="74" height="24" rx="6" fill="rgba(52, 211, 153, 0.15)" stroke="#34d399"/>
+              <text x="241" y="244" fill="#34d399" font-size="11" font-weight="600" text-anchor="middle">OPTIONAL</text>
+
+              <rect x="40" y="280" width="250" height="52" rx="8" fill="#24141f" stroke="#f472b6" stroke-width="1.5"/>
+              <text x="58" y="312" fill="#e2e8f0" font-size="16" font-family="JetBrains Mono, monospace">assets/</text>
+              <rect x="204" y="294" width="74" height="24" rx="6" fill="rgba(244, 114, 182, 0.15)" stroke="#f472b6"/>
+              <text x="241" y="310" fill="#f472b6" font-size="11" font-weight="600" text-anchor="middle">OPTIONAL</text>
+
+              <g stroke-width="1.8" fill="none">
+                <line x1="290" y1="108" x2="370" y2="108" stroke="#38bdf8"/>
+                <line x1="290" y1="174" x2="370" y2="174" stroke="#a5b4fc" stroke-dasharray="4 4"/>
+                <line x1="290" y1="240" x2="370" y2="240" stroke="#34d399" stroke-dasharray="4 4"/>
+                <line x1="290" y1="306" x2="370" y2="306" stroke="#f472b6" stroke-dasharray="4 4"/>
+              </g>
+              <g fill="#38bdf8"><circle cx="290" cy="108" r="4"/><circle cx="370" cy="108" r="4"/></g>
+              <g fill="#a5b4fc"><circle cx="290" cy="174" r="3.5"/><circle cx="370" cy="174" r="3.5"/></g>
+              <g fill="#34d399"><circle cx="290" cy="240" r="3.5"/><circle cx="370" cy="240" r="3.5"/></g>
+              <g fill="#f472b6"><circle cx="290" cy="306" r="3.5"/><circle cx="370" cy="306" r="3.5"/></g>
+
+              <rect x="370" y="82" width="370" height="52" rx="8" fill="#0c1724" stroke="#38bdf8" stroke-width="1.5"/>
+              <text x="388" y="104" fill="#38bdf8" font-size="15" font-weight="700">Frontmatter plus instructions</text>
+              <text x="388" y="124" fill="#94a3b8" font-size="13.5">Metadata always loaded; body on trigger</text>
+
+              <rect x="370" y="148" width="370" height="52" rx="8" fill="#131122" stroke="#a5b4fc" stroke-width="1.5"/>
+              <text x="388" y="170" fill="#a5b4fc" font-size="15" font-weight="700">Extra documentation</text>
+              <text x="388" y="190" fill="#94a3b8" font-size="13.5">Read only when SKILL.md points to it</text>
+
+              <rect x="370" y="214" width="370" height="52" rx="8" fill="#091b15" stroke="#34d399" stroke-width="1.5"/>
+              <text x="388" y="236" fill="#34d399" font-size="15" font-weight="700">Executable code</text>
+              <text x="388" y="256" fill="#94a3b8" font-size="13.5">Runs through bash; only its output enters context</text>
+
+              <rect x="370" y="280" width="370" height="52" rx="8" fill="#1d1119" stroke="#f472b6" stroke-width="1.5"/>
+              <text x="388" y="302" fill="#f472b6" font-size="15" font-weight="700">Templates, images, data</text>
+              <text x="388" y="322" fill="#94a3b8" font-size="13.5">Used to build the output, loaded on demand</text>
+            </g>
+          </svg>
+          <figcaption class="article-figcaption"><b>Figure 1:</b> Anatomy of a skill folder. Only <code>SKILL.md</code> is required; the folder names follow the conventions in the Agent Skills specification.</figcaption>
+        </figure>
+
+        <p class="article-p">Skills load in three stages, a design Anthropic calls progressive disclosure. The <a class="ref-link" href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" target="_blank" rel="noopener noreferrer">Anthropic engineering post that introduced Agent Skills</a> calls it the principle that lets skills scale.</p>
+
+        <!-- Figure 2 -->
+        <figure class="article-figure">
+          <svg viewBox="0 0 760 410" role="img" aria-labelledby="f2t f2d" xmlns="http://www.w3.org/2000/svg">
+            <title id="f2t">Progressive disclosure in three levels</title>
+            <desc id="f2d">Level 1 loads every skill's name and description at startup. Level 2 loads one skill's SKILL.md body when a request matches. Level 3 loads reference files or runs scripts only when the instructions call for them.</desc>
+            <defs>
+              <marker id="f2a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="#fbbf24"/>
+              </marker>
+            </defs>
+            <g font-family="Inter, system-ui, sans-serif">
+              <rect x="20" y="14" width="720" height="112" rx="12" fill="#091b2b" stroke="#38bdf8" stroke-width="1.5"/>
+              <rect x="20" y="148" width="720" height="112" rx="12" fill="#1f1807" stroke="#fbbf24" stroke-width="1.5"/>
+              <rect x="20" y="282" width="720" height="112" rx="12" fill="#0c111d" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.5"/>
+
+              <text x="40" y="48" fill="#38bdf8" font-size="16" font-weight="700">Level 1 &middot; Metadata</text>
+              <text x="40" y="72" fill="#94a3b8" font-size="13.5">Loaded at startup</text>
+              <text x="40" y="96" fill="#34d399" font-size="13.5" font-weight="600">~100 tokens per skill</text>
+
+              <text x="40" y="182" fill="#fbbf24" font-size="16" font-weight="700">Level 2 &middot; Instructions</text>
+              <text x="40" y="206" fill="#94a3b8" font-size="13.5">When a request matches</text>
+              <text x="40" y="230" fill="#38bdf8" font-size="13.5" font-weight="600">Under 5,000 tokens</text>
+
+              <text x="40" y="316" fill="#f472b6" font-size="16" font-weight="700">Level 3 &middot; Resources</text>
+              <text x="40" y="340" fill="#94a3b8" font-size="13.5">Only when referenced</text>
+              <text x="40" y="364" fill="#a5b4fc" font-size="13.5" font-weight="600">0 tokens until used</text>
+
+              <g font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">
+                <rect x="240" y="52" width="54" height="36" rx="18" fill="#141417" stroke="#fb7185"/>
+                <text x="267" y="75" fill="#fbcfe8">pdf</text>
+                <rect x="304" y="52" width="62" height="36" rx="18" fill="#141417" stroke="#38bdf8"/>
+                <text x="335" y="75" fill="#bae6fd">docx</text>
+                <rect x="376" y="52" width="136" height="36" rx="18" fill="#2a2414" stroke="#fbbf24" stroke-width="2"/>
+                <text x="444" y="75" fill="#fbbf24" font-weight="700">meeting-notes</text>
+                <rect x="522" y="52" width="58" height="36" rx="18" fill="#141417" stroke="#34d399"/>
+                <text x="551" y="75" fill="#a7f3d0">xlsx</text>
+                <rect x="590" y="52" width="110" height="36" rx="18" fill="#141417" stroke="#a5b4fc" stroke-dasharray="4 3"/>
+                <text x="645" y="75" fill="#c7d2fe">+ many more</text>
+              </g>
+
+              <line x1="444" y1="90" x2="444" y2="174" stroke="#fbbf24" stroke-width="2" marker-end="url(#f2a)"/>
+
+              <rect x="314" y="178" width="260" height="62" rx="10" fill="#141417" stroke="#fbbf24" stroke-width="1.8"/>
+              <text x="444" y="203" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">SKILL.md body</text>
+              <text x="444" y="225" fill="#fbbf24" font-size="13.5" text-anchor="middle">steps, rules, examples</text>
+
+              <line x1="400" y1="242" x2="360" y2="308" stroke="#a5b4fc" stroke-width="2" marker-end="url(#f2a)"/>
+              <line x1="488" y1="242" x2="580" y2="308" stroke="#34d399" stroke-width="2" marker-end="url(#f2a)"/>
+
+              <rect x="240" y="312" width="230" height="62" rx="10" fill="#181329" stroke="#a5b4fc" stroke-width="1.5"/>
+              <text x="355" y="338" fill="#c7d2fe" font-size="13.5" text-anchor="middle" font-family="JetBrains Mono, monospace">notes-template.md</text>
+              <text x="355" y="360" fill="#94a3b8" font-size="13" text-anchor="middle">read when the steps link it</text>
+
+              <rect x="490" y="312" width="230" height="62" rx="10" fill="#09221a" stroke="#34d399" stroke-width="1.5"/>
+              <text x="605" y="338" fill="#a7f3d0" font-size="13.5" text-anchor="middle" font-family="JetBrains Mono, monospace">scripts/validate.py</text>
+              <text x="605" y="360" fill="#94a3b8" font-size="13" text-anchor="middle">runs; only its output returns</text>
+            </g>
+          </svg>
+          <figcaption class="article-figcaption"><b>Figure 2:</b> Progressive disclosure: every installed skill costs a line of metadata, and only the matching skill's body and files load. Token figures come from Anthropic's Agent Skills overview.</figcaption>
+        </figure>
+
+        <p class="article-p">Scripts run through bash, so only their output enters the context window. A skill can bundle a full API reference at no cost until a task needs it, which is why one installation can carry many skills.</p>
+
+        <!-- Figure 3 -->
+        <figure class="article-figure">
+          <svg viewBox="0 0 760 364" role="img" aria-labelledby="f3t f3d" xmlns="http://www.w3.org/2000/svg">
+            <title id="f3t">What happens when a request triggers a skill</title>
+            <desc id="f3d">Six steps: you ask, Claude compares the request with skill descriptions, it reads the matching SKILL.md, opens linked files, runs bundled scripts and reads only their output, then replies in the skill's format.</desc>
+            <defs>
+              <marker id="f3a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="#38bdf8"/>
+              </marker>
+              <marker id="f3gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="#fbbf24"/>
+              </marker>
+            </defs>
+            <g font-family="Inter, system-ui, sans-serif">
+              <rect x="20" y="24" width="216" height="118" rx="12" fill="#091b2b" stroke="#38bdf8" stroke-width="1.5"/>
+              <circle cx="48" cy="54" r="15" fill="#38bdf8"/><text x="48" y="60" fill="#020408" font-size="14" font-weight="800" text-anchor="middle">1</text>
+              <text x="74" y="59" fill="#38bdf8" font-size="15" font-weight="700">You ask</text>
+              <text x="38" y="96" fill="#cbd5e1" font-size="13.5">"Summarise this call,"</text>
+              <text x="38" y="117" fill="#94a3b8" font-size="13.5">with a pasted transcript</text>
+
+              <rect x="272" y="24" width="216" height="118" rx="12" fill="#141126" stroke="#a5b4fc" stroke-width="1.5"/>
+              <circle cx="300" cy="54" r="15" fill="#a5b4fc"/><text x="300" y="60" fill="#020408" font-size="14" font-weight="800" text-anchor="middle">2</text>
+              <text x="326" y="59" fill="#a5b4fc" font-size="15" font-weight="700">Claude scans</text>
+              <text x="290" y="96" fill="#cbd5e1" font-size="13.5">Compares the request with</text>
+              <text x="290" y="117" fill="#94a3b8" font-size="13.5">every skill description</text>
+
+              <rect x="524" y="24" width="216" height="118" rx="12" fill="#231a08" stroke="#fbbf24" stroke-width="1.5"/>
+              <circle cx="552" cy="54" r="15" fill="#fbbf24"/><text x="552" y="60" fill="#020408" font-size="14" font-weight="800" text-anchor="middle">3</text>
+              <text x="578" y="59" fill="#fbbf24" font-size="15" font-weight="700">Skill loads</text>
+              <text x="542" y="96" fill="#cbd5e1" font-size="13.5">Reads the matching</text>
+              <text x="542" y="117" fill="#94a3b8" font-size="13.5">SKILL.md through bash</text>
+
+              <rect x="524" y="222" width="216" height="118" rx="12" fill="#24141f" stroke="#f472b6" stroke-width="1.5"/>
+              <circle cx="552" cy="252" r="15" fill="#f472b6"/><text x="552" y="258" fill="#020408" font-size="14" font-weight="800" text-anchor="middle">4</text>
+              <text x="578" y="257" fill="#f472b6" font-size="15" font-weight="700">Files on demand</text>
+              <text x="542" y="294" fill="#cbd5e1" font-size="13.5">Opens the template</text>
+              <text x="542" y="315" fill="#94a3b8" font-size="13.5">because SKILL.md links it</text>
+
+              <rect x="272" y="222" width="216" height="118" rx="12" fill="#08221a" stroke="#34d399" stroke-width="1.5"/>
+              <circle cx="300" cy="252" r="15" fill="#34d399"/><text x="300" y="258" fill="#020408" font-size="14" font-weight="800" text-anchor="middle">5</text>
+              <text x="326" y="257" fill="#34d399" font-size="15" font-weight="700">Scripts run</text>
+              <text x="290" y="294" fill="#cbd5e1" font-size="13.5">A bundled script executes;</text>
+              <text x="290" y="315" fill="#94a3b8" font-size="13.5">only its output is read</text>
+
+              <rect x="20" y="222" width="216" height="118" rx="12" fill="#07202e" stroke="#38bdf8" stroke-width="2"/>
+              <circle cx="48" cy="252" r="15" fill="#fbbf24"/><text x="48" y="258" fill="#020408" font-size="14" font-weight="800" text-anchor="middle">6</text>
+              <text x="74" y="257" fill="#ffffff" font-size="15" font-weight="700">You get the result</text>
+              <text x="38" y="294" fill="#bae6fd" font-size="13.5">A summary in your team's</text>
+              <text x="38" y="315" fill="#fbbf24" font-size="13.5" font-weight="600">format, every time</text>
+
+              <g stroke="#38bdf8" stroke-width="2" fill="none">
+                <line x1="238" y1="83" x2="268" y2="83" marker-end="url(#f3a)"/>
+                <line x1="490" y1="83" x2="520" y2="83" marker-end="url(#f3a)"/>
+                <line x1="632" y1="144" x2="632" y2="218" marker-end="url(#f3a)"/>
+                <line x1="522" y1="281" x2="492" y2="281" stroke="#fbbf24" marker-end="url(#f3gold)"/>
+                <line x1="270" y1="281" x2="240" y2="281" stroke="#38bdf8" marker-end="url(#f3a)"/>
+              </g>
+            </g>
+          </svg>
+          <figcaption class="article-figcaption"><b>Figure 3:</b> What happens when a request triggers a skill. Steps 4 and 5 happen only when the skill bundles files or scripts.</figcaption>
+        </figure>
+      </div>
+
+      <!-- Section 2: Where Skills Run -->
+      <div class="content-card" id="where">
+        <h2>2. Where Skills Run</h2>
+        <ul class="article-list">
+          <li><strong>Claude apps:</strong> custom skills are uploaded or created under Customize &gt; Skills, on Free, Pro, Max, Team and Enterprise plans with code execution turned on.</li>
+          <li><strong>Claude Code:</strong> skills are folders in <code>~/.claude/skills/</code> for personal use or <code>.claude/skills/</code> inside a repository, callable as <code>/skill-name</code>.</li>
+          <li><strong>Claude API:</strong> skills attach to the code execution container by <code>skill_id</code> and are shared across a workspace.</li>
+          <li><strong>Agent SDK:</strong> skills are discovered from the filesystem and limited with a <code>skills</code> option, per the <a class="ref-link" href="https://code.claude.com/docs/en/agent-sdk/skills" target="_blank" rel="noopener noreferrer">Agent SDK skills documentation</a>.</li>
+        </ul>
+        <div class="card gold">
+          <span class="tag">Security &amp; Network Boundary</span>
+          <p class="article-p">Custom skills do not sync automatically between the web apps and the API, although Claude Code now downloads the skills enabled on your claude.ai account when you sign in with it. API skills run in a secure sandbox with <strong>no outbound network access</strong>, while Claude Code skills execute locally with the same system and network access as any native program running under your local terminal.</p>
         </div>
       </div>
-    </div>
 
-    <div class="content-card" style="border-color:rgba(251,191,36,0.3);">
-      <h3 style="color:var(--gold);font-size:1.1rem;font-weight:700;margin-bottom:0.75rem;">Verified Technical References</h3>
-      <ul style="color:#94a3b8;font-size:0.85rem;margin-left:1.4rem;line-height:1.7;">
-        <li><a class="ref-link" href="https://docs.anthropic.com/en/docs/agents-and-tools" target="_blank" rel="noopener">Anthropic Advanced Tool Use: Dynamic Tool Calling</a>.</li><li><a class="ref-link" href="https://www.anthropic.com/research" target="_blank" rel="noopener">Vector Indexing for AI Skills: Progressive Tool Disclosure</a>.</li><li><a class="ref-link" href="https://www.modelcontextprotocol.io" target="_blank" rel="noopener">Reusable Capability Design: Modular Skill Repositories</a>.</li><li><a class="ref-link" href="https://aclanthology.org" target="_blank" rel="noopener">ACL Conference: Code-Driven Multi-Tool Orchestration</a>.</li>
-      </ul>
-    </div>
+      <!-- Section 3: How To Create Your Own Skill -->
+      <div class="content-card" id="create">
+        <h2>3. Build Your Own Skill</h2>
+
+        <h3>Step 1: Pick One Repeated Job</h3>
+        <p class="article-p">The <a class="ref-link" href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener noreferrer">Claude Code guide to extending Claude with skills</a> gives a practical trigger: write a skill when you keep pasting the same instructions, checklist or procedure into chat. Keep each skill to one workflow, because Claude can combine several focused skills in a single task.</p>
+
+        <h3>Step 2: Write The SKILL.md File</h3>
+        <p class="article-p">A skill needs YAML frontmatter between <code>---</code> markers and Markdown instructions below it. Here is an enterprise release-notes skill directory layout and definition:</p>
+
+        <div class="code-window">
+          <div class="code-bar">
+            <span>Folder Layout &mdash; writing-release-notes</span>
+            <span style="color:var(--cyan);">Filesystem Directory</span>
+          </div>
+          <pre class="code-pre"><code><span class="c"># Folder layout: the folder name doubles as the skill name</span>
+writing-release-notes/
+├── SKILL.md                     <span class="c"># required: frontmatter plus instructions</span>
+├── references/style-guide.md    <span class="c"># optional: read only when SKILL.md links to it</span>
+└── scripts/collect_commits.py   <span class="c"># optional: executed, never loaded into context</span></code></pre>
+        </div>
+
+        <div class="code-window">
+          <div class="code-bar">
+            <span>writing-release-notes/SKILL.md</span>
+            <span style="color:var(--gold);">Frontmatter + Markdown</span>
+          </div>
+          <pre class="code-pre"><code>---
+<span class="c"># Required. Lowercase letters, numbers and hyphens, 64 characters max.</span>
+<span class="k">name:</span> writing-release-notes
+<span class="c"># Required. What the skill does AND when to use it, in the third person.</span>
+<span class="k">description:</span> &gt;
+  Drafts customer-facing release notes from merged pull requests.
+  Use when the user asks for release notes or a changelog summary.
+---
+
+# Writing Release Notes
+
+<span class="c">&lt;!-- Step 1 runs a bundled script; only its output reaches Claude --&gt;</span>
+1. Run `python scripts/collect_commits.py --since last-tag`.
+<span class="c">&lt;!-- Steps 2 and 3 need judgment, so they stay as plain instructions --&gt;</span>
+2. Group changes under New, Improved and Fixed.
+3. Follow the tone rules in [references/style-guide.md](references/style-guide.md).</code></pre>
+        </div>
+
+        <p class="article-p">Anthropic's <a class="ref-link" href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices" target="_blank" rel="noopener noreferrer">skill authoring best practices guide</a> sets the rules. Names cannot contain "anthropic" or "claude", descriptions are capped at 1,024 characters, and the body should stay under 500 lines, with supporting files linked one level deep. Use scripts for fragile, sequence-dependent steps and plain instructions where several approaches are valid.</p>
+
+        <h3>Step 3: Install The Skill</h3>
+        <p class="article-p">In Claude Code, copy the folder into a skills directory; edits take effect mid-session without restarting. In the Claude apps, zip the folder with the folder itself at the root, upload it, and enable it under <em>Customize &gt; Skills</em>. On the API, upload through the <code>/v1/skills</code> endpoints.</p>
+        <p class="article-p">The <a class="ref-link" href="https://support.claude.com/en/articles/12512198-how-to-create-custom-skills" target="_blank" rel="noopener noreferrer">Claude Help Center guide to creating skills</a> adds a shortcut: on Pro, Max and Team plans, Cowork in Claude for Mac can build a skill from a screen recording of you doing the task. You can also ask Claude to build one, and the <code>skill-creator</code> skill will interview you and draft <code>SKILL.md</code>.</p>
+
+        <h3>Step 4: Test It Against A Baseline</h3>
+        <p class="article-p">A skill that triggers does not automatically help. Run realistic prompts in fresh sessions with the skill on and then off. The <a class="ref-link" href="https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator" target="_blank" rel="noopener noreferrer">skill-creator plugin for Claude Code</a> automates this: it runs test cases in isolated subagents, grades output, benchmarks pass rate, time and tokens against a no-skill run, and suggests description fixes when the skill fires on the wrong requests.</p>
+      </div>
+
+      <!-- Section 4: Hands-On Tutorials -->
+      <div class="content-card" id="tutorials">
+        <h2>4. Hands-On Tutorials</h2>
+        <p class="article-p">The three tutorials below build systematically on one another. The first requires only the Claude app, the second runs in Claude Code with a bundled Python script and dynamic injection, and the third uploads the custom skill to the Claude API and pairs it with Anthropic's production Word skill.</p>
+
+        <!-- Tutorial 1 -->
+        <h3 id="tutorial-1">Tutorial 1: Meeting-Notes in Claude Apps</h3>
+        <div class="card gold">
+          <span class="tag">Tutorial 1 Blueprint</span>
+          <p class="article-p"><strong>You will build:</strong> a skill that turns raw notes or a call transcript into the same summary layout every time, with decisions, owners and due dates.<br><strong>You need:</strong> a Claude account and a text editor. No code or terminal dependencies required.</p>
+        </div>
+
+        <p class="article-p"><strong>1. Create the folder.</strong> The folder name has to match the <code>name</code> field you are about to write, so keep it lowercase with hyphens.</p>
+        <div class="code-window">
+          <div class="code-bar">
+            <span>meeting-notes/ directory</span>
+            <span style="color:var(--cyan);">Layout</span>
+          </div>
+          <pre class="code-pre"><code>meeting-notes/                 <span class="c"># folder name must equal the skill's name field</span>
+├── SKILL.md                   <span class="c"># the instructions Claude follows</span>
+└── assets/
+    └── notes-template.md      <span class="c"># the layout every summary must use</span></code></pre>
+        </div>
+
+        <p class="article-p"><strong>2. Write <code>SKILL.md</code>.</strong> The description carries the trigger phrases, because it is the only part Claude sees before deciding to load the skill.</p>
+        <div class="code-window">
+          <div class="code-bar">
+            <span>meeting-notes/SKILL.md</span>
+            <span style="color:var(--gold);">Frontmatter + Instructions</span>
+          </div>
+          <pre class="code-pre"><code>---
+<span class="c"># Must match the folder name: lowercase letters, numbers and hyphens.</span>
+<span class="k">name:</span> meeting-notes
+<span class="c"># Claude matches requests against this text, so name the triggers plainly.</span>
+<span class="k">description:</span> &gt;
+  Turns raw meeting notes or call transcripts into a structured summary
+  with decisions, action items, owners and due dates. Use when the user
+  pastes meeting notes or a transcript, or asks for minutes or a recap.
+---
+
+# Meeting Notes
+
+<span class="c">&lt;!-- The numbered steps are the procedure Claude follows every time. --&gt;</span>
+## Steps
+1. Read the raw notes in full before writing anything.
+2. Fill in assets/notes-template.md, keeping its headings in the same order.
+3. Give every action item an owner and a due date. If the notes do not
+   say, write "Owner: unassigned" or "Due: not set" and add the item
+   to Open questions.
+4. Record only decisions the notes state. Never infer a decision from
+   discussion.
+
+<span class="c">&lt;!-- One concrete example teaches the format faster than a description. --&gt;</span>
+## Example action item
+- Send the revised budget to finance. Owner: Priya. Due: 30 Oct.</code></pre>
+        </div>
+
+        <p class="article-p"><strong>3. Add the template.</strong> Save this as <code>assets/notes-template.md</code>. Claude reads it only when step 2 of the instructions sends it there.</p>
+        <div class="code-window">
+          <div class="code-bar">
+            <span>meeting-notes/assets/notes-template.md</span>
+            <span style="color:var(--cyan);">Markdown Template</span>
+          </div>
+          <pre class="code-pre"><code><span class="c">&lt;!-- Claude replaces each {placeholder} and keeps the headings in order. --&gt;</span>
+# {Meeting title}: {date}
+
+**Attendees:** {names}
+
+## Decisions
+- {decision}
+
+## Action items
+- {task}. Owner: {name}. Due: {date}.
+
+## Open questions
+- {question, or an action item missing an owner or date}</code></pre>
+        </div>
+
+        <p class="article-p"><strong>4. Zip the folder.</strong> Zip the folder itself rather than the loose files inside it, so <code>meeting-notes/</code> sits at the root of the archive.</p>
+        <div class="code-window">
+          <div class="code-bar">
+            <span>Terminal &mdash; Zip Archive</span>
+            <span style="color:var(--green);">Bash</span>
+          </div>
+          <pre class="code-pre"><code><span class="c"># macOS or Linux: run from the directory that contains meeting-notes/</span>
+zip -r meeting-notes.zip meeting-notes
+
+<span class="c"># Windows: right-click the meeting-notes folder, then choose</span>
+<span class="c"># Send to &gt; Compressed (zipped) folder</span></code></pre>
+        </div>
+
+        <p class="article-p"><strong>5. Upload and enable it.</strong> On Free, Pro and Max plans, first turn on "Code execution and file creation" under Settings &gt; Capabilities; on Team and Enterprise plans an owner enables it for the organization. Then open Customize &gt; Skills, click <strong>+</strong>, choose <strong>Create skill</strong>, then <strong>Upload a skill</strong>, select the ZIP and switch the skill on. These steps follow the <a class="ref-link" href="https://support.claude.com/en/articles/12512180-using-skills-in-claude" target="_blank" rel="noopener noreferrer">Help Center guide to using skills in Claude</a>.</p>
+
+        <p class="article-p"><strong>6. Test both directions.</strong> Paste a messy set of notes and ask for a recap; the reply should follow the template exactly, with gaps listed under Open questions. Then ask for something nearby that should not trigger the skill, such as "draft a meeting invite for Thursday", and confirm the template does not appear. If the skill never fires, sharpen the description or name it directly: <em>"Use my meeting-notes skill on these notes."</em></p>
+
+        <!-- Tutorial 2 -->
+        <h3 id="tutorial-2" style="margin-top:2.5rem;">Tutorial 2: Changelog Script in Claude Code</h3>
+        <div class="card violet">
+          <span class="tag">Tutorial 2 Blueprint</span>
+          <p class="article-p"><strong>You will build:</strong> a <code>/drafting-changelogs</code> command that groups git commits by type with a Python script, then has Claude rewrite them as customer-facing release notes.<br><strong>You need:</strong> Claude Code, Python 3 and a git repository with at least one tag. Uses: bundled scripts, <code>${CLAUDE_SKILL_DIR}</code>, dynamic context injection, and <code>$ARGUMENTS</code>.</p>
+        </div>
+
+        <p class="article-p"><strong>1. Create the folders.</strong> A personal skill lives under your home directory and works in every project on that machine.</p>
+        <div class="code-window">
+          <div class="code-bar">
+            <span>Terminal &mdash; Personal Skills Directory</span>
+            <span style="color:var(--green);">Bash</span>
+          </div>
+          <pre class="code-pre"><code><span class="c"># Personal skill: available in all your projects on this machine</span>
+mkdir -p ~/.claude/skills/drafting-changelogs/scripts</code></pre>
+        </div>
+
+        <p class="article-p"><strong>2. Add the script.</strong> Save this as <code>scripts/group_commits.py</code>. It uses only the Python standard library and sorts commits written in the Conventional Commits style (<code>feat:</code>, <code>fix:</code>, <code>perf:</code>) into changelog sections.</p>
+        <div class="code-window">
+          <div class="code-bar">
+            <span>~/.claude/skills/drafting-changelogs/scripts/group_commits.py</span>
+            <span style="color:var(--cyan);">Python 3</span>
+          </div>
+          <pre class="code-pre"><code>#!/usr/bin/env python3
+"""Group git commits by Conventional Commit type for a changelog draft.
+
+Usage: python3 group_commits.py [since-ref]
+If no ref is given, the script uses the most recent git tag.
+"""
+import re
+import subprocess
+import sys
+from collections import defaultdict
+
+<span class="c"># Map Conventional Commit prefixes to the changelog headings we publish.</span>
+SECTIONS = {
+    "feat": "New",
+    "fix": "Fixed",
+    "perf": "Improved",
+    "refactor": "Improved",
+    "docs": "Documentation",
+}
+<span class="c"># Print headings in this order; anything unrecognised lands in "Other".</span>
+ORDER = ["New", "Improved", "Fixed", "Documentation", "Other"]
+
+<span class="c"># Matches "type(scope)!: summary" and captures the type and the summary.</span>
+PATTERN = re.compile(r"^(?P&lt;type&gt;\w+)(\([^)]*\))?!?:\s*(?P&lt;summary&gt;.+)$")
+
+
+def git(*args):
+    """Run a git command and return (exit_code, stdout, stderr)."""
+    result = subprocess.run(["git", *args], capture_output=True, text=True)
+    return result.returncode, result.stdout.strip(), result.stderr.strip()
+
+
+def main():
+    <span class="c"># 1. Work out the starting point: an explicit ref, else the last tag.</span>
+    since = sys.argv[1].strip() if len(sys.argv) &gt; 1 else ""
+    if not since:
+        code, tag, _ = git("describe", "--tags", "--abbrev=0")
+        since = tag if code == 0 else ""
+
+    <span class="c"># 2. Read one line per commit: short hash, a tab, then the subject.</span>
+    log_range = f"{since}..HEAD" if since else "HEAD"
+    code, out, err = git("log", log_range, "--no-merges", "--pretty=format:%h	%s")
+    if code != 0:
+        <span class="c"># Print a readable error instead of a traceback, so Claude can explain it.</span>
+        print(f"Could not read git history: {err}")
+        sys.exit(1)
+
+    <span class="c"># 3. Sort each commit into a section based on its prefix.</span>
+    groups = defaultdict(list)
+    for line in filter(None, out.splitlines()):
+        sha, subject = line.split("	", 1)
+        match = PATTERN.match(subject)
+        if match:
+            section = SECTIONS.get(match["type"].lower(), "Other")
+            summary = match["summary"]
+        else:
+            section, summary = "Other", subject
+        groups[section].append(f"- {summary} ({sha})")
+
+    <span class="c"># 4. Print Markdown that Claude rewrites into customer-facing notes.</span>
+    print(f"Commits since {since or 'the first commit'}:")
+    if not groups:
+        print("No commits found.")
+    for section in ORDER:
+        if groups[section]:
+            print(f"
+## {section}")
+            print("
+".join(groups[section]))
+
+
+if __name__ == "__main__":
+    main()</code></pre>
+        </div>
+
+        <p class="article-p"><strong>3. Write <code>SKILL.md</code>.</strong> The line that starts with <code>!</code> is dynamic context injection: Claude Code runs the command before Claude reads the skill and pastes the output in its place, so Claude starts with real commit data instead of guessing.</p>
+        <div class="code-window">
+          <div class="code-bar">
+            <span>~/.claude/skills/drafting-changelogs/SKILL.md</span>
+            <span style="color:var(--gold);">Frontmatter + Dynamic Context</span>
+          </div>
+          <pre class="code-pre"><code>---
+<span class="k">name:</span> drafting-changelogs
+<span class="k">description:</span> &gt;
+  Drafts customer-facing release notes from git history since the last
+  tag. Use when the user asks for a changelog, release notes, or what
+  changed since the last release.
+<span class="c"># Hint shown in the / menu for the optional argument.</span>
+<span class="k">argument-hint:</span> "[since-ref]"
+<span class="c"># Lets the bundled script run without a permission prompt, for this turn only.</span>
+<span class="k">allowed-tools:</span> Bash(python3 *)
+---
+
+## Commits since the last tag
+<span class="c">&lt;!-- Claude Code runs the next line first and pastes the script's output here. --&gt;</span>
+!`python3 ${CLAUDE_SKILL_DIR}/scripts/group_commits.py`
+
+## Steps
+<span class="c">&lt;!-- $ARGUMENTS becomes whatever the user typed after /drafting-changelogs. --&gt;</span>
+1. If this text is not empty: "$ARGUMENTS", treat it as a git ref and run
+   `python3 ${CLAUDE_SKILL_DIR}/scripts/group_commits.py $ARGUMENTS`
+   instead of using the list above.
+2. Rewrite each entry as one plain sentence a customer would understand.
+3. Drop the Other section unless an entry changes what users see.
+4. Keep the short commit hashes so reviewers can trace every line.</code></pre>
+        </div>
+
+        <p class="article-p"><strong>4. Run it.</strong> Open a tagged repository, start Claude Code with <code>claude</code>, and type <code>/drafting-changelogs</code>, or <code>/drafting-changelogs v1.0</code> to pick the starting point. Asking "what changed since the last release?" should trigger it too. On a test repository with five commits after a <code>v1.0</code> tag, the script hands Claude this before any rewriting happens:</p>
+        <div class="code-window">
+          <div class="code-bar">
+            <span>Pre-Injected Context &mdash; Commits Output</span>
+            <span style="color:var(--cyan);">Injected Markdown</span>
+          </div>
+          <pre class="code-pre"><code>Commits since v1.0:
+
+## New
+- PDF export from Share menu (2682589)
+
+## Improved
+- faster chart rendering (6885426)
+
+## Fixed
+- crash when saving empty dashboard (13c4796)
+
+## Documentation
+- update README (553b27a)
+
+## Other
+- bump deps (9fee148)</code></pre>
+        </div>
+        <p class="article-p">Claude Code picks up edits to the skill without a restart. To share it with your team, move the folder into the repository's <code>.claude/skills/</code> directory and commit it. Cloud sessions and Cowork do not read <code>~/.claude/skills/</code>, so a skill you want there must be enabled on your claude.ai account or committed to the repository.</p>
+
+        <!-- Tutorial 3 -->
+        <h3 id="tutorial-3" style="margin-top:2.5rem;">Tutorial 3: Skills via Claude API</h3>
+        <div class="card green">
+          <span class="tag">Tutorial 3 Blueprint</span>
+          <p class="article-p"><strong>You will build:</strong> a Python script that uploads the meeting-notes skill from Tutorial 1 and asks Claude to produce a Word document, combining your skill (the layout) with Anthropic's <code>docx</code> skill (the file format).<br><strong>You need:</strong> Python 3, an Anthropic API key and the <code>meeting-notes</code> folder in your working directory.</p>
+        </div>
+
+        <p class="article-p"><strong>1. Install the SDK and set your key.</strong></p>
+        <div class="code-window">
+          <div class="code-bar">
+            <span>Terminal &mdash; Environment Setup</span>
+            <span style="color:var(--green);">Bash</span>
+          </div>
+          <pre class="code-pre"><code><span class="c"># Install the official Python SDK</span>
+pip install anthropic
+<span class="c"># The client reads the key from this environment variable</span>
+export ANTHROPIC_API_KEY="your-key-here"</code></pre>
+        </div>
+
+        <p class="article-p"><strong>2. Save and run this script.</strong> It follows the patterns in Anthropic's <a class="ref-link" href="https://platform.claude.com/docs/en/build-with-claude/skills-guide" target="_blank" rel="noopener noreferrer">guide to using Agent Skills with the API</a>, where the Skills API no longer needs a beta header.</p>
+        <div class="code-window">
+          <div class="code-bar">
+            <span>run_skills_api.py</span>
+            <span style="color:var(--cyan);">Python SDK</span>
+          </div>
+          <pre class="code-pre"><code>import anthropic
+from anthropic.lib import files_from_dir
+
+<span class="c"># The client reads your key from the ANTHROPIC_API_KEY environment variable.</span>
+client = anthropic.Anthropic()
+
+<span class="c"># 1. Upload the meeting-notes folder from Tutorial 1.</span>
+<span class="c">#    files_from_dir() collects every file and keeps the folder name, so</span>
+<span class="c">#    SKILL.md sits at the top of one enclosing folder, as the API requires.</span>
+skill = client.skills.create(
+    display_name="Meeting Notes",
+    files=files_from_dir("meeting-notes"),
+)
+print("Skill ID:", skill.id)
+print("Version:", skill.latest_version_id)
+
+raw_notes = """Planning call, 21 Oct. Attendees: Priya, Sam, Lee.
+Agreed to ship PDF export in the November release.
+Sam to update the pricing page. Lee to ask legal about the EU terms."""
+
+<span class="c"># 2. Attach both skills to the code execution container. The custom skill</span>
+<span class="c">#    decides the layout; Anthropic's docx skill builds the Word file.</span>
+response = client.messages.create(
+    model="claude-opus-5-5",
+    max_tokens=4096,
+    container={
+        "skills": [
+            <span class="c"># Pin the version you just uploaded; use "latest" only while testing.</span>
+            {"type": "custom", "skill_id": skill.id, "version": skill.latest_version_id},
+            {"type": "anthropic", "skill_id": "docx", "version": "latest"},
+        ]
+    },
+    <span class="c"># Skills run inside the code execution container, so this tool is required.</span>
+    tools=[{"type": "code_execution_20250825", "name": "code_execution"}],
+    messages=[{
+        "role": "user",
+        "content": f"Turn these notes into meeting minutes as a Word document:
+
+{raw_notes}",
+    }],
+)
+
+<span class="c"># 3. Print Claude's text reply.</span>
+for block in response.content:
+    if block.type == "text":
+        print(block.text)
+
+<span class="c"># 4. Files created in the container come back as file IDs inside code</span>
+<span class="c">#    execution results. Download each one with the Files API.</span>
+for block in response.content:
+    if block.type == "bash_code_execution_tool_result":
+        result = block.content
+        if result.type == "bash_code_execution_result":
+            for output in result.content:
+                meta = client.files.retrieve_metadata(file_id=output.file_id)
+                client.files.download(file_id=output.file_id).write_to_file(meta.filename)
+                print("Saved", meta.filename)</code></pre>
+        </div>
+
+        <p class="article-p"><strong>3. Reuse the skill instead of re-uploading it.</strong> Running the script twice creates two skills, so store <code>skill.id</code> after the first upload and reference it from then on. When you change the files, upload a new version with <code>client.skills.versions.create(skill_id=..., files=files_from_dir("meeting-notes"))</code>; each version is a full snapshot of the folder. Uploaded skills are visible to everyone in the API workspace, and they run in a container with no network access, so any packages a script needs must already be installed there.</p>
+      </div>
+
+      <!-- Section 5: Skills That Already Exist -->
+      <div class="content-card" id="existing">
+        <h2>5. Existing Skills Catalog</h2>
+
+        <h3>Anthropic's Built-In Document Skills</h3>
+        <p class="article-p">Four pre-built production skills power Claude's file creation capabilities: <code>pptx</code>, <code>xlsx</code>, <code>docx</code> and <code>pdf</code>. They run without setup across the Claude web and desktop apps, the Claude API, Claude Platform on AWS, and Microsoft Foundry.</p>
+
+        <h3>Public anthropics/skills Repo</h3>
+        <p class="article-p">The <a class="ref-link" href="https://github.com/anthropics/skills" target="_blank" rel="noopener noreferrer">anthropics/skills repository on GitHub</a> held 19 skills as of October 2026 and had passed 180,000 stars. Most are Apache 2.0 licensed; the document skills are source-available. In Claude Code, run <code>/plugin marketplace add anthropics/skills</code> to install them.</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Skill Name</th>
+                <th>Core Capability &amp; Scope</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>academy-guide</code></td><td>Recommends tailored Claude Academy courses based on project objectives</td></tr>
+              <tr><td><code>algorithmic-art</code></td><td>Interactive generative art and mathematical visualizations in p5.js</td></tr>
+              <tr><td><code>brand-guidelines</code></td><td>Applies Anthropic's official brand palettes, typography, and spacing</td></tr>
+              <tr><td><code>canvas-design</code></td><td>Editorial posters, infographics, and visual art exported as high-res PNG or PDF</td></tr>
+              <tr><td><code>claude-api</code></td><td>Complete Claude API, SDK methods, and streaming endpoints reference</td></tr>
+              <tr><td><code>discernment-nudge</code></td><td>Adds structured Socratic follow-up questions for critical evaluation</td></tr>
+              <tr><td><code>doc-coauthoring</code></td><td>Iterative co-writing for technical specs, product proposals, and decision RFCs</td></tr>
+              <tr><td><code>docx, pdf, pptx, xlsx</code></td><td>Production document parsers, layout engines, and spreadsheet calculators</td></tr>
+              <tr><td><code>frontend-design</code></td><td>Distinctive UI design, component systems, and responsive typography</td></tr>
+              <tr><td><code>internal-comms</code></td><td>Internal company memos, announcements, and leadership communications</td></tr>
+              <tr><td><code>mcp-builder</code></td><td>Scaffolds Model Context Protocol (MCP) servers with schema validation</td></tr>
+              <tr><td><code>skill-creator</code></td><td>Interactive designer that creates, evaluates, and benchmarks agent skills</td></tr>
+              <tr><td><code>slack-gif-creator</code></td><td>Generates animated GIFs precisely formatted and compressed for Slack</td></tr>
+              <tr><td><code>theme-factory</code></td><td>Ten curated design themes for presentation slides, documents, and web pages</td></tr>
+              <tr><td><code>web-artifacts-builder</code></td><td>Modern React, Tailwind CSS, and shadcn/ui interactive artifacts</td></tr>
+              <tr><td><code>webapp-testing</code></td><td>Automated Playwright end-to-end testing for local and deployed web apps</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Skills Bundled With Claude Code</h3>
+        <p class="article-p">Claude Code ships native skills including <code>/doctor</code>, <code>/code-review</code>, <code>/debug</code>, <code>/batch</code>, <code>/loop</code> and <code>/claude-api</code>. Three work together in an interactive feedback loop: <code>/run</code> launches your app, <code>/verify</code> confirms a code change against the running app, and <code>/run-skill-generator</code> saves the verified build-and-launch recipe as a new skill.</p>
+
+        <h3>Partner Skills &amp; Platforms</h3>
+        <p class="article-p">The <a class="ref-link" href="https://claude.com/blog/organization-skills-and-directory" target="_blank" rel="noopener noreferrer">Claude blog post on organization skills</a> added a partner directory in December 2025, naming Notion, Canva, Figma, Atlassian, Cloudflare, Sentry, Vercel and Zapier, which Team and Enterprise admins can provision company-wide. The <a class="ref-link" href="https://support.claude.com/en/articles/12512176-what-are-skills" target="_blank" rel="noopener noreferrer">Help Center article on what skills are</a> explains how to browse it under Customize &gt; Skills.</p>
+        <p class="article-p">The <a class="ref-link" href="https://agentskills.io/home" target="_blank" rel="noopener noreferrer">Agent Skills open standard at agentskills.io</a> lets the same folder work across ecosystem providers. OpenAI's <a class="ref-link" href="https://learn.chatgpt.com/docs/build-skills" target="_blank" rel="noopener noreferrer">guide to building skills for ChatGPT and Codex</a> builds on it, and GitHub's <a class="ref-link" href="https://docs.github.com/en/copilot/concepts/agents/about-agent-skills" target="_blank" rel="noopener noreferrer">Copilot documentation on agent skills</a> lists support in Copilot CLI, cloud agent, and VS Code agent mode. For maximum cross-platform portability, stick strictly to the standard's frontmatter fields rather than Claude Code extensions such as <code>context: fork</code>.</p>
+      </div>
+
+      <!-- Section 6: Security -->
+      <div class="content-card" id="security">
+        <h2>6. Skill Security &amp; Safety</h2>
+        <div class="card pink">
+          <span class="tag">Security Audit Imperative</span>
+          <p class="article-p">A skill can direct Claude to call system tools and execute arbitrary code, which means a malicious or compromised skill can exfiltrate sensitive files or poison your working context. Anthropic advises using only skills you wrote yourself or obtained directly from Anthropic, auditing every bundled script and referenced file before installing third-party skills, and strictly distrusting skills that attempt to fetch external URLs. <strong>Never hardcode API keys, tokens, or passwords in a skill folder.</strong></p>
+        </div>
+      </div>
+
+      <!-- Section 7: Future & Economic Impact -->
+      <div class="content-card" id="future">
+        <h2>7. Automation Economics &amp; Impact</h2>
+        <p class="article-p">A model with a skill library behaves fundamentally differently from a model alone. The foundation model supplies raw reasoning, while each skill supplies one organization's documented, repeatable way of doing one specific job—written once and reused by every human and autonomous agent that accesses it. Anthropic's engineers wrote at launch that they anticipate agents will soon create, edit, benchmark, and evaluate skills entirely autonomously.</p>
+        <p class="article-p">Composability gives skills room for automations that nobody had to design in advance. An organization with modular skills for its brand guidelines, its data warehouse schema, and its financial report layout can generate an entirely new report type simply by prompting Claude, which fuses the three skills seamlessly:</p>
+
+        <!-- Figure 4 -->
+        <figure class="article-figure">
+          <svg viewBox="0 0 760 410" role="img" aria-labelledby="f4t f4d" xmlns="http://www.w3.org/2000/svg">
+            <title id="f4t">How skills compose into new automations</title>
+            <desc id="f4d">Three skills and one data connector feed into Claude, which combines them into a new report type no one wrote a skill for. The new procedure is then captured as another skill and joins the library.</desc>
+            <defs>
+              <marker id="f4a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="#fbbf24"/>
+              </marker>
+              <marker id="f4c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="#34d399"/>
+              </marker>
+              <marker id="f4b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="#38bdf8"/>
+              </marker>
+            </defs>
+            <g font-family="Inter, system-ui, sans-serif">
+              <rect x="20" y="24" width="230" height="58" rx="10" fill="#22121e" stroke="#f472b6" stroke-width="1.5"/>
+              <text x="38" y="48" fill="#f472b6" font-size="14.5" font-weight="700" font-family="JetBrains Mono, monospace">brand-guidelines</text>
+              <text x="38" y="69" fill="#94a3b8" font-size="13">Colors, fonts and tone</text>
+
+              <rect x="20" y="96" width="230" height="58" rx="10" fill="#171329" stroke="#a5b4fc" stroke-width="1.5"/>
+              <text x="38" y="120" fill="#a5b4fc" font-size="14.5" font-weight="700" font-family="JetBrains Mono, monospace">warehouse-schema</text>
+              <text x="38" y="141" fill="#94a3b8" font-size="13">Tables and metric rules</text>
+
+              <rect x="20" y="168" width="230" height="58" rx="10" fill="#241b08" stroke="#fbbf24" stroke-width="1.5"/>
+              <text x="38" y="192" fill="#fbbf24" font-size="14.5" font-weight="700" font-family="JetBrains Mono, monospace">report-format</text>
+              <text x="38" y="213" fill="#94a3b8" font-size="13">Layout of every report</text>
+
+              <rect x="20" y="240" width="230" height="58" rx="10" fill="#08221a" stroke="#34d399" stroke-width="1.5"/>
+              <text x="38" y="264" fill="#34d399" font-size="14.5" font-weight="700">Data warehouse</text>
+              <text x="38" y="285" fill="#94a3b8" font-size="13">MCP connector: live numbers</text>
+
+              <g stroke-width="2" fill="none">
+                <path d="M252 53 C 300 53, 300 150, 334 156" stroke="#f472b6" marker-end="url(#f4a)"/>
+                <path d="M252 125 C 290 125, 300 160, 334 162" stroke="#a5b4fc" marker-end="url(#f4a)"/>
+                <path d="M252 197 C 290 197, 300 170, 334 168" stroke="#fbbf24" marker-end="url(#f4a)"/>
+                <path d="M252 269 C 300 269, 300 180, 334 174" stroke="#34d399" marker-end="url(#f4c)"/>
+              </g>
+
+              <circle cx="398" cy="164" r="62" fill="#0d1424" stroke="#fbbf24" stroke-width="2.5"/>
+              <circle cx="398" cy="164" r="54" fill="none" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <text x="398" y="160" fill="#ffffff" font-size="20" font-weight="800" text-anchor="middle">Claude</text>
+              <text x="398" y="182" fill="#38bdf8" font-size="12.5" font-weight="600" text-anchor="middle">combines them</text>
+
+              <line x1="462" y1="164" x2="524" y2="164" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#f4b)"/>
+
+              <rect x="528" y="116" width="212" height="96" rx="12" fill="#091b2b" stroke="#38bdf8" stroke-width="2"/>
+              <text x="546" y="146" fill="#38bdf8" font-size="15" font-weight="700">A new report type</text>
+              <text x="546" y="170" fill="#cbd5e1" font-size="13">that nobody wrote a</text>
+              <text x="546" y="190" fill="#fbbf24" font-size="13" font-weight="600">skill for</text>
+
+              <g font-size="12.5" fill="#cbd5e1">
+                <rect x="560" y="30" width="12" height="12" rx="2" fill="none" stroke="#fbbf24" stroke-width="1.5"/>
+                <text x="580" y="41">Skill</text>
+                <rect x="630" y="30" width="12" height="12" rx="2" fill="none" stroke="#34d399" stroke-width="1.5"/>
+                <text x="650" y="41">Connector</text>
+              </g>
+
+              <line x1="634" y1="214" x2="634" y2="326" stroke="#38bdf8" stroke-width="2" marker-end="url(#f4b)"/>
+
+              <rect x="300" y="330" width="440" height="64" rx="12" fill="#15120a" stroke="#fbbf24" stroke-width="1.8" stroke-dasharray="6 4"/>
+              <text x="320" y="356" fill="#fbbf24" font-size="14.5" font-weight="700">Capture the new procedure as a skill</text>
+              <text x="320" y="379" fill="#94a3b8" font-size="13">skill-creator, /run-skill-generator or a Cowork screen recording</text>
+
+              <path d="M298 362 H 9 V 125 H 16" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#f4b)"/>
+            </g>
+          </svg>
+          <figcaption class="article-figcaption"><b>Figure 4:</b> Skills and connectors compose into automations nobody designed in advance, and each new procedure can be captured as another skill.</figcaption>
+        </figure>
+
+        <p class="article-p">The usage data shows the macroeconomic direction. Anthropic's <a class="ref-link" href="https://www.anthropic.com/research/anthropic-economic-index-september-2025-report" target="_blank" rel="noopener noreferrer">September 2025 Economic Index report</a> found that directive conversations, where users hand Claude a whole autonomous task, rose from 27% to 39% of Claude.ai usage in under a year, and that 77% of business API transcripts exhibited structured automation patterns. The World Economic Forum's <a class="ref-link" href="https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/" target="_blank" rel="noopener noreferrer">Future of Jobs Report 2025</a> projects 92 million jobs displaced and 170 million created by 2030, with 41% of surveyed employers planning workforce reductions driven by AI automation.</p>
+
+        <p class="article-p">So far, tasks are being automated significantly faster than whole jobs. In the <a class="ref-link" href="https://www.anthropic.com/research/economic-index-june-2026-report" target="_blank" rel="noopener noreferrer">June 2026 Economic Index survey of Claude users</a>, over a third of roughly 9,700 respondents expected AI to handle most of their daily tasks within a year, yet only 10% rated losing their own job as likely. Intriguingly, over a third put a junior colleague's odds of job loss above 60%. While the sample skews technical and is self-reported, the signal is unmistakable.</p>
+
+        <p class="article-p">Skills turn the automation of a documented procedure from a multi-month engineering project into something a domain expert can write on a Friday afternoon. The most exposed roles are those whose steps fit cleanly in a <code>SKILL.md</code>, and the professionals who write, test, and maintain those repositories hold the procedural know-how that enterprise agents depend on. To start, turn the instruction you paste into Claude most often into a skill, and explore <code>skill-creator</code> and <code>pdf</code> in Anthropic's repository today.</p>
+      </div>
+
+      <!-- Section 8: References -->
+      <div class="content-card" id="references">
+        <h2>8. References</h2>
+        <ol class="refs">
+          <li><a class="ref-link" href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" target="_blank" rel="noopener noreferrer">Anthropic Engineering: Equipping agents for the real world with Agent Skills</a></li>
+          <li><a class="ref-link" href="https://claude.com/resources/articles/skills" target="_blank" rel="noopener noreferrer">Claude: Introducing Agent Skills</a></li>
+          <li><a class="ref-link" href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" target="_blank" rel="noopener noreferrer">Claude Platform Docs: Agent Skills overview</a></li>
+          <li><a class="ref-link" href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices" target="_blank" rel="noopener noreferrer">Claude Platform Docs: Skill authoring best practices</a></li>
+          <li><a class="ref-link" href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener noreferrer">Claude Code Docs: Extend Claude with skills</a></li>
+          <li><a class="ref-link" href="https://code.claude.com/docs/en/agent-sdk/skills" target="_blank" rel="noopener noreferrer">Claude Code Docs: Skills in the Agent SDK</a></li>
+          <li><a class="ref-link" href="https://support.claude.com/en/articles/12512176-what-are-skills" target="_blank" rel="noopener noreferrer">Claude Help Center: What are skills?</a></li>
+          <li><a class="ref-link" href="https://support.claude.com/en/articles/12512198-how-to-create-custom-skills" target="_blank" rel="noopener noreferrer">Claude Help Center: How to create custom skills</a></li>
+          <li><a class="ref-link" href="https://support.claude.com/en/articles/12512180-using-skills-in-claude" target="_blank" rel="noopener noreferrer">Claude Help Center: Using skills in Claude</a></li>
+          <li><a class="ref-link" href="https://platform.claude.com/docs/en/build-with-claude/skills-guide" target="_blank" rel="noopener noreferrer">Claude Platform Docs: Using Agent Skills with the API</a></li>
+          <li><a class="ref-link" href="https://claude.com/blog/organization-skills-and-directory" target="_blank" rel="noopener noreferrer">Claude Blog: Skills for organizations and partners</a></li>
+          <li><a class="ref-link" href="https://github.com/anthropics/skills" target="_blank" rel="noopener noreferrer">GitHub: anthropics/skills repository</a></li>
+          <li><a class="ref-link" href="https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator" target="_blank" rel="noopener noreferrer">GitHub: skill-creator plugin</a></li>
+          <li><a class="ref-link" href="https://agentskills.io/home" target="_blank" rel="noopener noreferrer">Agent Skills open standard</a></li>
+          <li><a class="ref-link" href="https://agentskills.io/specification" target="_blank" rel="noopener noreferrer">Agent Skills format specification</a></li>
+          <li><a class="ref-link" href="https://learn.chatgpt.com/docs/build-skills" target="_blank" rel="noopener noreferrer">OpenAI: Build skills</a></li>
+          <li><a class="ref-link" href="https://docs.github.com/en/copilot/concepts/agents/about-agent-skills" target="_blank" rel="noopener noreferrer">GitHub Docs: About agent skills</a></li>
+          <li><a class="ref-link" href="https://www.anthropic.com/research/anthropic-economic-index-september-2025-report" target="_blank" rel="noopener noreferrer">Anthropic Economic Index, September 2025</a></li>
+          <li><a class="ref-link" href="https://www.anthropic.com/research/economic-index-june-2026-report" target="_blank" rel="noopener noreferrer">Anthropic Economic Index, June 2026</a></li>
+          <li><a class="ref-link" href="https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/" target="_blank" rel="noopener noreferrer">World Economic Forum: Future of Jobs Report 2025</a></li>
+        </ol>
+      </div>
+
+      <!-- CTA Banner -->
+      <section class="cta-banner">
+        <h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Scale Your Enterprise AI Agents with Production Skills</h3>
+        <p style="color:#94a3b8;font-size:1.02rem;max-width:680px;margin:0 auto 1.75rem;line-height:1.7;">Architect resilient skill repositories, custom prompt injection harnesses, and multi-model agentic workflows tailored for your organization.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+          <a class="btn btn-primary" href="collaboration.html">Start A Project &rarr;</a>
+          <a class="btn btn-outline" href="pricing.html">View Advisory Tiers &rarr;</a>
+        </div>
+      </section>
     </article>
-
-    <!-- RELEVANT CALL TO ACTION -->
-    <section class="cta-banner">
-      <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Build Modular Skill Repositories for Claude</h2>
-      <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
-        Organize your enterprise AI capabilities into reusable, testable skill modules with progressive vector disclosure.
-      </p>
-      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
-        <a class="btn btn-primary" href="collaboration.html">Schedule Skills Architecture Session →</a>
-        <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
-        <a class="btn btn-outline" href="pricing.html">View Advisory Packages</a>
-      </div>
-    </section>
   </main>
 
     <!-- START:FOOTER -->
@@ -1561,6 +2518,7 @@ safety_gate: "READ_ONLY_REPO_ACCESS"</code></pre>
     </p>
   </footer>
     <!-- END:FOOTER -->
-<script src="components.js"></script>
+
+  <script src="components.js"></script>
 </body>
 </html>
