@@ -702,47 +702,52 @@ def convert_service_page(file_path: str) -> str:
     ]
     
     main = soup.find("main") or soup
-    for sec in main.find_all(["section", "div"]):
-        h2 = sec.find("h2")
-        if not h2:
-            continue
+    h2_elements = main.find_all("h2")
+    for h2 in h2_elements:
         h2_text = clean_text(h2.get_text())
-        if not any(k in h2_text for k in ["Overview", "Architecture", "Deliverable", "Guarantee", "Investment"]):
+        if not any(k in h2_text for k in ["Overview", "Architecture", "Deliverable", "Guarantee", "Investment", "Summary"]):
             continue
             
         lines.append(f"## {h2_text}")
         lines.append("")
         
-        for p in sec.find_all("p", recursive=False):
-            p_text = clean_text(p.get_text())
-            if p_text:
-                lines.append(p_text)
+        curr = h2.next_sibling
+        while curr:
+            if curr.name == "h2":
+                break
+            if curr.name == "p":
+                p_text = clean_text(curr.get_text())
+                if p_text:
+                    lines.append(p_text)
+                    lines.append("")
+            elif curr.name in ["ul", "ol"]:
+                for li in curr.find_all("li", recursive=False):
+                    nested_ul = li.find("ul")
+                    nested_ol = li.find("ol")
+                    if nested_ul:
+                        nested_ul.extract()
+                    if nested_ol:
+                        nested_ol.extract()
+                        
+                    li_text = clean_text(li.get_text())
+                    if li_text:
+                        lines.append(f"- {li_text}")
+                    
+                    if nested_ul:
+                        for n_li in nested_ul.find_all("li"):
+                            n_text = clean_text(n_li.get_text())
+                            if n_text:
+                                lines.append(f"  - {n_text}")
+                    if nested_ol:
+                        for idx, n_li in enumerate(nested_ol.find_all("li"), 1):
+                            n_text = clean_text(n_li.get_text())
+                            if n_text:
+                                lines.append(f"  {idx}. {n_text}")
                 lines.append("")
-                
-        cards = sec.find_all("div", class_=lambda c: c and any(k in c for k in ["card", "box", "step", "spec", "grid"]))
-        for c in cards:
-            h3 = c.find(["h3", "h4"])
-            if h3:
-                lines.append(f"### {clean_text(h3.get_text())}")
-                c_desc = clean_text(c.find("p").get_text()) if c.find("p") else ""
-                if c_desc:
-                    lines.append(c_desc)
-                lines.append("")
-                
-        ul = sec.find("ul")
-        if ul:
-            for li in ul.find_all("li"):
-                lines.append(f"- {clean_text(li.get_text())}")
-            lines.append("")
-            
-        chips = [clean_text(chip.get_text()) for chip in sec.find_all("span", class_=lambda cl: cl and ("chip" in cl or "tag" in cl))]
-        if chips:
-            lines.append("**Tech Stack & Tools**: " + " · ".join(f"`{c}`" for c in chips))
-            lines.append("")
+            curr = curr.next_sibling
             
         lines.append("---")
         lines.append("")
-        
     lines.append("### Ready to Deploy?")
     lines.append("- [Commission this Service via Email →](contact.html)")
     lines.append("- [Book Strategy Session on Topmate ↗](https://topmate.io/thomascherickal)")

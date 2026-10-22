@@ -77,7 +77,8 @@ In-depth technical systems design covering Tokio async runtimes, Burn & Candle
 
 ### 11. 🚀 Role #11
 Structured engagement models for engineering teams, fast-growing tech startups, and forward-looking
- enterprises — covering Claude Agent Teams, live & remote workforce bootcamps, Local LLM cost reduction,
+ enterprises — covering Claude Agent Teams, live & remote workforce bootcamps, Local LLM cost
+ reduction,
  and quantum systems exploration.
 
 ---
@@ -100,8 +101,8 @@ Structured engagement models for engineering teams, fast-growing tech startups, 
 ### ⚡ Local LLMs Budget
 `Ollama` · `vLLM` · `llama.cpp` · `GGUF` · `LM Studio` · `Qwen` · `Gemma` · `Llama` · `Mistral`
 
-### 🎓 Corporate Training
-`Live & Remote Bootcamps` · `Employee AI Adoption` · `Developer AI-Assisted Dev` · `Staff Workflow Automation` · `CXO AI Roadmaps`
+### 🛡️ Decision Models
+`Jev` · `Laya` · `OpenAI Decision Model API` · `Microsoft Decsion Model API` · `System One Thinking` · `Jev Endpoints` · `Local Decision Models`
 
 ### 🧪 AI-Assisted Test-Driven Dev (TDD)
 `Test-Driven Development (TDD)` · `AI Pair Programming` · `Automated Test Suites` · `pytest` · `cargo test` · `CI/CD Automation`
@@ -112,8 +113,8 @@ Structured engagement models for engineering teams, fast-growing tech startups, 
 ### ⚡ Claude Expertise
 `Claude Agent Teams` · `Prompt Caching` · `MCP Architecture` · `Adaptive Thinking` · `Computer Use` · `Claude Subagents`
 
-### 🛡️ Technical Verification Standards
-`Human Direction` · `Runtime Verification` · `Primary Source Research` · `Independent Verification` · `Code Correctness`
+### 🎓 Corporate Training
+`Live & Remote Bootcamps` · `Employee AI Adoption` · `Developer AI-Assisted Dev` · `Staff Workflow Automation` · `CXO AI Roadmaps`
 
 ---
 

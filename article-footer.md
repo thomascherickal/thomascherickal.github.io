@@ -1,7 +1,7 @@
 # Thomas Cherickal
-## Thomas Cherickal · Generative AI Consultant
+## Generative AI Consultant
 
-> **About the Author**: Thomas Cherickal is a Technical Writer upskilling to Python AI Engineering and Rust Systems Engineering, acting as a Generative AI Consultant and a Quantum Computing Explorer available for work globally, on a remote basis. He has 500+ publications across 10+ platforms covering AI, agentic systems, quantum computing, LLMs, Local AI, and other emerging technologies, for which he acts as a consultant in Python and Rust. Find his work at [thomascherickal.com](https://thomascherickal.com) and [thomascherickal.github.io](https://thomascherickal.github.io).
+> **About the Author**: Thomas Cherickal is a Technical Writer upskilling to Python AI Engineering, Golang Cloud Engineering, and Rust Systems Engineering, working as a Generative AI Consultant and a Quantum Computing Explorer available for work globally, on a remote basis. He has 500+ publications across 10+ platforms covering AI, agentic systems, quantum computing, LLMs, Local AI, and other emerging technologies, for which he acts as a consultant in Python, Golang, Rust, and the Claude AI Ecosystem. Find his work at [thomascherickal.com](https://thomascherickal.com) and [thomascherickal.github.io](https://thomascherickal.github.io).
 
 ---
 
@@ -10,11 +10,11 @@
 Thomas writes and codes for power users, developers, enterprises, and executive audiences on AI agents, enterprise AI deployment, local LLM deployment, quantum computing content, and emerging technology. Available for technology coding and writing engagements and AI/quantum code or content consulting.
 
 - 📝 **Technical Writing** — deep, sourced, developer-grade long-form content
-- 🧠 **Generative AI Consulting** — building complex Generative AI systems with TDD
-- ⚛️ **Quantum Consulting** — building complex quantum computing systems with TDD
-- 🤖 **Claude AI Consultant** — training, mentoring, and transforming individuals and cohorts to AI-native and AI-first leaders
+- 🧠 **Generative AI Consulting** — building complex Generative AI systems
+- ⚛️ **Quantum Consulting** — building complex quantum computing systems
+- 🤖 **Claude AI Consultant** — trransforming individuals and cohorts into AI-native AI-first leaders
 - 🐍 **Python AI Engineering** — building custom AI applications, tools, and pipelines
-- 🐹 **Golang Cloud Engineering** — building scalable cloud-native microservices, APIs, and concurrent distributed systems
+- 🐹 **Golang Cloud Engineering** — building scalable cloud-native microservices
 - 🦀 **Rust Systems Engineering** — building high-performance systems-level AI applications
 
 ---
