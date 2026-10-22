@@ -9,7 +9,7 @@
     content="Running several Claude agents at once: five architectures, six tutorials, working cost tools and explicit spend limits from session to year."
     name="description" />
   <meta
-    content="Claude agent orchestration, multi-agent systems, Anthropic Claude, Claude Opus 5.5, Claude Sonnet 5.5, Claude Haiku 5.5, Claude Fable 5.1, subagents, prompt caching, batch processing, Agent SDK, spend limits"
+    content="Claude agent orchestration, multi-agent systems, Anthropic Claude, Claude Opus, Claude Sonnet, Claude Haiku, Claude Fable, subagents, prompt caching, batch processing, Agent SDK, spend limits"
     name="keywords" />
   <meta content="Thomas Cherickal" name="author" />
   <link href="https://thomascherickal.github.io/claude-orchestration.html" rel="canonical" />
@@ -1837,10 +1837,10 @@
           Futurist</span> &bull; 22 October 2026 &bull; <code>thomascherickal.github.io</code>
       </div>
       <div class="pills">
-        <span class="pill">Claude Opus 5.5</span>
-        <span class="pill">Claude Sonnet 5.5</span>
-        <span class="pill">Claude Haiku 5.5</span>
-        <span class="pill">Claude Fable 5.1</span>
+        <span class="pill">Claude Opus</span>
+        <span class="pill">Claude Sonnet</span>
+        <span class="pill">Claude Haiku</span>
+        <span class="pill">Claude Fable</span>
         <span class="pill">Agent SDK</span>
         <span class="pill">Managed Agents</span>
         <span class="pill">Prompt Caching</span>
@@ -1903,7 +1903,7 @@
           finishes or something stops it. Orchestration starts when several loops run together and you must decide who
           starts each one, what it can see, how results merge and what ends the run. Concurrency changes four things.
         </p>
-        <p><strong>Rate limits are shared.</strong> Limits apply per organization and model, so ten Sonnet 5.5 agents
+        <p><strong>Rate limits are shared.</strong> Limits apply per organization and model, so ten Sonnet agents
           draw from one bucket: <a href="https://platform.claude.com/docs/en/api/rate-limits" target="_blank"
             rel="noopener noreferrer">on the Start tier</a>, 1,000 requests, 2,000,000 uncached input tokens and 400,000
           output tokens per minute.</p>
@@ -1913,14 +1913,14 @@
             href="https://www.anthropic.com/engineering/multi-agent-research-system" target="_blank"
             rel="noopener noreferrer">Anthropic's Research system</a> works this way.</p>
         <p><strong>Cost multiplies.</strong> In Anthropic's data, agents use about four times the tokens of a chat and
-          multi-agent systems about fifteen times. A Claude Opus 4 lead with Claude Sonnet 4 subagents beat a single
-          Opus 4 agent by 90.2% on <a href="https://www.anthropic.com/engineering/multi-agent-research-system"
+          multi-agent systems about fifteen times. A Claude Opus lead with Claude Sonnet subagents beat a single
+          Opus agent by 90.2% on <a href="https://www.anthropic.com/engineering/multi-agent-research-system"
             target="_blank" rel="noopener noreferrer">an internal research evaluation</a>, and token usage alone
           explained 80% of performance variance on BrowseComp. Parallel agents buy quality with tokens, so the spending
           has to be deliberate.</p>
-        <p>The examples use the lineup current on 22 October 2026: Claude Fable 5.1 (<code>claude-fable-5-1</code>),
-          Opus 5.5 (<code>claude-opus-5-5</code>), Sonnet 5.5 (<code>claude-sonnet-5-5</code>) and Haiku 5.5
-          (<code>claude-haiku-5-5</code>), all with 1M-token context and <a
+        <p>The examples use the lineup current on 22 October 2026: Claude Fable (<code>claude-fable</code>),
+          Opus (<code>claude-opus</code>), Sonnet (<code>claude-sonnet</code>) and Haiku
+          (<code>claude-haiku</code>), all with 1M-token context and <a
             href="https://platform.claude.com/docs/en/models/overview" target="_blank" rel="noopener noreferrer">128K
             maximum output</a>.</p>
       </section>
@@ -2199,7 +2199,7 @@
               <rect x="290" y="20" width="220" height="62" rx="12" fill="rgba(242,193,78,.14)" stroke="#f2c14e"
                 stroke-width="2" />
               <text x="400" y="46" text-anchor="middle" fill="#f2c14e" font-weight="700" font-size="16">Orchestrator
-                (Opus 5.5)</text>
+                (Opus)</text>
               <text x="400" y="68" text-anchor="middle" fill="#e7eaf5" font-size="12">plan &bull; delegate &bull;
                 validate &bull; synthesise</text>
               <g>
@@ -2215,9 +2215,9 @@
               <g text-anchor="middle" font-size="14" font-weight="700" fill="#4cc9f0"><text x="110" y="168">Worker
                   A</text><text x="300" y="168">Worker B</text><text x="490" y="168">Worker C</text><text x="680"
                   y="168">Worker D</text></g>
-              <g text-anchor="middle" font-size="11" fill="#e7eaf5"><text x="110" y="190">Sonnet 5.5 &bull; own
-                  context</text><text x="300" y="190">Sonnet 5.5 &bull; own context</text><text x="490" y="190">Haiku
-                  5.5 &bull; own context</text><text x="680" y="190">Sonnet 5.5 &bull; own context</text></g>
+              <g text-anchor="middle" font-size="11" fill="#e7eaf5"><text x="110" y="190">Sonnet &bull; own
+                  context</text><text x="300" y="190">Sonnet &bull; own context</text><text x="490" y="190">Haiku
+                  &bull; own context</text><text x="680" y="190">Sonnet &bull; own context</text></g>
               <g fill="rgba(177,151,252,.14)" stroke="#b197fc">
                 <rect x="45" y="226" width="60" height="22" rx="5" />
                 <rect x="115" y="226" width="60" height="22" rx="5" />
@@ -2351,7 +2351,7 @@
         <div class="widget w-violet" id="w-rate" role="region"
           aria-label="Widget 1: concurrency and rate-limit estimator">
           <h4>Widget 1 &bull; Concurrency and rate-limit estimator</h4>
-          <p class="note">Uses the standard Messages API limits per model for each tier (Fable 5.1 shares a combined
+          <p class="note">Uses the standard Messages API limits per model for each tier (Fable shares a combined
             Fable bucket). Only uncached input counts toward the input-token limit on these models. Limits checked 22
             October 2026.</p>
           <div class="grid">
@@ -2361,8 +2361,8 @@
                 <option value="scale">Scale</option>
               </select></div>
             <div class="field"><label for="r-model">Model</label><select id="r-model">
-                <option value="std" selected>Opus 5.5 / Sonnet 5.5 / Haiku 5.5</option>
-                <option value="fable">Fable 5.1</option>
+                <option value="std" selected>Opus / Sonnet / Haiku</option>
+                <option value="fable">Fable</option>
               </select></div>
             <div class="field"><label for="r-agents">Concurrent agents</label><input id="r-agents" type="number" min="1"
                 value="20" /></div>
@@ -2391,7 +2391,7 @@
             <dt>Avoid when</dt>
             <dd>Categories overlap so much that misroutes are common.</dd>
             <dt>Cost profile</dt>
-            <dd>Usually the cheapest per request. Haiku 5.5 input costs <a
+            <dd>Usually the cheapest per request. Haiku input costs <a
                 href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank"
                 rel="noopener noreferrer">$0.10 per million tokens</a> for prompts up to 100,000 tokens.</dd>
             <dt>Failure modes</dt>
@@ -2504,7 +2504,7 @@ import sys
 
 from anthropic import AsyncAnthropic
 
-MODEL = "claude-sonnet-5-5"
+MODEL = "claude-sonnet"
 # USD per million tokens, from the Claude pricing page, checked 22 Oct 2026.
 PRICE = {"in": 2.00, "out": 10.00, "cache_write": 2.50, "cache_read": 0.10}
 SESSION_CAP_USD = 0.25          # hard stop for this whole run
@@ -2752,7 +2752,7 @@ import sys
 from anthropic import AsyncAnthropic
 from claude_agent_sdk import ClaudeAgentOptions, ResultMessage, query
 
-LEAD_MODEL, WORKER_MODEL = "claude-opus-5-5", "claude-sonnet-5-5"
+LEAD_MODEL, WORKER_MODEL = "claude-opus", "claude-sonnet"
 OPUS = {"in": 4.00, "out": 20.00}          # USD per million tokens, checked 22 Oct 2026
 RUN_CAP_USD = 4.00                          # orchestrator + all workers
 WORKER_CAP_USD = 0.60                       # each worker stops itself here
@@ -2893,8 +2893,8 @@ import anthropic
 from anthropic.types.message_create_params import MessageCreateParamsNonStreaming
 from anthropic.types.messages.batch_create_params import Request
 
-MODEL = "claude-haiku-5-5"
-# Haiku 5.5 list prices for prompts up to 100,000 tokens, USD per million (22 Oct 2026).
+MODEL = "claude-haiku"
+# Haiku list prices for prompts up to 100,000 tokens, USD per million (22 Oct 2026).
 P = {"in": 0.10, "out": 0.50, "write_1h": 0.20, "read": 0.01}
 BATCH_DISCOUNT = 0.5             # batch pricing is 50% of standard, caching stacks with it
 JOB_CAP_USD = 5.00
@@ -3055,7 +3055,7 @@ print(f"Failed or expired: {len(failed)} (resubmit these ids)")</code></pre>
             so the script reports your measured rate.</p>
           <p><strong>What can go wrong:</strong> expired requests are not billed and need resubmitting, and batches can
             <a href="https://platform.claude.com/docs/en/build-with-claude/batch-processing" target="_blank"
-              rel="noopener noreferrer">slightly overshoot a workspace</a> spend limit. Haiku 5.5 charges <a
+              rel="noopener noreferrer">slightly overshoot a workspace</a> spend limit. Haiku charges <a
               href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank"
               rel="noopener noreferrer">five times its base rates</a> when a prompt exceeds 100,000 tokens.</p>
           <p><strong>Estimated cost per run:</strong> for 1,500-token tickets, a 2,000-token rubric, 300 output tokens
@@ -3172,7 +3172,7 @@ TEAMS = {
 async def run_lead(team: str) -> dict:
     spec = TEAMS[team]
     options = ClaudeAgentOptions(
-        model="claude-sonnet-5-5",
+        model="claude-sonnet",
         mcp_servers={"board": board},
         agents=spec["workers"],
         allowed_tools=READ + BOARD_TOOLS + ["Agent"],
@@ -3207,7 +3207,7 @@ async def director() -> None:
     summaries = "\n\n".join(f"## {t['team']}\n{t['summary']}" for t in teams)
     async for m in query(
         prompt=f"Merge these team summaries into one release-risk report:\n\n{summaries}",
-        options=ClaudeAgentOptions(model="claude-opus-5-5", allowed_tools=[],
+        options=ClaudeAgentOptions(model="claude-opus", allowed_tools=[],
                                    max_budget_usd=GLOBAL_CAP_USD - SPENT["total"], max_turns=2),
     ):
         if isinstance(m, ResultMessage):
@@ -3260,7 +3260,7 @@ asyncio.run(director())</code></pre>
                 aria-label="Copy dependency-upgrader.md">Copy</button></div>
             <pre><code class="language-markdown">---
 name: Dependency Upgrader
-model: claude-sonnet-5-5
+model: claude-sonnet
 tools:
   - type: agent_toolset_20260401
 ---
@@ -3404,10 +3404,10 @@ print(f"Fleet spent ${ledger['spent'] / 100:.2f} of ${GLOBAL_CAP_CENTS / 100:.2f
         <p>Each agent carries its own context and re-sends all of it as input every turn, so five workers that load the
           same 8,000-token prompt pay for it five times unless the prefix is cached. Output costs <a
             href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank"
-            rel="noopener noreferrer">five times input</a> on every current model. Claude 4.7 and later models also
+            rel="noopener noreferrer">five times input</a> on every current model. Frontier Claude models also
           produce about 30% more tokens for the same text, and declaring tools adds <a
             href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank"
-            rel="noopener noreferrer">hidden prompt tokens</a> (286 or more per request on the 5.5 models). Budget from
+            rel="noopener noreferrer">hidden prompt tokens</a> (286 or more per request on current models). Budget from
           measured usage, not character counts.</p>
 
         <!-- Widget 2: Multi-agent cost calculator -->
@@ -3418,11 +3418,11 @@ print(f"Fleet spent ${ledger['spent'] / 100:.2f} of ${GLOBAL_CAP_CENTS / 100:.2f
             2026.</p>
           <div class="grid">
             <div class="field"><label for="c-model">Model</label><select id="c-model">
-                <option value="fable">Claude Fable 5.1</option>
-                <option value="opus">Claude Opus 5.5</option>
-                <option value="sonnet" selected>Claude Sonnet 5.5</option>
-                <option value="haiku">Claude Haiku 5.5 (prompt &le; 100k)</option>
-                <option value="haikulong">Claude Haiku 5.5 (prompt &gt; 100k)</option>
+                <option value="fable">Claude Fable</option>
+                <option value="opus">Claude Opus</option>
+                <option value="sonnet" selected>Claude Sonnet</option>
+                <option value="haiku">Claude Haiku (prompt &le; 100k)</option>
+                <option value="haikulong">Claude Haiku (prompt &gt; 100k)</option>
               </select></div>
             <div class="field"><label for="c-agents">Agents per session</label><input id="c-agents" type="number"
                 min="1" max="500" value="5" /></div>
@@ -3641,8 +3641,8 @@ use std::sync::Arc;
 use std::time::Duration;
 use tokio::sync::Semaphore;
 
-const MODEL: &str = "claude-haiku-5-5";
-// Micro-dollars per token = USD per million tokens (Haiku 5.5, prompts up to 100k tokens).
+const MODEL: &str = "claude-haiku";
+// Micro-dollars per token = USD per million tokens (Haiku, prompts up to 100k tokens).
 const IN_PRICE: f64 = 0.10;
 const OUT_PRICE: f64 = 0.50;
 const CAP_MICRO_USD: u64 = 2_000_000; // $2.00 for the whole run
@@ -3750,11 +3750,11 @@ async fn futures_count(handles: Vec<tokio::task::JoinHandle<Option<String>>>) ->
         <p><strong>Bedrock and Google Cloud</strong> invoice you directly at their own prices, published on <a
             href="https://aws.amazon.com/bedrock/pricing/" target="_blank" rel="noopener noreferrer">the Bedrock pricing
             page</a> and <a href="https://cloud.google.com/vertex-ai/generative-ai/pricing" target="_blank"
-            rel="noopener noreferrer">Google Cloud's pricing page</a>. For Claude 4.5 models and later, regional and
+            rel="noopener noreferrer">Google Cloud's pricing page</a>. For Claude models, regional and
           multi-region endpoints <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank"
             rel="noopener noreferrer">cost 10% more</a> than global ones. <a
             href="https://aws.amazon.com/bedrock/pricing/" target="_blank" rel="noopener noreferrer">Bedrock batch
-            inference</a> is 50% below on-demand, and Bedrock cut Sonnet 5.5 cache-read prices by 50% from 7 October
+            inference</a> is 50% below on-demand, and Bedrock cut Sonnet cache-read prices by 50% from 7 October
           2026.</p>
         <p><strong>Claude Platform on AWS and Microsoft Foundry</strong> are Anthropic-operated and bill standard API
           rates through the cloud marketplace in <a href="https://platform.claude.com/docs/en/about-claude/pricing"
@@ -3779,15 +3779,15 @@ async fn futures_count(handles: Vec<tokio::task::JoinHandle<Option<String>>>) ->
         <h3 id="b-reduce">Cutting the bill</h3>
         <p><strong>Caching:</strong> <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank"
             rel="noopener noreferrer">reads cost 0.1&times; base input</a> on most models, 0.05&times; on Opus and
-          Sonnet 5.5 and 0.025&times; on Fable 5.1, and do not count <a
+          Sonnet and 0.025&times; on Fable, and do not count <a
             href="https://platform.claude.com/docs/en/api/rate-limits" target="_blank" rel="noopener noreferrer">toward
             input rate limits</a>. Start parallel agents after the first response begins so they can <a
             href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" target="_blank"
             rel="noopener noreferrer">hit the cache</a>. <strong>Batching:</strong> <a
             href="https://platform.claude.com/docs/en/build-with-claude/batch-processing" target="_blank"
-            rel="noopener noreferrer">50% off</a>. <strong>Routing:</strong> Haiku 5.5 input <a
+            rel="noopener noreferrer">50% off</a>. <strong>Routing:</strong> Haiku input <a
             href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank"
-            rel="noopener noreferrer">costs one twentieth</a> of Sonnet 5.5's. <strong>Trimming:</strong> a fetched
+            rel="noopener noreferrer">costs one twentieth</a> of Sonnet's. <strong>Trimming:</strong> a fetched
           documentation page runs <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank"
             rel="noopener noreferrer">about 25,000 tokens</a>, so cap fetches with <code>max_content_tokens</code>.
           <strong>Capping:</strong> <code>max_turns</code>, lower <code>effort</code> and <a
@@ -3795,8 +3795,8 @@ async fn futures_count(handles: Vec<tokio::task::JoinHandle<Option<String>>>) ->
             rel="noopener noreferrer">automatic compaction</a> all cut tokens per run.</p>
 
         <h3 id="b-worked">Worked example: a five-agent research run</h3>
-        <p>One Opus 5.5 lead runs 6 turns with a 12,000-token cached prefix, 4,000 new input and 1,500 output tokens per
-          turn. Four Sonnet 5.5 workers run 10 turns each with an 8,000-token cached prefix, 6,000 new input and 800
+        <p>One Opus lead runs 6 turns with a 12,000-token cached prefix, 4,000 new input and 1,500 output tokens per
+          turn. Four Sonnet workers run 10 turns each with an 8,000-token cached prefix, 6,000 new input and 800
           output tokens per turn, and 5 web searches.</p>
         <div class="tablewrap">
           <table>
@@ -3885,10 +3885,10 @@ async fn futures_count(handles: Vec<tokio::task::JoinHandle<Option<String>>>) ->
           <h4>Widget 4 &bull; Run log analyser</h4>
           <p class="note">Paste one JSON object per line with <code>agent</code>, <code>model</code> and the usage
             fields from API responses. Costs use the price table in Widget 2's defaults for each model id.</p>
-          <textarea id="l-in" aria-label="JSON lines to analyse">{"agent":"lead","model":"claude-opus-5-5","input_tokens":4100,"output_tokens":1480,"cache_read_input_tokens":12000,"cache_creation_input_tokens":0}
-{"agent":"worker-1","model":"claude-sonnet-5-5","input_tokens":6020,"output_tokens":812,"cache_read_input_tokens":8000,"cache_creation_input_tokens":0}
-{"agent":"worker-2","model":"claude-sonnet-5-5","input_tokens":5870,"output_tokens":790,"cache_read_input_tokens":0,"cache_creation_input_tokens":8000}
-{"agent":"router","model":"claude-haiku-5-5","input_tokens":900,"output_tokens":40}</textarea>
+          <textarea id="l-in" aria-label="JSON lines to analyse">{"agent":"lead","model":"claude-opus","input_tokens":4100,"output_tokens":1480,"cache_read_input_tokens":12000,"cache_creation_input_tokens":0}
+{"agent":"worker-1","model":"claude-sonnet","input_tokens":6020,"output_tokens":812,"cache_read_input_tokens":8000,"cache_creation_input_tokens":0}
+{"agent":"worker-2","model":"claude-sonnet","input_tokens":5870,"output_tokens":790,"cache_read_input_tokens":0,"cache_creation_input_tokens":8000}
+{"agent":"router","model":"claude-haiku","input_tokens":900,"output_tokens":40}</textarea>
           <button class="btn" id="l-go" type="button">Analyse</button>
           <div class="err" id="l-err" role="alert"></div>
           <div class="out" id="l-out" aria-live="polite"></div>
@@ -4840,11 +4840,11 @@ async fn futures_count(handles: Vec<tokio::task::JoinHandle<Option<String>>>) ->
       // ---- shared helpers ---------------------------------------------------
       // USD per million tokens, Claude API list prices checked 22 October 2026.
       var PRICES = {
-        fable: { name: "Claude Fable 5.1", id: "claude-fable-5-1", inp: 10, out: 50, w: 12.5, r: 0.25 },
-        opus: { name: "Claude Opus 5.5", id: "claude-opus-5-5", inp: 4, out: 20, w: 5, r: 0.20 },
-        sonnet: { name: "Claude Sonnet 5.5", id: "claude-sonnet-5-5", inp: 2, out: 10, w: 2.5, r: 0.10 },
-        haiku: { name: "Claude Haiku 5.5", id: "claude-haiku-5-5", inp: 0.10, out: 0.50, w: 0.125, r: 0.01 },
-        haikulong: { name: "Claude Haiku 5.5 (>100k prompt)", id: "", inp: 0.50, out: 2.50, w: 0.625, r: 0.05 }
+        fable: { name: "Claude Fable", id: "claude-fable", inp: 10, out: 50, w: 12.5, r: 0.25 },
+        opus: { name: "Claude Opus", id: "claude-opus", inp: 4, out: 20, w: 5, r: 0.20 },
+        sonnet: { name: "Claude Sonnet", id: "claude-sonnet", inp: 2, out: 10, w: 2.5, r: 0.10 },
+        haiku: { name: "Claude Haiku", id: "claude-haiku", inp: 0.10, out: 0.50, w: 0.125, r: 0.01 },
+        haikulong: { name: "Claude Haiku (>100k prompt)", id: "", inp: 0.50, out: 2.50, w: 0.625, r: 0.05 }
       };
       function $(id) { return document.getElementById(id); }
       function num(id, min, max) {

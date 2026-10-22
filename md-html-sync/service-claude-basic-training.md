@@ -2,7 +2,7 @@
 ## Enterprise AI Transformation Service — Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 13**  
-> **Foundational workforce enablement program designed for corporate staff, knowledge workers, and freshers: mastering Claude 3.7 / 3.5 Sonnet & Haiku, structured prompt engineering, artifacts, projects, and high-efficiency daily office workflows.**
+> **Foundational workforce enablement program designed for corporate staff, knowledge workers, and freshers: mastering Claude Sonnet & Haiku, structured prompt engineering, artifacts, projects, and high-efficiency daily office workflows.**
 
 ---
 

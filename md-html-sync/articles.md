@@ -66,7 +66,7 @@ A data-driven comparative analysis synthesizing frontier model benchmarks, API p
  architectures, agentic coding environments, and enterprise governance tradeoffs.
 
 ### The Approach
-- Benchmarked Claude Opus 4.6 and Sonnet 4.6, awarding Claude #1 overall for multi-step reasoning, natural
+- Benchmarked Claude Opus and Sonnet, awarding Claude #1 overall for multi-step reasoning, natural
  prose writing, agentic coding (Claude Code with 1M token context), and enterprise trust (Constitutional AI,
  ad-free).
 - Evaluated Google Gemini's unified multimodal architecture and ecosystem distribution, highlighting Gemini
@@ -83,7 +83,7 @@ A 3,700-word decision playbook featuring direct category rankings across 7 domai
  verdicts, and 12-month forward-looking market projections.
 
 **Technologies & Keywords**: `Frontier AI
- Benchmarks`, `Claude Opus 4.6
+ Benchmarks`, `Claude Opus
  (Claude Code)`, `Google Gemini 3 Deep Think`, `GPT-5.4 Computer Use`, `xAI Grok 4/5`, `Constitutional AI & Privacy`, `Multimodal AI`, `Enterprise AI Strategy`
 
 ---
@@ -568,7 +568,7 @@ A rigorous consumer and developer buyer's guide dissecting the features, hidden 
 - Profiled 9 top plans across 10 evaluation categories: plan features, coding ability, long-form writing,
  benchmarks (SWE-bench Verified/Pro, LiveCodeBench, GPQA, AIME), multimodality, autonomous agents, and
  ecosystem value.
-- Evaluated frontier model performance: GPT-5.5 (Terminal-Bench 82.7%), Claude Opus 4.7 (SWE-bench Verified
+- Evaluated frontier model performance: GPT-5.5 (Terminal-Bench 82.7%), Claude Opus (SWE-bench Verified
  87.6%), Gemini 3.1 Pro (ARC-AGI-2 77.1%), and Kimi K2.6 Agent Swarm.
 - Analyzed the disruption of Meta's free Muse Spark (scoring 89.5% on GPQA Diamond and #1 on HealthBench
  Hard)

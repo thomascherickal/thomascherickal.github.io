@@ -1643,19 +1643,19 @@
           <li><strong>Vendor independence:</strong> a downloaded Apache 2.0 model such as Gemma 4, gpt-oss or Qwen3.8-27B cannot be withdrawn or repriced.</li>
           <li><strong>Compliance evidence:</strong> an auditor can inspect the exact model file and server version that produced an output.</li>
         </ul>
-        <p class="article-p">Open models still trail the frontier. In <a href="https://pinggy.io/blog/best_open_source_self_hosted_llms_for_coding/" target="_blank" rel="noopener noreferrer">Pinggy's October 2026 roundup of Artificial Analysis scores</a>, Claude Opus 5.5 leads at 58, the best open-weight model scores 46, and Qwen3.8-27B, the strongest model that fits one 24 GB card, scores 34. Long agentic sessions expose that gap first, because small errors compound over dozens of tool calls. Maintenance also becomes your job: drivers, CUDA versions, context settings and model updates all need attention.</p>
+        <p class="article-p">Open models still trail the frontier. In <a href="https://pinggy.io/blog/best_open_source_self_hosted_llms_for_coding/" target="_blank" rel="noopener noreferrer">Pinggy's October 2026 roundup of Artificial Analysis scores</a>, Claude Opus leads at 58, the best open-weight model scores 46, and Qwen3.8-27B, the strongest model that fits one 24 GB card, scores 34. Long agentic sessions expose that gap first, because small errors compound over dozens of tool calls. Maintenance also becomes your job: drivers, CUDA versions, context settings and model updates all need attention.</p>
 
         <h3>A Worked Break-Even Example</h3>
-        <p class="article-p">Take a team of three developers running agentic coding sessions on Claude Sonnet 5.5, which <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Anthropic's pricing page lists at $2 input and $10 output</a> per million tokens. Agent loops resend a lot of context, so assume 300 million input tokens and 30 million output tokens a month. That is 300 &times; $2 + 30 &times; $10 = $900 before prompt caching; cache reads cost $0.10 per million on Sonnet 5.5, so a well-cached workload pays less.</p>
+        <p class="article-p">Take a team of three developers running agentic coding sessions on Claude Sonnet, which <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Anthropic's pricing page lists at $2 input and $10 output</a> per million tokens. Agent loops resend a lot of context, so assume 300 million input tokens and 30 million output tokens a month. That is 300 &times; $2 + 30 &times; $10 = $900 before prompt caching; cache reads cost $0.10 per million on Sonnet, so a well-cached workload pays less.</p>
         <p class="article-p">Now buy a 128 GB Framework Desktop for $3,449 and spread it over 36 months, which is $95.81 a month. At an average 200 W for eight hours a day, it draws 48 kWh a month. At the <a href="https://www.eia.gov/outlooks/steo/report/elec_coal_renew.php" target="_blank" rel="noopener noreferrer">EIA's 2026 US residential average of 18.2 cents per kWh</a>, that is $8.74. In India, using an assumed ₹8 per kWh for a household in a higher consumption slab, it is ₹384. Check your own DISCOM schedule, because slabs vary by state and usage.</p>
         <p class="article-p">A local model will not replace Sonnet on every task, so assume it absorbs 60 percent of the tokens. The cloud bill falls to $360 and the team saves $540 a month. The break-even formula is:</p>
         <p class="formula" style="font-size:0.95rem;color:var(--gold);margin-bottom:1rem;">months to break even = hardware cost &divide; (monthly cloud savings &minus; monthly electricity)</p>
-        <p class="article-p">In the US that gives $3,449 &divide; ($540 &minus; $8.74) = 6.5 months. In India the electricity term is smaller, so the payback is about the same, although import duty raises the hardware price. Run the same arithmetic on Claude Haiku 5.5, priced at $0.10 input and $0.50 output for prompts up to 100,000 tokens, and the picture flips. The whole 330-million-token workload costs $45 a month, a 60 percent shift saves $27, and the box would need more than 15 years to pay for itself. For cheap, short prompts, buy local hardware for privacy or offline needs, not to save money.</p>
+        <p class="article-p">In the US that gives $3,449 &divide; ($540 &minus; $8.74) = 6.5 months. In India the electricity term is smaller, so the payback is about the same, although import duty raises the hardware price. Run the same arithmetic on Claude Haiku, priced at $0.10 input and $0.50 output for prompts up to 100,000 tokens, and the picture flips. The whole 330-million-token workload costs $45 a month, a 60 percent shift saves $27, and the box would need more than 15 years to pay for itself. For cheap, short prompts, buy local hardware for privacy or offline needs, not to save money.</p>
 
         <div class="table-wrap">
           <table class="data-table">
             <thead>
-              <tr><th>Line item</th><th>Cloud only (Sonnet 5.5)</th><th>Hybrid, 60% local</th></tr>
+              <tr><th>Line item</th><th>Cloud only (Sonnet)</th><th>Hybrid, 60% local</th></tr>
             </thead>
             <tbody>
               <tr><td>API spend per month</td><td>$900</td><td>$360</td></tr>
@@ -1692,7 +1692,7 @@
             <div class="field"><label for="be-tariff" id="be-tariff-label">Electricity tariff ($/kWh)</label><input id="be-tariff" type="number" min="0" step="0.01" value="0.182"></div>
           </div>
           <div class="out" id="be-out-box" aria-live="polite"></div>
-          <p class="formula">Prices are entered in USD, as published. INR display converts at ₹88 per USD. Break-even = hardware &divide; (cloud savings &minus; electricity). Presets: Sonnet 5.5 $2/$10, Opus 5.5 $4/$20, Haiku 5.5 $0.10/$0.50 per million tokens.</p>
+          <p class="formula">Prices are entered in USD, as published. INR display converts at ₹88 per USD. Break-even = hardware &divide; (cloud savings &minus; electricity). Presets: Sonnet $2/$10, Opus $4/$20, Haiku $0.10/$0.50 per million tokens.</p>
         </div>
       </section>
 
@@ -2513,9 +2513,9 @@ model_list:
     litellm_params:
       model: ollama_chat/qwen3.8:27b
       api_base: http://localhost:11434
-  - model_name: claude-hard          # hard reasoning: Claude Sonnet 5.5
+  - model_name: claude-hard          # hard reasoning: Claude Sonnet
     litellm_params:
-      model: anthropic/claude-sonnet-5-5
+      model: anthropic/claude-sonnet
       api_key: os.environ/ANTHROPIC_API_KEY
 
 litellm_settings:
@@ -2580,7 +2580,7 @@ python ~/litellm/router.py</code></pre>
       <section class="content-card" id="conclusion">
         <h2><span class="sec-num">09</span>Conclusion: Choosing Your Setup</h2>
         <p class="article-p">Start from the hardware you have. A 16 GB card runs the 8B and 14B models, gpt-oss-20b and, with 64 to 96 GB of system RAM, gpt-oss-120b through expert offload. A 24 GB card is the point where Qwen3.8-27B makes local coding agents useful. For 70B dense models or several 120B MoE models, a 128 GB unified-memory machine gives capacity, while a GPU gives speed.</p>
-        <p class="article-p">Before you buy, price your workload. If your team spends hundreds of dollars a month on Sonnet or Opus tokens for work a local model can handle, the break-even calculator will show a payback measured in months. If you mostly send short prompts that Haiku 5.5 handles for cents, local hardware pays off only through privacy, offline access or the freedom to run unlimited batch jobs.</p>
+        <p class="article-p">Before you buy, price your workload. If your team spends hundreds of dollars a month on Sonnet or Opus tokens for work a local model can handle, the break-even calculator will show a payback measured in months. If you mostly send short prompts that Haiku handles for cents, local hardware pays off only through privacy, offline access or the freedom to run unlimited batch jobs.</p>
         <p class="article-p">Then wire it in gradually. Begin with Ollama and OpenCode, move to Claude Code on a local backend for private repositories, and add the MCP server so cloud Claude can hand bulk reading to your GPU. Keep Claude for the work where its lead matters, and let the local model take the rest.</p>
       </section>
 
@@ -2605,7 +2605,7 @@ python ~/litellm/router.py</code></pre>
           <li><a href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener noreferrer">Claude Code docs: connecting tools through MCP</a></li>
           <li><a href="https://py.sdk.modelcontextprotocol.io/get-started/real-host/" target="_blank" rel="noopener noreferrer">MCP Python SDK: connecting a server to a real host</a></li>
           <li><a href="https://docs.litellm.ai/docs/proxy/reliability" target="_blank" rel="noopener noreferrer">LiteLLM docs: proxy fallbacks and reliability settings</a></li>
-          <li><a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Claude Platform docs: API pricing for Opus, Sonnet and Haiku 5.5</a></li>
+          <li><a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Claude Platform docs: API pricing for Opus, Sonnet and Haiku</a></li>
           <li><a href="https://huggingface.co/Qwen/Qwen3.8-27B" target="_blank" rel="noopener noreferrer">Hugging Face: Qwen3.8-27B model card</a></li>
           <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" target="_blank" rel="noopener noreferrer">Google blog: Gemma 4 announcement and model sizes</a></li>
           <li><a href="https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512" target="_blank" rel="noopener noreferrer">Hugging Face: Ministral 3 8B Instruct model card</a></li>

@@ -36,7 +36,7 @@ Anthropic introduced the product in its launch announcement on April 17, 2026. S
 
 ## 3. What Claude Design Actually Is
 
-Claude Design began as an Anthropic Labs product running on Claude Opus 4.7, as TechCrunch's launch report noted. It produces prototypes, slide decks, one-pagers, landing pages, social assets and marketing collateral, all through one short loop.
+Claude Design began as an Anthropic Labs product running on Claude Opus, as TechCrunch's launch report noted. It produces prototypes, slide decks, one-pagers, landing pages, social assets and marketing collateral, all through one short loop.
 
 Describe: start from a text prompt, upload images or DOCX, PPTX and XLSX files, point Claude at a codebase, or grab elements from a live site with the web capture tool.
 
@@ -54,7 +54,7 @@ The product has changed dramatically in half a year. The Help Center release not
 
 | Date | Platform & Architecture Milestone |
 | :--- | :--- |
-| April 17 | Research preview for Pro, Max, Team and Enterprise on Opus 4.7, with exports to PDF, PPTX, HTML and Canva and a Claude Code handoff. |
+| April 17 | Research preview for Pro, Max, Team and Enterprise on Opus, with exports to PDF, PPTX, HTML and Canva and a Claude Code handoff. |
 | June 17 | New on-canvas editor, design system import from GitHub, /design-sync and /design in Claude Code, and new ecosystem connectors. |
 | September 16 | Design moves into every conversation, Claude Code and the Artifacts tab when Anthropic merged chat and Cowork. Slides and Docs launch alongside it. |
 | October 8 | Design, Slides and Docs leave beta on every plan. Claude Motion adds code-built animation exported as MP4. |

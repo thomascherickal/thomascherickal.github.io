@@ -362,7 +362,7 @@ Sam to update the pricing page. Lee to ask legal about the EU terms."""
 # 2. Attach both skills to the code execution container. The custom skill
 #    decides the layout; Anthropic's docx skill builds the Word file.
 response = client.messages.create(
-    model="claude-opus-5-5",
+    model="claude-opus",
     max_tokens=4096,
     container={
         "skills": [

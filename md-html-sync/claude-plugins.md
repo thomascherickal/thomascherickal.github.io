@@ -136,7 +136,7 @@ Plugins provide the operational vehicle for closing this gap because occupations
 
 1. Complete Task Mapping: Systematically encoding every occupational task documented in standards like the O*NET occupational database.
 2. Deep System Write Access: Deploying robust MCP connectors that act deterministically within scoped enterprise permissions.
-3. Long-Horizon Autonomous Execution: Leveraging Claude 3.7 / 3.5's ability to run self-directed tool loops for hours in Claude Code and Cowork.
+3. Long-Horizon Autonomous Execution: Leveraging Claude's ability to run self-directed tool loops for hours in Claude Code and Cowork.
 4. Self-Correction & Verification: Incorporating specialized review subagents and static validation hooks before shipping outputs.
 5. Organization-Enforced Compliance: Deploying plugins as Required so the entire company adheres to verified, standardized agent pipelines.
 

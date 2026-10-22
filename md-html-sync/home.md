@@ -13,7 +13,7 @@
 **Email**: [thomascherickal@gmail.com](mailto:thomascherickal@gmail.com)  
 
 **Specialized Roles**:
-- `Generative AI Consultant`
+- `Claude AI Consultant`
 - `Agentic AI Architect`
 - `AI Automation Expert`
 - `AI Training Live & Remote`

@@ -1919,7 +1919,7 @@ claude mcp add integrity -- /absolute/path/to/integrity-mcp/target/release/integ
         <h3>Claude Desktop and Claude Code</h3>
         <p class="article-p">Both start local stdio servers and connect to remote HTTP servers. The <a href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener noreferrer">Claude Code MCP reference</a> documents <code>claude mcp add</code> with local, project and user scopes, a <code>.mcp.json</code> file a team can commit, OAuth sign-in through <code>/mcp</code>, and tool search, which loads tool definitions only when needed so a large set of servers doesn't fill the context window. Claude Code also offers an <code>mcp-server-dev</code> plugin whose build skill scaffolds a new server.</p>
 
-        <p class="article-p">Anthropic's launch post noted that Claude 3.5 Sonnet could build MCP server implementations quickly. With today's tooling, Claude can write a server, Claude Code can register it, and Claude can then call its tools.</p>
+        <p class="article-p">Anthropic's launch post noted that Claude Sonnet could build MCP server implementations quickly. With today's tooling, Claude can write a server, Claude Code can register it, and Claude can then call its tools.</p>
 
         <h3>The Claude API MCP connector</h3>
         <p class="article-p">For your own applications, the <a href="https://platform.claude.com/docs/en/agents-and-tools/mcp-connector" target="_blank" rel="noopener noreferrer">Claude API MCP connector documentation</a> describes how the Messages API calls a remote MCP server directly, with no client code of your own. It currently supports tool calls only, requires a server reachable over public HTTPS, and lets you allowlist or denylist individual tools.</p>
@@ -1934,7 +1934,7 @@ claude mcp add integrity -- /absolute/path/to/integrity-mcp/target/release/integ
 client = anthropic.Anthropic()  <span class="c"># reads ANTHROPIC_API_KEY from the environment</span>
 
 response = client.beta.messages.create(
-    model=<span class="s">"claude-opus-5-5"</span>,
+    model=<span class="s">"claude-opus"</span>,
     max_tokens=1000,
     messages=[{<span class="s">"role"</span>: <span class="s">"user"</span>, <span class="s">"content"</span>: <span class="s">"Which of my monitored sites are down?"</span>}],
     <span class="c"># Where the remote server lives and how to authenticate to it</span>

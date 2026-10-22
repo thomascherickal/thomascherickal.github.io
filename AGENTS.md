@@ -27,3 +27,8 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
   `<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>`
 - Ensure it is prominently featured alongside other primary actions (such as `collaboration.html` or `pricing.html`).
 
+## Claude Model Version Numbers
+- **DO NOT include version numbers for Claude models** (e.g., avoid Claude 3, Claude 3.5, Claude 3.7, Claude 4, Claude 4.5, Claude 4.6, Claude 4.7, Claude 5, Claude 5.5, Sonnet 3.5/4/5.5, Opus 4/4.6/4.7/5.5, Haiku 3.5/4.5/5.5, Fable 5.1, Mythos 5.1, etc.) anywhere across the website, documentation, or schemas.
+- Refer to Claude models exclusively by their model family names without version numbers: **Claude**, **Claude Opus** (or **Opus**), **Claude Sonnet** (or **Sonnet**), **Claude Haiku** (or **Haiku**), **Claude Fable** (or **Fable**), and **Claude Mythos** (or **Mythos**).
+- When describing model capabilities or architectures, use evergreen descriptions (e.g., "frontier Claude models", "Claude Opus lead with Claude Sonnet subagents", "the Claude model family").
+
