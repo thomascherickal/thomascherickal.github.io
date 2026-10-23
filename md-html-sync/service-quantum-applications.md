@@ -1,75 +1,111 @@
-# ⚛️ Quantum Applications (Experimental) (Enterprise Exploration & PQC)
+# Quantum Applications (Experimental)
 ## Enterprise AI Transformation Service — Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 07**  
-> **Exploratory quantum computing advisory for practical enterprise use cases, algorithm simulation with IBM Qiskit and PennyLane, variational circuits, and post-quantum cryptography readiness.**
+> **Exploratory quantum computing advisory for enterprise use cases: algorithm simulation with IBM Qiskit and
+ PennyLane, variational circuits, quantum machine learning, and post-quantum cryptography readiness.**
 
 ---
 
-## 1. Service Overview & Scope
+## 1. Service
+ Overview & Scope
 
-- Post-Quantum Cryptography (PQC) Readiness: Auditing enterprise cryptographic assets and designing migration roadmaps compliant with NIST PQC standards (FIPS 203, 204, 205).
-- Quantum Threat Modeling: Evaluating "Harvest Now, Decrypt Later" exposure across TLS endpoints, VPNs, SSH certificates, and stored database keys.
-- Hybrid Classical-Quantum Algorithms: Exploring quantum-inspired algorithms, Variational Quantum Eigensolvers (VQE), and QAOA for combinatorial optimization and finance.
-- Quantum SDK Engineering: Prototyping quantum circuit simulations using IBM Qiskit, Google Cirq, and AWS Braket environments.
-- Executive Strategic Briefing: Providing clear, non-hyped technical assessments of quantum commercial timelines and strategic IP opportunities.
-
----
-
-## 2. Standard Architecture & Tools
-
-- Quantum SDKs & Simulators: IBM Qiskit (Aer, Primitives), Google Cirq, PennyLane for hybrid QML, and Amazon Braket SDK.
-- PQC Cryptographic Libraries: OpenQuantumSafe (liboqs), BoringSSL PQC forks, and Bouncy Castle quantum extensions.
-- Post-Quantum Algorithms: ML-KEM (Kyber), ML-DSA (Dilithium), and SLH-DSA (SPHINCS+) for quantum-resistant key exchange and digital signatures.
-- Classical Acceleration: NVIDIA cuQuantum SDK for GPU-accelerated state-vector and tensor network simulations.
+- Post-Quantum Cryptography (PQC) Readiness: Advising on migration roadmaps aligned with
+ the NIST PQC standards (FIPS 203, 204 and 205).
+- Quantum Threat Assessment: Reviewing "harvest now, decrypt later" exposure for long-lived
+ data, TLS, VPN and SSH keys, and stored encrypted records.
+- Variational Algorithms: Exploring VQE and QAOA for optimization and simulation problems
+ drawn from your domain.
+- Quantum Machine Learning: Prototyping hybrid classical-quantum models with PennyLane and
+ comparing them against classical baselines.
+- Executive Briefing: Plain assessments of what quantum hardware can and cannot do today,
+ with realistic timelines.
 
 ---
 
-## 3. Deliverable Examples & 4-Week Schedule
+## 2. Standard
+ Architecture & Tools
 
-- Cryptographic Inventory & Vulnerability Audit: Comprehensive catalog of enterprise public-key cryptographic dependencies vulnerable to Shor's algorithm.
-- NIST PQC Migration Blueprint: Step-by-step architectural transition plan implementing hybrid classical/post-quantum cipher suites across corporate networks.
-- Proof-of-Concept Quantum Circuit Codebase: Tested Python repository implementing domain-specific quantum optimization circuits using Qiskit.
-- Executive Quantum Strategy Whitepaper: Board-level advisory report detailing competitive landscape, quantum timelines, and regulatory compliance targets.
-
----
-
-## 4. Guarantees & Commitments
-
-- Zero Hype Rigor: Clear, realistic technical assessments grounded in published peer-reviewed quantum physics and computer science.
-- NIST Standards Alignment: Strict adherence to official FIPS 203, 204, and 205 post-quantum standards.
-- 100% Commercial IP Ownership: Complete ownership of all custom simulation code, migration roadmaps, and audit findings.
-- 30-Day Advisory Support: Async access for follow-up questions regarding cryptographic updates and hardware announcements.
+- Quantum SDKs & Simulators: IBM Qiskit (Aer simulator and Primitives) and PennyLane.
+- Programming Environment: Python with NumPy and SciPy, with pytest for verifying every
+ circuit and result.
+- Post-Quantum Algorithms: ML-KEM (Kyber), ML-DSA (Dilithium) and SLH-DSA (SPHINCS+),
+ covered at the planning and advisory level.
+- Research Sources: Primary arXiv papers, NIST publications and vendor hardware
+ specifications.
 
 ---
 
-## 5. Investment & Pricing Quote
+## 3.
+ Deliverable Examples & 4-Week Schedule
 
-- Engagement Duration: Strictly 1 month (4 weeks of structured milestone delivery and runtime verification).
-- Base Investment Rate (Tier 1 Standard): $2,000 USD (flat base rate for complete 1-month delivery).
+- Cryptographic Inventory: Catalog of the public-key cryptography in your systems that a
+ large quantum computer running Shor's algorithm could break, ranked by how long the protected data must stay
+ secret.
+- PQC Migration Roadmap: Phased plan for moving to hybrid classical and post-quantum
+ schemes, for your security and engineering teams to implement.
+- Proof-of-Concept Circuit Codebase: Tested Python repository with Qiskit or PennyLane
+ circuits for a chosen problem, run on simulators.
+- Executive Quantum Strategy Paper: Board-level report on timelines, risks and where to
+ focus attention.
+
+| Timeline | Focus & Architecture | Core Deliverables & Artifacts | Verification & Sign-off Criteria |
+| :--- | :--- | :--- | :--- |
+| Week 1 | Cryptographic Inventory & Quantum Threat Assessment | Catalog of public-key assets (RSA, ECC), "harvest now, decrypt later" risk assessment for long-lived data, TLS/VPN/SSH key exposure audit, and priority ranking | Security team approval of cryptographic inventory, vulnerable key mapping, and data secrecy horizon classification |
+| Week 2 | NIST Post-Quantum Cryptography (PQC) Migration Roadmap | Phased PQC migration roadmap aligned with NIST standards (FIPS 203 ML-KEM, FIPS 204 ML-DSA, FIPS 205 SLH-DSA), hybrid classical-quantum scheme recommendations, and engineering transition plan | Security and architectural sign-off on NIST-aligned hybrid migration path and cryptographic agility standards |
+| Week 3 | Variational Algorithms & Quantum Machine Learning PoC | Python repository with IBM Qiskit (Aer simulator, Primitives) and PennyLane variational circuits (VQE, QAOA), hybrid quantum-classical ML prototype, and pytest validation suite | Verified execution of quantum simulation circuits on classical backends with benchmark comparison against classical baselines |
+| Week 4 | Executive Quantum Strategy Paper & Advisory Handover | Board-level executive strategy paper covering realistic hardware timelines, technical limits, and recommended investment focus, code repository handover, and 30-day advisory access | Executive briefing delivered with plain, hype-free assessments, 100% IP and code transfer, and client sign-off |
+
+---
+
+## 4. Guarantees
+ & Commitments
+
+- No Hype: Assessments grounded in published research, with limits stated plainly.
+- NIST Standards Alignment: Recommendations follow FIPS 203, 204 and 205.
+- 100% Commercial IP Ownership: All simulation code, roadmaps and audit findings belong to
+ you.
+- 30-Day Advisory Support: Follow-up questions on cryptographic updates and hardware
+ announcements.
+
+---
+
+## 5. Investment
+ & Pricing Quote
+
+- Engagement Duration: Strictly 1 month (4 weeks of structured milestone delivery and
+ runtime verification).
+- Base Investment Rate (Tier 1 Standard): $2,000 USD (flat base rate for
+ complete 1-month delivery).
 - Global Purchasing Power Parity (PPP) & Subsidized Rates:
   - Tier 1 (Standard / 100%): $2,000 USD (USA, UK, EU, Canada, Australia)
-  - Tier 2 (Developing Nations / 25% Off): $1,500 USD (India, Brazil, Mexico, UAE, Poland)
+  - Tier 2 (Developing Nations / 25% Off): $1,500 USD (India, Brazil, Mexico, UAE,
+ Poland)
   - Tier 3 & 4 (Least Developed & Startups / 50% Off): $1,000 USD
   - Tier 5 (Academia & Non-Profits / 75% Off): $500 USD
-  - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief / Micro-Rates
+  - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief /
+ Micro-Rates
   - Calculate and lock in your exact tier rate live on the Pricing page.
 - Payment Milestones:
-  - 50% upfront milestone initialization / 50% upon completed Week 4 delivery, runtime verification, and client sign-off.
+  - 50% upfront milestone initialization / 50% upon completed Week 4 delivery, runtime verification, and
+ client sign-off.
 
 ---
 
 ## 6. Summary
 
-- Post-Quantum Cryptography Readiness: Auditing RSA/ECC exposure and establishing NIST-compliant hybrid migration roadmaps.
-- Strict 1-Month Delivery: 4-week structured consulting program from crypto audit to executive strategy handover.
-- NIST Standards Compliance: Implementation blueprints for ML-KEM, ML-DSA, and SLH-DSA post-quantum algorithms.
-- Hybrid Circuit Simulation: Hands-on prototyping using Qiskit, Cirq, and GPU-accelerated cuQuantum backends.
-- 100% IP & Strategic Ownership: Complete code transfer, migration playbooks, and 30-day dedicated advisory access.
+- PQC Readiness: Mapping RSA and ECC exposure and planning a
+ NIST-aligned migration.
+- Strict 1-Month Delivery: 4-week program from cryptographic
+ inventory to executive handover.
+- NIST Standards: Roadmaps covering ML-KEM, ML-DSA and SLH-DSA.
+- Circuit Prototyping: Hands-on VQE, QAOA and quantum machine
+ learning work in Qiskit and PennyLane.
+- 100% IP & Strategic Ownership: Code, roadmaps and 30-day
+ advisory access.
 
 ---
 
 ### Ready to Deploy?
 - [Commission this Service via Email →](contact.html)
 - [Book Strategy Session on Topmate ↗](https://topmate.io/thomascherickal)
-- [Return to All Services →](services.html)

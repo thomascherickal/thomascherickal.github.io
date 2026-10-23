@@ -1,67 +1,74 @@
-# 🏎️ Agentic AI Assistants (Hermes Agent) Persistent Memory & Autonomy
+# Agentic AI Assistants - Hermes Agent
 ## Enterprise AI Transformation Service — Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 04**  
-> **Enterprise deployment of autonomously improving agentic assistants with persistent vector memory, sandboxed tool
- execution, and continuous reinforcement learning pipelines.**
+> **Deploying Hermes Agent, the open-source agent from Nous Research, as a self-hosted assistant that remembers
+ across sessions, builds its own skills and runs scheduled tasks on your own infrastructure.**
 
 ---
 
 ## 1. Service
  Overview & Scope
 
-- Hermes Autonomous Agent Architecture: Building self-hosted, sovereign agentic systems
- powered by the open-weights Hermes 3 model family (Nous Research).
-- Advanced Function Calling & Tool Ingestion: Training and fine-tuning structured
- JSON-schema function dispatch pipelines for deterministic tool execution.
-- Agentic Reasoning & Reflection Loops: Deploying multi-turn reasoning loops,
- scratchpad execution planning, and runtime self-correction mechanisms without cloud dependency.
-- Private Hardware Optimization: Tuning Hermes 3 inference on vLLM and llama.cpp runtimes
- for low-latency batch processing and high token throughput.
-- Enterprise Tool Integration & Security: Integrating Hermes agents with private
- databases, shell executors, and internal APIs within gVisor-isolated sandboxes.
+- Self-Hosted Hermes Agent: Installing and configuring Hermes Agent (MIT-licensed, released
+ by Nous Research in February 2026) as an always-on service on your Linux server or workstation.
+- Persistent Memory: Setting up session history and memory so the agent keeps project
+ context, preferences and past decisions across conversations.
+- Skills From Experience: Configuring how the agent saves solved procedures as reusable
+ skills, and reviewing those skills before your team relies on them.
+- Model Choice: Connecting Hermes Agent to local models through Ollama, llama.cpp, vLLM or
+ LM Studio, to Claude, or to OpenRouter, depending on your cost and privacy needs.
+- Tools, Schedules and Access: Connecting MCP servers and internal tools, setting up
+ scheduled tasks, and reaching the agent from the terminal or your team chat, all inside Docker with limited
+ permissions.
 
 ---
 
 ## 2. Standard
  Architecture & Tools
 
-- Foundation Models: Hermes 3 (Llama-3.1-8B, 70B, and 405B variants) fine-tuned for
- structured tool calling and autonomous planning.
-- Serving Runtimes: vLLM with OpenAI-compatible tool-calling endpoints, llama-server with
- grammar-constrained JSON schemas, and Ollama.
-- Tool Middleware & Validation: Pydantic v2 data models, Instructor,
- LangChain/LangGraph agent runners, and SQLite memory stores.
-- Sandboxed Environments: Ephemeral Docker containers, dropped Linux capabilities, and
- non-root execution wrappers.
+- Agent Framework: Hermes Agent with its memory store, skills library and task scheduler.
+- Model Backends: Local open-weight models (Qwen, Gemma, Llama, Mistral) via Ollama,
+ llama.cpp, vLLM or LM Studio, plus Claude or OpenRouter through an OpenAI-compatible endpoint.
+- Tools and Integrations: MCP servers in Python or Rust, Python tool scripts, and messaging
+ channels such as Slack, Discord or Telegram.
+- Isolation: Docker containers running as non-root, with limited network access and file
+ permissions.
 
 ---
 
 ## 3.
  Deliverable Examples & 4-Week Schedule
 
-- Containerized Hermes 3 Serving Stack: Production Docker Compose configuration serving
- quantized Hermes 3 models with native tool-calling endpoints.
-- Custom Function-Calling Toolset: Python tool library with Pydantic validation schemas
- enabling Hermes to query SQL, execute shell commands, and interact with APIs.
-- Multi-Step Reasoning Harness: Execution loop script managing context window preservation,
- scratchpad reasoning, and error retry logic.
-- Evaluation Benchmark Suite: Automated test harness evaluating tool selection precision,
- argument correctness, and error recovery rates.
+- Containerized Hermes Agent Deployment: Docker Compose setup with configuration, secrets
+ handling, persistent storage for memory and skills, and backups.
+- Custom Tool & MCP Integrations: Python or Rust tools that let the agent query your
+ databases, read internal documents and call internal APIs.
+- Starter Skills Library: A reviewed set of skills for your team's recurring tasks, written
+ and tested before handover.
+- Evaluation Suite: pytest checks covering tool selection, argument correctness, memory
+ recall and recovery from failed steps.
+
+| Timeline | Focus & Architecture | Core Deliverables & Artifacts | Verification & Sign-off Criteria |
+| :--- | :--- | :--- | :--- |
+| Week 1 | Hermes Agent Installation & Model Backend Configuration | Docker Compose deployment of Hermes Agent on Linux server or workstation, persistent storage volumes, and model backend connection (Ollama, llama.cpp, vLLM, LM Studio, Claude, or OpenRouter) | Always-on agent service responding reliably with chosen local or API model backend and baseline latency verified |
+| Week 2 | Persistent Memory & Task Scheduler Setup | Session history configuration, cross-conversation memory store, scheduled task routines, and terminal/team chat messaging integration (Slack, Discord, or Telegram) | Agent retains project context and preferences across distinct sessions and executes scheduled background tasks on time |
+| Week 3 | Custom Tools, MCP Servers & Skills Library | Python and Rust MCP servers, internal database and document tools, schema-checked tool validation, and starter library of reviewed, tested skills for recurring procedures | Agent executes multi-step tool calls with schema validation and successfully saves and reuses reviewed procedure skills |
+| Week 4 | Evaluation Suite, Docker Isolation & Handover | pytest test suite covering tool selection, argument correctness, and memory recall, non-root Docker security lockdown, complete configuration transfer, and 30-day support onboarding | All pytest evaluation checks pass, backup routines verified, complete configuration and IP handed over with client sign-off |
 
 ---
 
 ## 4. Guarantees
  & Commitments
 
-- Complete Sovereign Autonomy: 100% private execution with zero dependence on external
+- Private Operation Option: When paired with local models, the agent runs without calls to
  commercial LLM APIs.
-- Reliable Function Calling: Schema-enforced grammar constraints guaranteeing zero invalid
- JSON tool payloads.
-- 100% Client Code & Model Weights Ownership: All scripts, custom tool libraries, and
- documentation transferred completely.
-- 30-Day Engineering Support: Direct technical guidance for model fine-tuning, runtime
- adjustments, and new tool integrations.
+- Checked Tool Calls: Tool inputs are validated against schemas, and failed calls are
+ caught, retried or escalated.
+- 100% Client Code & Configuration Ownership: All configuration, tools, skills and
+ documentation transfer to you.
+- 30-Day Engineering Support: Help with model swaps, runtime tuning and new tool
+ integrations.
 
 ---
 
@@ -89,20 +96,19 @@
 
 ## 6. Summary
 
-- Hermes Autonomous Agents: Self-hosted agentic intelligence
- leveraging Nous Research Hermes open-weight foundation models.
-- Strict 1-Month Delivery: 4-week program from local inference
- serving to production tool execution and air-gapped handover.
-- Deterministic Tool Calling: Pydantic validation schemas and
- grammar-constrained JSON execution for zero hallucinations.
-- Multi-Turn Reasoning Graphs: Scratchpad planning, reflection
- loops, and containerized Docker execution sandboxes.
-- 100% IP & Code Transfer: Complete local ownership, private
- serving manifests, and 30-day dedicated SLA support.
+- Hermes Agent, Self-Hosted: Nous Research's open-source agent
+ running on your infrastructure.
+- Strict 1-Month Delivery: 4-week program from installation to
+ production tools and handover.
+- Memory and Skills: An agent that keeps context across sessions
+ and reuses reviewed skills.
+- Flexible Model Backends: Local models for privacy and cost,
+ Claude or OpenRouter for harder work.
+- 100% IP & Code Transfer: Full ownership, deployment files
+ and 30-day support.
 
 ---
 
 ### Ready to Deploy?
 - [Commission this Service via Email →](contact.html)
 - [Book Strategy Session on Topmate ↗](https://topmate.io/thomascherickal)
-- [Return to All Services →](services.html)

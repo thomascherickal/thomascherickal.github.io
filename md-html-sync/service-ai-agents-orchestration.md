@@ -1,75 +1,112 @@
-# 🤖 Claude AI Agent Orchestration Fundamentals (Scalable Swarms & Low Budgets)
+# Claude AI Agent Orchestration 101
 ## Enterprise AI Transformation Service — Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 03**  
-> **Principles of Claude AI agent orchestration and releasing agent swarms at scale. Building autonomous multi-agent workflows that automate complex enterprise operations, even on constrained budgets.**
+> **The principles behind Claude AI agent orchestration and how to run agent teams at scale. Build multi-agent
+ workflows that automate complex operations while keeping quality and cost under control, even on a small budget.**
 
 ---
 
-## 1. Service Overview & Scope
+## 1. Service
+ Overview & Scope
 
-- Frontier Claude Swarm Architecture: Engineering coordinated multi-agent swarms leveraging Claude Opus for strategic planning and Claude Sonnet for parallel tool execution.
-- Stateful Graph Orchestration: Building cyclic state graphs with LangGraph, including human-in-the-loop approval nodes, checkpoint persistence, and dynamic subagent delegation.
-- Model Context Protocol (MCP) Integration: Standardizing internal enterprise API and database tooling via full-duplex MCP servers with deterministic JSON schema validation.
-- Self-Correction & Consensus Engines: Designing automated critique-reflection loops where evaluator agents verify worker outputs before committing state changes.
-- FinOps & Loop Circuit Breakers: Implementing deterministic iteration bounds, token consumption alarms, and automatic fallback routers to prevent infinite loops.
-
----
-
-## 2. Standard Architecture & Tools
-
-- Core Orchestrator: LangGraph state machines, CrewAI multi-agent task managers, and Anthropic SDK streaming APIs.
-- Model Tier Allocation: Claude Opus (supervisor planning and final synthesis), Claude Sonnet (coding, tool dispatch, analysis), and Claude Haiku (classification and summarization).
-- Persistence & Memory: PostgreSQL checkpointers, Redis message brokers, and Chroma/Qdrant vector stores for long-horizon context retention.
-- Observability & Sandboxing: OpenTelemetry instrumentation, Langfuse trace visualization, Docker container sandboxes, and Linux user namespace isolation.
+- Claude Agent Teams: Coordinating several Claude agents on one goal, with an orchestrator
+ on Opus or Fable at high or xhigh effort and Sonnet or Haiku workers at lower effort.
+- Five Core Architectures: Orchestrator-worker, hierarchical, sequential pipeline, parallel
+ fan-out and fan-in, and router, with guidance on when each one fits.
+- Model Context Protocol (MCP) Integration: Connecting agents to internal APIs, databases
+ and files through MCP servers with defined input schemas.
+- Verification Before Commit: Reviewer subagents and test suites check worker output before
+ it changes anything.
+- Spend Limits at Every Level: Budgets per session, day, month and year, iteration caps,
+ and a kill switch that stops concurrent cloud agents.
 
 ---
 
-## 3. Deliverable Examples & 4-Week Schedule
+## 2. Standard
+ Architecture & Tools
 
-- Production Swarm Repository: Fully documented Python codebase containing supervisor routing logic, agent persona specifications, and state graph definitions.
-- Custom MCP Tool Server Suite: Secure MCP server implementations connecting Claude Agents to corporate SQL databases, ticket queues, and cloud APIs.
-- Stateful Checkpoint & Resume Engine: Persistent storage integration allowing interrupted multi-hour agent workflows to resume without data loss.
-- OpenTelemetry Tracing Dashboard: Real-time visualization dashboard tracking token burn, tool latency, subagent message exchanges, and error rates.
-
----
-
-## 4. Guarantees & Commitments
-
-- Zero Runaway Loop Guarantee: Deterministic iteration counters and token spend caps preventing unchecked agent execution.
-- Full IP & Code Ownership: 100% intellectual property transfer of all orchestration code, prompts, and MCP configurations.
-- Enterprise Data Boundaries: Zero data retention on Claude enterprise tiers with strict outbound network sandboxing.
-- 30-Day Production SLA: Dedicated Slack/Discord support channel for graph adjustments, tool extensions, and debugging.
+- Orchestration Layer: Claude Code subagents, background agents in their own git worktrees,
+ and the Claude API with Python asyncio for concurrent calls.
+- Model Tier Allocation: Claude Opus or Fable (planning and final synthesis), Claude Sonnet
+ (coding, tool use and analysis), and Claude Haiku (search, classification and summarization).
+- Shared State: Task and result state kept in files or a SQL database, so interrupted runs
+ can resume.
+- Cost and Safety Controls: Prompt caching, Batch API fan-out, a restricted tool list for
+ each subagent, Docker sandboxes, and run logs that record tokens per agent.
 
 ---
 
-## 5. Investment & Pricing Quote
+## 3.
+ Deliverable Examples & 4-Week Schedule
 
-- Engagement Duration: Strictly 1 month (4 weeks of structured milestone delivery and runtime verification).
-- Base Investment Rate (Tier 1 Standard): $2,000 USD (flat base rate for complete 1-month delivery).
+- Orchestration Repository: Documented Python codebase with the orchestrator, worker
+ definitions and routing logic, plus its tests.
+- Custom MCP Server Suite: MCP servers in Python or Rust connecting your agents to SQL
+ databases, ticket queues and internal APIs.
+- Checkpoint & Resume Logic: Saved state that lets a multi-hour agent run pick up where
+ it stopped.
+- Cost & Run Report: Per-agent breakdown of tokens, cost, tool calls and failures for
+ each run, with a worked budget for your workload.
+
+| Timeline | Focus & Architecture | Core Deliverables & Artifacts | Verification & Sign-off Criteria |
+| :--- | :--- | :--- | :--- |
+| Week 1 | Architecture Selection & Agent Topology Design | Architecture specification selecting from the five core patterns (orchestrator-worker, hierarchical, sequential pipeline, parallel fan-out/fan-in, router), model tier assignments (Opus or Fable lead, Sonnet or Haiku workers), and effort level tuning | Stakeholder sign-off on agent team topology, effort budgets, and git worktree isolation model |
+| Week 2 | MCP Tooling & Async Orchestration Engine | Custom Python or Rust MCP servers with defined input schemas for SQL, ticket queues, and internal APIs, Python asyncio orchestration engine, and Docker sandbox setup | Verified schema-enforced tool execution between subagents and MCP servers within restricted container boundaries |
+| Week 3 | Verification Graphs, State Checkpoints & Spend Controls | Reviewer subagent verification logic, automated test suites before commit, SQL or file state checkpoint & resume engine, prompt caching, and per-session/daily token budgets | Verified state recovery after simulated run interruption and reviewer subagents catching errors before commit |
+| Week 4 | Batch API Fan-out, Cost Reporting & Handover | Batch API processing pipeline, per-agent token and cost telemetry reporting, hard kill-switch breakers, complete codebase transfer, and 30-day SLA onboarding | Multi-agent stress run completed with zero runaway loops, confirmed budget ceiling enforcement, full IP transfer, and client sign-off |
+
+---
+
+## 4. Guarantees
+ & Commitments
+
+- No Runaway Loops: Iteration counters, timeouts and token caps on every agent.
+- Full IP & Code Ownership: All orchestration code, prompts, skills and MCP
+ configurations transfer to you.
+- Enterprise Data Boundaries: Agents act with each user's own permissions, and write
+ actions need approval until you choose to relax them.
+- 30-Day Production SLA: Support channel for adjustments, new tools and debugging.
+
+---
+
+## 5. Investment
+ & Pricing Quote
+
+- Engagement Duration: Strictly 1 month (4 weeks of structured milestone delivery and
+ runtime verification).
+- Base Investment Rate (Tier 1 Standard): $2,000 USD (flat base rate for
+ complete 1-month delivery).
 - Global Purchasing Power Parity (PPP) & Subsidized Rates:
   - Tier 1 (Standard / 100%): $2,000 USD (USA, UK, EU, Canada, Australia)
-  - Tier 2 (Developing Nations / 25% Off): $1,500 USD (India, Brazil, Mexico, UAE, Poland)
+  - Tier 2 (Developing Nations / 25% Off): $1,500 USD (India, Brazil, Mexico, UAE,
+ Poland)
   - Tier 3 & 4 (Least Developed & Startups / 50% Off): $1,000 USD
   - Tier 5 (Academia & Non-Profits / 75% Off): $500 USD
-  - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief / Micro-Rates
+  - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief /
+ Micro-Rates
   - Calculate and lock in your exact tier rate live on the Pricing page.
 - Payment Milestones:
-  - 50% upfront milestone initialization / 50% upon completed Week 4 delivery, runtime verification, and client sign-off.
+  - 50% upfront milestone initialization / 50% upon completed Week 4 delivery, runtime verification, and
+ client sign-off.
 
 ---
 
 ## 6. Summary
 
-- Frontier Claude Swarm Topologies: Hierarchical orchestration pairing Claude Opus lead planning with Claude Sonnet tool execution.
-- Strict 1-Month Delivery: 4-week progression from workflow decomposition to production Langfuse telemetry handover.
-- Model Context Protocol Tools: Standardized full-duplex MCP servers connecting agents to SQL, REST APIs, and file systems.
-- Deterministic State Controls: LangGraph state machines with checkpointer persistence, cycle guards, and token circuit breakers.
-- Complete Code & IP Transfer: 100% commercial ownership, containerized runtimes, and 30-day dedicated SLA support.
+- Claude Agent Teams: Opus or Fable planning paired with Sonnet
+ and Haiku workers.
+- Strict 1-Month Delivery: 4-week progression from workflow
+ breakdown to production handover.
+- Model Context Protocol Tools: MCP servers connecting agents to
+ SQL, internal APIs and file systems.
+- Low-Budget Operation: Prompt caching, batch processing,
+ cheaper models for narrow jobs and hard spend limits.
+- Complete Code & IP Transfer: Full ownership, containerized
+ runtimes and 30-day support.
 
 ---
 
 ### Ready to Deploy?
 - [Commission this Service via Email →](contact.html)
 - [Book Strategy Session on Topmate ↗](https://topmate.io/thomascherickal)
-- [Return to All Services →](services.html)

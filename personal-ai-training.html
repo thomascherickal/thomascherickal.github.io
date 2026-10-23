@@ -26,7 +26,7 @@
   <meta name="twitter:image" content="https://thomascherickal.github.io/assets/og-card.png" />
 
   <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
@@ -38,6 +38,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Open+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="buttons.css" />
   <link rel="stylesheet" href="style.css" />
 
   <!-- Schema.org JSON-LD -->
@@ -193,15 +194,15 @@
       transform: translateY(-2px) !important;
     }
 
-    /* Bordered Section Containers */
+    /* Section Containers */
     .personal-bordered-section {
       max-width: 1240px;
       margin: 3.5rem auto;
       padding: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 2.75rem);
-      border: 2px solid var(--gold, #fbbf24);
+      border: none;
       border-radius: var(--radius-lg, 16px);
-      background: radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.08) 0%, rgba(12, 17, 29, 0.98) 100%);
-      box-shadow: 0 0 35px rgba(251, 191, 36, 0.16), 0 10px 40px rgba(0, 0, 0, 0.85);
+      background: radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.05) 0%, rgba(12, 17, 29, 0.98) 100%);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
       position: relative;
     }
 
@@ -209,10 +210,10 @@
       max-width: 1240px;
       margin: 2.5rem auto 3.5rem;
       padding: clamp(3rem, 6vw, 4.5rem) clamp(1.5rem, 4vw, 3rem);
-      border: 2.5px solid var(--gold, #fbbf24);
+      border: none;
       border-radius: var(--radius-lg, 16px);
-      background: radial-gradient(circle at 50% 15%, rgba(251, 191, 36, 0.14) 0%, rgba(6, 9, 18, 0.98) 80%);
-      box-shadow: 0 0 45px rgba(251, 191, 36, 0.22), 0 12px 48px rgba(0, 0, 0, 0.9);
+      background: radial-gradient(circle at 50% 15%, rgba(251, 191, 36, 0.08) 0%, rgba(6, 9, 18, 0.98) 80%);
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.8);
       text-align: center;
       position: relative;
     }
@@ -770,6 +771,83 @@
         padding: 1.25rem 1rem !important;
       }
     }
+
+    /* btn-gold / btn-glow-gold: High-Contrast Solid Radiant Gold Button */
+    .btn-gold,
+    .btn-glow-gold {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%) !important;
+      color: #060912 !important;
+      font-weight: 800 !important;
+      border: 4px solid #fef08a !important;
+      border-radius: var(--radius, 8px) !important;
+      box-shadow: 0 0 28px rgba(251, 191, 36, 0.85), 0 0 10px #fbbf24, 0 4px 15px rgba(217, 119, 6, 0.6) !important;
+      text-shadow: none !important;
+      letter-spacing: 0.02em !important;
+      transition: var(--transition, 0.25s ease);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      text-transform: none !important;
+      white-space: normal !important;
+      text-align: center !important;
+      line-height: 1.35 !important;
+      box-sizing: border-box !important;
+      max-width: 100% !important;
+    }
+
+    .btn-gold:hover,
+    .btn-glow-gold:hover {
+      background: linear-gradient(135deg, #fef08a 0%, #fbbf24 50%, #f59e0b 100%) !important;
+      color: #000000 !important;
+      border-color: #ffffff !important;
+      box-shadow: 0 0 38px rgba(251, 191, 36, 1), 0 0 16px #fbbf24, 0 6px 22px rgba(217, 119, 6, 0.7) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    /* gold-highlight-container: Gold Radiant Highlight Wrapper for Personal AI Actions */
+    .gold-highlight-container {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      padding: 1.25rem 2rem;
+      border-radius: 18px;
+      background: radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.15) 0%, rgba(251, 191, 36, 0.04) 100%);
+      border: 2px solid rgba(251, 191, 36, 0.6);
+      box-shadow: 0 0 35px rgba(251, 191, 36, 0.28), inset 0 0 20px rgba(251, 191, 36, 0.08);
+      max-width: 100%;
+      box-sizing: border-box;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .gold-highlight-container:hover {
+      border-color: rgba(251, 191, 36, 0.95);
+      box-shadow: 0 0 48px rgba(251, 191, 36, 0.45), inset 0 0 28px rgba(251, 191, 36, 0.15);
+    }
+
+    /* Collapse empty icon wrappers when emojis are removed */
+    .home-nav-icon:empty,
+    .service-icon-box:empty,
+    .role-card-icon:empty,
+    .collab-icon:empty,
+    .audience-icon:empty,
+    .contact-method-icon:empty,
+    .search-icon-left:empty,
+    .faq-category-icon:empty,
+    .tech-cat-title span:empty,
+    div[style*="font-size:1.8rem"]:empty,
+    span[style*="font-size:1.4rem"]:empty,
+    span[style*="font-size:1.8rem"]:empty,
+    span[style*="font-size: 2.2rem"]:empty,
+    span[style*="font-size:2.8rem"]:empty {
+      display: none !important;
+    }
+
+    .search-icon-left:empty ~ .search-input {
+      padding-left: 1.25rem !important;
+    }
   </style>
   <nav aria-label="Main navigation">
     <a href="https://thomascherickal.com" class="nav-brand"><img src="assets/digital-futurist-logo.jpg"
@@ -783,7 +861,7 @@
     <ul class="nav-links">
       <li><a href="index.html" data-nav="index.html">Home</a></li>
       <li><a href="expertise.html" data-nav="expertise.html">Expertise</a></li>
-      <li><a href="personal-ai-training.html" data-nav="personal-ai-training.html">Personal</a></li>
+      <li><a href="personal-ai-training.html" data-nav="personal-ai-training.html">Upskill</a></li>
       <li><a href="collaboration.html" data-nav="collaboration.html">Collaborate</a></li>
       <li class="nav-dropdown">
         <a class="nav-dropdown-toggle">
@@ -809,10 +887,6 @@
           Services <span class="dropdown-caret">▾</span>
         </a>
         <ul class="dropdown-menu">
-          <li><a href="services.html" class="dropdown-header-link">All Services</a></li>
-          <li><a href="personal-ai-training.html" style="color:var(--gold);font-weight:700;">Personal AI
-              Transformation</a></li>
-          <li class="dropdown-divider"></li>
           <li><a href="service-generative-ai-transformation.html">Generative AI Transformation</a></li>
           <li><a href="service-local-llms-cost-slashing.html">Local LLMs &amp; Cost Slashing</a></li>
           <li><a href="service-ai-agents-orchestration.html">AI Agent Orchestration</a></li>
@@ -840,7 +914,7 @@
     <!-- SECTION 1: HERO SECTION (BORDERED) -->
     <section class="reveal personal-hero-bordered" id="personal-hero">
       <div style="max-width:980px;margin:0 auto;">
-        <span class="gold-badge">👑 PERSONAL AI TRANSFORMATION · 15 DAYS TRAINING + 15 DAYS SUPPORT</span>
+        <span class="gold-badge">PERSONAL AI TRANSFORMATION · 15 DAYS TRAINING + 15 DAYS SUPPORT</span>
         <h1
           style="font-family:var(--font-display);font-size:clamp(2rem, 4.2vw, 3.25rem);font-weight:900;line-height:1.2;margin-bottom:1.25rem;color:var(--text-primary);">
           Personal AI Transformation: <span class="accent-gold">15-Day Sprint (All 12 Services) + 15-Day Daily Work Support</span>
@@ -854,7 +928,8 @@
         </p>
         <div style="text-align:center;margin-bottom:2.25rem;">
           <div class="gold-highlight-container">
-            <a class="btn btn-glow-gold" href="contact.html?service=personal-ai-transformation">
+            <a class="btn btn-commission" href="contact.html?service=personal-ai-transformation"
+              style="padding:0.95rem 1.85rem;font-size:0.95rem;">
               Book Your Personal 1-on-1 Sprint →
             </a>
             <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">
@@ -867,21 +942,21 @@
         </div>
         <div
           style="display:inline-flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;padding:0.85rem 1.75rem;border-radius:12px;background:rgba(255,255,255,0.03);border:1.5px solid rgba(251,191,36,0.35);font-family:var(--font-mono);font-size:0.88rem;color:var(--text-secondary);">
-          <span>⏱️ <strong>Personal:</strong> 15 Days Training + 15 Days Included Support</span>
+          <span><strong>Personal:</strong> 15 Days Training + 15 Days Included Support</span>
           <span style="opacity:0.4;">|</span>
-          <span>👤 <strong>Format:</strong> One Person Only (1-on-1 Private)</span>
+          <span><strong>Format:</strong> One Person Only (1-on-1 Private)</span>
           <span style="opacity:0.4;">|</span>
-          <span>🛡️ <strong>Cap:</strong> 50% of Enterprise Rate ($1,000 Base)</span>
+          <span><strong>Cap:</strong> 50% of Enterprise Rate ($1,000 Base)</span>
           <span style="opacity:0.4;">|</span>
-          <span>💼 <strong>Handover:</strong> 100% Complete IP Ownership</span>
+          <span><strong>Handover:</strong> 100% Complete IP Ownership</span>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 2: PROMINENT DUAL GUARANTEE BANNER (BORDERED) -->
-    <section class="reveal personal-bordered-section" id="guarantee-section" style="border-color:var(--gold);background:radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.12) 0%, rgba(10, 15, 28, 0.98) 100%);">
+    <!-- SECTION 2: PROMINENT DUAL GUARANTEE BANNER -->
+    <section class="reveal personal-bordered-section" id="guarantee-section" style="background:radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.12) 0%, rgba(10, 15, 28, 0.98) 100%);">
       <div style="text-align:center;max-width:960px;margin:0 auto;">
-        <span class="gold-badge" style="background:rgba(251,191,36,0.2);border-color:var(--gold);">🛡️ THE OFFICIAL ENGAGEMENT GUARANTEE</span>
+        <span class="gold-badge" style="background:rgba(251,191,36,0.2);border-color:var(--gold);">THE OFFICIAL ENGAGEMENT GUARANTEE</span>
         <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem, 3.2vw, 2.4rem);font-weight:900;color:var(--text-primary);margin-bottom:1rem;">
           Our Uncompromising <span class="accent-gold">Training &amp; Included Support Guarantee</span>
         </h2>
@@ -892,7 +967,7 @@
           <!-- Enterprise Guarantee Card -->
           <div style="background:rgba(255,255,255,0.03);border:2px solid rgba(56,189,248,0.5);border-radius:12px;padding:1.75rem;">
             <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
-              <span style="font-size:1.8rem;">🏢</span>
+              <span style="font-size:1.8rem;"></span>
               <h3 style="color:#38bdf8;font-size:1.2rem;font-weight:800;margin:0;">Enterprise Guarantee</h3>
             </div>
             <div style="font-family:var(--font-mono);font-size:1rem;color:#f0f9ff;font-weight:700;margin-bottom:0.75rem;background:rgba(56,189,248,0.12);padding:0.4rem 0.8rem;border-radius:6px;border:1px solid rgba(56,189,248,0.3);">
@@ -905,7 +980,7 @@
           <!-- Personal AI Guarantee Card -->
           <div style="background:rgba(255,255,255,0.03);border:2px solid var(--gold);border-radius:12px;padding:1.75rem;box-shadow:0 0 25px rgba(251,191,36,0.15);">
             <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
-              <span style="font-size:1.8rem;">👑</span>
+              <span style="font-size:1.8rem;"></span>
               <h3 style="color:var(--gold);font-size:1.2rem;font-weight:800;margin:0;">Personal AI Guarantee (1 Person Only)</h3>
             </div>
             <div style="font-family:var(--font-mono);font-size:1rem;color:#fffbeb;font-weight:700;margin-bottom:0.75rem;background:rgba(251,191,36,0.15);padding:0.4rem 0.8rem;border-radius:6px;border:1px solid rgba(251,191,36,0.4);">
@@ -955,109 +1030,109 @@
             <div class="personal-card-grid">
         <!-- 01: Generative AI Transformation -->
         <div class="service-synth-card">
-          <div class="service-icon-box">🧠</div>
+          <div class="service-icon-box"></div>
           <h3 style="color:var(--gold);font-size:1.15rem;font-weight:700;margin-bottom:0.5rem;">01 · Generative AI Transformation</h3>
           <p style="color:var(--text-secondary);font-size:0.92rem;line-height:1.6;flex-grow:1;">
-            Convert ad-hoc conversational chatbot windows into proactive, agent-driven architectures. Orchestrate coordinated teams of Claude Agents to execute complex operational workflows grounded in domain-specific boundaries.
+            Move your business from one-off chatbot prompts to coordinated teams of Claude agents that carry real work. Ground agent swarms in your domain data with custom MCP servers, bounded execution loops, and strict spending limits.
           </p>
         </div>
 
         <!-- 02: Local LLMs & Cost Slashing -->
         <div class="service-synth-card">
-          <div class="service-icon-box">📦</div>
+          <div class="service-icon-box"></div>
           <h3 style="color:#38bdf8;font-size:1.15rem;font-weight:700;margin-bottom:0.5rem;">02 · Local LLMs &amp; Cost Slashing</h3>
           <p style="color:var(--text-secondary);font-size:0.92rem;line-height:1.6;flex-grow:1;">
-            Drastically slash recurring cloud AI inference invoices by 60% to 90% by deploying private open-weight models (Llama 3, DeepSeek, Mistral, Qwen) with Ollama, vLLM, and GGUF/AWQ quantization.
+            Cut recurring cloud API bills by 60% to 90% by running open-weight models privately with Ollama, vLLM, llama.cpp and LM Studio. Size hardware from 8B to 120B models, route routine queries locally, and keep sensitive records on your machines.
           </p>
         </div>
 
         <!-- 03: Claude AI Agent Orchestration -->
         <div class="service-synth-card">
-          <div class="service-icon-box">🤖</div>
+          <div class="service-icon-box"></div>
           <h3 style="color:var(--gold);font-size:1.15rem;font-weight:700;margin-bottom:0.5rem;">03 · Claude AI Agent Orchestration</h3>
           <p style="color:var(--text-secondary);font-size:0.92rem;line-height:1.6;flex-grow:1;">
-            Master core principles to release multi-agent swarms without runaway costs. Build supervisor-worker hierarchies, consensus voting networks, and autonomous tool-calling loops engineered for dependable operational execution.
+            Master the principles of Claude AI agent orchestration to run multi-agent swarms at scale. Build orchestrator-worker hierarchies, sequential pipelines, and parallel fan-out teams that automate complex workflows while controlling quality and cost.
           </p>
         </div>
 
         <!-- 04: Hermes Agent -->
         <div class="service-synth-card">
-          <div class="service-icon-box">🏎️</div>
+          <div class="service-icon-box"></div>
           <h3 style="color:#38bdf8;font-size:1.15rem;font-weight:700;margin-bottom:0.5rem;">04 · Hermes Agent</h3>
           <p style="color:var(--text-secondary);font-size:0.92rem;line-height:1.6;flex-grow:1;">
-            Deploy autonomously improving agentic assistants featuring long-term persistent vector memory, continuous episodic learning, and self-healing terminal execution loops built on Nous Research Hermes 3.
+            Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own infrastructure. Configure persistent session memory so the agent retains project context, saves solved procedures as reusable skills, and runs scheduled tasks.
           </p>
         </div>
 
         <!-- 05: WorkFlow Automations -->
         <div class="service-synth-card">
-          <div class="service-icon-box">🌐</div>
+          <div class="service-icon-box"></div>
           <h3 style="color:var(--gold);font-size:1.15rem;font-weight:700;margin-bottom:0.5rem;">05 · WorkFlow Automations</h3>
           <p style="color:var(--text-secondary);font-size:0.92rem;line-height:1.6;flex-grow:1;">
-            Comprehensive hands-on training for building, self-hosting, and operating enterprise n8n workflow automations. Automate 50% of recurring daily operations with private AI node integration and zero SaaS lock-in.
+            Hands-on training for automating recurring office work with Claude skills, plugins, connectors, scheduled tasks and Microsoft 365 add-ins. Automate up to half of routine daily operations across sales, finance and engineering with private data options.
           </p>
         </div>
 
         <!-- 06: Applied Quantum (Experimental) -->
         <div class="service-synth-card">
-          <div class="service-icon-box">⚛️</div>
+          <div class="service-icon-box"></div>
           <h3 style="color:#38bdf8;font-size:1.15rem;font-weight:700;margin-bottom:0.5rem;">06 · Applied Quantum (Experimental)</h3>
           <p style="color:var(--text-secondary);font-size:0.92rem;line-height:1.6;flex-grow:1;">
-            Exploratory quantum computing advisory and circuit simulation: hybrid quantum-classical algorithms (VQE/QAOA), IBM Qiskit, PennyLane, and post-quantum cryptographic (PQC) transition patterns.
+            Exploratory quantum computing advisory for enterprise use cases: algorithm simulation with IBM Qiskit and PennyLane, variational circuits (VQE/QAOA), quantum machine learning, and Post-Quantum Cryptography (PQC) readiness aligned with NIST standards.
           </p>
         </div>
 
         <!-- 07: AI Budget Training -->
         <div class="service-synth-card">
-          <div class="service-icon-box">💲</div>
+          <div class="service-icon-box"></div>
           <h3 style="color:var(--gold);font-size:1.15rem;font-weight:700;margin-bottom:0.5rem;">07 · AI Budget Training</h3>
           <p style="color:var(--text-secondary);font-size:0.92rem;line-height:1.6;flex-grow:1;">
-            Educate on financial AI literacy and token governance: establish hard spending caps, LiteLLM reverse proxies, semantic prompt caching, and cost governance harnesses to keep inference strictly within budget.
+            Train staff across all levels to control AI spending: establish hard spending caps per session and month, configure token budgets, leverage prompt caching for up to 90% input savings, and route low-complexity tasks to free and local models.
           </p>
         </div>
 
         <!-- 08: Enterprise AI Training -->
         <div class="service-synth-card">
-          <div class="service-icon-box">🛡️</div>
+          <div class="service-icon-box"></div>
           <h3 style="color:#38bdf8;font-size:1.15rem;font-weight:700;margin-bottom:0.5rem;">08 · Enterprise AI Training</h3>
           <p style="color:var(--text-secondary);font-size:0.92rem;line-height:1.6;flex-grow:1;">
-            Live corporate training methodologies adapted for solo leadership: board-level strategic AI roadmaps, compliance, data sovereignty, and quantitative evaluation frameworks (Ragas/DeepEval).
+            Live and remote corporate AI training delivered across distinct tracks: prompting for corporate staff, Claude Code and AI-assisted TDD for developers, and executive briefings, AI roadmaps, governance, and safe AI use policies for CXOs.
           </p>
         </div>
 
         <!-- 09: AI Developer Training -->
         <div class="service-synth-card">
-          <div class="service-icon-box">💻</div>
+          <div class="service-icon-box"></div>
           <h3 style="color:var(--gold);font-size:1.15rem;font-weight:700;margin-bottom:0.5rem;">09 · AI Developer Training</h3>
           <p style="color:var(--text-secondary);font-size:0.92rem;line-height:1.6;flex-grow:1;">
-            Empower your workflow with cutting-edge CLI and IDE coding agents (Claude Code, Google Antigravity, Aider). Master custom Model Context Protocol (MCP) servers and AI-assisted Test-Driven Development (TDD).
+            Hands-on bootcamps training developer teams on terminal and IDE coding agents (Claude Code, Google Antigravity, OpenCode). Catch mistakes early with strict AI-assisted Test-Driven Development (TDD) and build custom MCP servers in Python and Rust.
           </p>
         </div>
 
         <!-- 10: Advanced AI Agents -->
         <div class="service-synth-card">
-          <div class="service-icon-box">🤖</div>
+          <div class="service-icon-box"></div>
           <h3 style="color:#38bdf8;font-size:1.15rem;font-weight:700;margin-bottom:0.5rem;">10 · Advanced AI Agents</h3>
           <p style="color:var(--text-secondary);font-size:0.92rem;line-height:1.6;flex-grow:1;">
-            Deploy production-grade autonomous agent systems designed for mission-critical workloads: hierarchical supervisor swarms, reflective self-correction loops, stateful episodic memory, and sandboxed execution.
+            Build production autonomous agent systems with hierarchical teams of Claude agents for business-critical workloads. Implement test-driven self-correction loops where agents fix errors until tests pass, with persistent state and Docker sandboxing.
           </p>
         </div>
 
         <!-- 11: Claude Basic Training -->
         <div class="service-synth-card">
-          <div class="service-icon-box">⚡</div>
+          <div class="service-icon-box"></div>
           <h3 style="color:var(--gold);font-size:1.15rem;font-weight:700;margin-bottom:0.5rem;">11 · Claude Basic Training</h3>
           <p style="color:var(--text-secondary);font-size:0.92rem;line-height:1.6;flex-grow:1;">
-            Master fundamental Claude skills: structured XML prompt craft, model tier selection, Claude Projects shared organizational memory, and interactive Artifact-driven rapid prototyping.
+            Foundational enablement for corporate staff and knowledge workers: choosing the right model between Haiku, Sonnet, and Opus, structured prompting with XML tags, managing shared team memory in Claude Projects, and using Artifacts for daily office work.
           </p>
         </div>
 
         <!-- 12: Claude Advanced Training -->
         <div class="service-synth-card">
-          <div class="service-icon-box">🚀</div>
+          <div class="service-icon-box"></div>
           <h3 style="color:#38bdf8;font-size:1.15rem;font-weight:700;margin-bottom:0.5rem;">12 · Claude Advanced Training</h3>
           <p style="color:var(--text-secondary);font-size:0.92rem;line-height:1.6;flex-grow:1;">
-            Advanced engineering masterclass: build terminal coding pipelines with Claude Code CLI, automate Microsoft 365 workflows with Claude Cowork, engineer custom MCP servers, and orchestrate frontier reasoning models.
+            Technical masterclass for senior developers and AI architects: advanced Claude Code CLI workflows, Claude Cowork in Microsoft 365, designing and securing production MCP servers, and orchestrating frontier models with adaptive thinking effort.
           </p>
         </div>
       </div>
@@ -1066,7 +1141,7 @@
     <!-- SECTION 5: 15 DAYS TRAINING + 15 DAYS SUPPORT SYLLABUS (BORDERED) -->
     <section class="reveal personal-bordered-section" id="curriculum">
       <div style="text-align:center;margin-bottom:2.5rem;">
-        <span class="gold-badge">📅 15 DAYS TRAINING + 15 DAYS INCLUDED SUPPORT</span>
+        <span class="gold-badge">15 DAYS TRAINING + 15 DAYS INCLUDED SUPPORT</span>
         <h2 class="section-title">Two-Phase Personal <span class="accent-gold">Curriculum &amp; Daily Support Roadmap</span></h2>
         <p class="section-sub" style="margin-top:0.5rem;">
           15 intensive days mastering all 12 services, followed immediately by 15 days of included daily work assistance on your live projects:
@@ -1194,7 +1269,7 @@
     <section class="reveal personal-bordered-section" id="pricing-matrix">
       <div>
         <div style="text-align:center;margin-bottom:2rem;">
-          <span class="gold-badge">🌐 195-COUNTRY PURCHASING POWER PARITY</span>
+          <span class="gold-badge">195-COUNTRY PURCHASING POWER PARITY</span>
           <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem, 3vw, 2.2rem);font-weight:800;color:var(--text-primary);margin-top:0.5rem;">
             Personal AI Transformation <span class="accent-gold">Parity Pricing Matrix</span>
           </h2>
@@ -1255,15 +1330,15 @@
         </div>
 
         <div style="margin-top:1.75rem;padding:1.25rem 1.5rem;border-radius:10px;background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.25);font-size:0.92rem;color:var(--text-secondary);line-height:1.6;">
-          <strong style="color:var(--gold);">👤 One Person Only Policy:</strong> 
-          Personal AI Transformation is strictly for <strong>one person only</strong> to guarantee complete privacy, custom hardware/stack integration, and undistracted 1-on-1 pair programming. For team bookings and cohorts of up to 10 participants, please explore our <a href="services.html" style="color:var(--cyan);text-decoration:underline;">Enterprise AI Training</a> packages.
+          <strong style="color:var(--gold);">One Person Only Policy:</strong> 
+          Personal AI Transformation is strictly for <strong>one person only</strong> to guarantee complete privacy, custom hardware/stack integration, and undistracted 1-on-1 pair programming. For team bookings and cohorts of up to 10 participants, please explore our <a href="service-enterprise-workforce-ai-training.html" style="color:var(--cyan);text-decoration:underline;">Enterprise AI Training</a> packages.
         </div>
       </div>
     </section>
 
     <!-- SECTION 7: CALL TO ACTION BANNER (BORDERED) -->
     <section class="reveal personal-bordered-section" id="personal-cta" style="margin-bottom:5rem;text-align:center;">
-      <span style="font-size:2.8rem;display:inline-block;margin-bottom:0.75rem;">👑</span>
+      <span style="font-size:2.8rem;display:inline-block;margin-bottom:0.75rem;"></span>
       <h2 style="font-family:var(--font-display);font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:900;color:var(--text-primary);margin-bottom:0.75rem;">
         Ready for Your <span class="accent-gold">Personal AI Transformation?</span>
       </h2>
@@ -1272,7 +1347,8 @@
       </p>
       <div style="text-align:center;margin-top:1.5rem;">
         <div class="gold-highlight-container">
-          <a class="btn btn-glow-gold" href="contact.html?service=personal-ai-transformation">
+          <a class="btn btn-commission" href="contact.html?service=personal-ai-transformation"
+            style="padding:0.95rem 1.85rem;font-size:0.95rem;">
             Book Your Personal 1-on-1 Sprint →
           </a>
           <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">

@@ -49,6 +49,7 @@
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap"
     rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="buttons.css" />
   <style>
     :root {
       --bg-0: #020408;
@@ -656,12 +657,6 @@
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Services",
-            "item": "https://thomascherickal.github.io/services.html"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
             "name": "Ways to Collaborate",
             "item": "https://thomascherickal.github.io/collaboration.html"
           }
@@ -1294,6 +1289,83 @@
         padding: 1.25rem 1rem !important;
       }
     }
+
+    /* btn-gold / btn-glow-gold: High-Contrast Solid Radiant Gold Button */
+    .btn-gold,
+    .btn-glow-gold {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%) !important;
+      color: #060912 !important;
+      font-weight: 800 !important;
+      border: 4px solid #fef08a !important;
+      border-radius: var(--radius, 8px) !important;
+      box-shadow: 0 0 28px rgba(251, 191, 36, 0.85), 0 0 10px #fbbf24, 0 4px 15px rgba(217, 119, 6, 0.6) !important;
+      text-shadow: none !important;
+      letter-spacing: 0.02em !important;
+      transition: var(--transition, 0.25s ease);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      text-transform: none !important;
+      white-space: normal !important;
+      text-align: center !important;
+      line-height: 1.35 !important;
+      box-sizing: border-box !important;
+      max-width: 100% !important;
+    }
+
+    .btn-gold:hover,
+    .btn-glow-gold:hover {
+      background: linear-gradient(135deg, #fef08a 0%, #fbbf24 50%, #f59e0b 100%) !important;
+      color: #000000 !important;
+      border-color: #ffffff !important;
+      box-shadow: 0 0 38px rgba(251, 191, 36, 1), 0 0 16px #fbbf24, 0 6px 22px rgba(217, 119, 6, 0.7) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    /* gold-highlight-container: Gold Radiant Highlight Wrapper for Personal AI Actions */
+    .gold-highlight-container {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      padding: 1.25rem 2rem;
+      border-radius: 18px;
+      background: radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.15) 0%, rgba(251, 191, 36, 0.04) 100%);
+      border: 2px solid rgba(251, 191, 36, 0.6);
+      box-shadow: 0 0 35px rgba(251, 191, 36, 0.28), inset 0 0 20px rgba(251, 191, 36, 0.08);
+      max-width: 100%;
+      box-sizing: border-box;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .gold-highlight-container:hover {
+      border-color: rgba(251, 191, 36, 0.95);
+      box-shadow: 0 0 48px rgba(251, 191, 36, 0.45), inset 0 0 28px rgba(251, 191, 36, 0.15);
+    }
+
+    /* Collapse empty icon wrappers when emojis are removed */
+    .home-nav-icon:empty,
+    .service-icon-box:empty,
+    .role-card-icon:empty,
+    .collab-icon:empty,
+    .audience-icon:empty,
+    .contact-method-icon:empty,
+    .search-icon-left:empty,
+    .faq-category-icon:empty,
+    .tech-cat-title span:empty,
+    div[style*="font-size:1.8rem"]:empty,
+    span[style*="font-size:1.4rem"]:empty,
+    span[style*="font-size:1.8rem"]:empty,
+    span[style*="font-size: 2.2rem"]:empty,
+    span[style*="font-size:2.8rem"]:empty {
+      display: none !important;
+    }
+
+    .search-icon-left:empty ~ .search-input {
+      padding-left: 1.25rem !important;
+    }
   </style>
   <nav aria-label="Main navigation">
     <a href="https://thomascherickal.com" class="nav-brand"><img src="assets/digital-futurist-logo.jpg"
@@ -1307,7 +1379,7 @@
     <ul class="nav-links">
       <li><a href="index.html" data-nav="index.html">Home</a></li>
       <li><a href="expertise.html" data-nav="expertise.html">Expertise</a></li>
-      <li><a href="personal-ai-training.html" data-nav="personal-ai-training.html">Personal</a></li>
+      <li><a href="personal-ai-training.html" data-nav="personal-ai-training.html">Upskill</a></li>
       <li><a href="collaboration.html" data-nav="collaboration.html">Collaborate</a></li>
       <li class="nav-dropdown">
         <a class="nav-dropdown-toggle">
@@ -1333,10 +1405,6 @@
           Services <span class="dropdown-caret">▾</span>
         </a>
         <ul class="dropdown-menu">
-          <li><a href="services.html" class="dropdown-header-link">All Services</a></li>
-          <li><a href="personal-ai-training.html" style="color:var(--gold);font-weight:700;">Personal AI
-              Transformation</a></li>
-          <li class="dropdown-divider"></li>
           <li><a href="service-generative-ai-transformation.html">Generative AI Transformation</a></li>
           <li><a href="service-local-llms-cost-slashing.html">Local LLMs &amp; Cost Slashing</a></li>
           <li><a href="service-ai-agents-orchestration.html">AI Agent Orchestration</a></li>
@@ -1379,7 +1447,7 @@
           style="background:rgba(255,255,255,0.05);border:1.5px solid var(--border-gold);color:var(--text-primary);padding:0.85rem 1.75rem;font-size:0.92rem;">
           View Pricing &amp; Parity Index →
         </a>
-        <a class="btn top-hero-btn top-hero-btn-3" href="services.html"
+        <a class="btn top-hero-btn top-hero-btn-3" href="pricing.html#service-rates"
           style="background:rgba(56,189,248,0.08);border:1.5px solid var(--border);color:var(--cyan);padding:0.85rem 1.75rem;font-size:0.92rem;">
           Browse All AI Services →
         </a>
@@ -1418,7 +1486,7 @@
         <!-- 01. 10-Day Enterprise AI Training Contract -->
         <div class="collab-card border-gold">
           <span class="collab-tag tag-gold">10-Day Sprint</span>
-          <span class="collab-icon">🎓</span>
+          <span class="collab-icon"></span>
           <h3 class="collab-title" style="color:var(--gold);">01. 10-Day Enterprise AI Training Contract</h3>
           <p class="collab-desc">
             My signature 10 consecutive business day intensive immersion for enterprise engineering teams and staff. Moving organizations from isolated chatbot windows into autonomous multi-agent teams, sovereign private model deployments, and strict AI-assisted TDD.
@@ -1431,7 +1499,7 @@
         <!-- 02. Claude Agent Suite & Team Orchestration -->
         <div class="collab-card border-cyan">
           <span class="collab-tag tag-cyan">Claude Agent Teams</span>
-          <span class="collab-icon">🤖</span>
+          <span class="collab-icon"></span>
           <h3 class="collab-title" style="color:var(--cyan);">02. Claude Agent Suite &amp; Team Orchestration</h3>
           <p class="collab-desc">
             Architectural implementation across the 8 Claude Agent modules: Claude 101 loops, Claude Code terminal workflows, Claude Skills schema injection, Model Context Protocol (MCP) servers, multi-agent teams, design patterns, and budget limiters.
@@ -1444,7 +1512,7 @@
         <!-- 03. Private Local LLMs & Inference Cost Slashing -->
         <div class="collab-card border-violet">
           <span class="collab-tag tag-violet">Cost Slashing (60–90%)</span>
-          <span class="collab-icon">📦</span>
+          <span class="collab-icon"></span>
           <h3 class="collab-title" style="color:var(--violet);">03. Private Local LLMs &amp; Inference Cost Slashing</h3>
           <p class="collab-desc">
             Slashing recurring cloud AI API bills by 60–90% by hosting fine-tuned open-weight models (Llama 3, DeepSeek, Qwen) on workstation clusters or private VPCs using vLLM, Ollama, and GGUF/AWQ quantization with complete zero data egress.
@@ -1457,7 +1525,7 @@
         <!-- 04. Role-Based Workforce AI Bootcamps (6 Cohorts) -->
         <div class="collab-card border-cyan">
           <span class="collab-tag tag-cyan">Workforce Enablement</span>
-          <span class="collab-icon">👥</span>
+          <span class="collab-icon"></span>
           <h3 class="collab-title" style="color:var(--green);">04. Role-Based Workforce AI Bootcamps (6 Cohorts)</h3>
           <p class="collab-desc">
             High-impact training intensives delivered live or remotely worldwide for 6 distinct cohorts: Freshers (foundational agent literacy), Developers (Claude Code, MCP, TDD), Corporate Staff (workflow automation), Tech Leads (state machines), Management (operational efficiency), and CXOs (strategic roadmap &amp; ROI).
@@ -1470,7 +1538,7 @@
         <!-- 05. AI-Assisted Test-Driven Development (TDD) -->
         <div class="collab-card border-gold">
           <span class="collab-tag tag-gold">Engineering Excellence</span>
-          <span class="collab-icon">⚡</span>
+          <span class="collab-icon"></span>
           <h3 class="collab-title" style="color:var(--gold);">05. AI-Assisted Test-Driven Development (TDD)</h3>
           <p class="collab-desc">
             Embedding rigorous Red-Green-Refactor methodologies directly into AI coding agent workflows. Author failing test suites first in pytest or cargo before directing AI models to generate code, completely eliminating hallucinations, regressions, and silent runtime failures.
@@ -1483,7 +1551,7 @@
         <!-- 06. AI Budget Limits & Cost-Control Gateways -->
         <div class="collab-card border-cyan">
           <span class="collab-tag tag-cyan">Financial Governance</span>
-          <span class="collab-icon">💲</span>
+          <span class="collab-icon"></span>
           <h3 class="collab-title" style="color:var(--cyan);">06. AI Budget Limits &amp; Cost-Control Gateways</h3>
           <p class="collab-desc">
             Establishing enterprise cost governance gateways using LiteLLM, prompt compression, semantic caching, and hard departmental quotas to prevent recursive tool-calling runaways and unpredictable cloud API billing spikes.
@@ -1496,7 +1564,7 @@
         <!-- 07. Autonomous Workflow Automations (n8n & Webhooks) -->
         <div class="collab-card border-gold">
           <span class="collab-tag tag-gold">Workflow Automation</span>
-          <span class="collab-icon">🌐</span>
+          <span class="collab-icon"></span>
           <h3 class="collab-title" style="color:var(--gold);">07. Autonomous Workflow Automations (n8n &amp; Webhooks)</h3>
           <p class="collab-desc">
             Architecting self-hosted n8n pipelines, event-driven webhook listeners, and zero-code business automations connecting ERPs, CRMs, and internal databases to intelligent AI agent decision routers, automating up to 50% of routine corporate tasks.
@@ -1509,7 +1577,7 @@
         <!-- 08. Early Quantum Applications & Migration Advisory -->
         <div class="collab-card border-violet">
           <span class="collab-tag tag-violet">Quantum Systems</span>
-          <span class="collab-icon">⚛️</span>
+          <span class="collab-icon"></span>
           <h3 class="collab-title" style="color:var(--violet);">08. Early Quantum Applications &amp; Migration Advisory</h3>
           <p class="collab-desc">
             Designing and simulating quantum circuits using IBM Qiskit and PennyLane. Exploring variational quantum algorithms (VQE, QAOA) and Quantum Machine Learning (QML) kernels, alongside Post-Quantum Cryptography (PQC) readiness assessments.
@@ -1522,7 +1590,7 @@
         <!-- 09. Dedicated Advisory Retainers & Fractional AI Leadership -->
         <div class="collab-card border-cyan">
           <span class="collab-tag tag-cyan">Dedicated Retainer</span>
-          <span class="collab-icon">💼</span>
+          <span class="collab-icon"></span>
           <h3 class="collab-title" style="color:var(--cyan);">09. Dedicated Advisory Retainers &amp; Fractional AI Leadership</h3>
           <p class="collab-desc">
             Dedicated monthly sprint capacity providing weekly architectural reviews, multi-agent code audits, model fine-tuning guidance, executive AI steering, and priority asynchronous advisory.
@@ -1632,56 +1700,56 @@
       </div>
       <div class="audience-grid">
         <div class="audience-card">
-          <div class="audience-icon">🚀</div>
+          <div class="audience-icon"></div>
           <h3 class="audience-title">Founders &amp; Solo Entrepreneurs</h3>
           <p class="audience-desc">
             Solo founders and entrepreneurs seeking 10x operational leverage by orchestrating coordinated teams of AI agents with Claude to execute multi-person workloads without headcount bloat.
           </p>
         </div>
         <div class="audience-card" style="border-color: #fbbf24;">
-          <div class="audience-icon">⚡</div>
+          <div class="audience-icon"></div>
           <h3 class="audience-title" style="color: #fbbf24;">Tier 4: Early-Stage Startups (50% Off)</h3>
           <p class="audience-desc">
             Pre-seed, seed-stage, and bootstrapped startups building technical velocity. Eligible for automatic <strong>50% off standard rates</strong> under Startup Enablement.
           </p>
         </div>
         <div class="audience-card">
-          <div class="audience-icon">🏢</div>
+          <div class="audience-icon"></div>
           <h3 class="audience-title">SMBs &amp; Mid-Market Enterprises</h3>
           <p class="audience-desc">
             Growing businesses seeking to automate manual operational bottlenecks with self-hosted n8n pipelines, slash cloud API bills with local LLMs, and upskill their internal developers in AI-assisted TDD.
           </p>
         </div>
         <div class="audience-card">
-          <div class="audience-icon">🌐</div>
+          <div class="audience-icon"></div>
           <h3 class="audience-title">Global MNCs &amp; Enterprise Leaders</h3>
           <p class="audience-desc">
             Large organizations deploying air-gapped private model clusters on private VPCs, enforcing strict departmental spend limits, and rolling out comprehensive 6-cohort workforce training programs.
           </p>
         </div>
         <div class="audience-card">
-          <div class="audience-icon">💻</div>
+          <div class="audience-icon"></div>
           <h3 class="audience-title">Developers &amp; Technical Leads</h3>
           <p class="audience-desc">
             Engineering teams looking to master terminal-native Claude Code, build custom Model Context Protocol (MCP) servers in TypeScript/Rust, and orchestrate robust LangGraph state machines.
           </p>
         </div>
         <div class="audience-card">
-          <div class="audience-icon">👥</div>
+          <div class="audience-icon"></div>
           <h3 class="audience-title">Corporate Staff &amp; Business Units</h3>
           <p class="audience-desc">
             Cross-functional knowledge workers, analysts, and project managers seeking practical training in secure prompt engineering, AI report generation, and automated business workflows.
           </p>
         </div>
         <div class="audience-card" style="border-color: #00d2ff;">
-          <div class="audience-icon">🏛️</div>
+          <div class="audience-icon"></div>
           <h3 class="audience-title" style="color: #00d2ff;">Tier 5: Non-Profits &amp; Academia (75% Off)</h3>
           <p class="audience-desc">
             Open research initiatives, universities, and mission-driven non-profits supported through a dedicated <strong>75% discount</strong> across all training courses, consulting sprints, and workshops.
           </p>
         </div>
         <div class="audience-card">
-          <div class="audience-icon">🌍</div>
+          <div class="audience-icon"></div>
           <h3 class="audience-title">Tier 6: Global Equity &amp; Emerging Nations</h3>
           <p class="audience-desc">
             Custom subsidized pricing and flexible milestone quotes for engineering teams, startups, and researchers in backward and underprivileged nations to guarantee universal AI access.
@@ -1743,7 +1811,7 @@
     <section class="reveal" style="padding: 3.5rem 1rem 4rem; text-align: center;">
       <div class="role-card border-gold"
         style="max-width: 960px; margin: 0 auto; padding: 3rem 2rem; background: radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.1) 0%, rgba(12, 17, 29, 0.98) 100%);">
-        <span class="role-card-icon" style="font-size: 2.5rem; display: inline-block; margin-bottom: 0.75rem;">🚀</span>
+        <span class="role-card-icon" style="font-size: 2.5rem; display: inline-block; margin-bottom: 0.75rem;"></span>
         <h2 class="section-title" style="font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1rem;">
           Ready to Start an AI <span class="accent-gold">Transformation?</span>
         </h2>

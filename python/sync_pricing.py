@@ -71,20 +71,20 @@ CORE_PILLARS = [
     }
 ]
 
-# Authoritative A La Carte Modules (Individual Services - Exactly matching the 12 services in services.html)
+# Authoritative A La Carte Modules (Individual Services - Exactly matching the 12 standalone service offerings)
 A_LA_CARTE = [
-    {"num": 1, "name": "🧠 Generative AI Transformation", "price": 2000, "per": "", "color": "gold"},
-    {"num": 2, "name": "📦 Local LLMs & Cost Slashing", "price": 2000, "per": "", "color": "cyan"},
-    {"num": 3, "name": "🤖 Claude AI Agent Orchestration", "price": 2000, "per": "", "color": "gold"},
-    {"num": 4, "name": "🏎️ Hermes Agent", "price": 2000, "per": "", "color": "cyan"},
-    {"num": 5, "name": "🌐 WorkFlow Automations", "price": 2000, "per": "", "color": "gold"},
-    {"num": 6, "name": "⚛️ Applied Quantum (Experimental)", "price": 2000, "per": "", "color": "cyan"},
-    {"num": 7, "name": "💲 AI Budget Training", "price": 2000, "per": "", "color": "gold"},
-    {"num": 8, "name": "🛡️ Enterprise AI Training", "price": 2000, "per": "", "color": "cyan"},
-    {"num": 9, "name": "💻 AI Developer Training", "price": 2000, "per": "", "color": "gold"},
-    {"num": 10, "name": "🤖 Advanced AI Agents", "price": 2000, "per": "", "color": "cyan"},
-    {"num": 11, "name": "⚡ Claude Basic Training", "price": 2000, "per": "", "color": "gold"},
-    {"num": 12, "name": "🚀 Claude Advanced Training", "price": 2000, "per": "", "color": "cyan"}
+    {"num": 1, "name": "Generative AI Transformation", "price": 2000, "per": "", "color": "gold"},
+    {"num": 2, "name": "Local LLMs & Cost Slashing", "price": 2000, "per": "", "color": "cyan"},
+    {"num": 3, "name": "Claude AI Agent Orchestration", "price": 2000, "per": "", "color": "gold"},
+    {"num": 4, "name": "Hermes Agent", "price": 2000, "per": "", "color": "cyan"},
+    {"num": 5, "name": "WorkFlow Automations", "price": 2000, "per": "", "color": "gold"},
+    {"num": 6, "name": "Applied Quantum (Experimental)", "price": 2000, "per": "", "color": "cyan"},
+    {"num": 7, "name": "AI Budget Training", "price": 2000, "per": "", "color": "gold"},
+    {"num": 8, "name": "Enterprise AI Training", "price": 2000, "per": "", "color": "cyan"},
+    {"num": 9, "name": "AI Developer Training", "price": 2000, "per": "", "color": "gold"},
+    {"num": 10, "name": "Advanced AI Agents", "price": 2000, "per": "", "color": "cyan"},
+    {"num": 11, "name": "Claude Basic Training", "price": 2000, "per": "", "color": "gold"},
+    {"num": 12, "name": "Claude Advanced Training", "price": 2000, "per": "", "color": "cyan"}
 ]
 
 # The 8 Standalone Services
@@ -314,7 +314,7 @@ def sync_pricing_html_cards():
           style="background:linear-gradient(155deg, rgba(8, 25, 45, 0.95) 0%, rgba(3, 7, 18, 0.98) 100%);border:2px solid #00d2ff;border-radius:var(--radius-lg);padding:2.2rem 1.85rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:var(--transition);box-shadow:0 0 28px rgba(0, 210, 255, 0.25), 0 10px 30px rgba(0,0,0,0.7);">
           <div
             style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg, #00d2ff 0%, #0284c7 100%);color:#000000;font-family:var(--font-mono);font-size:calc(0.75rem + 3px);font-weight:900;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 1.1rem;border-radius:9999px;box-shadow:0 0 18px rgba(0, 210, 255, 0.65);white-space:nowrap;">
-            ★ AGENT ORCHESTRATION MASTERY
+            AGENT ORCHESTRATION MASTERY
           </div>
           <div>
             <span
@@ -381,7 +381,7 @@ def sync_pricing_html_cards():
           style="background:linear-gradient(155deg, rgba(35, 26, 6, 0.95) 0%, rgba(12, 9, 2, 0.98) 100%);border:2px solid #fbbf24;border-radius:var(--radius-lg);padding:2.2rem 1.85rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:var(--transition);box-shadow:0 0 28px rgba(251, 191, 36, 0.25), 0 10px 30px rgba(0,0,0,0.7);">
           <div
             style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);color:#000000;font-family:var(--font-mono);font-size:calc(0.75rem + 3px);font-weight:900;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 1.1rem;border-radius:9999px;box-shadow:0 0 18px rgba(251, 191, 36, 0.65);white-space:nowrap;">
-            ★ LIVE &amp; REMOTE TRAINING
+            LIVE &amp; REMOTE TRAINING
           </div>
           <div>
             <span
@@ -449,7 +449,7 @@ def sync_pricing_html_cards():
           style="background:linear-gradient(155deg, rgba(30, 12, 48, 0.95) 0%, rgba(10, 4, 18, 0.98) 100%);border:2px solid #a855f7;border-radius:var(--radius-lg);padding:2.2rem 1.85rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:var(--transition);box-shadow:0 0 28px rgba(168, 85, 247, 0.25), 0 10px 30px rgba(0,0,0,0.7);">
           <div
             style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg, #c084fc 0%, #9333ea 100%);color:#000000;font-family:var(--font-mono);font-size:calc(0.75rem + 3px);font-weight:900;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 1.1rem;border-radius:9999px;box-shadow:0 0 18px rgba(168, 85, 247, 0.65);white-space:nowrap;">
-            ★ COST SLASHING &amp; PRIVACY
+            COST SLASHING &amp; PRIVACY
           </div>
           <div>
             <span
@@ -530,7 +530,7 @@ def sync_pricing_html_cards():
           <div class="price-card-faq border-gold">
             <div class="price-card-title"
               style="color:var(--gold);font-weight:700;font-size:0.98rem;min-height:2.6rem;display:flex;align-items:center;justify-content:center;">
-              🧠 Generative AI Transformation</div>
+              Generative AI Transformation</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
               $2,000 USD
@@ -544,14 +544,14 @@ def sync_pricing_html_cards():
             </div>
             <div
               style="font-size:calc(0.84rem + 3px);color:var(--text-secondary);line-height:1.5;flex-grow:1;display:flex;align-items:center;justify-content:center;">
-              Convert your business from isolated chatbots into coordinated teams of Claude Agents.
+              Move from one-off chatbot prompts to coordinated teams of Claude agents with custom MCP servers and bounded execution loops.
             </div>
           </div>
           <!-- Item 2 (Row 1, Card 2) -->
           <div class="price-card-faq border-cyan">
             <div class="price-card-title"
               style="color:var(--cyan);font-weight:700;font-size:0.98rem;min-height:2.6rem;display:flex;align-items:center;justify-content:center;">
-              📦 Local LLMs &amp; Cost Slashing</div>
+              Local LLMs &amp; Cost Slashing</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
               $2,000 USD
@@ -565,14 +565,14 @@ def sync_pricing_html_cards():
             </div>
             <div
               style="font-size:calc(0.84rem + 3px);color:var(--text-secondary);line-height:1.5;flex-grow:1;display:flex;align-items:center;justify-content:center;">
-              Deploy self-hosted, private open-weight models (Llama 3.3, DeepSeek R1, Mistral, Qwen 2.5) to slash inference costs by 60–90%.
+              Cut recurring cloud API bills by 60% to 90% by running open-weight models privately with Ollama, vLLM, and llama.cpp on your hardware.
             </div>
           </div>
           <!-- Item 3 (Row 1, Card 3) -->
           <div class="price-card-faq border-gold">
             <div class="price-card-title"
               style="color:var(--gold);font-weight:700;font-size:0.98rem;min-height:2.6rem;display:flex;align-items:center;justify-content:center;">
-              🤖 Claude AI Agent Orchestration</div>
+              Claude AI Agent Orchestration</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
               $2,000 USD
@@ -586,14 +586,14 @@ def sync_pricing_html_cards():
             </div>
             <div
               style="font-size:calc(0.84rem + 3px);color:var(--text-secondary);line-height:1.5;flex-grow:1;display:flex;align-items:center;justify-content:center;">
-              Architect autonomous multi-agent environments with Claude via Model Context Protocol (MCP) with robust budget limits and telemetry.
+              Master Claude agent orchestration to build supervisor-worker swarms, sequential pipelines, and parallel teams that control quality and cost.
             </div>
           </div>
           <!-- Item 4 (Row 1, Card 4) -->
           <div class="price-card-faq border-cyan">
             <div class="price-card-title"
               style="color:var(--cyan);font-weight:700;font-size:0.98rem;min-height:2.6rem;display:flex;align-items:center;justify-content:center;">
-              🏎️ Hermes Agent</div>
+              Hermes Agent</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
               $2,000 USD
@@ -607,14 +607,14 @@ def sync_pricing_html_cards():
             </div>
             <div
               style="font-size:calc(0.84rem + 3px);color:var(--text-secondary);line-height:1.5;flex-grow:1;display:flex;align-items:center;justify-content:center;">
-              Deploy Hermes Agent with persistent memory, autonomous tool selection, self-correcting execution loops, and structured outputs.
+              Deploy self-hosted Hermes Agent on Linux with persistent session memory, autonomous skill accumulation, and scheduled background tasks.
             </div>
           </div>
           <!-- Item 5 (Row 2, Card 1) -->
           <div class="price-card-faq border-gold">
             <div class="price-card-title"
               style="color:var(--gold);font-weight:700;font-size:0.98rem;min-height:2.6rem;display:flex;align-items:center;justify-content:center;">
-              🌐 WorkFlow Automations</div>
+              WorkFlow Automations</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
               $2,000 USD
@@ -628,14 +628,14 @@ def sync_pricing_html_cards():
             </div>
             <div
               style="font-size:calc(0.84rem + 3px);color:var(--text-secondary);line-height:1.5;flex-grow:1;display:flex;align-items:center;justify-content:center;">
-              Build reliable self-hosted workflow automations connecting enterprise APIs, webhooks, databases, and LLM reasoning steps.
+              Hands-on training to automate up to 50% of routine office work using Claude skills, plugins, connectors, and Microsoft 365 add-ins.
             </div>
           </div>
           <!-- Item 6 (Row 2, Card 2) -->
           <div class="price-card-faq border-cyan">
             <div class="price-card-title"
               style="color:var(--cyan);font-weight:700;font-size:0.98rem;min-height:2.6rem;display:flex;align-items:center;justify-content:center;">
-              ⚛️ Applied Quantum (Experimental)</div>
+              Applied Quantum (Experimental)</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
               $2,000 USD
@@ -649,14 +649,14 @@ def sync_pricing_html_cards():
             </div>
             <div
               style="font-size:calc(0.84rem + 3px);color:var(--text-secondary);line-height:1.5;flex-grow:1;display:flex;align-items:center;justify-content:center;">
-              Explore quantum computing algorithms with Qiskit, quantum circuit simulation, optimization problems, and post-quantum crypto.
+              Exploratory quantum computing advisory: algorithm simulation with Qiskit and PennyLane, variational circuits, and NIST PQC migration.
             </div>
           </div>
           <!-- Item 7 (Row 2, Card 3) -->
           <div class="price-card-faq border-gold">
             <div class="price-card-title"
               style="color:var(--gold);font-weight:700;font-size:0.98rem;min-height:2.6rem;display:flex;align-items:center;justify-content:center;">
-              💲 AI Budget Training</div>
+              AI Budget Training</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
               $2,000 USD
@@ -670,14 +670,14 @@ def sync_pricing_html_cards():
             </div>
             <div
               style="font-size:calc(0.84rem + 3px);color:var(--text-secondary);line-height:1.5;flex-grow:1;display:flex;align-items:center;justify-content:center;">
-              Establish enterprise token governance, hard budget ceilings, prompt caching optimizations, semantic routing, and spend analytics.
+              Train staff across all levels to enforce hard spending caps, manage token quotas, leverage prompt caching, and route to local models.
             </div>
           </div>
           <!-- Item 8 (Row 2, Card 4) -->
           <div class="price-card-faq border-cyan">
             <div class="price-card-title"
               style="color:var(--cyan);font-weight:700;font-size:0.98rem;min-height:2.6rem;display:flex;align-items:center;justify-content:center;">
-              🛡️ Enterprise AI Training</div>
+              Enterprise AI Training</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
               $2,000 USD
@@ -691,14 +691,14 @@ def sync_pricing_html_cards():
             </div>
             <div
               style="font-size:calc(0.84rem + 3px);color:var(--text-secondary);line-height:1.5;flex-grow:1;display:flex;align-items:center;justify-content:center;">
-              Comprehensive role-tailored AI literacy and engineering training: executive strategy, employee productivity, and developer pairing.
+              Role-tailored corporate AI training across distinct tracks: staff workflows, developer AI-assisted TDD, and executive AI roadmaps.
             </div>
           </div>
           <!-- Item 9 (Row 3, Card 1) -->
           <div class="price-card-faq border-gold">
             <div class="price-card-title"
               style="color:var(--gold);font-weight:700;font-size:0.98rem;min-height:2.6rem;display:flex;align-items:center;justify-content:center;">
-              💻 AI Developer Training</div>
+              AI Developer Training</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
               $2,000 USD
@@ -712,14 +712,14 @@ def sync_pricing_html_cards():
             </div>
             <div
               style="font-size:calc(0.84rem + 3px);color:var(--text-secondary);line-height:1.5;flex-grow:1;display:flex;align-items:center;justify-content:center;">
-              Hands-on engineering bootcamps: Claude Code CLI, Google Antigravity SDK, custom MCP servers in Rust/TS, and AI-assisted TDD.
+              Hands-on bootcamps training developers on Claude Code CLI, Google Antigravity, custom Python/Rust MCP servers, and AI-assisted TDD.
             </div>
           </div>
           <!-- Item 10 (Row 3, Card 2) -->
           <div class="price-card-faq border-cyan">
             <div class="price-card-title"
               style="color:var(--cyan);font-weight:700;font-size:0.98rem;min-height:2.6rem;display:flex;align-items:center;justify-content:center;">
-              🤖 Advanced AI Agents</div>
+              Advanced AI Agents</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
               $2,000 USD
@@ -733,14 +733,14 @@ def sync_pricing_html_cards():
             </div>
             <div
               style="font-size:calc(0.84rem + 3px);color:var(--text-secondary);line-height:1.5;flex-grow:1;display:flex;align-items:center;justify-content:center;">
-              Production multi-agent swarms, reflective self-correction loops, stateful episodic memory, LangGraph, and Docker sandboxes.
+              Build production autonomous agent systems: hierarchical Claude teams, test-driven self-correction loops, and Docker sandboxed tools.
             </div>
           </div>
           <!-- Item 11 (Row 3, Card 3) -->
           <div class="price-card-faq border-gold">
             <div class="price-card-title"
               style="color:var(--gold);font-weight:700;font-size:0.98rem;min-height:2.6rem;display:flex;align-items:center;justify-content:center;">
-              ⚡ Claude Basic Training</div>
+              Claude Basic Training</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
               $2,000 USD
@@ -754,14 +754,14 @@ def sync_pricing_html_cards():
             </div>
             <div
               style="font-size:calc(0.84rem + 3px);color:var(--text-secondary);line-height:1.5;flex-grow:1;display:flex;align-items:center;justify-content:center;">
-              Foundations for staff: Claude models, XML prompt craft, Claude Projects team memory, and interactive Artifacts for office work.
+              Foundational enablement: model tier selection (Haiku, Sonnet, Opus), structured XML prompting, Claude Projects, and Artifacts.
             </div>
           </div>
           <!-- Item 12 (Row 3, Card 4) -->
           <div class="price-card-faq border-cyan">
             <div class="price-card-title"
               style="color:var(--cyan);font-weight:700;font-size:0.98rem;min-height:2.6rem;display:flex;align-items:center;justify-content:center;">
-              🚀 Claude Advanced Training</div>
+              Claude Advanced Training</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
               $2,000 USD
@@ -775,28 +775,7 @@ def sync_pricing_html_cards():
             </div>
             <div
               style="font-size:calc(0.84rem + 3px);color:var(--text-secondary);line-height:1.5;flex-grow:1;display:flex;align-items:center;justify-content:center;">
-              Senior engineer masterclass: Claude Code CLI, Claude Cowork in Microsoft 365, custom Model Context Protocol (MCP) servers, and swarms.
-            </div>
-          </div>
-          <!-- Item 13 (Row 5, Card 1) - Personal AI Transformation -->
-          <div class="price-card-faq border-gold" style="border:2px solid var(--gold);box-shadow:0 0 20px rgba(251,191,36,0.25);">
-            <div class="price-card-title"
-              style="color:var(--gold);font-weight:800;font-size:0.98rem;min-height:2.6rem;display:flex;align-items:center;justify-content:center;">
-              👑 Personal AI Transformation (50% Off · 1 Person)</div>
-            <div class="price-amount"
-              style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
-              $1,000 USD
-            </div>
-            <div style="font-size:0.75rem;color:var(--gold);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 15d Training + 15d Support · 1 Person Only</div>
-            <div class="service-parity-strip">
-              <span>25% Off: <strong>$750</strong></span>
-              <span>50% Off: <strong>$500</strong></span>
-              <span>75% Off: <strong>$250</strong></span>
-              <span>T6: <strong>$100</strong></span>
-            </div>
-            <div
-              style="font-size:calc(0.84rem + 3px);color:var(--text-secondary);line-height:1.5;flex-grow:1;display:flex;align-items:center;justify-content:center;">
-              Unified 1-on-1 mastery across all 12 services (15d training sprint) + 15d daily support and doubts clarification, and light, easy-to-skim guides. Strictly for one person only.
+              Senior engineer masterclass: Claude Code CLI in depth, Claude Cowork in Microsoft 365, custom MCP engineering, and agent swarms.
             </div>
           </div>
         </div>

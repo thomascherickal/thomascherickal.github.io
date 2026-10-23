@@ -42,7 +42,7 @@ Nothing. There is strictly zero upfront payment ($0 advance). You do not pay a s
 
 - Payment Made Only After Training: Payment installments are initiated only after completing 3 or 5 full days of training (3 days for Personal AI Transformation, or 5 days for Enterprise AI Transformation).
 
-- 3 to 6 Hours of Daily Live Immersion: Every training day entails 3 to 6 hours of live, hands-on engineering, pair-programming, and real-world system architecture deployed directly into your repositories.
+- Live Daily Immersion (4h Enterprise / 2h Individual): Every training day entails 4 hours daily for enterprise cohorts or 2 hours daily for individuals of live, hands-on engineering, pair-programming, and real-world system architecture deployed directly into your repositories.
 
 - Zero-Risk Guarantee: If after the first 3 or 5 days you are not completely satisfied with the caliber of instruction, codebase progress, and production AI capability delivered, you owe nothing and walk away with zero financial obligation.
 
@@ -676,21 +676,21 @@ Whether your team is distributed across five continents or co-located in a singl
 *Curriculum: Claude Suite · FAQ #37*  
 Our flagship Claude curriculum covers eight meticulously structured modules reflecting the state-of-the-art late-2026 Anthropic agent ecosystem:
 
-- 🚀 Claude Agents 101: Core loop primitives, system prompt architecture, tool invocation, and handling multi-step reasoning traces.
+- Claude Agents 101: Core loop primitives, system prompt architecture, tool invocation, and handling multi-step reasoning traces.
 
-- 💻 Claude Code & Cowork: Command-line terminal mastery, repository-wide refactoring, and desktop computer use automation.
+- Claude Code & Cowork: Command-line terminal mastery, repository-wide refactoring, and desktop computer use automation.
 
-- 🧩 Claude Skills: Extending agent capabilities with domain-specific knowledge packages and schema definitions.
+- Claude Skills: Extending agent capabilities with domain-specific knowledge packages and schema definitions.
 
-- 🔌 Claude MCP: Building custom Model Context Protocol client-server architectures connecting enterprise data.
+- Claude MCP: Building custom Model Context Protocol client-server architectures connecting enterprise data.
 
-- 👥 Claude Agent Teams: Hierarchical multi-agent swarms, consensus voting mechanisms, and worker specialization.
+- Claude Agent Teams: Hierarchical multi-agent swarms, consensus voting mechanisms, and worker specialization.
 
-- 📐 Claude Agent Design Patterns: Router, Evaluator-Optimizer, Orchestrator-Workers, and Autonomous Loop patterns.
+- Claude Agent Design Patterns: Router, Evaluator-Optimizer, Orchestrator-Workers, and Autonomous Loop patterns.
 
-- 💲 Claude Budget Limits: Token caching optimizations, prompt compression, rate limits, and hard budget spend caps.
+- Claude Budget Limits: Token caching optimizations, prompt compression, rate limits, and hard budget spend caps.
 
-- 📦 Claude with Local LLMs: Hybrid orchestration combining Claude frontier reasoning with high-throughput local open models.
+- Claude with Local LLMs: Hybrid orchestration combining Claude frontier reasoning with high-throughput local open models.
 
 ---
 

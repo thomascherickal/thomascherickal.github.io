@@ -46,6 +46,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap"
     rel="stylesheet" />
+    <link rel="stylesheet" href="buttons.css" />
   <style>
     :root {
       --bg-0: #020408;
@@ -3115,7 +3116,7 @@
     }
 
     .workflow-card.automated .workflow-list li::before {
-      content: '⚡';
+      content: '•';
       position: absolute;
       left: 0;
       top: 0;
@@ -4472,6 +4473,83 @@
         padding: 1.25rem 1rem !important;
       }
     }
+
+    /* btn-gold / btn-glow-gold: High-Contrast Solid Radiant Gold Button */
+    .btn-gold,
+    .btn-glow-gold {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%) !important;
+      color: #060912 !important;
+      font-weight: 800 !important;
+      border: 4px solid #fef08a !important;
+      border-radius: var(--radius, 8px) !important;
+      box-shadow: 0 0 28px rgba(251, 191, 36, 0.85), 0 0 10px #fbbf24, 0 4px 15px rgba(217, 119, 6, 0.6) !important;
+      text-shadow: none !important;
+      letter-spacing: 0.02em !important;
+      transition: var(--transition, 0.25s ease);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      text-transform: none !important;
+      white-space: normal !important;
+      text-align: center !important;
+      line-height: 1.35 !important;
+      box-sizing: border-box !important;
+      max-width: 100% !important;
+    }
+
+    .btn-gold:hover,
+    .btn-glow-gold:hover {
+      background: linear-gradient(135deg, #fef08a 0%, #fbbf24 50%, #f59e0b 100%) !important;
+      color: #000000 !important;
+      border-color: #ffffff !important;
+      box-shadow: 0 0 38px rgba(251, 191, 36, 1), 0 0 16px #fbbf24, 0 6px 22px rgba(217, 119, 6, 0.7) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    /* gold-highlight-container: Gold Radiant Highlight Wrapper for Personal AI Actions */
+    .gold-highlight-container {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      padding: 1.25rem 2rem;
+      border-radius: 18px;
+      background: radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.15) 0%, rgba(251, 191, 36, 0.04) 100%);
+      border: 2px solid rgba(251, 191, 36, 0.6);
+      box-shadow: 0 0 35px rgba(251, 191, 36, 0.28), inset 0 0 20px rgba(251, 191, 36, 0.08);
+      max-width: 100%;
+      box-sizing: border-box;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .gold-highlight-container:hover {
+      border-color: rgba(251, 191, 36, 0.95);
+      box-shadow: 0 0 48px rgba(251, 191, 36, 0.45), inset 0 0 28px rgba(251, 191, 36, 0.15);
+    }
+
+    /* Collapse empty icon wrappers when emojis are removed */
+    .home-nav-icon:empty,
+    .service-icon-box:empty,
+    .role-card-icon:empty,
+    .collab-icon:empty,
+    .audience-icon:empty,
+    .contact-method-icon:empty,
+    .search-icon-left:empty,
+    .faq-category-icon:empty,
+    .tech-cat-title span:empty,
+    div[style*="font-size:1.8rem"]:empty,
+    span[style*="font-size:1.4rem"]:empty,
+    span[style*="font-size:1.8rem"]:empty,
+    span[style*="font-size: 2.2rem"]:empty,
+    span[style*="font-size:2.8rem"]:empty {
+      display: none !important;
+    }
+
+    .search-icon-left:empty ~ .search-input {
+      padding-left: 1.25rem !important;
+    }
   </style>
   <nav aria-label="Main navigation">
     <a href="https://thomascherickal.com" class="nav-brand"><img src="assets/digital-futurist-logo.jpg"
@@ -4485,7 +4563,7 @@
     <ul class="nav-links">
       <li><a href="index.html" data-nav="index.html">Home</a></li>
       <li><a href="expertise.html" data-nav="expertise.html">Expertise</a></li>
-      <li><a href="personal-ai-training.html" data-nav="personal-ai-training.html">Personal</a></li>
+      <li><a href="personal-ai-training.html" data-nav="personal-ai-training.html">Upskill</a></li>
       <li><a href="collaboration.html" data-nav="collaboration.html">Collaborate</a></li>
       <li class="nav-dropdown">
         <a class="nav-dropdown-toggle">
@@ -4511,10 +4589,6 @@
           Services <span class="dropdown-caret">▾</span>
         </a>
         <ul class="dropdown-menu">
-          <li><a href="services.html" class="dropdown-header-link">All Services</a></li>
-          <li><a href="personal-ai-training.html" style="color:var(--gold);font-weight:700;">Personal AI
-              Transformation</a></li>
-          <li class="dropdown-divider"></li>
           <li><a href="service-generative-ai-transformation.html">Generative AI Transformation</a></li>
           <li><a href="service-local-llms-cost-slashing.html">Local LLMs &amp; Cost Slashing</a></li>
           <li><a href="service-ai-agents-orchestration.html">AI Agent Orchestration</a></li>
@@ -4562,7 +4636,7 @@
       <div class="roles-grid">
         <!-- Card 1 -->
         <div class="role-card border-gold">
-          <span class="role-card-icon">🤖</span>
+          <span class="role-card-icon"></span>
           <h3 class="role-card-title" style="color:var(--gold);">AI Agent Mastery &amp; Team Orchestration</h3>
           <p class="role-card-desc">Learn the in-depth principles that make Claude AI agent orchestration successful,
             understand deep agent constraints, and perform the tasks of multiple people with coordinated agent teams
@@ -4570,7 +4644,7 @@
         </div>
         <!-- Card 2 -->
         <div class="role-card border-cyan">
-          <span class="role-card-icon">🎓</span>
+          <span class="role-card-icon"></span>
           <h3 class="role-card-title" style="color:var(--cyan);">Live &amp; Remote AI Training</h3>
           <p class="role-card-desc">Tailored curriculums delivered live and remotely for Employees (AI adoption &amp;
             productivity), Developers (AI-assisted dev &amp; TDD), Corporate Staff (workflows), and CXOs (strategy, ROI
@@ -4578,7 +4652,7 @@
         </div>
         <!-- Card 3 -->
         <div class="role-card border-gold">
-          <span class="role-card-icon">📦</span>
+          <span class="role-card-icon"></span>
           <h3 class="role-card-title" style="color:var(--gold);">Local LLM Deployment &amp; Cost Slashing</h3>
           <p class="role-card-desc">Lowering recurring cloud AI inference bills by 60–90% using open-weight local LLMs
             (Llama 3, DeepSeek, Qwen, Mistral). Expertise in Ollama, vLLM, llama.cpp, GGUF/AWQ quantization, and private
@@ -4586,7 +4660,7 @@
         </div>
         <!-- Card 4 -->
         <div class="role-card border-cyan">
-          <span class="role-card-icon">🧪</span>
+          <span class="role-card-icon"></span>
           <h3 class="role-card-title" style="color:var(--cyan);">AI-Assisted Dev &amp; Test-Driven Development</h3>
           <p class="role-card-desc">Accelerating developer workflows with frontier AI coding assistants (Claude Code,
             Google Antigravity, OpenCode). Establishing rigorous TDD workflows with automated
@@ -4594,7 +4668,7 @@
         </div>
         <!-- Card 5 -->
         <div class="role-card border-gold">
-          <span class="role-card-icon">⚡</span>
+          <span class="role-card-icon"></span>
           <h3 class="role-card-title" style="color:var(--gold);">Claude Expertise</h3>
           <p class="role-card-desc">Configuring prompt caching for 90–95% cost reductions, extended
             thinking effort controls, Model Context Protocol (MCP) integrations, declarative subagents in Claude Code,
@@ -4602,7 +4676,7 @@
         </div>
         <!-- Card 6 -->
         <div class="role-card border-violet">
-          <span class="role-card-icon">⚛️</span>
+          <span class="role-card-icon"></span>
           <h3 class="role-card-title" style="color:var(--violet);">Early Quantum Systems Explorer</h3>
           <p class="role-card-desc">Pioneering hands-on quantum research and circuit modeling using IBM Qiskit and
             PennyLane. Variational quantum algorithms (VQE, QAOA), Quantum Machine Learning (QML), and enterprise
@@ -4610,7 +4684,7 @@
         </div>
         <!-- Card 7 -->
         <div class="role-card border-cyan">
-          <span class="role-card-icon">🛠️</span>
+          <span class="role-card-icon"></span>
           <h3 class="role-card-title" style="color:var(--cyan);">Frontier AI Tools Advisory</h3>
           <p class="role-card-desc">Hands-on architecture, configuration, and developer pair-programming in Claude Code,
             Google Antigravity, HuggingFace Spaces, Google Gemini Notebook, Google AI Studio,
@@ -4618,14 +4692,14 @@
         </div>
         <!-- Card 8 -->
         <div class="role-card border-gold">
-          <span class="role-card-icon">🐍</span>
+          <span class="role-card-icon"></span>
           <h3 class="role-card-title" style="color:var(--gold);">Python AI Engineering</h3>
           <p class="role-card-desc">Deep-dive technical architecture, step-by-step guides, and runtime verification for
             PyTorch pipelines, FastAPI microservices, Hugging Face Transformers, and NumPy/SciPy scientific tooling.</p>
         </div>
         <!-- Card 9 -->
         <div class="role-card border-gold">
-          <span class="role-card-icon">🐍</span>
+          <span class="role-card-icon"></span>
           <h3 class="role-card-title" style="color:var(--gold);">Golang Cloud Engineering</h3>
           <p class="role-card-desc">
             High-performance APIs, concurrent processing, and secure microservice architectures. Expertise in
@@ -4633,7 +4707,7 @@
         </div>
         <!-- Card 10 -->
         <div class="role-card border-violet">
-          <span class="role-card-icon">🦀</span>
+          <span class="role-card-icon"></span>
           <h3 class="role-card-title" style="color:var(--violet);">Rust Systems Engineering</h3>
           <p class="role-card-desc">In-depth technical systems design covering Tokio async runtimes, Burn &amp; Candle
             ML frameworks, PyO3 bindings, and memory-safe systems engineering for latency-critical AI workloads.</p>
@@ -4652,7 +4726,7 @@
       <div class="tech-grid">
         <!-- Group 1 -->
         <div class="tech-category border-gold">
-          <h3 class="tech-cat-title" style="color:var(--gold);"><span>💻</span> Languages I Code &amp; Write</h3>
+          <h3 class="tech-cat-title" style="color:var(--gold);"><span></span> Languages I Code &amp; Write</h3>
           <div class="tech-tags">
             <span class="tech-tag highlight">Python</span>
             <span class="tech-tag highlight">Rust</span>
@@ -4670,7 +4744,7 @@
         </div>
         <!-- Group 2 -->
         <div class="tech-category border-cyan">
-          <h3 class="tech-cat-title" style="color:var(--cyan);"><span>🧠</span> Generative AI Systems</h3>
+          <h3 class="tech-cat-title" style="color:var(--cyan);"><span></span> Generative AI Systems</h3>
           <div class="tech-tags">
             <span class="tech-tag highlight">LLMs</span>
             <span class="tech-tag">SLMs</span>
@@ -4682,7 +4756,7 @@
         </div>
         <!-- Group 3 -->
         <div class="tech-category border-violet">
-          <h3 class="tech-cat-title" style="color:var(--violet);"><span>⚛️</span> Quantum Systems</h3>
+          <h3 class="tech-cat-title" style="color:var(--violet);"><span></span> Quantum Systems</h3>
           <div class="tech-tags">
             <span class="tech-tag highlight" style="color:var(--violet);border-color:rgba(129, 140, 248, 0.3);">IBM
               Qiskit</span>
@@ -4696,7 +4770,7 @@
         </div>
         <!-- Group 4 -->
         <div class="tech-category border-gold">
-          <h3 class="tech-cat-title" style="color:var(--gold);"><span>🤖</span> AI Tools Expertise</h3>
+          <h3 class="tech-cat-title" style="color:var(--gold);"><span></span> AI Tools Expertise</h3>
           <div class="tech-tags">
             <span class="tech-tag highlight">Claude Code</span>
             <span class="tech-tag highlight">Claude Desktop</span>
@@ -4709,7 +4783,7 @@
         </div>
         <!-- Group 5 -->
         <div class="tech-category border-cyan">
-          <h3 class="tech-cat-title" style="color:var(--cyan);"><span>⚡</span> Local LLMs Budget</h3>
+          <h3 class="tech-cat-title" style="color:var(--cyan);"><span></span> Local LLMs Budget</h3>
           <div class="tech-tags">
             <span class="tech-tag highlight">Ollama</span>
             <span class="tech-tag highlight">vLLM</span>
@@ -4725,7 +4799,7 @@
         </div>
         <!-- Group 6 -->
         <div class="tech-category border-gold">
-          <h3 class="tech-cat-title" style="color:var(--gold);"><span>🛡️</span> Decision Models
+          <h3 class="tech-cat-title" style="color:var(--gold);"><span></span> Decision Models
           </h3>
           <div class="tech-tags">
             <span class="tech-tag highlight">Jev</span>
@@ -4739,7 +4813,7 @@
         </div>
         <!-- Group 7 -->
         <div class="tech-category border-cyan">
-          <h3 class="tech-cat-title" style="color:var(--cyan);"><span>🧪</span> AI-Assisted Test-Driven Dev (TDD)
+          <h3 class="tech-cat-title" style="color:var(--cyan);"><span></span> AI-Assisted Test-Driven Dev (TDD)
           </h3>
           <div class="tech-tags">
             <span class="tech-tag highlight">Test-Driven Development (TDD)</span>
@@ -4752,7 +4826,7 @@
         </div>
         <!-- Group 8 -->
         <div class="tech-category border-gold">
-          <h3 class="tech-cat-title" style="color:var(--gold);"><span>🐧</span> Open Source Systems</h3>
+          <h3 class="tech-cat-title" style="color:var(--gold);"><span></span> Open Source Systems</h3>
           <div class="tech-tags">
             <span class="tech-tag highlight">Linux (Ubuntu/Zorin)</span>
             <span class="tech-tag highlight">Docker &amp; Containers</span>
@@ -4763,7 +4837,7 @@
         </div>
         <!-- Group 9 -->
         <div class="tech-category border-gold">
-          <h3 class="tech-cat-title" style="color:var(--gold);"><span>⚡</span> Claude Expertise</h3>
+          <h3 class="tech-cat-title" style="color:var(--gold);"><span></span> Claude Expertise</h3>
           <div class="tech-tags">
             <span class="tech-tag highlight">Claude Agent Teams</span>
             <span class="tech-tag">Prompt Caching</span>
@@ -4775,7 +4849,7 @@
         </div>
         <!-- Group 10 -->
         <div class="tech-category border-gold">
-          <h3 class="tech-cat-title" style="color:var(--gold);"><span>🎓</span> Corporate Training</h3>
+          <h3 class="tech-cat-title" style="color:var(--gold);"><span></span> Corporate Training</h3>
           <div class="tech-tags">
             <span class="tech-tag highlight">Live &amp; Remote Bootcamps</span>
             <span class="tech-tag">Employee AI Adoption</span>
@@ -4791,7 +4865,7 @@
     <section class="reveal" style="margin-top: 3.5rem; margin-bottom: 2.5rem;">
       <div class="role-card border-gold"
         style="max-width: 960px; margin: 0 auto; text-align: center; padding: 2.75rem 2rem; background: radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.08) 0%, rgba(12, 17, 29, 0.95) 100%);">
-        <span class="role-card-icon" style="font-size: 2.4rem; display: inline-block; margin-bottom: 0.75rem;">🚀</span>
+        <span class="role-card-icon" style="font-size: 2.4rem; display: inline-block; margin-bottom: 0.75rem;"></span>
         <h2 class="section-title" style="font-size: clamp(1.6rem, 3.5vw, 2.3rem); margin-bottom: 0.85rem;">
           Ready to Deploy <span class="accent-gold">Frontier AI &amp; Agent Topologies?</span>
         </h2>

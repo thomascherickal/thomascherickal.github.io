@@ -10,6 +10,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Open+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
+    <link rel="stylesheet" href="buttons.css" />
   <style>
     :root {
       --bg-0: #020408;
@@ -722,6 +723,28 @@
       border-color: #ffffff !important;
       box-shadow: 0 0 38px rgba(251, 191, 36, 1), 0 6px 22px rgba(0, 0, 0, 0.7) !important;
       transform: translateY(-2px) !important;
+    }
+
+    /* gold-highlight-container: Gold Radiant Highlight Wrapper for Personal AI Actions */
+    .gold-highlight-container {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      padding: 1.25rem 2rem;
+      border-radius: 18px;
+      background: radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.15) 0%, rgba(251, 191, 36, 0.04) 100%);
+      border: 2px solid rgba(251, 191, 36, 0.6);
+      box-shadow: 0 0 35px rgba(251, 191, 36, 0.28), inset 0 0 20px rgba(251, 191, 36, 0.08);
+      max-width: 100%;
+      box-sizing: border-box;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .gold-highlight-container:hover {
+      border-color: rgba(251, 191, 36, 0.95);
+      box-shadow: 0 0 48px rgba(251, 191, 36, 0.45), inset 0 0 28px rgba(251, 191, 36, 0.15);
     }
 
     /* btn-commission: High-Contrast Dark Slate & Vivid Gold Button */
@@ -3165,7 +3188,7 @@
     }
 
     .workflow-card.automated .workflow-list li::before {
-      content: '⚡';
+      content: '•';
       position: absolute;
       left: 0;
       top: 0;
@@ -4436,3 +4459,25 @@
 </body>
 
 </html>
+
+/* Collapse empty icon wrappers when emojis are removed */
+.home-nav-icon:empty,
+.service-icon-box:empty,
+.role-card-icon:empty,
+.collab-icon:empty,
+.audience-icon:empty,
+.contact-method-icon:empty,
+.search-icon-left:empty,
+.faq-category-icon:empty,
+.tech-cat-title span:empty,
+div[style*="font-size:1.8rem"]:empty,
+span[style*="font-size:1.4rem"]:empty,
+span[style*="font-size:1.8rem"]:empty,
+span[style*="font-size: 2.2rem"]:empty,
+span[style*="font-size:2.8rem"]:empty {
+  display: none !important;
+}
+
+.search-icon-left:empty ~ .search-input {
+  padding-left: 1.25rem !important;
+}

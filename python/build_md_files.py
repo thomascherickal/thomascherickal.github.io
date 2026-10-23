@@ -148,7 +148,7 @@ def convert_writing() -> str:
         "",
         "A comprehensive transformation system showing professionals how to use frontier AI tools — GitHub, LinkedIn, Perplexity, Claude, Google Antigravity, and Gemini Notebook — to rebuild their professional presence so that inbound recruiter offers find them.",
         "",
-        "- [🎗 Pre-Order on Patreon](https://patreon.com/thomascherickal)",
+        "- [Pre-Order on Patreon](https://patreon.com/thomascherickal)",
         "",
         "---",
         "",
@@ -180,95 +180,6 @@ def convert_writing() -> str:
         
     lines.append("---")
     lines.append("*Explore more publications at [thomascherickal.com](https://thomascherickal.com) and [HackerNoon](https://hackernoon.com/u/thomascherickal).*")
-    return "\n".join(lines).strip() + "\n"
-
-def convert_services() -> str:
-    html_file = os.path.join(REPO_DIR, "services.html")
-    with open(html_file, "r", encoding="utf-8") as f:
-        soup = BeautifulSoup(f.read(), "html.parser")
-    
-    lines = [
-        "# Thomas Cherickal — Generative AI Services & Offerings",
-        "## AI Agent Mastery, Corporate AI Training & Autonomous Systems",
-        "",
-        "> **// GENERATIVE AI CONSULTANT & QUANTUM SYSTEMS EXPLORER**  ",
-        "> **AI Agent Mastery: create teams of Claude Agents. Learn the in-depth principles that make Claude AI agent orchestration successful, understand deep agent constraints, and perform the tasks of multiple people with an agent team — grounded in essential task domain knowledge. Comprehensive live and remote workforce training (Employees, Developers, Staff, CXOs), Local LLM cost optimization, agent orchestration, AI-assisted TDD, and early quantum systems exploration.**",
-        "",
-        "**Quick Actions**:",
-        "- [✉️ Book a Strategy Consultation](contact.html)",
-        "- [🌐 View Pricing & Country Parity Index](pricing.html)",
-        "",
-        "---",
-        "",
-        "## Frontier AI Tools & Stack Expertise",
-        "",
-        "Hands-on mastery, configuration, and developer pair-programming across industry-standard AI development environments and foundation APIs:",
-        ""
-    ]
-    
-    chips = [clean_text(c.get_text()) for c in soup.find_all("span", class_="role-chip")]
-    seen = set()
-    uniq_chips = []
-    for c in chips:
-        if c not in seen:
-            seen.add(c)
-            uniq_chips.append(c)
-    
-    lines.append(" · ".join(f"`{c}`" for c in uniq_chips))
-    lines.append("")
-    lines.append("---")
-    lines.append("")
-    lines.append("## Core Capabilities & Advisory Offerings")
-    lines.append("")
-    
-    roles = soup.find_all("div", class_="role-card")
-    for i, r in enumerate(roles, 1):
-        icon = clean_text(r.find("span", class_="role-card-icon").get_text()) if r.find("span", class_="role-card-icon") else "⚡"
-        title_el = r.find("h3", class_="role-card-title")
-        title = clean_text(title_el.get_text()) if title_el else f"Service #{i}"
-        
-        desc_el = r.find("p", class_="role-card-desc")
-        desc = clean_text(desc_el.get_text()) if desc_el else ""
-        
-        lines.append(f"### {i}. {icon} {title}")
-        if desc:
-            lines.append(desc)
-            lines.append("")
-        
-        ul = r.find("ul")
-        if ul:
-            for li in ul.find_all("li"):
-                lines.append(f"- {clean_text(li.get_text())}")
-            lines.append("")
-            
-        hl_div = r.find("div", style=lambda s: s and "border-top" in s)
-        if hl_div:
-            hl_text = clean_text(hl_div.get_text())
-            if hl_text:
-                lines.append(f"> **Focus**: {hl_text}")
-                lines.append("")
-                
-        btn = r.find("a", class_="btn")
-        if btn and btn.get("href"):
-            btn_text = clean_text(btn.get_text())
-            lines.append(f"**Action**: [{btn_text}]({btn.get('href')})")
-            lines.append("")
-        
-        lines.append("---")
-        lines.append("")
-        
-    lines.append("## Dedicated Enterprise AI Transformation Service Pages")
-    lines.append("")
-    lines.append("1. [🧠 Generative AI Transformation](service-generative-ai-transformation.html) — Agentic workflows, metrics, safeguards.")
-    lines.append("2. [📦 Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — High-throughput private inference via Ollama, vLLM, llama.cpp.")
-    lines.append("3. [🤖 Claude AI Agent Orchestration Fundamentals](service-ai-agents-orchestration.html) — Scalable swarms & state machines.")
-    lines.append("4. [🏎️ Agentic AI Assistants (Hermes Agent)](service-agentic-ai-systems.html) — Persistent memory & autonomous loops.")
-    lines.append("5. [🌐 Training for WorkFlows Automations](service-training-for-workflow-automations.html) — Self-hosted n8n automations.")
-    lines.append("6. [⚛️ Quantum Applications (Experimental)](service-quantum-applications.html) — Enterprise quantum readiness.")
-    lines.append("7. [💲 AI Budget & Cost Limits Training](service-ai-budget-cost-limits-training.html) — Token governance & free models.")
-    lines.append("8. [🛡️ Enterprise Workforce AI Training](service-enterprise-workforce-ai-training.html) — Freshers, Devs & CXOs.")
-    lines.append("")
-    
     return "\n".join(lines).strip() + "\n"
 
 def convert_collaboration() -> str:
@@ -499,16 +410,13 @@ def convert_expertise() -> str:
     
     roles = soup.find_all("div", class_="role-card")
     for i, r in enumerate(roles, 1):
-        icon_el = r.find("span", class_="role-card-icon")
-        icon = clean_text(icon_el.get_text()) if icon_el else "⚡"
-        
         title_el = r.find(["h3", "h4"])
         title = clean_text(title_el.get_text()) if title_el else f"Role #{i}"
         
         desc_el = r.find("p", class_="role-card-desc") or r.find("p")
         desc = clean_text(desc_el.get_text()) if desc_el else ""
         
-        lines.append(f"### {i}. {icon} {title}")
+        lines.append(f"### {i}. {title}")
         if desc:
             lines.append(desc)
             lines.append("")
@@ -668,7 +576,6 @@ def convert_404() -> str:
 
 ### Navigation Options
 - [Return to Home →](index.html)
-- [Explore Services & Capabilities →](services.html)
 - [Transparent Pricing & Parity Tiers →](pricing.html)
 - [Explore Publications & Deep Dives →](writing.html)
 - [Contact via Email →](contact.html)
@@ -744,6 +651,13 @@ def convert_service_page(file_path: str) -> str:
                             if n_text:
                                 lines.append(f"  {idx}. {n_text}")
                 lines.append("")
+            elif isinstance(curr, Tag):
+                table = curr if curr.name == "table" else curr.find("table")
+                if table and "data-table" in table.get("class", []):
+                    md_table = html_table_to_md(table)
+                    if md_table:
+                        lines.append(md_table)
+                        lines.append("")
             curr = curr.next_sibling
             
         lines.append("---")
@@ -751,7 +665,6 @@ def convert_service_page(file_path: str) -> str:
     lines.append("### Ready to Deploy?")
     lines.append("- [Commission this Service via Email →](contact.html)")
     lines.append("- [Book Strategy Session on Topmate ↗](https://topmate.io/thomascherickal)")
-    lines.append("- [Return to All Services →](services.html)")
     lines.append("")
     
     return "\n".join(lines).strip() + "\n"
@@ -1038,7 +951,6 @@ def main():
     converters = {
         "articles.html": ("articles.md", convert_articles),
         "writing.html": ("writing.md", convert_writing),
-        "services.html": ("services.md", convert_services),
         "collaboration.html": ("collaboration.md", convert_collaboration),
         "pricing.html": ("pricing.md", convert_pricing),
         "expertise.html": ("expertise.md", convert_expertise),

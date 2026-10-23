@@ -34,7 +34,6 @@ PAGE_MAPPINGS = {
     "index.html": "home.md",
     "articles.html": "articles.md",
     "writing.html": "writing.md",
-    "services.html": "services.md",
     "collaboration.html": "collaboration.md",
     "pricing.html": "pricing.md",
     "expertise.html": "expertise.md",
@@ -158,10 +157,10 @@ def sync_html_to_md(html_name: str, md_name: str):
             bio,
             "",
             "### Quick Actions",
-            "- [📚 Articles](articles.html)",
-            "- [📝 Contact via Email](contact.html)",
-            "- [🐙 GitHub Profile](https://github.com/thomascherickal)",
-            "- [📅 Book 1:1 Consult](https://topmate.io/thomascherickal)",
+            "- [Articles](articles.html)",
+            "- [Contact via Email](contact.html)",
+            "- [GitHub Profile](https://github.com/thomascherickal)",
+            "- [Book 1:1 Consult](https://topmate.io/thomascherickal)",
             "",
             "---",
             "",
@@ -183,16 +182,16 @@ def sync_html_to_md(html_name: str, md_name: str):
             "",
             "## Explore My Work (Curated Destinations)",
             "",
-            "1. [📚 Articles & Case Studies](articles.html) — Detailed case studies across Generative AI Systems and Quantum Systems — the brief, the approach, and what shipped, verified in Python and Rust.",
-            "2. [✍️ Publications](writing.html) — Selected work from 500+ publications across 10+ platforms since 2020, plus the book RECRUITED.",
-            "3. [⚡ Capabilities & Tech Stack](expertise.html) — 10 specialized capability areas, 10 curated tech-stack chip groups, and the Python & Rust execution tooling behind every piece.",
-            "4. [🎯 Services & Commissions](services.html) — Service offerings — Claude AI agent orchestration, deep dives, courses, training, mentoring, enterprise LLM deployment, and Generative AI developer content.",
-            "5. [🔬 Workflow & Verification](expertise.html#how-this-gets-made) — Research → Build → Run → Verify → Explain. AI accelerates the workflow, while human verification owns the result.",
-            "6. [💳 Pricing & Parity Index](pricing.html) — Transparent milestone rates and an interactive 195-country Purchasing Power Parity (PPP) calculator for global equity.",
-            "7. [❓ Frequently Asked Questions](faqs.html) — Turnaround timelines, code verification standards, AI workflows, daily service fee calculator, and collaboration details.",
-            "8. [📬 Contact & Training](contact.html) — Commission custom emerging technologies training, Claude AI agent orchestration, developer courses, or retainer sprints directly.",
-            "9. [📰 HackerNoon Profile](https://hackernoon.com/u/thomascherickal) — Explore featured deep dives, AI exploration, and published articles on HackerNoon covering AI models and devtools.",
-            "10. [🐙 GitHub Profile](https://github.com/thomascherickal) — Inspect open-source code bases, Python and Rust scripts, quantum circuit benchmarks, and custom repositories for content.",
+            "1. [Articles & Case Studies](articles.html) — Detailed case studies across Generative AI Systems and Quantum Systems — the brief, the approach, and what shipped, verified in Python and Rust.",
+            "2. [Publications](writing.html) — Selected work from 500+ publications across 10+ platforms since 2020, plus the book RECRUITED.",
+            "3. [Capabilities & Tech Stack](expertise.html) — 10 specialized capability areas, 10 curated tech-stack chip groups, and the Python & Rust execution tooling behind every piece.",
+            "4. [Services & Commissions](pricing.html#service-rates) — Service offerings — Claude AI agent orchestration, deep dives, courses, training, mentoring, enterprise LLM deployment, and Generative AI developer content.",
+            "5. [Workflow & Verification](expertise.html#how-this-gets-made) — Research → Build → Run → Verify → Explain. AI accelerates the workflow, while human verification owns the result.",
+            "6. [Pricing & Parity Index](pricing.html) — Transparent milestone rates and an interactive 195-country Purchasing Power Parity (PPP) calculator for global equity.",
+            "7. [Frequently Asked Questions](faqs.html) — Turnaround timelines, code verification standards, AI workflows, daily service fee calculator, and collaboration details.",
+            "8. [Contact & Training](contact.html) — Commission custom emerging technologies training, Claude AI agent orchestration, developer courses, or retainer sprints directly.",
+            "9. [HackerNoon Profile](https://hackernoon.com/u/thomascherickal) — Explore featured deep dives, AI exploration, and published articles on HackerNoon covering AI models and devtools.",
+            "10. [GitHub Profile](https://github.com/thomascherickal) — Inspect open-source code bases, Python and Rust scripts, quantum circuit benchmarks, and custom repositories for content.",
             "",
             "---",
             "",
@@ -208,15 +207,36 @@ def sync_html_to_md(html_name: str, md_name: str):
             "---",
             "",
             "## Enterprise AI Transformation Services",
-            "",
-            "1. [🧠 Generative AI Transformation](service-generative-ai-transformation.html) — Convert an entire business that uses AI as a chatbot to one that works with agents, with metrics and safeguards.",
-            "2. [📦 Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — High-throughput private open-weight model serving via Ollama, vLLM, and llama.cpp with zero external data egress.",
-            "3. [🤖 Claude AI Agent Orchestration Fundamentals](service-ai-agents-orchestration.html) — Principles of Claude AI agent orchestration, releasing agent swarms at scale, using AI agents with deterministic state machines.",
-            "4. [🏎️ Agentic AI Assistants (Hermes Agent)](service-agentic-ai-systems.html) — Enterprise deployment of autonomously improving agentic assistants with persistent vector memory.",
-            "5. [🌐 Training for WorkFlows Automations](service-training-for-workflow-automations.html) — Training in setting up n8n automations, self-hosted, to automate routine recurring workflows.",
-            "6. [⚛️ Quantum Applications (Experimental)](service-quantum-applications.html) — Exploring quantum systems for enterprise business case uses, algorithm simulation, and practical applications.",
-            "7. [💲 AI Budget and Cost Limits Training](service-ai-budget-cost-limits-training.html) — Training employees at all levels on token governance, prompt efficiency, and intelligent model routing.",
-            "8. [🛡️ Enterprise Workforce AI Training](service-enterprise-workforce-ai-training.html) — Live and remote corporate training for freshers, employees, developers (AI TDD), and CXOs, alongside executive briefings and AI roadmaps.",
+            ""
+        ])
+
+        services_grid = soup.find("div", class_="home-services-grid")
+        if services_grid:
+            cards = services_grid.find_all("a", class_="home-nav-card")
+            for idx, c in enumerate(cards, 1):
+                href = c.get("href", "")
+                icon = clean_text(c.find("span", class_="home-nav-icon").get_text()) if c.find("span", class_="home-nav-icon") else ""
+                title = clean_text(c.find("h3", class_="home-nav-title").get_text()) if c.find("h3", class_="home-nav-title") else ""
+                desc = clean_text(c.find("p", class_="home-nav-desc").get_text()) if c.find("p", class_="home-nav-desc") else ""
+                label = f"{icon} {title}".strip()
+                md_lines.append(f"{idx}. [{label}]({href}) — {desc}")
+        else:
+            md_lines.extend([
+                "1. [Generative AI Transformation](service-generative-ai-transformation.html) — Move your business from one-off chatbot prompts to coordinated teams of Claude agents that carry real work.",
+                "2. [Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — Cut recurring cloud API bills by 60% to 90% by running open-weight models privately with Ollama, vLLM, and llama.cpp.",
+                "3. [Claude AI Agent Orchestration](service-ai-agents-orchestration.html) — Master the principles of Claude AI agent orchestration to run multi-agent swarms at scale.",
+                "4. [Hermes Agent](service-agentic-ai-systems.html) — Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own infrastructure.",
+                "5. [WorkFlow Automations](service-training-for-workflow-automations.html) — Hands-on training for automating recurring office work with Claude skills, plugins, connectors, and Microsoft 365 add-ins.",
+                "6. [Applied Quantum (Experimental)](service-quantum-applications.html) — Exploratory quantum computing advisory for enterprise use cases: algorithm simulation with IBM Qiskit and PennyLane.",
+                "7. [AI Budget Training](service-ai-budget-cost-limits-training.html) — Train staff across all levels to control AI spending: establish hard spending caps per session and month.",
+                "8. [Enterprise Workforce AI Training](service-enterprise-workforce-ai-training.html) — Live and remote corporate AI training delivered across distinct tracks: prompting, AI-assisted TDD, and executive roadmaps.",
+                "9. [AI Developer Training](service-ai-developer-training.html) — Hands-on bootcamps training developer teams on terminal and IDE coding agents (Claude Code, Google Antigravity, OpenCode).",
+                "10. [Advanced AI Agents](service-advanced-ai-agents.html) — Build production autonomous agent systems with hierarchical teams of Claude agents for business-critical workloads.",
+                "11. [Claude Basic Training](service-claude-basic-training.html) — Foundational enablement for corporate staff and knowledge workers: choosing the right model between Haiku, Sonnet, and Opus.",
+                "12. [Claude Advanced Training](service-claude-advanced-training.html) — Technical masterclass for senior developers and AI architects: advanced Claude Code CLI workflows, Claude Cowork, and MCP servers."
+            ])
+
+        md_lines.extend([
             "",
             "---",
             "",
@@ -229,40 +249,40 @@ def sync_html_to_md(html_name: str, md_name: str):
             "",
             "A comprehensive transformation system showing professionals how to use frontier AI tools — GitHub, LinkedIn, Perplexity, Claude, Google Antigravity, and Gemini Notebook — to rebuild their professional presence so that inbound recruiter offers find them.",
             "",
-            "- [🎗 Pre-Order on Patreon](https://patreon.com/thomascherickal)",
+            "- [Pre-Order on Patreon](https://patreon.com/thomascherickal)",
             "",
             "---",
             "",
             "## The Digital Futurist Newsletter",
             "",
             "**The Digital Futurist Newsletter**: How to understand and build emerging technologies.  ",
-            "- [✉️ Subscribe Free on Kit](https://thomascherickal.kit.com)",
+            "- [Subscribe Free on Kit](https://thomascherickal.kit.com)",
             "",
             "---",
             "",
             "## Links",
             "",
             "### Find Me Online",
-            "- [🌐 Profile (thomascherickal.com)](https://thomascherickal.com)",
-            "- [🐙 GitHub (github.com/thomascherickal)](https://github.com/thomascherickal)",
-            "- [💼 LinkedIn (in/thomascherickal)](https://linkedin.com/in/thomascherickal)",
-            "- [🗞 HackerNoon (u/thomascherickal)](https://hackernoon.com/u/thomascherickal)",
-            "- [✍️ Medium (@thomascherickal)](https://thomascherickal.medium.com)",
-            "- [🔷 Hashnode (thomascherickal.hashnode.dev)](https://thomascherickal.hashnode.dev)",
-            "- [📬 Substack (thesingularitypoint.substack.com)](https://thesingularitypoint.substack.com)",
-            "- [❓ Quora (thomascherickal.quora.com)](https://thomascherickal.quora.com)",
-            "- [🤖 Reddit (reddit.com/user/thomascherickal1)](https://reddit.com/user/thomascherickal1)",
-            "- [🧪 Exercism (exercism.org/profiles/thomascherickal)](https://exercism.org/profiles/thomascherickal)",
-            "- [🏅 CodersRank (profile.codersrank.io/user/thomascherickal)](https://profile.codersrank.io/user/thomascherickal/)",
-            "- [🧠 Deep-ML (deep-ml.com/profile/thomascherickal)](https://www.deep-ml.com/profile/thomascherickal)",
-            "- [✖️ X (@thomazcherickal)](https://x.com/thomazcherickal)",
-            "- [👩‍💻 DEV (dev.to/thomascherickal)](https://dev.to/thomascherickal)",
-            "- [🦊 GitLab (gitlab.com/thomascherickal)](https://gitlab.com/thomascherickal)",
-            "- [✉️ Kit (thomascherickal.kit.com)](https://thomascherickal.kit.com)",
-            "- [🔗 Linktree (linktr.ee/thomascherickal)](https://linktr.ee/thomascherickal)",
-            "- [🎨 Patreon (patreon.com/thomascherickal)](https://patreon.com/thomascherickal)",
-            "- [🛍️ Gumroad (thomascherickal.gumroad.com)](https://thomascherickal.gumroad.com)",
-            "- [🤝 Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)",
+            "- [Profile (thomascherickal.com)](https://thomascherickal.com)",
+            "- [GitHub (github.com/thomascherickal)](https://github.com/thomascherickal)",
+            "- [LinkedIn (in/thomascherickal)](https://linkedin.com/in/thomascherickal)",
+            "- [HackerNoon (u/thomascherickal)](https://hackernoon.com/u/thomascherickal)",
+            "- [Medium (@thomascherickal)](https://thomascherickal.medium.com)",
+            "- [Hashnode (thomascherickal.hashnode.dev)](https://thomascherickal.hashnode.dev)",
+            "- [Substack (thesingularitypoint.substack.com)](https://thesingularitypoint.substack.com)",
+            "- [Quora (thomascherickal.quora.com)](https://thomascherickal.quora.com)",
+            "- [Reddit (reddit.com/user/thomascherickal1)](https://reddit.com/user/thomascherickal1)",
+            "- [Exercism (exercism.org/profiles/thomascherickal)](https://exercism.org/profiles/thomascherickal)",
+            "- [CodersRank (profile.codersrank.io/user/thomascherickal)](https://profile.codersrank.io/user/thomascherickal/)",
+            "- [Deep-ML (deep-ml.com/profile/thomascherickal)](https://www.deep-ml.com/profile/thomascherickal)",
+            "- [X (@thomazcherickal)](https://x.com/thomazcherickal)",
+            "- [DEV (dev.to/thomascherickal)](https://dev.to/thomascherickal)",
+            "- [GitLab (gitlab.com/thomascherickal)](https://gitlab.com/thomascherickal)",
+            "- [Kit (thomascherickal.kit.com)](https://thomascherickal.kit.com)",
+            "- [Linktree (linktr.ee/thomascherickal)](https://linktr.ee/thomascherickal)",
+            "- [Patreon (patreon.com/thomascherickal)](https://patreon.com/thomascherickal)",
+            "- [Gumroad (thomascherickal.gumroad.com)](https://thomascherickal.gumroad.com)",
+            "- [Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)",
             "",
             "---",
             "*© 2026 Thomas Cherickal · The Digital Futurist · Generative AI Consultant · Agentic AI Architect · AI Automation Expert · AI Trainer Live & Remote · Enterprise AI Integration · Local LLM Deployment · Claude AI Agent Orchestration · Remote Worldwide*",
@@ -273,8 +293,6 @@ def sync_html_to_md(html_name: str, md_name: str):
         content = build_md_files.convert_articles()
     elif html_name == "writing.html":
         content = build_md_files.convert_writing()
-    elif html_name == "services.html":
-        content = build_md_files.convert_services()
     elif html_name == "collaboration.html":
         content = build_md_files.convert_collaboration()
     elif html_name == "pricing.html":
@@ -397,6 +415,23 @@ def sync_md_to_html(md_name: str, html_name: str):
             h1_el = soup.find("h1")
             if h1_el:
                 h1_el.string = clean_text(md_h1_match.group(1))
+        # Sync 4-week table if present in markdown
+        md_table_matches = re.findall(r'\|\s*\*\*?(Week\s+\d+)\*\*?\s*\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|', md_text)
+        if md_table_matches:
+            table_el = soup.find("table", class_="data-table")
+            if table_el and table_el.find("tbody"):
+                tbody_rows = table_el.find("tbody").find_all("tr")
+                for (wk, focus, deliv, crit), tr in zip(md_table_matches, tbody_rows):
+                    tds = tr.find_all("td")
+                    if len(tds) >= 4:
+                        str_el = tds[0].find("strong")
+                        if str_el:
+                            str_el.string = clean_text(wk)
+                        else:
+                            tds[0].string = clean_text(wk)
+                        tds[1].string = clean_text(focus)
+                        tds[2].string = clean_text(deliv)
+                        tds[3].string = clean_text(crit)
     elif html_name.startswith("agents-") or html_name.startswith("agent-"):
         # Sync H1
         if md_h1_match:

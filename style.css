@@ -1,3 +1,5 @@
+@import url("buttons.css");
+
 :root {
   --bg-0: #020408;
   --bg-1: #060912;
@@ -3520,7 +3522,7 @@ footer {
 }
 
 .workflow-card.automated .workflow-list li::before {
-  content: '⚡';
+  content: '•';
   position: absolute;
   left: 0;
   top: 0;
@@ -4213,3 +4215,26 @@ footer {
 
 
 
+
+
+/* Collapse empty icon wrappers when emojis are removed */
+.home-nav-icon:empty,
+.service-icon-box:empty,
+.role-card-icon:empty,
+.collab-icon:empty,
+.audience-icon:empty,
+.contact-method-icon:empty,
+.search-icon-left:empty,
+.faq-category-icon:empty,
+.tech-cat-title span:empty,
+div[style*="font-size:1.8rem"]:empty,
+span[style*="font-size:1.4rem"]:empty,
+span[style*="font-size:1.8rem"]:empty,
+span[style*="font-size: 2.2rem"]:empty,
+span[style*="font-size:2.8rem"]:empty {
+  display: none !important;
+}
+
+.search-icon-left:empty ~ .search-input {
+  padding-left: 1.25rem !important;
+}

@@ -1,75 +1,113 @@
-# 📦 Local LLMs & Cost Slashing (60–90% Inference Savings)
+# Local LLMs & Cost Slashing
 ## Enterprise AI Transformation Service — Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 02**  
-> **Slashing recurring cloud API bills by 60–90% by deploying private, high-throughput open-weight models via Ollama, vLLM, llama.cpp, and private on-premise model serving.**
+> **Cutting recurring cloud API bills by 60-90% by running open-weight models privately with Ollama, vLLM, llama.cpp
+ and LM Studio on hardware you own.**
 
 ---
 
-## 1. Service Overview & Scope
+## 1. Service
+ Overview & Scope
 
-- Cloud Independence & Cost Slashing: Eliminating recurring commercial API token bills by migrating high-volume generative workloads to self-hosted, private open-weight LLMs.
-- Hardware Sizing & Topology Engineering: Tailoring optimal GPU/NPU compute clusters (dual RTX 4090 workstations, Mac Studio clusters, or enterprise H100/A100 instances) for maximum tokens/second/dollar.
-- Intelligent Semantic Routing: Implementing dynamic routing cascades that automatically serve 70%+ of routine tasks locally, selectively escalating complex reasoning to Claude.
-- Air-Gapped Sovereign Security: Complete data sovereignty with zero outbound internet egress, ensuring sensitive source code, customer records, and IP never leave your infrastructure.
-- Enterprise Serving Stacks: Deploying production vLLM, Ollama, and llama.cpp runners with continuous tensor parallelism, AWQ/FP8 quantization, and continuous batching.
-
----
-
-## 2. Standard Architecture & Tools
-
-- Inference Engines: vLLM with PagedAttention, llama.cpp with metal/CUDA acceleration, Ollama, and HuggingFace TGI.
-- Open-Weight Model Families: Qwen 2.5 (Coder & Instruct), Llama 3.3 70B, DeepSeek-R1 distilled variants, and Mistral NeMo.
-- Semantic Routing Middleware: RouteLLM, LiteLLM proxy, custom embedding cosine-similarity classifiers, and fallback handlers.
-- Observability & Hardware Metrics: Prometheus node exporters, nvidia-smi GPU metrics dashboards, Grafana token throughput graphs, and Docker orchestration.
+- Moving High-Volume Work Off the Cloud: Shifting repetitive generative workloads from paid
+ APIs to open-weight models (Llama, Qwen, Gemma, Mistral, DeepSeek) running on your own hardware.
+- Hardware Sizing: Matching model size, from 8B to 120B parameters, to your GPUs and
+ memory, and pricing the next hardware upgrade in US dollars and Indian rupees.
+- Local-First Routing: Sending routine requests to local models and passing harder
+ reasoning to Claude, with OpenRouter as an optional middle tier.
+- Private Hosting: Running models on-premises on Linux (Ubuntu or Zorin), so source code,
+ customer records and internal documents stay on your machines.
+- Serving and Quantization: Setting up vLLM, Ollama, llama.cpp or LM Studio with GGUF or
+ AWQ quantization chosen to fit your hardware.
 
 ---
 
-## 3. Deliverable Examples & 4-Week Schedule
+## 2. Standard
+ Architecture & Tools
 
-- Hardware Sizing & ROI Payback Calculator: Custom spreadsheet and financial analysis modeling hardware capital expenditure against projected monthly cloud API token savings.
-- Containerized Local Inference Engine: Hardened Docker Compose / Helm deployment files provisioning vLLM or llama-server with GPU acceleration and health-check endpoints.
-- Intelligent Semantic Router Gateway: OpenAI-compatible API reverse proxy routing requests between local open-weight models and frontier Claude endpoints based on task complexity.
-- Air-Gapped Hardening & Benchmarking Suite: Automated load testing scripts validating concurrent request latency, VRAM saturation limits, and offline security verification.
-
----
-
-## 4. Guarantees & Commitments
-
-- 60% to 90% Cost Reduction: Guaranteed reduction in monthly cloud API token expenditure for equivalent volume inference.
-- Complete Data Sovereignty: Zero telemetry, zero external logging, and 100% offline air-gapped capability.
-- Hardware Independence: Clean Docker containerization portable across bare-metal workstations, on-prem servers, or private cloud VPCs.
-- 30-Day Operational SLA: Dedicated assistance for model weight updates, driver compatibility, and performance optimization.
+- Inference Engines: vLLM for multi-user serving, llama.cpp and Ollama for lighter
+ deployments, and LM Studio for desktop use.
+- Open-Weight Model Families: Llama, Qwen, Gemma, Mistral and DeepSeek, selected and
+ quantized per task.
+- Routing Gateway: A FastAPI service exposing an OpenAI-compatible endpoint that routes
+ each request to a local model or to Claude.
+- Coding Agents on Local Models: OpenCode and Claude Code configured to use your local
+ models for work they handle well.
 
 ---
 
-## 5. Investment & Pricing Quote
+## 3.
+ Deliverable Examples & 4-Week Schedule
 
-- Engagement Duration: Strictly 1 month (4 weeks of structured milestone delivery and runtime verification).
-- Base Investment Rate (Tier 1 Standard): $2,000 USD (flat base rate for complete 1-month delivery).
+- Hardware Sizing & ROI Payback Calculator: Spreadsheet comparing hardware cost against
+ your current monthly API spend, with the payback period for each option.
+- Containerized Local Inference Stack: Docker Compose files that bring up your chosen
+ inference engine with GPU acceleration and health checks.
+- Local-First Routing Gateway: OpenAI-compatible FastAPI gateway that sends each request to
+ a local model or to Claude based on task type.
+- Benchmark & Verification Suite: Python scripts and pytest checks measuring tokens per
+ second, latency under concurrent load, memory limits and answer quality on your own sample tasks.
+
+| Timeline | Focus & Architecture | Core Deliverables & Artifacts | Verification & Sign-off Criteria |
+| :--- | :--- | :--- | :--- |
+| Week 1 | Workload Audit, Hardware Sizing & ROI Projections | API spend and token audit, hardware sizing and ROI payback calculator, hardware specification (NVIDIA GPUs, Apple Silicon, AMD ROCm), and model selection matrix (Qwen, Gemma, Llama, Mistral) | Approved hardware procurement plan, baseline cost comparison, and agreed latency/throughput target SLAs |
+| Week 2 | Containerized Local Inference Serving Stack | Docker Compose deployment of chosen inference engine (vLLM, llama.cpp, Ollama, LM Studio), quantization setup (4-bit, 8-bit, 16-bit), GPU driver acceleration, and health-check endpoints | Local inference engine serving requests at target tokens/sec with verified OpenAI-compatible API responses |
+| Week 3 | Local-First Routing Gateway & Fallback | OpenAI-compatible FastAPI / LiteLLM routing gateway sending routine queries to local models and escalating complex tasks to Claude, caching layer, and failure fallback handlers | Over 70% of standard workload resolved on local hardware with identical output quality and verified automatic escalation to Claude |
+| Week 4 | Benchmark Verification, Privacy Lockdown & Handover | Python and pytest benchmark suite measuring latency and memory under concurrent load, firewall lockdown ensuring zero unauthorized outbound traffic, deployment manifests, and 30-day SLA onboarding | Benchmark suite passes under concurrent load, 60%-90% cost reduction verified against baseline, full IP transfer, and client sign-off |
+
+---
+
+## 4. Guarantees
+ & Commitments
+
+- 60% to 90% Cost Reduction: Lower monthly cloud API spend for the workloads moved to local
+ models, measured against a baseline agreed in week 1.
+- Data Stays on Your Hardware: Local models run without sending prompts or outputs to
+ outside services; only requests you choose to route to Claude leave your network.
+- Hardware Independence: Docker containers that run on workstations, on-premises servers or
+ a private cloud.
+- 30-Day Operational SLA: Help with model updates, driver issues and performance tuning.
+
+---
+
+## 5. Investment
+ & Pricing Quote
+
+- Engagement Duration: Strictly 1 month (4 weeks of structured milestone delivery and
+ runtime verification).
+- Base Investment Rate (Tier 1 Standard): $2,000 USD (flat base rate for
+ complete 1-month delivery).
 - Global Purchasing Power Parity (PPP) & Subsidized Rates:
   - Tier 1 (Standard / 100%): $2,000 USD (USA, UK, EU, Canada, Australia)
-  - Tier 2 (Developing Nations / 25% Off): $1,500 USD (India, Brazil, Mexico, UAE, Poland)
+  - Tier 2 (Developing Nations / 25% Off): $1,500 USD (India, Brazil, Mexico, UAE,
+ Poland)
   - Tier 3 & 4 (Least Developed & Startups / 50% Off): $1,000 USD
   - Tier 5 (Academia & Non-Profits / 75% Off): $500 USD
-  - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief / Micro-Rates
+  - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief /
+ Micro-Rates
   - Calculate and lock in your exact tier rate live on the Pricing page.
 - Payment Milestones:
-  - 50% upfront milestone initialization / 50% upon completed Week 4 delivery, runtime verification, and client sign-off.
+  - 50% upfront milestone initialization / 50% upon completed Week 4 delivery, runtime verification, and
+ client sign-off.
 
 ---
 
 ## 6. Summary
 
-- Cloud Token Independence: Slashing recurring API costs by 60%–90% via high-throughput self-hosted inference.
-- Strict 1-Month Delivery: 4-week timeline covering hardware sizing, vLLM deployment, semantic routing, and air-gapped sign-off.
-- Intelligent Model Cascades: Routing routine queries to local models while escalating edge cases to Claude.
-- Total Data Sovereignty: Air-gapped private compute ensuring zero data retention and complete regulatory compliance.
-- Full IP & Deployment Handover: Turnkey container manifests, monitoring dashboards, and 30-day dedicated SLA support.
+- Lower Cloud Token Spend: Cutting recurring API costs by
+ 60%-90% for workloads moved to self-hosted models.
+- Strict 1-Month Delivery: 4-week timeline covering hardware
+ sizing, deployment, routing and sign-off.
+- Local-First Routing: Routine queries served locally, harder
+ cases escalated to Claude.
+- Private Data Handling: Sensitive data processed on your own
+ machines.
+- Full IP & Deployment Handover: Container files, benchmark
+ scripts, the ROI calculator and 30-day support.
 
 ---
 
 ### Ready to Deploy?
 - [Commission this Service via Email →](contact.html)
 - [Book Strategy Session on Topmate ↗](https://topmate.io/thomascherickal)
-- [Return to All Services →](services.html)

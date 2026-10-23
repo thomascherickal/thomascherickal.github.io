@@ -48,6 +48,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap"
     rel="stylesheet" />
+    <link rel="stylesheet" href="buttons.css" />
   <style>
     :root {
       --bg-0: #020408;
@@ -781,6 +782,59 @@
       border-color: #fde047;
       box-shadow: 0 0 32px rgba(253, 224, 71, 0.95), 0 0 14px #fbbf24, 0 6px 20px rgba(180, 83, 9, 0.5);
       transform: translateY(-2px);
+    }
+
+    /* btn-glow-gold: High-Contrast Solid Radiant Gold Button with WCAG AAA Contrast */
+    .btn-glow-gold {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%) !important;
+      color: #060912 !important;
+      font-weight: 800 !important;
+      border: 4px solid #fef08a !important;
+      border-radius: var(--radius) !important;
+      box-shadow: 0 0 28px rgba(251, 191, 36, 0.85), 0 0 10px #fbbf24, 0 4px 15px rgba(217, 119, 6, 0.6) !important;
+      text-shadow: none !important;
+      letter-spacing: 0.02em !important;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      text-transform: none !important;
+      white-space: normal !important;
+      text-align: center !important;
+      line-height: 1.35 !important;
+      box-sizing: border-box !important;
+      max-width: 100% !important;
+    }
+
+    .btn-glow-gold:hover {
+      background: linear-gradient(135deg, #fef08a 0%, #fbbf24 50%, #f59e0b 100%) !important;
+      color: #000000 !important;
+      border-color: #ffffff !important;
+      box-shadow: 0 0 38px rgba(251, 191, 36, 1), 0 0 16px #fbbf24, 0 6px 22px rgba(217, 119, 6, 0.7) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    /* gold-highlight-container: Gold Radiant Highlight Wrapper for Personal AI Actions */
+    .gold-highlight-container {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      padding: 1.25rem 2rem;
+      border-radius: 18px;
+      background: radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.15) 0%, rgba(251, 191, 36, 0.04) 100%);
+      border: 2px solid rgba(251, 191, 36, 0.6);
+      box-shadow: 0 0 35px rgba(251, 191, 36, 0.28), inset 0 0 20px rgba(251, 191, 36, 0.08);
+      max-width: 100%;
+      box-sizing: border-box;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .gold-highlight-container:hover {
+      border-color: rgba(251, 191, 36, 0.95);
+      box-shadow: 0 0 48px rgba(251, 191, 36, 0.45), inset 0 0 28px rgba(251, 191, 36, 0.15);
     }
 
     /* btn-commission: Executive Dark Slate & Gold Button */
@@ -3438,7 +3492,7 @@
     }
 
     .workflow-card.automated .workflow-list li::before {
-      content: '⚡';
+      content: '•';
       position: absolute;
       left: 0;
       top: 0;
@@ -4795,6 +4849,83 @@
         padding: 1.25rem 1rem !important;
       }
     }
+
+    /* btn-gold / btn-glow-gold: High-Contrast Solid Radiant Gold Button */
+    .btn-gold,
+    .btn-glow-gold {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%) !important;
+      color: #060912 !important;
+      font-weight: 800 !important;
+      border: 4px solid #fef08a !important;
+      border-radius: var(--radius, 8px) !important;
+      box-shadow: 0 0 28px rgba(251, 191, 36, 0.85), 0 0 10px #fbbf24, 0 4px 15px rgba(217, 119, 6, 0.6) !important;
+      text-shadow: none !important;
+      letter-spacing: 0.02em !important;
+      transition: var(--transition, 0.25s ease);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      text-transform: none !important;
+      white-space: normal !important;
+      text-align: center !important;
+      line-height: 1.35 !important;
+      box-sizing: border-box !important;
+      max-width: 100% !important;
+    }
+
+    .btn-gold:hover,
+    .btn-glow-gold:hover {
+      background: linear-gradient(135deg, #fef08a 0%, #fbbf24 50%, #f59e0b 100%) !important;
+      color: #000000 !important;
+      border-color: #ffffff !important;
+      box-shadow: 0 0 38px rgba(251, 191, 36, 1), 0 0 16px #fbbf24, 0 6px 22px rgba(217, 119, 6, 0.7) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    /* gold-highlight-container: Gold Radiant Highlight Wrapper for Personal AI Actions */
+    .gold-highlight-container {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      padding: 1.25rem 2rem;
+      border-radius: 18px;
+      background: radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.15) 0%, rgba(251, 191, 36, 0.04) 100%);
+      border: 2px solid rgba(251, 191, 36, 0.6);
+      box-shadow: 0 0 35px rgba(251, 191, 36, 0.28), inset 0 0 20px rgba(251, 191, 36, 0.08);
+      max-width: 100%;
+      box-sizing: border-box;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .gold-highlight-container:hover {
+      border-color: rgba(251, 191, 36, 0.95);
+      box-shadow: 0 0 48px rgba(251, 191, 36, 0.45), inset 0 0 28px rgba(251, 191, 36, 0.15);
+    }
+
+    /* Collapse empty icon wrappers when emojis are removed */
+    .home-nav-icon:empty,
+    .service-icon-box:empty,
+    .role-card-icon:empty,
+    .collab-icon:empty,
+    .audience-icon:empty,
+    .contact-method-icon:empty,
+    .search-icon-left:empty,
+    .faq-category-icon:empty,
+    .tech-cat-title span:empty,
+    div[style*="font-size:1.8rem"]:empty,
+    span[style*="font-size:1.4rem"]:empty,
+    span[style*="font-size:1.8rem"]:empty,
+    span[style*="font-size: 2.2rem"]:empty,
+    span[style*="font-size:2.8rem"]:empty {
+      display: none !important;
+    }
+
+    .search-icon-left:empty ~ .search-input {
+      padding-left: 1.25rem !important;
+    }
   </style>
   <nav aria-label="Main navigation">
     <a href="https://thomascherickal.com" class="nav-brand"><img src="assets/digital-futurist-logo.jpg"
@@ -4808,7 +4939,7 @@
     <ul class="nav-links">
       <li><a href="index.html" data-nav="index.html">Home</a></li>
       <li><a href="expertise.html" data-nav="expertise.html">Expertise</a></li>
-      <li><a href="personal-ai-training.html" data-nav="personal-ai-training.html">Personal</a></li>
+      <li><a href="personal-ai-training.html" data-nav="personal-ai-training.html">Upskill</a></li>
       <li><a href="collaboration.html" data-nav="collaboration.html">Collaborate</a></li>
       <li class="nav-dropdown">
         <a class="nav-dropdown-toggle">
@@ -4834,10 +4965,6 @@
           Services <span class="dropdown-caret">▾</span>
         </a>
         <ul class="dropdown-menu">
-          <li><a href="services.html" class="dropdown-header-link">All Services</a></li>
-          <li><a href="personal-ai-training.html" style="color:var(--gold);font-weight:700;">Personal AI
-              Transformation</a></li>
-          <li class="dropdown-divider"></li>
           <li><a href="service-generative-ai-transformation.html">Generative AI Transformation</a></li>
           <li><a href="service-local-llms-cost-slashing.html">Local LLMs &amp; Cost Slashing</a></li>
           <li><a href="service-ai-agents-orchestration.html">AI Agent Orchestration</a></li>
@@ -5228,7 +5355,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge">🤖 Generative AI</span>
+                <span class="article-badge">Generative AI</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5250,7 +5377,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge">🤖 Local LLMs</span>
+                <span class="article-badge">Local LLMs</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5271,7 +5398,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge gold">🦾 AI Agents</span>
+                <span class="article-badge gold">AI Agents</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5291,7 +5418,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge">🤖 Private AI</span>
+                <span class="article-badge">Private AI</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5312,7 +5439,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Quantum Stack</span>
+                <span class="article-badge violet">Quantum Stack</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5335,7 +5462,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Quantum Basics</span>
+                <span class="article-badge violet">Quantum Basics</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5357,7 +5484,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Quantum Algo</span>
+                <span class="article-badge violet">Quantum Algo</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5378,7 +5505,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Post-Quantum</span>
+                <span class="article-badge violet">Post-Quantum</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5401,7 +5528,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge gold">🦾 Agentic AI</span>
+                <span class="article-badge gold">Agentic AI</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5424,7 +5551,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge gold">🦾 Agent OS</span>
+                <span class="article-badge gold">Agent OS</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5448,7 +5575,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge gold">🦾 Agent Frameworks</span>
+                <span class="article-badge gold">Agent Frameworks</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5469,7 +5596,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge gold">🦾 Agent Economics</span>
+                <span class="article-badge gold">Agent Economics</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5492,7 +5619,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge green">🛠️ AI Tooling</span>
+                <span class="article-badge green">AI Tooling</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5513,7 +5640,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge green">🛠️ Developer Tools</span>
+                <span class="article-badge green">Developer Tools</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5534,7 +5661,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge green">🛠️ AI Workflows</span>
+                <span class="article-badge green">AI Workflows</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5556,7 +5683,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge green">🛠️ Automation</span>
+                <span class="article-badge green">Automation</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5578,7 +5705,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge pink">🔮 Futurism &amp; AGI</span>
+                <span class="article-badge pink">Futurism &amp; AGI</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5599,7 +5726,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge pink">🔮 Career Strategy</span>
+                <span class="article-badge pink">Career Strategy</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5620,7 +5747,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge pink">🔮 Geopolitics</span>
+                <span class="article-badge pink">Geopolitics</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5641,7 +5768,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge pink">🔮 Edge SLMs</span>
+                <span class="article-badge pink">Edge SLMs</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5663,7 +5790,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge red">🔗 Web3 &amp; IP</span>
+                <span class="article-badge red">Web3 &amp; IP</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5685,7 +5812,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge red">🔗 Supply Chain</span>
+                <span class="article-badge red">Supply Chain</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5707,7 +5834,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge red">🔗 Startups</span>
+                <span class="article-badge red">Startups</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5728,7 +5855,7 @@
             href="https://hackernoon.com/classical-blockchain-vs-hedera-hashgraph" rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge red">🔗 Distributed Tech</span>
+                <span class="article-badge red">Distributed Tech</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -5749,7 +5876,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge brown">🦀 Rust</span>
+                <span class="article-badge brown">Rust</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -5770,7 +5897,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge brown">🦀 Rust</span>
+                <span class="article-badge brown">Rust</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -5793,7 +5920,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge brown">🦀 Rust</span>
+                <span class="article-badge brown">Rust</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -5816,7 +5943,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge brown">🦀 Rust</span>
+                <span class="article-badge brown">Rust</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -5837,7 +5964,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge maroon">🧠 AI Engineering</span>
+                <span class="article-badge maroon">AI Engineering</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -5860,7 +5987,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge maroon">🧠 AI Engineering</span>
+                <span class="article-badge maroon">AI Engineering</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -5882,7 +6009,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge maroon">🧠 AI Engineering</span>
+                <span class="article-badge maroon">AI Engineering</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -5904,7 +6031,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge maroon">🧠 AI Engineering</span>
+                <span class="article-badge maroon">AI Engineering</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -5926,7 +6053,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Quantum Research</span>
+                <span class="article-badge violet">Quantum Research</span>
                 <span class="meta-pill platform">Medium</span>
               </div>
               <div class="article-card-meta-line">
@@ -5947,7 +6074,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Quantum Research</span>
+                <span class="article-badge violet">Quantum Research</span>
                 <span class="meta-pill platform">Medium</span>
               </div>
               <div class="article-card-meta-line">
@@ -5970,7 +6097,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Quantum Research</span>
+                <span class="article-badge violet">Quantum Research</span>
                 <span class="meta-pill platform">Medium</span>
               </div>
               <div class="article-card-meta-line">
@@ -5991,7 +6118,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Quantum Research</span>
+                <span class="article-badge violet">Quantum Research</span>
                 <span class="meta-pill platform">Medium</span>
               </div>
               <div class="article-card-meta-line">
@@ -6012,7 +6139,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge green">🔬 Research Tech</span>
+                <span class="article-badge green">Research Tech</span>
                 <span class="meta-pill platform">Substack</span>
               </div>
               <div class="article-card-meta-line">
@@ -6034,7 +6161,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge green">🔬 Research Tech</span>
+                <span class="article-badge green">Research Tech</span>
                 <span class="meta-pill platform">Substack</span>
               </div>
               <div class="article-card-meta-line">
@@ -6057,7 +6184,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge green">🔬 Research Tech</span>
+                <span class="article-badge green">Research Tech</span>
                 <span class="meta-pill platform">Substack</span>
               </div>
               <div class="article-card-meta-line">
@@ -6078,7 +6205,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge green">🔬 Research Tech</span>
+                <span class="article-badge green">Research Tech</span>
                 <span class="meta-pill platform">Substack</span>
               </div>
               <div class="article-card-meta-line">
@@ -6100,7 +6227,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge gold">⚡ Decision Models</span>
+                <span class="article-badge gold">Decision Models</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -6121,7 +6248,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge gold">🦾 Agent Frameworks</span>
+                <span class="article-badge gold">Agent Frameworks</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -6143,7 +6270,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge green">🛠️ Automation</span>
+                <span class="article-badge green">Automation</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -6164,7 +6291,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge">🤖 Sovereign Local AI</span>
+                <span class="article-badge">Sovereign Local AI</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -6186,7 +6313,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Post-Quantum</span>
+                <span class="article-badge violet">Post-Quantum</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -6210,7 +6337,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Post-Quantum</span>
+                <span class="article-badge violet">Post-Quantum</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -6233,7 +6360,7 @@
             rel="noopener" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge">🤖 SLM Fine-Tuning</span>
+                <span class="article-badge">SLM Fine-Tuning</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -6257,7 +6384,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge">🤖 Model Benchmark</span>
+                <span class="article-badge">Model Benchmark</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -6280,7 +6407,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge">🤖 Generative AI</span>
+                <span class="article-badge">Generative AI</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6302,7 +6429,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge">🤖 Local LLMs</span>
+                <span class="article-badge">Local LLMs</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6323,7 +6450,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge gold">🦾 AI Agents</span>
+                <span class="article-badge gold">AI Agents</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6345,7 +6472,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge">🤖 Private AI</span>
+                <span class="article-badge">Private AI</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6366,7 +6493,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Quantum Stack</span>
+                <span class="article-badge violet">Quantum Stack</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6389,7 +6516,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Quantum Basics</span>
+                <span class="article-badge violet">Quantum Basics</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6411,7 +6538,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Quantum Algo</span>
+                <span class="article-badge violet">Quantum Algo</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6432,7 +6559,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Post-Quantum</span>
+                <span class="article-badge violet">Post-Quantum</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6455,7 +6582,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge gold">🦾 Agentic AI</span>
+                <span class="article-badge gold">Agentic AI</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6478,7 +6605,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge gold">🦾 Agent OS</span>
+                <span class="article-badge gold">Agent OS</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6501,7 +6628,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge gold">🦾 Agent Frameworks</span>
+                <span class="article-badge gold">Agent Frameworks</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6523,7 +6650,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge gold">🦾 Agent Economics</span>
+                <span class="article-badge gold">Agent Economics</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6546,7 +6673,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge green">🛠️ AI Tooling</span>
+                <span class="article-badge green">AI Tooling</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6567,7 +6694,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge green">🛠️ Developer Tools</span>
+                <span class="article-badge green">Developer Tools</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6588,7 +6715,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge green">🛠️ AI Workflows</span>
+                <span class="article-badge green">AI Workflows</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6610,7 +6737,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge green">🛠️ Automation</span>
+                <span class="article-badge green">Automation</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6632,7 +6759,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge pink">🔮 Futurism &amp; AGI</span>
+                <span class="article-badge pink">Futurism &amp; AGI</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6653,7 +6780,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge pink">🔮 Career Strategy</span>
+                <span class="article-badge pink">Career Strategy</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6675,7 +6802,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge pink">🔮 Geopolitics</span>
+                <span class="article-badge pink">Geopolitics</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6696,7 +6823,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge pink">🔮 Edge SLMs</span>
+                <span class="article-badge pink">Edge SLMs</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6718,7 +6845,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge red">🔗 Web3 &amp; IP</span>
+                <span class="article-badge red">Web3 &amp; IP</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6741,7 +6868,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge red">🔗 Supply Chain</span>
+                <span class="article-badge red">Supply Chain</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6763,7 +6890,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge red">🔗 Startups</span>
+                <span class="article-badge red">Startups</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6786,7 +6913,7 @@
             target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge red">🔗 Distributed Tech</span>
+                <span class="article-badge red">Distributed Tech</span>
                 <span class="meta-pill platform">HackerNoon</span>
               </div>
               <div class="article-card-meta-line">
@@ -6807,7 +6934,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge brown">🦀 Rust</span>
+                <span class="article-badge brown">Rust</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -6828,7 +6955,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge brown">🦀 Rust</span>
+                <span class="article-badge brown">Rust</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -6851,7 +6978,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge brown">🦀 Rust</span>
+                <span class="article-badge brown">Rust</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -6874,7 +7001,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge brown">🦀 Rust</span>
+                <span class="article-badge brown">Rust</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -6895,7 +7022,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge maroon">🧠 AI Engineering</span>
+                <span class="article-badge maroon">AI Engineering</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -6917,7 +7044,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge maroon">🧠 AI Engineering</span>
+                <span class="article-badge maroon">AI Engineering</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -6940,7 +7067,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge maroon">🧠 AI Engineering</span>
+                <span class="article-badge maroon">AI Engineering</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -6963,7 +7090,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge maroon">🧠 AI Engineering</span>
+                <span class="article-badge maroon">AI Engineering</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -6985,7 +7112,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Quantum Research</span>
+                <span class="article-badge violet">Quantum Research</span>
                 <span class="meta-pill platform">Medium</span>
               </div>
               <div class="article-card-meta-line">
@@ -7006,7 +7133,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Quantum Research</span>
+                <span class="article-badge violet">Quantum Research</span>
                 <span class="meta-pill platform">Medium</span>
               </div>
               <div class="article-card-meta-line">
@@ -7029,7 +7156,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Quantum Research</span>
+                <span class="article-badge violet">Quantum Research</span>
                 <span class="meta-pill platform">Medium</span>
               </div>
               <div class="article-card-meta-line">
@@ -7050,7 +7177,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Quantum Research</span>
+                <span class="article-badge violet">Quantum Research</span>
                 <span class="meta-pill platform">Medium</span>
               </div>
               <div class="article-card-meta-line">
@@ -7072,7 +7199,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge green">🔬 Research Tech</span>
+                <span class="article-badge green">Research Tech</span>
                 <span class="meta-pill platform">Substack</span>
               </div>
               <div class="article-card-meta-line">
@@ -7094,7 +7221,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge green">🔬 Research Tech</span>
+                <span class="article-badge green">Research Tech</span>
                 <span class="meta-pill platform">Substack</span>
               </div>
               <div class="article-card-meta-line">
@@ -7117,7 +7244,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge green">🔬 Research Tech</span>
+                <span class="article-badge green">Research Tech</span>
                 <span class="meta-pill platform">Substack</span>
               </div>
               <div class="article-card-meta-line">
@@ -7138,7 +7265,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge green">🔬 Research Tech</span>
+                <span class="article-badge green">Research Tech</span>
                 <span class="meta-pill platform">Substack</span>
               </div>
               <div class="article-card-meta-line">
@@ -7160,7 +7287,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge gold">⚡ Decision Models</span>
+                <span class="article-badge gold">Decision Models</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -7181,7 +7308,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge gold">🦾 Agent Frameworks</span>
+                <span class="article-badge gold">Agent Frameworks</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -7203,7 +7330,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge green">🛠️ Automation</span>
+                <span class="article-badge green">Automation</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -7224,7 +7351,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge">🤖 Sovereign Local AI</span>
+                <span class="article-badge">Sovereign Local AI</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -7246,7 +7373,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Post-Quantum</span>
+                <span class="article-badge violet">Post-Quantum</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -7270,7 +7397,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge violet">⚛️ Post-Quantum</span>
+                <span class="article-badge violet">Post-Quantum</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -7293,7 +7420,7 @@
             rel="noopener" tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge">🤖 SLM Fine-Tuning</span>
+                <span class="article-badge">SLM Fine-Tuning</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -7317,7 +7444,7 @@
             tabindex="-1" target="_blank">
             <div>
               <div class="article-card-top">
-                <span class="article-badge">🤖 Model Benchmark</span>
+                <span class="article-badge">Model Benchmark</span>
                 <span class="meta-pill platform">thomascherickal.com</span>
               </div>
               <div class="article-card-meta-line">
@@ -7348,7 +7475,7 @@
         <!-- Card 1 -->
         <a class="home-nav-card glow-cyan" href="articles.html">
           <div>
-            <span class="home-nav-icon">📚</span>
+            <span class="home-nav-icon"></span>
             <h3 class="home-nav-title">Articles &amp; Case Studies</h3>
             <p class="home-nav-desc">Detailed case studies across Generative AI Systems and Quantum Systems — the
               brief,
@@ -7359,7 +7486,7 @@
         <!-- Card 2 -->
         <a class="home-nav-card glow-gold" href="writing.html">
           <div>
-            <span class="home-nav-icon">✍️</span>
+            <span class="home-nav-icon"></span>
             <h3 class="home-nav-title">Publications</h3>
             <p class="home-nav-desc">Selected work from 500+ publications across 10+ platforms since
               2020, plus the book RECRUITED.</p>
@@ -7369,7 +7496,7 @@
         <!-- Card 3 -->
         <a class="home-nav-card glow-cyan" href="expertise.html">
           <div>
-            <span class="home-nav-icon">⚡</span>
+            <span class="home-nav-icon"></span>
             <h3 class="home-nav-title">Capabilities &amp; Tech Stack</h3>
             <p class="home-nav-desc">10 specialized capability areas, 10 curated tech-stack chip groups, and the
               Python
@@ -7378,9 +7505,9 @@
           <span class="home-nav-btn">Explore Capabilities →</span>
         </a>
         <!-- Card 4 -->
-        <a class="home-nav-card glow-gold" href="services.html">
+        <a class="home-nav-card glow-gold" href="pricing.html#service-rates">
           <div>
-            <span class="home-nav-icon">🎯</span>
+            <span class="home-nav-icon"></span>
             <h3 class="home-nav-title">Services &amp; Commissions</h3>
             <p class="home-nav-desc">Service offerings — Claude AI agent orchestration, deep dives, courses,
               training, mentoring, enterprise LLM deployment, and Generative AI developer content.</p>
@@ -7390,7 +7517,7 @@
         <!-- Card 5 -->
         <a class="home-nav-card glow-cyan" href="expertise.html#how-this-gets-made">
           <div>
-            <span class="home-nav-icon">🔬</span>
+            <span class="home-nav-icon"></span>
             <h3 class="home-nav-title">Workflow &amp; Verification</h3>
             <p class="home-nav-desc">Research → Build → Run → Verify → Explain. AI accelerates the workflow, while
               human
@@ -7401,7 +7528,7 @@
         <!-- Card 6 -->
         <a class="home-nav-card glow-gold" href="pricing.html">
           <div>
-            <span class="home-nav-icon">💳</span>
+            <span class="home-nav-icon"></span>
             <h3 class="home-nav-title">Pricing &amp; Parity Index</h3>
             <p class="home-nav-desc">Transparent milestone rates and an interactive 195-country Purchasing Power
               Parity
@@ -7412,7 +7539,7 @@
         <!-- Card 7 -->
         <a class="home-nav-card glow-cyan" href="faqs.html">
           <div>
-            <span class="home-nav-icon">❓</span>
+            <span class="home-nav-icon"></span>
             <h3 class="home-nav-title">Frequently Asked Questions</h3>
             <p class="home-nav-desc">Turnaround timelines, code verification standards, AI workflows, daily service
               fee calculator, and collaboration details.</p>
@@ -7422,7 +7549,7 @@
         <!-- Card 8 -->
         <a class="home-nav-card glow-gold" href="contact.html">
           <div>
-            <span class="home-nav-icon">📬</span>
+            <span class="home-nav-icon"></span>
             <h3 class="home-nav-title">Contact &amp; Training</h3>
             <p class="home-nav-desc">Commission custom emerging technologies training, Claude AI agent orchestration,
               developer courses, or retainer sprints directly.
@@ -7434,7 +7561,7 @@
         <a class="home-nav-card glow-cyan" href="https://hackernoon.com/u/thomascherickal" rel="noopener"
           target="_blank">
           <div>
-            <span class="home-nav-icon">📰</span>
+            <span class="home-nav-icon"></span>
             <h3 class="home-nav-title">HackerNoon Profile</h3>
             <p class="home-nav-desc">Explore featured deep dives, AI exploration, and published articles on
               HackerNoon covering AI models and devtools.</p>
@@ -7444,7 +7571,7 @@
         <!-- Card 10 -->
         <a class="home-nav-card glow-gold" href="https://github.com/thomascherickal" rel="noopener" target="_blank">
           <div>
-            <span class="home-nav-icon">🐙</span>
+            <span class="home-nav-icon"></span>
             <h3 class="home-nav-title">GitHub Profile</h3>
             <p class="home-nav-desc">Inspect open-source code bases, Python and Rust scripts, quantum circuit
               benchmarks, and custom repositories for content.</p>
@@ -7484,7 +7611,7 @@
         </p>
         <p class="section-sub"
           style="max-width:820px;margin:0.75rem auto 0;font-size:0.875rem;color:var(--text-muted);border:1px solid rgba(0,229,255,0.2);padding:0.75rem 1.25rem;border-radius:8px;background:rgba(0,229,255,0.03);">
-          ⚡ <strong style="color:var(--gold, #fbbf24);font-weight:700;">Core Operating Principle: Every service runs for
+          <strong style="color:var(--gold, #fbbf24);font-weight:700;">Core Operating Principle: Every service runs for
             one month and can freely overlap with
             other services. Engagements deliver end-to-end training, production-ready sample code guides, technical
             explainers, and hands-on modules.</strong>
@@ -7496,27 +7623,11 @@
           <div style="display:flex;flex-direction:column;flex-grow:1;">
             <div
               style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
-              <span class="home-nav-icon" style="margin-bottom:0;">🧠</span>
+              <span class="home-nav-icon" style="margin-bottom:0;"></span>
               <span class="role-chip cyan" style="font-size:0.7rem;padding:0.2rem 0.55rem;">Agentic Workflows</span>
             </div>
             <h3 class="home-nav-title">Generative AI Transformation</h3>
-            <p class="home-nav-desc">Convert your business from isolated conversational chatbot windows into a
-              proactive, agent-driven organization. Orchestrate coordinated teams of Claude Agents to execute complex
-              operational workloads grounded in domain knowledge.</p>
-            <ul class="home-nav-list">
-              <li><span style="color:var(--cyan);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Reasoning Graphs:</strong> Multi-step autonomous reasoning graphs with internal API
-                  tooling.</div>
-              </li>
-              <li><span style="color:var(--cyan);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Model Context Protocol:</strong> MCP servers and context window degradation prevention.
-                </div>
-              </li>
-              <li><span style="color:var(--cyan);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Quantitative Evals:</strong> Hallucination scoring and safeguards via Ragas &amp; DeepEval.
-                </div>
-              </li>
-            </ul>
+            <p class="home-nav-desc">Move your business from one-off chatbot prompts to coordinated teams of Claude agents that carry real work. Ground agent swarms in your domain data with custom MCP servers, bounded execution loops, and strict spending limits.</p>
           </div>
           <span class="home-nav-btn">Explore GenAI Transformation →</span>
         </a>
@@ -7525,114 +7636,50 @@
           <div style="display:flex;flex-direction:column;flex-grow:1;">
             <div
               style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
-              <span class="home-nav-icon" style="margin-bottom:0;">📦</span>
+              <span class="home-nav-icon" style="margin-bottom:0;"></span>
               <span class="role-chip gold" style="font-size:0.7rem;padding:0.2rem 0.55rem;">Private Serving</span>
             </div>
             <h3 class="home-nav-title">Local LLMs &amp; Cost Slashing</h3>
-            <p class="home-nav-desc">Deploy private open-weight models (Llama 3, DeepSeek, Mistral, Qwen) on local
-              developer workstations, private clusters, or hybrid enterprise infrastructure. Run high-throughput private
-              inference with zero external data egress and complete data sovereignty.</p>
-            <ul class="home-nav-list">
-              <li><span style="color:var(--gold);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>High-Throughput Engines:</strong> Production engine tuning via Ollama, vLLM, and llama.cpp.
-                </div>
-              </li>
-              <li><span style="color:var(--gold);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Advanced Quantization:</strong> 4-bit and 8-bit GGUF, AWQ, and EXL2 model compression.
-                </div>
-              </li>
-              <li><span style="color:var(--gold);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Air-Gapped Security:</strong> Zero external API dependencies with sovereign corporate
-                  privacy.</div>
-              </li>
-            </ul>
+            <p class="home-nav-desc">Cut recurring cloud API bills by 60% to 90% by running open-weight models privately with Ollama, vLLM, llama.cpp and LM Studio. Size hardware from 8B to 120B models, route routine queries locally, and keep sensitive records on your machines.</p>
           </div>
           <span class="home-nav-btn">Explore Local LLMs →</span>
         </a>
-        <!-- Service 3: Claude AI Agent Orchestration Fundamentals -->
+        <!-- Service 3: Claude AI Agent Orchestration -->
         <a class="home-nav-card glow-cyan" href="service-ai-agents-orchestration.html">
           <div style="display:flex;flex-direction:column;flex-grow:1;">
             <div
               style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
-              <span class="home-nav-icon" style="margin-bottom:0;">🤖</span>
+              <span class="home-nav-icon" style="margin-bottom:0;"></span>
               <span class="role-chip cyan" style="font-size:0.7rem;padding:0.2rem 0.55rem;">Swarm Topologies</span>
             </div>
-            <h3 class="home-nav-title">Claude AI Agent Orchestration Fundamentals</h3>
-            <p class="home-nav-desc">Master the core software principles required to release multi-agent swarms at
-              enterprise scale. Build supervisor-worker hierarchies, consensus voting networks, and autonomous
-              tool-calling loops engineered for dependable operational execution.</p>
-            <ul class="home-nav-list">
-              <li><span style="color:var(--cyan);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Swarm Topologies:</strong> Hierarchical and mesh supervisor-worker graphs via LangGraph
-                  &amp; AutoGen.</div>
-              </li>
-              <li><span style="color:var(--cyan);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Resilient Execution:</strong> Deterministic state machines, loop guards, and dynamic
-                  fallback.</div>
-              </li>
-              <li><span style="color:var(--cyan);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Robust Tool Calling:</strong> Strict JSON schema validation, scoped executor permissions,
-                  and review gates.</div>
-              </li>
-            </ul>
+            <h3 class="home-nav-title">Claude AI Agent Orchestration</h3>
+            <p class="home-nav-desc">Master the principles of Claude AI agent orchestration to run multi-agent swarms at scale. Build orchestrator-worker hierarchies, sequential pipelines, and parallel fan-out teams that automate complex workflows while controlling quality and cost.</p>
           </div>
           <span class="home-nav-btn">Explore Agent Swarms →</span>
         </a>
-        <!-- Service 4: Agentic AI Assistants -->
+        <!-- Service 4: Hermes Agent -->
         <a class="home-nav-card glow-gold" href="service-agentic-ai-systems.html">
           <div style="display:flex;flex-direction:column;flex-grow:1;">
             <div
               style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
-              <span class="home-nav-icon" style="margin-bottom:0;">🏎️</span>
+              <span class="home-nav-icon" style="margin-bottom:0;"></span>
               <span class="role-chip gold" style="font-size:0.7rem;padding:0.2rem 0.55rem;">Persistent Memory</span>
             </div>
-            <h3 class="home-nav-title">Agentic AI Assistants (Hermes Agent)</h3>
-            <p class="home-nav-desc">Enterprise deployment of autonomously improving agentic assistants featuring
-              long-term persistent vector memory and continuous episodic learning. Built on Nous Research Hermes 3,
-              OpenClaw, and OpenFang runners for round-the-clock operation in isolated containers.</p>
-            <ul class="home-nav-list">
-              <li><span style="color:var(--gold);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Dual-Tier Memory:</strong> Dense vector indexing (Qdrant HNSW) paired with episodic SQLite
-                  storage.</div>
-              </li>
-              <li><span style="color:var(--gold);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Sandboxed Isolation:</strong> Hardened container runtimes with dropped privileges and zero
-                  data egress.</div>
-              </li>
-              <li><span style="color:var(--gold);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Episodic Synthesis:</strong> Daily operational synthesis turning interactions into evolving
-                  memory.</div>
-              </li>
-            </ul>
+            <h3 class="home-nav-title">Hermes Agent</h3>
+            <p class="home-nav-desc">Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own infrastructure. Configure persistent session memory so the agent retains project context, saves solved procedures as reusable skills, and runs scheduled tasks.</p>
           </div>
-          <span class="home-nav-btn">Explore Agentic Systems →</span>
+          <span class="home-nav-btn">Explore Hermes Agent →</span>
         </a>
-        <!-- Service 5: Training for WorkFlows Automations -->
+        <!-- Service 5: WorkFlow Automations -->
         <a class="home-nav-card glow-cyan" href="service-training-for-workflow-automations.html">
           <div style="display:flex;flex-direction:column;flex-grow:1;">
             <div
               style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
-              <span class="home-nav-icon" style="margin-bottom:0;">🌐</span>
-              <span class="role-chip cyan" style="font-size:0.7rem;padding:0.2rem 0.55rem;">Self-Hosted n8n</span>
+              <span class="home-nav-icon" style="margin-bottom:0;"></span>
+              <span class="role-chip cyan" style="font-size:0.7rem;padding:0.2rem 0.55rem;">Daily Automation</span>
             </div>
-            <h3 class="home-nav-title">Training for WorkFlows Automations</h3>
-            <p class="home-nav-desc">Comprehensive hands-on training for building, self-hosting, and maintaining
-              enterprise n8n workflow automations. Automate routine recurring operations across engineering, support,
-              and business units with complete data governance and private AI node integration.</p>
-            <ul class="home-nav-list">
-              <li><span style="color:var(--cyan);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Self-Hosted Infrastructure:</strong> High-availability Docker &amp; K8s setups backed by
-                  PostgreSQL and Redis.</div>
-              </li>
-              <li><span style="color:var(--cyan);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Cognitive AI Nodes:</strong> Embedding local LLMs, dynamic webhooks, and automated document
-                  parsing.</div>
-              </li>
-              <li><span style="color:var(--cyan);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Enterprise Governance:</strong> Secret vaulting, role-based access control, and Prometheus
-                  monitoring.</div>
-              </li>
-            </ul>
+            <h3 class="home-nav-title">WorkFlow Automations</h3>
+            <p class="home-nav-desc">Hands-on training for automating recurring office work with Claude skills, plugins, connectors, scheduled tasks and Microsoft 365 add-ins. Automate up to half of routine daily operations across sales, finance and engineering with private data options.</p>
           </div>
           <span class="home-nav-btn">Explore Workflow Training →</span>
         </a>
@@ -7641,56 +7688,24 @@
           <div style="display:flex;flex-direction:column;flex-grow:1;">
             <div
               style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
-              <span class="home-nav-icon" style="margin-bottom:0;">⚛️</span>
+              <span class="home-nav-icon" style="margin-bottom:0;"></span>
               <span class="role-chip gold" style="font-size:0.7rem;padding:0.2rem 0.55rem;">Quantum Algorithms</span>
             </div>
             <h3 class="home-nav-title">Quantum Applications (Experimental)</h3>
-            <p class="home-nav-desc">Exploratory quantum computing advisory and circuit simulation for forward-looking
-              enterprises. Objectively evaluate computational viability across combinatorial optimization, portfolio
-              risk modeling, and materials science while preparing for the post-quantum era.</p>
-            <ul class="home-nav-list">
-              <li><span style="color:var(--gold);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Feasibility Audits:</strong> Mathematical evaluations separating commercial reality from
-                  speculative hype.</div>
-              </li>
-              <li><span style="color:var(--gold);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Circuit Simulation:</strong> Variational algorithms (VQE, QAOA) via IBM Qiskit and
-                  PennyLane.</div>
-              </li>
-              <li><span style="color:var(--gold);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Post-Quantum Security:</strong> Infrastructure audits and migration roadmaps for NIST PQC
-                  standards.</div>
-              </li>
-            </ul>
+            <p class="home-nav-desc">Exploratory quantum computing advisory for enterprise use cases: algorithm simulation with IBM Qiskit and PennyLane, variational circuits (VQE/QAOA), quantum machine learning, and Post-Quantum Cryptography (PQC) readiness aligned with NIST standards.</p>
           </div>
           <span class="home-nav-btn">Explore Quantum Specs →</span>
         </a>
-        <!-- Service 7: AI Budget & Cost Limits Training -->
+        <!-- Service 7: AI Budget Training -->
         <a class="home-nav-card glow-cyan" href="service-ai-budget-cost-limits-training.html">
           <div style="display:flex;flex-direction:column;flex-grow:1;">
             <div
               style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
-              <span class="home-nav-icon" style="margin-bottom:0;">💲</span>
+              <span class="home-nav-icon" style="margin-bottom:0;"></span>
               <span class="role-chip cyan" style="font-size:0.7rem;padding:0.2rem 0.55rem;">Token Governance</span>
             </div>
-            <h3 class="home-nav-title">AI Budget &amp; Cost Limits Training</h3>
-            <p class="home-nav-desc">Educate employees, developers, and department heads on token economics, context
-              window management, and governance guardrails. Establish quota proxies, compress prompt overhead, and
-              automatically route low-complexity tasks to high-efficiency foundation models.</p>
-            <ul class="home-nav-list">
-              <li><span style="color:var(--cyan);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Token Economics Literacy:</strong> Understanding context inflation, recursive agent loops,
-                  and token efficiency.</div>
-              </li>
-              <li><span style="color:var(--cyan);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Quota &amp; Proxy Gateways:</strong> LiteLLM and OpenRouter proxy architectures enforcing
-                  team-level limits.</div>
-              </li>
-              <li><span style="color:var(--cyan);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Intelligent Routing:</strong> Automated rule engines offloading routine tasks to free
-                  foundation models.</div>
-              </li>
-            </ul>
+            <h3 class="home-nav-title">AI Budget Training</h3>
+            <p class="home-nav-desc">Train staff across all levels to control AI spending: establish hard spending caps per session and month, configure token budgets, leverage prompt caching for up to 90% input savings, and route low-complexity tasks to free and local models.</p>
           </div>
           <span class="home-nav-btn">Explore Budget Training →</span>
         </a>
@@ -7699,29 +7714,65 @@
           <div style="display:flex;flex-direction:column;flex-grow:1;">
             <div
               style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
-              <span class="home-nav-icon" style="margin-bottom:0;">🛡️</span>
-              <span class="role-chip gold" style="font-size:0.7rem;padding:0.2rem 0.55rem;">4-Tier Enablement</span>
+              <span class="home-nav-icon" style="margin-bottom:0;"></span>
+              <span class="role-chip gold" style="font-size:0.7rem;padding:0.2rem 0.55rem;">Role-Based Tracks</span>
             </div>
             <h3 class="home-nav-title">Enterprise Workforce AI Training</h3>
-            <p class="home-nav-desc">Live and remote corporate AI training delivered across four distinct organizational
-              tiers. From new-hire productivity and developer AI-assisted Test-Driven Development (TDD) to operational
-              workflow automation and executive CXO strategic AI roadmaps.</p>
-            <ul class="home-nav-list">
-              <li><span style="color:var(--gold);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Freshers &amp; Staff:</strong> Daily productivity workflows, prompt craft, research
-                  synthesis, and safety.</div>
-              </li>
-              <li><span style="color:var(--gold);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>Developers &amp; Engineers:</strong> AI pair-programming, Test-Driven Development (TDD)
-                  with tests-first.</div>
-              </li>
-              <li><span style="color:var(--gold);margin-right:0.35rem;flex-shrink:0;">▸</span>
-                <div><strong>CXOs &amp; Leadership:</strong> Strategic transformation roadmaps, technology radar
-                  briefings, and benchmarks.</div>
-              </li>
-            </ul>
+            <p class="home-nav-desc">Live and remote corporate AI training delivered across distinct tracks: prompting for corporate staff, Claude Code and AI-assisted TDD for developers, and executive briefings, AI roadmaps, governance, and safe AI use policies for CXOs.</p>
           </div>
           <span class="home-nav-btn">Explore Workforce Training →</span>
+        </a>
+        <!-- Service 9: AI Developer Training -->
+        <a class="home-nav-card glow-cyan" href="service-ai-developer-training.html">
+          <div style="display:flex;flex-direction:column;flex-grow:1;">
+            <div
+              style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
+              <span class="home-nav-icon" style="margin-bottom:0;"></span>
+              <span class="role-chip cyan" style="font-size:0.7rem;padding:0.2rem 0.55rem;">CLI &amp; TDD</span>
+            </div>
+            <h3 class="home-nav-title">AI Developer Training</h3>
+            <p class="home-nav-desc">Hands-on bootcamps training developer teams on terminal and IDE coding agents (Claude Code, Google Antigravity, OpenCode). Catch mistakes early with strict AI-assisted Test-Driven Development (TDD) and build custom MCP servers in Python and Rust.</p>
+          </div>
+          <span class="home-nav-btn">Explore Developer Training →</span>
+        </a>
+        <!-- Service 10: Advanced AI Agents -->
+        <a class="home-nav-card glow-gold" href="service-advanced-ai-agents.html">
+          <div style="display:flex;flex-direction:column;flex-grow:1;">
+            <div
+              style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
+              <span class="home-nav-icon" style="margin-bottom:0;"></span>
+              <span class="role-chip gold" style="font-size:0.7rem;padding:0.2rem 0.55rem;">Autonomous Loops</span>
+            </div>
+            <h3 class="home-nav-title">Advanced AI Agents</h3>
+            <p class="home-nav-desc">Build production autonomous agent systems with hierarchical teams of Claude agents for business-critical workloads. Implement test-driven self-correction loops where agents fix errors until tests pass, with persistent state and Docker sandboxing.</p>
+          </div>
+          <span class="home-nav-btn">Explore Advanced Agents →</span>
+        </a>
+        <!-- Service 11: Claude Basic Training -->
+        <a class="home-nav-card glow-cyan" href="service-claude-basic-training.html">
+          <div style="display:flex;flex-direction:column;flex-grow:1;">
+            <div
+              style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
+              <span class="home-nav-icon" style="margin-bottom:0;"></span>
+              <span class="role-chip cyan" style="font-size:0.7rem;padding:0.2rem 0.55rem;">Core Prompting</span>
+            </div>
+            <h3 class="home-nav-title">Claude Basic Training</h3>
+            <p class="home-nav-desc">Foundational enablement for corporate staff and knowledge workers: choosing the right model between Haiku, Sonnet, and Opus, structured prompting with XML tags, managing shared team memory in Claude Projects, and using Artifacts for daily office work.</p>
+          </div>
+          <span class="home-nav-btn">Explore Claude Basics →</span>
+        </a>
+        <!-- Service 12: Claude Advanced Training -->
+        <a class="home-nav-card glow-gold" href="service-claude-advanced-training.html">
+          <div style="display:flex;flex-direction:column;flex-grow:1;">
+            <div
+              style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
+              <span class="home-nav-icon" style="margin-bottom:0;"></span>
+              <span class="role-chip gold" style="font-size:0.7rem;padding:0.2rem 0.55rem;">CLI &amp; Orchestration</span>
+            </div>
+            <h3 class="home-nav-title">Claude Advanced Training</h3>
+            <p class="home-nav-desc">Technical masterclass for senior developers and AI architects: advanced Claude Code CLI workflows, Claude Cowork in Microsoft 365, designing and securing production MCP servers, and orchestrating frontier models with adaptive thinking effort.</p>
+          </div>
+          <span class="home-nav-btn">Explore Advanced Claude →</span>
         </a>
       </div>
     </section>
@@ -7949,7 +8000,7 @@
         </p>
         <div
           style="margin-top:1.25rem;display:inline-flex;align-items:center;gap:0.75rem;padding:0.6rem 1.25rem;border-radius:999px;background:rgba(56,189,248,0.06);border:1px solid rgba(56,189,248,0.25);font-size:0.85rem;color:var(--text-secondary);">
-          <span>⚡ <strong style="color:var(--gold, #fbbf24);font-weight:700;">Principle of Global Equity: Equal
+          <span><strong style="color:var(--gold, #fbbf24);font-weight:700;">Principle of Global Equity: Equal
               production-grade architecture, uncompromised
               quality, and direct advisory. Every service lasts for one month and can freely overlap or run in parallel
               according to your team's needs.</strong></span>
@@ -7962,7 +8013,7 @@
           <div>
             <span class="parity-badge-tag"
               style="background:rgba(56, 189, 248, 0.18);border:1px solid #38bdf8;color:#38bdf8;">
-              🌐 TIER 01 · DEVELOPED NATIONS
+              TIER 01 · DEVELOPED NATIONS
             </span>
             <h3 class="parity-card-heading">High-Income Economies</h3>
             <p class="parity-card-subheading">OECD High-Income Economies &amp; Global Enterprise Hubs</p>
@@ -8003,7 +8054,7 @@
           <div>
             <span class="parity-badge-tag"
               style="background:rgba(251, 191, 36, 0.18);border:1px solid #fbbf24;color:#fbbf24;">
-              📈 TIER 02 · DEVELOPING NATIONS
+              TIER 02 · DEVELOPING NATIONS
             </span>
             <h3 class="parity-card-heading">Developing &amp; Growth Markets</h3>
             <p class="parity-card-subheading">Rapidly Expanding Digital Hubs &amp; Regional Tech Leaders</p>
@@ -8043,7 +8094,7 @@
           <div>
             <span class="parity-badge-tag"
               style="background:rgba(52, 211, 153, 0.18);border:1px solid #34d399;color:#34d399;">
-              🌱 TIER 03 · EMERGING ECONOMIES
+              TIER 03 · EMERGING ECONOMIES
             </span>
             <h3 class="parity-card-heading">Emerging &amp; Developing Markets</h3>
             <p class="parity-card-subheading">World Bank Lower-Middle &amp; Low-Income Tech Ecosystems</p>
@@ -8083,7 +8134,7 @@
           <div>
             <span class="parity-badge-tag"
               style="background:rgba(244, 114, 182, 0.18);border:1px solid #f472b6;color:#f472b6;">
-              🚀 TIER 04 · EARLY-STAGE VENTURES
+              TIER 04 · EARLY-STAGE VENTURES
             </span>
             <h3 class="parity-card-heading">Early-Stage Tech Startups</h3>
             <p class="parity-card-subheading">Global Pre-Seed, Seed &amp; Bootstrapped Software Builders</p>
@@ -8124,7 +8175,7 @@
           <div>
             <span class="parity-badge-tag"
               style="background:rgba(192, 132, 252, 0.18);border:1px solid #c084fc;color:#c084fc;">
-              🎓 TIER 05 · ACADEMIA &amp; CHARITIES
+              TIER 05 · ACADEMIA &amp; CHARITIES
             </span>
             <h3 class="parity-card-heading">Universities, Labs &amp; Non-Profits</h3>
             <p class="parity-card-subheading">Higher Education, Research Centers &amp; Registered Non-Profits</p>
@@ -8166,7 +8217,7 @@
           <div>
             <span class="parity-badge-tag"
               style="background:rgba(0, 240, 255, 0.2);border:1px solid #00f0ff;color:#00f0ff;">
-              🤝 TIER 06 · RADICAL PRICING WORLDWIDE
+              TIER 06 · RADICAL PRICING WORLDWIDE
             </span>
             <h3 class="parity-card-heading">Radical Pricing &amp; Distressed Regions</h3>
             <p class="parity-card-subheading">Grassroots Innovators, Crisis Zones &amp; Micro-Rate Candidates</p>
@@ -8206,7 +8257,7 @@
 
       <!-- RADICAL PRICING WORLDWIDE CALLOUT BANNER -->
       <div class="radical-callout-banner">
-        <span style="font-size: 2.2rem; display: inline-block; margin-bottom: 0.5rem;">🌍</span>
+        <span style="font-size: 2.2rem; display: inline-block; margin-bottom: 0.5rem;"></span>
         <h3
           style="font-family: var(--font-display, sans-serif); font-size: clamp(1.4rem, 2.8vw, 1.9rem); font-weight: 800; color: #ffffff; margin-bottom: 0.75rem;">
           Radical Pricing Available for <span class="accent-cyan">Suitable Clients Worldwide</span>
@@ -8237,29 +8288,39 @@
     <div class="divider"></div>
     <!-- PROMINENT DUAL GUARANTEE BANNER -->
     <div style="max-width:1380px;margin:2.5rem auto 1rem;padding:0 1.5rem;">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:1.5rem;background:rgba(12, 17, 29, 0.95);border:2px solid var(--border-glow, rgba(56, 189, 248, 0.4));border-radius:var(--radius-lg);padding:1.5rem 2rem;box-shadow:0 0 30px rgba(0,240,255,0.12);">
+      <div
+        style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:1.5rem;background:rgba(12, 17, 29, 0.95);border:2px solid var(--border-glow, rgba(56, 189, 248, 0.4));border-radius:var(--radius-lg);padding:1.5rem 2rem;box-shadow:0 0 30px rgba(0,240,255,0.12);">
         <div style="border-left:4px solid var(--cyan, #00f0ff);padding-left:1.25rem;">
           <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.35rem;">
-            <span style="font-size:1.4rem;">🛡️</span>
-            <span style="font-family:var(--font-mono);font-size:0.82rem;font-weight:800;letter-spacing:0.08em;color:var(--cyan);text-transform:uppercase;">ENTERPRISE PROTECTION GUARANTEE</span>
+            <span style="font-size:1.4rem;"></span>
+            <span
+              style="font-family:var(--font-mono);font-size:0.82rem;font-weight:800;letter-spacing:0.08em;color:var(--cyan);text-transform:uppercase;">ENTERPRISE
+              PROTECTION GUARANTEE</span>
           </div>
-          <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--text-primary);margin-bottom:0.35rem;">
+          <h3
+            style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--text-primary);margin-bottom:0.35rem;">
             30 Days Training + 30 Days Included Support
           </h3>
           <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.5;margin:0;">
-            Every enterprise booking covers strictly 30 days of milestone delivery/training and 30 days of included enterprise-grade support (60 days total coverage). Base rate covers up to 10 participants.
+            Every enterprise booking covers strictly 30 days of milestone delivery/training and 30 days of included
+            enterprise-grade support (60 days total coverage). Base rate covers up to 10 participants.
           </p>
         </div>
         <div style="border-left:4px solid var(--gold, #fbbf24);padding-left:1.25rem;">
           <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.35rem;">
-            <span style="font-size:1.4rem;">👑</span>
-            <span style="font-family:var(--font-mono);font-size:0.82rem;font-weight:800;letter-spacing:0.08em;color:var(--gold);text-transform:uppercase;">PERSONAL AI GUARANTEE (50% OFF)</span>
+            <span style="font-size:1.4rem;"></span>
+            <span
+              style="font-family:var(--font-mono);font-size:0.82rem;font-weight:800;letter-spacing:0.08em;color:var(--gold);text-transform:uppercase;">PERSONAL
+              AI GUARANTEE (50% OFF)</span>
           </div>
-          <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--gold);margin-bottom:0.35rem;">
+          <h3
+            style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--gold);margin-bottom:0.35rem;">
             15 Days Training (12 Services) + 15 Days Included Support (1 Person Only)
           </h3>
           <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.5;margin:0;">
-            15 days of intensive 1-on-1 training across all 12 disciplines plus 15 days of included support, daily questions and doubts clarification, and source materials and guides that are light and easy to skim. Strictly for one person only.
+            15 days of intensive 1-on-1 training across all 12 disciplines plus 15 days of included support, daily
+            questions and doubts clarification, and source materials and guides that are light and easy to skim.
+            Strictly for one person only.
           </p>
         </div>
       </div>
@@ -8273,14 +8334,22 @@
         <div style="text-align:center;max-width:920px;margin:0 auto 2rem;">
           <span
             style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 1.1rem;border-radius:999px;background:rgba(251, 191, 36, 0.15);border:1px solid rgba(251, 191, 36, 0.45);color:var(--gold);font-family:var(--font-mono);font-size:0.85rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:1rem;">
-            👑 1-ON-1 PERSONAL ACCELERATION · 50% ENTERPRISE CAP · ONE PERSON ONLY
+            1-ON-1 PERSONAL ACCELERATION · 50% ENTERPRISE CAP · ONE PERSON ONLY
           </span>
           <h2
             style="font-family:var(--font-display);font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:900;color:var(--text-primary);margin-bottom:0.85rem;">
-            Personal AI Transformation: <span class="accent-gold">15-Day Sprint (All 12 Services) + 15-Day Daily Work Support</span>
+            Personal AI Transformation: <span class="accent-gold">15-Day Sprint (All 12 Services) + 15-Day Daily Work
+              Support</span>
           </h2>
           <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.75;">
-            Tailored specifically for solo founders, independent engineers, visionary executives, and creators. Personal AI Training is strictly for <strong style="color:var(--gold);">one person only (1-on-1 private acceleration)</strong>, capped at strictly <strong style="color:var(--gold);">50% of enterprise training costs ($1,000 USD base rate in Tier 1)</strong>, justified because all 12 transformation services are delivered in a comprehensive 30-day experience: <strong style="color:var(--gold);">15 days of intensive 1-on-1 sprint training across all 12 services</strong> followed by <strong style="color:var(--cyan);">15 days of included support</strong> with daily questions and doubts clarification, and source materials and guides that are light and easy to skim. Purchasing Power Parity applies across 195 countries down to $100.
+            Tailored specifically for solo founders, independent engineers, visionary executives, and creators. Personal
+            AI Training is strictly for <strong style="color:var(--gold);">one person only (1-on-1 private
+              acceleration)</strong>, capped at strictly <strong style="color:var(--gold);">50% of enterprise training
+              costs ($1,000 USD base rate in Tier 1)</strong>, justified because all 12 transformation services are
+            delivered in a comprehensive 30-day experience: <strong style="color:var(--gold);">15 days of intensive
+              1-on-1 sprint training across all 12 services</strong> followed by <strong style="color:var(--cyan);">15
+              days of included support</strong> with daily questions and doubts clarification, and source materials and
+            guides that are light and easy to skim. Purchasing Power Parity applies across 195 countries down to $100.
           </p>
         </div>
 
@@ -8288,7 +8357,7 @@
           style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;margin-bottom:2rem;">
           <div
             style="background:rgba(255,255,255,0.03);border:1px solid rgba(251,191,36,0.25);border-radius:12px;padding:1.5rem;">
-            <div style="font-size:1.8rem;margin-bottom:0.6rem;">👑</div>
+            <div style="font-size:1.8rem;margin-bottom:0.6rem;"></div>
             <h3 style="color:var(--gold);font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">50% Capped Fee ($1,000
               Base)</h3>
             <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
@@ -8298,26 +8367,30 @@
           </div>
           <div
             style="background:rgba(255,255,255,0.03);border:1px solid rgba(251,191,36,0.25);border-radius:12px;padding:1.5rem;">
-            <div style="font-size:1.8rem;margin-bottom:0.6rem;">⚡</div>
-            <h3 style="color:var(--gold);font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">15-Day Sprint (All 12 Disciplines)</h3>
+            <div style="font-size:1.8rem;margin-bottom:0.6rem;"></div>
+            <h3 style="color:var(--gold);font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">15-Day Sprint (All 12
+              Disciplines)</h3>
             <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
-              Days 1–15: Deep mastery across local LLMs, teams of Claude Agents, Hermes loops, workflow automations, AI budgets, and Claude Code CLI configured for your setup.
+              Days 1–15: Deep mastery across local LLMs, teams of Claude Agents, Hermes loops, workflow automations, AI
+              budgets, and Claude Code CLI configured for your setup.
             </p>
           </div>
           <div
             style="background:rgba(255,255,255,0.03);border:1px solid rgba(251,191,36,0.25);border-radius:12px;padding:1.5rem;">
-            <div style="font-size:1.8rem;margin-bottom:0.6rem;">🛠️</div>
-            <h3 style="color:var(--gold);font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">15 Days of Support &amp; Daily Doubts Clarification</h3>
+            <div style="font-size:1.8rem;margin-bottom:0.6rem;"></div>
+            <h3 style="color:var(--gold);font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">15 Days of Support
+              &amp; Daily Doubts Clarification</h3>
             <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
-              15 days of included support, daily questions and doubts clarification, and source materials and guides that are light and easy to skim.
+              15 days of included support, daily questions and doubts clarification, and source materials and guides
+              that are light and easy to skim.
             </p>
           </div>
         </div>
 
         <div style="text-align:center;margin-top:2rem;">
           <div class="gold-highlight-container">
-            <a class="btn btn-glow-gold" href="personal-ai-training.html"
-              style="padding:0.95rem 2rem;font-size:1rem;">
+            <a class="btn btn-commission" href="personal-ai-training.html"
+              style="padding:0.95rem 1.85rem;font-size:0.95rem;">
               Explore Personal AI Transformation →
             </a>
             <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank"
@@ -8326,7 +8399,7 @@
             </a>
             <a class="btn btn-commission" href="pricing.html#personal-ai-section"
               style="padding:0.95rem 1.85rem;font-size:0.95rem;">
-              Check 195-Country Parity Rates →
+              Check Country Parity Rates →
             </a>
           </div>
         </div>
@@ -8337,7 +8410,7 @@
     <section class="reveal" style="margin-top: 3.5rem; margin-bottom: 2.5rem;">
       <div class="role-card border-gold"
         style="max-width: 960px; margin: 0 auto; text-align: center; padding: 2.75rem 2rem; background: radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.08) 0%, rgba(12, 17, 29, 0.95) 100%);">
-        <span class="role-card-icon" style="font-size: 2.4rem; display: inline-block; margin-bottom: 0.75rem;">🤝</span>
+        <span class="role-card-icon" style="font-size: 2.4rem; display: inline-block; margin-bottom: 0.75rem;"></span>
         <h2 class="section-title" style="font-size: clamp(1.6rem, 3.5vw, 2.3rem); margin-bottom: 0.85rem;">
           Ready to Build Your <span class="accent-gold">Enterprise AI Roadmap?</span>
         </h2>
@@ -8345,7 +8418,11 @@
           style="max-width: 760px; margin: 0 auto 1.75rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.7;">
           Structured engagement models for engineering teams, fast-growing tech startups, and forward-looking
           enterprises — covering Claude Agent Teams, live &amp; remote workforce training, Local LLM cost reduction, and
-          quantum systems exploration. <strong style="color:var(--gold, #fbbf24);font-weight:700;">Every enterprise booking covers strictly 30 days of training and 30 days of included support (total 60 days of enterprise protection). Personal AI Transformation is strictly for one person only, covering 15 days of intensive training (all 12 services) and 15 days of included support with daily questions and doubts clarification, and source materials and guides that are light and easy to skim.</strong>
+          quantum systems exploration. <strong style="color:var(--gold, #fbbf24);font-weight:700;">Every enterprise
+            booking covers strictly 30 days of training and 30 days of included support (total 60 days of enterprise
+            protection). Personal AI Transformation is strictly for one person only, covering 15 days of intensive
+            training (all 12 services) and 15 days of included support with daily questions and doubts clarification,
+            and source materials and guides that are light and easy to skim.</strong>
         </p>
         <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
           <a class="btn btn-commission" href="collaboration.html" style="padding: 0.85rem 1.75rem; font-size: 0.92rem;">

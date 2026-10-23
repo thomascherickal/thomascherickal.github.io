@@ -8,74 +8,74 @@
 
 ## Specialized Technical Roles & Offerings
 
-### 1. 🤖 AI Agent Mastery & Team Orchestration
+### 1. AI Agent Mastery & Team Orchestration
 Learn the in-depth principles that make Claude AI agent orchestration successful,
  understand deep agent constraints, and perform the tasks of multiple people with coordinated agent teams
  grounded in basic domain knowledge.
 
 ---
 
-### 2. 🎓 Live & Remote AI Training
+### 2. Live & Remote AI Training
 Tailored curriculums delivered live and remotely for Employees (AI adoption &
  productivity), Developers (AI-assisted dev & TDD), Corporate Staff (workflows), and CXOs (strategy, ROI
  & governance).
 
 ---
 
-### 3. 📦 Local LLM Deployment & Cost Slashing
+### 3. Local LLM Deployment & Cost Slashing
 Lowering recurring cloud AI inference bills by 60–90% using open-weight local LLMs
  (Llama 3, DeepSeek, Qwen, Mistral). Expertise in Ollama, vLLM, llama.cpp, GGUF/AWQ quantization, and private
  on-prem hosting.
 
 ---
 
-### 4. 🧪 AI-Assisted Dev & Test-Driven Development
+### 4. AI-Assisted Dev & Test-Driven Development
 Accelerating developer workflows with frontier AI coding assistants (Claude Code,
  Google Antigravity, OpenCode). Establishing rigorous TDD workflows with automated
  unit/integration test suites.
 
 ---
 
-### 5. ⚡ Claude Expertise
+### 5. Claude Expertise
 Configuring prompt caching for 90–95% cost reductions, extended
  thinking effort controls, Model Context Protocol (MCP) integrations, declarative subagents in Claude Code,
  and autonomous multi-agent DAG swarms.
 
 ---
 
-### 6. ⚛️ Early Quantum Systems Explorer
+### 6. Early Quantum Systems Explorer
 Pioneering hands-on quantum research and circuit modeling using IBM Qiskit and
  PennyLane. Variational quantum algorithms (VQE, QAOA), Quantum Machine Learning (QML), and enterprise
  quantum readiness.
 
 ---
 
-### 7. 🛠️ Frontier AI Tools Advisory
+### 7. Frontier AI Tools Advisory
 Hands-on architecture, configuration, and developer pair-programming in Claude Code,
  Google Antigravity, HuggingFace Spaces, Google Gemini Notebook, Google AI Studio,
  OpenCode, and OpenRouter.
 
 ---
 
-### 8. 🐍 Python AI Engineering
+### 8. Python AI Engineering
 Deep-dive technical architecture, step-by-step guides, and runtime verification for
  PyTorch pipelines, FastAPI microservices, Hugging Face Transformers, and NumPy/SciPy scientific tooling.
 
 ---
 
-### 9. 🐍 Golang Cloud Engineering
+### 9. Golang Cloud Engineering
 High-performance APIs, concurrent processing, and secure microservice architectures. Expertise in
  distributed systems, gRPC, containerization (Docker, K8s), and Google Cloud Platform.
 
 ---
 
-### 10. 🦀 Rust Systems Engineering
+### 10. Rust Systems Engineering
 In-depth technical systems design covering Tokio async runtimes, Burn & Candle
  ML frameworks, PyO3 bindings, and memory-safe systems engineering for latency-critical AI workloads.
 
 ---
 
-### 11. 🚀 Role #11
+### 11. Role #11
 Structured engagement models for engineering teams, fast-growing tech startups, and forward-looking
  enterprises — covering Claude Agent Teams, live & remote workforce bootcamps, Local LLM cost
  reduction,
@@ -85,35 +85,35 @@ Structured engagement models for engineering teams, fast-growing tech startups, 
 
 ## Tech-Stack Expertise (10 Curated Chip Groups)
 
-### 💻 Languages I Code & Write
+### Languages I Code & Write
 `Python` · `Rust` · `SQL` · `Bash` · `HTML` · `CSS` · `Vanilla JS` · `Golang` · `Mojo` · `C` · `Julia` · `MPI`
 
-### 🧠 Generative AI Systems
+### Generative AI Systems
 `LLMs` · `SLMs` · `Agentic AI` · `Hermes Agent` · `AI Agents` · `Python Ecosystems`
 
-### ⚛️ Quantum Systems
+### Quantum Systems
 `IBM
  Qiskit` · `PennyLane` · `Quantum Machine Learning` · `Quantum Algorithms` · `VQE` · `QAOA` · `PQC Advisory`
 
-### 🤖 AI Tools Expertise
+### AI Tools Expertise
 `Claude Code` · `Claude Desktop` · `Google Antigravity` · `Google Gemini Notebook` · `Google AI Studio` · `OpenCode` · `OpenRouter`
 
-### ⚡ Local LLMs Budget
+### Local LLMs Budget
 `Ollama` · `vLLM` · `llama.cpp` · `GGUF` · `LM Studio` · `Qwen` · `Gemma` · `Llama` · `Mistral`
 
-### 🛡️ Decision Models
+### Decision Models
 `Jev` · `Laya` · `OpenAI Decision Model API` · `Microsoft Decsion Model API` · `System One Thinking` · `Jev Endpoints` · `Local Decision Models`
 
-### 🧪 AI-Assisted Test-Driven Dev (TDD)
+### AI-Assisted Test-Driven Dev (TDD)
 `Test-Driven Development (TDD)` · `AI Pair Programming` · `Automated Test Suites` · `pytest` · `cargo test` · `CI/CD Automation`
 
-### 🐧 Open Source Systems
+### Open Source Systems
 `Linux (Ubuntu/Zorin)` · `Docker & Containers` · `Hugging Face Ecosystem` · `FastAPI Microservices` · `Git & Open Source Tooling`
 
-### ⚡ Claude Expertise
+### Claude Expertise
 `Claude Agent Teams` · `Prompt Caching` · `MCP Architecture` · `Adaptive Thinking` · `Computer Use` · `Claude Subagents`
 
-### 🎓 Corporate Training
+### Corporate Training
 `Live & Remote Bootcamps` · `Employee AI Adoption` · `Developer AI-Assisted Dev` · `Staff Workflow Automation` · `CXO AI Roadmaps`
 
 ---

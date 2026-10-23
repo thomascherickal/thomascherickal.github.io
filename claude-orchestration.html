@@ -143,6 +143,7 @@
 }
 </script>
 
+    <link rel="stylesheet" href="buttons.css" />
   <style>
     :root {
       --bg-0: #020408;
@@ -1759,6 +1760,83 @@
         padding: 1.25rem 1rem !important;
       }
     }
+
+    /* btn-gold / btn-glow-gold: High-Contrast Solid Radiant Gold Button */
+    .btn-gold,
+    .btn-glow-gold {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%) !important;
+      color: #060912 !important;
+      font-weight: 800 !important;
+      border: 4px solid #fef08a !important;
+      border-radius: var(--radius, 8px) !important;
+      box-shadow: 0 0 28px rgba(251, 191, 36, 0.85), 0 0 10px #fbbf24, 0 4px 15px rgba(217, 119, 6, 0.6) !important;
+      text-shadow: none !important;
+      letter-spacing: 0.02em !important;
+      transition: var(--transition, 0.25s ease);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      text-transform: none !important;
+      white-space: normal !important;
+      text-align: center !important;
+      line-height: 1.35 !important;
+      box-sizing: border-box !important;
+      max-width: 100% !important;
+    }
+
+    .btn-gold:hover,
+    .btn-glow-gold:hover {
+      background: linear-gradient(135deg, #fef08a 0%, #fbbf24 50%, #f59e0b 100%) !important;
+      color: #000000 !important;
+      border-color: #ffffff !important;
+      box-shadow: 0 0 38px rgba(251, 191, 36, 1), 0 0 16px #fbbf24, 0 6px 22px rgba(217, 119, 6, 0.7) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    /* gold-highlight-container: Gold Radiant Highlight Wrapper for Personal AI Actions */
+    .gold-highlight-container {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      padding: 1.25rem 2rem;
+      border-radius: 18px;
+      background: radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.15) 0%, rgba(251, 191, 36, 0.04) 100%);
+      border: 2px solid rgba(251, 191, 36, 0.6);
+      box-shadow: 0 0 35px rgba(251, 191, 36, 0.28), inset 0 0 20px rgba(251, 191, 36, 0.08);
+      max-width: 100%;
+      box-sizing: border-box;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .gold-highlight-container:hover {
+      border-color: rgba(251, 191, 36, 0.95);
+      box-shadow: 0 0 48px rgba(251, 191, 36, 0.45), inset 0 0 28px rgba(251, 191, 36, 0.15);
+    }
+
+    /* Collapse empty icon wrappers when emojis are removed */
+    .home-nav-icon:empty,
+    .service-icon-box:empty,
+    .role-card-icon:empty,
+    .collab-icon:empty,
+    .audience-icon:empty,
+    .contact-method-icon:empty,
+    .search-icon-left:empty,
+    .faq-category-icon:empty,
+    .tech-cat-title span:empty,
+    div[style*="font-size:1.8rem"]:empty,
+    span[style*="font-size:1.4rem"]:empty,
+    span[style*="font-size:1.8rem"]:empty,
+    span[style*="font-size: 2.2rem"]:empty,
+    span[style*="font-size:2.8rem"]:empty {
+      display: none !important;
+    }
+
+    .search-icon-left:empty ~ .search-input {
+      padding-left: 1.25rem !important;
+    }
   </style>
   <nav aria-label="Main navigation">
     <a href="https://thomascherickal.com" class="nav-brand"><img src="assets/digital-futurist-logo.jpg"
@@ -1772,7 +1850,7 @@
     <ul class="nav-links">
       <li><a href="index.html" data-nav="index.html">Home</a></li>
       <li><a href="expertise.html" data-nav="expertise.html">Expertise</a></li>
-      <li><a href="personal-ai-training.html" data-nav="personal-ai-training.html">Personal</a></li>
+      <li><a href="personal-ai-training.html" data-nav="personal-ai-training.html">Upskill</a></li>
       <li><a href="collaboration.html" data-nav="collaboration.html">Collaborate</a></li>
       <li class="nav-dropdown">
         <a class="nav-dropdown-toggle">
@@ -1798,10 +1876,6 @@
           Services <span class="dropdown-caret">▾</span>
         </a>
         <ul class="dropdown-menu">
-          <li><a href="services.html" class="dropdown-header-link">All Services</a></li>
-          <li><a href="personal-ai-training.html" style="color:var(--gold);font-weight:700;">Personal AI
-              Transformation</a></li>
-          <li class="dropdown-divider"></li>
           <li><a href="service-generative-ai-transformation.html">Generative AI Transformation</a></li>
           <li><a href="service-local-llms-cost-slashing.html">Local LLMs &amp; Cost Slashing</a></li>
           <li><a href="service-ai-agents-orchestration.html">AI Agent Orchestration</a></li>
@@ -2373,7 +2447,7 @@
                 min="0.1" step="0.1" value="6" /></div>
             <div class="field"><label for="r-in">Uncached input tokens per request</label><input id="r-in" type="number"
                 min="0" value="6000" /></div>
-            <div class="field"><label for="r-out">Output tokens per request</label><input id="r-out" type="number"
+            <div class="field"><label for="r-outtok">Output tokens per request</label><input id="r-outtok" type="number"
                 min="0" value="800" /></div>
             <div class="field"><label for="r-total">Total requests in the job</label><input id="r-total" type="number"
                 min="1" value="5000" /></div>
@@ -3431,7 +3505,7 @@ print(f"Fleet spent ${ledger['spent'] / 100:.2f} of ${GLOBAL_CAP_CENTS / 100:.2f
                 min="1" max="500" value="5" /></div>
             <div class="field"><label for="c-in">Input tokens per turn</label><input id="c-in" type="number" min="0"
                 value="14000" /></div>
-            <div class="field"><label for="c-out">Output tokens per turn</label><input id="c-out" type="number" min="0"
+            <div class="field"><label for="c-outtok">Output tokens per turn</label><input id="c-outtok" type="number" min="0"
                 value="800" /></div>
             <div class="field"><label for="c-turns">Turns per agent</label><input id="c-turns" type="number" min="1"
                 value="10" /></div>
@@ -3674,15 +3748,15 @@ async fn call(http: &reqwest::Client, key: &str, prompt: &str) -> anyhow::Result
         if resp.status().as_u16() == 429 || resp.status().is_server_error() {
             // Honour retry-after when present; spend-cap 429s carry none and will keep failing.
             let wait = resp.headers().get("retry-after")
-                .and_then(|v| v.to_str().ok()).and_then(|s| s.parse::<u64>().ok())
-                .unwrap_or(1u64 << attempt);
+                .and_then(|v| v.to_str().ok()).and_then(|s| s.parse::&lt;u64&gt;().ok())
+                .unwrap_or(1u64 &lt;&lt; attempt);
             tokio::time::sleep(Duration::from_secs(wait.min(60))).await;
             continue;
         }
         let v: serde_json::Value = resp.error_for_status()?.json().await?;
         let text = v["content"].as_array().into_iter().flatten()
             .filter(|b| b["type"] == "text")          // skip thinking blocks
-            .filter_map(|b| b["text"].as_str()).collect::<Vec<_>>().join("");
+            .filter_map(|b| b["text"].as_str()).collect::&lt;Vec&lt;_&gt;&gt;().join("");
         let input = v["usage"]["input_tokens"].as_u64().unwrap_or(0);
         let output = v["usage"]["output_tokens"].as_u64().unwrap_or(0);
         return Ok((text, input, output));
@@ -3696,7 +3770,7 @@ async fn main() -> anyhow::Result<()> {
     let http = reqwest::Client::builder().timeout(Duration::from_secs(120)).build()?;
     let budget = Arc::new(Budget { spent: AtomicU64::new(0) });
     let gate = Arc::new(Semaphore::new(MAX_PARALLEL));
-    let tickets: Vec<String> = std::fs::read_to_string("tickets.txt")?
+    let tickets: Vec&lt;String&gt; = std::fs::read_to_string("tickets.txt")?
         .lines().map(str::to_owned).collect();
 
     let mut handles = Vec::new();
@@ -3721,7 +3795,7 @@ async fn main() -> anyhow::Result<()> {
     Ok(())
 }
 
-async fn futures_count(handles: Vec<tokio::task::JoinHandle<Option<String>>>) -> usize {
+async fn futures_count(handles: Vec&lt;tokio::task::JoinHandle&lt;Option&lt;String&gt;&gt;&gt;) -> usize {
     let mut n = 0;
     for h in handles { if let Ok(Some(_)) = h.await { n += 1; } }
     n
@@ -4953,7 +5027,7 @@ async fn futures_count(handles: Vec<tokio::task::JoinHandle<Option<String>>>) ->
       function calcCost() {
         $("c-err").textContent = "";
         try {
-          var agents = num("c-agents", 1, 500), inTok = num("c-in", 0), outTok = num("c-out", 0),
+          var agents = num("c-agents", 1, 500), inTok = num("c-in", 0), outTok = num("c-outtok", 0),
             turns = num("c-turns", 1, 1000), hit = num("c-hit", 0, 100) / 100,
             sess = num("c-sess", 0), days = num("c-days", 1, 7),
             pin = num("c-pin", 0), pout = num("c-pout", 0), pw = num("c-pw", 0), pr = num("c-pr", 0);
@@ -5028,7 +5102,7 @@ async fn futures_count(handles: Vec<tokio::task::JoinHandle<Option<String>>>) ->
         $("r-err").textContent = "";
         try {
           var lim = LIMITS[$("r-tier").value][$("r-model").value];
-          var agents = num("r-agents", 1), rpa = num("r-rpm", 0.1), inT = num("r-in", 0), outT = num("r-out", 0), total = num("r-total", 1);
+          var agents = num("r-agents", 1), rpa = num("r-rpm", 0.1), inT = num("r-in", 0), outT = num("r-outtok", 0), total = num("r-total", 1);
           var rpm = agents * rpa, itpm = rpm * inT, otpm = rpm * outT;
           var caps2 = [lim[0], inT > 0 ? lim[1] / inT : Infinity, outT > 0 ? lim[2] / outT : Infinity];
           var names = ["requests per minute", "input tokens per minute", "output tokens per minute"];

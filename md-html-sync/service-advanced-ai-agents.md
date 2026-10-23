@@ -1,75 +1,112 @@
-# 🤖 Advanced AI Agents (Swarms, Self-Correction & Autonomous Loops)
+# Advanced AI Agents
 ## Enterprise AI Transformation Service — Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 12**  
-> **Architect resilient, production-grade autonomous agent systems: hierarchical multi-agent swarms, reflective self-correction graphs, stateful episodic memory, and zero-trust sandboxed execution for mission-critical enterprise workloads.**
+> **Building production autonomous agent systems: hierarchical teams of Claude agents, self-correcting loops driven
+ by tests, persistent state, and sandboxed execution for business-critical workloads.**
 
 ---
 
-## 1. Service Overview & Scope
+## 1. Service
+ Overview & Scope
 
-- Autonomous Multi-Agent Swarms: Architecting enterprise multi-agent networks capable of executing multi-day, multi-person operational workflows with minimal human oversight.
-- Self-Correction & Reflection Graphs: Building automated reflection loops where agents parse compiler errors, linting traces, and runtime exceptions to iterate autonomously toward verified solutions.
-- Sandboxed Tool Execution: Isolating agent bash commands, code execution, and database queries inside ephemeral Docker and gVisor containers with strict security policies.
-- Deterministic FinOps Circuit Breakers: Hardening agent loops with iteration limits, token consumption budgets, and automated killswitches preventing infinite loops.
-- Comprehensive Telemetry & Tracing: Full observability instrumentation with OpenTelemetry and Langfuse to monitor token burn, reasoning steps, and tool latency.
-
----
-
-## 2. Standard Architecture & Tools
-
-- Agent Swarm Frameworks: LangGraph state machines, CrewAI multi-agent crews, and Anthropic Claude Agent SDK.
-- Model Layer: Claude Opus (lead planner, architectural synthesis), Claude Sonnet (code authoring, tool dispatch), and Claude Haiku (fast classification).
-- Execution Sandboxing: gVisor (`runsc`), Docker containers with dropped capabilities (`CAP_DROP=ALL`), and non-root execution.
-- Observability & Persistence: Langfuse tracing, Prometheus metrics, Redis stream event bus, and PostgreSQL state checkpointers.
+- Multi-Agent Teams: Hierarchical Claude agent teams that carry multi-day, multi-person
+ workflows, with human checkpoints at the steps that matter.
+- Self-Correction Loops: Agents read compiler errors, test failures and lint output, fix
+ the code, and run the checks again until they pass or reach a retry limit.
+- Sandboxed Tool Execution: Agent shell commands, code execution and database queries run
+ inside Docker containers with restricted permissions and network access.
+- Spend and Loop Limits: Iteration caps, token budgets and kill switches on every loop.
+- Run Logging: Records of each agent's steps, tool calls, token use and failures for review
+ and debugging.
 
 ---
 
-## 3. Deliverable Examples & 4-Week Schedule
+## 2. Standard
+ Architecture & Tools
 
-- Production Swarm Codebase: Fully functional, containerized multi-agent system with supervisor routing, worker agents, custom tool harnesses, and stateful persistence.
-- Self-Correcting Execution & Verification Engine: Robust execution middleware with schema-enforced tool calling, automated error retry graphs, and human escalation gates.
-- Real-Time Agent Telemetry Dashboard: Web-based telemetry dashboard visualizing agent message flows, tool latency, token burn rate, and step-by-step reasoning traces.
-- Enterprise Sandboxing & Security Manifests: Docker Compose and gVisor configurations with dropped Linux capabilities and outbound network egress firewalls.
-
----
-
-## 4. Guarantees & Commitments
-
-- Deterministic Reliability & Zero Infinite Loops: Guaranteed termination with hard cycle limits, timeout breakers, and deterministic fallback paths.
-- Complete Commercial IP Ownership: Full copyright, code ownership, and architectural documentation transferred upon milestone sign-off.
-- 30-Day Operational SLA & Support: Dedicated engineering channel for bug fixes, performance tuning, and upstream LLM API updates.
-- Zero Data Leakage Assurance: Ephemeral container execution with strict network egress whitelisting.
+- Agent Frameworks: Claude Agent Teams, Claude Code subagents and background agents in
+ separate git worktrees, and the Claude API with Python asyncio or Rust Tokio for custom orchestration.
+- Model Layer: Claude Opus or Fable (lead planner and synthesis), Claude Sonnet (code and
+ tool use), and Claude Haiku (fast classification and search).
+- Execution Sandboxing: Docker containers with dropped capabilities (`CAP_DROP=ALL`),
+ non-root execution and egress restrictions.
+- State & Persistence: Checkpoints in a SQL database or files, so long runs can resume
+ after an interruption.
 
 ---
 
-## 5. Investment & Pricing Quote
+## 3.
+ Deliverable Examples & 4-Week Schedule
 
-- Engagement Duration: Strictly 1 month (4 weeks of structured milestone delivery and runtime verification).
-- Base Investment Rate (Tier 1 Standard): $2,000 USD (flat base rate for complete 1-month delivery).
+- Production Agent Codebase: Containerized multi-agent system in Python or Rust with an
+ orchestrator, worker agents, custom tools and saved state.
+- Self-Correcting Execution Engine: Middleware with schema-checked tool calls, retry rules
+ and escalation to a human when retries run out.
+- Agent Run Dashboard: Web dashboard showing message flow between agents, tool latency,
+ token use and step-by-step traces.
+- Sandboxing & Security Configuration: Docker Compose files with dropped Linux
+ capabilities and outbound network rules.
+
+| Timeline | Focus & Architecture | Core Deliverables & Artifacts | Verification & Sign-off Criteria |
+| :--- | :--- | :--- | :--- |
+| Week 1 | Claude Agent Team Architecture & Worktree Setup | Hierarchical agent topology, Claude Opus lead planner design, Claude Sonnet and Haiku worker definitions, and git worktree isolation configuration | Architecture sign-off on agent hierarchy, orchestrator-worker task decomposition, and human checkpoint gates |
+| Week 2 | Sandboxed Tool Execution & Persistent State | Docker execution containers with dropped Linux capabilities (CAP_DROP=ALL), non-root execution, network egress restrictions, and SQL database state checkpointers | Multi-step tool calls verified in disposable containers with strict network rules and interruption resume verified from saved state |
+| Week 3 | Test-Driven Self-Correction Loops & Execution Engine | Schema-checked tool calling middleware, automated test, lint, and compiler error feedback loops, retry limiters, and human escalation rules | Agents autonomously diagnose and fix compiler and test errors up to retry limit with verified fallback escalation to humans |
+| Week 4 | Spend Limits, Run Logging & Production Handover | Web-based Agent Run Dashboard for message flows and token use, iteration caps and kill-switch circuit breakers, complete codebase transfer, and 30-day SLA onboarding | Stress test completed with zero infinite loops, hard token budgets enforced, full IP transfer, and client sign-off |
+
+---
+
+## 4. Guarantees
+ & Commitments
+
+- Guaranteed Termination: Hard cycle limits, timeouts and fallback paths end every run.
+- Complete Commercial IP Ownership: Full code, copyright and documentation transfer at
+ sign-off.
+- 30-Day Operational SLA & Support: Engineering channel for fixes, tuning and Claude
+ model or API updates.
+- Data Containment: Disposable containers, with outbound traffic limited to approved
+ destinations.
+
+---
+
+## 5. Investment
+ & Pricing Quote
+
+- Engagement Duration: Strictly 1 month (4 weeks of structured milestone delivery and
+ runtime verification).
+- Base Investment Rate (Tier 1 Standard): $2,000 USD (flat base rate for
+ complete 1-month delivery).
 - Global Purchasing Power Parity (PPP) & Subsidized Rates:
   - Tier 1 (Standard / 100%): $2,000 USD (USA, UK, EU, Canada, Australia)
-  - Tier 2 (Developing Nations / 25% Off): $1,500 USD (India, Brazil, Mexico, UAE, Poland)
+  - Tier 2 (Developing Nations / 25% Off): $1,500 USD (India, Brazil, Mexico, UAE,
+ Poland)
   - Tier 3 & 4 (Least Developed & Startups / 50% Off): $1,000 USD
   - Tier 5 (Academia & Non-Profits / 75% Off): $500 USD
-  - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief / Micro-Rates
+  - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief /
+ Micro-Rates
   - Calculate and lock in your exact tier rate live on the Pricing page.
 - Payment Milestones:
-  - 50% upfront milestone initialization / 50% upon completed Week 4 delivery, runtime verification, and client sign-off.
+  - 50% upfront milestone initialization / 50% upon completed Week 4 delivery, runtime verification, and
+ client sign-off.
 
 ---
 
 ## 6. Summary
 
-- Multi-Agent Swarm Topologies: Production LangGraph, CrewAI, and custom supervisor-worker architectures.
-- Strict 1-Month Delivery: 4-week progression from swarm topology design to production Langfuse telemetry handover.
-- Autonomous Self-Correction Loops: Automated test, lint, and type feedback loops for zero-hallucination convergence.
-- Hardened Sandboxed Runtimes: Docker and gVisor isolation with dropped capabilities and outbound network whitelisting.
-- Enterprise IP & Handover: 100% intellectual property transfer, bespoke runbooks, and 30-day dedicated SLA support.
+- Claude Agent Teams: Production orchestrator-worker and
+ hierarchical architectures.
+- Strict 1-Month Delivery: 4-week progression from architecture
+ design to production handover.
+- Test-Driven Self-Correction: Test, lint and type-check
+ feedback loops that work toward passing code.
+- Sandboxed Runtimes: Docker isolation with dropped capabilities
+ and restricted network access.
+- Enterprise IP & Handover: Full IP transfer, runbooks and
+ 30-day support.
 
 ---
 
 ### Ready to Deploy?
 - [Commission this Service via Email →](contact.html)
 - [Book Strategy Session on Topmate ↗](https://topmate.io/thomascherickal)
-- [Return to All Services →](services.html)

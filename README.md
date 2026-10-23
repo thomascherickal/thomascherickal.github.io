@@ -20,7 +20,7 @@
 
 ---
 
-## 🌟 Welcome to My Practice
+## Welcome to My Practice
 
 Welcome! I am **Thomas Cherickal**, known online as **The Digital Futurist**.
 
@@ -68,7 +68,7 @@ mindmap
 
 ---
 
-## 👤 About Me & Core Mission
+## About Me & Core Mission
 
 ### My Mission: Global AI Access & Wealth Equalization
 Artificial Intelligence is the single greatest cognitive leverage multiplier in human history. If frontier agentic engineering remains concentrated solely in wealthy Western tech hubs by prohibitively high licensing fees and advisory rates, it will inevitably accelerate global inequality.
@@ -82,17 +82,17 @@ To enforce this mission practically, my entire engagement catalog is indexed acr
 
 ---
 
-## 🌐 Find Me Online (Verified Profiles & Channels)
+## Find Me Online (Verified Profiles & Channels)
 
 I maintain an active, verified presence across **10+ major developer, research, and technical writing platforms**:
 
-### 🏢 Business Website & Domains
+### Business Website & Domains
 | Platform | URL | Category / Purpose |
 | :--- | :--- | :--- |
 | **Business Website** | [thomascherickal.github.io](https://thomascherickal.github.io) | **Official Practice & Portfolio Hub** |
 | **Personal Domain** | [thomascherickal.com](https://thomascherickal.com) | Personal Brand & Executive Portal |
 
-### 🛠️ Core Developer & Social Profiles
+### Core Developer & Social Profiles
 | Platform | URL | Description / Focus |
 | :--- | :--- | :--- |
 | **GitHub** | [github.com/thomascherickal](https://github.com/thomascherickal) | Open-source AI agents, MCP servers, prompts & tools |
@@ -100,7 +100,7 @@ I maintain an active, verified presence across **10+ major developer, research, 
 | **X / Twitter** | [x.com/thomazcherickal](https://x.com/thomazcherickal) | Breaking updates in frontier models & agent architecture |
 | **Linktree** | [linktr.ee/thomascherickal](https://linktr.ee/thomascherickal) | Centralized hub for all active channels & profiles |
 
-### ✍️ Technical Writing & Research Publications
+### Technical Writing & Research Publications
 | Publication | URL | Focus Areas |
 | :--- | :--- | :--- |
 | **HackerNoon** | [hackernoon.com/u/thomascherickal](https://hackernoon.com/u/thomascherickal) | In-depth AI engineering deep dives (Top Writer) |
@@ -112,7 +112,7 @@ I maintain an active, verified presence across **10+ major developer, research, 
 | **HubPages** | [hubpages.com/@thomascherickal](https://hubpages.com/@thomascherickal) | General technology reviews, hardware & software essays |
 | **Newsletter** | [The Digital Futurist on Kit](https://thomascherickal.kit.com) | Weekly curated emerging technology intelligence |
 
-### 💻 Competitive Coding & Problem-Solving Profiles
+### Competitive Coding & Problem-Solving Profiles
 | Platform | Verified Profile |
 | :--- | :--- |
 | **LeetCode** | [leetcode.com/u/thomascherickal](https://leetcode.com/u/thomascherickal) |
@@ -125,7 +125,7 @@ I maintain an active, verified presence across **10+ major developer, research, 
 | **Kaggle** | [kaggle.com/thomascherickal](https://kaggle.com/thomascherickal) |
 | **CodersRank** | [profile.codersrank.io/user/thomascherickal](https://profile.codersrank.io/user/thomascherickal/) |
 
-### 🤝 Direct Advisory & Community Access
+### Direct Advisory & Community Access
 | Channel | Destination | Purpose |
 | :--- | :--- | :--- |
 | **Topmate (1-on-1)** | [topmate.io/thomascherickal](https://topmate.io/thomascherickal) | Book 1-on-1 strategy calls, architecture audits & advisory sessions |
@@ -135,7 +135,7 @@ I maintain an active, verified presence across **10+ major developer, research, 
 
 ---
 
-## 📖 Upcoming Book: RECRUITED
+## Upcoming Book: RECRUITED
 
 ### RECRUITED: The Inbound Recruiter Blueprint
 *How to Make Recruiters Chase You*
@@ -148,7 +148,7 @@ I maintain an active, verified presence across **10+ major developer, research, 
 
 ---
 
-## 🏛️ Comprehensive Website Architecture
+## Comprehensive Website Architecture
 
 My portfolio website ([thomascherickal.github.io](https://thomascherickal.github.io)) is an independently engineered static web property comprising **26 interconnected HTML pages** backed by an automated Python build and bidirectional Markdown synchronization engine:
 
@@ -191,7 +191,7 @@ graph TD
 | **Articles** | [`articles.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/articles.html) | Case studies in Multi-Agent Swarms, Local LLM Inference, Quantum Simulations & RAG. |
 | **Writing** | [`writing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/writing.html) | Publication library categorizing essays across HackerNoon, Medium, Substack & Hashnode. |
 | **Expertise** | [`expertise.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/expertise.html) | Technical radar detailing proficiencies across languages, frameworks, inference & quantum. |
-| **Services** | [`services.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/services.html) | Complete catalog of all 8 enterprise advisory and workforce training offerings. |
+| **Personal AI** | [`personal-ai-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/personal-ai-training.html) | 1-on-1 private intensive AI transformation and pair programming. |
 | **Pricing & Parity** | [`pricing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/pricing.html) | 100% transparent rates and interactive 6-Tier Parity calculator across 195 countries. |
 | **FAQs** | [`faqs.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/faqs.html) | 36 technical FAQs covering recipient roles, organization sizes, 10-day training & parity. |
 | **Collaborate** | [`collaboration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/collaboration.html) | Operating principles, mutual NDAs, milestone billing terms & project kickoff process. |
@@ -201,30 +201,30 @@ graph TD
 ### 2. The Claude Agent Suite (9 Dedicated Architectural Pages)
 | Architectural Guide | File | Core Engineering Focus |
 | :--- | :--- | :--- |
-| **🚀 Claude Agents 101** | [`claude-101.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-101.html) | Autonomous agent loops, tool calling boundaries, reasoning traces & error recovery. |
-| **💻 Claude Code & Cowork** | [`claude-code.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-code.html) | Terminal-native pair programming, codebase refactoring & desktop automation. |
-| **🧩 Claude Skills** | [`claude-skills.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-skills.html) | Modular prompt extensions, domain schema injection & reusable skill encapsulation. |
-| **🔌 Claude Custom MCP** | [`claude-custom-mcp.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-custom-mcp.html) | Type-safe Model Context Protocol servers in Rust and TypeScript with sandboxed tools. |
-| **👥 Claude Agent Orchestration** | [`claude-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-orchestration.html) | Running multiple Claude agents concurrently: 5 architectures, 6 tutorials, rate/cost calculators & spend limits. |
-| **🎨 Claude Design** | [`claude-design.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-design.html) | Natural language interface for graphic design, on-canvas editing, brand design systems & export pipelines. |
-| **📦 Claude With Local LLMs** | [`claude-local-llms.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-local-llms.html) | Running 8B to 120B local models on Linux with OpenCode, Claude Code, VRAM/cost calculators & tutorials. |
-| **🔬 Claude Science** | [`claude-science.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-science.html) | AI research workbench, agentic loops, literature synthesis & reproducible compute pipelines. |
+| **Claude Agents 101** | [`claude-101.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-101.html) | Autonomous agent loops, tool calling boundaries, reasoning traces & error recovery. |
+| **Claude Code & Cowork** | [`claude-code.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-code.html) | Terminal-native pair programming, codebase refactoring & desktop automation. |
+| **Claude Skills** | [`claude-skills.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-skills.html) | Modular prompt extensions, domain schema injection & reusable skill encapsulation. |
+| **Claude Custom MCP** | [`claude-custom-mcp.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-custom-mcp.html) | Type-safe Model Context Protocol servers in Rust and TypeScript with sandboxed tools. |
+| **Claude Agent Orchestration** | [`claude-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-orchestration.html) | Running multiple Claude agents concurrently: 5 architectures, 6 tutorials, rate/cost calculators & spend limits. |
+| **Claude Design** | [`claude-design.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-design.html) | Natural language interface for graphic design, on-canvas editing, brand design systems & export pipelines. |
+| **Claude With Local LLMs** | [`claude-local-llms.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-local-llms.html) | Running 8B to 120B local models on Linux with OpenCode, Claude Code, VRAM/cost calculators & tutorials. |
+| **Claude Science** | [`claude-science.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-science.html) | AI research workbench, agentic loops, literature synthesis & reproducible compute pipelines. |
 
 ### 3. The 8 Standalone Enterprise Transformation Services
 | Enterprise Transformation Service | File | Transformation Objective |
 | :--- | :--- | :--- |
-| **🧠 Generative AI Transformation** | [`service-generative-ai-transformation.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-generative-ai-transformation.html) | Transitioning from basic chatbots to coordinated autonomous agent swarms. |
-| **📦 Local LLMs & Cost Slashing** | [`service-local-llms-cost-slashing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-local-llms-cost-slashing.html) | Deploying private open-weight models (vLLM, Ollama) to slash token expenses by 60%–90%. |
-| **🤖 Claude AI Agent Orchestration** | [`service-ai-agents-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-ai-agents-orchestration.html) | Production state machines, long-term memory persistence & human-in-the-loop gates. |
-| **🏎️ Hermes Agent Training** | [`service-agentic-ai-systems.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-agentic-ai-systems.html) | Open-weights autonomous agent development, self-correction loops & task runners. |
-| **🌐 Training for Workflow Automations** | [`service-training-for-workflow-automations.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-training-for-workflow-automations.html) | Enterprise n8n pipelines, webhook listeners & automated business processes. |
-| **⚛️ Quantum Applications (Experimental)** | [`service-quantum-applications.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-quantum-applications.html) | IBM Qiskit, PennyLane, VQE, QAOA & Post-Quantum Cryptography (PQC) readiness. |
-| **💲 AI Budget & Cost Limits Training** | [`service-ai-budget-cost-limits-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-ai-budget-cost-limits-training.html) | LiteLLM gateways, departmental spend quotas, token caching & hard circuit breakers. |
-| **🛡️ Enterprise Workforce AI Training** | [`service-enterprise-workforce-ai-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-enterprise-workforce-ai-training.html) | Role-specific bootcamps for Freshers, Staff, Developers, Managers & CXOs. |
+| **Generative AI Transformation** | [`service-generative-ai-transformation.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-generative-ai-transformation.html) | Transitioning from basic chatbots to coordinated autonomous agent swarms. |
+| **Local LLMs & Cost Slashing** | [`service-local-llms-cost-slashing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-local-llms-cost-slashing.html) | Deploying private open-weight models (vLLM, Ollama) to slash token expenses by 60%–90%. |
+| **Claude AI Agent Orchestration** | [`service-ai-agents-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-ai-agents-orchestration.html) | Production state machines, long-term memory persistence & human-in-the-loop gates. |
+| **Hermes Agent Training** | [`service-agentic-ai-systems.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-agentic-ai-systems.html) | Open-weights autonomous agent development, self-correction loops & task runners. |
+| **Training for Workflow Automations** | [`service-training-for-workflow-automations.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-training-for-workflow-automations.html) | Enterprise n8n pipelines, webhook listeners & automated business processes. |
+| **Quantum Applications (Experimental)** | [`service-quantum-applications.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-quantum-applications.html) | IBM Qiskit, PennyLane, VQE, QAOA & Post-Quantum Cryptography (PQC) readiness. |
+| **AI Budget & Cost Limits Training** | [`service-ai-budget-cost-limits-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-ai-budget-cost-limits-training.html) | LiteLLM gateways, departmental spend quotas, token caching & hard circuit breakers. |
+| **Enterprise Workforce AI Training** | [`service-enterprise-workforce-ai-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-enterprise-workforce-ai-training.html) | Role-specific bootcamps for Freshers, Staff, Developers, Managers & CXOs. |
 
 ---
 
-## 🎓 The 10-Day Training Contract Model
+## The 10-Day Training Contract Model
 
 Each training contract I execute spans **10 consecutive business days** of intensive, hands-on architectural and coding immersion:
 
@@ -264,7 +264,7 @@ gantt
 
 ---
 
-## 🌐 The Six Global Equity & Parity Tiers
+## The Six Global Equity & Parity Tiers
 
 To make elite generative AI engineering universally accessible, I apply mathematical Purchasing Power Parity (PPP) discounts across 195 countries:
 
@@ -279,7 +279,7 @@ To make elite generative AI engineering universally accessible, I apply mathemat
 
 ---
 
-## 🛠️ Verification & Build Logs
+## Verification & Build Logs
 
 The integrity of this website is maintained by rigorous automated Python tooling. Below are the actual execution logs from the centralized build and synchronization pipeline:
 
@@ -311,7 +311,6 @@ Included components in: service-generative-ai-transformation.html
 Included components in: service-local-llms-cost-slashing.html
 Included components in: service-quantum-applications.html
 Included components in: service-training-for-workflow-automations.html
-Included components in: services.html
 Included components in: writing.html
 
 Build complete. Successfully updated 26 HTML files.
@@ -328,7 +327,6 @@ Updated llms.txt
   [HTML -> MD] Syncing index.html -> md-html-sync/home.md...
   [HTML -> MD] Syncing portfolio.html -> md-html-sync/portfolio.md...
   [HTML -> MD] Syncing writing.html -> md-html-sync/writing.md...
-  [HTML -> MD] Syncing services.html -> md-html-sync/services.md...
   [HTML -> MD] Syncing collaboration.html -> md-html-sync/collaboration.md...
   [HTML -> MD] Syncing pricing.html -> md-html-sync/pricing.md...
   [HTML -> MD] Syncing expertise.html -> md-html-sync/expertise.md...
@@ -380,7 +378,6 @@ No changes needed: service-generative-ai-transformation.html
 No changes needed: service-local-llms-cost-slashing.html
 No changes needed: service-quantum-applications.html
 No changes needed: service-training-for-workflow-automations.html
-No changes needed: services.html
 No changes needed: writing.html
 
 Build complete. Successfully updated 0 HTML files.
@@ -399,7 +396,7 @@ Sync complete. Synchronized 0 file pair(s).
 
 ---
 
-## 📬 Contact & Inquiries
+## Contact & Inquiries
 
 Whether you represent an early-stage startup seeking rapid technical validation, an enterprise engineering organization looking to slash inference overhead, or an institution seeking custom AI workforce training:
 

@@ -35,3 +35,8 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
   1. **Endpoints and Model Strings in Code Examples**: Do NOT change model numbers in API endpoints, parameters, or model identifiers within code blocks, script samples, configuration snippets, or test payloads (e.g., `model="claude-opus-5-5"`, `MODEL = "claude-sonnet-5-5"`, `claude-haiku-5-5`, `anthropic/claude-sonnet-5-5`).
   2. **Pricing Mentions**: When quoting specific pricing, token rates, cost calculations, pricing tables, or break-even analyses, always include the specific model version numbers tied to those prices (e.g., "Opus 5.5 ($4 / $20 per MTok)", "Sonnet 5.5 at $2/$10", "Haiku 5.5 at $0.10/$0.50", "Fable 5.1 at $10/$50").
 
+## No Emojis Rule
+- **DO NOT use emojis** in any further generation of any file in the future in this repo.
+- Ensure all generated or modified files (including HTML, CSS, JavaScript, Markdown, Python, and configuration files) remain completely free of emojis.
+
+

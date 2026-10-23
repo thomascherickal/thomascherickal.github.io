@@ -35,10 +35,10 @@ PG in CS from Loyola College; I help individuals and enterprises transform into 
  and drive real business impact.
 
 ### Quick Actions
-- [📚 Articles](articles.html)
-- [📝 Contact via Email](contact.html)
-- [🐙 GitHub Profile](https://github.com/thomascherickal)
-- [📅 Book 1:1 Consult](https://topmate.io/thomascherickal)
+- [Articles](articles.html)
+- [Contact via Email](contact.html)
+- [GitHub Profile](https://github.com/thomascherickal)
+- [Book 1:1 Consult](https://topmate.io/thomascherickal)
 
 ---
 
@@ -59,16 +59,16 @@ HackerNoon · Medium · Hashnode · Substack · LinkedIn · Reddit · Quora · W
 
 ## Explore My Work (Curated Destinations)
 
-1. [📚 Articles & Case Studies](articles.html) — Detailed case studies across Generative AI Systems and Quantum Systems — the brief, the approach, and what shipped, verified in Python and Rust.
-2. [✍️ Publications](writing.html) — Selected work from 500+ publications across 10+ platforms since 2020, plus the book RECRUITED.
-3. [⚡ Capabilities & Tech Stack](expertise.html) — 10 specialized capability areas, 10 curated tech-stack chip groups, and the Python & Rust execution tooling behind every piece.
-4. [🎯 Services & Commissions](services.html) — Service offerings — Claude AI agent orchestration, deep dives, courses, training, mentoring, enterprise LLM deployment, and Generative AI developer content.
-5. [🔬 Workflow & Verification](expertise.html#how-this-gets-made) — Research → Build → Run → Verify → Explain. AI accelerates the workflow, while human verification owns the result.
-6. [💳 Pricing & Parity Index](pricing.html) — Transparent milestone rates and an interactive 195-country Purchasing Power Parity (PPP) calculator for global equity.
-7. [❓ Frequently Asked Questions](faqs.html) — Turnaround timelines, code verification standards, AI workflows, daily service fee calculator, and collaboration details.
-8. [📬 Contact & Training](contact.html) — Commission custom emerging technologies training, Claude AI agent orchestration, developer courses, or retainer sprints directly.
-9. [📰 HackerNoon Profile](https://hackernoon.com/u/thomascherickal) — Explore featured deep dives, AI exploration, and published articles on HackerNoon covering AI models and devtools.
-10. [🐙 GitHub Profile](https://github.com/thomascherickal) — Inspect open-source code bases, Python and Rust scripts, quantum circuit benchmarks, and custom repositories for content.
+1. [Articles & Case Studies](articles.html) — Detailed case studies across Generative AI Systems and Quantum Systems — the brief, the approach, and what shipped, verified in Python and Rust.
+2. [Publications](writing.html) — Selected work from 500+ publications across 10+ platforms since 2020, plus the book RECRUITED.
+3. [Capabilities & Tech Stack](expertise.html) — 10 specialized capability areas, 10 curated tech-stack chip groups, and the Python & Rust execution tooling behind every piece.
+4. [Services & Commissions](pricing.html#service-rates) — Service offerings — Claude AI agent orchestration, deep dives, courses, training, mentoring, enterprise LLM deployment, and Generative AI developer content.
+5. [Workflow & Verification](expertise.html#how-this-gets-made) — Research → Build → Run → Verify → Explain. AI accelerates the workflow, while human verification owns the result.
+6. [Pricing & Parity Index](pricing.html) — Transparent milestone rates and an interactive 195-country Purchasing Power Parity (PPP) calculator for global equity.
+7. [Frequently Asked Questions](faqs.html) — Turnaround timelines, code verification standards, AI workflows, daily service fee calculator, and collaboration details.
+8. [Contact & Training](contact.html) — Commission custom emerging technologies training, Claude AI agent orchestration, developer courses, or retainer sprints directly.
+9. [HackerNoon Profile](https://hackernoon.com/u/thomascherickal) — Explore featured deep dives, AI exploration, and published articles on HackerNoon covering AI models and devtools.
+10. [GitHub Profile](https://github.com/thomascherickal) — Inspect open-source code bases, Python and Rust scripts, quantum circuit benchmarks, and custom repositories for content.
 
 ---
 
@@ -85,14 +85,18 @@ Enterprise AI transformation, Claude AI agent orchestration, technical deep dive
 
 ## Enterprise AI Transformation Services
 
-1. [🧠 Generative AI Transformation](service-generative-ai-transformation.html) — Convert an entire business that uses AI as a chatbot to one that works with agents, with metrics and safeguards.
-2. [📦 Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — High-throughput private open-weight model serving via Ollama, vLLM, and llama.cpp with zero external data egress.
-3. [🤖 Claude AI Agent Orchestration Fundamentals](service-ai-agents-orchestration.html) — Principles of Claude AI agent orchestration, releasing agent swarms at scale, using AI agents with deterministic state machines.
-4. [🏎️ Agentic AI Assistants (Hermes Agent)](service-agentic-ai-systems.html) — Enterprise deployment of autonomously improving agentic assistants with persistent vector memory.
-5. [🌐 Training for WorkFlows Automations](service-training-for-workflow-automations.html) — Training in setting up n8n automations, self-hosted, to automate routine recurring workflows.
-6. [⚛️ Quantum Applications (Experimental)](service-quantum-applications.html) — Exploring quantum systems for enterprise business case uses, algorithm simulation, and practical applications.
-7. [💲 AI Budget and Cost Limits Training](service-ai-budget-cost-limits-training.html) — Training employees at all levels on token governance, prompt efficiency, and intelligent model routing.
-8. [🛡️ Enterprise Workforce AI Training](service-enterprise-workforce-ai-training.html) — Live and remote corporate training for freshers, employees, developers (AI TDD), and CXOs, alongside executive briefings and AI roadmaps.
+1. [Generative AI Transformation](service-generative-ai-transformation.html) — Move your business from one-off chatbot prompts to coordinated teams of Claude agents that carry real work. Ground agent swarms in your domain data with custom MCP servers, bounded execution loops, and strict spending limits.
+2. [Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — Cut recurring cloud API bills by 60% to 90% by running open-weight models privately with Ollama, vLLM, llama.cpp and LM Studio. Size hardware from 8B to 120B models, route routine queries locally, and keep sensitive records on your machines.
+3. [Claude AI Agent Orchestration](service-ai-agents-orchestration.html) — Master the principles of Claude AI agent orchestration to run multi-agent swarms at scale. Build orchestrator-worker hierarchies, sequential pipelines, and parallel fan-out teams that automate complex workflows while controlling quality and cost.
+4. [Hermes Agent](service-agentic-ai-systems.html) — Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own infrastructure. Configure persistent session memory so the agent retains project context, saves solved procedures as reusable skills, and runs scheduled tasks.
+5. [WorkFlow Automations](service-training-for-workflow-automations.html) — Hands-on training for automating recurring office work with Claude skills, plugins, connectors, scheduled tasks and Microsoft 365 add-ins. Automate up to half of routine daily operations across sales, finance and engineering with private data options.
+6. [Quantum Applications (Experimental)](service-quantum-applications.html) — Exploratory quantum computing advisory for enterprise use cases: algorithm simulation with IBM Qiskit and PennyLane, variational circuits (VQE/QAOA), quantum machine learning, and Post-Quantum Cryptography (PQC) readiness aligned with NIST standards.
+7. [AI Budget Training](service-ai-budget-cost-limits-training.html) — Train staff across all levels to control AI spending: establish hard spending caps per session and month, configure token budgets, leverage prompt caching for up to 90% input savings, and route low-complexity tasks to free and local models.
+8. [Enterprise Workforce AI Training](service-enterprise-workforce-ai-training.html) — Live and remote corporate AI training delivered across distinct tracks: prompting for corporate staff, Claude Code and AI-assisted TDD for developers, and executive briefings, AI roadmaps, governance, and safe AI use policies for CXOs.
+9. [AI Developer Training](service-ai-developer-training.html) — Hands-on bootcamps training developer teams on terminal and IDE coding agents (Claude Code, Google Antigravity, OpenCode). Catch mistakes early with strict AI-assisted Test-Driven Development (TDD) and build custom MCP servers in Python and Rust.
+10. [Advanced AI Agents](service-advanced-ai-agents.html) — Build production autonomous agent systems with hierarchical teams of Claude agents for business-critical workloads. Implement test-driven self-correction loops where agents fix errors until tests pass, with persistent state and Docker sandboxing.
+11. [Claude Basic Training](service-claude-basic-training.html) — Foundational enablement for corporate staff and knowledge workers: choosing the right model between Haiku, Sonnet, and Opus, structured prompting with XML tags, managing shared team memory in Claude Projects, and using Artifacts for daily office work.
+12. [Claude Advanced Training](service-claude-advanced-training.html) — Technical masterclass for senior developers and AI architects: advanced Claude Code CLI workflows, Claude Cowork in Microsoft 365, designing and securing production MCP servers, and orchestrating frontier models with adaptive thinking effort.
 
 ---
 
@@ -105,40 +109,40 @@ Enterprise AI transformation, Claude AI agent orchestration, technical deep dive
 
 A comprehensive transformation system showing professionals how to use frontier AI tools — GitHub, LinkedIn, Perplexity, Claude, Google Antigravity, and Gemini Notebook — to rebuild their professional presence so that inbound recruiter offers find them.
 
-- [🎗 Pre-Order on Patreon](https://patreon.com/thomascherickal)
+- [Pre-Order on Patreon](https://patreon.com/thomascherickal)
 
 ---
 
 ## The Digital Futurist Newsletter
 
 **The Digital Futurist Newsletter**: How to understand and build emerging technologies.  
-- [✉️ Subscribe Free on Kit](https://thomascherickal.kit.com)
+- [Subscribe Free on Kit](https://thomascherickal.kit.com)
 
 ---
 
 ## Links
 
 ### Find Me Online
-- [🌐 Profile (thomascherickal.com)](https://thomascherickal.com)
-- [🐙 GitHub (github.com/thomascherickal)](https://github.com/thomascherickal)
-- [💼 LinkedIn (in/thomascherickal)](https://linkedin.com/in/thomascherickal)
-- [🗞 HackerNoon (u/thomascherickal)](https://hackernoon.com/u/thomascherickal)
-- [✍️ Medium (@thomascherickal)](https://thomascherickal.medium.com)
-- [🔷 Hashnode (thomascherickal.hashnode.dev)](https://thomascherickal.hashnode.dev)
-- [📬 Substack (thesingularitypoint.substack.com)](https://thesingularitypoint.substack.com)
-- [❓ Quora (thomascherickal.quora.com)](https://thomascherickal.quora.com)
-- [🤖 Reddit (reddit.com/user/thomascherickal1)](https://reddit.com/user/thomascherickal1)
-- [🧪 Exercism (exercism.org/profiles/thomascherickal)](https://exercism.org/profiles/thomascherickal)
-- [🏅 CodersRank (profile.codersrank.io/user/thomascherickal)](https://profile.codersrank.io/user/thomascherickal/)
-- [🧠 Deep-ML (deep-ml.com/profile/thomascherickal)](https://www.deep-ml.com/profile/thomascherickal)
-- [✖️ X (@thomazcherickal)](https://x.com/thomazcherickal)
-- [👩‍💻 DEV (dev.to/thomascherickal)](https://dev.to/thomascherickal)
-- [🦊 GitLab (gitlab.com/thomascherickal)](https://gitlab.com/thomascherickal)
-- [✉️ Kit (thomascherickal.kit.com)](https://thomascherickal.kit.com)
-- [🔗 Linktree (linktr.ee/thomascherickal)](https://linktr.ee/thomascherickal)
-- [🎨 Patreon (patreon.com/thomascherickal)](https://patreon.com/thomascherickal)
-- [🛍️ Gumroad (thomascherickal.gumroad.com)](https://thomascherickal.gumroad.com)
-- [🤝 Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)
+- [Profile (thomascherickal.com)](https://thomascherickal.com)
+- [GitHub (github.com/thomascherickal)](https://github.com/thomascherickal)
+- [LinkedIn (in/thomascherickal)](https://linkedin.com/in/thomascherickal)
+- [HackerNoon (u/thomascherickal)](https://hackernoon.com/u/thomascherickal)
+- [Medium (@thomascherickal)](https://thomascherickal.medium.com)
+- [Hashnode (thomascherickal.hashnode.dev)](https://thomascherickal.hashnode.dev)
+- [Substack (thesingularitypoint.substack.com)](https://thesingularitypoint.substack.com)
+- [Quora (thomascherickal.quora.com)](https://thomascherickal.quora.com)
+- [Reddit (reddit.com/user/thomascherickal1)](https://reddit.com/user/thomascherickal1)
+- [Exercism (exercism.org/profiles/thomascherickal)](https://exercism.org/profiles/thomascherickal)
+- [CodersRank (profile.codersrank.io/user/thomascherickal)](https://profile.codersrank.io/user/thomascherickal/)
+- [Deep-ML (deep-ml.com/profile/thomascherickal)](https://www.deep-ml.com/profile/thomascherickal)
+- [X (@thomazcherickal)](https://x.com/thomazcherickal)
+- [DEV (dev.to/thomascherickal)](https://dev.to/thomascherickal)
+- [GitLab (gitlab.com/thomascherickal)](https://gitlab.com/thomascherickal)
+- [Kit (thomascherickal.kit.com)](https://thomascherickal.kit.com)
+- [Linktree (linktr.ee/thomascherickal)](https://linktr.ee/thomascherickal)
+- [Patreon (patreon.com/thomascherickal)](https://patreon.com/thomascherickal)
+- [Gumroad (thomascherickal.gumroad.com)](https://thomascherickal.gumroad.com)
+- [Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)
 
 ---
 *© 2026 Thomas Cherickal · The Digital Futurist · Generative AI Consultant · Agentic AI Architect · AI Automation Expert · AI Trainer Live & Remote · Enterprise AI Integration · Local LLM Deployment · Claude AI Agent Orchestration · Remote Worldwide*

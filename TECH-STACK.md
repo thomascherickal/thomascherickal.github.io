@@ -21,7 +21,7 @@
 
 ---
 
-## 🏗️ 1. Architectural Philosophy & Zero-Framework Core
+## 1. Architectural Philosophy & Zero-Framework Core
 
 When I architected this website, I made an uncompromising systems design choice: **I completely eliminated heavy client-side JavaScript frameworks (React, Next.js, Vue, Angular) and utility CSS preprocessors (Tailwind CSS, PostCSS).**
 
@@ -75,7 +75,7 @@ graph TD
 
 ---
 
-## 🎨 2. Design System & CSS Token Architecture
+## 2. Design System & CSS Token Architecture
 
 I constructed a comprehensive design token system in Vanilla CSS using standard CSS Custom Properties. The styling is defined globally in [`index.css`](file:///home/thomas/GitHub.io/thomascherickal.github.io/index.css) and scoped uniformly across all 26 HTML pages:
 
@@ -157,7 +157,7 @@ classDiagram
 
 ---
 
-## 🐍 3. The Python Automation & Synchronization Pipeline
+## 3. The Python Automation & Synchronization Pipeline
 
 The engine powering this repository is a custom Python 3 automation system housed in [`python/`](file:///home/thomas/GitHub.io/thomascherickal.github.io/python):
 
@@ -230,7 +230,6 @@ Included components in: service-generative-ai-transformation.html
 Included components in: service-local-llms-cost-slashing.html
 Included components in: service-quantum-applications.html
 Included components in: service-training-for-workflow-automations.html
-Included components in: services.html
 Included components in: writing.html
 
 Build complete. Successfully updated 26 HTML files.
@@ -280,7 +279,7 @@ I established a dedicated Markdown mirror in [`md-html-sync/`](file:///home/thom
 
 ---
 
-## 🔬 4. Advanced Systems: Agent Swarms & Quantum Frameworks
+## 4. Advanced Systems: Agent Swarms & Quantum Frameworks
 
 Beyond the web stack itself, this repository documents and serves as the gateway to my advanced enterprise consulting architectures:
 
@@ -295,7 +294,7 @@ Beyond the web stack itself, this repository documents and serves as the gateway
 
 ---
 
-## 🔍 5. Semantic Search, Structured Web Graph & `llms.txt`
+## 5. Semantic Search, Structured Web Graph & `llms.txt`
 
 Search engine indexing and AI knowledge retrieval are first-class engineering citizens across this codebase:
 
@@ -331,7 +330,7 @@ To allow autonomous AI agents, research crawlers, and context window engines to 
 
 ---
 
-## 🔒 6. Data Privacy, Air-Gapped Security & Client IP
+## 6. Data Privacy, Air-Gapped Security & Client IP
 
 In enterprise AI engagements, data privacy is paramount. The architectures I train and implement enforce absolute security:
 
@@ -344,7 +343,7 @@ In enterprise AI engagements, data privacy is paramount. The architectures I tra
 
 ---
 
-## 📊 7. Repository Verification & Current State
+## 7. Repository Verification & Current State
 
 Below is the verified Git status confirming full synchronization across all files, components, and Markdown pairs:
 
@@ -399,14 +398,13 @@ Changes not staged for commit:
 	modified:   service-local-llms-cost-slashing.html
 	modified:   service-quantum-applications.html
 	modified:   service-training-for-workflow-automations.html
-	modified:   services.html
 	modified:   sitemap.xml
 	modified:   writing.html
 ```
 
 ---
 
-## 🚀 8. Running the Build Engine Locally
+## 8. Running the Build Engine Locally
 
 To test, build, or watch the site locally, execute the following commands from the repository root:
 

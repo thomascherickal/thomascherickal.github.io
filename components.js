@@ -12,8 +12,7 @@
       var lowerPage = page ? page.toLowerCase() : '';
       if (
         lowerHref === lowerPage || 
-        (lowerPage === 'index.html' && (lowerHref === 'index.html' || lowerHref === './' || lowerHref === '/')) ||
-        ((lowerPage.startsWith('service-') || lowerPage === 'collaboration.html') && lowerHref === 'services.html')
+        (lowerPage === 'index.html' && (lowerHref === 'index.html' || lowerHref === './' || lowerHref === '/'))
       ) {
         link.classList.add('active');
         link.setAttribute('aria-current', 'page');

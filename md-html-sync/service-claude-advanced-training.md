@@ -1,75 +1,114 @@
-# 🚀 Claude Advanced Training (Claude Code, Cowork, MCP & Agent Swarms)
+# Claude Advanced Training
 ## Enterprise AI Transformation Service — Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 14**  
-> **Intensive technical masterclass for senior developers, technical leads, and AI architects: building with Claude Code CLI, Claude Cowork in Microsoft 365, custom Model Context Protocol (MCP) server architectures, and production multi-agent orchestration.**
+> **Intensive technical masterclass for senior developers, technical leads and AI architects: Claude Code, Claude
+ Cowork in Microsoft 365, custom Model Context Protocol (MCP) servers, and production multi-agent orchestration.**
 
 ---
 
-## 1. Service Overview & Scope
+## 1. Service
+ Overview & Scope
 
-- Advanced Extended Thinking Architecture: Mastering multi-thousand token reasoning traces, dynamic budget allocation, and self-directed test case synthesis.
-- Claude Code CLI & Terminal Workflows: Terminal-native agent pair programming, custom slash commands, headless scripting, and automated multi-file codebase refactoring.
-- Production Model Context Protocol (MCP) Engineering: Designing, implementing, and securing enterprise MCP servers connecting Claude to internal databases, APIs, and microservices.
-- Multi-Agent Swarm Orchestration with Claude: Architecting supervisor-worker hierarchies pairing Claude Opus planners with Claude Sonnet executors.
-- Enterprise Context Management: Managing massive 200k+ token context windows, avoiding context degradation, and implementing prompt caching to reduce token burn.
-
----
-
-## 2. Standard Architecture & Tools
-
-- Claude Developer Suite: Claude Code CLI, Anthropic API SDK (Python/TypeScript), and Claude Desktop developer tooling.
-- Protocols & Tooling: Model Context Protocol (MCP) specification, JSON-RPC, stdio and SSE transport protocols.
-- Orchestration & State: LangGraph state machines, Anthropic Tool Use APIs, and Redis state stores.
-- Sandboxed Testing: Docker container runtimes, Python virtual environments, and automated CI/CD validation.
+- Effort and Adaptive Thinking: Choosing an effort level per task, changing effort
+ mid-conversation, and using extended reasoning where it pays off.
+- Claude Code in Depth: Plan mode, permission modes, custom subagents, hooks, skills,
+ headless runs in CI, and parallel background agents.
+- Production MCP Engineering: Designing, building and securing MCP servers that connect
+ Claude to internal databases, APIs and services.
+- Multi-Agent Orchestration: Orchestrator-worker and hierarchical teams that pair Opus or
+ Fable planners with Sonnet and Haiku workers.
+- Context and Cost Management: Working with context windows of up to 1 million tokens,
+ avoiding detail loss in long sessions, and using prompt caching to cut token spend.
 
 ---
 
-## 3. Deliverable Examples & 4-Week Schedule
+## 2. Standard
+ Architecture & Tools
 
-- Custom MCP Server Codebase: Production-ready TypeScript/Python MCP server with database connectors, authentication, and full documentation.
-- Claude Code Enterprise Configuration Suite: Tailored `.claude/config` configurations, custom slash commands, and codebase architecture primers.
-- Multi-Agent Swarm Architecture Template: Working multi-agent supervisor-worker codebase implementing deterministic tool calling and error recovery.
-- Advanced Engineering Masterclass & Runbooks: Interactive video recordings, hands-on lab repositories, and operational runbooks for internal engineering teams.
-
----
-
-## 4. Guarantees & Commitments
-
-- Production-Grade Engineering Standards: Clean, modular, fully typed code passing all enterprise linters and security checks.
-- 100% Commercial IP Ownership: Complete code transfer of all custom MCP servers, scripts, configurations, and documentation.
-- Measurable Engineering Leverage: 2x to 4x acceleration on feature delivery, codebase comprehension, and test creation.
-- 30-Day Engineering Mentoring SLA: Direct access to lead architects for code reviews, prompt tuning, and architectural advisory.
+- Claude Developer Suite: Claude Code, the Anthropic Python SDK, Claude Desktop and Claude
+ in Microsoft 365.
+- Protocols & Tooling: The Model Context Protocol specification and its Python and Rust
+ SDKs, local and remote servers, plugins and skills.
+- Orchestration & State: Claude Agent Teams, tool use in the Claude API, and state
+ saved to files or SQL.
+- Sandboxed Testing: Docker containers, Python virtual environments, cargo, and automated
+ CI checks.
 
 ---
 
-## 5. Investment & Pricing Quote
+## 3.
+ Deliverable Examples & 4-Week Schedule
 
-- Engagement Duration: Strictly 1 month (4 weeks of structured milestone delivery and runtime verification).
-- Base Investment Rate (Tier 1 Standard): $2,000 USD (flat base rate for complete 1-month delivery).
+- Custom MCP Server Codebase: Production MCP server in Python or Rust with database access,
+ authentication and documentation.
+- Claude Code Team Configuration: CLAUDE.md, settings with permissions and hooks, custom
+ subagents, skills and a team plugin.
+- Multi-Agent Architecture Template: Working orchestrator-worker codebase with checked tool
+ calls and error recovery.
+- Advanced Masterclass & Runbooks: Recordings, lab repositories and runbooks for your
+ engineering teams.
+
+| Timeline | Focus & Architecture | Core Deliverables & Artifacts | Verification & Sign-off Criteria |
+| :--- | :--- | :--- | :--- |
+| Week 1 | Adaptive Thinking, Context Engineering & Prompt Caching | Adaptive thinking budget configuration, prompt caching implementation across system prompts, 1M token context window management strategies, and token cost reduction runbooks | Engineers demonstrate dynamic effort adjustments and verify measurable latency and token cost savings via prompt caching |
+| Week 2 | Claude Code Mastery & Team Configuration | Claude Code deployment with plan mode, permission modes, CLAUDE.md architecture rules, custom subagents in .claude/agents/, team skills in .claude/skills/, and pre/post-tool hooks | Developers execute complex multi-file refactoring and headless CI tasks with subagents operating in parallel background worktrees |
+| Week 3 | Production MCP Server Architecture & Security | Custom Model Context Protocol (MCP) servers in Python and Rust with official SDKs, internal database and REST service integrations, authentication hooks, and Docker sandbox testing | Production MCP server connected to Claude Desktop and Claude Code with verified bidirectional tool calls and schema validation |
+| Week 4 | Multi-Agent Teams, CI Automation & Handover | Working orchestrator-worker architecture pairing Claude Opus or Fable lead with Claude Sonnet and Haiku workers, CI automated code review pipelines, masterclass recordings, and 30-day mentoring access | Automated multi-agent review pipeline merges verified test and code fixes, complete IP transfer, and client sign-off |
+
+---
+
+## 4. Guarantees
+ & Commitments
+
+- Production-Grade Engineering Standards: Modular, typed code that passes your linters,
+ tests and security checks.
+- 100% Commercial IP Ownership: All MCP servers, scripts, configurations and documentation
+ transfer to you.
+- Measurable Engineering Leverage: 2x to 4x faster feature delivery, codebase understanding
+ and test writing, measured on your own work.
+- 30-Day Engineering Mentoring SLA: Direct access for code reviews, configuration help and
+ architecture questions.
+
+---
+
+## 5. Investment
+ & Pricing Quote
+
+- Engagement Duration: Strictly 1 month (4 weeks of structured milestone delivery and
+ runtime verification).
+- Base Investment Rate (Tier 1 Standard): $2,000 USD (flat base rate for
+ complete 1-month delivery).
 - Global Purchasing Power Parity (PPP) & Subsidized Rates:
   - Tier 1 (Standard / 100%): $2,000 USD (USA, UK, EU, Canada, Australia)
-  - Tier 2 (Developing Nations / 25% Off): $1,500 USD (India, Brazil, Mexico, UAE, Poland)
+  - Tier 2 (Developing Nations / 25% Off): $1,500 USD (India, Brazil, Mexico, UAE,
+ Poland)
   - Tier 3 & 4 (Least Developed & Startups / 50% Off): $1,000 USD
   - Tier 5 (Academia & Non-Profits / 75% Off): $500 USD
-  - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief / Micro-Rates
+  - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief /
+ Micro-Rates
   - Calculate and lock in your exact tier rate live on the Pricing page.
 - Payment Milestones:
-  - 50% upfront milestone initialization / 50% upon completed Week 4 delivery, runtime verification, and client sign-off.
+  - 50% upfront milestone initialization / 50% upon completed Week 4 delivery, runtime verification, and
+ client sign-off.
 
 ---
 
 ## 6. Summary
 
-- Advanced Claude Systems: Extended thinking control, terminal-native Claude Code CLI workflows, and custom MCP tools.
-- Strict 1-Month Delivery: 4-week structured engineering track from context caching to production multi-agent swarm deployment.
-- Custom Model Context Protocol: Building enterprise full-duplex MCP servers interfacing directly with SQL and internal microservices.
-- Multi-Agent Swarm Topologies: Pairing Claude Opus planners with Claude Sonnet executors for automated CI/CD code reviews.
-- 100% Commercial IP Ownership: Complete code transfer, starter kits, recorded masterclasses, and 30-day dedicated SLA support.
+- Advanced Claude Systems: Effort control, Claude Code workflows
+ and custom MCP tools.
+- Strict 1-Month Delivery: 4-week track from context and caching
+ to production multi-agent deployment.
+- Custom Model Context Protocol: MCP servers connecting Claude
+ to SQL and internal services.
+- Multi-Agent Teams: Opus or Fable planners with Sonnet and
+ Haiku workers for jobs such as automated code review in CI.
+- 100% Commercial IP Ownership: Code, starter kits, recordings
+ and 30-day support.
 
 ---
 
 ### Ready to Deploy?
 - [Commission this Service via Email →](contact.html)
 - [Book Strategy Session on Topmate ↗](https://topmate.io/thomascherickal)
-- [Return to All Services →](services.html)
