@@ -8,8 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Open+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="buttons.css" />
   <style>
     :root {
@@ -1765,11 +1766,27 @@
     }
 
     .footer-top {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2.5rem;
       margin-bottom: 3rem;
     }
+
+    .footer-brand {
+      flex: 0 0 auto;
+    }
+
+    .footer-newsletter-wrap,
+    .footer-top > div:last-child {
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: flex-end;
+      max-width: 680px;
+      min-width: 0;
+    }
+
 
     .footer-brand {
       display: flex;
@@ -1932,22 +1949,25 @@
     }
 
     .newsletter-card {
-      margin-top: 2.5rem;
-      padding: 1.5rem 2rem;
+      margin-top: 0;
+      padding: 0.85rem 1.25rem;
       background: var(--bg-card);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg, 14px);
       display: flex;
+      flex-direction: row;
       align-items: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.8);
+      justify-content: space-between;
+      gap: 1.25rem;
+      width: 100%;
+      max-width: 680px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      box-sizing: border-box;
     }
 
     .newsletter-info {
-      flex: 1;
+      flex: 1 1 auto;
+      min-width: 0;
     }
 
     .newsletter-name {
@@ -1957,12 +1977,28 @@
       color: var(--gold);
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.2rem;
+      white-space: nowrap;
     }
 
     .newsletter-desc {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
+      line-height: 1.35;
       color: var(--text-secondary);
+      margin: 0;
+    }
+
+    .newsletter-card .btn,
+    .newsletter-card a.btn {
+      flex: 0 0 auto;
+      width: auto !important;
+      max-width: max-content !important;
+      white-space: nowrap;
+      padding: 0.55rem 1.15rem;
+      font-size: 0.76rem;
+      min-height: 38px;
+      border-radius: 8px;
+      margin-left: auto;
     }
 
     .footer-divider {
@@ -2282,8 +2318,18 @@
       }
 
       .footer-top {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: stretch;
         gap: 2rem;
+      }
+
+      .footer-newsletter-wrap,
+      .footer-top > div:last-child {
+        justify-content: flex-start;
+      }
+
+      .newsletter-card {
+        max-width: 100%;
       }
     }
 
@@ -2298,8 +2344,32 @@
       }
 
       .newsletter-card {
-        padding: 1.25rem 1rem;
-        gap: 1rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 0.9rem;
+        gap: 0.75rem;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .newsletter-name {
+        font-size: 0.82rem;
+        white-space: normal;
+      }
+
+      .newsletter-desc {
+        font-size: 0.74rem;
+      }
+
+      .newsletter-card .btn,
+      .newsletter-card a.btn {
+        width: auto !important;
+        max-width: max-content !important;
+        padding: 0.45rem 0.85rem;
+        font-size: 0.72rem;
+        min-height: 34px;
+        margin-left: auto;
       }
 
       .footer-bottom {
@@ -3863,41 +3933,12 @@
     }
   </style>
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
-      background: transparent;
-      overflow: hidden;
-    }
-
-    .social-link {
-      border: 2px solid rgba(56, 189, 248, 0.55) !important;
-      box-shadow: 0 0 14px rgba(56, 189, 248, 0.35), 0 0 28px rgba(56, 189, 248, 0.18), 0 2px 8px rgba(0, 0, 0, 0.4) !important;
-      font-size: 0.82rem !important;
-    }
-
-    .social-link:hover {
-      border-color: #38bdf8 !important;
-      box-shadow: 0 0 26px rgba(56, 189, 248, 0.9), 0 0 45px rgba(56, 189, 248, 0.5), 0 4px 14px rgba(0, 0, 0, 0.5) !important;
-    }
-
-    .social-link.highlight {
-      border: 2px solid rgba(251, 191, 36, 0.75) !important;
-      box-shadow: 0 0 14px rgba(251, 191, 36, 0.3), 0 2px 8px rgba(0, 0, 0, 0.4) !important;
-    }
-
-    .social-link.highlight:hover {
-      border-color: #fbbf24 !important;
-      box-shadow: 0 0 26px rgba(251, 191, 36, 0.85), 0 4px 14px rgba(0, 0, 0, 0.5) !important;
-    }
-
-    .footer-top .newsletter-card {
-      margin-top: 0;
-    }
-
-    .newsletter-card {
-      border: 2px solid rgba(251, 191, 36, 0.5) !important;
-      box-shadow: 0 0 16px rgba(251, 191, 36, 0.15) !important;
+      background: #060912;
+      color: #ffffff;
+      min-height: 100%;
     }
 
     .newsletter-name {
@@ -4064,24 +4105,63 @@
       margin: 0 8px;
     }
 
-    @media (max-width: 960px) {
+    @media (max-width: 1366px) {
       .wg {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px !important;
       }
     }
 
-    @media (max-width: 640px) {
-      .wg {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
+    @media (max-width: 1100px) {
+      .footer-top {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 2rem !important;
+      }
+
+      .footer-newsletter-wrap,
+      .footer-top > div:last-child {
+        justify-content: flex-start !important;
+      }
+
+      .newsletter-card {
+        max-width: 100% !important;
       }
     }
 
-    @media (max-width: 440px) {
+    @media (max-width: 768px) {
       .wg {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
       }
+    }
+
+    @media (max-width: 480px) {
+      .wg {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    /* Collapse empty icon wrappers when emojis are removed */
+    .home-nav-icon:empty,
+    .service-icon-box:empty,
+    .role-card-icon:empty,
+    .collab-icon:empty,
+    .audience-icon:empty,
+    .contact-method-icon:empty,
+    .search-icon-left:empty,
+    .faq-category-icon:empty,
+    .tech-cat-title span:empty,
+    div[style*="font-size:1.8rem"]:empty,
+    span[style*="font-size:1.4rem"]:empty,
+    span[style*="font-size:1.8rem"]:empty,
+    span[style*="font-size: 2.2rem"]:empty,
+    span[style*="font-size:2.8rem"]:empty {
+      display: none !important;
+    }
+
+    .search-icon-left:empty ~ .search-input {
+      padding-left: 1.25rem !important;
     }
   </style>
 </head>
@@ -4100,7 +4180,7 @@
           <p class="footer-brand-tagline">Thomas Cherickal · Generative AI Consultant</p>
         </div>
       </div>
-      <div>
+      <div class="footer-newsletter-wrap">
         <div class="newsletter-card">
           <div class="newsletter-info">
             <p class="newsletter-name"><span class="newsletter-icon"><svg class="newsletter-svg" width="18" height="18"
@@ -4267,12 +4347,12 @@
     <style>
       .wg {
         grid-template-columns: repeat(6, 1fr) !important;
-        gap: 8px !important;
+        gap: 10px !important;
       }
       .wl {
-        padding: 9px 10px !important;
+        padding: 10px 12px !important;
         border-radius: 8px !important;
-        gap: 3px !important;
+        gap: 4px !important;
       }
       .wl-head {
         gap: 8px !important;
@@ -4288,15 +4368,16 @@
         display: block !important;
       }
       .wl-name {
-        font-size: 13px !important;
+        font-size: 13.5px !important;
+        font-weight: 700 !important;
         line-height: 1.3 !important;
         white-space: nowrap !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
       }
       .wl-desc {
-        font-size: 11px !important;
-        line-height: 1.35 !important;
+        font-size: 11.5px !important;
+        line-height: 1.4 !important;
         margin-top: 2px !important;
         display: -webkit-box !important;
         -webkit-line-clamp: 2 !important;
@@ -4304,23 +4385,122 @@
         overflow: hidden !important;
       }
       .wl-url {
-        font-size: 10.5px !important;
+        font-size: 11px !important;
         margin-top: auto !important;
         padding-top: 4px !important;
+        overflow-wrap: anywhere !important;
       }
-      @media (max-width: 960px) {
+      @media (max-width: 1366px) {
         .wg {
           grid-template-columns: repeat(3, 1fr) !important;
-          gap: 8px !important;
+          gap: 10px !important;
         }
       }
-      @media (max-width: 640px) {
+      .footer-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1.75rem;
+        margin-bottom: 2.5rem;
+      }
+      .footer-brand {
+        flex: 0 0 auto;
+      }
+      .footer-newsletter-wrap {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: flex-end;
+        max-width: 680px;
+      }
+      .newsletter-card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.25rem;
+        padding: 0.85rem 1.25rem;
+        background: var(--bg-card, #0c111d);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+        max-width: 680px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .newsletter-info {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+      .newsletter-name {
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--gold, #fbbf24);
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+        margin: 0 0 0.2rem 0;
+        white-space: nowrap;
+      }
+      .newsletter-desc {
+        font-size: 0.8rem;
+        line-height: 1.35;
+        color: var(--text-muted, #94a3b8);
+        margin: 0;
+      }
+      .newsletter-card .btn,
+      .newsletter-card a.btn {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        padding: 0.55rem 1.15rem;
+        font-size: 0.76rem;
+        min-height: 38px;
+        border-radius: 8px;
+        margin-left: auto;
+      }
+      @media (max-width: 1024px) {
+        .footer-top {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 1.5rem;
+        }
+        .footer-newsletter-wrap {
+          justify-content: flex-start;
+          width: 100%;
+        }
+        .newsletter-card {
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+      @media (max-width: 600px) {
+        .newsletter-card {
+          flex-direction: row;
+          align-items: center;
+          gap: 0.75rem;
+          padding: 0.75rem 0.9rem;
+        }
+        .newsletter-name {
+          font-size: 0.82rem;
+          white-space: normal;
+        }
+        .newsletter-desc {
+          font-size: 0.74rem;
+        }
+        .newsletter-card .btn,
+        .newsletter-card a.btn {
+          padding: 0.45rem 0.85rem;
+          font-size: 0.72rem;
+          min-height: 34px;
+        }
+      }
+      @media (max-width: 768px) {
         .wg {
           grid-template-columns: repeat(2, 1fr) !important;
           gap: 8px !important;
         }
       }
-      @media (max-width: 440px) {
+      @media (max-width: 480px) {
         .wg {
           grid-template-columns: 1fr !important;
         }
@@ -4459,25 +4639,3 @@
 </body>
 
 </html>
-
-/* Collapse empty icon wrappers when emojis are removed */
-.home-nav-icon:empty,
-.service-icon-box:empty,
-.role-card-icon:empty,
-.collab-icon:empty,
-.audience-icon:empty,
-.contact-method-icon:empty,
-.search-icon-left:empty,
-.faq-category-icon:empty,
-.tech-cat-title span:empty,
-div[style*="font-size:1.8rem"]:empty,
-span[style*="font-size:1.4rem"]:empty,
-span[style*="font-size:1.8rem"]:empty,
-span[style*="font-size: 2.2rem"]:empty,
-span[style*="font-size:2.8rem"]:empty {
-  display: none !important;
-}
-
-.search-icon-left:empty ~ .search-input {
-  padding-left: 1.25rem !important;
-}

@@ -40,10 +40,12 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--bg-0, #020408);
+  min-height: 100%;
 }
 
 body {
-  background: var(--bg-0);
+  background: var(--bg-0, #020408);
   color: var(--text-primary);
   font-family: var(--font-body);
   font-size: 18px;
@@ -51,6 +53,7 @@ body {
   overflow-x: hidden;
   cursor: default;
   transition: background 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -2164,28 +2167,52 @@ footer {
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.45));
 }
 
+.footer-newsletter-wrap,
+.footer-top > div:last-child {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 680px;
+  min-width: 0;
+}
+
 .footer-top .newsletter-card {
   margin-top: 0;
 }
 
 .newsletter-card {
-  margin-top: 2.5rem;
-  padding: 1.5rem 2rem;
+  margin-top: 0;
+  padding: 0.85rem 1.25rem;
   background: var(--bg-card);
-  border: 2px solid rgba(251, 191, 36, 0.5) !important;
-  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg, 14px);
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8),
-              inset 0 1px 0 rgba(255, 255, 255, 0.08),
-              inset 0 -1px 0 rgba(0, 0, 0, 0.8),
-              0 0 16px rgba(251, 191, 36, 0.15) !important;
+  justify-content: space-between;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 680px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+.newsletter-card .btn,
+.newsletter-card a.btn {
+  width: auto;
+  max-width: max-content;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  padding: 0.55rem 1.15rem;
+  font-size: 0.76rem;
+  min-height: 38px;
+  border-radius: 8px;
+  margin-left: auto;
 }
 
 .newsletter-info {
-  flex: 1;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .newsletter-name {
@@ -2462,12 +2489,25 @@ footer {
     user-select: none;
   }
 
+  .nav-dropdown:hover .dropdown-menu,
+  .nav-dropdown:focus-within .dropdown-menu {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    display: none !important;
+  }
+
+  .nav-dropdown:hover .dropdown-caret {
+    transform: rotate(0deg) !important;
+  }
+
   .dropdown-menu {
+    display: none !important;
     position: static !important;
     transform: none !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: auto !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
     background: rgba(255, 255, 255, 0.03) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: var(--radius) !important;
@@ -2476,7 +2516,6 @@ footer {
     width: 100% !important;
     min-width: 100% !important;
     max-width: 100% !important;
-    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     max-height: none !important;
@@ -2486,6 +2525,26 @@ footer {
 
   .dropdown-menu.mobile-hidden {
     display: none !important;
+  }
+
+  .nav-dropdown.open .dropdown-menu,
+  .nav-dropdown.open:hover .dropdown-menu,
+  .nav-dropdown.open:focus-within .dropdown-menu,
+  .dropdown-menu.mobile-open {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  .nav-dropdown .dropdown-caret {
+    transition: transform 0.25s ease;
+  }
+
+  .nav-dropdown.open .dropdown-caret,
+  .nav-dropdown.open:hover .dropdown-caret {
+    transform: rotate(180deg) !important;
+    color: var(--cyan, #38bdf8) !important;
   }
 
   .dropdown-menu li {
@@ -2612,8 +2671,30 @@ footer {
   }
 
   .newsletter-card {
-    padding: 1.25rem 1rem;
-    gap: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.75rem 0.9rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .newsletter-name {
+    font-size: 0.82rem;
+    white-space: normal;
+  }
+
+  .newsletter-desc {
+    font-size: 0.74rem;
+  }
+
+  .newsletter-card .btn,
+  .newsletter-card a.btn {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.72rem;
+    min-height: 34px;
+    margin-left: auto;
   }
 
   .footer-bottom {

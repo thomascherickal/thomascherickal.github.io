@@ -8,8 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Open+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="buttons.css" />
   <style>
     :root {
@@ -2133,12 +2134,25 @@
         user-select: none;
       }
 
+      .nav-dropdown:hover .dropdown-menu,
+      .nav-dropdown:focus-within .dropdown-menu {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        display: none !important;
+      }
+
+      .nav-dropdown:hover .dropdown-caret {
+        transform: rotate(0deg) !important;
+      }
+
       .dropdown-menu {
+        display: none !important;
         position: static !important;
         transform: none !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        pointer-events: auto !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
         background: rgba(255, 255, 255, 0.03) !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
         border-radius: var(--radius) !important;
@@ -2147,7 +2161,6 @@
         width: 100% !important;
         min-width: 100% !important;
         max-width: 100% !important;
-        display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         max-height: none !important;
@@ -2157,6 +2170,26 @@
 
       .dropdown-menu.mobile-hidden {
         display: none !important;
+      }
+
+      .nav-dropdown.open .dropdown-menu,
+      .nav-dropdown.open:hover .dropdown-menu,
+      .nav-dropdown.open:focus-within .dropdown-menu,
+      .dropdown-menu.mobile-open {
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+      }
+
+      .nav-dropdown .dropdown-caret {
+        transition: transform 0.25s ease;
+      }
+
+      .nav-dropdown.open .dropdown-caret,
+      .nav-dropdown.open:hover .dropdown-caret {
+        transform: rotate(180deg) !important;
+        color: var(--cyan, #38bdf8) !important;
       }
 
       .dropdown-menu li {
@@ -3879,14 +3912,63 @@
         align-items: center !important;
       }
 
+      .nav-dropdown:hover .dropdown-menu,
+      .nav-dropdown:focus-within .dropdown-menu {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        display: none !important;
+      }
+
+      .nav-dropdown:hover .dropdown-caret {
+        transform: rotate(0deg) !important;
+      }
+
       .dropdown-menu {
+        display: none !important;
+        position: static !important;
+        transform: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: var(--radius) !important;
+        box-shadow: none !important;
+        margin-top: 0.4rem !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        flex-direction: column !important;
+        align-items: center !important;
         max-height: none !important;
-        overflow-y: visible !important;
+        overflow: visible !important;
+        padding: 0.5rem 0.25rem !important;
         white-space: normal !important;
       }
 
       .dropdown-menu.mobile-hidden {
         display: none !important;
+      }
+
+      .nav-dropdown.open .dropdown-menu,
+      .nav-dropdown.open:hover .dropdown-menu,
+      .nav-dropdown.open:focus-within .dropdown-menu,
+      .dropdown-menu.mobile-open {
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+      }
+
+      .nav-dropdown .dropdown-caret {
+        transition: transform 0.25s ease;
+      }
+
+      .nav-dropdown.open .dropdown-caret,
+      .nav-dropdown.open:hover .dropdown-caret {
+        transform: rotate(180deg) !important;
+        color: var(--cyan, #38bdf8) !important;
       }
 
       .dropdown-menu a {
@@ -3895,6 +3977,28 @@
         justify-content: center;
         min-height: 44px !important;
       }
+    }
+
+    /* Collapse empty icon wrappers when emojis are removed */
+    .home-nav-icon:empty,
+    .service-icon-box:empty,
+    .role-card-icon:empty,
+    .collab-icon:empty,
+    .audience-icon:empty,
+    .contact-method-icon:empty,
+    .search-icon-left:empty,
+    .faq-category-icon:empty,
+    .tech-cat-title span:empty,
+    div[style*="font-size:1.8rem"]:empty,
+    span[style*="font-size:1.4rem"]:empty,
+    span[style*="font-size:1.8rem"]:empty,
+    span[style*="font-size: 2.2rem"]:empty,
+    span[style*="font-size:2.8rem"]:empty {
+      display: none !important;
+    }
+
+    .search-icon-left:empty ~ .search-input {
+      padding-left: 1.25rem !important;
     }
   </style>
 </head>
@@ -3931,6 +4035,24 @@
           <li><a href="claude-design.html">Claude Design</a></li>
           <li><a href="claude-science.html">Claude for Science</a></li>
           <li><a href="claude-local-llms.html">Claude With Local LLMs</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          Gemini<span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="google-gemini-101.html">Google Gemini 101</a></li>
+          <li><a href="google-ai-studio.html">Google AI Studio</a></li>
+          <li><a href="google-antigravity-ide.html">Google Antigravity IDE</a></li>
+          <li><a href="google-gemini-deep-think.html">Gemini Deep Think</a></li>
+          <li><a href="google-nano-banana.html">Nano Banana</a></li>
+          <li><a href="google-flow.html">Google Flow</a></li>
+          <li><a href="google-gemini-spark.html">Gemini Spark</a></li>
+          <li><a href="google-gemini-notebook.html">Gemini Notebook</a></li>
+          <li><a href="google-gemma.html">Google Gemma</a></li>
+          <li><a href="google-deep-research.html">Google Deep Research</a></li>
+          <li><a href="google-gemini-argon.html">Gemini Argon</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
@@ -3972,7 +4094,7 @@
       var navLinks = document.querySelector('.nav-links');
 
       function isMobile() {
-        return window.innerWidth <= 768;
+        return window.innerWidth <= 1024;
       }
 
       function sendHeight(h) {
@@ -4016,8 +4138,49 @@
         }
       });
 
-      // Desktop dropdown hover/focus
       var navDropdowns = document.querySelectorAll('.nav-dropdown');
+
+      function closeAllMobileDropdowns() {
+        navDropdowns.forEach(function (p) {
+          p.classList.remove('open');
+          var m = p.querySelector('.dropdown-menu');
+          if (m) {
+            m.classList.remove('mobile-open');
+            m.classList.add('mobile-hidden');
+          }
+          var c = p.querySelector('.dropdown-caret');
+          if (c) c.style.transform = '';
+        });
+      }
+
+      // Close all dropdowns by default on load
+      closeAllMobileDropdowns();
+
+      // Mobile dropdown click toggle
+      navDropdowns.forEach(function (navDropdown) {
+        var toggle = navDropdown.querySelector('.nav-dropdown-toggle');
+        var menu = navDropdown.querySelector('.dropdown-menu');
+        if (toggle && menu) {
+          toggle.addEventListener('click', function (e) {
+            if (isMobile()) {
+              e.preventDefault();
+              e.stopPropagation();
+              var wasOpen = navDropdown.classList.contains('open') || menu.classList.contains('mobile-open');
+              closeAllMobileDropdowns();
+              if (!wasOpen) {
+                navDropdown.classList.add('open');
+                menu.classList.add('mobile-open');
+                menu.classList.remove('mobile-hidden');
+                var caret = toggle.querySelector('.dropdown-caret');
+                if (caret) caret.style.transform = 'rotate(180deg)';
+              }
+              recalcHeight();
+            }
+          });
+        }
+      });
+
+      // Desktop dropdown hover/focus
       navDropdowns.forEach(function (navDropdown) {
         navDropdown.addEventListener('mouseenter', function () {
           if (!isMobile()) { isDropdownOpen = true; recalcHeight(); }
@@ -4049,14 +4212,31 @@
       if (navToggle) {
         navToggle.addEventListener('change', function () {
           isMobileMenuOpen = navToggle.checked;
+          if (!navToggle.checked) {
+            closeAllMobileDropdowns();
+          }
           recalcHeight();
         });
       }
+
+      // Close menu on link click
+      var inNavLinks = document.querySelectorAll('.nav-links a:not(.nav-dropdown-toggle)');
+      inNavLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (navToggle && navToggle.checked) {
+            navToggle.checked = false;
+            isMobileMenuOpen = false;
+            closeAllMobileDropdowns();
+            recalcHeight();
+          }
+        });
+      });
 
       // Window resize — also update mobile nav panel height
       window.addEventListener('resize', function () {
         if (!isMobile()) {
           isMobileMenuOpen = false;
+          closeAllMobileDropdowns();
           if (navLinks) navLinks.style.height = '';
         }
         recalcHeight();
@@ -4069,25 +4249,3 @@
 </body>
 
 </html>
-
-/* Collapse empty icon wrappers when emojis are removed */
-.home-nav-icon:empty,
-.service-icon-box:empty,
-.role-card-icon:empty,
-.collab-icon:empty,
-.audience-icon:empty,
-.contact-method-icon:empty,
-.search-icon-left:empty,
-.faq-category-icon:empty,
-.tech-cat-title span:empty,
-div[style*="font-size:1.8rem"]:empty,
-span[style*="font-size:1.4rem"]:empty,
-span[style*="font-size:1.8rem"]:empty,
-span[style*="font-size: 2.2rem"]:empty,
-span[style*="font-size:2.8rem"]:empty {
-  display: none !important;
-}
-
-.search-icon-left:empty ~ .search-input {
-  padding-left: 1.25rem !important;
-}

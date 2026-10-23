@@ -55,6 +55,13 @@ for a in agent_files:
     base = os.path.basename(a)
     PAGE_MAPPINGS[base] = base.replace(".html", ".md")
 
+# Auto-discover google gemini pages
+google_files = sorted(glob.glob(os.path.join(REPO_DIR, "google-*.html")))
+for g in google_files:
+    base = os.path.basename(g)
+    if not base.startswith("google43d"):
+        PAGE_MAPPINGS[base] = base.replace(".html", ".md")
+
 def get_file_hash(path: str) -> str:
     if not os.path.exists(path):
         return ""

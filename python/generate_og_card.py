@@ -161,7 +161,7 @@ html_content = f"""<!DOCTYPE html>
     }}
 
     .title-name {{
-      font-size: 72px;
+      font-size: 66px;
       font-weight: 900;
       line-height: 1.05;
       letter-spacing: -0.035em;
@@ -170,7 +170,7 @@ html_content = f"""<!DOCTYPE html>
     }}
 
     .title-role {{
-      font-size: 42px;
+      font-size: 36px;
       font-weight: 800;
       color: #FFFFFF;
       letter-spacing: -0.02em;
@@ -179,29 +179,73 @@ html_content = f"""<!DOCTYPE html>
 
     .pillars-tags {{
       display: flex;
-      align-items: center;
-      gap: 12px;
+      flex-direction: column;
+      gap: 10px;
       margin-top: 10px;
-      flex-wrap: wrap;
+    }}
+
+    .pillars-row {{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: nowrap;
     }}
 
     .pillar-chip {{
-      background: rgba(56, 189, 248, 0.08);
-      border: 1px solid rgba(56, 189, 248, 0.4);
-      border-radius: 10px;
-      padding: 9px 18px;
+      border-radius: 9px;
+      padding: 7px 15px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 17px;
+      font-size: 14.5px;
       font-weight: 700;
-      color: #38BDF8;
       letter-spacing: 0.02em;
-      box-shadow: 0 0 16px rgba(56, 189, 248, 0.15);
       white-space: nowrap;
     }}
 
+    .chip-cyan {{
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.45);
+      color: #38BDF8;
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.16);
+    }}
+
+    .chip-gold {{
+      background: rgba(251, 191, 36, 0.1);
+      border: 1px solid rgba(251, 191, 36, 0.45);
+      color: #FBBF24;
+      box-shadow: 0 0 14px rgba(251, 191, 36, 0.16);
+    }}
+
+    .chip-emerald {{
+      background: rgba(52, 211, 153, 0.1);
+      border: 1px solid rgba(52, 211, 153, 0.45);
+      color: #34D399;
+      box-shadow: 0 0 14px rgba(52, 211, 153, 0.16);
+    }}
+
+    .chip-blue {{
+      background: rgba(96, 165, 250, 0.1);
+      border: 1px solid rgba(96, 165, 250, 0.45);
+      color: #60A5FA;
+      box-shadow: 0 0 14px rgba(96, 165, 250, 0.16);
+    }}
+
+    .chip-purple {{
+      background: rgba(192, 132, 252, 0.1);
+      border: 1px solid rgba(192, 132, 252, 0.45);
+      color: #C084FC;
+      box-shadow: 0 0 14px rgba(192, 132, 252, 0.16);
+    }}
+
+    .chip-slate {{
+      background: rgba(226, 232, 240, 0.08);
+      border: 1px solid rgba(226, 232, 240, 0.35);
+      color: #E2E8F0;
+      box-shadow: 0 0 14px rgba(226, 232, 240, 0.12);
+    }}
+
     .pillar-sep {{
-      color: rgba(255, 255, 255, 0.3);
-      font-size: 18px;
+      color: rgba(255, 255, 255, 0.25);
+      font-size: 15px;
       font-weight: 400;
     }}
 
@@ -319,16 +363,25 @@ html_content = f"""<!DOCTYPE html>
       <div class="hero-info">
         <div class="eyebrow">
           <span class="eyebrow-pill"></span>
-          <span>// The Digital Futurist &middot; Enterprise AI Systems</span>
+          <span>// The Digital Futurist &middot; AI Systems Training</span>
         </div>
         <h1 class="title-name">Thomas Cherickal</h1>
         <h2 class="title-role">Generative AI Consultant</h2>
         <div class="pillars-tags">
-          <span class="pillar-chip">Digital AI Transformation</span>
-          <span class="pillar-sep">&bull;</span>
-          <span class="pillar-chip">Claude AI Consultant</span>
-          <span class="pillar-sep">&bull;</span>
-          <span class="pillar-chip">Office Automation</span>
+          <div class="pillars-row">
+            <span class="pillar-chip chip-gold">Claude AI Consultant</span>
+            <span class="pillar-sep">&bull;</span>
+            <span class="pillar-chip chip-gold">Gemini AI Consultant</span>
+            <span class="pillar-sep">&bull;</span>
+            <span class="pillar-chip chip-emerald">AI Agent Orchestrator</span>
+          </div>
+          <div class="pillars-row">
+            <span class="pillar-chip chip-blue">TDD AI-assisted Dev</span>
+            <span class="pillar-sep">&bull;</span>
+            <span class="pillar-chip chip-purple">Digital AI Transformation</span>
+            <span class="pillar-sep">&bull;</span>
+            <span class="pillar-chip chip-slate">Office Automation</span>
+          </div>
         </div>
       </div>
       <div class="avatar-wrapper">

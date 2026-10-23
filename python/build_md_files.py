@@ -978,7 +978,11 @@ def main():
             f.write(content)
         print(f"  -> Wrote {len(content.splitlines())} lines to {md_name}")
 
-    agent_files = sorted(glob.glob(os.path.join(REPO_DIR, "agents-*.html")) + glob.glob(os.path.join(REPO_DIR, "claude-*.html")))
+    agent_files = sorted(
+        glob.glob(os.path.join(REPO_DIR, "agents-*.html")) +
+        glob.glob(os.path.join(REPO_DIR, "claude-*.html")) +
+        [g for g in glob.glob(os.path.join(REPO_DIR, "google-*.html")) if not os.path.basename(g).startswith("google43d")]
+    )
     for a_path in agent_files:
         base = os.path.basename(a_path)
         md_name = base.replace(".html", ".md")

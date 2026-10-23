@@ -404,12 +404,25 @@ def build():
         user-select: none;
       }
 
+      .nav-dropdown:hover .dropdown-menu,
+      .nav-dropdown:focus-within .dropdown-menu {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        display: none !important;
+      }
+
+      .nav-dropdown:hover .dropdown-caret {
+        transform: rotate(0deg) !important;
+      }
+
       .dropdown-menu {
+        display: none !important;
         position: static !important;
         transform: none !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        pointer-events: auto !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
         background: rgba(255, 255, 255, 0.03) !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
         border-radius: var(--radius) !important;
@@ -418,7 +431,6 @@ def build():
         width: 100% !important;
         min-width: 100% !important;
         max-width: 100% !important;
-        display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         max-height: none !important;
@@ -428,6 +440,26 @@ def build():
 
       .dropdown-menu.mobile-hidden {
         display: none !important;
+      }
+
+      .nav-dropdown.open .dropdown-menu,
+      .nav-dropdown.open:hover .dropdown-menu,
+      .nav-dropdown.open:focus-within .dropdown-menu,
+      .dropdown-menu.mobile-open {
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+      }
+
+      .nav-dropdown .dropdown-caret {
+        transition: transform 0.25s ease;
+      }
+
+      .nav-dropdown.open .dropdown-caret,
+      .nav-dropdown.open:hover .dropdown-caret {
+        transform: rotate(180deg) !important;
+        color: var(--cyan, #38bdf8) !important;
       }
 
       .dropdown-menu li {
@@ -568,21 +600,35 @@ def build():
     footer {
       background: var(--bg-1, #060912);
       border-top: 1px solid var(--border, rgba(56, 189, 248, 0.22));
-      padding: 5rem clamp(1.5rem, 8vw, 8rem) 3rem;
+      padding: 4rem clamp(1.5rem, 6vw, 6rem) 2.5rem;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 0;
     }
     .footer-top-divider {
       display: none;
     }
     .footer-top {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 3rem;
-      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.75rem;
+      margin-bottom: 2.5rem;
     }
     .footer-brand {
+      flex: 0 0 auto;
       display: flex;
       align-items: center;
       gap: 0.85rem;
+    }
+    .footer-newsletter-wrap,
+    .footer-top > div:last-child {
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: flex-end;
+      max-width: 680px;
+      min-width: 0;
     }
     @keyframes tcLogoPulse {
       0%, 100% {
@@ -722,29 +768,52 @@ def build():
       margin-top: 0;
     }
     .newsletter-card {
-      margin-top: 2.5rem;
-      padding: 1.5rem 2rem;
+      margin-top: 0;
+      padding: 0.85rem 1.25rem;
       background: var(--bg-card, linear-gradient(145deg, #0c111d 0%, #04060c 100%));
-      border: 2px solid rgba(251, 191, 36, 0.5) !important;
-      border-radius: var(--radius-lg, 14px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
       display: flex;
+      flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      gap: 2rem;
-      box-shadow: 0 0 16px rgba(251, 191, 36, 0.15), 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+      gap: 1.25rem;
+      width: 100%;
+      max-width: 680px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      box-sizing: border-box;
+    }
+    .newsletter-card .btn,
+    .newsletter-card a.btn {
+      width: auto !important;
+      max-width: max-content !important;
+      flex: 0 0 auto !important;
+      white-space: nowrap !important;
+      padding: 0.55rem 1.15rem !important;
+      font-size: 0.76rem !important;
+      min-height: 38px !important;
+      border-radius: 8px !important;
+      margin-left: auto;
     }
     .newsletter-info {
-      flex: 1;
+      flex: 1 1 auto;
+      min-width: 0;
     }
     .newsletter-desc {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: var(--text-muted, #94a3b8);
-      margin-top: 0.25rem;
+      margin-top: 0.2rem;
+      line-height: 1.35;
     }
     .newsletter-name {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.45rem;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--gold, #fbbf24);
+      margin-bottom: 0.2rem;
+      white-space: nowrap;
     }
     .newsletter-icon {
       display: inline-flex;
@@ -769,22 +838,44 @@ def build():
       fill: var(--cyan);
       margin-right: 4px;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 1024px) {
       .footer-top {
-        grid-template-columns: 1fr;
-        gap: 1.75rem;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 1.5rem !important;
+      }
+      .footer-newsletter-wrap,
+      .footer-top > div:last-child {
+        justify-content: flex-start !important;
+        width: 100% !important;
       }
       .newsletter-card {
-        flex-direction: column;
-        align-items: stretch;
-        text-align: center;
-        padding: 1.25rem 1rem !important;
-        gap: 1rem;
+        max-width: 100% !important;
+        width: 100% !important;
       }
-      .newsletter-card .btn {
+    }
+    @media (max-width: 600px) {
+      .newsletter-card {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        padding: 0.75rem 0.9rem;
         width: 100%;
-        justify-content: center;
-        min-height: 44px;
+        max-width: 100%;
+      }
+      .newsletter-name {
+        font-size: 0.82rem;
+        white-space: normal;
+      }
+      .newsletter-desc {
+        font-size: 0.74rem;
+      }
+      .newsletter-card .btn,
+      .newsletter-card a.btn {
+        padding: 0.45rem 0.85rem !important;
+        font-size: 0.72rem !important;
+        min-height: 34px !important;
       }
       .footer-bottom {
         flex-direction: column;
@@ -792,6 +883,9 @@ def build():
         text-align: center;
         gap: 0.75rem;
       }
+    }
+    .tc-copy {
+      margin-bottom: 0;
     }
     .dv {
       border: none;
@@ -903,14 +997,21 @@ def build():
       border-radius: 2px;
       margin: 0 8px;
     }
-    @media (max-width: 820px) {
+    @media (max-width: 1366px) {
       .wg {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px !important;
       }
     }
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       .wg {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .wg {
+        grid-template-columns: 1fr !important;
       }
     }
   </style>"""
@@ -938,7 +1039,7 @@ def build():
     for file_path in html_files:
         if os.path.abspath(file_path) in excluded:
             continue
-        if os.path.basename(file_path).startswith("google"):
+        if os.path.basename(file_path).startswith("google43d"):
             continue
         if "footer" in os.path.basename(file_path).lower():
             continue
@@ -960,10 +1061,18 @@ def build():
                 new_content = content
 
         if footer_pattern.search(new_content):
-            new_content = footer_pattern.sub(footer_block, new_content)
+            footer_match = footer_pattern.search(new_content)
+            main_close_pos = new_content.rfind("</main>")
+            if main_close_pos != -1 and footer_match.start() < main_close_pos:
+                # Footer was inside <main>! Remove it from inside <main> and re-place outside </main>
+                new_content = footer_pattern.sub("", new_content)
+                main_close = new_content.rfind("</main>") + len("</main>")
+                new_content = new_content[:main_close] + "\n" + footer_block + "\n" + new_content[main_close:]
+            else:
+                new_content = footer_pattern.sub(footer_block, new_content)
         else:
             if "</main>" in new_content:
-                main_close = new_content.rfind("</main>")
+                main_close = new_content.rfind("</main>") + len("</main>")
                 new_content = new_content[:main_close] + "\n" + footer_block + "\n" + new_content[main_close:]
             elif "</body>" in new_content:
                 body_close = new_content.rfind("</body>")
