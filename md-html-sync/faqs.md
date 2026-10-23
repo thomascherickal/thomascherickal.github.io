@@ -8,7 +8,159 @@
 
 ## Frequently Asked Questions
 
-### 1. How is training tailored for solo practitioners, freelancers, and independent builders?
+### 1. How is Payment made?
+*Payment: Methods & Invoicing · FAQ #49*  
+We settle engagements globally via two direct, frictionless payment channels: PayPal or Bank Transfer.
+
+- PayPal: Frictionless instant settlement supporting business accounts, all major international credit/debit cards, and multi-currency balances with zero regional exchange impediments.
+
+- Direct Bank Transfer (Wire / ACH / SWIFT / IBAN): Domestic and international wire transfers with full institutional support, including ACH for US entities, SEPA for European clients, and SWIFT/IBAN for global partners.
+
+- Official Commercial Invoicing: Every installment comes with a formal, itemized commercial invoice issued in USD (or local currency equivalent) and official receipts suitable for corporate expense accounts, vendor procurement systems, and corporate tax write-offs.
+
+Settlement links and wire routing instructions are dispatched directly upon reaching each milestone.
+
+---
+
+### 2. What is the Schedule of Payment?
+*Payment: Schedule & Milestones · FAQ #50*  
+All payments are distributed into five equal installments (20% per installment), mapped directly to completed training days:
+
+- 30-Day Enterprise AI Transformation (Every 5 Days): Billed in 5 equal installments due every 5 days of completed training—Milestone 1 after Day 5, Milestone 2 after Day 10, Milestone 3 after Day 15, Milestone 4 after Day 20, and Milestone 5 after Day 25/30.
+
+- 15-Day Personal AI Transformation (Every 3 Days): Billed in 5 equal installments due every 3 days of completed training—Milestone 1 after Day 3, Milestone 2 after Day 6, Milestone 3 after Day 9, Milestone 4 after Day 12, and Milestone 5 after Day 15.
+
+- Included Post-Training Support: The extensive subsequent support periods (30 days of included support for Enterprise; 15 days of included support with daily questions and doubts clarification and light skim guides for Personal) carry zero additional cost.
+
+You never pay ahead of delivery—each installment is settled strictly as milestones are achieved.
+
+---
+
+### 3. How much is required as upfront payment?
+*Payment: Zero Upfront Commitment · FAQ #51*  
+Nothing. There is strictly zero upfront payment ($0 advance). You do not pay a single dollar prior to commencing training.
+
+- Payment Made Only After Training: Payment installments are initiated only after completing 3 or 5 full days of training (3 days for Personal AI Transformation, or 5 days for Enterprise AI Transformation).
+
+- 3 to 6 Hours of Daily Live Immersion: Every training day entails 3 to 6 hours of live, hands-on engineering, pair-programming, and real-world system architecture deployed directly into your repositories.
+
+- Zero-Risk Guarantee: If after the first 3 or 5 days you are not completely satisfied with the caliber of instruction, codebase progress, and production AI capability delivered, you owe nothing and walk away with zero financial obligation.
+
+This policy guarantees complete risk elimination, aligning our incentives entirely with your concrete engineering success.
+
+---
+
+### 4. What is Personal AI Transformation, and how is it distinct from enterprise workforce training?
+*Personal: Overview · FAQ #23*  
+Personal AI Transformation (also known as Personal AI Training) is an intensive, direct 1-on-1 mentorship and acceleration sprint crafted specifically for solo founders, independent practitioners, freelance consultants, and senior engineers. While enterprise workforce training is structured around multi-tier corporate hierarchies, SSO rollouts, and departmental division goals, Personal AI Transformation is hyper-focused on your sovereign systems.
+
+- Direct Pair-Programming & Architecture: You work directly with founder Thomas Cherickal on your actual codebases, product repositories, and real-world workflows.
+
+- Zero Corporate Friction: No HR committee approvals, vendor bureaucracy, or generic corporate lecture slides—we move at elite founder speed.
+
+- Tailored Personal Tech Stack: Systems are custom-configured around your exact tooling preferences, whether Claude Code, Google Antigravity, OpenRouter, vLLM, or Ollama.
+
+- 100% Sovereign IP Ownership: Every script, prompt handbook, fine-tuned agent, and automation harness created is 100% owned by you.
+
+Graduates emerge operating as high-leverage solo powerhouses capable of out-delivering entire conventional engineering squads.
+
+---
+
+### 5. Why is Personal AI Training capped at strictly 50% of enterprise training costs ($1,000 USD base)?
+*Personal: Pricing Cap · FAQ #24*  
+Our standard Enterprise AI Training carries a baseline rate of $2,000 USD. For Personal AI Transformation, we strictly cap the fee at 50% of enterprise costs ($1,000 USD base rate in Tier 1).
+
+- Justification of the 50% Cap: All 12 enterprise transformation disciplines are integrated into a single unified sprint, yet delivery incurs zero enterprise overhead—no procurement friction, legal redlining, multi-tenant sandboxes, or administrative bloat.
+
+- 195-Country Parity Scaled: The 50% cap cascades through all 6 Purchasing Power Parity tiers, scaling from $1,000 in Tier 1 down to $100 in Tier 6.
+
+- Maximum Founder ROI: Independent builders receive institutional-grade multi-agent architecture and local LLM cost slashing at a fraction of enterprise expenditure.
+
+This transparent ceiling guarantees that individual creators access world-class agent orchestration without enterprise pricing barriers.
+
+---
+
+### 6. How are all 12 transformation services unified under Personal AI Transformation?
+*Personal: 12-in-1 Curriculum · FAQ #25*  
+Rather than forcing clients to purchase separate standalone packages, all 12 practice capabilities are available under Personal AI Transformation in one coherent 30-day curriculum:
+
+- 1. Generative AI Transformation: End-to-end agentic workflow redesign and autonomous task delegation.
+
+- 2. Local LLMs & Cost Slashing: Sovereign inference via Ollama and vLLM to cut token spend by 60–90%.
+
+- 3. Claude Agent Orchestration: Orchestrator-Workers, Evaluator-Optimizer, and Router multi-agent teams.
+
+- 4. Hermes Agent Autonomy: Self-healing function calling and terminal execution with open-weights.
+
+- 5. Workflow Automations: Multi-app connectors, browser automation, and data pipeline orchestration.
+
+- 6. Quantum Applications (Experimental): Hybrid quantum circuit simulation with Qiskit and PennyLane.
+
+- 7. AI Budget & Cost Governance: Hard spend ceiling reverse proxies and semantic prompt caching.
+
+- 8. Workforce AI Enablement: Scaling operational leverage across your personal network or apprentices.
+
+- 9. AI Developer Training: Test-Driven Development (TDD) paired with Claude Code and terminal agents.
+
+- 10. Advanced AI Agents: Custom Model Context Protocol (MCP) servers and stateful execution graphs.
+
+- 11. Claude Basic Mastery: Prompt caching, context window hygiene, and system instruction engineering.
+
+- 12. Claude Advanced Orchestration: Multi-agent state machines, subagent dispatching, and evaluators.
+
+We selectively emphasize the disciplines most crucial to your immediate products and business goals.
+
+---
+
+### 7. What are the exact Country Parity Pricing rates for Personal AI Transformation across 195 countries?
+*Personal: Global Parity Rates · FAQ #26*  
+Purchasing Power Parity applies unconditionally to Personal AI Transformation, reflecting exactly 50% of the corresponding enterprise tier rate:
+
+- Tier 1 (High-Income OECD — USA, UK, EU, Singapore, Australia): $1,000 USD rate (100% standard).
+
+- Tier 2 (Growth Markets & Tech Hubs — India, Brazil, Mexico, Poland, UAE): $750 USD rate (25% parity discount).
+
+- Tier 3 (Emerging Economies — Nigeria, Kenya, Egypt, Vietnam, Pakistan): $500 USD rate (50% parity discount).
+
+- Tier 4 (Early-Stage Startups <$1M Funding): $500 USD rate (50% flat startup discount).
+
+- Tier 5 (Academia, Researchers & Non-Profits): $250 USD rate (75% academic discount).
+
+- Tier 6 (Underprivileged & Crisis Zones): $100 USD rate (90%+ subsidized quote / nominal honorarium).
+
+Rates are universally honored based on the client's verified operating country and organization classification.
+
+---
+
+### 8. Can I bring co-founders or team members to Personal AI Training?
+*Personal: One Person Only · FAQ #27*  
+No. Personal AI Training is strictly for one person only (private 1-on-1 acceleration). This ensures complete confidentiality, zero committee distraction, and custom hardware/workflow pairing tailored 100% to your individual daily work.
+
+- One-on-One Dedication: Direct, uninterrupted pair programming and mentorship with founder Thomas Cherickal.
+
+- Custom Private Setup: 100% configured for your specific developer environment, private local models, and personal productivity workflow.
+
+- Enterprise Training for Teams: If you wish to train a founding team, corporate department, or developer cohort, explore our Enterprise AI Training, which covers up to 10 participants in its fixed base rate (with additional seats at $250/head scaled by parity).
+
+---
+
+### 9. What is the structure of Personal AI Training, and how do the 15 days of training plus 15 days of included support work?
+*Personal: 15+15 Cadence · FAQ #28*  
+Personal AI Transformation is structured as an intensive two-phase acceleration program strictly for one person only: 15 days of intensive 1-on-1 sprint training covering all 12 services, immediately followed by 15 days of included support with daily questions and doubts clarification, and source materials and guides that are light and easy to skim.
+
+- Phase 1 (Days 1–15) · Intensive 1-on-1 Training Across All 12 Services: Direct pair-programming covering personal AI workflows, private local LLMs (Ollama/vLLM), Claude agent teams, autonomous Hermes loops, custom MCP servers, AI budget ceilings, and AI-assisted TDD.
+
+- Phase 2 (Days 16–30) · 15 Days Included Support & Daily Doubts Clarification: 15 consecutive days of direct support, daily questions and doubts clarification as you execute daily client work, plus access to source materials and guides that are light and easy to skim.
+
+- All 12 Disciplines Synthesized: No compromise—you access local LLM quantization, autonomous agents, and tool calling tailored to your machine.
+
+- 100% Intellectual Property Handover: Full ownership of all synthesized code, MCP tools, and configuration runbooks.
+
+Our explicit guarantee: 15 days of intensive instruction plus 15 days of included daily doubts clarification and lightweight guides ensures immediate, compounding ROI in your daily work.
+
+---
+
+### 10. How is training tailored for solo practitioners, freelancers, and independent builders?
 *Recipient: Individuals · FAQ #01*  
 Individual training is engineered to transform independent software consultants, solopreneurs, and knowledge workers into one-person powerhouse agencies. Rather than superficial prompting, individuals master full-stack agent orchestration using Claude Agents 101, Claude Code CLI, and Claude Cowork desktop automation.
 
@@ -22,9 +174,9 @@ Graduates gain the operational bandwidth of an entire 4–5 person development s
 
 ---
 
-### 2. How does the training fast-track freshers and junior developers into production-ready AI engineers?
+### 11. How does the training fast-track freshers and junior developers into production-ready AI engineers?
 *Recipient: Freshers · FAQ #02*  
-Freshers and recent computer science graduates often experience a steep disconnect between theoretical academic models and production-grade engineering. Our 10-day intensive bridges this chasm by instilling disciplined AI-assisted engineering habits from day one.
+Freshers and recent computer science graduates often experience a steep disconnect between theoretical academic models and production-grade engineering. Our 30-day intensive bridges this chasm by instilling disciplined AI-assisted engineering habits from day one.
 
 - AI-Assisted Test-Driven Development (TDD): Juniors learn to write strict, failing unit and integration tests before generating code with Claude Code, eliminating silent hallucinations.
 
@@ -36,7 +188,7 @@ Freshers graduate with the practical productivity, testing rigor, and architectu
 
 ---
 
-### 3. What advanced curriculum is delivered for senior software engineers, system architects, and DevOps?
+### 12. What advanced curriculum is delivered for senior software engineers, system architects, and DevOps?
 *Recipient: Developers · FAQ #03*  
 For senior engineers and systems architects, training bypasses basic prompting to focus strictly on scalable, production-grade agent architectures and infrastructural sovereignty.
 
@@ -52,7 +204,7 @@ Engineers gain full mastery over multi-agent orchestration while preventing cont
 
 ---
 
-### 4. How are non-technical corporate staff (Marketing, Sales, HR, Finance, Operations) trained?
+### 13. How are non-technical corporate staff (Marketing, Sales, HR, Finance, Operations) trained?
 *Recipient: Staff Members · FAQ #04*  
 Corporate staff receive pragmatic, zero-code productivity multiplication training designed for immediate daily utility. We focus on transforming repetitive administrative tasks into natural-language automated workflows.
 
@@ -68,7 +220,7 @@ Staff members regularly recover 10 to 15 hours of manual, repetitive busywork pe
 
 ---
 
-### 5. How does training prepare engineering managers, product leads, and directors to supervise AI workflows?
+### 14. How does training prepare engineering managers, product leads, and directors to supervise AI workflows?
 *Recipient: Management · FAQ #05*  
 Leading an AI-augmented team requires fundamentally different management metrics. We train engineering directors, project managers, and team leads to govern and optimize hybrid human-agent delivery loops.
 
@@ -84,7 +236,7 @@ Managers ensure that velocity multiplication never comes at the expense of budge
 
 ---
 
-### 6. What strategic briefings and governance training are provided for CXOs (CTO, CIO, CEO, CFO, CDO)?
+### 15. What strategic briefings and governance training are provided for CXOs (CTO, CIO, CEO, CFO, CDO)?
 *Recipient: CXOs & Leaders · FAQ #06*  
 Executive briefings for C-suite leaders distill technical realities into actionable enterprise competitive advantage, risk mitigation, and capital efficiency.
 
@@ -100,9 +252,9 @@ CXOs receive definitive strategic frameworks to lead enterprise AI transformatio
 
 ---
 
-### 7. How does the training help startup and technical founders launch zero-to-one MVPs in record time?
+### 16. How does the training help startup and technical founders launch zero-to-one MVPs in record time?
 *Company: Founders · FAQ #07*  
-For founders, speed to customer validation is existential. Our curriculum enables founders to collapse traditional 6-month product development cycles into 10 days.
+For founders, speed to customer validation is existential. Our curriculum enables founders to collapse traditional 6-month product development cycles into a single 30-day sprint.
 
 - Zero-to-One Scaffolding: Rapid generation of database schemas, API backends, and frontend components using Claude Code and terminal agent loops.
 
@@ -114,7 +266,7 @@ Founders ship complete, robust, self-testing software before burning precious pr
 
 ---
 
-### 8. How does this training empower serial entrepreneurs to build and scale automated micro-SaaS and ventures?
+### 17. How does this training empower serial entrepreneurs to build and scale automated micro-SaaS and ventures?
 *Company: Entrepreneurs · FAQ #08*  
 Serial digital entrepreneurs leverage our training to construct autonomous commercial flywheels that operate with minimal human intervention.
 
@@ -128,7 +280,7 @@ Entrepreneurs build scalable, highly profitable digital enterprises without need
 
 ---
 
-### 9. How does the 10-day intensive program multiply delivery velocity for seed and Series A startups?
+### 18. How does the 30-day intensive program multiply delivery velocity for seed and Series A startups?
 *Company: Startups · FAQ #09*  
 Backed startups must demonstrate exceptional growth and delivery velocity to reach subsequent funding milestones. We embed directly with your early engineering pod to install production-grade AI agent tooling into your live codebases.
 
@@ -142,7 +294,7 @@ Startups outpace better-funded competitors through disciplined, agent-augmented 
 
 ---
 
-### 10. How can Small and Medium Businesses (SMBs) adopt enterprise-grade AI automation without deep IT budgets?
+### 19. How can Small and Medium Businesses (SMBs) adopt enterprise-grade AI automation without deep IT budgets?
 *Company: SMBs · FAQ #10*  
 Many SMBs assume advanced AI requires seven-figure enterprise contracts. Our training focuses on high-ROI, low-complexity automations that yield immediate operational savings.
 
@@ -156,7 +308,7 @@ SMBs achieve institutional enterprise capabilities while maintaining disciplined
 
 ---
 
-### 11. How is enterprise-wide workforce training delivered across multi-department corporate organizations?
+### 20. How is enterprise-wide workforce training delivered across multi-department corporate organizations?
 *Company: Enterprises · FAQ #11*  
 Enterprise delivery is structured to integrate smoothly with corporate governance, single sign-on (SSO), and internal security policies across multiple operating divisions.
 
@@ -172,7 +324,7 @@ Enterprises achieve unified AI alignment across hundreds of employees without or
 
 ---
 
-### 12. How do Global Multinational Corporations deploy standardized, multi-region AI training and governance?
+### 21. How do Global Multinational Corporations deploy standardized, multi-region AI training and governance?
 *Company: Global MNCs · FAQ #12*  
 Global MNCs face intricate cross-border regulatory constraints, data residency laws, and multi-timezone operational requirements. Our enterprise practice delivers globally unified yet regionally compliant AI enablement.
 
@@ -188,45 +340,45 @@ Global MNCs gain a consistent, world-class standard of agentic software engineer
 
 ---
 
-### 13. What is the pricing model for the 10-day training contract, and what does the 20-participant cap include?
-*Pricing: Cohort Structure · FAQ #13*  
-Our 10-day training contracts feature a transparent, fixed base investment for up to 20 participants. There are no surprise hourly fees, hidden licensing royalties, or restrictive seat tiers for cohorts within this limit.
+### 22. What is the pricing model for enterprise training, and what does the 10-participant quota and 30-day training plus 30-day support guarantee cover?
+*Pricing: Enterprise Guarantee · FAQ #13*  
+Our enterprise training bookings feature a fixed base investment covering up to 10 participants, backed by our ironclad enterprise guarantee: 30 days of intensive workforce training AND 30 days of included ongoing support (total 60 days of enterprise protection). There are no hidden licensing royalties or hourly surprise fees.
 
-- Full 10-Day Live Sprint: 10 consecutive business days of interactive, instructor-led training and live pair-programming sandboxes.
+- 30 Days Live Training Sprint: 30 calendar days (4 intensive weeks) of interactive instructor-led instruction, live pair-programming sandboxes, and milestone deliverables.
 
-- Complete Digital Documentation: Architecture blueprints, prompt design handbooks, and production-grade starter repositories included.
+- 30 Days of Included Ongoing Support: 30 consecutive calendar days of post-sprint architectural reviews, PR audits, edge-case troubleshooting, and free doubt consultation.
 
-- 30 Days Post-Training Support: Comprehensive technical assistance for questions and edge cases following sprint completion.
+- Complete Digital Assets & Repos: Architecture blueprints, prompt design handbooks, and reproducible starter repositories included.
 
-- 30 Days Free Consultation for Doubts: Dedicated advisory window to inspect code, review PRs, and debug workflows.
+- Up to 10 Learners Included: Base fee covers up to 10 participants. Additional seats scale transparently at $250 USD per head (adjusted by country parity tier).
 
-- Graduate Discord Community: Lifetime access to our private, invite-only community for ongoing education and updates.
+- Graduate Discord Community & 100% IP: Lifetime alumni Discord access and complete unrestricted intellectual property assignment.
 
-For organizations in Tier 1, this represents exceptional ROI; for emerging regions, our parity multipliers make it globally accessible.
+This 30+30 dual guarantee ensures your organization achieves lasting capability with zero risk of implementation stall.
 
 ---
 
-### 14. What are the fees if our training cohort exceeds 20 participants?
+### 23. What are the fees if our training cohort exceeds 10 participants?
 *Pricing: Scale-Out · FAQ #14*  
-When a team desires to include more than 20 participants in a single 10-day cohort, pricing scales simply, transparently, and predictably: $500 USD per additional head.
+When a team desires to include more than 10 participants in a single 30-day cohort, pricing scales simply, transparently, and predictably: $250 USD per additional head.
 
-- Parity Discounts Apply Directly: The qualifying country parity multiplier applies to the $500 per-head fee as well.
+- Parity Discounts Apply Directly: The qualifying country parity multiplier applies to the $250 per-head fee as well.
 
-- Tier 1 (Standard): $500 USD per additional participant.
+- Tier 1 (Standard): $250 USD per additional participant.
 
-- Tier 2 (25% Parity Discount): $375 USD per additional participant (0.75X).
+- Tier 2 (25% Parity Discount): $187.50 USD per additional participant (0.75X).
 
-- Tier 3 & Tier 4 (50% Parity / Startup Discount): $250 USD per additional participant (0.50X).
+- Tier 3 & Tier 4 (50% Parity / Startup Discount): $125 USD per additional participant (0.50X).
 
-- Tier 5 (75% Academia / Non-Profit Discount): $125 USD per additional participant (0.25X).
+- Tier 5 (75% Academia / Non-Profit Discount): $62.50 USD per additional participant (0.25X).
 
-- Tier 6 (Radical Equity / Subsidized): Subsidized micro-rates evaluated case-by-case.
+- Tier 6 (Radical Equity / Subsidized): $25 USD / subsidized micro-rates evaluated case-by-case.
 
 Every participant receives full access to digital runbooks, sandboxes, post-training support, and the graduate Discord.
 
 ---
 
-### 15. How do custom quotes work for enterprise-wide rollouts, large divisions, or multi-cohort deployments?
+### 24. How do custom quotes work for enterprise-wide rollouts, large divisions, or multi-cohort deployments?
 *Pricing: Enterprise Quotes · FAQ #15*  
 For organizations training 50 to 5,000+ employees across multiple engineering divisions or business units, we provide custom enterprise master service agreements (MSAs).
 
@@ -242,7 +394,7 @@ Custom quotes are generated within 24 hours following an initial architectural s
 
 ---
 
-### 16. What is Tier 1 (Developed Nations) and which countries and organizations qualify?
+### 25. What is Tier 1 (Developed Nations) and which countries and organizations qualify?
 *Parity: Tier 1 · FAQ #16*  
 Tier 1 encompasses high-income OECD economies with mature capital markets and high purchasing power. Teams operating in Tier 1 pay our 100% standard baseline rate (1.0X multiplier, 0% discount).
 
@@ -256,7 +408,7 @@ Tier 1 standard rates fund our pro-bono research, open-source repositories, and 
 
 ---
 
-### 17. What is Tier 2 (Developing Nations & Growth Markets) and how does the 25% discount apply?
+### 26. What is Tier 2 (Developing Nations & Growth Markets) and how does the 25% discount apply?
 *Parity: Tier 2 · FAQ #17*  
 Tier 2 is calibrated for rapidly expanding digital ecosystems and regional technology hubs. Qualifying organizations receive an automatic 25% Parity Discount (75% base rate, 0.75X multiplier) across all consulting and training packages.
 
@@ -272,7 +424,7 @@ This discount bridges regional wage differentials while delivering identical pre
 
 ---
 
-### 18. What is Tier 3 (Least Developed & Emerging Markets) and how does the 50% discount apply?
+### 27. What is Tier 3 (Least Developed & Emerging Markets) and how does the 50% discount apply?
 *Parity: Tier 3 · FAQ #18*  
 Tier 3 is designated for World Bank lower-middle and low-income economies where currency exchange rates impose severe barriers to frontier technology. Qualifying teams receive a flat 50% Parity Discount (50% base rate, 0.50X multiplier).
 
@@ -288,7 +440,7 @@ Our goal is to ensure world-class agent engineering capabilities flourish within
 
 ---
 
-### 19. What is Tier 4 (Early-Stage Tech Startups) and who qualifies for the 50% discount?
+### 28. What is Tier 4 (Early-Stage Tech Startups) and who qualifies for the 50% discount?
 *Parity: Tier 4 · FAQ #19*  
 Tier 4 is dedicated to supporting ambitious early-stage founders globally, regardless of geographical origin. Ventures qualifying under Tier 4 receive a flat 50% Startup Discount (0.50X multiplier).
 
@@ -302,7 +454,7 @@ Early-stage startups preserve valuable equity while gaining production-grade mul
 
 ---
 
-### 20. What is Tier 5 (Academia, Research Labs & Non-Profits) and how do they receive 75% off?
+### 29. What is Tier 5 (Academia, Research Labs & Non-Profits) and how do they receive 75% off?
 *Parity: Tier 5 · FAQ #20*  
 In alignment with our educational mission, Tier 5 provides deep subsidies to higher education and public-interest research. Qualifying institutions receive a 75% Parity Discount (25% base rate, 0.25X multiplier).
 
@@ -316,7 +468,7 @@ We empower students, researchers, and humanitarian workers with frontier AI capa
 
 ---
 
-### 21. What is Tier 6 (Radical Equity, Distressed Regions & Micro-Grants) and how does subsidized relief work?
+### 30. What is Tier 6 (Radical Equity, Distressed Regions & Micro-Grants) and how does subsidized relief work?
 *Parity: Tier 6 · FAQ #21*  
 Tier 6 embodies our foundational commitment that no ambitious technologist should be denied frontier AI capabilities due to war, economic collapse, or extreme systemic poverty. We provide custom subsidized micro-rates and up to 90%+ financial relief.
 
@@ -332,7 +484,55 @@ Tier 6 engagements are reviewed directly by founder Thomas Cherickal on a missio
 
 ---
 
-### 22. What is the mission of the founder, and why is Purchasing Power Parity (PPP) integral to this practice?
+### 31. How do organizations and educational institutions qualify for Tier 5 (75% discount) pricing?
+*Parity: Tier 5 Qualification · FAQ #46*  
+Qualification for Tier 5 (75% Parity Discount / $500 USD per 1-month service) is straightforward and designed to support public education, open science, and humanitarian missions with minimal bureaucracy:
+
+- Accredited Academic Institutions: Universities, colleges, community schools, and student engineering groups qualifying via an institutional email address (e.g., .edu, .ac.uk) or proof of faculty/student status.
+
+- Non-Profit & Charitable Organizations: Registered non-profits, international NGOs, and 501(c)(3) entities providing public benefit, verified via official registration documentation.
+
+- Open-Source Maintainers & Independent Researchers: Core maintainers of prominent public-interest open-source software libraries, research labs, or non-commercial AI evaluation initiatives.
+
+- Automatic Scale-Out Verification: Tier 5 cohorts receive the full 75% discount across the base 30-day package and any additional seats ($125/head vs. standard $500/head).
+
+Verification is completed during initial onboarding within 24 hours of inquiry.
+
+---
+
+### 32. What criteria qualify a client, team, or builder for Tier 6 Radical Equity pricing?
+*Parity: Tier 6 Qualification · FAQ #47*  
+Tier 6 is our Radical Equity & Economic Inclusion program, guaranteeing that geographical hardship, economic collapse, or extreme capital constraints never block access to world-class AI engineering education. Qualification is open to:
+
+- Vulnerable Geographic & Economic Regions: Builders, developer communities, and teams operating in UN Least Developed Countries (LDCs), crisis zones, post-conflict areas, or refugee settlements.
+
+- Hyperinflation & Depreciated Currencies: Technologists living in economies impacted by runaway hyperinflation, acute foreign exchange restrictions, or banking collapse.
+
+- Grassroots Educational Initiatives: Volunteer community collectives teaching coding to underprivileged youth, displaced persons, or historically excluded demographics.
+
+- Under-Resourced Independent Innovators: High-potential independent engineers and student builders facing severe financial hardship with demonstrated dedication to open engineering.
+
+Tier 6 delivers deeply subsidized rates (up to 90%+ discounts or custom micro-fees) tailored directly to your team's economic reality.
+
+---
+
+### 33. How do prospective clients apply for a Tier 6 pricing training program?
+*Application: Tier 6 Subsidies · FAQ #48*  
+Tier 6 subsidized engagements bypass standard automated checkout. To apply for Tier 6 pricing training, contact founder Thomas Cherickal directly through either of the following official channels:
+
+- Direct Email (Gmail): Send an email directly to thomascherickal@gmail.com with the subject line "Tier 6 Training Application — [Your Team/Project Name]".
+
+- Direct Message on X (Twitter): Contact Thomas Cherickal directly on X at @thomazcherickal ↗.
+
+- Required Application Details: Provide a brief summary of your background, your organization or collective's mission, current geographic location and economic context, target AI training focus areas, and cohort size.
+
+- Founder Review & Approval: Every Tier 6 subsidy is individually reviewed, customized, and approved directly by the founder. Response times are typically within 24 to 48 hours.
+
+All conversations are held in strict confidence, with zero judgment and total focus on empowering your technical capabilities.
+
+---
+
+### 34. What is the mission of the founder, and why is Purchasing Power Parity (PPP) integral to this practice?
 *Mission: Global Equity · FAQ #22*  
 Founder Thomas Cherickal views Artificial Intelligence not merely as a commercial tool, but as the greatest cognitive leverage equalizer in human history. If frontier intelligence remains artificially restricted by Silicon Valley pricing, it risks dramatically widening global inequality.
 
@@ -346,8 +546,8 @@ Every standard-rate enterprise engagement directly subsidizes our global mission
 
 ---
 
-### 23. How does deploying Local LLMs decrease operational AI budgets by 60% to 90%?
-*Local LLMs: Cost Slashing · FAQ #23*  
+### 35. How does deploying Local LLMs decrease operational AI budgets by 60% to 90%?
+*Local LLMs: Cost Slashing · FAQ #29*  
 Relying exclusively on proprietary cloud model APIs for high-volume, recurring operations leads to compounding token bills that rapidly escalate out of control. We teach organizations to deploy private, quantized open-weight models on local or on-premise hardware.
 
 - High-Throughput Serving Engines: Deploying vLLM, Ollama, and llama.cpp with AWQ and GGUF 4-bit/8-bit quantization on consumer GPUs or on-premise servers.
@@ -360,8 +560,8 @@ Organizations replace unpredictable, escalating variable cloud API meters with f
 
 ---
 
-### 24. What is OpenCode, and how does the training integrate open-source coding agents and private dev environments?
-*OpenCode: Open Coding · FAQ #24*  
+### 36. What is OpenCode, and how does the training integrate open-source coding agents and private dev environments?
+*OpenCode: Open Coding · FAQ #30*  
 OpenCode represents the global open-source movement for developer agentic autonomy. While proprietary tools lock engineering teams into closed ecosystems, OpenCode empowers developers to pair with open-weight models in terminal-native workflows.
 
 - Open-Source Frameworks: Comprehensive training on OpenCode, Aider, and OpenHands paired directly with local or private endpoints.
@@ -376,8 +576,8 @@ Developers master cutting-edge agentic pair-programming while retaining complete
 
 ---
 
-### 25. Why are model-agnostic AI systems essential, and how do we prevent proprietary vendor lock-in?
-*Architecture: Model-Agnostic · FAQ #25*  
+### 37. Why are model-agnostic AI systems essential, and how do we prevent proprietary vendor lock-in?
+*Architecture: Model-Agnostic · FAQ #31*  
 Coupling an enterprise codebase tightly to a single proprietary AI vendor creates acute business risk: models can be deprecated without warning, pricing structures can change, safety filters can shift, and service outages halt business operations. We architect resilient, model-agnostic AI foundations.
 
 - Unified Abstraction Gateways: Standardizing on LiteLLM and Model Context Protocol (MCP) to allow dynamic switching across model providers without code changes.
@@ -390,36 +590,24 @@ Your team retains total architectural sovereignty, effortlessly adopting new fro
 
 ---
 
-### 26. What is the day-by-day cadence and structure of a 10-day training contract?
-*Contract: 10-Day Cadence · FAQ #26*  
-Each training contract spans 10 consecutive business days of intensive, hands-on architectural and coding immersion:
+### 38. What is the day-by-day cadence and structure of a 30-day training contract?
+*Contract: 30-Day Cadence · FAQ #32*  
+Each training contract spans 30 calendar days (4 intensive weekly milestones) of hands-on architectural and coding immersion:
 
-- Day 1: Architecture Assessment, Toolchain Setup & Sandbox Verification.
+- Week 1 (Days 1–7) — Architectural Assessment, Toolchains & Sandboxes: System discovery, tooling verification, prompt engineering design patterns, and Claude agent reasoning loop primitives.
 
-- Day 2: Prompt Engineering, Structured JSON Schemas & Context Dynamics.
+- Week 2 (Days 8–15) — Agent Orchestration, Skills & MCP Servers: Claude Code CLI, Claude Cowork, custom capability Skills, Model Context Protocol (MCP) servers, and hierarchical agent teams.
 
-- Day 3: Claude Agents 101, Reasoning Loops & Tool Calling Boundaries.
+- Week 3 (Days 16–22) — Local LLM Clusters, OpenCode & AI-Assisted TDD: High-throughput local model serving (vLLM/Ollama), OpenCode model routing, test-driven hallucination prevention, and guardrails.
 
-- Day 4: Claude Code, Cowork & AI-Assisted Test-Driven Development (TDD).
+- Week 4 (Days 23–30) — Hard Budget Governance, Automated Evals & IP Handover: Token spend caps, circuit breakers, Ragas/DeepEval benchmarks, capstone live verification, and 100% intellectual property transfer.
 
-- Day 5: Claude Skills & Model Context Protocol (MCP) Server Development.
-
-- Day 6: Multi-Agent Teams, Swarm Hierarchies & State Persistence.
-
-- Day 7: Local LLM Serving (vLLM, Ollama) & Hardware Optimization.
-
-- Day 8: OpenCode, Model-Agnostic Architecture & Dynamic Routing.
-
-- Day 9: Hard Budget Limits, Spend Quotas & Automated Evals.
-
-- Day 10: Capstone Project Verification, IP Handover & Sandbox Sign-Off.
-
-Participants conclude the sprint with fully operational, self-authored multi-agent systems.
+Participants conclude the 30-day program with fully operational, sovereign multi-agent systems running in production.
 
 ---
 
-### 27. What digital documentation, starter repositories, and implementation guides are included in the package?
-*Deliverables: Documentation · FAQ #27*  
+### 39. What digital documentation, starter repositories, and implementation guides are included in the package?
+*Deliverables: Documentation · FAQ #33*  
 Every training engagement includes an exhaustive suite of production-ready digital assets and runnable repositories that remain with your organization permanently.
 
 - Production Starter Repositories: Fully working, documented codebases in Python, TypeScript, and Rust illustrating agent loops and MCP servers.
@@ -436,9 +624,9 @@ All assets are clean, fully commented, and versioned for your internal engineeri
 
 ---
 
-### 28. How does the 30-day post-training support and free consultation for doubts work?
-*Support: 30-Day Window · FAQ #28*  
-True engineering learning happens when your team begins implementing concepts on live production workloads. Therefore, every contract includes 30 consecutive calendar days of ongoing support and free doubt consultation starting immediately after Day 10.
+### 40. How does the 30-day post-training support and free consultation for doubts work?
+*Support: 30-Day Window · FAQ #34*  
+True engineering learning happens when your team begins implementing concepts on live production workloads. Therefore, every contract includes 30 consecutive calendar days of ongoing support and free doubt consultation starting immediately after the 30-day training sprint.
 
 - Direct Asynchronous Advisory: Dedicated communication channels for developers to ask questions, submit runtime stack traces, and debug agent edge cases.
 
@@ -452,8 +640,8 @@ Your engineering team is never left stranded after the initial classroom session
 
 ---
 
-### 29. What is the custom Discord community for training graduates and what ongoing benefits does it offer?
-*Community: Graduate Discord · FAQ #29*  
+### 41. What is the custom Discord community for training graduates and what ongoing benefits does it offer?
+*Community: Graduate Discord · FAQ #35*  
 All graduates receive lifetime access to our exclusive, invite-only Graduate Discord Community, designed specifically for alumni to stay at the cutting edge as the frontier AI landscape evolves.
 
 - Rapid Frontier AI Breakdowns: The moment Anthropic, OpenAI, or Google releases new models, features, or APIs, detailed technical breakdowns and migration guides are posted.
@@ -468,8 +656,8 @@ Your team remains permanently up to date with frontier AI breakthroughs without 
 
 ---
 
-### 30. How is training delivered across different international timezones and remote setups?
-*Delivery: Modalities · FAQ #30*  
+### 42. How is training delivered across different international timezones and remote setups?
+*Delivery: Modalities · FAQ #36*  
 Our delivery model is remote-first, highly interactive, and globally adaptable across international engineering hubs.
 
 - Timezone Flexibility: Cohorts are scheduled to align natively with Americas (EST/PST), EMEA (GMT/CET), or APAC (IST/SGT) operating hours.
@@ -484,8 +672,8 @@ Whether your team is distributed across five continents or co-located in a singl
 
 ---
 
-### 31. Which specific modules cover Claude Agents 101, Code, Cowork, Skills, MCP, Agent Teams, Design Patterns, Budget Limits, and Local LLMs?
-*Curriculum: Claude Suite · FAQ #31*  
+### 43. Which specific modules cover Claude Agents 101, Code, Cowork, Skills, MCP, Agent Teams, Design Patterns, Budget Limits, and Local LLMs?
+*Curriculum: Claude Suite · FAQ #37*  
 Our flagship Claude curriculum covers eight meticulously structured modules reflecting the state-of-the-art late-2026 Anthropic agent ecosystem:
 
 - 🚀 Claude Agents 101: Core loop primitives, system prompt architecture, tool invocation, and handling multi-step reasoning traces.
@@ -506,8 +694,8 @@ Our flagship Claude curriculum covers eight meticulously structured modules refl
 
 ---
 
-### 32. What is Hermes Agent Training and how are autonomous systems built with it?
-*Curriculum: Hermes Agents · FAQ #32*  
+### 44. What is Hermes Agent Training and how are autonomous systems built with it?
+*Curriculum: Hermes Agents · FAQ #38*  
 Hermes Agent Training focuses on the powerful Nous Research Hermes model series, the industry benchmark for open-weights agentic reasoning and function calling.
 
 - Autonomous Function Calling: Directing Hermes models to invoke internal API endpoints, inspect JSON schemas, and execute terminal tools without cloud intermediaries.
@@ -522,8 +710,8 @@ Engineers gain the ability to build fully autonomous agents on self-hosted infra
 
 ---
 
-### 33. What is covered in the Quantum Applications (Experimental) module?
-*Curriculum: Quantum Systems · FAQ #33*  
+### 45. What is covered in the Quantum Applications (Experimental) module?
+*Curriculum: Quantum Systems · FAQ #39*  
 As an early Quantum Systems Explorer, Thomas Cherickal delivers an experimental module designed to prepare forward-thinking engineering organizations for the hybrid quantum-classical computing era.
 
 - Quantum Circuit Simulation: Hands-on circuit design and statevector simulation using IBM Qiskit and PennyLane.
@@ -538,8 +726,8 @@ Teams build early quantum intuition, understanding when quantum acceleration wil
 
 ---
 
-### 34. How does the training teach AI Budget & Cost Limits Training alongside Local LLM Cost Slashing?
-*Curriculum: Cost Governance · FAQ #34*  
+### 46. How does the training teach AI Budget & Cost Limits Training alongside Local LLM Cost Slashing?
+*Curriculum: Cost Governance · FAQ #40*  
 Financial sustainability is central to enterprise AI success. We teach comprehensive AI FinOps and cost-governance architectures to protect bottom-line margins.
 
 - API Reverse Proxy Gateways: Configuring LiteLLM proxy servers with granular per-user, per-department, and per-token hard spend ceilings.
@@ -554,8 +742,50 @@ Engineering leadership gains total financial predictability over company-wide AI
 
 ---
 
-### 35. How are confidential enterprise codebases, data privacy, and IP rights protected?
-*Governance: Security & IP · FAQ #35*  
+### 47. What is the standard engagement duration and included support guarantee for enterprise and personal AI bookings?
+*Engagement: Guaranteed Duration · FAQ #43*  
+Every service engagement is governed by an explicit duration and included support guarantee tailored to organizational scale:
+
+- Enterprise AI Transformation Services: Strictly 30 days of training AND 30 days of included support (total 60 days of enterprise protection). Week 1 Architectural Scoping; Week 2 Core Pipeline & Agent Orchestration; Week 3 Validation & TDD; Week 4 Production Handover & IP Transfer, followed by 30 consecutive calendar days of technical support.
+
+- Personal AI Transformation: Strictly 15 days of intensive training covering all 12 services AND 15 days of included daily work support (total 30-day experience), giving individuals hands-on assistance as they execute daily professional tasks.
+
+- Free Concurrency: All enterprise services can freely overlap or run concurrently according to your exact business velocity.
+
+This dual guarantee ensures neither enterprises nor solo founders ever face implementation stall.
+
+---
+
+### 48. Can clients run multiple AI services concurrently or freely overlap different training programs?
+*Engagement: Free Overlapping · FAQ #44*  
+Yes, absolutely. All enterprise services and training programs can freely overlap and run concurrently according to each client's specific operational needs and transformation priorities.
+
+- Zero Sequential Delays: You are never locked into waiting for one service to conclude before commencing another; services execute in parallel to match your business momentum.
+
+- Popular Overlap Combinations: Clients frequently pair Generative AI Transformation concurrently with Local LLMs & Cost Slashing, or run AI Developer Training alongside Training for Workflow Automations.
+
+- Unified Governance: Overlapping engagements share centralized guardrail patterns, architectural blueprints, and cross-team knowledge repositories for maximum synergy.
+
+We tailor overlapping execution tracks so your organization realizes compounding ROI across multiple fronts simultaneously.
+
+---
+
+### 49. How does free service overlapping work when customizing delivery for different teams across an organization?
+*Customization: Multi-Team Overlap · FAQ #45*  
+Different cohorts across an enterprise have fundamentally different enablement objectives. Our modular one-month architecture is designed for multi-track concurrency:
+
+- Executives & Leadership: Undergo strategic AI transformation roadmaps, compliance briefings, and boardroom ROI metrics.
+
+- Engineering & DevOps: Concurrently build autonomous Claude agent swarms, implement AI-assisted TDD, and deploy private local LLM clusters.
+
+- Business & Operations Staff: Concurrently master no-code workflow automations, document synthesis, and daily prompt craft.
+
+Multi-track overlapping ensures that every department transforms synchronously without cross-functional friction or implementation lag.
+
+---
+
+### 50. How are confidential enterprise codebases, data privacy, and IP rights protected?
+*Governance: Security & IP · FAQ #41*  
 We adhere to strict, uncompromising enterprise security protocols designed to satisfy legal and regulatory audits:
 
 - Strict Mutual NDAs: Comprehensive non-disclosure agreements executed prior to reviewing confidential architecture schemas or codebases.
@@ -570,60 +800,16 @@ Your intellectual property, proprietary data, and competitive secrets remain str
 
 ---
 
-### 36. How does an organization or individual book a 10-day training contract?
-*Engagement: Onboarding · FAQ #36*  
+### 51. How does an organization or individual book a 30-day training contract?
+*Engagement: Onboarding · FAQ #42*  
 Booking an engagement follows a straightforward, rapid 3-step onboarding workflow:
 
 - 1. Submit Cohort Scope: Send your approximate cohort size, target roles (Individuals, Freshers, Devs, Staff, Management, CXOs), and country of operation via the inquiry form below.
 
-- 2. Receive Proposal & Parity Quote: Within 24 hours, you receive a tailored 10-day syllabus outline and milestone-based quote reflecting your verified parity tier.
+- 2. Receive Proposal & Parity Quote: Within 24 hours, you receive a tailored 30-day syllabus outline and milestone-based quote reflecting your verified parity tier.
 
-- 3. Alignment & Launch: Upon contract execution and milestone agreement, we establish your sandbox environment and commence the 10-day sprint within 5 to 7 business days.
+- 3. Alignment & Launch: Upon contract execution and milestone agreement, we establish your sandbox environment and commence the 30-day sprint within 5 to 7 business days.
 
 Inquire today to secure your team's preferred cohort dates.
-
----
-
-### 37. What is the standard engagement duration for each enterprise AI service and training package?
-*Engagement: 1-Month Duration · FAQ #37*  
-Every enterprise AI transformation service, architecture engagement, and workforce training program is structured as a comprehensive, intensive one-month (4-week) implementation.
-
-- Week 1 — Architectural Discovery & Scoping: System auditing, identifying bottleneck processes, establishing sandboxes, and defining quantitative evaluation criteria (Evals).
-
-- Week 2 — Core Pipeline & Agent Orchestration: Deploying teams of Claude Agents, custom tool integrations, MCP servers, and local LLM configurations.
-
-- Week 3 — Validation, Guardrails & TDD: Implementing test-driven development, deterministic guardrails, context window management, and hallucination scoring via Ragas/DeepEval.
-
-- Week 4 — Production Handover & Cohort Training: Live team training modules, complete code guide walk-throughs, architecture documentation, and 100% intellectual property transfer.
-
-Each service is fully self-contained, providing actionable operational capability from day 30 onwards.
-
----
-
-### 38. Can clients run multiple AI services concurrently or freely overlap different training programs?
-*Engagement: Free Overlapping · FAQ #38*  
-Yes, absolutely. All enterprise services and training programs can freely overlap and run concurrently according to each client's specific operational needs and transformation priorities.
-
-- Zero Sequential Delays: You are never locked into waiting for one service to conclude before commencing another; services execute in parallel to match your business momentum.
-
-- Popular Overlap Combinations: Clients frequently pair Generative AI Transformation concurrently with Local LLMs & Cost Slashing, or run AI Developer Training alongside Training for Workflow Automations.
-
-- Unified Governance: Overlapping engagements share centralized guardrail patterns, architectural blueprints, and cross-team knowledge repositories for maximum synergy.
-
-We tailor overlapping execution tracks so your organization realizes compounding ROI across multiple fronts simultaneously.
-
----
-
-### 39. How does free service overlapping work when customizing delivery for different teams across an organization?
-*Customization: Multi-Team Overlap · FAQ #39*  
-Different cohorts across an enterprise have fundamentally different enablement objectives. Our modular one-month architecture is designed for multi-track concurrency:
-
-- Executives & Leadership: Undergo strategic AI transformation roadmaps, compliance briefings, and boardroom ROI metrics.
-
-- Engineering & DevOps: Concurrently build autonomous Claude agent swarms, implement AI-assisted TDD, and deploy private local LLM clusters.
-
-- Business & Operations Staff: Concurrently master no-code workflow automations, document synthesis, and daily prompt craft.
-
-Multi-track overlapping ensures that every department transforms synchronously without cross-functional friction or implementation lag.
 
 ---

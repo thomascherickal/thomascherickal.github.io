@@ -794,16 +794,17 @@
       transform: translateY(-2px);
     }
 
-    /* btn-gold / btn-glow-gold: Solid Vivid Amber Gold Glowing Button with 4px Border */
+    /* btn-gold / btn-glow-gold: High-Contrast Solid Radiant Gold Button with WCAG AAA Contrast */
     .btn-gold,
     .btn-glow-gold {
-      background: #d97706 !important;
-      color: #ffffff !important;
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%) !important;
+      color: #060912 !important;
       font-weight: 800 !important;
-      border: 4px solid #fbbf24 !important;
+      border: 3px solid #fef08a !important;
       border-radius: var(--radius) !important;
-      box-shadow: 0 0 28px rgba(251, 191, 36, 0.85), 0 0 10px #fbbf24, 0 4px 15px rgba(217, 119, 6, 0.6) !important;
+      box-shadow: 0 0 28px rgba(251, 191, 36, 0.85), 0 0 10px #fbbf24, 0 4px 15px rgba(0, 0, 0, 0.6) !important;
       text-shadow: none !important;
+      letter-spacing: 0.02em !important;
       transition: var(--transition);
       display: inline-flex;
       align-items: center;
@@ -819,10 +820,10 @@
 
     .btn-gold:hover,
     .btn-glow-gold:hover {
-      background: #b45309 !important;
-      color: #ffffff !important;
-      border-color: #fde047 !important;
-      box-shadow: 0 0 38px rgba(251, 191, 36, 1), 0 0 16px #fbbf24, 0 6px 22px rgba(217, 119, 6, 0.7) !important;
+      background: linear-gradient(135deg, #fef08a 0%, #fbbf24 50%, #f59e0b 100%) !important;
+      color: #000000 !important;
+      border-color: #ffffff !important;
+      box-shadow: 0 0 38px rgba(251, 191, 36, 1), 0 0 16px #fbbf24, 0 6px 22px rgba(0, 0, 0, 0.7) !important;
       transform: translateY(-2px);
     }
 
@@ -856,14 +857,14 @@
       transform: translateY(-2px);
     }
 
-    /* btn-commission: Solid Deep Amber & Gold Button with 4px Border */
+    /* btn-commission: High-Contrast Dark Slate & Vivid Gold Button */
     .btn-commission {
-      background: #b45309 !important;
-      color: #ffffff !important;
+      background: linear-gradient(180deg, #131d2e 0%, #0b121e 100%) !important;
+      color: #fbbf24 !important;
       font-weight: 800 !important;
-      border: 4px solid #fbbf24 !important;
+      border: 3px solid #fbbf24 !important;
       border-radius: var(--radius) !important;
-      box-shadow: 0 0 28px rgba(251, 191, 36, 0.85), 0 0 10px #fbbf24, 0 4px 15px rgba(180, 83, 9, 0.6) !important;
+      box-shadow: 0 0 20px rgba(251, 191, 36, 0.4), 0 4px 14px rgba(0, 0, 0, 0.6) !important;
       text-shadow: none !important;
       transition: var(--transition);
       display: inline-flex;
@@ -879,10 +880,40 @@
     }
 
     .btn-commission:hover {
-      background: #92400e !important;
+      background: linear-gradient(180deg, #1e2d47 0%, #131d2e 100%) !important;
+      color: #fef08a !important;
+      border-color: #fef08a !important;
+      box-shadow: 0 0 32px rgba(251, 191, 36, 0.85), 0 6px 20px rgba(0, 0, 0, 0.7) !important;
+      transform: translateY(-2px);
+    }
+
+    /* btn-linkedin: High-Contrast Corporate Blue Button */
+    .btn-linkedin {
+      background: linear-gradient(180deg, #0a2540 0%, #001e3d 100%) !important;
       color: #ffffff !important;
-      border-color: #fde047 !important;
-      box-shadow: 0 0 38px rgba(251, 191, 36, 1), 0 0 16px #fbbf24, 0 6px 22px rgba(180, 83, 9, 0.7) !important;
+      font-weight: 700 !important;
+      border: 3px solid #38bdf8 !important;
+      border-radius: var(--radius) !important;
+      box-shadow: 0 0 22px rgba(56, 189, 248, 0.55), 0 4px 14px rgba(0, 0, 0, 0.6) !important;
+      text-shadow: none !important;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      text-transform: none !important;
+      white-space: normal !important;
+      text-align: center !important;
+      line-height: 1.35 !important;
+      box-sizing: border-box !important;
+      max-width: 100% !important;
+    }
+
+    .btn-linkedin:hover {
+      background: linear-gradient(180deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      border-color: #ffffff !important;
+      box-shadow: 0 0 35px rgba(56, 189, 248, 0.95), 0 6px 20px rgba(0, 0, 0, 0.7) !important;
       transform: translateY(-2px);
     }
 
@@ -5398,6 +5429,8 @@
     <ul class="nav-links">
       <li><a href="index.html" data-nav="index.html">Home</a></li>
       <li><a href="expertise.html" data-nav="expertise.html">Expertise</a></li>
+      <li><a href="personal-ai-training.html" data-nav="personal-ai-training.html">Personal</a></li>
+      <li><a href="collaboration.html" data-nav="collaboration.html">Collaborate</a></li>
       <li class="nav-dropdown">
         <a class="nav-dropdown-toggle">
           Claude<span class="dropdown-caret">▾</span>
@@ -5423,6 +5456,8 @@
         </a>
         <ul class="dropdown-menu">
           <li><a href="services.html" class="dropdown-header-link">All Services</a></li>
+          <li><a href="personal-ai-training.html" style="color:var(--gold);font-weight:700;">Personal AI
+              Transformation</a></li>
           <li class="dropdown-divider"></li>
           <li><a href="service-generative-ai-transformation.html">Generative AI Transformation</a></li>
           <li><a href="service-local-llms-cost-slashing.html">Local LLMs &amp; Cost Slashing</a></li>
@@ -5438,7 +5473,6 @@
           <li><a href="service-claude-advanced-training.html">Claude Advanced Training</a></li>
         </ul>
       </li>
-      <li><a href="collaboration.html" data-nav="collaboration.html">Collaborate</a></li>
       <li><a href="pricing.html" data-nav="pricing.html">Pricing</a></li>
       <li><a href="faqs.html" data-nav="faqs.html">FAQs</a></li>
       <li><a href="articles.html" data-nav="articles.html">Articles</a></li>
@@ -5458,9 +5492,39 @@
         style="max-width:820px;margin:0.75rem auto 0 auto;line-height:1.8;font-size:calc(1rem + 3px);">
         Enterprise AI Transformation packages for AI Agent Mastery (teams of Claude Agents), live
         and remote workforce training (Employees, Developers, Staff, CXOs), Local LLM cost optimization, agent
-        orchestration, and early quantum exploration. <strong>Each service engagement lasts for strictly one month (4 weeks of structured milestone delivery) and can freely overlap or run concurrently for different customers according to their technical and organizational needs.</strong>
+        orchestration, and early quantum exploration. <strong style="color:var(--gold, #fbbf24);font-weight:700;">Every enterprise booking covers strictly 30 days of training and 30 days of included support (total 60 days of enterprise protection) with free service concurrency. Personal AI Transformation is strictly for one person only, covering 15 days of intensive training (all 12 services) and 15 days of included support with daily questions and doubts clarification, and source materials and guides that are light and easy to skim.</strong>
       </p>
     </section>
+    <!-- PROMINENT DUAL GUARANTEE BANNER -->
+    <div style="max-width:1380px;margin:1.5rem auto 2.5rem;padding:0 1.5rem;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:1.5rem;background:rgba(12, 17, 29, 0.95);border:2px solid var(--border-glow, rgba(56, 189, 248, 0.4));border-radius:var(--radius-lg);padding:1.5rem 2rem;box-shadow:0 0 30px rgba(0,240,255,0.12);">
+        <div style="border-left:4px solid var(--cyan, #00f0ff);padding-left:1.25rem;">
+          <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.35rem;">
+            <span style="font-size:1.4rem;">🛡️</span>
+            <span style="font-family:var(--font-mono);font-size:0.82rem;font-weight:800;letter-spacing:0.08em;color:var(--cyan);text-transform:uppercase;">ENTERPRISE PROTECTION GUARANTEE</span>
+          </div>
+          <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--text-primary);margin-bottom:0.35rem;">
+            30 Days Training + 30 Days Included Support
+          </h3>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.5;margin:0;">
+            Every enterprise booking covers strictly 30 days of milestone delivery/training and 30 days of included enterprise-grade support (60 days total coverage). Base rate covers up to 10 participants.
+          </p>
+        </div>
+        <div style="border-left:4px solid var(--gold, #fbbf24);padding-left:1.25rem;">
+          <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.35rem;">
+            <span style="font-size:1.4rem;">👑</span>
+            <span style="font-family:var(--font-mono);font-size:0.82rem;font-weight:800;letter-spacing:0.08em;color:var(--gold);text-transform:uppercase;">PERSONAL AI GUARANTEE (50% OFF)</span>
+          </div>
+          <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--gold);margin-bottom:0.35rem;">
+            15 Days Training (12 Services) + 15 Days Included Support (1 Person Only)
+          </h3>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.5;margin:0;">
+            15 days of intensive 1-on-1 training across all 12 disciplines plus 15 days of included support, daily questions and doubts clarification, and source materials and guides that are light and easy to skim. Strictly for one person only.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <!-- PARITY PRICING CALCULATOR SECTION (TOP OF PAGE WIDGET) -->
     <section class="reveal parity-calc-section" id="parity-calculator">
       <style>
@@ -5560,23 +5624,26 @@
                 <span class="hint">Standard Base Rate</span>
               </label>
               <select class="calc-select" id="calc-package">
-                <optgroup label="Specialized Transformation Services">
-                  <option value="srv-genai" data-price="2000">01 · Generative AI Transformation — $2,000 USD</option>
-                  <option value="srv-localllm" data-price="2000">02 · Local LLMs &amp; Cost Slashing — $1,000 USD
+                <optgroup label="👑 Personal Acceleration (50% Off Enterprise Cap · 15d Training + 15d Support)">
+                  <option value="srv-personal" data-price="1000">👑 Personal AI Transformation (15d Training + 15d Support · 1 Person Only) — $1,000 USD (50% Off)</option>
+                </optgroup>
+                <optgroup label="Specialized Transformation Services (30d Training + 30d Support · Base Covers Up to 10 Seats)">
+                  <option value="srv-genai" data-price="2000" selected="">01 · Generative AI Transformation — $2,000 USD</option>
+                  <option value="srv-localllm" data-price="2000">02 · Local LLMs &amp; Cost Slashing — $2,000 USD
                   </option>
                   <option value="srv-agents" data-price="2000">03 · Claude AI Agent Orchestration — $2,000 USD</option>
                   <option value="srv-hermes" data-price="2000">04 · Hermes Agent — $2,000 USD</option>
                   <option value="srv-workflows" data-price="2000">05 · WorkFlow Automations — $2,000 USD</option>
-                  <option value="srv-quantum" data-price="2000">06 · Applied Quantum (Experimental) — $1,000 USD
+                  <option value="srv-quantum" data-price="2000">06 · Applied Quantum (Experimental) — $2,000 USD
                   </option>
                   <option value="srv-budget" data-price="2000">07 · AI Budget Training — $2,000 USD</option>
-                  <option value="srv-workforce-training" data-price="2000">08 · Enterprise AI Training — $1,000 USD
+                  <option value="srv-workforce-training" data-price="2000">08 · Enterprise AI Training — $2,000 USD
                   </option>
-                  <option value="srv-developer-training" data-price="2000">09 · AI Developer Training — $1,000 USD
+                  <option value="srv-developer-training" data-price="2000">09 · AI Developer Training — $2,000 USD
                   </option>
                   <option value="srv-agents-advanced" data-price="2000">10 · Advanced AI Agents — $2,000 USD</option>
                   <option value="srv-claude-basic" data-price="2000">11 · Claude Basic Training — $2,000 USD</option>
-                  <option value="srv-claude-advanced" data-price="2000">12 · Claude Advanced Training — $1,000 USD
+                  <option value="srv-claude-advanced" data-price="2000">12 · Claude Advanced Training — $2,000 USD
                   </option>
                 </optgroup>
                 <option value="custom" data-price="">Custom Scope Amount (Enter Custom USD Below)</option>
@@ -5590,14 +5657,27 @@
               </label>
               <div class="calc-input-wrapper">
                 <span class="calc-input-currency">$</span>
-                <input class="calc-input calc-input-with-currency" id="calc-custom-amount" max="100000" min="500"
-                  placeholder="2000" step="250" type="number" value="2000" />
+                <input class="calc-input calc-input-with-currency" id="calc-custom-amount" max="100000" min="100"
+                  placeholder="2000" step="50" type="number" value="2000" />
               </div>
+            </div>
+            <!-- Cohort Participants Input: Base covers up to 10 participants, +$250/head additional -->
+            <div class="calc-field-group">
+              <label class="calc-field-label" for="calc-participants">
+                <span>3. Cohort Participants</span>
+                <span class="hint">Enterprise: 1–10 Included · Personal: 1 Person Only</span>
+              </label>
+              <div class="calc-input-wrapper">
+                <input class="calc-input" id="calc-participants" max="500" min="1" step="1" type="number" value="10" />
+              </div>
+              <p style="font-size:0.75rem;color:var(--text-muted);margin-top:0.35rem;font-family:var(--font-mono);line-height:1.4;">
+                Enterprise base covers up to 10 participants (+$250 USD/head additional). Personal AI Training is strictly for 1 person only.
+              </p>
             </div>
             <!-- Country / Organization Quick Dropdown -->
             <div class="calc-field-group">
               <label class="calc-field-label" for="calc-country">
-                <span>3. Country or Organization Category</span>
+                <span>4. Country or Organization Category</span>
                 <span class="hint">Auto-Selects Parity Tier</span>
               </label>
               <select class="calc-select" id="calc-country">
@@ -5670,7 +5750,7 @@
             <!-- 6 Interactive Tier Pill Buttons -->
             <div>
               <label class="calc-field-label">
-                <span>4. Quick-Select Parity Tier</span>
+                <span>5. Quick-Select Parity Tier</span>
                 <span class="hint">Click to switch</span>
               </label>
               <div class="calc-tier-grid" id="calc-tier-buttons">
@@ -5734,6 +5814,10 @@
                     <span class="calc-summary-value" id="calc-base-value">$2,000 USD</span>
                   </div>
                   <div class="calc-summary-row">
+                    <span class="calc-summary-label">Cohort Allocation:</span>
+                    <span class="calc-summary-value calc-summary-value-text" id="calc-cohort-val" style="color:var(--gold);">10 Participants (Included in Base)</span>
+                  </div>
+                  <div class="calc-summary-row">
                     <span class="calc-summary-label">Applied Parity Tier:</span>
                     <span class="calc-summary-value calc-summary-value-text" id="calc-applied-tier"
                       style="color:#38bdf8;">Tier 1:
@@ -5758,10 +5842,10 @@
               <div>
                 <!-- Dynamic CTA Button -->
                 <a class="btn btn-glow-gold"
-                  href="contact.html?tier=Tier%201%3A%20Developed%20Nations%20(100%25%20Standard%20Rate)&amp;budget=1000"
+                  href="contact.html?tier=Tier%201%3A%20Developed%20Nations%20(100%25%20Standard%20Rate)&amp;budget=2000"
                   id="calc-cta-btn"
                   style="width:100%;justify-content:center;padding:0.95rem 1rem;font-size:calc(0.92rem + 3pt);font-weight:800;letter-spacing:0.02em;border:3px solid #fbbf24;box-shadow:0 0 20px rgba(251,191,36,0.35);">
-                  Lock in Tier 1 Parity Rate ($1,000) →
+                  Lock in Tier 1 Parity Rate ($2,000) →
                 </a>
                 <p class="calc-disclaimer-text"
                   style="font-size:calc(0.75rem + 3pt);color:var(--text-muted);text-align:center;margin-top:0.75rem;line-height:1.4;">
@@ -5770,6 +5854,96 @@
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEDICATED PERSONAL AI TRANSFORMATION SECTION -->
+    <section class="reveal" id="personal-ai-section" style="max-width:1380px;margin:3.5rem auto;padding:0 1.5rem;">
+      <div style="background:radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.12) 0%, rgba(12, 17, 29, 0.98) 100%);border:2px solid var(--gold);border-radius:var(--radius-lg);padding:clamp(2.5rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 3rem);box-shadow:0 0 35px rgba(251,191,36,0.18), 0 10px 40px rgba(0,0,0,0.8);">
+        <div style="text-align:center;max-width:920px;margin:0 auto 2.5rem;">
+          <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 1.1rem;border-radius:999px;background:rgba(251, 191, 36, 0.15);border:1px solid rgba(251, 191, 36, 0.45);color:var(--gold);font-family:var(--font-mono);font-size:0.85rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:1rem;">
+            👑 1-ON-1 PERSONAL ACCELERATION · 50% ENTERPRISE CAP · ONE PERSON ONLY
+          </span>
+          <h2 style="font-family:var(--font-display);font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:900;color:var(--text-primary);margin-bottom:0.85rem;">
+            Personal AI Transformation: <span class="accent-gold">15-Day Sprint (All 12 Services) + 15-Day Daily Work Support</span>
+          </h2>
+          <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.75;">
+            Designed for solo founders, independent engineers, visionary executives, and creators. Personal AI Training is strictly for <strong style="color:var(--gold);">one person only (1-on-1 private acceleration)</strong>, capped at strictly <strong style="color:var(--gold);">50% of our enterprise training cost ($1,000 USD standard rate)</strong>, backed by our full 195-country Purchasing Power Parity framework. Structured as <strong style="color:var(--gold);">15 days of intensive 1-on-1 sprint training covering all 12 services</strong> followed by <strong style="color:var(--cyan);">15 days of included support</strong> with daily questions and doubts clarification, and source materials and guides that are light and easy to skim.
+          </p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;margin-bottom:2.5rem;">
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(251,191,36,0.25);border-radius:12px;padding:1.5rem;">
+            <div style="font-size:1.8rem;margin-bottom:0.6rem;">🛡️</div>
+            <h3 style="color:var(--gold);font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">50% Capped Investment</h3>
+            <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+              While enterprise services are $2,000 USD base due to corporate overhead, personal 1-on-1 training is capped at $1,000 USD base rate (down to $100 in Tier 6) with full 195-country parity.
+            </p>
+          </div>
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(251,191,36,0.25);border-radius:12px;padding:1.5rem;">
+            <div style="font-size:1.8rem;margin-bottom:0.6rem;">⚡</div>
+            <h3 style="color:var(--gold);font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">15-Day Sprint (All 12 Disciplines)</h3>
+            <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+              Days 1–15: Deep mastery across local LLMs, teams of Claude Agents, Hermes loops, workflow automations, AI budgets, and Claude Code CLI configured for your setup.
+            </p>
+          </div>
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(251,191,36,0.25);border-radius:12px;padding:1.5rem;">
+            <div style="font-size:1.8rem;margin-bottom:0.6rem;">🛠️</div>
+            <h3 style="color:var(--gold);font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">15 Days of Support &amp; Daily Doubts Clarification</h3>
+            <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+              15 days of included support, daily questions and doubts clarification, and source materials and guides that are light and easy to skim.
+            </p>
+          </div>
+        </div>
+
+        <div style="background:rgba(0,0,0,0.4);border:1px solid rgba(251,191,36,0.3);border-radius:12px;padding:1.5rem;margin-bottom:2.25rem;">
+          <h4 style="color:var(--gold);font-family:var(--font-mono);font-size:0.95rem;text-transform:uppercase;margin-bottom:1rem;text-align:center;">
+            Personal AI Transformation Parity Rates (50% of Enterprise Pricing):
+          </h4>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));gap:1rem;text-align:center;">
+            <div style="padding:0.75rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(56,189,248,0.3);">
+              <div style="font-size:0.75rem;color:#7dd3fc;font-family:var(--font-mono);">TIER 1 (OECD)</div>
+              <div style="font-size:1.25rem;font-weight:800;color:#38bdf8;margin-top:0.25rem;">$1,000 USD</div>
+            </div>
+            <div style="padding:0.75rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(251,191,36,0.3);">
+              <div style="font-size:0.75rem;color:#fde68a;font-family:var(--font-mono);">TIER 2 (GROWTH)</div>
+              <div style="font-size:1.25rem;font-weight:800;color:#fbbf24;margin-top:0.25rem;">$750 USD</div>
+            </div>
+            <div style="padding:0.75rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(52,211,153,0.3);">
+              <div style="font-size:0.75rem;color:#a7f3d0;font-family:var(--font-mono);">TIER 3 (EMERGING)</div>
+              <div style="font-size:1.25rem;font-weight:800;color:#34d399;margin-top:0.25rem;">$500 USD</div>
+            </div>
+            <div style="padding:0.75rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(244,114,182,0.3);">
+              <div style="font-size:0.75rem;color:#fbcfe8;font-family:var(--font-mono);">TIER 4 (STARTUPS)</div>
+              <div style="font-size:1.25rem;font-weight:800;color:#f472b6;margin-top:0.25rem;">$500 USD</div>
+            </div>
+            <div style="padding:0.75rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(192,132,252,0.3);">
+              <div style="font-size:0.75rem;color:#e9d5ff;font-family:var(--font-mono);">TIER 5 (ACADEMIA)</div>
+              <div style="font-size:1.25rem;font-weight:800;color:#c084fc;margin-top:0.25rem;">$250 USD</div>
+            </div>
+            <div style="padding:0.75rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(0,240,255,0.3);">
+              <div style="font-size:0.75rem;color:#7dd3fc;font-family:var(--font-mono);">TIER 6 (EQUITY)</div>
+              <div style="font-size:1.25rem;font-weight:800;color:#00f0ff;margin-top:0.25rem;">$100 USD</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:2rem;">
+          <div class="gold-highlight-container">
+            <a class="btn btn-glow-gold" href="personal-ai-training.html"
+              style="padding:0.95rem 2rem;font-size:1rem;">
+              👑 Explore Dedicated Personal AI Page →
+            </a>
+            <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank"
+              style="padding:0.95rem 1.85rem;font-size:0.95rem;">
+              Free LinkedIn Consultation ↗
+            </a>
+            <a class="btn btn-commission" href="contact.html?service=personal-ai-transformation"
+              style="padding:0.95rem 1.85rem;font-size:0.95rem;">
+              Book Your Personal Sprint →
+            </a>
           </div>
         </div>
       </div>
@@ -6049,7 +6223,7 @@
           <p class="section-label">// REFERENCE SPECIFICATIONS</p>
           <h2 class="section-title">Individual Services &amp; <span class="accent-cyan">Base Rates</span></h2>
           <p class="section-sub" style="max-width:820px;margin:0.5rem auto 0 auto;line-height:1.7;">
-            A la carte specifications across our twelve core transformation services. Each service lasts for strictly one month (4-week implementation timeline) with global parity pricing across 195 countries.
+            A la carte specifications across our twelve core transformation services. <strong style="color:var(--gold, #fbbf24);font-weight:700;">Every enterprise booking covers strictly 30 days of training and 30 days of included support (total 60 days of enterprise protection) with global parity pricing across 195 countries.</strong>
           </p>
         </div>
         <div class="pricing-grid-faq">
@@ -6062,7 +6236,7 @@
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -6083,7 +6257,7 @@
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -6104,7 +6278,7 @@
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -6125,7 +6299,7 @@
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -6146,7 +6320,7 @@
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -6167,7 +6341,7 @@
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -6188,7 +6362,7 @@
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -6209,7 +6383,7 @@
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -6230,7 +6404,7 @@
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -6251,7 +6425,7 @@
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -6272,7 +6446,7 @@
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -6293,7 +6467,7 @@
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -6303,6 +6477,27 @@
             <div
               style="font-size:calc(0.84rem + 3px);color:var(--text-secondary);line-height:1.5;flex-grow:1;display:flex;align-items:center;justify-content:center;">
               Senior engineer masterclass: Claude Code CLI, Claude Cowork in Microsoft 365, custom Model Context Protocol (MCP) servers, and swarms.
+            </div>
+          </div>
+          <!-- Item 13 (Row 5, Card 1) - Personal AI Transformation -->
+          <div class="price-card-faq border-gold" style="border:2px solid var(--gold);box-shadow:0 0 20px rgba(251,191,36,0.25);">
+            <div class="price-card-title"
+              style="color:var(--gold);font-weight:800;font-size:0.98rem;min-height:2.6rem;display:flex;align-items:center;justify-content:center;">
+              👑 Personal AI Transformation (50% Off · 1 Person)</div>
+            <div class="price-amount"
+              style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
+              $1,000 USD
+            </div>
+            <div style="font-size:0.75rem;color:var(--gold);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 15d Training + 15d Support · 1 Person Only</div>
+            <div class="service-parity-strip">
+              <span>25% Off: <strong>$750</strong></span>
+              <span>50% Off: <strong>$500</strong></span>
+              <span>75% Off: <strong>$250</strong></span>
+              <span>T6: <strong>$100</strong></span>
+            </div>
+            <div
+              style="font-size:calc(0.84rem + 3px);color:var(--text-secondary);line-height:1.5;flex-grow:1;display:flex;align-items:center;justify-content:center;">
+              Unified 1-on-1 mastery across all 12 services (15d training sprint) + 15d daily support and doubts clarification, and light, easy-to-skim guides. Strictly for one person only.
             </div>
           </div>
         </div>
@@ -7142,9 +7337,12 @@
       };
 
       let activeTier = 1;
+      let standardBasePrice = 2000;
 
       const calcPackage = document.getElementById("calc-package");
       const calcCustomAmount = document.getElementById("calc-custom-amount");
+      const calcParticipants = document.getElementById("calc-participants");
+      const calcCohortVal = document.getElementById("calc-cohort-val");
       const calcCountry = document.getElementById("calc-country");
       const calcTierButtons = document.querySelectorAll(".calc-tier-btn");
       const calcResultBox = document.getElementById("calc-result-box");
@@ -7160,18 +7358,28 @@
       function updateCalculator() {
         if (!calcCustomAmount) return;
 
-        let basePrice = parseFloat(calcCustomAmount.value);
-        if (isNaN(basePrice) || basePrice <= 0) {
-          basePrice = 1000;
-        }
-
         const tier = PARITY_TIERS[activeTier];
-        const formattedBase = "$" + basePrice.toLocaleString("en-US") + " USD";
+        const formattedBase = "$" + standardBasePrice.toLocaleString("en-US") + " USD";
 
         // Update Base Value Row
         calcBaseValue.textContent = formattedBase;
         calcAppliedTier.textContent = tier.shortName;
         calcAppliedTier.style.color = tier.badgeColor;
+
+        // Participants & Extra Head Scaling: Base covers up to 10 participants, +$250/head for extra
+        const participants = parseInt(calcParticipants ? calcParticipants.value : 10, 10) || 1;
+        const extraParticipants = Math.max(0, participants - 10);
+        const extraHeadRate = Math.round(extraParticipants * 250 * tier.multiplier);
+
+        if (calcCohortVal) {
+          if (participants <= 10) {
+            calcCohortVal.textContent = participants + (participants === 1 ? " Participant (Included in Base)" : " Participants (Included in Base)");
+            calcCohortVal.style.color = "var(--gold)";
+          } else {
+            calcCohortVal.textContent = participants + " Heads (+" + extraParticipants + " Extra @ +$" + extraHeadRate.toLocaleString("en-US") + " USD)";
+            calcCohortVal.style.color = "#38bdf8";
+          }
+        }
 
         // Update Badge
         calcTierBadge.textContent = tier.badgeText;
@@ -7190,8 +7398,8 @@
           calcDisplayPrice.style.color = tier.badgeColor;
           calcDisplayPrice.style.textShadow = "0 0 18px rgba(0, 240, 255, 0.45)";
 
-          const indicativeMin = Math.round(basePrice * 0.10);
-          const indicativeMax = Math.round(basePrice * 0.20);
+          const indicativeMin = Math.round(standardBasePrice * 0.10) + extraHeadRate;
+          const indicativeMax = Math.round(standardBasePrice * 0.20) + extraHeadRate;
           calcDisplayNote.innerHTML = "Micro-Rates / Indicative $" + indicativeMin.toLocaleString("en-US") + " – $" + indicativeMax.toLocaleString("en-US") + " USD or Nominal Honorarium";
           calcDisplayNote.style.color = "#7dd3fc";
 
@@ -7205,18 +7413,25 @@
 
           calcCtaBtn.textContent = "Request Subsidized Tier 6 Quote →";
           calcCtaBtn.style.borderColor = tier.badgeColor;
-          calcCtaBtn.href = "contact.html?tier=" + encodeURIComponent(tier.name) + "&budget=Custom%20Subsidized%20Quote";
+          calcCtaBtn.href = "contact.html?tier=" + encodeURIComponent(tier.name) + "&budget=Custom%20Subsidized%20Quote&participants=" + participants;
         } else {
           // Tiers 1–5
-          const finalPrice = Math.round(basePrice * tier.multiplier);
-          const savings = Math.round(basePrice * (tier.discountPercent / 100));
+          const baseTierPrice = Math.round(standardBasePrice * tier.multiplier);
+          const finalPrice = baseTierPrice + extraHeadRate;
+          const baseSavings = Math.round(standardBasePrice * (tier.discountPercent / 100));
+          const extraSavings = Math.round(extraParticipants * 250 * (tier.discountPercent / 100));
+          const totalSavings = baseSavings + extraSavings;
 
           calcDisplayPrice.textContent = "$" + finalPrice.toLocaleString("en-US") + " USD";
           calcDisplayPrice.style.fontSize = "clamp(2.1rem, 3.8vw, 2.85rem)";
           calcDisplayPrice.style.color = tier.badgeColor;
           calcDisplayPrice.style.textShadow = "0 0 22px " + tier.badgeBg.replace("0.15", "0.45");
 
-          calcDisplayNote.innerHTML = tier.note;
+          if (extraParticipants > 0) {
+            calcDisplayNote.innerHTML = tier.note + " · Plus " + extraParticipants + " extra seats (+$" + extraHeadRate.toLocaleString("en-US") + ")";
+          } else {
+            calcDisplayNote.innerHTML = tier.note + " · Base covers up to 10 participants";
+          }
           calcDisplayNote.style.color = tier.badgeColor;
 
           if (tier.discountPercent === 0) {
@@ -7227,9 +7442,9 @@
             calcSavingsBadge.style.borderColor = "rgba(56, 189, 248, 0.4)";
             calcSavingsBadge.style.background = "rgba(56, 189, 248, 0.12)";
           } else {
-            calcAdjustmentVal.textContent = "-$" + savings.toLocaleString("en-US") + " USD (" + tier.discountPercent + "% Off)";
+            calcAdjustmentVal.textContent = "-$" + totalSavings.toLocaleString("en-US") + " USD (" + tier.discountPercent + "% Off)";
             calcAdjustmentVal.style.color = "#34d399";
-            calcSavingsBadge.innerHTML = '<span>🎉 You Save $' + savings.toLocaleString("en-US") + ' USD (' + tier.discountPercent + '% Parity Subsidy)</span>';
+            calcSavingsBadge.innerHTML = '<span>🎉 You Save $' + totalSavings.toLocaleString("en-US") + ' USD (' + tier.discountPercent + '% Parity Subsidy)</span>';
             calcSavingsBadge.style.color = "#34d399";
             calcSavingsBadge.style.borderColor = "rgba(52, 211, 153, 0.4)";
             calcSavingsBadge.style.background = "rgba(52, 211, 153, 0.15)";
@@ -7237,7 +7452,7 @@
 
           calcCtaBtn.textContent = "Lock in " + tier.shortName + " Rate ($" + finalPrice.toLocaleString("en-US") + ") →";
           calcCtaBtn.style.borderColor = tier.badgeColor;
-          calcCtaBtn.href = "contact.html?tier=" + encodeURIComponent(tier.name) + "&budget=" + finalPrice;
+          calcCtaBtn.href = "contact.html?tier=" + encodeURIComponent(tier.name) + "&budget=" + finalPrice + "&participants=" + participants;
         }
       }
 
@@ -7252,9 +7467,18 @@
         });
 
         // Sync Country Dropdown if needed
-        let matchingOpt = calcCountry.querySelector('option[data-tier="' + activeTier + '"]');
-        if (matchingOpt && calcCountry.selectedOptions[0]?.getAttribute("data-tier") != activeTier) {
-          matchingOpt.selected = true;
+        if (calcCountry) {
+          let matchingOpt = calcCountry.querySelector('option[data-tier="' + activeTier + '"]');
+          if (matchingOpt && calcCountry.selectedOptions[0]?.getAttribute("data-tier") != activeTier) {
+            matchingOpt.selected = true;
+          }
+        }
+
+        // Dynamically update the baseline investment field as different tier buttons are clicked
+        const tier = PARITY_TIERS[activeTier];
+        if (calcCustomAmount && tier) {
+          const tierPrice = Math.round(standardBasePrice * tier.multiplier);
+          calcCustomAmount.value = tierPrice;
         }
 
         updateCalculator();
@@ -7269,9 +7493,13 @@
             calcCustomAmount.focus();
             calcCustomAmount.select();
           } else {
-            const price = selectedOpt.getAttribute("data-price");
-            if (price) {
-              calcCustomAmount.value = price;
+            const price = parseFloat(selectedOpt.getAttribute("data-price"));
+            if (!isNaN(price) && price > 0) {
+              standardBasePrice = price;
+              const tier = PARITY_TIERS[activeTier];
+              if (calcCustomAmount && tier) {
+                calcCustomAmount.value = Math.round(standardBasePrice * tier.multiplier);
+              }
             }
           }
           updateCalculator();
@@ -7281,29 +7509,34 @@
       // Custom Amount input event
       if (calcCustomAmount) {
         calcCustomAmount.addEventListener("input", function () {
-          const currentVal = this.value.trim();
-          const currentOpt = calcPackage.options[calcPackage.selectedIndex];
-
-          // If current selection already matches, leave it
-          if (currentOpt && currentOpt.getAttribute("data-price") === currentVal) {
-            updateCalculator();
-            return;
+          const currentVal = parseFloat(this.value);
+          const tier = PARITY_TIERS[activeTier];
+          if (!isNaN(currentVal) && currentVal > 0 && tier) {
+            // Infer standard 100% base price from the entered tier value
+            standardBasePrice = Math.round(currentVal / (tier.multiplier || 1));
           }
 
-          // Otherwise find an option that matches this exact price
-          let matched = false;
-          for (let opt of calcPackage.options) {
-            if (opt.getAttribute("data-price") === currentVal) {
-              calcPackage.value = opt.value;
-              matched = true;
-              break;
+          if (calcPackage) {
+            let matched = false;
+            for (let opt of calcPackage.options) {
+              if (parseFloat(opt.getAttribute("data-price")) === standardBasePrice) {
+                calcPackage.value = opt.value;
+                matched = true;
+                break;
+              }
+            }
+            if (!matched) {
+              calcPackage.value = "custom";
             }
           }
 
-          if (!matched) {
-            calcPackage.value = "custom";
-          }
+          updateCalculator();
+        });
+      }
 
+      // Participants input event
+      if (calcParticipants) {
+        calcParticipants.addEventListener("input", function () {
           updateCalculator();
         });
       }
@@ -7314,15 +7547,7 @@
           const selectedOption = this.options[this.selectedIndex];
           const tier = selectedOption.getAttribute("data-tier");
           if (tier) {
-            activeTier = parseInt(tier, 10);
-            calcTierButtons.forEach(btn => {
-              if (parseInt(btn.getAttribute("data-tier"), 10) === activeTier) {
-                btn.classList.add("active");
-              } else {
-                btn.classList.remove("active");
-              }
-            });
-            updateCalculator();
+            setActiveTier(tier);
           }
         });
       }

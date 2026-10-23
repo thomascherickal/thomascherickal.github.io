@@ -522,7 +522,7 @@ def sync_pricing_html_cards():
           <p class="section-label">// REFERENCE SPECIFICATIONS</p>
           <h2 class="section-title">Individual Services &amp; <span class="accent-cyan">Base Rates</span></h2>
           <p class="section-sub" style="max-width:820px;margin:0.5rem auto 0 auto;line-height:1.7;">
-            A la carte specifications across our twelve core transformation services. Each service lasts for strictly one month (4-week implementation timeline) with global parity pricing across 195 countries.
+            A la carte specifications across our twelve core transformation services. <strong style="color:var(--gold, #fbbf24);font-weight:700;">Every enterprise booking covers strictly 30 days of training and 30 days of included support (total 60 days of enterprise protection) with global parity pricing across 195 countries.</strong>
           </p>
         </div>
         <div class="pricing-grid-faq">
@@ -535,7 +535,7 @@ def sync_pricing_html_cards():
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -556,7 +556,7 @@ def sync_pricing_html_cards():
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -577,7 +577,7 @@ def sync_pricing_html_cards():
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -598,7 +598,7 @@ def sync_pricing_html_cards():
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -619,7 +619,7 @@ def sync_pricing_html_cards():
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -640,7 +640,7 @@ def sync_pricing_html_cards():
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -661,7 +661,7 @@ def sync_pricing_html_cards():
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -682,7 +682,7 @@ def sync_pricing_html_cards():
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -703,7 +703,7 @@ def sync_pricing_html_cards():
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -724,7 +724,7 @@ def sync_pricing_html_cards():
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -745,7 +745,7 @@ def sync_pricing_html_cards():
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -766,7 +766,7 @@ def sync_pricing_html_cards():
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
               $2,000 USD
             </div>
-            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 30d Training + 30d Support</div>
             <div class="service-parity-strip">
               <span>25% Off: <strong>$1,500</strong></span>
               <span>50% Off: <strong>$1,000</strong></span>
@@ -776,6 +776,27 @@ def sync_pricing_html_cards():
             <div
               style="font-size:calc(0.84rem + 3px);color:var(--text-secondary);line-height:1.5;flex-grow:1;display:flex;align-items:center;justify-content:center;">
               Senior engineer masterclass: Claude Code CLI, Claude Cowork in Microsoft 365, custom Model Context Protocol (MCP) servers, and swarms.
+            </div>
+          </div>
+          <!-- Item 13 (Row 5, Card 1) - Personal AI Transformation -->
+          <div class="price-card-faq border-gold" style="border:2px solid var(--gold);box-shadow:0 0 20px rgba(251,191,36,0.25);">
+            <div class="price-card-title"
+              style="color:var(--gold);font-weight:800;font-size:0.98rem;min-height:2.6rem;display:flex;align-items:center;justify-content:center;">
+              👑 Personal AI Transformation (50% Off · 1 Person)</div>
+            <div class="price-amount"
+              style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
+              $1,000 USD
+            </div>
+            <div style="font-size:0.75rem;color:var(--gold);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Coverage: 15d Training + 15d Support · 1 Person Only</div>
+            <div class="service-parity-strip">
+              <span>25% Off: <strong>$750</strong></span>
+              <span>50% Off: <strong>$500</strong></span>
+              <span>75% Off: <strong>$250</strong></span>
+              <span>T6: <strong>$100</strong></span>
+            </div>
+            <div
+              style="font-size:calc(0.84rem + 3px);color:var(--text-secondary);line-height:1.5;flex-grow:1;display:flex;align-items:center;justify-content:center;">
+              Unified 1-on-1 mastery across all 12 services (15d training sprint) + 15d daily support and doubts clarification, and light, easy-to-skim guides. Strictly for one person only.
             </div>
           </div>
         </div>

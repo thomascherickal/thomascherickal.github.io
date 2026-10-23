@@ -40,6 +40,7 @@ PAGE_MAPPINGS = {
     "expertise.html": "expertise.md",
     "contact.html": "contact.md",
     "faqs.html": "faqs.md",
+    "personal-ai-training.html": "personal-ai-training.md",
     "404.html": "404.md"
 }
 

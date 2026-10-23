@@ -3,8 +3,9 @@
 
 > **//
  The Digital Futurist · Remote Worldwide**  
-> **Specializing in transforming traditional businesses to an
- AI-first & AI-native organization, by providing live and remote training, teaching freshers, developers,
+> **Specializing in transforming individuals or traditional businesses to an
+ AI-first & AI-native leaders or organizations, by providing live and remote training, teaching freshers,
+ developers,
  staff, architects, management, and CXOs to become AI-enabled and experts in Claude AI agent orchestration with
  minimal investment and cost monitoring and budgeting, also using Local LLMs with investment in hardware.**
 
@@ -25,11 +26,13 @@
 ---
 
 ## Bio
-PG in CS from Loyola College; I help enterprises transform into AI-first, AI-native
- organizations. My expertise spans Generative AI, Local LLM deployments for cost reduction, Claude AI agent
- orchestration, and comprehensive AI training for all levels - from freshers to CXOs. With a focus on practical
- application and budget-conscious implementation, I empower teams to become AI-native and drive real business
- impact.
+PG in CS from Loyola College; I help individuals and enterprises transform into AI-first,
+ AI-native leaders and organizations. My expertise spans Generative AI, Local LLM deployments for cost reduction,
+ Claude AI
+ agent orchestration, and comprehensive AI training for all levels - from freshers to CXOs, enterprise level or
+ personal basis. With a focus on practical application and budget-conscious implementation, I empower teams to
+ become AI-native
+ and drive real business impact.
 
 ### Quick Actions
 - [📚 Articles](articles.html)

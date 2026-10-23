@@ -67,6 +67,10 @@ Foundations for staff: Claude models, XML prompt craft, Claude Projects team mem
 **Base Rate**: `$2,000 USD`  
 Senior engineer masterclass: Claude Code CLI, Claude Cowork in Microsoft 365, custom Model Context Protocol (MCP) servers, and swarms.
 
+### 👑 Personal AI Transformation (50% Off · 1 Person)
+**Base Rate**: `$1,000 USD`  
+Unified 1-on-1 mastery across all 12 services (15d training sprint) + 15d daily support and doubts clarification, and light, easy-to-skim guides. Strictly for one person only.
+
 ---
 
 ## Global Equity: Purchasing Power Parity (PPP) Six Tiers

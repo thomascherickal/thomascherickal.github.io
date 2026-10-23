@@ -15,7 +15,7 @@
 Hands-on mastery, configuration, and developer pair-programming across industry-standard AI development environments and foundation APIs:
 
 `Claude Code` · `Google Antigravity` · `ChatGPT` · `HuggingFace Spaces` · `OpenAI Codex` · `Google Gemini Notebook` · `Google AI Studio` · `OpenCode` · `OpenRouter` · `Ollama & vLLM` · `IBM Qiskit` · `Enterprise
- Transition` · `Duration: 1 Month (4 Weeks)` · `60%
+ Transition` · `Coverage: 30d Training + 30d Support` · `60%
  Inference Savings & Privacy` · `Multi-Agents
  On Budget` · `Persistent
  Memory` · `Self-Hosted
