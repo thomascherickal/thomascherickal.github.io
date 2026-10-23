@@ -8,57 +8,45 @@
 
 ## 1. Service Overview & Scope
 
-- CLI & IDE Coding Agent Mastery:
-  - Hands-on developer immersion with terminal coding agents (Claude Code, Google Antigravity SDK, Aider) and modern IDE agents (Cursor, Windsurf, GitHub Copilot).
-  - Autonomous repository comprehension, full-codebase architectural mapping, AST-guided indexing, and multi-file atomic refactoring workflows.
-  - Context window governance: prompt compression, repomix packing, token budget optimization, and preventing model drift across large enterprise monoliths.
-- AI-Assisted Test-Driven Development (TDD):
-  - Strict Red-Green-Refactor agentic cycles: writing executable, failing test assertions (pytest, cargo test, vitest, go test) before code generation to permanently eliminate hallucinations.
-  - Automated compiler, linter, and type-checker feedback loops (mypy, tsc, clippy) feeding error traces directly back into agent reflection loops.
-  - Automated unit test generation, mutation testing, boundary-value fuzzing, and regression isolation harnesses.
-- Custom Model Context Protocol (MCP) Server Architecture:
-  - Engineering enterprise-grade Model Context Protocol (MCP) servers in TypeScript and Rust.
-  - Exposing corporate databases (PostgreSQL, Snowflake, BigQuery) and private microservices as type-safe tools with Zod/Pydantic validation.
-  - Configuring secure bidirectional communication transports (stdio, Server-Sent Events, streamable HTTP) with zero-trust OAuth2 authorization.
+- Elite AI Engineering Mastery: Transforming software developers into 10x engineers proficient in terminal-native agent pairing with Claude Code.
+- AI-Assisted Test-Driven Development (TDD): Integrating red-green-refactor cycles with AI agents to achieve >90% test coverage and rapid bug elimination.
+- Model Context Protocol (MCP) Server Development: Hands-on training on building, testing, and debugging custom MCP servers using Python and TypeScript.
+- Subagent Orchestration & Architecture: Constructing hierarchical agent swarms, dynamic code review bots, and automated CI/CD PR remediation pipelines.
+- Enterprise Prompt & Context Architecture: Priming AI agents with complex codebases, architecture decision records, and multi-file dependency graphs.
 
 ---
 
 ## 2. Standard Architecture & Tools
 
-- Coding Agent Environments:
-  - Claude Code, Google Antigravity SDK, Cursor, VS Code, JetBrains IDEs, Neovim, and Linux tmux terminal automation.
-  - Automated git branch management, PR summary generation, and interactive code review assistance.
-- Testing & Validation Harnesses:
-  - Pytest, Vitest, Jest, Cargo Test, Go Test with automated assertion generation and mock isolation.
-  - Docker containerized sandbox runners with execution timeouts, memory limits, and ephemeral environments.
-- Extensibility & Protocol Stacks:
-  - Model Context Protocol (MCP) SDKs (TypeScript & Python/Rust), JSON Schema tool definitions, and OpenAPI generators.
-  - Tree-sitter AST parsers, Chroma / LanceDB vector embeddings for codebase indexing, and repomix context bundling.
+- Core AI Developer Tools: Claude Code CLI, Anthropic SDK, Google Antigravity, and OpenAI Codex.
+- Protocols & Tooling: Model Context Protocol (MCP) TypeScript/Python SDKs, stdio and SSE transports.
+- Testing & CI/CD: Pytest, Jest, Vitest, Playwright, GitHub Actions, and automated PR review bots.
+- Sandboxing: Docker containers, Linux virtual environments, and isolated Git feature branches.
 
 ---
 
-## 3. Deliverable Examples
+## 3. Deliverable Examples & 4-Week Schedule
 
-- Enterprise Developer Agent Configuration Suite:
-  - Production-ready dotfiles, CLAUDE.md templates, AGENTS.md rules, and custom slash command suites tailored for your enterprise stack.
-- Custom MCP Server Starter Kit:
-  - End-to-end working MCP server connecting your corporate git repos, CI/CD pipelines, or databases to coding agents with full test coverage.
-- Hands-On Developer Lab Repository & Workshop Materials:
-  - Comprehensive interactive curriculum: 10 hands-on coding labs, slides, cheatsheets, and recorded demonstration screencasts.
+- Claude Code Developer Configuration Suite: Tailored `.claude/config` setups, custom slash commands, and codebase architecture primers.
+- Custom MCP Server Starter Kit: Fully functional TypeScript/Python MCP server with database and API connectors ready for team customization.
+- Automated TDD Agent Pipeline: Working CI/CD pipeline using Claude Code to generate failing unit tests from specs and autonomously implement passing code.
+- Developer Masterclass Video Series & Code Sandbox: High-definition video walkthroughs and interactive repository exercises covering all training modules.
 
 ---
 
 ## 4. Guarantees & Commitments
 
-- Measurable Engineering Acceleration: 2x to 4x throughput acceleration on feature development and bug resolution without regression spikes.
-- 100% Client Intellectual Property Transfer: All workshop repositories, customized agent rules, and demonstration code belong exclusively to your enterprise.
-- 30-Day Async Post-Training Engineering Support: Ongoing private Discord or Slack advisory channel for answering engineer questions and unblocking production tooling.
+- 3x Developer Velocity Boost: Measurable 3x speedup on greenfield feature development, test writing, and bug hunting.
+- Production-Grade Code Quality: Strict TDD discipline ensuring AI code passes enterprise linters, type checks, and security scans.
+- 100% Commercial IP Ownership: Complete code transfer of all custom MCP servers, CI/CD scripts, and test harnesses.
+- 30-Day Engineering Mentoring SLA: Direct access to lead architects for code reviews, prompt tuning, and architectural advisory.
 
 ---
 
 ## 5. Investment & Pricing Quote
 
-- Base Investment Rate (Tier 1 Standard): $2,000 USD (flat base rate for up to 20 developer seats).
+- Engagement Duration: Strictly 1 month (4 weeks of structured milestone delivery and runtime verification).
+- Base Investment Rate (Tier 1 Standard): $2,000 USD (flat base rate for complete 1-month delivery).
 - Global Purchasing Power Parity (PPP) & Subsidized Rates:
   - Tier 1 (Standard / 100%): $2,000 USD (USA, UK, EU, Canada, Australia)
   - Tier 2 (Developing Nations / 25% Off): $1,500 USD (India, Brazil, Mexico, UAE, Poland)
@@ -66,18 +54,18 @@
   - Tier 5 (Academia & Non-Profits / 75% Off): $500 USD
   - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief / Micro-Rates
   - Calculate and lock in your exact tier rate live on the Pricing page.
-- Payment Schedule:
-  - 50% upfront milestone initialization / 50% upon completed delivery, runtime verification, and client sign-off.
+- Payment Milestones:
+  - 50% upfront milestone initialization / 50% upon completed Week 4 delivery, runtime verification, and client sign-off.
 
 ---
 
 ## 6. Summary
 
-- Claude Code & Antigravity Fluency: Mastering terminal coding agents, multi-file edits, and automated Git pull requests.
-- Test-Driven Agent Generation (TDD): Writing pytest/cargo tests first to strictly verify agent code correctness.
-- Custom MCP Server Building: Developing bespoke Python/TypeScript Model Context Protocol tools for internal APIs.
-- AST-Guided Refactoring: Navigating large legacy codebases safely without regression or hallucination.
-- Security & Secret Hygiene: Enforcing automated pre-commit secret scanning and prompt injection prevention.
+- 10x Developer Acceleration: Terminal-native pairing with Claude Code for rapid multi-file refactoring and feature implementation.
+- Strict 1-Month Delivery: 4-week intensive curriculum from CLI mastery to custom MCP servers and CI/CD bot automation.
+- AI-Assisted TDD Discipline: Autonomous red-green-refactor test loops guaranteeing >90% coverage and zero regression bugs.
+- Custom MCP Tool Servers: Building enterprise Model Context Protocol endpoints to interface directly with SQL and internal APIs.
+- 100% IP & Code Transfer: Complete repository transfer, starter kits, recorded masterclasses, and 30-day dedicated SLA support.
 
 ---
 

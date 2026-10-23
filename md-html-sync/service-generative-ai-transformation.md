@@ -2,86 +2,70 @@
 ## Enterprise AI Transformation Service — Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 01**  
-> **Convert your business from basic chatbot query windows into an autonomous, agent-driven organization. Master creating teams of AI agents with Claude, OpenAI, Gemini, or Grok, learn in-depth orchestration principles, understand deep agent constraints, and perform multi-person tasks grounded in basic domain knowledge.**
+> **Convert your business from basic chatbot query windows into an autonomous, agent-driven organization. Master creating teams of Claude Agents, learn in-depth orchestration principles, understand deep agent constraints, and perform multi-person tasks grounded in basic domain knowledge.**
 
 ---
 
-## 1. Service
- Overview & Scope
+## 1. Service Overview & Scope
 
-- Chatbot-to-Agent Enterprise Evolution:
-  - Transitioning teams from basic conversational chat windows to proactive multi-agent systems that autonomously execute multi-step workflows, invoke internal APIs, and complete end-to-end work.
-  - Designing cognitive automation architectures that augment customer operations, executive analytics, document synthesis, and administrative pipelines.
-  - Establishing hard operational guardrails, human-in-the-loop review triggers, and strict compliance boundaries around agentic autonomy.
-- AI Agent Mastery & Deep Constraint Grounding:
-  - Creating specialized teams of AI agents powered by Claude, OpenAI, Gemini, or Grok to perform the work of multiple people in concert.
-  - Understanding deep agent constraints: context window degradation, catastrophic tool loops, execution budget caps, and the critical domain knowledge required to make agent orchestration successful.
-  - Deploying Model Context Protocol (MCP) servers and vectorized tool interfaces that securely ground agent teams in real-world task boundaries.
-- Deterministic Metrics & Hallucination Safeguards:
-  - Replacing qualitative prompt guessing with deterministic scoring harnesses (latency, accuracy, token efficiency, hallucination suppression).
-  - Implementing runtime prompt injection shields, sensitive data redaction filters, and enterprise safety firewalls.
+- Enterprise Autonomous Shift: Transitioning organizational operations from ad-hoc isolated chatbot query windows into coordinated, autonomous teams of Claude Agents.
+- Multi-Agent Role Distribution: Orchestrating hierarchical supervisor-worker networks, dynamic sub-agent task decomposition, and deterministic consensus across mission-critical workflows.
+- Deep Boundary Grounding: Engineering custom Model Context Protocol (MCP) servers, private vector context stores, and strict enterprise domain boundaries to prevent context drift.
+- Evaluation & Governance Benchmarks: Establishing quantitative evaluation pipelines with Ragas and DeepEval, setting strict deterministic validation gates and spend circuit breakers.
+- Production Readiness: Full containerized infrastructure rollout, telemetry instrumentation via OpenTelemetry and Langfuse, and complete knowledge transfer.
 
 ---
 
-## 2. Standard
- Architecture & Tools
+## 2. Standard Architecture & Tools
 
-- Agent Orchestration & State Engines:
-  - LangGraph, AutoGen, CrewAI, and custom deterministic Python/Rust state graphs for complex enterprise business logic.
-  - Multi-tier supervisor-worker agent topologies with dynamic task routing, validation layers, and fallback failovers.
-- Enterprise Tooling & Data Layer:
-  - Model Context Protocol (MCP) server endpoints, REST/GraphQL connectors, and secure CLI executor sandboxes.
-  - Vector memory and semantic search powered by Qdrant, Chroma, and hybrid keyword/dense indexers.
-- Evaluation & Telemetry:
-  - Continuous evaluation pipelines using Ragas, DeepEval, and Promptfoo integrated directly into GitHub Actions CI/CD.
-  - Centralized observability dashboards and token consumption telemetry with Langfuse and OpenTelemetry.
+- Foundation Models & Orchestration: Frontier Claude models (Claude Opus lead orchestrator, Claude Sonnet subagent execution, Claude Haiku high-throughput routing), LangGraph, CrewAI, and custom event DAGs.
+- Tool Integration & Protocols: Model Context Protocol (MCP) full-duplex JSON-RPC, OpenAPI REST connectors, PostgreSQL/pgvector memory checkpoints, and Redis pub/sub streams.
+- Runtime Security & Isolation: Docker and gVisor sandboxed environments, dropped Linux root capabilities (`CAP_DROP=ALL`), egress proxy filtering, and zero-data-retention API configurations.
+- FinOps & Observability: LiteLLM proxy gateways, Langfuse trace visualization, Prometheus/Grafana latency monitors, and automated spend cap triggers.
 
 ---
 
-## 3.
- Deliverable Examples
+## 3. Deliverable Examples & 4-Week Schedule
 
-- Enterprise AI Agent Mastery Blueprint:
-  - Comprehensive architectural roadmap detailing current-state bottlenecks, target agent topology, security protocols, and phased implementation schedule.
-- Agent Workflow Sample Project & Explainer Guides:
-  - Interactive sample project repository in Python/Rust with modular agent definitions, custom tool bindings, step-by-step guides, and training modules.
-- Evaluation Harness & Safety Shield Suite:
-  - Automated test suites validating task completion rates, hallucination mitigation, prompt security, and API latency benchmarks.
+- Autonomous Multi-Agent Blueprint: Production architectural specification detailing supervisor routing graphs, role personas, failure fallback modes, and state persistence.
+- Custom MCP Middleware & Tool Connectors: Fully tested and containerized MCP microservices interfacing Claude Agents directly with enterprise ERP, CRM, and SQL data layers.
+- Automated CI/CD Evaluation Suite: Regression test suite validating output quality, factual accuracy, guardrail compliance, and response latency against golden datasets.
+- Turnkey Operational Infrastructure: Docker Compose and Kubernetes deployment manifests with integrated telemetry, automated alerting, and full operational runbooks.
 
 ---
 
-## 4. Guarantees
- & Commitments
+## 4. Guarantees & Commitments
 
-- Sandbox Runtime Verification: Every agentic workflow demonstration and tool loop guide is verified in isolated training sandbox environments before delivery.
-- Zero Vendor Lock-in: All agent architectures are model-agnostic and support seamless hot-swapping between frontier cloud providers and private open-weights models.
-- 30-Day Technical Post-Delivery Training Support: Dedicated async Slack/email engineering support for curriculum troubleshooting, prompt refinement, and scaling guidance.
+- Deterministic Execution Guarantee: Strict cycle counters, wall-clock timeouts, and token circuit breakers preventing runaway execution loops and infinite spend.
+- 100% Commercial IP Ownership: Complete transfer of all custom agent code, prompts, MCP server implementations, and architectural diagrams upon completion.
+- Zero Data Leakage Assurance: Zero retention data configurations, local credential vaults, and verified outbound egress filtering.
+- 30-Day Production SLA & Support: Dedicated Slack/Discord engineering access for runtime optimization, bug resolution, and upstream API version upgrades.
 
 ---
 
-## 5. Investment
- & Pricing Quote
+## 5. Investment & Pricing Quote
 
-- Base Investment Range (Tier 1 Standard): $3,000 – $6,000 USD (per transformation module or implementation milestone).
+- Engagement Duration: Strictly 1 month (4 weeks of structured milestone delivery and runtime verification).
+- Base Investment Rate (Tier 1 Standard): $2,000 USD (flat base rate for complete 1-month delivery).
 - Global Purchasing Power Parity (PPP) & Subsidized Rates:
-  - Tier 1 (Standard / 100%): $3,000 – $6,000 USD
-  - Tier 2 (Developing Nations / 25% Off): $2,250 – $4,500 USD
-  - Tier 3 & 4 (Least Developed & Startups / 50% Off): $1,500 – $3,000 USD
-  - Tier 5 (Academia & Non-Profits / 75% Off): $750 – $1,500 USD
+  - Tier 1 (Standard / 100%): $2,000 USD (USA, UK, EU, Canada, Australia)
+  - Tier 2 (Developing Nations / 25% Off): $1,500 USD (India, Brazil, Mexico, UAE, Poland)
+  - Tier 3 & 4 (Least Developed & Startups / 50% Off): $1,000 USD
+  - Tier 5 (Academia & Non-Profits / 75% Off): $500 USD
   - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief / Micro-Rates
   - Calculate and lock in your exact tier rate live on the Pricing page.
-- Payment Schedule:
-  - 50% upfront milestone initialization / 50% upon completed delivery, runtime verification, and client sign-off.
+- Payment Milestones:
+  - 50% upfront milestone initialization / 50% upon completed Week 4 delivery, runtime verification, and client sign-off.
 
 ---
 
 ## 6. Summary
 
-- Chatbot-to-Agent Paradigm Shift: Upgrading passive conversational chat into autonomous multi-step execution graphs.
-- Enterprise Hybrid RAG: Integrating vector search, hybrid dense/sparse retrieval, and GraphRAG across company silos.
-- Deterministic Guardrails & NeMo: Hardening pipelines with schema validation, Pydantic, and safety guardrails.
-- Full Operational Workflow Re-Engineering: Mapping business bottlenecks into automated, event-driven agent pipelines.
-- Change Management & Culture: Upskilling internal engineering and ops teams into an autonomous AI-native workforce.
+- Autonomous Enterprise Swarms: Transitioning from simple chatbot windows to hierarchical teams of Claude Agents.
+- Strict 1-Month Delivery: 4-week structured progression from initial security diagnostic to live production handover.
+- Model Context Protocol (MCP): Grounding agent reasoning in private databases, internal APIs, and zero-leakage sandboxes.
+- Evaluation & FinOps Governance: Ragas automated accuracy benchmarks, LiteLLM token limits, and zero runaway loop guarantees.
+- 100% Commercial IP Ownership: Complete code transfer, Docker manifests, bespoke runbooks, and 30-day dedicated SLA support.
 
 ---
 

@@ -21,14 +21,22 @@ from PIL import Image
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_DIR = os.path.dirname(SCRIPT_DIR)
 ASSETS_DIR = os.path.join(REPO_DIR, "assets")
-SOURCE_IMAGE = os.path.join(ASSETS_DIR, "site-icon.webp")
+SOURCE_IMAGE_JPEG = os.path.join(ASSETS_DIR, "site-icon.jpeg")
+SOURCE_IMAGE_WEBP = os.path.join(ASSETS_DIR, "site-icon.webp")
+SOURCE_IMAGE = SOURCE_IMAGE_JPEG if os.path.exists(SOURCE_IMAGE_JPEG) else SOURCE_IMAGE_WEBP
 
 def generate_favicons():
     if not os.path.exists(SOURCE_IMAGE):
-        raise FileNotFoundError(f"Source image not found: {SOURCE_IMAGE}")
+        raise FileNotFoundError(f"Source image not found: neither {SOURCE_IMAGE_JPEG} nor {SOURCE_IMAGE_WEBP} exists")
 
     src = Image.open(SOURCE_IMAGE)
     print(f"Loaded master image: {SOURCE_IMAGE} ({src.size[0]}x{src.size[1]}, {src.mode})")
+
+    # If source is JPEG, ensure a high-quality site-icon.webp is also saved for schema/logo compatibility
+    if SOURCE_IMAGE == SOURCE_IMAGE_JPEG:
+        webp_path = SOURCE_IMAGE_WEBP
+        src.save(webp_path, format="WEBP", quality=95)
+        print(f"Generated site-icon.webp (1024x1024): {os.path.getsize(webp_path):,} bytes")
 
     # 1. Standard PNG sizes
     png_targets = {

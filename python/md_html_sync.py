@@ -187,7 +187,7 @@ def sync_html_to_md(html_name: str, md_name: str):
             "3. [⚡ Capabilities & Tech Stack](expertise.html) — 10 specialized capability areas, 10 curated tech-stack chip groups, and the Python & Rust execution tooling behind every piece.",
             "4. [🎯 Services & Commissions](services.html) — Service offerings — Claude AI agent orchestration, deep dives, courses, training, mentoring, enterprise LLM deployment, and Generative AI developer content.",
             "5. [🔬 Workflow & Verification](expertise.html#how-this-gets-made) — Research → Build → Run → Verify → Explain. AI accelerates the workflow, while human verification owns the result.",
-            "6. [💳 Pricing & Parity Index](pricing.html) — Transparent milestone rates and an interactive 198-country Purchasing Power Parity (PPP) calculator for global equity.",
+            "6. [💳 Pricing & Parity Index](pricing.html) — Transparent milestone rates and an interactive 195-country Purchasing Power Parity (PPP) calculator for global equity.",
             "7. [❓ Frequently Asked Questions](faqs.html) — Turnaround timelines, code verification standards, AI workflows, daily service fee calculator, and collaboration details.",
             "8. [📬 Contact & Training](contact.html) — Commission custom emerging technologies training, Claude AI agent orchestration, developer courses, or retainer sprints directly.",
             "9. [📰 HackerNoon Profile](https://hackernoon.com/u/thomascherickal) — Explore featured deep dives, AI exploration, and published articles on HackerNoon covering AI models and devtools.",

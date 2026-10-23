@@ -192,7 +192,7 @@ graph TD
 | **Writing** | [`writing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/writing.html) | Publication library categorizing essays across HackerNoon, Medium, Substack & Hashnode. |
 | **Expertise** | [`expertise.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/expertise.html) | Technical radar detailing proficiencies across languages, frameworks, inference & quantum. |
 | **Services** | [`services.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/services.html) | Complete catalog of all 8 enterprise advisory and workforce training offerings. |
-| **Pricing & Parity** | [`pricing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/pricing.html) | 100% transparent rates and interactive 6-Tier Parity calculator across 198 countries. |
+| **Pricing & Parity** | [`pricing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/pricing.html) | 100% transparent rates and interactive 6-Tier Parity calculator across 195 countries. |
 | **FAQs** | [`faqs.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/faqs.html) | 36 technical FAQs covering recipient roles, organization sizes, 10-day training & parity. |
 | **Collaborate** | [`collaboration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/collaboration.html) | Operating principles, mutual NDAs, milestone billing terms & project kickoff process. |
 | **Contact** | [`contact.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/contact.html) | Secure honeypot-protected inquiry portal connected to FormSubmit with 24-hour SLA. |
@@ -266,7 +266,7 @@ gantt
 
 ## 🌐 The Six Global Equity & Parity Tiers
 
-To make elite generative AI engineering universally accessible, I apply mathematical Purchasing Power Parity (PPP) discounts across 198 countries:
+To make elite generative AI engineering universally accessible, I apply mathematical Purchasing Power Parity (PPP) discounts across 195 countries:
 
 | Tier | Category | Geographic & Institutional Coverage | Multiplier | Discount |
 | :---: | :--- | :--- | :---: | :---: |

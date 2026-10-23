@@ -4264,7 +4264,7 @@
         "@type": "ItemList",
         "@id": "https://thomascherickal.github.io/#emerging-technologies",
         "name": "Enterprise AI Transformation Services",
-        "description": "Full-lifecycle enterprise AI transformation services spanning AI Agent Mastery (teams of Claude, OpenAI, Gemini, Grok agents), local LLM cost slashing, autonomous agent swarms, workforce training, and sovereign AI architectures.",
+        "description": "Full-lifecycle enterprise AI transformation services spanning AI Agent Mastery (teams of Claude Agents), local LLM cost slashing, autonomous agent swarms, workforce training, and sovereign AI architectures. Every service lasts for one month and can freely overlap for different customers according to their needs.",
         "numberOfItems": 8,
         "itemListElement": [
           {
@@ -4907,10 +4907,10 @@
       </div>
       <div class="stat-item">
         <div class="stat-num">5+</div>
-        <div class="stat-label">Years in AI</div>
+        <div class="stat-label">Years in Gen AI</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">10+</div>
+        <div class="stat-num">20+</div>
         <div class="stat-label">Local LLMs</div>
       </div>
     </div>
@@ -7398,7 +7398,7 @@
           <div>
             <span class="home-nav-icon">💳</span>
             <h3 class="home-nav-title">Pricing &amp; Parity Index</h3>
-            <p class="home-nav-desc">Transparent milestone rates and an interactive 198-country Purchasing Power
+            <p class="home-nav-desc">Transparent milestone rates and an interactive 195-country Purchasing Power
               Parity
               (PPP) calculator for global equity.</p>
           </div>
@@ -7470,15 +7470,17 @@
         <p class="section-label">Enterprise Transformation</p>
         <h2 class="section-title">Selected <span class="accent-gold">Enterprise AI Transformation</span> Services</h2>
         <p class="section-sub" style="max-width:820px;margin:1.25rem auto 0;line-height:1.8;">
-          Full-lifecycle enterprise AI transformation services spanning AI Agent Mastery (teams of Claude, OpenAI,
-          Gemini, Grok agents), private local LLM cost
-          reduction,
-          autonomous agent swarms, workforce training, and sovereign AI architectures.
+          Full-lifecycle enterprise AI transformation services spanning AI Agent Mastery (teams of Claude Agents),
+          private local LLM cost
+          reduction, autonomous agent swarms, workforce training, and sovereign AI architectures. All services are one
+          month long and can freely overlap for different customers according to their technical and organizational
+          needs.
         </p>
         <p class="section-sub"
           style="max-width:820px;margin:0.75rem auto 0;font-size:0.875rem;color:var(--text-muted);border:1px solid rgba(0,229,255,0.2);padding:0.75rem 1.25rem;border-radius:8px;background:rgba(0,229,255,0.03);">
-          ⚡ <strong>Core Operating Principle:</strong> Enterprise AI Transformation requires training for everything,
-          sample code guides, technical explainers, sample projects, and training modules.
+          ⚡ <strong>Core Operating Principle:</strong> Every service runs for one month and can freely overlap with
+          other services. Engagements deliver end-to-end training, production-ready sample code guides, technical
+          explainers, and hands-on modules.
         </p>
       </div>
       <div class="home-nav-grid home-services-grid">
@@ -7492,8 +7494,8 @@
             </div>
             <h3 class="home-nav-title">Generative AI Transformation</h3>
             <p class="home-nav-desc">Convert your business from isolated conversational chatbot windows into a
-              proactive, agent-driven organization. Orchestrate coordinated teams of AI agents powered by Claude,
-              OpenAI, Gemini, or Grok to execute complex operational workloads grounded in domain knowledge.</p>
+              proactive, agent-driven organization. Orchestrate coordinated teams of Claude Agents to execute complex
+              operational workloads grounded in domain knowledge.</p>
             <ul class="home-nav-list">
               <li><span style="color:var(--cyan);margin-right:0.35rem;flex-shrink:0;">▸</span>
                 <div><strong>Reasoning Graphs:</strong> Multi-step autonomous reasoning graphs with internal API
@@ -7714,6 +7716,513 @@
           </div>
           <span class="home-nav-btn">Explore Workforce Training →</span>
         </a>
+      </div>
+    </section>
+    <div class="divider"></div>
+    <!-- GLOBAL PARITY PRICING & RADICAL ACCESS SECTION -->
+    <style>
+      .parity-pricing-section {
+        max-width: 1380px;
+        margin: 0 auto;
+        padding: 3.5rem clamp(1rem, 4vw, 3rem) 2.5rem;
+      }
+
+      .parity-pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        align-items: stretch;
+        margin-top: 2.25rem;
+      }
+
+      @media (max-width: 1080px) {
+        .parity-pricing-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.25rem;
+        }
+      }
+
+      @media (max-width: 680px) {
+        .parity-pricing-grid {
+          grid-template-columns: 1fr;
+          gap: 1.25rem;
+        }
+      }
+
+      .parity-card {
+        background: linear-gradient(155deg, rgba(12, 18, 33, 0.95) 0%, rgba(4, 7, 16, 0.98) 100%);
+        border-radius: var(--radius-lg, 14px);
+        padding: 1.85rem 1.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      }
+
+      .parity-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.85);
+      }
+
+      .parity-card-1 {
+        border: 2px solid #38bdf8;
+        box-shadow: 0 0 20px rgba(56, 189, 248, 0.2), 0 10px 30px rgba(0, 0, 0, 0.7);
+      }
+
+      .parity-card-1:hover {
+        border-color: #00d2ff;
+        box-shadow: 0 0 30px rgba(56, 189, 248, 0.4), 0 18px 45px rgba(0, 0, 0, 0.85);
+      }
+
+      .parity-card-2 {
+        border: 2px solid #fbbf24;
+        box-shadow: 0 0 20px rgba(251, 191, 36, 0.2), 0 10px 30px rgba(0, 0, 0, 0.7);
+      }
+
+      .parity-card-2:hover {
+        border-color: #f59e0b;
+        box-shadow: 0 0 30px rgba(251, 191, 36, 0.4), 0 18px 45px rgba(0, 0, 0, 0.85);
+      }
+
+      .parity-card-3 {
+        border: 2px solid #34d399;
+        box-shadow: 0 0 20px rgba(52, 211, 153, 0.2), 0 10px 30px rgba(0, 0, 0, 0.7);
+      }
+
+      .parity-card-3:hover {
+        border-color: #10b981;
+        box-shadow: 0 0 30px rgba(52, 211, 153, 0.4), 0 18px 45px rgba(0, 0, 0, 0.85);
+      }
+
+      .parity-card-4 {
+        border: 2px solid #f472b6;
+        box-shadow: 0 0 20px rgba(244, 114, 182, 0.2), 0 10px 30px rgba(0, 0, 0, 0.7);
+      }
+
+      .parity-card-4:hover {
+        border-color: #ec4899;
+        box-shadow: 0 0 30px rgba(244, 114, 182, 0.4), 0 18px 45px rgba(0, 0, 0, 0.85);
+      }
+
+      .parity-card-5 {
+        border: 2px solid #c084fc;
+        box-shadow: 0 0 20px rgba(192, 132, 252, 0.2), 0 10px 30px rgba(0, 0, 0, 0.7);
+      }
+
+      .parity-card-5:hover {
+        border-color: #a855f7;
+        box-shadow: 0 0 30px rgba(192, 132, 252, 0.4), 0 18px 45px rgba(0, 0, 0, 0.85);
+      }
+
+      .parity-card-6 {
+        border: 2px solid #00f0ff;
+        box-shadow: 0 0 24px rgba(0, 240, 255, 0.25), 0 10px 30px rgba(0, 0, 0, 0.7);
+      }
+
+      .parity-card-6:hover {
+        border-color: #38bdf8;
+        box-shadow: 0 0 34px rgba(0, 240, 255, 0.5), 0 18px 45px rgba(0, 0, 0, 0.85);
+      }
+
+      .parity-badge-tag {
+        font-family: var(--font-mono, monospace);
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        padding: 0.3rem 0.75rem;
+        border-radius: 6px;
+        display: inline-block;
+        margin-bottom: 0.85rem;
+      }
+
+      .parity-card-heading {
+        font-size: 1.35rem;
+        font-weight: 800;
+        color: var(--text-primary);
+        margin-bottom: 0.25rem;
+        line-height: 1.3;
+      }
+
+      .parity-card-subheading {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 1.1rem;
+        line-height: 1.5;
+      }
+
+      .parity-discount-box {
+        margin-bottom: 1.25rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .parity-discount-val {
+        font-family: var(--font-display, sans-serif);
+        font-size: 1.6rem;
+        font-weight: 900;
+        line-height: 1.15;
+      }
+
+      .parity-discount-sub {
+        font-family: var(--font-mono, monospace);
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+        margin-top: 0.25rem;
+      }
+
+      .parity-tag-title {
+        font-family: var(--font-mono, monospace);
+        font-size: 0.74rem;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--gold, #fbbf24);
+        margin-top: 0.85rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .parity-geo-tag {
+        font-size: 0.82rem;
+        color: #94a3b8;
+        line-height: 1.55;
+        background: rgba(0, 0, 0, 0.35);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 6px;
+        padding: 0.65rem 0.85rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .parity-card-features {
+        list-style: none;
+        padding: 0;
+        margin: 0.85rem 0 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+        font-size: 0.82rem;
+        color: var(--text-secondary);
+      }
+
+      .parity-card-features li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.45rem;
+        line-height: 1.45;
+      }
+
+      .parity-card-features li span {
+        flex-shrink: 0;
+      }
+
+      .radical-callout-banner {
+        margin-top: 2.25rem;
+        background: radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.12) 0%, rgba(12, 17, 29, 0.96) 100%);
+        border: 2px solid rgba(0, 240, 255, 0.4);
+        border-radius: var(--radius-lg, 14px);
+        padding: 2.25rem 2rem;
+        box-shadow: 0 0 30px rgba(0, 240, 255, 0.15), 0 10px 30px rgba(0, 0, 0, 0.7);
+        text-align: center;
+      }
+    </style>
+    <section class="parity-pricing-section reveal" id="parity-pricing">
+      <div class="section-header" style="text-align:center;max-width:960px;margin:0 auto 2.5rem;">
+        <p class="section-label">// GLOBAL ACCESS GUARANTEE · 195-COUNTRY PPP</p>
+        <h2 class="section-title">Purchasing Power Parity <span class="accent-gold">&amp; Radical Pricing</span></h2>
+        <p class="section-sub" style="max-width:840px;margin:1.25rem auto 0;line-height:1.8;">
+          Frontier AI architecture, production Claude Agent swarms, and enterprise workforce enablement should be
+          accessible to ambitious engineering teams and builders worldwide. We operate on a transparent 195-country
+          Purchasing Power Parity (PPP) framework — offering localized discounts and radical pricing relief to empower
+          high-impact builders across every economy. All services are one month long and can freely overlap for
+          different customers according to their needs.
+        </p>
+        <div
+          style="margin-top:1.25rem;display:inline-flex;align-items:center;gap:0.75rem;padding:0.6rem 1.25rem;border-radius:999px;background:rgba(56,189,248,0.06);border:1px solid rgba(56,189,248,0.25);font-size:0.85rem;color:var(--text-secondary);">
+          <span>⚡ <strong>Principle of Global Equity:</strong> Equal production-grade architecture, uncompromised
+            quality, and direct advisory. Every service lasts for one month and can freely overlap or run in parallel
+            according to your team's needs.</span>
+        </div>
+      </div>
+
+      <div class="parity-pricing-grid">
+        <!-- TIER 01: High-Income Developed Economies -->
+        <div class="parity-card parity-card-1">
+          <div>
+            <span class="parity-badge-tag"
+              style="background:rgba(56, 189, 248, 0.18);border:1px solid #38bdf8;color:#38bdf8;">
+              🌐 TIER 01 · DEVELOPED NATIONS
+            </span>
+            <h3 class="parity-card-heading">High-Income Economies</h3>
+            <p class="parity-card-subheading">OECD High-Income Economies &amp; Global Enterprise Hubs</p>
+            <div class="parity-discount-box">
+              <div class="parity-discount-val" style="color:#38bdf8;text-shadow:0 0 16px rgba(56,189,248,0.4);">
+                Standard Baseline Rate
+              </div>
+              <div class="parity-discount-sub" style="color:#7dd3fc;">
+                0% DISCOUNT · 1.0X BASELINE MULTIPLIER
+              </div>
+            </div>
+            <div class="parity-tag-title">Qualifying Geographies</div>
+            <div class="parity-geo-tag">
+              <strong>North America:</strong> United States, Canada<br>
+              <strong>Europe:</strong> United Kingdom, Germany, France, Switzerland, Netherlands, Sweden, Norway,
+              Ireland, Austria<br>
+              <strong>Asia-Pacific:</strong> Japan, Singapore, Australia, New Zealand, South Korea
+            </div>
+            <ul class="parity-card-features">
+              <li><span style="color:#38bdf8;">▸</span>
+                <div><strong>Enterprise SLA:</strong> Complete 1-month delivery with production-grade agent swarms and
+                  architectural specs.</div>
+              </li>
+              <li><span style="color:#38bdf8;">▸</span>
+                <div><strong>Subsidizing Global Equity:</strong> Baseline engagements fund open-source tooling and
+                  subsidized rates worldwide.</div>
+              </li>
+            </ul>
+          </div>
+          <a class="btn" href="pricing.html"
+            style="width:100%;justify-content:center;border:1px solid #38bdf8;color:#38bdf8;background:rgba(56,189,248,0.08);">
+            Explore Tier 1 Overview →
+          </a>
+        </div>
+
+        <!-- TIER 02: Developing & Growth Markets -->
+        <div class="parity-card parity-card-2">
+          <div>
+            <span class="parity-badge-tag"
+              style="background:rgba(251, 191, 36, 0.18);border:1px solid #fbbf24;color:#fbbf24;">
+              📈 TIER 02 · DEVELOPING NATIONS
+            </span>
+            <h3 class="parity-card-heading">Developing &amp; Growth Markets</h3>
+            <p class="parity-card-subheading">Rapidly Expanding Digital Hubs &amp; Regional Tech Leaders</p>
+            <div class="parity-discount-box">
+              <div class="parity-discount-val" style="color:#fbbf24;text-shadow:0 0 16px rgba(251,191,36,0.4);">
+                25% Parity Discount
+              </div>
+              <div class="parity-discount-sub" style="color:#fde68a;">
+                75% BASE RATE · 0.75X MULTIPLIER
+              </div>
+            </div>
+            <div class="parity-tag-title">Qualifying Geographies</div>
+            <div class="parity-geo-tag">
+              <strong>South Asia &amp; APAC:</strong> India, Malaysia, Thailand, Indonesia, Philippines<br>
+              <strong>Latin America:</strong> Brazil, Mexico, Colombia, Chile, Argentina, Peru<br>
+              <strong>Europe &amp; MEA:</strong> Poland, Turkey, Romania, South Africa, UAE, Saudi Arabia
+            </div>
+            <ul class="parity-card-features">
+              <li><span style="color:#fbbf24;">▸</span>
+                <div><strong>Full Scope Delivery:</strong> Identical production code deliverables, private local LLM
+                  setups, and custom evals.</div>
+              </li>
+              <li><span style="color:#fbbf24;">▸</span>
+                <div><strong>Regional Acceleration:</strong> Calibrated to local market dynamics to accelerate agentic
+                  systems adoption.</div>
+              </li>
+            </ul>
+          </div>
+          <a class="btn" href="pricing.html"
+            style="width:100%;justify-content:center;border:1px solid #fbbf24;color:#fbbf24;background:rgba(251,191,36,0.08);">
+            Explore Tier 2 Overview →
+          </a>
+        </div>
+
+        <!-- TIER 03: Emerging & Least Developed Nations -->
+        <div class="parity-card parity-card-3">
+          <div>
+            <span class="parity-badge-tag"
+              style="background:rgba(52, 211, 153, 0.18);border:1px solid #34d399;color:#34d399;">
+              🌱 TIER 03 · EMERGING ECONOMIES
+            </span>
+            <h3 class="parity-card-heading">Emerging &amp; Developing Markets</h3>
+            <p class="parity-card-subheading">World Bank Lower-Middle &amp; Low-Income Tech Ecosystems</p>
+            <div class="parity-discount-box">
+              <div class="parity-discount-val" style="color:#34d399;text-shadow:0 0 16px rgba(52,211,153,0.4);">
+                50% Parity Discount
+              </div>
+              <div class="parity-discount-sub" style="color:#a7f3d0;">
+                50% BASE RATE · 0.50X MULTIPLIER
+              </div>
+            </div>
+            <div class="parity-tag-title">Qualifying Geographies</div>
+            <div class="parity-geo-tag">
+              <strong>South Asia:</strong> Bangladesh, Pakistan, Sri Lanka, Nepal, Bhutan<br>
+              <strong>Africa:</strong> Kenya, Nigeria, Ghana, Ethiopia, Uganda, Rwanda, Tanzania, Egypt<br>
+              <strong>Americas &amp; Central Asia:</strong> Bolivia, Ecuador, Guatemala, Uzbekistan, Kyrgyzstan
+            </div>
+            <ul class="parity-card-features">
+              <li><span style="color:#34d399;">▸</span>
+                <div><strong>Infrastructure Leapfrogging:</strong> Enables regional teams to bypass legacy toolchains
+                  directly to AI agents.</div>
+              </li>
+              <li><span style="color:#34d399;">▸</span>
+                <div><strong>Hands-On Enablement:</strong> 4-week structured milestone roadmap with comprehensive
+                  knowledge transfer.</div>
+              </li>
+            </ul>
+          </div>
+          <a class="btn" href="pricing.html"
+            style="width:100%;justify-content:center;border:1px solid #34d399;color:#34d399;background:rgba(52,211,153,0.08);">
+            Explore Tier 3 Overview →
+          </a>
+        </div>
+
+        <!-- TIER 04: Early-Stage Startups -->
+        <div class="parity-card parity-card-4">
+          <div>
+            <span class="parity-badge-tag"
+              style="background:rgba(244, 114, 182, 0.18);border:1px solid #f472b6;color:#f472b6;">
+              🚀 TIER 04 · EARLY-STAGE VENTURES
+            </span>
+            <h3 class="parity-card-heading">Early-Stage Tech Startups</h3>
+            <p class="parity-card-subheading">Global Pre-Seed, Seed &amp; Bootstrapped Software Builders</p>
+            <div class="parity-discount-box">
+              <div class="parity-discount-val" style="color:#f472b6;text-shadow:0 0 16px rgba(244,114,182,0.4);">
+                50% Startup Discount
+              </div>
+              <div class="parity-discount-sub" style="color:#fbcfe8;">
+                FLAT 50% OFF WORLDWIDE · 0.50X MULTIPLIER
+              </div>
+            </div>
+            <div class="parity-tag-title">Qualifying Ventures</div>
+            <div class="parity-geo-tag">
+              <strong>Pre-Seed &amp; Seed:</strong> Early-stage startups with under one million USD cumulative external
+              funding<br>
+              <strong>Bootstrapped Founders:</strong> Self-funded companies building customer-facing software<br>
+              <strong>Accelerators:</strong> Y Combinator, Techstars, Antler, 500 Global, and angel cohort teams
+            </div>
+            <ul class="parity-card-features">
+              <li><span style="color:#f472b6;">▸</span>
+                <div><strong>Capital Preservation:</strong> Slash API token consumption and build high-performance agent
+                  pipelines.</div>
+              </li>
+              <li><span style="color:#f472b6;">▸</span>
+                <div><strong>Rapid Time-to-Market:</strong> Prototype to production deployment within four disciplined
+                  weeks.</div>
+              </li>
+            </ul>
+          </div>
+          <a class="btn" href="pricing.html"
+            style="width:100%;justify-content:center;border:1px solid #f472b6;color:#f472b6;background:rgba(244,114,182,0.08);">
+            Explore Startup Tier →
+          </a>
+        </div>
+
+        <!-- TIER 05: Academia, Research Labs & Non-Profits -->
+        <div class="parity-card parity-card-5">
+          <div>
+            <span class="parity-badge-tag"
+              style="background:rgba(192, 132, 252, 0.18);border:1px solid #c084fc;color:#c084fc;">
+              🎓 TIER 05 · ACADEMIA &amp; CHARITIES
+            </span>
+            <h3 class="parity-card-heading">Universities, Labs &amp; Non-Profits</h3>
+            <p class="parity-card-subheading">Higher Education, Research Centers &amp; Registered Non-Profits</p>
+            <div class="parity-discount-box">
+              <div class="parity-discount-val" style="color:#c084fc;text-shadow:0 0 16px rgba(192,132,252,0.4);">
+                75% Academic Discount
+              </div>
+              <div class="parity-discount-sub" style="color:#e9d5ff;">
+                25% BASE RATE · 0.25X MULTIPLIER
+              </div>
+            </div>
+            <div class="parity-tag-title">Qualifying Organizations</div>
+            <div class="parity-geo-tag">
+              <strong>Higher Education:</strong> Accredited universities, faculties, doctoral candidates, student AI
+              labs<br>
+              <strong>Research Institutes:</strong> Public scientific labs, post-doctoral groups, open research
+              centers<br>
+              <strong>Charities &amp; NGOs:</strong> Registered non-profits, humanitarian trusts, civic tech initiatives
+            </div>
+            <ul class="parity-card-features">
+              <li><span style="color:#c084fc;">▸</span>
+                <div><strong>Open Science Transfer:</strong> Reproducible methodologies, open-source codebases, and
+                  academic training.</div>
+              </li>
+              <li><span style="color:#c084fc;">▸</span>
+                <div><strong>Collaborative Workshops:</strong> Interactive curriculum tailored for faculty, students,
+                  and research staff.</div>
+              </li>
+            </ul>
+          </div>
+          <a class="btn" href="pricing.html"
+            style="width:100%;justify-content:center;border:1px solid #c084fc;color:#c084fc;background:rgba(192,132,252,0.08);">
+            Explore Academic Tier →
+          </a>
+        </div>
+
+        <!-- TIER 06: Radical Pricing Worldwide -->
+        <div class="parity-card parity-card-6">
+          <div>
+            <span class="parity-badge-tag"
+              style="background:rgba(0, 240, 255, 0.2);border:1px solid #00f0ff;color:#00f0ff;">
+              🤝 TIER 06 · RADICAL PRICING WORLDWIDE
+            </span>
+            <h3 class="parity-card-heading">Radical Pricing &amp; Distressed Regions</h3>
+            <p class="parity-card-subheading">Grassroots Innovators, Crisis Zones &amp; Micro-Rate Candidates</p>
+            <div class="parity-discount-box">
+              <div class="parity-discount-val" style="color:#00f0ff;text-shadow:0 0 16px rgba(0,240,255,0.45);">
+                Radical Pricing Relief
+              </div>
+              <div class="parity-discount-sub" style="color:#7dd3fc;">
+                CUSTOM MICRO-RATES &amp; UP TO 90%+ SUBSIDIES
+              </div>
+            </div>
+            <div class="parity-tag-title">Qualifying Beneficiaries</div>
+            <div class="parity-geo-tag">
+              <strong>Crisis &amp; Conflict Zones:</strong> Builders operating in post-conflict recovery or humanitarian
+              crises<br>
+              <strong>Hyperinflation Environments:</strong> Teams restricted by severe currency shocks or forex
+              blocks<br>
+              <strong>Grassroots Collectives:</strong> Underprivileged community builders and non-commercial creators
+            </div>
+            <ul class="parity-card-features">
+              <li><span style="color:#00f0ff;">▸</span>
+                <div><strong>No One Turned Away:</strong> High-impact, ethical missions receive customized micro-rates
+                  or subsidized relief.</div>
+              </li>
+              <li><span style="color:#00f0ff;">▸</span>
+                <div><strong>Uncompromised Excellence:</strong> Equal access to production Claude agent architecture and
+                  direct advisory.</div>
+              </li>
+            </ul>
+          </div>
+          <a class="btn" href="pricing.html"
+            style="width:100%;justify-content:center;border:1px solid #00f0ff;color:#00f0ff;background:rgba(0,240,255,0.08);">
+            Explore Radical Equity →
+          </a>
+        </div>
+      </div>
+
+      <!-- RADICAL PRICING WORLDWIDE CALLOUT BANNER -->
+      <div class="radical-callout-banner">
+        <span style="font-size: 2.2rem; display: inline-block; margin-bottom: 0.5rem;">🌍</span>
+        <h3
+          style="font-family: var(--font-display, sans-serif); font-size: clamp(1.4rem, 2.8vw, 1.9rem); font-weight: 800; color: #ffffff; margin-bottom: 0.75rem;">
+          Radical Pricing Available for <span class="accent-cyan">Suitable Clients Worldwide</span>
+        </h3>
+        <p
+          style="max-width: 820px; margin: 0 auto 1.5rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7;">
+          Economic hardship, geographical location, or currency exchange shocks should never lock ambitious creators out
+          of the intelligence age. If your organization operates in a crisis zone, hyperinflation environment,
+          grassroots collective, or under-resourced community, we provide deeply subsidized relief, flexible
+          micro-rates, or milestone-based pro bono advisory. Reach out directly to discuss how we can support your
+          mission.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a class="btn btn-commission" href="pricing.html" style="padding: 0.85rem 1.75rem; font-size: 0.92rem;">
+            Explore Full 195-Country Parity Index →
+          </a>
+          <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank"
+            style="padding: 0.85rem 1.75rem; font-size: 0.92rem;">
+            Free LinkedIn Consultation ↗
+          </a>
+          <a class="btn" href="contact.html"
+            style="background: rgba(255,255,255,0.06); border: 1px solid rgba(0, 240, 255, 0.4); color: #00f0ff; padding: 0.85rem 1.75rem; font-size: 0.92rem;">
+            Request Radical Pricing Relief →
+          </a>
+        </div>
       </div>
     </section>
     <div class="divider"></div>
@@ -8276,6 +8785,68 @@
     <hr class="dv">
 
     <!-- WORK WITH ME -->
+    <style>
+      .wg {
+        grid-template-columns: repeat(6, 1fr) !important;
+        gap: 8px !important;
+      }
+      .wl {
+        padding: 9px 10px !important;
+        border-radius: 8px !important;
+        gap: 3px !important;
+      }
+      .wl-head {
+        gap: 8px !important;
+      }
+      .wl-ic {
+        width: 26px !important;
+        height: 26px !important;
+        border-radius: 6px !important;
+      }
+      .wl-ic svg {
+        width: 16px !important;
+        height: 16px !important;
+        display: block !important;
+      }
+      .wl-name {
+        font-size: 13px !important;
+        line-height: 1.3 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+      .wl-desc {
+        font-size: 11px !important;
+        line-height: 1.35 !important;
+        margin-top: 2px !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+      }
+      .wl-url {
+        font-size: 10.5px !important;
+        margin-top: auto !important;
+        padding-top: 4px !important;
+      }
+      @media (max-width: 960px) {
+        .wg {
+          grid-template-columns: repeat(3, 1fr) !important;
+          gap: 8px !important;
+        }
+      }
+      @media (max-width: 640px) {
+        .wg {
+          grid-template-columns: repeat(2, 1fr) !important;
+          gap: 8px !important;
+        }
+      }
+      @media (max-width: 440px) {
+        .wg {
+          grid-template-columns: 1fr !important;
+        }
+      }
+    </style>
     <p class="tc-label">Work With Me</p>
     <div class="wg">
       <!-- Topmate -->
@@ -8337,8 +8908,23 @@
           </div>
           <span class="wl-name">Pricing &amp; Parity</span>
         </div>
-        <p class="wl-desc">Transparent milestone rates &amp; 198-country PPP index.</p>
+        <p class="wl-desc">Transparent milestone rates &amp; 195-country PPP index.</p>
         <span class="wl-url">thomascherickal.github.io/pricing</span>
+      </a>
+
+      <!-- Message me on X -->
+      <a href="https://x.com/@thomazcherickal" class="wl" target="_blank" rel="noopener noreferrer">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true">
+              <path
+                d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z" />
+            </svg>
+          </div>
+          <span class="wl-name">Message me on X</span>
+        </div>
+        <p class="wl-desc">Direct messaging, quick queries &amp; tech discussions.</p>
+        <span class="wl-url">x.com/@thomazcherickal</span>
       </a>
 
       <!-- Direct Email Inquiry -->

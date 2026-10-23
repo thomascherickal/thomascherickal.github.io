@@ -6,80 +6,66 @@
 
 ---
 
-## 1. Service
- Overview & Scope
+## 1. Service Overview & Scope
 
-- Role-Specific Tailored Curriculums:
-  - Freshers & Employees: Practical daily AI adoption, effective prompt craft, research synthesis, productivity workflows, and responsible usage.
-  - Developers & Engineers: AI-assisted development, Test-Driven Development (TDD) with AI, agentic coding workflows, and Model Context Protocol (MCP) server creation.
-  - Corporate Staff & Operations: Document intelligence, cross-department automation, intelligent reporting, and cognitive workflow integration.
-  - CXOs & Leadership: Strategic AI transformation roadmaps, technology radars, ROI maximization, vendor assessment, and governance frameworks.
-- Hands-On Interactive Delivery Formats:
-  - Delivered live in-person or remotely via interactive sessions: half-day intensives, multi-day masterclasses, or ongoing monthly training cohorts.
-  - Practical coding labs, interactive Jupyter notebooks, real-world case study challenges, and executable sandbox environments.
-- Executive AI Briefings & Strategy Roadmaps:
-  - High-level strategic briefings for board members and senior executives detailing macroeconomic AI shifts, open-source vs proprietary dynamics, and defensible AI moat building.
-  - Establishing organizational AI policies, compliance governance, and risk mitigation strategies.
+- Organization-Wide AI Enablement: Comprehensive live and remote training masterclasses tailored for all organizational cohorts: Employees, Developers, Corporate Staff, and CXOs.
+- Cohort-Specific Curricula: Distinct tracks for non-technical staff (prompting & workflows), technical engineers (Claude Code CLI & TDD), and executives (AI governance & ROI).
+- Safe Enterprise AI Policies: Establishing clear guidelines for data confidentiality, IP protection, avoiding public LLM leakage, and zero-retention enterprise compliance.
+- Departmental Automation Projects: Guided hands-on workshops where employees build working AI workflows directly applicable to their day-to-day business responsibilities.
+- Scalable Knowledge Repository: Providing permanent video recordings, interactive prompt sandboxes, template libraries, and bespoke cheat sheets.
 
 ---
 
-## 2. Standard
- Architecture & Tools
+## 2. Standard Architecture & Tools
 
-- Developer & Engineering Tooling:
-  - Claude Code CLI, Google Antigravity, OpenAI Codex, OpenCode, VS Code / Cursor.
-  - Automated testing harnesses (pytest, cargo test) for AI Test-Driven Development.
-- Enterprise Productivity Platforms:
-  - Google Gemini Notebook, Perplexity Pro, ChatGPT Enterprise, Claude Team, and local Ollama workstations.
-- Learning Resources & Sandbox Materials:
-  - Executable GitHub Classroom repositories, interactive Jupyter notebooks, reproducible lab environments, and recorded walkthroughs.
+- Primary Platforms: Claude.ai enterprise workspaces, Claude Desktop, Claude Code CLI, and Google Workspace integrations.
+- Automation & Sandbox Tools: Docker containers, self-hosted n8n automation instances, and internal API mock gateways.
+- Training Delivery Environments: Live interactive Zoom/Meet workshops, dedicated Slack/Discord support hubs, and recorded video portals.
+- Instructional Materials: 50+ reusable departmental prompt templates, XML framing guides, and enterprise governance checklists.
 
 ---
 
-## 3.
- Deliverable Examples
+## 3. Deliverable Examples & 4-Week Schedule
 
-- Complete Workforce Curriculum & Hands-On Labs:
-  - Role-tailored course slides, interactive coding exercises, prompt libraries, and cheat sheets for ongoing reference.
-- Executive AI Transformation Roadmap & Strategy Briefing:
-  - Bespoke strategy document analyzing your industry vertical, high-ROI AI initiatives, and recommended 12-month implementation milestones.
-- Permanent Internal AI Knowledge Hub:
-  - Customized corporate wiki templates, prompt patterns, and security guidelines for ongoing employee onboarding.
+- Enterprise AI Prompt Playbook & Template Library: Curated repository of 50+ tested prompt templates tailored for HR, operations, sales, finance, and legal workflows.
+- Cohort Masterclass Recordings & Slide Decks: High-definition video recordings of all live training modules with detailed presentation slides and step-by-step transcripts.
+- Acceptable AI Use Policy & Security Checklist: Formal corporate policy document establishing safe AI practices, data boundary rules, and compliance standards.
+- Departmental Capstone Projects & Certificate: Completed, functional automation workflows authored by each participating business cohort.
 
 ---
 
-## 4. Guarantees
- & Commitments
+## 4. Guarantees & Commitments
 
-- Tangible Skill Acquisition: Every participant builds and tests working, verified AI workflows within interactive sandbox training environments during the training program.
-- Interactive Outcome-Driven Format: No boring theoretical lectures: 70%+ hands-on exercises tailored to your company's actual daily workflows.
-- 14-Day Post-Training Mentoring: Dedicated async Q&A support for participants to resolve real-world implementation questions following the sessions.
+- Immediate Operational ROI: Measurable 30% to 50% productivity acceleration on core knowledge tasks within 14 days.
+- 100% Tailored Enterprise Content: All training examples, templates, and sandboxes customized to your industry and tech stack.
+- Full IP & Material Ownership: Complete rights to all recorded videos, slides, guides, and departmental prompt playbooks.
+- 30-Day Post-Training Mentoring SLA: Dedicated async Q&A channel to assist employees and debug workflows as they adopt tools.
 
 ---
 
-## 5. Investment
- & Pricing Quote
+## 5. Investment & Pricing Quote
 
-- Base Investment Range (Tier 1 Standard): $4,000 – $8,000 USD (per workshop series, bootcamp cohort, or executive briefing).
+- Engagement Duration: Strictly 1 month (4 weeks of structured milestone delivery and runtime verification).
+- Base Investment Rate (Tier 1 Standard): $2,000 USD (flat base rate for complete 1-month delivery).
 - Global Purchasing Power Parity (PPP) & Subsidized Rates:
-  - Tier 1 (Standard / 100%): $4,000 – $8,000 USD
-  - Tier 2 (Developing Nations / 25% Off): $3,000 – $6,000 USD
-  - Tier 3 & 4 (Least Developed & Startups / 50% Off): $2,000 – $4,000 USD
-  - Tier 5 (Academia & Non-Profits / 75% Off): $1,000 – $2,000 USD
+  - Tier 1 (Standard / 100%): $2,000 USD (USA, UK, EU, Canada, Australia)
+  - Tier 2 (Developing Nations / 25% Off): $1,500 USD (India, Brazil, Mexico, UAE, Poland)
+  - Tier 3 & 4 (Least Developed & Startups / 50% Off): $1,000 USD
+  - Tier 5 (Academia & Non-Profits / 75% Off): $500 USD
   - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief / Micro-Rates
   - Calculate and lock in your exact tier rate live on the Pricing page.
-- Payment Schedule:
-  - 50% upfront milestone initialization / 50% upon completed delivery, runtime verification, and client sign-off.
+- Payment Milestones:
+  - 50% upfront milestone initialization / 50% upon completed Week 4 delivery, runtime verification, and client sign-off.
 
 ---
 
 ## 6. Summary
 
-- Three-Tier Curriculum: Tailored modules for Freshers (AI basics), Developers (AI TDD & agents), and CXOs (strategy & ROI).
-- Cross-Functional Automation: Automating finance, HR, legal, and ops workflows with Claude, n8n, and Perplexity.
-- AI-Assisted Engineering: Upskilling dev teams in Cursor, Claude Code, test-driven validation, and Git workflows.
-- CXO Strategic Roadmaps: Assessing model tradeoffs, vendor lock-in risks, capital allocation, and ROI metrics.
-- Governance & Compliance: Standardizing corporate AI acceptable use policies, SOC2/GDPR compliance, and IP safety.
+- Cross-Functional Enablement: Tailored training curricula for Employees, Developers, Staff, and CXOs.
+- Strict 1-Month Delivery: 4-week structured masterclass from C-suite governance to cohort capstone project certification.
+- Hands-on Practical Mastery: Structured XML prompting, Claude Projects, Claude Code CLI, and n8n automations.
+- Safe Enterprise Compliance: Strict acceptable use policies preventing sensitive IP and customer data leakage.
+- 100% Material Ownership: Full access to high-definition recordings, playbooks, and 30-day dedicated post-training SLA.
 
 ---
 

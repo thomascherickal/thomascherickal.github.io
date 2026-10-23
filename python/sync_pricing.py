@@ -32,9 +32,9 @@ CORE_PILLARS = [
         "sub": "USD · FLAT BASE RATE",
         "minPrice": 2000,
         "maxPrice": 2000,
-        "description": "Create teams of AI agents with Claude, OpenAI, Gemini, or Grok. Flat base rate: $2,000 USD. Parity rates: Tier 2 (25% off) $1,500; Tier 3 & 4 (50% off) $1,000; Tier 5 (75% off) $500; Tier 6 custom subsidized relief across 198 countries.",
+        "description": "Create teams of Claude Agents. Flat base rate: $2,000 USD. Parity rates: Tier 2 (25% off) $1,500; Tier 3 & 4 (50% off) $1,000; Tier 5 (75% off) $500; Tier 6 custom subsidized relief across 195 countries.",
         "bullets": [
-            ("Multi-Agent Architecture", "Coordinated teams using Claude, OpenAI, Gemini, or Grok."),
+            ("Multi-Agent Architecture", "Coordinated teams of Claude Agents."),
             ("Constraint Navigation", "Overcoming context degradation, tool loops & state drift."),
             ("Sample Code & IP Transfer", "Runnable Python/Rust repos, evals & 100% IP transfer.")
         ]
@@ -47,7 +47,7 @@ CORE_PILLARS = [
         "sub": "USD · FLAT BASE RATE",
         "minPrice": 2000,
         "maxPrice": 2000,
-        "description": "Live and remote training tailored for Employees, Developers, Corporate Staff, and CXOs. Flat base rate: $2,000 USD. Parity rates: Tier 2 (25% off) $1,500; Tier 3 & 4 (50% off) $1,000; Tier 5 (75% off) $500; Tier 6 custom subsidized relief across 198 countries.",
+        "description": "Live and remote training tailored for Employees, Developers, Corporate Staff, and CXOs. Flat base rate: $2,000 USD. Parity rates: Tier 2 (25% off) $1,500; Tier 3 & 4 (50% off) $1,000; Tier 5 (75% off) $500; Tier 6 custom subsidized relief across 195 countries.",
         "bullets": [
             ("Employees & Staff", "AI adoption, prompt craft, and daily productivity tool mastery."),
             ("Engineering & TDD", "AI-assisted dev, test-driven development & agentic loops."),
@@ -62,7 +62,7 @@ CORE_PILLARS = [
         "sub": "USD · FLAT BASE RATE",
         "minPrice": 2000,
         "maxPrice": 2000,
-        "description": "Slashing recurring AI inference costs by deploying private open-weight models on local/on-prem hardware. Flat base rate: $2,000 USD. Parity rates: Tier 2 (25% off) $1,500; Tier 3 & 4 (50% off) $1,000; Tier 5 (75% off) $500; Tier 6 custom subsidized relief across 198 countries.",
+        "description": "Slashing recurring AI inference costs by deploying private open-weight models on local/on-prem hardware. Flat base rate: $2,000 USD. Parity rates: Tier 2 (25% off) $1,500; Tier 3 & 4 (50% off) $1,000; Tier 5 (75% off) $500; Tier 6 custom subsidized relief across 195 countries.",
         "bullets": [
             ("API Cost Audit", "Quantitative assessment of token spend and 60–90% savings plan."),
             ("Production Model Serving", "vLLM, Ollama, AWQ/GGUF on consumer GPUs or servers."),
@@ -73,18 +73,18 @@ CORE_PILLARS = [
 
 # Authoritative A La Carte Modules (Individual Services - Exactly matching the 12 services in services.html)
 A_LA_CARTE = [
-    {"num": 1, "name": "🧠 Generative AI Transformation", "price": 1000, "per": "", "color": "gold"},
-    {"num": 2, "name": "📦 Local LLMs & Cost Slashing", "price": 1000, "per": "", "color": "cyan"},
-    {"num": 3, "name": "🤖 Claude AI Agent Orchestration", "price": 1000, "per": "", "color": "gold"},
-    {"num": 4, "name": "🏎️ Hermes Agent", "price": 1000, "per": "", "color": "cyan"},
-    {"num": 5, "name": "🌐 WorkFlow Automations", "price": 1000, "per": "", "color": "gold"},
-    {"num": 6, "name": "⚛️ Applied Quantum (Experimental)", "price": 1000, "per": "", "color": "cyan"},
-    {"num": 7, "name": "💲 AI Budget Training", "price": 1000, "per": "", "color": "gold"},
-    {"num": 8, "name": "🛡️ Enterprise AI Training", "price": 1000, "per": "", "color": "cyan"},
-    {"num": 9, "name": "💻 AI Developer Training", "price": 1000, "per": "", "color": "gold"},
-    {"num": 10, "name": "🤖 Advanced AI Agents", "price": 1000, "per": "", "color": "cyan"},
-    {"num": 11, "name": "⚡ Claude Basic Training", "price": 1000, "per": "", "color": "gold"},
-    {"num": 12, "name": "🚀 Claude Advanced Training", "price": 1000, "per": "", "color": "cyan"}
+    {"num": 1, "name": "🧠 Generative AI Transformation", "price": 2000, "per": "", "color": "gold"},
+    {"num": 2, "name": "📦 Local LLMs & Cost Slashing", "price": 2000, "per": "", "color": "cyan"},
+    {"num": 3, "name": "🤖 Claude AI Agent Orchestration", "price": 2000, "per": "", "color": "gold"},
+    {"num": 4, "name": "🏎️ Hermes Agent", "price": 2000, "per": "", "color": "cyan"},
+    {"num": 5, "name": "🌐 WorkFlow Automations", "price": 2000, "per": "", "color": "gold"},
+    {"num": 6, "name": "⚛️ Applied Quantum (Experimental)", "price": 2000, "per": "", "color": "cyan"},
+    {"num": 7, "name": "💲 AI Budget Training", "price": 2000, "per": "", "color": "gold"},
+    {"num": 8, "name": "🛡️ Enterprise AI Training", "price": 2000, "per": "", "color": "cyan"},
+    {"num": 9, "name": "💻 AI Developer Training", "price": 2000, "per": "", "color": "gold"},
+    {"num": 10, "name": "🤖 Advanced AI Agents", "price": 2000, "per": "", "color": "cyan"},
+    {"num": 11, "name": "⚡ Claude Basic Training", "price": 2000, "per": "", "color": "gold"},
+    {"num": 12, "name": "🚀 Claude Advanced Training", "price": 2000, "per": "", "color": "cyan"}
 ]
 
 # The 8 Standalone Services
@@ -205,7 +205,7 @@ def build_offer_catalog_elements():
     for p in CORE_PILLARS:
         if p["minPrice"] == 0 and p["maxPrice"] == 0:
             price_specs = [
-                format_price_spec("Tier 6 Underprivileged & Backward Nations", 0, 0, "Custom subsidized quotes and micro-rates across 198 countries")
+                format_price_spec("Tier 6 Underprivileged & Backward Nations", 0, 0, "Custom subsidized quotes and micro-rates across 195 countries")
             ]
         else:
             par = calc_parity(p["minPrice"], p["maxPrice"])
@@ -228,7 +228,7 @@ def build_offer_catalog_elements():
         elements.append(offer)
     return elements
 
-clean_desc = "Transparent flat-rate pricing across Enterprise Services: 01 AI Agent Mastery, 02 Workforce AI Training, 03 Local LLMs & Inference Cost Slashing with Global Parity across 198 countries."
+clean_desc = "Transparent flat-rate pricing across Enterprise Services: 01 AI Agent Mastery, 02 Workforce AI Training, 03 Local LLMs & Inference Cost Slashing with Global Parity across 195 countries. Each service lasts for one month and can freely overlap for different customers according to their needs."
 
 def sync_pricing_schema_json():
     pricing_schema_path = os.path.join(SCHEMA_DIR, "pricing-schema.json")
@@ -304,7 +304,7 @@ def sync_pricing_html_cards():
         <p class="section-label">// STRATEGIC PACKAGES</p>
         <h2 class="section-title">Enterprise <span class="accent-gold">Services</span></h2>
         <p class="section-sub" style="max-width:820px;margin:0.5rem auto 0 auto;line-height:1.7;">
-          Turnkey enterprise deployments and high-impact AI capabilities at a flat, transparent base rate of $2,000 USD with global parity pricing across 198 countries.
+          Turnkey enterprise deployments and high-impact AI capabilities at a flat, transparent base rate of $2,000 USD with global parity pricing across 195 countries.
         </p>
       </div>
       <div class="packages-grid"
@@ -322,8 +322,7 @@ def sync_pricing_html_cards():
               · AGENT ORCHESTRATION</span>
             <h3 style="font-size:1.55rem;font-weight:800;color:var(--text-primary);margin-bottom:0.35rem;">AI Agent
               Mastery</h3>
-            <p style="color:var(--text-muted);font-size:calc(0.88rem + 3px);margin-bottom:1.1rem;line-height:1.55;">Create teams of AI
-              agents with Claude, OpenAI, Gemini, or Grok. Master multi-agent orchestration principles &amp; constraints.</p>
+            <p style="color:var(--text-muted);font-size:calc(0.88rem + 3px);margin-bottom:1.1rem;line-height:1.55;">Create teams of Claude Agents. Master multi-agent orchestration principles &amp; constraints.</p>
             <div style="margin-bottom:1.1rem;padding-bottom:1rem;border-bottom:1px solid rgba(0, 210, 255, 0.3);">
               <div
                 style="font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:#00f0ff;line-height:1.1;text-shadow:0 0 16px rgba(0, 240, 255, 0.4);">
@@ -336,7 +335,7 @@ def sync_pricing_html_cards():
             <div class="pillar-parity-box">
               <div class="pillar-parity-header">
                 <span>PARITY PRICING TIERS</span>
-                <span style="color:#00f0ff;font-size:calc(0.65rem + 3px);">198 NATIONS</span>
+                <span style="color:#00f0ff;font-size:calc(0.65rem + 3px);">195 NATIONS</span>
               </div>
               <div class="pillar-parity-grid">
                 <div class="pillar-parity-item">
@@ -361,7 +360,7 @@ def sync_pricing_html_cards():
               style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;margin-bottom:1.5rem;font-size:calc(0.87rem + 3px);color:var(--text-secondary);line-height:1.5;">
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
                 <span style="color:#00f0ff;font-weight:bold;">✓</span>
-                <span><strong>Multi-Agent Architecture:</strong> Coordinated teams using Claude, OpenAI, Gemini, or Grok.</span>
+                <span><strong>Multi-Agent Architecture:</strong> Coordinated teams of Claude Agents.</span>
               </li>
               <li style="display:flex;align-items:flex-start;gap:0.6rem;">
                 <span style="color:#00f0ff;font-weight:bold;">✓</span>
@@ -404,7 +403,7 @@ def sync_pricing_html_cards():
             <div class="pillar-parity-box">
               <div class="pillar-parity-header">
                 <span>PARITY PRICING TIERS</span>
-                <span style="color:#fbbf24;font-size:calc(0.65rem + 3px);">198 NATIONS</span>
+                <span style="color:#fbbf24;font-size:calc(0.65rem + 3px);">195 NATIONS</span>
               </div>
               <div class="pillar-parity-grid">
                 <div class="pillar-parity-item">
@@ -472,7 +471,7 @@ def sync_pricing_html_cards():
             <div class="pillar-parity-box">
               <div class="pillar-parity-header">
                 <span>PARITY PRICING TIERS</span>
-                <span style="color:#c084fc;font-size:calc(0.65rem + 3px);">198 NATIONS</span>
+                <span style="color:#c084fc;font-size:calc(0.65rem + 3px);">195 NATIONS</span>
               </div>
               <div class="pillar-parity-grid">
                 <div class="pillar-parity-item">
@@ -523,7 +522,7 @@ def sync_pricing_html_cards():
           <p class="section-label">// REFERENCE SPECIFICATIONS</p>
           <h2 class="section-title">Individual Services &amp; <span class="accent-cyan">Base Rates</span></h2>
           <p class="section-sub" style="max-width:820px;margin:0.5rem auto 0 auto;line-height:1.7;">
-            A la carte specifications across our twelve core transformation services, with global parity pricing across 198 countries.
+            A la carte specifications across our twelve core transformation services. Each service lasts for strictly one month (4-week implementation timeline) with global parity pricing across 195 countries.
           </p>
         </div>
         <div class="pricing-grid-faq">
@@ -534,17 +533,18 @@ def sync_pricing_html_cards():
               🧠 Generative AI Transformation</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
-              $1,000 USD
+              $2,000 USD
             </div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
             <div class="service-parity-strip">
-              <span>25% Off: <strong>$750</strong></span>
-              <span>50% Off: <strong>$500</strong></span>
-              <span>75% Off: <strong>$250</strong></span>
+              <span>25% Off: <strong>$1,500</strong></span>
+              <span>50% Off: <strong>$1,000</strong></span>
+              <span>75% Off: <strong>$500</strong></span>
               <span>T6: <strong>Relief</strong></span>
             </div>
             <div
               style="font-size:calc(0.84rem + 3px);color:var(--text-secondary);line-height:1.5;flex-grow:1;display:flex;align-items:center;justify-content:center;">
-              Convert your business from isolated chatbots into coordinated agent teams powered by Claude, OpenAI, Gemini, or Grok.
+              Convert your business from isolated chatbots into coordinated teams of Claude Agents.
             </div>
           </div>
           <!-- Item 2 (Row 1, Card 2) -->
@@ -554,12 +554,13 @@ def sync_pricing_html_cards():
               📦 Local LLMs &amp; Cost Slashing</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
-              $1,000 USD
+              $2,000 USD
             </div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
             <div class="service-parity-strip">
-              <span>25% Off: <strong>$750</strong></span>
-              <span>50% Off: <strong>$500</strong></span>
-              <span>75% Off: <strong>$250</strong></span>
+              <span>25% Off: <strong>$1,500</strong></span>
+              <span>50% Off: <strong>$1,000</strong></span>
+              <span>75% Off: <strong>$500</strong></span>
               <span>T6: <strong>Relief</strong></span>
             </div>
             <div
@@ -574,12 +575,13 @@ def sync_pricing_html_cards():
               🤖 Claude AI Agent Orchestration</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
-              $1,000 USD
+              $2,000 USD
             </div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
             <div class="service-parity-strip">
-              <span>25% Off: <strong>$750</strong></span>
-              <span>50% Off: <strong>$500</strong></span>
-              <span>75% Off: <strong>$250</strong></span>
+              <span>25% Off: <strong>$1,500</strong></span>
+              <span>50% Off: <strong>$1,000</strong></span>
+              <span>75% Off: <strong>$500</strong></span>
               <span>T6: <strong>Relief</strong></span>
             </div>
             <div
@@ -594,12 +596,13 @@ def sync_pricing_html_cards():
               🏎️ Hermes Agent</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
-              $1,000 USD
+              $2,000 USD
             </div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
             <div class="service-parity-strip">
-              <span>25% Off: <strong>$750</strong></span>
-              <span>50% Off: <strong>$500</strong></span>
-              <span>75% Off: <strong>$250</strong></span>
+              <span>25% Off: <strong>$1,500</strong></span>
+              <span>50% Off: <strong>$1,000</strong></span>
+              <span>75% Off: <strong>$500</strong></span>
               <span>T6: <strong>Relief</strong></span>
             </div>
             <div
@@ -614,12 +617,13 @@ def sync_pricing_html_cards():
               🌐 WorkFlow Automations</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
-              $1,000 USD
+              $2,000 USD
             </div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
             <div class="service-parity-strip">
-              <span>25% Off: <strong>$750</strong></span>
-              <span>50% Off: <strong>$500</strong></span>
-              <span>75% Off: <strong>$250</strong></span>
+              <span>25% Off: <strong>$1,500</strong></span>
+              <span>50% Off: <strong>$1,000</strong></span>
+              <span>75% Off: <strong>$500</strong></span>
               <span>T6: <strong>Relief</strong></span>
             </div>
             <div
@@ -634,12 +638,13 @@ def sync_pricing_html_cards():
               ⚛️ Applied Quantum (Experimental)</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
-              $1,000 USD
+              $2,000 USD
             </div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
             <div class="service-parity-strip">
-              <span>25% Off: <strong>$750</strong></span>
-              <span>50% Off: <strong>$500</strong></span>
-              <span>75% Off: <strong>$250</strong></span>
+              <span>25% Off: <strong>$1,500</strong></span>
+              <span>50% Off: <strong>$1,000</strong></span>
+              <span>75% Off: <strong>$500</strong></span>
               <span>T6: <strong>Relief</strong></span>
             </div>
             <div
@@ -654,12 +659,13 @@ def sync_pricing_html_cards():
               💲 AI Budget Training</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
-              $1,000 USD
+              $2,000 USD
             </div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
             <div class="service-parity-strip">
-              <span>25% Off: <strong>$750</strong></span>
-              <span>50% Off: <strong>$500</strong></span>
-              <span>75% Off: <strong>$250</strong></span>
+              <span>25% Off: <strong>$1,500</strong></span>
+              <span>50% Off: <strong>$1,000</strong></span>
+              <span>75% Off: <strong>$500</strong></span>
               <span>T6: <strong>Relief</strong></span>
             </div>
             <div
@@ -674,12 +680,13 @@ def sync_pricing_html_cards():
               🛡️ Enterprise AI Training</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
-              $1,000 USD
+              $2,000 USD
             </div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
             <div class="service-parity-strip">
-              <span>25% Off: <strong>$750</strong></span>
-              <span>50% Off: <strong>$500</strong></span>
-              <span>75% Off: <strong>$250</strong></span>
+              <span>25% Off: <strong>$1,500</strong></span>
+              <span>50% Off: <strong>$1,000</strong></span>
+              <span>75% Off: <strong>$500</strong></span>
               <span>T6: <strong>Relief</strong></span>
             </div>
             <div
@@ -694,12 +701,13 @@ def sync_pricing_html_cards():
               💻 AI Developer Training</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
-              $1,000 USD
+              $2,000 USD
             </div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
             <div class="service-parity-strip">
-              <span>25% Off: <strong>$750</strong></span>
-              <span>50% Off: <strong>$500</strong></span>
-              <span>75% Off: <strong>$250</strong></span>
+              <span>25% Off: <strong>$1,500</strong></span>
+              <span>50% Off: <strong>$1,000</strong></span>
+              <span>75% Off: <strong>$500</strong></span>
               <span>T6: <strong>Relief</strong></span>
             </div>
             <div
@@ -714,12 +722,13 @@ def sync_pricing_html_cards():
               🤖 Advanced AI Agents</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
-              $1,000 USD
+              $2,000 USD
             </div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
             <div class="service-parity-strip">
-              <span>25% Off: <strong>$750</strong></span>
-              <span>50% Off: <strong>$500</strong></span>
-              <span>75% Off: <strong>$250</strong></span>
+              <span>25% Off: <strong>$1,500</strong></span>
+              <span>50% Off: <strong>$1,000</strong></span>
+              <span>75% Off: <strong>$500</strong></span>
               <span>T6: <strong>Relief</strong></span>
             </div>
             <div
@@ -734,12 +743,13 @@ def sync_pricing_html_cards():
               ⚡ Claude Basic Training</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#fbbf24;text-shadow:0 0 12px rgba(251,191,36,0.35);">
-              $1,000 USD
+              $2,000 USD
             </div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
             <div class="service-parity-strip">
-              <span>25% Off: <strong>$750</strong></span>
-              <span>50% Off: <strong>$500</strong></span>
-              <span>75% Off: <strong>$250</strong></span>
+              <span>25% Off: <strong>$1,500</strong></span>
+              <span>50% Off: <strong>$1,000</strong></span>
+              <span>75% Off: <strong>$500</strong></span>
               <span>T6: <strong>Relief</strong></span>
             </div>
             <div
@@ -754,12 +764,13 @@ def sync_pricing_html_cards():
               🚀 Claude Advanced Training</div>
             <div class="price-amount"
               style="font-size:1.3rem;font-weight:800;margin:0.4rem 0 0.2rem 0;color:#00f0ff;text-shadow:0 0 12px rgba(0,240,255,0.35);">
-              $1,000 USD
+              $2,000 USD
             </div>
+            <div style="font-size:0.75rem;color:var(--cyan);font-weight:700;margin:0.2rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.06em;">Duration: 1 Month (4 Weeks)</div>
             <div class="service-parity-strip">
-              <span>25% Off: <strong>$750</strong></span>
-              <span>50% Off: <strong>$500</strong></span>
-              <span>75% Off: <strong>$250</strong></span>
+              <span>25% Off: <strong>$1,500</strong></span>
+              <span>50% Off: <strong>$1,000</strong></span>
+              <span>75% Off: <strong>$500</strong></span>
               <span>T6: <strong>Relief</strong></span>
             </div>
             <div
@@ -887,15 +898,15 @@ def sync_llms_txt():
     with open(llms_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    new_packages_block = """- **Enterprise Services ($2,000 USD Flat Base Rate, 198 Countries Supported)**:
+    new_packages_block = """- **Enterprise Services ($2,000 USD Flat Base Rate, 195 Countries Supported)**:
   * **01 · AI Agent Mastery**: **$2,000 USD** (Flat Base Rate)
     - Parity: 25% Off (Tier 2): $1,500 | 50% Off (Tier 3/4 Startups): $1,000 | 75% Off (Tier 5): $500 | Tier 6: Subsidized Relief
   * **02 · Workforce AI Training (Live & Remote)**: **$2,000 USD** (Flat Base Rate)
     - Parity: 25% Off (Tier 2): $1,500 | 50% Off (Tier 3/4 Startups): $1,000 | 75% Off (Tier 5): $500 | Tier 6: Subsidized Relief
   * **03 · Local LLM Deployment & Inference Cost Slashing**: **$2,000 USD** (Flat Base Rate)
     - Parity: 25% Off (Tier 2): $1,500 | 50% Off (Tier 3/4 Startups): $1,000 | 75% Off (Tier 5): $500 | Tier 6: Subsidized Relief
-- **A La Carte Advisory & Modules**: **$1,000 USD** flat rate per module (AI Agents, Local LLM Setup, AI-Assisted Dev & TDD, Early Quantum Systems, Frontier AI Tools, Technical Deep Dives).
-  - Parity: 25% Off: $750 USD | 50% Off: $500 USD | 75% Off: $250 USD | Tier 6: Subsidized Relief"""
+- **A La Carte Advisory & Modules**: **$2,000 USD** flat rate per module (AI Agents, Local LLM Setup, AI-Assisted Dev & TDD, Early Quantum Systems, Frontier AI Tools, Technical Deep Dives).
+  - Parity: 25% Off: $1,500 USD | 50% Off: $1,000 USD | 75% Off: $500 USD | Tier 6: Subsidized Relief"""
 
     pattern = re.compile(
         r'-\s*\*\*(?:Core Strategic Packages|Enterprise Services)[\s\S]*?-\s*\*\*A La Carte Advisory & Modules\*\*:[\s\S]*?(?=\n\n|\n-|\n###)',

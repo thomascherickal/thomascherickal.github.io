@@ -135,4 +135,4 @@ You retain 100% complete IP ownership and copyright upon milestone payment compl
 Every engagement includes 30 days of active Discord/Slack support for direct developer advisory and troubleshooting, plus 60 days of free minor curriculum adjustments, sample code guide updates, and upstream model/API breaking-change fixes.
 
 ### 6. What are the 6 Tiers of Purchasing Power Parity (PPP)?
-Pricing is indexed across 6 tiers of payment covering 198 countries: Tier 1 Developed Nations (100%), Tier 2 Developing Nations (75%), Tier 3 Least Developed Nations (50%), Tier 4 Startups (50% off), Tier 5 Non-Profits & Academia (75% off), and Tier 6 Backward Nations & Underprivileged Individuals (Customized subsidized pricing).
+Pricing is indexed across 6 tiers of payment covering 195 countries: Tier 1 Developed Nations (100%), Tier 2 Developing Nations (75%), Tier 3 Least Developed Nations (50%), Tier 4 Startups (50% off), Tier 5 Non-Profits & Academia (75% off), and Tier 6 Backward Nations & Underprivileged Individuals (Customized subsidized pricing).

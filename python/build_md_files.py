@@ -192,7 +192,7 @@ def convert_services() -> str:
         "## AI Agent Mastery, Corporate AI Training & Autonomous Systems",
         "",
         "> **// GENERATIVE AI CONSULTANT & QUANTUM SYSTEMS EXPLORER**  ",
-        "> **AI Agent Mastery: create teams of AI agents with Claude, OpenAI, Gemini, or Grok. Learn the in-depth principles that make Claude AI agent orchestration successful, understand deep agent constraints, and perform the tasks of multiple people with an agent team — grounded in essential task domain knowledge. Comprehensive live and remote workforce training (Employees, Developers, Staff, CXOs), Local LLM cost optimization, agent orchestration, AI-assisted TDD, and early quantum systems exploration.**",
+        "> **AI Agent Mastery: create teams of Claude Agents. Learn the in-depth principles that make Claude AI agent orchestration successful, understand deep agent constraints, and perform the tasks of multiple people with an agent team — grounded in essential task domain knowledge. Comprehensive live and remote workforce training (Employees, Developers, Staff, CXOs), Local LLM cost optimization, agent orchestration, AI-assisted TDD, and early quantum systems exploration.**",
         "",
         "**Quick Actions**:",
         "- [✉️ Book a Strategy Consultation](contact.html)",
@@ -367,7 +367,7 @@ def convert_pricing() -> str:
         "## Transparent Retainer Packages, Enterprise Migrations & Global Parity Index",
         "",
         "> **// TRANSPARENT MILESTONE RATES & EQUAL-WEIGHT DELIVERABLES**  ",
-        "> **Clear milestone pricing, runtime-verified code, infinite revisions until satisfied, and global equity with an interactive 198-country Purchasing Power Parity (PPP) rate calculator.**",
+        "> **Clear milestone pricing, runtime-verified code, infinite revisions until satisfied, and global equity with an interactive 195-country Purchasing Power Parity (PPP) rate calculator.**",
         "",
         "---",
         "",
@@ -447,7 +447,7 @@ def convert_pricing() -> str:
     lines.append("---")
     lines.append("")
     lines.append("## Global Equity: Purchasing Power Parity (PPP) Six Tiers")
-    lines.append("Rates are automatically indexed across 198 countries to ensure fair pricing worldwide across 6 Parity Tiers:")
+    lines.append("Rates are automatically indexed across 195 countries to ensure fair pricing worldwide across 6 Parity Tiers:")
     lines.append("")
     parity_cards = soup.find_all("div", class_="parity-tier-card")
     if parity_cards:
@@ -578,7 +578,7 @@ def convert_contact() -> str:
 - **Response Time**: All verified enterprise queries receive a detailed response within 24 business hours.
 - **Non-Disclosure Agreements (NDAs)**: Mutual NDAs executed prior to reviewing proprietary codebase or confidential data.
 - **Initial Audit**: Every engagement begins with an objective scoping call to identify ROI bottlenecks.
-- **Purchasing Power Parity**: 6 PPP tiers apply across 198 countries to ensure accessible global rates.
+- **Purchasing Power Parity**: 6 PPP tiers apply across 195 countries to ensure accessible global rates.
 
 ---
 

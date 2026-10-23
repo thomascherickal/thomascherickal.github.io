@@ -2,7 +2,7 @@
 ## AI Agent Mastery, Corporate AI Training & Autonomous Systems
 
 > **// GENERATIVE AI CONSULTANT & QUANTUM SYSTEMS EXPLORER**  
-> **AI Agent Mastery: create teams of AI agents with Claude, OpenAI, Gemini, or Grok. Learn the in-depth principles that make Claude AI agent orchestration successful, understand deep agent constraints, and perform the tasks of multiple people with an agent team — grounded in essential task domain knowledge. Comprehensive live and remote workforce training (Employees, Developers, Staff, CXOs), Local LLM cost optimization, agent orchestration, AI-assisted TDD, and early quantum systems exploration.**
+> **AI Agent Mastery: create teams of Claude Agents. Learn the in-depth principles that make Claude AI agent orchestration successful, understand deep agent constraints, and perform the tasks of multiple people with an agent team — grounded in essential task domain knowledge. Comprehensive live and remote workforce training (Employees, Developers, Staff, CXOs), Local LLM cost optimization, agent orchestration, AI-assisted TDD, and early quantum systems exploration.**
 
 **Quick Actions**:
 - [✉️ Book a Strategy Consultation](contact.html)
@@ -15,7 +15,7 @@
 Hands-on mastery, configuration, and developer pair-programming across industry-standard AI development environments and foundation APIs:
 
 `Claude Code` · `Google Antigravity` · `ChatGPT` · `HuggingFace Spaces` · `OpenAI Codex` · `Google Gemini Notebook` · `Google AI Studio` · `OpenCode` · `OpenRouter` · `Ollama & vLLM` · `IBM Qiskit` · `Enterprise
- Transition` · `60%
+ Transition` · `Duration: 1 Month (4 Weeks)` · `60%
  Inference Savings & Privacy` · `Multi-Agents
  On Budget` · `Persistent
  Memory` · `Self-Hosted
@@ -30,7 +30,7 @@ Hands-on mastery, configuration, and developer pair-programming across industry-
 
 ### 1. 🧠 Generative AI Transformation
 Convert your business from isolated conversational chatbot windows into a proactive, agent-driven
- organization. Orchestrate coordinated teams of AI agents powered by Claude, OpenAI, Gemini, or Grok to
+ organization. Orchestrate coordinated teams of Claude Agents to
  execute complex, multi-person operational workloads grounded in domain-specific boundaries.
 
 - ▸Chatbot-to-Agent

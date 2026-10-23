@@ -1,87 +1,104 @@
-# 🏎️ Agentic AI Assistants (Hermes Agent) (Persistent Memory & Autonomy)
+# 🏎️ Agentic AI Assistants (Hermes Agent) Persistent Memory & Autonomy
 ## Enterprise AI Transformation Service — Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 04**  
-> **Enterprise deployment of autonomously improving agentic assistants with persistent vector memory, sandboxed tool execution, and continuous reinforcement learning pipelines.**
+> **Enterprise deployment of autonomously improving agentic assistants with persistent vector memory, sandboxed tool
+ execution, and continuous reinforcement learning pipelines.**
 
 ---
 
 ## 1. Service
  Overview & Scope
 
-- Frontier Agent Architecture & Training:
-  - Hands-on training and sandbox demonstrations of Nous Research Hermes Agent, OpenClaw, and OpenFang for autonomous work and persistent execution.
-  - Custom daemon architectures and process isolation tutorials enabling background agents to run 24/7 without manual intervention.
-  - Model-agnostic execution layers allowing seamless switching between Nous Hermes, Claude, DeepSeek, and local weights.
-- Persistent Memory & Contextual Evolution:
-  - Multi-tiered memory architecture combining dense vector embeddings with episodic SQLite/DuckDB interaction storage.
-  - Memory consolidation pipelines that synthesize daily operational interactions into long-term organizational knowledge.
-  - Context compression algorithms preserving critical memories across months of continuous operations without context-window overflow.
-- Sandboxed Autonomous Tool Execution:
-  - Secure containerized execution environments for bash commands, filesystem operations, Python evaluation, and web browsing.
-  - Multi-stage security gates requiring explicit human cryptographic approval for high-risk system commands.
+- Hermes Autonomous Agent Architecture: Building self-hosted, sovereign agentic systems
+ powered by the open-weights Hermes 3 model family (Nous Research).
+- Advanced Function Calling & Tool Ingestion: Training and fine-tuning structured
+ JSON-schema function dispatch pipelines for deterministic tool execution.
+- Agentic Reasoning & Reflection Loops: Deploying multi-turn reasoning loops,
+ scratchpad execution planning, and runtime self-correction mechanisms without cloud dependency.
+- Private Hardware Optimization: Tuning Hermes 3 inference on vLLM and llama.cpp runtimes
+ for low-latency batch processing and high token throughput.
+- Enterprise Tool Integration & Security: Integrating Hermes agents with private
+ databases, shell executors, and internal APIs within gVisor-isolated sandboxes.
 
 ---
 
 ## 2. Standard
  Architecture & Tools
 
-- Agent Core & Inference Runtimes:
-  - Nous Hermes 3 (Llama/Mistral based), OpenClaw engine, OpenFang daemon runner, and Google Antigravity SDK.
-  - High-speed local inference via vLLM or optimized gateway routing via OpenRouter.
-- Vector Memory & Knowledge Indexing:
-  - Qdrant vector database with HNSW indexing and semantic metadata filtering.
-  - DuckDB for structured episodic recall and session state checkpointing.
-- Isolation & Security Sandbox:
-  - gVisor and Docker container sandboxing with dropped Linux capabilities and read-only root filesystems.
-  - Outbound egress network whitelists preventing data exfiltration.
+- Foundation Models: Hermes 3 (Llama-3.1-8B, 70B, and 405B variants) fine-tuned for
+ structured tool calling and autonomous planning.
+- Serving Runtimes: vLLM with OpenAI-compatible tool-calling endpoints, llama-server with
+ grammar-constrained JSON schemas, and Ollama.
+- Tool Middleware & Validation: Pydantic v2 data models, Instructor,
+ LangChain/LangGraph agent runners, and SQLite memory stores.
+- Sandboxed Environments: Ephemeral Docker containers, dropped Linux capabilities, and
+ non-root execution wrappers.
 
 ---
 
 ## 3.
- Deliverable Examples
+ Deliverable Examples & 4-Week Schedule
 
-- Hermes Agent Sample Architecture & Training Sandbox:
-  - Complete educational containerized setup with sample code guides, custom system prompts, tool hooks, and daemon manager tutorials.
-- Institutional Memory Ingestion Pipeline:
-  - Automated ingestion scripts transforming internal wikis, documentation, and codebase repos into searchable vector memory.
-- Security Sandbox & Whitelist Configuration:
-  - Hardened runner scripts with granular permission control and audit log generation.
+- Containerized Hermes 3 Serving Stack: Production Docker Compose configuration serving
+ quantized Hermes 3 models with native tool-calling endpoints.
+- Custom Function-Calling Toolset: Python tool library with Pydantic validation schemas
+ enabling Hermes to query SQL, execute shell commands, and interact with APIs.
+- Multi-Step Reasoning Harness: Execution loop script managing context window preservation,
+ scratchpad reasoning, and error retry logic.
+- Evaluation Benchmark Suite: Automated test harness evaluating tool selection precision,
+ argument correctness, and error recovery rates.
 
 ---
 
 ## 4. Guarantees
  & Commitments
 
-- Memory Retention Verification: Guaranteed persistence of critical facts across reboots and context flushes, validated via recall test suites in demo sandboxes.
-- Zero Data Exfiltration: Strict network isolation preventing any confidential memory data from leaving authorized infrastructure.
-- 30-Day Operational Training Support: Async guidance on tool expansion, prompt calibration, and memory index optimization.
+- Complete Sovereign Autonomy: 100% private execution with zero dependence on external
+ commercial LLM APIs.
+- Reliable Function Calling: Schema-enforced grammar constraints guaranteeing zero invalid
+ JSON tool payloads.
+- 100% Client Code & Model Weights Ownership: All scripts, custom tool libraries, and
+ documentation transferred completely.
+- 30-Day Engineering Support: Direct technical guidance for model fine-tuning, runtime
+ adjustments, and new tool integrations.
 
 ---
 
 ## 5. Investment
  & Pricing Quote
 
-- Base Investment Range (Tier 1 Standard): $3,000 – $6,000 USD (per system rollout).
+- Engagement Duration: Strictly 1 month (4 weeks of structured milestone delivery and
+ runtime verification).
+- Base Investment Rate (Tier 1 Standard): $2,000 USD (flat base rate for
+ complete 1-month delivery).
 - Global Purchasing Power Parity (PPP) & Subsidized Rates:
-  - Tier 1 (Standard / 100%): $3,000 – $6,000 USD
-  - Tier 2 (Developing Nations / 25% Off): $2,250 – $4,500 USD
-  - Tier 3 & 4 (Least Developed & Startups / 50% Off): $1,500 – $3,000 USD
-  - Tier 5 (Academia & Non-Profits / 75% Off): $750 – $1,500 USD
-  - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief / Micro-Rates
+  - Tier 1 (Standard / 100%): $2,000 USD (USA, UK, EU, Canada, Australia)
+  - Tier 2 (Developing Nations / 25% Off): $1,500 USD (India, Brazil, Mexico, UAE,
+ Poland)
+  - Tier 3 & 4 (Least Developed & Startups / 50% Off): $1,000 USD
+  - Tier 5 (Academia & Non-Profits / 75% Off): $500 USD
+  - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief /
+ Micro-Rates
   - Calculate and lock in your exact tier rate live on the Pricing page.
-- Payment Schedule:
-  - 50% upfront milestone initialization / 50% upon completed delivery, runtime verification, and client sign-off.
+- Payment Milestones:
+  - 50% upfront milestone initialization / 50% upon completed Week 4 delivery, runtime verification, and
+ client sign-off.
 
 ---
 
 ## 6. Summary
 
-- Hermes 3 Model Mastery: Deploying fine-tuned open-weight Hermes agents with native JSON function-calling.
-- Vector Memory via Qdrant & Milvus: Implementing persistent episodic and semantic recall across multi-day sessions.
-- Autonomous Multi-Step Planning: Structuring Tree-of-Thought decomposition and dynamic environment feedback replanning.
-- Deterministic Guardrails & Pydantic: Enforcing strict schema validation and execution gates on code generation.
-- Air-Gapped Private VPC Deployment: Hosting on-premise without telemetry leaks or vendor lock-in.
+- Hermes Autonomous Agents: Self-hosted agentic intelligence
+ leveraging Nous Research Hermes open-weight foundation models.
+- Strict 1-Month Delivery: 4-week program from local inference
+ serving to production tool execution and air-gapped handover.
+- Deterministic Tool Calling: Pydantic validation schemas and
+ grammar-constrained JSON execution for zero hallucinations.
+- Multi-Turn Reasoning Graphs: Scratchpad planning, reflection
+ loops, and containerized Docker execution sandboxes.
+- 100% IP & Code Transfer: Complete local ownership, private
+ serving manifests, and 30-day dedicated SLA support.
 
 ---
 

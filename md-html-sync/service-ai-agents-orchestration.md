@@ -6,81 +6,66 @@
 
 ---
 
-## 1. Service
- Overview & Scope
+## 1. Service Overview & Scope
 
-- Multi-Agent Swarm Topologies:
-  - Architecting hierarchical supervisor-worker networks, competitive consensus swarms, and sequential pipeline topologies tailored for enterprise operations.
-  - Autonomous tool-calling loops with strict permission scopes, rate limiting, and structured JSON output validation.
-  - Enabling complex multi-step reasoning, dynamic sub-task decomposition, and self-correcting error recovery.
-- Budget-Conscious Agent Architectures:
-  - Intelligent cost-aware routing: delegating heavy reasoning to frontier models while routing intermediate parsing, summarization, and formatting to zero-cost local SLMs.
-  - Aggressive prompt and context compression techniques preventing token inflation across long agent execution chains.
-- Enterprise Operational Reliability:
-  - Deterministic state machines ensuring predictable agent execution trajectories and preventing infinite looping.
-  - Human-in-the-loop escalation gates for sensitive actions (financial approvals, system modifications, external communications).
+- Frontier Claude Swarm Architecture: Engineering coordinated multi-agent swarms leveraging Claude Opus for strategic planning and Claude Sonnet for parallel tool execution.
+- Stateful Graph Orchestration: Building cyclic state graphs with LangGraph, including human-in-the-loop approval nodes, checkpoint persistence, and dynamic subagent delegation.
+- Model Context Protocol (MCP) Integration: Standardizing internal enterprise API and database tooling via full-duplex MCP servers with deterministic JSON schema validation.
+- Self-Correction & Consensus Engines: Designing automated critique-reflection loops where evaluator agents verify worker outputs before committing state changes.
+- FinOps & Loop Circuit Breakers: Implementing deterministic iteration bounds, token consumption alarms, and automatic fallback routers to prevent infinite loops.
 
 ---
 
-## 2. Standard
- Architecture & Tools
+## 2. Standard Architecture & Tools
 
-- Orchestration Frameworks:
-  - LangGraph, AutoGen, CrewAI, OpenFang Agent OS, and custom Python asynchronous state machines.
-  - Event-driven architecture with Redis/RabbitMQ task queues for high-concurrency swarm execution.
-- Tool Integration & Protocols:
-  - Model Context Protocol (MCP) clients and servers for standardized tool registration.
-  - Sandboxed Docker tool runners with strict execution timeouts and filesystem isolation.
-- Monitoring & Tracing Infrastructure:
-  - Langfuse and Phoenix Arize tracing for deep step-by-step visibility into agent reasoning trajectories.
-  - Local SQLite audit trails recording every tool invocation, latency measurement, and token cost.
+- Core Orchestrator: LangGraph state machines, CrewAI multi-agent task managers, and Anthropic SDK streaming APIs.
+- Model Tier Allocation: Claude Opus (supervisor planning and final synthesis), Claude Sonnet (coding, tool dispatch, analysis), and Claude Haiku (classification and summarization).
+- Persistence & Memory: PostgreSQL checkpointers, Redis message brokers, and Chroma/Qdrant vector stores for long-horizon context retention.
+- Observability & Sandboxing: OpenTelemetry instrumentation, Langfuse trace visualization, Docker container sandboxes, and Linux user namespace isolation.
 
 ---
 
-## 3.
- Deliverable Examples
+## 3. Deliverable Examples & 4-Week Schedule
 
-- Multi-Agent Swarm Sample Repository & Technical Guide:
-  - Clean, modular educational Python/Rust sample repository containing agent definitions, custom tool harnesses, step-by-step guides, and sandbox demonstrations.
-- Budget-Optimized Routing Middleware:
-  - Middleware layer routing 70%+ of agent sub-tasks to free local models, drastically reducing monthly API burn.
-- Interactive Swarm Telemetry Dashboard:
-  - Real-time monitoring interface visualizing agent state transitions, tool execution success rates, and token expenditures.
+- Production Swarm Repository: Fully documented Python codebase containing supervisor routing logic, agent persona specifications, and state graph definitions.
+- Custom MCP Tool Server Suite: Secure MCP server implementations connecting Claude Agents to corporate SQL databases, ticket queues, and cloud APIs.
+- Stateful Checkpoint & Resume Engine: Persistent storage integration allowing interrupted multi-hour agent workflows to resume without data loss.
+- OpenTelemetry Tracing Dashboard: Real-time visualization dashboard tracking token burn, tool latency, subagent message exchanges, and error rates.
 
 ---
 
-## 4. Guarantees
- & Commitments
+## 4. Guarantees & Commitments
 
-- Schema Compliance Guarantee: 100% structured JSON output compliance with zero formatting hallucinations using Pydantic validation in demo sandboxes.
-- Complete Intellectual Property Ownership: All training curriculum materials, custom guides, and demonstration prompts are 100% owned by the client.
-- 30-Day Async Operational Training Support: Comprehensive support for swarm configuration tuning and sub-agent learning post-delivery.
+- Zero Runaway Loop Guarantee: Deterministic iteration counters and token spend caps preventing unchecked agent execution.
+- Full IP & Code Ownership: 100% intellectual property transfer of all orchestration code, prompts, and MCP configurations.
+- Enterprise Data Boundaries: Zero data retention on Claude enterprise tiers with strict outbound network sandboxing.
+- 30-Day Production SLA: Dedicated Slack/Discord support channel for graph adjustments, tool extensions, and debugging.
 
 ---
 
-## 5. Investment
- & Pricing Quote
+## 5. Investment & Pricing Quote
 
-- Base Investment Range (Tier 1 Standard): $3,000 – $6,000 USD (per agent swarm milestone).
+- Engagement Duration: Strictly 1 month (4 weeks of structured milestone delivery and runtime verification).
+- Base Investment Rate (Tier 1 Standard): $2,000 USD (flat base rate for complete 1-month delivery).
 - Global Purchasing Power Parity (PPP) & Subsidized Rates:
-  - Tier 1 (Standard / 100%): $3,000 – $6,000 USD
-  - Tier 2 (Developing Nations / 25% Off): $2,250 – $4,500 USD
-  - Tier 3 & 4 (Least Developed & Startups / 50% Off): $1,500 – $3,000 USD
-  - Tier 5 (Academia & Non-Profits / 75% Off): $750 – $1,500 USD
+  - Tier 1 (Standard / 100%): $2,000 USD (USA, UK, EU, Canada, Australia)
+  - Tier 2 (Developing Nations / 25% Off): $1,500 USD (India, Brazil, Mexico, UAE, Poland)
+  - Tier 3 & 4 (Least Developed & Startups / 50% Off): $1,000 USD
+  - Tier 5 (Academia & Non-Profits / 75% Off): $500 USD
   - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief / Micro-Rates
   - Calculate and lock in your exact tier rate live on the Pricing page.
-- Payment Schedule:
-  - 50% upfront milestone initialization / 50% upon completed delivery, runtime verification, and client sign-off.
+- Payment Milestones:
+  - 50% upfront milestone initialization / 50% upon completed Week 4 delivery, runtime verification, and client sign-off.
 
 ---
 
 ## 6. Summary
 
-- Sonnet & Haiku Hybrid Swarms: Orchestrating tiered multi-agent topologies for high-accuracy, cost-effective pipelines.
-- Context Partitioning & Delegation: Eliminating context rot with isolated sub-agent scratchpads and role specialization.
-- Anthropic Prompt Caching: Cutting token costs up to 80% with breakpoint caching and structured routing.
-- Model Context Protocol (MCP): Connecting agent swarms to internal filesystems, GitHub, PostgreSQL, and APIs.
-- Stateful Async Recovery: Building resilient finite state machines with human-in-the-loop gates and retry loops.
+- Frontier Claude Swarm Topologies: Hierarchical orchestration pairing Claude Opus lead planning with Claude Sonnet tool execution.
+- Strict 1-Month Delivery: 4-week progression from workflow decomposition to production Langfuse telemetry handover.
+- Model Context Protocol Tools: Standardized full-duplex MCP servers connecting agents to SQL, REST APIs, and file systems.
+- Deterministic State Controls: LangGraph state machines with checkpointer persistence, cycle guards, and token circuit breakers.
+- Complete Code & IP Transfer: 100% commercial ownership, containerized runtimes, and 30-day dedicated SLA support.
 
 ---
 

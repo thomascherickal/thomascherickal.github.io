@@ -6,81 +6,66 @@
 
 ---
 
-## 1. Service
- Overview & Scope
+## 1. Service Overview & Scope
 
-- Self-Hosted n8n Infrastructure & Setup:
-  - Comprehensive instruction on deploying and self-hosting n8n using Docker Compose or Kubernetes on your private servers or secure private cloud.
-  - Configuring persistent PostgreSQL execution databases, Redis queue workers for high concurrency, and automated encrypted backup routines.
-  - Zero third-party SaaS dependency: complete retention of company data, credentials, webhooks, and customer records within your firewall.
-- Automating 50% of Daily Recurring Operations:
-  - Auditing organizational daily tasks to identify repetitive manual overhead across support, sales, marketing, operations, and development.
-  - Demonstrating robust automation workflows: automated lead enrichment, multi-channel customer inbox routing, ERP/CRM bi-directional sync, scheduled reporting, and invoice data extraction.
-  - Implementing human-in-the-loop review nodes, Slack/Teams notification hooks, and conditional escalation branching.
-- AI-Powered Cognitive Nodes & Local LLM Integration:
-  - Augmenting traditional low-code pipelines with local LLMs (Ollama, vLLM) and foundation model APIs (Claude, OpenAI) directly inside n8n.
-  - Automating intelligent document summarization, unstructured data parsing, sentiment triage, and autonomous draft replies without recurring API costs.
+- 50% Daily Work Automation: Streamlining repetitive knowledge-work processes across sales, operations, finance, and engineering through automated AI pipelines.
+- Self-Hosted n8n Infrastructure: Deploying private, unmetered n8n workflow automation instances backed by PostgreSQL, preventing SaaS vendor lock-in.
+- Frontier AI Pipeline Integration: Connecting self-hosted workflows to Claude APIs, local LLM runners, and custom Python microservices.
+- Document & Data Intelligence: Building automated pipelines for unstructured document extraction (PDF, DOCX, CSV), semantic classification, and ERP/CRM updates.
+- Employee Automation Enablement: Live hands-on training equipping non-technical staff and developers to build, test, and maintain robust automated workflows.
 
 ---
 
-## 2. Standard
- Architecture & Tools
+## 2. Standard Architecture & Tools
 
-- Workflow & Orchestration Engine:
-  - n8n (Self-Hosted Community & Enterprise Editions), Docker Compose, Kubernetes manifests, and systemd daemons.
-  - PostgreSQL for persistent execution logs, Redis for background job scaling.
-- AI & Model Connectors:
-  - Native n8n LangChain and AI Agent nodes, Ollama and vLLM local endpoints, OpenAI and Anthropic API nodes.
-  - Vector database connectors (Qdrant, Pinecone) for semantic document retrieval inside automation flows.
-- Integration Ecosystem:
-  - Webhooks, REST/GraphQL APIs, OAuth2 credential stores, PostgreSQL/MySQL connectors, Google Workspace, Slack, Jira, and GitHub.
+- Automation Platform: Self-hosted n8n (Community / Enterprise), Docker Compose, PostgreSQL persistence, and Redis queue workers.
+- AI Intelligence Nodes: Claude API (Anthropic SDK), Ollama/vLLM local runners, LangChain agents, and OpenAI-compatible endpoints.
+- Enterprise Connectors: Webhooks, REST APIs, Google Workspace / Microsoft 365, Slack/Discord, HubSpot, Salesforce, and Jira.
+- Data Security: Encrypted environment credential vaults, isolated Docker network bridges, and local file storage.
 
 ---
 
-## 3.
- Deliverable Examples
+## 3. Deliverable Examples & 4-Week Schedule
 
-- Self-Hosted n8n Educational Architecture & Deployment Guide:
-  - Hardened Docker Compose or Kubernetes walkthroughs with persistent storage, Redis worker clustering, and SSL reverse proxy configurations.
-- 50% Work Automation Sample Template Library:
-  - 10+ validated educational n8n JSON workflow sample templates targeting core business operations ready to import with one click.
-- Live Interactive Corporate Training & Video Curriculum:
-  - Hands-on workshop sessions for employees and technical staff, complete with recorded walkthroughs, workflow cookbooks, and cheat sheets.
+- Turnkey n8n Production Server: Production-hardened Docker Compose setup with automated SSL, daily database backups, and health monitoring.
+- Library of 20+ Pre-Built Workflows: Production-ready workflows for lead enrichment, invoice data extraction, executive email triage, and incident escalation.
+- Custom Python & Claude AI Nodes: Reusable n8n JavaScript/Python code nodes for structured JSON output formatting, token caching, and error retry logic.
+- Staff Training Playbook & Recorded Sessions: Comprehensive video walkthroughs, slide decks, and step-by-step documentation for internal team maintenance.
 
 ---
 
-## 4. Guarantees
- & Commitments
+## 4. Guarantees & Commitments
 
-- Measurable 50% Task Time Reduction: Workflows designed and benchmarked against targeted manual business processes to ensure concrete time savings.
-- 100% Data Sovereignty: All workflows, credentials, and payload data remain strictly on your self-hosted servers with zero external telemetry.
-- 30-Day Technical Post-Training Support: Dedicated async engineering assistance for workflow debugging, node configuration, and scaling guidance.
+- 50% Time Savings on Routine Tasks: Measurable reduction in manual repetitive data entry, reporting, and triage.
+- Zero Per-Workflow SaaS Tax: Complete independence from expensive per-step workflow automation billing (Zapier/Make).
+- 100% Client Ownership: Full export of all JSON workflows, container configs, and proprietary logic.
+- 30-Day Operational SLA: Dedicated async support for workflow tuning, bug fixes, and third-party API webhook updates.
 
 ---
 
-## 5. Investment
- & Pricing Quote
+## 5. Investment & Pricing Quote
 
-- Base Investment Range (Tier 1 Standard): $4,000 – $8,000 USD (per enterprise training sprint or workflow rollout).
+- Engagement Duration: Strictly 1 month (4 weeks of structured milestone delivery and runtime verification).
+- Base Investment Rate (Tier 1 Standard): $2,000 USD (flat base rate for complete 1-month delivery).
 - Global Purchasing Power Parity (PPP) & Subsidized Rates:
-  - Tier 1 (Standard / 100%): $4,000 – $8,000 USD
-  - Tier 2 (Developing Nations / 25% Off): $3,000 – $6,000 USD
-  - Tier 3 & 4 (Least Developed & Startups / 50% Off): $2,000 – $4,000 USD
-  - Tier 5 (Academia & Non-Profits / 75% Off): $1,000 – $2,000 USD
+  - Tier 1 (Standard / 100%): $2,000 USD (USA, UK, EU, Canada, Australia)
+  - Tier 2 (Developing Nations / 25% Off): $1,500 USD (India, Brazil, Mexico, UAE, Poland)
+  - Tier 3 & 4 (Least Developed & Startups / 50% Off): $1,000 USD
+  - Tier 5 (Academia & Non-Profits / 75% Off): $500 USD
   - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief / Micro-Rates
   - Calculate and lock in your exact tier rate live on the Pricing page.
-- Payment Schedule:
-  - 50% upfront milestone initialization / 50% upon completed delivery, runtime verification, and client sign-off.
+- Payment Milestones:
+  - 50% upfront milestone initialization / 50% upon completed Week 4 delivery, runtime verification, and client sign-off.
 
 ---
 
 ## 6. Summary
 
-- Self-Hosted n8n Docker Setup: Deploying private, scalable n8n instances with zero per-execution SaaS platform fees.
-- 50% Daily Workflow Automation: Connecting webhooks, PostgreSQL, CRMs, Slack, and email into automated workflows.
-- AI Logic Nodes & Structured Extraction: Embedding Claude and OpenAI nodes to parse unstructured docs and route data.
-- Resilient Error Queues & Webhooks: Engineering automated retries, fallback dead-letter queues, and incident alerts.
-- Team Enablement Bootcamps: Hands-on training for engineers and ops staff to build and maintain production pipelines.
+- 50% Daily Work Automation: Eliminating repetitive manual processes across sales, operations, and finance.
+- Strict 1-Month Delivery: 4-week roadmap from self-hosted n8n infrastructure to live team enablement masterclasses.
+- Self-Hosted Freedom: Zero per-task SaaS subscription bills with private, unlimited Docker-based workflow engines.
+- Claude AI Integration: Intelligent document extraction, automated email drafting, and structured JSON parsing.
+- 100% Client Ownership: Complete workflow export, container configs, training videos, and 30-day dedicated SLA support.
 
 ---
 

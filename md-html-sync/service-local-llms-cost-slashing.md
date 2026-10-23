@@ -6,81 +6,66 @@
 
 ---
 
-## 1. Service
- Overview & Scope
+## 1. Service Overview & Scope
 
-- Cloud Token Spend Audit & TCO Analysis:
-  - Quantitative analysis of existing cloud LLM invoices (OpenAI, Anthropic) to isolate high-volume, low-complexity queries suitable for local execution.
-  - Calculating Total Cost of Ownership (TCO) comparing cloud API recurring expenses against on-premise hardware capital expenditures.
-- High-Throughput On-Premise Serving:
-  - Sizing and provisioning workstation or server GPU clusters (NVIDIA RTX/A-series, Apple Silicon Unified Memory) for maximum tokens/second.
-  - Comprehensive training and setup guides for continuous-batching engines (vLLM) and lightweight edge runtimes (Ollama, llama.cpp) delivering multi-user concurrency.
-- Quantization & Memory Optimization:
-  - Deploying state-of-the-art quantization formats (GGUF, AWQ, EXL2) enabling massive 70B+ model execution within constrained VRAM budgets.
-  - FlashAttention-2 and PagedAttention configuration for sub-second time-to-first-token (TTFT) and high token generation throughput.
+- Cloud Independence & Cost Slashing: Eliminating recurring commercial API token bills by migrating high-volume generative workloads to self-hosted, private open-weight LLMs.
+- Hardware Sizing & Topology Engineering: Tailoring optimal GPU/NPU compute clusters (dual RTX 4090 workstations, Mac Studio clusters, or enterprise H100/A100 instances) for maximum tokens/second/dollar.
+- Intelligent Semantic Routing: Implementing dynamic routing cascades that automatically serve 70%+ of routine tasks locally, selectively escalating complex reasoning to Claude.
+- Air-Gapped Sovereign Security: Complete data sovereignty with zero outbound internet egress, ensuring sensitive source code, customer records, and IP never leave your infrastructure.
+- Enterprise Serving Stacks: Deploying production vLLM, Ollama, and llama.cpp runners with continuous tensor parallelism, AWQ/FP8 quantization, and continuous batching.
 
 ---
 
-## 2. Standard
- Architecture & Tools
+## 2. Standard Architecture & Tools
 
-- Serving Engines & Compilers:
-  - vLLM with PagedAttention demonstrations for high-concurrency API servers.
-  - Ollama and llama.cpp for rapid desktop workstation and edge deployment.
-  - Docker and Podman containerization with NVIDIA Container Toolkit.
-- Open-Weight Model Portfolio:
-  - DeepSeek-R1 & V3, Llama 3.3 (70B/8B), Qwen 2.5 (32B/72B/Coder), Mistral Large, and Gemma 2.
-  - Domain-specific SLMs (Qwen 2.5 Coder, Phi-4) fine-tuned for specialized coding and extraction tasks.
-- Networking & Security Isolation:
-  - Private reverse proxy with rate limiting, API token authentication, and TLS encryption.
-  - Zero data egress architecture: complete air-gap isolation with no telemetry sent to external vendors.
+- Inference Engines: vLLM with PagedAttention, llama.cpp with metal/CUDA acceleration, Ollama, and HuggingFace TGI.
+- Open-Weight Model Families: Qwen 2.5 (Coder & Instruct), Llama 3.3 70B, DeepSeek-R1 distilled variants, and Mistral NeMo.
+- Semantic Routing Middleware: RouteLLM, LiteLLM proxy, custom embedding cosine-similarity classifiers, and fallback handlers.
+- Observability & Hardware Metrics: Prometheus node exporters, nvidia-smi GPU metrics dashboards, Grafana token throughput graphs, and Docker orchestration.
 
 ---
 
-## 3.
- Deliverable Examples
+## 3. Deliverable Examples & 4-Week Schedule
 
-- Hardware Sizing & Token-Throughput Audit Report:
-  - Hardware specification matrix, memory allocation guides, and calculated payback period with 3-year ROI forecasts.
-- Local Inference Demonstration & Setup Guide Package:
-  - Educational Docker Compose templates, Ansible playbook guides, and configuration walkthroughs with automated model caching and health checks.
-- Drop-in OpenAI-Compatible API Gateway:
-  - Fully compliant local REST API endpoint allowing instant drop-in replacement across existing applications with zero code rewrites.
+- Hardware Sizing & ROI Payback Calculator: Custom spreadsheet and financial analysis modeling hardware capital expenditure against projected monthly cloud API token savings.
+- Containerized Local Inference Engine: Hardened Docker Compose / Helm deployment files provisioning vLLM or llama-server with GPU acceleration and health-check endpoints.
+- Intelligent Semantic Router Gateway: OpenAI-compatible API reverse proxy routing requests between local open-weight models and frontier Claude endpoints based on task complexity.
+- Air-Gapped Hardening & Benchmarking Suite: Automated load testing scripts validating concurrent request latency, VRAM saturation limits, and offline security verification.
 
 ---
 
-## 4. Guarantees
- & Commitments
+## 4. Guarantees & Commitments
 
-- Zero Data Egress Guarantee: 100% of input prompts and generated completions remain strictly confined to your physical hardware or private VPC.
-- Target Throughput SLA: Verified generation speed (tokens/sec) meeting or exceeding agreed performance targets in demonstration benchmarks.
-- 30-Day Operational Handover Training Support: Assistance with driver updates, model re-quantization, and performance tuning post-delivery.
+- 60% to 90% Cost Reduction: Guaranteed reduction in monthly cloud API token expenditure for equivalent volume inference.
+- Complete Data Sovereignty: Zero telemetry, zero external logging, and 100% offline air-gapped capability.
+- Hardware Independence: Clean Docker containerization portable across bare-metal workstations, on-prem servers, or private cloud VPCs.
+- 30-Day Operational SLA: Dedicated assistance for model weight updates, driver compatibility, and performance optimization.
 
 ---
 
-## 5. Investment
- & Pricing Quote
+## 5. Investment & Pricing Quote
 
-- Base Investment Range (Tier 1 Standard): $3,000 – $5,000 USD (per deployment sprint).
+- Engagement Duration: Strictly 1 month (4 weeks of structured milestone delivery and runtime verification).
+- Base Investment Rate (Tier 1 Standard): $2,000 USD (flat base rate for complete 1-month delivery).
 - Global Purchasing Power Parity (PPP) & Subsidized Rates:
-  - Tier 1 (Standard / 100%): $3,000 – $5,000 USD
-  - Tier 2 (Developing Nations / 25% Off): $2,250 – $3,750 USD
-  - Tier 3 & 4 (Least Developed & Startups / 50% Off): $1,500 – $2,500 USD
-  - Tier 5 (Academia & Non-Profits / 75% Off): $750 – $1,250 USD
+  - Tier 1 (Standard / 100%): $2,000 USD (USA, UK, EU, Canada, Australia)
+  - Tier 2 (Developing Nations / 25% Off): $1,500 USD (India, Brazil, Mexico, UAE, Poland)
+  - Tier 3 & 4 (Least Developed & Startups / 50% Off): $1,000 USD
+  - Tier 5 (Academia & Non-Profits / 75% Off): $500 USD
   - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief / Micro-Rates
   - Calculate and lock in your exact tier rate live on the Pricing page.
-- Payment Schedule:
-  - 50% upfront milestone initialization / 50% upon completed delivery, runtime verification, and client sign-off.
+- Payment Milestones:
+  - 50% upfront milestone initialization / 50% upon completed Week 4 delivery, runtime verification, and client sign-off.
 
 ---
 
 ## 6. Summary
 
-- 60–90% Cloud API Cost Slashing: Migrating heavy query volumes to open-weight models (Llama 3, DeepSeek, Qwen).
-- vLLM & Ollama High-Throughput Serving: Implementing PagedAttention, continuous batching, and low-latency inference.
-- Quantization (GGUF, AWQ & GPTQ): Sizing 4-bit and 8-bit quantized models for budget on-prem GPUs and servers.
-- Air-Gapped Privacy & Zero Leakage: Running 100% offline, local inference guaranteeing zero third-party data egress.
-- LiteLLM Intelligent Hybrid Routing: Directing routine prompts to local engines while escalating edge cases to frontier APIs.
+- Cloud Token Independence: Slashing recurring API costs by 60%–90% via high-throughput self-hosted inference.
+- Strict 1-Month Delivery: 4-week timeline covering hardware sizing, vLLM deployment, semantic routing, and air-gapped sign-off.
+- Intelligent Model Cascades: Routing routine queries to local models while escalating edge cases to Claude.
+- Total Data Sovereignty: Air-gapped private compute ensuring zero data retention and complete regulatory compliance.
+- Full IP & Deployment Handover: Turnkey container manifests, monitoring dashboards, and 30-day dedicated SLA support.
 
 ---
 

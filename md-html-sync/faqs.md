@@ -583,3 +583,47 @@ Booking an engagement follows a straightforward, rapid 3-step onboarding workflo
 Inquire today to secure your team's preferred cohort dates.
 
 ---
+
+### 37. What is the standard engagement duration for each enterprise AI service and training package?
+*Engagement: 1-Month Duration · FAQ #37*  
+Every enterprise AI transformation service, architecture engagement, and workforce training program is structured as a comprehensive, intensive one-month (4-week) implementation.
+
+- Week 1 — Architectural Discovery & Scoping: System auditing, identifying bottleneck processes, establishing sandboxes, and defining quantitative evaluation criteria (Evals).
+
+- Week 2 — Core Pipeline & Agent Orchestration: Deploying teams of Claude Agents, custom tool integrations, MCP servers, and local LLM configurations.
+
+- Week 3 — Validation, Guardrails & TDD: Implementing test-driven development, deterministic guardrails, context window management, and hallucination scoring via Ragas/DeepEval.
+
+- Week 4 — Production Handover & Cohort Training: Live team training modules, complete code guide walk-throughs, architecture documentation, and 100% intellectual property transfer.
+
+Each service is fully self-contained, providing actionable operational capability from day 30 onwards.
+
+---
+
+### 38. Can clients run multiple AI services concurrently or freely overlap different training programs?
+*Engagement: Free Overlapping · FAQ #38*  
+Yes, absolutely. All enterprise services and training programs can freely overlap and run concurrently according to each client's specific operational needs and transformation priorities.
+
+- Zero Sequential Delays: You are never locked into waiting for one service to conclude before commencing another; services execute in parallel to match your business momentum.
+
+- Popular Overlap Combinations: Clients frequently pair Generative AI Transformation concurrently with Local LLMs & Cost Slashing, or run AI Developer Training alongside Training for Workflow Automations.
+
+- Unified Governance: Overlapping engagements share centralized guardrail patterns, architectural blueprints, and cross-team knowledge repositories for maximum synergy.
+
+We tailor overlapping execution tracks so your organization realizes compounding ROI across multiple fronts simultaneously.
+
+---
+
+### 39. How does free service overlapping work when customizing delivery for different teams across an organization?
+*Customization: Multi-Team Overlap · FAQ #39*  
+Different cohorts across an enterprise have fundamentally different enablement objectives. Our modular one-month architecture is designed for multi-track concurrency:
+
+- Executives & Leadership: Undergo strategic AI transformation roadmaps, compliance briefings, and boardroom ROI metrics.
+
+- Engineering & DevOps: Concurrently build autonomous Claude agent swarms, implement AI-assisted TDD, and deploy private local LLM clusters.
+
+- Business & Operations Staff: Concurrently master no-code workflow automations, document synthesis, and daily prompt craft.
+
+Multi-track overlapping ensures that every department transforms synchronously without cross-functional friction or implementation lag.
+
+---
