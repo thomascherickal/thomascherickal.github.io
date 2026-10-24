@@ -552,3 +552,36 @@ input:disabled,
     display: none !important;
   }
 }
+
+/* btn-topmate: Dedicated Topmate 1-on-1 Consultation */
+.btn-topmate {
+  background: rgba(228, 67, 50, 0.15) !important;
+  border: 1.5px solid #e44332 !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  transition: all 0.28s ease;
+}
+
+.btn-topmate:hover {
+  background: #e44332 !important;
+  border-color: #ff6b5b !important;
+  box-shadow: 0 0 24px rgba(228, 67, 50, 0.7), 0 6px 18px rgba(0, 0, 0, 0.5) !important;
+  transform: translateY(-2.5px) scale(1.02);
+}
+
+/* btn-pricing-cta: Dedicated Transparent Rates Navigation */
+.btn-pricing-cta {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1.5px solid var(--border-gold, rgba(251, 191, 36, 0.35)) !important;
+  color: var(--text-primary, #ffffff) !important;
+  font-weight: 700;
+  transition: all 0.28s ease;
+}
+
+.btn-pricing-cta:hover {
+  background: rgba(251, 191, 36, 0.16) !important;
+  border-color: var(--gold, #fbbf24) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 24px rgba(251, 191, 36, 0.7), 0 6px 18px rgba(0, 0, 0, 0.5) !important;
+  transform: translateY(-2.5px) scale(1.02);
+}

@@ -1,0 +1,198 @@
+/* ==========================================================================
+   GOOGLE & GEMINI ARCHITECTURE & GUIDE SYSTEM (gemini.css)
+   thomascherickal.github.io
+   Dedicated stylesheet for Google Gemini, Google AI Studio, Antigravity IDE,
+   Gemini Deep Think, Gemma fine-tuning, and edge/nano agent systems.
+   ========================================================================== */
+
+:root {
+  --gemini-accent: #38bdf8;
+  --gemini-purple: #818cf8;
+  --gemini-surface: rgba(56, 189, 248, 0.08);
+  --gemini-border: rgba(56, 189, 248, 0.28);
+  --gemini-glow: 0 0 24px rgba(56, 189, 248, 0.25);
+  --gemini-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+}
+
+/* Gemini Hero Header & Badges */
+.hero-badge.cyan {
+  color: var(--gemini-accent);
+}
+
+.hero-badge.gold {
+  color: var(--gold, #fbbf24);
+}
+
+.gemini-gradient-text {
+  background: var(--gemini-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Diagram Containers & Captions */
+.diagram-container {
+  background: #040711;
+  border: 1px solid var(--gemini-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+.diagram-caption {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8rem;
+  color: var(--gemini-accent);
+  margin-top: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+/* Gemini Architecture Flow & Pipelines */
+.flow-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.flow-step {
+  background: var(--bg-card, #0c111d);
+  border: 1px solid var(--gemini-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.flow-step:hover {
+  transform: translateY(-2px);
+  border-color: var(--gemini-accent);
+  box-shadow: var(--gemini-glow);
+}
+
+.flow-step-num {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--gemini-purple);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+/* Benchmark & Model Indicator Pills */
+.gemini-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  background: var(--gemini-surface);
+  border: 1px solid var(--gemini-border);
+  color: var(--gemini-accent);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.gemini-pill.purple {
+  background: rgba(129, 140, 248, 0.1);
+  border-color: rgba(129, 140, 248, 0.35);
+  color: var(--gemini-purple);
+}
+
+.gemini-pill.gold {
+  background: rgba(251, 191, 36, 0.1);
+  border-color: rgba(251, 191, 36, 0.35);
+  color: var(--gold, #fbbf24);
+}
+
+/* Gemini AI Studio & Antigravity IDE Cards */
+.antigravity-card {
+  background: linear-gradient(145deg, rgba(12, 17, 29, 0.98) 0%, rgba(4, 7, 16, 0.98) 100%);
+  border: 1.5px solid var(--gemini-border);
+  border-radius: var(--radius-lg, 14px);
+  padding: 2rem;
+  margin-bottom: 1.75rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.antigravity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gemini-gradient);
+}
+
+/* Token & Parameter Meter */
+.token-meter {
+  background: rgba(6, 9, 18, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+}
+
+.meter-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.meter-fill {
+  height: 100%;
+  background: var(--gemini-gradient);
+  border-radius: 3px;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (gemini.css)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .flow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .flow-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .diagram-container {
+    padding: 1rem 0.75rem;
+  }
+
+  .antigravity-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .gemini-pill {
+    font-size: 0.74rem;
+    padding: 0.25rem 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .diagram-caption {
+    font-size: 0.74rem;
+  }
+
+  .token-meter {
+    padding: 0.85rem 1rem;
+  }
+}

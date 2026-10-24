@@ -1,0 +1,160 @@
+/* ==========================================================================
+   CALL TO ACTION & ACTION BANNERS (cta.css)
+   thomascherickal.github.io
+   Reusable CTA banners, hero button bars, and interactive conversion modules.
+   ========================================================================== */
+
+/* Full-Width Guide & Content Section CTA Banner */
+.cta-banner {
+  background: var(--bg-1, #070c18);
+  border: 1.5px solid var(--border-gold, rgba(251, 191, 36, 0.35));
+  border-radius: var(--radius-lg, 16px);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 3.5rem auto 2.5rem;
+  max-width: 100%;
+  box-shadow: 0 0 28px rgba(251, 191, 36, 0.18), 0 8px 32px rgba(0, 0, 0, 0.45);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold, #fbbf24), transparent);
+  pointer-events: none;
+}
+
+.cta-banner h2 {
+  color: var(--gold, #fbbf24);
+  font-family: var(--font-display, 'Open Sans', sans-serif);
+  font-size: clamp(1.4rem, 3vw, 1.95rem);
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.cta-banner p {
+  color: var(--text-muted, #94a3b8);
+  max-width: 680px;
+  margin: 0 auto 1.75rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.cta-banner .cta-buttons,
+.cta-banner > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Hero Section CTA Wrapper */
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+/* Manifesto and Section Callout Bar */
+.manifesto-cta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  background: var(--bg-card, #0c111d);
+  border: 1px solid var(--border, rgba(56, 189, 248, 0.2));
+  border-radius: var(--radius-lg, 14px);
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+
+/* In-Content Case Study Link */
+.case-study-cta-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--cyan, #38bdf8);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.case-study-cta-left:hover {
+  color: var(--gold, #fbbf24);
+  transform: translateX(3px);
+}
+
+.case-study-cta-left:active {
+  transform: translateX(1px);
+}
+
+/* Full Width Pricing CTA */
+.btn-pricing-cta {
+  width: 100%;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* Responsive Rules for CTA Modules */
+@media (max-width: 768px) {
+  .cta-banner {
+    padding: 2.25rem 1.25rem;
+    margin: 2.5rem 0 1.5rem;
+  }
+
+  .cta-banner h2 {
+    font-size: 1.4rem;
+  }
+
+  .cta-banner p {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.85rem;
+  }
+
+  .hero-ctas .btn,
+  .hero-ctas a.btn {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .manifesto-cta-bar {
+    flex-direction: column;
+    padding: 1.25rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-banner .cta-buttons,
+  .cta-banner > div:last-child {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-banner .btn,
+  .cta-banner a.btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center;
+  }
+}

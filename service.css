@@ -1,0 +1,323 @@
+/* ==========================================================================
+   ENTERPRISE SERVICES & TRAINING CURRICULUM SYSTEM (service.css)
+   thomascherickal.github.io
+   Dedicated stylesheet for 12 Enterprise Service Specifications,
+   Workforce AI Training, Personal Curriculum modules, and 4-week milestone delivery.
+   ========================================================================== */
+
+/* Service Specification Container & Main Card */
+.service-spec-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+}
+
+.service-spec-card {
+  background: var(--bg-card, #0c111d);
+  border: 1px solid var(--border-gold, rgba(251, 191, 36, 0.35));
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: var(--glow-gold, 0 0 24px rgba(251, 191, 36, 0.25));
+  position: relative;
+  overflow: hidden;
+}
+
+.service-spec-card h2 {
+  font-family: var(--font-display, sans-serif);
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.service-spec-card h2:first-child {
+  margin-top: 0;
+}
+
+.service-spec-card ul {
+  color: var(--text-secondary, #e2e8f0);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.service-spec-card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.service-spec-card ul li strong {
+  color: #ffffff;
+}
+
+/* Service Milestone Schedule Table Wrapper */
+.service-table-wrap {
+  overflow-x: auto;
+  margin: 1.5rem 0 2rem 0;
+  border-radius: 10px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+/* Personal AI Training & Curriculum Modules */
+.personal-bordered-section {
+  max-width: 1240px;
+  margin: 3.5rem auto;
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 2.75rem);
+  border: none;
+  border-radius: var(--radius-lg, 16px);
+  background: radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.05) 0%, rgba(12, 17, 29, 0.98) 100%);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+.personal-hero-bordered {
+  max-width: 1240px;
+  margin: 2.5rem auto 3.5rem;
+  padding: clamp(3rem, 6vw, 4.5rem) clamp(1.5rem, 4vw, 3rem);
+  border: none;
+  border-radius: var(--radius-lg, 16px);
+  background: radial-gradient(circle at 50% 15%, rgba(251, 191, 36, 0.08) 0%, rgba(6, 9, 18, 0.98) 80%);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  position: relative;
+}
+
+.gold-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.25rem;
+  border-radius: 999px;
+  background: rgba(251, 191, 36, 0.16);
+  border: 1.5px solid rgba(251, 191, 36, 0.55);
+  color: var(--gold, #fbbf24);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.personal-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.service-synth-card {
+  background: linear-gradient(145deg, rgba(251, 191, 36, 0.04) 0%, rgba(12, 17, 29, 0.95) 100%);
+  border: 1.5px solid rgba(251, 191, 36, 0.3);
+  border-radius: var(--radius-lg, 14px);
+  padding: 1.85rem;
+  transition: all 0.28s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.service-synth-card:hover {
+  border-color: var(--gold, #fbbf24);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(251, 191, 36, 0.2);
+}
+
+.service-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(251, 191, 36, 0.15);
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.curriculum-phase-card {
+  background: var(--bg-card, #0c111d);
+  border: 1.5px solid var(--border, rgba(56, 189, 248, 0.2));
+  border-radius: var(--radius-lg, 14px);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.curriculum-phase-card.active-gold {
+  border-color: rgba(251, 191, 36, 0.55);
+  background: radial-gradient(circle at 10% 20%, rgba(251, 191, 36, 0.08) 0%, rgba(12, 17, 29, 0.96) 100%);
+}
+
+.curriculum-phase-card.active-cyan {
+  border-color: rgba(56, 189, 248, 0.55);
+  background: radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.08) 0%, rgba(12, 17, 29, 0.96) 100%);
+}
+
+.parity-table-personal {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.75rem 0;
+  font-size: 0.95rem;
+}
+
+.parity-table-personal th,
+.parity-table-personal td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.parity-table-personal th {
+  background: rgba(251, 191, 36, 0.12);
+  color: var(--gold, #fbbf24);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.parity-table-personal tr:hover td {
+  background: rgba(251, 191, 36, 0.05);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (service.css)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .personal-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .service-spec-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .service-spec-section {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .personal-bordered-section,
+  .personal-hero-bordered {
+    padding: 2rem 1.25rem;
+    margin: 2rem auto;
+  }
+
+  .personal-card-grid {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+
+  .curriculum-phase-card {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-spec-card h2 {
+    font-size: 1.15rem;
+  }
+
+  .service-spec-card ul {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .gold-badge {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.95rem;
+  }
+}
+
+/* Selected Enterprise AI Transformation Services — 4 Role Cards in One Row on Laptop */
+.home-services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 1.35rem !important;
+  margin-top: 2.25rem !important;
+}
+
+.home-services-grid .home-nav-card {
+  padding: 1.85rem 1.45rem !important;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-services-grid .home-nav-title {
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+  margin-bottom: 0.65rem !important;
+}
+
+.home-services-grid .home-nav-desc {
+  font-size: 0.98rem !important;
+  line-height: 1.7 !important;
+  color: var(--text-secondary, #cbd5e1) !important;
+  margin-bottom: 1.4rem !important;
+}
+
+.home-services-grid .role-chip {
+  font-size: 0.82rem !important;
+  padding: 0.35rem 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+}
+
+.home-services-grid .home-nav-btn {
+  font-size: 0.86rem !important;
+  padding: 0.75rem 1rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  margin-top: auto !important;
+}
+
+@media (max-width: 1200px) {
+  .home-services-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1rem !important;
+  }
+  .home-services-grid .home-nav-card {
+    padding: 1.5rem 1.2rem !important;
+  }
+  .home-services-grid .home-nav-title {
+    font-size: 1.15rem !important;
+  }
+  .home-services-grid .home-nav-desc {
+    font-size: 0.92rem !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .home-services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+  .home-services-grid .home-nav-card {
+    padding: 1.75rem 1.35rem !important;
+  }
+  .home-services-grid .home-nav-title {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .home-services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  .home-services-grid .home-nav-card {
+    padding: 1.35rem 1.1rem !important;
+  }
+  .home-services-grid .home-nav-title {
+    font-size: 1.15rem !important;
+  }
+  .home-services-grid .home-nav-desc {
+    font-size: 0.92rem !important;
+  }
+}

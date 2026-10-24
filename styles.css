@@ -1,4 +1,8 @@
+@import url("fonts.css");
 @import url("buttons.css");
+@import url("navbar.css");
+@import url("footer.css");
+@import url("cta.css");
 
 :root {
   --bg-0: #020408;
@@ -2914,6 +2918,97 @@ footer {
   margin-top: 1.75rem;
   perspective: 1200px;
 }
+
+/* Selected Enterprise AI Transformation Services — 4 Role Cards in One Row on Laptop */
+.home-services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 1.35rem !important;
+  margin-top: 2.25rem !important;
+}
+
+.home-services-grid .home-nav-card {
+  padding: 1.85rem 1.45rem !important;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-services-grid .home-nav-title {
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+  margin-bottom: 0.65rem !important;
+}
+
+.home-services-grid .home-nav-desc {
+  font-size: 0.98rem !important;
+  line-height: 1.7 !important;
+  color: var(--text-secondary, #cbd5e1) !important;
+  margin-bottom: 1.4rem !important;
+}
+
+.home-services-grid .role-chip {
+  font-size: 0.82rem !important;
+  padding: 0.35rem 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+}
+
+.home-services-grid .home-nav-btn {
+  font-size: 0.86rem !important;
+  padding: 0.75rem 1rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  margin-top: auto !important;
+}
+
+@media (max-width: 1200px) {
+  .home-services-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1rem !important;
+  }
+  .home-services-grid .home-nav-card {
+    padding: 1.5rem 1.2rem !important;
+  }
+  .home-services-grid .home-nav-title {
+    font-size: 1.15rem !important;
+  }
+  .home-services-grid .home-nav-desc {
+    font-size: 0.92rem !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .home-services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+  .home-services-grid .home-nav-card {
+    padding: 1.75rem 1.35rem !important;
+  }
+  .home-services-grid .home-nav-title {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .home-services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  .home-services-grid .home-nav-card {
+    padding: 1.35rem 1.1rem !important;
+  }
+  .home-services-grid .home-nav-title {
+    font-size: 1.15rem !important;
+  }
+  .home-services-grid .home-nav-desc {
+    font-size: 0.92rem !important;
+  }
+}
+
 
 .home-nav-card {
   position: relative;
