@@ -5,9 +5,9 @@
  The Digital Futurist · Remote Worldwide**  
 > **Specializing in transforming individuals or traditional businesses to an
  AI-first & AI-native leaders or organizations, by providing live and remote training, teaching freshers,
- developers,
- staff, architects, management, and CXOs to become AI-enabled and experts in Claude AI agent orchestration with
- minimal investment and cost monitoring and budgeting, also using Local LLMs with investment in hardware.**
+ developers, staff, architects, management, and CXOs to become AI-enabled and experts in Claude AI agent
+ orchestration and Gemini AI tooling ecosystem with minimal investment and cost monitoring and budgeting,
+ also using Local LLMs with investment in hardware.**
 
 **Location**: Chennai, India (Remote — Worldwide)  
 **Brand**: The Digital Futurist  
@@ -18,10 +18,10 @@
 - `Agentic AI Architect`
 - `AI Automation Expert`
 - `AI Training Live & Remote`
-- `AI Integration`
+- `AI Agent Orchestration`
 - `Local LLM Deployment`
-- `Claude AI Agent Orchestration`
-- `Agentic Workflows`
+- `Gemini AI Consultant`
+- `Multimodal AI`
 
 ---
 
@@ -85,18 +85,42 @@ Enterprise AI transformation, Claude AI agent orchestration, technical deep dive
 
 ## Enterprise AI Transformation Services
 
-1. [Generative AI Transformation](service-generative-ai-transformation.html) — Move your business from one-off chatbot prompts to coordinated teams of Claude agents that carry real work. Ground agent swarms in your domain data with custom MCP servers, bounded execution loops, and strict spending limits.
-2. [Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — Cut recurring cloud API bills by 60% to 90% by running open-weight models privately with Ollama, vLLM, llama.cpp and LM Studio. Size hardware from 8B to 120B models, route routine queries locally, and keep sensitive records on your machines.
-3. [Claude AI Agent Orchestration](service-ai-agents-orchestration.html) — Master the principles of Claude AI agent orchestration to run multi-agent swarms at scale. Build orchestrator-worker hierarchies, sequential pipelines, and parallel fan-out teams that automate complex workflows while controlling quality and cost.
-4. [Hermes Agent](service-agentic-ai-systems.html) — Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own infrastructure. Configure persistent session memory so the agent retains project context, saves solved procedures as reusable skills, and runs scheduled tasks.
-5. [WorkFlow Automations](service-training-for-workflow-automations.html) — Hands-on training for automating recurring office work with Claude skills, plugins, connectors, scheduled tasks and Microsoft 365 add-ins. Automate up to half of routine daily operations across sales, finance and engineering with private data options.
-6. [Quantum Applications (Experimental)](service-quantum-applications.html) — Exploratory quantum computing advisory for enterprise use cases: algorithm simulation with IBM Qiskit and PennyLane, variational circuits (VQE/QAOA), quantum machine learning, and Post-Quantum Cryptography (PQC) readiness aligned with NIST standards.
-7. [AI Budget Training](service-ai-budget-cost-limits-training.html) — Train staff across all levels to control AI spending: establish hard spending caps per session and month, configure token budgets, leverage prompt caching for up to 90% input savings, and route low-complexity tasks to free and local models.
-8. [Enterprise Workforce AI Training](service-enterprise-workforce-ai-training.html) — Live and remote corporate AI training delivered across distinct tracks: prompting for corporate staff, Claude Code and AI-assisted TDD for developers, and executive briefings, AI roadmaps, governance, and safe AI use policies for CXOs.
-9. [AI Developer Training](service-ai-developer-training.html) — Hands-on bootcamps training developer teams on terminal and IDE coding agents (Claude Code, Google Antigravity, OpenCode). Catch mistakes early with strict AI-assisted Test-Driven Development (TDD) and build custom MCP servers in Python and Rust.
-10. [Advanced AI Agents](service-advanced-ai-agents.html) — Build production autonomous agent systems with hierarchical teams of Claude agents for business-critical workloads. Implement test-driven self-correction loops where agents fix errors until tests pass, with persistent state and Docker sandboxing.
-11. [Claude Basic Training](service-claude-basic-training.html) — Foundational enablement for corporate staff and knowledge workers: choosing the right model between Haiku, Sonnet, and Opus, structured prompting with XML tags, managing shared team memory in Claude Projects, and using Artifacts for daily office work.
-12. [Claude Advanced Training](service-claude-advanced-training.html) — Technical masterclass for senior developers and AI architects: advanced Claude Code CLI workflows, Claude Cowork in Microsoft 365, designing and securing production MCP servers, and orchestrating frontier models with adaptive thinking effort.
+1. [Generative AI Transformation](service-generative-ai-transformation.html) — Move your business from one-off chatbot prompts to coordinated teams of Claude
+ agents that carry real work. Ground agent swarms in your domain data with custom MCP servers, bounded
+ execution loops, and strict spending limits.
+2. [Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — Cut recurring cloud API bills by 60% to 90% by running open-weight models privately
+ with Ollama, vLLM, llama.cpp and LM Studio. Size hardware from 8B to 120B models, route routine queries
+ locally, and keep sensitive records on your machines.
+3. [Claude AI Agent Orchestration](service-ai-agents-orchestration.html) — Master the principles of Claude AI agent orchestration to run multi-agent swarms at
+ scale. Build orchestrator-worker hierarchies, sequential pipelines, and parallel fan-out teams that
+ automate complex workflows while controlling quality and cost.
+4. [Hermes Agent](service-agentic-ai-systems.html) — Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own
+ infrastructure. Configure persistent session memory so the agent retains project context, saves solved
+ procedures as reusable skills, and runs scheduled tasks.
+5. [WorkFlow Automations](service-training-for-workflow-automations.html) — Hands-on training for automating recurring office work with Claude skills, plugins,
+ connectors, scheduled tasks and Microsoft 365 add-ins. Automate up to half of routine daily operations
+ across sales, finance and engineering with private data options.
+6. [Quantum Applications (Experimental)](service-quantum-applications.html) — Exploratory quantum computing advisory for enterprise use cases: algorithm
+ simulation with IBM Qiskit and PennyLane, variational circuits (VQE/QAOA), quantum machine learning, and
+ Post-Quantum Cryptography (PQC) readiness aligned with NIST standards.
+7. [AI Budget Training](service-ai-budget-cost-limits-training.html) — Train staff across all levels to control AI spending: establish hard spending caps
+ per session and month, configure token budgets, leverage prompt caching for up to 90% input savings, and
+ route low-complexity tasks to free and local models.
+8. [Enterprise Workforce AI Training](service-enterprise-workforce-ai-training.html) — Live and remote corporate AI training delivered across distinct tracks: prompting
+ for corporate staff, Claude Code and AI-assisted TDD for developers, and executive briefings, AI roadmaps,
+ governance, and safe AI use policies for CXOs.
+9. [AI Developer Training](service-ai-developer-training.html) — Hands-on bootcamps training developer teams on terminal and IDE coding agents
+ (Claude Code, Google Antigravity, OpenCode). Catch mistakes early with strict AI-assisted Test-Driven
+ Development (TDD) and build custom MCP servers in Python and Rust.
+10. [Advanced AI Agents](service-advanced-ai-agents.html) — Build production autonomous agent systems with hierarchical teams of Claude agents
+ for business-critical workloads. Implement test-driven self-correction loops where agents fix errors until
+ tests pass, with persistent state and Docker sandboxing.
+11. [Claude Basic Training](service-claude-basic-training.html) — Foundational enablement for corporate staff and knowledge workers: choosing the
+ right model between Haiku, Sonnet, and Opus, structured prompting with XML tags, managing shared team
+ memory in Claude Projects, and using Artifacts for daily office work.
+12. [Claude Advanced Training](service-claude-advanced-training.html) — Technical masterclass for senior developers and AI architects: advanced Claude Code
+ CLI workflows, Claude Cowork in Microsoft 365, designing and securing production MCP servers, and
+ orchestrating frontier models with adaptive thinking effort.
 
 ---
 
