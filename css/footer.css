@@ -299,6 +299,65 @@ footer,
   margin-bottom: 1.5rem;
 }
 
+/* Work With Me Desktop/Laptop 6-Pane Single Row (.footer-work-row) */
+.footer-work-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .footer-work-row {
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  .footer-work-row .wl {
+    padding: 10px 8px !important;
+    gap: 4px !important;
+  }
+
+  .footer-work-row .wl-head {
+    gap: 6px !important;
+  }
+
+  .footer-work-row .wl-ic {
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 6px !important;
+  }
+
+  .footer-work-row .wl-ic svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .footer-work-row .wl-name {
+    font-size: clamp(11.5px, 0.82vw, 13px) !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    line-height: 1.25 !important;
+  }
+
+  .footer-work-row .wl-desc {
+    font-size: clamp(10px, 0.7vw, 11.2px) !important;
+    color: #94a3b8 !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
+  }
+
+  .footer-work-row .wl-url {
+    font-size: clamp(9px, 0.62vw, 10.2px) !important;
+    color: #38bdf8 !important;
+    font-family: var(--font-mono, monospace) !important;
+    opacity: 0.85 !important;
+    margin-top: auto !important;
+    word-break: break-all !important;
+    line-height: 1.25 !important;
+  }
+}
+
 .wl {
   border: 1px solid #253147;
   border-radius: 10px;
@@ -410,9 +469,28 @@ footer,
 
 /* Footer Responsive Breakpoints */
 @media (max-width: 1366px) {
-  .wg {
+  .wg:not(.footer-work-row) {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 10px !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .footer-work-row {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .footer-work-row .wl-name {
+    font-size: 13px !important;
+  }
+
+  .footer-work-row .wl-desc {
+    font-size: 11.5px !important;
+  }
+
+  .footer-work-row .wl-url {
+    font-size: 10.5px !important;
   }
 }
 
@@ -436,8 +514,16 @@ footer,
 }
 
 @media (max-width: 768px) {
-  .wg {
+  .wg,
+  .footer-work-row {
     grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-work-row {
+    grid-template-columns: 1fr !important;
     gap: 8px !important;
   }
 }

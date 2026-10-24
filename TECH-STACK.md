@@ -77,7 +77,7 @@ graph TD
 
 ## 2. Design System & CSS Token Architecture
 
-I constructed a comprehensive design token system in Vanilla CSS using standard CSS Custom Properties. The styling is defined globally in [`index.css`](file:///home/thomas/GitHub.io/thomascherickal.github.io/index.css) and scoped uniformly across all 26 HTML pages:
+I constructed a comprehensive design token system in Vanilla CSS using standard CSS Custom Properties. The styling is defined globally in [`css/styles.css`](file:///home/thomas/GitHub.io/thomascherickal.github.io/css/styles.css) and scoped uniformly across all 26 HTML pages:
 
 ```mermaid
 classDiagram

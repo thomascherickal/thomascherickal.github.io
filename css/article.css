@@ -432,6 +432,40 @@ figure.article-figure svg {
   margin: 0 auto;
 }
 
+/* Case Study Cover Images */
+.case-study-cover-wrap {
+  width: 100%;
+  margin: 1.25rem 0 1.75rem;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  background: #020408;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+}
+
+.case-study-cover-link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.case-study-cover-img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.case-study-cover-link:hover .case-study-cover-img {
+  transform: scale(1.02);
+  filter: brightness(1.08);
+}
+
 /* Technical Callouts */
 .callout {
   margin: 1.5rem 0;
