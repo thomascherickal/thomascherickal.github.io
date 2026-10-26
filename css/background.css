@@ -1,0 +1,380 @@
+/* ==========================================================================
+   background.css -- Dark Nebula Glassmorphic Background System
+   ========================================================================== 
+   Full-viewport, multi-layer cosmic background featuring:
+   1. Deep Space Base: Ultra-rich midnight void (#02040a)
+   2. Dark Nebula Clouds: Layered radiant cyan, cosmic violet & navy blooms
+   3. Flowing Cosmic Waves: Undulating wave ribbons spanning the whole screen
+   4. Deep Space Starfield: Sparkling glowing stars distributed across viewport
+   5. Glassmorphism: Frosted-glass depth and saturation for cards
+   6. Responsive & Performant: GPU-composited, mobile/tablet optimized
+   7. Accessibility: Full prefers-reduced-motion & forced-colors compliance
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HTML & Body Core Layering Setup
+   -------------------------------------------------------------------------- */
+html {
+  background-color: #02040a !important;
+  min-height: 100%;
+}
+
+body {
+  background-color: transparent !important;
+  background-image: none !important;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* --------------------------------------------------------------------------
+   2. Layer A: Flowing Cosmic Wave Ribbons (html::before)
+   -- Covers the entire screen with flowing gradient ribbons
+   -- GPU-accelerated smooth drift animation
+   -------------------------------------------------------------------------- */
+html::before {
+  content: '';
+  position: fixed;
+  inset: -20% -10%;
+  width: 140%;
+  height: 140%;
+  pointer-events: none;
+  z-index: -3;
+  background:
+    /* Top flowing wave ribbon -- cyan */
+    radial-gradient(
+      ellipse 90% 35% at 20% 25%,
+      rgba(56, 189, 248, 0.18) 0%,
+      rgba(14, 116, 144, 0.08) 45%,
+      transparent 70%
+    ),
+    /* Upper-mid violet nebula wave */
+    radial-gradient(
+      ellipse 80% 40% at 85% 35%,
+      rgba(168, 85, 247, 0.16) 0%,
+      rgba(126, 34, 206, 0.07) 50%,
+      transparent 70%
+    ),
+    /* Center diagonal cosmic stream */
+    linear-gradient(
+      125deg,
+      transparent 20%,
+      rgba(56, 189, 248, 0.09) 38%,
+      rgba(168, 85, 247, 0.11) 50%,
+      rgba(52, 211, 153, 0.06) 62%,
+      transparent 78%
+    ),
+    /* Lower-mid flowing wave ribbon */
+    radial-gradient(
+      ellipse 85% 38% at 15% 72%,
+      rgba(14, 165, 233, 0.15) 0%,
+      rgba(99, 102, 241, 0.08) 45%,
+      transparent 70%
+    ),
+    /* Bottom deep violet wave crest */
+    radial-gradient(
+      ellipse 95% 42% at 80% 85%,
+      rgba(147, 51, 234, 0.16) 0%,
+      rgba(56, 189, 248, 0.08) 50%,
+      transparent 75%
+    );
+  filter: blur(40px);
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  animation: cosmicWaveMotion 26s ease-in-out infinite alternate;
+}
+
+/* --------------------------------------------------------------------------
+   3. Layer B: Dark Nebula Clouds & Central Glow (body::before)
+   -- Dense cosmic nebula core, deep navy field, vibrant glowing plumes
+   -------------------------------------------------------------------------- */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -2;
+  background:
+    /* Center focal deep navy cosmic core */
+    radial-gradient(
+      circle 650px at 50% 42%,
+      rgba(14, 30, 62, 0.65) 0%,
+      rgba(8, 18, 38, 0.45) 45%,
+      transparent 75%
+    ),
+    /* Top-left radiant cyan nebula cluster */
+    radial-gradient(
+      circle 450px at 12% 18%,
+      rgba(56, 189, 248, 0.22) 0%,
+      rgba(2, 132, 199, 0.12) 40%,
+      transparent 70%
+    ),
+    /* Top-right royal violet bloom */
+    radial-gradient(
+      circle 480px at 88% 15%,
+      rgba(168, 85, 247, 0.20) 0%,
+      rgba(109, 40, 217, 0.10) 45%,
+      transparent 70%
+    ),
+    /* Mid-left celestial turquoise plume */
+    radial-gradient(
+      circle 420px at 6% 52%,
+      rgba(45, 212, 191, 0.14) 0%,
+      rgba(14, 116, 144, 0.08) 45%,
+      transparent 65%
+    ),
+    /* Mid-right amber stardust whisper */
+    radial-gradient(
+      circle 380px at 92% 58%,
+      rgba(251, 191, 36, 0.10) 0%,
+      rgba(217, 119, 6, 0.05) 40%,
+      transparent 65%
+    ),
+    /* Lower-center cyan ocean flare */
+    radial-gradient(
+      circle 550px at 45% 82%,
+      rgba(56, 189, 248, 0.18) 0%,
+      rgba(30, 58, 138, 0.14) 45%,
+      transparent 70%
+    ),
+    /* Lower-right ultra-violet depth */
+    radial-gradient(
+      circle 500px at 85% 88%,
+      rgba(139, 92, 246, 0.18) 0%,
+      rgba(76, 29, 149, 0.10) 45%,
+      transparent 70%
+    );
+  filter: blur(28px);
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
+  animation: nebulaGlowPulse 18s ease-in-out infinite alternate;
+}
+
+/* --------------------------------------------------------------------------
+   4. Layer C: Deep Space Starfield & Stardust (body::after)
+   -- Sharp, crisp, glowing star particles across the entire viewport
+   -- Includes subtle cyan, violet and warm gold accent stars
+   -------------------------------------------------------------------------- */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+  box-shadow:
+    /* --- Row 1: Top Region (0vh - 15vh) --- */
+    8vw 4vh 0.5px rgba(255, 255, 255, 0.85),
+    22vw 7vh 0.5px rgba(56, 189, 248, 0.9),
+    35vw 3vh 1px rgba(255, 255, 255, 0.75),
+    48vw 8vh 0.5px rgba(168, 85, 247, 0.85),
+    62vw 4vh 1.5px rgba(56, 189, 248, 0.95),
+    75vw 6vh 0.5px rgba(255, 255, 255, 0.8),
+    88vw 3vh 1px rgba(251, 191, 36, 0.9),
+    96vw 8vh 0.5px rgba(255, 255, 255, 0.75),
+    14vw 12vh 1px rgba(255, 255, 255, 0.8),
+    54vw 13vh 0.5px rgba(56, 189, 248, 0.85),
+    82vw 11vh 1px rgba(168, 85, 247, 0.8),
+
+    /* --- Row 2: Upper-Middle Region (16vh - 35vh) --- */
+    5vw 22vh 1px rgba(56, 189, 248, 0.9),
+    18vw 28vh 0.5px rgba(255, 255, 255, 0.8),
+    29vw 19vh 1.5px rgba(251, 191, 36, 0.85),
+    42vw 25vh 0.5px rgba(255, 255, 255, 0.75),
+    58vw 22vh 1px rgba(168, 85, 247, 0.9),
+    69vw 31vh 0.5px rgba(255, 255, 255, 0.8),
+    81vw 24vh 1.5px rgba(56, 189, 248, 0.95),
+    93vw 29vh 0.5px rgba(255, 255, 255, 0.75),
+    12vw 34vh 1px rgba(255, 255, 255, 0.85),
+    51vw 33vh 0.5px rgba(56, 189, 248, 0.8),
+    87vw 35vh 1px rgba(251, 191, 36, 0.85),
+
+    /* --- Row 3: Central Region (36vh - 55vh) --- */
+    7vw 42vh 0.5px rgba(255, 255, 255, 0.75),
+    24vw 48vh 1.5px rgba(56, 189, 248, 0.9),
+    36vw 39vh 0.5px rgba(168, 85, 247, 0.85),
+    46vw 46vh 1px rgba(255, 255, 255, 0.9),
+    64vw 41vh 0.5px rgba(255, 255, 255, 0.8),
+    78vw 49vh 1.5px rgba(56, 189, 248, 0.95),
+    91vw 44vh 0.5px rgba(255, 255, 255, 0.75),
+    16vw 53vh 1px rgba(251, 191, 36, 0.85),
+    32vw 54vh 0.5px rgba(56, 189, 248, 0.8),
+    72vw 52vh 1px rgba(168, 85, 247, 0.85),
+    85vw 55vh 0.5px rgba(255, 255, 255, 0.8),
+
+    /* --- Row 4: Lower-Middle Region (56vh - 75vh) --- */
+    4vw 63vh 1.5px rgba(56, 189, 248, 0.9),
+    19vw 69vh 0.5px rgba(255, 255, 255, 0.8),
+    28vw 61vh 1px rgba(168, 85, 247, 0.85),
+    43vw 67vh 0.5px rgba(255, 255, 255, 0.75),
+    57vw 59vh 1.5px rgba(251, 191, 36, 0.9),
+    66vw 71vh 0.5px rgba(56, 189, 248, 0.85),
+    80vw 64vh 1px rgba(255, 255, 255, 0.9),
+    94vw 68vh 0.5px rgba(168, 85, 247, 0.8),
+    11vw 74vh 1px rgba(255, 255, 255, 0.8),
+    49vw 73vh 0.5px rgba(56, 189, 248, 0.85),
+    88vw 72vh 1.5px rgba(56, 189, 248, 0.95),
+
+    /* --- Row 5: Bottom Region (76vh - 98vh) --- */
+    9vw 82vh 0.5px rgba(255, 255, 255, 0.8),
+    21vw 89vh 1.5px rgba(168, 85, 247, 0.9),
+    34vw 84vh 0.5px rgba(56, 189, 248, 0.85),
+    47vw 91vh 1px rgba(255, 255, 255, 0.85),
+    61vw 86vh 0.5px rgba(251, 191, 36, 0.85),
+    73vw 93vh 1.5px rgba(56, 189, 248, 0.95),
+    84vw 83vh 0.5px rgba(255, 255, 255, 0.8),
+    95vw 88vh 1px rgba(168, 85, 247, 0.85),
+    15vw 96vh 0.5px rgba(255, 255, 255, 0.75),
+    39vw 97vh 1px rgba(56, 189, 248, 0.85),
+    79vw 97vh 0.5px rgba(255, 255, 255, 0.8);
+  animation: starTwinklePulse 9s ease-in-out infinite alternate;
+}
+
+/* --------------------------------------------------------------------------
+   5. Glassmorphism Card Polish
+   -- Makes all cards and panels frosted-glass translucent so the Dark Nebula
+      flows seamlessly beneath them
+   -------------------------------------------------------------------------- */
+.role-chip,
+.stat-item,
+.card,
+.case-card,
+.pillar-card,
+.tier-card,
+.faq-item,
+.content-card,
+.article-card,
+.workflow-card,
+.contact-card,
+[class*="card"] {
+  backdrop-filter: blur(14px) saturate(1.3) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(1.3) !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. Keyframe Animations (GPU-Optimized)
+   -------------------------------------------------------------------------- */
+@keyframes cosmicWaveMotion {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(-2%, 1.5%, 0) scale(1.03) rotate(1deg);
+  }
+  100% {
+    transform: translate3d(1.5%, -1%, 0) scale(0.98) rotate(-1deg);
+  }
+}
+
+@keyframes nebulaGlowPulse {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.04) translate3d(1%, -1%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.98) translate3d(-1%, 1%, 0);
+    opacity: 0.88;
+  }
+}
+
+@keyframes starTwinklePulse {
+  0% {
+    opacity: 0.65;
+  }
+  30% {
+    opacity: 0.95;
+  }
+  60% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. Responsive Adaptations
+   -------------------------------------------------------------------------- */
+
+/* Tablets (1024px and below) */
+@media (max-width: 1024px) {
+  html::before {
+    inset: -10%;
+    width: 120%;
+    height: 120%;
+    filter: blur(32px);
+  }
+  body::before {
+    filter: blur(22px);
+  }
+}
+
+/* Mobile Devices (768px and below) */
+@media (max-width: 768px) {
+  html::before {
+    animation-duration: 32s;
+    filter: blur(28px);
+  }
+  body::before {
+    animation-duration: 24s;
+    filter: blur(20px);
+  }
+  body::after {
+    box-shadow:
+      8vw 4vh 0.5px rgba(255, 255, 255, 0.85),
+      22vw 8vh 0.5px rgba(56, 189, 248, 0.9),
+      62vw 5vh 1.5px rgba(56, 189, 248, 0.95),
+      88vw 4vh 1px rgba(251, 191, 36, 0.9),
+      18vw 26vh 0.5px rgba(255, 255, 255, 0.8),
+      42vw 22vh 0.5px rgba(255, 255, 255, 0.75),
+      81vw 25vh 1.5px rgba(56, 189, 248, 0.95),
+      24vw 46vh 1.5px rgba(56, 189, 248, 0.9),
+      46vw 44vh 1px rgba(255, 255, 255, 0.9),
+      78vw 48vh 1.5px rgba(56, 189, 248, 0.95),
+      19vw 67vh 0.5px rgba(255, 255, 255, 0.8),
+      57vw 62vh 1.5px rgba(251, 191, 36, 0.9),
+      80vw 66vh 1px rgba(255, 255, 255, 0.9),
+      21vw 88vh 1.5px rgba(168, 85, 247, 0.9),
+      47vw 86vh 1px rgba(255, 255, 255, 0.85),
+      73vw 92vh 1.5px rgba(56, 189, 248, 0.95),
+      88vw 84vh 0.5px rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Small Phones (480px and below) */
+@media (max-width: 480px) {
+  html::before {
+    filter: blur(24px);
+  }
+  body::before {
+    filter: blur(16px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. Reduced Motion & High Contrast Accessibility
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html::before,
+  body::before,
+  body::after {
+    animation: none !important;
+  }
+}
+
+@media (forced-colors: active) {
+  html::before,
+  body::before,
+  body::after {
+    display: none !important;
+  }
+}
