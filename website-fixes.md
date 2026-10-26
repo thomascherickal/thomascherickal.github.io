@@ -65,8 +65,8 @@ This report documents the resolution of all items requested across Parts 2 throu
   - Aligned page header and eyebrow: Eyebrow: `Publications`, H1: `Publications & Long-Form Work`, Intro updated to include 500+ publications across 10+ platforms since 2020 plus RECRUITED.
   - Updated RECRUITED pre-order pricing line: "$20 USD pre-order until 31 December 2026, $40 after release on 1 January 2027. Free with an active Patreon membership."
   - Updated closing CTA: "Want an article or tutorial written for your company? Get in touch →".
-- [x] **3.2 `services.html` Redirect Stub**:
-  - Replaced stale `services.html` with clean redirect stub to `https://thomascherickal.github.io/pricing.html`.
+- [x] **3.2 `services.html` Removed**:
+  - Deleted stale `services.html` completely and pruned all references in favor of `https://thomascherickal.github.io/pricing.html`.
 - [x] **3.3 `articles.html` Case Studies Refactoring**:
   - Renamed title and H1 to `Featured Articles`.
   - Subheader updated: "Fourteen of my long-form articles: Generative AI (6), Agentic AI (4) and Quantum Computing (4). Each summary covers the scope, what the article explains and what the reader takes away."
