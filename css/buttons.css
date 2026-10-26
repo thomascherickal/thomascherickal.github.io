@@ -468,20 +468,25 @@ input:disabled,
 }
 
 .copy-link-btn {
-  background: rgba(56, 189, 248, 0.1);
+  background: rgba(56, 189, 248, 0.08);
   border: 1px solid rgba(56, 189, 248, 0.3);
-  color: var(--cyan);
-  padding: 0.4rem 0.85rem;
+  color: var(--text-muted);
+  padding: 0.35rem 0.85rem;
   border-radius: 6px;
-  font-size: 0.75rem;
+  font-size: 0.45rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
   cursor: pointer;
   transition: var(--transition);
 }
 
 .copy-link-btn:hover {
-  background: rgba(56, 189, 248, 0.25);
+  background: rgba(56, 189, 248, 0.22);
   border-color: var(--cyan);
   color: #ffffff;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.25);
 }
 
 .search-clear-btn {
