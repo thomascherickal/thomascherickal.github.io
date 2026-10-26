@@ -42,10 +42,10 @@ I hold a postgraduate degree in Computer Science from Loyola College. I help ind
 ## Key Metrics
 | Metric | Value |
 | :--- | :--- |
-| **Publications** | 500+ |
-| **Platforms** | 10+ |
-| **Languages** | 8+ |
-| **Coding Since** | 2020 |
+| **Publications Online** | 500+ |
+| **Publsihing Platforms** | 10+ |
+| **Coding Languages** | 10+ |
+| **Writing & Coding Since** | 2016 |
 
 ---
 

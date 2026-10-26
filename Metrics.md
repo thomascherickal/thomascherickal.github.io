@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-10-26 13:21:26 UTC` | Branch: `main` | Head Commit: `1a5b8f9`
+> **Automated Status Report** | Generated on `2026-10-26 17:01:05 UTC` | Branch: `main` | Head Commit: `c88d732`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **252** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **78,411** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **69,761** | Executable / renderable content lines |
+| **Total Lines of Source Code & Content** | **78,422** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **69,772** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **2,973** | In-code and architectural documentation |
 | **Blank / Spacing Lines** | **5,677** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **14.01 MB (14,688,057 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **190,270 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **387** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-10-26** | Subject: "docs: auto-update Metrics.md" |
+| **Total Repository Size (Tracked Assets)** | **14.01 MB (14,688,654 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **190,330 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **388** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-10-26** | Subject: "chore: delete services.html and remove references" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,11 +27,11 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 50 | 49,953 | 3.70 MB (3,877,446 bytes) | Production static web pages, services, frameworks & guides |
-| **CSS Stylesheets** | 14 | 10,796 | 251.13 KB (257,154 bytes) | Design tokens, animations, responsive layout & themes |
+| **HTML Documents** | 50 | 49,953 | 3.70 MB (3,877,690 bytes) | Production static web pages, services, frameworks & guides |
+| **CSS Stylesheets** | 14 | 10,807 | 251.42 KB (257,450 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 1 | 393 | 11.84 KB (12,121 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 9 | 3,580 | 162.46 KB (166,361 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 58 | 7,350 | 453.68 KB (464,571 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Markdown Documentation** | 58 | 7,350 | 453.74 KB (464,628 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 36 | 6,291 | 262.80 KB (269,111 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 37 | 48 | 61.43 KB (62,907 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 40 | 0 | 9.09 MB (9,529,900 bytes) | Optimized feature hero graphics, social cards & assets |
@@ -43,9 +43,9 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 50 | 49,953 | 3.70 MB (3,877,446 bytes) | 19.8% |
-| `.css` | 14 | 10,796 | 251.13 KB (257,154 bytes) | 5.6% |
-| `.md` | 58 | 7,350 | 453.68 KB (464,571 bytes) | 23.0% |
+| `.html` | 50 | 49,953 | 3.70 MB (3,877,690 bytes) | 19.8% |
+| `.css` | 14 | 10,807 | 251.42 KB (257,450 bytes) | 5.6% |
+| `.md` | 58 | 7,350 | 453.74 KB (464,628 bytes) | 23.0% |
 | `.json` | 36 | 6,291 | 262.80 KB (269,111 bytes) | 14.3% |
 | `.py` | 9 | 3,580 | 162.46 KB (166,361 bytes) | 3.6% |
 | `.js` | 1 | 393 | 11.84 KB (12,121 bytes) | 0.4% |
@@ -69,7 +69,7 @@
 | :--- | :--- | :--- |
 | **CSS Media Queries (`@media`)** | **76** | Ultra-responsive breakpoints for mobile, tablet, desktop |
 | **CSS Rule Blocks** | **1,510** | Modular selector rules across all stylesheets |
-| **CSS Design Tokens (`--var`)** | **58** | Standardized color palettes, typography, spacing & radii |
+| **CSS Design Tokens (`--var`)** | **60** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **159** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **46** | Strict single-H1 semantic hierarchy per page |
 | **Secondary Section Headings (`<h2>`)** | **337** | Structural topic subdivisions |

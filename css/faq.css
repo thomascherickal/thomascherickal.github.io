@@ -119,6 +119,7 @@
       font-family: var(--font-mono);
       font-size: 0.96rem;
       color: var(--text-secondary);
+      text-decoration: none;
       cursor: pointer;
       transition: var(--transition);
       display: inline-flex;
@@ -127,9 +128,11 @@
       user-select: none;
     }
 
-    .filter-chip:hover {
+    .filter-chip:hover,
+    .filter-chip:focus {
       border-color: var(--cyan);
       color: #ffffff;
+      text-decoration: none;
       transform: translateY(-1px);
     }
 
@@ -137,6 +140,7 @@
       background: linear-gradient(135deg, rgba(56, 189, 248, 0.25) 0%, rgba(251, 191, 36, 0.2) 100%);
       border-color: var(--cyan);
       color: #ffffff;
+      text-decoration: none;
       font-weight: 700;
       box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
     }
@@ -146,7 +150,9 @@
       padding: 0.15rem 0.45rem;
       border-radius: 4px;
       font-size: 0.86rem;
+      color: var(--text-muted);
       border: 1px solid rgba(255, 255, 255, 0.15);
+      text-decoration: none;
     }
 
     /* Controls Bar: Counter & Expand/Collapse */
@@ -227,6 +233,7 @@
       border-radius: 999px;
       padding: 0.2rem 0.65rem;
       color: var(--text-secondary);
+      text-decoration: none;
       font-weight: 600;
     }
 
@@ -350,6 +357,7 @@
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
+      text-decoration: none;
     }
 
     .faq-num-pill {
@@ -357,6 +365,7 @@
       font-size: 0.91rem;
       color: var(--text-muted);
       letter-spacing: 0.05em;
+      text-decoration: none;
     }
 
     .faq-question {
