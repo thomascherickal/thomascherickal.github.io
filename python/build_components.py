@@ -124,6 +124,12 @@ def build():
     except Exception as e:
         print(f"Warning: MD-HTML sync step failed: {e}")
 
+    try:
+        import generate_metrics
+        generate_metrics.generate_metrics()
+    except Exception as e:
+        print(f"Warning: Metrics generation step failed: {e}")
+
 def watch():
     import time
     print(f"Watching {os.path.basename(HEADER_SRC)} and {os.path.basename(FOOTER_SRC)} for changes... (Press Ctrl+C to stop)")
