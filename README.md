@@ -26,7 +26,7 @@ Welcome! I am **Thomas Cherickal**, known online as **The Digital Futurist**.
 
 I operate an independent global consulting and workforce training practice engineered to guide businesses, startups, engineering teams, and executive leadership from isolated manual development and basic chat prompts into **autonomous, sovereign, AI-native enterprises**.
 
-I specialize in **Claude AI Agent Orchestration**, **Autonomous Multi-Agent Swarms**, **Local LLM Cost Slashing (reducing inference bills by 60%–90%)**, **AI-Assisted Test-Driven Development (TDD)**, and **Early Quantum Computing Applications**.
+I specialize in **Claude Agent Orchestration**, **Autonomous Multi-Agent Swarms**, **Local LLM Cost Slashing (reducing inference bills by 60%–90%)**, **AI-Assisted Test-Driven Development (TDD)**, and **Early Quantum Computing Applications**.
 
 Every workshop, advisory sprint, and architecture roadmap I design follows one unbreakable rule: **I do not sell hype or trivial chatbot wrappers.** I train individuals, freshers, developers, staff members, engineering managers, and CXOs to build, inspect, and deploy production-grade agent swarms and sovereign local AI pipelines inside their own secure infrastructure.
 
@@ -195,7 +195,7 @@ graph TD
 | **Pricing & Parity** | [`pricing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/pricing.html) | 100% transparent rates and interactive 6-Tier Parity calculator across 195 countries. |
 | **FAQs** | [`faqs.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/faqs.html) | 36 technical FAQs covering recipient roles, organization sizes, 10-day training & parity. |
 | **Collaborate** | [`collaboration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/collaboration.html) | Operating principles, mutual NDAs, milestone billing terms & project kickoff process. |
-| **Contact** | [`contact.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/contact.html) | Secure honeypot-protected inquiry portal connected to FormSubmit with 24-hour SLA. |
+| **Contact** | [`contact.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/contact.html) | Secure honeypot-protected inquiry portal connected to FormSubmit with one-week response time. |
 | **404 Latent Space** | [`404.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/404.html) | Context-window exhaustion themed fallback redirecting visitors back to active pages. |
 
 ### 2. The Claude Agent Suite (9 Dedicated Architectural Pages)
@@ -215,11 +215,11 @@ graph TD
 | :--- | :--- | :--- |
 | **Generative AI Transformation** | [`service-generative-ai-transformation.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-generative-ai-transformation.html) | Transitioning from basic chatbots to coordinated autonomous agent swarms. |
 | **Local LLMs & Cost Slashing** | [`service-local-llms-cost-slashing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-local-llms-cost-slashing.html) | Deploying private open-weight models (vLLM, Ollama) to slash token expenses by 60%–90%. |
-| **Claude AI Agent Orchestration** | [`service-ai-agents-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-ai-agents-orchestration.html) | Production state machines, long-term memory persistence & human-in-the-loop gates. |
+| **Claude Agent Orchestration** | [`service-ai-agents-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-ai-agents-orchestration.html) | Production state machines, long-term memory persistence & human-in-the-loop gates. |
 | **Hermes Agent Training** | [`service-agentic-ai-systems.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-agentic-ai-systems.html) | Open-weights autonomous agent development, self-correction loops & task runners. |
 | **Training for Workflow Automations** | [`service-training-for-workflow-automations.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-training-for-workflow-automations.html) | Enterprise n8n pipelines, webhook listeners & automated business processes. |
 | **Quantum Applications (Experimental)** | [`service-quantum-applications.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-quantum-applications.html) | IBM Qiskit, PennyLane, VQE, QAOA & Post-Quantum Cryptography (PQC) readiness. |
-| **AI Budget & Cost Limits Training** | [`service-ai-budget-cost-limits-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-ai-budget-cost-limits-training.html) | LiteLLM gateways, departmental spend quotas, token caching & hard circuit breakers. |
+| **AI Budget & Cost Control Training** | [`service-ai-budget-cost-limits-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-ai-budget-cost-limits-training.html) | LiteLLM gateways, departmental spend quotas, token caching & hard circuit breakers. |
 | **Enterprise Workforce AI Training** | [`service-enterprise-workforce-ai-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-enterprise-workforce-ai-training.html) | Role-specific bootcamps for Freshers, Staff, Developers, Managers & CXOs. |
 
 ---
@@ -270,12 +270,12 @@ To make elite generative AI engineering universally accessible, I apply mathemat
 
 | Tier | Category | Geographic & Institutional Coverage | Multiplier | Discount |
 | :---: | :--- | :--- | :---: | :---: |
-| **Tier 1** | **Developed Nations** | United States, Canada, United Kingdom, Germany, France, Japan, Singapore, Australia | **1.00X** | **0% (Base)** |
-| **Tier 2** | **Developing Nations & Growth** | India, Brazil, Mexico, Colombia, UAE, Poland, South Africa, Malaysia | **0.75X** | **25% Off** |
-| **Tier 3** | **Least Developed / Emerging** | Nigeria, Kenya, Ghana, Bangladesh, Pakistan, Vietnam, Egypt, Bolivia | **0.50X** | **50% Off** |
+| **Tier 1** | **High-Income Economies** | United States, Canada, United Kingdom, Germany, France, Poland, Japan, Australia, Singapore, Chile, UAE, Saudi Arabia | **1.00X** | **0% (Base)** |
+| **Tier 2** | **Upper-Middle-Income Economies** | Brazil, Mexico, Colombia, Argentina, Peru, Ecuador, Guatemala, Türkiye, Malaysia, Thailand, Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka | **0.75X** | **25% Off** |
+| **Tier 3** | **Lower-Middle & Low-Income Economies** | India, Bangladesh, Pakistan, Nepal, Bhutan, Kenya, Nigeria, Ghana, Egypt, Morocco, Tanzania, Bolivia | **0.50X** | **50% Off** |
 | **Tier 4** | **Early-Stage Tech Startups** | Startups globally with &lt;$1M external funding & accelerator cohorts | **0.50X** | **50% Off** |
 | **Tier 5** | **Academia & Non-Profits** | Accredited universities, post-doc labs, registered 501(c)(3) charities | **0.25X** | **75% Off** |
-| **Tier 6** | **Radical Equity & Distressed** | Conflict zones, hyperinflation environments, UN LDCs, grassroots collectives | **Custom** | **Up to 90%+** |
+| **Tier 6** | **Crisis-Affected & Under-Resourced** | Conflict zones, hyperinflation environments, UN LDCs, grassroots collectives | **Custom** | **Subsidized** |
 
 ---
 

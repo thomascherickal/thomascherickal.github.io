@@ -10,11 +10,11 @@
 
 ### 1. How is Payment made?
 *Payment: Methods & Invoicing · FAQ #49*  
-We settle engagements globally via two direct, frictionless payment channels: PayPal or Bank Transfer.
+Payment by PayPal or bank transfer (wire, ACH, SEPA, SWIFT or NEFT). Invoices are issued in USD or the local-currency equivalent.
 
 - PayPal: Frictionless instant settlement supporting business accounts, all major international credit/debit cards, and multi-currency balances with zero regional exchange impediments.
 
-- Direct Bank Transfer (Wire / ACH / SWIFT / IBAN): Domestic and international wire transfers with full institutional support, including ACH for US entities, SEPA for European clients, and SWIFT/IBAN for global partners.
+- Direct Bank Transfer (Wire / ACH / SEPA / SWIFT / NEFT): Domestic and international bank transfers with full institutional support, including ACH for US entities, SEPA for European clients, and SWIFT/NEFT for global partners.
 
 - Official Commercial Invoicing: Every installment comes with a formal, itemized commercial invoice issued in USD (or local currency equivalent) and official receipts suitable for corporate expense accounts, vendor procurement systems, and corporate tax write-offs.
 
@@ -26,9 +26,9 @@ Settlement links and wire routing instructions are dispatched directly upon reac
 *Payment: Schedule & Milestones · FAQ #50*  
 All payments are distributed into five equal installments (20% per installment), mapped directly to completed training days:
 
-- 30-Day Enterprise AI Transformation (Every 5 Days): Billed in 5 equal installments due every 5 days of completed training—Milestone 1 after Day 5, Milestone 2 after Day 10, Milestone 3 after Day 15, Milestone 4 after Day 20, and Milestone 5 after Day 25/30.
+- 30-Day Enterprise AI Transformation: Five equal installments, due after Days 6, 12, 18, 24 and 30 of training.
 
-- 15-Day Personal AI Transformation (Every 3 Days): Billed in 5 equal installments due every 3 days of completed training—Milestone 1 after Day 3, Milestone 2 after Day 6, Milestone 3 after Day 9, Milestone 4 after Day 12, and Milestone 5 after Day 15.
+- 15-Day Personal AI Transformation: Five equal installments, due after Days 3, 6, 9, 12 and 15 of training.
 
 - Included Post-Training Support: The extensive subsequent support periods (30 days of included support for Enterprise; 15 days of included support with daily questions and doubts clarification and light skim guides for Personal) carry zero additional cost.
 
@@ -62,21 +62,21 @@ Personal AI Transformation (also known as Personal AI Training) is an intensive,
 
 - 100% Sovereign IP Ownership: Every script, prompt handbook, fine-tuned agent, and automation harness created is 100% owned by you.
 
-Graduates emerge operating as high-leverage solo powerhouses capable of out-delivering entire conventional engineering squads.
+Graduates emerge operating as high-leverage solo powerhouses
 
 ---
 
-### 5. Why is Personal AI Training capped at strictly 50% of enterprise training costs ($1,000 USD base)?
+### 5. Why does Personal AI Transformation cost $1,000 in Tier 1 (half the price of a single enterprise service)?
 *Personal: Pricing Cap · FAQ #24*  
-Our standard Enterprise AI Training carries a baseline rate of $2,000 USD. For Personal AI Transformation, we strictly cap the fee at 50% of enterprise costs ($1,000 USD base rate in Tier 1).
+Personal AI Transformation costs $1,000 in Tier 1, half the price of a single enterprise service. It covers all 12 services in 15 days at working depth, for one person, followed by 15 days of daily Q&A support. Enterprise engagements go deeper on each service and train up to 10 people.
 
-- Justification of the 50% Cap: All 12 enterprise transformation disciplines are integrated into a single unified sprint, yet delivery incurs zero enterprise overhead—no procurement friction, legal redlining, multi-tenant sandboxes, or administrative bloat.
+- Zero Corporate Overhead: For independent builders, corporate coordination (multi-tier approvals, vendor compliance, multi-tenant sandboxes) disappears entirely, moving directly at founder speed.
 
-- 195-Country Parity Scaled: The 50% cap cascades through all 6 Purchasing Power Parity tiers, scaling from $1,000 in Tier 1 down to $100 in Tier 6.
+- 195-Country Parity Scaled: The $1,000 baseline cascades through all 6 Purchasing Power Parity tiers, scaling from $1,000 in Tier 1 down to $100 in Tier 6.
 
-- Maximum Founder ROI: Independent builders receive institutional-grade multi-agent architecture and local LLM cost slashing at a fraction of enterprise expenditure.
+- Maximum Founder Leverage: Independent builders receive hands-on working proficiency in local LLMs, Claude agent teams, Hermes Agent, workflow automation, AI budgets and Claude Code, set up on their own machines.
 
-This transparent ceiling guarantees that individual creators access world-class agent orchestration without enterprise pricing barriers.
+This transparent pricing guarantees that individual creators access world-class agent orchestration without enterprise pricing barriers.
 
 ---
 
@@ -114,21 +114,21 @@ We selectively emphasize the disciplines most crucial to your immediate products
 
 ### 7. What are the exact Country Parity Pricing rates for Personal AI Transformation across 195 countries?
 *Personal: Global Parity Rates · FAQ #26*  
-Purchasing Power Parity applies unconditionally to Personal AI Transformation, reflecting exactly 50% of the corresponding enterprise tier rate:
+Purchasing Power Parity applies unconditionally to Personal AI Transformation across six global tiers:
 
-- Tier 1 (High-Income OECD — USA, UK, EU, Singapore, Australia): $1,000 USD rate (100% standard).
+- Tier 1: World Bank High-Income Economies (USA, Canada, UK, Germany, France, Poland, Czech Republic, Hungary, Greece, Romania, Japan, South Korea, Singapore, Australia, Chile, UAE, Saudi Arabia): $1,000 USD rate (100% standard).
 
-- Tier 2 (Growth Markets & Tech Hubs — India, Brazil, Mexico, Poland, UAE): $750 USD rate (25% parity discount).
+- Tier 2: Upper-Middle-Income Economies (Brazil, Mexico, Colombia, Argentina, Peru, Ecuador, Guatemala, Türkiye, Malaysia, Thailand, Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka): $750 USD rate (25% parity discount).
 
-- Tier 3 (Emerging Economies — Nigeria, Kenya, Egypt, Vietnam, Pakistan): $500 USD rate (50% parity discount).
+- Tier 3: Lower-Middle & Low-Income Economies (India, Bangladesh, Pakistan, Nepal, Bhutan, Kenya, Nigeria, Ghana, Egypt, Morocco, Tanzania, Bolivia, Cambodia, Laos, Myanmar, Ethiopia, Uganda, Rwanda): $500 USD rate (50% parity discount).
 
-- Tier 4 (Early-Stage Startups <$1M Funding): $500 USD rate (50% flat startup discount).
+- Tier 4: Early-Stage Startups (<$1M Funding): $500 USD rate (50% flat startup discount).
 
-- Tier 5 (Academia, Researchers & Non-Profits): $250 USD rate (75% academic discount).
+- Tier 5: Academia, Researchers & Non-Profits: $250 USD rate (75% academic discount).
 
-- Tier 6 (Underprivileged & Crisis Zones): $100 USD rate (90%+ subsidized quote / nominal honorarium).
+- Tier 6: Crisis-Affected & Under-Resourced Regions: $100 USD rate (Custom subsidized quote / nominal honorarium).
 
-Rates are universally honored based on the client's verified operating country and organization classification.
+Tiers follow the current World Bank income classification, updated each July.
 
 ---
 
@@ -140,7 +140,7 @@ No. Personal AI Training is strictly for one person only (private 1-on-1 acceler
 
 - Custom Private Setup: 100% configured for your specific developer environment, private local models, and personal productivity workflow.
 
-- Enterprise Training for Teams: If you wish to train a founding team, corporate department, or developer cohort, explore our Enterprise AI Training, which covers up to 10 participants in its fixed base rate (with additional seats at $250/head scaled by parity).
+- Enterprise Training for Teams: If you wish to train a founding team, corporate department, or developer cohort, explore our Enterprise Workforce AI Training, which covers up to 10 participants in its fixed base rate (with additional seats at $250/head scaled by parity).
 
 ---
 
@@ -208,7 +208,7 @@ Engineers gain full mastery over multi-agent orchestration while preventing cont
 *Recipient: Staff Members · FAQ #04*  
 Corporate staff receive pragmatic, zero-code productivity multiplication training designed for immediate daily utility. We focus on transforming repetitive administrative tasks into natural-language automated workflows.
 
-- Claude Cowork & Computer Use: Automating multi-step browser tasks, cross-application data transfers, and spreadsheet audits safely.
+- Claude's desktop and computer-use features: Automating multi-step browser tasks, cross-application data transfers, and spreadsheet audits safely.
 
 - Custom Claude Skills: Building specialized business skills that encode internal marketing style guides, compliance rules, and HR policies.
 
@@ -216,7 +216,7 @@ Corporate staff receive pragmatic, zero-code productivity multiplication trainin
 
 - Safe Enterprise Prompting: Enforcing data privacy principles to ensure proprietary customer records never leak outside corporate boundaries.
 
-Staff members regularly recover 10 to 15 hours of manual, repetitive busywork per week, boosting organizational throughput.
+Staff members automate repetitive data tasks, boosting organizational throughput.
 
 ---
 
@@ -244,7 +244,7 @@ Executive briefings for C-suite leaders distill technical realities into actiona
 
 - Boardroom AI ROI & Cost Slashing: Cutting recurring API expenditures by 60–90% through localized inference clusters and hybrid routing.
 
-- Sovereign Compliance & Air-Gapped Security: Deploying private LLMs behind company firewalls to satisfy HIPAA, GDPR, SOC2, and EU AI Act mandates.
+- Private deployment for regulated data: Designing private LLM deployments behind your firewall that support your HIPAA, GDPR and EU AI Act obligations.
 
 - Quantum Horizon Readiness: Assessing Post-Quantum Cryptography (PQC) standards (NIST ML-KEM, ML-DSA) to protect enterprise IP from future decryption.
 
@@ -284,7 +284,7 @@ Entrepreneurs build scalable, highly profitable digital enterprises without need
 *Company: Startups · FAQ #09*  
 Backed startups must demonstrate exceptional growth and delivery velocity to reach subsequent funding milestones. We embed directly with your early engineering pod to install production-grade AI agent tooling into your live codebases.
 
-- Headcount Multiplication: Giving a 4-person engineering team the output capacity of a 15-person engineering organization.
+- Headcount Multiplication: Raising a small team's output with agent-assisted delivery, measured against your own sprint baseline..
 
 - Local Inference Cost Slashing: Conserving critical venture runway by running high-throughput background tasks on private local LLM servers.
 
@@ -316,7 +316,7 @@ Enterprise delivery is structured to integrate smoothly with corporate governanc
 
 - Internal Repository Integration: Workshops conducted using sanitized internal code repositories and internal APIs rather than toy examples.
 
-- SOC2 & HIPAA-Compliant Sandboxes: Instruction delivered within your private enterprise VPCs, ensuring no confidential data touches public networks.
+- Your environment, your controls: Sessions can run inside your private cloud or on-premise systems, so confidential data stays under your existing security and compliance controls.
 
 - Standardized Documentation: Full internal runbooks and curriculum guides provided for your internal L&D team to continue training future hires.
 
@@ -342,7 +342,7 @@ Global MNCs gain a consistent, world-class standard of agentic software engineer
 
 ### 22. What is the pricing model for enterprise training, and what does the 10-participant quota and 30-day training plus 30-day support guarantee cover?
 *Pricing: Enterprise Guarantee · FAQ #13*  
-Our enterprise training bookings feature a fixed base investment covering up to 10 participants, backed by our ironclad enterprise guarantee: 30 days of intensive workforce training AND 30 days of included ongoing support (total 60 days of enterprise protection). There are no hidden licensing royalties or hourly surprise fees.
+Our enterprise training bookings feature a fixed base investment covering up to 10 participants, backed by our enterprise guarantee: 30 days of intensive workforce training AND 30 days of included ongoing support (total 60 days of enterprise protection). There are no hidden licensing royalties or hourly surprise fees.
 
 - 30 Days Live Training Sprint: 30 calendar days (4 intensive weeks) of interactive instructor-led instruction, live pair-programming sandboxes, and milestone deliverables.
 
@@ -352,7 +352,7 @@ Our enterprise training bookings feature a fixed base investment covering up to 
 
 - Up to 10 Learners Included: Base fee covers up to 10 participants. Additional seats scale transparently at $250 USD per head (adjusted by country parity tier).
 
-- Graduate Discord Community & 100% IP: Lifetime alumni Discord access and complete unrestricted intellectual property assignment.
+- Graduate Discord Community & 100% IP: Access to the alumni Discord and complete unrestricted intellectual property assignment.
 
 This 30+30 dual guarantee ensures your organization achieves lasting capability with zero risk of implementation stall.
 
@@ -384,57 +384,55 @@ For organizations training 50 to 5,000+ employees across multiple engineering di
 
 - Volume Economies: Graduated volume discounts that reduce blended per-participant costs significantly.
 
-- Dedicated Sandbox Infrastructure: Custom private cloud VPC instances provisioned exclusively for enterprise cohorts.
+- Your infrastructure: Cohorts can train inside sandbox environments you provision, so nothing leaves your network.
 
 - Train-the-Trainer Modules: Equipping internal staff to continuously train new personnel on an ongoing basis.
 
 - Executive Advisory Retainers: Optional fractional advisory retainers for continuous C-suite architectural guidance post-rollout.
 
-Custom quotes are generated within 24 hours following an initial architectural scoping call.
+I reply to every inquiry within one week (a little busy with current work).
 
 ---
 
-### 25. What is Tier 1 (Developed Nations) and which countries and organizations qualify?
+### 25. What is Tier 1 (High-Income Economies) and which countries and organizations qualify?
 *Parity: Tier 1 · FAQ #16*  
-Tier 1 encompasses high-income OECD economies with mature capital markets and high purchasing power. Teams operating in Tier 1 pay our 100% standard baseline rate (1.0X multiplier, 0% discount).
+Tier 1 encompasses World Bank high-income economies with mature capital markets and high purchasing power. Teams operating in Tier 1 pay our 100% standard baseline rate (1.0X multiplier, 0% discount).
 
 - North America: United States, Canada.
 
-- Western & Northern Europe: United Kingdom, Germany, France, Switzerland, Netherlands, Sweden, Norway, Denmark, Ireland, Austria, Belgium, Finland.
+- Europe: United Kingdom, Germany, France, Poland, Czech Republic, Hungary, Greece, Romania, Switzerland, Netherlands, Sweden, Norway, Denmark, Ireland, Austria, Belgium, Finland.
 
-- Asia-Pacific: Japan, Singapore, Australia, New Zealand, South Korea.
+- Asia-Pacific, Americas & Middle East: Japan, Singapore, Australia, New Zealand, South Korea, Chile, United Arab Emirates, Saudi Arabia.
 
 Tier 1 standard rates fund our pro-bono research, open-source repositories, and heavily subsidized Tier 5 and Tier 6 global equity programs.
 
 ---
 
-### 26. What is Tier 2 (Developing Nations & Growth Markets) and how does the 25% discount apply?
+### 26. What is Tier 2 (Upper-Middle-Income Economies) and how does the 25% discount apply?
 *Parity: Tier 2 · FAQ #17*  
-Tier 2 is calibrated for rapidly expanding digital ecosystems and regional technology hubs. Qualifying organizations receive an automatic 25% Parity Discount (75% base rate, 0.75X multiplier) across all consulting and training packages.
+Tier 2 is calibrated for World Bank upper-middle-income economies and regional technology hubs. Qualifying organizations receive an automatic 25% Parity Discount (75% base rate, 0.75X multiplier) across all consulting and training packages.
 
-- South Asia & APAC: India, Malaysia, Thailand, Indonesia, Philippines.
+- Latin America: Brazil, Mexico, Colombia, Argentina, Peru, Ecuador, Guatemala.
 
-- Latin America: Brazil, Mexico, Colombia, Chile, Argentina, Peru.
+- Asia-Pacific: Malaysia, Thailand, Indonesia, Vietnam, the Philippines, Sri Lanka.
 
-- Europe & Eurasia: Poland, Turkey, Romania, Hungary, Czech Republic, Greece.
-
-- Middle East & Africa: South Africa, United Arab Emirates, Saudi Arabia, Morocco.
+- Europe & MEA: Türkiye, South Africa.
 
 This discount bridges regional wage differentials while delivering identical premier training and complete IP transfer.
 
 ---
 
-### 27. What is Tier 3 (Least Developed & Emerging Markets) and how does the 50% discount apply?
+### 27. What is Tier 3 (Lower-Middle & Low-Income Economies) and how does the 50% discount apply?
 *Parity: Tier 3 · FAQ #18*  
 Tier 3 is designated for World Bank lower-middle and low-income economies where currency exchange rates impose severe barriers to frontier technology. Qualifying teams receive a flat 50% Parity Discount (50% base rate, 0.50X multiplier).
 
-- South Asia: Bangladesh, Pakistan, Sri Lanka, Nepal, Bhutan.
+- South Asia: India, Bangladesh, Pakistan, Nepal, Bhutan.
 
-- Africa: Kenya, Nigeria, Ghana, Ethiopia, Uganda, Rwanda, Tanzania, Egypt.
+- Africa: Kenya, Nigeria, Ghana, Egypt, Morocco, Tanzania, Ethiopia, Uganda, Rwanda.
 
-- Southeast Asia: Vietnam (regional), Cambodia, Laos, Myanmar.
+- Southeast Asia: Cambodia, Laos, Myanmar.
 
-- Americas & Central Asia: Bolivia, Ecuador, Guatemala, Uzbekistan, Kyrgyzstan.
+- Americas & Central Asia: Bolivia, Uzbekistan, Kyrgyzstan.
 
 Our goal is to ensure world-class agent engineering capabilities flourish within emerging software ecosystems.
 
@@ -462,7 +460,7 @@ In alignment with our educational mission, Tier 5 provides deep subsidies to hig
 
 - Scientific Research: Public research institutions, post-doctoral laboratories, and clinical academic centers.
 
-- Non-Profit Organizations: Registered 501(c)(3) charities, international humanitarian NGOs, and open civic research groups.
+- Non-Profit Organizations: registered charity or non-profit (including US 501(c)(3) organizations) charities, international humanitarian NGOs, and open civic research groups.
 
 We empower students, researchers, and humanitarian workers with frontier AI capabilities at nominal rates.
 
@@ -494,9 +492,9 @@ Qualification for Tier 5 (75% Parity Discount / $500 USD per 1-month service) is
 
 - Open-Source Maintainers & Independent Researchers: Core maintainers of prominent public-interest open-source software libraries, research labs, or non-commercial AI evaluation initiatives.
 
-- Automatic Scale-Out Verification: Tier 5 cohorts receive the full 75% discount across the base 30-day package and any additional seats ($125/head vs. standard $500/head).
+- Additional seats: Tier 5 cohorts get the 75% discount on extra seats too: $62.50 per additional participant instead of the standard $250.
 
-Verification is completed during initial onboarding within 24 hours of inquiry.
+I reply to every inquiry within one week (a little busy with current work).
 
 ---
 
@@ -526,7 +524,7 @@ Tier 6 subsidized engagements bypass standard automated checkout. To apply for T
 
 - Required Application Details: Provide a brief summary of your background, your organization or collective's mission, current geographic location and economic context, target AI training focus areas, and cohort size.
 
-- Founder Review & Approval: Every Tier 6 subsidy is individually reviewed, customized, and approved directly by the founder. Response times are typically within 24 to 48 hours.
+- Founder Review & Approval: Every Tier 6 subsidy is individually reviewed, customized, and approved directly by the founder. I reply to every inquiry within one week (a little busy with current work).
 
 All conversations are held in strict confidence, with zero judgment and total focus on empowering your technical capabilities.
 
@@ -552,7 +550,7 @@ Relying exclusively on proprietary cloud model APIs for high-volume, recurring o
 
 - High-Throughput Serving Engines: Deploying vLLM, Ollama, and llama.cpp with AWQ and GGUF 4-bit/8-bit quantization on consumer GPUs or on-premise servers.
 
-- Workload Offloading: Diverting routine classification, JSON formatting, entity extraction, and preliminary code linting from cloud APIs to local models (DeepSeek, Llama 3.3, Qwen 2.5).
+- Workload Offloading: Diverting routine classification, JSON formatting, entity extraction, and preliminary code linting from cloud APIs to local models (Qwen3.5, DeepSeek V3.2, Gemma 4).
 
 - Zero Data Egress: Operating 100% air-gapped systems where sensitive enterprise data never crosses public internet boundaries, fulfilling strict compliance requirements.
 
@@ -566,7 +564,7 @@ OpenCode represents the global open-source movement for developer agentic autono
 
 - Open-Source Frameworks: Comprehensive training on OpenCode, Aider, and OpenHands paired directly with local or private endpoints.
 
-- State-of-the-Art Open Weights: Harnessing frontier open coding models including Qwen-2.5-Coder and DeepSeek-Coder.
+- State-of-the-Art Open Weights: Harnessing frontier open coding models including current open-weight coding models such as Qwen3.5 and DeepSeek V3.2.
 
 - Complete Code Privacy: Zero proprietary source code is uploaded to external telemetry or third-party training pipelines.
 
@@ -596,7 +594,7 @@ Each training contract spans 30 calendar days (4 intensive weekly milestones) of
 
 - Week 1 (Days 1–7) — Architectural Assessment, Toolchains & Sandboxes: System discovery, tooling verification, prompt engineering design patterns, and Claude agent reasoning loop primitives.
 
-- Week 2 (Days 8–15) — Agent Orchestration, Skills & MCP Servers: Claude Code CLI, Claude Cowork, custom capability Skills, Model Context Protocol (MCP) servers, and hierarchical agent teams.
+- Week 2 (Days 8–15) — Agent Orchestration, Skills & MCP Servers: Claude Code CLI, Claude's desktop and computer-use features, custom capability Skills, Model Context Protocol (MCP) servers, and hierarchical agent teams.
 
 - Week 3 (Days 16–22) — Local LLM Clusters, OpenCode & AI-Assisted TDD: High-throughput local model serving (vLLM/Ollama), OpenCode model routing, test-driven hallucination prevention, and guardrails.
 
@@ -696,15 +694,13 @@ Our flagship Claude curriculum covers eight meticulously structured modules refl
 
 ### 44. What is Hermes Agent Training and how are autonomous systems built with it?
 *Curriculum: Hermes Agents · FAQ #38*  
-Hermes Agent Training focuses on the powerful Nous Research Hermes model series, the industry benchmark for open-weights agentic reasoning and function calling.
+Hermes Agent Training covers Hermes Agent, the open-source agent framework from Nous Research: persistent memory across sessions, skills it saves and reuses, scheduled tasks and sandboxed tool execution on your own servers.
 
 - Autonomous Function Calling: Directing Hermes models to invoke internal API endpoints, inspect JSON schemas, and execute terminal tools without cloud intermediaries.
 
 - Self-Correction Loops: Engineering agents that inspect runtime exceptions, self-debug compilation errors, and retry failed commands autonomously.
 
 - Private Autonomous Task Runners: Building headless background daemons that monitor servers, parse customer support tickets, and generate automated summaries.
-
-- Zero Licensing Restraints: Deploying open-weights agent instances that carry zero third-party licensing or usage restrictions.
 
 Engineers gain the ability to build fully autonomous agents on self-hosted infrastructure.
 
@@ -734,7 +730,7 @@ Financial sustainability is central to enterprise AI success. We teach comprehen
 
 - Circuit Breakers: Halting recursive agent loops automatically if anomalous token consumption spikes exceed specified thresholds.
 
-- Semantic Prompt Caching: Slashing repeat prompt token expenses by 30% to 50% using Anthropic Prompt Caching and vector cache layers.
+- Semantic Prompt Caching: Prompt caching cuts the cost of cached input tokens by 90% to 97.5%, depending on the Claude model.
 
 - Tiered Inference Offloading: Routing 70%+ of bulk operations to local vLLM or Ollama instances, reserving high-cost frontier calls exclusively for complex decisions.
 

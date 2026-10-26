@@ -34,7 +34,7 @@ Cut recurring cloud API bills by 60% to 90% by running open-weight models privat
 - **Deliverables**: 60%–90% API bill reduction, high-throughput vLLM/Ollama private serving, 4-bit/8-bit GGUF/AWQ quantization, and zero external data egress.
 - **URL**: [https://thomascherickal.github.io/service-local-llms-cost-slashing.html](https://thomascherickal.github.io/service-local-llms-cost-slashing.html)
 
-### 03. Claude AI Agent Orchestration
+### 03. Claude Agent Orchestration
 Master the principles of Claude AI agent orchestration to run multi-agent swarms at scale. Build orchestrator-worker hierarchies, sequential pipelines, and parallel fan-out teams that automate complex workflows while controlling quality and cost.
 - **Deliverables**: Orchestrator-worker hierarchies, parallel fan-out execution, dynamic task routing, human-in-the-loop gates, and token budget governance.
 - **URL**: [https://thomascherickal.github.io/service-ai-agents-orchestration.html](https://thomascherickal.github.io/service-ai-agents-orchestration.html)
@@ -44,17 +44,17 @@ Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own in
 - **Deliverables**: Self-hosted Hermes Agent on Linux, persistent session memory (vector & SQLite), autonomous skill accumulation, and sandboxed Docker tool execution.
 - **URL**: [https://thomascherickal.github.io/service-agentic-ai-systems.html](https://thomascherickal.github.io/service-agentic-ai-systems.html)
 
-### 05. Training for WorkFlow Automations
+### 05. Training for Workflow Automation Training
 Hands-on training for automating recurring office work with Claude skills, plugins, connectors, scheduled tasks, and Microsoft 365 add-ins. Automate up to half of routine daily operations across sales, finance, and engineering with private data options.
 - **Deliverables**: Up to 50% routine office automation, custom Claude skills & connectors, Microsoft 365 add-in integrations, scheduled background tasks, and zero per-seat SaaS lock-in.
 - **URL**: [https://thomascherickal.github.io/service-training-for-workflow-automations.html](https://thomascherickal.github.io/service-training-for-workflow-automations.html)
 
-### 06. Applied Quantum (Experimental)
+### 06. Quantum Applications (Experimental)
 Exploratory quantum computing advisory for enterprise use cases: algorithm simulation with IBM Qiskit and PennyLane, variational circuits (VQE/QAOA), quantum machine learning, and Post-Quantum Cryptography (PQC) readiness aligned with NIST standards.
 - **Deliverables**: Quantum readiness feasibility audits, circuit simulation with Qiskit/PennyLane, hybrid VQE/QAOA algorithms, and NIST Post-Quantum Cryptography (PQC) migration.
 - **URL**: [https://thomascherickal.github.io/service-quantum-applications.html](https://thomascherickal.github.io/service-quantum-applications.html)
 
-### 07. AI Budget & Cost Limits Training
+### 07. AI Budget & Cost Control Training
 Train staff across all levels to control AI spending: establish hard spending caps per session and month, configure token budgets, leverage prompt caching for up to 90% input savings, and route low-complexity tasks to free and local models.
 - **Deliverables**: Hard spending caps per session/month, departmental token quotas, prompt caching for up to 90% savings, and LiteLLM model routing to local/free tiers.
 - **URL**: [https://thomascherickal.github.io/service-ai-budget-cost-limits-training.html](https://thomascherickal.github.io/service-ai-budget-cost-limits-training.html)

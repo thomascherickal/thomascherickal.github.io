@@ -3,7 +3,7 @@
 ### Pricing Tier Structure:
 - **Tier 1 — Developed Nations (100% Price)**: Standard pricing for developed economies.
 - **Tier 2 — Developing Nations (75% Price / 25% Discount)**: Middle-income and emerging economies.
-- **Tier 3 — Least Developed Nations (50% Price / 50% Discount)**: Developing and low-income economies.
+- **Tier 3 — Lower-Middle & Low-Income Economies (50% Price / 50% Discount)**: Developing and low-income economies.
 - **Tier 4 — Early-Stage Startups (50% Startup Discount)**: Exclusive 50% discount for Pre-Seed and Seed-stage engineering teams building frontier AI infrastructure or Quantum Computing SDKs.
 - **Tier 5 — Custom Pricing Tier**: Custom pricing and special accommodations for non-profits, educational institutions, universities, under-privileged institutions, and underprivileged clients. Contact `thomascherickal@gmail.com` or submit a brief on the contact page.
 

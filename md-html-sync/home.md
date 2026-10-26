@@ -3,35 +3,26 @@
 
 > **//
  The Digital Futurist · Remote Worldwide**  
-> **Specializing in transforming individuals or traditional businesses to an
- AI-first & AI-native leaders or organizations, by providing hybrid and remote training, teaching freshers,
- developers, staff, architects, management, and CXOs to become AI-enabled and experts in Claude AI agent
- orchestration and Gemini AI tooling ecosystem using minimal investment and cost monitoring and budgeting,
- also using Local LLMs with investment in hardware.**
+> **I train individuals and teams to work AI-first, from freshers and developers to architects, managers and CXOs. Training is live and remote and covers Claude agent orchestration, the Gemini toolset, and budget controls that keep AI spend predictable. For teams ready to invest in hardware, I also set up local LLMs that cut recurring cloud API bills.**
 
 **Location**: Chennai, India (Remote — Worldwide)  
 **Brand**: The Digital Futurist  
 **Email**: [thomascherickal@gmail.com](mailto:thomascherickal@gmail.com)  
 
 **Specialized Roles**:
-- `Claude AI Consultant`
-- `Agentic AI Architect`
-- `AI Automation Expert`
-- `AI Training Live & Remote`
-- `Claude AI Ecosystem`
-- `AI Agent Orchestration`
+- `Claude Agent Orchestration`
+- `Gemini AI Tooling`
 - `Local LLM Deployment`
-- `Gemini AI Consultant`
+- `AI Budgets & Cost Control`
+- `Workforce AI Training`
+- `AI Developer Training (TDD)`
+- `Custom Agent Development`
+- `Live & Remote Delivery`
 
 ---
 
 ## Bio
-PG in CS from Loyola College; I help individuals and enterprises transform into AI-first,
- AI-native leaders and organizations. My expertise spans Generative AI, Local LLM deployments for cost reduction,
- Claude AI agent orchestration, Gemini AI work optimizationand comprehensive AI training for all levels - from
- freshers to CXOs, enterprise level or personal basis. With a focus on practical application and budget-conscious
- implementation, I empower teams to
- become AI-native and drive real business impact.
+I hold a postgraduate degree in Computer Science from Loyola College. I help individuals and enterprises become AI-first, AI-native leaders and organizations. My work covers Generative AI, local LLM deployments that reduce inference costs, Claude agent orchestration, and AI training for every level from freshers to CXOs, one-to-one or for whole teams. The focus is practical use and budget-conscious rollout that shows up in daily work.
 
 ### Quick Actions
 - [Articles](articles.html)
@@ -45,9 +36,9 @@ PG in CS from Loyola College; I help individuals and enterprises transform into 
 | Metric | Value |
 | :--- | :--- |
 | **Publications** | 500+ |
-| **Agent Teams** | 10+ |
-| **Years in Gen AI** | 5+ |
-| **Local LLMs** | 20+ |
+| **Platforms** | 10+ |
+| **Languages** | 8+ |
+| **Writing Since** | 2020 |
 
 ---
 
@@ -87,23 +78,23 @@ Enterprise AI transformation, Claude AI agent orchestration, technical deep dive
 1. [Generative AI Transformation](service-generative-ai-transformation.html) — Move your business from one-off chatbot prompts to coordinated teams of Claude
  agents that carry real work. Ground agent swarms in your domain data with custom MCP servers, bounded
  execution loops, and strict spending limits.
-2. [Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — Cut recurring cloud API bills by 60% to 90% by running open-weight models privately
+2. [Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — Moving routine workloads to local models can cut recurring cloud API bills by 60% to 90%; your figure depends on volume and hardware. by running open-weight models privately
  with Ollama, vLLM, llama.cpp and LM Studio. Size hardware from 8B to 120B models, route routine queries
  locally, and keep sensitive records on your machines.
-3. [Claude AI Agent Orchestration](service-ai-agents-orchestration.html) — Master the principles of Claude AI agent orchestration to run multi-agent swarms at
+3. [Claude Agent Orchestration](service-ai-agents-orchestration.html) — Master the principles of Claude AI agent orchestration to run multi-agent swarms at
  scale. Build orchestrator-worker hierarchies, sequential pipelines, and parallel fan-out teams that
  automate complex workflows while controlling quality and cost.
 4. [Hermes Agent](service-agentic-ai-systems.html) — Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own
  infrastructure. Configure persistent session memory so the agent retains project context, saves solved
  procedures as reusable skills, and runs scheduled tasks.
-5. [WorkFlow Automations](service-training-for-workflow-automations.html) — Hands-on training for automating recurring office work with Claude skills, plugins,
- connectors, scheduled tasks and Microsoft 365 add-ins. Automate up to half of routine daily operations
+5. [Workflow Automation Training](service-training-for-workflow-automations.html) — Hands-on training for automating recurring office work with Claude skills, plugins,
+ connectors, scheduled tasks and Microsoft 365 add-ins. Automate recurring office tasks across sales, finance and engineering, with private data options.
  across sales, finance and engineering with private data options.
 6. [Quantum Applications (Experimental)](service-quantum-applications.html) — Exploratory quantum computing advisory for enterprise use cases: algorithm
  simulation with IBM Qiskit and PennyLane, variational circuits (VQE/QAOA), quantum machine learning, and
  Post-Quantum Cryptography (PQC) readiness aligned with NIST standards.
-7. [AI Budget Training](service-ai-budget-cost-limits-training.html) — Train staff across all levels to control AI spending: establish hard spending caps
- per session and month, configure token budgets, leverage prompt caching for up to 90% input savings, and
+7. [AI Budget & Cost Control Training](service-ai-budget-cost-limits-training.html) — Train staff across all levels to control AI spending: establish hard spending caps
+ per session and month, configure token budgets, leverage prompt caching (cutting cached input tokens by 90% to 97.5%, depending on the Claude model), and
  route low-complexity tasks to free and local models.
 8. [Enterprise Workforce AI Training](service-enterprise-workforce-ai-training.html) — Live and remote corporate AI training delivered across distinct tracks: prompting
  for corporate staff, Claude Code and AI-assisted TDD for developers, and executive briefings, AI roadmaps,
@@ -115,10 +106,10 @@ Enterprise AI transformation, Claude AI agent orchestration, technical deep dive
  for business-critical workloads. Implement test-driven self-correction loops where agents fix errors until
  tests pass, with persistent state and Docker sandboxing.
 11. [Claude Basic Training](service-claude-basic-training.html) — Foundational enablement for corporate staff and knowledge workers: choosing the
- right model between Haiku, Sonnet, and Opus, structured prompting with XML tags, managing shared team
+ right model between Haiku, Sonnet, Opus and Fable, structured prompting with XML tags, managing shared team
  memory in Claude Projects, and using Artifacts for daily office work.
 12. [Claude Advanced Training](service-claude-advanced-training.html) — Technical masterclass for senior developers and AI architects: advanced Claude Code
- CLI workflows, Claude Cowork in Microsoft 365, designing and securing production MCP servers, and
+ CLI workflows, Claude for Microsoft 365 (Excel, Word, PowerPoint, Outlook), designing and securing production MCP servers, and
  orchestrating frontier models with adaptive thinking effort.
 
 ---

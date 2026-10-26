@@ -24,7 +24,8 @@ Tailored curriculums delivered live and remotely for Employees (AI adoption &
 
 ### 3. Local LLM Deployment & Cost Slashing
 Lowering recurring cloud AI inference bills by 60–90% using open-weight local LLMs
- (Llama 3, DeepSeek, Qwen, Mistral). Expertise in Ollama, vLLM, llama.cpp, GGUF/AWQ quantization, and private
+ (Qwen3.5, DeepSeek V3.2, GPT-OSS-120B, Gemma 4, Mistral). Expertise in Ollama, vLLM, llama.cpp, GGUF/AWQ
+ quantization, and private
  on-prem hosting.
 
 ---
@@ -37,14 +38,15 @@ Accelerating developer workflows with frontier AI coding assistants (Claude Code
 ---
 
 ### 5. Claude Expertise
-Configuring prompt caching for 90–95% cost reductions, extended
+Prompt caching cuts the cost of cached input tokens by 90% to 97.5%, depending on
+ the Claude model, extended
  thinking effort controls, Model Context Protocol (MCP) integrations, declarative subagents in Claude Code,
  and autonomous multi-agent DAG swarms.
 
 ---
 
 ### 6. Early Quantum Systems Explorer
-Pioneering hands-on quantum research and circuit modeling using IBM Qiskit and
+Hands-on quantum circuit modeling using IBM Qiskit and
  PennyLane. Variational quantum algorithms (VQE, QAOA), Quantum Machine Learning (QML), and enterprise
  quantum readiness.
 
@@ -52,7 +54,7 @@ Pioneering hands-on quantum research and circuit modeling using IBM Qiskit and
 
 ### 7. Frontier AI Tools Advisory
 Hands-on architecture, configuration, and developer pair-programming in Claude Code,
- Google Antigravity, HuggingFace Spaces, Google Gemini Notebook, Google AI Studio,
+ Google Antigravity, Hugging Face Spaces, Google Gemini Notebook, Google AI Studio,
  OpenCode, and OpenRouter.
 
 ---
@@ -102,7 +104,7 @@ Structured engagement models for engineering teams, fast-growing tech startups, 
 `Ollama` · `vLLM` · `llama.cpp` · `GGUF` · `LM Studio` · `Qwen` · `Gemma` · `Llama` · `Mistral`
 
 ### Decision Models
-`Jev` · `Laya` · `OpenAI Decision Model API` · `Microsoft Decsion Model API` · `System One Thinking` · `Jev Endpoints` · `Local Decision Models`
+`Jev` · `Laya` · `OpenAI Decisions API` · `Local Decision Models (Ollama)`
 
 ### AI-Assisted Test-Driven Dev (TDD)
 `Test-Driven Development (TDD)` · `AI Pair Programming` · `Automated Test Suites` · `pytest` · `cargo test` · `CI/CD Automation`

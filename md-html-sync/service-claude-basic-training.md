@@ -78,9 +78,9 @@
   - Tier 1 (Standard / 100%): $2,000 USD (USA, UK, EU, Canada, Australia)
   - Tier 2 (Developing Nations / 25% Off): $1,500 USD (India, Brazil, Mexico, UAE,
  Poland)
-  - Tier 3 & 4 (Least Developed & Startups / 50% Off): $1,000 USD
+  - Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off): $1,000 USD
   - Tier 5 (Academia & Non-Profits / 75% Off): $500 USD
-  - Tier 6 (Backward & Underprivileged Nations): Custom Subsidized Relief /
+  - Tier 6 (Crisis-Affected & Under-Resourced Regions): Custom Subsidized Relief /
  Micro-Rates
   - Calculate and lock in your exact tier rate live on the Pricing page.
 - Payment Milestones:

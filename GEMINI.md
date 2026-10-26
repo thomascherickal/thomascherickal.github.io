@@ -46,6 +46,6 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 ## No Emojis Rule
 - **DO NOT use emojis** in any further generation of any file in the future in this repo.
 - Ensure all generated or modified files (including HTML, CSS, JavaScript, Markdown, Python, and configuration files) remain completely free of emojis.
-
-
-
+## Canonical Email ID
+- **Canonical Email ID**: `thomascherickal@gmail.com`
+- **ALWAYS** save, render, and use `thomascherickal@gmail.com` as the primary contact email address across all files, footer links, mailto references, documentation, schemas, and configurations.

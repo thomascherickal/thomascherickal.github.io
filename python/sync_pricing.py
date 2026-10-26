@@ -167,9 +167,9 @@ def calc_parity(min_val, max_val):
     return {
         "tier1": {"label": "Tier 1 (Standard / 100%)", "min": min_val, "max": max_val},
         "tier2": {"label": "Tier 2 (Developing / 25% Off)", "min": int(min_val * 0.75), "max": int(max_val * 0.75)},
-        "tier3": {"label": "Tier 3 & 4 (Least Developed & Startups / 50% Off)", "min": int(min_val * 0.50), "max": int(max_val * 0.50)},
+        "tier3": {"label": "Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off)", "min": int(min_val * 0.50), "max": int(max_val * 0.50)},
         "tier5": {"label": "Tier 5 (Academia & Non-Profits / 75% Off)", "min": int(min_val * 0.25), "max": int(max_val * 0.25)},
-        "tier6": {"label": "Tier 6 (Underprivileged & Backward Nations)", "min": 0, "max": 0, "custom": True}
+        "tier6": {"label": "Tier 6 (Crisis-Affected & Under-Resourced Regions)", "min": 0, "max": 0, "custom": True}
     }
 
 def format_price_spec(name, min_val, max_val, desc=None):
@@ -205,7 +205,7 @@ def build_offer_catalog_elements():
     for p in CORE_PILLARS:
         if p["minPrice"] == 0 and p["maxPrice"] == 0:
             price_specs = [
-                format_price_spec("Tier 6 Underprivileged & Backward Nations", 0, 0, "Custom subsidized quotes and micro-rates across 195 countries")
+                format_price_spec("Tier 6 Crisis-Affected & Under-Resourced Regions", 0, 0, "Custom subsidized quotes and micro-rates across 195 countries")
             ]
         else:
             par = calc_parity(p["minPrice"], p["maxPrice"])
@@ -214,7 +214,7 @@ def build_offer_catalog_elements():
                 format_price_spec(par["tier2"]["label"], par["tier2"]["min"], par["tier2"]["max"]),
                 format_price_spec(par["tier3"]["label"], par["tier3"]["min"], par["tier3"]["max"]),
                 format_price_spec(par["tier5"]["label"], par["tier5"]["min"], par["tier5"]["max"]),
-                format_price_spec("Tier 6 (Custom Subsidized Relief)", 0, 0, "Micro-rates and customized quotes for underprivileged teams")
+                format_price_spec("Tier 6 (Custom Subsidized Relief)", 0, 0, "Micro-rates and customized quotes for under-resourced teams")
             ]
         
         offer = {
@@ -827,7 +827,7 @@ def sync_standalone_service_files():
                         format_price_spec(par["tier2"]["label"], par["tier2"]["min"], par["tier2"]["max"]),
                         format_price_spec(par["tier3"]["label"], par["tier3"]["min"], par["tier3"]["max"]),
                         format_price_spec(par["tier5"]["label"], par["tier5"]["min"], par["tier5"]["max"]),
-                        format_price_spec(par["tier6"]["label"], 0, 0, "Custom subsidized quotes for underprivileged teams")
+                        format_price_spec(par["tier6"]["label"], 0, 0, "Custom subsidized quotes for under-resourced teams")
                     ]
             with open(schema_path, "w", encoding="utf-8") as f:
                 json.dump(s_data, f, indent=2, ensure_ascii=False)
@@ -853,7 +853,7 @@ def sync_standalone_service_files():
                                 format_price_spec(par["tier2"]["label"], par["tier2"]["min"], par["tier2"]["max"]),
                                 format_price_spec(par["tier3"]["label"], par["tier3"]["min"], par["tier3"]["max"]),
                                 format_price_spec(par["tier5"]["label"], par["tier5"]["min"], par["tier5"]["max"]),
-                                format_price_spec(par["tier6"]["label"], 0, 0, "Custom subsidized quotes for underprivileged teams")
+                                format_price_spec(par["tier6"]["label"], 0, 0, "Custom subsidized quotes for under-resourced teams")
                             ]
                     new_json_str = json.dumps(s_data, indent=2, ensure_ascii=False)
                     html_content = html_content[:match.start(2)] + "\n  " + new_json_str.replace("\n", "\n  ") + "\n  " + html_content[match.end(2):]
@@ -873,9 +873,9 @@ def sync_standalone_service_files():
   <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:disc;">
     <li><strong>Tier 1 (Standard / 100%):</strong> ${par['tier1']['min']:,} – ${par['tier1']['max']:,} USD</li>
     <li><strong>Tier 2 (Developing Nations / 25% Off):</strong> ${par['tier2']['min']:,} – ${par['tier2']['max']:,} USD</li>
-    <li><strong>Tier 3 &amp; 4 (Least Developed &amp; Startups / 50% Off):</strong> ${par['tier3']['min']:,} – ${par['tier3']['max']:,} USD</li>
+    <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> ${par['tier3']['min']:,} – ${par['tier3']['max']:,} USD</li>
     <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> ${par['tier5']['min']:,} – ${par['tier5']['max']:,} USD</li>
-    <li><strong>Tier 6 (Backward &amp; Underprivileged Nations):</strong> Custom Subsidized Relief / Micro-Rates</li>
+    <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Custom Subsidized Relief / Micro-Rates</li>
     <li>Calculate and lock in your exact tier rate live on the <a href="pricing.html" style="color:var(--cyan);text-decoration:underline;">Pricing page</a>.</li>
   </ul>
 </li>

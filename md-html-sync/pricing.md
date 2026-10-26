@@ -76,12 +76,12 @@ Rates are automatically indexed across 195 countries to ensure fair pricing worl
 *TIER 01 · DEVELOPED NATIONS* — OECD High-Income Economies & Global Enterprise Hubs  
 **Rate**: `100% Standard Rate` (0% DISCOUNT · BASELINE MULTIPLIER: 1.0X)  
 
-### Developing & Growth Markets
-*TIER 02 · DEVELOPING NATIONS* — Rapidly Expanding Digital Ecosystems & Regional Tech Hubs  
+### Upper-Middle-Income Economies
+*TIER 02 · UPPER-MIDDLE-INCOME ECONOMIES* — World Bank Upper-Middle-Income Digital Ecosystems & Regional Hubs  
 **Rate**: `25% Parity Discount` (75% BASE RATE · BASELINE MULTIPLIER: 0.75X)  
 
-### Emerging & Least Developed Markets
-*TIER 03 · LEAST DEVELOPED NATIONS* — World Bank Lower-Middle & Low-Income Tech Ecosystems  
+### Lower-Middle & Low-Income Economies
+*TIER 03 · LOWER-MIDDLE & LOW-INCOME* — World Bank Lower-Middle & Low-Income Tech Ecosystems  
 **Rate**: `50% Parity Discount` (50% BASE RATE · BASELINE MULTIPLIER: 0.50X)  
 
 ### Early-Stage Tech Startups
@@ -89,11 +89,11 @@ Rates are automatically indexed across 195 countries to ensure fair pricing worl
 **Rate**: `50% Startup Discount` (FLAT 50% OFF ALL PACKAGES · MULTIPLIER: 0.50X)  
 
 ### Universities, Labs & Non-Profits
-*TIER 05 · ACADEMIA & NON-PROFITS* — Higher Education, Research Labs & Registered 501(c)(3) Charities  
+*TIER 05 · ACADEMIA & NON-PROFITS* — Higher Education, Research Labs & registered charity or non-profit (including US 501(c)(3) organizations) Charities  
 **Rate**: `75% Parity Discount` (25% BASE RATE · BASELINE MULTIPLIER: 0.25X)  
 
-### Underprivileged & Distressed Regions
-*TIER 06 · RADICAL EQUITY & UNDERPRIVILEGED* — Grassroots Builders in Distressed Areas & Micro-Grant Candidates  
+### Crisis-Affected & Under-Resourced Regions
+*TIER 06 · CRISIS-AFFECTED & UNDER-RESOURCED* — Custom Subsidized Pricing & Flexible Milestones  
 **Rate**: `Custom Subsidized Quotes` (MICRO-RATES & UP TO 90%+ SUBSIDIZED RELIEF)  
 
 - [Check your country on the interactive calculator](pricing.html)
