@@ -1,5 +1,5 @@
 # Google Deep Research
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// AUTONOMOUS INFORMATION SYNTHESIS**  
 > **Inside Google Gemini's Deep Research engine: an autonomous agentic analyst that navigates hundreds of online and enterprise sources to compile comprehensive, cited research dossiers.**

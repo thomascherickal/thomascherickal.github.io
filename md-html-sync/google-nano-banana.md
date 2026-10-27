@@ -1,5 +1,5 @@
 # Google Nano Banana
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// VISUAL GENERATION & CONVERSATIONAL EDITING**  
 > **Explore Google's flagship visual generation suite: how Nano Banana transformed AI image synthesis through conversational iteration, multi-reference identity fusion, and typographic precision.**

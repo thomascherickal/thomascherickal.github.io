@@ -94,8 +94,8 @@ Technical masterclass for senior developers and AI architects: advanced Claude C
 - **URL**: [https://thomascherickal.github.io/service-claude-advanced-training.html](https://thomascherickal.github.io/service-claude-advanced-training.html)
 
 ### 13. Google Gemini Basic Training
-Foundational enterprise Google Gemini workforce enablement: mastering Google Gemini Pro services, Gemini Chat, Nano Banana conversational image generation, Google Flow cinematic storyboarding, Google Lyria music scoring, Google Omni multimodal workflows, and Gemini Spark 24/7 background agents.
-- **Deliverables**: Gemini Pro multimodal chat, Nano Banana conversational image editing, Google Flow storyboards, Google Lyria soundtrack scoring, Google Omni multimodal video direction, and Gemini Spark 24/7 Workspace agents.
+Foundational enterprise Google Gemini workforce enablement: mastering Google Gemini Pro services, Gemini Chat, Nano Banana conversational image generation, Google Flow cinematic storyboarding, Google Lyria music scoring, Gemini Omni multimodal workflows, and Gemini Spark 24/7 background agents.
+- **Deliverables**: Gemini Pro multimodal chat, Nano Banana conversational image editing, Google Flow storyboards, Google Lyria soundtrack scoring, Gemini Omni multimodal video direction, and Gemini Spark 24/7 Workspace agents.
 - **URL**: [https://thomascherickal.github.io/service-gemini-basic-training.html](https://thomascherickal.github.io/service-gemini-basic-training.html)
 
 ### 14. Google Gemini Advanced Training

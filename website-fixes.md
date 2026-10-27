@@ -92,7 +92,7 @@ This report documents the resolution of all items requested across Parts 2 throu
   - Updated factual strip: `500+ Publications · 10+ Platforms · 8+ Languages · Writing since 2020`.
 - [x] **4.6 Guarantee Boilerplate**:
   - Retained single clean statement on index: "Every service runs for one month, and services can run in parallel."
-  - Consolidated terms on pricing and faqs: "Enterprise: 30 days of live training plus 30 days of included support, for up to 20 participants. Personal: 15 days of one-to-one training across all 12 services plus 15 days of daily Q&A support, with short reference guides. One person only."
+  - Consolidated terms on pricing and faqs: "Enterprise: 30 days of live training plus 30 days of included support, for up to 20 participants. Personal: 15 days of one-to-one training drawing on the full 16-service catalogue plus 15 days of daily Q&A support, with short reference guides. One person only."
 - [x] **4.7 CTA Block**:
   - Tightened CTA copy: "Claude agent orchestration, consulting, mentoring and training for teams that want to work AI-first."
 - [x] **4.8 Publication Card Blurbs & Sorting**:
@@ -101,12 +101,12 @@ This report documents the resolution of all items requested across Parts 2 throu
 ---
 
 ### Part 5: Naming, Navigation, Forms & Footer
-- [x] **5.1 Standardize 12 Service Names**:
+- [x] **5.1 Standardize 16 Service Names**:
   - Standardized service names across site: `Hermes Agent Training`, `Workflow Automation Training`, `Quantum Applications (Experimental)`, `AI Budget & Cost Control Training`, `Enterprise Workforce AI Training`, `Claude Agent Orchestration`.
 - [x] **5.2 Contact Form Options**:
-  - Contact dropdown updated with all 12 standardized services + Personal AI Transformation (all 12 services) + Other.
+  - Contact dropdown updated with all 16 standardized services + Personal AI Transformation (16-service catalogue) + Other.
 - [x] **5.3 Header Navigation**:
-  - Streamlined primary navigation in `header.html`: Home · Expertise · Services ▾ (12 services) · Pricing · Personal Training · Guides ▾ (Claude, Gemini) · Publications · FAQs · Contact.
+  - Streamlined primary navigation in `header.html`: Home · Expertise · Services ▾ (16 services) · Pricing · Personal Training · Guides ▾ (Claude, Gemini) · Publications · FAQs · Contact.
   - Linked logo brand to `index.html`.
 - [x] **5.4 Consultation Button**:
   - Standardized CTA label across all pages: `Book a free intro call on LinkedIn ↗`.

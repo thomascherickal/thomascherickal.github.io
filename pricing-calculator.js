@@ -111,7 +111,7 @@
     { slug: "service-claude-advanced-training", title: "Claude Advanced Training" },
     { slug: "service-gemini-basic-training", title: "Google Gemini Basic Training" },
     { slug: "service-gemini-advanced-training", title: "Google Gemini Advanced Training" },
-    { slug: "service-deep-research-notebooklm", title: "Deep Research & NotebookLM" },
+    { slug: "service-deep-research-notebooklm", title: "Deep Research & Gemini Notebook" },
     { slug: "service-hybrid-quantum-ai", title: "Hybrid Quantum-Classical AI" }
   ];
 

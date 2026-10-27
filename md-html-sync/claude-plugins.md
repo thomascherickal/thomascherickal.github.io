@@ -1,5 +1,5 @@
 # Claude Plugins: How One Install Turns Claude Into A Specialist For Any Job
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// ARCHITECTURE & EXTENSIBILITY GUIDE**  
 > **Plugins bundle skills, connectors, commands, and autonomous agents into a single unified package. Here is how they operate under the hood, why they make Claude extraordinarily capable, which ones matter today, and how they could automate whole occupations.**

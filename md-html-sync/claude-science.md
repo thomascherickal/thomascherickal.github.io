@@ -1,5 +1,5 @@
 # Claude Science: Anthropic's AI Workbench for Faster Research
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
 > **What the app does, how its agentic loops work, how it takes over literature review and documentation, and the results labs have reported since launch.**

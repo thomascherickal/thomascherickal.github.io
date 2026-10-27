@@ -1,5 +1,5 @@
 # Claude Skills: Build Your Own, Use What Exists, and Plan for What Comes Next
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
 > **How Claude skills work, how to write your own SKILL.md, the skills that already exist across Claude and the open Agent Skills standard, and what this extensibility means for automation and work.**

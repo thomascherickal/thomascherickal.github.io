@@ -1,5 +1,5 @@
 # Claude Features: Projects, Artifacts, Deep Research & Extensibility
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
 > **How Anthropic engineered Claude into an agentic operating system: combining persistent institutional knowledge, live dual-pane prototyping, web-scale autonomous research, and universal open tooling.By Thomas Cherickal, Generative AI Consultant · The Digital Futurist · thomascherickal.com · thomascherickal.github.io**

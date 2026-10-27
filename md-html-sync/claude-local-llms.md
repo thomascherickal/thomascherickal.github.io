@@ -1,5 +1,5 @@
 # Running Local LLMs on Linux: From 8B to 120B Parameters, with OpenCode and Claude
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
 > **Pick a model that fits your hardware, price the next upgrade in dollars and rupees, and wire the model into OpenCode and Claude Code with working configs.**

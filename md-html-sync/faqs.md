@@ -1,4 +1,4 @@
-# Thomas Cherickal — Frequently Asked Questions
+# Thomas Cherickal - Frequently Asked Questions
 ## Generative AI Consulting, Training, Pricing & Engagement Policies
 
 > **// CLIENT MANDATES & POLICIES**  
@@ -127,12 +127,10 @@ This transparent pricing guarantees that individual creators access world-class 
 
 ---
 
-### 6. How are all 12 transformation services unified under Personal AI Transformation?
+### 6. How does Personal AI Transformation draw from the full 16-service catalogue?
 *Personal:
- 12-in-1 Curriculum · FAQ #25*  
-Rather than forcing clients to purchase separate standalone packages, all 12 practice
- capabilities are available under Personal AI Transformation in one coherent 30-day
- curriculum:
+ 16-Service Catalogue · FAQ #25*  
+Rather than forcing clients to purchase separate standalone packages, the 16-service catalogue is modular: you choose the focus areas relevant to your work, and we tailor the 15-day intensive sprint around your live stack:
 
 - 1. Generative AI Transformation: End-to-end agentic workflow redesign and
  autonomous task delegation.
@@ -169,6 +167,18 @@ Rather than forcing clients to purchase separate standalone packages, all 12 pra
 
 - 12. Claude Advanced Orchestration: Multi-agent state machines, subagent
  dispatching, and evaluators.
+
+- 13. Gemini Basic Training: Multimodal prompting, Google Workspace automation, and
+ Gemini Flash workflows.
+
+- 14. Gemini Advanced Training: Google AI Studio, Google Antigravity IDE, Gemini
+ Deep Think, and Gemma fine-tuning.
+
+- 15. Deep Research & Gemini Notebook: Autonomous literature synthesis and
+ grounded multi-document intelligence.
+
+- 16. Hybrid Quantum-Classical AI: Quantum-classical optimization pipelines with
+ PennyLane and Qiskit.
 
 We selectively emphasize the disciplines most crucial to your immediate products and business goals.
 
@@ -230,11 +240,9 @@ No. Personal Training is strictly for one person only (private 1-on-1
 *Personal:
  15+15 Cadence · FAQ #28*  
 Personal AI Transformation is structured as an intensive two-phase acceleration program strictly for
- one person only: 15 days of intensive 1-on-1 sprint training covering all 12
- services, immediately followed by 15 days of included support with daily questions
- and doubts clarification, and source materials and guides that are light and easy to skim.
+ one person only: 15 days of intensive 1-on-1 sprint training drawing on the full 16-service catalogue (you choose the focus areas relevant to your work), immediately followed by 15 days of included support with daily questions and doubts clarification, and source materials and guides that are light and easy to skim.
 
-- Phase 1 (Days 1–15) · Intensive 1-on-1 Training Across All 12 Services: Direct
+- Phase 1 (Days 1–15) · Intensive 1-on-1 Training: Direct
  pair-programming covering personal AI workflows, private local LLMs (Ollama/vLLM), Claude agent
  teams, autonomous Hermes loops, custom MCP servers, AI budget ceilings, and AI-assisted TDD.
 
@@ -242,7 +250,7 @@ Personal AI Transformation is structured as an intensive two-phase acceleration 
  15 consecutive days of direct support, daily questions and doubts clarification as you execute daily
  client work, plus access to source materials and guides that are light and easy to skim.
 
-- All 12 Disciplines Synthesized: No compromise—you access local LLM quantization,
+- 16-Service Catalogue Synthesis: No compromise—you access local LLM quantization,
  autonomous agents, and tool calling tailored to your machine.
 
 - 100% Intellectual Property Handover: Full ownership of all synthesized code, MCP
@@ -260,7 +268,7 @@ Our explicit guarantee: 15 days of intensive instruction plus 15 days of include
 Individual training is engineered to transform independent software consultants, solopreneurs, and
  knowledge workers into one-person powerhouse agencies. Rather than superficial
  prompting, individuals master full-stack agent orchestration using Claude Agents 101,
- Claude Code CLI, and Claude Cowork desktop automation.
+ Claude Code CLI, and Claude desktop automation (formerly Cowork).
 
 - Autonomous Client Delivery: Scaffolding complete software applications, data
  pipelines, and documentation repositories in hours.
@@ -1175,7 +1183,7 @@ Every service engagement is governed by an explicit duration and included suppor
  support.
 
 - Personal AI Transformation: Strictly 15 days of intensive training
- covering all 12 services AND 15 days of included daily work support (total 30-day
+ drawing on the full 16-service catalogue AND 15 days of included daily work support (total 30-day
  experience), giving individuals hands-on assistance as they execute daily professional tasks.
 
 - Free Concurrency: All enterprise services can freely overlap or run concurrently

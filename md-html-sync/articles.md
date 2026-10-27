@@ -1,8 +1,8 @@
-# Thomas Cherickal — Articles & Case Studies
+# Thomas Cherickal - Articles & Case Studies
 ## Generative AI Consultant
 
 > **// Verified Case Studies**  
-> **The brief, the approach, and what shipped — 14 verified, human-directed case studies across Generative AI (6), Agentic AI (4), and Quantum Computing (4), backed by runtime-verified code, deep analysis, and equally deep insights.**
+> **The brief, the approach, and what shipped - 14 verified, human-directed case studies across Generative AI (6), Agentic AI (4), and Quantum Computing (4), backed by runtime-verified code, deep analysis, and equally deep insights.**
 
 ---
 

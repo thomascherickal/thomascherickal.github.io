@@ -1,5 +1,5 @@
 # Google Gemini Basic Training
-## Enterprise AI Transformation Service — Thomas Cherickal
+## Enterprise AI Transformation Service - Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 15**  
 > **Foundational workforce enablement across Google Gemini AI Pro services: mastering Google Gemini Chat, Nano
@@ -21,7 +21,7 @@
  storyboarding, scene layout planning, and character/wardrobe consistency across multi-shot video campaigns.
 - Google Lyria (Music Generation & Scoring): Composing studio-grade stereo soundtracks,
  ambient audio beds, dynamic music clips, and lyric-timed acoustic tracks for brand media.
-- Google Omni (Multimodal Video & Interaction): Any-to-any native multimodal video
+- Gemini Omni (Multimodal Video & Interaction): Any-to-any native multimodal video
  generation and conversational scene editing using natural language directives.
 - Gemini Spark (Autonomous 24/7 Workspace Agents): Orchestrating persistent background agents
  that autonomously monitor inboxes, summarize drive folders, and execute scheduled tasks across Google
@@ -36,7 +36,7 @@
  extensions (Docs, Sheets, Slides, Drive, Gmail).
 - Creative Generation Engines: Nano Banana, Nano Banana Pro, Google Flow studio, Veo
  video pipelines, and Lyria RealTime audio synthesizers.
-- Multimodal Processing: Google Omni interactions API for native video, audio, and visual
+- Multimodal Processing: Gemini Omni interactions API for native video, audio, and visual
  composition without multi-stage transcoding bottlenecks.
 - Security & Watermarking: SynthID detection tooling, enterprise privacy controls, and
  zero-egress corporate confidentiality boundaries.
@@ -61,8 +61,8 @@
  and structured output prompting | Staff accurately synthesize 500+ page corporate reports with verified citations and zero hallucinated facts |
 | Week 2 | Nano Banana & Creative Visual Synthesis | Conversational image generation, multi-turn visual editing, character/product consistency sheets,
  reference image fusion, and SynthID compliance | Marketing and design personnel produce production-ready visual campaign assets adhering to strict brand palettes |
-| Week 3 | Google Flow, Lyria Music & Google Omni | End-to-end creative studio workflows, Google Flow storyboards, Lyria soundtrack generation, and
- conversational Google Omni video editing | Teams generate fully storyboarded, scored video prototypes with synchronized audio and narrative continuity |
+| Week 3 | Google Flow, Lyria Music & Gemini Omni | End-to-end creative studio workflows, Google Flow storyboards, Lyria soundtrack generation, and
+ conversational Gemini Omni video editing | Teams generate fully storyboarded, scored video prototypes with synchronized audio and narrative continuity |
 | Week 4 | Gemini Spark 24/7 Agents & Workspace Handover | Configured Gemini Spark autonomous background agents, Google Workspace cross-app automation, prompt
  playbook rollout, and async Q&A setup | Staff deploy self-running Gemini Spark automations for daily inbox/file management with 40%+ productivity lift |
 
@@ -86,26 +86,26 @@
  & Pricing Quote
 
 - Modular Service Selection & Flexible Engagement: Clients can freely pick and choose their services, either individually or bundled under our comprehensive transformation programs:
-  - Individual Service Pick (Personal / 1-on-1): $1,000 USD per service for 5 days of live training + 5 days of dedicated support (10 days total coverage per service). Strictly 1 person only.
-  - Individual Service Pick (Business / Teams): $2,000 USD per service for 5 days of live training + 5 days of dedicated support (10 days total coverage per service). Covers up to 20 participants (additional seats at $250 USD per seat).
-  - Comprehensive Business Training: $5,000 USD for 60 days (30 days live training + 30 days guidance and detailed guides and materials). Includes cohorts up to 20 participants. Extra seats at $250 USD per seat).
-  - Comprehensive Personal Training: $2,500 USD for 30 days (15 days live training + 15 days guidance and detailed guides and materials). Strictly for 1 person only (private acceleration).
+ - Individual Service Pick (Personal / 1-on-1): $1,000 USD per service for 5 days of live training + 5 days of dedicated support (10 days total coverage per service). Strictly 1 person only.
+ - Individual Service Pick (Business / Teams): $2,000 USD per service for 5 days of live training + 5 days of dedicated support (10 days total coverage per service). Covers up to 20 participants (additional seats at $250 USD per seat).
+ - Comprehensive Business Training: $5,000 USD for 60 days (30 days live training + 30 days guidance and detailed guides and materials). Includes cohorts up to 20 participants. Extra seats at $250 USD per seat).
+ - Comprehensive Personal Training: $2,500 USD for 30 days (15 days live training + 15 days guidance and detailed guides and materials). Strictly for 1 person only (private acceleration).
 - Global Purchasing Power Parity (PPP) Available for All Service Pricing:
-  - Tier 1 (Standard / 100%): Individual $1,000 USD | Business $2,000 USD | Business 60d $5,000 USD | Personal 30d $2,500 USD (USA, UK, EU, Canada, Australia)
-  - Tier 2 (Developing Nations / 25% Off): Individual $750 USD | Business $1,500 USD | Business 60d $3,750 USD | Personal 30d $1,875 USD (India, Brazil, Mexico, UAE, Poland)
-  - Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off): Individual $500 USD | Business $1,000 USD | Business 60d $2,500 USD | Personal 30d $1,250 USD
-  - Tier 5 (Academia & Non-Profits / 75% Off): Individual $250 USD | Business $500 USD | Business 60d $1,250 USD | Personal 30d $625 USD
-  - Tier 6 (Crisis-Affected & Under-Resourced Regions): Individual $100 USD | Business $200 USD | Custom Subsidized Relief / Micro-Rates
-  - Calculate and lock in your exact tier rate live on the Pricing page.
+ - Tier 1 (Standard / 100%): Individual $1,000 USD | Business $2,000 USD | Business 60d $5,000 USD | Personal 30d $2,500 USD (USA, UK, EU, Canada, Australia)
+ - Tier 2 (Developing Nations / 25% Off): Individual $750 USD | Business $1,500 USD | Business 60d $3,750 USD | Personal 30d $1,875 USD (India, Brazil, Mexico, UAE, Poland)
+ - Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off): Individual $500 USD | Business $1,000 USD | Business 60d $2,500 USD | Personal 30d $1,250 USD
+ - Tier 5 (Academia & Non-Profits / 75% Off): Individual $250 USD | Business $500 USD | Business 60d $1,250 USD | Personal 30d $625 USD
+ - Tier 6 (Crisis-Affected & Under-Resourced Regions): Individual $100 USD | Business $200 USD | Custom Subsidized Relief / Micro-Rates
+ - Calculate and lock in your exact tier rate live on the Pricing page.
 - Payment Schedule:
-  - Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.
+ - Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.
 
 ---
 
 ## 6. Summary
 
 - Frontier Multimodal Mastery: Full coverage of Gemini Chat,
- Gemini Pro, Nano Banana, Google Flow, Google Lyria, and Google Omni.
+ Gemini Pro, Nano Banana, Google Flow, Google Lyria, and Gemini Omni.
 - 24/7 Workspace Autonomy: Deploying Gemini Spark background agents
  to eliminate repetitive administrative tasks.
 - Strict 1-Month Delivery: 4 structured weekly sprints leading

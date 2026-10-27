@@ -1,4 +1,4 @@
-# Thomas Cherickal — Start an AI Transformation
+# Thomas Cherickal - Start an AI Transformation
 ## Generative AI Consultant
 
 > **// PROJECT INTAKE & DIRECT COMMUNICATION**  

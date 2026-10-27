@@ -1,5 +1,5 @@
 # Google AI Studio
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// DEVELOPER PLAYGROUND & APP BUILDER**  
 > **Explore how Google AI Studio accelerates multimodal AI development, streamlines native Android app generation in Build Mode, automates Firebase backend security, and supports enterprise cloud deployment.**

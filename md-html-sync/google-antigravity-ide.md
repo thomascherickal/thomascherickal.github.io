@@ -1,5 +1,5 @@
 # Google Antigravity IDE
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// AI-FIRST DEVELOPMENT PLATFORM**  
 > **Explore Google Antigravity IDE: an open fork of Visual Studio Code engineered as a universal language builder with multi-model multiplexing across frontier Claude and Gemini architectures.**
@@ -20,7 +20,6 @@ A defining breakthrough of the Antigravity development environment is its model-
 
 - Claude Model Integration: Seamlessly dispatch complex architectural planning, refactoring passes, and nuanced coding tasks to Claude Opus and Claude Sonnet.
 - Gemini Frontier Suite: Leverage Gemini Flash for near-instant sub-second autocomplete, Gemini Pro for robust multi-file feature development, and Gemini Argon for deep, million-token context evaluations and autonomous cybersecurity audits.
-- Upcoming Frontier Horizons: Architectural pipelines are already provisioned to connect Google's next-generation specialized models—including Luna, Terra, Sol, and Astra—as they emerge from DeepMind research labs.
 
 ### The Universal Language Builder
 

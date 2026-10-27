@@ -1,5 +1,5 @@
 # Google Flow
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// MULTI-MODEL CREATIVE FILMMAKING STUDIO**  
 > **Inside Google Flow: the multi-model filmmaking platform unifying Gemini Omni reasoning, Veo high-definition video generation, and Lyria musical scoring for end-to-end creative production.**

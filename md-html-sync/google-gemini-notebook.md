@@ -1,5 +1,5 @@
 # Gemini Notebook
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// GROUNDED COGNITION & SECOND BRAIN**  
 > **Explore Gemini Notebook (formerly NotebookLM): the breakthrough platform revolutionizing global education, source-grounded research, viral audio podcasts, and personal knowledge management.**

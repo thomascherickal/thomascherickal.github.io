@@ -1,4 +1,4 @@
-# Thomas Cherickal — Generative AI Architecture, AI Agent Mastery & Tech Stack
+# Thomas Cherickal - Generative AI Architecture, AI Agent Mastery & Tech Stack
 ## Generative AI Consultant
 
 > **// TECHNICAL ROLES & CAPABILITIES DIRECTORY**  

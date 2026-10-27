@@ -1,4 +1,4 @@
-# Thomas Cherickal — Ways to Collaborate
+# Thomas Cherickal - Ways to Collaborate
 ## Generative AI Consulting, Corporate Training & Dedicated Retainers
 
 > **// CLIENT COLLABORATION DIRECTORY**  

@@ -1,5 +1,5 @@
 # Claude Basic Training
-## Enterprise AI Transformation Service — Thomas Cherickal
+## Enterprise AI Transformation Service - Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 13**  
 > **Foundational training for corporate staff, knowledge workers and freshers: choosing the right Claude model,
@@ -71,19 +71,19 @@
  & Pricing Quote
 
 - Modular Service Selection & Flexible Engagement: Clients can freely pick and choose their services, either individually or bundled under our comprehensive transformation programs:
-  - Individual Service Pick (Personal / 1-on-1): $1,000 USD per service for 5 days of live training + 5 days of dedicated support (10 days total coverage per service). Strictly 1 person only.
-  - Individual Service Pick (Business / Teams): $2,000 USD per service for 5 days of live training + 5 days of dedicated support (10 days total coverage per service). Covers up to 20 participants (additional seats at $250 USD per seat).
-  - Comprehensive Business Training: $5,000 USD for 60 days (30 days live training + 30 days guidance and detailed guides and materials). Includes cohorts up to 20 participants. Extra seats at $250 USD per seat).
-  - Comprehensive Personal Training: $2,500 USD for 30 days (15 days live training + 15 days guidance and detailed guides and materials). Strictly for 1 person only (private acceleration).
+ - Individual Service Pick (Personal / 1-on-1): $1,000 USD per service for 5 days of live training + 5 days of dedicated support (10 days total coverage per service). Strictly 1 person only.
+ - Individual Service Pick (Business / Teams): $2,000 USD per service for 5 days of live training + 5 days of dedicated support (10 days total coverage per service). Covers up to 20 participants (additional seats at $250 USD per seat).
+ - Comprehensive Business Training: $5,000 USD for 60 days (30 days live training + 30 days guidance and detailed guides and materials). Includes cohorts up to 20 participants. Extra seats at $250 USD per seat).
+ - Comprehensive Personal Training: $2,500 USD for 30 days (15 days live training + 15 days guidance and detailed guides and materials). Strictly for 1 person only (private acceleration).
 - Global Purchasing Power Parity (PPP) Available for All Service Pricing:
-  - Tier 1 (Standard / 100%): Individual $1,000 USD | Business $2,000 USD | Business 60d $5,000 USD | Personal 30d $2,500 USD (USA, UK, EU, Canada, Australia)
-  - Tier 2 (Developing Nations / 25% Off): Individual $750 USD | Business $1,500 USD | Business 60d $3,750 USD | Personal 30d $1,875 USD (India, Brazil, Mexico, UAE, Poland)
-  - Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off): Individual $500 USD | Business $1,000 USD | Business 60d $2,500 USD | Personal 30d $1,250 USD
-  - Tier 5 (Academia & Non-Profits / 75% Off): Individual $250 USD | Business $500 USD | Business 60d $1,250 USD | Personal 30d $625 USD
-  - Tier 6 (Crisis-Affected & Under-Resourced Regions): Individual $100 USD | Business $200 USD | Custom Subsidized Relief / Micro-Rates
-  - Calculate and lock in your exact tier rate live on the Pricing page.
+ - Tier 1 (Standard / 100%): Individual $1,000 USD | Business $2,000 USD | Business 60d $5,000 USD | Personal 30d $2,500 USD (USA, UK, EU, Canada, Australia)
+ - Tier 2 (Developing Nations / 25% Off): Individual $750 USD | Business $1,500 USD | Business 60d $3,750 USD | Personal 30d $1,875 USD (India, Brazil, Mexico, UAE, Poland)
+ - Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off): Individual $500 USD | Business $1,000 USD | Business 60d $2,500 USD | Personal 30d $1,250 USD
+ - Tier 5 (Academia & Non-Profits / 75% Off): Individual $250 USD | Business $500 USD | Business 60d $1,250 USD | Personal 30d $625 USD
+ - Tier 6 (Crisis-Affected & Under-Resourced Regions): Individual $100 USD | Business $200 USD | Custom Subsidized Relief / Micro-Rates
+ - Calculate and lock in your exact tier rate live on the Pricing page.
 - Payment Schedule:
-  - Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.
+ - Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.
 
 ---
 

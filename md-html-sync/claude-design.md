@@ -1,5 +1,5 @@
 # Claude Design: When a Sentence Replaces the Mouse
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
 > **Anthropic has turned graphic design into a conversation. Here is what Claude Design does, how it stacks up against Figma and Canva, the numbers behind it, and why it changes how digital visuals get made.**

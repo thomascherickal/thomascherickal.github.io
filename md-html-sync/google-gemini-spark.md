@@ -1,5 +1,5 @@
 # Gemini Spark
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// AUTONOMOUS WORKSPACE COWORKER AGENT**  
 > **Discover Gemini Spark: Google's 24/7 autonomous background agent architecture revolutionizing enterprise productivity across Gmail, Docs, Drive, Sheets, and third-party systems via Model Context Protocol.**

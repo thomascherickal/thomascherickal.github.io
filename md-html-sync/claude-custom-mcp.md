@@ -1,5 +1,5 @@
 # Custom MCP Servers With Claude: Connecting AI to Systems Across the Web
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
 > **How to build custom MCP servers in Python, TypeScript and Rust, and how Claude Desktop, Claude Code and the Claude API use them.**

@@ -1,5 +1,5 @@
 # Google Gemini 101
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// ARCHITECTURAL FOUNDATION & TIERS**  
 > **A comprehensive breakdown of Google Gemini's native multimodal architecture, service tiers, long-context window mechanics, and enterprise capabilities across Google AI Pro and Ultra subscriptions.**

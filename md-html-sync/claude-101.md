@@ -1,5 +1,5 @@
 # Claude 101: A Detailed Overview
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
 > **What each model is for, how the five effort levels work, and what Claude agents have done in recent weeks.By Thomas Cherickal, Generative AI Consultant · The Digital Futurist · thomascherickal.com · thomascherickal.github.io**

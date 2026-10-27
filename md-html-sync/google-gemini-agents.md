@@ -1,5 +1,5 @@
 # Google Gemini Agents
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// ENTERPRISE AUTONOMOUS AGENT ECOSYSTEM**  
 > **Inside Google's enterprise agent ecosystem: the Gemini Enterprise Agent Platform, Agent Development Kit (ADK), the open Agent2Agent (A2A) protocol, microVM sandboxed runtimes, and distributed multi-agent swarms.**

@@ -1,12 +1,14 @@
-# Claude Cowork and Microsoft 365: Office Work, Delegated
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+# Claude and Microsoft 365: Office Work, Delegated
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
-> **Cowork started as a separate agent mode in January 2026. Since September it lives inside every Claude conversation. Here is what it does in Word, Excel, PowerPoint and Outlook, what it can build, how it plugs into enterprise systems worldwide, and where adoption stands.By Thomas Cherickal, Generative AI Consultant · The Digital Futurist · 22 October 2026 · thomascherickal.com · thomascherickal.github.io**
+> **Cowork's capabilities became part of Claude on 16 September 2026. Here is how Claude operates in Word, Excel, PowerPoint and Outlook, what it can build, how it plugs into enterprise systems worldwide, and where adoption stands.By Thomas Cherickal, Generative AI Consultant · The Digital Futurist · 22 October 2026 · thomascherickal.com · thomascherickal.github.io**
 
 ---
 
 ## Table of Contents
+
+Cowork's capabilities became part of Claude on 16 September 2026 (Anthropic merge announcement).
 
 Cowork started as a separate agent mode in January 2026. Since September it lives inside every Claude conversation. Here is what it does in Word, Excel, PowerPoint and Outlook, what it can build, how it plugs into enterprise systems worldwide, and where adoption stands.
 

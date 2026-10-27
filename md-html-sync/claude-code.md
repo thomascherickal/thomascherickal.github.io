@@ -1,5 +1,5 @@
 # Claude Code in the Terminal and Your IDE
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
 > **Claude Code is an agent, not autocomplete. It reads your repository, edits files, runs your tests and commits the result. It started as a terminal tool and now runs inside VS Code, JetBrains IDEs, a desktop app and the browser, with the same agent behind every surface. This guide covers how it works, how to use it in each place, and how to run agents with it, with tutorials for first-time users and for people who already use it daily.By Thomas Cherickal, Generative AI Consultant · The Digital Futurist · thomascherickal.com · thomascherickal.github.io**

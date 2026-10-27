@@ -1,5 +1,5 @@
 # Google Gemma & The Gemmaverse
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// OPEN-WEIGHTS SMALL LANGUAGE MODELS**  
 > **Explore Google DeepMind's open-weights Gemma family: how Small Language Models (SLMs) and the community-driven Gemmaverse are powering local, developer-managed, and privacy-first edge intelligence.**

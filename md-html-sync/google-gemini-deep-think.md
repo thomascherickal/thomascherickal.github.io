@@ -1,5 +1,5 @@
 # Gemini Deep Think
-## AI Agent Architecture & Orchestration — Thomas Cherickal
+## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// INFERENCE-TIME COMPUTE & REASONING BREAKTHROUGH**  
 > **Inside Google DeepMind's flagship reasoning architecture: scaling inference-time compute, competitive mathematical Olympiad dominance, and the structural transformation of scientific problem solving.**
