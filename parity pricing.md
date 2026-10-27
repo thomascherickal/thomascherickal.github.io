@@ -1,11 +1,21 @@
 # Purchasing Power Parity (PPP) Country Tiers & Custom Pricing Index
 
 ### Pricing Tier Structure:
-- **Tier 1 — Developed Nations (100% Price)**: Standard pricing for developed economies.
-- **Tier 2 — Developing Nations (75% Price / 25% Discount)**: Middle-income and emerging economies.
-- **Tier 3 — Lower-Middle & Low-Income Economies (50% Price / 50% Discount)**: Developing and low-income economies.
-- **Tier 4 — Early-Stage Startups (50% Startup Discount)**: Exclusive 50% discount for Pre-Seed and Seed-stage engineering teams building frontier AI infrastructure or Quantum Computing SDKs.
-- **Tier 5 — Custom Pricing Tier**: Custom pricing and special accommodations for non-profits, educational institutions, universities, under-privileged institutions, and underprivileged clients. Contact `thomascherickal@gmail.com` or submit a brief on the contact page.
+- **Tier 1 — Developed Nations (100% Price · 1.00X Multiplier)**: High-income and developed economies.
+- **Tier 2 — Upper-Middle-Income Economies (75% Price · 25% Discount · 0.75X Multiplier)**: Emerging tech hubs and upper-middle economies.
+- **Tier 3 — Lower-Middle & Low-Income Economies (50% Price · 50% Discount · 0.50X Multiplier)**: Developing digital economies.
+- **Tier 4 — Early-Stage Startups (50% Flat Startup Discount · 0.50X Multiplier)**: Exclusive 50% discount for Pre-Seed and Seed-stage engineering teams building frontier AI or quantum infrastructure (<$1M raised).
+- **Tier 5 — Non-Profits & Academia (25% Price · 75% Flat Discount · 0.25X Multiplier)**: Universities, academic research labs, and registered non-profit/charity organizations.
+- **Tier 6 — Crisis-Affected & Under-Resourced Builders (Custom Subsidized Quotes · 0.10X Indicative / Up to 90%+ Relief)**: Subsidized micro-rates, community grants, or nominal honoraria for crisis-affected regions and under-resourced grassroots builders.
+
+### Service Selection & Flagship Options:
+1. **Individual Service Picks (Pick & Choose from 16 Services)**:
+   - **Personal (1-on-1)**: **$1,000 USD per service** (strictly 1 person), covers **5 days live training + 5 days dedicated support** (10 days total coverage). Tier rates: T1: $1,000 | T2: $750 | T3/4: $500 | T5: $250 | T6: $100.
+   - **Business (Organizations)**: **$2,000 USD per service** (up to 10 participants, +$500/extra seat), covers **5 days live training + 5 days dedicated support** (10 days total coverage). Tier rates: T1: $2,000 | T2: $1,500 | T3/4: $1,000 | T5: $500 | T6: $200.
+2. **Flagship Programs**:
+   - **Business Training Flagship**: **$5,000 USD for 60 days** (30d live training + 30d guidance & materials, up to 10 participants, +$500/extra seat).
+   - **Personal Training Flagship**: **$2,500 USD for 30 days** (15d live training + 15d guidance & materials, strictly 1 person).
+   - Purchasing Power Parity (PPP) applies to all individual service picks and flagship programs across 195 countries.
 
 ---
 
@@ -212,5 +222,6 @@
 
 ---
 
-### Tier 5 — Custom Pricing & Underprivileged Client Inquiries:
-For non-profit organizations, educational institutions, universities, under-privileged institutions, or underprivileged individual clients, custom pricing arrangements and flexible milestone terms are available upon request. Contact `thomascherickal@gmail.com` or submit a brief at `https://thomascherickal.github.io/contact.html`.
+### Tier 5 & Tier 6 — Custom Pricing & Underprivileged Client Inquiries:
+- **Tier 5 (Academia & Non-Profits)**: Flat 75% parity discount (25% of base rate) automatically available for accredited universities, student research labs, and registered 501(c)(3) charities.
+- **Tier 6 (Crisis-Affected & Under-Resourced)**: Custom subsidized arrangements, micro-rates (up to 90%+ relief), and flexible milestone terms are available upon request for builders in crisis zones, conflict regions, or under-resourced grassroots tech collectives. Contact `thomascherickal@gmail.com` or submit a brief at `https://thomascherickal.github.io/contact.html`.

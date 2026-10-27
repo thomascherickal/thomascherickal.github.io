@@ -30,7 +30,7 @@ In enterprise AI engineering, we frequently witness systems burdened by dependen
 ```mermaid
 graph TD
   subgraph Client Browser [Zero-Runtime Presentation Layer]
-    HTML["26 Pure Semantic HTML5 Pages<br/>(Zero Virtual DOM, Zero Hydration, Raw Fast DOM)"]
+    HTML["50 Pure Semantic HTML5 Pages<br/>(Zero Virtual DOM, Zero Hydration, Raw Fast DOM)"]
     CSS["Vanilla CSS3 Token System (:root)<br/>(Hardware-Accelerated Glassmorphism, 0KB Frameworks)"]
     JS["Vanilla ES6+ Client Runtime<br/>(Native DOM APIs, Hash Sync, Honeypots)"]
   end
@@ -49,7 +49,7 @@ graph TD
   subgraph External Consumers [LLMs & Search Engines]
     LDJSON["schema.json & JSON-LD Graphs"]
     LLMS["llms.txt (Direct Agent Ingestion)"]
-    MD["md-html-sync/ (Raw Markdown Mirrors)"]
+    MD["md-html-sync/ (50 Raw Markdown Mirrors)"]
   end
 
   HTML --> CDN
@@ -77,7 +77,7 @@ graph TD
 
 ## 2. Design System & CSS Token Architecture
 
-I constructed a comprehensive design token system in Vanilla CSS using standard CSS Custom Properties. The styling is defined globally in [`css/styles.css`](file:///home/thomas/GitHub.io/thomascherickal.github.io/css/styles.css) and scoped uniformly across all 26 HTML pages:
+I constructed a comprehensive design token system in Vanilla CSS using standard CSS Custom Properties. The styling is defined globally in [`css/styles.css`](file:///home/thomas/GitHub.io/thomascherickal.github.io/css/styles.css) and scoped uniformly across all 50 HTML pages:
 
 ```mermaid
 classDiagram
@@ -180,15 +180,15 @@ sequenceDiagram
   participant Master as build_components.py
   participant Pricing as sync_pricing.py
   participant Sync as md_html_sync.py
-  participant Targets as 26 HTML Files + schema.json + llms.txt + md-html-sync/
+  participant Targets as 50 HTML Files + schema.json + llms.txt + md-html-sync/
 
   Dev->>Hook: Edit header.html / footer.html
   Hook->>Master: Auto-invoke build_components.py
-  Master->>Targets: Regex inline <nav> & <footer> across all 26 HTML pages
+  Master->>Targets: Regex inline <nav> & <footer> across all 50 HTML pages
   Master->>Pricing: Execute sync_all_pricing()
-  Pricing->>Targets: Recalculate PPP Tiers (0.75X, 0.50X, 0.25X)
-  Pricing->>Targets: Update pricing.html JSON-LD, #pricing-pillars, #service-rates
-  Pricing->>Targets: Sync schema/pricing-schema.json & schema.json & llms.txt
+  Pricing->>Targets: Recalculate PPP Tiers (0.75X, 0.50X, 0.25X, 0.10X)
+  Pricing->>Targets: Update pricing.html JSON-LD, #individual-services-list, #parity-calculator
+  Pricing->>Targets: Sync schema/pricing-schema.json, 16 service schemas, schema.json & llms.txt
   Master->>Sync: Execute run_sync()
   Sync->>Targets: Generate/Update clean .md mirrors in md-html-sync/
   Master-->>Dev: Build complete (Zero drift, 100% idempotent)
@@ -201,38 +201,23 @@ sequenceDiagram
 I engineered [`build_components.py`](file:///home/thomas/GitHub.io/thomascherickal.github.io/python/build_components.py) to resolve the static site dilemma: *How do you maintain a single unified header and footer without client-side template engines or runtime iframe latency?*
 
 1. **Extraction**: The script extracts the pure `<nav>` element from [`header.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/header.html) and `<footer>` from [`footer.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/footer.html).
-2. **Regex Substitution**: It scans all 26 HTML files in the repository root and performs atomic regex replacements between `<!-- START:HEADER -->...<!-- END:HEADER -->` and `<!-- START:FOOTER -->...<!-- END:FOOTER -->`.
+2. **Regex Substitution**: It scans all 50 HTML files in the repository root and performs atomic regex replacements between `<!-- START:HEADER -->...<!-- END:HEADER -->` and `<!-- START:FOOTER -->...<!-- END:FOOTER -->`.
 3. **Automated Chaining**: Once inlining is complete, it triggers `sync_pricing.sync_all_pricing()` and `md_html_sync.run_sync()`.
 
 #### Actual Execution Log:
 ```text
 $ python3 python/build_components.py
-Included components in: 404.html
-Included components in: claude-101.html
-Included components in: claude-orchestration.html
-Included components in: claude-code.html
-Included components in: claude-design.html
-Included components in: claude-local-llms.html
-Included components in: claude-custom-mcp.html
-Included components in: claude-skills.html
-Included components in: collaboration.html
-Included components in: contact.html
-Included components in: expertise.html
-Included components in: faqs.html
-Included components in: index.html
-Included components in: portfolio.html
-Included components in: pricing.html
-Included components in: service-agentic-ai-systems.html
-Included components in: service-ai-agents-orchestration.html
-Included components in: service-ai-budget-cost-limits-training.html
-Included components in: service-enterprise-workforce-ai-training.html
-Included components in: service-generative-ai-transformation.html
-Included components in: service-local-llms-cost-slashing.html
-Included components in: service-quantum-applications.html
-Included components in: service-workflow-automations.html
-Included components in: writing.html
+Build complete. Successfully updated 50 HTML files.
+--- Starting Central Pricing & Parity Sync Pass ---
+Updated schema/pricing-schema.json
+Updated schema.json
+Updated embedded JSON-LD in pricing.html
+Updated 16 service schema JSON files
+Updated 16 service HTML pricing sections
+--- Central Pricing & Parity Sync Pass Complete ---
 
-Build complete. Successfully updated 26 HTML files.
+--- Running MD-HTML Sync Pass ---
+Sync complete. Synchronized 50 file pair(s).
 ```
 
 ---
@@ -303,10 +288,10 @@ I structured [`schema.json`](file:///home/thomas/GitHub.io/thomascherickal.githu
 - **`WebSite`**: Canonical root indexing, search action URL templates, and publisher references.
 - **`Organization`**: Brand entity (`The Digital Futurist`), logo URLs, founding date (`2020-05-05`), area served (`Worldwide`), and `knowsAbout` taxonomic array.
 - **`Person`**: Author identity (`Thomas Cherickal`), verified profiles (`sameAs`), and contact endpoints.
-- **`OfferCatalog`**: Enumeration of all 8 standalone services, 3 core packages, and a la carte modules with explicit currency (`USD`) and parity pricing descriptors.
+- **`OfferCatalog`**: Enumeration of all 16 standalone services, 2 flagship programs, and individual service picks ($1,000 Indiv / $2,000 Biz) with explicit currency (`USD`) and parity pricing descriptors.
 
 ### Rich Results on `faqs.html`
-On [`faqs.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/faqs.html), I embedded an exhaustive Schema.org `FAQPage` script containing **all 36 questions and answers**:
+On [`faqs.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/faqs.html), I embedded an exhaustive Schema.org `FAQPage` script containing **all 53 questions and answers**:
 
 ```json
 {

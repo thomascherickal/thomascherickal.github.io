@@ -26,7 +26,7 @@ Welcome! I am **Thomas Cherickal**, known online as **The Digital Futurist**.
 
 I operate an independent global consulting and workforce training practice engineered to guide businesses, startups, engineering teams, and executive leadership from isolated manual development and basic chat prompts into **autonomous, sovereign, AI-native enterprises**.
 
-I specialize in **Claude Agent Orchestration**, **Autonomous Multi-Agent Swarms**, **Local LLM Cost Slashing (reducing inference bills by 60%–90%)**, **AI-Assisted Test-Driven Development (TDD)**, and **Early Quantum Computing Applications**.
+I specialize in **Claude Agent Orchestration**, **the Gemini AI Ecosystem**,**Autonomous Multi-Agent Swarms**, **Local LLM Cost Slashing (reducing inference bills by 60%–90%)**, **AI-Assisted Test-Driven Development (TDD)**, and **Early Quantum Computing Applications**.
 
 Every workshop, advisory sprint, and architecture roadmap I design follows one unbreakable rule: **I do not sell hype or trivial chatbot wrappers.** I train individuals, freshers, developers, staff members, engineering managers, and CXOs to build, inspect, and deploy production-grade agent swarms and sovereign local AI pipelines inside their own secure infrastructure.
 
@@ -120,7 +120,7 @@ I maintain an active, verified presence across **10+ major developer, research, 
 | **Deep-ML** | [deep-ml.com/profile/thomascherickal](https://www.deep-ml.com/profile/thomascherickal) |
 | **Exercism** | [exercism.org/profiles/thomascherickal](https://exercism.org/profiles/thomascherickal) |
 | **CodeWars** | [codewars.com/users/thomascherickal](https://www.codewars.com/users/thomascherickal) |
-| **Code360** | [naukri.com/code360/profile/thomascherickal](https://www.naukri.com/code360/profile/thomascherickal) |
+| **Code 360** | [naukri.com/code360/profile/thomascherickal](https://www.naukri.com/code360/profile/thomascherickal) |
 | **HackerEarth** | [hackerearth.com/@thomascherickal](https://hackerearth.com/@thomascherickal) |
 | **Kaggle** | [kaggle.com/thomascherickal](https://kaggle.com/thomascherickal) |
 | **CodersRank** | [profile.codersrank.io/user/thomascherickal](https://profile.codersrank.io/user/thomascherickal/) |
@@ -288,107 +288,75 @@ $ python3 python/build_components.py
 
 ```text
 Included components in: 404.html
+Included components in: articles.html
 Included components in: claude-101.html
-Included components in: claude-orchestration.html
 Included components in: claude-code.html
-Included components in: claude-design.html
-Included components in: claude-local-llms.html
+Included components in: claude-connectors.html
+Included components in: claude-cowork.html
 Included components in: claude-custom-mcp.html
+Included components in: claude-design.html
+Included components in: claude-features.html
+Included components in: claude-local-llms.html
+Included components in: claude-orchestration.html
+Included components in: claude-plugins.html
+Included components in: claude-science.html
 Included components in: claude-skills.html
 Included components in: collaboration.html
 Included components in: contact.html
 Included components in: expertise.html
 Included components in: faqs.html
+Included components in: google-ai-studio.html
+Included components in: google-antigravity-ide.html
+Included components in: google-deep-research.html
+Included components in: google-flow.html
+Included components in: google-gemini-101.html
+Included components in: google-gemini-agents.html
+Included components in: google-gemini-argon.html
+Included components in: google-gemini-deep-think.html
+Included components in: google-gemini-notebook.html
+Included components in: google-gemini-spark.html
+Included components in: google-gemma.html
+Included components in: google-nano-banana.html
 Included components in: index.html
-Included components in: portfolio.html
+Included components in: personal-ai-training.html
 Included components in: pricing.html
+Included components in: service-advanced-ai-agents.html
 Included components in: service-agentic-ai-systems.html
 Included components in: service-ai-agents-orchestration.html
 Included components in: service-ai-budget-cost-limits-training.html
+Included components in: service-ai-developer-training.html
+Included components in: service-claude-advanced-training.html
+Included components in: service-claude-basic-training.html
+Included components in: service-deep-research-notebooklm.html
 Included components in: service-enterprise-workforce-ai-training.html
+Included components in: service-gemini-advanced-training.html
+Included components in: service-gemini-basic-training.html
 Included components in: service-generative-ai-transformation.html
+Included components in: service-hybrid-quantum-ai.html
 Included components in: service-local-llms-cost-slashing.html
 Included components in: service-quantum-applications.html
 Included components in: service-workflow-automations.html
 Included components in: writing.html
 
-Build complete. Successfully updated 26 HTML files.
+Build complete. Successfully updated 50 HTML files.
 --- Starting Central Pricing & Parity Sync Pass ---
-Updated /home/thomas/GitHub.io/thomascherickal.github.io/schema/pricing-schema.json
+Updated schema/pricing-schema.json
+Updated schema.json
 Updated embedded JSON-LD in pricing.html
-Updated #pricing-pillars in pricing.html
-Updated #service-rates in pricing.html
-Updated /home/thomas/GitHub.io/thomascherickal.github.io/schema.json
-Updated llms.txt
+Updated 16 service schema JSON files
+Updated 16 service HTML pricing sections
 --- Central Pricing & Parity Sync Pass Complete ---
 
 --- Running MD-HTML Sync Pass ---
-  [HTML -> MD] Syncing index.html -> md-html-sync/home.md...
-  [HTML -> MD] Syncing portfolio.html -> md-html-sync/portfolio.md...
-  [HTML -> MD] Syncing writing.html -> md-html-sync/writing.md...
-  [HTML -> MD] Syncing collaboration.html -> md-html-sync/collaboration.md...
-  [HTML -> MD] Syncing pricing.html -> md-html-sync/pricing.md...
-  [HTML -> MD] Syncing expertise.html -> md-html-sync/expertise.md...
-  [HTML -> MD] Syncing contact.html -> md-html-sync/contact.md...
-  [HTML -> MD] Syncing faqs.html -> md-html-sync/faqs.md...
-  [HTML -> MD] Syncing 404.html -> md-html-sync/404.md...
-  [HTML -> MD] Syncing service-agentic-ai-systems.html -> md-html-sync/service-agentic-ai-systems.md...
-  [HTML -> MD] Syncing service-ai-agents-orchestration.html -> md-html-sync/service-ai-agents-orchestration.md...
-  [HTML -> MD] Syncing service-ai-budget-cost-limits-training.html -> md-html-sync/service-ai-budget-cost-limits-training.md...
-  [HTML -> MD] Syncing service-enterprise-workforce-ai-training.html -> md-html-sync/service-enterprise-workforce-ai-training.md...
-  [HTML -> MD] Syncing service-generative-ai-transformation.html -> md-html-sync/service-generative-ai-transformation.md...
-  [HTML -> MD] Syncing service-local-llms-cost-slashing.html -> md-html-sync/service-local-llms-cost-slashing.md...
-  [HTML -> MD] Syncing service-quantum-applications.html -> md-html-sync/service-quantum-applications.md...
-  [HTML -> MD] Syncing service-workflow-automations.html -> md-html-sync/service-workflow-automations.md...
-  [HTML -> MD] Syncing claude-101.html -> md-html-sync/claude-101.md...
-  [HTML -> MD] Syncing claude-orchestration.html -> md-html-sync/claude-orchestration.md...
-  [HTML -> MD] Syncing claude-code.html -> md-html-sync/claude-code.md...
-  [HTML -> MD] Syncing claude-design.html -> md-html-sync/claude-design.md...
-  [HTML -> MD] Syncing claude-local-llms.html -> md-html-sync/claude-local-llms.md...
-  [HTML -> MD] Syncing claude-custom-mcp.html -> md-html-sync/claude-custom-mcp.md...
-  [HTML -> MD] Syncing claude-skills.html -> md-html-sync/claude-skills.md...
-Sync complete. Synchronized 26 file pair(s).
+Sync complete. Synchronized 50 file pair(s).
 ```
 
 And subsequent execution verifies complete idempotency:
 
 ```text
 $ python3 python/build_components.py
-No changes needed: 404.html
-No changes needed: claude-101.html
-No changes needed: claude-orchestration.html
-No changes needed: claude-code.html
-No changes needed: claude-design.html
-No changes needed: claude-local-llms.html
-No changes needed: claude-custom-mcp.html
-No changes needed: claude-skills.html
-No changes needed: collaboration.html
-No changes needed: contact.html
-No changes needed: expertise.html
-No changes needed: faqs.html
-No changes needed: index.html
-No changes needed: portfolio.html
-No changes needed: pricing.html
-No changes needed: service-agentic-ai-systems.html
-No changes needed: service-ai-agents-orchestration.html
-No changes needed: service-ai-budget-cost-limits-training.html
-No changes needed: service-enterprise-workforce-ai-training.html
-No changes needed: service-generative-ai-transformation.html
-No changes needed: service-local-llms-cost-slashing.html
-No changes needed: service-quantum-applications.html
-No changes needed: service-workflow-automations.html
-No changes needed: writing.html
-
 Build complete. Successfully updated 0 HTML files.
---- Starting Central Pricing & Parity Sync Pass ---
-Updated /home/thomas/GitHub.io/thomascherickal.github.io/schema/pricing-schema.json
-Updated embedded JSON-LD in pricing.html
-Updated #pricing-pillars in pricing.html
-Updated #service-rates in pricing.html
-Updated /home/thomas/GitHub.io/thomascherickal.github.io/schema.json
-Updated llms.txt
 --- Central Pricing & Parity Sync Pass Complete ---
-
 --- Running MD-HTML Sync Pass ---
 Sync complete. Synchronized 0 file pair(s).
 ```
