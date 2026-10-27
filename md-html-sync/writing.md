@@ -24,7 +24,7 @@ A comprehensive transformation system showing professionals how to use frontier 
 
 - [Google Gemini vs Anthropic Claude vs OpenAI ChatGPT vs xAI Grok: The Ultimate
  Comparison](https://hackernoon.com/google-gemini-vs-anthropic-claude-vs-openai-chatgpt-vs-xai-grok-the-ultimate-comparison) - *Mar 12, 2026 · HackerNoon · 3,700 words*
-- [How to Run Your Own Local LLM — 2026 Edition](https://hackernoon.com/how-to-run-your-own-local-llm-2026-edition-version-1) - *Mar 9, 2026 · HackerNoon · 10,500 words*
+- [How to Run Your Own Local LLM - 2026 Edition](https://hackernoon.com/how-to-run-your-own-local-llm-2026-edition-version-1) - *Mar 9, 2026 · HackerNoon · 10,500 words*
 - [The AI Agent Revolution: How to Build the Workforce of Tomorrow](https://hackernoon.com/the-ai-agent-revolution-how-to-build-the-workforce-of-tomorrow) - *Nov 10, 2025 · HackerNoon · 2,900 words*
 - [The Case for Local AI Has Never Been Stronger](https://hackernoon.com/the-case-for-local-ai-has-never-been-stronger) - *Oct 5, 2025 · HackerNoon · 2,800 words*
 

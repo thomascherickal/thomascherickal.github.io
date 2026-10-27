@@ -35,8 +35,8 @@ A deep technical survey and operational guide evaluating the top 10
 ![Google Gemini vs Anthropic Claude vs OpenAI ChatGPT vs xAI Grok Cover Illustration](images/frontier-llm-benchmarks-2026.webp)
 
 ### Executive Summary
-The definitive 2026 comparative evaluation of the four AI titans—Google
- Gemini, Anthropic Claude, OpenAI ChatGPT, and xAI Grok—analyzing technical strengths, ecosystem moats, and
+The definitive 2026 comparative evaluation of the four AI titans - Google
+ Gemini, Anthropic Claude, OpenAI ChatGPT, and xAI Grok - analyzing technical strengths, ecosystem moats, and
  corporate strategies to declare category winners across reasoning, writing, coding, enterprise trust,
  real-time data, and creative tasks, with Claude taking the #1 overall crown.
 
@@ -56,8 +56,8 @@ The definitive 2026 comparative evaluation of the four AI titans—Google
 
 ### Executive Summary
 A masterclass in geometric deep learning explaining seven major unsolved
- riddles of generative AI—from diffusion score matching and GAN mode collapse to latent space soap bubbles and
- Flow Matching—through the single unifying lens of differential manifold theory, presented twice (once in plain
+ riddles of generative AI - from diffusion score matching and GAN mode collapse to latent space soap bubbles and
+ Flow Matching - through the single unifying lens of differential manifold theory, presented twice (once in plain
  English, once for the math-curious) with zero equations.
 
 **Technologies & Keywords**: `Manifold
@@ -76,7 +76,7 @@ A masterclass in geometric deep learning explaining seven major unsolved
 
 ### Executive Summary
 A physics-grounded technical treatise reframing large language models as
- high-dimensional nonlinear dynamical systems governed by autoregressive feedback loops—explaining Chinchilla
+ high-dimensional nonlinear dynamical systems governed by autoregressive feedback loops - explaining Chinchilla
  scaling (the 20-to-1 rule), emergent capabilities as physical phase transitions, grokking as a bifurcation
  into generalizing Fourier circuits, and why deep networks operate at the 'Edge of Chaos' (λ ≈
  0).
@@ -96,7 +96,7 @@ A physics-grounded technical treatise reframing large language models as
 
 ### Executive Summary
 A technical chronicle and architectural post-mortem of the February 2026
- OpenClaw revolution—analyzing its autonomous local-first execution, the rapid spawning of community forks
+ OpenClaw revolution - analyzing its autonomous local-first execution, the rapid spawning of community forks
  (ClawRouter, Moltbook, PicoClaw, SecureClaw, ClawBands, IronClaw), the critical CVE-2026-25253 WebSocket RCE
  vulnerability, and why local quantized SLMs/LLMs are displacing vendor-locked cloud agents.
 
@@ -116,7 +116,7 @@ A technical chronicle and architectural post-mortem of the February 2026
 ### Executive Summary
 A comprehensive architectural shootout contrasting Nous Research's Hermes
  Agent (agent-first, compounding learning loop) against OpenClaw (gateway-first, multi-channel
- routing)—evaluating why Hermes provides the first secure, practical self-improving agent framework through
+ routing) - evaluating why Hermes provides the first secure, practical self-improving agent framework through
  three-tier persistent memory (MEMORY.md/USER.md and SQLite FTS5 SessionDB), the SKILL.md self-evolution
  engine, and Tinker-Atropos GRPO reinforcement learning pipelines.
 
@@ -136,8 +136,8 @@ A comprehensive architectural shootout contrasting Nous Research's Hermes
 
 ### Executive Summary
 An in-depth comparative architectural evaluation of three leading quantum
- programming ecosystems—IBM Qiskit, Microsoft Q#, and Quantinuum's three-tier stack (Guppy, Selene,
- Helios)—evaluating developer ergonomics, abstraction layers, and compilation pipelines with practical code
+ programming ecosystems - IBM Qiskit, Microsoft Q#, and Quantinuum's three-tier stack (Guppy, Selene,
+ Helios) - evaluating developer ergonomics, abstraction layers, and compilation pipelines with practical code
  examples implementing the Variational Quantum Eigensolver (VQE) for molecular simulation (H2 ground
  state energy).
 
@@ -156,8 +156,8 @@ An in-depth comparative architectural evaluation of three leading quantum
 
 ### Executive Summary
 A foundational curriculum guiding classical software engineers through 10
- essential quantum principles—from qubits, superposition, and the Bloch sphere to Bell state entanglement,
- measurement collapse, the no-cloning theorem, quantum teleportation, and decoherence—illustrated with detailed
+ essential quantum principles - from qubits, superposition, and the Bloch sphere to Bell state entanglement,
+ measurement collapse, the no-cloning theorem, quantum teleportation, and decoherence - illustrated with detailed
  explanations and self-contained, executable Qiskit Python circuits.
 
 **Technologies & Keywords**: `IBM
@@ -175,8 +175,8 @@ A foundational curriculum guiding classical software engineers through 10
 
 ### Executive Summary
 The concluding masterclass in the Quantum Fundamentals series covering 10
- advanced quantum algorithms and industry techniques—including Shor's factoring algorithm, QFT, QPE,
- Hamiltonian simulation, quantum annealing, 3-qubit error correction, Grover's search, and VQE—with complete
+ advanced quantum algorithms and industry techniques - including Shor's factoring algorithm, QFT, QPE,
+ Hamiltonian simulation, quantum annealing, 3-qubit error correction, Grover's search, and VQE - with complete
  source code, circuit diagrams, and execution instructions.
 
 **Technologies & Keywords**: `IBM Qiskit`, `Shor's Algorithm
@@ -194,8 +194,8 @@ The concluding masterclass in the Quantum Fundamentals series covering 10
 
 ### Executive Summary
 A clear, accessible breakdown of how quantum computing acts as a ticking
- time bomb against modern public-key cryptography—explaining how Shor's algorithm breaks RSA and Bitcoin's ECC
- (secp256k1), the urgent 'Store Now, Decrypt Later' (SNDL) crisis, logical qubit timelines (2035–2040), and the
+ time bomb against modern public-key cryptography - explaining how Shor's algorithm breaks RSA and Bitcoin's ECC
+ (secp256k1), the urgent 'Store Now, Decrypt Later' (SNDL) crisis, logical qubit timelines (2035-2040), and the
  global race to transition to NIST Post-Quantum Cryptography standards.
 
 **Technologies & Keywords**: `Post-Quantum
@@ -212,7 +212,7 @@ A clear, accessible breakdown of how quantum computing acts as a ticking
 ![OpenFang The Game-Changing Open Source Agent OS That Replaces OpenClaw Cover Illustration](images/openfang-agent-operating-system.webp)
 
 ### Executive Summary
-A deep systems-engineering and security analysis of OpenFang—a
+A deep systems-engineering and security analysis of OpenFang - a
  137,000-line Rust agent operating system (14 crates, single 32MB binary, 40MB idle RAM, 180ms cold start)
  designed to replace fragile chatbot wrappers like OpenClaw with 16 defense-in-depth security layers, 7
  autonomous Hands, and kernel-enforced permission gates.
@@ -231,9 +231,9 @@ A deep systems-engineering and security analysis of OpenFang—a
 ![Inside Jev How Decision Models Trade Text Generation for Typed Calibrated Answers Cover Illustration](images/inside-jev-decision-models.webp)
 
 ### Executive Summary
-An architectural deep dive into TypeSafe AI's Jev—the first 'System One'
+An architectural deep dive into TypeSafe AI's Jev - the first 'System One'
  decision model that trades token-by-token text generation for typed, parallel judgments with calibrated
- probabilities, cutting inference latency to 70–500ms and reducing agent decision costs by up to 98.7%
+ probabilities, cutting inference latency to 70-500ms and reducing agent decision costs by up to 98.7%
  ($0.042/M input tokens, free outputs).
 
 **Technologies & Keywords**: `Decision
@@ -253,7 +253,7 @@ An architectural deep dive into TypeSafe AI's Jev—the first 'System One'
 A definitive 3-way architectural shootout contrasting Google's managed
  24/7
  cloud agent (Gemini Spark), Nous Research's open-source self-improving agent (Hermes Agent), and the viral
- gateway pioneer (OpenClaw)—evaluating security posture, persistent memory architectures, runtime autonomy, and
+ gateway pioneer (OpenClaw) - evaluating security posture, persistent memory architectures, runtime autonomy, and
  enterprise viability.
 
 **Technologies & Keywords**: `Agentic AI
@@ -272,7 +272,7 @@ A definitive 3-way architectural shootout contrasting Google's managed
 ### Executive Summary
 An exhaustive multi-vendor showdown evaluating nine $20/month AI
  subscription
- plans across 10 empirical categories—benchmarking ChatGPT Plus, Claude Pro, Google AI Pro, SuperGrok, Kimi
+ plans across 10 empirical categories - benchmarking ChatGPT Plus, Claude Pro, Google AI Pro, SuperGrok, Kimi
  Moderato, Meta AI (Muse Spark), MiniMax Plus, Copilot Pro, and Perplexity Pro across coding, writing,
  research,
  and multimodal generation.

@@ -18,8 +18,8 @@ Flow unites three foundational AI architectures into a synchronized multimedia p
 
 The historical hurdle of AI filmmaking has been the near-total absence of continuity. In traditional video generators, changing shot angles resulted in entirely different actors, altered costumes, and morphing room geometries. Google Flow resolves this through structured architectural innovations:
 
-- Storyboard Studio & Asset Persistence: Creators define persistent visual "Ingredients"—locking in character facial bone structure, wardrobe, props, and location set dressings before shooting begins.
-- Camera Trajectory & Dynamic Angles: Direct complex camera movements—such as dolly zooms, drone fly-throughs, 180-degree orbits, and steadicam tracking shots—with precise frame conditioning.
+- Storyboard Studio & Asset Persistence: Creators define persistent visual "Ingredients" - locking in character facial bone structure, wardrobe, props, and location set dressings before shooting begins.
+- Camera Trajectory & Dynamic Angles: Direct complex camera movements - such as dolly zooms, drone fly-throughs, 180-degree orbits, and steadicam tracking shots - with precise frame conditioning.
 - Conversational Timeline Editing via Gemini Omni: Creators adjust scenes directly using plain language instructions (e.g., "Make the background rain heavier, shift the lighting to cool neon blue, and slow the actor's walk by 20%") without rebuilding the timeline from scratch.
 
 ---
@@ -30,7 +30,7 @@ Visual storytelling is incomplete without acoustic precision. Google Flow tightl
 
 - Google Flow Music: Directs Lyria to generate full-spectrum musical scores spanning cinematic symphonic arrangements, ambient electronic soundscapes, jazz ensembles, and vocal tracks with lyric-level timing.
 - Automated Audio-Visual Sync: Lyria analyzes the tempo, emotional arc, and cut transitions produced by Veo, dynamically modulating musical crescendos and foley effects to align precisely with visual scene changes.
-- Native Veo Audio Foley: Veo generates synchronous acoustic sound effects—including footsteps on gravel, breaking glass, and ambient room reverberation—directly paired to the physical physics of the video scene.
+- Native Veo Audio Foley: Veo generates synchronous acoustic sound effects - including footsteps on gravel, breaking glass, and ambient room reverberation - directly paired to the physical physics of the video scene.
 
 ---
 

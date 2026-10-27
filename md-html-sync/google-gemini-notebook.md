@@ -19,7 +19,7 @@ By combining dense vector retrieval with long-context Gemini foundation models, 
 Gemini Notebook ignited a global educational revolution through its Audio Overviews feature, turning dry academic papers, dense legal contracts, and lengthy books into engaging, natural conversational podcasts:
 
 - Dynamic Two-Host Podcasting: Two artificial intelligence voices banter, ask clarifying questions, explain difficult metaphors, and summarize complex research with realistic human cadences, pauses, and interjections.
-- Specialized Audio Modes: Users select tailored listening formats—including Deep Dive (comprehensive breakdown), Brief Summary (quick commute catch-up), Critique (identifying weak arguments and gaps), and Debate (presenting opposing viewpoints).
+- Specialized Audio Modes: Users select tailored listening formats - including Deep Dive (comprehensive breakdown), Brief Summary (quick commute catch-up), Critique (identifying weak arguments and gaps), and Debate (presenting opposing viewpoints).
 - Interactive Audio Interruptions: In Interactive Mode, users can tap the microphone to interject live into the podcast, redirecting the hosts' conversation, asking for specific analogies, or clarifying complex equations mid-stream.
 - Multi-Language & Persona Customization: Generates audio across dozens of global languages, tuning host expertise to match elementary students, business executives, or doctoral researchers.
 

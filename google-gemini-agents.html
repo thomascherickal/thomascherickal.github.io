@@ -1,35 +1,36 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Google Gemini Agents: Autonomous Architecture, A2A Protocol & Enterprise Swarms | Thomas Cherickal</title>
-  <meta content="Comprehensive architectural guide to Google Gemini autonomous agents: Agent Development Kit (ADK), Agent2Agent (A2A) protocol, sandboxed microVM runtimes, live search grounding, and enterprise swarms." name="description" />
-  <meta content="Thomas Cherickal" name="author" />
-  <link href="https://thomascherickal.github.io/google-gemini-agents.html" rel="canonical" />
-  <!-- Open Graph -->
-  <meta content="article" property="og:type" />
-  <meta content="https://thomascherickal.github.io/google-gemini-agents.html" property="og:url" />
-  <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name" />
-  <meta content="Google Gemini Agents: Autonomous Architecture, A2A Protocol &amp; Enterprise Swarms | Thomas Cherickal" property="og:title" />
-  <meta content="Comprehensive architectural guide to Google Gemini autonomous agents: Agent Development Kit (ADK), Agent2Agent (A2A) protocol, sandboxed microVM runtimes, live search grounding, and enterprise swarms." property="og:description" />
-  <meta content="https://thomascherickal.github.io/assets/og-card.png" property="og:image" />
-  <meta content="en_US" property="og:locale" />
-  <!-- Twitter Card -->
-  <meta content="summary_large_image" name="twitter:card" />
-  <meta content="@thomazcherickal" name="twitter:site" />
-  <meta content="Google Gemini Agents: Autonomous Architecture, A2A Protocol &amp; Enterprise Swarms | Thomas Cherickal" name="twitter:title" />
-  <meta content="Comprehensive architectural guide to Google Gemini autonomous agents: Agent Development Kit (ADK), Agent2Agent (A2A) protocol, sandboxed microVM runtimes, live search grounding, and enterprise swarms." name="twitter:description" />
-  <meta content="https://thomascherickal.github.io/assets/og-card.png" name="twitter:image" />
-  <!-- Favicons -->
-  <link href="assets/favicon.ico" rel="icon" sizes="any" />
-  <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
-  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-  <link href="/site.webmanifest" rel="manifest" />
-  <meta content="#020408" name="theme-color" />
-  <!-- Mermaid.js for architecture diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Google Gemini Agents: Autonomous Architecture, A2A Protocol &amp; Enterprise Swarms | Thomas Cherickal</title>
+<meta content="Comprehensive architectural guide to Google Gemini autonomous agents: Agent Development Kit (ADK), Agent2Agent (A2A) protocol, sandboxed microVM runtimes, live search grounding, and enterprise swarms." name="description"/>
+<meta content="Thomas Cherickal" name="author"/>
+<link href="https://thomascherickal.github.io/google-gemini-agents.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="article" property="og:type"/>
+<meta content="https://thomascherickal.github.io/google-gemini-agents.html" property="og:url"/>
+<meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
+<meta content="Google Gemini Agents: Autonomous Architecture, A2A Protocol &amp; Enterprise Swarms | Thomas Cherickal" property="og:title"/>
+<meta content="Comprehensive architectural guide to Google Gemini autonomous agents: Agent Development Kit (ADK), Agent2Agent (A2A) protocol, sandboxed microVM runtimes, live search grounding, and enterprise swarms." property="og:description"/>
+<meta content="https://thomascherickal.github.io/assets/og-card.png" property="og:image"/>
+<meta content="en_US" property="og:locale"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@thomazcherickal" name="twitter:site"/>
+<meta content="Google Gemini Agents: Autonomous Architecture, A2A Protocol &amp; Enterprise Swarms | Thomas Cherickal" name="twitter:title"/>
+<meta content="Comprehensive architectural guide to Google Gemini autonomous agents: Agent Development Kit (ADK), Agent2Agent (A2A) protocol, sandboxed microVM runtimes, live search grounding, and enterprise swarms." name="twitter:description"/>
+<meta content="https://thomascherickal.github.io/assets/og-card.png" name="twitter:image"/>
+<!-- Favicons -->
+<link href="assets/favicon.ico" rel="icon" sizes="any"/>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<meta content="#020408" name="theme-color"/>
+<!-- Mermaid.js for architecture diagrams -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
     document.addEventListener("DOMContentLoaded", function () {
       if (typeof mermaid !== "undefined") {
         mermaid.initialize({
@@ -47,16 +48,16 @@
       }
     });
   </script>
-  <link rel="stylesheet" href="css/fonts.css" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/background.css" />
-  <link rel="stylesheet" href="css/buttons.css" />
-  <link rel="stylesheet" href="css/navbar.css" />
-  <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/cta.css" />
-  <link rel="stylesheet" href="css/article.css" />
-  <link rel="stylesheet" href="css/gemini.css" />
-  <script type="application/ld+json">
+<link href="css/fonts.css" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
+<link href="css/background.css" rel="stylesheet"/>
+<link href="css/buttons.css" rel="stylesheet"/>
+<link href="css/navbar.css" rel="stylesheet"/>
+<link href="css/footer.css" rel="stylesheet"/>
+<link href="css/cta.css" rel="stylesheet"/>
+<link href="css/article.css" rel="stylesheet"/>
+<link href="css/gemini.css" rel="stylesheet"/>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -90,7 +91,7 @@
         "name": "Thomas Cherickal",
         "jobTitle": "Generative AI Consultant and The Digital Futurist",
         "url": "https://thomascherickal.github.io",
-        "description": "Thomas Cherickal — Generative AI Consultant and The Digital Futurist.",
+        "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
         "sameAs": [
           "https://linkedin.com/in/thomascherickal",
           "https://github.com/thomascherickal",
@@ -102,7 +103,7 @@
         "@id": "https://thomascherickal.github.io/#organization",
         "name": "The Digital Futurist",
         "url": "https://thomascherickal.github.io",
-        "description": "Thomas Cherickal — Generative AI Consultant and The Digital Futurist.",
+        "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
         "logo": {
           "@type": "ImageObject",
           "url": "https://thomascherickal.github.io/assets/digital-futurist-logo.jpg",
@@ -234,200 +235,187 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-  <main class="container">
-    <header class="hero">
-      <p class="hero-badge cyan">// ENTERPRISE AUTONOMOUS AGENT ECOSYSTEM</p>
-      <h1 class="hero-title">Google Gemini Agents</h1>
-      <p class="hero-desc">
+<main class="container">
+<header class="hero">
+<p class="hero-badge cyan">// ENTERPRISE AUTONOMOUS AGENT ECOSYSTEM</p>
+<h1 class="hero-title">Google Gemini Agents</h1>
+<p class="hero-desc">
         Inside Google's enterprise agent ecosystem: the Gemini Enterprise Agent Platform, Agent Development Kit (ADK), the open Agent2Agent (A2A) protocol, microVM sandboxed runtimes, and distributed multi-agent swarms.
       </p>
-    </header>
-
-    <!-- SECTION 1: WHAT ARE GOOGLE GEMINI AGENTS -->
-    <article class="content-card">
-      <h2>What are Google Gemini Agents?</h2>
-      <p>
-        <strong>Google Gemini Agents</strong> represent the structural evolution of artificial intelligence from conversational assistants into proactive, stateful, and autonomous execution systems. Where traditional foundation models generate static text completions, a Gemini Agent operates within continuous reasoning, planning, and tool-dispatch loops — observing its environment, decomposing multi-step enterprise mandates, invoking APIs, executing Python code in secure sandboxes, and verifying outcomes against operational objectives.
+</header>
+<!-- SECTION 1: WHAT ARE GOOGLE GEMINI AGENTS -->
+<article class="content-card">
+<h2>What are Google Gemini Agents?</h2>
+<p>
+<strong>Google Gemini Agents</strong> represent the structural evolution of artificial intelligence from conversational assistants into proactive, stateful, and autonomous execution systems. Where traditional foundation models generate static text completions, a Gemini Agent operates within continuous reasoning, planning, and tool-dispatch loops - observing its environment, decomposing multi-step enterprise mandates, invoking APIs, executing Python code in secure sandboxes, and verifying outcomes against operational objectives.
       </p>
-      <p>
+<p>
         Google anchors this capability within the <strong>Gemini Enterprise Agent Platform</strong> (the enterprise evolution of Vertex AI Agent Builder). The platform provides end-to-end infrastructure for building, deploying, governing, and orchestrating fleets of autonomous agents. By pairing frontier reasoning models with serverless microVM sandboxes, persistent session memory banks, and cryptographic agent identity attestation, organizations can operationalize agentic intelligence without sacrificing enterprise security or data sovereignty.
       </p>
-
-      <div class="diagram-container">
-        <div class="mermaid">
+<div class="diagram-container">
+<div class="mermaid">
 flowchart TD
-    UserGoal[Enterprise Mandate / Trigger] --> Platform[Gemini Enterprise Agent Platform]
+    UserGoal[Enterprise Mandate / Trigger] --&gt; Platform[Gemini Enterprise Agent Platform]
     
     subgraph ControlPlane[Strategic Planning &amp; Orchestration]
-        Platform --> LeadAgent[Lead Strategic Agent: Gemini Pro / Argon]
-        LeadAgent <--> MemoryBank[(Persistent Memory Bank: Semantic &amp; Episodic)]
-        LeadAgent --> SkillReg[(Enterprise Skill Registry: Verified Tools)]
+        Platform --&gt; LeadAgent[Lead Strategic Agent: Gemini Pro / Argon]
+        LeadAgent &lt;--&gt; MemoryBank[(Persistent Memory Bank: Semantic &amp; Episodic)]
+        LeadAgent --&gt; SkillReg[(Enterprise Skill Registry: Verified Tools)]
     end
     
     subgraph ExecutionPlane[MicroVM Agent Runtime Engine]
-        LeadAgent --> ADK[Agent Development Kit: Task Dispatcher]
-        ADK --> Worker1[Research Agent: Search Grounding]
-        ADK --> Worker2[Compute Agent: Python Sandbox]
-        ADK --> Worker3[Enterprise Agent: Custom REST / DB Tools]
-        ADK --> A2AEngine[A2A Protocol Engine: Cross-Platform Swarms]
+        LeadAgent --&gt; ADK[Agent Development Kit: Task Dispatcher]
+        ADK --&gt; Worker1[Research Agent: Search Grounding]
+        ADK --&gt; Worker2[Compute Agent: Python Sandbox]
+        ADK --&gt; Worker3[Enterprise Agent: Custom REST / DB Tools]
+        ADK --&gt; A2AEngine[A2A Protocol Engine: Cross-Platform Swarms]
     end
     
-    Worker1 --> Attributor[Attribution &amp; Fact Verification]
-    Worker2 --> ExecutionOut[Sandboxed Stdout / Plots]
-    Worker3 --> JSONPayload[Strict JSON Schema Response]
-    A2AEngine --> PeerCollab[Peer Agent Consensus &amp; Handoff]
+    Worker1 --&gt; Attributor[Attribution &amp; Fact Verification]
+    Worker2 --&gt; ExecutionOut[Sandboxed Stdout / Plots]
+    Worker3 --&gt; JSONPayload[Strict JSON Schema Response]
+    A2AEngine --&gt; PeerCollab[Peer Agent Consensus &amp; Handoff]
     
-    Attributor --> Synthesis[Unified Context Synthesis Loop]
-    ExecutionOut --> Synthesis
-    JSONPayload --> Synthesis
-    PeerCollab --> Synthesis
+    Attributor --&gt; Synthesis[Unified Context Synthesis Loop]
+    ExecutionOut --&gt; Synthesis
+    JSONPayload --&gt; Synthesis
+    PeerCollab --&gt; Synthesis
     
-    Synthesis --> PolicyGate{Governance &amp; HITL Gate}
-    PolicyGate -->|Destructive Mutation| HumanReview[Human-in-the-Loop Approval]
-    PolicyGate -->|Verified Safe| Output[Autonomous Execution &amp; Audit Trail]
-    HumanReview -->|Approved| Output
+    Synthesis --&gt; PolicyGate{Governance &amp; HITL Gate}
+    PolicyGate --&gt;|Destructive Mutation| HumanReview[Human-in-the-Loop Approval]
+    PolicyGate --&gt;|Verified Safe| Output[Autonomous Execution &amp; Audit Trail]
+    HumanReview --&gt;|Approved| Output
         </div>
-        <div class="diagram-caption">Figure 1: Gemini Enterprise Agent Platform &amp; MicroVM Execution Lifecycle</div>
-      </div>
-    </article>
-
-    <!-- SECTION 2: CORE FRAMEWORKS & ARCHITECTURE -->
-    <article class="content-card">
-      <h2>Core Building Blocks &amp; Developer Frameworks</h2>
-      <p>
+<div class="diagram-caption">Figure 1: Gemini Enterprise Agent Platform &amp; MicroVM Execution Lifecycle</div>
+</div>
+</article>
+<!-- SECTION 2: CORE FRAMEWORKS & ARCHITECTURE -->
+<article class="content-card">
+<h2>Core Building Blocks &amp; Developer Frameworks</h2>
+<p>
         Google provides a modular hierarchy of open frameworks and enterprise platform services designed to accommodate diverse developer requirements from visual low-code authoring to programmatic low-level systems engineering:
       </p>
-
-      <div class="flow-grid">
-        <div class="flow-step">
-          <div class="flow-step-num">01 / FRAMEWORK</div>
-          <h3>Agent Development Kit (ADK)</h3>
-          <p>
+<div class="flow-grid">
+<div class="flow-step">
+<div class="flow-step-num">01 / FRAMEWORK</div>
+<h3>Agent Development Kit (ADK)</h3>
+<p>
             An open-source, opinionated framework optimized specifically for Gemini architectures. ADK provides standardized primitives for model-driven task delegation, shared multi-turn session states, dynamic tool dispatch, and structured execution graphs.
           </p>
-        </div>
-        <div class="flow-step">
-          <div class="flow-step-num">02 / VISUAL CANVAS</div>
-          <h3>Agent Studio</h3>
-          <p>
+</div>
+<div class="flow-step">
+<div class="flow-step-num">02 / VISUAL CANVAS</div>
+<h3>Agent Studio</h3>
+<p>
             A collaborative visual design studio within Google Cloud where enterprise teams map, compose, evaluate, and stress-test complex multi-agent topologies and fallback loops without managing low-level orchestration plumbing.
           </p>
-        </div>
-        <div class="flow-step">
-          <div class="flow-step-num">03 / PROGRAMMATIC</div>
-          <h3>Google Genkit</h3>
-          <p>
+</div>
+<div class="flow-step">
+<div class="flow-step-num">03 / PROGRAMMATIC</div>
+<h3>Google Genkit</h3>
+<p>
             Google's open-source, code-first agent framework engineered for Node.js, TypeScript, and Go. Genkit delivers fine-grained control over prompt evaluation, structured outputs, OpenTelemetry observability, and tool integration.
           </p>
-        </div>
-        <div class="flow-step">
-          <div class="flow-step-num">04 / ECOSYSTEM</div>
-          <h3>Open Orchestration Bridges</h3>
-          <p>
+</div>
+<div class="flow-step">
+<div class="flow-step-num">04 / ECOSYSTEM</div>
+<h3>Open Orchestration Bridges</h3>
+<p>
             Native Google Cloud adapters and certified connectors for industry-standard third-party agent orchestration frameworks, including LangGraph, CrewAI, LlamaIndex, AutoGen, and Composio.
           </p>
-        </div>
-      </div>
-
-      <h3>Infrastructure &amp; Serverless Runtimes:</h3>
-      <ul>
-        <li><strong>Agent Compute Engine &amp; MicroVM Runtime:</strong> Serverless, ephemeral execution environments that spin up in milliseconds to execute long-running agent workflows, isolated terminal commands, and sandboxed code execution without host node vulnerability.</li>
-        <li><strong>Enterprise Memory Bank:</strong> Persistent storage decoupling working memory from model context windows. Organizes agent memory across episodic (past execution histories), semantic (domain facts), and procedural (successful operational paths) tiers.</li>
-        <li><strong>Enterprise Skill Registry:</strong> A centralized, version-controlled catalog of verified tools, API connectors, and execution scripts with granular IAM access controls and cryptographic signing.</li>
-        <li><strong>Agent Identity &amp; Attestation:</strong> Cryptographic verification assigning distinct identity certificates to every agent, providing complete provenance, non-repudiation, and audit compliance across regulated industries.</li>
-      </ul>
-    </article>
-
-    <!-- SECTION 3: NATIVE TOOLS & TRI-GROUNDING -->
-    <article class="content-card">
-      <h2>Native Tool Suite &amp; Tri-Grounding Architecture</h2>
-      <p>
+</div>
+</div>
+<h3>Infrastructure &amp; Serverless Runtimes:</h3>
+<ul>
+<li><strong>Agent Compute Engine &amp; MicroVM Runtime:</strong> Serverless, ephemeral execution environments that spin up in milliseconds to execute long-running agent workflows, isolated terminal commands, and sandboxed code execution without host node vulnerability.</li>
+<li><strong>Enterprise Memory Bank:</strong> Persistent storage decoupling working memory from model context windows. Organizes agent memory across episodic (past execution histories), semantic (domain facts), and procedural (successful operational paths) tiers.</li>
+<li><strong>Enterprise Skill Registry:</strong> A centralized, version-controlled catalog of verified tools, API connectors, and execution scripts with granular IAM access controls and cryptographic signing.</li>
+<li><strong>Agent Identity &amp; Attestation:</strong> Cryptographic verification assigning distinct identity certificates to every agent, providing complete provenance, non-repudiation, and audit compliance across regulated industries.</li>
+</ul>
+</article>
+<!-- SECTION 3: NATIVE TOOLS & TRI-GROUNDING -->
+<article class="content-card">
+<h2>Native Tool Suite &amp; Tri-Grounding Architecture</h2>
+<p>
         Unlike architectures that rely on brittle scraping layers or unverified third-party libraries, Google Gemini incorporates native inference-time tool decodes directly into the core model architecture:
       </p>
-
-      <div class="flow-grid">
-        <div class="flow-step">
-          <div class="flow-step-num">TOOL 01 / GROUNDING</div>
-          <h3>Live Google Search Grounding</h3>
-          <p>
+<div class="flow-grid">
+<div class="flow-step">
+<div class="flow-step-num">TOOL 01 / GROUNDING</div>
+<h3>Live Google Search Grounding</h3>
+<p>
             Infers search intent dynamically, queries Google Search indexes in real time, and synthesizes answers accompanied by grounding metadata, URL source attributions, and groundability confidence scores.
           </p>
-        </div>
-        <div class="flow-step">
-          <div class="flow-step-num">TOOL 02 / COMPUTATION</div>
-          <h3>Sandboxed Python Runtime</h3>
-          <p>
+</div>
+<div class="flow-step">
+<div class="flow-step-num">TOOL 02 / COMPUTATION</div>
+<h3>Sandboxed Python Runtime</h3>
+<p>
             Autonomously writes, executes, and debugs Python code in an isolated micro-container. Ideal for financial modeling, complex data transformation, matrix calculations, and symbolic logic verification.
           </p>
-        </div>
-        <div class="flow-step">
-          <div class="flow-step-num">TOOL 03 / ENTERPRISE</div>
-          <h3>Vertex AI Search Grounding</h3>
-          <p>
+</div>
+<div class="flow-step">
+<div class="flow-step-num">TOOL 03 / ENTERPRISE</div>
+<h3>Vertex AI Search Grounding</h3>
+<p>
             Connects agent decision loops directly to internal corporate data stores, including BigQuery data warehouses, Google Cloud Storage, Google Workspace documents, and enterprise vector databases.
           </p>
-        </div>
-        <div class="flow-step">
-          <div class="flow-step-num">TOOL 04 / INTERACTION</div>
-          <h3>Computer Use (UI Navigation)</h3>
-          <p>
+</div>
+<div class="flow-step">
+<div class="flow-step-num">TOOL 04 / INTERACTION</div>
+<h3>Computer Use (UI Navigation)</h3>
+<p>
             Native multimodal vision models visually interpret operating system desktops and browser canvases, planning and issuing mouse clicks, keyboard keystrokes, and form fills to operate legacy software without APIs.
           </p>
-        </div>
-      </div>
-
-      <div class="diagram-container">
-        <div class="mermaid">
+</div>
+</div>
+<div class="diagram-container">
+<div class="mermaid">
 flowchart LR
     subgraph AgentPerception[Agent Tri-Grounding Engine]
-        A[Gemini Autonomous Agent] -->|External World| GSearch[Google Search Grounding: Live Web]
-        A -->|Internal Facts| VSearch[Vertex AI Search: BigQuery &amp; Cloud Storage]
-        A -->|Deterministic Verification| Sandbox[Python Runtime: Isolated Computation]
+        A[Gemini Autonomous Agent] --&gt;|External World| GSearch[Google Search Grounding: Live Web]
+        A --&gt;|Internal Facts| VSearch[Vertex AI Search: BigQuery &amp; Cloud Storage]
+        A --&gt;|Deterministic Verification| Sandbox[Python Runtime: Isolated Computation]
     end
     
     subgraph ExternalProtocols[Enterprise Interoperability Standards]
-        A -->|Agent-to-Tool: Local / Data| MCP[Model Context Protocol MCP]
-        A -->|Agent-to-Agent: Cross-Platform| A2A[Agent2Agent A2A Protocol]
+        A --&gt;|Agent-to-Tool: Local / Data| MCP[Model Context Protocol MCP]
+        A --&gt;|Agent-to-Agent: Cross-Platform| A2A[Agent2Agent A2A Protocol]
     end
     
-    MCP --> LocalData[(Local Filesystems &amp; Custom DBs)]
-    A2A --> ExternalAgents[(ServiceNow / Salesforce / CrewAI Swarms)]
+    MCP --&gt; LocalData[(Local Filesystems &amp; Custom DBs)]
+    A2A --&gt; ExternalAgents[(ServiceNow / Salesforce / CrewAI Swarms)]
         </div>
-        <div class="diagram-caption">Figure 2: Tri-Grounding Architecture and Interoperability Protocol Stack</div>
-      </div>
-    </article>
-
-    <!-- SECTION 4: THE A2A PROTOCOL & MULTI-AGENT SWARMS -->
-    <article class="content-card">
-      <h2>The Agent2Agent (A2A) Protocol &amp; Multi-Agent Swarms</h2>
-      <p>
+<div class="diagram-caption">Figure 2: Tri-Grounding Architecture and Interoperability Protocol Stack</div>
+</div>
+</article>
+<!-- SECTION 4: THE A2A PROTOCOL & MULTI-AGENT SWARMS -->
+<article class="content-card">
+<h2>The Agent2Agent (A2A) Protocol &amp; Multi-Agent Swarms</h2>
+<p>
         As enterprises deploy hundreds of specialized agents across different business units, single-agent architectures give way to distributed swarms. However, agent fragmentation historically resulted in isolated silos unable to coordinate across differing vendor platforms.
       </p>
-      <p>
+<p>
         To solve this, Google introduced and transitioned the <strong>Agent2Agent (A2A) protocol</strong> to the open-source governance of the Linux Foundation. A2A establishes an open standard for agent discovery, capability negotiation, and task delegation:
       </p>
-
-      <h3>1. AgentCards for Dynamic Discovery</h3>
-      <p>
+<h3>1. AgentCards for Dynamic Discovery</h3>
+<p>
         Every compliant agent publishes a machine-readable <code>AgentCard</code> (akin to a cryptographically verified digital business card). The card declares the agent's unique identity, functional description, input/output schemas, required authentication scopes, rate limits, and operational endpoints.
       </p>
-
-      <h3>2. AgentExecutor &amp; Transport Layer</h3>
-      <p>
+<h3>2. AgentExecutor &amp; Transport Layer</h3>
+<p>
         Built on standard web technologies (JSON-RPC 2.0 over HTTP/S and gRPC), A2A supports synchronous request-response exchanges, long-running streaming execution via Server-Sent Events (SSE), and asynchronous push notifications for long-horizon background workflows.
       </p>
-
-      <h3>3. A2A vs. MCP: Complementary Standards</h3>
-      <p>
+<h3>3. A2A vs. MCP: Complementary Standards</h3>
+<p>
         Industry architects frequently ask how A2A compares to Anthropic's Model Context Protocol (MCP). Google explicitly positions them as complementary halves of the enterprise agent stack:
       </p>
-      <ul>
-        <li><strong>Model Context Protocol (MCP) — Agent-to-Tool:</strong> Standardizes how an <em>individual</em> agent securely accesses local files, database connections, shell environments, and proprietary tool endpoints.</li>
-        <li><strong>Agent2Agent Protocol (A2A) — Agent-to-Agent:</strong> Standardizes how <em>independent, specialized agents</em> discover each other, negotiate sub-delegations, pass operational context, and collaborate across organizational boundaries.</li>
-      </ul>
-
-      <div class="diagram-container">
-        <div class="mermaid">
+<ul>
+<li><strong>Model Context Protocol (MCP) - Agent-to-Tool:</strong> Standardizes how an <em>individual</em> agent securely accesses local files, database connections, shell environments, and proprietary tool endpoints.</li>
+<li><strong>Agent2Agent Protocol (A2A) - Agent-to-Agent:</strong> Standardizes how <em>independent, specialized agents</em> discover each other, negotiate sub-delegations, pass operational context, and collaborate across organizational boundaries.</li>
+</ul>
+<div class="diagram-container">
+<div class="mermaid">
 sequenceDiagram
     autonumber
     participant Client as Enterprise User
@@ -436,42 +424,40 @@ sequenceDiagram
     participant FinAgent as Financial Auditor Agent (ServiceNow)
     participant SecAgent as SecOps Compliance Agent (Google Cloud)
 
-    Client->>Lead: Execute M&amp;A Risk Audit Mandate
-    Lead->>Registry: Query AgentCards for 'Corporate Tax' &amp; 'SecOps Compliance'
-    Registry-->>Lead: Returns FinAgent.card &amp; SecAgent.card (A2A Endpoints)
+    Client-&gt;&gt;Lead: Execute M&amp;A Risk Audit Mandate
+    Lead-&gt;&gt;Registry: Query AgentCards for 'Corporate Tax' &amp; 'SecOps Compliance'
+    Registry--&gt;&gt;Lead: Returns FinAgent.card &amp; SecAgent.card (A2A Endpoints)
     
     par Parallel Subtask Delegation
-        Lead->>FinAgent: A2A JSON-RPC: Audit Balance Sheets &amp; Tax Liabilities
-        Lead->>SecAgent: A2A JSON-RPC: Audit Cloud IAM &amp; Vulnerability Posture
+        Lead-&gt;&gt;FinAgent: A2A JSON-RPC: Audit Balance Sheets &amp; Tax Liabilities
+        Lead-&gt;&gt;SecAgent: A2A JSON-RPC: Audit Cloud IAM &amp; Vulnerability Posture
     end
     
-    FinAgent-->>Lead: Tax Audit Payload + Supporting Evidence
-    SecAgent-->>Lead: Zero-Day Risk Matrix + Compliance Status
+    FinAgent--&gt;&gt;Lead: Tax Audit Payload + Supporting Evidence
+    SecAgent--&gt;&gt;Lead: Zero-Day Risk Matrix + Compliance Status
     
-    Lead->>Lead: Synthesize 2M-Token Multi-Domain Risk White Paper
-    Lead-->>Client: Final Verified Executive Dossier &amp; Action Plan
+    Lead-&gt;&gt;Lead: Synthesize 2M-Token Multi-Domain Risk White Paper
+    Lead--&gt;&gt;Client: Final Verified Executive Dossier &amp; Action Plan
         </div>
-        <div class="diagram-caption">Figure 3: Multi-Agent Collaboration via the Open Agent2Agent (A2A) Protocol</div>
-      </div>
-    </article>
-
-    <!-- SECTION 5: PRODUCTION PYTHON IMPLEMENTATION -->
-    <article class="content-card">
-      <h2>Production Python Implementation (Google GenAI SDK &amp; ADK)</h2>
-      <p>
+<div class="diagram-caption">Figure 3: Multi-Agent Collaboration via the Open Agent2Agent (A2A) Protocol</div>
+</div>
+</article>
+<!-- SECTION 5: PRODUCTION PYTHON IMPLEMENTATION -->
+<article class="content-card">
+<h2>Production Python Implementation (Google GenAI SDK &amp; ADK)</h2>
+<p>
         The following production-ready Python implementation utilizes the modern <code>google-genai</code> SDK, illustrating an autonomous agent equipped with native function calling, live search grounding, sandboxed Python computation, and multi-turn state retention:
       </p>
-
-      <div class="code-window">
-        <div class="code-header">
-          <div class="code-dots">
-            <span class="code-dot red"></span>
-            <span class="code-dot yellow"></span>
-            <span class="code-dot green"></span>
-          </div>
-          <span class="code-lang">Python (Google GenAI SDK)</span>
-        </div>
-        <pre class="code-content"><code>import os
+<div class="code-window">
+<div class="code-header">
+<div class="code-dots">
+<span class="code-dot red"></span>
+<span class="code-dot yellow"></span>
+<span class="code-dot green"></span>
+</div>
+<span class="code-lang">Python (Google GenAI SDK)</span>
+</div>
+<pre class="code-content"><code>import os
 from typing import Dict, Any
 from google import genai
 from google.genai import types
@@ -480,7 +466,7 @@ from google.genai import types
 client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
 # 2. Define Custom Enterprise Tools with strict schemas
-def fetch_cloud_telemetry(cluster_id: str) -> Dict[str, Any]:
+def fetch_cloud_telemetry(cluster_id: str) -&gt; Dict[str, Any]:
     """Retrieve real-time compute cluster metrics, CPU utilization, and memory headroom."""
     # Production telemetry integration
     mock_db = {
@@ -501,7 +487,7 @@ def fetch_cloud_telemetry(cluster_id: str) -> Dict[str, Any]:
     }
     return mock_db.get(cluster_id, {"error": "Cluster identifier not found"})
 
-def rebalance_cluster_workload(source_cluster: str, target_cluster: str, pod_count: int) -> Dict[str, str]:
+def rebalance_cluster_workload(source_cluster: str, target_cluster: str, pod_count: int) -&gt; Dict[str, str]:
     """Dispatch automated workload rebalancing command to Kubernetes control plane."""
     return {
         "action": "rebalance_initiated",
@@ -509,7 +495,7 @@ def rebalance_cluster_workload(source_cluster: str, target_cluster: str, pod_cou
         "transaction_id": "TXN-88204-K8S"
     }
 
-# 3. Configure the Autonomous Agent with Tri-Grounding & Tools
+# 3. Configure the Autonomous Agent with Tri-Grounding &amp; Tools
 agent_config = types.GenerateContentConfig(
     temperature=0.1,
     system_instruction=(
@@ -545,7 +531,7 @@ mandate = (
 print("[Agent Loop Triggered] Processing mandate...")
 response = agent_chat.send_message(mandate)
 
-# 6. Display Agent Response & Grounding Evidence
+# 6. Display Agent Response &amp; Grounding Evidence
 print("\n[Autonomous Agent Execution Summary]:")
 print(response.text)
 
@@ -557,169 +543,160 @@ if response.candidates and response.candidates[0].grounding_metadata:
     if meta.grounding_chunks:
         print(f"[Attributed Source Citations]: {len(meta.grounding_chunks)} authoritative sources verified")
 </code></pre>
-      </div>
-    </article>
-
-    <!-- SECTION 6: COMPARATIVE EVALUATION TABLE -->
-    <article class="content-card">
-      <h2>Architectural Comparison: Evolution of Autonomous Agents</h2>
-      <p>
+</div>
+</article>
+<!-- SECTION 6: COMPARATIVE EVALUATION TABLE -->
+<article class="content-card">
+<h2>Architectural Comparison: Evolution of Autonomous Agents</h2>
+<p>
         Evaluating agent architectures requires examining memory horizons, isolation security, and multi-agent coordination capabilities:
       </p>
-
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Dimension</th>
-            <th>Single-Turn Prompting</th>
-            <th>Basic ReAct Wrapper</th>
-            <th>Gemini Autonomous Agent</th>
-            <th>Enterprise A2A Swarm</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Working Memory</strong></td>
-            <td>Stateless (single completion)</td>
-            <td>Sliding window (8k - 32k)</td>
-            <td>2 Million Tokens in Attention</td>
-            <td>Distributed Context + Shared Memory Bank</td>
-          </tr>
-          <tr>
-            <td><strong>Tool Ecosystem</strong></td>
-            <td>Zero (isolated weights)</td>
-            <td>Custom scraping middleware</td>
-            <td>Native Search, Python &amp; APIs</td>
-            <td>Enterprise Skill Registry &amp; MicroVMs</td>
-          </tr>
-          <tr>
-            <td><strong>Cross-Agent Protocol</strong></td>
-            <td>None</td>
-            <td>Ad-hoc prompt chaining</td>
-            <td>Hierarchical Subagent Dispatch</td>
-            <td>Standardized Agent2Agent (A2A) Protocol</td>
-          </tr>
-          <tr>
-            <td><strong>Execution Safety</strong></td>
-            <td>Unsandboxed local scripts</td>
-            <td>Containerized API servers</td>
-            <td>Google MicroVM Isolation</td>
-            <td>Cryptographically Attested Agent Identities</td>
-          </tr>
-          <tr>
-            <td><strong>Autonomy Horizon</strong></td>
-            <td>Single prompt</td>
-            <td>3 - 5 sequential steps</td>
-            <td>20 - 100+ multi-tool steps</td>
-            <td>Long-horizon multi-day workflows</td>
-          </tr>
-          <tr>
-            <td><strong>Perception Modality</strong></td>
-            <td>Text only</td>
-            <td>Text + Static OCR</td>
-            <td>Native Video, Audio, UI &amp; Code</td>
-            <td>Multimodal Synchronous Streams</td>
-          </tr>
-        </tbody>
-      </table>
-    </article>
-
-    <!-- SECTION 7: KEY METRICS & BENCHMARKS -->
-    <article class="content-card">
-      <h2>Enterprise Benchmarks &amp; Performance Metrics</h2>
-      <p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Single-Turn Prompting</th>
+<th>Basic ReAct Wrapper</th>
+<th>Gemini Autonomous Agent</th>
+<th>Enterprise A2A Swarm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Working Memory</strong></td>
+<td>Stateless (single completion)</td>
+<td>Sliding window (8k - 32k)</td>
+<td>2 Million Tokens in Attention</td>
+<td>Distributed Context + Shared Memory Bank</td>
+</tr>
+<tr>
+<td><strong>Tool Ecosystem</strong></td>
+<td>Zero (isolated weights)</td>
+<td>Custom scraping middleware</td>
+<td>Native Search, Python &amp; APIs</td>
+<td>Enterprise Skill Registry &amp; MicroVMs</td>
+</tr>
+<tr>
+<td><strong>Cross-Agent Protocol</strong></td>
+<td>None</td>
+<td>Ad-hoc prompt chaining</td>
+<td>Hierarchical Subagent Dispatch</td>
+<td>Standardized Agent2Agent (A2A) Protocol</td>
+</tr>
+<tr>
+<td><strong>Execution Safety</strong></td>
+<td>Unsandboxed local scripts</td>
+<td>Containerized API servers</td>
+<td>Google MicroVM Isolation</td>
+<td>Cryptographically Attested Agent Identities</td>
+</tr>
+<tr>
+<td><strong>Autonomy Horizon</strong></td>
+<td>Single prompt</td>
+<td>3 - 5 sequential steps</td>
+<td>20 - 100+ multi-tool steps</td>
+<td>Long-horizon multi-day workflows</td>
+</tr>
+<tr>
+<td><strong>Perception Modality</strong></td>
+<td>Text only</td>
+<td>Text + Static OCR</td>
+<td>Native Video, Audio, UI &amp; Code</td>
+<td>Multimodal Synchronous Streams</td>
+</tr>
+</tbody>
+</table>
+</article>
+<!-- SECTION 7: KEY METRICS & BENCHMARKS -->
+<article class="content-card">
+<h2>Enterprise Benchmarks &amp; Performance Metrics</h2>
+<p>
         Gemini autonomous agents deliver measurable performance advantages across enterprise automation benchmarks:
       </p>
-
-      <div class="metric-grid">
-        <div class="metric-card">
-          <div class="metric-val">2.0M</div>
-          <div class="metric-label">Tokens Active Working Memory Window</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-val">99.8%</div>
-          <div class="metric-label">Needle-in-a-Haystack Recall Across 2M Tokens</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-val">87.2%</div>
-          <div class="metric-label">Autonomous Problem Solve Rate on SWE-bench</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-val">&lt; 100ms</div>
-          <div class="metric-label">Flash Subagent First-Token Routing Latency</div>
-        </div>
-      </div>
-    </article>
-
-    <!-- SECTION 8: PROS AND CONS -->
-    <article class="content-card">
-      <h2>Architectural Advantages &amp; Implementation Trade-Offs</h2>
-      <p>
+<div class="metric-grid">
+<div class="metric-card">
+<div class="metric-val">2.0M</div>
+<div class="metric-label">Tokens Active Working Memory Window</div>
+</div>
+<div class="metric-card">
+<div class="metric-val">99.8%</div>
+<div class="metric-label">Needle-in-a-Haystack Recall Across 2M Tokens</div>
+</div>
+<div class="metric-card">
+<div class="metric-val">87.2%</div>
+<div class="metric-label">Autonomous Problem Solve Rate on SWE-bench</div>
+</div>
+<div class="metric-card">
+<div class="metric-val">&lt; 100ms</div>
+<div class="metric-label">Flash Subagent First-Token Routing Latency</div>
+</div>
+</div>
+</article>
+<!-- SECTION 8: PROS AND CONS -->
+<article class="content-card">
+<h2>Architectural Advantages &amp; Implementation Trade-Offs</h2>
+<p>
         Deploying autonomous agents requires engineering leaders to weigh breakthrough operational capabilities against governance and cost trade-offs:
       </p>
-
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Key Advantages (Pros)</th>
-            <th>Operational Challenges (Cons)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Zero Middleware Fragility:</strong> Built-in Google Search, Python code execution, and function calling eliminate third-party scrapers and fragile execution runtimes.</td>
-            <td><strong>Recursive Cost &amp; Token Overrun:</strong> Unbounded autonomous retry loops can rapidly consume API quotas without strict max-iteration and budget caps.</td>
-          </tr>
-          <tr>
-            <td><strong>Open Standard Interoperability:</strong> The A2A protocol and AgentCards prevent vendor lock-in, enabling seamless collaboration with ServiceNow, Salesforce, and custom agents.</td>
-            <td><strong>Non-Deterministic Problem Paths:</strong> Creative autonomous decomposition may choose novel execution trajectories that require hardened output validation gates.</td>
-          </tr>
-          <tr>
-            <td><strong>True Multimodal Autonomy:</strong> Direct perception of video streams, system audio, and desktop UI layouts enables end-to-end computer use without brittle OCR pipelines.</td>
-            <td><strong>Privilege Escalation Risks:</strong> Autonomous agents possessing mutation tools require strict Role-Based Access Control (RBAC) and human approval checkpoints.</td>
-          </tr>
-        </tbody>
-      </table>
-    </article>
-
-    <!-- SECTION 9: HOW GEMINI AGENTS WILL RESHAPE ENTERPRISE -->
-    <article class="content-card">
-      <h2>How Gemini Agents Will Reshape the Enterprise</h2>
-      <p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Key Advantages (Pros)</th>
+<th>Operational Challenges (Cons)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zero Middleware Fragility:</strong> Built-in Google Search, Python code execution, and function calling eliminate third-party scrapers and fragile execution runtimes.</td>
+<td><strong>Recursive Cost &amp; Token Overrun:</strong> Unbounded autonomous retry loops can rapidly consume API quotas without strict max-iteration and budget caps.</td>
+</tr>
+<tr>
+<td><strong>Open Standard Interoperability:</strong> The A2A protocol and AgentCards prevent vendor lock-in, enabling seamless collaboration with ServiceNow, Salesforce, and custom agents.</td>
+<td><strong>Non-Deterministic Problem Paths:</strong> Creative autonomous decomposition may choose novel execution trajectories that require hardened output validation gates.</td>
+</tr>
+<tr>
+<td><strong>True Multimodal Autonomy:</strong> Direct perception of video streams, system audio, and desktop UI layouts enables end-to-end computer use without brittle OCR pipelines.</td>
+<td><strong>Privilege Escalation Risks:</strong> Autonomous agents possessing mutation tools require strict Role-Based Access Control (RBAC) and human approval checkpoints.</td>
+</tr>
+</tbody>
+</table>
+</article>
+<!-- SECTION 9: HOW GEMINI AGENTS WILL RESHAPE ENTERPRISE -->
+<article class="content-card">
+<h2>How Gemini Agents Will Reshape the Enterprise</h2>
+<p>
         The shift from passive LLM conversational chatbots to autonomous Gemini swarms marks a profound transformation in enterprise operational velocity:
       </p>
-      <ul>
-        <li><strong>Autonomous DevOps &amp; Self-Healing Infrastructure:</strong> Agents proactively monitor telemetry streams, isolate memory leaks, synthesize Kubernetes rebalance commands, and file post-mortem incident reports before outages impact end users.</li>
-        <li><strong>Continuous Financial &amp; Regulatory Auditing:</strong> Teams of specialized A2A agents autonomously ingest thousands of quarterly 10-K filings, reconcile disparate ERP databases, calculate liquidity variances, and verify corporate compliance continuously.</li>
-        <li><strong>Autonomous Supply Chain Negotiation:</strong> Supplier and enterprise procurement agents interact via the A2A protocol to dynamically negotiate purchase orders, verify warehouse inventory in real time, and settle contracts within established budgetary guidelines.</li>
-      </ul>
-    </article>
-
-    <!-- SECTION 10: VERIFIED REFERENCES -->
-    <article class="content-card">
-      <h2>Verified References &amp; Authoritative Documentation</h2>
-      <ul>
-        <li><a class="ref-link" href="https://cloud.google.com/vertex-ai/docs/agent-builder/overview" target="_blank" rel="noopener">Google Cloud Vertex AI: Enterprise Agent Builder &amp; Agent Engine</a></li>
-        <li><a class="ref-link" href="https://ai.google.dev/gemini-api/docs/agents" target="_blank" rel="noopener">Google AI Developers: Gemini Autonomous Agentic Workflows &amp; Tool Decodes</a></li>
-        <li><a class="ref-link" href="https://a2a-protocol.org" target="_blank" rel="noopener">Agent2Agent (A2A) Protocol Specification &amp; Architecture (Linux Foundation)</a></li>
-        <li><a class="ref-link" href="https://github.com/google-gemini/generative-ai-python" target="_blank" rel="noopener">Official Google GenAI Python SDK (google-genai) on GitHub</a></li>
-        <li><a class="ref-link" href="https://deepmind.google/technologies/gemini/" target="_blank" rel="noopener">Google DeepMind: Gemini Model Architecture &amp; Long-Context Research</a></li>
-      </ul>
-    </article>
-
-    <!-- SECTION 11: RELEVANT CALL TO ACTION -->
-    <section class="cta-banner">
-      <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Scale Enterprise Autonomy with Gemini Agents</h2>
-      <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
-        From native tool-calling loops and sandboxed microVM runtimes to A2A multi-agent swarms and 2M-token working memory — let's engineer your organization's autonomous agent roadmap.
+<ul>
+<li><strong>Autonomous DevOps &amp; Self-Healing Infrastructure:</strong> Agents proactively monitor telemetry streams, isolate memory leaks, synthesize Kubernetes rebalance commands, and file post-mortem incident reports before outages impact end users.</li>
+<li><strong>Continuous Financial &amp; Regulatory Auditing:</strong> Teams of specialized A2A agents autonomously ingest thousands of quarterly 10-K filings, reconcile disparate ERP databases, calculate liquidity variances, and verify corporate compliance continuously.</li>
+<li><strong>Autonomous Supply Chain Negotiation:</strong> Supplier and enterprise procurement agents interact via the A2A protocol to dynamically negotiate purchase orders, verify warehouse inventory in real time, and settle contracts within established budgetary guidelines.</li>
+</ul>
+</article>
+<!-- SECTION 10: VERIFIED REFERENCES -->
+<article class="content-card">
+<h2>Verified References &amp; Authoritative Documentation</h2>
+<ul>
+<li><a class="ref-link" href="https://cloud.google.com/vertex-ai/docs/agent-builder/overview" rel="noopener" target="_blank">Google Cloud Vertex AI: Enterprise Agent Builder &amp; Agent Engine</a></li>
+<li><a class="ref-link" href="https://ai.google.dev/gemini-api/docs/agents" rel="noopener" target="_blank">Google AI Developers: Gemini Autonomous Agentic Workflows &amp; Tool Decodes</a></li>
+<li><a class="ref-link" href="https://a2a-protocol.org" rel="noopener" target="_blank">Agent2Agent (A2A) Protocol Specification &amp; Architecture (Linux Foundation)</a></li>
+<li><a class="ref-link" href="https://github.com/google-gemini/generative-ai-python" rel="noopener" target="_blank">Official Google GenAI Python SDK (google-genai) on GitHub</a></li>
+<li><a class="ref-link" href="https://deepmind.google/technologies/gemini/" rel="noopener" target="_blank">Google DeepMind: Gemini Model Architecture &amp; Long-Context Research</a></li>
+</ul>
+</article>
+<!-- SECTION 11: RELEVANT CALL TO ACTION -->
+<section class="cta-banner">
+<h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Scale Enterprise Autonomy with Gemini Agents</h2>
+<p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
+        From native tool-calling loops and sandboxed microVM runtimes to A2A multi-agent swarms and 2M-token working memory - let's engineer your organization's autonomous agent roadmap.
       </p>
-      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
-        <a class="btn btn-primary" href="collaboration.html">Schedule Gemini Agent Consultation →</a>
-        <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
-        <a class="btn btn-outline" href="pricing.html">View Advisory Packages</a>
-      </div>
-    </section>
-  </main>
+<div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+<a class="btn btn-primary" href="collaboration.html">Schedule Gemini Agent Consultation →</a>
+<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
+<a class="btn btn-outline" href="pricing.html">View Advisory Packages</a>
+</div>
+</section>
+</main>
     <!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">
@@ -1014,7 +991,6 @@ if response.candidates and response.candidates[0].grounding_metadata:
     </p>
   </footer>
     <!-- END:FOOTER -->
-
 <script src="components.js"></script>
 </body>
 </html>

@@ -45,7 +45,7 @@ Gemini Deep Think is accessible to enterprise engineers and researchers through 
 
 ## How Deep Think Will Reshape the World
 
-The emergence of inference-time compute scaling alters the fundamental economics of human intelligence. In fields where mistakes carry astronomical costs—such as nuclear engineering, biopharmaceutical discovery, aerospace flight control, and economic modeling—Deep Think replaces probabilistic guessing with verifiable, audit-ready reasoning.
+The emergence of inference-time compute scaling alters the fundamental economics of human intelligence. In fields where mistakes carry astronomical costs - such as nuclear engineering, biopharmaceutical discovery, aerospace flight control, and economic modeling - Deep Think replaces probabilistic guessing with verifiable, audit-ready reasoning.
 
 By giving models the time to think, reflect, and self-correct, AI transitions from a digital conversationalist into an autonomous scientific colleague capable of expanding the frontier of human knowledge.
 

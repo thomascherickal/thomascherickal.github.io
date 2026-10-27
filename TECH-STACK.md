@@ -15,7 +15,7 @@
 > **Author & Practice Lead**: Thomas Cherickal (*The Digital Futurist*)  
 > **Official Business Website**: [https://thomascherickal.github.io](https://thomascherickal.github.io)  
 > **Canonical Description**:  
-> *"Thomas Cherickal — Generative AI Consultant and The Digital Futurist."*  
+> *"Thomas Cherickal - Generative AI Consultant and The Digital Futurist."*  
 > **Repository**: `thomascherickal/thomascherickal.github.io`  
 > **Architecture Pattern**: Zero-Framework Semantic HTML5 + Vanilla CSS3 Custom Tokens + Vanilla ES6+ JS + Automated Python CI/CD Synchronization Engine
 
@@ -68,7 +68,7 @@ graph TD
 | :--- | :---: | :---: | :--- |
 | **First Contentful Paint (FCP)** | **&lt; 0.3s** | 1.8s – 2.5s | **8× Faster** |
 | **Largest Contentful Paint (LCP)** | **&lt; 0.4s** | 2.2s – 3.8s | **Instantaneous Render** |
-| **Cumulative Layout Shift (CLS)** | **0.00** | 0.08 – 0.25 | **Zero Visual Jitter** |
+| **Cumulative Layout Shift (CLS)** | **0.00** | 0.08-0.25 | **Zero Visual Jitter** |
 | **Interaction to Next Paint (INP)** | **&lt; 16ms** | 120ms – 280ms | **Frame-Perfect UI** |
 | **Client JS Runtime Overhead** | **0 KB** (no bundle) | 250 KB – 1.8 MB | **Zero Hydration Stalls** |
 | **Time to First Byte (TTFB)** | **&lt; 50ms** | 200ms – 800ms | **Edge CDN Cached** |

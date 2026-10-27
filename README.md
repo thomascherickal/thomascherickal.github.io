@@ -1,4 +1,4 @@
-# The Digital Futurist — Thomas Cherickal
+# The Digital Futurist - Thomas Cherickal
 ### Generative AI Consultant · AI Agent Architect · Early Quantum Systems Explorer
 
 <p align="center">
@@ -15,7 +15,7 @@
 
 > [!NOTE]
 > **Canonical Site & Profile Description**:  
-> *"Thomas Cherickal — Generative AI Consultant and The Digital Futurist."*  
+> *"Thomas Cherickal - Generative AI Consultant and The Digital Futurist."*  
 > **Official Business Website**: [https://thomascherickal.github.io](https://thomascherickal.github.io)
 
 ---

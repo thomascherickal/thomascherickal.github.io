@@ -48,7 +48,7 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - Ensure all generated or modified files (including HTML, CSS, JavaScript, Markdown, Python, and configuration files) remain completely free of emojis.
 
 ## No Em-Dash Rule
-- **DO NOT use em-dashes** (the em-dash character U+2014 `—` or the `&mdash;` / `&#8212;` HTML entities) anywhere in any file in this repo.
+- **DO NOT use em-dashes** (the em-dash character U+2014 or the &amp;mdash; / &amp;#8212; entities) anywhere in any file in this repo.
 - Use a spaced hyphen ` - ` in prose, headings, and titles.
 - En-dashes in numeric ranges (e.g., `Days 1-15`, `2020-2026`) must also be written as plain hyphens `-`.
 

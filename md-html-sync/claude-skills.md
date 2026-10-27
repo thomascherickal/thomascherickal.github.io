@@ -56,7 +56,7 @@ The Claude Code guide to extending Claude with skills gives a practical trigger:
 
 A skill needs YAML frontmatter between --- markers and Markdown instructions below it. Here is an enterprise release-notes skill directory layout and definition:
 
-#### `Folder Layout — writing-release-notes`
+#### `Folder Layout - writing-release-notes`
 ```python
 # Folder layout: the folder name doubles as the skill name
 writing-release-notes/
@@ -167,7 +167,7 @@ description: >
 
 4. Zip the folder. Zip the folder itself rather than the loose files inside it, so meeting-notes/ sits at the root of the archive.
 
-#### `Terminal — Zip Archive`
+#### `Terminal - Zip Archive`
 ```python
 # macOS or Linux: run from the directory that contains meeting-notes/
 zip -r meeting-notes.zip meeting-notes
@@ -184,7 +184,7 @@ zip -r meeting-notes.zip meeting-notes
 
 1. Create the folders. A personal skill lives under your home directory and works in every project on that machine.
 
-#### `Terminal — Personal Skills Directory`
+#### `Terminal - Personal Skills Directory`
 ```python
 # Personal skill: available in all your projects on this machine
 mkdir -p ~/.claude/skills/drafting-changelogs/scripts
@@ -301,7 +301,7 @@ allowed-tools: Bash(python3 *)
 
 4. Run it. Open a tagged repository, start Claude Code with claude, and type /drafting-changelogs, or /drafting-changelogs v1.0 to pick the starting point. Asking "what changed since the last release?" should trigger it too. On a test repository with five commits after a v1.0 tag, the script hands Claude this before any rewriting happens:
 
-#### `Pre-Injected Context — Commits Output`
+#### `Pre-Injected Context - Commits Output`
 ```python
 Commits since v1.0:
 
@@ -327,7 +327,7 @@ Claude Code picks up edits to the skill without a restart. To share it with your
 
 1. Install the SDK and set your key.
 
-#### `Terminal — Environment Setup`
+#### `Terminal - Environment Setup`
 ```python
 # Install the official Python SDK
 pip install anthropic
@@ -449,7 +449,7 @@ The Agent Skills open standard at agentskills.io lets the same folder work acros
 
 ## 7. Automation Economics & Impact
 
-A model with a skill library behaves fundamentally differently from a model alone. The foundation model supplies raw reasoning, while each skill supplies one organization's documented, repeatable way of doing one specific job—written once and reused by every human and autonomous agent that accesses it. Anthropic's engineers wrote at launch that they anticipate agents will soon create, edit, benchmark, and evaluate skills entirely autonomously.
+A model with a skill library behaves fundamentally differently from a model alone. The foundation model supplies raw reasoning, while each skill supplies one organization's documented, repeatable way of doing one specific job - written once and reused by every human and autonomous agent that accesses it. Anthropic's engineers wrote at launch that they anticipate agents will soon create, edit, benchmark, and evaluate skills entirely autonomously.
 
 Composability gives skills room for automations that nobody had to design in advance. An organization with modular skills for its brand guidelines, its data warehouse schema, and its financial report layout can generate an entirely new report type simply by prompting Claude, which fuses the three skills seamlessly:
 

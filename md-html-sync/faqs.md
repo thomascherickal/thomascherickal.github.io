@@ -51,7 +51,7 @@ All payments are distributed into five
  support with daily questions and doubts clarification and light skim guides for Personal)
  carry zero additional cost.
 
-You never pay ahead of delivery—each installment is settled strictly as milestones are achieved.
+You never pay ahead of delivery - each installment is settled strictly as milestones are achieved.
 
 ---
 
@@ -96,7 +96,7 @@ Personal AI Transformation (also known as Personal AI Training) is an
  Cherickal on your actual codebases, product repositories, and real-world workflows.
 
 - Zero Corporate Friction: No HR committee approvals, vendor bureaucracy, or
- generic corporate lecture slides—we move at elite founder speed.
+ generic corporate lecture slides - we move at elite founder speed.
 
 - Tailored Personal Tech Stack: Systems are custom-configured around your exact
  tooling preferences, whether Claude Code, Google Antigravity, OpenRouter, vLLM, or Ollama.
@@ -136,7 +136,7 @@ Rather than forcing clients to purchase separate standalone packages, the 16-ser
  autonomous task delegation.
 
 - 2. Local LLMs & Cost Slashing: Sovereign inference via Ollama and vLLM to cut
- token spend by 60–90%.
+ token spend by 60-90%.
 
 - 3. Claude Agent Orchestration: Orchestrator-Workers, Evaluator-Optimizer, and
  Router multi-agent teams.
@@ -242,15 +242,15 @@ No. Personal Training is strictly for one person only (private 1-on-1
 Personal AI Transformation is structured as an intensive two-phase acceleration program strictly for
  one person only: 15 days of intensive 1-on-1 sprint training drawing on the full 16-service catalogue (you choose the focus areas relevant to your work), immediately followed by 15 days of included support with daily questions and doubts clarification, and source materials and guides that are light and easy to skim.
 
-- Phase 1 (Days 1–15) · Intensive 1-on-1 Training: Direct
+- Phase 1 (Days 1-15) · Intensive 1-on-1 Training: Direct
  pair-programming covering personal AI workflows, private local LLMs (Ollama/vLLM), Claude agent
  teams, autonomous Hermes loops, custom MCP servers, AI budget ceilings, and AI-assisted TDD.
 
-- Phase 2 (Days 16–30) · 15 Days Included Support & Daily Doubts Clarification:
+- Phase 2 (Days 16-30) · 15 Days Included Support & Daily Doubts Clarification:
  15 consecutive days of direct support, daily questions and doubts clarification as you execute daily
  client work, plus access to source materials and guides that are light and easy to skim.
 
-- 16-Service Catalogue Synthesis: No compromise—you access local LLM quantization,
+- 16-Service Catalogue Synthesis: No compromise - you access local LLM quantization,
  autonomous agents, and tool calling tailored to your machine.
 
 - 100% Intellectual Property Handover: Full ownership of all synthesized code, MCP
@@ -279,7 +279,7 @@ Individual training is engineered to transform independent software consultants,
 - Workflow Automation: Automating proposal generation, invoice processing, client
  communications, and multi-file code refactoring.
 
-Graduates gain the operational bandwidth of an entire 4–5 person development squad while preserving
+Graduates gain the operational bandwidth of an entire 4-5 person development squad while preserving
  complete personal autonomy.
 
 ---
@@ -303,7 +303,7 @@ Freshers and recent computer science graduates often experience a steep disconne
  terminal-native debugging loops.
 
 Freshers graduate with the practical productivity, testing rigor, and architectural judgment
- typically acquired after 3–5 years on the job.
+ typically acquired after 3-5 years on the job.
 
 ---
 
@@ -391,7 +391,7 @@ Executive briefings for C-suite leaders distill technical realities into actiona
  single-vendor lock-in through model-agnostic architectures.
 
 - Boardroom AI ROI & Cost Slashing: Cutting recurring API expenditures by
- 60–90% through localized inference clusters and hybrid routing.
+ 60-90% through localized inference clusters and hybrid routing.
 
 - Private deployment for regulated data: Designing private LLM deployments behind
  your firewall that support your HIPAA, GDPR and EU AI Act obligations.
@@ -837,7 +837,7 @@ Tier 6 subsidized engagements bypass standard automated checkout. To apply for T
  official channels:
 
 - Direct Email (Gmail): Send an email directly to thomascherickal@gmail.com with the subject line
- "Tier 6 Training Application — [Your Team/Project Name]".
+ "Tier 6 Training Application - [Your Team/Project Name]".
 
 - Direct Message on X (Twitter): Contact Thomas Cherickal directly on X at @thomazcherickal ↗.
 
@@ -954,19 +954,19 @@ Your team retains total architectural sovereignty, effortlessly adopting new fro
 Each training contract spans 30 calendar days (4 intensive weekly milestones) of
  hands-on architectural and coding immersion:
 
-- Week 1 (Days 1–7) — Architectural Assessment, Toolchains & Sandboxes: System
+- Week 1 (Days 1-7) - Architectural Assessment, Toolchains & Sandboxes: System
  discovery, tooling verification, prompt engineering design patterns, and Claude agent reasoning loop
  primitives.
 
-- Week 2 (Days 8–15) — Agent Orchestration, Skills & MCP Servers: Claude Code
+- Week 2 (Days 8-15) - Agent Orchestration, Skills & MCP Servers: Claude Code
  CLI, Claude's desktop and computer-use features, custom capability Skills, Model Context Protocol
  (MCP) servers, and hierarchical agent teams.
 
-- Week 3 (Days 16–22) — Local LLM Clusters, OpenCode & AI-Assisted TDD:
+- Week 3 (Days 16-22) - Local LLM Clusters, OpenCode & AI-Assisted TDD:
  High-throughput local model serving (vLLM/Ollama), OpenCode model routing, test-driven hallucination
  prevention, and guardrails.
 
-- Week 4 (Days 23–30) — Hard Budget Governance, Automated Evals & IP Handover:
+- Week 4 (Days 23-30) - Hard Budget Governance, Automated Evals & IP Handover:
  Token spend caps, circuit breakers, Ragas/DeepEval benchmarks, capstone live verification, and 100%
  intellectual property transfer.
 

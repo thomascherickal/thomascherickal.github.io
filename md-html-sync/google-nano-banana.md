@@ -10,7 +10,7 @@
 
 Nano Banana is Google DeepMind's native suite of visual generation and conversational image editing models, engineered directly on top of the Gemini multimodal architecture. Spanning specialized variants including Nano Banana, Nano Banana Pro, Nano Banana Lite, and Flash Image, the family shifts visual synthesis from static, single-prompt gambling into an interactive, multi-turn creative conversation.
 
-Historically, text-to-image models operated as black-box generators: asking for minor adjustments—such as changing an object's color, turning a character's head, or adjusting the lighting—required rolling a new random seed, invariably altering the entire composition. Nano Banana redefines this paradigm by maintaining persistent spatial awareness, preserving character identity, and applying surgical localized modifications through conversational prompts.
+Historically, text-to-image models operated as black-box generators: asking for minor adjustments - such as changing an object's color, turning a character's head, or adjusting the lighting - required rolling a new random seed, invariably altering the entire composition. Nano Banana redefines this paradigm by maintaining persistent spatial awareness, preserving character identity, and applying surgical localized modifications through conversational prompts.
 
 ---
 

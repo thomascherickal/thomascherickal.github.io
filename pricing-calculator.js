@@ -302,7 +302,7 @@
           calcParticipants.value = Math.max(20, parseInt(calcParticipants.value, 10) || 20);
           calcParticipants.disabled = false;
         }
-        if (calcParticipantsHint) calcParticipantsHint.textContent = "Business: 1–20 Included (+$250/extra seat)";
+        if (calcParticipantsHint) calcParticipantsHint.textContent = "Business: 1-20 Included (+$250/extra seat)";
         if (calcParticipantsDesc) calcParticipantsDesc.textContent = "Business base covers up to 20 participants (additional seats are $250 USD per seat scaled by country parity).";
       } else {
         btnModeIndividual.classList.add("active");
@@ -481,7 +481,7 @@
           calcCtaBtn.href = "contact.html?tier=" + encodeURIComponent(tier.name) + "&budget=Custom%20Subsidized%20Quote&participants=" + result.participants;
         }
       } else {
-        // Tiers 1–5
+        // Tiers 1-5
         if (calcDisplayPrice) {
           calcDisplayPrice.textContent = "$" + result.finalPrice.toLocaleString("en-US") + " USD";
           calcDisplayPrice.style.fontSize = "clamp(2.1rem, 3.8vw, 2.85rem)";

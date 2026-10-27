@@ -19,7 +19,7 @@ Architectural implementation across the 8 Claude Agent modules: Claude 101 loops
 ---
 
 ### 03. Private Local LLMs & Inference Cost Slashing
-Slashing recurring cloud AI API bills by 60–90% by hosting fine-tuned open-weight models (Qwen3.5, DeepSeek V3.2, GPT-OSS-120B, Gemma 4, Mistral) on workstation clusters or private VPCs using vLLM, Ollama, and GGUF/AWQ quantization with complete zero data egress.
+Slashing recurring cloud AI API bills by 60-90% by hosting fine-tuned open-weight models (Qwen3.5, DeepSeek V3.2, GPT-OSS-120B, Gemma 4, Mistral) on workstation clusters or private VPCs using vLLM, Ollama, and GGUF/AWQ quantization with complete zero data egress.
 
 ---
 
@@ -61,7 +61,7 @@ We align on agent team composition (Claude, OpenAI, Gemini, Grok), task domain k
 
 ### 02. Milestone Agreement & 6 Parity Tiers
 Fixed milestone proposal with equal weightage across every deliverable phase, structured under 6 Parity
- Pricing tiers — including 50% off for Early-Stage Startups (Tier 4), 75% off for Non-Profits & Academia
+ Pricing tiers - including 50% off for Early-Stage Startups (Tier 4), 75% off for Non-Profits & Academia
  (Tier 5), and customized pricing for underprivileged nations (Tier 6).
 
 ### 03. Architecture Blueprint & Tool Selection
@@ -124,13 +124,13 @@ Initial architectural audits and scoping sprints start within 3 to 5 business da
 ### 2. What does the training contract look like in practice?
 Each training contract spans 30 calendar days (4 intensive weekly milestones) of hands-on architectural and coding immersion:
 
-Week 1 (Days 1–7) — Architectural Assessment, Toolchains & Sandboxes: System discovery, tooling verification, prompt engineering design patterns, and Claude agent reasoning loop primitives.
+Week 1 (Days 1-7) - Architectural Assessment, Toolchains & Sandboxes: System discovery, tooling verification, prompt engineering design patterns, and Claude agent reasoning loop primitives.
 
-Week 2 (Days 8–15) — Agent Orchestration, Skills & MCP Servers: Claude Code CLI, Claude Cowork, custom capability Skills, Model Context Protocol (MCP) servers, and hierarchical agent teams.
+Week 2 (Days 8-15) - Agent Orchestration, Skills & MCP Servers: Claude Code CLI, Claude Cowork, custom capability Skills, Model Context Protocol (MCP) servers, and hierarchical agent teams.
 
-Week 3 (Days 16–22) — Local LLM Clusters, OpenCode & AI-Assisted TDD: High-throughput local model serving (vLLM/Ollama), OpenCode model routing, test-driven hallucination prevention, and guardrails.
+Week 3 (Days 16-22) - Local LLM Clusters, OpenCode & AI-Assisted TDD: High-throughput local model serving (vLLM/Ollama), OpenCode model routing, test-driven hallucination prevention, and guardrails.
 
-Week 4 (Days 23–30) — Hard Budget Governance, Automated Evals & IP Handover: Token spend caps, circuit breakers, Ragas/DeepEval benchmarks, capstone live verification, and 100% intellectual property transfer.
+Week 4 (Days 23-30) - Hard Budget Governance, Automated Evals & IP Handover: Token spend caps, circuit breakers, Ragas/DeepEval benchmarks, capstone live verification, and 100% intellectual property transfer.
 
  Participants conclude the 30-day program with fully operational, sovereign multi-agent systems running in production, backed by 30 days of included post-training support.
 

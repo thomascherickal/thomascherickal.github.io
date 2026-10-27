@@ -23,7 +23,7 @@ Tailored curriculums delivered live and remotely for Employees (AI adoption &
 ---
 
 ### 3. Local LLM Deployment & Cost Slashing
-Lowering recurring cloud AI inference bills by 60–90% using open-weight local LLMs
+Lowering recurring cloud AI inference bills by 60-90% using open-weight local LLMs
  (Qwen3.5, DeepSeek V3.2, GPT-OSS-120B, Gemma 4, Mistral). Expertise in Ollama, vLLM, llama.cpp, GGUF/AWQ
  quantization, and private
  on-prem hosting.
@@ -79,7 +79,7 @@ In-depth technical systems design covering Tokio async runtimes, Burn & Candle
 
 ### 11. Role #11
 Structured engagement models for engineering teams, fast-growing tech startups, and forward-looking
- enterprises — covering Claude Agent Teams, the Google Gemini AI Ecosystem (Google AI Studio, Google Antigravity, Gemini Deep Think, Gemini Agents & Argon), live & remote workforce training, Local LLM cost
+ enterprises - covering Claude Agent Teams, the Google Gemini AI Ecosystem (Google AI Studio, Google Antigravity, Gemini Deep Think, Gemini Agents & Argon), live & remote workforce training, Local LLM cost
  reduction, and quantum systems exploration.
 
 ---

@@ -8,7 +8,7 @@
 
 ## What are Google Gemini Agents?
 
-Google Gemini Agents represent the structural evolution of artificial intelligence from conversational assistants into proactive, stateful, and autonomous execution systems. Where traditional foundation models generate static text completions, a Gemini Agent operates within continuous reasoning, planning, and tool-dispatch loops — observing its environment, decomposing multi-step enterprise mandates, invoking APIs, executing Python code in secure sandboxes, and verifying outcomes against operational objectives.
+Google Gemini Agents represent the structural evolution of artificial intelligence from conversational assistants into proactive, stateful, and autonomous execution systems. Where traditional foundation models generate static text completions, a Gemini Agent operates within continuous reasoning, planning, and tool-dispatch loops - observing its environment, decomposing multi-step enterprise mandates, invoking APIs, executing Python code in secure sandboxes, and verifying outcomes against operational objectives.
 
 Google anchors this capability within the Gemini Enterprise Agent Platform (the enterprise evolution of Vertex AI Agent Builder). The platform provides end-to-end infrastructure for building, deploying, governing, and orchestrating fleets of autonomous agents. By pairing frontier reasoning models with serverless microVM sandboxes, persistent session memory banks, and cryptographic agent identity attestation, organizations can operationalize agentic intelligence without sacrificing enterprise security or data sovereignty.
 
@@ -51,8 +51,8 @@ Built on standard web technologies (JSON-RPC 2.0 over HTTP/S and gRPC), A2A supp
 
 Industry architects frequently ask how A2A compares to Anthropic's Model Context Protocol (MCP). Google explicitly positions them as complementary halves of the enterprise agent stack:
 
-- Model Context Protocol (MCP) — Agent-to-Tool: Standardizes how an individual agent securely accesses local files, database connections, shell environments, and proprietary tool endpoints.
-- Agent2Agent Protocol (A2A) — Agent-to-Agent: Standardizes how independent, specialized agents discover each other, negotiate sub-delegations, pass operational context, and collaborate across organizational boundaries.
+- Model Context Protocol (MCP) - Agent-to-Tool: Standardizes how an individual agent securely accesses local files, database connections, shell environments, and proprietary tool endpoints.
+- Agent2Agent Protocol (A2A) - Agent-to-Agent: Standardizes how independent, specialized agents discover each other, negotiate sub-delegations, pass operational context, and collaborate across organizational boundaries.
 
 ---
 
