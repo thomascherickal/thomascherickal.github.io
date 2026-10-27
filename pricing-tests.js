@@ -213,6 +213,70 @@ function runTestSuite() {
     "Tier 6 should be marked isCustom"
   );
 
+  // 7. Flagship Cheaper Nudge & Tier 6 Custom Quote Tests (Phase 2)
+  const biz2Picks = PricingCalculator.calculatePricing({
+    tierId: 1,
+    clientMode: "business",
+    packageType: "pick-services",
+    selectedServices: [
+      "service-generative-ai-transformation",
+      "service-local-llms-cost-slashing"
+    ],
+    participants: 20
+  });
+  assert(
+    "2 business picks does not trigger flagship nudge (flagshipCheaper = false)",
+    biz2Picks.flagshipCheaper === false,
+    `Expected flagshipCheaper === false, got ${biz2Picks.flagshipCheaper}`
+  );
+
+  const biz3Picks = PricingCalculator.calculatePricing({
+    tierId: 1,
+    clientMode: "business",
+    packageType: "pick-services",
+    selectedServices: [
+      "service-generative-ai-transformation",
+      "service-local-llms-cost-slashing",
+      "service-workflow-automations"
+    ],
+    participants: 20
+  });
+  assert(
+    "3 business picks triggers flagship nudge with flagshipPrice 5000",
+    biz3Picks.flagshipCheaper === true && biz3Picks.flagshipPrice === 5000,
+    `Expected flagshipCheaper === true and flagshipPrice === 5000, got cheaper=${biz3Picks.flagshipCheaper}, price=${biz3Picks.flagshipPrice}`
+  );
+
+  const indiv3Picks = PricingCalculator.calculatePricing({
+    tierId: 1,
+    clientMode: "individual",
+    packageType: "pick-services",
+    selectedServices: [
+      "service-generative-ai-transformation",
+      "service-local-llms-cost-slashing",
+      "service-workflow-automations"
+    ],
+    participants: 1
+  });
+  assert(
+    "3 individual picks triggers flagship nudge with flagshipPrice 2500",
+    indiv3Picks.flagshipCheaper === true && indiv3Picks.flagshipPrice === 2500,
+    `Expected flagshipCheaper === true and flagshipPrice === 2500, got cheaper=${indiv3Picks.flagshipCheaper}, price=${indiv3Picks.flagshipPrice}`
+  );
+
+  const tier6Calc = PricingCalculator.calculatePricing({
+    tierId: 6,
+    clientMode: "business",
+    packageType: "pick-services",
+    selectedServices: ["service-generative-ai-transformation"],
+    participants: 20
+  });
+  assert(
+    "Tier 6 calculation returns isCustom = true",
+    tier6Calc.isCustom === true,
+    `Expected isCustom === true, got ${tier6Calc.isCustom}`
+  );
+
   console.log("=================================================");
   console.log(`TEST RUN FINISHED: ${results.passed}/${results.total} PASSED`);
   if (results.failed > 0) {

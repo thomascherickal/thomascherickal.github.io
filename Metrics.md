@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-10-27 07:07:13 UTC` | Branch: `main` | Head Commit: `2b56142`
+> **Automated Status Report** | Generated on `2026-10-27 07:12:25 UTC` | Branch: `main` | Head Commit: `5b5b903`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **270** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **93,041** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **83,883** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **3,134** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **6,024** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **15.08 MB (15,813,242 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Lines of Source Code & Content** | **93,150** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **83,982** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **3,136** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **6,032** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **15.08 MB (15,817,678 bytes)** | HTML, CSS, JS, Python, SVG & Images |
 | **Total Word Count (Prose & Technical)** | **272,314 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **397** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-10-27** | Subject: "Phase 0: Fix rules and generators (no em-dash rule, Dev.to inclusion, post_edit_hook path fix)" |
+| **Total Git Commits** | **398** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-10-27** | Subject: "Phase 1: Fix factual errors, model claims, service count, Twitter handle, and retired product names" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,9 +27,9 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 54 | 61,015 | 4.61 MB (4,834,642 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 54 | 61,016 | 4.61 MB (4,834,910 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 17 | 11,090 | 258.70 KB (264,910 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 3 | 1,280 | 46.64 KB (47,757 bytes) | Client-side interactivity, search, filter & components |
+| **JavaScript Scripts** | 3 | 1,388 | 50.71 KB (51,925 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 10 | 3,167 | 136.62 KB (139,894 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
 | **Markdown Documentation** | 62 | 8,237 | 508.20 KB (520,395 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 40 | 8,204 | 348.84 KB (357,216 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
@@ -43,12 +43,12 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 54 | 61,015 | 4.61 MB (4,834,642 bytes) | 20.0% |
+| `.html` | 54 | 61,016 | 4.61 MB (4,834,910 bytes) | 20.0% |
 | `.css` | 17 | 11,090 | 258.70 KB (264,910 bytes) | 6.3% |
 | `.md` | 62 | 8,237 | 508.20 KB (520,395 bytes) | 23.0% |
 | `.json` | 40 | 8,204 | 348.84 KB (357,216 bytes) | 14.8% |
 | `.py` | 10 | 3,167 | 136.62 KB (139,894 bytes) | 3.7% |
-| `.js` | 3 | 1,280 | 46.64 KB (47,757 bytes) | 1.1% |
+| `.js` | 3 | 1,388 | 50.71 KB (51,925 bytes) | 1.1% |
 | `.svg` | 37 | 48 | 61.43 KB (62,907 bytes) | 13.7% |
 | `.jpg` | 10 | 0 | 5.26 MB (5,517,051 bytes) | 3.7% |
 | `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 7.4% |

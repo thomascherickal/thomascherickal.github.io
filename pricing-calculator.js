@@ -146,6 +146,18 @@
       basePrice = params.customBase;
     }
 
+    const matchingFlagshipPrice = clientMode === "business" ? 5000 : 2500;
+    let flagshipCheaper = false;
+    let flagshipPrice = matchingFlagshipPrice;
+
+    if (packageType === "pick-services") {
+      const count = Math.max(1, selectedServices.length);
+      if (count * ratePerSvc >= matchingFlagshipPrice) {
+        flagshipCheaper = true;
+        flagshipPrice = matchingFlagshipPrice;
+      }
+    }
+
     let participants = clientMode === "individual" ? 1 : Math.max(1, parseInt(params.participants, 10) || 20);
     const extraParticipants = clientMode === "business" ? Math.max(0, participants - 20) : 0;
     const extraHeadRate = Math.round(extraParticipants * 250 * tier.multiplier);
@@ -170,7 +182,9 @@
       baseTierPrice,
       finalPrice,
       totalSavings,
-      isCustom: tier.isCustom
+      isCustom: tier.isCustom,
+      flagshipCheaper,
+      flagshipPrice
     };
   }
 
@@ -338,7 +352,7 @@
 
         if (indivPriceEl) {
           if (tier.isCustom) {
-            indivPriceEl.textContent = "$100 USD (T6)";
+            indivPriceEl.textContent = "Custom quote - contact Thomas";
             indivPriceEl.style.color = "#00f0ff";
           } else {
             const calculated = Math.round(1000 * mult);
@@ -349,7 +363,7 @@
 
         if (bizPriceEl) {
           if (tier.isCustom) {
-            bizPriceEl.textContent = "$200 USD (T6)";
+            bizPriceEl.textContent = "Custom quote - contact Thomas";
             bizPriceEl.style.color = "#00f0ff";
           } else {
             const calculated = Math.round(2000 * mult);
@@ -438,21 +452,19 @@
       if (tier.isCustom) {
         // Tier 6 Subsidized
         if (calcDisplayPrice) {
-          calcDisplayPrice.textContent = "Custom Subsidized Quote";
-          calcDisplayPrice.style.fontSize = "clamp(1.55rem, 2.6vw, 1.95rem)";
+          calcDisplayPrice.textContent = "Custom subsidized quote - contact Thomas";
+          calcDisplayPrice.style.fontSize = "clamp(1.35rem, 2.4vw, 1.75rem)";
           calcDisplayPrice.style.color = tier.badgeColor;
           calcDisplayPrice.style.textShadow = "0 0 18px rgba(0, 240, 255, 0.45)";
         }
 
-        const indicativeMin = Math.round(result.basePrice * 0.10) + result.extraHeadRate;
-        const indicativeMax = Math.round(result.basePrice * 0.20) + result.extraHeadRate;
         if (calcDisplayNote) {
-          calcDisplayNote.innerHTML = "Micro-Rates / Indicative $" + indicativeMin.toLocaleString("en-US") + " – $" + indicativeMax.toLocaleString("en-US") + " USD or Nominal Honorarium";
+          calcDisplayNote.textContent = "Custom subsidized relief - contact Thomas directly";
           calcDisplayNote.style.color = "#7dd3fc";
         }
 
         if (calcAdjustmentVal) {
-          calcAdjustmentVal.textContent = "Up to 90%+ Subsidized Relief";
+          calcAdjustmentVal.textContent = "Custom Subsidized Quote";
           calcAdjustmentVal.style.color = tier.badgeColor;
         }
 
@@ -464,7 +476,7 @@
         }
 
         if (calcCtaBtn) {
-          calcCtaBtn.textContent = "Request Subsidized Tier 6 Quote →";
+          calcCtaBtn.textContent = "Contact Thomas for Custom Subsidized Quote →";
           calcCtaBtn.style.borderColor = tier.badgeColor;
           calcCtaBtn.href = "contact.html?tier=" + encodeURIComponent(tier.name) + "&budget=Custom%20Subsidized%20Quote&participants=" + result.participants;
         }
@@ -508,6 +520,38 @@
           calcCtaBtn.textContent = "Lock in " + tier.shortName + " Rate ($" + result.finalPrice.toLocaleString("en-US") + ") →";
           calcCtaBtn.style.borderColor = tier.badgeColor;
           calcCtaBtn.href = "contact.html?tier=" + encodeURIComponent(tier.name) + "&budget=" + result.finalPrice + "&participants=" + result.participants;
+        }
+      }
+
+      // Flagship Cheaper Nudge (2.1)
+      const calcFlagshipNudge = document.getElementById("calc-flagship-nudge");
+      if (calcFlagshipNudge) {
+        if (result.flagshipCheaper) {
+          const isBiz = result.clientMode === "business";
+          const pkgTitle = isBiz ? "Business Flagship" : "Personal Flagship";
+          const flagshipCostStr = "$" + result.flagshipPrice.toLocaleString("en-US");
+          const trainingDays = isBiz ? "30 days training + 30 days guidance" : "15 days training + 15 days guidance";
+          const targetPkgVal = isBiz ? "pkg-business" : "pkg-personal";
+
+          calcFlagshipNudge.style.display = "block";
+          calcFlagshipNudge.innerHTML = `
+            <div style="display:flex;flex-direction:column;gap:0.5rem;">
+              <span style="font-weight:600;color:#fef08a;">The ${pkgTitle} (${flagshipCostStr}, ${trainingDays}) costs less than this selection. Switch to it?</span>
+              <button type="button" id="btn-switch-flagship" style="align-self:flex-start;background:var(--gold);color:#020408;border:none;border-radius:6px;padding:0.4rem 0.85rem;font-weight:700;font-size:0.85rem;cursor:pointer;transition:transform 0.15s ease;">Switch to ${pkgTitle}</button>
+            </div>
+          `;
+          const btnSwitch = document.getElementById("btn-switch-flagship");
+          if (btnSwitch) {
+            btnSwitch.onclick = function() {
+              if (calcPackage) {
+                calcPackage.value = targetPkgVal;
+                calcPackage.dispatchEvent(new Event("change"));
+              }
+            };
+          }
+        } else {
+          calcFlagshipNudge.style.display = "none";
+          calcFlagshipNudge.innerHTML = "";
         }
       }
 
