@@ -333,8 +333,8 @@ A comprehensive transformation system showing professionals how to use frontier 
 ## Links
 
 ### Find Me Online
-- [Business Website (thomascherickal.github.io)](https://thomascherickal.github.io)
 - [Profile (thomascherickal.com)](https://thomascherickal.com)
+- [Business Website (thomascherickal.github.io)](https://thomascherickal.github.io)
 - [GitHub (github.com/thomascherickal)](https://github.com/thomascherickal)
 - [LinkedIn (in/thomascherickal)](https://linkedin.com/in/thomascherickal)
 - [HackerNoon (u/thomascherickal)](https://hackernoon.com/u/thomascherickal)
@@ -359,9 +359,13 @@ A comprehensive transformation system showing professionals how to use frontier 
 - [GitLab (gitlab.com/thomascherickal)](https://gitlab.com/thomascherickal)
 - [Kit (thomascherickal.kit.com)](https://thomascherickal.kit.com)
 - [Linktree (linktr.ee/thomascherickal)](https://linktr.ee/thomascherickal)
+- [Telegram (t.me/thomascherickal)](https://t.me/thomascherickal)
+- [WhatsApp (wa.me/919884452724)](https://wa.me/919884452724)
+- [Discord (discord.gg/na3UWDx4h)](https://discord.gg/na3UWDx4h)
 - [Patreon (patreon.com/thomascherickal)](https://patreon.com/thomascherickal)
 - [Gumroad (thomascherickal.gumroad.com)](https://thomascherickal.gumroad.com)
 - [Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)
 
 ---
+
 *© 2026 Thomas Cherickal · The Digital Futurist · Generative AI Consultant · Agentic AI Architect · AI Automation Expert · AI Trainer Live, Hybrid & Remote · Local LLM Deployment · Claude AI Agent Orchestration · Remote Worldwide*
