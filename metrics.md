@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-10-27 12:37:45 UTC` | Branch: `main` | Head Commit: `895c5a9`
+> **Automated Status Report** | Generated on `2026-10-27 12:50:53 UTC` | Branch: `main` | Head Commit: `ec3ee1d`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **285** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **91,024** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **81,768** | Executable / renderable content lines |
+| **Total Tracked Files** | **284** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **90,922** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **81,677** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **3,221** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **6,035** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **14.15 MB (14,842,506 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **221,389 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **413** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-10-27** | Subject: "Format article-footer_dark.html" |
+| **Blank / Spacing Lines** | **6,024** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **14.04 MB (14,725,498 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **221,395 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **414** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-10-27** | Subject: "Update footer copyright and synchronize home.md and index.html" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,14 +27,14 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 54 | 56,925 | 4.23 MB (4,433,739 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 54 | 56,823 | 4.22 MB (4,430,202 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 17 | 11,124 | 259.32 KB (265,541 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 3 | 1,380 | 50.53 KB (51,746 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 11 | 3,396 | 144.97 KB (148,449 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 63 | 8,654 | 546.51 KB (559,623 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 53 | 9,497 | 400.16 KB (409,762 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Python Tooling** | 11 | 3,396 | 144.98 KB (148,461 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 63 | 8,654 | 547.62 KB (560,760 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 53 | 9,497 | 400.17 KB (409,774 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 37 | 48 | 61.43 KB (62,907 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
-| **Raster Images (WebP, JPG, PNG)** | 40 | 0 | 8.45 MB (8,862,139 bytes) | Optimized feature hero graphics, social cards & assets |
+| **Raster Images (WebP, JPG, PNG)** | 39 | 0 | 8.34 MB (8,747,507 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 7 | 0 | 47.46 KB (48,600 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
@@ -43,17 +43,17 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 54 | 56,925 | 4.23 MB (4,433,739 bytes) | 18.9% |
+| `.html` | 54 | 56,823 | 4.22 MB (4,430,202 bytes) | 19.0% |
 | `.css` | 17 | 11,124 | 259.32 KB (265,541 bytes) | 6.0% |
-| `.json` | 53 | 9,497 | 400.16 KB (409,762 bytes) | 18.6% |
-| `.md` | 63 | 8,654 | 546.51 KB (559,623 bytes) | 22.1% |
-| `.py` | 11 | 3,396 | 144.97 KB (148,449 bytes) | 3.9% |
+| `.json` | 53 | 9,497 | 400.17 KB (409,774 bytes) | 18.7% |
+| `.md` | 63 | 8,654 | 547.62 KB (560,760 bytes) | 22.2% |
+| `.py` | 11 | 3,396 | 144.98 KB (148,461 bytes) | 3.9% |
 | `.js` | 3 | 1,380 | 50.53 KB (51,746 bytes) | 1.1% |
 | `.svg` | 37 | 48 | 61.43 KB (62,907 bytes) | 13.0% |
 | `.jpg` | 10 | 0 | 5.26 MB (5,517,051 bytes) | 3.5% |
 | `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 7.0% |
-| `.png` | 8 | 0 | 717.16 KB (734,367 bytes) | 2.8% |
 | `.jpeg` | 1 | 0 | 622.42 KB (637,354 bytes) | 0.4% |
+| `.png` | 7 | 0 | 605.21 KB (619,735 bytes) | 2.5% |
 | `.txt` | 2 | 0 | 27.07 KB (27,721 bytes) | 0.7% |
 | `.docx` | 1 | 0 | 10.34 KB (10,592 bytes) | 0.4% |
 | `.xml` | 1 | 0 | 9.43 KB (9,656 bytes) | 0.4% |
