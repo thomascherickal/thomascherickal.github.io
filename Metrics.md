@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-10-27 06:04:39 UTC` | Branch: `main` | Head Commit: `1736e1e`
+> **Automated Status Report** | Generated on `2026-10-27 06:16:17 UTC` | Branch: `main` | Head Commit: `7964298`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **269** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **91,889** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **82,765** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **3,120** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **6,004** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **14.97 MB (15,698,980 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **257,799 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **394** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-10-27** | Subject: "Update all MD documentation: 50 pages, 16 services, 12 Claude + 12 Gemini guides, and parity index" |
+| **Total Tracked Files** | **270** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **91,746** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **82,629** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **3,124** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **5,993** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **14.97 MB (15,695,269 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **260,523 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **395** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-10-27** | Subject: "Update Business plan base coverage to 20 seats and scale-out rate to $250/head; rename og-card-book asset" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,14 +27,14 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 54 | 60,042 | 4.51 MB (4,734,173 bytes) | Production static web pages, services, frameworks & guides |
-| **CSS Stylesheets** | 17 | 11,089 | 258.67 KB (264,876 bytes) | Design tokens, animations, responsive layout & themes |
+| **HTML Documents** | 54 | 59,772 | 4.50 MB (4,718,790 bytes) | Production static web pages, services, frameworks & guides |
+| **CSS Stylesheets** | 17 | 11,090 | 258.70 KB (264,910 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 3 | 1,280 | 46.63 KB (47,752 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 9 | 3,036 | 132.04 KB (135,207 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 62 | 8,190 | 506.16 KB (518,305 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 40 | 8,204 | 348.94 KB (357,314 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Python Tooling** | 10 | 3,162 | 136.50 KB (139,776 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 62 | 8,190 | 506.16 KB (518,306 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 40 | 8,204 | 348.92 KB (357,298 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 37 | 48 | 61.43 KB (62,907 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
-| **Raster Images (WebP, JPG, PNG)** | 40 | 0 | 9.09 MB (9,529,900 bytes) | Optimized feature hero graphics, social cards & assets |
+| **Raster Images (WebP, JPG, PNG)** | 40 | 0 | 9.10 MB (9,536,984 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 7 | 0 | 47.41 KB (48,546 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
@@ -43,16 +43,16 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 54 | 60,042 | 4.51 MB (4,734,173 bytes) | 20.1% |
-| `.css` | 17 | 11,089 | 258.67 KB (264,876 bytes) | 6.3% |
-| `.json` | 40 | 8,204 | 348.94 KB (357,314 bytes) | 14.9% |
-| `.md` | 62 | 8,190 | 506.16 KB (518,305 bytes) | 23.0% |
-| `.py` | 9 | 3,036 | 132.04 KB (135,207 bytes) | 3.3% |
+| `.html` | 54 | 59,772 | 4.50 MB (4,718,790 bytes) | 20.0% |
+| `.css` | 17 | 11,090 | 258.70 KB (264,910 bytes) | 6.3% |
+| `.json` | 40 | 8,204 | 348.92 KB (357,298 bytes) | 14.8% |
+| `.md` | 62 | 8,190 | 506.16 KB (518,306 bytes) | 23.0% |
+| `.py` | 10 | 3,162 | 136.50 KB (139,776 bytes) | 3.7% |
 | `.js` | 3 | 1,280 | 46.63 KB (47,752 bytes) | 1.1% |
-| `.svg` | 37 | 48 | 61.43 KB (62,907 bytes) | 13.8% |
+| `.svg` | 37 | 48 | 61.43 KB (62,907 bytes) | 13.7% |
 | `.jpg` | 10 | 0 | 5.26 MB (5,517,051 bytes) | 3.7% |
 | `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 7.4% |
-| `.png` | 8 | 0 | 1.34 MB (1,402,128 bytes) | 3.0% |
+| `.png` | 8 | 0 | 1.34 MB (1,409,212 bytes) | 3.0% |
 | `.jpeg` | 1 | 0 | 622.42 KB (637,354 bytes) | 0.4% |
 | `.txt` | 2 | 0 | 27.20 KB (27,851 bytes) | 0.7% |
 | `.docx` | 1 | 0 | 10.35 KB (10,595 bytes) | 0.4% |
@@ -102,7 +102,7 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **42 functions** across tooling scripts | Modular execution units |
+| **Python Function Definitions** | **46 functions** across tooling scripts | Modular execution units |
 | **Python Class Definitions** | **0 classes** | Structured state containers |
 
 ---

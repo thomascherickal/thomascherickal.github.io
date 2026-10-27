@@ -347,10 +347,10 @@ html_content = f"""<!DOCTYPE html>
 
     .metric-lbl {{
       font-family: 'JetBrains Mono', monospace;
-      font-size: 15px;
+      font-size: 13.5px;
       font-weight: 700;
       color: #CBD5E1;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
     }}
   </style>
@@ -394,19 +394,19 @@ html_content = f"""<!DOCTYPE html>
       <div class="metrics-grid">
         <div class="metric-card card-gold">
           <div class="metric-val val-gold">500+</div>
-          <div class="metric-lbl">Publications</div>
+          <div class="metric-lbl">Publications Online</div>
         </div>
         <div class="metric-card card-cyan">
           <div class="metric-val val-cyan">10+</div>
-          <div class="metric-lbl">Platforms</div>
+          <div class="metric-lbl">Publishing Platforms</div>
         </div>
         <div class="metric-card card-emerald">
           <div class="metric-val val-emerald">10+</div>
-          <div class="metric-lbl">Agent Teams</div>
+          <div class="metric-lbl">Coding Languages</div>
         </div>
         <div class="metric-card card-purple">
-          <div class="metric-val val-purple">20+</div>
-          <div class="metric-lbl">Local LLMs</div>
+          <div class="metric-val val-purple">2016</div>
+          <div class="metric-lbl">Writing &amp; Coding Since</div>
         </div>
       </div>
     </div>

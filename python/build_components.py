@@ -130,6 +130,12 @@ def build():
     except Exception as e:
         print(f"Warning: Metrics generation step failed: {e}")
 
+    try:
+        import sync_og_card
+        sync_og_card.sync_og_card()
+    except Exception as e:
+        print(f"Warning: OG card sync step failed: {e}")
+
 def watch():
     import time
     print(f"Watching {os.path.basename(HEADER_SRC)} and {os.path.basename(FOOTER_SRC)} for changes... (Press Ctrl+C to stop)")
