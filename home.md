@@ -346,6 +346,11 @@ A comprehensive transformation system showing professionals how to use frontier 
 - [HubPages (hubpages.com/@thomascherickal)](https://hubpages.com/@thomascherickal)
 - [Contently (thomascherickal.contently.com)](https://thomascherickal.contently.com)
 - [Kaggle (kaggle.com/thomascherickal)](https://www.kaggle.com/thomascherickal)
+- [LeetCode (leetcode.com/u/thomascherickal)](https://leetcode.com/u/thomascherickal)
+- [HackerRank (hackerrank.com/profile/thomascherickal)](https://hackerrank.com/profile/thomascherickal)
+- [CodeWars (codewars.com/users/thomascherickal)](https://www.codewars.com/users/thomascherickal)
+- [Code360 (naukri.com/code360/profile/thomascherickal)](https://www.naukri.com/code360/profile/thomascherickal)
+- [HackerEarth (hackerearth.com/@thomascherickal)](https://hackerearth.com/@thomascherickal)
 - [Exercism (exercism.org/profiles/thomascherickal)](https://exercism.org/profiles/thomascherickal)
 - [CodersRank (profile.codersrank.io/user/thomascherickal)](https://profile.codersrank.io/user/thomascherickal/)
 - [Deep-ML (deep-ml.com/profile/thomascherickal)](https://www.deep-ml.com/profile/thomascherickal)
@@ -359,4 +364,4 @@ A comprehensive transformation system showing professionals how to use frontier 
 - [Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)
 
 ---
-*© 2026 Thomas Cherickal · The Digital Futurist · Generative AI Consultant · Agentic AI Architect · AI Automation Expert · AI Trainer Live & Remote · Enterprise AI Integration · Local LLM Deployment · Claude AI Agent Orchestration · Remote Worldwide*
+*© 2026 Thomas Cherickal · The Digital Futurist · Generative AI Consultant · Agentic AI Architect · AI Automation Expert · AI Trainer Live, Hybrid & Remote · Local LLM Deployment · Claude AI Agent Orchestration · Remote Worldwide*
