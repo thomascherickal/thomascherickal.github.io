@@ -288,7 +288,7 @@ I structured [`schema.json`](file:///home/thomas/GitHub.io/thomascherickal.githu
 - **`WebSite`**: Canonical root indexing, search action URL templates, and publisher references.
 - **`Organization`**: Brand entity (`The Digital Futurist`), logo URLs, founding date (`2020-05-05`), area served (`Worldwide`), and `knowsAbout` taxonomic array.
 - **`Person`**: Author identity (`Thomas Cherickal`), verified profiles (`sameAs`), and contact endpoints.
-- **`OfferCatalog`**: Enumeration of all 16 standalone services, 2 flagship programs, and individual service picks ($1,000 Indiv / $2,000 Biz) with explicit currency (`USD`) and parity pricing descriptors.
+- **`OfferCatalog`**: Enumeration of all 16 standalone services, 2 flagship programs, and individual service picks ($100 Indiv / $200 Biz) with explicit currency (`USD`) and parity pricing descriptors.
 
 ### Rich Results on `faqs.html`
 On [`faqs.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/faqs.html), I embedded an exhaustive Schema.org `FAQPage` script containing **all 53 questions and answers**:

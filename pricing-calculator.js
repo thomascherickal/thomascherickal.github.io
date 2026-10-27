@@ -132,21 +132,21 @@
     const clientMode = params.clientMode || "business";
     const packageType = params.packageType || "pick-services";
     const selectedServices = params.selectedServices || ["service-generative-ai-transformation"];
-    const ratePerSvc = clientMode === "business" ? 2000 : 1000;
+    const ratePerSvc = clientMode === "business" ? 200 : 100;
 
-    let basePrice = 5000;
+    let basePrice = 2000;
     if (packageType === "pick-services") {
       const count = Math.max(1, selectedServices.length);
       basePrice = count * ratePerSvc;
     } else if (packageType === "pkg-business") {
-      basePrice = 5000;
+      basePrice = 2000;
     } else if (packageType === "pkg-personal") {
-      basePrice = 2500;
+      basePrice = 1000;
     } else if (packageType === "custom" && typeof params.customBase === 'number') {
       basePrice = params.customBase;
     }
 
-    const matchingFlagshipPrice = clientMode === "business" ? 5000 : 2500;
+    const matchingFlagshipPrice = clientMode === "business" ? 2000 : 1000;
     let flagshipCheaper = false;
     let flagshipPrice = matchingFlagshipPrice;
 
@@ -160,12 +160,12 @@
 
     let participants = clientMode === "individual" ? 1 : Math.max(1, parseInt(params.participants, 10) || 20);
     const extraParticipants = clientMode === "business" ? Math.max(0, participants - 20) : 0;
-    const extraHeadRate = Math.round(extraParticipants * 250 * tier.multiplier);
+    const extraHeadRate = Math.round(extraParticipants * 100 * tier.multiplier);
     const baseTierPrice = Math.round(basePrice * tier.multiplier);
     const finalPrice = baseTierPrice + extraHeadRate;
 
     const baseSavings = Math.round(basePrice * (tier.discountPercent / 100));
-    const extraSavings = Math.round(extraParticipants * 250 * (tier.discountPercent / 100));
+    const extraSavings = Math.round(extraParticipants * 100 * (tier.discountPercent / 100));
     const totalSavings = baseSavings + extraSavings;
 
     return {
@@ -196,7 +196,7 @@
 
     let activeTier = 1;
     let clientMode = "business"; // "business" or "individual"
-    let standardBasePrice = 5000;
+    let standardBasePrice = 2000;
     let selectedServices = ["service-generative-ai-transformation"];
 
     const btnModeBusiness = document.getElementById("btn-mode-business");
@@ -250,7 +250,7 @@
     }
 
     function updateFromServicesSelection() {
-      const ratePerSvc = clientMode === "business" ? 2000 : 1000;
+      const ratePerSvc = clientMode === "business" ? 200 : 100;
       const count = selectedServices.length;
       standardBasePrice = Math.max(count * ratePerSvc, ratePerSvc);
 
@@ -302,8 +302,8 @@
           calcParticipants.value = Math.max(20, parseInt(calcParticipants.value, 10) || 20);
           calcParticipants.disabled = false;
         }
-        if (calcParticipantsHint) calcParticipantsHint.textContent = "Business: 1-20 Included (+$250/extra seat)";
-        if (calcParticipantsDesc) calcParticipantsDesc.textContent = "Business base covers up to 20 participants (additional seats are $250 USD per seat scaled by country parity).";
+        if (calcParticipantsHint) calcParticipantsHint.textContent = "Business: 1-20 Included (+$100/extra seat)";
+        if (calcParticipantsDesc) calcParticipantsDesc.textContent = "Business base covers up to 20 participants (additional seats are $100 USD per seat scaled by country parity).";
       } else {
         btnModeIndividual.classList.add("active");
         btnModeBusiness.classList.remove("active");
@@ -319,15 +319,15 @@
         updateFromServicesSelection();
       } else if (calcPackage && calcPackage.value === "pkg-business" && mode === "individual") {
         calcPackage.value = "pkg-personal";
-        standardBasePrice = 2500;
+        standardBasePrice = 1000;
         const tier = PARITY_TIERS[activeTier];
-        if (calcCustomAmount && tier) calcCustomAmount.value = Math.round(2500 * tier.multiplier);
+        if (calcCustomAmount && tier) calcCustomAmount.value = Math.round(1000 * tier.multiplier);
         updateCalculator();
       } else if (calcPackage && calcPackage.value === "pkg-personal" && mode === "business") {
         calcPackage.value = "pkg-business";
-        standardBasePrice = 5000;
+        standardBasePrice = 2000;
         const tier = PARITY_TIERS[activeTier];
-        if (calcCustomAmount && tier) calcCustomAmount.value = Math.round(5000 * tier.multiplier);
+        if (calcCustomAmount && tier) calcCustomAmount.value = Math.round(2000 * tier.multiplier);
         updateCalculator();
       } else {
         updateCalculator();
@@ -355,7 +355,7 @@
             indivPriceEl.textContent = "Custom quote - contact Thomas";
             indivPriceEl.style.color = "#00f0ff";
           } else {
-            const calculated = Math.round(1000 * mult);
+            const calculated = Math.round(100 * mult);
             indivPriceEl.textContent = "$" + calculated.toLocaleString("en-US") + " USD" + (tier.id > 1 ? ` (T${tier.id})` : "");
             indivPriceEl.style.color = tier.badgeColor;
           }
@@ -366,7 +366,7 @@
             bizPriceEl.textContent = "Custom quote - contact Thomas";
             bizPriceEl.style.color = "#00f0ff";
           } else {
-            const calculated = Math.round(2000 * mult);
+            const calculated = Math.round(200 * mult);
             bizPriceEl.textContent = "$" + calculated.toLocaleString("en-US") + " USD" + (tier.id > 1 ? ` (T${tier.id})` : "");
             bizPriceEl.style.color = tier.badgeColor;
           }
@@ -596,10 +596,10 @@
           if (servicesMultiSelectWrap) servicesMultiSelectWrap.style.display = "none";
           if (selectedOpt.value === "pkg-business") {
             setClientMode("business");
-            standardBasePrice = 5000;
+            standardBasePrice = 2000;
           } else if (selectedOpt.value === "pkg-personal") {
             setClientMode("individual");
-            standardBasePrice = 2500;
+            standardBasePrice = 1000;
           } else if (selectedOpt.value === "custom") {
             calcCustomAmount.focus();
             calcCustomAmount.select();

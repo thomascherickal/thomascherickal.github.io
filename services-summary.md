@@ -9,9 +9,9 @@ Consolidated executive overview, training time limits, and compressed deliverabl
 Clients have the flexibility to either enroll in comprehensive multi-week transformation programs or pick and choose individual services tailored to specific technical needs:
 
 1. **Individual Service Picks (Pick & Choose)**:
-   - **Personal / 1-on-1**: **$1,000 USD per service** (strictly 1 person), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
-   - **Business / Organizations**: **$2,000 USD per service** (cohorts up to 20 participants, +$250/extra seat), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
-   - **Purchasing Power Parity (PPP)**: Available across all 6 parity tiers for every individual service pick (Individual: $1,000 / $750 / $500 / $500 / $250 / $100; Business: $2,000 / $1,500 / $1,000 / $1,000 / $500 / $200).
+   - **Personal / 1-on-1**: **$100 USD per service** (strictly 1 person), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
+   - **Business / Organizations**: **$200 USD per service** (cohorts up to 20 participants, +$100/extra seat), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
+   - **Purchasing Power Parity (PPP)**: Available across all 6 parity tiers for every individual service pick (Individual: $100 / $75 / $50 / $50 / $25 / $10; Business: $200 / $150 / $100 / $100 / $50 / $20).
 
 2. **Flagship Transformation Programs (Comprehensive Engagement)**:
 
@@ -21,10 +21,10 @@ Clients have the flexibility to either enroll in comprehensive multi-week transf
 | **Training Duration** | 5 days live engineering | 5 days live engineering | 30 days hands-on engineering | 15 days intensive instruction |
 | **Included Support Period** | 5 days dedicated support | 5 days dedicated support | 30 days guidance & materials | 15 days guidance & materials |
 | **Total Coverage** | 10 days total coverage | 10 days total coverage | 60 days total coverage | 30 days total coverage |
-| **Audience & Cohort Size** | Strictly 1 person | Up to 20 seats (+ $250/extra) | Up to 20 seats (+ $250/extra) | Strictly 1 person |
+| **Audience & Cohort Size** | Strictly 1 person | Up to 20 seats (+ $100/extra) | Up to 20 seats (+ $100/extra) | Strictly 1 person |
 | **Scope** | Pick & choose single service | Pick & choose single service | Full organizational rollout | Full 1-on-1 career mastery |
-| **Standard Base Rate** | **$1,000 USD** per service | **$2,000 USD** per service | **$5,000 USD** for 60 days | **$2,500 USD** for 30 days |
-| **Purchasing Power Parity** | 6 Tiers: $1,000 to $100 | 6 Tiers: $2,000 to $200 | 6 Tiers: $5,000 to Subsidized | 6 Tiers: $2,500 to $250 |
+| **Standard Base Rate** | **$100 USD** per service | **$200 USD** per service | **$2,000 USD** for 60 days | **$1,000 USD** for 30 days |
+| **Purchasing Power Parity** | 6 Tiers: $100 to $10 | 6 Tiers: $200 to $20 | 6 Tiers: $2,000 to Subsidized | 6 Tiers: $1,000 to $100 |
 | **Upfront Advance Fee** | $0 advance | $0 advance | $0 advance | $0 advance |
 | **Milestone Structure** | Delivered then settled | Delivered then settled | 5 equal milestones | 5 equal milestones |
 | **Intellectual Property** | 100% commercial IP transfer | 100% commercial IP transfer | 100% commercial IP transfer | 100% commercial IP transfer |
@@ -124,7 +124,7 @@ A dedicated 1-on-1 acceleration program engineered strictly for one person only 
 - **Sprint Structure**: 15 days of intensive live instruction + 15 days of guidance and detailed guides and materials (30-day experience).
 - **Guidance & Doubts Clarification**: Ongoing daily access to review real-world implementations, debug agent pipelines, and solve production blockers.
 - **Detailed Guides & Materials**: In-depth architecture blueprints, runbooks, and cheat sheets designed for rapid daily lookup and long-term reference.
-- **Pricing & Parity**: **$2,500 USD base rate** with 195-country Purchasing Power Parity ($2,500 / $1,875 / $1,250 / $1,250 / $625 / $250).
+- **Pricing & Parity**: **$1,000 USD base rate** with 195-country Purchasing Power Parity ($1,000 / $750 / $500 / $500 / $250 / $100).
 - **$0 Upfront Commitment**: Zero advance fee; billed in 5 equal milestones due after milestones are delivered.
 - **100% IP Transfer**: Complete commercial ownership and copyright assignment of all code, prompts, and runbooks developed.
 - **URL**: [https://thomascherickal.github.io/personal-ai-training.html](https://thomascherickal.github.io/personal-ai-training.html)

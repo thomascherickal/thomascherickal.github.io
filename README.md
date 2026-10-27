@@ -227,18 +227,18 @@ graph TD
 Clients have complete autonomy to choose how they engage:
 
 1. **Individual Service Picks (Pick & Choose)**:
-   - **Personal / 1-on-1**: **$1,000 USD per service** (strictly 1 person), covers **5 days of live training + 5 days of dedicated support** (10 days total coverage per service).
-   - **Business / Organizations**: **$2,000 USD per service** (cohorts up to 20 participants included, +$250 USD per extra seat), covers **5 days of live training + 5 days of dedicated support** (10 days total coverage per service).
+   - **Personal / 1-on-1**: **$100 USD per service** (strictly 1 person), covers **5 days of live training + 5 days of dedicated support** (10 days total coverage per service).
+   - **Business / Organizations**: **$200 USD per service** (cohorts up to 20 participants included, +$100 USD per extra seat), covers **5 days of live training + 5 days of dedicated support** (10 days total coverage per service).
    - **Purchasing Power Parity (PPP)**: Applies across all 6 tiers for all individual service picks.
 
 2. **Flagship Transformation Programs (Comprehensive Immersion)**:
-   - **Business Training Flagship**: **$5,000 USD for 60 days** (30 days live hands-on engineering training + 30 days guidance and detailed guides and materials). Includes cohorts up to 20 participants (extra seats at $250 USD per seat).
-   - **Personal Training Flagship**: **$2,500 USD for 30 days** (15 days intensive 1-on-1 sprint + 15 days guidance and detailed guides and materials). Strictly for 1 person only.
+   - **Business Training Flagship**: **$2,000 USD for 60 days** (30 days live hands-on engineering training + 30 days guidance and detailed guides and materials). Includes cohorts up to 20 participants (extra seats at $100 USD per seat).
+   - **Personal Training Flagship**: **$1,000 USD for 30 days** (15 days intensive 1-on-1 sprint + 15 days guidance and detailed guides and materials). Strictly for 1 person only.
 
 ### Cohort Pricing & Scale-Out Policy
 1. **Fixed Base Rate for up to 20 Seats**: Every Business engagement carries a fixed base rate covering up to 20 participants.
-2. **Scale-Out Additional Head Charges**: Beyond 20 seats, cohorts are billed at a flat **$250 USD per additional participant**.
-3. **Parity Applied to Scale-Out**: The qualifying Country Parity multiplier applies directly to the additional seat fee as well (e.g., Tier 2 pays $188/head; Tier 3 & 4 pay $125/head; Tier 5 pays $63/head; Tier 6 pays $25/head).
+2. **Scale-Out Additional Head Charges**: Beyond 20 seats, cohorts are billed at a flat **$100 USD per additional participant**.
+3. **Parity Applied to Scale-Out**: The qualifying Country Parity multiplier applies directly to the additional seat fee as well (e.g., Tier 2 pays $75/head; Tier 3 & 4 pay $50/head; Tier 5 pays $25/head; Tier 6 pays $10/head).
 4. **Custom Enterprise MSAs**: For organizations rolling out training across 50 to 5,000+ employees across international divisions, custom enterprise master service agreements provide volume discounts and dedicated sandbox infrastructure.
 
 ### Complete Inclusions

@@ -111,14 +111,14 @@ Graduates emerge operating as high-leverage solo powerhouses
 ### 5. What is the investment and structure for Personal Training?
 *Personal:
  Pricing Offer · FAQ #24*  
-Personal Training is $2,500 USD in Tier 1 for 30 days total (15 days training, + 15 days guidance and detailed guides and materials). Strictly for 1 person only. Clients are encouraged to choose services relevant to their work or interests.
+Personal Training is $1,000 USD in Tier 1 for 30 days total (15 days training, + 15 days guidance and detailed guides and materials). Strictly for 1 person only. Clients are encouraged to choose services relevant to their work or interests.
 
 - Zero Corporate Overhead: For independent builders, corporate coordination
  (multi-tier approvals, vendor compliance, multi-tenant sandboxes) disappears entirely, moving
  directly at founder speed.
 
-- 195-Country Parity Scaled: The $2,500 baseline cascades through all 6 Purchasing
- Power Parity tiers, scaling from $2,500 in Tier 1 down to $250 in Tier 6.
+- 195-Country Parity Scaled: The $1,000 baseline cascades through all 6 Purchasing
+ Power Parity tiers, scaling from $1,000 in Tier 1 down to $100 in Tier 6.
 
 - Tailored Focus: Clients select specific tools and architectures relevant to their workflows (local LLMs, Claude agent teams, Gemini agents, workflow automation, and custom tooling) on their own workstations.
 
@@ -192,23 +192,23 @@ Purchasing Power Parity applies unconditionally to Personal Training across six 
 
 - Tier 1: World Bank High-Income Economies (USA, Canada, UK, Germany, France, Poland, Czech
  Republic, Hungary, Greece, Romania, Japan, South Korea, Singapore, Australia, Chile, UAE, Saudi
- Arabia): $2,500 USD rate (100% standard).
+ Arabia): $1,000 USD rate (100% standard).
 
 - Tier 2: Upper-Middle-Income Economies (Brazil, Mexico, Colombia, Argentina, Peru, Ecuador,
  Guatemala, Türkiye, Malaysia, Thailand, Indonesia, South Africa, Vietnam, the Philippines, Sri
- Lanka): $1,875 USD rate (25% parity discount).
+ Lanka): $750 USD rate (25% parity discount).
 
 - Tier 3: Lower-Middle & Low-Income Economies (India, Bangladesh, Pakistan, Nepal,
  Bhutan, Kenya, Nigeria, Ghana, Egypt, Morocco, Tanzania, Bolivia, Cambodia, Laos, Myanmar,
- Ethiopia, Uganda, Rwanda): $1,250 USD rate (50% parity discount).
+ Ethiopia, Uganda, Rwanda): $500 USD rate (50% parity discount).
 
-- Tier 4: Early-Stage Startups (<$1M Funding): $1,250 USD rate (50% flat startup
+- Tier 4: Early-Stage Startups (<$1M Funding): $500 USD rate (50% flat startup
  discount).
 
-- Tier 5: Academia, Researchers & Non-Profits: $625 USD rate (75% academic
+- Tier 5: Academia, Researchers & Non-Profits: $250 USD rate (75% academic
  discount).
 
-- Tier 6: Crisis-Affected & Under-Resourced Regions: $250 USD rate (Custom
+- Tier 6: Crisis-Affected & Under-Resourced Regions: $100 USD rate (Custom
  subsidized quote / nominal honorarium).
 
 Tiers follow the current World Bank income classification, updated each July.
@@ -229,8 +229,8 @@ No. Personal Training is strictly for one person only (private 1-on-1
  private local models, and personal productivity workflow.
 
 - Business Training for Teams: If you wish to train a founding team, corporate
- department, or developer cohort, explore our Business Training ($5,000 USD for 60 Days),
- which covers up to 20 participants in its fixed base rate (with additional seats at $250/head scaled
+ department, or developer cohort, explore our Business Training ($2,000 USD for 60 Days),
+ which covers up to 20 participants in its fixed base rate (with additional seats at $100/head scaled
  by parity).
 
 ---
@@ -541,7 +541,7 @@ Global MNCs gain a consistent, world-class standard of agentic software engineer
  20-participant quota and 30-day training plus 30-day support guarantee cover?
 *Pricing:
  Enterprise Guarantee · FAQ #13*  
-Our Business Training bookings feature a fixed base investment of $5,000 USD covering up to 20
+Our Business Training bookings feature a fixed base investment of $2,000 USD covering up to 20
  participants for 60 days (30 days training + 30 days guidance and detailed guides and materials).
  There are no hidden licensing royalties or hourly surprise fees.
 
@@ -554,7 +554,7 @@ Our Business Training bookings feature a fixed base investment of $5,000 USD cov
  handbooks, and reproducible starter repositories included.
 
 - Up to 20 Learners Included: Base fee covers up to 20 participants. Additional
- seats scale transparently at $250 USD per head (adjusted by country parity tier).
+ seats scale transparently at $100 USD per head (adjusted by country parity tier).
 
 - Graduate Discord Community & 100% IP: Access to the alumni Discord and
  complete unrestricted intellectual property assignment.
@@ -568,22 +568,22 @@ This 30+30 dual guarantee ensures your organization achieves lasting capability 
 *Pricing:
  Scale-Out · FAQ #14*  
 When a team desires to include more than 20 participants in a single Business Training cohort, pricing scales
- simply, transparently, and predictably: $250 USD per additional seat.
+ simply, transparently, and predictably: $100 USD per additional seat.
 
 - Parity Discounts Apply Directly: The qualifying country parity multiplier applies
- to the $250 per-head fee as well.
+ to the $100 per-head fee as well.
 
-- Tier 1 (Standard): $250 USD per additional participant.
+- Tier 1 (Standard): $100 USD per additional participant.
 
-- Tier 2 (25% Parity Discount): $188 USD per additional participant (0.75X).
+- Tier 2 (25% Parity Discount): $75 USD per additional participant (0.75X).
 
-- Tier 3 & Tier 4 (50% Parity / Startup Discount): $125 USD per additional
+- Tier 3 & Tier 4 (50% Parity / Startup Discount): $50 USD per additional
  participant (0.50X).
 
-- Tier 5 (75% Academia / Non-Profit Discount): $63 USD per additional
+- Tier 5 (75% Academia / Non-Profit Discount): $25 USD per additional
  participant (0.25X).
 
-- Tier 6 (Radical Equity / Subsidized): $25 USD / subsidized micro-rates evaluated
+- Tier 6 (Radical Equity / Subsidized): $10 USD / subsidized micro-rates evaluated
  case-by-case.
 
 Every participant receives full access to digital runbooks, sandboxes, post-training support, and the
@@ -619,9 +619,9 @@ I reply to every inquiry within one week (a little busy with current work).
  Individual Services · FAQ #52*  
 Yes, absolutely. Clients have complete freedom to pick and choose individual services from our 16-service catalogue without committing to a full multi-week transformation package.
 
-- Individual / Personal Pricing: $1,000 USD per service strictly for 1 person only (private 1-on-1 sprint).
+- Individual / Personal Pricing: $100 USD per service strictly for 1 person only (private 1-on-1 sprint).
 
-- Business / Organization Pricing: $2,000 USD per service for up to 20 team participants (additional seats at $250 USD per seat).
+- Business / Organization Pricing: $200 USD per service for up to 20 team participants (additional seats at $100 USD per seat).
 
 - Delivery Cadence: Every individual service includes 5 days of live, hands-on engineering training followed by 5 days of dedicated operational support and doubt clarification (10 days total coverage per service).
 
@@ -636,9 +636,9 @@ Individual service picks allow teams to solve high-priority architectural bottle
  Parity on Services · FAQ #53*  
 Yes. Parity pricing is universally available for all service pricing across our entire offering catalogue and across all 195 countries.
 
-- Individual Pick Parity Rates ($1,000 Base): Tier 1 (100%): $1,000 | Tier 2 (25% off): $750 | Tier 3 & 4 (50% off): $500 | Tier 5 (75% off): $250 | Tier 6 (Subsidized): $100 USD.
+- Individual Pick Parity Rates ($100 Base): Tier 1 (100%): $100 | Tier 2 (25% off): $75 | Tier 3 & 4 (50% off): $50 | Tier 5 (75% off): $25 | Tier 6 (Subsidized): $10 USD.
 
-- Business Pick Parity Rates ($2,000 Base): Tier 1 (100%): $2,000 | Tier 2 (25% off): $1,500 | Tier 3 & 4 (50% off): $1,000 | Tier 5 (75% off): $500 | Tier 6 (Subsidized): $200 USD.
+- Business Pick Parity Rates ($200 Base): Tier 1 (100%): $200 | Tier 2 (25% off): $150 | Tier 3 & 4 (50% off): $100 | Tier 5 (75% off): $50 | Tier 6 (Subsidized): $20 USD.
 
 - Transparent Application: Select your country or entity category in our interactive pricing calculator to instantly calibrate and lock in your parity rate.
 
@@ -796,8 +796,8 @@ Qualification for Tier 5 (75% Parity Discount / $500 USD per 1-month service) is
  prominent public-interest open-source software libraries, research labs, or non-commercial AI
  evaluation initiatives.
 
-- Additional seats: Tier 5 cohorts get the 75% discount on extra seats too: $63
- per additional participant instead of the standard $250.
+- Additional seats: Tier 5 cohorts get the 75% discount on extra seats too: $25
+ per additional participant instead of the standard $100.
 
 I reply to every inquiry within one week (a little busy with current work).
 

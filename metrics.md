@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-10-27 07:54:04 UTC` | Branch: `main` | Head Commit: `c525c24`
+> **Automated Status Report** | Generated on `2026-10-27 09:55:47 UTC` | Branch: `main` | Head Commit: `fb97c92`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **270** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **87,108** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **78,059** | Executable / renderable content lines |
+| **Total Lines of Source Code & Content** | **87,101** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **78,052** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **3,136** | In-code and architectural documentation |
 | **Blank / Spacing Lines** | **5,913** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **13.87 MB (14,539,141 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **217,473 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **405** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-10-27** | Subject: "Chore: Update sync state and metrics after clean build" |
+| **Total Repository Size (Tracked Assets)** | **13.86 MB (14,537,093 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **217,271 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **407** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-10-27** | Subject: "Update pricing structure across repo: 000 Business Flagship, 000 Personal Flagship, 00 Business service pick, 00 Individual service pick, 00 extra seat" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,15 +27,15 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 54 | 54,930 | 4.03 MB (4,230,818 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 54 | 54,930 | 4.03 MB (4,229,779 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 17 | 11,124 | 259.32 KB (265,541 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 3 | 1,388 | 50.70 KB (51,921 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 10 | 3,177 | 137.02 KB (140,310 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 62 | 8,237 | 507.66 KB (519,845 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 40 | 8,204 | 348.66 KB (357,025 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **JavaScript Scripts** | 3 | 1,380 | 50.53 KB (51,746 bytes) | Client-side interactivity, search, filter & components |
+| **Python Tooling** | 10 | 3,178 | 137.04 KB (140,324 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 62 | 8,237 | 507.17 KB (519,346 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 40 | 8,204 | 348.35 KB (356,711 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 37 | 48 | 61.43 KB (62,907 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 40 | 0 | 8.45 MB (8,862,139 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 7 | 0 | 47.50 KB (48,635 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 7 | 0 | 47.46 KB (48,600 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,18 +43,18 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 54 | 54,930 | 4.03 MB (4,230,818 bytes) | 20.0% |
+| `.html` | 54 | 54,930 | 4.03 MB (4,229,779 bytes) | 20.0% |
 | `.css` | 17 | 11,124 | 259.32 KB (265,541 bytes) | 6.3% |
-| `.md` | 62 | 8,237 | 507.66 KB (519,845 bytes) | 23.0% |
-| `.json` | 40 | 8,204 | 348.66 KB (357,025 bytes) | 14.8% |
-| `.py` | 10 | 3,177 | 137.02 KB (140,310 bytes) | 3.7% |
-| `.js` | 3 | 1,388 | 50.70 KB (51,921 bytes) | 1.1% |
+| `.md` | 62 | 8,237 | 507.17 KB (519,346 bytes) | 23.0% |
+| `.json` | 40 | 8,204 | 348.35 KB (356,711 bytes) | 14.8% |
+| `.py` | 10 | 3,178 | 137.04 KB (140,324 bytes) | 3.7% |
+| `.js` | 3 | 1,380 | 50.53 KB (51,746 bytes) | 1.1% |
 | `.svg` | 37 | 48 | 61.43 KB (62,907 bytes) | 13.7% |
 | `.jpg` | 10 | 0 | 5.26 MB (5,517,051 bytes) | 3.7% |
 | `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 7.4% |
 | `.png` | 8 | 0 | 717.16 KB (734,367 bytes) | 3.0% |
 | `.jpeg` | 1 | 0 | 622.42 KB (637,354 bytes) | 0.4% |
-| `.txt` | 2 | 0 | 27.11 KB (27,756 bytes) | 0.7% |
+| `.txt` | 2 | 0 | 27.07 KB (27,721 bytes) | 0.7% |
 | `.docx` | 1 | 0 | 10.34 KB (10,592 bytes) | 0.4% |
 | `.xml` | 1 | 0 | 9.43 KB (9,656 bytes) | 0.4% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.4% |
@@ -98,7 +98,7 @@
 | [`python/build_components.py`](python/build_components.py) | Central component inliner for `header.html` and `footer.html` across all HTML pages | Inliner, Parser, Watcher |
 | [`python/sync_pricing.py`](python/sync_pricing.py) | Single source of truth for 6-tier parity pricing calculations & schema injection | Rate Calculator, Parity Engine, Schema Generator |
 | [`python/md_html_sync.py`](python/md_html_sync.py) | Bi-directional synchronization between HTML pages and Markdown mirrors | HTML-to-MD Parser, State Tracker |
-| [`python/generate_metrics.py`](python/generate_metrics.py) | Automated metrics engine producing this `Metrics.md` document | Repository Scanner, Code Analyzer |
+| [`python/generate_metrics.py`](python/generate_metrics.py) | Automated metrics engine producing this `metrics.md` document | Repository Scanner, Code Analyzer |
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
@@ -123,7 +123,7 @@
 
 ## 8. Automated Update Triggers
 
-`Metrics.md` is automatically kept in sync by the following mechanisms:
+`metrics.md` is automatically kept in sync by the following mechanisms:
 1. **Local Build Pipeline**: Invoked whenever `python3 python/build_components.py` or `python3 python/generate_metrics.py` is executed.
 2. **Git Pre-Commit Hook**: Automated execution during commit creation.
 3. **Git Pre-Push Hook**: Automated recalculation before every `git push` to origin.

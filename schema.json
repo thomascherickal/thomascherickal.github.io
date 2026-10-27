@@ -82,7 +82,7 @@
       "@type": "OfferCatalog",
       "@id": "https://thomascherickal.github.io/pricing.html#offercatalog",
       "name": "Services Pricing & Engagement Packages - Thomas Cherickal",
-      "description": "Transparent AI engagement model: Pick individual services at $1,000 USD per service for individuals and $2,000 USD per service for businesses (each covering 5 days of training + 5 days of dedicated support, 10 days total coverage). Clients can also choose our comprehensive programs: Business Training at $5,000 USD for 60 days (30 days training + 30 days guidance/materials, up to 20 participants, +$250 per extra seat) and Personal Training at $2,500 USD for 30 days (15 days training + 15 days guidance/materials, 1 person only). Full 195-country Purchasing Power Parity (PPP) supported across all service pricing.",
+      "description": "Transparent AI engagement model: Pick individual services at $100 USD per service for individuals and $200 USD per service for businesses (each covering 5 days of training + 5 days of dedicated support, 10 days total coverage). Clients can also choose our comprehensive programs: Business Training at $2,000 USD for 60 days (30 days training + 30 days guidance/materials, up to 20 participants, +$100 per extra seat) and Personal Training at $1,000 USD for 30 days (15 days training + 15 days guidance/materials, 1 person only). Full 195-country Purchasing Power Parity (PPP) supported across all service pricing.",
       "url": "https://thomascherickal.github.io/pricing.html",
       "offeredBy": {
         "@id": "https://thomascherickal.github.io/#person"
@@ -91,32 +91,32 @@
         {
           "@type": "Offer",
           "name": "Individual Service Pick (Personal / 1-on-1)",
-          "description": "Pick individual services at $1,000 USD per service for individuals, covering 5 days of live training plus 5 days of dedicated support (10 days total coverage per service). Strictly 1 person only. Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 $1,000; Tier 2 (25% off) $750; Tier 3 & 4 (50% off) $500; Tier 5 (75% off) $250; Tier 6 custom subsidized relief ($100).",
-          "price": "1000.00",
+          "description": "Pick individual services at $100 USD per service for individuals, covering 5 days of live training plus 5 days of dedicated support (10 days total coverage per service). Strictly 1 person only. Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 $100; Tier 2 (25% off) $75; Tier 3 & 4 (50% off) $50; Tier 5 (75% off) $25; Tier 6 custom subsidized relief ($10).",
+          "price": "100.00",
           "priceCurrency": "USD",
           "priceSpecification": [
             {
               "@type": "PriceSpecification",
               "name": "Tier 1 (Standard / 100%)",
-              "price": "1000.00",
+              "price": "100.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
               "name": "Tier 2 (Developing / 25% Off)",
-              "price": "750.00",
+              "price": "75.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
               "name": "Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off)",
-              "price": "500.00",
+              "price": "50.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
               "name": "Tier 5 (Academia & Non-Profits / 75% Off)",
-              "price": "250.00",
+              "price": "25.00",
               "priceCurrency": "USD"
             },
             {
@@ -131,7 +131,47 @@
         {
           "@type": "Offer",
           "name": "Individual Service Pick (Business / Teams)",
-          "description": "Pick individual services at $2,000 USD per service for businesses, covering 5 days of live training plus 5 days of dedicated support (10 days total coverage per service). Covers cohorts up to 20 participants (additional seats at $250 USD per seat). Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 $2,000; Tier 2 (25% off) $1,500; Tier 3 & 4 (50% off) $1,000; Tier 5 (75% off) $500; Tier 6 custom subsidized relief ($200).",
+          "description": "Pick individual services at $200 USD per service for businesses, covering 5 days of live training plus 5 days of dedicated support (10 days total coverage per service). Covers cohorts up to 20 participants (additional seats at $100 USD per seat). Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 $200; Tier 2 (25% off) $150; Tier 3 & 4 (50% off) $100; Tier 5 (75% off) $50; Tier 6 custom subsidized relief ($20).",
+          "price": "200.00",
+          "priceCurrency": "USD",
+          "priceSpecification": [
+            {
+              "@type": "PriceSpecification",
+              "name": "Tier 1 (Standard / 100%)",
+              "price": "200.00",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "PriceSpecification",
+              "name": "Tier 2 (Developing / 25% Off)",
+              "price": "150.00",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "PriceSpecification",
+              "name": "Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off)",
+              "price": "100.00",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "PriceSpecification",
+              "name": "Tier 5 (Academia & Non-Profits / 75% Off)",
+              "price": "50.00",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "PriceSpecification",
+              "name": "Tier 6 (Custom Subsidized Relief)",
+              "price": "0.00",
+              "priceCurrency": "USD",
+              "description": "Micro-rates and customized quotes for under-resourced teams"
+            }
+          ]
+        },
+        {
+          "@type": "Offer",
+          "name": "Business Training (Comprehensive Program)",
+          "description": "Comprehensive Business Training at $2,000 USD for 60 days (30 days training + 30 days guidance and detailed guides and materials). Includes up to 20 participants. Additional seats at $100 USD per seat. Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 $2,000; Tier 2 (25% off) $1,500; Tier 3 & 4 (50% off) $1,000; Tier 5 (75% off) $500; Tier 6 custom subsidized relief.",
           "price": "2000.00",
           "priceCurrency": "USD",
           "priceSpecification": [
@@ -170,73 +210,33 @@
         },
         {
           "@type": "Offer",
-          "name": "Business Training (Comprehensive Program)",
-          "description": "Comprehensive Business Training at $5,000 USD for 60 days (30 days training + 30 days guidance and detailed guides and materials). Includes up to 20 participants. Additional seats at $250 USD per seat. Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 2 (25% off) $3,750; Tier 3 & 4 (50% off) $2,500; Tier 5 (75% off) $1,250; Tier 6 custom subsidized relief.",
-          "price": "5000.00",
-          "priceCurrency": "USD",
-          "priceSpecification": [
-            {
-              "@type": "PriceSpecification",
-              "name": "Tier 1 (Standard / 100%)",
-              "price": "5000.00",
-              "priceCurrency": "USD"
-            },
-            {
-              "@type": "PriceSpecification",
-              "name": "Tier 2 (Developing / 25% Off)",
-              "price": "3750.00",
-              "priceCurrency": "USD"
-            },
-            {
-              "@type": "PriceSpecification",
-              "name": "Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off)",
-              "price": "2500.00",
-              "priceCurrency": "USD"
-            },
-            {
-              "@type": "PriceSpecification",
-              "name": "Tier 5 (Academia & Non-Profits / 75% Off)",
-              "price": "1250.00",
-              "priceCurrency": "USD"
-            },
-            {
-              "@type": "PriceSpecification",
-              "name": "Tier 6 (Custom Subsidized Relief)",
-              "price": "0.00",
-              "priceCurrency": "USD",
-              "description": "Micro-rates and customized quotes for under-resourced teams"
-            }
-          ]
-        },
-        {
-          "@type": "Offer",
           "name": "Personal Training (Comprehensive Program)",
-          "description": "Comprehensive Personal Training at $2,500 USD for 30 days (15 days training + 15 days guidance and detailed guides and materials). Strictly for 1 person only. Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 2 (25% off) $1,875; Tier 3 & 4 (50% off) $1,250; Tier 5 (75% off) $625; Tier 6 custom subsidized relief ($100-$250).",
-          "price": "2500.00",
+          "description": "Comprehensive Personal Training at $1,000 USD for 30 days (15 days training + 15 days guidance and detailed guides and materials). Strictly for 1 person only. Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 $1,000; Tier 2 (25% off) $750; Tier 3 & 4 (50% off) $500; Tier 5 (75% off) $250; Tier 6 custom subsidized relief ($100).",
+          "price": "1000.00",
           "priceCurrency": "USD",
           "priceSpecification": [
             {
               "@type": "PriceSpecification",
               "name": "Tier 1 (Standard / 100%)",
-              "price": "2500.00",
+              "price": "1000.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
               "name": "Tier 2 (Developing / 25% Off)",
-              "price": "1875.00",
+              "price": "750.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
               "name": "Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off)",
-              "price": "1250.00",
+              "price": "500.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
               "name": "Tier 5 (Academia & Non-Profits / 75% Off)",
-              "price": "625.00",
+              "price": "250.00",
               "priceCurrency": "USD"
             },
             {

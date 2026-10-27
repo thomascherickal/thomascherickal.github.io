@@ -45,7 +45,7 @@ function runTestSuite() {
     `Expected 16 services, found ${PricingCalculator.ALL_SERVICES_DATA.length}`
   );
 
-  // 2. Individual Pick Unit Tests ($1,000 base, strictly 1 person)
+  // 2. Individual Pick Unit Tests ($100 base, strictly 1 person)
   const indivT1 = PricingCalculator.calculatePricing({
     tierId: 1,
     clientMode: "individual",
@@ -54,9 +54,9 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Individual Pick 1 service @ Tier 1 = $1,000 USD",
-    indivT1.finalPrice === 1000 && indivT1.participants === 1,
-    `Expected $1000 with 1 participant, got $${indivT1.finalPrice} with ${indivT1.participants}`
+    "Individual Pick 1 service @ Tier 1 = $100 USD",
+    indivT1.finalPrice === 100 && indivT1.participants === 1,
+    `Expected $100 with 1 participant, got $${indivT1.finalPrice} with ${indivT1.participants}`
   );
 
   const indivT2 = PricingCalculator.calculatePricing({
@@ -67,9 +67,9 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Individual Pick 1 service @ Tier 2 (25% off) = $750 USD",
-    indivT2.finalPrice === 750 && indivT2.totalSavings === 250,
-    `Expected $750 price and $250 savings, got price $${indivT2.finalPrice} and savings $${indivT2.totalSavings}`
+    "Individual Pick 1 service @ Tier 2 (25% off) = $75 USD",
+    indivT2.finalPrice === 75 && indivT2.totalSavings === 25,
+    `Expected $75 price and $25 savings, got price $${indivT2.finalPrice} and savings $${indivT2.totalSavings}`
   );
 
   const indivT3 = PricingCalculator.calculatePricing({
@@ -80,9 +80,9 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Individual Pick 1 service @ Tier 3 (50% off) = $500 USD",
-    indivT3.finalPrice === 500 && indivT3.totalSavings === 500,
-    `Expected $500 price and $500 savings, got price $${indivT3.finalPrice}`
+    "Individual Pick 1 service @ Tier 3 (50% off) = $50 USD",
+    indivT3.finalPrice === 50 && indivT3.totalSavings === 50,
+    `Expected $50 price and $50 savings, got price $${indivT3.finalPrice}`
   );
 
   const indivT5 = PricingCalculator.calculatePricing({
@@ -93,9 +93,9 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Individual Pick 1 service @ Tier 5 (75% off) = $250 USD",
-    indivT5.finalPrice === 250 && indivT5.totalSavings === 750,
-    `Expected $250 price and $750 savings, got price $${indivT5.finalPrice}`
+    "Individual Pick 1 service @ Tier 5 (75% off) = $25 USD",
+    indivT5.finalPrice === 25 && indivT5.totalSavings === 75,
+    `Expected $25 price and $75 savings, got price $${indivT5.finalPrice}`
   );
 
   // 3. Multi-Service Selection Tests (Individuals)
@@ -111,9 +111,9 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Individual Pick 3 services @ Tier 1 = $3,000 USD",
-    indivMulti3.finalPrice === 3000 && indivMulti3.serviceCount === 3,
-    `Expected $3000 for 3 services, got $${indivMulti3.finalPrice}`
+    "Individual Pick 3 services @ Tier 1 = $300 USD",
+    indivMulti3.finalPrice === 300 && indivMulti3.serviceCount === 3,
+    `Expected $300 for 3 services, got $${indivMulti3.finalPrice}`
   );
 
   const indivAll16 = PricingCalculator.calculatePricing({
@@ -124,12 +124,12 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Individual Pick all 16 services @ Tier 1 = $16,000 USD",
-    indivAll16.finalPrice === 16000 && indivAll16.serviceCount === 16,
-    `Expected $16,000, got $${indivAll16.finalPrice}`
+    "Individual Pick all 16 services @ Tier 1 = $1,600 USD",
+    indivAll16.finalPrice === 1600 && indivAll16.serviceCount === 16,
+    `Expected $1,600, got $${indivAll16.finalPrice}`
   );
 
-  // 4. Business Pick Unit Tests ($2,000 base, up to 20 participants, +$250/extra)
+  // 4. Business Pick Unit Tests ($200 base, up to 20 participants, +$100/extra)
   const bizT1 = PricingCalculator.calculatePricing({
     tierId: 1,
     clientMode: "business",
@@ -138,9 +138,9 @@ function runTestSuite() {
     participants: 20
   });
   assert(
-    "Business Pick 1 service @ Tier 1 (20 seats) = $2,000 USD",
-    bizT1.finalPrice === 2000 && bizT1.extraParticipants === 0,
-    `Expected $2,000 with 0 extra, got $${bizT1.finalPrice}`
+    "Business Pick 1 service @ Tier 1 (20 seats) = $200 USD",
+    bizT1.finalPrice === 200 && bizT1.extraParticipants === 0,
+    `Expected $200 with 0 extra, got $${bizT1.finalPrice}`
   );
 
   const bizT1Extra = PricingCalculator.calculatePricing({
@@ -151,9 +151,9 @@ function runTestSuite() {
     participants: 22
   });
   assert(
-    "Business Pick 1 service @ Tier 1 (22 seats: 20 incl + 2 extra @ $250) = $2,500 USD",
-    bizT1Extra.finalPrice === 2500 && bizT1Extra.extraHeadRate === 500,
-    `Expected $2,500 with $500 extra, got $${bizT1Extra.finalPrice}`
+    "Business Pick 1 service @ Tier 1 (22 seats: 20 incl + 2 extra @ $100) = $400 USD",
+    bizT1Extra.finalPrice === 400 && bizT1Extra.extraHeadRate === 200,
+    `Expected $400 with $200 extra, got $${bizT1Extra.finalPrice}`
   );
 
   const bizT2Extra = PricingCalculator.calculatePricing({
@@ -161,12 +161,12 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 22 // 2 extra heads * $250 * 0.75 = $375; base = $2000 * 0.75 = $1500; total = $1875
+    participants: 22 // 2 extra heads * $100 * 0.75 = $150; base = $200 * 0.75 = $150; total = $300
   });
   assert(
-    "Business Pick 1 service @ Tier 2 (22 seats parity scaled) = $1,875 USD",
-    bizT2Extra.finalPrice === 1875 && bizT2Extra.extraHeadRate === 375,
-    `Expected $1875 with $375 extra, got $${bizT2Extra.finalPrice}`
+    "Business Pick 1 service @ Tier 2 (22 seats parity scaled) = $300 USD",
+    bizT2Extra.finalPrice === 300 && bizT2Extra.extraHeadRate === 150,
+    `Expected $300 with $150 extra, got $${bizT2Extra.finalPrice}`
   );
 
   // 5. Flagship Package Calculations
@@ -177,9 +177,9 @@ function runTestSuite() {
     participants: 20
   });
   assert(
-    "Business Flagship @ Tier 1 = $5,000 USD",
-    flagshipBiz.finalPrice === 5000 && flagshipBiz.basePrice === 5000,
-    `Expected $5000, got $${flagshipBiz.finalPrice}`
+    "Business Flagship @ Tier 1 = $2,000 USD",
+    flagshipBiz.finalPrice === 2000 && flagshipBiz.basePrice === 2000,
+    `Expected $2000, got $${flagshipBiz.finalPrice}`
   );
 
   const flagshipPersonal = PricingCalculator.calculatePricing({
@@ -189,9 +189,9 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Personal Flagship @ Tier 1 = $2,500 USD",
-    flagshipPersonal.finalPrice === 2500 && flagshipPersonal.basePrice === 2500,
-    `Expected $2500, got $${flagshipPersonal.finalPrice}`
+    "Personal Flagship @ Tier 1 = $1,000 USD",
+    flagshipPersonal.finalPrice === 1000 && flagshipPersonal.basePrice === 1000,
+    `Expected $1000, got $${flagshipPersonal.finalPrice}`
   );
 
   // 6. Functional / Invariant Checks
@@ -230,38 +230,30 @@ function runTestSuite() {
     `Expected flagshipCheaper === false, got ${biz2Picks.flagshipCheaper}`
   );
 
-  const biz3Picks = PricingCalculator.calculatePricing({
+  const biz10Picks = PricingCalculator.calculatePricing({
     tierId: 1,
     clientMode: "business",
     packageType: "pick-services",
-    selectedServices: [
-      "service-generative-ai-transformation",
-      "service-local-llms-cost-slashing",
-      "service-workflow-automations"
-    ],
+    selectedServices: PricingCalculator.ALL_SERVICES_DATA.slice(0, 10).map(s => s.slug),
     participants: 20
   });
   assert(
-    "3 business picks triggers flagship nudge with flagshipPrice 5000",
-    biz3Picks.flagshipCheaper === true && biz3Picks.flagshipPrice === 5000,
-    `Expected flagshipCheaper === true and flagshipPrice === 5000, got cheaper=${biz3Picks.flagshipCheaper}, price=${biz3Picks.flagshipPrice}`
+    "10 business picks triggers flagship nudge with flagshipPrice 2000",
+    biz10Picks.flagshipCheaper === true && biz10Picks.flagshipPrice === 2000,
+    `Expected flagshipCheaper === true and flagshipPrice === 2000, got cheaper=${biz10Picks.flagshipCheaper}, price=${biz10Picks.flagshipPrice}`
   );
 
-  const indiv3Picks = PricingCalculator.calculatePricing({
+  const indiv10Picks = PricingCalculator.calculatePricing({
     tierId: 1,
     clientMode: "individual",
     packageType: "pick-services",
-    selectedServices: [
-      "service-generative-ai-transformation",
-      "service-local-llms-cost-slashing",
-      "service-workflow-automations"
-    ],
+    selectedServices: PricingCalculator.ALL_SERVICES_DATA.slice(0, 10).map(s => s.slug),
     participants: 1
   });
   assert(
-    "3 individual picks triggers flagship nudge with flagshipPrice 2500",
-    indiv3Picks.flagshipCheaper === true && indiv3Picks.flagshipPrice === 2500,
-    `Expected flagshipCheaper === true and flagshipPrice === 2500, got cheaper=${indiv3Picks.flagshipCheaper}, price=${indiv3Picks.flagshipPrice}`
+    "10 individual picks triggers flagship nudge with flagshipPrice 1000",
+    indiv10Picks.flagshipCheaper === true && indiv10Picks.flagshipPrice === 1000,
+    `Expected flagshipCheaper === true and flagshipPrice === 1000, got cheaper=${indiv10Picks.flagshipCheaper}, price=${indiv10Picks.flagshipPrice}`
   );
 
   const tier6Calc = PricingCalculator.calculatePricing({
