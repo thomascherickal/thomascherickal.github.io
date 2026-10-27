@@ -334,11 +334,11 @@ def sync_service_html_pages():
 
         # 2. Update Investment & Pricing Quote Section
         section_pattern = re.compile(
-            r'(<h2[^>]*>(?:5|6)\.\s*Investment[\s\S]*?</h2>)[\s\S]*?(?=\s*<h2|\s*</section|\s*</main|\s*<div\s+class="cta|\Z)',
+            r'(<h2[^>]*>(?:5|6)\.\s*Investment[\s\S]*?</h2>)\s*<ul[\s\S]*?</ul>\s*(?=<h2|</section|</main|<div\s+class="cta|\Z)',
             re.IGNORECASE
         )
         if section_pattern.search(html_content):
-            html_content = section_pattern.sub(r'\1\n' + pricing_section_html + '\n', html_content)
+            html_content = section_pattern.sub(r'\1\n' + pricing_section_html + '\n\n        ', html_content)
 
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(html_content)

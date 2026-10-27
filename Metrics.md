@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-10-27 07:51:52 UTC` | Branch: `main` | Head Commit: `6557561`
+> **Automated Status Report** | Generated on `2026-10-27 07:52:55 UTC` | Branch: `main` | Head Commit: `1172693`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **270** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **87,129** | All text, markup, styles & scripts |
+| **Total Lines of Source Code & Content** | **87,108** | All text, markup, styles & scripts |
 | **Source Code Lines (SLOC)** | **78,059** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **3,136** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **5,934** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **13.87 MB (14,539,191 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Blank / Spacing Lines** | **5,913** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **13.87 MB (14,539,193 bytes)** | HTML, CSS, JS, Python, SVG & Images |
 | **Total Word Count (Prose & Technical)** | **217,477 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **402** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-10-27** | Subject: "Phase 6: UX improvements, hero layout, scannable pricing hero, and resilient Mermaid diagrams" |
+| **Total Git Commits** | **403** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-10-27** | Subject: "Fix(pricing): sanitize sync_pricing regex, eliminate duplicate service sections, and update og card chips" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,12 +27,12 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 54 | 54,951 | 4.03 MB (4,230,839 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 54 | 54,930 | 4.03 MB (4,230,818 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 17 | 11,124 | 259.32 KB (265,541 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 3 | 1,388 | 50.70 KB (51,921 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 10 | 3,177 | 137.01 KB (140,298 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 62 | 8,237 | 507.70 KB (519,884 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 40 | 8,204 | 348.66 KB (357,027 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Python Tooling** | 10 | 3,177 | 137.02 KB (140,310 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 62 | 8,237 | 507.71 KB (519,896 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 40 | 8,204 | 348.66 KB (357,026 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 37 | 48 | 61.43 KB (62,907 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 40 | 0 | 8.45 MB (8,862,139 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 7 | 0 | 47.50 KB (48,635 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,11 +43,11 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 54 | 54,951 | 4.03 MB (4,230,839 bytes) | 20.0% |
+| `.html` | 54 | 54,930 | 4.03 MB (4,230,818 bytes) | 20.0% |
 | `.css` | 17 | 11,124 | 259.32 KB (265,541 bytes) | 6.3% |
-| `.md` | 62 | 8,237 | 507.70 KB (519,884 bytes) | 23.0% |
-| `.json` | 40 | 8,204 | 348.66 KB (357,027 bytes) | 14.8% |
-| `.py` | 10 | 3,177 | 137.01 KB (140,298 bytes) | 3.7% |
+| `.md` | 62 | 8,237 | 507.71 KB (519,896 bytes) | 23.0% |
+| `.json` | 40 | 8,204 | 348.66 KB (357,026 bytes) | 14.8% |
+| `.py` | 10 | 3,177 | 137.02 KB (140,310 bytes) | 3.7% |
 | `.js` | 3 | 1,388 | 50.70 KB (51,921 bytes) | 1.1% |
 | `.svg` | 37 | 48 | 61.43 KB (62,907 bytes) | 13.7% |
 | `.jpg` | 10 | 0 | 5.26 MB (5,517,051 bytes) | 3.7% |
