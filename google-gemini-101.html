@@ -28,22 +28,33 @@
   <link href="/site.webmanifest" rel="manifest" />
   <meta content="#020408" name="theme-color" />
 <!-- Mermaid.js for architecture diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       if (typeof mermaid !== "undefined") {
-        mermaid.initialize({
-          startOnLoad: true,
-          theme: 'dark',
-          themeVariables: {
-            'primaryColor': '#0c111d',
-            'primaryTextColor': '#38bdf8',
-            'primaryBorderColor': '#38bdf8',
-            'lineColor': '#fbbf24',
-            'secondaryColor': '#060912',
-            'tertiaryColor': '#131926'
-          }
-        });
+        try {
+          mermaid.initialize({
+            startOnLoad: false,
+            theme: "dark",
+            themeVariables: {
+              "primaryColor": "#0c111d",
+              "primaryTextColor": "#38bdf8",
+              "primaryBorderColor": "#38bdf8",
+              "lineColor": "#fbbf24",
+              "secondaryColor": "#060912",
+              "tertiaryColor": "#131926"
+            }
+          });
+          mermaid.run().then(function () {
+            document.querySelectorAll(".diagram-container").forEach(function (container) {
+              container.classList.add("mermaid-rendered");
+            });
+          }).catch(function (err) {
+            console.warn("Mermaid rendering failed:", err);
+          });
+        } catch (e) {
+          console.warn("Mermaid init error:", e);
+        }
       }
     });
   </script>
@@ -251,7 +262,10 @@
         Trained across Google's custom Tensor Processing Unit (TPU) supercomputers, the Gemini family scales from ultra-compact on-device models to frontier reasoning engines capable of handling multi-million-token contexts. This architectural cohesion allows users to query hour-long video files, analyze hundreds of thousands of lines of code simultaneously, and run autonomous deep research loops with source grounding.
       </p>
 
-      <div class="diagram-container">
+            <div class="diagram-container">
+        <div class="mermaid-fallback">
+          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+        </div>
         <div class="mermaid">
 flowchart LR
     A[Multimodal Inputs: Video / Audio / Code / Text] --> B[Unified Multimodal Tokenizer]
@@ -306,7 +320,10 @@ flowchart LR
         </tbody>
       </table>
 
-      <div class="diagram-container">
+            <div class="diagram-container">
+        <div class="mermaid-fallback">
+          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+        </div>
         <div class="mermaid">
 graph TD
     Free[Gemini Free: $0 - 15GB] --> Plus[Google AI Plus: $4.99 - 400GB]

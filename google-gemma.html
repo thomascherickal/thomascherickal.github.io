@@ -28,22 +28,33 @@
   <link href="/site.webmanifest" rel="manifest" />
   <meta content="#020408" name="theme-color" />
 <!-- Mermaid.js for architecture diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       if (typeof mermaid !== "undefined") {
-        mermaid.initialize({
-          startOnLoad: true,
-          theme: 'dark',
-          themeVariables: {
-            'primaryColor': '#0c111d',
-            'primaryTextColor': '#38bdf8',
-            'primaryBorderColor': '#38bdf8',
-            'lineColor': '#fbbf24',
-            'secondaryColor': '#060912',
-            'tertiaryColor': '#131926'
-          }
-        });
+        try {
+          mermaid.initialize({
+            startOnLoad: false,
+            theme: "dark",
+            themeVariables: {
+              "primaryColor": "#0c111d",
+              "primaryTextColor": "#38bdf8",
+              "primaryBorderColor": "#38bdf8",
+              "lineColor": "#fbbf24",
+              "secondaryColor": "#060912",
+              "tertiaryColor": "#131926"
+            }
+          });
+          mermaid.run().then(function () {
+            document.querySelectorAll(".diagram-container").forEach(function (container) {
+              container.classList.add("mermaid-rendered");
+            });
+          }).catch(function (err) {
+            console.warn("Mermaid rendering failed:", err);
+          });
+        } catch (e) {
+          console.warn("Mermaid init error:", e);
+        }
       }
     });
   </script>
@@ -251,7 +262,10 @@
         Built on a permissive open-source foundation (licensed under Apache 2.0), the Gemma ecosystem empowers individual software engineers, academic institutions, and regulated enterprises to inspect model weights, fine-tune domain adapters, run offline inference, and deploy AI without recurring API token taxation.
       </p>
 
-      <div class="diagram-container">
+            <div class="diagram-container">
+        <div class="mermaid-fallback">
+          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+        </div>
         <div class="mermaid">
 flowchart TD
     GeminiResearch[Gemini Foundation Research &amp; Pretraining] --> GemmaCore[Gemma Open-Weights Core Architecture]
@@ -282,7 +296,10 @@ flowchart TD
         <li><strong>Task-Specific Domain Superiority:</strong> When fine-tuned on curated domain datasets (e.g., internal enterprise APIs or legal precedents), compact SLMs consistently achieve accuracy parity with frontier cloud giants at a fraction of the compute footprint.</li>
       </ul>
 
-      <div class="diagram-container">
+            <div class="diagram-container">
+        <div class="mermaid-fallback">
+          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+        </div>
         <div class="mermaid">
 flowchart LR
     subgraph CloudModel[Frontier Cloud Model Routing]

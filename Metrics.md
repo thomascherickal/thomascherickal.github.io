@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-10-27 07:43:08 UTC` | Branch: `main` | Head Commit: `ea60da6`
+> **Automated Status Report** | Generated on `2026-10-27 07:47:03 UTC` | Branch: `main` | Head Commit: `086a860`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **270** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **93,427** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **84,410** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **3,137** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **5,880** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **14.46 MB (15,159,094 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **277,750 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **400** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-10-27** | Subject: "Phase 3: Sitewide em-dash and entity sweep" |
+| **Total Lines of Source Code & Content** | **93,716** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **84,694** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **3,136** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **5,886** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **14.47 MB (15,171,008 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **278,355 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **401** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-10-27** | Subject: "Phase 4: SEO hygiene, titles, meta descriptions, sitemap, and asset compression" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,11 +27,11 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 54 | 61,283 | 4.63 MB (4,851,456 bytes) | Production static web pages, services, frameworks & guides |
-| **CSS Stylesheets** | 17 | 11,090 | 258.70 KB (264,910 bytes) | Design tokens, animations, responsive layout & themes |
+| **HTML Documents** | 54 | 61,538 | 4.64 MB (4,862,773 bytes) | Production static web pages, services, frameworks & guides |
+| **CSS Stylesheets** | 17 | 11,124 | 259.32 KB (265,541 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 3 | 1,388 | 50.70 KB (51,921 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 10 | 3,177 | 136.94 KB (140,231 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 62 | 8,237 | 507.68 KB (519,867 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Markdown Documentation** | 62 | 8,237 | 507.65 KB (519,833 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 40 | 8,204 | 348.66 KB (357,026 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 37 | 48 | 61.43 KB (62,907 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 40 | 0 | 8.45 MB (8,862,139 bytes) | Optimized feature hero graphics, social cards & assets |
@@ -43,9 +43,9 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 54 | 61,283 | 4.63 MB (4,851,456 bytes) | 20.0% |
-| `.css` | 17 | 11,090 | 258.70 KB (264,910 bytes) | 6.3% |
-| `.md` | 62 | 8,237 | 507.68 KB (519,867 bytes) | 23.0% |
+| `.html` | 54 | 61,538 | 4.64 MB (4,862,773 bytes) | 20.0% |
+| `.css` | 17 | 11,124 | 259.32 KB (265,541 bytes) | 6.3% |
+| `.md` | 62 | 8,237 | 507.65 KB (519,833 bytes) | 23.0% |
 | `.json` | 40 | 8,204 | 348.66 KB (357,026 bytes) | 14.8% |
 | `.py` | 10 | 3,177 | 136.94 KB (140,231 bytes) | 3.7% |
 | `.js` | 3 | 1,388 | 50.70 KB (51,921 bytes) | 1.1% |
@@ -68,7 +68,7 @@
 | Metric | Measurement | Architecture Details |
 | :--- | :--- | :--- |
 | **CSS Media Queries (`@media`)** | **80** | Ultra-responsive breakpoints for mobile, tablet, desktop |
-| **CSS Rule Blocks** | **1,551** | Modular selector rules across all stylesheets |
+| **CSS Rule Blocks** | **1,557** | Modular selector rules across all stylesheets |
 | **CSS Design Tokens (`--var`)** | **61** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **165** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **50** | Strict single-H1 semantic hierarchy per page |

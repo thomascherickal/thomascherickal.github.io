@@ -454,12 +454,13 @@ main {
 }
 
 .hero-tagline {
-  font-family: var(--font-display);
-  font-size: clamp(0.85rem, 2.5vw, 1.15rem);
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: var(--gold);
-  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 2vw, 1.12rem);
+  font-weight: 400;
+  letter-spacing: normal;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  text-transform: none;
   margin-bottom: 1.5rem;
   text-align: center;
   width: 100%;

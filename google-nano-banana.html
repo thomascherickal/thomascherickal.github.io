@@ -29,22 +29,33 @@
 <link href="/site.webmanifest" rel="manifest"/>
 <meta content="#020408" name="theme-color"/>
 <!-- Mermaid.js for architecture diagrams -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+  <script>
     document.addEventListener("DOMContentLoaded", function () {
       if (typeof mermaid !== "undefined") {
-        mermaid.initialize({
-          startOnLoad: true,
-          theme: 'dark',
-          themeVariables: {
-            'primaryColor': '#0c111d',
-            'primaryTextColor': '#38bdf8',
-            'primaryBorderColor': '#38bdf8',
-            'lineColor': '#fbbf24',
-            'secondaryColor': '#060912',
-            'tertiaryColor': '#131926'
-          }
-        });
+        try {
+          mermaid.initialize({
+            startOnLoad: false,
+            theme: "dark",
+            themeVariables: {
+              "primaryColor": "#0c111d",
+              "primaryTextColor": "#38bdf8",
+              "primaryBorderColor": "#38bdf8",
+              "lineColor": "#fbbf24",
+              "secondaryColor": "#060912",
+              "tertiaryColor": "#131926"
+            }
+          });
+          mermaid.run().then(function () {
+            document.querySelectorAll(".diagram-container").forEach(function (container) {
+              container.classList.add("mermaid-rendered");
+            });
+          }).catch(function (err) {
+            console.warn("Mermaid rendering failed:", err);
+          });
+        } catch (e) {
+          console.warn("Mermaid init error:", e);
+        }
       }
     });
   </script>
@@ -249,7 +260,10 @@
 <p>
         Historically, text-to-image models operated as black-box generators: asking for minor adjustments - such as changing an object's color, turning a character's head, or adjusting the lighting - required rolling a new random seed, invariably altering the entire composition. Nano Banana redefines this paradigm by maintaining persistent spatial awareness, preserving character identity, and applying surgical localized modifications through conversational prompts.
       </p>
-<div class="diagram-container">
+      <div class="diagram-container">
+        <div class="mermaid-fallback">
+          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+        </div>
 <div class="mermaid">
 flowchart LR
     Input[Conversational Natural Language Prompt] --&gt; Reasoning[Gemini Visual Reasoning Engine]
@@ -281,7 +295,10 @@ flowchart LR
 <p>
         By uniting language comprehension with image diffusion inside a single foundation architecture, Nano Banana eliminates the disconnect between complex prompt semantics and visual rendering:
       </p>
-<div class="diagram-container">
+      <div class="diagram-container">
+        <div class="mermaid-fallback">
+          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+        </div>
 <div class="mermaid">
 graph TD
     subgraph TraditionalDiffusion[Legacy Image Generators]

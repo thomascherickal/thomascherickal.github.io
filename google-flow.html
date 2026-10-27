@@ -29,22 +29,33 @@
 <link href="/site.webmanifest" rel="manifest"/>
 <meta content="#020408" name="theme-color"/>
 <!-- Mermaid.js for architecture diagrams -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+  <script>
     document.addEventListener("DOMContentLoaded", function () {
       if (typeof mermaid !== "undefined") {
-        mermaid.initialize({
-          startOnLoad: true,
-          theme: 'dark',
-          themeVariables: {
-            'primaryColor': '#0c111d',
-            'primaryTextColor': '#38bdf8',
-            'primaryBorderColor': '#38bdf8',
-            'lineColor': '#fbbf24',
-            'secondaryColor': '#060912',
-            'tertiaryColor': '#131926'
-          }
-        });
+        try {
+          mermaid.initialize({
+            startOnLoad: false,
+            theme: "dark",
+            themeVariables: {
+              "primaryColor": "#0c111d",
+              "primaryTextColor": "#38bdf8",
+              "primaryBorderColor": "#38bdf8",
+              "lineColor": "#fbbf24",
+              "secondaryColor": "#060912",
+              "tertiaryColor": "#131926"
+            }
+          });
+          mermaid.run().then(function () {
+            document.querySelectorAll(".diagram-container").forEach(function (container) {
+              container.classList.add("mermaid-rendered");
+            });
+          }).catch(function (err) {
+            console.warn("Mermaid rendering failed:", err);
+          });
+        } catch (e) {
+          console.warn("Mermaid init error:", e);
+        }
       }
     });
   </script>
@@ -250,7 +261,10 @@
 <p>
         Flow unites three foundational AI architectures into a synchronized multimedia pipeline: <strong>Gemini Omni</strong> serves as the narrative director and conversational editing core, <strong>Veo</strong> acts as the high-fidelity cinematic video generation engine, and <strong>Lyria</strong> (via Google Flow Music) generates complete, timeline-synchronized original musical scores and vocal arrangements.
       </p>
-<div class="diagram-container">
+      <div class="diagram-container">
+        <div class="mermaid-fallback">
+          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+        </div>
 <div class="mermaid">
 flowchart TD
     Script[Script &amp; Creative Treatment] --&gt; Omni[Gemini Omni: Storyboard Decomposition &amp; Character Assets]
@@ -288,7 +302,10 @@ flowchart TD
 <li><strong>Automated Audio-Visual Sync:</strong> Lyria analyzes the tempo, emotional arc, and cut transitions produced by Veo, dynamically modulating musical crescendos and foley effects to align precisely with visual scene changes.</li>
 <li><strong>Native Veo Audio Foley:</strong> Veo generates synchronous acoustic sound effects - including footsteps on gravel, breaking glass, and ambient room reverberation - directly paired to the physical physics of the video scene.</li>
 </ul>
-<div class="diagram-container">
+      <div class="diagram-container">
+        <div class="mermaid-fallback">
+          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+        </div>
 <div class="mermaid">
 sequenceDiagram
     autonumber

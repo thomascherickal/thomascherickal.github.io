@@ -29,22 +29,33 @@
 <link href="/site.webmanifest" rel="manifest"/>
 <meta content="#020408" name="theme-color"/>
 <!-- Mermaid.js for architecture diagrams -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+  <script>
     document.addEventListener("DOMContentLoaded", function () {
       if (typeof mermaid !== "undefined") {
-        mermaid.initialize({
-          startOnLoad: true,
-          theme: 'dark',
-          themeVariables: {
-            'primaryColor': '#0c111d',
-            'primaryTextColor': '#38bdf8',
-            'primaryBorderColor': '#38bdf8',
-            'lineColor': '#fbbf24',
-            'secondaryColor': '#060912',
-            'tertiaryColor': '#131926'
-          }
-        });
+        try {
+          mermaid.initialize({
+            startOnLoad: false,
+            theme: "dark",
+            themeVariables: {
+              "primaryColor": "#0c111d",
+              "primaryTextColor": "#38bdf8",
+              "primaryBorderColor": "#38bdf8",
+              "lineColor": "#fbbf24",
+              "secondaryColor": "#060912",
+              "tertiaryColor": "#131926"
+            }
+          });
+          mermaid.run().then(function () {
+            document.querySelectorAll(".diagram-container").forEach(function (container) {
+              container.classList.add("mermaid-rendered");
+            });
+          }).catch(function (err) {
+            console.warn("Mermaid rendering failed:", err);
+          });
+        } catch (e) {
+          console.warn("Mermaid init error:", e);
+        }
       }
     });
   </script>
@@ -252,7 +263,10 @@
 <p>
         Google anchors this capability within the <strong>Gemini Enterprise Agent Platform</strong> (the enterprise evolution of Vertex AI Agent Builder). The platform provides end-to-end infrastructure for building, deploying, governing, and orchestrating fleets of autonomous agents. By pairing frontier reasoning models with serverless microVM sandboxes, persistent session memory banks, and cryptographic agent identity attestation, organizations can operationalize agentic intelligence without sacrificing enterprise security or data sovereignty.
       </p>
-<div class="diagram-container">
+      <div class="diagram-container">
+        <div class="mermaid-fallback">
+          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+        </div>
 <div class="mermaid">
 flowchart TD
     UserGoal[Enterprise Mandate / Trigger] --&gt; Platform[Gemini Enterprise Agent Platform]
@@ -369,7 +383,10 @@ flowchart TD
           </p>
 </div>
 </div>
-<div class="diagram-container">
+      <div class="diagram-container">
+        <div class="mermaid-fallback">
+          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+        </div>
 <div class="mermaid">
 flowchart LR
     subgraph AgentPerception[Agent Tri-Grounding Engine]
@@ -414,7 +431,10 @@ flowchart LR
 <li><strong>Model Context Protocol (MCP) - Agent-to-Tool:</strong> Standardizes how an <em>individual</em> agent securely accesses local files, database connections, shell environments, and proprietary tool endpoints.</li>
 <li><strong>Agent2Agent Protocol (A2A) - Agent-to-Agent:</strong> Standardizes how <em>independent, specialized agents</em> discover each other, negotiate sub-delegations, pass operational context, and collaborate across organizational boundaries.</li>
 </ul>
-<div class="diagram-container">
+      <div class="diagram-container">
+        <div class="mermaid-fallback">
+          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+        </div>
 <div class="mermaid">
 sequenceDiagram
     autonumber

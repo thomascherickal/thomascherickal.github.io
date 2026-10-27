@@ -15,6 +15,19 @@
 }
 
 /* Gemini Hero Header & Badges */
+.hero {
+  min-height: auto !important;
+  padding: 2.25rem 1rem 1.25rem !important;
+}
+
+.hero .hero-title {
+  margin-bottom: 0.75rem;
+}
+
+.hero .hero-desc {
+  margin-bottom: 1rem;
+}
+
 .hero-badge.cyan {
   color: var(--gemini-accent);
 }
@@ -30,7 +43,6 @@
   background-clip: text;
 }
 
-/* Diagram Containers & Captions */
 .diagram-container {
   background: #040711;
   border: 1px solid var(--gemini-border);
@@ -39,6 +51,26 @@
   margin: 1.5rem 0;
   overflow-x: auto;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+.diagram-container .mermaid-fallback {
+  display: block;
+  padding: 1.25rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-align: center;
+  background: rgba(12, 17, 29, 0.6);
+  border: 1px dashed rgba(56, 189, 248, 0.35);
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.diagram-container.mermaid-rendered .mermaid-fallback {
+  display: none !important;
+}
+
+.diagram-container:not(.mermaid-rendered) .mermaid {
+  display: none;
 }
 
 .diagram-caption {

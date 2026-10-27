@@ -28,22 +28,33 @@
   <link href="/site.webmanifest" rel="manifest" />
   <meta content="#020408" name="theme-color" />
 <!-- Mermaid.js for architecture diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       if (typeof mermaid !== "undefined") {
-        mermaid.initialize({
-          startOnLoad: true,
-          theme: 'dark',
-          themeVariables: {
-            'primaryColor': '#0c111d',
-            'primaryTextColor': '#38bdf8',
-            'primaryBorderColor': '#38bdf8',
-            'lineColor': '#fbbf24',
-            'secondaryColor': '#060912',
-            'tertiaryColor': '#131926'
-          }
-        });
+        try {
+          mermaid.initialize({
+            startOnLoad: false,
+            theme: "dark",
+            themeVariables: {
+              "primaryColor": "#0c111d",
+              "primaryTextColor": "#38bdf8",
+              "primaryBorderColor": "#38bdf8",
+              "lineColor": "#fbbf24",
+              "secondaryColor": "#060912",
+              "tertiaryColor": "#131926"
+            }
+          });
+          mermaid.run().then(function () {
+            document.querySelectorAll(".diagram-container").forEach(function (container) {
+              container.classList.add("mermaid-rendered");
+            });
+          }).catch(function (err) {
+            console.warn("Mermaid rendering failed:", err);
+          });
+        } catch (e) {
+          console.warn("Mermaid init error:", e);
+        }
       }
     });
   </script>
@@ -251,7 +262,10 @@
         When presented with an ambiguous, high-dimensional research mandate, Deep Research formulates an initial hypothesis, constructs a comprehensive multi-point investigation outline, queries hundreds of public and private databases, cross-verifies conflicting data points, and outputs structured, fully cited reports spanning 10 to 30 pages in minutes.
       </p>
 
-      <div class="diagram-container">
+            <div class="diagram-container">
+        <div class="mermaid-fallback">
+          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+        </div>
         <div class="mermaid">
 flowchart TD
     Mandate[User Research Mandate] --> Outliner[Autonomous Investigation Plan Generator]
@@ -292,7 +306,10 @@ flowchart TD
         Deep Research eliminates hundreds of hours of manual knowledge assembly across critical corporate domains:
       </p>
 
-      <div class="diagram-container">
+            <div class="diagram-container">
+        <div class="mermaid-fallback">
+          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+        </div>
         <div class="mermaid">
 flowchart LR
     subgraph TraditionalSearch[Traditional Surface Query]
