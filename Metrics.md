@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-10-27 07:14:43 UTC` | Branch: `main` | Head Commit: `1759dc0`
+> **Automated Status Report** | Generated on `2026-10-27 07:43:08 UTC` | Branch: `main` | Head Commit: `ea60da6`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **270** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **93,505** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **84,491** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **3,136** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **5,878** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **15.10 MB (15,838,561 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **277,919 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **399** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-10-27** | Subject: "Phase 2: Add flagship pricing recommendation and Tier 6 custom quote display" |
+| **Total Lines of Source Code & Content** | **93,427** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **84,410** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **3,137** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **5,880** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **14.46 MB (15,159,094 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **277,750 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **400** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-10-27** | Subject: "Phase 3: Sitewide em-dash and entity sweep" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,15 +27,15 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 54 | 61,371 | 4.63 MB (4,856,547 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 54 | 61,283 | 4.63 MB (4,851,456 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 17 | 11,090 | 258.70 KB (264,910 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 3 | 1,388 | 50.70 KB (51,921 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 10 | 3,167 | 136.62 KB (139,894 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Python Tooling** | 10 | 3,177 | 136.94 KB (140,231 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
 | **Markdown Documentation** | 62 | 8,237 | 507.68 KB (519,867 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 40 | 8,204 | 348.66 KB (357,026 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 37 | 48 | 61.43 KB (62,907 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
-| **Raster Images (WebP, JPG, PNG)** | 40 | 0 | 9.10 MB (9,536,984 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 7 | 0 | 47.37 KB (48,505 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Raster Images (WebP, JPG, PNG)** | 40 | 0 | 8.45 MB (8,862,139 bytes) | Optimized feature hero graphics, social cards & assets |
+| **Config & Metadata** | 7 | 0 | 47.50 KB (48,637 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,20 +43,20 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 54 | 61,371 | 4.63 MB (4,856,547 bytes) | 20.0% |
+| `.html` | 54 | 61,283 | 4.63 MB (4,851,456 bytes) | 20.0% |
 | `.css` | 17 | 11,090 | 258.70 KB (264,910 bytes) | 6.3% |
 | `.md` | 62 | 8,237 | 507.68 KB (519,867 bytes) | 23.0% |
 | `.json` | 40 | 8,204 | 348.66 KB (357,026 bytes) | 14.8% |
-| `.py` | 10 | 3,167 | 136.62 KB (139,894 bytes) | 3.7% |
+| `.py` | 10 | 3,177 | 136.94 KB (140,231 bytes) | 3.7% |
 | `.js` | 3 | 1,388 | 50.70 KB (51,921 bytes) | 1.1% |
 | `.svg` | 37 | 48 | 61.43 KB (62,907 bytes) | 13.7% |
 | `.jpg` | 10 | 0 | 5.26 MB (5,517,051 bytes) | 3.7% |
 | `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 7.4% |
-| `.png` | 8 | 0 | 1.34 MB (1,409,212 bytes) | 3.0% |
+| `.png` | 8 | 0 | 717.16 KB (734,367 bytes) | 3.0% |
 | `.jpeg` | 1 | 0 | 622.42 KB (637,354 bytes) | 0.4% |
-| `.txt` | 2 | 0 | 27.17 KB (27,817 bytes) | 0.7% |
+| `.txt` | 2 | 0 | 27.11 KB (27,758 bytes) | 0.7% |
 | `.docx` | 1 | 0 | 10.34 KB (10,592 bytes) | 0.4% |
-| `.xml` | 1 | 0 | 9.24 KB (9,465 bytes) | 0.4% |
+| `.xml` | 1 | 0 | 9.43 KB (9,656 bytes) | 0.4% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.4% |
 | `.webmanifest` | 1 | 0 | 538 bytes | 0.4% |
 | `[no extension]` | 2 | 0 | 93 bytes | 0.7% |

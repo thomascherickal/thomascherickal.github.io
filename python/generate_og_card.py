@@ -432,6 +432,16 @@ try:
         temp_html
     ]
     subprocess.run(chrome_cmd, check=True)
+    
+    # Optimize to under 200 KB
+    try:
+        from PIL import Image
+        im = Image.open(OUTPUT_PATH).convert("RGB")
+        opt_im = im.convert("P", palette=Image.Palette.ADAPTIVE, colors=256)
+        opt_im.save(OUTPUT_PATH, "PNG", optimize=True)
+    except Exception as e:
+        print(f"Pillow optimization notice: {e}")
+
     print(f"Generated {OUTPUT_PATH} ({os.path.getsize(OUTPUT_PATH):,} bytes)")
 finally:
     if os.path.exists(temp_html):
