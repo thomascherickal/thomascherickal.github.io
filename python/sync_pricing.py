@@ -98,7 +98,7 @@ OFFERS = [
         "sub": "USD · 30 DAYS (15D TRAINING + 15D GUIDANCE & MATERIALS)",
         "minPrice": 2500,
         "maxPrice": 2500,
-        "description": "Comprehensive Personal Training at $2,500 USD for 30 days (15 days training + 15 days guidance and detailed guides and materials). Strictly for 1 person only. Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 2 (25% off) $1,875; Tier 3 & 4 (50% off) $1,250; Tier 5 (75% off) $625; Tier 6 custom subsidized relief ($100–$250).",
+        "description": "Comprehensive Personal Training at $2,500 USD for 30 days (15 days training + 15 days guidance and detailed guides and materials). Strictly for 1 person only. Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 2 (25% off) $1,875; Tier 3 & 4 (50% off) $1,250; Tier 5 (75% off) $625; Tier 6 custom subsidized relief ($100-$250).",
         "duration": "30 days (15 days live training + 15 days guidance and detailed guides and materials)",
         "cohort": "Strictly 1 person only (private 1-on-1 acceleration)",
         "parity": {
@@ -334,11 +334,11 @@ def sync_service_html_pages():
 
         # 2. Update Investment & Pricing Quote Section
         section_pattern = re.compile(
-            r'(<h2[^>]*>(?:5|6)\.\s*Investment[\s\S]*?</h2>)\s*<[uo]l[\s\S]*?</[uo]l>',
+            r'(<h2[^>]*>(?:5|6)\.\s*Investment[\s\S]*?</h2>)[\s\S]*?(?=\s*<h2|\s*</section|\s*</main|\s*<div\s+class="cta|\Z)',
             re.IGNORECASE
         )
         if section_pattern.search(html_content):
-            html_content = section_pattern.sub(r'\1' + pricing_section_html, html_content)
+            html_content = section_pattern.sub(r'\1\n' + pricing_section_html + '\n', html_content)
 
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(html_content)
@@ -359,7 +359,7 @@ def sync_llms_txt():
 - **Comprehensive Business Training**: **$5,000 USD** for **60 days** (30 days live hands-on engineering training + 30 days guidance and detailed guides and materials). Covers cohorts up to 20 participants. Additional seats at **$250 USD per seat**. Clients are encouraged to choose services relevant to their work or interests.
   * Parity: Tier 1: $5,000 | Tier 2 (25% off): $3,750 | Tier 3 & 4 (50% off): $2,500 | Tier 5 (75% off): $1,250 | Tier 6: Custom Subsidized Relief.
 - **Comprehensive Personal Training**: **$2,500 USD** for **30 days** (15 days intensive 1-on-1 sprint + 15 days guidance and detailed guides and materials). Strictly for **one person only**. Clients are encouraged to choose services relevant to their work or interests.
-  * Parity: Tier 1: $2,500 | Tier 2 (25% off): $1,875 | Tier 3 & 4 (50% off): $1,250 | Tier 5 (75% off): $625 | Tier 6: Custom Subsidized Relief ($100–$250).
+  * Parity: Tier 1: $2,500 | Tier 2 (25% off): $1,875 | Tier 3 & 4 (50% off): $1,250 | Tier 5 (75% off): $625 | Tier 6: Custom Subsidized Relief ($100-$250).
 - **Purchasing Power Parity (PPP)**: Available across all service pricing, covering 195 countries and dedicated relief tiers."""
 
     pattern = re.compile(

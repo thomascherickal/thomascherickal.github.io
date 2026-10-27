@@ -369,9 +369,9 @@ html_content = f"""<!DOCTYPE html>
         <h2 class="title-role">Generative AI Consultant</h2>
         <div class="pillars-tags">
           <div class="pillars-row">
-            <span class="pillar-chip chip-gold">Claude AI Consultant</span>
+            <span class="pillar-chip chip-gold">Claude Generative AI Consultant</span>
             <span class="pillar-sep">&bull;</span>
-            <span class="pillar-chip chip-gold">Gemini AI Consultant</span>
+            <span class="pillar-chip chip-gold">Gemini Generative AI Consultant</span>
             <span class="pillar-sep">&bull;</span>
             <span class="pillar-chip chip-emerald">AI Agent Orchestrator</span>
           </div>
