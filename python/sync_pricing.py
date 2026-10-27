@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-sync_pricing.py — Centralized Pricing & Parity Synchronization Engine.
+sync_pricing.py - Centralized Pricing & Parity Synchronization Engine.
 Defines authoritative pricing data for the two core offerings:
 1. Business Training: $5,000 USD for 60 days (30 days training + 30 days guidance and detailed guides and materials),
    up to 20 participants, +$250 USD per extra seat.
@@ -353,9 +353,9 @@ def sync_llms_txt():
 
     new_block = """- **Individual Service Picks**: Clients can pick and choose their services:
   * **Individual (1-on-1)**: **$1,000 USD** per service for **5 days live training + 5 days dedicated support** (10 days total coverage per service). Strictly 1 person only.
-    - Parity: Tier 1: $1,000 | Tier 2 (25% off): $750 | Tier 3 & 4 (50% off): $500 | Tier 5 (75% off): $250 | Tier 6 (Subsidized): $100.
+ - Parity: Tier 1: $1,000 | Tier 2 (25% off): $750 | Tier 3 & 4 (50% off): $500 | Tier 5 (75% off): $250 | Tier 6 (Subsidized): $100.
   * **Business (Teams)**: **$2,000 USD** per service for **5 days live training + 5 days dedicated support** (10 days total coverage per service). Covers up to 20 participants (additional seats at **$250 USD per seat**).
-    - Parity: Tier 1: $2,000 | Tier 2 (25% off): $1,500 | Tier 3 & 4 (50% off): $1,000 | Tier 5 (75% off): $500 | Tier 6 (Subsidized): $200.
+ - Parity: Tier 1: $2,000 | Tier 2 (25% off): $1,500 | Tier 3 & 4 (50% off): $1,000 | Tier 5 (75% off): $500 | Tier 6 (Subsidized): $200.
 - **Comprehensive Business Training**: **$5,000 USD** for **60 days** (30 days live hands-on engineering training + 30 days guidance and detailed guides and materials). Covers cohorts up to 20 participants. Additional seats at **$250 USD per seat**. Clients are encouraged to choose services relevant to their work or interests.
   * Parity: Tier 1: $5,000 | Tier 2 (25% off): $3,750 | Tier 3 & 4 (50% off): $2,500 | Tier 5 (75% off): $1,250 | Tier 6: Custom Subsidized Relief.
 - **Comprehensive Personal Training**: **$2,500 USD** for **30 days** (15 days intensive 1-on-1 sprint + 15 days guidance and detailed guides and materials). Strictly for **one person only**. Clients are encouraged to choose services relevant to their work or interests.

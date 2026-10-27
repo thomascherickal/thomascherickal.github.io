@@ -19,8 +19,8 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - Always categorize and list `https://thomascherickal.github.io` under the **Business Website** category across all profile registries, documentation, schemas, and links.
 
 ## Canonical Site & Profile Description
-- **Canonical Description**: `"description": "Thomas Cherickal — Generative AI Consultant and The Digital Futurist."`
-- Always use `"Thomas Cherickal — Generative AI Consultant and The Digital Futurist."` as the primary site, author, and profile description across all HTML files, metadata, and schemas.
+- **Canonical Description**: `"description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist."`
+- Always use `"Thomas Cherickal - Generative AI Consultant and The Digital Futurist."` as the primary site, author, and profile description across all HTML files, metadata, and schemas.
 
 ## Call to Action (CTA) & Free LinkedIn Consultation Rule
 - **ALWAYS include the Free LinkedIn Consultation** link/button in **every Call to Action (CTA)** block, banner, or section created or updated across any page:
@@ -46,6 +46,22 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 ## No Emojis Rule
 - **DO NOT use emojis** in any further generation of any file in the future in this repo.
 - Ensure all generated or modified files (including HTML, CSS, JavaScript, Markdown, Python, and configuration files) remain completely free of emojis.
+
+## No Em-Dash Rule
+- **DO NOT use em-dashes** (the em-dash character U+2014 `—` or the `&mdash;` / `&#8212;` HTML entities) anywhere in any file in this repo.
+- Use a spaced hyphen ` - ` in prose, headings, and titles.
+- En-dashes in numeric ranges (e.g., `Days 1-15`, `2020-2026`) must also be written as plain hyphens `-`.
+
+## Platform Rules
+- Dev.to is an allowed platform. Include `https://dev.to/thomascherickal` in platform lists, `sameAs` arrays, and footers wherever the other publishing platforms appear.
+- Never remove existing Dev.to links.
+- Mastodon is excluded.
+
+## Article Footers
+- Keep `article-footer.md`, `article-footer_dark.html`, and `article-footer-plain.docx` in the repo; do not delete or move them.
+- Never insert an article footer into any Claude article (`claude-*.html` or `md-html-sync/claude-*.md`).
+
 ## Canonical Email ID
 - **Canonical Email ID**: `thomascherickal@gmail.com`
 - **ALWAYS** save, render, and use `thomascherickal@gmail.com` as the primary contact email address across all files, footer links, mailto references, documentation, schemas, and configurations.
+

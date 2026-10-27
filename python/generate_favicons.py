@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """
-generate_favicons.py — Generate all website favicon files from assets/site-icon.webp.
+generate_favicons.py - Generate all website favicon files from assets/site-icon.webp.
 
 Outputs:
-  - assets/favicon-16x16.png (16x16)
-  - assets/favicon-32x32.png (32x32)
-  - assets/favicon-96x96.png (96x96)
-  - assets/apple-touch-icon.png (180x180)
-  - assets/android-chrome-192x192.png (192x192)
-  - assets/android-chrome-512x512.png (512x512)
-  - assets/favicon.ico (multi-res 16, 32, 48)
-  - assets/favicon.svg (crisp SVG wrapper with embedded raster URI)
+ - assets/favicon-16x16.png (16x16)
+ - assets/favicon-32x32.png (32x32)
+ - assets/favicon-96x96.png (96x96)
+ - assets/apple-touch-icon.png (180x180)
+ - assets/android-chrome-192x192.png (192x192)
+ - assets/android-chrome-512x512.png (512x512)
+ - assets/favicon.ico (multi-res 16, 32, 48)
+ - assets/favicon.svg (crisp SVG wrapper with embedded raster URI)
 """
 
 import base64

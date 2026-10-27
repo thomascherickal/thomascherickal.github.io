@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-sync_og_card.py — Synchronizes assets/og-card.png with the factual stats in index.html.
+sync_og_card.py - Synchronizes assets/og-card.png with the factual stats in index.html.
 
 Extracts the 4 stat numbers and labels from index.html's .stats-strip,
 updates only the stats fields in python/generate_og_card.py,

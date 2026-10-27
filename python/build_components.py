@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build_components.py — Build-time component includer for thomascherickal.github.io.
+build_components.py - Build-time component includer for thomascherickal.github.io.
 Extracts <nav> from header.html and <footer> from footer.html,
 and replaces iframes or existing build-time include blocks across all HTML pages.
 Supports --watch to monitor header.html and footer.html for automatic updates.

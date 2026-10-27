@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build.py — Backward-compatible wrapper for build_components.py.
+build.py - Backward-compatible wrapper for build_components.py.
 """
 import os
 import sys

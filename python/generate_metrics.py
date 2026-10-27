@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-generate_metrics.py — Comprehensive Repository Metrics Generator.
+generate_metrics.py - Comprehensive Repository Metrics Generator.
 Scans the entire git repository and produces Metrics.md containing comprehensive
 code, structural, content, Git history, asset, security, and schema metrics.
 Strictly zero emojis rule compliant.
@@ -326,7 +326,7 @@ def generate_metrics():
     md.append("3. **Git Pre-Push Hook**: Automated recalculation before every `git push` to origin.")
     md.append("")
     md.append("---")
-    md.append("*Metrics engine authored by Thomas Cherickal — Generative AI Consultant and The Digital Futurist.*")
+    md.append("*Metrics engine authored by Thomas Cherickal - Generative AI Consultant and The Digital Futurist.*")
     md.append("")
 
     output_path = os.path.join(repo_root, "Metrics.md")

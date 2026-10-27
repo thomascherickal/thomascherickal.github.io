@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build_md_files.py — Extract structured, high-fidelity Markdown from all HTML pages
+build_md_files.py - Extract structured, high-fidelity Markdown from all HTML pages
 in thomascherickal.github.io and write them to md-html-sync/.
 """
 
@@ -27,11 +27,11 @@ def convert_articles() -> str:
         soup = BeautifulSoup(f.read(), "html.parser")
     
     lines = [
-        "# Thomas Cherickal — Articles & Case Studies",
+        "# Thomas Cherickal - Articles & Case Studies",
         "## Generative AI Consultant",
         "",
         "> **// Verified Case Studies**  ",
-        "> **The brief, the approach, and what shipped — 14 verified, human-directed case studies across Generative AI (6), Agentic AI (4), and Quantum Computing (4), backed by runtime-verified code, deep analysis, and equally deep insights.**",
+        "> **The brief, the approach, and what shipped - 14 verified, human-directed case studies across Generative AI (6), Agentic AI (4), and Quantum Computing (4), backed by runtime-verified code, deep analysis, and equally deep insights.**",
         "",
         "---",
         ""
@@ -132,7 +132,7 @@ def convert_writing() -> str:
         soup = BeautifulSoup(f.read(), "html.parser")
     
     lines = [
-        "# Thomas Cherickal — Publications & Long-Form Works",
+        "# Thomas Cherickal - Publications & Long-Form Works",
         "## Generative AI Consultant",
         "",
         "> **// 500+ Publications Across 10+ Platforms Since 2020**  ",
@@ -141,12 +141,12 @@ def convert_writing() -> str:
         "---",
         "",
         "## Featured Book: RECRUITED",
-        "### RECRUITED — The Inbound Recruiter Blueprint: How to Make Recruiters Chase You",
-        "*(Pre-Order Status — $20.00 USD pre-release until December 31, 2026 ($40.00 USD after release) · Free with an active Patreon subscription)*",
+        "### RECRUITED - The Inbound Recruiter Blueprint: How to Make Recruiters Chase You",
+        "*(Pre-Order Status - $20.00 USD pre-release until December 31, 2026 ($40.00 USD after release) · Free with an active Patreon subscription)*",
         "",
         "![RECRUITED Book Cover](assets/og-card-book.png)",
         "",
-        "A comprehensive transformation system showing professionals how to use frontier AI tools — GitHub, LinkedIn, Perplexity, Claude, Google Antigravity, and Gemini Notebook — to rebuild their professional presence so that inbound recruiter offers find them.",
+        "A comprehensive transformation system showing professionals how to use frontier AI tools - GitHub, LinkedIn, Perplexity, Claude, Google Antigravity, and Gemini Notebook - to rebuild their professional presence so that inbound recruiter offers find them.",
         "",
         "- [Pre-Order on Patreon](https://patreon.com/thomascherickal)",
         "",
@@ -173,7 +173,7 @@ def convert_writing() -> str:
             pill_str = " · ".join(pills) if pills else ""
             
             if pill_str:
-                lines.append(f"- [{title}]({href}) — *{pill_str}*")
+                lines.append(f"- [{title}]({href}) - *{pill_str}*")
             else:
                 lines.append(f"- [{title}]({href})")
         lines.append("")
@@ -188,7 +188,7 @@ def convert_collaboration() -> str:
         soup = BeautifulSoup(f.read(), "html.parser")
         
     lines = [
-        "# Thomas Cherickal — Ways to Collaborate",
+        "# Thomas Cherickal - Ways to Collaborate",
         "## Generative AI Consulting, Corporate Training & Dedicated Retainers",
         "",
         "> **// CLIENT COLLABORATION DIRECTORY**  ",
@@ -274,7 +274,7 @@ def convert_pricing() -> str:
         soup = BeautifulSoup(f.read(), "html.parser")
         
     lines = [
-        "# Thomas Cherickal — Generative AI Packages & Transparent Pricing",
+        "# Thomas Cherickal - Generative AI Packages & Transparent Pricing",
         "## Transparent Retainer Packages, Enterprise Migrations & Global Parity Index",
         "",
         "> **// TRANSPARENT MILESTONE RATES & EQUAL-WEIGHT DELIVERABLES**  ",
@@ -372,7 +372,7 @@ def convert_pricing() -> str:
             
             lines.append(f"### {p_title}")
             if p_badge:
-                lines.append(f"*{p_badge}* — {p_sub}  ")
+                lines.append(f"*{p_badge}* - {p_sub}  ")
             lines.append(f"**Rate**: `{p_rate}` ({p_ratesub})  ")
             if p_desc:
                 lines.append(p_desc)
@@ -396,7 +396,7 @@ def convert_expertise() -> str:
         soup = BeautifulSoup(f.read(), "html.parser")
         
     lines = [
-        "# Thomas Cherickal — Generative AI Architecture, AI Agent Mastery & Tech Stack",
+        "# Thomas Cherickal - Generative AI Architecture, AI Agent Mastery & Tech Stack",
         "## Generative AI Consultant",
         "",
         "> **// TECHNICAL ROLES & CAPABILITIES DIRECTORY**  ",
@@ -462,7 +462,7 @@ def convert_expertise() -> str:
     return "\n".join(lines).strip() + "\n"
 
 def convert_contact() -> str:
-    return """# Thomas Cherickal — Start an AI Transformation
+    return """# Thomas Cherickal - Start an AI Transformation
 ## Generative AI Consultant
 
 > **// PROJECT INTAKE & DIRECT COMMUNICATION**  
@@ -507,7 +507,7 @@ def convert_faqs() -> str:
         soup = BeautifulSoup(f.read(), "html.parser")
         
     lines = [
-        "# Thomas Cherickal — Frequently Asked Questions",
+        "# Thomas Cherickal - Frequently Asked Questions",
         "## Generative AI Consulting, Training, Pricing & Engagement Policies",
         "",
         "> **// CLIENT MANDATES & POLICIES**  ",
@@ -563,10 +563,10 @@ def convert_faqs() -> str:
     return "\n".join(lines).strip() + "\n"
 
 def convert_404() -> str:
-    return """# 404 — Context Window Exhausted
+    return """# 404 - Context Window Exhausted
 ## Page Not Found
 
-> **// 404 — CONTEXT WINDOW EXHAUSTED**  
+> **// 404 - CONTEXT WINDOW EXHAUSTED**  
 > **High-Temperature Hallucination Detected**  
 > **Even with a 2-million-token context window, our autonomous multi-agent swarm couldn’t ground this route. Either your prompt drifted into unmapped latent space at temperature 2.0, our RAG retrieval scored zero cosine similarity, or an overconfident LLM hallucinated a URL that was never trained into the weights.**
 > 
@@ -599,7 +599,7 @@ def convert_service_page(file_path: str) -> str:
     
     lines = [
         f"# {h1}",
-        f"## Enterprise AI Transformation Service — Thomas Cherickal",
+        f"## Enterprise AI Transformation Service - Thomas Cherickal",
         "",
         f"> **{eyebrow}**  ",
         f"> **{sub}**" if sub else "> **Enterprise transformation, verification, and implementation.**",
@@ -644,7 +644,7 @@ def convert_service_page(file_path: str) -> str:
                         for n_li in nested_ul.find_all("li"):
                             n_text = clean_text(n_li.get_text())
                             if n_text:
-                                lines.append(f"  - {n_text}")
+                                lines.append(f" - {n_text}")
                     if nested_ol:
                         for idx, n_li in enumerate(nested_ol.find_all("li"), 1):
                             n_text = clean_text(n_li.get_text())
@@ -710,7 +710,7 @@ def convert_agents_all_providers(file_path: str) -> str:
 
     lines = [
         f"# {h1}",
-        f"## Enterprise Agentic AI Playbook — Thomas Cherickal",
+        f"## Enterprise Agentic AI Playbook - Thomas Cherickal",
         "",
         f"> **{badge}**  ",
         f"> **{sub}**" if sub else "> **Architectural comparison across 8 frontier agent platforms.**",
@@ -726,7 +726,7 @@ def convert_agents_all_providers(file_path: str) -> str:
         href = nc.get("href", "#")
         name = clean_text(nc.find("span", class_="nav-card-name").get_text()) if nc.find("span", class_="nav-card-name") else "Provider"
         price = clean_text(nc.find("span", class_="nav-card-price").get_text()) if nc.find("span", class_="nav-card-price") else ""
-        lines.append(f"- [{name}]({href}) — *{price}*")
+        lines.append(f"- [{name}]({href}) - *{price}*")
     lines.append("")
     lines.append("---")
     lines.append("")
@@ -843,7 +843,7 @@ def convert_agent_deepdive(file_path: str) -> str:
                 
     lines = [
         f"# {h1}",
-        f"## AI Agent Architecture & Orchestration — Thomas Cherickal",
+        f"## AI Agent Architecture & Orchestration - Thomas Cherickal",
         "",
         f"> **{badge}**  ",
         f"> **{sub}**" if sub else "> **Production architecture, protocols, and implementation.**",
@@ -924,7 +924,7 @@ def convert_agent_deepdive(file_path: str) -> str:
                     s_desc = clean_text(desc_el.get_text()) if desc_el else ""
                     heading_parts = [p for p in [s_num, s_title] if p]
                     if heading_parts:
-                        lines.append(f"#### {' — '.join(heading_parts)}")
+                        lines.append(f"#### {' - '.join(heading_parts)}")
                     if s_desc:
                         lines.append(s_desc)
                     lines.append("")

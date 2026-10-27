@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-generate_og_card.py — Generates assets/og-card.png (1200x630) using Headless Google Chrome.
+generate_og_card.py - Generates assets/og-card.png (1200x630) using Headless Google Chrome.
 """
 
 import base64
