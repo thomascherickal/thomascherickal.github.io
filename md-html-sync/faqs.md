@@ -220,7 +220,7 @@ No. Personal Training is strictly for one person only (private 1-on-1
 
 - Business Training for Teams: If you wish to train a founding team, corporate
  department, or developer cohort, explore our Business Training ($5,000 USD for 60 Days),
- which covers up to 10 participants in its fixed base rate (with additional seats at $500/head scaled
+ which covers up to 20 participants in its fixed base rate (with additional seats at $250/head scaled
  by parity).
 
 ---
@@ -530,10 +530,10 @@ Global MNCs gain a consistent, world-class standard of agentic software engineer
 ---
 
 ### 22. What is the pricing model for enterprise training, and what does the
- 10-participant quota and 30-day training plus 30-day support guarantee cover?
+ 20-participant quota and 30-day training plus 30-day support guarantee cover?
 *Pricing:
  Enterprise Guarantee · FAQ #13*  
-Our Business Training bookings feature a fixed base investment of $5,000 USD covering up to 10
+Our Business Training bookings feature a fixed base investment of $5,000 USD covering up to 20
  participants for 60 days (30 days training + 30 days guidance and detailed guides and materials).
  There are no hidden licensing royalties or hourly surprise fees.
 
@@ -545,8 +545,8 @@ Our Business Training bookings feature a fixed base investment of $5,000 USD cov
 - Complete Digital Assets & Repos: Architecture blueprints, prompt design
  handbooks, and reproducible starter repositories included.
 
-- Up to 10 Learners Included: Base fee covers up to 10 participants. Additional
- seats scale transparently at $500 USD per head (adjusted by country parity tier).
+- Up to 20 Learners Included: Base fee covers up to 20 participants. Additional
+ seats scale transparently at $250 USD per head (adjusted by country parity tier).
 
 - Graduate Discord Community & 100% IP: Access to the alumni Discord and
  complete unrestricted intellectual property assignment.
@@ -556,26 +556,26 @@ This 30+30 dual guarantee ensures your organization achieves lasting capability 
 
 ---
 
-### 23. What are the fees if our training cohort exceeds 10 participants?
+### 23. What are the fees if our training cohort exceeds 20 participants?
 *Pricing:
  Scale-Out · FAQ #14*  
-When a team desires to include more than 10 participants in a single Business Training cohort, pricing scales
- simply, transparently, and predictably: $500 USD per additional seat.
+When a team desires to include more than 20 participants in a single Business Training cohort, pricing scales
+ simply, transparently, and predictably: $250 USD per additional seat.
 
 - Parity Discounts Apply Directly: The qualifying country parity multiplier applies
- to the $500 per-head fee as well.
+ to the $250 per-head fee as well.
 
-- Tier 1 (Standard): $500 USD per additional participant.
+- Tier 1 (Standard): $250 USD per additional participant.
 
-- Tier 2 (25% Parity Discount): $375 USD per additional participant (0.75X).
+- Tier 2 (25% Parity Discount): $188 USD per additional participant (0.75X).
 
-- Tier 3 & Tier 4 (50% Parity / Startup Discount): $250 USD per additional
+- Tier 3 & Tier 4 (50% Parity / Startup Discount): $125 USD per additional
  participant (0.50X).
 
-- Tier 5 (75% Academia / Non-Profit Discount): $125 USD per additional
+- Tier 5 (75% Academia / Non-Profit Discount): $63 USD per additional
  participant (0.25X).
 
-- Tier 6 (Radical Equity / Subsidized): $50 USD / subsidized micro-rates evaluated
+- Tier 6 (Radical Equity / Subsidized): $25 USD / subsidized micro-rates evaluated
  case-by-case.
 
 Every participant receives full access to digital runbooks, sandboxes, post-training support, and the
@@ -613,7 +613,7 @@ Yes, absolutely. Clients have complete freedom to pick and choose individual ser
 
 - Individual / Personal Pricing: $1,000 USD per service strictly for 1 person only (private 1-on-1 sprint).
 
-- Business / Organization Pricing: $2,000 USD per service for up to 10 team participants (additional seats at $500 USD per seat).
+- Business / Organization Pricing: $2,000 USD per service for up to 20 team participants (additional seats at $250 USD per seat).
 
 - Delivery Cadence: Every individual service includes 5 days of live, hands-on engineering training followed by 5 days of dedicated operational support and doubt clarification (10 days total coverage per service).
 
@@ -788,8 +788,8 @@ Qualification for Tier 5 (75% Parity Discount / $500 USD per 1-month service) is
  prominent public-interest open-source software libraries, research labs, or non-commercial AI
  evaluation initiatives.
 
-- Additional seats: Tier 5 cohorts get the 75% discount on extra seats too: $125
- per additional participant instead of the standard $500.
+- Additional seats: Tier 5 cohorts get the 75% discount on extra seats too: $63
+ per additional participant instead of the standard $250.
 
 I reply to every inquiry within one week (a little busy with current work).
 

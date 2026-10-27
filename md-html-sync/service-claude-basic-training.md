@@ -72,8 +72,8 @@
 
 - Modular Service Selection & Flexible Engagement: Clients can freely pick and choose their services, either individually or bundled under our comprehensive transformation programs:
   - Individual Service Pick (Personal / 1-on-1): $1,000 USD per service for 5 days of live training + 5 days of dedicated support (10 days total coverage per service). Strictly 1 person only.
-  - Individual Service Pick (Business / Teams): $2,000 USD per service for 5 days of live training + 5 days of dedicated support (10 days total coverage per service). Covers up to 10 participants (additional seats at $500 USD per seat).
-  - Comprehensive Business Training: $5,000 USD for 60 days (30 days live training + 30 days guidance and detailed guides and materials). Includes cohorts up to 10 participants. Extra seats at $500 USD per seat.
+  - Individual Service Pick (Business / Teams): $2,000 USD per service for 5 days of live training + 5 days of dedicated support (10 days total coverage per service). Covers up to 20 participants (additional seats at $250 USD per seat).
+  - Comprehensive Business Training: $5,000 USD for 60 days (30 days live training + 30 days guidance and detailed guides and materials). Includes cohorts up to 20 participants. Extra seats at $250 USD per seat).
   - Comprehensive Personal Training: $2,500 USD for 30 days (15 days live training + 15 days guidance and detailed guides and materials). Strictly for 1 person only (private acceleration).
 - Global Purchasing Power Parity (PPP) Available for All Service Pricing:
   - Tier 1 (Standard / 100%): Individual $1,000 USD | Business $2,000 USD | Business 60d $5,000 USD | Personal 30d $2,500 USD (USA, UK, EU, Canada, Australia)

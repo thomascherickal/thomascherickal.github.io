@@ -146,14 +146,14 @@
       basePrice = params.customBase;
     }
 
-    let participants = clientMode === "individual" ? 1 : Math.max(1, parseInt(params.participants, 10) || 10);
-    const extraParticipants = clientMode === "business" ? Math.max(0, participants - 10) : 0;
-    const extraHeadRate = Math.round(extraParticipants * 500 * tier.multiplier);
+    let participants = clientMode === "individual" ? 1 : Math.max(1, parseInt(params.participants, 10) || 20);
+    const extraParticipants = clientMode === "business" ? Math.max(0, participants - 20) : 0;
+    const extraHeadRate = Math.round(extraParticipants * 250 * tier.multiplier);
     const baseTierPrice = Math.round(basePrice * tier.multiplier);
     const finalPrice = baseTierPrice + extraHeadRate;
 
     const baseSavings = Math.round(basePrice * (tier.discountPercent / 100));
-    const extraSavings = Math.round(extraParticipants * 500 * (tier.discountPercent / 100));
+    const extraSavings = Math.round(extraParticipants * 250 * (tier.discountPercent / 100));
     const totalSavings = baseSavings + extraSavings;
 
     return {
@@ -285,11 +285,11 @@
         btnModeBusiness.classList.add("active");
         btnModeIndividual.classList.remove("active");
         if (calcParticipants) {
-          calcParticipants.value = Math.max(10, parseInt(calcParticipants.value, 10) || 10);
+          calcParticipants.value = Math.max(20, parseInt(calcParticipants.value, 10) || 20);
           calcParticipants.disabled = false;
         }
-        if (calcParticipantsHint) calcParticipantsHint.textContent = "Business: 1–10 Included (+$500/extra seat)";
-        if (calcParticipantsDesc) calcParticipantsDesc.textContent = "Business base covers up to 10 participants (additional seats are $500 USD per seat scaled by country parity).";
+        if (calcParticipantsHint) calcParticipantsHint.textContent = "Business: 1–20 Included (+$250/extra seat)";
+        if (calcParticipantsDesc) calcParticipantsDesc.textContent = "Business base covers up to 20 participants (additional seats are $250 USD per seat scaled by country parity).";
       } else {
         btnModeIndividual.classList.add("active");
         btnModeBusiness.classList.remove("active");
@@ -377,7 +377,7 @@
         clientMode: clientMode,
         packageType: calcPackage ? calcPackage.value : "pick-services",
         selectedServices: selectedServices,
-        participants: calcParticipants ? calcParticipants.value : 10,
+        participants: calcParticipants ? calcParticipants.value : 20,
         customBase: standardBasePrice
       });
 
@@ -411,7 +411,7 @@
           calcCohortVal.textContent = "1 Person Only (Private 1-on-1)";
           calcCohortVal.style.color = "var(--gold)";
         } else {
-          if (result.participants <= 10) {
+          if (result.participants <= 20) {
             calcCohortVal.textContent = result.participants + (result.participants === 1 ? " Participant (Included in Base)" : " Participants (Included in Base)");
             calcCohortVal.style.color = "var(--gold)";
           } else {
@@ -481,7 +481,7 @@
           if (result.extraParticipants > 0) {
             calcDisplayNote.innerHTML = tier.note + " · Plus " + result.extraParticipants + " extra seats (+$" + result.extraHeadRate.toLocaleString("en-US") + ")";
           } else {
-            calcDisplayNote.innerHTML = tier.note + (result.clientMode === "business" ? " · Base covers up to 10 participants" : " · Strictly 1 person only");
+            calcDisplayNote.innerHTML = tier.note + (result.clientMode === "business" ? " · Base covers up to 20 participants" : " · Strictly 1 person only");
           }
           calcDisplayNote.style.color = tier.badgeColor;
         }

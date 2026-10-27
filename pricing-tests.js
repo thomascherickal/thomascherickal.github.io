@@ -129,16 +129,16 @@ function runTestSuite() {
     `Expected $16,000, got $${indivAll16.finalPrice}`
   );
 
-  // 4. Business Pick Unit Tests ($2,000 base, up to 10 participants, +$500/extra)
+  // 4. Business Pick Unit Tests ($2,000 base, up to 20 participants, +$250/extra)
   const bizT1 = PricingCalculator.calculatePricing({
     tierId: 1,
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 10
+    participants: 20
   });
   assert(
-    "Business Pick 1 service @ Tier 1 (10 seats) = $2,000 USD",
+    "Business Pick 1 service @ Tier 1 (20 seats) = $2,000 USD",
     bizT1.finalPrice === 2000 && bizT1.extraParticipants === 0,
     `Expected $2,000 with 0 extra, got $${bizT1.finalPrice}`
   );
@@ -148,12 +148,12 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 12
+    participants: 22
   });
   assert(
-    "Business Pick 1 service @ Tier 1 (12 seats: 10 incl + 2 extra @ $500) = $3,000 USD",
-    bizT1Extra.finalPrice === 3000 && bizT1Extra.extraHeadRate === 1000,
-    `Expected $3,000 with $1000 extra, got $${bizT1Extra.finalPrice}`
+    "Business Pick 1 service @ Tier 1 (22 seats: 20 incl + 2 extra @ $250) = $2,500 USD",
+    bizT1Extra.finalPrice === 2500 && bizT1Extra.extraHeadRate === 500,
+    `Expected $2,500 with $500 extra, got $${bizT1Extra.finalPrice}`
   );
 
   const bizT2Extra = PricingCalculator.calculatePricing({
@@ -161,12 +161,12 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 12 // 2 extra heads * $500 * 0.75 = $750; base = $2000 * 0.75 = $1500; total = $2250
+    participants: 22 // 2 extra heads * $250 * 0.75 = $375; base = $2000 * 0.75 = $1500; total = $1875
   });
   assert(
-    "Business Pick 1 service @ Tier 2 (12 seats parity scaled) = $2,250 USD",
-    bizT2Extra.finalPrice === 2250 && bizT2Extra.extraHeadRate === 750,
-    `Expected $2250 with $750 extra, got $${bizT2Extra.finalPrice}`
+    "Business Pick 1 service @ Tier 2 (22 seats parity scaled) = $1,875 USD",
+    bizT2Extra.finalPrice === 1875 && bizT2Extra.extraHeadRate === 375,
+    `Expected $1875 with $375 extra, got $${bizT2Extra.finalPrice}`
   );
 
   // 5. Flagship Package Calculations
@@ -174,7 +174,7 @@ function runTestSuite() {
     tierId: 1,
     clientMode: "business",
     packageType: "pkg-business",
-    participants: 10
+    participants: 20
   });
   assert(
     "Business Flagship @ Tier 1 = $5,000 USD",

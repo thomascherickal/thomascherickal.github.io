@@ -150,14 +150,15 @@ I maintain an active, verified presence across **10+ major developer, research, 
 
 ## Comprehensive Website Architecture
 
-My portfolio website ([thomascherickal.github.io](https://thomascherickal.github.io)) is an independently engineered static web property comprising **26 interconnected HTML pages** backed by an automated Python build and bidirectional Markdown synchronization engine:
+My portfolio website ([thomascherickal.github.io](https://thomascherickal.github.io)) is an independently engineered static web property comprising **50 interconnected HTML pages** backed by an automated Python build and bidirectional Markdown synchronization engine:
 
 ```mermaid
 graph TD
   subgraph Presentation Layer
-    CorePages["10 Core Pages<br/>(Home, Portfolio, Writing, FAQs, Pricing...)"]
-    ClaudePages["8 Claude Agent Suite Pages<br/>(101, Code, MCP, Teams, Design...)"]
-    ServicePages["8 Transformation Services<br/>(Local LLMs, Swarms, Quantum, Budgets...)"]
+    CorePages["10 Core Pages<br/>(Home, Articles, Writing, Expertise, FAQs, Pricing...)"]
+    ClaudePages["14 Claude Agent Suite Pages<br/>(101, Code, Connectors, Cowork, MCP, Design...)"]
+    GeminiPages["10 Google Gemini Ecosystem Pages<br/>(Agents, Studio, IDE, Deep Research, Flow...)"]
+    ServicePages["16 Transformation Services<br/>(Local LLMs, Swarms, Quantum, Budgets, Dev...)"]
   end
 
   subgraph Automation Pipeline
@@ -169,12 +170,13 @@ graph TD
   subgraph Distribution & Discovery
     Schema["schema.json (JSON-LD Master Graph)"]
     LLMSTxt["llms.txt (Direct Agent Ingestion)"]
-    Markdown["md-html-sync/ (26 Clean .md Mirrors)"]
+    Markdown["md-html-sync/ (50 Clean .md Mirrors)"]
     Edge["GitHub Pages Static Edge CDN"]
   end
 
   CorePages --> Build
   ClaudePages --> Build
+  GeminiPages --> Build
   ServicePages --> Build
   Build --> Pricing
   Build --> Sync
@@ -193,71 +195,56 @@ graph TD
 | **Expertise** | [`expertise.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/expertise.html) | Technical radar detailing proficiencies across languages, frameworks, inference & quantum. |
 | **Personal AI** | [`personal-ai-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/personal-ai-training.html) | 1-on-1 private intensive AI transformation and pair programming. |
 | **Pricing & Parity** | [`pricing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/pricing.html) | 100% transparent rates and interactive 6-Tier Parity calculator across 195 countries. |
-| **FAQs** | [`faqs.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/faqs.html) | 36 technical FAQs covering recipient roles, organization sizes, 10-day training & parity. |
+| **FAQs** | [`faqs.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/faqs.html) | Comprehensive technical FAQs covering recipient roles, organization sizes, 20-seat quotas & parity. |
 | **Collaborate** | [`collaboration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/collaboration.html) | Operating principles, mutual NDAs, milestone billing terms & project kickoff process. |
 | **Contact** | [`contact.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/contact.html) | Secure honeypot-protected inquiry portal connected to FormSubmit with one-week response time. |
 | **404 Latent Space** | [`404.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/404.html) | Context-window exhaustion themed fallback redirecting visitors back to active pages. |
 
-### 2. The Claude Agent Suite (9 Dedicated Architectural Pages)
-| Architectural Guide | File | Core Engineering Focus |
-| :--- | :--- | :--- |
-| **Claude Agents 101** | [`claude-101.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-101.html) | Autonomous agent loops, tool calling boundaries, reasoning traces & error recovery. |
-| **Claude Code & Cowork** | [`claude-code.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-code.html) | Terminal-native pair programming, codebase refactoring & desktop automation. |
-| **Claude Skills** | [`claude-skills.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-skills.html) | Modular prompt extensions, domain schema injection & reusable skill encapsulation. |
-| **Claude Custom MCP** | [`claude-custom-mcp.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-custom-mcp.html) | Type-safe Model Context Protocol servers in Rust and TypeScript with sandboxed tools. |
-| **Claude Agent Orchestration** | [`claude-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-orchestration.html) | Running multiple Claude agents concurrently: 5 architectures, 6 tutorials, rate/cost calculators & spend limits. |
-| **Claude Design** | [`claude-design.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-design.html) | Natural language interface for graphic design, on-canvas editing, brand design systems & export pipelines. |
-| **Claude With Local LLMs** | [`claude-local-llms.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-local-llms.html) | Running 8B to 120B local models on Linux with OpenCode, Claude Code, VRAM/cost calculators & tutorials. |
-| **Claude Science** | [`claude-science.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-science.html) | AI research workbench, agentic loops, literature synthesis & reproducible compute pipelines. |
-
-### 3. The 8 Standalone Enterprise Transformation Services
-| Enterprise Transformation Service | File | Transformation Objective |
+### 2. The 16 Standalone Enterprise Transformation Services
+| Service | File | Transformation Objective |
 | :--- | :--- | :--- |
 | **Generative AI Transformation** | [`service-generative-ai-transformation.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-generative-ai-transformation.html) | Transitioning from basic chatbots to coordinated autonomous agent swarms. |
 | **Local LLMs & Cost Slashing** | [`service-local-llms-cost-slashing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-local-llms-cost-slashing.html) | Deploying private open-weight models (vLLM, Ollama) to slash token expenses by 60%–90%. |
 | **Claude Agent Orchestration** | [`service-ai-agents-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-ai-agents-orchestration.html) | Production state machines, long-term memory persistence & human-in-the-loop gates. |
+| **Hermes Agent Training** | [`service-agentic-ai-systems.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-agentic-ai-systems.html) | Self-hosted Hermes Agent on Linux, persistent session memory & sandboxed tool execution. |
 | **Workflow Automations** | [`service-workflow-automations.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-workflow-automations.html) | Enterprise local n8n, Make, IFTTT & open-source workflow pipelines with zero per-step SaaS fees. |
 | **Quantum Applications (Experimental)** | [`service-quantum-applications.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-quantum-applications.html) | IBM Qiskit, PennyLane, VQE, QAOA & Post-Quantum Cryptography (PQC) readiness. |
 | **AI Budget & Cost Control Training** | [`service-ai-budget-cost-limits-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-ai-budget-cost-limits-training.html) | LiteLLM gateways, departmental spend quotas, token caching & hard circuit breakers. |
 | **Enterprise Workforce AI Training** | [`service-enterprise-workforce-ai-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-enterprise-workforce-ai-training.html) | Role-specific bootcamps for Freshers, Staff, Developers, Managers & CXOs. |
+| **AI Developer Training** | [`service-ai-developer-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-ai-developer-training.html) | Coding agent mastery (Claude Code, Google Antigravity, OpenCode) & strict AI-assisted TDD. |
+| **Advanced AI Agents** | [`service-advanced-ai-agents.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-advanced-ai-agents.html) | Production hierarchical agent swarms, self-correction loops & persistent state machines. |
+| **Claude Basic Training** | [`service-claude-basic-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-claude-basic-training.html) | Model tier selection, structured prompt engineering with XML tags & team memory in Claude Projects. |
+| **Claude Advanced Training** | [`service-claude-advanced-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-claude-advanced-training.html) | Advanced CLI workflows, Claude Cowork in M365, secure MCP servers & frontier model orchestration. |
+| **Google Gemini Basic Training** | [`service-gemini-basic-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-gemini-basic-training.html) | Gemini Pro multimodal chat, Nano Banana conversational editing & Gemini Spark background agents. |
+| **Google Gemini Advanced Training** | [`service-gemini-advanced-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-gemini-advanced-training.html) | Antigravity multi-agent systems, deep thinking modes, flow video direction & hybrid ecosystems. |
+| **Deep Research & NotebookLM** | [`service-deep-research-notebooklm.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-deep-research-notebooklm.html) | Autonomous multi-source literature synthesis, corporate knowledge graphs & audio briefing generation. |
+| **Hybrid Quantum-Classical AI** | [`service-hybrid-quantum-ai.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-hybrid-quantum-ai.html) | Quantum kernel methods, hybrid QNN-LLM architectures, parameter shift rules & fault-tolerant simulation. |
 
 ---
 
-## The 10-Day Training Contract Model
+## Flexible Engagement Models & Service Selection
 
-Each training contract I execute spans **10 consecutive business days** of intensive, hands-on architectural and coding immersion:
+Clients have complete autonomy to choose how they engage:
 
-```mermaid
-gantt
-    title 10-Day Enterprise Training Immersion Roadmap
-    dateFormat  X
-    axisFormat Day %d
-    section Phase 1: Foundations
-    Architecture Assessment & Sandboxes  :active, 1, 1d
-    Prompt Engineering & Schema Design   :active, 2, 2d
-    section Phase 2: Agent Mechanics
-    Claude Agents 101 & Primitives       :crit, active, 3, 3d
-    Claude Code & AI-Assisted TDD        :crit, active, 4, 4d
-    Claude Skills & Custom MCP Servers   :crit, active, 5, 5d
-    section Phase 3: Swarms & Local LLMs
-    Multi-Agent Teams & Swarm Ops        :active, 6, 6d
-    Local LLM Serving (vLLM / Ollama)    :active, 7, 7d
-    OpenCode & Dynamic Model Routing     :active, 8, 8d
-    section Phase 4: Productionization
-    Budget Limits, Spend Quotas & Evals  :active, 9, 9d
-    Capstone Verification & IP Handover  :crit, active, 10, 10d
-```
+1. **Individual Service Picks (Pick & Choose)**:
+   - **Personal / 1-on-1**: **$1,000 USD per service** (strictly 1 person), covers **5 days of live training + 5 days of dedicated support** (10 days total coverage per service).
+   - **Business / Organizations**: **$2,000 USD per service** (cohorts up to 20 participants included, +$250 USD per extra seat), covers **5 days of live training + 5 days of dedicated support** (10 days total coverage per service).
+   - **Purchasing Power Parity (PPP)**: Applies across all 6 tiers for all individual service picks.
+
+2. **Flagship Transformation Programs (Comprehensive Immersion)**:
+   - **Business Training Flagship**: **$5,000 USD for 60 days** (30 days live hands-on engineering training + 30 days guidance and detailed guides and materials). Includes cohorts up to 20 participants (extra seats at $250 USD per seat).
+   - **Personal Training Flagship**: **$2,500 USD for 30 days** (15 days intensive 1-on-1 sprint + 15 days guidance and detailed guides and materials). Strictly for 1 person only.
 
 ### Cohort Pricing & Scale-Out Policy
-1. **Fixed Base Rate for up to 20 Seats**: Every 10-day training contract carries a fixed base rate covering up to 20 participants.
-2. **Scale-Out Additional Head Charges**: Beyond 20 seats, cohorts are billed at a flat **$500 USD per additional participant**.
-3. **Parity Applied to Scale-Out**: The qualifying Country Parity multiplier applies directly to the additional seat fee as well (e.g., Tier 2 pays $375/head; Tier 3 & 4 pay $250/head; Tier 5 pays $125/head).
+1. **Fixed Base Rate for up to 20 Seats**: Every Business engagement carries a fixed base rate covering up to 20 participants.
+2. **Scale-Out Additional Head Charges**: Beyond 20 seats, cohorts are billed at a flat **$250 USD per additional participant**.
+3. **Parity Applied to Scale-Out**: The qualifying Country Parity multiplier applies directly to the additional seat fee as well (e.g., Tier 2 pays $188/head; Tier 3 & 4 pay $125/head; Tier 5 pays $63/head; Tier 6 pays $25/head).
 4. **Custom Enterprise MSAs**: For organizations rolling out training across 50 to 5,000+ employees across international divisions, custom enterprise master service agreements provide volume discounts and dedicated sandbox infrastructure.
 
 ### Complete Inclusions
 - **Comprehensive Digital Assets**: Production-grade GitHub starter repos (Python, TypeScript, Rust), MCP templates, Docker/vLLM runbooks, and prompt template libraries.
-- **30 Days Post-Training Support**: Direct technical assistance for edge cases and runtime debugging immediately following Day 10.
-- **30 Days Free Consultation for Doubts**: Scheduled video check-ins and asynchronous PR/architecture reviews.
+- **Dedicated Post-Training Support**: Direct technical assistance for edge cases and runtime debugging immediately following live instruction.
+- **Consultation for Doubts**: Scheduled video check-ins and asynchronous PR/architecture reviews.
 - **Custom Graduate Discord Community**: Lifetime access to an exclusive alumni community for continuous frontier AI updates and monthly live AMAs with me.
 - **100% Client IP Ownership**: Full copyright transfer with zero model training on client code and zero data retention.
 

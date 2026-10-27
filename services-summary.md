@@ -10,7 +10,7 @@ Clients have the flexibility to either enroll in comprehensive multi-week transf
 
 1. **Individual Service Picks (Pick & Choose)**:
    - **Personal / 1-on-1**: **$1,000 USD per service** (strictly 1 person), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
-   - **Business / Organizations**: **$2,000 USD per service** (cohorts up to 10 participants, +$500/extra seat), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
+   - **Business / Organizations**: **$2,000 USD per service** (cohorts up to 20 participants, +$250/extra seat), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
    - **Purchasing Power Parity (PPP)**: Available across all 6 parity tiers for every individual service pick (Individual: $1,000 / $750 / $500 / $500 / $250 / $100; Business: $2,000 / $1,500 / $1,000 / $1,000 / $500 / $200).
 
 2. **Flagship Transformation Programs (Comprehensive Engagement)**:
@@ -21,7 +21,7 @@ Clients have the flexibility to either enroll in comprehensive multi-week transf
 | **Training Duration** | 5 days live engineering | 5 days live engineering | 30 days hands-on engineering | 15 days intensive instruction |
 | **Included Support Period** | 5 days dedicated support | 5 days dedicated support | 30 days guidance & materials | 15 days guidance & materials |
 | **Total Coverage** | 10 days total coverage | 10 days total coverage | 60 days total coverage | 30 days total coverage |
-| **Audience & Cohort Size** | Strictly 1 person | Up to 10 seats (+ $500/extra) | Up to 10 seats (+ $500/extra) | Strictly 1 person |
+| **Audience & Cohort Size** | Strictly 1 person | Up to 20 seats (+ $250/extra) | Up to 20 seats (+ $250/extra) | Strictly 1 person |
 | **Scope** | Pick & choose single service | Pick & choose single service | Full organizational rollout | Full 1-on-1 career mastery |
 | **Standard Base Rate** | **$1,000 USD** per service | **$2,000 USD** per service | **$5,000 USD** for 60 days | **$2,500 USD** for 30 days |
 | **Purchasing Power Parity** | 6 Tiers: $1,000 to $100 | 6 Tiers: $2,000 to $200 | 6 Tiers: $5,000 to Subsidized | 6 Tiers: $2,500 to $250 |
