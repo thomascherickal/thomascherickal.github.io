@@ -233,14 +233,18 @@ def sync_html_to_md(html_name: str, md_name: str):
                 "2. [Local LLMs & Cost Slashing](service-local-llms-cost-slashing.html) — Cut recurring cloud API bills by 60% to 90% by running open-weight models privately with Ollama, vLLM, and llama.cpp.",
                 "3. [Claude AI Agent Orchestration](service-ai-agents-orchestration.html) — Master the principles of Claude AI agent orchestration to run multi-agent swarms at scale.",
                 "4. [Hermes Agent](service-agentic-ai-systems.html) — Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own infrastructure.",
-                "5. [WorkFlow Automations](service-training-for-workflow-automations.html) — Hands-on training for automating recurring office work with Claude skills, plugins, connectors, and Microsoft 365 add-ins.",
+                "5. [Workflow Automations](service-workflow-automations.html) — Hands-on training in self-hosted local n8n, Make, IFTTT, and open-source automation tools (Activepieces, Windmill) for recurring daily work.",
                 "6. [Applied Quantum (Experimental)](service-quantum-applications.html) — Exploratory quantum computing advisory for enterprise use cases: algorithm simulation with IBM Qiskit and PennyLane.",
                 "7. [AI Budget Training](service-ai-budget-cost-limits-training.html) — Train staff across all levels to control AI spending: establish hard spending caps per session and month.",
                 "8. [Enterprise Workforce AI Training](service-enterprise-workforce-ai-training.html) — Live and remote corporate AI training delivered across distinct tracks: prompting, AI-assisted TDD, and executive roadmaps.",
                 "9. [AI Developer Training](service-ai-developer-training.html) — Hands-on bootcamps training developer teams on terminal and IDE coding agents (Claude Code, Google Antigravity, OpenCode).",
                 "10. [Advanced AI Agents](service-advanced-ai-agents.html) — Build production autonomous agent systems with hierarchical teams of Claude agents for business-critical workloads.",
                 "11. [Claude Basic Training](service-claude-basic-training.html) — Foundational enablement for corporate staff and knowledge workers: choosing the right model between Haiku, Sonnet, and Opus.",
-                "12. [Claude Advanced Training](service-claude-advanced-training.html) — Technical masterclass for senior developers and AI architects: advanced Claude Code CLI workflows, Claude Cowork, and MCP servers."
+                "12. [Claude Advanced Training](service-claude-advanced-training.html) — Technical masterclass for senior developers and AI architects: advanced Claude Code CLI workflows, Claude Cowork, and MCP servers.",
+                "13. [Gemini Basic Training](service-gemini-basic-training.html) — Foundational enterprise Google Gemini workforce enablement: Gemini Pro, Gemini Chat, Nano Banana, Google Flow, and Gemini Spark.",
+                "14. [Gemini Advanced Training](service-gemini-advanced-training.html) — Advanced technical masterclass: Google AI Studio, Google Antigravity IDE, Gemini Deep Think, Gemma fine-tuning, and Gemini Argon.",
+                "15. [Deep Research & NotebookLM](service-deep-research-notebooklm.html) — Autonomous literature synthesis, source-grounded knowledge graphs with NotebookLM, and multi-document intelligence.",
+                "16. [Hybrid Quantum-Classical AI](service-hybrid-quantum-ai.html) — Hybrid quantum-classical optimization pipelines with VQE, QAOA, QSVM, PennyLane, and Qiskit."
             ])
 
         md_lines.extend([

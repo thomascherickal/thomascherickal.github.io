@@ -1,0 +1,36 @@
+/* ==========================================================================
+   LAPTOP / DESKTOP RESPONSIVE DESIGN (css/laptop/laptop.css)
+   Target: Desktop, Laptops, and Large Screens (min-width: 1025px)
+   ========================================================================== */
+
+@media (min-width: 1025px) {
+  /* Fluid typography and container scaling for laptop viewports */
+  .container {
+    max-width: 1380px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* 4-Column Grid for Services on Laptop/Desktop */
+  .pricing-grid-faq {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 1.5rem !important;
+  }
+
+  /* 3-Column Grid for Parity Tiers on Laptop/Desktop */
+  .parity-tiers-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Dual column layout for calculator on Laptop/Desktop */
+  .calc-grid {
+    display: grid !important;
+    grid-template-columns: 1.15fr 0.85fr !important;
+    gap: 2.5rem !important;
+  }
+}

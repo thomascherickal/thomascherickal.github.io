@@ -216,8 +216,7 @@ graph TD
 | **Generative AI Transformation** | [`service-generative-ai-transformation.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-generative-ai-transformation.html) | Transitioning from basic chatbots to coordinated autonomous agent swarms. |
 | **Local LLMs & Cost Slashing** | [`service-local-llms-cost-slashing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-local-llms-cost-slashing.html) | Deploying private open-weight models (vLLM, Ollama) to slash token expenses by 60%–90%. |
 | **Claude Agent Orchestration** | [`service-ai-agents-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-ai-agents-orchestration.html) | Production state machines, long-term memory persistence & human-in-the-loop gates. |
-| **Hermes Agent Training** | [`service-agentic-ai-systems.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-agentic-ai-systems.html) | Open-weights autonomous agent development, self-correction loops & task runners. |
-| **Training for Workflow Automations** | [`service-training-for-workflow-automations.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-training-for-workflow-automations.html) | Enterprise n8n pipelines, webhook listeners & automated business processes. |
+| **Workflow Automations** | [`service-workflow-automations.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-workflow-automations.html) | Enterprise local n8n, Make, IFTTT & open-source workflow pipelines with zero per-step SaaS fees. |
 | **Quantum Applications (Experimental)** | [`service-quantum-applications.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-quantum-applications.html) | IBM Qiskit, PennyLane, VQE, QAOA & Post-Quantum Cryptography (PQC) readiness. |
 | **AI Budget & Cost Control Training** | [`service-ai-budget-cost-limits-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-ai-budget-cost-limits-training.html) | LiteLLM gateways, departmental spend quotas, token caching & hard circuit breakers. |
 | **Enterprise Workforce AI Training** | [`service-enterprise-workforce-ai-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/service-enterprise-workforce-ai-training.html) | Role-specific bootcamps for Freshers, Staff, Developers, Managers & CXOs. |
@@ -310,7 +309,7 @@ Included components in: service-enterprise-workforce-ai-training.html
 Included components in: service-generative-ai-transformation.html
 Included components in: service-local-llms-cost-slashing.html
 Included components in: service-quantum-applications.html
-Included components in: service-training-for-workflow-automations.html
+Included components in: service-workflow-automations.html
 Included components in: writing.html
 
 Build complete. Successfully updated 26 HTML files.
@@ -340,7 +339,7 @@ Updated llms.txt
   [HTML -> MD] Syncing service-generative-ai-transformation.html -> md-html-sync/service-generative-ai-transformation.md...
   [HTML -> MD] Syncing service-local-llms-cost-slashing.html -> md-html-sync/service-local-llms-cost-slashing.md...
   [HTML -> MD] Syncing service-quantum-applications.html -> md-html-sync/service-quantum-applications.md...
-  [HTML -> MD] Syncing service-training-for-workflow-automations.html -> md-html-sync/service-training-for-workflow-automations.md...
+  [HTML -> MD] Syncing service-workflow-automations.html -> md-html-sync/service-workflow-automations.md...
   [HTML -> MD] Syncing claude-101.html -> md-html-sync/claude-101.md...
   [HTML -> MD] Syncing claude-orchestration.html -> md-html-sync/claude-orchestration.md...
   [HTML -> MD] Syncing claude-code.html -> md-html-sync/claude-code.md...
@@ -377,7 +376,7 @@ No changes needed: service-enterprise-workforce-ai-training.html
 No changes needed: service-generative-ai-transformation.html
 No changes needed: service-local-llms-cost-slashing.html
 No changes needed: service-quantum-applications.html
-No changes needed: service-training-for-workflow-automations.html
+No changes needed: service-workflow-automations.html
 No changes needed: writing.html
 
 Build complete. Successfully updated 0 HTML files.

@@ -56,46 +56,131 @@
         "@type": "Offer",
         "url": "https://thomascherickal.github.io/service-ai-agents-orchestration.html",
         "priceCurrency": "USD",
-        "price": "3000.00",
+        "price": "1000.00",
         "priceSpecification": [
           {
             "@type": "PriceSpecification",
-            "name": "Tier 1 (Standard / 100%)",
-            "minPrice": "3000.00",
-            "maxPrice": "6000.00",
+            "name": "Individual Service Pick (Individual Tier 1 / 100%)",
+            "price": "1000.00",
+            "priceCurrency": "USD",
+            "description": "5 days live training + 5 days dedicated support (10 days total coverage), 1 person only"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Individual Service Pick (Individual Tier 2 / 25% Off)",
+            "price": "750.00",
             "priceCurrency": "USD"
           },
           {
             "@type": "PriceSpecification",
-            "name": "Tier 2 (Developing / 25% Off)",
-            "minPrice": "2250.00",
-            "maxPrice": "4500.00",
+            "name": "Individual Service Pick (Individual Tier 3 & 4 / 50% Off)",
+            "price": "500.00",
             "priceCurrency": "USD"
           },
           {
             "@type": "PriceSpecification",
-            "name": "Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off)",
-            "minPrice": "1500.00",
-            "maxPrice": "3000.00",
+            "name": "Individual Service Pick (Individual Tier 5 / 75% Off)",
+            "price": "250.00",
             "priceCurrency": "USD"
           },
           {
             "@type": "PriceSpecification",
-            "name": "Tier 5 (Academia & Non-Profits / 75% Off)",
-            "minPrice": "750.00",
-            "maxPrice": "1500.00",
+            "name": "Individual Service Pick (Individual Tier 6 / Subsidized)",
+            "price": "100.00",
             "priceCurrency": "USD"
           },
           {
             "@type": "PriceSpecification",
-            "name": "Tier 6 (Crisis-Affected & Under-Resourced Regions)",
+            "name": "Business Service Pick (Business Tier 1 / 100%)",
+            "price": "2000.00",
+            "priceCurrency": "USD",
+            "description": "5 days live training + 5 days dedicated support (10 days total coverage), up to 10 participants, +$500/extra seat"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Business Service Pick (Business Tier 2 / 25% Off)",
+            "price": "1500.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Business Service Pick (Business Tier 3 & 4 / 50% Off)",
+            "price": "1000.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Business Service Pick (Business Tier 5 / 75% Off)",
+            "price": "500.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Business Service Pick (Business Tier 6 / Subsidized)",
+            "price": "200.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Business Training (Tier 1 / 100%)",
+            "price": "5000.00",
+            "priceCurrency": "USD",
+            "description": "60 days: 30d training + 30d guidance & materials, up to 10 participants, +$500/extra seat"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Business Training (Tier 2 / 25% Off)",
+            "price": "3750.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Business Training (Tier 3 & 4 / 50% Off)",
+            "price": "2500.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Business Training (Tier 5 / 75% Off)",
+            "price": "1250.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Personal Training (Tier 1 / 100%)",
+            "price": "2500.00",
+            "priceCurrency": "USD",
+            "description": "30 days: 15d training + 15d guidance & materials, 1 person only"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Personal Training (Tier 2 / 25% Off)",
+            "price": "1875.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Personal Training (Tier 3 & 4 / 50% Off)",
+            "price": "1250.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Personal Training (Tier 5 / 75% Off)",
+            "price": "625.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "PriceSpecification",
+            "name": "Tier 6 (Custom Subsidized Relief)",
             "price": "0.00",
             "priceCurrency": "USD",
-            "description": "Custom subsidized quotes for underprivileged teams"
+            "description": "Custom subsidized quotes and relief for under-resourced teams"
           }
         ],
         "availability": "https://schema.org/InStock",
-        "eligibleRegion": "Worldwide"
+        "eligibleRegion": "Worldwide",
+        "description": "Available as an individual service pick ($1,000 USD for individuals / $2,000 USD for businesses, each for 5 days of live training + 5 days of dedicated support, 10 days total coverage), or as part of our comprehensive programs: Business Training ($5,000 USD for 60 days: 30d training + 30d guidance/materials, up to 10 seats, +$500/extra seat) or Personal Training ($2,500 USD for 30 days: 15d training + 15d guidance/materials, 1 person only). Clients are free to pick and choose their services. Full 195-country Purchasing Power Parity (PPP) supported across all service pricing."
       },
       "serviceOutput": [
         "Sonnet & Haiku Hybrid Swarms: Orchestrating tiered multi-agent topologies for high-accuracy, cost-effective pipelines.",

@@ -112,13 +112,13 @@
     }
 
     .filter-chip {
-      background: rgba(12, 17, 29, 0.85);
-      border: 1px solid var(--chip-accent, rgba(255, 255, 255, 0.12));
+      background: rgba(12, 17, 29, 0.5);
+      border: 1px solid var(--chip-accent, rgba(255, 255, 255, 0.25));
       border-radius: 8px;
       padding: 0.5rem 1rem;
       font-family: var(--font-mono);
       font-size: 0.96rem;
-      color: var(--chip-accent, var(--text-secondary));
+      color: #ffffff;
       text-decoration: none;
       cursor: pointer;
       transition: var(--transition);
@@ -132,7 +132,7 @@
     .filter-chip:focus {
       border-color: var(--chip-accent, var(--cyan));
       color: #ffffff;
-      background: rgba(12, 17, 29, 0.95);
+      background: rgba(12, 17, 29, 0.85);
       text-decoration: none;
       transform: translateY(-1px);
       box-shadow: 0 0 12px var(--chip-accent, rgba(56, 189, 248, 0.3));
@@ -152,8 +152,8 @@
       padding: 0.15rem 0.45rem;
       border-radius: 4px;
       font-size: 0.86rem;
-      color: var(--chip-accent, var(--text-muted));
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      border: 1px solid var(--chip-accent, rgba(255, 255, 255, 0.25));
       text-decoration: none;
     }
 

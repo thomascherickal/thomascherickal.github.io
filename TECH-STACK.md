@@ -229,7 +229,7 @@ Included components in: service-enterprise-workforce-ai-training.html
 Included components in: service-generative-ai-transformation.html
 Included components in: service-local-llms-cost-slashing.html
 Included components in: service-quantum-applications.html
-Included components in: service-training-for-workflow-automations.html
+Included components in: service-workflow-automations.html
 Included components in: writing.html
 
 Build complete. Successfully updated 26 HTML files.
@@ -397,7 +397,7 @@ Changes not staged for commit:
 	modified:   service-generative-ai-transformation.html
 	modified:   service-local-llms-cost-slashing.html
 	modified:   service-quantum-applications.html
-	modified:   service-training-for-workflow-automations.html
+	modified:   service-workflow-automations.html
 	modified:   sitemap.xml
 	modified:   writing.html
 ```

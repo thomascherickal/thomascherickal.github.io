@@ -19,53 +19,37 @@
 
 ## Individual Services & Base Rates (A La Carte)
 
-### Generative AI Transformation
-**Base Rate**: `$2,000 USD`  
-Move from one-off chatbot prompts to coordinated teams of Claude agents with custom MCP servers and bounded execution loops.
+### Service
 
-### Local LLMs & Cost Slashing
-**Base Rate**: `$2,000 USD`  
-Cut recurring cloud API bills by 60% to 90% by running open-weight models privately with Ollama, vLLM, and llama.cpp on your hardware.
+### Service
 
-### Claude AI Agent Orchestration
-**Base Rate**: `$2,000 USD`  
-Master Claude agent orchestration to build supervisor-worker swarms, sequential pipelines, and parallel teams that control quality and cost.
+### Service
 
-### Hermes Agent
-**Base Rate**: `$2,000 USD`  
-Deploy self-hosted Hermes Agent on Linux with persistent session memory, autonomous skill accumulation, and scheduled background tasks.
+### Service
 
-### WorkFlow Automations
-**Base Rate**: `$2,000 USD`  
-Hands-on training to automate up to 50% of routine office work using Claude skills, plugins, connectors, and Microsoft 365 add-ins.
+### Service
 
-### Applied Quantum (Experimental)
-**Base Rate**: `$2,000 USD`  
-Exploratory quantum computing advisory: algorithm simulation with Qiskit and PennyLane, variational circuits, and NIST PQC migration.
+### Service
 
-### AI Budget Training
-**Base Rate**: `$2,000 USD`  
-Train staff across all levels to enforce hard spending caps, manage token quotas, leverage prompt caching, and route to local models.
+### Service
 
-### Enterprise AI Training
-**Base Rate**: `$2,000 USD`  
-Role-tailored corporate AI training across distinct tracks: staff workflows, developer AI-assisted TDD, and executive AI roadmaps.
+### Service
 
-### AI Developer Training
-**Base Rate**: `$2,000 USD`  
-Hands-on bootcamps training developers on Claude Code CLI, Google Antigravity, custom Python/Rust MCP servers, and AI-assisted TDD.
+### Service
 
-### Advanced AI Agents
-**Base Rate**: `$2,000 USD`  
-Build production autonomous agent systems: hierarchical Claude teams, test-driven self-correction loops, and Docker sandboxed tools.
+### Service
 
-### Claude Basic Training
-**Base Rate**: `$2,000 USD`  
-Foundational enablement: model tier selection (Haiku, Sonnet, Opus), structured XML prompting, Claude Projects, and Artifacts.
+### Service
 
-### Claude Advanced Training
-**Base Rate**: `$2,000 USD`  
-Senior engineer masterclass: Claude Code CLI in depth, Claude Cowork in Microsoft 365, custom MCP engineering, and agent swarms.
+### Service
+
+### Service
+
+### Service
+
+### Service
+
+### Service
 
 ---
 
@@ -89,7 +73,8 @@ Rates are automatically indexed across 195 countries to ensure fair pricing worl
 **Rate**: `50% Startup Discount` (FLAT 50% OFF ALL PACKAGES · MULTIPLIER: 0.50X)  
 
 ### Universities, Labs & Non-Profits
-*TIER 05 · ACADEMIA & NON-PROFITS* — Higher Education, Research Labs & registered charity or non-profit (including US 501(c)(3) organizations) Charities  
+*TIER 05 · ACADEMIA & NON-PROFITS* — Higher Education, Research Labs & registered charity or non-profit (including
+ US 501(c)(3) organizations) Charities  
 **Rate**: `75% Parity Discount` (25% BASE RATE · BASELINE MULTIPLIER: 0.25X)  
 
 ### Crisis-Affected & Under-Resourced Regions

@@ -14,7 +14,7 @@
 
 **Specialized Roles**:
 - `Claude Agent Orchestration`
-- `Gemini AI Tooling`
+- `Gemini AI Toolkit Mastery`
 - `Local LLM Deployment`
 - `AI Budgets & Cost Control`
 - `Workforce AI Training`
@@ -95,10 +95,7 @@ Enterprise AI transformation, Claude AI agent orchestration, technical deep dive
 4. [Hermes Agent](service-agentic-ai-systems.html) — Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own
  infrastructure. Configure persistent session memory so the agent retains project context, saves solved
  procedures as reusable skills, and runs scheduled tasks.
-5. [Workflow Automation Training](service-training-for-workflow-automations.html) — Hands-on training for automating recurring office work with Claude skills, plugins,
- connectors, scheduled tasks and Microsoft 365 add-ins. Automate recurring office tasks across sales,
- finance and engineering, with private data options.
- across sales, finance and engineering with private data options.
+5. [Workflow Automations](service-workflow-automations.html) — Hands-on training in self-hosted local n8n, Make, IFTTT, and open-source automation tools (Activepieces, Windmill). Automate up to 50% of routine enterprise workflows with zero per-step SaaS fees and complete data privacy.
 6. [Quantum Applications (Experimental)](service-quantum-applications.html) — Exploratory quantum computing advisory for enterprise use cases: algorithm
  simulation with IBM Qiskit and PennyLane, variational circuits (VQE/QAOA), quantum machine learning, and
  Post-Quantum Cryptography (PQC) readiness aligned with NIST standards.
@@ -123,6 +120,10 @@ Enterprise AI transformation, Claude AI agent orchestration, technical deep dive
  CLI workflows, Claude for Microsoft 365 (Excel, Word, PowerPoint, Outlook), designing and securing
  production MCP servers, and
  orchestrating frontier models with adaptive thinking effort.
+13. [Google Gemini Basic Training](service-gemini-basic-training.html) — Foundational enterprise Google Gemini workforce enablement: mastering Google Gemini Pro services, Gemini Chat, Nano Banana conversational image generation, Google Flow, Google Lyria music scoring, Google Omni multimodal workflows, and Gemini Spark 24/7 background agents.
+14. [Google Gemini Advanced Training](service-gemini-advanced-training.html) — Advanced technical masterclass for engineers, architects, and technical leads: Google AI Studio, Google Antigravity IDE, Gemini Deep Think extended reasoning, open-weight Google Gemma fine-tuning, autonomous Gemini Agents with MCP, and Gemini Argon frontier code refactoring.
+15. [Deep Research & NotebookLM](service-deep-research-notebooklm.html) — Enterprise autonomous research and intelligence enablement: long-horizon Gemini Deep Research agents, multi-source conflict resolution, verified citation graphs, NotebookLM enterprise knowledge bases, and structured executive synthesis.
+16. [Hybrid Quantum-Classical AI](service-hybrid-quantum-ai.html) — Advanced technical masterclass on Hybrid Quantum-Classical AI: parameterized quantum circuits (PQCs), variational algorithms (VQE, QAOA), quantum machine learning with PennyLane and Qiskit, and NIST post-quantum cryptography migration.
 
 ---
 

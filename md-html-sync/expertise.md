@@ -79,16 +79,15 @@ In-depth technical systems design covering Tokio async runtimes, Burn & Candle
 
 ### 11. Role #11
 Structured engagement models for engineering teams, fast-growing tech startups, and forward-looking
- enterprises — covering Claude Agent Teams, live & remote workforce bootcamps, Local LLM cost
- reduction,
- and quantum systems exploration.
+ enterprises — covering Claude Agent Teams, the Google Gemini AI Ecosystem (Google AI Studio, Google Antigravity, Gemini Deep Think, Gemini Agents & Argon), live & remote workforce training, Local LLM cost
+ reduction, and quantum systems exploration.
 
 ---
 
 ## Tech-Stack Expertise (10 Curated Chip Groups)
 
 ### Languages I Code & Write
-`Python` · `Rust` · `SQL` · `Bash` · `HTML` · `CSS` · `Vanilla JS` · `Golang` · `Mojo` · `C` · `Julia` · `MPI`
+`Python` · `Rust` · `SQL` · `Bash` · `HTML` · `CSS` · `Vanilla JS` · `Golang` · `C` · `Julia` · `MPI`
 
 ### Generative AI Systems
 `LLMs` · `SLMs` · `Agentic AI` · `Hermes Agent` · `AI Agents` · `Python Ecosystems`
@@ -98,25 +97,25 @@ Structured engagement models for engineering teams, fast-growing tech startups, 
  Qiskit` · `PennyLane` · `Quantum Machine Learning` · `Quantum Algorithms` · `VQE` · `QAOA` · `PQC Advisory`
 
 ### AI Tools Expertise
-`Claude Code` · `Claude Desktop` · `Google Antigravity` · `Google Gemini Notebook` · `Google AI Studio` · `OpenCode` · `OpenRouter`
+`Claude Code` · `Claude Desktop` · `Google Antigravity` · `Google Gemini Notebook` · `Google AI Studio` · `Gemini Desktop` · `OpenRouter`
 
-### Local LLMs Budget
-`Ollama` · `vLLM` · `llama.cpp` · `GGUF` · `LM Studio` · `Qwen` · `Gemma` · `Llama` · `Mistral`
-
-### Decision Models
-`Jev` · `Laya` · `OpenAI Decisions API` · `Local Decision Models (Ollama)`
+### Local LLM & Local AI
+`vLLM` · `llama.cpp` · `GGUF` · `LM Studio` · `Qwen` · `Gemma` · `LM Studio` · `Jev Alternatives` · `Laya`
 
 ### AI-Assisted Test-Driven Dev (TDD)
 `Test-Driven Development (TDD)` · `AI Pair Programming` · `Automated Test Suites` · `pytest` · `cargo test` · `CI/CD Automation`
 
-### Open Source Systems
-`Linux (Ubuntu/Zorin)` · `Docker & Containers` · `Hugging Face Ecosystem` · `FastAPI Microservices` · `Git & Open Source Tooling`
+### Gemini Expertise
+`Gemini LLMs` · `Google Deep Research` · `Gemini Agents` · `Gemini Spark` · `Google Nano Banana` · `Google Flow` · `Google DeepMind`
 
 ### Claude Expertise
 `Claude Agent Teams` · `Prompt Caching` · `MCP Architecture` · `Adaptive Thinking` · `Computer Use` · `Claude Subagents`
 
-### Corporate Training
-`Live & Remote Bootcamps` · `Employee AI Adoption` · `Developer AI-Assisted Dev` · `Staff Workflow Automation` · `CXO AI Roadmaps`
+### Open-Source Systems
+`HuggingFace Models` · `HuggingFace Spaces` · `Hermes Agent` · `Agentic Skills` · `OpenCode` · `Agentics Foundation`
+
+### Automation Expertise
+`n8n Local Deployment` · `Make` · `IFTTT` · `Activepieces` · `Subagents` · `Windmill` · `AI Desktop Ecosystems`
 
 ---
 

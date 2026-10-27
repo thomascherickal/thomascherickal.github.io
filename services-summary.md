@@ -1,28 +1,37 @@
 # Services Summary
 
-Consolidated executive overview, training time limits, and compressed deliverables for all 12 core enterprise transformation services, plus dedicated 1-on-1 Personal AI Transformation.
+Consolidated executive overview, training time limits, and compressed deliverables for all 16 core enterprise transformation services, plus dedicated 1-on-1 Personal AI Transformation.
 
 ---
 
-## Training Formats & Daily Time Limits
+## Engagement Models & Service Selection Options
 
-| Parameter | Enterprise Transformation Programs | Personal AI Transformation (Individual) |
-| :--- | :--- | :--- |
-| **Daily Training Time Limit** | **4 hours a day** | **2 hours a day** |
-| **Training Duration** | 30 days of live hands-on engineering | 15 days of intensive 1-on-1 sprint |
-| **Included Support Period** | 30 days of included enterprise support | 15 days of included daily work support |
-| **Total Engagement Coverage** | 60 days of total enterprise protection | 30 days of comprehensive coverage |
-| **Audience & Cohort Size** | Cohorts up to 10 participants per booking | Strictly for **one person only** (private acceleration) |
-| **Doubts & Support Channel** | Dedicated team channel & architectural reviews | Daily questions, doubts clarification & lightweight guides |
-| **Standard Base Rate** | $2,000 USD (covers up to 10 participants) | $1,000 USD (strictly capped at 50% of enterprise rate) |
-| **Purchasing Power Parity** | Supported across 195 countries (6 parity tiers) | Supported across 195 countries (down to $100 in Tier 6) |
-| **Upfront Advance Fee** | $0 advance (zero upfront payment required) | $0 advance (zero upfront payment required) |
-| **Installment Structure** | 5 equal milestones billed after every 5 days | 5 equal milestones billed after every 3 days |
-| **Intellectual Property** | 100% full commercial IP transfer | 100% full commercial IP transfer |
+Clients have the flexibility to either enroll in comprehensive multi-week transformation programs or pick and choose individual services tailored to specific technical needs:
+
+1. **Individual Service Picks (Pick & Choose)**:
+   - **Personal / 1-on-1**: **$1,000 USD per service** (strictly 1 person), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
+   - **Business / Organizations**: **$2,000 USD per service** (cohorts up to 10 participants, +$500/extra seat), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
+   - **Purchasing Power Parity (PPP)**: Available across all 6 parity tiers for every individual service pick (Individual: $1,000 / $750 / $500 / $500 / $250 / $100; Business: $2,000 / $1,500 / $1,000 / $1,000 / $500 / $200).
+
+2. **Flagship Transformation Programs (Comprehensive Engagement)**:
+
+| Parameter | Individual Service Pick (Personal) | Individual Service Pick (Business) | Business Training Flagship | Personal Training Flagship |
+| :--- | :--- | :--- | :--- | :--- |
+| **Daily Training Time Limit** | **2 hours a day** | **4 hours a day** | **4 hours a day** | **2 hours a day** |
+| **Training Duration** | 5 days live engineering | 5 days live engineering | 30 days hands-on engineering | 15 days intensive instruction |
+| **Included Support Period** | 5 days dedicated support | 5 days dedicated support | 30 days guidance & materials | 15 days guidance & materials |
+| **Total Coverage** | 10 days total coverage | 10 days total coverage | 60 days total coverage | 30 days total coverage |
+| **Audience & Cohort Size** | Strictly 1 person | Up to 10 seats (+ $500/extra) | Up to 10 seats (+ $500/extra) | Strictly 1 person |
+| **Scope** | Pick & choose single service | Pick & choose single service | Full organizational rollout | Full 1-on-1 career mastery |
+| **Standard Base Rate** | **$1,000 USD** per service | **$2,000 USD** per service | **$5,000 USD** for 60 days | **$2,500 USD** for 30 days |
+| **Purchasing Power Parity** | 6 Tiers: $1,000 to $100 | 6 Tiers: $2,000 to $200 | 6 Tiers: $5,000 to Subsidized | 6 Tiers: $2,500 to $250 |
+| **Upfront Advance Fee** | $0 advance | $0 advance | $0 advance | $0 advance |
+| **Milestone Structure** | Delivered then settled | Delivered then settled | 5 equal milestones | 5 equal milestones |
+| **Intellectual Property** | 100% commercial IP transfer | 100% commercial IP transfer | 100% commercial IP transfer | 100% commercial IP transfer |
 
 ---
 
-## The 12 Enterprise Services (Compressed Summaries)
+## The 16 Enterprise Services (Compressed Summaries)
 
 ### 01. Generative AI Transformation
 Move your business from one-off chatbot prompts to coordinated teams of Claude agents that carry real work. Ground agent swarms in your domain data with custom MCP servers, bounded execution loops, and strict spending limits.
@@ -44,10 +53,10 @@ Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own in
 - **Deliverables**: Self-hosted Hermes Agent on Linux, persistent session memory (vector & SQLite), autonomous skill accumulation, and sandboxed Docker tool execution.
 - **URL**: [https://thomascherickal.github.io/service-agentic-ai-systems.html](https://thomascherickal.github.io/service-agentic-ai-systems.html)
 
-### 05. Training for Workflow Automation Training
-Hands-on training for automating recurring office work with Claude skills, plugins, connectors, scheduled tasks, and Microsoft 365 add-ins. Automate up to half of routine daily operations across sales, finance, and engineering with private data options.
-- **Deliverables**: Up to 50% routine office automation, custom Claude skills & connectors, Microsoft 365 add-in integrations, scheduled background tasks, and zero per-seat SaaS lock-in.
-- **URL**: [https://thomascherickal.github.io/service-training-for-workflow-automations.html](https://thomascherickal.github.io/service-training-for-workflow-automations.html)
+### 05. Workflow Automations
+Hands-on enterprise training in self-hosted local n8n, Make, IFTTT, and open-source automation tools (Activepieces, Windmill, Node-RED). Connect webhooks, databases, CRMs, and local LLMs (Ollama) to automate up to 50% of routine operations with zero per-step SaaS lock-in and complete data privacy.
+- **Deliverables**: Self-hosted local n8n with Ollama AI Agent nodes, multi-branch Make scenarios, IFTTT event bridges, open-source Activepieces/Windmill setups, webhook error handling queues, and full commercial workflow export.
+- **URL**: [https://thomascherickal.github.io/service-workflow-automations.html](https://thomascherickal.github.io/service-workflow-automations.html)
 
 ### 06. Quantum Applications (Experimental)
 Exploratory quantum computing advisory for enterprise use cases: algorithm simulation with IBM Qiskit and PennyLane, variational circuits (VQE/QAOA), quantum machine learning, and Post-Quantum Cryptography (PQC) readiness aligned with NIST standards.
@@ -84,18 +93,38 @@ Technical masterclass for senior developers and AI architects: advanced Claude C
 - **Deliverables**: Advanced Claude Code CLI workflows, Claude Cowork in Microsoft 365, secure production MCP server design, and frontier model orchestration with adaptive thinking.
 - **URL**: [https://thomascherickal.github.io/service-claude-advanced-training.html](https://thomascherickal.github.io/service-claude-advanced-training.html)
 
+### 13. Google Gemini Basic Training
+Foundational enterprise Google Gemini workforce enablement: mastering Google Gemini Pro services, Gemini Chat, Nano Banana conversational image generation, Google Flow cinematic storyboarding, Google Lyria music scoring, Google Omni multimodal workflows, and Gemini Spark 24/7 background agents.
+- **Deliverables**: Gemini Pro multimodal chat, Nano Banana conversational image editing, Google Flow storyboards, Google Lyria soundtrack scoring, Google Omni multimodal video direction, and Gemini Spark 24/7 Workspace agents.
+- **URL**: [https://thomascherickal.github.io/service-gemini-basic-training.html](https://thomascherickal.github.io/service-gemini-basic-training.html)
+
+### 14. Google Gemini Advanced Training
+Advanced technical masterclass for engineers, architects, and technical leads: Google AI Studio, Google Antigravity IDE, Gemini Deep Think extended reasoning, open-weight Google Gemma fine-tuning, autonomous Gemini Agents with MCP, and Gemini Argon frontier code refactoring.
+- **Deliverables**: Google AI Studio prompt engineering with context caching, Google Antigravity IDE agentic workflows with browser verification, Gemini Deep Think reasoning trails, private local Gemma fine-tuning & vLLM serving, and 1M-token legacy codebase modernization with Gemini Argon.
+- **URL**: [https://thomascherickal.github.io/service-gemini-advanced-training.html](https://thomascherickal.github.io/service-gemini-advanced-training.html)
+
+### 15. Deep Research & NotebookLM Intelligence
+Enterprise research synthesis and grounded intelligence: automated deep-dive literature synthesis, source-grounded knowledge graphs with NotebookLM, audio overview discussions, multi-step competitive intelligence pipelines, and zero-hallucination document audits.
+- **Deliverables**: Autonomous Deep Research pipelines, enterprise NotebookLM audio and slide generation, grounded source validation, competitive intelligence dossiers, and multi-document synthesis workflows.
+- **URL**: [https://thomascherickal.github.io/service-deep-research-notebooklm.html](https://thomascherickal.github.io/service-deep-research-notebooklm.html)
+
+### 16. Hybrid Quantum-Classical AI Architecture
+Next-generation hybrid computing: Variational Quantum Eigensolvers (VQE), Quantum Approximate Optimization Algorithm (QAOA), Quantum Support Vector Machines (QSVM), PennyLane and Qiskit integrations, and Post-Quantum Cryptography (PQC) readiness.
+- **Deliverables**: Hybrid quantum-classical optimization pipelines, PennyLane/Qiskit circuit simulations, parameterized quantum circuits (PQC), quantum machine learning kernels, and cryptographic migration roadmaps.
+- **URL**: [https://thomascherickal.github.io/service-hybrid-quantum-ai.html](https://thomascherickal.github.io/service-hybrid-quantum-ai.html)
+
 ---
 
-## Personal AI Transformation (Individual 1-on-1 Acceleration)
+## Personal Training (Individual 1-on-1 Acceleration)
 
-A dedicated 1-on-1 executive acceleration program engineered strictly for one person only (solo founders, senior engineers, and independent builders). Synthesizes all 12 transformation services into an intensive 15-day training sprint followed by 15 days of included support with daily questions and doubts clarification, and lightweight source guides:
+A dedicated 1-on-1 acceleration program engineered strictly for one person only (solo founders, senior engineers, and independent builders). Structured as 30 days total (15 days intensive training + 15 days of guidance and detailed guides and materials). Clients are encouraged to choose services relevant to their work or interests across the catalogue:
 
-- **Daily Time Limit**: **2 hours a day** of direct 1-on-1 pair-programming and system implementation.
+- **Daily Training Time Limit**: **2 hours a day** of direct 1-on-1 pair-programming and system implementation.
 - **Audience**: Strictly for **one person only** with zero cohort dilution or corporate friction.
-- **Sprint Structure**: 15 days of intensive live instruction + 15 days of included daily work support (30-day experience).
-- **Daily Questions & Doubts Clarification**: Ongoing daily access to review real-world implementations, debug agent pipelines, and solve production blockers.
-- **Lightweight Source Guides**: Concise, easy-to-skim architecture blueprints, runbooks, and cheat sheets designed for rapid daily lookup.
-- **Pricing & Parity**: Strictly capped at **50% of enterprise training costs ($1,000 USD base rate)** with 195-country Purchasing Power Parity ($1,000 / $750 / $500 / $500 / $250 / $100).
-- **$0 Upfront Commitment**: Zero advance fee; billed in 5 equal installments due every 3 days only after training has been delivered.
+- **Sprint Structure**: 15 days of intensive live instruction + 15 days of guidance and detailed guides and materials (30-day experience).
+- **Guidance & Doubts Clarification**: Ongoing daily access to review real-world implementations, debug agent pipelines, and solve production blockers.
+- **Detailed Guides & Materials**: In-depth architecture blueprints, runbooks, and cheat sheets designed for rapid daily lookup and long-term reference.
+- **Pricing & Parity**: **$2,500 USD base rate** with 195-country Purchasing Power Parity ($2,500 / $1,875 / $1,250 / $1,250 / $625 / $250).
+- **$0 Upfront Commitment**: Zero advance fee; billed in 5 equal milestones due after milestones are delivered.
 - **100% IP Transfer**: Complete commercial ownership and copyright assignment of all code, prompts, and runbooks developed.
 - **URL**: [https://thomascherickal.github.io/personal-ai-training.html](https://thomascherickal.github.io/personal-ai-training.html)

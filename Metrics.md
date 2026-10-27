@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-10-26 17:17:58 UTC` | Branch: `main` | Head Commit: `10d42cc`
+> **Automated Status Report** | Generated on `2026-10-27 05:07:35 UTC` | Branch: `main` | Head Commit: `ba367ff`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **252** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **78,442** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **69,792** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **2,973** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **5,677** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **14.01 MB (14,685,625 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **190,336 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **391** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-10-26** | Subject: "style: expand copy link button dimensions and reduce text size by 50%" |
+| **Total Tracked Files** | **269** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **90,588** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **81,462** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **3,120** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **6,006** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **14.84 MB (15,564,919 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **244,128 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **392** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-10-26** | Subject: "style: adjust copy link button text size and padding to fit box smoothly" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,15 +27,15 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 50 | 49,953 | 3.70 MB (3,878,079 bytes) | Production static web pages, services, frameworks & guides |
-| **CSS Stylesheets** | 14 | 10,827 | 252.19 KB (258,239 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 1 | 393 | 11.84 KB (12,121 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 9 | 3,580 | 162.46 KB (166,361 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 58 | 7,350 | 453.76 KB (464,648 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 36 | 6,291 | 262.80 KB (269,112 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **HTML Documents** | 54 | 58,682 | 4.39 MB (4,599,130 bytes) | Production static web pages, services, frameworks & guides |
+| **CSS Stylesheets** | 17 | 11,089 | 258.67 KB (264,876 bytes) | Design tokens, animations, responsive layout & themes |
+| **JavaScript Scripts** | 3 | 1,280 | 46.63 KB (47,754 bytes) | Client-side interactivity, search, filter & components |
+| **Python Tooling** | 9 | 3,046 | 132.37 KB (135,549 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 62 | 8,239 | 506.77 KB (518,937 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 40 | 8,204 | 348.95 KB (357,320 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 37 | 48 | 61.43 KB (62,907 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 40 | 0 | 9.09 MB (9,529,900 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 7 | 0 | 43.22 KB (44,258 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 7 | 0 | 47.41 KB (48,546 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,23 +43,23 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 50 | 49,953 | 3.70 MB (3,878,079 bytes) | 19.8% |
-| `.css` | 14 | 10,827 | 252.19 KB (258,239 bytes) | 5.6% |
-| `.md` | 58 | 7,350 | 453.76 KB (464,648 bytes) | 23.0% |
-| `.json` | 36 | 6,291 | 262.80 KB (269,112 bytes) | 14.3% |
-| `.py` | 9 | 3,580 | 162.46 KB (166,361 bytes) | 3.6% |
-| `.js` | 1 | 393 | 11.84 KB (12,121 bytes) | 0.4% |
-| `.svg` | 37 | 48 | 61.43 KB (62,907 bytes) | 14.7% |
-| `.jpg` | 10 | 0 | 5.26 MB (5,517,051 bytes) | 4.0% |
-| `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 7.9% |
-| `.png` | 8 | 0 | 1.34 MB (1,402,128 bytes) | 3.2% |
+| `.html` | 54 | 58,682 | 4.39 MB (4,599,130 bytes) | 20.1% |
+| `.css` | 17 | 11,089 | 258.67 KB (264,876 bytes) | 6.3% |
+| `.md` | 62 | 8,239 | 506.77 KB (518,937 bytes) | 23.0% |
+| `.json` | 40 | 8,204 | 348.95 KB (357,320 bytes) | 14.9% |
+| `.py` | 9 | 3,046 | 132.37 KB (135,549 bytes) | 3.3% |
+| `.js` | 3 | 1,280 | 46.63 KB (47,754 bytes) | 1.1% |
+| `.svg` | 37 | 48 | 61.43 KB (62,907 bytes) | 13.8% |
+| `.jpg` | 10 | 0 | 5.26 MB (5,517,051 bytes) | 3.7% |
+| `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 7.4% |
+| `.png` | 8 | 0 | 1.34 MB (1,402,128 bytes) | 3.0% |
 | `.jpeg` | 1 | 0 | 622.42 KB (637,354 bytes) | 0.4% |
-| `.txt` | 2 | 0 | 23.79 KB (24,361 bytes) | 0.8% |
+| `.txt` | 2 | 0 | 27.20 KB (27,851 bytes) | 0.7% |
 | `.docx` | 1 | 0 | 10.35 KB (10,595 bytes) | 0.4% |
-| `.xml` | 1 | 0 | 8.46 KB (8,667 bytes) | 0.4% |
+| `.xml` | 1 | 0 | 9.24 KB (9,465 bytes) | 0.4% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.4% |
 | `.webmanifest` | 1 | 0 | 542 bytes | 0.4% |
-| `[no extension]` | 2 | 0 | 93 bytes | 0.8% |
+| `[no extension]` | 2 | 0 | 93 bytes | 0.7% |
 
 ---
 
@@ -67,25 +67,25 @@
 
 | Metric | Measurement | Architecture Details |
 | :--- | :--- | :--- |
-| **CSS Media Queries (`@media`)** | **76** | Ultra-responsive breakpoints for mobile, tablet, desktop |
-| **CSS Rule Blocks** | **1,510** | Modular selector rules across all stylesheets |
+| **CSS Media Queries (`@media`)** | **80** | Ultra-responsive breakpoints for mobile, tablet, desktop |
+| **CSS Rule Blocks** | **1,551** | Modular selector rules across all stylesheets |
 | **CSS Design Tokens (`--var`)** | **61** | Standardized color palettes, typography, spacing & radii |
-| **FAQ Question Cards** | **159** | Rich searchable & filterable accordion cards |
-| **Primary Headings (`<h1>`)** | **46** | Strict single-H1 semantic hierarchy per page |
-| **Secondary Section Headings (`<h2>`)** | **337** | Structural topic subdivisions |
-| **Card & Item Headings (`<h3>`)** | **343** | Individual service, question, and feature cards |
-| **Call-to-Action (CTA) Modules** | **52** | Standardized CTAs with Free LinkedIn Consultation rule |
-| **Canonical Links Configured** | **45** | 100% SEO canonical URL coverage across public pages |
-| **Open Graph Meta Tags** | **323** | Social preview cards across Twitter/LinkedIn/Facebook |
-| **Structured Data Blocks (JSON-LD)** | **46** | Schema.org FAQPage, Service, Person, Organization schemas |
+| **FAQ Question Cards** | **165** | Rich searchable & filterable accordion cards |
+| **Primary Headings (`<h1>`)** | **50** | Strict single-H1 semantic hierarchy per page |
+| **Secondary Section Headings (`<h2>`)** | **362** | Structural topic subdivisions |
+| **Card & Item Headings (`<h3>`)** | **371** | Individual service, question, and feature cards |
+| **Call-to-Action (CTA) Modules** | **56** | Standardized CTAs with Free LinkedIn Consultation rule |
+| **Canonical Links Configured** | **49** | 100% SEO canonical URL coverage across public pages |
+| **Open Graph Meta Tags** | **351** | Social preview cards across Twitter/LinkedIn/Facebook |
+| **Structured Data Blocks (JSON-LD)** | **50** | Schema.org FAQPage, Service, Person, Organization schemas |
 
 ---
 
 ## 5. Web Page Taxonomy & Sitemap Distribution
 
-- **Total Public HTML Pages**: **50**
+- **Total Public HTML Pages**: **54**
 - **Core Landing & Portal Pages**: **14** (`404.html`, `article-footer_dark.html`, `articles.html`, `collaboration.html`, `contact.html`, `expertise.html`, `faqs.html`, `footer.html`, `google43d90cf6a204dc6d.html`, `header.html`, `index.html`, `personal-ai-training.html`, `pricing.html`, `writing.html`)
-- **Dedicated Service Pages (`service-*.html`)**: **12** (Full enterprise curriculum and architecture deep-dives)
+- **Dedicated Service Pages (`service-*.html`)**: **16** (Full enterprise curriculum and architecture deep-dives)
 - **Claude Guides & Frameworks (`claude-*.html`)**: **12** (Claude Code, Cowork, Skills, MCP, Orchestration, Plugins, Science, Local LLMs, Features)
 - **Google AI & Gemini Guides (`google-*.html`)**: **12** (Gemini 101, Antigravity IDE, Studio, Flow, Deep Research, Spark, Argon, Gemma, Nano Banana)
 

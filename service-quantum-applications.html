@@ -98,42 +98,127 @@
           "priceSpecification": [
             {
               "@type": "PriceSpecification",
-              "name": "Tier 1 (Standard / 100%)",
-              "minPrice": "1000.00",
-              "maxPrice": "3000.00",
+              "name": "Individual Service Pick (Individual Tier 1 / 100%)",
+              "price": "1000.00",
+              "priceCurrency": "USD",
+              "description": "5 days live training + 5 days dedicated support (10 days total coverage), 1 person only"
+            },
+            {
+              "@type": "PriceSpecification",
+              "name": "Individual Service Pick (Individual Tier 2 / 25% Off)",
+              "price": "750.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
-              "name": "Tier 2 (Developing / 25% Off)",
-              "minPrice": "750.00",
-              "maxPrice": "2250.00",
+              "name": "Individual Service Pick (Individual Tier 3 & 4 / 50% Off)",
+              "price": "500.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
-              "name": "Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off)",
-              "minPrice": "500.00",
-              "maxPrice": "1500.00",
+              "name": "Individual Service Pick (Individual Tier 5 / 75% Off)",
+              "price": "250.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
-              "name": "Tier 5 (Academia & Non-Profits / 75% Off)",
-              "minPrice": "250.00",
-              "maxPrice": "750.00",
+              "name": "Individual Service Pick (Individual Tier 6 / Subsidized)",
+              "price": "100.00",
               "priceCurrency": "USD"
             },
             {
               "@type": "PriceSpecification",
-              "name": "Tier 6 (Crisis-Affected & Under-Resourced Regions)",
+              "name": "Business Service Pick (Business Tier 1 / 100%)",
+              "price": "2000.00",
+              "priceCurrency": "USD",
+              "description": "5 days live training + 5 days dedicated support (10 days total coverage), up to 10 participants, +$500/extra seat"
+            },
+            {
+              "@type": "PriceSpecification",
+              "name": "Business Service Pick (Business Tier 2 / 25% Off)",
+              "price": "1500.00",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "PriceSpecification",
+              "name": "Business Service Pick (Business Tier 3 & 4 / 50% Off)",
+              "price": "1000.00",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "PriceSpecification",
+              "name": "Business Service Pick (Business Tier 5 / 75% Off)",
+              "price": "500.00",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "PriceSpecification",
+              "name": "Business Service Pick (Business Tier 6 / Subsidized)",
+              "price": "200.00",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "PriceSpecification",
+              "name": "Business Training (Tier 1 / 100%)",
+              "price": "5000.00",
+              "priceCurrency": "USD",
+              "description": "60 days: 30d training + 30d guidance & materials, up to 10 participants, +$500/extra seat"
+            },
+            {
+              "@type": "PriceSpecification",
+              "name": "Business Training (Tier 2 / 25% Off)",
+              "price": "3750.00",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "PriceSpecification",
+              "name": "Business Training (Tier 3 & 4 / 50% Off)",
+              "price": "2500.00",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "PriceSpecification",
+              "name": "Business Training (Tier 5 / 75% Off)",
+              "price": "1250.00",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "PriceSpecification",
+              "name": "Personal Training (Tier 1 / 100%)",
+              "price": "2500.00",
+              "priceCurrency": "USD",
+              "description": "30 days: 15d training + 15d guidance & materials, 1 person only"
+            },
+            {
+              "@type": "PriceSpecification",
+              "name": "Personal Training (Tier 2 / 25% Off)",
+              "price": "1875.00",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "PriceSpecification",
+              "name": "Personal Training (Tier 3 & 4 / 50% Off)",
+              "price": "1250.00",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "PriceSpecification",
+              "name": "Personal Training (Tier 5 / 75% Off)",
+              "price": "625.00",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "PriceSpecification",
+              "name": "Tier 6 (Custom Subsidized Relief)",
               "price": "0.00",
               "priceCurrency": "USD",
-              "description": "Custom subsidized quotes for underprivileged teams"
+              "description": "Custom subsidized quotes and relief for under-resourced teams"
             }
           ],
           "availability": "https://schema.org/InStock",
-          "eligibleRegion": "Worldwide"
+          "eligibleRegion": "Worldwide",
+          "description": "Available as an individual service pick ($1,000 USD for individuals / $2,000 USD for businesses, each for 5 days of live training + 5 days of dedicated support, 10 days total coverage), or as part of our comprehensive programs: Business Training ($5,000 USD for 60 days: 30d training + 30d guidance/materials, up to 10 seats, +$500/extra seat) or Personal Training ($2,500 USD for 30 days: 15d training + 15d guidance/materials, 1 person only). Clients are free to pick and choose their services. Full 195-country Purchasing Power Parity (PPP) supported across all service pricing."
         },
         "serviceOutput": [
           "Quantum Readiness & Feasibility Audits: Identifying commercial optimization, logistics, and chemistry quantum advantages.",
@@ -181,14 +266,18 @@
           <li><a href="service-local-llms-cost-slashing.html">Local LLMs &amp; Cost Slashing</a></li>
           <li><a href="service-ai-agents-orchestration.html">Claude Agent Orchestration</a></li>
           <li><a href="service-agentic-ai-systems.html">Hermes Agent Training</a></li>
-          <li><a href="service-training-for-workflow-automations.html">Workflow Automation Training</a></li>
+          <li><a href="service-workflow-automations.html">Workflow Automations</a></li>
           <li><a href="service-quantum-applications.html">Quantum Applications (Experimental)</a></li>
+          <li><a href="service-hybrid-quantum-ai.html">Hybrid Quantum-Classical AI (Demos)</a></li>
           <li><a href="service-ai-budget-cost-limits-training.html">AI Budget &amp; Cost Control Training</a></li>
           <li><a href="service-enterprise-workforce-ai-training.html">Enterprise Workforce AI Training</a></li>
           <li><a href="service-ai-developer-training.html">AI Developer Training</a></li>
           <li><a href="service-advanced-ai-agents.html">Advanced AI Agents</a></li>
+          <li><a href="service-deep-research-notebooklm.html">Deep Research &amp; NotebookLM</a></li>
           <li><a href="service-claude-basic-training.html">Claude Basic Training</a></li>
           <li><a href="service-claude-advanced-training.html">Claude Advanced Training</a></li>
+          <li><a href="service-gemini-basic-training.html">Gemini Basic Training</a></li>
+          <li><a href="service-gemini-advanced-training.html">Gemini Advanced Training</a></li>
         </ul>
       </li>
       <li><a href="personal-ai-training.html" data-nav="personal-ai-training.html">Personal-Training</a></li>
@@ -352,22 +441,234 @@
         <h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">5. Investment
           &amp; Pricing Quote</h2>
         <ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;list-style:disc;">
-          <li><strong>Engagement Duration:</strong> Strictly 1 month (4 weeks of structured milestone delivery and
-            runtime verification).</li>
-          <li><strong>Base Investment Rate (Tier 1 Standard):</strong> <strong>$2,000 USD</strong> (flat base rate for
-            complete 1-month delivery).</li>
+          <li><strong>Modular Service Selection &amp; Flexible Engagement:</strong> Clients can freely pick and choose their services, either individually or bundled under our comprehensive transformation programs:
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li><strong>Individual Service Pick (Personal / 1-on-1):</strong> <strong>$1,000 USD</strong> per service for <strong>5 days of live training + 5 days of dedicated support</strong> (10 days total coverage per service). Strictly 1 person only.</li>
+              <li><strong>Individual Service Pick (Business / Teams):</strong> <strong>$2,000 USD</strong> per service for <strong>5 days of live training + 5 days of dedicated support</strong> (10 days total coverage per service). Covers up to 10 participants (additional seats at <strong>$500 USD per seat</strong>).</li>
+              <li><strong>Comprehensive Business Training:</strong> <strong>$5,000 USD</strong> for <strong>60 days</strong> (30 days live training + 30 days guidance and detailed guides and materials). Includes cohorts up to 10 participants. Extra seats at <strong>$500 USD per seat</strong>.</li>
+              <li><strong>Comprehensive Personal Training:</strong> <strong>$2,500 USD</strong> for <strong>30 days</strong> (15 days live training + 15 days guidance and detailed guides and materials). Strictly for 1 person only (private acceleration).</li>
+            </ul>
+          </li>
+          <li><strong>Global Purchasing Power Parity (PPP) Available for All Service Pricing:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li><strong>Tier 1 (Standard / 100%):</strong> Individual $1,000 USD | Business $2,000 USD | Business 60d $5,000 USD | Personal 30d $2,500 USD (USA, UK, EU, Canada, Australia)</li>
+              <li><strong>Tier 2 (Developing Nations / 25% Off):</strong> Individual $750 USD | Business $1,500 USD | Business 60d $3,750 USD | Personal 30d $1,875 USD (India, Brazil, Mexico, UAE, Poland)</li>
+              <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Individual $500 USD | Business $1,000 USD | Business 60d $2,500 USD | Personal 30d $1,250 USD</li>
+              <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Individual $250 USD | Business $500 USD | Business 60d $1,250 USD | Personal 30d $625 USD</li>
+              <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Individual $100 USD | Business $200 USD | Custom Subsidized Relief / Micro-Rates</li>
+              <li>Calculate and lock in your exact tier rate live on the <a href="pricing.html" style="color:var(--cyan);text-decoration:underline;">Pricing page</a>.</li>
+            </ul>
+          </li>
+          <li><strong>Payment Schedule:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li>Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.</li>
+            </ul>
+          </li>
+        </ul>
+          </li>
+          <li><strong>Global Purchasing Power Parity (PPP) Available for All Service Pricing:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li><strong>Tier 1 (Standard / 100%):</strong> Individual $1,000 USD | Business $2,000 USD | Business 60d $5,000 USD | Personal 30d $2,500 USD (USA, UK, EU, Canada, Australia)</li>
+              <li><strong>Tier 2 (Developing Nations / 25% Off):</strong> Individual $750 USD | Business $1,500 USD | Business 60d $3,750 USD | Personal 30d $1,875 USD (India, Brazil, Mexico, UAE, Poland)</li>
+              <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Individual $500 USD | Business $1,000 USD | Business 60d $2,500 USD | Personal 30d $1,250 USD</li>
+              <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Individual $250 USD | Business $500 USD | Business 60d $1,250 USD | Personal 30d $625 USD</li>
+              <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Individual $100 USD | Business $200 USD | Custom Subsidized Relief / Micro-Rates</li>
+              <li>Calculate and lock in your exact tier rate live on the <a href="pricing.html" style="color:var(--cyan);text-decoration:underline;">Pricing page</a>.</li>
+            </ul>
+          </li>
+          <li><strong>Payment Schedule:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li>Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.</li>
+            </ul>
+          </li>
+        </ul>
+          </li>
+          <li><strong>Global Purchasing Power Parity (PPP) Available for All Service Pricing:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li><strong>Tier 1 (Standard / 100%):</strong> Individual $1,000 USD | Business $2,000 USD | Business 60d $5,000 USD | Personal 30d $2,500 USD (USA, UK, EU, Canada, Australia)</li>
+              <li><strong>Tier 2 (Developing Nations / 25% Off):</strong> Individual $750 USD | Business $1,500 USD | Business 60d $3,750 USD | Personal 30d $1,875 USD (India, Brazil, Mexico, UAE, Poland)</li>
+              <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Individual $500 USD | Business $1,000 USD | Business 60d $2,500 USD | Personal 30d $1,250 USD</li>
+              <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Individual $250 USD | Business $500 USD | Business 60d $1,250 USD | Personal 30d $625 USD</li>
+              <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Individual $100 USD | Business $200 USD | Custom Subsidized Relief / Micro-Rates</li>
+              <li>Calculate and lock in your exact tier rate live on the <a href="pricing.html" style="color:var(--cyan);text-decoration:underline;">Pricing page</a>.</li>
+            </ul>
+          </li>
+          <li><strong>Payment Schedule:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li>Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.</li>
+            </ul>
+          </li>
+        </ul>
+          </li>
+          <li><strong>Global Purchasing Power Parity (PPP) Available for All Service Pricing:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li><strong>Tier 1 (Standard / 100%):</strong> Individual $1,000 USD | Business $2,000 USD | Business 60d $5,000 USD | Personal 30d $2,500 USD (USA, UK, EU, Canada, Australia)</li>
+              <li><strong>Tier 2 (Developing Nations / 25% Off):</strong> Individual $750 USD | Business $1,500 USD | Business 60d $3,750 USD | Personal 30d $1,875 USD (India, Brazil, Mexico, UAE, Poland)</li>
+              <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Individual $500 USD | Business $1,000 USD | Business 60d $2,500 USD | Personal 30d $1,250 USD</li>
+              <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Individual $250 USD | Business $500 USD | Business 60d $1,250 USD | Personal 30d $625 USD</li>
+              <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Individual $100 USD | Business $200 USD | Custom Subsidized Relief / Micro-Rates</li>
+              <li>Calculate and lock in your exact tier rate live on the <a href="pricing.html" style="color:var(--cyan);text-decoration:underline;">Pricing page</a>.</li>
+            </ul>
+          </li>
+          <li><strong>Payment Schedule:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li>Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.</li>
+            </ul>
+          </li>
+        </ul>
+          </li>
+          <li><strong>Global Purchasing Power Parity (PPP) Available for All Service Pricing:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li><strong>Tier 1 (Standard / 100%):</strong> Individual $1,000 USD | Business $2,000 USD | Business 60d $5,000 USD | Personal 30d $2,500 USD (USA, UK, EU, Canada, Australia)</li>
+              <li><strong>Tier 2 (Developing Nations / 25% Off):</strong> Individual $750 USD | Business $1,500 USD | Business 60d $3,750 USD | Personal 30d $1,875 USD (India, Brazil, Mexico, UAE, Poland)</li>
+              <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Individual $500 USD | Business $1,000 USD | Business 60d $2,500 USD | Personal 30d $1,250 USD</li>
+              <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Individual $250 USD | Business $500 USD | Business 60d $1,250 USD | Personal 30d $625 USD</li>
+              <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Individual $100 USD | Business $200 USD | Custom Subsidized Relief / Micro-Rates</li>
+              <li>Calculate and lock in your exact tier rate live on the <a href="pricing.html" style="color:var(--cyan);text-decoration:underline;">Pricing page</a>.</li>
+            </ul>
+          </li>
+          <li><strong>Payment Schedule:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li>Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.</li>
+            </ul>
+          </li>
+        </ul>
+          </li>
+          <li><strong>Global Purchasing Power Parity (PPP) Available for All Service Pricing:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li><strong>Tier 1 (Standard / 100%):</strong> Individual $1,000 USD | Business $2,000 USD | Business 60d $5,000 USD | Personal 30d $2,500 USD (USA, UK, EU, Canada, Australia)</li>
+              <li><strong>Tier 2 (Developing Nations / 25% Off):</strong> Individual $750 USD | Business $1,500 USD | Business 60d $3,750 USD | Personal 30d $1,875 USD (India, Brazil, Mexico, UAE, Poland)</li>
+              <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Individual $500 USD | Business $1,000 USD | Business 60d $2,500 USD | Personal 30d $1,250 USD</li>
+              <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Individual $250 USD | Business $500 USD | Business 60d $1,250 USD | Personal 30d $625 USD</li>
+              <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Individual $100 USD | Business $200 USD | Custom Subsidized Relief / Micro-Rates</li>
+              <li>Calculate and lock in your exact tier rate live on the <a href="pricing.html" style="color:var(--cyan);text-decoration:underline;">Pricing page</a>.</li>
+            </ul>
+          </li>
+          <li><strong>Payment Schedule:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li>Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.</li>
+            </ul>
+          </li>
+        </ul>
+          </li>
           <li><strong>Global Purchasing Power Parity (PPP) &amp; Subsidized Rates:</strong>
             <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
-              <li><strong>Tier 1 (Standard / 100%):</strong> $2,000 USD (USA, UK, EU, Canada, Australia)</li>
-              <li><strong>Tier 2 (Developing Nations / 25% Off):</strong> $1,500 USD (India, Brazil, Mexico, UAE,
-                Poland)</li>
-              <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> $1,000 USD</li>
-              <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> $500 USD</li>
-              <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Custom Subsidized Relief /
-                Micro-Rates</li>
-              <li>Calculate and lock in your exact tier rate live on the <a href="pricing.html"
-                  style="color:var(--cyan);text-decoration:underline;">Pricing page</a>.</li>
+              <li><strong>Tier 1 (Standard / 100%):</strong> Business Training $5,000 USD | Personal Training $2,500 USD (USA, UK, EU, Canada, Australia)</li>
+              <li><strong>Tier 2 (Developing Nations / 25% Off):</strong> Business Training $3,750 USD | Personal Training $1,875 USD (India, Brazil, Mexico, UAE, Poland)</li>
+              <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Business Training $2,500 USD | Personal Training $1,250 USD</li>
+              <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Business Training $1,250 USD | Personal Training $625 USD</li>
+              <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Custom Subsidized Relief / Micro-Rates</li>
+              <li>Calculate and lock in your exact tier rate live on the <a href="pricing.html" style="color:var(--cyan);text-decoration:underline;">Pricing page</a>.</li>
             </ul>
+          </li>
+          <li><strong>Payment Schedule:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li>Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.</li>
+            </ul>
+          </li>
+        </ul>
+          </li>
+          <li><strong>Global Purchasing Power Parity (PPP) &amp; Subsidized Rates:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li><strong>Tier 1 (Standard / 100%):</strong> Business Training $5,000 USD | Personal Training $2,500 USD (USA, UK, EU, Canada, Australia)</li>
+              <li><strong>Tier 2 (Developing Nations / 25% Off):</strong> Business Training $3,750 USD | Personal Training $1,875 USD (India, Brazil, Mexico, UAE, Poland)</li>
+              <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Business Training $2,500 USD | Personal Training $1,250 USD</li>
+              <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Business Training $1,250 USD | Personal Training $625 USD</li>
+              <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Custom Subsidized Relief / Micro-Rates</li>
+              <li>Calculate and lock in your exact tier rate live on the <a href="pricing.html" style="color:var(--cyan);text-decoration:underline;">Pricing page</a>.</li>
+            </ul>
+          </li>
+          <li><strong>Payment Schedule:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li>Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.</li>
+            </ul>
+          </li>
+        </ul>
+          </li>
+          <li><strong>Global Purchasing Power Parity (PPP) &amp; Subsidized Rates:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li><strong>Tier 1 (Standard / 100%):</strong> Business Training $5,000 USD | Personal Training $2,500 USD (USA, UK, EU, Canada, Australia)</li>
+              <li><strong>Tier 2 (Developing Nations / 25% Off):</strong> Business Training $3,750 USD | Personal Training $1,875 USD (India, Brazil, Mexico, UAE, Poland)</li>
+              <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Business Training $2,500 USD | Personal Training $1,250 USD</li>
+              <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Business Training $1,250 USD | Personal Training $625 USD</li>
+              <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Custom Subsidized Relief / Micro-Rates</li>
+              <li>Calculate and lock in your exact tier rate live on the <a href="pricing.html" style="color:var(--cyan);text-decoration:underline;">Pricing page</a>.</li>
+            </ul>
+          </li>
+          <li><strong>Payment Schedule:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li>Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.</li>
+            </ul>
+          </li>
+        </ul>
+          </li>
+          <li><strong>Global Purchasing Power Parity (PPP) &amp; Subsidized Rates:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li><strong>Tier 1 (Standard / 100%):</strong> Business Training $5,000 USD | Personal Training $2,500 USD (USA, UK, EU, Canada, Australia)</li>
+              <li><strong>Tier 2 (Developing Nations / 25% Off):</strong> Business Training $3,750 USD | Personal Training $1,875 USD (India, Brazil, Mexico, UAE, Poland)</li>
+              <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Business Training $2,500 USD | Personal Training $1,250 USD</li>
+              <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Business Training $1,250 USD | Personal Training $625 USD</li>
+              <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Custom Subsidized Relief / Micro-Rates</li>
+              <li>Calculate and lock in your exact tier rate live on the <a href="pricing.html" style="color:var(--cyan);text-decoration:underline;">Pricing page</a>.</li>
+            </ul>
+          </li>
+          <li><strong>Payment Schedule:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li>Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.</li>
+            </ul>
+          </li>
+        </ul>
+          </li>
+          <li><strong>Global Purchasing Power Parity (PPP) &amp; Subsidized Rates:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li><strong>Tier 1 (Standard / 100%):</strong> Business Training $5,000 USD | Personal Training $2,500 USD (USA, UK, EU, Canada, Australia)</li>
+              <li><strong>Tier 2 (Developing Nations / 25% Off):</strong> Business Training $3,750 USD | Personal Training $1,875 USD (India, Brazil, Mexico, UAE, Poland)</li>
+              <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Business Training $2,500 USD | Personal Training $1,250 USD</li>
+              <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Business Training $1,250 USD | Personal Training $625 USD</li>
+              <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Custom Subsidized Relief / Micro-Rates</li>
+              <li>Calculate and lock in your exact tier rate live on the <a href="pricing.html" style="color:var(--cyan);text-decoration:underline;">Pricing page</a>.</li>
+            </ul>
+          </li>
+          <li><strong>Payment Schedule:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li>Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.</li>
+            </ul>
+          </li>
+        </ul>
+          </li>
+          <li><strong>Global Purchasing Power Parity (PPP) &amp; Subsidized Rates:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li><strong>Tier 1 (Standard / 100%):</strong> Business Training $5,000 USD | Personal Training $2,500 USD (USA, UK, EU, Canada, Australia)</li>
+              <li><strong>Tier 2 (Developing Nations / 25% Off):</strong> Business Training $3,750 USD | Personal Training $1,875 USD (India, Brazil, Mexico, UAE, Poland)</li>
+              <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Business Training $2,500 USD | Personal Training $1,250 USD</li>
+              <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Business Training $1,250 USD | Personal Training $625 USD</li>
+              <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Custom Subsidized Relief / Micro-Rates</li>
+              <li>Calculate and lock in your exact tier rate live on the <a href="pricing.html" style="color:var(--cyan);text-decoration:underline;">Pricing page</a>.</li>
+            </ul>
+          </li>
+          <li><strong>Payment Schedule:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li>Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.</li>
+            </ul>
+          </li>
+        </ul>
+          </li>
+          <li><strong>Global Purchasing Power Parity (PPP) &amp; Subsidized Rates:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li><strong>Tier 1 (Standard / 100%):</strong> Business Training $5,000 USD | Personal Training $2,500 USD (USA, UK, EU, Canada, Australia)</li>
+              <li><strong>Tier 2 (Developing Nations / 25% Off):</strong> Business Training $3,750 USD | Personal Training $1,875 USD (India, Brazil, Mexico, UAE, Poland)</li>
+              <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Business Training $2,500 USD | Personal Training $1,250 USD</li>
+              <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Business Training $1,250 USD | Personal Training $625 USD</li>
+              <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Custom Subsidized Relief / Micro-Rates</li>
+              <li>Calculate and lock in your exact tier rate live on the <a href="pricing.html" style="color:var(--cyan);text-decoration:underline;">Pricing page</a>.</li>
+            </ul>
+          </li>
+          <li><strong>Payment Schedule:</strong>
+            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+              <li>Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.</li>
+            </ul>
+          </li>
+        </ul>
           </li>
           <li><strong>Payment Milestones:</strong>
             <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
