@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-10-27 07:53:06 UTC` | Branch: `main` | Head Commit: `621741b`
+> **Automated Status Report** | Generated on `2026-10-27 07:54:04 UTC` | Branch: `main` | Head Commit: `c525c24`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -15,10 +15,10 @@
 | **Source Code Lines (SLOC)** | **78,059** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **3,136** | In-code and architectural documentation |
 | **Blank / Spacing Lines** | **5,913** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **13.87 MB (14,539,164 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **217,472 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **404** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-10-27** | Subject: "Fix(pricing): ensure whitespace normalization and idempotency in sync_pricing" |
+| **Total Repository Size (Tracked Assets)** | **13.87 MB (14,539,141 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **217,473 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **405** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-10-27** | Subject: "Chore: Update sync state and metrics after clean build" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -31,7 +31,7 @@
 | **CSS Stylesheets** | 17 | 11,124 | 259.32 KB (265,541 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 3 | 1,388 | 50.70 KB (51,921 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 10 | 3,177 | 137.02 KB (140,310 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 62 | 8,237 | 507.68 KB (519,868 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Markdown Documentation** | 62 | 8,237 | 507.66 KB (519,845 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 40 | 8,204 | 348.66 KB (357,025 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 37 | 48 | 61.43 KB (62,907 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 40 | 0 | 8.45 MB (8,862,139 bytes) | Optimized feature hero graphics, social cards & assets |
@@ -45,7 +45,7 @@
 | :--- | :--- | :--- | :--- | :--- |
 | `.html` | 54 | 54,930 | 4.03 MB (4,230,818 bytes) | 20.0% |
 | `.css` | 17 | 11,124 | 259.32 KB (265,541 bytes) | 6.3% |
-| `.md` | 62 | 8,237 | 507.68 KB (519,868 bytes) | 23.0% |
+| `.md` | 62 | 8,237 | 507.66 KB (519,845 bytes) | 23.0% |
 | `.json` | 40 | 8,204 | 348.66 KB (357,025 bytes) | 14.8% |
 | `.py` | 10 | 3,177 | 137.02 KB (140,310 bytes) | 3.7% |
 | `.js` | 3 | 1,388 | 50.70 KB (51,921 bytes) | 1.1% |
