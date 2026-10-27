@@ -32,5 +32,14 @@ All Python build, sync, and automation scripts for this repository are stored in
   python3 python/sync_pricing.py
   ```
 
+- **`sync_schemas.py`**:
+  Extracts live embedded JSON-LD schemas (`<script type="application/ld+json">`) from all standalone HTML pages and synchronizes the copy into corresponding JSON files in the `schema/` directory. Live HTML files serve as the source of truth. Run before every push or build pass.
+  ```bash
+  python3 python/sync_schemas.py
+  # Check status without modifying:
+  python3 python/sync_schemas.py --check
+  ```
+
 ## Guideline
 Save all future Python scripts in this `python/` directory.
+

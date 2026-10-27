@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-10-27 09:55:47 UTC` | Branch: `main` | Head Commit: `fb97c92`
+> **Automated Status Report** | Generated on `2026-10-27 11:35:33 UTC` | Branch: `main` | Head Commit: `e2fd1e4`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,13 +10,13 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **270** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **87,101** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **78,052** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **3,136** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **5,913** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **13.86 MB (14,537,093 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **217,271 words** | Educational, curriculum, & marketing prose |
+| **Total Tracked Files** | **285** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **88,982** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **79,722** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **3,217** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **6,043** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **13.95 MB (14,631,952 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **221,013 words** | Educational, curriculum, & marketing prose |
 | **Total Git Commits** | **407** | Since repository inception (2023-03-30) |
 | **Latest Commit Date** | **2026-10-27** | Subject: "Update pricing structure across repo: 000 Business Flagship, 000 Personal Flagship, 00 Business service pick, 00 Individual service pick, 00 extra seat" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
@@ -30,9 +30,9 @@
 | **HTML Documents** | 54 | 54,930 | 4.03 MB (4,229,779 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 17 | 11,124 | 259.32 KB (265,541 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 3 | 1,380 | 50.53 KB (51,746 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 10 | 3,178 | 137.04 KB (140,324 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 62 | 8,237 | 507.17 KB (519,346 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 40 | 8,204 | 348.35 KB (356,711 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Python Tooling** | 11 | 3,384 | 143.83 KB (147,278 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 63 | 8,619 | 541.20 KB (554,192 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 53 | 9,497 | 400.17 KB (409,770 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 37 | 48 | 61.43 KB (62,907 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 40 | 0 | 8.45 MB (8,862,139 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 7 | 0 | 47.46 KB (48,600 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,16 +43,16 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 54 | 54,930 | 4.03 MB (4,229,779 bytes) | 20.0% |
-| `.css` | 17 | 11,124 | 259.32 KB (265,541 bytes) | 6.3% |
-| `.md` | 62 | 8,237 | 507.17 KB (519,346 bytes) | 23.0% |
-| `.json` | 40 | 8,204 | 348.35 KB (356,711 bytes) | 14.8% |
-| `.py` | 10 | 3,178 | 137.04 KB (140,324 bytes) | 3.7% |
+| `.html` | 54 | 54,930 | 4.03 MB (4,229,779 bytes) | 18.9% |
+| `.css` | 17 | 11,124 | 259.32 KB (265,541 bytes) | 6.0% |
+| `.json` | 53 | 9,497 | 400.17 KB (409,770 bytes) | 18.6% |
+| `.md` | 63 | 8,619 | 541.20 KB (554,192 bytes) | 22.1% |
+| `.py` | 11 | 3,384 | 143.83 KB (147,278 bytes) | 3.9% |
 | `.js` | 3 | 1,380 | 50.53 KB (51,746 bytes) | 1.1% |
-| `.svg` | 37 | 48 | 61.43 KB (62,907 bytes) | 13.7% |
-| `.jpg` | 10 | 0 | 5.26 MB (5,517,051 bytes) | 3.7% |
-| `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 7.4% |
-| `.png` | 8 | 0 | 717.16 KB (734,367 bytes) | 3.0% |
+| `.svg` | 37 | 48 | 61.43 KB (62,907 bytes) | 13.0% |
+| `.jpg` | 10 | 0 | 5.26 MB (5,517,051 bytes) | 3.5% |
+| `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 7.0% |
+| `.png` | 8 | 0 | 717.16 KB (734,367 bytes) | 2.8% |
 | `.jpeg` | 1 | 0 | 622.42 KB (637,354 bytes) | 0.4% |
 | `.txt` | 2 | 0 | 27.07 KB (27,721 bytes) | 0.7% |
 | `.docx` | 1 | 0 | 10.34 KB (10,592 bytes) | 0.4% |
@@ -102,7 +102,7 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **46 functions** across tooling scripts | Modular execution units |
+| **Python Function Definitions** | **50 functions** across tooling scripts | Modular execution units |
 | **Python Class Definitions** | **0 classes** | Structured state containers |
 
 ---

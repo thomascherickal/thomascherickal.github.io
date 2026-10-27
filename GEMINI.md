@@ -65,3 +65,10 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - **Canonical Email ID**: `thomascherickal@gmail.com`
 - **ALWAYS** save, render, and use `thomascherickal@gmail.com` as the primary contact email address across all files, footer links, mailto references, documentation, schemas, and configurations.
 
+## HTML to JSON Schema Synchronization (`schema/`)
+- **ALWAYS run `python3 python/sync_schemas.py` before every push** and after modifying any HTML page's `<script type="application/ld+json">` metadata.
+- Live HTML files are the definitive source of truth for all structured data and schema markup.
+- `python/sync_schemas.py` extracts embedded JSON-LD schemas from all HTML pages and synchronizes the copy into the corresponding JSON file under the `schema/` directory (e.g., `index.html` -> `schema/home-schema.json`, `service-*.html` -> `schema/service-*.json`, and other pages -> `schema/<page>-schema.json`).
+- Ensure all updated schema files in `schema/` are staged and committed before pushing to the remote repository.
+
+

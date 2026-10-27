@@ -119,6 +119,12 @@ def build():
         print(f"Warning: Pricing sync step failed: {e}")
 
     try:
+        import sync_schemas
+        sync_schemas.sync_html_to_schemas()
+    except Exception as e:
+        print(f"Warning: HTML to schema sync step failed: {e}")
+
+    try:
         import md_html_sync
         md_html_sync.run_sync()
     except Exception as e:
