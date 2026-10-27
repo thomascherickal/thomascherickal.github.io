@@ -302,7 +302,7 @@ def sync_html_to_md(html_name: str, md_name: str):
             "- [Linktree (linktr.ee/thomascherickal)](https://linktr.ee/thomascherickal)",
             "- [Telegram (t.me/thomascherickal)](https://t.me/thomascherickal)",
             "- [WhatsApp (wa.me/919884452724)](https://wa.me/919884452724)",
-            "- [Discord (discord.gg/na3UWDx4h)](https://discord.gg/na3UWDx4h)",
+            "- [Email (thomascherickal@gmail.com)](mailto:thomascherickal@gmail.com)",
             "- [Patreon (patreon.com/thomascherickal)](https://patreon.com/thomascherickal)",
             "- [Gumroad (thomascherickal.gumroad.com)](https://thomascherickal.gumroad.com)",
             "- [Topmate (topmate.io/thomascherickal)](https://topmate.io/thomascherickal)",
