@@ -328,7 +328,7 @@ def sync_html_to_md(html_name: str, md_name: str):
         content = build_md_files.convert_faqs()
     elif html_name == "404.html":
         content = build_md_files.convert_404()
-    elif html_name.startswith("service-"):
+    elif html_name == "personal-ai-training.html" or html_name.startswith("service-"):
         content = build_md_files.convert_service_page(html_path)
     elif html_name == "agents-all-agentic-providers.html":
         content = build_md_files.convert_agents_all_providers(html_path)
@@ -474,7 +474,11 @@ def sync_md_to_html(md_name: str, html_name: str):
 
 def run_sync(force_direction: str = None) -> int:
     state = load_state()
-    changed_count = 0
+    html_to_md_count = 0
+    md_to_html_count = 0
+    created_md_count = 0
+    unchanged_count = 0
+    total_checked = 0
     
     print("\n--- Running MD-HTML Sync Pass ---")
     
@@ -485,6 +489,7 @@ def run_sync(force_direction: str = None) -> int:
         if not os.path.exists(html_path):
             continue
             
+        total_checked += 1
         cur_html_hash = get_file_hash(html_path)
         cur_html_mtime = get_file_mtime(html_path)
         
@@ -497,16 +502,19 @@ def run_sync(force_direction: str = None) -> int:
         
         # Determine direction
         if force_direction == "html_to_md":
+            if not os.path.exists(md_path):
+                created_md_count += 1
+            else:
+                html_to_md_count += 1
             sync_html_to_md(html_name, md_name)
-            changed_count += 1
         elif force_direction == "md_to_html":
             sync_md_to_html(md_name, html_name)
-            changed_count += 1
+            md_to_html_count += 1
         else:
             # Auto bidirectional detection
             if not os.path.exists(md_path):
                 sync_html_to_md(html_name, md_name)
-                changed_count += 1
+                created_md_count += 1
             else:
                 html_changed = (cur_html_hash != saved_html_hash)
                 md_changed = (cur_md_hash != saved_md_hash)
@@ -515,15 +523,18 @@ def run_sync(force_direction: str = None) -> int:
                     # Both changed, resolve by newer mtime
                     if cur_html_mtime >= cur_md_mtime:
                         sync_html_to_md(html_name, md_name)
+                        html_to_md_count += 1
                     else:
                         sync_md_to_html(md_name, html_name)
-                    changed_count += 1
+                        md_to_html_count += 1
                 elif html_changed:
                     sync_html_to_md(html_name, md_name)
-                    changed_count += 1
+                    html_to_md_count += 1
                 elif md_changed:
                     sync_md_to_html(md_name, html_name)
-                    changed_count += 1
+                    md_to_html_count += 1
+                else:
+                    unchanged_count += 1
                     
         # Update saved state
         state[html_name] = {
@@ -535,8 +546,17 @@ def run_sync(force_direction: str = None) -> int:
         }
         
     save_state(state)
-    print(f"Sync complete. Synchronized {changed_count} file pair(s).\n")
-    return changed_count
+    total_synchronized = html_to_md_count + md_to_html_count + created_md_count
+
+    print("\n--- HTML to Markdown Sync Summary ---")
+    print(f"Total file pairs checked : {total_checked}")
+    print(f"Synced [HTML -> MD]      : {html_to_md_count}")
+    print(f"Synced [MD -> HTML]      : {md_to_html_count}")
+    print(f"Created in md-html-sync/ : {created_md_count}")
+    print(f"Already in sync          : {unchanged_count}")
+    print("-------------------------------------\n")
+
+    return total_synchronized
 
 # ==============================================================================
 # WATCH MODE

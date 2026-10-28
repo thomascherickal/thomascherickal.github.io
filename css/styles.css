@@ -377,9 +377,9 @@ main {
 .hero-avatar {
   width: 300px;
   height: 300px;
-  border-radius: 50%;
-  border: 2px solid var(--gold);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 0 4px rgba(245, 158, 11, 0.12);
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   margin: 0 auto 2rem auto;
   opacity: 1;
   object-fit: cover;
@@ -389,7 +389,7 @@ main {
 
 .hero-avatar:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 0 6px rgba(245, 158, 11, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 .hero-name {
@@ -4482,3 +4482,6 @@ span[style*="font-size:2.8rem"]:empty {
 .search-icon-left:empty ~ .search-input {
   padding-left: 1.25rem !important;
 }
+
+/* Ensure mobile overrides take final priority in stylesheet cascade */
+@import url("mobile/mobile.css");

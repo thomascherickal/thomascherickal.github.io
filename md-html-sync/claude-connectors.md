@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
-> **Connectors give Claude permission-scoped access to the tools each team already uses. Here is how they work, how admins roll them out and three handoffs they fix.By Thomas Cherickal, Generative AI Consultant · The Digital Futurist · October 2026 · thomascherickal.com · thomascherickal.github.io**
+> **Connectors give Claude permission-scoped access to the tools each team already uses. Here is how they work, how admins roll them out and three handoffs they fix.By Thomas Cherickal, Generative AI Consultant · The Digital Futurist · October 2026 · thomascherickal.com · thedigitalfuturist.com**
 
 ---
 
