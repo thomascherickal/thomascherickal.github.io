@@ -375,14 +375,14 @@ Changes not staged for commit:
 	deleted:    schema/claude-MCP.json
 	deleted:    schema/claude-agent-swarms.json
 	deleted:    schema/claude-cowork.json
-	modified:   service-agentic-ai-systems.html
-	modified:   service-ai-agents-orchestration.html
-	modified:   service-ai-budget-cost-limits-training.html
-	modified:   service-enterprise-workforce-ai-training.html
-	modified:   service-generative-ai-transformation.html
-	modified:   service-local-llms-cost-slashing.html
-	modified:   service-quantum-applications.html
-	modified:   service-workflow-automations.html
+	modified:   Business-Services/business-service-agentic-ai-systems.html
+	modified:   Business-Services/business-service-ai-agents-orchestration.html
+	modified:   Business-Services/business-service-ai-budget-cost-limits-training.html
+	modified:   Business-Services/business-service-enterprise-workforce-ai-training.html
+	modified:   Business-Services/business-service-generative-ai-transformation.html
+	modified:   Business-Services/business-service-local-llms-cost-slashing.html
+	modified:   Business-Services/business-service-quantum-applications.html
+	modified:   Business-Services/business-service-workflow-automations.html
 	modified:   sitemap.xml
 	modified:   writing.html
 ```

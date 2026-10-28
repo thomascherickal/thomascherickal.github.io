@@ -310,13 +310,24 @@ def sync_service_html_pages():
           </li>
         </ul>"""
 
+    target_paths = []
     for s in ALL_SERVICES:
         slug = s["slug"]
-        html_path = os.path.join(REPO_DIR, f"{slug}.html")
-        if not os.path.exists(html_path):
-            continue
+        for candidate in [
+            os.path.join(REPO_DIR, f"{slug}.html"),
+            os.path.join(REPO_DIR, "Business-Services", f"business-{slug}.html"),
+            os.path.join(REPO_DIR, "Personal-Services", f"personal-{slug}.html")
+        ]:
+            if os.path.exists(candidate):
+                target_paths.append(candidate)
+
+    for html_path in target_paths:
         with open(html_path, "r", encoding="utf-8") as f:
             html_content = f.read()
+
+        is_subdir = os.path.dirname(os.path.abspath(html_path)) != os.path.abspath(REPO_DIR)
+        pricing_href = "../pricing.html" if is_subdir else "pricing.html"
+        current_pricing_section = pricing_section_html.replace('href="pricing.html"', f'href="{pricing_href}"')
 
         # 1. Update embedded JSON-LD
         match = re.search(r'(<script type="application/ld\+json">)([\s\S]*?)(</script>)', html_content)
@@ -339,11 +350,11 @@ def sync_service_html_pages():
             re.IGNORECASE
         )
         if section_pattern.search(html_content):
-            html_content = section_pattern.sub(r'\1\n' + pricing_section_html + '\n\n        ', html_content)
+            html_content = section_pattern.sub(r'\1\n' + current_pricing_section + '\n\n        ', html_content)
 
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(html_content)
-        print(f"Updated service page: {slug}.html")
+        print(f"Updated service page: {os.path.basename(html_path)}")
 
 def sync_llms_txt():
     llms_path = os.path.join(REPO_DIR, "llms.txt")

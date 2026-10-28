@@ -49,7 +49,13 @@ def build():
         re.IGNORECASE
     )
 
-    html_files = sorted(glob.glob(os.path.join(REPO_DIR, "*.html")))
+    html_files = sorted(
+        glob.glob(os.path.join(REPO_DIR, "*.html")) +
+        glob.glob(os.path.join(REPO_DIR, "Business-Services", "*.html")) +
+        glob.glob(os.path.join(REPO_DIR, "Personal-Services", "*.html")) +
+        glob.glob(os.path.join(REPO_DIR, "Google", "*.html")) +
+        glob.glob(os.path.join(REPO_DIR, "Claude", "*.html"))
+    )
     excluded = {
         os.path.abspath(HEADER_SRC),
         os.path.abspath(FOOTER_SRC)
@@ -64,19 +70,44 @@ def build():
         if "footer" in os.path.basename(file_path).lower():
             continue
 
+        is_subdir = os.path.dirname(os.path.abspath(file_path)) != os.path.abspath(REPO_DIR)
+
+        if is_subdir:
+            # Adjust paths in nav and footer for pages in subdirectories
+            subdir_nav = nav_html
+            # Replace assets/, css/, and root html links that don't already have ../
+            subdir_nav = re.sub(r'src="(?!https?://|\.\./|data:)([^"]+)"', r'src="../\1"', subdir_nav)
+            subdir_nav = re.sub(r'href="(?!(?:https?://|mailto:|#|\.\./|Business-Services/|Personal-Services/|Google/|Claude/))([^"]+)"', r'href="../\1"', subdir_nav)
+            subdir_nav = subdir_nav.replace('href="Business-Services/', 'href="../Business-Services/')
+            subdir_nav = subdir_nav.replace('href="Personal-Services/', 'href="../Personal-Services/')
+            subdir_nav = subdir_nav.replace('href="Google/', 'href="../Google/')
+            subdir_nav = subdir_nav.replace('href="Claude/', 'href="../Claude/')
+
+            subdir_footer = footer_html
+            subdir_footer = re.sub(r'src="(?!https?://|\.\./|data:)([^"]+)"', r'src="../\1"', subdir_footer)
+            subdir_footer = re.sub(r'href="(?!(?:https?://|mailto:|#|\.\./))([^"]+)"', r'href="../\1"', subdir_footer)
+
+            file_header_block = f"  <!-- START:HEADER -->\n  {subdir_nav}\n  <!-- END:HEADER -->"
+            file_footer_block = f"    <!-- START:FOOTER -->\n    {subdir_footer}\n    <!-- END:FOOTER -->"
+            components_script = '<script src="../components.js"></script>\n'
+        else:
+            file_header_block = header_block
+            file_footer_block = footer_block
+            components_script = '<script src="components.js"></script>\n'
+
         with open(file_path, "r", encoding="utf-8") as f:
             content = f.read()
 
         if header_pattern.search(content):
-            new_content = header_pattern.sub(header_block, content)
+            new_content = header_pattern.sub(file_header_block, content)
         else:
             if "<body" in content:
                 skip_match = re.search(r'(<a\s+[^>]*class="skip-link"[^>]*>[\s\S]*?</a>)', content, re.IGNORECASE)
                 if skip_match:
-                    new_content = content[:skip_match.end()] + "\n" + header_block + content[skip_match.end():]
+                    new_content = content[:skip_match.end()] + "\n" + file_header_block + content[skip_match.end():]
                 else:
                     body_match = re.search(r'(<body\b[^>]*>)', content, re.IGNORECASE)
-                    new_content = content[:body_match.end()] + "\n" + header_block + content[body_match.end():]
+                    new_content = content[:body_match.end()] + "\n" + file_header_block + content[body_match.end():]
             else:
                 new_content = content
 
@@ -87,20 +118,26 @@ def build():
                 # Footer was inside <main>! Remove it from inside <main> and re-place outside </main>
                 new_content = footer_pattern.sub("", new_content)
                 main_close = new_content.rfind("</main>") + len("</main>")
-                new_content = new_content[:main_close] + "\n" + footer_block + "\n" + new_content[main_close:]
+                new_content = new_content[:main_close] + "\n" + file_footer_block + "\n" + new_content[main_close:]
             else:
-                new_content = footer_pattern.sub(footer_block, new_content)
+                new_content = footer_pattern.sub(file_footer_block, new_content)
         else:
             if "</main>" in new_content:
                 main_close = new_content.rfind("</main>") + len("</main>")
-                new_content = new_content[:main_close] + "\n" + footer_block + "\n" + new_content[main_close:]
+                new_content = new_content[:main_close] + "\n" + file_footer_block + "\n" + new_content[main_close:]
             elif "</body>" in new_content:
                 body_close = new_content.rfind("</body>")
-                new_content = new_content[:body_close] + "\n" + footer_block + "\n" + new_content[body_close:]
+                new_content = new_content[:body_close] + "\n" + file_footer_block + "\n" + new_content[body_close:]
+
+        # Ensure correct components.js script tag
+        if is_subdir:
+            new_content = re.sub(r'<script\s+src="(?:\./)?components\.js"></script>', '<script src="../components.js"></script>', new_content)
+        else:
+            new_content = re.sub(r'<script\s+src="\.\./components\.js"></script>', '<script src="components.js"></script>', new_content)
 
         if "components.js" not in new_content and "</body>" in new_content:
             body_close = new_content.rfind("</body>")
-            new_content = new_content[:body_close] + '<script src="components.js"></script>\n' + new_content[body_close:]
+            new_content = new_content[:body_close] + components_script + new_content[body_close:]
 
         if new_content != content:
             with open(file_path, "w", encoding="utf-8") as f:

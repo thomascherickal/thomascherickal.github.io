@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Custom MCP Servers with Claude | Thomas Cherickal</title>
+  <meta content="Build production Model Context Protocol servers connecting Claude to databases, cloud infrastructure, internal REST APIs, and enterprise tool execution loops." name="description"/>
+  <meta content="Thomas Cherickal" name="author" />
+  <link href="https://thomascherickal.github.io/Claude/claude-custom-mcp.html" rel="canonical" />
+
+  <!-- Open Graph -->
+  <meta content="article" property="og:type" />
+  <meta content="https://thomascherickal.github.io/Claude/claude-custom-mcp.html" property="og:url" />
+  <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name" />
+  <meta content="Custom MCP Servers With Claude: Wire AI Into Every System On The Web | Thomas Cherickal" property="og:title" />
+  <meta content="Build production Model Context Protocol servers connecting Claude to databases, cloud infrastructure, internal REST APIs, and enterprise tool execution loops." property="og:description"/>
+  <meta content="https://thomascherickal.github.io/assets/og-card.png" property="og:image" />
+  <meta content="en_US" property="og:locale" />
+
+  <!-- Twitter Card -->
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="@thomazcherickal" name="twitter:site" />
+  <meta content="Custom MCP Servers With Claude: Wire AI Into Every System On The Web | Thomas Cherickal" name="twitter:title" />
+  <meta content="How custom Model Context Protocol (MCP) servers built in Python, TypeScript and Rust let Claude automate almost anything across the web, with three hands-on tutorials, four diagrams and verified references." property="twitter:description" />
+  <meta content="https://thomascherickal.github.io/assets/og-card.png" name="twitter:image" />
+
+  <!-- Favicons -->
+  <link href="../assets/favicon.ico" rel="icon" sizes="any" />
+  <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml" />
+  <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="../site.webmanifest" rel="manifest" />
+  <meta content="#020408" name="theme-color" />
+
+<!-- JSON-LD Article Schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "TechArticle",
+        "Article"
+      ],
+      "@id": "https://thomascherickal.github.io/Claude/claude-custom-mcp.html#article",
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://thomascherickal.github.io/Claude/claude-custom-mcp.html",
+        "url": "https://thomascherickal.github.io/Claude/claude-custom-mcp.html",
+        "name": "Custom MCP Servers With Claude: Connecting AI to Systems Across the Web | Thomas Cherickal"
+      },
+      "headline": "Custom MCP Servers With Claude: Connecting AI to Systems Across the Web",
+      "description": "How custom Model Context Protocol (MCP) servers built in Python, TypeScript and Rust let Claude automate almost anything across the web, with three hands-on tutorials, four diagrams and verified references.",
+      "image": [
+        "https://thomascherickal.github.io/assets/og-card.png"
+      ],
+      "datePublished": "2026-10-22T00:00:00+05:30",
+      "dateModified": "2026-10-22T00:00:00+05:30",
+      "inLanguage": "en-US",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://thomascherickal.github.io/Claude/claude-custom-mcp.html"
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://thomascherickal.github.io/#person",
+        "name": "Thomas Cherickal",
+        "jobTitle": "Generative AI Consultant and The Digital Futurist",
+        "url": "https://thomascherickal.github.io",
+        "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
+        "sameAs": [
+          "https://linkedin.com/in/thomascherickal",
+          "https://github.com/thomascherickal",
+          "https://x.com/thomazcherickal"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://thomascherickal.github.io/#organization",
+        "name": "The Digital Futurist",
+        "url": "https://thomascherickal.github.io",
+        "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://thomascherickal.github.io/assets/digital-futurist-logo.jpg",
+          "width": 256,
+          "height": 256
+        }
+      },
+      "articleSection": "Model Context Protocol",
+      "keywords": [
+        "Custom MCP Server",
+        "Model Context Protocol",
+        "Python MCP",
+        "TypeScript MCP",
+        "Rust MCP",
+        "Claude Desktop",
+        "Anthropic"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thomascherickal.github.io/Claude/claude-custom-mcp.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thomascherickal.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Writing",
+          "item": "https://thomascherickal.github.io/writing.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Custom MCP Servers",
+          "item": "https://thomascherickal.github.io/Claude/claude-custom-mcp.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+  <link rel="stylesheet" href="../css/fonts.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/background.css" />
+  <link rel="stylesheet" href="../css/buttons.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/cta.css" />
+  <link rel="stylesheet" href="../css/article.css" />
+  <link rel="stylesheet" href="../css/claude.css" />
+</head>
+<body>
+  <!-- START:HEADER -->
+  <nav aria-label="Main navigation">
+    <a href="../index.html" class="nav-brand"><img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo"
+        class="nav-brand-logo" width="20" height="20">Thomas Cherickal</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <div class="nav-right-container">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle Navigation Menu">
+        <span></span>
+      </label>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html" data-nav="index.html">Home</a></li>
+      <li><a href="../expertise.html" data-nav="expertise.html">Expertise</a></li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          <b>Business-Services</b> <span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="../all-business-services.html">All Business Services</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="../Business-Services/business-service-generative-ai-transformation.html">Generative AI Transformation</a></li>
+          <li><a href="../Business-Services/business-service-local-llms-cost-slashing.html">Local LLMs &amp; Cost Slashing</a></li>
+          <li><a href="../Business-Services/business-service-ai-agents-orchestration.html">Claude Agent Orchestration</a></li>
+          <li><a href="../Business-Services/business-service-agentic-ai-systems.html">Hermes Agent Training</a></li>
+          <li><a href="../Business-Services/business-service-workflow-automations.html">Workflow Automations</a></li>
+          <li><a href="../Business-Services/business-service-quantum-applications.html">Quantum Applications (Experimental)</a></li>
+          <li><a href="../Business-Services/business-service-hybrid-quantum-ai.html">Hybrid Quantum-Classical AI (Demos)</a></li>
+          <li><a href="../Business-Services/business-service-ai-budget-cost-limits-training.html">AI Budget &amp; Cost Control Training</a></li>
+          <li><a href="../Business-Services/business-service-enterprise-workforce-ai-training.html">Enterprise Workforce AI Training</a></li>
+          <li><a href="../Business-Services/business-service-ai-developer-training.html">AI Developer Training</a></li>
+          <li><a href="../Business-Services/business-service-advanced-ai-agents.html">Advanced AI Agents</a></li>
+          <li><a href="../Business-Services/business-service-deep-research-notebooklm.html">Deep Research &amp; Gemini Notebook</a></li>
+          <li><a href="../Business-Services/business-service-claude-basic-training.html">Claude Basic Training</a></li>
+          <li><a href="../Business-Services/business-service-claude-advanced-training.html">Claude Advanced Training</a></li>
+          <li><a href="../Business-Services/business-service-gemini-basic-training.html">Gemini Basic Training</a></li>
+          <li><a href="../Business-Services/business-service-gemini-advanced-training.html">Gemini Advanced Training</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          <b>Personal-Services</b> <span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="../all-personal-services.html">All Personal Services</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="../personal-ai-training.html">Personal AI Training Overview</a></li>
+          <li><a href="../Personal-Services/personal-service-generative-ai-transformation.html">Generative AI Transformation</a></li>
+          <li><a href="../Personal-Services/personal-service-local-llms-cost-slashing.html">Local LLMs &amp; Cost Slashing</a></li>
+          <li><a href="../Personal-Services/personal-service-ai-agents-orchestration.html">Claude Agent Orchestration</a></li>
+          <li><a href="../Personal-Services/personal-service-agentic-ai-systems.html">Hermes Agent Training</a></li>
+          <li><a href="../Personal-Services/personal-service-workflow-automations.html">Workflow Automations</a></li>
+          <li><a href="../Personal-Services/personal-service-quantum-applications.html">Quantum Applications (Experimental)</a></li>
+          <li><a href="../Personal-Services/personal-service-hybrid-quantum-ai.html">Hybrid Quantum-Classical AI (Demos)</a></li>
+          <li><a href="../Personal-Services/personal-service-ai-budget-cost-limits-training.html">AI Budget &amp; Cost Control Training</a></li>
+          <li><a href="../Personal-Services/personal-service-enterprise-workforce-ai-training.html">Enterprise Workforce AI Training</a></li>
+          <li><a href="../Personal-Services/personal-service-ai-developer-training.html">AI Developer Training</a></li>
+          <li><a href="../Personal-Services/personal-service-advanced-ai-agents.html">Advanced AI Agents</a></li>
+          <li><a href="../Personal-Services/personal-service-deep-research-notebooklm.html">Deep Research &amp; Gemini Notebook</a></li>
+          <li><a href="../Personal-Services/personal-service-claude-basic-training.html">Claude Basic Training</a></li>
+          <li><a href="../Personal-Services/personal-service-claude-advanced-training.html">Claude Advanced Training</a></li>
+          <li><a href="../Personal-Services/personal-service-gemini-basic-training.html">Gemini Basic Training</a></li>
+          <li><a href="../Personal-Services/personal-service-gemini-advanced-training.html">Gemini Advanced Training</a></li>
+        </ul>
+      </li>
+      <li><a href="../faqs.html" data-nav="faqs.html">FAQs</a></li>
+      <li><a href="../pricing.html" data-nav="pricing.html">Pricing</a></li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          Claude-Guides <span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="../Claude/claude-101.html">Claude 101</a></li>
+          <li><a href="../Claude/claude-features.html">Claude Features</a></li>
+          <li><a href="../Claude/claude-code.html">Claude Code</a></li>
+          <li><a href="../Claude/claude-cowork.html">Claude Desktop &amp; M365</a></li>
+          <li><a href="../Claude/claude-skills.html">Claude Skills</a></li>
+          <li><a href="../Claude/claude-custom-mcp.html">Claude Custom MCP</a></li>
+          <li><a href="../Claude/claude-plugins.html">Claude Plugins</a></li>
+          <li><a href="../Claude/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../Claude/claude-orchestration.html">Claude Orchestration</a></li>
+          <li><a href="../Claude/claude-design.html">Claude Design</a></li>
+          <li><a href="../Claude/claude-science.html">Claude for Science</a></li>
+          <li><a href="../Claude/claude-local-llms.html">Claude With Local LLMs</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          Gemini-Guides <span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="../Google/google-gemini-101.html">Gemini 101</a></li>
+          <li><a href="../Google/google-ai-studio.html">Google AI Studio</a></li>
+          <li><a href="../Google/google-antigravity-ide.html">Google Antigravity IDE</a></li>
+          <li><a href="../Google/google-gemini-deep-think.html">Gemini Deep Think</a></li>
+          <li><a href="../Google/google-nano-banana.html">Google Nano Banana</a></li>
+          <li><a href="../Google/google-flow.html">Google Flow</a></li>
+          <li><a href="../Google/google-gemini-spark.html">Gemini Spark</a></li>
+          <li><a href="../Google/google-gemini-notebook.html">Gemini Notebook</a></li>
+          <li><a href="../Google/google-gemma.html">Google Gemma</a></li>
+          <li><a href="../Google/google-deep-research.html">Google Deep Research</a></li>
+          <li><a href="../Google/google-gemini-argon.html">Gemini Argon</a></li>
+          <li><a href="../Google/google-gemini-agents.html">Gemini Agents</a></li>
+        </ul>
+      </li>
+      <li><a href="../writing.html" data-nav="writing.html">Publications</a></li>
+      <li><a href="../contact.html" data-nav="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- END:HEADER -->
+
+  <main class="container">
+    <header class="hero">
+      <a href="../index.html" aria-label="The Digital Futurist Home" style="display:inline-block;text-decoration:none;">
+        <img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist logo" class="hero-logo" width="110" height="110" />
+      </a>
+      <div class="hero-badge">Model Context Protocol &bull; Architecture &amp; Custom Implementation</div>
+      <h1 class="hero-title">Custom MCP Servers With Claude: Connecting AI to Systems Across the Web</h1>
+      <p class="hero-desc">How to build custom MCP servers in Python, TypeScript and Rust, and how Claude Desktop, Claude Code and the Claude API use them.</p>
+      <p class="hero-byline">By <strong>Thomas Cherickal</strong>, Generative AI Consultant &bull; <strong>The Digital Futurist</strong></p>
+      <div class="pills">
+        <span class="pill">Python SDK v2</span>
+        <span class="pill">TypeScript SDK v2</span>
+        <span class="pill">Rust rmcp Crate</span>
+        <span class="pill">Stateless Spec 2026-07-28</span>
+        <span class="pill">Claude Code &amp; Desktop</span>
+        <span class="pill">Claude API Connector</span>
+      </div>
+    </header>
+
+    <article class="article-body">
+      <!-- Table of Contents -->
+      <section class="content-card toc-card">
+        <h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
+        <ol class="toc-list" aria-label="Table of contents">
+          <li><a href="#bridge">01. Why MCP exists</a></li>
+          <li><a href="#what">02. What a custom MCP server is</a></li>
+          <li><a href="#hub">03. From M&times;N integrations to one protocol</a></li>
+          <li><a href="#where">04. Where custom servers help</a></li>
+          <li><a href="#languages">05. Choosing a language</a></li>
+          <li><a href="#tut1">06. Tutorial 1: a Python web inspector</a></li>
+          <li><a href="#tut2">07. Tutorial 2: a TypeScript Hacker News feed</a></li>
+          <li><a href="#tut3">08. Tutorial 3: a Rust file integrity checker</a></li>
+          <li><a href="#claude">09. How Claude uses MCP</a></li>
+          <li><a href="#risk">10. Security risks and defenses</a></li>
+          <li><a href="#close">11. Getting started</a></li>
+          <li><a href="#refs">12. References</a></li>
+        </ol>
+      </section>
+
+      <!-- Section 1: Why MCP exists -->
+      <section class="content-card" id="bridge">
+        <h2><span class="sec-num">01</span>Why MCP exists</h2>
+
+        <p class="article-p">A language model on its own can reason about a contract or refactor a Rust crate, but it cannot query your database, open a GitHub issue, or check whether your website is up. It needs a connection to those systems, and before late 2024 each connection was a custom integration.</p>
+
+        <p class="article-p">The Model Context Protocol (MCP) standardizes that connection. Anthropic open-sourced it on November 25, 2024, describing it in <a href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noopener noreferrer">Anthropic's original MCP launch post</a> as an open standard for connecting AI assistants to the systems where data lives. A year later, the <a href="https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/" target="_blank" rel="noopener noreferrer">official MCP blog's foundation announcement</a> reported more than 97 million monthly SDK downloads, 10,000 active servers, and client support in ChatGPT, Claude, Cursor, Gemini, Microsoft Copilot and VS Code.</p>
+
+        <div class="stats">
+          <div class="stat"><b>97M+</b><span>monthly SDK downloads</span></div>
+          <div class="stat"><b>10,000+</b><span>active servers by Dec 2025</span></div>
+          <div class="stat"><b>6</b><span>Tier 1 official SDKs</span></div>
+          <div class="stat"><b>2026-07-28</b><span>current stateless spec</span></div>
+        </div>
+
+        <p class="article-p">Many public servers wrap commercial products such as Notion, Sentry or GitHub. This article covers the other kind: a custom server you write for your own systems, in a language you already use, which Claude can call once you register it.</p>
+      </section>
+
+      <!-- Section 2: What a custom MCP server is -->
+      <section class="content-card" id="what">
+        <h2><span class="sec-num">02</span>What a custom MCP server is</h2>
+
+        <p class="article-p">An MCP server is a program that exposes three kinds of capability: tools (functions the model can call), resources (data it can read) and prompts (reusable templates). A host application such as Claude Desktop, Claude Code or an app built on the Claude API runs an MCP client, and that client can connect to many servers at once.</p>
+
+        <p class="article-p">A custom server wraps something specific to you, such as a billing API, a Postgres replica, an internal wiki or an old SOAP service. Once it speaks MCP, any MCP-compatible client can use it without new integration code.</p>
+
+        <!-- Figure 1 -->
+        <div class="diagram-container">
+          <div class="fig-scroll">
+            <svg viewBox="0 0 900 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MCP architecture: Claude hosts with MCP clients connect to custom servers, which reach external systems" style="background:#090d16;border-radius:8px;">
+              <defs>
+                <marker id="ah1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9ca3af"/></marker>
+              </defs>
+              <style>
+                .t { font-family: 'Inter', sans-serif; fill: #e5e7eb; }
+                .h { font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; }
+              </style>
+              <text x="120" y="28" text-anchor="middle" class="t h" font-size="16" fill="#38bdf8" style="fill:#38bdf8">Hosts (Claude)</text>
+              <text x="450" y="28" text-anchor="middle" class="t h" font-size="16" style="fill:#fbbf24">Your Custom MCP Servers</text>
+              <text x="770" y="28" text-anchor="middle" class="t h" font-size="16" style="fill:#34d399">Systems They Reach</text>
+
+              <rect x="20" y="44" width="200" height="370" rx="16" fill="rgba(56,189,248,0.06)" stroke="#38bdf8" stroke-width="1.5"/>
+              <g>
+                <rect x="38" y="70" width="164" height="80" rx="10" fill="#10151f" stroke="#38bdf8"/>
+                <text x="120" y="104" text-anchor="middle" class="t" font-size="15" font-weight="700">Claude Desktop</text>
+                <text x="120" y="128" text-anchor="middle" class="t" font-size="12.5" style="fill:#a5b4fc">MCP client</text>
+                <rect x="38" y="190" width="164" height="80" rx="10" fill="#10151f" stroke="#38bdf8"/>
+                <text x="120" y="224" text-anchor="middle" class="t" font-size="15" font-weight="700">Claude Code</text>
+                <text x="120" y="248" text-anchor="middle" class="t" font-size="12.5" style="fill:#a5b4fc">MCP client</text>
+                <rect x="38" y="310" width="164" height="80" rx="10" fill="#10151f" stroke="#38bdf8"/>
+                <text x="120" y="344" text-anchor="middle" class="t" font-size="15" font-weight="700">Claude API App</text>
+                <text x="120" y="368" text-anchor="middle" class="t" font-size="12.5" style="fill:#a5b4fc">MCP connector</text>
+              </g>
+
+              <g stroke="#9ca3af" stroke-width="1.6" fill="none" marker-end="url(#ah1)">
+                <line x1="220" y1="110" x2="336" y2="85"/>
+                <line x1="220" y1="230" x2="336" y2="180"/>
+                <line x1="220" y1="230" x2="336" y2="275"/>
+                <line x1="220" y1="350" x2="336" y2="370"/>
+              </g>
+              <text x="278" y="420" text-anchor="middle" class="t" font-size="11" font-family="'JetBrains Mono', monospace" style="fill:#94a3b8">JSON-RPC over stdio or HTTP</text>
+
+              <g>
+                <rect x="340" y="50" width="220" height="72" rx="10" fill="rgba(251,191,36,0.08)" stroke="#fbbf24"/>
+                <text x="450" y="80" text-anchor="middle" class="t" font-size="15" font-weight="700">Web Inspector</text>
+                <text x="450" y="102" text-anchor="middle" class="t" font-size="12.5" font-family="'JetBrains Mono', monospace" style="fill:#fbbf24">Python &bull; stdio</text>
+                <rect x="340" y="145" width="220" height="72" rx="10" fill="rgba(52,211,153,0.08)" stroke="#34d399"/>
+                <text x="450" y="175" text-anchor="middle" class="t" font-size="15" font-weight="700">Hacker News Feed</text>
+                <text x="450" y="197" text-anchor="middle" class="t" font-size="12.5" font-family="'JetBrains Mono', monospace" style="fill:#34d399">TypeScript &bull; stdio</text>
+                <rect x="340" y="240" width="220" height="72" rx="10" fill="rgba(251,113,133,0.08)" stroke="#fb7185"/>
+                <text x="450" y="270" text-anchor="middle" class="t" font-size="15" font-weight="700">File Integrity</text>
+                <text x="450" y="292" text-anchor="middle" class="t" font-size="12.5" font-family="'JetBrains Mono', monospace" style="fill:#fb7185">Rust &bull; stdio</text>
+                <rect x="340" y="335" width="220" height="72" rx="10" fill="rgba(96,165,250,0.08)" stroke="#60a5fa"/>
+                <text x="450" y="365" text-anchor="middle" class="t" font-size="15" font-weight="700">Remote SaaS Server</text>
+                <text x="450" y="387" text-anchor="middle" class="t" font-size="12.5" font-family="'JetBrains Mono', monospace" style="fill:#60a5fa">Any language &bull; Streamable HTTP</text>
+              </g>
+
+              <g stroke="#9ca3af" stroke-width="1.6" fill="none" marker-end="url(#ah1)">
+                <line x1="560" y1="86" x2="656" y2="86"/>
+                <line x1="560" y1="181" x2="656" y2="181"/>
+                <line x1="560" y1="276" x2="656" y2="276"/>
+                <line x1="560" y1="371" x2="656" y2="371"/>
+              </g>
+
+              <g>
+                <rect x="660" y="56" width="220" height="60" rx="10" fill="#10151f" stroke="#34d399"/>
+                <text x="770" y="91" text-anchor="middle" class="t" font-size="14">Any public website</text>
+                <rect x="660" y="151" width="220" height="60" rx="10" fill="#10151f" stroke="#34d399"/>
+                <text x="770" y="186" text-anchor="middle" class="t" font-size="14">Hacker News REST API</text>
+                <rect x="660" y="246" width="220" height="60" rx="10" fill="#10151f" stroke="#34d399"/>
+                <text x="770" y="281" text-anchor="middle" class="t" font-size="14">Local file system</text>
+                <rect x="660" y="341" width="220" height="60" rx="10" fill="#10151f" stroke="#34d399"/>
+                <text x="770" y="376" text-anchor="middle" class="t" font-size="14">Notion, GitHub, Sentry</text>
+              </g>
+            </svg>
+          </div>
+          <div class="diagram-caption">Diagram 1: Hosts, MCP clients, custom servers and the systems they reach. The three local servers correspond to the tutorials below.</div>
+        </div>
+      </section>
+
+      <!-- Section 3: From M×N integrations to one protocol -->
+      <section class="content-card" id="hub">
+        <h2><span class="sec-num">03</span>From M&times;N integrations to one protocol</h2>
+
+        <p class="article-p">Connecting M AI applications to N systems used to take M&times;N integrations. Anthropic's launch post described the problem directly: every new data source needed its own custom implementation. With MCP, each application implements a client once and each system implements a server once, so the count drops to M+N.</p>
+
+        <!-- Figure 2 -->
+        <div class="diagram-container">
+          <div class="fig-scroll">
+            <svg viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Before MCP every app wires to every system; with MCP everything meets at one protocol hub" style="background:#090d16;border-radius:8px;">
+              <style>
+                .t2 { font-family: 'Inter', sans-serif; fill: #e5e7eb; }
+                .h2t { font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; }
+              </style>
+              <text x="220" y="30" text-anchor="middle" class="t2 h2t" font-size="16" style="fill:#fb7185">Before: M &times; N = 12 integrations</text>
+              <text x="680" y="30" text-anchor="middle" class="t2 h2t" font-size="16" style="fill:#34d399">With MCP: M + N = 7 implementations</text>
+              <line x1="450" y1="50" x2="450" y2="320" stroke="#1f2937" stroke-width="2" stroke-dasharray="6 6"/>
+
+              <g stroke="rgba(251,113,133,0.55)" stroke-width="1.4">
+                <line x1="110" y1="100" x2="330" y2="80"/><line x1="110" y1="100" x2="330" y2="150"/><line x1="110" y1="100" x2="330" y2="220"/><line x1="110" y1="100" x2="330" y2="290"/>
+                <line x1="110" y1="185" x2="330" y2="80"/><line x1="110" y1="185" x2="330" y2="150"/><line x1="110" y1="185" x2="330" y2="220"/><line x1="110" y1="185" x2="330" y2="290"/>
+                <line x1="110" y1="270" x2="330" y2="80"/><line x1="110" y1="270" x2="330" y2="150"/><line x1="110" y1="270" x2="330" y2="220"/><line x1="110" y1="270" x2="330" y2="290"/>
+              </g>
+              <g>
+                <rect x="30" y="80" width="90" height="40" rx="8" fill="#10151f" stroke="#38bdf8"/><text x="75" y="105" text-anchor="middle" class="t2" font-size="13">Claude</text>
+                <rect x="30" y="165" width="90" height="40" rx="8" fill="#10151f" stroke="#38bdf8"/><text x="75" y="190" text-anchor="middle" class="t2" font-size="13">IDE agent</text>
+                <rect x="30" y="250" width="90" height="40" rx="8" fill="#10151f" stroke="#38bdf8"/><text x="75" y="275" text-anchor="middle" class="t2" font-size="13">Your app</text>
+                <rect x="330" y="62" width="100" height="36" rx="8" fill="#10151f" stroke="#fbbf24"/><text x="380" y="85" text-anchor="middle" class="t2" font-size="12.5">Database</text>
+                <rect x="330" y="132" width="100" height="36" rx="8" fill="#10151f" stroke="#fbbf24"/><text x="380" y="155" text-anchor="middle" class="t2" font-size="12.5">GitHub</text>
+                <rect x="330" y="202" width="100" height="36" rx="8" fill="#10151f" stroke="#fbbf24"/><text x="380" y="225" text-anchor="middle" class="t2" font-size="12.5">Web APIs</text>
+                <rect x="330" y="272" width="100" height="36" rx="8" fill="#10151f" stroke="#fbbf24"/><text x="380" y="295" text-anchor="middle" class="t2" font-size="12.5">Files</text>
+              </g>
+
+              <g stroke="#34d399" stroke-width="1.8">
+                <line x1="580" y1="100" x2="660" y2="185"/><line x1="580" y1="185" x2="660" y2="185"/><line x1="580" y1="270" x2="660" y2="185"/>
+                <line x1="700" y1="185" x2="780" y2="80"/><line x1="700" y1="185" x2="780" y2="150"/><line x1="700" y1="185" x2="780" y2="220"/><line x1="700" y1="185" x2="780" y2="290"/>
+              </g>
+              <g>
+                <rect x="490" y="80" width="90" height="40" rx="8" fill="#10151f" stroke="#38bdf8"/><text x="535" y="105" text-anchor="middle" class="t2" font-size="13">Claude</text>
+                <rect x="490" y="165" width="90" height="40" rx="8" fill="#10151f" stroke="#38bdf8"/><text x="535" y="190" text-anchor="middle" class="t2" font-size="13">IDE agent</text>
+                <rect x="490" y="250" width="90" height="40" rx="8" fill="#10151f" stroke="#38bdf8"/><text x="535" y="275" text-anchor="middle" class="t2" font-size="13">Your app</text>
+                <circle cx="680" cy="185" r="38" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="2.5"/>
+                <text x="680" y="192" text-anchor="middle" class="t2 h2t" font-size="18" style="fill:#fbbf24">MCP</text>
+                <rect x="780" y="62" width="100" height="36" rx="8" fill="#10151f" stroke="#a5b4fc"/><text x="830" y="85" text-anchor="middle" class="t2" font-size="12.5">Database</text>
+                <rect x="780" y="132" width="100" height="36" rx="8" fill="#10151f" stroke="#a5b4fc"/><text x="830" y="155" text-anchor="middle" class="t2" font-size="12.5">GitHub</text>
+                <rect x="780" y="202" width="100" height="36" rx="8" fill="#10151f" stroke="#a5b4fc"/><text x="830" y="225" text-anchor="middle" class="t2" font-size="12.5">Web APIs</text>
+                <rect x="780" y="272" width="100" height="36" rx="8" fill="#10151f" stroke="#a5b4fc"/><text x="830" y="295" text-anchor="middle" class="t2" font-size="12.5">Files</text>
+              </g>
+            </svg>
+          </div>
+          <div class="diagram-caption">Diagram 2: Three apps and four systems need twelve point-to-point integrations without MCP and seven implementations with it.</div>
+        </div>
+
+        <p class="article-p">The protocol also no longer belongs to one company. On December 9, 2025, Anthropic <a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation" target="_blank" rel="noopener noreferrer">donated MCP to the Agentic AI Foundation</a>, a directed fund under the Linux Foundation co-founded by Anthropic, Block and OpenAI, with support from Google, Microsoft, AWS, Cloudflare and Bloomberg.</p>
+      </section>
+
+      <!-- Section 4: Where custom servers help -->
+      <section class="content-card" id="where">
+        <h2><span class="sec-num">04</span>Where custom servers help</h2>
+
+        <p class="article-p">Anything with an API, a command line, a database driver or a file format can sit behind an MCP server. These are common starting points.</p>
+
+        <div class="cards">
+          <div class="card" style="--c:#38bdf8">
+            <h4>Engineering and DevOps</h4>
+            <p>The Claude Code docs give this example: implement the feature described in a JIRA ticket and open a GitHub pull request, from one request.</p>
+          </div>
+          <div class="card" style="--c:#fbbf24">
+            <h4>Data and analytics</h4>
+            <p>A server with read-only database credentials lets Claude answer questions such as monthly revenue against live tables.</p>
+          </div>
+          <div class="card" style="--c:#34d399">
+            <h4>Web monitoring</h4>
+            <p>Uptime sweeps, title and metadata checks, price watching and public API polling. Tutorial 1 covers the first two.</p>
+          </div>
+          <div class="card" style="--c:#a5b4fc">
+            <h4>Business apps</h4>
+            <p>Notion, Asana, Stripe, HubSpot and Sentry already publish remote servers. Custom servers cover the in-house tools they don't.</p>
+          </div>
+          <div class="card" style="--c:#fb7185">
+            <h4>Private and legacy systems</h4>
+            <p><a href="https://platform.claude.com/docs/agents-and-tools/mcp-tunnels/overview" target="_blank" rel="noopener noreferrer">Claude's MCP tunnels documentation</a> describes reaching servers inside a private network without opening inbound ports.</p>
+          </div>
+          <div class="card" style="--c:#fb923c">
+            <h4>Personal automation</h4>
+            <p>Notes, local files, home-lab scripts and research pipelines become tools Claude can call one after another.</p>
+          </div>
+        </div>
+
+        <p class="article-p"><a href="https://serpapi.com/blog/the-state-of-mcp-everything-that-changed-in-h1-2026/" target="_blank" rel="noopener noreferrer">SerpApi's first-half 2026 MCP review</a> counts roughly 9,400 to 17,000+ public servers across the major registries and finds that fewer than 5% are monetized. It also reports momentum moving toward vendor-built connectors and private servers that companies run for their own systems.</p>
+      </section>
+
+      <!-- Section 5: Choosing a language -->
+      <section class="content-card" id="languages">
+        <h2><span class="sec-num">05</span>Choosing a language</h2>
+
+        <p class="article-p">The <a href="https://modelcontextprotocol.io/docs/sdk" target="_blank" rel="noopener noreferrer">official MCP SDK tier list</a> places TypeScript, Python, C#, Go, Rust and Ruby at Tier 1, Java at Tier 2, and Swift, PHP and Kotlin at Tier 3. Every SDK can build servers that expose tools, resources and prompts.</p>
+
+        <!-- Figure 3 -->
+        <div class="diagram-container">
+          <div class="fig-scroll">
+            <svg viewBox="0 0 900 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Official MCP SDKs grouped by tier" style="background:#090d16;border-radius:8px;">
+              <style>
+                .t4 { font-family: 'Inter', sans-serif; fill: #e5e7eb; }
+                .h4t { font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; }
+              </style>
+              <text x="20" y="62" class="t4 h4t" font-size="18" style="fill:#34d399">Tier 1</text>
+              <g font-size="13" font-weight="600">
+                <rect x="120" y="36" width="112" height="42" rx="21" fill="rgba(52,211,153,0.12)" stroke="#34d399"/><text x="176" y="62" text-anchor="middle" class="t4">TypeScript</text>
+                <rect x="244" y="36" width="112" height="42" rx="21" fill="rgba(52,211,153,0.12)" stroke="#34d399"/><text x="300" y="62" text-anchor="middle" class="t4">Python</text>
+                <rect x="368" y="36" width="112" height="42" rx="21" fill="rgba(52,211,153,0.12)" stroke="#34d399"/><text x="424" y="62" text-anchor="middle" class="t4">C#</text>
+                <rect x="492" y="36" width="112" height="42" rx="21" fill="rgba(52,211,153,0.12)" stroke="#34d399"/><text x="548" y="62" text-anchor="middle" class="t4">Go</text>
+                <rect x="616" y="36" width="112" height="42" rx="21" fill="rgba(251,113,133,0.15)" stroke="#fb7185" stroke-width="2"/><text x="672" y="62" text-anchor="middle" class="t4">Rust</text>
+                <rect x="740" y="36" width="112" height="42" rx="21" fill="rgba(52,211,153,0.12)" stroke="#34d399"/><text x="796" y="62" text-anchor="middle" class="t4">Ruby</text>
+              </g>
+              <text x="20" y="142" class="t4 h4t" font-size="18" style="fill:#fbbf24">Tier 2</text>
+              <rect x="120" y="116" width="112" height="42" rx="21" fill="rgba(251,191,36,0.12)" stroke="#fbbf24"/><text x="176" y="142" text-anchor="middle" class="t4" font-size="13" font-weight="600">Java</text>
+              <text x="20" y="222" class="t4 h4t" font-size="18" style="fill:#a5b4fc">Tier 3</text>
+              <g font-size="13" font-weight="600">
+                <rect x="120" y="196" width="112" height="42" rx="21" fill="rgba(165,180,252,0.12)" stroke="#a5b4fc"/><text x="176" y="222" text-anchor="middle" class="t4">Swift</text>
+                <rect x="244" y="196" width="112" height="42" rx="21" fill="rgba(165,180,252,0.12)" stroke="#a5b4fc"/><text x="300" y="222" text-anchor="middle" class="t4">PHP</text>
+                <rect x="368" y="196" width="112" height="42" rx="21" fill="rgba(165,180,252,0.12)" stroke="#a5b4fc"/><text x="424" y="222" text-anchor="middle" class="t4">Kotlin</text>
+              </g>
+              <text x="560" y="142" class="t4" font-size="12" font-family="'JetBrains Mono', monospace" style="fill:#94a3b8">Tutorials below: Python &bull; TypeScript &bull; Rust</text>
+              <text x="560" y="222" class="t4" font-size="12" font-family="'JetBrains Mono', monospace" style="fill:#94a3b8">Tier = feature completeness and support level</text>
+            </svg>
+          </div>
+          <div class="diagram-caption">Diagram 3: Official MCP SDKs by tier, per modelcontextprotocol.io as of October 2026.</div>
+        </div>
+
+        <p class="article-p">The tutorials target the 2026-07-28 specification, which became the <a href="https://github.com/modelcontextprotocol/modelcontextprotocol/releases/tag/2026-07-28" target="_blank" rel="noopener noreferrer">stable 2026-07-28 MCP release</a> on July 28, 2026. All three run over stdio, the transport Claude Desktop and Claude Code use when they start a local server as a child process.</p>
+      </section>
+
+      <!-- Section 6: Tutorial 1 -->
+      <section class="content-card" id="tut1">
+        <h2><span class="sec-num">06</span>Tutorial 1: a Python web inspector</h2>
+
+        <p class="article-p">This server gives Claude two tools that report a public page's status code, response time and title. It uses the <a href="https://github.com/modelcontextprotocol/python-sdk" target="_blank" rel="noopener noreferrer">MCP Python SDK v2 repository</a>, where the <code>MCPServer</code> class builds each tool's JSON Schema from its type hints.</p>
+
+        <span class="step" style="--sc:#fbbf24">Step 1 &middot; Install</span>
+        <div class="code-window">
+          <div class="code-bar">
+            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+            <span>bash &bull; uv project setup</span>
+          </div>
+          <pre class="code-pre"><code><span class="c"># Create a project and add the MCP Python SDK v2 plus httpx for HTTP requests</span>
+uv init web-inspector &amp;&amp; cd web-inspector
+uv add "mcp[cli]" httpx</code></pre>
+        </div>
+
+        <span class="step" style="--sc:#fbbf24">Step 2 &middot; Write server.py</span>
+        <div class="code-window">
+          <div class="code-bar">
+            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+            <span>python &bull; server.py</span>
+          </div>
+          <pre class="code-pre"><code><span class="c">"""server.py - an MCP server that lets Claude inspect public web pages."""</span>
+<span class="k">import</span> re
+<span class="k">import</span> time
+
+<span class="k">import</span> httpx                      <span class="c"># async HTTP client used to fetch pages</span>
+<span class="k">from</span> mcp.server <span class="k">import</span> MCPServer  <span class="c"># high-level server class in SDK v2</span>
+
+<span class="c"># The name hosts such as Claude Code display for this server</span>
+mcp = MCPServer(<span class="s">"WebInspector"</span>)
+
+<span class="c"># Precompiled pattern that pulls the &lt;title&gt; text out of raw HTML</span>
+TITLE_RE = re.compile(<span class="s">r"&lt;title[^&gt;]*&gt;(.*?)&lt;/title&gt;"</span>, re.IGNORECASE | re.DOTALL)
+
+
+<span class="k">async def</span> _inspect(client: httpx.AsyncClient, url: str) -&gt; dict:
+    <span class="c"># Shared helper: time one request and extract what Claude needs</span>
+    start = time.perf_counter()
+    response = <span class="k">await</span> client.get(url)
+    elapsed_ms = round((time.perf_counter() - start) * 1000)
+    match = TITLE_RE.search(response.text)
+    <span class="k">return</span> {
+        <span class="s">"final_url"</span>: str(response.url),        <span class="c"># after any redirects</span>
+        <span class="s">"status"</span>: response.status_code,
+        <span class="s">"response_ms"</span>: elapsed_ms,
+        <span class="s">"title"</span>: match.group(1).strip() <span class="k">if</span> match <span class="k">else</span> <span class="s">""</span>,
+    }
+
+
+@mcp.tool()
+<span class="k">async def</span> inspect_page(url: str) -&gt; dict:
+    <span class="s">"""Fetch a public URL and report HTTP status, response time and page title."""</span>
+    <span class="c"># The docstring becomes the tool description Claude reads when choosing tools</span>
+    <span class="k">async with</span> httpx.AsyncClient(follow_redirects=<span class="k">True</span>, timeout=15) <span class="k">as</span> client:
+        <span class="k">return await</span> _inspect(client, url)
+
+
+@mcp.tool()
+<span class="k">async def</span> check_many(urls: list[str]) -&gt; list[dict]:
+    <span class="s">"""Check several URLs in one call, reporting failures instead of raising."""</span>
+    results = []
+    <span class="k">async with</span> httpx.AsyncClient(follow_redirects=<span class="k">True</span>, timeout=15) <span class="k">as</span> client:
+        <span class="k">for</span> url <span class="k">in</span> urls:
+            <span class="k">try</span>:
+                results.append(<span class="k">await</span> _inspect(client, url))
+            <span class="k">except</span> httpx.HTTPError <span class="k">as</span> exc:
+                <span class="c"># A down site is data for Claude, not a crash for the server</span>
+                results.append({<span class="s">"final_url"</span>: url, <span class="s">"error"</span>: str(exc)})
+    <span class="k">return</span> results
+
+
+<span class="k">if</span> __name__ == <span class="s">"__main__"</span>:
+    <span class="c"># run() with no arguments starts a stdio server, the transport local hosts launch</span>
+    mcp.run()</code></pre>
+        </div>
+
+        <span class="step" style="--sc:#fbbf24">Step 3 &middot; Test, Then Connect To Claude Code</span>
+        <div class="code-window">
+          <div class="code-bar">
+            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+            <span>bash &bull; registration &amp; execution</span>
+          </div>
+          <pre class="code-pre"><code><span class="c"># Open the server in the MCP Inspector to call each tool by hand</span>
+uv run mcp dev server.py
+
+<span class="c"># Register it with Claude Code; everything after -- is the launch command</span>
+claude mcp add web-inspector -- uv run --with "mcp[cli]" --with httpx mcp run /absolute/path/to/server.py</code></pre>
+        </div>
+
+        <p class="article-p">Run <code>/mcp</code> inside Claude Code to check that the server connected, then ask something like <em>&ldquo;Check thomascherickal.com and thomascherickal.github.io and tell me which responds faster.&rdquo;</em> For Claude Desktop, the <a href="https://py.sdk.modelcontextprotocol.io/get-started/real-host/" target="_blank" rel="noopener noreferrer">Python SDK's connect-to-a-host guide</a> shows <code>uv run mcp install server.py</code> writing the config entry for you.</p>
+      </section>
+
+      <!-- Section 7: Tutorial 2 -->
+      <section class="content-card" id="tut2">
+        <h2><span class="sec-num">07</span>Tutorial 2: a TypeScript Hacker News feed</h2>
+
+        <p class="article-p">The <a href="https://github.com/HackerNews/API" target="_blank" rel="noopener noreferrer">official Hacker News Firebase API</a> needs no key, so it works well as an example of wrapping a REST API. The server uses the <code>@modelcontextprotocol/server</code> package from the <a href="https://github.com/modelcontextprotocol/typescript-sdk" target="_blank" rel="noopener noreferrer">MCP TypeScript SDK v2 repository</a>.</p>
+
+        <span class="step" style="--sc:#34d399">Step 1 &middot; Install</span>
+        <div class="code-window">
+          <div class="code-bar">
+            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+            <span>bash &bull; npm project setup</span>
+          </div>
+          <pre class="code-pre"><code><span class="c"># ES module project with the v2 server package, Zod for schemas, tsx to run TypeScript directly</span>
+mkdir hn-feed &amp;&amp; cd hn-feed
+npm init -y &amp;&amp; npm pkg set type=module
+npm install @modelcontextprotocol/server zod
+npm install -D tsx typescript</code></pre>
+        </div>
+
+        <span class="step" style="--sc:#34d399">Step 2 &middot; Write index.ts</span>
+        <div class="code-window">
+          <div class="code-bar">
+            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+            <span>typescript &bull; index.ts</span>
+          </div>
+          <pre class="code-pre"><code><span class="c">// index.ts - an MCP server that gives Claude a live Hacker News feed</span>
+<span class="k">import</span> { McpServer } <span class="k">from</span> <span class="s">'@modelcontextprotocol/server'</span>;
+<span class="k">import</span> { StdioServerTransport } <span class="k">from</span> <span class="s">'@modelcontextprotocol/server/stdio'</span>;
+<span class="k">import</span> * <span class="k">as</span> z <span class="k">from</span> <span class="s">'zod/v4'</span>;
+
+<span class="c">// Base URL of the public, key-free Hacker News API</span>
+<span class="k">const</span> HN = <span class="s">'https://hacker-news.firebaseio.com/v0'</span>;
+
+<span class="c">// Name and version are what MCP clients display for this server</span>
+<span class="k">const</span> server = <span class="k">new</span> McpServer({ name: <span class="s">'hn-feed'</span>, version: <span class="s">'1.0.0'</span> });
+
+<span class="c">// Register a tool; the Zod schema becomes the JSON Schema Claude sees</span>
+server.registerTool(
+  <span class="s">'top_stories'</span>,
+  {
+    description: <span class="s">'Return the current top Hacker News stories with title, score and link'</span>,
+    inputSchema: z.object({
+      count: z.number().int().min(1).max(20).default(5) <span class="c">// cap output to protect context</span>
+    })
+  },
+  <span class="k">async</span> ({ count }) =&gt; {
+    <span class="c">// 1. Fetch the ranked list of top story IDs (up to 500)</span>
+    <span class="k">const</span> ids: number[] = <span class="k">await</span> (<span class="k">await</span> fetch(<span class="s">`${HN}/topstories.json`</span>)).json();
+
+    <span class="c">// 2. Fetch the first `count` stories in parallel</span>
+    <span class="k">const</span> stories = <span class="k">await</span> Promise.all(
+      ids.slice(0, count).map(<span class="k">async</span> (id) =&gt; (<span class="k">await</span> fetch(<span class="s">`${HN}/item/${id}.json`</span>)).json())
+    );
+
+    <span class="c">// 3. One readable line per story; text content is what Claude reads back</span>
+    <span class="k">const</span> lines = stories.map((s: any, i: number) =&gt;
+      <span class="s">`${i + 1}. ${s.title} (${s.score} points) ${s.url ?? `https://news.ycombinator.com/item?id=${s.id}`}`</span>
+    );
+    <span class="k">return</span> { content: [{ type: <span class="s">'text'</span>, text: lines.join(<span class="s">'
+'</span>) }] };
+  }
+);
+
+<span class="c">// Serve over stdio so Claude Code can launch this file as a child process</span>
+<span class="k">async function</span> main() {
+  <span class="k">await</span> server.connect(<span class="k">new</span> StdioServerTransport());
+}
+main();</code></pre>
+        </div>
+
+        <span class="step" style="--sc:#34d399">Step 3 &middot; Connect</span>
+        <div class="code-window">
+          <div class="code-bar">
+            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+            <span>bash &bull; claude code hookup</span>
+          </div>
+          <pre class="code-pre"><code><span class="c"># Claude Code launches the server with tsx whenever a session starts</span>
+claude mcp add hn-feed -- npx tsx /absolute/path/to/hn-feed/index.ts</code></pre>
+        </div>
+
+        <p class="article-p">You can then ask Claude for the current top stories with a short summary of each. The same structure works for a weather service, a CRM or an internal REST API.</p>
+      </section>
+
+      <!-- Section 8: Tutorial 3 -->
+      <section class="content-card" id="tut3">
+        <h2><span class="sec-num">08</span>Tutorial 3: a Rust file integrity checker</h2>
+
+        <p class="article-p">Rust suits tools that need speed and memory safety and that you want to ship as a single binary. <a href="https://github.com/modelcontextprotocol/rust-sdk" target="_blank" rel="noopener noreferrer">The official Rust SDK, the rmcp crate</a>, implements the 2026-07-28 spec, stays compatible with 2025-11-25, and generates tool routing from macros.</p>
+
+        <span class="step" style="--sc:#fb7185">Step 1 &middot; Create The Crate</span>
+        <div class="code-window">
+          <div class="code-bar">
+            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+            <span>bash &bull; cargo dependencies</span>
+          </div>
+          <pre class="code-pre"><code><span class="c"># rmcp with server and stdio transport features, plus tokio, serde, anyhow and sha2</span>
+cargo new integrity-mcp &amp;&amp; cd integrity-mcp
+cargo add rmcp --features server,transport-io
+cargo add tokio --features full
+cargo add serde --features derive
+cargo add anyhow sha2</code></pre>
+        </div>
+
+        <span class="step" style="--sc:#fb7185">Step 2 &middot; Write src/main.rs</span>
+        <div class="code-window">
+          <div class="code-bar">
+            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+            <span>rust &bull; src/main.rs</span>
+          </div>
+          <pre class="code-pre"><code><span class="c">// main.rs - an MCP server that lets Claude verify files with SHA-256</span>
+<span class="k">use</span> rmcp::{handler::server::wrapper::Parameters, schemars, tool, tool_router, ServiceExt, transport::stdio};
+<span class="k">use</span> sha2::{Digest, Sha256};
+
+<span class="c">// Tool input; field doc comments become descriptions in the generated JSON Schema</span>
+#[derive(Debug, serde::Deserialize, schemars::JsonSchema)]
+<span class="k">struct</span> HashParams {
+    <span class="c">/// Absolute path of the file to hash</span>
+    path: String,
+}
+
+<span class="c">// The server type; Clone lets rmcp hand a copy to each request</span>
+#[derive(Clone)]
+<span class="k">struct</span> Integrity;
+
+<span class="c">// tool_router(server_handler) generates routing and the ServerHandler impl</span>
+#[tool_router(server_handler)]
+<span class="k">impl</span> Integrity {
+    #[tool(description = <span class="s">"Compute the SHA-256 checksum of a local file"</span>)]
+    <span class="k">fn</span> sha256_file(&amp;<span class="k">self</span>, Parameters(HashParams { path }): Parameters&lt;HashParams&gt;) -&gt; String {
+        <span class="c">// Read the file and return a readable message on failure instead of panicking</span>
+        <span class="k">match</span> std::fs::read(&amp;path) {
+            Ok(bytes) =&gt; format!(<span class="s">"{:x}  {}"</span>, Sha256::digest(&amp;bytes), path),
+            Err(e) =&gt; format!(<span class="s">"error reading {path}: {e}"</span>),
+        }
+    }
+}
+
+#[tokio::main]
+<span class="k">async fn</span> main() -&gt; anyhow::Result&lt;()&gt; {
+    <span class="c">// Serve over stdin/stdout and keep running until the host disconnects</span>
+    <span class="k">let</span> service = Integrity.serve(stdio()).<span class="k">await</span>?;
+    service.waiting().<span class="k">await</span>?;
+    Ok(())
+}</code></pre>
+        </div>
+
+        <span class="step" style="--sc:#fb7185">Step 3 &middot; Build And Connect</span>
+        <div class="code-window">
+          <div class="code-bar">
+            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+            <span>bash &bull; release compilation</span>
+          </div>
+          <pre class="code-pre"><code><span class="c"># Compile a release binary, then hand its absolute path to Claude Code</span>
+cargo build --release
+claude mcp add integrity -- /absolute/path/to/integrity-mcp/target/release/integrity-mcp</code></pre>
+        </div>
+
+        <p class="article-p">With the server registered, you can ask Claude to hash the installers in a folder and compare the results with published checksums. rmcp feature flags change between releases, so check the crate README if the build fails.</p>
+      </section>
+
+      <!-- Section 9: How Claude uses MCP -->
+      <section class="content-card" id="claude">
+        <h2><span class="sec-num">09</span>How Claude uses MCP</h2>
+
+        <p class="article-p">Claude reaches MCP servers through three surfaces.</p>
+
+        <h3>Claude Desktop and Claude Code</h3>
+        <p class="article-p">Both start local stdio servers and connect to remote HTTP servers. The <a href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener noreferrer">Claude Code MCP reference</a> documents <code>claude mcp add</code> with local, project and user scopes, a <code>.mcp.json</code> file a team can commit, OAuth sign-in through <code>/mcp</code>, and tool search, which loads tool definitions only when needed so a large set of servers doesn't fill the context window. Claude Code also offers an <code>mcp-server-dev</code> plugin whose build skill scaffolds a new server.</p>
+
+        <p class="article-p">Anthropic's launch post noted that Claude Sonnet could build MCP server implementations quickly. With today's tooling, Claude can write a server, Claude Code can register it, and Claude can then call its tools.</p>
+
+        <h3>The Claude API MCP connector</h3>
+        <p class="article-p">For your own applications, the <a href="https://platform.claude.com/docs/en/agents-and-tools/mcp-connector" target="_blank" rel="noopener noreferrer">Claude API MCP connector documentation</a> describes how the Messages API calls a remote MCP server directly, with no client code of your own. It currently supports tool calls only, requires a server reachable over public HTTPS, and lets you allowlist or denylist individual tools.</p>
+
+        <div class="code-window">
+          <div class="code-bar">
+            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+            <span>python &bull; Messages API MCP Connector</span>
+          </div>
+          <pre class="code-pre"><code><span class="k">import</span> anthropic
+
+client = anthropic.Anthropic()  <span class="c"># reads ANTHROPIC_API_KEY from the environment</span>
+
+response = client.beta.messages.create(
+    model=<span class="s">"claude-opus-5-5"</span>,
+    max_tokens=1000,
+    messages=[{<span class="s">"role"</span>: <span class="s">"user"</span>, <span class="s">"content"</span>: <span class="s">"Which of my monitored sites are down?"</span>}],
+    <span class="c"># Where the remote server lives and how to authenticate to it</span>
+    mcp_servers=[{
+        <span class="s">"type"</span>: <span class="s">"url"</span>,
+        <span class="s">"url"</span>: <span class="s">"https://mcp.example.com/mcp"</span>,
+        <span class="s">"name"</span>: <span class="s">"web-inspector"</span>,
+        <span class="s">"authorization_token"</span>: <span class="s">"YOUR_TOKEN"</span>,
+    }],
+    <span class="c"># Which of its tools Claude may use; here, all of them</span>
+    tools=[{<span class="s">"type"</span>: <span class="s">"mcp_toolset"</span>, <span class="s">"mcp_server_name"</span>: <span class="s">"web-inspector"</span>}],
+    betas=[<span class="s">"mcp-client-2025-11-20"</span>],
+)
+print(response.content)</code></pre>
+        </div>
+
+        <h3>What travels over the wire</h3>
+        <p class="article-p">The 2026-07-28 revision made the protocol stateless. <a href="https://workos.com/blog/mcp-stateless-spec-2026-07-28" target="_blank" rel="noopener noreferrer">WorkOS's breakdown of the stateless spec</a> explains that the <code>initialize</code> handshake and the <code>Mcp-Session-Id</code> header were removed, so each request carries its own context. <a href="https://blog.cloudflare.com/mcp-v2/" target="_blank" rel="noopener noreferrer">Cloudflare's next-generation MCP write-up</a> adds that the new <code>Mcp-Method</code> and <code>Mcp-Name</code> headers let gateways route and rate-limit requests without parsing the JSON body.</p>
+
+        <!-- Figure 4 -->
+        <div class="diagram-container">
+          <div class="fig-scroll">
+            <svg viewBox="0 0 900 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sequence of a stateless MCP tool call from Claude to an external API and back" style="background:#090d16;border-radius:8px;">
+              <defs>
+                <marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker>
+              </defs>
+              <style>
+                .t3 { font-family: 'Inter', sans-serif; fill: #e5e7eb; }
+                .m3 { font-family: 'JetBrains Mono', monospace; }
+              </style>
+              <g font-size="13" font-weight="700">
+                <rect x="15" y="20" width="140" height="44" rx="10" fill="#10151f" stroke="#38bdf8"/><text x="85" y="47" text-anchor="middle" class="t3">Claude (model)</text>
+                <rect x="200" y="20" width="140" height="44" rx="10" fill="#10151f" stroke="#a5b4fc"/><text x="270" y="47" text-anchor="middle" class="t3">Host MCP client</text>
+                <rect x="385" y="20" width="140" height="44" rx="10" fill="#10151f" stroke="#fbbf24"/><text x="455" y="47" text-anchor="middle" class="t3">Load balancer</text>
+                <rect x="570" y="20" width="140" height="44" rx="10" fill="#10151f" stroke="#fb7185"/><text x="640" y="47" text-anchor="middle" class="t3">Any server instance</text>
+                <rect x="755" y="20" width="130" height="44" rx="10" fill="#10151f" stroke="#34d399"/><text x="820" y="47" text-anchor="middle" class="t3">External API</text>
+              </g>
+              <g stroke="#374151" stroke-width="1.5" stroke-dasharray="4 5">
+                <line x1="85" y1="64" x2="85" y2="420"/><line x1="270" y1="64" x2="270" y2="420"/><line x1="455" y1="64" x2="455" y2="420"/><line x1="640" y1="64" x2="640" y2="420"/><line x1="820" y1="64" x2="820" y2="420"/>
+              </g>
+              <g stroke-width="2" fill="none">
+                <line x1="85" y1="100" x2="266" y2="100" stroke="#38bdf8" marker-end="url(#ah3)"/>
+                <line x1="270" y1="150" x2="451" y2="150" stroke="#a5b4fc" marker-end="url(#ah3)"/>
+                <line x1="455" y1="200" x2="636" y2="200" stroke="#fbbf24" marker-end="url(#ah3)"/>
+                <line x1="640" y1="250" x2="816" y2="250" stroke="#34d399" marker-end="url(#ah3)"/>
+                <line x1="820" y1="295" x2="644" y2="295" stroke="#34d399" stroke-dasharray="6 4" marker-end="url(#ah3)"/>
+                <line x1="640" y1="340" x2="274" y2="340" stroke="#fb7185" stroke-dasharray="6 4" marker-end="url(#ah3)"/>
+                <line x1="270" y1="385" x2="89" y2="385" stroke="#38bdf8" stroke-dasharray="6 4" marker-end="url(#ah3)"/>
+              </g>
+              <g font-size="12">
+                <text x="175" y="92" text-anchor="middle" class="t3">1. call inspect_page(url)</text>
+                <text x="360" y="128" text-anchor="middle" class="t3 m3" font-size="11" style="fill:#a5b4fc">POST /mcp</text>
+                <text x="360" y="142" text-anchor="middle" class="t3 m3" font-size="11" style="fill:#a5b4fc">Mcp-Method: tools/call</text>
+                <text x="545" y="178" text-anchor="middle" class="t3">3. route by header,</text>
+                <text x="545" y="192" text-anchor="middle" class="t3">no sticky session</text>
+                <text x="728" y="242" text-anchor="middle" class="t3">4. GET the page</text>
+                <text x="732" y="287" text-anchor="middle" class="t3">5. 200 OK + HTML</text>
+                <text x="455" y="332" text-anchor="middle" class="t3">6. result, carrying its own _meta</text>
+                <text x="178" y="377" text-anchor="middle" class="t3">7. structured JSON</text>
+              </g>
+              <rect x="300" y="398" width="500" height="34" rx="8" fill="rgba(251,191,36,0.1)" stroke="#fbbf24"/>
+              <text x="550" y="420" text-anchor="middle" class="t3" font-size="12.5" font-family="'JetBrains Mono', monospace">2026-07-28: no initialize handshake, no Mcp-Session-Id</text>
+            </svg>
+          </div>
+          <div class="diagram-caption">Diagram 4: One stateless tool call from start to finish. Any server instance can handle any request, so an MCP server can sit behind an ordinary load balancer.</div>
+        </div>
+      </section>
+
+      <!-- Section 10: Security risks and defenses -->
+      <section class="content-card" id="risk">
+        <h2><span class="sec-num">10</span>Security risks and defenses</h2>
+
+        <p class="article-p">A server that can reach your database, inbox and cloud console also gives an attacker more to work with. SerpApi's review records more than thirty MCP-related CVEs filed in January and February 2026 and describes tool poisoning, where a server hides instructions inside a tool description, as a mainstream concern. The Claude Code docs tell users to verify that they trust each server, because servers that fetch external content can expose them to prompt injection.</p>
+
+        <p class="article-p">The defenses in the sources above are ordinary security practice:</p>
+
+        <ul class="checks">
+          <li><strong>Read-only credentials:</strong> Give database servers read-only credentials, as the Claude Code docs do in their Postgres example.</li>
+          <li><strong>Granular toolsets:</strong> Use the API's <code>mcp_toolset</code> to disable every tool by default and enable only the ones you name, or to deny destructive tools.</li>
+          <li><strong>Code auditability:</strong> Prefer servers whose code you have read, including the ones you write yourself.</li>
+          <li><strong>Idempotency keys:</strong> Add idempotency keys to tools that charge, send or provision, because WorkOS notes that the new spec removed stream resumability.</li>
+          <li><strong>Gateway-level headers:</strong> Apply per-tool authorization at the gateway with the new routing headers, which avoids inspecting request bodies.</li>
+        </ul>
+      </section>
+
+      <!-- Section 11: Getting started -->
+      <section class="content-card" id="close">
+        <h2><span class="sec-num">11</span>Getting started</h2>
+
+        <p class="article-p">Pick one system you use often, wrap it with the SDK that matches your stack, and register it with <code>claude mcp add</code>. The three tutorials share one structure, so most of the work goes into the tool functions themselves.</p>
+
+        <p class="article-p">When a local server proves useful, serve it over Streamable HTTP with OAuth so it can run behind a load balancer and the Claude API connector can reach it.</p>
+      </section>
+
+      <!-- Section 12: References -->
+      <section class="content-card" id="refs">
+        <h2><span class="sec-num">12</span>References</h2>
+        <ol class="refs">
+          <li>Anthropic, &ldquo;<a href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noopener noreferrer">Introducing the Model Context Protocol</a>,&rdquo; November 25, 2024. <span class="ref-url">https://www.anthropic.com/news/model-context-protocol</span></li>
+          <li>Anthropic, &ldquo;<a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation" target="_blank" rel="noopener noreferrer">Donating the Model Context Protocol and establishing the Agentic AI Foundation</a>,&rdquo; December 9, 2025. <span class="ref-url">https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation</span></li>
+          <li>Model Context Protocol Blog, &ldquo;<a href="https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/" target="_blank" rel="noopener noreferrer">MCP joins the Agentic AI Foundation</a>,&rdquo; December 9, 2025. <span class="ref-url">https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/</span></li>
+          <li>Model Context Protocol Blog, &ldquo;<a href="https://blog.modelcontextprotocol.io/posts/2025-09-08-mcp-registry-preview/" target="_blank" rel="noopener noreferrer">Introducing the MCP Registry</a>,&rdquo; September 8, 2025. <span class="ref-url">https://blog.modelcontextprotocol.io/posts/2025-09-08-mcp-registry-preview/</span></li>
+          <li>Model Context Protocol, &ldquo;<a href="https://modelcontextprotocol.io/docs/sdk" target="_blank" rel="noopener noreferrer">SDKs (official SDK tiers)</a>.&rdquo; <span class="ref-url">https://modelcontextprotocol.io/docs/sdk</span></li>
+          <li>Model Context Protocol, &ldquo;<a href="https://github.com/modelcontextprotocol/modelcontextprotocol/releases/tag/2026-07-28" target="_blank" rel="noopener noreferrer">Release 2026-07-28 (stable specification)</a>,&rdquo; GitHub, July 28, 2026. <span class="ref-url">https://github.com/modelcontextprotocol/modelcontextprotocol/releases/tag/2026-07-28</span></li>
+          <li>MCP Python SDK (v2), GitHub repository. &ldquo;<a href="https://github.com/modelcontextprotocol/python-sdk" target="_blank" rel="noopener noreferrer">Python SDK v2 on GitHub</a>.&rdquo; <span class="ref-url">https://github.com/modelcontextprotocol/python-sdk</span></li>
+          <li>MCP Python SDK docs, &ldquo;<a href="https://py.sdk.modelcontextprotocol.io/get-started/real-host/" target="_blank" rel="noopener noreferrer">Connect to a real host</a>.&rdquo; <span class="ref-url">https://py.sdk.modelcontextprotocol.io/get-started/real-host/</span></li>
+          <li>MCP TypeScript SDK (v2), GitHub repository. &ldquo;<a href="https://github.com/modelcontextprotocol/typescript-sdk" target="_blank" rel="noopener noreferrer">TypeScript SDK v2 on GitHub</a>.&rdquo; <span class="ref-url">https://github.com/modelcontextprotocol/typescript-sdk</span></li>
+          <li>MCP Rust SDK (rmcp), GitHub repository. &ldquo;<a href="https://github.com/modelcontextprotocol/rust-sdk" target="_blank" rel="noopener noreferrer">Rust SDK rmcp on GitHub</a>.&rdquo; <span class="ref-url">https://github.com/modelcontextprotocol/rust-sdk</span></li>
+          <li>Hacker News, &ldquo;<a href="https://github.com/HackerNews/API" target="_blank" rel="noopener noreferrer">Official Hacker News API</a>,&rdquo; GitHub repository. <span class="ref-url">https://github.com/HackerNews/API</span></li>
+          <li>Claude Code Docs, &ldquo;<a href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener noreferrer">Connect Claude Code to tools via MCP</a>.&rdquo; <span class="ref-url">https://code.claude.com/docs/en/mcp</span></li>
+          <li>Claude Platform Docs, &ldquo;<a href="https://platform.claude.com/docs/en/agents-and-tools/mcp-connector" target="_blank" rel="noopener noreferrer">MCP connector</a>.&rdquo; <span class="ref-url">https://platform.claude.com/docs/en/agents-and-tools/mcp-connector</span></li>
+          <li>Claude Platform Docs, &ldquo;<a href="https://platform.claude.com/docs/agents-and-tools/mcp-tunnels/overview" target="_blank" rel="noopener noreferrer">MCP tunnels</a>.&rdquo; <span class="ref-url">https://platform.claude.com/docs/agents-and-tools/mcp-tunnels/overview</span></li>
+          <li>WorkOS, &ldquo;<a href="https://workos.com/blog/mcp-stateless-spec-2026-07-28" target="_blank" rel="noopener noreferrer">MCP went stateless: What changed in the 2026-07-28 spec</a>,&rdquo; September 16, 2026. <span class="ref-url">https://workos.com/blog/mcp-stateless-spec-2026-07-28</span></li>
+          <li>Cloudflare Blog, &ldquo;<a href="https://blog.cloudflare.com/mcp-v2/" target="_blank" rel="noopener noreferrer">The next generation of MCP</a>,&rdquo; August 6, 2026. <span class="ref-url">https://blog.cloudflare.com/mcp-v2/</span></li>
+          <li>SerpApi, &ldquo;<a href="https://serpapi.com/blog/the-state-of-mcp-everything-that-changed-in-h1-2026/" target="_blank" rel="noopener noreferrer">The State of MCP: Everything That Changed in H1 2026</a>,&rdquo; June 3, 2026. <span class="ref-url">https://serpapi.com/blog/the-state-of-mcp-everything-that-changed-in-h1-2026/</span></li>
+        </ol>
+      </section>
+
+      <!-- CTA Banner -->
+      <section class="cta-banner">
+        <h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Build Enterprise-Grade MCP Servers &amp; Agent Tooling</h3>
+        <p style="color:#94a3b8;font-size:1.02rem;max-width:680px;margin:0 auto 1.75rem;line-height:1.7;">Architect type-safe Model Context Protocol servers in Python, TypeScript, and Rust connecting Claude to private VPC databases and microservices.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
+          <a class="btn btn-primary" href="../collaboration.html">Start A Project &rarr;</a>
+          <a class="btn btn-outline" href="../pricing.html">View Advisory Tiers &rarr;</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+    <!-- START:FOOTER -->
+    <footer id="links">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="footer-brand-logo-link"
+          aria-label="Thomas Cherickal - The Digital Futurist">
+          <img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo" class="footer-brand-logo"
+            width="46" height="46" />
+        </a>
+        <div>
+          <p class="footer-brand-name">The Digital Futurist</p>
+          <p class="footer-brand-tagline">Thomas Cherickal · Generative AI Consultant</p>
+        </div>
+      </div>
+      <div class="footer-newsletter-wrap">
+        <div class="newsletter-card">
+          <div class="newsletter-info">
+            <p class="newsletter-name"><span class="newsletter-icon"><svg class="newsletter-svg" width="18" height="18"
+                  viewBox="0 0 24 24" fill="#F87171" aria-hidden="true">
+                  <path
+                    d="m3.5 11.633-2.434 2.408V8.687a.53.53 0 0 0-.533-.527.53.53 0 0 0-.533.527v6.624a.528.528 0 0 0 .532.526.533.533 0 0 0 .377-.153l2.974-2.939 2.974 2.94a.535.535 0 0 0 .754 0 .522.522 0 0 0 0-.746l-2.974-2.938L7.61 9.06a.522.522 0 0 0 0-.745.538.538 0 0 0-.753 0l-3.344 3.307c-.003 0-.005.003-.007.005l-.007.006v-.001zm8.826 4.206a.53.53 0 0 1-.533-.526V8.688a.53.53 0 0 1 .533-.528.53.53 0 0 1 .533.528v6.624a.53.53 0 0 1-.533.526v.001zm7.257-6.624v6.098c0 .29.238.526.532.526a.53.53 0 0 0 .533-.526V9.215h2.818A.53.53 0 0 0 24 8.688a.53.53 0 0 0-.533-.527h-6.702a.53.53 0 0 0-.533.527.53.53 0 0 0 .533.527h2.819-.001z" />
+                </svg></span>The Digital Futurist Newsletter</p>
+            <p class="newsletter-desc">How to understand and build emerging technologies.</p>
+          </div>
+          <a href="https://thomascherickal.kit.com" target="_blank" rel="noopener" class="btn btn-primary"
+            style="white-space:nowrap;">Subscribe Free →</a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-label" id="contact-label">Find Me Online</p>
+    <div class="social-grid">
+      <a href="https://thomascherickal.com" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal Profile Site"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg></span>Master Blog</a>
+      <a href="https://github.com/thomascherickal" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal GitHub Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true">
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+          </svg></span>GitHub</a>
+      <a href="https://linkedin.com/in/thomascherickal" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal LinkedIn Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#0A66C2" aria-hidden="true">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg></span>LinkedIn</a>
+      <a href="https://hackernoon.com/u/thomascherickal" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal HackerNoon Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#00EB47" aria-hidden="true">
+            <path
+              d="M5.701 0v6.223H8.85V4.654h1.576v7.842H12V4.654h1.574v1.569h3.15V0zm11.024 6.223v3.136h1.574V6.223zm1.574 3.136v4.705h1.576v-1.568h1.574v-1.568h-1.574V9.359zm0 4.705h-1.574v3.137h1.574zm-1.574 3.137h-3.15v1.569H8.85V17.2H5.7V24h11.024zm-11.024 0v-3.137H4.125v3.137zm-1.576-3.137V9.36H2.551v4.705zm0-4.705h1.576V6.223H4.125Z" />
+          </svg></span>HackerNoon</a>
+      <a href="https://thomascherickal.medium.com" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal Medium Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true">
+            <path
+              d="M4.21 0A4.201 4.201 0 0 0 0 4.21v15.58A4.201 4.201 0 0 0 4.21 24h15.58A4.201 4.201 0 0 0 24 19.79v-1.093c-.137.013-.278.02-.422.02-2.577 0-4.027-2.146-4.09-4.832a7.592 7.592 0 0 1 .022-.708c.093-1.186.475-2.241 1.105-3.022a3.885 3.885 0 0 1 1.395-1.1c.468-.237 1.127-.367 1.664-.367h.023c.101 0 .202.004.303.01V4.211A4.201 4.201 0 0 0 19.79 0Zm.198 5.583h4.165l3.588 8.435 3.59-8.435h3.864v.146l-.019.004c-.705.16-1.063.397-1.063 1.254h-.003l.003 10.274c.06.676.424.885 1.063 1.03l.02.004v.145h-4.923v-.145l.019-.005c.639-.144.994-.353 1.054-1.03V7.267l-4.745 11.15h-.261L6.15 7.569v9.445c0 .857.358 1.094 1.063 1.253l.02.004v.147H4.405v-.147l.019-.004c.705-.16 1.065-.397 1.065-1.253V6.987c0-.857-.358-1.094-1.064-1.254l-.018-.004zm19.25 3.668c-1.086.023-1.733 1.323-1.813 3.124H24V9.298a1.378 1.378 0 0 0-.342-.047Zm-1.862 3.632c-.1 1.756.86 3.239 2.204 3.634v-3.634z" />
+          </svg></span>Medium</a>
+      <a href="https://thomascherickal.hashnode.dev" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal Hashnode Blog"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#2962FF" aria-hidden="true">
+            <path
+              d="M22.351 8.019l-6.37-6.37a5.63 5.63 0 0 0-7.962 0l-6.37 6.37a5.63 5.63 0 0 0 0 7.962l6.37 6.37a5.63 5.63 0 0 0 7.962 0l6.37-6.37a5.63 5.63 0 0 0 0-7.962zM12 15.953a3.953 3.953 0 1 1 0-7.906 3.953 3.953 0 0 1 0 7.906z" />
+          </svg></span>Hashnode</a>
+      <a href="https://thesingularitypoint.substack.com" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal Substack"><span class="social-icon"><svg class="social-svg" width="18" height="18"
+            viewBox="0 0 24 24" fill="#FF6719" aria-hidden="true">
+            <path
+              d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
+          </svg></span>Substack</a>
+      <a href="https://exercism.org/profiles/thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal Exercism Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="24" height="24" rx="4" fill="#E5E7EB" />
+            <g transform="translate(12, 12) scale(0.68) translate(-15.0245, -11.9765)" fill="#000000">
+              <path
+                d="M 16.7711 15.3596 C 16.7711 16.376 15.8912 17.0112 15.1118 17.0112 C 14.3324 17.0112 13.3973 16.6954 13.3973 15.3596 V 14.71 H 12.3706 V 15.3596 C 12.3706 16.8389 13.6008 18.0421 15.1118 18.0421 C 16.6228 18.0421 17.8529 16.8389 17.8529 15.3596 V 14.71 H 16.7711 V 15.3596 Z" />
+              <path
+                d="M 8.14791 12.2226 C 8.14791 11.252 8.98972 10.4627 10.024 10.4627 C 11.0576 10.4627 11.8994 11.2527 11.8994 12.2226 H 13.0811 C 13.0811 10.64 11.7104 9.35303 10.024 9.35303 C 8.33759 9.35303 6.96619 10.64 6.96619 12.2226 H 8.14791 Z" />
+              <path
+                d="M 17.8859 12.2226 C 17.8859 11.252 18.7278 10.4627 19.7613 10.4627 C 20.7956 10.4627 21.6374 11.2527 21.6374 12.2226 H 22.8191 C 22.8191 10.64 21.4477 9.35303 19.7613 9.35303 C 18.0749 9.35303 16.7042 10.64 16.7042 12.2226 H 17.8859 Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M 24.7258 8.45805 V 4.64371 C 24.7258 3.35828 24.5696 2.46641 24.257 1.96808 C 23.9445 1.46974 23.2938 1.08551 22.3049 0.815389 C 22.0063 0.731557 21.8571 0.596496 21.8571 0.410202 C 21.8571 0.158705 22.1929 0.032959 22.8646 0.032959 H 23.8862 C 24.9964 0.032959 25.8384 0.377597 26.4121 1.06688 C 26.9859 1.75617 27.2727 2.76214 27.2727 4.08483 V 8.10875 C 27.2727 9.04022 27.373 9.75744 27.5736 10.2604 C 27.7742 10.7634 28.145 11.2338 28.6861 11.6716 C 28.8447 11.802 28.924 11.9091 28.924 11.993 C 28.924 12.0768 28.8447 12.1839 28.6861 12.3143 C 28.1357 12.7614 27.7625 13.2341 27.5666 13.7325 C 27.3707 14.2308 27.2727 14.9457 27.2727 15.8772 V 19.8871 C 27.2727 21.2191 26.9835 22.2297 26.4051 22.919 C 25.8267 23.6083 24.9871 23.953 23.8862 23.953 H 22.8646 C 22.4261 23.953 22.1486 23.932 22.032 23.8901 C21.9154 23.8482 21.8571 23.7434 21.8571 23.5757 C 21.8571 23.3429 22.011 23.1892 22.3189 23.1146 L 22.8786 22.9889 C 24.1101 22.7095 24.7258 21.4939 24.7258 19.3422 V 15.5279 C 24.7258 14.0841 25.0757 13.0641 25.7754 12.468 L 26.0413 12.2445 C 26.1719 12.1327 26.2372 12.0488 26.2372 11.993 C 26.2372 11.9278 26.1719 11.8439 26.0413 11.7415 L 25.7754 11.5179 C 25.0757 10.9218 24.7258 9.90183 24.7258 8.45805 Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M 5.32324 8.42509 V 4.61075 C 5.32324 3.32532 5.47951 2.43345 5.79204 1.93512 C 6.10458 1.43678 6.75529 1.05256 7.74421 0.78243 C 8.04275 0.698598 8.19202 0.563537 8.19202 0.377243 C 8.19202 0.125746 7.85616 0 7.18445 0 H 6.16288 C 5.05269 0 4.21072 0.344638 3.63696 1.03393 C 3.06321 1.72321 2.77633 2.72918 2.77633 4.05187 V 8.0758 C 2.77633 9.00726 2.67604 9.72448 2.47546 10.2275 C 2.27488 10.7305 1.90404 11.2009 1.36294 11.6386 C 1.20434 11.7691 1.12504 11.8762 1.12504 11.96 C 1.12504 12.0438 1.20434 12.151 1.36294 12.2814 C 1.91337 12.7285 2.28654 13.2012 2.48246 13.6995 C 2.67838 14.1978 2.77633 14.9127 2.77633 15.8442 V 19.8542 C 2.77633 21.1862 3.06554 22.1968 3.64396 22.8861 C 4.22238 23.5754 5.06202 23.92 6.16288 23.92 H 7.18445 C 7.62293 23.92 7.90047 23.899 8.01709 23.8571 C 8.13371 23.8152 8.19202 23.7104 8.19202 23.5428 C 8.19202 23.3099 8.03808 23.1562 7.73021 23.0817 L 7.17045 22.9559 C 5.93897 22.6765 5.32324 21.4609 5.32324 19.3093 V 15.4949 C 5.32324 14.0511 4.9734 13.0312 4.27369 12.435 L 4.00781 12.2115 C 3.87719 12.0997 3.81189 12.0159 3.81189 11.96 C 3.81189 11.8948 3.87719 11.811 4.00781 11.7085 L 4.27369 11.485 C 4.9734 10.8888 5.32324 9.86887 5.32324 8.42509 Z" />
+            </g>
+          </svg></span>Exercism</a>
+      <a href="https://www.deep-ml.com/profile/thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal Deep-ML Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="24" height="24" rx="4" fill="#003865" />
+            <g transform="scale(0.046875)">
+              <g transform="translate(56.32 144.46) scale(0.60785)">
+                <path fill="#ffffff" fill-rule="evenodd"
+                  d="M36.4 365.4C31.4 363.0 30.0 359.4 30.0 349.2C30.0 344.2 29.7 339.5 29.4 338.6C28.9 337.3 27.1 337.0 19.9 337.0C9.3 337.0 4.9 335.5 2.0 330.8C0.0 327.5 0.0 326.2 0.0 183.5C0.0 70.3 0.3 39.0 1.3 37.0C2.0 35.7 4.1 33.5 5.9 32.3C8.9 30.3 10.6 30.0 18.9 30.0C25.1 30.0 29.0 29.6 29.8 28.8C30.5 28.1 31.0 24.4 31.0 19.3C31.0 9.8 32.4 5.4 36.5 2.2C39.3 0.0 39.3 -0.0 95.2 0.0C156.5 0.0 155.3 -0.1 158.5 6.0C159.5 8.0 160.0 11.8 160.0 18.3C160.0 24.2 160.4 28.0 161.2 28.8C162.0 29.6 166.0 30.0 172.4 30.0C183.8 30.0 186.4 30.9 189.7 35.9C191.7 38.9 192.0 40.5 192.0 50.1C192.0 63.2 191.8 63.0 205.3 63.0C213.3 63.0 215.1 63.3 217.4 65.1C221.7 68.5 222.5 70.9 223.0 83.5L223.5 95.5L233.3 96.1C248.4 97.0 252.0 100.8 252.0 116.1C252.0 123.1 252.3 124.9 253.6 125.4C254.5 125.7 259.4 126.0 264.6 126.0C273.5 126.0 274.1 126.1 277.2 128.9L280.5 131.8L281.0 152.3C281.4 167.5 281.8 173.1 282.9 174.4C284.1 175.8 287.0 176.0 306.1 176.0C327.5 176.0 327.9 176.0 329.4 173.8C330.7 172.0 331.0 168.2 331.0 153.7C331.0 133.9 331.7 130.8 336.9 127.7C339.0 126.5 342.1 126.0 348.3 126.0C353.0 126.0 357.5 125.7 358.4 125.4C359.7 124.9 360.0 123.1 360.0 116.1C360.0 100.8 363.6 97.0 378.7 96.1L388.4 95.5L389.2 92.0C389.6 90.1 389.9 84.6 389.9 79.9C389.8 70.2 390.7 67.8 395.3 65.0C397.8 63.4 400.3 63.0 407.1 63.0C413.1 63.0 416.1 62.6 416.9 61.7C417.5 60.9 418.2 55.0 418.6 48.4C418.9 41.9 419.6 35.5 420.2 34.3C422.3 29.9 425.9 28.6 436.5 28.0L446.5 27.5L447.0 17.5C447.6 6.7 448.9 3.3 453.6 1.2C455.2 0.4 463.0 0.0 475.6 0.0C502.1 0.0 503.1 0.6 504.0 16.5L504.5 25.5L514.0 26.0C524.3 26.6 527.0 27.6 529.8 31.7C531.4 34.2 531.5 42.5 532.0 159.0L532.5 283.5L573.0 284.0C603.4 284.4 614.1 284.8 615.8 285.8C620.1 288.3 621.5 291.8 622.0 302.0L622.5 311.5L633.0 312.0C651.1 312.9 652.3 314.8 651.8 340.9C651.5 360.7 651.1 361.8 644.4 365.0C640.4 367.0 638.4 367.0 568.6 366.8L496.8 366.5L493.4 362.8C490.1 359.1 490.0 358.8 490.0 350.7C490.0 345.6 489.5 341.9 488.8 341.2C488.1 340.5 484.4 340.0 479.3 340.0C469.4 340.0 466.0 338.6 463.6 333.6C462.2 330.5 462.0 320.2 462.0 223.6C462.0 119.3 462.0 117.0 460.1 116.0C457.6 114.7 442.4 114.7 439.9 116.0C438.2 117.0 438.0 118.2 438.0 130.6C438.0 146.0 436.9 149.8 431.8 153.0C429.2 154.6 426.8 155.0 419.7 155.0C406.6 155.0 407.0 154.5 407.0 170.3C407.0 190.8 404.3 194.0 387.3 194.0C379.2 194.0 377.9 194.2 377.0 195.9C376.5 197.0 376.0 203.8 376.0 211.0L376.0 224.2L372.6 227.6L369.2 231.0L358.8 231.0C352.0 231.0 347.8 231.4 346.8 232.2C345.5 233.3 345.1 236.0 344.8 246.5C344.3 267.8 343.9 268.0 310.5 268.0C277.3 268.0 276.9 267.8 276.2 246.0C275.9 236.1 275.5 233.2 274.2 232.2C273.2 231.5 269.3 231.0 263.7 231.0C255.0 231.0 254.7 230.9 251.6 227.8C248.4 224.6 248.3 224.2 247.6 213.1C247.3 206.8 246.7 201.3 246.4 200.9C246.1 200.4 241.7 200.0 236.7 200.0C220.8 200.0 218.0 196.6 218.0 177.2C218.0 169.4 217.6 165.0 216.8 164.2C216.0 163.4 212.3 163.0 206.8 163.0C191.6 163.0 188.5 159.8 188.7 143.8C188.9 131.1 188.8 131.0 176.3 131.0C160.9 131.0 158.0 127.7 158.0 110.5C158.0 98.9 158.1 99.0 143.5 99.0L132.8 99.0L129.4 95.6L126.0 92.2L126.0 81.0C126.0 74.9 125.5 69.0 125.0 67.9C124.0 66.1 122.6 66.0 94.9 66.0L66.0 66.0L65.0 68.6C64.4 70.2 64.0 113.2 64.0 184.3C64.0 285.2 64.2 297.8 65.6 299.8C67.0 301.9 67.8 302.0 80.1 302.0C87.3 302.0 94.0 301.6 95.0 301.0C96.5 300.2 96.9 298.2 97.5 288.8C97.9 282.6 98.7 276.7 99.2 275.7C101.2 271.8 106.1 270.0 114.7 270.0C122.0 270.0 123.1 269.8 124.4 267.8C125.8 265.8 126.0 258.8 126.0 211.2L126.0 156.8L128.9 153.9L131.8 151.0L148.7 151.0C164.5 151.0 165.8 151.1 167.9 153.1C171.1 156.1 172.0 159.2 172.0 167.5C172.0 175.8 172.2 176.0 180.0 176.0C186.7 176.0 189.5 179.4 190.3 188.2C191.3 200.5 191.1 291.8 190.1 295.8C189.5 297.9 187.9 300.7 186.4 302.1C184.2 304.2 182.7 304.5 175.7 304.8C162.1 305.3 163.0 304.6 163.0 315.3C163.0 331.1 159.4 335.2 144.7 336.0L135.5 336.5L135.0 347.2C134.4 359.2 133.1 362.1 126.9 365.2C123.8 366.8 119.5 367.0 81.5 367.0C46.1 367.0 39.0 366.7 36.4 365.4Z" />
+                <path fill="#018AFA"
+                  d="M576.2 98.7C571.1 95.8 570.5 93.7 570.2 75.7C569.8 57.2 570.3 54.6 575.2 50.5C577.9 48.2 578.9 48.0 588.5 48.0C597.8 48.0 599.0 47.8 600.0 46.1C600.6 44.9 601.0 36.7 601.0 26.5C601.0 -0.3 600.6 0.0 629.7 0.0C657.4 0.0 657.0 -0.4 657.0 26.3C657.0 42.4 656.8 43.9 654.9 46.4C651.6 50.6 649.1 51.5 638.5 52.0L628.5 52.5L628.0 62.2C627.5 71.1 627.3 72.2 624.8 74.7C622.5 77.0 621.0 77.5 614.8 77.9L607.5 78.5L607.0 86.3C606.5 93.6 606.3 94.4 603.2 97.1C600.0 99.9 599.7 100.0 589.2 100.0C582.6 99.9 577.6 99.5 576.2 98.7Z" />
+              </g>
+            </g>
+          </svg></span>Deep-ML</a>
+      <a href="https://hackerrank.com/profile/thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal HackerRank Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#00EA64" aria-hidden="true">
+            <path
+              d="M0 0v24h24V0zm9.95 8.002h1.805c.061 0 .111.05.111.111v7.767c0 .061-.05.111-.11.111H9.95c-.061 0-.111-.05-.111-.11v-2.87H7.894v2.87c0 .06-.05.11-.11.11H5.976a.11.11 0 01-.11-.11V8.112c0-.06.05-.11.11-.11h1.806c.061 0 .11.05.11.11v2.869H9.84v-2.87c0-.06.05-.11.11-.11zm2.999 0h5.778c.061 0 .111.05.111.11v7.767a.11.11 0 01-.11.112h-5.78a.11.11 0 01-.11-.11V8.111c0-.06.05-.11.11-.11z" />
+          </svg></span>HackerRank</a>
+      <a href="https://leetcode.com/u/thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal LeetCode Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#FFA116" aria-hidden="true">
+            <path
+              d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+          </svg></span>LeetCode</a>
+      <a href="https://www.codewars.com/users/thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal CodeWars Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#BA423D" aria-hidden="true">
+            <path
+              d="M1.072.142A1.072 1.072 0 0 0 0 1.214v21.572a1.072 1.072 0 0 0 1.072 1.072h21.856A1.072 1.072 0 0 0 24 22.786V1.214A1.072 1.072 0 0 0 22.928.142zm9.736 1.818a.904.904 0 0 1 .828.539.784.784 0 0 1 1.274.493.639.639 0 0 1 .29-.06c.33.008.59.262.625.575a1.322 1.322 0 0 1 .624-.515 1.325 1.325 0 0 1 1.718.71 1.098 1.098 0 0 1 .306-.236 1.102 1.102 0 0 1 1.483.479 1.094 1.094 0 0 1 .12.47.994.994 0 0 1 1.322 1.214.904.904 0 0 1 .874 1.438.784.784 0 0 1 .176 1.356.639.639 0 0 1 .19.224.642.642 0 0 1-.011.613 1.326 1.326 0 0 1 .482.235 1.334 1.334 0 0 1 .258 1.842 1.098 1.098 0 0 1 .35.15 1.102 1.102 0 0 1 .337 1.516 1.094 1.094 0 0 1-.344.344.994.994 0 0 1 .228 1.318 1.006 1.006 0 0 1-.605.434.904.904 0 0 1-.803 1.482.814.814 0 0 0-.008-.04.784.784 0 0 1-1.075.873.639.639 0 0 1-.098.28.625.625 0 0 1-.43.288 1.33 1.33 0 0 1 .023.456 1.334 1.334 0 0 1-1.44 1.173 1.098 1.098 0 0 1 .054.377 1.102 1.102 0 0 1-1.128 1.072 1.098 1.098 0 0 1-.47-.12.994.994 0 0 1-1.696.583.904.904 0 0 1-1.685.075.784.784 0 0 1-1.274-.493.639.639 0 0 1-.29.064.64.64 0 0 1-.621-.58l.004-.007a1.326 1.326 0 0 1-.632.523 1.334 1.334 0 0 1-1.718-.706 1.098 1.098 0 0 1-.306.232 1.102 1.102 0 0 1-1.48-.478 1.094 1.094 0 0 1-.123-.471.994.994 0 0 1-1.318-1.21.904.904 0 0 1-.874-1.442.784.784 0 0 1-.176-1.356.639.639 0 0 1-.194-.224.642.642 0 0 1 .011-.61l.019.004a1.326 1.326 0 0 1-.497-.239 1.334 1.334 0 0 1-.262-1.845 1.098 1.098 0 0 1-.35-.146 1.102 1.102 0 0 1-.337-1.52 1.094 1.094 0 0 1 .347-.34A.994.994 0 0 1 2.88 9a.904.904 0 0 1 .803-1.48.784.784 0 0 1 1.083-.836.639.639 0 0 1 .098-.28.649.649 0 0 1 .433-.288 1.33 1.33 0 0 1-.026-.452A1.334 1.334 0 0 1 6.716 4.49a1.098 1.098 0 0 1-.06-.377 1.101 1.101 0 0 1 1.13-1.073 1.094 1.094 0 0 1 .47.115.994.994 0 0 1 1.696-.579.904.904 0 0 1 .857-.617z" />
+          </svg></span>CodeWars</a>
+      <a href="https://www.naukri.com/code360/profile/thomascherickal" target="_blank" rel="noopener"
+        class="social-link" aria-label="Thomas Cherickal Code360 Profile"><span class="social-icon"><svg
+            class="social-svg" width="18" height="18" viewBox="0 0 24 24" fill="#F25430" aria-hidden="true">
+            <path
+              d="M23.198 0c-.499.264-1.209.675-1.79.984a542.82 542.82 0 000 6.242c.995-.526 1.761-.834 1.79-2.066V0zM8.743.181C7.298.144 5.613.65 4.47 1.414c-1.17.8-1.987 1.869-2.572 3.179A16.787 16.787 0 00.9 8.87c-.15 1.483-.128 3.079.025 4.677.27 1.855.601 3.724 1.616 5.456 1.57 2.62 4.313 4.109 7.262 4.19 3.41.246 7.233.53 11.411.807.022-2.005.01-5.418 0-6.25-3.206-.21-7.398-.524-11.047-.782-.443-.043-.896-.056-1.324-.172-1.086-.295-1.806-.802-2.374-1.757-.643-1.107-.875-2.832-.797-4.294.11-1.27.287-2.41 1.244-3.44.669-.56 1.307-.758 2.161-.84 5.17.345 7.609.53 12.137.858.032-1.133.01-3.46 0-6.229C16.561.752 12.776.474 8.743.181zm-.281 9.7c.174.675.338 1.305.729 1.903.537.832 1.375 1.127 2.388.877.76-.196 1.581-.645 2.35-1.282zm12.974 1.04l-5.447.689c.799.739 1.552 1.368 2.548 1.703.988.319 1.78.01 2.308-.777.209-.329.56-1.148.591-1.614zm.842 6.461c-.388.01-.665.198-.87.355.002 1.798 0 4.127 0 6.223.586-.297 1.135-.644 1.793-.998-.005-1.454.002-3.137-.005-4.707a.904.904 0 00-.917-.873z" />
+          </svg></span>Code360</a>
+      <a href="https://www.hackerearth.com/@thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal HackerEarth Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="24" height="24" rx="4" fill="#000000" />
+            <path fill="#FFFFFF"
+              d="M18.447 20.936H5.553V19.66h12.894zM9.511 0H6.97v17.65h2.58V10.25c0-1.88 1.35-2.77 2.64-2.77 1.76 0 2.34 1.33 2.34 3.12v7.05h2.54v-7.32c-.13-3.82-2.05-5.05-4.02-5.17-1.33-.09-2.55.03-3.54 1.31V0z" />
+          </svg></span>HackerEarth</a>
+      <a href="https://www.kaggle.com/thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal Kaggle Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#20BEFF" aria-hidden="true">
+            <path
+              d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.246l-5.18-6.598-1.453 1.383v5.215c0 .164-.082.246-.246.246H5.474c-.164 0-.246-.082-.246-.246V.246c0-.164.082-.246.246-.246h2.559c.164 0 .246.082.246.246v14.906l6.398-6.398c.141-.141.305-.211.492-.211h3.281c.141 0 .234.059.281.176.047.141.023.246-.07.316l-7.242 7.102 7.547 7.43c.094.094.117.199.07.293z" />
+          </svg></span>Kaggle</a>
+      <a href="https://profile.codersrank.io/user/thomascherickal/" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal CodersRank Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#67A4AC" aria-hidden="true">
+            <path
+              d="M23.134 8.64l-5.973-3.62a.286.286 0 0 0-.412.125l-1.4 3.286 2.842 1.696a.53.53 0 0 1 0 .921l-5.335 3.14-2.267 5.274a.127.127 0 0 0 .052.203.122.122 0 0 0 .134-.035l3.914-2.365 1.545 2.219a.373.373 0 0 0 .309.167h3.708a.367.367 0 0 0 .327-.2.382.382 0 0 0-.018-.386l-2.513-3.852 5.088-3.077c.577-.349.865-.74.865-1.172V9.813c0-.433-.288-.823-.866-1.172zM13.082 4.35L.845 12.052c-.577.348-.858.739-.845 1.171v1.173c.014.432.303.816.866 1.15l6.056 3.496a.286.286 0 0 0 .412-.146l1.36-3.286-2.884-1.633a.518.518 0 0 1-.275-.384.529.529 0 0 1 .254-.537l5.295-3.245 2.183-5.316a.128.128 0 0 0-.04-.142.122.122 0 0 0-.146-.005z" />
+          </svg></span>CodersRank</a>
+      <a href="https://thomascherickal.quora.com" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal Quora Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#B92B27" aria-hidden="true">
+            <path
+              d="M7.3799.9483A11.9628 11.9628 0 0 1 21.248 19.5397l2.4096 2.4225c.7322.7362.21 1.9905-.8272 1.9905l-10.7105.01a12.52 12.52 0 0 1-.304 0h-.02A11.9628 11.9628 0 0 1 7.3818.9503Zm7.3217 4.428a7.1717 7.1717 0 1 0-5.4873 13.2512 7.1717 7.1717 0 0 0 5.4883-13.2511Z" />
+          </svg></span>Quora</a>
+      <a href="https://reddit.com/user/thomascherickal1" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal Reddit Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#FF4500" aria-hidden="true">
+            <path
+              d="M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-2.286 2.286C.775 23.225 1.097 24 1.738 24H12c6.627 0 12-5.373 12-12S18.627 0 12 0Zm4.388 3.199c1.104 0 1.999.895 1.999 1.999 0 1.105-.895 2-1.999 2-.946 0-1.739-.657-1.947-1.539v.002c-1.147.162-2.032 1.15-2.032 2.341v.007c1.776.067 3.4.567 4.686 1.363.473-.363 1.064-.58 1.707-.58 1.547 0 2.802 1.254 2.802 2.802 0 1.117-.655 2.081-1.601 2.531-.088 3.256-3.637 5.876-7.997 5.876-4.361 0-7.905-2.617-7.998-5.87-.954-.447-1.614-1.415-1.614-2.538 0-1.548 1.255-2.802 2.803-2.802.645 0 1.239.218 1.712.585 1.275-.79 2.881-1.291 4.64-1.365v-.01c0-1.663 1.263-3.034 2.88-3.207.188-.911.993-1.595 1.959-1.595Zm-8.085 8.376c-.784 0-1.459.78-1.506 1.797-.047 1.016.64 1.429 1.426 1.429.786 0 1.371-.369 1.418-1.385.047-1.017-.553-1.841-1.338-1.841Zm7.406 0c-.786 0-1.385.824-1.338 1.841.047 1.017.634 1.385 1.418 1.385.785 0 1.473-.413 1.426-1.429-.046-1.017-.721-1.797-1.506-1.797Zm-3.703 4.013c-.974 0-1.907.048-2.77.135-.147.015-.241.168-.183.305.483 1.154 1.622 1.964 2.953 1.964 1.33 0 2.47-.81 2.953-1.964.057-.137-.037-.29-.184-.305-.863-.087-1.795-.135-2.769-.135Z" />
+          </svg></span>Reddit</a>
+      <a href="https://x.com/thomazcherickal" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal X Profile"><span class="social-icon"><svg class="social-svg" width="18" height="18"
+            viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true">
+            <path
+              d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z" />
+          </svg></span>X (Twitter)</a>
+      <a href="https://linktr.ee/thomascherickal" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal Linktree Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#43E55E" aria-hidden="true">
+            <path
+              d="m13.73635 5.85251 4.00467-4.11665 2.3248 2.3808-4.20064 4.00466h5.9085v3.30473h-5.9365l4.22865 4.10766-2.3248 2.3338L12.0005 12.099l-5.74052 5.76852-2.3248-2.3248 4.22864-4.10766h-5.9375V8.12132h5.9085L3.93417 4.11666l2.3248-2.3808 4.00468 4.11665V0h3.4727zm-3.4727 10.30614h3.4727V24h-3.4727z" />
+          </svg></span>Linktree</a>
+    </div>
+
+    <hr class="dv">
+
+    <!-- WORK WITH ME -->
+
+    <p class="tc-label">Work With Me</p>
+    <div class="wg footer-work-row">
+
+      <!-- Topmate -->
+      <a href="https://topmate.io/thomascherickal" class="wl" target="_blank" rel="noopener noreferrer">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 47 46" fill="none" aria-hidden="true">
+              <circle cx="23.6" cy="23" r="22.5" fill="#E44332" />
+              <path
+                d="M33.0038 29.6411C31.5707 31.6672 29.5206 33.1752 27.1598 33.9401C24.7989 34.705 22.254 34.6857 19.905 33.8851C17.5561 33.0844 15.5291 31.5454 14.1269 29.4978C12.7247 27.4503 12.0225 25.0041 12.1251 22.5246C12.2277 20.045 13.1296 17.6652 14.6962 15.7405C16.2627 13.8158 18.4099 12.4495 20.817 11.8456C23.224 11.2418 25.7619 11.4328 28.0515 12.3901C30.341 13.3474 32.2595 15.0197 33.5204 17.1572L23.6152 23L33.0038 29.6411Z"
+                fill="#FEF7F7" />
+            </svg>
+          </div>
+          <span class="wl-name">1-on-1 Consults</span>
+        </div>
+        <p class="wl-desc">Book strategy, architecture reviews &amp; enterprise advisory.</p>
+        <span class="wl-url">topmate.io/thomascherickal</span>
+      </a>
+
+      <!-- Patreon -->
+      <a href="https://patreon.com/thomascherickal" class="wl" target="_blank" rel="noopener noreferrer">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FF424D" aria-hidden="true">
+              <path
+                d="M22.957 7.21c-.004-3.064-2.391-5.576-5.191-6.482-3.478-1.125-8.064-.962-11.384.604C2.357 3.231 1.093 7.391 1.046 11.54c-.039 3.411.302 12.396 5.369 12.46 3.765.047 4.326-4.804 6.068-7.141 1.24-1.662 2.836-2.132 4.801-2.618 3.376-.836 5.678-3.501 5.673-7.031Z" />
+            </svg>
+          </div>
+          <span class="wl-name">Patreon Community</span>
+        </div>
+        <p class="wl-desc">Exclusive member content, playbooks &amp; free book access.</p>
+        <span class="wl-url">patreon.com/thomascherickal</span>
+      </a>
+
+      <!-- Gumroad -->
+      <a href="https://thomascherickal.gumroad.com" class="wl" target="_blank" rel="noopener noreferrer">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FF90E8" aria-hidden="true">
+              <path
+                d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0Zm-.007 5.12c4.48 0 5.995 3.025 6.064 4.744h-3.239c-.069-.962-.897-2.406-2.896-2.406-2.136 0-3.514 1.857-3.514 4.126 0 2.27 1.378 4.125 3.514 4.125 1.93 0 2.758-1.512 3.103-3.025h-3.103v-1.238h6.509v6.327h-2.855v-3.989c-.207 1.444-1.102 4.264-4.617 4.264-3.516 0-5.584-2.82-5.584-6.326 0-3.645 2.276-6.602 6.618-6.602z" />
+            </svg>
+          </div>
+          <span class="wl-name">Digital Products</span>
+        </div>
+        <p class="wl-desc">Developer guides, architecture playbooks &amp; checklists.</p>
+        <span class="wl-url">thomascherickal.gumroad.com</span>
+      </a>
+
+      <!-- Pricing & Parity Index -->
+      <a href="https://thedigitalfuturist.com/pricing.html" class="wl" target="_blank" rel="noopener noreferrer">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+              <line x1="1" y1="10" x2="23" y2="10" />
+            </svg>
+          </div>
+          <span class="wl-name">Pricing &amp; Parity</span>
+        </div>
+        <p class="wl-desc">Transparent milestone rates &amp; 195-country PPP index.</p>
+        <span class="wl-url">thedigitalfuturist.com/pricing</span>
+      </a>
+
+      <!-- Message me on X -->
+      <a href="https://x.com/thomazcherickal" class="wl" target="_blank" rel="noopener noreferrer">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true">
+              <path
+                d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z" />
+            </svg>
+          </div>
+          <span class="wl-name">Message me on X</span>
+        </div>
+        <p class="wl-desc">Direct messaging, quick queries &amp; tech discussions.</p>
+        <span class="wl-url">x.com/thomazcherickal</span>
+      </a>
+
+      <!-- Direct Email Inquiry -->
+      <a href="mailto:thomascherickal@gmail.com" class="wl">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+          </div>
+          <span class="wl-name">Direct Inquiries</span>
+        </div>
+        <p class="wl-desc">Reach out directly for custom engagements &amp; proposals.</p>
+        <span class="wl-url">thomascherickal@gmail.com</span>
+      </a>
+    </div>
+
+    <hr class="dv">
+
+    <!-- COPYRIGHT & DOMAINS -->
+    <p class="tc-copy">
+      © 2026 <a href="../index.html">Thomas
+        Cherickal</a>
+      <span class="tc-sep"></span> The Digital Futurist
+      <span class="tc-sep"></span> Generative AI Consultant
+      <span class="tc-sep"></span> <a href="https://thomascherickal.com" target="_blank"
+        rel="noopener noreferrer">thomascherickal.com</a>
+      <span class="tc-sep"></span> <a href="https://thedigitalfuturist.com" target="_blank"
+        rel="noopener noreferrer">thedigitalfuturist.com</a>
+      <span class="tc-sep"></span> <span style="display:inline-flex;align-items:center;gap:4px;color:#a1a1aa;"><svg
+          width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+          style="vertical-align:middle;color:#38bdf8;">
+    </p>
+  </footer>
+    <!-- END:FOOTER -->
+  <script src="../components.js"></script>
+</body>
+</html>

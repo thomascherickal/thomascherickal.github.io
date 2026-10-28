@@ -49,7 +49,7 @@ def get_target_schema_filename(html_filename: str) -> str:
     stem = html_filename[:-5] if html_filename.endswith(".html") else html_filename
     existing_files = set(os.listdir(SCHEMA_DIR)) if SCHEMA_DIR.exists() else set()
 
-    if stem.startswith("service-"):
+    if stem.startswith(("service-", "business-service-", "personal-service-")):
         if f"{stem}.json" in existing_files:
             return f"{stem}.json"
         if f"{stem}-schema.json" in existing_files:
@@ -101,7 +101,13 @@ def sync_html_to_schemas(check_only: bool = False, verbose: bool = False) -> dic
             return {"total": 0, "updated": 0, "created": 0, "unchanged": 0, "errors": 1}
         SCHEMA_DIR.mkdir(parents=True, exist_ok=True)
 
-    html_files = sorted(REPO_DIR.glob("*.html"))
+    html_files = sorted(
+        list(REPO_DIR.glob("*.html")) +
+        list((REPO_DIR / "Business-Services").glob("*.html")) +
+        list((REPO_DIR / "Personal-Services").glob("*.html")) +
+        list((REPO_DIR / "Google").glob("*.html")) +
+        list((REPO_DIR / "Claude").glob("*.html"))
+    )
     updated = []
     created = []
     unchanged = []
