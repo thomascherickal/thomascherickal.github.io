@@ -71,4 +71,10 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - `python/sync_schemas.py` extracts embedded JSON-LD schemas from all HTML pages and synchronizes the copy into the corresponding JSON file under the `schema/` directory (e.g., `index.html` -> `schema/home-schema.json`, `service-*.html` -> `schema/service-*.json`, and other pages -> `schema/<page>-schema.json`).
 - Ensure all updated schema files in `schema/` are staged and committed before pushing to the remote repository.
 
+## Markdown Synchronization (`md-html-sync/`)
+- **ALWAYS run `python3 python/md_html_sync.py`** on every modification or change to HTML pages or content.
+- Keeps Markdown files in `md-html-sync/` synchronized with their corresponding HTML pages.
+- When full Markdown generation is required across all pages, run `python3 python/build_md_files.py`.
+
+
 

@@ -221,49 +221,49 @@
     position: relative;
     background: linear-gradient(145deg, #151d2f 0%, #0d131f 100%);
     border: 1px solid rgba(251, 191, 36, 0.32);
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4), 0 0 18px rgba(251, 191, 36, 0.08);
+    border-radius: 16px;
+    padding: 30px 28px;
+    margin-bottom: 1.75rem;
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.5), 0 0 24px rgba(251, 191, 36, 0.1);
   }
 
   .footer-dark .tc-book-badge {
     position: absolute;
-    top: 16px;
-    right: 18px;
+    top: 20px;
+    right: 24px;
     background: #fbbf24;
     color: #04060c;
-    font-size: 11px;
+    font-size: 11.5px;
     font-weight: 800;
     letter-spacing: .08em;
-    padding: 4px 10px;
+    padding: 5px 12px;
     border-radius: 6px;
     text-transform: uppercase;
   }
 
   .footer-dark .tc-book-body {
     display: flex;
-    gap: 20px;
-    align-items: flex-start;
+    gap: 30px;
+    align-items: center;
   }
 
   .footer-dark .tc-book-cover-wrap {
     flex-shrink: 0;
-    width: 115px;
-    border-radius: 8px;
+    width: 240px;
+    border-radius: 12px;
     overflow: hidden;
-    border: 1px solid rgba(251, 191, 36, 0.35);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(251, 191, 36, 0.38);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65), 0 0 20px rgba(251, 191, 36, 0.16);
     background: #1b2336;
   }
 
   .footer-dark .tc-book-cover {
     width: 100%;
     height: auto;
-    aspect-ratio: 7/10;
+    aspect-ratio: 687 / 1024;
     display: block;
     object-fit: cover;
-    object-position: 22.25% center;
+    object-position: center;
   }
 
   .footer-dark .tc-book-info {
@@ -272,44 +272,46 @@
   }
 
   .footer-dark .tc-book-tag {
-    font-size: 12px;
+    font-size: 13px;
     text-transform: uppercase;
-    letter-spacing: .08em;
+    letter-spacing: .09em;
     color: #fbbf24;
     font-weight: 700;
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
 
   .footer-dark .tc-book-title {
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 800;
     color: #ffffff;
-    margin-bottom: 3px;
+    margin-bottom: 6px;
+    line-height: 1.25;
     letter-spacing: -0.015em;
   }
 
   .footer-dark .tc-book-sub {
-    font-size: 15.5px;
+    font-size: 16.5px;
     font-weight: 600;
     color: #cbd5e1;
-    margin-bottom: 8px;
-    line-height: 1.45;
+    margin-bottom: 12px;
+    line-height: 1.5;
   }
 
   .footer-dark .tc-book-desc {
-    font-size: 15px;
+    font-size: 15.5px;
     color: #94a3b8;
-    line-height: 1.55;
-    margin-bottom: 12px;
+    line-height: 1.65;
+    margin-bottom: 16px;
+    max-width: 720px;
   }
 
   .footer-dark .tc-book-price {
-    font-size: 14.5px;
+    font-size: 15.5px;
     font-weight: 600;
     color: #fbbf24;
-    margin-bottom: 14px;
-    line-height: 1.45;
+    margin-bottom: 18px;
+    line-height: 1.5;
   }
 
   .footer-dark .tc-book-actions {
@@ -325,9 +327,9 @@
     gap: 7px;
     background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
     color: #05070d;
-    font-size: 13.5px;
+    font-size: 14.5px;
     font-weight: 700;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
     transition: transform .15s ease, box-shadow .15s ease;
@@ -340,7 +342,7 @@
   }
 
   .footer-dark .tc-book-validity {
-    font-size: 13px;
+    font-size: 13.5px;
     color: #94a3b8;
     font-style: italic;
   }
@@ -500,6 +502,22 @@
 
   /* RESPONSIVE DESIGN */
   @media(max-width: 820px) {
+    .footer-dark .tc-book {
+      padding: 24px 20px;
+    }
+
+    .footer-dark .tc-book-body {
+      gap: 22px;
+    }
+
+    .footer-dark .tc-book-cover-wrap {
+      width: 200px;
+    }
+
+    .footer-dark .tc-book-title {
+      font-size: 23px;
+    }
+
     .footer-dark .pg {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -514,14 +532,19 @@
       padding: 16px;
     }
 
+    .footer-dark .tc-book {
+      padding: 22px 16px;
+    }
+
     .footer-dark .tc-book-body {
       flex-direction: column;
       align-items: center;
       text-align: center;
+      gap: 18px;
     }
 
     .footer-dark .tc-book-cover-wrap {
-      width: 105px;
+      width: min(230px, 75vw);
     }
 
     .footer-dark .tc-book-actions {
@@ -531,7 +554,20 @@
     .footer-dark .tc-book-badge {
       position: static;
       display: inline-block;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    .footer-dark .tc-book-title {
+      font-size: 22px;
+    }
+
+    .footer-dark .tc-book-sub {
+      font-size: 15px;
+    }
+
+    .footer-dark .tc-book-desc {
+      font-size: 14.5px;
+      line-height: 1.6;
     }
 
     .footer-dark .pg {
@@ -618,7 +654,8 @@
       <li><strong>Claude AI Agent Orchestration</strong> - Creating AI Agent teams for all tasks for corporate staff,
         from
         freshers to developers to architects to management to CXOs level.</li>
-      <li><strong>Gemini AI Ecosystem Devtools</strong> - Mastering Google's suite of development and design tools for
+      <li><strong>Gemini AI Ecosystem Tools</strong> - Mastering Google's suite of development, content, and design
+        tools for
         tasks
         from freshers to developers to architects to management to CXOs level.</li>
       </li>
@@ -645,11 +682,11 @@
     <div class="tc-book-body">
       <div class="tc-book-cover-wrap">
         <picture>
-          <source srcset="https://thomascherickal.github.io/assets/Book%20Cover%20LQ.jpeg" type="image/jpeg">
-          <img src="https://thomascherickal.github.io/assets/Book%20Cover%20LQ.jpeg"
-            onerror="this.onerror=null;this.src='assets/Book%20Cover%20LQ.jpeg';"
+          <source srcset="assets/RECRUITED-Book-Cover.jpeg?v=20261028, https://thomascherickal.github.io/assets/RECRUITED-Book-Cover.jpeg?v=20261028" type="image/jpeg">
+          <img src="assets/RECRUITED-Book-Cover.jpeg?v=20261028"
+            onerror="this.onerror=null;this.src='https://thomascherickal.github.io/assets/RECRUITED-Book-Cover.jpeg?v=20261028';"
             alt="RECRUITED by Thomas Cherickal - The Inbound Recruiter Blueprint: How to Make Recruiters Chase You"
-            class="tc-book-cover" width="115" height="164" loading="lazy">
+            class="tc-book-cover" width="240" height="358" loading="lazy">
         </picture>
       </div>
       <div class="tc-book-info">
@@ -799,7 +836,7 @@
           <path
             d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.3zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.66-2.52.74-.04c.4-.02.73 0 .73.04 0 .14-1.67 6.38-1.8 6.68z" />
         </svg></div>
-      <span class="pn">DEV Community</span>
+      <span class="pn">DEV.to</span>
     </a>
     <!-- Contently -->
     <a href="https://thomascherickal.contently.com" class="pl" target="_blank" rel="noopener noreferrer"

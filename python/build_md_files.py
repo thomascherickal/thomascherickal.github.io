@@ -144,7 +144,7 @@ def convert_writing() -> str:
         "### RECRUITED - The Inbound Recruiter Blueprint: How to Make Recruiters Chase You",
         "*(Pre-Order Status - $20.00 USD pre-release until December 31, 2026 ($40.00 USD after release) · Free with an active Patreon subscription)*",
         "",
-        "![RECRUITED Book Cover](assets/Book%20Cover%20LQ.jpeg)",
+        "![RECRUITED Book Cover](assets/RECRUITED-Book-Cover.jpeg)",
         "",
         "A comprehensive transformation system showing professionals how to use frontier AI tools - GitHub, LinkedIn, Perplexity, Claude, Google Antigravity, and Gemini Notebook - to rebuild their professional presence so that inbound recruiter offers find them.",
         "",
