@@ -478,7 +478,8 @@
         if (calcCtaBtn) {
           calcCtaBtn.textContent = "Contact Thomas for Custom Subsidized Quote →";
           calcCtaBtn.style.borderColor = tier.badgeColor;
-          calcCtaBtn.href = "contact.html?tier=" + encodeURIComponent(tier.name) + "&budget=Custom%20Subsidized%20Quote&participants=" + result.participants;
+          const pkgVal = calcPackage ? calcPackage.value : "";
+          calcCtaBtn.href = "contact.html?tier=" + tier.tier + "&offer=" + encodeURIComponent(pkgVal) + "&budget=Custom%20Subsidized%20Quote&participants=" + result.participants;
         }
       } else {
         // Tiers 1-5
@@ -519,7 +520,8 @@
         if (calcCtaBtn) {
           calcCtaBtn.textContent = "Lock in " + tier.shortName + " Rate ($" + result.finalPrice.toLocaleString("en-US") + ") →";
           calcCtaBtn.style.borderColor = tier.badgeColor;
-          calcCtaBtn.href = "contact.html?tier=" + encodeURIComponent(tier.name) + "&budget=" + result.finalPrice + "&participants=" + result.participants;
+          const pkgVal = calcPackage ? calcPackage.value : "";
+          calcCtaBtn.href = "contact.html?tier=" + tier.tier + "&offer=" + encodeURIComponent(pkgVal) + "&budget=" + result.finalPrice + "&participants=" + result.participants;
         }
       }
 

@@ -73,8 +73,7 @@ Rates are automatically indexed across 195 countries to ensure fair pricing worl
 **Rate**: `50% Startup Discount` (FLAT 50% OFF ALL PACKAGES · MULTIPLIER: 0.50X)  
 
 ### Universities, Labs & Non-Profits
-*TIER 05 · ACADEMIA & NON-PROFITS* - Higher Education, Research Labs & registered charity or non-profit (including
- US 501(c)(3) organizations) Charities  
+*TIER 05 · ACADEMIA & NON-PROFITS* - Higher Education, Research Labs & Registered Non-Profits (including US 501(c)(3))  
 **Rate**: `75% Parity Discount` (25% BASE RATE · BASELINE MULTIPLIER: 0.25X)  
 
 ### Crisis-Affected & Under-Resourced Regions

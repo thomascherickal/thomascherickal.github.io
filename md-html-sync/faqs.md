@@ -744,8 +744,7 @@ In alignment with our educational mission, Tier 5 provides deep subsidies to hig
 - Scientific Research: Public research institutions, post-doctoral laboratories,
  and clinical academic centers.
 
-- Non-Profit Organizations: registered charity or non-profit (including US
- 501(c)(3) organizations) charities, international humanitarian NGOs, and open civic research groups.
+- Non-Profit Organizations: Registered charities and non-profits (including US 501(c)(3) organizations), international humanitarian NGOs, and open civic research groups.
 
 We empower students, researchers, and humanitarian workers with frontier AI capabilities at nominal
  rates.

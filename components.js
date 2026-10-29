@@ -379,10 +379,27 @@
     startAutoplay();
   }
 
+  function initEmailObfuscation() {
+    var emailLinks = document.querySelectorAll('.email-reveal-link');
+    emailLinks.forEach(function (link) {
+      var user = link.getAttribute('data-user');
+      var domain = link.getAttribute('data-domain');
+      if (user && domain) {
+        var email = user + '@' + domain;
+        link.setAttribute('href', 'mailto:' + email);
+        var displayEl = link.querySelector('.email-display');
+        if (displayEl) {
+          displayEl.textContent = email;
+        }
+      }
+    });
+  }
+
   function init() {
     syncActiveNav();
     bindNavEvents();
     initArticlesCarousel();
+    initEmailObfuscation();
   }
 
   if (document.readyState === 'loading') {
