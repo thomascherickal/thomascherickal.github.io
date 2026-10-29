@@ -102,17 +102,13 @@
     { slug: "service-ai-agents-orchestration", title: "Claude Agent Orchestration" },
     { slug: "service-agentic-ai-systems", title: "Hermes Agent Training" },
     { slug: "service-workflow-automations", title: "Workflow Automations" },
-    { slug: "service-quantum-applications", title: "Quantum Applications (Experimental)" },
     { slug: "service-ai-budget-cost-limits-training", title: "AI Budget & Cost Control" },
     { slug: "service-enterprise-workforce-ai-training", title: "Enterprise Workforce AI Training" },
     { slug: "service-ai-developer-training", title: "AI Developer Training" },
     { slug: "service-advanced-ai-agents", title: "Advanced AI Agents" },
-    { slug: "service-claude-basic-training", title: "Claude Basic Training" },
     { slug: "service-claude-advanced-training", title: "Claude Advanced Training" },
-    { slug: "service-gemini-basic-training", title: "Google Gemini Basic Training" },
     { slug: "service-gemini-advanced-training", title: "Google Gemini Advanced Training" },
-    { slug: "service-deep-research-notebooklm", title: "Deep Research & Gemini Notebook" },
-    { slug: "service-hybrid-quantum-ai", title: "Hybrid Quantum-Classical AI" }
+    { slug: "service-deep-research-notebooklm", title: "Deep Research & Gemini Notebook" }
   ];
 
   /**

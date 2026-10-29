@@ -47,7 +47,7 @@ a.tier-btn {
   line-height: 1.5;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  text-decoration: none;
+  text-decoration: none !important;
   text-align: center;
   white-space: nowrap;
   display: inline-flex;
@@ -73,14 +73,30 @@ a.tier-btn {
   will-change: transform, box-shadow;
 }
 
-/* Universal Button Animation System: Hover Lift, Glow Bloom & Specular Sheen */
-@keyframes btnSheenSweep {
-  0% {
-    left: -140%;
-  }
-  100% {
-    left: 140%;
-  }
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+.btn:hover,
+a.btn:hover,
+a.tier-btn:hover,
+button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+.btn:focus,
+a.btn:focus,
+a.tier-btn:focus,
+button:active,
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+.btn:active,
+a.btn:active,
+a.tier-btn:active,
+a.btn:visited,
+a.tier-btn:visited {
+  text-decoration: none !important;
 }
 
 button:hover,
@@ -92,6 +108,16 @@ a.btn:hover,
 a.tier-btn:hover {
   transform: translateY(-2.5px) scale(1.02);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 16px rgba(56, 189, 248, 0.35);
+}
+
+/* Universal Button Animation System: Hover Lift, Glow Bloom & Specular Sheen */
+@keyframes btnSheenSweep {
+  0% {
+    left: -140%;
+  }
+  100% {
+    left: 140%;
+  }
 }
 
 button::after,
@@ -591,4 +617,54 @@ input:disabled,
   color: #ffffff !important;
   box-shadow: 0 0 24px rgba(251, 191, 36, 0.7), 0 6px 18px rgba(0, 0, 0, 0.5) !important;
   transform: translateY(-2.5px) scale(1.02);
+}
+
+/* ==========================================================================
+   UNIFORM BUTTON CONTAINERS & STANDARDIZATION SYSTEM
+   Ensures all buttons in the same page or section share identical formats.
+   ========================================================================== */
+
+/* Standard Hero / Section Button Row: identical height, padding, and alignment */
+.btn-row,
+.hero-cta-group,
+.service-hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+}
+
+.btn-row .btn,
+.hero-cta-group .btn,
+.service-hero-buttons .btn {
+  padding: 0.8rem 1.75rem;
+  font-size: 0.85rem;
+  min-height: 46px;
+  line-height: 1.5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Standard Bottom CTA Column: full-width matched cards */
+.cta-btn-column,
+.service-cta-buttons {
+  margin-top: 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cta-btn-column .btn,
+.service-cta-buttons .btn {
+  width: 100%;
+  max-width: 480px;
+  min-height: 50px;
+  padding: 0.9rem 2.2rem;
+  font-size: 0.88rem;
+  justify-content: center;
 }

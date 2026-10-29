@@ -66,6 +66,52 @@ body {
   min-height: 100vh;
 }
 
+/* ==========================================================================
+   GLOBAL DEFAULT HYPERLINKS (Gold Theme)
+   ========================================================================== */
+a {
+  color: var(--gold, #fbbf24);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+a:hover {
+  color: var(--gold-dim, #d97706);
+}
+
+/* Strictly enforce no underline on buttons and UI navigation */
+a.btn,
+.btn,
+a.tier-btn,
+button,
+input[type="button"],
+input[type="submit"],
+.nav-links a,
+.dropdown-menu a,
+.nav-brand,
+.social-link,
+.wl,
+.footer-brand-logo-link {
+  text-decoration: none !important;
+}
+
+a.btn:hover,
+.btn:hover,
+a.tier-btn:hover {
+  text-decoration: none !important;
+}
+
+.gold-link {
+  color: var(--gold, #fbbf24) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+
+.gold-link:hover {
+  color: var(--gold-dim, #d97706) !important;
+}
+
 h1, h2, h3, h4, h5, h6,
 .section-title,
 .hero-name,

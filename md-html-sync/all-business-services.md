@@ -51,13 +51,6 @@ Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own in
 
 Hands-on training in self-hosted local n8n, Make, IFTTT, and open-source automation tools (Activepieces, Windmill). Automate up to 50% of routine enterprise workflows with zero per-step SaaS fees and complete data privacy.
 
-### Quantum Applications (Experimental)
-
-**Category**: `Quantum Algorithms`  
-**Link**: [Quantum Applications (Experimental)](business-services/business-service-quantum-applications.html)
-
-Exploratory quantum computing advisory for enterprise use cases: algorithm simulation with IBM Qiskit and PennyLane, variational circuits (VQE/QAOA), quantum machine learning, and Post-Quantum Cryptography (PQC) readiness aligned with NIST standards.
-
 ### AI Budget & Cost Control Training
 
 **Category**: `Token Governance`  
@@ -86,26 +79,12 @@ Hands-on bootcamps training developer teams on terminal and IDE coding agents (C
 
 Build production autonomous agent systems with hierarchical teams of Claude agents for business-critical workloads. Implement test-driven self-correction loops where agents fix errors until tests pass, with persistent state and Docker sandboxing.
 
-### Claude Basic Training
-
-**Category**: `Core Prompting`  
-**Link**: [Claude Basic Training](business-services/business-service-claude-basic-training.html)
-
-Foundational enablement for corporate staff and knowledge workers: choosing the right model between Haiku, Sonnet, Opus and Fable, structured prompting with XML tags, managing shared team memory in Claude Projects, and using Artifacts.
-
 ### Claude Advanced Training
 
 **Category**: `CLI & Orchestration`  
 **Link**: [Claude Advanced Training](business-services/business-service-claude-advanced-training.html)
 
 Technical masterclass for senior developers and AI architects: advanced Claude Code CLI workflows, Claude for Microsoft 365 (Excel, Word, PowerPoint, Outlook), designing and securing production MCP servers, and orchestrating frontier models.
-
-### Google Gemini Basic Training
-
-**Category**: `Multimodal Creation`  
-**Link**: [Google Gemini Basic Training](business-services/business-service-gemini-basic-training.html)
-
-Foundational enterprise Google Gemini workforce enablement: mastering Google Gemini Pro services, Gemini Chat, Nano Banana conversational image generation, Google Flow, Gemini Omni multimodal workflows, and Gemini Spark background agents.
 
 ### Google Gemini Advanced Training
 
@@ -120,13 +99,6 @@ Advanced technical masterclass for engineers, architects, and technical leads: G
 **Link**: [Deep Research & NotebookLM](business-services/business-service-deep-research-notebooklm.html)
 
 Enterprise autonomous research and intelligence enablement: long-horizon Gemini Deep Research agents, multi-source conflict resolution, verified citation graphs, NotebookLM enterprise knowledge bases, and structured executive synthesis.
-
-### Hybrid Quantum-Classical AI
-
-**Category**: `Hybrid Computing`  
-**Link**: [Hybrid Quantum-Classical AI](business-services/business-service-hybrid-quantum-ai.html)
-
-Advanced technical masterclass on Hybrid Quantum-Classical AI: parameterized quantum circuits (PQCs), variational algorithms (VQE, QAOA), quantum machine learning with PennyLane and Qiskit, and NIST post-quantum cryptography migration.
 
 ## Ready to Transform Your Organization?
 

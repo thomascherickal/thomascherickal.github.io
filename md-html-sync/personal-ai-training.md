@@ -3,7 +3,7 @@
 
 > **PERSONAL TRAINING · 40 DAYS (20 DAYS TRAINING + 20 DAYS GUIDANCE)**  
 > **You are never forced to choose between local models, autonomous agents, prompt craft, or workflow automations. 
- Your personal sprint draws on the full 16-service catalogue; you choose the services relevant to your work and goals:**
+ Your personal sprint draws on the full 12-service catalogue; you choose the services relevant to your work and goals:**
 
 ---
 
@@ -37,7 +37,7 @@ Personal Training costs $1,000 in Tier 1 for 40 days (20 days training, + 20 day
 ## The Complete 16-Service Catalogue Customized to Your Work
 
 You are never forced to choose between local models, autonomous agents, prompt craft, or workflow automations. 
- Your personal sprint draws on the full 16-service catalogue; you choose the services relevant to your work and goals:
+ Your personal sprint draws on the full 12-service catalogue; you choose the services relevant to your work and goals:
 
 ### 01 · Generative AI Transformation
 
@@ -59,55 +59,11 @@ Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own in
 
 Hands-on training for automating recurring office work with Claude skills, plugins, connectors, scheduled tasks and Microsoft 365 add-ins. Automate recurring office tasks across sales, finance and engineering, with private data options. across sales, finance and engineering with private data options.
 
-### 06 · Quantum Applications (Experimental)
-
-Exploratory quantum computing advisory for enterprise use cases: algorithm simulation with IBM Qiskit and PennyLane, variational circuits (VQE/QAOA), quantum machine learning, and Post-Quantum Cryptography (PQC) readiness aligned with NIST standards.
-
-### 07 · AI Budget & Cost Control Training
-
-Train staff across all levels to control AI spending: establish hard spending caps per session and month, configure token budgets, leverage prompt caching (cutting cached input tokens by 90% to 97.5%, depending on the Claude model), and route low-complexity tasks to free and local models.
-
-### 08 · Enterprise Workforce AI Training
-
-Live and remote corporate AI training delivered across distinct tracks: prompting for corporate staff, Claude Code and AI-assisted TDD for developers, and executive briefings, AI roadmaps, governance, and safe AI use policies for CXOs.
-
-### 09 · AI Developer Training
-
-Hands-on bootcamps training developer teams on terminal and IDE coding agents (Claude Code, Google Antigravity, OpenCode). Catch mistakes early with strict AI-assisted Test-Driven Development (TDD) and build custom MCP servers in Python and Rust.
-
-### 10 · Advanced AI Agents
-
-Build production autonomous agent systems with hierarchical teams of Claude agents for business-critical workloads. Implement test-driven self-correction loops where agents fix errors until tests pass, with persistent state and Docker sandboxing.
-
-### 11 · Claude Basic Training
-
-Foundational enablement for corporate staff and knowledge workers: choosing the right model between Haiku, Sonnet, Opus and Fable, structured prompting with XML tags, managing shared team memory in Claude Projects, and using Artifacts for daily office work.
-
-### 12 · Claude Advanced Training
-
-Technical masterclass for senior developers and AI architects: advanced Claude Code CLI workflows, Claude for Microsoft 365 (Excel, Word, PowerPoint, Outlook), designing and securing production MCP servers, and orchestrating frontier models with adaptive thinking effort.
-
-### 13 · Gemini Basic Training
-
-Foundational Google Gemini workforce enablement: multimodal reasoning, Google Workspace automation, Gemini Flash for high-speed tasks, and creative workflows with Google Flow and Nano Banana.
-
-### 14 · Gemini Advanced Training
-
-Advanced technical masterclass for AI engineers: Google AI Studio, Google Antigravity IDE, Gemini Deep Think reasoning, Gemma fine-tuning, and Gemini Argon deployment.
-
-### 15 · Deep Research & Gemini Notebook
-
-Autonomous literature synthesis, source-grounded knowledge graphs with Gemini Notebook, and enterprise multi-document intelligence pipelines.
-
-### 16 · Hybrid Quantum-Classical AI
-
-Hybrid quantum-classical optimization pipelines with VQE, QAOA, QSVM, PennyLane, and Qiskit for complex industrial logistics and chemical modeling.
-
 ## Two-Phase Personal Curriculum & Daily Support Roadmap
 
-20 intensive days focused on your selected services from the 16-service catalogue, followed immediately by 15 days of included daily work assistance on your live projects:
+20 intensive days focused on your selected services from the 12-service catalogue, followed immediately by 15 days of included daily work assistance on your live projects:
 
-### Generative AI Transformation, Enterprise Workforce AI Training & Claude Basic Training
+### Generative AI Transformation & Enterprise Workforce AI Training
 
 Mapping your daily professional bottlenecks, setting up Claude Projects, authoring deterministic XML boundary prompts, and establishing an isolated sandbox workspace on your primary workstation.
 
@@ -119,9 +75,9 @@ Deploying Llama 3, DeepSeek, Mistral, and Qwen locally with GGUF/AWQ 4-bit quant
 
 Configuring lead orchestrator Claude Opus with fast Claude Sonnet subagents, authoring custom Model Context Protocol (MCP) servers in TypeScript/Python, and building stateful memory execution graphs.
 
-### Hermes Agent, Workflow Automation Training & Quantum Applications (Experimental)
+### Hermes Agent Training & Workflow Automations
 
-Building terminal-native Hermes agents with recursive self-healing loops, automating cross-app workflows with self-hosted n8n, and running early quantum circuit simulations with IBM Qiskit and PennyLane.
+Building terminal-native Hermes agents with recursive self-healing loops, automating cross-app workflows with self-hosted n8n.
 
 ### AI Developer Training, Coding Agent TDD Pairing & Transition
 

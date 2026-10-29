@@ -68,6 +68,28 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - When full Markdown generation is required across all pages, run `python3 python/build_md_files.py`.
 
 ## Link Verification (`python/check_links.py`)
-- **Run `python3 python/check_links.py` only before every commit**, not after every individual edit.
+- **DO NOT check for broken links at every change or edit.**
+- **Run `python3 python/check_links.py` ONLY before committing**, not after every individual change.
 - If any broken links or missing anchor targets are detected, fix them immediately before finalizing and committing.
+
+## No Underlined Text in Buttons Rule
+- **NEVER underline text in buttons** (`<button>`, `input[type="button"]`, `input[type="submit"]`, `.btn`, `a.btn`, `a.tier-btn`, or any button element/class) across any page, stylesheet, or inline style.
+- Buttons must always maintain `text-decoration: none !important;` across all pseudo-classes (`:hover`, `:focus`, `:active`, `:visited`).
+- When applying parent link styles (such as `a { text-decoration: underline; }`), always exclude buttons using `:not(.btn)` or explicitly enforce `text-decoration: none !important;` on button selectors.
+
+## Gold Hyperlinks by Default Rule
+- **ALWAYS use gold colors for hyperlinks by default** across all HTML pages, markdown documentation, components, stylesheets, and content blocks in this repo.
+- Hyperlinks must default to gold (`var(--gold, #fbbf24)` or `var(--bs-gold, #fbbf24)` / `#fbbf24`), with hover states transitioning to gold-dim (`var(--gold-dim, #d97706)` or `#d97706`).
+- When styling prose, inline references, tables, resource lists, or guide directories, always use gold styling (e.g. `color: var(--gold);` or `class="gold-link"`).
+- Buttons (`.btn`, `a.btn`, etc.) remain unaffected and must always maintain their button styling with `text-decoration: none !important;`.
+
+## Uniform Button Formatting Rule
+- **Keep all buttons in one HTML page in the same format, sizing, and styling structure.**
+- Across any given page and site-wide, buttons within the same section or action group (e.g. Hero action buttons, bottom CTA blocks, or card action rows) must share identical dimensions, padding, font-size, line-height, letter-spacing, text-transform, min-height, and flex alignment.
+- Never use mismatched inline padding or font sizes (such as mixing `padding:0.75rem 1.6rem;font-size:0.875rem;` on one button with `padding:0.75rem 1.5rem;font-size:0.85rem;` on another).
+- In CTA groups, all peer buttons must use identical sizing modifiers (e.g., all `.btn-lg` or all standard `.btn`, never mixing sizes).
+- Always use standardized CSS classes (`.btn`, `.btn-commission`, `.btn-linkedin`, `.btn-primary`, `.btn-gold`, `.btn-outline`, `.btn-lg`, `.btn-full`) defined in `css/buttons.css` rather than ad-hoc inline dimensional overrides.
+- All buttons must strictly maintain `text-decoration: none !important;` across all states (`:hover`, `:focus`, `:active`, `:visited`).
+
+
 

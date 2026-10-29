@@ -27,24 +27,20 @@ CORE_PAGES = [
     ("personal-ai-training.html", "personal-ai-training.html"),
 ]
 
-# 16 Business Service Pages
+# 12 Business Service Pages
 BUSINESS_SERVICES = [
     "business-services/business-service-generative-ai-transformation.html",
     "business-services/business-service-local-llms-cost-slashing.html",
     "business-services/business-service-ai-agents-orchestration.html",
     "business-services/business-service-agentic-ai-systems.html",
     "business-services/business-service-workflow-automations.html",
-    "business-services/business-service-quantum-applications.html",
     "business-services/business-service-ai-budget-cost-limits-training.html",
     "business-services/business-service-enterprise-workforce-ai-training.html",
     "business-services/business-service-ai-developer-training.html",
     "business-services/business-service-advanced-ai-agents.html",
     "business-services/business-service-deep-research-notebooklm.html",
-    "business-services/business-service-claude-basic-training.html",
     "business-services/business-service-claude-advanced-training.html",
-    "business-services/business-service-gemini-basic-training.html",
     "business-services/business-service-gemini-advanced-training.html",
-    "business-services/business-service-hybrid-quantum-ai.html",
 ]
 
 # 12 claude Guide Pages

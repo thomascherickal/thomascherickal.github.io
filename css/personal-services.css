@@ -1,0 +1,318 @@
+/* ==========================================================================
+   PERSONAL SERVICES STYLESHEET (personal-services.css)
+   thomascherickal.github.io
+   Dedicated stylesheet for all Personal Service Specification pages.
+   Warm, inviting, slightly lighter background aesthetic with high-contrast readability.
+   ========================================================================== */
+
+/* Design System Tokens for Personal Services */
+:root {
+  --ps-bg-card: linear-gradient(165deg, #182232 0%, #0f1724 100%);
+  --ps-bg-card-hover: linear-gradient(165deg, #1e2a3e 0%, #131c2c 100%);
+  --ps-bg-panel: #162030;
+  --ps-bg-code: #0f1726;
+  --ps-border: rgba(203, 213, 225, 0.22);
+  --ps-border-gold: rgba(251, 191, 36, 0.42);
+  --ps-border-soft: rgba(203, 213, 225, 0.16);
+  --ps-card-shadow: 0 12px 36px rgba(0, 0, 0, 0.4), 0 0 24px rgba(251, 191, 36, 0.14);
+  --ps-text-primary: #f8fafc;
+  --ps-text-secondary: #e2e8f0;
+  --ps-text-subtle: #cbd5e1;
+  --ps-text-muted: #94a3b8;
+  --ps-gold: #fbbf24;
+  --ps-gold-dim: #d97706;
+  --ps-gold-warm: #fde047;
+}
+
+/* Container & Layout */
+.personal-service-container,
+.personal-guide,
+main#main > section.reveal {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Lighter, Softer Card Container */
+.personal-service-card,
+.personal-guide > div,
+section.reveal > div[style*="background:var(--bg-card)"],
+section.reveal > div[style*="background: var(--bg-card)"],
+section.reveal > div[style*="background:linear-gradient"],
+section.reveal > div[style*="background: linear-gradient"] {
+  background: var(--ps-bg-card) !important;
+  border: 1px solid var(--ps-border-gold) !important;
+  border-radius: 16px;
+  box-shadow: var(--ps-card-shadow) !important;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease;
+}
+
+/* Personal Pill Badges */
+.personal-badge,
+span[style*="PERSONAL SECOND BRAIN"],
+span[style*="WORKFORCE CURRICULUM"],
+span[style*="SERVICE SPECIFICATION"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.15rem;
+  border-radius: 999px;
+  background: rgba(203, 213, 225, 0.08) !important;
+  border: 1px solid var(--ps-border-gold) !important;
+  color: var(--ps-gold) !important;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* High Contrast Headings */
+h1.section-title,
+.personal-service-card h2,
+.personal-guide h2 {
+  color: var(--ps-text-primary);
+  letter-spacing: -0.015em;
+  font-weight: 800;
+}
+
+.personal-service-card h2,
+.personal-guide h2 {
+  font-family: var(--font-display, sans-serif);
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.35;
+}
+
+.personal-service-card h3,
+.personal-guide h3 {
+  font-family: var(--font-display, sans-serif);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: var(--ps-gold);
+  margin-top: 2.25rem;
+  margin-bottom: 0.85rem;
+  font-weight: 700;
+}
+
+.personal-service-card h4,
+.personal-guide h4 {
+  font-family: var(--font-display, sans-serif);
+  color: var(--ps-text-primary);
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
+.personal-service-card h5,
+.personal-guide h5 {
+  font-family: var(--font-mono, monospace);
+  color: var(--ps-gold);
+  font-size: 0.95rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+/* Highly Readable Prose & Lists */
+.personal-service-card p,
+.personal-guide p,
+.personal-service-card ul,
+.personal-guide ul,
+.personal-service-card ol,
+.personal-guide ol {
+  color: var(--ps-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.personal-service-card ul,
+.personal-guide ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.personal-service-card ol,
+.personal-guide ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.personal-service-card li,
+.personal-guide li {
+  margin-bottom: 0.55rem;
+  color: var(--ps-text-secondary);
+}
+
+.personal-service-card strong,
+.personal-guide strong {
+  color: var(--ps-text-primary);
+}
+
+/* Refined Data Tables with Soft Light Contrast */
+.data-table-wrapper,
+div[style*="overflow-x:auto"] {
+  border-radius: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(24, 34, 50, 0.75);
+  border: 1px solid var(--ps-border);
+  border-radius: 10px;
+  margin: 1.5rem 0 2rem 0;
+}
+
+table.data-table th {
+  background: rgba(251, 191, 36, 0.14);
+  color: var(--ps-gold);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: left;
+  padding: 0.9rem 1.15rem;
+  border-bottom: 2px solid var(--ps-border-gold);
+  letter-spacing: 0.03em;
+}
+
+table.data-table td {
+  padding: 0.85rem 1.15rem;
+  color: var(--ps-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  border-bottom: 1px solid var(--ps-border-soft);
+}
+
+table.data-table tr:hover td {
+  background: rgba(251, 191, 36, 0.04);
+}
+
+/* Readable Code & Preformatted Blocks */
+pre,
+code {
+  font-family: var(--font-mono, monospace);
+}
+
+div[style*="background:#090d14"],
+div[style*="background: #090d14"] {
+  background: var(--ps-bg-code) !important;
+  border: 1px solid var(--ps-border-gold) !important;
+  border-left: 3px solid var(--ps-gold) !important;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+div[style*="background:#090d14"] pre,
+div[style*="background: #090d14"] pre {
+  color: var(--ps-text-secondary) !important;
+}
+
+/* Visual Figures */
+.personal-service-card img,
+.personal-guide img,
+section.reveal img {
+  border: 1px solid var(--ps-border-gold);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(251, 191, 36, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.personal-service-card img:hover,
+.personal-guide img:hover,
+section.reveal img:hover {
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.65), 0 0 28px rgba(251, 191, 36, 0.22);
+}
+
+/* In-Content Prose Hyperlinks (Bright Gold) */
+.personal-service-card a:not(.btn),
+.personal-guide a:not(.btn),
+section.reveal a:not(.btn) {
+  color: var(--ps-gold) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.personal-service-card a:not(.btn):hover,
+.personal-guide a:not(.btn):hover,
+section.reveal a:not(.btn):hover {
+  color: #f59e0b !important;
+}
+
+/* Strictly enforce no underlined text in buttons */
+.personal-service-card a.btn,
+.personal-service-card .btn,
+.personal-guide a.btn,
+.personal-guide .btn,
+section.reveal a.btn,
+section.reveal .btn,
+a.btn,
+.btn {
+  text-decoration: none !important;
+}
+
+.personal-service-card a.btn:hover,
+.personal-service-card .btn:hover,
+.personal-guide a.btn:hover,
+.personal-guide .btn:hover,
+section.reveal a.btn:hover,
+section.reveal .btn:hover {
+  text-decoration: none !important;
+}
+
+/* ==========================================================================
+   UNIFORM BUTTON FORMATTING (Per GEMINI.md Rule)
+   Keeps all buttons in personal service pages in the exact same format
+   ========================================================================== */
+
+/* Hero Action Buttons: Identical sizing, padding, and alignment */
+section > div:has(> a.btn),
+.hero-cta-group,
+.service-hero-buttons {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  flex-wrap: wrap !important;
+}
+
+/* Ensure all buttons in hero or section rows match */
+section > div:has(> a.btn) > a.btn,
+.hero-cta-group .btn,
+.service-hero-buttons .btn {
+  padding: 0.8rem 1.75rem !important;
+  font-size: 0.85rem !important;
+  min-height: 46px !important;
+  line-height: 1.5 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Bottom CTA Buttons: Unified full-width column */
+.personal-service-card div:has(> a.btn-lg),
+.personal-guide div:has(> a.btn-lg),
+.cta-btn-column,
+.service-cta-buttons {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 1rem !important;
+}
+
+.personal-service-card div:has(> a.btn-lg) > a.btn,
+.personal-guide div:has(> a.btn-lg) > a.btn,
+.cta-btn-column .btn,
+.service-cta-buttons .btn {
+  width: 100% !important;
+  max-width: 480px !important;
+  min-height: 50px !important;
+  padding: 0.9rem 2.2rem !important;
+  font-size: 0.88rem !important;
+  justify-content: center !important;
+}

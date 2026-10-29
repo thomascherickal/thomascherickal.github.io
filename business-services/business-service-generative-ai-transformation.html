@@ -233,6 +233,7 @@
 <link href="../css/cta.css" rel="stylesheet"/>
 <link href="../css/article.css" rel="stylesheet"/>
 <link href="../css/service.css" rel="stylesheet"/>
+<link href="../css/business-services.css" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -265,10 +266,6 @@
           </li>
           <li><a href="../business-services/business-service-agentic-ai-systems.html">Hermes Agent Training</a></li>
           <li><a href="../business-services/business-service-workflow-automations.html">Workflow Automations</a></li>
-          <li><a href="../business-services/business-service-quantum-applications.html">Quantum Applications
-              (Experimental)</a></li>
-          <li><a href="../business-services/business-service-hybrid-quantum-ai.html">Hybrid Quantum-Classical AI
-              (Demos)</a></li>
           <li><a href="../business-services/business-service-ai-budget-cost-limits-training.html">AI Budget &amp; Cost
               Control Training</a></li>
           <li><a href="../business-services/business-service-enterprise-workforce-ai-training.html">Enterprise Workforce AI
@@ -277,10 +274,8 @@
           <li><a href="../business-services/business-service-advanced-ai-agents.html">Advanced AI Agents</a></li>
           <li><a href="../business-services/business-service-deep-research-notebooklm.html">Deep Research &amp; Gemini
               Notebook</a></li>
-          <li><a href="../business-services/business-service-claude-basic-training.html">Claude Basic Training</a></li>
           <li><a href="../business-services/business-service-claude-advanced-training.html">Claude Advanced Training</a>
           </li>
-          <li><a href="../business-services/business-service-gemini-basic-training.html">Gemini Basic Training</a></li>
           <li><a href="../business-services/business-service-gemini-advanced-training.html">Gemini Advanced Training</a>
           </li>
         </ul>
@@ -301,10 +296,6 @@
           </li>
           <li><a href="../personal-services/personal-service-agentic-ai-systems.html">Hermes Agent Training</a></li>
           <li><a href="../personal-services/personal-service-workflow-automations.html">Workflow Automations</a></li>
-          <li><a href="../personal-services/personal-service-quantum-applications.html">Quantum Applications
-              (Experimental)</a></li>
-          <li><a href="../personal-services/personal-service-hybrid-quantum-ai.html">Hybrid Quantum-Classical AI
-              (Demos)</a></li>
           <li><a href="../personal-services/personal-service-ai-budget-cost-limits-training.html">AI Budget &amp; Cost
               Control Training</a></li>
           <li><a href="../personal-services/personal-service-enterprise-workforce-ai-training.html">Enterprise Workforce AI
@@ -313,10 +304,8 @@
           <li><a href="../personal-services/personal-service-advanced-ai-agents.html">Advanced AI Agents</a></li>
           <li><a href="../personal-services/personal-service-deep-research-notebooklm.html">Deep Research &amp; Gemini
               Notebook</a></li>
-          <li><a href="../personal-services/personal-service-claude-basic-training.html">Claude Basic Training</a></li>
           <li><a href="../personal-services/personal-service-claude-advanced-training.html">Claude Advanced Training</a>
           </li>
-          <li><a href="../personal-services/personal-service-gemini-basic-training.html">Gemini Basic Training</a></li>
           <li><a href="../personal-services/personal-service-gemini-advanced-training.html">Gemini Advanced Training</a>
           </li>
         </ul>
@@ -386,159 +375,395 @@
         knowledge can take on tasks that used to need several people.
       </p>
 <div style="margin-top:1.5rem;">
-<a class="btn btn-commission" href="../contact.html" style="padding:0.75rem 1.5rem;font-size:0.85rem;">
+<a class="btn btn-commission" href="../contact.html" >
           Commission Generative AI Transformation →
         </a>
 </div>
 </section>
 <div class="divider"></div>
-<!-- STRUCTURED SPECIFICATION LISTS -->
-<section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
-<div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:2.5rem;box-shadow:var(--glow-gold);">
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">1. Service
-          Overview &amp; Scope</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>From Chat Windows to Agent Teams:</strong> Moving day-to-day operations out of isolated chat
-            sessions and into coordinated teams of Claude agents with defined roles and handoffs.</li>
-<li><strong>Orchestrator and Subagent Design:</strong> An orchestrator on Claude Opus or Fable at high effort
-            keeps the plan and checks results, while Sonnet and Haiku subagents search, run code and read documents in
-            parallel.</li>
-<li><strong>Grounding in Your Systems:</strong> Custom Model Context Protocol (MCP) servers in Python or Rust,
-            plus connectors that follow each user's permissions, so agents work from your actual data and stay inside
-            set boundaries.</li>
-<li><strong>Verification and Spend Limits:</strong> Agent output is checked by pytest and cargo test suites
-            before it lands, and token budgets are set per session, per day and per month.</li>
-<li><strong>Production Handover:</strong> Containerized deployment on Linux with Docker, written runbooks and
-            a working session with your team before sign-off.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">2. Standard
-          Architecture &amp; Tools</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Models and Orchestration:</strong> Claude Opus and Fable for planning, Claude Sonnet for execution
-            and Claude Haiku for high-volume routing, run as Claude Agent Teams, Claude Code subagents and background
-            agents in separate git worktrees.</li>
-<li><strong>Tool Integration:</strong> MCP servers written in Python (with FastAPI where an HTTP service is
-            needed) or Rust, Claude connectors, and SQL access kept read-only wherever possible.</li>
-<li><strong>Runtime Isolation:</strong> Docker containers running as non-root with dropped capabilities
-            (`CAP_DROP=ALL`), Claude Code permission modes, and connector write tools set to Needs approval.</li>
-<li><strong>Cost Controls:</strong> Prompt caching, effort levels matched to each agent's role, the Batch API
-            for non-urgent work, and hard spend limits with a kill switch.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">3.
-          Deliverable Examples &amp; 4-Week Schedule</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:1.5rem;list-style:disc;">
-<li><strong>Agent Team Blueprint:</strong> Written architecture covering each agent's role, model and effort
-            level, the handoffs between agents, failure fallbacks and where state is kept.</li>
-<li><strong>Custom MCP Servers:</strong> Tested MCP servers connecting your Claude agents to your databases,
-            internal APIs and file stores.</li>
-<li><strong>Automated Verification Suite:</strong> pytest and cargo test suites wired into CI/CD that check
-            agent output against known-good cases on every change.</li>
-<li><strong>Deployment Package:</strong> Docker Compose files, configuration, runbooks and recorded
-            walkthroughs your team can operate after handover.</li>
-</ul>
-<div style="overflow-x:auto;margin:1.5rem 0 2rem 0;">
-<table class="data-table">
-<thead>
-<tr>
-<th>Timeline</th>
-<th>Focus &amp; Architecture</th>
-<th>Core Deliverables &amp; Artifacts</th>
-<th>Verification &amp; Sign-off Criteria</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong style="color:var(--cyan);">Week 1</strong></td>
-<td>Workflow Mapping &amp; Agent Team Blueprint</td>
-<td>Agent team blueprint, task allocation matrix, orchestrator-subagent role definitions (Claude Opus or Fable planner, Claude Sonnet and Haiku workers), and effort budget allocations</td>
-<td>Stakeholder approval of agent team architecture, data boundary specifications, and handoff protocols</td>
-</tr>
-<tr>
-<td><strong style="color:var(--cyan);">Week 2</strong></td>
-<td>Custom MCP Server Engineering &amp; Grounding</td>
-<td>Custom Model Context Protocol (MCP) servers in Python (FastAPI) and Rust, read-only SQL connections, internal API connectors, and user-permission boundary configuration</td>
-<td>Successful end-to-end execution of agent tool calls against internal data sources with enforced input schemas and write approvals</td>
-</tr>
-<tr>
-<td><strong style="color:var(--cyan);">Week 3</strong></td>
-<td>Automated Verification Suite &amp; Docker Sandboxing</td>
-<td>Automated pytest and cargo test suites in CI/CD verifying agent output against known-good benchmarks, Docker container isolation (CAP_DROP=ALL, non-root), and separate git worktrees</td>
-<td>Agent reasoning loops pass verification test suites with zero unhandled exceptions and verified runtime isolation</td>
-</tr>
-<tr>
-<td><strong style="color:var(--cyan);">Week 4</strong></td>
-<td>Spend Circuit Breakers, Rollout &amp; Production Handover</td>
-<td>Prompt caching setup, Batch API integration, per-session/daily spend limits with kill switch, Docker Compose deployment manifests, operational runbooks, and 30-day SLA onboarding</td>
-<td>Stress test completed with bounded iteration limits and budget ceiling enforcement, complete IP handover, and client sign-off</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">4. Guarantees
-          &amp; Commitments</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Bounded Execution:</strong> Every agent loop has an iteration cap, a wall-clock timeout and a
-            token budget, so no run continues unchecked.</li>
-<li><strong>100% Commercial IP Ownership:</strong> All agent code, prompts, skills, MCP server implementations
-            and architecture diagrams transfer to you on completion.</li>
-<li><strong>Data Boundaries:</strong> Credentials stay in your environment, containers run with restricted
-            network access, and agents see only what each user's permissions allow.</li>
-<li><strong>30-Day Production SLA &amp; Support:</strong> Direct engineering access for tuning, bug fixes and
-            updates when Claude models or APIs change.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">5. Investment
-          &amp; Pricing Quote</h2>
+<!-- ======================================================== -->
+<!-- 5-DAY NON-CODE WORKFORCE GUIDE & PROMPT PLAYBOOK -->
+<!-- ======================================================== -->
+<section class="reveal" style="max-width:960px;margin:0 auto;padding:0 1rem 3rem 1rem;">
+<div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:clamp(1.25rem, 3.5vw, 2.5rem);box-shadow:var(--glow-gold);overflow:hidden;">
 
-        <ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;list-style:disc;">
-          <li><strong>Modular Service Selection &amp; Flexible Engagement:</strong> Clients can freely pick and choose their services, either individually or bundled under our comprehensive transformation programs:
-            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
-              <li><strong>Individual Service Pick (Personal / 1-on-1):</strong> <strong>$100 USD</strong> per service for <strong>5 days of live training + 5 days of dedicated support</strong> (10 days total coverage per service). Strictly 1 person only.</li>
-              <li><strong>Individual Service Pick (Business / Teams):</strong> <strong>$200 USD</strong> per service for <strong>5 days of live training + 5 days of dedicated support</strong> (10 days total coverage per service). Covers up to 20 participants (additional seats at <strong>$100 USD per seat</strong>).</li>
-              <li><strong>Comprehensive Business Training:</strong> <strong>$2,000 USD</strong> for <strong>40 days</strong> (20 days live training + 20 days guidance, Q&A and written guides). Includes cohorts up to 20 participants. Extra seats at <strong>$100 USD per seat</strong>).</li>
-              <li><strong>Comprehensive Personal Training:</strong> <strong>$1,000 USD</strong> for <strong>40 days</strong> (20 days live training + 20 days guidance, Q&A and written guides). Strictly for 1 person only (private acceleration).</li>
-            </ul>
-          </li>
-          <li><strong>Global Purchasing Power Parity (PPP) Available for All Service Pricing:</strong>
-            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
-              <li><strong>Tier 1 (Standard / 100%):</strong> Individual $100 USD | Business $200 USD | Business 40d $2,000 USD | Personal 40d $1,000 USD (USA, UK, EU, Canada, Australia)</li>
-              <li><strong>Tier 2 (Upper-Middle-Income / 25% Off):</strong> Individual $75 USD | Business $150 USD | Business 40d $1,500 USD | Personal 40d $750 USD: e.g. Brazil, Mexico, Malaysia, Thailand, Türkiye</li>
-              <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Individual $50 USD | Business $100 USD | Business 40d $1,000 USD | Personal 40d $500 USD</li>
-              <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Individual $25 USD | Business $50 USD | Business 40d $500 USD | Personal 40d $250 USD</li>
-              <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Individual $10 USD | Business $20 USD | Custom Subsidized Relief / Micro-Rates</li>
-              <li>Calculate and lock in your exact tier rate live on the <a href="../pricing.html" style="color:var(--cyan);text-decoration:underline;">Pricing page</a>.</li>
-            </ul>
-          </li>
-          <li><strong>Payment Schedule:</strong>
-            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
-              <li>Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.</li>
-            </ul>
-          </li>
-        </ul>
+  <div style="text-align:center;max-width:860px;margin:0 auto 2rem;">
+    <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.35rem 1rem;border-radius:999px;background:rgba(251, 191, 36, 0.15);border:1px solid rgba(251, 191, 36, 0.45);color:var(--gold);font-family:var(--font-mono);font-size:0.8rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:0.85rem;">
+      WORKFORCE CURRICULUM &amp; PLAYBOOK
+    </span>
+    <h2 style="font-family:var(--font-display);font-size:clamp(1.35rem, 3vw, 2rem);font-weight:900;color:var(--text-primary);margin-bottom:0.85rem;line-height:1.3;">
+      Business Generative AI Enterprise Transformation: <span style="color:var(--gold);">5-Day Non-Code Workforce Guide &amp; Prompt Playbook</span>
+    </h2>
+    <p style="color:var(--text-secondary);font-size:clamp(0.95rem, 2vw, 1.05rem);line-height:1.75;">
+      A comprehensive, non-code implementation guide and prompt architecture playbook designed to transition cross-functional enterprise teams from casual chatbot chatter to structured, automated agentic productivity.
+    </p>
+  </div>
 
-        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-top:2rem;margin-bottom:1rem;">
-          6. Summary</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong style="color:var(--gold);">Claude Agent Teams:</strong> Moving from single chat windows to
-            coordinated teams of Claude agents with clear roles.</li>
-<li><strong style="color:var(--gold);">Strict 1-Month Delivery:</strong> 4-week progression from workflow
-            mapping to production handover.</li>
-<li><strong style="color:var(--gold);">Model Context Protocol (MCP):</strong> Agents grounded in your
-            databases and internal APIs through custom Python and Rust servers.</li>
-<li><strong style="color:var(--gold);">Verification and Cost Control:</strong> Test-gated output, prompt
-            caching and hard spend limits on every run.</li>
-<li><strong style="color:var(--gold);">100% Commercial IP Ownership:</strong> Complete code transfer, Docker
-            manifests, runbooks and 30-day support.</li>
-</ul>
-<div style="margin-top:2.5rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:1rem;">
-<a class="btn btn-commission btn-lg" href="../contact.html" style="width:100%;max-width:480px;justify-content:center;">
-            Commission Generative AI Transformation →
-          </a>
-<a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" style="width:100%;max-width:480px;justify-content:center;" target="_blank">
-            Book a free intro call on LinkedIn ↗
-          </a>
-</div>
+  <!-- HERO IMAGE 1: WORKFORCE AUTOMATION DASHBOARD -->
+  <div style="margin:1.5rem 0 2.5rem 0;text-align:center;">
+    <img src="../assets/genai-transformation-workflow.jpg" alt="Generative AI Enterprise Transformation Dashboard showing Non-Code Workforce Automation and Executive Metrics" style="width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid var(--border-gold);box-shadow:var(--glow-gold);display:block;margin:0 auto;" loading="lazy" />
+    <p style="font-size:0.8rem;color:var(--text-muted);font-family:var(--font-mono);margin-top:0.6rem;">Figure 1: Enterprise Generative AI Transformation &amp; Non-Code Workforce Automation Architecture.</p>
+  </div>
+
+  <h3 style="font-family:var(--font-display);color:var(--gold);font-size:clamp(1.15rem, 2.5vw, 1.3rem);margin-bottom:0.75rem;">Introduction: Welcome to Your No-Code AI Level-Up!</h3>
+  <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;">
+    Welcome to your non-code guide for turning Generative AI into your daily productivity superpower. For a while now, most folks have treated Large Language Models (LLMs) like fancy Google search bars or casual chatbots - copying and pasting text back and forth, asking for a quick email rewrite, or messing around with simple prompts. While that is fun for quick tasks, it barely scratches the surface of what modern AI can do.
+  </p>
+  <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:2rem;">
+    We are in the middle of a massive shift: moving from basic chatbot banter to automated, non-code agentic workflows. You do not need a computer science degree, and you definitely do not need to write a single line of Python or software code to make AI do heavy lifting for you. By mastering smart prompt engineering, structured UIs (like Claude Projects, Google Gemini, and NotebookLM), and contextual reference files, you can automate up to 70% of your repetitive workload. Whether you are an intern trying to ace study notes, a junior staffer aiming for promotion, a manager drowning in weekly updates, or a CXO looking for strategic market insights - this guide and 5-day curriculum are built specifically for you. No code required.
+  </p>
+
+  <h3 style="font-family:var(--font-display);color:var(--gold);font-size:clamp(1.15rem, 2.5vw, 1.3rem);margin-bottom:0.75rem;">1. The Mindset Shift: From Chatbot Banter to Automated Workflows</h3>
+  <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.25rem;">
+    Let us break down how people actually use AI at work. Most organizations fall into one of four stages:
+  </p>
+
+  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0 2rem 0;max-width:100%;">
+    <table class="data-table" style="width:100%;min-width:620px;">
+      <thead>
+        <tr>
+          <th>Adoption Stage</th>
+          <th>How You Interact</th>
+          <th>What You Are Doing</th>
+          <th>Real Business Value</th>
+          <th>Risk Guidance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong style="color:var(--gold);">Stage 1: Casual Chatbot</strong></td>
+          <td>Web Chat UI</td>
+          <td>Quick ad-hoc text rephrasing &amp; random Q&amp;A</td>
+          <td>Saves ~10% time on small tasks</td>
+          <td>High risk of unmonitored data pasting</td>
+        </tr>
+        <tr>
+          <td><strong style="color:var(--gold);">Stage 2: Contextual Assistant</strong></td>
+          <td>Web UI with Uploaded Files</td>
+          <td>Ingesting PDFs &amp; docs for targeted Q&amp;A</td>
+          <td>Boosts team speed by ~25%</td>
+          <td>Medium risk; requires curated documents</td>
+        </tr>
+        <tr>
+          <td><strong style="color:var(--gold);">Stage 3: Non-Code Automated Workflow</strong></td>
+          <td>Custom Instructions &amp; Templates</td>
+          <td>Multi-step prompt chains &amp; custom instructions</td>
+          <td>Compresses workflows by 50-70%</td>
+          <td>Low risk when using structured prompt templates</td>
+        </tr>
+        <tr>
+          <td><strong style="color:var(--gold);">Stage 4: Autonomous Agentic Flow</strong></td>
+          <td>Multi-Agent Web Tools &amp; Platforms</td>
+          <td>AI systems carrying out multi-step goals</td>
+          <td>Complete task transformation</td>
+          <td>Low risk when human-in-the-loop signoff is enforced</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4 style="font-family:var(--font-display);color:var(--cyan);font-size:1.1rem;margin-bottom:0.75rem;">The Secret Sauce: What LLMs Can Do Without Any Code</h4>
+  <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;">
+    You do not need programming skills to get AI to perform complex, multi-step work. Here are 5 superpower capabilities available right inside modern web UIs:
+  </p>
+  <ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
+    <li><strong>Document Compression &amp; Synthesis:</strong> Feed a 50-page PDF or transcript into AI and get a 1-page executive brief with action items in seconds.</li>
+    <li><strong>Unstructured-to-Structured Formatting:</strong> Turn a messy, chaotic Slack thread or meeting brain-dump into a clean Markdown table or CSV outline.</li>
+    <li><strong>Role-Based Sparring &amp; Feedback:</strong> Turn the AI into a tough interview panelist, a strict legal auditor, or an expert technical reviewer before you send work to your manager.</li>
+    <li><strong>Tone &amp; Brand Localization:</strong> Instantly rephrase internal technical jargon into customer-ready marketing copy or executive-ready slide bullets.</li>
+    <li><strong>Policy &amp; Compliance Auditing:</strong> Cross-examine a new business proposal against your company internal guidelines to spot compliance gaps automatically.</li>
+  </ul>
+
+  <h3 style="font-family:var(--font-display);color:var(--gold);font-size:clamp(1.15rem, 2.5vw, 1.3rem);margin-bottom:0.75rem;">2. The 5-Day Non-Code Training Curriculum (5 Micro-Modules Per Hour)</h3>
+  <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;">
+    This 20-hour training program is designed to be super digestible. Instead of long lectures, every single hour is split into 5 crisp, 12-minute micro-modules so you stay engaged, get hands-on experience, and build real skills fast.
+  </p>
+  <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border-gold);border-radius:10px;padding:1.25rem;margin-bottom:2rem;font-family:var(--font-mono);font-size:0.85rem;color:var(--gold);line-height:1.6;overflow-x:auto;">
+    Daily Structure (4 Hours / Day)<br />
+    ├── Hour 1: 5 Micro-Modules (12 mins each)<br />
+    ├── Hour 2: 5 Micro-Modules (12 mins each)<br />
+    ├── Hour 3: 5 Micro-Modules (12 mins each)<br />
+    └── Hour 4: 5 Micro-Modules (12 mins each)<br />
+    Total: 20 Micro-Modules Per Day | 100 Modules Across 5 Days!
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;margin-bottom:2rem;">
+    <!-- DAY 1 -->
+    <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(251,191,36,0.3);border-radius:12px;padding:clamp(1rem, 2.5vw, 1.5rem);">
+      <h4 style="font-family:var(--font-display);color:var(--gold);font-size:1.15rem;margin-bottom:0.75rem;">Day 1: Foundations, Prompt Mechanics &amp; AI Literacy (4 Hours / 20 Modules)</h4>
+      <ul style="color:var(--text-secondary);font-size:0.92rem;line-height:1.75;margin-left:1.25rem;list-style:disc;">
+        <li><strong>Hour 1: Demystifying Generative AI:</strong> How LLMs Think (probabilistic next-token prediction without math) · Context Windows Explained · Temperature &amp; Creativity Tuning · Models Showcase (Claude, Gemini, ChatGPT, NotebookLM) · Factual Guardrails &amp; Catching Hallucinations.</li>
+        <li><strong>Hour 2: The Core Prompting Toolkit:</strong> Zero-Shot vs. Few-Shot Prompting · The SCIO Framework (System, Context, Instruction, Output) · System Prompts &amp; Personas · Setting Up Negative Constraints · Interactive Prompting Lab (Rewriting Weak Prompts).</li>
+        <li><strong>Hour 3: Advanced Non-Code Techniques:</strong> Chain-of-Thought (CoT) Step-by-Step Reasoning · Multi-Turn Conversation Design · Output Formatting in Tables, JSON &amp; Markdown · Grounding with Source Files (PDFs/Docs) · Hands-On Grounding Lab on Sample Policies.</li>
+        <li><strong>Hour 4: Quality Control &amp; Safety Basics:</strong> Filtering Corporate Buzzwords · Fact Verification Protocols · Data Privacy Fundamentals for Web UIs · Creating Personal Style Rules · Day 1 Graduation Challenge (Executive Memo from Raw Notes).</li>
+      </ul>
+    </div>
+
+    <!-- DAY 2 -->
+    <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(56,189,248,0.3);border-radius:12px;padding:clamp(1rem, 2.5vw, 1.5rem);">
+      <h4 style="font-family:var(--font-display);color:var(--cyan);font-size:1.15rem;margin-bottom:0.75rem;">Day 2: Personal &amp; Team Productivity Masterclass (4 Hours / 20 Modules)</h4>
+      <ul style="color:var(--text-secondary);font-size:0.92rem;line-height:1.75;margin-left:1.25rem;list-style:disc;">
+        <li><strong>Hour 1: Document &amp; Report Transformation:</strong> Rapid Long-Doc Summarization (30 Pages to 1 Page) · Cross-Document Synthesis &amp; Comparison · Key Metric Extraction into Tables · Structured Visual Outlines · Hands-On PDF Lab (Vendor Proposal Comparison Grid).</li>
+        <li><strong>Hour 2: Business Communication &amp; Writing:</strong> Email Refinement &amp; Tone Polish · Meeting Notes to Action Items · Stakeholder Customization (Peers vs. C-Suite) · Tone Adjustment (Assertive, Consultative, Neutral) · Communication Lab (Reusable Email Template).</li>
+        <li><strong>Hour 3: Deep Research with Web &amp; Grounded AI:</strong> Web Grounding with Gemini Live Search · Deep Research Tools for Industry Papers · Evaluating Online Source Quality · Research Report Generation · Research Lab (Live Competitor Analysis).</li>
+        <li><strong>Hour 4: Knowledge Management with NotebookLM:</strong> Introduction to NotebookLM · Combining Multiple Source Formats (Docs, PDFs, Web Links) · Generating 2-Person Audio Overview Podcasts · Custom FAQs &amp; Study Guides · Day 2 Capstone Lab (No-Code Onboarding Knowledge Hub).</li>
+      </ul>
+    </div>
+
+    <!-- DAY 3 -->
+    <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(168,85,247,0.3);border-radius:12px;padding:clamp(1rem, 2.5vw, 1.5rem);">
+      <h4 style="font-family:var(--font-display);color:var(--purple);font-size:1.15rem;margin-bottom:0.75rem;">Day 3: Advanced No-Code Tools, Projects &amp; Context Management (4 Hours / 20 Modules)</h4>
+      <ul style="color:var(--text-secondary);font-size:0.92rem;line-height:1.75;margin-left:1.25rem;list-style:disc;">
+        <li><strong>Hour 1: Mastering Claude Projects &amp; Custom Artifacts:</strong> Setting Up Claude Projects · Persistent Project Instructions · Leveraging Claude Artifacts for Interactive Documents &amp; Dashboards · Team Style Controls · Claude Projects Lab (Department Workspace Setup).</li>
+        <li><strong>Hour 2: Google Gemini Advanced Capabilities &amp; Canvas:</strong> Gemini Canvas Side-by-Side Co-Creation · Multimodal Image &amp; Whiteboard Photo Analysis · Google Workspace Integration (Docs, Gmail, Drive) · Interactive Forms &amp; Checklists · Gemini Multimodal Lab (Meeting Whiteboard to Tasks).</li>
+        <li><strong>Hour 3: Multi-Step No-Code Prompt Chaining:</strong> Understanding Prompt Chains · Step 1: Brainstorming &amp; Outlining · Step 2: Drafting &amp; Expansion · Step 3: Review &amp; Critique · Prompt Chaining Lab (3-Step Pipeline for Publication-Ready Reports).</li>
+        <li><strong>Hour 4: Creating No-Code Workflow Assistants:</strong> Custom Instructions &amp; Assistants · Fill-in-the-Blank Input Form Templates · Department Prompt Libraries · Maintenance &amp; Prompt Iteration · Day 3 Capstone Lab (Reusable SOP Writing Assistant).</li>
+      </ul>
+    </div>
+
+    <!-- DAY 4 -->
+    <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(16,185,129,0.3);border-radius:12px;padding:clamp(1rem, 2.5vw, 1.5rem);">
+      <h4 style="font-family:var(--font-display);color:var(--emerald);font-size:1.15rem;margin-bottom:0.75rem;">Day 4: Role-Based Workflow Automation (4 Hours / 20 Modules)</h4>
+      <ul style="color:var(--text-secondary);font-size:0.92rem;line-height:1.75;margin-left:1.25rem;list-style:disc;">
+        <li><strong>Hour 1: Entry Level &amp; Student Workflows:</strong> Study Systems, Flashcards &amp; Practice Quizzes · Academic Paper Reader in Plain English · Fresher Onboarding &amp; Jargon Decoders · Mock Interview Simulator with Constructive Feedback · Entry-Level Lab.</li>
+        <li><strong>Hour 2: Technical &amp; Engineering Non-Code Workflows:</strong> Non-Code Spec Writing for Developers (User Stories &amp; GWT Acceptance Criteria) · Plain-English Architecture Concept Explainer · Terminal Error &amp; Log Reader · Incident Post-Mortem Generator · Tech Non-Code Lab (Root Cause Analysis RCA Report).</li>
+        <li><strong>Hour 3: Corporate Staff, HR &amp; Legal Workflows:</strong> Policy Audit &amp; Gap Analysis · Job Description &amp; HR Onboarding Guides · Contract Clause Comparison · Survey &amp; Feedback Sentiment Analysis · Corporate Staff Lab (Contract Clause Comparison Grid).</li>
+        <li><strong>Hour 4: Management &amp; Executive Workflows:</strong> Multi-Status Synthesis (10 Weekly Updates to 1 Briefing) · Blocker &amp; Risk Matrix Construction · Strategic Threat/Opportunity SWOT Analysis · Board &amp; Investor Talking Points · Day 4 Capstone Lab (CXO Board Decision Matrix).</li>
+      </ul>
+    </div>
+
+    <!-- DAY 5 -->
+    <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(244,114,182,0.3);border-radius:12px;padding:clamp(1rem, 2.5vw, 1.5rem);">
+      <h4 style="font-family:var(--font-display);color:var(--pink);font-size:1.15rem;margin-bottom:0.75rem;">Day 5: Governance, Risk, ROI &amp; AI Culture (4 Hours / 20 Modules)</h4>
+      <ul style="color:var(--text-secondary);font-size:0.92rem;line-height:1.75;margin-left:1.25rem;list-style:disc;">
+        <li><strong>Hour 1: Enterprise Data Safety &amp; Confidentiality:</strong> Public vs. Private AI Tools · Zero Data Retention (ZDR) Standards · Redaction &amp; Anonymization Techniques · Intellectual Property Guardrails · Safety Lab (Manual Redaction on Sample Data).</li>
+        <li><strong>Hour 2: Responsible AI &amp; Quality Control:</strong> Inclusive Language &amp; Quality Checks · Enforcing Human-in-the-Loop (HITL) Signoff · Audit Trails &amp; Prompt Record Keeping · Managing Model Behavior Updates · Quality Lab (Factual Hallucination Audits).</li>
+        <li><strong>Hour 3: Measuring Value &amp; Productivity ROI:</strong> Reclaimed Hours Tracking per Week · Task Turn-Around Time Metrics · Department Prompt Playbooks · AI Change Management · ROI Lab (Projected Annual Departmental Time Savings).</li>
+        <li><strong>Hour 4: Capstone Showcase &amp; Certification:</strong> Final Capstone Presentation Assembly · Peer Review &amp; Prompt Sharing · Troubleshooting Edge Cases · Personal 30-Day Action Plan · Graduation &amp; AI Fluency Certification.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- HERO IMAGE 2: PROMPT PLAYBOOK -->
+  <div style="margin:2.5rem 0 3rem 0;text-align:center;">
+    <img src="../assets/genai-prompt-playbook.jpg" alt="Enterprise AI Prompt Playbook featuring SCIO Prompt Architecture, Holographic Interfaces, and Context Windows" style="width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid var(--border-gold);box-shadow:var(--glow-gold);display:block;margin:0 auto;" loading="lazy" />
+    <p style="font-size:0.8rem;color:var(--text-muted);font-family:var(--font-mono);margin-top:0.6rem;">Figure 2: The SCIO Framework &amp; Enterprise Prompt Architecture Playbook.</p>
+  </div>
+
+  <h3 style="font-family:var(--font-display);color:var(--gold);font-size:clamp(1.15rem, 2.5vw, 1.3rem);margin-bottom:0.75rem;">3. The Ultimate No-Code Automation Prompt Playbook (Copy &amp; Paste!)</h3>
+  <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem;">
+    Ready-to-use prompt blueprints engineered using the System-Context-Instruction-Output (SCIO) framework. Copy, paste into Claude, Gemini, or ChatGPT, fill in the brackets, and execute immediate high-leverage work:
+  </p>
+
+  <!-- PLAYBOOK TEMPLATES -->
+  <div style="display:flex;flex-direction:column;gap:1.5rem;margin-bottom:2.5rem;">
+    <!-- PROMPT 1 -->
+    <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border-gold);border-radius:12px;padding:clamp(1rem, 2vw, 1.5rem);">
+      <h4 style="font-family:var(--font-display);color:var(--gold);font-size:1.05rem;margin-bottom:0.5rem;">1. Student / Intern: Concept Simplifier &amp; Flashcard Generator</h4>
+      <div style="background:rgba(0,0,0,0.5);border-radius:8px;padding:1rem;font-family:var(--font-mono);font-size:0.82rem;color:var(--text-secondary);line-height:1.6;border:1px solid rgba(251,191,36,0.2);white-space:pre-wrap;word-break:break-word;overflow-x:auto;">SYSTEM ROLE: You are an expert academic tutor and master learning designer.
+CONTEXT: I am studying a complex topic and need to master the core concepts quickly for an exam/review.
+INPUT NOTES: [Insert your dense lecture notes, textbook excerpt, or topic summary here]
+INSTRUCTIONS:
+1. Break down the core concept into a plain-English explanation that a 12-year-old could easily understand. Use a relatable real-world analogy.
+2. Identify 5 essential terms or ideas from the text.
+3. Generate 5 active-recall study flashcards formatted clearly with Questions and Answers.
+OUTPUT FORMAT:
+- **Simple Explanation**: [Analogy + plain English summary]
+- **Key Terms**: [5 bullet points with brief definitions]
+- **Study Flashcards**:
+  - Flashcard 1: Q: [Question] | A: [Answer]
+  - Flashcard 2: Q: [Question] | A: [Answer]
+  - Flashcard 3: Q: [Question] | A: [Answer]
+  - Flashcard 4: Q: [Question] | A: [Answer]
+  - Flashcard 5: Q: [Question] | A: [Answer]</div>
+    </div>
+
+    <!-- PROMPT 2 -->
+    <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border-gold);border-radius:12px;padding:clamp(1rem, 2vw, 1.5rem);">
+      <h4 style="font-family:var(--font-display);color:var(--gold);font-size:1.05rem;margin-bottom:0.5rem;">2. Fresher / Junior Staff: Professional Email Polish &amp; Communication Assistant</h4>
+      <div style="background:rgba(0,0,0,0.5);border-radius:8px;padding:1rem;font-family:var(--font-mono);font-size:0.82rem;color:var(--text-secondary);line-height:1.6;border:1px solid rgba(251,191,36,0.2);white-space:pre-wrap;word-break:break-word;overflow-x:auto;">SYSTEM ROLE: You are an elite executive communications coach and corporate writing specialist.
+CONTEXT: I need to send an important email to a senior stakeholder, but my draft is messy or too casual.
+RAW DRAFT / BULLET POINTS: [Insert your rough draft or raw bullet points here]
+TARGET AUDIENCE: [e.g., Department Manager, Client, Cross-Functional Team]
+DESIRED TONE: [e.g., Professional and assertive / Polite and consultative / Concise and direct]
+INSTRUCTIONS:
+1. Review my raw points and rewrite them into a clear, professional email.
+2. Remove filler words, passive voice, and aggressive or hesitant language.
+3. Structure the email with a clear subject line, greeting, bulleted key points, and a direct call-to-action (CTA).
+OUTPUT FORMAT:
+**Subject Line Option 1**: [Short &amp; Punchy]
+**Subject Line Option 2**: [Formal &amp; Detailed]
+**Email Body**: [Insert polished email draft here]</div>
+    </div>
+
+    <!-- PROMPT 3 -->
+    <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border-gold);border-radius:12px;padding:clamp(1rem, 2vw, 1.5rem);">
+      <h4 style="font-family:var(--font-display);color:var(--gold);font-size:1.05rem;margin-bottom:0.5rem;">3. Developer / Data Analyst: Non-Code Functional Spec &amp; Acceptance Criteria Generator</h4>
+      <div style="background:rgba(0,0,0,0.5);border-radius:8px;padding:1rem;font-family:var(--font-mono);font-size:0.82rem;color:var(--text-secondary);line-height:1.6;border:1px solid rgba(251,191,36,0.2);white-space:pre-wrap;word-break:break-word;overflow-x:auto;">SYSTEM ROLE: You are a Lead Technical Product Manager and Agile Scrum Master.
+CONTEXT: Our business team has an idea for a software feature, but developers need clear, structured specifications without fluff.
+FEATURE IDEA: [Insert rough description of the proposed feature or business requirement]
+INSTRUCTIONS:
+1. Convert the feature idea into a formal User Story written in standard format ("As a [user type], I want to [action] so that [benefit]").
+2. Outline 3 to 5 clear Acceptance Criteria using the Given-When-Then format.
+3. Identify potential edge cases or user errors developers should account for.
+OUTPUT FORMAT:
+- **User Story**: [As a... I want to... So that...]
+- **Acceptance Criteria**:
+  - Criteria 1: Given [context], When [action], Then [expected outcome]
+  - Criteria 2: Given [context], When [action], Then [expected outcome]
+  - Criteria 3: Given [context], When [action], Then [expected outcome]
+- **Edge Cases &amp; Risks**: [Bulleted list of potential technical or user risks]</div>
+    </div>
+
+    <!-- PROMPT 4 -->
+    <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border-gold);border-radius:12px;padding:clamp(1rem, 2vw, 1.5rem);">
+      <h4 style="font-family:var(--font-display);color:var(--gold);font-size:1.05rem;margin-bottom:0.5rem;">4. Engineer / DevOps: Terminal Error Log Interpreter &amp; Non-Code RCA Writer</h4>
+      <div style="background:rgba(0,0,0,0.5);border-radius:8px;padding:1rem;font-family:var(--font-mono);font-size:0.82rem;color:var(--text-secondary);line-height:1.6;border:1px solid rgba(251,191,36,0.2);white-space:pre-wrap;word-break:break-word;overflow-x:auto;">SYSTEM ROLE: You are a Principal Site Reliability Engineer (SRE) and Incident Commander.
+CONTEXT: Our system experienced an error or outage. I am pasting the raw log trace below.
+RAW LOG EXCERPT: [Paste raw server logs, stack trace, or error output here]
+INSTRUCTIONS:
+1. Translate the technical log trace into a plain-English explanation of what actually broke.
+2. Identify the probable Root Cause.
+3. Suggest 3 concrete remediation steps to fix the issue immediately.
+4. Draft a brief Root Cause Analysis (RCA) summary for non-technical stakeholders.
+OUTPUT FORMAT:
+- **Plain-English Diagnosis**: [1-2 sentences explaining what happened]
+- **Probable Root Cause**: [Specific system/component failure]
+- **Recommended Action Plan**: [Numbered step-by-step fix]
+- **Executive RCA Summary**: [Paragraph suitable for non-engineers]</div>
+    </div>
+
+    <!-- PROMPT 5 -->
+    <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border-gold);border-radius:12px;padding:clamp(1rem, 2vw, 1.5rem);">
+      <h4 style="font-family:var(--font-display);color:var(--gold);font-size:1.05rem;margin-bottom:0.5rem;">5. Corporate Staff / HR / Legal: Policy Audit &amp; Clause Comparison Tool</h4>
+      <div style="background:rgba(0,0,0,0.5);border-radius:8px;padding:1rem;font-family:var(--font-mono);font-size:0.82rem;color:var(--text-secondary);line-height:1.6;border:1px solid rgba(251,191,36,0.2);white-space:pre-wrap;word-break:break-word;overflow-x:auto;">SYSTEM ROLE: You are a Chief Legal Officer and Corporate Compliance Auditor.
+CONTEXT: We are reviewing a new document or contract clause against our existing company policy.
+EXISTING POLICY RULE: [Insert your company rule or standard clause here]
+NEW PROPOSED DOCUMENT / CLAUSE: [Insert the new proposal or vendor clause here]
+INSTRUCTIONS:
+1. Compare the new proposed clause directly against our existing policy rule.
+2. Identify any conflicts, compliance risks, or unfavorable terms in the new proposal.
+3. Assign a Risk Level (Low, Medium, High).
+4. Provide a recommended counter-proposal or redline rewrite.
+OUTPUT FORMAT:
+| Evaluation Dimension | Existing Policy | Proposed Clause | Conflict Identified? |
+| :--- | :--- | :--- | :--- |
+| **Key Term / Rule** | [Text] | [Text] | [Yes / No + Reason] |
+- **Overall Risk Rating**: [Low / Medium / High]
+- **Recommended Redline / Counter-Draft**: [Proposed wording]</div>
+    </div>
+
+    <!-- PROMPT 6 -->
+    <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border-gold);border-radius:12px;padding:clamp(1rem, 2vw, 1.5rem);">
+      <h4 style="font-family:var(--font-display);color:var(--gold);font-size:1.05rem;margin-bottom:0.5rem;">6. Management / Team Leads: Weekly Multi-Status Synthesizer &amp; Blocker Matrix</h4>
+      <div style="background:rgba(0,0,0,0.5);border-radius:8px;padding:1rem;font-family:var(--font-mono);font-size:0.82rem;color:var(--text-secondary);line-height:1.6;border:1px solid rgba(251,191,36,0.2);white-space:pre-wrap;word-break:break-word;overflow-x:auto;">SYSTEM ROLE: You are a Senior Operations Director and Chief of Staff.
+CONTEXT: I have received individual status updates from multiple team members. I need to synthesize them for executive leadership.
+RAW TEAM UPDATES: [Paste multiple Slack updates, emails, or status bullets from your team members here]
+INSTRUCTIONS:
+1. Synthesize all updates into a unified executive summary organized by key themes.
+2. Highlight major achievements completed this week.
+3. Identify critical blockers, delays, or dependencies requiring management intervention.
+4. Extract assigned Action Items with clear owners.
+OUTPUT FORMAT:
+- **Executive Summary**: [3-4 sentence high-level overview]
+- **Top Accomplishments**: [Bulleted list]
+- **Critical Blockers &amp; Risks**:
+| Blocker Description | Impact Level | Impacted Project | Recommended Action |
+| :--- | :--- | :--- | :--- |
+- **Action Item Tracker**:
+  - [ ] [Task] - **Owner**: [Name] - **Due**: [Date]</div>
+    </div>
+
+    <!-- PROMPT 7 -->
+    <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border-gold);border-radius:12px;padding:clamp(1rem, 2vw, 1.5rem);">
+      <h4 style="font-family:var(--font-display);color:var(--gold);font-size:1.05rem;margin-bottom:0.5rem;">7. CXO / Executives: Strategic Market Intelligence SWOT &amp; Decision Matrix</h4>
+      <div style="background:rgba(0,0,0,0.5);border-radius:8px;padding:1rem;font-family:var(--font-mono);font-size:0.82rem;color:var(--text-secondary);line-height:1.6;border:1px solid rgba(251,191,36,0.2);white-space:pre-wrap;word-break:break-word;overflow-x:auto;">SYSTEM ROLE: You are a Senior Strategy Director at a top-tier management consulting firm.
+CONTEXT: Our executive leadership team is evaluating a new strategic initiative or market trend.
+RAW MARKET DATA / ARTICLE / REPORT EXCERPT: [Paste earnings transcript, market analysis, or competitor news here]
+INSTRUCTIONS:
+1. Analyze the input material and construct a comprehensive SWOT (Strengths, Weaknesses, Opportunities, Threats) Matrix.
+2. Identify 3 strategic implications for our business model.
+3. Provide a clear Executive Recommendation with pros, cons, and mitigation strategies.
+OUTPUT FORMAT:
+### Strategic SWOT Matrix
+| Category | Strategic Insights |
+| :--- | :--- |
+| **Strengths** | [Point 1] <br /> [Point 2] |
+| **Weaknesses** | [Point 1] <br /> [Point 2] |
+| **Opportunities**| [Point 1] <br /> [Point 2] |
+| **Threats** | [Point 1] <br /> [Point 2] |
+- **Top 3 Strategic Implications**: [Numbered list]
+- **Executive Recommendation**: [Direct decision framework with next steps]</div>
+    </div>
+  </div>
+
+  <h3 style="font-family:var(--font-display);color:var(--gold);font-size:clamp(1.15rem, 2.5vw, 1.3rem);margin-bottom:0.75rem;">4. Web Tools &amp; Platform Cheat Sheet</h3>
+  <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem;">
+    You do not need complex code setups or terminal tools to make these prompts work. The top non-code web platforms to run your workflows include:
+  </p>
+  <ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
+    <li><strong>Claude Web UI &amp; Claude Projects (<a href="https://platform.claude.com/docs/en/api/overview" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Claude Platform Docs</a>):</strong> Best for long document analysis, complex reasoning, writing polished reports, and side-by-side editing using Artifacts. <em>Pro Tip:</em> Use Claude Projects to upload your company branding guidelines or policy templates once. Every new chat in that project will automatically follow those rules!</li>
+    <li><strong>Google Gemini &amp; AI Studio (<a href="https://aistudio.google.com/docs/libraries" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Google AI Studio</a>):</strong> Best for real-time web research, live search grounding, Google Workspace integration (Docs/Drive), and analyzing photos/charts. <em>Pro Tip:</em> Turn on Google Search Grounding in Gemini when you need up-to-the-minute market facts or current news citations.</li>
+    <li><strong>NotebookLM (<a href="https://notebooklm.google.com/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">NotebookLM Platform</a>):</strong> Best for creating source-grounded research hubs, study guides, custom FAQs, and 2-person Audio Overview podcasts. <em>Pro Tip:</em> Upload up to 50 sources (PDFs, YouTube links, Docs) into a single notebook to get answers that never hallucinate outside your uploaded files.</li>
+  </ul>
+
+  <h3 style="font-family:var(--font-display);color:var(--gold);font-size:clamp(1.15rem, 2.5vw, 1.3rem);margin-bottom:0.75rem;">5. Governance &amp; Safety Rules (Keeping Data Secure!)</h3>
+  <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;">
+    Even without writing code, every employee must follow baseline AI security hygiene:
+  </p>
+  <ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
+    <li><strong>The Public vs. Private Rule:</strong> Never paste confidential customer data or unreleased financial results into free public web chats.</li>
+    <li><strong>The Anonymization Trick:</strong> Replace sensitive names or numbers with generic placeholders before prompting (e.g., change "Project Apollo with Client X for M" to "Project [NAME] with Client [Y] for [AMOUNT]").</li>
+    <li><strong>The Human-in-the-Loop Rule:</strong> AI is an awesome co-pilot, but you are the captain. Always re-read, fact-check, and review any AI output before sending it to clients or managers.</li>
+  </ul>
+
+  <h3 style="font-family:var(--font-display);color:var(--gold);font-size:clamp(1.15rem, 2.5vw, 1.3rem);margin-bottom:0.75rem;">Conclusion: You Are Now AI-Powered!</h3>
+  <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;">
+    Congratulations! You have just walked through the complete blueprint for transforming your daily work using Generative AI - without writing a single line of code.
+  </p>
+  <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:2rem;">
+    Remember: enterprise AI fluency is not about knowing how to program neural networks or write software scripts. It is about knowing how to frame clear problems, provide rich context, use structured prompt templates, and critically evaluate the results. Start small: pick one prompt template from Section 3 that fits your daily role, try it out today on a real work task, and share the results with your team. Before you know it, you will be saving hours every week while delivering higher-quality work than ever before. Go unleash your no-code AI superpowers!
+  </p>
+
+  <h3 style="font-family:var(--font-display);color:var(--gold);font-size:clamp(1.15rem, 2.5vw, 1.3rem);margin-bottom:0.75rem;">6. References &amp; Bibliography</h3>
+  <ul style="color:var(--text-secondary);font-size:0.9rem;line-height:1.8;margin-left:1.5rem;margin-bottom:1rem;list-style:disc;">
+    <li><a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Vaswani, A., et al. (2017). "Attention Is All You Need." Advances in Neural Information Processing Systems (NeurIPS 30)</a>.</li>
+    <li><a href="https://arxiv.org/abs/2210.03629" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Yao, S., et al. (2022). "ReAct: Synergizing Reasoning and Acting in Language Models." arXiv preprint arXiv:2210.03629</a>.</li>
+    <li><a href="https://arxiv.org/abs/2302.04761" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Schick, T., et al. (2023). "Toolformer: Language Models Can Teach Themselves to Use Tools." arXiv preprint arXiv:2302.04761</a>.</li>
+    <li><a href="https://arxiv.org/abs/2303.11366" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Shinn, N., et al. (2023). "Reflexion: Language Agents with Verbal Reinforcement Learning." arXiv preprint arXiv:2303.11366</a>.</li>
+    <li><a href="https://platform.claude.com/docs/en/api/overview" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Anthropic. (2024). "Claude Model Card &amp; Architecture Reference." Anthropic Documentation</a>.</li>
+    <li><a href="https://googleapis.github.io/python-genai/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Google DeepMind. (2024). "Gemini Technical Report: Long-Context Multimodal Foundation Models." Google Research</a>.</li>
+    <li><a href="https://platform.openai.com/docs/api-reference" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">OpenAI. (2024). "GPT System Card &amp; Function Calling Guide." OpenAI Documentation</a>.</li>
+    <li><a href="https://www.gartner.com/en/articles/agentic-ai" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Gartner. (2025). "Top Strategic Technology Trends for 2025: Agentic AI." Gartner Research</a>.</li>
+    <li><a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">McKinsey &amp; Company. (2024). "The Economic Potential of Generative AI: The Next Productivity Frontier." McKinsey Global Institute</a>.</li>
+    <li><a href="https://www.pwc.com/gx/en/issues/artificial-intelligence/global-ai-jobs-barometer.html" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">PwC. (2025). "Global Artificial Intelligence Jobs Barometer: Wage Premiums &amp; Skills Impact." PwC Industry Report</a>.</li>
+    <li><a href="https://www.ibm.com/think/topics/agentic-ai" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">IBM Think. (2025). "What is Agentic AI? Autonomous Systems and Enterprise Workflow Automation." IBM Knowledge Hub</a>.</li>
+    <li><a href="https://timesofindia.indiatimes.com/education/why-leaders-must-learn-agentic-ai-to-drive-enterprise-transformation/articleshow/135255233.cms" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">The Times of India. (2026). "Why leaders must learn Agentic AI to drive enterprise transformation." Times of India Education &amp; Enterprise Tech</a>.</li>
+    <li><a href="https://platform.claude.com/docs/en/cli-sdks-libraries/sdks/python" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Anthropic Platform Team. (2026). "Python SDK for Claude Platform." Claude Platform Documentation</a>.</li>
+    <li><a href="https://platform.claude.com/docs/en/api/overview" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Anthropic Platform Team. (2026). "API Overview &amp; Endpoint Specs." Claude Platform Documentation</a>.</li>
+    <li><a href="https://googleapis.github.io/python-genai/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Google Gen AI SDK Team. (2026). "Google Gen AI Python SDK Documentation." Google Developer Documentation</a>.</li>
+    <li><a href="https://aistudio.google.com/docs/libraries" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Google AI Studio. (2026). "Gemini API SDK Libraries &amp; GA Releases." Google AI Studio Documentation</a>.</li>
+    <li><a href="https://googleapis.github.io/python-genai/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">DeepLearning.AI &amp; Andrew Ng. (2024). "Generative AI for Everyone Course Guide." Coursera &amp; DeepLearning.AI</a>.</li>
+    <li><a href="https://aistudio.google.com/docs/libraries" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Iternal Technologies. (2026). "Enterprise AI Training: The Complete Guide to Workforce AI Fluency." Industry Research Guide</a>.</li>
+    <li><a href="https://aistudio.google.com/docs/libraries" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">BIGXSTAR Academy. (2026). "Generative AI Training for Employees: Corporate Guide for Enterprise Workforce." BIGXSTAR Corporate Insights</a>.</li>
+    <li><a href="https://aistudio.google.com/docs/libraries" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Edstellar. (2026). "Generative AI (GenAI) Corporate Training Course Manual." Edstellar Enterprise Catalog</a>.</li>
+    <li><a href="https://aistudio.google.com/docs/libraries" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">uCertify. (2026). "Generative AI for Enterprise: Course Overview, Skills &amp; Workflows." uCertify Learning Hub</a>.</li>
+    <li><a href="https://aistudio.google.com/docs/libraries" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">TechTarget. (2025). "Top Generative AI Courses and Enterprise Training Resources." TechTarget Enterprise AI</a>.</li>
+  </ul>
+
+
+  <div class="service-cta-buttons">
+    <a class="btn btn-commission btn-lg" href="../contact.html" >
+      Commission Generative AI Transformation →
+    </a>
+    <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener"  target="_blank">
+      Free LinkedIn Consultation ↗
+    </a>
+  </div>
+
 </div>
 </section>
+
 <div class="divider" style="margin-top:3rem;"></div>
 </main>
     <!-- START:FOOTER -->
