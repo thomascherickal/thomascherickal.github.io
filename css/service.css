@@ -58,7 +58,8 @@
 }
 
 /* Personal AI Training & Curriculum Modules */
-.personal-bordered-section {
+.personal-bordered-section,
+.business-bordered-section {
   max-width: 1240px;
   margin: 3.5rem auto;
   padding: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 2.75rem);
@@ -69,7 +70,12 @@
   position: relative;
 }
 
-.personal-hero-bordered {
+.business-bordered-section {
+  background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.06) 0%, rgba(12, 17, 29, 0.98) 100%);
+}
+
+.personal-hero-bordered,
+.business-hero-bordered {
   max-width: 1240px;
   margin: 2.5rem auto 3.5rem;
   padding: clamp(3rem, 6vw, 4.5rem) clamp(1.5rem, 4vw, 3rem);
@@ -81,7 +87,12 @@
   position: relative;
 }
 
-.gold-badge {
+.business-hero-bordered {
+  background: radial-gradient(circle at 50% 15%, rgba(56, 189, 248, 0.1) 0%, rgba(6, 9, 18, 0.98) 80%);
+}
+
+.gold-badge,
+.cyan-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -96,6 +107,76 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
+}
+
+.cyan-badge {
+  background: rgba(56, 189, 248, 0.16);
+  border-color: rgba(56, 189, 248, 0.55);
+  color: var(--cyan, #38bdf8);
+}
+
+.cyan-highlight-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  padding: 1.25rem 2rem;
+  border-radius: 18px;
+  background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.15) 0%, rgba(56, 189, 248, 0.04) 100%);
+  border: 2px solid rgba(56, 189, 248, 0.6);
+  box-shadow: 0 0 35px rgba(56, 189, 248, 0.28), inset 0 0 20px rgba(56, 189, 248, 0.08);
+  max-width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cyan-highlight-container:hover {
+  border-color: rgba(56, 189, 248, 0.95);
+  box-shadow: 0 0 48px rgba(56, 189, 248, 0.45), inset 0 0 28px rgba(56, 189, 248, 0.15);
+}
+
+.parity-table-personal,
+.parity-table-business {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.75rem 0;
+  font-size: 0.95rem;
+}
+
+.parity-table-personal th,
+.parity-table-personal td,
+.parity-table-business th,
+.parity-table-business td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.parity-table-personal th {
+  background: rgba(251, 191, 36, 0.12);
+  color: var(--gold, #fbbf24);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.parity-table-business th {
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--cyan, #38bdf8);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.parity-table-personal tr:hover td {
+  background: rgba(251, 191, 36, 0.05);
+}
+
+.parity-table-business tr:hover td {
+  background: rgba(56, 189, 248, 0.05);
 }
 
 .personal-card-grid {
