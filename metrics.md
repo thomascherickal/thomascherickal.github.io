@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-10-28 18:57:38 UTC` | Branch: `main` | Head Commit: `1a26bad`
+> **Automated Status Report** | Generated on `2026-10-29 04:45:21 UTC` | Branch: `main` | Head Commit: `8540d05`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **314** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **107,491** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **97,882** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **3,451** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **6,158** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **15.53 MB (16,281,363 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **243,111 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **421** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-10-28** | Subject: "Update site styles, mobile layout, platform links, and sync markdown/schemas" |
+| **Total Lines of Source Code & Content** | **109,049** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **99,459** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **3,443** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **6,147** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **15.55 MB (16,306,461 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **242,663 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **422** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-10-29** | Subject: "Restructure services, Google guides, and Claude guides into dedicated directories with zero broken links" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,12 +27,12 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 72 | 71,404 | 5.39 MB (5,655,677 bytes) | Production static web pages, services, frameworks & guides |
-| **CSS Stylesheets** | 17 | 11,348 | 264.73 KB (271,086 bytes) | Design tokens, animations, responsive layout & themes |
+| **HTML Documents** | 72 | 72,853 | 5.42 MB (5,680,064 bytes) | Production static web pages, services, frameworks & guides |
+| **CSS Stylesheets** | 17 | 11,429 | 266.81 KB (273,210 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 3 | 1,380 | 50.53 KB (51,746 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 11 | 3,494 | 150.20 KB (153,803 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 48 | 6,874 | 436.37 KB (446,840 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 72 | 12,938 | 555.06 KB (568,378 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Python Tooling** | 11 | 3,495 | 150.26 KB (153,863 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 47 | 6,809 | 431.53 KB (441,885 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 73 | 13,030 | 558.46 KB (571,860 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 41 | 0 | 8.60 MB (9,017,049 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 8 | 0 | 49.12 KB (50,296 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,11 +43,11 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 72 | 71,404 | 5.39 MB (5,655,677 bytes) | 22.9% |
-| `.json` | 72 | 12,938 | 555.06 KB (568,378 bytes) | 22.9% |
-| `.css` | 17 | 11,348 | 264.73 KB (271,086 bytes) | 5.4% |
-| `.md` | 48 | 6,874 | 436.37 KB (446,840 bytes) | 15.3% |
-| `.py` | 11 | 3,494 | 150.20 KB (153,803 bytes) | 3.5% |
+| `.html` | 72 | 72,853 | 5.42 MB (5,680,064 bytes) | 22.9% |
+| `.json` | 73 | 13,030 | 558.46 KB (571,860 bytes) | 23.2% |
+| `.css` | 17 | 11,429 | 266.81 KB (273,210 bytes) | 5.4% |
+| `.md` | 47 | 6,809 | 431.53 KB (441,885 bytes) | 15.0% |
+| `.py` | 11 | 3,495 | 150.26 KB (153,863 bytes) | 3.5% |
 | `.js` | 3 | 1,380 | 50.53 KB (51,746 bytes) | 1.0% |
 | `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 13.4% |
 | `.jpg` | 10 | 0 | 5.26 MB (5,517,051 bytes) | 3.2% |
@@ -68,7 +68,7 @@
 | Metric | Measurement | Architecture Details |
 | :--- | :--- | :--- |
 | **CSS Media Queries (`@media`)** | **80** | Ultra-responsive breakpoints for mobile, tablet, desktop |
-| **CSS Rule Blocks** | **1,578** | Modular selector rules across all stylesheets |
+| **CSS Rule Blocks** | **1,589** | Modular selector rules across all stylesheets |
 | **CSS Design Tokens (`--var`)** | **61** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **165** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **68** | Strict single-H1 semantic hierarchy per page |
@@ -84,7 +84,7 @@
 ## 5. Web Page Taxonomy & Sitemap Distribution
 
 - **Total Public HTML Pages**: **72**
-- **Core Landing & Portal Pages**: **72** (`404.html`, `Business-Services/business-service-advanced-ai-agents.html`, `Business-Services/business-service-agentic-ai-systems.html`, `Business-Services/business-service-ai-agents-orchestration.html`, `Business-Services/business-service-ai-budget-cost-limits-training.html`, `Business-Services/business-service-ai-developer-training.html`, `Business-Services/business-service-claude-advanced-training.html`, `Business-Services/business-service-claude-basic-training.html`, `Business-Services/business-service-deep-research-notebooklm.html`, `Business-Services/business-service-enterprise-workforce-ai-training.html`, `Business-Services/business-service-gemini-advanced-training.html`, `Business-Services/business-service-gemini-basic-training.html`, `Business-Services/business-service-generative-ai-transformation.html`, `Business-Services/business-service-hybrid-quantum-ai.html`, `Business-Services/business-service-local-llms-cost-slashing.html`, `Business-Services/business-service-quantum-applications.html`, `Business-Services/business-service-workflow-automations.html`, `Claude/claude-101.html`, `Claude/claude-code.html`, `Claude/claude-connectors.html`, `Claude/claude-cowork.html`, `Claude/claude-custom-mcp.html`, `Claude/claude-design.html`, `Claude/claude-features.html`, `Claude/claude-local-llms.html`, `Claude/claude-orchestration.html`, `Claude/claude-plugins.html`, `Claude/claude-science.html`, `Claude/claude-skills.html`, `Google/google-ai-studio.html`, `Google/google-antigravity-ide.html`, `Google/google-deep-research.html`, `Google/google-flow.html`, `Google/google-gemini-101.html`, `Google/google-gemini-agents.html`, `Google/google-gemini-argon.html`, `Google/google-gemini-deep-think.html`, `Google/google-gemini-notebook.html`, `Google/google-gemini-spark.html`, `Google/google-gemma.html`, `Google/google-nano-banana.html`, `Personal-Services/personal-service-advanced-ai-agents.html`, `Personal-Services/personal-service-agentic-ai-systems.html`, `Personal-Services/personal-service-ai-agents-orchestration.html`, `Personal-Services/personal-service-ai-budget-cost-limits-training.html`, `Personal-Services/personal-service-ai-developer-training.html`, `Personal-Services/personal-service-claude-advanced-training.html`, `Personal-Services/personal-service-claude-basic-training.html`, `Personal-Services/personal-service-deep-research-notebooklm.html`, `Personal-Services/personal-service-enterprise-workforce-ai-training.html`, `Personal-Services/personal-service-gemini-advanced-training.html`, `Personal-Services/personal-service-gemini-basic-training.html`, `Personal-Services/personal-service-generative-ai-transformation.html`, `Personal-Services/personal-service-hybrid-quantum-ai.html`, `Personal-Services/personal-service-local-llms-cost-slashing.html`, `Personal-Services/personal-service-quantum-applications.html`, `Personal-Services/personal-service-workflow-automations.html`, `all-business-services.html`, `all-personal-services.html`, `article-footer_dark.html`, `articles.html`, `collaboration.html`, `contact.html`, `expertise.html`, `faqs.html`, `footer.html`, `google43d90cf6a204dc6d.html`, `header.html`, `index.html`, `personal-ai-training.html`, `pricing.html`, `writing.html`)
+- **Core Landing & Portal Pages**: **72** (`404.html`, `Business-Services/business-service-advanced-ai-agents.html`, `Business-Services/business-service-agentic-ai-systems.html`, `Business-Services/business-service-ai-agents-orchestration.html`, `Business-Services/business-service-ai-budget-cost-limits-training.html`, `Business-Services/business-service-ai-developer-training.html`, `Business-Services/business-service-claude-advanced-training.html`, `Business-Services/business-service-claude-basic-training.html`, `Business-Services/business-service-deep-research-notebooklm.html`, `Business-Services/business-service-enterprise-workforce-ai-training.html`, `Business-Services/business-service-gemini-advanced-training.html`, `Business-Services/business-service-gemini-basic-training.html`, `Business-Services/business-service-generative-ai-transformation.html`, `Business-Services/business-service-hybrid-quantum-ai.html`, `Business-Services/business-service-local-llms-cost-slashing.html`, `Business-Services/business-service-quantum-applications.html`, `Business-Services/business-service-workflow-automations.html`, `Claude/claude-101.html`, `Claude/claude-code.html`, `Claude/claude-connectors.html`, `Claude/claude-cowork.html`, `Claude/claude-custom-mcp.html`, `Claude/claude-design.html`, `Claude/claude-features.html`, `Claude/claude-local-llms.html`, `Claude/claude-orchestration.html`, `Claude/claude-plugins.html`, `Claude/claude-science.html`, `Claude/claude-skills.html`, `Google/google-ai-studio.html`, `Google/google-antigravity-ide.html`, `Google/google-deep-research.html`, `Google/google-flow.html`, `Google/google-gemini-101.html`, `Google/google-gemini-4-models.html`, `Google/google-gemini-agents.html`, `Google/google-gemini-deep-think.html`, `Google/google-gemini-notebook.html`, `Google/google-gemini-spark.html`, `Google/google-gemma.html`, `Google/google-nano-banana.html`, `Personal-Services/personal-service-advanced-ai-agents.html`, `Personal-Services/personal-service-agentic-ai-systems.html`, `Personal-Services/personal-service-ai-agents-orchestration.html`, `Personal-Services/personal-service-ai-budget-cost-limits-training.html`, `Personal-Services/personal-service-ai-developer-training.html`, `Personal-Services/personal-service-claude-advanced-training.html`, `Personal-Services/personal-service-claude-basic-training.html`, `Personal-Services/personal-service-deep-research-notebooklm.html`, `Personal-Services/personal-service-enterprise-workforce-ai-training.html`, `Personal-Services/personal-service-gemini-advanced-training.html`, `Personal-Services/personal-service-gemini-basic-training.html`, `Personal-Services/personal-service-generative-ai-transformation.html`, `Personal-Services/personal-service-hybrid-quantum-ai.html`, `Personal-Services/personal-service-local-llms-cost-slashing.html`, `Personal-Services/personal-service-quantum-applications.html`, `Personal-Services/personal-service-workflow-automations.html`, `all-business-services.html`, `all-personal-services.html`, `article-footer_dark.html`, `articles.html`, `collaboration.html`, `contact.html`, `expertise.html`, `faqs.html`, `footer.html`, `google43d90cf6a204dc6d.html`, `header.html`, `index.html`, `personal-ai-training.html`, `pricing.html`, `writing.html`)
 - **Dedicated Service Pages (`service-*.html`)**: **0** (Full enterprise curriculum and architecture deep-dives)
 - **Claude Guides & Frameworks (`claude-*.html`)**: **0** (Claude Code, Cowork, Skills, MCP, Orchestration, Plugins, Science, Local LLMs, Features)
 - **Google AI & Gemini Guides (`google-*.html`)**: **0** (Gemini 101, Antigravity IDE, Studio, Flow, Deep Research, Spark, Argon, Gemma, Nano Banana)
