@@ -7,7 +7,7 @@
       "name": "How is Payment made?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Payments are made via PayPal or Direct Bank Transfer (Wire, ACH, SWIFT, IBAN). PayPal supports all major international credit/debit cards, multi-currency balances, and business accounts. Bank Transfer includes wire routing for US ACH, European SEPA, and global SWIFT transfers. Every milestone installment is accompanied by an official commercial invoice in USD or local currency equivalent."
+        "text": "Payments are made via Stripe, PayPal or Direct Bank Transfer (Wire, ACH, SEPA, SWIFT, NEFT). Accepted currencies include USD, EUR, GBP, AUD, CAD, and INR. Stripe and PayPal support all major international credit/debit cards, multi-currency balances, and business accounts. Bank Transfer includes wire routing for US ACH, European SEPA, and global SWIFT/NEFT transfers. Every milestone installment is accompanied by an official commercial invoice in USD or local currency equivalent."
       }
     },
     {
@@ -15,7 +15,7 @@
       "name": "What is the Schedule of Payment?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Payments are structured into five equal progressive installments (20% each). In the 30-day Enterprise AI Transformation, installments are due every 5 days of completed training (after Day 5, Day 10, Day 15, Day 20, and Day 25/30). In the 15-day Personal AI Transformation, installments are due every 3 days of completed training (after Day 3, Day 6, Day 9, Day 12, and Day 15). The subsequent support periods are included with zero additional fees."
+        "text": "Payments are structured into five equal progressive installments (20% each). For 40-day Flagship programs (Business & Personal), installments are due after Days 4, 8, 12, 16, and 20 of completed live training. For 10-day Individual Services, installments are due after Days 1, 2, 3, 4, and 5 of completed training. The subsequent 20-day (or 5-day) support periods are included with zero additional fees."
       }
     },
     {
@@ -23,7 +23,7 @@
       "name": "How much is required as upfront payment?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nothing. There is strictly zero upfront payment ($0 advance). In both Enterprise and Personal programs, installment payments are triggered only after completing 3 or 5 full days of hands-on training (3 days for Personal AI Transformation at 2 hours daily, or 5 days for Enterprise AI Transformation at 4 hours daily). If you are not completely satisfied during the initial training days, you owe nothing."
+        "text": "Nothing. There is strictly zero upfront payment ($0 advance). In Flagship programs, installment payments are triggered only after completing Day 4 of live training (with a full walkaway guarantee after the first 2 days if not completely satisfied). In Individual Services, installments are triggered after Day 1 (with a walkaway guarantee after the first 1 day). If you are not satisfied during the initial period, you owe nothing."
       }
     },
     {
@@ -31,7 +31,7 @@
       "name": "How is training tailored for solo practitioners, freelancers, and independent builders?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Training for individuals focuses on turning solo practitioners into one-person full-stack agencies. We train individuals across Claude Agents 101, Claude Code CLI, Claude's desktop and computer-use features, Claude Skills, Local LLM deployment via Ollama, and automated workflows. Solo builders learn to automate client deliverables, scaffold complete codebases, run private local models without recurring cloud bills, and operate with the velocity of an entire engineering department."
+        "text": "Training for individuals focuses on turning solo practitioners into one-person full-stack agencies. We train individuals across Claude Agents 101, Claude Code CLI, Claude's desktop and computer-use features, Claude Skills, Local LLM deployment via Ollama, and automated workflows. Solo builders learn to automate client deliverables, scaffold complete codebases, run private local models without recurring cloud bills, and substantially multiply their individual productivity and engineering velocity with AI agents."
       }
     },
     {
@@ -39,7 +39,7 @@
       "name": "How does the training fast-track freshers and junior developers into production-ready AI engineers?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For freshers, graduates, and junior engineers, the curriculum bridges the gap between theoretical computer science and high-velocity enterprise software development. Freshers master Claude Code, AI-assisted Test-Driven Development (TDD) where failing tests are written first to eliminate hallucinations, Model Context Protocol (MCP) tool integration, and open-weights Hermes agent loops. Juniors gain 3-5 years of equivalent engineering leverage across our 30-day intensive."
+        "text": "For freshers, graduates, and junior engineers, the curriculum bridges the gap between theoretical computer science and high-velocity enterprise software development. Freshers master Claude Code, AI-assisted Test-Driven Development (TDD) where failing tests are written first to catch hallucinations and prevent regressions through verifiable unit contracts and sound architectural judgment, Model Context Protocol (MCP) tool integration, and open-weights Hermes agent loops. Juniors gain 3-5 years of equivalent engineering leverage across our 40-day intensive (20 days live training + 20 days support)."
       }
     },
     {
@@ -92,10 +92,10 @@
     },
     {
       "@type": "Question",
-      "name": "How does the 30-day intensive program multiply delivery velocity for seed and Series A startups?",
+      "name": "How does the 40-day intensive program multiply delivery velocity for seed and Series A startups?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Early-stage startups double or triple engineering velocity without doubling headcount. The 30-day intensive embeds agent swarms, local LLM cost slashing, and CI/CD automated test generation directly into the startup's active repositories, backed by our Tier 4 flat 50% startup discount."
+        "text": "Early-stage startups double or triple engineering velocity without doubling headcount. The 40-day intensive embeds agent swarms, local LLM cost slashing, and CI/CD automated test generation directly into the startup's active repositories, backed by our Tier 4 flat 50% startup discount."
       }
     },
     {
@@ -124,10 +124,10 @@
     },
     {
       "@type": "Question",
-      "name": "What is the pricing model for enterprise training, and what does the 10-participant quota and 30-day training plus 30-day support guarantee cover?",
+      "name": "What is the pricing model for enterprise training, and what does the 20-participant quota and 20-day training plus 20-day support guarantee cover?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Enterprise training bookings feature a fixed base rate covering up to 20 participants, backed by our ironclad guarantee: 30 days of intensive workforce training AND 30 days of included ongoing support (total 60 days of enterprise protection). This includes digital documentation, reproducible sample code repositories, 30 days of post-training technical assistance, 30 days of free doubt consultation, and lifetime graduate Discord community access."
+        "text": "Enterprise training bookings feature a fixed base rate of $2,000 USD covering up to 20 participants, backed by our 40-day flagship guarantee: 20 days of intensive live workforce training AND 20 days of included ongoing support (total 40 days of coverage). This includes digital documentation, reproducible sample code repositories, 20 days of post-training technical assistance, free doubt consultation, and all written guides and materials licensed under Apache 2.0."
       }
     },
     {
@@ -148,15 +148,15 @@
     },
     {
       "@type": "Question",
-      "name": "What is Tier 1 (Developed Nations) and which countries and organizations qualify?",
+      "name": "What is Tier 1 (High-Income) and which countries and organizations qualify?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Tier 1 represents OECD High-Income Economies including the United States, Canada, United Kingdom, Germany, France, Switzerland, Netherlands, Sweden, Norway, Denmark, Ireland, Japan, Singapore, Australia, and New Zealand. Tier 1 receives our 100% standard baseline rate (1.0X multiplier, 0% discount)."
+        "text": "Tier 1 represents World Bank High-Income Economies including the United States, Canada, United Kingdom, Germany, France, Switzerland, Netherlands, Sweden, Norway, Denmark, Ireland, Japan, Singapore, Australia, and New Zealand. Tier 1 receives our 100% standard baseline rate (1.0X multiplier, 0% discount)."
       }
     },
     {
       "@type": "Question",
-      "name": "What is Tier 2 (Developing Nations & Growth Markets) and how does the 25% discount apply?",
+      "name": "What is Tier 2 (Upper-Middle-Income Markets) and how does the 25% discount apply?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Tier 2 applies to rapidly expanding digital tech hubs across South Asia, Latin America, Southeast Asia, Eastern Europe, and the Middle East (including India, Brazil, Mexico, Colombia, Poland, Turkey, UAE, Saudi Arabia, South Africa, Malaysia, Thailand, and Philippines). Qualifying teams receive an automatic 25% Parity Discount (75% base rate, 0.75X multiplier)."
@@ -215,7 +215,7 @@
       "name": "What is the investment and structure for Personal Training?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Personal Training is $1,000 USD in Tier 1 for 30 days (15 days training, + 15 days guidance and detailed guides and materials). Strictly for 1 person only. Clients are encouraged to choose services relevant to their work or interests."
+        "text": "Personal Training is $1,000 USD in Tier 1 for 40 days (20 days training, + 20 days guidance, Q&A and written guides). Strictly for 1 person only. Clients are encouraged to choose services relevant to their work or interests."
       }
     },
     {
@@ -223,7 +223,7 @@
       "name": "How are services chosen under Personal Training?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Clients are encouraged to choose services relevant to their work or interests across the entire catalogue during their 30-day personal engagement."
+        "text": "Clients are encouraged to choose services relevant to their work or interests across the entire catalogue during their 40-day personal engagement."
       }
     },
     {
@@ -244,10 +244,10 @@
     },
     {
       "@type": "Question",
-      "name": "What is the structure of Personal AI Training, and how do the 15 days of training plus 15 days of included support work?",
+      "name": "What is the structure of Personal AI Training, and how do the 20 days of training plus 20 days of included support work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Personal AI Transformation draws on the full 16-service catalogue across 15 days of intensive 1-on-1 sprint training customized to your specific projects and goals, immediately followed by 15 days of included support with daily questions and doubts clarification, and source materials and guides that are light and easy to skim (total 30-day experience, strictly one person only), backed by 100% intellectual property assignment and graduate Discord community access."
+        "text": "Personal AI Transformation draws on the full 16-service catalogue across 20 days of intensive 1-on-1 sprint training customized to your specific projects and goals, immediately followed by 20 days of included support with daily questions and doubts clarification, and guidance, Q&A and written guides licensed under Apache 2.0 (total 40-day experience, strictly one person only)."
       }
     },
     {
@@ -255,7 +255,7 @@
       "name": "How does deploying Local LLMs decrease operational AI budgets by 60% to 90%?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "By shifting high-volume, recurring workloads (classification, parsing, schema formatting, boilerplate code generation) from expensive cloud APIs to open-weight models (Qwen3.5, DeepSeek V3.2, Gemma 4, Mistral) served via vLLM, Ollama, and llama.cpp with AWQ/GGUF 4-bit quantization on private hardware. This replaces recurring token bills with fixed infrastructure costs while guaranteeing zero data egress."
+        "text": "By shifting high-volume, recurring workloads (classification, parsing, schema formatting, boilerplate code generation) from expensive cloud APIs to open-weight models (Qwen, DeepSeek, Gemma, Mistral) served via vLLM, Ollama, and llama.cpp with AWQ/GGUF 4-bit quantization on private hardware. This replaces recurring token bills with fixed infrastructure costs while guaranteeing zero data egress."
       }
     },
     {
@@ -263,7 +263,7 @@
       "name": "What is OpenCode, and how does the training integrate open-source coding agents and private dev environments?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "OpenCode encompasses the open-source movement for developer agentic autonomy. Training covers open-source coding frameworks (OpenCode, Aider, OpenHands) integrated with state-of-the-art open coding models (current open-weight coding models such as Qwen3.5 and DeepSeek V3.2). Developers learn to work within terminal-native agent loops that run 100% privately on their own machines without telemetry or third-party code inspection."
+        "text": "OpenCode encompasses the open-source movement for developer agentic autonomy. Training covers open-source coding frameworks (OpenCode, Aider, OpenHands) integrated with state-of-the-art open coding models (current open-weight coding models such as Qwen, DeepSeek, and Gemma). Developers learn to work within terminal-native agent loops that run 100% privately on their own machines without telemetry or third-party code inspection."
       }
     },
     {
@@ -276,10 +276,10 @@
     },
     {
       "@type": "Question",
-      "name": "What is the day-by-day cadence and structure of a 30-day training contract?",
+      "name": "What is the day-by-day cadence and structure of a 40-day flagship training contract?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The 30-day contract follows a structured 4-week progression: Week 1 (Days 1-7) Architecture Assessment, Sandboxes & Agent Primitives; Week 2 (Days 8-15) Claude Code, Cowork, Custom Skills & MCP Servers; Week 3 (Days 16-22) Multi-Agent Swarms, Local LLM Serving (vLLM/Ollama) & AI-Assisted TDD; Week 4 (Days 23-30) OpenCode Routing, Hard Budget Limits, Automated Evals & Capstone Production IP Handover."
+        "text": "The 40-day flagship contract follows a structured progression: 20 days of live immersive training (4 hours per day, 80 live hours total) followed by 20 days of included ongoing support. Week 1 (Days 1-5) Architecture Assessment, Sandboxes & Agent Primitives; Week 2 (Days 6-10) Claude Code, Computer Use, Custom Skills & MCP Servers; Week 3 (Days 11-15) Multi-Agent Swarms, Local LLM Serving (vLLM/Ollama) & AI-Assisted TDD; Week 4 (Days 16-20) Hard Budget Limits, Automated Evals & Production Handover, followed by Phase 2 (Days 21-40) 20 days of ongoing technical assistance, PR reviews, and doubts clarification."
       }
     },
     {
@@ -287,15 +287,15 @@
       "name": "What digital documentation, starter repositories, and implementation guides are included in the package?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Every training engagement includes comprehensive digital assets: production-ready starter repositories in Python, TypeScript, and Rust, custom MCP server templates, step-by-step local LLM deployment runbooks (Docker/vLLM/Ollama), prompt design pattern handbooks, evaluation test suites, and 100% intellectual property transfer documentation."
+        "text": "Every training engagement includes comprehensive digital assets: production-ready starter repositories in Python, TypeScript, and Rust, custom MCP server templates, step-by-step local LLM deployment runbooks (Docker/vLLM/Ollama), prompt design pattern handbooks, evaluation test suites, and all written guides, training materials, operating manuals, tutorials, and deep dives licensed under the permissive Apache 2.0 license."
       }
     },
     {
       "@type": "Question",
-      "name": "How does the 30-day post-training support and free consultation for doubts work?",
+      "name": "How does the 20-day post-training support and free consultation for doubts work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Following the completion of the 30-day training sprint, clients receive 30 consecutive calendar days of ongoing technical support and doubt consultation. Participants can submit questions, architectural design proposals, and runtime debugging issues directly for expert review, guidance, and troubleshooting."
+        "text": "Following the completion of the 20-day live training sprint, clients receive 20 business days (excluding weekends) of ongoing technical support and doubt consultation. Participants can submit questions, architectural design proposals, and runtime debugging issues directly for expert review, guidance, assistance, and troubleshooting."
       }
     },
     {
@@ -351,15 +351,15 @@
       "name": "How are confidential enterprise codebases, data privacy, and IP rights protected?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We operate under strict mutual non-disclosure agreements (NDAs). Zero client code or proprietary data is ever retained, cached, or used for model training. Client work takes place inside dedicated isolated sandboxes or your own private cloud VPC. All developed repositories, scripts, and documentation become 100% your organization's intellectual property."
+        "text": "We operate under client or vendor NDAs. Zero client code or proprietary data is ever retained, cached, or used for model training. Client work takes place inside dedicated isolated sandboxes or your own private cloud VPC. Custom client integration code and agent definitions are licensed under Apache 2.0, and all written guides, manuals, and deep dives are licensed under the Apache 2.0 license."
       }
     },
     {
       "@type": "Question",
-      "name": "How does an organization or individual book a 30-day training contract?",
+      "name": "How does an organization or individual book a training engagement?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "To get started, submit your cohort details, focus areas, and operating country via the contact form on this page or email thomascherickal@gmail.com. We return a tailored 30-day syllabus outline and country-parity quote within 24 hours. Once dates are confirmed and milestone terms executed, training commences within 5 to 7 business days."
+        "text": "To get started, submit your cohort details, focus areas, and operating country via the contact form on this page or email thomascherickal@gmail.com. We return a tailored program syllabus outline and country-parity quote within 24 hours. Once dates are confirmed and milestone terms executed, training commences within 5 to 7 business days."
       }
     },
     {
@@ -391,7 +391,7 @@
       "name": "How do organizations and educational institutions qualify for Tier 5 (75% discount) pricing?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Qualification for Tier 5 (75% Parity Discount / $500 USD per 1-month service) is open to accredited universities, academic research departments, post-doctoral laboratories, registered 501(c)(3) or international non-profit charities, and core maintainers of public-interest open-source software libraries. Verification requires an institutional email domain (.edu, .ac.uk) or official non-profit registration documentation, completed during onboarding within 24 hours of inquiry."
+        "text": "Qualification for Tier 5 (75% Parity Discount: $500 USD for Flagship Business, $250 USD for Flagship Personal, $50 USD for Individual Business, and $25 USD for Individual Personal) is open to accredited universities, academic research departments, post-doctoral laboratories, registered 501(c)(3) or international non-profit charities, and core maintainers of public-interest open-source software libraries. Verification requires an institutional email domain (.edu, .ac.uk) or official non-profit registration documentation, completed during onboarding within 24 hours of inquiry."
       }
     },
     {

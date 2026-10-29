@@ -56,8 +56,8 @@
 ## Global Equity: Purchasing Power Parity (PPP) Six Tiers
 Rates are automatically indexed across 195 countries to ensure fair pricing worldwide across 6 Parity Tiers:
 
-### High-Income Developed Economies
-*TIER 01 · DEVELOPED NATIONS* - OECD High-Income Economies & Global Enterprise Hubs  
+### Tier 1: High-Income
+*TIER 01 · HIGH-INCOME* - High-Income Economies & Global Enterprise Hubs  
 **Rate**: `100% Standard Rate` (0% DISCOUNT · BASELINE MULTIPLIER: 1.0X)  
 
 ### Upper-Middle-Income Economies

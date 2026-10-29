@@ -2,9 +2,9 @@
 """
 sync_pricing.py - Centralized Pricing & Parity Synchronization Engine.
 Defines authoritative pricing data for the offerings:
-1. Business Training: $2,000 USD for 60 days (30 days training + 30 days guidance and detailed guides and materials),
+1. Business Training: $2,000 USD for 40 days (30 days training + 30 days guidance, Q&A and written guides),
    up to 20 participants, +$100 USD per extra seat.
-2. Personal Training: $1,000 USD for 30 days (15 days training + 15 days guidance and detailed guides and materials),
+2. Personal Training: $1,000 USD for 40 days (15 days training + 15 days guidance, Q&A and written guides),
    strictly 1 person only.
 3. Individual Service Picks: $200 USD per service for businesses (up to 20 participants, +$100/extra seat);
    $100 USD per service for individuals (strictly 1 person).
@@ -14,7 +14,7 @@ Clients are encouraged to choose services relevant to their work or interests.
 Synchronizes across:
 - schema/pricing-schema.json
 - pricing.html (embedded JSON-LD, calculator, and guarantee sections)
-- schema.json
+- schema/home-schema.json
 - 16 service-*.html pages (Section 5/6 & embedded JSON-LD)
 - 16 schema/service-*.json files
 - personal-ai-training.html
@@ -77,11 +77,11 @@ OFFERS = [
         "id": "business-training",
         "name": "Business Training (Comprehensive Program)",
         "headline": "$2,000 USD",
-        "sub": "USD · 60 DAYS (30D TRAINING + 30D GUIDANCE & MATERIALS)",
+        "sub": "USD · 40 DAYS (20D TRAINING + 20D GUIDANCE & MATERIALS)",
         "minPrice": 2000,
         "maxPrice": 2000,
-        "description": "Comprehensive Business Training at $2,000 USD for 60 days (30 days training + 30 days guidance and detailed guides and materials). Includes up to 20 participants. Additional seats at $100 USD per seat. Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 $2,000; Tier 2 (25% off) $1,500; Tier 3 & 4 (50% off) $1,000; Tier 5 (75% off) $500; Tier 6 custom subsidized relief.",
-        "duration": "60 days (30 days live training + 30 days guidance and detailed guides and materials)",
+        "description": "Comprehensive Business Training at $2,000 USD for 40 days (20 days training + 20 days guidance, Q&A and written guides). Includes up to 20 participants. Additional seats at $100 USD per seat. Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 $2,000; Tier 2 (25% off) $1,500; Tier 3 & 4 (50% off) $1,000; Tier 5 (75% off) $500; Tier 6 custom subsidized relief.",
+        "duration": "40 days (20 days live training + 20 days guidance, Q&A and written guides)",
         "cohort": "Up to 20 participants included (+$100 USD per extra seat)",
         "parity": {
             "tier1": 2000,
@@ -96,11 +96,11 @@ OFFERS = [
         "id": "personal-training",
         "name": "Personal Training (Comprehensive Program)",
         "headline": "$1,000 USD",
-        "sub": "USD · 30 DAYS (15D TRAINING + 15D GUIDANCE & MATERIALS)",
+        "sub": "USD · 40 DAYS (20D TRAINING + 20D GUIDANCE & MATERIALS)",
         "minPrice": 1000,
         "maxPrice": 1000,
-        "description": "Comprehensive Personal Training at $1,000 USD for 30 days (15 days training + 15 days guidance and detailed guides and materials). Strictly for 1 person only. Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 $1,000; Tier 2 (25% off) $750; Tier 3 & 4 (50% off) $500; Tier 5 (75% off) $250; Tier 6 custom subsidized relief ($100).",
-        "duration": "30 days (15 days live training + 15 days guidance and detailed guides and materials)",
+        "description": "Comprehensive Personal Training at $1,000 USD for 40 days (20 days training + 20 days guidance, Q&A and written guides). Strictly for 1 person only. Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 $1,000; Tier 2 (25% off) $750; Tier 3 & 4 (50% off) $500; Tier 5 (75% off) $250; Tier 6 custom subsidized relief ($100).",
+        "duration": "40 days (20 days live training + 20 days guidance, Q&A and written guides)",
         "cohort": "Strictly 1 person only (private 1-on-1 acceleration)",
         "parity": {
             "tier1": 1000,
@@ -173,7 +173,7 @@ def build_offer_catalog_elements():
         elements.append(offer)
     return elements
 
-clean_desc = "Transparent AI engagement model: Pick individual services at $100 USD per service for individuals and $200 USD per service for businesses (each covering 5 days of training + 5 days of dedicated support, 10 days total coverage). Clients can also choose our comprehensive programs: Business Training at $2,000 USD for 60 days (30 days training + 30 days guidance/materials, up to 20 participants, +$100 per extra seat) and Personal Training at $1,000 USD for 30 days (15 days training + 15 days guidance/materials, 1 person only). Full 195-country Purchasing Power Parity (PPP) supported across all service pricing."
+clean_desc = "Transparent AI engagement model: Pick individual services at $100 USD per service for individuals and $200 USD per service for businesses (each covering 5 days of training + 5 days of dedicated support, 10 days total coverage). Clients can also choose our comprehensive programs: Business Training at $2,000 USD for 40 days (30 days training + 30 days guidance/materials, up to 20 participants, +$100 per extra seat) and Personal Training at $1,000 USD for 40 days (15 days training + 15 days guidance/materials, 1 person only). Full 195-country Purchasing Power Parity (PPP) supported across all service pricing."
 
 def sync_pricing_schema_json():
     pricing_schema_path = os.path.join(SCHEMA_DIR, "pricing-schema.json")
@@ -192,21 +192,24 @@ def sync_pricing_schema_json():
         f.write("\n")
     print(f"Updated {pricing_schema_path}")
 
-def sync_root_schema_json():
-    root_schema_path = os.path.join(REPO_DIR, "schema.json")
-    if not os.path.exists(root_schema_path):
+def sync_home_schema_json():
+    home_schema_path = os.path.join(SCHEMA_DIR, "home-schema.json")
+    if not os.path.exists(home_schema_path):
         return
-    with open(root_schema_path, "r", encoding="utf-8") as f:
+    with open(home_schema_path, "r", encoding="utf-8") as f:
         data = json.load(f)
+    updated = False
     for item in data.get("@graph", []):
         if item.get("@type") == "OfferCatalog" and "pricing" in item.get("@id", "").lower():
             item["description"] = clean_desc
             item["itemListElement"] = build_offer_catalog_elements()
+            updated = True
             break
-    with open(root_schema_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-        f.write("\n")
-    print(f"Updated {root_schema_path}")
+    if updated:
+        with open(home_schema_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+            f.write("\n")
+        print(f"Updated {home_schema_path}")
 
 def sync_pricing_html_embedded_schema():
     pricing_html_path = os.path.join(REPO_DIR, "pricing.html")
@@ -249,18 +252,18 @@ def get_service_price_specs():
         format_price_spec("Business Service Pick (Business Tier 3 & 4 / 50% Off)", 100),
         format_price_spec("Business Service Pick (Business Tier 5 / 75% Off)", 50),
         format_price_spec("Business Service Pick (Business Tier 6 / Subsidized)", 20),
-        format_price_spec("Business Training (Tier 1 / 100%)", 2000, "60 days: 30d training + 30d guidance & materials, up to 20 participants, +$100/extra seat"),
+        format_price_spec("Business Training (Tier 1 / 100%)", 2000, "40 days: 20d training + 20d guidance & materials, up to 20 participants, +$100/extra seat"),
         format_price_spec("Business Training (Tier 2 / 25% Off)", 1500),
         format_price_spec("Business Training (Tier 3 & 4 / 50% Off)", 1000),
         format_price_spec("Business Training (Tier 5 / 75% Off)", 500),
-        format_price_spec("Personal Training (Tier 1 / 100%)", 1000, "30 days: 15d training + 15d guidance & materials, 1 person only"),
+        format_price_spec("Personal Training (Tier 1 / 100%)", 1000, "40 days: 20d training + 20d guidance & materials, 1 person only"),
         format_price_spec("Personal Training (Tier 2 / 25% Off)", 750),
         format_price_spec("Personal Training (Tier 3 & 4 / 50% Off)", 500),
         format_price_spec("Personal Training (Tier 5 / 75% Off)", 250),
         format_price_spec("Tier 6 (Custom Subsidized Relief)", 0, "Custom subsidized quotes and relief for under-resourced teams")
     ]
 
-service_offer_desc = "Available as an individual service pick ($100 USD for individuals / $200 USD for businesses, each for 5 days of live training + 5 days of dedicated support, 10 days total coverage), or as part of our comprehensive programs: Business Training ($2,000 USD for 60 days: 30d training + 30d guidance/materials, up to 20 seats, +$100/extra seat) or Personal Training ($1,000 USD for 30 days: 15d training + 15d guidance/materials, 1 person only). Clients are free to pick and choose their services. Full 195-country Purchasing Power Parity (PPP) supported across all service pricing."
+service_offer_desc = "Available as an individual service pick ($100 USD for individuals / $200 USD for businesses, each for 5 days of live training + 5 days of dedicated support, 10 days total coverage), or as part of our comprehensive programs: Business Training ($2,000 USD for 40 days: 20d training + 20d guidance/materials, up to 20 seats, +$100/extra seat) or Personal Training ($1,000 USD for 40 days: 20d training + 20d guidance/materials, 1 person only). Clients are free to pick and choose their services. Full 195-country Purchasing Power Parity (PPP) supported across all service pricing."
 
 def sync_service_schema_files():
     offer_specs = get_service_price_specs()
@@ -289,16 +292,16 @@ def sync_service_html_pages():
             <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
               <li><strong>Individual Service Pick (Personal / 1-on-1):</strong> <strong>$100 USD</strong> per service for <strong>5 days of live training + 5 days of dedicated support</strong> (10 days total coverage per service). Strictly 1 person only.</li>
               <li><strong>Individual Service Pick (Business / Teams):</strong> <strong>$200 USD</strong> per service for <strong>5 days of live training + 5 days of dedicated support</strong> (10 days total coverage per service). Covers up to 20 participants (additional seats at <strong>$100 USD per seat</strong>).</li>
-              <li><strong>Comprehensive Business Training:</strong> <strong>$2,000 USD</strong> for <strong>60 days</strong> (30 days live training + 30 days guidance and detailed guides and materials). Includes cohorts up to 20 participants. Extra seats at <strong>$100 USD per seat</strong>).</li>
-              <li><strong>Comprehensive Personal Training:</strong> <strong>$1,000 USD</strong> for <strong>30 days</strong> (15 days live training + 15 days guidance and detailed guides and materials). Strictly for 1 person only (private acceleration).</li>
+              <li><strong>Comprehensive Business Training:</strong> <strong>$2,000 USD</strong> for <strong>40 days</strong> (20 days live training + 20 days guidance, Q&A and written guides). Includes cohorts up to 20 participants. Extra seats at <strong>$100 USD per seat</strong>).</li>
+              <li><strong>Comprehensive Personal Training:</strong> <strong>$1,000 USD</strong> for <strong>40 days</strong> (20 days live training + 20 days guidance, Q&A and written guides). Strictly for 1 person only (private acceleration).</li>
             </ul>
           </li>
           <li><strong>Global Purchasing Power Parity (PPP) Available for All Service Pricing:</strong>
             <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
-              <li><strong>Tier 1 (Standard / 100%):</strong> Individual $100 USD | Business $200 USD | Business 60d $2,000 USD | Personal 30d $1,000 USD (USA, UK, EU, Canada, Australia)</li>
-              <li><strong>Tier 2 (Developing Nations / 25% Off):</strong> Individual $75 USD | Business $150 USD | Business 60d $1,500 USD | Personal 30d $750 USD (India, Brazil, Mexico, UAE, Poland)</li>
-              <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Individual $50 USD | Business $100 USD | Business 60d $1,000 USD | Personal 30d $500 USD</li>
-              <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Individual $25 USD | Business $50 USD | Business 60d $500 USD | Personal 30d $250 USD</li>
+              <li><strong>Tier 1 (Standard / 100%):</strong> Individual $100 USD | Business $200 USD | Business 40d $2,000 USD | Personal 40d $1,000 USD (USA, UK, EU, Canada, Australia)</li>
+              <li><strong>Tier 2 (Upper-Middle-Income / 25% Off):</strong> Individual $75 USD | Business $150 USD | Business 40d $1,500 USD | Personal 40d $750 USD: e.g. Brazil, Mexico, Malaysia, Thailand, Türkiye</li>
+              <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Individual $50 USD | Business $100 USD | Business 40d $1,000 USD | Personal 40d $500 USD</li>
+              <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Individual $25 USD | Business $50 USD | Business 40d $500 USD | Personal 40d $250 USD</li>
               <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Individual $10 USD | Business $20 USD | Custom Subsidized Relief / Micro-Rates</li>
               <li>Calculate and lock in your exact tier rate live on the <a href="pricing.html" style="color:var(--cyan);text-decoration:underline;">Pricing page</a>.</li>
             </ul>
@@ -315,8 +318,8 @@ def sync_service_html_pages():
         slug = s["slug"]
         for candidate in [
             os.path.join(REPO_DIR, f"{slug}.html"),
-            os.path.join(REPO_DIR, "Business-Services", f"business-{slug}.html"),
-            os.path.join(REPO_DIR, "Personal-Services", f"personal-{slug}.html")
+            os.path.join(REPO_DIR, "business-services", f"business-{slug}.html"),
+            os.path.join(REPO_DIR, "personal-services", f"personal-{slug}.html")
         ]:
             if os.path.exists(candidate):
                 target_paths.append(candidate)
@@ -368,9 +371,9 @@ def sync_llms_txt():
  - Parity: Tier 1: $100 | Tier 2 (25% off): $75 | Tier 3 & 4 (50% off): $50 | Tier 5 (75% off): $25 | Tier 6 (Subsidized): $10.
   * **Business (Teams)**: **$200 USD** per service for **5 days live training + 5 days dedicated support** (10 days total coverage per service). Covers up to 20 participants (additional seats at **$100 USD per seat**).
  - Parity: Tier 1: $200 | Tier 2 (25% off): $150 | Tier 3 & 4 (50% off): $100 | Tier 5 (75% off): $50 | Tier 6 (Subsidized): $20.
-- **Comprehensive Business Training**: **$2,000 USD** for **60 days** (30 days live hands-on engineering training + 30 days guidance and detailed guides and materials). Covers cohorts up to 20 participants. Additional seats at **$100 USD per seat**. Clients are encouraged to choose services relevant to their work or interests.
+- **Comprehensive Business Training**: **$2,000 USD** for **40 days** (20 days live hands-on engineering training + 20 days guidance, Q&A and written guides). Covers cohorts up to 20 participants. Additional seats at **$100 USD per seat**. Clients are encouraged to choose services relevant to their work or interests.
   * Parity: Tier 1: $2,000 | Tier 2 (25% off): $1,500 | Tier 3 & 4 (50% off): $1,000 | Tier 5 (75% off): $500 | Tier 6: Custom Subsidized Relief.
-- **Comprehensive Personal Training**: **$1,000 USD** for **30 days** (15 days intensive 1-on-1 sprint + 15 days guidance and detailed guides and materials). Strictly for **one person only**. Clients are encouraged to choose services relevant to their work or interests.
+- **Comprehensive Personal Training**: **$1,000 USD** for **40 days** (20 days intensive 1-on-1 sprint + 20 days guidance, Q&A and written guides). Strictly for **one person only**. Clients are encouraged to choose services relevant to their work or interests.
   * Parity: Tier 1: $1,000 | Tier 2 (25% off): $750 | Tier 3 & 4 (50% off): $500 | Tier 5 (75% off): $250 | Tier 6: Custom Subsidized Relief ($100).
 - **Purchasing Power Parity (PPP)**: Available across all service pricing, covering 195 countries and dedicated relief tiers."""
 
@@ -387,7 +390,7 @@ def sync_llms_txt():
 def sync_all_pricing():
     print("--- Starting Central Pricing & Parity Sync Pass ---")
     sync_pricing_schema_json()
-    sync_root_schema_json()
+    sync_home_schema_json()
     sync_pricing_html_embedded_schema()
     sync_service_schema_files()
     sync_service_html_pages()

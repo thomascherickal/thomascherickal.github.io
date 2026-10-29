@@ -402,11 +402,11 @@ html_content = f"""<!DOCTYPE html>
         </div>
         <div class="metric-card card-emerald">
           <div class="metric-val val-emerald">10+</div>
-          <div class="metric-lbl">Coding Languages</div>
+          <div class="metric-lbl">Programming Languages</div>
         </div>
         <div class="metric-card card-purple">
-          <div class="metric-val val-purple">2016</div>
-          <div class="metric-lbl">Writing &amp; Coding Since</div>
+          <div class="metric-val val-purple">2020</div>
+          <div class="metric-lbl">The Digital Futurist since</div>
         </div>
       </div>
     </div>

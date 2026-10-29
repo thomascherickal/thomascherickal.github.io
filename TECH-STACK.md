@@ -47,7 +47,7 @@ graph TD
   end
 
   subgraph External Consumers [LLMs & Search Engines]
-    LDJSON["schema.json & JSON-LD Graphs"]
+    LDJSON["schema/home-schema.json & JSON-LD Graphs"]
     LLMS["llms.txt (Direct Agent Ingestion)"]
     MD["md-html-sync/ (50 Raw Markdown Mirrors)"]
   end
@@ -180,7 +180,7 @@ sequenceDiagram
   participant Master as build_components.py
   participant Pricing as sync_pricing.py
   participant Sync as md_html_sync.py
-  participant Targets as 50 HTML Files + schema.json + llms.txt + md-html-sync/
+  participant Targets as 50 HTML Files + schema/home-schema.json + llms.txt + md-html-sync/
 
   Dev->>Hook: Edit header.html / footer.html
   Hook->>Master: Auto-invoke build_components.py
@@ -188,7 +188,7 @@ sequenceDiagram
   Master->>Pricing: Execute sync_all_pricing()
   Pricing->>Targets: Recalculate PPP Tiers (0.75X, 0.50X, 0.25X, 0.10X)
   Pricing->>Targets: Update pricing.html JSON-LD, #individual-services-list, #parity-calculator
-  Pricing->>Targets: Sync schema/pricing-schema.json, 16 service schemas, schema.json & llms.txt
+  Pricing->>Targets: Sync schema/pricing-schema.json, 16 service schemas, schema/home-schema.json & llms.txt
   Master->>Sync: Execute run_sync()
   Sync->>Targets: Generate/Update clean .md mirrors in md-html-sync/
   Master-->>Dev: Build complete (Zero drift, 100% idempotent)
@@ -210,7 +210,7 @@ $ python3 python/build_components.py
 Build complete. Successfully updated 50 HTML files.
 --- Starting Central Pricing & Parity Sync Pass ---
 Updated schema/pricing-schema.json
-Updated schema.json
+Updated schema/home-schema.json
 Updated embedded JSON-LD in pricing.html
 Updated 16 service schema JSON files
 Updated 16 service HTML pricing sections
@@ -250,7 +250,7 @@ def calc_parity(min_val, max_val):
 Whenever pricing adjustments occur, `sync_pricing.py` updates:
 1. `schema/pricing-schema.json`: Complete machine-readable JSON schema defining all price structures.
 2. `pricing.html`: Synchronizes both the embedded `<script type="application/ld+json">` structured data and the interactive DOM elements (`#pricing-pillars` and `#service-rates`).
-3. `schema.json`: Master site graph cataloging all offers under Schema.org specifications.
+3. `schema/home-schema.json`: Master site graph cataloging all offers under Schema.org specifications.
 4. `llms.txt`: Real-time text documentation ingested by AI agents and researchers.
 
 ---
@@ -283,8 +283,8 @@ Beyond the web stack itself, this repository documents and serves as the gateway
 
 Search engine indexing and AI knowledge retrieval are first-class engineering citizens across this codebase:
 
-### Master Graph in `schema.json`
-I structured [`schema.json`](file:///home/thomas/GitHub.io/thomascherickal.github.io/schema.json) as a connected, validated Schema.org graph:
+### Master Graph in `schema/home-schema.json`
+I structured [`schema/home-schema.json`](file:///home/thomas/GitHub.io/thomascherickal.github.io/schema/home-schema.json) as a connected, validated Schema.org graph:
 - **`WebSite`**: Canonical root indexing, search action URL templates, and publisher references.
 - **`Organization`**: Brand entity (`The Digital Futurist`), logo URLs, founding date (`2020-05-05`), area served (`Worldwide`), and `knowsAbout` taxonomic array.
 - **`Person`**: Author identity (`Thomas Cherickal`), verified profiles (`sameAs`), and contact endpoints.
@@ -371,18 +371,18 @@ Changes not staged for commit:
 	modified:   portfolio.html
 	modified:   pricing.html
 	modified:   python/build_md_files.py
-	modified:   schema.json
+	modified:   schema/home-schema.json
 	deleted:    schema/claude-MCP.json
 	deleted:    schema/claude-agent-swarms.json
 	deleted:    schema/claude-cowork.json
-	modified:   Business-Services/business-service-agentic-ai-systems.html
-	modified:   Business-Services/business-service-ai-agents-orchestration.html
-	modified:   Business-Services/business-service-ai-budget-cost-limits-training.html
-	modified:   Business-Services/business-service-enterprise-workforce-ai-training.html
-	modified:   Business-Services/business-service-generative-ai-transformation.html
-	modified:   Business-Services/business-service-local-llms-cost-slashing.html
-	modified:   Business-Services/business-service-quantum-applications.html
-	modified:   Business-Services/business-service-workflow-automations.html
+	modified:   business-services/business-service-agentic-ai-systems.html
+	modified:   business-services/business-service-ai-agents-orchestration.html
+	modified:   business-services/business-service-ai-budget-cost-limits-training.html
+	modified:   business-services/business-service-enterprise-workforce-ai-training.html
+	modified:   business-services/business-service-generative-ai-transformation.html
+	modified:   business-services/business-service-local-llms-cost-slashing.html
+	modified:   business-services/business-service-quantum-applications.html
+	modified:   business-services/business-service-workflow-automations.html
 	modified:   sitemap.xml
 	modified:   writing.html
 ```

@@ -168,7 +168,7 @@ graph TD
   end
 
   subgraph Distribution & Discovery
-    Schema["schema.json (JSON-LD Master Graph)"]
+    Schema["schema/home-schema.json (JSON-LD Master Graph)"]
     LLMSTxt["llms.txt (Direct Agent Ingestion)"]
     Markdown["md-html-sync/ (50 Clean .md Mirrors)"]
     Edge["GitHub Pages Static Edge CDN"]
@@ -203,22 +203,22 @@ graph TD
 ### 2. The 16 Standalone Enterprise Transformation Services
 | Service | File | Transformation Objective |
 | :--- | :--- | :--- |
-| **Generative AI Transformation** | [`Business-Services/business-service-generative-ai-transformation.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/Business-Services/business-service-generative-ai-transformation.html) | Transitioning from basic chatbots to coordinated autonomous agent swarms. |
-| **Local LLMs & Cost Slashing** | [`Business-Services/business-service-local-llms-cost-slashing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/Business-Services/business-service-local-llms-cost-slashing.html) | Deploying private open-weight models (vLLM, Ollama) to slash token expenses by 60%–90%. |
-| **Claude Agent Orchestration** | [`Business-Services/business-service-ai-agents-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/Business-Services/business-service-ai-agents-orchestration.html) | Production state machines, long-term memory persistence & human-in-the-loop gates. |
-| **Hermes Agent Training** | [`Business-Services/business-service-agentic-ai-systems.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/Business-Services/business-service-agentic-ai-systems.html) | Self-hosted Hermes Agent on Linux, persistent session memory & sandboxed tool execution. |
-| **Workflow Automations** | [`Business-Services/business-service-workflow-automations.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/Business-Services/business-service-workflow-automations.html) | Enterprise local n8n, Make, IFTTT & open-source workflow pipelines with zero per-step SaaS fees. |
-| **Quantum Applications (Experimental)** | [`Business-Services/business-service-quantum-applications.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/Business-Services/business-service-quantum-applications.html) | IBM Qiskit, PennyLane, VQE, QAOA & Post-Quantum Cryptography (PQC) readiness. |
-| **AI Budget & Cost Control Training** | [`Business-Services/business-service-ai-budget-cost-limits-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/Business-Services/business-service-ai-budget-cost-limits-training.html) | LiteLLM gateways, departmental spend quotas, token caching & hard circuit breakers. |
-| **Enterprise Workforce AI Training** | [`Business-Services/business-service-enterprise-workforce-ai-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/Business-Services/business-service-enterprise-workforce-ai-training.html) | Role-specific bootcamps for Freshers, Staff, Developers, Managers & CXOs. |
-| **AI Developer Training** | [`Business-Services/business-service-ai-developer-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/Business-Services/business-service-ai-developer-training.html) | Coding agent mastery (Claude Code, Google Antigravity, OpenCode) & strict AI-assisted TDD. |
-| **Advanced AI Agents** | [`Business-Services/business-service-advanced-ai-agents.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/Business-Services/business-service-advanced-ai-agents.html) | Production hierarchical agent swarms, self-correction loops & persistent state machines. |
-| **Claude Basic Training** | [`Business-Services/business-service-claude-basic-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/Business-Services/business-service-claude-basic-training.html) | Model tier selection, structured prompt engineering with XML tags & team memory in Claude Projects. |
-| **Claude Advanced Training** | [`Business-Services/business-service-claude-advanced-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/Business-Services/business-service-claude-advanced-training.html) | Advanced CLI workflows, Claude Cowork in M365, secure MCP servers & frontier model orchestration. |
-| **Google Gemini Basic Training** | [`Business-Services/business-service-gemini-basic-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/Business-Services/business-service-gemini-basic-training.html) | Gemini Pro multimodal chat, Nano Banana conversational editing & Gemini Spark background agents. |
-| **Google Gemini Advanced Training** | [`Business-Services/business-service-gemini-advanced-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/Business-Services/business-service-gemini-advanced-training.html) | Antigravity multi-agent systems, deep thinking modes, flow video direction & hybrid ecosystems. |
-| **Deep Research & NotebookLM** | [`Business-Services/business-service-deep-research-notebooklm.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/Business-Services/business-service-deep-research-notebooklm.html) | Autonomous multi-source literature synthesis, corporate knowledge graphs & audio briefing generation. |
-| **Hybrid Quantum-Classical AI** | [`Business-Services/business-service-hybrid-quantum-ai.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/Business-Services/business-service-hybrid-quantum-ai.html) | Quantum kernel methods, hybrid QNN-LLM architectures, parameter shift rules & fault-tolerant simulation. |
+| **Generative AI Transformation** | [`business-services/business-service-generative-ai-transformation.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-generative-ai-transformation.html) | Transitioning from basic chatbots to coordinated autonomous agent swarms. |
+| **Local LLMs & Cost Slashing** | [`business-services/business-service-local-llms-cost-slashing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-local-llms-cost-slashing.html) | Deploying private open-weight models (vLLM, Ollama) to slash token expenses by 60%–90%. |
+| **Claude Agent Orchestration** | [`business-services/business-service-ai-agents-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-ai-agents-orchestration.html) | Production state machines, long-term memory persistence & human-in-the-loop gates. |
+| **Hermes Agent Training** | [`business-services/business-service-agentic-ai-systems.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-agentic-ai-systems.html) | Self-hosted Hermes Agent on Linux, persistent session memory & sandboxed tool execution. |
+| **Workflow Automations** | [`business-services/business-service-workflow-automations.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-workflow-automations.html) | Enterprise local n8n, Make, IFTTT & open-source workflow pipelines with zero per-step SaaS fees. |
+| **Quantum Applications (Experimental)** | [`business-services/business-service-quantum-applications.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-quantum-applications.html) | IBM Qiskit, PennyLane, VQE, QAOA & Post-Quantum Cryptography (PQC) readiness. |
+| **AI Budget & Cost Control Training** | [`business-services/business-service-ai-budget-cost-limits-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-ai-budget-cost-limits-training.html) | LiteLLM gateways, departmental spend quotas, token caching & hard circuit breakers. |
+| **Enterprise Workforce AI Training** | [`business-services/business-service-enterprise-workforce-ai-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-enterprise-workforce-ai-training.html) | Role-specific bootcamps for Freshers, Staff, Developers, Managers & CXOs. |
+| **AI Developer Training** | [`business-services/business-service-ai-developer-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-ai-developer-training.html) | Coding agent mastery (Claude Code, Google Antigravity, OpenCode) & strict AI-assisted TDD. |
+| **Advanced AI Agents** | [`business-services/business-service-advanced-ai-agents.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-advanced-ai-agents.html) | Production hierarchical agent swarms, self-correction loops & persistent state machines. |
+| **Claude Basic Training** | [`business-services/business-service-claude-basic-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-claude-basic-training.html) | Model tier selection, structured prompt engineering with XML tags & team memory in Claude Projects. |
+| **Claude Advanced Training** | [`business-services/business-service-claude-advanced-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-claude-advanced-training.html) | Advanced CLI workflows, Claude Cowork in M365, secure MCP servers & frontier model orchestration. |
+| **Google Gemini Basic Training** | [`business-services/business-service-gemini-basic-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-gemini-basic-training.html) | Gemini Pro multimodal chat, Nano Banana conversational editing & Gemini Spark background agents. |
+| **Google Gemini Advanced Training** | [`business-services/business-service-gemini-advanced-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-gemini-advanced-training.html) | Antigravity multi-agent systems, deep thinking modes, flow video direction & hybrid ecosystems. |
+| **Deep Research & NotebookLM** | [`business-services/business-service-deep-research-notebooklm.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-deep-research-notebooklm.html) | Autonomous multi-source literature synthesis, corporate knowledge graphs & audio briefing generation. |
+| **Hybrid Quantum-Classical AI** | [`business-services/business-service-hybrid-quantum-ai.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-hybrid-quantum-ai.html) | Quantum kernel methods, hybrid QNN-LLM architectures, parameter shift rules & fault-tolerant simulation. |
 
 ---
 
@@ -232,8 +232,8 @@ Clients have complete autonomy to choose how they engage:
    - **Purchasing Power Parity (PPP)**: Applies across all 6 tiers for all individual service picks.
 
 2. **Flagship Transformation Programs (Comprehensive Immersion)**:
-   - **Business Training Flagship**: **$2,000 USD for 60 days** (30 days live hands-on engineering training + 30 days guidance and detailed guides and materials). Includes cohorts up to 20 participants (extra seats at $100 USD per seat).
-   - **Personal Training Flagship**: **$1,000 USD for 30 days** (15 days intensive 1-on-1 sprint + 15 days guidance and detailed guides and materials). Strictly for 1 person only.
+   - **Business Training Flagship**: **$2,000 USD for 40 days** (20 days live hands-on engineering training + 20 days guidance and detailed guides and materials). Includes cohorts up to 20 participants (extra seats at $100 USD per seat).
+   - **Personal Training Flagship**: **$1,000 USD for 40 days** (15 days intensive 1-on-1 sprint + 15 days guidance and detailed guides and materials). Strictly for 1 person only.
 
 ### Cohort Pricing & Scale-Out Policy
 1. **Fixed Base Rate for up to 20 Seats**: Every Business engagement carries a fixed base rate covering up to 20 participants.
@@ -307,28 +307,28 @@ Included components in: google-nano-banana.html
 Included components in: index.html
 Included components in: personal-ai-training.html
 Included components in: pricing.html
-Included components in: Business-Services/business-service-advanced-ai-agents.html
-Included components in: Business-Services/business-service-agentic-ai-systems.html
-Included components in: Business-Services/business-service-ai-agents-orchestration.html
-Included components in: Business-Services/business-service-ai-budget-cost-limits-training.html
-Included components in: Business-Services/business-service-ai-developer-training.html
-Included components in: Business-Services/business-service-claude-advanced-training.html
-Included components in: Business-Services/business-service-claude-basic-training.html
-Included components in: Business-Services/business-service-deep-research-notebooklm.html
-Included components in: Business-Services/business-service-enterprise-workforce-ai-training.html
-Included components in: Business-Services/business-service-gemini-advanced-training.html
-Included components in: Business-Services/business-service-gemini-basic-training.html
-Included components in: Business-Services/business-service-generative-ai-transformation.html
-Included components in: Business-Services/business-service-hybrid-quantum-ai.html
-Included components in: Business-Services/business-service-local-llms-cost-slashing.html
-Included components in: Business-Services/business-service-quantum-applications.html
-Included components in: Business-Services/business-service-workflow-automations.html
+Included components in: business-services/business-service-advanced-ai-agents.html
+Included components in: business-services/business-service-agentic-ai-systems.html
+Included components in: business-services/business-service-ai-agents-orchestration.html
+Included components in: business-services/business-service-ai-budget-cost-limits-training.html
+Included components in: business-services/business-service-ai-developer-training.html
+Included components in: business-services/business-service-claude-advanced-training.html
+Included components in: business-services/business-service-claude-basic-training.html
+Included components in: business-services/business-service-deep-research-notebooklm.html
+Included components in: business-services/business-service-enterprise-workforce-ai-training.html
+Included components in: business-services/business-service-gemini-advanced-training.html
+Included components in: business-services/business-service-gemini-basic-training.html
+Included components in: business-services/business-service-generative-ai-transformation.html
+Included components in: business-services/business-service-hybrid-quantum-ai.html
+Included components in: business-services/business-service-local-llms-cost-slashing.html
+Included components in: business-services/business-service-quantum-applications.html
+Included components in: business-services/business-service-workflow-automations.html
 Included components in: writing.html
 
 Build complete. Successfully updated 50 HTML files.
 --- Starting Central Pricing & Parity Sync Pass ---
 Updated schema/pricing-schema.json
-Updated schema.json
+Updated schema/home-schema.json
 Updated embedded JSON-LD in pricing.html
 Updated 16 service schema JSON files
 Updated 16 service HTML pricing sections

@@ -1,4 +1,4 @@
-# Claude and Microsoft 365: Office Work, Delegated
+# Claude Desktop & M365: Office Work, Delegated
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  

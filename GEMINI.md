@@ -66,3 +66,8 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - **Run `python3 python/md_html_sync.py` only when committing**, not after every change.
 - Keeps Markdown files in `md-html-sync/` synchronized with their corresponding HTML pages.
 - When full Markdown generation is required across all pages, run `python3 python/build_md_files.py`.
+
+## Link Verification (`python/check_links.py`)
+- **Run `python3 python/check_links.py` only before every commit**, not after every individual edit.
+- If any broken links or missing anchor targets are detected, fix them immediately before finalizing and committing.
+

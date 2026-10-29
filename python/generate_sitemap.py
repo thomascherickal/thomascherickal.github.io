@@ -29,54 +29,54 @@ CORE_PAGES = [
 
 # 16 Business Service Pages
 BUSINESS_SERVICES = [
-    "Business-Services/business-service-generative-ai-transformation.html",
-    "Business-Services/business-service-local-llms-cost-slashing.html",
-    "Business-Services/business-service-ai-agents-orchestration.html",
-    "Business-Services/business-service-agentic-ai-systems.html",
-    "Business-Services/business-service-workflow-automations.html",
-    "Business-Services/business-service-quantum-applications.html",
-    "Business-Services/business-service-ai-budget-cost-limits-training.html",
-    "Business-Services/business-service-enterprise-workforce-ai-training.html",
-    "Business-Services/business-service-ai-developer-training.html",
-    "Business-Services/business-service-advanced-ai-agents.html",
-    "Business-Services/business-service-deep-research-notebooklm.html",
-    "Business-Services/business-service-claude-basic-training.html",
-    "Business-Services/business-service-claude-advanced-training.html",
-    "Business-Services/business-service-gemini-basic-training.html",
-    "Business-Services/business-service-gemini-advanced-training.html",
-    "Business-Services/business-service-hybrid-quantum-ai.html",
+    "business-services/business-service-generative-ai-transformation.html",
+    "business-services/business-service-local-llms-cost-slashing.html",
+    "business-services/business-service-ai-agents-orchestration.html",
+    "business-services/business-service-agentic-ai-systems.html",
+    "business-services/business-service-workflow-automations.html",
+    "business-services/business-service-quantum-applications.html",
+    "business-services/business-service-ai-budget-cost-limits-training.html",
+    "business-services/business-service-enterprise-workforce-ai-training.html",
+    "business-services/business-service-ai-developer-training.html",
+    "business-services/business-service-advanced-ai-agents.html",
+    "business-services/business-service-deep-research-notebooklm.html",
+    "business-services/business-service-claude-basic-training.html",
+    "business-services/business-service-claude-advanced-training.html",
+    "business-services/business-service-gemini-basic-training.html",
+    "business-services/business-service-gemini-advanced-training.html",
+    "business-services/business-service-hybrid-quantum-ai.html",
 ]
 
-# 12 Claude Guide Pages
+# 12 claude Guide Pages
 CLAUDE_GUIDES = [
-    "Claude/claude-101.html",
-    "Claude/claude-features.html",
-    "Claude/claude-code.html",
-    "Claude/claude-cowork.html",
-    "Claude/claude-skills.html",
-    "Claude/claude-custom-mcp.html",
-    "Claude/claude-plugins.html",
-    "Claude/claude-connectors.html",
-    "Claude/claude-orchestration.html",
-    "Claude/claude-design.html",
-    "Claude/claude-science.html",
-    "Claude/claude-local-llms.html",
+    "claude/claude-101.html",
+    "claude/claude-features.html",
+    "claude/claude-code.html",
+    "claude/claude-cowork.html",
+    "claude/claude-skills.html",
+    "claude/claude-custom-mcp.html",
+    "claude/claude-plugins.html",
+    "claude/claude-connectors.html",
+    "claude/claude-orchestration.html",
+    "claude/claude-design.html",
+    "claude/claude-science.html",
+    "claude/claude-local-llms.html",
 ]
 
-# 12 Google Gemini Guide Pages
+# 12 google Gemini Guide Pages
 GEMINI_GUIDES = [
-    "Google/google-gemini-101.html",
-    "Google/google-ai-studio.html",
-    "Google/google-antigravity-ide.html",
-    "Google/google-gemini-deep-think.html",
-    "Google/google-nano-banana.html",
-    "Google/google-flow.html",
-    "Google/google-gemini-spark.html",
-    "Google/google-gemini-notebook.html",
-    "Google/google-gemma.html",
-    "Google/google-deep-research.html",
-    "Google/google-gemini-4-models.html",
-    "Google/google-gemini-agents.html",
+    "google/google-gemini-101.html",
+    "google/google-ai-studio.html",
+    "google/google-antigravity-ide.html",
+    "google/google-gemini-deep-think.html",
+    "google/google-nano-banana.html",
+    "google/google-flow.html",
+    "google/google-gemini-spark.html",
+    "google/google-gemini-notebook.html",
+    "google/google-gemma.html",
+    "google/google-deep-research.html",
+    "google/google-gemini-4-models.html",
+    "google/google-gemini-agents.html",
 ]
 
 def get_git_lastmod(rel_path: str) -> str:
@@ -113,15 +113,15 @@ def generate_sitemap():
         lastmod = get_git_lastmod(file_path)
         entries.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>")
 
-    # 3. Claude Guides (12 pages)
-    entries.append("\n  <!-- Claude Guides -->")
+    # 3. claude Guides (12 pages)
+    entries.append("\n  <!-- claude Guides -->")
     for file_path in CLAUDE_GUIDES:
         loc = f"{BASE_URL}/{file_path}"
         lastmod = get_git_lastmod(file_path)
         entries.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>")
 
-    # 4. Google Gemini Guides (12 pages)
-    entries.append("\n  <!-- Google Gemini Guides -->")
+    # 4. google Gemini Guides (12 pages)
+    entries.append("\n  <!-- google Gemini Guides -->")
     for file_path in GEMINI_GUIDES:
         loc = f"{BASE_URL}/{file_path}"
         lastmod = get_git_lastmod(file_path)

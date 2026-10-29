@@ -2948,13 +2948,13 @@ footer {
 
 .home-nav-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
   margin-top: 1.75rem;
   perspective: 1200px;
 }
 
-/* Selected Enterprise AI Transformation Services — 4 Role Cards in One Row on Laptop */
+/* Selected Enterprise AI Transformation Services - 4 Role Cards in One Row on Laptop */
 .home-services-grid {
   display: grid !important;
   grid-template-columns: repeat(4, 1fr) !important;
@@ -3382,21 +3382,21 @@ footer {
 }
 
 /* Responsive Media Queries for home-nav-grid */
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .home-nav-grid {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0.75rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
   }
   .home-nav-card,
   .diataxis-card,
   .agentic-card {
-    padding: 1rem 0.8rem;
+    padding: 1.15rem 0.95rem;
   }
   .home-nav-title {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
   .home-nav-desc {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
   }
 }
 

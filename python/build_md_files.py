@@ -980,8 +980,8 @@ def main():
 
     agent_files = sorted(
         glob.glob(os.path.join(REPO_DIR, "agents-*.html")) +
-        glob.glob(os.path.join(REPO_DIR, "Claude", "*.html")) +
-        glob.glob(os.path.join(REPO_DIR, "Google", "*.html")) +
+        glob.glob(os.path.join(REPO_DIR, "claude", "*.html")) +
+        glob.glob(os.path.join(REPO_DIR, "google", "*.html")) +
         glob.glob(os.path.join(REPO_DIR, "claude-*.html")) +
         [g for g in glob.glob(os.path.join(REPO_DIR, "google-*.html")) if not os.path.basename(g).startswith("google43d")]
     )

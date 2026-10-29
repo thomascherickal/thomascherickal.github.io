@@ -1,12 +1,12 @@
-# Gemini Argon
+# Gemini 4 Argon
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// FRONTIER REASONING & AGENTIC MASTERY**  
-> **Inside Gemini Argon: Google DeepMind's frontier reasoning architecture featuring 1M token output decodes via background chained execution, top rankings on the Vals Index, and cooperative multi-agent benchmarks.**
+> **Inside Gemini 4 Argon: Google DeepMind's frontier reasoning architecture featuring 1M token output decodes via background chained execution, top rankings on the Vals Index, and cooperative multi-agent benchmarks.**
 
 ---
 
-## What is Gemini Argon?
+## What is Gemini 4 Argon?
 
 Gemini Argon (referenced in API architectures as gemini-4-argon) is Google DeepMind's flagship frontier reasoning model. Announced on 30 September 2026 and released to general availability on 13 October 2026 across the Gemini API and Google AI Studio, Argon is engineered for long-horizon task execution, autonomous software analysis, and complex agentic workflows.
 
@@ -43,7 +43,7 @@ A balanced evaluation of Argon requires understanding both its capabilities and 
 
 ---
 
-## The Future of Gemini Argon
+## The Future of Gemini 4 Argon
 
 Argon marks Google DeepMind's ongoing transition toward long-horizon agentic autonomy and multi-agent coordination. With expanding support in Google AI Studio and Google Antigravity IDE, future developments focus on reducing continuation latency, expanding developer tooling integration, and refining multi-agent coordination frameworks across enterprise software stacks.
 

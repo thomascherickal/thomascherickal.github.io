@@ -11,10 +11,9 @@
 ### 1. How is Payment made?
 *Payment:
  Methods & Invoicing · FAQ #49*  
-Payment by PayPal or bank transfer (wire, ACH, SEPA, SWIFT or NEFT). Invoices are issued in USD or the
- local-currency equivalent.
+Payment by Stripe, PayPal, or direct bank transfer (Wire, ACH, SEPA, SWIFT or NEFT). Supported currencies include USD, EUR, GBP, AUD, CAD, and INR. Invoices are issued in USD or the local-currency equivalent.
 
-- PayPal: Frictionless instant
+- Stripe & PayPal: Frictionless instant
  settlement supporting business accounts, all major international credit/debit cards, and
  multi-currency balances with zero regional exchange impediments.
 
@@ -39,19 +38,19 @@ Settlement links and wire routing instructions are dispatched directly upon reac
 All payments are distributed into five
  equal installments (20% per installment), mapped directly to completed training days:
 
-- 30-Day Enterprise AI
- Transformation: Five equal installments, due after Days 6, 12, 18, 24 and 30 of training.
+- 40-Day Business AI
+ Transformation ($2,000): Five equal installments (20% / $400 each), due after Days 4, 8, 12, 16 and 20 of completed training.
 
-- 15-Day Personal AI
- Transformation: Five equal installments, due after Days 3, 6, 9, 12 and 15 of training.
+- 40-Day Personal AI
+ Transformation ($1,000): Five equal installments (20% / $200 each), due after Days 4, 8, 12, 16 and 20 of completed training.
 
-- Included Post-Training
- Support: The extensive subsequent support periods (30 days of included support for
- Enterprise; 15 days of included
- support with daily questions and doubts clarification and light skim guides for Personal)
- carry zero additional cost.
+- 10-Day Individual Services ($100 / $200): Five equal installments (20% each), due after Days 1, 2, 3, 4, and 5 of completed training, nothing upfront.
 
-You never pay ahead of delivery - each installment is settled strictly as milestones are achieved.
+- Included Support Phase: The subsequent support periods (20 days of guidance, assistance, and written guides for
+ Business; 20 days of guidance, assistance, and written guides for Personal; 5 days for Individual services)
+ carry zero additional cost. All written materials licensed under Apache 2.0.
+
+All schedules count business days (excluding Saturdays and Sundays). You never pay ahead of delivery - each installment is settled strictly as milestones are achieved.
 
 ---
 
@@ -62,22 +61,17 @@ Nothing. There is strictly zero upfront
  payment ($0 advance). You do not pay a single dollar prior to commencing training.
 
 - Payment Made Only After
- Training: Payment installments are initiated only after completing 3 or 5 full days of
- training (3 days for Personal AI Transformation, or 5 days for Enterprise AI
- Transformation).
+ Training: In Flagships, installments are initiated only after completing Day 4 of live training. In Individual Services, installments are initiated after Day 1.
 
-- Live Daily Immersion (4h Enterprise /
- 2h Individual): Every training day entails 4 hours daily for enterprise cohorts
- or 2 hours daily for
+- Live Daily Immersion (4h Business /
+ 4h Individual): Every training day entails 4 hours daily for business cohorts
+ or 4 hours daily for
  individuals of live, hands-on engineering, pair-programming, and real-world system
- architecture deployed directly into your repositories.
+ architecture (Saturdays and Sundays excluded). Your team builds working agent prototypes during the labs, with code and guides licensed under Apache 2.0.
 
-- Zero-Risk Guarantee: If after
- the first 3 or 5 days you are not completely satisfied with the caliber of instruction, codebase
- progress, and production AI capability delivered, you owe nothing and walk away with zero financial
- obligation.
+- Zero-Risk Guarantee: In Flagships, walk away owing nothing if not satisfied after the first 2 days of completed training. In Individual Services, walk away owing nothing if not satisfied after the first 1 day.
 
-This policy guarantees complete risk elimination, aligning our incentives entirely with your concrete
+This policy guarantees complete risk elimination, aligning my incentives entirely with your concrete
  engineering success.
 
 ---
@@ -111,7 +105,7 @@ Graduates emerge operating as high-leverage solo powerhouses
 ### 5. What is the investment and structure for Personal Training?
 *Personal:
  Pricing Offer · FAQ #24*  
-Personal Training is $1,000 USD in Tier 1 for 30 days total (15 days training, + 15 days guidance and detailed guides and materials). Strictly for 1 person only. Clients are encouraged to choose services relevant to their work or interests.
+Personal Training is $1,000 USD in Tier 1 for 40 days total (20 days training, + 20 days guidance, Q&A and written guides). Strictly for 1 person only. Clients are encouraged to choose services relevant to their work or interests.
 
 - Zero Corporate Overhead: For independent builders, corporate coordination
  (multi-tier approvals, vendor compliance, multi-tenant sandboxes) disappears entirely, moving
@@ -127,10 +121,10 @@ This transparent pricing guarantees that individual creators access world-class 
 
 ---
 
-### 6. How does Personal AI Transformation draw from the full 16-service catalogue?
+### 6. How does Personal AI Transformation draw from the 16-service catalogue?
 *Personal:
  16-Service Catalogue · FAQ #25*  
-Rather than forcing clients to purchase separate standalone packages, the 16-service catalogue is modular: you choose the focus areas relevant to your work, and we tailor the 15-day intensive sprint around your live stack:
+Rather than forcing clients to purchase separate standalone packages, the 16-service personal catalogue is modular: you choose the focus areas relevant to your work, and I tailor the 20-day intensive live sprint around your live stack:
 
 - 1. Generative AI Transformation: End-to-end agentic workflow redesign and
  autonomous task delegation.
@@ -153,8 +147,7 @@ Rather than forcing clients to purchase separate standalone packages, the 16-ser
 - 7. AI Budget & Cost Governance: Hard spend ceiling reverse proxies and
  semantic prompt caching.
 
-- 8. Workforce AI Enablement: Scaling operational leverage across your personal
- network or apprentices.
+- 8. Enterprise Workforce Training: Non-technical professional AI acceleration across legal, finance, analysis, and operational tasks.
 
 - 9. AI Developer Training: Test-Driven Development (TDD) paired with Claude Code
  and terminal agents.
@@ -162,10 +155,10 @@ Rather than forcing clients to purchase separate standalone packages, the 16-ser
 - 10. Advanced AI Agents: Custom Model Context Protocol (MCP) servers and stateful
  execution graphs.
 
-- 11. Claude Basic Mastery: Prompt caching, context window hygiene, and system
+- 11. Claude Basic Training: Prompt caching, context window hygiene, and system
  instruction engineering.
 
-- 12. Claude Advanced Orchestration: Multi-agent state machines, subagent
+- 12. Claude Advanced Training: Multi-agent state machines, subagent
  dispatching, and evaluators.
 
 - 13. Gemini Basic Training: Multimodal prompting, Google Workspace automation, and
@@ -180,7 +173,7 @@ Rather than forcing clients to purchase separate standalone packages, the 16-ser
 - 16. Hybrid Quantum-Classical AI: Quantum-classical optimization pipelines with
  PennyLane and Qiskit.
 
-We selectively emphasize the disciplines most crucial to your immediate products and business goals.
+I selectively emphasize the disciplines most crucial to your immediate products and career goals.
 
 ---
 
@@ -229,35 +222,34 @@ No. Personal Training is strictly for one person only (private 1-on-1
  private local models, and personal productivity workflow.
 
 - Business Training for Teams: If you wish to train a founding team, corporate
- department, or developer cohort, explore our Business Training ($2,000 USD for 60 Days),
+ department, or developer cohort, explore our Business Training ($2,000 USD for 40 Days),
  which covers up to 20 participants in its fixed base rate (with additional seats at $100/head scaled
  by parity).
 
 ---
 
-### 9. What is the structure of Personal AI Training, and how do the 15 days of training
- plus 15 days of included support work?
+### 9. What is the structure of Personal AI Training, and how do the 20 days of training
+ plus 20 days of included support work?
 *Personal:
- 15+15 Cadence · FAQ #28*  
+ 20+20 Cadence · FAQ #28*  
 Personal AI Transformation is structured as an intensive two-phase acceleration program strictly for
- one person only: 15 days of intensive 1-on-1 sprint training drawing on the full 16-service catalogue (you choose the focus areas relevant to your work), immediately followed by 15 days of included support with daily questions and doubts clarification, and source materials and guides that are light and easy to skim.
+ one person only: 20 days of intensive 1-on-1 sprint training drawing on the full 16-service catalogue (you choose the focus areas relevant to your work), immediately followed by 20 days of included support with daily questions and doubts clarification, and guidance, assistance, and written guides licensed under Apache 2.0 (total 40-day experience).
 
-- Phase 1 (Days 1-15) · Intensive 1-on-1 Training: Direct
+- Phase 1 (Days 1-20) · Intensive 1-on-1 Training: Direct
  pair-programming covering personal AI workflows, private local LLMs (Ollama/vLLM), Claude agent
- teams, autonomous Hermes loops, custom MCP servers, AI budget ceilings, and AI-assisted TDD.
+ teams, autonomous agent loops, custom MCP servers, AI budget ceilings, and AI-assisted TDD.
 
-- Phase 2 (Days 16-30) · 15 Days Included Support & Daily Doubts Clarification:
- 15 consecutive days of direct support, daily questions and doubts clarification as you execute daily
- client work, plus access to source materials and guides that are light and easy to skim.
+- Phase 2 (Days 21-40) · 20 Days Included Support & Daily Doubts Clarification:
+ 20 consecutive business days of direct support, daily questions and doubts clarification as you execute daily
+ work, plus access to guidance, assistance, implementation, Q&A, and written guides.
 
 - 16-Service Catalogue Synthesis: No compromise - you access local LLM quantization,
  autonomous agents, and tool calling tailored to your machine.
 
-- 100% Intellectual Property Handover: Full ownership of all synthesized code, MCP
- tools, and configuration runbooks.
+- Apache 2.0 Licensing: All synthesized custom code, agent templates, written guides, and configuration runbooks fall under permissive Apache 2.0 licensing.
 
-Our explicit guarantee: 15 days of intensive instruction plus 15 days of included daily doubts
- clarification and lightweight guides ensures immediate, compounding ROI in your daily work.
+Our explicit guarantee: 20 days of intensive instruction plus 20 days of included daily doubts
+ clarification and guides ensures immediate, compounding ROI in your daily work.
 
 ---
 
@@ -279,7 +271,7 @@ Individual training is engineered to transform independent software consultants,
 - Workflow Automation: Automating proposal generation, invoice processing, client
  communications, and multi-file code refactoring.
 
-Graduates gain the operational bandwidth of an entire 4-5 person development squad while preserving
+Graduates substantially multiply their development velocity and project capacity with agent workflows while preserving
  complete personal autonomy.
 
 ---
@@ -289,12 +281,12 @@ Graduates gain the operational bandwidth of an entire 4-5 person development squ
 *Recipient:
  Freshers · FAQ #02*  
 Freshers and recent computer science graduates often experience a steep disconnect between theoretical
- academic models and production-grade engineering. Our 30-day intensive bridges this chasm by
+ academic models and production-grade engineering. Our 40-day intensive (20 days live training + 20 days support) bridges this chasm by
  instilling disciplined AI-assisted engineering habits from day one.
 
 - AI-Assisted Test-Driven Development (TDD): Juniors learn to write strict, failing
- unit and integration tests before generating code with Claude Code, eliminating silent
- hallucinations.
+ unit and integration tests before generating code with Claude Code, catching hallucinations and
+ preventing regressions early through verifiable unit contracts and sound architectural judgment.
 
 - Tool Calling & MCP Integration: Hands-on training on the Model Context
  Protocol (MCP) to connect models safely to databases, filesystems, and APIs.
@@ -409,7 +401,7 @@ CXOs receive definitive strategic frameworks to lead enterprise AI transformatio
 *Company:
  Founders · FAQ #07*  
 For founders, speed to customer validation is existential. Our curriculum enables founders to collapse
- traditional 6-month product development cycles into a single 30-day sprint.
+ multi-month product development cycles into focused execution sprints during the 20-day live training program.
 
 - Zero-to-One Scaffolding: Rapid generation of database schemas, API backends, and
  frontend components using Claude Code and terminal agent loops.
@@ -445,7 +437,7 @@ Entrepreneurs build scalable, highly profitable digital enterprises without need
 
 ---
 
-### 18. How does the 30-day intensive program multiply delivery velocity for seed and
+### 18. How does the 40-day intensive program multiply delivery velocity for seed and
  Series A startups?
 *Company:
  Startups · FAQ #09*  
@@ -454,7 +446,7 @@ Backed startups must demonstrate exceptional growth and delivery velocity to rea
  agent tooling into your live codebases.
 
 - Headcount Multiplication: Raising a small team's output with agent-assisted
- delivery, measured against your own sprint baseline..
+ delivery, measured against your own sprint baseline.
 
 - Local Inference Cost Slashing: Conserving critical venture runway by running
  high-throughput background tasks on private local LLM servers.
@@ -538,28 +530,27 @@ Global MNCs gain a consistent, world-class standard of agentic software engineer
 ---
 
 ### 22. What is the pricing model for enterprise training, and what does the
- 20-participant quota and 30-day training plus 30-day support guarantee cover?
+ 20-participant quota and 20-day training plus 20-day support guarantee cover?
 *Pricing:
  Enterprise Guarantee · FAQ #13*  
 Our Business Training bookings feature a fixed base investment of $2,000 USD covering up to 20
- participants for 60 days (30 days training + 30 days guidance and detailed guides and materials).
+ participants for 40 days (20 days training + 20 days guidance, assistance, and written guides licensed under Apache 2.0).
  There are no hidden licensing royalties or hourly surprise fees.
 
-- 30 Days Live Training Sprint: 30 calendar days (4 intensive weeks) of interactive
+- 20 Days Live Training Sprint: 20 business days (4 intensive weeks, Mon-Fri, excluding weekends) of interactive
  instructor-led instruction, live pair-programming sandboxes, and milestone deliverables.
 
-- 30 Days of Included Guidance & Materials: 30 consecutive calendar days of post-training guidance, detailed guides, and source materials.
+- 20 Days of Included Guidance & Materials: 20 business days (excluding weekends) of post-training guidance, detailed guides, and source materials under Apache 2.0.
 
 - Complete Digital Assets & Repos: Architecture blueprints, prompt design
- handbooks, and reproducible starter repositories included.
+ handbooks, and reproducible starter repositories included under Apache 2.0.
 
 - Up to 20 Learners Included: Base fee covers up to 20 participants. Additional
  seats scale transparently at $100 USD per head (adjusted by country parity tier).
 
-- Graduate Discord Community & 100% IP: Access to the alumni Discord and
- complete unrestricted intellectual property assignment.
+- Apache 2.0 Open Licensing: Unrestricted commercial use, modification, and deployment with attribution.
 
-This 30+30 dual guarantee ensures your organization achieves lasting capability with zero risk of
+This 20+20 dual guarantee ensures your organization achieves lasting capability with zero risk of
  implementation stall.
 
 ---
@@ -610,7 +601,7 @@ For organizations training 50 to 5,000+ employees across multiple engineering di
 - Executive Advisory Retainers: Optional fractional advisory retainers for
  continuous C-suite architectural guidance post-rollout.
 
-I reply to every inquiry within one week (a little busy with current work).
+Response SLA: 7 days reply, 30 days start. Remote only worldwide.
 
 ---
 
@@ -779,7 +770,7 @@ Tier 6 engagements are reviewed directly by founder Thomas Cherickal on a missio
  discount) pricing?
 *Parity:
  Tier 5 Qualification · FAQ #46*  
-Qualification for Tier 5 (75% Parity Discount / $500 USD per 1-month service) is
+Qualification for Tier 5 (75% Parity Discount: $500 USD for Flagship Business, $250 USD for Flagship Personal, $50 USD for Individual Business, and $25 USD for Individual Personal) is
  straightforward and designed to support public education, open science, and humanitarian missions with
  minimal bureaucracy:
 
@@ -798,7 +789,7 @@ Qualification for Tier 5 (75% Parity Discount / $500 USD per 1-month service) is
 - Additional seats: Tier 5 cohorts get the 75% discount on extra seats too: $25
  per additional participant instead of the standard $100.
 
-I reply to every inquiry within one week (a little busy with current work).
+Response SLA: 7 days reply, 30 days start. Remote only worldwide.
 
 ---
 
@@ -888,8 +879,8 @@ Relying exclusively on proprietary cloud model APIs for high-volume, recurring o
  and GGUF 4-bit/8-bit quantization on consumer GPUs or on-premise servers.
 
 - Workload Offloading: Diverting routine classification, JSON formatting, entity
- extraction, and preliminary code linting from cloud APIs to local models (Qwen3.5, DeepSeek V3.2,
- Gemma 4).
+ extraction, and preliminary code linting from cloud APIs to local models (Qwen, DeepSeek,
+ Gemma, Mistral).
 
 - Zero Data Egress: Operating 100% air-gapped systems where sensitive enterprise
  data never crosses public internet boundaries, fulfilling strict compliance requirements.
@@ -911,7 +902,7 @@ OpenCode represents the global open-source movement for developer agentic autono
  paired directly with local or private endpoints.
 
 - State-of-the-Art Open Weights: Harnessing frontier open coding models including
- current open-weight coding models such as Qwen3.5 and DeepSeek V3.2.
+ current open-weight coding models such as Qwen, DeepSeek, and Gemma.
 
 - Complete Code Privacy: Zero proprietary source code is uploaded to external
  telemetry or third-party training pipelines.
@@ -947,29 +938,31 @@ Your team retains total architectural sovereignty, effortlessly adopting new fro
 
 ---
 
-### 40. What is the day-by-day cadence and structure of a 30-day training contract?
+### 40. What is the day-by-day cadence and structure of a 40-day flagship training contract?
 *Contract:
- 30-Day Cadence · FAQ #32*  
-Each training contract spans 30 calendar days (4 intensive weekly milestones) of
- hands-on architectural and coding immersion:
+ 20-Day Live Training (40 Days Total) · FAQ #32*  
+Each Flagship training contract spans 40 business days (Mon-Fri, excluding weekends), structured into 20 days of live immersive training (4 hours per day, 80 live hours total) followed by 20 days of included ongoing support and implementation guidance:
 
-- Week 1 (Days 1-7) - Architectural Assessment, Toolchains & Sandboxes: System
+- Week 1 (Days 1-5) - Architectural Assessment, Toolchains & Sandboxes: System
  discovery, tooling verification, prompt engineering design patterns, and Claude agent reasoning loop
  primitives.
 
-- Week 2 (Days 8-15) - Agent Orchestration, Skills & MCP Servers: Claude Code
- CLI, Claude's desktop and computer-use features, custom capability Skills, Model Context Protocol
+- Week 2 (Days 6-10) - Agent Scaffolding, Skills & MCP Servers: Claude Code
+ CLI, Claude desktop and computer-use features, custom capability Skills, Model Context Protocol
  (MCP) servers, and hierarchical agent teams.
 
-- Week 3 (Days 16-22) - Local LLM Clusters, OpenCode & AI-Assisted TDD:
+- Week 3 (Days 11-15) - Local LLM Clusters, OpenCode & AI-Assisted TDD:
  High-throughput local model serving (vLLM/Ollama), OpenCode model routing, test-driven hallucination
  prevention, and guardrails.
 
-- Week 4 (Days 23-30) - Hard Budget Governance, Automated Evals & IP Handover:
- Token spend caps, circuit breakers, Ragas/DeepEval benchmarks, capstone live verification, and 100%
- intellectual property transfer.
+- Week 4 (Days 16-20) - Hard Budget Governance, Automated Evals & Handover:
+ Token spend caps, circuit breakers, Ragas/DeepEval benchmarks, capstone live verification, and Apache 2.0
+ licensing handover.
 
-Participants conclude the 30-day program with fully operational, sovereign multi-agent systems
+- Phase 2 (Days 21-40) - 20 Days Included Ongoing Support: Dedicated asynchronous advisory,
+ daily questions and doubts clarification, PR code reviews, and implementation assistance.
+
+Participants conclude the 40-day program with fully operational, sovereign multi-agent systems
  running in production.
 
 ---
@@ -989,22 +982,21 @@ Every training engagement includes an exhaustive suite of production-ready digit
 - Prompt Design System Handbook: Curated libraries of structured system prompts,
  zero-shot/few-shot templates, and anti-hallucination guardrails.
 
-- Automated Evals Test Suite: Python testing harnesses using Ragas and DeepEval to
+- Automated Evals Test Suite: Python testing harnesses using automated eval frameworks to
  benchmark accuracy, latency, and context recall.
 
-- 100% IP Transfer Deed: Full copyright assignment transferring all synthesized
- code, guides, and documentation directly to your organization.
+- Apache 2.0 Open Licensing: Full open-source license allowing unrestricted commercial use, adaptation, deployment, and distribution with attribution.
 
 All assets are clean, fully commented, and versioned for your internal engineering wiki.
 
 ---
 
-### 42. How does the 30-day post-training support and free consultation for doubts work?
+### 42. How does the 20-day post-training support and free consultation for doubts work?
 *Support:
- 30-Day Window · FAQ #34*  
+ 20-Day Window · FAQ #34*  
 True engineering learning happens when your team begins implementing concepts on live production
- workloads. Therefore, every contract includes 30 consecutive calendar days of ongoing support
- and free doubt consultation starting immediately after the 30-day training sprint.
+ workloads. Therefore, every flagship contract includes 20 business days (excluding weekends) of ongoing support
+ and free doubt consultation starting immediately after the 20-day live training sprint (for individual services, 5 days of support follow the 5-day training).
 
 - Direct Asynchronous Advisory: Dedicated communication channels for developers to
  ask questions, submit runtime stack traces, and debug agent edge cases.
@@ -1013,12 +1005,11 @@ True engineering learning happens when your team begins implementing concepts on
  requests, MCP server schemas, and model routing rules.
 
 - Model Drift & Deprecation Fixes: Immediate guidance if provider APIs update
- or model weights deprecate during your 30-day window.
+ or model weights deprecate during your 20-day window.
 
-- Scheduled Doubt Sessions: Video check-in calls to clarify architectural
- uncertainties and ensure stable production rollouts.
+- Scheduled Doubt Sessions: Check-in calls to clarify architectural uncertainties and ensure stable production rollouts.
 
-Your engineering team is never left stranded after the initial classroom sessions conclude.
+Your engineering team is never left stranded after the live training sessions conclude.
 
 ---
 
@@ -1158,8 +1149,7 @@ Financial sustainability is central to enterprise AI success. We teach comprehen
 - Circuit Breakers: Halting recursive agent loops automatically if anomalous token
  consumption spikes exceed specified thresholds.
 
-- Semantic Prompt Caching: Prompt caching cuts the cost of cached input tokens by
- 90% to 97.5%, depending on the Claude model.
+- Semantic Prompt Caching: Cached input reads cost 90% to 97.5% less than normal input, depending on the model; writing to the cache costs 1.25x (5-minute) or 2x (1-hour) the base input price.
 
 - Tiered Inference Offloading: Routing 70%+ of bulk operations to local vLLM or
  Ollama instances, reserving high-cost frontier calls exclusively for complex decisions.
@@ -1175,17 +1165,15 @@ Engineering leadership gains total financial predictability over company-wide AI
 Every service engagement is governed by an explicit duration and included support guarantee tailored
  to organizational scale:
 
-- Enterprise AI Transformation Services: Strictly 30 days of training AND
- 30 days of included support (total 60 days of enterprise protection). Week 1
- Architectural Scoping; Week 2 Core Pipeline & Agent Orchestration; Week 3 Validation & TDD;
- Week 4 Production Handover & IP Transfer, followed by 30 consecutive calendar days of technical
- support.
+- Flagship Business AI Training: Strictly 20 days of live intensive training AND
+ 20 days of included support (total 40 days of coverage, 4 hours per day, 80 live training hours total), covering up to 20 participants (with additional seats at $100/head scaled by parity). Week 1: Architectural Scoping & Sandboxes; Week 2: Core Pipeline & Agent Orchestration; Week 3: Local LLMs & Test-Driven Automation; Week 4: Production Handover & Apache 2.0 Licensing, followed by 20 business days (excluding weekends) of technical assistance and doubt resolution.
 
-- Personal AI Transformation: Strictly 15 days of intensive training
- drawing on the full 16-service catalogue AND 15 days of included daily work support (total 30-day
- experience), giving individuals hands-on assistance as they execute daily professional tasks.
+- Flagship Personal AI Training: Strictly 20 days of intensive 1-on-1 training
+ drawing on the full 16-service catalogue AND 20 days of included daily work support (total 40 days of coverage, 4 hours per day, 80 live training hours total) for 1 person only.
 
-- Free Concurrency: All enterprise services can freely overlap or run concurrently
+- Individual Pick Services: Strictly 5 days of intensive live training AND 5 days of included support (total 10 days of coverage, 4 hours per day, 20 live training hours total), priced at $200 USD (Business, 20 seats) or $100 USD (Personal, 1 person) in Tier 1 with universal parity scaling.
+
+- Free Concurrency: All enterprise services and programs can freely overlap or run concurrently
  according to your exact business velocity.
 
 This dual guarantee ensures neither enterprises nor solo founders ever face implementation stall.
@@ -1240,11 +1228,10 @@ Multi-track overlapping ensures that every department transforms synchronously w
 We adhere to strict, uncompromising enterprise security protocols designed to satisfy legal and
  regulatory audits:
 
-- Strict Mutual NDAs: Comprehensive non-disclosure agreements executed prior to
+- Client or Vendor NDAs: Comprehensive non-disclosure agreements executed prior to
  reviewing confidential architecture schemas or codebases.
 
-- 100% Client IP Assignment: All custom code, configuration runbooks, prompt
- templates, and agent definitions developed during the contract belong 100% to you.
+- Apache 2.0 Licensing: All custom code, configuration runbooks, prompt templates, agent definitions, written guides, training materials, operating manuals, tutorials, and deep dives authored by Thomas Cherickal fall under the Apache 2.0 license, granting unrestricted commercial freedom.
 
 - Zero Model Training: Client source code, data records, and prompt histories are
  never used to train or fine-tune public models.
@@ -1252,11 +1239,11 @@ We adhere to strict, uncompromising enterprise security protocols designed to sa
 - Air-Gapped & Private VPC Support: Sprints can be conducted entirely within
  your own isolated private cloud VPC or local on-premise hardware.
 
-Your intellectual property, proprietary data, and competitive secrets remain strictly protected.
+Your proprietary data, confidential schemas, and competitive secrets remain strictly protected.
 
 ---
 
-### 53. How does an organization or individual book a 30-day training contract?
+### 53. How does an organization or individual book a training engagement?
 *Engagement:
  Onboarding · FAQ #42*  
 Booking an engagement follows a straightforward, rapid 3-step onboarding workflow:
@@ -1266,10 +1253,10 @@ Booking an engagement follows a straightforward, rapid 3-step onboarding workflo
  form below.
 
 - 2. Receive Proposal & Parity Quote: Within 24 hours, you receive a tailored
- 30-day syllabus outline and milestone-based quote reflecting your verified parity tier.
+ program syllabus outline and milestone-based quote reflecting your verified parity tier.
 
 - 3. Alignment & Launch: Upon contract execution and milestone agreement, we
- establish your sandbox environment and commence the 30-day sprint within 5 to 7 business days.
+ establish your sandbox environment and commence the engagement within 5 to 7 business days.
 
 Inquire today to secure your team's preferred cohort dates.
 

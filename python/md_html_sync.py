@@ -49,7 +49,7 @@ def get_html_path(html_name: str) -> str:
     direct = os.path.join(REPO_DIR, html_name)
     if os.path.exists(direct):
         return direct
-    for subdir in ["Business-Services", "Personal-Services", "Claude", "Google"]:
+    for subdir in ["business-services", "personal-services", "claude", "google"]:
         sub_path = os.path.join(REPO_DIR, subdir, html_name)
         if os.path.exists(sub_path):
             return sub_path
@@ -58,8 +58,8 @@ def get_html_path(html_name: str) -> str:
 # Auto-discover service pages from root, Business-Services, and Personal-Services
 service_files = sorted(
     glob.glob(os.path.join(REPO_DIR, "service-*.html")) +
-    glob.glob(os.path.join(REPO_DIR, "Business-Services", "*.html")) +
-    glob.glob(os.path.join(REPO_DIR, "Personal-Services", "*.html"))
+    glob.glob(os.path.join(REPO_DIR, "business-services", "*.html")) +
+    glob.glob(os.path.join(REPO_DIR, "personal-services", "*.html"))
 )
 for s in service_files:
     base = os.path.basename(s)
@@ -68,7 +68,7 @@ for s in service_files:
 # Auto-discover agent orchestration & claude pages
 agent_files = sorted(
     glob.glob(os.path.join(REPO_DIR, "agents-*.html")) +
-    glob.glob(os.path.join(REPO_DIR, "Claude", "*.html")) +
+    glob.glob(os.path.join(REPO_DIR, "claude", "*.html")) +
     glob.glob(os.path.join(REPO_DIR, "claude-*.html"))
 )
 for a in agent_files:
@@ -77,7 +77,7 @@ for a in agent_files:
 
 # Auto-discover google gemini pages
 google_files = sorted(
-    glob.glob(os.path.join(REPO_DIR, "Google", "*.html")) +
+    glob.glob(os.path.join(REPO_DIR, "google", "*.html")) +
     glob.glob(os.path.join(REPO_DIR, "google-*.html"))
 )
 for g in google_files:
@@ -252,22 +252,22 @@ def sync_html_to_md(html_name: str, md_name: str):
                 md_lines.append(f"{idx}. [{label}]({href}) - {desc}")
         else:
             md_lines.extend([
-                "1. [Generative AI Transformation](Business-Services/business-service-generative-ai-transformation.html) - Move your business from one-off chatbot prompts to coordinated teams of Claude agents that carry real work.",
-                "2. [Local LLMs & Cost Slashing](Business-Services/business-service-local-llms-cost-slashing.html) - Cut recurring cloud API bills by 60% to 90% by running open-weight models privately with Ollama, vLLM, and llama.cpp.",
-                "3. [Claude AI Agent Orchestration](Business-Services/business-service-ai-agents-orchestration.html) - Master the principles of Claude AI agent orchestration to run multi-agent swarms at scale.",
-                "4. [Hermes Agent](Business-Services/business-service-agentic-ai-systems.html) - Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own infrastructure.",
-                "5. [Workflow Automations](Business-Services/business-service-workflow-automations.html) - Hands-on training in self-hosted local n8n, Make, IFTTT, and open-source automation tools (Activepieces, Windmill) for recurring daily work.",
-                "6. [Applied Quantum (Experimental)](Business-Services/business-service-quantum-applications.html) - Exploratory quantum computing advisory for enterprise use cases: algorithm simulation with IBM Qiskit and PennyLane.",
-                "7. [AI Budget Training](Business-Services/business-service-ai-budget-cost-limits-training.html) - Train staff across all levels to control AI spending: establish hard spending caps per session and month.",
-                "8. [Enterprise Workforce AI Training](Business-Services/business-service-enterprise-workforce-ai-training.html) - Live and remote corporate AI training delivered across distinct tracks: prompting, AI-assisted TDD, and executive roadmaps.",
-                "9. [AI Developer Training](Business-Services/business-service-ai-developer-training.html) - Hands-on bootcamps training developer teams on terminal and IDE coding agents (Claude Code, Google Antigravity, OpenCode).",
-                "10. [Advanced AI Agents](Business-Services/business-service-advanced-ai-agents.html) - Build production autonomous agent systems with hierarchical teams of Claude agents for business-critical workloads.",
-                "11. [Claude Basic Training](Business-Services/business-service-claude-basic-training.html) - Foundational enablement for corporate staff and knowledge workers: choosing the right model between Haiku, Sonnet, and Opus.",
-                "12. [Claude Advanced Training](Business-Services/business-service-claude-advanced-training.html) - Technical masterclass for senior developers and AI architects: advanced Claude Code CLI workflows, Claude Cowork, and MCP servers.",
-                "13. [Gemini Basic Training](Business-Services/business-service-gemini-basic-training.html) - Foundational enterprise Google Gemini workforce enablement: Gemini Pro, Gemini Chat, Nano Banana, Google Flow, and Gemini Spark.",
-                "14. [Gemini Advanced Training](Business-Services/business-service-gemini-advanced-training.html) - Advanced technical masterclass: Google AI Studio, Google Antigravity IDE, Gemini Deep Think, Gemma fine-tuning, and Gemini Argon.",
-                "15. [Deep Research & NotebookLM](Business-Services/business-service-deep-research-notebooklm.html) - Autonomous literature synthesis, source-grounded knowledge graphs with NotebookLM, and multi-document intelligence.",
-                "16. [Hybrid Quantum-Classical AI](Business-Services/business-service-hybrid-quantum-ai.html) - Hybrid quantum-classical optimization pipelines with VQE, QAOA, QSVM, PennyLane, and Qiskit."
+                "1. [Generative AI Transformation](business-services/business-service-generative-ai-transformation.html) - Move your business from one-off chatbot prompts to coordinated teams of Claude agents that carry real work.",
+                "2. [Local LLMs & Cost Slashing](business-services/business-service-local-llms-cost-slashing.html) - Cut recurring cloud API bills by 60% to 90% by running open-weight models privately with Ollama, vLLM, and llama.cpp.",
+                "3. [Claude AI Agent Orchestration](business-services/business-service-ai-agents-orchestration.html) - Master the principles of Claude AI agent orchestration to run multi-agent swarms at scale.",
+                "4. [Hermes Agent](business-services/business-service-agentic-ai-systems.html) - Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own infrastructure.",
+                "5. [Workflow Automations](business-services/business-service-workflow-automations.html) - Hands-on training in self-hosted local n8n, Make, IFTTT, and open-source automation tools (Activepieces, Windmill) for recurring daily work.",
+                "6. [Applied Quantum (Experimental)](business-services/business-service-quantum-applications.html) - Exploratory quantum computing advisory for enterprise use cases: algorithm simulation with IBM Qiskit and PennyLane.",
+                "7. [AI Budget Training](business-services/business-service-ai-budget-cost-limits-training.html) - Train staff across all levels to control AI spending: establish hard spending caps per session and month.",
+                "8. [Enterprise Workforce AI Training](business-services/business-service-enterprise-workforce-ai-training.html) - Live and remote corporate AI training delivered across distinct tracks: prompting, AI-assisted TDD, and executive roadmaps.",
+                "9. [AI Developer Training](business-services/business-service-ai-developer-training.html) - Hands-on bootcamps training developer teams on terminal and IDE coding agents (Claude Code, Google Antigravity, OpenCode).",
+                "10. [Advanced AI Agents](business-services/business-service-advanced-ai-agents.html) - Build production autonomous agent systems with hierarchical teams of Claude agents for business-critical workloads.",
+                "11. [Claude Basic Training](business-services/business-service-claude-basic-training.html) - Foundational enablement for corporate staff and knowledge workers: choosing the right model between Haiku, Sonnet, and Opus.",
+                "12. [Claude Advanced Training](business-services/business-service-claude-advanced-training.html) - Technical masterclass for senior developers and AI architects: advanced Claude Code CLI workflows, Claude Cowork, and MCP servers.",
+                "13. [Gemini Basic Training](business-services/business-service-gemini-basic-training.html) - Foundational enterprise Google Gemini workforce enablement: Gemini Pro, Gemini Chat, Nano Banana, Google Flow, and Gemini Spark.",
+                "14. [Gemini Advanced Training](business-services/business-service-gemini-advanced-training.html) - Advanced technical masterclass: Google AI Studio, Google Antigravity IDE, Gemini Deep Think, Gemma fine-tuning, and Gemini Argon.",
+                "15. [Deep Research & NotebookLM](business-services/business-service-deep-research-notebooklm.html) - Autonomous literature synthesis, source-grounded knowledge graphs with NotebookLM, and multi-document intelligence.",
+                "16. [Hybrid Quantum-Classical AI](business-services/business-service-hybrid-quantum-ai.html) - Hybrid quantum-classical optimization pipelines with VQE, QAOA, QSVM, PennyLane, and Qiskit."
             ])
 
         md_lines.extend([

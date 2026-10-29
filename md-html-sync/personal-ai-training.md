@@ -1,4 +1,4 @@
-# Personal Training: $1,000 for 30 Days (15d Training + 15d Guidance & Materials)
+# Personal Training: $1,000 for 40 Days (20d Training + 20d Guidance & Materials)
 ## Enterprise AI Transformation Service - Thomas Cherickal
 
 > **// THE VALUE PROPOSITION & RATIONALE**  

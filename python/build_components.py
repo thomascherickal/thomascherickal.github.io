@@ -51,10 +51,10 @@ def build():
 
     html_files = sorted(
         glob.glob(os.path.join(REPO_DIR, "*.html")) +
-        glob.glob(os.path.join(REPO_DIR, "Business-Services", "*.html")) +
-        glob.glob(os.path.join(REPO_DIR, "Personal-Services", "*.html")) +
-        glob.glob(os.path.join(REPO_DIR, "Google", "*.html")) +
-        glob.glob(os.path.join(REPO_DIR, "Claude", "*.html"))
+        glob.glob(os.path.join(REPO_DIR, "business-services", "*.html")) +
+        glob.glob(os.path.join(REPO_DIR, "personal-services", "*.html")) +
+        glob.glob(os.path.join(REPO_DIR, "google", "*.html")) +
+        glob.glob(os.path.join(REPO_DIR, "claude", "*.html"))
     )
     excluded = {
         os.path.abspath(HEADER_SRC),
@@ -77,11 +77,11 @@ def build():
             subdir_nav = nav_html
             # Replace assets/, css/, and root html links that don't already have ../
             subdir_nav = re.sub(r'src="(?!https?://|\.\./|data:)([^"]+)"', r'src="../\1"', subdir_nav)
-            subdir_nav = re.sub(r'href="(?!(?:https?://|mailto:|#|\.\./|Business-Services/|Personal-Services/|Google/|Claude/))([^"]+)"', r'href="../\1"', subdir_nav)
-            subdir_nav = subdir_nav.replace('href="Business-Services/', 'href="../Business-Services/')
-            subdir_nav = subdir_nav.replace('href="Personal-Services/', 'href="../Personal-Services/')
-            subdir_nav = subdir_nav.replace('href="Google/', 'href="../Google/')
-            subdir_nav = subdir_nav.replace('href="Claude/', 'href="../Claude/')
+            subdir_nav = re.sub(r'href="(?!(?:https?://|mailto:|#|\.\./|business-services/|personal-services/|google/|claude/))([^"]+)"', r'href="../\1"', subdir_nav)
+            subdir_nav = subdir_nav.replace('href="business-services/', 'href="../business-services/')
+            subdir_nav = subdir_nav.replace('href="personal-services/', 'href="../personal-services/')
+            subdir_nav = subdir_nav.replace('href="google/', 'href="../google/')
+            subdir_nav = subdir_nav.replace('href="claude/', 'href="../claude/')
 
             subdir_footer = footer_html
             subdir_footer = re.sub(r'src="(?!https?://|\.\./|data:)([^"]+)"', r'src="../\1"', subdir_footer)
