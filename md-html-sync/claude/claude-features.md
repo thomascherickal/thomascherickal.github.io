@@ -8,7 +8,7 @@
 
 ## Table of Contents
 
-Modern generative AI has moved decisively beyond single-turn conversational chatbots. Enterprise workflows demand four interconnected superpowers: persistent organizational memory, real-time interactive execution environments, autonomous multi-hour research agents, and standardized bridges to enterprise systems. Anthropic implements this architecture through four foundational features in Claude: Projects, Artifacts, Deep Research, and Extensibility.
+Modern generative AI has moved decisively beyond single-turn conversational chatbots. Business workflows demand four interconnected superpowers: persistent organizational memory, real-time interactive execution environments, autonomous multi-hour research agents, and standardized bridges to business systems. Anthropic implements this architecture through four foundational features in Claude: Projects, Artifacts, Deep Research, and Extensibility.
 
 1. Projects in Claude: Grounded Knowledge
 2. Artifacts: Interactive Co-Creation
@@ -22,11 +22,11 @@ Modern generative AI has moved decisively beyond single-turn conversational chat
 
 ## 1. Projects in Claude: Persistent Grounded Knowledge
 
-Claude Projects provide persistent contextual workspaces for teams and enterprises. Rather than re-pasting schemas, brand tone guidelines, and API documentation into every conversation, a Project binds up to 200,000+ tokens of foundational knowledge to an isolated work stream.
+Claude Projects provide persistent contextual workspaces for teams and businesses. Rather than re-pasting schemas, brand tone guidelines, and API documentation into every conversation, a Project binds up to 200,000+ tokens of foundational knowledge to an isolated work stream.
 
 - Project Knowledge Base: Ingests internal repositories, PDFs, style guides, and product specifications that remain permanently active across all chats in the project.
 - Tailored Custom Instructions: Defines persistent persona rules (e.g., "Act as Principal Cloud Architect enforcing strict zero-trust and PCI-DSS compliance") without polluting global account settings.
-- Shared Team Collaboration: In Claude Team and Enterprise, project members collaborate on common conversation histories and view shared artifacts with role-based access.
+- Shared Team Collaboration: In Claude Team and Business, project members collaborate on common conversation histories and view shared artifacts with role-based access.
 
 ---
 
@@ -52,11 +52,11 @@ Deep Research represents Claude's transition into an autonomous investigative an
 
 ## 4. Extensibility: Model Context Protocol (MCP) & Beyond
 
-Claude’s true power is unleashed when it interacts directly with enterprise infrastructure. Anthropic’s open-source Model Context Protocol (MCP) establishes an open standard connecting AI models to external tools, data lakes, and terminal environments.
+Claude’s true power is unleashed when it interacts directly with business infrastructure. Anthropic’s open-source Model Context Protocol (MCP) establishes an open standard connecting AI models to external tools, data lakes, and terminal environments.
 
 - Open Standard Protocol (MCP): Decouples models from bespoke API integrations. An MCP host enables Claude to query SQL databases, inspect GitHub repositories, and trigger Slack notifications seamlessly.
 - Computer & Browser Use: Through Claude in Chrome and the Anthropic Computer Use API, agents click, scroll, fill forms, and automate complex desktop workflows.
-- Office & Workspace Integration: Deep hooks across Microsoft 365 (Word, Excel, PowerPoint, Outlook) synchronize analysis across enterprise suites.
+- Office & Workspace Integration: Deep hooks across Microsoft 365 (Word, Excel, PowerPoint, Outlook) synchronize analysis across business suites.
 
 ---
 
@@ -64,7 +64,7 @@ Claude’s true power is unleashed when it interacts directly with enterprise in
 
 ---
 
-## 6. Enterprise Implementation Playbook
+## 6. Business Implementation Playbook
 
 To build an agile, high-leverage AI capability within your organization, roll out these features in a 3-step sequence:
 

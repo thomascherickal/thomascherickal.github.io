@@ -1,5 +1,5 @@
 # Claude Advanced Training
-## Enterprise AI Transformation Service - Thomas Cherickal
+## Business AI Transformation Service - Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 12**  
 > **Intensive technical masterclass for senior developers, technical leads and AI architects: Claude Code, Claude

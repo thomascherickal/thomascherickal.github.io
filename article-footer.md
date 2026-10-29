@@ -7,7 +7,7 @@
 
 ### Let's Work Together
 
-Thomas writes and codes for power users, developers, enterprises, and executive audiences on AI agents, enterprise AI deployment, local LLM deployment, quantum computing content, and emerging technology. Available for technology coding and writing engagements and AI/quantum code or content consulting.
+Thomas writes and codes for power users, developers, businesses, and executive audiences on AI agents, business AI deployment, local LLM deployment, quantum computing content, and emerging technology. Available for technology coding and writing engagements and AI/quantum code or content consulting.
 
 - **Technical Writing** - deep, sourced, developer-grade long-form content
 - **Generative AI Consulting** - building complex Generative AI systems

@@ -39,7 +39,7 @@ Scripts run through bash, so only their output enters the context window. A skil
 
 ## 2. Where Skills Run
 
-- Claude apps: custom skills are uploaded or created under Customize > Skills, on Free, Pro, Max, Team and Enterprise plans with code execution turned on.
+- Claude apps: custom skills are uploaded or created under Customize > Skills, on Free, Pro, Max, Team and Business plans with code execution turned on.
 - Claude Code: skills are folders in ~/.claude/skills/ for personal use or .claude/skills/ inside a repository, callable as /skill-name.
 - Claude API: skills attach to the code execution container by skill_id and are shared across a workspace.
 - Agent SDK: skills are discovered from the filesystem and limited with a skills option, per the Agent SDK skills documentation.
@@ -54,7 +54,7 @@ The Claude Code guide to extending Claude with skills gives a practical trigger:
 
 ### Step 2: Write The SKILL.md File
 
-A skill needs YAML frontmatter between --- markers and Markdown instructions below it. Here is an enterprise release-notes skill directory layout and definition:
+A skill needs YAML frontmatter between --- markers and Markdown instructions below it. Here is an business release-notes skill directory layout and definition:
 
 #### `Folder Layout - writing-release-notes`
 ```python
@@ -176,7 +176,7 @@ zip -r meeting-notes.zip meeting-notes
 # Send to > Compressed (zipped) folder
 ```
 
-5. Upload and enable it. On Free, Pro and Max plans, first turn on "Code execution and file creation" under Settings > Capabilities; on Team and Enterprise plans an owner enables it for the organization. Then open Customize > Skills, click +, choose Create skill, then Upload a skill, select the ZIP and switch the skill on. These steps follow the Help Center guide to using skills in Claude.
+5. Upload and enable it. On Free, Pro and Max plans, first turn on "Code execution and file creation" under Settings > Capabilities; on Team and Business plans an owner enables it for the organization. Then open Customize > Skills, click +, choose Create skill, then Upload a skill, select the ZIP and switch the skill on. These steps follow the Help Center guide to using skills in Claude.
 
 6. Test both directions. Paste a messy set of notes and ask for a recap; the reply should follow the template exactly, with gaps listed under Open questions. Then ask for something nearby that should not trigger the skill, such as "draft a meeting invite for Thursday", and confirm the template does not appear. If the skill never fires, sharpen the description or name it directly: "Use my meeting-notes skill on these notes."
 
@@ -437,7 +437,7 @@ Claude Code ships native skills including /doctor, /code-review, /debug, /batch,
 
 ### Partner Skills & Platforms
 
-The Claude blog post on organization skills added a partner directory in December 2025, naming Notion, Canva, Figma, Atlassian, Cloudflare, Sentry, Vercel and Zapier, which Team and Enterprise admins can provision company-wide. The Help Center article on what skills are explains how to browse it under Customize > Skills.
+The Claude blog post on organization skills added a partner directory in December 2025, naming Notion, Canva, Figma, Atlassian, Cloudflare, Sentry, Vercel and Zapier, which Team and Business admins can provision company-wide. The Help Center article on what skills are explains how to browse it under Customize > Skills.
 
 The Agent Skills open standard at agentskills.io lets the same folder work across ecosystem providers. OpenAI's guide to building skills for ChatGPT and Codex builds on it, and GitHub's Copilot documentation on agent skills lists support in Copilot CLI, cloud agent, and VS Code agent mode. For maximum cross-platform portability, stick strictly to the standard's frontmatter fields rather than Claude Code extensions such as context: fork.
 
@@ -457,7 +457,7 @@ The usage data shows the macroeconomic direction. Anthropic's September 2025 Eco
 
 So far, tasks are being automated significantly faster than whole jobs. In the June 2026 Economic Index survey of Claude users, over a third of roughly 9,700 respondents expected AI to handle most of their daily tasks within a year, yet only 10% rated losing their own job as likely. Intriguingly, over a third put a junior colleague's odds of job loss above 60%. While the sample skews technical and is self-reported, the signal is unmistakable.
 
-Skills turn the automation of a documented procedure from a multi-month engineering project into something a domain expert can write on a Friday afternoon. The most exposed roles are those whose steps fit cleanly in a SKILL.md, and the professionals who write, test, and maintain those repositories hold the procedural know-how that enterprise agents depend on. To start, turn the instruction you paste into Claude most often into a skill, and explore skill-creator and pdf in Anthropic's repository today.
+Skills turn the automation of a documented procedure from a multi-month engineering project into something a domain expert can write on a Friday afternoon. The most exposed roles are those whose steps fit cleanly in a SKILL.md, and the professionals who write, test, and maintain those repositories hold the procedural know-how that business agents depend on. To start, turn the instruction you paste into Claude most often into a skill, and explore skill-creator and pdf in Anthropic's repository today.
 
 ---
 

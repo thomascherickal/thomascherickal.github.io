@@ -92,7 +92,7 @@ This report documents the resolution of all items requested across Parts 2 throu
   - Updated factual strip: `500+ Publications · 10+ Platforms · 8+ Languages · Writing since 2020`.
 - [x] **4.6 Guarantee Boilerplate**:
   - Retained single clean statement on index: "Every service runs for one month, and services can run in parallel."
-  - Consolidated terms on pricing and faqs: "Enterprise: 30 days of live training plus 30 days of included support, for up to 20 participants. Personal: 15 days of one-to-one training drawing on the full 16-service catalogue plus 15 days of daily Q&A support, with short reference guides. One person only."
+  - Consolidated terms on pricing and faqs: "Business: 30 days of live training plus 30 days of included support, for up to 20 participants. Personal: 15 days of one-to-one training drawing on the full 16-service catalogue plus 15 days of daily Q&A support, with short reference guides. One person only."
 - [x] **4.7 CTA Block**:
   - Tightened CTA copy: "Claude agent orchestration, consulting, mentoring and training for teams that want to work AI-first."
 - [x] **4.8 Publication Card Blurbs & Sorting**:
@@ -102,7 +102,7 @@ This report documents the resolution of all items requested across Parts 2 throu
 
 ### Part 5: Naming, Navigation, Forms & Footer
 - [x] **5.1 Standardize 16 Service Names**:
-  - Standardized service names across site: `Hermes Agent Training`, `Workflow Automation Training`, `Quantum Applications (Experimental)`, `AI Budget & Cost Control Training`, `Enterprise Workforce AI Training`, `Claude Agent Orchestration`.
+  - Standardized service names across site: `Hermes Agent Training`, `Workflow Automation Training`, `Quantum Applications (Experimental)`, `AI Budget & Cost Control Training`, `Business Workforce AI Training`, `Claude Agent Orchestration`.
 - [x] **5.2 Contact Form Options**:
   - Contact dropdown updated with all 16 standardized services + Personal AI Transformation (16-service catalogue) + Other.
 - [x] **5.3 Header Navigation**:
@@ -131,7 +131,7 @@ This report documents the resolution of all items requested across Parts 2 throu
 - [x] Personal page: "work moves faster than it can inside a committee", "Hands-on working proficiency in...".
 - [x] Expertise: "Hands-on quantum circuit modeling".
 - [x] Pricing & Collaboration: "Revisions to roadmaps, syllabi and deliverables throughout the engagement and support window".
-- [x] FAQ #13 & #35: "Access to the alumni Discord", "enterprise guarantee".
+- [x] FAQ #13 & #35: "Access to the alumni Discord", "business guarantee".
 - [x] Workflow Automations: "Automate recurring office tasks across sales, finance and engineering, with private data options."
 - [x] Local LLMs: "Moving routine workloads to local models can cut recurring cloud API bills by 60% to 90%; your figure depends on volume and hardware."
 - [x] FAQ #15: "For larger rollouts, I quote per cohort and run train-the-trainer sessions so your L&D team can continue the program."

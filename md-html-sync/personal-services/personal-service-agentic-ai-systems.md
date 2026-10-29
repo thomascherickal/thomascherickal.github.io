@@ -1,5 +1,5 @@
 # Agentic AI Assistants - Hermes Agent
-## Enterprise AI Transformation Service - Thomas Cherickal
+## Business AI Transformation Service - Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 04**  
 > **Deploying Hermes Agent, the open-source agent from Nous Research, as a self-hosted assistant that remembers

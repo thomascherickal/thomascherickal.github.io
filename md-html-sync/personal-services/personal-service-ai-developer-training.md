@@ -1,5 +1,5 @@
 # AI Developer Training
-## Enterprise AI Transformation Service - Thomas Cherickal
+## Business AI Transformation Service - Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 09**  
 > **Hands-on bootcamps that train developer teams to work with terminal and IDE coding agents (Claude Code, Google

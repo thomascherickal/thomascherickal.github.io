@@ -282,7 +282,7 @@ def generate_metrics():
     md.append("")
     md.append(f"- **Total Public HTML Pages**: **{len(html_files)}**")
     md.append(f"- **Core Landing & Portal Pages**: **{len(core_pages)}** (`" + "`, `".join(sorted(core_pages)) + "`)")
-    md.append(f"- **Dedicated Service Pages (`service-*.html`)**: **{len(service_pages)}** (Full enterprise curriculum and architecture deep-dives)")
+    md.append(f"- **Dedicated Service Pages (`service-*.html`)**: **{len(service_pages)}** (Full business curriculum and architecture deep-dives)")
     md.append(f"- **Claude Guides & Frameworks (`claude-*.html`)**: **{len(claude_pages)}** (Claude Code, Cowork, Skills, MCP, Orchestration, Plugins, Science, Local LLMs, Features)")
     md.append(f"- **Google AI & Gemini Guides (`google-*.html`)**: **{len(google_pages)}** (Gemini 101, Antigravity IDE, Studio, Flow, Deep Research, Spark, Argon, Gemma, Nano Banana)")
     md.append("")

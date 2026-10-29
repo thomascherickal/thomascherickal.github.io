@@ -1,5 +1,5 @@
 # Local LLMs & Cost Slashing
-## Enterprise AI Transformation Service - Thomas Cherickal
+## Business AI Transformation Service - Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 02**  
 > **Cutting recurring cloud API bills by 60-90% by running open-weight models privately with Ollama, vLLM, llama.cpp

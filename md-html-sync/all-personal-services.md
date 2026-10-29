@@ -14,7 +14,7 @@ Individual Builders & Leaders
 
 ## Selected Personal AI Services
 
-Tailored 1-on-1 private mentorship and hands-on skill acceleration across the exact same high-impact enterprise curriculum. All services are one month long and include private direct advisory sessions, custom code reviews, and sample architectures.
+Tailored 1-on-1 private mentorship and hands-on skill acceleration across the exact same high-impact business curriculum. All services are one month long and include private direct advisory sessions, custom code reviews, and sample architectures.
 
 ### Generative AI Transformation
 
@@ -58,13 +58,6 @@ Hands-on training in self-hosted local n8n, Make, IFTTT, and open-source automat
 
 Master personal AI spending control: set hard spending caps per session and month, configure token budgets, leverage prompt caching, and route low-complexity tasks to free and local models.
 
-### Workforce & Executive AI Training
-
-**Category**: `Role-Based Tracks`  
-**Link**: [Workforce & Executive AI Training](personal-services/personal-service-enterprise-workforce-ai-training.html)
-
-Private mentorship for managers, directors, and independent consultants: executive briefings, strategic AI roadmaps, governance, and safe AI use frameworks.
-
 ### AI Developer Training
 
 **Category**: `CLI & TDD`  
@@ -93,12 +86,19 @@ Technical masterclass for senior developers: advanced Claude Code CLI workflows,
 
 Advanced technical mentoring: Google AI Studio, Google Antigravity IDE, Gemini Deep Think extended reasoning, open-weight Google Gemma fine-tuning, and autonomous Gemini Agents with MCP.
 
-### Deep Research & NotebookLM
+### Continuous Learning & AI Second Brain
 
-**Category**: `Autonomous Research`  
-**Link**: [Deep Research & NotebookLM](personal-services/personal-service-deep-research-notebooklm.html)
+**Category**: `Knowledge Systems`  
+**Link**: [Continuous Learning & AI Second Brain](personal-services/personal-service-continuous-learning.html)
 
-Autonomous personal research and knowledge management: long-horizon Gemini Deep Research agents, multi-source conflict resolution, verified citation graphs, and personal NotebookLM knowledge bases.
+Architect an autonomous personal knowledge engine using NotebookLM, Obsidian vector memory, active context retrieval, and automated research synthesis.
+
+### Work-Life Balance & Autonomous Offloading
+
+**Category**: `Executive Offloading`  
+**Link**: [Work-Life Balance & Autonomous Offloading](personal-services/personal-service-worklife-balance.html)
+
+Reclaim 15-20 hours weekly through autonomous inbox triage, biological focus time-blocking, automated task delegation, and cognitive load minimization.
 
 ## Ready to Accelerate Your AI Skills?
 

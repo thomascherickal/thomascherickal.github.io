@@ -2,7 +2,7 @@
 ## Generative AI Consultant
 
 > **// TECHNICAL ROLES & CAPABILITIES DIRECTORY**  
-> **10 specialized capability areas, 10 curated tech-stack chip groups, and the Python, Rust, and quantum execution tooling behind every enterprise delivery.**
+> **10 specialized capability areas, 10 curated tech-stack chip groups, and the Python, Rust, and quantum execution tooling behind every business delivery.**
 
 ---
 
@@ -45,7 +45,7 @@ Prompt caching (cached reads cost 90% to 97.5% less, depending on the model), ef
 
 ### 6. Early Quantum Systems Explorer
 Hands-on quantum circuit modeling using IBM Qiskit and
- PennyLane. Variational quantum algorithms (VQE, QAOA), Quantum Machine Learning (QML), and enterprise
+ PennyLane. Variational quantum algorithms (VQE, QAOA), Quantum Machine Learning (QML), and business
  quantum readiness.
 
 ---
@@ -77,7 +77,7 @@ In-depth technical systems design covering Tokio async runtimes, Burn & Candle
 
 ### 11. Role #11
 Structured engagement models for engineering teams, fast-growing tech startups, and forward-looking
- enterprises - covering Claude Agent Teams, the Google Gemini AI Ecosystem (Google AI Studio, Google
+ businesses - covering Claude Agent Teams, the Google Gemini AI Ecosystem (Google AI Studio, Google
  Antigravity, Gemini Deep Think, Gemini Agents & Gemini 4 Argon), live & remote workforce training,
  Local LLM cost
  reduction, and quantum systems exploration.

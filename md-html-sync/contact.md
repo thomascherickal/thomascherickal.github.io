@@ -19,7 +19,7 @@
 
 ## Engagement Standards
 
-- **Response Time**: All verified enterprise queries receive a detailed response within 24 business hours.
+- **Response Time**: All verified business queries receive a detailed response within 24 business hours.
 - **Non-Disclosure Agreements (NDAs)**: Mutual NDAs executed prior to reviewing proprietary codebase or confidential data.
 - **Initial Audit**: Every engagement begins with an objective scoping call to identify ROI bottlenecks.
 - **Purchasing Power Parity**: 6 PPP tiers apply across 195 countries to ensure accessible global rates.

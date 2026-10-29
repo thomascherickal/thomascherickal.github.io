@@ -1,5 +1,5 @@
 # Advanced AI Agents
-## Enterprise AI Transformation Service - Thomas Cherickal
+## Business AI Transformation Service - Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 10**  
 > **Building production autonomous agent systems: hierarchical teams of Claude agents, self-correcting loops driven
@@ -100,7 +100,7 @@
  feedback loops that work toward passing code.
 - Sandboxed Runtimes: Docker isolation with dropped capabilities
  and restricted network access.
-- Enterprise IP & Handover: Full IP transfer, runbooks and
+- Business IP & Handover: Full IP transfer, runbooks and
  30-day support.
 
 ---

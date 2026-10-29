@@ -367,14 +367,14 @@ def convert_pricing() -> str:
         
     lines = [
         "# Thomas Cherickal - Generative AI Packages & Transparent Pricing",
-        "## Transparent Retainer Packages, Enterprise Migrations & Global Parity Index",
+        "## Transparent Retainer Packages, Business Migrations & Global Parity Index",
         "",
         "> **// TRANSPARENT MILESTONE RATES & EQUAL-WEIGHT DELIVERABLES**  ",
         "> **Clear milestone pricing, runtime-verified code, infinite revisions until satisfied, and global equity with an interactive 195-country Purchasing Power Parity (PPP) rate calculator.**",
         "",
         "---",
         "",
-        "## Enterprise Services",
+        "## Business Services",
         ""
     ]
     
@@ -492,7 +492,7 @@ def convert_expertise() -> str:
         "## Generative AI Consultant",
         "",
         "> **// TECHNICAL ROLES & CAPABILITIES DIRECTORY**  ",
-        "> **10 specialized capability areas, 10 curated tech-stack chip groups, and the Python, Rust, and quantum execution tooling behind every enterprise delivery.**",
+        "> **10 specialized capability areas, 10 curated tech-stack chip groups, and the Python, Rust, and quantum execution tooling behind every business delivery.**",
         "",
         "---",
         "",
@@ -575,7 +575,7 @@ def convert_contact() -> str:
 
 ## Engagement Standards
 
-- **Response Time**: All verified enterprise queries receive a detailed response within 24 business hours.
+- **Response Time**: All verified business queries receive a detailed response within 24 business hours.
 - **Non-Disclosure Agreements (NDAs)**: Mutual NDAs executed prior to reviewing proprietary codebase or confidential data.
 - **Initial Audit**: Every engagement begins with an objective scoping call to identify ROI bottlenecks.
 - **Purchasing Power Parity**: 6 PPP tiers apply across 195 countries to ensure accessible global rates.
@@ -684,17 +684,17 @@ def convert_service_page(file_path: str) -> str:
     h1 = clean_text(h1_el.get_text()) if h1_el else os.path.basename(file_path).replace(".html", "").replace("-", " ").title()
     
     eyebrow_el = soup.find("p", class_="service-hero-badge") or soup.find("p", class_="section-label")
-    eyebrow = clean_text(eyebrow_el.get_text()) if eyebrow_el else "// ENTERPRISE AI TRANSFORMATION SERVICE"
+    eyebrow = clean_text(eyebrow_el.get_text()) if eyebrow_el else "// BUSINESS AI TRANSFORMATION SERVICE"
     
     sub_el = soup.find("p", class_="service-hero-sub") or soup.find("p", class_="section-sub")
     sub = clean_text(sub_el.get_text()) if sub_el else ""
     
     lines = [
         f"# {h1}",
-        f"## Enterprise AI Transformation Service - Thomas Cherickal",
+        f"## Business AI Transformation Service - Thomas Cherickal",
         "",
         f"> **{eyebrow}**  ",
-        f"> **{sub}**" if sub else "> **Enterprise transformation, verification, and implementation.**",
+        f"> **{sub}**" if sub else "> **Business transformation, verification, and implementation.**",
         "",
         "---",
         ""
@@ -802,7 +802,7 @@ def convert_agents_all_providers(file_path: str) -> str:
 
     lines = [
         f"# {h1}",
-        f"## Enterprise Agentic AI Playbook - Thomas Cherickal",
+        f"## Business Agentic AI Playbook - Thomas Cherickal",
         "",
         f"> **{badge}**  ",
         f"> **{sub}**" if sub else "> **Architectural comparison across 8 frontier agent platforms.**",
@@ -895,7 +895,7 @@ def convert_agents_all_providers(file_path: str) -> str:
 
     roadmap_cards = soup.find_all("div", class_="roadmap-card")
     if roadmap_cards:
-        lines.append("## Enterprise Implementation Roadmap")
+        lines.append("## Business Implementation Roadmap")
         lines.append("")
         for rc in roadmap_cards:
             step = clean_text(rc.find("div", class_="roadmap-step").get_text()) if rc.find("div", class_="roadmap-step") else ""

@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// ARCHITECTURAL FOUNDATION & TIERS**  
-> **A comprehensive breakdown of Google Gemini's native multimodal architecture, service tiers, long-context window mechanics, and enterprise capabilities across Google AI Pro and Ultra subscriptions.**
+> **A comprehensive breakdown of Google Gemini's native multimodal architecture, service tiers, long-context window mechanics, and business capabilities across Google AI Pro and Ultra subscriptions.**
 
 ---
 
@@ -40,7 +40,7 @@ The Google AI Pro plan ($19.99/month) represents the standard professional bench
 
 ## What Can You Do with an Ultra Subscription?
 
-The Google AI Ultra plan is engineered for power creators, AI engineering teams, and enterprise researchers demanding unthrottled compute and early access to breakthrough experimental tools:
+The Google AI Ultra plan is engineered for power creators, AI engineering teams, and business researchers demanding unthrottled compute and early access to breakthrough experimental tools:
 
 - Priority Frontier Compute Queues: Zero-latency routing to Google's highest capability frontier reasoning models (including Gemini Argon and Deep Think modes) even during peak global load.
 - Substantially Expanded Rate Caps: 5x to 20x higher rate limits compared to Pro, supporting high-throughput API testing, synthetic data generation, and long-horizon agentic task loops.

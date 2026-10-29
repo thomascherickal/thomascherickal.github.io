@@ -1,5 +1,5 @@
 # Generative AI Transformation
-## Enterprise AI Transformation Service - Thomas Cherickal
+## Business AI Transformation Service - Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 01**  
 > **Move your business from one-off chatbot prompts to teams of Claude agents that carry real work. Learn how Claude

@@ -16,7 +16,7 @@ A core technical capability of Argon is its support for output decoding reaching
 
 ## Empirical Benchmarks & Cooperative Agent Milestones
 
-Argon demonstrated competitive performance across Google-reported enterprise evaluations and agentic environments:
+Argon demonstrated competitive performance across Google-reported business evaluations and agentic environments:
 
 - Google-Reported Vals Index Benchmarks: In Google's reported evaluation tables, Gemini 4 Argon achieved 68.9% on the Vals Index (compared to 67.0% for Claude Opus 5.5), 65.4% on the Vals Finance Agent v2 benchmark (vs 58.9% for Claude Fable 5.1), and 51.3% on Zapier AutomationBench (vs 42.5% for Opus 5.5).
 - Cooperative Minecraft Speedrun (27 Hours): In an autonomous multi-agent demonstration, four Gemini 4 Argon agents worked cooperatively to navigate the complete Minecraft progression loop from scratch, completing the game in 27 hours without human intervention or scripted macros (GAGADGET Coverage).
@@ -45,7 +45,7 @@ A balanced evaluation of Argon requires understanding both its capabilities and 
 
 ## The Future of Gemini 4 Argon
 
-Argon marks Google DeepMind's ongoing transition toward long-horizon agentic autonomy and multi-agent coordination. With expanding support in Google AI Studio and Google Antigravity IDE, future developments focus on reducing continuation latency, expanding developer tooling integration, and refining multi-agent coordination frameworks across enterprise software stacks.
+Argon marks Google DeepMind's ongoing transition toward long-horizon agentic autonomy and multi-agent coordination. With expanding support in Google AI Studio and Google Antigravity IDE, future developments focus on reducing continuation latency, expanding developer tooling integration, and refining multi-agent coordination frameworks across business software stacks.
 
 ---
 

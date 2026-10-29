@@ -22,7 +22,7 @@
 ---
 
 ## Bio
-I hold a postgraduate degree in Computer Science from Loyola College. I help individuals and enterprises become AI-first, AI-native leaders and organizations. My work covers Generative AI, local LLM deployments that reduce inference costs, Claude agent orchestration, and AI training for every level from freshers to CXOs, one-to-one or for whole teams. The focus is practical use and budget-conscious rollout that shows up in daily work.
+I hold a postgraduate degree in Computer Science from Loyola College. I help individuals and businesses become AI-first, AI-native leaders and organizations. My work covers Generative AI, local LLM deployments that reduce inference costs, Claude agent orchestration, and AI training for every level from freshers to CXOs, one-to-one or for whole teams. The focus is practical use and budget-conscious rollout that shows up in daily work.
 
 ### Quick Actions
 - [Articles & Case Studies](https://thomascherickal.github.io/articles.html)
@@ -52,19 +52,19 @@ HackerNoon · Medium · Hashnode · Substack · LinkedIn · Reddit · Quora · W
 
 1. **[Google Gemini vs Anthropic Claude vs OpenAI ChatGPT vs xAI Grok: The Ultimate Comparison](https://hackernoon.com/google-gemini-vs-anthropic-claude-vs-openai-chatgpt-vs-xai-grok-the-ultimate-comparison)** (Generative AI · HackerNoon)  
    *Mar 12, 2026 · 5,000 words*  
-   Comprehensive comparative benchmark evaluating reasoning, writing, coding, enterprise safety, and live tool performance across the top frontier AI models.
+   Comprehensive comparative benchmark evaluating reasoning, writing, coding, business safety, and live tool performance across the top frontier AI models.
 
 2. **[How to Run Your Own Local LLM - 2026 Edition](https://hackernoon.com/how-to-run-your-own-local-llm-2026-edition-version-1)** (Local LLMs · HackerNoon)  
    *Mar 9, 2026 · 3,800 words*  
-   Technical deployment guide benchmarking top open-weight LLMs, GGUF quantization, and high-density memory clusters for private, offline enterprise inference.
+   Technical deployment guide benchmarking top open-weight LLMs, GGUF quantization, and high-density memory clusters for private, offline business inference.
 
 3. **[The AI Agent Revolution: How to Build the Workforce of Tomorrow](https://hackernoon.com/the-ai-agent-revolution-how-to-build-the-workforce-of-tomorrow)** (AI Agents · HackerNoon)  
    *Nov 10, 2025 · 3,200 words*  
-   Architectural blueprint for building autonomous agent swarms, tool-calling loops, and multi-agent workflows that transform enterprise engineering teams.
+   Architectural blueprint for building autonomous agent swarms, tool-calling loops, and multi-agent workflows that transform business engineering teams.
 
 4. **[The Case for Local AI Has Never Been Stronger](https://hackernoon.com/the-case-for-local-ai-has-never-been-stronger)** (Private AI · HackerNoon)  
    *Oct 5, 2025 · 2,800 words*  
-   Strategic analysis of data sovereignty, zero cloud latency, and economics driving enterprise migration from cloud APIs to on-premise SLMs.
+   Strategic analysis of data sovereignty, zero cloud latency, and economics driving business migration from cloud APIs to on-premise SLMs.
 
 5. **[Comparing Quantum Frameworks: IBM Qiskit, Microsoft Q#, and Quantinuum's New Stack](https://hackernoon.com/comparing-quantum-programming-frameworks-ibm-qiskit-microsoft-q-and-quantinuums-new-stack)** (Quantum Stack · HackerNoon)  
    *Sep 15, 2025 · 3,500 words*  
@@ -140,7 +140,7 @@ HackerNoon · Medium · Hashnode · Substack · LinkedIn · Reddit · Quora · W
 
 23. **[7 Blockchain Startups That Could Generate Multibillion-Dollar Revenue](https://hackernoon.com/7-blockchain-startups-that-could-generate-multibillion-dollar-revenue-within-2-years)** (Startups · HackerNoon)  
    *Sep 18, 2023 · 3,400 words*  
-   Venture analysis of 7 high-impact blockchain architectures solving enterprise privacy, cross-chain liquidity, and zero-knowledge verification.
+   Venture analysis of 7 high-impact blockchain architectures solving business privacy, cross-chain liquidity, and zero-knowledge verification.
 
 24. **[Classical Blockchain vs Hedera Hashgraph](https://hackernoon.com/classical-blockchain-vs-hedera-hashgraph)** (Distributed Tech · HackerNoon)  
    *Jun 22, 2023 · 2,800 words*  
@@ -228,15 +228,15 @@ HackerNoon · Medium · Hashnode · Substack · LinkedIn · Reddit · Quora · W
 
 45. **[Publicly Adaptable Cryptographic Systems (PACS) - Solving PQC in the Age of AI Agent Cryptanalysts](https://thomascherickal.com/2026/09/13/publicly-adaptable-cryptographic-systems-pacs-solving-pqc-in-the-age-of-ai-agent-cryptanalysts/)** (Post-Quantum · thomascherickal.com)  
    *Sep 13, 2026 · 7,100 words*  
-   Novel PACS architectural framework addressing post-quantum transition bottlenecks and securing enterprise infrastructure against autonomous AI agent cryptanalysts.
+   Novel PACS architectural framework addressing post-quantum transition bottlenecks and securing business infrastructure against autonomous AI agent cryptanalysts.
 
 46. **[The Solution to Post-Quantum Cryptography: A Showstopping Problem Today](https://thomascherickal.com/2026/09/17/the-solution-to-post-quantum-cryptography-a-showstopping-problem-today/)** (Post-Quantum · thomascherickal.com)  
    *Sep 17, 2026 · 2,300 words*  
-   Executive briefing on Harvest Now Decrypt Later, the SIKE warning, crypto-agility, and why immediate cryptographic migration is mandatory for modern enterprises.
+   Executive briefing on Harvest Now Decrypt Later, the SIKE warning, crypto-agility, and why immediate cryptographic migration is mandatory for modern businesses.
 
 47. **[How (and when) to Fine-Tune SLMs for Your Business Domain-Specific Use Case](https://thomascherickal.com/2026/09/06/how-and-when-to-fine-tune-google-gemma-4-for-your-business-domain-specific-use-case/)** (SLM Fine-Tuning · thomascherickal.com)  
    *Sep 6, 2026 · 10,800 words*  
-   Plain-English enterprise roadmap detailing hardware specs, LoRA/QLoRA pipelines, real operational costs, and ROI when fine-tuning Google Gemma and domain SLMs.
+   Plain-English business roadmap detailing hardware specs, LoRA/QLoRA pipelines, real operational costs, and ROI when fine-tuning Google Gemma and domain SLMs.
 
 48. **[The Ultimate Comparison Over 20 Modern Professions: Choosing Between Claude and ChatGPT](https://thomascherickal.com/2026/09/25/chatgpt-versus-claude-the-ultimate-comparison/)** (Model Benchmark · thomascherickal.com)  
    *Sep 25, 2026 · 10,300 words*  
@@ -249,7 +249,7 @@ HackerNoon · Medium · Hashnode · Substack · LinkedIn · Reddit · Quora · W
 1. [Articles & Case Studies](https://thomascherickal.github.io/articles.html) - Detailed case studies across Generative AI Systems and Quantum Systems - the brief, the approach, and what shipped, verified in Python and Rust.
 2. [Publications](https://thomascherickal.github.io/writing.html) - Selected work from 500+ publications across 10+ platforms since 2020, plus the book RECRUITED.
 3. [Capabilities & Tech Stack](https://thomascherickal.github.io/expertise.html) - 10 specialized capability areas, 10 curated tech-stack chip groups, and the Python & Rust execution tooling behind every piece.
-4. [Services & Commissions](https://thomascherickal.github.io/pricing.html#service-rates) - Service offerings - Claude AI agent orchestration, deep dives, courses, training, mentoring, enterprise LLM deployment, and Generative AI developer content.
+4. [Services & Commissions](https://thomascherickal.github.io/pricing.html#service-rates) - Service offerings - Claude AI agent orchestration, deep dives, courses, training, mentoring, business LLM deployment, and Generative AI developer content.
 5. [Workflow & Verification](https://thomascherickal.github.io/expertise.html#how-this-gets-made) - Research → Build → Run → Verify → Explain. AI accelerates the workflow, while human verification owns the result.
 6. [Pricing & Parity Index](https://thomascherickal.github.io/pricing.html) - Transparent milestone rates and an interactive 195-country Purchasing Power Parity (PPP) calculator for global equity.
 7. [Frequently Asked Questions](https://thomascherickal.github.io/faqs.html) - Turnaround timelines, code verification standards, AI workflows, daily service fee calculator, and collaboration details.
@@ -259,9 +259,9 @@ HackerNoon · Medium · Hashnode · Substack · LinkedIn · Reddit · Quora · W
 
 ---
 
-## Ready to Begin Your Enterprise AI Transformation?
+## Ready to Begin Your Business AI Transformation?
 
-Enterprise AI transformation, Claude AI agent orchestration, technical deep dives, generative AI agent consulting, generative AI agent training.
+Business AI transformation, Claude AI agent orchestration, technical deep dives, generative AI agent consulting, generative AI agent training.
 - [Start a Conversation via Email →](https://thomascherickal.github.io/contact.html)
 - [Free LinkedIn Consultation ↗](https://linkedin.com/in/thomascherickal)
 - [Commission an Enterprise AI Transformation →](https://thomascherickal.github.io/contact.html)
@@ -270,7 +270,7 @@ Enterprise AI transformation, Claude AI agent orchestration, technical deep dive
 
 ---
 
-## Selected Enterprise AI Transformation Services
+## Selected Business AI Transformation Services
 
 Core Operating Principle: Every service runs for one month and can freely overlap with other services. Engagements deliver end-to-end training, production-ready sample code guides, technical explainers, and hands-on modules.
 
@@ -278,18 +278,12 @@ Core Operating Principle: Every service runs for one month and can freely overla
 2. [Local LLMs & Cost Slashing](https://thomascherickal.github.io/business-services/business-service-local-llms-cost-slashing.html) - Moving routine workloads to local models can cut recurring cloud API bills by 60% to 90% (depending on volume and hardware) by running open-weight models privately with Ollama, vLLM, llama.cpp and LM Studio. Size hardware from 8B to 120B models, route routine queries locally, and keep sensitive records on your machines.
 3. [Claude Agent Orchestration](https://thomascherickal.github.io/business-services/business-service-ai-agents-orchestration.html) - Master the principles of Claude AI agent orchestration to run multi-agent swarms at scale. Build orchestrator-worker hierarchies, sequential pipelines, and parallel fan-out teams that automate complex workflows while controlling quality and cost.
 4. [Hermes Agent](https://thomascherickal.github.io/business-services/business-service-agentic-ai-systems.html) - Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own infrastructure. Configure persistent session memory so the agent retains project context, saves solved procedures as reusable skills, and runs scheduled tasks.
-5. [Workflow Automations](https://thomascherickal.github.io/business-services/business-service-workflow-automations.html) - Hands-on training in self-hosted local n8n, Make, IFTTT, and open-source automation tools (Activepieces, Windmill). Automate up to 50% of routine enterprise workflows with zero per-step SaaS fees and complete data privacy.
-6. [Quantum Applications (Experimental)](https://thomascherickal.github.io/business-services/business-service-quantum-applications.html) - Exploratory quantum computing advisory for enterprise use cases: algorithm simulation with IBM Qiskit and PennyLane, variational circuits (VQE/QAOA), quantum machine learning, and Post-Quantum Cryptography (PQC) readiness aligned with NIST standards.
-7. [AI Budget & Cost Control Training](https://thomascherickal.github.io/business-services/business-service-ai-budget-cost-limits-training.html) - Train staff across all levels to control AI spending: establish hard spending caps per session and month, configure token budgets, leverage prompt caching (cutting cached input tokens by 90% to 97.5%, depending on the Claude model), and route low-complexity tasks to free and local models.
-8. [Enterprise Workforce AI Training](https://thomascherickal.github.io/business-services/business-service-enterprise-workforce-ai-training.html) - Live and remote corporate AI training delivered across distinct tracks: prompting for corporate staff, Claude Code and AI-assisted TDD for developers, and executive briefings, AI roadmaps, governance, and safe AI use policies for CXOs.
-9. [AI Developer Training](https://thomascherickal.github.io/business-services/business-service-ai-developer-training.html) - Hands-on bootcamps training developer teams on terminal and IDE coding agents (Claude Code, Google Antigravity, OpenCode). Catch mistakes early with strict AI-assisted Test-Driven Development (TDD) and build custom MCP servers in Python and Rust.
-10. [Advanced AI Agents](https://thomascherickal.github.io/business-services/business-service-advanced-ai-agents.html) - Build production autonomous agent systems with hierarchical teams of Claude agents for business-critical workloads. Implement test-driven self-correction loops where agents fix errors until tests pass, with persistent state and Docker sandboxing.
-11. [Claude Basic Training](https://thomascherickal.github.io/business-services/business-service-claude-basic-training.html) - Foundational enablement for corporate staff and knowledge workers: choosing the right model between Haiku, Sonnet, Opus and Fable, structured prompting with XML tags, managing shared team memory in Claude Projects, and using Artifacts for daily office work.
-12. [Claude Advanced Training](https://thomascherickal.github.io/business-services/business-service-claude-advanced-training.html) - Technical masterclass for senior developers and AI architects: advanced Claude Code CLI workflows, Claude for Microsoft 365 (Excel, Word, PowerPoint, Outlook), designing and securing production MCP servers, and orchestrating frontier models with adaptive thinking effort.
-13. [Google Gemini Basic Training](https://thomascherickal.github.io/business-services/business-service-gemini-basic-training.html) - Foundational enterprise Google Gemini workforce enablement: mastering Google Gemini Pro services, Gemini Chat, Nano Banana conversational image generation, Google Flow, Google Lyria music scoring, Gemini Omni multimodal workflows, and Gemini Spark 24/7 background agents.
-14. [Google Gemini Advanced Training](https://thomascherickal.github.io/business-services/business-service-gemini-advanced-training.html) - Advanced technical masterclass for engineers, architects, and technical leads: Google AI Studio, Google Antigravity IDE, Gemini Deep Think extended reasoning, open-weight Google Gemma fine-tuning, autonomous Gemini Agents with MCP, and Gemini Argon frontier code refactoring.
-15. [Deep Research & NotebookLM](https://thomascherickal.github.io/business-services/business-service-deep-research-notebooklm.html) - Enterprise autonomous research and intelligence enablement: long-horizon Gemini Deep Research agents, multi-source conflict resolution, verified citation graphs, NotebookLM enterprise knowledge bases, and structured executive synthesis.
-16. [Hybrid Quantum-Classical AI](https://thomascherickal.github.io/business-services/business-service-hybrid-quantum-ai.html) - Advanced technical masterclass on Hybrid Quantum-Classical AI: parameterized quantum circuits (PQCs), variational algorithms (VQE, QAOA), quantum machine learning with PennyLane and Qiskit, and NIST post-quantum cryptography migration.
+5. [Workflow Automations](https://thomascherickal.github.io/business-services/business-service-workflow-automations.html) - Hands-on training in self-hosted local n8n, Make, IFTTT, and open-source automation tools (Activepieces, Windmill). Automate up to 50% of routine workflows with zero per-step SaaS fees and complete data privacy.
+6. [AI Budget & Cost Control Training](https://thomascherickal.github.io/business-services/business-service-ai-budget-cost-limits-training.html) - Train staff across all levels to control AI spending: establish hard spending caps per session and month, configure token budgets, leverage prompt caching, and route low-complexity tasks to free and local models.
+7. [AI Developer Training](https://thomascherickal.github.io/business-services/business-service-ai-developer-training.html) - Hands-on bootcamps training developer teams on terminal and IDE coding agents (Claude Code, Google Antigravity, OpenCode). Catch mistakes early with strict AI-assisted Test-Driven Development (TDD) and build custom MCP servers in Python and Rust.
+8. [Advanced AI Agents](https://thomascherickal.github.io/business-services/business-service-advanced-ai-agents.html) - Build production autonomous agent systems with hierarchical teams of Claude agents for business-critical workloads. Implement test-driven self-correction loops where agents fix errors until tests pass, with persistent state and Docker sandboxing.
+9. [Claude Advanced Training](https://thomascherickal.github.io/business-services/business-service-claude-advanced-training.html) - Technical masterclass for senior developers and AI architects: advanced Claude Code CLI workflows, Claude for Microsoft 365 (Excel, Word, PowerPoint, Outlook), designing and securing production MCP servers, and orchestrating frontier models with adaptive thinking effort.
+10. [Google Gemini Advanced Training](https://thomascherickal.github.io/business-services/business-service-gemini-advanced-training.html) - Advanced technical masterclass for engineers, architects, and technical leads: Google AI Studio, Google Antigravity IDE, Gemini Deep Think extended reasoning, open-weight Google Gemma fine-tuning, autonomous Gemini Agents with MCP, and Gemini Argon frontier code refactoring.
 
 ---
 
@@ -301,7 +295,7 @@ All services are backed by transparent flat rates and our full 195-country Purch
 - **Complete Business Transformation (Up to 20 seats)**: $2,000 USD for 40 days (15 days live training + 15 days guidance and materials).
 - **Individual Service Pick for Businesses**: $200 USD per service alone.
 - **Additional Seats**: $100 USD per seat above the included 20 seats.
-- **Duration**: 20 days of training + 20 days of included guidance and detailed guides and materials (total 60 days of enterprise protection).
+- **Duration**: 20 days of training + 20 days of included guidance and detailed guides and materials (total 60 days of business protection).
 
 ### Personal AI Acceleration (Strictly 1 Person Only)
 - **Complete Personal Transformation**: $1,000 USD for 40 days (15 days intensive training + 15 days guidance and materials), scaled down to $100 USD via country parity multipliers.

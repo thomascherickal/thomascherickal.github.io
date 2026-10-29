@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
-> **Cowork's capabilities became part of Claude on 16 September 2026. Here is how Claude operates in Word, Excel, PowerPoint and Outlook, what it can build, how it plugs into enterprise systems worldwide, and where adoption stands.By Thomas Cherickal, Generative AI Consultant · The Digital Futurist · 22 October 2026 · thomascherickal.com · thedigitalfuturist.com**
+> **Cowork's capabilities became part of Claude on 16 September 2026. Here is how Claude operates in Word, Excel, PowerPoint and Outlook, what it can build, how it plugs into business systems worldwide, and where adoption stands.By Thomas Cherickal, Generative AI Consultant · The Digital Futurist · 22 October 2026 · thomascherickal.com · thedigitalfuturist.com**
 
 ---
 
@@ -10,7 +10,7 @@
 
 Cowork's capabilities became part of Claude on 16 September 2026 (Anthropic merge announcement).
 
-Cowork started as a separate agent mode in January 2026. Since September it lives inside every Claude conversation. Here is what it does in Word, Excel, PowerPoint and Outlook, what it can build, how it plugs into enterprise systems worldwide, and where adoption stands.
+Cowork started as a separate agent mode in January 2026. Since September it lives inside every Claude conversation. Here is what it does in Word, Excel, PowerPoint and Outlook, what it can build, how it plugs into business systems worldwide, and where adoption stands.
 
 1. What Claude Cowork is
 2. Microsoft 365 in practice
@@ -27,7 +27,7 @@ Cowork started as a separate agent mode in January 2026. Since September it live
 
 Anthropic released Cowork on 12 January 2026 as a research preview for Max subscribers on macOS. It applies the agent design behind Claude Code to ordinary office tasks. You give Claude access to a folder and describe the outcome you want. Claude plans the steps, carries them out, and asks before significant actions. Anthropic's launch examples included turning receipt photos into an expense spreadsheet and drafting a report from scattered notes.
 
-On 16 September 2026, Anthropic merged Cowork and chat into one Claude. There is no mode to choose anymore: Claude decides whether a request needs a quick answer or a multi-step task, and work keeps running after you close your laptop. Pro and Max plans get the merged experience first, Team and Free follow, and Enterprise admins receive at least 30 days' notice. Connectors, skills and projects carry over, and memory has been shared across chat and Cowork since 25 August.
+On 16 September 2026, Anthropic merged Cowork and chat into one Claude. There is no mode to choose anymore: Claude decides whether a request needs a quick answer or a multi-step task, and work keeps running after you close your laptop. Pro and Max plans get the merged experience first, Team and Free follow, and Business admins receive at least 30 days' notice. Connectors, skills and projects carry over, and memory has been shared across chat and Cowork since 25 August.
 
 ---
 
@@ -48,7 +48,7 @@ Once a process works, you can save it as a skill and the whole team runs it the 
 
 ### Dashboards
 
-Claude Dashboards entered beta on 8 October 2026 on Pro, Max, Team and Enterprise plans. You describe the dashboard in a conversation and Claude builds it as a live artifact: a web page plus one or more datasets. Data can come from file extracts or from live connections through MCP connectors, including Microsoft 365, Snowflake and Databricks. On a live dashboard, the refresh button reruns the queries with each viewer's own permissions. Dashboards stay private until shared, and viewers can comment. Single datasets are capped at 8 MB, so very large tables still belong in a warehouse.
+Claude Dashboards entered beta on 8 October 2026 on Pro, Max, Team and Business plans. You describe the dashboard in a conversation and Claude builds it as a live artifact: a web page plus one or more datasets. Data can come from file extracts or from live connections through MCP connectors, including Microsoft 365, Snowflake and Databricks. On a live dashboard, the refresh button reruns the queries with each viewer's own permissions. Dashboards stay private until shared, and viewers can comment. Single datasets are capped at 8 MB, so very large tables still belong in a warehouse.
 
 ### Presentations of 50 slides
 
@@ -60,7 +60,7 @@ Current Claude models read up to 1 million tokens of context and write up to 128
 
 ---
 
-## Enterprise integrations
+## Business integrations
 
 Connectors built on the open Model Context Protocol let Claude read and act inside other business tools. A February 2026 update added Google Calendar, Drive and Gmail, DocuSign, Apollo, Clay, Outreach, Similarweb, MSCI, LegalZoom, FactSet, WordPress and Harvey. Partners including Slack by Salesforce, LSEG and S&P Global built plugins of their own. Claude can update Salesforce records, and Claude in Chrome covers web tools that have no connector.
 
@@ -68,7 +68,7 @@ For IT teams, Claude for Microsoft 365 can connect through Microsoft Foundry, Am
 
 ---
 
-## Claude in enterprises around the world
+## Claude in businesses around the world
 
 ### Regional deployment
 
@@ -86,7 +86,7 @@ Large services firms carry Claude into client companies. Deloitte rolled Claude 
 
 ## Why it suits office automation
 
-Claude works inside the files people already use instead of asking them to move to a new app. Changes are visible before they land. And it plugs into the cloud platforms enterprises already pay for. Deloitte, Bain, ServiceNow and Citadel appear as customers on Anthropic's Microsoft 365 page; ServiceNow says uptake is fast internally because Claude does the work inside Excel rather than shuttling content between tools.
+Claude works inside the files people already use instead of asking them to move to a new app. Changes are visible before they land. And it plugs into the cloud platforms businesses already pay for. Deloitte, Bain, ServiceNow and Citadel appear as customers on Anthropic's Microsoft 365 page; ServiceNow says uptake is fast internally because Claude does the work inside Excel rather than shuttling content between tools.
 
 There are limits. Anthropic warned at launch that Cowork can take destructive actions, such as deleting files, when instructions are unclear, and it flagged prompt injection as a risk. In January, PromptArmor researchers showed that a booby-trapped document could make a Cowork session upload a user's file to an attacker. Keep folder and connector permissions narrow.
 

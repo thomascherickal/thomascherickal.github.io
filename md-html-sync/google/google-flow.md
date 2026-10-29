@@ -8,7 +8,7 @@
 
 ## What is Google Flow?
 
-Google Flow is an enterprise AI filmmaking studio and dynamic storyboarding platform developed by Google Labs and powered by Google DeepMind's flagship generative models. Built to transcend the limitations of disconnected, single-clip video prompts, Flow provides filmmakers, animators, and commercial agencies with a cohesive virtual production lot inside a single browser canvas.
+Google Flow is an business AI filmmaking studio and dynamic storyboarding platform developed by Google Labs and powered by Google DeepMind's flagship generative models. Built to transcend the limitations of disconnected, single-clip video prompts, Flow provides filmmakers, animators, and commercial agencies with a cohesive virtual production lot inside a single browser canvas.
 
 Flow unites three foundational AI architectures into a synchronized multimedia pipeline: Gemini Omni serves as the narrative director and conversational editing core, Veo acts as the high-fidelity cinematic video generation engine, and Lyria (via Google Flow Music) generates complete, timeline-synchronized original musical scores and vocal arrangements.
 
@@ -40,7 +40,7 @@ Google Flow has powered celebrated film festival showcases, award-winning indepe
 
 - Tribeca Festival Collaborations: Renowned directors utilized Flow and Veo to shoot multi-scene speculative sci-fi and historical fiction shorts maintaining unbroken character continuity.
 - Independent Music Videos: Musicians and indie record labels used Google Flow Music to compose original instrumental backing tracks and generate matching visual worlds without physical production overhead.
-- C2PA & SynthID Provenance: Every frame and audio track generated in Flow embeds cryptographic C2PA provenance and SynthID digital watermarks, providing enterprise-grade transparency.
+- C2PA & SynthID Provenance: Every frame and audio track generated in Flow embeds cryptographic C2PA provenance and SynthID digital watermarks, providing business-grade transparency.
 
 ---
 

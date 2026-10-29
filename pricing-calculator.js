@@ -103,12 +103,12 @@
     { slug: "service-agentic-ai-systems", title: "Hermes Agent Training" },
     { slug: "service-workflow-automations", title: "Workflow Automations" },
     { slug: "service-ai-budget-cost-limits-training", title: "AI Budget & Cost Control" },
-    { slug: "service-enterprise-workforce-ai-training", title: "Enterprise Workforce AI Training" },
     { slug: "service-ai-developer-training", title: "AI Developer Training" },
     { slug: "service-advanced-ai-agents", title: "Advanced AI Agents" },
     { slug: "service-claude-advanced-training", title: "Claude Advanced Training" },
     { slug: "service-gemini-advanced-training", title: "Google Gemini Advanced Training" },
-    { slug: "service-deep-research-notebooklm", title: "Deep Research & Gemini Notebook" }
+    { slug: "service-competitor-research", title: "Competitor Research & Intelligence" },
+    { slug: "service-leads-magnet", title: "AI Leads Magnet & Conversion Systems" }
   ];
 
   /**
@@ -123,23 +123,27 @@
    * @returns {Object} Calculated pricing details
    */
   function calculatePricing(params) {
-    const tierId = params.tierId || 1;
-    const tier = PARITY_TIERS[tierId] || PARITY_TIERS[1];
-    const clientMode = params.clientMode || "business";
+    if (!params) params = {};
+    const parsedTierId = parseInt(params.tierId, 10) || 1;
+    const tier = PARITY_TIERS[parsedTierId] || PARITY_TIERS[1];
+    const tierId = tier.id;
+    const clientMode = params.clientMode === "individual" ? "individual" : "business";
     const packageType = params.packageType || "pick-services";
-    const selectedServices = params.selectedServices || ["service-generative-ai-transformation"];
+    const selectedServices = Array.isArray(params.selectedServices)
+      ? params.selectedServices
+      : (params.selectedServices ? [params.selectedServices] : ["service-generative-ai-transformation"]);
     const ratePerSvc = clientMode === "business" ? 200 : 100;
 
     let basePrice = 2000;
     if (packageType === "pick-services") {
-      const count = Math.max(1, selectedServices.length);
+      const count = selectedServices.length;
       basePrice = count * ratePerSvc;
     } else if (packageType === "pkg-business") {
       basePrice = 2000;
     } else if (packageType === "pkg-personal") {
       basePrice = 1000;
     } else if (packageType === "custom" && typeof params.customBase === 'number') {
-      basePrice = params.customBase;
+      basePrice = Math.max(0, params.customBase);
     }
 
     const matchingFlagshipPrice = clientMode === "business" ? 2000 : 1000;
@@ -147,22 +151,26 @@
     let flagshipPrice = matchingFlagshipPrice;
 
     if (packageType === "pick-services") {
-      const count = Math.max(1, selectedServices.length);
-      if (count * ratePerSvc >= matchingFlagshipPrice) {
+      const count = selectedServices.length;
+      if (count > 0 && count * ratePerSvc >= matchingFlagshipPrice) {
         flagshipCheaper = true;
         flagshipPrice = matchingFlagshipPrice;
       }
     }
 
-    let participants = clientMode === "individual" ? 1 : Math.max(1, parseInt(params.participants, 10) || 20);
-    const extraParticipants = clientMode === "business" ? Math.max(0, participants - 20) : 0;
+    let rawParticipants = parseInt(params.participants, 10);
+    if (isNaN(rawParticipants) || rawParticipants < 1) {
+      rawParticipants = clientMode === "individual" ? 1 : 20;
+    }
+    let participants = clientMode === "individual" ? 1 : rawParticipants;
+    const extraParticipants = (clientMode === "business" && basePrice > 0) ? Math.max(0, participants - 20) : 0;
     const extraHeadRate = Math.round(extraParticipants * 100 * tier.multiplier);
     const baseTierPrice = Math.round(basePrice * tier.multiplier);
-    const finalPrice = baseTierPrice + extraHeadRate;
+    const finalPrice = basePrice === 0 ? 0 : baseTierPrice + extraHeadRate;
 
     const baseSavings = Math.round(basePrice * (tier.discountPercent / 100));
     const extraSavings = Math.round(extraParticipants * 100 * (tier.discountPercent / 100));
-    const totalSavings = baseSavings + extraSavings;
+    const totalSavings = basePrice === 0 ? 0 : baseSavings + extraSavings;
 
     return {
       tierId,
@@ -234,21 +242,24 @@
       }).join("");
 
       servicesCheckboxGrid.querySelectorAll(".service-pick-cb").forEach(cb => {
-        cb.addEventListener("change", function () {
+        const handleCb = function () {
           if (this.checked) {
             if (!selectedServices.includes(this.value)) selectedServices.push(this.value);
           } else {
             selectedServices = selectedServices.filter(slug => slug !== this.value);
           }
           updateFromServicesSelection();
-        });
+        };
+        cb.addEventListener("change", handleCb);
+        cb.addEventListener("input", handleCb);
+        cb.addEventListener("click", handleCb);
       });
     }
 
     function updateFromServicesSelection() {
       const ratePerSvc = clientMode === "business" ? 200 : 100;
       const count = selectedServices.length;
-      standardBasePrice = Math.max(count * ratePerSvc, ratePerSvc);
+      standardBasePrice = count * ratePerSvc;
 
       if (selectedServiceCountLabel) {
         selectedServiceCountLabel.textContent = `${count} Service${count === 1 ? '' : 's'} Selected ($${(count * ratePerSvc).toLocaleString("en-US")} USD)`;
@@ -274,10 +285,10 @@
 
     if (btnClearServices) {
       btnClearServices.addEventListener("click", () => {
-        selectedServices = [ALL_SERVICES_DATA[0].slug];
+        selectedServices = [];
         if (servicesCheckboxGrid) {
           servicesCheckboxGrid.querySelectorAll(".service-pick-cb").forEach(cb => {
-            cb.checked = (cb.value === selectedServices[0]);
+            cb.checked = false;
           });
         }
         updateFromServicesSelection();
@@ -445,7 +456,37 @@
         calcResultBox.style.boxShadow = "0 0 28px " + tier.badgeBg.replace("0.15", "0.25").replace("0.18", "0.25") + ", 0 10px 30px rgba(0,0,0,0.6)";
       }
 
-      if (tier.isCustom) {
+      if (result.basePrice === 0 && result.packageType === "pick-services") {
+        if (calcDisplayPrice) {
+          calcDisplayPrice.textContent = "$0 USD";
+          calcDisplayPrice.style.fontSize = "clamp(2.1rem, 3.8vw, 2.85rem)";
+          calcDisplayPrice.style.color = "var(--text-muted)";
+          calcDisplayPrice.style.textShadow = "none";
+        }
+
+        if (calcDisplayNote) {
+          calcDisplayNote.textContent = "0 services selected · Please select at least one service above";
+          calcDisplayNote.style.color = "var(--text-muted)";
+        }
+
+        if (calcAdjustmentVal) {
+          calcAdjustmentVal.textContent = "$0 USD";
+          calcAdjustmentVal.style.color = "var(--text-muted)";
+        }
+
+        if (calcSavingsBadge) {
+          calcSavingsBadge.innerHTML = '<span>No services selected ($0 USD)</span>';
+          calcSavingsBadge.style.color = "var(--text-muted)";
+          calcSavingsBadge.style.borderColor = "rgba(255, 255, 255, 0.15)";
+          calcSavingsBadge.style.background = "rgba(255, 255, 255, 0.05)";
+        }
+
+        if (calcCtaBtn) {
+          calcCtaBtn.textContent = "Select at Least 1 Service to Proceed ($0 USD)";
+          calcCtaBtn.style.borderColor = "var(--border)";
+          calcCtaBtn.href = "#services-multi-select-wrap";
+        }
+      } else if (tier.isCustom) {
         // Tier 6 Subsidized
         if (calcDisplayPrice) {
           calcDisplayPrice.textContent = "Custom subsidized quote - contact Thomas";
@@ -584,7 +625,7 @@
     }
 
     if (calcPackage) {
-      calcPackage.addEventListener("change", function () {
+      const handlePackageChange = function () {
         const selectedOpt = this.options[this.selectedIndex];
         if (!selectedOpt) return;
         if (selectedOpt.value === "pick-services") {
@@ -609,14 +650,16 @@
           }
           updateCalculator();
         }
-      });
+      };
+      calcPackage.addEventListener("change", handlePackageChange);
+      calcPackage.addEventListener("input", handlePackageChange);
     }
 
     if (calcCustomAmount) {
-      calcCustomAmount.addEventListener("input", function () {
+      const handleCustomInput = function () {
         const currentVal = parseFloat(this.value);
         const tier = PARITY_TIERS[activeTier];
-        if (!isNaN(currentVal) && currentVal > 0 && tier) {
+        if (!isNaN(currentVal) && currentVal >= 0 && tier) {
           standardBasePrice = Math.round(currentVal / (tier.multiplier || 1));
         }
 
@@ -636,21 +679,30 @@
         }
 
         updateCalculator();
-      });
+      };
+      calcCustomAmount.addEventListener("input", handleCustomInput);
+      calcCustomAmount.addEventListener("change", handleCustomInput);
+      calcCustomAmount.addEventListener("keyup", handleCustomInput);
     }
 
     if (calcParticipants) {
-      calcParticipants.addEventListener("input", function () {
+      const handleParticipants = function () {
         updateCalculator();
-      });
+      };
+      calcParticipants.addEventListener("input", handleParticipants);
+      calcParticipants.addEventListener("change", handleParticipants);
+      calcParticipants.addEventListener("keyup", handleParticipants);
+      calcParticipants.addEventListener("mouseup", handleParticipants);
     }
 
     if (calcCountry) {
-      calcCountry.addEventListener("change", function () {
+      const handleCountry = function () {
         const selectedOption = this.options[this.selectedIndex];
-        const tier = selectedOption.getAttribute("data-tier");
+        const tier = selectedOption ? selectedOption.getAttribute("data-tier") : null;
         if (tier) setActiveTier(tier);
-      });
+      };
+      calcCountry.addEventListener("change", handleCountry);
+      calcCountry.addEventListener("input", handleCountry);
     }
 
     calcTierButtons.forEach(btn => {

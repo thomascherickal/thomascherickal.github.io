@@ -1,12 +1,12 @@
 # Thomas Cherickal - Generative AI Packages & Transparent Pricing
-## Transparent Retainer Packages, Enterprise Migrations & Global Parity Index
+## Transparent Retainer Packages, Business Migrations & Global Parity Index
 
 > **// TRANSPARENT MILESTONE RATES & EQUAL-WEIGHT DELIVERABLES**  
 > **Clear milestone pricing, runtime-verified code, infinite revisions until satisfied, and global equity with an interactive 195-country Purchasing Power Parity (PPP) rate calculator.**
 
 ---
 
-## Enterprise Services
+## Business Services
 
 ## Foundational Guarantees on Every Engagement
 
@@ -49,7 +49,7 @@
 Rates are automatically indexed across 195 countries to ensure fair pricing worldwide across 6 Parity Tiers:
 
 ### Tier 1: High-Income
-*TIER 01 · HIGH-INCOME* - High-Income Economies & Global Enterprise Hubs  
+*TIER 01 · HIGH-INCOME* - High-Income Economies & Global Business Hubs  
 **Rate**: `100% Standard Rate` (0% DISCOUNT · BASELINE MULTIPLIER: 1.0X)  
 
 ### Upper-Middle-Income Economies

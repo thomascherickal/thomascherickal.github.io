@@ -1,5 +1,5 @@
 # AI Budget & Cost Limits Training
-## Enterprise AI Transformation Service - Thomas Cherickal
+## Business AI Transformation Service - Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 07**  
 > **Training staff at every level to control AI spending: hard spending caps, token budgets, prompt caching, effort

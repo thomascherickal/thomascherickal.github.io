@@ -1,28 +1,28 @@
 # Google Gemini Agents
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
-> **// ENTERPRISE AUTONOMOUS AGENT ECOSYSTEM**  
-> **Inside Google's enterprise agent ecosystem: the Gemini Enterprise Agent Platform, Agent Development Kit (ADK), the open Agent2Agent (A2A) protocol, microVM sandboxed runtimes, and distributed multi-agent swarms.**
+> **// BUSINESS AUTONOMOUS AGENT ECOSYSTEM**  
+> **Inside Google's business agent ecosystem: the Gemini Business Agent Platform, Agent Development Kit (ADK), the open Agent2Agent (A2A) protocol, microVM sandboxed runtimes, and distributed multi-agent swarms.**
 
 ---
 
 ## What are Google Gemini Agents?
 
-Google Gemini Agents represent the structural evolution of artificial intelligence from conversational assistants into proactive, stateful, and autonomous execution systems. Where traditional foundation models generate static text completions, a Gemini Agent operates within continuous reasoning, planning, and tool-dispatch loops - observing its environment, decomposing multi-step enterprise mandates, invoking APIs, executing Python code in secure sandboxes, and verifying outcomes against operational objectives.
+Google Gemini Agents represent the structural evolution of artificial intelligence from conversational assistants into proactive, stateful, and autonomous execution systems. Where traditional foundation models generate static text completions, a Gemini Agent operates within continuous reasoning, planning, and tool-dispatch loops - observing its environment, decomposing multi-step business mandates, invoking APIs, executing Python code in secure sandboxes, and verifying outcomes against operational objectives.
 
-Google anchors this capability within the Gemini Enterprise Agent Platform (the enterprise evolution of Vertex AI Agent Builder). The platform provides end-to-end infrastructure for building, deploying, governing, and orchestrating fleets of autonomous agents. By pairing frontier reasoning models with serverless microVM sandboxes, persistent session memory banks, and cryptographic agent identity attestation, organizations can operationalize agentic intelligence without sacrificing enterprise security or data sovereignty.
+Google anchors this capability within the Gemini Business Agent Platform (the business evolution of Vertex AI Agent Builder). The platform provides end-to-end infrastructure for building, deploying, governing, and orchestrating fleets of autonomous agents. By pairing frontier reasoning models with serverless microVM sandboxes, persistent session memory banks, and cryptographic agent identity attestation, organizations can operationalize agentic intelligence without sacrificing business security or data sovereignty.
 
 ---
 
 ## Core Building Blocks & Developer Frameworks
 
-Google provides a modular hierarchy of open frameworks and enterprise platform services designed to accommodate diverse developer requirements from visual low-code authoring to programmatic low-level systems engineering:
+Google provides a modular hierarchy of open frameworks and business platform services designed to accommodate diverse developer requirements from visual low-code authoring to programmatic low-level systems engineering:
 
 ### Infrastructure & Serverless Runtimes:
 
 - Agent Compute Engine & MicroVM Runtime: Serverless, ephemeral execution environments that spin up in milliseconds to execute long-running agent workflows, isolated terminal commands, and sandboxed code execution without host node vulnerability.
-- Enterprise Memory Bank: Persistent storage decoupling working memory from model context windows. Organizes agent memory across episodic (past execution histories), semantic (domain facts), and procedural (successful operational paths) tiers.
-- Enterprise Skill Registry: A centralized, version-controlled catalog of verified tools, API connectors, and execution scripts with granular IAM access controls and cryptographic signing.
+- Business Memory Bank: Persistent storage decoupling working memory from model context windows. Organizes agent memory across episodic (past execution histories), semantic (domain facts), and procedural (successful operational paths) tiers.
+- Business Skill Registry: A centralized, version-controlled catalog of verified tools, API connectors, and execution scripts with granular IAM access controls and cryptographic signing.
 - Agent Identity & Attestation: Cryptographic verification assigning distinct identity certificates to every agent, providing complete provenance, non-repudiation, and audit compliance across regulated industries.
 
 ---
@@ -35,7 +35,7 @@ Unlike architectures that rely on brittle scraping layers or unverified third-pa
 
 ## The Agent2Agent (A2A) Protocol & Multi-Agent Swarms
 
-As enterprises deploy hundreds of specialized agents across different business units, single-agent architectures give way to distributed swarms. However, agent fragmentation historically resulted in isolated silos unable to coordinate across differing vendor platforms.
+As businesses deploy hundreds of specialized agents across different business units, single-agent architectures give way to distributed swarms. However, agent fragmentation historically resulted in isolated silos unable to coordinate across differing vendor platforms.
 
 To solve this, Google introduced and transitioned the Agent2Agent (A2A) protocol to the open-source governance of the Linux Foundation. A2A establishes an open standard for agent discovery, capability negotiation, and task delegation:
 
@@ -49,7 +49,7 @@ Built on standard web technologies (JSON-RPC 2.0 over HTTP/S and gRPC), A2A supp
 
 ### 3. A2A vs. MCP: Complementary Standards
 
-Industry architects frequently ask how A2A compares to Anthropic's Model Context Protocol (MCP). Google explicitly positions them as complementary halves of the enterprise agent stack:
+Industry architects frequently ask how A2A compares to Anthropic's Model Context Protocol (MCP). Google explicitly positions them as complementary halves of the business agent stack:
 
 - Model Context Protocol (MCP) - Agent-to-Tool: Standardizes how an individual agent securely accesses local files, database connections, shell environments, and proprietary tool endpoints.
 - Agent2Agent Protocol (A2A) - Agent-to-Agent: Standardizes how independent, specialized agents discover each other, negotiate sub-delegations, pass operational context, and collaborate across organizational boundaries.
@@ -70,7 +70,7 @@ from google.genai import types
 # 1. Initialize the Google GenAI Client
 client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
-# 2. Define Custom Enterprise Tools with strict schemas
+# 2. Define Custom Business Tools with strict schemas
 def fetch_cloud_telemetry(cluster_id: str) -> Dict[str, Any]:
     """Retrieve real-time compute cluster metrics, CPU utilization, and memory headroom."""
     # Production telemetry integration
@@ -155,10 +155,10 @@ if response.candidates and response.candidates[0].grounding_metadata:
 
 Evaluating agent architectures requires examining memory horizons, isolation security, and multi-agent coordination capabilities:
 
-| Dimension | Single-Turn Prompting | Basic ReAct Wrapper | Gemini Autonomous Agent | Enterprise A2A Swarm |
+| Dimension | Single-Turn Prompting | Basic ReAct Wrapper | Gemini Autonomous Agent | Business A2A Swarm |
 | :--- | :--- | :--- | :--- | :--- |
 | Working Memory | Stateless (single completion) | Sliding window (8k - 32k) | 2 Million Tokens in Attention | Distributed Context + Shared Memory Bank |
-| Tool Ecosystem | Zero (isolated weights) | Custom scraping middleware | Native Search, Python & APIs | Enterprise Skill Registry & MicroVMs |
+| Tool Ecosystem | Zero (isolated weights) | Custom scraping middleware | Native Search, Python & APIs | Business Skill Registry & MicroVMs |
 | Cross-Agent Protocol | None | Ad-hoc prompt chaining | Hierarchical Subagent Dispatch | Standardized Agent2Agent (A2A) Protocol |
 | Execution Safety | Unsandboxed local scripts | Containerized API servers | Google MicroVM Isolation | Cryptographically Attested Agent Identities |
 | Autonomy Horizon | Single prompt | 3 - 5 sequential steps | 20 - 100+ multi-tool steps | Long-horizon multi-day workflows |
@@ -166,9 +166,9 @@ Evaluating agent architectures requires examining memory horizons, isolation sec
 
 ---
 
-## Enterprise Benchmarks & Performance Metrics
+## Business Benchmarks & Performance Metrics
 
-Gemini autonomous agents deliver measurable performance advantages across enterprise automation benchmarks:
+Gemini autonomous agents deliver measurable performance advantages across business automation benchmarks:
 
 ---
 
@@ -184,13 +184,13 @@ Deploying autonomous agents requires engineering leaders to weigh breakthrough o
 
 ---
 
-## How Gemini Agents Will Reshape the Enterprise
+## How Gemini Agents Will Reshape the Business
 
-The shift from passive LLM conversational chatbots to autonomous Gemini swarms marks a profound transformation in enterprise operational velocity:
+The shift from passive LLM conversational chatbots to autonomous Gemini swarms marks a profound transformation in business operational velocity:
 
 - Autonomous DevOps & Self-Healing Infrastructure: Agents proactively monitor telemetry streams, isolate memory leaks, synthesize Kubernetes rebalance commands, and file post-mortem incident reports before outages impact end users.
 - Continuous Financial & Regulatory Auditing: Teams of specialized A2A agents autonomously ingest thousands of quarterly 10-K filings, reconcile disparate ERP databases, calculate liquidity variances, and verify corporate compliance continuously.
-- Autonomous Supply Chain Negotiation: Supplier and enterprise procurement agents interact via the A2A protocol to dynamically negotiate purchase orders, verify warehouse inventory in real time, and settle contracts within established budgetary guidelines.
+- Autonomous Supply Chain Negotiation: Supplier and business procurement agents interact via the A2A protocol to dynamically negotiate purchase orders, verify warehouse inventory in real time, and settle contracts within established budgetary guidelines.
 
 ---
 

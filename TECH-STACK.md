@@ -25,7 +25,7 @@
 
 When I architected this website, I made an uncompromising systems design choice: **I completely eliminated heavy client-side JavaScript frameworks (React, Next.js, Vue, Angular) and utility CSS preprocessors (Tailwind CSS, PostCSS).**
 
-In enterprise AI engineering, we frequently witness systems burdened by dependency bloat, fragile hydration layers, supply-chain vulnerabilities, and breaking package updates. I chose to build my professional showcase and technical practice upon an **indestructible, zero-runtime-dependency foundation**.
+In business AI engineering, we frequently witness systems burdened by dependency bloat, fragile hydration layers, supply-chain vulnerabilities, and breaking package updates. I chose to build my professional showcase and technical practice upon an **indestructible, zero-runtime-dependency foundation**.
 
 ```mermaid
 graph TD
@@ -266,16 +266,16 @@ I established a dedicated Markdown mirror in [`md-html-sync/`](file:///home/thom
 
 ## 4. Advanced Systems: Agent Swarms & Quantum Frameworks
 
-Beyond the web stack itself, this repository documents and serves as the gateway to my advanced enterprise consulting architectures:
+Beyond the web stack itself, this repository documents and serves as the gateway to my advanced business consulting architectures:
 
 ### 1. Autonomous Multi-Agent Systems
 - **Agent Operating Systems**: State machines orchestrating autonomous agent teams with defined communication buses, fallback circuits, and deterministic tool schemas.
 - **Self-Healing Code Loops**: Integrating Hermes 3 and Claude Code with local test runners (pytest, cargo test) for autonomous test-driven repair.
-- **Local vLLM Acceleration**: Running quantized models (AWQ/GGUF) on consumer-grade and enterprise hardware to achieve 60%–90% cost reduction over proprietary APIs.
+- **Local vLLM Acceleration**: Running quantized models (AWQ/GGUF) on consumer-grade and business hardware to achieve 60%–90% cost reduction over proprietary APIs.
 
 ### 2. Experimental Quantum Systems
 - **Qiskit & PennyLane**: Implementation of Variational Quantum Eigensolvers (VQE) and Quantum Approximate Optimization Algorithms (QAOA).
-- **Post-Quantum Cryptography (PQC)**: Auditing cryptographic systems against quantum threat timelines, preparing enterprise key infrastructure for NIST-standardized lattice-based algorithms (ML-KEM / ML-DSA).
+- **Post-Quantum Cryptography (PQC)**: Auditing cryptographic systems against quantum threat timelines, preparing business key infrastructure for NIST-standardized lattice-based algorithms (ML-KEM / ML-DSA).
 
 ---
 
@@ -317,7 +317,7 @@ To allow autonomous AI agents, research crawlers, and context window engines to 
 
 ## 6. Data Privacy, Air-Gapped Security & Client IP
 
-In enterprise AI engagements, data privacy is paramount. The architectures I train and implement enforce absolute security:
+In business AI engagements, data privacy is paramount. The architectures I train and implement enforce absolute security:
 
 1. **Air-Gapped & Zero Data Egress**:
    - High-volume classification, extraction, and linting tasks run on local inference servers via **vLLM**, **Ollama**, or **llama.cpp** utilizing **AWQ** and **GGUF** 4-bit/8-bit quantization.
@@ -378,10 +378,8 @@ Changes not staged for commit:
 	modified:   business-services/business-service-agentic-ai-systems.html
 	modified:   business-services/business-service-ai-agents-orchestration.html
 	modified:   business-services/business-service-ai-budget-cost-limits-training.html
-	modified:   business-services/business-service-enterprise-workforce-ai-training.html
 	modified:   business-services/business-service-generative-ai-transformation.html
 	modified:   business-services/business-service-local-llms-cost-slashing.html
-	modified:   business-services/business-service-quantum-applications.html
 	modified:   business-services/business-service-workflow-automations.html
 	modified:   sitemap.xml
 	modified:   writing.html

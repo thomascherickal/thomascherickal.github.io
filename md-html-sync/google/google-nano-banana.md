@@ -44,7 +44,7 @@ The latest evolutions of Nano Banana introduce:
 
 - Native 4K Output Resolution: Direct generation and upscaling across 1K, 2K, and 4K resolutions without pixel interpolation blur.
 - Video Context Ingestion: Ingesting frames directly from video clips to serve as visual style guides or character references.
-- SynthID Digital Watermarking: Every image created by Nano Banana embeds Google's SynthID invisible watermark into pixel data. Resistant to compression, cropping, and color filtering, SynthID ensures verifiable content provenance and transparency for enterprise safety.
+- SynthID Digital Watermarking: Every image created by Nano Banana embeds Google's SynthID invisible watermark into pixel data. Resistant to compression, cropping, and color filtering, SynthID ensures verifiable content provenance and transparency for business safety.
 
 ---
 

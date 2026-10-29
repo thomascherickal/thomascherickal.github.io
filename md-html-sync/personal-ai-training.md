@@ -34,7 +34,7 @@ Personal Training costs $1,000 in Tier 1 for 40 days (20 days training, + 20 day
 
 // FULL-SPECTRUM MASTERY
 
-## The Complete 16-Service Catalogue Customized to Your Work
+## The Complete 12-Service Catalogue Customized to Your Work
 
 You are never forced to choose between local models, autonomous agents, prompt craft, or workflow automations. 
  Your personal sprint draws on the full 12-service catalogue; you choose the services relevant to your work and goals:
@@ -45,7 +45,7 @@ Move your business from one-off chatbot prompts to coordinated teams of Claude a
 
 ### 02 · Local LLMs & Cost Slashing
 
-Moving routine workloads to local models can cut recurring cloud API bills by 60% to 90%; your figure depends on volume and hardware. by running open-weight models privately with Ollama, vLLM, llama.cpp and LM Studio. Size hardware from 8B to 120B models, route routine queries locally, and keep sensitive records on your machines.
+Moving routine workloads to local models can cut recurring cloud API bills by 60% to 90%; your figure depends on volume and hardware. Run open-weight models privately with Ollama, vLLM, llama.cpp and LM Studio.
 
 ### 03 · Claude Agent Orchestration
 
@@ -57,13 +57,41 @@ Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own in
 
 ### 05 · Workflow Automation Training
 
-Hands-on training for automating recurring office work with Claude skills, plugins, connectors, scheduled tasks and Microsoft 365 add-ins. Automate recurring office tasks across sales, finance and engineering, with private data options. across sales, finance and engineering with private data options.
+Hands-on training for automating recurring office work with Claude skills, plugins, connectors, scheduled tasks and Microsoft 365 add-ins across sales, finance and engineering with private data options.
+
+### 06 · AI Budget & Cost Control Training
+
+Control your AI spending as a solo builder: enforce hard token caps per session, leverage prompt caching for up to 90% savings, and route everyday queries to local or free-tier models.
+
+### 07 · AI Developer Training
+
+1-on-1 developer pair programming with terminal coding agents (Claude Code CLI, Google Antigravity). Catch bugs early with test-driven prompt harnesses and engineer custom MCP servers.
+
+### 08 · Advanced AI Agents
+
+Architect persistent, self-evaluating autonomous agents that execute long-horizon projects while you sleep, featuring test-driven verification loops and stateful memory.
+
+### 09 · Claude Advanced Training
+
+Technical masterclass for solo builders: advanced Claude Code CLI workflows, Claude for Microsoft 365, custom Model Context Protocol (MCP) servers, and adaptive thinking effort tuning.
+
+### 10 · Google Gemini Advanced Training
+
+Hands-on technical mentoring: Google AI Studio prompt engineering with context caching, Google Antigravity IDE, Gemini Deep Think extended reasoning, and autonomous Gemini Agents with MCP.
+
+### 11 · Continuous Learning & AI Second Brain
+
+Architect an autonomous personal knowledge engine using NotebookLM, Obsidian vector memory, active context retrieval, and automated research synthesis from arXiv and technical newsletters.
+
+### 12 · Work-Life Balance & Autonomous Offloading
+
+Reclaim 15-20 hours weekly through autonomous inbox triage, biological focus time-blocking, automated task delegation, and cognitive load minimization.
 
 ## Two-Phase Personal Curriculum & Daily Support Roadmap
 
 20 intensive days focused on your selected services from the 12-service catalogue, followed immediately by 15 days of included daily work assistance on your live projects:
 
-### Generative AI Transformation & Enterprise Workforce AI Training
+### Generative AI Transformation & Architecture Audit
 
 Mapping your daily professional bottlenecks, setting up Claude Projects, authoring deterministic XML boundary prompts, and establishing an isolated sandbox workspace on your primary workstation.
 
@@ -79,9 +107,9 @@ Configuring lead orchestrator Claude Opus with fast Claude Sonnet subagents, aut
 
 Building terminal-native Hermes agents with recursive self-healing loops, automating cross-app workflows with self-hosted n8n.
 
-### AI Developer Training, Coding Agent TDD Pairing & Transition
+### AI Developer Training, Gemini Advanced, Continuous Learning & Work-Life Balance
 
-Live developer pair-programming with Claude Code CLI and Google Antigravity, strict unit testing before code generation, formal IP assignment, and transition into Phase 2 daily support.
+Live developer pair-programming with Claude Code CLI and Google Antigravity, strict unit testing before code generation, building an Obsidian vector second brain, and automating executive inbox and calendar offloading.
 
 ### 15 Days of Support, Daily Doubts Clarification & Light Easy-to-Skim Guides
 

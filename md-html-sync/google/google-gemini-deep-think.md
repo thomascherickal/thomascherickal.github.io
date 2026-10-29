@@ -28,9 +28,9 @@ The deployment of Deep Think has shattered historic performance records across i
 
 ---
 
-## Platform Access & Enterprise Use Cases
+## Platform Access & Business Use Cases
 
-Gemini Deep Think is accessible to enterprise engineers and researchers through multiple official channels:
+Gemini Deep Think is accessible to business engineers and researchers through multiple official channels:
 
 - Google AI Ultra Subscription: Available natively in the consumer and professional Gemini web application with dedicated reasoning toggle controls.
 - Google AI Studio & Vertex AI API: Developers configure dynamic reasoning budgets via the thinkingConfig parameter, auditing internal thought chains and step-by-step logic proofs.

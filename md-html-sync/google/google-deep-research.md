@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// AUTONOMOUS INFORMATION SYNTHESIS**  
-> **Inside Google Gemini's Deep Research engine: an autonomous agentic analyst that navigates hundreds of online and enterprise sources to compile comprehensive, cited research dossiers.**
+> **Inside Google Gemini's Deep Research engine: an autonomous agentic analyst that navigates hundreds of online and business sources to compile comprehensive, cited research dossiers.**
 
 ---
 
@@ -25,7 +25,7 @@ Deep Research moves beyond standard web indexing through iterative reasoning mec
 
 ---
 
-## Enterprise Use Cases & Practical Samples
+## Business Use Cases & Practical Samples
 
 Deep Research eliminates hundreds of hours of manual knowledge assembly across critical corporate domains:
 

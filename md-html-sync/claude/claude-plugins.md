@@ -66,13 +66,13 @@ A plugin added in claude.ai follows you and syncs to Claude Code the next time y
 
 ## 5. Why Extensibility Makes Claude So Powerful
 
-Every customer starts with the identical base Claude model. Plugins allow each enterprise to customize it deeply, governed by four key architectural design choices:
+Every customer starts with the identical base Claude model. Plugins allow each business to customize it deeply, governed by four key architectural design choices:
 
 ---
 
 ## 6. The Major Claude Plugins Available Now
 
-The Claude Marketplace plugin directory listed 341 plugins as of October 2026. Here are the primary enterprise and engineering packages available today:
+The Claude Marketplace plugin directory listed 341 plugins as of October 2026. Here are the primary business and engineering packages available today:
 
 ### Knowledge Work Plugins From Anthropic
 
@@ -86,7 +86,7 @@ The Claude Marketplace plugin directory listed 341 plugins as of October 2026. H
 | Legal | Contract review, NDA triage, regulatory compliance, and risk assessments |
 | Finance | Journal entries, balance reconciliations, financial statements, and month-end close support |
 | Data | SQL generation, statistical analysis, and interactive dashboards on Snowflake, Databricks, or BigQuery |
-| Enterprise Search | Unified cross-system querying across email, Slack/Teams, cloud docs, and wikis |
+| Business Search | Unified cross-system querying across email, Slack/Teams, cloud docs, and wikis |
 | Bio-Research | Biomedical literature synthesis, genomics analysis, and therapeutic target prioritization |
 | HR, Design, Operations | Offer letters, accessibility audits, postmortems, SRE runbooks, and vendor reviews |
 | Plugin Management | Meta-plugin that scaffolds, validates, and refines new custom plugins |
@@ -101,7 +101,7 @@ The Claude Marketplace plugin directory listed 341 plugins as of October 2026. H
 | Private Equity | Due diligence across massive dataroom document sets and quantitative deal scoring |
 | Wealth Management | Portfolio drift calculation, tax exposure optimization, and asset rebalancing |
 
-Anthropic also provides enterprise partner plugins from Salesforce (Slack), LSEG, S&P Global, Apollo, and Common Room, along with tailored brand voice solutions from Tribe AI.
+Anthropic also provides business partner plugins from Salesforce (Slack), LSEG, S&P Global, Apollo, and Common Room, along with tailored brand voice solutions from Tribe AI.
 
 ### Developer Plugins For Claude Code
 
@@ -120,9 +120,9 @@ Anthropic also provides enterprise partner plugins from Salesforce (Slack), LSEG
 
 ## 7. How Plugins Reach A Whole Organization
 
-On Claude Team and Enterprise plans, workspace Owners can distribute approved plugins from a centralized GitHub repository through an internal organization marketplace. Anthropic's guide to managing plugins for your organization establishes four installation preferences: Installed by default, Available for install, Required, or Not available. These rules can be segmented by user group:
+On Claude Team and Business plans, workspace Owners can distribute approved plugins from a centralized GitHub repository through an internal organization marketplace. Anthropic's guide to managing plugins for your organization establishes four installation preferences: Installed by default, Available for install, Required, or Not available. These rules can be segmented by user group:
 
-Members cannot tamper with organization-managed plugins, keeping enterprise operations consistent. According to the Claude Help Center article on using plugins, Enterprise tenants with skill scanning enabled have plugins automatically evaluated for security risks and prompt injections whenever installed or updated.
+Members cannot tamper with organization-managed plugins, keeping business operations consistent. According to the Claude Help Center article on using plugins, Business tenants with skill scanning enabled have plugins automatically evaluated for security risks and prompt injections whenever installed or updated.
 
 ---
 
@@ -130,12 +130,12 @@ Members cannot tamper with organization-managed plugins, keeping enterprise oper
 
 A plugin today automates discrete tasks. Whether it can automate an entire job depends on how much of that role's end-to-end task matrix it covers. Anthropic's research on the labor market impacts of AI measured that gap: LLMs could theoretically accelerate 94% of tasks in Computer and Math fields, yet observed real-world coverage was 33%. Computer programmers led with 75% coverage, followed by customer service representatives and data entry keyers at 67%.
 
-Enterprise expectations are shifting rapidly. In the Anthropic Economic Index report "Cadences", over a third of ~9,700 surveyed respondents expected AI to handle most or all of their work tasks within 12 months. Anthropic CEO Dario Amodei noted in a May 2025 interview that AI could replace half of entry-level white-collar jobs within five years.
+Business expectations are shifting rapidly. In the Anthropic Economic Index report "Cadences", over a third of ~9,700 surveyed respondents expected AI to handle most or all of their work tasks within 12 months. Anthropic CEO Dario Amodei noted in a May 2025 interview that AI could replace half of entry-level white-collar jobs within five years.
 
 Plugins provide the operational vehicle for closing this gap because occupations are bundles of tasks, and plugins are bundles of skills. Five architectural steps bridge the gap from task assistance to full operational autonomy:
 
 1. Complete Task Mapping: Systematically encoding every occupational task documented in standards like the O*NET occupational database.
-2. Deep System Write Access: Deploying robust MCP connectors that act deterministically within scoped enterprise permissions.
+2. Deep System Write Access: Deploying robust MCP connectors that act deterministically within scoped business permissions.
 3. Long-Horizon Autonomous Execution: Leveraging Claude's ability to run self-directed tool loops for hours in Claude Code and Cowork.
 4. Self-Correction & Verification: Incorporating specialized review subagents and static validation hooks before shipping outputs.
 5. Organization-Enforced Compliance: Deploying plugins as Required so the entire company adheres to verified, standardized agent pipelines.
@@ -154,7 +154,7 @@ Anthropic's economic research urges balanced realism. While headline unemploymen
 
 Crucially, physical tasks, courtroom appearances, and high-stakes fiduciary liabilities remain firmly out of reach. In the Cadences study, senior professionals with 15+ years of tenure highlighted context, unwritten organizational norms, and human trust as qualities no static skill file can replicate.
 
-Security remains a paramount consideration. Because plugins inherit the user's active permissions, organizations must implement zero-trust credentialing and automated skill auditing for any plugin loaded outside vetted enterprise repositories.
+Security remains a paramount consideration. Because plugins inherit the user's active permissions, organizations must implement zero-trust credentialing and automated skill auditing for any plugin loaded outside vetted business repositories.
 
 ---
 

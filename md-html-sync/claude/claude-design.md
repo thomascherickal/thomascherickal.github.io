@@ -54,7 +54,7 @@ The product has changed dramatically in half a year. The Help Center release not
 
 | Date | Platform & Architecture Milestone |
 | :--- | :--- |
-| April 17 | Research preview for Pro, Max, Team and Enterprise on Opus, with exports to PDF, PPTX, HTML and Canva and a Claude Code handoff. |
+| April 17 | Research preview for Pro, Max, Team and Business on Opus, with exports to PDF, PPTX, HTML and Canva and a Claude Code handoff. |
 | June 17 | New on-canvas editor, design system import from GitHub, /design-sync and /design in Claude Code, and new ecosystem connectors. |
 | September 16 | Design moves into every conversation, Claude Code and the Artifacts tab when Anthropic merged chat and Cowork. Slides and Docs launch alongside it. |
 | October 8 | Design, Slides and Docs leave beta on every plan. Claude Motion adds code-built animation exported as MP4. |
@@ -99,7 +99,7 @@ The competitors are also partners. Claude Design has a direct export to Canva, a
 
 Investors moved fast. Figma, which Gizmodo cites an estimate placing at 80 to 90% of UI and UX design work, took the hardest hit.
 
-The incumbents were still growing rapidly before the launch, which demonstrates that enterprise appetite for dedicated digital design tools remains colossal.
+The incumbents were still growing rapidly before the launch, which demonstrates that business appetite for dedicated digital design tools remains colossal.
 
 ---
 
@@ -126,7 +126,7 @@ Pressure lands first on routine production. Simple decks, one-pagers and social 
 - Ask for a design in any Claude conversation, or start one from the Artifacts tab.
 - Developers can run /design inside Claude Code to create, edit and sync design projects.
 - Standalone users should click "Migrate team design systems" on the Artifacts page and download projects they want to keep before December 14.
-- Enterprise admins manage Design, Slides and Docs under Organization settings, Artifacts.
+- Business admins manage Design, Slides and Docs under Organization settings, Artifacts.
 
 Design used to begin with a cursor. It now begins with a sentence, and that change reshapes how digital graphics and graphical assets get made.
 

@@ -1,5 +1,5 @@
 # Personal Generative AI Transformation
-## Enterprise AI Transformation Service - Thomas Cherickal
+## Business AI Transformation Service - Thomas Cherickal
 
 > **// PERSONAL SERVICE SPECIFICATION 01**  
 > **Move from casual, one-off chatbot queries to an AI Second Brain and proactive thinking partner. Master the CODE framework,

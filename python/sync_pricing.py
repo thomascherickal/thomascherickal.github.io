@@ -120,12 +120,12 @@ ALL_SERVICES = [
     {"slug": "service-agentic-ai-systems", "title": "Hermes Agent Training"},
     {"slug": "service-workflow-automations", "title": "Workflow Automations"},
     {"slug": "service-ai-budget-cost-limits-training", "title": "AI Budget & Cost Control Training"},
-    {"slug": "service-enterprise-workforce-ai-training", "title": "Enterprise Workforce AI Training"},
     {"slug": "service-ai-developer-training", "title": "AI Developer Training"},
     {"slug": "service-advanced-ai-agents", "title": "Advanced AI Agents"},
     {"slug": "service-claude-advanced-training", "title": "Claude Advanced Training"},
     {"slug": "service-gemini-advanced-training", "title": "Google Gemini Advanced Training"},
-    {"slug": "service-deep-research-notebooklm", "title": "Deep Research & NotebookLM Intelligence"}
+    {"slug": "service-competitor-research", "title": "Competitor Research & Intelligence"},
+    {"slug": "service-leads-magnet", "title": "AI Leads Magnet & Conversion Systems"}
 ]
 
 def format_price_spec(name, price_val, desc=None):
@@ -374,7 +374,7 @@ def sync_llms_txt():
 - **Purchasing Power Parity (PPP)**: Available across all service pricing, covering 195 countries and dedicated relief tiers."""
 
     pattern = re.compile(
-        r'-\s*\*\*(?:Individual Service Picks|Core Strategic Packages|Enterprise Services|Business Training)[\s\S]*?(?=\n\n|\n###|\Z)',
+        r'-\s*\*\*(?:Individual Service Picks|Core Strategic Packages|Business Services|Business Training)[\s\S]*?(?=\n\n|\n###|\Z)',
         re.MULTILINE
     )
     if pattern.search(content):

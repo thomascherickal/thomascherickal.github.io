@@ -1,4 +1,4 @@
-# Claude Connectors: How Enterprise Work Moves Smoothly Between People And Teams
+# Claude Connectors: How Business Work Moves Smoothly Between People And Teams
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
@@ -25,9 +25,9 @@ Connectors give Claude permission-scoped access to the tools each team already u
 
 ---
 
-## Why Enterprise Work Stalls Between Teams
+## Why Business Work Stalls Between Teams
 
-Most enterprise work does not fail inside one team. It fails at the handoff. A salesperson logs a customer request in the CRM, a product manager rewrites it as a ticket, an engineer reads a thinner version of it and support hears about the fix weeks later.
+Most business work does not fail inside one team. It fails at the handoff. A salesperson logs a customer request in the CRM, a product manager rewrites it as a ticket, an engineer reads a thinner version of it and support hears about the fix weeks later.
 
 Each handoff loses context because each team lives in a different tool. An AI assistant that only reads what someone pastes into a chat window inherits the same gap. Claude connectors close it by letting Claude work inside the tools where the record already sits.
 
@@ -57,15 +57,15 @@ The most important design choice sits in the permission model. Claude inherits e
 
 ---
 
-## Shared Setup For Teams And Enterprises
+## Shared Setup For Teams And Businesses
 
-On Team and Enterprise plans, setup splits into two steps. An Owner or Primary Owner enables a connector for the organization, and then each member signs in with their own account before using it.
+On Team and Business plans, setup splits into two steps. An Owner or Primary Owner enables a connector for the organization, and then each member signs in with their own account before using it.
 
-This split is what lets work carry across people. Governance owners configure the connector once, while access still follows each employee's identity in the source system. An Enterprise-managed auth option, currently in beta, lets admins authorize a connector once so members inherit access on first login.
+This split is what lets work carry across people. Governance owners configure the connector once, while access still follows each employee's identity in the source system. An Business-managed auth option, currently in beta, lets admins authorize a connector once so members inherit access on first login.
 
 Owners can also restrict what a connector may do across the whole organization. Each tool can be set to Always allow, Needs approval or Blocked, so a team might let Claude search email without sending it. Members cannot override these organization-wide limits.
 
-Members who need a missing tool can request it from the directory, and Owners approve or decline it from the admin notifications tab. Requests are on by default for Team plans and off by default for Enterprise plans.
+Members who need a missing tool can request it from the directory, and Owners approve or decline it from the admin notifications tab. Requests are on by default for Team plans and off by default for Business plans.
 
 ---
 
@@ -106,10 +106,10 @@ Connectors give Claude real reach into business systems, so the rollout plan mat
 - Start with read access: Set write and delete tools to Needs approval until teams trust the output.
 - Vet custom connectors: Anthropic warns that custom connectors can reach services it has not verified, so connect only servers from trusted organizations.
 - Watch shared credentials: A custom connector that uses a shared credential reaches everything that credential can access, not just what each user can see.
-- Protect your domain: Enterprise Owners can stop services on their verified domains from being connected to Claude accounts outside the organization.
+- Protect your domain: Business Owners can stop services on their verified domains from being connected to Claude accounts outside the organization.
 - Load tools on demand: With ten or more active connectors, the On demand tool access mode leaves more room in each conversation.
 
-Plan around one limit as well. On Team and Enterprise plans, connectors work only in private projects, and chats with synced content cannot be shared. The output Claude writes into Jira, Confluence or Linear becomes the shared record, and that record is what the next person picks up.
+Plan around one limit as well. On Team and Business plans, connectors work only in private projects, and chats with synced content cannot be shared. The output Claude writes into Jira, Confluence or Linear becomes the shared record, and that record is what the next person picks up.
 
 ---
 

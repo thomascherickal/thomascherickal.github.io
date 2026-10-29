@@ -90,7 +90,7 @@
         "Agent Skills Standard",
         "Anthropic Skills",
         "Custom AI Skills",
-        "Enterprise Agents"
+        "Business Agents"
       ]
     },
     {
@@ -162,16 +162,14 @@
           <li><a href="../business-services/business-service-workflow-automations.html">Workflow Automations</a></li>
           <li><a href="../business-services/business-service-ai-budget-cost-limits-training.html">AI Budget &amp; Cost
               Control Training</a></li>
-          <li><a href="../business-services/business-service-enterprise-workforce-ai-training.html">Enterprise Workforce AI
-              Training</a></li>
           <li><a href="../business-services/business-service-ai-developer-training.html">AI Developer Training</a></li>
           <li><a href="../business-services/business-service-advanced-ai-agents.html">Advanced AI Agents</a></li>
-          <li><a href="../business-services/business-service-deep-research-notebooklm.html">Deep Research &amp; Gemini
-              Notebook</a></li>
           <li><a href="../business-services/business-service-claude-advanced-training.html">Claude Advanced Training</a>
           </li>
           <li><a href="../business-services/business-service-gemini-advanced-training.html">Gemini Advanced Training</a>
           </li>
+          <li><a href="../business-services/business-service-competitor-research.html">Competitor Research</a></li>
+          <li><a href="../business-services/business-service-leads-magnet.html">Leads Magnet</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
@@ -192,16 +190,14 @@
           <li><a href="../personal-services/personal-service-workflow-automations.html">Workflow Automations</a></li>
           <li><a href="../personal-services/personal-service-ai-budget-cost-limits-training.html">AI Budget &amp; Cost
               Control Training</a></li>
-          <li><a href="../personal-services/personal-service-enterprise-workforce-ai-training.html">Enterprise Workforce AI
-              Training</a></li>
           <li><a href="../personal-services/personal-service-ai-developer-training.html">AI Developer Training</a></li>
           <li><a href="../personal-services/personal-service-advanced-ai-agents.html">Advanced AI Agents</a></li>
-          <li><a href="../personal-services/personal-service-deep-research-notebooklm.html">Deep Research &amp; Gemini
-              Notebook</a></li>
           <li><a href="../personal-services/personal-service-claude-advanced-training.html">Claude Advanced Training</a>
           </li>
           <li><a href="../personal-services/personal-service-gemini-advanced-training.html">Gemini Advanced Training</a>
           </li>
+          <li><a href="../personal-services/personal-service-continuous-learning.html">Continuous Learning</a></li>
+          <li><a href="../personal-services/personal-service-worklife-balance.html">Work-Life Balance</a></li>
         </ul>
       </li>
       <li><a href="../faqs.html" data-nav="faqs.html">FAQs</a></li>
@@ -468,7 +464,7 @@
 <div class="content-card" id="where">
 <h2>2. Where Skills Run</h2>
 <ul class="article-list">
-<li><strong>Claude apps:</strong> custom skills are uploaded or created under Customize &gt; Skills, on Free, Pro, Max, Team and Enterprise plans with code execution turned on.</li>
+<li><strong>Claude apps:</strong> custom skills are uploaded or created under Customize &gt; Skills, on Free, Pro, Max, Team and Business plans with code execution turned on.</li>
 <li><strong>Claude Code:</strong> skills are folders in <code>~/.claude/skills/</code> for personal use or <code>.claude/skills/</code> inside a repository, callable as <code>/skill-name</code>.</li>
 <li><strong>Claude API:</strong> skills attach to the code execution container by <code>skill_id</code> and are shared across a workspace.</li>
 <li><strong>Agent SDK:</strong> skills are discovered from the filesystem and limited with a <code>skills</code> option, per the <a class="ref-link" href="https://code.claude.com/docs/en/agent-sdk/skills" rel="noopener noreferrer" target="_blank">Agent SDK skills documentation</a>.</li>
@@ -484,7 +480,7 @@
 <h3>Step 1: Pick One Repeated Job</h3>
 <p class="article-p">The <a class="ref-link" href="https://code.claude.com/docs/en/skills" rel="noopener noreferrer" target="_blank">Claude Code guide to extending Claude with skills</a> gives a practical trigger: write a skill when you keep pasting the same instructions, checklist or procedure into chat. Keep each skill to one workflow, because Claude can combine several focused skills in a single task.</p>
 <h3>Step 2: Write The SKILL.md File</h3>
-<p class="article-p">A skill needs YAML frontmatter between <code>---</code> markers and Markdown instructions below it. Here is an enterprise release-notes skill directory layout and definition:</p>
+<p class="article-p">A skill needs YAML frontmatter between <code>---</code> markers and Markdown instructions below it. Here is an business release-notes skill directory layout and definition:</p>
 <div class="code-window">
 <div class="code-bar">
 <span>Folder Layout - writing-release-notes</span>
@@ -610,7 +606,7 @@ zip -r meeting-notes.zip meeting-notes
 <span class="c"># Windows: right-click the meeting-notes folder, then choose</span>
 <span class="c"># Send to &gt; Compressed (zipped) folder</span></code></pre>
 </div>
-<p class="article-p"><strong>5. Upload and enable it.</strong> On Free, Pro and Max plans, first turn on "Code execution and file creation" under Settings &gt; Capabilities; on Team and Enterprise plans an owner enables it for the organization. Then open Customize &gt; Skills, click <strong>+</strong>, choose <strong>Create skill</strong>, then <strong>Upload a skill</strong>, select the ZIP and switch the skill on. These steps follow the <a class="ref-link" href="https://support.claude.com/en/articles/12512180-using-skills-in-claude" rel="noopener noreferrer" target="_blank">Help Center guide to using skills in Claude</a>.</p>
+<p class="article-p"><strong>5. Upload and enable it.</strong> On Free, Pro and Max plans, first turn on "Code execution and file creation" under Settings &gt; Capabilities; on Team and Business plans an owner enables it for the organization. Then open Customize &gt; Skills, click <strong>+</strong>, choose <strong>Create skill</strong>, then <strong>Upload a skill</strong>, select the ZIP and switch the skill on. These steps follow the <a class="ref-link" href="https://support.claude.com/en/articles/12512180-using-skills-in-claude" rel="noopener noreferrer" target="_blank">Help Center guide to using skills in Claude</a>.</p>
 <p class="article-p"><strong>6. Test both directions.</strong> Paste a messy set of notes and ask for a recap; the reply should follow the template exactly, with gaps listed under Open questions. Then ask for something nearby that should not trigger the skill, such as "draft a meeting invite for Thursday", and confirm the template does not appear. If the skill never fires, sharpen the description or name it directly: <em>"Use my meeting-notes skill on these notes."</em></p>
 <!-- Tutorial 2 -->
 <h3 id="tutorial-2" style="margin-top:2.5rem;">Tutorial 2: Changelog Script in Claude Code</h3>
@@ -883,7 +879,7 @@ for block in response.content:
 <h3>Skills Bundled With Claude Code</h3>
 <p class="article-p">Claude Code ships native skills including <code>/doctor</code>, <code>/code-review</code>, <code>/debug</code>, <code>/batch</code>, <code>/loop</code> and <code>/claude-api</code>. Three work together in an interactive feedback loop: <code>/run</code> launches your app, <code>/verify</code> confirms a code change against the running app, and <code>/run-skill-generator</code> saves the verified build-and-launch recipe as a new skill.</p>
 <h3>Partner Skills &amp; Platforms</h3>
-<p class="article-p">The <a class="ref-link" href="https://claude.com/blog/organization-skills-and-directory" rel="noopener noreferrer" target="_blank">Claude blog post on organization skills</a> added a partner directory in December 2025, naming Notion, Canva, Figma, Atlassian, Cloudflare, Sentry, Vercel and Zapier, which Team and Enterprise admins can provision company-wide. The <a class="ref-link" href="https://support.claude.com/en/articles/12512176-what-are-skills" rel="noopener noreferrer" target="_blank">Help Center article on what skills are</a> explains how to browse it under Customize &gt; Skills.</p>
+<p class="article-p">The <a class="ref-link" href="https://claude.com/blog/organization-skills-and-directory" rel="noopener noreferrer" target="_blank">Claude blog post on organization skills</a> added a partner directory in December 2025, naming Notion, Canva, Figma, Atlassian, Cloudflare, Sentry, Vercel and Zapier, which Team and Business admins can provision company-wide. The <a class="ref-link" href="https://support.claude.com/en/articles/12512176-what-are-skills" rel="noopener noreferrer" target="_blank">Help Center article on what skills are</a> explains how to browse it under Customize &gt; Skills.</p>
 <p class="article-p">The <a class="ref-link" href="https://agentskills.io/home" rel="noopener noreferrer" target="_blank">Agent Skills open standard at agentskills.io</a> lets the same folder work across ecosystem providers. OpenAI's <a class="ref-link" href="https://learn.chatgpt.com/docs/build-skills" rel="noopener noreferrer" target="_blank">guide to building skills for ChatGPT and Codex</a> builds on it, and GitHub's <a class="ref-link" href="https://docs.github.com/en/copilot/concepts/agents/about-agent-skills" rel="noopener noreferrer" target="_blank">Copilot documentation on agent skills</a> lists support in Copilot CLI, cloud agent, and VS Code agent mode. For maximum cross-platform portability, stick strictly to the standard's frontmatter fields rather than Claude Code extensions such as <code>context: fork</code>.</p>
 </div>
 <!-- Section 6: Security -->
@@ -960,7 +956,7 @@ for block in response.content:
 </figure>
 <p class="article-p">The usage data shows the macroeconomic direction. Anthropic's <a class="ref-link" href="https://www.anthropic.com/research/anthropic-economic-index-september-2025-report" rel="noopener noreferrer" target="_blank">September 2025 Economic Index report</a> found that directive conversations, where users hand Claude a whole autonomous task, rose from 27% to 39% of Claude.ai usage in under a year, and that 77% of business API transcripts exhibited structured automation patterns. The World Economic Forum's <a class="ref-link" href="https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/" rel="noopener noreferrer" target="_blank">Future of Jobs Report 2025</a> projects 92 million jobs displaced and 170 million created by 2030, with 41% of surveyed employers planning workforce reductions driven by AI automation.</p>
 <p class="article-p">So far, tasks are being automated significantly faster than whole jobs. In the <a class="ref-link" href="https://www.anthropic.com/research/economic-index-june-2026-report" rel="noopener noreferrer" target="_blank">June 2026 Economic Index survey of Claude users</a>, over a third of roughly 9,700 respondents expected AI to handle most of their daily tasks within a year, yet only 10% rated losing their own job as likely. Intriguingly, over a third put a junior colleague's odds of job loss above 60%. While the sample skews technical and is self-reported, the signal is unmistakable.</p>
-<p class="article-p">Skills turn the automation of a documented procedure from a multi-month engineering project into something a domain expert can write on a Friday afternoon. The most exposed roles are those whose steps fit cleanly in a <code>SKILL.md</code>, and the professionals who write, test, and maintain those repositories hold the procedural know-how that enterprise agents depend on. To start, turn the instruction you paste into Claude most often into a skill, and explore <code>skill-creator</code> and <code>pdf</code> in Anthropic's repository today.</p>
+<p class="article-p">Skills turn the automation of a documented procedure from a multi-month engineering project into something a domain expert can write on a Friday afternoon. The most exposed roles are those whose steps fit cleanly in a <code>SKILL.md</code>, and the professionals who write, test, and maintain those repositories hold the procedural know-how that business agents depend on. To start, turn the instruction you paste into Claude most often into a skill, and explore <code>skill-creator</code> and <code>pdf</code> in Anthropic's repository today.</p>
 </div>
 <!-- Section 8: References -->
 <div class="content-card" id="references">
@@ -990,7 +986,7 @@ for block in response.content:
 </div>
 <!-- CTA Banner -->
 <section class="cta-banner">
-<h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Scale Your Enterprise AI Agents with Production Skills</h3>
+<h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Scale Your Business AI Agents with Production Skills</h3>
 <p style="color:#94a3b8;font-size:1.02rem;max-width:680px;margin:0 auto 1.75rem;line-height:1.7;">Architect resilient skill repositories, custom prompt injection harnesses, and multi-model agentic workflows tailored for your organization.</p>
 <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
 <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
