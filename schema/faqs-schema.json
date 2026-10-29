@@ -148,7 +148,23 @@
     },
     {
       "@type": "Question",
-      "name": "What is Tier 1 (High-Income) and which countries and organizations qualify?",
+      "name": "Can clients pick and choose individual services instead of enrolling in a full program?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, absolutely. Clients have complete freedom to pick and choose individual services from our 16-service catalogue without committing to a full multi-week transformation package. Individual / Personal Service delivery is billed at a transparent baseline rate of $100 USD (Day 1-5 delivery, Days 6-10 guidance & support), while Enterprise Single Service delivery is billed at $1,000 USD (Days 1-10 delivery, Days 11-20 guidance & support). All services include hands-on custom implementation, code repositories, starter templates, and Apache 2.0 deliverables."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Purchasing Power Parity (PPP) available for individual service pricing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Parity pricing is universally available for all service pricing across our entire offering catalogue and across all 195 countries. Individual Pick Parity Rates ($100 Base): Tier 1 (100%): $100 | Tier 2 (75%): $75 | Tier 3 (50%): $50 | Tier 4 (50%): $50 | Tier 5 (25%): $25 | Tier 6 (10%): $10. Enterprise Single Pick Parity Rates ($1,000 Base): Tier 1 (100%): $1,000 | Tier 2 (75%): $750 | Tier 3 (50%): $500 | Tier 4 (50%): $500 | Tier 5 (25%): $250 | Tier 6 (10%): $100. Displaced founders, students, and open-source contributors can also apply for Tier 6 micro-grants."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Tier 1 (High-Income Economies) and which countries and organizations qualify?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Tier 1 represents World Bank High-Income Economies including the United States, Canada, United Kingdom, Germany, France, Switzerland, Netherlands, Sweden, Norway, Denmark, Ireland, Japan, Singapore, Australia, and New Zealand. Tier 1 receives our 100% standard baseline rate (1.0X multiplier, 0% discount)."
@@ -156,7 +172,7 @@
     },
     {
       "@type": "Question",
-      "name": "What is Tier 2 (Upper-Middle-Income Markets) and how does the 25% discount apply?",
+      "name": "What is Tier 2 (Upper-Middle-Income Economies) and how does the 25% discount apply?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Tier 2 applies to rapidly expanding digital tech hubs across South Asia, Latin America, Southeast Asia, Eastern Europe, and the Middle East (including India, Brazil, Mexico, Colombia, Poland, Turkey, UAE, Saudi Arabia, South Africa, Malaysia, Thailand, and Philippines). Qualifying teams receive an automatic 25% Parity Discount (75% base rate, 0.75X multiplier)."
@@ -164,7 +180,7 @@
     },
     {
       "@type": "Question",
-      "name": "What is Tier 3 (Least Developed & Emerging Markets) and how does the 50% discount apply?",
+      "name": "What is Tier 3 (Lower-Middle & Low-Income Economies) and how does the 50% discount apply?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Tier 3 covers World Bank lower-middle and low-income economies including Nigeria, Kenya, Ghana, Ethiopia, Egypt, Bangladesh, Pakistan, Sri Lanka, Nepal, Vietnam, Bolivia, and Uzbekistan. Teams in these regions receive an automatic 50% Parity Discount (50% base rate, 0.50X multiplier)."
@@ -220,7 +236,7 @@
     },
     {
       "@type": "Question",
-      "name": "How are services chosen under Personal Training?",
+      "name": "How does Personal AI Transformation draw from the 16-service catalogue?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Clients are encouraged to choose services relevant to their work or interests across the entire catalogue during their 40-day personal engagement."
@@ -236,7 +252,7 @@
     },
     {
       "@type": "Question",
-      "name": "Can I bring co-founders or team members to Personal AI Training?",
+      "name": "Can I bring co-founders or team members to Personal Training?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "No. Personal AI Training is strictly for one person only (private 1-on-1 acceleration). This ensures complete confidentiality, zero committee distraction, and custom hardware/workflow pairing tailored 100% to your individual daily work. If you wish to train a team, co-founders, or engineering cohort, our Enterprise Workforce AI Training covers up to 20 participants in its fixed base fee."
@@ -340,7 +356,7 @@
     },
     {
       "@type": "Question",
-      "name": "How does the training teach AI Budget & Cost Control Training alongside Local LLM Cost Slashing?",
+      "name": "How does the training teach AI Budget & Cost Limits Training alongside Local LLM Cost Slashing?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "We implement concrete financial guardrails: reverse proxy gateways (LiteLLM), per-user and per-key spend caps, automatic circuit breakers against recursive agent loops, semantic prompt caching (saving 30-50% on repeat inputs), prompt token compression, and routing routine workloads to local open-weights clusters to slash enterprise AI expenses by up to 90%."
@@ -364,7 +380,7 @@
     },
     {
       "@type": "Question",
-      "name": "What is the standard engagement duration for each enterprise AI service and training package?",
+      "name": "What is the standard engagement duration and included support guarantee for enterprise and personal AI bookings?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Every enterprise AI transformation service, architecture engagement, and workforce training program is structured as a comprehensive, intensive one-month (4-week) implementation. Each one-month engagement follows a disciplined four-week milestone roadmap: Week 1 covers architectural discovery and technical scoping, Week 2 establishes core Claude agent pipelines and tool orchestration, Week 3 focuses on verification, test-driven development (TDD), and guardrails, and Week 4 delivers production handover, comprehensive guides, and cohort training."
@@ -408,6 +424,94 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Tier 6 subsidized engagements bypass standard automated checkout. To apply, contact founder Thomas Cherickal directly via email at thomascherickal@gmail.com or send a direct message on X at https://x.com/thomazcherickal. Please provide a brief description of your organization or personal background, geographic location, current economic constraints, target training focus areas, and cohort size. Every Tier 6 accommodation is individually evaluated and subject to direct approval by the founder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Apache 2.0 license, and why are all deliverables released under it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Apache License, Version 2.0 (Apache 2.0) is a permissive, OSI-approved open-source and content license created by the Apache Software Foundation. It grants anyone who receives the licensed work an irrevocable, perpetual, worldwide, non-exclusive, royalty-free copyright and patent license to reproduce, prepare derivative works of, publicly display, perform, sublicense, and distribute the work and derivative works in source, binary, or document form. All training materials, starter repositories, architectural patterns, runbooks, documentation, and deep dives authored by Thomas Cherickal are released under Apache 2.0 to eliminate legal ambiguity, abolish proprietary software lock-in, and provide complete sovereign technical ownership to clients and learners."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can clients, teams, or independent builders resell or monetize the code, guides, and training materials?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, absolutely. Under Apache 2.0, commercial use and monetization are explicitly authorized without restriction or royalty obligations. Clients, founders, and developers can bundle custom agents, test suites, architecture guides, and tutorials into commercial client engagements, paid SaaS products, proprietary enterprise services, or fee-based training academies. You are free to charge money for derivative solutions, host paid courses incorporating the materials, or sell enterprise integrations built upon the code. The only standard Apache 2.0 requirements are including a copy of the Apache 2.0 license, retaining copyright and attribution notices, and stating significant modifications."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the Apache 2.0 license apply to internal reuse across enterprise departments and global teams?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Apache 2.0 license provides complete freedom for internal enterprise reuse. Unlike restrictive proprietary vendor licenses with per-seat barriers or copyleft licenses (such as GPL) that enforce external disclosure, Apache 2.0 allows organizations to distribute, modify, and integrate all curriculum, codebases, operating manuals, and guides internally without restrictions. Teams across different engineering divisions, subsidiaries, branch offices, and business units can fork repositories, modify agent prompts, embed tooling into private intranets or corporate wikis, and train unlimited internal staff indefinitely with zero recurring licensing royalties."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the Google Gemini curriculum cover across Basic and Advanced enterprise training?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our Google Gemini training curriculum is structured into comprehensive Basic and Advanced tracks designed to equip organizations with Google's full frontier AI toolchain. Basic Training covers multimodal chat with Google Gemini Pro, Google Workspace automation, conversational image generation with Nano Banana, soundtrack composition with Google Lyria, Google Flow video direction, and Gemini Spark background agents. Advanced Training covers Google AI Studio system prompt engineering with context caching, Google Antigravity IDE autonomous multi-agent development loops, Gemini Deep Think extended reasoning budgets, and sovereign on-premise Google Gemma fine-tuning and deployment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Deep Research and Gemini Notebook transform enterprise market intelligence and executive research?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Traditional web research is fragmented, slow, and prone to hallucinations. Our Deep Research and Gemini Notebook enablement establishes an automated, audit-ready intelligence pipeline: autonomous Gemini Deep Research agents crawl verified sources and generate comprehensive dossiers with direct citations, while Gemini Notebook anchors answers strictly in proprietary enterprise repositories, whitepapers, and filings to eliminate hallucinations, alongside generating audio discussions, executive podcasts, and briefing decks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Google Antigravity IDE transform full-stack engineering and multi-agent development?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google Antigravity IDE is an agent-first development environment engineered for autonomous multi-agent pairing: formulating multi-step execution plans, editing code across repositories, running shell commands in sandboxes, spawning concurrent subagents, automating custom workflows with skills schemas, and verifying DOM updates with integrated browser DevTools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can engineering teams leverage Google AI Studio context caching and structured outputs for production systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google AI Studio provides enterprise developer controls for prototyping and deploying multimodal applications: ingesting whole repositories into 2M-token context windows, context caching to cut input token billing by up to 75% on recurring requests, enforcing deterministic JSON schemas with OpenAPI definitions, and tuning system instructions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Claude Code CLI, and how does it accelerate enterprise software development?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code is Anthropic's agentic command-line interface that brings Claude directly into your terminal, filesystem, and version control workflows. It reads whole codebases, plans and executes multi-file edits, runs local test suites iteratively until passing, and creates atomic Git commits directly inside developer environments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Model Context Protocol (MCP), and why is it essential for enterprise AI integrations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Model Context Protocol (MCP) is an open standard created by Anthropic that standardizes how AI applications connect to external data sources and tools. Teams build custom servers in Python, TypeScript, or Rust exposing databases, ERP systems, and APIs to agents with granular security boundaries and zero vendor lock-in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Claude multi-agent orchestration work for complex, mission-critical business processes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude multi-agent orchestration coordinates swarms through orchestrator-worker hierarchies, parallel execution fan-outs to minimize latency, independent evaluator-optimizer critic loops to guarantee output quality, and hard token budget caps and circuit breakers to control spending."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Claude prompt caching reduce recurring API costs and latency in production deployments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude prompt caching allows developers to reuse frequently referenced context across API requests, reducing cached input token costs by up to 90% and dropping Time to First Token (TTFT) by up to 80% on long documents and agent loops with strategic cache breakpoints."
       }
     }
   ]

@@ -1,18 +1,154 @@
 # Personal Training: $1,000 for 40 Days (20d Training + 20d Guidance & Materials)
-## Enterprise AI Transformation Service - Thomas Cherickal
+## Thomas Cherickal - The Digital Futurist
 
-> **// THE VALUE PROPOSITION & RATIONALE**  
+> **PERSONAL TRAINING · 40 DAYS (20 DAYS TRAINING + 20 DAYS GUIDANCE)**  
 > **You are never forced to choose between local models, autonomous agents, prompt craft, or workflow automations. 
  Your personal sprint draws on the full 16-service catalogue; you choose the services relevant to your work and goals:**
 
 ---
 
+Clients can choose our comprehensive 40-day transformation at $1,000 USD (20 days live training + 20 days guidance, Q&A and written guides), or pick individual services at $100 USD per service (5 days live training + 5 days dedicated support). Strictly for 1 person only. Clients are encouraged to choose services relevant to their work or interests. Purchasing Power Parity (PPP) is available for all service pricing across 195 countries.
+
 ## Our Uncompromising Training & Included Guidance Guarantee
 
 Whether booking organization-wide Business Training or an intensive 1-on-1 Personal Training sprint, every engagement is backed by an explicit, transparent training and guidance guarantee:
 
----
+### Business Training Flagship
 
-### Ready to Deploy?
-- [Commission this Service via Email →](contact.html)
-- [Book Strategy Session on Topmate ↗](https://topmate.io/thomascherickal)
+Guaranteed 20 days of comprehensive live instruction across engineering cohorts and leadership, followed immediately by 30 days of guidance, Q&A and written guides. Covers up to 20 participants (extra seats at $100 USD per seat). Clients are encouraged to choose services relevant to their work or interests.
+
+### Personal Training Flagship (1 Person Only)
+
+Guaranteed 20 days of intensive 1-on-1 instruction, followed immediately by 15 days of guidance, Q&A and written guides. Strictly for one person only. Clients are encouraged to choose services relevant to their work or interests.
+
+// THE VALUE PROPOSITION & RATIONALE
+
+## Why Personal Training Is Structured at $1,000 for 40 Days
+
+In organizational Business Training engagements ($2,000 USD base), substantial coordination is mandatory: aligning cross-functional teams of up to 20 participants, navigating corporate compliance reviews, provisioning isolated corporate sandboxes, and orchestrating change management across varied skill levels.
+
+For a solo founder, visionary executive, or elite individual developer, this bureaucratic overhead disappears entirely. 
+ Friction is zero. Because you have full administrative authority over your local machines, repositories, and API credentials, work moves faster than it can inside a committee.
+
+Personal Training costs $1,000 in Tier 1 for 40 days (20 days training, + 20 days guidance, Q&A and written guides). Strictly for 1 person only. Clients are encouraged to choose services relevant to their work or interests.
+
+// FULL-SPECTRUM MASTERY
+
+## The Complete 16-Service Catalogue Customized to Your Work
+
+You are never forced to choose between local models, autonomous agents, prompt craft, or workflow automations. 
+ Your personal sprint draws on the full 16-service catalogue; you choose the services relevant to your work and goals:
+
+### 01 · Generative AI Transformation
+
+Move your business from one-off chatbot prompts to coordinated teams of Claude agents that carry real work. Ground agent swarms in your domain data with custom MCP servers, bounded execution loops, and strict spending limits.
+
+### 02 · Local LLMs & Cost Slashing
+
+Moving routine workloads to local models can cut recurring cloud API bills by 60% to 90%; your figure depends on volume and hardware. by running open-weight models privately with Ollama, vLLM, llama.cpp and LM Studio. Size hardware from 8B to 120B models, route routine queries locally, and keep sensitive records on your machines.
+
+### 03 · Claude Agent Orchestration
+
+Master the principles of Claude AI agent orchestration to run multi-agent swarms at scale. Build orchestrator-worker hierarchies, sequential pipelines, and parallel fan-out teams that automate complex workflows while controlling quality and cost.
+
+### 04 · Hermes Agent
+
+Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own infrastructure. Configure persistent session memory so the agent retains project context, saves solved procedures as reusable skills, and runs scheduled tasks.
+
+### 05 · Workflow Automation Training
+
+Hands-on training for automating recurring office work with Claude skills, plugins, connectors, scheduled tasks and Microsoft 365 add-ins. Automate recurring office tasks across sales, finance and engineering, with private data options. across sales, finance and engineering with private data options.
+
+### 06 · Quantum Applications (Experimental)
+
+Exploratory quantum computing advisory for enterprise use cases: algorithm simulation with IBM Qiskit and PennyLane, variational circuits (VQE/QAOA), quantum machine learning, and Post-Quantum Cryptography (PQC) readiness aligned with NIST standards.
+
+### 07 · AI Budget & Cost Control Training
+
+Train staff across all levels to control AI spending: establish hard spending caps per session and month, configure token budgets, leverage prompt caching (cutting cached input tokens by 90% to 97.5%, depending on the Claude model), and route low-complexity tasks to free and local models.
+
+### 08 · Enterprise Workforce AI Training
+
+Live and remote corporate AI training delivered across distinct tracks: prompting for corporate staff, Claude Code and AI-assisted TDD for developers, and executive briefings, AI roadmaps, governance, and safe AI use policies for CXOs.
+
+### 09 · AI Developer Training
+
+Hands-on bootcamps training developer teams on terminal and IDE coding agents (Claude Code, Google Antigravity, OpenCode). Catch mistakes early with strict AI-assisted Test-Driven Development (TDD) and build custom MCP servers in Python and Rust.
+
+### 10 · Advanced AI Agents
+
+Build production autonomous agent systems with hierarchical teams of Claude agents for business-critical workloads. Implement test-driven self-correction loops where agents fix errors until tests pass, with persistent state and Docker sandboxing.
+
+### 11 · Claude Basic Training
+
+Foundational enablement for corporate staff and knowledge workers: choosing the right model between Haiku, Sonnet, Opus and Fable, structured prompting with XML tags, managing shared team memory in Claude Projects, and using Artifacts for daily office work.
+
+### 12 · Claude Advanced Training
+
+Technical masterclass for senior developers and AI architects: advanced Claude Code CLI workflows, Claude for Microsoft 365 (Excel, Word, PowerPoint, Outlook), designing and securing production MCP servers, and orchestrating frontier models with adaptive thinking effort.
+
+### 13 · Gemini Basic Training
+
+Foundational Google Gemini workforce enablement: multimodal reasoning, Google Workspace automation, Gemini Flash for high-speed tasks, and creative workflows with Google Flow and Nano Banana.
+
+### 14 · Gemini Advanced Training
+
+Advanced technical masterclass for AI engineers: Google AI Studio, Google Antigravity IDE, Gemini Deep Think reasoning, Gemma fine-tuning, and Gemini Argon deployment.
+
+### 15 · Deep Research & Gemini Notebook
+
+Autonomous literature synthesis, source-grounded knowledge graphs with Gemini Notebook, and enterprise multi-document intelligence pipelines.
+
+### 16 · Hybrid Quantum-Classical AI
+
+Hybrid quantum-classical optimization pipelines with VQE, QAOA, QSVM, PennyLane, and Qiskit for complex industrial logistics and chemical modeling.
+
+## Two-Phase Personal Curriculum & Daily Support Roadmap
+
+20 intensive days focused on your selected services from the 16-service catalogue, followed immediately by 15 days of included daily work assistance on your live projects:
+
+### Generative AI Transformation, Enterprise Workforce AI Training & Claude Basic Training
+
+Mapping your daily professional bottlenecks, setting up Claude Projects, authoring deterministic XML boundary prompts, and establishing an isolated sandbox workspace on your primary workstation.
+
+### Local LLMs & Cost Slashing, AI Budget & Cost Control Training & Token Ceilings
+
+Deploying Llama 3, DeepSeek, Mistral, and Qwen locally with GGUF/AWQ 4-bit quantization, setting up hard reverse proxy spend limits via LiteLLM, and slashing recurring API token bills by 60-90%.
+
+### Claude Agent Orchestration, Advanced AI Agents & Claude Advanced Training
+
+Configuring lead orchestrator Claude Opus with fast Claude Sonnet subagents, authoring custom Model Context Protocol (MCP) servers in TypeScript/Python, and building stateful memory execution graphs.
+
+### Hermes Agent, Workflow Automation Training & Quantum Applications (Experimental)
+
+Building terminal-native Hermes agents with recursive self-healing loops, automating cross-app workflows with self-hosted n8n, and running early quantum circuit simulations with IBM Qiskit and PennyLane.
+
+### AI Developer Training, Coding Agent TDD Pairing & Transition
+
+Live developer pair-programming with Claude Code CLI and Google Antigravity, strict unit testing before code generation, formal IP assignment, and transition into Phase 2 daily support.
+
+### 15 Days of Support, Daily Doubts Clarification & Light Easy-to-Skim Guides
+
+Unlike corporate teams with extensive IT departments, individual practitioners, solo founders, and consultants require dedicated assistance during daily work. For 15 consecutive days immediately following sprint instruction, founder Thomas Cherickal remains in your corner for strictly 1-on-1 support:
+
+- Daily Questions & Doubts Clarification: Direct, dedicated clarification of all questions, prompt calibrations, tool issues, and architecture doubts as they arise in your daily work.
+- Light & Easy-to-Skim Source Materials & Guides: Carefully organized cheat sheets, reference guides, and source repositories designed to be light and easy to skim when you need fast answers during high-velocity work.
+- Daily PR & Architecture Reviews: Reviewing code produced by your new agents before you ship to clients or production repositories.
+- Workflow Optimization & Debugging: Resolving runtime exceptions, context degradation, or token spikes in real time via direct messaging and screen sharing.
+
+## Personal Training Parity Pricing Matrix
+
+Personal Training is $1,000 USD in Tier 1 for 40 days (20 days training, + 20 days guidance, Q&A and written guides). Clients are encouraged to choose services relevant to their work or interests. Parity multipliers apply globally:
+
+| Equity Tier | Qualifying Region / Profile | Discount | Milestone Rate |
+| :--- | :--- | :--- | :--- |
+| Tier 1: High-Income | US, Canada, UK, Germany, France, Poland, Czech Republic, Hungary, Greece, Romania, Japan, South Korea, Singapore, Australia, Chile, UAE, Saudi Arabia | Standard Rate (0% Discount) | $1,000 USD |
+| Tier 2: Upper-Middle | Brazil, Mexico, Colombia, Argentina, Peru, Ecuador, Guatemala, Türkiye, Malaysia, Thailand, Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka | 25% Parity Discount | $750 USD |
+| Tier 3: Lower-Middle & Low-Income | India, Bangladesh, Pakistan, Nepal, Bhutan, Kenya, Nigeria, Ghana, Egypt, Morocco, Tanzania, Bolivia, Cambodia, Laos, Myanmar, Ethiopia, Uganda, Rwanda | 50% Parity Discount | $500 USD |
+| Tier 4: Early Startups | Solo Founders, Pre-Seed, Bootstrapped Tech Ventures (<$1M Raised) | 50% Startup Discount | $500 USD |
+| Tier 5: Academia & Non-Profit | Students, Academic Researchers, Faculty Labs, 501(c)(3) Non-Profits | 75% Academic Discount | $250 USD |
+| Tier 6: Crisis-Affected & Under-Resourced | Crisis Zones, Hyperinflation Economies, UN Least Developed Countries, Grassroots Devs | Custom Subsidized Relief | $100 USD (or Quote) |
+
+## Ready for Your Personal AI Transformation?
+
+Spaces are strictly limited to two personal mentees per calendar month to guarantee deep architectural pairing and uncompromised focus. Book today to lock in 20 days of intensive training plus 15 days of included support with daily questions and doubts clarification, and light, easy-to-skim source materials and guides (strictly one person only).

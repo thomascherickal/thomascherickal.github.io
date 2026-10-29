@@ -28,62 +28,41 @@ SYNC_DIR = os.path.join(REPO_DIR, "md-html-sync")
 STATE_FILE = os.path.join(SYNC_DIR, ".sync-state.json")
 
 os.makedirs(SYNC_DIR, exist_ok=True)
+for sub in ["business-services", "personal-services", "claude", "google"]:
+    os.makedirs(os.path.join(SYNC_DIR, sub), exist_ok=True)
 
-# Map HTML files to Markdown files in md-html-sync/
+# Map relative HTML files to relative Markdown files in md-html-sync/
 PAGE_MAPPINGS = {
     "index.html": "home.md",
     "articles.html": "articles.md",
     "writing.html": "writing.md",
-    "collaboration.html": "collaboration.md",
     "pricing.html": "pricing.md",
     "expertise.html": "expertise.md",
     "contact.html": "contact.md",
     "faqs.html": "faqs.md",
     "personal-ai-training.html": "personal-ai-training.md",
     "business-ai-training.html": "business-ai-training.md",
+    "all-business-services.html": "all-business-services.md",
+    "all-personal-services.html": "all-personal-services.md",
     "404.html": "404.md"
 }
 
-# Helper to find full HTML path across root and subdirectories
-def get_html_path(html_name: str) -> str:
-    direct = os.path.join(REPO_DIR, html_name)
-    if os.path.exists(direct):
-        return direct
-    for subdir in ["business-services", "personal-services", "claude", "google"]:
-        sub_path = os.path.join(REPO_DIR, subdir, html_name)
-        if os.path.exists(sub_path):
-            return sub_path
-    return direct
+# Helper to find full HTML path
+def get_html_path(rel_html_path: str) -> str:
+    return os.path.join(REPO_DIR, rel_html_path)
 
-# Auto-discover service pages from root, Business-Services, and Personal-Services
-service_files = sorted(
-    glob.glob(os.path.join(REPO_DIR, "service-*.html")) +
-    glob.glob(os.path.join(REPO_DIR, "business-services", "*.html")) +
-    glob.glob(os.path.join(REPO_DIR, "personal-services", "*.html"))
-)
-for s in service_files:
-    base = os.path.basename(s)
-    PAGE_MAPPINGS[base] = base.replace(".html", ".md")
-
-# Auto-discover agent orchestration & claude pages
-agent_files = sorted(
-    glob.glob(os.path.join(REPO_DIR, "agents-*.html")) +
-    glob.glob(os.path.join(REPO_DIR, "claude", "*.html")) +
-    glob.glob(os.path.join(REPO_DIR, "claude-*.html"))
-)
-for a in agent_files:
-    base = os.path.basename(a)
-    PAGE_MAPPINGS[base] = base.replace(".html", ".md")
-
-# Auto-discover google gemini pages
-google_files = sorted(
-    glob.glob(os.path.join(REPO_DIR, "google", "*.html")) +
-    glob.glob(os.path.join(REPO_DIR, "google-*.html"))
-)
-for g in google_files:
-    base = os.path.basename(g)
-    if not base.startswith("google43d"):
-        PAGE_MAPPINGS[base] = base.replace(".html", ".md")
+# Auto-discover subdirectory HTML files
+for subdir in ["business-services", "personal-services", "claude", "google"]:
+    sub_dir_path = os.path.join(REPO_DIR, subdir)
+    if not os.path.isdir(sub_dir_path):
+        continue
+    for html_path in sorted(glob.glob(os.path.join(sub_dir_path, "*.html"))):
+        base = os.path.basename(html_path)
+        if base.startswith("google43d"):
+            continue
+        rel_html = os.path.join(subdir, base)
+        rel_md = os.path.join(subdir, base.replace(".html", ".md"))
+        PAGE_MAPPINGS[rel_html] = rel_md
 
 def get_file_hash(path: str) -> str:
     if not os.path.exists(path):
@@ -339,8 +318,6 @@ def sync_html_to_md(html_name: str, md_name: str):
         content = build_md_files.convert_articles()
     elif html_name == "writing.html":
         content = build_md_files.convert_writing()
-    elif html_name == "collaboration.html":
-        content = build_md_files.convert_collaboration()
     elif html_name == "pricing.html":
         content = build_md_files.convert_pricing()
     elif html_name == "expertise.html":
@@ -351,14 +328,14 @@ def sync_html_to_md(html_name: str, md_name: str):
         content = build_md_files.convert_faqs()
     elif html_name == "404.html":
         content = build_md_files.convert_404()
-    elif html_name == "personal-ai-training.html" or html_name.startswith("service-"):
+    elif html_name in ["business-ai-training.html", "personal-ai-training.html", "all-business-services.html", "all-personal-services.html"]:
+        content = build_md_files.convert_general_document(html_path)
+    elif "business-services" in html_name or "personal-services" in html_name:
         content = build_md_files.convert_service_page(html_path)
-    elif html_name == "agents-all-agentic-providers.html":
-        content = build_md_files.convert_agents_all_providers(html_path)
-    elif html_name.startswith("agents-") or html_name.startswith("agent-") or html_name.startswith("claude-") or html_name.startswith("google-"):
+    elif "claude" in html_name or "google" in html_name:
         content = build_md_files.convert_agent_deepdive(html_path)
     else:
-        return False
+        content = build_md_files.convert_general_document(html_path)
         
     with open(md_path, "w", encoding="utf-8") as f:
         f.write(content)
@@ -455,7 +432,7 @@ def sync_md_to_html(md_name: str, html_name: str):
             if price_div:
                 price_div.string = price_val.replace(" USD", "")
                 
-    elif html_name.startswith("service-"):
+    elif "business-services" in html_name or "personal-services" in html_name:
         # Sync H1
         if md_h1_match:
             h1_el = soup.find("h1")
@@ -478,7 +455,7 @@ def sync_md_to_html(md_name: str, html_name: str):
                         tds[1].string = clean_text(focus)
                         tds[2].string = clean_text(deliv)
                         tds[3].string = clean_text(crit)
-    elif html_name.startswith("agents-") or html_name.startswith("agent-"):
+    elif "claude" in html_name or "google" in html_name:
         # Sync H1
         if md_h1_match:
             h1_el = soup.find("h1")

@@ -102,12 +102,12 @@ All live training runs on **business days** (Monday to Friday, excluding Saturda
 ## 4. Strategic Observations & Capacity Notes
 
 1. **Accessibility and Mission Alignment:**
-   - At $25.00/hr for Business Flagship ($1.25/hr per seat for 20 engineers) and $12.50/hr for 1-on-1 Personal Flagship, these rates are extraordinarily competitive for senior Generative AI training.
+   - At $25.00/hr for Business Flagship ($1.25/hr per seat for 20 participants) and $12.50/hr for 1-on-1 Personal Flagship, these rates are extraordinarily competitive for senior Generative AI training.
    - For developing nations (Tier 2 and Tier 3), rates ensure no high-impact engineering team or individual is priced out of foundational AI architectural skills.
 
 2. **Delivery Bandwidth & Solo Capacity:**
    - With 80 live training hours per flagship program (4 hours/day over 20 business days, or 4 calendar weeks), running one Business Flagship and one Personal Flagship simultaneously requires **8 live teaching hours per day**.
-   - Solo practice capacity is capped at 1-2 concurrent flagship clients per month to maintain training quality, bespoke repository code reviews, and student responsiveness.
+   - Solo practice capacity is capped at 1 concurrent flagship clients per month to maintain training quality, bespoke repository code reviews, and student responsiveness.
 
 3. **Installment & Cashflow Architecture:**
    - **Business Flagship ($2,000 USD):** Five equal payments of $400 USD (due after Days 4, 8, 12, 16, and 20 of completed training). Walk away owing nothing after the first 2 days.

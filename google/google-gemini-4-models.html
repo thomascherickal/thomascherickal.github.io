@@ -1,35 +1,36 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Gemini 4 Argon 1M Output Guide | Thomas Cherickal</title>
-  <meta content="Architectural guide to Gemini Argon: 1M token output decodes via chained execution, Vals Index enterprise rankings, and cooperative multi-agent benchmarks." name="description" />
-  <meta content="Thomas Cherickal" name="author" />
-  <link href="https://thedigitalfuturist.com/google/google-gemini-argon.html" rel="canonical" />
-  <!-- Open Graph -->
-  <meta content="article" property="og:type" />
-  <meta content="https://thedigitalfuturist.com/google/google-gemini-argon.html" property="og:url" />
-  <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name" />
-  <meta content="Gemini 4 Argon: 1M Output &amp; Reasoning | Thomas Cherickal" property="og:title" />
-  <meta content="Architectural guide to Gemini Argon: 1M token output decodes via chained execution, Vals Index enterprise rankings, and cooperative multi-agent benchmarks." property="og:description" />
-  <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image" />
-  <meta content="en_US" property="og:locale" />
-  <!-- Twitter Card -->
-  <meta content="summary_large_image" name="twitter:card" />
-  <meta content="@thomazcherickal" name="twitter:site" />
-  <meta content="Gemini 4 Argon: 1M Output &amp; Reasoning | Thomas Cherickal" name="twitter:title" />
-  <meta content="Architectural guide to Gemini Argon: 1M token output decodes via chained execution, Vals Index enterprise rankings, and cooperative multi-agent benchmarks." name="twitter:description" />
-  <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image" />
-  <!-- Favicons -->
-  <link href="../assets/favicon.ico" rel="icon" sizes="any" />
-  <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml" />
-  <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-  <link href="../site.webmanifest" rel="manifest" />
-  <meta content="#020408" name="theme-color" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gemini 4 Argon 1M Output Guide | Thomas Cherickal</title>
+<meta content="Architectural guide to Gemini Argon: 1M token output decodes via chained execution, Vals Index enterprise rankings, and cooperative multi-agent benchmarks." name="description"/>
+<meta content="Thomas Cherickal" name="author"/>
+<link href="https://thedigitalfuturist.com/google/google-gemini-argon.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="article" property="og:type"/>
+<meta content="https://thedigitalfuturist.com/google/google-gemini-argon.html" property="og:url"/>
+<meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
+<meta content="Gemini 4 Argon: 1M Output &amp; Reasoning | Thomas Cherickal" property="og:title"/>
+<meta content="Architectural guide to Gemini Argon: 1M token output decodes via chained execution, Vals Index enterprise rankings, and cooperative multi-agent benchmarks." property="og:description"/>
+<meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
+<meta content="en_US" property="og:locale"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@thomazcherickal" name="twitter:site"/>
+<meta content="Gemini 4 Argon: 1M Output &amp; Reasoning | Thomas Cherickal" name="twitter:title"/>
+<meta content="Architectural guide to Gemini Argon: 1M token output decodes via chained execution, Vals Index enterprise rankings, and cooperative multi-agent benchmarks." name="twitter:description"/>
+<meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
+<!-- Favicons -->
+<link href="../assets/favicon.ico" rel="icon" sizes="any"/>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../site.webmanifest" rel="manifest"/>
+<meta content="#020408" name="theme-color"/>
 <!-- Mermaid.js for architecture diagrams -->
-  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
-  <script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<script>
     document.addEventListener("DOMContentLoaded", function () {
       if (typeof mermaid !== "undefined") {
         try {
@@ -58,16 +59,16 @@
       }
     });
   </script>
-  <link rel="stylesheet" href="../css/fonts.css" />
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="stylesheet" href="../css/background.css" />
-  <link rel="stylesheet" href="../css/buttons.css" />
-  <link rel="stylesheet" href="../css/navbar.css" />
-  <link rel="stylesheet" href="../css/footer.css" />
-  <link rel="stylesheet" href="../css/cta.css" />
-  <link rel="stylesheet" href="../css/article.css" />
-  <link rel="stylesheet" href="../css/gemini.css" />
-  <script type="application/ld+json">
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link href="../css/styles.css" rel="stylesheet"/>
+<link href="../css/background.css" rel="stylesheet"/>
+<link href="../css/buttons.css" rel="stylesheet"/>
+<link href="../css/navbar.css" rel="stylesheet"/>
+<link href="../css/footer.css" rel="stylesheet"/>
+<link href="../css/cta.css" rel="stylesheet"/>
+<link href="../css/article.css" rel="stylesheet"/>
+<link href="../css/gemini.css" rel="stylesheet"/>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -300,164 +301,153 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-  <main class="container">
-    <header class="hero">
-      <p class="hero-badge">// FRONTIER REASONING &amp; AGENTIC MASTERY</p>
-      <h1 class="hero-title">Gemini 4 Argon</h1>
-      <p class="hero-desc">
+<main class="container">
+<header class="hero">
+<p class="hero-badge">// FRONTIER REASONING &amp; AGENTIC MASTERY</p>
+<h1 class="hero-title">Gemini 4 Argon</h1>
+<p class="hero-desc">
         Inside Gemini 4 Argon: Google DeepMind's frontier reasoning architecture featuring 1M token output decodes via background chained execution, top rankings on the Vals Index, and cooperative multi-agent benchmarks.
       </p>
-    </header>
-
-    <!-- WHAT IS GEMINI ARGON -->
-    <article class="content-card">
-      <h2>What is Gemini 4 Argon?</h2>
-      <p>
-        <strong>Gemini Argon</strong> (referenced in API architectures as <code>gemini-4-argon</code>) is Google DeepMind's flagship frontier reasoning model. Announced on 30 September 2026 and released to general availability on 13 October 2026 across the Gemini API and Google AI Studio, Argon is engineered for long-horizon task execution, autonomous software analysis, and complex agentic workflows.
+</header>
+<!-- WHAT IS GEMINI ARGON -->
+<article class="content-card">
+<h2>What is Gemini 4 Argon?</h2>
+<p>
+<strong>Gemini Argon</strong> (referenced in API architectures as <code>gemini-4-argon</code>) is Google DeepMind's flagship frontier reasoning model. Announced on 30 September 2026 and released to general availability on 13 October 2026 across the Gemini API and Google AI Studio, Argon is engineered for long-horizon task execution, autonomous software analysis, and complex agentic workflows.
       </p>
-      <p>
+<p>
         A core technical capability of Argon is its support for output decoding reaching up to <strong>1 million tokens</strong>. Standard API responses stop at 65,536 tokens by default; output up to 1M tokens is achieved through background execution that chains continuation hops of up to 64K tokens each. The total context window is 1,048,576 tokens shared dynamically across input, thinking, and output.
       </p>
-
-            <div class="diagram-container">
-        <div class="mermaid-fallback">
-          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
-        </div>
-        <div class="mermaid">
+<div class="diagram-container">
+<div class="mermaid-fallback">
+<em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+</div>
+<div class="mermaid">
 flowchart TD
-    Task[Enterprise Mandate / Long-Horizon Objective] --> InputContext[Input Context Ingestion: Code, Vision &amp; Data]
-    InputContext --> ArgonCore[Gemini Argon Frontier Core]
-    ArgonCore --> Horizon[Subgoal Decomposition &amp; Thinking]
-    Horizon --> ToolUse[Autonomous Tool Calls &amp; Environment Interaction]
-    ToolUse --> Feedback[Execution Environment Feedback Loop]
-    Feedback --> ArgonCore
-    ArgonCore --> DecodeStream[Chained Continuation Decodes: up to 1M Tokens Total]
+    Task[Enterprise Mandate / Long-Horizon Objective] --&gt; InputContext[Input Context Ingestion: Code, Vision &amp; Data]
+    InputContext --&gt; ArgonCore[Gemini Argon Frontier Core]
+    ArgonCore --&gt; Horizon[Subgoal Decomposition &amp; Thinking]
+    Horizon --&gt; ToolUse[Autonomous Tool Calls &amp; Environment Interaction]
+    ToolUse --&gt; Feedback[Execution Environment Feedback Loop]
+    Feedback --&gt; ArgonCore
+    ArgonCore --&gt; DecodeStream[Chained Continuation Decodes: up to 1M Tokens Total]
         </div>
-        <div class="diagram-caption">Figure 1: Gemini Argon Long-Horizon Reasoning &amp; Chained Continuation Loop</div>
-      </div>
-    </article>
-
-    <!-- ACHIEVEMENTS WITHIN GOOGLE AND OUTSIDE -->
-    <article class="content-card">
-      <h2>Empirical Benchmarks &amp; Cooperative Agent Milestones</h2>
-      <p>
+<div class="diagram-caption">Figure 1: Gemini Argon Long-Horizon Reasoning &amp; Chained Continuation Loop</div>
+</div>
+</article>
+<!-- ACHIEVEMENTS WITHIN GOOGLE AND OUTSIDE -->
+<article class="content-card">
+<h2>Empirical Benchmarks &amp; Cooperative Agent Milestones</h2>
+<p>
         Argon demonstrated competitive performance across Google-reported enterprise evaluations and agentic environments:
       </p>
-      <ul>
-        <li><strong>Google-Reported Vals Index Benchmarks:</strong> In Google's reported evaluation tables, Gemini 4 Argon achieved 68.9% on the Vals Index (compared to 67.0% for Claude Opus 5.5), 65.4% on the Vals Finance Agent v2 benchmark (vs 58.9% for Claude Fable 5.1), and 51.3% on Zapier AutomationBench (vs 42.5% for Opus 5.5).</li>
-        <li><strong>Cooperative Minecraft Speedrun (27 Hours):</strong> In an autonomous multi-agent demonstration, four Gemini 4 Argon agents worked cooperatively to navigate the complete Minecraft progression loop from scratch, completing the game in 27 hours without human intervention or scripted macros (<a class="ref-link" href="https://gagadget.com/en/730751-four-gemini-4-argon-agents-beat-minecraft-in-27-hours/" target="_blank" rel="noopener">GAGADGET Coverage</a>).</li>
-        <li><strong>Benchmark Balance &amp; Industry Standings:</strong> While leading on Vals evaluations, Argon trails frontier models such as GPT-6 Astra or Claude Opus 5.5 on developer benchmarks including FrontierSWE v2, Terminal-Bench 4.0, and OSWorld-2.0. On the Artificial Analysis Intelligence Index, Argon holds a score of 53, tied with GPT-6 Astra.</li>
-      </ul>
-
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Evaluation Benchmark</th>
-            <th>Gemini 4 Argon (Google Reported)</th>
-            <th>Comparison Model</th>
-            <th>Source</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Vals Index</strong></td>
-            <td>68.9%</td>
-            <td>Claude Opus 5.5 (67.0%)</td>
-            <td>Google / <a class="ref-link" href="https://www.dsebastien.net/gemini-4-argon/" target="_blank" rel="noopener">Sébastien Dubois Analysis</a></td>
-          </tr>
-          <tr>
-            <td><strong>Vals Finance Agent v2</strong></td>
-            <td>65.4%</td>
-            <td>Claude Fable 5.1 (58.9%)</td>
-            <td>Google / <a class="ref-link" href="https://www.dsebastien.net/gemini-4-argon/" target="_blank" rel="noopener">Sébastien Dubois Analysis</a></td>
-          </tr>
-          <tr>
-            <td><strong>Zapier AutomationBench</strong></td>
-            <td>51.3%</td>
-            <td>Claude Opus 5.5 (42.5%)</td>
-            <td>Google / <a class="ref-link" href="https://www.dsebastien.net/gemini-4-argon/" target="_blank" rel="noopener">Sébastien Dubois Analysis</a></td>
-          </tr>
-          <tr>
-            <td><strong>Artificial Analysis Intelligence Index</strong></td>
-            <td>53</td>
-            <td>GPT-6 Astra (53 - Tied)</td>
-            <td>Artificial Analysis Evaluation Suite</td>
-          </tr>
-        </tbody>
-      </table>
-    </article>
-
-    <!-- PROS AND CONS -->
-    <article class="content-card">
-      <h2>Architectural Strengths &amp; Operational Trade-Offs</h2>
-      <p>
+<ul>
+<li><strong>Google-Reported Vals Index Benchmarks:</strong> In Google's reported evaluation tables, Gemini 4 Argon achieved 68.9% on the Vals Index (compared to 67.0% for Claude Opus 5.5), 65.4% on the Vals Finance Agent v2 benchmark (vs 58.9% for Claude Fable 5.1), and 51.3% on Zapier AutomationBench (vs 42.5% for Opus 5.5).</li>
+<li><strong>Cooperative Minecraft Speedrun (27 Hours):</strong> In an autonomous multi-agent demonstration, four Gemini 4 Argon agents worked cooperatively to navigate the complete Minecraft progression loop from scratch, completing the game in 27 hours without human intervention or scripted macros (<a class="ref-link" href="https://gagadget.com/en/730751-four-gemini-4-argon-agents-beat-minecraft-in-27-hours/" rel="noopener" target="_blank">GAGADGET Coverage</a>).</li>
+<li><strong>Benchmark Balance &amp; Industry Standings:</strong> While leading on Vals evaluations, Argon trails frontier models such as GPT-6 Astra or Claude Opus 5.5 on developer benchmarks including FrontierSWE v2, Terminal-Bench 4.0, and OSWorld-2.0. On the Artificial Analysis Intelligence Index, Argon holds a score of 53, tied with GPT-6 Astra.</li>
+</ul>
+<table class="data-table">
+<thead>
+<tr>
+<th>Evaluation Benchmark</th>
+<th>Gemini 4 Argon (Google Reported)</th>
+<th>Comparison Model</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vals Index</strong></td>
+<td>68.9%</td>
+<td>Claude Opus 5.5 (67.0%)</td>
+<td>Google / <a class="ref-link" href="https://www.dsebastien.net/gemini-4-argon/" rel="noopener" target="_blank">Sébastien Dubois Analysis</a></td>
+</tr>
+<tr>
+<td><strong>Vals Finance Agent v2</strong></td>
+<td>65.4%</td>
+<td>Claude Fable 5.1 (58.9%)</td>
+<td>Google / <a class="ref-link" href="https://www.dsebastien.net/gemini-4-argon/" rel="noopener" target="_blank">Sébastien Dubois Analysis</a></td>
+</tr>
+<tr>
+<td><strong>Zapier AutomationBench</strong></td>
+<td>51.3%</td>
+<td>Claude Opus 5.5 (42.5%)</td>
+<td>Google / <a class="ref-link" href="https://www.dsebastien.net/gemini-4-argon/" rel="noopener" target="_blank">Sébastien Dubois Analysis</a></td>
+</tr>
+<tr>
+<td><strong>Artificial Analysis Intelligence Index</strong></td>
+<td>53</td>
+<td>GPT-6 Astra (53 - Tied)</td>
+<td>Artificial Analysis Evaluation Suite</td>
+</tr>
+</tbody>
+</table>
+</article>
+<!-- PROS AND CONS -->
+<article class="content-card">
+<h2>Architectural Strengths &amp; Operational Trade-Offs</h2>
+<p>
         A balanced evaluation of Argon requires understanding both its capabilities and architectural constraints:
       </p>
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Advantages (Pros)</th>
-            <th>Limitations &amp; Trade-Offs (Cons)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Long-Horizon Coherence:</strong> Maintains logical state across thousands of sequential actions and multi-step agent decisions.</td>
-            <td><strong>Selective Developer Benchmark Leads:</strong> Trails competitive models on developer-centric evaluations including FrontierSWE v2 and OSWorld-2.0.</td>
-          </tr>
-          <tr>
-            <td><strong>1M Token Output Via Chained Execution:</strong> Generates extensive software architectures or detailed documentation via continuation hops of up to 64K tokens each.</td>
-            <td><strong>No Free API Tier:</strong> Available exclusively as a paid model on the Gemini API and Vertex AI, requiring dedicated budget provisioning.</td>
-          </tr>
-          <tr>
-            <td><strong>Introductory Developer Pricing:</strong> Offered at an introductory rate of $2 per million input tokens and $10 per million output tokens through 30 November 2026, moving to $4 / $20 per million tokens thereafter.</td>
-            <td><strong>Human-in-the-Loop Governance:</strong> High-stakes production deployments require verification pipelines to validate edge-case code and data assumptions.</td>
-          </tr>
-        </tbody>
-      </table>
-    </article>
-
-    <!-- THE FUTURE OF ARGON -->
-    <article class="content-card">
-      <h2>The Future of Gemini 4 Argon</h2>
-      <p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Advantages (Pros)</th>
+<th>Limitations &amp; Trade-Offs (Cons)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Long-Horizon Coherence:</strong> Maintains logical state across thousands of sequential actions and multi-step agent decisions.</td>
+<td><strong>Selective Developer Benchmark Leads:</strong> Trails competitive models on developer-centric evaluations including FrontierSWE v2 and OSWorld-2.0.</td>
+</tr>
+<tr>
+<td><strong>1M Token Output Via Chained Execution:</strong> Generates extensive software architectures or detailed documentation via continuation hops of up to 64K tokens each.</td>
+<td><strong>No Free API Tier:</strong> Available exclusively as a paid model on the Gemini API and Vertex AI, requiring dedicated budget provisioning.</td>
+</tr>
+<tr>
+<td><strong>Introductory Developer Pricing:</strong> Offered at an introductory rate of $2 per million input tokens and $10 per million output tokens through 30 November 2026, moving to $4 / $20 per million tokens thereafter.</td>
+<td><strong>Human-in-the-Loop Governance:</strong> High-stakes production deployments require verification pipelines to validate edge-case code and data assumptions.</td>
+</tr>
+</tbody>
+</table>
+</article>
+<!-- THE FUTURE OF ARGON -->
+<article class="content-card">
+<h2>The Future of Gemini 4 Argon</h2>
+<p>
         Argon marks Google DeepMind's ongoing transition toward long-horizon agentic autonomy and multi-agent coordination. With expanding support in Google AI Studio and Google Antigravity IDE, future developments focus on reducing continuation latency, expanding developer tooling integration, and refining multi-agent coordination frameworks across enterprise software stacks.
       </p>
-    </article>
-
-    <!-- VERIFIED REFERENCES -->
-    <article class="content-card">
-      <h2>Verified References &amp; Authoritative Documentation</h2>
-      <ul>
-        <li><a class="ref-link" href="https://blog.google/technology/ai/" target="_blank" rel="noopener">Google Official Blog: Gemini Argon Architecture &amp; GA Announcement (30 September 2026)</a></li>
-        <li><a class="ref-link" href="https://www.dsebastien.net/gemini-4-argon/" target="_blank" rel="noopener">Gemini 4 Argon Technical Breakdown &amp; Benchmark Comparison by Sébastien Dubois</a></li>
-        <li><a class="ref-link" href="https://gagadget.com/en/730751-four-gemini-4-argon-agents-beat-minecraft-in-27-hours/" target="_blank" rel="noopener">GAGADGET: Four Gemini 4 Argon Agents Cooperatively Beat Minecraft in 27 Hours</a></li>
-        <li><a class="ref-link" href="https://ai.google.dev/gemini-api/docs" target="_blank" rel="noopener">Google AI Studio: Gemini API Documentation &amp; 1M Output Specs</a></li>
-        <li><a class="ref-link" href="https://cloud.google.com/vertex-ai" target="_blank" rel="noopener">Google Cloud Vertex AI: Enterprise Model Availability &amp; Pricing</a></li>
-      </ul>
-    </article>
-
-    <!-- RELEVANT CALL TO ACTION -->
-    <section class="cta-banner">
-      <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Orchestrate Autonomous Agents with Gemini 4 Argon</h2>
-      <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
+</article>
+<!-- VERIFIED REFERENCES -->
+<article class="content-card">
+<h2>Verified References &amp; Authoritative Documentation</h2>
+<ul>
+<li><a class="ref-link" href="https://blog.google/technology/ai/" rel="noopener" target="_blank">Google Official Blog: Gemini Argon Architecture &amp; GA Announcement (30 September 2026)</a></li>
+<li><a class="ref-link" href="https://www.dsebastien.net/gemini-4-argon/" rel="noopener" target="_blank">Gemini 4 Argon Technical Breakdown &amp; Benchmark Comparison by Sébastien Dubois</a></li>
+<li><a class="ref-link" href="https://gagadget.com/en/730751-four-gemini-4-argon-agents-beat-minecraft-in-27-hours/" rel="noopener" target="_blank">GAGADGET: Four Gemini 4 Argon Agents Cooperatively Beat Minecraft in 27 Hours</a></li>
+<li><a class="ref-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener" target="_blank">Google AI Studio: Gemini API Documentation &amp; 1M Output Specs</a></li>
+<li><a class="ref-link" href="https://cloud.google.com/vertex-ai" rel="noopener" target="_blank">Google Cloud Vertex AI: Enterprise Model Availability &amp; Pricing</a></li>
+</ul>
+</article>
+<!-- RELEVANT CALL TO ACTION -->
+<section class="cta-banner">
+<h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Orchestrate Autonomous Agents with Gemini 4 Argon</h2>
+<p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
         Harness 1-million-token output decodes, enterprise refactoring, and physical real-to-sim agent workflows with Gemini Argon.
       </p>
-      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
-        <a class="btn btn-primary" href="../contact.html">Schedule Argon Architecture Session →</a>
-        <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
-        <a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
-      </div>
-    </section>
-  
-    </main>
-
+<div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+<a class="btn btn-primary" href="../contact.html">Schedule Argon Architecture Session →</a>
+<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
+<a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
+</div>
+</section>
+</main>
     <!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="../index.html" class="footer-brand-logo-link"
-          aria-label="Thomas Cherickal - The Digital Futurist">
+        <a href="../index.html" class="footer-brand-logo-link" aria-label="Thomas Cherickal - The Digital Futurist">
           <img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo" class="footer-brand-logo"
             width="46" height="46" />
         </a>
@@ -712,7 +702,8 @@ flowchart TD
       </a>
 
       <!-- Direct Email Inquiry -->
-      <a href="mailto:thomascherickal@gmail.com" class="wl email-reveal-link" data-user="thomascherickal" data-domain="gmail.com">
+      <a href="mailto:thomascherickal@gmail.com" class="wl email-reveal-link" data-user="thomascherickal"
+        data-domain="gmail.com">
         <div class="wl-head">
           <div class="wl-ic">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2"
@@ -736,7 +727,6 @@ flowchart TD
         Cherickal</a>
       <span class="tc-sep"></span> The Digital Futurist
       <span class="tc-sep"></span> Generative AI Consultant
-      <span class="tc-sep"></span> Guides &amp; Materials Licensed under Apache 2.0
       <span class="tc-sep"></span> <a href="https://thomascherickal.com" target="_blank"
         rel="noopener noreferrer">thomascherickal.com</a>
       <span class="tc-sep"></span> <a href="https://thedigitalfuturist.com" target="_blank"
@@ -744,7 +734,6 @@ flowchart TD
     </p>
   </footer>
     <!-- END:FOOTER -->
-
 <script src="../components.js"></script>
 </body>
 </html>

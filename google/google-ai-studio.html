@@ -1,35 +1,36 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Google AI Studio Prototyping | Thomas Cherickal</title>
-  <meta content="Technical guide to Google AI Studio, covering Build Mode for Android Jetpack Compose, Firebase App Check security, browser emulators, and Cloud Run deployment." name="description" />
-  <meta content="Thomas Cherickal" name="author" />
-  <link href="https://thedigitalfuturist.com/google/google-ai-studio.html" rel="canonical" />
-  <!-- Open Graph -->
-  <meta content="article" property="og:type" />
-  <meta content="https://thedigitalfuturist.com/google/google-ai-studio.html" property="og:url" />
-  <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name" />
-  <meta content="Google AI Studio: Prototyping, Mobile App Generation &amp; Backend Deployment | Thomas Cherickal" property="og:title" />
-  <meta content="Technical guide to Google AI Studio, covering Build Mode for Android Jetpack Compose, Firebase App Check security, browser emulators, and Cloud Run deployment." property="og:description" />
-  <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image" />
-  <meta content="en_US" property="og:locale" />
-  <!-- Twitter Card -->
-  <meta content="summary_large_image" name="twitter:card" />
-  <meta content="@thomazcherickal" name="twitter:site" />
-  <meta content="Google AI Studio: Prototyping, Mobile App Generation &amp; Backend Deployment | Thomas Cherickal" name="twitter:title" />
-  <meta content="Technical guide to Google AI Studio, covering Build Mode for Android Jetpack Compose, Firebase App Check security, browser emulators, and Cloud Run deployment." name="twitter:description" />
-  <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image" />
-  <!-- Favicons -->
-  <link href="../assets/favicon.ico" rel="icon" sizes="any" />
-  <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml" />
-  <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-  <link href="../site.webmanifest" rel="manifest" />
-  <meta content="#020408" name="theme-color" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Google AI Studio Prototyping | Thomas Cherickal</title>
+<meta content="Technical guide to Google AI Studio, covering Build Mode for Android Jetpack Compose, Firebase App Check security, browser emulators, and Cloud Run deployment." name="description"/>
+<meta content="Thomas Cherickal" name="author"/>
+<link href="https://thedigitalfuturist.com/google/google-ai-studio.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="article" property="og:type"/>
+<meta content="https://thedigitalfuturist.com/google/google-ai-studio.html" property="og:url"/>
+<meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
+<meta content="Google AI Studio: Prototyping, Mobile App Generation &amp; Backend Deployment | Thomas Cherickal" property="og:title"/>
+<meta content="Technical guide to Google AI Studio, covering Build Mode for Android Jetpack Compose, Firebase App Check security, browser emulators, and Cloud Run deployment." property="og:description"/>
+<meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
+<meta content="en_US" property="og:locale"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@thomazcherickal" name="twitter:site"/>
+<meta content="Google AI Studio: Prototyping, Mobile App Generation &amp; Backend Deployment | Thomas Cherickal" name="twitter:title"/>
+<meta content="Technical guide to Google AI Studio, covering Build Mode for Android Jetpack Compose, Firebase App Check security, browser emulators, and Cloud Run deployment." name="twitter:description"/>
+<meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
+<!-- Favicons -->
+<link href="../assets/favicon.ico" rel="icon" sizes="any"/>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../site.webmanifest" rel="manifest"/>
+<meta content="#020408" name="theme-color"/>
 <!-- Mermaid.js for architecture diagrams -->
-  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
-  <script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<script>
     document.addEventListener("DOMContentLoaded", function () {
       if (typeof mermaid !== "undefined") {
         try {
@@ -58,16 +59,16 @@
       }
     });
   </script>
-  <link rel="stylesheet" href="../css/fonts.css" />
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="stylesheet" href="../css/background.css" />
-  <link rel="stylesheet" href="../css/buttons.css" />
-  <link rel="stylesheet" href="../css/navbar.css" />
-  <link rel="stylesheet" href="../css/footer.css" />
-  <link rel="stylesheet" href="../css/cta.css" />
-  <link rel="stylesheet" href="../css/article.css" />
-  <link rel="stylesheet" href="../css/gemini.css" />
-  <script type="application/ld+json">
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link href="../css/styles.css" rel="stylesheet"/>
+<link href="../css/background.css" rel="stylesheet"/>
+<link href="../css/buttons.css" rel="stylesheet"/>
+<link href="../css/navbar.css" rel="stylesheet"/>
+<link href="../css/footer.css" rel="stylesheet"/>
+<link href="../css/cta.css" rel="stylesheet"/>
+<link href="../css/article.css" rel="stylesheet"/>
+<link href="../css/gemini.css" rel="stylesheet"/>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -298,73 +299,68 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-  <main class="container">
-    <header class="hero">
-      <p class="hero-badge">// DEVELOPER PLAYGROUND &amp; APP BUILDER</p>
-      <h1 class="hero-title">Google AI Studio</h1>
-      <p class="hero-desc">
+<main class="container">
+<header class="hero">
+<p class="hero-badge">// DEVELOPER PLAYGROUND &amp; APP BUILDER</p>
+<h1 class="hero-title">Google AI Studio</h1>
+<p class="hero-desc">
         Explore how Google AI Studio accelerates multimodal AI development, streamlines native Android app generation in Build Mode, automates Firebase backend security, and supports enterprise cloud deployment.
       </p>
-    </header>
-
-    <!-- WHAT IS GOOGLE AI STUDIO -->
-    <article class="content-card">
-      <h2>What is Google AI Studio?</h2>
-      <p>
+</header>
+<!-- WHAT IS GOOGLE AI STUDIO -->
+<article class="content-card">
+<h2>What is Google AI Studio?</h2>
+<p>
         Google AI Studio is Google's web-based developer playground and rapid engineering environment for the Gemini model family. It provides developers and technical architects with an immediate, friction-free interface to experiment with multimodal prompts, tune system instructions, test safety filters, and obtain instant API keys for production workloads.
       </p>
-      <p>
+<p>
         Moving far beyond basic text chat boxes, Google AI Studio functions as an interactive workspace supporting video uploads, audio analysis, PDF document dissection, function calling configurations, and structured JSON schema enforcement. Crucially, once a prompt or prototype is validated, developers can export production-ready code in Python, TypeScript, Go, Kotlin, Swift, or raw cURL with a single click.
       </p>
-
-            <div class="diagram-container">
-        <div class="mermaid-fallback">
-          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
-        </div>
-        <div class="mermaid">
+<div class="diagram-container">
+<div class="mermaid-fallback">
+<em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+</div>
+<div class="mermaid">
 flowchart TD
-    Prompt[Developer Prompt &amp; System Instruction] --> Studio[Google AI Studio Engine]
-    Studio --> Tuner[Temperature / Top-P / JSON Schema Validation]
-    Studio --> MultiModal[Vision / Audio / Document / Code Ingestion]
-    Tuner --> Export[Target SDK Export: Python / TS / Go / Android / Swift]
-    MultiModal --> BuildMode[Build Mode: Full-Stack App Compilation]
+    Prompt[Developer Prompt &amp; System Instruction] --&gt; Studio[Google AI Studio Engine]
+    Studio --&gt; Tuner[Temperature / Top-P / JSON Schema Validation]
+    Studio --&gt; MultiModal[Vision / Audio / Document / Code Ingestion]
+    Tuner --&gt; Export[Target SDK Export: Python / TS / Go / Android / Swift]
+    MultiModal --&gt; BuildMode[Build Mode: Full-Stack App Compilation]
         </div>
-        <div class="diagram-caption">Figure 1: Google AI Studio Prototyping &amp; SDK Code Generation Pipeline</div>
-      </div>
-    </article>
-
-    <!-- HOW IT SIMPLIFIES MOBILE APPS -->
-    <article class="content-card">
-      <h2>Simplifying Mobile App Creation: Build Mode for Android</h2>
-      <p>
+<div class="diagram-caption">Figure 1: Google AI Studio Prototyping &amp; SDK Code Generation Pipeline</div>
+</div>
+</article>
+<!-- HOW IT SIMPLIFIES MOBILE APPS -->
+<article class="content-card">
+<h2>Simplifying Mobile App Creation: Build Mode for Android</h2>
+<p>
         One of the most revolutionary additions to Google AI Studio is its <strong>Build Mode</strong>, designed specifically for rapid mobile application development. Instead of writing boilerplate UI controllers and state wrappers by hand, developers can prompt AI Studio to generate native Android applications written entirely in <strong>Kotlin using Jetpack Compose</strong>.
       </p>
-      <h3>Key Mobile Development Highlights:</h3>
-      <ul>
-        <li><strong>Browser-Based Android Emulator:</strong> Test and interact with the newly generated native Android app in real-time inside an embedded browser emulator, completely bypassing the need to download multi-gigabyte SDKs or configure local emulator virtual machines.</li>
-        <li><strong>Physical Device Testing:</strong> Connect a physical smartphone over USB or local network pairing to run and test the compiled Android package directly on real hardware.</li>
-        <li><strong>Direct Android Studio Export:</strong> When an application requires deeper native integrations, custom C++ libraries, or preparation for Google Play Store publishing, AI Studio exports the entire project directory directly into Android Studio with complete Gradle configurations.</li>
-      </ul>
-    </article>
-
-    <!-- BACKEND ARCHITECTURE & FIREBASE DEPLOYMENT SUPPORT -->
-    <article class="content-card">
-      <h2>Backend Integration &amp; Deployment Support</h2>
-      <p>
+<h3>Key Mobile Development Highlights:</h3>
+<ul>
+<li><strong>Browser-Based Android Emulator:</strong> Test and interact with the newly generated native Android app in real-time inside an embedded browser emulator, completely bypassing the need to download multi-gigabyte SDKs or configure local emulator virtual machines.</li>
+<li><strong>Physical Device Testing:</strong> Connect a physical smartphone over USB or local network pairing to run and test the compiled Android package directly on real hardware.</li>
+<li><strong>Direct Android Studio Export:</strong> When an application requires deeper native integrations, custom C++ libraries, or preparation for Google Play Store publishing, AI Studio exports the entire project directory directly into Android Studio with complete Gradle configurations.</li>
+</ul>
+</article>
+<!-- BACKEND ARCHITECTURE & FIREBASE DEPLOYMENT SUPPORT -->
+<article class="content-card">
+<h2>Backend Integration &amp; Deployment Support</h2>
+<p>
         Native mobile applications built in Google AI Studio operate on a secure client-side model designed to prevent API key exposure and eliminate the overhead of hosting dedicated custom web servers:
       </p>
-      <ul>
-        <li><strong>Firebase App Check &amp; AI Logic:</strong> Rather than bundling raw, sensitive Gemini API keys into compiled APK binaries where malicious actors could decompile and steal them, AI Studio configures Firebase App Check. App Check cryptographically attests that every incoming request originates from an authentic, unmodified instance of your app.</li>
-        <li><strong>Cloud Firestore Database Persistence:</strong> Seamlessly binds user data, conversation histories, and preferences to a scalable NoSQL cloud database without requiring SQL migration scripts or server configuration.</li>
-        <li><strong>Firebase Authentication:</strong> Automatically provisions secure identity management, Google Sign-In, and multi-factor authentication loops out of the box.</li>
-        <li><strong>Cloud Run Serverless Hosting for Web Apps:</strong> For web applications built in Studio, developers can deploy full-stack containerized runtimes directly to Google Cloud Run, gaining auto-scaling, custom domain routing, and enterprise-grade security.</li>
-      </ul>
-
-            <div class="diagram-container">
-        <div class="mermaid-fallback">
-          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
-        </div>
-        <div class="mermaid">
+<ul>
+<li><strong>Firebase App Check &amp; AI Logic:</strong> Rather than bundling raw, sensitive Gemini API keys into compiled APK binaries where malicious actors could decompile and steal them, AI Studio configures Firebase App Check. App Check cryptographically attests that every incoming request originates from an authentic, unmodified instance of your app.</li>
+<li><strong>Cloud Firestore Database Persistence:</strong> Seamlessly binds user data, conversation histories, and preferences to a scalable NoSQL cloud database without requiring SQL migration scripts or server configuration.</li>
+<li><strong>Firebase Authentication:</strong> Automatically provisions secure identity management, Google Sign-In, and multi-factor authentication loops out of the box.</li>
+<li><strong>Cloud Run Serverless Hosting for Web Apps:</strong> For web applications built in Studio, developers can deploy full-stack containerized runtimes directly to Google Cloud Run, gaining auto-scaling, custom domain routing, and enterprise-grade security.</li>
+</ul>
+<div class="diagram-container">
+<div class="mermaid-fallback">
+<em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+</div>
+<div class="mermaid">
 sequenceDiagram
     autonumber
     actor User as Mobile Device (Kotlin App)
@@ -372,48 +368,43 @@ sequenceDiagram
     participant FS as Cloud Firestore
     participant GA as Gemini API / Vertex AI
     
-    User->>AC: Send Device Attestation Token
-    AC-->>User: Issue Cryptographic Verification
-    User->>GA: Forward Prompt + Verified Token
-    GA->>FS: Persist Conversation State
-    GA-->>User: Stream Grounded Inference Response
+    User-&gt;&gt;AC: Send Device Attestation Token
+    AC--&gt;&gt;User: Issue Cryptographic Verification
+    User-&gt;&gt;GA: Forward Prompt + Verified Token
+    GA-&gt;&gt;FS: Persist Conversation State
+    GA--&gt;&gt;User: Stream Grounded Inference Response
         </div>
-        <div class="diagram-caption">Figure 2: Secure Mobile App Architecture via Firebase App Check &amp; Cloud Firestore</div>
-      </div>
-    </article>
-
-    <!-- VERIFIED REFERENCES -->
-    <article class="content-card">
-      <h2>Verified References &amp; Authoritative Documentation</h2>
-      <ul>
-        <li><a class="ref-link" href="https://ai.google.dev/" target="_blank" rel="noopener">Google AI Studio &amp; Gemini API Developer Portal</a></li>
-        <li><a class="ref-link" href="https://ai.google.dev/gemini-api/docs" target="_blank" rel="noopener">Gemini API Documentation &amp; Structured Outputs</a></li>
-        <li><a class="ref-link" href="https://firebase.google.com/docs/app-check" target="_blank" rel="noopener">Firebase App Check: Protecting App APIs &amp; Keys</a></li>
-        <li><a class="ref-link" href="https://developer.android.com/jetpack/compose" target="_blank" rel="noopener">Android Developers: Jetpack Compose Modern UI Toolkit</a></li>
-      </ul>
-    </article>
-
-    <!-- RELEVANT CALL TO ACTION -->
-    <section class="cta-banner">
-      <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Build Production Applications with Google AI Studio</h2>
-      <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
+<div class="diagram-caption">Figure 2: Secure Mobile App Architecture via Firebase App Check &amp; Cloud Firestore</div>
+</div>
+</article>
+<!-- VERIFIED REFERENCES -->
+<article class="content-card">
+<h2>Verified References &amp; Authoritative Documentation</h2>
+<ul>
+<li><a class="ref-link" href="https://ai.google.dev/" rel="noopener" target="_blank">Google AI Studio &amp; Gemini API Developer Portal</a></li>
+<li><a class="ref-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener" target="_blank">Gemini API Documentation &amp; Structured Outputs</a></li>
+<li><a class="ref-link" href="https://firebase.google.com/docs/app-check" rel="noopener" target="_blank">Firebase App Check: Protecting App APIs &amp; Keys</a></li>
+<li><a class="ref-link" href="https://developer.android.com/jetpack/compose" rel="noopener" target="_blank">Android Developers: Jetpack Compose Modern UI Toolkit</a></li>
+</ul>
+</article>
+<!-- RELEVANT CALL TO ACTION -->
+<section class="cta-banner">
+<h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Build Production Applications with Google AI Studio</h2>
+<p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
         From rapid mobile app prototyping with Jetpack Compose to enterprise Firebase security and Cloud Run serverless deployment - let's accelerate your AI development cycle.
       </p>
-      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
-        <a class="btn btn-primary" href="../contact.html">Schedule AI Architecture Review →</a>
-        <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
-        <a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
-      </div>
-    </section>
-  
-    </main>
-
+<div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+<a class="btn btn-primary" href="../contact.html">Schedule AI Architecture Review →</a>
+<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
+<a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
+</div>
+</section>
+</main>
     <!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="../index.html" class="footer-brand-logo-link"
-          aria-label="Thomas Cherickal - The Digital Futurist">
+        <a href="../index.html" class="footer-brand-logo-link" aria-label="Thomas Cherickal - The Digital Futurist">
           <img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo" class="footer-brand-logo"
             width="46" height="46" />
         </a>
@@ -668,7 +659,8 @@ sequenceDiagram
       </a>
 
       <!-- Direct Email Inquiry -->
-      <a href="mailto:thomascherickal@gmail.com" class="wl email-reveal-link" data-user="thomascherickal" data-domain="gmail.com">
+      <a href="mailto:thomascherickal@gmail.com" class="wl email-reveal-link" data-user="thomascherickal"
+        data-domain="gmail.com">
         <div class="wl-head">
           <div class="wl-ic">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2"
@@ -692,7 +684,6 @@ sequenceDiagram
         Cherickal</a>
       <span class="tc-sep"></span> The Digital Futurist
       <span class="tc-sep"></span> Generative AI Consultant
-      <span class="tc-sep"></span> Guides &amp; Materials Licensed under Apache 2.0
       <span class="tc-sep"></span> <a href="https://thomascherickal.com" target="_blank"
         rel="noopener noreferrer">thomascherickal.com</a>
       <span class="tc-sep"></span> <a href="https://thedigitalfuturist.com" target="_blank"
@@ -700,7 +691,6 @@ sequenceDiagram
     </p>
   </footer>
     <!-- END:FOOTER -->
-
 <script src="../components.js"></script>
 </body>
 </html>

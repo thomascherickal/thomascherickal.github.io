@@ -1,38 +1,35 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Claude Plugins Architecture | Thomas Cherickal</title>
-  <meta content="What Claude plugins are, how they work across chat, Cowork and Claude Code, the major plugins available now, and how plugins could automate whole occupations." name="description" />
-  <meta content="Thomas Cherickal" name="author" />
-  <link href="https://thedigitalfuturist.com/claude/claude-plugins.html" rel="canonical" />
-
-  <!-- Open Graph -->
-  <meta content="article" property="og:type" />
-  <meta content="https://thedigitalfuturist.com/claude/claude-plugins.html" property="og:url" />
-  <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name" />
-  <meta content="Claude Plugins: How One Install Turns Claude Into A Specialist For Any Job | Thomas Cherickal" property="og:title" />
-  <meta content="What Claude plugins are, how they work across chat, Cowork and Claude Code, the major plugins available now, and how plugins could automate whole occupations." property="og:description" />
-  <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image" />
-  <meta content="en_US" property="og:locale" />
-
-  <!-- Twitter Card -->
-  <meta content="summary_large_image" name="twitter:card" />
-  <meta content="@thomazcherickal" name="twitter:site" />
-  <meta content="Claude Plugins: How One Install Turns Claude Into A Specialist For Any Job | Thomas Cherickal" name="twitter:title" />
-  <meta content="What Claude plugins are, how they work across chat, Cowork and Claude Code, the major plugins available now, and how plugins could automate whole occupations." name="twitter:description" />
-  <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image" />
-
-  <!-- Favicons -->
-  <link href="../assets/favicon.ico" rel="icon" sizes="any" />
-  <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml" />
-  <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-  <link href="../site.webmanifest" rel="manifest" />
-  <meta content="#020408" name="theme-color" />
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Claude Plugins Architecture | Thomas Cherickal</title>
+<meta content="What Claude plugins are, how they work across chat, Cowork and Claude Code, the major plugins available now, and how plugins could automate whole occupations." name="description"/>
+<meta content="Thomas Cherickal" name="author"/>
+<link href="https://thedigitalfuturist.com/claude/claude-plugins.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="article" property="og:type"/>
+<meta content="https://thedigitalfuturist.com/claude/claude-plugins.html" property="og:url"/>
+<meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
+<meta content="Claude Plugins: How One Install Turns Claude Into A Specialist For Any Job | Thomas Cherickal" property="og:title"/>
+<meta content="What Claude plugins are, how they work across chat, Cowork and Claude Code, the major plugins available now, and how plugins could automate whole occupations." property="og:description"/>
+<meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
+<meta content="en_US" property="og:locale"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@thomazcherickal" name="twitter:site"/>
+<meta content="Claude Plugins: How One Install Turns Claude Into A Specialist For Any Job | Thomas Cherickal" name="twitter:title"/>
+<meta content="What Claude plugins are, how they work across chat, Cowork and Claude Code, the major plugins available now, and how plugins could automate whole occupations." name="twitter:description"/>
+<meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
+<!-- Favicons -->
+<link href="../assets/favicon.ico" rel="icon" sizes="any"/>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../site.webmanifest" rel="manifest"/>
+<meta content="#020408" name="theme-color"/>
 <!-- JSON-LD Article Schema -->
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -122,15 +119,15 @@
   ]
 }
 </script>
-  <link rel="stylesheet" href="../css/fonts.css" />
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="stylesheet" href="../css/background.css" />
-  <link rel="stylesheet" href="../css/buttons.css" />
-  <link rel="stylesheet" href="../css/navbar.css" />
-  <link rel="stylesheet" href="../css/footer.css" />
-  <link rel="stylesheet" href="../css/cta.css" />
-  <link rel="stylesheet" href="../css/article.css" />
-  <link rel="stylesheet" href="../css/claude.css" />
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link href="../css/styles.css" rel="stylesheet"/>
+<link href="../css/background.css" rel="stylesheet"/>
+<link href="../css/buttons.css" rel="stylesheet"/>
+<link href="../css/navbar.css" rel="stylesheet"/>
+<link href="../css/footer.css" rel="stylesheet"/>
+<link href="../css/cta.css" rel="stylesheet"/>
+<link href="../css/article.css" rel="stylesheet"/>
+<link href="../css/claude.css" rel="stylesheet"/>
 </head>
 <body>
   <!-- START:HEADER -->
@@ -271,366 +268,335 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-
-  <main class="container">
-    <header class="hero">
-      <p class="hero-badge">// ARCHITECTURE &amp; EXTENSIBILITY GUIDE</p>
-      <h1 class="hero-title">Claude Plugins: How One Install Turns Claude Into A Specialist For Any Job</h1>
-      <p class="hero-desc">Plugins bundle skills, connectors, commands, and autonomous agents into a single unified package. Here is how they operate under the hood, why they make Claude extraordinarily capable, which ones matter today, and how they could automate whole occupations.</p>
-      <p class="hero-byline">By <strong>Thomas Cherickal</strong> · Generative AI Consultant &amp; The Digital Futurist · October 2026</p>
-      <div class="pills">
-        <span class="pill">Claude</span>
-        <span class="pill">Plugins Architecture</span>
-        <span class="pill">Model Context Protocol (MCP)</span>
-        <span class="pill">Claude (formerly Cowork)</span>
-        <span class="pill">Claude Code CLI</span>
-      </div>
-    </header>
-
-    <article class="article-body">
-
-      <!-- INTRO & TABLE OF CONTENTS -->
-      <div class="content-card toc-card">
-        <p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">
+<main class="container">
+<header class="hero">
+<p class="hero-badge">// ARCHITECTURE &amp; EXTENSIBILITY GUIDE</p>
+<h1 class="hero-title">Claude Plugins: How One Install Turns Claude Into A Specialist For Any Job</h1>
+<p class="hero-desc">Plugins bundle skills, connectors, commands, and autonomous agents into a single unified package. Here is how they operate under the hood, why they make Claude extraordinarily capable, which ones matter today, and how they could automate whole occupations.</p>
+<p class="hero-byline">By <strong>Thomas Cherickal</strong> · Generative AI Consultant &amp; The Digital Futurist · October 2026</p>
+<div class="pills">
+<span class="pill">Claude</span>
+<span class="pill">Plugins Architecture</span>
+<span class="pill">Model Context Protocol (MCP)</span>
+<span class="pill">Claude (formerly Cowork)</span>
+<span class="pill">Claude Code CLI</span>
+</div>
+</header>
+<article class="article-body">
+<!-- INTRO & TABLE OF CONTENTS -->
+<div class="content-card toc-card">
+<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">
           A general assistant knows nothing about your company. It does not know how your finance team closes the month or what your legal team checks before signing an NDA, so every person re-explains the same process in every chat.
         </p>
-        <p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">
+<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">
           Plugins turn that know-how into files Claude loads dynamically when a task calls for them. Install a sales plugin and Claude gains the research steps, the call-prep command, and the direct link to your CRM at once.
         </p>
-        
-        <div class="rule"></div>
-
-        <h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
-        <ol class="toc-list">
-          <li><a href="#why">Why Plugins Exist</a></li>
-          <li><a href="#what">What A Claude Plugin Is</a></li>
-          <li><a href="#inside">Inside A Plugin</a></li>
-          <li><a href="#where">Where Plugins Run</a></li>
-          <li><a href="#power">Why Extensibility Makes Claude So Powerful</a></li>
-          <li><a href="#major">The Major Claude Plugins Available Now</a></li>
-          <li><a href="#org">How Plugins Reach A Whole Organization</a></li>
-          <li><a href="#future">From Tasks To Whole Occupations</a></li>
-          <li><a href="#limits">What Still Stands In The Way</a></li>
-          <li><a href="#start">Where To Start</a></li>
-          <li><a href="#references">References</a></li>
-        </ol>
-      </div>
-
-      <!-- 1. WHY PLUGINS EXIST -->
-      <div class="content-card">
-        <h2 id="why">1. Why Plugins Exist</h2>
-        <p class="article-p">A general assistant knows nothing about your company. It does not know how your finance team closes the month or what your legal team checks before signing an NDA, so every person re-explains the same process in every chat.</p>
-        <p class="article-p">Plugins turn that know-how into files Claude loads when a task calls for them. Install a sales plugin and Claude gets the research steps, the call-prep command and the link to your CRM at once.</p>
-      </div>
-
-      <!-- 2. WHAT A CLAUDE PLUGIN IS -->
-      <div class="content-card">
-        <h2 id="what">2. What A Claude Plugin Is</h2>
-        <p class="article-p"><a class="ref-link" href="https://claude.com/docs/plugins/overview" target="_blank" rel="noopener noreferrer">Anthropic's plugin overview for claude.ai and Cowork</a> says a plugin packages skills, MCP connectors, commands and agents so you can add them to Claude as one unit. You add one from Customize &gt; Plugins in claude.ai or the desktop app, and it is saved to your account.</p>
-        <p class="article-p">Plugins began in the terminal. Anthropic <a class="ref-link" href="https://claude.com/blog/claude-code-plugins" target="_blank" rel="noopener noreferrer">introduced plugins for Claude Code on October 9, 2025</a> as collections of slash commands, agents, MCP servers and hooks that install with a single command. <a class="ref-link" href="https://www.datacamp.com/tutorial/claude-cowork-plugins" target="_blank" rel="noopener noreferrer">DataCamp's guide to Cowork plugins</a> dates their arrival in Cowork to January 30, 2026, with 11 open-source plugins from Anthropic's own teams.</p>
-      </div>
-
-      <!-- 3. INSIDE A PLUGIN -->
-      <div class="content-card">
-        <h2 id="inside">3. Inside A Plugin</h2>
-        <p class="article-p">Every part of a plugin is a plain file. The <a class="ref-link" href="https://github.com/anthropics/knowledge-work-plugins" target="_blank" rel="noopener noreferrer">knowledge-work-plugins repository on GitHub</a> shows the layout: a manifest at <code>.claude-plugin/plugin.json</code>, a <code>.mcp.json</code> file for tool connections, a commands folder and a skills folder. Its README says the components are markdown and JSON, with no code, infrastructure or build steps.</p>
-
-        <figure class="article-figure">
-          <svg viewBox="0 0 800 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="f1t">
-            <title id="f1t">The files inside a plugin and what each one adds</title>
-            <defs>
-              <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9aa4b2"/></marker>
-            </defs>
-            <g font-family="'Inter', sans-serif">
-              <rect x="20" y="14" width="300" height="302" rx="12" fill="#11161d" stroke="#e3b341"/>
-              <text x="40" y="44" fill="#e3b341" font-size="16" font-weight="700">sales-plugin/</text>
-              <g font-family="'JetBrains Mono', monospace" font-size="14" fill="#e6e8eb">
-                <text x="56" y="86">.claude-plugin/plugin.json</text>
-                <text x="56" y="130">skills/</text>
-                <text x="56" y="174">commands/</text>
-                <text x="56" y="218">.mcp.json</text>
-                <text x="56" y="262">agents/</text>
-                <text x="56" y="306">hooks/</text>
-              </g>
-              <g text-anchor="start" font-size="14">
-                <rect x="470" y="66" width="310" height="32" rx="8" fill="#0e1a20" stroke="#3fd4e8"/><text x="486" y="87" fill="#e6e8eb">Name, version, description</text>
-                <rect x="470" y="110" width="310" height="32" rx="8" fill="#0e1a20" stroke="#3fd4e8"/><text x="486" y="131" fill="#e6e8eb">Know-how Claude loads on demand</text>
-                <rect x="470" y="154" width="310" height="32" rx="8" fill="#0e1a20" stroke="#3fd4e8"/><text x="486" y="175" fill="#e6e8eb">Actions like /sales:call-prep</text>
-                <rect x="470" y="198" width="310" height="32" rx="8" fill="#0e1a20" stroke="#4fd1a1"/><text x="486" y="219" fill="#e6e8eb">Access to CRM and other tools</text>
-                <rect x="470" y="242" width="310" height="32" rx="8" fill="#0e1a20" stroke="#b58cf0"/><text x="486" y="263" fill="#e6e8eb">Specialists for subtasks</text>
-                <rect x="470" y="286" width="310" height="32" rx="8" fill="#0e1a20" stroke="#b58cf0"/><text x="486" y="307" fill="#e6e8eb">Checks that run automatically</text>
-              </g>
-              <g stroke="#9aa4b2" stroke-width="1.6">
-                <line x1="290" y1="82" x2="464" y2="82" marker-end="url(#a1)"/>
-                <line x1="290" y1="126" x2="464" y2="126" marker-end="url(#a1)"/>
-                <line x1="290" y1="170" x2="464" y2="170" marker-end="url(#a1)"/>
-                <line x1="290" y1="214" x2="464" y2="214" marker-end="url(#a1)"/>
-                <line x1="290" y1="258" x2="464" y2="258" marker-end="url(#a1)"/>
-                <line x1="290" y1="302" x2="464" y2="302" marker-end="url(#a1)"/>
-              </g>
-            </g>
-          </svg>
-          <figcaption class="article-figcaption"><b>Figure 1.</b> A plugin is a clean folder. Each plain text file adds one distinct operational capability.</figcaption>
-        </figure>
-
-        <ul class="article-list">
-          <li><strong>Skills:</strong> Hold instructions Claude follows when a task matches, such as your team's weekly reporting process.</li>
-          <li><strong>Commands:</strong> Named actions you trigger manually, such as <code>/sales:call-prep</code> or <code>/finance:reconciliation</code>.</li>
-          <li><strong>Connectors:</strong> MCP servers that reach outside tools like a CRM, a data warehouse, or an issue tracker.</li>
-          <li><strong>Agents:</strong> Specialized subagents Claude can hand part of a complex multi-stage task to.</li>
-          <li><strong>Hooks:</strong> Run validation scripts and deterministic checks at set execution points, such as after every file edit.</li>
-        </ul>
-        <p class="article-p">The <a class="ref-link" href="https://code.claude.com/docs/en/plugins-reference" target="_blank" rel="noopener noreferrer">Claude Code plugins reference</a> adds two developer parts: language servers for live code intelligence, and background event monitors.</p>
-      </div>
-
-      <!-- 4. WHERE PLUGINS RUN -->
-      <div class="content-card">
-        <h2 id="where">4. Where Plugins Run</h2>
-        <p class="article-p">One plugin works across three distinct surfaces, and each surface loads only what it supports. Skills, commands, and connectors work seamlessly in chat, Cowork, and Claude Code. Agents run in Cowork and Claude Code, and so do hooks, because they execute commands directly on your computer or container environment.</p>
-
-        <figure class="article-figure">
-          <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="f2t">
-            <title id="f2t">Which plugin components load in chat, Cowork and Claude Code</title>
-            <g font-family="'Inter', sans-serif" text-anchor="middle">
-              <text x="400" y="34" fill="#3fd4e8" font-size="15" font-weight="700">Chat</text>
-              <text x="560" y="34" fill="#3fd4e8" font-size="15" font-weight="700">Cowork</text>
-              <text x="720" y="34" fill="#3fd4e8" font-size="15" font-weight="700">Claude Code</text>
-              <g text-anchor="start" fill="#e6e8eb" font-size="15">
-                <text x="40" y="84">Skills</text>
-                <text x="40" y="134">Commands</text>
-                <text x="40" y="184">Connectors</text>
-                <text x="40" y="234">Agents</text>
-                <text x="40" y="284">Hooks</text>
-              </g>
-              <g stroke="#1f2833" stroke-width="1">
-                <line x1="20" y1="52" x2="790" y2="52"/><line x1="20" y1="102" x2="790" y2="102"/>
-                <line x1="20" y1="152" x2="790" y2="152"/><line x1="20" y1="202" x2="790" y2="202"/>
-                <line x1="20" y1="252" x2="790" y2="252"/>
-              </g>
-              <g fill="#4fd1a1">
-                <circle cx="400" cy="79" r="9"/><circle cx="560" cy="79" r="9"/><circle cx="720" cy="79" r="9"/>
-                <circle cx="400" cy="129" r="9"/><circle cx="560" cy="129" r="9"/><circle cx="720" cy="129" r="9"/>
-                <circle cx="400" cy="179" r="9"/><circle cx="560" cy="179" r="9"/><circle cx="720" cy="179" r="9"/>
-                <circle cx="560" cy="229" r="9"/><circle cx="720" cy="229" r="9"/>
-                <circle cx="560" cy="279" r="9"/><circle cx="720" cy="279" r="9"/>
-              </g>
-              <g stroke="#3a4350" stroke-width="2">
-                <line x1="390" y1="229" x2="410" y2="229"/><line x1="390" y1="279" x2="410" y2="279"/>
-              </g>
-            </g>
-          </svg>
-          <figcaption class="article-figcaption"><b>Figure 2.</b> The same plugin delivers deeper, autonomous capabilities in Cowork and Claude Code than in a standard browser chat.</figcaption>
-        </figure>
-
-        <p class="article-p">A plugin added in claude.ai follows you and syncs to Claude Code the next time you sign in there. Plugins installed from the Claude Code command line remain local to that machine or project repository.</p>
-      </div>
-
-      <!-- 5. WHY EXTENSIBILITY MAKES CLAUDE SO POWERFUL -->
-      <div class="content-card">
-        <h2 id="power">5. Why Extensibility Makes Claude So Powerful</h2>
-        <p class="article-p">Every customer starts with the identical base Claude model. Plugins allow each enterprise to customize it deeply, governed by four key architectural design choices:</p>
-
-        <div class="card">
-          <span class="tag">Expertise becomes editable</span>
-          <p>A skill is simply a markdown file, so the domain expert who owns the process can refine it without writing code. The starter plugins get dramatically more useful once you swap connectors and incorporate internal terminology, org structures, and SOPs.</p>
-        </div>
-        <div class="card gold">
-          <span class="tag">Context is spent only when needed</span>
-          <p>The <a class="ref-link" href="https://code.claude.com/docs/en/plugins/overview" target="_blank" rel="noopener noreferrer">Claude Code plugins overview</a> explains that only each skill's name and description sit in Claude's active context window on every turn. The full instruction text loads only when the skill triggers, allowing dozens of specialisms without crowding conversation memory.</p>
-        </div>
-        <div class="card green">
-          <span class="tag">Connectors use an open standard</span>
-          <p>Connectors run on the <a class="ref-link" href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noopener noreferrer">Model Context Protocol that Anthropic open-sourced</a>, meaning a plugin reaches any enterprise system offering an MCP server, from Snowflake to Slack and Jira.</p>
-        </div>
-        <div class="card violet">
-          <span class="tag">Build once, run everywhere</span>
-          <p>Anthropic's <a class="ref-link" href="https://claude.com/blog/cowork-plugins-across-enterprise" target="_blank" rel="noopener noreferrer">announcement of plugins across the enterprise</a> describes plugins as portable file systems you own. One folder serves a chat user, a Cowork desktop workflow, and an automated agent pipeline built on the Claude Agent SDK.</p>
-        </div>
-      </div>
-
-      <!-- 6. THE MAJOR CLAUDE PLUGINS AVAILABLE NOW -->
-      <div class="content-card">
-        <h2 id="major">6. The Major Claude Plugins Available Now</h2>
-        <p class="article-p">The <a class="ref-link" href="https://claude.com/marketplace/plugins" target="_blank" rel="noopener noreferrer">Claude Marketplace plugin directory</a> listed 341 plugins as of October 2026. Here are the primary enterprise and engineering packages available today:</p>
-
-        <h3 id="knowledge">Knowledge Work Plugins From Anthropic</h3>
-        <div class="table-wrap">
-          <table class="data-table">
-            <thead><tr><th>Plugin</th><th>What It Does</th></tr></thead>
-            <tbody>
-              <tr><td>Productivity</td><td>Tasks, calendars, and daily workflows across Slack, Notion, Asana, and Microsoft 365</td></tr>
-              <tr><td>Sales</td><td>Prospect research, call prep, pipeline review, and competitive battlecards</td></tr>
-              <tr><td>Customer Support</td><td>Ticket triage, draft replies, escalations, and knowledge base article authoring</td></tr>
-              <tr><td>Product Management</td><td>PRDs, product roadmaps, and qualitative user research synthesis</td></tr>
-              <tr><td>Marketing</td><td>Content creation, multichannel campaigns, brand voice enforcement, and analytics reporting</td></tr>
-              <tr><td>Legal</td><td>Contract review, NDA triage, regulatory compliance, and risk assessments</td></tr>
-              <tr><td>Finance</td><td>Journal entries, balance reconciliations, financial statements, and month-end close support</td></tr>
-              <tr><td>Data</td><td>SQL generation, statistical analysis, and interactive dashboards on Snowflake, Databricks, or BigQuery</td></tr>
-              <tr><td>Enterprise Search</td><td>Unified cross-system querying across email, Slack/Teams, cloud docs, and wikis</td></tr>
-              <tr><td>Bio-Research</td><td>Biomedical literature synthesis, genomics analysis, and therapeutic target prioritization</td></tr>
-              <tr><td>HR, Design, Operations</td><td>Offer letters, accessibility audits, postmortems, SRE runbooks, and vendor reviews</td></tr>
-              <tr><td>Plugin Management</td><td>Meta-plugin that scaffolds, validates, and refines new custom plugins</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h3 id="finserv">Financial Services Plugins</h3>
-        <div class="table-wrap">
-          <table class="data-table">
-            <thead><tr><th>Plugin</th><th>What It Does</th></tr></thead>
-            <tbody>
-              <tr><td>Financial Analysis</td><td>Macro market research, DCF/LBO financial modeling, and PowerPoint slide integrity checks</td></tr>
-              <tr><td>Investment Banking</td><td>Transaction documentation, comparable company analyses (comps), and pitch deck materials</td></tr>
-              <tr><td>Equity Research</td><td>Earnings call transcript breakdown, financial model updates, and published research notes</td></tr>
-              <tr><td>Private Equity</td><td>Due diligence across massive dataroom document sets and quantitative deal scoring</td></tr>
-              <tr><td>Wealth Management</td><td>Portfolio drift calculation, tax exposure optimization, and asset rebalancing</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="article-p">Anthropic also provides enterprise partner plugins from Salesforce (Slack), LSEG, S&amp;P Global, Apollo, and Common Room, along with tailored brand voice solutions from Tribe AI.</p>
-
-        <h3 id="dev">Developer Plugins For Claude Code</h3>
-        <div class="table-wrap">
-          <table class="data-table">
-            <thead><tr><th>Plugin</th><th>What It Does</th></tr></thead>
-            <tbody>
-              <tr><td>Frontend Design</td><td>Anthropic plugin delivering distinctive, production-grade UI design with high-fidelity polish</td></tr>
-              <tr><td>Code Review</td><td>Review agents providing confidence-scored feedback and automated pull request analysis</td></tr>
-              <tr><td>Security Guidance</td><td>Deterministic security hooks checking against command injection, XSS, and unsafe libraries</td></tr>
-              <tr><td>Feature Dev &amp; PR Review</td><td>Full-cycle developer agents that explore, architect, write code, and verify changes with tests</td></tr>
-              <tr><td>Pyright &amp; TypeScript LSP</td><td>Language Server Protocol daemons providing type verification and symbol intelligence</td></tr>
-              <tr><td>Context7</td><td>Upstash integration that dynamically fetches library-version-specific docs into prompt context</td></tr>
-              <tr><td>Playwright</td><td>Microsoft browser automation runner for automated end-to-end testing and screenshot review</td></tr>
-              <tr><td>GitHub, Figma, Vercel, Supabase</td><td>Direct manipulation of repositories, design tokens, preview deployments, and databases</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- 7. HOW PLUGINS REACH A WHOLE ORGANIZATION -->
-      <div class="content-card">
-        <h2 id="org">7. How Plugins Reach A Whole Organization</h2>
-        <p class="article-p">On Claude Team and Enterprise plans, workspace Owners can distribute approved plugins from a centralized GitHub repository through an internal organization marketplace. <a class="ref-link" href="https://support.claude.com/en/articles/13837433" target="_blank" rel="noopener noreferrer">Anthropic's guide to managing plugins for your organization</a> establishes four installation preferences: Installed by default, Available for install, Required, or Not available. These rules can be segmented by user group:</p>
-
-        <figure class="article-figure">
-          <svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="f3t">
-            <title id="f3t">How an organization distributes a plugin to different groups</title>
-            <defs>
-              <marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9aa4b2"/></marker>
-            </defs>
-            <g font-family="'Inter', sans-serif" text-anchor="middle">
-              <rect x="20" y="100" width="160" height="80" rx="12" fill="#11161d" stroke="#e3b341"/>
-              <text x="100" y="134" fill="#e3b341" font-size="15" font-weight="700">GitHub repo</text>
-              <text x="100" y="156" fill="#9aa4b2" font-size="13">company plugins</text>
-              <rect x="250" y="100" width="190" height="80" rx="12" fill="#0e1a20" stroke="#3fd4e8" stroke-width="2"/>
-              <text x="345" y="134" fill="#3fd4e8" font-size="15" font-weight="700">Org marketplace</text>
-              <text x="345" y="156" fill="#9aa4b2" font-size="13">Owner sets rules</text>
-              <g text-anchor="start" font-size="14">
-                <rect x="520" y="18" width="260" height="50" rx="10" fill="#11161d" stroke="#4fd1a1"/>
-                <text x="536" y="40" fill="#4fd1a1" font-weight="700">Engineering</text><text x="536" y="59" fill="#e6e8eb">Installed by default</text>
-                <rect x="520" y="82" width="260" height="50" rx="10" fill="#11161d" stroke="#b58cf0"/>
-                <text x="536" y="104" fill="#b58cf0" font-weight="700">Legal</text><text x="536" y="123" fill="#e6e8eb">Available for install</text>
-                <rect x="520" y="146" width="260" height="50" rx="10" fill="#11161d" stroke="#f07a9a"/>
-                <text x="536" y="168" fill="#f07a9a" font-weight="700">Finance</text><text x="536" y="187" fill="#e6e8eb">Required</text>
-                <rect x="520" y="210" width="260" height="50" rx="10" fill="#11161d" stroke="#3a4350"/>
-                <text x="536" y="232" fill="#9aa4b2" font-weight="700">Everyone else</text><text x="536" y="251" fill="#e6e8eb">Not available</text>
-              </g>
-              <g stroke="#9aa4b2" stroke-width="1.6" fill="none">
-                <line x1="180" y1="140" x2="246" y2="140" marker-end="url(#a3)"/>
-                <path d="M440,130 C480,130 480,43 516,43" marker-end="url(#a3)"/>
-                <path d="M440,135 C480,135 480,107 516,107" marker-end="url(#a3)"/>
-                <path d="M440,145 C480,145 480,171 516,171" marker-end="url(#a3)"/>
-                <path d="M440,150 C480,150 480,235 516,235" marker-end="url(#a3)"/>
-              </g>
-            </g>
-          </svg>
-          <figcaption class="article-figcaption"><b>Figure 3.</b> Centralized distribution: one plugin configured across specific organizational roles by IT administrators.</figcaption>
-        </figure>
-
-        <p class="article-p">Members cannot tamper with organization-managed plugins, keeping enterprise operations consistent. According to the <a class="ref-link" href="https://support.claude.com/en/articles/13837440" target="_blank" rel="noopener noreferrer">Claude Help Center article on using plugins</a>, Enterprise tenants with skill scanning enabled have plugins automatically evaluated for security risks and prompt injections whenever installed or updated.</p>
-      </div>
-
-      <!-- 8. FROM TASKS TO WHOLE OCCUPATIONS -->
-      <div class="content-card">
-        <h2 id="future">8. From Tasks To Whole Occupations</h2>
-        <p class="article-p">A plugin today automates discrete tasks. Whether it can automate an entire job depends on how much of that role's end-to-end task matrix it covers. Anthropic's <a class="ref-link" href="https://www.anthropic.com/research/labor-market-impacts" target="_blank" rel="noopener noreferrer">research on the labor market impacts of AI</a> measured that gap: LLMs could theoretically accelerate 94% of tasks in Computer and Math fields, yet observed real-world coverage was 33%. Computer programmers led with 75% coverage, followed by customer service representatives and data entry keyers at 67%.</p>
-        <p class="article-p">Enterprise expectations are shifting rapidly. In the <a class="ref-link" href="https://www.anthropic.com/research/economic-index-june-2026-report" target="_blank" rel="noopener noreferrer">Anthropic Economic Index report "Cadences"</a>, over a third of ~9,700 surveyed respondents expected AI to handle most or all of their work tasks within 12 months. Anthropic CEO Dario Amodei <a class="ref-link" href="https://siliconangle.com/2025/05/29/ai-set-eliminate-half-entry-level-white-collar-jobs-within-five-years-warns-anthropic-ceo/" target="_blank" rel="noopener noreferrer">noted in a May 2025 interview</a> that AI could replace half of entry-level white-collar jobs within five years.</p>
-        <p class="article-p">Plugins provide the operational vehicle for closing this gap because occupations are bundles of tasks, and plugins are bundles of skills. Five architectural steps bridge the gap from task assistance to full operational autonomy:</p>
-        <ol class="article-list">
-          <li><strong>Complete Task Mapping:</strong> Systematically encoding every occupational task documented in standards like the <a class="ref-link" href="https://www.onetcenter.org/database.html" target="_blank" rel="noopener noreferrer">O*NET occupational database</a>.</li>
-          <li><strong>Deep System Write Access:</strong> Deploying robust MCP connectors that act deterministically within scoped enterprise permissions.</li>
-          <li><strong>Long-Horizon Autonomous Execution:</strong> Leveraging Claude's ability to run self-directed tool loops for hours in Claude Code and Cowork.</li>
-          <li><strong>Self-Correction &amp; Verification:</strong> Incorporating specialized review subagents and static validation hooks before shipping outputs.</li>
-          <li><strong>Organization-Enforced Compliance:</strong> Deploying plugins as Required so the entire company adheres to verified, standardized agent pipelines.</li>
-        </ol>
-        <p class="article-p">Three occupations currently sit closest to this transition:</p>
-        <ul class="article-list">
-          <li><strong>Customer Support:</strong> The Customer Support plugin already handles triage, drafting, and ticket documentation; only sensitive refund approvals remain human-gated.</li>
-          <li><strong>Financial Analysis:</strong> Equity Research plugins parse filings, update financial models, and generate commentary with real-time FactSet/S&amp;P connectors.</li>
-          <li><strong>Software Engineering:</strong> Feature Dev, Code Review, Security Guidance, and LSPs automate the loop from architecture spec to verified pull request.</li>
-        </ul>
-      </div>
-
-      <!-- 9. WHAT STILL STANDS IN THE WAY -->
-      <div class="content-card">
-        <h2 id="limits">9. What Still Stands In The Way</h2>
-        <p class="article-p">Anthropic's economic research urges balanced realism. While headline unemployment in exposed tech occupations has not shown a dramatic surge, hiring rates for 22-to-25-year-olds into entry-level knowledge jobs have dropped roughly 14% below 2022 baselines.</p>
-        <p class="article-p">Crucially, physical tasks, courtroom appearances, and high-stakes fiduciary liabilities remain firmly out of reach. In the Cadences study, senior professionals with 15+ years of tenure highlighted context, unwritten organizational norms, and human trust as qualities no static skill file can replicate.</p>
-        <p class="article-p">Security remains a paramount consideration. Because plugins inherit the user's active permissions, organizations must implement zero-trust credentialing and automated skill auditing for any plugin loaded outside vetted enterprise repositories.</p>
-      </div>
-
-      <!-- 10. WHERE TO START -->
-      <div class="content-card">
-        <h2 id="start">10. Where To Start</h2>
-        <p class="article-p">Start with a single role plugin matching an immediate departmental pain point, such as Sales or Customer Support. Hook its connectors to your actual toolstack, customize the markdown skill files with your internal guidelines and terminology, and test it in production workflows for two weeks.</p>
-        <p class="article-p">Once adoption and efficiency metrics validate the workflow, promote it to Required status in your organization marketplace and systematically build your next operational plugin.</p>
-      </div>
-
-      <!-- 11. REFERENCES -->
-      <div class="content-card" style="border-color:rgba(251,191,36,0.3);">
-        <h2 id="references">11. References</h2>
-        <ol class="refs">
-          <li><a class="ref-link" href="https://claude.com/docs/plugins/overview" target="_blank" rel="noopener noreferrer">Plugins On Claude.ai And In Cowork</a>, Claude Docs.</li>
-          <li><a class="ref-link" href="https://claude.com/blog/claude-code-plugins" target="_blank" rel="noopener noreferrer">Customize Claude Code With Plugins</a>, Anthropic, October 2025.</li>
-          <li><a class="ref-link" href="https://claude.com/blog/cowork-plugins-across-enterprise" target="_blank" rel="noopener noreferrer">Cowork And Plugins For Teams Across The Enterprise</a>, Anthropic, February 2026.</li>
-          <li><a class="ref-link" href="https://github.com/anthropics/knowledge-work-plugins" target="_blank" rel="noopener noreferrer">Knowledge Work Plugins Repository</a>, GitHub.</li>
-          <li><a class="ref-link" href="https://code.claude.com/docs/en/plugins/overview" target="_blank" rel="noopener noreferrer">Plugins Overview</a>, Claude Code Docs.</li>
-          <li><a class="ref-link" href="https://code.claude.com/docs/en/plugins-reference" target="_blank" rel="noopener noreferrer">Plugins Reference</a>, Claude Code Docs.</li>
-          <li><a class="ref-link" href="https://claude.com/marketplace/plugins" target="_blank" rel="noopener noreferrer">Plugins Directory</a>, Claude Marketplace.</li>
-          <li><a class="ref-link" href="https://support.claude.com/en/articles/13837440" target="_blank" rel="noopener noreferrer">Use Plugins In Claude</a>, Claude Help Center.</li>
-          <li><a class="ref-link" href="https://support.claude.com/en/articles/13837433" target="_blank" rel="noopener noreferrer">Manage Plugins For Your Organization</a>, Claude Help Center.</li>
-          <li><a class="ref-link" href="https://www.datacamp.com/tutorial/claude-cowork-plugins" target="_blank" rel="noopener noreferrer">Claude Cowork Plugins Tutorial</a>, DataCamp, October 2026.</li>
-          <li><a class="ref-link" href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noopener noreferrer">Introducing The Model Context Protocol</a>, Anthropic, November 2024.</li>
-          <li><a class="ref-link" href="https://www.anthropic.com/research/labor-market-impacts" target="_blank" rel="noopener noreferrer">Labor Market Impacts Of AI</a>, Anthropic, March 2026.</li>
-          <li><a class="ref-link" href="https://www.anthropic.com/research/economic-index-june-2026-report" target="_blank" rel="noopener noreferrer">Anthropic Economic Index Report: Cadences</a>, Anthropic, June 2026.</li>
-          <li><a class="ref-link" href="https://siliconangle.com/2025/05/29/ai-set-eliminate-half-entry-level-white-collar-jobs-within-five-years-warns-anthropic-ceo/" target="_blank" rel="noopener noreferrer">Anthropic CEO Warns On Entry-Level Jobs</a>, SiliconANGLE, May 2025.</li>
-          <li><a class="ref-link" href="https://www.onetcenter.org/database.html" target="_blank" rel="noopener noreferrer">O*NET Database</a>, O*NET Resource Center.</li>
-        </ol>
-      </div>
-
-    </article>
-
-    <!-- CALL TO ACTION (CTA) -->
-    <section class="cta-banner">
-      <h2 style="color:var(--gold);font-size:1.85rem;margin-bottom:0.75rem;">Build Custom Enterprise Plugins &amp; Agent Workflows</h2>
-      <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
+<div class="rule"></div>
+<h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
+<ol class="toc-list">
+<li><a href="#why">Why Plugins Exist</a></li>
+<li><a href="#what">What A Claude Plugin Is</a></li>
+<li><a href="#inside">Inside A Plugin</a></li>
+<li><a href="#where">Where Plugins Run</a></li>
+<li><a href="#power">Why Extensibility Makes Claude So Powerful</a></li>
+<li><a href="#major">The Major Claude Plugins Available Now</a></li>
+<li><a href="#org">How Plugins Reach A Whole Organization</a></li>
+<li><a href="#future">From Tasks To Whole Occupations</a></li>
+<li><a href="#limits">What Still Stands In The Way</a></li>
+<li><a href="#start">Where To Start</a></li>
+<li><a href="#references">References</a></li>
+</ol>
+</div>
+<!-- 1. WHY PLUGINS EXIST -->
+<div class="content-card">
+<h2 id="why">1. Why Plugins Exist</h2>
+<p class="article-p">A general assistant knows nothing about your company. It does not know how your finance team closes the month or what your legal team checks before signing an NDA, so every person re-explains the same process in every chat.</p>
+<p class="article-p">Plugins turn that know-how into files Claude loads when a task calls for them. Install a sales plugin and Claude gets the research steps, the call-prep command and the link to your CRM at once.</p>
+</div>
+<!-- 2. WHAT A CLAUDE PLUGIN IS -->
+<div class="content-card">
+<h2 id="what">2. What A Claude Plugin Is</h2>
+<p class="article-p"><a class="ref-link" href="https://claude.com/docs/plugins/overview" rel="noopener noreferrer" target="_blank">Anthropic's plugin overview for claude.ai and Cowork</a> says a plugin packages skills, MCP connectors, commands and agents so you can add them to Claude as one unit. You add one from Customize &gt; Plugins in claude.ai or the desktop app, and it is saved to your account.</p>
+<p class="article-p">Plugins began in the terminal. Anthropic <a class="ref-link" href="https://claude.com/blog/claude-code-plugins" rel="noopener noreferrer" target="_blank">introduced plugins for Claude Code on October 9, 2025</a> as collections of slash commands, agents, MCP servers and hooks that install with a single command. <a class="ref-link" href="https://www.datacamp.com/tutorial/claude-cowork-plugins" rel="noopener noreferrer" target="_blank">DataCamp's guide to Cowork plugins</a> dates their arrival in Cowork to January 30, 2026, with 11 open-source plugins from Anthropic's own teams.</p>
+</div>
+<!-- 3. INSIDE A PLUGIN -->
+<div class="content-card">
+<h2 id="inside">3. Inside A Plugin</h2>
+<p class="article-p">Every part of a plugin is a plain file. The <a class="ref-link" href="https://github.com/anthropics/knowledge-work-plugins" rel="noopener noreferrer" target="_blank">knowledge-work-plugins repository on GitHub</a> shows the layout: a manifest at <code>.claude-plugin/plugin.json</code>, a <code>.mcp.json</code> file for tool connections, a commands folder and a skills folder. Its README says the components are markdown and JSON, with no code, infrastructure or build steps.</p>
+<figure class="article-figure">
+<svg aria-labelledby="f1t" role="img" viewbox="0 0 800 330" xmlns="http://www.w3.org/2000/svg">
+<title id="f1t">The files inside a plugin and what each one adds</title>
+<defs>
+<marker id="a1" markerheight="7" markerwidth="7" orient="auto" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#9aa4b2"></path></marker>
+</defs>
+<g font-family="'Inter', sans-serif">
+<rect fill="#11161d" height="302" rx="12" stroke="#e3b341" width="300" x="20" y="14"></rect>
+<text fill="#e3b341" font-size="16" font-weight="700" x="40" y="44">sales-plugin/</text>
+<g fill="#e6e8eb" font-family="'JetBrains Mono', monospace" font-size="14">
+<text x="56" y="86">.claude-plugin/plugin.json</text>
+<text x="56" y="130">skills/</text>
+<text x="56" y="174">commands/</text>
+<text x="56" y="218">.mcp.json</text>
+<text x="56" y="262">agents/</text>
+<text x="56" y="306">hooks/</text>
+</g>
+<g font-size="14" text-anchor="start">
+<rect fill="#0e1a20" height="32" rx="8" stroke="#3fd4e8" width="310" x="470" y="66"></rect><text fill="#e6e8eb" x="486" y="87">Name, version, description</text>
+<rect fill="#0e1a20" height="32" rx="8" stroke="#3fd4e8" width="310" x="470" y="110"></rect><text fill="#e6e8eb" x="486" y="131">Know-how Claude loads on demand</text>
+<rect fill="#0e1a20" height="32" rx="8" stroke="#3fd4e8" width="310" x="470" y="154"></rect><text fill="#e6e8eb" x="486" y="175">Actions like /sales:call-prep</text>
+<rect fill="#0e1a20" height="32" rx="8" stroke="#4fd1a1" width="310" x="470" y="198"></rect><text fill="#e6e8eb" x="486" y="219">Access to CRM and other tools</text>
+<rect fill="#0e1a20" height="32" rx="8" stroke="#b58cf0" width="310" x="470" y="242"></rect><text fill="#e6e8eb" x="486" y="263">Specialists for subtasks</text>
+<rect fill="#0e1a20" height="32" rx="8" stroke="#b58cf0" width="310" x="470" y="286"></rect><text fill="#e6e8eb" x="486" y="307">Checks that run automatically</text>
+</g>
+<g stroke="#9aa4b2" stroke-width="1.6">
+<line marker-end="url(#a1)" x1="290" x2="464" y1="82" y2="82"></line>
+<line marker-end="url(#a1)" x1="290" x2="464" y1="126" y2="126"></line>
+<line marker-end="url(#a1)" x1="290" x2="464" y1="170" y2="170"></line>
+<line marker-end="url(#a1)" x1="290" x2="464" y1="214" y2="214"></line>
+<line marker-end="url(#a1)" x1="290" x2="464" y1="258" y2="258"></line>
+<line marker-end="url(#a1)" x1="290" x2="464" y1="302" y2="302"></line>
+</g>
+</g>
+</svg>
+<figcaption class="article-figcaption"><b>Figure 1.</b> A plugin is a clean folder. Each plain text file adds one distinct operational capability.</figcaption>
+</figure>
+<ul class="article-list">
+<li><strong>Skills:</strong> Hold instructions Claude follows when a task matches, such as your team's weekly reporting process.</li>
+<li><strong>Commands:</strong> Named actions you trigger manually, such as <code>/sales:call-prep</code> or <code>/finance:reconciliation</code>.</li>
+<li><strong>Connectors:</strong> MCP servers that reach outside tools like a CRM, a data warehouse, or an issue tracker.</li>
+<li><strong>Agents:</strong> Specialized subagents Claude can hand part of a complex multi-stage task to.</li>
+<li><strong>Hooks:</strong> Run validation scripts and deterministic checks at set execution points, such as after every file edit.</li>
+</ul>
+<p class="article-p">The <a class="ref-link" href="https://code.claude.com/docs/en/plugins-reference" rel="noopener noreferrer" target="_blank">Claude Code plugins reference</a> adds two developer parts: language servers for live code intelligence, and background event monitors.</p>
+</div>
+<!-- 4. WHERE PLUGINS RUN -->
+<div class="content-card">
+<h2 id="where">4. Where Plugins Run</h2>
+<p class="article-p">One plugin works across three distinct surfaces, and each surface loads only what it supports. Skills, commands, and connectors work seamlessly in chat, Cowork, and Claude Code. Agents run in Cowork and Claude Code, and so do hooks, because they execute commands directly on your computer or container environment.</p>
+<figure class="article-figure">
+<svg aria-labelledby="f2t" role="img" viewbox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+<title id="f2t">Which plugin components load in chat, Cowork and Claude Code</title>
+<g font-family="'Inter', sans-serif" text-anchor="middle">
+<text fill="#3fd4e8" font-size="15" font-weight="700" x="400" y="34">Chat</text>
+<text fill="#3fd4e8" font-size="15" font-weight="700" x="560" y="34">Cowork</text>
+<text fill="#3fd4e8" font-size="15" font-weight="700" x="720" y="34">Claude Code</text>
+<g fill="#e6e8eb" font-size="15" text-anchor="start">
+<text x="40" y="84">Skills</text>
+<text x="40" y="134">Commands</text>
+<text x="40" y="184">Connectors</text>
+<text x="40" y="234">Agents</text>
+<text x="40" y="284">Hooks</text>
+</g>
+<g stroke="#1f2833" stroke-width="1">
+<line x1="20" x2="790" y1="52" y2="52"></line><line x1="20" x2="790" y1="102" y2="102"></line>
+<line x1="20" x2="790" y1="152" y2="152"></line><line x1="20" x2="790" y1="202" y2="202"></line>
+<line x1="20" x2="790" y1="252" y2="252"></line>
+</g>
+<g fill="#4fd1a1">
+<circle cx="400" cy="79" r="9"></circle><circle cx="560" cy="79" r="9"></circle><circle cx="720" cy="79" r="9"></circle>
+<circle cx="400" cy="129" r="9"></circle><circle cx="560" cy="129" r="9"></circle><circle cx="720" cy="129" r="9"></circle>
+<circle cx="400" cy="179" r="9"></circle><circle cx="560" cy="179" r="9"></circle><circle cx="720" cy="179" r="9"></circle>
+<circle cx="560" cy="229" r="9"></circle><circle cx="720" cy="229" r="9"></circle>
+<circle cx="560" cy="279" r="9"></circle><circle cx="720" cy="279" r="9"></circle>
+</g>
+<g stroke="#3a4350" stroke-width="2">
+<line x1="390" x2="410" y1="229" y2="229"></line><line x1="390" x2="410" y1="279" y2="279"></line>
+</g>
+</g>
+</svg>
+<figcaption class="article-figcaption"><b>Figure 2.</b> The same plugin delivers deeper, autonomous capabilities in Cowork and Claude Code than in a standard browser chat.</figcaption>
+</figure>
+<p class="article-p">A plugin added in claude.ai follows you and syncs to Claude Code the next time you sign in there. Plugins installed from the Claude Code command line remain local to that machine or project repository.</p>
+</div>
+<!-- 5. WHY EXTENSIBILITY MAKES CLAUDE SO POWERFUL -->
+<div class="content-card">
+<h2 id="power">5. Why Extensibility Makes Claude So Powerful</h2>
+<p class="article-p">Every customer starts with the identical base Claude model. Plugins allow each enterprise to customize it deeply, governed by four key architectural design choices:</p>
+<div class="card">
+<span class="tag">Expertise becomes editable</span>
+<p>A skill is simply a markdown file, so the domain expert who owns the process can refine it without writing code. The starter plugins get dramatically more useful once you swap connectors and incorporate internal terminology, org structures, and SOPs.</p>
+</div>
+<div class="card gold">
+<span class="tag">Context is spent only when needed</span>
+<p>The <a class="ref-link" href="https://code.claude.com/docs/en/plugins/overview" rel="noopener noreferrer" target="_blank">Claude Code plugins overview</a> explains that only each skill's name and description sit in Claude's active context window on every turn. The full instruction text loads only when the skill triggers, allowing dozens of specialisms without crowding conversation memory.</p>
+</div>
+<div class="card green">
+<span class="tag">Connectors use an open standard</span>
+<p>Connectors run on the <a class="ref-link" href="https://www.anthropic.com/news/model-context-protocol" rel="noopener noreferrer" target="_blank">Model Context Protocol that Anthropic open-sourced</a>, meaning a plugin reaches any enterprise system offering an MCP server, from Snowflake to Slack and Jira.</p>
+</div>
+<div class="card violet">
+<span class="tag">Build once, run everywhere</span>
+<p>Anthropic's <a class="ref-link" href="https://claude.com/blog/cowork-plugins-across-enterprise" rel="noopener noreferrer" target="_blank">announcement of plugins across the enterprise</a> describes plugins as portable file systems you own. One folder serves a chat user, a Cowork desktop workflow, and an automated agent pipeline built on the Claude Agent SDK.</p>
+</div>
+</div>
+<!-- 6. THE MAJOR CLAUDE PLUGINS AVAILABLE NOW -->
+<div class="content-card">
+<h2 id="major">6. The Major Claude Plugins Available Now</h2>
+<p class="article-p">The <a class="ref-link" href="https://claude.com/marketplace/plugins" rel="noopener noreferrer" target="_blank">Claude Marketplace plugin directory</a> listed 341 plugins as of October 2026. Here are the primary enterprise and engineering packages available today:</p>
+<h3 id="knowledge">Knowledge Work Plugins From Anthropic</h3>
+<div class="table-wrap">
+<table class="data-table">
+<thead><tr><th>Plugin</th><th>What It Does</th></tr></thead>
+<tbody>
+<tr><td>Productivity</td><td>Tasks, calendars, and daily workflows across Slack, Notion, Asana, and Microsoft 365</td></tr>
+<tr><td>Sales</td><td>Prospect research, call prep, pipeline review, and competitive battlecards</td></tr>
+<tr><td>Customer Support</td><td>Ticket triage, draft replies, escalations, and knowledge base article authoring</td></tr>
+<tr><td>Product Management</td><td>PRDs, product roadmaps, and qualitative user research synthesis</td></tr>
+<tr><td>Marketing</td><td>Content creation, multichannel campaigns, brand voice enforcement, and analytics reporting</td></tr>
+<tr><td>Legal</td><td>Contract review, NDA triage, regulatory compliance, and risk assessments</td></tr>
+<tr><td>Finance</td><td>Journal entries, balance reconciliations, financial statements, and month-end close support</td></tr>
+<tr><td>Data</td><td>SQL generation, statistical analysis, and interactive dashboards on Snowflake, Databricks, or BigQuery</td></tr>
+<tr><td>Enterprise Search</td><td>Unified cross-system querying across email, Slack/Teams, cloud docs, and wikis</td></tr>
+<tr><td>Bio-Research</td><td>Biomedical literature synthesis, genomics analysis, and therapeutic target prioritization</td></tr>
+<tr><td>HR, Design, Operations</td><td>Offer letters, accessibility audits, postmortems, SRE runbooks, and vendor reviews</td></tr>
+<tr><td>Plugin Management</td><td>Meta-plugin that scaffolds, validates, and refines new custom plugins</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="finserv">Financial Services Plugins</h3>
+<div class="table-wrap">
+<table class="data-table">
+<thead><tr><th>Plugin</th><th>What It Does</th></tr></thead>
+<tbody>
+<tr><td>Financial Analysis</td><td>Macro market research, DCF/LBO financial modeling, and PowerPoint slide integrity checks</td></tr>
+<tr><td>Investment Banking</td><td>Transaction documentation, comparable company analyses (comps), and pitch deck materials</td></tr>
+<tr><td>Equity Research</td><td>Earnings call transcript breakdown, financial model updates, and published research notes</td></tr>
+<tr><td>Private Equity</td><td>Due diligence across massive dataroom document sets and quantitative deal scoring</td></tr>
+<tr><td>Wealth Management</td><td>Portfolio drift calculation, tax exposure optimization, and asset rebalancing</td></tr>
+</tbody>
+</table>
+</div>
+<p class="article-p">Anthropic also provides enterprise partner plugins from Salesforce (Slack), LSEG, S&amp;P Global, Apollo, and Common Room, along with tailored brand voice solutions from Tribe AI.</p>
+<h3 id="dev">Developer Plugins For Claude Code</h3>
+<div class="table-wrap">
+<table class="data-table">
+<thead><tr><th>Plugin</th><th>What It Does</th></tr></thead>
+<tbody>
+<tr><td>Frontend Design</td><td>Anthropic plugin delivering distinctive, production-grade UI design with high-fidelity polish</td></tr>
+<tr><td>Code Review</td><td>Review agents providing confidence-scored feedback and automated pull request analysis</td></tr>
+<tr><td>Security Guidance</td><td>Deterministic security hooks checking against command injection, XSS, and unsafe libraries</td></tr>
+<tr><td>Feature Dev &amp; PR Review</td><td>Full-cycle developer agents that explore, architect, write code, and verify changes with tests</td></tr>
+<tr><td>Pyright &amp; TypeScript LSP</td><td>Language Server Protocol daemons providing type verification and symbol intelligence</td></tr>
+<tr><td>Context7</td><td>Upstash integration that dynamically fetches library-version-specific docs into prompt context</td></tr>
+<tr><td>Playwright</td><td>Microsoft browser automation runner for automated end-to-end testing and screenshot review</td></tr>
+<tr><td>GitHub, Figma, Vercel, Supabase</td><td>Direct manipulation of repositories, design tokens, preview deployments, and databases</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- 7. HOW PLUGINS REACH A WHOLE ORGANIZATION -->
+<div class="content-card">
+<h2 id="org">7. How Plugins Reach A Whole Organization</h2>
+<p class="article-p">On Claude Team and Enterprise plans, workspace Owners can distribute approved plugins from a centralized GitHub repository through an internal organization marketplace. <a class="ref-link" href="https://support.claude.com/en/articles/13837433" rel="noopener noreferrer" target="_blank">Anthropic's guide to managing plugins for your organization</a> establishes four installation preferences: Installed by default, Available for install, Required, or Not available. These rules can be segmented by user group:</p>
+<figure class="article-figure">
+<svg aria-labelledby="f3t" role="img" viewbox="0 0 800 280" xmlns="http://www.w3.org/2000/svg">
+<title id="f3t">How an organization distributes a plugin to different groups</title>
+<defs>
+<marker id="a3" markerheight="7" markerwidth="7" orient="auto" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#9aa4b2"></path></marker>
+</defs>
+<g font-family="'Inter', sans-serif" text-anchor="middle">
+<rect fill="#11161d" height="80" rx="12" stroke="#e3b341" width="160" x="20" y="100"></rect>
+<text fill="#e3b341" font-size="15" font-weight="700" x="100" y="134">GitHub repo</text>
+<text fill="#9aa4b2" font-size="13" x="100" y="156">company plugins</text>
+<rect fill="#0e1a20" height="80" rx="12" stroke="#3fd4e8" stroke-width="2" width="190" x="250" y="100"></rect>
+<text fill="#3fd4e8" font-size="15" font-weight="700" x="345" y="134">Org marketplace</text>
+<text fill="#9aa4b2" font-size="13" x="345" y="156">Owner sets rules</text>
+<g font-size="14" text-anchor="start">
+<rect fill="#11161d" height="50" rx="10" stroke="#4fd1a1" width="260" x="520" y="18"></rect>
+<text fill="#4fd1a1" font-weight="700" x="536" y="40">Engineering</text><text fill="#e6e8eb" x="536" y="59">Installed by default</text>
+<rect fill="#11161d" height="50" rx="10" stroke="#b58cf0" width="260" x="520" y="82"></rect>
+<text fill="#b58cf0" font-weight="700" x="536" y="104">Legal</text><text fill="#e6e8eb" x="536" y="123">Available for install</text>
+<rect fill="#11161d" height="50" rx="10" stroke="#f07a9a" width="260" x="520" y="146"></rect>
+<text fill="#f07a9a" font-weight="700" x="536" y="168">Finance</text><text fill="#e6e8eb" x="536" y="187">Required</text>
+<rect fill="#11161d" height="50" rx="10" stroke="#3a4350" width="260" x="520" y="210"></rect>
+<text fill="#9aa4b2" font-weight="700" x="536" y="232">Everyone else</text><text fill="#e6e8eb" x="536" y="251">Not available</text>
+</g>
+<g fill="none" stroke="#9aa4b2" stroke-width="1.6">
+<line marker-end="url(#a3)" x1="180" x2="246" y1="140" y2="140"></line>
+<path d="M440,130 C480,130 480,43 516,43" marker-end="url(#a3)"></path>
+<path d="M440,135 C480,135 480,107 516,107" marker-end="url(#a3)"></path>
+<path d="M440,145 C480,145 480,171 516,171" marker-end="url(#a3)"></path>
+<path d="M440,150 C480,150 480,235 516,235" marker-end="url(#a3)"></path>
+</g>
+</g>
+</svg>
+<figcaption class="article-figcaption"><b>Figure 3.</b> Centralized distribution: one plugin configured across specific organizational roles by IT administrators.</figcaption>
+</figure>
+<p class="article-p">Members cannot tamper with organization-managed plugins, keeping enterprise operations consistent. According to the <a class="ref-link" href="https://support.claude.com/en/articles/13837440" rel="noopener noreferrer" target="_blank">Claude Help Center article on using plugins</a>, Enterprise tenants with skill scanning enabled have plugins automatically evaluated for security risks and prompt injections whenever installed or updated.</p>
+</div>
+<!-- 8. FROM TASKS TO WHOLE OCCUPATIONS -->
+<div class="content-card">
+<h2 id="future">8. From Tasks To Whole Occupations</h2>
+<p class="article-p">A plugin today automates discrete tasks. Whether it can automate an entire job depends on how much of that role's end-to-end task matrix it covers. Anthropic's <a class="ref-link" href="https://www.anthropic.com/research/labor-market-impacts" rel="noopener noreferrer" target="_blank">research on the labor market impacts of AI</a> measured that gap: LLMs could theoretically accelerate 94% of tasks in Computer and Math fields, yet observed real-world coverage was 33%. Computer programmers led with 75% coverage, followed by customer service representatives and data entry keyers at 67%.</p>
+<p class="article-p">Enterprise expectations are shifting rapidly. In the <a class="ref-link" href="https://www.anthropic.com/research/economic-index-june-2026-report" rel="noopener noreferrer" target="_blank">Anthropic Economic Index report "Cadences"</a>, over a third of ~9,700 surveyed respondents expected AI to handle most or all of their work tasks within 12 months. Anthropic CEO Dario Amodei <a class="ref-link" href="https://siliconangle.com/2025/05/29/ai-set-eliminate-half-entry-level-white-collar-jobs-within-five-years-warns-anthropic-ceo/" rel="noopener noreferrer" target="_blank">noted in a May 2025 interview</a> that AI could replace half of entry-level white-collar jobs within five years.</p>
+<p class="article-p">Plugins provide the operational vehicle for closing this gap because occupations are bundles of tasks, and plugins are bundles of skills. Five architectural steps bridge the gap from task assistance to full operational autonomy:</p>
+<ol class="article-list">
+<li><strong>Complete Task Mapping:</strong> Systematically encoding every occupational task documented in standards like the <a class="ref-link" href="https://www.onetcenter.org/database.html" rel="noopener noreferrer" target="_blank">O*NET occupational database</a>.</li>
+<li><strong>Deep System Write Access:</strong> Deploying robust MCP connectors that act deterministically within scoped enterprise permissions.</li>
+<li><strong>Long-Horizon Autonomous Execution:</strong> Leveraging Claude's ability to run self-directed tool loops for hours in Claude Code and Cowork.</li>
+<li><strong>Self-Correction &amp; Verification:</strong> Incorporating specialized review subagents and static validation hooks before shipping outputs.</li>
+<li><strong>Organization-Enforced Compliance:</strong> Deploying plugins as Required so the entire company adheres to verified, standardized agent pipelines.</li>
+</ol>
+<p class="article-p">Three occupations currently sit closest to this transition:</p>
+<ul class="article-list">
+<li><strong>Customer Support:</strong> The Customer Support plugin already handles triage, drafting, and ticket documentation; only sensitive refund approvals remain human-gated.</li>
+<li><strong>Financial Analysis:</strong> Equity Research plugins parse filings, update financial models, and generate commentary with real-time FactSet/S&amp;P connectors.</li>
+<li><strong>Software Engineering:</strong> Feature Dev, Code Review, Security Guidance, and LSPs automate the loop from architecture spec to verified pull request.</li>
+</ul>
+</div>
+<!-- 9. WHAT STILL STANDS IN THE WAY -->
+<div class="content-card">
+<h2 id="limits">9. What Still Stands In The Way</h2>
+<p class="article-p">Anthropic's economic research urges balanced realism. While headline unemployment in exposed tech occupations has not shown a dramatic surge, hiring rates for 22-to-25-year-olds into entry-level knowledge jobs have dropped roughly 14% below 2022 baselines.</p>
+<p class="article-p">Crucially, physical tasks, courtroom appearances, and high-stakes fiduciary liabilities remain firmly out of reach. In the Cadences study, senior professionals with 15+ years of tenure highlighted context, unwritten organizational norms, and human trust as qualities no static skill file can replicate.</p>
+<p class="article-p">Security remains a paramount consideration. Because plugins inherit the user's active permissions, organizations must implement zero-trust credentialing and automated skill auditing for any plugin loaded outside vetted enterprise repositories.</p>
+</div>
+<!-- 10. WHERE TO START -->
+<div class="content-card">
+<h2 id="start">10. Where To Start</h2>
+<p class="article-p">Start with a single role plugin matching an immediate departmental pain point, such as Sales or Customer Support. Hook its connectors to your actual toolstack, customize the markdown skill files with your internal guidelines and terminology, and test it in production workflows for two weeks.</p>
+<p class="article-p">Once adoption and efficiency metrics validate the workflow, promote it to Required status in your organization marketplace and systematically build your next operational plugin.</p>
+</div>
+<!-- 11. REFERENCES -->
+<div class="content-card" style="border-color:rgba(251,191,36,0.3);">
+<h2 id="references">11. References</h2>
+<ol class="refs">
+<li><a class="ref-link" href="https://claude.com/docs/plugins/overview" rel="noopener noreferrer" target="_blank">Plugins On Claude.ai And In Cowork</a>, Claude Docs.</li>
+<li><a class="ref-link" href="https://claude.com/blog/claude-code-plugins" rel="noopener noreferrer" target="_blank">Customize Claude Code With Plugins</a>, Anthropic, October 2025.</li>
+<li><a class="ref-link" href="https://claude.com/blog/cowork-plugins-across-enterprise" rel="noopener noreferrer" target="_blank">Cowork And Plugins For Teams Across The Enterprise</a>, Anthropic, February 2026.</li>
+<li><a class="ref-link" href="https://github.com/anthropics/knowledge-work-plugins" rel="noopener noreferrer" target="_blank">Knowledge Work Plugins Repository</a>, GitHub.</li>
+<li><a class="ref-link" href="https://code.claude.com/docs/en/plugins/overview" rel="noopener noreferrer" target="_blank">Plugins Overview</a>, Claude Code Docs.</li>
+<li><a class="ref-link" href="https://code.claude.com/docs/en/plugins-reference" rel="noopener noreferrer" target="_blank">Plugins Reference</a>, Claude Code Docs.</li>
+<li><a class="ref-link" href="https://claude.com/marketplace/plugins" rel="noopener noreferrer" target="_blank">Plugins Directory</a>, Claude Marketplace.</li>
+<li><a class="ref-link" href="https://support.claude.com/en/articles/13837440" rel="noopener noreferrer" target="_blank">Use Plugins In Claude</a>, Claude Help Center.</li>
+<li><a class="ref-link" href="https://support.claude.com/en/articles/13837433" rel="noopener noreferrer" target="_blank">Manage Plugins For Your Organization</a>, Claude Help Center.</li>
+<li><a class="ref-link" href="https://www.datacamp.com/tutorial/claude-cowork-plugins" rel="noopener noreferrer" target="_blank">Claude Cowork Plugins Tutorial</a>, DataCamp, October 2026.</li>
+<li><a class="ref-link" href="https://www.anthropic.com/news/model-context-protocol" rel="noopener noreferrer" target="_blank">Introducing The Model Context Protocol</a>, Anthropic, November 2024.</li>
+<li><a class="ref-link" href="https://www.anthropic.com/research/labor-market-impacts" rel="noopener noreferrer" target="_blank">Labor Market Impacts Of AI</a>, Anthropic, March 2026.</li>
+<li><a class="ref-link" href="https://www.anthropic.com/research/economic-index-june-2026-report" rel="noopener noreferrer" target="_blank">Anthropic Economic Index Report: Cadences</a>, Anthropic, June 2026.</li>
+<li><a class="ref-link" href="https://siliconangle.com/2025/05/29/ai-set-eliminate-half-entry-level-white-collar-jobs-within-five-years-warns-anthropic-ceo/" rel="noopener noreferrer" target="_blank">Anthropic CEO Warns On Entry-Level Jobs</a>, SiliconANGLE, May 2025.</li>
+<li><a class="ref-link" href="https://www.onetcenter.org/database.html" rel="noopener noreferrer" target="_blank">O*NET Database</a>, O*NET Resource Center.</li>
+</ol>
+</div>
+</article>
+<!-- CALL TO ACTION (CTA) -->
+<section class="cta-banner">
+<h2 style="color:var(--gold);font-size:1.85rem;margin-bottom:0.75rem;">Build Custom Enterprise Plugins &amp; Agent Workflows</h2>
+<p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
         From authoring type-safe MCP connectors and custom Claude Code plugins to setting up enterprise governance and organization marketplaces - let's transform your workforce.
       </p>
-      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
-        <a class="btn btn-primary" href="../contact.html">Schedule Architecture Session →</a>
-        <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
-        <a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
-      </div>
-    </section>
-
-  </main>
-
+<div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+<a class="btn btn-primary" href="../contact.html">Schedule Architecture Session →</a>
+<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
+<a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
+</div>
+</section>
+</main>
     <!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="../index.html" class="footer-brand-logo-link"
-          aria-label="Thomas Cherickal - The Digital Futurist">
+        <a href="../index.html" class="footer-brand-logo-link" aria-label="Thomas Cherickal - The Digital Futurist">
           <img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo" class="footer-brand-logo"
             width="46" height="46" />
         </a>
@@ -885,7 +851,8 @@
       </a>
 
       <!-- Direct Email Inquiry -->
-      <a href="mailto:thomascherickal@gmail.com" class="wl email-reveal-link" data-user="thomascherickal" data-domain="gmail.com">
+      <a href="mailto:thomascherickal@gmail.com" class="wl email-reveal-link" data-user="thomascherickal"
+        data-domain="gmail.com">
         <div class="wl-head">
           <div class="wl-ic">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2"
@@ -909,7 +876,6 @@
         Cherickal</a>
       <span class="tc-sep"></span> The Digital Futurist
       <span class="tc-sep"></span> Generative AI Consultant
-      <span class="tc-sep"></span> Guides &amp; Materials Licensed under Apache 2.0
       <span class="tc-sep"></span> <a href="https://thomascherickal.com" target="_blank"
         rel="noopener noreferrer">thomascherickal.com</a>
       <span class="tc-sep"></span> <a href="https://thedigitalfuturist.com" target="_blank"
@@ -917,7 +883,6 @@
     </p>
   </footer>
     <!-- END:FOOTER -->
-
-  <script src="../components.js"></script>
+<script src="../components.js"></script>
 </body>
 </html>

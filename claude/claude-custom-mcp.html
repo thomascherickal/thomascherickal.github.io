@@ -1,38 +1,35 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Custom MCP Servers with Claude | Thomas Cherickal</title>
-  <meta content="Build production Model Context Protocol servers connecting Claude to databases, cloud infrastructure, internal REST APIs, and enterprise tool execution loops." name="description"/>
-  <meta content="Thomas Cherickal" name="author" />
-  <link href="https://thedigitalfuturist.com/claude/claude-custom-mcp.html" rel="canonical" />
-
-  <!-- Open Graph -->
-  <meta content="article" property="og:type" />
-  <meta content="https://thedigitalfuturist.com/claude/claude-custom-mcp.html" property="og:url" />
-  <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name" />
-  <meta content="Custom MCP Servers With Claude: Wire AI Into Every System On The Web | Thomas Cherickal" property="og:title" />
-  <meta content="Build production Model Context Protocol servers connecting Claude to databases, cloud infrastructure, internal REST APIs, and enterprise tool execution loops." property="og:description"/>
-  <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image" />
-  <meta content="en_US" property="og:locale" />
-
-  <!-- Twitter Card -->
-  <meta content="summary_large_image" name="twitter:card" />
-  <meta content="@thomazcherickal" name="twitter:site" />
-  <meta content="Custom MCP Servers With Claude: Wire AI Into Every System On The Web | Thomas Cherickal" name="twitter:title" />
-  <meta content="How custom Model Context Protocol (MCP) servers built in Python, TypeScript and Rust let Claude automate almost anything across the web, with three hands-on tutorials, four diagrams and verified references." property="twitter:description" />
-  <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image" />
-
-  <!-- Favicons -->
-  <link href="../assets/favicon.ico" rel="icon" sizes="any" />
-  <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml" />
-  <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-  <link href="../site.webmanifest" rel="manifest" />
-  <meta content="#020408" name="theme-color" />
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Custom MCP Servers with Claude | Thomas Cherickal</title>
+<meta content="Build production Model Context Protocol servers connecting Claude to databases, cloud infrastructure, internal REST APIs, and enterprise tool execution loops." name="description"/>
+<meta content="Thomas Cherickal" name="author"/>
+<link href="https://thedigitalfuturist.com/claude/claude-custom-mcp.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="article" property="og:type"/>
+<meta content="https://thedigitalfuturist.com/claude/claude-custom-mcp.html" property="og:url"/>
+<meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
+<meta content="Custom MCP Servers With Claude: Wire AI Into Every System On The Web | Thomas Cherickal" property="og:title"/>
+<meta content="Build production Model Context Protocol servers connecting Claude to databases, cloud infrastructure, internal REST APIs, and enterprise tool execution loops." property="og:description"/>
+<meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
+<meta content="en_US" property="og:locale"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@thomazcherickal" name="twitter:site"/>
+<meta content="Custom MCP Servers With Claude: Wire AI Into Every System On The Web | Thomas Cherickal" name="twitter:title"/>
+<meta content="How custom Model Context Protocol (MCP) servers built in Python, TypeScript and Rust let Claude automate almost anything across the web, with three hands-on tutorials, four diagrams and verified references." property="twitter:description"/>
+<meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
+<!-- Favicons -->
+<link href="../assets/favicon.ico" rel="icon" sizes="any"/>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../site.webmanifest" rel="manifest"/>
+<meta content="#020408" name="theme-color"/>
 <!-- JSON-LD Article Schema -->
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -124,15 +121,15 @@
   ]
 }
 </script>
-  <link rel="stylesheet" href="../css/fonts.css" />
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="stylesheet" href="../css/background.css" />
-  <link rel="stylesheet" href="../css/buttons.css" />
-  <link rel="stylesheet" href="../css/navbar.css" />
-  <link rel="stylesheet" href="../css/footer.css" />
-  <link rel="stylesheet" href="../css/cta.css" />
-  <link rel="stylesheet" href="../css/article.css" />
-  <link rel="stylesheet" href="../css/claude.css" />
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link href="../css/styles.css" rel="stylesheet"/>
+<link href="../css/background.css" rel="stylesheet"/>
+<link href="../css/buttons.css" rel="stylesheet"/>
+<link href="../css/navbar.css" rel="stylesheet"/>
+<link href="../css/footer.css" rel="stylesheet"/>
+<link href="../css/cta.css" rel="stylesheet"/>
+<link href="../css/article.css" rel="stylesheet"/>
+<link href="../css/claude.css" rel="stylesheet"/>
 </head>
 <body>
   <!-- START:HEADER -->
@@ -273,303 +270,269 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-
-  <main class="container">
-    <header class="hero">
-      <a href="../index.html" aria-label="The Digital Futurist Home" style="display:inline-block;text-decoration:none;">
-        <img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist logo" class="hero-logo" width="110" height="110" />
-      </a>
-      <div class="hero-badge">Model Context Protocol &bull; Architecture &amp; Custom Implementation</div>
-      <h1 class="hero-title">Custom MCP Servers With Claude: Connecting AI to Systems Across the Web</h1>
-      <p class="hero-desc">How to build custom MCP servers in Python, TypeScript and Rust, and how Claude Desktop, Claude Code and the Claude API use them.</p>
-      <p class="hero-byline">By <strong>Thomas Cherickal</strong>, Generative AI Consultant &bull; <strong>The Digital Futurist</strong></p>
-      <div class="pills">
-        <span class="pill">Python SDK v2</span>
-        <span class="pill">TypeScript SDK v2</span>
-        <span class="pill">Rust rmcp Crate</span>
-        <span class="pill">Stateless Spec 2026-07-28</span>
-        <span class="pill">Claude Code &amp; Desktop</span>
-        <span class="pill">Claude API Connector</span>
-      </div>
-    </header>
-
-    <article class="article-body">
-      <!-- Table of Contents -->
-      <section class="content-card toc-card">
-        <h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
-        <ol class="toc-list" aria-label="Table of contents">
-          <li><a href="#bridge">01. Why MCP exists</a></li>
-          <li><a href="#what">02. What a custom MCP server is</a></li>
-          <li><a href="#hub">03. From M&times;N integrations to one protocol</a></li>
-          <li><a href="#where">04. Where custom servers help</a></li>
-          <li><a href="#languages">05. Choosing a language</a></li>
-          <li><a href="#tut1">06. Tutorial 1: a Python web inspector</a></li>
-          <li><a href="#tut2">07. Tutorial 2: a TypeScript Hacker News feed</a></li>
-          <li><a href="#tut3">08. Tutorial 3: a Rust file integrity checker</a></li>
-          <li><a href="#claude">09. How Claude uses MCP</a></li>
-          <li><a href="#risk">10. Security risks and defenses</a></li>
-          <li><a href="#close">11. Getting started</a></li>
-          <li><a href="#refs">12. References</a></li>
-        </ol>
-      </section>
-
-      <!-- Section 1: Why MCP exists -->
-      <section class="content-card" id="bridge">
-        <h2><span class="sec-num">01</span>Why MCP exists</h2>
-
-        <p class="article-p">A language model on its own can reason about a contract or refactor a Rust crate, but it cannot query your database, open a GitHub issue, or check whether your website is up. It needs a connection to those systems, and before late 2024 each connection was a custom integration.</p>
-
-        <p class="article-p">The Model Context Protocol (MCP) standardizes that connection. Anthropic open-sourced it on November 25, 2024, describing it in <a href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noopener noreferrer">Anthropic's original MCP launch post</a> as an open standard for connecting AI assistants to the systems where data lives. A year later, the <a href="https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/" target="_blank" rel="noopener noreferrer">official MCP blog's foundation announcement</a> reported more than 97 million monthly SDK downloads, 10,000 active servers, and client support in ChatGPT, Claude, Cursor, Gemini, Microsoft Copilot and VS Code.</p>
-
-        <div class="stats">
-          <div class="stat"><b>97M+</b><span>monthly SDK downloads</span></div>
-          <div class="stat"><b>10,000+</b><span>active servers by Dec 2025</span></div>
-          <div class="stat"><b>6</b><span>Tier 1 official SDKs</span></div>
-          <div class="stat"><b>2026-07-28</b><span>current stateless spec</span></div>
-        </div>
-
-        <p class="article-p">Many public servers wrap commercial products such as Notion, Sentry or GitHub. This article covers the other kind: a custom server you write for your own systems, in a language you already use, which Claude can call once you register it.</p>
-      </section>
-
-      <!-- Section 2: What a custom MCP server is -->
-      <section class="content-card" id="what">
-        <h2><span class="sec-num">02</span>What a custom MCP server is</h2>
-
-        <p class="article-p">An MCP server is a program that exposes three kinds of capability: tools (functions the model can call), resources (data it can read) and prompts (reusable templates). A host application such as Claude Desktop, Claude Code or an app built on the Claude API runs an MCP client, and that client can connect to many servers at once.</p>
-
-        <p class="article-p">A custom server wraps something specific to you, such as a billing API, a Postgres replica, an internal wiki or an old SOAP service. Once it speaks MCP, any MCP-compatible client can use it without new integration code.</p>
-
-        <!-- Figure 1 -->
-        <div class="diagram-container">
-          <div class="fig-scroll">
-            <svg viewBox="0 0 900 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MCP architecture: Claude hosts with MCP clients connect to custom servers, which reach external systems" style="background:#090d16;border-radius:8px;">
-              <defs>
-                <marker id="ah1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9ca3af"/></marker>
-              </defs>
-              <style>
+<main class="container">
+<header class="hero">
+<a aria-label="The Digital Futurist Home" href="../index.html" style="display:inline-block;text-decoration:none;">
+<img alt="The Digital Futurist logo" class="hero-logo" height="110" src="../assets/digital-futurist-logo.jpg" width="110"/>
+</a>
+<div class="hero-badge">Model Context Protocol • Architecture &amp; Custom Implementation</div>
+<h1 class="hero-title">Custom MCP Servers With Claude: Connecting AI to Systems Across the Web</h1>
+<p class="hero-desc">How to build custom MCP servers in Python, TypeScript and Rust, and how Claude Desktop, Claude Code and the Claude API use them.</p>
+<p class="hero-byline">By <strong>Thomas Cherickal</strong>, Generative AI Consultant • <strong>The Digital Futurist</strong></p>
+<div class="pills">
+<span class="pill">Python SDK v2</span>
+<span class="pill">TypeScript SDK v2</span>
+<span class="pill">Rust rmcp Crate</span>
+<span class="pill">Stateless Spec 2026-07-28</span>
+<span class="pill">Claude Code &amp; Desktop</span>
+<span class="pill">Claude API Connector</span>
+</div>
+</header>
+<article class="article-body">
+<!-- Table of Contents -->
+<section class="content-card toc-card">
+<h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
+<ol aria-label="Table of contents" class="toc-list">
+<li><a href="#bridge">01. Why MCP exists</a></li>
+<li><a href="#what">02. What a custom MCP server is</a></li>
+<li><a href="#hub">03. From M×N integrations to one protocol</a></li>
+<li><a href="#where">04. Where custom servers help</a></li>
+<li><a href="#languages">05. Choosing a language</a></li>
+<li><a href="#tut1">06. Tutorial 1: a Python web inspector</a></li>
+<li><a href="#tut2">07. Tutorial 2: a TypeScript Hacker News feed</a></li>
+<li><a href="#tut3">08. Tutorial 3: a Rust file integrity checker</a></li>
+<li><a href="#claude">09. How Claude uses MCP</a></li>
+<li><a href="#risk">10. Security risks and defenses</a></li>
+<li><a href="#close">11. Getting started</a></li>
+<li><a href="#refs">12. References</a></li>
+</ol>
+</section>
+<!-- Section 1: Why MCP exists -->
+<section class="content-card" id="bridge">
+<h2><span class="sec-num">01</span>Why MCP exists</h2>
+<p class="article-p">A language model on its own can reason about a contract or refactor a Rust crate, but it cannot query your database, open a GitHub issue, or check whether your website is up. It needs a connection to those systems, and before late 2024 each connection was a custom integration.</p>
+<p class="article-p">The Model Context Protocol (MCP) standardizes that connection. Anthropic open-sourced it on November 25, 2024, describing it in <a href="https://www.anthropic.com/news/model-context-protocol" rel="noopener noreferrer" target="_blank">Anthropic's original MCP launch post</a> as an open standard for connecting AI assistants to the systems where data lives. A year later, the <a href="https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/" rel="noopener noreferrer" target="_blank">official MCP blog's foundation announcement</a> reported more than 97 million monthly SDK downloads, 10,000 active servers, and client support in ChatGPT, Claude, Cursor, Gemini, Microsoft Copilot and VS Code.</p>
+<div class="stats">
+<div class="stat"><b>97M+</b><span>monthly SDK downloads</span></div>
+<div class="stat"><b>10,000+</b><span>active servers by Dec 2025</span></div>
+<div class="stat"><b>6</b><span>Tier 1 official SDKs</span></div>
+<div class="stat"><b>2026-07-28</b><span>current stateless spec</span></div>
+</div>
+<p class="article-p">Many public servers wrap commercial products such as Notion, Sentry or GitHub. This article covers the other kind: a custom server you write for your own systems, in a language you already use, which Claude can call once you register it.</p>
+</section>
+<!-- Section 2: What a custom MCP server is -->
+<section class="content-card" id="what">
+<h2><span class="sec-num">02</span>What a custom MCP server is</h2>
+<p class="article-p">An MCP server is a program that exposes three kinds of capability: tools (functions the model can call), resources (data it can read) and prompts (reusable templates). A host application such as Claude Desktop, Claude Code or an app built on the Claude API runs an MCP client, and that client can connect to many servers at once.</p>
+<p class="article-p">A custom server wraps something specific to you, such as a billing API, a Postgres replica, an internal wiki or an old SOAP service. Once it speaks MCP, any MCP-compatible client can use it without new integration code.</p>
+<!-- Figure 1 -->
+<div class="diagram-container">
+<div class="fig-scroll">
+<svg aria-label="MCP architecture: Claude hosts with MCP clients connect to custom servers, which reach external systems" role="img" style="background:#090d16;border-radius:8px;" viewbox="0 0 900 430" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="ah1" markerheight="7" markerwidth="7" orient="auto-start-reverse" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#9ca3af"></path></marker>
+</defs>
+<style>
                 .t { font-family: 'Inter', sans-serif; fill: #e5e7eb; }
                 .h { font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; }
               </style>
-              <text x="120" y="28" text-anchor="middle" class="t h" font-size="16" fill="#38bdf8" style="fill:#38bdf8">Hosts (Claude)</text>
-              <text x="450" y="28" text-anchor="middle" class="t h" font-size="16" style="fill:#fbbf24">Your Custom MCP Servers</text>
-              <text x="770" y="28" text-anchor="middle" class="t h" font-size="16" style="fill:#34d399">Systems They Reach</text>
-
-              <rect x="20" y="44" width="200" height="370" rx="16" fill="rgba(56,189,248,0.06)" stroke="#38bdf8" stroke-width="1.5"/>
-              <g>
-                <rect x="38" y="70" width="164" height="80" rx="10" fill="#10151f" stroke="#38bdf8"/>
-                <text x="120" y="104" text-anchor="middle" class="t" font-size="15" font-weight="700">Claude Desktop</text>
-                <text x="120" y="128" text-anchor="middle" class="t" font-size="12.5" style="fill:#a5b4fc">MCP client</text>
-                <rect x="38" y="190" width="164" height="80" rx="10" fill="#10151f" stroke="#38bdf8"/>
-                <text x="120" y="224" text-anchor="middle" class="t" font-size="15" font-weight="700">Claude Code</text>
-                <text x="120" y="248" text-anchor="middle" class="t" font-size="12.5" style="fill:#a5b4fc">MCP client</text>
-                <rect x="38" y="310" width="164" height="80" rx="10" fill="#10151f" stroke="#38bdf8"/>
-                <text x="120" y="344" text-anchor="middle" class="t" font-size="15" font-weight="700">Claude API App</text>
-                <text x="120" y="368" text-anchor="middle" class="t" font-size="12.5" style="fill:#a5b4fc">MCP connector</text>
-              </g>
-
-              <g stroke="#9ca3af" stroke-width="1.6" fill="none" marker-end="url(#ah1)">
-                <line x1="220" y1="110" x2="336" y2="85"/>
-                <line x1="220" y1="230" x2="336" y2="180"/>
-                <line x1="220" y1="230" x2="336" y2="275"/>
-                <line x1="220" y1="350" x2="336" y2="370"/>
-              </g>
-              <text x="278" y="420" text-anchor="middle" class="t" font-size="11" font-family="'JetBrains Mono', monospace" style="fill:#94a3b8">JSON-RPC over stdio or HTTP</text>
-
-              <g>
-                <rect x="340" y="50" width="220" height="72" rx="10" fill="rgba(251,191,36,0.08)" stroke="#fbbf24"/>
-                <text x="450" y="80" text-anchor="middle" class="t" font-size="15" font-weight="700">Web Inspector</text>
-                <text x="450" y="102" text-anchor="middle" class="t" font-size="12.5" font-family="'JetBrains Mono', monospace" style="fill:#fbbf24">Python &bull; stdio</text>
-                <rect x="340" y="145" width="220" height="72" rx="10" fill="rgba(52,211,153,0.08)" stroke="#34d399"/>
-                <text x="450" y="175" text-anchor="middle" class="t" font-size="15" font-weight="700">Hacker News Feed</text>
-                <text x="450" y="197" text-anchor="middle" class="t" font-size="12.5" font-family="'JetBrains Mono', monospace" style="fill:#34d399">TypeScript &bull; stdio</text>
-                <rect x="340" y="240" width="220" height="72" rx="10" fill="rgba(251,113,133,0.08)" stroke="#fb7185"/>
-                <text x="450" y="270" text-anchor="middle" class="t" font-size="15" font-weight="700">File Integrity</text>
-                <text x="450" y="292" text-anchor="middle" class="t" font-size="12.5" font-family="'JetBrains Mono', monospace" style="fill:#fb7185">Rust &bull; stdio</text>
-                <rect x="340" y="335" width="220" height="72" rx="10" fill="rgba(96,165,250,0.08)" stroke="#60a5fa"/>
-                <text x="450" y="365" text-anchor="middle" class="t" font-size="15" font-weight="700">Remote SaaS Server</text>
-                <text x="450" y="387" text-anchor="middle" class="t" font-size="12.5" font-family="'JetBrains Mono', monospace" style="fill:#60a5fa">Any language &bull; Streamable HTTP</text>
-              </g>
-
-              <g stroke="#9ca3af" stroke-width="1.6" fill="none" marker-end="url(#ah1)">
-                <line x1="560" y1="86" x2="656" y2="86"/>
-                <line x1="560" y1="181" x2="656" y2="181"/>
-                <line x1="560" y1="276" x2="656" y2="276"/>
-                <line x1="560" y1="371" x2="656" y2="371"/>
-              </g>
-
-              <g>
-                <rect x="660" y="56" width="220" height="60" rx="10" fill="#10151f" stroke="#34d399"/>
-                <text x="770" y="91" text-anchor="middle" class="t" font-size="14">Any public website</text>
-                <rect x="660" y="151" width="220" height="60" rx="10" fill="#10151f" stroke="#34d399"/>
-                <text x="770" y="186" text-anchor="middle" class="t" font-size="14">Hacker News REST API</text>
-                <rect x="660" y="246" width="220" height="60" rx="10" fill="#10151f" stroke="#34d399"/>
-                <text x="770" y="281" text-anchor="middle" class="t" font-size="14">Local file system</text>
-                <rect x="660" y="341" width="220" height="60" rx="10" fill="#10151f" stroke="#34d399"/>
-                <text x="770" y="376" text-anchor="middle" class="t" font-size="14">Notion, GitHub, Sentry</text>
-              </g>
-            </svg>
-          </div>
-          <div class="diagram-caption">Diagram 1: Hosts, MCP clients, custom servers and the systems they reach. The three local servers correspond to the tutorials below.</div>
-        </div>
-      </section>
-
-      <!-- Section 3: From M×N integrations to one protocol -->
-      <section class="content-card" id="hub">
-        <h2><span class="sec-num">03</span>From M&times;N integrations to one protocol</h2>
-
-        <p class="article-p">Connecting M AI applications to N systems used to take M&times;N integrations. Anthropic's launch post described the problem directly: every new data source needed its own custom implementation. With MCP, each application implements a client once and each system implements a server once, so the count drops to M+N.</p>
-
-        <!-- Figure 2 -->
-        <div class="diagram-container">
-          <div class="fig-scroll">
-            <svg viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Before MCP every app wires to every system; with MCP everything meets at one protocol hub" style="background:#090d16;border-radius:8px;">
-              <style>
+<text class="t h" fill="#38bdf8" font-size="16" style="fill:#38bdf8" text-anchor="middle" x="120" y="28">Hosts (Claude)</text>
+<text class="t h" font-size="16" style="fill:#fbbf24" text-anchor="middle" x="450" y="28">Your Custom MCP Servers</text>
+<text class="t h" font-size="16" style="fill:#34d399" text-anchor="middle" x="770" y="28">Systems They Reach</text>
+<rect fill="rgba(56,189,248,0.06)" height="370" rx="16" stroke="#38bdf8" stroke-width="1.5" width="200" x="20" y="44"></rect>
+<g>
+<rect fill="#10151f" height="80" rx="10" stroke="#38bdf8" width="164" x="38" y="70"></rect>
+<text class="t" font-size="15" font-weight="700" text-anchor="middle" x="120" y="104">Claude Desktop</text>
+<text class="t" font-size="12.5" style="fill:#a5b4fc" text-anchor="middle" x="120" y="128">MCP client</text>
+<rect fill="#10151f" height="80" rx="10" stroke="#38bdf8" width="164" x="38" y="190"></rect>
+<text class="t" font-size="15" font-weight="700" text-anchor="middle" x="120" y="224">Claude Code</text>
+<text class="t" font-size="12.5" style="fill:#a5b4fc" text-anchor="middle" x="120" y="248">MCP client</text>
+<rect fill="#10151f" height="80" rx="10" stroke="#38bdf8" width="164" x="38" y="310"></rect>
+<text class="t" font-size="15" font-weight="700" text-anchor="middle" x="120" y="344">Claude API App</text>
+<text class="t" font-size="12.5" style="fill:#a5b4fc" text-anchor="middle" x="120" y="368">MCP connector</text>
+</g>
+<g fill="none" marker-end="url(#ah1)" stroke="#9ca3af" stroke-width="1.6">
+<line x1="220" x2="336" y1="110" y2="85"></line>
+<line x1="220" x2="336" y1="230" y2="180"></line>
+<line x1="220" x2="336" y1="230" y2="275"></line>
+<line x1="220" x2="336" y1="350" y2="370"></line>
+</g>
+<text class="t" font-family="'JetBrains Mono', monospace" font-size="11" style="fill:#94a3b8" text-anchor="middle" x="278" y="420">JSON-RPC over stdio or HTTP</text>
+<g>
+<rect fill="rgba(251,191,36,0.08)" height="72" rx="10" stroke="#fbbf24" width="220" x="340" y="50"></rect>
+<text class="t" font-size="15" font-weight="700" text-anchor="middle" x="450" y="80">Web Inspector</text>
+<text class="t" font-family="'JetBrains Mono', monospace" font-size="12.5" style="fill:#fbbf24" text-anchor="middle" x="450" y="102">Python • stdio</text>
+<rect fill="rgba(52,211,153,0.08)" height="72" rx="10" stroke="#34d399" width="220" x="340" y="145"></rect>
+<text class="t" font-size="15" font-weight="700" text-anchor="middle" x="450" y="175">Hacker News Feed</text>
+<text class="t" font-family="'JetBrains Mono', monospace" font-size="12.5" style="fill:#34d399" text-anchor="middle" x="450" y="197">TypeScript • stdio</text>
+<rect fill="rgba(251,113,133,0.08)" height="72" rx="10" stroke="#fb7185" width="220" x="340" y="240"></rect>
+<text class="t" font-size="15" font-weight="700" text-anchor="middle" x="450" y="270">File Integrity</text>
+<text class="t" font-family="'JetBrains Mono', monospace" font-size="12.5" style="fill:#fb7185" text-anchor="middle" x="450" y="292">Rust • stdio</text>
+<rect fill="rgba(96,165,250,0.08)" height="72" rx="10" stroke="#60a5fa" width="220" x="340" y="335"></rect>
+<text class="t" font-size="15" font-weight="700" text-anchor="middle" x="450" y="365">Remote SaaS Server</text>
+<text class="t" font-family="'JetBrains Mono', monospace" font-size="12.5" style="fill:#60a5fa" text-anchor="middle" x="450" y="387">Any language • Streamable HTTP</text>
+</g>
+<g fill="none" marker-end="url(#ah1)" stroke="#9ca3af" stroke-width="1.6">
+<line x1="560" x2="656" y1="86" y2="86"></line>
+<line x1="560" x2="656" y1="181" y2="181"></line>
+<line x1="560" x2="656" y1="276" y2="276"></line>
+<line x1="560" x2="656" y1="371" y2="371"></line>
+</g>
+<g>
+<rect fill="#10151f" height="60" rx="10" stroke="#34d399" width="220" x="660" y="56"></rect>
+<text class="t" font-size="14" text-anchor="middle" x="770" y="91">Any public website</text>
+<rect fill="#10151f" height="60" rx="10" stroke="#34d399" width="220" x="660" y="151"></rect>
+<text class="t" font-size="14" text-anchor="middle" x="770" y="186">Hacker News REST API</text>
+<rect fill="#10151f" height="60" rx="10" stroke="#34d399" width="220" x="660" y="246"></rect>
+<text class="t" font-size="14" text-anchor="middle" x="770" y="281">Local file system</text>
+<rect fill="#10151f" height="60" rx="10" stroke="#34d399" width="220" x="660" y="341"></rect>
+<text class="t" font-size="14" text-anchor="middle" x="770" y="376">Notion, GitHub, Sentry</text>
+</g>
+</svg>
+</div>
+<div class="diagram-caption">Diagram 1: Hosts, MCP clients, custom servers and the systems they reach. The three local servers correspond to the tutorials below.</div>
+</div>
+</section>
+<!-- Section 3: From M×N integrations to one protocol -->
+<section class="content-card" id="hub">
+<h2><span class="sec-num">03</span>From M×N integrations to one protocol</h2>
+<p class="article-p">Connecting M AI applications to N systems used to take M×N integrations. Anthropic's launch post described the problem directly: every new data source needed its own custom implementation. With MCP, each application implements a client once and each system implements a server once, so the count drops to M+N.</p>
+<!-- Figure 2 -->
+<div class="diagram-container">
+<div class="fig-scroll">
+<svg aria-label="Before MCP every app wires to every system; with MCP everything meets at one protocol hub" role="img" style="background:#090d16;border-radius:8px;" viewbox="0 0 900 340" xmlns="http://www.w3.org/2000/svg">
+<style>
                 .t2 { font-family: 'Inter', sans-serif; fill: #e5e7eb; }
                 .h2t { font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; }
               </style>
-              <text x="220" y="30" text-anchor="middle" class="t2 h2t" font-size="16" style="fill:#fb7185">Before: M &times; N = 12 integrations</text>
-              <text x="680" y="30" text-anchor="middle" class="t2 h2t" font-size="16" style="fill:#34d399">With MCP: M + N = 7 implementations</text>
-              <line x1="450" y1="50" x2="450" y2="320" stroke="#1f2937" stroke-width="2" stroke-dasharray="6 6"/>
-
-              <g stroke="rgba(251,113,133,0.55)" stroke-width="1.4">
-                <line x1="110" y1="100" x2="330" y2="80"/><line x1="110" y1="100" x2="330" y2="150"/><line x1="110" y1="100" x2="330" y2="220"/><line x1="110" y1="100" x2="330" y2="290"/>
-                <line x1="110" y1="185" x2="330" y2="80"/><line x1="110" y1="185" x2="330" y2="150"/><line x1="110" y1="185" x2="330" y2="220"/><line x1="110" y1="185" x2="330" y2="290"/>
-                <line x1="110" y1="270" x2="330" y2="80"/><line x1="110" y1="270" x2="330" y2="150"/><line x1="110" y1="270" x2="330" y2="220"/><line x1="110" y1="270" x2="330" y2="290"/>
-              </g>
-              <g>
-                <rect x="30" y="80" width="90" height="40" rx="8" fill="#10151f" stroke="#38bdf8"/><text x="75" y="105" text-anchor="middle" class="t2" font-size="13">Claude</text>
-                <rect x="30" y="165" width="90" height="40" rx="8" fill="#10151f" stroke="#38bdf8"/><text x="75" y="190" text-anchor="middle" class="t2" font-size="13">IDE agent</text>
-                <rect x="30" y="250" width="90" height="40" rx="8" fill="#10151f" stroke="#38bdf8"/><text x="75" y="275" text-anchor="middle" class="t2" font-size="13">Your app</text>
-                <rect x="330" y="62" width="100" height="36" rx="8" fill="#10151f" stroke="#fbbf24"/><text x="380" y="85" text-anchor="middle" class="t2" font-size="12.5">Database</text>
-                <rect x="330" y="132" width="100" height="36" rx="8" fill="#10151f" stroke="#fbbf24"/><text x="380" y="155" text-anchor="middle" class="t2" font-size="12.5">GitHub</text>
-                <rect x="330" y="202" width="100" height="36" rx="8" fill="#10151f" stroke="#fbbf24"/><text x="380" y="225" text-anchor="middle" class="t2" font-size="12.5">Web APIs</text>
-                <rect x="330" y="272" width="100" height="36" rx="8" fill="#10151f" stroke="#fbbf24"/><text x="380" y="295" text-anchor="middle" class="t2" font-size="12.5">Files</text>
-              </g>
-
-              <g stroke="#34d399" stroke-width="1.8">
-                <line x1="580" y1="100" x2="660" y2="185"/><line x1="580" y1="185" x2="660" y2="185"/><line x1="580" y1="270" x2="660" y2="185"/>
-                <line x1="700" y1="185" x2="780" y2="80"/><line x1="700" y1="185" x2="780" y2="150"/><line x1="700" y1="185" x2="780" y2="220"/><line x1="700" y1="185" x2="780" y2="290"/>
-              </g>
-              <g>
-                <rect x="490" y="80" width="90" height="40" rx="8" fill="#10151f" stroke="#38bdf8"/><text x="535" y="105" text-anchor="middle" class="t2" font-size="13">Claude</text>
-                <rect x="490" y="165" width="90" height="40" rx="8" fill="#10151f" stroke="#38bdf8"/><text x="535" y="190" text-anchor="middle" class="t2" font-size="13">IDE agent</text>
-                <rect x="490" y="250" width="90" height="40" rx="8" fill="#10151f" stroke="#38bdf8"/><text x="535" y="275" text-anchor="middle" class="t2" font-size="13">Your app</text>
-                <circle cx="680" cy="185" r="38" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="2.5"/>
-                <text x="680" y="192" text-anchor="middle" class="t2 h2t" font-size="18" style="fill:#fbbf24">MCP</text>
-                <rect x="780" y="62" width="100" height="36" rx="8" fill="#10151f" stroke="#a5b4fc"/><text x="830" y="85" text-anchor="middle" class="t2" font-size="12.5">Database</text>
-                <rect x="780" y="132" width="100" height="36" rx="8" fill="#10151f" stroke="#a5b4fc"/><text x="830" y="155" text-anchor="middle" class="t2" font-size="12.5">GitHub</text>
-                <rect x="780" y="202" width="100" height="36" rx="8" fill="#10151f" stroke="#a5b4fc"/><text x="830" y="225" text-anchor="middle" class="t2" font-size="12.5">Web APIs</text>
-                <rect x="780" y="272" width="100" height="36" rx="8" fill="#10151f" stroke="#a5b4fc"/><text x="830" y="295" text-anchor="middle" class="t2" font-size="12.5">Files</text>
-              </g>
-            </svg>
-          </div>
-          <div class="diagram-caption">Diagram 2: Three apps and four systems need twelve point-to-point integrations without MCP and seven implementations with it.</div>
-        </div>
-
-        <p class="article-p">The protocol also no longer belongs to one company. On December 9, 2025, Anthropic <a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation" target="_blank" rel="noopener noreferrer">donated MCP to the Agentic AI Foundation</a>, a directed fund under the Linux Foundation co-founded by Anthropic, Block and OpenAI, with support from Google, Microsoft, AWS, Cloudflare and Bloomberg.</p>
-      </section>
-
-      <!-- Section 4: Where custom servers help -->
-      <section class="content-card" id="where">
-        <h2><span class="sec-num">04</span>Where custom servers help</h2>
-
-        <p class="article-p">Anything with an API, a command line, a database driver or a file format can sit behind an MCP server. These are common starting points.</p>
-
-        <div class="cards">
-          <div class="card" style="--c:#38bdf8">
-            <h4>Engineering and DevOps</h4>
-            <p>The Claude Code docs give this example: implement the feature described in a JIRA ticket and open a GitHub pull request, from one request.</p>
-          </div>
-          <div class="card" style="--c:#fbbf24">
-            <h4>Data and analytics</h4>
-            <p>A server with read-only database credentials lets Claude answer questions such as monthly revenue against live tables.</p>
-          </div>
-          <div class="card" style="--c:#34d399">
-            <h4>Web monitoring</h4>
-            <p>Uptime sweeps, title and metadata checks, price watching and public API polling. Tutorial 1 covers the first two.</p>
-          </div>
-          <div class="card" style="--c:#a5b4fc">
-            <h4>Business apps</h4>
-            <p>Notion, Asana, Stripe, HubSpot and Sentry already publish remote servers. Custom servers cover the in-house tools they don't.</p>
-          </div>
-          <div class="card" style="--c:#fb7185">
-            <h4>Private and legacy systems</h4>
-            <p><a href="https://platform.claude.com/docs/agents-and-tools/mcp-tunnels/overview" target="_blank" rel="noopener noreferrer">Claude's MCP tunnels documentation</a> describes reaching servers inside a private network without opening inbound ports.</p>
-          </div>
-          <div class="card" style="--c:#fb923c">
-            <h4>Personal automation</h4>
-            <p>Notes, local files, home-lab scripts and research pipelines become tools Claude can call one after another.</p>
-          </div>
-        </div>
-
-        <p class="article-p"><a href="https://serpapi.com/blog/the-state-of-mcp-everything-that-changed-in-h1-2026/" target="_blank" rel="noopener noreferrer">SerpApi's first-half 2026 MCP review</a> counts roughly 9,400 to 17,000+ public servers across the major registries and finds that fewer than 5% are monetized. It also reports momentum moving toward vendor-built connectors and private servers that companies run for their own systems.</p>
-      </section>
-
-      <!-- Section 5: Choosing a language -->
-      <section class="content-card" id="languages">
-        <h2><span class="sec-num">05</span>Choosing a language</h2>
-
-        <p class="article-p">The <a href="https://modelcontextprotocol.io/docs/sdk" target="_blank" rel="noopener noreferrer">official MCP SDK tier list</a> places TypeScript, Python, C#, Go, Rust and Ruby at Tier 1, Java at Tier 2, and Swift, PHP and Kotlin at Tier 3. Every SDK can build servers that expose tools, resources and prompts.</p>
-
-        <!-- Figure 3 -->
-        <div class="diagram-container">
-          <div class="fig-scroll">
-            <svg viewBox="0 0 900 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Official MCP SDKs grouped by tier" style="background:#090d16;border-radius:8px;">
-              <style>
+<text class="t2 h2t" font-size="16" style="fill:#fb7185" text-anchor="middle" x="220" y="30">Before: M × N = 12 integrations</text>
+<text class="t2 h2t" font-size="16" style="fill:#34d399" text-anchor="middle" x="680" y="30">With MCP: M + N = 7 implementations</text>
+<line stroke="#1f2937" stroke-dasharray="6 6" stroke-width="2" x1="450" x2="450" y1="50" y2="320"></line>
+<g stroke="rgba(251,113,133,0.55)" stroke-width="1.4">
+<line x1="110" x2="330" y1="100" y2="80"></line><line x1="110" x2="330" y1="100" y2="150"></line><line x1="110" x2="330" y1="100" y2="220"></line><line x1="110" x2="330" y1="100" y2="290"></line>
+<line x1="110" x2="330" y1="185" y2="80"></line><line x1="110" x2="330" y1="185" y2="150"></line><line x1="110" x2="330" y1="185" y2="220"></line><line x1="110" x2="330" y1="185" y2="290"></line>
+<line x1="110" x2="330" y1="270" y2="80"></line><line x1="110" x2="330" y1="270" y2="150"></line><line x1="110" x2="330" y1="270" y2="220"></line><line x1="110" x2="330" y1="270" y2="290"></line>
+</g>
+<g>
+<rect fill="#10151f" height="40" rx="8" stroke="#38bdf8" width="90" x="30" y="80"></rect><text class="t2" font-size="13" text-anchor="middle" x="75" y="105">Claude</text>
+<rect fill="#10151f" height="40" rx="8" stroke="#38bdf8" width="90" x="30" y="165"></rect><text class="t2" font-size="13" text-anchor="middle" x="75" y="190">IDE agent</text>
+<rect fill="#10151f" height="40" rx="8" stroke="#38bdf8" width="90" x="30" y="250"></rect><text class="t2" font-size="13" text-anchor="middle" x="75" y="275">Your app</text>
+<rect fill="#10151f" height="36" rx="8" stroke="#fbbf24" width="100" x="330" y="62"></rect><text class="t2" font-size="12.5" text-anchor="middle" x="380" y="85">Database</text>
+<rect fill="#10151f" height="36" rx="8" stroke="#fbbf24" width="100" x="330" y="132"></rect><text class="t2" font-size="12.5" text-anchor="middle" x="380" y="155">GitHub</text>
+<rect fill="#10151f" height="36" rx="8" stroke="#fbbf24" width="100" x="330" y="202"></rect><text class="t2" font-size="12.5" text-anchor="middle" x="380" y="225">Web APIs</text>
+<rect fill="#10151f" height="36" rx="8" stroke="#fbbf24" width="100" x="330" y="272"></rect><text class="t2" font-size="12.5" text-anchor="middle" x="380" y="295">Files</text>
+</g>
+<g stroke="#34d399" stroke-width="1.8">
+<line x1="580" x2="660" y1="100" y2="185"></line><line x1="580" x2="660" y1="185" y2="185"></line><line x1="580" x2="660" y1="270" y2="185"></line>
+<line x1="700" x2="780" y1="185" y2="80"></line><line x1="700" x2="780" y1="185" y2="150"></line><line x1="700" x2="780" y1="185" y2="220"></line><line x1="700" x2="780" y1="185" y2="290"></line>
+</g>
+<g>
+<rect fill="#10151f" height="40" rx="8" stroke="#38bdf8" width="90" x="490" y="80"></rect><text class="t2" font-size="13" text-anchor="middle" x="535" y="105">Claude</text>
+<rect fill="#10151f" height="40" rx="8" stroke="#38bdf8" width="90" x="490" y="165"></rect><text class="t2" font-size="13" text-anchor="middle" x="535" y="190">IDE agent</text>
+<rect fill="#10151f" height="40" rx="8" stroke="#38bdf8" width="90" x="490" y="250"></rect><text class="t2" font-size="13" text-anchor="middle" x="535" y="275">Your app</text>
+<circle cx="680" cy="185" fill="rgba(251,191,36,0.15)" r="38" stroke="#fbbf24" stroke-width="2.5"></circle>
+<text class="t2 h2t" font-size="18" style="fill:#fbbf24" text-anchor="middle" x="680" y="192">MCP</text>
+<rect fill="#10151f" height="36" rx="8" stroke="#a5b4fc" width="100" x="780" y="62"></rect><text class="t2" font-size="12.5" text-anchor="middle" x="830" y="85">Database</text>
+<rect fill="#10151f" height="36" rx="8" stroke="#a5b4fc" width="100" x="780" y="132"></rect><text class="t2" font-size="12.5" text-anchor="middle" x="830" y="155">GitHub</text>
+<rect fill="#10151f" height="36" rx="8" stroke="#a5b4fc" width="100" x="780" y="202"></rect><text class="t2" font-size="12.5" text-anchor="middle" x="830" y="225">Web APIs</text>
+<rect fill="#10151f" height="36" rx="8" stroke="#a5b4fc" width="100" x="780" y="272"></rect><text class="t2" font-size="12.5" text-anchor="middle" x="830" y="295">Files</text>
+</g>
+</svg>
+</div>
+<div class="diagram-caption">Diagram 2: Three apps and four systems need twelve point-to-point integrations without MCP and seven implementations with it.</div>
+</div>
+<p class="article-p">The protocol also no longer belongs to one company. On December 9, 2025, Anthropic <a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation" rel="noopener noreferrer" target="_blank">donated MCP to the Agentic AI Foundation</a>, a directed fund under the Linux Foundation co-founded by Anthropic, Block and OpenAI, with support from Google, Microsoft, AWS, Cloudflare and Bloomberg.</p>
+</section>
+<!-- Section 4: Where custom servers help -->
+<section class="content-card" id="where">
+<h2><span class="sec-num">04</span>Where custom servers help</h2>
+<p class="article-p">Anything with an API, a command line, a database driver or a file format can sit behind an MCP server. These are common starting points.</p>
+<div class="cards">
+<div class="card" style="--c:#38bdf8">
+<h4>Engineering and DevOps</h4>
+<p>The Claude Code docs give this example: implement the feature described in a JIRA ticket and open a GitHub pull request, from one request.</p>
+</div>
+<div class="card" style="--c:#fbbf24">
+<h4>Data and analytics</h4>
+<p>A server with read-only database credentials lets Claude answer questions such as monthly revenue against live tables.</p>
+</div>
+<div class="card" style="--c:#34d399">
+<h4>Web monitoring</h4>
+<p>Uptime sweeps, title and metadata checks, price watching and public API polling. Tutorial 1 covers the first two.</p>
+</div>
+<div class="card" style="--c:#a5b4fc">
+<h4>Business apps</h4>
+<p>Notion, Asana, Stripe, HubSpot and Sentry already publish remote servers. Custom servers cover the in-house tools they don't.</p>
+</div>
+<div class="card" style="--c:#fb7185">
+<h4>Private and legacy systems</h4>
+<p><a href="https://platform.claude.com/docs/agents-and-tools/mcp-tunnels/overview" rel="noopener noreferrer" target="_blank">Claude's MCP tunnels documentation</a> describes reaching servers inside a private network without opening inbound ports.</p>
+</div>
+<div class="card" style="--c:#fb923c">
+<h4>Personal automation</h4>
+<p>Notes, local files, home-lab scripts and research pipelines become tools Claude can call one after another.</p>
+</div>
+</div>
+<p class="article-p"><a href="https://serpapi.com/blog/the-state-of-mcp-everything-that-changed-in-h1-2026/" rel="noopener noreferrer" target="_blank">SerpApi's first-half 2026 MCP review</a> counts roughly 9,400 to 17,000+ public servers across the major registries and finds that fewer than 5% are monetized. It also reports momentum moving toward vendor-built connectors and private servers that companies run for their own systems.</p>
+</section>
+<!-- Section 5: Choosing a language -->
+<section class="content-card" id="languages">
+<h2><span class="sec-num">05</span>Choosing a language</h2>
+<p class="article-p">The <a href="https://modelcontextprotocol.io/docs/sdk" rel="noopener noreferrer" target="_blank">official MCP SDK tier list</a> places TypeScript, Python, C#, Go, Rust and Ruby at Tier 1, Java at Tier 2, and Swift, PHP and Kotlin at Tier 3. Every SDK can build servers that expose tools, resources and prompts.</p>
+<!-- Figure 3 -->
+<div class="diagram-container">
+<div class="fig-scroll">
+<svg aria-label="Official MCP SDKs grouped by tier" role="img" style="background:#090d16;border-radius:8px;" viewbox="0 0 900 270" xmlns="http://www.w3.org/2000/svg">
+<style>
                 .t4 { font-family: 'Inter', sans-serif; fill: #e5e7eb; }
                 .h4t { font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; }
               </style>
-              <text x="20" y="62" class="t4 h4t" font-size="18" style="fill:#34d399">Tier 1</text>
-              <g font-size="13" font-weight="600">
-                <rect x="120" y="36" width="112" height="42" rx="21" fill="rgba(52,211,153,0.12)" stroke="#34d399"/><text x="176" y="62" text-anchor="middle" class="t4">TypeScript</text>
-                <rect x="244" y="36" width="112" height="42" rx="21" fill="rgba(52,211,153,0.12)" stroke="#34d399"/><text x="300" y="62" text-anchor="middle" class="t4">Python</text>
-                <rect x="368" y="36" width="112" height="42" rx="21" fill="rgba(52,211,153,0.12)" stroke="#34d399"/><text x="424" y="62" text-anchor="middle" class="t4">C#</text>
-                <rect x="492" y="36" width="112" height="42" rx="21" fill="rgba(52,211,153,0.12)" stroke="#34d399"/><text x="548" y="62" text-anchor="middle" class="t4">Go</text>
-                <rect x="616" y="36" width="112" height="42" rx="21" fill="rgba(251,113,133,0.15)" stroke="#fb7185" stroke-width="2"/><text x="672" y="62" text-anchor="middle" class="t4">Rust</text>
-                <rect x="740" y="36" width="112" height="42" rx="21" fill="rgba(52,211,153,0.12)" stroke="#34d399"/><text x="796" y="62" text-anchor="middle" class="t4">Ruby</text>
-              </g>
-              <text x="20" y="142" class="t4 h4t" font-size="18" style="fill:#fbbf24">Tier 2</text>
-              <rect x="120" y="116" width="112" height="42" rx="21" fill="rgba(251,191,36,0.12)" stroke="#fbbf24"/><text x="176" y="142" text-anchor="middle" class="t4" font-size="13" font-weight="600">Java</text>
-              <text x="20" y="222" class="t4 h4t" font-size="18" style="fill:#a5b4fc">Tier 3</text>
-              <g font-size="13" font-weight="600">
-                <rect x="120" y="196" width="112" height="42" rx="21" fill="rgba(165,180,252,0.12)" stroke="#a5b4fc"/><text x="176" y="222" text-anchor="middle" class="t4">Swift</text>
-                <rect x="244" y="196" width="112" height="42" rx="21" fill="rgba(165,180,252,0.12)" stroke="#a5b4fc"/><text x="300" y="222" text-anchor="middle" class="t4">PHP</text>
-                <rect x="368" y="196" width="112" height="42" rx="21" fill="rgba(165,180,252,0.12)" stroke="#a5b4fc"/><text x="424" y="222" text-anchor="middle" class="t4">Kotlin</text>
-              </g>
-              <text x="560" y="142" class="t4" font-size="12" font-family="'JetBrains Mono', monospace" style="fill:#94a3b8">Tutorials below: Python &bull; TypeScript &bull; Rust</text>
-              <text x="560" y="222" class="t4" font-size="12" font-family="'JetBrains Mono', monospace" style="fill:#94a3b8">Tier = feature completeness and support level</text>
-            </svg>
-          </div>
-          <div class="diagram-caption">Diagram 3: Official MCP SDKs by tier, per modelcontextprotocol.io as of October 2026.</div>
-        </div>
-
-        <p class="article-p">The tutorials target the 2026-07-28 specification, which became the <a href="https://github.com/modelcontextprotocol/modelcontextprotocol/releases/tag/2026-07-28" target="_blank" rel="noopener noreferrer">stable 2026-07-28 MCP release</a> on July 28, 2026. All three run over stdio, the transport Claude Desktop and Claude Code use when they start a local server as a child process.</p>
-      </section>
-
-      <!-- Section 6: Tutorial 1 -->
-      <section class="content-card" id="tut1">
-        <h2><span class="sec-num">06</span>Tutorial 1: a Python web inspector</h2>
-
-        <p class="article-p">This server gives Claude two tools that report a public page's status code, response time and title. It uses the <a href="https://github.com/modelcontextprotocol/python-sdk" target="_blank" rel="noopener noreferrer">MCP Python SDK v2 repository</a>, where the <code>MCPServer</code> class builds each tool's JSON Schema from its type hints.</p>
-
-        <span class="step" style="--sc:#fbbf24">Step 1 &middot; Install</span>
-        <div class="code-window">
-          <div class="code-bar">
-            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-            <span>bash &bull; uv project setup</span>
-          </div>
-          <pre class="code-pre"><code><span class="c"># Create a project and add the MCP Python SDK v2 plus httpx for HTTP requests</span>
+<text class="t4 h4t" font-size="18" style="fill:#34d399" x="20" y="62">Tier 1</text>
+<g font-size="13" font-weight="600">
+<rect fill="rgba(52,211,153,0.12)" height="42" rx="21" stroke="#34d399" width="112" x="120" y="36"></rect><text class="t4" text-anchor="middle" x="176" y="62">TypeScript</text>
+<rect fill="rgba(52,211,153,0.12)" height="42" rx="21" stroke="#34d399" width="112" x="244" y="36"></rect><text class="t4" text-anchor="middle" x="300" y="62">Python</text>
+<rect fill="rgba(52,211,153,0.12)" height="42" rx="21" stroke="#34d399" width="112" x="368" y="36"></rect><text class="t4" text-anchor="middle" x="424" y="62">C#</text>
+<rect fill="rgba(52,211,153,0.12)" height="42" rx="21" stroke="#34d399" width="112" x="492" y="36"></rect><text class="t4" text-anchor="middle" x="548" y="62">Go</text>
+<rect fill="rgba(251,113,133,0.15)" height="42" rx="21" stroke="#fb7185" stroke-width="2" width="112" x="616" y="36"></rect><text class="t4" text-anchor="middle" x="672" y="62">Rust</text>
+<rect fill="rgba(52,211,153,0.12)" height="42" rx="21" stroke="#34d399" width="112" x="740" y="36"></rect><text class="t4" text-anchor="middle" x="796" y="62">Ruby</text>
+</g>
+<text class="t4 h4t" font-size="18" style="fill:#fbbf24" x="20" y="142">Tier 2</text>
+<rect fill="rgba(251,191,36,0.12)" height="42" rx="21" stroke="#fbbf24" width="112" x="120" y="116"></rect><text class="t4" font-size="13" font-weight="600" text-anchor="middle" x="176" y="142">Java</text>
+<text class="t4 h4t" font-size="18" style="fill:#a5b4fc" x="20" y="222">Tier 3</text>
+<g font-size="13" font-weight="600">
+<rect fill="rgba(165,180,252,0.12)" height="42" rx="21" stroke="#a5b4fc" width="112" x="120" y="196"></rect><text class="t4" text-anchor="middle" x="176" y="222">Swift</text>
+<rect fill="rgba(165,180,252,0.12)" height="42" rx="21" stroke="#a5b4fc" width="112" x="244" y="196"></rect><text class="t4" text-anchor="middle" x="300" y="222">PHP</text>
+<rect fill="rgba(165,180,252,0.12)" height="42" rx="21" stroke="#a5b4fc" width="112" x="368" y="196"></rect><text class="t4" text-anchor="middle" x="424" y="222">Kotlin</text>
+</g>
+<text class="t4" font-family="'JetBrains Mono', monospace" font-size="12" style="fill:#94a3b8" x="560" y="142">Tutorials below: Python • TypeScript • Rust</text>
+<text class="t4" font-family="'JetBrains Mono', monospace" font-size="12" style="fill:#94a3b8" x="560" y="222">Tier = feature completeness and support level</text>
+</svg>
+</div>
+<div class="diagram-caption">Diagram 3: Official MCP SDKs by tier, per modelcontextprotocol.io as of October 2026.</div>
+</div>
+<p class="article-p">The tutorials target the 2026-07-28 specification, which became the <a href="https://github.com/modelcontextprotocol/modelcontextprotocol/releases/tag/2026-07-28" rel="noopener noreferrer" target="_blank">stable 2026-07-28 MCP release</a> on July 28, 2026. All three run over stdio, the transport Claude Desktop and Claude Code use when they start a local server as a child process.</p>
+</section>
+<!-- Section 6: Tutorial 1 -->
+<section class="content-card" id="tut1">
+<h2><span class="sec-num">06</span>Tutorial 1: a Python web inspector</h2>
+<p class="article-p">This server gives Claude two tools that report a public page's status code, response time and title. It uses the <a href="https://github.com/modelcontextprotocol/python-sdk" rel="noopener noreferrer" target="_blank">MCP Python SDK v2 repository</a>, where the <code>MCPServer</code> class builds each tool's JSON Schema from its type hints.</p>
+<span class="step" style="--sc:#fbbf24">Step 1 · Install</span>
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>bash • uv project setup</span>
+</div>
+<pre class="code-pre"><code><span class="c"># Create a project and add the MCP Python SDK v2 plus httpx for HTTP requests</span>
 uv init web-inspector &amp;&amp; cd web-inspector
 uv add "mcp[cli]" httpx</code></pre>
-        </div>
-
-        <span class="step" style="--sc:#fbbf24">Step 2 &middot; Write server.py</span>
-        <div class="code-window">
-          <div class="code-bar">
-            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-            <span>python &bull; server.py</span>
-          </div>
-          <pre class="code-pre"><code><span class="c">"""server.py - an MCP server that lets Claude inspect public web pages."""</span>
+</div>
+<span class="step" style="--sc:#fbbf24">Step 2 · Write server.py</span>
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>python • server.py</span>
+</div>
+<pre class="code-pre"><code><span class="c">"""server.py - an MCP server that lets Claude inspect public web pages."""</span>
 <span class="k">import</span> re
 <span class="k">import</span> time
 
@@ -622,50 +585,44 @@ TITLE_RE = re.compile(<span class="s">r"&lt;title[^&gt;]*&gt;(.*?)&lt;/title&gt;
 <span class="k">if</span> __name__ == <span class="s">"__main__"</span>:
     <span class="c"># run() with no arguments starts a stdio server, the transport local hosts launch</span>
     mcp.run()</code></pre>
-        </div>
-
-        <span class="step" style="--sc:#fbbf24">Step 3 &middot; Test, Then Connect To Claude Code</span>
-        <div class="code-window">
-          <div class="code-bar">
-            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-            <span>bash &bull; registration &amp; execution</span>
-          </div>
-          <pre class="code-pre"><code><span class="c"># Open the server in the MCP Inspector to call each tool by hand</span>
+</div>
+<span class="step" style="--sc:#fbbf24">Step 3 · Test, Then Connect To Claude Code</span>
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>bash • registration &amp; execution</span>
+</div>
+<pre class="code-pre"><code><span class="c"># Open the server in the MCP Inspector to call each tool by hand</span>
 uv run mcp dev server.py
 
 <span class="c"># Register it with Claude Code; everything after -- is the launch command</span>
 claude mcp add web-inspector -- uv run --with "mcp[cli]" --with httpx mcp run /absolute/path/to/server.py</code></pre>
-        </div>
-
-        <p class="article-p">Run <code>/mcp</code> inside Claude Code to check that the server connected, then ask something like <em>&ldquo;Check thomascherickal.com and thomascherickal.github.io and tell me which responds faster.&rdquo;</em> For Claude Desktop, the <a href="https://py.sdk.modelcontextprotocol.io/get-started/real-host/" target="_blank" rel="noopener noreferrer">Python SDK's connect-to-a-host guide</a> shows <code>uv run mcp install server.py</code> writing the config entry for you.</p>
-      </section>
-
-      <!-- Section 7: Tutorial 2 -->
-      <section class="content-card" id="tut2">
-        <h2><span class="sec-num">07</span>Tutorial 2: a TypeScript Hacker News feed</h2>
-
-        <p class="article-p">The <a href="https://github.com/HackerNews/API" target="_blank" rel="noopener noreferrer">official Hacker News Firebase API</a> needs no key, so it works well as an example of wrapping a REST API. The server uses the <code>@modelcontextprotocol/server</code> package from the <a href="https://github.com/modelcontextprotocol/typescript-sdk" target="_blank" rel="noopener noreferrer">MCP TypeScript SDK v2 repository</a>.</p>
-
-        <span class="step" style="--sc:#34d399">Step 1 &middot; Install</span>
-        <div class="code-window">
-          <div class="code-bar">
-            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-            <span>bash &bull; npm project setup</span>
-          </div>
-          <pre class="code-pre"><code><span class="c"># ES module project with the v2 server package, Zod for schemas, tsx to run TypeScript directly</span>
+</div>
+<p class="article-p">Run <code>/mcp</code> inside Claude Code to check that the server connected, then ask something like <em>“Check thomascherickal.com and thomascherickal.github.io and tell me which responds faster.”</em> For Claude Desktop, the <a href="https://py.sdk.modelcontextprotocol.io/get-started/real-host/" rel="noopener noreferrer" target="_blank">Python SDK's connect-to-a-host guide</a> shows <code>uv run mcp install server.py</code> writing the config entry for you.</p>
+</section>
+<!-- Section 7: Tutorial 2 -->
+<section class="content-card" id="tut2">
+<h2><span class="sec-num">07</span>Tutorial 2: a TypeScript Hacker News feed</h2>
+<p class="article-p">The <a href="https://github.com/HackerNews/API" rel="noopener noreferrer" target="_blank">official Hacker News Firebase API</a> needs no key, so it works well as an example of wrapping a REST API. The server uses the <code>@modelcontextprotocol/server</code> package from the <a href="https://github.com/modelcontextprotocol/typescript-sdk" rel="noopener noreferrer" target="_blank">MCP TypeScript SDK v2 repository</a>.</p>
+<span class="step" style="--sc:#34d399">Step 1 · Install</span>
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>bash • npm project setup</span>
+</div>
+<pre class="code-pre"><code><span class="c"># ES module project with the v2 server package, Zod for schemas, tsx to run TypeScript directly</span>
 mkdir hn-feed &amp;&amp; cd hn-feed
 npm init -y &amp;&amp; npm pkg set type=module
 npm install @modelcontextprotocol/server zod
 npm install -D tsx typescript</code></pre>
-        </div>
-
-        <span class="step" style="--sc:#34d399">Step 2 &middot; Write index.ts</span>
-        <div class="code-window">
-          <div class="code-bar">
-            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-            <span>typescript &bull; index.ts</span>
-          </div>
-          <pre class="code-pre"><code><span class="c">// index.ts - an MCP server that gives Claude a live Hacker News feed</span>
+</div>
+<span class="step" style="--sc:#34d399">Step 2 · Write index.ts</span>
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>typescript • index.ts</span>
+</div>
+<pre class="code-pre"><code><span class="c">// index.ts - an MCP server that gives Claude a live Hacker News feed</span>
 <span class="k">import</span> { McpServer } <span class="k">from</span> <span class="s">'@modelcontextprotocol/server'</span>;
 <span class="k">import</span> { StdioServerTransport } <span class="k">from</span> <span class="s">'@modelcontextprotocol/server/stdio'</span>;
 <span class="k">import</span> * <span class="k">as</span> z <span class="k">from</span> <span class="s">'zod/v4'</span>;
@@ -708,48 +665,42 @@ server.registerTool(
   <span class="k">await</span> server.connect(<span class="k">new</span> StdioServerTransport());
 }
 main();</code></pre>
-        </div>
-
-        <span class="step" style="--sc:#34d399">Step 3 &middot; Connect</span>
-        <div class="code-window">
-          <div class="code-bar">
-            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-            <span>bash &bull; claude code hookup</span>
-          </div>
-          <pre class="code-pre"><code><span class="c"># Claude Code launches the server with tsx whenever a session starts</span>
+</div>
+<span class="step" style="--sc:#34d399">Step 3 · Connect</span>
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>bash • claude code hookup</span>
+</div>
+<pre class="code-pre"><code><span class="c"># Claude Code launches the server with tsx whenever a session starts</span>
 claude mcp add hn-feed -- npx tsx /absolute/path/to/hn-feed/index.ts</code></pre>
-        </div>
-
-        <p class="article-p">You can then ask Claude for the current top stories with a short summary of each. The same structure works for a weather service, a CRM or an internal REST API.</p>
-      </section>
-
-      <!-- Section 8: Tutorial 3 -->
-      <section class="content-card" id="tut3">
-        <h2><span class="sec-num">08</span>Tutorial 3: a Rust file integrity checker</h2>
-
-        <p class="article-p">Rust suits tools that need speed and memory safety and that you want to ship as a single binary. <a href="https://github.com/modelcontextprotocol/rust-sdk" target="_blank" rel="noopener noreferrer">The official Rust SDK, the rmcp crate</a>, implements the 2026-07-28 spec, stays compatible with 2025-11-25, and generates tool routing from macros.</p>
-
-        <span class="step" style="--sc:#fb7185">Step 1 &middot; Create The Crate</span>
-        <div class="code-window">
-          <div class="code-bar">
-            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-            <span>bash &bull; cargo dependencies</span>
-          </div>
-          <pre class="code-pre"><code><span class="c"># rmcp with server and stdio transport features, plus tokio, serde, anyhow and sha2</span>
+</div>
+<p class="article-p">You can then ask Claude for the current top stories with a short summary of each. The same structure works for a weather service, a CRM or an internal REST API.</p>
+</section>
+<!-- Section 8: Tutorial 3 -->
+<section class="content-card" id="tut3">
+<h2><span class="sec-num">08</span>Tutorial 3: a Rust file integrity checker</h2>
+<p class="article-p">Rust suits tools that need speed and memory safety and that you want to ship as a single binary. <a href="https://github.com/modelcontextprotocol/rust-sdk" rel="noopener noreferrer" target="_blank">The official Rust SDK, the rmcp crate</a>, implements the 2026-07-28 spec, stays compatible with 2025-11-25, and generates tool routing from macros.</p>
+<span class="step" style="--sc:#fb7185">Step 1 · Create The Crate</span>
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>bash • cargo dependencies</span>
+</div>
+<pre class="code-pre"><code><span class="c"># rmcp with server and stdio transport features, plus tokio, serde, anyhow and sha2</span>
 cargo new integrity-mcp &amp;&amp; cd integrity-mcp
 cargo add rmcp --features server,transport-io
 cargo add tokio --features full
 cargo add serde --features derive
 cargo add anyhow sha2</code></pre>
-        </div>
-
-        <span class="step" style="--sc:#fb7185">Step 2 &middot; Write src/main.rs</span>
-        <div class="code-window">
-          <div class="code-bar">
-            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-            <span>rust &bull; src/main.rs</span>
-          </div>
-          <pre class="code-pre"><code><span class="c">// main.rs - an MCP server that lets Claude verify files with SHA-256</span>
+</div>
+<span class="step" style="--sc:#fb7185">Step 2 · Write src/main.rs</span>
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>rust • src/main.rs</span>
+</div>
+<pre class="code-pre"><code><span class="c">// main.rs - an MCP server that lets Claude verify files with SHA-256</span>
 <span class="k">use</span> rmcp::{handler::server::wrapper::Parameters, schemars, tool, tool_router, ServiceExt, transport::stdio};
 <span class="k">use</span> sha2::{Digest, Sha256};
 
@@ -784,42 +735,34 @@ cargo add anyhow sha2</code></pre>
     service.waiting().<span class="k">await</span>?;
     Ok(())
 }</code></pre>
-        </div>
-
-        <span class="step" style="--sc:#fb7185">Step 3 &middot; Build And Connect</span>
-        <div class="code-window">
-          <div class="code-bar">
-            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-            <span>bash &bull; release compilation</span>
-          </div>
-          <pre class="code-pre"><code><span class="c"># Compile a release binary, then hand its absolute path to Claude Code</span>
+</div>
+<span class="step" style="--sc:#fb7185">Step 3 · Build And Connect</span>
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>bash • release compilation</span>
+</div>
+<pre class="code-pre"><code><span class="c"># Compile a release binary, then hand its absolute path to Claude Code</span>
 cargo build --release
 claude mcp add integrity -- /absolute/path/to/integrity-mcp/target/release/integrity-mcp</code></pre>
-        </div>
-
-        <p class="article-p">With the server registered, you can ask Claude to hash the installers in a folder and compare the results with published checksums. rmcp feature flags change between releases, so check the crate README if the build fails.</p>
-      </section>
-
-      <!-- Section 9: How Claude uses MCP -->
-      <section class="content-card" id="claude">
-        <h2><span class="sec-num">09</span>How Claude uses MCP</h2>
-
-        <p class="article-p">Claude reaches MCP servers through three surfaces.</p>
-
-        <h3>Claude Desktop and Claude Code</h3>
-        <p class="article-p">Both start local stdio servers and connect to remote HTTP servers. The <a href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener noreferrer">Claude Code MCP reference</a> documents <code>claude mcp add</code> with local, project and user scopes, a <code>.mcp.json</code> file a team can commit, OAuth sign-in through <code>/mcp</code>, and tool search, which loads tool definitions only when needed so a large set of servers doesn't fill the context window. Claude Code also offers an <code>mcp-server-dev</code> plugin whose build skill scaffolds a new server.</p>
-
-        <p class="article-p">Anthropic's launch post noted that Claude Sonnet could build MCP server implementations quickly. With today's tooling, Claude can write a server, Claude Code can register it, and Claude can then call its tools.</p>
-
-        <h3>The Claude API MCP connector</h3>
-        <p class="article-p">For your own applications, the <a href="https://platform.claude.com/docs/en/agents-and-tools/mcp-connector" target="_blank" rel="noopener noreferrer">Claude API MCP connector documentation</a> describes how the Messages API calls a remote MCP server directly, with no client code of your own. It currently supports tool calls only, requires a server reachable over public HTTPS, and lets you allowlist or denylist individual tools.</p>
-
-        <div class="code-window">
-          <div class="code-bar">
-            <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-            <span>python &bull; Messages API MCP Connector</span>
-          </div>
-          <pre class="code-pre"><code><span class="k">import</span> anthropic
+</div>
+<p class="article-p">With the server registered, you can ask Claude to hash the installers in a folder and compare the results with published checksums. rmcp feature flags change between releases, so check the crate README if the build fails.</p>
+</section>
+<!-- Section 9: How Claude uses MCP -->
+<section class="content-card" id="claude">
+<h2><span class="sec-num">09</span>How Claude uses MCP</h2>
+<p class="article-p">Claude reaches MCP servers through three surfaces.</p>
+<h3>Claude Desktop and Claude Code</h3>
+<p class="article-p">Both start local stdio servers and connect to remote HTTP servers. The <a href="https://code.claude.com/docs/en/mcp" rel="noopener noreferrer" target="_blank">Claude Code MCP reference</a> documents <code>claude mcp add</code> with local, project and user scopes, a <code>.mcp.json</code> file a team can commit, OAuth sign-in through <code>/mcp</code>, and tool search, which loads tool definitions only when needed so a large set of servers doesn't fill the context window. Claude Code also offers an <code>mcp-server-dev</code> plugin whose build skill scaffolds a new server.</p>
+<p class="article-p">Anthropic's launch post noted that Claude Sonnet could build MCP server implementations quickly. With today's tooling, Claude can write a server, Claude Code can register it, and Claude can then call its tools.</p>
+<h3>The Claude API MCP connector</h3>
+<p class="article-p">For your own applications, the <a href="https://platform.claude.com/docs/en/agents-and-tools/mcp-connector" rel="noopener noreferrer" target="_blank">Claude API MCP connector documentation</a> describes how the Messages API calls a remote MCP server directly, with no client code of your own. It currently supports tool calls only, requires a server reachable over public HTTPS, and lets you allowlist or denylist individual tools.</p>
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>python • Messages API MCP Connector</span>
+</div>
+<pre class="code-pre"><code><span class="k">import</span> anthropic
 
 client = anthropic.Anthropic()  <span class="c"># reads ANTHROPIC_API_KEY from the environment</span>
 
@@ -839,129 +782,116 @@ response = client.beta.messages.create(
     betas=[<span class="s">"mcp-client-2025-11-20"</span>],
 )
 print(response.content)</code></pre>
-        </div>
-
-        <h3>What travels over the wire</h3>
-        <p class="article-p">The 2026-07-28 revision made the protocol stateless. <a href="https://workos.com/blog/mcp-stateless-spec-2026-07-28" target="_blank" rel="noopener noreferrer">WorkOS's breakdown of the stateless spec</a> explains that the <code>initialize</code> handshake and the <code>Mcp-Session-Id</code> header were removed, so each request carries its own context. <a href="https://blog.cloudflare.com/mcp-v2/" target="_blank" rel="noopener noreferrer">Cloudflare's next-generation MCP write-up</a> adds that the new <code>Mcp-Method</code> and <code>Mcp-Name</code> headers let gateways route and rate-limit requests without parsing the JSON body.</p>
-
-        <!-- Figure 4 -->
-        <div class="diagram-container">
-          <div class="fig-scroll">
-            <svg viewBox="0 0 900 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sequence of a stateless MCP tool call from Claude to an external API and back" style="background:#090d16;border-radius:8px;">
-              <defs>
-                <marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker>
-              </defs>
-              <style>
+</div>
+<h3>What travels over the wire</h3>
+<p class="article-p">The 2026-07-28 revision made the protocol stateless. <a href="https://workos.com/blog/mcp-stateless-spec-2026-07-28" rel="noopener noreferrer" target="_blank">WorkOS's breakdown of the stateless spec</a> explains that the <code>initialize</code> handshake and the <code>Mcp-Session-Id</code> header were removed, so each request carries its own context. <a href="https://blog.cloudflare.com/mcp-v2/" rel="noopener noreferrer" target="_blank">Cloudflare's next-generation MCP write-up</a> adds that the new <code>Mcp-Method</code> and <code>Mcp-Name</code> headers let gateways route and rate-limit requests without parsing the JSON body.</p>
+<!-- Figure 4 -->
+<div class="diagram-container">
+<div class="fig-scroll">
+<svg aria-label="Sequence of a stateless MCP tool call from Claude to an external API and back" role="img" style="background:#090d16;border-radius:8px;" viewbox="0 0 900 440" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="ah3" markerheight="7" markerwidth="7" orient="auto" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"></path></marker>
+</defs>
+<style>
                 .t3 { font-family: 'Inter', sans-serif; fill: #e5e7eb; }
                 .m3 { font-family: 'JetBrains Mono', monospace; }
               </style>
-              <g font-size="13" font-weight="700">
-                <rect x="15" y="20" width="140" height="44" rx="10" fill="#10151f" stroke="#38bdf8"/><text x="85" y="47" text-anchor="middle" class="t3">Claude (model)</text>
-                <rect x="200" y="20" width="140" height="44" rx="10" fill="#10151f" stroke="#a5b4fc"/><text x="270" y="47" text-anchor="middle" class="t3">Host MCP client</text>
-                <rect x="385" y="20" width="140" height="44" rx="10" fill="#10151f" stroke="#fbbf24"/><text x="455" y="47" text-anchor="middle" class="t3">Load balancer</text>
-                <rect x="570" y="20" width="140" height="44" rx="10" fill="#10151f" stroke="#fb7185"/><text x="640" y="47" text-anchor="middle" class="t3">Any server instance</text>
-                <rect x="755" y="20" width="130" height="44" rx="10" fill="#10151f" stroke="#34d399"/><text x="820" y="47" text-anchor="middle" class="t3">External API</text>
-              </g>
-              <g stroke="#374151" stroke-width="1.5" stroke-dasharray="4 5">
-                <line x1="85" y1="64" x2="85" y2="420"/><line x1="270" y1="64" x2="270" y2="420"/><line x1="455" y1="64" x2="455" y2="420"/><line x1="640" y1="64" x2="640" y2="420"/><line x1="820" y1="64" x2="820" y2="420"/>
-              </g>
-              <g stroke-width="2" fill="none">
-                <line x1="85" y1="100" x2="266" y2="100" stroke="#38bdf8" marker-end="url(#ah3)"/>
-                <line x1="270" y1="150" x2="451" y2="150" stroke="#a5b4fc" marker-end="url(#ah3)"/>
-                <line x1="455" y1="200" x2="636" y2="200" stroke="#fbbf24" marker-end="url(#ah3)"/>
-                <line x1="640" y1="250" x2="816" y2="250" stroke="#34d399" marker-end="url(#ah3)"/>
-                <line x1="820" y1="295" x2="644" y2="295" stroke="#34d399" stroke-dasharray="6 4" marker-end="url(#ah3)"/>
-                <line x1="640" y1="340" x2="274" y2="340" stroke="#fb7185" stroke-dasharray="6 4" marker-end="url(#ah3)"/>
-                <line x1="270" y1="385" x2="89" y2="385" stroke="#38bdf8" stroke-dasharray="6 4" marker-end="url(#ah3)"/>
-              </g>
-              <g font-size="12">
-                <text x="175" y="92" text-anchor="middle" class="t3">1. call inspect_page(url)</text>
-                <text x="360" y="128" text-anchor="middle" class="t3 m3" font-size="11" style="fill:#a5b4fc">POST /mcp</text>
-                <text x="360" y="142" text-anchor="middle" class="t3 m3" font-size="11" style="fill:#a5b4fc">Mcp-Method: tools/call</text>
-                <text x="545" y="178" text-anchor="middle" class="t3">3. route by header,</text>
-                <text x="545" y="192" text-anchor="middle" class="t3">no sticky session</text>
-                <text x="728" y="242" text-anchor="middle" class="t3">4. GET the page</text>
-                <text x="732" y="287" text-anchor="middle" class="t3">5. 200 OK + HTML</text>
-                <text x="455" y="332" text-anchor="middle" class="t3">6. result, carrying its own _meta</text>
-                <text x="178" y="377" text-anchor="middle" class="t3">7. structured JSON</text>
-              </g>
-              <rect x="300" y="398" width="500" height="34" rx="8" fill="rgba(251,191,36,0.1)" stroke="#fbbf24"/>
-              <text x="550" y="420" text-anchor="middle" class="t3" font-size="12.5" font-family="'JetBrains Mono', monospace">2026-07-28: no initialize handshake, no Mcp-Session-Id</text>
-            </svg>
-          </div>
-          <div class="diagram-caption">Diagram 4: One stateless tool call from start to finish. Any server instance can handle any request, so an MCP server can sit behind an ordinary load balancer.</div>
-        </div>
-      </section>
-
-      <!-- Section 10: Security risks and defenses -->
-      <section class="content-card" id="risk">
-        <h2><span class="sec-num">10</span>Security risks and defenses</h2>
-
-        <p class="article-p">A server that can reach your database, inbox and cloud console also gives an attacker more to work with. SerpApi's review records more than thirty MCP-related CVEs filed in January and February 2026 and describes tool poisoning, where a server hides instructions inside a tool description, as a mainstream concern. The Claude Code docs tell users to verify that they trust each server, because servers that fetch external content can expose them to prompt injection.</p>
-
-        <p class="article-p">The defenses in the sources above are ordinary security practice:</p>
-
-        <ul class="checks">
-          <li><strong>Read-only credentials:</strong> Give database servers read-only credentials, as the Claude Code docs do in their Postgres example.</li>
-          <li><strong>Granular toolsets:</strong> Use the API's <code>mcp_toolset</code> to disable every tool by default and enable only the ones you name, or to deny destructive tools.</li>
-          <li><strong>Code auditability:</strong> Prefer servers whose code you have read, including the ones you write yourself.</li>
-          <li><strong>Idempotency keys:</strong> Add idempotency keys to tools that charge, send or provision, because WorkOS notes that the new spec removed stream resumability.</li>
-          <li><strong>Gateway-level headers:</strong> Apply per-tool authorization at the gateway with the new routing headers, which avoids inspecting request bodies.</li>
-        </ul>
-      </section>
-
-      <!-- Section 11: Getting started -->
-      <section class="content-card" id="close">
-        <h2><span class="sec-num">11</span>Getting started</h2>
-
-        <p class="article-p">Pick one system you use often, wrap it with the SDK that matches your stack, and register it with <code>claude mcp add</code>. The three tutorials share one structure, so most of the work goes into the tool functions themselves.</p>
-
-        <p class="article-p">When a local server proves useful, serve it over Streamable HTTP with OAuth so it can run behind a load balancer and the Claude API connector can reach it.</p>
-      </section>
-
-      <!-- Section 12: References -->
-      <section class="content-card" id="refs">
-        <h2><span class="sec-num">12</span>References</h2>
-        <ol class="refs">
-          <li>Anthropic, &ldquo;<a href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noopener noreferrer">Introducing the Model Context Protocol</a>,&rdquo; November 25, 2024. <span class="ref-url">https://www.anthropic.com/news/model-context-protocol</span></li>
-          <li>Anthropic, &ldquo;<a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation" target="_blank" rel="noopener noreferrer">Donating the Model Context Protocol and establishing the Agentic AI Foundation</a>,&rdquo; December 9, 2025. <span class="ref-url">https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation</span></li>
-          <li>Model Context Protocol Blog, &ldquo;<a href="https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/" target="_blank" rel="noopener noreferrer">MCP joins the Agentic AI Foundation</a>,&rdquo; December 9, 2025. <span class="ref-url">https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/</span></li>
-          <li>Model Context Protocol Blog, &ldquo;<a href="https://blog.modelcontextprotocol.io/posts/2025-09-08-mcp-registry-preview/" target="_blank" rel="noopener noreferrer">Introducing the MCP Registry</a>,&rdquo; September 8, 2025. <span class="ref-url">https://blog.modelcontextprotocol.io/posts/2025-09-08-mcp-registry-preview/</span></li>
-          <li>Model Context Protocol, &ldquo;<a href="https://modelcontextprotocol.io/docs/sdk" target="_blank" rel="noopener noreferrer">SDKs (official SDK tiers)</a>.&rdquo; <span class="ref-url">https://modelcontextprotocol.io/docs/sdk</span></li>
-          <li>Model Context Protocol, &ldquo;<a href="https://github.com/modelcontextprotocol/modelcontextprotocol/releases/tag/2026-07-28" target="_blank" rel="noopener noreferrer">Release 2026-07-28 (stable specification)</a>,&rdquo; GitHub, July 28, 2026. <span class="ref-url">https://github.com/modelcontextprotocol/modelcontextprotocol/releases/tag/2026-07-28</span></li>
-          <li>MCP Python SDK (v2), GitHub repository. &ldquo;<a href="https://github.com/modelcontextprotocol/python-sdk" target="_blank" rel="noopener noreferrer">Python SDK v2 on GitHub</a>.&rdquo; <span class="ref-url">https://github.com/modelcontextprotocol/python-sdk</span></li>
-          <li>MCP Python SDK docs, &ldquo;<a href="https://py.sdk.modelcontextprotocol.io/get-started/real-host/" target="_blank" rel="noopener noreferrer">Connect to a real host</a>.&rdquo; <span class="ref-url">https://py.sdk.modelcontextprotocol.io/get-started/real-host/</span></li>
-          <li>MCP TypeScript SDK (v2), GitHub repository. &ldquo;<a href="https://github.com/modelcontextprotocol/typescript-sdk" target="_blank" rel="noopener noreferrer">TypeScript SDK v2 on GitHub</a>.&rdquo; <span class="ref-url">https://github.com/modelcontextprotocol/typescript-sdk</span></li>
-          <li>MCP Rust SDK (rmcp), GitHub repository. &ldquo;<a href="https://github.com/modelcontextprotocol/rust-sdk" target="_blank" rel="noopener noreferrer">Rust SDK rmcp on GitHub</a>.&rdquo; <span class="ref-url">https://github.com/modelcontextprotocol/rust-sdk</span></li>
-          <li>Hacker News, &ldquo;<a href="https://github.com/HackerNews/API" target="_blank" rel="noopener noreferrer">Official Hacker News API</a>,&rdquo; GitHub repository. <span class="ref-url">https://github.com/HackerNews/API</span></li>
-          <li>Claude Code Docs, &ldquo;<a href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener noreferrer">Connect Claude Code to tools via MCP</a>.&rdquo; <span class="ref-url">https://code.claude.com/docs/en/mcp</span></li>
-          <li>Claude Platform Docs, &ldquo;<a href="https://platform.claude.com/docs/en/agents-and-tools/mcp-connector" target="_blank" rel="noopener noreferrer">MCP connector</a>.&rdquo; <span class="ref-url">https://platform.claude.com/docs/en/agents-and-tools/mcp-connector</span></li>
-          <li>Claude Platform Docs, &ldquo;<a href="https://platform.claude.com/docs/agents-and-tools/mcp-tunnels/overview" target="_blank" rel="noopener noreferrer">MCP tunnels</a>.&rdquo; <span class="ref-url">https://platform.claude.com/docs/agents-and-tools/mcp-tunnels/overview</span></li>
-          <li>WorkOS, &ldquo;<a href="https://workos.com/blog/mcp-stateless-spec-2026-07-28" target="_blank" rel="noopener noreferrer">MCP went stateless: What changed in the 2026-07-28 spec</a>,&rdquo; September 16, 2026. <span class="ref-url">https://workos.com/blog/mcp-stateless-spec-2026-07-28</span></li>
-          <li>Cloudflare Blog, &ldquo;<a href="https://blog.cloudflare.com/mcp-v2/" target="_blank" rel="noopener noreferrer">The next generation of MCP</a>,&rdquo; August 6, 2026. <span class="ref-url">https://blog.cloudflare.com/mcp-v2/</span></li>
-          <li>SerpApi, &ldquo;<a href="https://serpapi.com/blog/the-state-of-mcp-everything-that-changed-in-h1-2026/" target="_blank" rel="noopener noreferrer">The State of MCP: Everything That Changed in H1 2026</a>,&rdquo; June 3, 2026. <span class="ref-url">https://serpapi.com/blog/the-state-of-mcp-everything-that-changed-in-h1-2026/</span></li>
-        </ol>
-      </section>
-
-      <!-- CTA Banner -->
-      <section class="cta-banner">
-        <h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Build Enterprise-Grade MCP Servers &amp; Agent Tooling</h3>
-        <p style="color:#94a3b8;font-size:1.02rem;max-width:680px;margin:0 auto 1.75rem;line-height:1.7;">Architect type-safe Model Context Protocol servers in Python, TypeScript, and Rust connecting Claude to private VPC databases and microservices.</p>
-        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-          <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
-          <a class="btn btn-primary" href="../contact.html">Start A Project &rarr;</a>
-          <a class="btn btn-outline" href="../pricing.html">View Advisory Tiers &rarr;</a>
-        </div>
-      </section>
-    </article>
-  </main>
-
+<g font-size="13" font-weight="700">
+<rect fill="#10151f" height="44" rx="10" stroke="#38bdf8" width="140" x="15" y="20"></rect><text class="t3" text-anchor="middle" x="85" y="47">Claude (model)</text>
+<rect fill="#10151f" height="44" rx="10" stroke="#a5b4fc" width="140" x="200" y="20"></rect><text class="t3" text-anchor="middle" x="270" y="47">Host MCP client</text>
+<rect fill="#10151f" height="44" rx="10" stroke="#fbbf24" width="140" x="385" y="20"></rect><text class="t3" text-anchor="middle" x="455" y="47">Load balancer</text>
+<rect fill="#10151f" height="44" rx="10" stroke="#fb7185" width="140" x="570" y="20"></rect><text class="t3" text-anchor="middle" x="640" y="47">Any server instance</text>
+<rect fill="#10151f" height="44" rx="10" stroke="#34d399" width="130" x="755" y="20"></rect><text class="t3" text-anchor="middle" x="820" y="47">External API</text>
+</g>
+<g stroke="#374151" stroke-dasharray="4 5" stroke-width="1.5">
+<line x1="85" x2="85" y1="64" y2="420"></line><line x1="270" x2="270" y1="64" y2="420"></line><line x1="455" x2="455" y1="64" y2="420"></line><line x1="640" x2="640" y1="64" y2="420"></line><line x1="820" x2="820" y1="64" y2="420"></line>
+</g>
+<g fill="none" stroke-width="2">
+<line marker-end="url(#ah3)" stroke="#38bdf8" x1="85" x2="266" y1="100" y2="100"></line>
+<line marker-end="url(#ah3)" stroke="#a5b4fc" x1="270" x2="451" y1="150" y2="150"></line>
+<line marker-end="url(#ah3)" stroke="#fbbf24" x1="455" x2="636" y1="200" y2="200"></line>
+<line marker-end="url(#ah3)" stroke="#34d399" x1="640" x2="816" y1="250" y2="250"></line>
+<line marker-end="url(#ah3)" stroke="#34d399" stroke-dasharray="6 4" x1="820" x2="644" y1="295" y2="295"></line>
+<line marker-end="url(#ah3)" stroke="#fb7185" stroke-dasharray="6 4" x1="640" x2="274" y1="340" y2="340"></line>
+<line marker-end="url(#ah3)" stroke="#38bdf8" stroke-dasharray="6 4" x1="270" x2="89" y1="385" y2="385"></line>
+</g>
+<g font-size="12">
+<text class="t3" text-anchor="middle" x="175" y="92">1. call inspect_page(url)</text>
+<text class="t3 m3" font-size="11" style="fill:#a5b4fc" text-anchor="middle" x="360" y="128">POST /mcp</text>
+<text class="t3 m3" font-size="11" style="fill:#a5b4fc" text-anchor="middle" x="360" y="142">Mcp-Method: tools/call</text>
+<text class="t3" text-anchor="middle" x="545" y="178">3. route by header,</text>
+<text class="t3" text-anchor="middle" x="545" y="192">no sticky session</text>
+<text class="t3" text-anchor="middle" x="728" y="242">4. GET the page</text>
+<text class="t3" text-anchor="middle" x="732" y="287">5. 200 OK + HTML</text>
+<text class="t3" text-anchor="middle" x="455" y="332">6. result, carrying its own _meta</text>
+<text class="t3" text-anchor="middle" x="178" y="377">7. structured JSON</text>
+</g>
+<rect fill="rgba(251,191,36,0.1)" height="34" rx="8" stroke="#fbbf24" width="500" x="300" y="398"></rect>
+<text class="t3" font-family="'JetBrains Mono', monospace" font-size="12.5" text-anchor="middle" x="550" y="420">2026-07-28: no initialize handshake, no Mcp-Session-Id</text>
+</svg>
+</div>
+<div class="diagram-caption">Diagram 4: One stateless tool call from start to finish. Any server instance can handle any request, so an MCP server can sit behind an ordinary load balancer.</div>
+</div>
+</section>
+<!-- Section 10: Security risks and defenses -->
+<section class="content-card" id="risk">
+<h2><span class="sec-num">10</span>Security risks and defenses</h2>
+<p class="article-p">A server that can reach your database, inbox and cloud console also gives an attacker more to work with. SerpApi's review records more than thirty MCP-related CVEs filed in January and February 2026 and describes tool poisoning, where a server hides instructions inside a tool description, as a mainstream concern. The Claude Code docs tell users to verify that they trust each server, because servers that fetch external content can expose them to prompt injection.</p>
+<p class="article-p">The defenses in the sources above are ordinary security practice:</p>
+<ul class="checks">
+<li><strong>Read-only credentials:</strong> Give database servers read-only credentials, as the Claude Code docs do in their Postgres example.</li>
+<li><strong>Granular toolsets:</strong> Use the API's <code>mcp_toolset</code> to disable every tool by default and enable only the ones you name, or to deny destructive tools.</li>
+<li><strong>Code auditability:</strong> Prefer servers whose code you have read, including the ones you write yourself.</li>
+<li><strong>Idempotency keys:</strong> Add idempotency keys to tools that charge, send or provision, because WorkOS notes that the new spec removed stream resumability.</li>
+<li><strong>Gateway-level headers:</strong> Apply per-tool authorization at the gateway with the new routing headers, which avoids inspecting request bodies.</li>
+</ul>
+</section>
+<!-- Section 11: Getting started -->
+<section class="content-card" id="close">
+<h2><span class="sec-num">11</span>Getting started</h2>
+<p class="article-p">Pick one system you use often, wrap it with the SDK that matches your stack, and register it with <code>claude mcp add</code>. The three tutorials share one structure, so most of the work goes into the tool functions themselves.</p>
+<p class="article-p">When a local server proves useful, serve it over Streamable HTTP with OAuth so it can run behind a load balancer and the Claude API connector can reach it.</p>
+</section>
+<!-- Section 12: References -->
+<section class="content-card" id="refs">
+<h2><span class="sec-num">12</span>References</h2>
+<ol class="refs">
+<li>Anthropic, “<a href="https://www.anthropic.com/news/model-context-protocol" rel="noopener noreferrer" target="_blank">Introducing the Model Context Protocol</a>,” November 25, 2024. <span class="ref-url">https://www.anthropic.com/news/model-context-protocol</span></li>
+<li>Anthropic, “<a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation" rel="noopener noreferrer" target="_blank">Donating the Model Context Protocol and establishing the Agentic AI Foundation</a>,” December 9, 2025. <span class="ref-url">https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation</span></li>
+<li>Model Context Protocol Blog, “<a href="https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/" rel="noopener noreferrer" target="_blank">MCP joins the Agentic AI Foundation</a>,” December 9, 2025. <span class="ref-url">https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/</span></li>
+<li>Model Context Protocol Blog, “<a href="https://blog.modelcontextprotocol.io/posts/2025-09-08-mcp-registry-preview/" rel="noopener noreferrer" target="_blank">Introducing the MCP Registry</a>,” September 8, 2025. <span class="ref-url">https://blog.modelcontextprotocol.io/posts/2025-09-08-mcp-registry-preview/</span></li>
+<li>Model Context Protocol, “<a href="https://modelcontextprotocol.io/docs/sdk" rel="noopener noreferrer" target="_blank">SDKs (official SDK tiers)</a>.” <span class="ref-url">https://modelcontextprotocol.io/docs/sdk</span></li>
+<li>Model Context Protocol, “<a href="https://github.com/modelcontextprotocol/modelcontextprotocol/releases/tag/2026-07-28" rel="noopener noreferrer" target="_blank">Release 2026-07-28 (stable specification)</a>,” GitHub, July 28, 2026. <span class="ref-url">https://github.com/modelcontextprotocol/modelcontextprotocol/releases/tag/2026-07-28</span></li>
+<li>MCP Python SDK (v2), GitHub repository. “<a href="https://github.com/modelcontextprotocol/python-sdk" rel="noopener noreferrer" target="_blank">Python SDK v2 on GitHub</a>.” <span class="ref-url">https://github.com/modelcontextprotocol/python-sdk</span></li>
+<li>MCP Python SDK docs, “<a href="https://py.sdk.modelcontextprotocol.io/get-started/real-host/" rel="noopener noreferrer" target="_blank">Connect to a real host</a>.” <span class="ref-url">https://py.sdk.modelcontextprotocol.io/get-started/real-host/</span></li>
+<li>MCP TypeScript SDK (v2), GitHub repository. “<a href="https://github.com/modelcontextprotocol/typescript-sdk" rel="noopener noreferrer" target="_blank">TypeScript SDK v2 on GitHub</a>.” <span class="ref-url">https://github.com/modelcontextprotocol/typescript-sdk</span></li>
+<li>MCP Rust SDK (rmcp), GitHub repository. “<a href="https://github.com/modelcontextprotocol/rust-sdk" rel="noopener noreferrer" target="_blank">Rust SDK rmcp on GitHub</a>.” <span class="ref-url">https://github.com/modelcontextprotocol/rust-sdk</span></li>
+<li>Hacker News, “<a href="https://github.com/HackerNews/API" rel="noopener noreferrer" target="_blank">Official Hacker News API</a>,” GitHub repository. <span class="ref-url">https://github.com/HackerNews/API</span></li>
+<li>Claude Code Docs, “<a href="https://code.claude.com/docs/en/mcp" rel="noopener noreferrer" target="_blank">Connect Claude Code to tools via MCP</a>.” <span class="ref-url">https://code.claude.com/docs/en/mcp</span></li>
+<li>Claude Platform Docs, “<a href="https://platform.claude.com/docs/en/agents-and-tools/mcp-connector" rel="noopener noreferrer" target="_blank">MCP connector</a>.” <span class="ref-url">https://platform.claude.com/docs/en/agents-and-tools/mcp-connector</span></li>
+<li>Claude Platform Docs, “<a href="https://platform.claude.com/docs/agents-and-tools/mcp-tunnels/overview" rel="noopener noreferrer" target="_blank">MCP tunnels</a>.” <span class="ref-url">https://platform.claude.com/docs/agents-and-tools/mcp-tunnels/overview</span></li>
+<li>WorkOS, “<a href="https://workos.com/blog/mcp-stateless-spec-2026-07-28" rel="noopener noreferrer" target="_blank">MCP went stateless: What changed in the 2026-07-28 spec</a>,” September 16, 2026. <span class="ref-url">https://workos.com/blog/mcp-stateless-spec-2026-07-28</span></li>
+<li>Cloudflare Blog, “<a href="https://blog.cloudflare.com/mcp-v2/" rel="noopener noreferrer" target="_blank">The next generation of MCP</a>,” August 6, 2026. <span class="ref-url">https://blog.cloudflare.com/mcp-v2/</span></li>
+<li>SerpApi, “<a href="https://serpapi.com/blog/the-state-of-mcp-everything-that-changed-in-h1-2026/" rel="noopener noreferrer" target="_blank">The State of MCP: Everything That Changed in H1 2026</a>,” June 3, 2026. <span class="ref-url">https://serpapi.com/blog/the-state-of-mcp-everything-that-changed-in-h1-2026/</span></li>
+</ol>
+</section>
+<!-- CTA Banner -->
+<section class="cta-banner">
+<h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Build Enterprise-Grade MCP Servers &amp; Agent Tooling</h3>
+<p style="color:#94a3b8;font-size:1.02rem;max-width:680px;margin:0 auto 1.75rem;line-height:1.7;">Architect type-safe Model Context Protocol servers in Python, TypeScript, and Rust connecting Claude to private VPC databases and microservices.</p>
+<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
+<a class="btn btn-primary" href="../contact.html">Start A Project →</a>
+<a class="btn btn-outline" href="../pricing.html">View Advisory Tiers →</a>
+</div>
+</section>
+</article>
+</main>
     <!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="../index.html" class="footer-brand-logo-link"
-          aria-label="Thomas Cherickal - The Digital Futurist">
+        <a href="../index.html" class="footer-brand-logo-link" aria-label="Thomas Cherickal - The Digital Futurist">
           <img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo" class="footer-brand-logo"
             width="46" height="46" />
         </a>
@@ -1216,7 +1146,8 @@ print(response.content)</code></pre>
       </a>
 
       <!-- Direct Email Inquiry -->
-      <a href="mailto:thomascherickal@gmail.com" class="wl email-reveal-link" data-user="thomascherickal" data-domain="gmail.com">
+      <a href="mailto:thomascherickal@gmail.com" class="wl email-reveal-link" data-user="thomascherickal"
+        data-domain="gmail.com">
         <div class="wl-head">
           <div class="wl-ic">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2"
@@ -1240,7 +1171,6 @@ print(response.content)</code></pre>
         Cherickal</a>
       <span class="tc-sep"></span> The Digital Futurist
       <span class="tc-sep"></span> Generative AI Consultant
-      <span class="tc-sep"></span> Guides &amp; Materials Licensed under Apache 2.0
       <span class="tc-sep"></span> <a href="https://thomascherickal.com" target="_blank"
         rel="noopener noreferrer">thomascherickal.com</a>
       <span class="tc-sep"></span> <a href="https://thedigitalfuturist.com" target="_blank"
@@ -1248,6 +1178,6 @@ print(response.content)</code></pre>
     </p>
   </footer>
     <!-- END:FOOTER -->
-  <script src="../components.js"></script>
+<script src="../components.js"></script>
 </body>
 </html>

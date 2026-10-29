@@ -1,39 +1,36 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Running Local LLMs with Claude | Thomas Cherickal</title>
-  <meta content="Run local LLMs from 8B to 120B on Linux: six model families, hardware prices in USD and INR, five runtimes, OpenCode and Claude Code setup, six tutorials." name="description" />
-  <meta content="local LLM, Linux, OpenCode, Claude Code, Ollama, llama.cpp, vLLM, LM Studio, gpt-oss-120b, Qwen3.8, Gemma 4, MCP server, GPU VRAM calculator, self-hosted AI, local AI cost" name="keywords" />
-  <meta content="Thomas Cherickal" name="author" />
-  <link href="https://thedigitalfuturist.com/claude/claude-local-llms.html" rel="canonical" />
-
-  <!-- Open Graph -->
-  <meta content="article" property="og:type" />
-  <meta content="https://thedigitalfuturist.com/claude/claude-local-llms.html" property="og:url" />
-  <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name" />
-  <meta content="Running Local LLMs on Linux: From 8B to 120B Parameters, with OpenCode and Claude | Thomas Cherickal" property="og:title" />
-  <meta content="Six model families, hardware prices in USD and INR, five runtimes, OpenCode and Claude Code setup, four calculators and six tutorials." property="og:description" />
-  <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image" />
-  <meta content="en_US" property="og:locale" />
-
-  <!-- Twitter Card -->
-  <meta content="summary_large_image" name="twitter:card" />
-  <meta content="@thomazcherickal" name="twitter:site" />
-  <meta content="Running Local LLMs on Linux: From 8B to 120B Parameters, with OpenCode and Claude | Thomas Cherickal" name="twitter:title" />
-  <meta content="Six model families, hardware prices in USD and INR, five runtimes, OpenCode and Claude Code setup, four calculators and six tutorials." property="twitter:description" />
-  <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image" />
-
-  <!-- Favicons -->
-  <link href="../assets/favicon.ico" rel="icon" sizes="any" />
-  <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml" />
-  <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-  <link href="../site.webmanifest" rel="manifest" />
-  <meta content="#020408" name="theme-color" />
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Running Local LLMs with Claude | Thomas Cherickal</title>
+<meta content="Run local LLMs from 8B to 120B on Linux: six model families, hardware prices in USD and INR, five runtimes, OpenCode and Claude Code setup, six tutorials." name="description"/>
+<meta content="local LLM, Linux, OpenCode, Claude Code, Ollama, llama.cpp, vLLM, LM Studio, gpt-oss-120b, Qwen3.8, Gemma 4, MCP server, GPU VRAM calculator, self-hosted AI, local AI cost" name="keywords"/>
+<meta content="Thomas Cherickal" name="author"/>
+<link href="https://thedigitalfuturist.com/claude/claude-local-llms.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="article" property="og:type"/>
+<meta content="https://thedigitalfuturist.com/claude/claude-local-llms.html" property="og:url"/>
+<meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
+<meta content="Running Local LLMs on Linux: From 8B to 120B Parameters, with OpenCode and Claude | Thomas Cherickal" property="og:title"/>
+<meta content="Six model families, hardware prices in USD and INR, five runtimes, OpenCode and Claude Code setup, four calculators and six tutorials." property="og:description"/>
+<meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
+<meta content="en_US" property="og:locale"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@thomazcherickal" name="twitter:site"/>
+<meta content="Running Local LLMs on Linux: From 8B to 120B Parameters, with OpenCode and Claude | Thomas Cherickal" name="twitter:title"/>
+<meta content="Six model families, hardware prices in USD and INR, five runtimes, OpenCode and Claude Code setup, four calculators and six tutorials." property="twitter:description"/>
+<meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
+<!-- Favicons -->
+<link href="../assets/favicon.ico" rel="icon" sizes="any"/>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../site.webmanifest" rel="manifest"/>
+<meta content="#020408" name="theme-color"/>
 <!-- JSON-LD Article Schema -->
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -126,15 +123,15 @@
   ]
 }
 </script>
-  <link rel="stylesheet" href="../css/fonts.css" />
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="stylesheet" href="../css/background.css" />
-  <link rel="stylesheet" href="../css/buttons.css" />
-  <link rel="stylesheet" href="../css/navbar.css" />
-  <link rel="stylesheet" href="../css/footer.css" />
-  <link rel="stylesheet" href="../css/cta.css" />
-  <link rel="stylesheet" href="../css/article.css" />
-  <link rel="stylesheet" href="../css/claude.css" />
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link href="../css/styles.css" rel="stylesheet"/>
+<link href="../css/background.css" rel="stylesheet"/>
+<link href="../css/buttons.css" rel="stylesheet"/>
+<link href="../css/navbar.css" rel="stylesheet"/>
+<link href="../css/footer.css" rel="stylesheet"/>
+<link href="../css/cta.css" rel="stylesheet"/>
+<link href="../css/article.css" rel="stylesheet"/>
+<link href="../css/claude.css" rel="stylesheet"/>
 </head>
 <body>
   <!-- START:HEADER -->
@@ -275,462 +272,426 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-
-  <main class="container">
-    <header class="hero">
-      <a href="../index.html" aria-label="The Digital Futurist Home" style="display:inline-block;text-decoration:none;">
-        <img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist logo" class="hero-logo" width="110" height="110" />
-      </a>
-      <div class="hero-badge">Autonomous Linux Infrastructure &bull; Local LLMs &amp; Claude</div>
-      <h1 class="hero-title">Running Local LLMs on Linux: From 8B to 120B Parameters, with OpenCode and Claude</h1>
-      <p class="hero-desc">Pick a model that fits your hardware, price the next upgrade in dollars and rupees, and wire the model into OpenCode and Claude Code with working configs.</p>
-      <p class="hero-byline">By <strong>Thomas Cherickal</strong>, Generative AI Consultant, <strong>The Digital Futurist</strong> &bull; 22 October 2026 <span class="reading">&bull; about 22 minutes to read, longer with the tutorials</span></p>
-      <div class="pills">
-        <span class="pill">8B to 120B Parameters</span>
-        <span class="pill">OpenCode &amp; Claude Code</span>
-        <span class="pill">Hardware Pricing USD/INR</span>
-        <span class="pill">Ollama &amp; vLLM</span>
-        <span class="pill">llama.cpp &amp; LM Studio</span>
-        <span class="pill">6 Hands-On Tutorials</span>
-      </div>
-    </header>
-
-    <article class="article-body">
-      <!-- Table of Contents -->
-      <section class="content-card toc-card">
-        <h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
-        <ol class="toc-list" aria-label="Table of contents">
-          <li><a href="#introduction">01. Why Local LLMs Matter Now</a></li>
-          <li><a href="#advantages">02. Advantages, Trade-Offs &amp; Cost Savings</a></li>
-          <li><a href="#model-families">03. Six Model Families From 8B To 120B</a></li>
-          <li><a href="#hardware">04. The Hardware You Need &amp; What It Costs</a></li>
-          <li><a href="#tools">05. Five Tools That Run LLMs Locally</a></li>
-          <li><a href="#opencode">06. Local LLMs With OpenCode On Linux</a></li>
-          <li><a href="#claude">07. Local LLMs With Claude Code &amp; Claude</a></li>
-          <li><a href="#tutorials">08. Six Hands-On Tutorials (Basic to Advanced)</a></li>
-          <li><a href="#conclusion">09. Choosing Your Setup</a></li>
-          <li><a href="#references">10. References (30 Verified Citations)</a></li>
-        </ol>
-      </section>
-
-      <!-- Section 1: Introduction -->
-      <section class="content-card" id="introduction">
-        <h2><span class="sec-num">01</span>Introduction: Why Local LLMs Matter Now</h2>
-        <p class="article-p">By the end of this guide you will have a language model running on your own Linux machine and connected to two coding agents, OpenCode and Claude Code. You will also know which model fits the hardware you already own, what the next hardware step costs in October 2026, and when paying for Claude's API is still the cheaper option.</p>
-        <p class="article-p">Running a model locally means the weights sit on your disk and your GPU or CPU computes every token. A prompt goes nowhere unless you send it somewhere. Two changes this year made the setup far more practical. In January, <a href="https://ollama.com/blog/claude" target="_blank" rel="noopener noreferrer">Ollama 0.14 added Anthropic Messages API compatibility</a>, and LM Studio, vLLM and llama.cpp now ship their own <code>/v1/messages</code> endpoints, so Claude Code can talk to a local server after you set three environment variables. Small models also improved. Alibaba reports that <a href="https://huggingface.co/Qwen/Qwen3.8-27B" target="_blank" rel="noopener noreferrer">Qwen3.8-27B scores 61.7 on SWE-bench Pro</a> when run inside the Claude Code harness, and Ollama packages it as an 18 GB download.</p>
-        <p class="article-p">Hardware is the constraint. A memory shortage has pushed GPU and unified-memory prices far above their launch levels. The RTX 5090 launched at $1,999, yet its lowest new asking price in the US was $4,920.99 on 11 October, and the cheapest card in stock in India costs about ₹7.49 lakh. Every tier in this guide carries a current price so you can decide with real numbers rather than launch-day ones.</p>
-        <p class="article-p">The sections below cover six model families from 8B to 120B parameters, five runtimes, the OpenCode and Claude Code setups, and six tutorials split into basic, intermediate and advanced levels. Five small tools run in the page itself: a memory calculator, a break-even calculator, a model picker, a config generator and a tutorial filter. None of them sends data anywhere. Commands target Ubuntu and Debian, with Fedora and Arch notes only where a command changes.</p>
-      </section>
-
-      <!-- Section 2: Advantages, Trade-Offs And Cost Savings -->
-      <section class="content-card" id="advantages">
-        <h2><span class="sec-num">02</span>Advantages, Trade-Offs And Cost Savings</h2>
-        <p class="article-p">These are the advantages that hold up in practice:</p>
-        <ul class="article-list">
-          <li><strong>Privacy and data residency:</strong> source code, contracts and customer records stay on hardware you own, and no third-party processor sits in the request path.</li>
-          <li><strong>Offline use:</strong> a laptop on a train or a machine in an air-gapped lab behaves exactly as it does on the office network.</li>
-          <li><strong>No rate limits:</strong> a batch job runs as fast as your GPU allows, with no HTTP 429 responses and no quota resets to wait for.</li>
-          <li><strong>Predictable cost:</strong> the hardware is a one-off purchase, and electricity is the only running expense.</li>
-          <li><strong>Latency:</strong> there is no network hop, so time to first token depends only on your machine and the prompt length.</li>
-          <li><strong>Customisation:</strong> you can fine-tune, change chat templates, pick a quantization and keep one model version for years.</li>
-          <li><strong>Vendor independence:</strong> a downloaded Apache 2.0 model such as Gemma 4, gpt-oss or Qwen3.8-27B cannot be withdrawn or repriced.</li>
-          <li><strong>Compliance evidence:</strong> an auditor can inspect the exact model file and server version that produced an output.</li>
-        </ul>
-        <p class="article-p">Open models still trail the frontier. In <a href="https://pinggy.io/blog/best_open_source_self_hosted_llms_for_coding/" target="_blank" rel="noopener noreferrer">Pinggy's October 2026 roundup of Artificial Analysis scores</a>, Claude Opus leads at 58, the best open-weight model scores 46, and Qwen3.8-27B, the strongest model that fits one 24 GB card, scores 34. Long agentic sessions expose that gap first, because small errors compound over dozens of tool calls. Maintenance also becomes your job: drivers, CUDA versions, context settings and model updates all need attention.</p>
-
-        <h3>A Worked Break-Even Example</h3>
-        <p class="article-p">Take a team of three developers running agentic coding sessions on Claude Sonnet 5.5, which <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Anthropic's pricing page lists at $2 input and $10 output</a> per million tokens. Agent loops resend a lot of context, so assume 300 million input tokens and 30 million output tokens a month. That is 300 &times; $2 + 30 &times; $10 = $900 before prompt caching; cache reads cost $0.10 per million on Sonnet 5.5, so a well-cached workload pays less.</p>
-        <p class="article-p">Now buy a 128 GB Framework Desktop for $3,449 and spread it over 36 months, which is $95.81 a month. At an average 200 W for eight hours a day, it draws 48 kWh a month. At the <a href="https://www.eia.gov/outlooks/steo/report/elec_coal_renew.php" target="_blank" rel="noopener noreferrer">EIA's 2026 US residential average of 18.2 cents per kWh</a>, that is $8.74. In India, using an assumed ₹8 per kWh for a household in a higher consumption slab, it is ₹384. Check your own DISCOM schedule, because slabs vary by state and usage.</p>
-        <p class="article-p">A local model will not replace Sonnet 5.5 on every task, so assume it absorbs 60 percent of the tokens. The cloud bill falls to $360 and the team saves $540 a month. The break-even formula is:</p>
-        <p class="formula" style="font-size:0.95rem;color:var(--gold);margin-bottom:1rem;">months to break even = hardware cost &divide; (monthly cloud savings &minus; monthly electricity)</p>
-        <p class="article-p">In the US that gives $3,449 &divide; ($540 &minus; $8.74) = 6.5 months. In India the electricity term is smaller, so the payback is about the same, although import duty raises the hardware price. Run the same arithmetic on Claude Haiku 5.5, priced at $0.10 input and $0.50 output for prompts up to 100,000 tokens, and the picture flips. The whole 330-million-token workload costs $45 a month, a 60 percent shift saves $27, and the box would need more than 15 years to pay for itself. For cheap, short prompts, buy local hardware for privacy or offline needs, not to save money.</p>
-
-        <div class="table-wrap">
-          <table class="data-table">
-            <thead>
-              <tr><th>Line item</th><th>Cloud only (Sonnet 5.5)</th><th>Hybrid, 60% local</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>API spend per month</td><td>$900</td><td>$360</td></tr>
-              <tr><td>Hardware, amortised over 36 months</td><td>$0</td><td>$95.81</td></tr>
-              <tr><td>Electricity (US, 48 kWh at $0.182)</td><td>$0</td><td>$8.74</td></tr>
-              <tr><td>Total monthly cost</td><td>$900</td><td>$464.55</td></tr>
-              <tr><td>Break-even on the $3,449 purchase</td><td>Not applicable</td><td>6.5 months</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p class="article-p">The hybrid split is the pattern this guide recommends: local models handle private, bulk and routine work, and Claude handles the hardest reasoning and the longest agentic runs. Tutorial 6 builds that split with an MCP server and a router. Try your own numbers below.</p>
-
-        <!-- Interactive Widget 1: Break-even Calculator -->
-        <div class="widget" id="w-breakeven">
-          <h4>Local Vs Cloud Break-Even Calculator</h4>
-          <p class="wdesc">Compares a monthly cloud API bill with amortised local hardware plus electricity, and estimates the payback period.</p>
-          <div style="margin-bottom:14px">
-            <span class="seg" role="group" aria-label="Currency">
-              <button type="button" data-cur="USD" aria-pressed="true">USD $</button>
-              <button type="button" data-cur="INR" aria-pressed="false">INR ₹</button>
-            </span>
-          </div>
-          <div class="grid">
-            <div class="field"><label for="be-in">Input tokens / mo (millions)</label><input id="be-in" type="number" min="0" step="1" value="300"></div>
-            <div class="field"><label for="be-out">Output tokens / mo (millions)</label><input id="be-out" type="number" min="0" step="1" value="30"></div>
-            <div class="field"><label for="be-pin">Cloud input $/M tokens</label><input id="be-pin" type="number" min="0" step="0.01" value="2"></div>
-            <div class="field"><label for="be-pout">Cloud output $/M tokens</label><input id="be-pout" type="number" min="0" step="0.01" value="10"></div>
-            <div class="field"><label for="be-share">Share shifted local (%)</label><input id="be-share" type="number" min="0" max="100" step="5" value="60"></div>
-            <div class="field"><label for="be-hw">Hardware purchase (USD)</label><input id="be-hw" type="number" min="0" step="50" value="3449"></div>
-            <div class="field"><label for="be-months">Amortisation (months)</label><input id="be-months" type="number" min="1" step="1" value="36"></div>
-            <div class="field"><label for="be-watts">Average power (watts)</label><input id="be-watts" type="number" min="0" step="10" value="200"></div>
-            <div class="field"><label for="be-hours">Hours used / day</label><input id="be-hours" type="number" min="0" max="24" step="1" value="8"></div>
-            <div class="field"><label for="be-tariff" id="be-tariff-label">Electricity tariff ($/kWh)</label><input id="be-tariff" type="number" min="0" step="0.01" value="0.182"></div>
-          </div>
-          <div class="out" id="be-out-box" aria-live="polite"></div>
-          <p class="formula">Prices are entered in USD, as published. INR display converts at ₹88 per USD. Break-even = hardware &divide; (cloud savings &minus; electricity). Presets: Sonnet 5.5 $2/$10, Opus 5.5 $4/$20, Haiku 5.5 $0.10/$0.50 per million tokens.</p>
-        </div>
-      </section>
-
-      <!-- Section 3: Six Model Families -->
-      <section class="content-card" id="model-families">
-        <h2><span class="sec-num">03</span>Six Model Families From 8B To 120B</h2>
-        <p class="article-p">Two terms come up in every row of the table below. A <strong>dense model</strong> runs every parameter for every token. A <strong>mixture-of-experts (MoE) model</strong> sends each token through a few expert blocks, so its active parameter count sets the compute per token while its total count still sets the memory it needs. <strong>Quantization</strong> stores weights in fewer bits: Q4_K_M is a popular 4-bit GGUF format for llama.cpp-based tools, and MXFP4 is the 4-bit format that gpt-oss was trained in.</p>
-
-        <h3>Qwen</h3>
-        <p class="article-p">Alibaba released the open weights of <a href="https://huggingface.co/Qwen/Qwen3.8-27B" target="_blank" rel="noopener noreferrer">Qwen3.8-27B on Hugging Face</a> in August 2026 under Apache 2.0. It is a 27B dense vision-language model with a native context of 262,144 tokens that extends to about one million with YaRN scaling. It thinks before answering by default, and a <code>reasoning_effort</code> setting trades depth for speed. The <a href="https://ollama.com/library/qwen3.8" target="_blank" rel="noopener noreferrer">qwen3.8 entry in Ollama's library</a> lists tools, thinking and vision support at 18 GB. For agentic coding on one 24 GB card it is the default pick in this guide.</p>
-
-        <h3>Gemma</h3>
-        <p class="article-p">Google launched <a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" target="_blank" rel="noopener noreferrer">Gemma 4 under an Apache 2.0 licence</a> on 2 April 2026. The family includes E2B and E4B edge models, a 26B MoE that activates 3.8B parameters per token and a 31B dense model, and Ollama also carries a 12B tag. The workstation sizes take 256K tokens of context, support native function calling and accept images. The 26B MoE generates faster because so few parameters run per token, while the 31B dense model keeps more quality.</p>
-
-        <h3>Mistral</h3>
-        <p class="article-p">Mistral covers both ends of the ladder under Apache 2.0. <a href="https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512" target="_blank" rel="noopener noreferrer">The Ministral 3 8B model card</a> lists an 8.4B language model plus a 0.4B vision encoder, native function calling and a 256K context window, and says the model fits in 12 GB of VRAM in FP8. A 14B sibling follows the same design. At the top, <a href="https://huggingface.co/mistralai/Mistral-Small-4-119B-2603" target="_blank" rel="noopener noreferrer">Mistral Small 4 on Hugging Face</a> is a 119B MoE with 6.5B active parameters, 128 experts and a 256K context, and it merges chat, reasoning and agentic coding into one model.</p>
-
-        <h3>Llama</h3>
-        <p class="article-p"><a href="https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct" target="_blank" rel="noopener noreferrer">Meta's Llama 3.3 70B Instruct</a> is the dense 70B option. It has a 128K context, eight officially supported languages including Hindi, and tool calling. Its licence is the Llama 3.3 Community License, which requires "Built with Llama" attribution and sets a 700-million-monthly-user threshold, so read it before shipping a product. At Q4_K_M it needs about 42 GB for weights alone, which puts it on a dual-GPU build or a 128 GB unified-memory machine.</p>
-
-        <h3>gpt-oss</h3>
-        <p class="article-p">OpenAI's two open models ship under Apache 2.0. The <a href="https://huggingface.co/openai/gpt-oss-120b" target="_blank" rel="noopener noreferrer">gpt-oss-120b model card</a> gives 117B total and 5.1B active parameters for the large model and 21B total and 3.6B active for gpt-oss-20b. Both were post-trained with MXFP4 weights, so the 120B model fits one 80 GB GPU and the 20B model runs within 16 GB. Each exposes low, medium and high reasoning effort and handles function calling. Thanks to that small active count, gpt-oss-120b runs at usable speeds even when most of its experts sit in system RAM, which Tutorial 5 relies on.</p>
-
-        <h3>Nemotron</h3>
-        <p class="article-p"><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4" target="_blank" rel="noopener noreferrer">NVIDIA's Nemotron 3 Super model card</a> describes a 120B hybrid MoE with 12B active parameters and up to one million tokens of context, released under the NVIDIA Nemotron Open Model License rather than Apache 2.0. The NVFP4 build lists a single DGX Spark as a supported minimum. Choose it for long-document and agent workloads on NVIDIA hardware where the licence suits you.</p>
-
-        <div class="table-wrap">
-          <table class="data-table">
-            <thead>
-              <tr><th>Tier</th><th>Models</th><th>Type</th><th>Licence</th><th>Context</th><th>Run this</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>~8B</td><td>Ministral 3 8B, Gemma 4 E4B</td><td>Dense</td><td>Apache 2.0</td><td>256K / 128K</td><td>Q4_K_M GGUF or FP8</td></tr>
-              <tr><td>~14B</td><td>Ministral 3 14B, Gemma 4 12B</td><td>Dense</td><td>Apache 2.0</td><td>256K</td><td>Q4_K_M GGUF</td></tr>
-              <tr><td>~20-32B</td><td>gpt-oss-20b, Gemma 4 26B A4B, Qwen3.8-27B, Gemma 4 31B</td><td>MoE (3.6B, 3.8B active) &amp; dense</td><td>Apache 2.0</td><td>128K-262K</td><td>MXFP4 for gpt-oss, Q4_K_M for rest</td></tr>
-              <tr><td>~70B</td><td>Llama 3.3 70B Instruct</td><td>Dense</td><td>Llama 3.3 Community</td><td>128K</td><td>Q4_K_M GGUF</td></tr>
-              <tr><td>~120B</td><td>gpt-oss-120b, Mistral Small 4, Nemotron 3 Super</td><td>MoE (5.1B, 6.5B, 12B active)</td><td>Apache 2.0 / NVIDIA Open Model</td><td>128K-1M</td><td>MXFP4, Q4_K_M, NVFP4</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Interactive Widget 2: Model Picker -->
-        <div class="widget" id="w-picker">
-          <h4>Model Recommendation Engine</h4>
-          <p class="wdesc">Choose your available memory and primary workload to surface the best-fitting open models, quantizations, and runtimes.</p>
-          <div class="grid">
-            <div class="field"><label for="mp-mem">GPU VRAM or unified memory</label>
-              <select id="mp-mem">
-                <option value="8">8 GB</option><option value="12">12 GB</option><option value="16" selected>16 GB</option><option value="24">24 GB</option><option value="32">32 GB</option><option value="48">48 GB (2 &times; 24 GB)</option><option value="64">64 GB</option><option value="96">96 GB</option><option value="128">128 GB unified</option>
-              </select>
-            </div>
-            <div class="field"><label for="mp-use">Main workload</label>
-              <select id="mp-use"><option value="coding">Coding agents</option><option value="chat">Chat and writing</option><option value="reasoning">Reasoning and maths</option><option value="tools">Tool calling and automation</option></select>
-            </div>
-            <div class="field"><label for="mp-ram">System RAM for MoE offload</label>
-              <select id="mp-ram"><option value="32">32 GB</option><option value="64" selected>64 GB</option><option value="96">96 GB or more</option></select>
-            </div>
-          </div>
-          <div class="out" id="mp-out" aria-live="polite"></div>
-          <p class="formula">Fit rule: model weights at the listed quantization plus a 16K-token cache and 2 GB of buffers must fit in memory. With 96 GB of system RAM, gpt-oss-120b also qualifies on a 16 GB card through llama.cpp expert offload.</p>
-        </div>
-      </section>
-
-      <!-- Section 4: The Hardware You Need And What It Costs -->
-      <section class="content-card" id="hardware">
-        <h2><span class="sec-num">04</span>The Hardware You Need And What It Costs</h2>
-        <p class="article-p">Memory decides what you can run, and memory bandwidth decides how fast it runs. A model needs room for three things: the quantized weights, the KV cache that stores attention state for every token in the context, and compute buffers. <a href="https://github.com/ggml-org/llama.cpp/discussions/15396" target="_blank" rel="noopener noreferrer">The llama.cpp guide to running gpt-oss</a> shows the split clearly: gpt-oss-120b needs 61 GB of model data, 2.7 GB of compute buffers and about 0.3 GB of cache per 8,192 tokens, which comes to 64.9 GB at 32K context.</p>
-        <p class="article-p">Context length is the setting people forget. <a href="https://docs.ollama.com/context-length" target="_blank" rel="noopener noreferrer">Ollama's context-length documentation</a> says it defaults to 4K tokens below 24 GiB of VRAM, 32K between 24 and 48 GiB, and 256K above that, and it recommends at least 64,000 tokens for coding tools. A coding agent sends its system prompt and tool schemas with every request, so a 4K window breaks it.</p>
-        <p class="article-p">Prices have moved sharply this year, so treat every figure as approximate for October 2026. US figures for new and used GPUs come from <a href="https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/" target="_blank" rel="noopener noreferrer">BuySellRam's October GPU price floors</a>. Indian figures come from <a href="https://gpuprix.com/india/gpus/geforce-rtx-5060-ti-16gb" target="_blank" rel="noopener noreferrer">GPUPrix listings for the RTX 5060 Ti</a> and <a href="https://gpuprix.com/india/gpus/geforce-rtx-5090" target="_blank" rel="noopener noreferrer">the RTX 5090 in India</a>. Where no Indian listing exists, the table converts at ₹88 per dollar; <a href="https://www.runyard.dev/buy/rtx-5060-ti-16gb-price-india.html" target="_blank" rel="noopener noreferrer">Runyard's landed-cost breakdown</a> explains why duty, 18 percent IGST and margins usually add 32 to 55 percent on top. Unified-memory machines are priced from <a href="https://computingforgeeks.com/ryzen-ai-max-395-mini-pc-comparison/" target="_blank" rel="noopener noreferrer">ComputingForGeeks' Ryzen AI Max+ 395 comparison</a> and <a href="https://cryptobriefing.com/nvidia-dgx-spark-64gb-launch/" target="_blank" rel="noopener noreferrer">the DGX Spark price report</a>. Build totals add a CPU, board, RAM, PSU and SSD and are my estimates.</p>
-
-        <!-- Figure 1 -->
-        <div class="diagram-container">
-          <div class="fig-scroll">
-            <svg viewBox="0 0 640 360" role="img" aria-labelledby="ladder-title ladder-desc" style="background:#090d16;border-radius:8px;">
-              <title id="ladder-title">The parameter-to-hardware ladder</title>
-              <desc id="ladder-desc">Five horizontal bars show estimated memory at 4-bit with a 16K context: 8B about 9 GB, 14B about 13 GB, 27 to 32B about 22 GB, 70B about 52 GB and 120B MoE about 65 GB, each mapped to a hardware class and a starting price.</desc>
-              <text x="20" y="26" class="svg-label">MEMORY AT 4-BIT, 16K CONTEXT (1 GB = 6 PX)</text>
-              <g>
-                <text x="20" y="66" class="svg-t">8B</text>
-                <rect x="110" y="50" width="54" height="22" rx="4" fill="#10b981"/>
-                <text x="172" y="66" class="svg-t">&asymp; 9 GB</text>
-                <text x="110" y="90" class="svg-s">16 GB GPU (RTX 5060 Ti) &bull; from $618 / ₹94,000</text>
-              </g>
-              <g>
-                <text x="20" y="128" class="svg-t">14B</text>
-                <rect x="110" y="112" width="78" height="22" rx="4" fill="#14b8a6"/>
-                <text x="196" y="128" class="svg-t">&asymp; 13 GB</text>
-                <text x="110" y="152" class="svg-s">16 GB GPU, 8K to 16K context &bull; from $618 / ₹94,000</text>
-              </g>
-              <g>
-                <text x="20" y="190" class="svg-t">27-32B</text>
-                <rect x="110" y="174" width="132" height="22" rx="4" fill="#0ea5e9"/>
-                <text x="250" y="190" class="svg-t">&asymp; 22 GB</text>
-                <text x="110" y="214" class="svg-s">24 GB used RTX 3090 &bull; from $1,350 / &asymp; ₹1.19 lakh</text>
-              </g>
-              <g>
-                <text x="20" y="252" class="svg-t">70B</text>
-                <rect x="110" y="236" width="312" height="22" rx="4" fill="#6366f1"/>
-                <text x="430" y="252" class="svg-t">&asymp; 52 GB</text>
-                <text x="110" y="276" class="svg-s">128 GB unified (or 2 &times; 24 GB at 8K) &bull; from $3,449 / &asymp; ₹3.04 lakh</text>
-              </g>
-              <g>
-                <text x="20" y="314" class="svg-t">120B MoE</text>
-                <rect x="110" y="298" width="390" height="22" rx="4" fill="#8b5cf6"/>
-                <text x="508" y="314" class="svg-t">&asymp; 65 GB</text>
-                <text x="110" y="338" class="svg-s">128 GB unified, DGX Spark, or 16 GB GPU + 96 GB RAM offload</text>
-              </g>
-            </svg>
-          </div>
-          <div class="diagram-caption">Figure 1. The parameter-to-hardware ladder. Memory estimates come from the calculator below at Q4_K_M (MXFP4 for 120B MoE) with 16K context; prices reflect October 2026 listings.</div>
-        </div>
-
-        <div class="table-wrap">
-          <table class="data-table">
-            <thead>
-              <tr><th>Tier</th><th>Memory needed (4-bit, 16-32K)</th><th>Recommended Linux hardware</th><th>Device price (USD)</th><th>Device price (INR)</th><th>Estimated full build</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>~8B</td><td>8-11 GB</td><td>RTX 5060 Ti 16GB</td><td>$618 new</td><td>₹94,000</td><td>$1,500-1,900 / ₹1.6-2.0 lakh</td></tr>
-              <tr><td>~14B</td><td>12-16 GB</td><td>RTX 5060 Ti 16GB (keep context at 8-16K)</td><td>$618 new</td><td>₹94,000</td><td>$1,500-1,900 / ₹1.6-2.0 lakh</td></tr>
-              <tr><td>~20-32B</td><td>16-26 GB</td><td>Used RTX 3090 24GB, or RTX 5090 32GB</td><td>$1,350 used; $4,921 new</td><td>&asymp; ₹1.19 lakh; ₹7.49 lakh</td><td>$2,400-3,000 (3090) / &asymp; ₹2.5-3.2L</td></tr>
-              <tr><td>~70B</td><td>45-55 GB</td><td>2 &times; used RTX 3090 (8K ctx) or Framework 128GB</td><td>$2,700 for 2 cards; $3,449</td><td>&asymp; ₹2.38 lakh; &asymp; ₹3.04 lakh</td><td>$4,200-5,000 dual-GPU / ₹4.4-5.3L</td></tr>
-              <tr><td>~120B</td><td>64-75 GB</td><td>Framework 128GB, DGX Spark, or 5060 Ti + 96GB DDR5</td><td>$3,449; $6,950; $618 + RAM</td><td>&asymp; ₹3.04L; &asymp; ₹6.12L; ₹94k + RAM</td><td>$3,449 to $6,950 / &asymp; ₹3.0-6.1L</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="callout warn">
-          <div class="ctitle">Hardware Market Warning</div>
-          <p>DRAM and GPU prices have risen by roughly half within a few months this year. The 128 GB DGX Spark went from $4,699 to $6,950, and the RTX 5090's lowest new asking price rose 64 percent between August and October. Check live market quotes before purchasing.</p>
-        </div>
-
-        <p class="article-p">A used RTX 3090 remains the cheapest route to 24 GB, which is the size where Qwen3.8-27B and Gemma 4 31B become comfortable. For 70B and 120B models, a 128 GB unified-memory box trades speed for capacity: the DGX Spark's memory runs at 273 GB/s, a fraction of a desktop GPU's bandwidth, so dense 70B models generate slowly while MoE models with few active parameters stay quick.</p>
-
-        <!-- Interactive Widget 3: VRAM Calculator -->
-        <div class="widget" id="w-vram">
-          <h4>VRAM &amp; Memory Allocation Calculator</h4>
-          <p class="wdesc">Estimates weight footprint, KV-cache headroom, and total memory required, identifying the precise matching hardware tier.</p>
-          <div class="grid">
-            <div class="field"><label for="vr-params">Parameters (billions)</label><input id="vr-params" type="number" min="1" max="400" step="1" value="27"></div>
-            <div class="field"><label for="vr-quant">Quantization</label>
-              <select id="vr-quant"><option value="16">FP16 / BF16</option><option value="8.5">Q8_0</option><option value="6.56">Q6_K</option><option value="5.69">Q5_K_M</option><option value="4.85" selected>Q4_K_M</option><option value="4.25">MXFP4</option></select>
-            </div>
-            <div class="field"><label for="vr-ctx">Context window (tokens)</label>
-              <select id="vr-ctx"><option value="4096">4K</option><option value="8192">8K</option><option value="16384" selected>16K</option><option value="32768">32K</option><option value="65536">64K</option><option value="131072">128K</option></select>
-            </div>
-            <div class="field"><label for="vr-arch">Architecture</label>
-              <select id="vr-arch"><option value="dense" selected>Dense</option><option value="moe">MoE (few active parameters)</option></select>
-            </div>
-          </div>
-          <div class="out" id="vr-out" aria-live="polite"></div>
-          <p class="formula" id="vr-formula"></p>
-        </div>
-      </section>
-
-      <!-- Section 5: Five Tools That Run LLMs Locally -->
-      <section class="content-card" id="tools">
-        <h2><span class="sec-num">05</span>Five Tools That Run LLMs Locally</h2>
-        <p class="article-p">Each tool below loads model weights, runs them on your GPU and exposes an HTTP API. They differ in interface, API dialect and how many users they serve at once.</p>
-
-        <!-- Figure 2 -->
-        <div class="diagram-container">
-          <div class="fig-scroll">
-            <svg viewBox="0 0 640 470" role="img" aria-labelledby="stack-title stack-desc" style="background:#090d16;border-radius:8px;">
-              <title id="stack-title">The local inference stack</title>
-              <desc id="stack-desc">Five stacked layers. Clients call an API layer, which calls servers, which sit on runtimes, loading weights.</desc>
-              <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0ea5e9"/></marker></defs>
-              <rect x="20" y="10" width="600" height="76" rx="10" class="svg-box"/>
-              <text x="36" y="32" class="svg-label">CLIENTS</text>
-              <rect x="36" y="42" width="170" height="32" rx="6" class="svg-chip"/><text x="121" y="63" text-anchor="middle" class="svg-t">OpenCode</text>
-              <rect x="235" y="42" width="170" height="32" rx="6" class="svg-chip"/><text x="320" y="63" text-anchor="middle" class="svg-t">Claude Code</text>
-              <rect x="434" y="42" width="170" height="32" rx="6" class="svg-chip"/><text x="519" y="63" text-anchor="middle" class="svg-t">Python / curl</text>
-              <line x1="320" y1="88" x2="320" y2="104" class="svg-accent" marker-end="url(#arr)"/>
-              <rect x="20" y="106" width="600" height="76" rx="10" class="svg-box"/>
-              <text x="36" y="128" class="svg-label">API LAYER</text>
-              <rect x="36" y="138" width="272" height="32" rx="6" class="svg-chip"/><text x="172" y="159" text-anchor="middle" class="svg-mono">OpenAI &bull; /v1/chat/completions</text>
-              <rect x="332" y="138" width="272" height="32" rx="6" class="svg-chip" style="stroke:#10b981"/><text x="468" y="159" text-anchor="middle" class="svg-mono">Anthropic &bull; /v1/messages</text>
-              <line x1="320" y1="184" x2="320" y2="200" class="svg-accent" marker-end="url(#arr)"/>
-              <rect x="20" y="202" width="600" height="76" rx="10" class="svg-box"/>
-              <text x="36" y="224" class="svg-label">SERVER (DEFAULT PORT)</text>
-              <rect x="36" y="234" width="108" height="32" rx="6" class="svg-chip"/><text x="90" y="255" text-anchor="middle" class="svg-s" style="fill:#fafafa">Ollama :11434</text>
-              <rect x="150" y="234" width="108" height="32" rx="6" class="svg-chip"/><text x="204" y="255" text-anchor="middle" class="svg-s" style="fill:#fafafa">LM Studio :1234</text>
-              <rect x="264" y="234" width="108" height="32" rx="6" class="svg-chip"/><text x="318" y="255" text-anchor="middle" class="svg-s" style="fill:#fafafa">Jan :1337</text>
-              <rect x="378" y="234" width="116" height="32" rx="6" class="svg-chip"/><text x="436" y="255" text-anchor="middle" class="svg-s" style="fill:#fafafa">llama-server :8080</text>
-              <rect x="500" y="234" width="104" height="32" rx="6" class="svg-chip"/><text x="552" y="255" text-anchor="middle" class="svg-s" style="fill:#fafafa">vLLM :8000</text>
-              <line x1="320" y1="280" x2="320" y2="296" class="svg-accent" marker-end="url(#arr)"/>
-              <rect x="20" y="298" width="600" height="76" rx="10" class="svg-box"/>
-              <text x="36" y="320" class="svg-label">RUNTIME AND GPU BACKEND</text>
-              <rect x="36" y="330" width="272" height="32" rx="6" class="svg-chip"/><text x="172" y="351" text-anchor="middle" class="svg-t">llama.cpp &bull; CUDA, ROCm, Vulkan</text>
-              <rect x="332" y="330" width="272" height="32" rx="6" class="svg-chip"/><text x="468" y="351" text-anchor="middle" class="svg-t">vLLM engine &bull; CUDA, ROCm</text>
-              <line x1="320" y1="376" x2="320" y2="392" class="svg-accent" marker-end="url(#arr)"/>
-              <rect x="20" y="394" width="600" height="66" rx="10" class="svg-box" style="stroke:#fbbf24"/>
-              <text x="36" y="416" class="svg-label" style="fill:#fbbf24">WEIGHTS ON DISK</text>
-              <text x="36" y="444" class="svg-mono">GGUF: Q4_K_M, Q8_0, MXFP4</text>
-              <text x="332" y="444" class="svg-mono">safetensors: BF16, FP8, NVFP4</text>
-            </svg>
-          </div>
-          <div class="diagram-caption">Figure 2. The local inference stack. Ollama, LM Studio and Jan wrap llama.cpp; vLLM brings its own high-throughput engine.</div>
-        </div>
-
-        <p class="article-p"><strong>Ollama</strong> is the quickest start. One script installs a CLI, a background service and a model registry, and <code>ollama run</code> downloads and starts a model in one step. It serves an OpenAI-compatible API under <code>/v1</code> and, since version 0.14, an Anthropic-compatible one, and its <code>ollama launch</code> command configures Claude Code and OpenCode for you. <a href="https://docs.ollama.com/linux" target="_blank" rel="noopener noreferrer">Ollama's Linux install guide</a> covers NVIDIA and AMD ROCm setups.</p>
-        <p class="article-p"><strong>LM Studio</strong> is a desktop app with a model browser, per-model settings and a headless <code>lms</code> command line for servers. It exposes an OpenAI-compatible API on port 1234, and <a href="https://lmstudio.ai/blog/claudecode" target="_blank" rel="noopener noreferrer">LM Studio's Claude Code announcement</a> introduced a <code>/v1/messages</code> endpoint in version 0.4.1, documented on <a href="https://lmstudio.ai/docs/developer/anthropic-compat" target="_blank" rel="noopener noreferrer">its Anthropic compatibility page</a>. It suits people who want to compare quantizations and sampling settings without editing files.</p>
-        <p class="article-p"><strong>llama.cpp</strong> is the engine underneath most desktop tools, and its <code>llama-server</code> binary is the most configurable server here. <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md" target="_blank" rel="noopener noreferrer">The llama-server README</a> lists OpenAI-compatible chat, responses and embeddings routes plus Anthropic Messages API compatibility, with a default port of 8080. It builds against CUDA, ROCm or Vulkan, and flags such as <code>--n-cpu-moe</code> let a 120B MoE run on a modest GPU.</p>
-        <p class="article-p"><strong>vLLM</strong> is the throughput option for serving several people at once. It batches concurrent requests on the GPU, serves an OpenAI-compatible API on port 8000, and, per <a href="https://docs.vllm.ai/en/stable/serving/integrations/claude_code/" target="_blank" rel="noopener noreferrer">vLLM's Claude Code integration guide</a>, implements the Anthropic Messages API as well. It loads safetensors checkpoints such as FP8 and NVFP4 rather than GGUF files, and it expects a card with enough VRAM for the whole model.</p>
-        <p class="article-p"><strong>Jan</strong> is an open-source desktop chat app built on llama.cpp. <a href="https://docs.jan.ai/desktop/api-server" target="_blank" rel="noopener noreferrer">Jan's local API server documentation</a> describes an OpenAI-compatible server at <code>127.0.0.1:1337</code>, and Linux builds come as .deb and AppImage packages. Its docs do not describe an Anthropic endpoint, so pair it with OpenCode or your own scripts rather than Claude Code.</p>
-
-        <div class="table-wrap">
-          <table class="data-table">
-            <thead>
-              <tr><th>Tool</th><th>Interface</th><th>OpenAI-compat</th><th>Anthropic-compat</th><th>Linux backends</th><th>Best for</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Ollama</td><td>CLI, systemd, desktop</td><td>Yes (:11434/v1)</td><td>Yes (v0.14+)</td><td>CUDA, ROCm</td><td>Fastest start, agent launchers</td></tr>
-              <tr><td>LM Studio</td><td>Desktop GUI + <code>lms</code> CLI</td><td>Yes (:1234/v1)</td><td>Yes (v0.4.1+)</td><td>llama.cpp runtime</td><td>Model testing, parameter tuning</td></tr>
-              <tr><td>llama.cpp</td><td><code>llama-server</code> CLI</td><td>Yes (:8080/v1)</td><td>Yes</td><td>CUDA, HIP, Vulkan</td><td>Fine control, MoE CPU offload</td></tr>
-              <tr><td>vLLM</td><td>Python async daemon</td><td>Yes (:8000/v1)</td><td>Yes (/v1/messages)</td><td>CUDA, ROCm</td><td>Team concurrency, high TPS</td></tr>
-              <tr><td>Jan</td><td>Desktop GUI app</td><td>Yes (:1337/v1)</td><td>Not documented</td><td>llama.cpp engine</td><td>Private offline desktop chat</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- Section 6: OpenCode -->
-      <section class="content-card" id="opencode">
-        <h2><span class="sec-num">06</span>Local LLMs With OpenCode On Linux</h2>
-        <p class="article-p">OpenCode is an open-source coding agent for the terminal. It reads your repository, plans changes, edits files and runs commands, and it talks to models through the AI SDK, which lets it use any OpenAI-compatible server. <a href="https://opencode.ai/docs/providers/" target="_blank" rel="noopener noreferrer">OpenCode's provider documentation</a> shows the exact block for Ollama, LM Studio and llama.cpp: a provider entry that uses the <code>@ai-sdk/openai-compatible</code> package, an <code>options.baseURL</code> pointing at the local server, and a <code>models</code> map whose keys must match the server's model IDs exactly, colons included.</p>
-        <p class="article-p">Two settings decide whether the agent works. The first is context. OpenCode sends a long system prompt and tool definitions with each turn, so the server must allow far more than its default; set Ollama to 64K tokens and declare the same <code>limit.context</code> in the config so OpenCode can track how much room is left. The second is tool calling. The agent edits files and runs commands through structured tool calls, and a model that writes a tool call as plain text stalls the loop. OpenCode's docs suggest raising <code>num_ctx</code> first when tool calls fail, then switching to a model with stronger tool calling.</p>
-        <p class="article-p">Start with models whose cards list native function calling: Qwen3.8-27B on a 24 GB card, gpt-oss-20b on a 16 GB card, and gpt-oss-120b or Mistral Small 4 on a 128 GB machine. Ollama can also write the config with <code>ollama launch opencode --model qwen3.8</code>, which leaves your own <code>opencode.json</code> untouched. Tutorial 2 builds it by hand so you can see each key.</p>
-      </section>
-
-      <!-- Section 7: Claude Code -->
-      <section class="content-card" id="claude">
-        <h2><span class="sec-num">07</span>Local LLMs With Claude Code And Claude</h2>
-        <p class="article-p">There are two ways to combine Claude with a local model.</p>
-        <p class="article-p">The first runs Claude Code, Anthropic's terminal agent, against a local model instead of Anthropic's API. Claude Code speaks the Anthropic Messages API, and <a href="https://code.claude.com/docs/en/env-vars" target="_blank" rel="noopener noreferrer">Claude Code's environment variable reference</a> documents <code>ANTHROPIC_BASE_URL</code> for redirecting it. <a href="https://docs.ollama.com/integrations/claude-code" target="_blank" rel="noopener noreferrer">Ollama's Claude Code integration page</a> gives the full setup: set the base URL to <code>http://localhost:11434</code>, set <code>ANTHROPIC_AUTH_TOKEN</code> to <code>ollama</code>, leave <code>ANTHROPIC_API_KEY</code> empty, and start <code>claude --model</code> with a local model name. Claude Code also asks for Opus, Sonnet and Haiku tiers internally, so map all three with <code>ANTHROPIC_DEFAULT_OPUS_MODEL</code>, <code>ANTHROPIC_DEFAULT_SONNET_MODEL</code> and <code>ANTHROPIC_DEFAULT_HAIKU_MODEL</code>.</p>
-        <p class="article-p"><strong>What works:</strong> file reads and edits, shell commands, and multi-step tasks on a repository with a model that has native tool calling and at least 64K of context. <strong>What degrades:</strong> speed, because local generation is slower than Anthropic's servers; long sessions, where small models lose track sooner; and some hosted features such as Anthropic's server-side web search. vLLM adds one rule of its own: served model names cannot contain a slash, so start it with <code>--served-model-name</code>.</p>
-
-        <!-- Figure 3 -->
-        <div class="diagram-container">
-          <div class="fig-scroll">
-            <svg viewBox="0 0 640 420" role="img" aria-labelledby="flow-title flow-desc" style="background:#090d16;border-radius:8px;">
-              <title id="flow-title">Claude Code on a local model</title>
-              <desc id="flow-desc">Sequence between Claude Code, local Ollama server and model.</desc>
-              <defs>
-                <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#38bdf8"/></marker>
-                <marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#34d399"/></marker>
-              </defs>
-              <rect x="20" y="14" width="160" height="44" rx="8" class="svg-box"/><text x="100" y="34" text-anchor="middle" class="svg-t">Claude Code</text><text x="100" y="50" text-anchor="middle" class="svg-s">your terminal</text>
-              <rect x="240" y="14" width="160" height="44" rx="8" class="svg-box"/><text x="320" y="34" text-anchor="middle" class="svg-t">Ollama :11434</text><text x="320" y="50" text-anchor="middle" class="svg-s">ANTHROPIC_BASE_URL</text>
-              <rect x="460" y="14" width="160" height="44" rx="8" class="svg-box"/><text x="540" y="34" text-anchor="middle" class="svg-t">Local model</text><text x="540" y="50" text-anchor="middle" class="svg-s">weights in VRAM</text>
-              <line x1="100" y1="58" x2="100" y2="390" class="svg-line" stroke-dasharray="4 4"/>
-              <line x1="320" y1="58" x2="320" y2="390" class="svg-line" stroke-dasharray="4 4"/>
-              <line x1="540" y1="58" x2="540" y2="390" class="svg-line" stroke-dasharray="4 4"/>
-              <line x1="104" y1="96" x2="314" y2="96" class="svg-accent" marker-end="url(#a2)"/><text x="110" y="88" class="svg-mono">1 POST /v1/messages</text>
-              <line x1="324" y1="132" x2="534" y2="132" class="svg-accent" marker-end="url(#a2)"/><text x="330" y="124" class="svg-s">2 prompt + tool schemas</text>
-              <line x1="536" y1="168" x2="326" y2="168" class="svg-green" marker-end="url(#a3)"/><text x="330" y="160" class="svg-mono">3 tool_use: Edit</text>
-              <line x1="316" y1="204" x2="106" y2="204" class="svg-green" marker-end="url(#a3)"/><text x="110" y="196" class="svg-s">4 Anthropic-format reply</text>
-              <rect x="30" y="220" width="140" height="48" rx="6" class="svg-chip" style="stroke:#fbbf24"/><text x="100" y="240" text-anchor="middle" class="svg-t">5 run tool</text><text x="100" y="258" text-anchor="middle" class="svg-s">edit file, run bash</text>
-              <line x1="104" y1="296" x2="314" y2="296" class="svg-accent" marker-end="url(#a2)"/><text x="110" y="288" class="svg-mono">6 tool_result</text>
-              <line x1="324" y1="324" x2="534" y2="324" class="svg-accent" marker-end="url(#a2)"/>
-              <line x1="536" y1="350" x2="326" y2="350" class="svg-green" marker-end="url(#a3)"/>
-              <line x1="316" y1="376" x2="106" y2="376" class="svg-green" marker-end="url(#a3)"/><text x="110" y="368" class="svg-s">7 final answer</text>
-              <text x="320" y="412" text-anchor="middle" class="svg-s">Every hop stays on localhost. Claude Code runs the tools; the model only decides which tool to call.</text>
-            </svg>
-          </div>
-          <div class="diagram-caption">Figure 3. Sequence trace of Claude Code driving tool executions via Ollama's Messages API endpoint.</div>
-        </div>
-
-        <p class="article-p">The second pattern keeps Claude in the cloud and gives it a local model as a tool through the Model Context Protocol (MCP). <a href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener noreferrer">Claude Code's MCP documentation</a> shows how to register a local stdio server with <code>claude mcp add</code>. The server reads a file on disk, asks the local model to summarise or classify it, and returns only the result. Claude does the planning and hard reasoning, while bulk reading and private documents stay on your machine, as Figure 4 shows.</p>
-
-        <!-- Figure 4 -->
-        <div class="diagram-container">
-          <div class="fig-scroll">
-            <svg viewBox="0 0 640 430" role="img" aria-labelledby="route-title route-desc" style="background:#090d16;border-radius:8px;">
-              <title id="route-title">The hybrid routing pattern</title>
-              <desc id="route-desc">Decision flowchart routing private/bulk tasks to local models and complex reasoning to Claude.</desc>
-              <defs><marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker></defs>
-              <rect x="250" y="12" width="140" height="40" rx="20" class="svg-box"/><text x="320" y="37" text-anchor="middle" class="svg-t">New task</text>
-              <line x1="320" y1="52" x2="320" y2="74" class="svg-line" marker-end="url(#a4)"/>
-              <polygon points="320,76 430,122 320,168 210,122" class="svg-box" style="stroke:#38bdf8"/>
-              <text x="320" y="118" text-anchor="middle" class="svg-t">Private data</text><text x="320" y="136" text-anchor="middle" class="svg-t">involved?</text>
-              <line x1="430" y1="122" x2="470" y2="122" class="svg-line" marker-end="url(#a4)"/><text x="440" y="114" class="svg-s">yes</text>
-              <rect x="472" y="98" width="150" height="48" rx="8" class="svg-box" style="stroke:#34d399"/><text x="547" y="118" text-anchor="middle" class="svg-t">Local only</text><text x="547" y="136" text-anchor="middle" class="svg-s">no cloud fallback</text>
-              <line x1="320" y1="168" x2="320" y2="194" class="svg-line" marker-end="url(#a4)"/><text x="328" y="186" class="svg-s">no</text>
-              <polygon points="320,196 440,244 320,292 200,244" class="svg-box" style="stroke:#38bdf8"/>
-              <text x="320" y="238" text-anchor="middle" class="svg-t">Hard reasoning or</text><text x="320" y="256" text-anchor="middle" class="svg-t">long agentic run?</text>
-              <line x1="440" y1="244" x2="470" y2="244" class="svg-line" marker-end="url(#a4)"/><text x="444" y="236" class="svg-s">yes</text>
-              <rect x="472" y="220" width="150" height="48" rx="8" class="svg-box" style="stroke:#a5b4fc"/><text x="547" y="240" text-anchor="middle" class="svg-t">Claude (cloud)</text><text x="547" y="258" text-anchor="middle" class="svg-s">Sonnet or Opus</text>
-              <line x1="200" y1="244" x2="174" y2="244" class="svg-line" marker-end="url(#a4)"/><text x="176" y="236" class="svg-s">no</text>
-              <rect x="18" y="220" width="154" height="48" rx="8" class="svg-box" style="stroke:#34d399"/><text x="95" y="240" text-anchor="middle" class="svg-t">Local first</text><text x="95" y="258" text-anchor="middle" class="svg-s">Claude on failure</text>
-              <path d="M547,268 L547,330 L330,330" class="svg-dash" marker-end="url(#a4)"/>
-              <text x="440" y="322" text-anchor="middle" class="svg-s">MCP tool call</text>
-              <rect x="160" y="306" width="168" height="52" rx="8" class="svg-box" style="stroke:#fbbf24"/><text x="244" y="328" text-anchor="middle" class="svg-t">Local model tool</text><text x="244" y="346" text-anchor="middle" class="svg-s">summarise, classify</text>
-              <text x="320" y="396" text-anchor="middle" class="svg-s">Raw files stay local. Claude receives only the summary or label the tool returns.</text>
-            </svg>
-          </div>
-          <div class="diagram-caption">Figure 4. Hybrid routing topology balancing enterprise data sovereignty with frontier reasoning.</div>
-        </div>
-
-        <!-- Interactive Widget 4: Config Generator -->
-        <div class="widget" id="w-config">
-          <h4>Dynamic Client Configuration Generator</h4>
-          <p class="wdesc">Generate instant, tested configuration snippets for OpenCode JSON, Claude Code environment wrappers, and curl tests.</p>
-          <div class="grid">
-            <div class="field"><label for="cg-rt">Server runtime</label>
-              <select id="cg-rt"><option value="ollama" selected>Ollama</option><option value="lmstudio">LM Studio</option><option value="llamacpp">llama.cpp (llama-server)</option><option value="vllm">vLLM</option></select>
-            </div>
-            <div class="field"><label for="cg-host">Host</label><input id="cg-host" type="text" value="localhost" spellcheck="false" autocomplete="off"></div>
-            <div class="field"><label for="cg-port">Port</label><input id="cg-port" type="number" min="1" max="65535" value="11434"></div>
-            <div class="field"><label for="cg-model">Served model tag</label><input id="cg-model" type="text" value="qwen3.8:27b" spellcheck="false" autocomplete="off"></div>
-          </div>
-          <div id="cg-out" style="margin-top:1.25rem;"></div>
-        </div>
-      </section>
-
-      <!-- Section 8: Six Hands-On Tutorials -->
-      <section class="content-card" id="tutorials">
-        <h2><span class="sec-num">08</span>Six Hands-On Tutorials</h2>
-        <p class="article-p">The tutorials build on each other, but each one runs on its own. Basic tutorials need a 16 GB GPU or better, intermediate ones a 24 GB card for the suggested model, and the advanced ones at least 16 GB of VRAM plus 64 GB of system RAM. Use the filter to show one level at a time.</p>
-
-        <!-- Interactive Widget 5: Tutorial Filter -->
-        <div class="widget" id="w-filter" style="margin-bottom:2rem;">
-          <h4>Tutorial Level Filter</h4>
-          <p class="wdesc">Filter tutorials by complexity and hardware footprint.</p>
-          <span class="seg" role="group" aria-label="Tutorial level">
-            <button type="button" data-level="all" aria-pressed="true">All</button>
-            <button type="button" data-level="basic" aria-pressed="false">Basic</button>
-            <button type="button" data-level="intermediate" aria-pressed="false">Intermediate</button>
-            <button type="button" data-level="advanced" aria-pressed="false">Advanced</button>
-          </span>
-        </div>
-
-        <!-- Tutorial 1 -->
-        <article class="tutorial" data-level="basic" id="tut-1">
-          <h3>Tutorial 1: Your First Local Model In Ten Minutes <span class="badge basic">Basic</span></h3>
-          <div class="prereq">Prerequisites: Ubuntu 22.04 or 24.04 (or Debian 12), NVIDIA GPU with 8 GB+ VRAM and proprietary driver installed, &asymp;10 GB free disk space.</div>
-          <p class="article-p">This tutorial installs Ollama as a system service, downloads Gemma 4 E4B, an 8B model counting its embeddings, and talks to it from the terminal and over HTTP.</p>
-          <ol class="article-list">
-            <li>Install Ollama and confirm the service is running.</li>
-            <li>Pull the model and ask it a question.</li>
-            <li>Call the native API and the OpenAI-compatible API with <code>curl</code>.</li>
-          </ol>
-          <div class="code">
-            <div class="code-head"><span>bash &bull; tutorial-1.sh</span><button class="copy" type="button">Copy</button></div>
-            <pre><code># Step 1: install Ollama with the official script.
+<main class="container">
+<header class="hero">
+<a aria-label="The Digital Futurist Home" href="../index.html" style="display:inline-block;text-decoration:none;">
+<img alt="The Digital Futurist logo" class="hero-logo" height="110" src="../assets/digital-futurist-logo.jpg" width="110"/>
+</a>
+<div class="hero-badge">Autonomous Linux Infrastructure • Local LLMs &amp; Claude</div>
+<h1 class="hero-title">Running Local LLMs on Linux: From 8B to 120B Parameters, with OpenCode and Claude</h1>
+<p class="hero-desc">Pick a model that fits your hardware, price the next upgrade in dollars and rupees, and wire the model into OpenCode and Claude Code with working configs.</p>
+<p class="hero-byline">By <strong>Thomas Cherickal</strong>, Generative AI Consultant, <strong>The Digital Futurist</strong> • 22 October 2026 <span class="reading">• about 22 minutes to read, longer with the tutorials</span></p>
+<div class="pills">
+<span class="pill">8B to 120B Parameters</span>
+<span class="pill">OpenCode &amp; Claude Code</span>
+<span class="pill">Hardware Pricing USD/INR</span>
+<span class="pill">Ollama &amp; vLLM</span>
+<span class="pill">llama.cpp &amp; LM Studio</span>
+<span class="pill">6 Hands-On Tutorials</span>
+</div>
+</header>
+<article class="article-body">
+<!-- Table of Contents -->
+<section class="content-card toc-card">
+<h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
+<ol aria-label="Table of contents" class="toc-list">
+<li><a href="#introduction">01. Why Local LLMs Matter Now</a></li>
+<li><a href="#advantages">02. Advantages, Trade-Offs &amp; Cost Savings</a></li>
+<li><a href="#model-families">03. Six Model Families From 8B To 120B</a></li>
+<li><a href="#hardware">04. The Hardware You Need &amp; What It Costs</a></li>
+<li><a href="#tools">05. Five Tools That Run LLMs Locally</a></li>
+<li><a href="#opencode">06. Local LLMs With OpenCode On Linux</a></li>
+<li><a href="#claude">07. Local LLMs With Claude Code &amp; Claude</a></li>
+<li><a href="#tutorials">08. Six Hands-On Tutorials (Basic to Advanced)</a></li>
+<li><a href="#conclusion">09. Choosing Your Setup</a></li>
+<li><a href="#references">10. References (30 Verified Citations)</a></li>
+</ol>
+</section>
+<!-- Section 1: Introduction -->
+<section class="content-card" id="introduction">
+<h2><span class="sec-num">01</span>Introduction: Why Local LLMs Matter Now</h2>
+<p class="article-p">By the end of this guide you will have a language model running on your own Linux machine and connected to two coding agents, OpenCode and Claude Code. You will also know which model fits the hardware you already own, what the next hardware step costs in October 2026, and when paying for Claude's API is still the cheaper option.</p>
+<p class="article-p">Running a model locally means the weights sit on your disk and your GPU or CPU computes every token. A prompt goes nowhere unless you send it somewhere. Two changes this year made the setup far more practical. In January, <a href="https://ollama.com/blog/claude" rel="noopener noreferrer" target="_blank">Ollama 0.14 added Anthropic Messages API compatibility</a>, and LM Studio, vLLM and llama.cpp now ship their own <code>/v1/messages</code> endpoints, so Claude Code can talk to a local server after you set three environment variables. Small models also improved. Alibaba reports that <a href="https://huggingface.co/Qwen/Qwen3.8-27B" rel="noopener noreferrer" target="_blank">Qwen3.8-27B scores 61.7 on SWE-bench Pro</a> when run inside the Claude Code harness, and Ollama packages it as an 18 GB download.</p>
+<p class="article-p">Hardware is the constraint. A memory shortage has pushed GPU and unified-memory prices far above their launch levels. The RTX 5090 launched at $1,999, yet its lowest new asking price in the US was $4,920.99 on 11 October, and the cheapest card in stock in India costs about ₹7.49 lakh. Every tier in this guide carries a current price so you can decide with real numbers rather than launch-day ones.</p>
+<p class="article-p">The sections below cover six model families from 8B to 120B parameters, five runtimes, the OpenCode and Claude Code setups, and six tutorials split into basic, intermediate and advanced levels. Five small tools run in the page itself: a memory calculator, a break-even calculator, a model picker, a config generator and a tutorial filter. None of them sends data anywhere. Commands target Ubuntu and Debian, with Fedora and Arch notes only where a command changes.</p>
+</section>
+<!-- Section 2: Advantages, Trade-Offs And Cost Savings -->
+<section class="content-card" id="advantages">
+<h2><span class="sec-num">02</span>Advantages, Trade-Offs And Cost Savings</h2>
+<p class="article-p">These are the advantages that hold up in practice:</p>
+<ul class="article-list">
+<li><strong>Privacy and data residency:</strong> source code, contracts and customer records stay on hardware you own, and no third-party processor sits in the request path.</li>
+<li><strong>Offline use:</strong> a laptop on a train or a machine in an air-gapped lab behaves exactly as it does on the office network.</li>
+<li><strong>No rate limits:</strong> a batch job runs as fast as your GPU allows, with no HTTP 429 responses and no quota resets to wait for.</li>
+<li><strong>Predictable cost:</strong> the hardware is a one-off purchase, and electricity is the only running expense.</li>
+<li><strong>Latency:</strong> there is no network hop, so time to first token depends only on your machine and the prompt length.</li>
+<li><strong>Customisation:</strong> you can fine-tune, change chat templates, pick a quantization and keep one model version for years.</li>
+<li><strong>Vendor independence:</strong> a downloaded Apache 2.0 model such as Gemma 4, gpt-oss or Qwen3.8-27B cannot be withdrawn or repriced.</li>
+<li><strong>Compliance evidence:</strong> an auditor can inspect the exact model file and server version that produced an output.</li>
+</ul>
+<p class="article-p">Open models still trail the frontier. In <a href="https://pinggy.io/blog/best_open_source_self_hosted_llms_for_coding/" rel="noopener noreferrer" target="_blank">Pinggy's October 2026 roundup of Artificial Analysis scores</a>, Claude Opus leads at 58, the best open-weight model scores 46, and Qwen3.8-27B, the strongest model that fits one 24 GB card, scores 34. Long agentic sessions expose that gap first, because small errors compound over dozens of tool calls. Maintenance also becomes your job: drivers, CUDA versions, context settings and model updates all need attention.</p>
+<h3>A Worked Break-Even Example</h3>
+<p class="article-p">Take a team of three developers running agentic coding sessions on Claude Sonnet 5.5, which <a href="https://platform.claude.com/docs/en/about-claude/pricing" rel="noopener noreferrer" target="_blank">Anthropic's pricing page lists at $2 input and $10 output</a> per million tokens. Agent loops resend a lot of context, so assume 300 million input tokens and 30 million output tokens a month. That is 300 × $2 + 30 × $10 = $900 before prompt caching; cache reads cost $0.10 per million on Sonnet 5.5, so a well-cached workload pays less.</p>
+<p class="article-p">Now buy a 128 GB Framework Desktop for $3,449 and spread it over 36 months, which is $95.81 a month. At an average 200 W for eight hours a day, it draws 48 kWh a month. At the <a href="https://www.eia.gov/outlooks/steo/report/elec_coal_renew.php" rel="noopener noreferrer" target="_blank">EIA's 2026 US residential average of 18.2 cents per kWh</a>, that is $8.74. In India, using an assumed ₹8 per kWh for a household in a higher consumption slab, it is ₹384. Check your own DISCOM schedule, because slabs vary by state and usage.</p>
+<p class="article-p">A local model will not replace Sonnet 5.5 on every task, so assume it absorbs 60 percent of the tokens. The cloud bill falls to $360 and the team saves $540 a month. The break-even formula is:</p>
+<p class="formula" style="font-size:0.95rem;color:var(--gold);margin-bottom:1rem;">months to break even = hardware cost ÷ (monthly cloud savings − monthly electricity)</p>
+<p class="article-p">In the US that gives $3,449 ÷ ($540 − $8.74) = 6.5 months. In India the electricity term is smaller, so the payback is about the same, although import duty raises the hardware price. Run the same arithmetic on Claude Haiku 5.5, priced at $0.10 input and $0.50 output for prompts up to 100,000 tokens, and the picture flips. The whole 330-million-token workload costs $45 a month, a 60 percent shift saves $27, and the box would need more than 15 years to pay for itself. For cheap, short prompts, buy local hardware for privacy or offline needs, not to save money.</p>
+<div class="table-wrap">
+<table class="data-table">
+<thead>
+<tr><th>Line item</th><th>Cloud only (Sonnet 5.5)</th><th>Hybrid, 60% local</th></tr>
+</thead>
+<tbody>
+<tr><td>API spend per month</td><td>$900</td><td>$360</td></tr>
+<tr><td>Hardware, amortised over 36 months</td><td>$0</td><td>$95.81</td></tr>
+<tr><td>Electricity (US, 48 kWh at $0.182)</td><td>$0</td><td>$8.74</td></tr>
+<tr><td>Total monthly cost</td><td>$900</td><td>$464.55</td></tr>
+<tr><td>Break-even on the $3,449 purchase</td><td>Not applicable</td><td>6.5 months</td></tr>
+</tbody>
+</table>
+</div>
+<p class="article-p">The hybrid split is the pattern this guide recommends: local models handle private, bulk and routine work, and Claude handles the hardest reasoning and the longest agentic runs. Tutorial 6 builds that split with an MCP server and a router. Try your own numbers below.</p>
+<!-- Interactive Widget 1: Break-even Calculator -->
+<div class="widget" id="w-breakeven">
+<h4>Local Vs Cloud Break-Even Calculator</h4>
+<p class="wdesc">Compares a monthly cloud API bill with amortised local hardware plus electricity, and estimates the payback period.</p>
+<div style="margin-bottom:14px">
+<span aria-label="Currency" class="seg" role="group">
+<button aria-pressed="true" data-cur="USD" type="button">USD $</button>
+<button aria-pressed="false" data-cur="INR" type="button">INR ₹</button>
+</span>
+</div>
+<div class="grid">
+<div class="field"><label for="be-in">Input tokens / mo (millions)</label><input id="be-in" min="0" step="1" type="number" value="300"/></div>
+<div class="field"><label for="be-out">Output tokens / mo (millions)</label><input id="be-out" min="0" step="1" type="number" value="30"/></div>
+<div class="field"><label for="be-pin">Cloud input $/M tokens</label><input id="be-pin" min="0" step="0.01" type="number" value="2"/></div>
+<div class="field"><label for="be-pout">Cloud output $/M tokens</label><input id="be-pout" min="0" step="0.01" type="number" value="10"/></div>
+<div class="field"><label for="be-share">Share shifted local (%)</label><input id="be-share" max="100" min="0" step="5" type="number" value="60"/></div>
+<div class="field"><label for="be-hw">Hardware purchase (USD)</label><input id="be-hw" min="0" step="50" type="number" value="3449"/></div>
+<div class="field"><label for="be-months">Amortisation (months)</label><input id="be-months" min="1" step="1" type="number" value="36"/></div>
+<div class="field"><label for="be-watts">Average power (watts)</label><input id="be-watts" min="0" step="10" type="number" value="200"/></div>
+<div class="field"><label for="be-hours">Hours used / day</label><input id="be-hours" max="24" min="0" step="1" type="number" value="8"/></div>
+<div class="field"><label for="be-tariff" id="be-tariff-label">Electricity tariff ($/kWh)</label><input id="be-tariff" min="0" step="0.01" type="number" value="0.182"/></div>
+</div>
+<div aria-live="polite" class="out" id="be-out-box"></div>
+<p class="formula">Prices are entered in USD, as published. INR display converts at ₹88 per USD. Break-even = hardware ÷ (cloud savings − electricity). Presets: Sonnet 5.5 $2/$10, Opus 5.5 $4/$20, Haiku 5.5 $0.10/$0.50 per million tokens.</p>
+</div>
+</section>
+<!-- Section 3: Six Model Families -->
+<section class="content-card" id="model-families">
+<h2><span class="sec-num">03</span>Six Model Families From 8B To 120B</h2>
+<p class="article-p">Two terms come up in every row of the table below. A <strong>dense model</strong> runs every parameter for every token. A <strong>mixture-of-experts (MoE) model</strong> sends each token through a few expert blocks, so its active parameter count sets the compute per token while its total count still sets the memory it needs. <strong>Quantization</strong> stores weights in fewer bits: Q4_K_M is a popular 4-bit GGUF format for llama.cpp-based tools, and MXFP4 is the 4-bit format that gpt-oss was trained in.</p>
+<h3>Qwen</h3>
+<p class="article-p">Alibaba released the open weights of <a href="https://huggingface.co/Qwen/Qwen3.8-27B" rel="noopener noreferrer" target="_blank">Qwen3.8-27B on Hugging Face</a> in August 2026 under Apache 2.0. It is a 27B dense vision-language model with a native context of 262,144 tokens that extends to about one million with YaRN scaling. It thinks before answering by default, and a <code>reasoning_effort</code> setting trades depth for speed. The <a href="https://ollama.com/library/qwen3.8" rel="noopener noreferrer" target="_blank">qwen3.8 entry in Ollama's library</a> lists tools, thinking and vision support at 18 GB. For agentic coding on one 24 GB card it is the default pick in this guide.</p>
+<h3>Gemma</h3>
+<p class="article-p">Google launched <a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" rel="noopener noreferrer" target="_blank">Gemma 4 under an Apache 2.0 licence</a> on 2 April 2026. The family includes E2B and E4B edge models, a 26B MoE that activates 3.8B parameters per token and a 31B dense model, and Ollama also carries a 12B tag. The workstation sizes take 256K tokens of context, support native function calling and accept images. The 26B MoE generates faster because so few parameters run per token, while the 31B dense model keeps more quality.</p>
+<h3>Mistral</h3>
+<p class="article-p">Mistral covers both ends of the ladder under Apache 2.0. <a href="https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512" rel="noopener noreferrer" target="_blank">The Ministral 3 8B model card</a> lists an 8.4B language model plus a 0.4B vision encoder, native function calling and a 256K context window, and says the model fits in 12 GB of VRAM in FP8. A 14B sibling follows the same design. At the top, <a href="https://huggingface.co/mistralai/Mistral-Small-4-119B-2603" rel="noopener noreferrer" target="_blank">Mistral Small 4 on Hugging Face</a> is a 119B MoE with 6.5B active parameters, 128 experts and a 256K context, and it merges chat, reasoning and agentic coding into one model.</p>
+<h3>Llama</h3>
+<p class="article-p"><a href="https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct" rel="noopener noreferrer" target="_blank">Meta's Llama 3.3 70B Instruct</a> is the dense 70B option. It has a 128K context, eight officially supported languages including Hindi, and tool calling. Its licence is the Llama 3.3 Community License, which requires "Built with Llama" attribution and sets a 700-million-monthly-user threshold, so read it before shipping a product. At Q4_K_M it needs about 42 GB for weights alone, which puts it on a dual-GPU build or a 128 GB unified-memory machine.</p>
+<h3>gpt-oss</h3>
+<p class="article-p">OpenAI's two open models ship under Apache 2.0. The <a href="https://huggingface.co/openai/gpt-oss-120b" rel="noopener noreferrer" target="_blank">gpt-oss-120b model card</a> gives 117B total and 5.1B active parameters for the large model and 21B total and 3.6B active for gpt-oss-20b. Both were post-trained with MXFP4 weights, so the 120B model fits one 80 GB GPU and the 20B model runs within 16 GB. Each exposes low, medium and high reasoning effort and handles function calling. Thanks to that small active count, gpt-oss-120b runs at usable speeds even when most of its experts sit in system RAM, which Tutorial 5 relies on.</p>
+<h3>Nemotron</h3>
+<p class="article-p"><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4" rel="noopener noreferrer" target="_blank">NVIDIA's Nemotron 3 Super model card</a> describes a 120B hybrid MoE with 12B active parameters and up to one million tokens of context, released under the NVIDIA Nemotron Open Model License rather than Apache 2.0. The NVFP4 build lists a single DGX Spark as a supported minimum. Choose it for long-document and agent workloads on NVIDIA hardware where the licence suits you.</p>
+<div class="table-wrap">
+<table class="data-table">
+<thead>
+<tr><th>Tier</th><th>Models</th><th>Type</th><th>Licence</th><th>Context</th><th>Run this</th></tr>
+</thead>
+<tbody>
+<tr><td>~8B</td><td>Ministral 3 8B, Gemma 4 E4B</td><td>Dense</td><td>Apache 2.0</td><td>256K / 128K</td><td>Q4_K_M GGUF or FP8</td></tr>
+<tr><td>~14B</td><td>Ministral 3 14B, Gemma 4 12B</td><td>Dense</td><td>Apache 2.0</td><td>256K</td><td>Q4_K_M GGUF</td></tr>
+<tr><td>~20-32B</td><td>gpt-oss-20b, Gemma 4 26B A4B, Qwen3.8-27B, Gemma 4 31B</td><td>MoE (3.6B, 3.8B active) &amp; dense</td><td>Apache 2.0</td><td>128K-262K</td><td>MXFP4 for gpt-oss, Q4_K_M for rest</td></tr>
+<tr><td>~70B</td><td>Llama 3.3 70B Instruct</td><td>Dense</td><td>Llama 3.3 Community</td><td>128K</td><td>Q4_K_M GGUF</td></tr>
+<tr><td>~120B</td><td>gpt-oss-120b, Mistral Small 4, Nemotron 3 Super</td><td>MoE (5.1B, 6.5B, 12B active)</td><td>Apache 2.0 / NVIDIA Open Model</td><td>128K-1M</td><td>MXFP4, Q4_K_M, NVFP4</td></tr>
+</tbody>
+</table>
+</div>
+<!-- Interactive Widget 2: Model Picker -->
+<div class="widget" id="w-picker">
+<h4>Model Recommendation Engine</h4>
+<p class="wdesc">Choose your available memory and primary workload to surface the best-fitting open models, quantizations, and runtimes.</p>
+<div class="grid">
+<div class="field"><label for="mp-mem">GPU VRAM or unified memory</label>
+<select id="mp-mem">
+<option value="8">8 GB</option><option value="12">12 GB</option><option selected="" value="16">16 GB</option><option value="24">24 GB</option><option value="32">32 GB</option><option value="48">48 GB (2 × 24 GB)</option><option value="64">64 GB</option><option value="96">96 GB</option><option value="128">128 GB unified</option>
+</select>
+</div>
+<div class="field"><label for="mp-use">Main workload</label>
+<select id="mp-use"><option value="coding">Coding agents</option><option value="chat">Chat and writing</option><option value="reasoning">Reasoning and maths</option><option value="tools">Tool calling and automation</option></select>
+</div>
+<div class="field"><label for="mp-ram">System RAM for MoE offload</label>
+<select id="mp-ram"><option value="32">32 GB</option><option selected="" value="64">64 GB</option><option value="96">96 GB or more</option></select>
+</div>
+</div>
+<div aria-live="polite" class="out" id="mp-out"></div>
+<p class="formula">Fit rule: model weights at the listed quantization plus a 16K-token cache and 2 GB of buffers must fit in memory. With 96 GB of system RAM, gpt-oss-120b also qualifies on a 16 GB card through llama.cpp expert offload.</p>
+</div>
+</section>
+<!-- Section 4: The Hardware You Need And What It Costs -->
+<section class="content-card" id="hardware">
+<h2><span class="sec-num">04</span>The Hardware You Need And What It Costs</h2>
+<p class="article-p">Memory decides what you can run, and memory bandwidth decides how fast it runs. A model needs room for three things: the quantized weights, the KV cache that stores attention state for every token in the context, and compute buffers. <a href="https://github.com/ggml-org/llama.cpp/discussions/15396" rel="noopener noreferrer" target="_blank">The llama.cpp guide to running gpt-oss</a> shows the split clearly: gpt-oss-120b needs 61 GB of model data, 2.7 GB of compute buffers and about 0.3 GB of cache per 8,192 tokens, which comes to 64.9 GB at 32K context.</p>
+<p class="article-p">Context length is the setting people forget. <a href="https://docs.ollama.com/context-length" rel="noopener noreferrer" target="_blank">Ollama's context-length documentation</a> says it defaults to 4K tokens below 24 GiB of VRAM, 32K between 24 and 48 GiB, and 256K above that, and it recommends at least 64,000 tokens for coding tools. A coding agent sends its system prompt and tool schemas with every request, so a 4K window breaks it.</p>
+<p class="article-p">Prices have moved sharply this year, so treat every figure as approximate for October 2026. US figures for new and used GPUs come from <a href="https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/" rel="noopener noreferrer" target="_blank">BuySellRam's October GPU price floors</a>. Indian figures come from <a href="https://gpuprix.com/india/gpus/geforce-rtx-5060-ti-16gb" rel="noopener noreferrer" target="_blank">GPUPrix listings for the RTX 5060 Ti</a> and <a href="https://gpuprix.com/india/gpus/geforce-rtx-5090" rel="noopener noreferrer" target="_blank">the RTX 5090 in India</a>. Where no Indian listing exists, the table converts at ₹88 per dollar; <a href="https://www.runyard.dev/buy/rtx-5060-ti-16gb-price-india.html" rel="noopener noreferrer" target="_blank">Runyard's landed-cost breakdown</a> explains why duty, 18 percent IGST and margins usually add 32 to 55 percent on top. Unified-memory machines are priced from <a href="https://computingforgeeks.com/ryzen-ai-max-395-mini-pc-comparison/" rel="noopener noreferrer" target="_blank">ComputingForGeeks' Ryzen AI Max+ 395 comparison</a> and <a href="https://cryptobriefing.com/nvidia-dgx-spark-64gb-launch/" rel="noopener noreferrer" target="_blank">the DGX Spark price report</a>. Build totals add a CPU, board, RAM, PSU and SSD and are my estimates.</p>
+<!-- Figure 1 -->
+<div class="diagram-container">
+<div class="fig-scroll">
+<svg aria-labelledby="ladder-title ladder-desc" role="img" style="background:#090d16;border-radius:8px;" viewbox="0 0 640 360">
+<title id="ladder-title">The parameter-to-hardware ladder</title>
+<desc id="ladder-desc">Five horizontal bars show estimated memory at 4-bit with a 16K context: 8B about 9 GB, 14B about 13 GB, 27 to 32B about 22 GB, 70B about 52 GB and 120B MoE about 65 GB, each mapped to a hardware class and a starting price.</desc>
+<text class="svg-label" x="20" y="26">MEMORY AT 4-BIT, 16K CONTEXT (1 GB = 6 PX)</text>
+<g>
+<text class="svg-t" x="20" y="66">8B</text>
+<rect fill="#10b981" height="22" rx="4" width="54" x="110" y="50"></rect>
+<text class="svg-t" x="172" y="66">≈ 9 GB</text>
+<text class="svg-s" x="110" y="90">16 GB GPU (RTX 5060 Ti) • from $618 / ₹94,000</text>
+</g>
+<g>
+<text class="svg-t" x="20" y="128">14B</text>
+<rect fill="#14b8a6" height="22" rx="4" width="78" x="110" y="112"></rect>
+<text class="svg-t" x="196" y="128">≈ 13 GB</text>
+<text class="svg-s" x="110" y="152">16 GB GPU, 8K to 16K context • from $618 / ₹94,000</text>
+</g>
+<g>
+<text class="svg-t" x="20" y="190">27-32B</text>
+<rect fill="#0ea5e9" height="22" rx="4" width="132" x="110" y="174"></rect>
+<text class="svg-t" x="250" y="190">≈ 22 GB</text>
+<text class="svg-s" x="110" y="214">24 GB used RTX 3090 • from $1,350 / ≈ ₹1.19 lakh</text>
+</g>
+<g>
+<text class="svg-t" x="20" y="252">70B</text>
+<rect fill="#6366f1" height="22" rx="4" width="312" x="110" y="236"></rect>
+<text class="svg-t" x="430" y="252">≈ 52 GB</text>
+<text class="svg-s" x="110" y="276">128 GB unified (or 2 × 24 GB at 8K) • from $3,449 / ≈ ₹3.04 lakh</text>
+</g>
+<g>
+<text class="svg-t" x="20" y="314">120B MoE</text>
+<rect fill="#8b5cf6" height="22" rx="4" width="390" x="110" y="298"></rect>
+<text class="svg-t" x="508" y="314">≈ 65 GB</text>
+<text class="svg-s" x="110" y="338">128 GB unified, DGX Spark, or 16 GB GPU + 96 GB RAM offload</text>
+</g>
+</svg>
+</div>
+<div class="diagram-caption">Figure 1. The parameter-to-hardware ladder. Memory estimates come from the calculator below at Q4_K_M (MXFP4 for 120B MoE) with 16K context; prices reflect October 2026 listings.</div>
+</div>
+<div class="table-wrap">
+<table class="data-table">
+<thead>
+<tr><th>Tier</th><th>Memory needed (4-bit, 16-32K)</th><th>Recommended Linux hardware</th><th>Device price (USD)</th><th>Device price (INR)</th><th>Estimated full build</th></tr>
+</thead>
+<tbody>
+<tr><td>~8B</td><td>8-11 GB</td><td>RTX 5060 Ti 16GB</td><td>$618 new</td><td>₹94,000</td><td>$1,500-1,900 / ₹1.6-2.0 lakh</td></tr>
+<tr><td>~14B</td><td>12-16 GB</td><td>RTX 5060 Ti 16GB (keep context at 8-16K)</td><td>$618 new</td><td>₹94,000</td><td>$1,500-1,900 / ₹1.6-2.0 lakh</td></tr>
+<tr><td>~20-32B</td><td>16-26 GB</td><td>Used RTX 3090 24GB, or RTX 5090 32GB</td><td>$1,350 used; $4,921 new</td><td>≈ ₹1.19 lakh; ₹7.49 lakh</td><td>$2,400-3,000 (3090) / ≈ ₹2.5-3.2L</td></tr>
+<tr><td>~70B</td><td>45-55 GB</td><td>2 × used RTX 3090 (8K ctx) or Framework 128GB</td><td>$2,700 for 2 cards; $3,449</td><td>≈ ₹2.38 lakh; ≈ ₹3.04 lakh</td><td>$4,200-5,000 dual-GPU / ₹4.4-5.3L</td></tr>
+<tr><td>~120B</td><td>64-75 GB</td><td>Framework 128GB, DGX Spark, or 5060 Ti + 96GB DDR5</td><td>$3,449; $6,950; $618 + RAM</td><td>≈ ₹3.04L; ≈ ₹6.12L; ₹94k + RAM</td><td>$3,449 to $6,950 / ≈ ₹3.0-6.1L</td></tr>
+</tbody>
+</table>
+</div>
+<div class="callout warn">
+<div class="ctitle">Hardware Market Warning</div>
+<p>DRAM and GPU prices have risen by roughly half within a few months this year. The 128 GB DGX Spark went from $4,699 to $6,950, and the RTX 5090's lowest new asking price rose 64 percent between August and October. Check live market quotes before purchasing.</p>
+</div>
+<p class="article-p">A used RTX 3090 remains the cheapest route to 24 GB, which is the size where Qwen3.8-27B and Gemma 4 31B become comfortable. For 70B and 120B models, a 128 GB unified-memory box trades speed for capacity: the DGX Spark's memory runs at 273 GB/s, a fraction of a desktop GPU's bandwidth, so dense 70B models generate slowly while MoE models with few active parameters stay quick.</p>
+<!-- Interactive Widget 3: VRAM Calculator -->
+<div class="widget" id="w-vram">
+<h4>VRAM &amp; Memory Allocation Calculator</h4>
+<p class="wdesc">Estimates weight footprint, KV-cache headroom, and total memory required, identifying the precise matching hardware tier.</p>
+<div class="grid">
+<div class="field"><label for="vr-params">Parameters (billions)</label><input id="vr-params" max="400" min="1" step="1" type="number" value="27"/></div>
+<div class="field"><label for="vr-quant">Quantization</label>
+<select id="vr-quant"><option value="16">FP16 / BF16</option><option value="8.5">Q8_0</option><option value="6.56">Q6_K</option><option value="5.69">Q5_K_M</option><option selected="" value="4.85">Q4_K_M</option><option value="4.25">MXFP4</option></select>
+</div>
+<div class="field"><label for="vr-ctx">Context window (tokens)</label>
+<select id="vr-ctx"><option value="4096">4K</option><option value="8192">8K</option><option selected="" value="16384">16K</option><option value="32768">32K</option><option value="65536">64K</option><option value="131072">128K</option></select>
+</div>
+<div class="field"><label for="vr-arch">Architecture</label>
+<select id="vr-arch"><option selected="" value="dense">Dense</option><option value="moe">MoE (few active parameters)</option></select>
+</div>
+</div>
+<div aria-live="polite" class="out" id="vr-out"></div>
+<p class="formula" id="vr-formula"></p>
+</div>
+</section>
+<!-- Section 5: Five Tools That Run LLMs Locally -->
+<section class="content-card" id="tools">
+<h2><span class="sec-num">05</span>Five Tools That Run LLMs Locally</h2>
+<p class="article-p">Each tool below loads model weights, runs them on your GPU and exposes an HTTP API. They differ in interface, API dialect and how many users they serve at once.</p>
+<!-- Figure 2 -->
+<div class="diagram-container">
+<div class="fig-scroll">
+<svg aria-labelledby="stack-title stack-desc" role="img" style="background:#090d16;border-radius:8px;" viewbox="0 0 640 470">
+<title id="stack-title">The local inference stack</title>
+<desc id="stack-desc">Five stacked layers. Clients call an API layer, which calls servers, which sit on runtimes, loading weights.</desc>
+<defs><marker id="arr" markerheight="7" markerwidth="7" orient="auto-start-reverse" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#0ea5e9"></path></marker></defs>
+<rect class="svg-box" height="76" rx="10" width="600" x="20" y="10"></rect>
+<text class="svg-label" x="36" y="32">CLIENTS</text>
+<rect class="svg-chip" height="32" rx="6" width="170" x="36" y="42"></rect><text class="svg-t" text-anchor="middle" x="121" y="63">OpenCode</text>
+<rect class="svg-chip" height="32" rx="6" width="170" x="235" y="42"></rect><text class="svg-t" text-anchor="middle" x="320" y="63">Claude Code</text>
+<rect class="svg-chip" height="32" rx="6" width="170" x="434" y="42"></rect><text class="svg-t" text-anchor="middle" x="519" y="63">Python / curl</text>
+<line class="svg-accent" marker-end="url(#arr)" x1="320" x2="320" y1="88" y2="104"></line>
+<rect class="svg-box" height="76" rx="10" width="600" x="20" y="106"></rect>
+<text class="svg-label" x="36" y="128">API LAYER</text>
+<rect class="svg-chip" height="32" rx="6" width="272" x="36" y="138"></rect><text class="svg-mono" text-anchor="middle" x="172" y="159">OpenAI • /v1/chat/completions</text>
+<rect class="svg-chip" height="32" rx="6" style="stroke:#10b981" width="272" x="332" y="138"></rect><text class="svg-mono" text-anchor="middle" x="468" y="159">Anthropic • /v1/messages</text>
+<line class="svg-accent" marker-end="url(#arr)" x1="320" x2="320" y1="184" y2="200"></line>
+<rect class="svg-box" height="76" rx="10" width="600" x="20" y="202"></rect>
+<text class="svg-label" x="36" y="224">SERVER (DEFAULT PORT)</text>
+<rect class="svg-chip" height="32" rx="6" width="108" x="36" y="234"></rect><text class="svg-s" style="fill:#fafafa" text-anchor="middle" x="90" y="255">Ollama :11434</text>
+<rect class="svg-chip" height="32" rx="6" width="108" x="150" y="234"></rect><text class="svg-s" style="fill:#fafafa" text-anchor="middle" x="204" y="255">LM Studio :1234</text>
+<rect class="svg-chip" height="32" rx="6" width="108" x="264" y="234"></rect><text class="svg-s" style="fill:#fafafa" text-anchor="middle" x="318" y="255">Jan :1337</text>
+<rect class="svg-chip" height="32" rx="6" width="116" x="378" y="234"></rect><text class="svg-s" style="fill:#fafafa" text-anchor="middle" x="436" y="255">llama-server :8080</text>
+<rect class="svg-chip" height="32" rx="6" width="104" x="500" y="234"></rect><text class="svg-s" style="fill:#fafafa" text-anchor="middle" x="552" y="255">vLLM :8000</text>
+<line class="svg-accent" marker-end="url(#arr)" x1="320" x2="320" y1="280" y2="296"></line>
+<rect class="svg-box" height="76" rx="10" width="600" x="20" y="298"></rect>
+<text class="svg-label" x="36" y="320">RUNTIME AND GPU BACKEND</text>
+<rect class="svg-chip" height="32" rx="6" width="272" x="36" y="330"></rect><text class="svg-t" text-anchor="middle" x="172" y="351">llama.cpp • CUDA, ROCm, Vulkan</text>
+<rect class="svg-chip" height="32" rx="6" width="272" x="332" y="330"></rect><text class="svg-t" text-anchor="middle" x="468" y="351">vLLM engine • CUDA, ROCm</text>
+<line class="svg-accent" marker-end="url(#arr)" x1="320" x2="320" y1="376" y2="392"></line>
+<rect class="svg-box" height="66" rx="10" style="stroke:#fbbf24" width="600" x="20" y="394"></rect>
+<text class="svg-label" style="fill:#fbbf24" x="36" y="416">WEIGHTS ON DISK</text>
+<text class="svg-mono" x="36" y="444">GGUF: Q4_K_M, Q8_0, MXFP4</text>
+<text class="svg-mono" x="332" y="444">safetensors: BF16, FP8, NVFP4</text>
+</svg>
+</div>
+<div class="diagram-caption">Figure 2. The local inference stack. Ollama, LM Studio and Jan wrap llama.cpp; vLLM brings its own high-throughput engine.</div>
+</div>
+<p class="article-p"><strong>Ollama</strong> is the quickest start. One script installs a CLI, a background service and a model registry, and <code>ollama run</code> downloads and starts a model in one step. It serves an OpenAI-compatible API under <code>/v1</code> and, since version 0.14, an Anthropic-compatible one, and its <code>ollama launch</code> command configures Claude Code and OpenCode for you. <a href="https://docs.ollama.com/linux" rel="noopener noreferrer" target="_blank">Ollama's Linux install guide</a> covers NVIDIA and AMD ROCm setups.</p>
+<p class="article-p"><strong>LM Studio</strong> is a desktop app with a model browser, per-model settings and a headless <code>lms</code> command line for servers. It exposes an OpenAI-compatible API on port 1234, and <a href="https://lmstudio.ai/blog/claudecode" rel="noopener noreferrer" target="_blank">LM Studio's Claude Code announcement</a> introduced a <code>/v1/messages</code> endpoint in version 0.4.1, documented on <a href="https://lmstudio.ai/docs/developer/anthropic-compat" rel="noopener noreferrer" target="_blank">its Anthropic compatibility page</a>. It suits people who want to compare quantizations and sampling settings without editing files.</p>
+<p class="article-p"><strong>llama.cpp</strong> is the engine underneath most desktop tools, and its <code>llama-server</code> binary is the most configurable server here. <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md" rel="noopener noreferrer" target="_blank">The llama-server README</a> lists OpenAI-compatible chat, responses and embeddings routes plus Anthropic Messages API compatibility, with a default port of 8080. It builds against CUDA, ROCm or Vulkan, and flags such as <code>--n-cpu-moe</code> let a 120B MoE run on a modest GPU.</p>
+<p class="article-p"><strong>vLLM</strong> is the throughput option for serving several people at once. It batches concurrent requests on the GPU, serves an OpenAI-compatible API on port 8000, and, per <a href="https://docs.vllm.ai/en/stable/serving/integrations/claude_code/" rel="noopener noreferrer" target="_blank">vLLM's Claude Code integration guide</a>, implements the Anthropic Messages API as well. It loads safetensors checkpoints such as FP8 and NVFP4 rather than GGUF files, and it expects a card with enough VRAM for the whole model.</p>
+<p class="article-p"><strong>Jan</strong> is an open-source desktop chat app built on llama.cpp. <a href="https://docs.jan.ai/desktop/api-server" rel="noopener noreferrer" target="_blank">Jan's local API server documentation</a> describes an OpenAI-compatible server at <code>127.0.0.1:1337</code>, and Linux builds come as .deb and AppImage packages. Its docs do not describe an Anthropic endpoint, so pair it with OpenCode or your own scripts rather than Claude Code.</p>
+<div class="table-wrap">
+<table class="data-table">
+<thead>
+<tr><th>Tool</th><th>Interface</th><th>OpenAI-compat</th><th>Anthropic-compat</th><th>Linux backends</th><th>Best for</th></tr>
+</thead>
+<tbody>
+<tr><td>Ollama</td><td>CLI, systemd, desktop</td><td>Yes (:11434/v1)</td><td>Yes (v0.14+)</td><td>CUDA, ROCm</td><td>Fastest start, agent launchers</td></tr>
+<tr><td>LM Studio</td><td>Desktop GUI + <code>lms</code> CLI</td><td>Yes (:1234/v1)</td><td>Yes (v0.4.1+)</td><td>llama.cpp runtime</td><td>Model testing, parameter tuning</td></tr>
+<tr><td>llama.cpp</td><td><code>llama-server</code> CLI</td><td>Yes (:8080/v1)</td><td>Yes</td><td>CUDA, HIP, Vulkan</td><td>Fine control, MoE CPU offload</td></tr>
+<tr><td>vLLM</td><td>Python async daemon</td><td>Yes (:8000/v1)</td><td>Yes (/v1/messages)</td><td>CUDA, ROCm</td><td>Team concurrency, high TPS</td></tr>
+<tr><td>Jan</td><td>Desktop GUI app</td><td>Yes (:1337/v1)</td><td>Not documented</td><td>llama.cpp engine</td><td>Private offline desktop chat</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Section 6: OpenCode -->
+<section class="content-card" id="opencode">
+<h2><span class="sec-num">06</span>Local LLMs With OpenCode On Linux</h2>
+<p class="article-p">OpenCode is an open-source coding agent for the terminal. It reads your repository, plans changes, edits files and runs commands, and it talks to models through the AI SDK, which lets it use any OpenAI-compatible server. <a href="https://opencode.ai/docs/providers/" rel="noopener noreferrer" target="_blank">OpenCode's provider documentation</a> shows the exact block for Ollama, LM Studio and llama.cpp: a provider entry that uses the <code>@ai-sdk/openai-compatible</code> package, an <code>options.baseURL</code> pointing at the local server, and a <code>models</code> map whose keys must match the server's model IDs exactly, colons included.</p>
+<p class="article-p">Two settings decide whether the agent works. The first is context. OpenCode sends a long system prompt and tool definitions with each turn, so the server must allow far more than its default; set Ollama to 64K tokens and declare the same <code>limit.context</code> in the config so OpenCode can track how much room is left. The second is tool calling. The agent edits files and runs commands through structured tool calls, and a model that writes a tool call as plain text stalls the loop. OpenCode's docs suggest raising <code>num_ctx</code> first when tool calls fail, then switching to a model with stronger tool calling.</p>
+<p class="article-p">Start with models whose cards list native function calling: Qwen3.8-27B on a 24 GB card, gpt-oss-20b on a 16 GB card, and gpt-oss-120b or Mistral Small 4 on a 128 GB machine. Ollama can also write the config with <code>ollama launch opencode --model qwen3.8</code>, which leaves your own <code>opencode.json</code> untouched. Tutorial 2 builds it by hand so you can see each key.</p>
+</section>
+<!-- Section 7: Claude Code -->
+<section class="content-card" id="claude">
+<h2><span class="sec-num">07</span>Local LLMs With Claude Code And Claude</h2>
+<p class="article-p">There are two ways to combine Claude with a local model.</p>
+<p class="article-p">The first runs Claude Code, Anthropic's terminal agent, against a local model instead of Anthropic's API. Claude Code speaks the Anthropic Messages API, and <a href="https://code.claude.com/docs/en/env-vars" rel="noopener noreferrer" target="_blank">Claude Code's environment variable reference</a> documents <code>ANTHROPIC_BASE_URL</code> for redirecting it. <a href="https://docs.ollama.com/integrations/claude-code" rel="noopener noreferrer" target="_blank">Ollama's Claude Code integration page</a> gives the full setup: set the base URL to <code>http://localhost:11434</code>, set <code>ANTHROPIC_AUTH_TOKEN</code> to <code>ollama</code>, leave <code>ANTHROPIC_API_KEY</code> empty, and start <code>claude --model</code> with a local model name. Claude Code also asks for Opus, Sonnet and Haiku tiers internally, so map all three with <code>ANTHROPIC_DEFAULT_OPUS_MODEL</code>, <code>ANTHROPIC_DEFAULT_SONNET_MODEL</code> and <code>ANTHROPIC_DEFAULT_HAIKU_MODEL</code>.</p>
+<p class="article-p"><strong>What works:</strong> file reads and edits, shell commands, and multi-step tasks on a repository with a model that has native tool calling and at least 64K of context. <strong>What degrades:</strong> speed, because local generation is slower than Anthropic's servers; long sessions, where small models lose track sooner; and some hosted features such as Anthropic's server-side web search. vLLM adds one rule of its own: served model names cannot contain a slash, so start it with <code>--served-model-name</code>.</p>
+<!-- Figure 3 -->
+<div class="diagram-container">
+<div class="fig-scroll">
+<svg aria-labelledby="flow-title flow-desc" role="img" style="background:#090d16;border-radius:8px;" viewbox="0 0 640 420">
+<title id="flow-title">Claude Code on a local model</title>
+<desc id="flow-desc">Sequence between Claude Code, local Ollama server and model.</desc>
+<defs>
+<marker id="a2" markerheight="7" markerwidth="7" orient="auto-start-reverse" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#38bdf8"></path></marker>
+<marker id="a3" markerheight="7" markerwidth="7" orient="auto-start-reverse" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#34d399"></path></marker>
+</defs>
+<rect class="svg-box" height="44" rx="8" width="160" x="20" y="14"></rect><text class="svg-t" text-anchor="middle" x="100" y="34">Claude Code</text><text class="svg-s" text-anchor="middle" x="100" y="50">your terminal</text>
+<rect class="svg-box" height="44" rx="8" width="160" x="240" y="14"></rect><text class="svg-t" text-anchor="middle" x="320" y="34">Ollama :11434</text><text class="svg-s" text-anchor="middle" x="320" y="50">ANTHROPIC_BASE_URL</text>
+<rect class="svg-box" height="44" rx="8" width="160" x="460" y="14"></rect><text class="svg-t" text-anchor="middle" x="540" y="34">Local model</text><text class="svg-s" text-anchor="middle" x="540" y="50">weights in VRAM</text>
+<line class="svg-line" stroke-dasharray="4 4" x1="100" x2="100" y1="58" y2="390"></line>
+<line class="svg-line" stroke-dasharray="4 4" x1="320" x2="320" y1="58" y2="390"></line>
+<line class="svg-line" stroke-dasharray="4 4" x1="540" x2="540" y1="58" y2="390"></line>
+<line class="svg-accent" marker-end="url(#a2)" x1="104" x2="314" y1="96" y2="96"></line><text class="svg-mono" x="110" y="88">1 POST /v1/messages</text>
+<line class="svg-accent" marker-end="url(#a2)" x1="324" x2="534" y1="132" y2="132"></line><text class="svg-s" x="330" y="124">2 prompt + tool schemas</text>
+<line class="svg-green" marker-end="url(#a3)" x1="536" x2="326" y1="168" y2="168"></line><text class="svg-mono" x="330" y="160">3 tool_use: Edit</text>
+<line class="svg-green" marker-end="url(#a3)" x1="316" x2="106" y1="204" y2="204"></line><text class="svg-s" x="110" y="196">4 Anthropic-format reply</text>
+<rect class="svg-chip" height="48" rx="6" style="stroke:#fbbf24" width="140" x="30" y="220"></rect><text class="svg-t" text-anchor="middle" x="100" y="240">5 run tool</text><text class="svg-s" text-anchor="middle" x="100" y="258">edit file, run bash</text>
+<line class="svg-accent" marker-end="url(#a2)" x1="104" x2="314" y1="296" y2="296"></line><text class="svg-mono" x="110" y="288">6 tool_result</text>
+<line class="svg-accent" marker-end="url(#a2)" x1="324" x2="534" y1="324" y2="324"></line>
+<line class="svg-green" marker-end="url(#a3)" x1="536" x2="326" y1="350" y2="350"></line>
+<line class="svg-green" marker-end="url(#a3)" x1="316" x2="106" y1="376" y2="376"></line><text class="svg-s" x="110" y="368">7 final answer</text>
+<text class="svg-s" text-anchor="middle" x="320" y="412">Every hop stays on localhost. Claude Code runs the tools; the model only decides which tool to call.</text>
+</svg>
+</div>
+<div class="diagram-caption">Figure 3. Sequence trace of Claude Code driving tool executions via Ollama's Messages API endpoint.</div>
+</div>
+<p class="article-p">The second pattern keeps Claude in the cloud and gives it a local model as a tool through the Model Context Protocol (MCP). <a href="https://code.claude.com/docs/en/mcp" rel="noopener noreferrer" target="_blank">Claude Code's MCP documentation</a> shows how to register a local stdio server with <code>claude mcp add</code>. The server reads a file on disk, asks the local model to summarise or classify it, and returns only the result. Claude does the planning and hard reasoning, while bulk reading and private documents stay on your machine, as Figure 4 shows.</p>
+<!-- Figure 4 -->
+<div class="diagram-container">
+<div class="fig-scroll">
+<svg aria-labelledby="route-title route-desc" role="img" style="background:#090d16;border-radius:8px;" viewbox="0 0 640 430">
+<title id="route-title">The hybrid routing pattern</title>
+<desc id="route-desc">Decision flowchart routing private/bulk tasks to local models and complex reasoning to Claude.</desc>
+<defs><marker id="a4" markerheight="7" markerwidth="7" orient="auto-start-reverse" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"></path></marker></defs>
+<rect class="svg-box" height="40" rx="20" width="140" x="250" y="12"></rect><text class="svg-t" text-anchor="middle" x="320" y="37">New task</text>
+<line class="svg-line" marker-end="url(#a4)" x1="320" x2="320" y1="52" y2="74"></line>
+<polygon class="svg-box" points="320,76 430,122 320,168 210,122" style="stroke:#38bdf8"></polygon>
+<text class="svg-t" text-anchor="middle" x="320" y="118">Private data</text><text class="svg-t" text-anchor="middle" x="320" y="136">involved?</text>
+<line class="svg-line" marker-end="url(#a4)" x1="430" x2="470" y1="122" y2="122"></line><text class="svg-s" x="440" y="114">yes</text>
+<rect class="svg-box" height="48" rx="8" style="stroke:#34d399" width="150" x="472" y="98"></rect><text class="svg-t" text-anchor="middle" x="547" y="118">Local only</text><text class="svg-s" text-anchor="middle" x="547" y="136">no cloud fallback</text>
+<line class="svg-line" marker-end="url(#a4)" x1="320" x2="320" y1="168" y2="194"></line><text class="svg-s" x="328" y="186">no</text>
+<polygon class="svg-box" points="320,196 440,244 320,292 200,244" style="stroke:#38bdf8"></polygon>
+<text class="svg-t" text-anchor="middle" x="320" y="238">Hard reasoning or</text><text class="svg-t" text-anchor="middle" x="320" y="256">long agentic run?</text>
+<line class="svg-line" marker-end="url(#a4)" x1="440" x2="470" y1="244" y2="244"></line><text class="svg-s" x="444" y="236">yes</text>
+<rect class="svg-box" height="48" rx="8" style="stroke:#a5b4fc" width="150" x="472" y="220"></rect><text class="svg-t" text-anchor="middle" x="547" y="240">Claude (cloud)</text><text class="svg-s" text-anchor="middle" x="547" y="258">Sonnet or Opus</text>
+<line class="svg-line" marker-end="url(#a4)" x1="200" x2="174" y1="244" y2="244"></line><text class="svg-s" x="176" y="236">no</text>
+<rect class="svg-box" height="48" rx="8" style="stroke:#34d399" width="154" x="18" y="220"></rect><text class="svg-t" text-anchor="middle" x="95" y="240">Local first</text><text class="svg-s" text-anchor="middle" x="95" y="258">Claude on failure</text>
+<path class="svg-dash" d="M547,268 L547,330 L330,330" marker-end="url(#a4)"></path>
+<text class="svg-s" text-anchor="middle" x="440" y="322">MCP tool call</text>
+<rect class="svg-box" height="52" rx="8" style="stroke:#fbbf24" width="168" x="160" y="306"></rect><text class="svg-t" text-anchor="middle" x="244" y="328">Local model tool</text><text class="svg-s" text-anchor="middle" x="244" y="346">summarise, classify</text>
+<text class="svg-s" text-anchor="middle" x="320" y="396">Raw files stay local. Claude receives only the summary or label the tool returns.</text>
+</svg>
+</div>
+<div class="diagram-caption">Figure 4. Hybrid routing topology balancing enterprise data sovereignty with frontier reasoning.</div>
+</div>
+<!-- Interactive Widget 4: Config Generator -->
+<div class="widget" id="w-config">
+<h4>Dynamic Client Configuration Generator</h4>
+<p class="wdesc">Generate instant, tested configuration snippets for OpenCode JSON, Claude Code environment wrappers, and curl tests.</p>
+<div class="grid">
+<div class="field"><label for="cg-rt">Server runtime</label>
+<select id="cg-rt"><option selected="" value="ollama">Ollama</option><option value="lmstudio">LM Studio</option><option value="llamacpp">llama.cpp (llama-server)</option><option value="vllm">vLLM</option></select>
+</div>
+<div class="field"><label for="cg-host">Host</label><input autocomplete="off" id="cg-host" spellcheck="false" type="text" value="localhost"/></div>
+<div class="field"><label for="cg-port">Port</label><input id="cg-port" max="65535" min="1" type="number" value="11434"/></div>
+<div class="field"><label for="cg-model">Served model tag</label><input autocomplete="off" id="cg-model" spellcheck="false" type="text" value="qwen3.8:27b"/></div>
+</div>
+<div id="cg-out" style="margin-top:1.25rem;"></div>
+</div>
+</section>
+<!-- Section 8: Six Hands-On Tutorials -->
+<section class="content-card" id="tutorials">
+<h2><span class="sec-num">08</span>Six Hands-On Tutorials</h2>
+<p class="article-p">The tutorials build on each other, but each one runs on its own. Basic tutorials need a 16 GB GPU or better, intermediate ones a 24 GB card for the suggested model, and the advanced ones at least 16 GB of VRAM plus 64 GB of system RAM. Use the filter to show one level at a time.</p>
+<!-- Interactive Widget 5: Tutorial Filter -->
+<div class="widget" id="w-filter" style="margin-bottom:2rem;">
+<h4>Tutorial Level Filter</h4>
+<p class="wdesc">Filter tutorials by complexity and hardware footprint.</p>
+<span aria-label="Tutorial level" class="seg" role="group">
+<button aria-pressed="true" data-level="all" type="button">All</button>
+<button aria-pressed="false" data-level="basic" type="button">Basic</button>
+<button aria-pressed="false" data-level="intermediate" type="button">Intermediate</button>
+<button aria-pressed="false" data-level="advanced" type="button">Advanced</button>
+</span>
+</div>
+<!-- Tutorial 1 -->
+<article class="tutorial" data-level="basic" id="tut-1">
+<h3>Tutorial 1: Your First Local Model In Ten Minutes <span class="badge basic">Basic</span></h3>
+<div class="prereq">Prerequisites: Ubuntu 22.04 or 24.04 (or Debian 12), NVIDIA GPU with 8 GB+ VRAM and proprietary driver installed, ≈10 GB free disk space.</div>
+<p class="article-p">This tutorial installs Ollama as a system service, downloads Gemma 4 E4B, an 8B model counting its embeddings, and talks to it from the terminal and over HTTP.</p>
+<ol class="article-list">
+<li>Install Ollama and confirm the service is running.</li>
+<li>Pull the model and ask it a question.</li>
+<li>Call the native API and the OpenAI-compatible API with <code>curl</code>.</li>
+</ol>
+<div class="code">
+<div class="code-head"><span>bash • tutorial-1.sh</span><button class="copy" type="button">Copy</button></div>
+<pre><code># Step 1: install Ollama with the official script.
 # The script installs the binary, creates an "ollama" system user
 # and registers a systemd service that starts on boot.
 curl -fsSL https://ollama.com/install.sh | sh
@@ -761,24 +722,23 @@ curl -s http://localhost:11434/v1/chat/completions   -H "Content-Type: applicati
 
 # Confirm the model runs fully on the GPU: PROCESSOR should read "100% GPU".
 ollama ps</code></pre>
-          </div>
-          <p class="article-p"><strong>Expected output:</strong> <code>ollama -v</code> prints a version number, the <code>run</code> command prints a two-sentence answer, and the second <code>curl</code> returns JSON whose <code>choices[0].message.content</code> contains "ready".</p>
-          <p class="ifit"><strong>Troubleshooting:</strong> <code>journalctl -e -u ollama</code> shows the service log. If <code>ollama ps</code> reports CPU instead of GPU, run <code>nvidia-smi</code>; a missing driver is the usual cause. On Fedora, install the NVIDIA driver from RPM Fusion first; on Arch, use the <code>nvidia</code> package.</p>
-        </article>
-
-        <!-- Tutorial 2 -->
-        <article class="tutorial" data-level="basic" id="tut-2">
-          <h3>Tutorial 2: Connect OpenCode To A Local Model <span class="badge basic">Basic</span></h3>
-          <div class="prereq">Prerequisites: Tutorial 1 completed. 24 GB GPU for Qwen3.8-27B, or 16 GB GPU for gpt-oss-20b.</div>
-          <p class="article-p">OpenCode will read a small project and make an edit using a local model. The context window comes first, because OpenCode's prompts do not fit in Ollama's 4K default.</p>
-          <ol class="article-list">
-            <li>Raise Ollama's default context to 64K through a systemd override.</li>
-            <li>Install OpenCode and pull a coding-capable model.</li>
-            <li>Write the provider block and run a first task.</li>
-          </ol>
-          <div class="code">
-            <div class="code-head"><span>bash &bull; tutorial-2.sh</span><button class="copy" type="button">Copy</button></div>
-            <pre><code># Step 1: set a 64K default context for every model Ollama loads.
+</div>
+<p class="article-p"><strong>Expected output:</strong> <code>ollama -v</code> prints a version number, the <code>run</code> command prints a two-sentence answer, and the second <code>curl</code> returns JSON whose <code>choices[0].message.content</code> contains "ready".</p>
+<p class="ifit"><strong>Troubleshooting:</strong> <code>journalctl -e -u ollama</code> shows the service log. If <code>ollama ps</code> reports CPU instead of GPU, run <code>nvidia-smi</code>; a missing driver is the usual cause. On Fedora, install the NVIDIA driver from RPM Fusion first; on Arch, use the <code>nvidia</code> package.</p>
+</article>
+<!-- Tutorial 2 -->
+<article class="tutorial" data-level="basic" id="tut-2">
+<h3>Tutorial 2: Connect OpenCode To A Local Model <span class="badge basic">Basic</span></h3>
+<div class="prereq">Prerequisites: Tutorial 1 completed. 24 GB GPU for Qwen3.8-27B, or 16 GB GPU for gpt-oss-20b.</div>
+<p class="article-p">OpenCode will read a small project and make an edit using a local model. The context window comes first, because OpenCode's prompts do not fit in Ollama's 4K default.</p>
+<ol class="article-list">
+<li>Raise Ollama's default context to 64K through a systemd override.</li>
+<li>Install OpenCode and pull a coding-capable model.</li>
+<li>Write the provider block and run a first task.</li>
+</ol>
+<div class="code">
+<div class="code-head"><span>bash • tutorial-2.sh</span><button class="copy" type="button">Copy</button></div>
+<pre><code># Step 1: set a 64K default context for every model Ollama loads.
 # The drop-in file overrides the packaged unit without editing it.
 sudo mkdir -p /etc/systemd/system/ollama.service.d
 printf '[Service]
@@ -796,11 +756,11 @@ ollama pull qwen3.8:27b
 
 # Step 3: create the global OpenCode config directory.
 mkdir -p ~/.config/opencode</code></pre>
-          </div>
-          <p class="article-p">Save the following as <code>~/.config/opencode/opencode.json</code>. The <code>ollama</code> key is the provider ID, <code>npm</code> selects the OpenAI-compatible adapter, and each key under <code>models</code> must match a name from <code>ollama list</code>. The <code>limit</code> block tells OpenCode how many tokens the server accepts.</p>
-          <div class="code">
-            <div class="code-head"><span>json &bull; ~/.config/opencode/opencode.json</span><button class="copy" type="button">Copy</button></div>
-            <pre><code>{
+</div>
+<p class="article-p">Save the following as <code>~/.config/opencode/opencode.json</code>. The <code>ollama</code> key is the provider ID, <code>npm</code> selects the OpenAI-compatible adapter, and each key under <code>models</code> must match a name from <code>ollama list</code>. The <code>limit</code> block tells OpenCode how many tokens the server accepts.</p>
+<div class="code">
+<div class="code-head"><span>json • ~/.config/opencode/opencode.json</span><button class="copy" type="button">Copy</button></div>
+<pre><code>{
   "$schema": "https://opencode.ai/config.json",
   "model": "ollama/qwen3.8:27b",
   "provider": {
@@ -823,10 +783,10 @@ mkdir -p ~/.config/opencode</code></pre>
     }
   }
 }</code></pre>
-          </div>
-          <div class="code">
-            <div class="code-head"><span>bash &bull; first-task.sh</span><button class="copy" type="button">Copy</button></div>
-            <pre><code># Create a tiny project for the agent to work on.
+</div>
+<div class="code">
+<div class="code-head"><span>bash • first-task.sh</span><button class="copy" type="button">Copy</button></div>
+<pre><code># Create a tiny project for the agent to work on.
 mkdir -p ~/oc-demo &amp;&amp; cd ~/oc-demo
 cat &gt; greet.py &lt;&lt;'EOF'
 def greet(name):
@@ -839,24 +799,23 @@ EOF
 #   2. ask: "Add a check to greet() that raises ValueError for empty names,
 #      then add a unittest file and run it."
 opencode</code></pre>
-          </div>
-          <p class="article-p"><strong>Expected output:</strong> OpenCode lists the local model under <code>/models</code>, edits <code>greet.py</code>, writes a test file and runs it with Python, and the test passes.</p>
-          <p class="ifit"><strong>Troubleshooting:</strong> If only cloud models appear, validate the file with <code>jq . ~/.config/opencode/opencode.json</code>. If the model answers in plain text instead of editing files, confirm the larger context took effect with <code>ollama ps</code>, which shows the context per loaded model.</p>
-        </article>
-
-        <!-- Tutorial 3 -->
-        <article class="tutorial" data-level="intermediate" id="tut-3">
-          <h3>Tutorial 3: Run Claude Code Against A Local Backend <span class="badge intermediate">Intermediate</span></h3>
-          <div class="prereq">Prerequisites: Tutorial 2 completed, Ollama 0.14+, 24 GB GPU for Qwen3.8-27B.</div>
-          <p class="article-p">Here Claude Code runs entirely against Ollama. A wrapper script keeps the local settings out of your normal shell, so plain <code>claude</code> still reaches Anthropic and <code>claude-local</code> reaches your GPU.</p>
-          <ol class="article-list">
-            <li>Install Claude Code.</li>
-            <li>Create a model variant with a 64K context baked in.</li>
-            <li>Write the wrapper script and test an edit-and-run loop.</li>
-          </ol>
-          <div class="code">
-            <div class="code-head"><span>bash &bull; tutorial-3.sh</span><button class="copy" type="button">Copy</button></div>
-            <pre><code># Step 1: install Claude Code with Anthropic's native installer.
+</div>
+<p class="article-p"><strong>Expected output:</strong> OpenCode lists the local model under <code>/models</code>, edits <code>greet.py</code>, writes a test file and runs it with Python, and the test passes.</p>
+<p class="ifit"><strong>Troubleshooting:</strong> If only cloud models appear, validate the file with <code>jq . ~/.config/opencode/opencode.json</code>. If the model answers in plain text instead of editing files, confirm the larger context took effect with <code>ollama ps</code>, which shows the context per loaded model.</p>
+</article>
+<!-- Tutorial 3 -->
+<article class="tutorial" data-level="intermediate" id="tut-3">
+<h3>Tutorial 3: Run Claude Code Against A Local Backend <span class="badge intermediate">Intermediate</span></h3>
+<div class="prereq">Prerequisites: Tutorial 2 completed, Ollama 0.14+, 24 GB GPU for Qwen3.8-27B.</div>
+<p class="article-p">Here Claude Code runs entirely against Ollama. A wrapper script keeps the local settings out of your normal shell, so plain <code>claude</code> still reaches Anthropic and <code>claude-local</code> reaches your GPU.</p>
+<ol class="article-list">
+<li>Install Claude Code.</li>
+<li>Create a model variant with a 64K context baked in.</li>
+<li>Write the wrapper script and test an edit-and-run loop.</li>
+</ol>
+<div class="code">
+<div class="code-head"><span>bash • tutorial-3.sh</span><button class="copy" type="button">Copy</button></div>
+<pre><code># Step 1: install Claude Code with Anthropic's native installer.
 curl -fsSL https://claude.ai/install.sh | bash
 
 # Step 2: build a model variant whose context is fixed at 64K.
@@ -909,32 +868,31 @@ EOF
 # Start Claude Code on the local model, then ask:
 #   "Run python3 -m unittest, fix the bug in stats.py, and run the tests again."
 claude-local</code></pre>
-          </div>
-          <p class="article-p"><strong>Expected output:</strong> Claude Code asks permission to run the tests, shows one failure, edits <code>stats.py</code> to remove the extra 1, reruns the tests and reports <code>OK</code>. Inside the session, <code>/status</code> shows the localhost base URL.</p>
-          <p class="ifit"><strong>Troubleshooting:</strong> A "connection refused" error means Ollama is not running. If Claude Code still asks you to log in, a value in <code>~/.claude/settings.json</code> is overriding the shell variables; remove its <code>env</code> entries. If <code>~/.local/bin</code> is not on your <code>PATH</code>, add <code>export PATH="$HOME/.local/bin:$PATH"</code> to <code>~/.bashrc</code>.</p>
-        </article>
-
-        <!-- Tutorial 4 -->
-        <article class="tutorial" data-level="intermediate" id="tut-4">
-          <h3>Tutorial 4: Script Your Local Model From Python <span class="badge intermediate">Intermediate</span></h3>
-          <div class="prereq">Prerequisites: Tutorial 1 completed, Python 3.10+, <code>gpt-oss:20b</code> pulled in Ollama (16 GB GPU).</div>
-          <p class="article-p">Most local servers speak the OpenAI API, so the official OpenAI Python SDK works against all of them by changing one URL. This script streams a reply, measures tokens per second and runs one tool call against a real function.</p>
-          <ol class="article-list">
-            <li>Create a virtual environment and install the SDK.</li>
-            <li>Run the streaming benchmark.</li>
-            <li>Run the tool-calling round trip.</li>
-          </ol>
-          <div class="code">
-            <div class="code-head"><span>bash &bull; setup.sh</span><button class="copy" type="button">Copy</button></div>
-            <pre><code># Isolate the dependencies in a virtual environment.
+</div>
+<p class="article-p"><strong>Expected output:</strong> Claude Code asks permission to run the tests, shows one failure, edits <code>stats.py</code> to remove the extra 1, reruns the tests and reports <code>OK</code>. Inside the session, <code>/status</code> shows the localhost base URL.</p>
+<p class="ifit"><strong>Troubleshooting:</strong> A "connection refused" error means Ollama is not running. If Claude Code still asks you to log in, a value in <code>~/.claude/settings.json</code> is overriding the shell variables; remove its <code>env</code> entries. If <code>~/.local/bin</code> is not on your <code>PATH</code>, add <code>export PATH="$HOME/.local/bin:$PATH"</code> to <code>~/.bashrc</code>.</p>
+</article>
+<!-- Tutorial 4 -->
+<article class="tutorial" data-level="intermediate" id="tut-4">
+<h3>Tutorial 4: Script Your Local Model From Python <span class="badge intermediate">Intermediate</span></h3>
+<div class="prereq">Prerequisites: Tutorial 1 completed, Python 3.10+, <code>gpt-oss:20b</code> pulled in Ollama (16 GB GPU).</div>
+<p class="article-p">Most local servers speak the OpenAI API, so the official OpenAI Python SDK works against all of them by changing one URL. This script streams a reply, measures tokens per second and runs one tool call against a real function.</p>
+<ol class="article-list">
+<li>Create a virtual environment and install the SDK.</li>
+<li>Run the streaming benchmark.</li>
+<li>Run the tool-calling round trip.</li>
+</ol>
+<div class="code">
+<div class="code-head"><span>bash • setup.sh</span><button class="copy" type="button">Copy</button></div>
+<pre><code># Isolate the dependencies in a virtual environment.
 python3 -m venv ~/llm-venv
 source ~/llm-venv/bin/activate
 pip install --upgrade openai
 ollama pull gpt-oss:20b</code></pre>
-          </div>
-          <div class="code">
-            <div class="code-head"><span>python &bull; local_client.py</span><button class="copy" type="button">Copy</button></div>
-            <pre><code>"""Stream from a local model, measure speed, then run a tool call."""
+</div>
+<div class="code">
+<div class="code-head"><span>python • local_client.py</span><button class="copy" type="button">Copy</button></div>
+<pre><code>"""Stream from a local model, measure speed, then run a tool call."""
 import json
 import shutil
 import time
@@ -1018,24 +976,23 @@ def tool_round_trip(question: str) -&gt; None:
 if __name__ == "__main__":
     stream_and_measure("Explain the difference between RAM and VRAM in 80 words.")
     tool_round_trip("How much free disk space is on / right now?")</code></pre>
-          </div>
-          <p class="article-p"><strong>Expected output:</strong> An 80-word explanation streams to the screen, followed by a time-to-first-token figure, a tokens-per-second figure, a line showing the <code>disk_free_gb</code> call with its result, and a sentence quoting the free space.</p>
-          <p class="ifit"><strong>Troubleshooting:</strong> A <code>404</code> means the model name does not match <code>ollama list</code>. If the model answers without calling the tool, ask the question more directly. To point the script at LM Studio, vLLM or llama-server, change only <code>base_url</code> and <code>MODEL</code>.</p>
-        </article>
-
-        <!-- Tutorial 5 -->
-        <article class="tutorial" data-level="advanced" id="tut-5">
-          <h3>Tutorial 5: Serve A 120B Model On Workstation Hardware <span class="badge advanced">Advanced</span></h3>
-          <div class="prereq">Prerequisites: NVIDIA GPU with 16 GB+ VRAM, 64 GB+ system RAM (96 GB ideal), &asymp;70 GB free disk, CUDA toolkit installed (<code>nvcc --version</code>).</div>
-          <p class="article-p">gpt-oss-120b has only 5.1B active parameters, so most of its expert weights can live in system RAM while the attention layers and KV cache stay on the GPU. The <code>--n-cpu-moe</code> flag in llama.cpp sets how many MoE layers stay on the CPU, and the llama.cpp gpt-oss guide uses 32 for a 16 GB card.</p>
-          <ol class="article-list">
-            <li>Build llama.cpp with CUDA and install it system-wide.</li>
-            <li>Download the model and start <code>llama-server</code> with expert offload.</li>
-            <li>Run it as a systemd service, then benchmark with <code>llama-bench</code>.</li>
-          </ol>
-          <div class="code">
-            <div class="code-head"><span>bash &bull; build-and-run.sh</span><button class="copy" type="button">Copy</button></div>
-            <pre><code># Step 1: build tools and libcurl (needed for -hf downloads).
+</div>
+<p class="article-p"><strong>Expected output:</strong> An 80-word explanation streams to the screen, followed by a time-to-first-token figure, a tokens-per-second figure, a line showing the <code>disk_free_gb</code> call with its result, and a sentence quoting the free space.</p>
+<p class="ifit"><strong>Troubleshooting:</strong> A <code>404</code> means the model name does not match <code>ollama list</code>. If the model answers without calling the tool, ask the question more directly. To point the script at LM Studio, vLLM or llama-server, change only <code>base_url</code> and <code>MODEL</code>.</p>
+</article>
+<!-- Tutorial 5 -->
+<article class="tutorial" data-level="advanced" id="tut-5">
+<h3>Tutorial 5: Serve A 120B Model On Workstation Hardware <span class="badge advanced">Advanced</span></h3>
+<div class="prereq">Prerequisites: NVIDIA GPU with 16 GB+ VRAM, 64 GB+ system RAM (96 GB ideal), ≈70 GB free disk, CUDA toolkit installed (<code>nvcc --version</code>).</div>
+<p class="article-p">gpt-oss-120b has only 5.1B active parameters, so most of its expert weights can live in system RAM while the attention layers and KV cache stay on the GPU. The <code>--n-cpu-moe</code> flag in llama.cpp sets how many MoE layers stay on the CPU, and the llama.cpp gpt-oss guide uses 32 for a 16 GB card.</p>
+<ol class="article-list">
+<li>Build llama.cpp with CUDA and install it system-wide.</li>
+<li>Download the model and start <code>llama-server</code> with expert offload.</li>
+<li>Run it as a systemd service, then benchmark with <code>llama-bench</code>.</li>
+</ol>
+<div class="code">
+<div class="code-head"><span>bash • build-and-run.sh</span><button class="copy" type="button">Copy</button></div>
+<pre><code># Step 1: build tools and libcurl (needed for -hf downloads).
 # Fedora: sudo dnf install gcc-c++ cmake git libcurl-devel
 # Arch:   sudo pacman -S base-devel cmake git curl
 sudo apt update &amp;&amp; sudo apt install -y build-essential cmake git libcurl4-openssl-dev
@@ -1060,10 +1017,10 @@ sudo -u llama env LLAMA_CACHE=/var/lib/llama/cache   llama-server -hf ggml-org/g
 
 # Quick test against the OpenAI-compatible route.
 curl -s http://127.0.0.1:8080/v1/chat/completions -H "Content-Type: application/json"   -d '{"model":"gpt-oss-120b","messages":[{"role":"user","content":"Say hello in Tamil."}]}'</code></pre>
-          </div>
-          <div class="code">
-            <div class="code-head"><span>ini &bull; /etc/systemd/system/llama-gptoss.service</span><button class="copy" type="button">Copy</button></div>
-            <pre><code># Runs llama-server for gpt-oss-120b at boot and restarts it on failure.
+</div>
+<div class="code">
+<div class="code-head"><span>ini • /etc/systemd/system/llama-gptoss.service</span><button class="copy" type="button">Copy</button></div>
+<pre><code># Runs llama-server for gpt-oss-120b at boot and restarts it on failure.
 [Unit]
 Description=llama.cpp server for gpt-oss-120b
 After=network-online.target
@@ -1082,10 +1039,10 @@ LimitMEMLOCK=infinity
 
 [Install]
 WantedBy=multi-user.target</code></pre>
-          </div>
-          <div class="code">
-            <div class="code-head"><span>bash &bull; enable-and-bench.sh</span><button class="copy" type="button">Copy</button></div>
-            <pre><code># Step 3: enable the service and watch it load the model.
+</div>
+<div class="code">
+<div class="code-head"><span>bash • enable-and-bench.sh</span><button class="copy" type="button">Copy</button></div>
+<pre><code># Step 3: enable the service and watch it load the model.
 sudo systemctl daemon-reload
 sudo systemctl enable --now llama-gptoss
 journalctl -u llama-gptoss -f   # press Ctrl+C once it reports it is listening
@@ -1096,24 +1053,23 @@ sudo systemctl stop llama-gptoss
 MODEL=$(sudo find /var/lib/llama/cache -name '*120b*00001-of-*.gguf' | head -n1)
 sudo -u llama llama-bench -m "$MODEL" -fa 1 -p 2048 -n 128 --n-cpu-moe 32
 sudo systemctl start llama-gptoss</code></pre>
-          </div>
-          <p class="article-p"><strong>Expected output:</strong> <code>llama-bench</code> prints a table with <code>pp2048</code> and <code>tg128</code> metrics in tokens per second. Generation typically yields &asymp;15 tokens/sec with 32 MoE layers on the CPU, an RTX 3060 12 GB, and 96 GB DDR5 RAM.</p>
-          <p class="ifit"><strong>Troubleshooting:</strong> An OOM error at load means too many layers are on the GPU; raise <code>--n-cpu-moe</code> by two and retry. If the build cannot find CUDA, ensure <code>/usr/local/cuda/bin</code> is in your <code>PATH</code>.</p>
-        </article>
-
-        <!-- Tutorial 6 -->
-        <article class="tutorial" data-level="advanced" id="tut-6">
-          <h3>Tutorial 6: A Hybrid Local-Plus-Claude Workflow With MCP And Routing <span class="badge advanced">Advanced</span></h3>
-          <div class="prereq">Prerequisites: Tutorials 2 and 3 completed, Claude Code authenticated, Anthropic API key, and <code>uv</code> installed.</div>
-          <p class="article-p">This tutorial builds both halves of Figure 4. First, an MCP server gives cloud Claude two local tools, so it can summarise and classify private files without the files leaving your machine. Second, a LiteLLM proxy and a short router script send each scripted request to the local model or to Claude.</p>
-          <ol class="article-list">
-            <li>Write the MCP server with the MCP Python SDK.</li>
-            <li>Register it with Claude Code and test it.</li>
-            <li>Configure the LiteLLM proxy and run the router.</li>
-          </ol>
-          <div class="code">
-            <div class="code-head"><span>python &bull; ~/mcp/local_llm_mcp.py</span><button class="copy" type="button">Copy</button></div>
-            <pre><code>"""MCP server that exposes a local Ollama model to Claude as two tools.
+</div>
+<p class="article-p"><strong>Expected output:</strong> <code>llama-bench</code> prints a table with <code>pp2048</code> and <code>tg128</code> metrics in tokens per second. Generation typically yields ≈15 tokens/sec with 32 MoE layers on the CPU, an RTX 3060 12 GB, and 96 GB DDR5 RAM.</p>
+<p class="ifit"><strong>Troubleshooting:</strong> An OOM error at load means too many layers are on the GPU; raise <code>--n-cpu-moe</code> by two and retry. If the build cannot find CUDA, ensure <code>/usr/local/cuda/bin</code> is in your <code>PATH</code>.</p>
+</article>
+<!-- Tutorial 6 -->
+<article class="tutorial" data-level="advanced" id="tut-6">
+<h3>Tutorial 6: A Hybrid Local-Plus-Claude Workflow With MCP And Routing <span class="badge advanced">Advanced</span></h3>
+<div class="prereq">Prerequisites: Tutorials 2 and 3 completed, Claude Code authenticated, Anthropic API key, and <code>uv</code> installed.</div>
+<p class="article-p">This tutorial builds both halves of Figure 4. First, an MCP server gives cloud Claude two local tools, so it can summarise and classify private files without the files leaving your machine. Second, a LiteLLM proxy and a short router script send each scripted request to the local model or to Claude.</p>
+<ol class="article-list">
+<li>Write the MCP server with the MCP Python SDK.</li>
+<li>Register it with Claude Code and test it.</li>
+<li>Configure the LiteLLM proxy and run the router.</li>
+</ol>
+<div class="code">
+<div class="code-head"><span>python • ~/mcp/local_llm_mcp.py</span><button class="copy" type="button">Copy</button></div>
+<pre><code>"""MCP server that exposes a local Ollama model to Claude as two tools.
 
 Raw file contents are processed by the local model. Only the summary
 or label that each tool returns is sent back to Claude.
@@ -1179,10 +1135,10 @@ Text:
 
 if __name__ == "__main__":
     mcp.run()  # with no arguments the server speaks MCP over stdio</code></pre>
-          </div>
-          <div class="code">
-            <div class="code-head"><span>bash &bull; register-mcp.sh</span><button class="copy" type="button">Copy</button></div>
-            <pre><code># Register the server with Claude Code. Everything after "--" is the launch command.
+</div>
+<div class="code">
+<div class="code-head"><span>bash • register-mcp.sh</span><button class="copy" type="button">Copy</button></div>
+<pre><code># Register the server with Claude Code. Everything after "--" is the launch command.
 # uv resolves the MCP SDK on the fly, so no virtual environment is needed.
 claude mcp add --env LOCAL_LLM_MODEL=qwen3.8:27b --transport stdio local-llm   -- uv run --with "mcp[cli]" mcp run "$HOME/mcp/local_llm_mcp.py"
 
@@ -1192,11 +1148,11 @@ claude mcp list
 # Start a normal (cloud) Claude Code session and try:
 #   "Use summarize_local_file on ~/notes/contract-draft.txt and list any deadlines."
 claude</code></pre>
-          </div>
-          <p class="article-p">The proxy below gives scripts one OpenAI-compatible endpoint with three model groups. <code>local-private</code> has no fallback, so private requests can never reach the cloud. <code>local-fast</code> falls back to Claude if the local server fails, following <a href="https://docs.litellm.ai/docs/proxy/reliability" target="_blank" rel="noopener noreferrer">LiteLLM's fallback configuration docs</a>.</p>
-          <div class="code">
-            <div class="code-head"><span>yaml &bull; ~/litellm/config.yaml</span><button class="copy" type="button">Copy</button></div>
-            <pre><code># Three model groups behind one OpenAI-compatible endpoint on port 4000.
+</div>
+<p class="article-p">The proxy below gives scripts one OpenAI-compatible endpoint with three model groups. <code>local-private</code> has no fallback, so private requests can never reach the cloud. <code>local-fast</code> falls back to Claude if the local server fails, following <a href="https://docs.litellm.ai/docs/proxy/reliability" rel="noopener noreferrer" target="_blank">LiteLLM's fallback configuration docs</a>.</p>
+<div class="code">
+<div class="code-head"><span>yaml • ~/litellm/config.yaml</span><button class="copy" type="button">Copy</button></div>
+<pre><code># Three model groups behind one OpenAI-compatible endpoint on port 4000.
 model_list:
   - model_name: local-private        # private data: local only, never falls back
     litellm_params:
@@ -1215,10 +1171,10 @@ litellm_settings:
   num_retries: 2
   # If the local server errors, retry routine requests on Claude.
   fallbacks: [{"local-fast": ["claude-hard"]}]</code></pre>
-          </div>
-          <div class="code">
-            <div class="code-head"><span>python &bull; ~/litellm/router.py</span><button class="copy" type="button">Copy</button></div>
-            <pre><code>"""Pick a model group per task and send it through the LiteLLM proxy."""
+</div>
+<div class="code">
+<div class="code-head"><span>python • ~/litellm/router.py</span><button class="copy" type="button">Copy</button></div>
+<pre><code>"""Pick a model group per task and send it through the LiteLLM proxy."""
 from openai import OpenAI
 
 # The proxy has no master key configured, so any placeholder key works locally.
@@ -1248,10 +1204,10 @@ if __name__ == "__main__":
     print(run("Write a regex that matches Indian PIN codes."))
     print(run("Summarise this salary sheet: ...", private=True))
     print(run("Do a security review of this login design: ..."))</code></pre>
-          </div>
-          <div class="code">
-            <div class="code-head"><span>bash &bull; start-router.sh</span><button class="copy" type="button">Copy</button></div>
-            <pre><code># Install the proxy and the OpenAI SDK into the venv from Tutorial 4.
+</div>
+<div class="code">
+<div class="code-head"><span>bash • start-router.sh</span><button class="copy" type="button">Copy</button></div>
+<pre><code># Install the proxy and the OpenAI SDK into the venv from Tutorial 4.
 source ~/llm-venv/bin/activate
 pip install 'litellm[proxy]' openai
 
@@ -1263,76 +1219,71 @@ litellm --config ~/litellm/config.yaml --port 4000
 
 # ...and run the router in another.
 python ~/litellm/router.py</code></pre>
-          </div>
-          <p class="article-p"><strong>Expected output:</strong> <code>claude mcp list</code> shows <code>local-llm</code> as connected, and a Claude Code session can call both tools. The router prints three answers tagged <code>[local-fast]</code>, <code>[local-private]</code> and <code>[claude-hard]</code>.</p>
-          <p class="ifit"><strong>Troubleshooting:</strong> Run the launch command from <code>claude mcp add</code> by hand; a stdio server that waits silently is healthy, while a traceback shows the real error. Keep debugging <code>print()</code> calls out of the MCP server, because stdout carries the protocol.</p>
-        </article>
-      </section>
-
-      <!-- Section 9: Conclusion -->
-      <section class="content-card" id="conclusion">
-        <h2><span class="sec-num">09</span>Conclusion: Choosing Your Setup</h2>
-        <p class="article-p">Start from the hardware you have. A 16 GB card runs the 8B and 14B models, gpt-oss-20b and, with 64 to 96 GB of system RAM, gpt-oss-120b through expert offload. A 24 GB card is the point where Qwen3.8-27B makes local coding agents useful. For 70B dense models or several 120B MoE models, a 128 GB unified-memory machine gives capacity, while a GPU gives speed.</p>
-        <p class="article-p">Before you buy, price your workload. If your team spends hundreds of dollars a month on Sonnet or Opus tokens for work a local model can handle, the break-even calculator will show a payback measured in months. If you mostly send short prompts that Haiku handles for cents, local hardware pays off only through privacy, offline access or the freedom to run unlimited batch jobs.</p>
-        <p class="article-p">Then wire it in gradually. Begin with Ollama and OpenCode, move to Claude Code on a local backend for private repositories, and add the MCP server so cloud Claude can hand bulk reading to your GPU. Keep Claude for the work where its lead matters, and let the local model take the rest.</p>
-      </section>
-
-      <!-- Section 10: References -->
-      <section class="content-card" id="references">
-        <h2><span class="sec-num">10</span>References</h2>
-        <ol class="refs">
-          <li><a href="https://ollama.com/blog/claude" target="_blank" rel="noopener noreferrer">Ollama blog: Claude Code with Anthropic API compatibility</a></li>
-          <li><a href="https://docs.ollama.com/integrations/claude-code" target="_blank" rel="noopener noreferrer">Ollama docs: Claude Code integration and environment variables</a></li>
-          <li><a href="https://docs.ollama.com/linux" target="_blank" rel="noopener noreferrer">Ollama docs: Linux installation, systemd service and ROCm</a></li>
-          <li><a href="https://docs.ollama.com/context-length" target="_blank" rel="noopener noreferrer">Ollama docs: context length defaults and settings</a></li>
-          <li><a href="https://ollama.com/library/qwen3.8" target="_blank" rel="noopener noreferrer">Ollama library: qwen3.8 model tags and sizes</a></li>
-          <li><a href="https://ollama.com/library/gemma4" target="_blank" rel="noopener noreferrer">Ollama library: gemma4 model tags and sizes</a></li>
-          <li><a href="https://lmstudio.ai/docs/developer/anthropic-compat" target="_blank" rel="noopener noreferrer">LM Studio docs: Anthropic-compatible Messages endpoint</a> &amp; <a href="https://lmstudio.ai/blog/claudecode" target="_blank" rel="noopener noreferrer">LM Studio blog: using LM Studio models in Claude Code</a></li>
-          <li><a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md" target="_blank" rel="noopener noreferrer">llama.cpp: llama-server README and API compatibility</a></li>
-          <li><a href="https://github.com/ggml-org/llama.cpp/discussions/15396" target="_blank" rel="noopener noreferrer">llama.cpp discussion: guide to running gpt-oss with llama.cpp</a></li>
-          <li><a href="https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md" target="_blank" rel="noopener noreferrer">llama.cpp docs: building with CUDA, HIP and Vulkan</a></li>
-          <li><a href="https://docs.vllm.ai/en/stable/serving/integrations/claude_code/" target="_blank" rel="noopener noreferrer">vLLM docs: using Claude Code with a vLLM server</a></li>
-          <li><a href="https://docs.jan.ai/desktop/api-server" target="_blank" rel="noopener noreferrer">Jan docs: local OpenAI-compatible API server</a></li>
-          <li><a href="https://opencode.ai/docs/providers/" target="_blank" rel="noopener noreferrer">OpenCode docs: providers, local models and custom baseURL</a></li>
-          <li><a href="https://code.claude.com/docs/en/env-vars" target="_blank" rel="noopener noreferrer">Claude Code docs: environment variable reference</a></li>
-          <li><a href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener noreferrer">Claude Code docs: connecting tools through MCP</a></li>
-          <li><a href="https://py.sdk.modelcontextprotocol.io/get-started/real-host/" target="_blank" rel="noopener noreferrer">MCP Python SDK: connecting a server to a real host</a></li>
-          <li><a href="https://docs.litellm.ai/docs/proxy/reliability" target="_blank" rel="noopener noreferrer">LiteLLM docs: proxy fallbacks and reliability settings</a></li>
-          <li><a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Claude Platform docs: API pricing for Opus 5.5, Sonnet 5.5 and Haiku 5.5</a></li>
-          <li><a href="https://huggingface.co/Qwen/Qwen3.8-27B" target="_blank" rel="noopener noreferrer">Hugging Face: Qwen3.8-27B model card</a></li>
-          <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" target="_blank" rel="noopener noreferrer">Google blog: Gemma 4 announcement and model sizes</a></li>
-          <li><a href="https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512" target="_blank" rel="noopener noreferrer">Hugging Face: Ministral 3 8B Instruct model card</a></li>
-          <li><a href="https://huggingface.co/mistralai/Mistral-Small-4-119B-2603" target="_blank" rel="noopener noreferrer">Hugging Face: Mistral Small 4 119B model card</a></li>
-          <li><a href="https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct" target="_blank" rel="noopener noreferrer">Hugging Face: Llama 3.3 70B Instruct model card</a></li>
-          <li><a href="https://huggingface.co/openai/gpt-oss-120b" target="_blank" rel="noopener noreferrer">Hugging Face: gpt-oss-120b model card</a></li>
-          <li><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4" target="_blank" rel="noopener noreferrer">Hugging Face: Nemotron 3 Super 120B NVFP4 model card</a></li>
-          <li><a href="https://pinggy.io/blog/best_open_source_self_hosted_llms_for_coding/" target="_blank" rel="noopener noreferrer">Pinggy: best open-source LLMs for coding, October 2026</a></li>
-          <li><a href="https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/" target="_blank" rel="noopener noreferrer">BuySellRam: NVIDIA consumer GPU price update, October 2026</a></li>
-          <li><a href="https://gpuprix.com/india/gpus/geforce-rtx-5060-ti-16gb" target="_blank" rel="noopener noreferrer">GPUPrix: RTX 5060 Ti 16GB price in India</a> &amp; <a href="https://gpuprix.com/india/gpus/geforce-rtx-5090" target="_blank" rel="noopener noreferrer">RTX 5090 price in India</a></li>
-          <li><a href="https://computingforgeeks.com/ryzen-ai-max-395-mini-pc-comparison/" target="_blank" rel="noopener noreferrer">ComputingForGeeks: Ryzen AI Max+ 395 mini PC prices</a> &amp; <a href="https://cryptobriefing.com/nvidia-dgx-spark-64gb-launch/" target="_blank" rel="noopener noreferrer">Crypto Briefing: DGX Spark 64GB launch and pricing</a></li>
-          <li><a href="https://www.eia.gov/outlooks/steo/report/elec_coal_renew.php" target="_blank" rel="noopener noreferrer">US EIA: Short-Term Energy Outlook, residential electricity prices</a> &amp; <a href="https://www.runyard.dev/buy/rtx-5060-ti-16gb-price-india.html" target="_blank" rel="noopener noreferrer">Runyard: Indian GPU landed costs</a></li>
-        </ol>
-      </section>
-
-      <!-- CTA Banner -->
-      <section class="cta-banner">
-        <h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Deploy Sovereign Local LLMs &amp; Slash Cloud AI Spend</h3>
-        <p style="color:#94a3b8;font-size:1.02rem;max-width:680px;margin:0 auto 1.75rem;line-height:1.7;">Architect private, on-premise model pipelines in Linux with vLLM, Ollama, and hybrid Claude routing to eliminate data egress and slash recurring inference bills by 60%&ndash;90%.</p>
-        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-          <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
-          <a class="btn btn-primary" href="../contact.html">Start A Project &rarr;</a>
-          <a class="btn btn-outline" href="../pricing.html">View Advisory Tiers &rarr;</a>
-        </div>
-      </section>
-    </article>
-  </main>
-
+</div>
+<p class="article-p"><strong>Expected output:</strong> <code>claude mcp list</code> shows <code>local-llm</code> as connected, and a Claude Code session can call both tools. The router prints three answers tagged <code>[local-fast]</code>, <code>[local-private]</code> and <code>[claude-hard]</code>.</p>
+<p class="ifit"><strong>Troubleshooting:</strong> Run the launch command from <code>claude mcp add</code> by hand; a stdio server that waits silently is healthy, while a traceback shows the real error. Keep debugging <code>print()</code> calls out of the MCP server, because stdout carries the protocol.</p>
+</article>
+</section>
+<!-- Section 9: Conclusion -->
+<section class="content-card" id="conclusion">
+<h2><span class="sec-num">09</span>Conclusion: Choosing Your Setup</h2>
+<p class="article-p">Start from the hardware you have. A 16 GB card runs the 8B and 14B models, gpt-oss-20b and, with 64 to 96 GB of system RAM, gpt-oss-120b through expert offload. A 24 GB card is the point where Qwen3.8-27B makes local coding agents useful. For 70B dense models or several 120B MoE models, a 128 GB unified-memory machine gives capacity, while a GPU gives speed.</p>
+<p class="article-p">Before you buy, price your workload. If your team spends hundreds of dollars a month on Sonnet or Opus tokens for work a local model can handle, the break-even calculator will show a payback measured in months. If you mostly send short prompts that Haiku handles for cents, local hardware pays off only through privacy, offline access or the freedom to run unlimited batch jobs.</p>
+<p class="article-p">Then wire it in gradually. Begin with Ollama and OpenCode, move to Claude Code on a local backend for private repositories, and add the MCP server so cloud Claude can hand bulk reading to your GPU. Keep Claude for the work where its lead matters, and let the local model take the rest.</p>
+</section>
+<!-- Section 10: References -->
+<section class="content-card" id="references">
+<h2><span class="sec-num">10</span>References</h2>
+<ol class="refs">
+<li><a href="https://ollama.com/blog/claude" rel="noopener noreferrer" target="_blank">Ollama blog: Claude Code with Anthropic API compatibility</a></li>
+<li><a href="https://docs.ollama.com/integrations/claude-code" rel="noopener noreferrer" target="_blank">Ollama docs: Claude Code integration and environment variables</a></li>
+<li><a href="https://docs.ollama.com/linux" rel="noopener noreferrer" target="_blank">Ollama docs: Linux installation, systemd service and ROCm</a></li>
+<li><a href="https://docs.ollama.com/context-length" rel="noopener noreferrer" target="_blank">Ollama docs: context length defaults and settings</a></li>
+<li><a href="https://ollama.com/library/qwen3.8" rel="noopener noreferrer" target="_blank">Ollama library: qwen3.8 model tags and sizes</a></li>
+<li><a href="https://ollama.com/library/gemma4" rel="noopener noreferrer" target="_blank">Ollama library: gemma4 model tags and sizes</a></li>
+<li><a href="https://lmstudio.ai/docs/developer/anthropic-compat" rel="noopener noreferrer" target="_blank">LM Studio docs: Anthropic-compatible Messages endpoint</a> &amp; <a href="https://lmstudio.ai/blog/claudecode" rel="noopener noreferrer" target="_blank">LM Studio blog: using LM Studio models in Claude Code</a></li>
+<li><a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md" rel="noopener noreferrer" target="_blank">llama.cpp: llama-server README and API compatibility</a></li>
+<li><a href="https://github.com/ggml-org/llama.cpp/discussions/15396" rel="noopener noreferrer" target="_blank">llama.cpp discussion: guide to running gpt-oss with llama.cpp</a></li>
+<li><a href="https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md" rel="noopener noreferrer" target="_blank">llama.cpp docs: building with CUDA, HIP and Vulkan</a></li>
+<li><a href="https://docs.vllm.ai/en/stable/serving/integrations/claude_code/" rel="noopener noreferrer" target="_blank">vLLM docs: using Claude Code with a vLLM server</a></li>
+<li><a href="https://docs.jan.ai/desktop/api-server" rel="noopener noreferrer" target="_blank">Jan docs: local OpenAI-compatible API server</a></li>
+<li><a href="https://opencode.ai/docs/providers/" rel="noopener noreferrer" target="_blank">OpenCode docs: providers, local models and custom baseURL</a></li>
+<li><a href="https://code.claude.com/docs/en/env-vars" rel="noopener noreferrer" target="_blank">Claude Code docs: environment variable reference</a></li>
+<li><a href="https://code.claude.com/docs/en/mcp" rel="noopener noreferrer" target="_blank">Claude Code docs: connecting tools through MCP</a></li>
+<li><a href="https://py.sdk.modelcontextprotocol.io/get-started/real-host/" rel="noopener noreferrer" target="_blank">MCP Python SDK: connecting a server to a real host</a></li>
+<li><a href="https://docs.litellm.ai/docs/proxy/reliability" rel="noopener noreferrer" target="_blank">LiteLLM docs: proxy fallbacks and reliability settings</a></li>
+<li><a href="https://platform.claude.com/docs/en/about-claude/pricing" rel="noopener noreferrer" target="_blank">Claude Platform docs: API pricing for Opus 5.5, Sonnet 5.5 and Haiku 5.5</a></li>
+<li><a href="https://huggingface.co/Qwen/Qwen3.8-27B" rel="noopener noreferrer" target="_blank">Hugging Face: Qwen3.8-27B model card</a></li>
+<li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" rel="noopener noreferrer" target="_blank">Google blog: Gemma 4 announcement and model sizes</a></li>
+<li><a href="https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512" rel="noopener noreferrer" target="_blank">Hugging Face: Ministral 3 8B Instruct model card</a></li>
+<li><a href="https://huggingface.co/mistralai/Mistral-Small-4-119B-2603" rel="noopener noreferrer" target="_blank">Hugging Face: Mistral Small 4 119B model card</a></li>
+<li><a href="https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct" rel="noopener noreferrer" target="_blank">Hugging Face: Llama 3.3 70B Instruct model card</a></li>
+<li><a href="https://huggingface.co/openai/gpt-oss-120b" rel="noopener noreferrer" target="_blank">Hugging Face: gpt-oss-120b model card</a></li>
+<li><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4" rel="noopener noreferrer" target="_blank">Hugging Face: Nemotron 3 Super 120B NVFP4 model card</a></li>
+<li><a href="https://pinggy.io/blog/best_open_source_self_hosted_llms_for_coding/" rel="noopener noreferrer" target="_blank">Pinggy: best open-source LLMs for coding, October 2026</a></li>
+<li><a href="https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/" rel="noopener noreferrer" target="_blank">BuySellRam: NVIDIA consumer GPU price update, October 2026</a></li>
+<li><a href="https://gpuprix.com/india/gpus/geforce-rtx-5060-ti-16gb" rel="noopener noreferrer" target="_blank">GPUPrix: RTX 5060 Ti 16GB price in India</a> &amp; <a href="https://gpuprix.com/india/gpus/geforce-rtx-5090" rel="noopener noreferrer" target="_blank">RTX 5090 price in India</a></li>
+<li><a href="https://computingforgeeks.com/ryzen-ai-max-395-mini-pc-comparison/" rel="noopener noreferrer" target="_blank">ComputingForGeeks: Ryzen AI Max+ 395 mini PC prices</a> &amp; <a href="https://cryptobriefing.com/nvidia-dgx-spark-64gb-launch/" rel="noopener noreferrer" target="_blank">Crypto Briefing: DGX Spark 64GB launch and pricing</a></li>
+<li><a href="https://www.eia.gov/outlooks/steo/report/elec_coal_renew.php" rel="noopener noreferrer" target="_blank">US EIA: Short-Term Energy Outlook, residential electricity prices</a> &amp; <a href="https://www.runyard.dev/buy/rtx-5060-ti-16gb-price-india.html" rel="noopener noreferrer" target="_blank">Runyard: Indian GPU landed costs</a></li>
+</ol>
+</section>
+<!-- CTA Banner -->
+<section class="cta-banner">
+<h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Deploy Sovereign Local LLMs &amp; Slash Cloud AI Spend</h3>
+<p style="color:#94a3b8;font-size:1.02rem;max-width:680px;margin:0 auto 1.75rem;line-height:1.7;">Architect private, on-premise model pipelines in Linux with vLLM, Ollama, and hybrid Claude routing to eliminate data egress and slash recurring inference bills by 60%–90%.</p>
+<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
+<a class="btn btn-primary" href="../contact.html">Start A Project →</a>
+<a class="btn btn-outline" href="../pricing.html">View Advisory Tiers →</a>
+</div>
+</section>
+</article>
+</main>
     <!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="../index.html" class="footer-brand-logo-link"
-          aria-label="Thomas Cherickal - The Digital Futurist">
+        <a href="../index.html" class="footer-brand-logo-link" aria-label="Thomas Cherickal - The Digital Futurist">
           <img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo" class="footer-brand-logo"
             width="46" height="46" />
         </a>
@@ -1587,7 +1538,8 @@ python ~/litellm/router.py</code></pre>
       </a>
 
       <!-- Direct Email Inquiry -->
-      <a href="mailto:thomascherickal@gmail.com" class="wl email-reveal-link" data-user="thomascherickal" data-domain="gmail.com">
+      <a href="mailto:thomascherickal@gmail.com" class="wl email-reveal-link" data-user="thomascherickal"
+        data-domain="gmail.com">
         <div class="wl-head">
           <div class="wl-ic">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2"
@@ -1611,7 +1563,6 @@ python ~/litellm/router.py</code></pre>
         Cherickal</a>
       <span class="tc-sep"></span> The Digital Futurist
       <span class="tc-sep"></span> Generative AI Consultant
-      <span class="tc-sep"></span> Guides &amp; Materials Licensed under Apache 2.0
       <span class="tc-sep"></span> <a href="https://thomascherickal.com" target="_blank"
         rel="noopener noreferrer">thomascherickal.com</a>
       <span class="tc-sep"></span> <a href="https://thedigitalfuturist.com" target="_blank"
@@ -1619,10 +1570,9 @@ python ~/litellm/router.py</code></pre>
     </p>
   </footer>
     <!-- END:FOOTER -->
-  <script src="../components.js"></script>
-
-  <!-- Interactive Calculators, Model Picker, Config Generator, and Filter Scripts -->
-  <script>
+<script src="../components.js"></script>
+<!-- Interactive Calculators, Model Picker, Config Generator, and Filter Scripts -->
+<script>
   (function () {
     "use strict";
     var INR_PER_USD = 88;

@@ -182,8 +182,100 @@ def convert_writing() -> str:
     lines.append("*Explore more publications at [thomascherickal.com](https://thomascherickal.com) and [HackerNoon](https://hackernoon.com/u/thomascherickal).*")
     return "\n".join(lines).strip() + "\n"
 
+def convert_general_document(file_path: str) -> str:
+    with open(file_path, "r", encoding="utf-8") as f:
+        soup = BeautifulSoup(f.read(), "html.parser")
+
+    main = soup.find("main") or soup.find("body") or soup
+    h1_el = main.find("h1") or soup.find("h1")
+    h1 = clean_text(h1_el.get_text()) if h1_el else "Thomas Cherickal"
+
+    eyebrow_el = main.find(class_=re.compile(r'(badge|eyebrow|section-label)'))
+    eyebrow = clean_text(eyebrow_el.get_text()) if eyebrow_el else ""
+
+    sub_el = main.find(class_=re.compile(r'(sub|tagline|lead|hero-sub)'))
+    sub = clean_text(sub_el.get_text()) if sub_el else ""
+
+    lines = [f"# {h1}", "## Thomas Cherickal - The Digital Futurist", ""]
+    if eyebrow:
+        lines.append(f"> **{eyebrow}**  ")
+    if sub:
+        lines.append(f"> **{sub}**")
+    if eyebrow or sub:
+        lines.extend(["", "---", ""])
+
+    seen_tables = set()
+
+    def process_node(node):
+        if not isinstance(node, Tag):
+            return
+        if node.name in ["script", "style", "nav", "svg", "noscript"]:
+            return
+        if "skip-link" in node.get("class", []):
+            return
+        if node.name == "h1":
+            return
+        if node.name == "h2":
+            lines.append(f"\n## {clean_text(node.get_text())}\n")
+            return
+        if node.name == "h3":
+            lines.append(f"\n### {clean_text(node.get_text())}\n")
+            return
+        if node.name == "h4":
+            lines.append(f"\n#### {clean_text(node.get_text())}\n")
+            return
+        if node.name == "table":
+            if node not in seen_tables:
+                seen_tables.add(node)
+                lines.append(f"\n{html_table_to_md(node)}\n")
+            return
+        if node.name in ["ul", "ol"]:
+            is_ol = (node.name == "ol")
+            for idx, li in enumerate(node.find_all("li", recursive=False), 1):
+                pfx = f"{idx}. " if is_ol else "- "
+                lines.append(f"{pfx}{clean_text(li.get_text())}")
+            lines.append("")
+            return
+        if node.name == "p":
+            t = clean_text(node.get_text())
+            if t:
+                lines.append(f"{t}\n")
+            return
+        if node.name == "pre" or ("code-window" in node.get("class", [])):
+            code = node.find("code")
+            c_text = code.get_text().strip() if code else node.get_text().strip()
+            lines.append(f"```python\n{c_text}\n```\n")
+            return
+        if node.name == "a" and "home-nav-card" in node.get("class", []):
+            title = clean_text(node.find("h3").get_text()) if node.find("h3") else "Service"
+            desc = clean_text(node.find("p").get_text()) if node.find("p") else ""
+            role_el = node.find("span", class_="role-chip")
+            role = clean_text(role_el.get_text()) if role_el else ""
+            href = node.get("href", "")
+            lines.append(f"\n### {title}\n")
+            if role:
+                lines.append(f"**Category**: `{role}`  ")
+            if href:
+                lines.append(f"**Link**: [{title}]({href})")
+            lines.append("")
+            if desc:
+                lines.append(f"{desc}\n")
+            return
+
+        for child in node.children:
+            process_node(child)
+
+    for child in main.children:
+        process_node(child)
+
+    out = "\n".join(lines)
+    out = re.sub(r'\n{3,}', '\n\n', out).strip() + "\n"
+    return out
+
 def convert_collaboration() -> str:
     html_file = os.path.join(REPO_DIR, "collaboration.html")
+    if not os.path.exists(html_file):
+        return ""
     with open(html_file, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f.read(), "html.parser")
         
@@ -948,10 +1040,16 @@ convert_portfolio = convert_articles
 def main():
     print(f"Generating Markdown files in: {SYNC_DIR}")
     
-    converters = {
+    # Ensure all target subdirectories exist in SYNC_DIR
+    for sub in ["business-services", "personal-services", "claude", "google"]:
+        os.makedirs(os.path.join(SYNC_DIR, sub), exist_ok=True)
+
+    exclude_files = {"header.html", "footer.html", "article-footer_dark.html", "google43d90cf6a204dc6d.html"}
+    
+    # 1. Root core converters
+    core_converters = {
         "articles.html": ("articles.md", convert_articles),
         "writing.html": ("writing.md", convert_writing),
-        "collaboration.html": ("collaboration.md", convert_collaboration),
         "pricing.html": ("pricing.md", convert_pricing),
         "expertise.html": ("expertise.md", convert_expertise),
         "contact.html": ("contact.md", convert_contact),
@@ -959,45 +1057,55 @@ def main():
         "404.html": ("404.md", convert_404)
     }
     
-    for html_file, (md_file, converter) in converters.items():
+    for html_file, (md_file, converter) in core_converters.items():
+        src_path = os.path.join(REPO_DIR, html_file)
+        if not os.path.exists(src_path):
+            continue
         dest = os.path.join(SYNC_DIR, md_file)
         print(f"Building {md_file} from {html_file}...")
         content = converter()
         with open(dest, "w", encoding="utf-8") as f:
             f.write(content)
         print(f"  -> Wrote {len(content.splitlines())} lines to {md_file}")
-        
-    service_files = sorted(glob.glob(os.path.join(REPO_DIR, "service-*.html")))
-    for s_path in service_files:
-        base = os.path.basename(s_path)
-        md_name = base.replace(".html", ".md")
-        dest = os.path.join(SYNC_DIR, md_name)
-        print(f"Building {md_name} from {base}...")
-        content = convert_service_page(s_path)
-        with open(dest, "w", encoding="utf-8") as f:
-            f.write(content)
-        print(f"  -> Wrote {len(content.splitlines())} lines to {md_name}")
 
-    agent_files = sorted(
-        glob.glob(os.path.join(REPO_DIR, "agents-*.html")) +
-        glob.glob(os.path.join(REPO_DIR, "claude", "*.html")) +
-        glob.glob(os.path.join(REPO_DIR, "google", "*.html")) +
-        glob.glob(os.path.join(REPO_DIR, "claude-*.html")) +
-        [g for g in glob.glob(os.path.join(REPO_DIR, "google-*.html")) if not os.path.basename(g).startswith("google43d")]
-    )
-    for a_path in agent_files:
-        base = os.path.basename(a_path)
-        md_name = base.replace(".html", ".md")
-        dest = os.path.join(SYNC_DIR, md_name)
-        print(f"Building {md_name} from {base}...")
-        if base == "agents-all-agentic-providers.html":
-            content = convert_agents_all_providers(a_path)
-        else:
-            content = convert_agent_deepdive(a_path)
-        with open(dest, "w", encoding="utf-8") as f:
-            f.write(content)
-        print(f"  -> Wrote {len(content.splitlines())} lines to {md_name}")
-        
+    # 2. Subdirectory files: business-services, personal-services, claude, google
+    for subdir in ["business-services", "personal-services", "claude", "google"]:
+        sub_dir_path = os.path.join(REPO_DIR, subdir)
+        if not os.path.isdir(sub_dir_path):
+            continue
+        for html_path in sorted(glob.glob(os.path.join(sub_dir_path, "*.html"))):
+            base = os.path.basename(html_path)
+            if base in exclude_files:
+                continue
+            rel_md = os.path.join(subdir, base.replace(".html", ".md"))
+            dest = os.path.join(SYNC_DIR, rel_md)
+            print(f"Building {rel_md} from {base}...")
+            if subdir in ["business-services", "personal-services"]:
+                content = convert_service_page(html_path)
+            else:
+                content = convert_agent_deepdive(html_path)
+            with open(dest, "w", encoding="utf-8") as f:
+                f.write(content)
+            print(f"  -> Wrote {len(content.splitlines())} lines to {rel_md}")
+
+    # 3. Overview, training, and catalogue pages in root
+    overview_pages = [
+        "all-business-services.html",
+        "all-personal-services.html",
+        "business-ai-training.html",
+        "personal-ai-training.html"
+    ]
+    for page in overview_pages:
+        src_path = os.path.join(REPO_DIR, page)
+        if os.path.exists(src_path):
+            md_name = page.replace(".html", ".md")
+            dest = os.path.join(SYNC_DIR, md_name)
+            print(f"Building {md_name} from {page}...")
+            content = convert_general_document(src_path)
+            with open(dest, "w", encoding="utf-8") as f:
+                f.write(content)
+            print(f"  -> Wrote {len(content.splitlines())} lines to {md_name}")
+
     print("\nInitial Markdown generation completed successfully!")
 
 if __name__ == "__main__":

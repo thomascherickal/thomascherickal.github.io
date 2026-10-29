@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Local LLMs & Cost Slashing | Thomas Cherickal</title>
-  <meta content="Slash cloud AI expenses by up to 90% by deploying private open-weight models using Ollama, vLLM, and llama.cpp on secure on-premises hardware clusters." name="description"/>
-  <meta content="Thomas Cherickal" name="author" />
-  <!-- Canonical URL -->
-  <link href="https://thedigitalfuturist.com/personal-services/personal-service-local-llms-cost-slashing.html" rel="canonical" />
-  <!-- Open Graph -->
-  <meta content="website" property="og:type" />
-  <meta content="https://thedigitalfuturist.com/personal-services/personal-service-local-llms-cost-slashing.html" property="og:url" />
-  <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name" />
-  <meta content="Local LLMs &amp; Cost Slashing | Thomas Cherickal" property="og:title" />
-  <meta content="Slash cloud AI expenses by up to 90% by deploying private open-weight models using Ollama, vLLM, and llama.cpp on secure on-premises hardware clusters." property="og:description"/>
-  <meta content="Local LLMs &amp; Cost Slashing | Thomas Cherickal" name="twitter:title" />
-  <meta content="Slash cloud AI expenses by up to 90% by deploying private open-weight models using Ollama, vLLM, and llama.cpp on secure on-premises hardware clusters." name="twitter:description"/>
-  <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image" />
-  <meta content="en_US" property="og:locale" />
-  <!-- Favicon & Icons -->
-  <link href="../assets/favicon.ico" rel="icon" sizes="any" />
-  <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml" />
-  <link href="../assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
-  <link href="../assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
-  <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-  <link href="../site.webmanifest" rel="manifest" />
-  <meta content="#000000" name="theme-color" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Local LLMs &amp; Cost Slashing | Thomas Cherickal</title>
+<meta content="Slash cloud AI expenses by up to 90% by deploying private open-weight models using Ollama, vLLM, and llama.cpp on secure on-premises hardware clusters." name="description"/>
+<meta content="Thomas Cherickal" name="author"/>
+<!-- Canonical URL -->
+<link href="https://thedigitalfuturist.com/personal-services/personal-service-local-llms-cost-slashing.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="https://thedigitalfuturist.com/personal-services/personal-service-local-llms-cost-slashing.html" property="og:url"/>
+<meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
+<meta content="Local LLMs &amp; Cost Slashing | Thomas Cherickal" property="og:title"/>
+<meta content="Slash cloud AI expenses by up to 90% by deploying private open-weight models using Ollama, vLLM, and llama.cpp on secure on-premises hardware clusters." property="og:description"/>
+<meta content="Local LLMs &amp; Cost Slashing | Thomas Cherickal" name="twitter:title"/>
+<meta content="Slash cloud AI expenses by up to 90% by deploying private open-weight models using Ollama, vLLM, and llama.cpp on secure on-premises hardware clusters." name="twitter:description"/>
+<meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
+<meta content="en_US" property="og:locale"/>
+<!-- Favicon & Icons -->
+<link href="../assets/favicon.ico" rel="icon" sizes="any"/>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../site.webmanifest" rel="manifest"/>
+<meta content="#000000" name="theme-color"/>
 <!-- Structured Data (JSON-LD) for Google Rich Results -->
-  <script type="application/ld+json">
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
@@ -225,19 +224,18 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="../css/fonts.css" />
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="stylesheet" href="../css/background.css" />
-  <link rel="stylesheet" href="../css/buttons.css" />
-  <link rel="stylesheet" href="../css/navbar.css" />
-  <link rel="stylesheet" href="../css/footer.css" />
-  <link rel="stylesheet" href="../css/cta.css" />
-  <link rel="stylesheet" href="../css/article.css" />
-  <link rel="stylesheet" href="../css/service.css" />
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link href="../css/styles.css" rel="stylesheet"/>
+<link href="../css/background.css" rel="stylesheet"/>
+<link href="../css/buttons.css" rel="stylesheet"/>
+<link href="../css/navbar.css" rel="stylesheet"/>
+<link href="../css/footer.css" rel="stylesheet"/>
+<link href="../css/cta.css" rel="stylesheet"/>
+<link href="../css/article.css" rel="stylesheet"/>
+<link href="../css/service.css" rel="stylesheet"/>
 </head>
-
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
   <!-- START:HEADER -->
   <nav aria-label="Main navigation">
     <a href="../index.html" class="nav-brand"><img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo"
@@ -376,69 +374,65 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-  <a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
-  <main id="main">
-    <!-- PAGE HERO HEADER -->
-    <section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
-      <p class="section-label">// SERVICE SPECIFICATION 02</p>
-      <h1 class="section-title">Local LLMs &amp; Cost Slashing</h1>
-      <p class="section-sub" style="max-width:760px;margin:0.75rem auto 0;line-height:1.8;">
+<a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
+<main id="main">
+<!-- PAGE HERO HEADER -->
+<section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
+<p class="section-label">// SERVICE SPECIFICATION 02</p>
+<h1 class="section-title">Local LLMs &amp; Cost Slashing</h1>
+<p class="section-sub" style="max-width:760px;margin:0.75rem auto 0;line-height:1.8;">
         Cutting recurring cloud API bills by 60-90% by running open-weight models privately with Ollama, vLLM, llama.cpp
         and LM Studio on hardware you own.
       </p>
-      <div style="margin-top:1.5rem;">
-        <a class="btn btn-commission" href="../contact.html" style="padding:0.75rem 1.5rem;font-size:0.85rem;">
+<div style="margin-top:1.5rem;">
+<a class="btn btn-commission" href="../contact.html" style="padding:0.75rem 1.5rem;font-size:0.85rem;">
           Slash Inference Costs with Local LLMs →
         </a>
-      </div>
-    </section>
-    <div class="divider"></div>
-    <!-- STRUCTURED SPECIFICATION LISTS -->
-    <section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
-      <div
-        style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:2.5rem;box-shadow:var(--glow-gold);">
-        <h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">1. Service
+</div>
+</section>
+<div class="divider"></div>
+<!-- STRUCTURED SPECIFICATION LISTS -->
+<section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
+<div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:2.5rem;box-shadow:var(--glow-gold);">
+<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">1. Service
           Overview &amp; Scope</h2>
-        <ul
-          style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-          <li><strong>Moving High-Volume Work Off the Cloud:</strong> Shifting repetitive generative workloads from paid
+<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
+<li><strong>Moving High-Volume Work Off the Cloud:</strong> Shifting repetitive generative workloads from paid
             APIs to open-weight models (Llama, Qwen, Gemma, Mistral, DeepSeek) running on your own hardware.</li>
-          <li><strong>Hardware Sizing:</strong> Matching model size, from 8B to 120B parameters, to your GPUs and
+<li><strong>Hardware Sizing:</strong> Matching model size, from 8B to 120B parameters, to your GPUs and
             memory, and pricing the next hardware upgrade in US dollars and Indian rupees.</li>
-          <li><strong>Local-First Routing:</strong> Sending routine requests to local models and passing harder
+<li><strong>Local-First Routing:</strong> Sending routine requests to local models and passing harder
             reasoning to Claude, with OpenRouter as an optional middle tier.</li>
-          <li><strong>Private Hosting:</strong> Running models on-premises on Linux (Ubuntu or Zorin), so source code,
+<li><strong>Private Hosting:</strong> Running models on-premises on Linux (Ubuntu or Zorin), so source code,
             customer records and internal documents stay on your machines.</li>
-          <li><strong>Serving and Quantization:</strong> Setting up vLLM, Ollama, llama.cpp or LM Studio with GGUF or
+<li><strong>Serving and Quantization:</strong> Setting up vLLM, Ollama, llama.cpp or LM Studio with GGUF or
             AWQ quantization chosen to fit your hardware.</li>
-        </ul>
-        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">2. Standard
+</ul>
+<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">2. Standard
           Architecture &amp; Tools</h2>
-        <ul
-          style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-          <li><strong>Inference Engines:</strong> vLLM for multi-user serving, llama.cpp and Ollama for lighter
+<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
+<li><strong>Inference Engines:</strong> vLLM for multi-user serving, llama.cpp and Ollama for lighter
             deployments, and LM Studio for desktop use.</li>
-          <li><strong>Open-Weight Model Families:</strong> Llama, Qwen, Gemma, Mistral and DeepSeek, selected and
+<li><strong>Open-Weight Model Families:</strong> Llama, Qwen, Gemma, Mistral and DeepSeek, selected and
             quantized per task.</li>
-          <li><strong>Routing Gateway:</strong> A FastAPI service exposing an OpenAI-compatible endpoint that routes
+<li><strong>Routing Gateway:</strong> A FastAPI service exposing an OpenAI-compatible endpoint that routes
             each request to a local model or to Claude.</li>
-          <li><strong>Coding Agents on Local Models:</strong> OpenCode and Claude Code configured to use your local
+<li><strong>Coding Agents on Local Models:</strong> OpenCode and Claude Code configured to use your local
             models for work they handle well.</li>
-        </ul>
-        <h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">3.
+</ul>
+<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">3.
           Deliverable Examples &amp; 4-Week Schedule</h2>
-        <ul
-          style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:1.5rem;list-style:disc;">
-          <li><strong>Hardware Sizing &amp; ROI Payback Calculator:</strong> Spreadsheet comparing hardware cost against
+<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:1.5rem;list-style:disc;">
+<li><strong>Hardware Sizing &amp; ROI Payback Calculator:</strong> Spreadsheet comparing hardware cost against
             your current monthly API spend, with the payback period for each option.</li>
-          <li><strong>Containerized Local Inference Stack:</strong> Docker Compose files that bring up your chosen
+<li><strong>Containerized Local Inference Stack:</strong> Docker Compose files that bring up your chosen
             inference engine with GPU acceleration and health checks.</li>
-          <li><strong>Local-First Routing Gateway:</strong> OpenAI-compatible FastAPI gateway that sends each request to
+<li><strong>Local-First Routing Gateway:</strong> OpenAI-compatible FastAPI gateway that sends each request to
             a local model or to Claude based on task type.</li>
-          <li><strong>Benchmark &amp; Verification Suite:</strong> Python scripts and pytest checks measuring tokens per
+<li><strong>Benchmark &amp; Verification Suite:</strong> Python scripts and pytest checks measuring tokens per
             second, latency under concurrent load, memory limits and answer quality on your own sample tasks.</li>
-        </ul>
-        <div style="overflow-x:auto;margin:1.5rem 0 2rem 0;">
+</ul>
+<div style="overflow-x:auto;margin:1.5rem 0 2rem 0;">
 <table class="data-table">
 <thead>
 <tr>
@@ -476,20 +470,19 @@
 </tbody>
 </table>
 </div>
-        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">4. Guarantees
+<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">4. Guarantees
           &amp; Commitments</h2>
-        <ul
-          style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-          <li><strong>60% to 90% Cost Reduction:</strong> Lower monthly cloud API spend for the workloads moved to local
+<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
+<li><strong>60% to 90% Cost Reduction:</strong> Lower monthly cloud API spend for the workloads moved to local
             models, measured against a baseline agreed in week 1.</li>
-          <li><strong>Data Stays on Your Hardware:</strong> Local models run without sending prompts or outputs to
+<li><strong>Data Stays on Your Hardware:</strong> Local models run without sending prompts or outputs to
             outside services; only requests you choose to route to Claude leave your network.</li>
-          <li><strong>Hardware Independence:</strong> Docker containers that run on workstations, on-premises servers or
+<li><strong>Hardware Independence:</strong> Docker containers that run on workstations, on-premises servers or
             a private cloud.</li>
-          <li><strong>30-Day Operational SLA:</strong> Help with model updates, driver issues and performance tuning.
+<li><strong>30-Day Operational SLA:</strong> Help with model updates, driver issues and performance tuning.
           </li>
-        </ul>
-        <h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">5. Investment
+</ul>
+<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">5. Investment
           &amp; Pricing Quote</h2>
 
         <ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;list-style:disc;">
@@ -518,44 +511,37 @@
           </li>
         </ul>
 
-        <h2
-          style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-top:2rem;margin-bottom:1rem;">
+        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-top:2rem;margin-bottom:1rem;">
           6. Summary</h2>
-        <ul
-          style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-          <li><strong style="color:var(--gold);">Lower Cloud Token Spend:</strong> Cutting recurring API costs by
+<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
+<li><strong style="color:var(--gold);">Lower Cloud Token Spend:</strong> Cutting recurring API costs by
             60%-90% for workloads moved to self-hosted models.</li>
-          <li><strong style="color:var(--gold);">Strict 1-Month Delivery:</strong> 4-week timeline covering hardware
+<li><strong style="color:var(--gold);">Strict 1-Month Delivery:</strong> 4-week timeline covering hardware
             sizing, deployment, routing and sign-off.</li>
-          <li><strong style="color:var(--gold);">Local-First Routing:</strong> Routine queries served locally, harder
+<li><strong style="color:var(--gold);">Local-First Routing:</strong> Routine queries served locally, harder
             cases escalated to Claude.</li>
-          <li><strong style="color:var(--gold);">Private Data Handling:</strong> Sensitive data processed on your own
+<li><strong style="color:var(--gold);">Private Data Handling:</strong> Sensitive data processed on your own
             machines.</li>
-          <li><strong style="color:var(--gold);">Full IP &amp; Deployment Handover:</strong> Container files, benchmark
+<li><strong style="color:var(--gold);">Full IP &amp; Deployment Handover:</strong> Container files, benchmark
             scripts, the ROI calculator and 30-day support.</li>
-        </ul>
-        <div
-          style="margin-top:2.5rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:1rem;">
-          <a class="btn btn-commission btn-lg" href="../contact.html"
-            style="width:100%;max-width:480px;justify-content:center;">
+</ul>
+<div style="margin-top:2.5rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:1rem;">
+<a class="btn btn-commission btn-lg" href="../contact.html" style="width:100%;max-width:480px;justify-content:center;">
             Commission Local LLM Cost Slashing →
           </a>
-          <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener"
-            style="width:100%;max-width:480px;justify-content:center;" target="_blank">
+<a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" style="width:100%;max-width:480px;justify-content:center;" target="_blank">
             Book a free intro call on LinkedIn ↗
           </a>
-        </div>
-      </div>
-    </section>
-    <div class="divider" style="margin-top:3rem;"></div>
-
-  </main>
+</div>
+</div>
+</section>
+<div class="divider" style="margin-top:3rem;"></div>
+</main>
     <!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="../index.html" class="footer-brand-logo-link"
-          aria-label="Thomas Cherickal - The Digital Futurist">
+        <a href="../index.html" class="footer-brand-logo-link" aria-label="Thomas Cherickal - The Digital Futurist">
           <img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo" class="footer-brand-logo"
             width="46" height="46" />
         </a>
@@ -810,7 +796,8 @@
       </a>
 
       <!-- Direct Email Inquiry -->
-      <a href="mailto:thomascherickal@gmail.com" class="wl email-reveal-link" data-user="thomascherickal" data-domain="gmail.com">
+      <a href="mailto:thomascherickal@gmail.com" class="wl email-reveal-link" data-user="thomascherickal"
+        data-domain="gmail.com">
         <div class="wl-head">
           <div class="wl-ic">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2"
@@ -834,7 +821,6 @@
         Cherickal</a>
       <span class="tc-sep"></span> The Digital Futurist
       <span class="tc-sep"></span> Generative AI Consultant
-      <span class="tc-sep"></span> Guides &amp; Materials Licensed under Apache 2.0
       <span class="tc-sep"></span> <a href="https://thomascherickal.com" target="_blank"
         rel="noopener noreferrer">thomascherickal.com</a>
       <span class="tc-sep"></span> <a href="https://thedigitalfuturist.com" target="_blank"
@@ -842,8 +828,6 @@
     </p>
   </footer>
     <!-- END:FOOTER -->
-
-  <script src="../components.js"></script>
+<script src="../components.js"></script>
 </body>
-
 </html>
