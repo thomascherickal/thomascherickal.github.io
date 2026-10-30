@@ -824,21 +824,24 @@ function runTestSuite() {
       return [];
     };
 
+    const allCalcTierClassButtons = [btnModeBusiness, btnModeIndividual, ...tierBtns];
+
     const mockDocument = {
       readyState: "complete",
       getElementById: (id) => elements[id] || null,
       querySelectorAll: (sel) => {
-        if (sel === ".calc-tier-btn") return tierBtns;
+        if (sel === ".calc-tier-btn") return allCalcTierClassButtons;
+        if (sel === "#calc-tier-buttons .calc-tier-btn, .calc-tier-btn[data-tier]") return tierBtns;
         if (sel.includes("#individual-services-list")) return serviceCards;
         return [];
       },
       addEventListener: () => {}
     };
 
-    return { mockDocument, elements, tierBtns, serviceCards, getCheckboxes: () => renderedCheckboxes };
+    return { mockDocument, elements, tierBtns, allCalcTierClassButtons, serviceCards, getCheckboxes: () => renderedCheckboxes };
   }
 
-  const { mockDocument, elements, tierBtns, serviceCards, getCheckboxes } = setupMockDOM();
+  const { mockDocument, elements, tierBtns, allCalcTierClassButtons, serviceCards, getCheckboxes } = setupMockDOM();
   const originalDoc = typeof document !== 'undefined' ? document : undefined;
   const originalWin = typeof window !== 'undefined' ? window : undefined;
 
@@ -993,6 +996,95 @@ function runTestSuite() {
     serviceCards[0].querySelector(".svc-indiv-price").textContent.includes("$75 USD (T2)") &&
     serviceCards[0].querySelector(".svc-biz-price").textContent.includes("$150 USD (T2)"),
     `Expected $75/$150 for Tier 2 on service cards, got indiv=${serviceCards[0].querySelector(".svc-indiv-price").textContent}, biz=${serviceCards[0].querySelector(".svc-biz-price").textContent}`
+  );
+
+  // 14. Edge Case & Crash Prevention Regression Tests
+  // Verifies fix for runtime exceptions at pricing-calculator.js:408 when buttons without data-tier or invalid tiers are triggered.
+  let noErrorThrown = true;
+  try {
+    // A. Clicking mode buttons (which carry .calc-tier-btn class but no data-tier attribute)
+    elements["btn-mode-business"].trigger("click");
+    elements["btn-mode-individual"].trigger("click");
+    elements["btn-mode-business"].trigger("click");
+  } catch (err) {
+    noErrorThrown = false;
+  }
+  assert(
+    "Crash Prevention: Clicking buttons with .calc-tier-btn lacking data-tier attribute does not throw runtime TypeError",
+    noErrorThrown,
+    "An error was thrown when clicking mode buttons"
+  );
+
+  // B. Calling window.selectTierAndScroll with invalid/null/undefined/string/NaN arguments
+  let selectTierSafe = true;
+  try {
+    if (typeof global.window.selectTierAndScroll === "function") {
+      global.window.selectTierAndScroll(null);
+      global.window.selectTierAndScroll(undefined);
+      global.window.selectTierAndScroll("invalid");
+      global.window.selectTierAndScroll(NaN);
+      global.window.selectTierAndScroll(999);
+      global.window.selectTierAndScroll(-1);
+    }
+  } catch (err) {
+    selectTierSafe = false;
+  }
+  assert(
+    "Crash Prevention: window.selectTierAndScroll gracefully ignores invalid or non-existent tier IDs without crashing",
+    selectTierSafe,
+    "selectTierAndScroll threw when passed invalid inputs"
+  );
+
+  // C. Calling calculatePricing with invalid tierId falls back safely to Tier 1
+  const invalidTierFallback = PricingCalculator.calculatePricing({
+    tierId: null,
+    clientMode: "business",
+    packageType: "pkg-business"
+  });
+  assert(
+    "Crash Prevention: calculatePricing with null tierId safely defaults to Tier 1 pricing ($2,000 USD)",
+    invalidTierFallback.tierId === 1 && invalidTierFallback.finalPrice === 2000,
+    `Expected Tier 1 and $2000, got tierId=${invalidTierFallback.tierId}, finalPrice=${invalidTierFallback.finalPrice}`
+  );
+
+  const outOfRangeTier = PricingCalculator.calculatePricing({
+    tierId: 99,
+    clientMode: "business",
+    packageType: "pkg-business"
+  });
+  assert(
+    "Crash Prevention: calculatePricing with tierId=99 safely defaults to Tier 1 pricing ($2,000 USD)",
+    outOfRangeTier.tierId === 1 && outOfRangeTier.finalPrice === 2000,
+    `Expected Tier 1 and $2000, got tierId=${outOfRangeTier.tierId}, finalPrice=${outOfRangeTier.finalPrice}`
+  );
+
+  // D. End-to-end full sequence workflow: Mode Switch -> Pick Services -> Change Country -> Change Participants -> Click Tier Button
+  let e2eWorkflowPassed = true;
+  try {
+    // Step 1: Switch to individual
+    elements["btn-mode-individual"].trigger("click");
+    // Step 2: Switch to pick services
+    elements["calc-package"].value = "pick-services";
+    elements["calc-package"].trigger("change");
+    // Step 3: Check 3 services
+    const cbs = getCheckboxes();
+    cbs[0].checked = true;
+    cbs[1].checked = true;
+    cbs[2].checked = true;
+    cbs[0].trigger("change");
+    // Step 4: Country to Tier 4 (Startups 50% off)
+    elements["calc-country"].selectedIndex = 3;
+    elements["calc-country"].selectedOptions = [elements["calc-country"].options[3]];
+    elements["calc-country"].trigger("change");
+    // Step 5: Click Tier 3 pill button
+    tierBtns[2].trigger("click"); // Tier 3
+  } catch (err) {
+    e2eWorkflowPassed = false;
+  }
+  assert(
+    "End-to-End Workflow: Multi-step interactive configuration sequence completes smoothly without exception",
+    e2eWorkflowPassed && elements["calc-applied-tier"].textContent.includes("Tier 3"),
+    `Expected smooth completion and Tier 3, got tier=${elements["calc-applied-tier"].textContent}`
   );
 
   // Restore globals

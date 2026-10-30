@@ -3,16 +3,16 @@
 
 > **// Business & Organizational Catalogue**  
 > **Comprehensive full-lifecycle business AI transformation engagements across 16 core competencies. Every service
- is a dedicated one-month intensive sprint providing direct executive advisory, production-grade architecture
- blueprints, sample code, and 30 days of post-delivery support.**
+ is a dedicated intensive sprint providing direct executive advisory, production-grade architecture
+ blueprints, sample code, and 20 days of post-delivery support (20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day).**
 
 ---
 
 // Business & Organizational Catalogue
 
 Comprehensive full-lifecycle business AI transformation engagements across 16 core competencies. Every service
- is a dedicated one-month intensive sprint providing direct executive advisory, production-grade architecture
- blueprints, sample code, and 30 days of post-delivery support.
+ is a dedicated intensive sprint providing direct executive advisory, production-grade architecture
+ blueprints, sample code, and 20 days of post-delivery support (20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day).
 
 Business Transformation
 

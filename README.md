@@ -60,8 +60,8 @@ mindmap
     10-Day Training Model
       Hands-On Coding Immersion
       Fixed Rate up to 20 Seats
-      30 Days Post-Training Support
-      30 Days Free Doubts Advisory
+      20 Days Post-Training Support
+      20 Days Free Doubts Advisory
       Custom Alumni Discord Community
       100% Client IP Ownership
 ```
@@ -226,8 +226,8 @@ Clients have complete autonomy to choose how they engage:
    - **Purchasing Power Parity (PPP)**: Applies across all 6 tiers for all individual service picks.
 
 2. **Flagship Transformation Programs (Comprehensive Immersion)**:
-   - **Business Training Flagship**: **$2,000 USD for 40 days** (20 days live hands-on engineering training + 20 days guidance and detailed guides and materials). Includes cohorts up to 20 participants (extra seats at $100 USD per seat).
-   - **Personal Training Flagship**: **$1,000 USD for 40 days** (15 days intensive 1-on-1 sprint + 15 days guidance and detailed guides and materials). Strictly for 1 person only.
+   - **Business Training Flagship**: **$2,000 USD for 40 days** (20 days live hands-on engineering training + 20 days guidance and detailed guides and materials - 20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Includes cohorts up to 20 participants (extra seats at $100 USD per seat).
+   - **Personal Training Flagship**: **$1,000 USD for 40 days** (20 days intensive 1-on-1 sprint + 20 days guidance and detailed guides and materials - 20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Strictly for 1 person only.
 
 ### Cohort Pricing & Scale-Out Policy
 1. **Fixed Base Rate for up to 20 Seats**: Every Business engagement carries a fixed base rate covering up to 20 participants.

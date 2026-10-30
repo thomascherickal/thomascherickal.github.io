@@ -218,7 +218,7 @@
     const calcScopeVal = document.getElementById("calc-scope-val");
     const calcCohortVal = document.getElementById("calc-cohort-val");
     const calcCountry = document.getElementById("calc-country");
-    const calcTierButtons = document.querySelectorAll(".calc-tier-btn");
+    const calcTierButtons = document.querySelectorAll("#calc-tier-buttons .calc-tier-btn, .calc-tier-btn[data-tier]");
     const calcResultBox = document.getElementById("calc-result-box");
     const calcTierBadge = document.getElementById("calc-tier-badge");
     const calcDisplayPrice = document.getElementById("calc-display-price");
@@ -392,6 +392,9 @@
     function updateCalculator() {
       if (!calcCustomAmount) return;
 
+      if (!activeTier || !PARITY_TIERS[activeTier]) {
+        activeTier = 1;
+      }
       const tier = PARITY_TIERS[activeTier];
       const result = calculatePricing({
         tierId: activeTier,
@@ -412,10 +415,10 @@
       // Scope description
       if (calcScopeVal) {
         if (result.packageType === "pkg-business") {
-          calcScopeVal.textContent = "Business Training Flagship (60 Days: 30d + 30d)";
+          calcScopeVal.textContent = "Business Training Flagship (40 Days: 20d + 20d, 4h/day)";
           calcScopeVal.style.color = "var(--cyan)";
         } else if (result.packageType === "pkg-personal") {
-          calcScopeVal.textContent = "Personal Training Flagship (30 Days: 15d + 15d)";
+          calcScopeVal.textContent = "Personal Training Flagship (40 Days: 20d + 20d, 4h/day)";
           calcScopeVal.style.color = "var(--gold)";
         } else if (result.packageType === "pick-services") {
           calcScopeVal.textContent = `${result.serviceCount} Selected Service${result.serviceCount === 1 ? '' : 's'} (${result.clientMode === "business" ? "Business" : "Individual"}, ${result.serviceCount * 5}d + ${result.serviceCount * 5}d support)`;
@@ -558,7 +561,7 @@
           calcCtaBtn.textContent = "Lock in " + tier.shortName + " Rate ($" + result.finalPrice.toLocaleString("en-US") + ") →";
           calcCtaBtn.style.borderColor = tier.badgeColor;
           const pkgVal = calcPackage ? calcPackage.value : "";
-          calcCtaBtn.href = "contact.html?tier=" + tier.tier + "&offer=" + encodeURIComponent(pkgVal) + "&budget=" + result.finalPrice + "&participants=" + result.participants;
+          calcCtaBtn.href = "contact.html?tier=" + tier.id + "&offer=" + encodeURIComponent(pkgVal) + "&budget=" + result.finalPrice + "&participants=" + result.participants;
         }
       }
 
@@ -569,7 +572,7 @@
           const isBiz = result.clientMode === "business";
           const pkgTitle = isBiz ? "Business Flagship" : "Personal Flagship";
           const flagshipCostStr = "$" + result.flagshipPrice.toLocaleString("en-US");
-          const trainingDays = isBiz ? "30 days training + 30 days guidance" : "15 days training + 15 days guidance";
+          const trainingDays = isBiz ? "20 days training + 20 days guidance (20 working days over 4 weeks, 4 hours/day)" : "20 days training + 20 days guidance (20 working days over 4 weeks, 4 hours/day)";
           const targetPkgVal = isBiz ? "pkg-business" : "pkg-personal";
 
           calcFlagshipNudge.style.display = "block";
@@ -599,7 +602,12 @@
     }
 
     function setActiveTier(tierNum) {
-      activeTier = parseInt(tierNum, 10);
+      const parsed = parseInt(tierNum, 10);
+      if (!isNaN(parsed) && PARITY_TIERS[parsed]) {
+        activeTier = parsed;
+      } else {
+        return;
+      }
       calcTierButtons.forEach(btn => {
         if (parseInt(btn.getAttribute("data-tier"), 10) === activeTier) {
           btn.classList.add("active");

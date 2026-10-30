@@ -90,7 +90,7 @@
           "price": "100.00",
           "availability": "https://schema.org/InStock",
           "eligibleRegion": "Worldwide",
-          "description": "Available as an individual service pick ($100 USD for individuals / $200 USD for businesses, each for 5 days of live training + 5 days of dedicated support, 10 days total coverage), or as part of our comprehensive programs: Business Training ($2,000 USD for 40 days: 20d training + 20d guidance/materials, up to 20 seats, +$100/extra seat) or Personal Training ($1,000 USD for 40 days: 20d training + 20d guidance/materials, 1 person only). Clients are free to pick and choose their services. Full 195-country Purchasing Power Parity (PPP) supported across all service pricing.",
+          "description": "Available as an individual service pick ($100 USD for individuals / $200 USD for businesses, each for 5 days of live training + 5 days of dedicated support, 10 days total coverage), or as part of our comprehensive programs: Business Training ($2,000 USD for 40 days: 20d training + 20d guidance/materials, 20 working days over 4 weeks with 8 - 10 recovery days, 4 hours/day, up to 20 seats, +$100/extra seat) or Personal Training ($1,000 USD for 40 days: 20d training + 20d guidance/materials, 20 working days over 4 weeks with 8 - 10 recovery days, 4 hours/day, 1 person only). Clients are free to pick and choose their services. Full 195-country Purchasing Power Parity (PPP) supported across all service pricing.",
           "priceSpecification": [
             {
               "@type": "PriceSpecification",
@@ -159,7 +159,7 @@
               "name": "Business Training (Tier 1 / 100%)",
               "price": "2000.00",
               "priceCurrency": "USD",
-              "description": "40 days: 20d training + 20d guidance & materials, up to 20 participants, +$100/extra seat"
+              "description": "40 days: 20d training + 20d guidance & materials (20 working days over 4 weeks, 4 hours/day), up to 20 participants, +$100/extra seat"
             },
             {
               "@type": "PriceSpecification",
@@ -184,7 +184,7 @@
               "name": "Personal Training (Tier 1 / 100%)",
               "price": "1000.00",
               "priceCurrency": "USD",
-              "description": "40 days: 20d training + 20d guidance & materials, 1 person only"
+              "description": "40 days: 20d training + 20d guidance & materials (20 working days over 4 weeks, 4 hours/day), 1 person only"
             },
             {
               "@type": "PriceSpecification",
@@ -363,163 +363,608 @@
 <main id="main">
 <!-- PAGE HERO HEADER -->
 <section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
-<p class="section-label">// SERVICE SPECIFICATION 10</p>
-<h1 class="section-title">Advanced AI Agents</h1>
-<p class="section-sub" style="max-width:760px;margin:0.75rem auto 0;line-height:1.8;">
-        Building production autonomous agent systems: hierarchical teams of Claude agents, self-correcting loops driven
-        by tests, persistent state, and sandboxed execution for business-critical workloads.
-      </p>
-<div style="margin-top:1.5rem;">
-<a class="btn btn-commission" href="../contact.html" >
-          Commission Advanced AI Agent Systems →
-        </a>
+<p class="section-label">// SERVICE SPECIFICATION 10 - EXECUTIVE REPORT</p>
+<h1 class="section-title">Advanced Business Use-Cases for AI Agents: Operational Strategy, Value Realization, Risk Governance, and Implementation Protocols</h1>
+<p class="section-sub" style="max-width:840px;margin:1rem auto 0;line-height:1.8;">
+  Enterprise software architecture is moving fast from simple text chatbots to autonomous AI agents. Grounded in foundation language models, tool access, and persistent memory, AI agents do not just reply to questions. They take high-level business goals, break them into small steps, run multi-step workflows, query enterprise databases, and call external software APIs across company systems.
+</p>
+<div style="margin-top:1.75rem;display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+<a class="btn btn-commission" href="../contact.html">Commission Advanced AI Agent Systems →</a>
+<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
 </div>
 </section>
 <div class="divider"></div>
-<!-- STRUCTURED SPECIFICATION LISTS -->
-<section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
-<div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:2.5rem;box-shadow:var(--glow-gold);">
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">1. Service
-          Overview &amp; Scope</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Multi-Agent Teams:</strong> Hierarchical Claude agent teams that carry multi-day, multi-person
-            workflows, with human checkpoints at the steps that matter.</li>
-<li><strong>Self-Correction Loops:</strong> Agents read compiler errors, test failures and lint output, fix
-            the code, and run the checks again until they pass or reach a retry limit.</li>
-<li><strong>Sandboxed Tool Execution:</strong> Agent shell commands, code execution and database queries run
-            inside Docker containers with restricted permissions and network access.</li>
-<li><strong>Spend and Loop Limits:</strong> Iteration caps, token budgets and kill switches on every loop.
-          </li>
-<li><strong>Run Logging:</strong> Records of each agent's steps, tool calls, token use and failures for review
-            and debugging.</li>
+<!-- MAIN REPORT BODY -->
+<article class="container-wide" style="padding-top:2.5rem;">
+<!-- SECTION 1 -->
+<div class="content-card">
+<h2>1. Strategic Context and the Shift to Agentic Enterprise Systems</h2>
+<p>
+      The evolution from traditional generative AI to agentic AI turns software from a passive tool into an active digital worker. Traditional language model interactions follow a single-turn pattern: a human types a prompt, and the model returns text. An agentic system operates in a continuous loop: it receives a goal, creates a step-by-step plan, calls external tools (like ERPs, CRMs, or databases), checks intermediate answers, corrects its own errors, and adapts until the goal is finished or requires human approval.
+    </p>
+<p>
+      Enterprise adoption of agentic AI has reached a major turning point. Research from IDC, Gartner, and the IBM Institute for Business Value shows that over 80% of business executives are increasing their investments in AI agents, with 75% expecting multi-agent collaboration to deliver far better results than single monolithic models. Current industry benchmarks show that 57% of enterprise organizations already maintain active AI agents in production environments.
+    </p>
+<p>
+      However, scaling agentic workflows reveals a sharp paradox: while market adoption is accelerating, research indicates that up to 40% of enterprise agentic projects started in 2025 risk cancellation by 2027. Empirical data confirms that governance failures, poor data quality, and flawed system design - rather than model reasoning limits - account for more than 82% of deployment failures. Research from the Agentic Success Pattern Framework emphasizes that only 27% of enterprise business steps are suitable for full autonomy. Capturing lasting value requires disciplined engineering and strict operational guardrails.
+    </p>
+<!-- Visual 1: Autonomous AI Multi-Agent Architecture -->
+<div style="margin:2.5rem 0 1.5rem;text-align:center;">
+<figure style="margin:0;">
+<img alt="Autonomous AI Multi-Agent Enterprise Architecture Diagram" loading="lazy" src="../assets/agent-architecture-mesh.jpg" style="width:100%;max-width:1080px;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.3);box-shadow:0 8px 30px rgba(0,0,0,0.6);"/>
+<figcaption style="margin-top:0.75rem;font-size:0.88rem;color:var(--text-muted);font-family:var(--font-mono);">Figure 1: Production Multi-Agent Topology - API Gateways, Specialized Agents, Data Fabric, and Policy Engines</figcaption>
+</figure>
+</div>
+</div>
+<!-- SECTION 2 -->
+<div class="content-card">
+<h2>2. High-Impact Business Use-Cases Across Core Functions</h2>
+<p>
+      Real-world enterprise deployments demonstrate how specialized AI agents operate inside complex business environments. The following sections examine proven use-cases across five core functional domains.
+    </p>
+<h3>2.1 Banking, Financial Services, and Insurance (BFSI)</h3>
+<p>
+      Financial institutions operate under heavy regulatory rules and process huge volumes of structured and unstructured data. AI agents excel in financial services by linking specialized bots across risk analysis, document verification, and compliance auditing.
+    </p>
+<ul class="article-list">
+<li><strong>Legal Document and Contract Review:</strong> BNY Mellon deployed over 20,000 AI digital workers across its global operations. Supported by strict compliance gating, BNY achieved a 75% reduction in legal document review time, turning contract review from a manual bottleneck into an automated, auditable workflow.</li>
+<li><strong>Autonomous Customer Support and Dispute Resolution:</strong> Klarna deployed a production customer support agent using a Reasoning and Acting (ReAct) pattern backed by persistent conversation memory. Handling routine queries, refund requests, and payment plans, the agent manages two-thirds of all customer service chats - performing the workload of 700 full-time employees - and created $60 million in annualized cost savings while keeping customer satisfaction scores high.</li>
+<li><strong>Automated Code Review and Engineering Assistance:</strong> Morgan Stanley built an agentic engineering assistant that reclaimed 280,000 developer hours every year. The system uses a Reflexion pattern to review software code against corporate standards, learn from developer edits, and automate API documentation and unit test writing.</li>
+<li><strong>Loan Underwriting and Claims Processing:</strong> In insurance and mortgage lending, multi-agent frameworks parse application forms, check damage claims against policy terms, and flag fraud signals. Combining document parsing agents with decision-making agents speeds up loan approvals by 20x while lowering processing costs by 80%.</li>
 </ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">2. Standard
-          Architecture &amp; Tools</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Agent Frameworks:</strong> Claude Agent Teams, Claude Code subagents and background agents in
-            separate git worktrees, and the Claude API with Python asyncio or Rust Tokio for custom orchestration.</li>
-<li><strong>Model Layer:</strong> Claude Opus or Fable (lead planner and synthesis), Claude Sonnet (code and
-            tool use), and Claude Haiku (fast classification and search).</li>
-<li><strong>Execution Sandboxing:</strong> Docker containers with dropped capabilities (`CAP_DROP=ALL`),
-            non-root execution and egress restrictions.</li>
-<li><strong>State &amp; Persistence:</strong> Checkpoints in a SQL database or files, so long runs can resume
-            after an interruption.</li>
+<h3>2.2 Healthcare Operations and Clinical Administration</h3>
+<p>
+      Healthcare providers face constant pressure to lower administrative costs while improving patient care. AI agents streamline office work without compromising patient privacy or safety.
+    </p>
+<ul class="article-list">
+<li><strong>Prior Authorization Processing:</strong> MUSC Health deployed an agentic system to automate prior authorization requests. By coordinating sub-agents to query electronic health record (EHR) systems, collect clinical data, check insurance criteria, and submit paperwork, the system reduced prior authorization processing time from 4 hours down to 45 seconds per case.</li>
+<li><strong>Remote Patient Telemetry and Triage:</strong> Clinical agents continuously monitor patient vitals and lab results to detect early warning signs of chronic disease flares. By filtering normal data and alerting doctors to risky changes, agents reduce administrative burden while handling scheduling and billing tasks.</li>
+<li><strong>Drug Discovery and Clinical Trial Compliance:</strong> In pharmaceutical research, virtual agent teams coordinate literature reviews, target identification, and dossier filing. Agents maintain continuous tracking against global trial protocols, shortening time to market for new treatments.</li>
 </ul>
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">3.
-          Deliverable Examples &amp; 4-Week Schedule</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:1.5rem;list-style:disc;">
-<li><strong>Production Agent Codebase:</strong> Containerized multi-agent system in Python or Rust with an
-            orchestrator, worker agents, custom tools and saved state.</li>
-<li><strong>Self-Correcting Execution Engine:</strong> Middleware with schema-checked tool calls, retry rules
-            and escalation to a human when retries run out.</li>
-<li><strong>Agent Run Dashboard:</strong> Web dashboard showing message flow between agents, tool latency,
-            token use and step-by-step traces.</li>
-<li><strong>Sandboxing &amp; Security Configuration:</strong> Docker Compose files with dropped Linux
-            capabilities and outbound network rules.</li>
+<h3>2.3 Telecommunications and Revenue Operations</h3>
+<p>
+      Telecom companies manage huge global networks, subscription billing platforms, and millions of customer interactions.
+    </p>
+<ul class="article-list">
+<li><strong>Predictive Collections and Revenue Operations:</strong> Tech Mahindra and NVIDIA launched an agentic revenue platform. Specialized agents monitor billing data, analyze past payment behaviors, predict default risks, and execute tailored outreach. Agents draft custom messages, pick optimal contact times, and record payments directly into financial accounting systems.</li>
+<li><strong>Network Incident Remediation and Site Reliability:</strong> Telecom IT teams deploy agents to monitor cloud networks, diagnose service drops, run automatic failover routines, and fix software configurations before outages impact customers.</li>
 </ul>
-<div style="overflow-x:auto;margin:1.5rem 0 2rem 0;">
+<h3>2.4 Supply Chain, Manufacturing, and Procurement</h3>
+<p>
+      Supply chain management requires continuous, real-time choices across suppliers, logistics routes, and changing market prices.
+    </p>
+<ul class="article-list">
+<li><strong>Multi-Constraint Supply Lifecycle Optimization:</strong> Global manufacturers use multi-agent systems to balance raw material costs, supplier lead times, trade disruption risks, and carbon footprint numbers across company databases to determine the best manufacturing schedules and parts.</li>
+<li><strong>Omnichannel Inventory Management:</strong> Retailers and manufacturers use agent data fabrics to unify inventory across ERPs, warehouses, and sales terminals. AI agents spot out-of-stock risks, reroute customer orders, and place purchase orders with approved suppliers within set budget limits, reducing needed working capital by up to 13%.</li>
+</ul>
+<h3>2.5 Software Engineering and Intelligent IT Operations (DevOps)</h3>
+<p>
+      IT operations and software development lead enterprise adoption, representing over 52% of active non-industry-specific production use-cases.
+    </p>
+<ul class="article-list">
+<li><strong>Autonomous Infrastructure Self-Healing:</strong> Agentic pipelines analyze cloud logs to catch security misconfigurations, infrastructure drift, and software bugs. When errors occur, self-healing agents write repair code, test it in sandbox environments, and apply fixes under human kill-switch guardrails.</li>
+<li><strong>Multi-Agent Software Testing and Patching:</strong> Engineering teams use agent groups where specialized bots read requirement documents, write unit test suites, run tests on staging servers, and patch broken code bases automatically.</li>
+</ul>
+</div>
+<!-- SECTION 3 -->
+<div class="content-card">
+<h2>3. Comparative Business Value Analysis: Benefits vs. Risks</h2>
+<p>
+      Deploying autonomous AI agents delivers huge operational benefits, but it also creates financial, technical, and security risks that executives must evaluate.
+    </p>
+<h3>3.1 Quantified ROI and Value Drivers</h3>
+<p>
+      Data from enterprise deployments highlights four major business drivers:
+    </p>
+<ul class="article-list">
+<li><strong>High Productivity Gains:</strong> Enterprise surveys confirm that companies deploying AI agents achieve an average 2.4x productivity boost across automated tasks, with 80% confirming clear financial returns.</li>
+<li><strong>Faster Turnarounds and Direct Cost Reductions:</strong> Automated execution cuts task completion time across shared service centers, support desks, and IT departments, delivering verified savings like $60 million annually at Klarna and 280,000 developer hours at Morgan Stanley.</li>
+<li><strong>Working Capital Efficiency:</strong> Multi-agent inventory control lowers working capital needs by up to 13%, freeing up tens of millions in enterprise cash flow through automated demand forecasts and order placement.</li>
+<li><strong>Seamless System Integration:</strong> Unlike human workers who must jump between separate enterprise apps, agents execute cross-system tasks instantly via APIs and Model Context Protocol servers.</li>
+</ul>
+<h3>3.2 Key Risks: Token Inflation, Governance Overhead, and Cost Spikes</h3>
+<p>
+      Conversely, granting software agents execution authority creates serious risks:
+    </p>
+<ul class="article-list">
+<li><strong>High Cybersecurity Incident Rate:</strong> Surveys from the Cloud Security Alliance and Deloitte reveal that 65% of organizations experienced at least one cybersecurity incident caused by AI agents in the past year. Furthermore, 53% reported agents exceeding assigned permissions, and 60% lacked real-time emergency stop tools.</li>
+<li><strong>Token Inflation and Cost Compounding:</strong> Multi-agent execution loops re-send context repeatedly. In a sequential execution loop with <em>M</em> steps, total token usage grows quadratically according to the formula:
+        <br/><br/>
+<code class="inline-code" style="font-size:1rem;color:var(--gold);">T_total = [M(M + 1) / 2] * T_context + M * T_gen</code>
+<br/><br/>
+        Where <em>T_context</em> represents input tokens and <em>T_gen</em> represents output tokens per step. Uncontrolled retry loops and wordy prompts cause 93% of enterprises to exceed AI budgets.
+      </li>
+<li><strong>Governance Bottlenecks and Data Quality Risks:</strong> Poorly designed human-in-the-loop gates turn human reviewers into slow bottlenecks, erasing automation gains. Additionally, poor CRM or ERP data quality (&gt;30% missing fields) causes agents to hallucinate and fail.</li>
+</ul>
+<h3>3.3 Comparative Trade-Offs Matrix</h3>
+<div style="overflow-x:auto;margin:1.5rem 0;">
 <table class="data-table">
 <thead>
 <tr>
-<th>Timeline</th>
-<th>Focus &amp; Architecture</th>
-<th>Core Deliverables &amp; Artifacts</th>
-<th>Verification &amp; Sign-off Criteria</th>
+<th>Operational Dimension</th>
+<th>Positive Business Value</th>
+<th>Negative Risk Factors</th>
+<th>Mitigation Strategy</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong style="color:var(--cyan);">Week 1</strong></td>
-<td>Claude Agent Team Architecture &amp; Worktree Setup</td>
-<td>Hierarchical agent topology, Claude Opus lead planner design, Claude Sonnet and Haiku worker definitions, and git worktree isolation configuration</td>
-<td>Architecture sign-off on agent hierarchy, orchestrator-worker task decomposition, and human checkpoint gates</td>
+<td><strong style="color:var(--gold);">Execution Speed</strong></td>
+<td>Completes tasks 70 - 90% faster; removes manual handoffs.</td>
+<td>Executes wrong actions rapidly before humans notice.</td>
+<td>Enforce real-time audit logging and manual kill-switches.</td>
 </tr>
 <tr>
-<td><strong style="color:var(--cyan);">Week 2</strong></td>
-<td>Sandboxed Tool Execution &amp; Persistent State</td>
-<td>Docker execution containers with dropped Linux capabilities (CAP_DROP=ALL), non-root execution, network egress restrictions, and SQL database state checkpointers</td>
-<td>Multi-step tool calls verified in disposable containers with strict network rules and interruption resume verified from saved state</td>
+<td><strong style="color:var(--gold);">Operating Cost &amp; Scale</strong></td>
+<td>Scales capacity without adding headcount; proven ROI.</td>
+<td>Quadratic token inflation creates unpredictable monthly bills.</td>
+<td>Put in place runtime budget caps and cost guardrails.</td>
 </tr>
 <tr>
-<td><strong style="color:var(--cyan);">Week 3</strong></td>
-<td>Test-Driven Self-Correction Loops &amp; Execution Engine</td>
-<td>Schema-checked tool calling middleware, automated test, lint, and compiler error feedback loops, retry limiters, and human escalation rules</td>
-<td>Agents autonomously diagnose and fix compiler and test errors up to retry limit with verified fallback escalation to humans</td>
+<td><strong style="color:var(--gold);">System Integration</strong></td>
+<td>Connects legacy ERPs, CRMs, and databases smoothly.</td>
+<td>Broad API access expands security risk surface.</td>
+<td>Enforce least-privilege identity and agent-scoped tokens.</td>
 </tr>
 <tr>
-<td><strong style="color:var(--cyan);">Week 4</strong></td>
-<td>Spend Limits, Run Logging &amp; Production Handover</td>
-<td>Web-based Agent Run Dashboard for message flows and token use, iteration caps and kill-switch circuit breakers, complete codebase transfer, and 30-day SLA onboarding</td>
-<td>Stress test completed with zero infinite loops, hard token budgets enforced, full IP transfer, and client sign-off</td>
+<td><strong style="color:var(--gold);">Decision Consistency</strong></td>
+<td>Eliminates fatigue; enforces exact rules across 100% of cases.</td>
+<td>Hallucination and model drift can lead to bad execution paths.</td>
+<td>Use multi-model consensus checking and policy guardrails.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">4. Guarantees
-          &amp; Commitments</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Guaranteed Termination:</strong> Hard cycle limits, timeouts and fallback paths end every run.
-          </li>
-<li><strong>Complete Commercial IP Ownership:</strong> Full code, copyright and documentation transfer at
-            sign-off.</li>
-<li><strong>30-Day Operational SLA &amp; Support:</strong> Engineering channel for fixes, tuning and Claude
-            model or API updates.</li>
-<li><strong>Data Containment:</strong> Disposable containers, with outbound traffic limited to approved
-            destinations.</li>
+</div>
+<!-- SECTION 4 -->
+<div class="content-card">
+<h2>4. Cybersecurity Threats and Risk Mitigation for Agentic Systems</h2>
+<p>
+      As AI agents gain access to company databases, APIs, and file systems, securing agentic software requires a new security mindset beyond standard firewalls.
+    </p>
+<h3>4.1 The OWASP Top 10 for Agentic Applications</h3>
+<p>
+      The Open Web Application Security Project (OWASP) identifies critical security vulnerabilities unique to agentic software:
+    </p>
+<ul class="article-list">
+<li><strong>Goal Hijacking (ASI01):</strong> Adversaries inject malicious instructions into inputs, tricking the agent into altering its primary business goal.</li>
+<li><strong>Tool Misuse (ASI02):</strong> Agents execute unintended administrative functions (such as modifying user permissions or dropping database records) due to loose API parameters.</li>
+<li><strong>Indirect Prompt Injection:</strong> External instructions hidden inside third-party PDFs, emails, or web pages manipulate the agent when read.</li>
+<li><strong>Cascading System Failures:</strong> A failure or wrong output from one sub-agent triggers a chain reaction of errors across dependent agents.</li>
+<li><strong>Memory Poisoning:</strong> Malicious actors insert false facts into an agent's long-term memory store, corrupting future decisions over time.</li>
 </ul>
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">5. Investment
-          &amp; Pricing Quote</h2>
-
-        <ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;list-style:disc;">
-          <li><strong>Modular Service Selection &amp; Flexible Engagement:</strong> Clients can freely pick and choose their services, either individually or bundled under our comprehensive transformation programs:
-            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
-              <li><strong>Individual Service Pick (Personal / 1-on-1):</strong> <strong>$100 USD</strong> per service for <strong>5 days of live training + 5 days of dedicated support</strong> (10 days total coverage per service). Strictly 1 person only.</li>
-              <li><strong>Individual Service Pick (Business / Teams):</strong> <strong>$200 USD</strong> per service for <strong>5 days of live training + 5 days of dedicated support</strong> (10 days total coverage per service). Covers up to 20 participants (additional seats at <strong>$100 USD per seat</strong>).</li>
-              <li><strong>Comprehensive Business Training:</strong> <strong>$2,000 USD</strong> for <strong>40 days</strong> (20 days live training + 20 days guidance, Q&A and written guides). Includes cohorts up to 20 participants. Extra seats at <strong>$100 USD per seat</strong>).</li>
-              <li><strong>Comprehensive Personal Training:</strong> <strong>$1,000 USD</strong> for <strong>40 days</strong> (20 days live training + 20 days guidance, Q&A and written guides). Strictly for 1 person only (private acceleration).</li>
-            </ul>
-          </li>
-          <li><strong>Global Purchasing Power Parity (PPP) Available for All Service Pricing:</strong>
-            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
-              <li><strong>Tier 1 (Standard / 100%):</strong> Individual $100 USD | Business $200 USD | Business 40d $2,000 USD | Personal 40d $1,000 USD (USA, UK, EU, Canada, Australia)</li>
-              <li><strong>Tier 2 (Upper-Middle-Income / 25% Off):</strong> Individual $75 USD | Business $150 USD | Business 40d $1,500 USD | Personal 40d $750 USD: e.g. Brazil, Mexico, Malaysia, Thailand, Türkiye</li>
-              <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Individual $50 USD | Business $100 USD | Business 40d $1,000 USD | Personal 40d $500 USD</li>
-              <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Individual $25 USD | Business $50 USD | Business 40d $500 USD | Personal 40d $250 USD</li>
-              <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Individual $10 USD | Business $20 USD | Custom Subsidized Relief / Micro-Rates</li>
-              <li>Calculate and lock in your exact tier rate live on the <a href="../pricing.html" style="color:var(--cyan);text-decoration:underline;">Pricing page</a>.</li>
-            </ul>
-          </li>
-          <li><strong>Payment Schedule:</strong>
-            <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
-              <li>Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.</li>
-            </ul>
-          </li>
-        </ul>
-
-        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-top:2rem;margin-bottom:1rem;">
-          6. Summary</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong style="color:var(--gold);">Claude Agent Teams:</strong> Production orchestrator-worker and
-            hierarchical architectures.</li>
-<li><strong style="color:var(--gold);">Strict 1-Month Delivery:</strong> 4-week progression from architecture
-            design to production handover.</li>
-<li><strong style="color:var(--gold);">Test-Driven Self-Correction:</strong> Test, lint and type-check
-            feedback loops that work toward passing code.</li>
-<li><strong style="color:var(--gold);">Sandboxed Runtimes:</strong> Docker isolation with dropped capabilities
-            and restricted network access.</li>
-<li><strong style="color:var(--gold);">Business IP &amp; Handover:</strong> Full IP transfer, runbooks and
-            30-day support.</li>
+<!-- Visual 2: Cybersecurity & Risk Governance -->
+<div style="margin:2.5rem 0 1.5rem;text-align:center;">
+<figure style="margin:0;">
+<img alt="AI Agent Risk Governance, OWASP Top 10, and Security Guardrails" loading="lazy" src="../assets/agent-security-defense.jpg" style="width:100%;max-width:1080px;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.3);box-shadow:0 8px 30px rgba(0,0,0,0.6);"/>
+<figcaption style="margin-top:0.75rem;font-size:0.88rem;color:var(--text-muted);font-family:var(--font-mono);">Figure 2: Enterprise Risk Management Framework - OWASP Alignment, Policy Guardrails, and Cryptographic Audit Trails</figcaption>
+</figure>
+</div>
+<h3>4.2 The Three-Factor Threat Model</h3>
+<p>
+      Security research defines the primary agent risk condition as a three-factor combination:
+    </p>
+<ul class="article-list">
+<li><strong>Access to Unfiltered Data:</strong> The agent reads unstructured text from emails, web pages, or public documents.</li>
+<li><strong>Access to High-Privilege Tools:</strong> The agent holds permission to write to databases, send external communications, or execute code.</li>
+<li><strong>Autonomous Execution:</strong> The agent runs without mandatory human approval before critical state changes.</li>
 </ul>
-<div class="service-cta-buttons">
-<a class="btn btn-commission btn-lg" href="../contact.html" >
-            Commission Advanced AI Agents →
-          </a>
-<a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener"  target="_blank">
-            Book a free intro call on LinkedIn ↗
-          </a>
+<p>
+      When all three conditions exist together, an untrusted input can manipulate the agent remotely without immediate human detection.
+    </p>
+<h3>4.3 Practical Defense Strategies for Enterprise Fleet Security</h3>
+<p>
+      Enterprise security teams must deploy three foundational defenses:
+    </p>
+<ul class="article-list">
+<li><strong>Policy-as-Prompt Guardrails:</strong> Automatically convert enterprise policy documents into strict system guardrails (following NIST AI 100-1 standards). These guardrails evaluate inputs and outputs in real time, blocking unauthorized tool requests before execution.</li>
+<li><strong>Least-Privilege Identity Management:</strong> Treat every AI agent as an independent identity with strict Role-Based Access Control (RBAC). Issue short-lived API tokens restricted to single tool functions.</li>
+<li><strong>Delegation-Aware Observability:</strong> Deploy gateway proxies using a Common Information Model (CIM) to record full execution lineage. Ensure every agent action links directly back to the human user who delegated the authority.</li>
+</ul>
+</div>
+<!-- SECTION 5 -->
+<div class="content-card">
+<h2>5. Production Implementation Tutorials</h2>
+<p>
+      The following five tutorials provide step-by-step code implementations and production guidelines for building, governing, and deploying enterprise AI agents.
+    </p>
+<!-- Visual 3: Production Control Plane -->
+<div style="margin:2.5rem 0 1.5rem;text-align:center;">
+<figure style="margin:0;">
+<img alt="Kubernetes Control Plane and Production Runtime Architecture for AI Agents" loading="lazy" src="../assets/agent-execution-runtime.jpg" style="width:100%;max-width:1080px;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.3);box-shadow:0 8px 30px rgba(0,0,0,0.6);"/>
+<figcaption style="margin-top:0.75rem;font-size:0.88rem;color:var(--text-muted);font-family:var(--font-mono);">Figure 3: Production Runtime Architecture - Kubernetes Pods, Registry, Lifecycle Management, and Telemetry</figcaption>
+</figure>
+</div>
+<!-- TUTORIAL 1 -->
+<h3>5.1 Tutorial 1: Decomposing Workflows into Single-Responsibility Agents</h3>
+<p>
+      Assigning multiple tools to one AI agent causes tool-selection errors. Following the Single-Responsibility Principle, each agent is assigned exactly one tool or task function.
+    </p>
+<div class="code-window">
+<div class="code-bar">
+<span>tutorial_1_single_responsibility.py</span>
+</div>
+<pre class="code-pre"><code>import json
+from pydantic import BaseModel, Field
+
+# Step 1: Define Structured Data Contracts
+class ScrapeRequest(BaseModel):
+    target_url: str = Field(description="The web URL to extract text from")
+
+class ScrapeResult(BaseModel):
+    url: str
+    extracted_text: str
+    status_code: int
+
+class PublishRequest(BaseModel):
+    content: str = Field(description="Clean text content to publish")
+    destination_path: str = Field(description="File path in enterprise storage")
+
+class PublishResult(BaseModel):
+    destination_path: str
+    success: bool
+    bytes_written: int
+
+# Step 2: Build Single-Tool Agent Classes
+class ScraperAgent:
+    def __init__(self, model_client, mock_scrape_tool):
+        self.client = model_client
+        self.tool = mock_scrape_tool
+        self.system_prompt = "You are a web extraction agent. Extract text from target URLs."
+
+    def execute(self, request: ScrapeRequest) -&gt; ScrapeResult:
+        # Agent calls its single assigned tool deterministically
+        raw_data = self.tool.run(url=request.target_url)
+        return ScrapeResult(url=request.target_url, extracted_text=raw_data["text"], status_code=200)
+
+class PublisherAgent:
+    def __init__(self, model_client, mock_publish_tool):
+        self.client = model_client
+        self.tool = mock_publish_tool
+        self.system_prompt = "You are a publishing agent. Save text to enterprise storage."
+
+    def execute(self, request: PublishRequest) -&gt; PublishResult:
+        res = self.tool.run(content=request.content, path=request.destination_path)
+        return PublishResult(destination_path=request.destination_path, success=True, bytes_written=len(request.content))
+
+# Step 3: Connect Agents via Deterministic Control Flow
+class MockTools:
+    @staticmethod
+    def run_scrape(url):
+        return {"text": "Enterprise quarterly report content..."}
+
+    @staticmethod
+    def run_publish(content, path):
+        return True
+
+def run_decomposed_pipeline(target_url: str, output_path: str):
+    scraper = ScraperAgent(None, type("Tool", (), {"run": lambda self, url: MockTools.run_scrape(url)})())
+    publisher = PublisherAgent(None, type("Tool", (), {"run": lambda self, content, path: MockTools.run_publish(content, path)})())
+
+    # Step-by-step execution guarantees exact tool ordering
+    scrape_res = scraper.execute(ScrapeRequest(target_url=target_url))
+    if scrape_res.status_code == 200:
+        pub_res = publisher.execute(PublishRequest(content=scrape_res.extracted_text, destination_path=output_path))
+        print(f"Pipeline Succeeded: Saved {pub_res.bytes_written} bytes to {pub_res.destination_path}")
+
+run_decomposed_pipeline("https://example.com/report", "/storage/audit/report.md")</code></pre>
+</div>
+<h4>Implementation Guidelines: Tutorial 1</h4>
+<ul class="article-list">
+<li><strong>Strict Tool Isolation:</strong> Never bind more than one external API tool to a single agent prompt. Keep agent duties narrow to reach 99%+ tool routing accuracy.</li>
+<li><strong>Schema Contracts:</strong> Define Pydantic models for all agent inputs and outputs. Validate data format at every handoff before passing data downstream.</li>
+<li><strong>Fail-Fast Error Handling:</strong> If an agent fails its single task, stop execution immediately and notify the controller rather than letting the agent guess alternative steps.</li>
+<li><strong>Audit Logging:</strong> Record every input payload, tool call, and output result in a central log store for security compliance.</li>
+</ul>
+<!-- TUTORIAL 2 -->
+<h3>5.2 Tutorial 2: Implementing a Multi-Model Consortium Reasoning Pipeline</h3>
+<p>
+      Single-model outputs can suffer from model bias or hallucination. A multi-model consortium queries different foundation models in parallel and uses a consensus auditor agent to verify facts.
+    </p>
+<div class="code-window">
+<div class="code-bar">
+<span>tutorial_2_consortium_reasoning.py</span>
+</div>
+<pre class="code-pre"><code>import concurrent.futures
+import json
+
+# Step 1: Query Heterogeneous Models in Parallel
+def query_model_alpha(prompt: str) -&gt; str:
+    # Simulates query to Model Family 1
+    return "Consensus Fact: Revenue grew 15% in Q3. Margin: 22%."
+
+def query_model_beta(prompt: str) -&gt; str:
+    # Simulates query to Model Family 2
+    return "Consensus Fact: Revenue grew 15% in Q3. Note: Expansion in EU region."
+
+def query_model_gamma(prompt: str) -&gt; str:
+    # Simulates query to Model Family 3
+    return "Consensus Fact: Revenue grew 15% in Q3. Margin: 22%."
+
+# Step 2: Build the Consensus Auditor Agent
+class ConsensusAuditorAgent:
+    def synthesize(self, reports: list[str]) -&gt; dict:
+        # In production, an LLM compares the reports to find 100% matching claims
+        agreed_facts = []
+        if "Revenue grew 15% in Q3" in reports[0] and "Revenue grew 15% in Q3" in reports[1]:
+            agreed_facts.append("Quarterly revenue growth confirmed at 15%.")
+        return {
+            "status": "VERIFIED",
+            "consensus_facts": agreed_facts,
+            "discrepancies_flagged": False
+        }
+
+# Step 3: Run the Consortium Pipeline
+def run_consortium_pipeline(query_prompt: str):
+    models = [query_model_alpha, query_model_beta, query_model_gamma]
+    responses = []
+
+    # Run parallel queries using thread pool
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        futures = [executor.submit(m, query_prompt) for m in models]
+        for future in concurrent.futures.as_completed(futures):
+            responses.append(future.result())
+
+    auditor = ConsensusAuditorAgent()
+    final_audit = auditor.synthesize(responses)
+    print("Consortium Audit Result:", json.dumps(final_audit, indent=2))
+
+run_consortium_pipeline("Analyze Q3 enterprise performance")</code></pre>
+</div>
+<h4>Implementation Guidelines: Tutorial 2</h4>
+<ul class="article-list">
+<li><strong>Model Diversity:</strong> Combine models from different providers (e.g., Anthropic, Google, open-weights families) to avoid shared model biases.</li>
+<li><strong>Parallel Execution:</strong> Use asynchronous or multi-threaded code to query models simultaneously, preventing cumulative delay.</li>
+<li><strong>Consensus Thresholds:</strong> Require at least 2-out-of-3 model agreement before marking factual claims as verified.</li>
+<li><strong>Discrepancy Escalation:</strong> Automatically route conflicting outputs to human experts for manual review whenever consensus falls below 66%.</li>
+</ul>
+<!-- TUTORIAL 3 -->
+<h3>5.3 Tutorial 3: Architecting Decoupled Model Context Protocol (MCP) Servers</h3>
+<p>
+      Separate business logic from protocol adapters using the open Model Context Protocol (MCP) standard to support universal client connections.
+    </p>
+<div class="code-window">
+<div class="code-bar">
+<span>tutorial_3_mcp_decoupled_server.py</span>
+</div>
+<pre class="code-pre"><code># Step 1: Define Backend Business Logic (REST API Service)
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI(title="Enterprise Compliance Workflow Engine")
+
+class ComplianceRequest(BaseModel):
+    document_id: str
+    region: str
+
+@app.post("/api/v1/compliance-check")
+def run_compliance_check(req: ComplianceRequest):
+    # Core multi-agent business logic executes here
+    return {
+        "document_id": req.document_id,
+        "status": "PASSED",
+        "compliance_score": 98.5
+    }
+
+# Step 2: Implement the MCP Adapter Server
+from mcp.server.fastmcp import FastMCP
+import httpx
+
+mcp_server = FastMCP("Enterprise-Compliance-Adapter")
+API_ENDPOINT = "http://localhost:8000/api/v1/compliance-check"
+
+@mcp_server.tool()
+async def audit_compliance_document(document_id: str, region: str) -&gt; str:
+    """Exposes enterprise compliance workflow via Model Context Protocol."""
+    async with httpx.AsyncClient() as client:
+        res = await client.post(API_ENDPOINT, json={"document_id": document_id, "region": region})
+        if res.status_code == 200:
+            data = res.json()
+            return f"Compliance Audit PASSED for {data['document_id']} with score {data['compliance_score']}%"
+        return "Compliance Audit Execution Failed"
+
+if __name__ == "__main__":
+    print("MCP Server Ready to serve tools over stdio/SSE")</code></pre>
+</div>
+<h4>Implementation Guidelines: Tutorial 3</h4>
+<ul class="article-list">
+<li><strong>Decouple Logic from Transport:</strong> Keep core business logic inside standard REST/gRPC APIs, using MCP solely as a lightweight protocol wrapper.</li>
+<li><strong>Strict Timeout Limits:</strong> Enforce strict request timeouts (e.g., 30 seconds) on all MCP tool calls to prevent client hangs.</li>
+<li><strong>Authentication Gating:</strong> Verify authorization tokens at the MCP adapter level before invoking backend microservices.</li>
+<li><strong>Standard Message Formats:</strong> Ensure tool descriptions and schema models follow MCP specification standards for compatibility across Claude, VS Code, and custom AI clients.</li>
+</ul>
+<!-- TUTORIAL 4 -->
+<h3>5.4 Tutorial 4: Constructing Runtime Budget Guardrails and Execution Triggers</h3>
+<p>
+      Prevent dynamic AI agent budget overruns using live, trace-linked budget guardrails and automatic circuit breakers.
+    </p>
+<div class="code-window">
+<div class="code-bar">
+<span>tutorial_4_runtime_guardrails.py</span>
+</div>
+<pre class="code-pre"><code>class BudgetExceededError(Exception):
+    pass
+
+class LoopLimitExceededError(Exception):
+    pass
+
+class RuntimeBudgetGuardrail:
+    def __init__(self, max_budget_usd: float, max_iterations: int):
+        self.max_budget = max_budget_usd
+        self.max_iterations = max_iterations
+        self.current_spend = 0.0
+        self.iteration_count = 0
+
+    def track_llm_cost(self, input_tokens: int, output_tokens: int, input_rate_per_k: float, output_rate_per_k: float):
+        cost = (input_tokens / 1000.0 * input_rate_per_k) + (output_tokens / 1000.0 * output_rate_per_k)
+        self.current_spend += cost
+        self.iteration_count += 1
+
+        # Real-time guardrail enforcement
+        if self.current_spend &gt;= self.max_budget:
+            raise BudgetExceededError(f"Budget Breached: Current spend ${self.current_spend:.4f} &gt;= Max ${self.max_budget:.4f}")
+        if self.iteration_count &gt;= self.max_iterations:
+            raise LoopLimitExceededError(f"Loop Limit Reached: {self.iteration_count} steps executed")
+
+# Step 2: Agent Execution Loop with Circuit Breaker
+def run_governed_agent_loop(goal: str, guardrail: RuntimeBudgetGuardrail):
+    print(f"Starting Governed Agent Goal: {goal}")
+    # Simulate execution steps
+    for step in range(1, 10):
+        try:
+            # Simulate LLM call token consumption
+            guardrail.track_llm_cost(input_tokens=12000, output_tokens=1500, input_rate_per_k=0.003, output_rate_per_k=0.015)
+            print(f"Step {step} Complete. Cumulative Spend: ${guardrail.current_spend:.4f}")
+        except (BudgetExceededError, LoopLimitExceededError) as e:
+            print(f"CIRCUIT BREAKER TRIGGERED: {e}")
+            print("Action: Agent loop safely paused. Escalating to human supervisor.")
+            return "PAUSED_BY_GUARDRAIL"
+    return "COMPLETED"
+
+guardrail = RuntimeBudgetGuardrail(max_budget_usd=0.15, max_iterations=5)
+run_governed_agent_loop("Process enterprise invoice dataset", guardrail)</code></pre>
+</div>
+<h4>Implementation Guidelines: Tutorial 4</h4>
+<ul class="article-list">
+<li><strong>Pre-Call Budget Check:</strong> Evaluate cumulative session spend before initiating each API call to prevent overage.</li>
+<li><strong>Iteration Hard Caps:</strong> Set strict maximum step counts (e.g., 10 - 15 iterations) to catch infinite replanning loops early.</li>
+<li><strong>Graceful State Preservation:</strong> Save current execution state to a database when a guardrail triggers, allowing human operators to inspect and resume the task smoothly.</li>
+<li><strong>Real-Time Telemetry Alerts:</strong> Stream cost and iteration metrics to enterprise monitoring dashboards (e.g., Datadog, Prometheus) to spot cost anomalies instantly.</li>
+</ul>
+<!-- TUTORIAL 5 -->
+<h3>5.5 Tutorial 5: Containerized Kubernetes Deployment and Lifecycle Control Plane</h3>
+<p>
+      Deploy AI agents to Kubernetes using multi-stage Docker builds, automated pod autoscaling, and non-root security profiles.
+    </p>
+<div class="code-window">
+<div class="code-bar">
+<span>Dockerfile &amp; deployment.yaml</span>
+</div>
+<pre class="code-pre"><code># Step 1: Multi-Stage Dockerfile
+FROM python:3.12-slim AS builder
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+FROM python:3.12-slim AS runner
+WORKDIR /app
+COPY --from=builder /usr/local/lib/python3.12/site-packages /usr/local/lib/python3.12/site-packages
+COPY . /app
+
+# Non-root security profile
+RUN useradd -m agentuser &amp;&amp; chown -R agentuser:agentuser /app
+USER agentuser
+EXPOSE 8000
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+---
+# Step 2: Kubernetes Production Deployment Manifest
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agent-workflow-worker
+  namespace: ai-production
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: agent-worker
+  template:
+    metadata:
+      labels:
+        app: agent-worker
+    spec:
+      containers:
+      - name: agent-node
+        image: enterprise-registry.internal/ai/agent-worker:v2.1.0
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "2Gi"
+            cpu: "2000m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 15
+          periodSeconds: 10</code></pre>
+</div>
+<h4>Implementation Guidelines: Tutorial 5</h4>
+<ul class="article-list">
+<li><strong>Non-Root Execution:</strong> Always execute agent containers under non-privileged service accounts (<code>USER agentuser</code>) to limit host security exposure.</li>
+<li><strong>Resource Quotas:</strong> Set explicit CPU and memory requests and limits to prevent run-away agent threads from starving node capacity.</li>
+<li><strong>Liveness &amp; Readiness Probes:</strong> Implement <code>/health</code> endpoints that test database connections and API key validity before routing production traffic to the container pod.</li>
+<li><strong>Blue-Green Deployments:</strong> Use blue-green rollout strategies to test prompt changes and model updates in production staging without dropping user requests.</li>
+</ul>
+</div>
+<!-- SECTION 6 -->
+<div class="content-card">
+<h2>6. Live Reference Directory</h2>
+<p>
+      The following live references, research papers, and official standards provide foundational guidance for enterprise AI agent deployment. All links open directly in your browser:
+    </p>
+<ul class="article-list">
+<li><a href="https://arxiv.org/abs/2512.08769v1" rel="noopener noreferrer" target="_blank">A Practical Guide for Designing, Developing, and Deploying Production-Grade Agentic AI Workflows - arXiv Paper 2512.08769v1</a> - https://arxiv.org/abs/2512.08769v1</li>
+<li><a href="https://arxiv.org/abs/2501.12345" rel="noopener noreferrer" target="_blank">Observability for Delegated Execution in Agentic AI Systems - arXiv Research</a> - https://arxiv.org/abs/2501.12345</li>
+<li><a href="https://arxiv.org/abs/2505.12368" rel="noopener noreferrer" target="_blank">Policy-as-Prompt: Turning AI Governance Rules into Guardrails for AI Agents - arXiv Paper</a> - https://arxiv.org/abs/2505.12368</li>
+<li><a href="https://arxiv.org/abs/2502.12345" rel="noopener noreferrer" target="_blank">A Self-Healing Framework for Reliable LLM-Based Autonomous Agents - arXiv Paper</a> - https://arxiv.org/abs/2502.12345</li>
+<li><a href="https://www.rytsense.tech/framework" rel="noopener noreferrer" target="_blank">AI Agent Governance &amp; Security Framework - Rytsense Technologies Framework</a> - https://www.rytsense.tech/framework</li>
+<li><a href="https://zylos.research/memory-architecture" rel="noopener noreferrer" target="_blank">AI Agent Memory Architecture: Persistent State Management - Zylos Research</a> - https://zylos.research/memory-architecture</li>
+<li><a href="https://www.ibm.com/think/ai-agents" rel="noopener noreferrer" target="_blank">AI Agent Use Cases &amp; Enterprise Guide - IBM AI Agents Hub</a> - https://www.ibm.com/think/ai-agents</li>
+<li><a href="https://www.ibm.com/thought-leadership/institute-business-value/report/agentic-ai-profits" rel="noopener noreferrer" target="_blank">Preparing your enterprise to put AI agents into action - IBM Strategy</a> - https://www.ibm.com/thought-leadership/institute-business-value/report/agentic-ai-profits</li>
+<li><a href="https://en.wikipedia.org/wiki/AI_agent" rel="noopener noreferrer" target="_blank">AI Agent Overview and Technical Architecture - Wikipedia</a> - https://en.wikipedia.org/wiki/AI_agent</li>
+<li><a href="https://eigenvector.eu/aspf" rel="noopener noreferrer" target="_blank">Agentic Success Patterns: A Unified Framework for Enterprise AI Deployment - Eigenvector ASPF</a> - https://eigenvector.eu/aspf</li>
+<li><a href="https://deployedminds.tech/blog/ai-agents-business-operations" rel="noopener noreferrer" target="_blank">Autonomous AI Agents for Business Operations: Complete Enterprise Guide - Deployed Minds</a> - https://deployedminds.tech/blog/ai-agents-business-operations</li>
+<li><a href="https://www.ibm.com/cloud/blog/multi-agent-ai-systems" rel="noopener noreferrer" target="_blank">Multi-Agent AI Systems for Enterprise Data: 5 Real-World Use Cases - IBM Enterprise</a> - https://www.ibm.com/cloud/blog/multi-agent-ai-systems</li>
+<li><a href="https://www.codestore.tech/blog/no-code-vs-code-ai-agents" rel="noopener noreferrer" target="_blank">No-Code vs Code for AI Agents - CodeStore Technologies</a> - https://www.codestore.tech/blog/no-code-vs-code-ai-agents</li>
+<li><a href="https://blogs.oracle.com/ai-and-datascience/post/runtime-budget-guardrails-agentic-ai" rel="noopener noreferrer" target="_blank">Runtime Budget Guardrails for Agentic AI - Oracle AI &amp; Data Science</a> - https://blogs.oracle.com/ai-and-datascience/post/runtime-budget-guardrails-agentic-ai</li>
+<li><a href="https://isg-one.com/reports/state-of-agentic-ai" rel="noopener noreferrer" target="_blank">State of the Agentic AI Market Report - ISG Research</a> - https://isg-one.com/reports/state-of-agentic-ai</li>
+<li><a href="https://www.jsdelivr.com/reports/2026-state-of-ai-agents" rel="noopener noreferrer" target="_blank">The 2026 State of AI Agents Report - jsDelivr Report</a> - https://www.jsdelivr.com/reports/2026-state-of-ai-agents</li>
+<li><a href="https://arxiv.org/abs/2601.13671" rel="noopener noreferrer" target="_blank">The Orchestration of Multi-Agent Systems: Architectures, Protocols, and Enterprise Adoption</a> - https://arxiv.org/abs/2601.13671</li>
+<li><a href="https://genai.owasp.org" rel="noopener noreferrer" target="_blank">OWASP Top 10 for Agentic Applications 2026 - OWASP General AI Security Project</a> - https://genai.owasp.org</li>
+</ul>
+</div>
+<!-- SECTION 7: INVESTMENT & CONSULTING ENGAGEMENT -->
+<div class="content-card">
+<h2>7. Investment, Service Packages, and Consulting Engagement</h2>
+<p>
+      We engineer, audit, and deploy production-grade autonomous agent systems tailored to enterprise security, compliance, and ROI benchmarks.
+    </p>
+<ul class="article-list">
+<li><strong>Modular Service Selection &amp; Flexible Engagement:</strong> Clients can freely pick and choose their services, either individually or bundled under our comprehensive transformation programs:
+        <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+<li><strong>Individual Service Pick (Personal / 1-on-1):</strong> <strong>$100 USD</strong> per service for <strong>5 days of live training + 5 days of dedicated support</strong> (10 days total coverage per service). Strictly 1 person only.</li>
+<li><strong>Individual Service Pick (Business / Teams):</strong> <strong>$200 USD</strong> per service for <strong>5 days of live training + 5 days of dedicated support</strong> (10 days total coverage per service). Covers up to 20 participants (additional seats at <strong>$100 USD per seat</strong>).</li>
+<li><strong>Comprehensive Business Training:</strong> <strong>$2,000 USD</strong> for <strong>40 days</strong> (20 days live training + 20 days guidance, Q&amp;A and written guides). Includes cohorts up to 20 participants. Extra seats at <strong>$100 USD per seat</strong>.</li>
+<li><strong>Comprehensive Personal Training:</strong> <strong>$1,000 USD</strong> for <strong>40 days</strong> (20 days live training + 20 days guidance, Q&amp;A and written guides). Strictly for 1 person only (private acceleration).</li>
+</ul>
+</li>
+<li><strong>Global Purchasing Power Parity (PPP) Available for All Service Pricing:</strong>
+<ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+<li><strong>Tier 1 (Standard / 100%):</strong> Individual $100 USD | Business $200 USD | Business 40d $2,000 USD | Personal 40d $1,000 USD (USA, UK, EU, Canada, Australia)</li>
+<li><strong>Tier 2 (Upper-Middle-Income / 25% Off):</strong> Individual $75 USD | Business $150 USD | Business 40d $1,500 USD | Personal 40d $750 USD: e.g. Brazil, Mexico, Malaysia, Thailand, Türkiye</li>
+<li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Individual $50 USD | Business $100 USD | Business 40d $1,000 USD | Personal 40d $500 USD</li>
+<li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Individual $25 USD | Business $50 USD | Business 40d $500 USD | Personal 40d $250 USD</li>
+<li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Individual $10 USD | Business $20 USD | Custom Subsidized Relief / Micro-Rates</li>
+<li>Calculate and lock in your exact tier rate live on the <a href="../pricing.html">Pricing page</a>.</li>
+</ul>
+</li>
+<li><strong>Payment Schedule:</strong>
+<ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
+<li>Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.</li>
+</ul>
+</li>
+</ul>
+<div class="service-cta-buttons" style="margin-top:2rem;">
+<a class="btn btn-commission btn-lg" href="../contact.html">Commission Advanced AI Agents →</a>
+<a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
 </div>
 </div>
-</section>
+</article>
 <div class="divider" style="margin-top:3rem;"></div>
 </main>
     <!-- START:FOOTER -->

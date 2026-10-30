@@ -23,15 +23,15 @@ Whether booking organization-wide Business Training or an intensive 1-on-1 Perso
  Up to 20)
 
 Guaranteed 20 days of comprehensive live instruction across engineering cohorts and leadership, followed
- immediately by 30 days of guidance, Q&A and written guides. Covers up to 20
+ immediately by 20 days of guidance, Q&A and written guides (delivered as 20 working days over 4 weeks with 8 - 10 recovery days, 4 hours per day). Covers up to 20
  participants (extra seats at $100 USD per seat). Clients are encouraged to choose services relevant to
  their work or interests.
 
 ### Personal Training Flagship (1
  Person Only)
 
-Guaranteed 20 days of intensive 1-on-1 instruction, followed immediately by 15 days of guidance,
- Q&A and written guides. Strictly for one person only. Clients are encouraged to choose
+Guaranteed 20 days of intensive 1-on-1 instruction, followed immediately by 20 days of guidance,
+ Q&A and written guides (delivered as 20 working days over 4 weeks with 8 - 10 recovery days, 4 hours per day). Strictly for one person only. Clients are encouraged to choose
  services relevant to their work or interests.
 
 // BUSINESS VALUE PROPOSITION & RATIONALE
@@ -124,7 +124,7 @@ Convert anonymous web traffic into sales-ready pipeline using conversational AI 
  Roadmap
 
 20 days of comprehensive live instruction across engineering cohorts and leadership, followed immediately by
- 30 days of dedicated guidance, guides, and materials:
+ 20 days of dedicated guidance, guides, and materials (delivered as 20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day):
 
 ### Generative AI Transformation & Architecture Audit
 
@@ -150,10 +150,10 @@ Deploying autonomous Hermes agents on internal servers with long-term skill memo
 
 Training engineering cohorts on terminal coding agents (Claude Code CLI, Google Antigravity), establishing rigorous test-driven AI verification loops, deploying autonomous competitive intelligence scrapers, and activating high-converting AI lead magnet pipelines.
 
-### 30 Days of Business Guidance, Team Architecture Reviews & Operational Materials
+### 20 Days of Business Guidance, Team Architecture Reviews & Operational Materials
 
 Following sprint instruction, your teams transition into production implementation with direct
- guidance from founder Thomas Cherickal for 30 consecutive days:
+ guidance from founder Thomas Cherickal for 20 consecutive working days (4 hours per day):
 
 - Business Doubts & Architecture Clarification: Ongoing technical support for lead
  engineers, prompt engineers, and department heads solving edge-cases in daily production.
@@ -184,5 +184,5 @@ Business Training is $2,000 USD in Tier 1 for 40 days (20 days training + 20 day
 ## Ready for Your Business AI Transformation?
 
 Engagements are scheduled on a first-come, first-served basis to ensure high engineering quality and dedicated
- senior architect oversight. Book today to lock in 20 days of comprehensive live instruction plus 30 days of
- included guidance and detailed materials for up to 20 participants.
+ senior architect oversight. Book today to lock in 20 days of comprehensive live instruction plus 20 days of
+ included guidance and detailed materials (20 working days over 4 weeks with 8 - 10 recovery days, 4 hours per day) for up to 20 participants.

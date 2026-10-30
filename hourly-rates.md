@@ -15,7 +15,7 @@ This report establishes the delivery structure, live instruction hours, effectiv
 2. **Flagship Personal Training**: 40 days total (20 days live training + 20 days guidance, Q&A and written guides), strictly 1-on-1 private acceleration.
 3. **Individual Service Picks**: 10 days total (5 days live training + 5 days dedicated support), available for individuals (1-on-1) and businesses (up to 20 participants).
 
-All live training runs on **business days** (Monday to Friday, excluding Saturdays and Sundays) at **4 hours per day**.
+All live training runs on **business days** (Monday to Friday, excluding Saturdays and Sundays) at **4 hours per day** (20 working days over 4 weeks with 8 - 10 days as holidays and recovery days).
 
 ---
 

@@ -92,7 +92,7 @@ This report documents the resolution of all items requested across Parts 2 throu
   - Updated factual strip: `500+ Publications · 10+ Platforms · 8+ Languages · Writing since 2020`.
 - [x] **4.6 Guarantee Boilerplate**:
   - Retained single clean statement on index: "Every service runs for one month, and services can run in parallel."
-  - Consolidated terms on pricing and faqs: "Business: 30 days of live training plus 30 days of included support, for up to 20 participants. Personal: 15 days of one-to-one training drawing on the full 16-service catalogue plus 15 days of daily Q&A support, with short reference guides. One person only."
+  - Consolidated terms on pricing and faqs: "Business: 20 days of live training plus 20 days of included support, for up to 20 participants (20 working days over 4 weeks with 8 - 10 recovery days, 4 hours per day). Personal: 20 days of one-to-one training plus 20 days of daily Q&A support, with short reference guides (20 working days over 4 weeks with 8 - 10 recovery days, 4 hours per day). One person only."
 - [x] **4.7 CTA Block**:
   - Tightened CTA copy: "Claude agent orchestration, consulting, mentoring and training for teams that want to work AI-first."
 - [x] **4.8 Publication Card Blurbs & Sorting**:
