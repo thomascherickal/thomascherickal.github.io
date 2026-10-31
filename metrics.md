@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-10-30 18:11:03 UTC` | Branch: `main` | Head Commit: `58d089c`
+> **Automated Status Report** | Generated on `2026-10-31 10:22:50 UTC` | Branch: `main` | Head Commit: `229221b`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **368** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **107,252** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **96,971** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **3,939** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **6,342** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **40.19 MB (42,143,180 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **281,722 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **431** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-10-30** | Subject: "Standardize flagship training durations to 20 days live training + 20 days guidance (20 working days over 4 weeks, 4 hours per day) with holidays and recovery days across all pages, schemas, data, and docs" |
+| **Total Lines of Source Code & Content** | **107,055** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **96,874** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **3,890** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **6,291** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **40.17 MB (42,124,798 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **279,883 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **432** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-10-30** | Subject: "Add Enterprise and Solo Developer Guides to AI-assisted coding with visual playbooks" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,12 +27,12 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 64 | 67,889 | 5.08 MB (5,322,981 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 64 | 67,889 | 5.08 MB (5,323,591 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 18 | 11,571 | 270.81 KB (277,314 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 3 | 2,277 | 88.96 KB (91,092 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 13 | 3,818 | 162.15 KB (166,037 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 75 | 9,490 | 609.53 KB (624,161 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 71 | 12,154 | 527.00 KB (539,643 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 75 | 9,293 | 590.98 KB (605,165 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 71 | 12,154 | 527.00 KB (539,647 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 74 | 0 | 33.39 MB (35,010,540 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 8 | 0 | 43.87 KB (44,924 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,10 +43,10 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 64 | 67,889 | 5.08 MB (5,322,981 bytes) | 17.4% |
-| `.json` | 71 | 12,154 | 527.00 KB (539,643 bytes) | 19.3% |
+| `.html` | 64 | 67,889 | 5.08 MB (5,323,591 bytes) | 17.4% |
+| `.json` | 71 | 12,154 | 527.00 KB (539,647 bytes) | 19.3% |
 | `.css` | 18 | 11,571 | 270.81 KB (277,314 bytes) | 4.9% |
-| `.md` | 75 | 9,490 | 609.53 KB (624,161 bytes) | 20.4% |
+| `.md` | 75 | 9,293 | 590.98 KB (605,165 bytes) | 20.4% |
 | `.py` | 13 | 3,818 | 162.15 KB (166,037 bytes) | 3.5% |
 | `.js` | 3 | 2,277 | 88.96 KB (91,092 bytes) | 0.8% |
 | `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 11.4% |
