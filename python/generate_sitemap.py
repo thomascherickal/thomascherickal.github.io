@@ -39,8 +39,8 @@ BUSINESS_SERVICES = [
     "business-services/business-service-advanced-ai-agents.html",
     "business-services/business-service-claude-advanced-training.html",
     "business-services/business-service-gemini-advanced-training.html",
-    "business-services/business-service-competitor-research.html",
-    "business-services/business-service-leads-magnet.html",
+    "business-services/business-service-ai-based-competitor-research.html",
+    "business-services/business-service-ai-assisted-leads-magnet.html",
 ]
 
 # 12 claude Guide Pages

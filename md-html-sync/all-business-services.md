@@ -118,14 +118,14 @@ Advanced technical masterclass for engineers, architects, and technical leads:
 ### Competitor Research & Intelligence
 
 **Category**: `Market Intelligence`  
-**Link**: [Competitor Research & Intelligence](business-services/business-service-competitor-research.html)
+**Link**: [Competitor Research & Intelligence](business-services/business-service-ai-based-competitor-research.html)
 
 Deploy autonomous competitive intelligence agents, automated pricing trackers, product teardown scrapers, and dynamic sales battlecards.
 
 ### AI Leads Magnet & Conversion Systems
 
 **Category**: `Demand Gen`  
-**Link**: [AI Leads Magnet & Conversion Systems](business-services/business-service-leads-magnet.html)
+**Link**: [AI Leads Magnet & Conversion Systems](business-services/business-service-ai-assisted-leads-magnet.html)
 
 Convert anonymous traffic into sales-ready pipeline using conversational AI audit tools, waterfall firmographic enrichment, and autonomous CRM routing.
 

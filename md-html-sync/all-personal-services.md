@@ -44,12 +44,12 @@ Master the principles of Claude AI agent orchestration to run multi-agent swarms
 
 Deploy Hermes Agent from Nous Research as a self-hosted personal companion on your own hardware. Configure persistent session memory so the agent retains project context, saves solved procedures as reusable skills, and runs scheduled tasks.
 
-### Workflow Automations
+### Personal Goals Self-Authoring
 
-**Category**: `Daily Automation`  
-**Link**: [Workflow Automations](personal-services/personal-service-workflow-automations.html)
+**Category**: `Goal Setting & Growth`  
+**Link**: [Personal Goals Self-Authoring](personal-services/personal-service-goals-self-authoring.html)
 
-Hands-on training in self-hosted local n8n, Make, IFTTT, and open-source automation tools (Activepieces, Windmill). Automate routine daily tasks and data ingestion with zero per-step SaaS fees and complete local privacy.
+Structure personal goals, track career milestones, and navigate career transitions with structured self-authoring frameworks, journaling templates, and actionable roadmaps.
 
 ### AI Budget & Cost Control Training
 

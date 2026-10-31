@@ -124,8 +124,9 @@ ALL_SERVICES = [
     {"slug": "service-advanced-ai-agents", "title": "Advanced AI Agents"},
     {"slug": "service-claude-advanced-training", "title": "Claude Advanced Training"},
     {"slug": "service-gemini-advanced-training", "title": "Google Gemini Advanced Training"},
-    {"slug": "service-competitor-research", "title": "Competitor Research & Intelligence"},
-    {"slug": "service-leads-magnet", "title": "AI Leads Magnet & Conversion Systems"}
+    {"slug": "service-ai-based-competitor-research", "title": "Competitor Research & Intelligence"},
+    {"slug": "service-ai-assisted-leads-magnet", "title": "AI Leads Magnet & Conversion Systems"},
+    {"slug": "service-goals-self-authoring", "title": "Personal Goals Self-Authoring"}
 ]
 
 def format_price_spec(name, price_val, desc=None):
