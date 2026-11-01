@@ -23,6 +23,7 @@ body {
   background-color: transparent !important;
   background-image: none !important;
   min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
 }
 
@@ -92,7 +93,9 @@ body::before {
   position: fixed;
   inset: 0;
   width: 100vw;
+  width: 100dvw;
   height: 100vh;
+  height: 100dvh;
   pointer-events: none;
   z-index: -2;
   background:

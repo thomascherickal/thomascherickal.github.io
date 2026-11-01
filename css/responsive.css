@@ -1,0 +1,522 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN SUITE (css/responsive.css)
+   Consolidated laptop, tablet, and mobile-first responsive architecture.
+   ========================================================================== */
+
+/* ==========================================================================
+   1. LAPTOP / DESKTOP RESPONSIVE DESIGN (min-width: 1025px)
+   ========================================================================== */
+
+@media (min-width: 1025px) {
+  /* Fluid typography and container scaling for laptop viewports */
+  .container {
+    max-width: 1380px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* 4-Column Grid for Services on Laptop/Desktop */
+  .pricing-grid-faq {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 1.5rem !important;
+  }
+
+  /* 3-Column Grid for Parity Tiers on Laptop/Desktop */
+  .parity-tiers-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Dual column layout for calculator on Laptop/Desktop */
+  .calc-grid {
+    display: grid !important;
+    grid-template-columns: 1.15fr 0.85fr !important;
+    gap: 2.5rem !important;
+  }
+}
+
+/* ==========================================================================
+   2. TABLET RESPONSIVE DESIGN (769px to 1024px)
+   ========================================================================== */
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  /* Container adjustments for tablet */
+  .container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  /* 2-Column Grid for Services on Tablet */
+  .pricing-grid-faq {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1.25rem !important;
+  }
+
+  /* 2-Column Grid for Parity Tiers on Tablet */
+  .parity-tiers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1.25rem !important;
+  }
+
+  /* Stack Calculator or use balanced 1-col on tablet if narrow */
+  .calc-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .calc-field-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Typography safety on tablet */
+  h1.section-title,
+  h1 {
+    font-size: clamp(2rem, 4vw, 2.75rem) !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+  }
+
+  h2.section-title,
+  h2 {
+    font-size: clamp(1.6rem, 3.2vw, 2.2rem) !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+  }
+
+  .section-sub {
+    font-size: 1.05rem !important;
+    line-height: 1.65 !important;
+  }
+}
+
+/* ==========================================================================
+   3. MODERN MOBILE & UNIVERSAL RESPONSIVE LAYER
+   ========================================================================== */
+
+/* Global, all viewports */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4 {
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+:where(p, li, blockquote) {
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+:not(pre) > code {
+  overflow-wrap: anywhere;
+}
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Responsive tables: stack at narrow container width (guide: responsive-table) */
+.rt-wrap {
+  container-type: inline-size;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@container (width < 640px) {
+  table.rt-stack,
+  table.rt-stack tbody,
+  table.rt-stack tr,
+  table.rt-stack td,
+  table.rt-stack th {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  table.rt-stack thead {
+    display: none !important;
+  }
+
+  table.rt-stack tr {
+    margin: 0 0 1rem !important;
+    border: 1px solid var(--border, rgba(56, 189, 248, 0.2)) !important;
+    border-radius: var(--radius, 10px) !important;
+    overflow: hidden !important;
+    background: rgba(15, 23, 42, 0.75) !important;
+  }
+
+  table.rt-stack td {
+    padding: 0.65rem 0.9rem !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+    text-align: left !important;
+  }
+
+  table.rt-stack td:last-child {
+    border-bottom: none !important;
+  }
+
+  table.rt-stack td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 0.2rem;
+    font-family: var(--font-mono, monospace);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gold, #fbbf24);
+    font-weight: 700;
+  }
+
+  table.rt-stack td:first-child {
+    background: rgba(251, 191, 36, 0.12) !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    font-size: 0.95rem !important;
+    border-bottom: 1px solid rgba(251, 191, 36, 0.25) !important;
+  }
+
+  table.rt-stack td:first-child::before {
+    display: none !important;
+  }
+}
+
+/* Phones & Compact Viewports (<= 768px) */
+@media (max-width: 768px) {
+  /* Prevent horizontal blowout safely */
+  html, body {
+    overflow-x: clip;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  /* Safe container and section padding */
+  .container,
+  .container-wide,
+  .service-spec-section,
+  .articles-carousel-section {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  main section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: clamp(2.5rem, 8vw, 4rem);
+    padding-bottom: clamp(2.5rem, 8vw, 4rem);
+    box-sizing: border-box;
+  }
+
+  /* Service pages inline card padding relief */
+  section > div[style*="padding:2.5rem"],
+  section > div[style*="padding: 2.5rem"] {
+    padding: 1.25rem 1rem !important;
+    border-radius: 14px !important;
+  }
+
+  ul[style*="margin-left:1.5rem"],
+  ul[style*="margin-left: 1.5rem"] {
+    margin-left: 1.15rem !important;
+  }
+
+  /* Nav brand tap target fix */
+  .nav-brand {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Lock body scroll when mobile nav drawer is open */
+  body:has(.nav-toggle:checked) {
+    overflow: hidden !important;
+  }
+
+  /* Typography fluid scaling */
+  h1.section-title,
+  h1.hero-title,
+  h1 {
+    font-size: clamp(1.75rem, 6.5vw, 2.35rem) !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+  }
+
+  h2.section-title,
+  h2 {
+    font-size: clamp(1.35rem, 5vw, 1.85rem) !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  h3 {
+    font-size: clamp(1.15rem, 4.2vw, 1.45rem) !important;
+    line-height: 1.35 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  p, .section-sub, .lead, .hero-desc, .audience-desc, .collab-desc {
+    font-size: 0.98rem !important;
+    line-height: 1.62 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* Single-column grid stacking */
+  .pricing-grid-faq,
+  .parity-tiers-grid,
+  .calc-grid,
+  .calc-field-grid,
+  .packages-grid,
+  .tier-cards-grid,
+  .workflow-grid,
+  .contact-grid,
+  .writing-columns,
+  .writing-columns-wide,
+  .form-row,
+  .manifesto-comparison-grid,
+  .manifesto-comparison-box,
+  .personal-card-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  /* Home Navigation Grid: 2 columns on mobile portrait */
+  .home-nav-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.85rem !important;
+  }
+
+  /* Stats strip: 2x2 grid */
+  .stats-strip {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Hero adjustments */
+  .hero {
+    min-height: auto !important;
+    padding: 3rem 1rem 2rem !important;
+  }
+
+  .hero-avatar {
+    width: min(220px, 75vw) !important;
+    height: min(220px, 75vw) !important;
+    margin: 0 auto 1.5rem !important;
+  }
+
+  .hero-subsubtitles {
+    flex-direction: column !important;
+    gap: 0.4rem !important;
+  }
+
+  .hero-subsubtitles .subsubtitle-sep {
+    display: none !important;
+  }
+
+  .hero-ctas {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.75rem !important;
+  }
+
+  .hero-ctas .btn,
+  .hero-ctas a.btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Minimum 44px touch targets on interactive controls */
+  .btn,
+  a.btn,
+  .home-nav-btn,
+  .tier-btn,
+  .search-btn,
+  .cta-btn {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    touch-action: manipulation;
+  }
+
+  /* Card padding and containment */
+  .collab-card,
+  .metric-card,
+  .audience-card,
+  .price-card-faq,
+  .package-card,
+  .ppp-container,
+  .parity-calc-card,
+  .radical-callout-banner,
+  .content-card,
+  .toc-card,
+  .service-spec-card,
+  .service-synth-card,
+  .curriculum-phase-card,
+  .manifesto-card,
+  .contact-card,
+  .faq-card {
+    padding: 1.35rem 1rem !important;
+    border-radius: var(--radius-lg, 14px) !important;
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+  }
+
+  /* Inputs, selects, and textareas: 16px font prevents iOS automatic zoom */
+  input,
+  select,
+  textarea,
+  .form-input {
+    font-size: 16px !important;
+    min-height: 44px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Footer responsiveness */
+  .footer-top {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1.75rem !important;
+  }
+
+  .footer-bottom {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 0.85rem !important;
+  }
+
+  .newsletter-card {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.85rem !important;
+    padding: 1.15rem 1rem !important;
+  }
+
+  .newsletter-card .btn,
+  .newsletter-card a.btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* Touch device specific adjustments */
+@media (pointer: coarse) {
+  button,
+  .btn,
+  a.btn,
+  .home-nav-btn,
+  .tier-btn,
+  .filter-chip {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+}
+
+/* ==========================================================================
+   4. EXTRA SMALL MOBILE VIEWPORTS (max-width: 480px)
+   ========================================================================== */
+
+@media (max-width: 480px) {
+  /* Full width primary action buttons on compact screens */
+  .btn,
+  a.btn,
+  .btn-gold,
+  .btn-cyan,
+  .btn-linkedin,
+  .btn-topmate,
+  .btn-pricing-cta,
+  .home-nav-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* Single-column Home Nav Grid for narrow screens */
+  .home-nav-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  /* Single column stats strip */
+  .stats-strip {
+    grid-template-columns: 1fr !important;
+  }
+
+  .stat-item {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border) !important;
+  }
+
+  .stat-item:last-child {
+    border-bottom: none !important;
+  }
+
+  /* Calculator single tier cards */
+  .calc-tier-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .calc-display-price {
+    font-size: 1.75rem !important;
+  }
+
+  /* Filter chips wrapping & touch padding */
+  .filter-chip {
+    font-size: 0.82rem !important;
+    padding: 0.45rem 0.8rem !important;
+    min-height: 38px !important;
+  }
+
+  .controls-meta-bar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.75rem !important;
+  }
+
+  /* Article marquee card width fit on narrow displays */
+  .article-carousel-card {
+    width: calc(100vw - 2rem) !important;
+    min-width: calc(100vw - 2rem) !important;
+    max-width: calc(100vw - 2rem) !important;
+    padding: 1.25rem 1rem !important;
+  }
+
+  /* Metric cards */
+  .metric-card {
+    padding: 1rem 0.85rem !important;
+  }
+
+  .metric-num {
+    font-size: 1.75rem !important;
+  }
+
+  /* Footer work grid single column on narrow screens */
+  .wg,
+  .footer-work-row {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+}
+

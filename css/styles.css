@@ -1,12 +1,3 @@
-@import url("fonts.css");
-@import url("buttons.css");
-@import url("navbar.css");
-@import url("footer.css");
-@import url("cta.css");
-@import url("laptop/laptop.css");
-@import url("tablet/tablet.css");
-@import url("mobile/mobile.css");
-
 :root {
   --bg-0: #020408;
   --bg-1: #060912;
@@ -58,12 +49,13 @@ body {
   background: var(--bg-0, #020408);
   color: var(--text-primary);
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.7;
   overflow-x: hidden;
   cursor: default;
   transition: background 0.3s ease, color 0.3s ease;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* ==========================================================================
@@ -386,6 +378,7 @@ main {
 
 .hero {
   min-height: calc(100vh - 64px);
+  min-height: calc(100dvh - 64px);
   display: flex;
   flex-direction: column;
   align-items: center;

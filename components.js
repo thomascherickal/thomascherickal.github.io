@@ -395,11 +395,44 @@
     });
   }
 
+  function initResponsiveTables() {
+    document.querySelectorAll('main table').forEach(function (table) {
+      if (table.querySelector('[colspan], [rowspan]')) return;
+      var headRow = table.querySelector('thead tr') || table.rows[0];
+      if (!headRow) return;
+      var labels = Array.prototype.map.call(headRow.cells, function (c) {
+        return c.textContent.replace(/\s+/g, ' ').trim();
+      });
+      var rows = table.querySelectorAll('tbody tr');
+      if (!rows.length) rows = Array.prototype.slice.call(table.rows, 1);
+      Array.prototype.forEach.call(rows, function (tr) {
+        Array.prototype.forEach.call(tr.cells, function (cell, i) {
+          if (labels[i]) cell.setAttribute('data-label', labels[i]);
+        });
+      });
+      var wrap = table.parentElement;
+      if (!wrap || !wrap.classList.contains('rt-wrap')) {
+        wrap = document.createElement('div');
+        wrap.className = 'rt-wrap';
+        table.parentNode.insertBefore(wrap, table);
+        wrap.appendChild(table);
+      }
+      table.classList.add('rt-stack');
+      wrap.setAttribute('role', 'region');
+      var cap = table.querySelector('caption');
+      wrap.setAttribute('aria-label', cap ? cap.textContent.trim() : 'Data table');
+      if (wrap.scrollWidth > wrap.clientWidth) {
+        wrap.setAttribute('tabindex', '0');
+      }
+    });
+  }
+
   function init() {
     syncActiveNav();
     bindNavEvents();
     initArticlesCarousel();
     initEmailObfuscation();
+    initResponsiveTables();
   }
 
   if (document.readyState === 'loading') {

@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-10-31 18:32:21 UTC` | Branch: `main` | Head Commit: `b5fc71d`
+> **Automated Status Report** | Generated on `2026-11-01 11:17:37 UTC` | Branch: `main` | Head Commit: `ef8c3e2`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **368** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **107,265** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **97,074** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **3,890** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **6,301** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **40.18 MB (42,135,279 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Tracked Files** | **366** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **107,466** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **97,246** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **3,896** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **6,324** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **40.19 MB (42,141,732 bytes)** | HTML, CSS, JS, Python, SVG & Images |
 | **Total Word Count (Prose & Technical)** | **280,423 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **435** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-10-31** | Subject: "Replace personal workflow automations with Goals Self-Authoring and rename business services" |
+| **Total Git Commits** | **436** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-01** | Subject: "Fix spacing in AI-Assisted Leads Magnet nav label and rebuild components" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,12 +27,12 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 64 | 68,076 | 5.08 MB (5,331,537 bytes) | Production static web pages, services, frameworks & guides |
-| **CSS Stylesheets** | 18 | 11,571 | 270.81 KB (277,314 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 3 | 2,277 | 88.96 KB (91,092 bytes) | Client-side interactivity, search, filter & components |
+| **HTML Documents** | 64 | 68,136 | 5.09 MB (5,334,741 bytes) | Production static web pages, services, frameworks & guides |
+| **CSS Stylesheets** | 16 | 11,679 | 272.66 KB (279,201 bytes) | Design tokens, animations, responsive layout & themes |
+| **JavaScript Scripts** | 3 | 2,310 | 90.30 KB (92,472 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 13 | 3,819 | 162.27 KB (166,167 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 75 | 9,294 | 591.68 KB (605,883 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 71 | 12,175 | 528.58 KB (541,262 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 75 | 9,294 | 591.66 KB (605,863 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 71 | 12,175 | 528.58 KB (541,264 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 74 | 0 | 33.39 MB (35,010,540 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 8 | 0 | 43.94 KB (44,996 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,15 +43,15 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 64 | 68,076 | 5.08 MB (5,331,537 bytes) | 17.4% |
-| `.json` | 71 | 12,175 | 528.58 KB (541,262 bytes) | 19.3% |
-| `.css` | 18 | 11,571 | 270.81 KB (277,314 bytes) | 4.9% |
-| `.md` | 75 | 9,294 | 591.68 KB (605,883 bytes) | 20.4% |
-| `.py` | 13 | 3,819 | 162.27 KB (166,167 bytes) | 3.5% |
-| `.js` | 3 | 2,277 | 88.96 KB (91,092 bytes) | 0.8% |
-| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 11.4% |
+| `.html` | 64 | 68,136 | 5.09 MB (5,334,741 bytes) | 17.5% |
+| `.json` | 71 | 12,175 | 528.58 KB (541,264 bytes) | 19.4% |
+| `.css` | 16 | 11,679 | 272.66 KB (279,201 bytes) | 4.4% |
+| `.md` | 75 | 9,294 | 591.66 KB (605,863 bytes) | 20.5% |
+| `.py` | 13 | 3,819 | 162.27 KB (166,167 bytes) | 3.6% |
+| `.js` | 3 | 2,310 | 90.30 KB (92,472 bytes) | 0.8% |
+| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 11.5% |
 | `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 11.7% |
-| `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 5.4% |
+| `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 5.5% |
 | `.jpeg` | 2 | 0 | 773.70 KB (792,264 bytes) | 0.5% |
 | `.png` | 8 | 0 | 714.78 KB (731,934 bytes) | 2.2% |
 | `.txt` | 2 | 0 | 26.63 KB (27,266 bytes) | 0.5% |
@@ -67,8 +67,8 @@
 
 | Metric | Measurement | Architecture Details |
 | :--- | :--- | :--- |
-| **CSS Media Queries (`@media`)** | **76** | Ultra-responsive breakpoints for mobile, tablet, desktop |
-| **CSS Rule Blocks** | **1,570** | Modular selector rules across all stylesheets |
+| **CSS Media Queries (`@media`)** | **77** | Ultra-responsive breakpoints for mobile, tablet, desktop |
+| **CSS Rule Blocks** | **1,591** | Modular selector rules across all stylesheets |
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **192** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **60** | Strict single-H1 semantic hierarchy per page |
