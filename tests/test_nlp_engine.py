@@ -71,6 +71,43 @@ class TestNLPEngine(unittest.TestCase):
         stripped = strip_sync_highlights(highlighted)
         self.assertEqual(stripped, val)
 
+    def test_nlp_edge_cases(self):
+        """Verifies edge cases for empty strings, punctuation only, and missing numbers."""
+        # Empty string
+        self.assertEqual(nlp_engine.normalize_text(""), "")
+        self.assertEqual(nlp_engine.tokenize_words(""), [])
+        self.assertEqual(nlp_engine.find_entities(""), [])
+        self.assertEqual(nlp_engine.classify_domain_context(""), "unknown")
+
+        # Punctuation and symbols only
+        punct = "!@#$%^&*()_+{}[]:;<>?,./"
+        self.assertEqual(nlp_engine.find_entities(punct), [])
+
+        # Multiple currencies and decimal formats
+        money_text = "Standard rate is $1,500.50 USD with a deposit of $0 upfront and $200.00 extra."
+        entities = nlp_engine.find_entities(money_text)
+        money_ents = [e for e in entities if e.entity_type == "MONEY"]
+        self.assertEqual(len(money_ents), 3)
+        self.assertEqual(money_ents[0].normalized_value, 1500.50)
+        self.assertEqual(money_ents[1].normalized_value, 0.0)
+        self.assertEqual(money_ents[2].normalized_value, 200.0)
+
+    def test_duration_and_seats_edge_cases(self):
+        """Verifies parsing of various duration and seat expressions."""
+        expr1 = "Total timeline 70 calendar days with 30 days live instruction and 30 days guidance."
+        ents1 = nlp_engine.find_entities(expr1)
+        dur_ents = [e for e in ents1 if e.entity_type == "DURATION"]
+        dur_vals = [e.normalized_value for e in dur_ents]
+        self.assertIn(70, dur_vals)
+        self.assertIn(30, dur_vals)
+
+        expr2 = "Designed for up to 25 participants and maximum 50 seats."
+        ents2 = nlp_engine.find_entities(expr2)
+        seat_ents = [e for e in ents2 if e.entity_type == "SEATS"]
+        seat_vals = [e.normalized_value for e in seat_ents]
+        self.assertIn(25, seat_vals)
+        self.assertIn(50, seat_vals)
+
 if __name__ == "__main__":
     unittest.main()
 

@@ -54,5 +54,30 @@ class TestSyncClaudeAndGemini(unittest.TestCase):
         self.assertTrue(os.path.exists(os.path.join(NLP_EXPERT_DIR, "claude.md")))
         self.assertTrue(os.path.exists(os.path.join(NLP_EXPERT_DIR, "gemini.md")))
 
+    def test_deepmind_guide_facts_and_sync(self):
+        """Verifies Google DeepMind guide facts and synchronization in target files."""
+        gem_guides = self.kb.raw_data.get("gemini", {}).get("guides", [])
+        dm_entry = next((g for g in gem_guides if g.get("id") == "google-deepmind"), None)
+        self.assertIsNotNone(dm_entry, "google-deepmind must exist in data/gemini.json")
+        self.assertEqual(dm_entry["slug"], "google-deepmind.html")
+        self.assertEqual(dm_entry["short_name"], "Google DeepMind")
+
+        dm_html = os.path.join(REPO_DIR, "google", "google-deepmind.html")
+        self.assertTrue(os.path.exists(dm_html), "google-deepmind.html must exist")
+        with open(dm_html, "r", encoding="utf-8") as f:
+            content = f.read()
+        self.assertIn("Google DeepMind: Frontier AI Research", content)
+        self.assertIn("AlphaFold", content)
+        self.assertIn("Argon", content)
+
+    def test_claude_guides_completeness(self):
+        """Verifies all 12 Claude guides exist on disk and have proper structure."""
+        cl_guides = self.kb.raw_data.get("claude", {}).get("guides", [])
+        self.assertEqual(len(cl_guides), 12, "Must track exactly 12 Claude guides")
+        for g in cl_guides:
+            slug = g["slug"]
+            path = os.path.join(REPO_DIR, "claude", slug)
+            self.assertTrue(os.path.exists(path), f"Claude guide {slug} must exist on disk")
+
 if __name__ == "__main__":
     unittest.main()

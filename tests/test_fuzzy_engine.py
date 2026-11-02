@@ -78,5 +78,52 @@ class TestFuzzyEngine(unittest.TestCase):
         self.assertIn(conf_near, ["HIGH", "EXACT"])
         self.assertGreater(score_near, 0.75)
 
+    def test_fuzzy_edge_cases(self):
+        """Verifies edge cases: empty strings, single chars, identical whitespaces, unicode, and extreme mismatch."""
+        # Empty string handling
+        self.assertEqual(levenshtein_distance("", ""), 0)
+        self.assertEqual(levenshtein_distance("abc", ""), 3)
+        self.assertEqual(levenshtein_distance("", "xyz"), 3)
+        self.assertEqual(levenshtein_ratio("", ""), 1.0)
+        self.assertEqual(levenshtein_ratio("abc", ""), 0.0)
+        self.assertEqual(ngram_similarity("", ""), 1.0)
+        self.assertEqual(ngram_similarity("abc", ""), 0.0)
+        self.assertEqual(token_sort_ratio("", ""), 1.0)
+        self.assertEqual(token_sort_ratio("abc", ""), 0.0)
+
+        # Single character comparisons
+        self.assertEqual(levenshtein_distance("a", "a"), 0)
+        self.assertEqual(levenshtein_distance("a", "b"), 1)
+        self.assertEqual(levenshtein_ratio("a", "a"), 1.0)
+        self.assertEqual(levenshtein_ratio("a", "b"), 0.0)
+
+        # Extreme mismatch
+        is_match, score, conf = fuzzy_matcher.match("Enterprise Cloud Kubernetes", "Fresh Apples And Oranges")
+        self.assertFalse(is_match)
+        self.assertEqual(conf, "NONE")
+        self.assertLess(score, 0.4)
+
+        # Case insensitivity and extra whitespace
+        is_match_ws, score_ws, conf_ws = fuzzy_matcher.match("  CLAUDE CODE  ", "claude code")
+        self.assertTrue(is_match_ws)
+        self.assertEqual(conf_ws, "EXACT")
+        self.assertEqual(score_ws, 1.0)
+
+    def test_membership_boundary_cases(self):
+        """Verifies boundary clamping on triangular and trapezoidal membership functions."""
+        # Value far below lower bound
+        self.assertEqual(fuzzy_triangle(-10.0, 0.0, 5.0, 10.0), 0.0)
+        self.assertEqual(fuzzy_trapezoid(-10.0, 0.0, 2.0, 8.0, 10.0), 0.0)
+
+        # Value far above upper bound
+        self.assertEqual(fuzzy_triangle(20.0, 0.0, 5.0, 10.0), 0.0)
+        self.assertEqual(fuzzy_trapezoid(20.0, 0.0, 2.0, 8.0, 10.0), 0.0)
+
+        # Exact inflection points
+        self.assertEqual(fuzzy_trapezoid(2.0, 0.0, 2.0, 8.0, 10.0), 1.0)
+        self.assertEqual(fuzzy_trapezoid(8.0, 0.0, 2.0, 8.0, 10.0), 1.0)
+        self.assertEqual(fuzzy_triangle(0.0, 0.0, 5.0, 10.0), 0.0)
+        self.assertEqual(fuzzy_triangle(10.0, 0.0, 5.0, 10.0), 0.0)
+
 if __name__ == "__main__":
     unittest.main()

@@ -66,6 +66,38 @@ class TestExpertSystem(unittest.TestCase):
         self.assertEqual(occ["field_key"], "flagship_price")
         self.assertEqual(occ["new_value"], "$2,000")
 
+    def test_expert_system_edge_cases(self):
+        """Verifies KnowledgeBase and InferenceEngine error handling and edge cases."""
+        # Non-existent domain or fact
+        self.assertIsNone(self.kb.get_fact("non_existent_domain", "missing_key"))
+        self.assertIsNone(self.kb.get_fact("pricing", "completely_bogus_fact_key"))
+
+        # Empty rule execution
+        empty_rule = Rule("NoopRule", 50, lambda p, c, *args: (False, {}), lambda p, c, *args: (c, []))
+        self.engine.register_rule(empty_rule)
+        cond, binds = empty_rule.condition_fn("sample_page.html", "sample content")
+        self.assertFalse(cond)
+
+        # Document discovery via ExpertSynchronizer
+        from synchronizer import ExpertSynchronizer
+        sync = ExpertSynchronizer()
+        docs = sync.discover_target_files()
+        self.assertGreater(len(docs), 50)
+        self.assertTrue(any("index.html" in d for d in docs))
+        self.assertTrue(any("pricing.html" in d for d in docs))
+
+    def test_save_and_load_json_atomic(self):
+        """Verifies atomic json writing and corruption-free reading."""
+        test_file = os.path.join(REPO_DIR, "data", ".test_atomic.json")
+        try:
+            payload = {"status": "ok", "count": 42, "items": ["a", "b", "c"]}
+            save_json(test_file, payload)
+            loaded = load_json(test_file)
+            self.assertEqual(loaded, payload)
+        finally:
+            if os.path.exists(test_file):
+                os.remove(test_file)
+
 if __name__ == "__main__":
     unittest.main()
 

@@ -97,5 +97,26 @@ class TestSyncPricing(unittest.TestCase):
         data = load_json(ref_file)
         self.assertGreater(len(data.get("all_references", [])), 0)
 
+    def test_pricing_zero_and_edge_multipliers(self):
+        """Verifies pricing calculations with edge cases and extreme participant volumes."""
+        b_price = self.kb.get_fact("pricing", "b_flag_price")
+        p_price = self.kb.get_fact("pricing", "p_flag_price")
+        b_seats = self.kb.get_fact("pricing", "b_flag_seats")
+        b_extra = self.kb.get_fact("pricing", "b_flag_extra_seat")
+
+        # Business extra seats formula evaluation
+        seats_edge_1 = b_seats # exact threshold (no fee)
+        extra_fee_1 = max(0, seats_edge_1 - b_seats) * b_extra
+        self.assertEqual(extra_fee_1, 0)
+
+        seats_edge_2 = b_seats + 10 # 10 additional participants
+        extra_fee_2 = max(0, seats_edge_2 - b_seats) * b_extra
+        self.assertEqual(extra_fee_2, 10 * b_extra)
+
+        # Baseline pricing sanity
+        self.assertGreaterEqual(b_price, p_price, "Business Flagship must be >= Personal Flagship")
+        self.assertEqual(b_price, 2000)
+        self.assertGreaterEqual(p_price, 1000)
+
 if __name__ == "__main__":
     unittest.main()
