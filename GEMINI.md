@@ -125,3 +125,8 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
   - Every page mentioning pricing must provide a short explanation of the six 195-country Purchasing Power Parity (PPP) tiers and include a prominent link to `pricing.html`.
 - **High-Quality Training Material & Apache 2.0 Licensing**:
   - All high-quality training materials, curriculum documents, architectural guides, and custom client code are licensed under the **Apache 2.0 license**, permitting commercial use, internal deployment, resale, and relicensing with attribution.
+- **Support Period Payments**:
+  - **Flagship Support (Business & Personal)**: An additional **$500 USD** for the 30 days support period, paid in two installments: **$250 USD after 15 days** of support and **$250 USD after 30 days** of support.
+  - **Individual Services Support (Business & Personal)**: An additional **$50 USD** for the 5 days support period, paid in a single installment **after 5 days** of support.
+  - **Zero Upfront for Support**: Support payments are strictly due only after verifying support delivery (after 15 days and 30 days of support for flagships; after 5 days of support for individual services).
+  - **Parity Scaled**: Support payments scale across the six Purchasing Power Parity (PPP) tiers.

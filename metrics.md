@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-02 07:35:40 UTC` | Branch: `main` | Head Commit: `4067f75`
+> **Automated Status Report** | Generated on `2026-11-02 11:35:18 UTC` | Branch: `main` | Head Commit: `e69ea35`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **411** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **119,832** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **108,280** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **4,247** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **7,305** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **40.83 MB (42,815,323 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **306,966 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **450** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-02** | Subject: "Make ToC single column and add high-resolution architecture images to google-ai-studio and google-antigravity-ide" |
+| **Total Tracked Files** | **414** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **121,049** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **109,384** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **4,282** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **7,383** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **40.92 MB (42,906,768 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **310,621 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **451** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-02** | Subject: "Simplify guarantee.html with plain language, 5-point schedule, clear comparison table, and remove blank image" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,12 +27,12 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 65 | 70,699 | 5.28 MB (5,531,519 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 66 | 71,606 | 5.35 MB (5,604,862 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,778 | 275.49 KB (282,099 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 3 | 2,321 | 90.70 KB (92,881 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 32 | 7,281 | 333.60 KB (341,603 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 87 | 10,689 | 695.21 KB (711,894 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 83 | 17,011 | 714.34 KB (731,486 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 88 | 10,801 | 704.51 KB (721,421 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 84 | 17,209 | 722.72 KB (740,061 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 74 | 0 | 33.39 MB (35,010,540 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 9 | 0 | 45.72 KB (46,813 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,15 +43,15 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 65 | 70,699 | 5.28 MB (5,531,519 bytes) | 15.8% |
-| `.json` | 83 | 17,011 | 714.34 KB (731,486 bytes) | 20.2% |
+| `.html` | 66 | 71,606 | 5.35 MB (5,604,862 bytes) | 15.9% |
+| `.json` | 84 | 17,209 | 722.72 KB (740,061 bytes) | 20.3% |
 | `.css` | 16 | 11,778 | 275.49 KB (282,099 bytes) | 3.9% |
-| `.md` | 87 | 10,689 | 695.21 KB (711,894 bytes) | 21.2% |
-| `.py` | 32 | 7,281 | 333.60 KB (341,603 bytes) | 7.8% |
+| `.md` | 88 | 10,801 | 704.51 KB (721,421 bytes) | 21.3% |
+| `.py` | 32 | 7,281 | 333.60 KB (341,603 bytes) | 7.7% |
 | `.js` | 3 | 2,321 | 90.70 KB (92,881 bytes) | 0.7% |
-| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 10.2% |
-| `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 10.5% |
-| `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 4.9% |
+| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 10.1% |
+| `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 10.4% |
+| `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 4.8% |
 | `.jpeg` | 2 | 0 | 773.70 KB (792,264 bytes) | 0.5% |
 | `.png` | 8 | 0 | 714.78 KB (731,934 bytes) | 1.9% |
 | `.txt` | 2 | 0 | 26.64 KB (27,280 bytes) | 0.5% |
@@ -70,25 +70,25 @@
 | **CSS Media Queries (`@media`)** | **77** | Ultra-responsive breakpoints for mobile, tablet, desktop |
 | **CSS Rule Blocks** | **1,601** | Modular selector rules across all stylesheets |
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
-| **FAQ Question Cards** | **192** | Rich searchable & filterable accordion cards |
-| **Primary Headings (`<h1>`)** | **61** | Strict single-H1 semantic hierarchy per page |
-| **Secondary Section Headings (`<h2>`)** | **434** | Structural topic subdivisions |
-| **Card & Item Headings (`<h3>`)** | **497** | Individual service, question, and feature cards |
-| **Call-to-Action (CTA) Modules** | **75** | Standardized CTAs with Free LinkedIn Consultation rule |
-| **Canonical Links Configured** | **60** | 100% SEO canonical URL coverage across public pages |
-| **Open Graph Meta Tags** | **425** | Social preview cards across Twitter/LinkedIn/Facebook |
-| **Structured Data Blocks (JSON-LD)** | **61** | Schema.org FAQPage, Service, Person, Organization schemas |
+| **FAQ Question Cards** | **198** | Rich searchable & filterable accordion cards |
+| **Primary Headings (`<h1>`)** | **62** | Strict single-H1 semantic hierarchy per page |
+| **Secondary Section Headings (`<h2>`)** | **440** | Structural topic subdivisions |
+| **Card & Item Headings (`<h3>`)** | **502** | Individual service, question, and feature cards |
+| **Call-to-Action (CTA) Modules** | **76** | Standardized CTAs with Free LinkedIn Consultation rule |
+| **Canonical Links Configured** | **61** | 100% SEO canonical URL coverage across public pages |
+| **Open Graph Meta Tags** | **432** | Social preview cards across Twitter/LinkedIn/Facebook |
+| **Structured Data Blocks (JSON-LD)** | **62** | Schema.org FAQPage, Service, Person, Organization schemas |
 
 ---
 
 ## 5. Web Page Taxonomy & Sitemap Distribution
 
-- **Total Public HTML Pages**: **65**
+- **Total Public HTML Pages**: **66**
 - **Core Landing & Portal Pages**: **17** (`404.html`, `all-business-services.html`, `all-personal-services.html`, `article-footer_dark.html`, `articles.html`, `business-ai-training.html`, `contact.html`, `expertise.html`, `faqs.html`, `footer.html`, `google43d90cf6a204dc6d.html`, `guarantee.html`, `header.html`, `index.html`, `personal-ai-training.html`, `pricing.html`, `writing.html`)
 - **Business AI Training Services (`business-services/`)**: **12** (Full enterprise curriculum, lead gen, agent orchestration, and architecture deep-dives)
 - **Personal AI Training Services (`personal-services/`)**: **12** (1-on-1 private acceleration, career transformation, continuous learning, and agentic workflows)
 - **Claude Guides & Frameworks (`claude/`)**: **12** (Claude Code, Cowork, Skills, MCP, Orchestration, Plugins, Science, Local LLMs, Features)
-- **Google AI & Gemini Guides (`google/`)**: **12** (Gemini 101, Antigravity IDE, Studio, Deep Research, Spark, Gemma, Desktop, Multimodal Models)
+- **Google AI & Gemini Guides (`google/`)**: **13** (Gemini 101, Antigravity IDE, Studio, Deep Research, Spark, Gemma, Desktop, Multimodal Models)
 
 ---
 

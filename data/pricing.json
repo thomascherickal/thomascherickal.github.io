@@ -69,6 +69,24 @@
             "description": "Completed Day 25 of live training"
           }
         ],
+        "support_payment": {
+          "total_usd": 500.0,
+          "structure": "Two equal installments ($250 USD each in Tier 1)",
+          "milestone_schedule": [
+            {
+              "installment": 1,
+              "amount_usd": 250.0,
+              "due_after_day": 15,
+              "description": "Completed Day 15 of support period"
+            },
+            {
+              "installment": 2,
+              "amount_usd": 250.0,
+              "due_after_day": 30,
+              "description": "Completed Day 30 of support period"
+            }
+          ]
+        },
         "walkaway_policy": "Walk away owing nothing if not satisfied after the first 5 days of completed training."
       },
       "parity_pricing": {
@@ -126,7 +144,7 @@
         "schedule_notes": "30 working days over 6 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day"
       },
       "payment_rules": {
-        "structure": "Five equal installments (20% each / $200 USD base in Tier 1)",
+        "structure": "Five equal installments (20% each / $400 USD base in Tier 1)",
         "milestone_schedule": [
           {
             "installment": 1,
@@ -159,6 +177,24 @@
             "description": "Completed Day 25 of live training"
           }
         ],
+        "support_payment": {
+          "total_usd": 500.0,
+          "structure": "Two equal installments ($250 USD each in Tier 1)",
+          "milestone_schedule": [
+            {
+              "installment": 1,
+              "amount_usd": 250.0,
+              "due_after_day": 15,
+              "description": "Completed Day 15 of support period"
+            },
+            {
+              "installment": 2,
+              "amount_usd": 250.0,
+              "due_after_day": 30,
+              "description": "Completed Day 30 of support period"
+            }
+          ]
+        },
         "walkaway_policy": "Walk away owing nothing if not satisfied after the first 5 days of completed training."
       },
       "parity_pricing": {
@@ -241,6 +277,18 @@
             "description": "Completed Day 5 of live training"
           }
         ],
+        "support_payment": {
+          "total_usd": 50.0,
+          "structure": "Single installment ($50 USD in Tier 1)",
+          "milestone_schedule": [
+            {
+              "installment": 1,
+              "amount_usd": 50.0,
+              "due_after_day": 5,
+              "description": "Completed Day 5 of support period"
+            }
+          ]
+        },
         "walkaway_policy": "Walk away owing nothing if not satisfied after the first 1 day of completed training."
       },
       "parity_pricing": {
@@ -297,7 +345,7 @@
         "support_phase_description": "5 days of guidance, assistance, implementation, Q&A, and written guides with IP belonging to the author."
       },
       "payment_rules": {
-        "structure": "Five equal installments (20% each / $20 USD base in Tier 1)",
+        "structure": "Five equal installments (20% each / $40 USD base in Tier 1)",
         "milestone_schedule": [
           {
             "installment": 1,
@@ -330,6 +378,18 @@
             "description": "Completed Day 5 of live training"
           }
         ],
+        "support_payment": {
+          "total_usd": 50.0,
+          "structure": "Single installment ($50 USD in Tier 1)",
+          "milestone_schedule": [
+            {
+              "installment": 1,
+              "amount_usd": 50.0,
+              "due_after_day": 5,
+              "description": "Completed Day 5 of support period"
+            }
+          ]
+        },
         "walkaway_policy": "Walk away owing nothing if not satisfied after the first 1 day of completed training."
       },
       "parity_pricing": {
@@ -366,7 +426,34 @@
       "installments_count": 5,
       "installment_percentage": 20,
       "billing_basis": "Billed only after completed milestone blocks of training progress",
-      "policy_summary": "Strictly bash upfront. Invoiced in 5 equal installments (20% each) due strictly after completed milestone blocks of training progress."
+      "policy_summary": "Strictly $0 upfront. Invoiced in 5 equal installments (20% each) due strictly after completed milestone blocks of training progress."
+    },
+    "support_payment_structure": {
+      "flagship_support_total_usd": 500,
+      "flagship_support_installments": [
+        {
+          "installment": 1,
+          "amount_usd": 250,
+          "due_after_day": 15,
+          "description": "Completed Day 15 of support period"
+        },
+        {
+          "installment": 2,
+          "amount_usd": 250,
+          "due_after_day": 30,
+          "description": "Completed Day 30 of support period"
+        }
+      ],
+      "individual_service_support_total_usd": 50,
+      "individual_service_support_installments": [
+        {
+          "installment": 1,
+          "amount_usd": 50,
+          "due_after_day": 5,
+          "description": "Completed Day 5 of support period"
+        }
+      ],
+      "policy_summary": "Zero upfront payment for support; installments are paid strictly after verifying support delivery (after 15 and 30 days for flagships; after 5 days for individual services). Subject to parity discounts."
     },
     "risk_free_guarantees": {
       "walkaway_guarantee": "Walk away owing nothing if not satisfied after the first milestone training phase.",
