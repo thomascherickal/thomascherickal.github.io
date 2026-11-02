@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-02 05:31:26 UTC` | Branch: `main` | Head Commit: `cd8fb92`
+> **Automated Status Report** | Generated on `2026-11-02 05:55:41 UTC` | Branch: `main` | Head Commit: `129de8a`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **408** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **117,186** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **106,065** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **4,139** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **6,982** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **40.64 MB (42,610,106 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **290,153 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **441** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-02** | Subject: "Harmonize documentation, FAQ installment terms, metrics taxonomy, and component synchronization" |
+| **Total Lines of Source Code & Content** | **117,829** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **106,579** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **4,164** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **7,086** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **40.68 MB (42,659,514 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **295,727 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **442** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-02** | Subject: "Add comprehensive Gemini 101 guide covering DeepMind, element models, subscription tiers, and parity pricing" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,12 +27,12 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 64 | 68,845 | 5.14 MB (5,386,657 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 64 | 69,297 | 5.17 MB (5,418,580 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,747 | 274.82 KB (281,419 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 3 | 2,321 | 90.68 KB (92,854 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 32 | 7,078 | 324.30 KB (332,086 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 86 | 10,200 | 649.23 KB (664,807 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 82 | 16,942 | 711.63 KB (728,711 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 86 | 10,388 | 666.22 KB (682,207 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 82 | 16,945 | 711.71 KB (728,796 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 74 | 0 | 33.39 MB (35,010,540 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 9 | 0 | 45.45 KB (46,544 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,10 +43,10 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 64 | 68,845 | 5.14 MB (5,386,657 bytes) | 15.7% |
-| `.json` | 82 | 16,942 | 711.63 KB (728,711 bytes) | 20.1% |
+| `.html` | 64 | 69,297 | 5.17 MB (5,418,580 bytes) | 15.7% |
+| `.json` | 82 | 16,945 | 711.71 KB (728,796 bytes) | 20.1% |
 | `.css` | 16 | 11,747 | 274.82 KB (281,419 bytes) | 3.9% |
-| `.md` | 86 | 10,200 | 649.23 KB (664,807 bytes) | 21.1% |
+| `.md` | 86 | 10,388 | 666.22 KB (682,207 bytes) | 21.1% |
 | `.py` | 32 | 7,078 | 324.30 KB (332,086 bytes) | 7.8% |
 | `.js` | 3 | 2,321 | 90.68 KB (92,854 bytes) | 0.7% |
 | `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 10.3% |
@@ -72,8 +72,8 @@
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **192** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **60** | Strict single-H1 semantic hierarchy per page |
-| **Secondary Section Headings (`<h2>`)** | **405** | Structural topic subdivisions |
-| **Card & Item Headings (`<h3>`)** | **466** | Individual service, question, and feature cards |
+| **Secondary Section Headings (`<h2>`)** | **414** | Structural topic subdivisions |
+| **Card & Item Headings (`<h3>`)** | **475** | Individual service, question, and feature cards |
 | **Call-to-Action (CTA) Modules** | **74** | Standardized CTAs with Free LinkedIn Consultation rule |
 | **Canonical Links Configured** | **59** | 100% SEO canonical URL coverage across public pages |
 | **Open Graph Meta Tags** | **418** | Social preview cards across Twitter/LinkedIn/Facebook |
