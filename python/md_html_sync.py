@@ -36,6 +36,7 @@ PAGE_MAPPINGS = {
     "index.html": "home.md",
     "articles.html": "articles.md",
     "writing.html": "writing.md",
+    "guarantee.html": "guarantee.md",
     "pricing.html": "pricing.md",
     "expertise.html": "expertise.md",
     "contact.html": "contact.md",
