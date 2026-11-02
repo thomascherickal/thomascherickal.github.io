@@ -6,6 +6,10 @@
 
 ---
 
+## Contents
+
+---
+
 ## What is Google Antigravity IDE?
 
 Google Antigravity IDE is a standalone, AI-first integrated development environment developed by Google DeepMind. Engineered as an open fork of Visual Studio Code, Antigravity retains 100% binary and configuration compatibility with the vast VS Code extension and plugin ecosystem while re-architecting the core editor canvas for autonomous agentic workflows.

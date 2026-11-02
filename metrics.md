@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-02 07:10:34 UTC` | Branch: `main` | Head Commit: `28757c2`
+> **Automated Status Report** | Generated on `2026-11-02 07:30:58 UTC` | Branch: `main` | Head Commit: `879688b`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **411** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **119,742** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **108,201** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **4,245** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **7,296** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **40.83 MB (42,812,347 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **306,467 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **448** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-02** | Subject: "Make google-ai-studio and google-gemini-101 single-column and mobile friendly, unescape Mermaid diagram syntax, and add practice pricing rules to GEMINI.md" |
+| **Total Lines of Source Code & Content** | **119,683** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **108,147** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **4,247** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **7,289** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **40.83 MB (42,811,265 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **306,546 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **449** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-02** | Subject: "Add guarantee.html page, risk-free payment structure and Apache 2.0 licensing, update header.html and all pages, pricing.html and contact.html" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,12 +27,12 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 65 | 70,620 | 5.27 MB (5,528,820 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 65 | 70,557 | 5.27 MB (5,527,729 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,778 | 275.49 KB (282,099 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 3 | 2,321 | 90.70 KB (92,881 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 32 | 7,281 | 333.60 KB (341,603 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 87 | 10,678 | 694.92 KB (711,596 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 83 | 17,011 | 714.36 KB (731,507 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 87 | 10,682 | 694.94 KB (711,614 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 83 | 17,011 | 714.35 KB (731,498 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 74 | 0 | 33.39 MB (35,010,540 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 9 | 0 | 45.72 KB (46,813 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,10 +43,10 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 65 | 70,620 | 5.27 MB (5,528,820 bytes) | 15.8% |
-| `.json` | 83 | 17,011 | 714.36 KB (731,507 bytes) | 20.2% |
+| `.html` | 65 | 70,557 | 5.27 MB (5,527,729 bytes) | 15.8% |
+| `.json` | 83 | 17,011 | 714.35 KB (731,498 bytes) | 20.2% |
 | `.css` | 16 | 11,778 | 275.49 KB (282,099 bytes) | 3.9% |
-| `.md` | 87 | 10,678 | 694.92 KB (711,596 bytes) | 21.2% |
+| `.md` | 87 | 10,682 | 694.94 KB (711,614 bytes) | 21.2% |
 | `.py` | 32 | 7,281 | 333.60 KB (341,603 bytes) | 7.8% |
 | `.js` | 3 | 2,321 | 90.70 KB (92,881 bytes) | 0.7% |
 | `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 10.2% |
@@ -72,7 +72,7 @@
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **192** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **61** | Strict single-H1 semantic hierarchy per page |
-| **Secondary Section Headings (`<h2>`)** | **433** | Structural topic subdivisions |
+| **Secondary Section Headings (`<h2>`)** | **434** | Structural topic subdivisions |
 | **Card & Item Headings (`<h3>`)** | **497** | Individual service, question, and feature cards |
 | **Call-to-Action (CTA) Modules** | **75** | Standardized CTAs with Free LinkedIn Consultation rule |
 | **Canonical Links Configured** | **60** | 100% SEO canonical URL coverage across public pages |

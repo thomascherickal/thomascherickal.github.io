@@ -302,7 +302,7 @@
 <!-- TABLE OF CONTENTS -->
 <article class="content-card" id="table-of-contents">
 <h2>Contents</h2>
-<div class="toc-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:0.75rem;margin-top:1rem;">
+<div class="toc-grid" style="display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem;">
 <a class="toc-link gold-link" href="#introduction">1. Introduction</a>
 <a class="toc-link gold-link" href="#what-it-is">2. What Google AI Studio is</a>
 <a class="toc-link gold-link" href="#playground">3. The Playground and the models</a>
@@ -484,6 +484,11 @@ flowchart TD
 </div>
 <div class="diagram-caption">Figure 4. The Build mode loop. Most of your time goes into the dashed iteration path.</div>
 </div>
+<div style="margin:1.75rem 0;text-align:center;">
+  <img alt="AI Dev Playbooks and Autonomous Scaffolding" src="../assets/ai-dev-playbooks.jpg" style="width:100%;max-width:760px;height:auto;border-radius:12px;border:1px solid rgba(56, 189, 248, 0.3);box-shadow:0 8px 30px rgba(0,0,0,0.5);" />
+  <p class="diagram-caption">Sandboxed agent scaffolding, multi-file context tracking, and preview compilation in Build Mode.</p>
+</div>
+
 
 <p>
   Iteration happens in three places. The chat panel handles requests such as "add a pie chart for categories". Annotation mode lets you highlight part of the UI and describe the change you want. The Code tab accepts direct edits, and a GitHub tab provides two-way sync with model-written commit messages and a side-by-side dialog for merge conflicts.<sup><a class="gold-link" href="#ref-2">[2]</a></sup>
@@ -563,6 +568,11 @@ flowchart LR
 </div>
 <div class="diagram-caption">Figure 6. The Android path, from prompt to the Play internal testing track.</div>
 </div>
+<div style="margin:1.75rem 0;text-align:center;">
+  <img alt="Autonomous Agent Execution and Mobile Deployment" src="../assets/autonomous-agent-loops.jpg" style="width:100%;max-width:760px;height:auto;border-radius:12px;border:1px solid rgba(251, 191, 36, 0.3);box-shadow:0 8px 30px rgba(0,0,0,0.5);" />
+  <p class="diagram-caption">Jetpack Compose UI hierarchy synthesis and streaming browser emulation for native Android projects.</p>
+</div>
+
 
 <p>
   Firebase covers the backend. Android apps call Gemini through Firebase AI Logic with App Check, so no raw API key ships inside the APK. They can also use Cloud Firestore and Firebase Authentication.<sup><a class="gold-link" href="#ref-4">[4]</a></sup> Secrets management, multiplayer and Workspace APIs remain web-only because Android apps in AI Studio are client-side only.
