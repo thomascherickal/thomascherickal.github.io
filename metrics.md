@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-02 11:45:49 UTC` | Branch: `main` | Head Commit: `5535e13`
+> **Automated Status Report** | Generated on `2026-11-02 11:46:54 UTC` | Branch: `main` | Head Commit: `8a971e5`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -15,10 +15,10 @@
 | **Source Code Lines (SLOC)** | **108,276** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **4,273** | In-code and architectural documentation |
 | **Blank / Spacing Lines** | **7,418** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **40.84 MB (42,829,030 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **309,076 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **452** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-02** | Subject: "Add support period milestone payments and synchronize pricing structure across documentation and pages" |
+| **Total Repository Size (Tracked Assets)** | **40.84 MB (42,829,020 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **309,075 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **453** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-02** | Subject: "Create delete_page.py helper, purge google-nano-banana.html across sync systems, and add prune logic to md_html_sync" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -31,8 +31,8 @@
 | **CSS Stylesheets** | 16 | 11,778 | 275.49 KB (282,099 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 3 | 2,321 | 90.70 KB (92,881 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 33 | 7,651 | 346.78 KB (355,105 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 87 | 10,766 | 702.60 KB (719,458 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 83 | 16,490 | 691.49 KB (708,084 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 87 | 10,766 | 702.59 KB (719,451 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 83 | 16,490 | 691.49 KB (708,081 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 74 | 0 | 33.39 MB (35,010,540 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 9 | 0 | 45.72 KB (46,813 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -44,9 +44,9 @@
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
 | `.html` | 65 | 70,908 | 5.29 MB (5,547,562 bytes) | 15.8% |
-| `.json` | 83 | 16,490 | 691.49 KB (708,084 bytes) | 20.1% |
+| `.json` | 83 | 16,490 | 691.49 KB (708,081 bytes) | 20.1% |
 | `.css` | 16 | 11,778 | 275.49 KB (282,099 bytes) | 3.9% |
-| `.md` | 87 | 10,766 | 702.60 KB (719,458 bytes) | 21.1% |
+| `.md` | 87 | 10,766 | 702.59 KB (719,451 bytes) | 21.1% |
 | `.py` | 33 | 7,651 | 346.78 KB (355,105 bytes) | 8.0% |
 | `.js` | 3 | 2,321 | 90.70 KB (92,881 bytes) | 0.7% |
 | `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 10.2% |
