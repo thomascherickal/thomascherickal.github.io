@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-02 12:12:40 UTC` | Branch: `main` | Head Commit: `8edaae4`
+> **Automated Status Report** | Generated on `2026-11-02 12:13:32 UTC` | Branch: `main` | Head Commit: `c899cf6`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -15,10 +15,10 @@
 | **Source Code Lines (SLOC)** | **108,927** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **4,282** | In-code and architectural documentation |
 | **Blank / Spacing Lines** | **7,437** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **40.89 MB (42,878,040 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Repository Size (Tracked Assets)** | **40.89 MB (42,878,042 bytes)** | HTML, CSS, JS, Python, SVG & Images |
 | **Total Word Count (Prose & Technical)** | **309,644 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **454** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-02** | Subject: "Update nlp-fuzzy-expert synchronization references and reports" |
+| **Total Git Commits** | **455** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-02** | Subject: "Enforce data/ Single Source of Truth rule in GEMINI.md and tests" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -32,7 +32,7 @@
 | **JavaScript Scripts** | 3 | 2,321 | 90.70 KB (92,881 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 33 | 7,746 | 350.99 KB (359,416 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
 | **Markdown Documentation** | 87 | 10,782 | 705.86 KB (722,805 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 83 | 16,490 | 691.49 KB (708,081 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **JSON Schemas & Data** | 83 | 16,490 | 691.49 KB (708,083 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 74 | 0 | 33.39 MB (35,010,540 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 9 | 0 | 46.00 KB (47,102 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -44,7 +44,7 @@
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
 | `.html` | 65 | 71,476 | 5.33 MB (5,588,628 bytes) | 15.8% |
-| `.json` | 83 | 16,490 | 691.49 KB (708,081 bytes) | 20.1% |
+| `.json` | 83 | 16,490 | 691.49 KB (708,083 bytes) | 20.1% |
 | `.css` | 16 | 11,778 | 275.49 KB (282,099 bytes) | 3.9% |
 | `.md` | 87 | 10,782 | 705.86 KB (722,805 bytes) | 21.1% |
 | `.py` | 33 | 7,746 | 350.99 KB (359,416 bytes) | 8.0% |
