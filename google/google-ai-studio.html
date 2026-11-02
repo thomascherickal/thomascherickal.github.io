@@ -5,22 +5,22 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Google AI Studio: Rapid Prototyping & System Instructions | Thomas Cherickal</title>
-<meta content="Technical guide to Google AI Studio, covering Build Mode for Android Jetpack Compose, Firebase App Check security, browser emulators, and Cloud Run deployment." name="description"/>
+<meta content="What Google AI Studio can do, which languages and frameworks it supports, and three comprehensive tutorials from prompt to deployed web and native Android apps." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
 <link href="https://thedigitalfuturist.com/google/google-ai-studio.html" rel="canonical"/>
 <!-- Open Graph -->
 <meta content="article" property="og:type"/>
 <meta content="https://thedigitalfuturist.com/google/google-ai-studio.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
-<meta content="Google AI Studio: Prototyping, Mobile App Generation &amp; Backend Deployment | Thomas Cherickal" property="og:title"/>
-<meta content="Technical guide to Google AI Studio, covering Build Mode for Android Jetpack Compose, Firebase App Check security, browser emulators, and Cloud Run deployment." property="og:description"/>
+<meta content="Google AI Studio in 2026: From Prompt to Published App | Thomas Cherickal" property="og:title"/>
+<meta content="What Google AI Studio can do, which languages and frameworks it supports, and three comprehensive tutorials from prompt to deployed web and native Android apps." property="og:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@thomazcherickal" name="twitter:site"/>
-<meta content="Google AI Studio: Prototyping, Mobile App Generation &amp; Backend Deployment | Thomas Cherickal" name="twitter:title"/>
-<meta content="Technical guide to Google AI Studio, covering Build Mode for Android Jetpack Compose, Firebase App Check security, browser emulators, and Cloud Run deployment." name="twitter:description"/>
+<meta content="Google AI Studio in 2026: From Prompt to Published App | Thomas Cherickal" name="twitter:title"/>
+<meta content="What Google AI Studio can do, which languages and frameworks it supports, and three comprehensive tutorials from prompt to deployed web and native Android apps." name="twitter:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
 <!-- Favicons -->
 <link href="../assets/favicon.ico" rel="icon" sizes="any"/>
@@ -82,15 +82,15 @@
         "@type": "WebPage",
         "@id": "https://thedigitalfuturist.com/google/google-ai-studio.html",
         "url": "https://thedigitalfuturist.com/google/google-ai-studio.html",
-        "name": "Google AI Studio: Prototyping, Mobile App Generation & Backend Deployment | Thomas Cherickal"
+        "name": "Google AI Studio in 2026: From Prompt to Published App | Thomas Cherickal"
       },
-      "headline": "Google AI Studio: Prototyping, Mobile App Generation & Backend Deployment",
-      "description": "Technical guide to Google AI Studio, covering Build Mode for Android Jetpack Compose, Firebase App Check security, browser emulators, and Cloud Run deployment.",
+      "headline": "Google AI Studio in 2026: From Prompt to Published App",
+      "description": "What Google AI Studio can do, which languages and frameworks it supports, and three comprehensive tutorials from prompt to deployed web and native Android apps.",
       "image": [
         "https://thedigitalfuturist.com/assets/og-card.png"
       ],
       "datePublished": "2026-10-24T00:00:00+05:30",
-      "dateModified": "2026-10-24T00:00:00+05:30",
+      "dateModified": "2026-11-02T11:40:00+05:30",
       "inLanguage": "en-US",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -125,11 +125,13 @@
       "articleSection": "Generative AI",
       "keywords": [
         "Google AI Studio",
+        "Gemini API",
+        "Build Mode",
         "Android App Generation",
-        "Jetpack Compose AI",
+        "Kotlin Jetpack Compose",
         "Firebase App Check",
-        "Cloud Run Deployment",
-        "Gemini API Prototyping"
+        "Cloud Run",
+        "Antigravity Coding Agent"
       ]
     },
     {
@@ -289,61 +291,221 @@
   <!-- END:HEADER -->
 <main class="container">
 <header class="hero">
-<p class="hero-badge">// DEVELOPER PLAYGROUND &amp; APP BUILDER</p>
+<p class="hero-badge">// RAPID PROTOTYPING &amp; APPLICATION COMPILATION</p>
 <h1>Google AI Studio: Rapid Prototyping & System Instructions</h1>
 <p class="hero-desc">
-        Explore how Google AI Studio accelerates multimodal AI development, streamlines native Android app generation in Build Mode, automates Firebase backend security, and supports business cloud deployment.
-      </p>
+  What it can do, which languages it supports, and three tutorials. By Thomas Cherickal, Generative AI Consultant | 2 November 2026 | Sources checked on the date of publication.
+</p>
 </header>
-<!-- WHAT IS GOOGLE AI STUDIO -->
-<article class="content-card">
-<h2>What is Google AI Studio?</h2>
+
+<!-- TABLE OF CONTENTS -->
+<article class="content-card" id="table-of-contents">
+<h2>Contents</h2>
+<div class="toc-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:0.75rem;margin-top:1rem;">
+<a class="toc-link gold-link" href="#introduction">1. Introduction</a>
+<a class="toc-link gold-link" href="#what-it-is">2. What Google AI Studio is</a>
+<a class="toc-link gold-link" href="#playground">3. The Playground and the models</a>
+<a class="toc-link gold-link" href="#build-mode">4. Build mode and AI-assisted development</a>
+<a class="toc-link gold-link" href="#backend">5. Backend: Node.js, Firebase, secrets and Workspace</a>
+<a class="toc-link gold-link" href="#android">6. Native Android and mobile apps</a>
+<a class="toc-link gold-link" href="#deployment">7. Deployment</a>
+<a class="toc-link gold-link" href="#languages">8. Languages, frameworks and SDKs</a>
+<a class="toc-link gold-link" href="#tutorial-1">9. Tutorial 1: From Playground prompt to Python script</a>
+<a class="toc-link gold-link" href="#tutorial-2">10. Tutorial 2: A full-stack expense tracker</a>
+<a class="toc-link gold-link" href="#tutorial-3">11. Tutorial 3: A native Android task app</a>
+<a class="toc-link gold-link" href="#limits">12. Limits and trade-offs</a>
+<a class="toc-link gold-link" href="#conclusion">13. Conclusion</a>
+<a class="toc-link gold-link" href="#pricing-parity">14. Practice Pricing &amp; Global Purchasing Power Parity</a>
+<a class="toc-link gold-link" href="#references">15. References</a>
+</div>
+</article>
+
+<!-- INTRODUCTION -->
+<article class="content-card" id="introduction">
+<h2>Introduction</h2>
 <p>
-        Google AI Studio is Google's web-based developer playground and rapid engineering environment for the Gemini model family. It provides developers and technical architects with an immediate, friction-free interface to experiment with multimodal prompts, tune system instructions, test safety filters, and obtain instant API keys for production workloads.
-      </p>
+  Google AI Studio began as a browser playground for trying Gemini prompts. By November 2026 it also builds and publishes web apps, generates native Android projects, and provisions Firebase backends from a chat box. This article covers what the platform does today, which languages and frameworks it supports, and three tutorials you can finish in an afternoon.
+</p>
 <p>
-        Moving far beyond basic text chat boxes, Google AI Studio functions as an interactive workspace supporting video uploads, audio analysis, PDF document dissection, function calling configurations, and structured JSON schema enforcement. Crucially, once a prompt or prototype is validated, developers can export production-ready code in Python, TypeScript, Go, Kotlin, Swift, or raw cURL with a single click.
-      </p>
+  Everything here comes from Google's documentation and announcements, which I read on 2 November 2026. Product details in this area change every few weeks, so treat prices and limits as a snapshot. The numbered links in the text point to the references at the end.
+</p>
+
 <div class="diagram-container">
 <div class="mermaid-fallback">
 <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
 </div>
 <div class="mermaid">
 flowchart TD
-    Prompt[Developer Prompt &amp; System Instruction] --&gt; Studio[Google AI Studio Engine]
-    Studio --&gt; Tuner[Temperature / Top-P / JSON Schema Validation]
-    Studio --&gt; MultiModal[Vision / Audio / Document / Code Ingestion]
-    Tuner --&gt; Export[Target SDK Export: Python / TS / Go / Android / Swift]
-    MultiModal --&gt; BuildMode[Build Mode: Full-Stack App Compilation]
-        </div>
-<div class="diagram-caption">Figure 1: Google AI Studio Prototyping &amp; SDK Code Generation Pipeline</div>
+    User["Developer / Technical Architect"] --&gt; AIS["Google AI Studio Browser Workspace"]
+    AIS --&gt; PG["Playground Surface<br/>(Prompt Exploration &amp; Model Parameter Tuning)"]
+    AIS --&gt; BM["Build Mode Surface<br/>(Full-Stack Web &amp; Android App Generation)"]
+    AIS --&gt; LM["Live Mode Surface<br/>(Real-Time Low-Latency Voice &amp; Video Sessions)"]
+    
+    BM --&gt; TargetWeb["Full-Stack Web Runtime<br/>(React / Angular / Next.js + Node.js)"]
+    BM --&gt; TargetAndroid["Native Android Target (2026)<br/>(Kotlin + Jetpack Compose)"]
+</div>
+<div class="diagram-caption">Figure 1. The three working surfaces of AI Studio, plus the Android target added in 2026.</div>
 </div>
 </article>
-<!-- HOW IT SIMPLIFIES MOBILE APPS -->
-<article class="content-card">
-<h2>Simplifying Mobile App Creation: Build Mode for Android</h2>
+
+<!-- WHAT GOOGLE AI STUDIO IS -->
+<article class="content-card" id="what-it-is">
+<h2>What Google AI Studio is</h2>
 <p>
-        One of the most revolutionary additions to Google AI Studio is its <strong>Build Mode</strong>, designed specifically for rapid mobile application development. Instead of writing boilerplate UI controllers and state wrappers by hand, developers can prompt AI Studio to generate native Android applications written entirely in <strong>Kotlin using Jetpack Compose</strong>.
-      </p>
-<h3>Key Mobile Development Highlights:</h3>
-<ul>
-<li><strong>Browser-Based Android Emulator:</strong> Test and interact with the newly generated native Android app in real-time inside an embedded browser emulator, completely bypassing the need to download multi-gigabyte SDKs or configure local emulator virtual machines.</li>
-<li><strong>Physical Device Testing:</strong> Connect a physical smartphone over USB or local network pairing to run and test the compiled Android package directly on real hardware.</li>
-<li><strong>Direct Android Studio Export:</strong> When an application requires deeper native integrations, custom C++ libraries, or preparation for Google Play Store publishing, AI Studio exports the entire project directory directly into Android Studio with complete Gradle configurations.</li>
-</ul>
+  AI Studio is Google's browser workspace for the Gemini API. You sign in with a Google account and reach three working surfaces: the Playground for prompts, Build mode for apps, and a Live mode for voice and video sessions. The official quickstart describes it as the place to try models and tune prompts, and its Get code button exports the result in the language you choose.<sup><a class="gold-link" href="#ref-1">[1]</a></sup>
+</p>
+<p>
+  The Gemini API pricing page lists a free tier that includes AI Studio access and limited access to some models. Free-tier content may be used to improve Google's products, while the paid tier excludes that use.<sup><a class="gold-link" href="#ref-7">[7]</a></sup> The difference matters if you paste client data into prompts.
+</p>
 </article>
-<!-- BACKEND ARCHITECTURE & FIREBASE DEPLOYMENT SUPPORT -->
-<article class="content-card">
-<h2>Backend Integration &amp; Deployment Support</h2>
+
+<!-- THE PLAYGROUND AND THE MODELS -->
+<article class="content-card" id="playground">
+<h2>The Playground and the models</h2>
 <p>
-        Native mobile applications built in Google AI Studio operate on a secure client-side model designed to prevent API key exposure and eliminate the overhead of hosting dedicated custom web servers:
-      </p>
-<ul>
-<li><strong>Firebase App Check &amp; AI Logic:</strong> Rather than bundling raw, sensitive Gemini API keys into compiled APK binaries where malicious actors could decompile and steal them, AI Studio configures Firebase App Check. App Check cryptographically attests that every incoming request originates from an authentic, unmodified instance of your app.</li>
-<li><strong>Cloud Firestore Database Persistence:</strong> Seamlessly binds user data, conversation histories, and preferences to a scalable NoSQL cloud database without requiring SQL migration scripts or server configuration.</li>
-<li><strong>Firebase Authentication:</strong> Automatically provisions secure identity management, Google Sign-In, and multi-factor authentication loops out of the box.</li>
-<li><strong>Cloud Run Serverless Hosting for Web Apps:</strong> For web applications built in Studio, developers can deploy full-stack containerized runtimes directly to Google Cloud Run, gaining auto-scaling, custom domain routing, and business-grade security.</li>
-</ul>
+  The Playground is where most projects start. A Run settings panel holds system instructions, model parameters and safety settings, plus switches for structured output, function calling, code execution and grounding. System instructions stay editable after a chat begins, so tone and persona are easy to adjust.<sup><a class="gold-link" href="#ref-1">[1]</a></sup>
+</p>
+
+<div class="diagram-container">
+<div class="mermaid-fallback">
+<em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+</div>
+<div class="mermaid">
+graph LR
+    subgraph Playground Controls
+        SI["System Instructions<br/>(Editable Persona, Tone &amp; Role Guardrails)"]
+        TL["Thinking Level<br/>(Low, Medium, High Test-Time Compute)"]
+        Tools["Integrated Tools<br/>(Structured Output, Code Execution, Grounding)"]
+        Export["Get Code Button<br/>(Instant Python, JS/TS, Go, Java, C# Export)"]
+    end
+    SI --&gt; Engine["Gemini Model Engine"]
+    TL --&gt; Engine
+    Tools --&gt; Engine
+    Engine --&gt; Export
+</div>
+<div class="diagram-caption">Figure 2. The Playground settings that matter most: system instructions, thinking level, tools and Get code.</div>
+</div>
+
+<p>
+  Model choice drives both quality and cost. Gemini 4 Argon (<code>gemini-4-argon</code>) is the current flagship, with a 1M-token context window, long decode up to 1M tokens, and low, medium and high thinking levels.<sup><a class="gold-link" href="#ref-8">[8]</a></sup> It is not on the free tier. Its introductory price of $2 per million input tokens and $10 per million output tokens runs through 30 November 2026, then doubles.<sup><a class="gold-link" href="#ref-7">[7]</a></sup>
+</p>
+<p>
+  Gemini 3.8 Flash and Gemini 3.5 Flash-Lite cost less and both have free tiers.<sup><a class="gold-link" href="#ref-7">[7]</a></sup> The chart and table below compare standard-tier output prices as listed on 2 November 2026. Flash pricing also rises on 1 January 2027.
+</p>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>Model Tier</th>
+<th>Input Price (per 1M tokens)</th>
+<th>Current Output Price (per 1M tokens)</th>
+<th>Upcoming Adjusted Rate</th>
+<th>Free Tier Availability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gemini 3.5 Flash-Lite</strong></td>
+<td>$0.075</td>
+<td>$0.30</td>
+<td>$2.50 standard tier ceiling</td>
+<td>Yes (Rate-limited free quota)</td>
+</tr>
+<tr>
+<td><strong>Gemini 3.8 Flash</strong></td>
+<td>$0.15</td>
+<td>$0.60 ($3.75 peak window)</td>
+<td>$7.50 from 1 Jan 2027</td>
+<td>Yes (Standard experimentation tier)</td>
+</tr>
+<tr>
+<td><strong>Gemini 4 Argon</strong></td>
+<td>$2.00 (through Nov 30)</td>
+<td>$10.00 (through Nov 30)</td>
+<td>$4.00 / $20.00 from 1 Dec 2026</td>
+<td>No (Paid API tier only)</td>
+</tr>
+</tbody>
+</table>
+
+<div class="diagram-container">
+<div class="mermaid-fallback">
+<em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+</div>
+<div class="mermaid">
+xychart-beta
+    title "Gemini Standard Tier Output Price per 1M Tokens (USD)"
+    x-axis ["Gemini 3.5 Flash-Lite", "Gemini 3.8 Flash (Now)", "Gemini 3.8 Flash (Jan 2027)", "Gemini 4 Argon (Intro)", "Gemini 4 Argon (Dec 2026)"]
+    y-axis "USD per 1M Tokens" 0 --> 22
+    bar [2.50, 3.75, 7.50, 10.00, 20.00]
+</div>
+<div class="diagram-caption">Figure 3. Output prices, including thinking tokens, from the Gemini API pricing page. Dashed bars show the announced price after the introductory period.</div>
+</div>
+
+<p>
+  Beyond text, AI Studio exposes media models. The pricing page lists Nano Banana 2.1 for image generation and conversational editing, Gemini Omni Flash for video generation and editing, and Live and Transcribe models for speech.<sup><a class="gold-link" href="#ref-7">[7]</a></sup> Image generation, video and music tools sit in the same Playground as text chat.
+</p>
+</article>
+
+<!-- BUILD MODE AND AI-ASSISTED DEVELOPMENT -->
+<article class="content-card" id="build-mode">
+<h2>Build mode and AI-assisted development</h2>
+<p>
+  Build mode turns a description into a running app. Google's announcement of 18 March 2026 introduced the Antigravity coding agent inside AI Studio, together with Firebase integration.<sup><a class="gold-link" href="#ref-9">[9]</a></sup> The agent keeps context of earlier prompts and file states, edits several files at once, and verifies code updates to cut down on invented changes.<sup><a class="gold-link" href="#ref-2">[2]</a></sup>
+</p>
+<p>
+  You can start in four ways. Write a prompt, press the I'm Feeling Lucky button, remix an App Gallery project with Copy App, or import an existing repository from GitHub. AI Chips add features such as image generation or Maps data to a prompt, and a speech-to-text button lets you dictate the request.<sup><a class="gold-link" href="#ref-2">[2]</a></sup>
+</p>
+
+<div class="diagram-container">
+<div class="mermaid-fallback">
+<em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+</div>
+<div class="mermaid">
+flowchart TD
+    Start["Inception: Prompt / I'm Feeling Lucky / App Gallery Copy / GitHub Import"] --&gt; Agent["Antigravity Coding Agent (Multi-File Context Engine)"]
+    Agent --&gt; CodeGen["Automated Code Compilation &amp; Dependency Resolution"]
+    CodeGen --&gt; Preview["Live Streaming Preview (Interactive Browser App / Cloud Emulator)"]
+    
+    Preview -. Iteration Loop .-&gt; ChatPanel["Chat Requests ('Add pie chart')"]
+    Preview -. Iteration Loop .-&gt; Annotation["Annotation Mode (Visual UI Region Highlighting)"]
+    Preview -. Iteration Loop .-&gt; CodeTab["Code Tab (Direct Source Edits)"]
+    Preview -. Iteration Loop .-&gt; GitSync["GitHub Tab (Two-Way Sync &amp; Merge Conflict Solver)"]
+    
+    ChatPanel -. Update Input .-&gt; Agent
+    Annotation -. Update Input .-&gt; Agent
+    CodeTab -. Update Input .-&gt; Agent
+    GitSync -. Update Input .-&gt; Agent
+    
+    Preview -- Finalized --&gt; Deploy["Production Deployment / Export"]
+</div>
+<div class="diagram-caption">Figure 4. The Build mode loop. Most of your time goes into the dashed iteration path.</div>
+</div>
+
+<p>
+  Iteration happens in three places. The chat panel handles requests such as "add a pie chart for categories". Annotation mode lets you highlight part of the UI and describe the change you want. The Code tab accepts direct edits, and a GitHub tab provides two-way sync with model-written commit messages and a side-by-side dialog for merge conflicts.<sup><a class="gold-link" href="#ref-2">[2]</a></sup>
+</p>
+<p>
+  Treat the agent as a fast junior developer. It writes a lot of working code, but you still read the output, test edge cases and review generated security rules. Google's own Cloud blog tells builders to double-check Firestore rules before sharing or deploying.<sup><a class="gold-link" href="#ref-10">[10]</a></sup>
+</p>
+</article>
+
+<!-- BACKEND: NODE.JS, FIREBASE, SECRETS AND WORKSPACE -->
+<article class="content-card" id="backend">
+<h2>Backend: Node.js, Firebase, secrets and Workspace</h2>
+<p>
+  Web apps are full-stack by default. According to the Build mode documentation, AI Studio creates a React frontend and a Node.js server runtime for secure API calls, database connections and npm packages.<sup><a class="gold-link" href="#ref-2">[2]</a></sup> The March announcement added Angular and Next.js as options in the Settings panel.<sup><a class="gold-link" href="#ref-9">[9]</a></sup>
+</p>
+<p>
+  You never run <code>npm install</code> yourself. Ask for a library such as a charting package or a payment SDK, and the agent installs it and wires it into the server code. The same chat also edits the server files, so a new API route is a sentence away.
+</p>
+<p>
+  Secrets are handled for you. A new Gemini-based web app gets <code>GEMINI_API_KEY</code> as a server-side secret, visible in the Secrets panel and never sent to the browser. Keys for Stripe, SendGrid or an external database go into the same panel, and the agent shows a card when a new key is needed.<sup><a class="gold-link" href="#ref-3">[3]</a></sup>
+</p>
+<p>
+  Data and sign-in come from Firebase. The agent detects when your prompt implies storage or login and offers a card. Approving it provisions Firestore, enables Firebase Authentication with Sign in with Google, and writes the client code.<sup><a class="gold-link" href="#ref-3">[3]</a></sup> Google's May 2026 Cloud blog also describes Cloud SQL for PostgreSQL as a relational option, with a developer edition that scales to zero, so check whether it is live in your account.<sup><a class="gold-link" href="#ref-10">[10]</a></sup>
+</p>
+
 <div class="diagram-container">
 <div class="mermaid-fallback">
 <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
@@ -351,39 +513,397 @@ flowchart TD
 <div class="mermaid">
 sequenceDiagram
     autonumber
-    actor User as Mobile Device (Kotlin App)
-    participant AC as Firebase App Check
-    participant FS as Cloud Firestore
-    participant GA as Gemini API / Vertex AI
+    actor Browser as Browser Client (React / Angular / Next.js)
+    participant Server as Node.js Backend Server
+    participant Secrets as Server Secrets Panel (GEMINI_API_KEY)
+    participant Firebase as Firebase (Firestore &amp; Authentication)
+    participant Gemini as Gemini API Gateway
     
-    User-&gt;&gt;AC: Send Device Attestation Token
-    AC--&gt;&gt;User: Issue Cryptographic Verification
-    User-&gt;&gt;GA: Forward Prompt + Verified Token
-    GA-&gt;&gt;FS: Persist Conversation State
-    GA--&gt;&gt;User: Stream Grounded Inference Response
-        </div>
-<div class="diagram-caption">Figure 2: Secure Mobile App Architecture via Firebase App Check &amp; Cloud Firestore</div>
+    Browser-&gt;&gt;Server: User Triggered Application Action
+    Server-&gt;&gt;Secrets: Read Injected Server-Side API Secrets
+    Server-&gt;&gt;Gemini: Invoke API with System Instructions &amp; Prompts
+    Gemini--&gt;&gt;Server: Stream Multimodal / Structured Response
+    Server-&gt;&gt;Firebase: Read/Write Authenticated Firestore Documents
+    Server--&gt;&gt;Browser: Send Sanitized Application State (Keys Protected)
+</div>
+<div class="diagram-caption">Figure 5. A typical full-stack app: the browser talks to a Node.js server, and the server holds the keys.</div>
+</div>
+
+<p>
+  Workspace integration reaches twelve apps: Calendar, Chat, Docs, Drive, Forms, Gmail, Keep, Meet, Contacts, Sheets, Slides and Tasks. AI Studio configures OAuth, generates the server code and adds a sign-in flow, so each end user authorizes access to their own data.<sup><a class="gold-link" href="#ref-3">[3]</a></sup> Multiplayer apps use the same server runtime to hold shared state, which makes a live chat or a shared whiteboard a prompt rather than a project.
+</p>
+<p>
+  Browser device APIs need explicit permission. Creators list values such as microphone, camera and geolocation under <code>requestFramePermissions</code> in the app's <code>metadata.json</code>, and viewers see an acknowledgement before access is granted.<sup><a class="gold-link" href="#ref-2">[2]</a></sup>
+</p>
+</article>
+
+<!-- NATIVE ANDROID AND MOBILE APPS -->
+<article class="content-card" id="android">
+<h2>Native Android and mobile apps</h2>
+<p>
+  Since Google I/O 2026 the platform picker offers Android beside web. The agent generates a Gradle project with Kotlin, Jetpack Compose, Material 3 theming and a single-activity architecture with ViewModels. The app runs in an emulator that streams to your browser, so you install no SDK and no Android Studio.<sup><a class="gold-link" href="#ref-4">[4]</a></sup>
+</p>
+<p>
+  Testing on real hardware uses WebUSB. Click Install on Device, pick the phone in the browser's USB dialog, and the APK installs and launches. This needs Chrome or Edge and USB debugging enabled on the phone.<sup><a class="gold-link" href="#ref-4">[4]</a></sup>
+</p>
+
+<div class="diagram-container">
+<div class="mermaid-fallback">
+<em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+</div>
+<div class="mermaid">
+flowchart LR
+    P["Natural Language Prompt"] --&gt; Gradle["Gradle Project (Kotlin + Compose + Material 3)"]
+    Gradle --&gt; Emu["Streaming Browser Emulator (Instant Validation)"]
+    Emu --&gt; WebUSB["WebUSB Direct Hardware Install (Chrome/Edge)"]
+    WebUSB --&gt; PlayTrack["Publish to Play Store (Internal Testing Track)"]
+</div>
+<div class="diagram-caption">Figure 6. The Android path, from prompt to the Play internal testing track.</div>
+</div>
+
+<p>
+  Firebase covers the backend. Android apps call Gemini through Firebase AI Logic with App Check, so no raw API key ships inside the APK. They can also use Cloud Firestore and Firebase Authentication.<sup><a class="gold-link" href="#ref-4">[4]</a></sup> Secrets management, multiplayer and Workspace APIs remain web-only because Android apps in AI Studio are client-side only.
+</p>
+<p>
+  The limits are specific. Java and XML layouts are not supported, nor are C and C++ code, Wear OS or Android TV. Export is a ZIP file, because GitHub export is not yet available for Android projects. The emulator has no camera, NFC, Bluetooth or real GPS, and it lacks Google Play services.<sup><a class="gold-link" href="#ref-4">[4]</a></sup>
+</p>
+<p>
+  Google also announced a separate AI Studio mobile app at I/O 2026 and opened pre-registration. It is meant for iterating on code and previewing builds from a phone, remixing apps from a mobile gallery, and sharing live deployments for feedback.<sup><a class="gold-link" href="#ref-11">[11]</a></sup> I could not confirm general availability on 2 November, so check your app store before relying on it.
+</p>
+</article>
+
+<!-- DEPLOYMENT -->
+<article class="content-card" id="deployment">
+<h2>Deployment</h2>
+<p>
+  There are three ways out of AI Studio. Publish deploys a web app to Cloud Run. GitHub sync and ZIP download let you host the code anywhere. Export to Antigravity moves conversation history, project files and secrets into local development.<sup><a class="gold-link" href="#ref-2">[2]</a></sup><sup><a class="gold-link" href="#ref-11">[11]</a></sup>
+</p>
+<p>
+  The Google Cloud Starter Tier lets eligible accounts publish up to two full-stack apps without a Cloud project or billing account. Services run in a single Cloud Run region. Workspace accounts, accounts with a paid Cloud billing history, and accounts without enough activity evidence are ineligible, and the support team cannot override that decision.<sup><a class="gold-link" href="#ref-5">[5]</a></sup> Beyond that you link a billing-enabled Cloud project, and Starter Tier resources can convert into a standard project.
+</p>
+<p>
+  Published apps can take a custom subdomain under <code>ai.studio</code>. Names are first come, first served, and an unpublished app releases its name. When you share or deploy a Gemini app, its API calls count toward your usage limits, and a deployed app uses your API key for every user's calls.<sup><a class="gold-link" href="#ref-2">[2]</a></sup> Set a spending alert before you share widely.
+</p>
+
+<div class="diagram-container">
+<div class="mermaid-fallback">
+<em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+</div>
+<div class="mermaid">
+flowchart TD
+    Ready["App ready in Build mode"] --&gt; CheckEligible{"Starter Tier eligible?"}
+    CheckEligible -- Yes --&gt; StarterPub["Publish up to 2 apps on Cloud Run (Free)"]
+    CheckEligible -- No --&gt; LinkCloud["Link Billing-Enabled Cloud Project"]
+    LinkCloud --&gt; CloudRunPub["Publish to Cloud Run (Public ai.studio URL)"]
+    Ready --&gt; GitSync["GitHub Sync (Host anywhere on independent infrastructure)"]
+    Ready --&gt; ZipExport["ZIP Download (Set GEMINI_API_KEY yourself)"]
+    Ready --&gt; AntigravityExp["Antigravity Export (Seamless local development)"]
+</div>
+<div class="diagram-caption">Figure 7. Cloud Run publishing is one route among four. Source code can leave AI Studio in three other ways.</div>
 </div>
 </article>
-<!-- VERIFIED REFERENCES -->
-<article class="content-card">
-<h2>Verified References &amp; Authoritative Documentation</h2>
-<ul>
-<li><a class="ref-link" href="https://ai.google.dev/" rel="noopener" target="_blank">Google AI Studio &amp; Gemini API Developer Portal</a></li>
-<li><a class="ref-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener" target="_blank">Gemini API Documentation &amp; Structured Outputs</a></li>
-<li><a class="ref-link" href="https://firebase.google.com/docs/app-check" rel="noopener" target="_blank">Firebase App Check: Protecting App APIs &amp; Keys</a></li>
-<li><a class="ref-link" href="https://developer.android.com/jetpack/compose" rel="noopener" target="_blank">Android Developers: Jetpack Compose Modern UI Toolkit</a></li>
-</ul>
+
+<!-- LANGUAGES, FRAMEWORKS AND SDKS -->
+<article class="content-card" id="languages">
+<h2>Languages, frameworks and SDKs</h2>
+<p>
+  Two layers matter here. The first is what AI Studio generates for you, and the second is what you can use to call the Gemini API from your own code. The table separates them.
+</p>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>Target Layer</th>
+<th>Languages and Frameworks</th>
+<th>Architectural Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Web client</strong></td>
+<td>React (default), Angular, Next.js</td>
+<td>Configured directly in the Settings panel.<sup><a class="gold-link" href="#ref-9">[9]</a></sup></td>
+</tr>
+<tr>
+<td><strong>Web server</strong></td>
+<td>Node.js with npm packages</td>
+<td>Handles server secrets, multiplayer state, and Workspace APIs.<sup><a class="gold-link" href="#ref-3">[3]</a></sup></td>
+</tr>
+<tr>
+<td><strong>Android app</strong></td>
+<td>Kotlin with Jetpack Compose</td>
+<td>Single-activity ViewModel architecture; no Java, XML layouts, or NDK.<sup><a class="gold-link" href="#ref-4">[4]</a></sup></td>
+</tr>
+<tr>
+<td><strong>Gemini API SDKs</strong></td>
+<td>Python, JavaScript and TypeScript, Go, Java, C#</td>
+<td>Official client packages: <code>google-genai</code>, <code>@google/genai</code>, <code>google.golang.org/genai</code>, <code>Google.GenAI</code>.<sup><a class="gold-link" href="#ref-6">[6]</a></sup></td>
+</tr>
+<tr>
+<td><strong>Other call paths</strong></td>
+<td>Google Apps Script, REST</td>
+<td>Both appear in the official developer quickstart documentation.<sup><a class="gold-link" href="#ref-12">[12]</a></sup></td>
+</tr>
+</tbody>
+</table>
+
+<p>
+  The older Google libraries were deprecated on 30 November 2025, so new code should use the Google GenAI SDK. For Dart, Flutter, Swift and Android, the libraries page points to Firebase AI Logic, and to Genkit Dart for Dart.<sup><a class="gold-link" href="#ref-6">[6]</a></sup> There is no separate Rust or Ruby SDK in the official list, although the REST interface works from any language.
+</p>
 </article>
+
+<!-- TUTORIAL 1: FROM PLAYGROUND PROMPT TO PYTHON SCRIPT -->
+<article class="content-card" id="tutorial-1">
+<h2>Tutorial 1: From Playground prompt to Python script</h2>
+<p>
+  This first tutorial takes about ten minutes. You will write a system instruction, test it, and export working code. The steps follow the Europa chatbot example in the official quickstart.<sup><a class="gold-link" href="#ref-1">[1]</a></sup>
+</p>
+<ol style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;">
+<li>Open <a class="gold-link" href="https://aistudio.google.com/" rel="noopener" target="_blank">aistudio.google.com</a> and sign in. The Playground opens with a new chat prompt.</li>
+<li>Click Run settings in the top-right corner and select a model. Gemini 3.8 Flash has a free tier, so it suits experiments.</li>
+<li>Paste this into System Instructions: <em>You are Tim, an alien that lives on Europa, one of Jupiter's moons. Keep your answers under 3 paragraphs and use an upbeat tone.</em></li>
+<li>Type "What's the weather like?" in the input box and press Run. Edit the instruction and run again until the tone fits.</li>
+<li>Click Get API key in the sidebar and create a key. Store it in an environment variable called <code>GEMINI_API_KEY</code>.</li>
+<li>Click Get code, choose Python, and copy the generated snippet. Install the SDK with <code>pip install google-genai</code> and run the file.</li>
+</ol>
+<p>
+  The generated snippet is the reliable reference, because Google updates model names and call styles often. The example below shows the shape of a minimal call with the current SDK:
+</p>
+
+<pre><code class="language-python">from google import genai
+
+client = genai.Client()  # reads GEMINI_API_KEY from the environment
+response = client.models.generate_content(
+    model="gemini-3.8-flash",
+    config={
+        "system_instruction": (
+            "You are Tim, an alien that lives on Europa. "
+            "Keep answers under 3 paragraphs and stay upbeat."
+        )
+    },
+    contents="What's the weather like?",
+)
+print(response.text)
+</code></pre>
+
+<p>
+  Google's latest-model page now demonstrates the Interactions API for new work, so compare your snippet with what Get code produces.<sup><a class="gold-link" href="#ref-8">[8]</a></sup> The Playground session remains useful either way, because it records the exact instruction and settings that produced a good answer.
+</p>
+</article>
+
+<!-- TUTORIAL 2: A FULL-STACK EXPENSE TRACKER -->
+<article class="content-card" id="tutorial-2">
+<h2>Tutorial 2: A full-stack expense tracker</h2>
+<p>
+  The second tutorial builds a web app with a database, Google sign-in and a public URL. It exercises the Antigravity agent, the Firebase integration and Cloud Run publishing. Expect to spend most of the time on iteration, not on setup.
+</p>
+<ol style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;">
+<li>Open the Build tab and keep the platform picker on web. React is the default framework, and Settings lets you switch to Angular or Next.js.</li>
+<li>Enter this prompt: <em>Build an expense tracker with categories, monthly totals, a pie chart and CSV export. Add a database and Google sign-in.</em></li>
+<li>Wait for the files to generate and the live preview to open. Click through the app and note anything that looks wrong.</li>
+<li>When the agent shows the Firebase card, click Enable and accept the terms. The agent provisions Firestore, turns on Sign in with Google and writes the client code.</li>
+<li>Open the generated Firestore security rules in the Firebase console and read them. Confirm that each user can read and write only their own documents.</li>
+<li>Switch on Annotation mode, highlight the chart, and ask for a palette that works for color-blind viewers. Repeat for any layout problem you find.</li>
+<li>Open the app in two browser tabs, or use the Share menu, to confirm that two accounts see separate data.</li>
+<li>Click Publish, then Get Started, then Publish App. Enter a custom ai.studio subdomain if you want one.</li>
+<li>Open the GitHub tab in Settings and link a repository so the code lives outside AI Studio.</li>
+</ol>
+<p>
+  If Publish asks you to upgrade, your account may fall outside the Starter Tier. Workspace accounts are one common cause, and the fix is a billing-enabled Cloud project.<sup><a class="gold-link" href="#ref-5">[5]</a></sup>
+</p>
+<p>
+  You now have a deployed app whose Gemini key and Firebase configuration sit on the server side. Try follow-up prompts that add features, such as a monthly budget alert or a Sheets export through the Workspace integration. Each one reuses the same agent loop from Figure 4.
+</p>
+</article>
+
+<!-- TUTORIAL 3: A NATIVE ANDROID TASK APP -->
+<article class="content-card" id="tutorial-3">
+<h2>Tutorial 3: A native Android task app</h2>
+<p>
+  The third tutorial produces a Kotlin app that runs in a cloud emulator, installs on your phone and reaches testers through Google Play. It needs no local Android tooling. The Play step requires a Google Play Developer account, which has a one-time $25 registration fee.<sup><a class="gold-link" href="#ref-4">[4]</a></sup>
+</p>
+<ol style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;">
+<li>Open Build mode and select Android in the platform picker.</li>
+<li>Enter <em>Create a daily task tracker with local storage</em>, which is one of the examples in the documentation.</li>
+<li>Wait for the project to generate and the browser emulator to launch. Tap through the app as you would on a phone.</li>
+<li>Iterate in chat with requests such as "add swipe to complete" and "support dark theme". The agent propagates each change across the Gradle project.</li>
+<li>Open the Code tab to read the Kotlin and Compose files. Download the ZIP if you want to continue in Android Studio.</li>
+<li>Connect your phone with a USB cable, with USB debugging switched on. Click Install on Device in Chrome or Edge, choose the phone, and accept the debugging prompt.</li>
+<li>Open Settings, then Publish, and click Publish to Play Store. Sign in with your Play Developer account.</li>
+<li>Share the internal testing link with up to 100 testers. Release to production through the Play Console, because AI Studio publishes only to the internal track.</li>
+</ol>
+<p>
+  Test the features the emulator cannot, such as camera, Bluetooth and Google Play services, on the physical phone. Check the Firebase App Check behavior as well if your app calls Gemini. Debug builds use a token that AI Studio manages, and release builds switch to reCAPTCHA Enterprise.<sup><a class="gold-link" href="#ref-4">[4]</a></sup>
+</p>
+</article>
+
+<!-- LIMITS AND TRADE-OFFS -->
+<article class="content-card" id="limits">
+<h2>Limits and trade-offs</h2>
+<p>
+  The convenience has costs. The generated stack ties you to Firebase and Cloud Run unless you export the code and rework the backend. Starter Tier caps you at two apps, in one region, and some accounts cannot use it at all.<sup><a class="gold-link" href="#ref-5">[5]</a></sup>
+</p>
+<p>
+  Review matters more than the demos suggest. Security rules, API key exposure through sharing, and per-user cost under a shared key are all your responsibility as the app owner, a point Google states in its FAQ.<sup><a class="gold-link" href="#ref-2">[2]</a></sup> The free tier also allows Google to use your content to improve its products.<sup><a class="gold-link" href="#ref-7">[7]</a></sup>
+</p>
+<p>
+  Prices and model names move quickly. Gemini 4 Argon's rates double on 1 December 2026, and the Flash models rise on 1 January 2027.<sup><a class="gold-link" href="#ref-7">[7]</a></sup> Recheck the pricing page before you commit a budget.
+</p>
+</article>
+
+<!-- CONCLUSION -->
+<article class="content-card" id="conclusion">
+<h2>Conclusion</h2>
+<p>
+  Google AI Studio now covers a full path from an idea in the Playground to a deployed web app or an Android build on a tester's phone. The Antigravity agent, the Firebase integration and Cloud Run publishing remove most of the setup work, and GitHub sync and ZIP export keep the code portable. The supported surface is specific: React, Angular, Next.js and Node.js for the web, Kotlin and Compose for Android, and five official SDKs for calling the API.
+</p>
+<p>
+  A practical order of work is to prove the prompt in the Playground, move to Build mode when you need an interface, and export to GitHub once the app matters. Read the security rules, watch the shared-key costs, and recheck prices each month. Try the three tutorials above, and you will know within a day whether the platform fits your projects.
+</p>
+</article>
+
+<!-- CONSULTING, TRAINING & GLOBAL PARITY PRICING -->
+<article class="content-card" id="pricing-parity">
+<h2>Practice Pricing &amp; Global Purchasing Power Parity</h2>
+<p>
+  I provide live, remote engineering training and advisory consulting covering Google Gemini, Claude, and sovereign local LLMs. Engagements turn engineering teams and individual developers into AI-first builders who construct production agent swarms, implement budget safeguards, and run private models.
+</p>
+<p>
+  All services are governed by our transparent 195-country Purchasing Power Parity (PPP) framework, scaling rates fairly across six economic tiers:
+</p>
+
+<div class="pricing-summary-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;margin:1.5rem 0;">
+<div class="package-card" style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:12px;padding:1.5rem;">
+<h3 style="color:var(--gold);margin-top:0;">Business AI Training Flagship</h3>
+<p style="color:var(--text-muted);font-size:0.9rem;">Comprehensive organizational workforce and engineering transformation.</p>
+<div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">$2,000 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 70 Days</span></div>
+<ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+<li>30 days live engineering training + 30 days guidance &amp; materials (70 calendar days total).</li>
+<li>Up to 25 participants included (+$200 USD per additional seat).</li>
+<li>4 hours daily live instruction (business days over 8 weeks with 8 - 10 recovery days).</li>
+<li>Zero advance deposit ($0 upfront); 5 equal milestone installments (due after Days 5, 10, 15, 20, 25).</li>
+<li>Walk away owing nothing if not satisfied after the first 5 days of completed training.</li>
+<li>All custom agents, tools, and guides transferred under Apache 2.0.</li>
+</ul>
+</div>
+
+<div class="package-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
+<h3 style="color:var(--cyan);margin-top:0;">Personal AI Training Flagship</h3>
+<p style="color:var(--text-muted);font-size:0.9rem;">Dedicated 1-on-1 private acceleration for solo founders and senior engineers.</p>
+<div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">$1,000 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
+<ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+<li>30 days live 1-on-1 sprint + 30 days guidance &amp; Apache 2.0 materials (60 calendar days total).</li>
+<li>Strictly 1 person only (dedicated private acceleration).</li>
+<li>4 hours daily hands-on implementation (business days over 6 weeks with 8 - 10 recovery days).</li>
+<li>Zero advance deposit ($0 upfront); 5 equal milestone installments (due after Days 5, 10, 15, 20, 25).</li>
+<li>Walk away owing nothing if not satisfied after the first 5 days of completed training.</li>
+<li>Parity relief down to $100 USD in Tier 6 subsidized regions.</li>
+</ul>
+</div>
+</div>
+
+<h3>Individual Service Picks (Pick &amp; Choose)</h3>
+<p>
+  Clients can also pick and choose individual standalone modules from our 16-service catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
+</p>
+<ul style="line-height:1.8;">
+<li><strong>Business Individual Pick:</strong> <strong>$200 USD per service</strong> (up to 25 participants included, +$200/extra seat), covering 5 days live engineering + 5 days dedicated support (10 days total coverage).</li>
+<li><strong>Personal Individual Pick:</strong> <strong>$100 USD per service</strong> (strictly 1 person), covering 5 days live training + 5 days dedicated support (10 days total coverage).</li>
+</ul>
+
+<h3>The Six Purchasing Power Parity (PPP) Tiers</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th>Tier</th>
+<th>Category</th>
+<th>Representative Geographies</th>
+<th>Multiplier</th>
+<th>Business Flagship</th>
+<th>Personal Flagship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tier 1</strong></td>
+<td>High-Income Baseline</td>
+<td>United States, UK, Germany, Canada, Japan, Singapore, Australia</td>
+<td>1.00X</td>
+<td>$2,000 USD</td>
+<td>$1,000 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 2</strong></td>
+<td>Upper-Middle Economies</td>
+<td>Brazil, Mexico, Malaysia, Türkiye, Thailand, Philippines, Sri Lanka</td>
+<td>0.75X</td>
+<td>$1,500 USD</td>
+<td>$750 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 3</strong></td>
+<td>Lower-Middle &amp; Low-Income</td>
+<td>India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam</td>
+<td>0.50X</td>
+<td>$1,000 USD</td>
+<td>$500 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 4</strong></td>
+<td>Early-Stage Startups</td>
+<td>Global tech startups with &lt;$1M external funding</td>
+<td>0.50X</td>
+<td>$1,000 USD</td>
+<td>$500 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 5</strong></td>
+<td>Academia &amp; Non-Profits</td>
+<td>Universities, accredited labs, registered charities &amp; 501(c)(3) entities</td>
+<td>0.25X</td>
+<td>$500 USD</td>
+<td>$250 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 6</strong></td>
+<td>Subsidized Relief</td>
+<td>Crisis-affected regions, developing collectives &amp; grassroots builders</td>
+<td>Custom</td>
+<td>Subsidized</td>
+<td>$100 USD</td>
+</tr>
+</tbody>
+</table>
+</article>
+
+<!-- REFERENCES -->
+<article class="content-card" id="references">
+<h2>References</h2>
+<ol class="references-list" style="line-height:1.8;padding-left:1.5rem;">
+<li id="ref-1"><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/ai-studio-quickstart" rel="noopener" target="_blank">Google AI Studio quickstart</a>, Google AI for Developers.</li>
+<li id="ref-2"><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/aistudio-build-mode" rel="noopener" target="_blank">Build apps in Google AI Studio</a>, Google AI for Developers.</li>
+<li id="ref-3"><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/aistudio-fullstack" rel="noopener" target="_blank">Develop full-stack apps in Google AI Studio</a>, Google AI for Developers.</li>
+<li id="ref-4"><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/aistudio-android" rel="noopener" target="_blank">Build Android apps in Google AI Studio</a>, Google AI for Developers.</li>
+<li id="ref-5"><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/aistudio-deploying" rel="noopener" target="_blank">Deploying from Google AI Studio</a>, Google AI for Developers.</li>
+<li id="ref-6"><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/libraries" rel="noopener" target="_blank">Gemini API libraries</a>, Google AI for Developers.</li>
+<li id="ref-7"><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/pricing" rel="noopener" target="_blank">Gemini Developer API pricing</a>, Google AI for Developers.</li>
+<li id="ref-8"><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/latest-model" rel="noopener" target="_blank">What's new in Gemini 4 Argon</a>, Google AI for Developers.</li>
+<li id="ref-9"><a class="ref-link gold-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/full-stack-vibe-coding-google-ai-studio/" rel="noopener" target="_blank">Introducing the new full-stack vibe coding experience in Google AI Studio</a>, Ammaar Reshi and Kat Kampf, Google, 18 March 2026.</li>
+<li id="ref-10"><a class="ref-link gold-link" href="https://cloud.google.com/blog/products/databases/vibe-coded-ai-studio-apps-with-firestore-firebase-cloud-sql" rel="noopener" target="_blank">AI Studio unlocks full-stack vibe coding with Cloud Run, Firebase, and Cloud SQL, no credit card required</a>, Google Cloud Blog, 21 May 2026.</li>
+<li id="ref-11"><a class="ref-link gold-link" href="https://futurefive.com.au/story/google-expands-ai-studio-with-android-cloud-tools" rel="noopener" target="_blank">Google expands AI Studio with Android &amp; cloud tools</a>, FutureFive Australia, 21 May 2026.</li>
+<li id="ref-12"><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/quickstart" rel="noopener" target="_blank">Gemini API quickstart</a>, Google AI for Developers.</li>
+</ol>
+</article>
+
 <!-- RELEVANT CALL TO ACTION -->
 <section class="cta-banner">
 <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Build Production Applications with Google AI Studio</h2>
 <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
-        From rapid mobile app prototyping with Jetpack Compose to business Firebase security and Cloud Run serverless deployment - let's accelerate your AI development cycle.
-      </p>
+  From rapid mobile app prototyping with Jetpack Compose to enterprise Firebase security and Cloud Run serverless deployment - let's accelerate your AI development cycle.
+</p>
 <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
 <a class="btn btn-primary" href="../contact.html">Schedule AI Architecture Review →</a>
-<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
+<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
 <a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
 </div>
 </section>

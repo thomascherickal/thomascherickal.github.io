@@ -84,13 +84,20 @@ def load_json(filepath):
 
 def save_json(filepath, data):
     """Safely saves pretty-printed JSON using atomic file replacement."""
-    tmp_path = filepath + ".tmp"
-    with open(tmp_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-        f.write("\n")
-        f.flush()
-        os.fsync(f.fileno())
-    os.replace(tmp_path, filepath)
+    tmp_path = f"{filepath}.{os.getpid()}_{time.time_ns()}.tmp"
+    try:
+        with open(tmp_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+            f.write("\n")
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(tmp_path, filepath)
+    finally:
+        if os.path.exists(tmp_path):
+            try:
+                os.remove(tmp_path)
+            except OSError:
+                pass
 
 class Fact:
     """Represents an atomic proposition in the knowledge base."""
