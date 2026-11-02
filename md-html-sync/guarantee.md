@@ -7,84 +7,91 @@
 
 // 100% RISK-FREE & SCAM-FREE ENGAGEMENT
 
-How our zero-upfront, five-installment payment structure and Apache 2.0 commercial licensing eliminate financial risk, prevent contractor lock-in, and guarantee institutional return on investment.
+How our zero-upfront, five-installment plan and Apache 2.0 commercial license keep you safe, give you total control, and make every project risk-free.
 
-## 1. The Zero-Risk Payment Architecture
+## 1. Simple Pricing, Clear Schedule, and Zero Upfront Cost
 
-The generative AI consulting and corporate training landscape is crowded with upfront retainers, rigid vendor locks, and opaque subscription models where clients take on all the financial risk before a single deliverable is proven. We operate under a fundamentally different commercial standard: every engagement is structured to make transactions 100% risk-free and scam-free.
+Hiring consultants can feel risky when they ask for large deposits upfront. We make it completely safe and simple for you. You never pay before seeing real results. Here is exactly how our pricing and schedule work in five simple points:
 
-Figure 1: Closed-loop risk elimination lifecycle from kickoff to verified delivery.
+1. Strictly Zero Dollars Upfront ($0): You never pay a single cent before training begins. There are no registration fees, no setup fees, and no advance deposits.
+2. Pay in Five Equal Parts (20% Each): Your total investment is divided into five equal payments of 20% each. You only pay after each training milestone is completed and verified by you.
+3. Walk Away Free Guarantee: Try the training with zero financial risk. If you are not completely happy after the first phase, you can walk away owing nothing.
+4. Clear Daily Schedule: Training takes place for 4 hours each day, Monday through Friday. Saturdays and Sundays are restful holidays. Every session is delivered 100% online so anyone worldwide can join.
+5. Full Commercial Ownership (Apache 2.0): Everything created during the training - all written notes, guides, checklists, and code - belongs to you under the open Apache 2.0 license. You can use it inside your business, sell it to clients, or share it however you want.
 
-Our payment architecture is founded on three immutable financial rules:
+Here is a side-by-side summary of our standard programs and schedules:
 
-- Strictly bash Upfront: Zero deposit or advance retainer is ever required before technical discovery and training commences. We never ask for payment card authorizations, retainers, or setup fees to begin work.
-- 20% in Five Milestone Installments: Invoiced in five equal installments (20% each) due strictly after completed milestone blocks of training progress. You evaluate live agent execution, test suites, and curriculum delivery before approving each payment.
-- The Unconditional Walkaway Guarantee: If you or your technical team are not completely satisfied after the first milestone training phase, you can walk away owing absolutely nothing. You keep all initial roadmaps and scripts developed during that phase.
+| Program | Total Duration | Live Sessions & Support | Group Size | Base Price (USD) | Payment Plan |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Business Training Flagship | 60 Days Total | 30 days live training + 30 days dedicated support | Up to 10 people included (+$200 per extra seat up to 20 seats) | $2,000 USD | 5 payments of $400 USD (20% each) due after completed milestones |
+| Personal Training Flagship | 60 Days Total | 30 days live training + 30 days dedicated support | Strictly 1 person (private 1-on-1 coaching) | $2,000 USD | 5 payments of $400 USD (20% each) due after completed milestones |
+| Business Individual Service | 10 Days Total | 5 days live training + 5 days dedicated support | 1 person base (+$200 per extra seat up to 10 seats) | $200 USD | 5 payments of $40 USD (20% each) due after completed milestones |
+| Personal Individual Service | 10 Days Total | 5 days live training + 5 days dedicated support | Strictly 1 person only | $200 USD | 5 payments of $40 USD (20% each) due after completed milestones |
 
-Verifiable, sandbox-tested multi-agent mesh architecture developed during client training sprints.
+Figure 1: How our zero-risk payment flow keeps you completely safe.
 
-## 2. Why This Eliminates Scams and Misaligned Incentives
+## 2. Why This Completely Eliminates Scams and Risks
 
-In traditional tech consulting, vendors demand 50% or 100% advance payment upfront, creating severe moral hazard. Once the money is collected, service quality often drops, delivery slows, and clients are forced into lengthy disputes. By inverting the payment sequence, our structure mathematically eliminates common contractor scams:
+Most consulting companies ask for half or all of the money before doing any work. Once they have your money, they might take weeks to reply, deliver poor work, or refuse refunds. Our system turns this upside down so that you stay in full control at every moment:
 
-| Risk Dimension | Traditional Agency Model | Our Risk-Free Payment Structure |
+| What Matters | Typical Agency | Our Risk-Free Guarantee |
 | :--- | :--- | :--- |
-| Advance Capital Exposure | 50% to 100% cash paid upfront before seeing any work. | bash Upfront: Zero advance payment or upfront deposit required. |
-| Billing Verification | Invoiced on vague billable hours or promises. | Milestone Gates: 20% installments billed strictly after verified progress. |
-| Client Satisfaction Exit | Non-refundable retainers; high cancellation fees. | Walkaway Guarantee: Walk away owing bash if unsatisfied after Phase 1. |
-| Intellectual Property Rights | Proprietary vendor lock-in; closed frameworks. | Apache 2.0 License: Full commercial ownership, resale, and relicensing rights. |
-| Global Economic Equity | Rigid Western rates regardless of local economic reality. | PPP Scaling: 6 transparent Purchasing Power Parity tiers across 195 countries. |
+| Upfront Payment | Demands 50% to 100% upfront before any work begins. | Zero Dollars ($0): Never pay anything in advance. |
+| When You Pay | Billed on vague hours or rigid monthly invoices. | Milestones: You only pay 20% after you inspect and approve completed work. |
+| If You Want to Stop | No refunds; strict cancellation fees. | Walk Away Free: Pay $0 if you are not happy after Phase 1. |
+| Who Owns the Material | The agency keeps ownership and locks you in. | You Own Everything: Apache 2.0 license gives you full commercial rights. |
+| Fair Pricing Worldwide | Same expensive price regardless of your country. | Fair Rates: Transparent discounts for 195 countries based on local purchasing power. |
 
-Figure 2: Sequence diagram detailing the milestone payment verification gate.
+Figure 2: Step-by-step review process where you approve every payment milestone.
 
-Enterprise governance and cost containment controls established during live engineering training.
+Practical, step-by-step training designed to give your team real skills from day one.
 
-## 3. High-Quality Training Materials & Apache 2.0 Commercial Licensing
+## 3. High-Quality Training Materials and Full Commercial Freedom
 
-When you invest in corporate transformation or private technical acceleration, you should own the outputs outright. We do not retain proprietary lock-in on custom pipelines, test fixtures, or curriculum modules.
+When you spend money on training, you deserve to keep and use everything you learn. You should never have to ask permission or pay ongoing fees to use what you built during your sessions.
 
-All custom agent architectures, MCP servers, workflow orchestrations, and high-quality training materials authored during our engagement are explicitly licensed to you under the terms of the Apache 2.0 License:
+All guides, lesson notes, templates, and code created during your training are protected under the friendly Apache 2.0 License. This gives you four clear rights:
 
-- Commercial Use: Deploy all custom agents, tools, prompts, and server integrations within your proprietary commercial applications and infrastructure without royalty fees.
-- Resale and Distribution: Bundle, package, and resell the developed pipelines, customized courses, and tooling directly to your end customers or clients.
-- Internal Scaling & Adaptation: Retain perpetual, irrevocable rights to duplicate, adapt, translate, and conduct internal training across infinite team members and future cohorts.
-- Relicensing With Attribution: Maintain complete legal flexibility to sub-license or relicense derived assets under terms that fit your corporate IP strategy, requiring only standard copyright attribution.
+- Commercial Use: Use all lesson materials, scripts, and prompts in your daily business operations without paying any royalties.
+- Resale and Distribution: Package, share, or resell the guides, courses, and tools directly to your own clients or customers.
+- Internal Team Sharing: Share all notes and videos freely across your whole company so future team members can learn too.
+- Complete Freedom with Attribution: Build your own products or services on top of what you learned. All that is needed is a simple credit line mentioning the author.
 
-Production playbooks, architectural roadmaps, and curriculum assets transferred with full Apache 2.0 rights.
+Easy-to-read playbooks and checklists you can keep, share, and use forever.
 
-## 4. Practice Pricing & Global Purchasing Power Parity (PPP)
+## 4. Transparent Pricing and Fair Global Rates
 
-Our engagements are delivered 100% remote worldwide with 4 hours per day of focused live instruction, Monday through Friday (Saturdays and Sundays are holidays). Rates are calibrated across six 195-country Purchasing Power Parity tiers to provide global economic equity:
+Every program is conducted 100% online worldwide for 4 hours per day, Monday through Friday. Saturdays and Sundays are holidays. We also adjust our prices across six global tiers so that builders in any country pay a fair rate matching their local economy:
 
 ### Business AI Training Flagship
 
-Comprehensive workforce and engineering transformation.
+Complete team training for companies and startups.
 
-- 60 days total: 30 days live engineering training + 30 days dedicated support.
-- Includes up to 10 participants (+00 USD per additional seat up to max 20 seats).
-- 4 hours daily live instruction, Mon - Fri (Sat & Sun holidays). Remote worldwide.
-- bash upfront; 20% in five milestone installments; walkaway guarantee.
-- All materials and custom code under Apache 2.0 license.
+- 60 days total: 30 days live instruction + 30 days dedicated support.
+- Up to 10 participants included (+$200 USD per extra seat up to 20 seats max).
+- 4 hours daily, Monday through Friday (weekends free). Online worldwide.
+- $0 upfront; 5 equal payments of 20%; full walkaway guarantee.
+- All materials and custom code belong to you under Apache 2.0.
 
 ### Personal AI Training Flagship
 
-Dedicated 1-on-1 private acceleration for solo founders and engineers.
+Private 1-on-1 coaching for founders and engineers.
 
-- 60 days total: 30 days live 1-on-1 training + 30 days dedicated support.
-- Strictly one person only (dedicated private acceleration).
-- 4 hours daily hands-on implementation, Mon - Fri (Sat & Sun holidays). Remote worldwide.
-- bash upfront; 20% in five milestone installments; walkaway guarantee.
-- Complete curriculum and custom code transferred under Apache 2.0 license.
+- 60 days total: 30 days live 1-on-1 coaching + 30 days dedicated support.
+- Strictly one person only for focused personal attention.
+- 4 hours daily, Monday through Friday (weekends free). Online worldwide.
+- $0 upfront; 5 equal payments of 20%; full walkaway guarantee.
+- Complete lessons and custom code belong to you under Apache 2.0.
 
-### Individual Service Picks (Pick & Choose)
+### Pick-and-Choose Individual Services
 
-Need a focused technical sprint instead of a full flagship program? Select modular services individually:
+If you only need help with one specific topic, you can choose individual 10-day service picks:
 
-- Business Individual Pick: 00 USD per service base for 1 seat, with additional seats at 00 USD per seat up to a maximum of 10 seats (5 days live training + 5 days support, 4 hours/day, remote worldwide).
-- Personal Individual Pick: 00 USD per service strictly for only one seat (5 days live training + 5 days support, 4 hours/day, remote worldwide).
+- Business Individual Pick: $200 USD per service (covers 1 seat, +$200 per extra seat up to 10 seats; 5 days live training + 5 days support, 4 hours/day, online worldwide).
+- Personal Individual Pick: $200 USD per service strictly for 1 person (5 days live training + 5 days support, 4 hours/day, online worldwide).
 
-To view your country tier classification, calculate calibrated rates, and explore our full 16-service catalog, visit our interactive Pricing Page.
+To check discounts for your country or calculate your exact price, visit our Pricing Page.
 
-## Ready for a Zero-Risk Transformation?
+## Ready to Start with Zero Financial Risk?
 
-Schedule an introductory briefing or claim your free consultation on LinkedIn. Commencing technical discovery involves strictly zero financial commitment.
+Book an introductory call or connect for a free consultation on LinkedIn. Starting technical discovery requires strictly zero payment.
