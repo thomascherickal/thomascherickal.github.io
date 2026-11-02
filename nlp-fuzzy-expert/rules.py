@@ -199,9 +199,9 @@ def build_rules():
         p_opt = f'<option value="pkg-personal" data-price="{p_price}">Personal Training Flagship - ${p_price:,} USD ({p_days} Days: {p_live}d Training + {p_supp}d Guidance, 1 person only)</option>'
         ind_opt = f'<option value="pick-services" data-price="{b_ind}">Pick Individual Services (${p_ind} Individual / ${b_ind} Business per service, 5d + 5d)</option>'
 
-        content = re.sub(r'<option value="pkg-business"[^>]*>.*?</option>', b_opt, content)
-        content = re.sub(r'<option value="pkg-personal"[^>]*>.*?</option>', p_opt, content)
-        content = re.sub(r'<option value="pick-services"[^>]*>.*?</option>', ind_opt, content)
+        content = re.sub(r'<option value="pkg-business"[^>]*>.*?</option>', b_opt, content, flags=re.DOTALL)
+        content = re.sub(r'<option value="pkg-personal"[^>]*>.*?</option>', p_opt, content, flags=re.DOTALL)
+        content = re.sub(r'<option value="pick-services"[^>]*>.*?</option>', ind_opt, content, flags=re.DOTALL)
 
         # Category buttons & hints (lines 678, 683, 687)
         content = re.sub(

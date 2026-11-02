@@ -24,10 +24,10 @@ Here is a side-by-side summary of our standard programs and schedules:
 
 | Program | Total Duration | Live Sessions & Support | Group Size | Base Price (USD) | Payment Plan |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Business Training Flagship | 60 Days Total | 30 days live training + 30 days dedicated support | Up to 10 people included (+$200 per extra seat up to 20 seats) | $2,000 USD (Training) + $500 USD (Support) | 5 training payments of $400 USD (20% each) + 2 support payments of $250 USD (after 15 & 30 days) |
-| Personal Training Flagship | 60 Days Total | 30 days live training + 30 days dedicated support | Strictly 1 person (private 1-on-1 coaching) | $2,000 USD (Training) + $500 USD (Support) | 5 training payments of $400 USD (20% each) + 2 support payments of $250 USD (after 15 & 30 days) |
-| Business Individual Service | 10 Days Total | 5 days live training + 5 days dedicated support | 1 person base (+$200 per extra seat up to 10 seats) | $200 USD (Training) + $50 USD (Support) | 5 training payments of $40 USD (20% each) + 1 support payment of $50 USD (after 5 days) |
-| Personal Individual Service | 10 Days Total | 5 days live training + 5 days dedicated support | Strictly 1 person only | $200 USD (Training) + $50 USD (Support) | 5 training payments of $40 USD (20% each) + 1 support payment of $50 USD (after 5 days) |
+| Business Training Flagship | 60 Days Total | 30 days live training + 30 days dedicated support | Up to 10 people included (+$250 per extra seat up to 20 seats) | $2,500 USD (Training) + $500 USD (Support) | 5 training payments of $500 USD (20% each) + 2 support payments of $250 USD (after 15 & 30 days) |
+| Personal Training Flagship | 60 Days Total | 30 days live training + 30 days dedicated support | Strictly 1 person (private 1-on-1 coaching) | $2,500 USD (Training) + $500 USD (Support) | 5 training payments of $500 USD (20% each) + 2 support payments of $250 USD (after 15 & 30 days) |
+| Business Individual Service | 10 Days Total | 5 days live training + 5 days dedicated support | 1 person base (+$250 per extra seat up to 10 seats) | $250 USD (Training) + $50 USD (Support) | 5 training payments of $50 USD (20% each) + 1 support payment of $50 USD (after 5 days) |
+| Personal Individual Service | 10 Days Total | 5 days live training + 5 days dedicated support | Strictly 1 person only | $250 USD (Training) + $50 USD (Support) | 5 training payments of $50 USD (20% each) + 1 support payment of $50 USD (after 5 days) |
 
 Figure 1: How our zero-risk payment flow keeps you completely safe.
 
@@ -69,9 +69,9 @@ Every program is conducted 100% online worldwide for 4 hours per day, Monday thr
 Complete team training for companies and startups.
 
 - 60 days total: 30 days live instruction + 30 days dedicated support.
-- Up to 10 participants included (+$200 USD per extra seat up to 20 seats max).
+- Up to 10 participants included (+$250 USD per extra seat up to 20 seats max).
 - 4 hours daily, Monday through Friday (weekends free). Online worldwide.
-- $0 upfront; 5 equal payments of 20% ($400 each) for live training.
+- $0 upfront; 5 equal payments of 20% ($500 each) for live training.
 - Dedicated support: $500 USD in 2 installments ($250 after 15 days, $250 after 30 days).
 - All materials and custom code belong to you under Apache 2.0.
 
@@ -82,7 +82,7 @@ Private 1-on-1 coaching for founders and engineers.
 - 60 days total: 30 days live 1-on-1 coaching + 30 days dedicated support.
 - Strictly one person only for focused personal attention.
 - 4 hours daily, Monday through Friday (weekends free). Online worldwide.
-- $0 upfront; 5 equal payments of 20% ($400 each) for live training.
+- $0 upfront; 5 equal payments of 20% ($500 each) for live training.
 - Dedicated support: $500 USD in 2 installments ($250 after 15 days, $250 after 30 days).
 - Complete lessons and custom code belong to you under Apache 2.0.
 
@@ -90,8 +90,8 @@ Private 1-on-1 coaching for founders and engineers.
 
 If you only need help with one specific topic, you can choose individual 10-day service picks:
 
-- Business Individual Pick: $200 USD training + $50 USD support per service (covers 1 seat, +$200 per extra seat up to 10 seats; 5 days live training + 5 days support, 4 hours/day, online worldwide. Support payment due after 5 days of support).
-- Personal Individual Pick: $200 USD training + $50 USD support per service strictly for 1 person (5 days live training + 5 days support, 4 hours/day, online worldwide. Support payment due after 5 days of support).
+- Business Individual Pick: $250 USD training + $50 USD support per service (covers 1 seat, +$250 per extra seat up to 10 seats; 5 days live training + 5 days support, 4 hours/day, online worldwide. Support payment due after 5 days of support).
+- Personal Individual Pick: $250 USD training + $50 USD support per service strictly for 1 person (5 days live training + 5 days support, 4 hours/day, online worldwide. Support payment due after 5 days of support).
 
 To check discounts for your country or calculate your exact price, visit our Pricing Page.
 

@@ -132,21 +132,21 @@
     const selectedServices = Array.isArray(params.selectedServices)
       ? params.selectedServices
       : (params.selectedServices ? [params.selectedServices] : ["service-generative-ai-transformation"]);
-    const ratePerSvc = clientMode === "business" ? 200 : 100;
+    const ratePerSvc = 250;
 
-    let basePrice = 2000;
+    let basePrice = 2500;
     if (packageType === "pick-services") {
       const count = selectedServices.length;
       basePrice = count * ratePerSvc;
     } else if (packageType === "pkg-business") {
-      basePrice = 2000;
+      basePrice = 2500;
     } else if (packageType === "pkg-personal") {
-      basePrice = 1000;
+      basePrice = 2500;
     } else if (packageType === "custom" && typeof params.customBase === 'number') {
       basePrice = Math.max(0, params.customBase);
     }
 
-    const matchingFlagshipPrice = clientMode === "business" ? 2000 : 1000;
+    const matchingFlagshipPrice = 2500;
     let flagshipCheaper = false;
     let flagshipPrice = matchingFlagshipPrice;
 
@@ -164,12 +164,12 @@
     }
     let participants = clientMode === "individual" ? 1 : rawParticipants;
     const extraParticipants = (clientMode === "business" && basePrice > 0) ? Math.max(0, participants - 10) : 0;
-    const extraHeadRate = Math.round(extraParticipants * 200 * tier.multiplier);
+    const extraHeadRate = Math.round(extraParticipants * 250 * tier.multiplier);
     const baseTierPrice = Math.round(basePrice * tier.multiplier);
     const finalPrice = basePrice === 0 ? 0 : baseTierPrice + extraHeadRate;
 
     const baseSavings = Math.round(basePrice * (tier.discountPercent / 100));
-    const extraSavings = Math.round(extraParticipants * 200 * (tier.discountPercent / 100));
+    const extraSavings = Math.round(extraParticipants * 250 * (tier.discountPercent / 100));
     const totalSavings = basePrice === 0 ? 0 : baseSavings + extraSavings;
 
     return {
@@ -200,7 +200,7 @@
 
     let activeTier = 1;
     let clientMode = "business"; // "business" or "individual"
-    let standardBasePrice = 2000;
+    let standardBasePrice = 2500;
     let selectedServices = ["service-generative-ai-transformation"];
 
     const btnModeBusiness = document.getElementById("btn-mode-business");
@@ -257,7 +257,7 @@
     }
 
     function updateFromServicesSelection() {
-      const ratePerSvc = clientMode === "business" ? 200 : 100;
+      const ratePerSvc = 250;
       const count = selectedServices.length;
       standardBasePrice = count * ratePerSvc;
 
@@ -309,8 +309,8 @@
           calcParticipants.value = Math.max(10, parseInt(calcParticipants.value, 10) || 10);
           calcParticipants.disabled = false;
         }
-        if (calcParticipantsHint) calcParticipantsHint.textContent = "Business: 1-10 Included (+$200/extra seat)";
-        if (calcParticipantsDesc) calcParticipantsDesc.textContent = "Business base covers up to 10 participants (additional seats are $200 USD per seat scaled by country parity).";
+        if (calcParticipantsHint) calcParticipantsHint.textContent = "Business: 1-10 Included (+$250/extra seat)";
+        if (calcParticipantsDesc) calcParticipantsDesc.textContent = "Business base covers up to 10 participants (additional seats are $250 USD per seat scaled by country parity).";
       } else {
         btnModeIndividual.classList.add("active");
         btnModeBusiness.classList.remove("active");
@@ -326,15 +326,15 @@
         updateFromServicesSelection();
       } else if (calcPackage && calcPackage.value === "pkg-business" && mode === "individual") {
         calcPackage.value = "pkg-personal";
-        standardBasePrice = 1000;
+        standardBasePrice = 2500;
         const tier = PARITY_TIERS[activeTier];
-        if (calcCustomAmount && tier) calcCustomAmount.value = Math.round(1000 * tier.multiplier);
+        if (calcCustomAmount && tier) calcCustomAmount.value = Math.round(2500 * tier.multiplier);
         updateCalculator();
       } else if (calcPackage && calcPackage.value === "pkg-personal" && mode === "business") {
         calcPackage.value = "pkg-business";
-        standardBasePrice = 2000;
+        standardBasePrice = 2500;
         const tier = PARITY_TIERS[activeTier];
-        if (calcCustomAmount && tier) calcCustomAmount.value = Math.round(2000 * tier.multiplier);
+        if (calcCustomAmount && tier) calcCustomAmount.value = Math.round(2500 * tier.multiplier);
         updateCalculator();
       } else {
         updateCalculator();
@@ -362,7 +362,7 @@
             indivPriceEl.textContent = "Custom quote - contact Thomas";
             indivPriceEl.style.color = "#00f0ff";
           } else {
-            const calculated = Math.round(100 * mult);
+            const calculated = Math.round(250 * mult);
             indivPriceEl.textContent = "$" + calculated.toLocaleString("en-US") + " USD" + (tier.id > 1 ? ` (T${tier.id})` : "");
             indivPriceEl.style.color = tier.badgeColor;
           }
@@ -373,7 +373,7 @@
             bizPriceEl.textContent = "Custom quote - contact Thomas";
             bizPriceEl.style.color = "#00f0ff";
           } else {
-            const calculated = Math.round(200 * mult);
+            const calculated = Math.round(250 * mult);
             bizPriceEl.textContent = "$" + calculated.toLocaleString("en-US") + " USD" + (tier.id > 1 ? ` (T${tier.id})` : "");
             bizPriceEl.style.color = tier.badgeColor;
           }
@@ -643,10 +643,10 @@
           if (servicesMultiSelectWrap) servicesMultiSelectWrap.style.display = "none";
           if (selectedOpt.value === "pkg-business") {
             setClientMode("business");
-            standardBasePrice = 2000;
+            standardBasePrice = 2500;
           } else if (selectedOpt.value === "pkg-personal") {
             setClientMode("individual");
-            standardBasePrice = 1000;
+            standardBasePrice = 2500;
           } else if (selectedOpt.value === "custom") {
             calcCustomAmount.focus();
             calcCustomAmount.select();

@@ -1,4 +1,4 @@
-# Business Training: $2,000 for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials)
+# Business Training: $2,500 for 60 Days (30d Training + 30d Guidance & Materials)
 ## Thomas Cherickal - The Digital Futurist
 
 > **BUSINESS TRAINING · 60 DAYS (30 DAYS TRAINING + 30 DAYS GUIDANCE)**  
@@ -7,8 +7,8 @@
 
 ---
 
-Clients can choose our comprehensive 60-day organization-wide transformation at $2,000 USD (30 days live hands-on engineering training + 30 days guidance, Q&A and written guides), or pick individual services at $200 USD per service (5 days live training + 5 days dedicated support). Covers cohorts up to 10 participants,
- with additional seats at $100 USD per seat. Clients are encouraged to choose services relevant to their work
+Clients can choose our comprehensive 60-day organization-wide transformation at $2,500 USD (30 days live hands-on engineering training + 30 days guidance, Q&A and written guides), or pick individual services at $250 USD per service (5 days live training + 5 days dedicated support). Covers cohorts up to 10 participants,
+ with additional seats at $250 USD per seat. Clients are encouraged to choose services relevant to their work
  or interests. Purchasing Power Parity (PPP) is available for all service pricing across 195 countries.
 
 ## Our Uncompromising Business Training & Implementation Guarantee
@@ -17,10 +17,10 @@ Whether booking organization-wide Business Training or an intensive 1-on-1 Perso
  engagement is backed by an explicit, transparent training and guidance guarantee:
 
 ### Business Training Flagship (Cohorts
- Up to 20)
+ Up to 10)
 
 Guaranteed 30 days of comprehensive live instruction across engineering cohorts and leadership, followed immediately by 30 days of guidance, Q&A and written guides (delivered as 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Covers up to 10
- participants (extra seats at $100 USD per seat). Clients are encouraged to choose services relevant to
+ participants (extra seats at $250 USD per seat). Clients are encouraged to choose services relevant to
  their work or interests.
 
 ### Personal Training Flagship (1
@@ -31,7 +31,7 @@ Guaranteed 30 days of intensive 1-on-1 instruction, followed immediately by 30 d
 
 // BUSINESS VALUE PROPOSITION & RATIONALE
 
-## Why Business Training Is Structured at $2,000 for 60 Days
+## Why Business Training Is Structured at $2,500 for 60 Days
 
 For organizations, scaling AI across teams requires structured change management: aligning cross-functional
  teams of up to 10 participants, integrating business security standards, provisioning private isolated
@@ -43,7 +43,7 @@ Traditional business consulting charges tens of thousands of dollars
  agent swarms, implement test-driven coding agent workflows, and deploy private open-weight models that
  permanently reduce recurring API token expenditures.
 
-Business Training costs $2,000 in Tier 1 for 60 days (30 days live hands-on engineering training + 30 days guidance, Q&A and written guides). Covers up to 10 participants, with additional seats at $200 USD per
+Business Training costs $2,500 in Tier 1 for 60 days (30 days live hands-on engineering training + 30 days guidance, Q&A and written guides). Covers up to 10 participants, with additional seats at $250 USD per
  seat. Clients are encouraged to choose services relevant to their work or interests.
 
 // FULL-SPECTRUM BUSINESS MASTERY
@@ -159,18 +159,18 @@ Following sprint instruction, your teams transition into production implementati
 
 ## Business Training Parity Pricing Matrix
 
-Business Training is $2,000 USD in Tier 1 for 60 days (30 days training + 30 days guidance, Q&A and written guides) for up to 10 participants. Clients are encouraged to choose services relevant to their work
+Business Training is $2,500 USD in Tier 1 for 60 days (30 days training + 30 days guidance, Q&A and written guides) for up to 10 participants. Clients are encouraged to choose services relevant to their work
  or interests. Parity multipliers apply globally:
 
 | Equity Tier | Qualifying Region / Profile | Discount | Milestone Rate |
 | :--- | :--- | :--- | :--- |
 | Tier 1: High-Income | US, Canada, UK, Germany, France, Poland, Czech Republic, Hungary, Greece, Romania, Japan, South
- Korea, Singapore, Australia, Chile, UAE, Saudi Arabia | Standard Rate (0% Discount) | $2,000 USD |
+ Korea, Singapore, Australia, Chile, UAE, Saudi Arabia | Standard Rate (0% Discount) | $2,500 USD |
 | Tier 2: Upper-Middle | Brazil, Mexico, Colombia, Argentina, Peru, Ecuador, Guatemala, Türkiye, Malaysia, Thailand,
- Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka | 25% Parity Discount | $1,500 USD |
+ Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka | 25% Parity Discount | $1,875 USD |
 | Tier 3 & 4: Lower-Middle/Low-Income & Startups | India, Bangladesh, Pakistan, Nepal, Bhutan, Kenya, Nigeria, Ghana, Egypt, Morocco, Tanzania,
- Bolivia, Cambodia, Laos, Myanmar, Ethiopia, Uganda, Rwanda, Pre-Seed Startups | 50% Parity Discount | $1,000 USD |
-| Tier 5: Academia & Non-Profit | University Labs, Educational Institutions, 501(c)(3) Non-Profits | 75% Academic Discount | $500 USD |
+ Bolivia, Cambodia, Laos, Myanmar, Ethiopia, Uganda, Rwanda, Pre-Seed Startups | 50% Parity Discount | $1,250 USD |
+| Tier 5: Academia & Non-Profit | University Labs, Educational Institutions, 501(c)(3) Non-Profits | 75% Academic Discount | $625 USD |
 | Tier 6: Crisis-Affected & Under-Resourced | Crisis Zones, Hyperinflation Economies, UN Least Developed Countries, Grassroots Dev Teams | Custom Subsidized Relief | Custom Relief (Contact Us) |
 
 ## Ready for Your Business AI Transformation?

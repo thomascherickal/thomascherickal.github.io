@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-02 12:14:58 UTC` | Branch: `main` | Head Commit: `c92e54b`
+> **Automated Status Report** | Generated on `2026-11-02 15:19:02 UTC` | Branch: `main` | Head Commit: `8bf3b43`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **412** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **120,646** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **108,927** | Executable / renderable content lines |
+| **Total Tracked Files** | **414** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **606,470** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **594,710** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **4,282** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **7,437** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **40.89 MB (42,878,208 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **309,649 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **456** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-02** | Subject: "Update nlp-fuzzy-expert reference reports" |
+| **Blank / Spacing Lines** | **7,478** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **65.13 MB (68,295,731 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **573,849 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **457** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-02** | Subject: "Auto-stage nlp-fuzzy-expert reports in pre-commit hook" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,12 +27,12 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 65 | 71,476 | 5.33 MB (5,588,628 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 65 | 71,462 | 5.33 MB (5,588,326 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,778 | 275.49 KB (282,099 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 3 | 2,321 | 90.70 KB (92,881 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 33 | 7,746 | 350.99 KB (359,416 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 87 | 10,782 | 705.87 KB (722,807 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 83 | 16,490 | 691.48 KB (708,079 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **JavaScript Scripts** | 3 | 2,321 | 90.65 KB (92,822 bytes) | Client-side interactivity, search, filter & components |
+| **Python Tooling** | 35 | 8,103 | 364.20 KB (372,944 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 87 | 26,960 | 2.96 MB (3,101,381 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 83 | 485,793 | 22.63 MB (23,733,861 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 74 | 0 | 33.39 MB (35,010,540 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 9 | 0 | 46.16 KB (47,270 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,15 +43,15 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 65 | 71,476 | 5.33 MB (5,588,628 bytes) | 15.8% |
-| `.json` | 83 | 16,490 | 691.48 KB (708,079 bytes) | 20.1% |
+| `.json` | 83 | 485,793 | 22.63 MB (23,733,861 bytes) | 20.0% |
+| `.html` | 65 | 71,462 | 5.33 MB (5,588,326 bytes) | 15.7% |
+| `.md` | 87 | 26,960 | 2.96 MB (3,101,381 bytes) | 21.0% |
 | `.css` | 16 | 11,778 | 275.49 KB (282,099 bytes) | 3.9% |
-| `.md` | 87 | 10,782 | 705.87 KB (722,807 bytes) | 21.1% |
-| `.py` | 33 | 7,746 | 350.99 KB (359,416 bytes) | 8.0% |
-| `.js` | 3 | 2,321 | 90.70 KB (92,881 bytes) | 0.7% |
-| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 10.2% |
+| `.py` | 35 | 8,103 | 364.20 KB (372,944 bytes) | 8.5% |
+| `.js` | 3 | 2,321 | 90.65 KB (92,822 bytes) | 0.7% |
+| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 10.1% |
 | `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 10.4% |
-| `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 4.9% |
+| `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 4.8% |
 | `.jpeg` | 2 | 0 | 773.70 KB (792,264 bytes) | 0.5% |
 | `.png` | 8 | 0 | 714.78 KB (731,934 bytes) | 1.9% |
 | `.txt` | 2 | 0 | 26.64 KB (27,280 bytes) | 0.5% |
@@ -107,8 +107,8 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **214 functions** across tooling scripts | Modular execution units |
-| **Python Class Definitions** | **20 classes** | Structured state containers |
+| **Python Function Definitions** | **231 functions** across tooling scripts | Modular execution units |
+| **Python Class Definitions** | **21 classes** | Structured state containers |
 
 ---
 

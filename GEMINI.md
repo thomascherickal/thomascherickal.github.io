@@ -105,14 +105,14 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 
 ## Practice Pricing, Payment Structure & Licensing Rules
 - **Business AI Training Flagship**:
-  - Base price: **$2,000 USD** for **60 days total** (30 days live engineering training + 30 days dedicated support).
-  - Includes up to 10 participants. Extra seats are **$200 USD per seat** after 10 participants, up to a strict maximum of 20 seats.
+  - Base price: **$2,500 USD** for **60 days total** (30 days live engineering training + 30 days dedicated support).
+  - Includes up to 10 participants. Extra seats are **$250 USD per seat** after 10 participants, up to a strict maximum of 20 seats.
 - **Personal AI Training Flagship**:
-  - Base price: **$2,000 USD** for **60 days total** (30 days live 1-on-1 training + 30 days dedicated support).
+  - Base price: **$2,500 USD** for **60 days total** (30 days live 1-on-1 training + 30 days dedicated support).
   - Strictly **one person only** (dedicated private acceleration).
 - **Individual Service Picks**:
-  - **Business Individual Service**: **$200 USD** base for 1 seat, with additional seats at **$200 USD per seat** up to a maximum of 10 seats (5 days live training + 5 days support).
-  - **Personal Individual Service**: **$200 USD** strictly for **only one seat** (5 days live training + 5 days support).
+  - **Business Individual Service**: **$250 USD** base for 1 seat, with additional seats at **$250 USD per seat** up to a maximum of 10 seats (5 days live training + 5 days support).
+  - **Personal Individual Service**: **$250 USD** strictly for **only one seat** (5 days live training + 5 days support).
 - **Delivery Schedule & Mode**:
   - **4 hours per day**, Monday through Friday.
   - **Saturdays and Sundays are holidays**.
@@ -143,9 +143,11 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
   6. Runs verification passes (`sync_schemas.py`, `md_html_sync.py`, `check_links.py`) to confirm zero broken links or orphaned sync states.
 
 ## Data Directory Single Source of Truth (SSOT) Rule (`data/*.json`)
-- **Authoritative Single Source of Truth**: All JSON files residing in `data/*.json` (`pricing.json`, `tiers.json`, `business-services.json`, `personal-services.json`, `config.json`, `publications.json`, `faqs.json`, `gemini.json`, `claude.json`) are the immutable single source of truth across the repository.
+- **GEMINI.md as Ultimate Source of Truth**: `GEMINI.md` is the authoritative project specification and the ultimate source of truth across the entire website. The files in `data/*.json` reflect this specification for automated synchronization and data modeling. `GEMINI.md` is the only source whose definitions can override files in the `data/` directory. No other code, runtime script, or test suite should modify the files under the `data/` directory.
+- **Authoritative Data Directory (`data/*.json`)**: All JSON files residing in `data/*.json` (`pricing.json`, `tiers.json`, `business-services.json`, `personal-services.json`, `config.json`, `publications.json`, `faqs.json`, `gemini.json`, `claude.json`) model the authoritative data specified by `GEMINI.md`.
 - **Strict One-Way Data Propagation**: Data flows strictly outward in one direction: `data/*.json` -> HTML / JS / Markdown / Schema files. Reverse writes, automatic modifications, or overwriting of `data/*.json` files by sync scripts, inference engines, or testing suites are strictly forbidden.
 - **Programmatic Mutation Prevention**: The core file-saving utility `save_json()` in `nlp-fuzzy-expert/expert_system.py` strictly blocks writing to any path within `data/` by raising a `PermissionError`.
 - **Test Isolation & Sandbox Execution**: Tests that simulate or verify changes to data (e.g. `tests/test_continuous_updates.py`) must never mutate repository files under `data/*.json`. Such tests must operate within isolated temporary sandboxes (e.g. `tempfile.mkdtemp()`) and instantiate `ExpertSynchronizer(data_dir=temp_dir)`.
 - **Pre-Test and Post-Test SHA-256 Integrity Verification**: `python/run_tests.py` computes cryptographic SHA-256 hashes of all `data/*.json` files prior to test execution and validates them immediately following execution. If any file in `data/` is altered, mutated, or created, the test suite aborts with exit code 1.
-- **Manual Authoring Only**: Changes to `data/*.json` may only be made by deliberate manual updates by the author or explicitly requested data configuration tasks.
+- **Manual Authoring Only**: Changes to `data/*.json` may only be made by deliberate manual updates by the author or explicitly requested data configuration tasks aligned with `GEMINI.md`.
+- **In all prompts, ask clarifying questions to the user in the case of the slightest ambiguity, inconsistencies, doubts, clarifications, or unclear and imprecise specifications.  Never assume anything.  Always verify with the user.**

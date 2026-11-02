@@ -42,15 +42,15 @@ All training payments are distributed into five
  equal installments (20% per installment), mapped directly to completed training days, followed by verified milestone payments for the support phase:
 
 - 60-Day Business AI
- Training Flagship ($2,000 USD): Five equal installments (20% / $400 USD each), due after Days 5, 10,
+ Training Flagship ($2,500 USD): Five equal installments (20% / $500 USD each), due after Days 5, 10,
  15, 20 and 25 of completed live training. Dedicated support (30 days) is an additional $500 USD, paid in two equal installments ($250 USD after 15 days and $250 USD after 30 days of support).
 
 - 60-Day Personal AI
- Training Flagship ($2,000 USD): Five equal installments (20% / $400 USD each), due after Days 5, 10,
+ Training Flagship ($2,500 USD): Five equal installments (20% / $500 USD each), due after Days 5, 10,
  15, 20 and 25 of completed live 1-on-1 training. Dedicated support (30 days) is an additional $500 USD, paid in two equal installments ($250 USD after 15 days and $250 USD after 30 days of support).
 
-- 10-Day Individual Services ($200 USD):
- Five equal installments (20% / $40 USD each), due after Days 1, 2, 3, 4, and 5 of completed live training. Dedicated support (5 days) is an additional $50 USD due after 5 days of support.
+- 10-Day Individual Services ($250 USD):
+ Five equal installments (20% / $50 USD each), due after Days 1, 2, 3, 4, and 5 of completed live training. Dedicated support (5 days) is an additional $50 USD due after 5 days of support.
 
 - Support Period Milestones:
  Support installments are strictly zero upfront, due only after verifying completed assistance, Q&A, code reviews, and written materials licensed under Apache 2.0.
@@ -157,7 +157,7 @@ Graduates emerge operating as high-leverage solo powerhouses
 ### 7. What is the investment and structure for Personal Training?
 *Personal:
  Pricing Offer · FAQ #24*  
-Personal Training is $1,000 USD in Tier 1 for 40 days total (20 days training, + 20 days guidance,
+Personal Training is $2,500 USD in Tier 1 for 60 days total (30 days training, + 30 days guidance,
  Q&A and written guides). Strictly for 1 person only. Clients are encouraged to choose services
  relevant to their work or interests.
 
@@ -165,8 +165,8 @@ Personal Training is $1,000 USD in Tier 1 for 40 days total (20 days training, +
  (multi-tier approvals, vendor compliance, multi-tenant sandboxes) disappears entirely, moving
  directly at founder speed.
 
-- 195-Country Parity Scaled: The $1,000 baseline cascades through all 6 Purchasing
- Power Parity tiers, scaling from $1,000 in Tier 1 down to $100 in Tier 6.
+- 195-Country Parity Scaled: The $2,500 baseline cascades through all 6 Purchasing
+ Power Parity tiers, scaling from $2,500 in Tier 1 down to $250 in Tier 6.
 
 - Tailored Focus: Clients select specific tools and architectures relevant to their
  workflows (local LLMs, Claude agent teams, Gemini agents, workflow automation, and custom tooling)
@@ -244,23 +244,23 @@ Purchasing Power Parity applies unconditionally to Personal Training across six 
 
 - Tier 1: World Bank High-Income Economies (USA, Canada, UK, Germany, France, Poland, Czech
  Republic, Hungary, Greece, Romania, Japan, South Korea, Singapore, Australia, Chile, UAE, Saudi
- Arabia): $1,000 USD rate (100% standard).
+ Arabia): $2,500 USD rate (100% standard).
 
 - Tier 2: Upper-Middle-Income Economies (Brazil, Mexico, Colombia, Argentina, Peru, Ecuador,
  Guatemala, Türkiye, Malaysia, Thailand, Indonesia, South Africa, Vietnam, the Philippines, Sri
- Lanka): $750 USD rate (25% parity discount).
+ Lanka): $1,875 USD rate (25% parity discount).
 
 - Tier 3: Lower-Middle & Low-Income Economies (India, Bangladesh, Pakistan, Nepal,
  Bhutan, Kenya, Nigeria, Ghana, Egypt, Morocco, Tanzania, Bolivia, Cambodia, Laos, Myanmar,
- Ethiopia, Uganda, Rwanda): $500 USD rate (50% parity discount).
+ Ethiopia, Uganda, Rwanda): $1,250 USD rate (50% parity discount).
 
-- Tier 4: Early-Stage Startups (<$1M Funding): $500 USD rate (50% flat startup
+- Tier 4: Early-Stage Startups (<$1M Funding): $1,250 USD rate (50% flat startup
  discount).
 
-- Tier 5: Academia, Researchers & Non-Profits: $250 USD rate (75% academic
+- Tier 5: Academia, Researchers & Non-Profits: $625 USD rate (75% academic
  discount).
 
-- Tier 6: Crisis-Affected & Under-Resourced Regions: $100 USD rate (Custom
+- Tier 6: Crisis-Affected & Under-Resourced Regions: $250 USD rate (Custom
  subsidized quote / nominal honorarium).
 
 Tiers follow the current World Bank income classification, updated each July.
@@ -281,30 +281,30 @@ No. Personal Training is strictly for one person only (private 1-on-1
  private local models, and personal productivity workflow.
 
 - Business Training for Teams: If you wish to train a founding team, corporate
- department, or developer cohort, explore our Business Training ($2,000 USD for 40
+ department, or developer cohort, explore our Business Training ($2,500 USD for 60
  Days),
- which covers up to 20 participants in its fixed base rate (with additional seats at $100/head scaled
- by parity).
+ which covers up to 10 participants in its fixed base rate (with additional seats at $250/head scaled
+ by parity up to 20 seats max).
 
 ---
 
-### 11. What is the structure of Personal AI Training, and how do the 20 days of training
- plus 20 days of included support work?
+### 11. What is the structure of Personal AI Training, and how do the 30 days of training
+ plus 30 days of included support work?
 *Personal:
  20+20 Cadence · FAQ #28*  
 Personal AI Transformation is structured as an intensive two-phase acceleration program strictly for
- one person only: 20 days of intensive 1-on-1 sprint training drawing on the
+ one person only: 30 days of intensive 1-on-1 sprint training drawing on the
  full 16-service catalogue (you choose the focus areas relevant to your work), immediately
- followed by 20 days of included support with daily questions and doubts clarification, and
- guidance, assistance, and written guides licensed under Apache 2.0 (total 40-day
+ followed by 30 days of included support with daily questions and doubts clarification, and
+ guidance, assistance, and written guides licensed under Apache 2.0 (total 60-day
  experience).
 
-- Phase 1 (Days 1-20) · Intensive 1-on-1 Training: Direct
+- Phase 1 (Days 1-30) · Intensive 1-on-1 Training: Direct
  pair-programming covering personal AI workflows, private local LLMs (Ollama/vLLM), Claude agent
  teams, autonomous agent loops, custom MCP servers, AI budget ceilings, and AI-assisted TDD.
 
-- Phase 2 (Days 21-40) · 20 Days Included Support & Daily Doubts Clarification:
- 20 consecutive business days of direct support, daily questions and doubts clarification as you
+- Phase 2 (Days 31-60) · 30 Days Included Support & Daily Doubts Clarification:
+ 30 consecutive business days of direct support, daily questions and doubts clarification as you
  execute daily
  work, plus access to guidance, assistance, implementation, Q&A, and written guides.
 
@@ -315,7 +315,7 @@ Personal AI Transformation is structured as an intensive two-phase acceleration 
 - Apache 2.0 Licensing: All synthesized custom code, agent templates, written
  guides, and configuration runbooks fall under permissive Apache 2.0 licensing.
 
-Our explicit guarantee: 20 days of intensive instruction plus 20 days of included daily doubts
+Our explicit guarantee: 30 days of intensive instruction plus 30 days of included daily doubts
  clarification and guides ensures immediate, compounding ROI in your daily work.
 
 ---
@@ -349,7 +349,7 @@ Graduates substantially multiply their development velocity and project capacity
 *Recipient:
  Freshers · FAQ #02*  
 Freshers and recent computer science graduates often experience a steep disconnect between theoretical
- academic models and production-grade engineering. Our 40-day intensive (20 days live training + 20
+ academic models and production-grade engineering. Our 60-day intensive (30 days live training + 30
  days support) bridges this chasm by
  instilling disciplined AI-assisted engineering habits from day one.
 
@@ -508,7 +508,7 @@ Entrepreneurs build scalable, highly profitable digital businesses without needi
 
 ---
 
-### 20. How does the 40-day intensive program multiply delivery velocity for seed and
+### 20. How does the 60-day intensive program multiply delivery velocity for seed and
  Series A startups?
 *Company:
  Startups · FAQ #09*  
@@ -604,7 +604,7 @@ Global MNCs gain a consistent, world-class standard of agentic software engineer
  quota and 30-day training plus 30-day support guarantee cover?
 *Pricing:
  Business Guarantee · FAQ #13*  
-Our Business Training bookings feature a fixed base investment of $2,000 USD covering up to 10 participants for 60 days (30 days training + 30 days guidance, assistance, and written guides licensed under Apache 2.0).
+Our Business Training bookings feature a fixed base investment of $2,500 USD covering up to 10 participants for 60 days (30 days training + 30 days guidance, assistance, and written guides licensed under Apache 2.0).
  There are no hidden licensing royalties or hourly surprise fees.
 
 - 30 Days Live Training Sprint: 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day.
@@ -615,8 +615,8 @@ Our Business Training bookings feature a fixed base investment of $2,000 USD cov
 - Complete Digital Assets & Repos: Architecture blueprints, prompt design
  handbooks, and reproducible starter repositories included under Apache 2.0.
 
-- Up to 20 Learners Included: Base fee covers up to 20 participants. Additional
- seats scale transparently at $100 USD per head (adjusted by country parity tier).
+- Up to 10 Learners Included: Base fee covers up to 10 participants. Additional
+ seats scale transparently at $250 USD per head (adjusted by country parity tier) up to a strict maximum of 20 seats.
 
 - Apache 2.0 Open Licensing: Unrestricted commercial use, modification, and
  deployment with attribution.
@@ -630,22 +630,22 @@ This 30+30 dual guarantee ensures your organization achieves lasting capability 
 *Pricing:
  Scale-Out · FAQ #14*  
 When a team desires to include more than 10 participants in a single Business Training cohort, pricing
- scales simply, transparently, and predictably: $200 USD per additional seat.
+ scales simply, transparently, and predictably: $250 USD per additional seat up to a strict maximum of 20 seats.
 
 - Parity Discounts Apply Directly: The qualifying country parity multiplier applies
- to the $100 per-head fee as well.
+ to the $250 per-head fee as well.
 
-- Tier 1 (Standard): $200 USD per additional participant.
+- Tier 1 (Standard): $250 USD per additional participant.
 
-- Tier 2 (25% Parity Discount): $75 USD per additional participant (0.75X).
+- Tier 2 (25% Parity Discount): $188 USD per additional participant (0.75X).
 
-- Tier 3 & Tier 4 (50% Parity / Startup Discount): $50 USD per additional
+- Tier 3 & Tier 4 (50% Parity / Startup Discount): $125 USD per additional
  participant (0.50X).
 
-- Tier 5 (75% Academia / Non-Profit Discount): $25 USD per additional
+- Tier 5 (75% Academia / Non-Profit Discount): $63 USD per additional
  participant (0.25X).
 
-- Tier 6 (Radical Equity / Subsidized): $10 USD / subsidized micro-rates evaluated
+- Tier 6 (Radical Equity / Subsidized): $25 USD / subsidized micro-rates evaluated
  case-by-case.
 
 Every participant receives full access to digital runbooks, sandboxes, post-training support, and the
@@ -683,11 +683,11 @@ Response SLA: 7 days reply, 30 days start. Remote only worldwide.
 Yes, absolutely. Clients have complete freedom to pick and choose individual services
  from our 16-service catalogue without committing to a full multi-week transformation package.
 
-- Individual / Personal Pricing: $200 USD per service strictly for
+- Individual / Personal Pricing: $250 USD per service strictly for
  1 person only (private 1-on-1 sprint).
 
-- Business / Organization Pricing: $200 USD per service for up to
- 10 team participants (additional seats at $200 USD per seat).
+- Business / Organization Pricing: $250 USD per service for up to
+ 10 team participants (additional seats at $250 USD per seat up to a maximum of 10 seats).
 
 - Delivery Cadence: Every individual service includes 5 days of live,
  hands-on engineering training followed by 5 days of dedicated operational support
@@ -707,10 +707,10 @@ Individual service picks allow teams to solve high-priority architectural bottle
 Yes. Parity pricing is universally available for all service pricing across our
  entire offering catalogue and across all 195 countries.
 
-- Individual Pick Parity Rates ($200 Base): Tier 1 (100%): $200 | Tier 2 (25% off): $150 | Tier 3 & 4 (50% off): $100 | Tier 5 (75% off): $50 | Tier 6 (Subsidized): $20 USD.
+- Individual Pick Parity Rates ($250 Base): Tier 1 (100%): $250 | Tier 2 (25% off): $187 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $62 | Tier 6 (Subsidized): $25 USD.
 
-- Business Pick Parity Rates ($200 Base): Tier 1 (100%): $200 | Tier 2 (25% off):
- $150 | Tier 3 & 4 (50% off): $100 | Tier 5 (75% off): $50 | Tier 6 (Subsidized): $20 USD.
+- Business Pick Parity Rates ($250 Base): Tier 1 (100%): $250 | Tier 2 (25% off):
+ $188 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $63 | Tier 6 (Subsidized): $25 USD.
 
 - Transparent Application: Select your country or entity category in our
  interactive pricing calculator to instantly calibrate and lock in your parity rate.
@@ -871,8 +871,8 @@ Qualification for Tier 5 (75% Parity Discount: $500 USD for Flagship Business, $
  prominent public-interest open-source software libraries, research labs, or non-commercial AI
  evaluation initiatives.
 
-- Additional seats: Tier 5 cohorts get the 75% discount on extra seats too: $25
- per additional participant instead of the standard $100.
+- Additional seats: Tier 5 cohorts get the 75% discount on extra seats too: $63
+ per additional participant instead of the standard $250.
 
 Response SLA: 7 days reply, 30 days start. Remote only worldwide.
 
@@ -1023,36 +1023,23 @@ Your team retains total architectural sovereignty, effortlessly adopting new fro
 
 ---
 
-### 42. What is the day-by-day cadence and structure of a 40-day flagship training
+### 42. What is the day-by-day cadence and structure of a 60-day flagship training
  contract?
 *Contract:
- 20-Day Live Training (40 Days Total) · FAQ #32*  
-Each Flagship training contract spans 40 business days (Mon-Fri, excluding weekends),
- structured into 20 days of live immersive training (4 hours per day, 80 live hours total) followed by
- 20 days of included ongoing support and implementation guidance:
+ 30-Day Live Training (60 Days Total) · FAQ #32*  
+Each Flagship training contract spans 60 days total (Mon-Fri, excluding weekends),
+ structured into 30 days of live immersive training (4 hours per day, 120 live hours total) followed by
+ 30 days of dedicated ongoing support and implementation guidance:
 
-- Week 1 (Days 1-5) - Architectural Assessment, Toolchains & Sandboxes: System
- discovery, tooling verification, prompt engineering design patterns, and Claude agent reasoning loop
- primitives.
+- Phase 1 (Days 1-30) - 30 Days of Live Immersive Engineering & Leadership Training:
+ Architectural assessment, secure developer sandboxes, Claude Code CLI, custom MCP servers, local LLM serving (vLLM/Ollama),
+ AI-assisted TDD, multi-agent swarms, hard budget governance, and Apache 2.0 licensing handover (4 hours per day, 120 hours total).
 
-- Week 2 (Days 6-10) - Agent Scaffolding, Skills & MCP Servers: Claude Code
- CLI, Claude desktop and computer-use features, custom capability Skills, Model Context Protocol
- (MCP) servers, and hierarchical agent teams.
-
-- Week 3 (Days 11-15) - Local LLM Clusters, OpenCode & AI-Assisted TDD:
- High-throughput local model serving (vLLM/Ollama), OpenCode model routing, test-driven hallucination
- prevention, and guardrails.
-
-- Week 4 (Days 16-20) - Hard Budget Governance, Automated Evals & Handover:
- Token spend caps, circuit breakers, Ragas/DeepEval benchmarks, capstone live verification, and
- Apache 2.0
- licensing handover.
-
-- Phase 2 (Days 21-40) - 20 Days Included Ongoing Support: Dedicated asynchronous
+- Phase 2 (Days 31-60) - 30 Days Included Ongoing Support: Dedicated asynchronous
  advisory,
  daily questions and doubts clarification, PR code reviews, and implementation assistance.
 
-Participants conclude the 40-day program with fully operational, sovereign multi-agent systems
+Participants conclude the 60-day program with fully operational, sovereign multi-agent systems
  running in production.
 
 ---
@@ -1262,22 +1249,21 @@ Engineering leadership gains total financial predictability over company-wide AI
 Every service engagement is governed by an explicit duration and included support guarantee tailored
  to organizational scale:
 
-- Flagship Business AI Training: Strictly 20 days of live intensive
+- Flagship Business AI Training: Strictly 30 days of live intensive
  training AND
- 20 days of included support (total 40 days of coverage, 4 hours per day, 80 live training
- hours total), covering up to 20 participants (with additional seats at $100/head scaled by parity).
- Week 1: Architectural Scoping & Sandboxes; Week 2: Core Pipeline & Agent Orchestration; Week
- 3: Local LLMs & Test-Driven Automation; Week 4: Production Handover & Apache 2.0 Licensing,
- followed by 20 business days (excluding weekends) of technical assistance and doubt resolution.
+ 30 days of included support (total 60 days of coverage, 4 hours per day, 120 live training
+ hours total), covering up to 10 participants (with additional seats at $250/head scaled by parity, up to a maximum of 20 seats).
+ Phase 1: Architectural Scoping, Toolchains, Agent Orchestration, Local LLMs, AI-Assisted TDD, Production Handover & Apache 2.0 Licensing,
+ followed by 30 business days (excluding weekends) of technical assistance and doubt resolution.
 
-- Flagship Personal AI Training: Strictly 20 days of intensive 1-on-1
+- Flagship Personal AI Training: Strictly 30 days of intensive 1-on-1
  training
- drawing on the full 16-service catalogue AND 20 days of included daily work support
- (total 40 days of coverage, 4 hours per day, 80 live training hours total) for 1 person only.
+ drawing on the full 16-service catalogue AND 30 days of included daily work support
+ (total 60 days of coverage, 4 hours per day, 120 live training hours total) for 1 person only.
 
 - Individual Pick Services: Strictly 5 days of intensive live training AND
  5 days of included support (total 10 days of coverage, 4 hours per day, 20 live training
- hours total), priced at $200 USD (Business, 20 seats) or $100 USD (Personal, 1 person) in Tier 1
+ hours total), priced at $250 USD (Business, up to 10 seats, additional seats at $250/seat) or $250 USD (Personal, 1 person) in Tier 1
  with universal parity scaling.
 
 - Free Concurrency: All business services and programs can freely overlap or run

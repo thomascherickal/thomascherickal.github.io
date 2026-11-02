@@ -229,52 +229,68 @@ class ExpertSynchronizer:
         self.sync_all()
         return True
 
-    def generate_reference_dictionaries(self):
-        """Generates domain-specific reference JSONs and the master aggregated dictionary."""
+    DOMAIN_FILES = {
+        "pricing": "pricing_references.json",
+        "business_services": "business_services_references.json",
+        "personal_services": "personal_services_references.json",
+        "tiers": "tiers_references.json",
+        "claude": "claude_references.json",
+        "gemini": "gemini_references.json",
+        "publications": "publications_references.json",
+        "config": "config_references.json",
+        "faqs": "faqs_references.json",
+    }
+    DOMAIN_DATA_SOURCE = {
+        "pricing": "data/pricing.json",
+        "business_services": "data/business-services.json",
+        "personal_services": "data/personal-services.json",
+        "tiers": "data/tiers.json",
+        "claude": "data/claude.json",
+        "gemini": "data/gemini.json",
+        "publications": "data/publications.json",
+        "config": "data/config.json",
+        "faqs": "data/faqs.json",
+    }
+
+    @staticmethod
+    def classify_rule_field(field):
+        """Maps a rule-tracked field key to its data domain."""
+        if "pricing" in field or "flagship" in field or "seats" in field or "calculator" in field:
+            return "pricing"
+        if "personal_service" in field:
+            return "personal_services"
+        if "business_service" in field:
+            return "business_services"
+        if "tier" in field:
+            return "tiers"
+        if "claude" in field:
+            return "claude"
+        if "gemini" in field:
+            return "gemini"
+        if "publication" in field:
+            return "publications"
+        if "email" in field or "config" in field:
+            return "config"
+        if "faq" in field:
+            return "faqs"
+        return "pricing"
+
+    def scan_all_locations(self):
+        """Runs the read-only exhaustive scanner over every target document."""
+        from reference_scanner import scan_repository
+        scanned = scan_repository(self.discover_target_files(), self.data_dir)
+        print(f"  -> Exhaustive scan located {sum(len(v) for v in scanned.values())} term occurrences "
+              f"across {len(self.discover_target_files())} documents")
+        return scanned
+
+    def _write_reference_files(self, domain_refs):
+        """Writes per-domain and master reference JSON files (never touches data/)."""
         timestamp = datetime.now().isoformat()
-        total_tracked = len(self.engine.tracked_occurrences)
-
-        # Domain map
-        domain_files = {
-            "pricing": "pricing_references.json",
-            "business_services": "business_services_references.json",
-            "personal_services": "personal_services_references.json",
-            "tiers": "tiers_references.json",
-            "claude": "claude_references.json",
-            "gemini": "gemini_references.json",
-            "publications": "publications_references.json",
-            "config": "config_references.json",
-            "faqs": "faqs_references.json",
-        }
-
-        domain_refs = {k: [] for k in domain_files}
-
-        for ref in self.engine.tracked_occurrences:
-            field = ref.get("field_key", "")
-            if "pricing" in field or "flagship" in field or "seats" in field or "calculator" in field:
-                domain_refs["pricing"].append(ref)
-            elif "personal_service" in field:
-                domain_refs["personal_services"].append(ref)
-            elif "business_service" in field:
-                domain_refs["business_services"].append(ref)
-            elif "tier" in field:
-                domain_refs["tiers"].append(ref)
-            elif "claude" in field:
-                domain_refs["claude"].append(ref)
-            elif "gemini" in field:
-                domain_refs["gemini"].append(ref)
-            elif "publication" in field:
-                domain_refs["publications"].append(ref)
-            elif "email" in field or "config" in field:
-                domain_refs["config"].append(ref)
-            elif "faq" in field:
-                domain_refs["faqs"].append(ref)
-            else:
-                domain_refs["pricing"].append(ref)
-
         self.domain_refs = domain_refs
-        for domain, fname in domain_files.items():
+        all_refs = []
+        for domain, fname in self.DOMAIN_FILES.items():
             refs = domain_refs[domain]
+            all_refs.extend(refs)
             out_dict = {
                 "metadata": {
                     "domain": domain,
@@ -284,25 +300,48 @@ class ExpertSynchronizer:
                 },
                 "all_references": refs
             }
-            out_path = os.path.join(SCRIPT_DIR, fname)
-            save_json(out_path, out_dict)
+            save_json(os.path.join(SCRIPT_DIR, fname), out_dict)
             print(f"  -> Wrote {fname} ({len(refs)} references)")
 
-        # Master Dictionary
         master_dict = {
             "metadata": {
                 "engine": "nlp-fuzzy-expert",
                 "version": "1.0.0",
                 "architecture": "Expert System (Forward Chaining) + Fuzzy Logic + NLP",
-                "total_references_tracked": total_tracked,
+                "total_references_tracked": len(all_refs),
                 "last_synchronized": timestamp
             },
             "by_domain": {k: len(v) for k, v in domain_refs.items()},
-            "all_references": self.engine.tracked_occurrences
+            "all_references": all_refs
         }
-        master_path = os.path.join(SCRIPT_DIR, "references_dictionary.json")
-        save_json(master_path, master_dict)
-        print(f"  -> Master Dictionary generated: references_dictionary.json ({total_tracked} total references)")
+        save_json(os.path.join(SCRIPT_DIR, "references_dictionary.json"), master_dict)
+        print(f"  -> Master Dictionary generated: references_dictionary.json ({len(all_refs)} total references)")
+
+    def generate_reference_dictionaries(self):
+        """Generates domain-specific reference JSONs and the master aggregated dictionary.
+        Combines rule-tracked occurrences with the exhaustive read-only location scan."""
+        domain_refs = {k: [] for k in self.DOMAIN_FILES}
+        for ref in self.engine.tracked_occurrences:
+            domain = self.classify_rule_field(ref.get("field_key", ""))
+            rec = dict(ref)
+            rec["match_type"] = "rule"
+            rec["data_source"] = self.DOMAIN_DATA_SOURCE[domain]
+            domain_refs[domain].append(rec)
+        for domain, recs in self.scan_all_locations().items():
+            domain_refs[domain].extend(recs)
+        self._write_reference_files(domain_refs)
+
+    def refresh_references_only(self):
+        """Scan-only mode: re-scans all pages and rewrites reference JSONs without
+        modifying any page or any data/ file. Existing rule-tracked records are kept."""
+        domain_refs = {k: [] for k in self.DOMAIN_FILES}
+        for domain, fname in self.DOMAIN_FILES.items():
+            existing = load_json(os.path.join(SCRIPT_DIR, fname)).get("all_references", [])
+            domain_refs[domain] = [r for r in existing if r.get("match_type", "rule") == "rule"]
+        for domain, recs in self.scan_all_locations().items():
+            domain_refs[domain].extend(recs)
+        self._write_reference_files(domain_refs)
+        self.generate_markdown_reports()
 
     def generate_markdown_reports(self):
         """Generates domain-specific markdown reports under nlp-fuzzy-expert/."""
