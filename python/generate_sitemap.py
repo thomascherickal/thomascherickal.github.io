@@ -66,7 +66,7 @@ GEMINI_GUIDES = [
     "google/google-antigravity-ide.html",
     "google/google-gemini-deep-think.html",
     "google/google-gemini-desktop.html",
-    "google/google-gemini-3-models.html",
+    "google/google-deepmind.html",
     "google/google-gemini-spark.html",
     "google/google-gemini-notebook.html",
     "google/google-gemma.html",
