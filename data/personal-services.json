@@ -3,23 +3,7 @@
     "title": "Personal & Professional AI Services",
     "directory": "personal-services",
     "overview_url": "all-personal-services.html",
-    "flagship_url": "personal-ai-training.html",
-    "total_services": 12,
-    "pricing_structure": {
-      "flagship_base_usd": 1000.0,
-      "flagship_duration_days": 40,
-      "flagship_live_days": 20,
-      "flagship_support_days": 20,
-      "individual_service_base_usd": 100.0,
-      "individual_service_duration_days": 10,
-      "individual_service_live_days": 5,
-      "individual_service_support_days": 5,
-      "included_seats": 1,
-      "additional_seats_allowed": false,
-      "hours_per_day": 4,
-      "advance_payment": "$0 upfront",
-      "licensing": "Apache 2.0"
-    }
+    "flagship_url": "personal-ai-training.html"
   },
   "services": [
     {
@@ -28,7 +12,6 @@
       "category": "ENTERPRISE AI",
       "name": "Generative AI Transformation",
       "slug": "personal-service-generative-ai-transformation.html",
-      "path": "personal-services/personal-service-generative-ai-transformation.html",
       "description": "Transform personal workflows and consulting practices from manual chatbot prompts to autonomous, coordinated teams of Claude agents.",
       "role_chip": "Personal Agent Workflows",
       "badge_class": "cyan"
@@ -39,7 +22,6 @@
       "category": "COST CONTROL",
       "name": "Local LLMs & Cost Slashing",
       "slug": "personal-service-local-llms-cost-slashing.html",
-      "path": "personal-services/personal-service-local-llms-cost-slashing.html",
       "description": "Eliminate cloud API dependencies and recurring costs by self-hosting quantized open-weights models locally with Ollama and vLLM.",
       "role_chip": "Sovereign Local Serving",
       "badge_class": "gold"
@@ -47,10 +29,9 @@
     {
       "id": "personal-service-03",
       "number": "03",
-      "category": "MULTI-AGENT SWARMS",
+      "category": "MULTI-AGENT ORCHESTRATION",
       "name": "Claude Agent Orchestration",
       "slug": "personal-service-ai-agents-orchestration.html",
-      "path": "personal-services/personal-service-ai-agents-orchestration.html",
       "description": "Build single-operator multi-agent swarms with orchestrator loops, subagent delegation, automated evaluation, and budget limits.",
       "role_chip": "1-Person Swarms",
       "badge_class": "cyan"
@@ -59,9 +40,8 @@
       "id": "personal-service-04",
       "number": "04",
       "category": "OPEN AUTONOMOUS AGENTS",
-      "name": "Hermes Agent Training",
+      "name": "Agentic Assistant Training",
       "slug": "personal-service-agentic-ai-systems.html",
-      "path": "personal-services/personal-service-agentic-ai-systems.html",
       "description": "Run private, unaligned autonomous agent loops on local hardware with open-weights Hermes models and structured tool execution.",
       "role_chip": "Private Agent Loops",
       "badge_class": "gold"
@@ -72,7 +52,6 @@
       "category": "NO-CODE & LOW-CODE",
       "name": "Personal Goals Self-Authoring",
       "slug": "personal-service-goals-self-authoring.html",
-      "path": "personal-services/personal-service-goals-self-authoring.html",
       "description": "Structure personal goals, track career milestones, and navigate career transitions with structured self-authoring frameworks, journaling templates, and actionable roadmaps.",
       "role_chip": "Goal Setting & Growth",
       "badge_class": "cyan"
@@ -83,7 +62,6 @@
       "category": "GOVERNANCE & LIMITS",
       "name": "AI Budget & Cost Control",
       "slug": "personal-service-ai-budget-cost-limits-training.html",
-      "path": "personal-services/personal-service-ai-budget-cost-limits-training.html",
       "description": "Enforce strict financial caps on personal developer API accounts, semantic caching, and local fallback routing to keep costs predictable.",
       "role_chip": "Budget Protection",
       "badge_class": "cyan"
@@ -94,7 +72,6 @@
       "category": "CODING AGENTS & TDD",
       "name": "AI Developer Training",
       "slug": "personal-service-ai-developer-training.html",
-      "path": "personal-services/personal-service-ai-developer-training.html",
       "description": "Elevate your developer practice with Claude Code CLI, test-driven prompt harnesses, autonomous debugging, and automated refactoring.",
       "role_chip": "Full-Stack Agency of 1",
       "badge_class": "cyan"
@@ -105,7 +82,6 @@
       "category": "AUTONOMOUS AGENT DESIGN",
       "name": "Advanced AI Agents",
       "slug": "personal-service-advanced-ai-agents.html",
-      "path": "personal-services/personal-service-advanced-ai-agents.html",
       "description": "Architect persistent, self-evaluating autonomous agents that execute long-horizon projects while you sleep.",
       "role_chip": "Long-Horizon Execution",
       "badge_class": "gold"
@@ -116,7 +92,6 @@
       "category": "CLAUDE ARCHITECTURE",
       "name": "Claude Advanced Training",
       "slug": "personal-service-claude-advanced-training.html",
-      "path": "personal-services/personal-service-claude-advanced-training.html",
       "description": "Build personal MCP servers, harness prompt caching for 90% savings, and integrate Claude directly into your development environment.",
       "role_chip": "Custom MCP Tooling",
       "badge_class": "gold"
@@ -124,10 +99,9 @@
     {
       "id": "personal-service-11",
       "number": "10",
-      "category": "ADVANCED GEMINI & AGY",
+      "category": "ADVANCED GEMINI",
       "name": "Gemini Advanced Training",
       "slug": "personal-service-gemini-advanced-training.html",
-      "path": "personal-services/personal-service-gemini-advanced-training.html",
       "description": "Implement Google Antigravity SDK workflows, structured schema extraction, and autonomous agent systems powered by Gemini.",
       "role_chip": "Google Agent SDK",
       "badge_class": "gold"
@@ -138,7 +112,6 @@
       "category": "KNOWLEDGE SYSTEMS",
       "name": "Continuous Learning & AI Second Brain",
       "slug": "personal-service-continuous-learning.html",
-      "path": "personal-services/personal-service-continuous-learning.html",
       "description": "Architect an autonomous personal knowledge engine using NotebookLM, Obsidian vector memory, active context retrieval, and automated research synthesis.",
       "role_chip": "Second Brain",
       "badge_class": "cyan"
@@ -149,7 +122,6 @@
       "category": "EXECUTIVE LIBERATION",
       "name": "Work-Life Balance & Autonomous Offloading",
       "slug": "personal-service-worklife-balance.html",
-      "path": "personal-services/personal-service-worklife-balance.html",
       "description": "Reclaim 15-20 hours weekly through autonomous inbox triage, biological focus time-blocking, automated task delegation, and cognitive load minimization.",
       "role_chip": "Executive Offloading",
       "badge_class": "gold"

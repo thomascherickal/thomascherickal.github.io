@@ -1,4 +1,4 @@
-# Gemini Spark
+# Gemini Spark: Lightweight High-Throughput Inference
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// AUTONOMOUS WORKSPACE COWORKER AGENT**  

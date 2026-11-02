@@ -49,11 +49,11 @@
 Rates are automatically indexed across 195 countries to ensure fair pricing worldwide across 6 Parity Tiers:
 
 ### Tier 1: High-Income
-*TIER 01 · HIGH-INCOME* - High-Income Economies & Global Business Hubs  
+*TIER 01 · HIGH-INCOME* - World Bank High-Income Economies & Global Enterprise Hubs  
 **Rate**: `100% Standard Rate` (0% DISCOUNT · BASELINE MULTIPLIER: 1.0X)  
 
 ### Upper-Middle-Income Economies
-*TIER 02 · UPPER-MIDDLE-INCOME ECONOMIES* - World Bank Upper-Middle-Income Digital Ecosystems & Regional Hubs  
+*TIER 02 · UPPER-MIDDLE-INCOME ECONOMIES* - World Bank Upper-Middle-Income Digital Ecosystems & Emerging Tech Hubs  
 **Rate**: `25% Parity Discount` (75% BASE RATE · BASELINE MULTIPLIER: 0.75X)  
 
 ### Lower-Middle & Low-Income Economies
@@ -61,7 +61,7 @@ Rates are automatically indexed across 195 countries to ensure fair pricing worl
 **Rate**: `50% Parity Discount` (50% BASE RATE · BASELINE MULTIPLIER: 0.50X)  
 
 ### Early-Stage Tech Startups
-*TIER 04 · EARLY-STAGE STARTUPS* - Global Pre-Seed, Seed & Bootstrapped Ventures (<$1M Raised)  
+*TIER 04 · EARLY-STAGE STARTUPS* - Global Pre-Seed, Seed & Bootstrapped Software Builders  
 **Rate**: `50% Startup Discount` (FLAT 50% OFF ALL PACKAGES · MULTIPLIER: 0.50X)  
 
 ### Universities, Labs & Non-Profits
@@ -69,7 +69,7 @@ Rates are automatically indexed across 195 countries to ensure fair pricing worl
 **Rate**: `75% Parity Discount` (25% BASE RATE · BASELINE MULTIPLIER: 0.25X)  
 
 ### Crisis-Affected & Under-Resourced Regions
-*TIER 06 · CRISIS-AFFECTED & UNDER-RESOURCED* - Custom Subsidized Pricing & Flexible Milestones  
+*TIER 06 · CRISIS-AFFECTED & UNDER-RESOURCED* - Crisis-Affected Regions, Displaced Builders & Under-Resourced Tech Collectives  
 **Rate**: `Custom Subsidized Quotes` (MICRO-RATES & UP TO 90%+ SUBSIDIZED RELIEF)  
 
 - [Check your country on the interactive calculator](pricing.html)

@@ -150,10 +150,11 @@ def build():
     print(f"\nBuild complete. Successfully updated {updated_count} HTML files.")
     
     try:
-        import sync_pricing
-        sync_pricing.sync_all_pricing()
+        sys.path.insert(0, os.path.join(REPO_DIR, "nlp-fuzzy-expert"))
+        from synchronizer import ExpertSynchronizer
+        ExpertSynchronizer().sync_all()
     except Exception as e:
-        print(f"Warning: Pricing sync step failed: {e}")
+        print(f"Warning: NLP-Fuzzy-Expert sync step failed: {e}")
 
     try:
         import sync_schemas

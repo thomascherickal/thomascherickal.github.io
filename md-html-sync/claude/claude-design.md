@@ -1,4 +1,4 @@
-# Claude Design: When a Sentence Replaces the Mouse
+# Claude Design: UI/UX Prototyping & Design Systems
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  

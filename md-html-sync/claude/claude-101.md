@@ -1,4 +1,4 @@
-# Claude 101: A Detailed Overview
+# Claude 101: Architecture, Features & Agentic Engineering
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  

@@ -1,4 +1,4 @@
-# Gemini Notebook
+# Gemini Notebook & Deep Research Grounding
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// GROUNDED COGNITION & SECOND BRAIN**  

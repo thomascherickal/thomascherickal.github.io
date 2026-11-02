@@ -1,16 +1,13 @@
-# Business Training: $2,000 for 40 Days (20d Training + 20d Guidance &
- Materials)
+# Business Training: $2,000 for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials)
 ## Thomas Cherickal - The Digital Futurist
 
-> **BUSINESS TRAINING · 40 DAYS (20 DAYS TRAINING + 20 DAYS GUIDANCE)**  
+> **BUSINESS TRAINING · 60 DAYS (30 DAYS TRAINING + 30 DAYS GUIDANCE)**  
 > **Your team receives tailored enablement across the full 12-service catalogue. Select the exact capabilities
  relevant to your technical stack, operations, and business goals:**
 
 ---
 
-Clients can choose our comprehensive 40-day organization-wide transformation at $2,000 USD (20 days live
- hands-on engineering training + 20 days guidance, Q&A and written guides), or pick individual services at
- $200 USD per service (5 days live training + 5 days dedicated support). Covers cohorts up to 20 participants,
+Clients can choose our comprehensive 60-day organization-wide transformation at $2,000 USD (30 days live hands-on engineering training + 30 days guidance, Q&A and written guides), or pick individual services at $200 USD per service (5 days live training + 5 days dedicated support). Covers cohorts up to 10 participants,
  with additional seats at $100 USD per seat. Clients are encouraged to choose services relevant to their work
  or interests. Purchasing Power Parity (PPP) is available for all service pricing across 195 countries.
 
@@ -22,24 +19,22 @@ Whether booking organization-wide Business Training or an intensive 1-on-1 Perso
 ### Business Training Flagship (Cohorts
  Up to 20)
 
-Guaranteed 20 days of comprehensive live instruction across engineering cohorts and leadership, followed
- immediately by 20 days of guidance, Q&A and written guides (delivered as 20 working days over 4 weeks with 8 - 10 recovery days, 4 hours per day). Covers up to 20
+Guaranteed 30 days of comprehensive live instruction across engineering cohorts and leadership, followed immediately by 30 days of guidance, Q&A and written guides (delivered as 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Covers up to 10
  participants (extra seats at $100 USD per seat). Clients are encouraged to choose services relevant to
  their work or interests.
 
 ### Personal Training Flagship (1
  Person Only)
 
-Guaranteed 20 days of intensive 1-on-1 instruction, followed immediately by 20 days of guidance,
- Q&A and written guides (delivered as 20 working days over 4 weeks with 8 - 10 recovery days, 4 hours per day). Strictly for one person only. Clients are encouraged to choose
+Guaranteed 30 days of intensive 1-on-1 instruction, followed immediately by 30 days of guidance, Q&A and written guides (delivered as 30 working days over 6 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Strictly for one person only. Clients are encouraged to choose
  services relevant to their work or interests.
 
 // BUSINESS VALUE PROPOSITION & RATIONALE
 
-## Why Business Training Is Structured at $2,000 for 40 Days
+## Why Business Training Is Structured at $2,000 for 60 Days
 
 For organizations, scaling AI across teams requires structured change management: aligning cross-functional
- teams of up to 20 participants, integrating business security standards, provisioning private isolated
+ teams of up to 10 participants, integrating business security standards, provisioning private isolated
  compute and local LLM clusters, and deploying automated developer testing pipelines.
 
 Traditional business consulting charges tens of thousands of dollars
@@ -48,8 +43,7 @@ Traditional business consulting charges tens of thousands of dollars
  agent swarms, implement test-driven coding agent workflows, and deploy private open-weight models that
  permanently reduce recurring API token expenditures.
 
-Business Training costs $2,000 in Tier 1 for 40 days (20 days live hands-on engineering training + 20 days
- guidance, Q&A and written guides). Covers up to 20 participants, with additional seats at $100 USD per
+Business Training costs $2,000 in Tier 1 for 60 days (30 days live hands-on engineering training + 30 days guidance, Q&A and written guides). Covers up to 10 participants, with additional seats at $200 USD per
  seat. Clients are encouraged to choose services relevant to their work or interests.
 
 // FULL-SPECTRUM BUSINESS MASTERY
@@ -123,8 +117,7 @@ Convert anonymous web traffic into sales-ready pipeline using conversational AI 
 ## Two-Phase Business Curriculum & Operational
  Roadmap
 
-20 days of comprehensive live instruction across engineering cohorts and leadership, followed immediately by
- 20 days of dedicated guidance, guides, and materials (delivered as 20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day):
+30 days of comprehensive live instruction across engineering cohorts and leadership, followed immediately by 30 days of dedicated guidance, guides, and materials (delivered as 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day):
 
 ### Generative AI Transformation & Architecture Audit
 
@@ -150,7 +143,7 @@ Deploying autonomous Hermes agents on internal servers with long-term skill memo
 
 Training engineering cohorts on terminal coding agents (Claude Code CLI, Google Antigravity), establishing rigorous test-driven AI verification loops, deploying autonomous competitive intelligence scrapers, and activating high-converting AI lead magnet pipelines.
 
-### 20 Days of Business Guidance, Team Architecture Reviews & Operational Materials
+### 30 Days of Business Guidance, Team Architecture Reviews & Operational Materials
 
 Following sprint instruction, your teams transition into production implementation with direct
  guidance from founder Thomas Cherickal for 20 consecutive working days (4 hours per day):
@@ -166,8 +159,7 @@ Following sprint instruction, your teams transition into production implementati
 
 ## Business Training Parity Pricing Matrix
 
-Business Training is $2,000 USD in Tier 1 for 40 days (20 days training + 20 days guidance, Q&A and
- written guides) for up to 20 participants. Clients are encouraged to choose services relevant to their work
+Business Training is $2,000 USD in Tier 1 for 60 days (30 days training + 30 days guidance, Q&A and written guides) for up to 10 participants. Clients are encouraged to choose services relevant to their work
  or interests. Parity multipliers apply globally:
 
 | Equity Tier | Qualifying Region / Profile | Discount | Milestone Rate |
@@ -184,5 +176,4 @@ Business Training is $2,000 USD in Tier 1 for 40 days (20 days training + 20 day
 ## Ready for Your Business AI Transformation?
 
 Engagements are scheduled on a first-come, first-served basis to ensure high engineering quality and dedicated
- senior architect oversight. Book today to lock in 20 days of comprehensive live instruction plus 20 days of
- included guidance and detailed materials (20 working days over 4 weeks with 8 - 10 recovery days, 4 hours per day) for up to 20 participants.
+ senior architect oversight. Book today to lock in 30 days of comprehensive live instruction plus 30 days of included guidance and detailed materials (30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day) for up to 10 participants.

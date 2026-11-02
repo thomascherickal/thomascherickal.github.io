@@ -1,4 +1,4 @@
-# Claude Features: Projects, Artifacts, Deep Research & Extensibility
+# Claude Frontier Features: Context, Speed & Tool Use
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  

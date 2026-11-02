@@ -1,4 +1,4 @@
-# AI Agent Orchestration with Claude: Running Many Agents at
+# Claude Multi-Agent Swarm Orchestration
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  

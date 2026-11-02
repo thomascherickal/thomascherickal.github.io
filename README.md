@@ -2,7 +2,7 @@
 ### Generative AI Consultant · AI Agent Architect · Early Quantum Systems Explorer
 
 <p align="center">
-  <a href="https://thomascherickal.github.io"><img src="https://img.shields.io/badge/Business%20Website-thomascherickal.github.io-38bdf8?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Business Website" /></a>
+  <a href="https://thedigitalfuturist.com"><img src="https://img.shields.io/badge/Business%20Website-thedigitalfuturist.com-38bdf8?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Business Website" /></a>
   <a href="https://github.com/thomascherickal/thomascherickal.github.io"><img src="https://img.shields.io/badge/Deployment-GitHub%20Pages-blue?style=for-the-badge&logo=githubpages&logoColor=white" alt="Deployment" /></a>
   <img src="https://img.shields.io/badge/Architecture-Zero--Framework%20HTML5%2FCSS3-00d26a?style=for-the-badge&logo=html5&logoColor=white" alt="Architecture" />
   <img src="https://img.shields.io/badge/Build%20Engine-Python%203.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.12" />
@@ -16,7 +16,7 @@
 > [!NOTE]
 > **Canonical Site & Profile Description**:  
 > *"Thomas Cherickal - Generative AI Consultant and The Digital Futurist."*  
-> **Official Business Website**: [https://thomascherickal.github.io](https://thomascherickal.github.io)
+> **Official Business Website**: [https://thedigitalfuturist.com](https://thedigitalfuturist.com)
 
 ---
 
@@ -26,7 +26,7 @@ Welcome! I am **Thomas Cherickal**, known online as **The Digital Futurist**.
 
 I operate an independent global consulting and workforce training practice engineered to guide businesses, startups, engineering teams, and executive leadership from isolated manual development and basic chat prompts into **autonomous, sovereign, AI-native businesses**.
 
-I specialize in **Claude Agent Orchestration**, **the Gemini AI Ecosystem**,**Autonomous Multi-Agent Swarms**, **Local LLM Cost Slashing (reducing inference bills by 60%–90%)**, **AI-Assisted Test-Driven Development (TDD)**, and **Early Quantum Computing Applications**.
+I specialize in **Claude Agent Orchestration**, **the Gemini AI Ecosystem**, **Autonomous Multi-Agent Swarms**, **Local LLM Cost Slashing (reducing inference bills by 60%-90%)**, **AI-Assisted Test-Driven Development (TDD)**, and **Early Quantum Computing Applications**.
 
 Every workshop, advisory sprint, and architecture roadmap I design follows one unbreakable rule: **I do not sell hype or trivial chatbot wrappers.** I train individuals, freshers, developers, staff members, engineering managers, and CXOs to build, inspect, and deploy production-grade agent swarms and sovereign local AI pipelines inside their own secure infrastructure.
 
@@ -57,11 +57,11 @@ mindmap
       Tier 4 50% Off Early Startups
       Tier 5 75% Off Academia & Non-Profits
       Tier 6 Custom Up to 90%+ Relief
-    10-Day Training Model
+    60-Day Training Model
       Hands-On Coding Immersion
-      Fixed Rate up to 20 Seats
-      20 Days Post-Training Support
-      20 Days Free Doubts Advisory
+      Fixed Rate up to 10 Seats
+      30 Days Live Training
+      30 Days Post-Training Support
       Custom Alumni Discord Community
       100% Client IP Ownership
 ```
@@ -89,7 +89,7 @@ I maintain an active, verified presence across **10+ major developer, research, 
 ### Business Website & Domains
 | Platform | URL | Category / Purpose |
 | :--- | :--- | :--- |
-| **Business Website** | [thomascherickal.github.io](https://thomascherickal.github.io) | **Official Practice & Portfolio Hub** |
+| **Business Website** | [thedigitalfuturist.com](https://thedigitalfuturist.com) | **Official Practice & Portfolio Hub** |
 | **Personal Domain** | [thomascherickal.com](https://thomascherickal.com) | Personal Brand & Executive Portal |
 
 ### Core Developer & Social Profiles
@@ -103,6 +103,7 @@ I maintain an active, verified presence across **10+ major developer, research, 
 ### Technical Writing & Research Publications
 | Publication | URL | Focus Areas |
 | :--- | :--- | :--- |
+| **Dev.to** | [dev.to/thomascherickal](https://dev.to/thomascherickal) | Technical software engineering, web architecture & AI agent guides |
 | **HackerNoon** | [hackernoon.com/u/thomascherickal](https://hackernoon.com/u/thomascherickal) | In-depth AI engineering deep dives (Top Writer) |
 | **Medium** | [thomascherickal.medium.com](https://thomascherickal.medium.com) | Thought leadership on agentic software development |
 | **Hashnode** | [thomascherickal.hashnode.dev](https://thomascherickal.hashnode.dev) | Developer guides, code snippets & technical tutorials |
@@ -150,27 +151,28 @@ I maintain an active, verified presence across **10+ major developer, research, 
 
 ## Comprehensive Website Architecture
 
-My portfolio website ([thomascherickal.github.io](https://thomascherickal.github.io)) is an independently engineered static web property comprising **50 interconnected HTML pages** backed by an automated Python build and bidirectional Markdown synchronization engine:
+My portfolio website ([thomascherickal.github.io](https://thomascherickal.github.io)) is an independently engineered static web property comprising **65 interconnected HTML pages** backed by an automated Python build, NLP-Fuzzy-Expert data synchronization, and bidirectional Markdown mirrors:
 
 ```mermaid
 graph TD
   subgraph Presentation Layer
     CorePages["10 Core Pages<br/>(Home, Articles, Writing, Expertise, FAQs, Pricing...)"]
-    ClaudePages["14 Claude Agent Suite Pages<br/>(101, Code, Connectors, Cowork, MCP, Design...)"]
-    GeminiPages["10 Google Gemini Ecosystem Pages<br/>(Agents, Studio, IDE, Deep Research, Flow...)"]
-    ServicePages["16 Transformation Services<br/>(Local LLMs, Swarms, Quantum, Budgets, Dev...)"]
+    ClaudePages["12 Claude Agent Suite Pages<br/>(101, Code, Connectors, Cowork, MCP, Design...)"]
+    GeminiPages["12 Google Gemini Ecosystem Pages<br/>(Agents, Studio, IDE, Deep Research, Flow...)"]
+    ServicePages["24 Transformation Services<br/>(12 Business Services + 12 Personal Services)"]
   end
 
   subgraph Automation Pipeline
     Build["python3 python/build_components.py"]
-    Pricing["python3 python/sync_pricing.py"]
+    NLPExpert["python3 nlp-fuzzy-expert/synchronizer.py"]
     Sync["python3 python/md_html_sync.py"]
+    Tests["python3 python/run_tests.py"]
   end
 
   subgraph Distribution & Discovery
     Schema["schema/home-schema.json (JSON-LD Master Graph)"]
     LLMSTxt["llms.txt (Direct Agent Ingestion)"]
-    Markdown["md-html-sync/ (50 Clean .md Mirrors)"]
+    Markdown["md-html-sync/ (65 Clean .md Mirrors)"]
     Edge["GitHub Pages Static Edge CDN"]
   end
 
@@ -178,11 +180,11 @@ graph TD
   ClaudePages --> Build
   GeminiPages --> Build
   ServicePages --> Build
-  Build --> Pricing
-  Build --> Sync
-  Pricing --> Schema
-  Pricing --> LLMSTxt
-  Sync --> Markdown
+  Build --> NLPExpert
+  NLPExpert --> Schema
+  NLPExpert --> LLMSTxt
+  NLPExpert --> Markdown
+  NLPExpert --> Tests
   Build --> Edge
 ```
 
@@ -195,16 +197,16 @@ graph TD
 | **Expertise** | [`expertise.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/expertise.html) | Technical radar detailing proficiencies across languages, frameworks, inference & quantum. |
 | **Personal AI** | [`personal-ai-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/personal-ai-training.html) | 1-on-1 private intensive AI transformation and pair programming. |
 | **Pricing & Parity** | [`pricing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/pricing.html) | 100% transparent rates and interactive 6-Tier Parity calculator across 195 countries. |
-| **FAQs** | [`faqs.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/faqs.html) | Comprehensive technical FAQs covering recipient roles, organization sizes, 20-seat quotas & parity. |
+| **FAQs** | [`faqs.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/faqs.html) | Comprehensive technical FAQs covering recipient roles, organization sizes, seat quotas & parity. |
 | **Collaborate** | [`collaboration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/collaboration.html) | Operating principles, mutual NDAs, milestone billing terms & project kickoff process. |
 | **Contact** | [`contact.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/contact.html) | Secure honeypot-protected inquiry portal connected to FormSubmit with one-week response time. |
 | **404 Latent Space** | [`404.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/404.html) | Context-window exhaustion themed fallback redirecting visitors back to active pages. |
 
-### 2. The 16 Standalone Business Transformation Services
+### 2. Standalone Business Transformation Services
 | Service | File | Transformation Objective |
 | :--- | :--- | :--- |
 | **Generative AI Transformation** | [`business-services/business-service-generative-ai-transformation.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-generative-ai-transformation.html) | Transitioning from basic chatbots to coordinated autonomous agent swarms. |
-| **Local LLMs & Cost Slashing** | [`business-services/business-service-local-llms-cost-slashing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-local-llms-cost-slashing.html) | Deploying private open-weight models (vLLM, Ollama) to slash token expenses by 60%–90%. |
+| **Local LLMs & Cost Slashing** | [`business-services/business-service-local-llms-cost-slashing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-local-llms-cost-slashing.html) | Deploying private open-weight models (vLLM, Ollama) to slash token expenses by 60%-90%. |
 | **Claude Agent Orchestration** | [`business-services/business-service-ai-agents-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-ai-agents-orchestration.html) | Production state machines, long-term memory persistence & human-in-the-loop gates. |
 | **Hermes Agent Training** | [`business-services/business-service-agentic-ai-systems.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-agentic-ai-systems.html) | Self-hosted Hermes Agent on Linux, persistent session memory & sandboxed tool execution. |
 | **Workflow Automations** | [`business-services/business-service-workflow-automations.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-workflow-automations.html) | Business local n8n, Make, IFTTT & open-source workflow pipelines with zero per-step SaaS fees. |
@@ -222,17 +224,17 @@ Clients have complete autonomy to choose how they engage:
 
 1. **Individual Service Picks (Pick & Choose)**:
    - **Personal / 1-on-1**: **$100 USD per service** (strictly 1 person), covers **5 days of live training + 5 days of dedicated support** (10 days total coverage per service).
-   - **Business / Organizations**: **$200 USD per service** (cohorts up to 20 participants included, +$100 USD per extra seat), covers **5 days of live training + 5 days of dedicated support** (10 days total coverage per service).
+   - **Business / Organizations**: **$200 USD per service** (cohorts up to 10 participants included, +$200 USD per extra seat), covers **5 days of live training + 5 days of dedicated support** (10 days total coverage per service).
    - **Purchasing Power Parity (PPP)**: Applies across all 6 tiers for all individual service picks.
 
 2. **Flagship Transformation Programs (Comprehensive Immersion)**:
-   - **Business Training Flagship**: **$2,000 USD for 40 days** (20 days live hands-on engineering training + 20 days guidance and detailed guides and materials - 20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Includes cohorts up to 20 participants (extra seats at $100 USD per seat).
-   - **Personal Training Flagship**: **$1,000 USD for 40 days** (20 days intensive 1-on-1 sprint + 20 days guidance and detailed guides and materials - 20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Strictly for 1 person only.
+   - **Business Training Flagship**: **$2,000 USD for 60 days** (30 days intensive live instruction + 30 days post-training assistance - 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day, up to 10 seats included, extra seats at $200 USD per seat).
+   - **Personal Training Flagship**: **$1,000 USD for 60 days** (30 days intensive 1-on-1 sprint + 30 days guidance and detailed guides and materials - 30 working days over 6 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Strictly for 1 person only.
 
 ### Cohort Pricing & Scale-Out Policy
-1. **Fixed Base Rate for up to 20 Seats**: Every Business engagement carries a fixed base rate covering up to 20 participants.
-2. **Scale-Out Additional Head Charges**: Beyond 20 seats, cohorts are billed at a flat **$100 USD per additional participant**.
-3. **Parity Applied to Scale-Out**: The qualifying Country Parity multiplier applies directly to the additional seat fee as well (e.g., Tier 2 pays $75/head; Tier 3 & 4 pay $50/head; Tier 5 pays $25/head; Tier 6 pays $10/head).
+1. **Fixed Base Rate for up to 10 Seats**: Every Business engagement carries a fixed base rate covering up to 10 participants.
+2. **Scale-Out Additional Head Charges**: Beyond 10 seats, cohorts are billed at a flat **$200 USD per additional participant**.
+3. **Parity Applied to Scale-Out**: The qualifying Country Parity multiplier applies directly to the additional seat fee as well (e.g., Tier 2 pays $150/head; Tier 3 & 4 pay $100/head; Tier 5 pays $50/head; Tier 6 pays $20/head).
 4. **Custom Business MSAs**: For organizations rolling out training across 50 to 5,000+ employees across international divisions, custom business master service agreements provide volume discounts and dedicated sandbox infrastructure.
 
 ### Complete Inclusions
@@ -261,79 +263,91 @@ To make elite generative AI engineering universally accessible, I apply mathemat
 
 ## Verification & Build Logs
 
-The integrity of this website is maintained by rigorous automated Python tooling. Below are the actual execution logs from the centralized build and synchronization pipeline:
+The integrity of this website is maintained by rigorous automated Python tooling. Below are actual execution logs from the centralized build, synchronization, and verification pipelines:
 
+### 1. NLP-Fuzzy-Expert Knowledge Synchronization
 ```bash
-$ python3 python/build_components.py
+$ python3 nlp-fuzzy-expert/synchronizer.py
 ```
 
 ```text
-Included components in: 404.html
-Included components in: articles.html
-Included components in: claude-101.html
-Included components in: claude-code.html
-Included components in: claude-connectors.html
-Included components in: claude-cowork.html
-Included components in: claude-custom-mcp.html
-Included components in: claude-design.html
-Included components in: claude-features.html
-Included components in: claude-local-llms.html
-Included components in: claude-orchestration.html
-Included components in: claude-plugins.html
-Included components in: claude-science.html
-Included components in: claude-skills.html
-Included components in: collaboration.html
-Included components in: contact.html
-Included components in: expertise.html
-Included components in: faqs.html
-Included components in: google-ai-studio.html
-Included components in: google-antigravity-ide.html
-Included components in: google-deep-research.html
-Included components in: google-flow.html
-Included components in: google-gemini-101.html
-Included components in: google-gemini-agents.html
-Included components in: google-gemini-argon.html
-Included components in: google-gemini-deep-think.html
-Included components in: google-gemini-notebook.html
-Included components in: google-gemini-spark.html
-Included components in: google-gemma.html
-Included components in: google-nano-banana.html
-Included components in: index.html
-Included components in: personal-ai-training.html
-Included components in: pricing.html
-Included components in: business-services/business-service-advanced-ai-agents.html
-Included components in: business-services/business-service-agentic-ai-systems.html
-Included components in: business-services/business-service-ai-agents-orchestration.html
-Included components in: business-services/business-service-ai-budget-cost-limits-training.html
-Included components in: business-services/business-service-ai-developer-training.html
-Included components in: business-services/business-service-claude-advanced-training.html
-Included components in: business-services/business-service-gemini-advanced-training.html
-Included components in: business-services/business-service-generative-ai-transformation.html
-Included components in: business-services/business-service-local-llms-cost-slashing.html
-Included components in: business-services/business-service-workflow-automations.html
-Included components in: writing.html
+================================================================================
+           NLP-FUZZY-EXPERT KNOWLEDGE SYNCHRONIZATION SYSTEM
+================================================================================
+[Step 1/6] Loading authoritative facts from data/*.json into KnowledgeBase...
+  -> Authoritative sources loaded: 9 data domains
+  -> Total atomic propositions registered in KnowledgeBase: 230
 
-Build complete. Successfully updated 50 HTML files.
---- Starting Central Pricing & Parity Sync Pass ---
-Updated schema/pricing-schema.json
-Updated schema/home-schema.json
-Updated embedded JSON-LD in pricing.html
-Updated 16 service schema JSON files
-Updated 16 service HTML pricing sections
---- Central Pricing & Parity Sync Pass Complete ---
+[Step 2/6] Registering production rules in salience priority order...
+  -> Active production rules registered: 16
 
---- Running MD-HTML Sync Pass ---
-Sync complete. Synchronized 50 file pair(s).
+[Step 3/6] Discovering target documents across repository...
+  -> Discovered 65 target documents (.html, .js) for synchronization.
+
+[Step 4/6] Executing forward-chaining inference & computing line diffs...
+  -> All 65 target documents evaluated. Zero changes required (fully in sync).
+
+[Step 5/6] Generating domain references and master dictionary...
+  -> Master Dictionary generated: references_dictionary.json (232 total references)
+
+[Step 6/6] Generating domain markdown synchronization reports...
+  -> Wrote 9 domain reports in nlp-fuzzy-expert/
+
+================================================================================
+                     SYNCHRONIZATION SUMMARY TABLE
+================================================================================
++----------------------------+---------+---------------+-------------------------+--------------------------+
+| Target File                | Status  | Changed Lines | Rules Fired             | Fields Synced            |
++----------------------------+---------+---------------+-------------------------+--------------------------+
+| all-business-services.html | IN SYNC | -             | -                       | business_service_01_c... |
+| all-personal-services.html | IN SYNC | -             | -                       | personal_service_01_c... |
+| business-ai-training.html  | IN SYNC | -             | -                       | business_flagship_dur... |
+| faqs.html                  | IN SYNC | -             | -                       | business_included_seats  |
+| index.html                 | IN SYNC | -             | -                       | index_business_flagsh... |
+| personal-ai-training.html  | IN SYNC | -             | -                       | personal_flagship_dur... |
+| pricing-calculator.js      | IN SYNC | -             | -                       | calculator_seat_thres... |
+| pricing.html               | IN SYNC | -             | PricingHeroPackagesRule | business_flagship_day... |
++----------------------------+---------+---------------+-------------------------+--------------------------+
+Summary: 65 files evaluated | 0 updated | 65 in sync | 232 references tracked
+================================================================================
 ```
 
-And subsequent execution verifies complete idempotency:
+### 2. Comprehensive Unit Test Suite
+```bash
+$ python3 python/run_tests.py
+```
 
 ```text
-$ python3 python/build_components.py
-Build complete. Successfully updated 0 HTML files.
---- Central Pricing & Parity Sync Pass Complete ---
---- Running MD-HTML Sync Pass ---
-Sync complete. Synchronized 0 file pair(s).
+================================================================================
+           UNIT TEST SUITE EXECUTION (tests/)
+================================================================================
+Target directory:  tests
+Discovery pattern: test_*.py
+--------------------------------------------------------------------------------
+Ran 36 tests in 3.95s
+
+OK
+--------------------------------------------------------------------------------
+TEST SUITE SUMMARY REPORT
+--------------------------------------------------------------------------------
+Tests Run:   36
+Failures:    0
+Errors:      0
+Skipped:     0
+Time Taken:  3.95 seconds
+================================================================================
+RESULT: ALL TESTS PASSED.
+================================================================================
+```
+
+### 3. Link & Anchor Integrity Verification
+```bash
+$ python3 python/check_links.py
+```
+
+```text
+Checked 5199 internal links across 64 HTML files.
+ZERO broken internal links or fragments found! All links verified.
 ```
 
 ---
@@ -342,15 +356,16 @@ Sync complete. Synchronized 0 file pair(s).
 
 Whether you represent an early-stage startup seeking rapid technical validation, an business engineering organization looking to slash inference overhead, or an institution seeking custom AI workforce training:
 
-- **Business Website**: [https://thomascherickal.github.io](https://thomascherickal.github.io)
+- **Business Website**: [https://thedigitalfuturist.com](https://thedigitalfuturist.com)
 - **Direct Inquiries**: [thomascherickal@gmail.com](mailto:thomascherickal@gmail.com)
 - **1-on-1 Consultations**: [topmate.io/thomascherickal](https://topmate.io/thomascherickal)
 - **LinkedIn Direct Message**: [linkedin.com/in/thomascherickal](https://linkedin.com/in/thomascherickal)
-- **Interactive Contact Form**: [thomascherickal.github.io/contact.html](https://thomascherickal.github.io/contact.html)
+- **Interactive Contact Form**: [https://thedigitalfuturist.com/contact.html](https://thedigitalfuturist.com/contact.html)
 - **Response Guarantee**: All direct technical inquiries receive a tailored response within 24 hours.
 
 ---
 
 <p align="center">
   <sub>© 2026 Thomas Cherickal · The Digital Futurist · Built with zero client runtime dependencies, semantic HTML5, and automated Python build pipelines.</sub>
+</p>
 </p>

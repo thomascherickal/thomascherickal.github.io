@@ -1,4 +1,4 @@
-# Gemini Deep Think
+# Gemini Deep Think: Extended Deliberation & Complex Reasoning
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// INFERENCE-TIME COMPUTE & REASONING BREAKTHROUGH**  

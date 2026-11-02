@@ -1,4 +1,4 @@
-# Google Antigravity IDE
+# Google Antigravity IDE: Autonomous Multi-Agent Development
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// AI-FIRST DEVELOPMENT PLATFORM**  

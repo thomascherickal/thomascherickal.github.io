@@ -1,4 +1,4 @@
-# Google Gemini 101
+# Google Gemini 101: Frontier Multimodal Architecture
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// ARCHITECTURAL FOUNDATION & TIERS**  

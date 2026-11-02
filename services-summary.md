@@ -10,7 +10,7 @@ Clients have the flexibility to either enroll in comprehensive multi-week transf
 
 1. **Individual Service Picks (Pick & Choose)**:
    - **Personal / 1-on-1**: **$100 USD per service** (strictly 1 person), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
-   - **Business / Organizations**: **$200 USD per service** (cohorts up to 20 participants, +$100/extra seat), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
+   - **Business / Organizations**: **$200 USD per service** (cohorts up to 10 participants included, +$200/extra seat), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
    - **Purchasing Power Parity (PPP)**: Available across all 6 parity tiers for every individual service pick (Individual: $100 / $75 / $50 / $50 / $25 / $10; Business: $200 / $150 / $100 / $100 / $50 / $20).
 
 2. **Flagship Transformation Programs (Comprehensive Engagement)**:
@@ -18,15 +18,15 @@ Clients have the flexibility to either enroll in comprehensive multi-week transf
 | Parameter | Individual Service Pick (Personal) | Individual Service Pick (Business) | Business Training Flagship | Personal Training Flagship |
 | :--- | :--- | :--- | :--- | :--- |
 | **Daily Training Time Limit** | **4 hours a day** | **4 hours a day** | **4 hours a day** | **4 hours a day** |
-| **Training Duration** | 5 days live engineering | 5 days live engineering | 20 days live engineering | 20 days live engineering |
-| **Included Support Period** | 5 days support & guides | 5 days support & guides | 20 days support & guides | 20 days support & guides |
-| **Total Coverage** | 10 days total coverage | 10 days total coverage | 40 days total coverage | 40 days total coverage |
-| **Audience & Cohort Size** | Strictly 1 person | Up to 20 seats (+ $100/extra) | Up to 20 seats (+ $100/extra) | Strictly 1 person |
+| **Training Duration** | 5 days live engineering | 5 days live engineering | 30 days live engineering | 30 days live engineering |
+| **Included Support Period** | 5 days support & guides | 5 days support & guides | 30 days support & guides | 30 days support & guides |
+| **Total Coverage** | 10 days total coverage | 10 days total coverage | 60 days total coverage | 60 days total coverage |
+| **Audience & Cohort Size** | Strictly 1 person | Up to 10 seats (+ $200/extra) | Up to 10 seats (+ $200/extra) | Strictly 1 person |
 | **Scope** | Pick & choose single service | Pick & choose single service | Full organizational rollout | Full 1-on-1 career mastery |
-| **Standard Base Rate** | **$100 USD** per service | **$200 USD** per service | **$2,000 USD** for 40 days | **$1,000 USD** for 40 days |
+| **Standard Base Rate** | **$100 USD** per service | **$200 USD** per service | **$2,000 USD** for 60 days | **$1,000 USD** for 60 days |
 | **Purchasing Power Parity** | 6 Tiers: $100 to $10 | 6 Tiers: $200 to $20 | 6 Tiers: $2,000 to Subsidized | 6 Tiers: $1,000 to $100 |
 | **Upfront Advance Fee** | $0 advance | $0 advance | $0 advance | $0 advance |
-| **Milestone Structure** | 5 equal milestones (Days 1-5) | 5 equal milestones (Days 1-5) | 5 equal milestones (Days 4, 8, 12, 16, 20) | 5 equal milestones (Days 4, 8, 12, 16, 20) |
+| **Milestone Structure** | 5 equal milestones (Days 1-5) | 5 equal milestones (Days 1-5) | 5 equal milestones | 5 equal milestones |
 | **Licensing & IP** | Apache 2.0 open license | Apache 2.0 open license | Apache 2.0 open license | Apache 2.0 open license |
 
 ---
@@ -40,7 +40,7 @@ Move your business from one-off chatbot prompts to coordinated teams of Claude a
 
 ### 02. Local LLMs & Cost Slashing
 Cut recurring cloud API bills by 60% to 90% by running open-weight models privately with Ollama, vLLM, llama.cpp, and LM Studio. Size hardware from 8B to 120B models, route routine queries locally, and keep sensitive records on your machines.
-- **Deliverables**: 60%–90% API bill reduction, high-throughput vLLM/Ollama private serving, 4-bit/8-bit GGUF/AWQ quantization, and zero external data egress.
+- **Deliverables**: 60%-90% API bill reduction, high-throughput vLLM/Ollama private serving, 4-bit/8-bit GGUF/AWQ quantization, and zero external data egress.
 - **URL**: [https://thedigitalfuturist.com/business-services/business-service-local-llms-cost-slashing.html](https://thedigitalfuturist.com/business-services/business-service-local-llms-cost-slashing.html)
 
 ### 03. Claude Agent Orchestration
@@ -87,11 +87,11 @@ Advanced technical masterclass for engineers, architects, and technical leads: G
 
 ## Personal Training (Individual 1-on-1 Acceleration)
 
-A dedicated 1-on-1 acceleration program engineered strictly for one person only (solo founders, senior engineers, and independent builders). Structured as 40 days total (20 days live training + 20 days of guidance, assistance, and written guides licensed under Apache 2.0). Clients are encouraged to choose services relevant to their work or interests across the catalogue:
+A dedicated 1-on-1 acceleration program engineered strictly for one person only (solo founders, senior engineers, and independent builders). Structured as 60 days total (30 days live training + 30 days of guidance, assistance, and written guides licensed under Apache 2.0). Clients are encouraged to choose services relevant to their work or interests across the catalogue:
 
 - **Daily Training Time Limit**: **4 hours a day** of direct 1-on-1 pair-programming and system implementation.
 - **Audience**: Strictly for **one person only** with zero cohort dilution or corporate friction.
-- **Sprint Structure**: 20 days of intensive live instruction + 20 days of guidance and detailed guides and materials (40-day experience).
+- **Sprint Structure**: 30 days of intensive live instruction + 30 days of guidance and detailed guides and materials (60-day experience).
 - **Guidance & Doubts Clarification**: Ongoing daily access to review real-world implementations, debug agent pipelines, and solve production blockers.
 - **Detailed Guides & Materials**: In-depth architecture blueprints, runbooks, and cheat sheets designed for rapid daily lookup and long-term reference, licensed under Apache 2.0.
 - **Pricing & Parity**: **$1,000 USD base rate** with 195-country Purchasing Power Parity ($1,000 / $750 / $500 / $500 / $250 / $100).

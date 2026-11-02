@@ -1,4 +1,4 @@
-# Google AI Studio
+# Google AI Studio: Rapid Prototyping & System Instructions
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// DEVELOPER PLAYGROUND & APP BUILDER**  

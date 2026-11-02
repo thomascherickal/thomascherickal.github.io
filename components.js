@@ -1,4 +1,15 @@
 (function () {
+  // Auto-detect Live Production vs IDE / Local Environment
+  try {
+    var host = window.location.hostname;
+    var isLive = host === 'thedigitalfuturist.com' || host.indexOf('github.io') !== -1;
+    if (isLive) {
+      document.documentElement.setAttribute('data-env', 'production');
+    } else {
+      document.documentElement.setAttribute('data-env', 'ide');
+    }
+  } catch (e) {}
+
   // Highlight active links in navigation
   function syncActiveNav() {
     var path = window.location.pathname;

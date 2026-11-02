@@ -1,4 +1,4 @@
-# Developer's Guide to Solo AI-Assisted Coding
+# AI Developer Training
 ## Business AI Transformation Service - Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 09 · PERSONAL ACCELERATION BLUEPRINT**  

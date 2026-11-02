@@ -18,31 +18,31 @@ Tailored 1-on-1 private mentorship and hands-on skill acceleration across the ex
 
 ### Generative AI Transformation
 
-**Category**: `Agentic Workflows`  
+**Category**: `Personal Agent Workflows`  
 **Link**: [Generative AI Transformation](personal-services/personal-service-generative-ai-transformation.html)
 
-Move your personal practice from one-off chatbot prompts to coordinated teams of Claude agents that carry real work. Ground agent swarms in your domain data with custom MCP servers, bounded execution loops, and strict spending limits.
+Transform personal workflows and consulting practices from manual chatbot prompts to autonomous, coordinated teams of Claude agents.
 
 ### Local LLMs & Cost Slashing
 
-**Category**: `Private Serving`  
+**Category**: `Sovereign Local Serving`  
 **Link**: [Local LLMs & Cost Slashing](personal-services/personal-service-local-llms-cost-slashing.html)
 
-Moving routine workloads to local models can cut recurring cloud API bills by 60% to 90% by running open-weight models privately with Ollama, vLLM, llama.cpp, and LM Studio. Route routine queries locally and keep private records on your workstation.
+Eliminate cloud API dependencies and recurring costs by self-hosting quantized open-weights models locally with Ollama and vLLM.
 
 ### Claude Agent Orchestration
 
-**Category**: `Swarm Topologies`  
+**Category**: `1-Person Swarms`  
 **Link**: [Claude Agent Orchestration](personal-services/personal-service-ai-agents-orchestration.html)
 
-Master the principles of Claude AI agent orchestration to run multi-agent swarms for your own projects. Build orchestrator-worker hierarchies, sequential pipelines, and parallel fan-out teams that automate complex workflows while controlling quality and cost.
+Build single-operator multi-agent swarms with orchestrator loops, subagent delegation, automated evaluation, and budget limits.
 
-### Hermes Agent
+### Agentic Assistant Training
 
-**Category**: `Persistent Memory`  
-**Link**: [Hermes Agent](personal-services/personal-service-agentic-ai-systems.html)
+**Category**: `Private Agent Loops`  
+**Link**: [Agentic Assistant Training](personal-services/personal-service-agentic-ai-systems.html)
 
-Deploy Hermes Agent from Nous Research as a self-hosted personal companion on your own hardware. Configure persistent session memory so the agent retains project context, saves solved procedures as reusable skills, and runs scheduled tasks.
+Run private, unaligned autonomous agent loops on local hardware with open-weights Hermes models and structured tool execution.
 
 ### Personal Goals Self-Authoring
 
@@ -51,44 +51,44 @@ Deploy Hermes Agent from Nous Research as a self-hosted personal companion on yo
 
 Structure personal goals, track career milestones, and navigate career transitions with structured self-authoring frameworks, journaling templates, and actionable roadmaps.
 
-### AI Budget & Cost Control Training
+### AI Budget & Cost Control
 
-**Category**: `Token Governance`  
-**Link**: [AI Budget & Cost Control Training](personal-services/personal-service-ai-budget-cost-limits-training.html)
+**Category**: `Budget Protection`  
+**Link**: [AI Budget & Cost Control](personal-services/personal-service-ai-budget-cost-limits-training.html)
 
-Master personal AI spending control: set hard spending caps per session and month, configure token budgets, leverage prompt caching, and route low-complexity tasks to free and local models.
+Enforce strict financial caps on personal developer API accounts, semantic caching, and local fallback routing to keep costs predictable.
 
 ### AI Developer Training
 
-**Category**: `CLI & TDD`  
+**Category**: `Full-Stack Agency of 1`  
 **Link**: [AI Developer Training](personal-services/personal-service-ai-developer-training.html)
 
-1-on-1 mentorship on terminal and IDE coding agents (Claude Code, Google Antigravity, OpenCode). Catch mistakes early with strict AI-assisted Test-Driven Development (TDD) and custom MCP servers.
+Elevate your developer practice with Claude Code CLI, test-driven prompt harnesses, autonomous debugging, and automated refactoring.
 
 ### Advanced AI Agents
 
-**Category**: `Autonomous Loops`  
+**Category**: `Long-Horizon Execution`  
 **Link**: [Advanced AI Agents](personal-services/personal-service-advanced-ai-agents.html)
 
-Build autonomous agent systems with hierarchical teams of Claude agents for personal projects. Implement test-driven self-correction loops where agents fix errors until tests pass, with persistent state and Docker sandboxing.
+Architect persistent, self-evaluating autonomous agents that execute long-horizon projects while you sleep.
 
 ### Claude Advanced Training
 
-**Category**: `CLI & Orchestration`  
+**Category**: `Custom MCP Tooling`  
 **Link**: [Claude Advanced Training](personal-services/personal-service-claude-advanced-training.html)
 
-Technical masterclass for senior developers: advanced Claude Code CLI workflows, Claude for Microsoft 365, building custom MCP servers, and orchestrating frontier models with adaptive thinking effort.
+Build personal MCP servers, harness prompt caching for 90% savings, and integrate Claude directly into your development environment.
 
-### Google Gemini Advanced Training
+### Gemini Advanced Training
 
-**Category**: `AI Studio & Antigravity`  
-**Link**: [Google Gemini Advanced Training](personal-services/personal-service-gemini-advanced-training.html)
+**Category**: `Google Agent SDK`  
+**Link**: [Gemini Advanced Training](personal-services/personal-service-gemini-advanced-training.html)
 
-Advanced technical mentoring: Google AI Studio, Google Antigravity IDE, Gemini Deep Think extended reasoning, open-weight Google Gemma fine-tuning, and autonomous Gemini Agents with MCP.
+Implement Google Antigravity SDK workflows, structured schema extraction, and autonomous agent systems powered by Gemini.
 
 ### Continuous Learning & AI Second Brain
 
-**Category**: `Knowledge Systems`  
+**Category**: `Second Brain`  
 **Link**: [Continuous Learning & AI Second Brain](personal-services/personal-service-continuous-learning.html)
 
 Architect an autonomous personal knowledge engine using NotebookLM, Obsidian vector memory, active context retrieval, and automated research synthesis.

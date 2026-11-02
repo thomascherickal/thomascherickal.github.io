@@ -1,7 +1,7 @@
 # Technical Architecture & Systems Engineering
 
 <p align="center">
-  <a href="https://thomascherickal.github.io"><img src="https://img.shields.io/badge/Business%20Website-thomascherickal.github.io-38bdf8?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Business Website" /></a>
+  <a href="https://thedigitalfuturist.com"><img src="https://img.shields.io/badge/Business%20Website-thedigitalfuturist.com-38bdf8?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Business Website" /></a>
   <img src="https://img.shields.io/badge/Architecture-Semantic%20HTML5%20%2B%20CSS3%20Tokens-00d26a?style=for-the-badge&logo=html5&logoColor=white" alt="Architecture" />
   <img src="https://img.shields.io/badge/Virtual%20DOM-0KB%20Zero%20Overhead-red?style=for-the-badge" alt="Zero VDOM" />
   <img src="https://img.shields.io/badge/Pipeline-Python%203.12%20Orchestrator-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python Pipeline" />
@@ -13,7 +13,7 @@
 
 > [!IMPORTANT]
 > **Author & Practice Lead**: Thomas Cherickal (*The Digital Futurist*)  
-> **Official Business Website**: [https://thomascherickal.github.io](https://thomascherickal.github.io)  
+> **Official Business Website**: [https://thedigitalfuturist.com](https://thedigitalfuturist.com)  
 > **Canonical Description**:  
 > *"Thomas Cherickal - Generative AI Consultant and The Digital Futurist."*  
 > **Repository**: `thomascherickal/thomascherickal.github.io`  
@@ -30,7 +30,7 @@ In business AI engineering, we frequently witness systems burdened by dependency
 ```mermaid
 graph TD
   subgraph Client Browser [Zero-Runtime Presentation Layer]
-    HTML["50 Pure Semantic HTML5 Pages<br/>(Zero Virtual DOM, Zero Hydration, Raw Fast DOM)"]
+    HTML["65 Pure Semantic HTML5 Pages<br/>(Zero Virtual DOM, Zero Hydration, Raw Fast DOM)"]
     CSS["Vanilla CSS3 Token System (:root)<br/>(Hardware-Accelerated Glassmorphism, 0KB Frameworks)"]
     JS["Vanilla ES6+ Client Runtime<br/>(Native DOM APIs, Hash Sync, Honeypots)"]
   end
@@ -41,43 +41,44 @@ graph TD
 
   subgraph Automation Pipeline [Python 3 Systems Engine]
     Build["build_components.py<br/>(Master Nav/Footer Inliner)"]
-    Pricing["sync_pricing.py<br/>(6-Tier PPP Mathematical Engine)"]
+    NLPExpert["nlp-fuzzy-expert/<br/>(Forward Chaining + Fuzzy + NLP)"]
     Sync["md_html_sync.py<br/>(Bidirectional File Pair Daemon)"]
-    AST["build_md_files.py<br/>(BeautifulSoup4 AST Compiler)"]
+    Tests["python/run_tests.py<br/>(Pre-Commit Unit Test Runner)"]
   end
 
   subgraph External Consumers [LLMs & Search Engines]
     LDJSON["schema/home-schema.json & JSON-LD Graphs"]
     LLMS["llms.txt (Direct Agent Ingestion)"]
-    MD["md-html-sync/ (50 Raw Markdown Mirrors)"]
+    MD["md-html-sync/ (65 Raw Markdown Mirrors)"]
   end
 
   HTML --> CDN
   CSS --> CDN
   JS --> CDN
   Build --> HTML
-  Pricing --> HTML
-  Pricing --> LDJSON
-  Pricing --> LLMS
+  NLPExpert --> HTML
+  NLPExpert --> LDJSON
+  NLPExpert --> LLMS
   Sync --> HTML
   Sync --> MD
+  Tests --> HTML
 ```
 
 ### Key Performance & Audit Benchmarks
 | Metric | Measurement | Industry Average (Next.js/React) | Advantage |
 | :--- | :---: | :---: | :--- |
-| **First Contentful Paint (FCP)** | **&lt; 0.3s** | 1.8s – 2.5s | **8× Faster** |
-| **Largest Contentful Paint (LCP)** | **&lt; 0.4s** | 2.2s – 3.8s | **Instantaneous Render** |
+| **First Contentful Paint (FCP)** | **&lt; 0.3s** | 1.8s - 2.5s | **8× Faster** |
+| **Largest Contentful Paint (LCP)** | **&lt; 0.4s** | 2.2s - 3.8s | **Instantaneous Render** |
 | **Cumulative Layout Shift (CLS)** | **0.00** | 0.08-0.25 | **Zero Visual Jitter** |
-| **Interaction to Next Paint (INP)** | **&lt; 16ms** | 120ms – 280ms | **Frame-Perfect UI** |
-| **Client JS Runtime Overhead** | **0 KB** (no bundle) | 250 KB – 1.8 MB | **Zero Hydration Stalls** |
-| **Time to First Byte (TTFB)** | **&lt; 50ms** | 200ms – 800ms | **Edge CDN Cached** |
+| **Interaction to Next Paint (INP)** | **&lt; 16ms** | 120ms - 280ms | **Frame-Perfect UI** |
+| **Client JS Runtime Overhead** | **0 KB** (no bundle) | 250 KB - 1.8 MB | **Zero Hydration Stalls** |
+| **Time to First Byte (TTFB)** | **&lt; 50ms** | 200ms - 800ms | **Edge CDN Cached** |
 
 ---
 
 ## 2. Design System & CSS Token Architecture
 
-I constructed a comprehensive design token system in Vanilla CSS using standard CSS Custom Properties. The styling is defined globally in [`css/styles.css`](file:///home/thomas/GitHub.io/thomascherickal.github.io/css/styles.css) and scoped uniformly across all 50 HTML pages:
+I constructed a comprehensive design token system in Vanilla CSS using standard CSS Custom Properties. The styling is defined globally in [`css/styles.css`](file:///home/thomas/GitHub.io/thomascherickal.github.io/css/styles.css) and scoped uniformly across all 65 HTML pages:
 
 ```mermaid
 classDiagram
@@ -159,39 +160,48 @@ classDiagram
 
 ## 3. The Python Automation & Synchronization Pipeline
 
-The engine powering this repository is a custom Python 3 automation system housed in [`python/`](file:///home/thomas/GitHub.io/thomascherickal.github.io/python):
+The engine powering this repository is a custom Python 3 automation system housed in [`python/`](file:///home/thomas/GitHub.io/thomascherickal.github.io/python) and [`nlp-fuzzy-expert/`](file:///home/thomas/GitHub.io/thomascherickal.github.io/nlp-fuzzy-expert):
 
 ```
-python/
-├── build_components.py      # Master component inliner & orchestration trigger
-├── build.py                 # Backward-compatible wrapper
-├── sync_pricing.py          # Centralized pricing & parity calculations
-├── md_html_sync.py          # Bidirectional HTML <---> Markdown sync engine
-├── build_md_files.py        # BeautifulSoup AST-to-Markdown document compiler
-└── hooks/
-    └── post_edit_hook.py    # Lifecycle agent hook for automated re-compilation
+├── python/
+│   ├── build_components.py      # Master component inliner & orchestration trigger
+│   ├── run_tests.py             # Pre-commit unit test runner (tests/ suite)
+│   ├── check_links.py           # High-speed internal link & anchor validator
+│   ├── sync_schemas.py          # Extracts embedded JSON-LD to schema/*.json
+│   ├── md_html_sync.py          # Bidirectional HTML <---> Markdown sync engine
+│   ├── build_md_files.py        # BeautifulSoup AST-to-Markdown document compiler
+│   └── hooks/
+│       └── pre-commit           # Pre-commit hook template
+├── nlp-fuzzy-expert/
+│   ├── expert_system.py         # KnowledgeBase & forward-chaining inference
+│   ├── fuzzy_engine.py          # Levenshtein, Jaccard & token sort/set ratios
+│   ├── nlp_engine.py            # Text normalizer & semantic entity extractor
+│   ├── rules.py                 # 16 domain production rules with salience
+│   ├── synchronizer.py          # Master CLI synchronizer & ASCII table reporter
+│   └── watcher.py               # Non-blocking filesystem polling daemon
+└── tests/                       # 11 unit test modules (36 tests)
 ```
 
 ```mermaid
 sequenceDiagram
   autonumber
   actor Dev as Developer / AI Agent
-  participant Hook as post_edit_hook.py
-  participant Master as build_components.py
-  participant Pricing as sync_pricing.py
-  participant Sync as md_html_sync.py
-  participant Targets as 50 HTML Files + schema/home-schema.json + llms.txt + md-html-sync/
+  participant Watcher as nlp-fuzzy-expert/watcher.py
+  participant Sync as nlp-fuzzy-expert/synchronizer.py
+  participant KB as KnowledgeBase (data/*.json)
+  participant Inference as InferenceEngine (rules.py)
+  participant Targets as 65 HTML/JS Documents
+  participant TestRunner as python/run_tests.py
 
-  Dev->>Hook: Edit header.html / footer.html
-  Hook->>Master: Auto-invoke build_components.py
-  Master->>Targets: Regex inline <nav> & <footer> across all 50 HTML pages
-  Master->>Pricing: Execute sync_all_pricing()
-  Pricing->>Targets: Recalculate PPP Tiers (0.75X, 0.50X, 0.25X, 0.10X)
-  Pricing->>Targets: Update pricing.html JSON-LD, #individual-services-list, #parity-calculator
-  Pricing->>Targets: Sync schema/pricing-schema.json, 16 service schemas, schema/home-schema.json & llms.txt
-  Master->>Sync: Execute run_sync()
-  Sync->>Targets: Generate/Update clean .md mirrors in md-html-sync/
-  Master-->>Dev: Build complete (Zero drift, 100% idempotent)
+  Dev->>KB: Update data/*.json file
+  Watcher->>Sync: File change detected (debounced 150ms)
+  Sync->>KB: Reload atomic propositions (230+ facts)
+  Sync->>Inference: Forward chain 16 production rules by salience
+  Inference->>Targets: Apply diffs & record line changes (e.g. Lines 394-405)
+  Sync->>Targets: Generate references_dictionary.json & *.md reports
+  Sync->>Dev: Print working steps & render ASCII summary table
+  Sync->>TestRunner: Auto-execute tests/ if HTML changed
+  TestRunner-->>Dev: All 36 unit tests pass (100% verified)
 ```
 
 ---
@@ -201,63 +211,39 @@ sequenceDiagram
 I engineered [`build_components.py`](file:///home/thomas/GitHub.io/thomascherickal.github.io/python/build_components.py) to resolve the static site dilemma: *How do you maintain a single unified header and footer without client-side template engines or runtime iframe latency?*
 
 1. **Extraction**: The script extracts the pure `<nav>` element from [`header.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/header.html) and `<footer>` from [`footer.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/footer.html).
-2. **Regex Substitution**: It scans all 50 HTML files in the repository root and performs atomic regex replacements between `<!-- START:HEADER -->...<!-- END:HEADER -->` and `<!-- START:FOOTER -->...<!-- END:FOOTER -->`.
-3. **Automated Chaining**: Once inlining is complete, it triggers `sync_pricing.sync_all_pricing()` and `md_html_sync.run_sync()`.
-
-#### Actual Execution Log:
-```text
-$ python3 python/build_components.py
-Build complete. Successfully updated 50 HTML files.
---- Starting Central Pricing & Parity Sync Pass ---
-Updated schema/pricing-schema.json
-Updated schema/home-schema.json
-Updated embedded JSON-LD in pricing.html
-Updated 16 service schema JSON files
-Updated 16 service HTML pricing sections
---- Central Pricing & Parity Sync Pass Complete ---
-
---- Running MD-HTML Sync Pass ---
-Sync complete. Synchronized 50 file pair(s).
-```
+2. **Regex Substitution**: It scans all 65 HTML files in the repository root and subdirectories and performs atomic regex replacements between `<!-- START:HEADER -->...<!-- END:HEADER -->` and `<!-- START:FOOTER -->...<!-- END:FOOTER -->`.
+3. **Automated Chaining**: If `header.html` or `footer.html` is modified, it runs immediately across all pages.
 
 ---
 
-### B. Pricing & Parity Engine: `sync_pricing.py`
+### B. NLP-Fuzzy-Expert Knowledge Synchronization Engine (`nlp-fuzzy-expert/`)
 
-I built [`sync_pricing.py`](file:///home/thomas/GitHub.io/thomascherickal.github.io/python/sync_pricing.py) to act as the **mathematical single source of truth** for all service rates, packages, and Purchasing Power Parity (PPP) calculations.
+The repository integrates a forward-chaining expert system combined with fuzzy logic string metrics and natural language processing to ensure zero knowledge drift:
 
-```python
-def calc_parity(min_val, max_val):
-    """
-    Computes exact parity pricing for an offering across all 6 Global Tiers:
-    - Tier 1: 100% (Baseline, 1.0X multiplier)
-    - Tier 2: 75%  (25% Parity Discount, 0.75X multiplier)
-    - Tier 3: 50%  (50% Parity Discount, 0.50X multiplier)
-    - Tier 4: 50%  (50% Startup Discount, 0.50X multiplier)
-    - Tier 5: 25%  (75% Academia/Non-Profit Discount, 0.25X multiplier)
-    - Tier 6: Subsidized Relief (Up to 90%+ micro-rates)
-    """
-    return {
-        1: (min_val, max_val),
-        2: (int(round(min_val * 0.75)), int(round(max_val * 0.75))),
-        3: (int(round(min_val * 0.50)), int(round(max_val * 0.50))),
-        4: (int(round(min_val * 0.50)), int(round(max_val * 0.50))),
-        5: (int(round(min_val * 0.25)), int(round(max_val * 0.25))),
-        6: ("Custom Subsidized", "Custom Subsidized")
-    }
-```
-
-Whenever pricing adjustments occur, `sync_pricing.py` updates:
-1. `schema/pricing-schema.json`: Complete machine-readable JSON schema defining all price structures.
-2. `pricing.html`: Synchronizes both the embedded `<script type="application/ld+json">` structured data and the interactive DOM elements (`#pricing-pillars` and `#service-rates`).
-3. `schema/home-schema.json`: Master site graph cataloging all offers under Schema.org specifications.
-4. `llms.txt`: Real-time text documentation ingested by AI agents and researchers.
+1. **KnowledgeBase Working Memory**: Automatically ingests 9 JSON data models from `data/` (`pricing.json`, `business-services.json`, `personal-services.json`, `tiers.json`, `claude.json`, `gemini.json`, `publications.json`, `config.json`, `faqs.json`) into 230+ atomic propositions.
+2. **Fuzzy String Metrics**: Employs Levenshtein distance, Token Sort Ratio, Token Set Ratio, and character 3-gram Jaccard similarity across triangular and trapezoidal fuzzy sets.
+3. **NLP Entity Extraction**: Standardizes whitespace and extracts `MONEY`, `DURATION`, and `SEATS` semantic entities.
+4. **Line-Level Diff Engine**: Calculates exact 1-based changed line numbers (e.g. `394-405, 428-449`) using `difflib.SequenceMatcher` opcodes.
+5. **Terminal Summary Table**: Renders an ASCII table upon completion showing target documents, update status, fired rules, changed lines, and synchronized fields.
+6. **Continuous Watcher Daemon**: [`nlp-fuzzy-expert/watcher.py`](file:///home/thomas/GitHub.io/thomascherickal.github.io/nlp-fuzzy-expert/watcher.py) monitors `data/*.json` with 1-second non-blocking polling and 150ms debouncing.
 
 ---
 
-### C. Bidirectional Markdown Sync: `md_html_sync.py` & `build_md_files.py`
+### C. Testing Infrastructure & Pre-Commit Verification (`tests/` & `python/run_tests.py`)
 
-I established a dedicated Markdown mirror in [`md-html-sync/`](file:///home/thomas/GitHub.io/thomascherickal.github.io/md-html-sync/) containing clean `.md` versions of all 26 HTML pages.
+A comprehensive unit test suite in [`tests/`](file:///home/thomas/GitHub.io/thomascherickal.github.io/tests) contains 11 dedicated test modules executing 36 individual tests:
+
+- **100% Pass Rate**: Validates fuzzy engines, NLP extraction, inference rules, pricing updates, catalog names, curriculum synchronization, parity calculations, and cyclic mutations.
+- **Pre-Commit Enforcement**: `.git/hooks/pre-commit` executes `python3 python/run_tests.py` before every commit, automatically blocking commits if any test fails.
+
+---
+
+### D. Bidirectional Markdown Sync: `md_html_sync.py` & `build_md_files.py`
+
+I established a dedicated Markdown mirror in [`md-html-sync/`](file:///home/thomas/GitHub.io/thomascherickal.github.io/md-html-sync/) containing clean `.md` versions of all 65 HTML pages.
+
+- **`build_md_files.py`**: An AST-level document compiler utilizing `BeautifulSoup4`. It traverses the HTML DOM, parses headings, role cards, pricing grids, and FAQ articles (`<article class="faq-card">`), translating them into clean, high-fidelity GitHub Flavored Markdown.
+- **`md_html_sync.py`**: A synchronization daemon that monitors file hashes via `.sync-state.json`. If an HTML page is updated, it automatically compiles the markdown counterpart; if a markdown file is edited, it syncs changes back.
 
 - **`build_md_files.py`**: An AST-level document compiler utilizing `BeautifulSoup4`. It traverses the HTML DOM, parses headings, role cards, pricing grids, and FAQ articles (`<article class="faq-card">`), translating them into clean, high-fidelity GitHub Flavored Markdown.
 - **`md_html_sync.py`**: A synchronization daemon that monitors file hashes via `.sync-state.json`. If an HTML page is updated, it automatically compiles the markdown counterpart; if a markdown file is edited, it syncs changes back.
@@ -271,7 +257,7 @@ Beyond the web stack itself, this repository documents and serves as the gateway
 ### 1. Autonomous Multi-Agent Systems
 - **Agent Operating Systems**: State machines orchestrating autonomous agent teams with defined communication buses, fallback circuits, and deterministic tool schemas.
 - **Self-Healing Code Loops**: Integrating Hermes 3 and Claude Code with local test runners (pytest, cargo test) for autonomous test-driven repair.
-- **Local vLLM Acceleration**: Running quantized models (AWQ/GGUF) on consumer-grade and business hardware to achieve 60%–90% cost reduction over proprietary APIs.
+- **Local vLLM Acceleration**: Running quantized models (AWQ/GGUF) on consumer-grade and business hardware to achieve 60%-90% cost reduction over proprietary APIs.
 
 ### 2. Experimental Quantum Systems
 - **Qiskit & PennyLane**: Implementation of Variational Quantum Eigensolvers (VQE) and Quantum Approximate Optimization Algorithms (QAOA).
@@ -387,24 +373,33 @@ Changes not staged for commit:
 
 ---
 
-## 8. Running the Build Engine Locally
+## 8. Running the Build & Synchronization Engines Locally
 
-To test, build, or watch the site locally, execute the following commands from the repository root:
+To test, build, synchronize, or watch the site locally, execute the following commands from the repository root:
 
 ```bash
-# 1. Run a single full build & sync pass
+# 1. Run NLP-Fuzzy-Expert repository knowledge synchronization
+python3 nlp-fuzzy-expert/synchronizer.py
+
+# 2. Start continuous autonomous data watcher daemon (monitors data/*.json)
+python3 nlp-fuzzy-expert/watcher.py
+
+# 3. Run the complete unit test suite (36 tests)
+python3 python/run_tests.py
+
+# 4. Verify all internal links and anchor integrity (5,190+ links)
+python3 python/check_links.py
+
+# 5. Inlining navigation header and footer across all pages
 python3 python/build_components.py
 
-# 2. Start the continuous watcher (auto-rebuilds when header.html or footer.html change)
-python3 python/build_components.py --watch
+# 6. Extract and sync embedded JSON-LD schemas to schema/
+python3 python/sync_schemas.py
 
-# 3. Force rebuild all Markdown files from HTML
-python3 python/build_md_files.py
-
-# 4. Force bidirectional sync between HTML and Markdown
+# 7. Force bidirectional sync between HTML and Markdown
 python3 python/md_html_sync.py --html-to-md
 
-# 5. Serve locally with any HTTP server
+# 8. Serve locally with any HTTP server
 python3 -m http.server 8000
 ```
 

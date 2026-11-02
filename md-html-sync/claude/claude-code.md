@@ -1,4 +1,4 @@
-# Claude Code in the Terminal and Your IDE
+# Claude Code: Terminal CLI, Agent Workflows & IDE Integration
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  

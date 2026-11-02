@@ -1,4 +1,4 @@
-# Claude Connectors: How Business Work Moves Smoothly Between People And Teams
+# Enterprise Connectors & Secure Data Ingestion
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  

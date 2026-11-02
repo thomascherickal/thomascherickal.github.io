@@ -1,4 +1,4 @@
-# Enterprise Guide to AI-Assisted Coding
+# AI Developer Training
 ## Business AI Transformation Service - Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 09 · ENTERPRISE EXECUTIVE BLUEPRINT**  

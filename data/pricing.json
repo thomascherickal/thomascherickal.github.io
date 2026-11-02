@@ -3,7 +3,7 @@
   "purchasing_power_parity_framework": "World Bank FY2027 (effective 1 July 2026)",
   "general_payment_rules": {
     "advance_deposit": "$0 upfront (strictly zero advance payment required)",
-    "currency_acceptance": "USD, EUR, GBP, AUD, CAD, INR (via Stripe, international wire, or approved payment rails)",
+    "currency_acceptance": "USD, EUR, GBP, AUD, CAD, INR (via PayPal, international wire, or approved payment rails)",
     "calendar_basis": "Business days (Monday through Friday, excluding Saturdays, Sundays, and public holidays)",
     "hours_per_day": 4,
     "concurrency_rule": "Programmes and individual services can run concurrently or in parallel across different cohorts or disciplines.",
@@ -22,19 +22,18 @@
       "name": "Business AI Training Flagship",
       "tier1_base_price_usd": 2000.0,
       "cohort_capacity": {
-        "included_seats": 20,
-        "additional_seat_fee_usd": 100.0,
-        "max_seats": 500,
+        "included_seats": 25,
+        "additional_seat_fee_usd": 200.0,
+        "max_seats": 100,
         "parity_applies_to_extra_seats": true
       },
       "schedule": {
-        "total_calendar_duration_days": 40,
-        "live_training_days": 20,
+        "total_calendar_duration_days": 70,
+        "live_training_days": 30,
         "live_hours_per_day": 4,
-        "total_live_hours": 80,
-        "support_phase_days": 20,
-        "support_phase_description": "20 days of guidance, assistance, implementation, Q&A, and written guides licensed under Apache 2.0.",
-        "schedule_notes": "20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day"
+        "support_phase_days": 30,
+        "support_phase_description": "30 days of guidance, assistance, implementation, Q&A, and written guides licensed under Apache 2.0.",
+        "schedule_notes": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day"
       },
       "payment_rules": {
         "structure": "Five equal installments (20% each / $400 USD base in Tier 1)",
@@ -42,35 +41,35 @@
           {
             "installment": 1,
             "percentage": 20,
-            "due_after_day": 4,
-            "description": "Completed Day 4 of live training"
+            "due_after_day": 5,
+            "description": "Completed Day 5 of live training"
           },
           {
             "installment": 2,
             "percentage": 20,
-            "due_after_day": 8,
-            "description": "Completed Day 8 of live training"
+            "due_after_day": 10,
+            "description": "Completed Day 10 of live training"
           },
           {
             "installment": 3,
             "percentage": 20,
-            "due_after_day": 12,
-            "description": "Completed Day 12 of live training"
+            "due_after_day": 15,
+            "description": "Completed Day 15 of live training"
           },
           {
             "installment": 4,
             "percentage": 20,
-            "due_after_day": 16,
-            "description": "Completed Day 16 of live training"
+            "due_after_day": 20,
+            "description": "Completed Day 20 of live training"
           },
           {
             "installment": 5,
             "percentage": 20,
-            "due_after_day": 20,
-            "description": "Completed Day 20 of live training"
+            "due_after_day": 25,
+            "description": "Completed Day 25 of live training"
           }
         ],
-        "walkaway_policy": "Walk away owing nothing if not satisfied after the first 2 days of completed training."
+        "walkaway_policy": "Walk away owing nothing if not satisfied after the first 5 days of completed training."
       },
       "parity_pricing": {
         "tier_1_high_income": {
@@ -101,7 +100,7 @@
         "tier_6_subsidized_relief": {
           "rate_percentage": "Custom",
           "price_usd": "Custom micro-rate quote",
-          "extra_seat_usd": "Custom"
+          "extra_seat_usd": 10.0
         }
       }
     },
@@ -110,7 +109,7 @@
       "type": "flagship",
       "target_audience": "Individuals / Solo Founders / Senior Engineers",
       "name": "Personal AI Training Flagship",
-      "tier1_base_price_usd": 1000.0,
+      "tier1_base_price_usd": 2000.0,
       "cohort_capacity": {
         "included_seats": 1,
         "additional_seat_fee_usd": 0.0,
@@ -119,13 +118,12 @@
         "note": "Strictly 1 person only (dedicated 1-on-1 private acceleration)."
       },
       "schedule": {
-        "total_calendar_duration_days": 40,
-        "live_training_days": 20,
+        "total_calendar_duration_days": 60,
+        "live_training_days": 30,
         "live_hours_per_day": 4,
-        "total_live_hours": 80,
-        "support_phase_days": 20,
-        "support_phase_description": "20 days of guidance, assistance, implementation, Q&A, and written guides licensed under Apache 2.0.",
-        "schedule_notes": "20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day"
+        "support_phase_days": 30,
+        "support_phase_description": "30 days of guidance, assistance, implementation, Q&A, and written guides licensed under Apache 2.0.",
+        "schedule_notes": "30 working days over 6 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day"
       },
       "payment_rules": {
         "structure": "Five equal installments (20% each / $200 USD base in Tier 1)",
@@ -133,60 +131,60 @@
           {
             "installment": 1,
             "percentage": 20,
-            "due_after_day": 4,
-            "description": "Completed Day 4 of live training"
+            "due_after_day": 5,
+            "description": "Completed Day 5 of live training"
           },
           {
             "installment": 2,
             "percentage": 20,
-            "due_after_day": 8,
-            "description": "Completed Day 8 of live training"
+            "due_after_day": 10,
+            "description": "Completed Day 10 of live training"
           },
           {
             "installment": 3,
             "percentage": 20,
-            "due_after_day": 12,
-            "description": "Completed Day 12 of live training"
+            "due_after_day": 15,
+            "description": "Completed Day 15 of live training"
           },
           {
             "installment": 4,
             "percentage": 20,
-            "due_after_day": 16,
-            "description": "Completed Day 16 of live training"
+            "due_after_day": 20,
+            "description": "Completed Day 20 of live training"
           },
           {
             "installment": 5,
             "percentage": 20,
-            "due_after_day": 20,
-            "description": "Completed Day 20 of live training"
+            "due_after_day": 25,
+            "description": "Completed Day 25 of live training"
           }
         ],
-        "walkaway_policy": "Walk away owing nothing if not satisfied after the first 2 days of completed training."
+        "walkaway_policy": "Walk away owing nothing if not satisfied after the first 5 days of completed training."
       },
       "parity_pricing": {
         "tier_1_high_income": {
           "rate_percentage": 100,
-          "price_usd": 1000.0
+          "price_usd": 2000.0
         },
         "tier_2_upper_middle_income": {
           "rate_percentage": 75,
-          "price_usd": 750.0
+          "price_usd": 1500.0
         },
         "tier_3_lower_middle_low_income": {
           "rate_percentage": 50,
-          "price_usd": 500.0
+          "price_usd": 1000.0
         },
         "tier_4_startups": {
           "rate_percentage": 50,
-          "price_usd": 500.0
+          "price_usd": 1000.0
         },
         "tier_5_academia_nonprofits": {
           "rate_percentage": 25,
-          "price_usd": 250.0
+          "price_usd": 500.0
         },
         "tier_6_subsidized_relief": {
           "rate_percentage": "Custom",
-          "price_usd": 100.0
+          "price_usd": 200.0
         }
       }
     },
@@ -197,16 +195,15 @@
       "name": "Individual Service Pick (Business / Teams)",
       "tier1_base_price_usd": 200.0,
       "cohort_capacity": {
-        "included_seats": 20,
-        "additional_seat_fee_usd": 100.0,
-        "max_seats": 500,
+        "included_seats": 1,
+        "additional_seat_fee_usd": 200.0,
+        "max_seats": 10,
         "parity_applies_to_extra_seats": true
       },
       "schedule": {
         "total_calendar_duration_days": 10,
         "live_training_days": 5,
         "live_hours_per_day": 4,
-        "total_live_hours": 20,
         "support_phase_days": 5,
         "support_phase_description": "5 days of guidance, assistance, implementation, Q&A, and written guides licensed under Apache 2.0."
       },
@@ -282,9 +279,9 @@
     {
       "id": "individual-service-personal",
       "type": "individual_service",
-      "target_audience": "Individuals / Solo Builders / Senior Engineers",
+      "target_audience": "Individuals / Solo Builders / Entrepreneurs",
       "name": "Individual Service Pick (Personal / 1-on-1)",
-      "tier1_base_price_usd": 100.0,
+      "tier1_base_price_usd": 200.0,
       "cohort_capacity": {
         "included_seats": 1,
         "additional_seat_fee_usd": 0.0,
@@ -296,7 +293,6 @@
         "total_calendar_duration_days": 10,
         "live_training_days": 5,
         "live_hours_per_day": 4,
-        "total_live_hours": 20,
         "support_phase_days": 5,
         "support_phase_description": "5 days of guidance, assistance, implementation, Q&A, and written guides with IP belonging to the author."
       },
@@ -339,27 +335,27 @@
       "parity_pricing": {
         "tier_1_high_income": {
           "rate_percentage": 100,
-          "price_usd": 100.0
+          "price_usd": 200.0
         },
         "tier_2_upper_middle_income": {
           "rate_percentage": 75,
-          "price_usd": 75.0
+          "price_usd": 150.0
         },
         "tier_3_lower_middle_low_income": {
           "rate_percentage": 50,
-          "price_usd": 50.0
+          "price_usd": 100.0
         },
         "tier_4_startups": {
           "rate_percentage": 50,
-          "price_usd": 50.0
+          "price_usd": 100.0
         },
         "tier_5_academia_nonprofits": {
           "rate_percentage": 25,
-          "price_usd": 25.0
+          "price_usd": 50.0
         },
         "tier_6_subsidized_relief": {
           "rate_percentage": "Custom",
-          "price_usd": 10.0
+          "price_usd": 20.0
         }
       }
     }

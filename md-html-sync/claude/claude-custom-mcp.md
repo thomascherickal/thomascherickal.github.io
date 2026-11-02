@@ -1,4 +1,4 @@
-# Custom MCP Servers With Claude: Connecting AI to Systems Across the Web
+# Custom Model Context Protocol (MCP) Server Development
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  

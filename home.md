@@ -95,7 +95,7 @@ Core Operating Principle: Every service runs for one month and can freely overla
 All services are backed by transparent flat rates and our full 195-country Purchasing Power Parity (PPP) index, scaling rates fairly across 4 global tiers.
 
 ### Business AI Training Flagship
-- **Complete Business Transformation (Up to 20 seats)**: $2,000 USD for 40 days (20 days live training + 20 days guidance and materials - 20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day).
+- **Complete Business Transformation (Up to 10 seats)**: $2,000 USD for 60 days (30 days live training + 30 days guidance and materials - 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day).
 - **Individual Service Pick for Businesses**: $200 USD per service alone.
 - **Additional Seats**: $100 USD per seat above the included 20 seats.
 - **Duration**: 20 days of training + 20 days of included guidance and detailed guides and materials (total 40 days of business protection).

@@ -1,17 +1,14 @@
-# Personal Training: $1,000 for 40 Days (20d Training + 20d Guidance &
- Materials)
+# Personal Training: $1,000 for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials) for 60 Days (30d Training + 30d Guidance & Materials)
 ## Thomas Cherickal - The Digital Futurist
 
-> **PERSONAL TRAINING · 40 DAYS (20 DAYS TRAINING + 20 DAYS GUIDANCE)**  
+> **PERSONAL TRAINING · 60 DAYS (30 DAYS TRAINING + 30 DAYS GUIDANCE)**  
 > **You are never forced to choose between local models, autonomous agents, prompt craft, or workflow automations.
  Your personal sprint draws on the full 12-service catalogue; you choose the services relevant to your work and
  goals:**
 
 ---
 
-Clients can choose our comprehensive 40-day transformation at $1,000 USD (20 days live training + 20 days
- guidance, Q&A and written guides), or pick individual services at $100 USD per service (5 days live
- training + 5 days dedicated support). Strictly for 1 person only. Clients are encouraged to choose services
+Clients can choose our comprehensive 60-day transformation at $1,000 USD (30 days live training + 30 days guidance, Q&A and written guides), or pick individual services at $100 USD per service (5 days live training + 5 days dedicated support). Strictly for 1 person only. Clients are encouraged to choose services
  relevant to their work or interests. Purchasing Power Parity (PPP) is available for all service pricing across
  195 countries.
 
@@ -22,24 +19,21 @@ Whether booking organization-wide Business Training or an intensive 1-on-1 Perso
 
 ### Business Training Flagship
 
-Guaranteed 20 days of comprehensive live instruction across engineering cohorts and leadership, followed
- immediately by 20 days of guidance, Q&A and written guides (20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Covers up to 20
- participants (extra seats at $100 USD per seat). Clients are encouraged to choose services relevant to
+Guaranteed 30 days of comprehensive live instruction across engineering cohorts and leadership, followed immediately by 30 days of guidance, Q&A and written guides (30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Covers up to 25 participants (extra seats at $200 USD per seat). Clients are encouraged to choose services relevant to
  their work or interests.
 
 ### Personal Training Flagship (1
  Person Only)
 
-Guaranteed 20 days of intensive 1-on-1 instruction, followed immediately by 20 days of guidance,
- Q&A and written guides (20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Strictly for one person only. Clients are encouraged to choose
+Guaranteed 30 days of intensive 1-on-1 instruction, followed immediately by 30 days of guidance, Q&A and written guides (delivered as 30 working days over 6 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Strictly for 1 person only. Clients are encouraged to choose
  services relevant to their work or interests.
 
 // THE VALUE PROPOSITION & RATIONALE
 
-## Why Personal Training Is Structured at $1,000 for 40 Days
+## Why Personal Training Is Structured at $1,000 for 60 Days
 
 In organizational Business Training engagements ($2,000 USD base), substantial coordination is mandatory:
- aligning cross-functional teams of up to 20 participants, navigating corporate compliance reviews,
+ aligning cross-functional teams of up to 10 participants, navigating corporate compliance reviews,
  provisioning isolated corporate sandboxes, and orchestrating change management across varied skill levels.
 
 For a solo founder, visionary executive, or elite individual developer,
@@ -47,8 +41,7 @@ For a solo founder, visionary executive, or elite individual developer,
  Friction is zero. Because you have full administrative authority over your local machines, repositories, and
  API credentials, work moves faster than it can inside a committee.
 
-Personal Training costs $1,000 in Tier 1 for 40 days (20 days training, + 20 days guidance, Q&A and
- written guides). Strictly for 1 person only. Clients are encouraged to choose services relevant to their
+Personal Training costs $1,000 in Tier 1 for 60 days (30 days training, + 30 days guidance, Q&A and written guides). Strictly for 1 person only. Clients are encouraged to choose services relevant to their
  work or interests.
 
 // FULL-SPECTRUM MASTERY
@@ -164,7 +157,7 @@ Building terminal-native Hermes agents with recursive self-healing loops, automa
 Live developer pair-programming with Claude Code CLI and Google Antigravity, strict unit testing before code
  generation, building an Obsidian vector second brain, and automating executive inbox and calendar offloading.
 
-### 20 Days of Support, Daily Doubts Clarification & Light Easy-to-Skim Guides
+### 30 Days of Support, Daily Doubts Clarification & Light Easy-to-Skim Guides
 
 Unlike corporate teams with extensive IT departments, individual practitioners, solo founders, and
  consultants require dedicated assistance during daily work. For 20 consecutive working days (4 hours per day) immediately
@@ -182,25 +175,24 @@ Unlike corporate teams with extensive IT departments, individual practitioners, 
 
 ## Personal Training Parity Pricing Matrix
 
-Personal Training is $1,000 USD in Tier 1 for 40 days (20 days training, + 20 days guidance, Q&A and
- written guides). Clients are encouraged to choose services relevant to their work or interests. Parity
+Personal Training is $2,000 USD in Tier 1 for 60 days (30 days training + 30 days guidance, Q&A and written guides). Clients are encouraged to choose services relevant to their work or interests. Parity
  multipliers apply globally:
 
 | Equity Tier | Qualifying Region / Profile | Discount | Milestone Rate |
 | :--- | :--- | :--- | :--- |
 | Tier 1: High-Income | US, Canada, UK, Germany, France, Poland, Czech Republic, Hungary, Greece, Romania, Japan, South
- Korea, Singapore, Australia, Chile, UAE, Saudi Arabia | Standard Rate (0% Discount) | $1,000 USD |
+ Korea, Singapore, Australia, Chile, UAE, Saudi Arabia | Standard Rate (0% Discount) | $2,000 USD |
 | Tier 2: Upper-Middle | Brazil, Mexico, Colombia, Argentina, Peru, Ecuador, Guatemala, Türkiye, Malaysia, Thailand,
- Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka | 25% Parity Discount | $750 USD |
+ Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka | 25% Parity Discount | $1,500 USD |
 | Tier 3: Lower-Middle & Low-Income | India, Bangladesh, Pakistan, Nepal, Bhutan, Kenya, Nigeria, Ghana, Egypt, Morocco, Tanzania,
- Bolivia, Cambodia, Laos, Myanmar, Ethiopia, Uganda, Rwanda | 50% Parity Discount | $500 USD |
+ Bolivia, Cambodia, Laos, Myanmar, Ethiopia, Uganda, Rwanda | 50% Parity Discount | $1,000 USD |
 | Tier 4: Early Startups | Solo Founders, Pre-Seed, Bootstrapped Tech Ventures (<$1M Raised) | 50% Startup Discount | $500 USD |
-| Tier 5: Academia & Non-Profit | Students, Academic Researchers, Faculty Labs, 501(c)(3) Non-Profits | 75% Academic Discount | $250 USD |
+| Tier 5: Academia & Non-Profit | Students, Academic Researchers, Faculty Labs, 501(c)(3) Non-Profits | 75% Academic Discount | $500 USD |
 | Tier 6: Crisis-Affected & Under-Resourced | Crisis Zones, Hyperinflation Economies, UN Least Developed Countries, Grassroots Devs | Custom Subsidized Relief | $100 USD (or Quote) |
 
 ## Ready for Your Personal AI Transformation?
 
 Spaces are strictly limited to two personal mentees per calendar month to guarantee deep architectural pairing
- and uncompromised focus. Book today to lock in 20 days of intensive training plus 20 days of included support
+ and uncompromised focus. Book today to lock in 30 days of intensive training plus 30 days of included support
  with daily questions and doubts clarification, and light, easy-to-skim source materials and guides (20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day, strictly one
  person only).

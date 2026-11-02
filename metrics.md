@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-01 11:17:37 UTC` | Branch: `main` | Head Commit: `ef8c3e2`
+> **Automated Status Report** | Generated on `2026-11-02 05:09:57 UTC` | Branch: `main` | Head Commit: `48a7807`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **366** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **107,466** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **97,246** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **3,896** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **6,324** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **40.19 MB (42,141,732 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **280,423 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **436** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-01** | Subject: "Fix spacing in AI-Assisted Leads Magnet nav label and rebuild components" |
+| **Total Tracked Files** | **408** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **116,075** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **104,959** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **4,139** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **6,977** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **40.62 MB (42,595,686 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **290,371 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **438** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-02** | Subject: "Implement NLP-fuzzy expert sync engine, test suite, and update Gemini guides" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,15 +27,15 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 64 | 68,136 | 5.09 MB (5,334,741 bytes) | Production static web pages, services, frameworks & guides |
-| **CSS Stylesheets** | 16 | 11,679 | 272.66 KB (279,201 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 3 | 2,310 | 90.30 KB (92,472 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 13 | 3,819 | 162.27 KB (166,167 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 75 | 9,294 | 591.66 KB (605,863 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 71 | 12,175 | 528.58 KB (541,264 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **HTML Documents** | 64 | 67,807 | 5.12 MB (5,369,934 bytes) | Production static web pages, services, frameworks & guides |
+| **CSS Stylesheets** | 16 | 11,747 | 274.83 KB (281,421 bytes) | Design tokens, animations, responsive layout & themes |
+| **JavaScript Scripts** | 3 | 2,321 | 90.68 KB (92,856 bytes) | Client-side interactivity, search, filter & components |
+| **Python Tooling** | 32 | 7,072 | 323.13 KB (330,890 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 86 | 10,133 | 652.64 KB (668,302 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 82 | 16,942 | 711.63 KB (728,711 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 74 | 0 | 33.39 MB (35,010,540 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 8 | 0 | 43.94 KB (44,996 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 9 | 0 | 45.45 KB (46,544 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,23 +43,23 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 64 | 68,136 | 5.09 MB (5,334,741 bytes) | 17.5% |
-| `.json` | 71 | 12,175 | 528.58 KB (541,264 bytes) | 19.4% |
-| `.css` | 16 | 11,679 | 272.66 KB (279,201 bytes) | 4.4% |
-| `.md` | 75 | 9,294 | 591.66 KB (605,863 bytes) | 20.5% |
-| `.py` | 13 | 3,819 | 162.27 KB (166,167 bytes) | 3.6% |
-| `.js` | 3 | 2,310 | 90.30 KB (92,472 bytes) | 0.8% |
-| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 11.5% |
-| `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 11.7% |
-| `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 5.5% |
+| `.html` | 64 | 67,807 | 5.12 MB (5,369,934 bytes) | 15.7% |
+| `.json` | 82 | 16,942 | 711.63 KB (728,711 bytes) | 20.1% |
+| `.css` | 16 | 11,747 | 274.83 KB (281,421 bytes) | 3.9% |
+| `.md` | 86 | 10,133 | 652.64 KB (668,302 bytes) | 21.1% |
+| `.py` | 32 | 7,072 | 323.13 KB (330,890 bytes) | 7.8% |
+| `.js` | 3 | 2,321 | 90.68 KB (92,856 bytes) | 0.7% |
+| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 10.3% |
+| `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 10.5% |
+| `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 4.9% |
 | `.jpeg` | 2 | 0 | 773.70 KB (792,264 bytes) | 0.5% |
-| `.png` | 8 | 0 | 714.78 KB (731,934 bytes) | 2.2% |
-| `.txt` | 2 | 0 | 26.63 KB (27,266 bytes) | 0.5% |
-| `.docx` | 1 | 0 | 10.34 KB (10,592 bytes) | 0.3% |
-| `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.3% |
-| `.xml` | 1 | 0 | 6.33 KB (6,485 bytes) | 0.3% |
-| `.webmanifest` | 1 | 0 | 538 bytes | 0.3% |
-| `[no extension]` | 3 | 0 | 115 bytes | 0.8% |
+| `.png` | 8 | 0 | 714.78 KB (731,934 bytes) | 2.0% |
+| `.txt` | 2 | 0 | 26.67 KB (27,307 bytes) | 0.5% |
+| `.docx` | 1 | 0 | 10.34 KB (10,592 bytes) | 0.2% |
+| `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
+| `.xml` | 1 | 0 | 6.35 KB (6,499 bytes) | 0.2% |
+| `[no extension]` | 4 | 0 | 1.57 KB (1,608 bytes) | 1.0% |
+| `.webmanifest` | 1 | 0 | 538 bytes | 0.2% |
 
 ---
 
@@ -68,12 +68,12 @@
 | Metric | Measurement | Architecture Details |
 | :--- | :--- | :--- |
 | **CSS Media Queries (`@media`)** | **77** | Ultra-responsive breakpoints for mobile, tablet, desktop |
-| **CSS Rule Blocks** | **1,591** | Modular selector rules across all stylesheets |
+| **CSS Rule Blocks** | **1,597** | Modular selector rules across all stylesheets |
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **192** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **60** | Strict single-H1 semantic hierarchy per page |
-| **Secondary Section Headings (`<h2>`)** | **399** | Structural topic subdivisions |
-| **Card & Item Headings (`<h3>`)** | **467** | Individual service, question, and feature cards |
+| **Secondary Section Headings (`<h2>`)** | **405** | Structural topic subdivisions |
+| **Card & Item Headings (`<h3>`)** | **466** | Individual service, question, and feature cards |
 | **Call-to-Action (CTA) Modules** | **74** | Standardized CTAs with Free LinkedIn Consultation rule |
 | **Canonical Links Configured** | **59** | 100% SEO canonical URL coverage across public pages |
 | **Open Graph Meta Tags** | **418** | Social preview cards across Twitter/LinkedIn/Facebook |
@@ -84,7 +84,7 @@
 ## 5. Web Page Taxonomy & Sitemap Distribution
 
 - **Total Public HTML Pages**: **64**
-- **Core Landing & Portal Pages**: **64** (`404.html`, `all-business-services.html`, `all-personal-services.html`, `article-footer_dark.html`, `articles.html`, `business-ai-training.html`, `business-services/business-service-advanced-ai-agents.html`, `business-services/business-service-agentic-ai-systems.html`, `business-services/business-service-ai-agents-orchestration.html`, `business-services/business-service-ai-assisted-leads-magnet.html`, `business-services/business-service-ai-based-competitor-research.html`, `business-services/business-service-ai-budget-cost-limits-training.html`, `business-services/business-service-ai-developer-training.html`, `business-services/business-service-claude-advanced-training.html`, `business-services/business-service-gemini-advanced-training.html`, `business-services/business-service-generative-ai-transformation.html`, `business-services/business-service-local-llms-cost-slashing.html`, `business-services/business-service-workflow-automations.html`, `claude/claude-101.html`, `claude/claude-code.html`, `claude/claude-connectors.html`, `claude/claude-cowork.html`, `claude/claude-custom-mcp.html`, `claude/claude-design.html`, `claude/claude-features.html`, `claude/claude-local-llms.html`, `claude/claude-orchestration.html`, `claude/claude-plugins.html`, `claude/claude-science.html`, `claude/claude-skills.html`, `contact.html`, `expertise.html`, `faqs.html`, `footer.html`, `google/google-ai-studio.html`, `google/google-antigravity-ide.html`, `google/google-deep-research.html`, `google/google-flow.html`, `google/google-gemini-101.html`, `google/google-gemini-4-models.html`, `google/google-gemini-agents.html`, `google/google-gemini-deep-think.html`, `google/google-gemini-notebook.html`, `google/google-gemini-spark.html`, `google/google-gemma.html`, `google/google-nano-banana.html`, `google43d90cf6a204dc6d.html`, `header.html`, `index.html`, `personal-ai-training.html`, `personal-services/personal-service-advanced-ai-agents.html`, `personal-services/personal-service-agentic-ai-systems.html`, `personal-services/personal-service-ai-agents-orchestration.html`, `personal-services/personal-service-ai-budget-cost-limits-training.html`, `personal-services/personal-service-ai-developer-training.html`, `personal-services/personal-service-claude-advanced-training.html`, `personal-services/personal-service-continuous-learning.html`, `personal-services/personal-service-gemini-advanced-training.html`, `personal-services/personal-service-generative-ai-transformation.html`, `personal-services/personal-service-goals-self-authoring.html`, `personal-services/personal-service-local-llms-cost-slashing.html`, `personal-services/personal-service-worklife-balance.html`, `pricing.html`, `writing.html`)
+- **Core Landing & Portal Pages**: **64** (`404.html`, `all-business-services.html`, `all-personal-services.html`, `article-footer_dark.html`, `articles.html`, `business-ai-training.html`, `business-services/business-service-advanced-ai-agents.html`, `business-services/business-service-agentic-ai-systems.html`, `business-services/business-service-ai-agents-orchestration.html`, `business-services/business-service-ai-assisted-leads-magnet.html`, `business-services/business-service-ai-based-competitor-research.html`, `business-services/business-service-ai-budget-cost-limits-training.html`, `business-services/business-service-ai-developer-training.html`, `business-services/business-service-claude-advanced-training.html`, `business-services/business-service-gemini-advanced-training.html`, `business-services/business-service-generative-ai-transformation.html`, `business-services/business-service-local-llms-cost-slashing.html`, `business-services/business-service-workflow-automations.html`, `claude/claude-101.html`, `claude/claude-code.html`, `claude/claude-connectors.html`, `claude/claude-cowork.html`, `claude/claude-custom-mcp.html`, `claude/claude-design.html`, `claude/claude-features.html`, `claude/claude-local-llms.html`, `claude/claude-orchestration.html`, `claude/claude-plugins.html`, `claude/claude-science.html`, `claude/claude-skills.html`, `contact.html`, `expertise.html`, `faqs.html`, `footer.html`, `google/google-ai-studio.html`, `google/google-antigravity-ide.html`, `google/google-deep-research.html`, `google/google-gemini-101.html`, `google/google-gemini-3-models.html`, `google/google-gemini-4-models.html`, `google/google-gemini-agents.html`, `google/google-gemini-deep-think.html`, `google/google-gemini-desktop.html`, `google/google-gemini-notebook.html`, `google/google-gemini-spark.html`, `google/google-gemma.html`, `google43d90cf6a204dc6d.html`, `header.html`, `index.html`, `personal-ai-training.html`, `personal-services/personal-service-advanced-ai-agents.html`, `personal-services/personal-service-agentic-ai-systems.html`, `personal-services/personal-service-ai-agents-orchestration.html`, `personal-services/personal-service-ai-budget-cost-limits-training.html`, `personal-services/personal-service-ai-developer-training.html`, `personal-services/personal-service-claude-advanced-training.html`, `personal-services/personal-service-continuous-learning.html`, `personal-services/personal-service-gemini-advanced-training.html`, `personal-services/personal-service-generative-ai-transformation.html`, `personal-services/personal-service-goals-self-authoring.html`, `personal-services/personal-service-local-llms-cost-slashing.html`, `personal-services/personal-service-worklife-balance.html`, `pricing.html`, `writing.html`)
 - **Dedicated Service Pages (`service-*.html`)**: **0** (Full business curriculum and architecture deep-dives)
 - **Claude Guides & Frameworks (`claude-*.html`)**: **0** (Claude Code, Cowork, Skills, MCP, Orchestration, Plugins, Science, Local LLMs, Features)
 - **Google AI & Gemini Guides (`google-*.html`)**: **0** (Gemini 101, Antigravity IDE, Studio, Flow, Deep Research, Spark, Argon, Gemma, Nano Banana)
@@ -102,8 +102,8 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **58 functions** across tooling scripts | Modular execution units |
-| **Python Class Definitions** | **0 classes** | Structured state containers |
+| **Python Function Definitions** | **193 functions** across tooling scripts | Modular execution units |
+| **Python Class Definitions** | **20 classes** | Structured state containers |
 
 ---
 

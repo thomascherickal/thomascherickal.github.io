@@ -91,5 +91,14 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - Always use standardized CSS classes (`.btn`, `.btn-commission`, `.btn-linkedin`, `.btn-primary`, `.btn-gold`, `.btn-outline`, `.btn-lg`, `.btn-full`) defined in `css/buttons.css` rather than ad-hoc inline dimensional overrides.
 - All buttons must strictly maintain `text-decoration: none !important;` across all states (`:hover`, `:focus`, `:active`, `:visited`).
 
+## NLP-Fuzzy-Expert Data Synchronization & Watcher Rule (`nlp-fuzzy-expert/`)
+- **Authoritative Data Directory (`data/*.json`)**: All core data (pricing, services, config, publications, tiers, FAQs, Claude/Gemini guides) is mastered in `data/*.json`.
+- **Knowledge Synchronization Engine**: Changes to `data/*.json` are synchronized to target HTML and JS files via `python3 nlp-fuzzy-expert/synchronizer.py`.
+- **Working Steps & Line Diff Reporting**: The synchronizer prints all working steps (Steps 1-6) in real-time, reports exact 1-based changed line numbers (e.g., `394-405, 428-449`) for each modified document, and displays a clean ASCII summary table upon completion.
+- **Continuous File Watcher Daemon**: Run `python3 nlp-fuzzy-expert/watcher.py` (or `python3 nlp-fuzzy-expert/watcher.py --once` for single pass) to monitor `data/*.json` and trigger automatic repository-wide synchronization on file save.
+- **Artifacts Generated**: Domain references (`*_references.json`), master reference dictionary (`references_dictionary.json`), and domain synchronization markdown reports (`*.md`) in `nlp-fuzzy-expert/`.
 
-
+## Unit Testing Suite & Pre-Commit Test Enforcement (`tests/` & `python/run_tests.py`)
+- **Test Command**: Run all unit tests with `python3 python/run_tests.py` or `python3 -m unittest discover -s tests -v`.
+- **Run Tests After HTML Changes**: When changes are made to repository HTML or JS files, always run the test suite to verify 100% test pass rate across all 36+ test cases.
+- **Pre-Commit Enforcement**: The pre-commit hook automatically executes `python3 python/run_tests.py`. If any unit test fails, the commit is aborted. Never bypass or force commits with broken tests.

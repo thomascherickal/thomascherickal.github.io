@@ -1,4 +1,4 @@
-# Google Deep Research
+# Google Deep Research: Autonomous Multi-Source Investigation
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// AUTONOMOUS INFORMATION SYNTHESIS**  

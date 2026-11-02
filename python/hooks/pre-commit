@@ -1,0 +1,38 @@
+#!/bin/bash
+# Pre-commit hook: Auto-rebuild components, sync schemas, and run unit tests
+# Strict Repo Compliance: Zero emojis, zero em-dashes.
+
+REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null)"
+if [ -z "$REPO_ROOT" ]; then
+    exit 0
+fi
+
+if git diff --cached --name-only | grep -E '^(header|footer)\.html$' > /dev/null 2>&1; then
+    echo "[git pre-commit] Detected changes to header.html or footer.html. Rebuilding components..."
+    python3 "$REPO_ROOT/python/build_components.py"
+    git add "$REPO_ROOT"/*.html "$REPO_ROOT"/business-services/*.html "$REPO_ROOT"/personal-services/*.html "$REPO_ROOT"/claude/*.html "$REPO_ROOT"/google/*.html "$REPO_ROOT"/md-html-sync/
+fi
+
+# Always sync Markdown mirrors and HTML pages
+python3 "$REPO_ROOT/python/md_html_sync.py" > /dev/null 2>&1
+git add "$REPO_ROOT/md-html-sync" 2>/dev/null || true
+
+# Always sync HTML JSON schemas into schema/
+python3 "$REPO_ROOT/python/sync_schemas.py" > /dev/null 2>&1
+git add "$REPO_ROOT/schema" 2>/dev/null || true
+
+python3 "$REPO_ROOT/python/generate_metrics.py" > /dev/null 2>&1
+git add "$REPO_ROOT/metrics.md" 2>/dev/null || true
+
+# Run all unit tests before committing
+echo "[git pre-commit] Running unit test suite (tests/)..."
+python3 "$REPO_ROOT/python/run_tests.py"
+TEST_STATUS=$?
+if [ $TEST_STATUS -ne 0 ]; then
+    echo "[git pre-commit] ERROR: Unit test suite failed with status $TEST_STATUS. Commit aborted."
+    exit 1
+fi
+echo "[git pre-commit] All unit tests passed. Commit approved."
+
+exit 0
+

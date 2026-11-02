@@ -1,4 +1,4 @@
-# Personal Generative AI Transformation
+# Generative AI Transformation
 ## Business AI Transformation Service - Thomas Cherickal
 
 > **// PERSONAL SERVICE SPECIFICATION 01**  

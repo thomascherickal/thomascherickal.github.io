@@ -520,3 +520,37 @@ pre {
   }
 }
 
+/* sync-highlight: Linked value highlighting in IDE/development, invisible on live production */
+.sync-highlight {
+  background: transparent !important;
+  color: inherit !important;
+  font-weight: inherit !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-decoration: inherit !important;
+  display: inline !important;
+}
+
+/* In IDE / Local Development Environment: 75% lighter gold highlight */
+[data-env="ide"] .sync-highlight,
+:root:not([data-env="production"]) .sync-highlight {
+  background: rgba(251, 191, 36, 0.25) !important; /* 75% lighter gold */
+  color: inherit !important;
+  font-weight: inherit !important;
+  padding: 0.05rem 0.25rem !important;
+  border-radius: 3px !important;
+  box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.35) !important;
+  display: inline-block !important;
+}
+
+[data-env="production"] .sync-highlight {
+  background: transparent !important;
+  color: inherit !important;
+  font-weight: inherit !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  display: inline !important;
+}
+

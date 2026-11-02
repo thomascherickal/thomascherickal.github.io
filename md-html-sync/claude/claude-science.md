@@ -1,4 +1,4 @@
-# Claude Science: Anthropic's AI Workbench for Faster Research
+# Claude for Scientific Discovery & Quantitative Research
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  

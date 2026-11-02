@@ -4,7 +4,7 @@
 > **// Business & Organizational Catalogue**  
 > **Comprehensive full-lifecycle business AI transformation engagements across 16 core competencies. Every service
  is a dedicated intensive sprint providing direct executive advisory, production-grade architecture
- blueprints, sample code, and 20 days of post-delivery support (20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day).**
+ blueprints, sample code, and 30 days of post-delivery guidance and materials (30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day).**
 
 ---
 
@@ -12,7 +12,7 @@
 
 Comprehensive full-lifecycle business AI transformation engagements across 16 core competencies. Every service
  is a dedicated intensive sprint providing direct executive advisory, production-grade architecture
- blueprints, sample code, and 20 days of post-delivery support (20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day).
+ blueprints, sample code, and 30 days of post-delivery guidance and materials (30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day).
 
 Business Transformation
 
@@ -28,96 +28,74 @@ Full-lifecycle business AI transformation services spanning AI Agent Mastery (te
 **Category**: `Agentic Workflows`  
 **Link**: [Generative AI Transformation](business-services/business-service-generative-ai-transformation.html)
 
-Move your business from one-off chatbot prompts to coordinated teams of Claude
- agents that carry real work. Ground agent swarms in your domain data with custom MCP servers, bounded
- execution loops, and strict spending limits.
+Transition from one-off prompts to coordinated teams of Claude agents grounded in enterprise data with custom MCP servers.
 
 ### Local LLMs & Cost Slashing
 
 **Category**: `Private Serving`  
 **Link**: [Local LLMs & Cost Slashing](business-services/business-service-local-llms-cost-slashing.html)
 
-Moving routine workloads to local models can cut recurring cloud API bills by 60%
- to 90% by running open-weight models privately with Ollama, vLLM, llama.cpp, and LM Studio. Route routine
- queries locally and keep sensitive records on your machines.
+Slash recurring API costs 60%-90% via private Ollama, vLLM, GGUF/AWQ quantization, and local model clusters.
 
 ### Claude Agent Orchestration
 
-**Category**: `Swarm Topologies`  
+**Category**: `Agent Swarms`  
 **Link**: [Claude Agent Orchestration](business-services/business-service-ai-agents-orchestration.html)
 
-Master the principles of Claude AI agent orchestration to run multi-agent swarms at
- scale. Build orchestrator-worker hierarchies, sequential pipelines, and parallel fan-out teams that
- automate complex workflows while controlling quality and cost.
+Architect orchestrator-worker swarms, parallel fan-out loops, human-in-the-loop gates, and dynamic model routing.
 
-### Hermes Agent
+### Hermes Agent Training
 
-**Category**: `Persistent Memory`  
-**Link**: [Hermes Agent](business-services/business-service-agentic-ai-systems.html)
+**Category**: `Autonomous Loops`  
+**Link**: [Hermes Agent Training](business-services/business-service-agentic-ai-systems.html)
 
-Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own
- infrastructure. Configure persistent session memory so the agent retains project context, saves solved
- procedures as reusable skills, and runs scheduled tasks.
+Deploy open-weights Hermes agent loops with multi-turn tool calling, structured JSON schemas, and function-calling fine-tunes.
 
 ### Workflow Automations
 
-**Category**: `Daily Automation`  
+**Category**: `Automation Pipelines`  
 **Link**: [Workflow Automations](business-services/business-service-workflow-automations.html)
 
-Hands-on training in self-hosted local n8n, Make, IFTTT, and open-source automation
- tools (Activepieces, Windmill). Automate up to 50% of routine enterprise workflows with zero per-step SaaS
- fees and complete data privacy.
+End-to-end automation pipelines connecting CRM, databases, email, and LLM backends via n8n, Make, and open-source stacks.
 
-### AI Budget & Cost Control Training
+### AI Budget & Cost Control
 
-**Category**: `Token Governance`  
-**Link**: [AI Budget & Cost Control Training](business-services/business-service-ai-budget-cost-limits-training.html)
+**Category**: `Financial Guardrails`  
+**Link**: [AI Budget & Cost Control](business-services/business-service-ai-budget-cost-limits-training.html)
 
-Train staff across all levels to control AI spending: establish hard spending caps
- per session and month, configure token budgets, leverage prompt caching, and route low-complexity tasks to
- free and local models.
+Implement hard budget limits, token caps, fallback models, semantic caching, and spend analytics dashboards.
 
 ### AI Developer Training
 
-**Category**: `CLI & TDD`  
+**Category**: `Test-Driven Dev`  
 **Link**: [AI Developer Training](business-services/business-service-ai-developer-training.html)
 
-Hands-on bootcamps training developer teams on terminal and IDE coding agents
- (Claude Code, Google Antigravity, OpenCode). Catch mistakes early with strict AI-assisted Test-Driven
- Development (TDD) and build custom MCP servers.
+Master Claude Code, agentic refactoring, test-driven prompt harnesses, and autonomous bug-hunting workflows.
 
 ### Advanced AI Agents
 
-**Category**: `Autonomous Loops`  
+**Category**: `Long-Horizon Planning`  
 **Link**: [Advanced AI Agents](business-services/business-service-advanced-ai-agents.html)
 
-Build production autonomous agent systems with hierarchical teams of Claude agents
- for business-critical workloads. Implement test-driven self-correction loops where agents fix errors until
- tests pass, with persistent state and Docker sandboxing.
+Build long-horizon planning agents with persistent state, tree-of-thought exploration, and self-correcting execution.
 
 ### Claude Advanced Training
 
-**Category**: `CLI &
- Orchestration`  
+**Category**: `MCP Architecture`  
 **Link**: [Claude Advanced Training](business-services/business-service-claude-advanced-training.html)
 
-Technical masterclass for senior developers and AI architects: advanced Claude Code
- CLI workflows, Claude for Microsoft 365 (Excel, Word, PowerPoint, Outlook), designing and securing
- production MCP servers, and orchestrating frontier models.
+Enterprise Claude architecture: MCP tool servers, prompt caching, effort controls, and production API harnesses.
 
-### Google Gemini Advanced Training
+### Gemini Advanced Training
 
-**Category**: `AI Studio &
- Antigravity`  
-**Link**: [Google Gemini Advanced Training](business-services/business-service-gemini-advanced-training.html)
+**Category**: `Antigravity SDK`  
+**Link**: [Gemini Advanced Training](business-services/business-service-gemini-advanced-training.html)
 
-Advanced technical masterclass for engineers, architects, and technical leads:
- Google AI Studio, Google Antigravity IDE, Gemini Deep Think extended reasoning, open-weight Google Gemma
- fine-tuning, autonomous Gemini Agents, and Gemini Argon.
+Business Gemini architecture: Google Antigravity SDK, structured outputs, code execution, and multi-agent coordination.
 
 ### Competitor Research & Intelligence
 
-**Category**: `Market Intelligence`  
+**Category**: `Competitive CI`  
 **Link**: [Competitor Research & Intelligence](business-services/business-service-ai-based-competitor-research.html)
 
 Deploy autonomous competitive intelligence agents, automated pricing trackers, product teardown scrapers, and dynamic sales battlecards.

@@ -1,4 +1,4 @@
-# Google Gemini Agents
+# Google Gemini Agent Swarms & Tool Integration
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// BUSINESS AUTONOMOUS AGENT ECOSYSTEM**  

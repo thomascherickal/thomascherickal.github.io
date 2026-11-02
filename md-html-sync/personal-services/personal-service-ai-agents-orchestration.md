@@ -1,4 +1,4 @@
-# Generative AI Career Acceleration
+# Claude Agent Orchestration
 ## Business AI Transformation Service - Thomas Cherickal
 
 > **// PERSONAL SERVICE SPECIFICATION 03**  

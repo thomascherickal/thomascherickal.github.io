@@ -1,4 +1,4 @@
-# Claude Skills: Build Your Own, Use What Exists, and Plan for What Comes Next
+# Claude Skills: Custom Skill Engineering & Repositories
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  

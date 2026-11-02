@@ -1,4 +1,4 @@
-# Running Local LLMs on Linux: From 8B to 120B Parameters, with OpenCode and Claude
+# Claude Integration with Sovereign Local LLMs
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
