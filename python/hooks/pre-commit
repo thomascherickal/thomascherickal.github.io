@@ -32,7 +32,15 @@ if [ $TEST_STATUS -ne 0 ]; then
     echo "[git pre-commit] ERROR: Unit test suite failed with status $TEST_STATUS. Commit aborted."
     exit 1
 fi
-echo "[git pre-commit] All unit tests passed. Commit approved."
+
+echo "[git pre-commit] Running JavaScript test suite (pricing-tests.js)..."
+node "$REPO_ROOT/pricing-tests.js"
+JS_TEST_STATUS=$?
+if [ $JS_TEST_STATUS -ne 0 ]; then
+    echo "[git pre-commit] ERROR: JavaScript test suite failed with status $JS_TEST_STATUS. Commit aborted."
+    exit 1
+fi
+echo "[git pre-commit] All unit and JavaScript tests passed. Commit approved."
 
 exit 0
 

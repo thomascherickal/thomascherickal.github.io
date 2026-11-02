@@ -229,11 +229,12 @@ The repository integrates a forward-chaining expert system combined with fuzzy l
 
 ---
 
-### C. Testing Infrastructure & Pre-Commit Verification (`tests/` & `python/run_tests.py`)
+### C. Testing Infrastructure & Pre-Commit Verification (`tests/`, `python/run_tests.py` & `pricing-tests.js`)
 
-A comprehensive unit test suite in [`tests/`](file:///home/thomas/GitHub.io/thomascherickal.github.io/tests) contains 11 dedicated test modules executing 36 individual tests:
+A comprehensive testing suite validates Python and JavaScript functionality across the codebase:
 
-- **100% Pass Rate**: Validates fuzzy engines, NLP extraction, inference rules, pricing updates, catalog names, curriculum synchronization, parity calculations, and cyclic mutations.
+- **Python Unit Test Suite (`tests/`)**: Contains 11 dedicated test modules executing 36 individual tests covering fuzzy engines, NLP extraction, inference rules, pricing updates, catalog names, curriculum synchronization, parity calculations, and cyclic mutations.
+- **JavaScript Test Suite (`pricing-tests.js`)**: Executes 78 unit, functional, DOM controller, and parity tier tests under Node.js with zero external dependencies, validating real-time client-side calculation, currency formatting, and edge case resilience.
 - **Pre-Commit Enforcement**: `.git/hooks/pre-commit` executes `python3 python/run_tests.py` before every commit, automatically blocking commits if any test fails.
 
 ---

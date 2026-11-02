@@ -416,19 +416,19 @@ function runTestSuite() {
   );
 
   // ---------------------------------------------------------------------------
-  // SECTION 5: Business Extra Participant Scaling Tests (+ $100/seat scaled by tier)
+  // SECTION 5: Business Extra Participant Scaling Tests (+ $200/seat scaled by tier)
   // ---------------------------------------------------------------------------
   const bizT1Extra2 = PricingCalculator.calculatePricing({
     tierId: 1,
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 22
+    participants: 27
   });
   assert(
-    "Business 22 seats (2 extra @ $100) @ Tier 1 = $400 USD ($200 base + $200 extra)",
-    bizT1Extra2.finalPrice === 400 && bizT1Extra2.extraParticipants === 2 && bizT1Extra2.extraHeadRate === 200,
-    `Expected $400 with $200 extra, got $${bizT1Extra2.finalPrice}`
+    "Business 27 seats (2 extra @ $200) @ Tier 1 = $600 USD ($200 base + $400 extra)",
+    bizT1Extra2.finalPrice === 600 && bizT1Extra2.extraParticipants === 2 && bizT1Extra2.extraHeadRate === 400,
+    `Expected $600 with $400 extra, got $${bizT1Extra2.finalPrice}`
   );
 
   const bizT2Extra2 = PricingCalculator.calculatePricing({
@@ -436,12 +436,12 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 22 // 2 extra heads * $100 * 0.75 = $150; base = $200 * 0.75 = $150; total = $300
+    participants: 27 // 2 extra heads * $200 * 0.75 = $300; base = $200 * 0.75 = $150; total = $450
   });
   assert(
-    "Business 22 seats @ Tier 2 (25% parity scaled) = $300 USD ($150 base + $150 extra)",
-    bizT2Extra2.finalPrice === 300 && bizT2Extra2.extraHeadRate === 150,
-    `Expected $300 with $150 extra, got $${bizT2Extra2.finalPrice}`
+    "Business 27 seats @ Tier 2 (25% parity scaled) = $450 USD ($150 base + $300 extra)",
+    bizT2Extra2.finalPrice === 450 && bizT2Extra2.extraHeadRate === 300,
+    `Expected $450 with $300 extra, got $${bizT2Extra2.finalPrice}`
   );
 
   const bizT3Extra5 = PricingCalculator.calculatePricing({
@@ -449,12 +449,12 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 25 // 5 extra heads * $100 * 0.50 = $250; base = $200 * 0.50 = $100; total = $350
+    participants: 30 // 5 extra heads * $200 * 0.50 = $500; base = $200 * 0.50 = $100; total = $600
   });
   assert(
-    "Business 25 seats @ Tier 3 = $350 USD ($100 base + $250 extra)",
-    bizT3Extra5.finalPrice === 350 && bizT3Extra5.extraHeadRate === 250,
-    `Expected $350 with $250 extra, got $${bizT3Extra5.finalPrice}`
+    "Business 30 seats @ Tier 3 = $600 USD ($100 base + $500 extra)",
+    bizT3Extra5.finalPrice === 600 && bizT3Extra5.extraHeadRate === 500,
+    `Expected $600 with $500 extra, got $${bizT3Extra5.finalPrice}`
   );
 
   const bizT5Extra10 = PricingCalculator.calculatePricing({
@@ -462,7 +462,7 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 30 // 10 extra heads * $100 * 0.25 = $250; base = $200 * 0.25 = $50; total = $300
+    participants: 30 // 5 extra heads * $200 * 0.25 = $250; base = $200 * 0.25 = $50; total = $300
   });
   assert(
     "Business 30 seats @ Tier 5 = $300 USD ($50 base + $250 extra)",
@@ -474,12 +474,12 @@ function runTestSuite() {
     tierId: 1,
     clientMode: "business",
     packageType: "pkg-business",
-    participants: 50 // 30 extra heads * $100 = $3,000; base = $2,000; total = $5,000
+    participants: 50 // 25 extra heads * $200 = $5,000; base = $2,000; total = $7,000
   });
   assert(
-    "Business Flagship 50 seats @ Tier 1 = $5,000 USD ($2,000 base + $3,000 extra)",
-    biz50Seats.finalPrice === 5000 && biz50Seats.extraParticipants === 30 && biz50Seats.extraHeadRate === 3000,
-    `Expected $5,000 with 30 extra, got $${biz50Seats.finalPrice}`
+    "Business Flagship 50 seats @ Tier 1 = $7,000 USD ($2,000 base + $5,000 extra)",
+    biz50Seats.finalPrice === 7000 && biz50Seats.extraParticipants === 25 && biz50Seats.extraHeadRate === 5000,
+    `Expected $7,000 with 25 extra, got $${biz50Seats.finalPrice}`
   );
 
   // ---------------------------------------------------------------------------
@@ -925,22 +925,22 @@ function runTestSuite() {
     `Expected $2,400 USD, got ${elements["calc-display-price"].textContent}`
   );
 
-  // 7. Participants Input Change: Extra head scaling (+5 participants)
-  elements["calc-participants"].value = "25";
+  // 7. Participants Input Change: Extra head scaling (+5 participants over 25 included = 30)
+  elements["calc-participants"].value = "30";
   elements["calc-participants"].trigger("input");
   assert(
-    "UI Participants Input: Changing participants to 25 immediately adds $500 extra head fee ($2,900 USD)",
-    elements["calc-display-price"].textContent === "$2,900 USD",
-    `Expected $2,900 USD, got ${elements["calc-display-price"].textContent}`
+    "UI Participants Input: Changing participants to 30 immediately adds $1,000 extra head fee ($3,400 USD)",
+    elements["calc-display-price"].textContent === "$3,400 USD",
+    `Expected $3,400 USD, got ${elements["calc-display-price"].textContent}`
   );
 
   // 8. Custom Base Amount Input Change: Typing 5000
   elements["calc-custom-amount"].value = "5000";
   elements["calc-custom-amount"].trigger("input");
   assert(
-    "UI Custom Amount Input: Typing $5,000 immediately recalculates price ($5,500 USD with 5 extra seats)",
-    elements["calc-display-price"].textContent === "$5,500 USD",
-    `Expected $5,500 USD, got ${elements["calc-display-price"].textContent}`
+    "UI Custom Amount Input: Typing $5,000 immediately recalculates price ($6,000 USD with 5 extra seats)",
+    elements["calc-display-price"].textContent === "$6,000 USD",
+    `Expected $6,000 USD, got ${elements["calc-display-price"].textContent}`
   );
 
   // 9. Custom Base Amount Input Change: Typing 0
@@ -961,8 +961,8 @@ function runTestSuite() {
   assert(
     "UI Country Dropdown: Selecting Tier 3 country (India) immediately updates parity tier and price",
     elements["calc-applied-tier"].textContent.includes("Tier 3") &&
-    elements["calc-display-price"].textContent === "$1,250 USD", // ($2,000 base + $500 extra) * 0.50 = $1,250
-    `Expected Tier 3 and $1,250 USD, got tier=${elements["calc-applied-tier"].textContent}, price=${elements["calc-display-price"].textContent}`
+    elements["calc-display-price"].textContent === "$1,500 USD", // ($2,000 base + $1,000 extra) * 0.50 = $1,500
+    `Expected Tier 3 and $1,500 USD, got tier=${elements["calc-applied-tier"].textContent}, price=${elements["calc-display-price"].textContent}`
   );
 
   // 11. Tier Pill Button Click: Clicking Tier 5 (75% discount)
@@ -970,8 +970,8 @@ function runTestSuite() {
   assert(
     "UI Tier Button Click: Clicking Tier 5 button immediately updates active tier and applies 75% discount",
     elements["calc-applied-tier"].textContent.includes("Tier 5") &&
-    elements["calc-display-price"].textContent === "$625 USD", // ($2,000 base + $500 extra) * 0.25 = $625
-    `Expected Tier 5 and $625 USD, got tier=${elements["calc-applied-tier"].textContent}, price=${elements["calc-display-price"].textContent}`
+    elements["calc-display-price"].textContent === "$750 USD", // ($2,000 base + $1,000 extra) * 0.25 = $750
+    `Expected Tier 5 and $750 USD, got tier=${elements["calc-applied-tier"].textContent}, price=${elements["calc-display-price"].textContent}`
   );
 
   // 12. Tier Pill Button Click: Clicking Tier 6 (Subsidized custom quote)

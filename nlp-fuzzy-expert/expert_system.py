@@ -14,6 +14,7 @@ import os
 import sys
 import json
 import re
+import time
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_DIR = os.path.dirname(SCRIPT_DIR)
@@ -64,17 +65,32 @@ def compute_changed_lines(old_text, new_text):
     return ", ".join(ranges)
 
 def load_json(filepath):
-    """Safely loads a JSON file."""
+    """Safely loads a JSON file with retry on transient concurrent read."""
     if not os.path.exists(filepath):
         return {}
-    with open(filepath, "r", encoding="utf-8") as f:
-        return json.load(f)
+    for attempt in range(5):
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                content = f.read().strip()
+                if not content:
+                    time.sleep(0.05)
+                    continue
+                return json.loads(content)
+        except (json.JSONDecodeError, OSError):
+            if attempt == 4:
+                raise
+            time.sleep(0.05)
+    return {}
 
 def save_json(filepath, data):
-    """Safely saves pretty-printed JSON."""
-    with open(filepath, "w", encoding="utf-8") as f:
+    """Safely saves pretty-printed JSON using atomic file replacement."""
+    tmp_path = filepath + ".tmp"
+    with open(tmp_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
         f.write("\n")
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp_path, filepath)
 
 class Fact:
     """Represents an atomic proposition in the knowledge base."""

@@ -21,6 +21,11 @@ python3 python/run_tests.py
 python3 -m unittest discover -s tests -v
 ```
 
+### JavaScript Test Suite Execution
+```bash
+node pricing-tests.js
+```
+
 ---
 
 ## Test Modules Overview

@@ -24,39 +24,53 @@ os.environ["ANTIGRAVITY_IN_TEST"] = "1"
 
 def run_all_tests():
     """Discovers and executes all test cases under tests/."""
-    print("=" * 80)
-    print("           UNIT TEST SUITE EXECUTION (tests/)")
-    print("=" * 80)
-    print(f"Target directory:  {TESTS_DIR}")
-    print("Discovery pattern: test_*.py")
-    print("-" * 80)
+    test_lock = os.path.join(REPO_DIR, "data", ".test_lock")
+    try:
+        with open(test_lock, "w") as f:
+            f.write("1")
+    except OSError:
+        pass
 
-    loader = unittest.TestLoader()
-    suite = loader.discover(start_dir=TESTS_DIR, pattern="test_*.py")
-
-    start_time = time.time()
-    runner = unittest.TextTestRunner(verbosity=2)
-    result = runner.run(suite)
-    elapsed = time.time() - start_time
-
-    print("-" * 80)
-    print("TEST SUITE SUMMARY REPORT")
-    print("-" * 80)
-    print(f"Tests Run:   {result.testsRun}")
-    print(f"Failures:    {len(result.failures)}")
-    print(f"Errors:      {len(result.errors)}")
-    print(f"Skipped:     {len(result.skipped)}")
-    print(f"Time Taken:  {elapsed:.2f} seconds")
-    print("=" * 80)
-
-    if result.wasSuccessful():
-        print("RESULT: ALL TESTS PASSED.")
+    try:
         print("=" * 80)
-        return 0
-    else:
-        print("RESULT: TEST SUITE FAILED.")
+        print("           UNIT TEST SUITE EXECUTION (tests/)")
         print("=" * 80)
-        return 1
+        print(f"Target directory:  {TESTS_DIR}")
+        print("Discovery pattern: test_*.py")
+        print("-" * 80)
+
+        loader = unittest.TestLoader()
+        suite = loader.discover(start_dir=TESTS_DIR, pattern="test_*.py")
+
+        start_time = time.time()
+        runner = unittest.TextTestRunner(verbosity=2)
+        result = runner.run(suite)
+        elapsed = time.time() - start_time
+
+        print("-" * 80)
+        print("TEST SUITE SUMMARY REPORT")
+        print("-" * 80)
+        print(f"Tests Run:   {result.testsRun}")
+        print(f"Failures:    {len(result.failures)}")
+        print(f"Errors:      {len(result.errors)}")
+        print(f"Skipped:     {len(result.skipped)}")
+        print(f"Time Taken:  {elapsed:.2f} seconds")
+        print("=" * 80)
+
+        if result.wasSuccessful():
+            print("RESULT: ALL TESTS PASSED.")
+            print("=" * 80)
+            return 0
+        else:
+            print("RESULT: TEST SUITE FAILED.")
+            print("=" * 80)
+            return 1
+    finally:
+        if os.path.exists(test_lock):
+            try:
+                os.remove(test_lock)
+            except OSError:
+                pass
 
 if __name__ == "__main__":
     exit_code = run_all_tests()

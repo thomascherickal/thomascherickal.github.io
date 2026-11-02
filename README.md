@@ -324,7 +324,7 @@ $ python3 python/run_tests.py
 Target directory:  tests
 Discovery pattern: test_*.py
 --------------------------------------------------------------------------------
-Ran 36 tests in 3.95s
+Ran 36 tests in 3.15s
 
 OK
 --------------------------------------------------------------------------------
@@ -334,19 +334,114 @@ Tests Run:   36
 Failures:    0
 Errors:      0
 Skipped:     0
-Time Taken:  3.95 seconds
+Time Taken:  3.15 seconds
 ================================================================================
 RESULT: ALL TESTS PASSED.
 ================================================================================
 ```
 
-### 3. Link & Anchor Integrity Verification
+### 3. JavaScript Test Suite Execution
+```bash
+$ node pricing-tests.js
+```
+
+```text
+=================================================
+STARTING PRICING CALCULATOR UNIT & FUNCTIONAL TESTS
+=================================================
+[PASS] PARITY_TIERS metadata contains all 6 tiers
+[PASS] PARITY_TIERS multipliers and discounts match defined standards
+[PASS] Tier 6 is marked isCustom = true
+[PASS] ALL_SERVICES_DATA contains all 12 services
+[PASS] ALL_SERVICES_DATA has 12 unique slugs without duplicates
+[PASS] Nothing Selected (Individual): Displays 0 USD ($0 final price, 0 base)
+[PASS] Nothing Selected (Business): Displays 0 USD ($0 final price, 0 base)
+[PASS] Nothing Selected with Extra Participants: Displays 0 USD without extra head charge
+[PASS] Nothing Selected @ Tier 1 returns $0 USD
+[PASS] Nothing Selected @ Tier 2 returns $0 USD
+[PASS] Nothing Selected @ Tier 3 returns $0 USD
+[PASS] Nothing Selected @ Tier 4 returns $0 USD
+[PASS] Nothing Selected @ Tier 5 returns $0 USD
+[PASS] Nothing Selected @ Tier 6 returns $0 USD
+[PASS] Nothing Selected does not trigger flagship cheaper nudge
+[PASS] Individual Pick 1 service @ Tier 1 = $100 USD (0% off)
+[PASS] Individual Pick 1 service @ Tier 2 (25% off) = $75 USD
+[PASS] Individual Pick 1 service @ Tier 3 (50% off) = $50 USD
+[PASS] Individual Pick 1 service @ Tier 4 (Startups 50% off) = $50 USD
+[PASS] Individual Pick 1 service @ Tier 5 (Academia 75% off) = $25 USD
+[PASS] Individual Pick 1 service @ Tier 6 marks isCustom = true
+[PASS] Individual Pick 3 services @ Tier 1 = $300 USD
+[PASS] Individual Pick 5 services @ Tier 2 = $375 USD ($500 base * 0.75)
+[PASS] Individual Pick 9 services ($900 USD) does not trigger flagship nudge
+[PASS] Individual Pick 10 services ($1,000 USD) triggers flagship nudge ($1,000 threshold)
+[PASS] Individual Pick all 12 services @ Tier 1 = $1,200 USD (triggers flagship nudge)
+[PASS] Individual client mode always forces participants to 1 regardless of user input
+[PASS] Business Pick 1 service @ Tier 1 (20 seats) = $200 USD
+[PASS] Business Pick 1 service @ Tier 2 (25% off) = $150 USD
+[PASS] Business Pick 1 service @ Tier 3 (50% off) = $100 USD
+[PASS] Business Pick 1 service @ Tier 5 (Academia 75% off) = $50 USD
+[PASS] Business Pick 5 services @ Tier 1 = $1,000 USD (flagshipCheaper = false)
+[PASS] Business Pick 9 services @ Tier 1 = $1,800 USD (flagshipCheaper = false)
+[PASS] Business Pick 10 services @ Tier 1 = $2,000 USD (triggers flagship nudge)
+[PASS] Business Pick all 12 services @ Tier 1 = $2,400 USD (triggers flagship nudge)
+[PASS] Business Pick all 12 services @ Tier 3 = $1,200 USD ($2,400 base * 0.50)
+[PASS] Business 27 seats (2 extra @ $200) @ Tier 1 = $600 USD ($200 base + $400 extra)
+[PASS] Business 27 seats @ Tier 2 (25% parity scaled) = $450 USD ($150 base + $300 extra)
+[PASS] Business 30 seats @ Tier 3 = $600 USD ($100 base + $500 extra)
+[PASS] Business 30 seats @ Tier 5 = $300 USD ($50 base + $250 extra)
+[PASS] Business Flagship 50 seats @ Tier 1 = $7,000 USD ($2,000 base + $5,000 extra)
+[PASS] Business Flagship @ Tier 1 = $2,000 USD (0% off)
+[PASS] Business Flagship @ Tier 2 = $1,500 USD (25% off, $500 savings)
+[PASS] Business Flagship @ Tier 3 = $1,000 USD (50% off, $1,000 savings)
+[PASS] Business Flagship @ Tier 5 = $500 USD (75% off, $1,500 savings)
+[PASS] Personal Flagship @ Tier 1 = $1,000 USD (0% off)
+[PASS] Personal Flagship @ Tier 2 = $750 USD (25% off, $250 savings)
+[PASS] Personal Flagship @ Tier 3 = $500 USD (50% off, $500 savings)
+[PASS] Personal Flagship @ Tier 5 = $250 USD (75% off, $750 savings)
+[PASS] Custom scope $5,000 @ Tier 1 = $5,000 USD
+[PASS] Custom scope $5,000 @ Tier 2 (25% off) = $3,750 USD
+[PASS] Custom scope $5,000 @ Tier 5 (75% off) = $1,250 USD
+[PASS] Custom scope $0 = $0 USD
+[PASS] Custom scope negative amount is clamped to $0 USD
+[PASS] Null/undefined parameter does not throw and defaults to safe calculation
+[PASS] Invalid tierId defaults safely to Tier 1 (1.0x standard rate)
+[PASS] NaN or negative participants defaults to 20 for business and 1 for individual
+-------------------------------------------------
+TESTING DOM CONTROLLER & REAL-TIME UI PANE CHANGES
+-------------------------------------------------
+[PASS] DOM UI Initial State: Defaults to Tier 1 Business Flagship $2,000 USD
+[PASS] UI Mode Switch: Clicking Individual immediately updates price to $1,000 USD and disables participants
+[PASS] UI Mode Switch: Clicking Business immediately updates price to $2,000 USD and enables participants
+[PASS] UI Package Change: Switching to pick-services immediately calculates 1 selected service ($200 USD)
+[PASS] UI Clear Services: Clicking Clear immediately unchecks all services and displays $0 USD
+[PASS] UI Checkbox Check: Toggling a service immediately updates price from $0 USD to $200 USD
+[PASS] UI Checkbox Check: Toggling second service immediately updates price to $400 USD
+[PASS] UI Select All: Clicking All 12 immediately checks all services and updates price to $2,400 USD
+[PASS] UI Participants Input: Changing participants to 30 immediately adds $1,000 extra head fee ($3,400 USD)
+[PASS] UI Custom Amount Input: Typing $5,000 immediately recalculates price ($6,000 USD with 5 extra seats)
+[PASS] UI Custom Amount Input: Typing $0 immediately displays $0 USD
+[PASS] UI Country Dropdown: Selecting Tier 3 country (India) immediately updates parity tier and price
+[PASS] UI Tier Button Click: Clicking Tier 5 button immediately updates active tier and applies 75% discount
+[PASS] UI Tier Button Click: Clicking Tier 6 button immediately displays custom subsidized quote message
+[PASS] Service Cards Parity Update: Service cards reflect active tier pricing dynamically
+[PASS] Service Cards Parity Update: Switching to Tier 2 renders calibrated prices on service cards
+[PASS] Crash Prevention: Clicking buttons with .calc-tier-btn lacking data-tier attribute does not throw runtime TypeError
+[PASS] Crash Prevention: window.selectTierAndScroll gracefully ignores invalid or non-existent tier IDs without crashing
+[PASS] Crash Prevention: calculatePricing with null tierId safely defaults to Tier 1 pricing ($2,000 USD)
+[PASS] Crash Prevention: calculatePricing with tierId=99 safely defaults to Tier 1 pricing ($2,000 USD)
+[PASS] End-to-End Workflow: Multi-step interactive configuration sequence completes smoothly without exception
+=================================================
+TEST RUN FINISHED: 78/78 PASSED
+ALL TESTS COMPLETED SUCCESSFULLY WITH ZERO ERRORS.
+```
+
+### 4. Link & Anchor Integrity Verification
 ```bash
 $ python3 python/check_links.py
 ```
 
 ```text
-Checked 5199 internal links across 64 HTML files.
+Checked 5212 internal links across 64 HTML files.
 ZERO broken internal links or fragments found! All links verified.
 ```
 
