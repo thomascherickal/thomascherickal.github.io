@@ -34,12 +34,6 @@ Model choice drives both quality and cost. Gemini 4 Argon (gemini-4-argon) is th
 
 Gemini 3.8 Flash and Gemini 3.5 Flash-Lite cost less and both have free tiers.[7] The chart and table below compare standard-tier output prices as listed on 2 November 2026. Flash pricing also rises on 1 January 2027.
 
-| Model Tier | Input Price (per 1M tokens) | Current Output Price (per 1M tokens) | Upcoming Adjusted Rate | Free Tier Availability |
-| :--- | :--- | :--- | :--- | :--- |
-| Gemini 3.5 Flash-Lite | $0.075 | $0.30 | $2.50 standard tier ceiling | Yes (Rate-limited free quota) |
-| Gemini 3.8 Flash | $0.15 | $0.60 ($3.75 peak window) | $7.50 from 1 Jan 2027 | Yes (Standard experimentation tier) |
-| Gemini 4 Argon | $2.00 (through Nov 30) | $10.00 (through Nov 30) | $4.00 / $20.00 from 1 Dec 2026 | No (Paid API tier only) |
-
 Beyond text, AI Studio exposes media models. The pricing page lists Nano Banana 2.1 for image generation and conversational editing, Gemini Omni Flash for video generation and editing, and Live and Transcribe models for speech.[7] Image generation, video and music tools sit in the same Playground as text chat.
 
 ---
@@ -99,14 +93,6 @@ Published apps can take a custom subdomain under ai.studio. Names are first come
 ## Languages, frameworks and SDKs
 
 Two layers matter here. The first is what AI Studio generates for you, and the second is what you can use to call the Gemini API from your own code. The table separates them.
-
-| Target Layer | Languages and Frameworks | Architectural Notes |
-| :--- | :--- | :--- |
-| Web client | React (default), Angular, Next.js | Configured directly in the Settings panel.[9] |
-| Web server | Node.js with npm packages | Handles server secrets, multiplayer state, and Workspace APIs.[3] |
-| Android app | Kotlin with Jetpack Compose | Single-activity ViewModel architecture; no Java, XML layouts, or NDK.[4] |
-| Gemini API SDKs | Python, JavaScript and TypeScript, Go, Java, C# | Official client packages: google-genai, @google/genai, google.golang.org/genai, Google.GenAI.[6] |
-| Other call paths | Google Apps Script, REST | Both appear in the official developer quickstart documentation.[12] |
 
 The older Google libraries were deprecated on 30 November 2025, so new code should use the Google GenAI SDK. For Dart, Flutter, Swift and Android, the libraries page points to Firebase AI Logic, and to Genkit Dart for Dart.[6] There is no separate Rust or Ruby SDK in the official list, although the REST interface works from any language.
 
@@ -188,25 +174,26 @@ A practical order of work is to prove the prompt in the Playground, move to Buil
 
 I provide live, remote engineering training and advisory consulting covering Google Gemini, Claude, and sovereign local LLMs. Engagements turn engineering teams and individual developers into AI-first builders who construct production agent swarms, implement budget safeguards, and run private models.
 
-All services are governed by our transparent 195-country Purchasing Power Parity (PPP) framework, scaling rates fairly across six economic tiers:
+All services are delivered remotely worldwide with 4 hours a day of live instruction, with Saturdays and Sundays as holidays. Pricing is governed by our transparent 195-country Purchasing Power Parity (PPP) framework scaling rates across six economic tiers. For full tier definitions, currency conversions, and interactive calculations, visit our Pricing Page.
 
 ### Individual Service Picks (Pick & Choose)
 
-Clients can also pick and choose individual standalone modules from our 16-service catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
+Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
 
-- Business Individual Pick: $200 USD per service (up to 25 participants included, +$200/extra seat), covering 5 days live engineering + 5 days dedicated support (10 days total coverage).
-- Personal Individual Pick: $100 USD per service (strictly 1 person), covering 5 days live training + 5 days dedicated support (10 days total coverage).
+- Business Individual Pick: 00 USD per service for up to 1 seat, with additional seats at 00 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
+- Personal Individual Pick: 00 USD per service strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
+
+### Payment Structure & Trust Guarantees
+
+Every client engagement is safeguarded by strict trust guarantees:
+
+- Zero Upfront Payment: Strictly bash advance deposit required. We never invoice before delivering actual value.
+- 20% in Five Installments: Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.
+- Walkaway Guarantee: If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.
+- Commercial Apache 2.0 License: All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.
+- Full Pricing Details: Learn more about country tier multipliers, currency choices, and customized curriculum on our Pricing Page.
 
 ### The Six Purchasing Power Parity (PPP) Tiers
-
-| Tier | Category | Representative Geographies | Multiplier | Business Flagship | Personal Flagship |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| Tier 1 | High-Income Baseline | United States, UK, Germany, Canada, Japan, Singapore, Australia | 1.00X | $2,000 USD | $1,000 USD |
-| Tier 2 | Upper-Middle Economies | Brazil, Mexico, Malaysia, Türkiye, Thailand, Philippines, Sri Lanka | 0.75X | $1,500 USD | $750 USD |
-| Tier 3 | Lower-Middle & Low-Income | India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam | 0.50X | $1,000 USD | $500 USD |
-| Tier 4 | Early-Stage Startups | Global tech startups with <$1M external funding | 0.50X | $1,000 USD | $500 USD |
-| Tier 5 | Academia & Non-Profits | Universities, accredited labs, registered charities & 501(c)(3) entities | 0.25X | $500 USD | $250 USD |
-| Tier 6 | Subsidized Relief | Crisis-affected regions, developing collectives & grassroots builders | Custom | Subsidized | $100 USD |
 
 ---
 

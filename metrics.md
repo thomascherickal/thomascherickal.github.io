@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-02 06:30:47 UTC` | Branch: `main` | Head Commit: `328fe9a`
+> **Automated Status Report** | Generated on `2026-11-02 07:03:14 UTC` | Branch: `main` | Head Commit: `9b3cde3`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **408** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **118,708** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **107,256** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **4,205** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **7,247** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **40.75 MB (42,728,273 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **303,113 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **446** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-02** | Subject: "Update nlp-fuzzy-expert generated reference reports" |
+| **Total Lines of Source Code & Content** | **118,543** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **107,169** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **4,210** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **7,164** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **40.75 MB (42,727,285 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **303,648 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **447** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-02** | Subject: "Update README test tables and expand Python test suite coverage" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,12 +27,12 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 64 | 69,797 | 5.20 MB (5,457,127 bytes) | Production static web pages, services, frameworks & guides |
-| **CSS Stylesheets** | 16 | 11,747 | 274.82 KB (281,419 bytes) | Design tokens, animations, responsive layout & themes |
+| **HTML Documents** | 64 | 69,581 | 5.20 MB (5,453,653 bytes) | Production static web pages, services, frameworks & guides |
+| **CSS Stylesheets** | 16 | 11,778 | 275.49 KB (282,099 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 3 | 2,321 | 90.70 KB (92,881 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 32 | 7,280 | 333.56 KB (341,565 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 86 | 10,568 | 686.49 KB (702,962 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 82 | 16,942 | 711.40 KB (728,478 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 86 | 10,588 | 688.25 KB (704,767 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 82 | 16,942 | 711.41 KB (728,479 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 74 | 0 | 33.39 MB (35,010,540 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 9 | 0 | 45.72 KB (46,813 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,10 +43,10 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 64 | 69,797 | 5.20 MB (5,457,127 bytes) | 15.7% |
-| `.json` | 82 | 16,942 | 711.40 KB (728,478 bytes) | 20.1% |
-| `.css` | 16 | 11,747 | 274.82 KB (281,419 bytes) | 3.9% |
-| `.md` | 86 | 10,568 | 686.49 KB (702,962 bytes) | 21.1% |
+| `.html` | 64 | 69,581 | 5.20 MB (5,453,653 bytes) | 15.7% |
+| `.json` | 82 | 16,942 | 711.41 KB (728,479 bytes) | 20.1% |
+| `.css` | 16 | 11,778 | 275.49 KB (282,099 bytes) | 3.9% |
+| `.md` | 86 | 10,588 | 688.25 KB (704,767 bytes) | 21.1% |
 | `.py` | 32 | 7,280 | 333.56 KB (341,565 bytes) | 7.8% |
 | `.js` | 3 | 2,321 | 90.70 KB (92,881 bytes) | 0.7% |
 | `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 10.3% |
@@ -68,12 +68,12 @@
 | Metric | Measurement | Architecture Details |
 | :--- | :--- | :--- |
 | **CSS Media Queries (`@media`)** | **77** | Ultra-responsive breakpoints for mobile, tablet, desktop |
-| **CSS Rule Blocks** | **1,597** | Modular selector rules across all stylesheets |
+| **CSS Rule Blocks** | **1,601** | Modular selector rules across all stylesheets |
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **192** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **60** | Strict single-H1 semantic hierarchy per page |
 | **Secondary Section Headings (`<h2>`)** | **426** | Structural topic subdivisions |
-| **Card & Item Headings (`<h3>`)** | **486** | Individual service, question, and feature cards |
+| **Card & Item Headings (`<h3>`)** | **488** | Individual service, question, and feature cards |
 | **Call-to-Action (CTA) Modules** | **74** | Standardized CTAs with Free LinkedIn Consultation rule |
 | **Canonical Links Configured** | **59** | 100% SEO canonical URL coverage across public pages |
 | **Open Graph Meta Tags** | **418** | Social preview cards across Twitter/LinkedIn/Facebook |

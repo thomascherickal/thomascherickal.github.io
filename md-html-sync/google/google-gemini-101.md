@@ -114,25 +114,11 @@ Information regarding Xenon is less clear. Community reports circulating since l
 
 Technical reporting requires a consistent standard: an engineering claim counts as confirmed when Google publishes it in a blog post, a model card, or API documentation, while other details remain labeled as unconfirmed reports.
 
-| Model | Release Status | Verified Architecture & Knowledge Summary |
-| :--- | :--- | :--- |
-| Gemini Argon | Available | Announced September 30, broadly available October 13, 2026. Documented API identifier gemini-4-argon with 1M token output decode capability. |
-| Gemini Carbon | Gated | Announced October 28, 2026. Accessible exclusively to Fairwind cybersecurity partners; no public general availability date published. |
-| Hydrogen | Unconfirmed | Reported Flash-tier optimization model. Appears only in third-party leaks and external tracking catalogs under gemini-4-flash-preview. |
-| Xenon | Unconfirmed | Leaked October 30, 2026. Reported internal evaluation architecture focusing on reduced-cost frontier reasoning. No official date. |
-
 ---
 
 ## Google AI Subscription Tiers Explained
 
 Google structured its consumer and professional AI offerings into integrated tiers tied to Google One cloud storage, computational quotas, and workspace application capabilities:
-
-| Subscription Tier | Monthly Investment | Unified Cloud Storage | Primary Model Capabilities & Quotas |
-| :--- | :--- | :--- | :--- |
-| Gemini Free | $0.00 | 15 GB | Baseline Flash-tier access, standard prompt lengths, standard rate limits. |
-| Google AI Plus | $4.99 / mo | 400 GB | 2x rate limits, baseline Google Docs and Gmail draft assistance, expanded research tools. |
-| Google AI Pro | $19.99 / mo | 5 TB | Frontier Gemini Pro & Argon access, 1M+ token context windows, autonomous Deep Research, native Google Workspace embedding. |
-| Google AI Ultra | $99.99 - $200.00 / mo | 20 TB+ | Maximum priority queues, 5x to 20x compute budget, Google Antigravity IDE access, Google Flow video creation credits. |
 
 ### What Can You Do with a Pro Subscription?
 
@@ -199,25 +185,26 @@ The practical step for developers and technical leaders is to benchmark Argon di
 
 I provide live, remote engineering training and advisory consulting covering Google Gemini, Claude, and sovereign local LLMs. Engagements turn engineering teams and individual developers into AI-first builders who construct production agent swarms, implement budget safeguards, and run private models.
 
-All services are governed by our transparent 195-country Purchasing Power Parity (PPP) framework, scaling rates fairly across six economic tiers:
+All services are delivered remotely worldwide with 4 hours a day of live instruction, with Saturdays and Sundays as holidays. Pricing is governed by our transparent 195-country Purchasing Power Parity (PPP) framework scaling rates across six economic tiers. For full tier definitions, currency conversions, and interactive calculations, visit our Pricing Page.
 
 ### Individual Service Picks (Pick & Choose)
 
-Clients can also pick and choose individual standalone modules from our 16-service catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
+Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
 
-- Business Individual Pick: $200 USD per service (up to 25 participants included, +$200/extra seat), covering 5 days live engineering + 5 days dedicated support (10 days total coverage).
-- Personal Individual Pick: $100 USD per service (strictly 1 person), covering 5 days live training + 5 days dedicated support (10 days total coverage).
+- Business Individual Pick: 00 USD per service for up to 1 seat, with additional seats at 00 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
+- Personal Individual Pick: 00 USD per service strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
+
+### Payment Structure & Trust Guarantees
+
+Every client engagement is safeguarded by strict trust guarantees:
+
+- Zero Upfront Payment: Strictly bash advance deposit required. We never invoice before delivering actual value.
+- 20% in Five Installments: Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.
+- Walkaway Guarantee: If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.
+- Commercial Apache 2.0 License: All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.
+- Full Pricing Details: Learn more about country tier multipliers, currency choices, and customized curriculum on our Pricing Page.
 
 ### The Six Purchasing Power Parity (PPP) Tiers
-
-| Tier | Category | Representative Geographies | Multiplier | Business Flagship | Personal Flagship |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| Tier 1 | High-Income Baseline | United States, UK, Germany, Canada, Japan, Singapore, Australia | 1.00X | $2,000 USD | $1,000 USD |
-| Tier 2 | Upper-Middle Economies | Brazil, Mexico, Malaysia, Türkiye, Thailand, Philippines, Sri Lanka | 0.75X | $1,500 USD | $750 USD |
-| Tier 3 | Lower-Middle & Low-Income | India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam | 0.50X | $1,000 USD | $500 USD |
-| Tier 4 | Early-Stage Startups | Global tech startups with <$1M external funding | 0.50X | $1,000 USD | $500 USD |
-| Tier 5 | Academia & Non-Profits | Universities, accredited labs, registered charities & 501(c)(3) entities | 0.25X | $500 USD | $250 USD |
-| Tier 6 | Subsidized Relief | Crisis-affected regions, developing collectives & grassroots builders | Custom | Subsidized | $100 USD |
 
 ---
 

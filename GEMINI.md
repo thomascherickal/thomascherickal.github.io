@@ -102,3 +102,26 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - **Test Command**: Run all unit tests with `python3 python/run_tests.py` or `python3 -m unittest discover -s tests -v`.
 - **Run Tests After HTML Changes**: When changes are made to repository HTML or JS files, always run the test suite to verify 100% test pass rate across all 36+ test cases.
 - **Pre-Commit Enforcement**: The pre-commit hook automatically executes `python3 python/run_tests.py`. If any unit test fails, the commit is aborted. Never bypass or force commits with broken tests.
+
+## Practice Pricing, Payment Structure & Licensing Rules
+- **Business AI Training Flagship**:
+  - Base price: **$2,000 USD** for **60 days total** (30 days live engineering training + 30 days dedicated support).
+  - Includes up to 10 participants. Extra seats are **$200 USD per seat** after 10 participants, up to a strict maximum of 20 seats.
+- **Personal AI Training Flagship**:
+  - Base price: **$2,000 USD** for **60 days total** (30 days live 1-on-1 training + 30 days dedicated support).
+  - Strictly **one person only** (dedicated private acceleration).
+- **Individual Service Picks**:
+  - **Business Individual Service**: **$200 USD** base for 1 seat, with additional seats at **$200 USD per seat** up to a maximum of 10 seats (5 days live training + 5 days support).
+  - **Personal Individual Service**: **$200 USD** strictly for **only one seat** (5 days live training + 5 days support).
+- **Delivery Schedule & Mode**:
+  - **4 hours per day**, Monday through Friday.
+  - **Saturdays and Sundays are holidays**.
+  - Delivered **100% remote worldwide**.
+- **Payment Structure & Trust Guarantees**:
+  - **$0 Upfront**: Strictly zero advance payment or deposit required before commencing technical discovery and training.
+  - **20% in Five Installments**: Invoiced in five equal installments (20% each) due strictly after completed milestone blocks of training progress.
+  - **Walkaway Guarantee**: Walk away owing nothing if not satisfied after the first milestone training phase.
+- **Purchasing Power Parity (PPP) Explanation**:
+  - Every page mentioning pricing must provide a short explanation of the six 195-country Purchasing Power Parity (PPP) tiers and include a prominent link to `pricing.html`.
+- **High-Quality Training Material & Apache 2.0 Licensing**:
+  - All high-quality training materials, curriculum documents, architectural guides, and custom client code are licensed under the **Apache 2.0 license**, permitting commercial use, internal deployment, resale, and relicensing with attribution.

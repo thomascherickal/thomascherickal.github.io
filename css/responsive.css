@@ -282,6 +282,8 @@ pre {
   }
 
   /* Single-column grid stacking */
+  .pricing-summary-grid,
+  .toc-grid,
   .pricing-grid-faq,
   .parity-tiers-grid,
   .calc-grid,
@@ -518,6 +520,35 @@ pre {
     grid-template-columns: 1fr !important;
     gap: 10px !important;
   }
+}
+
+
+/* Article Single-Column & Mobile-Friendly Architecture */
+.single-column-article,
+.article-single-column {
+  max-width: 880px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100% !important;
+}
+
+.table-responsive {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  margin: 1.25rem 0 !important;
+}
+
+.diagram-container {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.diagram-container svg {
+  max-width: 100% !important;
+  height: auto !important;
 }
 
 /* sync-highlight: Linked value highlighting in IDE/development, invisible on live production */
