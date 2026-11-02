@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-02 11:46:54 UTC` | Branch: `main` | Head Commit: `8a971e5`
+> **Automated Status Report** | Generated on `2026-11-02 12:12:40 UTC` | Branch: `main` | Head Commit: `8edaae4`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **412** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **119,967** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **108,276** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **4,273** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **7,418** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **40.84 MB (42,829,020 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **309,075 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **453** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-02** | Subject: "Create delete_page.py helper, purge google-nano-banana.html across sync systems, and add prune logic to md_html_sync" |
+| **Total Lines of Source Code & Content** | **120,646** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **108,927** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **4,282** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **7,437** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **40.89 MB (42,878,040 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **309,644 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **454** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-02** | Subject: "Update nlp-fuzzy-expert synchronization references and reports" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,15 +27,15 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 65 | 70,908 | 5.29 MB (5,547,562 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 65 | 71,476 | 5.33 MB (5,588,628 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,778 | 275.49 KB (282,099 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 3 | 2,321 | 90.70 KB (92,881 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 33 | 7,651 | 346.78 KB (355,105 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 87 | 10,766 | 702.59 KB (719,451 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Python Tooling** | 33 | 7,746 | 350.99 KB (359,416 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 87 | 10,782 | 705.86 KB (722,805 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 83 | 16,490 | 691.49 KB (708,081 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 74 | 0 | 33.39 MB (35,010,540 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 9 | 0 | 45.72 KB (46,813 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 9 | 0 | 46.00 KB (47,102 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,11 +43,11 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 65 | 70,908 | 5.29 MB (5,547,562 bytes) | 15.8% |
+| `.html` | 65 | 71,476 | 5.33 MB (5,588,628 bytes) | 15.8% |
 | `.json` | 83 | 16,490 | 691.49 KB (708,081 bytes) | 20.1% |
 | `.css` | 16 | 11,778 | 275.49 KB (282,099 bytes) | 3.9% |
-| `.md` | 87 | 10,766 | 702.59 KB (719,451 bytes) | 21.1% |
-| `.py` | 33 | 7,651 | 346.78 KB (355,105 bytes) | 8.0% |
+| `.md` | 87 | 10,782 | 705.86 KB (722,805 bytes) | 21.1% |
+| `.py` | 33 | 7,746 | 350.99 KB (359,416 bytes) | 8.0% |
 | `.js` | 3 | 2,321 | 90.70 KB (92,881 bytes) | 0.7% |
 | `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 10.2% |
 | `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 10.4% |
@@ -58,7 +58,7 @@
 | `.docx` | 1 | 0 | 10.34 KB (10,592 bytes) | 0.2% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
 | `.xml` | 1 | 0 | 6.34 KB (6,492 bytes) | 0.2% |
-| `[no extension]` | 4 | 0 | 1.87 KB (1,911 bytes) | 1.0% |
+| `[no extension]` | 4 | 0 | 2.15 KB (2,200 bytes) | 1.0% |
 | `.webmanifest` | 1 | 0 | 538 bytes | 0.2% |
 
 ---
@@ -72,8 +72,8 @@
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **198** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **61** | Strict single-H1 semantic hierarchy per page |
-| **Secondary Section Headings (`<h2>`)** | **434** | Structural topic subdivisions |
-| **Card & Item Headings (`<h3>`)** | **501** | Individual service, question, and feature cards |
+| **Secondary Section Headings (`<h2>`)** | **435** | Structural topic subdivisions |
+| **Card & Item Headings (`<h3>`)** | **505** | Individual service, question, and feature cards |
 | **Call-to-Action (CTA) Modules** | **75** | Standardized CTAs with Free LinkedIn Consultation rule |
 | **Canonical Links Configured** | **60** | 100% SEO canonical URL coverage across public pages |
 | **Open Graph Meta Tags** | **425** | Social preview cards across Twitter/LinkedIn/Facebook |
@@ -107,7 +107,7 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **212 functions** across tooling scripts | Modular execution units |
+| **Python Function Definitions** | **214 functions** across tooling scripts | Modular execution units |
 | **Python Class Definitions** | **20 classes** | Structured state containers |
 
 ---

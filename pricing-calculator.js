@@ -160,10 +160,10 @@
 
     let rawParticipants = parseInt(params.participants, 10);
     if (isNaN(rawParticipants) || rawParticipants < 1) {
-      rawParticipants = clientMode === "individual" ? 1 : 20;
+      rawParticipants = clientMode === "individual" ? 1 : 10;
     }
     let participants = clientMode === "individual" ? 1 : rawParticipants;
-    const extraParticipants = (clientMode === "business" && basePrice > 0) ? Math.max(0, participants - 25) : 0;
+    const extraParticipants = (clientMode === "business" && basePrice > 0) ? Math.max(0, participants - 10) : 0;
     const extraHeadRate = Math.round(extraParticipants * 200 * tier.multiplier);
     const baseTierPrice = Math.round(basePrice * tier.multiplier);
     const finalPrice = basePrice === 0 ? 0 : baseTierPrice + extraHeadRate;
@@ -306,11 +306,11 @@
         btnModeBusiness.classList.add("active");
         btnModeIndividual.classList.remove("active");
         if (calcParticipants) {
-          calcParticipants.value = Math.max(20, parseInt(calcParticipants.value, 10) || 20);
+          calcParticipants.value = Math.max(10, parseInt(calcParticipants.value, 10) || 10);
           calcParticipants.disabled = false;
         }
-        if (calcParticipantsHint) calcParticipantsHint.textContent = "Business: 1-25 Included (+$200/extra seat)";
-        if (calcParticipantsDesc) calcParticipantsDesc.textContent = "Business base covers up to 25 participants (additional seats are $200 USD per seat scaled by country parity).";
+        if (calcParticipantsHint) calcParticipantsHint.textContent = "Business: 1-10 Included (+$200/extra seat)";
+        if (calcParticipantsDesc) calcParticipantsDesc.textContent = "Business base covers up to 10 participants (additional seats are $200 USD per seat scaled by country parity).";
       } else {
         btnModeIndividual.classList.add("active");
         btnModeBusiness.classList.remove("active");
@@ -415,7 +415,7 @@
       // Scope description
       if (calcScopeVal) {
         if (result.packageType === "pkg-business") {
-          calcScopeVal.textContent = "Business Training Flagship (70 Days: 30d + 30d, 4h/day)";
+          calcScopeVal.textContent = "Business Training Flagship (60 Days: 30d + 30d, 4h/day)";
           calcScopeVal.style.color = "var(--cyan)";
         } else if (result.packageType === "pkg-personal") {
           calcScopeVal.textContent = "Personal Training Flagship (60 Days: 30d + 30d, 4h/day)";
@@ -435,7 +435,7 @@
           calcCohortVal.textContent = "1 Person Only (Private 1-on-1)";
           calcCohortVal.style.color = "var(--gold)";
         } else {
-          if (result.participants <= 25) {
+          if (result.participants <= 10) {
             calcCohortVal.textContent = result.participants + (result.participants === 1 ? " Participant (Included in Base)" : " Participants (Included in Base)");
             calcCohortVal.style.color = "var(--gold)";
           } else {
@@ -534,7 +534,7 @@
           if (result.extraParticipants > 0) {
             calcDisplayNote.innerHTML = tier.note + " · Plus " + result.extraParticipants + " extra seats (+$" + result.extraHeadRate.toLocaleString("en-US") + ")";
           } else {
-            calcDisplayNote.innerHTML = tier.note + (result.clientMode === "business" ? " · Base covers up to 25 participants" : " · Strictly 1 person only");
+            calcDisplayNote.innerHTML = tier.note + (result.clientMode === "business" ? " · Base covers up to 10 participants" : " · Strictly 1 person only");
           }
           calcDisplayNote.style.color = tier.badgeColor;
         }

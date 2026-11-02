@@ -19,7 +19,7 @@ Whether booking organization-wide Business Training or an intensive 1-on-1 Perso
 
 ### Business Training Flagship
 
-Guaranteed 30 days of comprehensive live instruction across engineering cohorts and leadership, followed immediately by 30 days of guidance, Q&A and written guides (30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Covers up to 25 participants (extra seats at $200 USD per seat). Clients are encouraged to choose services relevant to
+Guaranteed 30 days of comprehensive live instruction across engineering cohorts and leadership, followed immediately by 30 days of guidance, Q&A and written guides (30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Covers up to 10 participants (extra seats at $200 USD per seat). Clients are encouraged to choose services relevant to
  their work or interests.
 
 ### Personal Training Flagship (1

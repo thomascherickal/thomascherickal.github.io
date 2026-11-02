@@ -296,17 +296,17 @@ function runTestSuite() {
   );
 
   // ---------------------------------------------------------------------------
-  // SECTION 4: Business Pick-Services Tests ($200/service base, up to 20 seats)
+  // SECTION 4: Business Pick-Services Tests ($200/service base, up to 10 seats)
   // ---------------------------------------------------------------------------
   const bizT1 = PricingCalculator.calculatePricing({
     tierId: 1,
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 20
+    participants: 10
   });
   assert(
-    "Business Pick 1 service @ Tier 1 (20 seats) = $200 USD",
+    "Business Pick 1 service @ Tier 1 (10 seats) = $200 USD",
     bizT1.finalPrice === 200 && bizT1.extraParticipants === 0 && bizT1.totalSavings === 0,
     `Expected $200 with 0 extra, got $${bizT1.finalPrice}`
   );
@@ -316,7 +316,7 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 20
+    participants: 10
   });
   assert(
     "Business Pick 1 service @ Tier 2 (25% off) = $150 USD",
@@ -329,7 +329,7 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 20
+    participants: 10
   });
   assert(
     "Business Pick 1 service @ Tier 3 (50% off) = $100 USD",
@@ -342,7 +342,7 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 20
+    participants: 10
   });
   assert(
     "Business Pick 1 service @ Tier 5 (Academia 75% off) = $50 USD",
@@ -355,7 +355,7 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: PricingCalculator.ALL_SERVICES_DATA.slice(0, 5).map(s => s.slug),
-    participants: 20
+    participants: 10
   });
   assert(
     "Business Pick 5 services @ Tier 1 = $1,000 USD (flagshipCheaper = false)",
@@ -368,7 +368,7 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: PricingCalculator.ALL_SERVICES_DATA.slice(0, 9).map(s => s.slug),
-    participants: 20
+    participants: 10
   });
   assert(
     "Business Pick 9 services @ Tier 1 = $1,800 USD (flagshipCheaper = false)",
@@ -381,7 +381,7 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: PricingCalculator.ALL_SERVICES_DATA.slice(0, 10).map(s => s.slug),
-    participants: 20
+    participants: 10
   });
   assert(
     "Business Pick 10 services @ Tier 1 = $2,000 USD (triggers flagship nudge)",
@@ -394,7 +394,7 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: PricingCalculator.ALL_SERVICES_DATA.map(s => s.slug),
-    participants: 20
+    participants: 10
   });
   assert(
     "Business Pick all 12 services @ Tier 1 = $2,400 USD (triggers flagship nudge)",
@@ -407,7 +407,7 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: PricingCalculator.ALL_SERVICES_DATA.map(s => s.slug),
-    participants: 20
+    participants: 10
   });
   assert(
     "Business Pick all 12 services @ Tier 3 = $1,200 USD ($2,400 base * 0.50)",
@@ -423,10 +423,10 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 27
+    participants: 12
   });
   assert(
-    "Business 27 seats (2 extra @ $200) @ Tier 1 = $600 USD ($200 base + $400 extra)",
+    "Business 12 seats (2 extra @ $200) @ Tier 1 = $600 USD ($200 base + $400 extra)",
     bizT1Extra2.finalPrice === 600 && bizT1Extra2.extraParticipants === 2 && bizT1Extra2.extraHeadRate === 400,
     `Expected $600 with $400 extra, got $${bizT1Extra2.finalPrice}`
   );
@@ -436,10 +436,10 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 27 // 2 extra heads * $200 * 0.75 = $300; base = $200 * 0.75 = $150; total = $450
+    participants: 12 // 2 extra heads * $200 * 0.75 = $300; base = $200 * 0.75 = $150; total = $450
   });
   assert(
-    "Business 27 seats @ Tier 2 (25% parity scaled) = $450 USD ($150 base + $300 extra)",
+    "Business 12 seats @ Tier 2 (25% parity scaled) = $450 USD ($150 base + $300 extra)",
     bizT2Extra2.finalPrice === 450 && bizT2Extra2.extraHeadRate === 300,
     `Expected $450 with $300 extra, got $${bizT2Extra2.finalPrice}`
   );
@@ -449,10 +449,10 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 30 // 5 extra heads * $200 * 0.50 = $500; base = $200 * 0.50 = $100; total = $600
+    participants: 15 // 5 extra heads * $200 * 0.50 = $500; base = $200 * 0.50 = $100; total = $600
   });
   assert(
-    "Business 30 seats @ Tier 3 = $600 USD ($100 base + $500 extra)",
+    "Business 15 seats @ Tier 3 = $600 USD ($100 base + $500 extra)",
     bizT3Extra5.finalPrice === 600 && bizT3Extra5.extraHeadRate === 500,
     `Expected $600 with $500 extra, got $${bizT3Extra5.finalPrice}`
   );
@@ -462,24 +462,24 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 30 // 5 extra heads * $200 * 0.25 = $250; base = $200 * 0.25 = $50; total = $300
+    participants: 15 // 5 extra heads * $200 * 0.25 = $250; base = $200 * 0.25 = $50; total = $300
   });
   assert(
-    "Business 30 seats @ Tier 5 = $300 USD ($50 base + $250 extra)",
+    "Business 15 seats @ Tier 5 = $300 USD ($50 base + $250 extra)",
     bizT5Extra10.finalPrice === 300 && bizT5Extra10.extraHeadRate === 250,
     `Expected $300 with $250 extra, got $${bizT5Extra10.finalPrice}`
   );
 
-  const biz50Seats = PricingCalculator.calculatePricing({
+  const biz35Seats = PricingCalculator.calculatePricing({
     tierId: 1,
     clientMode: "business",
     packageType: "pkg-business",
-    participants: 50 // 25 extra heads * $200 = $5,000; base = $2,000; total = $7,000
+    participants: 35 // 25 extra heads * $200 = $5,000; base = $2,000; total = $7,000
   });
   assert(
-    "Business Flagship 50 seats @ Tier 1 = $7,000 USD ($2,000 base + $5,000 extra)",
-    biz50Seats.finalPrice === 7000 && biz50Seats.extraParticipants === 25 && biz50Seats.extraHeadRate === 5000,
-    `Expected $7,000 with 25 extra, got $${biz50Seats.finalPrice}`
+    "Business Flagship 35 seats @ Tier 1 = $7,000 USD ($2,000 base + $5,000 extra)",
+    biz35Seats.finalPrice === 7000 && biz35Seats.extraParticipants === 25 && biz35Seats.extraHeadRate === 5000,
+    `Expected $7,000 with 25 extra, got $${biz35Seats.finalPrice}`
   );
 
   // ---------------------------------------------------------------------------
@@ -489,7 +489,7 @@ function runTestSuite() {
     tierId: 1,
     clientMode: "business",
     packageType: "pkg-business",
-    participants: 20
+    participants: 10
   });
   assert(
     "Business Flagship @ Tier 1 = $2,000 USD (0% off)",
@@ -501,7 +501,7 @@ function runTestSuite() {
     tierId: 2,
     clientMode: "business",
     packageType: "pkg-business",
-    participants: 20
+    participants: 10
   });
   assert(
     "Business Flagship @ Tier 2 = $1,500 USD (25% off, $500 savings)",
@@ -513,7 +513,7 @@ function runTestSuite() {
     tierId: 3,
     clientMode: "business",
     packageType: "pkg-business",
-    participants: 20
+    participants: 10
   });
   assert(
     "Business Flagship @ Tier 3 = $1,000 USD (50% off, $1,000 savings)",
@@ -525,7 +525,7 @@ function runTestSuite() {
     tierId: 5,
     clientMode: "business",
     packageType: "pkg-business",
-    participants: 20
+    participants: 10
   });
   assert(
     "Business Flagship @ Tier 5 = $500 USD (75% off, $1,500 savings)",
@@ -589,7 +589,7 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "custom",
     customBase: 5000,
-    participants: 20
+    participants: 10
   });
   assert(
     "Custom scope $5,000 @ Tier 1 = $5,000 USD",
@@ -602,7 +602,7 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "custom",
     customBase: 5000,
-    participants: 20
+    participants: 10
   });
   assert(
     "Custom scope $5,000 @ Tier 2 (25% off) = $3,750 USD",
@@ -615,7 +615,7 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "custom",
     customBase: 5000,
-    participants: 20
+    participants: 10
   });
   assert(
     "Custom scope $5,000 @ Tier 5 (75% off) = $1,250 USD",
@@ -628,7 +628,7 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "custom",
     customBase: 0,
-    participants: 20
+    participants: 10
   });
   assert(
     "Custom scope $0 = $0 USD",
@@ -641,7 +641,7 @@ function runTestSuite() {
     clientMode: "business",
     packageType: "custom",
     customBase: -500,
-    participants: 20
+    participants: 10
   });
   assert(
     "Custom scope negative amount is clamped to $0 USD",
@@ -665,8 +665,8 @@ function runTestSuite() {
   );
 
   assert(
-    "NaN or negative participants defaults to 20 for business and 1 for individual",
-    PricingCalculator.calculatePricing({ clientMode: "business", participants: "invalid" }).participants === 20 &&
+    "NaN or negative participants defaults to 10 for business and 1 for individual",
+    PricingCalculator.calculatePricing({ clientMode: "business", participants: "invalid" }).participants === 10 &&
     PricingCalculator.calculatePricing({ clientMode: "individual", participants: "invalid" }).participants === 1,
     "Malformed participants were not safely normalized"
   );
@@ -748,7 +748,7 @@ function runTestSuite() {
     const btnSelectAllServices = makeEl("button", "btn-select-all-services");
     const btnClearServices = makeEl("button", "btn-clear-services");
     const calcCustomAmount = makeEl("input", "calc-custom-amount"); calcCustomAmount.value = "2000";
-    const calcParticipants = makeEl("input", "calc-participants"); calcParticipants.value = "20";
+    const calcParticipants = makeEl("input", "calc-participants"); calcParticipants.value = "10";
     const calcParticipantsHint = makeEl("span", "calc-participants-hint");
     const calcParticipantsDesc = makeEl("p", "calc-participants-desc");
     const calcScopeVal = makeEl("span", "calc-scope-val");
@@ -925,11 +925,11 @@ function runTestSuite() {
     `Expected $2,400 USD, got ${elements["calc-display-price"].textContent}`
   );
 
-  // 7. Participants Input Change: Extra head scaling (+5 participants over 25 included = 30)
-  elements["calc-participants"].value = "30";
+  // 7. Participants Input Change: Extra head scaling (+5 participants over 10 included = 15)
+  elements["calc-participants"].value = "15";
   elements["calc-participants"].trigger("input");
   assert(
-    "UI Participants Input: Changing participants to 30 immediately adds $1,000 extra head fee ($3,400 USD)",
+    "UI Participants Input: Changing participants to 15 immediately adds $1,000 extra head fee ($3,400 USD)",
     elements["calc-display-price"].textContent === "$3,400 USD",
     `Expected $3,400 USD, got ${elements["calc-display-price"].textContent}`
   );

@@ -97,7 +97,7 @@ class DataWatcher:
         print(f"[NLP-Fuzzy-Expert Watcher] Daemon active. Monitoring {len(self.file_mtimes)} data files in data/...", flush=True)
         print(f"[NLP-Fuzzy-Expert Watcher] Polling interval: {self.poll_interval}s. Press Ctrl+C to terminate.", flush=True)
 
-        test_lock_file = os.path.join(DATA_DIR, ".test_lock")
+        test_lock_file = os.path.join(REPO_DIR, ".test_lock")
         while self.running:
             try:
                 time.sleep(self.poll_interval)

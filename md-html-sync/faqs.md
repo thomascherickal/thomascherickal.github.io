@@ -604,7 +604,7 @@ Global MNCs gain a consistent, world-class standard of agentic software engineer
  quota and 30-day training plus 30-day support guarantee cover?
 *Pricing:
  Business Guarantee · FAQ #13*  
-Our Business Training bookings feature a fixed base investment of $2,000 USD covering up to 25 participants for 70 days (30 days training + 30 days guidance, assistance, and written guides licensed under Apache 2.0).
+Our Business Training bookings feature a fixed base investment of $2,000 USD covering up to 10 participants for 60 days (30 days training + 30 days guidance, assistance, and written guides licensed under Apache 2.0).
  There are no hidden licensing royalties or hourly surprise fees.
 
 - 30 Days Live Training Sprint: 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day.
@@ -626,7 +626,7 @@ This 30+30 dual guarantee ensures your organization achieves lasting capability 
 
 ---
 
-### 25. What are the fees if our training cohort exceeds 25 participants?
+### 25. What are the fees if our training cohort exceeds 10 participants?
 *Pricing:
  Scale-Out · FAQ #14*  
 When a team desires to include more than 10 participants in a single Business Training cohort, pricing

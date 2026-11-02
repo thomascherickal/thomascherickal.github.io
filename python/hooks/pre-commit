@@ -40,6 +40,13 @@ if [ $JS_TEST_STATUS -ne 0 ]; then
     echo "[git pre-commit] ERROR: JavaScript test suite failed with status $JS_TEST_STATUS. Commit aborted."
     exit 1
 fi
+# Verify data directory Single Source of Truth (SSOT) integrity
+DATA_DIR_STATUS="$(git status --porcelain "$REPO_ROOT/data" 2>/dev/null)"
+if [ -n "$DATA_DIR_STATUS" ]; then
+    echo "[git pre-commit] WARNING: Detected modified or untracked files in data/:"
+    echo "$DATA_DIR_STATUS"
+fi
+
 echo "[git pre-commit] All unit and JavaScript tests passed. Commit approved."
 
 exit 0

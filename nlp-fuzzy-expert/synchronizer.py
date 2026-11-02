@@ -67,8 +67,9 @@ def render_ascii_table(headers, rows, max_widths=None):
 class ExpertSynchronizer:
     """Master orchestrator for NLP-Fuzzy-Expert synchronization."""
 
-    def __init__(self):
-        self.kb = KnowledgeBase()
+    def __init__(self, data_dir=None):
+        self.data_dir = data_dir or DATA_DIR
+        self.kb = KnowledgeBase(data_dir=self.data_dir)
         self.engine = InferenceEngine(self.kb)
         for r in build_rules():
             self.engine.register_rule(r)

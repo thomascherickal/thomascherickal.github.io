@@ -141,3 +141,11 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
   4. The tracking cache entry in `md-html-sync/.sync-state.json`.
   5. Any references in `python/generate_sitemap.py`, `sitemap.xml`, `header.html`, and `llms.txt`.
   6. Runs verification passes (`sync_schemas.py`, `md_html_sync.py`, `check_links.py`) to confirm zero broken links or orphaned sync states.
+
+## Data Directory Single Source of Truth (SSOT) Rule (`data/*.json`)
+- **Authoritative Single Source of Truth**: All JSON files residing in `data/*.json` (`pricing.json`, `tiers.json`, `business-services.json`, `personal-services.json`, `config.json`, `publications.json`, `faqs.json`, `gemini.json`, `claude.json`) are the immutable single source of truth across the repository.
+- **Strict One-Way Data Propagation**: Data flows strictly outward in one direction: `data/*.json` -> HTML / JS / Markdown / Schema files. Reverse writes, automatic modifications, or overwriting of `data/*.json` files by sync scripts, inference engines, or testing suites are strictly forbidden.
+- **Programmatic Mutation Prevention**: The core file-saving utility `save_json()` in `nlp-fuzzy-expert/expert_system.py` strictly blocks writing to any path within `data/` by raising a `PermissionError`.
+- **Test Isolation & Sandbox Execution**: Tests that simulate or verify changes to data (e.g. `tests/test_continuous_updates.py`) must never mutate repository files under `data/*.json`. Such tests must operate within isolated temporary sandboxes (e.g. `tempfile.mkdtemp()`) and instantiate `ExpertSynchronizer(data_dir=temp_dir)`.
+- **Pre-Test and Post-Test SHA-256 Integrity Verification**: `python/run_tests.py` computes cryptographic SHA-256 hashes of all `data/*.json` files prior to test execution and validates them immediately following execution. If any file in `data/` is altered, mutated, or created, the test suite aborts with exit code 1.
+- **Manual Authoring Only**: Changes to `data/*.json` may only be made by deliberate manual updates by the author or explicitly requested data configuration tasks.

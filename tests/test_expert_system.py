@@ -9,6 +9,7 @@ Strict Repo Compliance:
 
 import os
 import sys
+import tempfile
 import unittest
 
 TESTS_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -88,7 +89,7 @@ class TestExpertSystem(unittest.TestCase):
 
     def test_save_and_load_json_atomic(self):
         """Verifies atomic json writing and corruption-free reading."""
-        test_file = os.path.join(REPO_DIR, "data", ".test_atomic.json")
+        test_file = os.path.join(tempfile.gettempdir(), f".test_atomic_{os.getpid()}.json")
         try:
             payload = {"status": "ok", "count": 42, "items": ["a", "b", "c"]}
             save_json(test_file, payload)
@@ -97,6 +98,21 @@ class TestExpertSystem(unittest.TestCase):
         finally:
             if os.path.exists(test_file):
                 os.remove(test_file)
+
+    def test_save_json_blocks_data_dir_mutation(self):
+        """Verifies save_json strictly raises PermissionError when targeting data/."""
+        data_dir = os.path.join(REPO_DIR, "data")
+        pricing_file = os.path.join(data_dir, "pricing.json")
+        with self.assertRaises(PermissionError):
+            save_json(pricing_file, {"hack": "forbidden"})
+
+        new_forbidden_file = os.path.join(data_dir, "new_file.json")
+        with self.assertRaises(PermissionError):
+            save_json(new_forbidden_file, {"hack": "forbidden"})
+
+        nested_forbidden = os.path.join(data_dir, "nested", "file.json")
+        with self.assertRaises(PermissionError):
+            save_json(nested_forbidden, {"hack": "forbidden"})
 
 if __name__ == "__main__":
     unittest.main()

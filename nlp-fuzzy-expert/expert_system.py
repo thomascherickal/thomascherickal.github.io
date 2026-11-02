@@ -83,7 +83,20 @@ def load_json(filepath):
     return {}
 
 def save_json(filepath, data):
-    """Safely saves pretty-printed JSON using atomic file replacement."""
+    """Safely saves pretty-printed JSON using atomic file replacement.
+    Strictly forbids mutating the authoritative data/ directory.
+    """
+    abs_fp = os.path.abspath(filepath)
+    abs_data_dir = os.path.abspath(DATA_DIR)
+    try:
+        if os.path.commonpath([abs_fp, abs_data_dir]) == abs_data_dir:
+            raise PermissionError(
+                f"MUTATION BLOCKED: '{filepath}' is inside authoritative data/ directory. "
+                f"Files in data/*.json are the immutable single source of truth and must never be modified by automation."
+            )
+    except ValueError:
+        pass
+
     tmp_path = f"{filepath}.{os.getpid()}_{time.time_ns()}.tmp"
     try:
         with open(tmp_path, "w", encoding="utf-8") as f:
@@ -114,7 +127,8 @@ class Fact:
 class KnowledgeBase:
     """Working memory containing all authoritative facts from data/*.json."""
 
-    def __init__(self):
+    def __init__(self, data_dir=None):
+        self.data_dir = data_dir or DATA_DIR
         self.facts = {}
         self.raw_data = {}
         self.reload()
@@ -136,7 +150,7 @@ class KnowledgeBase:
         self.raw_data.clear()
 
         # 1. Pricing
-        pricing_file = os.path.join(DATA_DIR, "pricing.json")
+        pricing_file = os.path.join(self.data_dir, "pricing.json")
         p_data = load_json(pricing_file)
         self.raw_data["pricing"] = p_data
 
@@ -178,7 +192,7 @@ class KnowledgeBase:
         self.add_fact("pricing", "hours_per_day", int(rules.get("hours_per_day", 4)))
 
         # 2. Personal Services
-        ps_file = os.path.join(DATA_DIR, "personal-services.json")
+        ps_file = os.path.join(self.data_dir, "personal-services.json")
         ps_data = load_json(ps_file)
         self.raw_data["personal_services"] = ps_data
         for s in ps_data.get("services", []):
@@ -190,7 +204,7 @@ class KnowledgeBase:
             self.add_fact("personal_services", f"{num}_chip", s.get("role_chip"))
 
         # 3. Business Services
-        bs_file = os.path.join(DATA_DIR, "business-services.json")
+        bs_file = os.path.join(self.data_dir, "business-services.json")
         bs_data = load_json(bs_file)
         self.raw_data["business_services"] = bs_data
         for s in bs_data.get("services", []):
@@ -202,7 +216,7 @@ class KnowledgeBase:
             self.add_fact("business_services", f"{num}_chip", s.get("role_chip"))
 
         # 4. Tiers
-        tiers_file = os.path.join(DATA_DIR, "tiers.json")
+        tiers_file = os.path.join(self.data_dir, "tiers.json")
         t_data = load_json(tiers_file)
         self.raw_data["tiers"] = t_data
         for t in t_data.get("tiers", []):
@@ -214,7 +228,7 @@ class KnowledgeBase:
             self.add_fact("tiers", f"tier_{t_num}_examples", ", ".join(t.get("examples", [])))
 
         # 5. Config
-        cfg_file = os.path.join(DATA_DIR, "config.json")
+        cfg_file = os.path.join(self.data_dir, "config.json")
         c_data = load_json(cfg_file)
         self.raw_data["config"] = c_data
         self.add_fact("config", "author", c_data.get("author", "Thomas Cherickal"))
@@ -224,7 +238,7 @@ class KnowledgeBase:
         self.add_fact("config", "linkedin", c_data.get("linkedin", "https://linkedin.com/in/thomascherickal"))
 
         # 6. FAQs
-        faq_file = os.path.join(DATA_DIR, "faqs.json")
+        faq_file = os.path.join(self.data_dir, "faqs.json")
         faq_data = load_json(faq_file)
         self.raw_data["faqs"] = faq_data
         policies = faq_data.get("core_policies", {})
@@ -232,7 +246,7 @@ class KnowledgeBase:
         self.add_fact("faqs", "ip_summary", policies.get("ip_licensing", {}).get("summary", "All code, workflows, custom tooling, and multi-agent infrastructure developed belong 100% to the client."))
 
         # 7. Claude Guides
-        claude_file = os.path.join(DATA_DIR, "claude.json")
+        claude_file = os.path.join(self.data_dir, "claude.json")
         cl_data = load_json(claude_file)
         self.raw_data["claude"] = cl_data
         for g in cl_data.get("guides", []):
@@ -240,7 +254,7 @@ class KnowledgeBase:
             self.add_fact("claude", f"guide_{g.get('id')}_slug", g.get("slug"))
 
         # 8. Gemini Guides
-        gemini_file = os.path.join(DATA_DIR, "gemini.json")
+        gemini_file = os.path.join(self.data_dir, "gemini.json")
         gem_data = load_json(gemini_file)
         self.raw_data["gemini"] = gem_data
         for g in gem_data.get("guides", []):
@@ -248,7 +262,7 @@ class KnowledgeBase:
             self.add_fact("gemini", f"guide_{g.get('id')}_slug", g.get("slug"))
 
         # 9. Publications
-        pub_file = os.path.join(DATA_DIR, "publications.json")
+        pub_file = os.path.join(self.data_dir, "publications.json")
         pub_data = load_json(pub_file)
         self.raw_data["publications"] = pub_data
 
