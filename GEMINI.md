@@ -130,3 +130,14 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
   - **Individual Services Support (Business & Personal)**: An additional **$50 USD** for the 5 days support period, paid in a single installment **after 5 days** of support.
   - **Zero Upfront for Support**: Support payments are strictly due only after verifying support delivery (after 15 days and 30 days of support for flagships; after 5 days of support for individual services).
   - **Parity Scaled**: Support payments scale across the six Purchasing Power Parity (PPP) tiers.
+
+## Page Deletion & Clean Purge Rule (`python/delete_page.py`)
+- **ALWAYS use `python3 python/delete_page.py <path_or_filename>`** whenever deleting an HTML page or guide from the website.
+- **Never simply delete the `.html` file with `rm`**: Doing so leaves behind orphaned schemas in `schema/`, markdown files in `md-html-sync/`, tracking entries in `md-html-sync/.sync-state.json`, and links in `header.html` or `sitemap.xml`, which can cause sync conflicts or resurrection.
+- The `delete_page.py` utility automatically cleans:
+  1. The HTML page from its folder (`google/`, `claude/`, `business-services/`, `personal-services/`, or root).
+  2. The corresponding schema file under `schema/`.
+  3. The Markdown mirror file under `md-html-sync/`.
+  4. The tracking cache entry in `md-html-sync/.sync-state.json`.
+  5. Any references in `python/generate_sitemap.py`, `sitemap.xml`, `header.html`, and `llms.txt`.
+  6. Runs verification passes (`sync_schemas.py`, `md_html_sync.py`, `check_links.py`) to confirm zero broken links or orphaned sync states.

@@ -540,6 +540,11 @@ def run_sync(force_direction: str = None) -> int:
             "md_name": md_name
         }
         
+    # Prune orphaned state entries for files that no longer exist on disk
+    pruned_keys = [k for k in list(state.keys()) if not os.path.exists(get_html_path(k))]
+    for k in pruned_keys:
+        del state[k]
+
     save_state(state)
     total_synchronized = html_to_md_count + md_to_html_count + created_md_count
 

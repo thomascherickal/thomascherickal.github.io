@@ -64,6 +64,12 @@ Constructs the complete XML sitemap (`sitemap.xml`) covering all published HTML 
 python3 python/generate_sitemap.py
 ```
 
+### 9. `delete_page.py`
+Completely and cleanly deletes an HTML page from the website, removing its schema (`schema/*.json`), Markdown mirror (`md-html-sync/*.md`), cache entry (`md-html-sync/.sync-state.json`), sitemap entry, and header links to prevent it from ever being resurrected by the sync engine.
+```bash
+python3 python/delete_page.py <path_or_filename>
+```
+
 ---
 
 ## Related Systems
