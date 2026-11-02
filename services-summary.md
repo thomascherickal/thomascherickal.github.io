@@ -10,7 +10,7 @@ Clients have the flexibility to either enroll in comprehensive multi-week transf
 
 1. **Individual Service Picks (Pick & Choose)**:
    - **Personal / 1-on-1**: **$100 USD per service** (strictly 1 person), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
-   - **Business / Organizations**: **$200 USD per service** (cohorts up to 10 participants included, +$200/extra seat), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
+   - **Business / Organizations**: **$200 USD per service** (cohorts up to 25 participants included, +$200/extra seat), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
    - **Purchasing Power Parity (PPP)**: Available across all 6 parity tiers for every individual service pick (Individual: $100 / $75 / $50 / $50 / $25 / $10; Business: $200 / $150 / $100 / $100 / $50 / $20).
 
 2. **Flagship Transformation Programs (Comprehensive Engagement)**:
@@ -20,10 +20,10 @@ Clients have the flexibility to either enroll in comprehensive multi-week transf
 | **Daily Training Time Limit** | **4 hours a day** | **4 hours a day** | **4 hours a day** | **4 hours a day** |
 | **Training Duration** | 5 days live engineering | 5 days live engineering | 30 days live engineering | 30 days live engineering |
 | **Included Support Period** | 5 days support & guides | 5 days support & guides | 30 days support & guides | 30 days support & guides |
-| **Total Coverage** | 10 days total coverage | 10 days total coverage | 60 days total coverage | 60 days total coverage |
-| **Audience & Cohort Size** | Strictly 1 person | Up to 10 seats (+ $200/extra) | Up to 10 seats (+ $200/extra) | Strictly 1 person |
+| **Total Coverage** | 10 days total coverage | 10 days total coverage | 70 days total coverage | 60 days total coverage |
+| **Audience & Cohort Size** | Strictly 1 person | Up to 25 seats (+ $200/extra) | Up to 25 seats (+ $200/extra) | Strictly 1 person |
 | **Scope** | Pick & choose single service | Pick & choose single service | Full organizational rollout | Full 1-on-1 career mastery |
-| **Standard Base Rate** | **$100 USD** per service | **$200 USD** per service | **$2,000 USD** for 60 days | **$1,000 USD** for 60 days |
+| **Standard Base Rate** | **$100 USD** per service | **$200 USD** per service | **$2,000 USD** for 70 days | **$1,000 USD** for 60 days |
 | **Purchasing Power Parity** | 6 Tiers: $100 to $10 | 6 Tiers: $200 to $20 | 6 Tiers: $2,000 to Subsidized | 6 Tiers: $1,000 to $100 |
 | **Upfront Advance Fee** | $0 advance | $0 advance | $0 advance | $0 advance |
 | **Milestone Structure** | 5 equal milestones (Days 1-5) | 5 equal milestones (Days 1-5) | 5 equal milestones | 5 equal milestones |

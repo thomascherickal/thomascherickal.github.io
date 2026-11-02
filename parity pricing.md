@@ -11,9 +11,9 @@
 ### Service Selection & Flagship Options:
 1. **Individual Service Picks (Pick & Choose from 16 Services)**:
    - **Personal (1-on-1)**: **$100 USD per service** (strictly 1 person), covers **5 days live training + 5 days dedicated support** (10 days total coverage). Tier rates: T1: $100 | T2: $75 | T3/4: $50 | T5: $25 | T6: $10.
-   - **Business (Organizations)**: **$200 USD per service** (up to 10 participants included, +$200/extra seat), covers **5 days live training + 5 days dedicated support** (10 days total coverage). Tier rates: T1: $200 | T2: $150 | T3/4: $100 | T5: $50 | T6: $20.
+   - **Business (Organizations)**: **$200 USD per service** (up to 25 participants included, +$200/extra seat), covers **5 days live training + 5 days dedicated support** (10 days total coverage). Tier rates: T1: $200 | T2: $150 | T3/4: $100 | T5: $50 | T6: $20.
 2. **Flagship Programs**:
-   - **Business Training Flagship**: **$2,000 USD for 60 days** (30d live training + 30d guidance & materials, 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day, up to 10 participants, +$200/extra seat).
+   - **Business Training Flagship**: **$2,000 USD for 70 days** (30d live training + 30d guidance & materials, 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day, up to 25 participants, +$200/extra seat).
    - **Personal Training Flagship**: **$1,000 USD for 60 days** (30d live training + 30d guidance & materials, 30 working days over 6 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day, strictly 1 person).
    - Purchasing Power Parity (PPP) applies to all individual service picks and flagship programs across 195 countries.
 

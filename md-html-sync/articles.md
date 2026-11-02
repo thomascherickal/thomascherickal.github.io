@@ -66,7 +66,7 @@ A masterclass in geometric deep learning explaining seven major unsolved
 
 ---
 
-## 4. Nobody Knows How LLMs Work – Unless You Look at Them as Non-Linear Dynamical
+## 4. Nobody Knows How LLMs Work - Unless You Look at Them as Non-Linear Dynamical
  Systems
 **Track**: `Generative AI` · `Nonlinear Dynamics & Physics`  
 **Details**: Published: July 31, 2026 · thomascherickal.com · 4,700 words · 19 min read  

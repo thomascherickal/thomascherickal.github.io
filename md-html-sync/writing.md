@@ -79,7 +79,7 @@ A comprehensive transformation system showing professionals how to use frontier 
 ### AI
  Engineering
 
-- [Nobody Knows How LLMs Work – Unless You Treat Them as Dynamical Systems](https://thomascherickal.com/2026/07/31/nobody-knows-how-llms-work-unless-you-look-at-them-as-non-linear-dynamical-systems/) - *Jul 31, 2026 · thomascherickal.com · 4,700 words*
+- [Nobody Knows How LLMs Work - Unless You Treat Them as Dynamical Systems](https://thomascherickal.com/2026/07/31/nobody-knows-how-llms-work-unless-you-look-at-them-as-non-linear-dynamical-systems/) - *Jul 31, 2026 · thomascherickal.com · 4,700 words*
 - [The Hidden Geometry of GenAI: How Manifold Theory Explains LLMs](https://thomascherickal.com/2026/07/15/the-hidden-geometry-of-generative-ai-how-manifold-theory-explains-the-mysteries-nobody-explained-to-you/) - *Jul 15, 2026 · thomascherickal.com · 9,300 words*
 - [The AI Engineer's Guide to Top 10 Free AI Inference Providers in 2026](https://thomascherickal.com/2026/06/24/the-ai-engineers-guide-to-the-top-10-genuinely-free-ai-inference-providers-in-2026/) - *Jun 24, 2026 · thomascherickal.com · 5,200 words*
 - [The Silicon Symphony: Top 10 Best Alternatives to Claude Code](https://thomascherickal.com/2026/06/12/the-silicon-symphony-the-top-10-best-alternatives-to-claude-code/) - *Jun 12, 2026 · thomascherickal.com · 7,500 words*
@@ -109,7 +109,7 @@ A comprehensive transformation system showing professionals how to use frontier 
 
 ### Post-Quantum Cryptography & Applied AI
 
-- [Publicly Adaptable Cryptographic Systems (PACS) – Solving PQC in the Age of AI Agent Cryptanalysts](https://thomascherickal.com/2026/09/13/publicly-adaptable-cryptographic-systems-pacs-solving-pqc-in-the-age-of-ai-agent-cryptanalysts/) - *Sep 13, 2026 · thomascherickal.com · 7,100 words*
+- [Publicly Adaptable Cryptographic Systems (PACS) - Solving PQC in the Age of AI Agent Cryptanalysts](https://thomascherickal.com/2026/09/13/publicly-adaptable-cryptographic-systems-pacs-solving-pqc-in-the-age-of-ai-agent-cryptanalysts/) - *Sep 13, 2026 · thomascherickal.com · 7,100 words*
 - [The Solution to Post-Quantum Cryptography: A Showstopping Problem Today](https://thomascherickal.com/2026/09/17/the-solution-to-post-quantum-cryptography-a-showstopping-problem-today/) - *Sep 17, 2026 · thomascherickal.com · 2,300 words*
 - [How (and when) to Fine-Tune SLMs for Your Business Domain-Specific Use Case](https://thomascherickal.com/2026/09/06/how-and-when-to-fine-tune-google-gemma-4-for-your-business-domain-specific-use-case/) - *Sep 6, 2026 · thomascherickal.com · 10,800 words*
 - [The Ultimate Comparison Over 20 Modern Professions: Choosing Between Claude and ChatGPT](https://thomascherickal.com/2026/09/25/chatgpt-versus-claude-the-ultimate-comparison/) - *Sep 25, 2026 · thomascherickal.com · 10,300 words*
