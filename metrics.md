@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-02 06:24:28 UTC` | Branch: `main` | Head Commit: `f1b0089`
+> **Automated Status Report** | Generated on `2026-11-02 06:24:55 UTC` | Branch: `main` | Head Commit: `558f2b3`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -15,10 +15,10 @@
 | **Source Code Lines (SLOC)** | **107,182** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **4,190** | In-code and architectural documentation |
 | **Blank / Spacing Lines** | **7,222** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **40.74 MB (42,722,325 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Repository Size (Tracked Assets)** | **40.74 MB (42,722,319 bytes)** | HTML, CSS, JS, Python, SVG & Images |
 | **Total Word Count (Prose & Technical)** | **303,570 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **444** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-02** | Subject: "Update google-ai-studio.html with 2026 comprehensive guide, tutorials, and global parity pricing" |
+| **Total Git Commits** | **445** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-02** | Subject: "Replace Gemini 3 Models with Google DeepMind guide and sync components" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -32,7 +32,7 @@
 | **JavaScript Scripts** | 3 | 2,321 | 90.70 KB (92,881 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 32 | 7,118 | 325.62 KB (333,430 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
 | **Markdown Documentation** | 86 | 10,616 | 688.61 KB (705,141 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 82 | 16,942 | 711.41 KB (728,486 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **JSON Schemas & Data** | 82 | 16,942 | 711.41 KB (728,480 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 74 | 0 | 33.39 MB (35,010,540 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 9 | 0 | 45.72 KB (46,813 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -44,7 +44,7 @@
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
 | `.html` | 64 | 69,797 | 5.20 MB (5,457,127 bytes) | 15.7% |
-| `.json` | 82 | 16,942 | 711.41 KB (728,486 bytes) | 20.1% |
+| `.json` | 82 | 16,942 | 711.41 KB (728,480 bytes) | 20.1% |
 | `.css` | 16 | 11,747 | 274.82 KB (281,419 bytes) | 3.9% |
 | `.md` | 86 | 10,616 | 688.61 KB (705,141 bytes) | 21.1% |
 | `.py` | 32 | 7,118 | 325.62 KB (333,430 bytes) | 7.8% |
