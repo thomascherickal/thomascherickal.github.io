@@ -57,9 +57,9 @@ mindmap
       Tier 4 50% Off Early Startups
       Tier 5 75% Off Academia & Non-Profits
       Tier 6 Custom Up to 90%+ Relief
-    60-Day Training Model
+    70-Day Training Model
       Hands-On Coding Immersion
-      Fixed Rate up to 10 Seats
+      Fixed Rate up to 25 Seats
       30 Days Live Training
       30 Days Post-Training Support
       Custom Alumni Discord Community
@@ -228,12 +228,12 @@ Clients have complete autonomy to choose how they engage:
    - **Purchasing Power Parity (PPP)**: Applies across all 6 tiers for all individual service picks.
 
 2. **Flagship Transformation Programs (Comprehensive Immersion)**:
-   - **Business Training Flagship**: **$2,000 USD for 60 days** (30 days intensive live instruction + 30 days post-training assistance - 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day, up to 10 seats included, extra seats at $200 USD per seat).
+   - **Business Training Flagship**: **$2,000 USD for 70 days** (30 days intensive live instruction + 30 days post-training assistance - 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day, up to 25 seats included, extra seats at $200 USD per seat).
    - **Personal Training Flagship**: **$1,000 USD for 60 days** (30 days intensive 1-on-1 sprint + 30 days guidance and detailed guides and materials - 30 working days over 6 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Strictly for 1 person only.
 
 ### Cohort Pricing & Scale-Out Policy
-1. **Fixed Base Rate for up to 10 Seats**: Every Business engagement carries a fixed base rate covering up to 10 participants.
-2. **Scale-Out Additional Head Charges**: Beyond 10 seats, cohorts are billed at a flat **$200 USD per additional participant**.
+1. **Fixed Base Rate for up to 25 Seats**: Every Business engagement carries a fixed base rate covering up to 25 participants.
+2. **Scale-Out Additional Head Charges**: Beyond 25 seats, cohorts are billed at a flat **$200 USD per additional participant**.
 3. **Parity Applied to Scale-Out**: The qualifying Country Parity multiplier applies directly to the additional seat fee as well (e.g., Tier 2 pays $150/head; Tier 3 & 4 pay $100/head; Tier 5 pays $50/head; Tier 6 pays $20/head).
 4. **Custom Business MSAs**: For organizations rolling out training across 50 to 5,000+ employees across international divisions, custom business master service agreements provide volume discounts and dedicated sandbox infrastructure.
 

@@ -95,6 +95,6 @@ A dedicated 1-on-1 acceleration program engineered strictly for one person only 
 - **Guidance & Doubts Clarification**: Ongoing daily access to review real-world implementations, debug agent pipelines, and solve production blockers.
 - **Detailed Guides & Materials**: In-depth architecture blueprints, runbooks, and cheat sheets designed for rapid daily lookup and long-term reference, licensed under Apache 2.0.
 - **Pricing & Parity**: **$1,000 USD base rate** with 195-country Purchasing Power Parity ($1,000 / $750 / $500 / $500 / $250 / $100).
-- **$0 Upfront Commitment**: Zero advance fee; billed in 5 equal installments (20% each) due after Days 4, 8, 12, 16, and 20 of completed training. Walk away owing nothing after the first 2 days.
+- **$0 Upfront Commitment**: Zero advance fee; billed in 5 equal installments (20% each) due after Days 5, 10, 15, 20, and 25 of completed training. Walk away owing nothing after the first 5 days.
 - **Apache 2.0 Licensing**: Permissive open-source licensing for all custom code, prompt templates, operating manuals, and written guides.
 - **URL**: [https://thedigitalfuturist.com/personal-ai-training.html](https://thedigitalfuturist.com/personal-ai-training.html)

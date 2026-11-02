@@ -420,7 +420,7 @@ def sync_md_to_html(md_name: str, html_name: str):
             price_div = None
             for div in card.find_all("div"):
                 txt = div.get_text().strip()
-                if ("$" in txt or "%" in txt) and not div.find("div") and ("–" in txt or "-" in txt or "/mo" in txt or "OFF" in txt):
+                if ("$" in txt or "%" in txt) and not div.find("div") and ("\u2013" in txt or "-" in txt or "/mo" in txt or "OFF" in txt):
                     price_div = div
                     break
             if price_div:

@@ -188,10 +188,11 @@ def generate_metrics():
 
     # 4. Standalone Content Counts
     html_files = [f for f in tracked_files if f.endswith('.html') and not f.startswith('archive')]
-    service_pages = [f for f in html_files if f.startswith('service-')]
-    claude_pages = [f for f in html_files if f.startswith('claude-')]
-    google_pages = [f for f in html_files if f.startswith('google-')]
-    core_pages = [f for f in html_files if not f.startswith(('service-', 'claude-', 'google-'))]
+    biz_services = [f for f in html_files if f.startswith('business-services/')]
+    personal_services = [f for f in html_files if f.startswith('personal-services/')]
+    claude_pages = [f for f in html_files if f.startswith('claude/')]
+    google_pages = [f for f in html_files if f.startswith('google/')]
+    core_pages = [f for f in html_files if not f.startswith(('business-services/', 'personal-services/', 'claude/', 'google/'))]
 
     now_utc = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
 
@@ -282,18 +283,23 @@ def generate_metrics():
     md.append("")
     md.append(f"- **Total Public HTML Pages**: **{len(html_files)}**")
     md.append(f"- **Core Landing & Portal Pages**: **{len(core_pages)}** (`" + "`, `".join(sorted(core_pages)) + "`)")
-    md.append(f"- **Dedicated Service Pages (`service-*.html`)**: **{len(service_pages)}** (Full business curriculum and architecture deep-dives)")
-    md.append(f"- **Claude Guides & Frameworks (`claude-*.html`)**: **{len(claude_pages)}** (Claude Code, Cowork, Skills, MCP, Orchestration, Plugins, Science, Local LLMs, Features)")
-    md.append(f"- **Google AI & Gemini Guides (`google-*.html`)**: **{len(google_pages)}** (Gemini 101, Antigravity IDE, Studio, Flow, Deep Research, Spark, Argon, Gemma, Nano Banana)")
+    md.append(f"- **Business AI Training Services (`business-services/`)**: **{len(biz_services)}** (Full enterprise curriculum, lead gen, agent orchestration, and architecture deep-dives)")
+    md.append(f"- **Personal AI Training Services (`personal-services/`)**: **{len(personal_services)}** (1-on-1 private acceleration, career transformation, continuous learning, and agentic workflows)")
+    md.append(f"- **Claude Guides & Frameworks (`claude/`)**: **{len(claude_pages)}** (Claude Code, Cowork, Skills, MCP, Orchestration, Plugins, Science, Local LLMs, Features)")
+    md.append(f"- **Google AI & Gemini Guides (`google/`)**: **{len(google_pages)}** (Gemini 101, Antigravity IDE, Studio, Deep Research, Spark, Gemma, Desktop, Multimodal Models)")
     md.append("")
     md.append("---")
     md.append("")
     md.append("## 6. Python Automation & Tooling Pipeline")
     md.append("")
-    md.append("| Script File | Purpose | Functions |")
+    md.append("| Script File / Module | Purpose | Functions |")
     md.append("| :--- | :--- | :--- |")
-    md.append(f"| [`python/build_components.py`](python/build_components.py) | Central component inliner for `header.html` and `footer.html` across all HTML pages | Inliner, Parser, Watcher |")
-    md.append(f"| [`python/sync_pricing.py`](python/sync_pricing.py) | Single source of truth for 6-tier parity pricing calculations & schema injection | Rate Calculator, Parity Engine, Schema Generator |")
+    md.append(f"| [`python/build_components.py`](python/build_components.py) | Central component inliner for `header.html` and `footer.html` across all HTML pages, running synchronizer on rebuild | Inliner, Parser, Rebuilder |")
+    md.append(f"| [`nlp-fuzzy-expert/synchronizer.py`](nlp-fuzzy-expert/synchronizer.py) | Knowledge synchronization engine matching facts from `data/*.json` and updating HTML/JS files with line diffs | Expert System, Fuzzy Logic, NLP Engine |")
+    md.append(f"| [`nlp-fuzzy-expert/watcher.py`](nlp-fuzzy-expert/watcher.py) | Continuous file watcher daemon monitoring `data/*.json` to trigger real-time updates | File Watcher, Automated Sync |")
+    md.append(f"| [`python/run_tests.py`](python/run_tests.py) | Comprehensive test discovery and pre-commit test enforcement suite (36+ unit tests) | Test Runner, Verification Suite |")
+    md.append(f"| [`python/check_links.py`](python/check_links.py) | Deep link and anchor target validation across all HTML files | Link Validator, Anchor Auditor |")
+    md.append(f"| [`python/sync_schemas.py`](python/sync_schemas.py) | Extracts and synchronizes embedded JSON-LD schemas into `schema/` directory | Schema Extractor, JSON-LD Synchronizer |")
     md.append(f"| [`python/md_html_sync.py`](python/md_html_sync.py) | Bi-directional synchronization between HTML pages and Markdown mirrors | HTML-to-MD Parser, State Tracker |")
     md.append(f"| [`python/generate_metrics.py`](python/generate_metrics.py) | Automated metrics engine producing this `metrics.md` document | Repository Scanner, Code Analyzer |")
     md.append(f"| [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |")
@@ -309,8 +315,8 @@ def generate_metrics():
     md.append("| Standard / Rule | Verification Target | Status |")
     md.append("| :--- | :--- | :--- |")
     md.append("| **Zero Emojis Repository Rule** | All codebase files | Strictly Enforced (Zero Emojis) |")
-    md.append("| **Component Synchronization** | All 50+ HTML pages | Unified header & footer via `build_components.py` |")
-    md.append("| **Canonical Business Website** | Schema, Meta, HTML | `https://thomascherickal.github.io` |")
+    md.append("| **Component Synchronization** | All 64 HTML pages | Unified header & footer via `build_components.py` |")
+    md.append("| **Canonical Business Website** | Schema, Meta, HTML | `https://thedigitalfuturist.com` |")
     md.append("| **Canonical Email** | Mailto links, schemas, footers | `thomascherickal@gmail.com` |")
     md.append("| **Call-to-Action Rule** | All promotional sections | Prominent Free LinkedIn Consultation button |")
     md.append("| **Evergreen Model References** | Website prose & docs | Claude & Gemini family naming without version clutter |")

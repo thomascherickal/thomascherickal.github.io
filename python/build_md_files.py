@@ -387,7 +387,7 @@ def convert_pricing() -> str:
         price_val = ""
         for div in pkg.find_all("div"):
             txt = clean_text(div.get_text())
-            if ("$" in txt or "% OFF" in txt or "OFF" in txt) and len(txt) < 30 and ("–" in txt or "-" in txt or "/mo" in txt or "OFF" in txt or "USD" in txt or txt.strip().startswith("$")):
+            if ("$" in txt or "% OFF" in txt or "OFF" in txt) and len(txt) < 30 and ("\u2013" in txt or "-" in txt or "/mo" in txt or "OFF" in txt or "USD" in txt or txt.strip().startswith("$")):
                 price_val = txt
                 break
         if not price_val:

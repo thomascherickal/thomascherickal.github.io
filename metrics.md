@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-02 05:16:33 UTC` | Branch: `main` | Head Commit: `6b9602a`
+> **Automated Status Report** | Generated on `2026-11-02 05:31:26 UTC` | Branch: `main` | Head Commit: `cd8fb92`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **408** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **116,075** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **104,959** | Executable / renderable content lines |
+| **Total Lines of Source Code & Content** | **117,186** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **106,065** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **4,139** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **6,977** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **40.62 MB (42,595,709 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **290,377 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **439** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-02** | Subject: "Update nlp-fuzzy-expert reference dictionaries and synchronization reports" |
+| **Blank / Spacing Lines** | **6,982** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **40.64 MB (42,610,106 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **290,153 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **441** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-02** | Subject: "Harmonize documentation, FAQ installment terms, metrics taxonomy, and component synchronization" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,11 +27,11 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 64 | 67,807 | 5.12 MB (5,369,912 bytes) | Production static web pages, services, frameworks & guides |
-| **CSS Stylesheets** | 16 | 11,747 | 274.83 KB (281,421 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 3 | 2,321 | 90.68 KB (92,856 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 32 | 7,072 | 323.13 KB (330,890 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 86 | 10,133 | 652.68 KB (668,347 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **HTML Documents** | 64 | 68,845 | 5.14 MB (5,386,657 bytes) | Production static web pages, services, frameworks & guides |
+| **CSS Stylesheets** | 16 | 11,747 | 274.82 KB (281,419 bytes) | Design tokens, animations, responsive layout & themes |
+| **JavaScript Scripts** | 3 | 2,321 | 90.68 KB (92,854 bytes) | Client-side interactivity, search, filter & components |
+| **Python Tooling** | 32 | 7,078 | 324.30 KB (332,086 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 86 | 10,200 | 649.23 KB (664,807 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 82 | 16,942 | 711.63 KB (728,711 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 74 | 0 | 33.39 MB (35,010,540 bytes) | Optimized feature hero graphics, social cards & assets |
@@ -43,12 +43,12 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 64 | 67,807 | 5.12 MB (5,369,912 bytes) | 15.7% |
+| `.html` | 64 | 68,845 | 5.14 MB (5,386,657 bytes) | 15.7% |
 | `.json` | 82 | 16,942 | 711.63 KB (728,711 bytes) | 20.1% |
-| `.css` | 16 | 11,747 | 274.83 KB (281,421 bytes) | 3.9% |
-| `.md` | 86 | 10,133 | 652.68 KB (668,347 bytes) | 21.1% |
-| `.py` | 32 | 7,072 | 323.13 KB (330,890 bytes) | 7.8% |
-| `.js` | 3 | 2,321 | 90.68 KB (92,856 bytes) | 0.7% |
+| `.css` | 16 | 11,747 | 274.82 KB (281,419 bytes) | 3.9% |
+| `.md` | 86 | 10,200 | 649.23 KB (664,807 bytes) | 21.1% |
+| `.py` | 32 | 7,078 | 324.30 KB (332,086 bytes) | 7.8% |
+| `.js` | 3 | 2,321 | 90.68 KB (92,854 bytes) | 0.7% |
 | `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 10.3% |
 | `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 10.5% |
 | `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 4.9% |
@@ -84,19 +84,24 @@
 ## 5. Web Page Taxonomy & Sitemap Distribution
 
 - **Total Public HTML Pages**: **64**
-- **Core Landing & Portal Pages**: **64** (`404.html`, `all-business-services.html`, `all-personal-services.html`, `article-footer_dark.html`, `articles.html`, `business-ai-training.html`, `business-services/business-service-advanced-ai-agents.html`, `business-services/business-service-agentic-ai-systems.html`, `business-services/business-service-ai-agents-orchestration.html`, `business-services/business-service-ai-assisted-leads-magnet.html`, `business-services/business-service-ai-based-competitor-research.html`, `business-services/business-service-ai-budget-cost-limits-training.html`, `business-services/business-service-ai-developer-training.html`, `business-services/business-service-claude-advanced-training.html`, `business-services/business-service-gemini-advanced-training.html`, `business-services/business-service-generative-ai-transformation.html`, `business-services/business-service-local-llms-cost-slashing.html`, `business-services/business-service-workflow-automations.html`, `claude/claude-101.html`, `claude/claude-code.html`, `claude/claude-connectors.html`, `claude/claude-cowork.html`, `claude/claude-custom-mcp.html`, `claude/claude-design.html`, `claude/claude-features.html`, `claude/claude-local-llms.html`, `claude/claude-orchestration.html`, `claude/claude-plugins.html`, `claude/claude-science.html`, `claude/claude-skills.html`, `contact.html`, `expertise.html`, `faqs.html`, `footer.html`, `google/google-ai-studio.html`, `google/google-antigravity-ide.html`, `google/google-deep-research.html`, `google/google-gemini-101.html`, `google/google-gemini-3-models.html`, `google/google-gemini-4-models.html`, `google/google-gemini-agents.html`, `google/google-gemini-deep-think.html`, `google/google-gemini-desktop.html`, `google/google-gemini-notebook.html`, `google/google-gemini-spark.html`, `google/google-gemma.html`, `google43d90cf6a204dc6d.html`, `header.html`, `index.html`, `personal-ai-training.html`, `personal-services/personal-service-advanced-ai-agents.html`, `personal-services/personal-service-agentic-ai-systems.html`, `personal-services/personal-service-ai-agents-orchestration.html`, `personal-services/personal-service-ai-budget-cost-limits-training.html`, `personal-services/personal-service-ai-developer-training.html`, `personal-services/personal-service-claude-advanced-training.html`, `personal-services/personal-service-continuous-learning.html`, `personal-services/personal-service-gemini-advanced-training.html`, `personal-services/personal-service-generative-ai-transformation.html`, `personal-services/personal-service-goals-self-authoring.html`, `personal-services/personal-service-local-llms-cost-slashing.html`, `personal-services/personal-service-worklife-balance.html`, `pricing.html`, `writing.html`)
-- **Dedicated Service Pages (`service-*.html`)**: **0** (Full business curriculum and architecture deep-dives)
-- **Claude Guides & Frameworks (`claude-*.html`)**: **0** (Claude Code, Cowork, Skills, MCP, Orchestration, Plugins, Science, Local LLMs, Features)
-- **Google AI & Gemini Guides (`google-*.html`)**: **0** (Gemini 101, Antigravity IDE, Studio, Flow, Deep Research, Spark, Argon, Gemma, Nano Banana)
+- **Core Landing & Portal Pages**: **16** (`404.html`, `all-business-services.html`, `all-personal-services.html`, `article-footer_dark.html`, `articles.html`, `business-ai-training.html`, `contact.html`, `expertise.html`, `faqs.html`, `footer.html`, `google43d90cf6a204dc6d.html`, `header.html`, `index.html`, `personal-ai-training.html`, `pricing.html`, `writing.html`)
+- **Business AI Training Services (`business-services/`)**: **12** (Full enterprise curriculum, lead gen, agent orchestration, and architecture deep-dives)
+- **Personal AI Training Services (`personal-services/`)**: **12** (1-on-1 private acceleration, career transformation, continuous learning, and agentic workflows)
+- **Claude Guides & Frameworks (`claude/`)**: **12** (Claude Code, Cowork, Skills, MCP, Orchestration, Plugins, Science, Local LLMs, Features)
+- **Google AI & Gemini Guides (`google/`)**: **12** (Gemini 101, Antigravity IDE, Studio, Deep Research, Spark, Gemma, Desktop, Multimodal Models)
 
 ---
 
 ## 6. Python Automation & Tooling Pipeline
 
-| Script File | Purpose | Functions |
+| Script File / Module | Purpose | Functions |
 | :--- | :--- | :--- |
-| [`python/build_components.py`](python/build_components.py) | Central component inliner for `header.html` and `footer.html` across all HTML pages | Inliner, Parser, Watcher |
-| [`python/sync_pricing.py`](python/sync_pricing.py) | Single source of truth for 6-tier parity pricing calculations & schema injection | Rate Calculator, Parity Engine, Schema Generator |
+| [`python/build_components.py`](python/build_components.py) | Central component inliner for `header.html` and `footer.html` across all HTML pages, running synchronizer on rebuild | Inliner, Parser, Rebuilder |
+| [`nlp-fuzzy-expert/synchronizer.py`](nlp-fuzzy-expert/synchronizer.py) | Knowledge synchronization engine matching facts from `data/*.json` and updating HTML/JS files with line diffs | Expert System, Fuzzy Logic, NLP Engine |
+| [`nlp-fuzzy-expert/watcher.py`](nlp-fuzzy-expert/watcher.py) | Continuous file watcher daemon monitoring `data/*.json` to trigger real-time updates | File Watcher, Automated Sync |
+| [`python/run_tests.py`](python/run_tests.py) | Comprehensive test discovery and pre-commit test enforcement suite (36+ unit tests) | Test Runner, Verification Suite |
+| [`python/check_links.py`](python/check_links.py) | Deep link and anchor target validation across all HTML files | Link Validator, Anchor Auditor |
+| [`python/sync_schemas.py`](python/sync_schemas.py) | Extracts and synchronizes embedded JSON-LD schemas into `schema/` directory | Schema Extractor, JSON-LD Synchronizer |
 | [`python/md_html_sync.py`](python/md_html_sync.py) | Bi-directional synchronization between HTML pages and Markdown mirrors | HTML-to-MD Parser, State Tracker |
 | [`python/generate_metrics.py`](python/generate_metrics.py) | Automated metrics engine producing this `metrics.md` document | Repository Scanner, Code Analyzer |
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
@@ -112,8 +117,8 @@
 | Standard / Rule | Verification Target | Status |
 | :--- | :--- | :--- |
 | **Zero Emojis Repository Rule** | All codebase files | Strictly Enforced (Zero Emojis) |
-| **Component Synchronization** | All 50+ HTML pages | Unified header & footer via `build_components.py` |
-| **Canonical Business Website** | Schema, Meta, HTML | `https://thomascherickal.github.io` |
+| **Component Synchronization** | All 64 HTML pages | Unified header & footer via `build_components.py` |
+| **Canonical Business Website** | Schema, Meta, HTML | `https://thedigitalfuturist.com` |
 | **Canonical Email** | Mailto links, schemas, footers | `thomascherickal@gmail.com` |
 | **Call-to-Action Rule** | All promotional sections | Prominent Free LinkedIn Consultation button |
 | **Evergreen Model References** | Website prose & docs | Claude & Gemini family naming without version clutter |

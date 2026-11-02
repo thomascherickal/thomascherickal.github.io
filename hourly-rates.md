@@ -110,8 +110,8 @@ All live training runs on **business days** (Monday to Friday, excluding Saturda
    - Solo practice capacity is capped at 1 concurrent flagship clients per month to maintain training quality, bespoke repository code reviews, and student responsiveness.
 
 3. **Installment & Cashflow Architecture:**
-   - **Business Flagship ($2,000 USD):** Five equal payments of $400 USD. Walk away owing nothing after the first 2 days.
-   - **Personal Flagship ($1,000 USD):** Five equal payments of $200 USD. Walk away owing nothing after the first 2 days.
+   - **Business Flagship ($2,000 USD):** Five equal payments of $400 USD. Walk away owing nothing after the first 5 days.
+   - **Personal Flagship ($1,000 USD):** Five equal payments of $200 USD. Walk away owing nothing after the first 5 days.
    - **Individual Services ($100 / $200 USD):** Billed across 5 milestones (Days 1 to 5); zero upfront advance required. Walk away owing nothing after Day 1.
 
 4. **Open-Source Licensing (Apache 2.0):**

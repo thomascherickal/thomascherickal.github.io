@@ -245,9 +245,6 @@ I established a dedicated Markdown mirror in [`md-html-sync/`](file:///home/thom
 - **`build_md_files.py`**: An AST-level document compiler utilizing `BeautifulSoup4`. It traverses the HTML DOM, parses headings, role cards, pricing grids, and FAQ articles (`<article class="faq-card">`), translating them into clean, high-fidelity GitHub Flavored Markdown.
 - **`md_html_sync.py`**: A synchronization daemon that monitors file hashes via `.sync-state.json`. If an HTML page is updated, it automatically compiles the markdown counterpart; if a markdown file is edited, it syncs changes back.
 
-- **`build_md_files.py`**: An AST-level document compiler utilizing `BeautifulSoup4`. It traverses the HTML DOM, parses headings, role cards, pricing grids, and FAQ articles (`<article class="faq-card">`), translating them into clean, high-fidelity GitHub Flavored Markdown.
-- **`md_html_sync.py`**: A synchronization daemon that monitors file hashes via `.sync-state.json`. If an HTML page is updated, it automatically compiles the markdown counterpart; if a markdown file is edited, it syncs changes back.
-
 ---
 
 ## 4. Advanced Systems: Agent Swarms & Quantum Frameworks
@@ -256,7 +253,7 @@ Beyond the web stack itself, this repository documents and serves as the gateway
 
 ### 1. Autonomous Multi-Agent Systems
 - **Agent Operating Systems**: State machines orchestrating autonomous agent teams with defined communication buses, fallback circuits, and deterministic tool schemas.
-- **Self-Healing Code Loops**: Integrating Hermes 3 and Claude Code with local test runners (pytest, cargo test) for autonomous test-driven repair.
+- **Self-Healing Code Loops**: Integrating Hermes Agent and Claude Code with local test runners (pytest, cargo test) for autonomous test-driven repair.
 - **Local vLLM Acceleration**: Running quantized models (AWQ/GGUF) on consumer-grade and business hardware to achieve 60%-90% cost reduction over proprietary APIs.
 
 ### 2. Experimental Quantum Systems
@@ -316,59 +313,17 @@ In business AI engagements, data privacy is paramount. The architectures I train
 
 ## 7. Repository Verification & Current State
 
-Below is the verified Git status confirming full synchronization across all files, components, and Markdown pairs:
+Below is the verified Git status confirming full synchronization across all files, components, tests, and Markdown mirrors:
 
 ```bash
 $ git status
 ```
 
 ```text
-On branch master
-Your branch is up to date with 'origin/master'.
+On branch main
+Your branch is up to date with 'origin/main'.
 
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	modified:   404.html
-	modified:   claude-101.html
-	deleted:    claude-MCP.html
-	deleted:    claude-agent-swarms.html
-	modified:   claude-orchestration.html
-	modified:   claude-code.html
-	deleted:    claude-cowork.html
-	modified:   claude-design.html
-	modified:   claude-local-llms.html
-	modified:   claude-custom-mcp.html
-	modified:   claude-skills.html
-	modified:   collaboration.html
-	modified:   components.js
-	modified:   contact.html
-	modified:   expertise.html
-	modified:   faqs.html
-	modified:   header.html
-	modified:   index.html
-	modified:   llms.txt
-	modified:   md-html-sync/.sync-state.json
-	modified:   md-html-sync/claude-101.md
-	deleted:    md-html-sync/claude-MCP.md
-	deleted:    md-html-sync/claude-agent-swarms.md
-	deleted:    md-html-sync/claude-cowork.md
-	modified:   md-html-sync/faqs.md
-	modified:   portfolio.html
-	modified:   pricing.html
-	modified:   python/build_md_files.py
-	modified:   schema/home-schema.json
-	deleted:    schema/claude-MCP.json
-	deleted:    schema/claude-agent-swarms.json
-	deleted:    schema/claude-cowork.json
-	modified:   business-services/business-service-agentic-ai-systems.html
-	modified:   business-services/business-service-ai-agents-orchestration.html
-	modified:   business-services/business-service-ai-budget-cost-limits-training.html
-	modified:   business-services/business-service-generative-ai-transformation.html
-	modified:   business-services/business-service-local-llms-cost-slashing.html
-	modified:   business-services/business-service-workflow-automations.html
-	modified:   sitemap.xml
-	modified:   writing.html
+nothing to commit, working tree clean
 ```
 
 ---

@@ -249,7 +249,7 @@
       if (progressText) {
         var cpv = getCardsPerView();
         var end = Math.min(currentIndex + cpv, totalCards);
-        progressText.textContent = (currentIndex + 1) + '–' + end + ' of ' + totalCards;
+        progressText.textContent = (currentIndex + 1) + '-' + end + ' of ' + totalCards;
       }
     }
 

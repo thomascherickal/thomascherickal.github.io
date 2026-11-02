@@ -41,22 +41,22 @@ Settlement links and wire routing instructions are dispatched directly upon reac
 All payments are distributed into five
  equal installments (20% per installment), mapped directly to completed training days:
 
-- 40-Day Business AI
- Transformation ($2,000): Five equal installments (20% / $400 each), due after Days 4, 8,
- 12, 16 and 20 of completed training.
+- 70-Day Business AI
+ Transformation ($2,000): Five equal installments (20% / $400 each), due after Days 5, 10,
+ 15, 20 and 25 of completed training.
 
-- 40-Day Personal AI
- Transformation ($1,000): Five equal installments (20% / $200 each), due after Days 4, 8,
- 12, 16 and 20 of completed training.
+- 60-Day Personal AI
+ Transformation ($1,000): Five equal installments (20% / $200 each), due after Days 5, 10,
+ 15, 20 and 25 of completed training.
 
 - 10-Day Individual Services ($100 /
  $200): Five equal installments (20% each), due after Days 1, 2, 3, 4, and 5 of completed
  training, nothing upfront.
 
 - Included Support Phase: The
- subsequent support periods (20 days of
+ subsequent support periods (30 days of
  guidance, assistance, and written guides for
- Business; 20 days of guidance,
+ Business; 30 days of guidance,
  assistance, and written guides for Personal; 5 days for Individual services)
  carry zero additional cost. All
  written materials licensed under Apache 2.0.
@@ -73,7 +73,7 @@ Nothing. There is strictly zero upfront
  payment ($0 advance). You do not pay a single dollar prior to commencing training.
 
 - Payment Made Only After
- Training: In Flagships, installments are initiated only after completing Day 4 of live
+ Training: In Flagships, installments are initiated only after completing Day 5 of live
  training. In Individual Services, installments are initiated after Day 1.
 
 - Live Daily Immersion (4h Business /
@@ -84,7 +84,7 @@ Nothing. There is strictly zero upfront
  labs, with code and guides licensed under Apache 2.0.
 
 - Zero-Risk Guarantee: In
- Flagships, walk away owing nothing if not satisfied after the first 2 days of completed training. In
+ Flagships, walk away owing nothing if not satisfied after the first 5 days of completed training. In
  Individual Services, walk away owing nothing if not satisfied after the first 1 day.
 
 This policy guarantees complete risk elimination, aligning my incentives entirely with your concrete
