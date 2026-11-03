@@ -64,7 +64,7 @@
 .diagram-container .mermaid-fallback {
   display: block;
   padding: 1.25rem;
-  color: var(--text-secondary);
+  color: var(--text-secondary, #94a3b8);
   font-size: 0.9rem;
   text-align: center;
   background: rgba(12, 17, 29, 0.6);
@@ -73,11 +73,16 @@
   margin-bottom: 0.75rem;
 }
 
-.diagram-container.mermaid-rendered .mermaid-fallback {
-  display: none !important;
+/* Hide raw diagram source until Mermaid has processed it.
+   visibility (not display) keeps layout so Mermaid can measure text. */
+.diagram-container .mermaid:not([data-processed="true"]) {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
 }
 
-.diagram-container:not(.mermaid-rendered) .mermaid {
+/* Hide the fallback note once a diagram SVG exists */
+.diagram-container:has(.mermaid svg) .mermaid-fallback {
   display: none;
 }
 
@@ -236,3 +241,17 @@
     padding: 0.85rem 1rem;
   }
 }
+
+/* mermaid-fix-v2 */
+.diagram-container .mermaid p {
+  line-height: 1.5 !important;
+  margin: 0 !important;
+  font-size: inherit !important;
+}
+.diagram-container .mermaid { text-align: center; }
+.diagram-container .mermaid svg {
+  max-width: none !important;
+  height: auto !important;
+  display: inline-block;
+}
+

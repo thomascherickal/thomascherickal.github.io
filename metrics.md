@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-03 11:08:47 UTC` | Branch: `main` | Head Commit: `0c640e4`
+> **Automated Status Report** | Generated on `2026-11-03 11:42:07 UTC` | Branch: `main` | Head Commit: `2917e89`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **417** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **613,572** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **601,283** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **4,399** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **7,890** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **68.69 MB (72,031,270 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **575,184 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **461** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-03** | Subject: "feat: dynamically rewrite markdown links to mermaid viewer with dynamic text" |
+| **Total Lines of Source Code & Content** | **613,999** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **601,701** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **4,402** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **7,896** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **68.70 MB (72,041,057 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **575,561 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **462** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-03** | Subject: "feat: enforce strictly single-column layout for all ToCs and finalize local mermaid assets" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,12 +27,12 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 66 | 71,885 | 5.37 MB (5,628,012 bytes) | Production static web pages, services, frameworks & guides |
-| **CSS Stylesheets** | 16 | 11,790 | 275.77 KB (282,392 bytes) | Design tokens, animations, responsive layout & themes |
+| **HTML Documents** | 66 | 72,160 | 5.38 MB (5,637,115 bytes) | Production static web pages, services, frameworks & guides |
+| **CSS Stylesheets** | 16 | 11,809 | 276.31 KB (282,937 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 5 | 6,074 | 3.50 MB (3,669,852 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 35 | 8,113 | 364.62 KB (373,370 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 87 | 27,062 | 2.97 MB (3,110,419 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 83 | 488,595 | 22.74 MB (23,842,927 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 87 | 27,195 | 2.97 MB (3,110,559 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 83 | 488,595 | 22.74 MB (23,842,926 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 74 | 0 | 33.39 MB (35,010,540 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 9 | 0 | 46.16 KB (47,270 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,10 +43,10 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 83 | 488,595 | 22.74 MB (23,842,927 bytes) | 19.9% |
-| `.html` | 66 | 71,885 | 5.37 MB (5,628,012 bytes) | 15.8% |
-| `.md` | 87 | 27,062 | 2.97 MB (3,110,419 bytes) | 20.9% |
-| `.css` | 16 | 11,790 | 275.77 KB (282,392 bytes) | 3.8% |
+| `.json` | 83 | 488,595 | 22.74 MB (23,842,926 bytes) | 19.9% |
+| `.html` | 66 | 72,160 | 5.38 MB (5,637,115 bytes) | 15.8% |
+| `.md` | 87 | 27,195 | 2.97 MB (3,110,559 bytes) | 20.9% |
+| `.css` | 16 | 11,809 | 276.31 KB (282,937 bytes) | 3.8% |
 | `.py` | 35 | 8,113 | 364.62 KB (373,370 bytes) | 8.4% |
 | `.js` | 5 | 6,074 | 3.50 MB (3,669,852 bytes) | 1.2% |
 | `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 10.1% |
@@ -68,7 +68,7 @@
 | Metric | Measurement | Architecture Details |
 | :--- | :--- | :--- |
 | **CSS Media Queries (`@media`)** | **77** | Ultra-responsive breakpoints for mobile, tablet, desktop |
-| **CSS Rule Blocks** | **1,602** | Modular selector rules across all stylesheets |
+| **CSS Rule Blocks** | **1,605** | Modular selector rules across all stylesheets |
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **198** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **61** | Strict single-H1 semantic hierarchy per page |

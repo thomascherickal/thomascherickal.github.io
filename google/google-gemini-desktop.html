@@ -45,7 +45,7 @@
   <link href="../css/footer.css" rel="stylesheet" />
   <link href="../css/cta.css" rel="stylesheet" />
   <link href="../css/article.css" rel="stylesheet" />
-  <link href="../css/gemini.css" rel="stylesheet" />
+  <link href="../css/gemini.css?v=20261103b" rel="stylesheet" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -924,29 +924,33 @@ def step_desktop_agent(instruction: str) -> bool:
   <script src="../components.js"></script>
 <script src="../assets/js/mermaid.min.js"></script>
 <script>
+(function () {
   mermaid.initialize({
-    startOnLoad: true,
-    theme: "dark",
+    startOnLoad: false,
+    theme: "base",
+    flowchart: { useMaxWidth: false },
+    timeline: { useMaxWidth: false },
     themeVariables: {
-      "primaryColor": "#0c111d",
-      "primaryTextColor": "#38bdf8",
-      "primaryBorderColor": "#38bdf8",
-      "lineColor": "#fbbf24",
-      "secondaryColor": "#060912",
-      "tertiaryColor": "#131926"
+      darkMode: true,
+      background: "#020408",
+      primaryColor: "#0c111d",
+      primaryTextColor: "#e2e8f0",
+      primaryBorderColor: "#38bdf8",
+      lineColor: "#fbbf24",
+      secondaryColor: "#060912",
+      tertiaryColor: "#131926",
+      textColor: "#e2e8f0",
+      fontSize: "15px"
     }
   });
-</script>
-<script>
-  window.addEventListener('load', function () {
-    document.querySelectorAll('.diagram-container').forEach(function (box) {
-      var d = box.querySelector('.mermaid');
-      var f = box.querySelector('.mermaid-fallback');
-      if (d && f && (d.getAttribute('data-processed') === 'true' || box.classList.contains('mermaid-rendered'))) {
-        f.style.display = 'none';
-      }
-    });
-  });
+  function renderDiagrams() {
+    if (!document.querySelector(".mermaid")) { return; }
+    mermaid.run({ querySelector: ".mermaid", suppressErrors: true })
+      .catch(function (e) { console.error("Mermaid render failed", e); });
+  }
+  var fontsReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+  window.addEventListener("load", function () { fontsReady.then(renderDiagrams); });
+})();
 </script>
 </body>
 
