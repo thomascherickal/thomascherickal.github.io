@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-02 15:19:02 UTC` | Branch: `main` | Head Commit: `8bf3b43`
+> **Automated Status Report** | Generated on `2026-11-03 05:00:24 UTC` | Branch: `main` | Head Commit: `ab6796a`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -15,10 +15,10 @@
 | **Source Code Lines (SLOC)** | **594,710** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **4,282** | In-code and architectural documentation |
 | **Blank / Spacing Lines** | **7,478** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **65.13 MB (68,295,731 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **573,849 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **457** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-02** | Subject: "Auto-stage nlp-fuzzy-expert reports in pre-commit hook" |
+| **Total Repository Size (Tracked Assets)** | **65.13 MB (68,295,744 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **573,851 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **458** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-02** | Subject: "feat(pricing): update site-wide pricing to ,500 flagships, 50 individual picks, and synchronize expert references" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -31,8 +31,8 @@
 | **CSS Stylesheets** | 16 | 11,778 | 275.49 KB (282,099 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 3 | 2,321 | 90.65 KB (92,822 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 35 | 8,103 | 364.20 KB (372,944 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 87 | 26,960 | 2.96 MB (3,101,381 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 83 | 485,793 | 22.63 MB (23,733,861 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 87 | 26,960 | 2.96 MB (3,101,400 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 83 | 485,793 | 22.63 MB (23,733,855 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 74 | 0 | 33.39 MB (35,010,540 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 9 | 0 | 46.16 KB (47,270 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,9 +43,9 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 83 | 485,793 | 22.63 MB (23,733,861 bytes) | 20.0% |
+| `.json` | 83 | 485,793 | 22.63 MB (23,733,855 bytes) | 20.0% |
 | `.html` | 65 | 71,462 | 5.33 MB (5,588,326 bytes) | 15.7% |
-| `.md` | 87 | 26,960 | 2.96 MB (3,101,381 bytes) | 21.0% |
+| `.md` | 87 | 26,960 | 2.96 MB (3,101,400 bytes) | 21.0% |
 | `.css` | 16 | 11,778 | 275.49 KB (282,099 bytes) | 3.9% |
 | `.py` | 35 | 8,103 | 364.20 KB (372,944 bytes) | 8.5% |
 | `.js` | 3 | 2,321 | 90.65 KB (92,822 bytes) | 0.7% |
