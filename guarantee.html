@@ -28,38 +28,7 @@
   <link href="assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
   <link href="site.webmanifest" rel="manifest" />
   <meta content="#020408" name="theme-color" />
-  <!-- Mermaid.js for diagrams -->
-  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      if (typeof mermaid !== "undefined") {
-        try {
-          mermaid.initialize({
-            startOnLoad: false,
-            theme: "dark",
-            themeVariables: {
-              "primaryColor": "#0c111d",
-              "primaryTextColor": "#38bdf8",
-              "primaryBorderColor": "#38bdf8",
-              "lineColor": "#fbbf24",
-              "secondaryColor": "#060912",
-              "tertiaryColor": "#131926"
-            }
-          });
-          mermaid.run().then(function () {
-            document.querySelectorAll(".diagram-container").forEach(function (container) {
-              container.classList.add("mermaid-rendered");
-            });
-          }).catch(function (err) {
-            console.warn("Mermaid rendering failed:", err);
-          });
-        } catch (e) {
-          console.warn("Mermaid init error:", e);
-        }
-      }
-    });
-  </script>
-  <link href="css/fonts.css" rel="stylesheet" />
+<link href="css/fonts.css" rel="stylesheet" />
   <link href="css/styles.css" rel="stylesheet" />
   <link href="css/background.css" rel="stylesheet" />
   <link href="css/buttons.css" rel="stylesheet" />
@@ -805,5 +774,6 @@ sequenceDiagram
   </footer>
     <!-- END:FOOTER -->
   <script src="components.js"></script>
+<script type="module" src="mermaid.js"></script>
 </body>
 </html>

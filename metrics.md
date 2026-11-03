@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-03 05:00:24 UTC` | Branch: `main` | Head Commit: `ab6796a`
+> **Automated Status Report** | Generated on `2026-11-03 10:30:08 UTC` | Branch: `main` | Head Commit: `8f9f7e4`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **414** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **606,470** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **594,710** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **4,282** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **7,478** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **65.13 MB (68,295,744 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **573,851 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **458** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-02** | Subject: "feat(pricing): update site-wide pricing to ,500 flagships, 50 individual picks, and synchronize expert references" |
+| **Total Tracked Files** | **416** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **609,260** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **597,454** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **4,289** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **7,517** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **65.26 MB (68,434,081 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **574,732 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **459** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-03** | Subject: "chore(nlp-fuzzy-expert): commit latest synchronized reference reports and master dictionary" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,12 +27,12 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 65 | 71,462 | 5.33 MB (5,588,326 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 66 | 71,531 | 5.36 MB (5,618,345 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,778 | 275.49 KB (282,099 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 3 | 2,321 | 90.65 KB (92,822 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 35 | 8,103 | 364.20 KB (372,944 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 87 | 26,960 | 2.96 MB (3,101,400 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 83 | 485,793 | 22.63 MB (23,733,855 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **JavaScript Scripts** | 4 | 2,368 | 92.13 KB (94,340 bytes) | Client-side interactivity, search, filter & components |
+| **Python Tooling** | 35 | 8,127 | 365.67 KB (374,450 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 87 | 27,054 | 2.97 MB (3,110,556 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 83 | 488,349 | 22.73 MB (23,829,993 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 74 | 0 | 33.39 MB (35,010,540 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 9 | 0 | 46.16 KB (47,270 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,14 +43,14 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 83 | 485,793 | 22.63 MB (23,733,855 bytes) | 20.0% |
-| `.html` | 65 | 71,462 | 5.33 MB (5,588,326 bytes) | 15.7% |
-| `.md` | 87 | 26,960 | 2.96 MB (3,101,400 bytes) | 21.0% |
-| `.css` | 16 | 11,778 | 275.49 KB (282,099 bytes) | 3.9% |
-| `.py` | 35 | 8,103 | 364.20 KB (372,944 bytes) | 8.5% |
-| `.js` | 3 | 2,321 | 90.65 KB (92,822 bytes) | 0.7% |
+| `.json` | 83 | 488,349 | 22.73 MB (23,829,993 bytes) | 20.0% |
+| `.html` | 66 | 71,531 | 5.36 MB (5,618,345 bytes) | 15.9% |
+| `.md` | 87 | 27,054 | 2.97 MB (3,110,556 bytes) | 20.9% |
+| `.css` | 16 | 11,778 | 275.49 KB (282,099 bytes) | 3.8% |
+| `.py` | 35 | 8,127 | 365.67 KB (374,450 bytes) | 8.4% |
+| `.js` | 4 | 2,368 | 92.13 KB (94,340 bytes) | 1.0% |
 | `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 10.1% |
-| `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 10.4% |
+| `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 10.3% |
 | `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 4.8% |
 | `.jpeg` | 2 | 0 | 773.70 KB (792,264 bytes) | 0.5% |
 | `.png` | 8 | 0 | 714.78 KB (731,934 bytes) | 1.9% |
@@ -72,7 +72,7 @@
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **198** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **61** | Strict single-H1 semantic hierarchy per page |
-| **Secondary Section Headings (`<h2>`)** | **435** | Structural topic subdivisions |
+| **Secondary Section Headings (`<h2>`)** | **437** | Structural topic subdivisions |
 | **Card & Item Headings (`<h3>`)** | **505** | Individual service, question, and feature cards |
 | **Call-to-Action (CTA) Modules** | **75** | Standardized CTAs with Free LinkedIn Consultation rule |
 | **Canonical Links Configured** | **60** | 100% SEO canonical URL coverage across public pages |
@@ -83,8 +83,8 @@
 
 ## 5. Web Page Taxonomy & Sitemap Distribution
 
-- **Total Public HTML Pages**: **65**
-- **Core Landing & Portal Pages**: **17** (`404.html`, `all-business-services.html`, `all-personal-services.html`, `article-footer_dark.html`, `articles.html`, `business-ai-training.html`, `contact.html`, `expertise.html`, `faqs.html`, `footer.html`, `google43d90cf6a204dc6d.html`, `guarantee.html`, `header.html`, `index.html`, `personal-ai-training.html`, `pricing.html`, `writing.html`)
+- **Total Public HTML Pages**: **66**
+- **Core Landing & Portal Pages**: **18** (`404.html`, `all-business-services.html`, `all-personal-services.html`, `article-footer_dark.html`, `articles.html`, `business-ai-training.html`, `contact.html`, `expertise.html`, `faqs.html`, `footer.html`, `google43d90cf6a204dc6d.html`, `guarantee.html`, `header.html`, `index.html`, `mermaid.html`, `personal-ai-training.html`, `pricing.html`, `writing.html`)
 - **Business AI Training Services (`business-services/`)**: **12** (Full enterprise curriculum, lead gen, agent orchestration, and architecture deep-dives)
 - **Personal AI Training Services (`personal-services/`)**: **12** (1-on-1 private acceleration, career transformation, continuous learning, and agentic workflows)
 - **Claude Guides & Frameworks (`claude/`)**: **12** (Claude Code, Cowork, Skills, MCP, Orchestration, Plugins, Science, Local LLMs, Features)
