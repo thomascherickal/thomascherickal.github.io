@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-03 10:30:08 UTC` | Branch: `main` | Head Commit: `8f9f7e4`
+> **Automated Status Report** | Generated on `2026-11-03 10:41:36 UTC` | Branch: `main` | Head Commit: `7ba478e`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **416** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **609,260** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **597,454** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **4,289** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **7,517** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **65.26 MB (68,434,081 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **574,732 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **459** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-03** | Subject: "chore(nlp-fuzzy-expert): commit latest synchronized reference reports and master dictionary" |
+| **Total Lines of Source Code & Content** | **609,346** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **597,517** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **4,302** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **7,527** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **65.27 MB (68,437,997 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **574,791 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **460** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-03** | Subject: "feat: include mermaid.js on all HTML pages and modernize diagram rendering" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,12 +27,12 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 66 | 71,531 | 5.36 MB (5,618,345 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 66 | 71,547 | 5.36 MB (5,619,395 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,778 | 275.49 KB (282,099 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 4 | 2,368 | 92.13 KB (94,340 bytes) | Client-side interactivity, search, filter & components |
+| **JavaScript Scripts** | 4 | 2,438 | 94.91 KB (97,191 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 35 | 8,127 | 365.67 KB (374,450 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 87 | 27,054 | 2.97 MB (3,110,556 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 83 | 488,349 | 22.73 MB (23,829,993 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 87 | 27,054 | 2.97 MB (3,110,572 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 83 | 488,349 | 22.73 MB (23,829,992 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 74 | 0 | 33.39 MB (35,010,540 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 9 | 0 | 46.16 KB (47,270 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,12 +43,12 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 83 | 488,349 | 22.73 MB (23,829,993 bytes) | 20.0% |
-| `.html` | 66 | 71,531 | 5.36 MB (5,618,345 bytes) | 15.9% |
-| `.md` | 87 | 27,054 | 2.97 MB (3,110,556 bytes) | 20.9% |
+| `.json` | 83 | 488,349 | 22.73 MB (23,829,992 bytes) | 20.0% |
+| `.html` | 66 | 71,547 | 5.36 MB (5,619,395 bytes) | 15.9% |
+| `.md` | 87 | 27,054 | 2.97 MB (3,110,572 bytes) | 20.9% |
 | `.css` | 16 | 11,778 | 275.49 KB (282,099 bytes) | 3.8% |
 | `.py` | 35 | 8,127 | 365.67 KB (374,450 bytes) | 8.4% |
-| `.js` | 4 | 2,368 | 92.13 KB (94,340 bytes) | 1.0% |
+| `.js` | 4 | 2,438 | 94.91 KB (97,191 bytes) | 1.0% |
 | `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 10.1% |
 | `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 10.3% |
 | `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 4.8% |
