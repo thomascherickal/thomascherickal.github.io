@@ -281,7 +281,7 @@
     <!-- TABLE OF CONTENTS -->
     <article class="content-card" id="table-of-contents">
       <h2>Contents</h2>
-      <div class="toc-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:0.75rem;margin-top:1rem;">
+      <div class="toc-grid" style="display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem;">
         <a class="toc-link gold-link" href="#foundations">1. Foundations &amp; Research Engine Role</a>
         <a class="toc-link gold-link" href="#scientific-breakthroughs">2. Scientific Breakthroughs: AlphaFold to AlphaQubit</a>
         <a class="toc-link gold-link" href="#element-models">3. Gemini Element Models: Argon, Carbon, Hydrogen &amp; Xenon</a>
@@ -308,7 +308,7 @@
 
       <div class="diagram-container">
         <div class="mermaid-fallback">
-          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+          <em>Interactive architecture diagram (loading...)</em>
         </div>
         <div class="mermaid">
 flowchart TD
@@ -350,7 +350,7 @@ flowchart TD
 
       <div class="diagram-container">
         <div class="mermaid-fallback">
-          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+          <em>Interactive architecture diagram (loading...)</em>
         </div>
         <div class="mermaid">
 flowchart LR
@@ -427,7 +427,7 @@ flowchart LR
 
       <div class="diagram-container">
         <div class="mermaid-fallback">
-          <em>Interactive architecture diagram (requires network access to Mermaid.js CDN).</em>
+          <em>Interactive architecture diagram (loading...)</em>
         </div>
         <div class="mermaid">
 flowchart TD
@@ -913,6 +913,31 @@ flowchart TD
   </footer>
     <!-- END:FOOTER -->
   <script src="../components.js"></script>
-<script type="module" src="../mermaid.js"></script>
+<script src="../assets/js/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: "dark",
+    themeVariables: {
+      "primaryColor": "#0c111d",
+      "primaryTextColor": "#38bdf8",
+      "primaryBorderColor": "#38bdf8",
+      "lineColor": "#fbbf24",
+      "secondaryColor": "#060912",
+      "tertiaryColor": "#131926"
+    }
+  });
+</script>
+<script>
+  window.addEventListener('load', function () {
+    document.querySelectorAll('.diagram-container').forEach(function (box) {
+      var d = box.querySelector('.mermaid');
+      var f = box.querySelector('.mermaid-fallback');
+      if (d && f && (d.getAttribute('data-processed') === 'true' || box.classList.contains('mermaid-rendered'))) {
+        f.style.display = 'none';
+      }
+    });
+  });
+</script>
 </body>
 </html>

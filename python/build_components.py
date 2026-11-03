@@ -90,12 +90,10 @@ def build():
             file_header_block = f"  <!-- START:HEADER -->\n  {subdir_nav}\n  <!-- END:HEADER -->"
             file_footer_block = f"    <!-- START:FOOTER -->\n    {subdir_footer}\n    <!-- END:FOOTER -->"
             components_script = '<script src="../components.js"></script>\n'
-            mermaid_script = '<script type="module" src="../mermaid.js"></script>\n'
         else:
             file_header_block = header_block
             file_footer_block = footer_block
             components_script = '<script src="components.js"></script>\n'
-            mermaid_script = '<script type="module" src="mermaid.js"></script>\n'
 
         with open(file_path, "r", encoding="utf-8") as f:
             content = f.read()
@@ -149,19 +147,7 @@ def build():
             body_close = new_content.rfind("</body>")
             new_content = new_content[:body_close] + components_script + new_content[body_close:]
 
-        # Ensure correct mermaid.js script tag
-        if is_subdir:
-            new_content = re.sub(r'<script\s+type="module"\s+src="(?:\./)?mermaid\.js"></script>', '<script type="module" src="../mermaid.js"></script>', new_content)
-        else:
-            new_content = re.sub(r'<script\s+type="module"\s+src="\.\./mermaid\.js"></script>', '<script type="module" src="mermaid.js"></script>', new_content)
 
-        if "mermaid.js" not in new_content:
-            comp_match = re.search(r'(<script\s+src="(?:\.\./)?components\.js"></script>)', new_content)
-            if comp_match:
-                new_content = new_content[:comp_match.end()] + "\n" + mermaid_script.strip() + new_content[comp_match.end():]
-            elif "</body>" in new_content:
-                body_close = new_content.rfind("</body>")
-                new_content = new_content[:body_close] + mermaid_script + new_content[body_close:]
 
         if new_content != content:
             with open(file_path, "w", encoding="utf-8") as f:
