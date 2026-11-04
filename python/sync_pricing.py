@@ -20,7 +20,7 @@ Synchronizes across:
 - personal-ai-training.html
 - faqs.html
 - index.html
-- services-summary.md
+- docs/services-summary.md
 - llms.txt
 """
 

@@ -1,7 +1,7 @@
 # Thomas Cherickal
 ## Generative AI Consultant
 
-> **// The Digital Futurist · Remote Worldwide**  
+> **// The Future Is Now**  
 > **I train individuals and teams to work AI-first, from freshers and developers to architects, managers and CXOs. Training is live and remote and covers Claude agent orchestration, the Gemini toolset, and budget controls that keep AI spend predictable. For teams ready to invest in hardware, I also set up local LLMs that cut recurring cloud API bills.**
 
 **Location**: Chennai, India (Remote - Worldwide)  

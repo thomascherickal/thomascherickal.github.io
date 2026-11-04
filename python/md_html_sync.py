@@ -123,7 +123,7 @@ def sync_html_to_md(html_name: str, md_name: str):
         
         name = clean_text(soup.find("h1", class_="hero-name").get_text()) if soup.find("h1", class_="hero-name") else "Thomas Cherickal"
         subtitle = clean_text(soup.find("h2", class_="hero-subtitle").get_text()) if soup.find("h2", class_="hero-subtitle") else "Generative AI Consultant"
-        eyebrow = clean_text(soup.find("p", class_="hero-eyebrow").get_text()) if soup.find("p", class_="hero-eyebrow") else "// The Digital Futurist · Remote Worldwide"
+        eyebrow = clean_text(soup.find("p", class_="hero-eyebrow").get_text()) if soup.find("p", class_="hero-eyebrow") else "// The Future Is Now"
         tagline = clean_text(soup.find("p", class_="hero-tagline").get_text()) if soup.find("p", class_="hero-tagline") else ""
         bio = clean_text(soup.find("p", class_="hero-bio").get_text()) if soup.find("p", class_="hero-bio") else ""
         

@@ -64,15 +64,15 @@ GEMINI_GUIDES = [
     "google/google-gemini-101.html",
     "google/google-ai-studio.html",
     "google/google-antigravity-ide.html",
-    "google/google-gemini-deep-think.html",
+    "google/google-gemini-4-argon.html",
     "google/google-gemini-desktop.html",
     "google/google-deepmind.html",
     "google/google-gemini-spark.html",
     "google/google-gemini-notebook.html",
-    "google/google-gemma.html",
+    "google/google-gemma-local-models.html",
     "google/google-multimodality.html",
-    "google/google-gemini-4-models.html",
-    "google/google-gemini-agents.html",
+    "google/google-gemini-4-hydrogen.html",
+    "google/google-gemini-4-carbon.html",
 ]
 
 def get_git_lastmod(rel_path: str) -> str:

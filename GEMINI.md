@@ -18,6 +18,11 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - **Business Website**: `https://thedigitalfuturist.com`
 - Always categorize and list `https://thedigitalfuturist.com` under the **Business Website** category across all profile registries, documentation, schemas, and links.
 
+## The Digital Futurist Tagline Rule
+- **Canonical Tagline**: `The Future Is Now`
+- Always use `The Future Is Now` as the tagline wherever text appears next to, above, or alongside The Digital Futurist logo (such as the hero eyebrow on `index.html` and markdown documentation).
+- Do not use `The Digital Futurist · Remote Worldwide`.
+
 ## Canonical Site & Profile Description
 - **Canonical Description**: `"description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist."`
 - Always use `"Thomas Cherickal - Generative AI Consultant and The Digital Futurist."` as the primary site, author, and profile description across all HTML files, metadata, and schemas.

@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Gemini Spark: Lightweight High-Throughput Inference | Thomas Cherickal</title>
-<meta content="Comprehensive architectural guide to Gemini Spark: 24/7 autonomous background agents, Google Workspace integration, MCP tools, and business workflows." name="description"/>
+<meta content="What Gemini Spark can do, and ten business and personal workflows for an IT professional working in generative AI." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
 <link href="https://thedigitalfuturist.com/google/google-gemini-spark.html" rel="canonical"/>
 <!-- Open Graph -->
 <meta content="article" property="og:type"/>
 <meta content="https://thedigitalfuturist.com/google/google-gemini-spark.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
-<meta content="Gemini Spark: Autonomous 24/7 Agentic Assistant for Google Workspace | Thomas Cherickal" property="og:title"/>
-<meta content="Comprehensive architectural guide to Gemini Spark: 24/7 autonomous background agents, Google Workspace integration, MCP tools, and business workflows." property="og:description"/>
+<meta content="Gemini Spark: Ten Use Cases for Generative AI Professionals | Thomas Cherickal" property="og:title"/>
+<meta content="What Gemini Spark can do, and ten business and personal workflows for an IT professional working in generative AI." property="og:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@thomazcherickal" name="twitter:site"/>
-<meta content="Gemini Spark: Autonomous 24/7 Agentic Assistant for Google Workspace | Thomas Cherickal" name="twitter:title"/>
-<meta content="Comprehensive architectural guide to Gemini Spark: 24/7 autonomous background agents, Google Workspace integration, MCP tools, and business workflows." name="twitter:description"/>
+<meta content="Gemini Spark: Ten Use Cases for Generative AI Professionals | Thomas Cherickal" name="twitter:title"/>
+<meta content="What Gemini Spark can do, and ten business and personal workflows for an IT professional working in generative AI." name="twitter:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
 <!-- Favicons -->
 <link href="../assets/favicon.ico" rel="icon" sizes="any"/>
@@ -36,7 +35,214 @@
 <link href="../css/footer.css" rel="stylesheet"/>
 <link href="../css/cta.css" rel="stylesheet"/>
 <link href="../css/article.css" rel="stylesheet"/>
-<link href="../css/gemini.css?v=20261103b" rel="stylesheet"/>
+<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
+<style>
+/* Gemini Spark Component Styling */
+.stat-box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin: 24px 0;
+}
+.stat-box {
+  background: var(--bg-card, #0c111d);
+  border: 1px solid var(--border, rgba(56, 189, 248, 0.2));
+  border-top: 3px solid var(--gold, #fbbf24);
+  border-radius: 12px;
+  padding: 18px 14px;
+  text-align: center;
+}
+.stat-box:nth-child(2) { border-top-color: var(--cyan, #22d3ee); }
+.stat-box:nth-child(3) { border-top-color: #e879f9; }
+.stat-box b {
+  display: block;
+  font-size: 42px;
+  line-height: 1.1;
+  color: #fff;
+  font-family: var(--font-mono, monospace);
+  font-weight: 700;
+}
+.stat-box span {
+  font-size: 14px;
+  color: var(--text-muted, #94a3b8);
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 24px;
+  padding: 0;
+  list-style: none;
+}
+.chips li {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  border: 1px solid;
+  background: var(--bg-card, #0c111d);
+  font-family: var(--font-mono, monospace);
+}
+.chips .g { border-color: rgba(56, 189, 248, 0.4); color: var(--cyan, #22d3ee); }
+.chips .m { border-color: rgba(232, 121, 249, 0.4); color: #e879f9; }
+.chips .t { border-color: rgba(251, 146, 60, 0.4); color: #fb923c; }
+.chips .c { border-color: rgba(251, 191, 36, 0.4); color: var(--gold, #fbbf24); }
+
+dl.spec {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin: 14px 0 24px;
+  padding: 16px;
+  background: rgba(12, 17, 29, 0.6);
+  border: 1px solid var(--border, rgba(56, 189, 248, 0.2));
+  border-radius: 10px;
+}
+dl.spec div { min-width: 0; }
+dl.spec dt {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold, #fbbf24);
+  font-family: var(--font-mono, monospace);
+  font-weight: 700;
+}
+dl.spec dd {
+  margin: 4px 0 0;
+  font-size: 14.5px;
+  color: var(--text-secondary, #cbd5e1);
+  line-height: 1.5;
+}
+.tablewrap {
+  overflow-x: auto;
+  margin: 22px 0;
+  border: 1px solid var(--border, rgba(56, 189, 248, 0.2));
+  border-radius: 10px;
+}
+.tablewrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  background: var(--bg-card, #0c111d);
+}
+.tablewrap th, .tablewrap td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.12);
+  vertical-align: top;
+}
+.tablewrap th {
+  color: var(--gold, #fbbf24);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(6, 9, 18, 0.8);
+  font-family: var(--font-mono, monospace);
+}
+.tablewrap td:first-child {
+  color: var(--cyan, #22d3ee);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.tablewrap caption {
+  caption-side: bottom;
+  color: var(--text-muted, #94a3b8);
+  font-size: 13px;
+  padding: 10px;
+}
+ol.steps {
+  list-style: none;
+  counter-reset: s;
+  padding: 0;
+  margin: 20px 0;
+}
+ol.steps li {
+  counter-increment: s;
+  position: relative;
+  padding: 14px 18px 14px 62px;
+  margin: 0 0 14px;
+  background: var(--bg-card, #0c111d);
+  border: 1px solid var(--border, rgba(56, 189, 248, 0.2));
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+ol.steps li::before {
+  content: counter(s);
+  position: absolute;
+  left: 16px;
+  top: 14px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid var(--cyan, #22d3ee);
+  color: var(--cyan, #22d3ee);
+  text-align: center;
+  font-weight: 700;
+  font-family: var(--font-mono, monospace);
+  font-size: 15px;
+}
+.spark-callout {
+  border-left: 4px solid var(--gold, #fbbf24);
+  background: rgba(251, 191, 36, 0.05);
+  border-top: 1px solid rgba(251, 191, 36, 0.15);
+  border-right: 1px solid rgba(251, 191, 36, 0.15);
+  border-bottom: 1px solid rgba(251, 191, 36, 0.15);
+  border-radius: 0 10px 10px 0;
+  padding: 18px 22px;
+  margin: 26px 0;
+}
+.spark-callout p {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--text-primary, #e2e8f0);
+}
+.uc-badge {
+  display: inline-block;
+  min-width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 14px;
+  color: #000;
+  background: var(--cyan, #22d3ee);
+  margin-right: 10px;
+  font-weight: 800;
+  font-family: var(--font-mono, monospace);
+  vertical-align: middle;
+}
+.uc-badge.personal {
+  background: #e879f9;
+}
+h3.uc-title {
+  display: flex;
+  align-items: center;
+  margin: 32px 0 12px;
+  color: #fff;
+  font-size: 1.35rem;
+}
+ul.spark-refs {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0;
+}
+ul.spark-refs li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+ul.spark-refs li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--gold, #fbbf24);
+}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -51,15 +257,15 @@
         "@type": "WebPage",
         "@id": "https://thedigitalfuturist.com/google/google-gemini-spark.html",
         "url": "https://thedigitalfuturist.com/google/google-gemini-spark.html",
-        "name": "Gemini Spark: Autonomous 24/7 Agentic Assistant for Google Workspace | Thomas Cherickal"
+        "name": "Gemini Spark: Ten Use Cases for Generative AI Professionals | Thomas Cherickal"
       },
-      "headline": "Gemini Spark: Autonomous 24/7 Agentic Assistant for Google Workspace",
-      "description": "Comprehensive architectural guide to Gemini Spark: 24/7 autonomous background agents, Google Workspace integration, MCP tools, and business workflows.",
+      "headline": "Gemini Spark: Ten Use Cases for Generative AI Professionals",
+      "description": "What Gemini Spark can do, and ten business and personal workflows for an IT professional working in generative AI.",
       "image": [
         "https://thedigitalfuturist.com/assets/og-card.png"
       ],
       "datePublished": "2026-10-24T00:00:00+05:30",
-      "dateModified": "2026-10-24T00:00:00+05:30",
+      "dateModified": "2026-11-04T00:00:00+05:30",
       "inLanguage": "en-US",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -99,7 +305,8 @@
         "24/7 Background Agent",
         "Model Context Protocol",
         "Business Coworker AI",
-        "Tasks in Gemini"
+        "Tasks in Gemini",
+        "Personal Intelligence"
       ]
     },
     {
@@ -128,7 +335,7 @@
     }
   ]
 }
-  </script>
+</script>
 <link href="../css/responsive.css" rel="stylesheet"/>
 </head>
 <body>
@@ -234,15 +441,15 @@
           <li><a href="../google/google-gemini-101.html">Gemini 101</a></li>
           <li><a href="../google/google-ai-studio.html">Google AI Studio</a></li>
           <li><a href="../google/google-antigravity-ide.html">Google Antigravity IDE</a></li>
-          <li><a href="../google/google-gemini-deep-think.html">Gemini Deep Think</a></li>
           <li><a href="../google/google-gemini-desktop.html">Gemini Desktop</a></li>
           <li><a href="../google/google-gemini-spark.html">Gemini Spark</a></li>
           <li><a href="../google/google-gemini-notebook.html">Gemini Notebook</a></li>
-          <li><a href="../google/google-gemma.html">Google Gemma</a></li>
+          <li><a href="../google/google-gemma-local-models.html">Google Gemma Local Models</a></li>
           <li><a href="../google/google-multimodality.html">Google Multimodality</a></li>
           <li><a href="../google/google-deepmind.html">Google DeepMind</a></li>
-          <li><a href="../google/google-gemini-4-models.html">Gemini 4 Models</a></li>
-          <li><a href="../google/google-gemini-agents.html">Gemini Agents</a></li>
+          <li><a href="../google/google-gemini-4-argon.html">Gemini 4 Argon</a></li>
+          <li><a href="../google/google-gemini-4-carbon.html">Gemini 4 Carbon</a></li>
+          <li><a href="../google/google-gemini-4-hydrogen.html">Gemini 4 Hydrogen</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
@@ -258,115 +465,571 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-<main class="container">
-<header class="hero">
-<p class="hero-badge">// AUTONOMOUS WORKSPACE COWORKER AGENT</p>
-<h1>Gemini Spark: Lightweight High-Throughput Inference</h1>
-<p class="hero-desc">
-        Discover Gemini Spark: Google's 24/7 autonomous background agent architecture revolutionizing business productivity across Gmail, Docs, Drive, Sheets, and third-party systems via Model Context Protocol.
-      </p>
-</header>
-<!-- WHAT IS GEMINI SPARK -->
-<article class="content-card">
-<h2>What is Gemini Spark?</h2>
-<p>
-<strong>Gemini Spark</strong> is Google's autonomous personal AI agent architecture, engineered to operate continuously in the background on secure Google Cloud virtual machines. While traditional conversational chatbots require a user to keep a browser window open and prompt them step-by-step, Gemini Spark acts as an asynchronous digital colleague capable of executing long-horizon, multi-step workflows while your computer is asleep or your phone is locked.
-      </p>
-<p>
-        Integrated natively into the Google Workspace ecosystem under features like <em>"Tasks in Gemini,"</em> Spark continuously evaluates user context, incoming emails, schedule commitments, and file updates. It bridges the gap between passive question-answering and proactive autonomous task execution.
-      </p>
-<div class="diagram-container">
-<div class="mermaid-fallback">
-<em>Interactive architecture diagram (loading...)</em>
-</div>
-<div class="mermaid">
-flowchart TD
-    Trigger[Event Trigger: Email / Calendar / Schedule / Drive File] --&gt; Agent[Gemini Spark Autonomous Agent Core]
-    Agent --&gt; Context[Context Mining: Gmail + Drive + Calendar + Chat]
-    Context --&gt; Plan[Multi-Step Execution Plan]
-    Plan --&gt; MCP[Model Context Protocol &amp; Workspace APIs]
-    MCP --&gt; Action[Execute Action: Draft Email / Update Sheet / Reschedule Meet]
-    Action --&gt; Verify[Security &amp; Policy Verification]
-    Verify --&gt; Notify[Proactive Morning Brief / User Notification]
+  <main class="container single-column-article">
+    <header class="hero" style="text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding-top:120px;padding-bottom:2rem;margin-bottom:2rem;">
+      <div style="background:var(--bg-card, #0c111d);border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:14px;padding:1.5rem 1.75rem;box-shadow:0 4px 20px rgba(0, 0, 0, 0.35);display:flex;align-items:center;gap:1.5rem;box-sizing:border-box;">
+        <img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist logo" width="96" height="96" style="width:96px;height:96px;border-radius:6px;object-fit:cover;flex:none;border:1px solid rgba(251,191,36,0.35);box-shadow:0 2px 10px rgba(0,0,0,0.5);" />
+        <div>
+          <div style="font-family:var(--font-mono, monospace);letter-spacing:0.2em;text-transform:uppercase;font-size:0.85rem;color:var(--gold, #fbbf24);font-weight:700;">The Digital Futurist</div>
+          <div style="color:var(--text-muted, #94a3b8);font-size:0.95rem;margin-top:0.35rem;line-height:1.5;">By Thomas Cherickal, Generative AI Consultant | 4 November 2026</div>
         </div>
-<div class="diagram-caption">Figure 1: Gemini Spark 24/7 Cloud Background Execution Cycle</div>
+      </div>
+      <div style="background:var(--bg-card, #0c111d);border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:14px;padding:2rem 2.25rem;box-shadow:0 4px 20px rgba(0, 0, 0, 0.35);box-sizing:border-box;">
+        <p class="hero-badge" style="margin:0 0 0.85rem 0;">// GEMINI SPARK ARCHITECTURAL GUIDE</p>
+        <h1>Gemini Spark: Lightweight High-Throughput Inference</h1>
+        <p class="hero-desc" style="font-size:1.15rem;line-height:1.7;color:var(--text-muted);margin:0.75rem 0 0;">
+          What Gemini Spark can do, and ten business and personal workflows for an IT professional working in generative AI.
+        </p>
+      </div>
+    </header>
+
+    <div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;margin-bottom:2rem;">
+      <div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
+        <div style="font-size:2rem;font-weight:700;color:var(--gold);font-family:var(--font-mono);">15</div>
+        <div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Concurrent Tasks</div>
+      </div>
+      <div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
+        <div style="font-size:2rem;font-weight:700;color:var(--cyan);font-family:var(--font-mono);">50</div>
+        <div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Active Schedules</div>
+      </div>
+      <div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
+        <div style="font-size:2rem;font-weight:700;color:#e879f9;font-family:var(--font-mono);">100+</div>
+        <div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Turn Reasoning Depth</div>
+      </div>
+      <div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
+        <div style="font-size:2rem;font-weight:700;color:var(--green, #34d399);font-family:var(--font-mono);">24 / 7</div>
+        <div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Cloud VM Runtime</div>
+      </div>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <article class="content-card" id="table-of-contents">
+      <h2>Contents</h2>
+      <div class="toc-grid" style="display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem;">
+        <a class="toc-link gold-link" href="#introduction">1. Introduction</a>
+        <a class="toc-link gold-link" href="#what-spark-is">2. What Gemini Spark Is</a>
+        <a class="toc-link gold-link" href="#capabilities">3. What Spark Can Do</a>
+        <a class="toc-link gold-link" href="#business">4. Five Business Use Cases</a>
+        <a class="toc-link gold-link" href="#personal">5. Five Personal Use Cases</a>
+        <a class="toc-link gold-link" href="#guardrails">6. Guardrails and Limits</a>
+        <a class="toc-link gold-link" href="#start">7. Getting Started</a>
+        <a class="toc-link gold-link" href="#conclusion">8. Conclusion</a>
+        <a class="toc-link gold-link" href="#pricing-parity">9. Practice Pricing &amp; Global Purchasing Power Parity</a>
+        <a class="toc-link gold-link" href="#references">10. References</a>
+      </div>
+    </article>
+    <article class="content-card" id="introduction">
+      <h2>Introduction</h2>
+      <p>Most AI assistants wait for you to type. Gemini Spark does not wait. It is a personal agent that runs in Google's cloud around the clock, so work carries on after you close the laptop. For a generative AI professional, that changes what an assistant can reasonably be asked to own.</p>
+      <p>Google introduced Spark as a 24/7 agent in its <a class="gold-link" href="https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/" rel="noopener" target="_blank">I/O announcement post</a>. It followed with a <a class="gold-link" href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/" rel="noopener" target="_blank">June 30 product update</a>. In October the feature was renamed Task inside the Gemini app, <a class="gold-link" href="https://9to5google.com/2026/10/12/gemini-spark-task-redesign/" rel="noopener" target="_blank">as 9to5Google reported</a>. This article keeps the name Spark because most documentation and coverage still use it.</p>
+      <p>The article is written for IT professionals who work in generative AI. It first explains what Spark does and where it stops. It then walks through ten workflows, five for business and five for personal life, each built from capabilities Google documents.</p>
+      <p>A caution before we start. Spark is a recent product, and its limits are real. Where a workflow depends on a restriction such as region or account type, the section says so.</p>
+    </article>
+
+    <article class="content-card" id="what-spark-is">
+      <h2>What Gemini Spark Is</h2>
+      <p>Spark is a cloud-hosted agent inside the Gemini app. At launch it ran on Gemini Flash, paired with the Antigravity harness, the agent framework Google also exposes to developers. Each user's work runs on dedicated Google Cloud virtual machines. That design is why a task can keep going while your phone is off.</p>
+      <figure style="margin:2rem 0;text-align:center;">
+<svg aria-label="Architecture diagram. You start tasks from the Gemini web app, a phone or the Mac app. Work runs on a dedicated Google Cloud VM containing Gemini Flash, the Antigravity harness, browsers, skills and schedules. A confirmation gate sits between the VM and connected apps such as Gmail, Calendar, Drive, Maps, Instacart and custom MCP servers." role="img" style="max-width:100%;height:auto;border:1px solid rgba(56,189,248,0.3);border-radius:14px;background:#000;" viewbox="0 0 900 440">
+<defs>
+<marker id="arr1" markerheight="8" markerwidth="8" orient="auto-start-reverse" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0 0L10 5L0 10z" fill="#ffc83d"></path></marker>
+<filter height="140%" id="glow1" width="140%" x="-20%" y="-20%"><fegaussianblur result="b" stddeviation="4"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
+</defs>
+<rect fill="#0b0b10" height="440" rx="10" width="900"></rect>
+<text fill="#ffc83d" font-size="14" font-weight="700" letter-spacing="2" text-anchor="middle" x="105" y="48">YOU</text>
+<text fill="#ffc83d" font-size="14" font-weight="700" letter-spacing="2" text-anchor="middle" x="430" y="40">DEDICATED GOOGLE CLOUD VM</text>
+<text fill="#ffc83d" font-size="14" font-weight="700" letter-spacing="2" text-anchor="middle" x="785" y="48">CONNECTED APPS</text>
+<g font-size="15" text-anchor="middle">
+<rect fill="#06222a" height="56" rx="10" stroke="#22d3ee" stroke-width="2" width="170" x="20" y="110"></rect><text fill="#22d3ee" x="105" y="144">Gemini web app</text>
+<rect fill="#06222a" height="56" rx="10" stroke="#22d3ee" stroke-width="2" width="170" x="20" y="196"></rect><text fill="#22d3ee" x="105" y="230">Phone</text>
+<rect fill="#06222a" height="56" rx="10" stroke="#22d3ee" stroke-width="2" width="170" x="20" y="282"></rect><text fill="#22d3ee" x="105" y="308">Mac app</text><text fill="#22d3ee" font-size="12" x="105" y="327">+ permissioned folder</text>
+</g>
+<path d="M192 138 L244 200" fill="none" marker-end="url(#arr1)" stroke="#ffc83d" stroke-width="2"></path>
+<path d="M192 224 L244 224" fill="none" marker-end="url(#arr1)" stroke="#ffc83d" stroke-width="2"></path>
+<path d="M192 310 L244 250" fill="none" marker-end="url(#arr1)" stroke="#ffc83d" stroke-width="2"></path>
+<rect fill="#100d04" filter="url(#glow1)" height="340" rx="18" stroke="#ffc83d" stroke-width="2.5" width="360" x="250" y="56"></rect>
+<g font-size="15" font-weight="600" text-anchor="middle">
+<rect fill="#06222a" height="52" rx="10" stroke="#22d3ee" stroke-width="2" width="300" x="280" y="86"></rect><text fill="#22d3ee" x="430" y="118">Gemini Flash (model)</text>
+<rect fill="#1a1236" height="52" rx="10" stroke="#a78bfa" stroke-width="2" width="300" x="280" y="156"></rect><text fill="#a78bfa" x="430" y="188">Antigravity harness (plans and tools)</text>
+<rect fill="#2a0a1b" height="52" rx="10" stroke="#ff3d9a" stroke-width="2" width="144" x="280" y="226"></rect><text fill="#ff3d9a" font-size="14" x="352" y="249">Remote cloud</text><text fill="#ff3d9a" font-size="14" x="352" y="267">browser</text>
+<rect fill="#2a1704" height="52" rx="10" stroke="#ff9f43" stroke-width="2" width="144" x="436" y="226"></rect><text fill="#ff9f43" font-size="14" x="508" y="249">Local Chrome</text><text fill="#ff9f43" font-size="14" x="508" y="267">(desktop)</text>
+<rect fill="#052a1d" height="52" rx="10" stroke="#34e7a0" stroke-width="2" width="300" x="280" y="296"></rect><text fill="#34e7a0" x="430" y="328">Skills and Schedules</text>
+</g>
+<text fill="#a9a69c" font-size="13" text-anchor="middle" x="430" y="378">Keeps running when your device is off</text>
+<path d="M612 224 L690 224" fill="none" marker-end="url(#arr1)" stroke="#ffc83d" stroke-width="2.5"></path>
+<rect fill="#ffc83d" height="32" rx="16" width="64" x="618" y="208"></rect>
+<text fill="#000" font-size="11" font-weight="800" text-anchor="middle" x="650" y="229">CONFIRM</text>
+<g font-size="14" text-anchor="middle">
+<rect fill="#0d1a2a" height="46" rx="9" stroke="#22d3ee" stroke-width="1.5" width="190" x="696" y="72"></rect><text fill="#22d3ee" x="791" y="100">Gmail, Calendar, Drive</text>
+<rect fill="#0d1a2a" height="46" rx="9" stroke="#22d3ee" stroke-width="1.5" width="190" x="696" y="128"></rect><text fill="#22d3ee" x="791" y="156">Docs, Sheets, Slides, Keep</text>
+<rect fill="#1c0d1a" height="46" rx="9" stroke="#ff3d9a" stroke-width="1.5" width="190" x="696" y="184"></rect><text fill="#ff3d9a" x="791" y="212">Photos, YouTube, Maps</text>
+<rect fill="#1c0d1a" height="46" rx="9" stroke="#ff3d9a" stroke-width="1.5" width="190" x="696" y="240"></rect><text fill="#ff3d9a" x="791" y="268">Flights, Hotels, Finance</text>
+<rect fill="#2a1704" height="46" rx="9" stroke="#ff9f43" stroke-width="1.5" width="190" x="696" y="296"></rect><text fill="#ff9f43" x="791" y="324">Instacart, OpenTable, Zillow</text>
+<rect fill="#17120a" height="46" rx="9" stroke="#ffc83d" stroke-width="1.5" width="190" x="696" y="352"></rect><text fill="#ffc83d" x="791" y="380">Custom MCP servers</text>
+</g>
+</svg>
+<figcaption style="font-size:0.85rem;color:var(--text-muted, #94a3b8);margin-top:0.6rem;">Figure 1. Where Spark runs and what it can reach.</figcaption>
+</figure>
+      <p>The practical difference from a chat window is persistence. A chat answer ends when the reply ends. A Spark task can plan, open apps, wait, retry and come back with a finished artifact such as a Doc, a Sheet or a drafted email.</p>
+      <p>Access comes with conditions. You must be 18 or older and use a personal Google Account, since work and school accounts are not supported. You also need a Google AI Pro or Ultra plan, with Keep Activity and Personal Intelligence turned on. <a class="gold-link" href="https://techcabal.com/?p=192551" rel="noopener" target="_blank">TechCabal reports</a> that the EEA, Nigeria, Switzerland and the UK are excluded.</p>
+      <figure style="margin:2rem 0;text-align:center;">
+<svg aria-label="Timeline. Google I/O: Spark launches as a 24/7 agent on Gemini Flash. June 30: Google publishes a Spark product update. October 12: the feature is renamed Task in the Gemini app." role="img" style="max-width:100%;height:auto;border:1px solid rgba(56,189,248,0.3);border-radius:14px;background:#000;" viewbox="0 0 900 190">
+<rect fill="#0b0b10" height="190" rx="10" width="900"></rect>
+<line stroke="#ffc83d" stroke-width="3" x1="90" x2="810" y1="78" y2="78"></line>
+<g>
+<circle cx="150" cy="78" fill="#000" r="14" stroke="#22d3ee" stroke-width="4"></circle>
+<circle cx="450" cy="78" fill="#000" r="14" stroke="#ff3d9a" stroke-width="4"></circle>
+<circle cx="750" cy="78" fill="#000" r="14" stroke="#34e7a0" stroke-width="4"></circle>
+</g>
+<g text-anchor="middle">
+<text fill="#22d3ee" font-size="19" font-weight="700" x="150" y="44">Google I/O</text>
+<text fill="#e9e6dd" font-size="14" x="150" y="118">Spark launches as a 24/7</text>
+<text fill="#e9e6dd" font-size="14" x="150" y="138">agent on Gemini Flash</text>
+<text fill="#ff3d9a" font-size="19" font-weight="700" x="450" y="44">June 30</text>
+<text fill="#e9e6dd" font-size="14" x="450" y="118">Google publishes a</text>
+<text fill="#e9e6dd" font-size="14" x="450" y="138">Spark product update</text>
+<text fill="#34e7a0" font-size="19" font-weight="700" x="750" y="44">October 12</text>
+<text fill="#e9e6dd" font-size="14" x="750" y="118">Feature renamed Task</text>
+<text fill="#e9e6dd" font-size="14" x="750" y="138">in the Gemini app</text>
+</g>
+</svg>
+<figcaption style="font-size:0.85rem;color:var(--text-muted, #94a3b8);margin-top:0.6rem;">Figure 2. Spark's public timeline in 2026.</figcaption>
+</figure>
+    </article>
+
+    <article class="content-card" id="capabilities">
+      <h2>What Spark Can Do</h2>
+      <h3>Tasks, Schedules and Skills</h3>
+      <p>Google's help center organizes Spark around three building blocks. A Task is the job, described in plain language. A Schedule decides when the job runs. A Skill records how the job should be done.</p>
+      <figure style="margin:2rem 0;text-align:center;">
+<svg aria-label="Diagram of the three building blocks. A Schedule (when) and a Skill (how) both feed a Task (what), which produces an output such as a Doc, Sheet, email draft or itinerary." role="img" style="max-width:100%;height:auto;border:1px solid rgba(56,189,248,0.3);border-radius:14px;background:#000;" viewbox="0 0 900 330">
+<defs>
+<marker id="arr2" markerheight="8" markerwidth="8" orient="auto-start-reverse" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0 0L10 5L0 10z" fill="#ffc83d"></path></marker>
+</defs>
+<rect fill="#0b0b10" height="330" rx="10" width="900"></rect>
+<g text-anchor="middle">
+<rect fill="#2a0a1b" height="120" rx="14" stroke="#ff3d9a" stroke-width="2.5" width="240" x="30" y="24"></rect>
+<text fill="#ff3d9a" font-size="13" font-weight="800" letter-spacing="3" x="150" y="52">WHEN</text>
+<text fill="#fff" font-size="23" font-weight="700" x="150" y="80">Schedule</text>
+<text fill="#e9e6dd" font-size="14" x="150" y="104">Time-based trigger</text>
+<text fill="#e9e6dd" font-size="14" x="150" y="122">Gmail and topic monitors</text>
+<rect fill="#052a1d" height="120" rx="14" stroke="#34e7a0" stroke-width="2.5" width="240" x="30" y="186"></rect>
+<text fill="#34e7a0" font-size="13" font-weight="800" letter-spacing="3" x="150" y="214">HOW</text>
+<text fill="#fff" font-size="23" font-weight="700" x="150" y="242">Skill</text>
+<text fill="#e9e6dd" font-size="14" x="150" y="266">SKILL.md instructions</text>
+<text fill="#e9e6dd" font-size="14" x="150" y="284">Call with / or @</text>
+<rect fill="#06222a" height="150" rx="14" stroke="#22d3ee" stroke-width="3" width="220" x="360" y="90"></rect>
+<text fill="#22d3ee" font-size="13" font-weight="800" letter-spacing="3" x="470" y="124">WHAT</text>
+<text fill="#fff" font-size="26" font-weight="700" x="470" y="158">Task</text>
+<text fill="#e9e6dd" font-size="14" x="470" y="186">Plain-language job</text>
+<text fill="#e9e6dd" font-size="14" x="470" y="206">Runs on the cloud VM</text>
+<text fill="#e9e6dd" font-size="14" x="470" y="226">Stop it any time</text>
+<rect fill="#17120a" height="150" rx="14" stroke="#ffc83d" stroke-width="2.5" width="200" x="670" y="90"></rect>
+<text fill="#ffc83d" font-size="13" font-weight="800" letter-spacing="3" x="770" y="124">RESULT</text>
+<text fill="#fff" font-size="23" font-weight="700" x="770" y="158">Output</text>
+<text fill="#e9e6dd" font-size="14" x="770" y="186">Doc or Sheet</text>
+<text fill="#e9e6dd" font-size="14" x="770" y="206">Email draft</text>
+<text fill="#e9e6dd" font-size="14" x="770" y="226">Cart or itinerary</text>
+</g>
+<path d="M272 90 L356 140" fill="none" marker-end="url(#arr2)" stroke="#ffc83d" stroke-width="2.5"></path>
+<path d="M272 240 L356 190" fill="none" marker-end="url(#arr2)" stroke="#ffc83d" stroke-width="2.5"></path>
+<path d="M582 165 L666 165" fill="none" marker-end="url(#arr2)" stroke="#ffc83d" stroke-width="2.5"></path>
+</svg>
+<figcaption style="font-size:0.85rem;color:var(--text-muted, #94a3b8);margin-top:0.6rem;">Figure 3. Schedule and Skill shape the Task, and the Task produces the output.</figcaption>
+</figure>
+      <p>You can cancel a running task with the Stop button in the Gemini text box. If you are unsure where to begin, typing "set up," "get started" or "interview me" inside a task starts a guided conversation about your first skills and tasks. The <a class="gold-link" href="https://support.google.com/gemini/answer/17094507" rel="noopener" target="_blank">task management page</a> covers both.</p>
+      <p>Schedules are triggers. A time-based schedule fires at a set hour or interval. A Gmail monitor fires when a matching email arrives, and a topic monitor watches a subject you name. The <a class="gold-link" href="https://support.google.com/gemini/answer/17094710" rel="noopener" target="_blank">schedules guide</a> explains how to view, edit, pause and delete them, and you can keep up to 50 active at once.</p>
+      <p>Skills are reusable instruction sets stored as SKILL.md files. You call one by typing a slash or an at sign in the prompt. The <a class="gold-link" href="https://support.google.com/gemini/answer/17094296" rel="noopener" target="_blank">skills help page</a> describes how to create and manage them. A skill is where a repeatable method gets written down once.</p>
+      <h3>Connected Apps</h3>
+      <p>Spark is only as useful as the systems it can touch. The first group is Google's own: Gmail, Calendar, Docs, Sheets, Slides, Drive, Keep and Tasks. Photos and YouTube sit alongside them, as do Search, Finance, Flights, Hotels and Maps.</p>
+      <ul aria-label="Connected apps" class="chips">
+<li class="g">Gmail</li><li class="g">Calendar</li><li class="g">Docs</li><li class="g">Sheets</li><li class="g">Slides</li><li class="g">Drive</li><li class="g">Keep</li><li class="g">Tasks</li>
+<li class="m">Photos</li><li class="m">YouTube</li><li class="m">Search</li><li class="m">Finance</li><li class="m">Flights</li><li class="m">Hotels</li><li class="m">Maps</li>
+<li class="t">Canva</li><li class="t">Dropbox</li><li class="t">Instacart</li><li class="t">OpenTable</li><li class="t">Zillow Rentals</li>
+<li class="c">Custom MCP servers</li>
+</ul>
+      <p>Third-party connections include Canva, Dropbox, Instacart, OpenTable and Zillow Rentals. Custom MCP servers let you add your own tools. Connected-app support is currently limited to US English on the web.</p>
+      <h3>Two Browsers, Two Behaviors</h3>
+      <p>Spark can drive a browser, and the choice of browser matters. With local Chrome on your desktop, the task runs on your machine, so the device must stay awake. With the remote cloud browser, the task continues even when your device is closed.</p>
+      <p>The remote browser pauses at sign-in screens instead of guessing. You can watch with View live or step in with Take over, then hand control back. The table compares the two.</p>
+      <div class="tablewrap">
+<table>
+<thead><tr><th>Trait</th><th>Local Chrome</th><th>Remote cloud browser</th></tr></thead>
+<tbody>
+<tr><td>Where it runs</td><td>Your desktop</td><td>Google's cloud</td></tr>
+<tr><td>Device closed</td><td>Task stops; device must stay awake</td><td>Task continues</td></tr>
+<tr><td>Sign-in walls</td><td>Uses your own browser session</td><td>Pauses and waits for you</td></tr>
+<tr><td>Your oversight</td><td>Visible on your screen</td><td>View live or Take over</td></tr>
+</tbody>
+<caption>Table 1. Local Chrome compared with the remote cloud browser.</caption>
+</table>
 </div>
-</article>
-<!-- REVOLUTIONIZING THE GOOGLE ECOSYSTEM & SEVEN CORE FEATURES -->
-<article class="content-card">
-<h2>Eight Core Features Revolutionizing the Google Ecosystem</h2>
-<p>
-        Gemini Spark transforms the entire Google productivity suite from static productivity software into an interconnected, autonomous operating environment:
-      </p>
-<ol>
-<li><strong>24/7 Cloud-Based Background Execution:</strong> Tasks execute persistently on Google Cloud virtual infrastructure, completing complex multi-hour data extractions even when all user client devices are offline.</li>
-<li><strong>Deep Cross-Application Workspace Integration:</strong> Native API-level access allows Spark to read correspondence in Gmail, query spreadsheets in Sheets, inspect documents in Drive, and coordinate calendar entries without manual copy-pasting.</li>
-<li><strong>Proactive Autonomous Morning Briefs:</strong> Synthesizes high-priority email threads, impending deadline commitments, and meeting agendas into a concise, actionable morning executive briefing.</li>
-<li><strong>Workspace Studio Event Automation:</strong> Monitors designated Google Drive folders, parses incoming vendor invoices or reports, automatically extracts financial rows into Google Sheets, and drafts confirmation notices in Gmail.</li>
-<li><strong>Autonomous Multi-Party Meeting Coordination:</strong> Evaluates attendee timezones, checks calendar free/busy blocks, identifies optimal slots, issues calendar invites, and handles rescheduling requests automatically.</li>
-<li><strong>Model Context Protocol (MCP) &amp; Business Connectors:</strong> Extends beyond Google services by interfacing securely with third-party tools (such as Jira, Salesforce, GitHub, and custom SQL databases) via standardized MCP schemas.</li>
-<li><strong>Business Coworker Identities:</strong> Business agents can be assigned corporate email identities (e.g., <code>@agents.company.com</code>), enabling team members to delegate tasks by @mentioning them directly in chat threads.</li>
-<li><strong>Rigid Spend &amp; Security Boundaries:</strong> Strict administrative scoping ensures agents operate within predefined financial limits and policy guardrails, requiring human confirmation for high-risk irreversible actions.</li>
+      <h3>Local Files and Hard Limits</h3>
+      <p>On Mac, a dedicated app lets Spark work with local files inside a folder you explicitly permission. Starting a task remotely from your phone is listed as coming soon. Until then, plan on starting local-file tasks from the Mac itself.</p>
+      <p>Usage is capped. You get 15 concurrent tasks and 50 active schedules, plus compute-based usage limits that vary with how heavy each task is. Heavy browsing and large file work will use more of your allowance than a short summary.</p>
+      <div class="stat-box-container">
+<div class="stat-box"><b>15</b><span>concurrent tasks</span></div>
+<div class="stat-box"><b>50</b><span>active schedules</span></div>
+<div class="stat-box"><b>Metered</b><span>compute-based usage limits</span></div>
+</div>
+      <h3>Why It Matters for a Generative AI Professional</h3>
+      <p>You already build and evaluate agents, so Spark is useful on two levels. It is a tool that takes routine work off your plate. It is also a working example of a production agent, with scoped permissions, confirmation gates, scheduled triggers and reusable skills.</p>
+      <p>Watching how Google draws those boundaries teaches design lessons you can apply to client systems. Notice which actions need approval, how the task pauses instead of guessing at a login, and how a limit on concurrency keeps costs predictable. Those same decisions appear in every serious agent deployment.</p>
+      <p>The workflows that follow use that lens. Each one names its trigger, its apps, its output and its guardrail, so you can judge both the value and the risk before you build it.</p>
+    </article>
+
+    <article class="content-card" id="business">
+      <h2>Five Business Use Cases</h2>
+      <p>One constraint shapes this section. Spark runs only on personal Google Accounts, so these workflows suit independent consultants, founders and small teams more than employees on managed workspaces. If you work inside a company, check your employer's policy before connecting anything.</p>
+      <h3 class="uc-title" id="uc1"><span class="uc-badge">1</span> Weekly Engagement Risk Brief</h3>
+      <p>Every Monday, a scheduled task reviews your priority Gmail threads from the past seven days. It checks Calendar for upcoming meetings and deadlines, then reads updated files in a project folder. From that it identifies overdue items, open decisions and risks.</p>
+      <p>This pattern comes from a <a class="gold-link" href="https://www.aiagentslibrary.com/blog/gemini-spark-use-cases/" rel="noopener" target="_blank">published workflow</a> at AI Agents Library, and it fits a consultant running several client engagements. The output is a single brief in Docs that you read in a few minutes, instead of rebuilding context from three apps. Review it before acting, since a summary can misjudge which thread matters.</p>
+      <dl class="spec">
+<div><dt>Trigger</dt><dd>Weekly time-based schedule</dd></div>
+<div><dt>Apps</dt><dd>Gmail, Calendar, Drive, Docs</dd></div>
+<div><dt>Output</dt><dd>One-page brief with risks and open decisions</dd></div>
+<div><dt>Guardrail</dt><dd>Read-only; nothing is sent or changed</dd></div>
+</dl>
+      <h3 class="uc-title" id="uc2"><span class="uc-badge">2</span> Competitor and Pricing Watch</h3>
+      <p>Model providers revise pricing, limits and terms regularly. A task using the remote browser can visit a list of approved vendor pages, identify meaningful changes in positioning, pricing, features or messaging, and compare them with the previous report.</p>
+      <p>Run it weekly and keep each report in Drive so the next run has something to compare against. The remote browser keeps working while your laptop is shut. A similar <a class="gold-link" href="https://www.aiagentslibrary.com/blog/gemini-spark-use-cases/" rel="noopener" target="_blank">competitor monitoring example</a> is documented, and if a page demands a login, the task pauses and waits for you to take over.</p>
+      <dl class="spec">
+<div><dt>Trigger</dt><dd>Weekly time-based schedule</dd></div>
+<div><dt>Apps</dt><dd>Remote browser, Drive, Docs</dd></div>
+<div><dt>Output</dt><dd>Change report compared with last run</dd></div>
+<div><dt>Guardrail</dt><dd>Approved sites only; pause at sign-in</dd></div>
+</dl>
+      <h3 class="uc-title" id="uc3"><span class="uc-badge">3</span> Client Inbox Triage</h3>
+      <p>A Gmail monitor can start a task when a matching message arrives, such as an email from a client domain or a subject containing "proposal." Spark reads the thread, checks your calendar for open slots and drafts a reply with proposed times.</p>
+      <p>Spark asks for confirmation before it sends any message. That gate is what makes this safe enough to try. Treat the drafts as drafts, and keep confidential client material out of the thread, since Spark runs on a personal account.</p>
+      <dl class="spec">
+<div><dt>Trigger</dt><dd>Gmail monitor on matching mail</dd></div>
+<div><dt>Apps</dt><dd>Gmail, Calendar</dd></div>
+<div><dt>Output</dt><dd>Reply draft with suggested meeting times</dd></div>
+<div><dt>Guardrail</dt><dd>Confirmation required before sending</dd></div>
+</dl>
+      <h3 class="uc-title" id="uc4"><span class="uc-badge">4</span> Research Radar for Model Releases</h3>
+      <p>Your edge in generative AI depends on knowing what shipped this week. Set topic monitors for open-weight releases, evaluation benchmarks or a framework you depend on. Each run writes new findings to a Sheet with columns for source, date, claim and relevance, and a weekly digest goes into Docs.</p>
+      <p><a class="gold-link" href="https://www.datacamp.com/blog/gemini-spark" rel="noopener" target="_blank">DataCamp's overview</a> offers a second view of the product and how its recurring tasks are structured. Add a column for verification status, because agent summaries sometimes misread a source. Check the original before you repeat a claim to a client.</p>
+      <dl class="spec">
+<div><dt>Trigger</dt><dd>Topic monitors plus a weekly digest schedule</dd></div>
+<div><dt>Apps</dt><dd>Search, Sheets, Docs</dd></div>
+<div><dt>Output</dt><dd>Logged findings and a short digest</dd></div>
+<div><dt>Guardrail</dt><dd>Verification column; check primary sources</dd></div>
+</dl>
+      <h3 class="uc-title" id="uc5"><span class="uc-badge">5</span> Reusable Skills and Custom Tools</h3>
+      <p>This is where an engineer gets the most value. Write a SKILL.md for a method you repeat, such as a proposal structure, a prompt-evaluation report or a client onboarding checklist. Then call it with a slash or an at sign inside any task.</p>
+      <p>Custom MCP servers extend this further. Pointing Spark at a server you built lets a task call your own tools, such as an internal ticket search or an evaluation harness. This is the natural bridge between the consumer app and the engineering you already do.</p>
+      <p>When you outgrow the app, the Gemini API offers the <a class="gold-link" href="https://ai.google.dev/gemini-api/docs/antigravity-agent" rel="noopener" target="_blank">Antigravity managed agent</a>. It runs in a Linux sandbox with code execution, Google Search and URL context, accepts MCP servers and custom functions, and supports cron triggers. It reads AGENTS.md and .agents/skills/*/SKILL.md files, defaults to Gemini Flash, and is in pay-as-you-go preview.</p>
+      <p>The <a class="gold-link" href="https://ai.google.dev/gemini-api/docs/custom-agents" rel="noopener" target="_blank">custom agents documentation</a> explains how to define your own. The SKILL.md format is shared between the app and the API, so a skill drafted in the app is a reasonable starting point.</p>
+      <dl class="spec">
+<div><dt>Trigger</dt><dd>Slash or at-sign call; cron triggers in the API</dd></div>
+<div><dt>Apps</dt><dd>SKILL.md files, custom MCP servers</dd></div>
+<div><dt>Output</dt><dd>Repeatable, versioned methods</dd></div>
+<div><dt>Guardrail</dt><dd>Test skills on low-stakes tasks first</dd></div>
+</dl>
+    </article>
+
+    <article class="content-card" id="personal">
+      <h2>Five Personal Use Cases</h2>
+      <p>The same machinery works on your private life. Several of these workflows depend on US-only connected apps, and each section flags where that applies.</p>
+      <h3 class="uc-title" id="uc6"><span class="uc-badge personal">6</span> Conference Trip Planner</h3>
+      <p>Suppose you are flying from Chennai to a conference abroad. Spark can search Flights and Hotels, check distances on Maps and compare options against the sessions on your Calendar. It then assembles an itinerary in Docs.</p>
+      <p>The remote browser can work through booking sites, but a purchase triggers a confirmation request first. Approve the choice yourself and enter payment details yourself. Never paste card numbers or passwords into the task thread.</p>
+      <dl class="spec">
+<div><dt>Trigger</dt><dd>One-off task from the Gemini app</dd></div>
+<div><dt>Apps</dt><dd>Flights, Hotels, Maps, Calendar, Docs</dd></div>
+<div><dt>Output</dt><dd>Itinerary with options and costs</dd></div>
+<div><dt>Guardrail</dt><dd>Confirmation on purchases; you handle payment</dd></div>
+</dl>
+      <h3 class="uc-title" id="uc7"><span class="uc-badge personal">7</span> Meal Plan to Grocery Cart</h3>
+      <p>Keep a note in Keep with your weekly meals and dietary rules. A scheduled Friday task reads it, builds an Instacart cart and stops before checkout. A second task can look for a table through OpenTable for a weekend dinner.</p>
+      <p>Both connections are US-focused, so readers elsewhere may only get the planning half. The pattern still holds: Spark prepares, and you approve. The confirmation step on purchases is part of the design, not an obstacle.</p>
+      <dl class="spec">
+<div><dt>Trigger</dt><dd>Weekly time-based schedule</dd></div>
+<div><dt>Apps</dt><dd>Keep, Instacart, OpenTable</dd></div>
+<div><dt>Output</dt><dd>Filled cart and a reservation proposal</dd></div>
+<div><dt>Guardrail</dt><dd>Stops before checkout and booking</dd></div>
+</dl>
+      <h3 class="uc-title" id="uc8"><span class="uc-badge personal">8</span> Local File Librarian</h3>
+      <p>Research PDFs, screenshots and exports pile up in a Downloads folder. Grant the Mac app one folder and ask Spark to sort files by topic, rename them with a consistent pattern and write an index to a Sheet. Because access is limited to the folder you permission, the damage a mistake can do stays inside that folder.</p>
+      <p>Start with a copy of the folder. Ask for a proposed plan first, read it, then approve the moves. Deletion deserves special caution, so tell the task not to delete anything.</p>
+      <dl class="spec">
+<div><dt>Trigger</dt><dd>One-off task started on the Mac</dd></div>
+<div><dt>Apps</dt><dd>Mac app, permissioned folder, Sheets</dd></div>
+<div><dt>Output</dt><dd>Sorted folder and a file index</dd></div>
+<div><dt>Guardrail</dt><dd>Work on a copy; no deletions</dd></div>
+</dl>
+      <h3 class="uc-title" id="uc9"><span class="uc-badge personal">9</span> Daily Learning Digest</h3>
+      <p>Generative AI moves quickly, and the reading list never ends. A topic monitor can watch YouTube and the web for a subject such as agent evaluation, and send you a short digest each morning. Spark can then save notes to Keep and create follow-up items in Google Tasks.</p>
+      <p>Be careful with Google Tasks. <a class="gold-link" href="https://support.google.com/gemini/answer/17094507" rel="noopener" target="_blank">Google notes</a> that bulk actions there can run without a confirmation step. Ask for a short list of items and review them, rather than letting a task rewrite your whole list.</p>
+      <dl class="spec">
+<div><dt>Trigger</dt><dd>Topic monitor plus a morning schedule</dd></div>
+<div><dt>Apps</dt><dd>YouTube, Search, Keep, Tasks</dd></div>
+<div><dt>Output</dt><dd>Short digest and a few follow-up items</dd></div>
+<div><dt>Guardrail</dt><dd>Cap the number of Tasks it may create</dd></div>
+</dl>
+      <h3 class="uc-title" id="uc10"><span class="uc-badge personal">10</span> Market and Rental Watch</h3>
+      <p>Use Finance for a watchlist and Zillow Rentals for a housing search. A topic monitor gathers price moves and new listings into one Sheet, with a short note on what changed. Zillow Rentals is a US service, so this half applies only if you search there.</p>
+      <p>Spark gathers and organizes, and you decide. This is not financial advice, and Spark does not replace a qualified advisor. Any financial transaction triggers a confirmation, and the final call stays with you.</p>
+      <dl class="spec">
+<div><dt>Trigger</dt><dd>Topic monitor plus a daily or weekly schedule</dd></div>
+<div><dt>Apps</dt><dd>Finance, Zillow Rentals, Sheets</dd></div>
+<div><dt>Output</dt><dd>One Sheet with changes and notes</dd></div>
+<div><dt>Guardrail</dt><dd>Information only; no transactions</dd></div>
+</dl>
+      <figure style="margin:2rem 0;text-align:center;">
+<svg aria-label="Map of the ten use cases around Spark. Business: weekly risk brief, competitor and pricing watch, client inbox triage, research radar, reusable skills and MCP. Personal: conference trip planner, meal plan to cart, local file librarian, daily learning digest, market and rental watch." role="img" style="max-width:100%;height:auto;border:1px solid rgba(56,189,248,0.3);border-radius:14px;background:#000;" viewbox="0 0 900 560">
+<rect fill="#0b0b10" height="560" rx="10" width="900"></rect>
+<text fill="#22d3ee" font-size="14" font-weight="800" letter-spacing="3" text-anchor="middle" x="150" y="30">BUSINESS</text>
+<text fill="#ff3d9a" font-size="14" font-weight="800" letter-spacing="3" text-anchor="middle" x="750" y="30">PERSONAL</text>
+<g fill="none" stroke-width="2">
+<path d="M282 80 L388 258" stroke="#22d3ee"></path><path d="M282 180 L388 268" stroke="#22d3ee"></path><path d="M282 280 L388 280" stroke="#22d3ee"></path><path d="M282 380 L388 292" stroke="#22d3ee"></path><path d="M282 480 L388 302" stroke="#22d3ee"></path>
+<path d="M618 80 L512 258" stroke="#ff3d9a"></path><path d="M618 180 L512 268" stroke="#ff3d9a"></path><path d="M618 280 L512 280" stroke="#ff3d9a"></path><path d="M618 380 L512 292" stroke="#ff3d9a"></path><path d="M618 480 L512 302" stroke="#ff3d9a"></path>
+</g>
+<circle cx="450" cy="280" fill="#17120a" r="68" stroke="#ffc83d" stroke-width="3.5"></circle>
+<text fill="#ffc83d" font-size="26" font-weight="800" text-anchor="middle" x="450" y="276">SPARK</text>
+<text fill="#a9a69c" font-size="13" text-anchor="middle" x="450" y="300">24/7 agent</text>
+<g text-anchor="middle">
+<g fill="#06222a" stroke="#22d3ee" stroke-width="2">
+<rect height="68" rx="12" width="262" x="20" y="46"></rect><rect height="68" rx="12" width="262" x="20" y="146"></rect><rect height="68" rx="12" width="262" x="20" y="246"></rect><rect height="68" rx="12" width="262" x="20" y="346"></rect><rect height="68" rx="12" width="262" x="20" y="446"></rect>
+</g>
+<g fill="#fff" font-size="16" font-weight="700">
+<text x="151" y="75">1 Weekly risk brief</text><text x="151" y="175">2 Competitor and pricing watch</text><text x="151" y="275">3 Client inbox triage</text><text x="151" y="375">4 Research radar</text><text x="151" y="475">5 Reusable skills and MCP</text>
+</g>
+<g fill="#22d3ee" font-size="13">
+<text x="151" y="97">Gmail, Calendar, Drive</text><text x="151" y="197">Remote browser, Drive</text><text x="151" y="297">Gmail monitor, Calendar</text><text x="151" y="397">Topic monitors, Sheets</text><text x="151" y="497">SKILL.md, custom MCP</text>
+</g>
+<g fill="#2a0a1b" stroke="#ff3d9a" stroke-width="2">
+<rect height="68" rx="12" width="262" x="618" y="46"></rect><rect height="68" rx="12" width="262" x="618" y="146"></rect><rect height="68" rx="12" width="262" x="618" y="246"></rect><rect height="68" rx="12" width="262" x="618" y="346"></rect><rect height="68" rx="12" width="262" x="618" y="446"></rect>
+</g>
+<g fill="#fff" font-size="16" font-weight="700">
+<text x="749" y="75">6 Conference trip planner</text><text x="749" y="175">7 Meal plan to cart</text><text x="749" y="275">8 Local file librarian</text><text x="749" y="375">9 Daily learning digest</text><text x="749" y="475">10 Market and rental watch</text>
+</g>
+<g fill="#ff3d9a" font-size="13">
+<text x="749" y="97">Flights, Hotels, Maps</text><text x="749" y="197">Keep, Instacart, OpenTable</text><text x="749" y="297">Mac app, permissioned folder</text><text x="749" y="397">YouTube, Keep, Tasks</text><text x="749" y="497">Finance, Zillow Rentals</text>
+</g>
+</g>
+</svg>
+<figcaption style="font-size:0.85rem;color:var(--text-muted, #94a3b8);margin-top:0.6rem;">Figure 4. The ten use cases and the apps each one touches.</figcaption>
+</figure>
+    </article>
+
+    <article class="content-card" id="guardrails">
+      <h2>Guardrails and Limits</h2>
+      <p>Spark is built to pause before consequential steps. Google says it asks for confirmation before sending messages, modifying or deleting data, making purchases, handling financial transactions and submitting forms. It also runs sensitive-information checks, and a Take control mode lets you step in.</p>
+      <figure style="margin:2rem 0;text-align:center;">
+<svg aria-label="Guardrail flow. Spark plans the next step. If the step is sensitive, it pauses and asks you to confirm before running it. If not, it runs directly. If a sign-in wall appears, the task pauses and you use Take over." role="img" style="max-width:100%;height:auto;border:1px solid rgba(56,189,248,0.3);border-radius:14px;background:#000;" viewbox="0 0 900 330">
+<defs>
+<marker id="arr5" markerheight="8" markerwidth="8" orient="auto-start-reverse" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0 0L10 5L0 10z" fill="#ffc83d"></path></marker>
+</defs>
+<rect fill="#0b0b10" height="330" rx="10" width="900"></rect>
+<g text-anchor="middle">
+<rect fill="#06222a" height="70" rx="12" stroke="#22d3ee" stroke-width="2.5" width="150" x="24" y="110"></rect>
+<text fill="#22d3ee" font-size="16" font-weight="700" x="99" y="141">Plan the</text><text fill="#22d3ee" font-size="16" font-weight="700" x="99" y="162">next step</text>
+<path d="M290 78 L376 145 L290 212 L204 145 Z" fill="#17120a" stroke="#ffc83d" stroke-width="2.5"></path>
+<text fill="#ffc83d" font-size="15" font-weight="700" x="290" y="141">Sensitive</text><text fill="#ffc83d" font-size="15" font-weight="700" x="290" y="160">action?</text>
+<rect fill="#2a0a1b" height="76" rx="12" stroke="#ff3d9a" stroke-width="2.5" width="200" x="410" y="196"></rect>
+<text fill="#ff3d9a" font-size="16" font-weight="700" x="510" y="227">Pause and ask</text><text fill="#ff3d9a" font-size="16" font-weight="700" x="510" y="248">you to confirm</text>
+<rect fill="#052a1d" height="150" rx="12" stroke="#34e7a0" stroke-width="2.5" width="172" x="704" y="100"></rect>
+<text fill="#34e7a0" font-size="18" font-weight="700" x="790" y="148">Run the step</text>
+<text fill="#e9e6dd" font-size="13" x="790" y="176">Send, buy, edit,</text><text fill="#e9e6dd" font-size="13" x="790" y="194">delete or submit</text>
+<rect fill="#2a1704" height="76" rx="12" stroke="#ff9f43" stroke-width="2.5" width="172" x="24" y="226"></rect>
+<text fill="#ff9f43" font-size="15" font-weight="700" x="110" y="256">Sign-in wall?</text><text fill="#ff9f43" font-size="14" x="110" y="278">Task pauses. You Take over.</text>
+</g>
+<path d="M176 145 L202 145" fill="none" marker-end="url(#arr5)" stroke="#ffc83d" stroke-width="2.5"></path>
+<path d="M378 145 L700 145" fill="none" marker-end="url(#arr5)" stroke="#ffc83d" stroke-width="2.5"></path>
+<text fill="#ffc83d" font-size="14" font-weight="700" text-anchor="middle" x="540" y="136">No</text>
+<path d="M290 214 L290 234 L406 234" fill="none" marker-end="url(#arr5)" stroke="#ffc83d" stroke-width="2.5"></path>
+<text fill="#ffc83d" font-size="14" font-weight="700" x="318" y="230">Yes</text>
+<path d="M612 234 L700 234" fill="none" marker-end="url(#arr5)" stroke="#ffc83d" stroke-width="2.5"></path>
+<text fill="#34e7a0" font-size="13" font-weight="700" text-anchor="middle" x="656" y="224">Approve</text>
+<text fill="#a9a69c" font-size="13" text-anchor="middle" x="450" y="312">Never type credentials into the task thread.</text>
+</svg>
+<figcaption style="font-size:0.85rem;color:var(--text-muted, #94a3b8);margin-top:0.6rem;">Figure 5. How Spark gates sensitive actions and sign-in screens.</figcaption>
+</figure>
+      <p>Risks remain. Web pages and emails can carry hidden instructions meant to hijack an agent, a problem known as prompt injection. Do not type credentials into the task thread, and avoid scheduling tasks that handle sensitive material. Google Tasks bulk actions are the one gap noted earlier.</p>
+      <p>Coverage of Spark also contains errors. Some secondary articles describe it as Ultra-only or place its launch in mid-2025, which conflicts with Google's own pages. When details matter, favor <a class="gold-link" href="https://support.google.com/gemini/answer/17094507" rel="noopener" target="_blank">Google's help center</a> and the company's blog posts.</p>
+      <p>Keep a simple audit habit. After each scheduled run, skim the output for anything surprising, and check that the task touched only the apps you expected. If a task drifts from its purpose, pause the schedule and tighten the instructions before it runs again.</p>
+      <div class="spark-callout">
+<p>A practical sequence helps. Start with read-only tasks that summarize and report. Add drafting next, then add actions that need approval. Review the first several runs of any schedule before trusting it unattended.</p>
+</div>
+    </article>
+
+    <article class="content-card" id="start">
+      <h2>Getting Started</h2>
+      <p>Getting from zero to a working schedule takes four moves. The steps below follow the order that keeps risk lowest. An independent <a class="gold-link" href="https://insidea.com/blog/ai/how-to-use-gemini-spark" rel="noopener" target="_blank">how-to guide from InsideA</a> offers a second walkthrough.</p>
+      <ol class="steps">
+<li><strong>Check eligibility.</strong> Use a personal Google Account, an AI Pro or Ultra plan, and switch on Keep Activity and Personal Intelligence.</li>
+<li><strong>Run the guided setup.</strong> Type "interview me" in a task and answer the questions about your work and routines.</li>
+<li><strong>Begin read-only.</strong> Start with the weekly brief or the research radar, where Spark reads and reports but changes nothing.</li>
+<li><strong>Add a schedule, then a skill.</strong> Once a run looks right, attach a schedule, then record the method as a SKILL.md you can reuse.</li>
 </ol>
-</article>
-<!-- SAMPLE USE CASES & DIAGRAM 2 -->
-<article class="content-card">
-<h2>Real-World Business Use Cases</h2>
-<p>
-        Organizations leverage Gemini Spark to eliminate repetitive administrative overhead and accelerate cross-functional execution:
+    </article>
+
+    <article class="content-card" id="conclusion">
+      <h2>Conclusion</h2>
+      <p>Spark moves a generative AI professional from asking an assistant to delegating to one. Its building blocks are simple: Tasks, Schedules and Skills, backed by connected apps, two browsers and a cloud machine that stays on. The ten workflows above show how far those pieces stretch.</p>
+      <p>The best first step is small. Pick one read-only task, such as the weekly risk brief or the research radar, and run it for two weeks. Write the method you settle on into a skill.</p>
+      <p>The limits matter as much as the capabilities. Personal accounts only, regional gaps, usage caps and prompt injection all argue for supervision. Used with that discipline, Spark can take over a good share of the routine work that eats a consultant's week.</p>
+      <p>There is also a professional lesson here. Clients will soon ask what an always-on agent can safely do for their teams. Having run these workflows yourself, with their gates and caps in view, you can answer with evidence rather than slides.</p>
+    </article>
+
+    <article class="content-card" id="pricing-parity">
+      <h2>Practice Pricing &amp; Global Purchasing Power Parity</h2>
+      <p>
+        I provide live, remote engineering training and advisory consulting covering Gemini Spark autonomous agent workflows, Google Workspace integration, 24/7 background scheduled tasks, custom skills development, and enterprise agent architecture. Engagements enable research organizations, academic departments, enterprises, and individual professionals to master production multimodal systems, source-grounded creative engines, and automated generative workflows.
       </p>
-<div class="diagram-container">
-<div class="mermaid-fallback">
-<em>Interactive architecture diagram (loading...)</em>
-</div>
-<div class="mermaid">
-sequenceDiagram
-    autonumber
-    actor Team as Human Project Team
-    participant Spark as Gemini Spark (@agents.company.com)
-    participant Drive as Google Drive Folder
-    participant Sheets as Google Sheets Ledger
-    participant Gmail as External Vendor Email
-    
-    Team-&gt;&gt;Spark: @mention "Reconcile Q4 Logistics Invoices"
-    Spark-&gt;&gt;Drive: Scan Uploaded PDF Invoices
-    Spark-&gt;&gt;Sheets: Extract Line Items &amp; Verify PO Numbers
-    Spark--&gt;&gt;Sheets: Append Reconciled Ledger Rows
-    Spark-&gt;&gt;Gmail: Flag Discrepancy &amp; Draft Vendor Inquiry
-    Spark--&gt;&gt;Team: Post Summary Report &amp; Await Signature Approval
+      <p>
+        All services are governed by our transparent 195-country Purchasing Power Parity (PPP) framework, scaling rates fairly across six economic tiers:
+      </p>
+      <div class="pricing-summary-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;margin:1.5rem 0;">
+        <div class="package-card" style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:12px;padding:1.5rem;">
+          <h3 style="color:var(--gold);margin-top:0;">Business AI Training Flagship</h3>
+          <p style="color:var(--text-muted);font-size:0.9rem;">Comprehensive organizational workforce and engineering transformation.</p>
+          <div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">$2,500 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
+          <ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+            <li>60 days total calendar duration: 30 days live engineering training + 30 days dedicated support.</li>
+            <li>Includes up to 10 participants, with additional seats at $250 USD per seat up to a maximum of 20 seats.</li>
+            <li>4 hours daily live instruction, Monday through Friday (Saturdays and Sundays holidays). Remote worldwide.</li>
+            <li>Zero advance deposit ($0 upfront); 20% due in 5 milestone installments after completed progress.</li>
+            <li>Walk away owing nothing if not satisfied after the first milestone training phase.</li>
+            <li>High-quality training materials, guides, and custom code transferred under Apache 2.0 license (commercial use, resale, and relicensing permitted with attribution).</li>
+          </ul>
         </div>
-<div class="diagram-caption">Figure 2: Autonomous Invoice Reconciliation &amp; Vendor Communications Workflow</div>
-</div>
-<h3>High-Impact Operational Workflows:</h3>
-<ul>
-<li><strong>Autonomous Vendor Contract Auditing:</strong> Watches incoming procurement folders, parses contract terms against master service agreements, logs deviations into Google Sheets, and notifies legal counsel.</li>
-<li><strong>Executive Travel &amp; Crisis Rescheduling:</strong> When a flight cancellation notification lands in Gmail, Spark automatically searches for alternative flights, reschedules conflicting client meetings in Calendar, and notifies attendees.</li>
-<li><strong>Daily Cross-Departmental Status Synthesis:</strong> Pulls commit logs from GitHub, tickets from Jira via MCP, and daily standup messages from Google Chat to compile unified executive progress memos.</li>
-</ul>
-</article>
-<!-- VERIFIED REFERENCES -->
-<article class="content-card">
-<h2>Verified References &amp; Authoritative Documentation</h2>
-<ul>
-<li><a class="ref-link" href="https://workspace.google.com/solutions/ai/" rel="noopener" target="_blank">Google Workspace: Gemini Enterprise &amp; Agent Solutions</a></li>
-<li><a class="ref-link" href="https://blog.google/products/workspace/" rel="noopener" target="_blank">Google Workspace Official Updates: Tasks &amp; Background Agents</a></li>
-<li><a class="ref-link" href="https://modelcontextprotocol.io/" rel="noopener" target="_blank">Model Context Protocol (MCP) Open Standard Documentation</a></li>
-<li><a class="ref-link" href="https://cloud.google.com/products/agent-builder" rel="noopener" target="_blank">Google Cloud Vertex AI Agent Builder</a></li>
-</ul>
-</article>
-<!-- RELEVANT CALL TO ACTION -->
-<section class="cta-banner">
-<h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Deploy Autonomous Agents with Gemini Spark</h2>
-<p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
-        Automate complex business workflows, cross-app Workspace orchestration, and 24/7 background agent architectures across your business.
+        <div class="package-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
+          <h3 style="color:var(--cyan);margin-top:0;">Personal AI Training Flagship</h3>
+          <p style="color:var(--text-muted);font-size:0.9rem;">Dedicated 1-on-1 private acceleration for solo founders, builders, and senior engineers.</p>
+          <div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">$2,500 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
+          <ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+            <li>60 days total calendar duration: 30 days live 1-on-1 training + 30 days dedicated support.</li>
+            <li>Strictly 1 person only (dedicated private acceleration).</li>
+            <li>4 hours daily hands-on implementation, Monday through Friday (Saturdays and Sundays holidays). Remote worldwide.</li>
+            <li>Zero advance deposit ($0 upfront); 20% due in 5 milestone installments after completed progress.</li>
+            <li>Walk away owing nothing if not satisfied after the first milestone training phase.</li>
+            <li>Comprehensive training curriculum and materials licensed under Apache 2.0 (commercial use, resale, and relicensing permitted with attribution).</li>
+          </ul>
+        </div>
+      </div>
+      <h3>Individual Service Picks (Pick &amp; Choose)</h3>
+      <p>
+        Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
       </p>
-<div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
-<a class="btn btn-primary" href="../contact.html">Schedule Agentic Systems Consultation →</a>
-<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
-<a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
-</div>
-</section>
-</main>
+      <ul style="line-height:1.8;">
+        <li><strong>Business Individual Pick:</strong> <strong>$250 USD</strong> base for 1 seat, with additional seats at $250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
+        <li><strong>Personal Individual Pick:</strong> <strong>$250 USD</strong> strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
+      </ul>
+      <h3>Payment Structure &amp; Trust Guarantees</h3>
+      <p>
+        Every client engagement is safeguarded by strict trust guarantees:
+      </p>
+      <ul style="line-height:1.7;">
+        <li><strong>Zero Upfront Payment:</strong> Strictly $0 advance deposit required. We never invoice before delivering actual value.</li>
+        <li><strong>20% in Five Installments:</strong> Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.</li>
+        <li><strong>Walkaway Guarantee:</strong> If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.</li>
+        <li><strong>Commercial Apache 2.0 License:</strong> All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.</li>
+        <li><strong>Full Pricing Details:</strong> Learn more about country tier multipliers, currency choices, and customized curriculum on our <a class="gold-link" href="../pricing.html">Pricing Page</a>.</li>
+      </ul>
+      <h3>The Six Purchasing Power Parity (PPP) Tiers</h3>
+      <p>
+        To ensure fair global access across all 195 countries, fees are adjusted by national economic indicators in accordance with our Purchasing Power Parity framework:
+      </p>
+      <table class="parity-table" style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.9rem;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border-gold);text-align:left;">
+            <th style="padding:0.75rem;">Tier</th>
+            <th style="padding:0.75rem;">Economic Category</th>
+            <th style="padding:0.75rem;">Representative Countries</th>
+            <th style="padding:0.75rem;">Parity Multiplier</th>
+            <th style="padding:0.75rem;">Business Flagship</th>
+            <th style="padding:0.75rem;">Personal Flagship</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Tier 1</strong></td>
+            <td>High-Income Baseline</td>
+            <td>United States, UK, Germany, Canada, Japan, Singapore, Australia</td>
+            <td>1.00X</td>
+            <td>$2,500 USD</td>
+            <td>$2,500 USD</td>
+          </tr>
+          <tr>
+            <td><strong>Tier 2</strong></td>
+            <td>Upper-Middle Economies</td>
+            <td>Brazil, Mexico, Malaysia, Turkiye, Thailand, Philippines, Sri Lanka</td>
+            <td>0.75X</td>
+            <td>$1,875 USD</td>
+            <td>$1,875 USD</td>
+          </tr>
+          <tr>
+            <td><strong>Tier 3</strong></td>
+            <td>Lower-Middle &amp; Low-Income</td>
+            <td>India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam</td>
+            <td>0.50X</td>
+            <td>$1,250 USD</td>
+            <td>$1,250 USD</td>
+          </tr>
+          <tr>
+            <td><strong>Tier 4</strong></td>
+            <td>Early-Stage Startups</td>
+            <td>Global tech startups with &lt;$1M external funding</td>
+            <td>0.50X</td>
+            <td>$1,250 USD</td>
+            <td>$1,250 USD</td>
+          </tr>
+          <tr>
+            <td><strong>Tier 5</strong></td>
+            <td>Academia &amp; Non-Profits</td>
+            <td>Universities, accredited labs, registered charities &amp; 501(c)(3) entities</td>
+            <td>0.25X</td>
+            <td>$625 USD</td>
+            <td>$625 USD</td>
+          </tr>
+          <tr>
+            <td><strong>Tier 6</strong></td>
+            <td>Subsidized Relief</td>
+            <td>Crisis-affected regions, developing collectives &amp; grassroots builders</td>
+            <td>Custom</td>
+            <td>Subsidized</td>
+            <td>$250 USD</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article class="content-card" id="references">
+      <h2>References</h2>
+      <p class="verified">All links below were opened and checked on November 4, 2026.</p>
+      <ul class="spark-refs">
+<li><a class="gold-link" href="https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/" rel="noopener" target="_blank">Next evolution of Gemini</a> <span>- Google blog. The I/O announcement of Spark and the agentic Gemini app.</span></li>
+<li><a class="gold-link" href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/" rel="noopener" target="_blank">Gemini Spark June update</a> <span>- Google blog. Product update published June 30, 2026.</span></li>
+<li><a class="gold-link" href="https://support.google.com/gemini/answer/17094507" rel="noopener" target="_blank">Manage tasks and workflows</a> <span>- Gemini Apps Help. Tasks, stopping a task, guided setup and safety notes.</span></li>
+<li><a class="gold-link" href="https://support.google.com/gemini/answer/17094710" rel="noopener" target="_blank">Create and manage schedules</a> <span>- Gemini Apps Help. Time-based, Gmail and topic triggers.</span></li>
+<li><a class="gold-link" href="https://support.google.com/gemini/answer/17094296" rel="noopener" target="_blank">Create and manage skills</a> <span>- Gemini Apps Help. SKILL.md files and invoking skills.</span></li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/antigravity-agent" rel="noopener" target="_blank">Antigravity managed agent</a> <span>- Gemini API docs. Sandbox, tools, MCP, cron triggers and preview pricing.</span></li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/custom-agents" rel="noopener" target="_blank">Custom agents guide</a> <span>- Gemini API docs. Defining your own agents.</span></li>
+<li><a class="gold-link" href="https://9to5google.com/2026/10/12/gemini-spark-task-redesign/" rel="noopener" target="_blank">Spark becomes Task</a> <span>- 9to5Google. Report on the October 2026 rename and redesign.</span></li>
+<li><a class="gold-link" href="https://www.datacamp.com/blog/gemini-spark" rel="noopener" target="_blank">DataCamp Spark overview</a> <span>- DataCamp. Independent explainer on how Spark works.</span></li>
+<li><a class="gold-link" href="https://www.aiagentslibrary.com/blog/gemini-spark-use-cases/" rel="noopener" target="_blank">Spark use case library</a> <span>- AI Agents Library. Weekly brief and competitor monitoring workflows.</span></li>
+<li><a class="gold-link" href="https://insidea.com/blog/ai/how-to-use-gemini-spark" rel="noopener" target="_blank">How to use Spark</a> <span>- InsideA. Independent how-to walkthrough.</span></li>
+<li><a class="gold-link" href="https://techcabal.com/?p=192551" rel="noopener" target="_blank">TechCabal Spark coverage</a> <span>- TechCabal. Regional availability reporting.</span></li>
+</ul>
+    </article>
+
+
+    <section class="cta-banner">
+      <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Build Autonomous Agent Pipelines with Gemini Spark</h2>
+      <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
+        Deploy 24/7 background agent workflows, automated Google Workspace triage, model radar trackers, and production Antigravity agent harnesses.
+      </p>
+      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+        <a class="btn btn-primary" href="../contact.html">Schedule Spark Architecture Session →</a>
+        <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank" style="text-decoration:none !important;">Free LinkedIn Consultation ↗</a>
+        <a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
+      </div>
+    </section>
+  </main>
     <!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">

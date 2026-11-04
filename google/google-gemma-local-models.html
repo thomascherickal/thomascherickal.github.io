@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Google Gemma Local Models: A Practical Guide | Thomas Cherickal</title>
+<meta content="A practical guide to Google's Gemma open-weight small language models: the current lineup, hardware needs, inference tools, the Hugging Face ecosystem, benchmarks against peers, and the Gemmaverse." name="description"/>
+<meta content="Thomas Cherickal" name="author"/>
+<link href="https://thedigitalfuturist.com/google/google-gemma-local-models.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="article" property="og:type"/>
+<meta content="https://thedigitalfuturist.com/google/google-gemma-local-models.html" property="og:url"/>
+<meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
+<meta content="Google Gemma Local Models: A Practical Guide | Thomas Cherickal" property="og:title"/>
+<meta content="A practical guide to Google's Gemma open-weight small language models: the current lineup, hardware needs, inference tools, the Hugging Face ecosystem, benchmarks against peers, and the Gemmaverse." property="og:description"/>
+<meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
+<meta content="en_US" property="og:locale"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@thomazcherickal" name="twitter:site"/>
+<meta content="Google Gemma Local Models: A Practical Guide | Thomas Cherickal" name="twitter:title"/>
+<meta content="A practical guide to Google's Gemma open-weight small language models: the current lineup, hardware needs, inference tools, the Hugging Face ecosystem, benchmarks against peers, and the Gemmaverse." name="twitter:description"/>
+<meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
+<!-- Favicons -->
+<link href="../assets/favicon.ico" rel="icon" sizes="any"/>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../site.webmanifest" rel="manifest"/>
+<meta content="#020408" name="theme-color"/>
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link href="../css/styles.css" rel="stylesheet"/>
+<link href="../css/background.css" rel="stylesheet"/>
+<link href="../css/buttons.css" rel="stylesheet"/>
+<link href="../css/navbar.css" rel="stylesheet"/>
+<link href="../css/footer.css" rel="stylesheet"/>
+<link href="../css/cta.css" rel="stylesheet"/>
+<link href="../css/article.css" rel="stylesheet"/>
+<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "TechArticle",
+        "Article"
+      ],
+      "@id": "https://thedigitalfuturist.com/google/google-gemma-local-models.html#article",
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://thedigitalfuturist.com/google/google-gemma-local-models.html",
+        "url": "https://thedigitalfuturist.com/google/google-gemma-local-models.html",
+        "name": "Google Gemma Local Models: A Practical Guide | Thomas Cherickal"
+      },
+      "headline": "Google Gemma Local Models: A Practical Guide",
+      "description": "A practical guide to Google's Gemma open-weight small language models: the current lineup, hardware needs, inference tools, the Hugging Face ecosystem, benchmarks against peers, and the Gemmaverse.",
+      "image": [
+        "https://thedigitalfuturist.com/assets/og-card.png"
+      ],
+      "datePublished": "2026-11-04T00:00:00+05:30",
+      "dateModified": "2026-11-04T00:00:00+05:30",
+      "inLanguage": "en-US",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://thedigitalfuturist.com/google/google-gemma-local-models.html"
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://thedigitalfuturist.com/#person",
+        "name": "Thomas Cherickal",
+        "jobTitle": "Generative AI Consultant and The Digital Futurist",
+        "url": "https://thedigitalfuturist.com",
+        "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
+        "sameAs": [
+          "https://linkedin.com/in/thomascherickal",
+          "https://github.com/thomascherickal",
+          "https://x.com/thomazcherickal"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://thedigitalfuturist.com/#organization",
+        "name": "The Digital Futurist",
+        "url": "https://thedigitalfuturist.com",
+        "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://thedigitalfuturist.com/assets/digital-futurist-logo.jpg",
+          "width": 256,
+          "height": 256
+        }
+      },
+      "articleSection": "Generative AI",
+      "keywords": [
+        "Google Gemma",
+        "Small Language Models",
+        "SLMs",
+        "Local LLMs",
+        "Ollama",
+        "LM Studio",
+        "llama.cpp",
+        "Hugging Face",
+        "Open-Weight Models",
+        "Apache 2.0",
+        "Gemmaverse",
+        "Sovereign AI"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thedigitalfuturist.com/google/google-gemma-local-models.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thedigitalfuturist.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Gemini",
+          "item": "https://thedigitalfuturist.com/google/google-gemini-101.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Google Gemma Local Models",
+          "item": "https://thedigitalfuturist.com/google/google-gemma-local-models.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link href="../css/responsive.css" rel="stylesheet"/>
+</head>
+<body>
+  <!-- START:HEADER -->
+  <nav aria-label="Main navigation">
+    <a href="../index.html" class="nav-brand"><img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo"
+        class="nav-brand-logo" width="20" height="20">Thomas Cherickal</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <div class="nav-right-container">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle Navigation Menu">
+        <span></span>
+      </label>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html" data-nav="index.html">Home</a></li>
+      <li><a href="../expertise.html" data-nav="expertise.html">Expertise</a></li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          <b>Business-Services</b> <span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="../all-business-services.html">All Business Services</a></li>
+          <li><a href="../business-ai-training.html">Business AI Training Overview</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="../business-services/business-service-generative-ai-transformation.html">Generative AI
+              Transformation</a></li>
+          <li><a href="../business-services/business-service-local-llms-cost-slashing.html">Local LLMs &amp; Cost
+              Slashing</a></li>
+          <li><a href="../business-services/business-service-ai-agents-orchestration.html">Claude Agent Orchestration</a>
+          </li>
+          <li><a href="../business-services/business-service-agentic-ai-systems.html">Agentic Assistants Training</a></li>
+          <li><a href="../business-services/business-service-workflow-automations.html">Workflow Automations</a></li>
+          <li><a href="../business-services/business-service-ai-budget-cost-limits-training.html">AI Budget &amp; Cost
+              Control Training</a></li>
+          <li><a href="../business-services/business-service-ai-developer-training.html">AI Developer Training</a></li>
+          <li><a href="../business-services/business-service-advanced-ai-agents.html">Advanced AI Agents</a></li>
+          <li><a href="../business-services/business-service-claude-advanced-training.html">Claude Advanced Training</a>
+          </li>
+          <li><a href="../business-services/business-service-gemini-advanced-training.html">Gemini Advanced Training</a>
+          </li>
+          <li><a href="../business-services/business-service-ai-based-competitor-research.html">AI-Based Competitor
+              Research</a></li>
+          <li><a href="../business-services/business-service-ai-assisted-leads-magnet.html">AI-Assisted Leads Magnet</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          <b>Personal-Services</b> <span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="../all-personal-services.html">All Personal Services</a></li>
+          <li><a href="../personal-ai-training.html">Personal AI Training Overview</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="../personal-services/personal-service-generative-ai-transformation.html">Generative AI
+              Transformation</a></li>
+          <li><a href="../personal-services/personal-service-local-llms-cost-slashing.html">Local LLMs &amp; Cost
+              Slashing</a></li>
+          <li><a href="../personal-services/personal-service-ai-agents-orchestration.html">Claude Agent Orchestration</a>
+          </li>
+          <li><a href="../personal-services/personal-service-agentic-ai-systems.html">Agentic Assistant Training</a></li>
+          <li><a href="../personal-services/personal-service-goals-self-authoring.html">Personal Goals Self-Authoring</a>
+          </li>
+          <li><a href="../personal-services/personal-service-ai-budget-cost-limits-training.html">AI Budget &amp; Cost
+              Control Training</a></li>
+          <li><a href="../personal-services/personal-service-ai-developer-training.html">AI Developer Training</a></li>
+          <li><a href="../personal-services/personal-service-advanced-ai-agents.html">Advanced AI Agents</a></li>
+          <li><a href="../personal-services/personal-service-claude-advanced-training.html">Claude Advanced Training</a>
+          </li>
+          <li><a href="../personal-services/personal-service-gemini-advanced-training.html">Gemini Advanced Training</a>
+          </li>
+          <li><a href="../personal-services/personal-service-continuous-learning.html">Daily Continuous Learning</a></li>
+          <li><a href="../personal-services/personal-service-worklife-balance.html">Professional Work-Life Balance</a></li>
+        </ul>
+      </li>
+      <li><a href="../faqs.html" data-nav="faqs.html">FAQs</a></li>
+      <li><a href="../guarantee.html" data-nav="guarantee.html">Guarantee</a></li>
+      <li><a href="../pricing.html" data-nav="pricing.html">Pricing</a></li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          Claude-Guides <span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="../claude/claude-101.html">Claude 101</a></li>
+          <li><a href="../claude/claude-features.html">Claude Features</a></li>
+          <li><a href="../claude/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude/claude-cowork.html">Claude Desktop</a></li>
+          <li><a href="../claude/claude-skills.html">Claude Skills</a></li>
+          <li><a href="../claude/claude-custom-mcp.html">Claude Custom MCP</a></li>
+          <li><a href="../claude/claude-plugins.html">Claude Plugins</a></li>
+          <li><a href="../claude/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude/claude-orchestration.html">Claude Orchestration</a></li>
+          <li><a href="../claude/claude-design.html">Claude Design</a></li>
+          <li><a href="../claude/claude-science.html">Claude for Science</a></li>
+          <li><a href="../claude/claude-local-llms.html">Claude With Local LLMs</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          Gemini-Guides <span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="../google/google-gemini-101.html">Gemini 101</a></li>
+          <li><a href="../google/google-ai-studio.html">Google AI Studio</a></li>
+          <li><a href="../google/google-antigravity-ide.html">Google Antigravity IDE</a></li>
+          <li><a href="../google/google-gemini-desktop.html">Gemini Desktop</a></li>
+          <li><a href="../google/google-gemini-spark.html">Gemini Spark</a></li>
+          <li><a href="../google/google-gemini-notebook.html">Gemini Notebook</a></li>
+          <li><a href="../google/google-gemma-local-models.html">Google Gemma Local Models</a></li>
+          <li><a href="../google/google-multimodality.html">Google Multimodality</a></li>
+          <li><a href="../google/google-deepmind.html">Google DeepMind</a></li>
+          <li><a href="../google/google-gemini-4-argon.html">Gemini 4 Argon</a></li>
+          <li><a href="../google/google-gemini-4-carbon.html">Gemini 4 Carbon</a></li>
+          <li><a href="../google/google-gemini-4-hydrogen.html">Gemini 4 Hydrogen</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          Writing-Portfolio <span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="../articles.html" data-nav="articles.html">Articles</a></li>
+          <li><a href="../writing.html" data-nav="writing.html">Publications</a></li>
+        </ul>
+      </li>
+      <li><a href="../contact.html" data-nav="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- END:HEADER -->
+  <main class="container single-column-article">
+    <header class="hero" style="text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2.5rem 0 1.5rem 0;">
+      <div style="background:var(--bg-card, #0c111d);border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:12px;padding:1.5rem;display:flex;align-items:center;gap:1.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.35);">
+        <img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist logo" width="96" height="96" style="border-radius:10px;border:1px solid var(--gold, #fbbf24);flex-shrink:0;object-fit:cover;box-shadow:0 0 15px rgba(251, 191, 36, 0.25);" />
+        <div>
+          <div style="font-family:var(--font-mono, monospace);letter-spacing:0.2em;text-transform:uppercase;font-size:0.75rem;color:var(--gold, #fbbf24);font-weight:700;">The Future Is Now</div>
+          <div style="color:var(--text-muted, #94a3b8);font-size:0.95rem;margin-top:0.35rem;line-height:1.5;">By <strong style="color:var(--text, #e2e8f0);">Thomas Cherickal</strong>, Generative AI Consultant · November 4, 2026</div>
+        </div>
+      </div>
+      <div style="background:var(--bg-card, #0c111d);border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:12px;padding:2rem;box-shadow:0 4px 20px rgba(0,0,0,0.35);">
+        <p class="hero-badge" style="margin:0 0 0.85rem 0;">// OPEN-WEIGHTS &amp; SOVEREIGN LOCAL INFERENCE</p>
+        <h1>Google Gemma Local Models: A Practical Guide</h1>
+        <p class="hero-desc" style="font-size:1.15rem;line-height:1.7;color:var(--text-muted);margin:0;">
+          A practical guide to Google's Gemma open-weight small language models: the current lineup, hardware needs, inference tools, the Hugging Face ecosystem, benchmarks against peers, and the Gemmaverse.
+        </p>
+      </div>
+    </header>
+
+    <div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;margin:1.5rem 0 2rem 0;">
+      <div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.25rem;text-align:center;">
+        <div style="font-size:2rem;font-weight:700;color:var(--gold);font-family:var(--font-mono);">Apache 2.0</div>
+        <div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Permissive Licensing</div>
+      </div>
+      <div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.25rem;text-align:center;">
+        <div style="font-size:2rem;font-weight:700;color:var(--cyan);font-family:var(--font-mono);">E2B - 31B</div>
+        <div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Scalable Lineup</div>
+      </div>
+      <div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.25rem;text-align:center;">
+        <div style="font-size:2rem;font-weight:700;color:#e879f9;font-family:var(--font-mono);">140+ Langs</div>
+        <div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Multilingual Pre-training</div>
+      </div>
+      <div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.25rem;text-align:center;">
+        <div style="font-size:2rem;font-weight:700;color:var(--green, #34d399);font-family:var(--font-mono);">&lt; 3 GB</div>
+        <div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Edge Memory Footprint</div>
+      </div>
+    </div>
+
+    <!-- HERO FIGURE -->
+    <article class="content-card" style="margin-bottom:1.5rem;">
+      <figure style="margin:2rem 0;text-align:center;">
+<svg aria-labelledby="g1t g1d" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.32);border-radius:14px;background:#040711;box-shadow:0 8px 24px rgba(0,0,0,0.5);" viewbox="0 0 960 440">
+<title id="g1t">The Gemma 4 family from edge to workstation</title>
+<desc id="g1d">Five blocks of rising height show Gemma 4 E2B, E4B, 12B, 26B A4B and 31B, each labelled with the device class it targets.</desc>
+<defs><filter id="gl"><fegaussianblur result="b" stddeviation="3"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs>
+<rect fill="#000" height="440" width="960"></rect>
+<rect fill="none" height="428" rx="10" stroke="#C99A18" stroke-opacity=".5" width="948" x="6" y="6"></rect>
+<text fill="#FFD24A" font-size="26" font-weight="700" x="40" y="48">Gemma 4: one family, five sizes</text>
+<text fill="#a9a596" font-size="15" x="40" y="74">Block height is proportional to parameter count (effective for E2B and E4B, total for the rest)</text>
+<line stroke="#FFD24A" stroke-width="2" x1="40" x2="920" y1="360" y2="360"></line>
+<rect fill="#00E5FF" filter="url(#gl)" height="18.4" width="140" x="60" y="341.6"></rect>
+<rect fill="#2EE59D" filter="url(#gl)" height="36" width="140" x="235" y="324"></rect>
+<rect fill="#8B5CF6" filter="url(#gl)" height="95.6" width="140" x="410" y="264.4"></rect>
+<rect fill="#FF2E93" filter="url(#gl)" height="201.6" width="140" x="585" y="158.4"></rect>
+<rect fill="#FFD24A" filter="url(#gl)" height="245.6" width="140" x="760" y="114.4"></rect>
+<g fill="#fff" font-size="18" font-weight="700" text-anchor="middle">
+<text x="130" y="330">E2B</text><text x="305" y="312">E4B</text><text x="480" y="252">12B</text><text x="655" y="146">26B A4B</text><text x="830" y="102">31B</text>
+</g>
+<g fill="#e9e6dc" font-size="13" text-anchor="middle">
+<text x="130" y="382">2.3B effective</text><text x="305" y="382">4.5B effective</text><text x="480" y="382">11.95B dense</text><text x="655" y="382">25.2B total, 3.8B active</text><text x="830" y="382">30.7B dense</text>
+</g>
+<g fill="#a9a596" font-size="13" text-anchor="middle">
+<text x="130" y="404">phones, Pi</text><text x="305" y="404">phones, laptops</text><text x="480" y="404">laptops</text><text x="655" y="404">workstations</text><text x="830" y="404">workstations</text>
+</g>
+<text fill="#a9a596" font-size="12" x="40" y="428">Source: Gemma 4 model card. Context window: 128K (E2B, E4B) and 256K (12B, 26B A4B, 31B).</text>
+</svg>
+<figcaption style="color:var(--text-muted, #94a3b8);font-size:0.875rem;margin-top:0.75rem;font-style:italic;">Image 1. The Gemma 4 lineup, from phone-class models to workstation-class models.</figcaption>
+</figure>
+    </article>
+
+    <!-- TABLE OF CONTENTS -->
+    <article class="content-card" id="table-of-contents">
+      <h2>Contents</h2>
+      <div class="toc-grid" style="display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem;">
+        <a class="toc-link gold-link" href="#intro">1. Introduction</a>
+        <a class="toc-link gold-link" href="#slm">2. What Small Language Models Are</a>
+        <a class="toc-link gold-link" href="#uses">3. What SLMs Are Used For</a>
+        <a class="toc-link gold-link" href="#lineup">4. The Current Gemma Models</a>
+        <a class="toc-link gold-link" href="#hardware">5. Hardware Required</a>
+        <a class="toc-link gold-link" href="#where">6. Where Gemma Runs Locally</a>
+        <a class="toc-link gold-link" href="#tools">7. Inference Tools</a>
+        <a class="toc-link gold-link" href="#hf">8. The Hugging Face Ecosystem</a>
+        <a class="toc-link gold-link" href="#free">9. Why Gemma Is Free</a>
+        <a class="toc-link gold-link" href="#why">10. Why Open-Weight Local Models Help</a>
+        <a class="toc-link gold-link" href="#bench">11. Benchmarks Against Peers</a>
+        <a class="toc-link gold-link" href="#gemmaverse">12. The Gemmaverse</a>
+        <a class="toc-link gold-link" href="#choose">13. Choosing a Model</a>
+        <a class="toc-link gold-link" href="#conclusion">14. Conclusion</a>
+        <a class="toc-link gold-link" href="#pricing-parity">15. Practice Pricing & Global Purchasing Power Parity</a>
+        <a class="toc-link gold-link" href="#references">16. References</a>
+      </div>
+    </article>
+
+    <article class="content-card" id="intro">
+      <h2 id="intro">Introduction</h2><p>A capable language model used to mean a rented one. You sent your text to a data center, paid per token, and accepted whatever the provider changed next month. Google's Gemma models offer a different deal: you download the weights once and run them on your own machine.</p><p>This article covers what small language models are, what they do well, and which Gemma models exist today. It lists the hardware each model needs, the tools that run them, and the Hugging Face ecosystem around them. It also explains why the weights are free, how Gemma benchmarks against similar open models, and what the community has built with them.</p><div class="callout"><p>I checked every source linked in the text on November 4, 2026. Benchmark numbers come from Google, from Artificial Analysis, or from the Gemma 4 technical report, and I name the source each time. Hardware figures are guidance based on published memory tables, so test on your own machine before you buy anything.</p></div>
+    </article>
+
+    <article class="content-card" id="slm">
+      <h2 id="slm">What small language models are</h2><p>A small language model, or SLM, is a language model small enough to run on ordinary hardware such as a phone, a laptop or a single GPU. No official cutoff defines "small," and the line keeps moving upward. In the Gemma family, it covers everything from a 270-million-parameter function-calling model to a 31-billion-parameter dense model.</p><p>The research case for SLMs is strong. In <a class="gold-link" href="https://arxiv.org/abs/2506.02153">an NVIDIA position paper</a>, researchers argue that SLMs are sufficiently powerful, more suitable and more economical for many agentic tasks. Their reasoning is that agents mostly repeat a narrow set of specialized jobs, which do not need the broad conversational range of a giant model.</p><p>The paper is a position statement, not a benchmark, so read it as an argument. It still matches what practitioners see: a well-tuned small model handles classification, extraction, routing and short generation at a fraction of the cost. A large model remains the better choice when a task needs wide knowledge or long chains of reasoning.</p><p>Gemma describes its models as built from the same research as Gemini, in a size that fits your hardware. Google's launch post for <a class="gold-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/">Gemma 4</a> claims "byte for byte, the most capable open models." Treat that as marketing language, and use the benchmark section below to judge it.</p>
+    </article>
+
+    <article class="content-card" id="uses">
+      <h2 id="uses">What SLMs are used for</h2><p>Small models fit tasks where the input is modest, the answer is bounded and speed or privacy matters. The same list appears across Google's documentation and the community projects covered later. Each item below maps to a Gemma capability you can test today.</p><figure style="margin:2rem 0;text-align:center;">
+<svg aria-labelledby="g2t g2d" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.32);border-radius:14px;background:#040711;box-shadow:0 8px 24px rgba(0,0,0,0.5);" viewbox="0 0 960 460">
+<title id="g2t">Eight common uses for small language models</title>
+<desc id="g2d">A central small language model connects to eight uses: on-device assistants, offline translation, document extraction, function-calling agents, coding help, embeddings and retrieval, medical triage support, and voice and audio.</desc>
+<rect fill="#000" height="460" width="960"></rect>
+<text fill="#FFD24A" font-size="22" font-weight="700" x="40" y="38">What small language models do well</text>
+<g fill="none" opacity=".85" stroke-width="2.5">
+<path d="M260 100 L 410 210" stroke="#00E5FF"></path><path d="M260 190 L 405 225" stroke="#2EE59D"></path><path d="M260 280 L 405 245" stroke="#8B5CF6"></path><path d="M260 370 L 410 262" stroke="#FF9F1C"></path>
+<path d="M700 100 L 550 210" stroke="#FF2E93"></path><path d="M700 190 L 555 225" stroke="#FFD24A"></path><path d="M700 280 L 555 245" stroke="#00E5FF"></path><path d="M700 370 L 550 262" stroke="#2EE59D"></path>
+</g>
+<circle cx="480" cy="236" fill="#2a2105" r="78" stroke="#FFD24A" stroke-width="4"></circle>
+<text fill="#FFD24A" font-size="18" font-weight="700" text-anchor="middle" x="480" y="230">Small language</text>
+<text fill="#FFD24A" font-size="18" font-weight="700" text-anchor="middle" x="480" y="252">model</text>
+<g font-size="15" font-weight="700" text-anchor="middle">
+<rect fill="#06222a" height="56" rx="12" stroke="#00E5FF" stroke-width="2.5" width="230" x="30" y="72"></rect><text fill="#00E5FF" x="145" y="106">On-device assistants</text>
+<rect fill="#06261a" height="56" rx="12" stroke="#2EE59D" stroke-width="2.5" width="230" x="30" y="162"></rect><text fill="#2EE59D" x="145" y="196">Offline translation</text>
+<rect fill="#1c1040" height="56" rx="12" stroke="#8B5CF6" stroke-width="2.5" width="230" x="30" y="252"></rect><text fill="#b9a2ff" x="145" y="286">Document extraction</text>
+<rect fill="#2a1a03" height="56" rx="12" stroke="#FF9F1C" stroke-width="2.5" width="230" x="30" y="342"></rect><text fill="#FF9F1C" x="145" y="376">Function-calling agents</text>
+<rect fill="#2a0a1a" height="56" rx="12" stroke="#FF2E93" stroke-width="2.5" width="230" x="700" y="72"></rect><text fill="#FF2E93" x="815" y="106">Coding help</text>
+<rect fill="#2a2105" height="56" rx="12" stroke="#FFD24A" stroke-width="2.5" width="230" x="700" y="162"></rect><text fill="#FFD24A" x="815" y="196">Embeddings and retrieval</text>
+<rect fill="#06222a" height="56" rx="12" stroke="#00E5FF" stroke-width="2.5" width="230" x="700" y="252"></rect><text fill="#00E5FF" x="815" y="286">Medical triage support</text>
+<rect fill="#06261a" height="56" rx="12" stroke="#2EE59D" stroke-width="2.5" width="230" x="700" y="342"></rect><text fill="#2EE59D" x="815" y="376">Voice and audio</text>
+</g>
+<text fill="#a9a596" font-size="12" x="40" y="440">Each use maps to a documented Gemma capability or variant covered in this article.</text>
+</svg>
+<figcaption style="color:var(--text-muted, #94a3b8);font-size:0.875rem;margin-top:0.75rem;font-style:italic;">Image 2. Eight tasks where a small local model is often enough.</figcaption>
+</figure><h3>On-device assistants and offline work</h3><p>The Gemma 4 E2B and E4B models target phones, Raspberry Pi boards and NVIDIA Jetson Orin Nano devices, and they run offline. That makes them suitable for field work, travel, and any setting with poor connectivity. Google's AI Edge Gallery app lets you try these two models on a phone.</p><h3>Translation and multilingual support</h3><p>Gemma 4 is pre-trained on more than 140 languages, with out-of-the-box support for more than 35. TranslateGemma, a separate release in sizes of 4B, 12B and 27B, is tuned for translation and covers 55 languages. A model that translates on your own device never sends a private document to a third party.</p><h3>Documents, vision and audio</h3><p>Every Gemma 4 model accepts images, and the models handle video as sequences of frames. The E2B, E4B and 12B models also take audio input of up to 30 seconds. On OmniDocBench 1.5, a document-parsing test where lower is better, the 31B model scores 0.131 and the E2B model scores 0.290, according to the model card.</p><h3>Agents and function calling</h3><p>Gemma 4 supports native function calling, structured JSON output and system instructions. FunctionGemma is a 270-million-parameter model built for function calling, released in December 2025. These features let a small model act as the router or tool-caller inside a larger system.</p><h3>Retrieval, coding and medicine</h3><p>EmbeddingGemma 2 is a 0.7B embedding model for search and retrieval, listed on Google's Hugging Face page. MedGemma covers medical text and images, and the 1.5 release is a 4B model. Code assistance is a common use of the larger Gemma 4 models, which score 80.0 percent on LiveCodeBench v6 at the 31B size.</p>
+    </article>
+
+    <article class="content-card" id="lineup">
+      <h2 id="lineup">The current Gemma models</h2><p>The Gemma project keeps a dated list of every release on its <a class="gold-link" href="https://gemma.ai/models/releases/">Gemma release page</a>. The current flagship generation is Gemma 4, which arrived in spring 2026 as four models and gained a 12B Unified model on June 3, 2026. A Multi-Token Prediction release on April 16 added drafters for faster decoding.</p><p>All Gemma 4 models ship in base and instruction-tuned versions under the Apache 2.0 license. Hugging Face's <a class="gold-link" href="https://huggingface.co/blog/gemma4">Welcome Gemma 4 post</a> adds one more member, DiffusionGemma 26B-A4B, a diffusion-based text generator. The table below summarizes the core family using Google's <a class="gold-link" href="https://ai.google.dev/gemma/docs/core/model_card_4">Gemma 4 model card</a>.</p><div class="tablewrap">
+<table class="pricing-table" style="width:100%;border-collapse:collapse;margin:1.5rem 0;">
+<thead><tr><th>Model</th><th>Parameters</th><th>Design</th><th>Context</th><th>Input</th></tr></thead>
+<tbody>
+<tr><td>Gemma 4 E2B</td><td>2.3B effective (5.1B with embeddings)</td><td>Dense, per-layer embeddings</td><td>128K</td><td>Text, image, audio, video</td></tr>
+<tr><td>Gemma 4 E4B</td><td>4.5B effective (8B with embeddings)</td><td>Dense, per-layer embeddings</td><td>128K</td><td>Text, image, audio, video</td></tr>
+<tr><td>Gemma 4 12B Unified</td><td>11.95B</td><td>Dense, encoder-free</td><td>256K</td><td>Text, image, audio, video</td></tr>
+<tr><td>Gemma 4 26B A4B</td><td>25.2B total, 3.8B active</td><td>Mixture of experts (8 of 128 experts, plus 1 shared)</td><td>256K</td><td>Text, image, video</td></tr>
+<tr><td>Gemma 4 31B</td><td>30.7B</td><td>Dense</td><td>256K</td><td>Text, image, video</td></tr>
+</tbody>
+</table>
+</div><p>The "E" in E2B and E4B stands for effective parameters. Per-Layer Embeddings give these models far more stored parameters than they use per token, which keeps compute low. The 12B Unified model is encoder-free, meaning it projects raw image patches and audio waveforms straight into the language model's embedding space.</p><p>The 26B A4B is a mixture-of-experts model that activates about 3.8 billion parameters per token. It runs at roughly the speed of a 4B model, but it must still load all 25.2 billion parameters into memory. Plan your memory around the total, not the active count.</p><h3>Specialized Gemma variants</h3><p>Beyond the core family, Google and its partners publish focused models. The release page lists TranslateGemma (4B, 12B, 27B) and MedGemma 1.5 (4B), both from January 2026. It also lists FunctionGemma (270M) and T5Gemma 2 encoder-decoder models from December 2025, and EmbeddingGemma 2 from October 6, 2026.</p><p>Older generations remain available. Gemma 3 spans 270M, 1B, 4B, 12B and 27B sizes, and Gemma 3n introduced the E2B and E4B naming in June 2025. VaultGemma, a 1B model, and ShieldGemma, a safety classifier, round out the list.</p>
+    </article>
+
+    <article class="content-card" id="hardware">
+      <h2 id="hardware">Hardware required</h2><p>Memory decides what you can run, and speed is secondary. Google's <a class="gold-link" href="https://ai.google.dev/gemma/docs/core">Gemma core documentation</a> publishes approximate memory needs for the static weights, including a 20 percent loading overhead. The figures exclude the KV cache and supporting software, so add headroom for long prompts.</p><div class="tablewrap">
+<table class="pricing-table" style="width:100%;border-collapse:collapse;margin:1.5rem 0;">
+<thead><tr><th>Model</th><th>BF16 (16-bit)</th><th>8-bit</th><th>Q4_0 (4-bit)</th><th>Mobile</th></tr></thead>
+<tbody>
+<tr><td>E2B</td><td>11.4 GB</td><td>5.7 GB</td><td>2.9 GB</td><td>1.1 GB</td></tr>
+<tr><td>E4B</td><td>17.9 GB</td><td>8.9 GB</td><td>4.5 GB</td><td>2.5 GB</td></tr>
+<tr><td>12B</td><td>26.7 GB</td><td>13.4 GB</td><td>6.7 GB</td><td>not listed</td></tr>
+<tr><td>26B A4B</td><td>57.7 GB</td><td>28.8 GB</td><td>14.4 GB</td><td>not listed</td></tr>
+<tr><td>31B</td><td>69.9 GB</td><td>34.9 GB</td><td>17.5 GB</td><td>not listed</td></tr>
+</tbody>
+</table>
+</div><figure style="margin:2rem 0;text-align:center;">
+<svg aria-labelledby="g3t g3d" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.32);border-radius:14px;background:#040711;box-shadow:0 8px 24px rgba(0,0,0,0.5);" viewbox="0 0 960 440">
+<title id="g3t">Memory needed for Gemma 4 weights at three precisions</title>
+<desc id="g3d">Grouped bars show BF16, 8-bit and 4-bit weight memory for each Gemma 4 model, with dashed lines marking 8, 16, 24 and 32 gigabyte memory tiers.</desc>
+<rect fill="#000" height="440" width="960"></rect>
+<text fill="#FFD24A" font-size="22" font-weight="700" x="40" y="36">Weight memory by precision (GB)</text>
+<rect fill="#FFD24A" height="14" width="14" x="40" y="48"></rect><text fill="#e9e6dc" font-size="12" x="60" y="60">4-bit (Q4_0)</text>
+<rect fill="#00E5FF" height="14" width="14" x="150" y="48"></rect><text fill="#e9e6dc" font-size="12" x="170" y="60">8-bit</text>
+<rect fill="#FF2E93" height="14" width="14" x="220" y="48"></rect><text fill="#e9e6dc" font-size="12" x="240" y="60">BF16</text>
+<line stroke="#FFD24A" stroke-width="2" x1="90" x2="930" y1="360" y2="360"></line>
+<g stroke-dasharray="6 6" stroke-width="1.5">
+<line stroke="#8B5CF6" x1="90" x2="930" y1="332.8" y2="332.8"></line><line stroke="#8B5CF6" x1="90" x2="930" y1="305.6" y2="305.6"></line><line stroke="#8B5CF6" x1="90" x2="930" y1="278.4" y2="278.4"></line><line stroke="#8B5CF6" x1="90" x2="930" y1="251.2" y2="251.2"></line>
+</g>
+<g fill="#b9a2ff" font-size="12" text-anchor="end"><text x="84" y="337">8 GB</text><text x="84" y="310">16 GB</text><text x="84" y="283">24 GB</text><text x="84" y="256">32 GB</text></g>
+<!-- 3.4 px per GB; baseline 360 -->
+<g>
+<rect fill="#FFD24A" height="9.9" width="44" x="110" y="350.1"></rect><rect fill="#00E5FF" height="19.4" width="44" x="158" y="340.6"></rect><rect fill="#FF2E93" height="38.8" width="44" x="206" y="321.2"></rect>
+<rect fill="#FFD24A" height="15.3" width="44" x="275" y="344.7"></rect><rect fill="#00E5FF" height="30.3" width="44" x="323" y="329.7"></rect><rect fill="#FF2E93" height="60.9" width="44" x="371" y="299.1"></rect>
+<rect fill="#FFD24A" height="22.8" width="44" x="440" y="337.2"></rect><rect fill="#00E5FF" height="45.6" width="44" x="488" y="314.4"></rect><rect fill="#FF2E93" height="90.8" width="44" x="536" y="269.2"></rect>
+<rect fill="#FFD24A" height="49" width="44" x="605" y="311"></rect><rect fill="#00E5FF" height="97.9" width="44" x="653" y="262.1"></rect><rect fill="#FF2E93" height="196.2" width="44" x="701" y="163.8"></rect>
+<rect fill="#FFD24A" height="59.5" width="44" x="770" y="300.5"></rect><rect fill="#00E5FF" height="118.7" width="44" x="818" y="241.3"></rect><rect fill="#FF2E93" height="237.7" width="44" x="866" y="122.3"></rect>
+</g>
+<g fill="#fff" font-size="11" font-weight="700" text-anchor="middle">
+<text x="132" y="345">2.9</text><text x="180" y="335">5.7</text><text x="228" y="316">11.4</text>
+<text x="297" y="339">4.5</text><text x="345" y="324">8.9</text><text x="393" y="294">17.9</text>
+<text x="462" y="332">6.7</text><text x="510" y="309">13.4</text><text x="558" y="264">26.7</text>
+<text x="627" y="306">14.4</text><text x="675" y="257">28.8</text><text x="723" y="158">57.7</text>
+<text x="792" y="295">17.5</text><text x="840" y="236">34.9</text><text x="888" y="117">69.9</text>
+</g>
+<g fill="#e9e6dc" font-size="14" text-anchor="middle"><text x="182" y="384">E2B</text><text x="347" y="384">E4B</text><text x="512" y="384">12B</text><text x="677" y="384">26B A4B</text><text x="842" y="384">31B</text></g>
+<text fill="#a9a596" font-size="12" x="40" y="420">Source: Google Gemma core documentation. Static weights with 20% loading overhead; KV cache not included.</text>
+</svg>
+<figcaption style="color:var(--text-muted, #94a3b8);font-size:0.875rem;margin-top:0.75rem;font-style:italic;">Image 3. Four-bit weights bring every Gemma 4 model within reach of a 24 GB machine, and the E-models within reach of a phone.</figcaption>
+</figure><p>Community guides give slightly higher real-world totals, because context and runtime add to the weights. Unsloth's <a class="gold-link" href="https://unsloth.ai/docs/models/gemma-4">Gemma 4 local guide</a> lists 4-bit totals of about 4 GB for E2B, 5.5 to 6 GB for E4B, 7 to 8 GB for 12B, 16 to 18 GB for 26B A4B and 17 to 20 GB for 31B. On Ollama, the download files for the same models range from about 4.6 GB to 20 GB.</p><p>Translating those numbers into machines gives a rough ladder. These tiers are my guidance, not a vendor specification.</p><ul class="tight">
+<li><strong>Phone, Raspberry Pi or Jetson:</strong> E2B, and E4B on newer devices, through LiteRT-LM.</li>
+<li><strong>8 GB laptop:</strong> E2B comfortably at 4-bit, with E4B possible only with a short context.</li>
+<li><strong>16 GB laptop or 12 GB GPU:</strong> E4B and the 12B Unified model at 4-bit.</li>
+<li><strong>24 GB GPU or 32 GB unified memory:</strong> the 26B A4B and the 31B at 4-bit, with limited context.</li>
+<li><strong>80 GB data-center GPU:</strong> unquantized bfloat16 26B A4B and 31B, which Google says fit on a single H100.</li>
+</ul><p>Speed depends on the device. Google's <a class="gold-link" href="https://developers.google.com/edge/litert-lm/models/gemma-4">LiteRT-LM Gemma 4 page</a> reports E2B decode speeds of 143 tokens per second on an RTX 4090 and 160 on an M4 Mac. A Galaxy S26 Ultra reaches 52 on its GPU, an iPhone 17 Pro reaches 56, and a 16 GB Raspberry Pi 5 manages 8 on its CPU.</p>
+    </article>
+
+    <article class="content-card" id="where">
+      <h2 id="where">Where Gemma runs locally</h2><p>Gemma runs on more kinds of hardware than most model families. Google's launch post names NVIDIA GPUs from Jetson Orin Nano to Blackwell, AMD GPUs through ROCm, and Google TPUs. Apple Silicon is a strong fit as well, because unified memory lets a laptop hold models that a discrete GPU of the same price could not.</p><p>The browser is a real target too. Transformers.js runs Gemma 4 in the browser, including text, image and audio inference, and the Hugging Face post links a WebGPU demo. Local pages built this way keep user data inside the tab.</p><p>At the other end, you can serve the larger models on one server. The 26B A4B and the 31B can fit on a single 80 GB H100 in bfloat16, and quantized versions run on consumer GPUs. For a small team, that is one box that replaces a metered API.</p>
+    </article>
+
+    <article class="content-card" id="tools">
+      <h2 id="tools">Inference tools</h2><p>Several tools run Gemma locally, and most of them are free. They differ in how much they hide, so pick by how much control you want. The diagram shows how apps, runtimes and hardware relate.</p><figure style="margin:2rem 0;text-align:center;">
+<svg aria-labelledby="g4t g4d" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.32);border-radius:14px;background:#040711;box-shadow:0 8px 24px rgba(0,0,0,0.5);" viewbox="0 0 960 440">
+<title id="g4t">Three layers for running Gemma locally</title>
+<desc id="g4d">Apps such as Ollama, LM Studio and Unsloth Studio sit above runtimes such as llama.cpp, MLX, LiteRT-LM, Transformers and vLLM, which sit above hardware from phones to data-center GPUs.</desc>
+<rect fill="#000" height="440" width="960"></rect>
+<text fill="#FFD24A" font-size="22" font-weight="700" x="40" y="38">The local inference stack</text>
+<text fill="#a9a596" font-size="13" font-weight="700" x="40" y="82">APPS AND FRONT ENDS</text>
+<g font-size="15" font-weight="700" text-anchor="middle">
+<rect fill="#06222a" height="60" rx="12" stroke="#00E5FF" stroke-width="3" width="200" x="40" y="94"></rect><text fill="#00E5FF" x="140" y="130">Ollama</text>
+<rect fill="#06261a" height="60" rx="12" stroke="#2EE59D" stroke-width="3" width="200" x="260" y="94"></rect><text fill="#2EE59D" x="360" y="130">LM Studio</text>
+<rect fill="#1c1040" height="60" rx="12" stroke="#8B5CF6" stroke-width="3" width="200" x="480" y="94"></rect><text fill="#b9a2ff" x="580" y="130">Unsloth Studio</text>
+<rect fill="#2a0a1a" height="60" rx="12" stroke="#FF2E93" stroke-width="3" width="220" x="700" y="94"></rect><text fill="#FF2E93" x="810" y="130">AI Edge Gallery</text>
+</g>
+<text fill="#a9a596" font-size="13" font-weight="700" x="40" y="196">RUNTIMES AND LIBRARIES</text>
+<g font-size="14" font-weight="700" text-anchor="middle">
+<rect fill="#2a2105" height="56" rx="10" stroke="#FFD24A" stroke-width="3" width="140" x="40" y="208"></rect><text fill="#FFD24A" x="110" y="241">llama.cpp</text>
+<rect fill="#2a2105" height="56" rx="10" stroke="#FFD24A" stroke-width="3" width="140" x="195" y="208"></rect><text fill="#FFD24A" x="265" y="241">MLX</text>
+<rect fill="#2a2105" height="56" rx="10" stroke="#FFD24A" stroke-width="3" width="140" x="350" y="208"></rect><text fill="#FFD24A" x="420" y="241">LiteRT-LM</text>
+<rect fill="#2a2105" height="56" rx="10" stroke="#FFD24A" stroke-width="3" width="140" x="505" y="208"></rect><text fill="#FFD24A" x="575" y="241">Transformers</text>
+<rect fill="#2a2105" height="56" rx="10" stroke="#FFD24A" stroke-width="3" width="120" x="660" y="208"></rect><text fill="#FFD24A" x="720" y="241">vLLM</text>
+<rect fill="#2a2105" height="56" rx="10" stroke="#FFD24A" stroke-width="3" width="125" x="795" y="208"></rect><text fill="#FFD24A" x="857" y="241">mistral.rs</text>
+</g>
+<text fill="#a9a596" font-size="13" font-weight="700" x="40" y="310">HARDWARE</text>
+<g fill="#e9e6dc" font-size="13" font-weight="700" text-anchor="middle">
+<rect fill="#0b0b0d" height="56" rx="10" stroke="#C99A18" stroke-width="2" width="150" x="40" y="322"></rect><text x="115" y="355">Phones, Pi</text>
+<rect fill="#0b0b0d" height="56" rx="10" stroke="#C99A18" stroke-width="2" width="150" x="205" y="322"></rect><text x="280" y="355">Apple Silicon</text>
+<rect fill="#0b0b0d" height="56" rx="10" stroke="#C99A18" stroke-width="2" width="150" x="370" y="322"></rect><text x="445" y="355">NVIDIA (CUDA)</text>
+<rect fill="#0b0b0d" height="56" rx="10" stroke="#C99A18" stroke-width="2" width="150" x="535" y="322"></rect><text x="610" y="355">AMD (ROCm)</text>
+<rect fill="#0b0b0d" height="56" rx="10" stroke="#C99A18" stroke-width="2" width="105" x="700" y="322"></rect><text x="752" y="355">CPU</text>
+<rect fill="#0b0b0d" height="56" rx="10" stroke="#C99A18" stroke-width="2" width="100" x="820" y="322"></rect><text x="870" y="355">Browser</text>
+</g>
+<text fill="#a9a596" font-size="12" x="40" y="414">LM Studio states that MLX and llama.cpp run under the hood. Unsloth Studio runs GGUF or MLX models.</text>
+</svg>
+<figcaption style="color:var(--text-muted, #94a3b8);font-size:0.875rem;margin-top:0.75rem;font-style:italic;">Image 4. Apps, runtimes and hardware: pick one from each layer.</figcaption>
+</figure><h3>Ollama</h3><p><a class="gold-link" href="https://ollama.com/">Ollama</a> runs on macOS, Windows and Linux, and it reports more than 9 million installs a month. Its <a class="gold-link" href="https://ollama.com/library/gemma4">Gemma 4 library page</a> lists tags for every size, such as <code>ollama run gemma4:12b</code> and <code>ollama run gemma4:31b</code>. It also offers MLX builds and cloud tags that run on Ollama's servers instead of your machine.</p><h3>LM Studio</h3><p><a class="gold-link" href="https://lmstudio.ai/models/gemma-4">LM Studio's model page</a> lists downloads of 4.2 GB for E2B, 5.9 GB for E4B, 7.4 GB for 12B, 15.6 GB for 26B A4B and 19 GB for 31B. It offers GGUF and MLX formats, including quantization-aware training versions. The company states that MLX and llama.cpp run under the hood of its app.</p><h3>llama.cpp</h3><p><a class="gold-link" href="https://github.com/ggml-org/llama.cpp">llama.cpp</a> is an MIT-licensed C and C++ inference engine with no external dependencies. It supports quantization from 1.5-bit to 8-bit, hybrid CPU and GPU inference for models larger than your VRAM, and backends including CUDA, HIP, Vulkan, Metal, SYCL and WebGPU. It can serve an OpenAI-compatible API, and the <a class="gold-link" href="https://huggingface.co/collections/ggml-org/gemma-4">ggml-org Gemma collection</a> hosts ready-made GGUF files.</p><h3>Others worth knowing</h3><p>Unsloth Studio gives you a browser interface for running and fine-tuning Gemma 4, and its guide recommends temperature 1.0, top-p 0.95 and top-k 64. MLX, through the mlx-vlm package, gives full multimodal support on Apple Silicon, and Hugging Face reports about 4x less active memory with its TurboQuant KV-cache compression. LiteRT-LM serves the E2B and E4B models on phones and small boards.</p><p>The Transformers library offers day-zero support, and it works with bitsandbytes, PEFT and TRL for fine-tuning. Hugging Face also lists mistral.rs, ONNX checkpoints and SGLang, and Google's launch post adds vLLM, NVIDIA NIM and Docker. If you want one default, start with Ollama or LM Studio, and move to llama.cpp when you need control.</p>
+    </article>
+
+    <article class="content-card" id="hf">
+      <h2 id="hf">The Hugging Face ecosystem</h2><p>Hugging Face is the main hub where Gemma lives. Its <a class="gold-link" href="https://huggingface.co/docs/hub/index">Hub documentation</a> describes a platform that hosts over 2 million models, 1.5 million datasets and 1.5 million Spaces. All of it is open and publicly available, and every repository is version-controlled with commit history, diffs and branches.</p><p>Google's own page at <a class="gold-link" href="https://huggingface.co/google">Google on Hugging Face</a> lists 1,136 models, 75 datasets, 25 Spaces and 54 collections. The Gemma 4 collection holds the 31B, 26B A4B and 12B models in base and instruction-tuned form. Google also publishes MedGemma, EmbeddingGemma 2 and the older PaliGemma, CodeGemma and ShieldGemma families there.</p><figure style="margin:2rem 0;text-align:center;">
+<svg aria-labelledby="g5t g5d" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.32);border-radius:14px;background:#040711;box-shadow:0 8px 24px rgba(0,0,0,0.5);" viewbox="0 0 960 460">
+<title id="g5t">The Hugging Face ecosystem around Gemma</title>
+<desc id="g5d">A central Hub connects to models, datasets, Spaces, libraries, inference services, storage buckets and organizations.</desc>
+<rect fill="#000" height="460" width="960"></rect>
+<text fill="#FFD24A" font-size="22" font-weight="700" x="40" y="38">Hugging Face: the Gemma workshop</text>
+<g fill="none" opacity=".85" stroke-width="2.5">
+<path d="M480 235 L 160 110" stroke="#00E5FF"></path><path d="M480 235 L 480 110" stroke="#FF2E93"></path><path d="M480 235 L 800 110" stroke="#2EE59D"></path>
+<path d="M480 235 L 130 235" stroke="#8B5CF6"></path><path d="M480 235 L 830 235" stroke="#FF9F1C"></path>
+<path d="M480 235 L 250 380" stroke="#FFD24A"></path><path d="M480 235 L 710 380" stroke="#00E5FF"></path>
+</g>
+<circle cx="480" cy="235" fill="#2a2105" r="62" stroke="#FFD24A" stroke-width="4"></circle>
+<text fill="#FFD24A" font-size="20" font-weight="700" text-anchor="middle" x="480" y="232">The Hub</text>
+<text fill="#e9e6dc" font-size="12" text-anchor="middle" x="480" y="254">Git + Xet</text>
+<g font-weight="700" text-anchor="middle">
+<rect fill="#06222a" height="76" rx="12" stroke="#00E5FF" stroke-width="3" width="220" x="50" y="72"></rect><text fill="#00E5FF" font-size="16" x="160" y="104">Models</text><text fill="#cfeff5" font-size="12" font-weight="400" x="160" y="127">2M+ repos, model cards</text>
+<rect fill="#2a0a1a" height="76" rx="12" stroke="#FF2E93" stroke-width="3" width="220" x="370" y="72"></rect><text fill="#FF2E93" font-size="16" x="480" y="104">Datasets</text><text fill="#f5cfe0" font-size="12" font-weight="400" x="480" y="127">1.5M, Data Studio, streaming</text>
+<rect fill="#06261a" height="76" rx="12" stroke="#2EE59D" stroke-width="3" width="220" x="690" y="72"></rect><text fill="#2EE59D" font-size="16" x="800" y="104">Spaces</text><text fill="#cff5e4" font-size="12" font-weight="400" x="800" y="127">1.5M apps, Gradio, ZeroGPU</text>
+<rect fill="#1c1040" height="76" rx="12" stroke="#8B5CF6" stroke-width="3" width="220" x="20" y="197"></rect><text fill="#b9a2ff" font-size="16" x="130" y="229">Libraries</text><text fill="#ddd2ff" font-size="12" font-weight="400" x="130" y="252">Transformers, TRL, PEFT</text>
+<rect fill="#2a1a03" height="76" rx="12" stroke="#FF9F1C" stroke-width="3" width="220" x="720" y="197"></rect><text fill="#FF9F1C" font-size="16" x="830" y="229">Inference</text><text fill="#ffe0b8" font-size="12" font-weight="400" x="830" y="252">Providers, dedicated Endpoints</text>
+<rect fill="#2a2105" height="76" rx="12" stroke="#FFD24A" stroke-width="3" width="220" x="140" y="342"></rect><text fill="#FFD24A" font-size="16" x="250" y="374">Storage Buckets</text><text fill="#e9e6dc" font-size="12" font-weight="400" x="250" y="397">S3-like, for checkpoints</text>
+<rect fill="#06222a" height="76" rx="12" stroke="#00E5FF" stroke-width="3" width="220" x="600" y="342"></rect><text fill="#00E5FF" font-size="16" x="710" y="374">Organizations</text><text fill="#cfeff5" font-size="12" font-weight="400" x="710" y="397">roles, access control</text>
+</g>
+<text fill="#a9a596" font-size="12" x="40" y="445">Source: Hugging Face Hub documentation, checked November 4, 2026.</text>
+</svg>
+<figcaption style="color:var(--text-muted, #94a3b8);font-size:0.875rem;margin-top:0.75rem;font-style:italic;">Image 5. The parts of Hugging Face that matter when you work with Gemma.</figcaption>
+</figure><h3>Models, cards and storage</h3><p>Each model repository carries a model card that documents limitations and biases, plus metadata for tasks, languages and evaluation results. Repositories build on Xet, which splits large files into chunks for faster uploads and downloads. That matters for Gemma, where a single 31B checkpoint is tens of gigabytes.</p><p>Storage Buckets add S3-like mutable storage for checkpoints and logs that do not need version history. Organizations let companies, universities and non-profits group accounts with roles that control repository access. The security section covers access tokens, GPG-signed commits and malware scanning.</p><h3>Libraries for using and tuning Gemma</h3><p>The Transformers library is the reference implementation, and the Hugging Face post notes day-zero Gemma 4 support through <code>pip install -U transformers</code>. It provides an any-to-any pipeline for multimodal use. TRL handles fine-tuning, including supervised training and a GRPO reinforcement example, and PEFT supports parameter-efficient methods through the same integration.</p><p>The Datasets library gives programmatic access to the Hub's datasets and can stream ones too large for your disk. Transformers.js brings models to the browser, and Hugging Face has a guide to <a class="gold-link" href="https://huggingface.co/blog/transformersjs-chrome-extension">Transformers.js in Chrome</a> extensions. Together these libraries cover the path from data to a trained, deployed Gemma variant.</p><h3>Spaces and inference services</h3><p>Spaces host demo apps using Gradio, Streamlit, static pages or Docker, and ZeroGPU supplies GPUs only when a demo needs them. Google's <a class="gold-link" href="https://huggingface.co/spaces/google/gemma4_vision_token_budget">vision token budget Space</a> shows how image resolution changes visual token counts. For programmatic hosted access, the Hub offers Inference Providers as a serverless API, and its navigation lists dedicated Inference Endpoints.</p><p>These hosted options are optional. The point of the local route is that you can download the files and never call a hosted service. The same Hub then works as your package registry, your documentation and your community forum.</p>
+    </article>
+
+    <article class="content-card" id="free">
+      <h2 id="free">Why Gemma is free</h2><p>Gemma 4 is released under the Apache 2.0 license, which Google's launch post calls commercially permissive. Apache 2.0 lets you use, modify and distribute the weights for commercial work without paying Google. That is a change from Gemma 3, which used the custom Gemma Terms of Use, according to <a class="gold-link" href="https://artificialanalysis.ai/articles/gemma-4-everything-you-need-to-know">Artificial Analysis's review</a>.</p><p>The download itself costs nothing. You can fetch Gemma from Hugging Face, Kaggle and Ollama, and Google's launch post lists those three as the download sources. Artificial Analysis also reports that the 26B and 31B models are free to use in Google AI Studio.</p><p>"Free" has limits worth stating. The weights are free, but hardware, electricity and your time are not. Ollama's cloud tags and third-party hosts such as Together AI or Fireworks run the model on their own servers, which is a service and not a free download.</p><p>My reading is that Google's reasons are strategic more than charitable, since an open family builds a developer ecosystem and spreads its research. Google has not spelled out its motives in the sources I read. Either way, read the license on the specific model you download.</p>
+    </article>
+
+    <article class="content-card" id="why">
+      <h2 id="why">Why open-weight local models help</h2><p>An open-weight model gives you the trained parameters, so you control where it runs. That sounds technical, but it changes five practical things.</p><ol class="tight">
+<li><strong>Privacy.</strong> Prompts and documents stay on your machine, which simplifies work with client files, medical notes or source code.</li>
+<li><strong>Offline use.</strong> The model works on a plane, in a lab without internet or inside an air-gapped network.</li>
+<li><strong>Cost predictability.</strong> After the hardware, each extra prompt costs electricity, so heavy batch jobs have no per-token bill.</li>
+<li><strong>Stability.</strong> You can pin a specific version for years, so a vendor update cannot change your results.</li>
+<li><strong>Customization.</strong> You can fine-tune the weights on your own data with tools such as TRL and Unsloth.</li>
+</ol><p>Stability deserves an example. Google's own help page says its Deep Think mode is being replaced by Gemini 4 Argon, and that Deep Think may be discontinued at any time. A local Gemma file does not disappear when a product line changes, as the <a class="gold-link" href="https://support.google.com/gemini/answer/16345172">Deep Think help page</a> shows for hosted services.</p><p>Local models have costs too. A local 31B model is weaker than the best hosted frontier models on hard reasoning, and you take on setup, updates and safety review yourself. Google reports safety testing for Gemma 4, but the model card says outputs can still be incorrect, outdated or biased, and developers should add safeguards.</p>
+    </article>
+
+    <article class="content-card" id="bench">
+      <h2 id="bench">Benchmarks against peers</h2><p>Benchmarks only help when you know who ran them. The first table comes from Google's model card for instruction-tuned models, and it shows how much Gemma 4 improved on Gemma 3 27B. All figures are vendor-reported.</p><div class="tablewrap">
+<table class="pricing-table" style="width:100%;border-collapse:collapse;margin:1.5rem 0;">
+<thead><tr><th>Benchmark (Google model card)</th><th>31B</th><th>26B A4B</th><th>12B</th><th>E4B</th><th>E2B</th><th>Gemma 3 27B</th></tr></thead>
+<tbody>
+<tr><td>MMLU Pro</td><td class="best">85.2%</td><td>82.6%</td><td>77.2%</td><td>69.4%</td><td>60.0%</td><td>67.6%</td></tr>
+<tr><td>GPQA Diamond</td><td class="best">84.3%</td><td>82.3%</td><td>78.8%</td><td>58.6%</td><td>43.4%</td><td>42.4%</td></tr>
+<tr><td>AIME 2026 (no tools)</td><td class="best">89.2%</td><td>88.3%</td><td>77.5%</td><td>42.5%</td><td>37.5%</td><td>20.8%</td></tr>
+<tr><td>LiveCodeBench v6</td><td class="best">80.0%</td><td>77.1%</td><td>72.0%</td><td>52.0%</td><td>44.0%</td><td>29.1%</td></tr>
+<tr><td>Codeforces Elo</td><td class="best">2150</td><td>1718</td><td>1659</td><td>940</td><td>633</td><td>110</td></tr>
+<tr><td>MMMU Pro</td><td class="best">76.9%</td><td>73.8%</td><td>69.1%</td><td>52.6%</td><td>44.2%</td><td>49.7%</td></tr>
+</tbody>
+</table>
+</div><figure style="margin:2rem 0;text-align:center;">
+<svg aria-labelledby="g6t g6d" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.32);border-radius:14px;background:#040711;box-shadow:0 8px 24px rgba(0,0,0,0.5);" viewbox="0 0 960 420">
+<title id="g6t">MMLU Pro and GPQA Diamond scores for Gemma models</title>
+<desc id="g6d">Grouped bars compare MMLU Pro and GPQA Diamond for Gemma 4 31B, 26B A4B, 12B, E4B, E2B and Gemma 3 27B.</desc>
+<rect fill="#000" height="420" width="960"></rect>
+<text fill="#FFD24A" font-size="22" font-weight="700" x="40" y="36">Gemma reasoning scores (percent)</text>
+<rect fill="#FFD24A" height="14" width="14" x="40" y="48"></rect><text fill="#e9e6dc" font-size="12" x="60" y="60">MMLU Pro</text>
+<rect fill="#00E5FF" height="14" width="14" x="140" y="48"></rect><text fill="#e9e6dc" font-size="12" x="160" y="60">GPQA Diamond</text>
+<g stroke="#2a2410"><line x1="90" x2="930" y1="340" y2="340"></line><line x1="90" x2="930" y1="270" y2="270"></line><line x1="90" x2="930" y1="200" y2="200"></line><line x1="90" x2="930" y1="130" y2="130"></line></g>
+<g fill="#a9a596" font-size="12" text-anchor="end"><text x="80" y="344">0</text><text x="80" y="274">25</text><text x="80" y="204">50</text><text x="80" y="134">75</text></g>
+<!-- 2.8 px per percent -->
+<g>
+<rect fill="#FFD24A" height="238.6" width="50" x="115" y="101.4"></rect><rect fill="#00E5FF" height="236" width="50" x="170" y="104"></rect>
+<rect fill="#FFD24A" height="231.3" width="50" x="255" y="108.7"></rect><rect fill="#00E5FF" height="230.4" width="50" x="310" y="109.6"></rect>
+<rect fill="#FFD24A" height="216.2" width="50" x="395" y="123.8"></rect><rect fill="#00E5FF" height="220.6" width="50" x="450" y="119.4"></rect>
+<rect fill="#FFD24A" height="194.3" width="50" x="535" y="145.7"></rect><rect fill="#00E5FF" height="164.1" width="50" x="590" y="175.9"></rect>
+<rect fill="#FFD24A" height="168" width="50" x="675" y="172"></rect><rect fill="#00E5FF" height="121.5" width="50" x="730" y="218.5"></rect>
+<rect fill="#FFD24A" height="189.3" width="50" x="815" y="150.7"></rect><rect fill="#00E5FF" height="118.7" width="50" x="870" y="221.3"></rect>
+</g>
+<g fill="#fff" font-size="12" font-weight="700" text-anchor="middle">
+<text x="140" y="95">85.2</text><text x="195" y="98">84.3</text><text x="280" y="102">82.6</text><text x="335" y="103">82.3</text><text x="420" y="117">77.2</text><text x="475" y="113">78.8</text>
+<text x="560" y="139">69.4</text><text x="615" y="169">58.6</text><text x="700" y="166">60.0</text><text x="755" y="212">43.4</text><text x="840" y="144">67.6</text><text x="895" y="215">42.4</text>
+</g>
+<g fill="#e9e6dc" font-size="13" text-anchor="middle"><text x="167" y="364">31B</text><text x="307" y="364">26B A4B</text><text x="447" y="364">12B</text><text x="587" y="364">E4B</text><text x="727" y="364">E2B</text><text x="867" y="364">Gemma 3 27B</text></g>
+<text fill="#a9a596" font-size="12" x="40" y="402">Source: Gemma 4 model card, instruction-tuned models; Gemma 3 27B without thinking. Vendor-reported.</text>
+</svg>
+<figcaption style="color:var(--text-muted, #94a3b8);font-size:0.875rem;margin-top:0.75rem;font-style:italic;">Image 6. Gemma 4 gains over Gemma 3 27B, even at much smaller sizes.</figcaption>
+</figure><p>The headline in that table is generational. The E2B model, at 2.3B effective parameters, beats Gemma 3 27B on AIME, GPQA Diamond and LiveCodeBench but trails it on MMLU Pro, and the Gemma 4 technical report says it roughly matches the older model overall. The 31B model scores 89.2 percent on AIME 2026 against 20.8 percent for Gemma 3 27B, though the older model ran without thinking.</p><h3>Against other open-weight models</h3><p>Independent comparisons are fewer and less flattering. <a class="gold-link" href="https://artificialanalysis.ai/articles/gemma-4-everything-you-need-to-know">Artificial Analysis's review</a> gives its Intelligence Index as 39 for the 31B, 31 for the 26B A4B, 19 for E4B and 15 for E2B. Qwen3.5 27B in reasoning mode scores 42, and Qwen3.5 35B A3B scores 37.</p><p>In that comparison, the 31B trails Qwen3.5 27B by 3 points, mainly because of weaker agentic performance. It leads on SciCode and TerminalBench Hard, and it ties on GPQA Diamond, IFBench and HLE. The 26B A4B sits 6 points below Qwen3.5 35B A3B and slightly above GLM-4.7-Flash at 30.</p><figure style="margin:2rem 0;text-align:center;">
+<svg aria-labelledby="g7t g7d" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.32);border-radius:14px;background:#040711;box-shadow:0 8px 24px rgba(0,0,0,0.5);" viewbox="0 0 960 400">
+<title id="g7t">Artificial Analysis Intelligence Index for Gemma 4 and similar open models</title>
+<desc id="g7d">Horizontal bars show Qwen3.5 27B at 42, Gemma 4 31B at 39, Qwen3.5 35B A3B at 37, Gemma 4 26B A4B at 31, GLM-4.7-Flash at 30, Gemma 4 E4B at 19 and Gemma 4 E2B at 15.</desc>
+<rect fill="#000" height="400" width="960"></rect>
+<text fill="#FFD24A" font-size="22" font-weight="700" x="40" y="36">Intelligence Index, open-weight models (Artificial Analysis)</text>
+<!-- 14 px per point, x0=260 -->
+<g fill="#e9e6dc" font-size="15" text-anchor="end">
+<text x="248" y="80">Qwen3.5 27B (reasoning)</text><text x="248" y="124">Gemma 4 31B</text><text x="248" y="168">Qwen3.5 35B A3B (reasoning)</text><text x="248" y="212">Gemma 4 26B A4B</text><text x="248" y="256">GLM-4.7-Flash (reasoning)</text><text x="248" y="300">Gemma 4 E4B</text><text x="248" y="344">Gemma 4 E2B</text>
+</g>
+<rect fill="#00E5FF" height="26" width="588" x="260" y="62"></rect>
+<rect fill="#FFD24A" height="26" width="546" x="260" y="106"></rect>
+<rect fill="#00E5FF" height="26" width="518" x="260" y="150"></rect>
+<rect fill="#FFD24A" height="26" width="434" x="260" y="194"></rect>
+<rect fill="#FF2E93" height="26" width="420" x="260" y="238"></rect>
+<rect fill="#FFD24A" height="26" width="266" x="260" y="282"></rect>
+<rect fill="#FFD24A" height="26" width="210" x="260" y="326"></rect>
+<g fill="#fff" font-size="15" font-weight="700">
+<text x="858" y="81">42</text><text x="816" y="125">39</text><text x="788" y="169">37</text><text x="704" y="213">31</text><text x="690" y="257">30</text><text x="536" y="301">19</text><text x="480" y="345">15</text>
+</g>
+<text fill="#a9a596" font-size="12" x="40" y="382">Source: Artificial Analysis, Gemma 4 review. Gold bars are Gemma 4. Output tokens to run the index: Gemma 4 31B 39M, Qwen3.5 27B 98M.</text>
+</svg>
+<figcaption style="color:var(--text-muted, #94a3b8);font-size:0.875rem;margin-top:0.75rem;font-style:italic;">Image 7. Gemma 4 sits just behind the strongest similar-size Qwen models on this index.</figcaption>
+</figure><p>Two more details change the picture. Artificial Analysis reports that Gemma 4 31B used 39 million output tokens to run the index, against 98 million for Qwen3.5 27B, so Gemma reaches its score with far less text. On its AA-Omniscience measure, which rewards avoiding wrong answers, the smaller E4B (-20) and E2B (-24) score better than the 31B (-45).</p><p>The Gemma 4 technical report adds Arena data. On June 19, 2026, the 31B had a text Elo of 1451 and ranked as the top open dense model, and the 26B A4B scored 1438. The report notes that Qwen 3.5 397B-A17B scored 1444, and that several larger open models, including GLM 5.1, Kimi K2.6 and DeepSeek V4 Pro, scored higher than the 31B.</p><p>Taken together, Gemma 4 is strong for its size and competitive, not dominant. It is near the top among models you can run on one GPU, and it trails the largest open models and the best Qwen at similar sizes on some tests. The only reliable verdict comes from your own tasks, so test two or three candidates on your real prompts.</p>
+    </article>
+
+    <article class="content-card" id="gemmaverse">
+      <h2 id="gemmaverse">The Gemmaverse</h2><p>Google calls the community around Gemma the Gemmaverse. On August 21, 2026, <a class="gold-link" href="https://thenextweb.com/news/google-gemma-one-billion-downloads-gemmaverse-variants">The Next Web reported</a> that the Gemma family had passed one billion downloads and that developers had published more than 100,000 variants. Google has not published how it counts either figure, so treat both as company claims.</p><p>The official <a class="gold-link" href="https://github.com/google-gemma/awesome-gemma">Awesome Gemma list</a> is the best directory. It sorts projects into models, inference tools, fine-tunes, tutorials, demos, challenges and research. The sections below pull out the entries I could verify, grouped by purpose.</p><figure style="margin:2rem 0;text-align:center;">
+<svg aria-labelledby="g8t g8d" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.32);border-radius:14px;background:#040711;box-shadow:0 8px 24px rgba(0,0,0,0.5);" viewbox="0 0 960 460">
+<title id="g8t">The Gemmaverse map</title>
+<desc id="g8d">Gemma sits at the center with one billion downloads and 100,000 variants, connected to health, science, language, tools, space and challenges.</desc>
+<rect fill="#000" height="460" width="960"></rect>
+<text fill="#FFD24A" font-size="22" font-weight="700" x="40" y="38">The Gemmaverse</text>
+<g fill="none" opacity=".85" stroke-width="2.5">
+<path d="M480 235 L 170 120" stroke="#00E5FF"></path><path d="M480 235 L 480 110" stroke="#FF2E93"></path><path d="M480 235 L 790 120" stroke="#2EE59D"></path>
+<path d="M480 235 L 170 350" stroke="#8B5CF6"></path><path d="M480 235 L 480 370" stroke="#FF9F1C"></path><path d="M480 235 L 790 350" stroke="#FFD24A"></path>
+</g>
+<circle cx="480" cy="235" fill="#2a2105" r="80" stroke="#FFD24A" stroke-width="4"></circle>
+<text fill="#FFD24A" font-size="22" font-weight="700" text-anchor="middle" x="480" y="222">Gemma</text>
+<text fill="#e9e6dc" font-size="13" text-anchor="middle" x="480" y="244">1B+ downloads</text>
+<text fill="#e9e6dc" font-size="13" text-anchor="middle" x="480" y="262">100K+ variants</text>
+<g font-weight="700" text-anchor="middle">
+<rect fill="#06222a" height="76" rx="12" stroke="#00E5FF" stroke-width="3" width="240" x="50" y="82"></rect><text fill="#00E5FF" font-size="16" x="170" y="114">Health</text><text fill="#cfeff5" font-size="12" font-weight="400" x="170" y="137">MedGemma, TxGemma</text>
+<rect fill="#2a0a1a" height="76" rx="12" stroke="#FF2E93" stroke-width="3" width="240" x="360" y="72"></rect><text fill="#FF2E93" font-size="16" x="480" y="104">Language</text><text fill="#f5cfe0" font-size="12" font-weight="400" x="480" y="127">TranslateGemma, BgGPT</text>
+<rect fill="#06261a" height="76" rx="12" stroke="#2EE59D" stroke-width="3" width="240" x="670" y="82"></rect><text fill="#2EE59D" font-size="16" x="790" y="114">Science</text><text fill="#cff5e4" font-size="12" font-weight="400" x="790" y="137">Cell2Sentence-Scale</text>
+<rect fill="#1c1040" height="76" rx="12" stroke="#8B5CF6" stroke-width="3" width="240" x="50" y="312"></rect><text fill="#b9a2ff" font-size="16" x="170" y="344">Tools</text><text fill="#ddd2ff" font-size="12" font-weight="400" x="170" y="367">Ollama, LM Studio, Unsloth</text>
+<rect fill="#2a1a03" height="76" rx="12" stroke="#FF9F1C" stroke-width="3" width="240" x="360" y="372"></rect><text fill="#FF9F1C" font-size="16" x="480" y="404">Space and nature</text><text fill="#ffe0b8" font-size="12" font-weight="400" x="480" y="427">satellites, DolphinGemma</text>
+<rect fill="#2a2105" height="76" rx="12" stroke="#FFD24A" stroke-width="3" width="240" x="670" y="312"></rect><text fill="#FFD24A" font-size="16" x="790" y="344">Community</text><text fill="#e9e6dc" font-size="12" font-weight="400" x="790" y="367">Kaggle challenges, guides</text>
+</g>
+</svg>
+<figcaption style="color:var(--text-muted, #94a3b8);font-size:0.875rem;margin-top:0.75rem;font-style:italic;">Image 8. The Gemmaverse: official variants, partner science projects, tools and community events.</figcaption>
+</figure><h3>Health and science variants</h3><p>The <a class="gold-link" href="https://huggingface.co/collections/google/medgemma-release">MedGemma collection</a> holds medical text and image models, and the <a class="gold-link" href="https://huggingface.co/collections/google/txgemma-release">TxGemma collection</a> targets therapeutic development. Google says MedGemma is used for outpatient triage at AIIMS and by frontline health workers in rural Uganda, though The Next Web did not verify those claims. Yale and Google built <a class="gold-link" href="https://huggingface.co/vandijklab/C2S-Scale-Gemma-2-27B">Cell2Sentence-Scale</a>, a Gemma 2 27B model tuned for single-cell biology.</p><h3>Language and translation</h3><p>The <a class="gold-link" href="https://huggingface.co/collections/google/translategemma">TranslateGemma collection</a> covers 55 languages. INSAIT built BgGPT, a Bulgarian-first model on Gemma, and Google also lists a Japanese-language Gemma 2 variant. For offline use, the Awesome Gemma list includes a translation device built on Gemma 4 E2B.</p><h3>Tools, demos and learning</h3><p>The list includes local chat and coding agents for Apple Silicon, a browser extension agent using WebGPU, and a tool that runs and compares several local Gemma instances at once. For learning, Maarten Grootendorst's <a class="gold-link" href="https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-gemma-4">visual guide</a> explains the architecture with diagrams. Google's <a class="gold-link" href="https://huggingface.co/spaces/google/gemma4_vision_token_budget">vision token budget Space</a> is a hands-on demo.</p><h3>Space, nature and challenges</h3><p>Google reports that NASA, Satlyt and Starcloud run Gemma in space for onboard image analysis and routing, without saying which models fly on which spacecraft. DolphinGemma, built with Georgia Tech and the Wild Dolphin Project, studies dolphin communication. Developers can join the <a class="gold-link" href="https://www.kaggle.com/competitions/gemma-4-good-hackathon">Gemma 4 Good Challenge</a> on Kaggle, and the earlier Gemma Challenge drew more than 1,600 submissions.</p><p>The ecosystem includes commercial and national deployments as well. Google says India's National Health Authority integrated Gemma 4 into the Aarogya Setu 2.0 app, which has over 100 million Android downloads. That figure counts the app, not Gemma, and The Next Web did not verify the deployment.</p>
+    </article>
+
+    <article class="content-card" id="choose">
+      <h2 id="choose">Choosing a model</h2><p>Start from your hardware and your task, then pick the smallest model that passes your own test. The guide below turns the earlier tables into a short list. It reflects my reading of the published data, so adjust it after you try each model.</p><ol class="tight">
+<li><strong>Phone or Raspberry Pi:</strong> E2B for speed, E4B if you have the memory and need better answers.</li>
+<li><strong>Everyday laptop assistant:</strong> E4B or 12B Unified at 4-bit, which fit in 16 GB with room for context.</li>
+<li><strong>Coding and reasoning on a workstation:</strong> 31B if you have 24 GB or more of GPU memory, since it posts the best scores in the family.</li>
+<li><strong>Fast responses on a large-memory machine:</strong> 26B A4B, which runs near 4B speed but needs 14 to 18 GB at 4-bit.</li>
+<li><strong>Search and retrieval:</strong> EmbeddingGemma 2 instead of a chat model.</li>
+<li><strong>Translation or medical text:</strong> TranslateGemma or MedGemma, then validate carefully.</li>
+</ol><p>Then run a small test. Take ten real prompts, run them on two models, and compare the answers blind. Record tokens per second and memory use, because speed on your machine matters more than any leaderboard.</p><p>Finally, plan for updates. Gemma releases keep arriving, and the release page shows a new model or variant every few months. Keep your prompts and test set in version control so you can rerun them on the next release.</p>
+    </article>
+
+    <article class="content-card" id="conclusion">
+      <h2 id="conclusion">Conclusion</h2><p>Gemma shows how far small language models have come. A 2.3B effective model now beats the 27B model of the previous generation on several benchmarks, and the 31B model sits near the top of open dense models on Arena. Independent data places it just behind the best Qwen models at similar sizes, which is strong for a model you can run at home.</p><p>The practical case is just as clear. Apache 2.0 licensing, free downloads and mature tools such as Ollama, LM Studio and llama.cpp make local use easy, and Hugging Face supplies the surrounding workshop. A single 24 GB machine now covers most of the family, and a phone covers the smallest members.</p><p>The Gemmaverse adds a reason to stay. Over 100,000 variants, partner science projects and open challenges mean you rarely start from zero. Pick a model, run it, test it on your own work, and let the results decide.</p>
+    </article>
+
+<article class="content-card" id="pricing-parity">
+      <h2>Practice Pricing &amp; Global Purchasing Power Parity</h2>
+      <p>
+        To ensure production-grade local model deployment, Gemma SLM quantization pipelines, and sovereign privacy-first inference workflows are accessible globally, our advisory practices operate under clear, transparent milestones:
+      </p>
+
+      <h3>Flagship Consulting Packages</h3>
+      <ul style="line-height:1.8;">
+        <li>
+          <strong>Business AI Training Flagship:</strong> <strong>$2,500 USD</strong> for <strong>60 days total</strong> (30 days of live engineering training + 30 days of dedicated architectural support). Includes up to 10 enterprise seats. Additional seats are $250 USD per seat up to a maximum of 20 seats. Delivered 4 hours per day, Monday through Friday (Saturdays and Sundays are holidays), 100% remote worldwide.
+        </li>
+        <li>
+          <strong>Personal AI Training Flagship:</strong> <strong>$2,500 USD</strong> for <strong>60 days total</strong> (30 days of live 1-on-1 private acceleration + 30 days of dedicated support). Strictly one participant only, providing comprehensive executive and technical mastery. Delivered 4 hours per day, Monday through Friday, 100% remote worldwide.
+        </li>
+      </ul>
+
+      <h3>Individual Service Picks</h3>
+      <p>
+        Organizations and professionals requiring targeted implementation on specific topics (such as local model cost slashing or custom agent orchestration) can book focused modules:
+      </p>
+      <ul style="line-height:1.8;">
+        <li><strong>Business Individual Pick:</strong> <strong>$250 USD</strong> base for 1 seat, with additional seats at $250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
+        <li><strong>Personal Individual Pick:</strong> <strong>$250 USD</strong> strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
+      </ul>
+
+      <h3>Payment Structure &amp; Trust Guarantees</h3>
+      <p>
+        Every client engagement is safeguarded by strict trust guarantees:
+      </p>
+      <ul style="line-height:1.7;">
+        <li><strong>Zero Upfront Payment:</strong> Strictly $0 advance deposit required. We never invoice before delivering actual value.</li>
+        <li><strong>20% in Five Installments:</strong> Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.</li>
+        <li><strong>Walkaway Guarantee:</strong> If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.</li>
+        <li><strong>Commercial Apache 2.0 License:</strong> All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.</li>
+        <li><strong>Full Pricing Details:</strong> Learn more about country tier multipliers, currency choices, and customized curriculum on our <a class="gold-link" href="../pricing.html">Pricing Page</a>.</li>
+      </ul>
+
+      <h3>The Six Purchasing Power Parity (PPP) Tiers</h3>
+      <p>
+        To ensure fair global access across all 195 countries, fees are adjusted by national economic indicators in accordance with our Purchasing Power Parity framework:
+      </p>
+      <table class="parity-table" style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.9rem;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border-gold);text-align:left;">
+            <th style="padding:0.75rem;">Tier</th>
+            <th style="padding:0.75rem;">Economic Category</th>
+            <th style="padding:0.75rem;">Representative Countries</th>
+            <th style="padding:0.75rem;">Parity Multiplier</th>
+            <th style="padding:0.75rem;">Business Flagship</th>
+            <th style="padding:0.75rem;">Personal Flagship</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Tier 1</strong></td>
+            <td>High-Income Baseline</td>
+            <td>United States, UK, Germany, Canada, Japan, Singapore, Australia</td>
+            <td>1.00X</td>
+            <td>$2,500 USD</td>
+            <td>$2,500 USD</td>
+          </tr>
+          <tr>
+            <td><strong>Tier 2</strong></td>
+            <td>Upper-Middle Economies</td>
+            <td>Brazil, Mexico, Malaysia, Turkiye, Thailand, Philippines, Sri Lanka</td>
+            <td>0.75X</td>
+            <td>$1,875 USD</td>
+            <td>$1,875 USD</td>
+          </tr>
+          <tr>
+            <td><strong>Tier 3</strong></td>
+            <td>Lower-Middle &amp; Low-Income</td>
+            <td>India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam</td>
+            <td>0.50X</td>
+            <td>$1,250 USD</td>
+            <td>$1,250 USD</td>
+          </tr>
+          <tr>
+            <td><strong>Tier 4</strong></td>
+            <td>Early-Stage Startups</td>
+            <td>Global tech startups with &lt;$1M external funding</td>
+            <td>0.50X</td>
+            <td>$1,250 USD</td>
+            <td>$1,250 USD</td>
+          </tr>
+          <tr>
+            <td><strong>Tier 5</strong></td>
+            <td>Academia &amp; Non-Profits</td>
+            <td>Universities, accredited labs, registered charities &amp; 501(c)(3) entities</td>
+            <td>0.25X</td>
+            <td>$625 USD</td>
+            <td>$625 USD</td>
+          </tr>
+          <tr>
+            <td><strong>Tier 6</strong></td>
+            <td>Subsidized Relief</td>
+            <td>Crisis-affected regions, developing collectives &amp; grassroots builders</td>
+            <td>Custom</td>
+            <td>Subsidized</td>
+            <td>$250 USD</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article class="content-card" id="references">
+      <h2 id="references">References</h2><p>All links below returned a live page, or were read in full, when I opened them on November 4, 2026.</p><ol class="refs">
+<li><a class="gold-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/">Gemma 4: Byte for byte, the most capable open models, Google Blog</a><span class="d">Launch post: sizes, Apache 2.0 license, supported tools, hardware and Gemmaverse figures.</span></li>
+<li><a class="gold-link" href="https://ai.google.dev/gemma/docs/core/model_card_4">Gemma 4 model card, Google AI for Developers</a><span class="d">Architecture, context windows, languages, benchmark table, safety and limitations.</span></li>
+<li><a class="gold-link" href="https://ai.google.dev/gemma/docs/core">Gemma core models, Google AI for Developers</a><span class="d">Model list and approximate memory requirements by precision.</span></li>
+<li><a class="gold-link" href="https://gemma.ai/models/releases/">Gemma release notes, gemma.ai</a><span class="d">Dated list of every Gemma release and variant.</span></li>
+<li><a class="gold-link" href="https://arxiv.org/html/2607.02770v1">Gemma 4 Technical Report (arXiv 2607.02770)</a><span class="d">Gemma Team report with quantization memory and Arena results.</span></li>
+<li><a class="gold-link" href="https://artificialanalysis.ai/articles/gemma-4-everything-you-need-to-know">Gemma 4: Google on the American open weights frontier, Artificial Analysis</a><span class="d">Independent Intelligence Index comparison with Qwen and GLM models, token use and license notes.</span></li>
+<li><a class="gold-link" href="https://arxiv.org/abs/2506.02153">Small Language Models are the Future of Agentic AI (arXiv 2506.02153)</a><span class="d">NVIDIA researchers' position paper on SLMs for agents.</span></li>
+<li><a class="gold-link" href="https://huggingface.co/blog/gemma4">Welcome Gemma 4, Hugging Face Blog</a><span class="d">Library support, architecture, fine-tuning examples and quantization tips.</span></li>
+<li><a class="gold-link" href="https://huggingface.co/docs/hub/index">Hugging Face Hub documentation</a><span class="d">Hub scale, repositories, Spaces, Storage Buckets, organizations and security.</span></li>
+<li><a class="gold-link" href="https://huggingface.co/google">Google on Hugging Face</a><span class="d">Google's organization page with Gemma 4, MedGemma and EmbeddingGemma collections.</span></li>
+<li><a class="gold-link" href="https://huggingface.co/blog/transformersjs-chrome-extension">How to Use Transformers.js in a Chrome Extension, Hugging Face Blog</a><span class="d">Browser deployment of local models.</span></li>
+<li><a class="gold-link" href="https://huggingface.co/spaces/google/gemma4_vision_token_budget">Gemma 4 Vision Token Budget, Hugging Face Space</a><span class="d">Interactive demo of image resolution and visual tokens.</span></li>
+<li><a class="gold-link" href="https://ollama.com/library/gemma4">gemma4, Ollama library</a><span class="d">Tags, file sizes and context windows for every Gemma 4 size.</span></li>
+<li><a class="gold-link" href="https://ollama.com/">Ollama</a><span class="d">Platforms and usage figures.</span></li>
+<li><a class="gold-link" href="https://lmstudio.ai/models/gemma-4">Gemma 4, LM Studio</a><span class="d">Download sizes, formats and memory guidance.</span></li>
+<li><a class="gold-link" href="https://github.com/ggml-org/llama.cpp">llama.cpp, GitHub</a><span class="d">Inference engine features, backends and license.</span></li>
+<li><a class="gold-link" href="https://huggingface.co/collections/ggml-org/gemma-4">Gemma 4 GGUF collection, ggml-org</a><span class="d">Ready-made GGUF files for llama.cpp.</span></li>
+<li><a class="gold-link" href="https://unsloth.ai/docs/models/gemma-4">Gemma 4 local guide, Unsloth</a><span class="d">Memory totals by quantization, recommended settings and Unsloth Studio.</span></li>
+<li><a class="gold-link" href="https://developers.google.com/edge/litert-lm/models/gemma-4">Gemma 4 on LiteRT-LM, Google AI Edge</a><span class="d">On-device speed and memory benchmarks across phones, laptops and Raspberry Pi.</span></li>
+<li><a class="gold-link" href="https://support.google.com/gemini/answer/16345172">Use Deep Think in Gemini Apps, Gemini Apps Help</a><span class="d">Example of a hosted feature being replaced.</span></li>
+<li><a class="gold-link" href="https://thenextweb.com/news/google-gemma-one-billion-downloads-gemmaverse-variants">Google says Gemma has passed a billion downloads, The Next Web</a><span class="d">Download and variant counts, and notable projects.</span></li>
+<li><a class="gold-link" href="https://github.com/google-gemma/awesome-gemma">Awesome Gemma, GitHub</a><span class="d">Official directory of Gemmaverse projects, tools and tutorials.</span></li>
+<li><a class="gold-link" href="https://huggingface.co/collections/google/medgemma-release">MedGemma collection, Hugging Face</a><span class="d">Medical text and image models.</span></li>
+<li><a class="gold-link" href="https://huggingface.co/collections/google/txgemma-release">TxGemma collection, Hugging Face</a><span class="d">Therapeutic development models.</span></li>
+<li><a class="gold-link" href="https://huggingface.co/collections/google/translategemma">TranslateGemma collection, Hugging Face</a><span class="d">Translation models covering 55 languages.</span></li>
+<li><a class="gold-link" href="https://huggingface.co/vandijklab/C2S-Scale-Gemma-2-27B">C2S-Scale-Gemma-2-27B, Hugging Face</a><span class="d">Gemma 2 27B tuned for single-cell biology.</span></li>
+<li><a class="gold-link" href="https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-gemma-4">A Visual Guide to Gemma 4, Maarten Grootendorst</a><span class="d">Illustrated explanation of the architecture.</span></li>
+<li><a class="gold-link" href="https://www.kaggle.com/competitions/gemma-4-good-hackathon">Gemma 4 Good Challenge, Kaggle</a><span class="d">Community hackathon for social impact projects.</span></li>
+<li><a class="gold-link" href="https://lmstudio.ai/">LM Studio</a><span class="d">Product page stating MLX and llama.cpp as underlying runtimes.</span></li>
+</ol>
+    </article>
+
+    <section class="cta-banner">
+      <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Deploy Local Open-Weight Intelligence with Google Gemma</h2>
+      <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
+        Architect private, cost-slashed SLM pipelines, local function-calling swarms, and on-device inference tailored for enterprise sovereignty.
+      </p>
+      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+        <a class="btn btn-primary" href="../contact.html">Schedule Gemma Advisory Session →</a>
+        <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank" style="text-decoration:none !important;">Free LinkedIn Consultation ↗</a>
+        <a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
+      </div>
+    </section>
+  </main>
+    <!-- START:FOOTER -->
+    <footer id="links">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="footer-brand-logo-link" aria-label="Thomas Cherickal - The Digital Futurist">
+          <img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo" class="footer-brand-logo"
+            width="46" height="46" />
+        </a>
+        <div>
+          <p class="footer-brand-name">The Digital Futurist</p>
+          <p class="footer-brand-tagline">Thomas Cherickal · Generative AI Consultant</p>
+        </div>
+      </div>
+      <div class="footer-newsletter-wrap">
+        <div class="newsletter-card">
+          <div class="newsletter-info">
+            <p class="newsletter-name"><span class="newsletter-icon"><svg class="newsletter-svg" width="18" height="18"
+                  viewBox="0 0 24 24" fill="#F87171" aria-hidden="true">
+                  <path
+                    d="m3.5 11.633-2.434 2.408V8.687a.53.53 0 0 0-.533-.527.53.53 0 0 0-.533.527v6.624a.528.528 0 0 0 .532.526.533.533 0 0 0 .377-.153l2.974-2.939 2.974 2.94a.535.535 0 0 0 .754 0 .522.522 0 0 0 0-.746l-2.974-2.938L7.61 9.06a.522.522 0 0 0 0-.745.538.538 0 0 0-.753 0l-3.344 3.307c-.003 0-.005.003-.007.005l-.007.006v-.001zm8.826 4.206a.53.53 0 0 1-.533-.526V8.688a.53.53 0 0 1 .533-.528.53.53 0 0 1 .533.528v6.624a.53.53 0 0 1-.533.526v.001zm7.257-6.624v6.098c0 .29.238.526.532.526a.53.53 0 0 0 .533-.526V9.215h2.818A.53.53 0 0 0 24 8.688a.53.53 0 0 0-.533-.527h-6.702a.53.53 0 0 0-.533.527.53.53 0 0 0 .533.527h2.819-.001z" />
+                </svg></span>The Digital Futurist Newsletter</p>
+            <p class="newsletter-desc">How to understand and build emerging technologies.</p>
+          </div>
+          <a href="https://thomascherickal.kit.com" target="_blank" rel="noopener" class="btn btn-primary"
+            style="white-space:nowrap;">Subscribe Free →</a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-label" id="contact-label">Find Me Online</p>
+    <div class="social-grid">
+      <a href="https://thomascherickal.com" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal Profile Site"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg></span>Master Blog</a>
+      <a href="https://github.com/thomascherickal" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal GitHub Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true">
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+          </svg></span>GitHub</a>
+      <a href="https://linkedin.com/in/thomascherickal" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal LinkedIn Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#0A66C2" aria-hidden="true">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg></span>LinkedIn</a>
+      <a href="https://hackernoon.com/u/thomascherickal" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal HackerNoon Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#00EB47" aria-hidden="true">
+            <path
+              d="M5.701 0v6.223H8.85V4.654h1.576v7.842H12V4.654h1.574v1.569h3.15V0zm11.024 6.223v3.136h1.574V6.223zm1.574 3.136v4.705h1.576v-1.568h1.574v-1.568h-1.574V9.359zm0 4.705h-1.574v3.137h1.574zm-1.574 3.137h-3.15v1.569H8.85V17.2H5.7V24h11.024zm-11.024 0v-3.137H4.125v3.137zm-1.576-3.137V9.36H2.551v4.705zm0-4.705h1.576V6.223H4.125Z" />
+          </svg></span>HackerNoon</a>
+      <a href="https://thomascherickal.medium.com" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal Medium Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true">
+            <path
+              d="M4.21 0A4.201 4.201 0 0 0 0 4.21v15.58A4.201 4.201 0 0 0 4.21 24h15.58A4.201 4.201 0 0 0 24 19.79v-1.093c-.137.013-.278.02-.422.02-2.577 0-4.027-2.146-4.09-4.832a7.592 7.592 0 0 1 .022-.708c.093-1.186.475-2.241 1.105-3.022a3.885 3.885 0 0 1 1.395-1.1c.468-.237 1.127-.367 1.664-.367h.023c.101 0 .202.004.303.01V4.211A4.201 4.201 0 0 0 19.79 0Zm.198 5.583h4.165l3.588 8.435 3.59-8.435h3.864v.146l-.019.004c-.705.16-1.063.397-1.063 1.254h-.003l.003 10.274c.06.676.424.885 1.063 1.03l.02.004v.145h-4.923v-.145l.019-.005c.639-.144.994-.353 1.054-1.03V7.267l-4.745 11.15h-.261L6.15 7.569v9.445c0 .857.358 1.094 1.063 1.253l.02.004v.147H4.405v-.147l.019-.004c.705-.16 1.065-.397 1.065-1.253V6.987c0-.857-.358-1.094-1.064-1.254l-.018-.004zm19.25 3.668c-1.086.023-1.733 1.323-1.813 3.124H24V9.298a1.378 1.378 0 0 0-.342-.047Zm-1.862 3.632c-.1 1.756.86 3.239 2.204 3.634v-3.634z" />
+          </svg></span>Medium</a>
+      <a href="https://thomascherickal.hashnode.dev" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal Hashnode Blog"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#2962FF" aria-hidden="true">
+            <path
+              d="M22.351 8.019l-6.37-6.37a5.63 5.63 0 0 0-7.962 0l-6.37 6.37a5.63 5.63 0 0 0 0 7.962l6.37 6.37a5.63 5.63 0 0 0 7.962 0l6.37-6.37a5.63 5.63 0 0 0 0-7.962zM12 15.953a3.953 3.953 0 1 1 0-7.906 3.953 3.953 0 0 1 0 7.906z" />
+          </svg></span>Hashnode</a>
+      <a href="https://thesingularitypoint.substack.com" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal Substack"><span class="social-icon"><svg class="social-svg" width="18" height="18"
+            viewBox="0 0 24 24" fill="#FF6719" aria-hidden="true">
+            <path
+              d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
+          </svg></span>Substack</a>
+      <a href="https://exercism.org/profiles/thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal Exercism Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="24" height="24" rx="4" fill="#E5E7EB" />
+            <g transform="translate(12, 12) scale(0.68) translate(-15.0245, -11.9765)" fill="#000000">
+              <path
+                d="M 16.7711 15.3596 C 16.7711 16.376 15.8912 17.0112 15.1118 17.0112 C 14.3324 17.0112 13.3973 16.6954 13.3973 15.3596 V 14.71 H 12.3706 V 15.3596 C 12.3706 16.8389 13.6008 18.0421 15.1118 18.0421 C 16.6228 18.0421 17.8529 16.8389 17.8529 15.3596 V 14.71 H 16.7711 V 15.3596 Z" />
+              <path
+                d="M 8.14791 12.2226 C 8.14791 11.252 8.98972 10.4627 10.024 10.4627 C 11.0576 10.4627 11.8994 11.2527 11.8994 12.2226 H 13.0811 C 13.0811 10.64 11.7104 9.35303 10.024 9.35303 C 8.33759 9.35303 6.96619 10.64 6.96619 12.2226 H 8.14791 Z" />
+              <path
+                d="M 17.8859 12.2226 C 17.8859 11.252 18.7278 10.4627 19.7613 10.4627 C 20.7956 10.4627 21.6374 11.2527 21.6374 12.2226 H 22.8191 C 22.8191 10.64 21.4477 9.35303 19.7613 9.35303 C 18.0749 9.35303 16.7042 10.64 16.7042 12.2226 H 17.8859 Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M 24.7258 8.45805 V 4.64371 C 24.7258 3.35828 24.5696 2.46641 24.257 1.96808 C 23.9445 1.46974 23.2938 1.08551 22.3049 0.815389 C 22.0063 0.731557 21.8571 0.596496 21.8571 0.410202 C 21.8571 0.158705 22.1929 0.032959 22.8646 0.032959 H 23.8862 C 24.9964 0.032959 25.8384 0.377597 26.4121 1.06688 C 26.9859 1.75617 27.2727 2.76214 27.2727 4.08483 V 8.10875 C 27.2727 9.04022 27.373 9.75744 27.5736 10.2604 C 27.7742 10.7634 28.145 11.2338 28.6861 11.6716 C 28.8447 11.802 28.924 11.9091 28.924 11.993 C 28.924 12.0768 28.8447 12.1839 28.6861 12.3143 C 28.1357 12.7614 27.7625 13.2341 27.5666 13.7325 C 27.3707 14.2308 27.2727 14.9457 27.2727 15.8772 V 19.8871 C 27.2727 21.2191 26.9835 22.2297 26.4051 22.919 C 25.8267 23.6083 24.9871 23.953 23.8862 23.953 H 22.8646 C 22.4261 23.953 22.1486 23.932 22.032 23.8901 C21.9154 23.8482 21.8571 23.7434 21.8571 23.5757 C 21.8571 23.3429 22.011 23.1892 22.3189 23.1146 L 22.8786 22.9889 C 24.1101 22.7095 24.7258 21.4939 24.7258 19.3422 V 15.5279 C 24.7258 14.0841 25.0757 13.0641 25.7754 12.468 L 26.0413 12.2445 C 26.1719 12.1327 26.2372 12.0488 26.2372 11.993 C 26.2372 11.9278 26.1719 11.8439 26.0413 11.7415 L 25.7754 11.5179 C 25.0757 10.9218 24.7258 9.90183 24.7258 8.45805 Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M 5.32324 8.42509 V 4.61075 C 5.32324 3.32532 5.47951 2.43345 5.79204 1.93512 C 6.10458 1.43678 6.75529 1.05256 7.74421 0.78243 C 8.04275 0.698598 8.19202 0.563537 8.19202 0.377243 C 8.19202 0.125746 7.85616 0 7.18445 0 H 6.16288 C 5.05269 0 4.21072 0.344638 3.63696 1.03393 C 3.06321 1.72321 2.77633 2.72918 2.77633 4.05187 V 8.0758 C 2.77633 9.00726 2.67604 9.72448 2.47546 10.2275 C 2.27488 10.7305 1.90404 11.2009 1.36294 11.6386 C 1.20434 11.7691 1.12504 11.8762 1.12504 11.96 C 1.12504 12.0438 1.20434 12.151 1.36294 12.2814 C 1.91337 12.7285 2.28654 13.2012 2.48246 13.6995 C 2.67838 14.1978 2.77633 14.9127 2.77633 15.8442 V 19.8542 C 2.77633 21.1862 3.06554 22.1968 3.64396 22.8861 C 4.22238 23.5754 5.06202 23.92 6.16288 23.92 H 7.18445 C 7.62293 23.92 7.90047 23.899 8.01709 23.8571 C 8.13371 23.8152 8.19202 23.7104 8.19202 23.5428 C 8.19202 23.3099 8.03808 23.1562 7.73021 23.0817 L 7.17045 22.9559 C 5.93897 22.6765 5.32324 21.4609 5.32324 19.3093 V 15.4949 C 5.32324 14.0511 4.9734 13.0312 4.27369 12.435 L 4.00781 12.2115 C 3.87719 12.0997 3.81189 12.0159 3.81189 11.96 C 3.81189 11.8948 3.87719 11.811 4.00781 11.7085 L 4.27369 11.485 C 4.9734 10.8888 5.32324 9.86887 5.32324 8.42509 Z" />
+            </g>
+          </svg></span>Exercism</a>
+      <a href="https://www.deep-ml.com/profile/thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal Deep-ML Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="24" height="24" rx="4" fill="#003865" />
+            <g transform="scale(0.046875)">
+              <g transform="translate(56.32 144.46) scale(0.60785)">
+                <path fill="#ffffff" fill-rule="evenodd"
+                  d="M36.4 365.4C31.4 363.0 30.0 359.4 30.0 349.2C30.0 344.2 29.7 339.5 29.4 338.6C28.9 337.3 27.1 337.0 19.9 337.0C9.3 337.0 4.9 335.5 2.0 330.8C0.0 327.5 0.0 326.2 0.0 183.5C0.0 70.3 0.3 39.0 1.3 37.0C2.0 35.7 4.1 33.5 5.9 32.3C8.9 30.3 10.6 30.0 18.9 30.0C25.1 30.0 29.0 29.6 29.8 28.8C30.5 28.1 31.0 24.4 31.0 19.3C31.0 9.8 32.4 5.4 36.5 2.2C39.3 0.0 39.3 -0.0 95.2 0.0C156.5 0.0 155.3 -0.1 158.5 6.0C159.5 8.0 160.0 11.8 160.0 18.3C160.0 24.2 160.4 28.0 161.2 28.8C162.0 29.6 166.0 30.0 172.4 30.0C183.8 30.0 186.4 30.9 189.7 35.9C191.7 38.9 192.0 40.5 192.0 50.1C192.0 63.2 191.8 63.0 205.3 63.0C213.3 63.0 215.1 63.3 217.4 65.1C221.7 68.5 222.5 70.9 223.0 83.5L223.5 95.5L233.3 96.1C248.4 97.0 252.0 100.8 252.0 116.1C252.0 123.1 252.3 124.9 253.6 125.4C254.5 125.7 259.4 126.0 264.6 126.0C273.5 126.0 274.1 126.1 277.2 128.9L280.5 131.8L281.0 152.3C281.4 167.5 281.8 173.1 282.9 174.4C284.1 175.8 287.0 176.0 306.1 176.0C327.5 176.0 327.9 176.0 329.4 173.8C330.7 172.0 331.0 168.2 331.0 153.7C331.0 133.9 331.7 130.8 336.9 127.7C339.0 126.5 342.1 126.0 348.3 126.0C353.0 126.0 357.5 125.7 358.4 125.4C359.7 124.9 360.0 123.1 360.0 116.1C360.0 100.8 363.6 97.0 378.7 96.1L388.4 95.5L389.2 92.0C389.6 90.1 389.9 84.6 389.9 79.9C389.8 70.2 390.7 67.8 395.3 65.0C397.8 63.4 400.3 63.0 407.1 63.0C413.1 63.0 416.1 62.6 416.9 61.7C417.5 60.9 418.2 55.0 418.6 48.4C418.9 41.9 419.6 35.5 420.2 34.3C422.3 29.9 425.9 28.6 436.5 28.0L446.5 27.5L447.0 17.5C447.6 6.7 448.9 3.3 453.6 1.2C455.2 0.4 463.0 0.0 475.6 0.0C502.1 0.0 503.1 0.6 504.0 16.5L504.5 25.5L514.0 26.0C524.3 26.6 527.0 27.6 529.8 31.7C531.4 34.2 531.5 42.5 532.0 159.0L532.5 283.5L573.0 284.0C603.4 284.4 614.1 284.8 615.8 285.8C620.1 288.3 621.5 291.8 622.0 302.0L622.5 311.5L633.0 312.0C651.1 312.9 652.3 314.8 651.8 340.9C651.5 360.7 651.1 361.8 644.4 365.0C640.4 367.0 638.4 367.0 568.6 366.8L496.8 366.5L493.4 362.8C490.1 359.1 490.0 358.8 490.0 350.7C490.0 345.6 489.5 341.9 488.8 341.2C488.1 340.5 484.4 340.0 479.3 340.0C469.4 340.0 466.0 338.6 463.6 333.6C462.2 330.5 462.0 320.2 462.0 223.6C462.0 119.3 462.0 117.0 460.1 116.0C457.6 114.7 442.4 114.7 439.9 116.0C438.2 117.0 438.0 118.2 438.0 130.6C438.0 146.0 436.9 149.8 431.8 153.0C429.2 154.6 426.8 155.0 419.7 155.0C406.6 155.0 407.0 154.5 407.0 170.3C407.0 190.8 404.3 194.0 387.3 194.0C379.2 194.0 377.9 194.2 377.0 195.9C376.5 197.0 376.0 203.8 376.0 211.0L376.0 224.2L372.6 227.6L369.2 231.0L358.8 231.0C352.0 231.0 347.8 231.4 346.8 232.2C345.5 233.3 345.1 236.0 344.8 246.5C344.3 267.8 343.9 268.0 310.5 268.0C277.3 268.0 276.9 267.8 276.2 246.0C275.9 236.1 275.5 233.2 274.2 232.2C273.2 231.5 269.3 231.0 263.7 231.0C255.0 231.0 254.7 230.9 251.6 227.8C248.4 224.6 248.3 224.2 247.6 213.1C247.3 206.8 246.7 201.3 246.4 200.9C246.1 200.4 241.7 200.0 236.7 200.0C220.8 200.0 218.0 196.6 218.0 177.2C218.0 169.4 217.6 165.0 216.8 164.2C216.0 163.4 212.3 163.0 206.8 163.0C191.6 163.0 188.5 159.8 188.7 143.8C188.9 131.1 188.8 131.0 176.3 131.0C160.9 131.0 158.0 127.7 158.0 110.5C158.0 98.9 158.1 99.0 143.5 99.0L132.8 99.0L129.4 95.6L126.0 92.2L126.0 81.0C126.0 74.9 125.5 69.0 125.0 67.9C124.0 66.1 122.6 66.0 94.9 66.0L66.0 66.0L65.0 68.6C64.4 70.2 64.0 113.2 64.0 184.3C64.0 285.2 64.2 297.8 65.6 299.8C67.0 301.9 67.8 302.0 80.1 302.0C87.3 302.0 94.0 301.6 95.0 301.0C96.5 300.2 96.9 298.2 97.5 288.8C97.9 282.6 98.7 276.7 99.2 275.7C101.2 271.8 106.1 270.0 114.7 270.0C122.0 270.0 123.1 269.8 124.4 267.8C125.8 265.8 126.0 258.8 126.0 211.2L126.0 156.8L128.9 153.9L131.8 151.0L148.7 151.0C164.5 151.0 165.8 151.1 167.9 153.1C171.1 156.1 172.0 159.2 172.0 167.5C172.0 175.8 172.2 176.0 180.0 176.0C186.7 176.0 189.5 179.4 190.3 188.2C191.3 200.5 191.1 291.8 190.1 295.8C189.5 297.9 187.9 300.7 186.4 302.1C184.2 304.2 182.7 304.5 175.7 304.8C162.1 305.3 163.0 304.6 163.0 315.3C163.0 331.1 159.4 335.2 144.7 336.0L135.5 336.5L135.0 347.2C134.4 359.2 133.1 362.1 126.9 365.2C123.8 366.8 119.5 367.0 81.5 367.0C46.1 367.0 39.0 366.7 36.4 365.4Z" />
+                <path fill="#018AFA"
+                  d="M576.2 98.7C571.1 95.8 570.5 93.7 570.2 75.7C569.8 57.2 570.3 54.6 575.2 50.5C577.9 48.2 578.9 48.0 588.5 48.0C597.8 48.0 599.0 47.8 600.0 46.1C600.6 44.9 601.0 36.7 601.0 26.5C601.0 -0.3 600.6 0.0 629.7 0.0C657.4 0.0 657.0 -0.4 657.0 26.3C657.0 42.4 656.8 43.9 654.9 46.4C651.6 50.6 649.1 51.5 638.5 52.0L628.5 52.5L628.0 62.2C627.5 71.1 627.3 72.2 624.8 74.7C622.5 77.0 621.0 77.5 614.8 77.9L607.5 78.5L607.0 86.3C606.5 93.6 606.3 94.4 603.2 97.1C600.0 99.9 599.7 100.0 589.2 100.0C582.6 99.9 577.6 99.5 576.2 98.7Z" />
+              </g>
+            </g>
+          </svg></span>Deep-ML</a>
+      <a href="https://hackerrank.com/profile/thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal HackerRank Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#00EA64" aria-hidden="true">
+            <path
+              d="M0 0v24h24V0zm9.95 8.002h1.805c.061 0 .111.05.111.111v7.767c0 .061-.05.111-.11.111H9.95c-.061 0-.111-.05-.111-.11v-2.87H7.894v2.87c0 .06-.05.11-.11.11H5.976a.11.11 0 01-.11-.11V8.112c0-.06.05-.11.11-.11h1.806c.061 0 .11.05.11.11v2.869H9.84v-2.87c0-.06.05-.11.11-.11zm2.999 0h5.778c.061 0 .111.05.111.11v7.767a.11.11 0 01-.11.112h-5.78a.11.11 0 01-.11-.11V8.111c0-.06.05-.11.11-.11z" />
+          </svg></span>HackerRank</a>
+      <a href="https://leetcode.com/u/thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal LeetCode Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#FFA116" aria-hidden="true">
+            <path
+              d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+          </svg></span>LeetCode</a>
+      <a href="https://www.codewars.com/users/thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal CodeWars Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#BA423D" aria-hidden="true">
+            <path
+              d="M1.072.142A1.072 1.072 0 0 0 0 1.214v21.572a1.072 1.072 0 0 0 1.072 1.072h21.856A1.072 1.072 0 0 0 24 22.786V1.214A1.072 1.072 0 0 0 22.928.142zm9.736 1.818a.904.904 0 0 1 .828.539.784.784 0 0 1 1.274.493.639.639 0 0 1 .29-.06c.33.008.59.262.625.575a1.322 1.322 0 0 1 .624-.515 1.325 1.325 0 0 1 1.718.71 1.098 1.098 0 0 1 .306-.236 1.102 1.102 0 0 1 1.483.479 1.094 1.094 0 0 1 .12.47.994.994 0 0 1 1.322 1.214.904.904 0 0 1 .874 1.438.784.784 0 0 1 .176 1.356.639.639 0 0 1 .19.224.642.642 0 0 1-.011.613 1.326 1.326 0 0 1 .482.235 1.334 1.334 0 0 1 .258 1.842 1.098 1.098 0 0 1 .35.15 1.102 1.102 0 0 1 .337 1.516 1.094 1.094 0 0 1-.344.344.994.994 0 0 1 .228 1.318 1.006 1.006 0 0 1-.605.434.904.904 0 0 1-.803 1.482.814.814 0 0 0-.008-.04.784.784 0 0 1-1.075.873.639.639 0 0 1-.098.28.625.625 0 0 1-.43.288 1.33 1.33 0 0 1 .023.456 1.334 1.334 0 0 1-1.44 1.173 1.098 1.098 0 0 1 .054.377 1.102 1.102 0 0 1-1.128 1.072 1.098 1.098 0 0 1-.47-.12.994.994 0 0 1-1.696.583.904.904 0 0 1-1.685.075.784.784 0 0 1-1.274-.493.639.639 0 0 1-.29.064.64.64 0 0 1-.621-.58l.004-.007a1.326 1.326 0 0 1-.632.523 1.334 1.334 0 0 1-1.718-.706 1.098 1.098 0 0 1-.306.232 1.102 1.102 0 0 1-1.48-.478 1.094 1.094 0 0 1-.123-.471.994.994 0 0 1-1.318-1.21.904.904 0 0 1-.874-1.442.784.784 0 0 1-.176-1.356.639.639 0 0 1-.194-.224.642.642 0 0 1 .011-.61l.019.004a1.326 1.326 0 0 1-.497-.239 1.334 1.334 0 0 1-.262-1.845 1.098 1.098 0 0 1-.35-.146 1.102 1.102 0 0 1-.337-1.52 1.094 1.094 0 0 1 .347-.34A.994.994 0 0 1 2.88 9a.904.904 0 0 1 .803-1.48.784.784 0 0 1 1.083-.836.639.639 0 0 1 .098-.28.649.649 0 0 1 .433-.288 1.33 1.33 0 0 1-.026-.452A1.334 1.334 0 0 1 6.716 4.49a1.098 1.098 0 0 1-.06-.377 1.101 1.101 0 0 1 1.13-1.073 1.094 1.094 0 0 1 .47.115.994.994 0 0 1 1.696-.579.904.904 0 0 1 .857-.617z" />
+          </svg></span>CodeWars</a>
+      <a href="https://www.naukri.com/code360/profile/thomascherickal" target="_blank" rel="noopener"
+        class="social-link" aria-label="Thomas Cherickal Code360 Profile"><span class="social-icon"><svg
+            class="social-svg" width="18" height="18" viewBox="0 0 24 24" fill="#F25430" aria-hidden="true">
+            <path
+              d="M23.198 0c-.499.264-1.209.675-1.79.984a542.82 542.82 0 000 6.242c.995-.526 1.761-.834 1.79-2.066V0zM8.743.181C7.298.144 5.613.65 4.47 1.414c-1.17.8-1.987 1.869-2.572 3.179A16.787 16.787 0 00.9 8.87c-.15 1.483-.128 3.079.025 4.677.27 1.855.601 3.724 1.616 5.456 1.57 2.62 4.313 4.109 7.262 4.19 3.41.246 7.233.53 11.411.807.022-2.005.01-5.418 0-6.25-3.206-.21-7.398-.524-11.047-.782-.443-.043-.896-.056-1.324-.172-1.086-.295-1.806-.802-2.374-1.757-.643-1.107-.875-2.832-.797-4.294.11-1.27.287-2.41 1.244-3.44.669-.56 1.307-.758 2.161-.84 5.17.345 7.609.53 12.137.858.032-1.133.01-3.46 0-6.229C16.561.752 12.776.474 8.743.181zm-.281 9.7c.174.675.338 1.305.729 1.903.537.832 1.375 1.127 2.388.877.76-.196 1.581-.645 2.35-1.282zm12.974 1.04l-5.447.689c.799.739 1.552 1.368 2.548 1.703.988.319 1.78.01 2.308-.777.209-.329.56-1.148.591-1.614zm.842 6.461c-.388.01-.665.198-.87.355.002 1.798 0 4.127 0 6.223.586-.297 1.135-.644 1.793-.998-.005-1.454.002-3.137-.005-4.707a.904.904 0 00-.917-.873z" />
+          </svg></span>Code360</a>
+      <a href="https://www.hackerearth.com/@thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal HackerEarth Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="24" height="24" rx="4" fill="#000000" />
+            <path fill="#FFFFFF"
+              d="M18.447 20.936H5.553V19.66h12.894zM9.511 0H6.97v17.65h2.58V10.25c0-1.88 1.35-2.77 2.64-2.77 1.76 0 2.34 1.33 2.34 3.12v7.05h2.54v-7.32c-.13-3.82-2.05-5.05-4.02-5.17-1.33-.09-2.55.03-3.54 1.31V0z" />
+          </svg></span>HackerEarth</a>
+      <a href="https://www.kaggle.com/thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal Kaggle Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#20BEFF" aria-hidden="true">
+            <path
+              d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.246l-5.18-6.598-1.453 1.383v5.215c0 .164-.082.246-.246.246H5.474c-.164 0-.246-.082-.246-.246V.246c0-.164.082-.246.246-.246h2.559c.164 0 .246.082.246.246v14.906l6.398-6.398c.141-.141.305-.211.492-.211h3.281c.141 0 .234.059.281.176.047.141.023.246-.07.316l-7.242 7.102 7.547 7.43c.094.094.117.199.07.293z" />
+          </svg></span>Kaggle</a>
+      <a href="https://profile.codersrank.io/user/thomascherickal/" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal CodersRank Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#67A4AC" aria-hidden="true">
+            <path
+              d="M23.134 8.64l-5.973-3.62a.286.286 0 0 0-.412.125l-1.4 3.286 2.842 1.696a.53.53 0 0 1 0 .921l-5.335 3.14-2.267 5.274a.127.127 0 0 0 .052.203.122.122 0 0 0 .134-.035l3.914-2.365 1.545 2.219a.373.373 0 0 0 .309.167h3.708a.367.367 0 0 0 .327-.2.382.382 0 0 0-.018-.386l-2.513-3.852 5.088-3.077c.577-.349.865-.74.865-1.172V9.813c0-.433-.288-.823-.866-1.172zM13.082 4.35L.845 12.052c-.577.348-.858.739-.845 1.171v1.173c.014.432.303.816.866 1.15l6.056 3.496a.286.286 0 0 0 .412-.146l1.36-3.286-2.884-1.633a.518.518 0 0 1-.275-.384.529.529 0 0 1 .254-.537l5.295-3.245 2.183-5.316a.128.128 0 0 0-.04-.142.122.122 0 0 0-.146-.005z" />
+          </svg></span>CodersRank</a>
+      <a href="https://thomascherickal.quora.com" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal Quora Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#B92B27" aria-hidden="true">
+            <path
+              d="M7.3799.9483A11.9628 11.9628 0 0 1 21.248 19.5397l2.4096 2.4225c.7322.7362.21 1.9905-.8272 1.9905l-10.7105.01a12.52 12.52 0 0 1-.304 0h-.02A11.9628 11.9628 0 0 1 7.3818.9503Zm7.3217 4.428a7.1717 7.1717 0 1 0-5.4873 13.2512 7.1717 7.1717 0 0 0 5.4883-13.2511Z" />
+          </svg></span>Quora</a>
+      <a href="https://reddit.com/user/thomascherickal1" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal Reddit Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#FF4500" aria-hidden="true">
+            <path
+              d="M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-2.286 2.286C.775 23.225 1.097 24 1.738 24H12c6.627 0 12-5.373 12-12S18.627 0 12 0Zm4.388 3.199c1.104 0 1.999.895 1.999 1.999 0 1.105-.895 2-1.999 2-.946 0-1.739-.657-1.947-1.539v.002c-1.147.162-2.032 1.15-2.032 2.341v.007c1.776.067 3.4.567 4.686 1.363.473-.363 1.064-.58 1.707-.58 1.547 0 2.802 1.254 2.802 2.802 0 1.117-.655 2.081-1.601 2.531-.088 3.256-3.637 5.876-7.997 5.876-4.361 0-7.905-2.617-7.998-5.87-.954-.447-1.614-1.415-1.614-2.538 0-1.548 1.255-2.802 2.803-2.802.645 0 1.239.218 1.712.585 1.275-.79 2.881-1.291 4.64-1.365v-.01c0-1.663 1.263-3.034 2.88-3.207.188-.911.993-1.595 1.959-1.595Zm-8.085 8.376c-.784 0-1.459.78-1.506 1.797-.047 1.016.64 1.429 1.426 1.429.786 0 1.371-.369 1.418-1.385.047-1.017-.553-1.841-1.338-1.841Zm7.406 0c-.786 0-1.385.824-1.338 1.841.047 1.017.634 1.385 1.418 1.385.785 0 1.473-.413 1.426-1.429-.046-1.017-.721-1.797-1.506-1.797Zm-3.703 4.013c-.974 0-1.907.048-2.77.135-.147.015-.241.168-.183.305.483 1.154 1.622 1.964 2.953 1.964 1.33 0 2.47-.81 2.953-1.964.057-.137-.037-.29-.184-.305-.863-.087-1.795-.135-2.769-.135Z" />
+          </svg></span>Reddit</a>
+      <a href="https://x.com/thomazcherickal" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal X Profile"><span class="social-icon"><svg class="social-svg" width="18" height="18"
+            viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true">
+            <path
+              d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z" />
+          </svg></span>X (Twitter)</a>
+      <a href="https://linktr.ee/thomascherickal" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal Linktree Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#43E55E" aria-hidden="true">
+            <path
+              d="m13.73635 5.85251 4.00467-4.11665 2.3248 2.3808-4.20064 4.00466h5.9085v3.30473h-5.9365l4.22865 4.10766-2.3248 2.3338L12.0005 12.099l-5.74052 5.76852-2.3248-2.3248 4.22864-4.10766h-5.9375V8.12132h5.9085L3.93417 4.11666l2.3248-2.3808 4.00468 4.11665V0h3.4727zm-3.4727 10.30614h3.4727V24h-3.4727z" />
+          </svg></span>Linktree</a>
+    </div>
+
+    <hr class="dv">
+
+    <!-- WORK WITH ME -->
+
+    <p class="tc-label">Work With Me</p>
+    <div class="wg footer-work-row">
+
+      <!-- Topmate -->
+      <a href="https://topmate.io/thomascherickal" class="wl" target="_blank" rel="noopener noreferrer">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 47 46" fill="none" aria-hidden="true">
+              <circle cx="23.6" cy="23" r="22.5" fill="#E44332" />
+              <path
+                d="M33.0038 29.6411C31.5707 31.6672 29.5206 33.1752 27.1598 33.9401C24.7989 34.705 22.254 34.6857 19.905 33.8851C17.5561 33.0844 15.5291 31.5454 14.1269 29.4978C12.7247 27.4503 12.0225 25.0041 12.1251 22.5246C12.2277 20.045 13.1296 17.6652 14.6962 15.7405C16.2627 13.8158 18.4099 12.4495 20.817 11.8456C23.224 11.2418 25.7619 11.4328 28.0515 12.3901C30.341 13.3474 32.2595 15.0197 33.5204 17.1572L23.6152 23L33.0038 29.6411Z"
+                fill="#FEF7F7" />
+            </svg>
+          </div>
+          <span class="wl-name">1-on-1 Consults</span>
+        </div>
+        <p class="wl-desc">Book strategy, architecture reviews &amp; enterprise advisory.</p>
+        <span class="wl-url">topmate.io/thomascherickal</span>
+      </a>
+
+      <!-- Patreon -->
+      <a href="https://patreon.com/thomascherickal" class="wl" target="_blank" rel="noopener noreferrer">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FF424D" aria-hidden="true">
+              <path
+                d="M22.957 7.21c-.004-3.064-2.391-5.576-5.191-6.482-3.478-1.125-8.064-.962-11.384.604C2.357 3.231 1.093 7.391 1.046 11.54c-.039 3.411.302 12.396 5.369 12.46 3.765.047 4.326-4.804 6.068-7.141 1.24-1.662 2.836-2.132 4.801-2.618 3.376-.836 5.678-3.501 5.673-7.031Z" />
+            </svg>
+          </div>
+          <span class="wl-name">Patreon Community</span>
+        </div>
+        <p class="wl-desc">Exclusive member content, playbooks &amp; free book access.</p>
+        <span class="wl-url">patreon.com/thomascherickal</span>
+      </a>
+
+      <!-- Gumroad -->
+      <a href="https://thomascherickal.gumroad.com" class="wl" target="_blank" rel="noopener noreferrer">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FF90E8" aria-hidden="true">
+              <path
+                d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0Zm-.007 5.12c4.48 0 5.995 3.025 6.064 4.744h-3.239c-.069-.962-.897-2.406-2.896-2.406-2.136 0-3.514 1.857-3.514 4.126 0 2.27 1.378 4.125 3.514 4.125 1.93 0 2.758-1.512 3.103-3.025h-3.103v-1.238h6.509v6.327h-2.855v-3.989c-.207 1.444-1.102 4.264-4.617 4.264-3.516 0-5.584-2.82-5.584-6.326 0-3.645 2.276-6.602 6.618-6.602z" />
+            </svg>
+          </div>
+          <span class="wl-name">Digital Products</span>
+        </div>
+        <p class="wl-desc">Developer guides, architecture playbooks &amp; checklists.</p>
+        <span class="wl-url">thomascherickal.gumroad.com</span>
+      </a>
+
+      <!-- Pricing & Parity Index -->
+      <a href="https://thedigitalfuturist.com/pricing.html" class="wl" target="_blank" rel="noopener noreferrer">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+              <line x1="1" y1="10" x2="23" y2="10" />
+            </svg>
+          </div>
+          <span class="wl-name">Pricing &amp; Parity</span>
+        </div>
+        <p class="wl-desc">Transparent milestone rates &amp; 195-country PPP index.</p>
+        <span class="wl-url">thedigitalfuturist.com/pricing</span>
+      </a>
+
+      <!-- Message me on X -->
+      <a href="https://x.com/thomazcherickal" class="wl" target="_blank" rel="noopener noreferrer">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true">
+              <path
+                d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z" />
+            </svg>
+          </div>
+          <span class="wl-name">Message me on X</span>
+        </div>
+        <p class="wl-desc">Direct messaging, quick queries &amp; tech discussions.</p>
+        <span class="wl-url">x.com/thomazcherickal</span>
+      </a>
+
+      <!-- Direct Email Inquiry -->
+      <a href="mailto:thomascherickal@gmail.com" class="wl email-reveal-link" data-user="thomascherickal"
+        data-domain="gmail.com">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+          </div>
+          <span class="wl-name">Direct Inquiries</span>
+        </div>
+        <p class="wl-desc">Reach out directly for custom engagements &amp; proposals.</p>
+        <span class="wl-url email-display">thomascherickal@gmail.com</span>
+      </a>
+    </div>
+
+    <hr class="dv">
+
+    <!-- COPYRIGHT & DOMAINS -->
+    <p class="tc-copy">
+      © 2026 <a href="../index.html">Thomas
+        Cherickal</a>
+      <span class="tc-sep"></span> The Digital Futurist
+      <span class="tc-sep"></span> Generative AI Consultant
+      <span class="tc-sep"></span> <a href="https://thomascherickal.com" target="_blank"
+        rel="noopener noreferrer">thomascherickal.com</a>
+      <span class="tc-sep"></span> <a href="https://thedigitalfuturist.com" target="_blank"
+        rel="noopener noreferrer">thedigitalfuturist.com</a>
+    </p>
+  </footer>
+    <!-- END:FOOTER -->
+<script src="../components.js"></script>
+<script src="../assets/js/mermaid.min.js"></script>
+<script>
+(function () {
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: "base",
+    flowchart: { useMaxWidth: false },
+    timeline: { useMaxWidth: false },
+    themeVariables: {
+      darkMode: true,
+      background: "#020408",
+      primaryColor: "#0c111d",
+      primaryTextColor: "#e2e8f0",
+      primaryBorderColor: "#38bdf8",
+      lineColor: "#fbbf24",
+      secondaryColor: "#060912",
+      tertiaryColor: "#131926",
+      textColor: "#e2e8f0",
+      fontSize: "15px"
+    }
+  });
+  function renderDiagrams() {
+    if (!document.querySelector(".mermaid")) { return; }
+    mermaid.run({ querySelector: ".mermaid", suppressErrors: true })
+      .catch(function (e) { console.error("Mermaid render failed", e); });
+  }
+  var fontsReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+  window.addEventListener("load", function () { fontsReady.then(renderDiagrams); });
+})();
+</script>
+</body>
+</html>
