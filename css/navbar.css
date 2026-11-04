@@ -258,6 +258,14 @@ nav:not(.provider-nav-grid) {
   color: var(--gold, #fbbf24) !important;
 }
 
+.dropdown-menu a.disabled,
+.dropdown-menu a[aria-disabled="true"] {
+  opacity: 0.55 !important;
+  pointer-events: none !important;
+  cursor: not-allowed !important;
+  color: var(--text-muted, #94a3b8) !important;
+}
+
 .dropdown-divider {
   height: 1px;
   background: rgba(255, 255, 255, 0.1);

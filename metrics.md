@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-04 14:33:51 UTC` | Branch: `main` | Head Commit: `6a6fd9a`
+> **Automated Status Report** | Generated on `2026-11-04 16:46:32 UTC` | Branch: `main` | Head Commit: `625abb9`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **438** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **671,690** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **657,926** | Executable / renderable content lines |
+| **Total Lines of Source Code & Content** | **669,782** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **656,015** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **4,688** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **9,076** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **74.52 MB (78,134,891 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **669,540 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **464** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-04** | Subject: "Update Google Multimodality with Gemini multimodal ecosystem and case studies" |
+| **Blank / Spacing Lines** | **9,079** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **74.45 MB (78,064,116 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **669,057 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **465** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-04** | Subject: "Organize loose documentation into docs/, update Gemini 4 guides & local models" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,15 +27,15 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 66 | 77,248 | 5.88 MB (6,161,433 bytes) | Production static web pages, services, frameworks & guides |
-| **CSS Stylesheets** | 16 | 11,871 | 278.24 KB (284,922 bytes) | Design tokens, animations, responsive layout & themes |
+| **HTML Documents** | 66 | 77,222 | 5.88 MB (6,165,057 bytes) | Production static web pages, services, frameworks & guides |
+| **CSS Stylesheets** | 16 | 11,887 | 278.67 KB (285,354 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 5 | 6,187 | 3.50 MB (3,673,845 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 35 | 8,113 | 364.63 KB (373,384 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 87 | 30,774 | 3.39 MB (3,552,509 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 83 | 537,444 | 25.50 MB (26,741,675 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 87 | 30,716 | 3.38 MB (3,546,192 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 83 | 535,604 | 25.43 MB (26,666,078 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 95 | 0 | 35.51 MB (37,233,318 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 9 | 0 | 46.21 KB (47,317 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 9 | 0 | 53.12 KB (54,400 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,10 +43,10 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 83 | 537,444 | 25.50 MB (26,741,675 bytes) | 18.9% |
-| `.html` | 66 | 77,248 | 5.88 MB (6,161,433 bytes) | 15.1% |
-| `.md` | 87 | 30,774 | 3.39 MB (3,552,509 bytes) | 19.9% |
-| `.css` | 16 | 11,871 | 278.24 KB (284,922 bytes) | 3.7% |
+| `.json` | 83 | 535,604 | 25.43 MB (26,666,078 bytes) | 18.9% |
+| `.html` | 66 | 77,222 | 5.88 MB (6,165,057 bytes) | 15.1% |
+| `.md` | 87 | 30,716 | 3.38 MB (3,546,192 bytes) | 19.9% |
+| `.css` | 16 | 11,887 | 278.67 KB (285,354 bytes) | 3.7% |
 | `.py` | 35 | 8,113 | 364.63 KB (373,384 bytes) | 8.0% |
 | `.js` | 5 | 6,187 | 3.50 MB (3,673,845 bytes) | 1.1% |
 | `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 9.6% |
@@ -54,7 +54,7 @@
 | `.png` | 26 | 0 | 2.78 MB (2,918,409 bytes) | 5.9% |
 | `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 4.6% |
 | `.jpeg` | 5 | 0 | 809.15 KB (828,567 bytes) | 1.1% |
-| `.txt` | 2 | 0 | 26.67 KB (27,313 bytes) | 0.5% |
+| `.txt` | 2 | 0 | 33.59 KB (34,396 bytes) | 0.5% |
 | `.docx` | 1 | 0 | 10.34 KB (10,592 bytes) | 0.2% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
 | `.xml` | 1 | 0 | 6.35 KB (6,506 bytes) | 0.2% |
@@ -68,7 +68,7 @@
 | Metric | Measurement | Architecture Details |
 | :--- | :--- | :--- |
 | **CSS Media Queries (`@media`)** | **77** | Ultra-responsive breakpoints for mobile, tablet, desktop |
-| **CSS Rule Blocks** | **1,608** | Modular selector rules across all stylesheets |
+| **CSS Rule Blocks** | **1,610** | Modular selector rules across all stylesheets |
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **198** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **61** | Strict single-H1 semantic hierarchy per page |
@@ -84,7 +84,7 @@
 ## 5. Web Page Taxonomy & Sitemap Distribution
 
 - **Total Public HTML Pages**: **66**
-- **Core Landing & Portal Pages**: **18** (`404.html`, `all-business-services.html`, `all-personal-services.html`, `article-footer_dark.html`, `articles.html`, `business-ai-training.html`, `contact.html`, `expertise.html`, `faqs.html`, `footer.html`, `google43d90cf6a204dc6d.html`, `guarantee.html`, `header.html`, `index.html`, `mermaid.html`, `personal-ai-training.html`, `pricing.html`, `writing.html`)
+- **Core Landing & Portal Pages**: **18** (`404.html`, `all-business-services.html`, `all-personal-services.html`, `article-footers/article-footer_dark.html`, `articles.html`, `business-ai-training.html`, `contact.html`, `expertise.html`, `faqs.html`, `footer.html`, `google43d90cf6a204dc6d.html`, `guarantee.html`, `header.html`, `index.html`, `mermaid.html`, `personal-ai-training.html`, `pricing.html`, `writing.html`)
 - **Business AI Training Services (`business-services/`)**: **12** (Full enterprise curriculum, lead gen, agent orchestration, and architecture deep-dives)
 - **Personal AI Training Services (`personal-services/`)**: **12** (1-on-1 private acceleration, career transformation, continuous learning, and agentic workflows)
 - **Claude Guides & Frameworks (`claude/`)**: **12** (Claude Code, Cowork, Skills, MCP, Orchestration, Plugins, Science, Local LLMs, Features)
