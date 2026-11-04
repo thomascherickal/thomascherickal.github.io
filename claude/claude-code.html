@@ -159,7 +159,7 @@
               Slashing</a></li>
           <li><a href="../business-services/business-service-ai-agents-orchestration.html">Claude Agent Orchestration</a>
           </li>
-          <li><a href="../business-services/business-service-agentic-ai-systems.html">Hermes Agent Training</a></li>
+          <li><a href="../business-services/business-service-agentic-ai-systems.html">Agentic Assistants Training</a></li>
           <li><a href="../business-services/business-service-workflow-automations.html">Workflow Automations</a></li>
           <li><a href="../business-services/business-service-ai-budget-cost-limits-training.html">AI Budget &amp; Cost
               Control Training</a></li>
@@ -235,11 +235,11 @@
           <li><a href="../google/google-ai-studio.html">Google AI Studio</a></li>
           <li><a href="../google/google-antigravity-ide.html">Google Antigravity IDE</a></li>
           <li><a href="../google/google-gemini-deep-think.html">Gemini Deep Think</a></li>
-          <li><a href="../google/google-gemini-desktop.html">Google Gemini Desktop</a></li>
+          <li><a href="../google/google-gemini-desktop.html">Gemini Desktop</a></li>
           <li><a href="../google/google-gemini-spark.html">Gemini Spark</a></li>
           <li><a href="../google/google-gemini-notebook.html">Gemini Notebook</a></li>
           <li><a href="../google/google-gemma.html">Google Gemma</a></li>
-          <li><a href="../google/google-deep-research.html">Google Deep Research</a></li>
+          <li><a href="../google/google-multimodality.html">Google Multimodality</a></li>
           <li><a href="../google/google-deepmind.html">Google DeepMind</a></li>
           <li><a href="../google/google-gemini-4-models.html">Gemini 4 Models</a></li>
           <li><a href="../google/google-gemini-agents.html">Gemini Agents</a></li>
@@ -295,7 +295,8 @@
 <li><a href="#large">Working in Large Repositories</a></li>
 <li><a href="#feedback">What Developers Say</a></li>
 <li><a href="#numbers">Adoption by the Numbers</a></li>
-<li><a href="#refs">References</a></li>
+<li><a href="#pricing-parity">Practice Pricing & Global Purchasing Power Parity</a></li>
+        <li><a href="#refs">References</a></li>
 </ol>
 </div>
 <!-- 1. WHY ENGINEERS ADOPTED IT -->
@@ -389,7 +390,13 @@
 <!-- 4. CLAUDE CODE IN THE TERMINAL -->
 <div class="content-card" id="terminal">
 <h2>Claude Code in the Terminal</h2>
-<pre><code># start, continue, resume
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>bash - interactive session management</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
+</div>
+<pre class="code-pre"><code># start, continue, resume
 claude                              # interactive session
 claude "fix the build error"        # start with a prompt
 claude -c                           # continue the last session here
@@ -402,6 +409,7 @@ claude --permission-mode plan       # research and plan, no edits
 # one-shot and pipes
 claude -p "explain src/auth.ts"
 cat build.log | claude -p "find the root cause" &gt; cause.txt</code></pre>
+</div>
 <p>Inside a session, these commands do most of the work:</p>
 <div style="overflow-x:auto;">
 <table class="data-table">
@@ -436,13 +444,20 @@ cat build.log | claude -p "find the root cause" &gt; cause.txt</code></pre>
 <h2>Tutorials for Beginners</h2>
 <h3 id="t1"><span class="level lv-b">Beginner</span>Tutorial 1: Install and run your first session</h3>
 <p><strong>1. Install.</strong> Pick the command for your system.</p>
-<pre><code># macOS, Linux, WSL
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>bash - native installation</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
+</div>
+<pre class="code-pre"><code># macOS, Linux, WSL
 curl -fsSL https://claude.ai/install.sh | bash
 # Windows PowerShell
 irm https://claude.ai/install.ps1 | iex
 # or a package manager
 brew install --cask claude-code
 winget install Anthropic.ClaudeCode</code></pre>
+</div>
 <p><strong>2. Check it.</strong> Open a new terminal and run <code>claude --version</code>.</p>
 <p><strong>3. Log in.</strong> Run <code>claude</code> inside a project folder and follow the browser prompt. Any paid Claude plan or a Claude Console account works.</p>
 <p><strong>4. Ask before you change anything.</strong> Type <code>what does this project do?</code> or <code>explain the folder structure</code>. Claude reads the files it needs.</p>
@@ -453,7 +468,13 @@ winget install Anthropic.ClaudeCode</code></pre>
 <p><strong>JetBrains:</strong> install the CLI from Tutorial 1, then the Claude Code plugin from the JetBrains Marketplace, and restart the IDE. Press <code>Cmd+Esc</code> / <code>Ctrl+Esc</code> to launch Claude. Changes open in the IDE's diff viewer. If you prefer an external terminal, run <code>claude</code> there and type <code>/ide</code>.</p>
 <h3 id="t3" style="margin-top:2rem;"><span class="level lv-b">Beginner</span>Tutorial 3: Teach Claude your project</h3>
 <p>Run <code>/init</code>. Claude scans the repository and writes a CLAUDE.md. Edit it by hand, because short, specific rules work better than long ones:</p>
-<pre><code># CLAUDE.md
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>markdown - CLAUDE.md project guidelines</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
+</div>
+<pre class="code-pre"><code># CLAUDE.md
 ## Commands
 - Test: pytest -q
 - Lint: ruff check . &amp;&amp; mypy src
@@ -461,6 +482,7 @@ winget install Anthropic.ClaudeCode</code></pre>
 - Use the repository pattern in src/db/
 - Never edit files in migrations/ by hand
 - Run the tests before every commit</code></pre>
+</div>
 <p>Commit the file so your team shares it. Run <code>/memory</code> later to edit it from inside a session.</p>
 </div>
 <!-- 7. TUTORIALS FOR EXPERTS -->
@@ -468,15 +490,28 @@ winget install Anthropic.ClaudeCode</code></pre>
 <h2>Tutorials for Experts</h2>
 <h3 id="t4"><span class="level lv-e">Expert</span>Tutorial 4: Build a subagent and a hook</h3>
 <p>A subagent works in its own context window, so the main session stays focused. Create <code>.claude/agents/security-reviewer.md</code>, or ask Claude to create it:</p>
-<pre><code>---
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>yaml - prompt template with frontmatter</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
+</div>
+<pre class="code-pre"><code>---
 name: security-reviewer
 description: Reviews diffs for injection, auth and secrets issues. Read-only.
 tools: Read, Grep, Glob
 ---
 Review the current diff. Report file, line and a suggested fix.
 Do not edit files.</code></pre>
+</div>
 <p>Then prompt: <code>add rate limiting to /login, then have the security-reviewer subagent check the diff</code>. Add a hook in <code>.claude/settings.json</code> so every edit gets formatted:</p>
-<pre><code>{
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>json - global settings and permissions</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
+</div>
+<pre class="code-pre"><code>{
   "hooks": {
     "PostToolUse": [{
       "matcher": "Edit|Write",
@@ -484,9 +519,16 @@ Do not edit files.</code></pre>
     }]
   }
 }</code></pre>
+</div>
 <h3 id="t5" style="margin-top:2rem;"><span class="level lv-e">Expert</span>Tutorial 5: Run parallel background agents</h3>
 <p>Agent view (<code>claude agents</code>) lists every background session, grouped into needs input, working and completed. Each background session moves into its own git worktree under <code>.claude/worktrees/</code> before it edits, so parallel agents never write to the same checkout.</p>
-<pre><code># dispatch from your shell
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>bash - background agents and terminal multiplexing</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
+</div>
+<pre class="code-pre"><code># dispatch from your shell
 claude --bg --name flaky-test "investigate the flaky SettingsChangeDetector test"
 claude --agent security-reviewer --bg "review PR 1234"
 
@@ -494,6 +536,7 @@ claude --agent security-reviewer --bg "review PR 1234"
 claude agents          # one screen for every session
 claude logs &lt;id&gt;       # recent output
 claude attach &lt;id&gt;     # take over in this terminal</code></pre>
+</div>
 <p>Inside a session, <code>/bg</code> sends the current conversation to the background and <code>/fork</code> copies it into a new one. Pair a background agent with <code>/goal all tests in tests/api pass</code> and it keeps working until that condition holds.</p>
 <figure class="article-figure">
 <svg aria-label="Agent view dispatches three background sessions, each in its own git worktree, which report back as working, needs input or completed" role="img" viewbox="0 0 640 300">
@@ -514,13 +557,20 @@ claude attach &lt;id&gt;     # take over in this terminal</code></pre>
 </figure>
 <h3 id="t6" style="margin-top:2rem;"><span class="level lv-e">Expert</span>Tutorial 6: Automate in CI with headless mode</h3>
 <p><code>claude -p</code> runs one task and exits with a status code your scripts can check. Add <code>--bare</code> in CI so the run ignores hooks, plugins and CLAUDE.md on the host machine and behaves the same everywhere. Scope tools tightly:</p>
-<pre><code># commit staged work with only the git commands it needs
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>bash - automated git commit workflows</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
+</div>
+<pre class="code-pre"><code># commit staged work with only the git commands it needs
 claude -p "look at my staged changes and create a commit" \
   --allowedTools "Bash(git diff *),Bash(git status *),Bash(git commit *)"
 
 # unattended job: classifier reviews actions, nothing waits for a human
 claude --bare -p "update dependency pins and run the tests" \
   --permission-mode auto --permission-prompts none --output-format json</code></pre>
+</div>
 <p>For pull requests, run <code>/install-github-app</code> in a session. It installs the GitHub app and adds a workflow using <code>anthropics/claude-code-action@v1</code>, after which anyone can mention <code>@claude</code> in an issue or PR.</p>
 <figure class="article-figure">
 <svg aria-label="CI flow: pull request opened, GitHub Action runs claude -p, review comment posted, human approves merge" role="img" viewbox="0 0 640 120">
@@ -536,9 +586,16 @@ claude --bare -p "update dependency pins and run the tests" \
 <figcaption class="article-figcaption">Diagram 5: Claude Code in a pull request pipeline</figcaption>
 </figure>
 <h3 id="t7" style="margin-top:2rem;"><span class="level lv-e">Expert</span>Tutorial 7: Connect external tools with MCP</h3>
-<pre><code>claude mcp add --transport http notion https://mcp.notion.com/mcp
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>bash - mcp server integration</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
+</div>
+<pre class="code-pre"><code>claude mcp add --transport http notion https://mcp.notion.com/mcp
 claude mcp login notion     # authenticate from the shell
 claude mcp list             # confirm it connected</code></pre>
+</div>
 <p>Each MCP server adds tool definitions to the context, so connect only what the project uses. <code>/usage</code> shows which servers, skills and subagents drive your plan limits.</p>
 </div>
 <!-- 8. WORKING IN LARGE REPOSITORIES -->
@@ -603,6 +660,135 @@ claude mcp list             # confirm it connected</code></pre>
 </figure>
 <p>Anthropic has not published a total user count. On 12 February 2026 it said weekly active users had doubled since 1 January. The survey figures are self-reported and use different samples, so read them as direction rather than exact market share.</p>
 </div>
+
+<article class="content-card" id="pricing-parity">
+<h2>Practice Pricing &amp; Global Purchasing Power Parity</h2>
+<p>
+  I provide live, remote engineering training and advisory consulting covering Google Gemini, Claude, and sovereign local LLMs. Engagements turn engineering teams and individual developers into AI-first builders who construct production agent swarms, implement budget safeguards, and run private models.
+</p>
+<p>
+  All services are delivered remotely worldwide with 4 hours a day of live instruction, with Saturdays and Sundays as holidays. Pricing is governed by our transparent 195-country Purchasing Power Parity (PPP) framework scaling rates across six economic tiers. For full tier definitions, currency conversions, and interactive calculations, visit our <a class="gold-link" href="../pricing.html">Pricing Page</a>.
+</p>
+
+<div class="pricing-summary-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;margin:1.5rem 0;">
+<div class="package-card" style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:12px;padding:1.5rem;">
+<h3 style="color:var(--gold);margin-top:0;">Business AI Training Flagship</h3>
+<p style="color:var(--text-muted);font-size:0.9rem;">Comprehensive organizational workforce and engineering transformation.</p>
+<div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">$2,500 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
+<ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+<li>60 days total calendar duration: 30 days live engineering training + 30 days dedicated support.</li>
+<li>Includes up to 10 participants, with additional seats at $250 USD per seat up to a maximum of 20 seats.</li>
+<li>4 hours daily live instruction, Monday through Friday (Saturdays and Sundays holidays). Remote worldwide.</li>
+<li>Zero advance deposit ($0 upfront); 20% due in 5 milestone installments after completed progress.</li>
+<li>Walk away owing nothing if not satisfied after the first milestone training phase.</li>
+<li>High-quality training materials, guides, and custom code transferred under Apache 2.0 license (commercial use, resale, and relicensing permitted with attribution).</li>
+</ul>
+</div>
+
+<div class="package-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
+<h3 style="color:var(--cyan);margin-top:0;">Personal AI Training Flagship</h3>
+<p style="color:var(--text-muted);font-size:0.9rem;">Dedicated 1-on-1 private acceleration for solo founders, builders, and senior engineers.</p>
+<div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">$2,500 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
+<ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+<li>60 days total calendar duration: 30 days live 1-on-1 training + 30 days dedicated support.</li>
+<li>Strictly 1 person only (dedicated private acceleration).</li>
+<li>4 hours daily hands-on implementation, Monday through Friday (Saturdays and Sundays holidays). Remote worldwide.</li>
+<li>Zero advance deposit ($0 upfront); 20% due in 5 milestone installments after completed progress.</li>
+<li>Walk away owing nothing if not satisfied after the first milestone training phase.</li>
+<li>Comprehensive training curriculum and materials licensed under Apache 2.0 (commercial use, resale, and relicensing permitted with attribution).</li>
+</ul>
+</div>
+</div>
+
+<h3>Individual Service Picks (Pick &amp; Choose)</h3>
+<p>
+  Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
+</p>
+<ul style="line-height:1.8;">
+<li><strong>Business Individual Pick:</strong> <strong>$250 USD</strong> base for 1 seat, with additional seats at $250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
+<li><strong>Personal Individual Pick:</strong> <strong>$250 USD</strong> strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
+</ul>
+
+<h3>Payment Structure &amp; Trust Guarantees</h3>
+<p>
+  Every client engagement is safeguarded by strict trust guarantees:
+</p>
+<ul style="line-height:1.7;">
+<li><strong>Zero Upfront Payment:</strong> Strictly $0 advance deposit required. We never invoice before delivering actual value.</li>
+<li><strong>20% in Five Installments:</strong> Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.</li>
+<li><strong>Walkaway Guarantee:</strong> If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.</li>
+<li><strong>Commercial Apache 2.0 License:</strong> All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.</li>
+<li><strong>Full Pricing Details:</strong> Learn more about country tier multipliers, currency choices, and customized curriculum on our <a class="gold-link" href="../pricing.html">Pricing Page</a>.</li>
+</ul>
+
+<h3>The Six Purchasing Power Parity (PPP) Tiers</h3>
+<div class="table-responsive">
+<table class="data-table">
+<thead>
+<tr>
+<th>Tier</th>
+<th>Category</th>
+<th>Representative Geographies</th>
+<th>Multiplier</th>
+<th>Business Flagship</th>
+<th>Personal Flagship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tier 1</strong></td>
+<td>High-Income Baseline</td>
+<td>United States, UK, Germany, Canada, Japan, Singapore, Australia</td>
+<td>1.00X</td>
+<td>$2,500 USD</td>
+<td>$2,500 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 2</strong></td>
+<td>Upper-Middle Economies</td>
+<td>Brazil, Mexico, Malaysia, Turkiye, Thailand, Philippines, Sri Lanka</td>
+<td>0.75X</td>
+<td>$1,875 USD</td>
+<td>$1,875 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 3</strong></td>
+<td>Lower-Middle &amp; Low-Income</td>
+<td>India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam</td>
+<td>0.50X</td>
+<td>$1,250 USD</td>
+<td>$1,250 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 4</strong></td>
+<td>Early-Stage Startups</td>
+<td>Global tech startups with &lt;$1M external funding</td>
+<td>0.50X</td>
+<td>$1,250 USD</td>
+<td>$1,250 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 5</strong></td>
+<td>Academia &amp; Non-Profits</td>
+<td>Universities, accredited labs, registered charities &amp; 501(c)(3) entities</td>
+<td>0.25X</td>
+<td>$625 USD</td>
+<td>$625 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 6</strong></td>
+<td>Subsidized Relief</td>
+<td>Crisis-affected regions, developing collectives &amp; grassroots builders</td>
+<td>Custom</td>
+<td>Subsidized</td>
+<td>$250 USD</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+
+
 <!-- 11. REFERENCES -->
 <div class="content-card" id="refs" style="border-color:rgba(251,191,36,0.3);">
 <h2>References</h2>
@@ -626,13 +812,11 @@ claude mcp list             # confirm it connected</code></pre>
 </article>
 <!-- RELEVANT CALL TO ACTION -->
 <section class="cta-banner">
-<h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Deploy Autonomous Engineering Agents in Your Dev Org</h2>
-<p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
-        Supercharge developer productivity with production-grade Claude Code workflows, CI/CD integration, and custom terminal scaffolding.
-      </p>
+<h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Deploy Autonomous Claude Code Agents in Your Dev Org</h2>
+<p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">Supercharge engineering velocity with production-grade Claude Code terminal workflows, sandboxed subagent loops, CI/CD pipelines, and custom developer tooling.</p>
 <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
 <a class="btn btn-primary" href="../contact.html">Schedule Engineering Consultation →</a>
-<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
+<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
 <a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
 </div>
 </section>

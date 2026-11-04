@@ -48,6 +48,11 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - Never remove existing Dev.to links.
 - Mastodon is excluded.
 
+## Mermaid Diagrams Layout & Vertical Orientation Rule
+- **Vertical or Square Layouts by Default**: All Mermaid diagrams in HTML files (`<div class="mermaid">`) or Markdown files (````mermaid`) must be designed in a vertical (`TD`, `TB`) or square orientation to ensure minimal horizontal scrolling across viewport sizes.
+- **Rotate Horizontal Diagrams by 90 Degrees**: Do NOT use long horizontal flowcharts or graphs (`flowchart LR`, `graph LR`, `RL`). Long horizontal chains must be rotated by 90 degrees to vertical top-down orientation (`flowchart TD` or `graph TD`).
+- **Preserve Readability**: Never shrink diagram scales or compress node labels to unreadable font sizes to circumvent layout boundaries. Use vertical flow with standard, legible label typography.
+
 ## Article Footers
 - Keep `article-footer.md`, `article-footer_dark.html`, and `article-footer-plain.docx` in the repo; do not delete or move them.
 - Never insert an article footer into any Claude article (`claude-*.html` or `md-html-sync/claude-*.md`).
@@ -150,4 +155,32 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - **Test Isolation & Sandbox Execution**: Tests that simulate or verify changes to data (e.g. `tests/test_continuous_updates.py`) must never mutate repository files under `data/*.json`. Such tests must operate within isolated temporary sandboxes (e.g. `tempfile.mkdtemp()`) and instantiate `ExpertSynchronizer(data_dir=temp_dir)`.
 - **Pre-Test and Post-Test SHA-256 Integrity Verification**: `python/run_tests.py` computes cryptographic SHA-256 hashes of all `data/*.json` files prior to test execution and validates them immediately following execution. If any file in `data/` is altered, mutated, or created, the test suite aborts with exit code 1.
 - **Manual Authoring Only**: Changes to `data/*.json` may only be made by deliberate manual updates by the author or explicitly requested data configuration tasks aligned with `GEMINI.md`.
-- **In all prompts, ask clarifying questions to the user in the case of the slightest ambiguity, inconsistencies, doubts, clarifications, or unclear and imprecise specifications.  Never assume anything.  Always verify with the user.**
+
+## New Files & Source Control Integrity Rule
+- **Mandatory Pricing & PPP Parity Audit**: Whenever any new file (HTML, Markdown, script, or documentation) is created, updated, or added to source control:
+  - All pricing mentions, rates, and Purchasing Power Parity (PPP) numbers across all 6 tiers must strictly conform to the authoritative figures specified in `GEMINI.md` and `data/pricing.json`.
+  - Flagships must be specified at **$2,500 USD** for **60 days total** (30 days live + 30 days dedicated support), with additional seats at **$250 USD per seat** (up to 20 seats max for business; strictly 1 person only for personal).
+  - Individual service picks must be specified at **$250 USD** base rate (covering 5 days live + 5 days dedicated support).
+  - Advance deposit must strictly be **$0 upfront** (never corrupted strings or omitted dollar signs).
+  - The 6 PPP tiers must explicitly reflect: Tier 1 ($2,500), Tier 2 ($1,875), Tier 3 ($1,250), Tier 4 ($1,250), Tier 5 ($625), Tier 6 ($250 custom subsidized).
+  - Must strictly preserve zero emojis and zero em-dashes.
+## User Clarification & Decision Rule
+- **Mandatory Clarification for Ambiguities**: Whenever there are ambiguities, doubts, clarifications required, or questions about an implementation, check whether there is a single clear recommended plan:
+  - **Single Recommended Action**: If there is a single Recommended action, do NOT ask the user questions but proceed immediately with the Recommended plan.
+  - **Two or More Recommended Actions**: Ask the user a question only if there are two or more Recommended actions or competing implementation paths with comparable merit, providing clear options so the user can choose.
+- **Never Assume or Guess Unclear Divergent Paths**: Do not make unilateral assumptions when multiple equally viable divergent paths exist without a clear recommended path. Always pause and verify with the user when two or more distinct recommended options are present.
+
+## Organic Reference Links Rule (No Superscript Numbers)
+- **NO Superscript Numbered Reference Links**: Do NOT use superscript or bracketed numbered citation markers (e.g., `<sup>[1]</sup>`, `<sup><a href="#ref-1">[1]</a></sup>`, `[^1]`, or `[1]`) anywhere across repository files.
+- **Organic In-Content Anchor Links**: Anchor all references organically within 2 - 4 descriptive words of the actual prose text (e.g., `<a class="gold-link" href="#references">official quickstart guide</a>` or `<a class="gold-link" href="#references">API pricing documentation</a>`).
+- **Enforced Repository-Wide**: This standard applies strictly across all content files added to or updated in the repository, including all HTML files and Markdown files (`md-html-sync/`, documentation, and articles).
+
+## Unnumbered Headings & Code Block Sharp Boundaries Rule
+- **Unnumbered Headings in Content**: Do NOT use numeric prefixes (such as `1. `, `01. `, `1) `, or `<span class="sec-num">01</span>`) in headings (`<h2>`, `<h3>`, `<h4>`, etc.) across HTML content pages. Numbering belongs exclusively in the Table of Contents (ToC) to maintain a clean reading experience in the body while preserving structured outline numbering in the navigation index.
+- **Sharp Boundaries Between Code and Text**: All code samples and preformatted code blocks (`<pre>`, `.code-window`, `.codewrap`, `.code`, `.code-box`) must have sharp, visually distinct boundaries separating them from surrounding prose:
+  - High-contrast dark background (`#040711` or `#060913`).
+  - Crisp borders (`1px solid rgba(56, 189, 248, 0.32)` or `rgba(251, 191, 36, 0.32)`) and distinct left accent border (`border-left: 3px solid var(--cyan)` or `var(--gold)`).
+  - Explicit vertical margins (`margin: 1.5rem 0;`) ensuring clear visual separation from surrounding text.
+  - A structured header bar (`.code-bar`, `.code-head`, `.cap`, `.code-header`) containing a file/language label and window dot accents where applicable.
+- **Copy Button on Every Code Sample**: Every code sample across all HTML files on the website must include an accessible, interactive Copy button (`button.copy` or `.copy-btn`) that copies the snippet text to the clipboard and provides visual feedback (`Copied!`). Buttons must strictly maintain `text-decoration: none !important;` across all states.
+

@@ -22,11 +22,12 @@ Plugins turn that know-how into files Claude loads dynamically when a task calls
 8. From Tasks To Whole Occupations
 9. What Still Stands In The Way
 10. Where To Start
-11. References
+11. Practice Pricing & Global Purchasing Power Parity
+12. References
 
 ---
 
-## 1. Why Plugins Exist
+## Why Plugins Exist
 
 A general assistant knows nothing about your company. It does not know how your finance team closes the month or what your legal team checks before signing an NDA, so every person re-explains the same process in every chat.
 
@@ -34,7 +35,7 @@ Plugins turn that know-how into files Claude loads when a task calls for them. I
 
 ---
 
-## 2. What A Claude Plugin Is
+## What A Claude Plugin Is
 
 Anthropic's plugin overview for claude.ai and Cowork says a plugin packages skills, MCP connectors, commands and agents so you can add them to Claude as one unit. You add one from Customize > Plugins in claude.ai or the desktop app, and it is saved to your account.
 
@@ -42,7 +43,7 @@ Plugins began in the terminal. Anthropic introduced plugins for Claude Code on O
 
 ---
 
-## 3. Inside A Plugin
+## Inside A Plugin
 
 Every part of a plugin is a plain file. The knowledge-work-plugins repository on GitHub shows the layout: a manifest at .claude-plugin/plugin.json, a .mcp.json file for tool connections, a commands folder and a skills folder. Its README says the components are markdown and JSON, with no code, infrastructure or build steps.
 
@@ -56,7 +57,7 @@ The Claude Code plugins reference adds two developer parts: language servers for
 
 ---
 
-## 4. Where Plugins Run
+## Where Plugins Run
 
 One plugin works across three distinct surfaces, and each surface loads only what it supports. Skills, commands, and connectors work seamlessly in chat, Cowork, and Claude Code. Agents run in Cowork and Claude Code, and so do hooks, because they execute commands directly on your computer or container environment.
 
@@ -64,13 +65,13 @@ A plugin added in claude.ai follows you and syncs to Claude Code the next time y
 
 ---
 
-## 5. Why Extensibility Makes Claude So Powerful
+## Why Extensibility Makes Claude So Powerful
 
 Every customer starts with the identical base Claude model. Plugins allow each business to customize it deeply, governed by four key architectural design choices:
 
 ---
 
-## 6. The Major Claude Plugins Available Now
+## The Major Claude Plugins Available Now
 
 The Claude Marketplace plugin directory listed 341 plugins as of October 2026. Here are the primary business and engineering packages available today:
 
@@ -118,7 +119,7 @@ Anthropic also provides business partner plugins from Salesforce (Slack), LSEG, 
 
 ---
 
-## 7. How Plugins Reach A Whole Organization
+## How Plugins Reach A Whole Organization
 
 On Claude Team and Business plans, workspace Owners can distribute approved plugins from a centralized GitHub repository through an internal organization marketplace. Anthropic's guide to managing plugins for your organization establishes four installation preferences: Installed by default, Available for install, Required, or Not available. These rules can be segmented by user group:
 
@@ -126,7 +127,7 @@ Members cannot tamper with organization-managed plugins, keeping business operat
 
 ---
 
-## 8. From Tasks To Whole Occupations
+## From Tasks To Whole Occupations
 
 A plugin today automates discrete tasks. Whether it can automate an entire job depends on how much of that role's end-to-end task matrix it covers. Anthropic's research on the labor market impacts of AI measured that gap: LLMs could theoretically accelerate 94% of tasks in Computer and Math fields, yet observed real-world coverage was 33%. Computer programmers led with 75% coverage, followed by customer service representatives and data entry keyers at 67%.
 
@@ -148,7 +149,7 @@ Three occupations currently sit closest to this transition:
 
 ---
 
-## 9. What Still Stands In The Way
+## What Still Stands In The Way
 
 Anthropic's economic research urges balanced realism. While headline unemployment in exposed tech occupations has not shown a dramatic surge, hiring rates for 22-to-25-year-olds into entry-level knowledge jobs have dropped roughly 14% below 2022 baselines.
 
@@ -158,7 +159,7 @@ Security remains a paramount consideration. Because plugins inherit the user's a
 
 ---
 
-## 10. Where To Start
+## Where To Start
 
 Start with a single role plugin matching an immediate departmental pain point, such as Sales or Customer Support. Hook its connectors to your actual toolstack, customize the markdown skill files with your internal guidelines and terminology, and test it in production workflows for two weeks.
 
@@ -166,7 +167,34 @@ Once adoption and efficiency metrics validate the workflow, promote it to Requir
 
 ---
 
-## 11. References
+## Practice Pricing & Global Purchasing Power Parity
+
+I provide live, remote engineering training and advisory consulting covering Google Gemini, Claude, and sovereign local LLMs. Engagements turn engineering teams and individual developers into AI-first builders who construct production agent swarms, implement budget safeguards, and run private models.
+
+All services are delivered remotely worldwide with 4 hours a day of live instruction, with Saturdays and Sundays as holidays. Pricing is governed by our transparent 195-country Purchasing Power Parity (PPP) framework scaling rates across six economic tiers. For full tier definitions, currency conversions, and interactive calculations, visit our Pricing Page.
+
+### Individual Service Picks (Pick & Choose)
+
+Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
+
+- Business Individual Pick: $250 USD base for 1 seat, with additional seats at $250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
+- Personal Individual Pick: $250 USD strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
+
+### Payment Structure & Trust Guarantees
+
+Every client engagement is safeguarded by strict trust guarantees:
+
+- Zero Upfront Payment: Strictly $0 advance deposit required. We never invoice before delivering actual value.
+- 20% in Five Installments: Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.
+- Walkaway Guarantee: If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.
+- Commercial Apache 2.0 License: All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.
+- Full Pricing Details: Learn more about country tier multipliers, currency choices, and customized curriculum on our Pricing Page.
+
+### The Six Purchasing Power Parity (PPP) Tiers
+
+---
+
+## References
 
 1. Plugins On Claude.ai And In Cowork, Claude Docs.
 2. Customize Claude Code With Plugins, Anthropic, October 2025.

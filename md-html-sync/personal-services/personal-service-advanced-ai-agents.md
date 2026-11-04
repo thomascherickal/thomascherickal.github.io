@@ -17,7 +17,7 @@ The shift from standard generative AI to agentic AI is all about turning softwar
 
 For individual creators, students, and developers, building your own agent system gives you superpowers that used to require entire teams of humans. According to research from Stanford University, IBM, and top AI labs, personalized agents excel because they add a persistent memory layer to foundation language models. This memory layer allows agents to remember your coding style, your academic domain, your personal budget constraints, and your past project decisions.
 
-However, running personal AI agents requires smart engineering. Multi-step agent loops re-query the language model continuously, which can quickly drain your API budget if you aren't careful. Moreover, choosing between local self-hosted models (like running vLLM and Hermes on local GPUs) and cloud APIs (like OpenAI GPT-4o or Anthropic Claude) determines whether you pay a fixed hardware electricity bill or variable per-token charges. Navigating these trade-offs is the key to building a personal AI agent setup that actually works without breaking the bank.
+However, running personal AI agents requires smart engineering. Multi-step agent loops re-query the language model continuously, which can quickly drain your API budget if you aren't careful. Moreover, choosing between local self-hosted models (like running vLLM and Agentic Assistants on local GPUs) and cloud APIs (like OpenAI GPT-4o or Anthropic Claude) determines whether you pay a fixed hardware electricity bill or variable per-token charges. Navigating these trade-offs is the key to building a personal AI agent setup that actually works without breaking the bank.
 
 ---
 

@@ -160,7 +160,7 @@
               Slashing</a></li>
           <li><a href="../business-services/business-service-ai-agents-orchestration.html">Claude Agent Orchestration</a>
           </li>
-          <li><a href="../business-services/business-service-agentic-ai-systems.html">Hermes Agent Training</a></li>
+          <li><a href="../business-services/business-service-agentic-ai-systems.html">Agentic Assistants Training</a></li>
           <li><a href="../business-services/business-service-workflow-automations.html">Workflow Automations</a></li>
           <li><a href="../business-services/business-service-ai-budget-cost-limits-training.html">AI Budget &amp; Cost
               Control Training</a></li>
@@ -236,11 +236,11 @@
           <li><a href="../google/google-ai-studio.html">Google AI Studio</a></li>
           <li><a href="../google/google-antigravity-ide.html">Google Antigravity IDE</a></li>
           <li><a href="../google/google-gemini-deep-think.html">Gemini Deep Think</a></li>
-          <li><a href="../google/google-gemini-desktop.html">Google Gemini Desktop</a></li>
+          <li><a href="../google/google-gemini-desktop.html">Gemini Desktop</a></li>
           <li><a href="../google/google-gemini-spark.html">Gemini Spark</a></li>
           <li><a href="../google/google-gemini-notebook.html">Gemini Notebook</a></li>
           <li><a href="../google/google-gemma.html">Google Gemma</a></li>
-          <li><a href="../google/google-deep-research.html">Google Deep Research</a></li>
+          <li><a href="../google/google-multimodality.html">Google Multimodality</a></li>
           <li><a href="../google/google-deepmind.html">Google DeepMind</a></li>
           <li><a href="../google/google-gemini-4-models.html">Gemini 4 Models</a></li>
           <li><a href="../google/google-gemini-agents.html">Gemini Agents</a></li>
@@ -341,7 +341,7 @@ flowchart TD
 <em>Interactive architecture diagram (loading...)</em>
 </div>
 <div class="mermaid">
-graph LR
+graph TD
     subgraph Playground Controls
         SI["System Instructions<br/>(Editable Persona, Tone & Role Guardrails)"]
         TL["Thinking Level<br/>(Low, Medium, High Test-Time Compute)"]
@@ -529,7 +529,7 @@ sequenceDiagram
 <em>Interactive architecture diagram (loading...)</em>
 </div>
 <div class="mermaid">
-flowchart LR
+flowchart TD
     P["Natural Language Prompt"] --> Gradle["Gradle Project (Kotlin + Compose + Material 3)"]
     Gradle --> Emu["Streaming Browser Emulator (Instant Validation)"]
     Emu --> WebUSB["WebUSB Direct Hardware Install (Chrome/Edge)"]
@@ -654,7 +654,13 @@ flowchart TD
   The generated snippet is the reliable reference, because Google updates model names and call styles often. The example below shows the shape of a minimal call with the current SDK:
 </p>
 
-<pre><code class="language-python">from google import genai
+<div class="code-window">
+<div class="code-bar">
+<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
+<span>python - minimal google genai sdk call</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
+</div>
+<pre class="code-pre"><code>from google import genai
 
 client = genai.Client()  # reads GEMINI_API_KEY from the environment
 response = client.models.generate_content(
@@ -669,6 +675,7 @@ response = client.models.generate_content(
 )
 print(response.text)
 </code></pre>
+</div>
 
 <p>
   Google's latest-model page now demonstrates the Interactions API for new work, so compare your snippet with what Get code produces.<sup><a class="gold-link" href="#ref-8">[8]</a></sup> The Playground session remains useful either way, because it records the exact instruction and settings that produced a good answer.
@@ -760,13 +767,13 @@ print(response.text)
 <div class="package-card" style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:12px;padding:1.5rem;">
 <h3 style="color:var(--gold);margin-top:0;">Business AI Training Flagship</h3>
 <p style="color:var(--text-muted);font-size:0.9rem;">Comprehensive organizational workforce and engineering transformation.</p>
-<div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">,000 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
+<div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">$2,500 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
 <ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
 <li>60 days total calendar duration: 30 days live engineering training + 30 days dedicated support.</li>
-<li>Includes up to 10 participants, with additional seats at 00 USD per seat up to a maximum of 20 seats.</li>
+<li>Includes up to 10 participants, with additional seats at $250 USD per seat up to a maximum of 20 seats.</li>
 <li>4 hours daily live instruction, Monday through Friday (Saturdays and Sundays holidays). Remote worldwide.</li>
-<li>Zero advance deposit (bash upfront); 20% due in 5 milestone installments after completed progress.</li>
-<li>Walk away owing nothing if not satisfied after the first 5 days of completed training.</li>
+<li>Zero advance deposit ($0 upfront); 20% due in 5 milestone installments after completed progress.</li>
+<li>Walk away owing nothing if not satisfied after the first milestone training phase.</li>
 <li>High-quality training materials, guides, and custom code transferred under Apache 2.0 license (commercial use, resale, and relicensing permitted with attribution).</li>
 </ul>
 </div>
@@ -774,13 +781,13 @@ print(response.text)
 <div class="package-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
 <h3 style="color:var(--cyan);margin-top:0;">Personal AI Training Flagship</h3>
 <p style="color:var(--text-muted);font-size:0.9rem;">Dedicated 1-on-1 private acceleration for solo founders, builders, and senior engineers.</p>
-<div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">,000 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
+<div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">$2,500 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
 <ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
 <li>60 days total calendar duration: 30 days live 1-on-1 training + 30 days dedicated support.</li>
 <li>Strictly 1 person only (dedicated private acceleration).</li>
 <li>4 hours daily hands-on implementation, Monday through Friday (Saturdays and Sundays holidays). Remote worldwide.</li>
-<li>Zero advance deposit (bash upfront); 20% due in 5 milestone installments after completed progress.</li>
-<li>Walk away owing nothing if not satisfied after the first 5 days of completed training.</li>
+<li>Zero advance deposit ($0 upfront); 20% due in 5 milestone installments after completed progress.</li>
+<li>Walk away owing nothing if not satisfied after the first milestone training phase.</li>
 <li>Comprehensive training curriculum and materials licensed under Apache 2.0 (commercial use, resale, and relicensing permitted with attribution).</li>
 </ul>
 </div>
@@ -791,8 +798,8 @@ print(response.text)
   Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
 </p>
 <ul style="line-height:1.8;">
-<li><strong>Business Individual Pick:</strong> <strong>00 USD per service</strong> for up to 1 seat, with additional seats at 00 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
-<li><strong>Personal Individual Pick:</strong> <strong>00 USD per service</strong> strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
+<li><strong>Business Individual Pick:</strong> <strong>$250 USD</strong> base for 1 seat, with additional seats at $250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
+<li><strong>Personal Individual Pick:</strong> <strong>$250 USD</strong> strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
 </ul>
 
 <h3>Payment Structure &amp; Trust Guarantees</h3>
@@ -800,7 +807,7 @@ print(response.text)
   Every client engagement is safeguarded by strict trust guarantees:
 </p>
 <ul style="line-height:1.7;">
-<li><strong>Zero Upfront Payment:</strong> Strictly bash advance deposit required. We never invoice before delivering actual value.</li>
+<li><strong>Zero Upfront Payment:</strong> Strictly $0 advance deposit required. We never invoice before delivering actual value.</li>
 <li><strong>20% in Five Installments:</strong> Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.</li>
 <li><strong>Walkaway Guarantee:</strong> If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.</li>
 <li><strong>Commercial Apache 2.0 License:</strong> All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.</li>
@@ -826,40 +833,40 @@ print(response.text)
 <td>High-Income Baseline</td>
 <td>United States, UK, Germany, Canada, Japan, Singapore, Australia</td>
 <td>1.00X</td>
-<td>,000 USD</td>
-<td>,000 USD</td>
+<td>$2,500 USD</td>
+<td>$2,500 USD</td>
 </tr>
 <tr>
 <td><strong>Tier 2</strong></td>
 <td>Upper-Middle Economies</td>
 <td>Brazil, Mexico, Malaysia, Turkiye, Thailand, Philippines, Sri Lanka</td>
 <td>0.75X</td>
-<td>,500 USD</td>
-<td>,500 USD</td>
+<td>$1,875 USD</td>
+<td>$1,875 USD</td>
 </tr>
 <tr>
 <td><strong>Tier 3</strong></td>
 <td>Lower-Middle &amp; Low-Income</td>
 <td>India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam</td>
 <td>0.50X</td>
-<td>,000 USD</td>
-<td>,000 USD</td>
+<td>$1,250 USD</td>
+<td>$1,250 USD</td>
 </tr>
 <tr>
 <td><strong>Tier 4</strong></td>
 <td>Early-Stage Startups</td>
-<td>Global tech startups with &lt;M external funding</td>
+<td>Global tech startups with &lt;$1M external funding</td>
 <td>0.50X</td>
-<td>,000 USD</td>
-<td>,000 USD</td>
+<td>$1,250 USD</td>
+<td>$1,250 USD</td>
 </tr>
 <tr>
 <td><strong>Tier 5</strong></td>
 <td>Academia &amp; Non-Profits</td>
 <td>Universities, accredited labs, registered charities &amp; 501(c)(3) entities</td>
 <td>0.25X</td>
-<td>00 USD</td>
-<td>00 USD</td>
+<td>$625 USD</td>
+<td>$625 USD</td>
 </tr>
 <tr>
 <td><strong>Tier 6</strong></td>
@@ -867,7 +874,7 @@ print(response.text)
 <td>Crisis-affected regions, developing collectives &amp; grassroots builders</td>
 <td>Custom</td>
 <td>Subsidized</td>
-<td>00 USD</td>
+<td>$250 USD</td>
 </tr>
 </tbody>
 </table>

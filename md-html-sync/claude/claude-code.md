@@ -27,7 +27,8 @@ Connect external tools with MCP
 8. Working in Large Repositories
 9. What Developers Say
 10. Adoption by the Numbers
-11. References
+11. Practice Pricing & Global Purchasing Power Parity
+12. References
 
 ---
 
@@ -54,6 +55,23 @@ Permission modes decide how much happens without you. Press Shift+Tab in a sessi
 ---
 
 ## Claude Code in the Terminal
+
+#### ``
+```python
+# start, continue, resume
+claude                              # interactive session
+claude "fix the build error"        # start with a prompt
+claude -c                           # continue the last session here
+claude -r                           # pick a past session
+
+# choose how it works
+claude --model opus                 # pick a model
+claude --permission-mode plan       # research and plan, no edits
+
+# one-shot and pipes
+claude -p "explain src/auth.ts"
+cat build.log | claude -p "find the root cause" > cause.txt
+```
 
 Inside a session, these commands do most of the work:
 
@@ -83,6 +101,17 @@ Vim, Neovim, Emacs and Zed users can run claude in any terminal next to the edit
 
 1. Install. Pick the command for your system.
 
+#### ``
+```python
+# macOS, Linux, WSL
+curl -fsSL https://claude.ai/install.sh | bash
+# Windows PowerShell
+irm https://claude.ai/install.ps1 | iex
+# or a package manager
+brew install --cask claude-code
+winget install Anthropic.ClaudeCode
+```
+
 2. Check it. Open a new terminal and run claude --version.
 
 3. Log in. Run claude inside a project folder and follow the browser prompt. Any paid Claude plan or a Claude Console account works.
@@ -103,6 +132,18 @@ JetBrains: install the CLI from Tutorial 1, then the Claude Code plugin from the
 
 Run /init. Claude scans the repository and writes a CLAUDE.md. Edit it by hand, because short, specific rules work better than long ones:
 
+#### ``
+```python
+# CLAUDE.md
+## Commands
+- Test: pytest -q
+- Lint: ruff check . && mypy src
+## Rules
+- Use the repository pattern in src/db/
+- Never edit files in migrations/ by hand
+- Run the tests before every commit
+```
+
 Commit the file so your team shares it. Run /memory later to edit it from inside a session.
 
 ---
@@ -113,11 +154,46 @@ Commit the file so your team shares it. Run /memory later to edit it from inside
 
 A subagent works in its own context window, so the main session stays focused. Create .claude/agents/security-reviewer.md, or ask Claude to create it:
 
+#### ``
+```python
+---
+name: security-reviewer
+description: Reviews diffs for injection, auth and secrets issues. Read-only.
+tools: Read, Grep, Glob
+---
+Review the current diff. Report file, line and a suggested fix.
+Do not edit files.
+```
+
 Then prompt: add rate limiting to /login, then have the security-reviewer subagent check the diff. Add a hook in .claude/settings.json so every edit gets formatted:
+
+#### ``
+```python
+{
+  "hooks": {
+    "PostToolUse": [{
+      "matcher": "Edit|Write",
+      "hooks": [{ "type": "command", "command": "npx prettier --write ." }]
+    }]
+  }
+}
+```
 
 ### ExpertTutorial 5: Run parallel background agents
 
 Agent view (claude agents) lists every background session, grouped into needs input, working and completed. Each background session moves into its own git worktree under .claude/worktrees/ before it edits, so parallel agents never write to the same checkout.
+
+#### ``
+```python
+# dispatch from your shell
+claude --bg --name flaky-test "investigate the flaky SettingsChangeDetector test"
+claude --agent security-reviewer --bg "review PR 1234"
+
+# watch and manage
+claude agents          # one screen for every session
+claude logs <id>       # recent output
+claude attach <id>     # take over in this terminal
+```
 
 Inside a session, /bg sends the current conversation to the background and /fork copies it into a new one. Pair a background agent with /goal all tests in tests/api pass and it keeps working until that condition holds.
 
@@ -125,9 +201,27 @@ Inside a session, /bg sends the current conversation to the background and /fork
 
 claude -p runs one task and exits with a status code your scripts can check. Add --bare in CI so the run ignores hooks, plugins and CLAUDE.md on the host machine and behaves the same everywhere. Scope tools tightly:
 
+#### ``
+```python
+# commit staged work with only the git commands it needs
+claude -p "look at my staged changes and create a commit" \
+  --allowedTools "Bash(git diff *),Bash(git status *),Bash(git commit *)"
+
+# unattended job: classifier reviews actions, nothing waits for a human
+claude --bare -p "update dependency pins and run the tests" \
+  --permission-mode auto --permission-prompts none --output-format json
+```
+
 For pull requests, run /install-github-app in a session. It installs the GitHub app and adds a workflow using anthropics/claude-code-action@v1, after which anyone can mention @claude in an issue or PR.
 
 ### ExpertTutorial 7: Connect external tools with MCP
+
+#### ``
+```python
+claude mcp add --transport http notion https://mcp.notion.com/mcp
+claude mcp login notion     # authenticate from the shell
+claude mcp list             # confirm it connected
+```
 
 Each MCP server adds tool definitions to the context, so connect only what the project uses. /usage shows which servers, skills and subagents drive your plan limits.
 
@@ -154,6 +248,33 @@ Anthropic's own study of about 400,000 Claude Code sessions from October 2025 to
 In the JetBrains survey's mid-2026 wave, Claude Code led workplace use by a wide margin:
 
 Anthropic has not published a total user count. On 12 February 2026 it said weekly active users had doubled since 1 January. The survey figures are self-reported and use different samples, so read them as direction rather than exact market share.
+
+---
+
+## Practice Pricing & Global Purchasing Power Parity
+
+I provide live, remote engineering training and advisory consulting covering Google Gemini, Claude, and sovereign local LLMs. Engagements turn engineering teams and individual developers into AI-first builders who construct production agent swarms, implement budget safeguards, and run private models.
+
+All services are delivered remotely worldwide with 4 hours a day of live instruction, with Saturdays and Sundays as holidays. Pricing is governed by our transparent 195-country Purchasing Power Parity (PPP) framework scaling rates across six economic tiers. For full tier definitions, currency conversions, and interactive calculations, visit our Pricing Page.
+
+### Individual Service Picks (Pick & Choose)
+
+Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
+
+- Business Individual Pick: $250 USD base for 1 seat, with additional seats at $250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
+- Personal Individual Pick: $250 USD strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
+
+### Payment Structure & Trust Guarantees
+
+Every client engagement is safeguarded by strict trust guarantees:
+
+- Zero Upfront Payment: Strictly $0 advance deposit required. We never invoice before delivering actual value.
+- 20% in Five Installments: Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.
+- Walkaway Guarantee: If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.
+- Commercial Apache 2.0 License: All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.
+- Full Pricing Details: Learn more about country tier multipliers, currency choices, and customized curriculum on our Pricing Page.
+
+### The Six Purchasing Power Parity (PPP) Tiers
 
 ---
 

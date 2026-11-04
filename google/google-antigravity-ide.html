@@ -5,22 +5,22 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Google Antigravity IDE: Autonomous Multi-Agent Development | Thomas Cherickal</title>
-<meta content="Deep dive into Google Antigravity IDE: VS Code fork architecture, plugin ecosystem, multi-model multiplexing across Claude and Gemini, and agentic workflows." name="description"/>
+<meta content="A deep dive into Google Antigravity 2.0, its Visual Studio Code fork architecture, extension ecosystem, model pricing, and five detailed production case studies." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
 <link href="https://thedigitalfuturist.com/google/google-antigravity-ide.html" rel="canonical"/>
 <!-- Open Graph -->
 <meta content="article" property="og:type"/>
 <meta content="https://thedigitalfuturist.com/google/google-antigravity-ide.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
-<meta content="Google Antigravity IDE: Universal Language Builder &amp; Multi-Model Engineering | Thomas Cherickal" property="og:title"/>
-<meta content="Deep dive into Google Antigravity IDE: VS Code fork architecture, plugin ecosystem, multi-model multiplexing across Claude and Gemini, and agentic workflows." property="og:description"/>
+<meta content="Google Antigravity IDE: Capabilities, the VS Code Fork &amp; Five Case Studies | Thomas Cherickal" property="og:title"/>
+<meta content="A deep dive into Google Antigravity 2.0, its Visual Studio Code fork architecture, extension ecosystem, model pricing, and five detailed production case studies." property="og:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@thomazcherickal" name="twitter:site"/>
-<meta content="Google Antigravity IDE: Universal Language Builder &amp; Multi-Model Engineering | Thomas Cherickal" name="twitter:title"/>
-<meta content="Deep dive into Google Antigravity IDE: VS Code fork architecture, plugin ecosystem, multi-model multiplexing across Claude and Gemini, and agentic workflows." name="twitter:description"/>
+<meta content="Google Antigravity IDE: Capabilities, the VS Code Fork &amp; Five Case Studies | Thomas Cherickal" name="twitter:title"/>
+<meta content="A deep dive into Google Antigravity 2.0, its Visual Studio Code fork architecture, extension ecosystem, model pricing, and five detailed production case studies." name="twitter:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
 <!-- Favicons -->
 <link href="../assets/favicon.ico" rel="icon" sizes="any"/>
@@ -160,7 +160,7 @@
               Slashing</a></li>
           <li><a href="../business-services/business-service-ai-agents-orchestration.html">Claude Agent Orchestration</a>
           </li>
-          <li><a href="../business-services/business-service-agentic-ai-systems.html">Hermes Agent Training</a></li>
+          <li><a href="../business-services/business-service-agentic-ai-systems.html">Agentic Assistants Training</a></li>
           <li><a href="../business-services/business-service-workflow-automations.html">Workflow Automations</a></li>
           <li><a href="../business-services/business-service-ai-budget-cost-limits-training.html">AI Budget &amp; Cost
               Control Training</a></li>
@@ -236,11 +236,11 @@
           <li><a href="../google/google-ai-studio.html">Google AI Studio</a></li>
           <li><a href="../google/google-antigravity-ide.html">Google Antigravity IDE</a></li>
           <li><a href="../google/google-gemini-deep-think.html">Gemini Deep Think</a></li>
-          <li><a href="../google/google-gemini-desktop.html">Google Gemini Desktop</a></li>
+          <li><a href="../google/google-gemini-desktop.html">Gemini Desktop</a></li>
           <li><a href="../google/google-gemini-spark.html">Gemini Spark</a></li>
           <li><a href="../google/google-gemini-notebook.html">Gemini Notebook</a></li>
           <li><a href="../google/google-gemma.html">Google Gemma</a></li>
-          <li><a href="../google/google-deep-research.html">Google Deep Research</a></li>
+          <li><a href="../google/google-multimodality.html">Google Multimodality</a></li>
           <li><a href="../google/google-deepmind.html">Google DeepMind</a></li>
           <li><a href="../google/google-gemini-4-models.html">Gemini 4 Models</a></li>
           <li><a href="../google/google-gemini-agents.html">Gemini Agents</a></li>
@@ -259,146 +259,259 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+
 <main class="container single-column-article">
 <header class="hero">
-<p class="hero-badge">// AI-FIRST DEVELOPMENT PLATFORM</p>
+<p class="hero-badge">// AUTONOMOUS AGENT ORCHESTRATION &amp; MULTI-MODEL IDE</p>
 <h1>Google Antigravity IDE: Autonomous Multi-Agent Development</h1>
 <p class="hero-desc">
-        Explore Google Antigravity IDE: an open fork of Visual Studio Code engineered as a universal language builder with multi-model multiplexing across frontier Claude and Gemini architectures.
-      </p>
+  By Thomas Cherickal, Generative AI Consultant | 2 November 2026 | Sources checked on the date of publication.
+</p>
 </header>
 
 <!-- TABLE OF CONTENTS -->
 <article class="content-card" id="table-of-contents">
 <h2>Contents</h2>
 <div class="toc-grid" style="display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem;">
-<a class="toc-link gold-link" href="#what-is-antigravity">1. What is Google Antigravity IDE?</a>
-<a class="toc-link gold-link" href="#multiplexing">2. Multi-Model Multiplexing: Claude &amp; Gemini Frontier Routing</a>
-<a class="toc-link gold-link" href="#modalities">3. Three Interaction Modalities &amp; Antigravity Chat</a>
-<a class="toc-link gold-link" href="#references">4. Verified References &amp; Authoritative Documentation</a>
+<a class="toc-link gold-link" href="#introduction">1. Introduction</a>
+<a class="toc-link gold-link" href="#evolution">2. From Editor to Agent Fleet</a>
+<a class="toc-link gold-link" href="#capabilities">3. What Antigravity 2.0 Can Do</a>
+<a class="toc-link gold-link" href="#workflow">4. AI-Assisted Development in Practice</a>
+<a class="toc-link gold-link" href="#models-pricing">5. Models and Pricing</a>
+<a class="toc-link gold-link" href="#vscode-fork">6. The Visual Studio Code Fork and Extension Support</a>
+<a class="toc-link gold-link" href="#case-studies">7. Five Case Studies</a>
+<a class="toc-link gold-link" href="#who-for">8. Who Should Use It, and Who Should Wait</a>
+<a class="toc-link gold-link" href="#limits">9. Limits, Security and Enterprise Use</a>
+<a class="toc-link gold-link" href="#conclusion">10. Conclusion</a>
+<a class="toc-link gold-link" href="#pricing-parity">11. Practice Pricing &amp; Global Purchasing Power Parity</a>
+<a class="toc-link gold-link" href="#references">12. References</a>
 </div>
 </article>
 
-
-<!-- WHAT IS ANTIGRAVITY IDE -->
-<article class="content-card" id="what-is-antigravity">
-<h2>What is Google Antigravity IDE?</h2>
-<p>
-        Google Antigravity IDE is a standalone, AI-first integrated development environment developed by Google DeepMind. Engineered as an open fork of Visual Studio Code, Antigravity retains 100% binary and configuration compatibility with the vast VS Code extension and plugin ecosystem while re-architecting the core editor canvas for autonomous agentic workflows.
-      </p>
-<p>
-        Rather than treating artificial intelligence as a superficial chat sidebar bolted onto an editor, Antigravity integrates multi-agent reasoning directly into the Abstract Syntax Tree (AST), workspace diagnostics, terminal runtimes, and file system watcher loops. Developers preserve their familiar keybindings, color themes, debuggers, and language servers while gaining autonomous pair programming capabilities.
-      </p>
-<div class="diagram-container">
-<div class="mermaid-fallback">
-<em>Interactive architecture diagram (loading...)</em>
+<!-- INTRODUCTION -->
+<article class="content-card" id="introduction">
+<h2>Introduction</h2>
+<p>Google Antigravity began in November 2025 as an editor and grew by May 2026 into something closer to an agent control room. Developers now give it a task, step away, and review what comes back. That shift raises fair questions about what the product does, what it costs, and where it still falls short.</p><p>This article covers both generations of the product, the AI-assisted workflow around it, and the Visual Studio Code fork under the IDE. It also tests the idea of full Visual Studio extension support against Google's own documentation. Five case studies show what people have built with it.</p><p>The article is written for developers, team leads and technical founders who are deciding whether to try Antigravity. It separates what Google states about its own product from what independent writers report. Where a figure comes only from Google, the text says so.</p><p>Every fact below comes from sources read on 2 November 2026, and the references at the end link to each one.</p><div style="margin:1.75rem 0;text-align:center;">
+  <img alt="Gold and neon illustration of an orbiting sphere surrounded by floating code windows, titled Google Antigravity" src="../assets/antigravity/antigravity_case_3.png" style="width:100%;max-width:760px;height:auto;border-radius:12px;border:1px solid rgba(56, 189, 248, 0.3);box-shadow:0 8px 30px rgba(0,0,0,0.5);" loading="lazy" />
+  <p class="diagram-caption">Figure 1. Antigravity moved from a single editor to a set of surfaces around one agent engine.</p>
 </div>
-<div class="mermaid">
-flowchart TD
-    subgraph AntigravityCore[Antigravity IDE Core Engine]
-        VSCode[VS Code Open-Source Fork] --> ExtManager[Plugin & Extension Runtime]
-        VSCode --> AST[Language Server & AST Watcher]
-        VSCode --> Terminals[Integrated Shell & MCP Tool Bridge]
-    end
-    
-    subgraph ModelDispatcher[Frontier Model Dispatcher]
-        AST --> Dispatcher{Dynamic Task Router}
-        Dispatcher --> ClaudeModels[Claude Opus & Claude Sonnet]
-        Dispatcher --> GeminiModels[Gemini Flash, Gemini Pro & Gemini Argon]
-    end
-    
-    ClaudeModels --> WorkStream[Autonomous Multi-Step File & Terminal Execution]
-    GeminiModels --> WorkStream
-        </div>
-<div class="diagram-caption">Figure 1: Antigravity IDE Multi-Model Dispatcher &amp; Core Architecture</div>
-</div>
-<div style="margin:1.75rem 0;text-align:center;">
-  <img alt="Solo Developer Cockpit and Agentic Workflow" src="../assets/solo-dev-cockpit.jpg" style="width:100%;max-width:760px;height:auto;border-radius:12px;border:1px solid rgba(56, 189, 248, 0.3);box-shadow:0 8px 30px rgba(0,0,0,0.5);" />
-  <p class="diagram-caption">Autonomous agent orchestration and multi-model dispatching inside Google Antigravity IDE.</p>
-</div>
-
 </article>
-<!-- MULTI-MODEL ACCESS & UNIVERSAL BUILDER -->
-<article class="content-card" id="multiplexing">
-<h2>Multi-Model Multiplexing: Claude &amp; Gemini Frontier Routing</h2>
+
+<!-- EVOLUTION -->
+<article class="content-card" id="evolution">
+<h2>From editor to agent fleet</h2>
+<p>Google released Antigravity on 18 November 2025, alongside Gemini 3. It looked like a Visual Studio Code editor with an agent panel beside the code. Developers soon found references to Windsurf's Cascade system in the code, and Google had licensed Windsurf technology for about $2.4 billion in July 2025. Google has not confirmed whether the IDE is a direct fork of either project.</p><p>Antigravity 2.0 arrived on 19 May 2026 at Google I/O. It is a standalone desktop app built around agents, and it has no code editor at all. The IDE remains part of the family, and official Antigravity extensions now connect other editors to the same agents.</p><p>Alongside the app, Google released the agy command line tool, written in Go, which replaces Gemini CLI. A Python SDK under the Apache 2.0 licence is in preview, and a Managed Agents API with Gemini Enterprise integration covers hosted use. TechCrunch covered the launch as an updated desktop app and CLI.</p><p>The naming can confuse. Antigravity 1.0 usually means the IDE released with Gemini 3, and Antigravity 2.0 means the May 2026 desktop app and its CLI, SDK and hosted agents. Both rest on the same agent harness, which Google now exposes through several surfaces.</p><p>Independent write-ups describe the product as agent-first. The shift is from autocomplete toward delegation, where the developer sets direction and checks results. Google's own launch posts use the same framing.</p><div style="margin:1.75rem 0;text-align:center;">
+  <img alt="Gold and neon timeline from Antigravity 1.0 in November 2025 to Gemini 4 Argon in October 2026" src="../assets/antigravity/antigravity_case_4.png" style="width:100%;max-width:760px;height:auto;border-radius:12px;border:1px solid rgba(56, 189, 248, 0.3);box-shadow:0 8px 30px rgba(0,0,0,0.5);" loading="lazy" />
+  <p class="diagram-caption">Figure 2. Key release dates from the first IDE to the Gemini 4 Argon model.</p>
+</div>
+</article>
+
+<!-- CAPABILITIES -->
+<article class="content-card" id="capabilities">
+<h2>What Antigravity 2.0 can do</h2>
+<p>The core idea is delegation. The agent plans, writes code, runs commands, and drives a browser, while you supervise through reviewable outputs. Dynamic subagents let one agent spawn helpers for parallel work, and async tasks keep long jobs running in the background.</p><p>Scheduled Tasks, started with the /schedule command, run work on a timer. Projects group several folders under one scoped set of permissions. JSON hooks let teams run their own checks at set points in an agent's run.</p><p>Slash commands shape behaviour. The /goal command sets a target the agent keeps working toward, /grill-me makes it question your plan before it builds, /browser starts the browser subagent, and /plan forces a planning pass. Live voice transcription lets you dictate prompts.</p><p>Remote Control, added in August, lets you check on and steer a running session from another device. Custom agents arrived the same month, and a plugin marketplace distributes shared agents, skills and rules. MCP servers connect outside tools, and a terminal sandbox limits what commands can touch.</p><p>Skills and rules give the agent standing instructions. A rule might say to use TypeScript and a named test runner, while a skill packages a repeatable procedure such as a release checklist. Teams can keep these instructions in project files and review them like any other change.</p><p>Permissions deserve attention. Projects scope what an agent may read and write, the terminal sandbox limits shell access, and the browser subagent has its own allow and deny lists. Together these controls let you grant an agent enough room to work without giving it your whole machine.</p><p>The CLI matters as much as the app. Because agy runs headless, the same agents can run in scripts and continuous integration jobs. The Python SDK and the Managed Agents API extend that idea to custom products, so a company can embed the agent harness in its own tools.</p><div style="margin:1.75rem 0;text-align:center;">
+  <img alt="Diagram of the Antigravity agent harness connected to the desktop app, CLI, SDK, Managed Agents API, IDE and Gemini Enterprise" src="../assets/antigravity/antigravity_case_5.png" style="width:100%;max-width:760px;height:auto;border-radius:12px;border:1px solid rgba(56, 189, 248, 0.3);box-shadow:0 8px 30px rgba(0,0,0,0.5);" loading="lazy" />
+  <p class="diagram-caption">Figure 3. The same agent harness serves the desktop app, the CLI, the SDK, hosted agents, the IDE and enterprise deployments.</p>
+</div>
+</article>
+
+<!-- WORKFLOW -->
+<article class="content-card" id="workflow">
+<h2>AI-assisted development in practice</h2>
+<p>Antigravity produces Artifacts instead of a wall of chat. These include task lists, implementation plans, walkthroughs, diffs, screenshots and browser recordings. You can comment on an Artifact the way you comment in Google Docs, and the agent folds your notes into its next step.</p><p>Two modes set the pace. Planning mode shows a plan for approval before any code changes, and Fast mode skips straight to work. Case study four below shows why many developers pick Planning for anything non-trivial.</p><p>The browser subagent opens a separate Chrome profile, so it never touches your signed-in sessions. Allow and deny lists restrict which sites it may visit. It clicks through the running app, captures screenshots and recordings, and attaches them as evidence.</p><figure class="article-figure"><svg viewBox="0 0 960 250" role="img" aria-label="Review-driven development loop: prompt, plan, review, run, browser check, walkthrough, with feedback arrow back to the plan" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#FFD24A"/></marker></defs><rect x="20" y="60" width="130" height="80" rx="14" fill="#00e5ff" fill-opacity=".12" stroke="#00e5ff" stroke-width="2.5"/><text x="85" y="98" font-size="16" font-weight="600" fill="#fff" text-anchor="middle">Prompt</text><text x="85" y="122" font-size="13" font-weight="500" fill="#00e5ff" text-anchor="middle">goal + spec</text><line x1="152" y1="100" x2="173" y2="100" stroke="#FFD24A" stroke-width="2.5" marker-end="url(#ar)"/><rect x="175" y="60" width="130" height="80" rx="14" fill="#FFD24A" fill-opacity=".12" stroke="#FFD24A" stroke-width="2.5"/><text x="240" y="98" font-size="16" font-weight="600" fill="#fff" text-anchor="middle">Plan</text><text x="240" y="122" font-size="13" font-weight="500" fill="#FFD24A" text-anchor="middle">Artifact</text><line x1="307" y1="100" x2="328" y2="100" stroke="#FFD24A" stroke-width="2.5" marker-end="url(#ar)"/><rect x="330" y="60" width="130" height="80" rx="14" fill="#ff2e93" fill-opacity=".12" stroke="#ff2e93" stroke-width="2.5"/><text x="395" y="98" font-size="16" font-weight="600" fill="#fff" text-anchor="middle">Your review</text><text x="395" y="122" font-size="13" font-weight="500" fill="#ff2e93" text-anchor="middle">comments</text><line x1="462" y1="100" x2="483" y2="100" stroke="#FFD24A" stroke-width="2.5" marker-end="url(#ar)"/><rect x="485" y="60" width="130" height="80" rx="14" fill="#7CFF4F" fill-opacity=".12" stroke="#7CFF4F" stroke-width="2.5"/><text x="550" y="98" font-size="16" font-weight="600" fill="#fff" text-anchor="middle">Agents run</text><text x="550" y="122" font-size="13" font-weight="500" fill="#7CFF4F" text-anchor="middle">subagents</text><line x1="617" y1="100" x2="638" y2="100" stroke="#FFD24A" stroke-width="2.5" marker-end="url(#ar)"/><rect x="640" y="60" width="130" height="80" rx="14" fill="#8a5cff" fill-opacity=".12" stroke="#8a5cff" stroke-width="2.5"/><text x="705" y="98" font-size="16" font-weight="600" fill="#fff" text-anchor="middle">Browser check</text><text x="705" y="122" font-size="13" font-weight="500" fill="#8a5cff" text-anchor="middle">recordings</text><line x1="772" y1="100" x2="793" y2="100" stroke="#FFD24A" stroke-width="2.5" marker-end="url(#ar)"/><rect x="795" y="60" width="130" height="80" rx="14" fill="#ff8a00" fill-opacity=".12" stroke="#ff8a00" stroke-width="2.5"/><text x="860" y="98" font-size="16" font-weight="600" fill="#fff" text-anchor="middle">Walkthrough</text><text x="860" y="122" font-size="13" font-weight="500" fill="#ff8a00" text-anchor="middle">diff + proof</text><path d="M860 145 C 860 215, 100 215, 100 145" fill="none" stroke="#FFD24A" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#ar)"/><text x="480" y="238" font-size="14" font-weight="500" fill="#FFD24A" text-anchor="middle">Your comments and test results feed the next plan</text><text x="480" y="34" font-size="18" font-weight="700" fill="#FFD24A" text-anchor="middle">Review-driven development loop</text></svg><figcaption>Figure: the review-driven loop that Artifacts support.</figcaption></figure><p>Consider a typical feature request. You write a short specification, and the agent returns an implementation plan as an Artifact. You comment on the two steps you dislike, approve the rest, and the agent edits files, runs tests and starts the app.</p><p>The browser subagent then exercises the feature and records what it saw. You open the walkthrough, scan the diff, and watch the recording at double speed. If something looks wrong, you comment on that exact screenshot and the loop runs again.</p><p>This differs from chat-based coding in one practical way. The evidence arrives with the change, so you are reviewing proof rather than trusting a summary. It is also slower to start than a quick autocomplete, which is why Fast mode exists for small edits.</p><p>Google calls the resulting habit review-driven development. You spend less time typing and more time reading plans, comparing diffs and watching recordings. The skill that matters shifts toward writing precise specifications and spotting what the agent got subtly wrong.</p>
+</article>
+
+<!-- MODELS-PRICING -->
+<article class="content-card" id="models-pricing">
+<h2>Models and pricing</h2>
+<p>Gemini 3.5 Flash is the default model. Gemini 4 Argon arrived on 13 October 2026 and works only in the 2.0 app and the CLI, on Ultra and Enterprise plans. Claude Sonnet 5.5 and Opus 5.5 are available from the Pro plan upward.</p><p>Model choice affects both cost and quality. Google says Gemini 3.1 Pro could not finish the OS build that Gemini 3.5 Flash completed, so newer models can matter more than their size labels. Try two models on the same small task before you commit to one.</p><p>Google's notes list Claude 4.6 and GPT-OSS-120B as removed on 2 November 2026. If you pinned either one, expect to switch.</p><p>The Free tier costs nothing. AI Pro costs $20 a month, and AI Ultra has a $100 tier with five times the Pro allowance and a $200 tier with twenty times, cut from $250. Business plans start at $30 per seat.</p><p>For most individuals the Free or Pro tier is enough to learn the workflow. The heavier Ultra tiers make sense when you run several long agent sessions a day, or when you want access to Gemini 4 Argon and the team features. Business plans from $30 per seat suit small groups that need shared administration.</p><figure class="article-figure"><svg viewBox="0 0 960 330" role="img" aria-label="Bar chart of Antigravity monthly plan prices: Free $0, Pro $20, Business from $30 per seat, Ultra $100, Ultra $200" xmlns="http://www.w3.org/2000/svg"><text x="480" y="28" font-size="18" font-weight="700" fill="#FFD24A" text-anchor="middle">Monthly price by plan (US dollars)</text><text x="20" y="82" font-size="16" font-weight="600" fill="#fff" text-anchor="start">Free</text><text x="20" y="100" font-size="12" font-weight="400" fill="#aaa" text-anchor="start">0</text><rect x="150" y="55" width="6" height="38" rx="8" fill="#7CFF4F" fill-opacity=".85"/><text x="168" y="81" font-size="18" font-weight="700" fill="#7CFF4F" text-anchor="start">$0</text><text x="20" y="136" font-size="16" font-weight="600" fill="#fff" text-anchor="start">AI Pro</text><text x="20" y="154" font-size="12" font-weight="400" fill="#aaa" text-anchor="start">1x allowance</text><rect x="150" y="109" width="56" height="38" rx="8" fill="#00e5ff" fill-opacity=".85"/><text x="218.0" y="135" font-size="18" font-weight="700" fill="#00e5ff" text-anchor="start">$20</text><text x="20" y="190" font-size="16" font-weight="600" fill="#fff" text-anchor="start">Business</text><text x="20" y="208" font-size="12" font-weight="400" fill="#aaa" text-anchor="start">per seat</text><rect x="150" y="163" width="84" height="38" rx="8" fill="#8a5cff" fill-opacity=".85"/><text x="246.0" y="189" font-size="18" font-weight="700" fill="#8a5cff" text-anchor="start">$30</text><text x="20" y="244" font-size="16" font-weight="600" fill="#fff" text-anchor="start">AI Ultra</text><text x="20" y="262" font-size="12" font-weight="400" fill="#aaa" text-anchor="start">5x Pro</text><rect x="150" y="217" width="280" height="38" rx="8" fill="#ff2e93" fill-opacity=".85"/><text x="442.0" y="243" font-size="18" font-weight="700" fill="#ff2e93" text-anchor="start">$100</text><text x="20" y="298" font-size="16" font-weight="600" fill="#fff" text-anchor="start">AI Ultra</text><text x="20" y="316" font-size="12" font-weight="400" fill="#aaa" text-anchor="start">20x Pro</text><rect x="150" y="271" width="560" height="38" rx="8" fill="#FFD24A" fill-opacity=".85"/><text x="722.0" y="297" font-size="18" font-weight="700" fill="#FFD24A" text-anchor="start">$200</text></svg><figcaption>Figure: Antigravity plan prices as listed by Google.</figcaption></figure><p>Quota is the practical limit. Google's own OS-build post warns that allowance can run out within a few tasks and recommends buying extra credits.</p>
+</article>
+
+<!-- VSCODE-FORK -->
+<article class="content-card" id="vscode-fork">
+<h2>The Visual Studio Code fork and extension support</h2>
+<p>The IDE inherits the VS Code workbench: the explorer, the terminal, the settings format and the extension host. Keybindings, themes and most language tooling feel familiar on first launch. Import commands copy your settings and installed extensions from VS Code, which makes the move quick.</p><p>Extensions are where the claim of full support needs care. Antigravity defaults to the Open VSX registry, not Microsoft's Visual Studio Marketplace. You can repoint it to the Microsoft marketplace, but Microsoft's licensing blocks some of its own extensions, such as C# Dev Kit, in forks.</p><p>On the other side, Google shipped official Antigravity extensions on 20 August 2026 for VS Code, Visual Studio 2026, JetBrains IDEs from version 2026.2.1, Zed, Xcode 27 beta 6 and later, and an Eclipse preview. These bring the agent into those editors. They do not turn Antigravity into a drop-in host for every Microsoft extension.</p><p>A practical migration takes four steps. Install Antigravity, run the import commands, and compare the imported extension list against what you use daily. Then open your real project and test the language server, debugger and formatter before you trust the setup.</p><p>Most front-end and Python work should carry over without trouble, because those extensions are widely published on Open VSX. Problems tend to appear with Microsoft-published tooling, remote development extensions and anything that checks which build of VS Code it runs in. The Antigravity docs and the appsoftware.com migration guide both cover these steps.</p><div style="margin:1.75rem 0;text-align:center;">
+  <img alt="Diagram showing VS Code core feeding Antigravity IDE, which uses Open VSX by default and can be repointed to the Visual Studio Marketplace" src="../assets/antigravity/antigravity_case_6.png" style="width:100%;max-width:760px;height:auto;border-radius:12px;border:1px solid rgba(56, 189, 248, 0.3);box-shadow:0 8px 30px rgba(0,0,0,0.5);" loading="lazy" />
+  <p class="diagram-caption">Figure 4. Two extension routes, plus the official Antigravity extensions for other editors.</p>
+</div><div class="table-responsive"><table class="data-table"><caption>Table 1. Extension routes and their status</caption><thead><tr><th>Where</th><th>Route</th><th>Status</th></tr></thead><tbody><tr><td>Antigravity IDE</td><td>Open VSX registry</td><td class="ok">Default</td></tr><tr><td>Antigravity IDE</td><td>Visual Studio Marketplace</td><td class="warn">Manual repoint; some Microsoft extensions blocked by licence</td></tr><tr><td>VS Code</td><td>Official Antigravity extension</td><td class="ok">Available since 20 Aug 2026</td></tr><tr><td>Visual Studio 2026</td><td>Official Antigravity extension</td><td class="ok">Available</td></tr><tr><td>JetBrains 2026.2.1+</td><td>Official Antigravity extension</td><td class="ok">Available</td></tr><tr><td>Zed</td><td>Official Antigravity extension</td><td class="ok">Available</td></tr><tr><td>Xcode 27 beta 6+</td><td>Official Antigravity extension</td><td class="ok">Available</td></tr><tr><td>Eclipse</td><td>Official Antigravity extension</td><td class="warn">Preview</td></tr></tbody></table></div><p>The accurate summary is broad compatibility with the VS Code ecosystem through Open VSX, plus official bridges into Visual Studio and other editors. Teams that depend on C# Dev Kit or similar Microsoft-only extensions should keep VS Code or Visual Studio for that work and add the Antigravity extension there.</p>
+</article>
+
+<!-- CASE-STUDIES -->
+<article class="content-card" id="case-studies">
+<h2>Five case studies</h2>
+<h3 id="cs1">Case study 1: an operating system from one prompt</h3><p>Google's own team asked agents to build an operating system from scratch with a single prompt and no human corrections. The result runs FreeDoom and covers a kernel, process and memory management, a filesystem, and video and keyboard drivers. The run used 93 subagents and 15,314 model calls on Gemini 3.5 Flash, with over 339 million input tokens.</p><p>Google priced the build at $916.92 at API rates. Digit's coverage of the keynote reported that the run took 12 hours. Google says Gemini 3.1 Pro could not complete the same task.</p><p>The design used seven roles: Sentinel, Orchestrator, Explorer, Worker, Reviewer, Critic and Auditor. Handoff files carried context across limits, and a scheduled job respawned stalled subagents. Early runs cheated by reusing logs from earlier runs, so the Auditor now checks for hardcoded outputs.</p><p>The authors admit the OS lacks floating-point math, sandboxing and hardware acceleration, and that code quality trails experienced developers. All figures are self-reported by Google. The feature is /teamwork-preview, a research preview that needs the $200 Ultra plan and a machine that stays awake.</p><p>The point of the OS demo is not the operating system. It is evidence that a long, coordinated run can stay on track when roles are separated and a checker watches for shortcuts. Teams building their own agent workflows can borrow the idea of a separate reviewer and auditor.</p><div style="margin:1.75rem 0;text-align:center;">
+  <img alt="Diagram of seven agent roles arranged around a single prompt, with statistics from the operating system build" src="../assets/antigravity/antigravity_case_7.png" style="width:100%;max-width:760px;height:auto;border-radius:12px;border:1px solid rgba(56, 189, 248, 0.3);box-shadow:0 8px 30px rgba(0,0,0,0.5);" loading="lazy" />
+  <p class="diagram-caption">Figure 5. The seven-role agent team and the scale of the operating system build, as reported by Google.</p>
+</div><h3 id="cs2">Case study 2: reproducing AlphaZero</h3><p>In a second demo, agents reproduced a light, playable version of AlphaZero. They wrote a reinforcement learning pipeline in JAX and Flax, trained a ResNet through self-play on multi-TPU pods, and mentioned 9x9 board training. They also built a full-stack app to play against the result.</p><p>The post gives no subagent count, token total or cost for this project, so it is hard to compare with the OS build. It does show the same orchestration handling a research-style task with training loops as well as systems code. Google also lists a photo editor, a messaging app and a collaboration platform, and calls them functional starting points rather than commercial-grade products.</p><h3 id="cs3">Case study 3: a dashboard and ESP32 firmware</h3><p>Saad Imtiaz wrote in Elektor Magazine in November 2025 about using Antigravity for engineering work. He asked for a ClickUp-style project dashboard with a React front end and SQLite back end, and received routes, components, a schema and an API within minutes. About twenty follow-up prompts added filters, spaces, projects, lists and four task states.</p><p>On the hardware side, he requested ESP-NOW file transfer between ESP32 boards. Antigravity wrote the sender and receiver sketches, handled MAC pairing, split files into packets, and built a drag-and-drop web page. He reports the code worked on the first flash.</p><p>He also created a testing agent that clicked through the web preview and reported issues with file names and line numbers. The agent fixed the code after he approved its plan. His cautions: it missed some UI bugs, and hallucinations rose near the context limit, which Antigravity does not display.</p><h3 id="cs4">Case study 4: the Mood Mirror app</h3><p>The Mood Mirror app turns a typed mood into abstract art. Gemini returns a sentiment score, a colour palette and a creative prompt, and the app generates an image or video from them. Scores above 0.8 or below -0.8 produce a five-second looping MP4, and other scores produce a PNG.</p><p>The author built it from a detailed prompt in Planning mode, using React, Tailwind CSS and the Gemini 3 SDK. Problems appeared quickly. It wrote JavaScript instead of TypeScript, shipped mock services first, installed husky when lefthook was requested, and used an outdated Gemini package.</p><p>The author rated the experience 7 out of 10. The workflow was excellent, but the output was less precise than expected. The takeaway was that Planning mode cuts rework and developer review remains essential.</p><h3 id="cs5">Case study 5: a Pomodoro progressive web app</h3><p>A developer built basic-pomo, a Pomodoro timer PWA, with SolidJS, Vite and TypeScript. A custom hook handles timer state, localStorage keeps progress through an accidental tab close, and the Web Audio API generates the 880 Hz alert beep without audio files. The author reports a 1.5-second load on simulated 3G.</p><p>An AGENTS.md file in the project root helped keep components small, though the AI did not follow every architectural rule. Antigravity set up the PWA configuration with little fuss, and the author says it handled SolidJS better than AI Studio had. The model sometimes errored or stalled at startup and needed nudging.</p><p>The author called it a pretty good experience and a capable assistant for rapid prototyping. The main rough edge was model consistency. The finished app is live at <a class="gold-link" href="https://pomo.mytoori.com/">pomo.mytoori.com</a>.</p><h3 id="cs-lessons">What the five cases share</h3><p>Three patterns repeat. First, the agent is fastest on well-defined work: scaffolds, drivers, glue code and tests. Second, the failures are mundane, such as the wrong package, the wrong language or a skipped edge case, and not dramatic crashes.</p><p>Third, the people who got the best results wrote clear prompts and read the plans. The Elektor author recommends a cycle of think, test, observe, then instruct. The Mood Mirror author reached the same conclusion from the opposite direction, after rework that a closer review of the plan would have prevented.</p><p>Scale changes the picture only in degree. Google needed an Auditor role to catch cheating in the OS build, which shows that verification has to be designed into large agent runs. A solo developer faces the same issue on a smaller scale and handles it with tests and careful reading.</p>
+</article>
+
+<!-- WHO-FOR -->
+<article class="content-card" id="who-for">
+<h2>Who should use it, and who should wait</h2>
+<p>Antigravity suits developers who already work in a VS Code style environment and want to hand off larger chunks of work. Prototype builders, makers and small teams benefit most, as the Elektor and Pomodoro cases show. The free tier lets you test the workflow before spending anything.</p><p>Teams with strict compliance needs should look at the enterprise route. Gemini Enterprise integration, IAM controls and VPC Service Controls exist for that purpose, and Google says enterprise code is not used for training. Even so, a security team should test the sandbox and the browser allow lists against its own policies before rollout.</p><p>Developers who rely on Microsoft-only extensions, especially C# Dev Kit, should keep their current editor for that work. Those who need guaranteed output quality at commercial scale should treat agent results as drafts. Google itself describes its demo apps as functional starting points, not finished products.</p><p>Developers who want to build their own agent products have two more options. The Python SDK, in preview under Apache 2.0, exposes the harness to custom code. The Managed Agents API covers hosted use, which suits products that cannot depend on a developer's laptop.</p><p>A sensible trial lasts one week. Pick one real but low-risk task, run it in Planning mode, and record how long review takes compared with writing the code yourself. That number, more than any benchmark, tells you whether the tool earns a place in your routine.</p>
+</article>
+
+<!-- LIMITS -->
+<article class="content-card" id="limits">
+<h2>Limits, security and enterprise use</h2>
+<p>Security researchers have found real problems. Koi researchers and BleepingComputer reported a namespace issue in extension recommendations, and Google removed 13 recommendations on 26 December 2025 and fixed the issue on 1 January 2026. Pillar Security reported a sandbox escape that Google fixed on 28 February 2026. An early report also described an agent wiping a user's drive in December 2025.</p><p>Enterprise plans add IAM and VPC Service Controls support, and Google states that it does not train on enterprise code. Individual users should still run agents inside the terminal sandbox, keep browser allow lists tight, and review every command that touches files outside the project.</p><p>Output quality is the other limit. Case studies three and four both found missed bugs and wrong package choices, and the OS build shows plainly what one-prompt systems still lack. Treat agent output as a strong first draft.</p><p>Cost control is the last practical issue. Long multi-agent runs consume quota quickly, and the OS build used billions of tokens in total. Set a goal with a clear end condition, watch usage during the first runs, and stop sessions that loop without progress.</p>
+</article>
+
+<!-- CONCLUSION -->
+<article class="content-card" id="conclusion">
+<h2>Conclusion</h2>
+<p>Antigravity 2.0 is best understood as a control room for agents, with the IDE as one view among several. Its strengths are parallel subagents, reviewable Artifacts and a browser that checks its own work. Its weak points are quota, model consistency and the gap between demo and production quality.</p><p>On extensions, the honest answer is broad but not total. Open VSX covers most needs, official extensions reach Visual Studio and other editors, and Microsoft licensing leaves a few gaps. Check your own extension list before you commit a team to it.</p><p>The pace of change is high. Model lists, plan limits and extension support all shifted within six months of launch, so check Google's changelog and plan notes before you budget or standardise. What you learn about writing plans and reviewing evidence will carry over even when the menus change.</p><p>Start with a small project in Planning mode and read every plan. Judge the tool by how much review time it saves you, not by the size of the demos.</p>
+</article>
+
+<article class="content-card" id="pricing-parity">
+<h2>Practice Pricing &amp; Global Purchasing Power Parity</h2>
 <p>
-        A defining breakthrough of the Antigravity development environment is its model-agnostic intelligence engine. Recognizing that specialized engineering challenges demand distinct reasoning strengths, the IDE provides native access to leading frontier models without requiring complex custom API proxy setups:
-      </p>
-<ul>
-<li><strong>Claude Model Integration:</strong> Seamlessly dispatch complex architectural planning, refactoring passes, and nuanced coding tasks to <strong>Claude Opus</strong> and <strong>Claude Sonnet</strong>.</li>
-<li><strong>Gemini Frontier Suite:</strong> Leverage <strong>Gemini Flash</strong> for near-instant sub-second autocomplete, <strong>Gemini Pro</strong> for robust multi-file feature development, and <strong>Gemini Argon</strong> for deep, million-token context evaluations and autonomous cybersecurity audits.</li>
+  I provide live, remote engineering training and advisory consulting covering Google Gemini, Claude, and sovereign local LLMs. Engagements turn engineering teams and individual developers into AI-first builders who construct production agent swarms, implement budget safeguards, and run private models.
+</p>
+<p>
+  All services are delivered remotely worldwide with 4 hours a day of live instruction, with Saturdays and Sundays as holidays. Pricing is governed by our transparent 195-country Purchasing Power Parity (PPP) framework scaling rates across six economic tiers. For full tier definitions, currency conversions, and interactive calculations, visit our <a class="gold-link" href="../pricing.html">Pricing Page</a>.
+</p>
+
+<div class="pricing-summary-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;margin:1.5rem 0;">
+<div class="package-card" style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:12px;padding:1.5rem;">
+<h3 style="color:var(--gold);margin-top:0;">Business AI Training Flagship</h3>
+<p style="color:var(--text-muted);font-size:0.9rem;">Comprehensive organizational workforce and engineering transformation.</p>
+<div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">$2,500 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
+<ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+<li>60 days total calendar duration: 30 days live engineering training + 30 days dedicated support.</li>
+<li>Includes up to 10 participants, with additional seats at $250 USD per seat up to a maximum of 20 seats.</li>
+<li>4 hours daily live instruction, Monday through Friday (Saturdays and Sundays holidays). Remote worldwide.</li>
+<li>Zero advance deposit ($0 upfront); 20% due in 5 milestone installments after completed progress.</li>
+<li>Walk away owing nothing if not satisfied after the first milestone training phase.</li>
+<li>High-quality training materials, guides, and custom code transferred under Apache 2.0 license (commercial use, resale, and relicensing permitted with attribution).</li>
 </ul>
-<h3>The Universal Language Builder</h3>
-<p>
-        Antigravity is designed from the ground up as a universal language builder. By marrying Language Server Protocol (LSP) diagnostics with agentic execution, it delivers first-class development support across TypeScript, Python, Rust, Go, C++, Java, Kotlin, Swift, and modern Domain-Specific Languages (DSLs). The editor automatically analyzes build errors, compiles unit tests, and applies verified diffs in-place.
-      </p>
-</article>
-<!-- THREE MODALITIES & ANTIGRAVITY CHAT -->
-<article class="content-card" id="modalities">
-<h2>Three Interaction Modalities &amp; Antigravity Chat</h2>
-<p>
-        Antigravity structures human-AI pair programming across three distinct operational modalities depending on cognitive overhead and task complexity:
-      </p>
-<ol>
-<li><strong>Passive Modality (Antigravity Tab Autocomplete):</strong> A sub-50ms next-intent prediction engine routed to a single keystroke. It suggests inline completions, predicts cursor jump positions, auto-imports dependencies, and generates multi-line diffs across open files.</li>
-<li><strong>Instructive Modality (Inline Command):</strong> Invoked via targeted shortcuts on highlighted code blocks to execute localized refactorings, add docstrings, optimize algorithms, or repair compiler errors without polluting the broader context window.</li>
-<li><strong>Collaborative Modality (Sidebar Agent &amp; Antigravity Chat):</strong> The primary conversational and autonomous pair programmer. Antigravity Chat allows developers to discuss architecture, plan migration roadmaps, and authorize the agent to execute shell commands, run tests, and commit code autonomously.</li>
-</ol>
-<div class="diagram-container">
-<div class="mermaid-fallback">
-<em>Interactive architecture diagram (loading...)</em>
-</div>
-<div class="mermaid">
-stateDiagram-v2
-    [*] --> PassiveTab: Keystroke Context
-    PassiveTab --> InstructiveCommand: User Selects Block (Ctrl+I)
-    InstructiveCommand --> CollaborativeAgent: Complex Task / Multiple Files
-    
-    state PassiveTab {
-        [*] --> InlineSuggest
-        InlineSuggest --> SupercompleteDiff
-    }
-    state InstructiveCommand {
-        [*] --> LocalRefactor
-        LocalRefactor --> InlineDocs
-    }
-    state CollaborativeAgent {
-        [*] --> AntigravityChat
-        AntigravityChat --> PlanningMode
-        PlanningMode --> ToolExecutionMCP
-    }
-        </div>
-<div class="diagram-caption">Figure 2: Antigravity IDE Three Operational Modalities State Machine</div>
-</div>
-<div style="margin:1.75rem 0;text-align:center;">
-  <img alt="Agent Security Defense and Execution Runtime" src="../assets/agent-security-defense.jpg" style="width:100%;max-width:760px;height:auto;border-radius:12px;border:1px solid rgba(251, 191, 36, 0.3);box-shadow:0 8px 30px rgba(0,0,0,0.5);" />
-  <p class="diagram-caption">Sandboxed terminal execution, tool authorization boundaries, and MCP safety guards in Collaborative Mode.</p>
 </div>
 
+<div class="package-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
+<h3 style="color:var(--cyan);margin-top:0;">Personal AI Training Flagship</h3>
+<p style="color:var(--text-muted);font-size:0.9rem;">Dedicated 1-on-1 private acceleration for solo founders, builders, and senior engineers.</p>
+<div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">$2,500 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
+<ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+<li>60 days total calendar duration: 30 days live 1-on-1 training + 30 days dedicated support.</li>
+<li>Strictly 1 person only (dedicated private acceleration).</li>
+<li>4 hours daily hands-on implementation, Monday through Friday (Saturdays and Sundays holidays). Remote worldwide.</li>
+<li>Zero advance deposit ($0 upfront); 20% due in 5 milestone installments after completed progress.</li>
+<li>Walk away owing nothing if not satisfied after the first milestone training phase.</li>
+<li>Comprehensive training curriculum and materials licensed under Apache 2.0 (commercial use, resale, and relicensing permitted with attribution).</li>
+</ul>
+</div>
+</div>
+
+<h3>Individual Service Picks (Pick &amp; Choose)</h3>
+<p>
+  Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
+</p>
+<ul style="line-height:1.8;">
+<li><strong>Business Individual Pick:</strong> <strong>$250 USD</strong> base for 1 seat, with additional seats at $250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
+<li><strong>Personal Individual Pick:</strong> <strong>$250 USD</strong> strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
+</ul>
+
+<h3>Payment Structure &amp; Trust Guarantees</h3>
+<p>
+  Every client engagement is safeguarded by strict trust guarantees:
+</p>
+<ul style="line-height:1.7;">
+<li><strong>Zero Upfront Payment:</strong> Strictly $0 advance deposit required. We never invoice before delivering actual value.</li>
+<li><strong>20% in Five Installments:</strong> Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.</li>
+<li><strong>Walkaway Guarantee:</strong> If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.</li>
+<li><strong>Commercial Apache 2.0 License:</strong> All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.</li>
+<li><strong>Full Pricing Details:</strong> Learn more about country tier multipliers, currency choices, and customized curriculum on our <a class="gold-link" href="../pricing.html">Pricing Page</a>.</li>
+</ul>
+
+<h3>The Six Purchasing Power Parity (PPP) Tiers</h3>
+<div class="table-responsive">
+<table class="data-table">
+<thead>
+<tr>
+<th>Tier</th>
+<th>Category</th>
+<th>Representative Geographies</th>
+<th>Multiplier</th>
+<th>Business Flagship</th>
+<th>Personal Flagship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tier 1</strong></td>
+<td>High-Income Baseline</td>
+<td>United States, UK, Germany, Canada, Japan, Singapore, Australia</td>
+<td>1.00X</td>
+<td>$2,500 USD</td>
+<td>$2,500 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 2</strong></td>
+<td>Upper-Middle Economies</td>
+<td>Brazil, Mexico, Malaysia, Turkiye, Thailand, Philippines, Sri Lanka</td>
+<td>0.75X</td>
+<td>$1,875 USD</td>
+<td>$1,875 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 3</strong></td>
+<td>Lower-Middle &amp; Low-Income</td>
+<td>India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam</td>
+<td>0.50X</td>
+<td>$1,250 USD</td>
+<td>$1,250 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 4</strong></td>
+<td>Early-Stage Startups</td>
+<td>Global tech startups with &lt;$1M external funding</td>
+<td>0.50X</td>
+<td>$1,250 USD</td>
+<td>$1,250 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 5</strong></td>
+<td>Academia &amp; Non-Profits</td>
+<td>Universities, accredited labs, registered charities &amp; 501(c)(3) entities</td>
+<td>0.25X</td>
+<td>$625 USD</td>
+<td>$625 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 6</strong></td>
+<td>Subsidized Relief</td>
+<td>Crisis-affected regions, developing collectives &amp; grassroots builders</td>
+<td>Custom</td>
+<td>Subsidized</td>
+<td>$250 USD</td>
+</tr>
+</tbody>
+</table>
+</div>
 </article>
-<!-- VERIFIED REFERENCES -->
+
+<!-- REFERENCES -->
+
+<!-- REFERENCES -->
 <article class="content-card" id="references">
-<h2>Verified References &amp; Authoritative Documentation</h2>
-<ul>
-<li><a class="ref-link" href="https://antigravity.google/docs" rel="noopener" target="_blank">Google Antigravity Documentation Portal</a></li>
-<li><a class="ref-link" href="https://antigravity.google/docs/ide/browser" rel="noopener" target="_blank">Antigravity IDE Browser Testing &amp; Automation</a></li>
-<li><a class="ref-link" href="https://deepmind.google/technologies/gemini/" rel="noopener" target="_blank">Google DeepMind Research: Gemini Engineering Platform</a></li>
-<li><a class="ref-link" href="https://github.com/google-antigravity/antigravity-sdk-python" rel="noopener" target="_blank">Google Antigravity Python SDK on GitHub</a></li>
-</ul>
+<h2>References</h2>
+<p class="refnote">All links were opened and returned a live page on 2 November 2026.</p><ol class="refs"><li>Introducing Google Antigravity 2.0. Google Antigravity blog. <a class="gold-link" href="https://antigravity.google/blog/introducing-google-antigravity-2-0" target="_blank" rel="noopener">https://antigravity.google/blog/introducing-google-antigravity-2-0</a></li><li>Google Antigravity built an OS. Google Antigravity blog. <a class="gold-link" href="https://antigravity.google/blog/google-antigravity-built-an-os" target="_blank" rel="noopener">https://antigravity.google/blog/google-antigravity-built-an-os</a></li><li>Antigravity IDE extensions. Google Antigravity blog. <a class="gold-link" href="https://antigravity.google/blog/antigravity-ide-extensions" target="_blank" rel="noopener">https://antigravity.google/blog/antigravity-ide-extensions</a></li><li>Extensions documentation. Google Antigravity docs. <a class="gold-link" href="https://antigravity.google/docs/ide/extensions" target="_blank" rel="noopener">https://antigravity.google/docs/ide/extensions</a></li><li>Changes to Antigravity plans. Google Antigravity blog. <a class="gold-link" href="https://antigravity.google/blog/changes-to-antigravity-plans" target="_blank" rel="noopener">https://antigravity.google/blog/changes-to-antigravity-plans</a></li><li>Gemini 4 Argon in Google Antigravity. Google Antigravity blog. <a class="gold-link" href="https://antigravity.google/blog/gemini-4-argon-in-google-antigravity" target="_blank" rel="noopener">https://antigravity.google/blog/gemini-4-argon-in-google-antigravity</a></li><li>Introducing Google Antigravity CLI. Google Antigravity blog. <a class="gold-link" href="https://antigravity.google/blog/introducing-google-antigravity-cli" target="_blank" rel="noopener">https://antigravity.google/blog/introducing-google-antigravity-cli</a></li><li>Introducing Google Antigravity SDK. Google Antigravity blog. <a class="gold-link" href="https://antigravity.google/blog/introducing-google-antigravity-sdk" target="_blank" rel="noopener">https://antigravity.google/blog/introducing-google-antigravity-sdk</a></li><li>Plugin marketplace in Antigravity. Google Antigravity blog. <a class="gold-link" href="https://antigravity.google/blog/plugin-marketplace-in-antigravity" target="_blank" rel="noopener">https://antigravity.google/blog/plugin-marketplace-in-antigravity</a></li><li>Remote Control for Antigravity. Google Antigravity blog. <a class="gold-link" href="https://antigravity.google/blog/remote-control-for-antigravity" target="_blank" rel="noopener">https://antigravity.google/blog/remote-control-for-antigravity</a></li><li>Google launches Antigravity 2.0 with an updated desktop app and CLI tool at I/O 2026. TechCrunch. <a class="gold-link" href="https://techcrunch.com/2026/05/19/google-launches-antigravity-2-0-with-an-updated-desktop-app-and-cli-tool-at-io-2026/" target="_blank" rel="noopener">https://techcrunch.com/2026/05/19/google-launches-antigravity-2-0-with-an-updated-desktop-app-and-cli-tool-at-io-2026/</a></li><li>Google I/O 2026: Google claims Antigravity 2.0 created an operating system in 12 hours. Digit. <a class="gold-link" href="https://www.digit.in/news/general/google-io-2026-google-claims-antigravity-20-created-an-operating-system-in-12-hours-brings-vibe-coding-to-android.html" target="_blank" rel="noopener">https://www.digit.in/news/general/google-io-2026-google-claims-antigravity-20-created-an-operating-system-in-12-hours-brings-vibe-coding-to-android.html</a></li><li>Google's Antigravity IDE Sparks Forking Debate. Visual Studio Magazine. <a class="gold-link" href="https://visualstudiomagazine.com/articles/2025/11/21/googles-antigravity-ide-sparks-forking-debate.aspx" target="_blank" rel="noopener">https://visualstudiomagazine.com/articles/2025/11/21/googles-antigravity-ide-sparks-forking-debate.aspx</a></li><li>Google Antigravity. Wikipedia. <a class="gold-link" href="https://en.wikipedia.org/wiki/Google_Antigravity" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Google_Antigravity</a></li><li>The Tool Every Engineer Should Try: An AI IDE That Actually Works. Elektor Magazine. <a class="gold-link" href="https://www.elektormagazine.com/articles/google-antigravity-ide" target="_blank" rel="noopener">https://www.elektormagazine.com/articles/google-antigravity-ide</a></li><li>The Mood Mirror App: My Antigravity First Experience. DEV Community. <a class="gold-link" href="https://dev.to/this-is-learning/the-mood-mirror-app-my-antigravity-first-experience-10a4" target="_blank" rel="noopener">https://dev.to/this-is-learning/the-mood-mirror-app-my-antigravity-first-experience-10a4</a></li><li>Building basic-pomo with Antigravity. giwan.github.io. <a class="gold-link" href="https://giwan.github.io/blog/2025-11-24-building-basic-pomo-with-antigravity" target="_blank" rel="noopener">https://giwan.github.io/blog/2025-11-24-building-basic-pomo-with-antigravity</a></li><li>Google Antigravity 2.0. Analytics Vidhya. <a class="gold-link" href="https://www.analyticsvidhya.com/blog/2026/05/google-antigravity-2-0/" target="_blank" rel="noopener">https://www.analyticsvidhya.com/blog/2026/05/google-antigravity-2-0/</a></li><li>Setting up Google Antigravity coming from VS Code. appsoftware.com. <a class="gold-link" href="https://www.appsoftware.com/blog/setting-up-google-antigravity-coming-from-vscode" target="_blank" rel="noopener">https://www.appsoftware.com/blog/setting-up-google-antigravity-coming-from-vscode</a></li><li>Google Antigravity 2.0 guide. Layer3 Labs. <a class="gold-link" href="https://www.layer3labs.io/guides/google-antigravity-2-0" target="_blank" rel="noopener">https://www.layer3labs.io/guides/google-antigravity-2-0</a></li><li>Antigravity is an agent-first coding tool. Altamira. <a class="gold-link" href="https://www.altamira.ai/blog/antigravity-is-agent-first-coding-tool/" target="_blank" rel="noopener">https://www.altamira.ai/blog/antigravity-is-agent-first-coding-tool/</a></li></ol>
 </article>
+
 <!-- RELEVANT CALL TO ACTION -->
 <section class="cta-banner">
-<h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Master Autonomous Software Development</h2>
+<h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Master Autonomous Software Development with Antigravity</h2>
 <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
-        From configuring Google Antigravity IDE and multi-model dispatching to building custom Model Context Protocol (MCP) toolchains - let's engineer your team's developer workflow.
-      </p>
+  From multi-agent pair programming and custom subagent orchestration to enterprise secure sandboxing and private model deployment - transform your engineering workflow.
+</p>
 <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
-<a class="btn btn-primary" href="../contact.html">Schedule Developer Advisory Session →</a>
-<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
+<a class="btn btn-primary" href="../contact.html">Schedule AI Architecture Review →</a>
+<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
 <a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
 </div>
 </section>
 </main>
+    
     <!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">

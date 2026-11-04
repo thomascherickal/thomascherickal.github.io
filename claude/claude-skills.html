@@ -159,7 +159,7 @@
               Slashing</a></li>
           <li><a href="../business-services/business-service-ai-agents-orchestration.html">Claude Agent Orchestration</a>
           </li>
-          <li><a href="../business-services/business-service-agentic-ai-systems.html">Hermes Agent Training</a></li>
+          <li><a href="../business-services/business-service-agentic-ai-systems.html">Agentic Assistants Training</a></li>
           <li><a href="../business-services/business-service-workflow-automations.html">Workflow Automations</a></li>
           <li><a href="../business-services/business-service-ai-budget-cost-limits-training.html">AI Budget &amp; Cost
               Control Training</a></li>
@@ -235,11 +235,11 @@
           <li><a href="../google/google-ai-studio.html">Google AI Studio</a></li>
           <li><a href="../google/google-antigravity-ide.html">Google Antigravity IDE</a></li>
           <li><a href="../google/google-gemini-deep-think.html">Gemini Deep Think</a></li>
-          <li><a href="../google/google-gemini-desktop.html">Google Gemini Desktop</a></li>
+          <li><a href="../google/google-gemini-desktop.html">Gemini Desktop</a></li>
           <li><a href="../google/google-gemini-spark.html">Gemini Spark</a></li>
           <li><a href="../google/google-gemini-notebook.html">Gemini Notebook</a></li>
           <li><a href="../google/google-gemma.html">Google Gemma</a></li>
-          <li><a href="../google/google-deep-research.html">Google Deep Research</a></li>
+          <li><a href="../google/google-multimodality.html">Google Multimodality</a></li>
           <li><a href="../google/google-deepmind.html">Google DeepMind</a></li>
           <li><a href="../google/google-gemini-4-models.html">Gemini 4 Models</a></li>
           <li><a href="../google/google-gemini-agents.html">Gemini Agents</a></li>
@@ -290,12 +290,13 @@
 <li><a href="#existing">5. Existing Skills Catalog</a></li>
 <li><a href="#security">6. Skill Security &amp; Safety</a></li>
 <li><a href="#future">7. Automation Economics &amp; Impact</a></li>
-<li><a href="#references">8. References</a></li>
+<li><a href="#pricing-parity">8. Practice Pricing & Global Purchasing Power Parity</a></li>
+      <li><a href="#references">9. References</a></li>
 </ol>
 </div>
 <!-- Introduction & Section 1 -->
 <div class="content-card" id="what">
-<h2>1. What A Claude Skill Is</h2>
+<h2>What A Claude Skill Is</h2>
 <p class="article-p" style="font-size:1.06rem;color:#f8fafc;font-weight:500;">A Claude skill is a folder. Inside it sits a Markdown file called <code>SKILL.md</code>, plus any scripts, templates or reference documents the task needs. Claude opens it only when a request matches what the skill says it does, then follows it like an onboarding guide for one specific job.</p>
 <p class="article-p">Anthropic <a class="ref-link" href="https://claude.com/resources/articles/skills" rel="noopener noreferrer" target="_blank">introduced Agent Skills for Claude</a> on October 16, 2025, and published the format as an open standard on December 18, 2025. Skills now run in the Claude apps, Claude Code, the Claude API and the Agent SDK. This article explains how they work, walks through three hands-on tutorials, lists the skills that already exist, and looks at what this extensibility means for automation and for the people whose work gets automated.</p>
 <p class="article-p">Anthropic's <a class="ref-link" href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" rel="noopener noreferrer" target="_blank">Agent Skills overview in the Claude docs</a> defines skills as modular capabilities that bundle instructions, metadata and optional resources, which Claude uses automatically when relevant. MCP connectors give Claude access to outside systems; a skill describes the procedure to follow once that access exists.</p>
@@ -467,7 +468,7 @@
 </div>
 <!-- Section 2: Where Skills Run -->
 <div class="content-card" id="where">
-<h2>2. Where Skills Run</h2>
+<h2>Where Skills Run</h2>
 <ul class="article-list">
 <li><strong>Claude apps:</strong> custom skills are uploaded or created under Customize &gt; Skills, on Free, Pro, Max, Team and Business plans with code execution turned on.</li>
 <li><strong>Claude Code:</strong> skills are folders in <code>~/.claude/skills/</code> for personal use or <code>.claude/skills/</code> inside a repository, callable as <code>/skill-name</code>.</li>
@@ -481,15 +482,17 @@
 </div>
 <!-- Section 3: How To Create Your Own Skill -->
 <div class="content-card" id="create">
-<h2>3. Build Your Own Skill</h2>
+<h2>Build Your Own Skill</h2>
 <h3>Step 1: Pick One Repeated Job</h3>
 <p class="article-p">The <a class="ref-link" href="https://code.claude.com/docs/en/skills" rel="noopener noreferrer" target="_blank">Claude Code guide to extending Claude with skills</a> gives a practical trigger: write a skill when you keep pasting the same instructions, checklist or procedure into chat. Keep each skill to one workflow, because Claude can combine several focused skills in a single task.</p>
 <h3>Step 2: Write The SKILL.md File</h3>
 <p class="article-p">A skill needs YAML frontmatter between <code>---</code> markers and Markdown instructions below it. Here is an business release-notes skill directory layout and definition:</p>
 <div class="code-window">
 <div class="code-bar">
+
 <span>Folder Layout - writing-release-notes</span>
 <span style="color:var(--cyan);">Filesystem Directory</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code><span class="c"># Folder layout: the folder name doubles as the skill name</span>
 writing-release-notes/
@@ -499,8 +502,10 @@ writing-release-notes/
 </div>
 <div class="code-window">
 <div class="code-bar">
+
 <span>writing-release-notes/SKILL.md</span>
 <span style="color:var(--gold);">Frontmatter + Markdown</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code>---
 <span class="c"># Required. Lowercase letters, numbers and hyphens, 64 characters max.</span>
@@ -528,7 +533,7 @@ writing-release-notes/
 </div>
 <!-- Section 4: Hands-On Tutorials -->
 <div class="content-card" id="tutorials">
-<h2>4. Hands-On Tutorials</h2>
+<h2>Hands-On Tutorials</h2>
 <p class="article-p">The three tutorials below build systematically on one another. The first requires only the Claude app, the second runs in Claude Code with a bundled Python script and dynamic injection, and the third uploads the custom skill to the Claude API and pairs it with Anthropic's production Word skill.</p>
 <!-- Tutorial 1 -->
 <h3 id="tutorial-1">Tutorial 1: Meeting-Notes in Claude Apps</h3>
@@ -539,8 +544,10 @@ writing-release-notes/
 <p class="article-p"><strong>1. Create the folder.</strong> The folder name has to match the <code>name</code> field you are about to write, so keep it lowercase with hyphens.</p>
 <div class="code-window">
 <div class="code-bar">
+
 <span>meeting-notes/ directory</span>
 <span style="color:var(--cyan);">Layout</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code>meeting-notes/                 <span class="c"># folder name must equal the skill's name field</span>
 ├── SKILL.md                   <span class="c"># the instructions Claude follows</span>
@@ -550,8 +557,10 @@ writing-release-notes/
 <p class="article-p"><strong>2. Write <code>SKILL.md</code>.</strong> The description carries the trigger phrases, because it is the only part Claude sees before deciding to load the skill.</p>
 <div class="code-window">
 <div class="code-bar">
+
 <span>meeting-notes/SKILL.md</span>
 <span style="color:var(--gold);">Frontmatter + Instructions</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code>---
 <span class="c"># Must match the folder name: lowercase letters, numbers and hyphens.</span>
@@ -582,8 +591,10 @@ writing-release-notes/
 <p class="article-p"><strong>3. Add the template.</strong> Save this as <code>assets/notes-template.md</code>. Claude reads it only when step 2 of the instructions sends it there.</p>
 <div class="code-window">
 <div class="code-bar">
+
 <span>meeting-notes/assets/notes-template.md</span>
 <span style="color:var(--cyan);">Markdown Template</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code><span class="c">&lt;!-- Claude replaces each {placeholder} and keeps the headings in order. --&gt;</span>
 # {Meeting title}: {date}
@@ -602,8 +613,10 @@ writing-release-notes/
 <p class="article-p"><strong>4. Zip the folder.</strong> Zip the folder itself rather than the loose files inside it, so <code>meeting-notes/</code> sits at the root of the archive.</p>
 <div class="code-window">
 <div class="code-bar">
+
 <span>Terminal - Zip Archive</span>
 <span style="color:var(--green);">Bash</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code><span class="c"># macOS or Linux: run from the directory that contains meeting-notes/</span>
 zip -r meeting-notes.zip meeting-notes
@@ -622,8 +635,10 @@ zip -r meeting-notes.zip meeting-notes
 <p class="article-p"><strong>1. Create the folders.</strong> A personal skill lives under your home directory and works in every project on that machine.</p>
 <div class="code-window">
 <div class="code-bar">
+
 <span>Terminal - Personal Skills Directory</span>
 <span style="color:var(--green);">Bash</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code><span class="c"># Personal skill: available in all your projects on this machine</span>
 mkdir -p ~/.claude/skills/drafting-changelogs/scripts</code></pre>
@@ -631,8 +646,10 @@ mkdir -p ~/.claude/skills/drafting-changelogs/scripts</code></pre>
 <p class="article-p"><strong>2. Add the script.</strong> Save this as <code>scripts/group_commits.py</code>. It uses only the Python standard library and sorts commits written in the Conventional Commits style (<code>feat:</code>, <code>fix:</code>, <code>perf:</code>) into changelog sections.</p>
 <div class="code-window">
 <div class="code-bar">
+
 <span>~/.claude/skills/drafting-changelogs/scripts/group_commits.py</span>
 <span style="color:var(--cyan);">Python 3</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code>#!/usr/bin/env python3
 """Group git commits by Conventional Commit type for a changelog draft.
@@ -711,8 +728,10 @@ if __name__ == "__main__":
 <p class="article-p"><strong>3. Write <code>SKILL.md</code>.</strong> The line that starts with <code>!</code> is dynamic context injection: Claude Code runs the command before Claude reads the skill and pastes the output in its place, so Claude starts with real commit data instead of guessing.</p>
 <div class="code-window">
 <div class="code-bar">
+
 <span>~/.claude/skills/drafting-changelogs/SKILL.md</span>
 <span style="color:var(--gold);">Frontmatter + Dynamic Context</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code>---
 <span class="k">name:</span> drafting-changelogs
@@ -742,8 +761,10 @@ if __name__ == "__main__":
 <p class="article-p"><strong>4. Run it.</strong> Open a tagged repository, start Claude Code with <code>claude</code>, and type <code>/drafting-changelogs</code>, or <code>/drafting-changelogs v1.0</code> to pick the starting point. Asking "what changed since the last release?" should trigger it too. On a test repository with five commits after a <code>v1.0</code> tag, the script hands Claude this before any rewriting happens:</p>
 <div class="code-window">
 <div class="code-bar">
+
 <span>Pre-Injected Context - Commits Output</span>
 <span style="color:var(--cyan);">Injected Markdown</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code>Commits since v1.0:
 
@@ -772,8 +793,10 @@ if __name__ == "__main__":
 <p class="article-p"><strong>1. Install the SDK and set your key.</strong></p>
 <div class="code-window">
 <div class="code-bar">
+
 <span>Terminal - Environment Setup</span>
 <span style="color:var(--green);">Bash</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code><span class="c"># Install the official Python SDK</span>
 pip install anthropic
@@ -783,8 +806,10 @@ export ANTHROPIC_API_KEY="your-key-here"</code></pre>
 <p class="article-p"><strong>2. Save and run this script.</strong> It follows the patterns in Anthropic's <a class="ref-link" href="https://platform.claude.com/docs/en/build-with-claude/skills-guide" rel="noopener noreferrer" target="_blank">guide to using Agent Skills with the API</a>, where the Skills API no longer needs a beta header.</p>
 <div class="code-window">
 <div class="code-bar">
+
 <span>run_skills_api.py</span>
 <span style="color:var(--cyan);">Python SDK</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code>import anthropic
 from anthropic.lib import files_from_dir
@@ -848,7 +873,7 @@ for block in response.content:
 </div>
 <!-- Section 5: Skills That Already Exist -->
 <div class="content-card" id="existing">
-<h2>5. Existing Skills Catalog</h2>
+<h2>Existing Skills Catalog</h2>
 <h3>Anthropic's Built-In Document Skills</h3>
 <p class="article-p">Four pre-built production skills power Claude's file creation capabilities: <code>pptx</code>, <code>xlsx</code>, <code>docx</code> and <code>pdf</code>. They run without setup across the Claude web and desktop apps, the Claude API, Claude Platform on AWS, and Microsoft Foundry.</p>
 <h3>Public anthropics/skills Repo</h3>
@@ -889,7 +914,7 @@ for block in response.content:
 </div>
 <!-- Section 6: Security -->
 <div class="content-card" id="security">
-<h2>6. Skill Security &amp; Safety</h2>
+<h2>Skill Security &amp; Safety</h2>
 <div class="card pink">
 <span class="tag">Security Audit Imperative</span>
 <p class="article-p">A skill can direct Claude to call system tools and execute arbitrary code, which means a malicious or compromised skill can exfiltrate sensitive files or poison your working context. Anthropic advises using only skills you wrote yourself or obtained directly from Anthropic, auditing every bundled script and referenced file before installing third-party skills, and strictly distrusting skills that attempt to fetch external URLs. <strong>Never hardcode API keys, tokens, or passwords in a skill folder.</strong></p>
@@ -897,7 +922,7 @@ for block in response.content:
 </div>
 <!-- Section 7: Future & Economic Impact -->
 <div class="content-card" id="future">
-<h2>7. Automation Economics &amp; Impact</h2>
+<h2>Automation Economics &amp; Impact</h2>
 <p class="article-p">A model with a skill library behaves fundamentally differently from a model alone. The foundation model supplies raw reasoning, while each skill supplies one organization's documented, repeatable way of doing one specific job - written once and reused by every human and autonomous agent that accesses it. Anthropic's engineers wrote at launch that they anticipate agents will soon create, edit, benchmark, and evaluate skills entirely autonomously.</p>
 <p class="article-p">Composability gives skills room for automations that nobody had to design in advance. An organization with modular skills for its brand guidelines, its data warehouse schema, and its financial report layout can generate an entirely new report type simply by prompting Claude, which fuses the three skills seamlessly:</p>
 <!-- Figure 4 -->
@@ -963,9 +988,138 @@ for block in response.content:
 <p class="article-p">So far, tasks are being automated significantly faster than whole jobs. In the <a class="ref-link" href="https://www.anthropic.com/research/economic-index-june-2026-report" rel="noopener noreferrer" target="_blank">June 2026 Economic Index survey of Claude users</a>, over a third of roughly 9,700 respondents expected AI to handle most of their daily tasks within a year, yet only 10% rated losing their own job as likely. Intriguingly, over a third put a junior colleague's odds of job loss above 60%. While the sample skews technical and is self-reported, the signal is unmistakable.</p>
 <p class="article-p">Skills turn the automation of a documented procedure from a multi-month engineering project into something a domain expert can write on a Friday afternoon. The most exposed roles are those whose steps fit cleanly in a <code>SKILL.md</code>, and the professionals who write, test, and maintain those repositories hold the procedural know-how that business agents depend on. To start, turn the instruction you paste into Claude most often into a skill, and explore <code>skill-creator</code> and <code>pdf</code> in Anthropic's repository today.</p>
 </div>
+
+<article class="content-card" id="pricing-parity">
+<h2>Practice Pricing &amp; Global Purchasing Power Parity</h2>
+<p>
+  I provide live, remote engineering training and advisory consulting covering Google Gemini, Claude, and sovereign local LLMs. Engagements turn engineering teams and individual developers into AI-first builders who construct production agent swarms, implement budget safeguards, and run private models.
+</p>
+<p>
+  All services are delivered remotely worldwide with 4 hours a day of live instruction, with Saturdays and Sundays as holidays. Pricing is governed by our transparent 195-country Purchasing Power Parity (PPP) framework scaling rates across six economic tiers. For full tier definitions, currency conversions, and interactive calculations, visit our <a class="gold-link" href="../pricing.html">Pricing Page</a>.
+</p>
+
+<div class="pricing-summary-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;margin:1.5rem 0;">
+<div class="package-card" style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:12px;padding:1.5rem;">
+<h3 style="color:var(--gold);margin-top:0;">Business AI Training Flagship</h3>
+<p style="color:var(--text-muted);font-size:0.9rem;">Comprehensive organizational workforce and engineering transformation.</p>
+<div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">$2,500 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
+<ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+<li>60 days total calendar duration: 30 days live engineering training + 30 days dedicated support.</li>
+<li>Includes up to 10 participants, with additional seats at $250 USD per seat up to a maximum of 20 seats.</li>
+<li>4 hours daily live instruction, Monday through Friday (Saturdays and Sundays holidays). Remote worldwide.</li>
+<li>Zero advance deposit ($0 upfront); 20% due in 5 milestone installments after completed progress.</li>
+<li>Walk away owing nothing if not satisfied after the first milestone training phase.</li>
+<li>High-quality training materials, guides, and custom code transferred under Apache 2.0 license (commercial use, resale, and relicensing permitted with attribution).</li>
+</ul>
+</div>
+
+<div class="package-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
+<h3 style="color:var(--cyan);margin-top:0;">Personal AI Training Flagship</h3>
+<p style="color:var(--text-muted);font-size:0.9rem;">Dedicated 1-on-1 private acceleration for solo founders, builders, and senior engineers.</p>
+<div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">$2,500 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
+<ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+<li>60 days total calendar duration: 30 days live 1-on-1 training + 30 days dedicated support.</li>
+<li>Strictly 1 person only (dedicated private acceleration).</li>
+<li>4 hours daily hands-on implementation, Monday through Friday (Saturdays and Sundays holidays). Remote worldwide.</li>
+<li>Zero advance deposit ($0 upfront); 20% due in 5 milestone installments after completed progress.</li>
+<li>Walk away owing nothing if not satisfied after the first milestone training phase.</li>
+<li>Comprehensive training curriculum and materials licensed under Apache 2.0 (commercial use, resale, and relicensing permitted with attribution).</li>
+</ul>
+</div>
+</div>
+
+<h3>Individual Service Picks (Pick &amp; Choose)</h3>
+<p>
+  Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
+</p>
+<ul style="line-height:1.8;">
+<li><strong>Business Individual Pick:</strong> <strong>$250 USD</strong> base for 1 seat, with additional seats at $250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
+<li><strong>Personal Individual Pick:</strong> <strong>$250 USD</strong> strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
+</ul>
+
+<h3>Payment Structure &amp; Trust Guarantees</h3>
+<p>
+  Every client engagement is safeguarded by strict trust guarantees:
+</p>
+<ul style="line-height:1.7;">
+<li><strong>Zero Upfront Payment:</strong> Strictly $0 advance deposit required. We never invoice before delivering actual value.</li>
+<li><strong>20% in Five Installments:</strong> Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.</li>
+<li><strong>Walkaway Guarantee:</strong> If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.</li>
+<li><strong>Commercial Apache 2.0 License:</strong> All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.</li>
+<li><strong>Full Pricing Details:</strong> Learn more about country tier multipliers, currency choices, and customized curriculum on our <a class="gold-link" href="../pricing.html">Pricing Page</a>.</li>
+</ul>
+
+<h3>The Six Purchasing Power Parity (PPP) Tiers</h3>
+<div class="table-responsive">
+<table class="data-table">
+<thead>
+<tr>
+<th>Tier</th>
+<th>Category</th>
+<th>Representative Geographies</th>
+<th>Multiplier</th>
+<th>Business Flagship</th>
+<th>Personal Flagship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tier 1</strong></td>
+<td>High-Income Baseline</td>
+<td>United States, UK, Germany, Canada, Japan, Singapore, Australia</td>
+<td>1.00X</td>
+<td>$2,500 USD</td>
+<td>$2,500 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 2</strong></td>
+<td>Upper-Middle Economies</td>
+<td>Brazil, Mexico, Malaysia, Turkiye, Thailand, Philippines, Sri Lanka</td>
+<td>0.75X</td>
+<td>$1,875 USD</td>
+<td>$1,875 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 3</strong></td>
+<td>Lower-Middle &amp; Low-Income</td>
+<td>India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam</td>
+<td>0.50X</td>
+<td>$1,250 USD</td>
+<td>$1,250 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 4</strong></td>
+<td>Early-Stage Startups</td>
+<td>Global tech startups with &lt;$1M external funding</td>
+<td>0.50X</td>
+<td>$1,250 USD</td>
+<td>$1,250 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 5</strong></td>
+<td>Academia &amp; Non-Profits</td>
+<td>Universities, accredited labs, registered charities &amp; 501(c)(3) entities</td>
+<td>0.25X</td>
+<td>$625 USD</td>
+<td>$625 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 6</strong></td>
+<td>Subsidized Relief</td>
+<td>Crisis-affected regions, developing collectives &amp; grassroots builders</td>
+<td>Custom</td>
+<td>Subsidized</td>
+<td>$250 USD</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+
+
 <!-- Section 8: References -->
 <div class="content-card" id="references">
-<h2>8. References</h2>
+<h2>References</h2>
 <ol class="refs">
 <li><a class="ref-link" href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" rel="noopener noreferrer" target="_blank">Anthropic Engineering: Equipping agents for the real world with Agent Skills</a></li>
 <li><a class="ref-link" href="https://claude.com/resources/articles/skills" rel="noopener noreferrer" target="_blank">Claude: Introducing Agent Skills</a></li>
@@ -991,10 +1145,10 @@ for block in response.content:
 </div>
 <!-- CTA Banner -->
 <section class="cta-banner">
-<h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Scale Your Business AI Agents with Production Skills</h3>
-<p style="color:#94a3b8;font-size:1.02rem;max-width:680px;margin:0 auto 1.75rem;line-height:1.7;">Architect resilient skill repositories, custom prompt injection harnesses, and multi-model agentic workflows tailored for your organization.</p>
+<h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Scale Your Business AI Agents with Custom Production Skills</h3>
+<p style="color:#94a3b8;font-size:1.02rem;max-width:680px;margin:0 auto 1.75rem;line-height:1.7;">Architect resilient skill repositories, custom prompt injection harnesses, and multi-model agentic workflows tailored for your organization's unique domain.</p>
 <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
+<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
 <a class="btn btn-primary" href="../contact.html">Start A Project →</a>
 <a class="btn btn-outline" href="../pricing.html">View Advisory Tiers →</a>
 </div>

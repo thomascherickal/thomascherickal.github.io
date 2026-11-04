@@ -162,7 +162,7 @@
               Slashing</a></li>
           <li><a href="../business-services/business-service-ai-agents-orchestration.html">Claude Agent Orchestration</a>
           </li>
-          <li><a href="../business-services/business-service-agentic-ai-systems.html">Hermes Agent Training</a></li>
+          <li><a href="../business-services/business-service-agentic-ai-systems.html">Agentic Assistants Training</a></li>
           <li><a href="../business-services/business-service-workflow-automations.html">Workflow Automations</a></li>
           <li><a href="../business-services/business-service-ai-budget-cost-limits-training.html">AI Budget &amp; Cost
               Control Training</a></li>
@@ -238,11 +238,11 @@
           <li><a href="../google/google-ai-studio.html">Google AI Studio</a></li>
           <li><a href="../google/google-antigravity-ide.html">Google Antigravity IDE</a></li>
           <li><a href="../google/google-gemini-deep-think.html">Gemini Deep Think</a></li>
-          <li><a href="../google/google-gemini-desktop.html">Google Gemini Desktop</a></li>
+          <li><a href="../google/google-gemini-desktop.html">Gemini Desktop</a></li>
           <li><a href="../google/google-gemini-spark.html">Gemini Spark</a></li>
           <li><a href="../google/google-gemini-notebook.html">Gemini Notebook</a></li>
           <li><a href="../google/google-gemma.html">Google Gemma</a></li>
-          <li><a href="../google/google-deep-research.html">Google Deep Research</a></li>
+          <li><a href="../google/google-multimodality.html">Google Multimodality</a></li>
           <li><a href="../google/google-deepmind.html">Google DeepMind</a></li>
           <li><a href="../google/google-gemini-4-models.html">Gemini 4 Models</a></li>
           <li><a href="../google/google-gemini-agents.html">Gemini Agents</a></li>
@@ -293,12 +293,13 @@
 <li><a href="#claude">07. Local LLMs With Claude Code &amp; Claude</a></li>
 <li><a href="#tutorials">08. Six Hands-On Tutorials (Basic to Advanced)</a></li>
 <li><a href="#conclusion">09. Choosing Your Setup</a></li>
-<li><a href="#references">10. References (30 Verified Citations)</a></li>
+<li><a href="#pricing-parity">10. Practice Pricing & Global Purchasing Power Parity</a></li>
+      <li><a href="#references">11. References (30 Verified Citations)</a></li>
 </ol>
 </section>
 <!-- Section 1: Introduction -->
 <section class="content-card" id="introduction">
-<h2><span class="sec-num">01</span>Introduction: Why Local LLMs Matter Now</h2>
+<h2>Introduction: Why Local LLMs Matter Now</h2>
 <p class="article-p">By the end of this guide you will have a language model running on your own Linux machine and connected to two coding agents, OpenCode and Claude Code. You will also know which model fits the hardware you already own, what the next hardware step costs in October 2026, and when paying for Claude's API is still the cheaper option.</p>
 <p class="article-p">Running a model locally means the weights sit on your disk and your GPU or CPU computes every token. A prompt goes nowhere unless you send it somewhere. Two changes this year made the setup far more practical. In January, <a href="https://ollama.com/blog/claude" rel="noopener noreferrer" target="_blank">Ollama 0.14 added Anthropic Messages API compatibility</a>, and LM Studio, vLLM and llama.cpp now ship their own <code>/v1/messages</code> endpoints, so Claude Code can talk to a local server after you set three environment variables. Small models also improved. Alibaba reports that <a href="https://huggingface.co/Qwen/Qwen3.8-27B" rel="noopener noreferrer" target="_blank">Qwen3.8-27B scores 61.7 on SWE-bench Pro</a> when run inside the Claude Code harness, and Ollama packages it as an 18 GB download.</p>
 <p class="article-p">Hardware is the constraint. A memory shortage has pushed GPU and unified-memory prices far above their launch levels. The RTX 5090 launched at $1,999, yet its lowest new asking price in the US was $4,920.99 on 11 October, and the cheapest card in stock in India costs about ₹7.49 lakh. Every tier in this guide carries a current price so you can decide with real numbers rather than launch-day ones.</p>
@@ -306,7 +307,7 @@
 </section>
 <!-- Section 2: Advantages, Trade-Offs And Cost Savings -->
 <section class="content-card" id="advantages">
-<h2><span class="sec-num">02</span>Advantages, Trade-Offs And Cost Savings</h2>
+<h2>Advantages, Trade-Offs And Cost Savings</h2>
 <p class="article-p">These are the advantages that hold up in practice:</p>
 <ul class="article-list">
 <li><strong>Privacy and data residency:</strong> source code, contracts and customer records stay on hardware you own, and no third-party processor sits in the request path.</li>
@@ -368,7 +369,7 @@
 </section>
 <!-- Section 3: Six Model Families -->
 <section class="content-card" id="model-families">
-<h2><span class="sec-num">03</span>Six Model Families From 8B To 120B</h2>
+<h2>Six Model Families From 8B To 120B</h2>
 <p class="article-p">Two terms come up in every row of the table below. A <strong>dense model</strong> runs every parameter for every token. A <strong>mixture-of-experts (MoE) model</strong> sends each token through a few expert blocks, so its active parameter count sets the compute per token while its total count still sets the memory it needs. <strong>Quantization</strong> stores weights in fewer bits: Q4_K_M is a popular 4-bit GGUF format for llama.cpp-based tools, and MXFP4 is the 4-bit format that gpt-oss was trained in.</p>
 <h3>Qwen</h3>
 <p class="article-p">Alibaba released the open weights of <a href="https://huggingface.co/Qwen/Qwen3.8-27B" rel="noopener noreferrer" target="_blank">Qwen3.8-27B on Hugging Face</a> in August 2026 under Apache 2.0. It is a 27B dense vision-language model with a native context of 262,144 tokens that extends to about one million with YaRN scaling. It thinks before answering by default, and a <code>reasoning_effort</code> setting trades depth for speed. The <a href="https://ollama.com/library/qwen3.8" rel="noopener noreferrer" target="_blank">qwen3.8 entry in Ollama's library</a> lists tools, thinking and vision support at 18 GB. For agentic coding on one 24 GB card it is the default pick in this guide.</p>
@@ -419,7 +420,7 @@
 </section>
 <!-- Section 4: The Hardware You Need And What It Costs -->
 <section class="content-card" id="hardware">
-<h2><span class="sec-num">04</span>The Hardware You Need And What It Costs</h2>
+<h2>The Hardware You Need And What It Costs</h2>
 <p class="article-p">Memory decides what you can run, and memory bandwidth decides how fast it runs. A model needs room for three things: the quantized weights, the KV cache that stores attention state for every token in the context, and compute buffers. <a href="https://github.com/ggml-org/llama.cpp/discussions/15396" rel="noopener noreferrer" target="_blank">The llama.cpp guide to running gpt-oss</a> shows the split clearly: gpt-oss-120b needs 61 GB of model data, 2.7 GB of compute buffers and about 0.3 GB of cache per 8,192 tokens, which comes to 64.9 GB at 32K context.</p>
 <p class="article-p">Context length is the setting people forget. <a href="https://docs.ollama.com/context-length" rel="noopener noreferrer" target="_blank">Ollama's context-length documentation</a> says it defaults to 4K tokens below 24 GiB of VRAM, 32K between 24 and 48 GiB, and 256K above that, and it recommends at least 64,000 tokens for coding tools. A coding agent sends its system prompt and tool schemas with every request, so a 4K window breaks it.</p>
 <p class="article-p">Prices have moved sharply this year, so treat every figure as approximate for October 2026. US figures for new and used GPUs come from <a href="https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/" rel="noopener noreferrer" target="_blank">BuySellRam's October GPU price floors</a>. Indian figures come from <a href="https://gpuprix.com/india/gpus/geforce-rtx-5060-ti-16gb" rel="noopener noreferrer" target="_blank">GPUPrix listings for the RTX 5060 Ti</a> and <a href="https://gpuprix.com/india/gpus/geforce-rtx-5090" rel="noopener noreferrer" target="_blank">the RTX 5090 in India</a>. Where no Indian listing exists, the table converts at ₹88 per dollar; <a href="https://www.runyard.dev/buy/rtx-5060-ti-16gb-price-india.html" rel="noopener noreferrer" target="_blank">Runyard's landed-cost breakdown</a> explains why duty, 18 percent IGST and margins usually add 32 to 55 percent on top. Unified-memory machines are priced from <a href="https://computingforgeeks.com/ryzen-ai-max-395-mini-pc-comparison/" rel="noopener noreferrer" target="_blank">ComputingForGeeks' Ryzen AI Max+ 395 comparison</a> and <a href="https://cryptobriefing.com/nvidia-dgx-spark-64gb-launch/" rel="noopener noreferrer" target="_blank">the DGX Spark price report</a>. Build totals add a CPU, board, RAM, PSU and SSD and are my estimates.</p>
@@ -505,7 +506,7 @@
 </section>
 <!-- Section 5: Five Tools That Run LLMs Locally -->
 <section class="content-card" id="tools">
-<h2><span class="sec-num">05</span>Five Tools That Run LLMs Locally</h2>
+<h2>Five Tools That Run LLMs Locally</h2>
 <p class="article-p">Each tool below loads model weights, runs them on your GPU and exposes an HTTP API. They differ in interface, API dialect and how many users they serve at once.</p>
 <!-- Figure 2 -->
 <div class="diagram-container">
@@ -568,14 +569,14 @@
 </section>
 <!-- Section 6: OpenCode -->
 <section class="content-card" id="opencode">
-<h2><span class="sec-num">06</span>Local LLMs With OpenCode On Linux</h2>
+<h2>Local LLMs With OpenCode On Linux</h2>
 <p class="article-p">OpenCode is an open-source coding agent for the terminal. It reads your repository, plans changes, edits files and runs commands, and it talks to models through the AI SDK, which lets it use any OpenAI-compatible server. <a href="https://opencode.ai/docs/providers/" rel="noopener noreferrer" target="_blank">OpenCode's provider documentation</a> shows the exact block for Ollama, LM Studio and llama.cpp: a provider entry that uses the <code>@ai-sdk/openai-compatible</code> package, an <code>options.baseURL</code> pointing at the local server, and a <code>models</code> map whose keys must match the server's model IDs exactly, colons included.</p>
 <p class="article-p">Two settings decide whether the agent works. The first is context. OpenCode sends a long system prompt and tool definitions with each turn, so the server must allow far more than its default; set Ollama to 64K tokens and declare the same <code>limit.context</code> in the config so OpenCode can track how much room is left. The second is tool calling. The agent edits files and runs commands through structured tool calls, and a model that writes a tool call as plain text stalls the loop. OpenCode's docs suggest raising <code>num_ctx</code> first when tool calls fail, then switching to a model with stronger tool calling.</p>
 <p class="article-p">Start with models whose cards list native function calling: Qwen3.8-27B on a 24 GB card, gpt-oss-20b on a 16 GB card, and gpt-oss-120b or Mistral Small 4 on a 128 GB machine. Ollama can also write the config with <code>ollama launch opencode --model qwen3.8</code>, which leaves your own <code>opencode.json</code> untouched. Tutorial 2 builds it by hand so you can see each key.</p>
 </section>
 <!-- Section 7: Claude Code -->
 <section class="content-card" id="claude">
-<h2><span class="sec-num">07</span>Local LLMs With Claude Code And Claude</h2>
+<h2>Local LLMs With Claude Code And Claude</h2>
 <p class="article-p">There are two ways to combine Claude with a local model.</p>
 <p class="article-p">The first runs Claude Code, Anthropic's terminal agent, against a local model instead of Anthropic's API. Claude Code speaks the Anthropic Messages API, and <a href="https://code.claude.com/docs/en/env-vars" rel="noopener noreferrer" target="_blank">Claude Code's environment variable reference</a> documents <code>ANTHROPIC_BASE_URL</code> for redirecting it. <a href="https://docs.ollama.com/integrations/claude-code" rel="noopener noreferrer" target="_blank">Ollama's Claude Code integration page</a> gives the full setup: set the base URL to <code>http://localhost:11434</code>, set <code>ANTHROPIC_AUTH_TOKEN</code> to <code>ollama</code>, leave <code>ANTHROPIC_API_KEY</code> empty, and start <code>claude --model</code> with a local model name. Claude Code also asks for Opus, Sonnet and Haiku tiers internally, so map all three with <code>ANTHROPIC_DEFAULT_OPUS_MODEL</code>, <code>ANTHROPIC_DEFAULT_SONNET_MODEL</code> and <code>ANTHROPIC_DEFAULT_HAIKU_MODEL</code>.</p>
 <p class="article-p"><strong>What works:</strong> file reads and edits, shell commands, and multi-step tasks on a repository with a model that has native tool calling and at least 64K of context. <strong>What degrades:</strong> speed, because local generation is slower than Anthropic's servers; long sessions, where small models lose track sooner; and some hosted features such as Anthropic's server-side web search. vLLM adds one rule of its own: served model names cannot contain a slash, so start it with <code>--served-model-name</code>.</p>
@@ -655,7 +656,7 @@
 </section>
 <!-- Section 8: Six Hands-On Tutorials -->
 <section class="content-card" id="tutorials">
-<h2><span class="sec-num">08</span>Six Hands-On Tutorials</h2>
+<h2>Six Hands-On Tutorials</h2>
 <p class="article-p">The tutorials build on each other, but each one runs on its own. Basic tutorials need a 16 GB GPU or better, intermediate ones a 24 GB card for the suggested model, and the advanced ones at least 16 GB of VRAM plus 64 GB of system RAM. Use the filter to show one level at a time.</p>
 <!-- Interactive Widget 5: Tutorial Filter -->
 <div class="widget" id="w-filter" style="margin-bottom:2rem;">
@@ -1215,14 +1216,143 @@ python ~/litellm/router.py</code></pre>
 </section>
 <!-- Section 9: Conclusion -->
 <section class="content-card" id="conclusion">
-<h2><span class="sec-num">09</span>Conclusion: Choosing Your Setup</h2>
+<h2>Conclusion: Choosing Your Setup</h2>
 <p class="article-p">Start from the hardware you have. A 16 GB card runs the 8B and 14B models, gpt-oss-20b and, with 64 to 96 GB of system RAM, gpt-oss-120b through expert offload. A 24 GB card is the point where Qwen3.8-27B makes local coding agents useful. For 70B dense models or several 120B MoE models, a 128 GB unified-memory machine gives capacity, while a GPU gives speed.</p>
 <p class="article-p">Before you buy, price your workload. If your team spends hundreds of dollars a month on Sonnet or Opus tokens for work a local model can handle, the break-even calculator will show a payback measured in months. If you mostly send short prompts that Haiku handles for cents, local hardware pays off only through privacy, offline access or the freedom to run unlimited batch jobs.</p>
 <p class="article-p">Then wire it in gradually. Begin with Ollama and OpenCode, move to Claude Code on a local backend for private repositories, and add the MCP server so cloud Claude can hand bulk reading to your GPU. Keep Claude for the work where its lead matters, and let the local model take the rest.</p>
 </section>
+
+<article class="content-card" id="pricing-parity">
+<h2>Practice Pricing &amp; Global Purchasing Power Parity</h2>
+<p>
+  I provide live, remote engineering training and advisory consulting covering Google Gemini, Claude, and sovereign local LLMs. Engagements turn engineering teams and individual developers into AI-first builders who construct production agent swarms, implement budget safeguards, and run private models.
+</p>
+<p>
+  All services are delivered remotely worldwide with 4 hours a day of live instruction, with Saturdays and Sundays as holidays. Pricing is governed by our transparent 195-country Purchasing Power Parity (PPP) framework scaling rates across six economic tiers. For full tier definitions, currency conversions, and interactive calculations, visit our <a class="gold-link" href="../pricing.html">Pricing Page</a>.
+</p>
+
+<div class="pricing-summary-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;margin:1.5rem 0;">
+<div class="package-card" style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:12px;padding:1.5rem;">
+<h3 style="color:var(--gold);margin-top:0;">Business AI Training Flagship</h3>
+<p style="color:var(--text-muted);font-size:0.9rem;">Comprehensive organizational workforce and engineering transformation.</p>
+<div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">$2,500 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
+<ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+<li>60 days total calendar duration: 30 days live engineering training + 30 days dedicated support.</li>
+<li>Includes up to 10 participants, with additional seats at $250 USD per seat up to a maximum of 20 seats.</li>
+<li>4 hours daily live instruction, Monday through Friday (Saturdays and Sundays holidays). Remote worldwide.</li>
+<li>Zero advance deposit ($0 upfront); 20% due in 5 milestone installments after completed progress.</li>
+<li>Walk away owing nothing if not satisfied after the first milestone training phase.</li>
+<li>High-quality training materials, guides, and custom code transferred under Apache 2.0 license (commercial use, resale, and relicensing permitted with attribution).</li>
+</ul>
+</div>
+
+<div class="package-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
+<h3 style="color:var(--cyan);margin-top:0;">Personal AI Training Flagship</h3>
+<p style="color:var(--text-muted);font-size:0.9rem;">Dedicated 1-on-1 private acceleration for solo founders, builders, and senior engineers.</p>
+<div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">$2,500 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
+<ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+<li>60 days total calendar duration: 30 days live 1-on-1 training + 30 days dedicated support.</li>
+<li>Strictly 1 person only (dedicated private acceleration).</li>
+<li>4 hours daily hands-on implementation, Monday through Friday (Saturdays and Sundays holidays). Remote worldwide.</li>
+<li>Zero advance deposit ($0 upfront); 20% due in 5 milestone installments after completed progress.</li>
+<li>Walk away owing nothing if not satisfied after the first milestone training phase.</li>
+<li>Comprehensive training curriculum and materials licensed under Apache 2.0 (commercial use, resale, and relicensing permitted with attribution).</li>
+</ul>
+</div>
+</div>
+
+<h3>Individual Service Picks (Pick &amp; Choose)</h3>
+<p>
+  Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
+</p>
+<ul style="line-height:1.8;">
+<li><strong>Business Individual Pick:</strong> <strong>$250 USD</strong> base for 1 seat, with additional seats at $250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
+<li><strong>Personal Individual Pick:</strong> <strong>$250 USD</strong> strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
+</ul>
+
+<h3>Payment Structure &amp; Trust Guarantees</h3>
+<p>
+  Every client engagement is safeguarded by strict trust guarantees:
+</p>
+<ul style="line-height:1.7;">
+<li><strong>Zero Upfront Payment:</strong> Strictly $0 advance deposit required. We never invoice before delivering actual value.</li>
+<li><strong>20% in Five Installments:</strong> Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.</li>
+<li><strong>Walkaway Guarantee:</strong> If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.</li>
+<li><strong>Commercial Apache 2.0 License:</strong> All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.</li>
+<li><strong>Full Pricing Details:</strong> Learn more about country tier multipliers, currency choices, and customized curriculum on our <a class="gold-link" href="../pricing.html">Pricing Page</a>.</li>
+</ul>
+
+<h3>The Six Purchasing Power Parity (PPP) Tiers</h3>
+<div class="table-responsive">
+<table class="data-table">
+<thead>
+<tr>
+<th>Tier</th>
+<th>Category</th>
+<th>Representative Geographies</th>
+<th>Multiplier</th>
+<th>Business Flagship</th>
+<th>Personal Flagship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tier 1</strong></td>
+<td>High-Income Baseline</td>
+<td>United States, UK, Germany, Canada, Japan, Singapore, Australia</td>
+<td>1.00X</td>
+<td>$2,500 USD</td>
+<td>$2,500 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 2</strong></td>
+<td>Upper-Middle Economies</td>
+<td>Brazil, Mexico, Malaysia, Turkiye, Thailand, Philippines, Sri Lanka</td>
+<td>0.75X</td>
+<td>$1,875 USD</td>
+<td>$1,875 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 3</strong></td>
+<td>Lower-Middle &amp; Low-Income</td>
+<td>India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam</td>
+<td>0.50X</td>
+<td>$1,250 USD</td>
+<td>$1,250 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 4</strong></td>
+<td>Early-Stage Startups</td>
+<td>Global tech startups with &lt;$1M external funding</td>
+<td>0.50X</td>
+<td>$1,250 USD</td>
+<td>$1,250 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 5</strong></td>
+<td>Academia &amp; Non-Profits</td>
+<td>Universities, accredited labs, registered charities &amp; 501(c)(3) entities</td>
+<td>0.25X</td>
+<td>$625 USD</td>
+<td>$625 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 6</strong></td>
+<td>Subsidized Relief</td>
+<td>Crisis-affected regions, developing collectives &amp; grassroots builders</td>
+<td>Custom</td>
+<td>Subsidized</td>
+<td>$250 USD</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+
+
 <!-- Section 10: References -->
 <section class="content-card" id="references">
-<h2><span class="sec-num">10</span>References</h2>
+<h2>References</h2>
 <ol class="refs">
 <li><a href="https://ollama.com/blog/claude" rel="noopener noreferrer" target="_blank">Ollama blog: Claude Code with Anthropic API compatibility</a></li>
 <li><a href="https://docs.ollama.com/integrations/claude-code" rel="noopener noreferrer" target="_blank">Ollama docs: Claude Code integration and environment variables</a></li>
@@ -1258,10 +1388,10 @@ python ~/litellm/router.py</code></pre>
 </section>
 <!-- CTA Banner -->
 <section class="cta-banner">
-<h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Deploy Sovereign Local LLMs &amp; Slash Cloud AI Spend</h3>
+<h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Deploy Sovereign Local LLMs & Slash Cloud AI Spend</h3>
 <p style="color:#94a3b8;font-size:1.02rem;max-width:680px;margin:0 auto 1.75rem;line-height:1.7;">Architect private, on-premise model pipelines in Linux with vLLM, Ollama, and hybrid Claude routing to eliminate data egress and slash recurring inference bills by 60%-90%.</p>
 <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
+<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
 <a class="btn btn-primary" href="../contact.html">Start A Project →</a>
 <a class="btn btn-outline" href="../pricing.html">View Advisory Tiers →</a>
 </div>

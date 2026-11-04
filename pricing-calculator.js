@@ -100,7 +100,7 @@
     { slug: "service-generative-ai-transformation", title: "Generative AI Transformation" },
     { slug: "service-local-llms-cost-slashing", title: "Local LLMs & Cost Slashing" },
     { slug: "service-ai-agents-orchestration", title: "Claude Agent Orchestration" },
-    { slug: "service-agentic-ai-systems", title: "Hermes Agent Training" },
+    { slug: "service-agentic-ai-systems", title: "Agentic Assistants Training" },
     { slug: "service-workflow-automations", title: "Workflow Automations" },
     { slug: "service-ai-budget-cost-limits-training", title: "AI Budget & Cost Control" },
     { slug: "service-ai-developer-training", title: "AI Developer Training" },

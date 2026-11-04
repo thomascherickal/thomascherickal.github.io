@@ -254,7 +254,7 @@ Beyond the web stack itself, this repository documents and serves as the gateway
 
 ### 1. Autonomous Multi-Agent Systems
 - **Agent Operating Systems**: State machines orchestrating autonomous agent teams with defined communication buses, fallback circuits, and deterministic tool schemas.
-- **Self-Healing Code Loops**: Integrating Hermes Agent and Claude Code with local test runners (pytest, cargo test) for autonomous test-driven repair.
+- **Self-Healing Code Loops**: Integrating Agentic Assistants and Claude Code with local test runners (pytest, cargo test) for autonomous test-driven repair.
 - **Local vLLM Acceleration**: Running quantized models (AWQ/GGUF) on consumer-grade and business hardware to achieve 60%-90% cost reduction over proprietary APIs.
 
 ### 2. Experimental Quantum Systems

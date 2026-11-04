@@ -42,7 +42,7 @@ A comprehensive transformation system showing professionals how to use frontier 
 - [The OpenClaw Saga: How the Last Two Weeks Changed the Agentic AI World
  Forever](https://hackernoon.com/the-openclaw-saga-how-the-last-two-weeks-changed-the-agentic-ai-world-forever) - *Mar 2, 2026 · HackerNoon · 5,700 words*
 - [OpenFang: The Game-Changing Open Source Agent OS That Replaces OpenClaw](https://hackernoon.com/openfangthe-game-changing-open-source-agent-operating-system-that-replaces-openclaw) - *Mar 30, 2026 · HackerNoon · 3,400 words*
-- [Hermes Agent vs OpenClaw: Which AI Agent Framework Wins in 2026?](https://hackernoon.com/hermes-agent-vs-openclaw-which-ai-agent-framework-wins-in-2026) - *May 13, 2026 · HackerNoon · 7,100 words*
+- [Agentic Assistants vs OpenClaw: Which AI Agent Framework Wins in 2026?](https://hackernoon.com/agentic assistants-agent-vs-openclaw-which-ai-agent-framework-wins-in-2026) - *May 13, 2026 · HackerNoon · 7,100 words*
 - [The Next Trillion-Dollar AI Shift: Why OpenClaw Changes Everything for LLMs](https://hackernoon.com/the-next-trillion-dollar-ai-shift-why-openclaw-changes-everything-for-llms) - *Jan 31, 2026 · HackerNoon · 3,100 words*
 
 ### AI
@@ -103,7 +103,7 @@ A comprehensive transformation system showing professionals how to use frontier 
 ### Frontier Decision Models & Autonomous Agents
 
 - [Jev: Why Decision Models Will Transform the World Itself](https://thomascherickal.com/2026/10/02/jev-why-decision-models-will-transform-the-world-itself/) - *Oct 2, 2026 · thomascherickal.com · 12,400 words*
-- [Gemini Spark versus Hermes Agent versus OpenClaw: Who Wins and Why?](https://hackernoon.com/gemini-spark-versus-hermes-agent-versus-openclaw-who-wins-and-why) - *Aug 18, 2026 · thomascherickal.com · 5,200 words*
+- [Gemini Spark versus Agentic Assistants versus OpenClaw: Who Wins and Why?](https://hackernoon.com/gemini-spark-versus-agentic assistants-agent-versus-openclaw-who-wins-and-why) - *Aug 18, 2026 · thomascherickal.com · 5,200 words*
 - [20 Ways to Use Gemini Spark to Automate Your Daily Workflow](https://thomascherickal.com/2026/09/08/20-ways-to-use-gemini-spark-to-automate-your-daily-workflow/) - *Sep 8, 2026 · thomascherickal.com · 5,800 words*
 - [Relying On Cloud AI Is Dangerous But Sovereign Local AI Is An Unstoppable Force](https://thomascherickal.com/2026/08/21/relying-on-cloud-ai-is-dangerous-but-sovereign-local-ai-is-an-unstoppable-force/) - *Aug 18, 2026 · thomascherickal.com · 5,800 words*
 

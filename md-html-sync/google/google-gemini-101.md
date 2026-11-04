@@ -309,10 +309,10 @@ All services are delivered remotely worldwide with 4 hours a day of live instruc
 Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training,
  Claude Agent Orchestration, Local LLMs, or Workflow Automations):
 
-- Business Individual Pick: 00 USD per service for up to 1 seat, with
+- Business Individual Pick: $250 USD base for 1 seat, with
  additional seats at 250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days
  dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
-- Personal Individual Pick: 00 USD per service strictly for only one seat,
+- Personal Individual Pick: $250 USD strictly for only one seat,
  covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote
  worldwide, Mon - Fri).
 
@@ -320,7 +320,7 @@ Clients can also avail of individual modular services from our technical catalog
 
 Every client engagement is safeguarded by strict trust guarantees:
 
-- Zero Upfront Payment: Strictly bash advance deposit required. We never invoice before
+- Zero Upfront Payment: Strictly $0 advance deposit required. We never invoice before
  delivering actual value.
 - 20% in Five Installments: Invoiced in 5 equal milestone installments of 20% each, billed
  strictly after each milestone block is completed.

@@ -158,7 +158,7 @@
               Slashing</a></li>
           <li><a href="../business-services/business-service-ai-agents-orchestration.html">Claude Agent Orchestration</a>
           </li>
-          <li><a href="../business-services/business-service-agentic-ai-systems.html">Hermes Agent Training</a></li>
+          <li><a href="../business-services/business-service-agentic-ai-systems.html">Agentic Assistants Training</a></li>
           <li><a href="../business-services/business-service-workflow-automations.html">Workflow Automations</a></li>
           <li><a href="../business-services/business-service-ai-budget-cost-limits-training.html">AI Budget &amp; Cost
               Control Training</a></li>
@@ -234,11 +234,11 @@
           <li><a href="../google/google-ai-studio.html">Google AI Studio</a></li>
           <li><a href="../google/google-antigravity-ide.html">Google Antigravity IDE</a></li>
           <li><a href="../google/google-gemini-deep-think.html">Gemini Deep Think</a></li>
-          <li><a href="../google/google-gemini-desktop.html">Google Gemini Desktop</a></li>
+          <li><a href="../google/google-gemini-desktop.html">Gemini Desktop</a></li>
           <li><a href="../google/google-gemini-spark.html">Gemini Spark</a></li>
           <li><a href="../google/google-gemini-notebook.html">Gemini Notebook</a></li>
           <li><a href="../google/google-gemma.html">Google Gemma</a></li>
-          <li><a href="../google/google-deep-research.html">Google Deep Research</a></li>
+          <li><a href="../google/google-multimodality.html">Google Multimodality</a></li>
           <li><a href="../google/google-deepmind.html">Google DeepMind</a></li>
           <li><a href="../google/google-gemini-4-models.html">Gemini 4 Models</a></li>
           <li><a href="../google/google-gemini-agents.html">Gemini Agents</a></li>
@@ -293,24 +293,25 @@
 <li><a href="#future">From Tasks To Whole Occupations</a></li>
 <li><a href="#limits">What Still Stands In The Way</a></li>
 <li><a href="#start">Where To Start</a></li>
-<li><a href="#references">References</a></li>
+<li><a href="#pricing-parity">Practice Pricing & Global Purchasing Power Parity</a></li>
+        <li><a href="#references">References</a></li>
 </ol>
 </div>
 <!-- 1. WHY PLUGINS EXIST -->
 <div class="content-card">
-<h2 id="why">1. Why Plugins Exist</h2>
+<h2 id="why">Why Plugins Exist</h2>
 <p class="article-p">A general assistant knows nothing about your company. It does not know how your finance team closes the month or what your legal team checks before signing an NDA, so every person re-explains the same process in every chat.</p>
 <p class="article-p">Plugins turn that know-how into files Claude loads when a task calls for them. Install a sales plugin and Claude gets the research steps, the call-prep command and the link to your CRM at once.</p>
 </div>
 <!-- 2. WHAT A CLAUDE PLUGIN IS -->
 <div class="content-card">
-<h2 id="what">2. What A Claude Plugin Is</h2>
+<h2 id="what">What A Claude Plugin Is</h2>
 <p class="article-p"><a class="ref-link" href="https://claude.com/docs/plugins/overview" rel="noopener noreferrer" target="_blank">Anthropic's plugin overview for claude.ai and Cowork</a> says a plugin packages skills, MCP connectors, commands and agents so you can add them to Claude as one unit. You add one from Customize &gt; Plugins in claude.ai or the desktop app, and it is saved to your account.</p>
 <p class="article-p">Plugins began in the terminal. Anthropic <a class="ref-link" href="https://claude.com/blog/claude-code-plugins" rel="noopener noreferrer" target="_blank">introduced plugins for Claude Code on October 9, 2025</a> as collections of slash commands, agents, MCP servers and hooks that install with a single command. <a class="ref-link" href="https://www.datacamp.com/tutorial/claude-cowork-plugins" rel="noopener noreferrer" target="_blank">DataCamp's guide to Cowork plugins</a> dates their arrival in Cowork to January 30, 2026, with 11 open-source plugins from Anthropic's own teams.</p>
 </div>
 <!-- 3. INSIDE A PLUGIN -->
 <div class="content-card">
-<h2 id="inside">3. Inside A Plugin</h2>
+<h2 id="inside">Inside A Plugin</h2>
 <p class="article-p">Every part of a plugin is a plain file. The <a class="ref-link" href="https://github.com/anthropics/knowledge-work-plugins" rel="noopener noreferrer" target="_blank">knowledge-work-plugins repository on GitHub</a> shows the layout: a manifest at <code>.claude-plugin/plugin.json</code>, a <code>.mcp.json</code> file for tool connections, a commands folder and a skills folder. Its README says the components are markdown and JSON, with no code, infrastructure or build steps.</p>
 <figure class="article-figure">
 <svg aria-labelledby="f1t" role="img" viewbox="0 0 800 330" xmlns="http://www.w3.org/2000/svg">
@@ -360,7 +361,7 @@
 </div>
 <!-- 4. WHERE PLUGINS RUN -->
 <div class="content-card">
-<h2 id="where">4. Where Plugins Run</h2>
+<h2 id="where">Where Plugins Run</h2>
 <p class="article-p">One plugin works across three distinct surfaces, and each surface loads only what it supports. Skills, commands, and connectors work seamlessly in chat, Cowork, and Claude Code. Agents run in Cowork and Claude Code, and so do hooks, because they execute commands directly on your computer or container environment.</p>
 <figure class="article-figure">
 <svg aria-labelledby="f2t" role="img" viewbox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
@@ -399,7 +400,7 @@
 </div>
 <!-- 5. WHY EXTENSIBILITY MAKES CLAUDE SO POWERFUL -->
 <div class="content-card">
-<h2 id="power">5. Why Extensibility Makes Claude So Powerful</h2>
+<h2 id="power">Why Extensibility Makes Claude So Powerful</h2>
 <p class="article-p">Every customer starts with the identical base Claude model. Plugins allow each business to customize it deeply, governed by four key architectural design choices:</p>
 <div class="card">
 <span class="tag">Expertise becomes editable</span>
@@ -420,7 +421,7 @@
 </div>
 <!-- 6. THE MAJOR CLAUDE PLUGINS AVAILABLE NOW -->
 <div class="content-card">
-<h2 id="major">6. The Major Claude Plugins Available Now</h2>
+<h2 id="major">The Major Claude Plugins Available Now</h2>
 <p class="article-p">The <a class="ref-link" href="https://claude.com/marketplace/plugins" rel="noopener noreferrer" target="_blank">Claude Marketplace plugin directory</a> listed 341 plugins as of October 2026. Here are the primary business and engineering packages available today:</p>
 <h3 id="knowledge">Knowledge Work Plugins From Anthropic</h3>
 <div class="table-wrap">
@@ -475,7 +476,7 @@
 </div>
 <!-- 7. HOW PLUGINS REACH A WHOLE ORGANIZATION -->
 <div class="content-card">
-<h2 id="org">7. How Plugins Reach A Whole Organization</h2>
+<h2 id="org">How Plugins Reach A Whole Organization</h2>
 <p class="article-p">On Claude Team and Business plans, workspace Owners can distribute approved plugins from a centralized GitHub repository through an internal organization marketplace. <a class="ref-link" href="https://support.claude.com/en/articles/13837433" rel="noopener noreferrer" target="_blank">Anthropic's guide to managing plugins for your organization</a> establishes four installation preferences: Installed by default, Available for install, Required, or Not available. These rules can be segmented by user group:</p>
 <figure class="article-figure">
 <svg aria-labelledby="f3t" role="img" viewbox="0 0 800 280" xmlns="http://www.w3.org/2000/svg">
@@ -515,7 +516,7 @@
 </div>
 <!-- 8. FROM TASKS TO WHOLE OCCUPATIONS -->
 <div class="content-card">
-<h2 id="future">8. From Tasks To Whole Occupations</h2>
+<h2 id="future">From Tasks To Whole Occupations</h2>
 <p class="article-p">A plugin today automates discrete tasks. Whether it can automate an entire job depends on how much of that role's end-to-end task matrix it covers. Anthropic's <a class="ref-link" href="https://www.anthropic.com/research/labor-market-impacts" rel="noopener noreferrer" target="_blank">research on the labor market impacts of AI</a> measured that gap: LLMs could theoretically accelerate 94% of tasks in Computer and Math fields, yet observed real-world coverage was 33%. Computer programmers led with 75% coverage, followed by customer service representatives and data entry keyers at 67%.</p>
 <p class="article-p">Business expectations are shifting rapidly. In the <a class="ref-link" href="https://www.anthropic.com/research/economic-index-june-2026-report" rel="noopener noreferrer" target="_blank">Anthropic Economic Index report "Cadences"</a>, over a third of ~9,700 surveyed respondents expected AI to handle most or all of their work tasks within 12 months. Anthropic CEO Dario Amodei <a class="ref-link" href="https://siliconangle.com/2025/05/29/ai-set-eliminate-half-entry-level-white-collar-jobs-within-five-years-warns-anthropic-ceo/" rel="noopener noreferrer" target="_blank">noted in a May 2025 interview</a> that AI could replace half of entry-level white-collar jobs within five years.</p>
 <p class="article-p">Plugins provide the operational vehicle for closing this gap because occupations are bundles of tasks, and plugins are bundles of skills. Five architectural steps bridge the gap from task assistance to full operational autonomy:</p>
@@ -535,20 +536,149 @@
 </div>
 <!-- 9. WHAT STILL STANDS IN THE WAY -->
 <div class="content-card">
-<h2 id="limits">9. What Still Stands In The Way</h2>
+<h2 id="limits">What Still Stands In The Way</h2>
 <p class="article-p">Anthropic's economic research urges balanced realism. While headline unemployment in exposed tech occupations has not shown a dramatic surge, hiring rates for 22-to-25-year-olds into entry-level knowledge jobs have dropped roughly 14% below 2022 baselines.</p>
 <p class="article-p">Crucially, physical tasks, courtroom appearances, and high-stakes fiduciary liabilities remain firmly out of reach. In the Cadences study, senior professionals with 15+ years of tenure highlighted context, unwritten organizational norms, and human trust as qualities no static skill file can replicate.</p>
 <p class="article-p">Security remains a paramount consideration. Because plugins inherit the user's active permissions, organizations must implement zero-trust credentialing and automated skill auditing for any plugin loaded outside vetted business repositories.</p>
 </div>
 <!-- 10. WHERE TO START -->
 <div class="content-card">
-<h2 id="start">10. Where To Start</h2>
+<h2 id="start">Where To Start</h2>
 <p class="article-p">Start with a single role plugin matching an immediate departmental pain point, such as Sales or Customer Support. Hook its connectors to your actual toolstack, customize the markdown skill files with your internal guidelines and terminology, and test it in production workflows for two weeks.</p>
 <p class="article-p">Once adoption and efficiency metrics validate the workflow, promote it to Required status in your organization marketplace and systematically build your next operational plugin.</p>
 </div>
+
+<article class="content-card" id="pricing-parity">
+<h2>Practice Pricing &amp; Global Purchasing Power Parity</h2>
+<p>
+  I provide live, remote engineering training and advisory consulting covering Google Gemini, Claude, and sovereign local LLMs. Engagements turn engineering teams and individual developers into AI-first builders who construct production agent swarms, implement budget safeguards, and run private models.
+</p>
+<p>
+  All services are delivered remotely worldwide with 4 hours a day of live instruction, with Saturdays and Sundays as holidays. Pricing is governed by our transparent 195-country Purchasing Power Parity (PPP) framework scaling rates across six economic tiers. For full tier definitions, currency conversions, and interactive calculations, visit our <a class="gold-link" href="../pricing.html">Pricing Page</a>.
+</p>
+
+<div class="pricing-summary-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;margin:1.5rem 0;">
+<div class="package-card" style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:12px;padding:1.5rem;">
+<h3 style="color:var(--gold);margin-top:0;">Business AI Training Flagship</h3>
+<p style="color:var(--text-muted);font-size:0.9rem;">Comprehensive organizational workforce and engineering transformation.</p>
+<div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">$2,500 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
+<ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+<li>60 days total calendar duration: 30 days live engineering training + 30 days dedicated support.</li>
+<li>Includes up to 10 participants, with additional seats at $250 USD per seat up to a maximum of 20 seats.</li>
+<li>4 hours daily live instruction, Monday through Friday (Saturdays and Sundays holidays). Remote worldwide.</li>
+<li>Zero advance deposit ($0 upfront); 20% due in 5 milestone installments after completed progress.</li>
+<li>Walk away owing nothing if not satisfied after the first milestone training phase.</li>
+<li>High-quality training materials, guides, and custom code transferred under Apache 2.0 license (commercial use, resale, and relicensing permitted with attribution).</li>
+</ul>
+</div>
+
+<div class="package-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
+<h3 style="color:var(--cyan);margin-top:0;">Personal AI Training Flagship</h3>
+<p style="color:var(--text-muted);font-size:0.9rem;">Dedicated 1-on-1 private acceleration for solo founders, builders, and senior engineers.</p>
+<div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">$2,500 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
+<ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+<li>60 days total calendar duration: 30 days live 1-on-1 training + 30 days dedicated support.</li>
+<li>Strictly 1 person only (dedicated private acceleration).</li>
+<li>4 hours daily hands-on implementation, Monday through Friday (Saturdays and Sundays holidays). Remote worldwide.</li>
+<li>Zero advance deposit ($0 upfront); 20% due in 5 milestone installments after completed progress.</li>
+<li>Walk away owing nothing if not satisfied after the first milestone training phase.</li>
+<li>Comprehensive training curriculum and materials licensed under Apache 2.0 (commercial use, resale, and relicensing permitted with attribution).</li>
+</ul>
+</div>
+</div>
+
+<h3>Individual Service Picks (Pick &amp; Choose)</h3>
+<p>
+  Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
+</p>
+<ul style="line-height:1.8;">
+<li><strong>Business Individual Pick:</strong> <strong>$250 USD</strong> base for 1 seat, with additional seats at $250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
+<li><strong>Personal Individual Pick:</strong> <strong>$250 USD</strong> strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
+</ul>
+
+<h3>Payment Structure &amp; Trust Guarantees</h3>
+<p>
+  Every client engagement is safeguarded by strict trust guarantees:
+</p>
+<ul style="line-height:1.7;">
+<li><strong>Zero Upfront Payment:</strong> Strictly $0 advance deposit required. We never invoice before delivering actual value.</li>
+<li><strong>20% in Five Installments:</strong> Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.</li>
+<li><strong>Walkaway Guarantee:</strong> If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.</li>
+<li><strong>Commercial Apache 2.0 License:</strong> All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.</li>
+<li><strong>Full Pricing Details:</strong> Learn more about country tier multipliers, currency choices, and customized curriculum on our <a class="gold-link" href="../pricing.html">Pricing Page</a>.</li>
+</ul>
+
+<h3>The Six Purchasing Power Parity (PPP) Tiers</h3>
+<div class="table-responsive">
+<table class="data-table">
+<thead>
+<tr>
+<th>Tier</th>
+<th>Category</th>
+<th>Representative Geographies</th>
+<th>Multiplier</th>
+<th>Business Flagship</th>
+<th>Personal Flagship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tier 1</strong></td>
+<td>High-Income Baseline</td>
+<td>United States, UK, Germany, Canada, Japan, Singapore, Australia</td>
+<td>1.00X</td>
+<td>$2,500 USD</td>
+<td>$2,500 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 2</strong></td>
+<td>Upper-Middle Economies</td>
+<td>Brazil, Mexico, Malaysia, Turkiye, Thailand, Philippines, Sri Lanka</td>
+<td>0.75X</td>
+<td>$1,875 USD</td>
+<td>$1,875 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 3</strong></td>
+<td>Lower-Middle &amp; Low-Income</td>
+<td>India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam</td>
+<td>0.50X</td>
+<td>$1,250 USD</td>
+<td>$1,250 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 4</strong></td>
+<td>Early-Stage Startups</td>
+<td>Global tech startups with &lt;$1M external funding</td>
+<td>0.50X</td>
+<td>$1,250 USD</td>
+<td>$1,250 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 5</strong></td>
+<td>Academia &amp; Non-Profits</td>
+<td>Universities, accredited labs, registered charities &amp; 501(c)(3) entities</td>
+<td>0.25X</td>
+<td>$625 USD</td>
+<td>$625 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 6</strong></td>
+<td>Subsidized Relief</td>
+<td>Crisis-affected regions, developing collectives &amp; grassroots builders</td>
+<td>Custom</td>
+<td>Subsidized</td>
+<td>$250 USD</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+
+
 <!-- 11. REFERENCES -->
 <div class="content-card" style="border-color:rgba(251,191,36,0.3);">
-<h2 id="references">11. References</h2>
+<h2 id="references">References</h2>
 <ol class="refs">
 <li><a class="ref-link" href="https://claude.com/docs/plugins/overview" rel="noopener noreferrer" target="_blank">Plugins On Claude.ai And In Cowork</a>, Claude Docs.</li>
 <li><a class="ref-link" href="https://claude.com/blog/claude-code-plugins" rel="noopener noreferrer" target="_blank">Customize Claude Code With Plugins</a>, Anthropic, October 2025.</li>
@@ -570,13 +700,11 @@
 </article>
 <!-- CALL TO ACTION (CTA) -->
 <section class="cta-banner">
-<h2 style="color:var(--gold);font-size:1.85rem;margin-bottom:0.75rem;">Build Custom Business Plugins &amp; Agent Workflows</h2>
-<p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
-        From authoring type-safe MCP connectors and custom Claude Code plugins to setting up business governance and organization marketplaces - let's transform your workforce.
-      </p>
+<h2 style="color:var(--gold);font-size:1.85rem;margin-bottom:0.75rem;">Build Custom Business Plugins & Production Agent Workflows</h2>
+<p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">From authoring type-safe MCP connectors and custom Claude Code plugins to setting up business governance and organization marketplaces - let's transform your workforce.</p>
 <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
 <a class="btn btn-primary" href="../contact.html">Schedule Architecture Session →</a>
-<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Book a free intro call on LinkedIn ↗</a>
+<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
 <a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
 </div>
 </section>

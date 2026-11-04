@@ -42,7 +42,7 @@ Build single-operator multi-agent swarms with orchestrator loops, subagent deleg
 **Category**: `Private Agent Loops`  
 **Link**: [Agentic Assistant Training](personal-services/personal-service-agentic-ai-systems.html)
 
-Run private, unaligned autonomous agent loops on local hardware with open-weights Hermes models and structured tool execution.
+Run private, unaligned autonomous agent loops on local hardware with open-weights agentic models and structured tool execution.
 
 ### Personal Goals Self-Authoring
 

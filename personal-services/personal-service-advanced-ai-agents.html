@@ -265,7 +265,7 @@
               Slashing</a></li>
           <li><a href="../business-services/business-service-ai-agents-orchestration.html">Claude Agent Orchestration</a>
           </li>
-          <li><a href="../business-services/business-service-agentic-ai-systems.html">Hermes Agent Training</a></li>
+          <li><a href="../business-services/business-service-agentic-ai-systems.html">Agentic Assistants Training</a></li>
           <li><a href="../business-services/business-service-workflow-automations.html">Workflow Automations</a></li>
           <li><a href="../business-services/business-service-ai-budget-cost-limits-training.html">AI Budget &amp; Cost
               Control Training</a></li>
@@ -341,11 +341,11 @@
           <li><a href="../google/google-ai-studio.html">Google AI Studio</a></li>
           <li><a href="../google/google-antigravity-ide.html">Google Antigravity IDE</a></li>
           <li><a href="../google/google-gemini-deep-think.html">Gemini Deep Think</a></li>
-          <li><a href="../google/google-gemini-desktop.html">Google Gemini Desktop</a></li>
+          <li><a href="../google/google-gemini-desktop.html">Gemini Desktop</a></li>
           <li><a href="../google/google-gemini-spark.html">Gemini Spark</a></li>
           <li><a href="../google/google-gemini-notebook.html">Gemini Notebook</a></li>
           <li><a href="../google/google-gemma.html">Google Gemma</a></li>
-          <li><a href="../google/google-deep-research.html">Google Deep Research</a></li>
+          <li><a href="../google/google-multimodality.html">Google Multimodality</a></li>
           <li><a href="../google/google-deepmind.html">Google DeepMind</a></li>
           <li><a href="../google/google-gemini-4-models.html">Gemini 4 Models</a></li>
           <li><a href="../google/google-gemini-agents.html">Gemini Agents</a></li>
@@ -397,7 +397,7 @@
       For individual creators, students, and developers, building your own agent system gives you superpowers that used to require entire teams of humans. According to research from Stanford University, IBM, and top AI labs, personalized agents excel because they add a persistent memory layer to foundation language models. This memory layer allows agents to remember your coding style, your academic domain, your personal budget constraints, and your past project decisions.
     </p>
 <p>
-      However, running personal AI agents requires smart engineering. Multi-step agent loops re-query the language model continuously, which can quickly drain your API budget if you aren't careful. Moreover, choosing between local self-hosted models (like running vLLM and Hermes on local GPUs) and cloud APIs (like OpenAI GPT-4o or Anthropic Claude) determines whether you pay a fixed hardware electricity bill or variable per-token charges. Navigating these trade-offs is the key to building a personal AI agent setup that actually works without breaking the bank.
+      However, running personal AI agents requires smart engineering. Multi-step agent loops re-query the language model continuously, which can quickly drain your API budget if you aren't careful. Moreover, choosing between local self-hosted models (like running vLLM and Agentic Assistants on local GPUs) and cloud APIs (like OpenAI GPT-4o or Anthropic Claude) determines whether you pay a fixed hardware electricity bill or variable per-token charges. Navigating these trade-offs is the key to building a personal AI agent setup that actually works without breaking the bank.
     </p>
 <!-- Visual 1: Personal AI Agent Workstation Companion -->
 <div style="margin:2.5rem 0 1.5rem;text-align:center;">
@@ -428,7 +428,7 @@
     </p>
 <ul class="article-list">
 <li><strong>Multi-Agent Coding Teams:</strong> Frameworks like Claude Code, OpenHands, and EPAM's multi-agent architectures deploy dedicated agents for different stages of software development. A Product Owner agent parses user requirements; an Architect agent designs API schemas; a Developer agent writes unit tests and code; and a QA agent executes tests inside isolated Docker containers, automatically patching failing code before submitting a pull request.</li>
-<li><strong>Local Agent Swarms:</strong> GenAI professionals run local multi-agent swarms using vLLM and Hermes on local GPU hardware (such as quad RTX 3090 rigs). By enabling prefix caching and chunked prefill, developers can run 15 to 20 sub-agents in parallel to refactor entire code repositories simultaneously at zero incremental token cost.</li>
+<li><strong>Local Agent Swarms:</strong> GenAI professionals run local multi-agent swarms using vLLM and Agentic Assistants on local GPU hardware (such as quad RTX 3090 rigs). By enabling prefix caching and chunked prefill, developers can run 15 to 20 sub-agents in parallel to refactor entire code repositories simultaneously at zero incremental token cost.</li>
 <li><strong>Event-Driven Workflow Automation:</strong> Developers use open-source frameworks like CrewAI, LangGraph, and AG2 (AutoGen) to link agents with webhooks, Telegram bots, and Slack channels, enabling agents to execute background tasks automatically whenever new GitHub issues or server events occur.</li>
 </ul>
 <h3>2.3 For IT Professionals &amp; Sysadmins: Self-Healing Local Infrastructure Agents</h3>
@@ -482,7 +482,7 @@
 <div style="margin:2.5rem 0 1.5rem;text-align:center;">
 <figure style="margin:0;">
 <img alt="Personal Homelab GPU Workstation running Local Agent Swarms with vLLM" loading="lazy" src="../assets/personal-local-swarm.jpg" style="width:100%;max-width:1080px;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.35);box-shadow:0 8px 30px rgba(0,0,0,0.5);"/>
-<figcaption style="margin-top:0.75rem;font-size:0.88rem;color:var(--text-muted);font-family:var(--font-mono);">Figure 3: Personal Homelab Hardware - Multi-GPU Rig Running vLLM, Hermes Swarms, and Local Sandboxes</figcaption>
+<figcaption style="margin-top:0.75rem;font-size:0.88rem;color:var(--text-muted);font-family:var(--font-mono);">Figure 3: Personal Homelab Hardware - Multi-GPU Rig Running vLLM, Agentic Assistants Swarms, and Local Sandboxes</figcaption>
 </figure>
 </div>
 <h3>3.2 Open-Source Agent Framework Pricing &amp; Licensing</h3>
@@ -597,17 +597,19 @@
       Here are 5 practical, step-by-step engineering tutorials designed to help you build, optimize, and govern your own personal AI agents. Each tutorial includes complete Python code snippets followed by dedicated Implementation Guidelines.
     </p>
 <!-- TUTORIAL 1 -->
-<h3>4.1 Tutorial 1: Configuring a Local Agent Swarm with vLLM, Hermes, and Prefix Caching</h3>
+<h3>4.1 Tutorial 1: Configuring a Local Agent Swarm with vLLM, Agentic Assistants, and Prefix Caching</h3>
 <p>
-      When running a swarm of multiple AI sub-agents in parallel, single-response latency matters far less than total batch throughput across the GPU cluster. Running swarms locally on consumer or enterprise hardware allows you to execute dozens of concurrent reasoning loops at zero marginal token cost. This tutorial guides you through configuring an enterprise-grade local inference server using vLLM, enabling prefix caching and chunked prefill, and building a multi-agent runner powered by Hermes-3 to execute concurrent tasks seamlessly.
+      When running a swarm of multiple AI sub-agents in parallel, single-response latency matters far less than total batch throughput across the GPU cluster. Running swarms locally on consumer or enterprise hardware allows you to execute dozens of concurrent reasoning loops at zero marginal token cost. This tutorial guides you through configuring an enterprise-grade local inference server using vLLM, enabling prefix caching and chunked prefill, and building a multi-agent runner powered by Agentic Assistants-3 to execute concurrent tasks seamlessly.
     </p>
 <div class="code-window">
 <div class="code-bar">
+
 <span>Step 1: vLLM Server Launch Command (Bash)</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code># Launch vLLM server with prefix caching and sequence limits enabled
 python3 -m vllm.entrypoints.openai.api_server \
-  --model NousResearch/Hermes-3-Llama-3.1-8B \
+  --model NousResearch/Agentic Assistants-3-Llama-3.1-8B \
   --port 8000 \
   --gpu-memory-utilization 0.92 \
   --max-model-len 16384 \
@@ -618,7 +620,9 @@ python3 -m vllm.entrypoints.openai.api_server \
 </div>
 <div class="code-window">
 <div class="code-bar">
-<span>Step 2 &amp; 3: Connect Hermes Agent &amp; Run Parallel Swarm (Python)</span>
+
+<span>Step 2 &amp; 3: Connect Agentic Assistants &amp; Run Parallel Swarm (Python)</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code>import asyncio
 from openai import AsyncOpenAI
@@ -632,7 +636,7 @@ local_client = AsyncOpenAI(
 async def run_swarm_subagent(agent_id: int, sub_task: str) -&gt; dict:
     print(f"[Agent {agent_id}] Starting task: {sub_task}")
     response = await local_client.chat.completions.create(
-        model="NousResearch/Hermes-3-Llama-3.1-8B",
+        model="NousResearch/Agentic Assistants-3-Llama-3.1-8B",
         messages=[
             {"role": "system", "content": "You are a specialized sub-agent in a research swarm. Perform your task concisely."},
             {"role": "user", "content": sub_task}
@@ -674,7 +678,9 @@ if __name__ == "__main__":
     </p>
 <div class="code-window">
 <div class="code-bar">
+
 <span>tutorial_2_agentic_memory_os.py</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code>import datetime
 from typing import List, Optional
@@ -750,7 +756,9 @@ print(f"\nRetrieved {len(retrieved)} interconnected memory notes for 'dev' query
     </p>
 <div class="code-window">
 <div class="code-bar">
+
 <span>tutorial_3_dev_team_pipeline.py</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code>from pydantic import BaseModel, Field
 
@@ -817,7 +825,9 @@ run_dev_team_pipeline("User Authentication", ["Password hashing", "JWT token iss
     </p>
 <div class="code-window">
 <div class="code-bar">
+
 <span>tutorial_4_academic_coscientist.py</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code>from typing import List
 from pydantic import BaseModel, Field
@@ -885,7 +895,9 @@ run_literature_review_pipeline("computational biology")</code></pre>
     </p>
 <div class="code-window">
 <div class="code-bar">
+
 <span>tutorial_5_personal_guardrail.py</span>
+<button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code>class BudgetBreachedException(Exception):
     pass
@@ -979,7 +991,7 @@ run_governed_personal_agent("Refactor authentication module", my_guardrail)</cod
 <li><a href="https://www.librechat.ai/docs/local/docker" rel="noopener noreferrer" target="_blank">10. LibreChat Local Docker Installation Guide - LibreChat Docs</a> - https://www.librechat.ai/docs/local/docker</li>
 <li><a href="https://docs.crewai.com/en/concepts/memory" rel="noopener noreferrer" target="_blank">11. CrewAI Unified Memory API &amp; Multi-Agent Concepts - CrewAI Docs</a> - https://docs.crewai.com/en/concepts/memory</li>
 <li><a href="https://zylos.ai/research/" rel="noopener noreferrer" target="_blank">12. AI Agent Memory Architecture: Persistent State Management - Zylos Research</a> - https://zylos.ai/research/</li>
-<li><a href="https://www.mindstudio.ai/blog" rel="noopener noreferrer" target="_blank">13. Running Local Agent Swarms with vLLM and Hermes: Config Guide - MindStudio Blog</a> - https://www.mindstudio.ai/blog</li>
+<li><a href="https://www.mindstudio.ai/blog" rel="noopener noreferrer" target="_blank">13. Running Local Agent Swarms with vLLM and Agentic Assistants: Config Guide - MindStudio Blog</a> - https://www.mindstudio.ai/blog</li>
 <li><a href="https://www.coursera.org/specializations/building-ai-agents-and-agentic-workflows" rel="noopener noreferrer" target="_blank">14. Building AI Agents and Agentic Workflows Specialization - Coursera</a> - https://www.coursera.org/specializations/building-ai-agents-and-agentic-workflows</li>
 <li><a href="https://www.ibm.com/think/ai-agents" rel="noopener noreferrer" target="_blank">15. AI Agent Use Cases &amp; Enterprise Application Guide - IBM AI Agents Hub</a> - https://www.ibm.com/think/ai-agents</li>
 <li><a href="https://hammadarmghan.com/agent-research" rel="noopener noreferrer" target="_blank">16. Building Your First Personalized AI Agent: Research Brief - Hammad Armghan Brief</a> - https://hammadarmghan.com/agent-research</li>

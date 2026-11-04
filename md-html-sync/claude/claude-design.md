@@ -18,11 +18,12 @@
 8. 8. Current Limitations
 9. 9. What This Means for Designers
 10. 10. Getting Started Today
-11. 11. References
+11. 11. Practice Pricing & Global Purchasing Power Parity
+12. 12. References
 
 ---
 
-## 1. The Short Version
+## The Short Version
 
 For three decades, digital graphics came out of hands. You dragged a rectangle, nudged a kerning pair, hunted for a hex code in a swatch panel, and learned where a tool hid its menus. Claude Design asks for a sentence instead. You describe a pitch deck, a landing page or a mobile app screen, and Claude builds a first version you can react to and refine.
 
@@ -30,11 +31,11 @@ Anthropic introduced the product in its launch announcement on April 17, 2026. S
 
 ---
 
-## 2. Claude Design in Numbers
+## Claude Design in Numbers
 
 ---
 
-## 3. What Claude Design Actually Is
+## What Claude Design Actually Is
 
 Claude Design began as an Anthropic Labs product running on Claude Opus, as TechCrunch's launch report noted. It produces prototypes, slide decks, one-pagers, landing pages, social assets and marketing collateral, all through one short loop.
 
@@ -48,7 +49,7 @@ The feature that sets it apart is brand awareness. Claude reads your code and de
 
 ---
 
-## 4. Six Months, Five Big Changes
+## Six Months, Five Big Changes
 
 The product has changed dramatically in half a year. The Help Center release notes and Anthropic's engineering dispatches record each milestone:
 
@@ -62,7 +63,7 @@ The product has changed dramatically in half a year. The Help Center release not
 
 ---
 
-## 5. Language as the Interface
+## Language as the Interface
 
 Every earlier design tool asked you to learn it. Photoshop had layers and masks. Figma has frames, auto layout and variants. Canva lowered the bar with templates, yet you still drag, drop and click your way to a result. Skill meant knowing which operations produce the picture in your head. Claude Design flips that. You state the intent, and the model works out the operations.
 
@@ -78,7 +79,7 @@ Design and engineering share one source. The handoff carries design intent, and 
 
 ---
 
-## 6. Claude Design vs Figma vs Canva
+## Claude Design vs Figma vs Canva
 
 The three tools overlap less than the headlines suggest. Each starts from a different assumption about who is designing and how.
 
@@ -95,7 +96,7 @@ The competitors are also partners. Claude Design has a direct export to Canva, a
 
 ---
 
-## 7. Market Numbers & Wall Street
+## Market Numbers & Wall Street
 
 Investors moved fast. Figma, which Gizmodo cites an estimate placing at 80 to 90% of UI and UX design work, took the hardest hit.
 
@@ -103,7 +104,7 @@ The incumbents were still growing rapidly before the launch, which demonstrates 
 
 ---
 
-## 8. Current Limitations
+## Current Limitations
 
 Joel Lewenstein, Anthropic's head of product design, wrote that Claude Design does not yet handle the last-mile craft that separates the best products from average ones, and that he sees it as one tool among many. Designer Andy Allen told Fast Company that, like most AI tools, it raises the floor for newcomers more than the ceiling for professionals:
 
@@ -113,7 +114,7 @@ There is a deadline too. Chats and comments on standalone projects disappear whe
 
 ---
 
-## 9. What This Means for Designers
+## What This Means for Designers
 
 The job moves from operating software to directing it. When the model handles layout mechanics, the scarce skills are taste, a clear brief, sharp critique and a well-kept design system for the model to read. The designer becomes an art director with a very fast junior team.
 
@@ -121,7 +122,7 @@ Pressure lands first on routine production. Simple decks, one-pagers and social 
 
 ---
 
-## 10. Getting Started Today
+## Getting Started Today
 
 - Ask for a design in any Claude conversation, or start one from the Artifacts tab.
 - Developers can run /design inside Claude Code to create, edit and sync design projects.
@@ -132,7 +133,34 @@ Design used to begin with a cursor. It now begins with a sentence, and that chan
 
 ---
 
-## 11. References
+## Practice Pricing & Global Purchasing Power Parity
+
+I provide live, remote engineering training and advisory consulting covering Google Gemini, Claude, and sovereign local LLMs. Engagements turn engineering teams and individual developers into AI-first builders who construct production agent swarms, implement budget safeguards, and run private models.
+
+All services are delivered remotely worldwide with 4 hours a day of live instruction, with Saturdays and Sundays as holidays. Pricing is governed by our transparent 195-country Purchasing Power Parity (PPP) framework scaling rates across six economic tiers. For full tier definitions, currency conversions, and interactive calculations, visit our Pricing Page.
+
+### Individual Service Picks (Pick & Choose)
+
+Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
+
+- Business Individual Pick: $250 USD base for 1 seat, with additional seats at $250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
+- Personal Individual Pick: $250 USD strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
+
+### Payment Structure & Trust Guarantees
+
+Every client engagement is safeguarded by strict trust guarantees:
+
+- Zero Upfront Payment: Strictly $0 advance deposit required. We never invoice before delivering actual value.
+- 20% in Five Installments: Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.
+- Walkaway Guarantee: If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.
+- Commercial Apache 2.0 License: All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.
+- Full Pricing Details: Learn more about country tier multipliers, currency choices, and customized curriculum on our Pricing Page.
+
+### The Six Purchasing Power Parity (PPP) Tiers
+
+---
+
+## References
 
 1. Introducing Claude Design by Anthropic Labs Anthropic, April 17, 2026
 2. Anthropic launches Claude Design TechCrunch, April 17, 2026

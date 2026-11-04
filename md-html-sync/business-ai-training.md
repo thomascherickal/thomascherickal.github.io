@@ -74,9 +74,9 @@ Master the principles of Claude AI agent orchestration to run multi-agent swarms
  orchestrator-worker hierarchies, sequential pipelines, and parallel fan-out teams that automate complex
  workflows while controlling quality and cost.
 
-### 04 · Hermes Agent
+### 04 · Agentic Assistants
 
-Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own business infrastructure.
+Deploy Agentic Assistants from Nous Research as a self-hosted assistant on your own business infrastructure.
  Configure persistent session memory so the agent retains project context, saves solved procedures as
  reusable skills, and runs scheduled tasks.
 
@@ -134,9 +134,9 @@ Deploying open-weight models privately on local clusters using vLLM and Ollama, 
 Configuring lead orchestrator Claude Opus with fast Claude Sonnet subagents, building stateful LangGraph
  execution graphs, and authoring secure custom Model Context Protocol (MCP) servers.
 
-### Hermes Agent Training & Workflow Automations
+### Agentic Assistants Training & Workflow Automations
 
-Deploying autonomous Hermes agents on internal servers with long-term skill memory, connecting recurring
+Deploying autonomous Agentic assistants on internal servers with long-term skill memory, connecting recurring
  departmental pipelines with n8n, and testing high-throughput autonomous tool pipelines.
 
 ### AI Developer Training, Gemini Advanced, Competitor Research & Leads Magnet

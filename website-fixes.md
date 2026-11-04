@@ -16,14 +16,14 @@ This report documents the resolution of all items requested across Parts 2 throu
     - *The Hidden Geometry of GenAI*: 9,300 words, Feb 26, 2026, HackerNoon.
     - *Nobody Knows How LLMs Work*: 4,700 words, Feb 23, 2026, HackerNoon.
     - *The OpenClaw Saga*: 5,700 words, Mar 2, 2026, HackerNoon.
-    - *Hermes Agent vs OpenClaw*: 7,100 words, Mar 25, 2026, HackerNoon.
+    - *Agentic Assistants vs OpenClaw*: 7,100 words, Mar 25, 2026, HackerNoon.
     - *Comparing Quantum Frameworks*: 3,900 words, Mar 28, 2026, HackerNoon.
     - *Quantum Computing Fundamentals Part I*: 6,200 words, Mar 19, 2026, HackerNoon.
     - *Quantum Computing Fundamentals Part II*: 8,700 words, Mar 22, 2026, HackerNoon.
     - *How Quantum Computers Threaten Bitcoin*: 2,900 words, Dec 7, 2025, HackerNoon.
     - *OpenFang*: Mar 30, 2026, HackerNoon.
     - *The AI Olympics*: May 15, 2026, nine plans, HackerNoon.
-    - *Gemini Spark vs Hermes Agent vs OpenClaw*: HackerNoon, Aug 18, 2026, 5,200 words.
+    - *Gemini Spark vs Agentic Assistants vs OpenClaw*: HackerNoon, Aug 18, 2026, 5,200 words.
 - [x] **2.2 OpenClaw Chronology**:
   - Corrected genesis timeline in `articles.html`: the January renames (Clawdbot to Moltbot on 27 January, Moltbot to OpenClaw on 30 January), the 15 to 21 February variant explosion, and the 22 to 28 February security reckoning.
   - Adjusted "The Next Trillion-Dollar AI Shift: Why OpenClaw Changes Everything for LLMs" publication date from Jan 28 to Jan 31, 2026.
@@ -36,8 +36,8 @@ This report documents the resolution of all items requested across Parts 2 throu
 - [x] **2.5 Prompt Caching Consistency**:
   - Standardized phrasing across `index.html`, `expertise.html`, `faqs.html` (#40), and `personal-ai-training.html` to:
     "Prompt caching cuts the cost of cached input tokens by 90% to 97.5%, depending on the Claude model."
-- [x] **2.6 Hermes Agent Training**:
-  - Updated FAQ #38 intro: "Hermes Agent Training covers Hermes Agent, the open-source agent framework from Nous Research: persistent memory across sessions, skills it saves and reuses, scheduled tasks and sandboxed tool execution on your own servers."
+- [x] **2.6 Agentic Assistants Training**:
+  - Updated FAQ #38 intro: "Agentic Assistants Training covers Agentic Assistants, the open-source agent framework from Nous Research: persistent memory across sessions, skills it saves and reuses, scheduled tasks and sandboxed tool execution on your own servers."
   - Removed the "Zero Licensing Restraints" bullet.
 - [x] **2.7 Decision Models Chips**:
   - Updated chips in `expertise.html` to: `Jev · Laya · OpenAI Decisions API · Local Decision Models (Ollama)`.
@@ -102,7 +102,7 @@ This report documents the resolution of all items requested across Parts 2 throu
 
 ### Part 5: Naming, Navigation, Forms & Footer
 - [x] **5.1 Standardize 16 Service Names**:
-  - Standardized service names across site: `Hermes Agent Training`, `Workflow Automation Training`, `Quantum Applications (Experimental)`, `AI Budget & Cost Control Training`, `Business Workforce AI Training`, `Claude Agent Orchestration`.
+  - Standardized service names across site: `Agentic Assistants Training`, `Workflow Automation Training`, `Quantum Applications (Experimental)`, `AI Budget & Cost Control Training`, `Business Workforce AI Training`, `Claude Agent Orchestration`.
 - [x] **5.2 Contact Form Options**:
   - Contact dropdown updated with all 16 standardized services + Personal AI Transformation (16-service catalogue) + Other.
 - [x] **5.3 Header Navigation**:

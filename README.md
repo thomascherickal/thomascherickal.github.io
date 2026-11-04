@@ -45,7 +45,7 @@ mindmap
     Business Transformations
       End-to-End GenAI Transformation
       Local LLM Deployment 60-90% Cost Cut
-      Agentic AI Systems & Hermes Training
+      Agentic AI Systems & Agentic Assistants Training
       n8n & Webhook Workflow Automation
       Quantum Algorithms Qiskit & PennyLane
       LiteLLM Gateways & Spend Quotas
@@ -208,7 +208,7 @@ graph TD
 | **Generative AI Transformation** | [`business-services/business-service-generative-ai-transformation.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-generative-ai-transformation.html) | Transitioning from basic chatbots to coordinated autonomous agent swarms. |
 | **Local LLMs & Cost Slashing** | [`business-services/business-service-local-llms-cost-slashing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-local-llms-cost-slashing.html) | Deploying private open-weight models (vLLM, Ollama) to slash token expenses by 60%-90%. |
 | **Claude Agent Orchestration** | [`business-services/business-service-ai-agents-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-ai-agents-orchestration.html) | Production state machines, long-term memory persistence & human-in-the-loop gates. |
-| **Hermes Agent Training** | [`business-services/business-service-agentic-ai-systems.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-agentic-ai-systems.html) | Self-hosted Hermes Agent on Linux, persistent session memory & sandboxed tool execution. |
+| **Agentic Assistants Training** | [`business-services/business-service-agentic-ai-systems.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-agentic-ai-systems.html) | Self-hosted Agentic Assistants on Linux, persistent session memory & sandboxed tool execution. |
 | **Workflow Automations** | [`business-services/business-service-workflow-automations.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-workflow-automations.html) | Business local n8n, Make, IFTTT & open-source workflow pipelines with zero per-step SaaS fees. |
 | **AI Budget & Cost Control Training** | [`business-services/business-service-ai-budget-cost-limits-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-ai-budget-cost-limits-training.html) | LiteLLM gateways, departmental spend quotas, token caching & hard circuit breakers. |
 | **AI Developer Training** | [`business-services/business-service-ai-developer-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-ai-developer-training.html) | Coding agent mastery (Claude Code, Google Antigravity, OpenCode) & strict AI-assisted TDD. |

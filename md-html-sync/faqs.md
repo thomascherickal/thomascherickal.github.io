@@ -193,7 +193,7 @@ Rather than forcing clients to purchase separate standalone packages, the 16-ser
 - 3. Claude Agent Orchestration: Orchestrator-Workers, Evaluator-Optimizer, and
  Router multi-agent teams.
 
-- 4. Hermes Agent Autonomy: Self-healing function calling and terminal execution
+- 4. Agentic Assistants Autonomy: Self-healing function calling and terminal execution
  with open-weights.
 
 - 5. Workflow Automations: Multi-app connectors, browser automation, and data
@@ -361,7 +361,7 @@ Freshers and recent computer science graduates often experience a steep disconne
 - Tool Calling & MCP Integration: Hands-on training on the Model Context
  Protocol (MCP) to connect models safely to databases, filesystems, and APIs.
 
-- Autonomous Open Agents: Hands-on experience with Nous Research Hermes agents and
+- Autonomous Open Agents: Hands-on experience with Nous Research Agentic assistants and
  terminal-native debugging loops.
 
 Freshers graduate with the practical productivity, testing rigor, and architectural judgment
@@ -477,7 +477,7 @@ For founders, speed to customer validation is existential. Our curriculum enable
 - Zero-to-One Scaffolding: Rapid generation of database schemas, API backends, and
  frontend components using Claude Code and terminal agent loops.
 
-- Automated Customer Support & Onboarding: Deploying autonomous Hermes agent
+- Automated Customer Support & Onboarding: Deploying autonomous Agentic Assistants agent
  instances to handle early user inquiries and product telemetry.
 
 - Runway Preservation: Minimizing capital expenditure by substituting early
@@ -1015,7 +1015,7 @@ Coupling an business codebase tightly to a single proprietary AI vendor creates 
  price, latency benchmarks, and context length requirements.
 
 - Automated Redundant Fallbacks: If Claude experiences latency spikes or temporary
- outages, workloads fail over automatically to Gemini, OpenAI, Grok, or a private local Hermes
+ outages, workloads fail over automatically to Gemini, OpenAI, Grok, or a private local Agentic Assistants
  instance.
 
 Your team retains total architectural sovereignty, effortlessly adopting new frontier models the
@@ -1176,14 +1176,14 @@ Our flagship Claude curriculum covers eight meticulously structured modules refl
 
 ---
 
-### 48. What is Hermes Agent Training and how are autonomous systems built with it?
+### 48. What is Agentic Assistants Training and how are autonomous systems built with it?
 *Curriculum:
- Hermes Agents · FAQ #38*  
-Hermes Agent Training covers Hermes Agent, the open-source agent framework from Nous Research:
+ Agentic Assistantss · FAQ #38*  
+Agentic Assistants Training covers Agentic Assistants, the open-source agent framework from Nous Research:
  persistent memory across sessions, skills it saves and reuses, scheduled tasks and sandboxed tool
  execution on your own servers.
 
-- Autonomous Function Calling: Directing Hermes models to invoke internal API
+- Autonomous Function Calling: Directing agentic models to invoke internal API
  endpoints, inspect JSON schemas, and execute terminal tools without cloud intermediaries.
 
 - Self-Correction Loops: Engineering agents that inspect runtime exceptions,

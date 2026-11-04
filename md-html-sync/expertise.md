@@ -90,7 +90,7 @@ Structured engagement models for engineering teams, fast-growing tech startups, 
 `Python` · `Rust` · `Golang` · `C` · `C++` · `Julia` · `SQL` · `Bash` · `JavaScript` · `TypeScript` · `Mojo` · `HTML/CSS`
 
 ### Generative AI Systems
-`LLMs` · `SLMs` · `Agentic AI` · `Hermes Agent` · `AI Agents` · `LangChain` · `LangGraph` · `LangSmith`
+`LLMs` · `SLMs` · `Agentic AI` · `Agentic Assistants` · `AI Agents` · `LangChain` · `LangGraph` · `LangSmith`
 
 ### Quantum Systems
 `IBM
@@ -112,7 +112,7 @@ Structured engagement models for engineering teams, fast-growing tech startups, 
 `Claude Agent Teams` · `Claude Skills` · `Claude AI Artifacts` · `Claude Motion` · `Claude Dashboards` · `Claude Mods` · `Claude Subagents`
 
 ### Open-Source Systems
-`HuggingFace Models` · `HuggingFace Spaces` · `Hermes Agent` · `Agentic Skills` · `OpenCode` · `Agentics Foundation`
+`HuggingFace Models` · `HuggingFace Spaces` · `Agentic Assistants` · `Agentic Skills` · `OpenCode` · `Agentics Foundation`
 
 ### Automation Expertise
 `n8n Local Deployment` · `Make` · `IFTTT` · `Activepieces` · `Windmill` · `Zapier` · `AI Desktop Ecosystems`

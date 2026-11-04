@@ -32,7 +32,7 @@
  open-source embedding models (BGE-M3, Nomic Embed).
 - Autonomous Ingestion Pipeline: Python and shell daemons monitoring RSS feeds,
  Pocket/Instapaper, and PDF drops for automatic text extraction and tagging.
-- Local Agent Assistant: Claude Code CLI or Hermes Agent configured to query your
+- Local Agent Assistant: Claude Code CLI or Agentic Assistants configured to query your
  personal knowledge vault with strict citations.
 
 ---

@@ -111,6 +111,24 @@ This first tutorial takes about ten minutes. You will write a system instruction
 
 The generated snippet is the reliable reference, because Google updates model names and call styles often. The example below shows the shape of a minimal call with the current SDK:
 
+#### ``
+```python
+from google import genai
+
+client = genai.Client()  # reads GEMINI_API_KEY from the environment
+response = client.models.generate_content(
+    model="gemini-3.8-flash",
+    config={
+        "system_instruction": (
+            "You are Tim, an alien that lives on Europa. "
+            "Keep answers under 3 paragraphs and stay upbeat."
+        )
+    },
+    contents="What's the weather like?",
+)
+print(response.text)
+```
+
 Google's latest-model page now demonstrates the Interactions API for new work, so compare your snippet with what Get code produces.[8] The Playground session remains useful either way, because it records the exact instruction and settings that produced a good answer.
 
 ---
@@ -180,14 +198,14 @@ All services are delivered remotely worldwide with 4 hours a day of live instruc
 
 Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
 
-- Business Individual Pick: 00 USD per service for up to 1 seat, with additional seats at 00 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
-- Personal Individual Pick: 00 USD per service strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
+- Business Individual Pick: $250 USD base for 1 seat, with additional seats at $250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
+- Personal Individual Pick: $250 USD strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
 
 ### Payment Structure & Trust Guarantees
 
 Every client engagement is safeguarded by strict trust guarantees:
 
-- Zero Upfront Payment: Strictly bash advance deposit required. We never invoice before delivering actual value.
+- Zero Upfront Payment: Strictly $0 advance deposit required. We never invoice before delivering actual value.
 - 20% in Five Installments: Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.
 - Walkaway Guarantee: If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.
 - Commercial Apache 2.0 License: All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.

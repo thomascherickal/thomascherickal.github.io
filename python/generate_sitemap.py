@@ -70,7 +70,7 @@ GEMINI_GUIDES = [
     "google/google-gemini-spark.html",
     "google/google-gemini-notebook.html",
     "google/google-gemma.html",
-    "google/google-deep-research.html",
+    "google/google-multimodality.html",
     "google/google-gemini-4-models.html",
     "google/google-gemini-agents.html",
 ]

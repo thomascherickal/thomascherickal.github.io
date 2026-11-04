@@ -44,12 +44,12 @@ Slash recurring API costs 60%-90% via private Ollama, vLLM, GGUF/AWQ quantizatio
 
 Architect orchestrator-worker swarms, parallel fan-out loops, human-in-the-loop gates, and dynamic model routing.
 
-### Hermes Agent Training
+### Agentic Assistants Training
 
 **Category**: `Autonomous Loops`  
-**Link**: [Hermes Agent Training](business-services/business-service-agentic-ai-systems.html)
+**Link**: [Agentic Assistants Training](business-services/business-service-agentic-ai-systems.html)
 
-Deploy open-weights Hermes agent loops with multi-turn tool calling, structured JSON schemas, and function-calling fine-tunes.
+Deploy open-weights Agentic Assistants agent loops with multi-turn tool calling, structured JSON schemas, and function-calling fine-tunes.
 
 ### Workflow Automations
 

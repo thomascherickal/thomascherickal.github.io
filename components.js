@@ -438,12 +438,125 @@
     });
   }
 
+  // Universal Code Sample Copy Buttons & Sharp Boundaries
+  function initCodeCopyButtons() {
+    var preElements = document.querySelectorAll('pre');
+    preElements.forEach(function (pre) {
+      // Find or establish container
+      var container = pre.closest('.code-window, .codewrap, .code, .code-box');
+      if (!container) {
+        var styledParent = pre.parentElement;
+        if (styledParent && styledParent.tagName === 'DIV' && styledParent.children.length === 1 &&
+            (styledParent.getAttribute('style') || '').indexOf('#090d14') !== -1) {
+          container = styledParent;
+          container.classList.add('code-box');
+        } else {
+          var wrapper = document.createElement('div');
+          wrapper.className = 'code-window';
+          pre.parentNode.insertBefore(wrapper, pre);
+          wrapper.appendChild(pre);
+          container = wrapper;
+        }
+      }
+
+      // Check for existing header/bar
+      var bar = container.querySelector('.code-bar, .code-head, .cap, .code-header');
+      if (!bar) {
+        bar = document.createElement('div');
+        bar.className = 'code-bar';
+        
+        var dots = document.createElement('div');
+        dots.className = 'code-dots';
+        dots.innerHTML = '<span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>';
+        bar.appendChild(dots);
+
+        var label = document.createElement('span');
+        var codeEl = pre.querySelector('code');
+        var lang = '';
+        if (codeEl && codeEl.className) {
+          var m = codeEl.className.match(/language-([a-zA-Z0-9_-]+)/);
+          if (m) lang = m[1];
+        }
+        label.textContent = lang ? lang.toUpperCase() : 'Code';
+        label.style.marginLeft = '8px';
+        bar.appendChild(label);
+
+        container.insertBefore(bar, pre);
+      }
+
+      // Ensure a copy button exists in the bar
+      var copyBtn = bar.querySelector('.copy, .copy-btn');
+      if (!copyBtn) {
+        copyBtn = document.createElement('button');
+        copyBtn.className = 'copy';
+        copyBtn.type = 'button';
+        copyBtn.setAttribute('aria-label', 'Copy code to clipboard');
+        copyBtn.textContent = 'Copy';
+        bar.appendChild(copyBtn);
+      }
+    });
+
+    // Global click delegation for all copy buttons
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest ? e.target.closest('button.copy, .copy-btn') : null;
+      if (!btn) return;
+
+      var container = btn.closest('.code-window, .codewrap, .code, .code-box, div');
+      var code = container ? container.querySelector('code') : null;
+      var text = '';
+      if (code) {
+        text = code.innerText || code.textContent;
+      } else {
+        var pre = container ? container.querySelector('pre') : null;
+        if (pre) text = pre.innerText || pre.textContent;
+      }
+      if (!text) return;
+
+      function onCopied() {
+        var origText = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(function () {
+          btn.textContent = origText;
+          btn.classList.remove('copied');
+        }, 1500);
+      }
+
+      function fallback(t) {
+        var ta = document.createElement('textarea');
+        ta.value = t;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          document.execCommand('copy');
+          onCopied();
+        } catch (err) {
+          btn.textContent = 'Failed';
+          setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+        }
+        document.body.removeChild(ta);
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(onCopied, function () {
+          fallback(text);
+        });
+      } else {
+        fallback(text);
+      }
+    });
+  }
+
   function init() {
     syncActiveNav();
     bindNavEvents();
     initArticlesCarousel();
     initEmailObfuscation();
     initResponsiveTables();
+    initCodeCopyButtons();
   }
 
   if (document.readyState === 'loading') {

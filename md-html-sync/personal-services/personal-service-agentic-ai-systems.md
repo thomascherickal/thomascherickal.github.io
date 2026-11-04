@@ -2,7 +2,7 @@
 ## Business AI Transformation Service - Thomas Cherickal
 
 > **// SERVICE SPECIFICATION 04**  
-> **Deploying Hermes Agent, the open-source agent from Nous Research, as a self-hosted assistant that remembers
+> **Deploying Agentic Assistants, the open-source agent from Nous Research, as a self-hosted assistant that remembers
  across sessions, builds its own skills and runs scheduled tasks on your own infrastructure.**
 
 ---
@@ -10,13 +10,13 @@
 ## 1. Service
  Overview & Scope
 
-- Self-Hosted Hermes Agent: Installing and configuring Hermes Agent (MIT-licensed, released
+- Self-Hosted Agentic Assistants: Installing and configuring Agentic Assistants (MIT-licensed, released
  by Nous Research in February 2026) as an always-on service on your Linux server or workstation.
 - Persistent Memory: Setting up session history and memory so the agent keeps project
  context, preferences and past decisions across conversations.
 - Skills From Experience: Configuring how the agent saves solved procedures as reusable
  skills, and reviewing those skills before your team relies on them.
-- Model Choice: Connecting Hermes Agent to local models through Ollama, llama.cpp, vLLM or
+- Model Choice: Connecting Agentic Assistants to local models through Ollama, llama.cpp, vLLM or
  LM Studio, to Claude, or to OpenRouter, depending on your cost and privacy needs.
 - Tools, Schedules and Access: Connecting MCP servers and internal tools, setting up
  scheduled tasks, and reaching the agent from the terminal or your team chat, all inside Docker with limited
@@ -27,7 +27,7 @@
 ## 2. Standard
  Architecture & Tools
 
-- Agent Framework: Hermes Agent with its memory store, skills library and task scheduler.
+- Agent Framework: Agentic Assistants with its memory store, skills library and task scheduler.
 - Model Backends: Local open-weight models (Qwen, Gemma, Llama, Mistral) via Ollama,
  llama.cpp, vLLM or LM Studio, plus Claude or OpenRouter through an OpenAI-compatible endpoint.
 - Tools and Integrations: MCP servers in Python or Rust, Python tool scripts, and messaging
@@ -40,7 +40,7 @@
 ## 3.
  Deliverable Examples & 4-Week Schedule
 
-- Containerized Hermes Agent Deployment: Docker Compose setup with configuration, secrets
+- Containerized Agentic Assistants Deployment: Docker Compose setup with configuration, secrets
  handling, persistent storage for memory and skills, and backups.
 - Custom Tool & MCP Integrations: Python or Rust tools that let the agent query your
  databases, read internal documents and call internal APIs.
@@ -51,7 +51,7 @@
 
 | Timeline | Focus & Architecture | Core Deliverables & Artifacts | Verification & Sign-off Criteria |
 | :--- | :--- | :--- | :--- |
-| Week 1 | Hermes Agent Installation & Model Backend Configuration | Docker Compose deployment of Hermes Agent on Linux server or workstation, persistent storage volumes, and model backend connection (Ollama, llama.cpp, vLLM, LM Studio, Claude, or OpenRouter) | Always-on agent service responding reliably with chosen local or API model backend and baseline latency verified |
+| Week 1 | Agentic Assistants Installation & Model Backend Configuration | Docker Compose deployment of Agentic Assistants on Linux server or workstation, persistent storage volumes, and model backend connection (Ollama, llama.cpp, vLLM, LM Studio, Claude, or OpenRouter) | Always-on agent service responding reliably with chosen local or API model backend and baseline latency verified |
 | Week 2 | Persistent Memory & Task Scheduler Setup | Session history configuration, cross-conversation memory store, scheduled task routines, and terminal/team chat messaging integration (Slack, Discord, or Telegram) | Agent retains project context and preferences across distinct sessions and executes scheduled background tasks on time |
 | Week 3 | Custom Tools, MCP Servers & Skills Library | Python and Rust MCP servers, internal database and document tools, schema-checked tool validation, and starter library of reviewed, tested skills for recurring procedures | Agent executes multi-step tool calls with schema validation and successfully saves and reuses reviewed procedure skills |
 | Week 4 | Evaluation Suite, Docker Isolation & Handover | pytest test suite covering tool selection, argument correctness, and memory recall, non-root Docker security lockdown, complete configuration transfer, and 30-day support onboarding | All pytest evaluation checks pass, backup routines verified, complete configuration and IP handed over with client sign-off |
@@ -94,7 +94,7 @@
 
 ## 6. Summary
 
-- Hermes Agent, Self-Hosted: Nous Research's open-source agent
+- Agentic Assistants, Self-Hosted: Nous Research's open-source agent
  running on your infrastructure.
 - Strict 1-Month Delivery: 4-week program from installation to
  production tools and handover.

@@ -48,9 +48,9 @@ Master the principles of Claude AI agent orchestration to run multi-agent swarms
 - **Deliverables**: Orchestrator-worker hierarchies, parallel fan-out execution, dynamic task routing, human-in-the-loop gates, and token budget governance.
 - **URL**: [https://thedigitalfuturist.com/business-services/business-service-ai-agents-orchestration.html](https://thedigitalfuturist.com/business-services/business-service-ai-agents-orchestration.html)
 
-### 04. Hermes Agent Training
-Deploy Hermes Agent from Nous Research as a self-hosted assistant on your own infrastructure. Configure persistent session memory so the agent retains project context, saves solved procedures as reusable skills, and runs scheduled tasks.
-- **Deliverables**: Self-hosted Hermes Agent on Linux, persistent session memory (vector & SQLite), autonomous skill accumulation, and sandboxed Docker tool execution.
+### 04. Agentic Assistants Training
+Deploy Agentic Assistants from Nous Research as a self-hosted assistant on your own infrastructure. Configure persistent session memory so the agent retains project context, saves solved procedures as reusable skills, and runs scheduled tasks.
+- **Deliverables**: Self-hosted Agentic Assistants on Linux, persistent session memory (vector & SQLite), autonomous skill accumulation, and sandboxed Docker tool execution.
 - **URL**: [https://thedigitalfuturist.com/business-services/business-service-agentic-ai-systems.html](https://thedigitalfuturist.com/business-services/business-service-agentic-ai-systems.html)
 
 ### 05. Workflow Automations

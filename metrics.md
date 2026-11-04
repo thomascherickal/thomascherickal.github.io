@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-03 11:42:07 UTC` | Branch: `main` | Head Commit: `2917e89`
+> **Automated Status Report** | Generated on `2026-11-04 10:19:39 UTC` | Branch: `main` | Head Commit: `f0730d2`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **417** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **613,999** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **601,701** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **4,402** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **7,896** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **68.70 MB (72,041,057 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **575,561 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **462** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-03** | Subject: "feat: enforce strictly single-column layout for all ToCs and finalize local mermaid assets" |
+| **Total Tracked Files** | **438** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **655,851** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **642,708** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **4,563** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **8,580** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **73.44 MB (77,006,141 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **634,087 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **463** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-03** | Subject: "fix: update mermaid rendering pipeline with pure css visibility and error-free measurement" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,15 +27,15 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 66 | 72,160 | 5.38 MB (5,637,115 bytes) | Production static web pages, services, frameworks & guides |
-| **CSS Stylesheets** | 16 | 11,809 | 276.31 KB (282,937 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 5 | 6,074 | 3.50 MB (3,669,852 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 35 | 8,113 | 364.62 KB (373,370 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 87 | 27,195 | 2.97 MB (3,110,559 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 83 | 488,595 | 22.74 MB (23,842,926 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **HTML Documents** | 66 | 75,143 | 5.64 MB (5,913,425 bytes) | Production static web pages, services, frameworks & guides |
+| **CSS Stylesheets** | 16 | 11,871 | 278.24 KB (284,922 bytes) | Design tokens, animations, responsive layout & themes |
+| **JavaScript Scripts** | 5 | 6,187 | 3.50 MB (3,673,845 bytes) | Client-side interactivity, search, filter & components |
+| **Python Tooling** | 35 | 8,113 | 364.64 KB (373,388 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 87 | 29,477 | 3.25 MB (3,405,067 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 83 | 525,007 | 24.80 MB (26,008,387 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
-| **Raster Images (WebP, JPG, PNG)** | 74 | 0 | 33.39 MB (35,010,540 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 9 | 0 | 46.16 KB (47,270 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Raster Images (WebP, JPG, PNG)** | 95 | 0 | 35.51 MB (37,233,318 bytes) | Optimized feature hero graphics, social cards & assets |
+| **Config & Metadata** | 9 | 0 | 46.19 KB (47,301 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,22 +43,22 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 83 | 488,595 | 22.74 MB (23,842,926 bytes) | 19.9% |
-| `.html` | 66 | 72,160 | 5.38 MB (5,637,115 bytes) | 15.8% |
-| `.md` | 87 | 27,195 | 2.97 MB (3,110,559 bytes) | 20.9% |
-| `.css` | 16 | 11,809 | 276.31 KB (282,937 bytes) | 3.8% |
-| `.py` | 35 | 8,113 | 364.62 KB (373,370 bytes) | 8.4% |
-| `.js` | 5 | 6,074 | 3.50 MB (3,669,852 bytes) | 1.2% |
-| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 10.1% |
-| `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 10.3% |
-| `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 4.8% |
-| `.jpeg` | 2 | 0 | 773.70 KB (792,264 bytes) | 0.5% |
-| `.png` | 8 | 0 | 714.78 KB (731,934 bytes) | 1.9% |
-| `.txt` | 2 | 0 | 26.64 KB (27,280 bytes) | 0.5% |
+| `.json` | 83 | 525,007 | 24.80 MB (26,008,387 bytes) | 18.9% |
+| `.html` | 66 | 75,143 | 5.64 MB (5,913,425 bytes) | 15.1% |
+| `.md` | 87 | 29,477 | 3.25 MB (3,405,067 bytes) | 19.9% |
+| `.css` | 16 | 11,871 | 278.24 KB (284,922 bytes) | 3.7% |
+| `.py` | 35 | 8,113 | 364.64 KB (373,388 bytes) | 8.0% |
+| `.js` | 5 | 6,187 | 3.50 MB (3,673,845 bytes) | 1.1% |
+| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 9.6% |
+| `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 9.8% |
+| `.png` | 26 | 0 | 2.78 MB (2,918,409 bytes) | 5.9% |
+| `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 4.6% |
+| `.jpeg` | 5 | 0 | 809.15 KB (828,567 bytes) | 1.1% |
+| `.txt` | 2 | 0 | 26.67 KB (27,311 bytes) | 0.5% |
 | `.docx` | 1 | 0 | 10.34 KB (10,592 bytes) | 0.2% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
 | `.xml` | 1 | 0 | 6.34 KB (6,492 bytes) | 0.2% |
-| `[no extension]` | 4 | 0 | 2.31 KB (2,368 bytes) | 1.0% |
+| `[no extension]` | 4 | 0 | 2.31 KB (2,368 bytes) | 0.9% |
 | `.webmanifest` | 1 | 0 | 538 bytes | 0.2% |
 
 ---
@@ -68,12 +68,12 @@
 | Metric | Measurement | Architecture Details |
 | :--- | :--- | :--- |
 | **CSS Media Queries (`@media`)** | **77** | Ultra-responsive breakpoints for mobile, tablet, desktop |
-| **CSS Rule Blocks** | **1,605** | Modular selector rules across all stylesheets |
+| **CSS Rule Blocks** | **1,608** | Modular selector rules across all stylesheets |
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **198** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **61** | Strict single-H1 semantic hierarchy per page |
-| **Secondary Section Headings (`<h2>`)** | **437** | Structural topic subdivisions |
-| **Card & Item Headings (`<h3>`)** | **503** | Individual service, question, and feature cards |
+| **Secondary Section Headings (`<h2>`)** | **478** | Structural topic subdivisions |
+| **Card & Item Headings (`<h3>`)** | **612** | Individual service, question, and feature cards |
 | **Call-to-Action (CTA) Modules** | **75** | Standardized CTAs with Free LinkedIn Consultation rule |
 | **Canonical Links Configured** | **60** | 100% SEO canonical URL coverage across public pages |
 | **Open Graph Meta Tags** | **425** | Social preview cards across Twitter/LinkedIn/Facebook |
