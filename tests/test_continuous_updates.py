@@ -34,6 +34,7 @@ class TestContinuousUpdates(unittest.TestCase):
         self.pricing_html = os.path.join(REPO_DIR, "pricing.html")
         self.calc_js = os.path.join(REPO_DIR, "pricing-calculator.js")
         self.personal_ai_html = os.path.join(REPO_DIR, "personal-ai-training.html")
+        self.guarantees_html = os.path.join(REPO_DIR, "guarantees.html")
 
         # Snapshot original contents of target files
         with open(self.pricing_html, "r", encoding="utf-8") as f:
@@ -42,6 +43,8 @@ class TestContinuousUpdates(unittest.TestCase):
             self.orig_calc_js = f.read()
         with open(self.personal_ai_html, "r", encoding="utf-8") as f:
             self.orig_personal_ai_html = f.read()
+        with open(self.guarantees_html, "r", encoding="utf-8") as f:
+            self.orig_guarantees_html = f.read()
 
         # Create isolated temporary data directory (sandbox)
         self.temp_dir = tempfile.mkdtemp()
@@ -65,6 +68,8 @@ class TestContinuousUpdates(unittest.TestCase):
             f.write(self.orig_calc_js)
         with open(self.personal_ai_html, "w", encoding="utf-8") as f:
             f.write(self.orig_personal_ai_html)
+        with open(self.guarantees_html, "w", encoding="utf-8") as f:
+            f.write(self.orig_guarantees_html)
 
         # Re-run sync against authoritative data/ to leave repo clean
         canonical_sync = ExpertSynchronizer()

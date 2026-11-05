@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-05 18:14:30 UTC` | Branch: `main` | Head Commit: `79b0e31`
+> **Automated Status Report** | Generated on `2026-11-05 18:27:25 UTC` | Branch: `main` | Head Commit: `95c6048`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **466** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **655,065** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **640,596** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **4,844** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **9,625** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **73.46 MB (77,030,337 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **668,181 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **480** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-05** | Subject: "feat(expert-system): enforce strictly unidirectional sync from data to website" |
+| **Total Tracked Files** | **467** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **655,597** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **641,075** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **4,855** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **9,667** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **73.49 MB (77,060,192 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **668,687 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **481** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-05** | Subject: "feat(synchronizer): synchronize repository state with authoritative data" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,15 +27,15 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 66 | 77,386 | 5.90 MB (6,187,518 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 66 | 77,386 | 5.90 MB (6,187,521 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,887 | 278.67 KB (285,354 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 16 | 6,677 | 3.52 MB (3,691,473 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 45 | 10,315 | 452.06 KB (462,906 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 91 | 30,893 | 3.41 MB (3,576,596 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 85 | 517,854 | 24.29 MB (25,468,177 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Python Tooling** | 46 | 10,578 | 469.12 KB (480,382 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 91 | 31,048 | 3.42 MB (3,584,674 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 85 | 517,968 | 24.29 MB (25,472,362 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 95 | 0 | 35.51 MB (37,233,318 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 10 | 0 | 57.14 KB (58,507 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 10 | 0 | 57.25 KB (58,620 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,11 +43,11 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 85 | 517,854 | 24.29 MB (25,468,177 bytes) | 18.2% |
-| `.html` | 66 | 77,386 | 5.90 MB (6,187,518 bytes) | 14.2% |
-| `.md` | 91 | 30,893 | 3.41 MB (3,576,596 bytes) | 19.5% |
+| `.json` | 85 | 517,968 | 24.29 MB (25,472,362 bytes) | 18.2% |
+| `.html` | 66 | 77,386 | 5.90 MB (6,187,521 bytes) | 14.1% |
+| `.md` | 91 | 31,048 | 3.42 MB (3,584,674 bytes) | 19.5% |
 | `.css` | 16 | 11,887 | 278.67 KB (285,354 bytes) | 3.4% |
-| `.py` | 45 | 10,315 | 452.06 KB (462,906 bytes) | 9.7% |
+| `.py` | 46 | 10,578 | 469.12 KB (480,382 bytes) | 9.9% |
 | `.js` | 16 | 6,677 | 3.52 MB (3,691,473 bytes) | 3.4% |
 | `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 9.0% |
 | `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 9.2% |
@@ -57,7 +57,7 @@
 | `.txt` | 2 | 0 | 36.88 KB (37,769 bytes) | 0.4% |
 | `.docx` | 1 | 0 | 10.34 KB (10,592 bytes) | 0.2% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
-| `.xml` | 1 | 0 | 6.56 KB (6,722 bytes) | 0.2% |
+| `.xml` | 1 | 0 | 6.67 KB (6,835 bytes) | 0.2% |
 | `[no extension]` | 5 | 0 | 2.82 KB (2,886 bytes) | 1.1% |
 | `.webmanifest` | 1 | 0 | 538 bytes | 0.2% |
 
@@ -107,8 +107,8 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **290 functions** across tooling scripts | Modular execution units |
-| **Python Class Definitions** | **27 classes** | Structured state containers |
+| **Python Function Definitions** | **298 functions** across tooling scripts | Modular execution units |
+| **Python Class Definitions** | **28 classes** | Structured state containers |
 
 ---
 
