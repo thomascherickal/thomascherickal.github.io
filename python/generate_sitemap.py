@@ -21,6 +21,7 @@ CORE_PAGES = [
     ("expertise.html", "expertise.html"),
     ("contact.html", "contact.html"),
     ("faqs.html", "faqs.html"),
+    ("guarantees.html", "guarantees.html"),
     ("all-business-services.html", "all-business-services.html"),
     ("all-personal-services.html", "all-personal-services.html"),
     ("business-ai-training.html", "business-ai-training.html"),

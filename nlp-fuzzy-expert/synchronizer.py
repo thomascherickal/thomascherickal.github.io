@@ -254,7 +254,7 @@ class ExpertSynchronizer:
                         ])
         else:
             sample_files = [
-                "pricing.html", "index.html", "pricing-calculator.js",
+                "pricing.html", "index.html", "guarantees.html", "pricing-calculator.js",
                 "all-business-services.html", "all-personal-services.html",
                 "faqs.html", "business-ai-training.html", "personal-ai-training.html",
             ]

@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-05 18:05:11 UTC` | Branch: `main` | Head Commit: `d660acb`
+> **Automated Status Report** | Generated on `2026-11-05 18:14:30 UTC` | Branch: `main` | Head Commit: `79b0e31`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **466** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **655,111** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **640,642** | Executable / renderable content lines |
+| **Total Lines of Source Code & Content** | **655,065** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **640,596** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **4,844** | In-code and architectural documentation |
 | **Blank / Spacing Lines** | **9,625** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **73.46 MB (77,031,653 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **668,189 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **479** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-05** | Subject: "feat(hooks): stage LAST-COMMIT-REPORT.md in pre-commit hook" |
+| **Total Repository Size (Tracked Assets)** | **73.46 MB (77,030,337 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **668,181 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **480** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-05** | Subject: "feat(expert-system): enforce strictly unidirectional sync from data to website" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,12 +27,12 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 66 | 77,388 | 5.90 MB (6,187,345 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 66 | 77,386 | 5.90 MB (6,187,518 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,887 | 278.67 KB (285,354 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 16 | 6,677 | 3.52 MB (3,691,473 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 45 | 10,315 | 452.05 KB (462,904 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 91 | 30,889 | 3.41 MB (3,576,315 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 85 | 517,902 | 24.29 MB (25,469,949 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Python Tooling** | 45 | 10,315 | 452.06 KB (462,906 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 91 | 30,893 | 3.41 MB (3,576,596 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 85 | 517,854 | 24.29 MB (25,468,177 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 95 | 0 | 35.51 MB (37,233,318 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 10 | 0 | 57.14 KB (58,507 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,11 +43,11 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 85 | 517,902 | 24.29 MB (25,469,949 bytes) | 18.2% |
-| `.html` | 66 | 77,388 | 5.90 MB (6,187,345 bytes) | 14.2% |
-| `.md` | 91 | 30,889 | 3.41 MB (3,576,315 bytes) | 19.5% |
+| `.json` | 85 | 517,854 | 24.29 MB (25,468,177 bytes) | 18.2% |
+| `.html` | 66 | 77,386 | 5.90 MB (6,187,518 bytes) | 14.2% |
+| `.md` | 91 | 30,893 | 3.41 MB (3,576,596 bytes) | 19.5% |
 | `.css` | 16 | 11,887 | 278.67 KB (285,354 bytes) | 3.4% |
-| `.py` | 45 | 10,315 | 452.05 KB (462,904 bytes) | 9.7% |
+| `.py` | 45 | 10,315 | 452.06 KB (462,906 bytes) | 9.7% |
 | `.js` | 16 | 6,677 | 3.52 MB (3,691,473 bytes) | 3.4% |
 | `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 9.0% |
 | `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 9.2% |
@@ -84,7 +84,7 @@
 ## 5. Web Page Taxonomy & Sitemap Distribution
 
 - **Total Public HTML Pages**: **66**
-- **Core Landing & Portal Pages**: **18** (`404.html`, `all-business-services.html`, `all-personal-services.html`, `article-footers/article-footer_dark.html`, `articles.html`, `business-ai-training.html`, `contact.html`, `expertise.html`, `faqs.html`, `footer.html`, `google43d90cf6a204dc6d.html`, `guarantee.html`, `header.html`, `index.html`, `mermaid.html`, `personal-ai-training.html`, `pricing.html`, `writing.html`)
+- **Core Landing & Portal Pages**: **18** (`404.html`, `all-business-services.html`, `all-personal-services.html`, `article-footers/article-footer_dark.html`, `articles.html`, `business-ai-training.html`, `contact.html`, `expertise.html`, `faqs.html`, `footer.html`, `google43d90cf6a204dc6d.html`, `guarantees.html`, `header.html`, `index.html`, `mermaid.html`, `personal-ai-training.html`, `pricing.html`, `writing.html`)
 - **Business AI Training Services (`business-services/`)**: **12** (Full enterprise curriculum, lead gen, agent orchestration, and architecture deep-dives)
 - **Personal AI Training Services (`personal-services/`)**: **12** (1-on-1 private acceleration, career transformation, continuous learning, and agentic workflows)
 - **Claude Guides & Frameworks (`claude/`)**: **12** (Claude Code, Cowork, Skills, MCP, Orchestration, Plugins, Science, Local LLMs, Features)

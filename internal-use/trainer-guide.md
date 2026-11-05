@@ -23,7 +23,7 @@ The website [thedigitalfuturist.com](file:///home/thomas/GitHub.io/thomascherick
 
 ### 1.2 Zero-Friction Risk Reversal & Commercial Trust
 - **$0 Upfront Deposit**: Clients pay nothing before commencing technical discovery and the first milestone block.
-- **5-Day Walkaway Guarantee**: Detailed in [`guarantee.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/guarantee.html), allowing clients to walk away owing $0 if not satisfied after the first milestone phase.
+- **5-Day Walkaway Guarantee**: Detailed in [`guarantees.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/guarantees.html), allowing clients to walk away owing $0 if not satisfied after the first milestone phase.
 - **20% Milestone Installments**: Five equal installments tied strictly to verified progress, eliminating buyer anxiety for both solo founders and corporate procurement teams.
 - **Apache 2.0 Commercial Licensing**: Clients receive full rights to use, modify, deploy internally, or resell custom code, MCP servers, and training materials.
 

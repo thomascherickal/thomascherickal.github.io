@@ -211,6 +211,8 @@ class KnowledgeBase:
         self.add_fact("pricing", "b_flag_hours", int(b_flag.get("schedule", {}).get("live_hours_per_day", 4)))
         self.add_fact("pricing", "b_flag_seats", int(b_flag.get("cohort_capacity", {}).get("included_seats", 10)))
         self.add_fact("pricing", "b_flag_extra_seat", int(b_flag.get("cohort_capacity", {}).get("additional_seat_fee_usd", 200)))
+        self.add_fact("pricing", "b_flag_max_seats", int(b_flag.get("cohort_capacity", {}).get("max_seats", 20)))
+        self.add_fact("pricing", "b_flag_supp_price", int(b_flag.get("payment_rules", {}).get("support_payment", {}).get("total_usd", 500)))
         self.add_fact("pricing", "b_flag_sched_notes", b_flag.get("schedule", {}).get("schedule_notes", "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day"))
 
         self.add_fact("pricing", "p_flag_price", int(p_flag.get("tier1_base_price_usd", 1000)))
@@ -218,6 +220,7 @@ class KnowledgeBase:
         self.add_fact("pricing", "p_flag_live_days", int(p_flag.get("schedule", {}).get("live_training_days", 30)))
         self.add_fact("pricing", "p_flag_supp_days", int(p_flag.get("schedule", {}).get("support_phase_days", 30)))
         self.add_fact("pricing", "p_flag_hours", int(p_flag.get("schedule", {}).get("live_hours_per_day", 4)))
+        self.add_fact("pricing", "p_flag_supp_price", int(p_flag.get("payment_rules", {}).get("support_payment", {}).get("total_usd", 500)))
         self.add_fact("pricing", "p_flag_sched_notes", p_flag.get("schedule", {}).get("schedule_notes", "30 working days over 6 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day"))
 
         self.add_fact("pricing", "b_ind_price", int(b_ind.get("tier1_base_price_usd", 200)))
@@ -225,11 +228,14 @@ class KnowledgeBase:
         self.add_fact("pricing", "b_ind_live_days", int(b_ind.get("schedule", {}).get("live_training_days", 5)))
         self.add_fact("pricing", "b_ind_supp_days", int(b_ind.get("schedule", {}).get("support_phase_days", 5)))
         self.add_fact("pricing", "b_ind_extra_seat", int(b_ind.get("cohort_capacity", {}).get("additional_seat_fee_usd", 200)))
+        self.add_fact("pricing", "b_ind_max_seats", int(b_ind.get("cohort_capacity", {}).get("max_seats", 10)))
+        self.add_fact("pricing", "b_ind_supp_price", int(b_ind.get("payment_rules", {}).get("support_payment", {}).get("total_usd", 50)))
 
         self.add_fact("pricing", "p_ind_price", int(p_ind.get("tier1_base_price_usd", 100)))
         self.add_fact("pricing", "p_ind_days", int(p_ind.get("schedule", {}).get("total_calendar_duration_days", 10)))
         self.add_fact("pricing", "p_ind_live_days", int(p_ind.get("schedule", {}).get("live_training_days", 5)))
         self.add_fact("pricing", "p_ind_supp_days", int(p_ind.get("schedule", {}).get("support_phase_days", 5)))
+        self.add_fact("pricing", "p_ind_supp_price", int(p_ind.get("payment_rules", {}).get("support_payment", {}).get("total_usd", 50)))
 
         self.add_fact("pricing", "currency_acceptance", rules.get("currency_acceptance", "USD, EUR, GBP, AUD, CAD, INR (via PayPal, international wire, or approved payment rails)"))
         self.add_fact("pricing", "hours_per_day", int(rules.get("hours_per_day", 4)))
