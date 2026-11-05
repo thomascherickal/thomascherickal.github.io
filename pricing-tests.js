@@ -773,9 +773,9 @@ function runTestSuite() {
         innerHTML: "",
         checked: false,
         disabled: false,
-        focus: () => {},
-        select: () => {},
-        scrollIntoView: () => {},
+        focus: () => { },
+        select: () => { },
+        scrollIntoView: () => { },
         querySelector: () => null,
         querySelectorAll: () => []
       };
@@ -888,7 +888,7 @@ function runTestSuite() {
         if (sel.includes("#individual-services-list")) return serviceCards;
         return [];
       },
-      addEventListener: () => {}
+      addEventListener: () => { }
     };
 
     return { mockDocument, elements, tierBtns, allCalcTierClassButtons, serviceCards, getCheckboxes: () => renderedCheckboxes };
@@ -1202,7 +1202,7 @@ Or pass this prompt directly into your active Antigravity session:
 `;
         fs.writeFileSync(path.join(__dirname, 'failed_pricing_tests.report.md'), report, 'utf8');
         fs.writeFileSync(path.join(__dirname, 'failed_pricing-tests_tests.report.md'), report, 'utf8');
-      } catch (e) {}
+      } catch (e) { }
       process.exit(1);
     }
   } else {
@@ -1215,7 +1215,7 @@ Or pass this prompt directly into your active Antigravity session:
         const r2 = path.join(__dirname, 'failed_pricing-tests_tests.report.md');
         if (fs.existsSync(r1)) fs.unlinkSync(r1);
         if (fs.existsSync(r2)) fs.unlinkSync(r2);
-      } catch (e) {}
+      } catch (e) { }
     }
   }
 
