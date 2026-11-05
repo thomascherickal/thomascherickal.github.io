@@ -37,6 +37,24 @@ function runAllModules(PricingCalculator, constants) {
 
   harness.printSummary("JAVASCRIPT UNIT TEST SUITE (pricing-tests.js)", startTime);
 
+  if (typeof process !== 'undefined') {
+    try {
+      const fs = require('fs');
+      const path = require('path');
+      const cachePath = path.join(__dirname, '..', '.js_test_reports_cache.json');
+      const cacheData = {
+        timestamp: new Date().toISOString(),
+        total: harness.results.total,
+        passed: harness.results.passed,
+        failed: harness.results.failed,
+        elapsed_seconds: ((Date.now() - startTime) / 1000).toFixed(2),
+        status: harness.results.failed === 0 ? "PASSED" : "FAILED",
+        sections: harness.sections
+      };
+      fs.writeFileSync(cachePath, JSON.stringify(cacheData, null, 2), 'utf8');
+    } catch (e) { }
+  }
+
   if (harness.results.failed > 0) {
     harness.handleFailures("pricing");
   } else {

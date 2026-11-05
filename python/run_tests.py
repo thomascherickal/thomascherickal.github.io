@@ -15,8 +15,10 @@ Strict Repo Compliance:
 import os
 import sys
 import time
+import json
 import hashlib
 import unittest
+from datetime import datetime, timezone
 
 REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TESTS_DIR = os.path.join(REPO_DIR, "tests")
@@ -24,6 +26,76 @@ DATA_DIR = os.path.join(REPO_DIR, "data")
 
 # Mark test environment to prevent recursive post-sync test triggering
 os.environ["ANTIGRAVITY_IN_TEST"] = "1"
+
+
+class RecordingTestResult(unittest.TextTestResult):
+    """Custom TestResult that captures per-test metadata for commit report generation."""
+
+    def __init__(self, stream, descriptions, verbosity):
+        super().__init__(stream, descriptions, verbosity)
+        self.test_records = []
+        self._test_start_times = {}
+
+    def startTest(self, test):
+        super().startTest(test)
+        self._test_start_times[test.id()] = time.time()
+
+    def addSuccess(self, test):
+        super().addSuccess(test)
+        elapsed = time.time() - self._test_start_times.get(test.id(), time.time())
+        doc = (test.shortDescription() or "").strip()
+        self.test_records.append({
+            "id": test.id(),
+            "module": test.__class__.__module__,
+            "class": test.__class__.__name__,
+            "method": test._testMethodName,
+            "description": doc,
+            "status": "PASSED",
+            "time_taken": round(elapsed, 4)
+        })
+
+    def addFailure(self, test, err):
+        super().addFailure(test, err)
+        elapsed = time.time() - self._test_start_times.get(test.id(), time.time())
+        doc = (test.shortDescription() or "").strip()
+        self.test_records.append({
+            "id": test.id(),
+            "module": test.__class__.__module__,
+            "class": test.__class__.__name__,
+            "method": test._testMethodName,
+            "description": doc,
+            "status": "FAILED",
+            "error": self._exc_info_to_string(err, test),
+            "time_taken": round(elapsed, 4)
+        })
+
+    def addError(self, test, err):
+        super().addError(test, err)
+        elapsed = time.time() - self._test_start_times.get(test.id(), time.time())
+        doc = (test.shortDescription() or "").strip()
+        self.test_records.append({
+            "id": test.id(),
+            "module": test.__class__.__module__,
+            "class": test.__class__.__name__,
+            "method": test._testMethodName,
+            "description": doc,
+            "status": "ERROR",
+            "error": self._exc_info_to_string(err, test),
+            "time_taken": round(elapsed, 4)
+        })
+
+    def addSkip(self, test, reason):
+        super().addSkip(test, reason)
+        self.test_records.append({
+            "id": test.id(),
+            "module": test.__class__.__module__,
+            "class": test.__class__.__name__,
+            "method": test._testMethodName,
+            "description": (test.shortDescription() or "").strip(),
+            "status": "SKIPPED",
+            "reason": str(reason),
+            "time_taken": 0.0
+        })
 
 def get_data_dir_hashes():
     """Computes SHA-256 hashes for all files under data/."""
@@ -61,9 +133,45 @@ def run_all_tests():
         suite = loader.discover(start_dir=TESTS_DIR, pattern="test_*.py")
 
         start_time = time.time()
-        runner = unittest.TextTestRunner(verbosity=2)
+        runner = unittest.TextTestRunner(resultclass=RecordingTestResult, verbosity=2)
         result = runner.run(suite)
         elapsed = time.time() - start_time
+
+        # Save comprehensive test report cache for LAST-COMMIT-REPORT.md
+        try:
+            modules_dict = {}
+            for rec in getattr(result, "test_records", []):
+                mod = rec["module"]
+                if mod not in modules_dict:
+                    modules_dict[mod] = {"total": 0, "passed": 0, "failed": 0, "errors": 0, "skipped": 0, "tests": []}
+                modules_dict[mod]["total"] += 1
+                if rec["status"] == "PASSED":
+                    modules_dict[mod]["passed"] += 1
+                elif rec["status"] == "FAILED":
+                    modules_dict[mod]["failed"] += 1
+                elif rec["status"] == "ERROR":
+                    modules_dict[mod]["errors"] += 1
+                elif rec["status"] == "SKIPPED":
+                    modules_dict[mod]["skipped"] += 1
+                modules_dict[mod]["tests"].append(rec)
+
+            cache_path = os.path.join(TESTS_DIR, ".test_reports_cache.json")
+            cache_data = {
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                "tests_run": result.testsRun,
+                "passed": result.testsRun - len(result.failures) - len(result.errors),
+                "failures": len(result.failures),
+                "errors": len(result.errors),
+                "skipped": len(result.skipped),
+                "time_taken": round(elapsed, 2),
+                "status": "PASSED" if result.wasSuccessful() else "FAILED",
+                "modules": modules_dict,
+                "records": getattr(result, "test_records", [])
+            }
+            with open(cache_path, "w", encoding="utf-8") as f:
+                json.dump(cache_data, f, indent=2)
+        except Exception as e:
+            print(f"[run_tests] Note: test cache write exception: {e}")
 
         # Snapshot data/*.json hashes after running tests
         post_hashes = get_data_dir_hashes()
