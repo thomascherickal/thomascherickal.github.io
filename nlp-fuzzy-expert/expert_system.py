@@ -102,6 +102,7 @@ def load_json(filepath):
 def save_json(filepath, data):
     """Safely saves pretty-printed JSON using atomic file replacement.
     Strictly forbids mutating the authoritative data/ directory.
+    Enforces unidirectional synchronization: data/*.json -> website only.
     """
     abs_fp = os.path.abspath(filepath)
     abs_data_dir = os.path.abspath(DATA_DIR)
@@ -109,7 +110,8 @@ def save_json(filepath, data):
         if os.path.commonpath([abs_fp, abs_data_dir]) == abs_data_dir:
             raise PermissionError(
                 f"MUTATION BLOCKED: '{filepath}' is inside authoritative data/ directory. "
-                f"Files in data/*.json are the immutable single source of truth and must never be modified by automation."
+                f"Sync is strictly unidirectional (data/*.json -> website). "
+                f"Website changes must never be reflected back into the data directory."
             )
     except ValueError:
         pass
@@ -133,6 +135,25 @@ def save_json(filepath, data):
                 os.remove(tmp_path)
             except OSError:
                 pass
+
+def verify_unidirectional_sync(source_data_dir=DATA_DIR, target_files=None):
+    """Verifies that synchronization is strictly unidirectional.
+    Ensures that data/*.json files are exclusively read-only sources of truth
+    and that no target file path points inside the data directory.
+    """
+    abs_data_dir = os.path.abspath(source_data_dir)
+    if target_files:
+        for fpath in target_files:
+            abs_fp = os.path.abspath(fpath)
+            try:
+                if os.path.commonpath([abs_fp, abs_data_dir]) == abs_data_dir:
+                    raise PermissionError(
+                        f"Unidirectional violation: target file '{fpath}' is inside data directory '{source_data_dir}'."
+                    )
+            except ValueError:
+                continue
+    return True
+
 
 class Fact:
     """Represents an atomic proposition in the knowledge base."""
@@ -333,9 +354,25 @@ class InferenceEngine:
 
     def process_file(self, file_path):
         """Applies all matching rules to file_path in priority order.
+        Strictly enforces unidirectional synchronization: website target documents
+        are updated based on authoritative data, but data/ files can never be processed
+        or mutated by the engine.
         Returns a structured report dictionary containing modification status,
         fired rules, changed line numbers, and synchronized fields.
         """
+        # Strict Unidirectional Guard: Never allow processing or writing to files inside data/
+        abs_fp = os.path.abspath(file_path)
+        abs_data_dir = os.path.abspath(self.kb.data_dir if hasattr(self.kb, "data_dir") else DATA_DIR)
+        try:
+            if os.path.commonpath([abs_fp, abs_data_dir]) == abs_data_dir:
+                raise PermissionError(
+                    f"MUTATION BLOCKED: Unidirectional sync violation. '{file_path}' is inside the data directory. "
+                    f"Sync is strictly one-way (data/*.json -> website). "
+                    f"Website files cannot modify or write back to data/*.json."
+                )
+        except ValueError:
+            pass
+
         rel_path = os.path.relpath(file_path, REPO_DIR) if os.path.isabs(file_path) else file_path
         if not os.path.exists(file_path):
             return {

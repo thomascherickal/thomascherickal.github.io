@@ -115,7 +115,18 @@ class ExpertSynchronizer:
                     if fname.endswith(".html"):
                         target_files.append(os.path.join(sdir, fname))
 
-        self._cached_target_files = sorted(target_files)
+        # Strict Unidirectional Guard: Never allow files under data/ to be targets
+        abs_data_dir = os.path.abspath(self.data_dir)
+        clean_targets = []
+        for tf in target_files:
+            abs_tf = os.path.abspath(tf)
+            try:
+                if os.path.commonpath([abs_tf, abs_data_dir]) != abs_data_dir:
+                    clean_targets.append(tf)
+            except ValueError:
+                clean_targets.append(tf)
+
+        self._cached_target_files = sorted(clean_targets)
         return list(self._cached_target_files)
 
     def sync_all(self, auto_heal=True, verify_tests=True):
@@ -125,6 +136,7 @@ class ExpertSynchronizer:
         print("=" * 80)
         print("           NLP-FUZZY-EXPERT KNOWLEDGE SYNCHRONIZATION SYSTEM")
         print("=" * 80)
+        print("  [DATA FLOW] Direction: data/*.json -> HTML/JS/MD/Code (STRICTLY UNIDIRECTIONAL / ONE-WAY)")
 
         # Step 1: Knowledge Base Facts
         print("[Step 1/6] Loading authoritative facts from data/*.json into KnowledgeBase...")

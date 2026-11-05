@@ -1,9 +1,9 @@
 # Source Code and Test Suite Knowledge Synchronization Report
 
-Generated on: 2026-11-05 23:27:05
+Generated on: 2026-11-05 23:36:07
 
 ## Summary
-- **Target Files Evaluated**: 24
+- **Target Files Evaluated**: 25
 - **Files Updated**: 0
 - **Tracked References**: 8
 
@@ -35,6 +35,7 @@ Generated on: 2026-11-05 23:27:05
 | `tests/test_sync_pricing.py` | **IN SYNC** | - |
 | `tests/test_sync_publications_config_faqs.py` | **IN SYNC** | - |
 | `tests/test_sync_tiers.py` | **IN SYNC** | - |
+| `tests/test_unidirectional_sync.py` | **IN SYNC** | - |
 
 ## Synchronized Entities and Facts
 

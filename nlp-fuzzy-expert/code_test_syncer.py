@@ -84,7 +84,10 @@ class CodeTestSynchronizer:
         self.occurrences = []
 
     def discover_source_files(self):
-        """Discovers all source code files to synchronize."""
+        """Discovers all source code files to synchronize.
+        Strictly excludes data/ directory to enforce unidirectional sync.
+        """
+        abs_data = os.path.abspath(DATA_DIR)
         sources = [
             os.path.join(self.repo_dir, "pricing-calculator.js"),
             os.path.join(self.repo_dir, "components.js"),
@@ -94,7 +97,10 @@ class CodeTestSynchronizer:
             os.path.join(self.repo_dir, "python", "generate_og_card.py"),
             os.path.join(self.repo_dir, "python", "check_links.py"),
         ]
-        return [f for f in sources if os.path.exists(f)]
+        return [
+            f for f in sources
+            if os.path.exists(f) and not os.path.abspath(f).startswith(abs_data)
+        ]
 
     def discover_test_files(self):
         """Discovers all unit test files to synchronize."""
@@ -445,6 +451,17 @@ class CodeTestSynchronizer:
                 new_content = self.sync_python_tests(new_content, fpath)
 
             if new_content != old_content:
+                # Unidirectional Guard: Ensure target is never inside data/
+                abs_fp = os.path.abspath(fpath)
+                abs_data = os.path.abspath(DATA_DIR)
+                try:
+                    if os.path.commonpath([abs_fp, abs_data]) == abs_data:
+                        raise PermissionError(
+                            f"MUTATION BLOCKED: '{fpath}' is inside data directory. Code sync is strictly one-way."
+                        )
+                except ValueError:
+                    pass
+
                 with open(fpath, "w", encoding="utf-8") as f:
                     f.write(new_content)
                 changed_lines = compute_changed_lines(old_content, new_content)
