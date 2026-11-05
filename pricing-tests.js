@@ -17,6 +17,7 @@ const B_INCLUDED_SEATS = 10;
 // --- END AUTHORITATIVE SYNCHRONIZED PRICING FACTS ---
 
 function runTestSuite() {
+  const startTime = Date.now();
   const results = {
     total: 0,
     passed: 0,
@@ -24,25 +25,46 @@ function runTestSuite() {
     failures: []
   };
 
-  function assert(testName, condition, message) {
-    results.total++;
-    if (condition) {
-      results.passed++;
-      console.log(`[PASS] ${testName}`);
-    } else {
-      results.failed++;
-      console.error(`[FAIL] ${testName}: ${message}`);
-      results.failures.push({ testName, message });
+  let currentSection = "Data Integrity & Metadata Tests";
+  const sections = {
+    "Data Integrity & Metadata Tests": { total: 0, passed: 0, failed: 0 },
+    "Nothing Selected (0 USD) Tests": { total: 0, passed: 0, failed: 0 },
+    "Individual Pick-Services Tests": { total: 0, passed: 0, failed: 0 },
+    "Business Pick-Services Tests": { total: 0, passed: 0, failed: 0 },
+    "Business Extra Participant Scaling Tests": { total: 0, passed: 0, failed: 0 },
+    "Flagship Package Tests": { total: 0, passed: 0, failed: 0 },
+    "Custom Amount Package Tests": { total: 0, passed: 0, failed: 0 },
+    "Defensive Edge Cases & Malformed Inputs Tests": { total: 0, passed: 0, failed: 0 },
+    "DOM Controller Simulated Live-Update Tests": { total: 0, passed: 0, failed: 0 }
+  };
+
+  function setSection(name) {
+    currentSection = name;
+    if (!sections[name]) {
+      sections[name] = { total: 0, passed: 0, failed: 0 };
     }
   }
 
-  console.log("=================================================");
-  console.log("STARTING PRICING CALCULATOR UNIT & FUNCTIONAL TESTS");
-  console.log("=================================================");
+  function assert(testName, condition, message) {
+    results.total++;
+    if (!sections[currentSection]) {
+      sections[currentSection] = { total: 0, passed: 0, failed: 0 };
+    }
+    sections[currentSection].total++;
+    if (condition) {
+      results.passed++;
+      sections[currentSection].passed++;
+    } else {
+      results.failed++;
+      sections[currentSection].failed++;
+      results.failures.push({ testName, message, section: currentSection });
+    }
+  }
 
   // ---------------------------------------------------------------------------
   // SECTION 1: Data Integrity & Metadata Tests
   // ---------------------------------------------------------------------------
+  setSection("Data Integrity & Metadata Tests");
   assert(
     "PARITY_TIERS metadata contains all 6 tiers",
     Object.keys(PricingCalculator.PARITY_TIERS).length === 6,
@@ -82,6 +104,7 @@ function runTestSuite() {
   // ---------------------------------------------------------------------------
   // SECTION 2: Nothing Selected (0 USD) Tests
   // ---------------------------------------------------------------------------
+  setSection("Nothing Selected (0 USD) Tests");
   const zeroIndiv = PricingCalculator.calculatePricing({
     tierId: 1,
     clientMode: "individual",
@@ -144,6 +167,7 @@ function runTestSuite() {
   // ---------------------------------------------------------------------------
   // SECTION 3: Individual Pick-Services Tests (strictly 1 person)
   // ---------------------------------------------------------------------------
+  setSection("Individual Pick-Services Tests");
   const indivT1 = PricingCalculator.calculatePricing({
     tierId: 1,
     clientMode: "individual",
@@ -317,6 +341,7 @@ function runTestSuite() {
   // ---------------------------------------------------------------------------
   // SECTION 4: Business Pick-Services Tests (up to 10 seats)
   // ---------------------------------------------------------------------------
+  setSection("Business Pick-Services Tests");
   const bizT1 = PricingCalculator.calculatePricing({
     tierId: 1,
     clientMode: "business",
@@ -446,6 +471,7 @@ function runTestSuite() {
   // ---------------------------------------------------------------------------
   // SECTION 5: Business Extra Participant Scaling Tests (+ $250/seat scaled by tier)
   // ---------------------------------------------------------------------------
+  setSection("Business Extra Participant Scaling Tests");
   const bizT1Extra2Rate = 2 * B_EXTRA_SEAT;
   const bizT1Extra2Expected = B_IND_PRICE + bizT1Extra2Rate;
   const bizT1Extra2 = PricingCalculator.calculatePricing({
@@ -526,6 +552,7 @@ function runTestSuite() {
   // ---------------------------------------------------------------------------
   // SECTION 6: Flagship Package Tests
   // ---------------------------------------------------------------------------
+  setSection("Flagship Package Tests");
   const flagshipBizT1 = PricingCalculator.calculatePricing({
     tierId: 1,
     clientMode: "business",
@@ -637,6 +664,7 @@ function runTestSuite() {
   // ---------------------------------------------------------------------------
   // SECTION 7: Custom Amount Package Tests
   // ---------------------------------------------------------------------------
+  setSection("Custom Amount Package Tests");
   const custom5000T1 = PricingCalculator.calculatePricing({
     tierId: 1,
     clientMode: "business",
@@ -705,6 +733,7 @@ function runTestSuite() {
   // ---------------------------------------------------------------------------
   // SECTION 8: Defensive Edge Cases & Malformed Inputs Tests
   // ---------------------------------------------------------------------------
+  setSection("Defensive Edge Cases & Malformed Inputs Tests");
   assert(
     "Null/undefined parameter does not throw and defaults to safe calculation",
     PricingCalculator.calculatePricing(null).finalPrice >= 0,
@@ -728,9 +757,7 @@ function runTestSuite() {
   // SECTION 9: DOM Controller Simulated Live-Update Tests (pricing.html Pane)
   // Verifies that the price listed changes as soon as a change is made in ANY UI element
   // ---------------------------------------------------------------------------
-  console.log("-------------------------------------------------");
-  console.log("TESTING DOM CONTROLLER & REAL-TIME UI PANE CHANGES");
-  console.log("-------------------------------------------------");
+  setSection("DOM Controller Simulated Live-Update Tests");
 
   function setupMockDOM() {
     const elements = {};
@@ -1149,15 +1176,77 @@ function runTestSuite() {
   if (originalDoc !== undefined) global.document = originalDoc; else delete global.document;
   if (originalWin !== undefined) global.window = originalWin; else delete global.window;
 
-  console.log("=================================================");
-  console.log(`TEST RUN FINISHED: ${results.passed}/${results.total} PASSED`);
+  const elapsed = ((Date.now() - startTime) / 1000).toFixed(2);
+
+  function formatCell(str, width) {
+    const s = String(str);
+    if (s.length > width) return s.slice(0, width - 3) + "...";
+    return s + " ".repeat(width - s.length);
+  }
+
+  function renderAsciiTable(headers, rows) {
+    const widths = headers.map((h, i) => {
+      let maxW = h.length;
+      for (const r of rows) {
+        maxW = Math.max(maxW, String(r[i] !== undefined ? r[i] : "").length);
+      }
+      return maxW;
+    });
+
+    const sep = "+" + widths.map(w => "-".repeat(w + 2)).join("+") + "+";
+    const headerLine = "|" + headers.map((h, i) => " " + formatCell(h, widths[i]) + " ").join("|") + "|";
+
+    const lines = [sep, headerLine, sep];
+    for (const row of rows) {
+      const rowLine = "|" + row.map((cell, i) => " " + formatCell(cell !== undefined ? cell : "", widths[i]) + " ").join("|") + "|";
+      lines.push(rowLine);
+    }
+    lines.push(sep);
+    return lines.join("\n");
+  }
+
+  const tableRows = [];
+  for (const [secName, stats] of Object.entries(sections)) {
+    const status = stats.failed === 0 ? "PASSED" : "FAILED";
+    tableRows.push([
+      secName,
+      String(stats.total),
+      String(stats.passed),
+      String(stats.failed),
+      status
+    ]);
+  }
+
+  console.log("=".repeat(80));
+  console.log("              JAVASCRIPT UNIT TEST SUITE (pricing-tests.js)");
+  console.log("=".repeat(80));
+  console.log(renderAsciiTable(["Test Section", "Tests", "Passed", "Failed", "Status"], tableRows));
+  console.log("-".repeat(80));
+  console.log("TEST SUITE SUMMARY REPORT");
+  console.log("-".repeat(80));
+  console.log(`Tests Run:   ${results.total}`);
+  console.log(`Passed:      ${results.passed}`);
+  console.log(`Failures:    ${results.failed}`);
+  console.log(`Time Taken:  ${elapsed} seconds`);
+  console.log("=".repeat(80));
+
   if (results.failed > 0) {
-    console.error(`FAILED: ${results.failed} tests`);
+    console.log(`RESULT: TEST SUITE FAILED (${results.failed} test failure${results.failed === 1 ? '' : 's'}).`);
+    console.log("=".repeat(80));
+    console.log("-".repeat(80));
+    console.log("FAILURES");
+    console.log("-".repeat(80));
+    for (const f of results.failures) {
+      console.log(`- FAIL: [${f.section}] ${f.testName}`);
+      console.log(`  Reason: ${f.message}`);
+    }
+    console.log("-".repeat(80));
+
     if (typeof process !== 'undefined') {
       try {
         const fs = require('fs');
         const path = require('path');
-        const failureList = results.failures.map(f => `- FAIL: ${f.testName}\n  Reason: ${f.message}`).join('\n\n');
+        const failureList = results.failures.map(f => `- FAIL: [${f.section}] ${f.testName}\n  Reason: ${f.message}`).join('\n\n');
         const report = `# Failed pricing Tests Report
 
 Generated by pricing-tests.js test runner for test suite \`pricing\`.
@@ -1206,7 +1295,8 @@ Or pass this prompt directly into your active Antigravity session:
       process.exit(1);
     }
   } else {
-    console.log("ALL TESTS COMPLETED SUCCESSFULLY WITH ZERO ERRORS.");
+    console.log("RESULT: ALL TESTS PASSED.");
+    console.log("=".repeat(80));
     if (typeof process !== 'undefined') {
       try {
         const fs = require('fs');
