@@ -192,3 +192,9 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
   - A structured header bar (`.code-bar`, `.code-head`, `.cap`, `.code-header`) containing a file/language label and window dot accents where applicable.
 - **Copy Button on Every Code Sample**: Every code sample across all HTML files on the website must include an accessible, interactive Copy button (`button.copy` or `.copy-btn`) that copies the snippet text to the clipboard and provides visual feedback (`Copied!`). Buttons must strictly maintain `text-decoration: none !important;` across all states.
 
+## Last Commit Output Report Rule (`LAST-COMMIT-REPORT.md`)
+- **Last Commit Output Recording**: The full commit output report of the last commit made must always be stored and recorded at `LAST-COMMIT-REPORT.md` in the repository root directory.
+- **Overwritten on Every New Commit**: Automatically regenerated and overwritten on every new commit via Git post-commit hook (`.git/hooks/post-commit` and `python/hooks/post-commit`) and the auto-healer commit handler (`python/generate_last_commit_report.py`).
+- **Zero Emojis & Zero Em-Dashes**: The generated report strictly enforces zero emojis and zero em-dashes (spaced hyphens ` - ` or plain hyphens `-`).
+
+

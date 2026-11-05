@@ -380,5 +380,10 @@ def commit_verified_state(commit_msg="feat(synchronizer): synchronize repository
         commit_res = subprocess.run(["git", "commit", "--no-verify", "-m", commit_msg], cwd=REPO_DIR, capture_output=True, text=True)
         print("  -> Git commit output:")
         print(commit_res.stdout.strip())
+
+        # Update LAST-COMMIT-REPORT.md with the output of the new commit
+        report_script = os.path.join(REPO_DIR, "python", "generate_last_commit_report.py")
+        if os.path.exists(report_script):
+            subprocess.run([sys.executable, report_script], cwd=REPO_DIR, capture_output=True, text=True)
     except Exception as e:
         print(f"  -> Git commit notice: {e}")

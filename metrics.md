@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-05 17:47:31 UTC` | Branch: `main` | Head Commit: `89d5c17`
+> **Automated Status Report** | Generated on `2026-11-05 17:54:40 UTC` | Branch: `main` | Head Commit: `60d4b37`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **461** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **654,518** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **640,179** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **4,810** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **9,529** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **73.44 MB (77,006,382 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **667,714 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **476** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-05** | Subject: "feat(synchronizer): synchronize repository state with authoritative data" |
+| **Total Tracked Files** | **465** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **654,815** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **640,407** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **4,826** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **9,582** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **73.45 MB (77,019,156 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **668,188 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **477** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-05** | Subject: "docs(sync): update home.md and sync-state after index.html parity fix" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -30,12 +30,12 @@
 | **HTML Documents** | 66 | 77,388 | 5.90 MB (6,187,345 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,887 | 278.67 KB (285,354 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 16 | 6,677 | 3.52 MB (3,691,473 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 42 | 9,814 | 432.29 KB (442,666 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 90 | 30,797 | 3.41 MB (3,571,756 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 85 | 517,902 | 24.29 MB (25,469,954 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Python Tooling** | 44 | 10,018 | 439.86 KB (450,414 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 91 | 30,890 | 3.41 MB (3,576,371 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 85 | 517,902 | 24.29 MB (25,469,949 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 95 | 0 | 35.51 MB (37,233,318 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 9 | 0 | 56.67 KB (58,028 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 10 | 0 | 57.07 KB (58,444 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,14 +43,14 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 85 | 517,902 | 24.29 MB (25,469,954 bytes) | 18.4% |
-| `.html` | 66 | 77,388 | 5.90 MB (6,187,345 bytes) | 14.3% |
-| `.md` | 90 | 30,797 | 3.41 MB (3,571,756 bytes) | 19.5% |
-| `.css` | 16 | 11,887 | 278.67 KB (285,354 bytes) | 3.5% |
-| `.py` | 42 | 9,814 | 432.29 KB (442,666 bytes) | 9.1% |
-| `.js` | 16 | 6,677 | 3.52 MB (3,691,473 bytes) | 3.5% |
-| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 9.1% |
-| `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 9.3% |
+| `.json` | 85 | 517,902 | 24.29 MB (25,469,949 bytes) | 18.3% |
+| `.html` | 66 | 77,388 | 5.90 MB (6,187,345 bytes) | 14.2% |
+| `.md` | 91 | 30,890 | 3.41 MB (3,576,371 bytes) | 19.6% |
+| `.css` | 16 | 11,887 | 278.67 KB (285,354 bytes) | 3.4% |
+| `.py` | 44 | 10,018 | 439.86 KB (450,414 bytes) | 9.5% |
+| `.js` | 16 | 6,677 | 3.52 MB (3,691,473 bytes) | 3.4% |
+| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 9.0% |
+| `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 9.2% |
 | `.png` | 26 | 0 | 2.78 MB (2,918,409 bytes) | 5.6% |
 | `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 4.3% |
 | `.jpeg` | 5 | 0 | 809.15 KB (828,567 bytes) | 1.1% |
@@ -58,7 +58,7 @@
 | `.docx` | 1 | 0 | 10.34 KB (10,592 bytes) | 0.2% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
 | `.xml` | 1 | 0 | 6.56 KB (6,722 bytes) | 0.2% |
-| `[no extension]` | 4 | 0 | 2.35 KB (2,407 bytes) | 0.9% |
+| `[no extension]` | 5 | 0 | 2.76 KB (2,823 bytes) | 1.1% |
 | `.webmanifest` | 1 | 0 | 538 bytes | 0.2% |
 
 ---
@@ -107,8 +107,8 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **275 functions** across tooling scripts | Modular execution units |
-| **Python Class Definitions** | **25 classes** | Structured state containers |
+| **Python Function Definitions** | **279 functions** across tooling scripts | Modular execution units |
+| **Python Class Definitions** | **26 classes** | Structured state containers |
 
 ---
 
