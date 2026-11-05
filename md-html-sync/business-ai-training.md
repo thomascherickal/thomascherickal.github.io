@@ -165,12 +165,12 @@ Business Training is $2,500 USD in Tier 1 for 60 days (30 days training + 30 day
 | Equity Tier | Qualifying Region / Profile | Discount | Milestone Rate |
 | :--- | :--- | :--- | :--- |
 | Tier 1: High-Income | US, Canada, UK, Germany, France, Poland, Czech Republic, Hungary, Greece, Romania, Japan, South
- Korea, Singapore, Australia, Chile, UAE, Saudi Arabia | Standard Rate (0% Discount) | $2,500 USD |
+ Korea, Singapore, Australia, Chile, UAE, Saudi Arabia | Standard Rate (0% Discount) | $3,000 USD |
 | Tier 2: Upper-Middle | Brazil, Mexico, Colombia, Argentina, Peru, Ecuador, Guatemala, Türkiye, Malaysia, Thailand,
- Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka | 25% Parity Discount | $1,875 USD |
+ Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka | 25% Parity Discount | $2,250 USD |
 | Tier 3 & 4: Lower-Middle/Low-Income & Startups | India, Bangladesh, Pakistan, Nepal, Bhutan, Kenya, Nigeria, Ghana, Egypt, Morocco, Tanzania,
- Bolivia, Cambodia, Laos, Myanmar, Ethiopia, Uganda, Rwanda, Pre-Seed Startups | 50% Parity Discount | $1,250 USD |
-| Tier 5: Academia & Non-Profit | University Labs, Educational Institutions, 501(c)(3) Non-Profits | 75% Academic Discount | $625 USD |
+ Bolivia, Cambodia, Laos, Myanmar, Ethiopia, Uganda, Rwanda, Pre-Seed Startups | 50% Parity Discount | $1,500 USD |
+| Tier 5: Academia & Non-Profit | University Labs, Educational Institutions, 501(c)(3) Non-Profits | 75% Academic Discount | $750 USD |
 | Tier 6: Crisis-Affected & Under-Resourced | Crisis Zones, Hyperinflation Economies, UN Least Developed Countries, Grassroots Dev Teams | Custom Subsidized Relief | Custom Relief (Contact Us) |
 
 ## Ready for Your Business AI Transformation?

@@ -100,10 +100,28 @@ def run_all_tests():
         if result.wasSuccessful():
             print("RESULT: ALL TESTS PASSED.")
             print("=" * 80)
+            try:
+                sys.path.insert(0, os.path.join(REPO_DIR, "nlp-fuzzy-expert"))
+                from auto_healer import clean_stale_failure_reports
+                clean_stale_failure_reports()
+            except Exception:
+                pass
             return 0
         else:
             print("RESULT: TEST SUITE FAILED.")
             print("=" * 80)
+            try:
+                sys.path.insert(0, os.path.join(REPO_DIR, "nlp-fuzzy-expert"))
+                from auto_healer import generate_failed_tests_report
+                buf = []
+                for test, err in result.failures:
+                    buf.append(f"FAIL: {test}\n{err}")
+                for test, err in result.errors:
+                    buf.append(f"ERROR: {test}\n{err}")
+                total_fails = len(result.failures) + len(result.errors)
+                generate_failed_tests_report("", "\n".join(buf), total_fails)
+            except Exception as e:
+                print(f"[run_tests] Note: failed report generation notice: {e}")
             return 1
     finally:
         if os.path.exists(test_lock):

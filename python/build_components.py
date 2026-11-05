@@ -53,8 +53,8 @@ def build():
         glob.glob(os.path.join(REPO_DIR, "*.html")) +
         glob.glob(os.path.join(REPO_DIR, "business-services", "*.html")) +
         glob.glob(os.path.join(REPO_DIR, "personal-services", "*.html")) +
-        glob.glob(os.path.join(REPO_DIR, "google", "*.html")) +
-        glob.glob(os.path.join(REPO_DIR, "claude", "*.html"))
+        glob.glob(os.path.join(REPO_DIR, "google-training", "*.html")) +
+        glob.glob(os.path.join(REPO_DIR, "claude-training", "*.html"))
     )
     excluded = {
         os.path.abspath(HEADER_SRC),
@@ -80,8 +80,8 @@ def build():
             subdir_nav = re.sub(r'href="(?!(?:https?://|mailto:|#|\.\./|business-services/|personal-services/|google/|claude/))([^"]+)"', r'href="../\1"', subdir_nav)
             subdir_nav = subdir_nav.replace('href="business-services/', 'href="../business-services/')
             subdir_nav = subdir_nav.replace('href="personal-services/', 'href="../personal-services/')
-            subdir_nav = subdir_nav.replace('href="google/', 'href="../google/')
-            subdir_nav = subdir_nav.replace('href="claude/', 'href="../claude/')
+            subdir_nav = subdir_nav.replace('href="google-training/', 'href="../google-training/')
+            subdir_nav = subdir_nav.replace('href="claude-training/', 'href="../claude-training/')
 
             subdir_footer = footer_html
             subdir_footer = re.sub(r'src="(?!https?://|\.\./|data:)([^"]+)"', r'src="../\1"', subdir_footer)
@@ -162,7 +162,7 @@ def build():
     try:
         sys.path.insert(0, os.path.join(REPO_DIR, "nlp-fuzzy-expert"))
         from synchronizer import ExpertSynchronizer
-        ExpertSynchronizer().sync_all()
+        ExpertSynchronizer().sync_all(auto_heal=False, verify_tests=False)
     except Exception as e:
         print(f"Warning: NLP-Fuzzy-Expert sync step failed: {e}")
 

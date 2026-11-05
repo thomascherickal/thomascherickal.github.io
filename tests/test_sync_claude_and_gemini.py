@@ -38,7 +38,7 @@ class TestSyncClaudeAndGemini(unittest.TestCase):
         """Verifies sync_all synchronizes guide titles in HTML files."""
         self.orchestrator.sync_all()
 
-        guide_path = os.path.join(REPO_DIR, "claude", "claude-code.html")
+        guide_path = os.path.join(REPO_DIR, "claude-training", "claude-code.html")
         if os.path.exists(guide_path):
             with open(guide_path, "r", encoding="utf-8") as f:
                 content = f.read()
@@ -62,7 +62,7 @@ class TestSyncClaudeAndGemini(unittest.TestCase):
         self.assertEqual(dm_entry["slug"], "google-deepmind.html")
         self.assertEqual(dm_entry["short_name"], "Google DeepMind")
 
-        dm_html = os.path.join(REPO_DIR, "google", "google-deepmind.html")
+        dm_html = os.path.join(REPO_DIR, "google-training", "google-deepmind.html")
         self.assertTrue(os.path.exists(dm_html), "google-deepmind.html must exist")
         with open(dm_html, "r", encoding="utf-8") as f:
             content = f.read()
@@ -76,7 +76,7 @@ class TestSyncClaudeAndGemini(unittest.TestCase):
         self.assertEqual(len(cl_guides), 12, "Must track exactly 12 Claude guides")
         for g in cl_guides:
             slug = g["slug"]
-            path = os.path.join(REPO_DIR, "claude", slug)
+            path = os.path.join(REPO_DIR, "claude-training", slug)
             self.assertTrue(os.path.exists(path), f"Claude guide {slug} must exist on disk")
 
 if __name__ == "__main__":

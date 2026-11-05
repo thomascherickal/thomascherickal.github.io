@@ -604,7 +604,7 @@ Global MNCs gain a consistent, world-class standard of agentic software engineer
  quota and 30-day training plus 30-day support guarantee cover?
 *Pricing:
  Business Guarantee · FAQ #13*  
-Our Business Training bookings feature a fixed base investment of $2,500 USD covering up to 10 participants for 60 days (30 days training + 30 days guidance, assistance, and written guides licensed under Apache 2.0).
+Our Business Training bookings feature a fixed base investment of $3,000 USD covering up to 10 participants for 60 days (30 days training + 30 days guidance, assistance, and written guides licensed under Apache 2.0).
  There are no hidden licensing royalties or hourly surprise fees.
 
 - 30 Days Live Training Sprint: 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day.
@@ -635,7 +635,7 @@ When a team desires to include more than 10 participants in a single Business Tr
 - Parity Discounts Apply Directly: The qualifying country parity multiplier applies
  to the $250 per-head fee as well.
 
-- Tier 1 (Standard): $250 USD per additional participant.
+- Tier 1 (Standard): $300 USD per additional participant.
 
 - Tier 2 (25% Parity Discount): $188 USD per additional participant (0.75X).
 
@@ -707,7 +707,7 @@ Individual service picks allow teams to solve high-priority architectural bottle
 Yes. Parity pricing is universally available for all service pricing across our
  entire offering catalogue and across all 195 countries.
 
-- Individual Pick Parity Rates ($250 Base): Tier 1 (100%): $250 | Tier 2 (25% off): $187 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $62 | Tier 6 (Subsidized): $25 USD.
+- Individual Pick Parity Rates ($300 Base): Tier 1 (100%): $300 | Tier 2 (25% off): $225 | Tier 3 & 4 (50% off): $150 | Tier 5 (75% off): $75 | Tier 6 (Subsidized): $30 USD.
 
 - Business Pick Parity Rates ($250 Base): Tier 1 (100%): $250 | Tier 2 (25% off):
  $188 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $63 | Tier 6 (Subsidized): $25 USD.

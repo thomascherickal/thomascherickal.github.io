@@ -1041,7 +1041,7 @@ def main():
     print(f"Generating Markdown files in: {SYNC_DIR}")
     
     # Ensure all target subdirectories exist in SYNC_DIR
-    for sub in ["business-services", "personal-services", "claude", "google"]:
+    for sub in ["business-services", "personal-services", "claude-training", "google-training"]:
         os.makedirs(os.path.join(SYNC_DIR, sub), exist_ok=True)
 
     exclude_files = {"header.html", "footer.html", "article-footer_dark.html", "google43d90cf6a204dc6d.html"}
@@ -1069,7 +1069,7 @@ def main():
         print(f"  -> Wrote {len(content.splitlines())} lines to {md_file}")
 
     # 2. Subdirectory files: business-services, personal-services, claude, google
-    for subdir in ["business-services", "personal-services", "claude", "google"]:
+    for subdir in ["business-services", "personal-services", "claude-training", "google-training"]:
         sub_dir_path = os.path.join(REPO_DIR, subdir)
         if not os.path.isdir(sub_dir_path):
             continue

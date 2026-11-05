@@ -17,15 +17,18 @@ Strict Repo Compliance:
 """
 
 import bisect
+import hashlib
 import html
 import json
 import os
 import re
 import sys
+from concurrent.futures import ProcessPoolExecutor
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_DIR = os.path.dirname(SCRIPT_DIR)
 DATA_DIR = os.path.join(REPO_DIR, "data")
+CACHE_FILE = os.path.join(SCRIPT_DIR, ".scanner_cache.json")
 
 DOMAIN_BY_FILE = {
     "pricing.json": "pricing",
@@ -105,8 +108,43 @@ def flatten(node, path=""):
         yield path, key, node
 
 
+def compute_data_digest(data_dir):
+    """Computes a combined SHA-256 digest of all data/*.json files for cache validation."""
+    h = hashlib.sha256()
+    if not os.path.exists(data_dir):
+        return ""
+    for fname in sorted(os.listdir(data_dir)):
+        if fname.endswith(".json"):
+            fpath = os.path.join(data_dir, fname)
+            with open(fpath, "rb") as f:
+                h.update(f.read())
+    return h.hexdigest()
+
+
+def load_scanner_cache():
+    """Loads cached scan results from .scanner_cache.json if valid."""
+    if os.path.exists(CACHE_FILE):
+        try:
+            with open(CACHE_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return {}
+    return {}
+
+
+def save_scanner_cache(cache):
+    """Persists scanner cache using atomic rename."""
+    try:
+        tmp = f"{CACHE_FILE}.tmp.{os.getpid()}"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(cache, f)
+        os.replace(tmp, CACHE_FILE)
+    except Exception:
+        pass
+
+
 def build_terms(data_dir):
-    """Loads data/*.json and returns a de-duplicated list of searchable terms."""
+    """Loads data/*.json and returns a de-duplicated list of searchable terms with precompiled patterns."""
     terms = {}
     for fname in sorted(os.listdir(data_dir)):
         if not fname.endswith(".json") or fname not in DOMAIN_BY_FILE:
@@ -138,7 +176,26 @@ def build_terms(data_dir):
                 }
             else:
                 entry["aliases"].append(src)
-    return list(terms.values())
+
+    # Precompile regexes and normalized tokens for fast lookups
+    term_list = list(terms.values())
+    for t in term_list:
+        val = t["value"]
+        if t["kind"] == "s":
+            needle = WS_RE.sub(" ", html.unescape(val)).strip()
+            needle_f = needle.casefold()
+            url_like = "://" in val or "@" in val
+            short = len(needle) <= 20 and not url_like
+            t["needle"] = needle
+            t["needle_f"] = needle_f
+            t["url_like"] = url_like
+            t["short"] = short
+            t["rx_s"] = re.compile(r"(?<![\w-])" + re.escape(needle_f) + r"(?![\w-])") if short else None
+            t["single_word"] = " " not in needle and len(needle) <= 12
+        else:
+            t["rx"] = re.compile(t["patterns"][0])
+
+    return term_list
 
 
 def page_index(raw_lines):
@@ -156,25 +213,41 @@ def page_index(raw_lines):
 
 
 def scan_file(path, terms):
+    """Scans a single file against the terms using full-document fast filters and line-level mapping."""
     rel = os.path.relpath(path, REPO_DIR)
     with open(path, "r", encoding="utf-8", errors="ignore") as f:
-        raw_lines = f.read().split("\n")
+        content = f.read()
+    raw_lines = content.split("\n")
     page, headings = page_index(raw_lines)
     heading_lines = [h[0] for h in headings]
     vis_lines = [visible(l) for l in raw_lines]
     fold_lines = [l.casefold() for l in vis_lines]
+    full_fold = "\n".join(fold_lines)
+    full_vis = "\n".join(vis_lines)
 
     seen = set()
     records = []
     for t in terms:
-        value = t["value"]
+        val = t["value"]
         if t["kind"] == "s":
-            needle = WS_RE.sub(" ", html.unescape(value)).strip()
-            needle_f = needle.casefold()
-            url_like = "://" in value or "@" in value
-            short = len(needle) <= 20 and not url_like
-            rx_s = re.compile(r"(?<![\w-])" + re.escape(needle_f) + r"(?![\w-])") if short else None
-            single_word = " " not in needle and len(needle) <= 12
+            needle = t.get("needle") or WS_RE.sub(" ", html.unescape(val)).strip()
+            needle_f = t.get("needle_f") or needle.casefold()
+            url_like = t.get("url_like") if "url_like" in t else ("://" in val or "@" in val)
+
+            # Fast document-level rejection check
+            if not url_like:
+                if needle_f not in full_fold:
+                    continue
+            else:
+                if needle_f not in full_fold and needle not in content:
+                    continue
+
+            short = t.get("short") if "short" in t else (len(needle) <= 20 and not url_like)
+            rx_s = t.get("rx_s")
+            if rx_s is None and short:
+                rx_s = re.compile(r"(?<![\w-])" + re.escape(needle_f) + r"(?![\w-])")
+            single_word = t.get("single_word") if "single_word" in t else (" " not in needle and len(needle) <= 12)
+
             for i, fl in enumerate(fold_lines):
                 hit = None
                 if needle_f in fl:
@@ -192,7 +265,11 @@ def scan_file(path, terms):
                 if hit:
                     records.append((i, t, hit[0], hit[1]))
         else:
-            rx = re.compile(t["patterns"][0])
+            rx = t.get("rx")
+            if rx is None:
+                rx = re.compile(t["patterns"][0])
+            if not rx.search(full_vis):
+                continue
             for i, vl in enumerate(vis_lines):
                 m = rx.search(vl)
                 if m:
@@ -220,21 +297,72 @@ def scan_file(path, terms):
             "context": ctx,
             "match_type": mtype,
             "data_source": t["data_source"],
+            "_domain": t["domain"],
         }
         if t["aliases"]:
             rec["also_in_data"] = list(t["aliases"])
-        rec["_domain"] = t["domain"]
         out.append(rec)
     return out
 
 
 def scan_repository(target_files, data_dir=None):
-    """Scans target_files for every tracked term. Returns {domain: [records]}."""
-    terms = build_terms(data_dir or DATA_DIR)
+    """Scans target_files for every tracked term with parallel execution and caching.
+    Returns {domain: [records]}.
+    """
+    actual_data_dir = data_dir or DATA_DIR
+    terms = build_terms(actual_data_dir)
+    data_digest = compute_data_digest(actual_data_dir)
+
+    cache = load_scanner_cache()
+    cached_records = {}
+    uncached_files = []
+
+    for path in sorted(target_files):
+        rel = os.path.relpath(path, REPO_DIR)
+        try:
+            st = os.stat(path)
+            key = f"{rel}:{st.st_mtime_ns}:{st.st_size}:{data_digest}"
+            if key in cache:
+                cached_records[path] = cache[key]
+            else:
+                uncached_files.append((path, key))
+        except OSError:
+            uncached_files.append((path, None))
+
+    if uncached_files:
+        if len(uncached_files) > 1:
+            try:
+                with ProcessPoolExecutor() as executor:
+                    futures = {executor.submit(scan_file, p, terms): (p, k) for p, k in uncached_files}
+                    for fut in futures:
+                        p, k = futures[fut]
+                        recs = fut.result()
+                        cached_records[p] = recs
+                        if k:
+                            cache[k] = recs
+            except Exception:
+                for p, k in uncached_files:
+                    recs = scan_file(p, terms)
+                    cached_records[p] = recs
+                    if k:
+                        cache[k] = recs
+        else:
+            for p, k in uncached_files:
+                recs = scan_file(p, terms)
+                cached_records[p] = recs
+                if k:
+                    cache[k] = recs
+
+        save_scanner_cache(cache)
+
     by_domain = {d: [] for d in DOMAIN_BY_FILE.values()}
     for path in sorted(target_files):
-        for rec in scan_file(path, terms):
-            by_domain[rec.pop("_domain")].append(rec)
+        for rec in cached_records.get(path, []):
+            dom = rec.get("_domain")
+            clean_rec = {k: v for k, v in rec.items() if k != "_domain"}
+            if dom and dom in by_domain:
+                by_domain[dom].append(clean_rec)
+
     for recs in by_domain.values():
         recs.sort(key=lambda r: (r["file"], r["line_number"], r["field_key"]))
     return by_domain

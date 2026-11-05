@@ -10,7 +10,7 @@ fi
 if git diff --cached --name-only | grep -E '^(header|footer)\.html$' > /dev/null 2>&1; then
     echo "[git pre-commit] Detected changes to header.html or footer.html. Rebuilding components..."
     python3 "$REPO_ROOT/python/build_components.py"
-    git add "$REPO_ROOT"/*.html "$REPO_ROOT"/business-services/*.html "$REPO_ROOT"/personal-services/*.html "$REPO_ROOT"/claude/*.html "$REPO_ROOT"/google/*.html "$REPO_ROOT"/md-html-sync/
+    git add "$REPO_ROOT"/*.html "$REPO_ROOT"/business-services/*.html "$REPO_ROOT"/personal-services/*.html "$REPO_ROOT"/claude-training/*.html "$REPO_ROOT"/google-training/*.html "$REPO_ROOT"/md-html-sync/
 fi
 
 # Always sync Markdown mirrors and HTML pages

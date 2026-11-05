@@ -8,6 +8,14 @@ const PricingCalculator = typeof require !== 'undefined'
   ? require('./pricing-calculator.js')
   : window.PricingCalculator;
 
+// --- AUTHORITATIVE SYNCHRONIZED PRICING FACTS ---
+const B_FLAG_PRICE = 3000;
+const P_FLAG_PRICE = 3000;
+const B_IND_PRICE = 300;
+const B_EXTRA_SEAT = 300;
+const B_INCLUDED_SEATS = 10;
+// --- END AUTHORITATIVE SYNCHRONIZED PRICING FACTS ---
+
 function runTestSuite() {
   const results = {
     total: 0,
@@ -134,7 +142,7 @@ function runTestSuite() {
   );
 
   // ---------------------------------------------------------------------------
-  // SECTION 3: Individual Pick-Services Tests ($250/service base, strictly 1 person)
+  // SECTION 3: Individual Pick-Services Tests (strictly 1 person)
   // ---------------------------------------------------------------------------
   const indivT1 = PricingCalculator.calculatePricing({
     tierId: 1,
@@ -144,11 +152,13 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Individual Pick 1 service @ Tier 1 = $250 USD (0% off)",
-    indivT1.finalPrice === 250 && indivT1.participants === 1 && indivT1.totalSavings === 0,
-    `Expected $250 with 1 participant, got $${indivT1.finalPrice}`
+    `Individual Pick 1 service @ Tier 1 = $${B_IND_PRICE} USD (0% off)`,
+    indivT1.finalPrice === B_IND_PRICE && indivT1.participants === 1 && indivT1.totalSavings === 0,
+    `Expected $${B_IND_PRICE} with 1 participant, got $${indivT1.finalPrice}`
   );
 
+  const indivT2Expected = Math.round(B_IND_PRICE * 0.75);
+  const indivT2Savings = B_IND_PRICE - indivT2Expected;
   const indivT2 = PricingCalculator.calculatePricing({
     tierId: 2,
     clientMode: "individual",
@@ -157,11 +167,13 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Individual Pick 1 service @ Tier 2 (25% off) = $188 USD",
-    indivT2.finalPrice === 188 && indivT2.totalSavings === 63,
-    `Expected $188 price and $63 savings, got price $${indivT2.finalPrice}`
+    `Individual Pick 1 service @ Tier 2 (25% off) = $${indivT2Expected} USD`,
+    indivT2.finalPrice === indivT2Expected && indivT2.totalSavings === indivT2Savings,
+    `Expected $${indivT2Expected} price and $${indivT2Savings} savings, got price $${indivT2.finalPrice}`
   );
 
+  const indivT3Expected = Math.round(B_IND_PRICE * 0.50);
+  const indivT3Savings = B_IND_PRICE - indivT3Expected;
   const indivT3 = PricingCalculator.calculatePricing({
     tierId: 3,
     clientMode: "individual",
@@ -170,11 +182,13 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Individual Pick 1 service @ Tier 3 (50% off) = $125 USD",
-    indivT3.finalPrice === 125 && indivT3.totalSavings === 125,
-    `Expected $125 price and $125 savings, got price $${indivT3.finalPrice}`
+    `Individual Pick 1 service @ Tier 3 (50% off) = $${indivT3Expected} USD`,
+    indivT3.finalPrice === indivT3Expected && indivT3.totalSavings === indivT3Savings,
+    `Expected $${indivT3Expected} price and $${indivT3Savings} savings, got price $${indivT3.finalPrice}`
   );
 
+  const indivT4Expected = Math.round(B_IND_PRICE * 0.50);
+  const indivT4Savings = B_IND_PRICE - indivT4Expected;
   const indivT4 = PricingCalculator.calculatePricing({
     tierId: 4,
     clientMode: "individual",
@@ -183,11 +197,13 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Individual Pick 1 service @ Tier 4 (Startups 50% off) = $125 USD",
-    indivT4.finalPrice === 125 && indivT4.totalSavings === 125,
-    `Expected $125 price and $125 savings, got price $${indivT4.finalPrice}`
+    `Individual Pick 1 service @ Tier 4 (Startups 50% off) = $${indivT4Expected} USD`,
+    indivT4.finalPrice === indivT4Expected && indivT4.totalSavings === indivT4Savings,
+    `Expected $${indivT4Expected} price and $${indivT4Savings} savings, got price $${indivT4.finalPrice}`
   );
 
+  const indivT5Expected = Math.round(B_IND_PRICE * 0.25);
+  const indivT5Savings = B_IND_PRICE - indivT5Expected;
   const indivT5 = PricingCalculator.calculatePricing({
     tierId: 5,
     clientMode: "individual",
@@ -196,9 +212,9 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Individual Pick 1 service @ Tier 5 (Academia 75% off) = $63 USD",
-    indivT5.finalPrice === 63 && indivT5.totalSavings === 188,
-    `Expected $63 price and $188 savings, got price $${indivT5.finalPrice}`
+    `Individual Pick 1 service @ Tier 5 (Academia 75% off) = $${indivT5Expected} USD`,
+    indivT5.finalPrice === indivT5Expected && indivT5.totalSavings === indivT5Savings,
+    `Expected $${indivT5Expected} price and $${indivT5Savings} savings, got price $${indivT5.finalPrice}`
   );
 
   const indivT6 = PricingCalculator.calculatePricing({
@@ -226,11 +242,14 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Individual Pick 3 services @ Tier 1 = $750 USD",
-    indivMulti3.finalPrice === 750 && indivMulti3.serviceCount === 3,
-    `Expected $750 for 3 services, got $${indivMulti3.finalPrice}`
+    `Individual Pick 3 services @ Tier 1 = $${3 * B_IND_PRICE} USD`,
+    indivMulti3.finalPrice === 3 * B_IND_PRICE && indivMulti3.serviceCount === 3,
+    `Expected $${3 * B_IND_PRICE} for 3 services, got $${indivMulti3.finalPrice}`
   );
 
+  const indivMulti5T2Base = 5 * B_IND_PRICE;
+  const indivMulti5T2Expected = Math.round(indivMulti5T2Base * 0.75);
+  const indivMulti5T2Savings = indivMulti5T2Base - indivMulti5T2Expected;
   const indivMulti5T2 = PricingCalculator.calculatePricing({
     tierId: 2,
     clientMode: "individual",
@@ -239,9 +258,9 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Individual Pick 5 services @ Tier 2 = $938 USD ($1,250 base * 0.75)",
-    indivMulti5T2.finalPrice === 938 && indivMulti5T2.totalSavings === 313,
-    `Expected $938 with $313 savings, got $${indivMulti5T2.finalPrice}`
+    `Individual Pick 5 services @ Tier 2 = $${indivMulti5T2Expected} USD ($${indivMulti5T2Base.toLocaleString()} base * 0.75)`,
+    indivMulti5T2.finalPrice === indivMulti5T2Expected && indivMulti5T2.totalSavings === indivMulti5T2Savings,
+    `Expected $${indivMulti5T2Expected} with $${indivMulti5T2Savings} savings, got $${indivMulti5T2.finalPrice}`
   );
 
   const indivMulti9 = PricingCalculator.calculatePricing({
@@ -252,9 +271,9 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Individual Pick 9 services ($2,250 USD) does not trigger flagship nudge",
-    indivMulti9.finalPrice === 2250 && indivMulti9.flagshipCheaper === false,
-    `Expected $2,250 and flagshipCheaper=false, got price=${indivMulti9.finalPrice}, cheaper=${indivMulti9.flagshipCheaper}`
+    `Individual Pick 9 services ($${(9 * B_IND_PRICE).toLocaleString()} USD) does not trigger flagship nudge`,
+    indivMulti9.finalPrice === 9 * B_IND_PRICE && indivMulti9.flagshipCheaper === false,
+    `Expected $${9 * B_IND_PRICE} and flagshipCheaper=false, got price=${indivMulti9.finalPrice}, cheaper=${indivMulti9.flagshipCheaper}`
   );
 
   const indivMulti10 = PricingCalculator.calculatePricing({
@@ -265,9 +284,9 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Individual Pick 10 services ($2,500 USD) triggers flagship nudge ($2,500 threshold)",
-    indivMulti10.finalPrice === 2500 && indivMulti10.flagshipCheaper === true && indivMulti10.flagshipPrice === 2500,
-    `Expected $2,500 and flagshipCheaper=true, got price=${indivMulti10.finalPrice}, cheaper=${indivMulti10.flagshipCheaper}`
+    `Individual Pick 10 services ($${(10 * B_IND_PRICE).toLocaleString()} USD) triggers flagship nudge ($${B_FLAG_PRICE.toLocaleString()} threshold)`,
+    indivMulti10.finalPrice === 10 * B_IND_PRICE && indivMulti10.flagshipCheaper === true && indivMulti10.flagshipPrice === B_FLAG_PRICE,
+    `Expected $${10 * B_IND_PRICE} and flagshipCheaper=true, got price=${indivMulti10.finalPrice}, cheaper=${indivMulti10.flagshipCheaper}`
   );
 
   const indivAll12 = PricingCalculator.calculatePricing({
@@ -278,9 +297,9 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Individual Pick all 12 services @ Tier 1 = $3,000 USD (triggers flagship nudge)",
-    indivAll12.finalPrice === 3000 && indivAll12.serviceCount === 12 && indivAll12.flagshipCheaper === true,
-    `Expected $3,000, got $${indivAll12.finalPrice}`
+    `Individual Pick all 12 services @ Tier 1 = $${(12 * B_IND_PRICE).toLocaleString()} USD (triggers flagship nudge)`,
+    indivAll12.finalPrice === 12 * B_IND_PRICE && indivAll12.serviceCount === 12 && indivAll12.flagshipCheaper === true,
+    `Expected $${12 * B_IND_PRICE}, got $${indivAll12.finalPrice}`
   );
 
   assert(
@@ -296,7 +315,7 @@ function runTestSuite() {
   );
 
   // ---------------------------------------------------------------------------
-  // SECTION 4: Business Pick-Services Tests ($250/service base, up to 10 seats)
+  // SECTION 4: Business Pick-Services Tests (up to 10 seats)
   // ---------------------------------------------------------------------------
   const bizT1 = PricingCalculator.calculatePricing({
     tierId: 1,
@@ -306,11 +325,13 @@ function runTestSuite() {
     participants: 10
   });
   assert(
-    "Business Pick 1 service @ Tier 1 (10 seats) = $250 USD",
-    bizT1.finalPrice === 250 && bizT1.extraParticipants === 0 && bizT1.totalSavings === 0,
-    `Expected $250 with 0 extra, got $${bizT1.finalPrice}`
+    `Business Pick 1 service @ Tier 1 (10 seats) = $${B_IND_PRICE} USD`,
+    bizT1.finalPrice === B_IND_PRICE && bizT1.extraParticipants === 0 && bizT1.totalSavings === 0,
+    `Expected $${B_IND_PRICE} with 0 extra, got $${bizT1.finalPrice}`
   );
 
+  const bizT2Expected = Math.round(B_IND_PRICE * 0.75);
+  const bizT2Savings = B_IND_PRICE - bizT2Expected;
   const bizT2 = PricingCalculator.calculatePricing({
     tierId: 2,
     clientMode: "business",
@@ -319,11 +340,13 @@ function runTestSuite() {
     participants: 10
   });
   assert(
-    "Business Pick 1 service @ Tier 2 (25% off) = $188 USD",
-    bizT2.finalPrice === 188 && bizT2.totalSavings === 63,
-    `Expected $188 with $63 savings, got $${bizT2.finalPrice}`
+    `Business Pick 1 service @ Tier 2 (25% off) = $${bizT2Expected} USD`,
+    bizT2.finalPrice === bizT2Expected && bizT2.totalSavings === bizT2Savings,
+    `Expected $${bizT2Expected} with $${bizT2Savings} savings, got $${bizT2.finalPrice}`
   );
 
+  const bizT3Expected = Math.round(B_IND_PRICE * 0.50);
+  const bizT3Savings = B_IND_PRICE - bizT3Expected;
   const bizT3 = PricingCalculator.calculatePricing({
     tierId: 3,
     clientMode: "business",
@@ -332,11 +355,13 @@ function runTestSuite() {
     participants: 10
   });
   assert(
-    "Business Pick 1 service @ Tier 3 (50% off) = $125 USD",
-    bizT3.finalPrice === 125 && bizT3.totalSavings === 125,
-    `Expected $125 with $125 savings, got $${bizT3.finalPrice}`
+    `Business Pick 1 service @ Tier 3 (50% off) = $${bizT3Expected} USD`,
+    bizT3.finalPrice === bizT3Expected && bizT3.totalSavings === bizT3Savings,
+    `Expected $${bizT3Expected} with $${bizT3Savings} savings, got $${bizT3.finalPrice}`
   );
 
+  const bizT5Expected = Math.round(B_IND_PRICE * 0.25);
+  const bizT5Savings = B_IND_PRICE - bizT5Expected;
   const bizT5 = PricingCalculator.calculatePricing({
     tierId: 5,
     clientMode: "business",
@@ -345,9 +370,9 @@ function runTestSuite() {
     participants: 10
   });
   assert(
-    "Business Pick 1 service @ Tier 5 (Academia 75% off) = $63 USD",
-    bizT5.finalPrice === 63 && bizT5.totalSavings === 188,
-    `Expected $63 with $188 savings, got $${bizT5.finalPrice}`
+    `Business Pick 1 service @ Tier 5 (Academia 75% off) = $${bizT5Expected} USD`,
+    bizT5.finalPrice === bizT5Expected && bizT5.totalSavings === bizT5Savings,
+    `Expected $${bizT5Expected} with $${bizT5Savings} savings, got $${bizT5.finalPrice}`
   );
 
   const biz5PicksT1 = PricingCalculator.calculatePricing({
@@ -358,9 +383,9 @@ function runTestSuite() {
     participants: 10
   });
   assert(
-    "Business Pick 5 services @ Tier 1 = $1,250 USD (flagshipCheaper = false)",
-    biz5PicksT1.finalPrice === 1250 && biz5PicksT1.flagshipCheaper === false,
-    `Expected $1,250 and flagshipCheaper=false, got $${biz5PicksT1.finalPrice}`
+    `Business Pick 5 services @ Tier 1 = $${(5 * B_IND_PRICE).toLocaleString()} USD (flagshipCheaper = false)`,
+    biz5PicksT1.finalPrice === 5 * B_IND_PRICE && biz5PicksT1.flagshipCheaper === false,
+    `Expected $${5 * B_IND_PRICE} and flagshipCheaper=false, got $${biz5PicksT1.finalPrice}`
   );
 
   const biz9Picks = PricingCalculator.calculatePricing({
@@ -371,9 +396,9 @@ function runTestSuite() {
     participants: 10
   });
   assert(
-    "Business Pick 9 services @ Tier 1 = $2,250 USD (flagshipCheaper = false)",
-    biz9Picks.finalPrice === 2250 && biz9Picks.flagshipCheaper === false,
-    `Expected $2,250 and flagshipCheaper=false, got $${biz9Picks.finalPrice}`
+    `Business Pick 9 services @ Tier 1 = $${(9 * B_IND_PRICE).toLocaleString()} USD (flagshipCheaper = false)`,
+    biz9Picks.finalPrice === 9 * B_IND_PRICE && biz9Picks.flagshipCheaper === false,
+    `Expected $${9 * B_IND_PRICE} and flagshipCheaper=false, got $${biz9Picks.finalPrice}`
   );
 
   const biz10Picks = PricingCalculator.calculatePricing({
@@ -384,9 +409,9 @@ function runTestSuite() {
     participants: 10
   });
   assert(
-    "Business Pick 10 services @ Tier 1 = $2,500 USD (triggers flagship nudge)",
-    biz10Picks.finalPrice === 2500 && biz10Picks.flagshipCheaper === true && biz10Picks.flagshipPrice === 2500,
-    `Expected $2,500 and flagshipCheaper=true, got price=${biz10Picks.finalPrice}, cheaper=${biz10Picks.flagshipCheaper}`
+    `Business Pick 10 services @ Tier 1 = $${(10 * B_IND_PRICE).toLocaleString()} USD (triggers flagship nudge)`,
+    biz10Picks.finalPrice === 10 * B_IND_PRICE && biz10Picks.flagshipCheaper === true && biz10Picks.flagshipPrice === B_FLAG_PRICE,
+    `Expected $${10 * B_IND_PRICE} and flagshipCheaper=true, got price=${biz10Picks.finalPrice}, cheaper=${biz10Picks.flagshipCheaper}`
   );
 
   const bizAll12 = PricingCalculator.calculatePricing({
@@ -397,11 +422,14 @@ function runTestSuite() {
     participants: 10
   });
   assert(
-    "Business Pick all 12 services @ Tier 1 = $3,000 USD (triggers flagship nudge)",
-    bizAll12.finalPrice === 3000 && bizAll12.serviceCount === 12 && bizAll12.flagshipCheaper === true,
-    `Expected $3,000, got $${bizAll12.finalPrice}`
+    `Business Pick all 12 services @ Tier 1 = $${(12 * B_IND_PRICE).toLocaleString()} USD (triggers flagship nudge)`,
+    bizAll12.finalPrice === 12 * B_IND_PRICE && bizAll12.serviceCount === 12 && bizAll12.flagshipCheaper === true,
+    `Expected $${12 * B_IND_PRICE}, got $${bizAll12.finalPrice}`
   );
 
+  const bizAll12T3Base = 12 * B_IND_PRICE;
+  const bizAll12T3Expected = Math.round(bizAll12T3Base * 0.50);
+  const bizAll12T3Savings = bizAll12T3Base - bizAll12T3Expected;
   const bizAll12T3 = PricingCalculator.calculatePricing({
     tierId: 3,
     clientMode: "business",
@@ -410,14 +438,16 @@ function runTestSuite() {
     participants: 10
   });
   assert(
-    "Business Pick all 12 services @ Tier 3 = $1,500 USD ($3,000 base * 0.50)",
-    bizAll12T3.finalPrice === 1500 && bizAll12T3.totalSavings === 1500,
-    `Expected $1,500, got $${bizAll12T3.finalPrice}`
+    `Business Pick all 12 services @ Tier 3 = $${bizAll12T3Expected.toLocaleString()} USD ($${bizAll12T3Base.toLocaleString()} base * 0.50)`,
+    bizAll12T3.finalPrice === bizAll12T3Expected && bizAll12T3.totalSavings === bizAll12T3Savings,
+    `Expected $${bizAll12T3Expected}, got $${bizAll12T3.finalPrice}`
   );
 
   // ---------------------------------------------------------------------------
   // SECTION 5: Business Extra Participant Scaling Tests (+ $250/seat scaled by tier)
   // ---------------------------------------------------------------------------
+  const bizT1Extra2Rate = 2 * B_EXTRA_SEAT;
+  const bizT1Extra2Expected = B_IND_PRICE + bizT1Extra2Rate;
   const bizT1Extra2 = PricingCalculator.calculatePricing({
     tierId: 1,
     clientMode: "business",
@@ -426,64 +456,75 @@ function runTestSuite() {
     participants: 12
   });
   assert(
-    "Business 12 seats (2 extra @ $250) @ Tier 1 = $750 USD ($250 base + $500 extra)",
-    bizT1Extra2.finalPrice === 750 && bizT1Extra2.extraParticipants === 2 && bizT1Extra2.extraHeadRate === 500,
-    `Expected $750 with $500 extra, got $${bizT1Extra2.finalPrice}`
+    `Business 12 seats (2 extra @ $${B_EXTRA_SEAT}) @ Tier 1 = $${bizT1Extra2Expected} USD ($${B_IND_PRICE} base + $${bizT1Extra2Rate} extra)`,
+    bizT1Extra2.finalPrice === bizT1Extra2Expected && bizT1Extra2.extraParticipants === 2 && bizT1Extra2.extraHeadRate === bizT1Extra2Rate,
+    `Expected $${bizT1Extra2Expected} with $${bizT1Extra2Rate} extra, got $${bizT1Extra2.finalPrice}`
   );
 
+  const bizT2Extra2Rate = Math.round(2 * B_EXTRA_SEAT * 0.75);
+  const bizT2Extra2Base = Math.round(B_IND_PRICE * 0.75);
+  const bizT2Extra2Expected = bizT2Extra2Base + bizT2Extra2Rate;
   const bizT2Extra2 = PricingCalculator.calculatePricing({
     tierId: 2,
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 12 // 2 extra heads * $250 * 0.75 = $375; base = $250 * 0.75 = $188; total = $563
+    participants: 12
   });
   assert(
-    "Business 12 seats @ Tier 2 (25% parity scaled) = $563 USD ($188 base + $375 extra)",
-    bizT2Extra2.finalPrice === 563 && bizT2Extra2.extraHeadRate === 375,
-    `Expected $563 with $375 extra, got $${bizT2Extra2.finalPrice}`
+    `Business 12 seats @ Tier 2 (25% parity scaled) = $${bizT2Extra2Expected} USD ($${bizT2Extra2Base} base + $${bizT2Extra2Rate} extra)`,
+    bizT2Extra2.finalPrice === bizT2Extra2Expected && bizT2Extra2.extraHeadRate === bizT2Extra2Rate,
+    `Expected $${bizT2Extra2Expected} with $${bizT2Extra2Rate} extra, got $${bizT2Extra2.finalPrice}`
   );
 
+  const bizT3Extra5Rate = Math.round(5 * B_EXTRA_SEAT * 0.50);
+  const bizT3Extra5Base = Math.round(B_IND_PRICE * 0.50);
+  const bizT3Extra5Expected = bizT3Extra5Base + bizT3Extra5Rate;
   const bizT3Extra5 = PricingCalculator.calculatePricing({
     tierId: 3,
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 15 // 5 extra heads * $250 * 0.50 = $625; base = $250 * 0.50 = $125; total = $750
+    participants: 15
   });
   assert(
-    "Business 15 seats @ Tier 3 = $750 USD ($125 base + $625 extra)",
-    bizT3Extra5.finalPrice === 750 && bizT3Extra5.extraHeadRate === 625,
-    `Expected $750 with $625 extra, got $${bizT3Extra5.finalPrice}`
+    `Business 15 seats @ Tier 3 = $${bizT3Extra5Expected} USD ($${bizT3Extra5Base} base + $${bizT3Extra5Rate} extra)`,
+    bizT3Extra5.finalPrice === bizT3Extra5Expected && bizT3Extra5.extraHeadRate === bizT3Extra5Rate,
+    `Expected $${bizT3Extra5Expected} with $${bizT3Extra5Rate} extra, got $${bizT3Extra5.finalPrice}`
   );
 
+  const bizT5Extra10Rate = Math.round(5 * B_EXTRA_SEAT * 0.25);
+  const bizT5Extra10Base = Math.round(B_IND_PRICE * 0.25);
+  const bizT5Extra10Expected = bizT5Extra10Base + bizT5Extra10Rate;
   const bizT5Extra10 = PricingCalculator.calculatePricing({
     tierId: 5,
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 15 // 5 extra heads * $250 * 0.25 = $313; base = $250 * 0.25 = $63; total = $376
+    participants: 15
   });
   assert(
-    "Business 15 seats @ Tier 5 = $376 USD ($63 base + $313 extra)",
-    bizT5Extra10.finalPrice === 376 && bizT5Extra10.extraHeadRate === 313,
-    `Expected $376 with $313 extra, got $${bizT5Extra10.finalPrice}`
+    `Business 15 seats @ Tier 5 = $${bizT5Extra10Expected} USD ($${bizT5Extra10Base} base + $${bizT5Extra10Rate} extra)`,
+    bizT5Extra10.finalPrice === bizT5Extra10Expected && bizT5Extra10.extraHeadRate === bizT5Extra10Rate,
+    `Expected $${bizT5Extra10Expected} with $${bizT5Extra10Rate} extra, got $${bizT5Extra10.finalPrice}`
   );
 
+  const biz35ExtraRate = 25 * B_EXTRA_SEAT;
+  const biz35Expected = B_FLAG_PRICE + biz35ExtraRate;
   const biz35Seats = PricingCalculator.calculatePricing({
     tierId: 1,
     clientMode: "business",
     packageType: "pkg-business",
-    participants: 35 // 25 extra heads * $250 = $6,250; base = $2,500; total = $8,750
+    participants: 35
   });
   assert(
-    "Business Flagship 35 seats @ Tier 1 = $8,750 USD ($2,500 base + $6,250 extra)",
-    biz35Seats.finalPrice === 8750 && biz35Seats.extraParticipants === 25 && biz35Seats.extraHeadRate === 6250,
-    `Expected $8,750 with 25 extra, got $${biz35Seats.finalPrice}`
+    `Business Flagship 35 seats @ Tier 1 = $${biz35Expected.toLocaleString()} USD ($${B_FLAG_PRICE.toLocaleString()} base + $${biz35ExtraRate.toLocaleString()} extra)`,
+    biz35Seats.finalPrice === biz35Expected && biz35Seats.extraParticipants === 25 && biz35Seats.extraHeadRate === biz35ExtraRate,
+    `Expected $${biz35Expected} with 25 extra, got $${biz35Seats.finalPrice}`
   );
 
   // ---------------------------------------------------------------------------
-  // SECTION 6: Flagship Package Tests (Business $2,500 / Personal $2,500 Base)
+  // SECTION 6: Flagship Package Tests
   // ---------------------------------------------------------------------------
   const flagshipBizT1 = PricingCalculator.calculatePricing({
     tierId: 1,
@@ -492,11 +533,13 @@ function runTestSuite() {
     participants: 10
   });
   assert(
-    "Business Flagship @ Tier 1 = $2,500 USD (0% off)",
-    flagshipBizT1.finalPrice === 2500 && flagshipBizT1.basePrice === 2500 && flagshipBizT1.totalSavings === 0,
-    `Expected $2,500, got $${flagshipBizT1.finalPrice}`
+    `Business Flagship @ Tier 1 = $${B_FLAG_PRICE.toLocaleString()} USD (0% off)`,
+    flagshipBizT1.finalPrice === B_FLAG_PRICE && flagshipBizT1.basePrice === B_FLAG_PRICE && flagshipBizT1.totalSavings === 0,
+    `Expected $${B_FLAG_PRICE}, got $${flagshipBizT1.finalPrice}`
   );
 
+  const flagshipBizT2Expected = Math.round(B_FLAG_PRICE * 0.75);
+  const flagshipBizT2Savings = B_FLAG_PRICE - flagshipBizT2Expected;
   const flagshipBizT2 = PricingCalculator.calculatePricing({
     tierId: 2,
     clientMode: "business",
@@ -504,11 +547,13 @@ function runTestSuite() {
     participants: 10
   });
   assert(
-    "Business Flagship @ Tier 2 = $1,875 USD (25% off, $625 savings)",
-    flagshipBizT2.finalPrice === 1875 && flagshipBizT2.totalSavings === 625,
-    `Expected $1,875 with $625 savings, got $${flagshipBizT2.finalPrice}`
+    `Business Flagship @ Tier 2 = $${flagshipBizT2Expected.toLocaleString()} USD (25% off, $${flagshipBizT2Savings.toLocaleString()} savings)`,
+    flagshipBizT2.finalPrice === flagshipBizT2Expected && flagshipBizT2.totalSavings === flagshipBizT2Savings,
+    `Expected $${flagshipBizT2Expected} with $${flagshipBizT2Savings} savings, got $${flagshipBizT2.finalPrice}`
   );
 
+  const flagshipBizT3Expected = Math.round(B_FLAG_PRICE * 0.50);
+  const flagshipBizT3Savings = B_FLAG_PRICE - flagshipBizT3Expected;
   const flagshipBizT3 = PricingCalculator.calculatePricing({
     tierId: 3,
     clientMode: "business",
@@ -516,11 +561,13 @@ function runTestSuite() {
     participants: 10
   });
   assert(
-    "Business Flagship @ Tier 3 = $1,250 USD (50% off, $1,250 savings)",
-    flagshipBizT3.finalPrice === 1250 && flagshipBizT3.totalSavings === 1250,
-    `Expected $1,250 with $1,250 savings, got $${flagshipBizT3.finalPrice}`
+    `Business Flagship @ Tier 3 = $${flagshipBizT3Expected.toLocaleString()} USD (50% off, $${flagshipBizT3Savings.toLocaleString()} savings)`,
+    flagshipBizT3.finalPrice === flagshipBizT3Expected && flagshipBizT3.totalSavings === flagshipBizT3Savings,
+    `Expected $${flagshipBizT3Expected} with $${flagshipBizT3Savings} savings, got $${flagshipBizT3.finalPrice}`
   );
 
+  const flagshipBizT5Expected = Math.round(B_FLAG_PRICE * 0.25);
+  const flagshipBizT5Savings = B_FLAG_PRICE - flagshipBizT5Expected;
   const flagshipBizT5 = PricingCalculator.calculatePricing({
     tierId: 5,
     clientMode: "business",
@@ -528,9 +575,9 @@ function runTestSuite() {
     participants: 10
   });
   assert(
-    "Business Flagship @ Tier 5 = $625 USD (75% off, $1,875 savings)",
-    flagshipBizT5.finalPrice === 625 && flagshipBizT5.totalSavings === 1875,
-    `Expected $625 with $1,875 savings, got $${flagshipBizT5.finalPrice}`
+    `Business Flagship @ Tier 5 = $${flagshipBizT5Expected.toLocaleString()} USD (75% off, $${flagshipBizT5Savings.toLocaleString()} savings)`,
+    flagshipBizT5.finalPrice === flagshipBizT5Expected && flagshipBizT5.totalSavings === flagshipBizT5Savings,
+    `Expected $${flagshipBizT5Expected} with $${flagshipBizT5Savings} savings, got $${flagshipBizT5.finalPrice}`
   );
 
   const flagshipPersonalT1 = PricingCalculator.calculatePricing({
@@ -540,11 +587,13 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Personal Flagship @ Tier 1 = $2,500 USD (0% off)",
-    flagshipPersonalT1.finalPrice === 2500 && flagshipPersonalT1.basePrice === 2500 && flagshipPersonalT1.totalSavings === 0,
-    `Expected $2,500, got $${flagshipPersonalT1.finalPrice}`
+    `Personal Flagship @ Tier 1 = $${P_FLAG_PRICE.toLocaleString()} USD (0% off)`,
+    flagshipPersonalT1.finalPrice === P_FLAG_PRICE && flagshipPersonalT1.basePrice === P_FLAG_PRICE && flagshipPersonalT1.totalSavings === 0,
+    `Expected $${P_FLAG_PRICE}, got $${flagshipPersonalT1.finalPrice}`
   );
 
+  const flagshipPersonalT2Expected = Math.round(P_FLAG_PRICE * 0.75);
+  const flagshipPersonalT2Savings = P_FLAG_PRICE - flagshipPersonalT2Expected;
   const flagshipPersonalT2 = PricingCalculator.calculatePricing({
     tierId: 2,
     clientMode: "individual",
@@ -552,11 +601,13 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Personal Flagship @ Tier 2 = $1,875 USD (25% off, $625 savings)",
-    flagshipPersonalT2.finalPrice === 1875 && flagshipPersonalT2.totalSavings === 625,
-    `Expected $1,875 with $625 savings, got $${flagshipPersonalT2.finalPrice}`
+    `Personal Flagship @ Tier 2 = $${flagshipPersonalT2Expected.toLocaleString()} USD (25% off, $${flagshipPersonalT2Savings.toLocaleString()} savings)`,
+    flagshipPersonalT2.finalPrice === flagshipPersonalT2Expected && flagshipPersonalT2.totalSavings === flagshipPersonalT2Savings,
+    `Expected $${flagshipPersonalT2Expected} with $${flagshipPersonalT2Savings} savings, got $${flagshipPersonalT2.finalPrice}`
   );
 
+  const flagshipPersonalT3Expected = Math.round(P_FLAG_PRICE * 0.50);
+  const flagshipPersonalT3Savings = P_FLAG_PRICE - flagshipPersonalT3Expected;
   const flagshipPersonalT3 = PricingCalculator.calculatePricing({
     tierId: 3,
     clientMode: "individual",
@@ -564,11 +615,13 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Personal Flagship @ Tier 3 = $1,250 USD (50% off, $1,250 savings)",
-    flagshipPersonalT3.finalPrice === 1250 && flagshipPersonalT3.totalSavings === 1250,
-    `Expected $1,250 with $1,250 savings, got $${flagshipPersonalT3.finalPrice}`
+    `Personal Flagship @ Tier 3 = $${flagshipPersonalT3Expected.toLocaleString()} USD (50% off, $${flagshipPersonalT3Savings.toLocaleString()} savings)`,
+    flagshipPersonalT3.finalPrice === flagshipPersonalT3Expected && flagshipPersonalT3.totalSavings === flagshipPersonalT3Savings,
+    `Expected $${flagshipPersonalT3Expected} with $${flagshipPersonalT3Savings} savings, got $${flagshipPersonalT3.finalPrice}`
   );
 
+  const flagshipPersonalT5Expected = Math.round(P_FLAG_PRICE * 0.25);
+  const flagshipPersonalT5Savings = P_FLAG_PRICE - flagshipPersonalT5Expected;
   const flagshipPersonalT5 = PricingCalculator.calculatePricing({
     tierId: 5,
     clientMode: "individual",
@@ -576,9 +629,9 @@ function runTestSuite() {
     participants: 1
   });
   assert(
-    "Personal Flagship @ Tier 5 = $625 USD (75% off, $1,875 savings)",
-    flagshipPersonalT5.finalPrice === 625 && flagshipPersonalT5.totalSavings === 1875,
-    `Expected $625 with $1,875 savings, got $${flagshipPersonalT5.finalPrice}`
+    `Personal Flagship @ Tier 5 = $${flagshipPersonalT5Expected.toLocaleString()} USD (75% off, $${flagshipPersonalT5Savings.toLocaleString()} savings)`,
+    flagshipPersonalT5.finalPrice === flagshipPersonalT5Expected && flagshipPersonalT5.totalSavings === flagshipPersonalT5Savings,
+    `Expected $${flagshipPersonalT5Expected} with $${flagshipPersonalT5Savings} savings, got $${flagshipPersonalT5.finalPrice}`
   );
 
   // ---------------------------------------------------------------------------
@@ -852,25 +905,25 @@ function runTestSuite() {
   PricingCalculator.initDOMController();
 
   assert(
-    "DOM UI Initial State: Defaults to Tier 1 Business Flagship $2,500 USD",
-    elements["calc-display-price"].textContent === "$2,500 USD" && elements["calc-base-value"].textContent === "$2,500 USD",
-    `Expected $2,500 USD, got ${elements["calc-display-price"].textContent}`
+    `DOM UI Initial State: Defaults to Tier 1 Business Flagship $${B_FLAG_PRICE.toLocaleString()} USD`,
+    elements["calc-display-price"].textContent === `$${B_FLAG_PRICE.toLocaleString()} USD` && elements["calc-base-value"].textContent === `$${B_FLAG_PRICE.toLocaleString()} USD`,
+    `Expected $${B_FLAG_PRICE.toLocaleString()} USD, got ${elements["calc-display-price"].textContent}`
   );
 
   // 1. Client Mode Button Change: Click Individual
   elements["btn-mode-individual"].trigger("click");
   assert(
-    "UI Mode Switch: Clicking Individual immediately updates price to $2,500 USD and disables participants",
-    elements["calc-display-price"].textContent === "$2,500 USD" && elements["calc-participants"].disabled === true,
-    `Expected $2,500 USD and disabled=true, got ${elements["calc-display-price"].textContent}, disabled=${elements["calc-participants"].disabled}`
+    `UI Mode Switch: Clicking Individual immediately updates price to $${P_FLAG_PRICE.toLocaleString()} USD and disables participants`,
+    elements["calc-display-price"].textContent === `$${P_FLAG_PRICE.toLocaleString()} USD` && elements["calc-participants"].disabled === true,
+    `Expected $${P_FLAG_PRICE.toLocaleString()} USD and disabled=true, got ${elements["calc-display-price"].textContent}, disabled=${elements["calc-participants"].disabled}`
   );
 
   // 2. Client Mode Button Change: Click Business
   elements["btn-mode-business"].trigger("click");
   assert(
-    "UI Mode Switch: Clicking Business immediately updates price to $2,500 USD and enables participants",
-    elements["calc-display-price"].textContent === "$2,500 USD" && elements["calc-participants"].disabled === false,
-    `Expected $2,500 USD and disabled=false, got ${elements["calc-display-price"].textContent}, disabled=${elements["calc-participants"].disabled}`
+    `UI Mode Switch: Clicking Business immediately updates price to $${B_FLAG_PRICE.toLocaleString()} USD and enables participants`,
+    elements["calc-display-price"].textContent === `$${B_FLAG_PRICE.toLocaleString()} USD` && elements["calc-participants"].disabled === false,
+    `Expected $${B_FLAG_PRICE.toLocaleString()} USD and disabled=false, got ${elements["calc-display-price"].textContent}, disabled=${elements["calc-participants"].disabled}`
   );
 
   // 3. Package Select Change: Switch to pick-services
@@ -878,9 +931,9 @@ function runTestSuite() {
   elements["calc-package"].selectedIndex = 2;
   elements["calc-package"].trigger("change");
   assert(
-    "UI Package Change: Switching to pick-services immediately calculates 1 selected service ($250 USD)",
-    elements["calc-display-price"].textContent === "$250 USD" && elements["services-multi-select-wrap"].style.display === "block",
-    `Expected $250 USD and visible multi-select wrap, got ${elements["calc-display-price"].textContent}`
+    `UI Package Change: Switching to pick-services immediately calculates 1 selected service ($${B_IND_PRICE.toLocaleString()} USD)`,
+    elements["calc-display-price"].textContent === `$${B_IND_PRICE.toLocaleString()} USD` && elements["services-multi-select-wrap"].style.display === "block",
+    `Expected $${B_IND_PRICE.toLocaleString()} USD and visible multi-select wrap, got ${elements["calc-display-price"].textContent}`
   );
 
   // 4. Clear Button Click: Nothing Selected Case
@@ -899,9 +952,9 @@ function runTestSuite() {
     checkboxes[0].checked = true;
     checkboxes[0].trigger("change");
     assert(
-      "UI Checkbox Check: Toggling a service immediately updates price from $0 USD to $250 USD",
-      elements["calc-display-price"].textContent === "$250 USD",
-      `Expected $250 USD, got ${elements["calc-display-price"].textContent}`
+      `UI Checkbox Check: Toggling a service immediately updates price from $0 USD to $${B_IND_PRICE.toLocaleString()} USD`,
+      elements["calc-display-price"].textContent === `$${B_IND_PRICE.toLocaleString()} USD`,
+      `Expected $${B_IND_PRICE.toLocaleString()} USD, got ${elements["calc-display-price"].textContent}`
     );
 
     // Check a second service
@@ -909,9 +962,9 @@ function runTestSuite() {
       checkboxes[1].checked = true;
       checkboxes[1].trigger("change");
       assert(
-        "UI Checkbox Check: Toggling second service immediately updates price to $500 USD",
-        elements["calc-display-price"].textContent === "$500 USD",
-        `Expected $500 USD, got ${elements["calc-display-price"].textContent}`
+        `UI Checkbox Check: Toggling second service immediately updates price to $${(2 * B_IND_PRICE).toLocaleString()} USD`,
+        elements["calc-display-price"].textContent === `$${(2 * B_IND_PRICE).toLocaleString()} USD`,
+        `Expected $${(2 * B_IND_PRICE).toLocaleString()} USD, got ${elements["calc-display-price"].textContent}`
       );
     }
   }
@@ -919,28 +972,30 @@ function runTestSuite() {
   // 6. Select All Services Button Click
   elements["btn-select-all-services"].trigger("click");
   assert(
-    "UI Select All: Clicking All 12 immediately checks all services and updates price to $3,000 USD",
-    elements["calc-display-price"].textContent === "$3,000 USD" &&
+    `UI Select All: Clicking All 12 immediately checks all services and updates price to $${(12 * B_IND_PRICE).toLocaleString()} USD`,
+    elements["calc-display-price"].textContent === `$${(12 * B_IND_PRICE).toLocaleString()} USD` &&
     elements["selected-service-count-label"].textContent.includes("12 Services Selected"),
-    `Expected $3,000 USD, got ${elements["calc-display-price"].textContent}`
+    `Expected $${(12 * B_IND_PRICE).toLocaleString()} USD, got ${elements["calc-display-price"].textContent}`
   );
 
   // 7. Participants Input Change: Extra head scaling (+5 participants over 10 included = 15)
   elements["calc-participants"].value = "15";
   elements["calc-participants"].trigger("input");
+  const ui15Price = (12 * B_IND_PRICE) + (5 * B_EXTRA_SEAT);
   assert(
-    "UI Participants Input: Changing participants to 15 immediately adds $1,250 extra head fee ($4,250 USD)",
-    elements["calc-display-price"].textContent === "$4,250 USD",
-    `Expected $4,250 USD, got ${elements["calc-display-price"].textContent}`
+    `UI Participants Input: Changing participants to 15 immediately adds $${(5 * B_EXTRA_SEAT).toLocaleString()} extra head fee ($${ui15Price.toLocaleString()} USD)`,
+    elements["calc-display-price"].textContent === `$${ui15Price.toLocaleString()} USD`,
+    `Expected $${ui15Price.toLocaleString()} USD, got ${elements["calc-display-price"].textContent}`
   );
 
   // 8. Custom Base Amount Input Change: Typing 5000
   elements["calc-custom-amount"].value = "5000";
   elements["calc-custom-amount"].trigger("input");
+  const uiCustom5000Price = 5000 + (5 * B_EXTRA_SEAT);
   assert(
-    "UI Custom Amount Input: Typing $5,000 immediately recalculates price ($6,250 USD with 5 extra seats)",
-    elements["calc-display-price"].textContent === "$6,250 USD",
-    `Expected $6,250 USD, got ${elements["calc-display-price"].textContent}`
+    `UI Custom Amount Input: Typing $5,000 immediately recalculates price ($${uiCustom5000Price.toLocaleString()} USD with 5 extra seats)`,
+    elements["calc-display-price"].textContent === `$${uiCustom5000Price.toLocaleString()} USD`,
+    `Expected $${uiCustom5000Price.toLocaleString()} USD, got ${elements["calc-display-price"].textContent}`
   );
 
   // 9. Custom Base Amount Input Change: Typing 0
@@ -958,20 +1013,22 @@ function runTestSuite() {
   elements["calc-country"].selectedIndex = 2; // IN (data-tier="3")
   elements["calc-country"].selectedOptions = [elements["calc-country"].options[2]];
   elements["calc-country"].trigger("change");
+  const uiCountryT3Price = Math.round((B_FLAG_PRICE + 5 * B_EXTRA_SEAT) * 0.50);
   assert(
     "UI Country Dropdown: Selecting Tier 3 country (India) immediately updates parity tier and price",
     elements["calc-applied-tier"].textContent.includes("Tier 3") &&
-    elements["calc-display-price"].textContent === "$1,875 USD", // ($2,500 base + $1,250 extra) * 0.50 = $1,875
-    `Expected Tier 3 and $1,875 USD, got tier=${elements["calc-applied-tier"].textContent}, price=${elements["calc-display-price"].textContent}`
+    elements["calc-display-price"].textContent === `$${uiCountryT3Price.toLocaleString()} USD`,
+    `Expected Tier 3 and $${uiCountryT3Price.toLocaleString()} USD, got tier=${elements["calc-applied-tier"].textContent}, price=${elements["calc-display-price"].textContent}`
   );
 
   // 11. Tier Pill Button Click: Clicking Tier 5 (75% discount)
   tierBtns[4].trigger("click"); // Tier 5 button
+  const uiTier5Price = Math.round((B_FLAG_PRICE + 5 * B_EXTRA_SEAT) * 0.25);
   assert(
     "UI Tier Button Click: Clicking Tier 5 button immediately updates active tier and applies 75% discount",
     elements["calc-applied-tier"].textContent.includes("Tier 5") &&
-    elements["calc-display-price"].textContent === "$938 USD", // ($2,500 base + $1,250 extra) * 0.25 = $938
-    `Expected Tier 5 and $938 USD, got tier=${elements["calc-applied-tier"].textContent}, price=${elements["calc-display-price"].textContent}`
+    elements["calc-display-price"].textContent === `$${uiTier5Price.toLocaleString()} USD`,
+    `Expected Tier 5 and $${uiTier5Price.toLocaleString()} USD, got tier=${elements["calc-applied-tier"].textContent}, price=${elements["calc-display-price"].textContent}`
   );
 
   // 12. Tier Pill Button Click: Clicking Tier 6 (Subsidized custom quote)
@@ -991,11 +1048,12 @@ function runTestSuite() {
 
   // Switch back to Tier 2 to verify dynamic price rendering on cards
   tierBtns[1].trigger("click");
+  const t2CardPrice = Math.round(B_IND_PRICE * 0.75);
   assert(
     "Service Cards Parity Update: Switching to Tier 2 renders calibrated prices on service cards",
-    serviceCards[0].querySelector(".svc-indiv-price").textContent.includes("$188 USD (T2)") &&
-    serviceCards[0].querySelector(".svc-biz-price").textContent.includes("$188 USD (T2)"),
-    `Expected $188/$188 for Tier 2 on service cards, got indiv=${serviceCards[0].querySelector(".svc-indiv-price").textContent}, biz=${serviceCards[0].querySelector(".svc-biz-price").textContent}`
+    serviceCards[0].querySelector(".svc-indiv-price").textContent.includes(`$${t2CardPrice} USD (T2)`) &&
+    serviceCards[0].querySelector(".svc-biz-price").textContent.includes(`$${t2CardPrice} USD (T2)`),
+    `Expected $${t2CardPrice}/$${t2CardPrice} for Tier 2 on service cards, got indiv=${serviceCards[0].querySelector(".svc-indiv-price").textContent}, biz=${serviceCards[0].querySelector(".svc-biz-price").textContent}`
   );
 
   // 14. Edge Case & Crash Prevention Regression Tests
@@ -1042,9 +1100,9 @@ function runTestSuite() {
     packageType: "pkg-business"
   });
   assert(
-    "Crash Prevention: calculatePricing with null tierId safely defaults to Tier 1 pricing ($2,500 USD)",
-    invalidTierFallback.tierId === 1 && invalidTierFallback.finalPrice === 2500,
-    `Expected Tier 1 and $2500, got tierId=${invalidTierFallback.tierId}, finalPrice=${invalidTierFallback.finalPrice}`
+    `Crash Prevention: calculatePricing with null tierId safely defaults to Tier 1 pricing ($${B_FLAG_PRICE.toLocaleString()} USD)`,
+    invalidTierFallback.tierId === 1 && invalidTierFallback.finalPrice === B_FLAG_PRICE,
+    `Expected Tier 1 and $${B_FLAG_PRICE}, got tierId=${invalidTierFallback.tierId}, finalPrice=${invalidTierFallback.finalPrice}`
   );
 
   const outOfRangeTier = PricingCalculator.calculatePricing({
@@ -1053,9 +1111,9 @@ function runTestSuite() {
     packageType: "pkg-business"
   });
   assert(
-    "Crash Prevention: calculatePricing with tierId=99 safely defaults to Tier 1 pricing ($2,500 USD)",
-    outOfRangeTier.tierId === 1 && outOfRangeTier.finalPrice === 2500,
-    `Expected Tier 1 and $2500, got tierId=${outOfRangeTier.tierId}, finalPrice=${outOfRangeTier.finalPrice}`
+    `Crash Prevention: calculatePricing with tierId=99 safely defaults to Tier 1 pricing ($${B_FLAG_PRICE.toLocaleString()} USD)`,
+    outOfRangeTier.tierId === 1 && outOfRangeTier.finalPrice === B_FLAG_PRICE,
+    `Expected Tier 1 and $${B_FLAG_PRICE}, got tierId=${outOfRangeTier.tierId}, finalPrice=${outOfRangeTier.finalPrice}`
   );
 
   // D. End-to-end full sequence workflow: Mode Switch -> Pick Services -> Change Country -> Change Participants -> Click Tier Button
@@ -1095,9 +1153,70 @@ function runTestSuite() {
   console.log(`TEST RUN FINISHED: ${results.passed}/${results.total} PASSED`);
   if (results.failed > 0) {
     console.error(`FAILED: ${results.failed} tests`);
-    if (typeof process !== 'undefined') process.exit(1);
+    if (typeof process !== 'undefined') {
+      try {
+        const fs = require('fs');
+        const path = require('path');
+        const failureList = results.failures.map(f => `- FAIL: ${f.testName}\n  Reason: ${f.message}`).join('\n\n');
+        const report = `# Failed pricing Tests Report
+
+Generated by pricing-tests.js test runner for test suite \`pricing\`.
+
+## Summary
+- **Module**: \`pricing\`
+- **Failures in Module**: ${results.failed}
+- **Total Tests**: ${results.total}
+- **Action Required**: The developer or AGY tool must resolve the failing assertions below.
+
+---
+
+## Failure Details
+
+\`\`\`text
+${failureList}
+\`\`\`
+
+---
+
+## Instructions for Developer
+
+1. Inspect the failing test assertion(s) in \`pricing-tests.js\`.
+2. Do **NOT** modify or revert any files under \`data/\`. The \`data/\` directory is the immutable authoritative specification.
+3. Update the matching calculations or assertions to align with authoritative data.
+4. Maintain zero emojis and zero em-dashes across all files.
+5. Run \`node pricing-tests.js\` to confirm the test suite is 100% green.
+
+---
+
+## Ready-to-Run AGY Tool Prompt
+
+To automatically resolve these test failures using the Google Antigravity CLI, run:
+
+\`\`\`bash
+agy --print "Fix the unit test failures reported in failed_pricing_tests.report.md"
+\`\`\`
+
+Or pass this prompt directly into your active Antigravity session:
+
+> Fix the unit test failures reported in failed_pricing_tests.report.md
+`;
+        fs.writeFileSync(path.join(__dirname, 'failed_pricing_tests.report.md'), report, 'utf8');
+        fs.writeFileSync(path.join(__dirname, 'failed_pricing-tests_tests.report.md'), report, 'utf8');
+      } catch (e) {}
+      process.exit(1);
+    }
   } else {
     console.log("ALL TESTS COMPLETED SUCCESSFULLY WITH ZERO ERRORS.");
+    if (typeof process !== 'undefined') {
+      try {
+        const fs = require('fs');
+        const path = require('path');
+        const r1 = path.join(__dirname, 'failed_pricing_tests.report.md');
+        const r2 = path.join(__dirname, 'failed_pricing-tests_tests.report.md');
+        if (fs.existsSync(r1)) fs.unlinkSync(r1);
+        if (fs.existsSync(r2)) fs.unlinkSync(r2);
+      } catch (e) {}
+    }
   }
 
   return results;

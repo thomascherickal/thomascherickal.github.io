@@ -1,0 +1,70 @@
+{
+  "version": "1.0.0",
+  "description": "Authoritative synchronization manifest mapping data domains to source code and unit tests",
+  "source_targets": {
+    "scripts": [
+      {
+        "file": "pricing-calculator.js",
+        "domain": "pricing",
+        "description": "Client-side pricing calculator formulas, extra head fee, and thresholds"
+      },
+      {
+        "file": "components.js",
+        "domain": "claude",
+        "description": "Navigation component orchestration page lists mapped to Claude guides catalog"
+      },
+      {
+        "file": "python/generate_sitemap.py",
+        "domain": "sitemap",
+        "description": "Dynamic sitemap URL lists mapped to services and guides catalog"
+      },
+      {
+        "file": "python/build_components.py",
+        "domain": "components",
+        "description": "Component inliner directory lists mapped to active folder architecture"
+      },
+      {
+        "file": "python/delete_page.py",
+        "domain": "page_cleaner",
+        "description": "Page deletion directory structure mapped to active folder architecture"
+      },
+      {
+        "file": "python/generate_og_card.py",
+        "domain": "config",
+        "description": "Social OG card metadata mapped to authoritative author and brand config"
+      }
+    ],
+    "tests": [
+      {
+        "file": "pricing-tests.js",
+        "domain": "pricing",
+        "description": "JavaScript test assertions for calculator pricing, seat scaling, and DOM UI"
+      },
+      {
+        "file": "tests/test_sync_pricing.py",
+        "domain": "pricing",
+        "description": "Unit tests for pricing synchronization and dynamic rule bounds"
+      },
+      {
+        "file": "tests/test_sync_business_services.py",
+        "domain": "business_services",
+        "description": "Unit tests for business service cards and curriculum"
+      },
+      {
+        "file": "tests/test_sync_personal_services.py",
+        "domain": "personal_services",
+        "description": "Unit tests for personal service cards and curriculum"
+      },
+      {
+        "file": "tests/test_sync_claude_and_gemini.py",
+        "domain": "guides",
+        "description": "Unit tests for Claude and Gemini guides catalog"
+      },
+      {
+        "file": "tests/test_sync_tiers.py",
+        "domain": "tiers",
+        "description": "Unit tests for 195-country Purchasing Power Parity tiers"
+      }
+    ]
+  }
+}

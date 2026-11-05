@@ -190,9 +190,9 @@ def generate_metrics():
     html_files = [f for f in tracked_files if f.endswith('.html') and not f.startswith('archive')]
     biz_services = [f for f in html_files if f.startswith('business-services/')]
     personal_services = [f for f in html_files if f.startswith('personal-services/')]
-    claude_pages = [f for f in html_files if f.startswith('claude/')]
-    google_pages = [f for f in html_files if f.startswith('google/')]
-    core_pages = [f for f in html_files if not f.startswith(('business-services/', 'personal-services/', 'claude/', 'google/'))]
+    claude_pages = [f for f in html_files if f.startswith('claude-training/')]
+    google_pages = [f for f in html_files if f.startswith('google-training/')]
+    core_pages = [f for f in html_files if not f.startswith(('business-services/', 'personal-services/', 'claude-training/', 'google-training/'))]
 
     now_utc = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
 

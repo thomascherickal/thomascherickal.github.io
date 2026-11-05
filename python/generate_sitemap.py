@@ -45,34 +45,34 @@ BUSINESS_SERVICES = [
 
 # 12 claude Guide Pages
 CLAUDE_GUIDES = [
-    "claude/claude-101.html",
-    "claude/claude-features.html",
-    "claude/claude-code.html",
-    "claude/claude-cowork.html",
-    "claude/claude-skills.html",
-    "claude/claude-custom-mcp.html",
-    "claude/claude-plugins.html",
-    "claude/claude-connectors.html",
-    "claude/claude-orchestration.html",
-    "claude/claude-design.html",
-    "claude/claude-science.html",
-    "claude/claude-local-llms.html",
+    "claude-training/claude-101.html",
+    "claude-training/claude-features.html",
+    "claude-training/claude-code.html",
+    "claude-training/claude-cowork.html",
+    "claude-training/claude-skills.html",
+    "claude-training/claude-custom-mcp.html",
+    "claude-training/claude-plugins.html",
+    "claude-training/claude-connectors.html",
+    "claude-training/claude-orchestration.html",
+    "claude-training/claude-design.html",
+    "claude-training/claude-science.html",
+    "claude-training/claude-local-llms.html",
 ]
 
 # 12 google Gemini Guide Pages
 GEMINI_GUIDES = [
-    "google/google-gemini-101.html",
-    "google/google-ai-studio.html",
-    "google/google-antigravity-ide.html",
-    "google/google-gemini-4-argon.html",
-    "google/google-gemini-desktop.html",
-    "google/google-deepmind.html",
-    "google/google-gemini-spark.html",
-    "google/google-gemini-notebook.html",
-    "google/google-gemma-local-models.html",
-    "google/google-multimodality.html",
-    "google/google-gemini-4-hydrogen.html",
-    "google/google-gemini-4-carbon.html",
+    "google-training/google-gemini-101.html",
+    "google-training/google-ai-studio.html",
+    "google-training/google-antigravity-ide.html",
+    "google-training/google-gemini-4-argon.html",
+    "google-training/google-gemini-desktop.html",
+    "google-training/google-deepmind.html",
+    "google-training/google-gemini-spark.html",
+    "google-training/google-gemini-notebook.html",
+    "google-training/google-gemma-local-models.html",
+    "google-training/google-multimodality.html",
+    "google-training/google-gemini-4-hydrogen.html",
+    "google-training/google-gemini-4-carbon.html",
 ]
 
 def get_git_lastmod(rel_path: str) -> str:
