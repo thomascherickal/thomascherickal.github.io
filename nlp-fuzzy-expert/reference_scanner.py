@@ -56,7 +56,7 @@ H1_RE = re.compile(r"<h1[^>]*>(.*?)</h1>", re.IGNORECASE | re.DOTALL)
 
 def visible(text):
     """Strips tags, unescapes entities, collapses whitespace."""
-    return WS_RE.sub(" ", html.unescape(TAG_RE.sub("", text))).strip()
+    return WS_RE.sub(" ", html.unescape(TAG_RE.sub(" ", text))).strip()
 
 
 def _fmt_number(n):
@@ -192,6 +192,11 @@ def build_terms(data_dir):
             t["short"] = short
             t["rx_s"] = re.compile(r"(?<![\w-])" + re.escape(needle_f) + r"(?![\w-])") if short else None
             t["single_word"] = " " not in needle and len(needle) <= 12
+            if " " in needle and not url_like:
+                words = [re.escape(w) for w in needle.split()]
+                t["rx_multiline"] = re.compile(r"(?<![\w-])" + r"(?:[\s]|<[^>]+>)+".join(words) + r"(?![\w-])", re.IGNORECASE)
+            else:
+                t["rx_multiline"] = None
         else:
             t["rx"] = re.compile(t["patterns"][0])
 
@@ -224,6 +229,7 @@ def scan_file(path, terms):
     fold_lines = [l.casefold() for l in vis_lines]
     full_fold = "\n".join(fold_lines)
     full_vis = "\n".join(vis_lines)
+    line_offsets = None
 
     seen = set()
     records = []
@@ -264,6 +270,25 @@ def scan_file(path, terms):
                     hit = ("exact", needle)
                 if hit:
                     records.append((i, t, hit[0], hit[1]))
+
+            # Check multiline/split occurrences across tags or line breaks for terms with spaces
+            rx_multi = t.get("rx_multiline")
+            if rx_multi:
+                # Calculate line offsets on demand
+                if line_offsets is None:
+                    line_offsets = []
+                    curr = 0
+                    for l in raw_lines:
+                        line_offsets.append(curr)
+                        curr += len(l) + 1
+                for m in rx_multi.finditer(content):
+                    matched = m.group(0)
+                    if "\n" in matched or "<" in matched:
+                        start_char = m.start()
+                        line_idx = bisect.bisect_right(line_offsets, start_char) - 1
+                        vis_match = visible(matched)
+                        is_exact = vis_match == needle
+                        records.append((line_idx, t, "exact" if is_exact else "fuzzy", vis_match))
         else:
             rx = t.get("rx")
             if rx is None:
