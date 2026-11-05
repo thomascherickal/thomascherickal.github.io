@@ -23,14 +23,22 @@ python3 -m unittest discover -s tests -v
 
 ### JavaScript Test Suite Execution
 ```bash
+# Run all 78 tests via master runner
 node pricing-tests.js
+
+# Or run via modular runner
+node tests/js/runner.js
+
+# Or run individual modules directly
+node tests/js/test_dom_controller.js
+node tests/js/test_data_integrity.js
 ```
 
 ---
 
-## Test Modules Overview
+## Python Test Modules Overview
 
-The test suite contains 11 dedicated test modules covering 36 individual test cases:
+The Python test suite contains 15 dedicated test modules covering 63 individual test cases:
 
 | Module | Focus Area | Key Verifications |
 | :--- | :--- | :--- |
@@ -45,6 +53,24 @@ The test suite contains 11 dedicated test modules covering 36 individual test ca
 | `test_sync_claude_and_gemini.py` | Architecture Guides | Claude and Gemini guide titles, file listings, and cross-references. |
 | `test_sync_publications_config_faqs.py`| Publications & FAQs | Publications directory sync, site configuration branding, FAQ policies. |
 | `test_continuous_updates.py` | Cyclic & Mutation Tests | Mutates JSON data in data/ back and forth across cycles, verifying exact propagation and idempotency. |
+
+---
+
+## JavaScript Test Modules Overview (`tests/js/`)
+
+The modular JavaScript test suite contains 9 dedicated modules covering 78 individual test cases:
+
+| Module | Focus Area | Tests | Key Verifications |
+| :--- | :--- | :--- | :--- |
+| `test_data_integrity.js` | Data Integrity & Metadata | 5 | 6 parity tiers, multipliers, discounts, Tier 6 custom flag, 12 unique service slugs. |
+| `test_zero_selection.js` | Zero Selection ($0 USD) | 10 | $0 price on empty selection across modes, participants, and all 6 parity tiers. |
+| `test_individual_services.js` | Individual Pick-Services | 12 | Tier discounts, seat enforcement (strictly 1 person), flagship nudge thresholds. |
+| `test_business_services.js` | Business Pick-Services | 9 | 10 included seats, parity discounts across tiers, flagship nudge threshold ($3,000). |
+| `test_extra_participants.js` | Extra Seat Scaling | 5 | Scaling over 10 included seats (+ $300/seat scaled across parity tiers). |
+| `test_flagship_packages.js` | Flagship Packages | 8 | Business and personal flagship rates and savings across all 6 parity tiers. |
+| `test_custom_package.js` | Custom Amount Packages | 5 | Custom scope pricing, negative input clamping to $0, parity percentage scaling. |
+| `test_edge_cases.js` | Defensive Edge Cases | 3 | Null/undefined parameters, invalid/out-of-range tier IDs, NaN participant normalization. |
+| `test_dom_controller.js` | DOM Controller & UI | 21 | Mock DOM events, interactive mode switching, service checkboxes, live pane updates. |
 
 ---
 
