@@ -2,8 +2,8 @@
   "metadata": {
     "domain": "pricing",
     "engine": "nlp-fuzzy-expert",
-    "total_references_tracked": 3499,
-    "last_synchronized": "2026-11-05T20:30:21.636913"
+    "total_references_tracked": 3498,
+    "last_synchronized": "2026-11-05T20:38:03.135333"
   },
   "all_references": [
     {
@@ -39445,7 +39445,7 @@
       "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
       "old_value": "30 days",
       "new_value": "30",
-      "context": "Training booking covers strictly 30 days of training and 30 days of guidance, Q&A and written guides (30",
+      "context": "Training booking covers strictly 30 days of training and 30 days of guidance, Q&A and written guides (60",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
       "also_in_data": [
@@ -39462,27 +39462,10 @@
       "page": "Thomas Cherickal | Generative AI Consultant",
       "section": "Ready to Build Your Business AI Roadmap?",
       "line_number": 3664,
-      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
-      "old_value": "10 days",
-      "new_value": "10",
-      "context": "working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day - total 60 days of",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].due_after_day",
-        "data/pricing.json#offerings[individual-service-business].schedule.total_calendar_duration_days",
-        "data/pricing.json#offerings[individual-service-personal].schedule.total_calendar_duration_days"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Ready to Build Your Business AI Roadmap?",
-      "line_number": 3664,
       "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
       "old_value": "60 days",
       "new_value": "60",
-      "context": "working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day - total 60 days of",
+      "context": "days over 2 months , 4 hours per day - total 60 days of",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.total_calendar_duration_days",
       "also_in_data": [
@@ -39513,17 +39496,20 @@
       "file": "index.html",
       "page": "Thomas Cherickal | Generative AI Consultant",
       "section": "Ready to Build Your Business AI Roadmap?",
-      "line_number": 3667,
-      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
-      "old_value": "10 days",
-      "new_value": "10",
-      "context": "with 8 - 10 days as holidays and recovery days, 4 hours per day) plus 30 days of dedicated daily work",
+      "line_number": 3666,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
+      "old_value": "30 days",
+      "new_value": "30",
+      "context": "training (covering client-selected services relevant to your work or interests, 30 days over 4",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].due_after_day",
-        "data/pricing.json#offerings[individual-service-business].schedule.total_calendar_duration_days",
-        "data/pricing.json#offerings[individual-service-personal].schedule.total_calendar_duration_days"
+        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
       ]
     },
     {
@@ -39534,7 +39520,7 @@
       "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
       "old_value": "30 days",
       "new_value": "30",
-      "context": "with 8 - 10 days as holidays and recovery days, 4 hours per day) plus 30 days of dedicated daily work",
+      "context": "weeks, 4 hours per day) plus 30 days of dedicated daily work support on working days.",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
       "also_in_data": [
