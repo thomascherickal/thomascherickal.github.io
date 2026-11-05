@@ -121,30 +121,91 @@ def compute_data_digest(data_dir):
     return h.hexdigest()
 
 
-def load_scanner_cache():
-    """Loads cached scan results from .scanner_cache.json if valid."""
-    if os.path.exists(CACHE_FILE):
+_MEMORY_SCANNER_CACHE = None
+_MEMORY_SCANNER_CACHE_MTIME = None
+_TERMS_CACHE = {}
+
+
+def prune_scanner_cache(cache, active_keys=None):
+    """Prunes old timestamps, missing files, and non-repo entries from the cache."""
+    pruned = {}
+    active_set = set(active_keys) if active_keys else set()
+    latest_by_rel = {}
+
+    # Prioritize active keys for target files in the current run
+    for key in sorted(cache.keys()):
+        if key in active_set:
+            parts = key.split(":")
+            if len(parts) >= 4:
+                latest_by_rel[parts[0]] = key
+                pruned[key] = cache[key]
+
+    for key, val in cache.items():
+        if key in pruned:
+            continue
+        parts = key.split(":")
+        if len(parts) < 4:
+            continue
+        rel = parts[0]
+        if rel in latest_by_rel:
+            continue
+        abs_path = os.path.join(REPO_DIR, rel)
+        if not os.path.isfile(abs_path):
+            continue
         try:
-            with open(CACHE_FILE, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception:
-            return {}
-    return {}
+            st = os.stat(abs_path)
+            if str(st.st_mtime_ns) == parts[1] and str(st.st_size) == parts[2]:
+                latest_by_rel[rel] = key
+                pruned[key] = val
+        except OSError:
+            pass
+    return pruned
 
 
-def save_scanner_cache(cache):
-    """Persists scanner cache using atomic rename."""
+def load_scanner_cache():
+    """Loads cached scan results from .scanner_cache.json with in-memory caching."""
+    global _MEMORY_SCANNER_CACHE, _MEMORY_SCANNER_CACHE_MTIME
+    if not os.path.exists(CACHE_FILE):
+        _MEMORY_SCANNER_CACHE = {}
+        _MEMORY_SCANNER_CACHE_MTIME = None
+        return {}
+    try:
+        st = os.stat(CACHE_FILE)
+        cache_key = (st.st_mtime_ns, st.st_size)
+        if _MEMORY_SCANNER_CACHE is not None and _MEMORY_SCANNER_CACHE_MTIME == cache_key:
+            return dict(_MEMORY_SCANNER_CACHE)
+        with open(CACHE_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            _MEMORY_SCANNER_CACHE = data
+            _MEMORY_SCANNER_CACHE_MTIME = cache_key
+            return dict(data)
+    except Exception:
+        return {}
+
+
+def save_scanner_cache(cache, active_keys=None):
+    """Persists pruned scanner cache using atomic rename and updates in-memory cache."""
+    global _MEMORY_SCANNER_CACHE, _MEMORY_SCANNER_CACHE_MTIME
+    pruned = prune_scanner_cache(cache, active_keys)
     try:
         tmp = f"{CACHE_FILE}.tmp.{os.getpid()}"
         with open(tmp, "w", encoding="utf-8") as f:
-            json.dump(cache, f)
+            json.dump(pruned, f)
         os.replace(tmp, CACHE_FILE)
+        st = os.stat(CACHE_FILE)
+        _MEMORY_SCANNER_CACHE = pruned
+        _MEMORY_SCANNER_CACHE_MTIME = (st.st_mtime_ns, st.st_size)
     except Exception:
         pass
 
 
 def build_terms(data_dir):
     """Loads data/*.json and returns a de-duplicated list of searchable terms with precompiled patterns."""
+    data_digest = compute_data_digest(data_dir)
+    cache_key = (os.path.abspath(data_dir), data_digest)
+    if cache_key in _TERMS_CACHE:
+        return _TERMS_CACHE[cache_key]
+
     terms = {}
     for fname in sorted(os.listdir(data_dir)):
         if not fname.endswith(".json") or fname not in DOMAIN_BY_FILE:
@@ -200,6 +261,7 @@ def build_terms(data_dir):
         else:
             t["rx"] = re.compile(t["patterns"][0])
 
+    _TERMS_CACHE[cache_key] = term_list
     return term_list
 
 
@@ -341,12 +403,14 @@ def scan_repository(target_files, data_dir=None):
     cache = load_scanner_cache()
     cached_records = {}
     uncached_files = []
+    active_keys = set()
 
     for path in sorted(target_files):
         rel = os.path.relpath(path, REPO_DIR)
         try:
             st = os.stat(path)
             key = f"{rel}:{st.st_mtime_ns}:{st.st_size}:{data_digest}"
+            active_keys.add(key)
             if key in cache:
                 cached_records[path] = cache[key]
             else:
@@ -378,7 +442,7 @@ def scan_repository(target_files, data_dir=None):
                 if k:
                     cache[k] = recs
 
-        save_scanner_cache(cache)
+        save_scanner_cache(cache, active_keys=active_keys)
 
     by_domain = {d: [] for d in DOMAIN_BY_FILE.values()}
     for path in sorted(target_files):

@@ -19,6 +19,8 @@ HIGHLIGHT_CLOSE = '</span>'
 
 def strip_sync_highlights(content):
     """Removes existing sync-highlight spans to ensure clean idempotent matching."""
+    if "sync-highlight" not in content:
+        return content
     return re.sub(r'<span class="sync-highlight"[^>]*>(.*?)</span>', r'\1', content)
 
 def apply_sync_highlight(val_str):

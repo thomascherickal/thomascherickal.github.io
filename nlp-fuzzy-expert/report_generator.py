@@ -63,18 +63,29 @@ def classify_rule_field(field):
     return "pricing"
 
 
+_DOMAIN_REFS_CACHE = {}
+_DOMAIN_MD_CACHE = {}
+
+
 def write_reference_files(domain_refs, force=False):
     """Writes per-domain and master reference JSON files (never touches data/)."""
+    global _DOMAIN_REFS_CACHE
     timestamp = datetime.now().isoformat()
     all_refs = []
+    any_domain_written = False
+
     for domain, fname in DOMAIN_FILES.items():
         refs = domain_refs.get(domain, [])
         all_refs.extend(refs)
         fpath = os.path.join(SCRIPT_DIR, fname)
 
         if not force and os.path.exists(fpath):
+            cached_refs = _DOMAIN_REFS_CACHE.get(domain)
+            if cached_refs is not None and cached_refs == refs:
+                continue
             existing = load_json(fpath)
             if existing.get("all_references") == refs:
+                _DOMAIN_REFS_CACHE[domain] = refs
                 continue
 
         out_dict = {
@@ -87,11 +98,15 @@ def write_reference_files(domain_refs, force=False):
             "all_references": refs,
         }
         save_json(fpath, out_dict)
+        _DOMAIN_REFS_CACHE[domain] = refs
+        any_domain_written = True
         print(f"  -> Wrote {fname} ({len(refs)} references)")
 
     master_path = os.path.join(SCRIPT_DIR, "references_dictionary.json")
     if force or not os.path.exists(master_path):
         should_write_master = True
+    elif not any_domain_written:
+        should_write_master = False
     else:
         existing_master = load_json(master_path)
         should_write_master = (existing_master.get("all_references") != all_refs)
@@ -114,6 +129,7 @@ def write_reference_files(domain_refs, force=False):
 
 def generate_markdown_reports(domain_refs, force=False):
     """Generates domain-specific markdown reports under nlp-fuzzy-expert/."""
+    global _DOMAIN_MD_CACHE
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     reports = [
@@ -131,6 +147,11 @@ def generate_markdown_reports(domain_refs, force=False):
     for md_name, domain, title in reports:
         md_path = os.path.join(SCRIPT_DIR, md_name)
         filtered = domain_refs.get(domain, [])
+
+        if not force and os.path.exists(md_path):
+            cached_filtered = _DOMAIN_MD_CACHE.get(domain)
+            if cached_filtered is not None and cached_filtered == filtered:
+                continue
 
         lines = [
             f"# NLP-Fuzzy-Expert Synchronization Report - {title}",
@@ -171,9 +192,11 @@ def generate_markdown_reports(domain_refs, force=False):
             old_body = old_content.split("## Tracked Occurrences Table", 1)[-1] if "## Tracked Occurrences Table" in old_content else ""
             new_body = new_content.split("## Tracked Occurrences Table", 1)[-1]
             if old_body and old_body == new_body:
+                _DOMAIN_MD_CACHE[domain] = filtered
                 continue
 
         with open(md_path, "w", encoding="utf-8") as f:
             f.write(new_content)
+        _DOMAIN_MD_CACHE[domain] = filtered
         print(f"  -> Wrote {md_name}")
 

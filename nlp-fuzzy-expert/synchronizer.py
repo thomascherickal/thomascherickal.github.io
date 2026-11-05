@@ -97,6 +97,9 @@ class ExpertSynchronizer:
 
     def discover_target_files(self):
         """Discovers all repository HTML and JS files subject to synchronization."""
+        if hasattr(self, "_cached_target_files") and self._cached_target_files:
+            return list(self._cached_target_files)
+
         target_files = []
 
         # Root files
@@ -112,7 +115,8 @@ class ExpertSynchronizer:
                     if fname.endswith(".html"):
                         target_files.append(os.path.join(sdir, fname))
 
-        return sorted(target_files)
+        self._cached_target_files = sorted(target_files)
+        return list(self._cached_target_files)
 
     def sync_all(self, auto_heal=True, verify_tests=True):
         """Runs the expert inference engine across all target files with live terminal reporting."""

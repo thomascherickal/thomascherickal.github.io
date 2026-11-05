@@ -37,6 +37,8 @@ def fuzzy_trapezoid(x, a, b, c, d):
 
 def levenshtein_distance(s1, s2):
     """Computes exact edit distance between two strings."""
+    if s1 == s2:
+        return 0
     if len(s1) < len(s2):
         return levenshtein_distance(s2, s1)
     if len(s2) == 0:
@@ -56,6 +58,8 @@ def levenshtein_distance(s1, s2):
 
 def levenshtein_ratio(s1, s2):
     """Computes normalized Levenshtein similarity in range [0.0, 1.0]."""
+    if s1 == s2:
+        return 1.0
     if not s1 and not s2:
         return 1.0
     if not s1 or not s2:
@@ -70,12 +74,18 @@ def clean_tokens(text):
 
 def token_sort_ratio(s1, s2):
     """Computes token sort ratio: sorts tokens before computing similarity."""
+    if s1 == s2:
+        return 1.0
     t1 = " ".join(sorted(clean_tokens(s1)))
     t2 = " ".join(sorted(clean_tokens(s2)))
+    if t1 == t2:
+        return 1.0
     return levenshtein_ratio(t1, t2)
 
 def token_set_ratio(s1, s2):
     """Computes token set ratio: compares intersection and unique remainders."""
+    if s1 == s2:
+        return 1.0
     set1 = set(clean_tokens(s1))
     set2 = set(clean_tokens(s2))
     if not set1 and not set2:

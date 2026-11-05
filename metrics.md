@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-05 13:58:03 UTC` | Branch: `main` | Head Commit: `8db95dd`
+> **Automated Status Report** | Generated on `2026-11-05 14:24:10 UTC` | Branch: `main` | Head Commit: `cd85eca`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **460** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **655,604** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **641,348** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **4,785** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **9,471** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **73.54 MB (77,107,269 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **668,174 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **470** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-05** | Subject: "Modularize JavaScript test suite into dedicated modules under tests/js" |
+| **Total Lines of Source Code & Content** | **655,729** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **641,458** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **4,786** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **9,485** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **73.54 MB (77,111,558 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **668,173 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **471** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-05** | Subject: "Enhance reference scanner to capture whitespace and multiline references in HTML" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -30,9 +30,9 @@
 | **HTML Documents** | 66 | 77,364 | 5.90 MB (6,185,671 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,887 | 278.67 KB (285,354 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 16 | 6,677 | 3.52 MB (3,691,473 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 42 | 9,689 | 428.12 KB (438,393 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 89 | 30,670 | 3.41 MB (3,574,343 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 85 | 519,264 | 24.39 MB (25,574,201 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Python Tooling** | 42 | 9,814 | 432.29 KB (442,666 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 89 | 30,670 | 3.41 MB (3,574,356 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 85 | 519,264 | 24.39 MB (25,574,204 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 95 | 0 | 35.51 MB (37,233,318 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 9 | 0 | 56.67 KB (58,028 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,11 +43,11 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 85 | 519,264 | 24.39 MB (25,574,201 bytes) | 18.5% |
+| `.json` | 85 | 519,264 | 24.39 MB (25,574,204 bytes) | 18.5% |
 | `.html` | 66 | 77,364 | 5.90 MB (6,185,671 bytes) | 14.3% |
-| `.md` | 89 | 30,670 | 3.41 MB (3,574,343 bytes) | 19.3% |
+| `.md` | 89 | 30,670 | 3.41 MB (3,574,356 bytes) | 19.3% |
 | `.css` | 16 | 11,887 | 278.67 KB (285,354 bytes) | 3.5% |
-| `.py` | 42 | 9,689 | 428.12 KB (438,393 bytes) | 9.1% |
+| `.py` | 42 | 9,814 | 432.29 KB (442,666 bytes) | 9.1% |
 | `.js` | 16 | 6,677 | 3.52 MB (3,691,473 bytes) | 3.5% |
 | `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 9.1% |
 | `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 9.3% |
@@ -107,7 +107,7 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **274 functions** across tooling scripts | Modular execution units |
+| **Python Function Definitions** | **275 functions** across tooling scripts | Modular execution units |
 | **Python Class Definitions** | **25 classes** | Structured state containers |
 
 ---

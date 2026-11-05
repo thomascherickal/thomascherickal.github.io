@@ -64,10 +64,20 @@ def compute_changed_lines(old_text, new_text):
 
     return ", ".join(ranges)
 
+_JSON_CACHE = {}
+
 def load_json(filepath):
-    """Safely loads a JSON file with retry on transient concurrent read."""
+    """Safely loads a JSON file with retry on transient concurrent read and mtime-based caching."""
     if not os.path.exists(filepath):
         return {}
+    try:
+        st = os.stat(filepath)
+        cache_key = (os.path.abspath(filepath), st.st_mtime_ns, st.st_size)
+        if cache_key in _JSON_CACHE:
+            return _JSON_CACHE[cache_key]
+    except OSError:
+        pass
+
     for attempt in range(5):
         try:
             with open(filepath, "r", encoding="utf-8") as f:
@@ -75,7 +85,14 @@ def load_json(filepath):
                 if not content:
                     time.sleep(0.05)
                     continue
-                return json.loads(content)
+                data = json.loads(content)
+                try:
+                    st = os.stat(filepath)
+                    cache_key = (os.path.abspath(filepath), st.st_mtime_ns, st.st_size)
+                    _JSON_CACHE[cache_key] = data
+                except OSError:
+                    pass
+                return data
         except (json.JSONDecodeError, OSError):
             if attempt == 4:
                 raise
@@ -105,6 +122,11 @@ def save_json(filepath, data):
             f.flush()
             os.fsync(f.fileno())
         os.replace(tmp_path, filepath)
+        try:
+            st = os.stat(filepath)
+            _JSON_CACHE[(os.path.abspath(filepath), st.st_mtime_ns, st.st_size)] = data
+        except OSError:
+            pass
     finally:
         if os.path.exists(tmp_path):
             try:
