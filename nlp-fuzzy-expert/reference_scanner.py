@@ -400,12 +400,20 @@ def scan_repository(target_files, data_dir=None):
     """
     actual_data_dir = data_dir or DATA_DIR
     terms = build_terms(actual_data_dir)
+    terms_by_field = {t["field_key"]: str(t["value"]) for t in terms}
     data_digest = compute_data_digest(actual_data_dir)
 
     cache = load_scanner_cache()
     cached_records = {}
     uncached_files = []
     active_keys = set()
+
+    # Pre-index existing cache by relative path
+    cache_by_rel = {}
+    for ck, cval in cache.items():
+        parts = ck.split(":")
+        if len(parts) >= 3:
+            cache_by_rel[parts[0]] = (parts[1], parts[2], ck, cval)
 
     for path in sorted(target_files):
         rel = os.path.relpath(path, REPO_DIR)
@@ -415,6 +423,21 @@ def scan_repository(target_files, data_dir=None):
             active_keys.add(key)
             if key in cache:
                 cached_records[path] = cache[key]
+            elif rel in cache_by_rel:
+                c_mtime, c_size, old_key, old_val = cache_by_rel[rel]
+                if c_mtime == str(st.st_mtime_ns) and c_size == str(st.st_size):
+                    # File on disk is unchanged. Check if any previously matched term changed value.
+                    terms_changed = False
+                    for r in old_val:
+                        fk = r.get("field_key")
+                        if fk in terms_by_field and terms_by_field[fk] != str(r.get("new_value")):
+                            terms_changed = True
+                            break
+                    if not terms_changed:
+                        cached_records[path] = old_val
+                        cache[key] = old_val
+                        continue
+                uncached_files.append((path, key))
             else:
                 uncached_files.append((path, key))
         except OSError:

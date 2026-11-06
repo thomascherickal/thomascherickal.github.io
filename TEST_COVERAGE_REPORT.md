@@ -1,14 +1,14 @@
 # Test Coverage Report
 
-Recorded at: **2026-11-06 18:32:47 UTC** | Commit: **cae1e59** (`main`) | Elapsed: **0.56s**
+Recorded at: **2026-11-06 18:38:36 UTC** | Commit: **89c0511** (`main`) | Elapsed: **0.56s**
 
 ## Executive Summary
 
 | Language | Tracked Files | Total Statements / Lines | Covered | Missed | Coverage % | Status |
 |:---|---:|---:|---:|---:|---:|:---|
-| Python (`nlp-fuzzy-expert/`, `python/`) | 27 | 5,240 | 3,415 | 1,825 | **65.17%** | WARN |
+| Python (`nlp-fuzzy-expert/`, `python/`) | 27 | 5,315 | 3,345 | 1,970 | **62.94%** | WARN |
 | JavaScript (Root scripts) | 3 | 1,254 | 1,254 | 0 | **100.00%** | PASS |
-| **Repository Combined Total** | **30** | **6,494** | **4,669** | **1,825** | **71.90%** | **WARN** |
+| **Repository Combined Total** | **30** | **6,569** | **4,599** | **1,970** | **70.01%** | **WARN** |
 
 ## Python Test Coverage
 
@@ -21,9 +21,9 @@ Recorded at: **2026-11-06 18:32:47 UTC** | Commit: **cae1e59** (`main`) | Elapse
 | `nlp-fuzzy-expert/fuzzy_engine.py` | 121 | 109 | 12 | **90.1%** | `22-24, 36, 64, 88, 92, 94, 123, ...` |
 | `nlp-fuzzy-expert/nlp_engine.py` | 74 | 69 | 5 | **93.2%** | `42, 77-78, 113, 119` |
 | `nlp-fuzzy-expert/reference_scanner.py` | 344 | 306 | 38 | **89.0%** | `74, 91, 117, 150, 154-163, 171-1...` |
-| `nlp-fuzzy-expert/report_generator.py` | 108 | 106 | 2 | **98.2%** | `115, 212` |
+| `nlp-fuzzy-expert/report_generator.py` | 114 | 96 | 18 | **84.2%** | `89, 98, 115, 118, 121, 168, 171,...` |
 | `nlp-fuzzy-expert/rules.py` | 546 | 528 | 18 | **96.7%** | `1318-1319, 1322-1328, 1335-1341,...` |
-| `nlp-fuzzy-expert/synchronizer.py` | 228 | 197 | 31 | **86.4%** | `69, 126-127, 190, 199-200, 289-2...` |
+| `nlp-fuzzy-expert/synchronizer.py` | 297 | 137 | 160 | **46.1%** | `23, 27, 97, 99, 102, 104, 109-11...` |
 | `nlp-fuzzy-expert/watcher.py` | 92 | 49 | 43 | **53.3%** | `41, 55-56, 73-74, 90-91, 93-95, ...` |
 | `python/build.py` | 10 | 0 | 10 | **0.0%** | `5-6, 8-9, 11, 13-16, 18` |
 | `python/build_components.py` | 147 | 95 | 52 | **64.6%** | `71, 104-107, 109-110, 112, 119-1...` |
@@ -68,12 +68,12 @@ The following files contain uncovered branches and line numbers identified for o
   - Missing Line(s): `42, 77-78, 113, 119`
 - **`nlp-fuzzy-expert/reference_scanner.py`** (89.0% covered):
   - Missing Line(s): `74, 91, 117, 150, 154-163, 171-173, 184-185, 200-201, 214, 318, 359, 371, 420-421, 434-439, 464-467, 471`
-- **`nlp-fuzzy-expert/report_generator.py`** (98.2% covered):
-  - Missing Line(s): `115, 212`
+- **`nlp-fuzzy-expert/report_generator.py`** (84.2% covered):
+  - Missing Line(s): `89, 98, 115, 118, 121, 168, 171, 174, 191, 221, 224, 233, 238-239, 241-244`
 - **`nlp-fuzzy-expert/rules.py`** (96.7% covered):
   - Missing Line(s): `1318-1319, 1322-1328, 1335-1341, 1347, 1422`
-- **`nlp-fuzzy-expert/synchronizer.py`** (86.4% covered):
-  - Missing Line(s): `69, 126-127, 190, 199-200, 289-291, 293-295, 350-355, 357-363, 372-374, 382-383, 387`
+- **`nlp-fuzzy-expert/synchronizer.py`** (46.1% covered):
+  - Missing Line(s): `23, 27, 97, 99, 102, 104, 109-110, 118, 141, 150-151, 159, 165-166, 173, 188, 190-191, 196-197, 201-202, 209, 215, 217, 222, 227-228, 234, 244, 254, 257-261, 276, 281-282, 285-287, 289-290, 292-293, 306, 308, 310, 315, 319, 329, 343, 349-352, 354, 357-360, 362, 365-370, 374-375, 389-392, 395-399, 401-404, 411-414, 422, 428-430, 438-439, 443, 446, 449, 454-457, 459-461, 463, 465, 467-471, 473, 475, 477-478, 482, 484, 486-494, 496-502, 511-512, 514, 516-521, 523-529, 538-540, 542, 544, 547-549, 552-553`
 - **`nlp-fuzzy-expert/watcher.py`** (53.3% covered):
   - Missing Line(s): `41, 55-56, 73-74, 90-91, 93-95, 97-98, 100-110, 113-119, 121, 124-127, 129-133, 135-136, 139`
 - **`python/build.py`** (0.0% covered):

@@ -26,15 +26,19 @@ git add "$REPO_ROOT/metrics.md" 2>/dev/null || true
 git add "$REPO_ROOT/LAST-COMMIT-REPORT.md" 2>/dev/null || true
 git add "$REPO_ROOT/TEST_COVERAGE_REPORT.md" 2>/dev/null || true
 
-# Run all unit tests before committing
+# Run all unit tests before committing (with coverage instrumentation when available)
 echo "[git pre-commit] Running unit test suite (tests/)..."
-python3 "$REPO_ROOT/python/run_tests.py"
+if python3 -c "import coverage" > /dev/null 2>&1; then
+    python3 -m coverage run --source="$REPO_ROOT/nlp-fuzzy-expert,$REPO_ROOT/python" "$REPO_ROOT/python/run_tests.py"
+else
+    python3 "$REPO_ROOT/python/run_tests.py"
+fi
 TEST_STATUS=$?
 if [ $TEST_STATUS -ne 0 ]; then
     echo "[git pre-commit] ERROR: Unit test suite failed with status $TEST_STATUS. Commit aborted."
     exit 1
 fi
-git add "$REPO_ROOT/nlp-fuzzy-expert"/*.md "$REPO_ROOT/nlp-fuzzy-expert"/*_references.json "$REPO_ROOT/nlp-fuzzy-expert"/references_dictionary.json "$REPO_ROOT/nlp-fuzzy-expert"/references_manifest.json 2>/dev/null || true
+git add "$REPO_ROOT/nlp-fuzzy-expert"/*.md "$REPO_ROOT/nlp-fuzzy-expert"/*_references.json "$REPO_ROOT/nlp-fuzzy-expert"/references_dictionary.json "$REPO_ROOT/nlp-fuzzy-expert"/references_manifest.json "$REPO_ROOT/nlp-fuzzy-expert"/sync_manifest.json 2>/dev/null || true
 
 echo "[git pre-commit] Running JavaScript test suite (pricing-tests.js)..."
 node "$REPO_ROOT/pricing-tests.js"

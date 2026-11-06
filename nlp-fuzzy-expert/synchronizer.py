@@ -348,18 +348,19 @@ class ExpertSynchronizer:
         print(f"\n[Step 5/6] Generating domain references and master dictionary...")
         print("  [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json")
         has_ref_manifest = os.path.exists(os.path.join(SCRIPT_DIR, "references_manifest.json"))
-        if force or modified_count > 0 or changed_domains or not has_ref_manifest:
+        is_canonical = (os.path.abspath(self.data_dir) == os.path.abspath(DATA_DIR))
+        if is_canonical and (force or modified_count > 0 or changed_domains or not has_ref_manifest):
             self.generate_reference_dictionaries()
         else:
-            print(f"  -> Reference dictionaries and manifest already in sync (0 target files modified).")
+            print(f"  -> Reference dictionaries and manifest already in sync.")
 
         # Step 6: Markdown Reports
         print(f"\n[Step 6/6] Generating domain markdown synchronization reports...")
         print("  [UPDATE SCOPE] Fields: Domain summaries & occurrence tables -> Target: nlp-fuzzy-expert/*.md reports")
-        if force or modified_count > 0 or changed_domains or not has_ref_manifest:
+        if is_canonical and (force or modified_count > 0 or changed_domains or not has_ref_manifest):
             self.generate_markdown_reports()
         else:
-            print(f"  -> Markdown reports already in sync (0 target files modified).")
+            print(f"  -> Markdown reports already in sync.")
 
         # Update synchronization manifest
         new_manifest_targets = dict(manifest_targets)

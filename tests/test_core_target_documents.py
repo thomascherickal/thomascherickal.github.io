@@ -117,6 +117,18 @@ class TestCoreTargetDocuments(unittest.TestCase):
         file_size = os.path.getsize(manifest_path)
         self.assertLess(file_size, 50 * 1024, "Manifest must be lightweight (under 50 KB)")
 
+    def test_sync_manifest_structure_and_counts(self):
+        """Verifies that sync_manifest.json exists and tracks data digests and targets."""
+        sync_manifest_path = os.path.join(NLP_EXPERT_DIR, "sync_manifest.json")
+        self.assertTrue(os.path.exists(sync_manifest_path), "sync_manifest.json must exist")
+
+        data = load_json(sync_manifest_path)
+        self.assertEqual(data["metadata"]["manifest_type"], "synchronization_manifest")
+        self.assertIn("data_hashes", data)
+        self.assertIn("targets", data)
+        self.assertEqual(len(data["data_hashes"]), 11, "Must track all 11 data files")
+        self.assertGreaterEqual(len(data["targets"]), 67, "Must track all target documents")
+
     def test_references_dictionary_preserved_and_intact(self):
         """Verifies that master references_dictionary.json is preserved and intact."""
         master_path = os.path.join(NLP_EXPERT_DIR, "references_dictionary.json")
@@ -209,10 +221,14 @@ class TestCoreTargetDocuments(unittest.TestCase):
         self.assertNotIn("core_policies", data)
 
     def test_compliance_zero_emojis_and_zero_em_dashes(self):
-        """Verifies zero emojis and zero em-dashes in manifest, contact.json, guarantees.json, and llms.txt."""
+        """Verifies zero emojis and zero em-dashes in manifests, contact.json, guarantees.json, and llms.txt."""
         manifest_path = os.path.join(NLP_EXPERT_DIR, "references_manifest.json")
         with open(manifest_path, "r", encoding="utf-8") as f:
             m_text = f.read()
+
+        sync_manifest_path = os.path.join(NLP_EXPERT_DIR, "sync_manifest.json")
+        with open(sync_manifest_path, "r", encoding="utf-8") as f:
+            sm_text = f.read()
 
         llms_path = os.path.join(REPO_DIR, "llms.txt")
         with open(llms_path, "r", encoding="utf-8") as f:
@@ -226,7 +242,7 @@ class TestCoreTargetDocuments(unittest.TestCase):
         with open(guarantees_path, "r", encoding="utf-8") as f:
             g_text = f.read()
 
-        for text in [m_text, l_text, c_text, g_text]:
+        for text in [m_text, sm_text, l_text, c_text, g_text]:
             self.assertNotIn(chr(0x2014), text)
             self.assertNotIn("&" + "mdash;", text)
             self.assertNotIn("&" + "#8212;", text)
