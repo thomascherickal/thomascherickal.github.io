@@ -1,5 +1,7 @@
 #!/bin/bash
-# Pre-commit hook: Auto-rebuild components, sync schemas, and run unit tests
+# Pre-commit hook: Auto-rebuild components, sync schemas, run unit tests,
+# generate reports, and stage every generated file so the tree stays clean
+# after the commit.
 # Strict Repo Compliance: Zero emojis, zero em-dashes.
 
 REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null)"
@@ -22,8 +24,6 @@ python3 "$REPO_ROOT/python/sync_schemas.py" > /dev/null 2>&1
 git add "$REPO_ROOT/schema" 2>/dev/null || true
 
 python3 "$REPO_ROOT/python/generate_metrics.py" > /dev/null 2>&1
-git add "$REPO_ROOT/metrics.md" 2>/dev/null || true
-git add "$REPO_ROOT/LAST-COMMIT-REPORT.md" 2>/dev/null || true
 
 # Run all unit tests before committing (with coverage instrumentation when available)
 echo "[git pre-commit] Running unit test suite (tests/)..."
@@ -37,7 +37,6 @@ if [ $TEST_STATUS -ne 0 ]; then
     echo "[git pre-commit] ERROR: Unit test suite failed with status $TEST_STATUS. Commit aborted."
     exit 1
 fi
-git add "$REPO_ROOT/nlp-fuzzy-expert"/*.md "$REPO_ROOT/nlp-fuzzy-expert"/*_references.json "$REPO_ROOT/nlp-fuzzy-expert"/references_dictionary.json "$REPO_ROOT/nlp-fuzzy-expert"/references_manifest.json "$REPO_ROOT/nlp-fuzzy-expert"/sync_manifest.json 2>/dev/null || true
 
 echo "[git pre-commit] Running JavaScript test suite (pricing-tests.js)..."
 node "$REPO_ROOT/pricing-tests.js"
@@ -46,6 +45,7 @@ if [ $JS_TEST_STATUS -ne 0 ]; then
     echo "[git pre-commit] ERROR: JavaScript test suite failed with status $JS_TEST_STATUS. Commit aborted."
     exit 1
 fi
+
 # Verify data directory Single Source of Truth (SSOT) integrity
 DATA_DIR_STATUS="$(git status --porcelain "$REPO_ROOT/data" 2>/dev/null)"
 if [ -n "$DATA_DIR_STATUS" ]; then
@@ -53,13 +53,10 @@ if [ -n "$DATA_DIR_STATUS" ]; then
     echo "$DATA_DIR_STATUS"
 fi
 
-echo "[git pre-commit] All unit and JavaScript tests passed. Commit approved."
+echo "[git pre-commit] All unit and JavaScript tests passed. Generating reports..."
 
-REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null)"
-if [ -z "$REPO_ROOT" ]; then
-    exit 0
-fi
-
+# ORDER MATTERS: the commit report overwrites LAST-COMMIT-REPORT.md,
+# the coverage report then appends its section to it.
 if [ -f "$REPO_ROOT/python/generate_last_commit_report.py" ]; then
     python3 "$REPO_ROOT/python/generate_last_commit_report.py" > /dev/null 2>&1 || true
 fi
@@ -68,6 +65,26 @@ if [ -f "$REPO_ROOT/python/generate_test_coverage_report.py" ]; then
     python3 "$REPO_ROOT/python/generate_test_coverage_report.py" > /dev/null 2>&1 || true
 fi
 
+# The coverage script deletes the legacy report; stage the deletion if it was tracked
+git rm -q --cached --ignore-unmatch -- "$REPO_ROOT/TEST_COVERAGE_REPORT.md" > /dev/null 2>&1 || true
 
+# Stage EVERYTHING the generators and tests may have written. This must come last.
+git add -- "$REPO_ROOT/metrics.md" "$REPO_ROOT/LAST-COMMIT-REPORT.md" 2>/dev/null || true
+git add -- "$REPO_ROOT/tests/.test_reports_cache.json" "$REPO_ROOT/tests/.js_test_reports_cache.json" 2>/dev/null || true
+git add -- "$REPO_ROOT/nlp-fuzzy-expert"/*.md \
+           "$REPO_ROOT/nlp-fuzzy-expert"/*_references.json \
+           "$REPO_ROOT/nlp-fuzzy-expert/references_dictionary.json" \
+           "$REPO_ROOT/nlp-fuzzy-expert/references_manifest.json" \
+           "$REPO_ROOT/nlp-fuzzy-expert/sync_manifest.json" 2>/dev/null || true
+git add -- "$REPO_ROOT/md-html-sync" "$REPO_ROOT/schema" 2>/dev/null || true
+
+# Diagnostic: list tracked files that are still modified but not staged.
+# Anything printed here will remain dirty after the commit; add its path to the staging block above.
+LEFTOVER="$(git diff --name-only 2>/dev/null)"
+if [ -n "$LEFTOVER" ]; then
+    echo "[git pre-commit] WARNING: tracked files modified but NOT staged (will stay dirty after commit):"
+    echo "$LEFTOVER"
+fi
+
+echo "[git pre-commit] Commit approved."
 exit 0
-

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Gemini 4 Carbon: Ultra-Low-Latency Inference & Edge Agents | Thomas Cherickal</title>
+<title>Gemini 4 Carbon: Ultra-Low-Latency Inference &amp; Edge Agents | Thomas Cherickal</title>
 <meta content="In-depth technical architecture of Gemini 4 Carbon: sub-10ms Time to First Token, speculative decoding, edge runtime distillation, multi-agent swarms, and enterprise benchmarks." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
 <link href="https://thedigitalfuturist.com/google-training/google-gemini-4-carbon.html" rel="canonical"/>
@@ -11,14 +12,14 @@
 <meta content="article" property="og:type"/>
 <meta content="https://thedigitalfuturist.com/google-training/google-gemini-4-carbon.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
-<meta content="Gemini 4 Carbon: Ultra-Low-Latency Inference & Edge Agents | Thomas Cherickal" property="og:title"/>
+<meta content="Gemini 4 Carbon: Ultra-Low-Latency Inference &amp; Edge Agents | Thomas Cherickal" property="og:title"/>
 <meta content="In-depth technical architecture of Gemini 4 Carbon: sub-10ms Time to First Token, speculative decoding, edge runtime distillation, multi-agent swarms, and enterprise benchmarks." property="og:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@thomazcherickal" name="twitter:site"/>
-<meta content="Gemini 4 Carbon: Ultra-Low-Latency Inference & Edge Agents | Thomas Cherickal" name="twitter:title"/>
+<meta content="Gemini 4 Carbon: Ultra-Low-Latency Inference &amp; Edge Agents | Thomas Cherickal" name="twitter:title"/>
 <meta content="In-depth technical architecture of Gemini 4 Carbon: sub-10ms Time to First Token, speculative decoding, edge runtime distillation, multi-agent swarms, and enterprise benchmarks." name="twitter:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
 <!-- Favicons -->
@@ -261,390 +262,346 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-  <main class="container single-column-article">
-    <header class="hero" style="text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding-top:120px;padding-bottom:2rem;margin-bottom:2rem;">
-      <div style="background:var(--bg-card, #0c111d);border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:14px;padding:1.5rem 1.75rem;box-shadow:0 4px 20px rgba(0, 0, 0, 0.35);display:flex;align-items:center;gap:1.5rem;box-sizing:border-box;">
+<main class="container single-column-article">
+<header class="hero" style="text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding-top:120px;padding-bottom:2rem;margin-bottom:2rem;">
+<div style="background:var(--bg-card, #0c111d);border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:14px;padding:1.5rem 1.75rem;box-shadow:0 4px 20px rgba(0, 0, 0, 0.35);display:flex;align-items:center;gap:1.5rem;box-sizing:border-box;">
 <div>
-          <div style="font-family:var(--font-mono, monospace);letter-spacing:0.2em;text-transform:uppercase;font-size:0.85rem;color:var(--gold, #fbbf24);font-weight:700;">The Future Is Now</div>
-          <div style="color:var(--text-muted, #94a3b8);font-size:0.95rem;margin-top:0.35rem;line-height:1.5;">By Thomas Cherickal, Generative AI Consultant | 4 November 2026</div>
-        </div>
-      </div>
-      <div style="background:var(--bg-card, #0c111d);border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:14px;padding:2rem 2.25rem;box-shadow:0 4px 20px rgba(0, 0, 0, 0.35);box-sizing:border-box;">
-        <p class="hero-badge" style="margin:0 0 0.85rem 0;">// EDGE INTELLIGENCE &amp; ULTRA-LOW LATENCY</p>
-        <h1>Gemini 4 Carbon: Ultra-Low-Latency Inference & Edge Agents</h1>
-        <p class="hero-desc" style="font-size:1.15rem;line-height:1.7;color:var(--text-muted);margin:0.75rem 0 0;">
+<div style="font-family:var(--font-mono, monospace);letter-spacing:0.2em;text-transform:uppercase;font-size:0.85rem;color:var(--gold, #fbbf24);font-weight:700;">The Future Is Now</div>
+<div style="color:var(--text-muted, #94a3b8);font-size:0.95rem;margin-top:0.35rem;line-height:1.5;">By Thomas Cherickal, Generative AI Consultant | 4 November 2026</div>
+</div>
+</div>
+<div style="background:var(--bg-card, #0c111d);border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:14px;padding:2rem 2.25rem;box-shadow:0 4px 20px rgba(0, 0, 0, 0.35);box-sizing:border-box;">
+<p class="hero-badge" style="margin:0 0 0.85rem 0;">// EDGE INTELLIGENCE &amp; ULTRA-LOW LATENCY</p>
+<h1>Gemini 4 Carbon: Ultra-Low-Latency Inference &amp; Edge Agents</h1>
+<p class="hero-desc" style="font-size:1.15rem;line-height:1.7;color:var(--text-muted);margin:0.75rem 0 0;">
           An architectural deep dive into Gemini 4 Carbon: sub-10ms Time to First Token, speculative decoding cascades, edge runtime distillation, distributed multi-agent swarms, and enterprise deployment benchmarks.
         </p>
-      </div>
-    </header>
-
-    <div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;margin-bottom:2rem;">
-      <div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
-        <div style="font-size:2rem;font-weight:700;color:var(--gold);font-family:var(--font-mono);">&lt; 9.4ms</div>
-        <div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Time to First Token</div>
-      </div>
-      <div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
-        <div style="font-size:2rem;font-weight:700;color:var(--cyan);font-family:var(--font-mono);">4.2M T/s</div>
-        <div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Cluster Throughput</div>
-      </div>
-      <div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
-        <div style="font-size:2rem;font-weight:700;color:#e879f9;font-family:var(--font-mono);">4.8 GB</div>
-        <div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Quantized Edge Footprint</div>
-      </div>
-      <div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
-        <div style="font-size:2rem;font-weight:700;color:var(--green, #34d399);font-family:var(--font-mono);">99.4%</div>
-        <div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Tool Calling Accuracy</div>
-      </div>
-    </div>
-
-    <!-- TABLE OF CONTENTS -->
-    <article class="content-card" id="table-of-contents">
-      <h2>Contents</h2>
-      <div class="toc-grid" style="display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem;">
-        <a class="toc-link gold-link" href="#intro">1. Introduction &amp; The Element Model Family</a>
-        <a class="toc-link gold-link" href="#architecture">2. Architectural Foundations: Speculative Decoding &amp; Edge Distillation</a>
-        <a class="toc-link gold-link" href="#latency-throughput">3. Latency Mechanics &amp; Sub-10ms Execution Profiles</a>
-        <a class="toc-link gold-link" href="#hybrid-handoff">4. Hybrid Edge-to-Cloud Orchestration Pipeline</a>
-        <a class="toc-link gold-link" href="#benchmarks">5. Comparative Evaluation: Carbon vs Argon vs Flash</a>
-        <a class="toc-link gold-link" href="#use-cases">6. Enterprise Real-World Deployment Scenarios</a>
-        <a class="toc-link gold-link" href="#implementation">7. Production Python Implementation (Google GenAI SDK)</a>
-        <a class="toc-link gold-link" href="#operational-guardrails">8. Operational Limits, Memory Footprints &amp; Guardrails</a>
-        <a class="toc-link gold-link" href="#pricing-parity">9. Practice Pricing &amp; Global Purchasing Power Parity</a>
-        <a class="toc-link gold-link" href="#references">10. References</a>
-      </div>
-    </article>
-
-    <article class="content-card" id="intro">
-      <h2>Introduction &amp; The Element Model Family</h2>
-      <p>
+</div>
+</header>
+<div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;margin-bottom:2rem;">
+<div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
+<div style="font-size:2rem;font-weight:700;color:var(--gold);font-family:var(--font-mono);">&lt; 9.4ms</div>
+<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Time to First Token</div>
+</div>
+<div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
+<div style="font-size:2rem;font-weight:700;color:var(--cyan);font-family:var(--font-mono);">4.2M T/s</div>
+<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Cluster Throughput</div>
+</div>
+<div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
+<div style="font-size:2rem;font-weight:700;color:#e879f9;font-family:var(--font-mono);">4.8 GB</div>
+<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Quantized Edge Footprint</div>
+</div>
+<div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
+<div style="font-size:2rem;font-weight:700;color:var(--green, #34d399);font-family:var(--font-mono);">99.4%</div>
+<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Tool Calling Accuracy</div>
+</div>
+</div>
+<!-- TABLE OF CONTENTS -->
+<article class="content-card" id="table-of-contents">
+<h2>Contents</h2>
+<div class="toc-grid" style="display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem;">
+<a class="toc-link gold-link" href="#intro">1. Introduction &amp; The Element Model Family</a>
+<a class="toc-link gold-link" href="#architecture">2. Architectural Foundations: Speculative Decoding &amp; Edge Distillation</a>
+<a class="toc-link gold-link" href="#latency-throughput">3. Latency Mechanics &amp; Sub-10ms Execution Profiles</a>
+<a class="toc-link gold-link" href="#hybrid-handoff">4. Hybrid Edge-to-Cloud Orchestration Pipeline</a>
+<a class="toc-link gold-link" href="#benchmarks">5. Comparative Evaluation: Carbon vs Argon vs Flash</a>
+<a class="toc-link gold-link" href="#use-cases">6. Enterprise Real-World Deployment Scenarios</a>
+<a class="toc-link gold-link" href="#implementation">7. Production Python Implementation (Google GenAI SDK)</a>
+<a class="toc-link gold-link" href="#operational-guardrails">8. Operational Limits, Memory Footprints &amp; Guardrails</a>
+<a class="toc-link gold-link" href="#pricing-parity">9. Practice Pricing &amp; Global Purchasing Power Parity</a>
+<a class="toc-link gold-link" href="#references">10. References</a>
+</div>
+</article>
+<article class="content-card" id="intro">
+<h2>Introduction &amp; The Element Model Family</h2>
+<p>
         In modern enterprise artificial intelligence, a single architectural compromise has historically dominated systems engineering: the trade-off between reasoning depth and execution latency. Massive frontier models achieve deep mathematical verification and complex planning at the cost of hundreds of milliseconds per token. Conversely, lightweight edge models deliver immediate response times but frequently falter when executing multi-turn tool calling, structured schema validation, or resilient error recovery.
       </p>
-      <p>
+<p>
         Google DeepMind addresses this divide through its specialized element model series. Within this design taxonomy, each architecture is engineered around specific thermodynamic and computational properties:
       </p>
-      <ul style="line-height:1.8;">
-        <li><strong>Gemini Argon:</strong> The heavy noble element designed for unyielding frontier reasoning, sustaining 1M-token output decodes, formal mathematical verification, and autonomous long-horizon scientific experiments.</li>
-        <li><strong>Gemini Carbon:</strong> The tetravalent bonding element engineered for ultra-low-latency execution, speculative verification, high-throughput edge deployment, and agile real-time agent swarms.</li>
-        <li><strong>Gemini Hydrogen:</strong> The ultra-dense, lightweight foundational substrate optimized for embedded sensor telemetry and extreme low-power microcontroller inference.</li>
-        <li><strong>Gemini Xenon:</strong> The high-capacity specialized multi-agent coordinator engineered for continuous long-context knowledge retrieval across global data fabrics.</li>
-      </ul>
-      <p>
+<ul style="line-height:1.8;">
+<li><strong>Gemini Argon:</strong> The heavy noble element designed for unyielding frontier reasoning, sustaining 1M-token output decodes, formal mathematical verification, and autonomous long-horizon scientific experiments.</li>
+<li><strong>Gemini Carbon:</strong> The tetravalent bonding element engineered for ultra-low-latency execution, speculative verification, high-throughput edge deployment, and agile real-time agent swarms.</li>
+<li><strong>Gemini Hydrogen:</strong> The ultra-dense, lightweight foundational substrate optimized for embedded sensor telemetry and extreme low-power microcontroller inference.</li>
+<li><strong>Gemini Xenon:</strong> The high-capacity specialized multi-agent coordinator engineered for continuous long-context knowledge retrieval across global data fabrics.</li>
+</ul>
+<p>
         Gemini 4 Carbon represents the high-frequency backbone of this family. Where Gemini Argon serves as the deliberate, deep-thinking strategist, Gemini Carbon acts as the rapid-reflex tactile executor. Operating seamlessly across local desktop hardware, enterprise edge clusters, and cloud hyperscalers, Carbon brings sub-10ms Time to First Token (TTFT) and multi-million token throughput to operational software engineering.
       </p>
-    </article>
-
-    <article class="content-card" id="architecture">
-      <h2>Architectural Foundations: Speculative Decoding &amp; Edge Distillation</h2>
-      <p>
+</article>
+<article class="content-card" id="architecture">
+<h2>Architectural Foundations: Speculative Decoding &amp; Edge Distillation</h2>
+<p>
         The extreme speed of Gemini 4 Carbon is achieved not through crude parameter pruning, but through a purpose-built dual-engine speculative decoding architecture paired with knowledge distillation from Gemini Argon weights.
       </p>
-      <p>
+<p>
         Standard autoregressive transformers generate tokens strictly sequentially, where generating \(N\) tokens requires \(N\) forward passes through all transformer layers. Carbon alters this dynamic by pairing a distilled, speculative drafting engine with a verification tensor bank. The draft engine proposes batches of candidate tokens in parallel, which are verified simultaneously within a single matrix multiplication pass.
       </p>
-
-      <figure style="margin:2rem 0;text-align:center;">
-        <svg aria-labelledby="carbon-arch-title carbon-arch-desc" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56,189,248,0.3);border-radius:14px;background:#000;" viewBox="0 0 960 480">
-          <title id="carbon-arch-title">Gemini 4 Carbon Speculative Decoding Architecture</title>
-          <desc id="carbon-arch-desc">Draft proposals generated by local distilled weights verified in parallel by high-throughput tensor cores.</desc>
-          <defs>
-            <linearGradient id="carbonGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#38BDF8"/>
-              <stop offset="100%" stop-color="#0284C7"/>
-            </linearGradient>
-            <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#FDE047"/>
-              <stop offset="100%" stop-color="#F59E0B"/>
-            </linearGradient>
-            <filter id="neonBlur">
-              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-              <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
-              </feMerge>
-            </filter>
-          </defs>
-          <rect width="960" height="480" fill="#040711"/>
-          <rect x="8" y="8" width="944" height="464" rx="12" fill="none" stroke="#38BDF8" stroke-opacity="0.3" stroke-width="1.5"/>
-
-          <text x="40" y="48" fill="#FBBF24" font-size="22" font-weight="700" font-family="monospace">Gemini 4 Carbon: Speculative Edge Pipeline</text>
-          <text x="40" y="74" fill="#94A3B8" font-size="14">Distilled weight drafting paired with parallel verification tensors</text>
-
-          <!-- Input Stream -->
-          <rect x="50" y="140" width="160" height="70" rx="8" fill="#0C1527" stroke="#38BDF8" stroke-width="2"/>
-          <text x="130" y="172" fill="#E2E8F0" font-size="15" font-weight="700" text-anchor="middle">Input Stream</text>
-          <text x="130" y="194" fill="#38BDF8" font-size="12" text-anchor="middle">Multi-turn Context</text>
-
-          <!-- Arrow 1 -->
-          <path d="M210 175 L280 175" stroke="#FBBF24" stroke-width="2.5" marker-end="url(#arrow)" fill="none"/>
-
-          <!-- Speculative Draft Engine -->
-          <rect x="280" y="115" width="220" height="120" rx="10" fill="#131C31" stroke="url(#carbonGlow)" stroke-width="2.5" filter="url(#neonBlur)"/>
-          <text x="390" y="150" fill="#38BDF8" font-size="16" font-weight="700" text-anchor="middle">Speculative Drafter</text>
-          <text x="390" y="174" fill="#94A3B8" font-size="12" text-anchor="middle">Distilled Compact Tensors</text>
-          <text x="390" y="196" fill="#FBBF24" font-size="13" font-weight="700" text-anchor="middle">Parallel K-Candidate Tokens</text>
-          <text x="390" y="218" fill="#34D399" font-size="11" text-anchor="middle">Latency: ~1.2ms / burst</text>
-
-          <!-- Branch to Verification -->
-          <path d="M500 175 L570 175" stroke="#FBBF24" stroke-width="2.5" fill="none"/>
-
-          <!-- Verification Block -->
-          <rect x="570" y="115" width="200" height="120" rx="10" fill="#1A1528" stroke="url(#goldGlow)" stroke-width="2.5"/>
-          <text x="670" y="150" fill="#FBBF24" font-size="16" font-weight="700" text-anchor="middle">Verification Unit</text>
-          <text x="670" y="174" fill="#E2E8F0" font-size="12" text-anchor="middle">Unified Attention Check</text>
-          <text x="670" y="196" fill="#38BDF8" font-size="13" font-weight="700" text-anchor="middle">Exact Token Match</text>
-          <text x="670" y="218" fill="#94A3B8" font-size="11" text-anchor="middle">Single Matrix Multiply</text>
-
-          <!-- Arrow to Output -->
-          <path d="M770 175 L840 175" stroke="#34D399" stroke-width="2.5" fill="none"/>
-
-          <!-- High-Speed Output Stream -->
-          <rect x="840" y="135" width="80" height="80" rx="8" fill="#06261A" stroke="#34D399" stroke-width="2"/>
-          <text x="880" y="172" fill="#34D399" font-size="14" font-weight="700" text-anchor="middle">Verified</text>
-          <text x="880" y="192" fill="#E2E8F0" font-size="12" text-anchor="middle">Tokens</text>
-
-          <!-- Bottom Edge Telemetry Box -->
-          <rect x="50" y="280" width="870" height="160" rx="10" fill="#080D1A" stroke="rgba(56,189,248,0.2)" stroke-width="1.5"/>
-          <text x="75" y="315" fill="#38BDF8" font-size="15" font-weight="700">Edge Execution Properties:</text>
-
-          <text x="75" y="348" fill="#E2E8F0" font-size="13">• KV-Cache Compression: Structured 4-bit Grouped Query Attention (GQA) reduces local VRAM requirements to 4.8 GB.</text>
-          <text x="75" y="376" fill="#E2E8F0" font-size="13">• Speculative Acceptance Rate: Achieves 84.6% acceptance across real-world code generation and function calling.</text>
-          <text x="75" y="404" fill="#E2E8F0" font-size="13">• Hardware Acceleration: Native kernel compilation for Apple Silicon Metal, NVIDIA TensorRT-LLM, and Google Edge TPUs.</text>
-          <text x="75" y="426" fill="#94A3B8" font-size="12">Source: DeepMind Edge Systems Whitepaper, October 2026. Metrics benchmarked on FP8 quantized weights.</text>
-        </svg>
-        <figcaption style="font-size:0.85rem;color:var(--text-muted, #94a3b8);margin-top:0.6rem;">Image 1. Architectural schematic of Gemini 4 Carbon's dual-engine speculative verification pipeline.</figcaption>
-      </figure>
-
-      <p>
+<figure style="margin:2rem 0;text-align:center;">
+<svg aria-labelledby="carbon-arch-title carbon-arch-desc" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56,189,248,0.3);border-radius:14px;background:#000;" viewbox="0 0 960 480">
+<title id="carbon-arch-title">Gemini 4 Carbon Speculative Decoding Architecture</title>
+<desc id="carbon-arch-desc">Draft proposals generated by local distilled weights verified in parallel by high-throughput tensor cores.</desc>
+<defs>
+<lineargradient id="carbonGlow" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#38BDF8"></stop>
+<stop offset="100%" stop-color="#0284C7"></stop>
+</lineargradient>
+<lineargradient id="goldGlow" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#FDE047"></stop>
+<stop offset="100%" stop-color="#F59E0B"></stop>
+</lineargradient>
+<filter id="neonBlur">
+<fegaussianblur result="coloredBlur" stddeviation="3"></fegaussianblur>
+<femerge>
+<femergenode in="coloredBlur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<rect fill="#040711" height="480" width="960"></rect>
+<rect fill="none" height="464" rx="12" stroke="#38BDF8" stroke-opacity="0.3" stroke-width="1.5" width="944" x="8" y="8"></rect>
+<text fill="#FBBF24" font-family="monospace" font-size="22" font-weight="700" x="40" y="48">Gemini 4 Carbon: Speculative Edge Pipeline</text>
+<text fill="#94A3B8" font-size="14" x="40" y="74">Distilled weight drafting paired with parallel verification tensors</text>
+<!-- Input Stream -->
+<rect fill="#0C1527" height="70" rx="8" stroke="#38BDF8" stroke-width="2" width="160" x="50" y="140"></rect>
+<text fill="#E2E8F0" font-size="15" font-weight="700" text-anchor="middle" x="130" y="172">Input Stream</text>
+<text fill="#38BDF8" font-size="12" text-anchor="middle" x="130" y="194">Multi-turn Context</text>
+<!-- Arrow 1 -->
+<path d="M210 175 L280 175" fill="none" marker-end="url(#arrow)" stroke="#FBBF24" stroke-width="2.5"></path>
+<!-- Speculative Draft Engine -->
+<rect fill="#131C31" filter="url(#neonBlur)" height="120" rx="10" stroke="url(#carbonGlow)" stroke-width="2.5" width="220" x="280" y="115"></rect>
+<text fill="#38BDF8" font-size="16" font-weight="700" text-anchor="middle" x="390" y="150">Speculative Drafter</text>
+<text fill="#94A3B8" font-size="12" text-anchor="middle" x="390" y="174">Distilled Compact Tensors</text>
+<text fill="#FBBF24" font-size="13" font-weight="700" text-anchor="middle" x="390" y="196">Parallel K-Candidate Tokens</text>
+<text fill="#34D399" font-size="11" text-anchor="middle" x="390" y="218">Latency: ~1.2ms / burst</text>
+<!-- Branch to Verification -->
+<path d="M500 175 L570 175" fill="none" stroke="#FBBF24" stroke-width="2.5"></path>
+<!-- Verification Block -->
+<rect fill="#1A1528" height="120" rx="10" stroke="url(#goldGlow)" stroke-width="2.5" width="200" x="570" y="115"></rect>
+<text fill="#FBBF24" font-size="16" font-weight="700" text-anchor="middle" x="670" y="150">Verification Unit</text>
+<text fill="#E2E8F0" font-size="12" text-anchor="middle" x="670" y="174">Unified Attention Check</text>
+<text fill="#38BDF8" font-size="13" font-weight="700" text-anchor="middle" x="670" y="196">Exact Token Match</text>
+<text fill="#94A3B8" font-size="11" text-anchor="middle" x="670" y="218">Single Matrix Multiply</text>
+<!-- Arrow to Output -->
+<path d="M770 175 L840 175" fill="none" stroke="#34D399" stroke-width="2.5"></path>
+<!-- High-Speed Output Stream -->
+<rect fill="#06261A" height="80" rx="8" stroke="#34D399" stroke-width="2" width="80" x="840" y="135"></rect>
+<text fill="#34D399" font-size="14" font-weight="700" text-anchor="middle" x="880" y="172">Verified</text>
+<text fill="#E2E8F0" font-size="12" text-anchor="middle" x="880" y="192">Tokens</text>
+<!-- Bottom Edge Telemetry Box -->
+<rect fill="#080D1A" height="160" rx="10" stroke="rgba(56,189,248,0.2)" stroke-width="1.5" width="870" x="50" y="280"></rect>
+<text fill="#38BDF8" font-size="15" font-weight="700" x="75" y="315">Edge Execution Properties:</text>
+<text fill="#E2E8F0" font-size="13" x="75" y="348">• KV-Cache Compression: Structured 4-bit Grouped Query Attention (GQA) reduces local VRAM requirements to 4.8 GB.</text>
+<text fill="#E2E8F0" font-size="13" x="75" y="376">• Speculative Acceptance Rate: Achieves 84.6% acceptance across real-world code generation and function calling.</text>
+<text fill="#E2E8F0" font-size="13" x="75" y="404">• Hardware Acceleration: Native kernel compilation for Apple Silicon Metal, NVIDIA TensorRT-LLM, and Google Edge TPUs.</text>
+<text fill="#94A3B8" font-size="12" x="75" y="426">Source: DeepMind Edge Systems Whitepaper, October 2026. Metrics benchmarked on FP8 quantized weights.</text>
+</svg>
+<figcaption style="font-size:0.85rem;color:var(--text-muted, #94a3b8);margin-top:0.6rem;">Image 1. Architectural schematic of Gemini 4 Carbon's dual-engine speculative verification pipeline.</figcaption>
+</figure>
+<p>
         By leveraging 4-bit Grouped Query Attention (GQA) with selective linear state-space layers, Carbon eliminates the quadratic memory expansion typical of long-context token generation. When executing agent workflows containing up to 128,000 tokens of conversational and telemetry context, memory consumption remains strictly flat, preventing local workstation out-of-memory crashes.
       </p>
-    </article>
-
-    <article class="content-card" id="latency-throughput">
-      <h2>Latency Mechanics &amp; Sub-10ms Execution Profiles</h2>
-      <p>
+</article>
+<article class="content-card" id="latency-throughput">
+<h2>Latency Mechanics &amp; Sub-10ms Execution Profiles</h2>
+<p>
         In interactive agent systems, latency is divided into two distinct engineering metrics: Time to First Token (TTFT) and Inter-Token Latency (ITL). While ITL governs the speed at which text streams across a monitor, TTFT determines how rapidly an autonomous agent evaluates incoming environment changes, validates input arguments, and dispatches API commands.
       </p>
-      <p>
+<p>
         Standard frontier models register TTFT measurements between 380ms and 950ms. In high-frequency operational contexts - such as real-time cyber defense interception, live voice streaming, or robotic obstacle avoidance - this delay introduces unacceptable lag. Gemini 4 Carbon records a consistent TTFT of under 9.4ms when served locally or across dedicated regional edge gateways.
       </p>
-
-      <figure style="margin:2rem 0;text-align:center;">
-        <svg aria-labelledby="latency-chart-title latency-chart-desc" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56,189,248,0.3);border-radius:14px;background:#000;" viewBox="0 0 960 400">
-          <title id="latency-chart-title">Time to First Token (TTFT) Comparison</title>
-          <desc id="latency-chart-desc">Comparative bar chart showing Time to First Token across major model architectures in milliseconds.</desc>
-          <rect width="960" height="400" fill="#040711"/>
-          <text x="40" y="40" fill="#FBBF24" font-size="20" font-weight="700" font-family="monospace">Time to First Token (TTFT) in Milliseconds (Lower is Better)</text>
-
-          <!-- Grid Lines -->
-          <g stroke="rgba(56,189,248,0.15)" stroke-width="1">
-            <line x1="220" y1="80" x2="220" y2="340"/>
-            <line x1="380" y1="80" x2="380" y2="340"/>
-            <line x1="540" y1="80" x2="540" y2="340"/>
-            <line x1="700" y1="80" x2="700" y2="340"/>
-            <line x1="860" y1="80" x2="860" y2="340"/>
-          </g>
-
-          <g fill="#94A3B8" font-size="12" text-anchor="middle">
-            <text x="220" y="365">0ms</text>
-            <text x="380" y="365">150ms</text>
-            <text x="540" y="365">300ms</text>
-            <text x="700" y="365">450ms</text>
-            <text x="860" y="365">600ms</text>
-          </g>
-
-          <!-- Bars -->
-          <!-- Carbon Edge Local -->
-          <text x="200" y="115" fill="#38BDF8" font-size="14" font-weight="700" text-anchor="end">Carbon (Edge Local)</text>
-          <rect x="220" y="98" width="10" height="26" rx="4" fill="#34D399"/>
-          <text x="240" y="116" fill="#34D399" font-size="13" font-weight="700">9.4ms</text>
-
-          <!-- Carbon Edge Gateway Cloud -->
-          <text x="200" y="165" fill="#E2E8F0" font-size="14" text-anchor="end">Carbon (Regional Edge)</text>
-          <rect x="220" y="148" width="28" height="26" rx="4" fill="#38BDF8"/>
-          <text x="258" y="166" fill="#38BDF8" font-size="13">26.5ms</text>
-
-          <!-- Gemini Flash Baseline -->
-          <text x="200" y="215" fill="#E2E8F0" font-size="14" text-anchor="end">Gemini Flash</text>
-          <rect x="220" y="198" width="144" height="26" rx="4" fill="#FBBF24"/>
-          <text x="374" y="216" fill="#FBBF24" font-size="13">135.0ms</text>
-
-          <!-- Generic Edge Baseline 8B -->
-          <text x="200" y="265" fill="#E2E8F0" font-size="14" text-anchor="end">Standard 8B Local</text>
-          <rect x="220" y="248" width="224" height="26" rx="4" fill="#A855F7"/>
-          <text x="454" y="266" fill="#A855F7" font-size="13">210.0ms</text>
-
-          <!-- Frontier Model Cloud Baseline -->
-          <text x="200" y="315" fill="#E2E8F0" font-size="14" text-anchor="end">Frontier Cloud Models</text>
-          <rect x="220" y="298" width="580" height="26" rx="4" fill="#F43F5E"/>
-          <text x="810" y="316" fill="#F43F5E" font-size="13">545.0ms</text>
-        </svg>
-        <figcaption style="font-size:0.85rem;color:var(--text-muted, #94a3b8);margin-top:0.6rem;">Image 2. Measured Time to First Token across edge runtimes and regional cloud infrastructure.</figcaption>
-      </figure>
-
-      <p>
+<figure style="margin:2rem 0;text-align:center;">
+<svg aria-labelledby="latency-chart-title latency-chart-desc" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56,189,248,0.3);border-radius:14px;background:#000;" viewbox="0 0 960 400">
+<title id="latency-chart-title">Time to First Token (TTFT) Comparison</title>
+<desc id="latency-chart-desc">Comparative bar chart showing Time to First Token across major model architectures in milliseconds.</desc>
+<rect fill="#040711" height="400" width="960"></rect>
+<text fill="#FBBF24" font-family="monospace" font-size="20" font-weight="700" x="40" y="40">Time to First Token (TTFT) in Milliseconds (Lower is Better)</text>
+<!-- Grid Lines -->
+<g stroke="rgba(56,189,248,0.15)" stroke-width="1">
+<line x1="220" x2="220" y1="80" y2="340"></line>
+<line x1="380" x2="380" y1="80" y2="340"></line>
+<line x1="540" x2="540" y1="80" y2="340"></line>
+<line x1="700" x2="700" y1="80" y2="340"></line>
+<line x1="860" x2="860" y1="80" y2="340"></line>
+</g>
+<g fill="#94A3B8" font-size="12" text-anchor="middle">
+<text x="220" y="365">0ms</text>
+<text x="380" y="365">150ms</text>
+<text x="540" y="365">300ms</text>
+<text x="700" y="365">450ms</text>
+<text x="860" y="365">600ms</text>
+</g>
+<!-- Bars -->
+<!-- Carbon Edge Local -->
+<text fill="#38BDF8" font-size="14" font-weight="700" text-anchor="end" x="200" y="115">Carbon (Edge Local)</text>
+<rect fill="#34D399" height="26" rx="4" width="10" x="220" y="98"></rect>
+<text fill="#34D399" font-size="13" font-weight="700" x="240" y="116">9.4ms</text>
+<!-- Carbon Edge Gateway Cloud -->
+<text fill="#E2E8F0" font-size="14" text-anchor="end" x="200" y="165">Carbon (Regional Edge)</text>
+<rect fill="#38BDF8" height="26" rx="4" width="28" x="220" y="148"></rect>
+<text fill="#38BDF8" font-size="13" x="258" y="166">26.5ms</text>
+<!-- Gemini Flash Baseline -->
+<text fill="#E2E8F0" font-size="14" text-anchor="end" x="200" y="215">Gemini Flash</text>
+<rect fill="#FBBF24" height="26" rx="4" width="144" x="220" y="198"></rect>
+<text fill="#FBBF24" font-size="13" x="374" y="216">135.0ms</text>
+<!-- Generic Edge Baseline 8B -->
+<text fill="#E2E8F0" font-size="14" text-anchor="end" x="200" y="265">Standard 8B Local</text>
+<rect fill="#A855F7" height="26" rx="4" width="224" x="220" y="248"></rect>
+<text fill="#A855F7" font-size="13" x="454" y="266">210.0ms</text>
+<!-- Frontier Model Cloud Baseline -->
+<text fill="#E2E8F0" font-size="14" text-anchor="end" x="200" y="315">Frontier Cloud Models</text>
+<rect fill="#F43F5E" height="26" rx="4" width="580" x="220" y="298"></rect>
+<text fill="#F43F5E" font-size="13" x="810" y="316">545.0ms</text>
+</svg>
+<figcaption style="font-size:0.85rem;color:var(--text-muted, #94a3b8);margin-top:0.6rem;">Image 2. Measured Time to First Token across edge runtimes and regional cloud infrastructure.</figcaption>
+</figure>
+<p>
         This sub-10ms performance unlocks real-time iterative execution loops. When an agent experiences an API invocation failure or a schema mismatch, it can re-plan, re-parameterize, and re-invoke the target service four consecutive times before a conventional cloud model has returned its initial opening token.
       </p>
-    </article>
-
-    <article class="content-card" id="hybrid-handoff">
-      <h2>Hybrid Edge-to-Cloud Orchestration Pipeline</h2>
-      <p>
+</article>
+<article class="content-card" id="hybrid-handoff">
+<h2>Hybrid Edge-to-Cloud Orchestration Pipeline</h2>
+<p>
         Rather than attempting to replace frontier models entirely, Gemini 4 Carbon functions as the primary tactical triage layer in a tiered edge-to-cloud architecture. In this topology, local Carbon instances handle high-frequency interactions, data parsing, and initial task decomposition. When a task requires deep mathematical derivation, extensive code repository synthesis, or long-horizon scientific analysis, Carbon gracefully serializes the context and delegates execution to Gemini Argon.
       </p>
-
-      <figure style="margin:2rem 0;text-align:center;">
-        <svg aria-labelledby="handoff-title handoff-desc" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56,189,248,0.3);border-radius:14px;background:#000;" viewBox="0 0 960 440">
-          <title id="handoff-title">Hybrid Edge-to-Cloud Handoff Protocol</title>
-          <desc id="handoff-desc">Diagram showing tactical edge evaluation routing standard tasks locally while handing complex long-horizon tasks to Gemini Argon.</desc>
-          <rect width="960" height="440" fill="#040711"/>
-          <rect x="8" y="8" width="944" height="424" rx="12" fill="none" stroke="#FBBF24" stroke-opacity="0.3" stroke-width="1.5"/>
-
-          <text x="40" y="46" fill="#FBBF24" font-size="20" font-weight="700" font-family="monospace">Hybrid Edge-to-Cloud Routing Matrix</text>
-
-          <!-- Client Request -->
-          <rect x="50" y="110" width="160" height="80" rx="8" fill="#0C1527" stroke="#38BDF8" stroke-width="2"/>
-          <text x="130" y="145" fill="#E2E8F0" font-size="14" font-weight="700" text-anchor="middle">Incoming Task</text>
-          <text x="130" y="168" fill="#38BDF8" font-size="12" text-anchor="middle">User / Telemetry</text>
-
-          <!-- Router Arrow -->
-          <path d="M210 150 L280 150" stroke="#FBBF24" stroke-width="2" fill="none"/>
-
-          <!-- Local Carbon Node -->
-          <rect x="280" y="85" width="240" height="130" rx="10" fill="#131C31" stroke="#34D399" stroke-width="2.5"/>
-          <text x="400" y="120" fill="#34D399" font-size="16" font-weight="700" text-anchor="middle">Gemini 4 Carbon Node</text>
-          <text x="400" y="145" fill="#E2E8F0" font-size="12" text-anchor="middle">Local Edge / Workstation</text>
-          <text x="400" y="170" fill="#FBBF24" font-size="13" font-weight="700" text-anchor="middle">Complexity Triage: &lt; 9ms</text>
-          <text x="400" y="192" fill="#94A3B8" font-size="11" text-anchor="middle">Entropy &amp; Uncertainty Gate</text>
-
-          <!-- Branch Fast Path -->
-          <path d="M520 130 L660 130" stroke="#34D399" stroke-width="2.5" fill="none"/>
-          <rect x="660" y="95" width="250" height="70" rx="8" fill="#06261A" stroke="#34D399" stroke-width="2"/>
-          <text x="785" y="128" fill="#34D399" font-size="14" font-weight="700" text-anchor="middle">Immediate Local Execution</text>
-          <text x="785" y="148" fill="#E2E8F0" font-size="12" text-anchor="middle">API Calls, UI Updates, Parsing (92% of events)</text>
-
-          <!-- Branch Heavy Path -->
-          <path d="M400 215 L400 300 L660 300" stroke="#FBBF24" stroke-width="2.5" fill="none"/>
-          <rect x="660" y="255" width="250" height="90" rx="8" fill="#2A1B05" stroke="#FBBF24" stroke-width="2"/>
-          <text x="785" y="288" fill="#FBBF24" font-size="15" font-weight="700" text-anchor="middle">Cloud Uplink: Gemini Argon</text>
-          <text x="785" y="310" fill="#E2E8F0" font-size="12" text-anchor="middle">1M Output Decodes, Proofs,</text>
-          <text x="785" y="328" fill="#94A3B8" font-size="12" text-anchor="middle">Long-Horizon Strategic Swarms</text>
-
-          <text x="50" y="390" fill="#94A3B8" font-size="13">
+<figure style="margin:2rem 0;text-align:center;">
+<svg aria-labelledby="handoff-title handoff-desc" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56,189,248,0.3);border-radius:14px;background:#000;" viewbox="0 0 960 440">
+<title id="handoff-title">Hybrid Edge-to-Cloud Handoff Protocol</title>
+<desc id="handoff-desc">Diagram showing tactical edge evaluation routing standard tasks locally while handing complex long-horizon tasks to Gemini Argon.</desc>
+<rect fill="#040711" height="440" width="960"></rect>
+<rect fill="none" height="424" rx="12" stroke="#FBBF24" stroke-opacity="0.3" stroke-width="1.5" width="944" x="8" y="8"></rect>
+<text fill="#FBBF24" font-family="monospace" font-size="20" font-weight="700" x="40" y="46">Hybrid Edge-to-Cloud Routing Matrix</text>
+<!-- Client Request -->
+<rect fill="#0C1527" height="80" rx="8" stroke="#38BDF8" stroke-width="2" width="160" x="50" y="110"></rect>
+<text fill="#E2E8F0" font-size="14" font-weight="700" text-anchor="middle" x="130" y="145">Incoming Task</text>
+<text fill="#38BDF8" font-size="12" text-anchor="middle" x="130" y="168">User / Telemetry</text>
+<!-- Router Arrow -->
+<path d="M210 150 L280 150" fill="none" stroke="#FBBF24" stroke-width="2"></path>
+<!-- Local Carbon Node -->
+<rect fill="#131C31" height="130" rx="10" stroke="#34D399" stroke-width="2.5" width="240" x="280" y="85"></rect>
+<text fill="#34D399" font-size="16" font-weight="700" text-anchor="middle" x="400" y="120">Gemini 4 Carbon Node</text>
+<text fill="#E2E8F0" font-size="12" text-anchor="middle" x="400" y="145">Local Edge / Workstation</text>
+<text fill="#FBBF24" font-size="13" font-weight="700" text-anchor="middle" x="400" y="170">Complexity Triage: &lt; 9ms</text>
+<text fill="#94A3B8" font-size="11" text-anchor="middle" x="400" y="192">Entropy &amp; Uncertainty Gate</text>
+<!-- Branch Fast Path -->
+<path d="M520 130 L660 130" fill="none" stroke="#34D399" stroke-width="2.5"></path>
+<rect fill="#06261A" height="70" rx="8" stroke="#34D399" stroke-width="2" width="250" x="660" y="95"></rect>
+<text fill="#34D399" font-size="14" font-weight="700" text-anchor="middle" x="785" y="128">Immediate Local Execution</text>
+<text fill="#E2E8F0" font-size="12" text-anchor="middle" x="785" y="148">API Calls, UI Updates, Parsing (92% of events)</text>
+<!-- Branch Heavy Path -->
+<path d="M400 215 L400 300 L660 300" fill="none" stroke="#FBBF24" stroke-width="2.5"></path>
+<rect fill="#2A1B05" height="90" rx="8" stroke="#FBBF24" stroke-width="2" width="250" x="660" y="255"></rect>
+<text fill="#FBBF24" font-size="15" font-weight="700" text-anchor="middle" x="785" y="288">Cloud Uplink: Gemini Argon</text>
+<text fill="#E2E8F0" font-size="12" text-anchor="middle" x="785" y="310">1M Output Decodes, Proofs,</text>
+<text fill="#94A3B8" font-size="12" text-anchor="middle" x="785" y="328">Long-Horizon Strategic Swarms</text>
+<text fill="#94A3B8" font-size="13" x="50" y="390">
             Handoff Protocol: Carbon serializes the active KV state, compresses execution history via semantic diffs, and transmits a cryptographically signed task payload to cloud instances.
           </text>
-        </svg>
-        <figcaption style="font-size:0.85rem;color:var(--text-muted, #94a3b8);margin-top:0.6rem;">Image 3. Dynamic complexity-based triage routing between edge Carbon runtimes and cloud Argon reasoning.</figcaption>
-      </figure>
-    </article>
-
-    <article class="content-card" id="benchmarks">
-      <h2>Comparative Evaluation: Carbon vs Argon vs Flash</h2>
-      <p>
+</svg>
+<figcaption style="font-size:0.85rem;color:var(--text-muted, #94a3b8);margin-top:0.6rem;">Image 3. Dynamic complexity-based triage routing between edge Carbon runtimes and cloud Argon reasoning.</figcaption>
+</figure>
+</article>
+<article class="content-card" id="benchmarks">
+<h2>Comparative Evaluation: Carbon vs Argon vs Flash</h2>
+<p>
         To quantify where Gemini 4 Carbon excels within production engineering pipelines, the table below highlights architectural specifications, inference latency benchmarks, and operational memory bounds compared to its peer models:
       </p>
-
-      <div class="tablewrap" style="overflow-x:auto;margin:22px 0;border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:10px;">
-        <table class="data-table" style="width:100%;border-collapse:collapse;font-size:15px;background:var(--bg-card, #0c111d);">
-          <thead>
-            <tr>
-              <th style="padding:12px 16px;text-align:left;color:var(--gold, #fbbf24);background:rgba(6,9,18,0.8);border-bottom:1px solid rgba(56,189,248,0.2);font-family:var(--font-mono, monospace);">Capability &amp; Metric</th>
-              <th style="padding:12px 16px;text-align:left;color:var(--gold, #fbbf24);background:rgba(6,9,18,0.8);border-bottom:1px solid rgba(56,189,248,0.2);font-family:var(--font-mono, monospace);">Gemini 4 Carbon</th>
-              <th style="padding:12px 16px;text-align:left;color:var(--gold, #fbbf24);background:rgba(6,9,18,0.8);border-bottom:1px solid rgba(56,189,248,0.2);font-family:var(--font-mono, monospace);">Gemini 4 Argon</th>
-              <th style="padding:12px 16px;text-align:left;color:var(--gold, #fbbf24);background:rgba(6,9,18,0.8);border-bottom:1px solid rgba(56,189,248,0.2);font-family:var(--font-mono, monospace);">Gemini Flash</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Primary Engineering Focus</td>
-              <td class="best" style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Ultra-Low Latency Edge Agents</td>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Frontier Reasoning &amp; Long Horizon</td>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Balanced Multimodal Cloud Workloads</td>
-            </tr>
-            <tr>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Time to First Token (TTFT)</td>
-              <td class="best" style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">&lt; 9.4ms (Local Edge)</td>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">420ms - 890ms</td>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">120ms - 180ms</td>
-            </tr>
-            <tr>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Context Window Limit</td>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">128,000 Tokens</td>
-              <td class="best" style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">1,048,576 Tokens</td>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">1,048,576 Tokens</td>
-            </tr>
-            <tr>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Maximum Output Horizon</td>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">16,384 Tokens</td>
-              <td class="best" style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">1,000,000 Tokens</td>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">65,536 Tokens</td>
-            </tr>
-            <tr>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Quantized RAM Footprint</td>
-              <td class="best" style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">4.8 GB (INT4 / FP8 Hybrid)</td>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Requires Distributed Cloud Pod</td>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Serverless Cloud Managed</td>
-            </tr>
-            <tr>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Tool Calling Precision</td>
-              <td class="best" style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">99.4% (Direct Schema Constraint)</td>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">99.1%</td>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">97.8%</td>
-            </tr>
-            <tr>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Offline Air-Gapped Operation</td>
-              <td class="best" style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Supported (Self-Contained)</td>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Cloud Dependent</td>
-              <td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Cloud Dependent</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </article>
-
-    <article class="content-card" id="use-cases">
-      <h2>Enterprise Real-World Deployment Scenarios</h2>
-      <p>
+<div class="tablewrap" style="overflow-x:auto;margin:22px 0;border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:10px;">
+<table class="data-table" style="width:100%;border-collapse:collapse;font-size:15px;background:var(--bg-card, #0c111d);">
+<thead>
+<tr>
+<th style="padding:12px 16px;text-align:left;color:var(--gold, #fbbf24);background:rgba(6,9,18,0.8);border-bottom:1px solid rgba(56,189,248,0.2);font-family:var(--font-mono, monospace);">Capability &amp; Metric</th>
+<th style="padding:12px 16px;text-align:left;color:var(--gold, #fbbf24);background:rgba(6,9,18,0.8);border-bottom:1px solid rgba(56,189,248,0.2);font-family:var(--font-mono, monospace);">Gemini 4 Carbon</th>
+<th style="padding:12px 16px;text-align:left;color:var(--gold, #fbbf24);background:rgba(6,9,18,0.8);border-bottom:1px solid rgba(56,189,248,0.2);font-family:var(--font-mono, monospace);">Gemini 4 Argon</th>
+<th style="padding:12px 16px;text-align:left;color:var(--gold, #fbbf24);background:rgba(6,9,18,0.8);border-bottom:1px solid rgba(56,189,248,0.2);font-family:var(--font-mono, monospace);">Gemini Flash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Primary Engineering Focus</td>
+<td class="best" style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Ultra-Low Latency Edge Agents</td>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Frontier Reasoning &amp; Long Horizon</td>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Balanced Multimodal Cloud Workloads</td>
+</tr>
+<tr>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Time to First Token (TTFT)</td>
+<td class="best" style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">&lt; 9.4ms (Local Edge)</td>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">420ms - 890ms</td>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">120ms - 180ms</td>
+</tr>
+<tr>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Context Window Limit</td>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">128,000 Tokens</td>
+<td class="best" style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">1,048,576 Tokens</td>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">1,048,576 Tokens</td>
+</tr>
+<tr>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Maximum Output Horizon</td>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">16,384 Tokens</td>
+<td class="best" style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">1,000,000 Tokens</td>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">65,536 Tokens</td>
+</tr>
+<tr>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Quantized RAM Footprint</td>
+<td class="best" style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">4.8 GB (INT4 / FP8 Hybrid)</td>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Requires Distributed Cloud Pod</td>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Serverless Cloud Managed</td>
+</tr>
+<tr>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Tool Calling Precision</td>
+<td class="best" style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">99.4% (Direct Schema Constraint)</td>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">99.1%</td>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">97.8%</td>
+</tr>
+<tr>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Offline Air-Gapped Operation</td>
+<td class="best" style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Supported (Self-Contained)</td>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Cloud Dependent</td>
+<td style="padding:12px 16px;border-bottom:1px solid rgba(56,189,248,0.12);vertical-align:top;">Cloud Dependent</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<article class="content-card" id="use-cases">
+<h2>Enterprise Real-World Deployment Scenarios</h2>
+<p>
         The architectural strengths of Gemini 4 Carbon translate directly into mission-critical applications across industrial and technological domains:
       </p>
-
-      <h3>1. Autonomous Multi-Agent Swarm Triage</h3>
-      <p>
+<h3>1. Autonomous Multi-Agent Swarm Triage</h3>
+<p>
         When coordinating dozens of micro-agents within corporate software delivery pipelines, agent coordination latency can compound exponentially. Using Carbon as the consensus coordinator, agents exchange Agent2Agent (A2A) protocol packets, evaluate build outputs, run syntax linter rules, and dispatch git branch rebases in under 20 milliseconds per iteration.
       </p>
-
-      <h3>2. Sub-Second Real-Time Voice &amp; Video Streams</h3>
-      <p>
+<h3>2. Sub-Second Real-Time Voice &amp; Video Streams</h3>
+<p>
         Conversational audio experiences break down when latency exceeds 250 milliseconds. By processing audio streams natively with speculative decoding, Carbon evaluates emotional prosody, decodes audio frames, and initiates audio response synthesis with a TTFT of under 15ms, delivering uninterrupted human-grade dialogue.
       </p>
-
-      <h3>3. Edge Robotics &amp; Embodied Visual Navigation</h3>
-      <p>
+<h3>3. Edge Robotics &amp; Embodied Visual Navigation</h3>
+<p>
         Industrial robotic arms and autonomous mobile robots (AMRs) operating in warehouses require immediate environmental trajectory corrections. Running Carbon locally on onboard embedded processors allows robots to parse camera feeds, detect sudden human path obstructions, and adjust motor actuation parameters without transmitting video feeds to external cloud networks.
       </p>
-
-      <h3>4. High-Frequency Financial Anomaly Interception</h3>
-      <p>
+<h3>4. High-Frequency Financial Anomaly Interception</h3>
+<p>
         Financial transaction routing networks process millions of events per minute. Carbon acts as a real-time semantic firewall, evaluating order flow patterns, detecting fraud markers, and verifying compliance credentials before transactions are committed to distributed ledgers.
       </p>
-    </article>
-
-    <article class="content-card" id="implementation">
-      <h2>Production Python Implementation (Google GenAI SDK)</h2>
-      <p>
+</article>
+<article class="content-card" id="implementation">
+<h2>Production Python Implementation (Google GenAI SDK)</h2>
+<p>
         The code sample below demonstrates initializing Gemini 4 Carbon using the modern <code>google-genai</code> SDK, configuring structured speculative decoding parameters, and executing a low-latency tool-dispatch loop:
       </p>
-
-      <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
-        <div class="code-header" style="background:#060913;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(56,189,248,0.2);">
-          <div class="code-dots" style="display:flex;align-items:center;gap:6px;">
-            <span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:#ef4444;"></span>
-            <span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:#eab308;"></span>
-            <span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:#22c55e;"></span>
-            <button aria-label="Copy code to clipboard" class="copy" style="margin-left:12px;padding:3px 10px;font-size:12px;border:1px solid rgba(56,189,248,0.4);background:rgba(56,189,248,0.1);color:#38bdf8;border-radius:4px;cursor:pointer;text-decoration:none !important;" type="button">Copy</button>
-          </div>
-          <span class="code-lang" style="font-family:var(--font-mono, monospace);font-size:12px;color:var(--gold, #fbbf24);">Python (Google GenAI SDK)</span>
-        </div>
-        <pre class="code-content" style="margin:0;padding:18px 20px;overflow-x:auto;font-family:var(--font-mono, monospace);font-size:13.5px;line-height:1.6;color:#e2e8f0;"><code>import os
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-header" style="background:#060913;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(56,189,248,0.2);">
+<div class="code-dots" style="display:flex;align-items:center;gap:6px;">
+<span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:#ef4444;"></span>
+<span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:#eab308;"></span>
+<span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:#22c55e;"></span>
+<button aria-label="Copy code to clipboard" class="copy" style="margin-left:12px;padding:3px 10px;font-size:12px;border:1px solid rgba(56,189,248,0.4);background:rgba(56,189,248,0.1);color:#38bdf8;border-radius:4px;cursor:pointer;text-decoration:none !important;" type="button">Copy</button>
+</div>
+<span class="code-lang" style="font-family:var(--font-mono, monospace);font-size:12px;color:var(--gold, #fbbf24);">Python (Google GenAI SDK)</span>
+</div>
+<pre class="code-content" style="margin:0;padding:18px 20px;overflow-x:auto;font-family:var(--font-mono, monospace);font-size:13.5px;line-height:1.6;color:#e2e8f0;"><code>import os
 import time
 from typing import Dict, Any
 from google import genai
@@ -657,7 +614,7 @@ client = genai.Client(
 )
 
 # 2. Define High-Speed Tactical Execution Tool
-def verify_cluster_integrity(node_id: str) -> Dict[str, Any]:
+def verify_cluster_integrity(node_id: str) -&gt; Dict[str, Any]:
     """Inspect edge cluster health, memory pressure, and telemetry drift."""
     return {
         "node_id": node_id,
@@ -701,171 +658,163 @@ for chunk in response_stream:
     output_tokens.append(chunk.text)
 
 print(f"Agent Execution Complete. Verified tokens: {len(output_tokens)}")</code></pre>
-      </div>
-    </article>
-
-    <article class="content-card" id="operational-guardrails">
-      <h2>Operational Limits, Memory Footprints &amp; Guardrails</h2>
-      <p>
+</div>
+</article>
+<article class="content-card" id="operational-guardrails">
+<h2>Operational Limits, Memory Footprints &amp; Guardrails</h2>
+<p>
         Deploying high-speed edge intelligence demands clear systems boundaries and robust runtime safeguards:
       </p>
-      <ul style="line-height:1.8;">
-        <li><strong>Memory Footprints:</strong> In FP8/INT4 hybrid quantization, Carbon requires 4.8 GB of physical RAM. On Apple Silicon unified memory systems, this leaves over 11 GB of RAM free on baseline 16 GB configurations for concurrent developer applications.</li>
-        <li><strong>Context Pruning Bounds:</strong> Carbon enforces a strict 128K token context boundary. Context beyond this threshold is automatically summarized using sliding-window attention to maintain sub-10ms response times.</li>
-        <li><strong>Deterministic Schema Verification:</strong> Function-calling arguments are validated against JSON schema definitions before model weights emit execution tokens, guaranteeing zero syntax errors when communicating with external microservices.</li>
-        <li><strong>Local Cryptographic Attestation:</strong> Every response emitted by Carbon includes a hardware-backed cryptographic signature proving the model weights executed in a tamper-resistant enclave without external interception.</li>
-      </ul>
-    </article>
-
-    <article class="content-card" id="pricing-parity">
-      <h2>Practice Pricing &amp; Global Purchasing Power Parity</h2>
-      <p>
+<ul style="line-height:1.8;">
+<li><strong>Memory Footprints:</strong> In FP8/INT4 hybrid quantization, Carbon requires 4.8 GB of physical RAM. On Apple Silicon unified memory systems, this leaves over 11 GB of RAM free on baseline 16 GB configurations for concurrent developer applications.</li>
+<li><strong>Context Pruning Bounds:</strong> Carbon enforces a strict 128K token context boundary. Context beyond this threshold is automatically summarized using sliding-window attention to maintain sub-10ms response times.</li>
+<li><strong>Deterministic Schema Verification:</strong> Function-calling arguments are validated against JSON schema definitions before model weights emit execution tokens, guaranteeing zero syntax errors when communicating with external microservices.</li>
+<li><strong>Local Cryptographic Attestation:</strong> Every response emitted by Carbon includes a hardware-backed cryptographic signature proving the model weights executed in a tamper-resistant enclave without external interception.</li>
+</ul>
+</article>
+<article class="content-card" id="pricing-parity">
+<h2>Practice Pricing &amp; Global Purchasing Power Parity</h2>
+<p>
         To ensure production-grade edge architecture, speculative decoding pipelines, and agent orchestration frameworks are accessible globally, our advisory practices operate under clear, transparent milestones:
       </p>
-
-      <h3>Flagship Consulting Packages</h3>
-      <ul style="line-height:1.8;">
-        <li>
-          <strong>Business AI Training Flagship:</strong> <strong>$2,500 USD</strong> for <strong>60 days total</strong> (30 days of live engineering training + 30 days of dedicated architectural support). Includes up to 10 enterprise seats. Additional seats are $250 USD per seat up to a maximum of 20 seats. Delivered 4 hours per day, Monday through Friday (Saturdays and Sundays are holidays), 100% remote worldwide.
+<h3>Flagship Consulting Packages</h3>
+<ul style="line-height:1.8;">
+<li>
+<strong>Business AI Training Flagship:</strong> <strong>$2,500 USD</strong> for <strong>60 days total</strong> (30 days of live engineering training + 30 days of dedicated architectural support). Includes up to 10 enterprise seats. Additional seats are $250 USD per seat up to a maximum of 20 seats. Delivered 4 hours per day, Monday through Friday (Saturdays and Sundays are holidays), 100% remote worldwide.
         </li>
-        <li>
-          <strong>Personal AI Training Flagship:</strong> <strong>$2,500 USD</strong> for <strong>60 days total</strong> (30 days of live 1-on-1 private acceleration + 30 days of dedicated support). Strictly one participant only, providing comprehensive executive and technical mastery. Delivered 4 hours per day, Monday through Friday, 100% remote worldwide.
+<li>
+<strong>Personal AI Training Flagship:</strong> <strong>$2,500 USD</strong> for <strong>60 days total</strong> (30 days of live 1-on-1 private acceleration + 30 days of dedicated support). Strictly one participant only, providing comprehensive executive and technical mastery. Delivered 4 hours per day, Monday through Friday, 100% remote worldwide.
         </li>
-      </ul>
-
-      <h3>Individual Service Picks</h3>
-      <p>
+</ul>
+<h3>Individual Service Picks</h3>
+<p>
         Organizations and professionals requiring targeted implementation on specific topics (such as local model cost slashing or custom agent orchestration) can book focused modules:
       </p>
-      <ul style="line-height:1.8;">
-        <li><strong>Business Individual Pick:</strong> <strong>$250 USD</strong> base for 1 seat, with additional seats at $250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
-        <li><strong>Personal Individual Pick:</strong> <strong>$250 USD</strong> strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
-      </ul>
-
-      <h3>Payment Structure &amp; Trust Guarantees</h3>
-      <p>
+<ul style="line-height:1.8;">
+<li><strong>Business Individual Pick:</strong> <strong>$250 USD</strong> base for 1 seat, with additional seats at $250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
+<li><strong>Personal Individual Pick:</strong> <strong>$250 USD</strong> strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
+</ul>
+<h3>Payment Structure &amp; Trust Guarantees</h3>
+<p>
         Every client engagement is safeguarded by strict trust guarantees:
       </p>
-      <ul style="line-height:1.7;">
-        <li><strong>Zero Upfront Payment:</strong> Strictly $0 advance deposit required. We never invoice before delivering actual value.</li>
-        <li><strong>20% in Five Installments:</strong> Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.</li>
-        <li><strong>Walkaway Guarantee:</strong> If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.</li>
-        <li><strong>Commercial Apache 2.0 License:</strong> All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.</li>
-        <li><strong>Full Pricing Details:</strong> Learn more about country tier multipliers, currency choices, and customized curriculum on our <a class="gold-link" href="../pricing.html">Pricing Page</a>.</li>
-      </ul>
-
-      <h3>The Six Purchasing Power Parity (PPP) Tiers</h3>
-      <p>
+<ul style="line-height:1.7;">
+<li><strong>Zero Upfront Payment:</strong> Strictly $0 advance deposit required. We never invoice before delivering actual value.</li>
+<li><strong>20% in Five Installments:</strong> Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.</li>
+<li><strong>Walkaway Guarantee:</strong> If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.</li>
+<li><strong>Commercial Apache 2.0 License:</strong> All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.</li>
+<li><strong>Full Pricing Details:</strong> Learn more about country tier multipliers, currency choices, and customized curriculum on our <a class="gold-link" href="../pricing.html">Pricing Page</a>.</li>
+</ul>
+<h3>The Six Purchasing Power Parity (PPP) Tiers</h3>
+<p>
         To ensure fair global access across all 195 countries, fees are adjusted by national economic indicators in accordance with our Purchasing Power Parity framework:
       </p>
-      <table class="parity-table" style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.9rem;">
-        <thead>
-          <tr style="border-bottom:2px solid var(--border-gold);text-align:left;">
-            <th style="padding:0.75rem;">Tier</th>
-            <th style="padding:0.75rem;">Economic Category</th>
-            <th style="padding:0.75rem;">Representative Countries</th>
-            <th style="padding:0.75rem;">Parity Multiplier</th>
-            <th style="padding:0.75rem;">Business Flagship</th>
-            <th style="padding:0.75rem;">Personal Flagship</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Tier 1</strong></td>
-            <td>High-Income Baseline</td>
-            <td>United States, UK, Germany, Canada, Japan, Singapore, Australia</td>
-            <td>1.00X</td>
-            <td>$2,500 USD</td>
-            <td>$2,500 USD</td>
-          </tr>
-          <tr>
-            <td><strong>Tier 2</strong></td>
-            <td>Upper-Middle Economies</td>
-            <td>Brazil, Mexico, Malaysia, Turkiye, Thailand, Philippines, Sri Lanka</td>
-            <td>0.75X</td>
-            <td>$1,875 USD</td>
-            <td>$1,875 USD</td>
-          </tr>
-          <tr>
-            <td><strong>Tier 3</strong></td>
-            <td>Lower-Middle &amp; Low-Income</td>
-            <td>India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam</td>
-            <td>0.50X</td>
-            <td>$1,250 USD</td>
-            <td>$1,250 USD</td>
-          </tr>
-          <tr>
-            <td><strong>Tier 4</strong></td>
-            <td>Early-Stage Startups</td>
-            <td>Global tech startups with &lt;$1M external funding</td>
-            <td>0.50X</td>
-            <td>$1,250 USD</td>
-            <td>$1,250 USD</td>
-          </tr>
-          <tr>
-            <td><strong>Tier 5</strong></td>
-            <td>Academia &amp; Non-Profits</td>
-            <td>Universities, accredited labs, registered charities &amp; 501(c)(3) entities</td>
-            <td>0.25X</td>
-            <td>$625 USD</td>
-            <td>$625 USD</td>
-          </tr>
-          <tr>
-            <td><strong>Tier 6</strong></td>
-            <td>Subsidized Relief</td>
-            <td>Crisis-affected regions, developing collectives &amp; grassroots builders</td>
-            <td>Custom</td>
-            <td>Subsidized</td>
-            <td>$250 USD</td>
-          </tr>
-        </tbody>
-      </table>
-    </article>
-
-    <article class="content-card" id="references">
-      <h2>References</h2>
-      <p>All reference sources verified live as of November 4, 2026:</p>
-      <ol class="refs" style="list-style:none;padding:0;margin:1.25rem 0;">
-        <li style="margin-bottom:1.25rem;line-height:1.6;font-size:0.95rem;padding-left:1.5rem;position:relative;">
-          <span style="position:absolute;left:0;color:var(--gold, #fbbf24);">→ </span>
-          <a class="gold-link" href="https://deepmind.google/technologies/gemini/" rel="noopener" target="_blank">Google DeepMind: Frontier AI Research &amp; Element Models</a>
-          <span class="d">DeepMind architectural framework, native multimodality, and the element series overview.</span>
-        </li>
-        <li style="margin-bottom:1.25rem;line-height:1.6;font-size:0.95rem;padding-left:1.5rem;position:relative;">
-          <span style="position:absolute;left:0;color:var(--gold, #fbbf24);">→ </span>
-          <a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener" target="_blank">Google AI for Developers Documentation</a>
-          <span class="d">API documentation for Gemini streaming, function calling schemas, and runtime configurations.</span>
-        </li>
-        <li style="margin-bottom:1.25rem;line-height:1.6;font-size:0.95rem;padding-left:1.5rem;position:relative;">
-          <span style="position:absolute;left:0;color:var(--gold, #fbbf24);">→ </span>
-          <a class="gold-link" href="https://blog.google/technology/ai/" rel="noopener" target="_blank">Google Keyword AI Insights &amp; Model Announcements</a>
-          <span class="d">Official announcements on model benchmarks, inference speedups, and enterprise deployments.</span>
-        </li>
-        <li style="margin-bottom:1.25rem;line-height:1.6;font-size:0.95rem;padding-left:1.5rem;position:relative;">
-          <span style="position:absolute;left:0;color:var(--gold, #fbbf24);">→ </span>
-          <a class="gold-link" href="https://cloud.google.com/vertex-ai" rel="noopener" target="_blank">Google Cloud Vertex AI Enterprise Infrastructure</a>
-          <span class="d">Enterprise agent orchestration, private microVM runtimes, and regional edge endpoints.</span>
-        </li>
-        <li style="margin-bottom:1.25rem;line-height:1.6;font-size:0.95rem;padding-left:1.5rem;position:relative;">
-          <span style="position:absolute;left:0;color:var(--gold, #fbbf24);">→ </span>
-          <a class="gold-link" href="https://arxiv.org/abs/2401.00001" rel="noopener" target="_blank">Speculative Decoding in Modern Foundation Models (arXiv Research)</a>
-          <span class="d">Mathematical formulations of draft-verification parallel inference loops.</span>
-        </li>
-      </ol>
-    </article>
-
-    <section class="cta-banner">
-      <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Deploy Real-Time Edge Intelligence with Gemini 4 Carbon</h2>
-      <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
+<table class="parity-table" style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.9rem;">
+<thead>
+<tr style="border-bottom:2px solid var(--border-gold);text-align:left;">
+<th style="padding:0.75rem;">Tier</th>
+<th style="padding:0.75rem;">Economic Category</th>
+<th style="padding:0.75rem;">Representative Countries</th>
+<th style="padding:0.75rem;">Parity Multiplier</th>
+<th style="padding:0.75rem;">Business Flagship</th>
+<th style="padding:0.75rem;">Personal Flagship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tier 1</strong></td>
+<td>High-Income Baseline</td>
+<td>United States, UK, Germany, Canada, Japan, Singapore, Australia</td>
+<td>1.00X</td>
+<td>$2,500 USD</td>
+<td>$2,500 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 2</strong></td>
+<td>Upper-Middle Economies</td>
+<td>Brazil, Mexico, Malaysia, Turkiye, Thailand, Philippines, Sri Lanka</td>
+<td>0.75X</td>
+<td>$1,875 USD</td>
+<td>$1,875 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 3</strong></td>
+<td>Lower-Middle &amp; Low-Income</td>
+<td>India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam</td>
+<td>0.50X</td>
+<td>$1,250 USD</td>
+<td>$1,250 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 4</strong></td>
+<td>Early-Stage Startups</td>
+<td>Global tech startups with &lt;$1M external funding</td>
+<td>0.50X</td>
+<td>$1,250 USD</td>
+<td>$1,250 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 5</strong></td>
+<td>Academia &amp; Non-Profits</td>
+<td>Universities, accredited labs, registered charities &amp; 501(c)(3) entities</td>
+<td>0.25X</td>
+<td>$625 USD</td>
+<td>$625 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 6</strong></td>
+<td>Subsidized Relief</td>
+<td>Crisis-affected regions, developing collectives &amp; grassroots builders</td>
+<td>Custom</td>
+<td>Subsidized</td>
+<td>$250 USD</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article class="content-card" id="references">
+<h2>References</h2>
+<p>All reference sources verified live as of November 4, 2026:</p>
+<ol class="refs" style="list-style:none;padding:0;margin:1.25rem 0;">
+<li style="margin-bottom:1.25rem;line-height:1.6;font-size:0.95rem;padding-left:1.5rem;position:relative;">
+<span style="position:absolute;left:0;color:var(--gold, #fbbf24);">→ </span>
+<a class="gold-link" href="https://deepmind.google/technologies/gemini/" rel="noopener" target="_blank">Google DeepMind: Frontier AI Research &amp; Element Models</a>
+<span class="d">DeepMind architectural framework, native multimodality, and the element series overview.</span>
+</li>
+<li style="margin-bottom:1.25rem;line-height:1.6;font-size:0.95rem;padding-left:1.5rem;position:relative;">
+<span style="position:absolute;left:0;color:var(--gold, #fbbf24);">→ </span>
+<a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener" target="_blank">Google AI for Developers Documentation</a>
+<span class="d">API documentation for Gemini streaming, function calling schemas, and runtime configurations.</span>
+</li>
+<li style="margin-bottom:1.25rem;line-height:1.6;font-size:0.95rem;padding-left:1.5rem;position:relative;">
+<span style="position:absolute;left:0;color:var(--gold, #fbbf24);">→ </span>
+<a class="gold-link" href="https://blog.google/technology/ai/" rel="noopener" target="_blank">Google Keyword AI Insights &amp; Model Announcements</a>
+<span class="d">Official announcements on model benchmarks, inference speedups, and enterprise deployments.</span>
+</li>
+<li style="margin-bottom:1.25rem;line-height:1.6;font-size:0.95rem;padding-left:1.5rem;position:relative;">
+<span style="position:absolute;left:0;color:var(--gold, #fbbf24);">→ </span>
+<a class="gold-link" href="https://cloud.google.com/vertex-ai" rel="noopener" target="_blank">Google Cloud Vertex AI Enterprise Infrastructure</a>
+<span class="d">Enterprise agent orchestration, private microVM runtimes, and regional edge endpoints.</span>
+</li>
+<li style="margin-bottom:1.25rem;line-height:1.6;font-size:0.95rem;padding-left:1.5rem;position:relative;">
+<span style="position:absolute;left:0;color:var(--gold, #fbbf24);">→ </span>
+<a class="gold-link" href="https://arxiv.org/abs/2401.00001" rel="noopener" target="_blank">Speculative Decoding in Modern Foundation Models (arXiv Research)</a>
+<span class="d">Mathematical formulations of draft-verification parallel inference loops.</span>
+</li>
+</ol>
+</article>
+<section class="cta-banner">
+<h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Deploy Real-Time Edge Intelligence with Gemini 4 Carbon</h2>
+<p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
         Architect high-frequency agent swarms, sub-10ms response pipelines, and hybrid edge-to-cloud workflows tailored for enterprise scale.
       </p>
-      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
-        <a class="btn btn-primary" href="../contact.html">Schedule Carbon Architecture Session →</a>
-        <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank" style="text-decoration:none !important;">Free LinkedIn Consultation ↗</a>
-        <a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
-      </div>
-    </section>
-  </main>
+<div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+<a class="btn btn-primary" href="../contact.html">Schedule Carbon Architecture Session →</a>
+<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" style="text-decoration:none !important;" target="_blank">Free LinkedIn Consultation ↗</a>
+<a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
+</div>
+</section>
+</main>
     <!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">

@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Google AI Studio: Rapid Prototyping & System Instructions | Thomas Cherickal</title>
+<title>Google AI Studio: Rapid Prototyping &amp; System Instructions | Thomas Cherickal</title>
 <meta content="What Google AI Studio can do, which languages and frameworks it supports, and three comprehensive tutorials from prompt to deployed web and native Android apps." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
 <link href="https://thedigitalfuturist.com/google-training/google-ai-studio.html" rel="canonical"/>
@@ -264,12 +264,11 @@
 <main class="container single-column-article">
 <header class="hero">
 <p class="hero-badge">// RAPID PROTOTYPING &amp; APPLICATION COMPILATION</p>
-<h1>Google AI Studio: Rapid Prototyping & System Instructions</h1>
+<h1>Google AI Studio: Rapid Prototyping &amp; System Instructions</h1>
 <p class="hero-desc">
   What it can do, which languages it supports, and three tutorials. By Thomas Cherickal, Generative AI Consultant | 2 November 2026 | Sources checked on the date of publication.
 </p>
 </header>
-
 <!-- TABLE OF CONTENTS -->
 <article class="content-card" id="table-of-contents">
 <h2>Contents</h2>
@@ -291,7 +290,6 @@
 <a class="toc-link gold-link" href="#references">15. References</a>
 </div>
 </article>
-
 <!-- INTRODUCTION -->
 <article class="content-card" id="introduction">
 <h2>Introduction</h2>
@@ -301,25 +299,23 @@
 <p>
   Everything here comes from Google's documentation and announcements, which I read on 2 November 2026. Product details in this area change every few weeks, so treat prices and limits as a snapshot. The numbered links in the text point to the references at the end.
 </p>
-
 <div class="diagram-container">
 <div class="mermaid-fallback">
 <em>Interactive architecture diagram (loading...)</em>
 </div>
 <div class="mermaid">
 flowchart TD
-    User["Developer / Technical Architect"] --> AIS["Google AI Studio Browser Workspace"]
-    AIS --> PG["Playground Surface<br/>(Prompt Exploration & Model Parameter Tuning)"]
-    AIS --> BM["Build Mode Surface<br/>(Full-Stack Web & Android App Generation)"]
-    AIS --> LM["Live Mode Surface<br/>(Real-Time Low-Latency Voice & Video Sessions)"]
+    User["Developer / Technical Architect"] --&gt; AIS["Google AI Studio Browser Workspace"]
+    AIS --&gt; PG["Playground Surface<br/>(Prompt Exploration &amp; Model Parameter Tuning)"]
+    AIS --&gt; BM["Build Mode Surface<br/>(Full-Stack Web &amp; Android App Generation)"]
+    AIS --&gt; LM["Live Mode Surface<br/>(Real-Time Low-Latency Voice &amp; Video Sessions)"]
     
-    BM --> TargetWeb["Full-Stack Web Runtime<br/>(React / Angular / Next.js + Node.js)"]
-    BM --> TargetAndroid["Native Android Target (2026)<br/>(Kotlin + Jetpack Compose)"]
+    BM --&gt; TargetWeb["Full-Stack Web Runtime<br/>(React / Angular / Next.js + Node.js)"]
+    BM --&gt; TargetAndroid["Native Android Target (2026)<br/>(Kotlin + Jetpack Compose)"]
 </div>
 <div class="diagram-caption">Figure 1. The three working surfaces of AI Studio, plus the Android target added in 2026.</div>
 </div>
 </article>
-
 <!-- WHAT GOOGLE AI STUDIO IS -->
 <article class="content-card" id="what-it-is">
 <h2>What Google AI Studio is</h2>
@@ -330,14 +326,12 @@ flowchart TD
   The Gemini API pricing page lists a free tier that includes AI Studio access and limited access to some models. Free-tier content may be used to improve Google's products, while the paid tier excludes that use.<sup><a class="gold-link" href="#ref-7">[7]</a></sup> The difference matters if you paste client data into prompts.
 </p>
 </article>
-
 <!-- THE PLAYGROUND AND THE MODELS -->
 <article class="content-card" id="playground">
 <h2>The Playground and the models</h2>
 <p>
   The Playground is where most projects start. A Run settings panel holds system instructions, model parameters and safety settings, plus switches for structured output, function calling, code execution and grounding. System instructions stay editable after a chat begins, so tone and persona are easy to adjust.<sup><a class="gold-link" href="#ref-1">[1]</a></sup>
 </p>
-
 <div class="diagram-container">
 <div class="mermaid-fallback">
 <em>Interactive architecture diagram (loading...)</em>
@@ -345,26 +339,24 @@ flowchart TD
 <div class="mermaid">
 graph TD
     subgraph Playground Controls
-        SI["System Instructions<br/>(Editable Persona, Tone & Role Guardrails)"]
+        SI["System Instructions<br/>(Editable Persona, Tone &amp; Role Guardrails)"]
         TL["Thinking Level<br/>(Low, Medium, High Test-Time Compute)"]
         Tools["Integrated Tools<br/>(Structured Output, Code Execution, Grounding)"]
         Export["Get Code Button<br/>(Instant Python, JS/TS, Go, Java, C# Export)"]
     end
-    SI --> Engine["Gemini Model Engine"]
-    TL --> Engine
-    Tools --> Engine
-    Engine --> Export
+    SI --&gt; Engine["Gemini Model Engine"]
+    TL --&gt; Engine
+    Tools --&gt; Engine
+    Engine --&gt; Export
 </div>
 <div class="diagram-caption">Figure 2. The Playground settings that matter most: system instructions, thinking level, tools and Get code.</div>
 </div>
-
 <p>
   Model choice drives both quality and cost. Gemini 4 Argon (<code>gemini-4-argon</code>) is the current flagship, with a 1M-token context window, long decode up to 1M tokens, and low, medium and high thinking levels.<sup><a class="gold-link" href="#ref-8">[8]</a></sup> It is not on the free tier. Its introductory price of $2 per million input tokens and $10 per million output tokens runs through 30 November 2026, then doubles.<sup><a class="gold-link" href="#ref-7">[7]</a></sup>
 </p>
 <p>
   Gemini 3.8 Flash and Gemini 3.5 Flash-Lite cost less and both have free tiers.<sup><a class="gold-link" href="#ref-7">[7]</a></sup> The chart and table below compare standard-tier output prices as listed on 2 November 2026. Flash pricing also rises on 1 January 2027.
 </p>
-
 <div class="table-responsive">
 <table class="data-table">
 <thead>
@@ -401,7 +393,6 @@ graph TD
 </tbody>
 </table>
 </div>
-
 <div class="diagram-container">
 <div class="mermaid-fallback">
 <em>Interactive architecture diagram (loading...)</em>
@@ -410,17 +401,15 @@ graph TD
 xychart-beta
     title "Gemini Standard Tier Output Price per 1M Tokens (USD)"
     x-axis ["Gemini 3.5 Flash-Lite", "Gemini 3.8 Flash (Now)", "Gemini 3.8 Flash (Jan 2027)", "Gemini 4 Argon (Intro)", "Gemini 4 Argon (Dec 2026)"]
-    y-axis "USD per 1M Tokens" 0 --> 22
+    y-axis "USD per 1M Tokens" 0 --&gt; 22
     bar [2.50, 3.75, 7.50, 10.00, 20.00]
 </div>
 <div class="diagram-caption">Figure 3. Output prices, including thinking tokens, from the Gemini API pricing page. Dashed bars show the announced price after the introductory period.</div>
 </div>
-
 <p>
   Beyond text, AI Studio exposes media models. The pricing page lists Nano Banana 2.1 for image generation and conversational editing, Gemini Omni Flash for video generation and editing, and Live and Transcribe models for speech.<sup><a class="gold-link" href="#ref-7">[7]</a></sup> Image generation, video and music tools sit in the same Playground as text chat.
 </p>
 </article>
-
 <!-- BUILD MODE AND AI-ASSISTED DEVELOPMENT -->
 <article class="content-card" id="build-mode">
 <h2>Build mode and AI-assisted development</h2>
@@ -430,37 +419,34 @@ xychart-beta
 <p>
   You can start in four ways. Write a prompt, press the I'm Feeling Lucky button, remix an App Gallery project with Copy App, or import an existing repository from GitHub. AI Chips add features such as image generation or Maps data to a prompt, and a speech-to-text button lets you dictate the request.<sup><a class="gold-link" href="#ref-2">[2]</a></sup>
 </p>
-
 <div class="diagram-container">
 <div class="mermaid-fallback">
 <em>Interactive architecture diagram (loading...)</em>
 </div>
 <div class="mermaid">
 flowchart TD
-    Start["Inception: Prompt / I'm Feeling Lucky / App Gallery Copy / GitHub Import"] --> Agent["Antigravity Coding Agent (Multi-File Context Engine)"]
-    Agent --> CodeGen["Automated Code Compilation & Dependency Resolution"]
-    CodeGen --> Preview["Live Streaming Preview (Interactive Browser App / Cloud Emulator)"]
+    Start["Inception: Prompt / I'm Feeling Lucky / App Gallery Copy / GitHub Import"] --&gt; Agent["Antigravity Coding Agent (Multi-File Context Engine)"]
+    Agent --&gt; CodeGen["Automated Code Compilation &amp; Dependency Resolution"]
+    CodeGen --&gt; Preview["Live Streaming Preview (Interactive Browser App / Cloud Emulator)"]
     
-    Preview -. Iteration Loop .-> ChatPanel["Chat Requests ('Add pie chart')"]
-    Preview -. Iteration Loop .-> Annotation["Annotation Mode (Visual UI Region Highlighting)"]
-    Preview -. Iteration Loop .-> CodeTab["Code Tab (Direct Source Edits)"]
-    Preview -. Iteration Loop .-> GitSync["GitHub Tab (Two-Way Sync & Merge Conflict Solver)"]
+    Preview -. Iteration Loop .-&gt; ChatPanel["Chat Requests ('Add pie chart')"]
+    Preview -. Iteration Loop .-&gt; Annotation["Annotation Mode (Visual UI Region Highlighting)"]
+    Preview -. Iteration Loop .-&gt; CodeTab["Code Tab (Direct Source Edits)"]
+    Preview -. Iteration Loop .-&gt; GitSync["GitHub Tab (Two-Way Sync &amp; Merge Conflict Solver)"]
     
-    ChatPanel -. Update Input .-> Agent
-    Annotation -. Update Input .-> Agent
-    CodeTab -. Update Input .-> Agent
-    GitSync -. Update Input .-> Agent
+    ChatPanel -. Update Input .-&gt; Agent
+    Annotation -. Update Input .-&gt; Agent
+    CodeTab -. Update Input .-&gt; Agent
+    GitSync -. Update Input .-&gt; Agent
     
-    Preview -- Finalized --> Deploy["Production Deployment / Export"]
+    Preview -- Finalized --&gt; Deploy["Production Deployment / Export"]
 </div>
 <div class="diagram-caption">Figure 4. The Build mode loop. Most of your time goes into the dashed iteration path.</div>
 </div>
 <div style="margin:1.75rem 0;text-align:center;">
-  <img alt="AI Dev Playbooks and Autonomous Scaffolding" src="../assets/ai-dev-playbooks.jpg" style="width:100%;max-width:760px;height:auto;border-radius:12px;border:1px solid rgba(56, 189, 248, 0.3);box-shadow:0 8px 30px rgba(0,0,0,0.5);" />
-  <p class="diagram-caption">Sandboxed agent scaffolding, multi-file context tracking, and preview compilation in Build Mode.</p>
+<img alt="AI Dev Playbooks and Autonomous Scaffolding" src="../assets/ai-dev-playbooks.jpg" style="width:100%;max-width:760px;height:auto;border-radius:12px;border:1px solid rgba(56, 189, 248, 0.3);box-shadow:0 8px 30px rgba(0,0,0,0.5);"/>
+<p class="diagram-caption">Sandboxed agent scaffolding, multi-file context tracking, and preview compilation in Build Mode.</p>
 </div>
-
-
 <p>
   Iteration happens in three places. The chat panel handles requests such as "add a pie chart for categories". Annotation mode lets you highlight part of the UI and describe the change you want. The Code tab accepts direct edits, and a GitHub tab provides two-way sync with model-written commit messages and a side-by-side dialog for merge conflicts.<sup><a class="gold-link" href="#ref-2">[2]</a></sup>
 </p>
@@ -468,7 +454,6 @@ flowchart TD
   Treat the agent as a fast junior developer. It writes a lot of working code, but you still read the output, test edge cases and review generated security rules. Google's own Cloud blog tells builders to double-check Firestore rules before sharing or deploying.<sup><a class="gold-link" href="#ref-10">[10]</a></sup>
 </p>
 </article>
-
 <!-- BACKEND: NODE.JS, FIREBASE, SECRETS AND WORKSPACE -->
 <article class="content-card" id="backend">
 <h2>Backend: Node.js, Firebase, secrets and Workspace</h2>
@@ -484,7 +469,6 @@ flowchart TD
 <p>
   Data and sign-in come from Firebase. The agent detects when your prompt implies storage or login and offers a card. Approving it provisions Firestore, enables Firebase Authentication with Sign in with Google, and writes the client code.<sup><a class="gold-link" href="#ref-3">[3]</a></sup> Google's May 2026 Cloud blog also describes Cloud SQL for PostgreSQL as a relational option, with a developer edition that scales to zero, so check whether it is live in your account.<sup><a class="gold-link" href="#ref-10">[10]</a></sup>
 </p>
-
 <div class="diagram-container">
 <div class="mermaid-fallback">
 <em>Interactive architecture diagram (loading...)</em>
@@ -495,19 +479,18 @@ sequenceDiagram
     actor Browser as Browser Client (React / Angular / Next.js)
     participant Server as Node.js Backend Server
     participant Secrets as Server Secrets Panel (GEMINI_API_KEY)
-    participant Firebase as Firebase (Firestore & Authentication)
+    participant Firebase as Firebase (Firestore &amp; Authentication)
     participant Gemini as Gemini API Gateway
     
-    Browser->>Server: User Triggered Application Action
-    Server->>Secrets: Read Injected Server-Side API Secrets
-    Server->>Gemini: Invoke API with System Instructions & Prompts
-    Gemini-->>Server: Stream Multimodal / Structured Response
-    Server->>Firebase: Read/Write Authenticated Firestore Documents
-    Server-->>Browser: Send Sanitized Application State (Keys Protected)
+    Browser-&gt;&gt;Server: User Triggered Application Action
+    Server-&gt;&gt;Secrets: Read Injected Server-Side API Secrets
+    Server-&gt;&gt;Gemini: Invoke API with System Instructions &amp; Prompts
+    Gemini--&gt;&gt;Server: Stream Multimodal / Structured Response
+    Server-&gt;&gt;Firebase: Read/Write Authenticated Firestore Documents
+    Server--&gt;&gt;Browser: Send Sanitized Application State (Keys Protected)
 </div>
 <div class="diagram-caption">Figure 5. A typical full-stack app: the browser talks to a Node.js server, and the server holds the keys.</div>
 </div>
-
 <p>
   Workspace integration reaches twelve apps: Calendar, Chat, Docs, Drive, Forms, Gmail, Keep, Meet, Contacts, Sheets, Slides and Tasks. AI Studio configures OAuth, generates the server code and adds a sign-in flow, so each end user authorizes access to their own data.<sup><a class="gold-link" href="#ref-3">[3]</a></sup> Multiplayer apps use the same server runtime to hold shared state, which makes a live chat or a shared whiteboard a prompt rather than a project.
 </p>
@@ -515,7 +498,6 @@ sequenceDiagram
   Browser device APIs need explicit permission. Creators list values such as microphone, camera and geolocation under <code>requestFramePermissions</code> in the app's <code>metadata.json</code>, and viewers see an acknowledgement before access is granted.<sup><a class="gold-link" href="#ref-2">[2]</a></sup>
 </p>
 </article>
-
 <!-- NATIVE ANDROID AND MOBILE APPS -->
 <article class="content-card" id="android">
 <h2>Native Android and mobile apps</h2>
@@ -525,26 +507,23 @@ sequenceDiagram
 <p>
   Testing on real hardware uses WebUSB. Click Install on Device, pick the phone in the browser's USB dialog, and the APK installs and launches. This needs Chrome or Edge and USB debugging enabled on the phone.<sup><a class="gold-link" href="#ref-4">[4]</a></sup>
 </p>
-
 <div class="diagram-container">
 <div class="mermaid-fallback">
 <em>Interactive architecture diagram (loading...)</em>
 </div>
 <div class="mermaid">
 flowchart TD
-    P["Natural Language Prompt"] --> Gradle["Gradle Project (Kotlin + Compose + Material 3)"]
-    Gradle --> Emu["Streaming Browser Emulator (Instant Validation)"]
-    Emu --> WebUSB["WebUSB Direct Hardware Install (Chrome/Edge)"]
-    WebUSB --> PlayTrack["Publish to Play Store (Internal Testing Track)"]
+    P["Natural Language Prompt"] --&gt; Gradle["Gradle Project (Kotlin + Compose + Material 3)"]
+    Gradle --&gt; Emu["Streaming Browser Emulator (Instant Validation)"]
+    Emu --&gt; WebUSB["WebUSB Direct Hardware Install (Chrome/Edge)"]
+    WebUSB --&gt; PlayTrack["Publish to Play Store (Internal Testing Track)"]
 </div>
 <div class="diagram-caption">Figure 6. The Android path, from prompt to the Play internal testing track.</div>
 </div>
 <div style="margin:1.75rem 0;text-align:center;">
-  <img alt="Autonomous Agent Execution and Mobile Deployment" src="../assets/autonomous-agent-loops.jpg" style="width:100%;max-width:760px;height:auto;border-radius:12px;border:1px solid rgba(251, 191, 36, 0.3);box-shadow:0 8px 30px rgba(0,0,0,0.5);" />
-  <p class="diagram-caption">Jetpack Compose UI hierarchy synthesis and streaming browser emulation for native Android projects.</p>
+<img alt="Autonomous Agent Execution and Mobile Deployment" src="../assets/autonomous-agent-loops.jpg" style="width:100%;max-width:760px;height:auto;border-radius:12px;border:1px solid rgba(251, 191, 36, 0.3);box-shadow:0 8px 30px rgba(0,0,0,0.5);"/>
+<p class="diagram-caption">Jetpack Compose UI hierarchy synthesis and streaming browser emulation for native Android projects.</p>
 </div>
-
-
 <p>
   Firebase covers the backend. Android apps call Gemini through Firebase AI Logic with App Check, so no raw API key ships inside the APK. They can also use Cloud Firestore and Firebase Authentication.<sup><a class="gold-link" href="#ref-4">[4]</a></sup> Secrets management, multiplayer and Workspace APIs remain web-only because Android apps in AI Studio are client-side only.
 </p>
@@ -555,7 +534,6 @@ flowchart TD
   Google also announced a separate AI Studio mobile app at I/O 2026 and opened pre-registration. It is meant for iterating on code and previewing builds from a phone, remixing apps from a mobile gallery, and sharing live deployments for feedback.<sup><a class="gold-link" href="#ref-11">[11]</a></sup> I could not confirm general availability on 2 November, so check your app store before relying on it.
 </p>
 </article>
-
 <!-- DEPLOYMENT -->
 <article class="content-card" id="deployment">
 <h2>Deployment</h2>
@@ -568,32 +546,29 @@ flowchart TD
 <p>
   Published apps can take a custom subdomain under <code>ai.studio</code>. Names are first come, first served, and an unpublished app releases its name. When you share or deploy a Gemini app, its API calls count toward your usage limits, and a deployed app uses your API key for every user's calls.<sup><a class="gold-link" href="#ref-2">[2]</a></sup> Set a spending alert before you share widely.
 </p>
-
 <div class="diagram-container">
 <div class="mermaid-fallback">
 <em>Interactive architecture diagram (loading...)</em>
 </div>
 <div class="mermaid">
 flowchart TD
-    Ready["App ready in Build mode"] --> CheckEligible{"Starter Tier eligible?"}
-    CheckEligible -- Yes --> StarterPub["Publish up to 2 apps on Cloud Run (Free)"]
-    CheckEligible -- No --> LinkCloud["Link Billing-Enabled Cloud Project"]
-    LinkCloud --> CloudRunPub["Publish to Cloud Run (Public ai.studio URL)"]
-    Ready --> GitSync["GitHub Sync (Host anywhere on independent infrastructure)"]
-    Ready --> ZipExport["ZIP Download (Set GEMINI_API_KEY yourself)"]
-    Ready --> AntigravityExp["Antigravity Export (Seamless local development)"]
+    Ready["App ready in Build mode"] --&gt; CheckEligible{"Starter Tier eligible?"}
+    CheckEligible -- Yes --&gt; StarterPub["Publish up to 2 apps on Cloud Run (Free)"]
+    CheckEligible -- No --&gt; LinkCloud["Link Billing-Enabled Cloud Project"]
+    LinkCloud --&gt; CloudRunPub["Publish to Cloud Run (Public ai.studio URL)"]
+    Ready --&gt; GitSync["GitHub Sync (Host anywhere on independent infrastructure)"]
+    Ready --&gt; ZipExport["ZIP Download (Set GEMINI_API_KEY yourself)"]
+    Ready --&gt; AntigravityExp["Antigravity Export (Seamless local development)"]
 </div>
 <div class="diagram-caption">Figure 7. Cloud Run publishing is one route among four. Source code can leave AI Studio in three other ways.</div>
 </div>
 </article>
-
 <!-- LANGUAGES, FRAMEWORKS AND SDKS -->
 <article class="content-card" id="languages">
 <h2>Languages, frameworks and SDKs</h2>
 <p>
   Two layers matter here. The first is what AI Studio generates for you, and the second is what you can use to call the Gemini API from your own code. The table separates them.
 </p>
-
 <div class="table-responsive">
 <table class="data-table">
 <thead>
@@ -632,12 +607,10 @@ flowchart TD
 </tbody>
 </table>
 </div>
-
 <p>
   The older Google libraries were deprecated on 30 November 2025, so new code should use the Google GenAI SDK. For Dart, Flutter, Swift and Android, the libraries page points to Firebase AI Logic, and to Genkit Dart for Dart.<sup><a class="gold-link" href="#ref-6">[6]</a></sup> There is no separate Rust or Ruby SDK in the official list, although the REST interface works from any language.
 </p>
 </article>
-
 <!-- TUTORIAL 1: FROM PLAYGROUND PROMPT TO PYTHON SCRIPT -->
 <article class="content-card" id="tutorial-1">
 <h2>Tutorial 1: From Playground prompt to Python script</h2>
@@ -655,7 +628,6 @@ flowchart TD
 <p>
   The generated snippet is the reliable reference, because Google updates model names and call styles often. The example below shows the shape of a minimal call with the current SDK:
 </p>
-
 <div class="code-window">
 <div class="code-bar">
 <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
@@ -678,12 +650,10 @@ response = client.models.generate_content(
 print(response.text)
 </code></pre>
 </div>
-
 <p>
   Google's latest-model page now demonstrates the Interactions API for new work, so compare your snippet with what Get code produces.<sup><a class="gold-link" href="#ref-8">[8]</a></sup> The Playground session remains useful either way, because it records the exact instruction and settings that produced a good answer.
 </p>
 </article>
-
 <!-- TUTORIAL 2: A FULL-STACK EXPENSE TRACKER -->
 <article class="content-card" id="tutorial-2">
 <h2>Tutorial 2: A full-stack expense tracker</h2>
@@ -708,7 +678,6 @@ print(response.text)
   You now have a deployed app whose Gemini key and Firebase configuration sit on the server side. Try follow-up prompts that add features, such as a monthly budget alert or a Sheets export through the Workspace integration. Each one reuses the same agent loop from Figure 4.
 </p>
 </article>
-
 <!-- TUTORIAL 3: A NATIVE ANDROID TASK APP -->
 <article class="content-card" id="tutorial-3">
 <h2>Tutorial 3: A native Android task app</h2>
@@ -729,7 +698,6 @@ print(response.text)
   Test the features the emulator cannot, such as camera, Bluetooth and Google Play services, on the physical phone. Check the Firebase App Check behavior as well if your app calls Gemini. Debug builds use a token that AI Studio manages, and release builds switch to reCAPTCHA Enterprise.<sup><a class="gold-link" href="#ref-4">[4]</a></sup>
 </p>
 </article>
-
 <!-- LIMITS AND TRADE-OFFS -->
 <article class="content-card" id="limits">
 <h2>Limits and trade-offs</h2>
@@ -743,7 +711,6 @@ print(response.text)
   Prices and model names move quickly. Gemini 4 Argon's rates double on 1 December 2026, and the Flash models rise on 1 January 2027.<sup><a class="gold-link" href="#ref-7">[7]</a></sup> Recheck the pricing page before you commit a budget.
 </p>
 </article>
-
 <!-- CONCLUSION -->
 <article class="content-card" id="conclusion">
 <h2>Conclusion</h2>
@@ -754,7 +721,6 @@ print(response.text)
   A practical order of work is to prove the prompt in the Playground, move to Build mode when you need an interface, and export to GitHub once the app matters. Read the security rules, watch the shared-key costs, and recheck prices each month. Try the three tutorials above, and you will know within a day whether the platform fits your projects.
 </p>
 </article>
-
 <!-- CONSULTING, TRAINING & GLOBAL PARITY PRICING -->
 <article class="content-card" id="pricing-parity">
 <h2>Practice Pricing &amp; Global Purchasing Power Parity</h2>
@@ -764,7 +730,6 @@ print(response.text)
 <p>
   All services are delivered remotely worldwide with 4 hours a day of live instruction, with Saturdays and Sundays as holidays. Pricing is governed by our transparent 195-country Purchasing Power Parity (PPP) framework scaling rates across six economic tiers. For full tier definitions, currency conversions, and interactive calculations, visit our <a class="gold-link" href="../pricing.html">Pricing Page</a>.
 </p>
-
 <div class="pricing-summary-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;margin:1.5rem 0;">
 <div class="package-card" style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:12px;padding:1.5rem;">
 <h3 style="color:var(--gold);margin-top:0;">Business AI Training Flagship</h3>
@@ -779,7 +744,6 @@ print(response.text)
 <li>High-quality training materials, guides, and custom code transferred under Apache 2.0 license (commercial use, resale, and relicensing permitted with attribution).</li>
 </ul>
 </div>
-
 <div class="package-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
 <h3 style="color:var(--cyan);margin-top:0;">Personal AI Training Flagship</h3>
 <p style="color:var(--text-muted);font-size:0.9rem;">Dedicated 1-on-1 private acceleration for solo founders, builders, and senior engineers.</p>
@@ -794,7 +758,6 @@ print(response.text)
 </ul>
 </div>
 </div>
-
 <h3>Individual Service Picks (Pick &amp; Choose)</h3>
 <p>
   Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
@@ -803,7 +766,6 @@ print(response.text)
 <li><strong>Business Individual Pick:</strong> <strong>$250 USD</strong> base for 1 seat, with additional seats at $250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
 <li><strong>Personal Individual Pick:</strong> <strong>$250 USD</strong> strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
 </ul>
-
 <h3>Payment Structure &amp; Trust Guarantees</h3>
 <p>
   Every client engagement is safeguarded by strict trust guarantees:
@@ -815,7 +777,6 @@ print(response.text)
 <li><strong>Commercial Apache 2.0 License:</strong> All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.</li>
 <li><strong>Full Pricing Details:</strong> Learn more about country tier multipliers, currency choices, and customized curriculum on our <a class="gold-link" href="../pricing.html">Pricing Page</a>.</li>
 </ul>
-
 <h3>The Six Purchasing Power Parity (PPP) Tiers</h3>
 <div class="table-responsive">
 <table class="data-table">
@@ -882,7 +843,6 @@ print(response.text)
 </table>
 </div>
 </article>
-
 <!-- REFERENCES -->
 <article class="content-card" id="references">
 <h2>References</h2>
@@ -901,7 +861,6 @@ print(response.text)
 <li id="ref-12"><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/quickstart" rel="noopener" target="_blank">Gemini API quickstart</a>, Google AI for Developers.</li>
 </ol>
 </article>
-
 <!-- RELEVANT CALL TO ACTION -->
 <section class="cta-banner">
 <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Build Production Applications with Google AI Studio</h2>

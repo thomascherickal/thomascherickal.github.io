@@ -1,52 +1,43 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Google Gemini 101: Frontier Multimodal Architecture | Thomas Cherickal</title>
-  <meta
-    content="Comprehensive architectural guide to Google Gemini and Google DeepMind, covering Argon, Carbon, Hydrogen and Xenon models, subscription tiers, and deployment pricing."
-    name="description" />
-  <meta content="Thomas Cherickal" name="author" />
-  <link href="https://thedigitalfuturist.com/google-training/google-gemini-101.html" rel="canonical" />
-  <!-- Open Graph -->
-  <meta content="article" property="og:type" />
-  <meta content="https://thedigitalfuturist.com/google-training/google-gemini-101.html" property="og:url" />
-  <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name" />
-  <meta content="Google Gemini 101: Models, DeepMind &amp; Frontier Architecture | Thomas Cherickal"
-    property="og:title" />
-  <meta
-    content="Comprehensive architectural guide to Google Gemini and Google DeepMind, covering Argon, Carbon, Hydrogen and Xenon models, subscription tiers, and deployment pricing."
-    property="og:description" />
-  <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image" />
-  <meta content="en_US" property="og:locale" />
-  <!-- Twitter Card -->
-  <meta content="summary_large_image" name="twitter:card" />
-  <meta content="@thomazcherickal" name="twitter:site" />
-  <meta content="Google Gemini 101: Models, DeepMind &amp; Frontier Architecture | Thomas Cherickal"
-    name="twitter:title" />
-  <meta
-    content="Comprehensive architectural guide to Google Gemini and Google DeepMind, covering Argon, Carbon, Hydrogen and Xenon models, subscription tiers, and deployment pricing."
-    name="twitter:description" />
-  <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image" />
-  <!-- Favicons -->
-  <link href="../assets/favicon.ico" rel="icon" sizes="any" />
-  <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml" />
-  <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-  <link href="../site.webmanifest" rel="manifest" />
-  <meta content="#020408" name="theme-color" />
-  <link href="../css/fonts.css" rel="stylesheet" />
-  <link href="../css/styles.css" rel="stylesheet" />
-  <link href="../css/background.css" rel="stylesheet" />
-  <link href="../css/buttons.css" rel="stylesheet" />
-  <link href="../css/navbar.css" rel="stylesheet" />
-  <link href="../css/footer.css" rel="stylesheet" />
-  <link href="../css/cta.css" rel="stylesheet" />
-  <link href="../css/article.css" rel="stylesheet" />
-  <link href="../css/gemini.css?v=20261103" rel="stylesheet" />
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Google Gemini 101: Frontier Multimodal Architecture | Thomas Cherickal</title>
+<meta content="Comprehensive architectural guide to Google Gemini and Google DeepMind, covering Argon, Carbon, Hydrogen and Xenon models, subscription tiers, and deployment pricing." name="description"/>
+<meta content="Thomas Cherickal" name="author"/>
+<link href="https://thedigitalfuturist.com/google-training/google-gemini-101.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="article" property="og:type"/>
+<meta content="https://thedigitalfuturist.com/google-training/google-gemini-101.html" property="og:url"/>
+<meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
+<meta content="Google Gemini 101: Models, DeepMind &amp; Frontier Architecture | Thomas Cherickal" property="og:title"/>
+<meta content="Comprehensive architectural guide to Google Gemini and Google DeepMind, covering Argon, Carbon, Hydrogen and Xenon models, subscription tiers, and deployment pricing." property="og:description"/>
+<meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
+<meta content="en_US" property="og:locale"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@thomazcherickal" name="twitter:site"/>
+<meta content="Google Gemini 101: Models, DeepMind &amp; Frontier Architecture | Thomas Cherickal" name="twitter:title"/>
+<meta content="Comprehensive architectural guide to Google Gemini and Google DeepMind, covering Argon, Carbon, Hydrogen and Xenon models, subscription tiers, and deployment pricing." name="twitter:description"/>
+<meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
+<!-- Favicons -->
+<link href="../assets/favicon.ico" rel="icon" sizes="any"/>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../site.webmanifest" rel="manifest"/>
+<meta content="#020408" name="theme-color"/>
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link href="../css/styles.css" rel="stylesheet"/>
+<link href="../css/background.css" rel="stylesheet"/>
+<link href="../css/buttons.css" rel="stylesheet"/>
+<link href="../css/navbar.css" rel="stylesheet"/>
+<link href="../css/footer.css" rel="stylesheet"/>
+<link href="../css/cta.css" rel="stylesheet"/>
+<link href="../css/article.css" rel="stylesheet"/>
+<link href="../css/gemini.css?v=20261103" rel="stylesheet"/>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -141,9 +132,8 @@
   ]
 }
   </script>
-  <link href="../css/responsive.css" rel="stylesheet" />
+<link href="../css/responsive.css" rel="stylesheet"/>
 </head>
-
 <body>
   <!-- START:HEADER -->
   <nav aria-label="Main navigation">
@@ -273,63 +263,61 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-  <main class="container single-column-article">
-    <header class="hero">
-      <p class="hero-badge">// MULTIMODAL INTELLIGENCE &amp; RESEARCH ARCHITECTURE</p>
-      <h1>Google Gemini 101: Frontier Multimodal Architecture</h1>
-      <p class="hero-desc">
+<main class="container single-column-article">
+<header class="hero">
+<p class="hero-badge">// MULTIMODAL INTELLIGENCE &amp; RESEARCH ARCHITECTURE</p>
+<h1>Google Gemini 101: Frontier Multimodal Architecture</h1>
+<p class="hero-desc">
         An introduction to Google Gemini and Google DeepMind, including the Argon, Carbon, Hydrogen and Xenon models. By
         Thomas Cherickal. Status as of November 2, 2026.
       </p>
-    </header>
-
-    <!-- TABLE OF CONTENTS -->
-    <article class="content-card" id="table-of-contents">
-      <h2>Table of Contents</h2>
-      <div class="toc-grid" style="display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem;">
-        <a class="toc-link gold-link" href="#introduction">1. Introduction</a>
-        <a class="toc-link gold-link" href="#what-is-gemini">2. What is Google Gemini?</a>
-        <a class="toc-link gold-link" href="#deepmind">3. Google DeepMind, the Research Engine</a>
-        <a class="toc-link gold-link" href="#history">4. The Rise, the Slowdown and the Return</a>
-        <a class="toc-link gold-link" href="#argon">5. Gemini Argon</a>
-        <a class="toc-link gold-link" href="#carbon">6. Gemini Carbon</a>
-        <a class="toc-link gold-link" href="#rumors">7. Hydrogen and Xenon</a>
-        <a class="toc-link gold-link" href="#subscriptions">8. Google AI Subscription Tiers Explained</a>
-        <a class="toc-link gold-link" href="#products">9. Products Built on Gemini</a>
-        <a class="toc-link gold-link" href="#focus">10. What This Site Will Focus On</a>
-        <a class="toc-link gold-link" href="#conclusion">11. Conclusion</a>
-        <a class="toc-link gold-link" href="#pricing-parity">12. Consulting, Training &amp; Global Parity Pricing</a>
-        <a class="toc-link gold-link" href="#references">13. References</a>
-      </div>
-    </article>
-
-    <!-- INTRODUCTION -->
-    <article class="content-card" id="introduction">
-      <h2>Introduction</h2>
-      <p>
+</header>
+<!-- TABLE OF CONTENTS -->
+<article class="content-card" id="table-of-contents">
+<h2>Table of Contents</h2>
+<div class="toc-grid" style="display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem;">
+<a class="toc-link gold-link" href="#introduction">1. Introduction</a>
+<a class="toc-link gold-link" href="#what-is-gemini">2. What is Google Gemini?</a>
+<a class="toc-link gold-link" href="#deepmind">3. Google DeepMind, the Research Engine</a>
+<a class="toc-link gold-link" href="#history">4. The Rise, the Slowdown and the Return</a>
+<a class="toc-link gold-link" href="#argon">5. Gemini Argon</a>
+<a class="toc-link gold-link" href="#carbon">6. Gemini Carbon</a>
+<a class="toc-link gold-link" href="#rumors">7. Hydrogen and Xenon</a>
+<a class="toc-link gold-link" href="#subscriptions">8. Google AI Subscription Tiers Explained</a>
+<a class="toc-link gold-link" href="#products">9. Products Built on Gemini</a>
+<a class="toc-link gold-link" href="#focus">10. What This Site Will Focus On</a>
+<a class="toc-link gold-link" href="#conclusion">11. Conclusion</a>
+<a class="toc-link gold-link" href="#pricing-parity">12. Consulting, Training &amp; Global Parity Pricing</a>
+<a class="toc-link gold-link" href="#references">13. References</a>
+</div>
+</article>
+<!-- INTRODUCTION -->
+<article class="content-card" id="introduction">
+<h2>Introduction</h2>
+<p>
         Gemini is the family of AI models built by Google DeepMind, and it is also the name of Google's assistant app.
         It debuted in December 2023, navigated an industry slowdown through much of 2026, and moved back to the center
         of the frontier conversation with the latest element-generation releases. This architectural guide explains what
         Gemini is, how DeepMind fits in, and what each of the four new models actually represents.
       </p>
-      <p>
+<p>
         In about a month, Google shipped Gemini Argon, announced Gemini Carbon, and saw leaks about two more models
         called Hydrogen and Xenon. All four are named after chemical elements. Today, only Argon is available to the
         public.
       </p>
-      <p>
+<p>
         This guide maintains strict discipline between confirmed engineering facts and unconfirmed industry rumors,
         labeling every official Google claim as Google's. Where independent benchmarks disagree with Google's published
         metrics, both versions appear. Every link in the reference list points directly to primary sources used.
       </p>
-      <div class="diagram-container">
-        <div class="mermaid-fallback">
-          <em>Interactive architecture diagram (loading...)</em>
-        </div>
-        <div class="mermaid">
+<div class="diagram-container">
+<div class="mermaid-fallback">
+<em>Interactive architecture diagram (loading...)</em>
+</div>
+<div class="mermaid">
           flowchart TD
           subgraph ResearchLab ["Google DeepMind Research Engine"]
-          AlphaGo["AlphaGo & Game Theory"]
+          AlphaGo["AlphaGo &amp; Game Theory"]
           AlphaFold["AlphaFold (Nobel Prize in Chemistry)"]
           AlphaQubit["AlphaQubit Quantum Decoder"]
           end
@@ -341,751 +329,678 @@
           Xenon["Xenon (Leaked Evaluation Tier)"]
           end
 
-          subgraph ConsumerEnterprise ["Products & Delivery Surfaces"]
+          subgraph ConsumerEnterprise ["Products &amp; Delivery Surfaces"]
           App["Gemini Assistant App (950M MAUs)"]
           SearchAI["AI Mode in Google Search"]
           IDE["Google Antigravity IDE"]
-          API["Gemini API & AI Studio"]
+          API["Gemini API &amp; AI Studio"]
           end
 
-          ResearchLab --> FoundationModels
-          FoundationModels --> ConsumerEnterprise
+          ResearchLab --&gt; FoundationModels
+          FoundationModels --&gt; ConsumerEnterprise
         </div>
-        <div class="diagram-caption">Figure 1: Google DeepMind Research Engine to Gemini Foundation Models &amp;
+<div class="diagram-caption">Figure 1: Google DeepMind Research Engine to Gemini Foundation Models &amp;
           Products</div>
-      </div>
-    </article>
-
-    <!-- WHAT IS GOOGLE GEMINI -->
-    <article class="content-card" id="what-is-gemini">
-      <h2>What is Google Gemini?</h2>
-      <p>
+</div>
+</article>
+<!-- WHAT IS GOOGLE GEMINI -->
+<article class="content-card" id="what-is-gemini">
+<h2>What is Google Gemini?</h2>
+<p>
         Sundar Pichai and Demis Hassabis announced the foundation model family on December 6, 2023, organized across
         three initial compute sizes: Ultra handled highly complex reasoning tasks, Pro covered a wide breadth of
         multimodal workflows, and Nano ran directly on client edge devices. The name Gemini refers to the historic
         merger of two world-class AI laboratories - Google Brain and DeepMind - as well as NASA's pioneering Project
         Gemini space program.
       </p>
-      <p>
+<p>
         The defining architectural idea of Gemini is native multimodality: one model handles text, images, audio, video,
         and code from the start, instead of a language model augmented with vision or speech adapters as an
         afterthought. The current flagship continues this unified foundation. In the official Gemini Argon API
         documentation, inputs include interleaved text, image, video, audio, and PDF formats, with structured text and
         function calling as output.
       </p>
-      <p>
+<p>
         Each model generation organizes compute along consistent operational tiers:
       </p>
-      <ul>
-        <li><strong>Gemini Pro:</strong> The enterprise flagship model engineered for complex multi-step reasoning,
+<ul>
+<li><strong>Gemini Pro:</strong> The enterprise flagship model engineered for complex multi-step reasoning,
           million-token document parsing, and agent orchestration.</li>
-        <li><strong>Gemini Flash:</strong> High-throughput, sub-second latency model designed for high-frequency API
+<li><strong>Gemini Flash:</strong> High-throughput, sub-second latency model designed for high-frequency API
           routing and real-time interactive tasks.</li>
-        <li><strong>Gemini Flash-Lite:</strong> Ultra-lightweight model tuned for high-volume operational cost
+<li><strong>Gemini Flash-Lite:</strong> Ultra-lightweight model tuned for high-volume operational cost
           minimization.</li>
-        <li><strong>Gemini Deep Think:</strong> An extended test-time reasoning mode that allocates dynamic inference
+<li><strong>Gemini Deep Think:</strong> An extended test-time reasoning mode that allocates dynamic inference
           compute budgets to verify multi-step logic chains.</li>
-      </ul>
-      <p>
+</ul>
+<p>
         The word Gemini also names Google's consumer assistant app. The app and the underlying foundation models share
         branding and core computational engines, but they are separate entities: the app is an end-user conversational
         interface, whereas Gemini foundation models are the intelligence engines powering APIs, developer tooling, and
         enterprise platforms.
       </p>
-      <div class="diagram-container">
-        <div class="mermaid-fallback">
-          <em>Interactive architecture diagram (loading...)</em>
-        </div>
-        <div class="mermaid">
+<div class="diagram-container">
+<div class="mermaid-fallback">
+<em>Interactive architecture diagram (loading...)</em>
+</div>
+<div class="mermaid">
           flowchart TD
-          A["Raw Inputs (Text, Vision, Audio, Video, PDF)"] --> B["Unified Multimodal Tokenizer"]
-          B --> C["Gemini Transformer Core (Shared Latent Space)"]
-          C --> D{"Dynamic Routing & Reasoning"}
-          D -->|Standard Forward Pass| E["Instant Streaming Decodes"]
-          D -->|Deep Think Budget| F["Test-Time Deliberate Verification"]
-          E --> G["Synthesized Code, Function Calls & Text"]
-          F --> G
+          A["Raw Inputs (Text, Vision, Audio, Video, PDF)"] --&gt; B["Unified Multimodal Tokenizer"]
+          B --&gt; C["Gemini Transformer Core (Shared Latent Space)"]
+          C --&gt; D{"Dynamic Routing &amp; Reasoning"}
+          D --&gt;|Standard Forward Pass| E["Instant Streaming Decodes"]
+          D --&gt;|Deep Think Budget| F["Test-Time Deliberate Verification"]
+          E --&gt; G["Synthesized Code, Function Calls &amp; Text"]
+          F --&gt; G
         </div>
-        <div class="diagram-caption">Figure 2: Native Multimodal Cross-Attention &amp; Deliberate Reasoning Architecture
+<div class="diagram-caption">Figure 2: Native Multimodal Cross-Attention &amp; Deliberate Reasoning Architecture
         </div>
-      </div>
-    </article>
-
-    <!-- GOOGLE DEEPMIND THE RESEARCH ENGINE -->
-    <article class="content-card" id="deepmind">
-      <h2>Google DeepMind, the Research Engine</h2>
-      <p>
+</div>
+</article>
+<!-- GOOGLE DEEPMIND THE RESEARCH ENGINE -->
+<article class="content-card" id="deepmind">
+<h2>Google DeepMind, the Research Engine</h2>
+<p>
         Demis Hassabis, Shane Legg, and Mustafa Suleyman founded DeepMind in London in 2010. Google Brain started a year
         later as a deep-learning project inside Google. For years the two organizations ran in parallel, with DeepMind
         pursuing historic scientific breakthroughs through deep reinforcement learning and Google Brain building
         foundational software infrastructure, computing systems, and core transformer architectures.
       </p>
-      <p>
+<p>
         In April 2023, Alphabet merged the two groups into Google DeepMind, led by Hassabis as Chief Executive Officer.
         Gemini was the first major frontier foundation model system built together through this consolidated research
         and engineering apparatus.
       </p>
-      <p>
+<p>
         The laboratory's research record includes AlphaGo and AlphaFold. In October 2024, Demis Hassabis and John Jumper
         were awarded the Nobel Prize in Chemistry for AlphaFold, sharing it with David Baker for computational protein
         design.
       </p>
-      <p>
+<p>
         The same unified lab now ships commercial products and conducts breakthrough scientific research. Google's Argon
         launch post describes Argon translating the AlphaQubit quantum error decoder into an optimized hardware kernel
         that nearly doubled its inference throughput on quantum simulation systems, alongside synthesizing enzyme
         designs that passed physical laboratory testing.
       </p>
-    </article>
-
-    <!-- THE RISE, THE SLOWDOWN AND THE RETURN -->
-    <article class="content-card" id="history">
-      <h2>The Rise, the Slowdown and the Return</h2>
-
-      <h3>The Rise</h3>
-      <p>
+</article>
+<!-- THE RISE, THE SLOWDOWN AND THE RETURN -->
+<article class="content-card" id="history">
+<h2>The Rise, the Slowdown and the Return</h2>
+<h3>The Rise</h3>
+<p>
         Gemini foundation models advanced rapidly through 2025 with integrated chain-of-thought reasoning and native
         multimodality. On November 18, 2025, Google launched Gemini Pro as its most capable intelligence model to date,
         available on day one across the Gemini app, Search, AI Studio, and Vertex AI. By February 2026, the consumer app
         reached more than 750 million monthly active users.
       </p>
-
-      <h3>The Slowdown</h3>
-      <p>
+<h3>The Slowdown</h3>
+<p>
         Gemini Pro underwent rapid iteration cycles, followed by an extended series of Flash models. Technology analysts
         and industry publications described a visible gap at the top of Google's lineup while competing laboratories
         released flagship reasoning updates.
       </p>
-      <p>
+<p>
         On the July earnings call, Google leadership confirmed that Gemini was transitioning to a significantly larger
         next-generation architecture and acknowledged it was addressing competitive ground in agentic coding benchmarks.
         User growth cooled as well: the app scaled from 750 million to 900 million to 950 million monthly users across
         three sequential updates, gaining about 150 million in one stretch and 50 million in the next. These are
         company-reported metrics reflecting steady maturation at massive global scale.
       </p>
-
-      <h3>The Return</h3>
-      <p>
+<h3>The Return</h3>
+<p>
         The launch of Gemini Argon decisively concluded this quiet spell, inaugurating the element-generation releases.
       </p>
-
-      <div class="diagram-container">
-        <div class="mermaid-fallback">
-          <em>Interactive architecture diagram (loading...)</em>
-        </div>
-        <div class="mermaid">
+<div class="diagram-container">
+<div class="mermaid-fallback">
+<em>Interactive architecture diagram (loading...)</em>
+</div>
+<div class="mermaid">
           timeline
-          title Gemini Evolution & Generational Milestones
+          title Gemini Evolution &amp; Generational Milestones
           section The Rise
           Dec 2023 : Gemini 1.0 Launch (Ultra, Pro, Nano)
           Mar 2025 : Integrated Chain-of-Thought Reasoning
-          Nov 2025 : Expanded Frontier Deployment across Search & Cloud
+          Nov 2025 : Expanded Frontier Deployment across Search &amp; Cloud
           Feb 2026 : Surpasses 750 Million Monthly Active Users
           section The Slowdown
-          Spring 2026 : Flash Iterations & Latency Optimizations
+          Spring 2026 : Flash Iterations &amp; Latency Optimizations
           July 2026 : 950M MAUs · Leadership Confirms Focus on Agentic Coding
           section The Return
           Sep 2026 : Gemini Argon Announced (Fairwind Cyber Access)
           Oct 2026 : Broad Availability of Argon (1M Token Output)
           Oct 2026 : Gemini Carbon Announced (Frontier Cyber Defense)
         </div>
-        <div class="diagram-caption">Figure 3: Chronological Trajectory of Google Gemini Development</div>
-      </div>
-    </article>
-
-    <!-- GEMINI ARGON -->
-    <article class="content-card" id="argon">
-      <h2>Gemini Argon</h2>
-      <p>
+<div class="diagram-caption">Figure 3: Chronological Trajectory of Google Gemini Development</div>
+</div>
+</article>
+<!-- GEMINI ARGON -->
+<article class="content-card" id="argon">
+<h2>Gemini Argon</h2>
+<p>
         Google announced Argon on September 30, 2026, granting initial sandboxed access to trusted cyber defenders
         through the Fairwind Program. Broad general availability followed on October 13, 2026.
       </p>
-
-      <div class="metrics-grid"
-        style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;margin:1.5rem 0;">
-        <div class="metric-card"
-          style="background:rgba(56,189,248,0.06);border:1px solid rgba(56,189,248,0.25);border-radius:10px;padding:1.25rem;text-align:center;">
-          <div style="font-size:2rem;font-weight:800;color:var(--cyan);font-family:var(--font-mono);">1,048,576</div>
-          <div style="color:var(--text-muted);font-size:0.85rem;margin-top:0.35rem;">Tokens in Shared Window (Input,
+<div class="metrics-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;margin:1.5rem 0;">
+<div class="metric-card" style="background:rgba(56,189,248,0.06);border:1px solid rgba(56,189,248,0.25);border-radius:10px;padding:1.25rem;text-align:center;">
+<div style="font-size:2rem;font-weight:800;color:var(--cyan);font-family:var(--font-mono);">1,048,576</div>
+<div style="color:var(--text-muted);font-size:0.85rem;margin-top:0.35rem;">Tokens in Shared Window (Input,
             Thinking &amp; Output)</div>
-        </div>
-        <div class="metric-card"
-          style="background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.25);border-radius:10px;padding:1.25rem;text-align:center;">
-          <div style="font-size:2rem;font-weight:800;color:var(--gold);font-family:var(--font-mono);">65,536</div>
-          <div style="color:var(--text-muted);font-size:0.85rem;margin-top:0.35rem;">Default Output Tokens per Request
+</div>
+<div class="metric-card" style="background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.25);border-radius:10px;padding:1.25rem;text-align:center;">
+<div style="font-size:2rem;font-weight:800;color:var(--gold);font-family:var(--font-mono);">65,536</div>
+<div style="color:var(--text-muted);font-size:0.85rem;margin-top:0.35rem;">Default Output Tokens per Request
             (Long Decode to 1M)</div>
-        </div>
-        <div class="metric-card"
-          style="background:rgba(165,180,252,0.06);border:1px solid rgba(165,180,252,0.25);border-radius:10px;padding:1.25rem;text-align:center;">
-          <div style="font-size:2rem;font-weight:800;color:var(--violet);font-family:var(--font-mono);">3 Levels</div>
-          <div style="color:var(--text-muted);font-size:0.85rem;margin-top:0.35rem;">Thinking Budgets (Low, Medium,
+</div>
+<div class="metric-card" style="background:rgba(165,180,252,0.06);border:1px solid rgba(165,180,252,0.25);border-radius:10px;padding:1.25rem;text-align:center;">
+<div style="font-size:2rem;font-weight:800;color:var(--violet);font-family:var(--font-mono);">3 Levels</div>
+<div style="color:var(--text-muted);font-size:0.85rem;margin-top:0.35rem;">Thinking Budgets (Low, Medium,
             High)</div>
-        </div>
-        <div class="metric-card"
-          style="background:rgba(52,211,153,0.06);border:1px solid rgba(52,211,153,0.25);border-radius:10px;padding:1.25rem;text-align:center;">
-          <div style="font-size:2rem;font-weight:800;color:var(--green);font-family:var(--font-mono);">$2 / $10</div>
-          <div style="color:var(--text-muted);font-size:0.85rem;margin-top:0.35rem;">Introductory Rate per Million Input
+</div>
+<div class="metric-card" style="background:rgba(52,211,153,0.06);border:1px solid rgba(52,211,153,0.25);border-radius:10px;padding:1.25rem;text-align:center;">
+<div style="font-size:2rem;font-weight:800;color:var(--green);font-family:var(--font-mono);">$2 / $10</div>
+<div style="color:var(--text-muted);font-size:0.85rem;margin-top:0.35rem;">Introductory Rate per Million Input
             / Output Tokens</div>
-        </div>
-      </div>
-
-      <p>
+</div>
+</div>
+<p>
         Architecturally, input prompt tokens, test-time thinking tokens, and final output tokens share a single unified
         context window of 1,048,576 tokens. Default output generation is 65,536 tokens per request, but long decode
         functionality allows a single continuous task to reach 1,048,576 tokens.
       </p>
-      <p>
+<p>
         Pricing for Gemini 4 Argon is $2.00 USD per million input tokens and $10.00 USD per million output tokens
         through November 30, 2026, transitioning to $4.00 USD input and $20.00 USD output thereafter. Argon is not
         offered on the free API tier.
       </p>
-      <p>
+<p>
         Argon runs in the Gemini app and AI Mode in Search for Google AI Pro and Ultra subscribers, in Google
         Antigravity for Ultra subscribers, and programmatically through the Gemini API and Google Cloud under the
         official model identifier <code>gemini-4-argon</code>.
       </p>
-      <p>
+<p>
         The pricing structure translates into concrete operational figures. A single long decode that fills all
         1,048,576 output tokens costs approximately $10.49 USD in output charges at the introductory rate, scaling to
         about $20.97 USD once the rate transitions after November 30. Because test-time thinking tokens are metered and
         billed as output tokens, configuring a high thinking level on challenging computational tasks adds to that cost
         before the visible answer begins streaming.
       </p>
-      <p>
+<p>
         Google's published benchmarks indicate high capability: Argon scores 77.9% on DeepSWE v1.1, leads the Vals
         Index, and reaches 91.7% on the LVBench long-video evaluation. Google also stated that Argon helped the Chrome
         engineering team finish an architectural refactor across hundreds of files in weeks instead of months, and cut
         session preparation time by 40% in the open-source Agent Development Kit.
       </p>
-      <p>
+<p>
         Those are Google's benchmarks, and independent sources add important caveats. Independent latency tracking puts
         Argon's time to first token at nearly 48 seconds at high thinking budgets, higher than the median for competing
         reasoning models.
       </p>
-      <p>
+<p>
         Google states that it built Argon under its Frontier Safety Framework, incorporating an active monitor that
         reads the model's reasoning trails and proposed tool actions, halting execution if it detects an unintended
         workaround. Google reports a 0.7% attack success rate on the Gray Swan prompt injection benchmark. The strongest
         offensive cyber capabilities are withheld from public endpoints via the Fairwind Program.
       </p>
-    </article>
-
-    <!-- GEMINI CARBON -->
-    <article class="content-card" id="carbon">
-      <h2>Gemini Carbon</h2>
-      <p>
+</article>
+<!-- GEMINI CARBON -->
+<article class="content-card" id="carbon">
+<h2>Gemini Carbon</h2>
+<p>
         Carbon followed fifteen days after Argon. Google announced Carbon on October 28, 2026, as its strongest frontier
         model, engineered specifically for state-of-the-art cybersecurity offense-defense analysis and long-horizon
         autonomous capabilities.
       </p>
-      <p>
+<p>
         Google's claims for Carbon report notable benchmark advancements:
       </p>
-      <ul>
-        <li>Ranks first on the Artificial Analysis Intelligence Index v5.0 with an aggregate score of 59.</li>
-        <li>Reaches 88.2% on SEC-bench Pro for autonomous vulnerability discovery.</li>
-        <li>Scores 54.8% on ExploitGym for safe adversarial exploit verification.</li>
-        <li>Scores 71.0% on CWE-bench for automated vulnerability patching and remediation.</li>
-        <li>Places fourth on WebDev Arena, up 89 Elo points over prior baselines.</li>
-        <li>Posts a 0.0% attack success rate on the Gray Swan indirect prompt injection benchmark, down from Argon's
+<ul>
+<li>Ranks first on the Artificial Analysis Intelligence Index v5.0 with an aggregate score of 59.</li>
+<li>Reaches 88.2% on SEC-bench Pro for autonomous vulnerability discovery.</li>
+<li>Scores 54.8% on ExploitGym for safe adversarial exploit verification.</li>
+<li>Scores 71.0% on CWE-bench for automated vulnerability patching and remediation.</li>
+<li>Places fourth on WebDev Arena, up 89 Elo points over prior baselines.</li>
+<li>Posts a 0.0% attack success rate on the Gray Swan indirect prompt injection benchmark, down from Argon's
           0.7%.</li>
-      </ul>
-      <p>
+</ul>
+<p>
         Access is currently restricted. Carbon is available exclusively to a vetted subset of cyber defenders through
         the Fairwind Program, with additional trusted partners phased in. Google states that Carbon will reach
         enterprise developers and consumers as soon as possible, without publishing specific calendar commitments.
         Third-party API tracking verified that Carbon lacks a public API endpoint, while introductory pricing parity
         matches Argon at $2.00 / $10.00 per million tokens.
       </p>
-      <p>
+<p>
         Before launch, industry reports highlighted internal codenames including Argon, Barium, and Carbon, with the
         internal Barium-B build chosen to ship publicly as Argon.
       </p>
-    </article>
-
-    <!-- HYDROGEN AND XENON -->
-    <article class="content-card" id="rumors">
-      <h2>Hydrogen and Xenon</h2>
-      <p>
+</article>
+<!-- HYDROGEN AND XENON -->
+<article class="content-card" id="rumors">
+<h2>Hydrogen and Xenon</h2>
+<p>
         Google has not officially announced either model. Hydrogen is reportedly the internal development codename for
         an upcoming Flash-tier model, and third-party tracking portals list the model string
         <code>gemini-4-flash-preview</code> with status in testing and an expected window in late 2026. Because these
         details derive from external leaks, specifications remain unconfirmed.
       </p>
-      <p>
+<p>
         Information regarding Xenon is less clear. Community reports circulating since late October 2026 claim Xenon is
         designed to deliver frontier-grade reasoning comparable to unreleased competitive baselines at a substantially
         lower serving cost. Google has confirmed no launch date, and the model remains in internal evaluation.
       </p>
-      <p>
+<p>
         Technical reporting requires a consistent standard: an engineering claim counts as confirmed when Google
         publishes it in a blog post, a model card, or API documentation, while other details remain labeled as
         unconfirmed reports.
       </p>
-
-      <div class="table-responsive">
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>Model</th>
-              <th>Release Status</th>
-              <th>Verified Architecture &amp; Knowledge Summary</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Gemini Argon</strong></td>
-              <td><span class="badge badge-success"
-                  style="background:rgba(52,211,153,0.15);color:var(--green);padding:0.25rem 0.65rem;border-radius:6px;font-size:0.8rem;border:1px solid rgba(52,211,153,0.35);">Available</span>
-              </td>
-              <td>Announced September 30, broadly available October 13, 2026. Documented API identifier
+<div class="table-responsive">
+<table class="data-table">
+<thead>
+<tr>
+<th>Model</th>
+<th>Release Status</th>
+<th>Verified Architecture &amp; Knowledge Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gemini Argon</strong></td>
+<td><span class="badge badge-success" style="background:rgba(52,211,153,0.15);color:var(--green);padding:0.25rem 0.65rem;border-radius:6px;font-size:0.8rem;border:1px solid rgba(52,211,153,0.35);">Available</span>
+</td>
+<td>Announced September 30, broadly available October 13, 2026. Documented API identifier
                 <code>gemini-4-argon</code> with 1M token output decode capability.
               </td>
-            </tr>
-            <tr>
-              <td><strong>Gemini Carbon</strong></td>
-              <td><span class="badge badge-warning"
-                  style="background:rgba(251,191,36,0.15);color:var(--gold);padding:0.25rem 0.65rem;border-radius:6px;font-size:0.8rem;border:1px solid rgba(251,191,36,0.35);">Gated</span>
-              </td>
-              <td>Announced October 28, 2026. Accessible exclusively to Fairwind cybersecurity partners; no public
+</tr>
+<tr>
+<td><strong>Gemini Carbon</strong></td>
+<td><span class="badge badge-warning" style="background:rgba(251,191,36,0.15);color:var(--gold);padding:0.25rem 0.65rem;border-radius:6px;font-size:0.8rem;border:1px solid rgba(251,191,36,0.35);">Gated</span>
+</td>
+<td>Announced October 28, 2026. Accessible exclusively to Fairwind cybersecurity partners; no public
                 general availability date published.</td>
-            </tr>
-            <tr>
-              <td><strong>Hydrogen</strong></td>
-              <td><span class="badge badge-secondary"
-                  style="background:rgba(148,163,184,0.15);color:var(--text-muted);padding:0.25rem 0.65rem;border-radius:6px;font-size:0.8rem;border:1px solid rgba(148,163,184,0.35);">Unconfirmed</span>
-              </td>
-              <td>Reported Flash-tier optimization model. Appears only in third-party leaks and external tracking
+</tr>
+<tr>
+<td><strong>Hydrogen</strong></td>
+<td><span class="badge badge-secondary" style="background:rgba(148,163,184,0.15);color:var(--text-muted);padding:0.25rem 0.65rem;border-radius:6px;font-size:0.8rem;border:1px solid rgba(148,163,184,0.35);">Unconfirmed</span>
+</td>
+<td>Reported Flash-tier optimization model. Appears only in third-party leaks and external tracking
                 catalogs under <code>gemini-4-flash-preview</code>.</td>
-            </tr>
-            <tr>
-              <td><strong>Xenon</strong></td>
-              <td><span class="badge badge-secondary"
-                  style="background:rgba(148,163,184,0.15);color:var(--text-muted);padding:0.25rem 0.65rem;border-radius:6px;font-size:0.8rem;border:1px solid rgba(148,163,184,0.35);">Unconfirmed</span>
-              </td>
-              <td>Leaked October 30, 2026. Reported internal evaluation architecture focusing on reduced-cost frontier
+</tr>
+<tr>
+<td><strong>Xenon</strong></td>
+<td><span class="badge badge-secondary" style="background:rgba(148,163,184,0.15);color:var(--text-muted);padding:0.25rem 0.65rem;border-radius:6px;font-size:0.8rem;border:1px solid rgba(148,163,184,0.35);">Unconfirmed</span>
+</td>
+<td>Leaked October 30, 2026. Reported internal evaluation architecture focusing on reduced-cost frontier
                 reasoning. No official date.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </article>
-
-    <!-- GOOGLE SUBSCRIPTION TIERS EXPLAINED -->
-    <article class="content-card" id="subscriptions">
-      <h2>Google AI Subscription Tiers Explained</h2>
-      <p>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<!-- GOOGLE SUBSCRIPTION TIERS EXPLAINED -->
+<article class="content-card" id="subscriptions">
+<h2>Google AI Subscription Tiers Explained</h2>
+<p>
         Google structured its consumer and professional AI offerings into integrated tiers tied to Google One cloud
         storage, computational quotas, and workspace application capabilities:
       </p>
-
-      <div class="table-responsive">
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>Subscription Tier</th>
-              <th>Monthly Investment</th>
-              <th>Unified Cloud Storage</th>
-              <th>Primary Model Capabilities &amp; Quotas</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Gemini Free</strong></td>
-              <td>$0.00</td>
-              <td>15 GB</td>
-              <td>Baseline Flash-tier access, standard prompt lengths, standard rate limits.</td>
-            </tr>
-            <tr>
-              <td><strong>Google AI Plus</strong></td>
-              <td>$4.99 / mo</td>
-              <td>400 GB</td>
-              <td>2x rate limits, baseline Google Docs and Gmail draft assistance, expanded research tools.</td>
-            </tr>
-            <tr>
-              <td><strong>Google AI Pro</strong></td>
-              <td>$19.99 / mo</td>
-              <td>5 TB</td>
-              <td>Frontier Gemini Pro &amp; Argon access, 1M+ token context windows, autonomous Deep Research, native
+<div class="table-responsive">
+<table class="data-table">
+<thead>
+<tr>
+<th>Subscription Tier</th>
+<th>Monthly Investment</th>
+<th>Unified Cloud Storage</th>
+<th>Primary Model Capabilities &amp; Quotas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gemini Free</strong></td>
+<td>$0.00</td>
+<td>15 GB</td>
+<td>Baseline Flash-tier access, standard prompt lengths, standard rate limits.</td>
+</tr>
+<tr>
+<td><strong>Google AI Plus</strong></td>
+<td>$4.99 / mo</td>
+<td>400 GB</td>
+<td>2x rate limits, baseline Google Docs and Gmail draft assistance, expanded research tools.</td>
+</tr>
+<tr>
+<td><strong>Google AI Pro</strong></td>
+<td>$19.99 / mo</td>
+<td>5 TB</td>
+<td>Frontier Gemini Pro &amp; Argon access, 1M+ token context windows, autonomous Deep Research, native
                 Google Workspace embedding.</td>
-            </tr>
-            <tr>
-              <td><strong>Google AI Ultra</strong></td>
-              <td>$99.99 - $200.00 / mo</td>
-              <td>20 TB+</td>
-              <td>Maximum priority queues, 5x to 20x compute budget, Google Antigravity IDE access, Google Flow video
+</tr>
+<tr>
+<td><strong>Google AI Ultra</strong></td>
+<td>$99.99 - $200.00 / mo</td>
+<td>20 TB+</td>
+<td>Maximum priority queues, 5x to 20x compute budget, Google Antigravity IDE access, Google Flow video
                 creation credits.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="diagram-container">
-        <div class="mermaid-fallback">
-          <em>Interactive architecture diagram (loading...)</em>
-        </div>
-        <div class="mermaid">
+</tr>
+</tbody>
+</table>
+</div>
+<div class="diagram-container">
+<div class="mermaid-fallback">
+<em>Interactive architecture diagram (loading...)</em>
+</div>
+<div class="mermaid">
           graph TD
-          Free["Gemini Free ($0 / 15GB)"] --> Plus["Google AI Plus ($4.99 / 400GB)"]
-          Plus --> Pro["Google AI Pro ($19.99 / 5TB Unified Storage)"]
-          Pro --> Ultra["Google AI Ultra ($99.99+ / 20TB+ Compute Priority)"]
+          Free["Gemini Free ($0 / 15GB)"] --&gt; Plus["Google AI Plus ($4.99 / 400GB)"]
+          Plus --&gt; Pro["Google AI Pro ($19.99 / 5TB Unified Storage)"]
+          Pro --&gt; Ultra["Google AI Ultra ($99.99+ / 20TB+ Compute Priority)"]
 
-          Pro -.-> ProFeatures["1M+ Tokens · Deep Research · Workspace Integration"]
-          Ultra -.-> UltraFeatures["Priority Frontier Compute · Antigravity IDE · Flow Credits"]
+          Pro -.-&gt; ProFeatures["1M+ Tokens · Deep Research · Workspace Integration"]
+          Ultra -.-&gt; UltraFeatures["Priority Frontier Compute · Antigravity IDE · Flow Credits"]
         </div>
-        <div class="diagram-caption">Figure 4: Google AI Subscription Spectrum &amp; Capability Escalation</div>
-      </div>
-
-      <h3>What Can You Do with a Pro Subscription?</h3>
-      <p>
+<div class="diagram-caption">Figure 4: Google AI Subscription Spectrum &amp; Capability Escalation</div>
+</div>
+<h3>What Can You Do with a Pro Subscription?</h3>
+<p>
         The <strong>Google AI Pro</strong> plan ($19.99/month) represents the standard professional benchmark, targeting
         software developers, financial analysts, and corporate knowledge workers:
       </p>
-      <ul>
-        <li><strong>Massive 1 Million+ Token Context Window:</strong> Ingest entire books, legal contracts, regulatory
+<ul>
+<li><strong>Massive 1 Million+ Token Context Window:</strong> Ingest entire books, legal contracts, regulatory
           filings, or large code repositories in a single prompt session without losing needle-in-a-haystack recall.
         </li>
-        <li><strong>Autonomous Deep Research:</strong> Deploy multi-step autonomous research agents that scour dozens of
+<li><strong>Autonomous Deep Research:</strong> Deploy multi-step autonomous research agents that scour dozens of
           online sources, build synthesized outlines, and format cited multi-page technical white papers.</li>
-        <li><strong>Native Google Workspace Embedding:</strong> Directly invoke Gemini inside Gmail, Google Docs,
+<li><strong>Native Google Workspace Embedding:</strong> Directly invoke Gemini inside Gmail, Google Docs,
           Sheets, and Slides to draft executive proposals, synthesize spreadsheets, and analyze correspondence threads.
         </li>
-        <li><strong>Frontier Model Access:</strong> Tap into frontier reasoning capabilities (including Argon) with
+<li><strong>Frontier Model Access:</strong> Tap into frontier reasoning capabilities (including Argon) with
           higher request quotas and continuous rolling compute refreshes.</li>
-      </ul>
-
-      <h3>What Can You Do with an Ultra Subscription?</h3>
-      <p>
+</ul>
+<h3>What Can You Do with an Ultra Subscription?</h3>
+<p>
         The <strong>Google AI Ultra</strong> plan is engineered for power creators, AI engineering teams, and enterprise
         researchers demanding unthrottled compute and early access to breakthrough experimental tools:
       </p>
-      <ul>
-        <li><strong>Priority Frontier Compute Queues:</strong> Zero-latency routing to Google's highest capability
+<ul>
+<li><strong>Priority Frontier Compute Queues:</strong> Zero-latency routing to Google's highest capability
           frontier reasoning models (including Gemini Argon and Deep Think modes) even during peak global load.</li>
-        <li><strong>Substantially Expanded Rate Caps:</strong> 5x to 20x higher rate limits compared to Pro, supporting
+<li><strong>Substantially Expanded Rate Caps:</strong> 5x to 20x higher rate limits compared to Pro, supporting
           high-throughput API testing, synthetic data generation, and long-horizon agentic task loops.</li>
-        <li><strong>Google Antigravity IDE Access:</strong> Priority developer access to the agent-first development
+<li><strong>Google Antigravity IDE Access:</strong> Priority developer access to the agent-first development
           environment with model multiplexing across Gemini Flash, Gemini Pro, Gemini Argon, Claude Opus, and Claude
           Sonnet.</li>
-        <li><strong>Google Flow Creative Credits:</strong> Bundled monthly generation credits for the Google Flow
+<li><strong>Google Flow Creative Credits:</strong> Bundled monthly generation credits for the Google Flow
           filmmaking studio, enabling high-definition Veo video generation and Lyria musical scoring.</li>
-        <li><strong>Expanded Cloud Ecosystem Perks:</strong> 20 TB or more of unified high-speed cloud storage, YouTube
+<li><strong>Expanded Cloud Ecosystem Perks:</strong> 20 TB or more of unified high-speed cloud storage, YouTube
           Premium integrations, and advanced device management.</li>
-      </ul>
-    </article>
-
-    <!-- PRODUCTS BUILT ON GEMINI -->
-    <article class="content-card" id="products">
-      <h2>Products Built on Gemini</h2>
-      <p>
+</ul>
+</article>
+<!-- PRODUCTS BUILT ON GEMINI -->
+<article class="content-card" id="products">
+<h2>Products Built on Gemini</h2>
+<p>
         Gemini reaches developers, enterprises, and everyday users through several coordinated products, each serving a
         different operational audience:
       </p>
-      <ul>
-        <li><strong>Gemini Consumer App:</strong> The consumer assistant application had about 950 million monthly users
+<ul>
+<li><strong>Gemini Consumer App:</strong> The consumer assistant application had about 950 million monthly users
           as of Alphabet's July earnings reports.</li>
-        <li><strong>AI Mode in Google Search:</strong> Offers Argon reasoning to Google AI Pro and Ultra subscribers
+<li><strong>AI Mode in Google Search:</strong> Offers Argon reasoning to Google AI Pro and Ultra subscribers
           directly within search queries.</li>
-        <li><strong>Google Antigravity IDE:</strong> The agent platform. Google reports that engineering teams using
+<li><strong>Google Antigravity IDE:</strong> The agent platform. Google reports that engineering teams using
           Argon in Antigravity raised agentic code submissions by more than 35% and cut code rollbacks by nearly a
           third.</li>
-        <li><strong>Gemini API &amp; Google AI Studio:</strong> The developer entry points, featuring context caching,
+<li><strong>Gemini API &amp; Google AI Studio:</strong> The developer entry points, featuring context caching,
           the Interactions API, and managed autonomous agents.</li>
-        <li><strong>Gemini for Business &amp; Google Cloud:</strong> Enterprise workspace agents and cloud
+<li><strong>Gemini for Business &amp; Google Cloud:</strong> Enterprise workspace agents and cloud
           infrastructure, incorporating the CodeMender tool for finding and fixing software vulnerabilities.</li>
-        <li><strong>Gemini Robotics:</strong> The embodied physical AI line. On July 30, 2026, Google DeepMind released
+<li><strong>Gemini Robotics:</strong> The embodied physical AI line. On July 30, 2026, Google DeepMind released
           Gemini Robotics ER 2 to developers through the Gemini API and AI Studio.</li>
-      </ul>
-    </article>
-
-    <!-- WHAT THIS SITE WILL FOCUS ON -->
-    <article class="content-card" id="focus">
-      <h2>What This Site Will Focus On</h2>
-      <p>
+</ul>
+</article>
+<!-- WHAT THIS SITE WILL FOCUS ON -->
+<article class="content-card" id="focus">
+<h2>What This Site Will Focus On</h2>
+<p>
         When The Digital Futurist covers Gemini, the technical focus centers on AI development and AI research, not on
         multimodality as an isolated novelty. Multimodality is a tactile skill that develops quickly through practice:
         upload a photo, feed the model a PDF, hand it a video log, and within a few weeks your workflow adapts
         naturally.
       </p>
-      <p>
+<p>
         AI development and research require deeper architectural study:
       </p>
-      <ul>
-        <li>How does long decode operate under million-token output constraints?</li>
-        <li>Why do test-time thinking levels change cost, latency, and reasoning depth?</li>
-        <li>How should teams evaluate a model before trusting it with production repositories?</li>
-        <li>What concrete failure modes does a runtime safety monitor guard against?</li>
-      </ul>
-      <p>
+<ul>
+<li>How does long decode operate under million-token output constraints?</li>
+<li>Why do test-time thinking levels change cost, latency, and reasoning depth?</li>
+<li>How should teams evaluate a model before trusting it with production repositories?</li>
+<li>What concrete failure modes does a runtime safety monitor guard against?</li>
+</ul>
+<p>
         A practical routine shows what this looks like: pick a complex task from your own codebase and run it across
         Argon's three thinking levels (low, medium, and high). Record the token consumption, the wait for the first
         token (TTFT), the total cost, and the quality of the result, then compare your empirical numbers with published
         figures. The variance between the two is the most useful insight an engineering team can possess.
       </p>
-      <p>
+<p>
         Coverage focuses on four key areas: how models are architected, trained, and evaluated; what research papers and
         model cards disclose; how to measure cost, latency, and quality on production workloads; and where confirmed
         facts end and rumors begin. Models evolve continuously, while rigorous verification standards outlast individual
         releases.
       </p>
-    </article>
-
-    <!-- CONCLUSION -->
-    <article class="content-card" id="conclusion">
-      <h2>Conclusion</h2>
-      <p>
+</article>
+<!-- CONCLUSION -->
+<article class="content-card" id="conclusion">
+<h2>Conclusion</h2>
+<p>
         Gemini is a foundation model family built by a laboratory that unites scientific discovery with production
         software delivery. Its path ran from a December 2023 debut through an industry cooldown in 2026 to the arrival
         of the element generation. Argon is the model you can integrate today, featuring a documented endpoint, a
         published price, and a million-token output decode window.
       </p>
-      <p>
+<p>
         Carbon is Google's claimed upgrade, announced October 28, 2026, but gated to Fairwind partners. Hydrogen and
         Xenon remain third-party reports without official Google announcements behind them.
       </p>
-      <p>
+<p>
         The practical step for developers and technical leaders is to benchmark Argon directly. Because thinking tokens
         are billed as output tokens, evaluate proprietary tasks across low, medium, and high thinking to establish
         empirical balance between quality, latency, and cost before standardizing on a configuration.
       </p>
-    </article>
-
-    <!-- CONSULTING, TRAINING & GLOBAL PARITY PRICING -->
-    <article class="content-card" id="pricing-parity">
-      <h2>Practice Pricing &amp; Global Purchasing Power Parity</h2>
-      <p>
+</article>
+<!-- CONSULTING, TRAINING & GLOBAL PARITY PRICING -->
+<article class="content-card" id="pricing-parity">
+<h2>Practice Pricing &amp; Global Purchasing Power Parity</h2>
+<p>
         I provide live, remote engineering training and advisory consulting covering Google Gemini, Claude, and
         sovereign local LLMs. Engagements turn engineering teams and individual developers into AI-first builders who
         construct production agent swarms, implement budget safeguards, and run private models.
       </p>
-      <p>
+<p>
         All services are delivered remotely worldwide with 4 hours a day of live instruction, with Saturdays and Sundays
         as holidays. Pricing is governed by our transparent 195-country Purchasing Power Parity (PPP) framework scaling
         rates across six economic tiers. For full tier definitions, currency conversions, and interactive calculations,
         visit our <a class="gold-link" href="../pricing.html">Pricing Page</a>.
       </p>
-
-      <div class="pricing-summary-grid"
-        style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;margin:1.5rem 0;">
-        <div class="package-card"
-          style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:12px;padding:1.5rem;">
-          <h3 style="color:var(--gold);margin-top:0;">Business AI Training Flagship</h3>
-          <p style="color:var(--text-muted);font-size:0.9rem;">Comprehensive organizational workforce and engineering
+<div class="pricing-summary-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;margin:1.5rem 0;">
+<div class="package-card" style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:12px;padding:1.5rem;">
+<h3 style="color:var(--gold);margin-top:0;">Business AI Training Flagship</h3>
+<p style="color:var(--text-muted);font-size:0.9rem;">Comprehensive organizational workforce and engineering
             transformation.</p>
-          <div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">2500 <span
-              style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
-          <ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
-            <li>60 days total calendar duration: 30 days live engineering training + 30 days dedicated support.</li>
-            <li>Includes up to 10 participants, with additional seats at 250 USD per seat up to a maximum of 20 seats.
+<div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">2500 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
+<ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+<li>60 days total calendar duration: 30 days live engineering training + 30 days dedicated support.</li>
+<li>Includes up to 10 participants, with additional seats at 250 USD per seat up to a maximum of 20 seats.
             </li>
-            <li>4 hours daily live instruction, Monday through Friday (Saturdays and Sundays holidays). Remote
+<li>4 hours daily live instruction, Monday through Friday (Saturdays and Sundays holidays). Remote
               worldwide.</li>
-            <li>Zero advance deposit ($0 upfront); 20% due in 5 milestone installments after completed progress.</li>
-            <li>Walk away owing nothing if not satisfied after the first 5 days of completed training.</li>
-            <li>High-quality training materials, guides, and custom code transferred under Apache 2.0 license
+<li>Zero advance deposit ($0 upfront); 20% due in 5 milestone installments after completed progress.</li>
+<li>Walk away owing nothing if not satisfied after the first 5 days of completed training.</li>
+<li>High-quality training materials, guides, and custom code transferred under Apache 2.0 license
               (commercial use, resale, and relicensing permitted with attribution).</li>
-          </ul>
-        </div>
-
-        <div class="package-card"
-          style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
-          <h3 style="color:var(--cyan);margin-top:0;">Personal AI Training Flagship</h3>
-          <p style="color:var(--text-muted);font-size:0.9rem;">Dedicated 1-on-1 private acceleration for solo founders,
+</ul>
+</div>
+<div class="package-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
+<h3 style="color:var(--cyan);margin-top:0;">Personal AI Training Flagship</h3>
+<p style="color:var(--text-muted);font-size:0.9rem;">Dedicated 1-on-1 private acceleration for solo founders,
             builders, and senior engineers.</p>
-          <div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">2500 <span
-              style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
-          <ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
-            <li>60 days total calendar duration: 30 days live 1-on-1 training + 30 days dedicated support.</li>
-            <li>Strictly 1 person only (dedicated private acceleration).</li>
-            <li>4 hours daily hands-on implementation, Monday through Friday (Saturdays and Sundays holidays). Remote
+<div style="font-size:2rem;font-weight:800;color:#fff;margin:1rem 0;">2500 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD / 60 Days</span></div>
+<ul style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+<li>60 days total calendar duration: 30 days live 1-on-1 training + 30 days dedicated support.</li>
+<li>Strictly 1 person only (dedicated private acceleration).</li>
+<li>4 hours daily hands-on implementation, Monday through Friday (Saturdays and Sundays holidays). Remote
               worldwide.</li>
-            <li>Zero advance deposit ($0 upfront); 20% due in 5 milestone installments after completed progress.</li>
-            <li>Walk away owing nothing if not satisfied after the first 5 days of completed training.</li>
-            <li>Comprehensive training curriculum and materials licensed under Apache 2.0 (commercial use, resale, and
+<li>Zero advance deposit ($0 upfront); 20% due in 5 milestone installments after completed progress.</li>
+<li>Walk away owing nothing if not satisfied after the first 5 days of completed training.</li>
+<li>Comprehensive training curriculum and materials licensed under Apache 2.0 (commercial use, resale, and
               relicensing permitted with attribution).</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>Individual Service Picks (Pick &amp; Choose)</h3>
-      <p>
+</ul>
+</div>
+</div>
+<h3>Individual Service Picks (Pick &amp; Choose)</h3>
+<p>
         Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training,
         Claude Agent Orchestration, Local LLMs, or Workflow Automations):
       </p>
-      <ul style="line-height:1.8;">
-        <li><strong>Business Individual Pick:</strong> <strong>$250 USD</strong> base for 1 seat, with
+<ul style="line-height:1.8;">
+<li><strong>Business Individual Pick:</strong> <strong>$250 USD</strong> base for 1 seat, with
           additional seats at 250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days
           dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
-        <li><strong>Personal Individual Pick:</strong> <strong>$250 USD</strong> strictly for only one seat,
+<li><strong>Personal Individual Pick:</strong> <strong>$250 USD</strong> strictly for only one seat,
           covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote
           worldwide, Mon - Fri).</li>
-      </ul>
-
-      <h3>Payment Structure &amp; Trust Guarantees</h3>
-      <p>
+</ul>
+<h3>Payment Structure &amp; Trust Guarantees</h3>
+<p>
         Every client engagement is safeguarded by strict trust guarantees:
       </p>
-      <ul style="line-height:1.7;">
-        <li><strong>Zero Upfront Payment:</strong> Strictly $0 advance deposit required. We never invoice before
+<ul style="line-height:1.7;">
+<li><strong>Zero Upfront Payment:</strong> Strictly $0 advance deposit required. We never invoice before
           delivering actual value.</li>
-        <li><strong>20% in Five Installments:</strong> Invoiced in 5 equal milestone installments of 20% each, billed
+<li><strong>20% in Five Installments:</strong> Invoiced in 5 equal milestone installments of 20% each, billed
           strictly after each milestone block is completed.</li>
-        <li><strong>Walkaway Guarantee:</strong> If you are not satisfied after the initial training phase, you can walk
+<li><strong>Walkaway Guarantee:</strong> If you are not satisfied after the initial training phase, you can walk
           away owing absolutely nothing.</li>
-        <li><strong>Commercial Apache 2.0 License:</strong> All custom code, architectures, and high-quality training
+<li><strong>Commercial Apache 2.0 License:</strong> All custom code, architectures, and high-quality training
           materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment,
           resale, and relicensing with attribution.</li>
-        <li><strong>Full Pricing Details:</strong> Learn more about country tier multipliers, currency choices, and
+<li><strong>Full Pricing Details:</strong> Learn more about country tier multipliers, currency choices, and
           customized curriculum on our <a class="gold-link" href="../pricing.html">Pricing Page</a>.</li>
-      </ul>
-
-      <h3>The Six Purchasing Power Parity (PPP) Tiers</h3>
-      <div class="table-responsive">
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>Tier</th>
-              <th>Category</th>
-              <th>Representative Geographies</th>
-              <th>Multiplier</th>
-              <th>Business Flagship</th>
-              <th>Personal Flagship</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Tier 1</strong></td>
-              <td>High-Income Baseline</td>
-              <td>United States, UK, Germany, Canada, Japan, Singapore, Australia</td>
-              <td>1.00X</td>
-              <td>2500 USD</td>
-              <td>2500 USD</td>
-            </tr>
-            <tr>
-              <td><strong>Tier 2</strong></td>
-              <td>Upper-Middle Economies</td>
-              <td>Brazil, Mexico, Malaysia, Turkiye, Thailand, Philippines, Sri Lanka</td>
-              <td>0.75X</td>
-              <td>1,875 USD</td>
-              <td>1,875 USD</td>
-            </tr>
-            <tr>
-              <td><strong>Tier 3</strong></td>
-              <td>Lower-Middle &amp; Low-Income</td>
-              <td>India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam</td>
-              <td>0.50X</td>
-              <td>1,250 USD</td>
-              <td>1,250 USD</td>
-            </tr>
-            <tr>
-              <td><strong>Tier 4</strong></td>
-              <td>Early-Stage Startups</td>
-              <td>Global tech startups with &lt;M external funding</td>
-              <td>0.50X</td>
-              <td>1,250 USD</td>
-              <td>1,250 USD</td>
-            </tr>
-            <tr>
-              <td><strong>Tier 5</strong></td>
-              <td>Academia &amp; Non-Profits</td>
-              <td>Universities, accredited labs, registered charities &amp; 501(c)(3) entities</td>
-              <td>0.25X</td>
-              <td>625 USD</td>
-              <td>625 USD</td>
-            </tr>
-            <tr>
-              <td><strong>Tier 6</strong></td>
-              <td>Subsidized Relief</td>
-              <td>Crisis-affected regions, developing collectives &amp; grassroots builders</td>
-              <td>Custom</td>
-              <td>Subsidized</td>
-              <td>250 USD</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </article>
-
-    <!-- REFERENCES -->
-    <article class="content-card" id="references">
-      <h2>References</h2>
-      <ul class="references-list" style="line-height:1.8;">
-        <li><a class="ref-link gold-link"
-            href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
-            rel="noopener" target="_blank">Gemini 4 Argon: our next era of frontier intelligence (Google, Sep 30,
+</ul>
+<h3>The Six Purchasing Power Parity (PPP) Tiers</h3>
+<div class="table-responsive">
+<table class="data-table">
+<thead>
+<tr>
+<th>Tier</th>
+<th>Category</th>
+<th>Representative Geographies</th>
+<th>Multiplier</th>
+<th>Business Flagship</th>
+<th>Personal Flagship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tier 1</strong></td>
+<td>High-Income Baseline</td>
+<td>United States, UK, Germany, Canada, Japan, Singapore, Australia</td>
+<td>1.00X</td>
+<td>2500 USD</td>
+<td>2500 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 2</strong></td>
+<td>Upper-Middle Economies</td>
+<td>Brazil, Mexico, Malaysia, Turkiye, Thailand, Philippines, Sri Lanka</td>
+<td>0.75X</td>
+<td>1,875 USD</td>
+<td>1,875 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 3</strong></td>
+<td>Lower-Middle &amp; Low-Income</td>
+<td>India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam</td>
+<td>0.50X</td>
+<td>1,250 USD</td>
+<td>1,250 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 4</strong></td>
+<td>Early-Stage Startups</td>
+<td>Global tech startups with &lt;M external funding</td>
+<td>0.50X</td>
+<td>1,250 USD</td>
+<td>1,250 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 5</strong></td>
+<td>Academia &amp; Non-Profits</td>
+<td>Universities, accredited labs, registered charities &amp; 501(c)(3) entities</td>
+<td>0.25X</td>
+<td>625 USD</td>
+<td>625 USD</td>
+</tr>
+<tr>
+<td><strong>Tier 6</strong></td>
+<td>Subsidized Relief</td>
+<td>Crisis-affected regions, developing collectives &amp; grassroots builders</td>
+<td>Custom</td>
+<td>Subsidized</td>
+<td>250 USD</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<!-- REFERENCES -->
+<article class="content-card" id="references">
+<h2>References</h2>
+<ul class="references-list" style="line-height:1.8;">
+<li><a class="ref-link gold-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/" rel="noopener" target="_blank">Gemini 4 Argon: our next era of frontier intelligence (Google, Sep 30,
             2026)</a></li>
-        <li><a class="ref-link gold-link"
-            href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
-            rel="noopener" target="_blank">Gemini 4 Argon: Built to solve your hardest problems (Google, Oct 13,
+<li><a class="ref-link gold-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/" rel="noopener" target="_blank">Gemini 4 Argon: Built to solve your hardest problems (Google, Oct 13,
             2026)</a></li>
-        <li><a class="ref-link gold-link"
-            href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
-            rel="noopener" target="_blank">Gemini 4 Carbon: our next frontier model (Google, Oct 28, 2026)</a></li>
-        <li><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/models/gemini-4-argon"
-            rel="noopener" target="_blank">Gemini 4 Argon model page (Gemini API documentation)</a></li>
-        <li><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/latest-model" rel="noopener"
-            target="_blank">What's new in Gemini 4 Argon (Gemini API documentation)</a></li>
-        <li><a class="ref-link gold-link"
-            href="https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud"
-            rel="noopener" target="_blank">Gemini 4 Argon available on Google Cloud (Google Cloud Blog)</a></li>
-        <li><a class="ref-link gold-link" href="https://www.axios.com/2026/09/30/google-gemini-4" rel="noopener"
-            target="_blank">Google unveils long-awaited Gemini 4 (Axios)</a></li>
-        <li><a class="ref-link gold-link" href="https://www.orcarouter.ai/blog/gemini-4-carbon-vs-gemini-4-argon"
-            rel="noopener" target="_blank">Gemini 4 Carbon vs Gemini 4 Argon: 9 Points, No Endpoint (OrcaRouter)</a>
-        </li>
-        <li><a class="ref-link gold-link"
-            href="https://aiweekly.co/alerts/google-staff-test-new-gemini-4-carbon-build-on-jetski" rel="noopener"
-            target="_blank">Google Staff Test New Gemini 4 'Carbon' Build on Jetski (AI Weekly)</a></li>
-        <li><a class="ref-link gold-link" href="https://overchat.ai/models/gemini-4-flash" rel="noopener"
-            target="_blank">Gemini 4 Flash, codename Hydrogen (Overchat AI, third-party, unconfirmed)</a></li>
-        <li><a class="ref-link gold-link"
-            href="https://nokiapoweruser.com/gemini-4-xenon-leak-features-fable-5-5-comparison/" rel="noopener"
-            target="_blank">Gemini 4 Xenon leak (NPowerUser, unconfirmed)</a></li>
-        <li><a class="ref-link gold-link" href="https://artificialanalysis.ai/de/models/gemini-4-argon" rel="noopener"
-            target="_blank">Gemini 4 Argon (High): intelligence, performance and price (Artificial Analysis)</a></li>
-        <li><a class="ref-link gold-link"
-            href="https://huggingface.co/blog/liliruli/gemini-4-coming-confirmed-leaks-how-to-prepare" rel="noopener"
-            target="_blank">Gemini 4.0 Is Coming: What Google Confirmed, What Leaked (Hugging Face blog)</a></li>
-        <li><a class="ref-link gold-link" href="https://suprmind.ai/hub/gemini/" rel="noopener" target="_blank">Google
+<li><a class="ref-link gold-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/" rel="noopener" target="_blank">Gemini 4 Carbon: our next frontier model (Google, Oct 28, 2026)</a></li>
+<li><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/models/gemini-4-argon" rel="noopener" target="_blank">Gemini 4 Argon model page (Gemini API documentation)</a></li>
+<li><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/latest-model" rel="noopener" target="_blank">What's new in Gemini 4 Argon (Gemini API documentation)</a></li>
+<li><a class="ref-link gold-link" href="https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud" rel="noopener" target="_blank">Gemini 4 Argon available on Google Cloud (Google Cloud Blog)</a></li>
+<li><a class="ref-link gold-link" href="https://www.axios.com/2026/09/30/google-gemini-4" rel="noopener" target="_blank">Google unveils long-awaited Gemini 4 (Axios)</a></li>
+<li><a class="ref-link gold-link" href="https://www.orcarouter.ai/blog/gemini-4-carbon-vs-gemini-4-argon" rel="noopener" target="_blank">Gemini 4 Carbon vs Gemini 4 Argon: 9 Points, No Endpoint (OrcaRouter)</a>
+</li>
+<li><a class="ref-link gold-link" href="https://aiweekly.co/alerts/google-staff-test-new-gemini-4-carbon-build-on-jetski" rel="noopener" target="_blank">Google Staff Test New Gemini 4 'Carbon' Build on Jetski (AI Weekly)</a></li>
+<li><a class="ref-link gold-link" href="https://overchat.ai/models/gemini-4-flash" rel="noopener" target="_blank">Gemini 4 Flash, codename Hydrogen (Overchat AI, third-party, unconfirmed)</a></li>
+<li><a class="ref-link gold-link" href="https://nokiapoweruser.com/gemini-4-xenon-leak-features-fable-5-5-comparison/" rel="noopener" target="_blank">Gemini 4 Xenon leak (NPowerUser, unconfirmed)</a></li>
+<li><a class="ref-link gold-link" href="https://artificialanalysis.ai/de/models/gemini-4-argon" rel="noopener" target="_blank">Gemini 4 Argon (High): intelligence, performance and price (Artificial Analysis)</a></li>
+<li><a class="ref-link gold-link" href="https://huggingface.co/blog/liliruli/gemini-4-coming-confirmed-leaks-how-to-prepare" rel="noopener" target="_blank">Gemini 4.0 Is Coming: What Google Confirmed, What Leaked (Hugging Face blog)</a></li>
+<li><a class="ref-link gold-link" href="https://suprmind.ai/hub/gemini/" rel="noopener" target="_blank">Google
             Gemini 2026: Models, Features, Pricing and Accuracy (Suprmind)</a></li>
-        <li><a class="ref-link gold-link" href="https://en.wikipedia.org/wiki/Gemini_(language_model)" rel="noopener"
-            target="_blank">Gemini (language model) (Wikipedia)</a></li>
-        <li><a class="ref-link gold-link" href="https://en.wikipedia.org/wiki/Gemini_Robotics" rel="noopener"
-            target="_blank">Gemini Robotics (Wikipedia)</a></li>
-        <li><a class="ref-link gold-link"
-            href="https://pulse2.com/google-gemini-surpasses-750-million-monthly-active-users" rel="noopener"
-            target="_blank">Google Gemini Surpasses 750 Million Monthly Active Users (Pulse 2.0)</a></li>
-        <li><a class="ref-link gold-link"
-            href="https://pasqualepillitteri.it/en/news/8853/gemini-950-million-users-chatgpt" rel="noopener"
-            target="_blank">Gemini Tops 950 Million Monthly Users (Pasquale Pillitteri)</a></li>
-        <li><a class="ref-link gold-link" href="https://www.unite.ai/?p=438138" rel="noopener" target="_blank">Gemini's
+<li><a class="ref-link gold-link" href="https://en.wikipedia.org/wiki/Gemini_(language_model)" rel="noopener" target="_blank">Gemini (language model) (Wikipedia)</a></li>
+<li><a class="ref-link gold-link" href="https://en.wikipedia.org/wiki/Gemini_Robotics" rel="noopener" target="_blank">Gemini Robotics (Wikipedia)</a></li>
+<li><a class="ref-link gold-link" href="https://pulse2.com/google-gemini-surpasses-750-million-monthly-active-users" rel="noopener" target="_blank">Google Gemini Surpasses 750 Million Monthly Active Users (Pulse 2.0)</a></li>
+<li><a class="ref-link gold-link" href="https://pasqualepillitteri.it/en/news/8853/gemini-950-million-users-chatgpt" rel="noopener" target="_blank">Gemini Tops 950 Million Monthly Users (Pasquale Pillitteri)</a></li>
+<li><a class="ref-link gold-link" href="https://www.unite.ai/?p=438138" rel="noopener" target="_blank">Gemini's
             Growth Cools as Its App Reaches 950M Users (Unite.AI)</a></li>
-        <li><a class="ref-link gold-link"
-            href="https://www.analyticsvidhya.com/blog/2023/04/tensorflow-and-alphago-makers-merged-to-form-google-deepmind/"
-            rel="noopener" target="_blank">TensorFlow and AlphaGo Makers Merged to Form Google DeepMind (Analytics
+<li><a class="ref-link gold-link" href="https://www.analyticsvidhya.com/blog/2023/04/tensorflow-and-alphago-makers-merged-to-form-google-deepmind/" rel="noopener" target="_blank">TensorFlow and AlphaGo Makers Merged to Form Google DeepMind (Analytics
             Vidhya)</a></li>
-        <li><a class="ref-link gold-link"
-            href="https://silicon.co.uk/ai/nobel-prizes-awarded-to-current-and-former-google-scientists-583519"
-            rel="noopener" target="_blank">Nobel Prizes Awarded To Current and Former Google Scientists (Silicon UK)</a>
-        </li>
-      </ul>
-    </article>
-
-    <!-- RELEVANT CALL TO ACTION -->
-    <section class="cta-banner">
-      <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Scale Business AI with Google Gemini</h2>
-      <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
+<li><a class="ref-link gold-link" href="https://silicon.co.uk/ai/nobel-prizes-awarded-to-current-and-former-google-scientists-583519" rel="noopener" target="_blank">Nobel Prizes Awarded To Current and Former Google Scientists (Silicon UK)</a>
+</li>
+</ul>
+</article>
+<!-- RELEVANT CALL TO ACTION -->
+<section class="cta-banner">
+<h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Scale Business AI with Google Gemini</h2>
+<p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
         From 1M+ token context architectures to autonomous deep research and workspace orchestration - let's engineer
         your organization's Gemini roadmap.
       </p>
-      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
-        <a class="btn btn-primary" href="../contact.html">Schedule Gemini Strategy Session →</a>
-        <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free
+<div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+<a class="btn btn-primary" href="../contact.html">Schedule Gemini Strategy Session →</a>
+<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free
           LinkedIn Consultation ↗</a>
-        <a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
-      </div>
-    </section>
-  </main>
+<a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
+</div>
+</section>
+</main>
     <!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">
@@ -1377,9 +1292,9 @@
     </p>
   </footer>
     <!-- END:FOOTER -->
-  <script src="../components.js"></script>
-  <script src="../assets/js/mermaid.min.js"></script>
-  <script>
+<script src="../components.js"></script>
+<script src="../assets/js/mermaid.min.js"></script>
+<script>
     (function () {
       mermaid.initialize({
         startOnLoad: false,
@@ -1409,4 +1324,4 @@
       var fontsReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
       window.addEventListener("load", function () { fontsReady.then(renderDiagrams); });
     })();
-  </script>
+  </script></body></html>

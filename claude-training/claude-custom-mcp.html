@@ -292,8 +292,8 @@
 <li><a href="#claude">09. How Claude uses MCP</a></li>
 <li><a href="#risk">10. Security risks and defenses</a></li>
 <li><a href="#close">11. Getting started</a></li>
-<li><a href="#pricing-parity">12. Practice Pricing & Global Purchasing Power Parity</a></li>
-      <li><a href="#refs">13. References</a></li>
+<li><a href="#pricing-parity">12. Practice Pricing &amp; Global Purchasing Power Parity</a></li>
+<li><a href="#refs">13. References</a></li>
 </ol>
 </section>
 <!-- Section 1: Why MCP exists -->
@@ -508,7 +508,6 @@
 <span class="step" style="--sc:#fbbf24">Step 1 · Install</span>
 <div class="code-window">
 <div class="code-bar">
-
 <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
 <button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
@@ -521,7 +520,6 @@ uv add "mcp[cli]" httpx</code></pre>
 <span class="step" style="--sc:#fbbf24">Step 2 · Write server.py</span>
 <div class="code-window">
 <div class="code-bar">
-
 <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
 <button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
@@ -584,7 +582,6 @@ TITLE_RE = re.compile(<span class="s">r"&lt;title[^&gt;]*&gt;(.*?)&lt;/title&gt;
 <span class="step" style="--sc:#fbbf24">Step 3 · Test, Then Connect To Claude Code</span>
 <div class="code-window">
 <div class="code-bar">
-
 <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
 <button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
@@ -605,7 +602,6 @@ claude mcp add web-inspector -- uv run --with "mcp[cli]" --with httpx mcp run /a
 <span class="step" style="--sc:#34d399">Step 1 · Install</span>
 <div class="code-window">
 <div class="code-bar">
-
 <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
 <button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
@@ -620,7 +616,6 @@ npm install -D tsx typescript</code></pre>
 <span class="step" style="--sc:#34d399">Step 2 · Write index.ts</span>
 <div class="code-window">
 <div class="code-bar">
-
 <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
 <button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
@@ -673,7 +668,6 @@ main();</code></pre>
 <span class="step" style="--sc:#34d399">Step 3 · Connect</span>
 <div class="code-window">
 <div class="code-bar">
-
 <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
 <button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
@@ -691,7 +685,6 @@ claude mcp add hn-feed -- npx tsx /absolute/path/to/hn-feed/index.ts</code></pre
 <span class="step" style="--sc:#fb7185">Step 1 · Create The Crate</span>
 <div class="code-window">
 <div class="code-bar">
-
 <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
 <button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
@@ -707,7 +700,6 @@ cargo add anyhow sha2</code></pre>
 <span class="step" style="--sc:#fb7185">Step 2 · Write src/main.rs</span>
 <div class="code-window">
 <div class="code-bar">
-
 <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
 <button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
@@ -752,7 +744,6 @@ cargo add anyhow sha2</code></pre>
 <span class="step" style="--sc:#fb7185">Step 3 · Build And Connect</span>
 <div class="code-window">
 <div class="code-bar">
-
 <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
 <button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
@@ -775,7 +766,6 @@ claude mcp add integrity -- /absolute/path/to/integrity-mcp/target/release/integ
 <p class="article-p">For your own applications, the <a href="https://platform.claude.com/docs/en/agents-and-tools/mcp-connector" rel="noopener noreferrer" target="_blank">Claude API MCP connector documentation</a> describes how the Messages API calls a remote MCP server directly, with no client code of your own. It currently supports tool calls only, requires a server reachable over public HTTPS, and lets you allowlist or denylist individual tools.</p>
 <div class="code-window">
 <div class="code-bar">
-
 <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
 <button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
@@ -871,7 +861,6 @@ print(response.content)</code></pre>
 <p class="article-p">Pick one system you use often, wrap it with the SDK that matches your stack, and register it with <code>claude mcp add</code>. The three tutorials share one structure, so most of the work goes into the tool functions themselves.</p>
 <p class="article-p">When a local server proves useful, serve it over Streamable HTTP with OAuth so it can run behind a load balancer and the Claude API connector can reach it.</p>
 </section>
-
 <article class="content-card" id="pricing-parity">
 <h2>Practice Pricing &amp; Global Purchasing Power Parity</h2>
 <p>
@@ -880,7 +869,6 @@ print(response.content)</code></pre>
 <p>
   All services are delivered remotely worldwide with 4 hours a day of live instruction, with Saturdays and Sundays as holidays. Pricing is governed by our transparent 195-country Purchasing Power Parity (PPP) framework scaling rates across six economic tiers. For full tier definitions, currency conversions, and interactive calculations, visit our <a class="gold-link" href="../pricing.html">Pricing Page</a>.
 </p>
-
 <div class="pricing-summary-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;margin:1.5rem 0;">
 <div class="package-card" style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:12px;padding:1.5rem;">
 <h3 style="color:var(--gold);margin-top:0;">Business AI Training Flagship</h3>
@@ -895,7 +883,6 @@ print(response.content)</code></pre>
 <li>High-quality training materials, guides, and custom code transferred under Apache 2.0 license (commercial use, resale, and relicensing permitted with attribution).</li>
 </ul>
 </div>
-
 <div class="package-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
 <h3 style="color:var(--cyan);margin-top:0;">Personal AI Training Flagship</h3>
 <p style="color:var(--text-muted);font-size:0.9rem;">Dedicated 1-on-1 private acceleration for solo founders, builders, and senior engineers.</p>
@@ -910,7 +897,6 @@ print(response.content)</code></pre>
 </ul>
 </div>
 </div>
-
 <h3>Individual Service Picks (Pick &amp; Choose)</h3>
 <p>
   Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
@@ -919,7 +905,6 @@ print(response.content)</code></pre>
 <li><strong>Business Individual Pick:</strong> <strong>$250 USD</strong> base for 1 seat, with additional seats at $250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
 <li><strong>Personal Individual Pick:</strong> <strong>$250 USD</strong> strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).</li>
 </ul>
-
 <h3>Payment Structure &amp; Trust Guarantees</h3>
 <p>
   Every client engagement is safeguarded by strict trust guarantees:
@@ -931,7 +916,6 @@ print(response.content)</code></pre>
 <li><strong>Commercial Apache 2.0 License:</strong> All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.</li>
 <li><strong>Full Pricing Details:</strong> Learn more about country tier multipliers, currency choices, and customized curriculum on our <a class="gold-link" href="../pricing.html">Pricing Page</a>.</li>
 </ul>
-
 <h3>The Six Purchasing Power Parity (PPP) Tiers</h3>
 <div class="table-responsive">
 <table class="data-table">
@@ -998,8 +982,6 @@ print(response.content)</code></pre>
 </table>
 </div>
 </article>
-
-
 <!-- Section 12: References -->
 <section class="content-card" id="refs">
 <h2>References</h2>
@@ -1025,7 +1007,7 @@ print(response.content)</code></pre>
 </section>
 <!-- CTA Banner -->
 <section class="cta-banner">
-<h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Build Business-Grade MCP Servers & Custom Agent Tooling</h3>
+<h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Build Business-Grade MCP Servers &amp; Custom Agent Tooling</h3>
 <p style="color:#94a3b8;font-size:1.02rem;max-width:680px;margin:0 auto 1.75rem;line-height:1.7;">Architect type-safe Model Context Protocol servers in Python, TypeScript, and Rust connecting Claude to private VPC databases and microservices.</p>
 <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
 <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
