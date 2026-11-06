@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-06 16:53:07 UTC` | Branch: `main` | Head Commit: `2d8738c`
+> **Automated Status Report** | Generated on `2026-11-06 16:54:32 UTC` | Branch: `main` | Head Commit: `055471b`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **476** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **733,166** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **718,393** | Executable / renderable content lines |
+| **Total Lines of Source Code & Content** | **733,191** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **718,418** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **4,917** | In-code and architectural documentation |
 | **Blank / Spacing Lines** | **9,856** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **77.19 MB (80,935,618 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **713,687 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **487** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-06** | Subject: "chore(report): record commit f11a88e in LAST-COMMIT-REPORT.md and sync reference timestamps" |
+| **Total Repository Size (Tracked Assets)** | **77.19 MB (80,937,222 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **713,801 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **488** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-06** | Subject: "feat(data): add authoritative guarantees.json reference file for guarantees.html" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -31,8 +31,8 @@
 | **CSS Stylesheets** | 16 | 11,887 | 278.67 KB (285,354 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 16 | 6,695 | 3.52 MB (3,692,150 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 47 | 11,534 | 515.97 KB (528,349 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 94 | 34,017 | 3.79 MB (3,976,282 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 90 | 591,594 | 27.57 MB (28,907,461 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 94 | 34,042 | 3.79 MB (3,977,885 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 90 | 591,594 | 27.57 MB (28,907,462 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 95 | 0 | 35.51 MB (37,233,318 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 10 | 0 | 57.32 KB (58,695 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,9 +43,9 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 90 | 591,594 | 27.57 MB (28,907,461 bytes) | 18.9% |
+| `.json` | 90 | 591,594 | 27.57 MB (28,907,462 bytes) | 18.9% |
 | `.html` | 66 | 77,386 | 5.90 MB (6,187,521 bytes) | 13.9% |
-| `.md` | 94 | 34,017 | 3.79 MB (3,976,282 bytes) | 19.7% |
+| `.md` | 94 | 34,042 | 3.79 MB (3,977,885 bytes) | 19.7% |
 | `.css` | 16 | 11,887 | 278.67 KB (285,354 bytes) | 3.4% |
 | `.py` | 47 | 11,534 | 515.97 KB (528,349 bytes) | 9.9% |
 | `.js` | 16 | 6,695 | 3.52 MB (3,692,150 bytes) | 3.4% |
