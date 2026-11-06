@@ -2,10 +2,16 @@
 """
 generate_test_coverage_report.py - Comprehensive Test Coverage Engine & Reporter.
 
+Designed to run inside the Git pre-commit hook, AFTER generate_last_commit_report.py
+(that script overwrites LAST-COMMIT-REPORT.md; this one appends to it).
+
 Executes Python coverage analysis across nlp-fuzzy-expert/ and python/ modules,
 and native Node.js V8 code coverage across pricing-calculator.js, components.js,
 and mermaid.js. Computes granular line-level metrics, and appends a structured
 Test Coverage Report section directly to LAST-COMMIT-REPORT.md, deleting TEST_COVERAGE_REPORT.md.
+
+Note: in pre-commit, HEAD is the parent commit, so the commit hash shown is
+labelled "Parent commit".
 
 Strict Repo Compliance:
 - Zero emojis.
@@ -28,7 +34,7 @@ LEGACY_COVERAGE_PATH = os.path.join(REPO_DIR, "TEST_COVERAGE_REPORT.md")
 
 
 def get_git_info():
-    """Retrieves current Git HEAD commit hash and short status."""
+    """Retrieves current Git HEAD (parent during pre-commit) hash and branch."""
     try:
         commit_hash = subprocess.check_output(
             ["git", "rev-parse", "--short", "HEAD"],
@@ -296,7 +302,7 @@ def generate_coverage_report(output_path=OUTPUT_REPORT_PATH):
     lines.append("")
     lines.append("## Test Coverage Report (Python & JavaScript)")
     lines.append("")
-    lines.append(f"Recorded at: **{timestamp}** | Commit: **{commit_hash}** (`{branch}`) | Elapsed: **{elapsed}s**")
+    lines.append(f"Recorded at: **{timestamp}** | Parent commit: **{commit_hash}** (`{branch}`) | Elapsed: **{elapsed}s**")
     lines.append("")
     lines.append("### Coverage Executive Summary")
     lines.append("")
@@ -395,4 +401,3 @@ def generate_coverage_report(output_path=OUTPUT_REPORT_PATH):
 
 if __name__ == "__main__":
     generate_coverage_report()
-
