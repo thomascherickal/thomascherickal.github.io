@@ -188,7 +188,7 @@ class KnowledgeBase:
         return fact.value if fact else default
 
     def reload(self):
-        """Loads all facts from the 9 authoritative JSON files in data/."""
+        """Loads all facts from the authoritative JSON files in data/."""
         self.facts.clear()
         self.raw_data.clear()
 
@@ -314,6 +314,20 @@ class KnowledgeBase:
         pub_file = os.path.join(self.data_dir, "publications.json")
         pub_data = load_json(pub_file)
         self.raw_data["publications"] = pub_data
+
+        # 10. Contact
+        contact_file = os.path.join(self.data_dir, "contact.json")
+        if os.path.exists(contact_file):
+            cnt_data = load_json(contact_file)
+            self.raw_data["contact"] = cnt_data
+            meta = cnt_data.get("contact_metadata", {})
+            self.add_fact("contact", "page_title", meta.get("page_title"))
+            self.add_fact("contact", "canonical_url", meta.get("canonical_url"))
+            comm = cnt_data.get("direct_communication", {})
+            self.add_fact("contact", "response_time", comm.get("response_time_standard"))
+            self.add_fact("contact", "location", comm.get("location"))
+            form = cnt_data.get("form_configuration", {})
+            self.add_fact("contact", "action_endpoint", form.get("action_endpoint"))
 
 class Rule:
     """An Expert System Production Rule with NLP & Fuzzy antecedents."""

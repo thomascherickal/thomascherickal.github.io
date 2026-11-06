@@ -45,7 +45,7 @@ class TestMasterOrchestrator(unittest.TestCase):
 
         data = load_json(dict_path)
         self.assertIn("by_domain", data)
-        self.assertEqual(len(data["by_domain"]), 9, "All 9 domains must be present in master dictionary")
+        self.assertEqual(len(data["by_domain"]), 10, "All 10 domains must be present in master dictionary")
 
         total_refs = data["metadata"]["total_references_tracked"]
         self.assertGreaterEqual(total_refs, 200, "Should aggregate 200+ references across repo")
@@ -60,11 +60,11 @@ class TestMasterOrchestrator(unittest.TestCase):
         self.assertEqual(m_data["metadata"]["total_references_tracked"], total_refs)
 
     def test_markdown_reports_generated(self):
-        """Verifies that all 9 domain markdown reports exist under nlp-fuzzy-expert/."""
+        """Verifies that all 10 domain markdown reports exist under nlp-fuzzy-expert/."""
         reports = [
             "pricing.md", "business-services.md", "personal-services.md",
             "tiers.md", "claude.md", "gemini.md",
-            "publications.md", "config.md", "faqs.md"
+            "publications.md", "config.md", "faqs.md", "contact.md"
         ]
         for r_name in reports:
             r_path = os.path.join(NLP_EXPERT_DIR, r_name)

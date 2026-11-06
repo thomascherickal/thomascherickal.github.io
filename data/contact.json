@@ -1,0 +1,203 @@
+{
+  "contact_metadata": {
+    "page_title": "Contact | Thomas Cherickal",
+    "description": "Book AI training, Claude agent orchestration, local LLM cost reduction or quantum advisory with Thomas Cherickal, Generative AI Consultant.",
+    "canonical_url": "https://thedigitalfuturist.com/contact.html",
+    "section_label": "// INITIATE ENGAGEMENT",
+    "section_title": "Start an AI Transformation",
+    "section_sub": "Master teams of Claude Agents, learn in-depth agent orchestration principles and constraints, train your workforce (employees, developers, staff, CXOs), slash inference costs with Local LLMs, or explore quantum computing. Send an inquiry or schedule a briefing."
+  },
+  "config_references": {
+    "author_ref": "config.json#author",
+    "email_ref": "config.json#email",
+    "domain_ref": "config.json#domain",
+    "linkedin_ref": "config.json#linkedin",
+    "topmate_ref": "config.json#topmate",
+    "pricing_ref": "pricing.json",
+    "tiers_ref": "tiers.json"
+  },
+  "direct_communication": {
+    "response_time_standard": "Within one week for all incoming project inquiries, architecture audits, and training briefs",
+    "busy_notice": "I reply to every inquiry within one week (a little busy with current work).",
+    "specializations": "Specializing in AI Agent Mastery, Live & Remote Workforce Training, Local LLM Inference Cost Slashing & Early Quantum Systems Exploration.",
+    "location": "Remote Worldwide",
+    "channels": [
+      {
+        "channel": "Email",
+        "reference": "config.json#email",
+        "action_label": "Direct Email"
+      },
+      {
+        "channel": "1-on-1 Video Consult",
+        "reference": "config.json#topmate",
+        "action_label": "Book via Topmate ->"
+      },
+      {
+        "channel": "Direct Consultation",
+        "reference": "config.json#linkedin",
+        "action_label": "Book a free intro call on LinkedIn ↗"
+      },
+      {
+        "channel": "Location",
+        "value": "Remote Worldwide",
+        "action_label": "Remote Delivery"
+      }
+    ]
+  },
+  "engagement_standards": [
+    {
+      "standard": "Inquiry Response",
+      "description": "I reply to every inquiry within one week (a little busy with current work) for all incoming project inquiries, architecture audits, and training briefs."
+    },
+    {
+      "standard": "Live & Remote Workforce Training",
+      "description": "Structured, cohort-specific training delivered live on-site or remotely for Employees, Developers, Corporate Staff, and CXOs."
+    },
+    {
+      "standard": "Runtime-Verified Code & TDD",
+      "description": "Every pipeline, agent tool, and LLM harness is built with Test-Driven Development (TDD) and verified in runtime sandboxes."
+    },
+    {
+      "standard": "Local LLMs & Cost Slashing",
+      "description": "Slash recurring inference costs by 60-90% via Ollama, vLLM, and quantized open-weight models (Qwen, DeepSeek, GPT-OSS, Gemma, Mistral)."
+    }
+  ],
+  "intake_workflow_steps": [
+    {
+      "step": 1,
+      "title": "AI Agent & Architecture Audit",
+      "summary": "In-depth review of agent workflows, domain constraints, task distribution, and training needs."
+    },
+    {
+      "step": 2,
+      "title": "Scope & Milestones",
+      "summary": "Transparent timeline, equal-weighted milestone proposal, and Country Parity pricing."
+    },
+    {
+      "step": 3,
+      "title": "Training & Sandbox Demonstrations",
+      "summary": "Hands-on training modules, architecture explainers, sample projects, and live sandbox demonstrations."
+    },
+    {
+      "step": 4,
+      "title": "Knowledge & Assets Handover",
+      "summary": "Comprehensive training modules, sample code guides, verified sandbox demos, and all materials licensed under Apache 2.0."
+    }
+  ],
+  "form_configuration": {
+    "action_endpoint": "https://formsubmit.co/ajax/thomascherickal@gmail.com",
+    "method": "POST",
+    "anti_spam": {
+      "honeypot_field": "_honey",
+      "captcha": "false",
+      "template": "table",
+      "subject": "Project Intake / Contact Inquiry - Thomas Cherickal Portfolio"
+    },
+    "fields": [
+      {
+        "name": "name",
+        "label": "Your Name",
+        "type": "text",
+        "required": true,
+        "placeholder": "John Doe"
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "required": true,
+        "placeholder": "john@example.com"
+      },
+      {
+        "name": "organization",
+        "label": "Company / Organization",
+        "type": "text",
+        "required": false,
+        "placeholder": "e.g. Acme AI, Business Corp, Stealth Startup, or Individual"
+      },
+      {
+        "name": "timeline",
+        "label": "Target Timeline",
+        "type": "text",
+        "required": true,
+        "placeholder": "e.g. Q3 Launch, 2 weeks, Immediate"
+      },
+      {
+        "name": "role",
+        "label": "Role / Job Title",
+        "type": "text",
+        "required": false,
+        "placeholder": "e.g. CTO, VP of Engineering, Founder, Head of AI"
+      },
+      {
+        "name": "website",
+        "label": "Website / Project URL",
+        "type": "url",
+        "required": false,
+        "placeholder": "https://example.com"
+      },
+      {
+        "name": "tech_stack",
+        "label": "Preferred Tech Stack / Tooling",
+        "type": "text",
+        "required": false,
+        "placeholder": "e.g. Claude Code, Google Antigravity, OpenRouter, vLLM, Ollama, LangGraph, Python, Rust, Qiskit"
+      },
+      {
+        "name": "deliverable_format",
+        "label": "Deliverable Format Preferences",
+        "type": "text",
+        "required": false,
+        "placeholder": "e.g. Local LLM Service, Live Workshops, GitHub PRs, Jupyter / Colab, TDD Test Suites"
+      },
+      {
+        "name": "project_type",
+        "label": "Project Type",
+        "type": "select",
+        "required": true,
+        "default_value": "Personal AI Transformation (12-service catalogue)",
+        "options": [
+          "Personal AI Transformation (12-service catalogue)",
+          "Generative AI Transformation",
+          "Local LLMs & Cost Slashing",
+          "Claude Agent Orchestration",
+          "Agentic Assistants Training",
+          "Workflow Automation Training",
+          "AI Budget & Cost Control Training",
+          "AI Developer Training",
+          "Advanced AI Agents",
+          "Claude Advanced Training",
+          "Gemini Advanced Training",
+          "Competitor Research & Intelligence",
+          "AI Leads Magnet & Conversion Systems",
+          "Continuous Learning & AI Second Brain",
+          "Work-Life Balance & Autonomous Offloading",
+          "Other"
+        ]
+      },
+      {
+        "name": "budget",
+        "label": "Estimated Scope",
+        "type": "select",
+        "required": false,
+        "default_value": "",
+        "options": [
+          "Tier 1: High-Income Economies (100% Standard Rate)",
+          "Tier 2: Upper-Middle-Income Economies (25% Discount / 75% Rate)",
+          "Tier 3: Lower-Middle & Low-Income Economies (50% Rate)",
+          "Tier 4: Early-Stage Startups (50% Flat Discount)",
+          "Tier 5: Non-Profits & Academia (75% Discount / 25% Rate)",
+          "Tier 6: Crisis-Affected & Under-Resourced Builders (Custom Subsidized Quote)"
+        ]
+      },
+      {
+        "name": "message",
+        "label": "Project Details & Message",
+        "type": "textarea",
+        "required": true,
+        "rows": 12
+      }
+    ]
+  }
+}
+
