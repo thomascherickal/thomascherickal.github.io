@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-06 19:17:16 UTC` | Branch: `main` | Head Commit: `1f381bd`
+> **Automated Status Report** | Generated on `2026-11-06 19:20:23 UTC` | Branch: `main` | Head Commit: `79ed85a`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **487** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **730,169** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **714,958** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,016** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **10,195** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **77.39 MB (81,151,198 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **730,183 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **498** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-07** | Subject: "hooks fixed" |
+| **Total Tracked Files** | **483** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **729,811** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **714,692** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **4,997** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **10,122** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **77.04 MB (80,780,988 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **710,288 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **499** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-07** | Subject: "Git fixed" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -31,11 +31,11 @@
 | **CSS Stylesheets** | 16 | 11,887 | 278.67 KB (285,354 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 18 | 7,432 | 3.54 MB (3,715,295 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 51 | 12,579 | 555.47 KB (568,801 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 98 | 34,303 | 4.13 MB (4,334,212 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 91 | 586,529 | 27.37 MB (28,700,624 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 94 | 33,945 | 3.78 MB (3,963,893 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 91 | 586,529 | 27.37 MB (28,700,626 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 95 | 0 | 35.51 MB (37,233,318 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 10 | 0 | 58.19 KB (59,585 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 10 | 0 | 58.29 KB (59,692 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,22 +43,22 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 91 | 586,529 | 27.37 MB (28,700,624 bytes) | 18.7% |
-| `.html` | 66 | 77,386 | 5.90 MB (6,187,521 bytes) | 13.6% |
-| `.md` | 98 | 34,303 | 4.13 MB (4,334,212 bytes) | 20.1% |
-| `.py` | 51 | 12,579 | 555.47 KB (568,801 bytes) | 10.5% |
+| `.json` | 91 | 586,529 | 27.37 MB (28,700,626 bytes) | 18.8% |
+| `.html` | 66 | 77,386 | 5.90 MB (6,187,521 bytes) | 13.7% |
+| `.md` | 94 | 33,945 | 3.78 MB (3,963,893 bytes) | 19.5% |
+| `.py` | 51 | 12,579 | 555.47 KB (568,801 bytes) | 10.6% |
 | `.css` | 16 | 11,887 | 278.67 KB (285,354 bytes) | 3.3% |
 | `.js` | 18 | 7,432 | 3.54 MB (3,715,295 bytes) | 3.7% |
-| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 8.6% |
-| `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 8.8% |
-| `.png` | 26 | 0 | 2.78 MB (2,918,409 bytes) | 5.3% |
+| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 8.7% |
+| `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 8.9% |
+| `.png` | 26 | 0 | 2.78 MB (2,918,409 bytes) | 5.4% |
 | `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 4.1% |
 | `.jpeg` | 5 | 0 | 809.15 KB (828,567 bytes) | 1.0% |
 | `.txt` | 2 | 0 | 36.88 KB (37,769 bytes) | 0.4% |
 | `.docx` | 1 | 0 | 10.34 KB (10,592 bytes) | 0.2% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
 | `.xml` | 1 | 0 | 6.67 KB (6,835 bytes) | 0.2% |
-| `[no extension]` | 5 | 0 | 3.76 KB (3,851 bytes) | 1.0% |
+| `[no extension]` | 5 | 0 | 3.87 KB (3,958 bytes) | 1.0% |
 | `.webmanifest` | 1 | 0 | 538 bytes | 0.2% |
 
 ---
