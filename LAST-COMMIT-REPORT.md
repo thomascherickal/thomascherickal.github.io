@@ -1,20 +1,20 @@
 # Last Git Commit Report
 
-> **Automated Commit Record** | Recorded on: `2026-11-05 18:45:11 UTC`
+> **Automated Commit Record** | Recorded on: `2026-11-06 15:47:44 UTC`
 
 ## Commit Overview
 
 | Property | Value |
 | :--- | :--- |
-| **Commit Hash (Full)** | `eb511bc8dfb21aa321940c164f449f402603f9b3` |
-| **Commit Hash (Short)** | `eb511bc` |
+| **Commit Hash (Full)** | `9c4329c0b46397dcc852d0b0cb9685823d613540` |
+| **Commit Hash (Short)** | `9c4329c` |
 | **Branch** | `main` |
-| **Subject** | feat(reports): include comprehensive test reports and summary tables in LAST-COMMIT-REPORT.md |
+| **Subject** | feat(synchronizer): synchronize repository state (1 test failure warnings - see failed_test_continuous_updates_tests.report.md) |
 | **Author** | Thomas Cherickal `<thomascherickal@gmail.com>` |
-| **Author Date** | `2026-11-06T00:14:10+05:30` |
+| **Author Date** | `2026-11-06T21:14:27+05:30` |
 | **Committer** | Thomas Cherickal `<thomascherickal@gmail.com>` |
-| **Committer Date** | `2026-11-06T00:14:10+05:30` |
-| **Total Commits in Repo** | 483 |
+| **Committer Date** | `2026-11-06T21:14:27+05:30` |
+| **Total Commits in Repo** | 484 |
 
 ## Quality Gate & Verification Summary
 
@@ -164,22 +164,22 @@
 - **Engine**: nlp-fuzzy-expert v1.0.0
 - **Architecture**: Expert System (Forward Chaining) + Fuzzy Logic + NLP
 - **Data Flow Direction**: Strictly Unidirectional (`data/*.json` -> HTML / JS / MD / Code)
-- **Total Tracked Occurrences**: 17,650
+- **Total Tracked Occurrences**: 18,164
 
 ### Master Reference Occurrences by Domain
 
 | Knowledge Domain | Tracked Occurrences | Primary Data Source | Domain Sync Report |
 | :--- | :---: | :--- | :--- |
-| `config` | 4,380 | `data/config.json` | [`nlp-fuzzy-expert/config.md`](nlp-fuzzy-expert/config.md) |
-| `pricing` | 3,506 | `data/pricing.json` | [`nlp-fuzzy-expert/pricing.md`](nlp-fuzzy-expert/pricing.md) |
-| `publications` | 3,280 | `data/publications.json` | [`nlp-fuzzy-expert/publications.md`](nlp-fuzzy-expert/publications.md) |
-| `tiers` | 2,165 | `data/tiers.json` | [`nlp-fuzzy-expert/tiers.md`](nlp-fuzzy-expert/tiers.md) |
-| `business_services` | 1,504 | `data/business_services.json` | [`nlp-fuzzy-expert/business-services.md`](nlp-fuzzy-expert/business-services.md) |
-| `claude` | 1,175 | `data/claude.json` | [`nlp-fuzzy-expert/claude.md`](nlp-fuzzy-expert/claude.md) |
-| `gemini` | 1,170 | `data/gemini.json` | [`nlp-fuzzy-expert/gemini.md`](nlp-fuzzy-expert/gemini.md) |
-| `personal_services` | 397 | `data/personal_services.json` | [`nlp-fuzzy-expert/personal-services.md`](nlp-fuzzy-expert/personal-services.md) |
-| `faqs` | 73 | `data/faqs.json` | [`nlp-fuzzy-expert/faqs.md`](nlp-fuzzy-expert/faqs.md) |
-| **Master Dictionary Total** | **17,650** | `data/*.json` (9 domains) | [`references_dictionary.json`](nlp-fuzzy-expert/references_dictionary.json) |
+| `config` | 4,494 | `data/config.json` | [`nlp-fuzzy-expert/config.md`](nlp-fuzzy-expert/config.md) |
+| `pricing` | 3,582 | `data/pricing.json` | [`nlp-fuzzy-expert/pricing.md`](nlp-fuzzy-expert/pricing.md) |
+| `publications` | 3,316 | `data/publications.json` | [`nlp-fuzzy-expert/publications.md`](nlp-fuzzy-expert/publications.md) |
+| `tiers` | 2,252 | `data/tiers.json` | [`nlp-fuzzy-expert/tiers.md`](nlp-fuzzy-expert/tiers.md) |
+| `business_services` | 1,588 | `data/business_services.json` | [`nlp-fuzzy-expert/business-services.md`](nlp-fuzzy-expert/business-services.md) |
+| `claude` | 1,207 | `data/claude.json` | [`nlp-fuzzy-expert/claude.md`](nlp-fuzzy-expert/claude.md) |
+| `gemini` | 1,207 | `data/gemini.json` | [`nlp-fuzzy-expert/gemini.md`](nlp-fuzzy-expert/gemini.md) |
+| `personal_services` | 444 | `data/personal_services.json` | [`nlp-fuzzy-expert/personal-services.md`](nlp-fuzzy-expert/personal-services.md) |
+| `faqs` | 74 | `data/faqs.json` | [`nlp-fuzzy-expert/faqs.md`](nlp-fuzzy-expert/faqs.md) |
+| **Master Dictionary Total** | **18,164** | `data/*.json` (9 domains) | [`references_dictionary.json`](nlp-fuzzy-expert/references_dictionary.json) |
 
 ### Core Target Documents Synchronization Status
 
@@ -188,9 +188,11 @@
 | `all-business-services.html` | IN SYNC | - | BusinessServicesCardsRule | Business service titles, prices, cards |
 | `all-personal-services.html` | IN SYNC | - | PersonalServicesCardsRule | Personal service titles, prices, cards |
 | `business-ai-training.html` | IN SYNC | - | BusinessAITrainingRule | Flagship duration, seats, pricing |
+| `contact.html` | IN SYNC | - | ContactPagePricingRule | Personal training quote, tier base rate |
 | `faqs.html` | IN SYNC | - | FAQsRule | Included seats, pricing terms |
 | `guarantees.html` | IN SYNC | - | GuaranteesPageRule | Flagship terms, walkaway guarantee |
 | `index.html` | IN SYNC | - | IndexPageRule | Hero pricing, flagship packages, stats |
+| `llms.txt` | IN SYNC | - | LLMsTxtRule | Flagship training rates, parity tiers, service catalog |
 | `personal-ai-training.html` | IN SYNC | - | PersonalAITrainingRule | Flagship duration, 1-on-1 model |
 | `pricing-calculator.js` | IN SYNC | - | PricingCalculatorScriptRule | Pricing tiers, seat multipliers, rates |
 | `pricing.html` | IN SYNC | - | PricingHeroPackagesRule | Parity tables, pricing cards, formulas |
@@ -207,64 +209,92 @@
 ## Changed Files & Status
 
 ```text
-M	.gitignore
 M	LAST-COMMIT-REPORT.md
-M	md-html-sync/.sync-state.json
-M	metrics.md
+A	failed_continuous_updates_tests.report.md
+A	failed_test_continuous_updates_tests.report.md
+A	failed_test_continuous_updates_tests_report.md
+A	failed_test_unidirectional_sync_tests.report.md
+A	failed_test_unidirectional_sync_tests_report.md
+A	failed_tests_report.md
+A	failed_unidirectional_sync_tests.report.md
+M	llms.txt
+M	nlp-fuzzy-expert/business-services.md
 M	nlp-fuzzy-expert/business_services_references.json
+M	nlp-fuzzy-expert/claude.md
 M	nlp-fuzzy-expert/claude_references.json
 M	nlp-fuzzy-expert/code-sync.md
 M	nlp-fuzzy-expert/code_references.json
+M	nlp-fuzzy-expert/config.md
 M	nlp-fuzzy-expert/config_references.json
+M	nlp-fuzzy-expert/faqs.md
 M	nlp-fuzzy-expert/faqs_references.json
+M	nlp-fuzzy-expert/gemini.md
 M	nlp-fuzzy-expert/gemini_references.json
 M	nlp-fuzzy-expert/personal-services.md
 M	nlp-fuzzy-expert/personal_services_references.json
 M	nlp-fuzzy-expert/pricing.md
 M	nlp-fuzzy-expert/pricing_references.json
+M	nlp-fuzzy-expert/publications.md
 M	nlp-fuzzy-expert/publications_references.json
 M	nlp-fuzzy-expert/references_dictionary.json
+A	nlp-fuzzy-expert/references_manifest.json
+M	nlp-fuzzy-expert/report_generator.py
+M	nlp-fuzzy-expert/rules.py
+M	nlp-fuzzy-expert/synchronizer.py
 M	nlp-fuzzy-expert/tiers.md
 M	nlp-fuzzy-expert/tiers_references.json
 M	python/generate_last_commit_report.py
-M	python/run_tests.py
-M	tests/js/runner.js
+M	python/hooks/pre-commit
 M	tests/test_last_commit_report.py
 ```
 
 ## Commit Output & Stat Summary
 
 ```text
-commit eb511bc8dfb21aa321940c164f449f402603f9b3
+commit 9c4329c0b46397dcc852d0b0cb9685823d613540
 Author: Thomas Cherickal <thomascherickal@gmail.com>
-Date:   Fri Nov 6 00:14:10 2026 +0530
+Date:   Fri Nov 6 21:14:27 2026 +0530
 
-    feat(reports): include comprehensive test reports and summary tables in LAST-COMMIT-REPORT.md
+    feat(synchronizer): synchronize repository state (1 test failure warnings - see failed_test_continuous_updates_tests.report.md)
 
- .gitignore                                         |   1 +
- LAST-COMMIT-REPORT.md                              | 417 +++++++++++----------
- md-html-sync/.sync-state.json                      |  56 +--
- metrics.md                                         |  38 +-
- nlp-fuzzy-expert/business_services_references.json |   2 +-
- nlp-fuzzy-expert/claude_references.json            |   2 +-
- nlp-fuzzy-expert/code-sync.md                      |   2 +-
- nlp-fuzzy-expert/code_references.json              |   2 +-
- nlp-fuzzy-expert/config_references.json            |   2 +-
- nlp-fuzzy-expert/faqs_references.json              |   2 +-
- nlp-fuzzy-expert/gemini_references.json            |   2 +-
- nlp-fuzzy-expert/personal-services.md              |   2 +-
- nlp-fuzzy-expert/personal_services_references.json |   2 +-
- nlp-fuzzy-expert/pricing.md                        |   2 +-
- nlp-fuzzy-expert/pricing_references.json           |   2 +-
- nlp-fuzzy-expert/publications_references.json      |   2 +-
- nlp-fuzzy-expert/references_dictionary.json        |   2 +-
- nlp-fuzzy-expert/tiers.md                          |   2 +-
- nlp-fuzzy-expert/tiers_references.json             |   2 +-
- python/generate_last_commit_report.py              | 378 ++++++++++++++++++-
- python/run_tests.py                                | 110 +++++-
- tests/js/runner.js                                 |  18 +
- tests/test_last_commit_report.py                   | 135 +++++--
- 23 files changed, 895 insertions(+), 288 deletions(-)
+ LAST-COMMIT-REPORT.md                              |   146 +-
+ failed_continuous_updates_tests.report.md          |    97 +
+ failed_test_continuous_updates_tests.report.md     |    97 +
+ failed_test_continuous_updates_tests_report.md     |    97 +
+ failed_test_unidirectional_sync_tests.report.md    |    97 +
+ failed_test_unidirectional_sync_tests_report.md    |    97 +
+ failed_tests_report.md                             |    96 +
+ failed_unidirectional_sync_tests.report.md         |    97 +
+ llms.txt                                           |     4 +-
+ nlp-fuzzy-expert/business-services.md              |    88 +-
+ nlp-fuzzy-expert/business_services_references.json |  1126 +-
+ nlp-fuzzy-expert/claude.md                         |    36 +-
+ nlp-fuzzy-expert/claude_references.json            |   388 +-
+ nlp-fuzzy-expert/code-sync.md                      |     2 +-
+ nlp-fuzzy-expert/code_references.json              |     2 +-
+ nlp-fuzzy-expert/config.md                         |   118 +-
+ nlp-fuzzy-expert/config_references.json            |  1372 +-
+ nlp-fuzzy-expert/faqs.md                           |     5 +-
+ nlp-fuzzy-expert/faqs_references.json              |    16 +-
+ nlp-fuzzy-expert/gemini.md                         |    41 +-
+ nlp-fuzzy-expert/gemini_references.json            |   448 +-
+ nlp-fuzzy-expert/personal-services.md              |    51 +-
+ nlp-fuzzy-expert/personal_services_references.json |   568 +-
+ nlp-fuzzy-expert/pricing.md                        |    80 +-
+ nlp-fuzzy-expert/pricing_references.json           |  1394 +-
+ nlp-fuzzy-expert/publications.md                   |    40 +-
+ nlp-fuzzy-expert/publications_references.json      |   550 +-
+ nlp-fuzzy-expert/references_dictionary.json        | 13244 ++++++++++++++-----
+ nlp-fuzzy-expert/references_manifest.json          |   105 +
+ nlp-fuzzy-expert/report_generator.py               |    26 +
+ nlp-fuzzy-expert/rules.py                          |    71 +
+ nlp-fuzzy-expert/synchronizer.py                   |     3 +-
+ nlp-fuzzy-expert/tiers.md                          |    91 +-
+ nlp-fuzzy-expert/tiers_references.json             |  1048 +-
+ python/generate_last_commit_report.py              |    11 +-
+ python/hooks/pre-commit                            |     2 +-
+ tests/test_last_commit_report.py                   |     6 +-
+ 37 files changed, 18458 insertions(+), 3302 deletions(-)
 ```
 
 ## Verification & Compliance

@@ -33,6 +33,8 @@ class TestMasterOrchestrator(unittest.TestCase):
         self.assertIn("pricing.html", target_basenames)
         self.assertIn("index.html", target_basenames)
         self.assertIn("pricing-calculator.js", target_basenames)
+        self.assertIn("contact.html", target_basenames)
+        self.assertIn("llms.txt", target_basenames)
 
     def test_sync_all_and_aggregate_dictionary(self):
         """Verifies full sync produces references_dictionary.json with 200+ references."""
@@ -48,6 +50,14 @@ class TestMasterOrchestrator(unittest.TestCase):
         total_refs = data["metadata"]["total_references_tracked"]
         self.assertGreaterEqual(total_refs, 200, "Should aggregate 200+ references across repo")
         self.assertEqual(total_refs, len(data["all_references"]))
+
+        # Verify lightweight manifest
+        manifest_path = os.path.join(NLP_EXPERT_DIR, "references_manifest.json")
+        self.assertTrue(os.path.exists(manifest_path), "Lightweight manifest must exist")
+        m_data = load_json(manifest_path)
+        self.assertIn("by_domain", m_data)
+        self.assertIn("by_document", m_data)
+        self.assertEqual(m_data["metadata"]["total_references_tracked"], total_refs)
 
     def test_markdown_reports_generated(self):
         """Verifies that all 9 domain markdown reports exist under nlp-fuzzy-expert/."""

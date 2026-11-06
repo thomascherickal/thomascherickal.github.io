@@ -1,9 +1,9 @@
 # Source Code and Test Suite Knowledge Synchronization Report
 
-Generated on: 2026-11-06 21:14:25
+Generated on: 2026-11-06 21:22:55
 
 ## Summary
-- **Target Files Evaluated**: 26
+- **Target Files Evaluated**: 27
 - **Files Updated**: 0
 - **Tracked References**: 8
 
@@ -22,6 +22,7 @@ Generated on: 2026-11-06 21:14:25
 | `tests/test_auto_healer.py` | **IN SYNC** | - |
 | `tests/test_code_test_syncer.py` | **IN SYNC** | - |
 | `tests/test_continuous_updates.py` | **IN SYNC** | - |
+| `tests/test_core_target_documents.py` | **IN SYNC** | - |
 | `tests/test_expert_system.py` | **IN SYNC** | - |
 | `tests/test_fuzzy_engine.py` | **IN SYNC** | - |
 | `tests/test_last_commit_report.py` | **IN SYNC** | - |
