@@ -71,16 +71,37 @@ class TestCoverageReport(unittest.TestCase):
             }
         }
 
-        report_file = os.path.join(self.temp_dir, "TEST_COVERAGE_REPORT.md")
+        report_file = os.path.join(self.temp_dir, "LAST-COMMIT-REPORT.md")
+        with open(report_file, "w", encoding="utf-8") as f:
+            f.write("# Git Commit Report\n\nSome initial commit details.\n")
+
         with patch("generate_test_coverage_report.run_python_coverage", return_value=mock_py):
             with patch("generate_test_coverage_report.run_javascript_coverage", return_value=mock_js):
                 content = cov_reporter.generate_coverage_report(output_path=report_file)
                 self.assertTrue(os.path.exists(report_file))
-                self.assertIn("# Test Coverage Report", content)
-                self.assertIn("## Executive Summary", content)
+                self.assertIn("# Git Commit Report", content)
+                self.assertIn("## Test Coverage Report (Python & JavaScript)", content)
+                self.assertIn("### Coverage Executive Summary", content)
                 self.assertIn("pricing-calculator.js", content)
                 self.assertIn("check_links.py", content)
                 self.assertNotIn(chr(0x2014), content)  # Zero em-dashes
+
+                # Test idempotency (replacing coverage block without duplicating)
+                content_second = cov_reporter.generate_coverage_report(output_path=report_file)
+                self.assertEqual(content_second.count("## Test Coverage Report"), 1)
+
+    def test_legacy_coverage_file_cleanup(self):
+        """Verifies that legacy TEST_COVERAGE_REPORT.md is deleted when report runs."""
+        legacy_file = os.path.join(self.temp_dir, "TEST_COVERAGE_REPORT.md")
+        with open(legacy_file, "w", encoding="utf-8") as f:
+            f.write("Old coverage report\n")
+
+        report_file = os.path.join(self.temp_dir, "LAST-COMMIT-REPORT.md")
+        with patch.object(cov_reporter, "LEGACY_COVERAGE_PATH", legacy_file):
+            with patch("generate_test_coverage_report.run_python_coverage", return_value={"files": {}}):
+                with patch("generate_test_coverage_report.run_javascript_coverage", return_value={}):
+                    cov_reporter.generate_coverage_report(output_path=report_file)
+                    self.assertFalse(os.path.exists(legacy_file))
 
 
 if __name__ == "__main__":

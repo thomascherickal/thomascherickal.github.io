@@ -390,7 +390,7 @@ def commit_verified_state(commit_msg="feat(synchronizer): synchronize repository
         if os.path.exists(report_script):
             subprocess.run([sys.executable, report_script], cwd=REPO_DIR, capture_output=True, text=True)
 
-        # Update TEST_COVERAGE_REPORT.md with the output of the new commit
+        # Append test coverage report to LAST-COMMIT-REPORT.md
         cov_script = os.path.join(REPO_DIR, "python", "generate_test_coverage_report.py")
         if os.path.exists(cov_script):
             subprocess.run([sys.executable, cov_script], cwd=REPO_DIR, capture_output=True, text=True)

@@ -4,8 +4,8 @@ generate_test_coverage_report.py - Comprehensive Test Coverage Engine & Reporter
 
 Executes Python coverage analysis across nlp-fuzzy-expert/ and python/ modules,
 and native Node.js V8 code coverage across pricing-calculator.js, components.js,
-and mermaid.js. Computes granular line-level metrics, and generates a structured
-TEST_COVERAGE_REPORT.md in the repository root.
+and mermaid.js. Computes granular line-level metrics, and appends a structured
+Test Coverage Report section directly to LAST-COMMIT-REPORT.md, deleting TEST_COVERAGE_REPORT.md.
 
 Strict Repo Compliance:
 - Zero emojis.
@@ -23,7 +23,8 @@ import subprocess
 from datetime import datetime, timezone
 
 REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUTPUT_REPORT_PATH = os.path.join(REPO_DIR, "TEST_COVERAGE_REPORT.md")
+OUTPUT_REPORT_PATH = os.path.join(REPO_DIR, "LAST-COMMIT-REPORT.md")
+LEGACY_COVERAGE_PATH = os.path.join(REPO_DIR, "TEST_COVERAGE_REPORT.md")
 
 
 def get_git_info():
@@ -221,10 +222,17 @@ def run_javascript_coverage(v8_dir):
 
 
 def generate_coverage_report(output_path=OUTPUT_REPORT_PATH):
-    """Orchestrates test coverage collection and writes TEST_COVERAGE_REPORT.md."""
+    """Orchestrates test coverage collection and appends to LAST-COMMIT-REPORT.md, deleting TEST_COVERAGE_REPORT.md."""
     start_time = time.time()
     commit_hash, branch = get_git_info()
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+
+    # Cleanly remove legacy TEST_COVERAGE_REPORT.md if present
+    if os.path.exists(LEGACY_COVERAGE_PATH):
+        try:
+            os.remove(LEGACY_COVERAGE_PATH)
+        except OSError:
+            pass
 
     temp_dir = tempfile.mkdtemp(prefix="test_cov_")
     try:
@@ -281,13 +289,16 @@ def generate_coverage_report(output_path=OUTPUT_REPORT_PATH):
     comb_overall_pct = (comb_covered / comb_total * 100.0) if comb_total > 0 else 100.0
     elapsed = round(time.time() - start_time, 2)
 
-    # Build Markdown Content
+    # Build Markdown Content Section
     lines = []
-    lines.append("# Test Coverage Report")
+    lines.append("")
+    lines.append("---")
+    lines.append("")
+    lines.append("## Test Coverage Report (Python & JavaScript)")
     lines.append("")
     lines.append(f"Recorded at: **{timestamp}** | Commit: **{commit_hash}** (`{branch}`) | Elapsed: **{elapsed}s**")
     lines.append("")
-    lines.append("## Executive Summary")
+    lines.append("### Coverage Executive Summary")
     lines.append("")
     lines.append("| Language | Tracked Files | Total Statements / Lines | Covered | Missed | Coverage % | Status |")
     lines.append("|:---|---:|---:|---:|---:|---:|:---|")
@@ -302,7 +313,7 @@ def generate_coverage_report(output_path=OUTPUT_REPORT_PATH):
     lines.append("")
 
     # Python Module Coverage Table
-    lines.append("## Python Test Coverage")
+    lines.append("### Python Test Coverage")
     lines.append("")
     lines.append("| File | Statements | Covered | Missed | Coverage % | Missing Lines |")
     lines.append("|:---|---:|---:|---:|---:|:---|")
@@ -317,7 +328,7 @@ def generate_coverage_report(output_path=OUTPUT_REPORT_PATH):
     lines.append("")
 
     # JavaScript File Coverage Table
-    lines.append("## JavaScript Test Coverage")
+    lines.append("### JavaScript Test Coverage")
     lines.append("")
     lines.append("| File | Executable Lines | Covered | Missed | Coverage % | Missing Lines |")
     lines.append("|:---|---:|---:|---:|---:|:---|")
@@ -332,7 +343,7 @@ def generate_coverage_report(output_path=OUTPUT_REPORT_PATH):
     lines.append("")
 
     # Detailed Missing Lines Breakdown
-    lines.append("## Detailed Uncovered Lines Breakdown")
+    lines.append("### Detailed Uncovered Lines Breakdown")
     lines.append("")
     lines.append("The following files contain uncovered branches and line numbers identified for ongoing test expansion:")
     lines.append("")
@@ -358,12 +369,28 @@ def generate_coverage_report(output_path=OUTPUT_REPORT_PATH):
     lines.append("*Automated test coverage generated across Python unittest and Node.js V8 suites.*")
     lines.append("")
 
-    report_content = "\n".join(lines)
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write(report_content)
+    coverage_section = "\n".join(lines)
 
-    print(f"[Coverage Report] Successfully generated {output_path} (Combined: {comb_overall_pct:.2f}% | Elapsed: {elapsed}s)")
-    return report_content
+    if os.path.exists(output_path):
+        with open(output_path, "r", encoding="utf-8") as f:
+            existing_content = f.read()
+
+        marker = "## Test Coverage Report"
+        if marker in existing_content:
+            before_cov = existing_content.split(marker, 1)[0].rstrip()
+            if before_cov.endswith("---"):
+                before_cov = before_cov[:-3].rstrip()
+            final_content = before_cov + "\n" + coverage_section
+        else:
+            final_content = existing_content.rstrip() + "\n" + coverage_section
+    else:
+        final_content = coverage_section.lstrip()
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(final_content)
+
+    print(f"[Coverage Report] Successfully appended coverage report to {output_path} (Combined: {comb_overall_pct:.2f}% | Elapsed: {elapsed}s)")
+    return final_content
 
 
 if __name__ == "__main__":

@@ -197,11 +197,12 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - **Overwritten on Every New Commit**: Automatically regenerated and overwritten on every new commit via Git post-commit hook (`.git/hooks/post-commit` and `python/hooks/post-commit`) and the auto-healer commit handler (`python/generate_last_commit_report.py`).
 - **Zero Emojis & Zero Em-Dashes**: The generated report strictly enforces zero emojis and zero em-dashes (spaced hyphens ` - ` or plain hyphens `-`).
 
-## Test Coverage Report Rule (`TEST_COVERAGE_REPORT.md`)
-- **Automated Test Coverage Generation**: The repository-wide test coverage report must be automatically generated and stored at `TEST_COVERAGE_REPORT.md` in the repository root directory on every commit.
-- **Overwritten on Every New Commit**: Automatically regenerated and overwritten on every new commit via Git post-commit hook (`.git/hooks/post-commit` and `python/hooks/post-commit`) and staged via pre-commit hook using `python/generate_test_coverage_report.py`.
+## Test Coverage Report Rule (Appended to LAST-COMMIT-REPORT.md)
+- **Automated Test Coverage Generation**: The repository-wide test coverage report for Python and JavaScript must be automatically generated and appended to `LAST-COMMIT-REPORT.md` on every commit.
+- **Legacy File Cleaned Up**: `TEST_COVERAGE_REPORT.md` is deleted; all test coverage details are consolidated directly within `LAST-COMMIT-REPORT.md`.
+- **Regenerated on Every New Commit**: Automatically regenerated and appended on every new commit via Git post-commit hook (`.git/hooks/post-commit` and `python/hooks/post-commit`) and staged via pre-commit hook using `python/generate_test_coverage_report.py`.
 - **Comprehensive Dual-Stack Assessment**: Evaluates Python code coverage (using coverage tracer across `nlp-fuzzy-expert/` and `python/`) and JavaScript code coverage (using native Node.js V8 code coverage `NODE_V8_COVERAGE` across `pricing-calculator.js`, `components.js`, and `mermaid.js`).
 - **Target Coverage**: Aspires towards 100% test coverage across both Python and JavaScript codebases.
-- **Zero Emojis & Zero Em-Dashes**: The generated report strictly enforces zero emojis and zero em-dashes (spaced hyphens ` - ` or plain hyphens `-`).
+- **Zero Emojis & Zero Em-Dashes**: The appended report strictly enforces zero emojis and zero em-dashes (spaced hyphens ` - ` or plain hyphens `-`).
 
 
