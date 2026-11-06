@@ -1,5 +1,10 @@
-// Load Mermaid 10 via CDN
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+// Load Mermaid
+let mermaid;
+try {
+  mermaid = (await import('https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs')).default;
+} catch (e) {
+  mermaid = typeof window !== 'undefined' ? window.mermaid : undefined;
+}
 
 /**
  * Dynamically transforms all links pointing to .md files across the document
@@ -73,8 +78,11 @@ async function initMermaid() {
     // 1. Transform all .md links dynamically
     transformMdLinks();
 
+    const m = mermaid || (typeof window !== 'undefined' ? window.mermaid : undefined);
+    if (!m) return;
+
     // 2. Configure theme to match dark aesthetic
-    mermaid.initialize({
+    m.initialize({
       startOnLoad: false,
       theme: 'dark',
       securityLevel: 'loose',
@@ -99,7 +107,7 @@ async function initMermaid() {
     });
 
     // 4. Render all diagrams into SVGs
-    await mermaid.run();
+    await m.run();
 
     // 5. Reveal diagram containers and hide fallbacks
     document.querySelectorAll('.diagram-container').forEach((container) => {
@@ -110,8 +118,12 @@ async function initMermaid() {
   }
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initMermaid);
-} else {
-  initMermaid();
+export { initMermaid };
+
+if (typeof document !== 'undefined' && typeof document.querySelector === 'function' && typeof window !== 'undefined' && window.location) {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMermaid);
+  } else {
+    initMermaid();
+  }
 }

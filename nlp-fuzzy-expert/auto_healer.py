@@ -120,6 +120,10 @@ def extract_failures_by_module(stdout, stderr):
     return by_mod
 
 
+# Alias for backwards compatibility
+parse_test_failures = extract_failures_by_module
+
+
 def clean_stale_failure_reports():
     """Removes any existing failed_*_tests.report.md, failed_*_tests_report.md, and failed_tests_report.md files."""
     for fname in os.listdir(REPO_DIR):
@@ -385,5 +389,10 @@ def commit_verified_state(commit_msg="feat(synchronizer): synchronize repository
         report_script = os.path.join(REPO_DIR, "python", "generate_last_commit_report.py")
         if os.path.exists(report_script):
             subprocess.run([sys.executable, report_script], cwd=REPO_DIR, capture_output=True, text=True)
+
+        # Update TEST_COVERAGE_REPORT.md with the output of the new commit
+        cov_script = os.path.join(REPO_DIR, "python", "generate_test_coverage_report.py")
+        if os.path.exists(cov_script):
+            subprocess.run([sys.executable, cov_script], cwd=REPO_DIR, capture_output=True, text=True)
     except Exception as e:
         print(f"  -> Git commit notice: {e}")

@@ -11,5 +11,9 @@ if [ -f "$REPO_ROOT/python/generate_last_commit_report.py" ]; then
     python3 "$REPO_ROOT/python/generate_last_commit_report.py" > /dev/null 2>&1 || true
 fi
 
+if [ -f "$REPO_ROOT/python/generate_test_coverage_report.py" ]; then
+    python3 "$REPO_ROOT/python/generate_test_coverage_report.py" > /dev/null 2>&1 || true
+fi
+
 exit 0
 

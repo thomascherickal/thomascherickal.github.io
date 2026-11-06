@@ -24,6 +24,7 @@ git add "$REPO_ROOT/schema" 2>/dev/null || true
 python3 "$REPO_ROOT/python/generate_metrics.py" > /dev/null 2>&1
 git add "$REPO_ROOT/metrics.md" 2>/dev/null || true
 git add "$REPO_ROOT/LAST-COMMIT-REPORT.md" 2>/dev/null || true
+git add "$REPO_ROOT/TEST_COVERAGE_REPORT.md" 2>/dev/null || true
 
 # Run all unit tests before committing
 echo "[git pre-commit] Running unit test suite (tests/)..."

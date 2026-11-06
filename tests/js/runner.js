@@ -14,6 +14,8 @@ const testFlagshipPackages = require('./test_flagship_packages.js');
 const testCustomPackage = require('./test_custom_package.js');
 const testEdgeCases = require('./test_edge_cases.js');
 const testDomController = require('./test_dom_controller.js');
+const testComponents = require('./test_components.js');
+const testMermaid = require('./test_mermaid.js');
 
 const TEST_MODULES = [
   { name: "test_data_integrity", module: testDataIntegrity },
@@ -24,15 +26,20 @@ const TEST_MODULES = [
   { name: "test_flagship_packages", module: testFlagshipPackages },
   { name: "test_custom_package", module: testCustomPackage },
   { name: "test_edge_cases", module: testEdgeCases },
-  { name: "test_dom_controller", module: testDomController }
+  { name: "test_dom_controller", module: testDomController },
+  { name: "test_components", module: testComponents },
+  { name: "test_mermaid", module: testMermaid }
 ];
 
-function runAllModules(PricingCalculator, constants) {
+async function runAllModules(PricingCalculator, constants) {
   const harness = createHarness();
   const startTime = Date.now();
 
   for (const { module } of TEST_MODULES) {
-    module.run(harness, PricingCalculator, constants);
+    const res = module.run(harness, PricingCalculator, constants);
+    if (res && typeof res.then === 'function') {
+      await res;
+    }
   }
 
   harness.printSummary("JAVASCRIPT UNIT TEST SUITE (pricing-tests.js)", startTime);

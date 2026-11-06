@@ -77,13 +77,11 @@ def check_links():
                     target_file = os.path.normpath(os.path.join(os.path.dirname(source_file), path))
                     
             # Check target file existence
-            if not os.path.exists(target_file):
-                # Try index.html if it's a directory
-                if os.path.isdir(target_file) and os.path.exists(os.path.join(target_file, 'index.html')):
-                    target_file = os.path.join(target_file, 'index.html')
-                else:
-                    errors.append(f"Broken link in {os.path.relpath(source_file, REPO_DIR)}: '{href}' -> Target file {os.path.relpath(target_file, REPO_DIR)} not found")
-                    continue
+            if os.path.isdir(target_file) and os.path.exists(os.path.join(target_file, 'index.html')):
+                target_file = os.path.join(target_file, 'index.html')
+            elif not os.path.exists(target_file):
+                errors.append(f"Broken link in {os.path.relpath(source_file, REPO_DIR)}: '{href}' -> Target file {os.path.relpath(target_file, REPO_DIR)} not found")
+                continue
                     
             # Check fragment/anchor if specified
             if fragment:

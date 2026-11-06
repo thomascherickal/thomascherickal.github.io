@@ -1,9 +1,9 @@
 # Source Code and Test Suite Knowledge Synchronization Report
 
-Generated on: 2026-11-06 22:25:28
+Generated on: 2026-11-06 23:15:26
 
 ## Summary
-- **Target Files Evaluated**: 27
+- **Target Files Evaluated**: 31
 - **Files Updated**: 0
 - **Tracked References**: 8
 
@@ -20,14 +20,17 @@ Generated on: 2026-11-06 22:25:28
 | `python/check_links.py` | **IN SYNC** | - |
 | `pricing-tests.js` | **IN SYNC** | - |
 | `tests/test_auto_healer.py` | **IN SYNC** | - |
+| `tests/test_check_links.py` | **IN SYNC** | - |
 | `tests/test_code_test_syncer.py` | **IN SYNC** | - |
 | `tests/test_continuous_updates.py` | **IN SYNC** | - |
 | `tests/test_core_target_documents.py` | **IN SYNC** | - |
+| `tests/test_coverage_report.py` | **IN SYNC** | - |
 | `tests/test_expert_system.py` | **IN SYNC** | - |
 | `tests/test_fuzzy_engine.py` | **IN SYNC** | - |
 | `tests/test_last_commit_report.py` | **IN SYNC** | - |
 | `tests/test_master_orchestrator.py` | **IN SYNC** | - |
 | `tests/test_nlp_engine.py` | **IN SYNC** | - |
+| `tests/test_python_tools.py` | **IN SYNC** | - |
 | `tests/test_reference_scanner.py` | **IN SYNC** | - |
 | `tests/test_report_generator.py` | **IN SYNC** | - |
 | `tests/test_sync_business_services.py` | **IN SYNC** | - |
@@ -38,6 +41,7 @@ Generated on: 2026-11-06 22:25:28
 | `tests/test_sync_publications_config_faqs.py` | **IN SYNC** | - |
 | `tests/test_sync_tiers.py` | **IN SYNC** | - |
 | `tests/test_unidirectional_sync.py` | **IN SYNC** | - |
+| `tests/test_watcher.py` | **IN SYNC** | - |
 
 ## Synchronized Entities and Facts
 

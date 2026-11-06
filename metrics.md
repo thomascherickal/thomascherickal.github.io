@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-06 16:54:32 UTC` | Branch: `main` | Head Commit: `055471b`
+> **Automated Status Report** | Generated on `2026-11-06 17:44:17 UTC` | Branch: `main` | Head Commit: `5bc3e7b`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **476** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **733,191** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **718,418** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **4,917** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **9,856** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **77.19 MB (80,937,222 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **713,801 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **488** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-06** | Subject: "feat(data): add authoritative guarantees.json reference file for guarantees.html" |
+| **Total Tracked Files** | **484** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **734,927** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **719,823** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **4,992** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **10,112** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **77.25 MB (81,005,497 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **715,177 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **489** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-06** | Subject: "chore(report): record commit 055471b in LAST-COMMIT-REPORT.md" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -29,13 +29,13 @@
 | :--- | :--- | :--- | :--- | :--- |
 | **HTML Documents** | 66 | 77,386 | 5.90 MB (6,187,521 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,887 | 278.67 KB (285,354 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 16 | 6,695 | 3.52 MB (3,692,150 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 47 | 11,534 | 515.97 KB (528,349 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 94 | 34,042 | 3.79 MB (3,977,885 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 90 | 591,594 | 27.57 MB (28,907,462 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **JavaScript Scripts** | 18 | 7,430 | 3.54 MB (3,715,111 bytes) | Client-side interactivity, search, filter & components |
+| **Python Tooling** | 52 | 12,444 | 550.85 KB (564,068 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 95 | 34,133 | 3.80 MB (3,987,232 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 90 | 591,594 | 27.57 MB (28,907,460 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 95 | 0 | 35.51 MB (37,233,318 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 10 | 0 | 57.32 KB (58,695 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 10 | 0 | 57.56 KB (58,945 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,22 +43,22 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 90 | 591,594 | 27.57 MB (28,907,462 bytes) | 18.9% |
-| `.html` | 66 | 77,386 | 5.90 MB (6,187,521 bytes) | 13.9% |
-| `.md` | 94 | 34,042 | 3.79 MB (3,977,885 bytes) | 19.7% |
-| `.css` | 16 | 11,887 | 278.67 KB (285,354 bytes) | 3.4% |
-| `.py` | 47 | 11,534 | 515.97 KB (528,349 bytes) | 9.9% |
-| `.js` | 16 | 6,695 | 3.52 MB (3,692,150 bytes) | 3.4% |
-| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 8.8% |
-| `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 9.0% |
-| `.png` | 26 | 0 | 2.78 MB (2,918,409 bytes) | 5.5% |
-| `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 4.2% |
-| `.jpeg` | 5 | 0 | 809.15 KB (828,567 bytes) | 1.1% |
+| `.json` | 90 | 591,594 | 27.57 MB (28,907,460 bytes) | 18.6% |
+| `.html` | 66 | 77,386 | 5.90 MB (6,187,521 bytes) | 13.6% |
+| `.md` | 95 | 34,133 | 3.80 MB (3,987,232 bytes) | 19.6% |
+| `.py` | 52 | 12,444 | 550.85 KB (564,068 bytes) | 10.7% |
+| `.css` | 16 | 11,887 | 278.67 KB (285,354 bytes) | 3.3% |
+| `.js` | 18 | 7,430 | 3.54 MB (3,715,111 bytes) | 3.7% |
+| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 8.7% |
+| `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 8.9% |
+| `.png` | 26 | 0 | 2.78 MB (2,918,409 bytes) | 5.4% |
+| `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 4.1% |
+| `.jpeg` | 5 | 0 | 809.15 KB (828,567 bytes) | 1.0% |
 | `.txt` | 2 | 0 | 36.88 KB (37,769 bytes) | 0.4% |
 | `.docx` | 1 | 0 | 10.34 KB (10,592 bytes) | 0.2% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
 | `.xml` | 1 | 0 | 6.67 KB (6,835 bytes) | 0.2% |
-| `[no extension]` | 5 | 0 | 2.89 KB (2,961 bytes) | 1.1% |
+| `[no extension]` | 5 | 0 | 3.14 KB (3,211 bytes) | 1.0% |
 | `.webmanifest` | 1 | 0 | 538 bytes | 0.2% |
 
 ---
@@ -107,8 +107,8 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **332 functions** across tooling scripts | Modular execution units |
-| **Python Class Definitions** | **30 classes** | Structured state containers |
+| **Python Function Definitions** | **377 functions** across tooling scripts | Modular execution units |
+| **Python Class Definitions** | **34 classes** | Structured state containers |
 
 ---
 

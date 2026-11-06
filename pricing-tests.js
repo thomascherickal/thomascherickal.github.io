@@ -44,7 +44,12 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 
 if (typeof require !== 'undefined' && require.main === module) {
-  runTestSuite();
+  const p = runTestSuite();
+  if (p && typeof p.then === 'function') {
+    p.then(res => {
+      if (res && res.failed > 0) process.exit(1);
+    });
+  }
 }
 
 if (typeof window !== 'undefined') {
