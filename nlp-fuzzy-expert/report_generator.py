@@ -82,6 +82,10 @@ def write_reference_files(domain_refs, force=False):
     all_refs = []
     any_domain_written = False
 
+    manifest_path = os.path.join(SCRIPT_DIR, "references_manifest.json")
+    manifest = load_json(manifest_path) if os.path.exists(manifest_path) else {}
+    manifest_by_domain = manifest.get("by_domain", {})
+
     for domain, fname in DOMAIN_FILES.items():
         refs = domain_refs.get(domain, [])
         all_refs.extend(refs)
@@ -90,6 +94,9 @@ def write_reference_files(domain_refs, force=False):
         if not force and os.path.exists(fpath):
             cached_refs = _DOMAIN_REFS_CACHE.get(domain)
             if cached_refs is not None and cached_refs == refs:
+                continue
+            if domain in manifest_by_domain and manifest_by_domain[domain] == len(refs):
+                _DOMAIN_REFS_CACHE[domain] = refs
                 continue
             existing = load_json(fpath)
             if existing.get("all_references") == refs:

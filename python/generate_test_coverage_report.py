@@ -55,23 +55,36 @@ def run_python_coverage(cov_json_path):
     """
     Executes Python unit test suite under coverage and exports results to JSON.
     Returns parsed dictionary of file coverage statistics.
+    Reuses existing fresh .coverage data if available (e.g. from pre-commit test run)
+    to avoid running the entire test suite twice.
     """
     env = os.environ.copy()
     env["ANTIGRAVITY_IN_TEST"] = "1"
 
-    # Run coverage
-    run_cmd = [
-        sys.executable,
-        "-m",
-        "coverage",
-        "run",
-        "-m",
-        "unittest",
-        "discover",
-        "-s",
-        os.path.join(REPO_DIR, "tests")
-    ]
-    subprocess.run(run_cmd, cwd=REPO_DIR, env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    cov_file = os.path.join(REPO_DIR, ".coverage")
+    has_fresh_cov = False
+    if os.path.exists(cov_file):
+        try:
+            cov_age = time.time() - os.path.getmtime(cov_file)
+            if cov_age < 900:  # Fresh within 15 minutes
+                has_fresh_cov = True
+        except OSError:
+            pass
+
+    if not has_fresh_cov:
+        # Run coverage
+        run_cmd = [
+            sys.executable,
+            "-m",
+            "coverage",
+            "run",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            os.path.join(REPO_DIR, "tests")
+        ]
+        subprocess.run(run_cmd, cwd=REPO_DIR, env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     # Export to JSON
     export_cmd = [

@@ -421,7 +421,7 @@ def scan_repository(target_files, data_dir=None):
             uncached_files.append((path, None))
 
     if uncached_files:
-        if len(uncached_files) > 1:
+        if len(uncached_files) > 12:
             try:
                 with ProcessPoolExecutor() as executor:
                     futures = {executor.submit(scan_file, p, terms): (p, k) for p, k in uncached_files}

@@ -18,12 +18,102 @@ Strict Repo Compliance:
 
 import os
 import sys
+import hashlib
 import subprocess
 from datetime import datetime
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_DIR = os.path.dirname(SCRIPT_DIR)
 DATA_DIR = os.path.join(REPO_DIR, "data")
+SYNC_MANIFEST_FILE = os.path.join(SCRIPT_DIR, "sync_manifest.json")
+
+DATA_DOMAIN_MAP = {
+    "pricing.json": "pricing",
+    "business-services.json": "business_services",
+    "personal-services.json": "personal_services",
+    "tiers.json": "tiers",
+    "claude.json": "claude",
+    "gemini.json": "gemini",
+    "publications.json": "publications",
+    "config.json": "config",
+    "faqs.json": "faqs",
+    "contact.json": "contact",
+    "guarantees.json": "guarantees",
+}
+
+DOMAIN_TARGET_PATTERNS = {
+    "pricing": {
+        "pricing.html", "index.html", "pricing-calculator.js",
+        "guarantees.html", "llms.txt", "contact.html", "faqs.html",
+        "business-ai-training.html", "personal-ai-training.html",
+        "all-business-services.html", "all-personal-services.html",
+        "business-services", "personal-services"
+    },
+    "business_services": {
+        "all-business-services.html", "business-ai-training.html",
+        "business-services"
+    },
+    "personal_services": {
+        "all-personal-services.html", "personal-ai-training.html",
+        "personal-services"
+    },
+    "tiers": {
+        "pricing.html", "pricing-calculator.js", "all-business-services.html",
+        "all-personal-services.html", "index.html", "guarantees.html", "writing.html"
+    },
+    "claude": {
+        "claude-training", "all-business-services.html", "all-personal-services.html"
+    },
+    "gemini": {
+        "google-training", "all-business-services.html", "all-personal-services.html"
+    },
+    "publications": {
+        "writing.html", "articles.html"
+    },
+    "config": {
+        "index.html", "pricing.html", "contact.html", "faqs.html", "guarantees.html",
+        "business-ai-training.html", "personal-ai-training.html",
+        "all-business-services.html", "all-personal-services.html",
+        "404.html", "expertise.html"
+    },
+    "faqs": {
+        "faqs.html"
+    },
+    "contact": {
+        "contact.html"
+    },
+    "guarantees": {
+        "guarantees.html"
+    },
+}
+
+
+def compute_data_domain_hashes(data_dir):
+    """Computes a dictionary of SHA-256 hashes for all data/*.json files."""
+    hashes = {}
+    if not os.path.exists(data_dir):
+        return hashes
+    for fname in sorted(os.listdir(data_dir)):
+        if fname.endswith(".json"):
+            fpath = os.path.join(data_dir, fname)
+            try:
+                with open(fpath, "rb") as f:
+                    hashes[fname] = hashlib.sha256(f.read()).hexdigest()
+            except OSError:
+                pass
+    return hashes
+
+
+def is_target_in_domains(rel_path, domains):
+    """Checks if a target document is affected by any of the specified domains."""
+    for d in domains:
+        patterns = DOMAIN_TARGET_PATTERNS.get(d, set())
+        if rel_path in patterns:
+            return True
+        for p in patterns:
+            if "/" not in p and rel_path.startswith(p + "/"):
+                return True
+    return False
 
 sys.path.insert(0, SCRIPT_DIR)
 from expert_system import KnowledgeBase, InferenceEngine, save_json, load_json
@@ -129,7 +219,7 @@ class ExpertSynchronizer:
         self._cached_target_files = sorted(clean_targets)
         return list(self._cached_target_files)
 
-    def sync_all(self, auto_heal=True, verify_tests=True):
+    def sync_all(self, auto_heal=True, verify_tests=True, force=False):
         """Runs the expert inference engine across all target files with live terminal reporting."""
         initial_data_fp = compute_data_fingerprint(self.data_dir)
 
@@ -163,6 +253,21 @@ class ExpertSynchronizer:
         targets = self.discover_target_files()
         print(f"  -> Discovered {len(targets)} target documents (.html, .js) for synchronization.")
 
+        # Check synchronization manifest
+        manifest = {}
+        if os.path.exists(SYNC_MANIFEST_FILE):
+            try:
+                manifest = load_json(SYNC_MANIFEST_FILE)
+            except Exception:
+                manifest = {}
+
+        manifest_data_hashes = manifest.get("data_hashes", {})
+        manifest_targets = manifest.get("targets", {})
+        current_data_hashes = compute_data_domain_hashes(self.data_dir)
+
+        changed_data_files = {fn for fn, h in current_data_hashes.items() if h != manifest_data_hashes.get(fn)}
+        changed_domains = {DATA_DOMAIN_MAP[fn] for fn in changed_data_files if fn in DATA_DOMAIN_MAP}
+
         # Step 4: Execute Inference & Diffs
         print(f"\n[Step 4/6] Executing forward-chaining inference & computing line diffs...")
         print("  [UPDATE SCOPE] Fields: Authoritative pricing, tiers, curricula & configs -> Target: HTML/JS repository pages")
@@ -171,7 +276,31 @@ class ExpertSynchronizer:
         header_footer_modified = False
         file_reports = []
 
+        # Determine target files needing evaluation via manifest
+        eval_targets = []
         for fpath in targets:
+            rel = os.path.relpath(fpath, REPO_DIR)
+            try:
+                st = os.stat(fpath)
+                mtime_ns, size = st.st_mtime_ns, st.st_size
+            except OSError:
+                mtime_ns, size = 0, 0
+            cached_sig = manifest_targets.get(rel, {})
+            disk_modified = (cached_sig.get("mtime_ns") != mtime_ns or cached_sig.get("size") != size)
+            domain_affected = is_target_in_domains(rel, changed_domains)
+
+            if force or not manifest or disk_modified or domain_affected:
+                eval_targets.append(fpath)
+            else:
+                file_reports.append({
+                    "file": rel,
+                    "modified": False,
+                    "fired_rules": [],
+                    "changed_lines": "None",
+                    "fields_synchronized": []
+                })
+
+        for fpath in eval_targets:
             rel = os.path.relpath(fpath, REPO_DIR)
             report = self.engine.process_file(fpath)
             file_reports.append(report)
@@ -218,12 +347,49 @@ class ExpertSynchronizer:
         # Step 5: Reference Dictionaries
         print(f"\n[Step 5/6] Generating domain references and master dictionary...")
         print("  [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json")
-        self.generate_reference_dictionaries()
+        has_ref_manifest = os.path.exists(os.path.join(SCRIPT_DIR, "references_manifest.json"))
+        if force or modified_count > 0 or changed_domains or not has_ref_manifest:
+            self.generate_reference_dictionaries()
+        else:
+            print(f"  -> Reference dictionaries and manifest already in sync (0 target files modified).")
 
         # Step 6: Markdown Reports
         print(f"\n[Step 6/6] Generating domain markdown synchronization reports...")
         print("  [UPDATE SCOPE] Fields: Domain summaries & occurrence tables -> Target: nlp-fuzzy-expert/*.md reports")
-        self.generate_markdown_reports()
+        if force or modified_count > 0 or changed_domains or not has_ref_manifest:
+            self.generate_markdown_reports()
+        else:
+            print(f"  -> Markdown reports already in sync (0 target files modified).")
+
+        # Update synchronization manifest
+        new_manifest_targets = dict(manifest_targets)
+        for fpath in targets:
+            rel = os.path.relpath(fpath, REPO_DIR)
+            try:
+                st = os.stat(fpath)
+                new_manifest_targets[rel] = {
+                    "mtime_ns": st.st_mtime_ns,
+                    "size": st.st_size
+                }
+            except OSError:
+                pass
+
+        new_manifest = {
+            "metadata": {
+                "engine": "nlp-fuzzy-expert",
+                "version": "1.0.0",
+                "manifest_type": "synchronization_manifest",
+                "last_synchronized": datetime.now().isoformat(),
+                "total_targets": len(targets),
+                "description": "Synchronization manifest tracking data hashes and target document state."
+            },
+            "data_hashes": current_data_hashes,
+            "targets": new_manifest_targets
+        }
+        try:
+            save_json(SYNC_MANIFEST_FILE, new_manifest)
+        except Exception:
+            pass
 
         # Terminal Summary Table
         print("\n" + "=" * 80)
