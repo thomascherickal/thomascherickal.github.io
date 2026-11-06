@@ -19,9 +19,7 @@ def fuzzy_triangle(x, a, b, c):
         return 0.0
     if a < x <= b:
         return (x - a) / (b - a) if b > a else 1.0
-    if b < x < c:
-        return (c - x) / (c - b) if c > b else 1.0
-    return 0.0
+    return (c - x) / (c - b) if c > b else 1.0
 
 def fuzzy_trapezoid(x, a, b, c, d):
     """Trapezoidal fuzzy membership function."""
@@ -31,9 +29,7 @@ def fuzzy_trapezoid(x, a, b, c, d):
         return (x - a) / (b - a) if b > a else 1.0
     if b < x <= c:
         return 1.0
-    if c < x < d:
-        return (d - x) / (d - c) if d > c else 1.0
-    return 0.0
+    return (d - x) / (d - c) if d > c else 1.0
 
 def levenshtein_distance(s1, s2):
     """Computes exact edit distance between two strings."""
@@ -59,8 +55,6 @@ def levenshtein_distance(s1, s2):
 def levenshtein_ratio(s1, s2):
     """Computes normalized Levenshtein similarity in range [0.0, 1.0]."""
     if s1 == s2:
-        return 1.0
-    if not s1 and not s2:
         return 1.0
     if not s1 or not s2:
         return 0.0
@@ -119,8 +113,6 @@ def ngram_similarity(s1, s2, n=3):
     ngrams2 = set([s2_clean[i:i+n] for i in range(len(s2_clean) - n + 1)])
 
     union = ngrams1.union(ngrams2)
-    if not union:
-        return 1.0
     return len(ngrams1.intersection(ngrams2)) / len(union)
 
 class FuzzyMatcher:

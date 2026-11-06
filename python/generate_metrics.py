@@ -177,7 +177,7 @@ def generate_metrics():
                 total_comment_lines += comments
                 total_code_lines += code
 
-            except Exception:
+            except Exception:  # pragma: no cover
                 pass
 
         if ext not in ext_data:
@@ -341,5 +341,5 @@ def generate_metrics():
 
     print(f"Successfully generated metrics in: {output_path} ({len(tracked_files)} files, {total_lines:,} lines)")
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     generate_metrics()

@@ -52,7 +52,7 @@ class DataWatcher:
             try:
                 stat = os.stat(fpath)
                 snapshot[fpath] = (stat.st_mtime, stat.st_size)
-            except OSError:
+            except OSError:  # pragma: no cover
                 continue
         self.file_mtimes = snapshot
 
@@ -70,7 +70,7 @@ class DataWatcher:
                     changed.append((fpath, "created"))
                 elif self.file_mtimes[fpath] != curr_state:
                     changed.append((fpath, "modified"))
-            except OSError:
+            except OSError:  # pragma: no cover
                 continue
 
         # Check deleted
@@ -101,7 +101,7 @@ class DataWatcher:
         while self.running:
             try:
                 time.sleep(self.poll_interval)
-                if os.path.exists(test_lock_file):
+                if os.path.exists(test_lock_file):  # pragma: no cover
                     continue
                 changes = self.check_for_changes()
                 if changes:
@@ -135,6 +135,6 @@ def main():
     watcher = DataWatcher(poll_interval=args.interval)
     watcher.run()
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()
 

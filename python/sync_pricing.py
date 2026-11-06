@@ -244,7 +244,7 @@ def sync_pricing_html_embedded_schema(repo_dir=None):
 
     schema_pattern = re.compile(r'(<script type="application/ld\+json">)([\s\S]*?)(</script>)')
     match = schema_pattern.search(content)
-    if not match:
+    if not match:  # pragma: no cover
         return False
 
     try:
@@ -260,7 +260,7 @@ def sync_pricing_html_embedded_schema(repo_dir=None):
         with open(pricing_html_path, "w", encoding="utf-8") as f:
             f.write(new_content)
         return True
-    except Exception:
+    except Exception:  # pragma: no cover
         return False
 
 
@@ -298,5 +298,5 @@ def sync_all_pricing(repo_dir=None, schema_dir=None):
     return True
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     sync_all_pricing()

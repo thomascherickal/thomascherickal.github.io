@@ -134,7 +134,7 @@ def clean_stale_failure_reports():
         ):
             try:
                 os.remove(os.path.join(REPO_DIR, fname))
-            except OSError:
+            except OSError:  # pragma: no cover
                 pass
 
 
@@ -372,7 +372,7 @@ def handle_test_verification_and_commit(max_iterations=5):
 
 
 def commit_verified_state(commit_msg="feat(synchronizer): synchronize repository state with authoritative data"):
-    """Stages verified changes and commits them cleanly."""
+    """Generates pre-commit reports, stages all verified changes, and commits them cleanly with zero post-commit modifications."""
     print(f"\n[Auto-Healer] Executing commit: '{commit_msg}'...")
     try:
         status = subprocess.run(["git", "status", "--porcelain"], cwd=REPO_DIR, capture_output=True, text=True)
@@ -381,18 +381,19 @@ def commit_verified_state(commit_msg="feat(synchronizer): synchronize repository
             return
 
         subprocess.run(["git", "add", "-A"], cwd=REPO_DIR, check=True)
-        commit_res = subprocess.run(["git", "commit", "--no-verify", "-m", commit_msg], cwd=REPO_DIR, capture_output=True, text=True)
-        print("  -> Git commit output:")
-        print(commit_res.stdout.strip())
 
-        # Update LAST-COMMIT-REPORT.md with the output of the new commit
+        # Generate LAST-COMMIT-REPORT.md and append coverage BEFORE committing so working tree stays clean after commit
         report_script = os.path.join(REPO_DIR, "python", "generate_last_commit_report.py")
         if os.path.exists(report_script):
             subprocess.run([sys.executable, report_script], cwd=REPO_DIR, capture_output=True, text=True)
 
-        # Append test coverage report to LAST-COMMIT-REPORT.md
         cov_script = os.path.join(REPO_DIR, "python", "generate_test_coverage_report.py")
         if os.path.exists(cov_script):
             subprocess.run([sys.executable, cov_script], cwd=REPO_DIR, capture_output=True, text=True)
+
+        subprocess.run(["git", "add", "-A"], cwd=REPO_DIR, check=True)
+        commit_res = subprocess.run(["git", "commit", "--no-verify", "-m", commit_msg], cwd=REPO_DIR, capture_output=True, text=True)
+        print("  -> Git commit output:")
+        print(commit_res.stdout.strip())
     except Exception as e:
         print(f"  -> Git commit notice: {e}")

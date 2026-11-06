@@ -194,12 +194,13 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 
 ## Last Commit Output Report Rule (`LAST-COMMIT-REPORT.md`)
 - **Last Commit Output Recording**: The full commit output report of the last commit made must always be stored and recorded at `LAST-COMMIT-REPORT.md` in the repository root directory.
-- **Overwritten on Every New Commit**: Automatically regenerated and overwritten on every new commit via Git pre-commit hook (`.git/hooks/pre-commit` and `python/hooks/post-commit`) and the auto-healer commit handler (`python/generate_last_commit_report.py`).
+- **Strictly Pre-Commit Only (Zero Post-Commit Modifications)**: All code synchronization, component building, schema extraction, Markdown mirroring, metrics calculation, test execution, `LAST-COMMIT-REPORT.md` generation, and test coverage appending MUST happen strictly **before** the commit is finalized (inside `.git/hooks/pre-commit` / `python/hooks/pre-commit`, or prior to `git commit` in automated handlers).
+- **Clean Working Tree After Every Commit**: Never run post-commit hooks or post-commit scripts that modify tracked or untracked files after `git commit` completes. Immediately after any commit, `git status` must be 100% clean with zero modified or untracked files.
 - **Zero Emojis & Zero Em-Dashes**: The generated report strictly enforces zero emojis and zero em-dashes (spaced hyphens ` - ` or plain hyphens `-`).
 
 ## Test Coverage Report Rule (Appended to LAST-COMMIT-REPORT.md)
-- **Automated Test Coverage Generation**: The repository-wide test coverage report for Python and JavaScript must be automatically generated and appended to `LAST-COMMIT-REPORT.md` before every commit.
+- **Automated Test Coverage Generation**: The repository-wide test coverage report for Python and JavaScript must be automatically generated and appended to `LAST-COMMIT-REPORT.md` before every commit, and staged as part of that commit.
 - **Comprehensive Dual-Stack Assessment**: Evaluates Python code coverage (using coverage tracer across `nlp-fuzzy-expert/` and `python/`) and JavaScript code coverage (using native Node.js V8 code coverage `NODE_V8_COVERAGE` across `pricing-calculator.js`, `components.js`, and `mermaid.js`).
-- **Target Coverage**: Aspires towards 100% test coverage across both Python and JavaScript codebases.
+- **100% Coverage Target**: Enforces 100% test coverage across both Python and JavaScript codebases.
 
 

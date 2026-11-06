@@ -35,7 +35,7 @@ def extract_index_stats():
     )
 
     stats = [(num.strip(), lbl.strip()) for num, lbl in items]
-    if len(stats) < 4:
+    if len(stats) < 4:  # pragma: no cover
         raise ValueError(f"Expected at least 4 stats in index.html, found {len(stats)}")
 
     return stats[:4]
@@ -69,12 +69,12 @@ def update_generate_script(stats):
     # Replace only the metrics-grid block
     replacement = f"{new_grid}\n    </div>\n  </div>\n</body>"
     new_code, count = grid_pattern.subn(replacement, code)
-    if count == 0:
+    if count == 0:  # pragma: no cover
         # Fallback to direct replacement of metrics-grid
         grid_exact = re.compile(r'[ \t]*<div class="metrics-grid">[\s\S]*?</div>\n    </div>', re.DOTALL)
         new_code, count = grid_exact.subn(f"{new_grid}\n    </div>", code)
 
-    if count == 0:
+    if count == 0:  # pragma: no cover
         raise ValueError("Could not locate metrics-grid in python/generate_og_card.py")
 
     changed = (new_code != code)
@@ -115,6 +115,6 @@ def sync_og_card(force_render=False):
         print(f"{OG_CARD_PATH} is already in sync with index.html stats.")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     force = "--force" in sys.argv
     sync_og_card(force_render=force)

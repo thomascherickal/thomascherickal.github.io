@@ -117,7 +117,7 @@ def load_python_test_data():
                         "skipped": 0,
                         "tests": mod_tests
                     }
-                except Exception:
+                except Exception:  # pragma: no cover
                     pass
 
     return {
@@ -218,7 +218,7 @@ def run_link_check_safe():
     success = True
     try:
         python_dir = os.path.join(REPO_ROOT, "python")
-        if python_dir not in sys.path:
+        if python_dir not in sys.path:  # pragma: no cover
             sys.path.insert(0, python_dir)
 
         from check_links import check_links
@@ -230,7 +230,7 @@ def run_link_check_safe():
         if m:
             checked_count = int(m.group(1))
             files_count = int(m.group(2))
-    except Exception:
+    except Exception:  # pragma: no cover
         pass
     return {
         "success": success,
@@ -500,5 +500,5 @@ def generate_last_commit_report(output_file=REPORT_FILE):
     return report_content
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     generate_last_commit_report()

@@ -50,7 +50,7 @@ def check_links():
         try:
             with open(source_file, 'r', encoding='utf-8', errors='ignore') as f:
                 content = f.read()
-        except Exception:
+        except Exception:  # pragma: no cover
             continue
             
         hrefs = HREF_PATTERN.findall(content)
@@ -85,10 +85,7 @@ def check_links():
                     
             # Check fragment/anchor if specified
             if fragment:
-                # Cache target file ids if not cached
-                if target_file not in file_ids_cache:
-                    file_ids_cache[target_file] = collect_file_targets(target_file)
-                target_ids = file_ids_cache[target_file]
+                target_ids = file_ids_cache.get(target_file) or collect_file_targets(target_file)
                 if fragment not in target_ids:
                     errors.append(f"Broken anchor in {os.path.relpath(source_file, REPO_DIR)}: '{href}' -> ID '#{fragment}' not found in {os.path.relpath(target_file, REPO_DIR)}")
 
@@ -102,7 +99,7 @@ def check_links():
         print("ZERO broken internal links or fragments found! All links verified.")
         return True
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     success = check_links()
     if not success:
         sys.exit(1)

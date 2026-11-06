@@ -1308,10 +1308,15 @@ def build_rules():
     rules.append(Rule("BusinessServicesNamesAndCardsRule", 85, cond_business_svcs, act_business_svcs, "business_services"))
 
     # -------------------------------------------------------------
-    # 13. Technical Guides Synchronization (claude/*.html, google/*.html)
+    # 13. Technical Guides Synchronization (claude-training/*.html, google-training/*.html)
     # -------------------------------------------------------------
     def cond_tech_guides(file_path, content, kb, nlp, fuzzy):
-        is_guide = ("/claude/" in file_path or "/google/" in file_path) and file_path.endswith(".html")
+        is_guide = (
+            "/claude-training/" in file_path
+            or "/google-training/" in file_path
+            or "/claude/" in file_path
+            or "/google/" in file_path
+        ) and file_path.endswith(".html")
         return is_guide, {}
 
     def act_tech_guides(file_path, content, match_info, kb, nlp, fuzzy):
@@ -1418,8 +1423,7 @@ def build_rules():
     def act_pubs(file_path, content, match_info, kb, nlp, fuzzy):
         occurrences = []
         pubs = kb.raw_data.get("publications", [])
-        if isinstance(pubs, dict):
-            pubs = pubs.get("publications", [])
+        pubs = pubs.get("publications", []) if isinstance(pubs, dict) else pubs
         for pub in pubs:
             title = pub.get("title")
             platform = pub.get("platform")

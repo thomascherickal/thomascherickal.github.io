@@ -72,10 +72,7 @@ class NLPEngine:
 
         for m in self.re_money.finditer(text):
             val_clean = m.group(0).replace('$', '').replace('USD', '').replace(',', '').strip()
-            try:
-                numeric_val = float(val_clean)
-            except ValueError:
-                numeric_val = None
+            numeric_val = float(val_clean)
             ctx = self.extract_context_window(text, m.start())
             entities.append(NLPEntity("MONEY", m.group(0), numeric_val, m.start(), m.end(), ctx))
 

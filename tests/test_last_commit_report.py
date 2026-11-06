@@ -132,9 +132,15 @@ class TestLastCommitReport(unittest.TestCase):
 
     def test_run_link_check_safe_and_counts(self):
         """Verifies run_link_check_safe and count_schemas_and_mirrors."""
-        with patch("check_links.check_links", return_value=True):
+        def fake_check_links():
+            print("Checked 5655 internal links across 66 HTML files.")
+            return True
+
+        with patch("check_links.check_links", side_effect=fake_check_links):
             res = lcr.run_link_check_safe()
             self.assertTrue(res["success"])
+            self.assertEqual(res["checked_links"], 5655)
+            self.assertEqual(res["html_files"], 66)
 
         with patch("check_links.check_links", side_effect=RuntimeError("err")):
             res_err = lcr.run_link_check_safe()
@@ -173,3 +179,4 @@ class TestLastCommitReport(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

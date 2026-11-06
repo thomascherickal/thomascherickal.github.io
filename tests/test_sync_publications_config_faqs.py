@@ -49,5 +49,10 @@ class TestSyncPublicationsConfigFaqs(unittest.TestCase):
             self.assertTrue(os.path.exists(ref_path), f"{ref_path} must exist")
             self.assertTrue(os.path.exists(md_path), f"{md_path} must exist")
 
+        # Explicitly evaluate GuidesIdentityRule and PublicationsRule via process_file
+        self.orchestrator.engine.process_file(os.path.join(REPO_DIR, "articles.html"))
+        self.orchestrator.engine.process_file(os.path.join(REPO_DIR, "claude-training", "claude-101.html"))
+        self.orchestrator.engine.process_file(os.path.join(REPO_DIR, "google-training", "google-gemini-101.html"))
+
 if __name__ == "__main__":
     unittest.main()

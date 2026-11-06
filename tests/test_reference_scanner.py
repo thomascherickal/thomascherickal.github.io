@@ -117,7 +117,8 @@ class TestReferenceScanner(unittest.TestCase):
                 res = rs.scan_repository(many_files, DATA_DIR)
                 self.assertIn("config", res)
 
-            # Test main()
+            # Test main() and numeric_patterns hour branch
+            self.assertTrue(len(rs.numeric_patterns("daily_hours", 4)) > 0)
             with patch("synchronizer.ExpertSynchronizer.refresh_references_only") as mock_ref:
                 rs.main()
                 mock_ref.assert_called_once()

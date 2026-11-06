@@ -138,17 +138,25 @@ class TestAutoHealer(unittest.TestCase):
     def test_commit_verified_state_dirty(self, mock_run):
         """Verifies commit_verified_state stages and commits when working tree has changes."""
         # 1st call: git status
-        # 2nd call: git add
-        # 3rd call: git commit
-        # 4th call: generate_last_commit_report.py
+        # 2nd call: git add -A
+        # 3rd call: generate_last_commit_report.py
+        # 4th call: generate_test_coverage_report.py
+        # 5th call: git add -A
+        # 6th call: git commit --no-verify
         mock_status = MagicMock(stdout=" M test.html")
         mock_add = MagicMock(returncode=0)
-        mock_commit = MagicMock(stdout="[main abc] commit")
         mock_report = MagicMock(returncode=0)
-        mock_run.side_effect = [mock_status, mock_add, mock_commit, mock_report]
+        mock_cov = MagicMock(returncode=0)
+        mock_add2 = MagicMock(returncode=0)
+        mock_commit = MagicMock(stdout="[main abc] commit")
+        mock_run.side_effect = [mock_status, mock_add, mock_report, mock_cov, mock_add2, mock_commit]
 
         commit_verified_state("feat: update test")
-        self.assertGreaterEqual(mock_run.call_count, 3)
+        self.assertGreaterEqual(mock_run.call_count, 5)
+
+        # Also test exception path during commit
+        mock_run.side_effect = RuntimeError("git failed")
+        commit_verified_state("feat: error test")
 
     @patch("auto_healer.run_unit_tests")
     @patch("auto_healer.commit_verified_state")

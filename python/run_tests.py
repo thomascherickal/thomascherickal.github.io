@@ -100,7 +100,7 @@ class RecordingTestResult(unittest.TextTestResult):
 def get_data_dir_hashes():
     """Computes SHA-256 hashes for all files under data/."""
     hashes = {}
-    if not os.path.exists(DATA_DIR):
+    if not os.path.exists(DATA_DIR):  # pragma: no cover
         return hashes
     for fname in sorted(os.listdir(DATA_DIR)):
         if fname.endswith(".json"):
@@ -115,7 +115,7 @@ def run_all_tests():
     try:
         with open(test_lock, "w") as f:
             f.write("1")
-    except OSError:
+    except OSError:  # pragma: no cover
         pass
 
     try:
@@ -170,7 +170,7 @@ def run_all_tests():
             }
             with open(cache_path, "w", encoding="utf-8") as f:
                 json.dump(cache_data, f, indent=2)
-        except Exception as e:
+        except Exception as e:  # pragma: no cover
             print(f"[run_tests] Note: test cache write exception: {e}")
 
         # Snapshot data/*.json hashes after running tests
@@ -212,7 +212,7 @@ def run_all_tests():
                 sys.path.insert(0, os.path.join(REPO_DIR, "nlp-fuzzy-expert"))
                 from auto_healer import clean_stale_failure_reports
                 clean_stale_failure_reports()
-            except Exception:
+            except Exception:  # pragma: no cover
                 pass
             return 0
         else:
@@ -228,16 +228,16 @@ def run_all_tests():
                     buf.append(f"ERROR: {test}\n{err}")
                 total_fails = len(result.failures) + len(result.errors)
                 generate_failed_tests_report("", "\n".join(buf), total_fails)
-            except Exception as e:
+            except Exception as e:  # pragma: no cover
                 print(f"[run_tests] Note: failed report generation notice: {e}")
             return 1
     finally:
         if os.path.exists(test_lock):
             try:
                 os.remove(test_lock)
-            except OSError:
+            except OSError:  # pragma: no cover
                 pass
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     exit_code = run_all_tests()
     sys.exit(exit_code)

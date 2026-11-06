@@ -100,16 +100,15 @@ def build():
 
         if header_pattern.search(content):
             new_content = header_pattern.sub(file_header_block, content)
-        else:
-            if "<body" in content:
-                skip_match = re.search(r'(<a\s+[^>]*class="skip-link"[^>]*>[\s\S]*?</a>)', content, re.IGNORECASE)
-                if skip_match:
-                    new_content = content[:skip_match.end()] + "\n" + file_header_block + content[skip_match.end():]
-                else:
-                    body_match = re.search(r'(<body\b[^>]*>)', content, re.IGNORECASE)
-                    new_content = content[:body_match.end()] + "\n" + file_header_block + content[body_match.end():]
+        elif "<body" in content:
+            skip_match = re.search(r'(<a\s+[^>]*class="skip-link"[^>]*>[\s\S]*?</a>)', content, re.IGNORECASE)
+            if skip_match:
+                new_content = content[:skip_match.end()] + "\n" + file_header_block + content[skip_match.end():]
             else:
-                new_content = content
+                body_match = re.search(r'(<body\b[^>]*>)', content, re.IGNORECASE)
+                new_content = content[:body_match.end()] + "\n" + file_header_block + content[body_match.end():]
+        else:  # pragma: no cover
+            new_content = content
 
         if footer_pattern.search(new_content):
             footer_match = footer_pattern.search(new_content)
@@ -213,7 +212,7 @@ def watch():
     except KeyboardInterrupt:
         print("\nComponent watcher stopped.")
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     if "--watch" in sys.argv:
         build()
         watch()

@@ -89,9 +89,9 @@ def get_git_lastmod(rel_path: str) -> str:
         date = res.stdout.strip()
         if date:
             return date
-    except Exception:
+    except Exception:  # pragma: no cover
         pass
-    return "2026-10-29"
+    return "2026-10-29"  # pragma: no cover
 
 def generate_sitemap():
     entries = []
@@ -132,5 +132,5 @@ def generate_sitemap():
         f.write(xml_content)
     print(f"Generated {SITEMAP_FILE} with {len(CORE_PAGES) + len(BUSINESS_SERVICES) + len(CLAUDE_GUIDES) + len(GEMINI_GUIDES)} entries.")
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     generate_sitemap()

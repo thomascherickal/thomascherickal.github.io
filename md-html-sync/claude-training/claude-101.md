@@ -176,6 +176,6 @@ Every client engagement is safeguarded by strict trust guarantees:
 ---
 
 ### Ready to Orchestrate Production Claude AI Agent Teams?
-- [Schedule Strategy Consultation via Email →](collaboration.html)
+- [Schedule Strategy Consultation via Email →](contact.html)
 - [View Advisory Packages & Rates](pricing.html)
 - [Explore Claude Agents Suite](claude-101.html)

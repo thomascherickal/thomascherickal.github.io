@@ -54,6 +54,22 @@ class TestReportGenerator(unittest.TestCase):
         self.assertEqual(classify_rule_field("contact_form_endpoint"), "contact")
         self.assertEqual(classify_rule_field("walkaway_guarantee_terms"), "guarantees")
 
+    def test_write_and_markdown_edge_cases(self):
+        """Verifies write_reference_files cache hit and generate_markdown_reports empty domain."""
+        import report_generator
+        from unittest.mock import patch
+        with patch("report_generator.save_json"), \
+             patch("report_generator.load_json", return_value={"all_references": [{"a": 1}]}), \
+             patch("os.path.exists", return_value=True):
+            report_generator._DOMAIN_REFS_CACHE.clear()
+            report_generator.write_reference_files({"pricing": [{"a": 1}]}, force=False)
+            report_generator.write_reference_files({"pricing": [{"a": 1}]}, force=True)
+
+        with patch("builtins.open", unittest.mock.mock_open()), \
+             patch("os.path.exists", return_value=False):
+            report_generator._DOMAIN_MD_CACHE.clear()
+            report_generator.generate_markdown_reports({}, force=True)
+
 
 if __name__ == "__main__":
     unittest.main()

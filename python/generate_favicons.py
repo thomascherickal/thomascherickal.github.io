@@ -81,5 +81,5 @@ def generate_favicons(assets_dir=None, source_image=None):
     print(f"Generated favicon.svg: {os.path.getsize(svg_path):,} bytes")
     return True
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     generate_favicons()

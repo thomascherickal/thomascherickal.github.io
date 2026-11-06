@@ -62,6 +62,11 @@ class TestNLPEngine(unittest.TestCase):
         self.assertEqual(nlp_engine.classify_domain_context(ctx_biz), "business_flagship")
         self.assertEqual(nlp_engine.classify_domain_context(ctx_pers), "personal_flagship")
         self.assertEqual(nlp_engine.classify_domain_context(ctx_calc), "calculator")
+        self.assertEqual(nlp_engine.classify_domain_context("pick individual service"), "individual_service")
+        self.assertEqual(nlp_engine.classify_domain_context("walkaway guarantee installment"), "general_policy")
+
+        ent = nlp_engine.find_entities("$300 USD")[0]
+        self.assertIn("MONEY", repr(ent))
 
     def test_highlight_tagging_and_stripping(self):
         """Verifies highlight tagging and idempotent clean stripping."""

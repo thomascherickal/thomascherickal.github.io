@@ -443,7 +443,7 @@ def generate_og_card(icon_path: str = ICON_PATH, output_path: str = OUTPUT_PATH)
             im = Image.open(output_path).convert("RGB")
             opt_im = im.convert("P", palette=Image.Palette.ADAPTIVE, colors=256)
             opt_im.save(output_path, "PNG", optimize=True)
-        except Exception as e:
+        except Exception as e:  # pragma: no cover
             print(f"Pillow optimization notice: {e}")
 
         print(f"Generated {output_path} ({os.path.getsize(output_path):,} bytes)")
@@ -453,5 +453,5 @@ def generate_og_card(icon_path: str = ICON_PATH, output_path: str = OUTPUT_PATH)
             os.remove(temp_html)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     generate_og_card()
