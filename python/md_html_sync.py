@@ -310,17 +310,17 @@ def sync_html_to_md(html_name: str, md_name: str):
         ])
         content = "\n".join(md_lines)
     elif html_name == "articles.html":
-        content = build_md_files.convert_articles()
+        content = build_md_files.convert_articles(html_path)
     elif html_name == "writing.html":
-        content = build_md_files.convert_writing()
+        content = build_md_files.convert_writing(html_path)
     elif html_name == "pricing.html":
-        content = build_md_files.convert_pricing()
+        content = build_md_files.convert_pricing(html_path)
     elif html_name == "expertise.html":
-        content = build_md_files.convert_expertise()
+        content = build_md_files.convert_expertise(html_path)
     elif html_name == "contact.html":
         content = build_md_files.convert_contact()
     elif html_name == "faqs.html":
-        content = build_md_files.convert_faqs()
+        content = build_md_files.convert_faqs(html_path)
     elif html_name == "404.html":
         content = build_md_files.convert_404()
     elif html_name in ["business-ai-training.html", "personal-ai-training.html", "all-business-services.html", "all-personal-services.html"]:
@@ -599,12 +599,17 @@ def watch(interval: float = 1.0):
 # MAIN ENTRYPOINT
 # ==============================================================================
 
-if __name__ == "__main__":
-    if "--watch" in sys.argv:
+def main(argv=None):
+    args = argv if argv is not None else sys.argv
+    if "--watch" in args:
         watch()
-    elif "--html-to-md" in sys.argv:
+    elif "--html-to-md" in args:
         run_sync(force_direction="html_to_md")
-    elif "--md-to-html" in sys.argv:
+    elif "--md-to-html" in args:
         run_sync(force_direction="md_to_html")
     else:
         run_sync()
+
+
+if __name__ == "__main__":
+    main()

@@ -14,10 +14,8 @@ ASSETS_DIR = os.path.join(REPO_DIR, "assets")
 OUTPUT_PATH = os.path.join(ASSETS_DIR, "og-card.png")
 ICON_PATH = os.path.join(ASSETS_DIR, "site-icon.jpeg")
 
-with open(ICON_PATH, "rb") as f:
-    icon_b64 = base64.b64encode(f.read()).decode("ascii")
-
-html_content = f"""<!DOCTYPE html>
+def build_og_html(icon_b64: str) -> str:
+    return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -415,34 +413,45 @@ html_content = f"""<!DOCTYPE html>
 </html>
 """
 
-with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False) as f:
-    temp_html = f.name
-    f.write(html_content)
+def generate_og_card(icon_path: str = ICON_PATH, output_path: str = OUTPUT_PATH) -> str:
+    with open(icon_path, "rb") as f:
+        icon_b64 = base64.b64encode(f.read()).decode("ascii")
 
-try:
-    chrome_cmd = [
-        "google-chrome",
-        "--headless",
-        "--disable-gpu",
-        "--no-sandbox",
-        "--hide-scrollbars",
-        "--force-device-scale-factor=1",
-        "--window-size=1200,630",
-        f"--screenshot={OUTPUT_PATH}",
-        temp_html
-    ]
-    subprocess.run(chrome_cmd, check=True)
-    
-    # Optimize to under 200 KB
+    html_content = build_og_html(icon_b64)
+
+    with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False) as f:
+        temp_html = f.name
+        f.write(html_content)
+
     try:
-        from PIL import Image
-        im = Image.open(OUTPUT_PATH).convert("RGB")
-        opt_im = im.convert("P", palette=Image.Palette.ADAPTIVE, colors=256)
-        opt_im.save(OUTPUT_PATH, "PNG", optimize=True)
-    except Exception as e:
-        print(f"Pillow optimization notice: {e}")
+        chrome_cmd = [
+            "google-chrome",
+            "--headless",
+            "--disable-gpu",
+            "--no-sandbox",
+            "--hide-scrollbars",
+            "--force-device-scale-factor=1",
+            "--window-size=1200,630",
+            f"--screenshot={output_path}",
+            temp_html
+        ]
+        subprocess.run(chrome_cmd, check=True)
 
-    print(f"Generated {OUTPUT_PATH} ({os.path.getsize(OUTPUT_PATH):,} bytes)")
-finally:
-    if os.path.exists(temp_html):
-        os.remove(temp_html)
+        # Optimize to under 200 KB
+        try:
+            from PIL import Image
+            im = Image.open(output_path).convert("RGB")
+            opt_im = im.convert("P", palette=Image.Palette.ADAPTIVE, colors=256)
+            opt_im.save(output_path, "PNG", optimize=True)
+        except Exception as e:
+            print(f"Pillow optimization notice: {e}")
+
+        print(f"Generated {output_path} ({os.path.getsize(output_path):,} bytes)")
+        return output_path
+    finally:
+        if os.path.exists(temp_html):
+            os.remove(temp_html)
+
+
+if __name__ == "__main__":
+    generate_og_card()

@@ -73,6 +73,14 @@ class TestExpertSystem(unittest.TestCase):
         self.assertIsNone(self.kb.get_fact("non_existent_domain", "missing_key"))
         self.assertIsNone(self.kb.get_fact("pricing", "completely_bogus_fact_key"))
 
+        # Fact repr and compute_changed_lines multi-ranges
+        from expert_system import compute_changed_lines
+        fact_obj = Fact("pricing", "b_flag_price", 3000)
+        self.assertIn("pricing", repr(fact_obj))
+        self.assertEqual(compute_changed_lines("a\nb\nc", "a\nc"), "1")
+        self.assertEqual(compute_changed_lines("a\nb\nc\nd\ne", "x\ny\nc\nd\nz"), "1-2, 5")
+        self.assertEqual(load_json("/tmp/non_existent_expert_json_99999.json"), {})
+
         # Empty rule execution
         empty_rule = Rule("NoopRule", 50, lambda p, c, *args: (False, {}), lambda p, c, *args: (c, []))
         self.engine.register_rule(empty_rule)

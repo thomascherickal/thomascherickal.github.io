@@ -57,6 +57,8 @@ class TestCodeTestSynchronizer(unittest.TestCase):
         self.assertEqual(compute_changed_lines("line1\nline2", "line1\nline2"), "None")
         diff = compute_changed_lines("line1\nline2", "line1\nline_modified")
         self.assertIn("2", diff)
+        self.assertEqual(compute_changed_lines("a\nb\nc", "a\nc"), "1")
+        self.assertEqual(compute_changed_lines("a\nb\nc\nd\ne", "x\ny\nc\nd\nz\nw"), "1-2, 5-6")
 
     def test_sync_pricing_calculator(self):
         """Verifies that sync_pricing_calculator inserts authoritative rates and formulas."""

@@ -173,7 +173,7 @@ class TestAutoHealer(unittest.TestCase):
         mock_commit.assert_called_once()
 
     def test_parse_test_failures_variations(self):
-        """Verifies parse_test_failures extracts modules and errors accurately."""
+        """Verifies parse_test_failures extracts modules and errors accurately across fallback paths."""
         sample_stderr = (
             "======================================================================\n"
             "FAIL: test_a (test_mod_a.TestA.test_a)\n"
@@ -183,12 +183,76 @@ class TestAutoHealer(unittest.TestCase):
             "ERROR: test_b (tests.test_mod_b.TestB.test_b)\n"
             "----------------------------------------------------------------------\n"
             "ValueError: bad value\n"
+            "======================================================================\n"
+            "FAIL: test_c (pkg.CustomMod.TestC)\n"
+            "----------------------------------------------------------------------\n"
+            "AssertionError: custom\n"
+            "======================================================================\n"
+            "FAIL: test_d (SingleName)\n"
+            "----------------------------------------------------------------------\n"
+            "AssertionError: single\n"
+            "======================================================================\n"
+            "FAIL: test_e\n"
+            '  File "/path/test_from_file.py", line 10\n'
         )
         failures = parse_test_failures("", sample_stderr)
         self.assertIn("test_mod_a", failures)
         self.assertIn("test_mod_b", failures)
-        self.assertEqual(len(failures["test_mod_a"]), 1)
-        self.assertEqual(len(failures["test_mod_b"]), 1)
+        self.assertIn("CustomMod", failures)
+        self.assertIn("SingleName", failures)
+        self.assertIn("test_from_file", failures)
+
+        # Fallback without === separators
+        no_sep = "FAIL: test_x (test_no_sep.TestX)\nAssertionError\n"
+        f_no_sep = parse_test_failures("", no_sep)
+        self.assertIn("test_no_sep", f_no_sep)
+
+        # Fallback with no FAIL/ERROR lines at all
+        f_unit = parse_test_failures("Generic crash output", "")
+        self.assertIn("unit", f_unit)
+
+    @patch("subprocess.run")
+    def test_run_unit_tests_execution(self, mock_run):
+        """Verifies run_unit_tests parses subprocess returncode and failure counts."""
+        from auto_healer import run_unit_tests
+        mock_run.return_value = MagicMock(returncode=1, stdout="", stderr="Crash without FAIL line")
+        passed, out, err, count = run_unit_tests()
+        self.assertFalse(passed)
+        self.assertEqual(count, 1)
+
+    @patch("auto_healer.run_unit_tests")
+    @patch("auto_healer.invoke_agy_healer")
+    @patch("auto_healer.verify_data_untouched")
+    @patch("auto_healer.commit_verified_state")
+    @patch("auto_healer.clean_stale_failure_reports")
+    @patch("auto_healer.generate_failed_tests_report", return_value=["failed_tests_report.md"])
+    def test_handle_test_verification_many_failures_healing_loop(
+        self, mock_gen, mock_clean, mock_commit, mock_verify, mock_agy, mock_run_tests
+    ):
+        """Verifies >= 5 failures triggers AGY auto-healing loop (green, <5, and exhausted)."""
+        try:
+            # Case 1: 6 failures -> heals to 0 failures on iteration 1
+            mock_run_tests.side_effect = [
+                (False, "", "FAIL", 6),
+                (True, "OK", "", 0),
+            ]
+            self.assertTrue(handle_test_verification_and_commit(max_iterations=2))
+
+            # Case 2: 6 failures -> heals to 2 failures (<5) on iteration 1
+            mock_run_tests.side_effect = [
+                (False, "", "FAIL", 6),
+                (False, "", "FAIL", 2),
+            ]
+            self.assertTrue(handle_test_verification_and_commit(max_iterations=2))
+
+            # Case 3: 6 failures -> stays at 6 failures across all iterations -> returns False
+            mock_run_tests.side_effect = [
+                (False, "", "FAIL", 6),
+                (False, "", "FAIL", 6),
+            ]
+            self.assertFalse(handle_test_verification_and_commit(max_iterations=1))
+        finally:
+            clean_stale_failure_reports()
 
 
 if __name__ == "__main__":

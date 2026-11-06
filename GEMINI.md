@@ -111,7 +111,7 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 ## Unit Testing Suite & Pre-Commit Test Enforcement (`tests/` & `python/run_tests.py`)
 - **Test Command**: Run all unit tests with `python3 python/run_tests.py` or `python3 -m unittest discover -s tests -v`.
 - **Run Tests After HTML Changes**: When changes are made to repository HTML or JS files, always run the test suite to verify 100% test pass rate across all 36+ test cases.
-- **Pre-Commit Enforcement**: The pre-commit hook automatically executes `python3 python/run_tests.py`. If any unit test fails, the commit is aborted. Never bypass or force commits with broken tests.
+- **Pre-Commit Enforcement**: The pre-commit hook automatically executes `python3 python/run_tests.py`. If any unit test fails, the commit is aborted. Never bypass or force commits with broken tests. If all tests pass, push automatically.
 
 ## Practice Pricing, Payment Structure & Licensing Rules
 - **Business AI Training Flagship**:

@@ -44,6 +44,18 @@ class TestCheckLinks(unittest.TestCase):
         targets = check_links.collect_file_targets("/nonexistent/file.html")
         self.assertEqual(targets, set())
 
+    def test_get_html_files_discovery(self):
+        """Verifies get_html_files walks REPO_DIR and excludes .git and node_modules."""
+        os.makedirs(os.path.join(self.temp_dir, ".git"), exist_ok=True)
+        with open(os.path.join(self.temp_dir, ".git", "ignored.html"), "w") as f:
+            f.write("ignore")
+        p1 = os.path.join(self.temp_dir, "valid.html")
+        with open(p1, "w") as f:
+            f.write("<html></html>")
+        with patch.object(check_links, "REPO_DIR", self.temp_dir):
+            found = check_links.get_html_files()
+            self.assertEqual(found, [p1])
+
     @patch("check_links.REPO_DIR")
     @patch("check_links.get_html_files")
     def test_check_links_success(self, mock_get_files, mock_repo_dir):

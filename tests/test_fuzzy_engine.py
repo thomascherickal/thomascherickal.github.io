@@ -124,6 +124,15 @@ class TestFuzzyEngine(unittest.TestCase):
         self.assertEqual(fuzzy_trapezoid(8.0, 0.0, 2.0, 8.0, 10.0), 1.0)
         self.assertEqual(fuzzy_triangle(0.0, 0.0, 5.0, 10.0), 0.0)
         self.assertEqual(fuzzy_triangle(10.0, 0.0, 5.0, 10.0), 0.0)
+        self.assertAlmostEqual(fuzzy_triangle(7.5, 0.0, 5.0, 10.0), 0.5)
+
+        # Punctuation-only and medium/low classification
+        self.assertEqual(token_set_ratio("same", "same"), 1.0)
+        self.assertEqual(token_set_ratio("!!!", "???"), 1.0)
+        self.assertEqual(token_set_ratio("abc", "???"), 0.0)
+        self.assertEqual(fuzzy_matcher.compute_membership("", "abc"), 0.0)
+        self.assertEqual(fuzzy_matcher.classify_confidence(0.75), "MEDIUM")
+        self.assertEqual(fuzzy_matcher.classify_confidence(0.50), "LOW")
 
 if __name__ == "__main__":
     unittest.main()

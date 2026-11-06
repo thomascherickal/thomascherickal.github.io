@@ -25,16 +25,21 @@ SOURCE_IMAGE_JPEG = os.path.join(ASSETS_DIR, "site-icon.jpeg")
 SOURCE_IMAGE_WEBP = os.path.join(ASSETS_DIR, "site-icon.webp")
 SOURCE_IMAGE = SOURCE_IMAGE_JPEG if os.path.exists(SOURCE_IMAGE_JPEG) else SOURCE_IMAGE_WEBP
 
-def generate_favicons():
-    if not os.path.exists(SOURCE_IMAGE):
-        raise FileNotFoundError(f"Source image not found: neither {SOURCE_IMAGE_JPEG} nor {SOURCE_IMAGE_WEBP} exists")
+def generate_favicons(assets_dir=None, source_image=None):
+    target_assets_dir = assets_dir or ASSETS_DIR
+    src_jpeg = os.path.join(target_assets_dir, "site-icon.jpeg")
+    src_webp = os.path.join(target_assets_dir, "site-icon.webp")
+    target_source = source_image or (src_jpeg if os.path.exists(src_jpeg) else src_webp)
 
-    src = Image.open(SOURCE_IMAGE)
-    print(f"Loaded master image: {SOURCE_IMAGE} ({src.size[0]}x{src.size[1]}, {src.mode})")
+    if not os.path.exists(target_source):
+        raise FileNotFoundError(f"Source image not found: neither {src_jpeg} nor {src_webp} exists")
+
+    src = Image.open(target_source)
+    print(f"Loaded master image: {target_source} ({src.size[0]}x{src.size[1]}, {src.mode})")
 
     # If source is JPEG, ensure a high-quality site-icon.webp is also saved for schema/logo compatibility
-    if SOURCE_IMAGE == SOURCE_IMAGE_JPEG:
-        webp_path = SOURCE_IMAGE_WEBP
+    if target_source == src_jpeg:
+        webp_path = src_webp
         src.save(webp_path, format="WEBP", quality=95)
         print(f"Generated site-icon.webp (1024x1024): {os.path.getsize(webp_path):,} bytes")
 
@@ -49,13 +54,13 @@ def generate_favicons():
     }
 
     for filename, size in png_targets.items():
-        out_path = os.path.join(ASSETS_DIR, filename)
+        out_path = os.path.join(target_assets_dir, filename)
         resized = src.resize(size, Image.Resampling.LANCZOS)
         resized.save(out_path, format="PNG", optimize=True)
         print(f"Generated {filename} ({size[0]}x{size[1]}): {os.path.getsize(out_path):,} bytes")
 
     # 2. Multi-resolution ICO
-    ico_path = os.path.join(ASSETS_DIR, "favicon.ico")
+    ico_path = os.path.join(target_assets_dir, "favicon.ico")
     ico_sizes = [(16, 16), (32, 32), (48, 48)]
     src.save(ico_path, format="ICO", sizes=ico_sizes)
     print(f"Generated favicon.ico (16, 32, 48): {os.path.getsize(ico_path):,} bytes")
@@ -70,10 +75,11 @@ def generate_favicons():
   <image width="128" height="128" href="data:image/png;base64,{b64_png}"/>
 </svg>
 '''
-    svg_path = os.path.join(ASSETS_DIR, "favicon.svg")
+    svg_path = os.path.join(target_assets_dir, "favicon.svg")
     with open(svg_path, "w", encoding="utf-8") as f:
         f.write(svg_content)
     print(f"Generated favicon.svg: {os.path.getsize(svg_path):,} bytes")
+    return True
 
 if __name__ == "__main__":
     generate_favicons()

@@ -61,6 +61,69 @@ class TestReferenceScanner(unittest.TestCase):
         self.assertIn("rule", kinds)
         self.assertTrue(kinds & {"exact", "fuzzy"})
 
+    def test_scanner_cache_helpers_and_parallel_fallback(self):
+        """Verifies prune_scanner_cache, load/save cache, >12 files batching, and main()."""
+        import tempfile
+        import shutil
+        from unittest.mock import patch
+        import reference_scanner as rs
+
+        temp_dir = tempfile.mkdtemp()
+        try:
+            # Create a dummy file in REPO_DIR-relative path or temp_dir
+            f_path = os.path.join(temp_dir, "sample.html")
+            with open(f_path, "w", encoding="utf-8") as f:
+                f.write("<html><body>thomascherickal@gmail.com</body></html>")
+            st = os.stat(f_path)
+
+            with patch.object(rs, "REPO_DIR", temp_dir):
+                key_valid = f"sample.html:{st.st_mtime_ns}:{st.st_size}:digest1"
+                cache = {
+                    key_valid: [{"field_key": "config:email"}],
+                    "short:key": [],
+                    "missing.html:1:2:3": [],
+                }
+                pruned = rs.prune_scanner_cache(cache, active_keys={key_valid})
+                self.assertIn(key_valid, pruned)
+
+                # Test without active_keys (disk stat fallback)
+                pruned2 = rs.prune_scanner_cache(cache, active_keys=None)
+                self.assertIn(key_valid, pruned2)
+
+            # Test load_scanner_cache with missing and corrupt cache file
+            missing_cache = os.path.join(temp_dir, "missing_cache.json")
+            with patch.object(rs, "CACHE_FILE", missing_cache):
+                self.assertEqual(rs.load_scanner_cache(), {})
+
+            corrupt_cache = os.path.join(temp_dir, "corrupt_cache.json")
+            with open(corrupt_cache, "w", encoding="utf-8") as f:
+                f.write("{corrupt")
+            with patch.object(rs, "CACHE_FILE", corrupt_cache):
+                rs._MEMORY_SCANNER_CACHE = None
+                self.assertEqual(rs.load_scanner_cache(), {})
+
+            # Test >12 uncached files with ProcessPoolExecutor fallback
+            many_files = []
+            for i in range(13):
+                p = os.path.join(temp_dir, f"doc_{i}.html")
+                with open(p, "w", encoding="utf-8") as f:
+                    f.write(f"<html><body>Doc {i} thomascherickal@gmail.com</body></html>")
+                many_files.append(p)
+
+            temp_cache_file = os.path.join(temp_dir, ".scanner_cache.json")
+            with patch.object(rs, "CACHE_FILE", temp_cache_file), \
+                 patch.object(rs, "ProcessPoolExecutor", side_effect=RuntimeError("no pool")):
+                rs._MEMORY_SCANNER_CACHE = {}
+                res = rs.scan_repository(many_files, DATA_DIR)
+                self.assertIn("config", res)
+
+            # Test main()
+            with patch("synchronizer.ExpertSynchronizer.refresh_references_only") as mock_ref:
+                rs.main()
+                mock_ref.assert_called_once()
+        finally:
+            shutil.rmtree(temp_dir, ignore_errors=True)
+
 
 if __name__ == "__main__":
     unittest.main()

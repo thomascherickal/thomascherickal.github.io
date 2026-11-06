@@ -21,8 +21,8 @@ def clean_text(text: str) -> str:
     text = re.sub(r'\n\s*\n', '\n\n', text)
     return text.strip()
 
-def convert_articles() -> str:
-    html_file = os.path.join(REPO_DIR, "articles.html")
+def convert_articles(html_file: str = None) -> str:
+    html_file = html_file or os.path.join(REPO_DIR, "articles.html")
     with open(html_file, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f.read(), "html.parser")
     
@@ -126,8 +126,8 @@ def convert_articles() -> str:
         
     return "\n".join(lines).strip() + "\n"
 
-def convert_writing() -> str:
-    html_file = os.path.join(REPO_DIR, "writing.html")
+def convert_writing(html_file: str = None) -> str:
+    html_file = html_file or os.path.join(REPO_DIR, "writing.html")
     with open(html_file, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f.read(), "html.parser")
     
@@ -272,96 +272,8 @@ def convert_general_document(file_path: str) -> str:
     out = re.sub(r'\n{3,}', '\n\n', out).strip() + "\n"
     return out
 
-def convert_collaboration() -> str:
-    html_file = os.path.join(REPO_DIR, "collaboration.html")
-    if not os.path.exists(html_file):
-        return ""
-    with open(html_file, "r", encoding="utf-8") as f:
-        soup = BeautifulSoup(f.read(), "html.parser")
-        
-    lines = [
-        "# Thomas Cherickal - Ways to Collaborate",
-        "## Generative AI Consulting, Corporate Training & Dedicated Retainers",
-        "",
-        "> **// CLIENT COLLABORATION DIRECTORY**  ",
-        "> **Structured, high-integrity models for AI Agent Mastery & team orchestration, remote & live workforce training, local LLM infrastructure, autonomous agent orchestration, and quantum exploration.**",
-        "",
-        "---",
-        "",
-        "## 9 Ways We Can Work Together",
-        ""
-    ]
-    
-    collab_cards = soup.find_all("div", class_="collab-card")
-    for i, c in enumerate(collab_cards, 1):
-        title_el = c.find(["h3", "h4"])
-        title = clean_text(title_el.get_text()) if title_el else f"Option #{i}"
-        
-        desc_el = c.find("p", class_="collab-desc") or c.find("p")
-        desc = clean_text(desc_el.get_text()) if desc_el else ""
-        
-        lines.append(f"### {title}")
-        if desc:
-            lines.append(desc)
-            lines.append("")
-            
-        ul = c.find("ul")
-        if ul:
-            for li in ul.find_all("li"):
-                lines.append(f"- {clean_text(li.get_text())}")
-            lines.append("")
-            
-        tags = [clean_text(t.get_text()) for t in c.find_all("span", class_="tech-tag")]
-        if tags:
-            lines.append("**Keywords**: " + ", ".join(f"`{t}`" for t in tags))
-            lines.append("")
-            
-        lines.append("---")
-        lines.append("")
-        
-    lines.append("## How We Collaborate: 8-Step Lifecycle")
-    lines.append("")
-    step_cards = soup.find_all("div", class_="step-card")
-    for i, sc in enumerate(step_cards, 1):
-        num = clean_text(sc.find("div", class_="step-num").get_text()) if sc.find("div", class_="step-num") else f"0{i}"
-        h3 = clean_text(sc.find("h3").get_text()) if sc.find("h3") else f"Step {i}"
-        desc = clean_text(sc.find("p").get_text()) if sc.find("p") else ""
-        lines.append(f"### {num}. {h3}")
-        if desc:
-            lines.append(desc)
-        lines.append("")
-        
-    lines.append("---")
-    lines.append("")
-    lines.append("## Who I Collaborate With (Audience & Parity Tiers)")
-    lines.append("")
-    
-    aud_cards = soup.find_all("div", class_="audience-card")
-    for ac in aud_cards:
-        h3 = clean_text(ac.find("h3").get_text()) if ac.find("h3") else "Audience"
-        desc = clean_text(ac.find("p").get_text()) if ac.find("p") else ""
-        lines.append(f"### {h3}")
-        if desc:
-            lines.append(desc)
-        lines.append("")
-        
-    lines.append("---")
-    lines.append("")
-    lines.append("## Collaboration FAQs")
-    lines.append("")
-    faq_cards = soup.find_all("div", class_="faq-card")
-    for i, fc in enumerate(faq_cards, 1):
-        q = clean_text(fc.find("h3").get_text()) if fc.find("h3") else f"Question #{i}"
-        ans = clean_text(fc.find("p").get_text()) if fc.find("p") else ""
-        lines.append(f"### {i}. {q}")
-        if ans:
-            lines.append(ans)
-        lines.append("")
-        
-    return "\n".join(lines).strip() + "\n"
-
-def convert_pricing() -> str:
-    html_file = os.path.join(REPO_DIR, "pricing.html")
+def convert_pricing(html_file: str = None) -> str:
+    html_file = html_file or os.path.join(REPO_DIR, "pricing.html")
     with open(html_file, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f.read(), "html.parser")
         
@@ -482,8 +394,8 @@ def convert_pricing() -> str:
     
     return "\n".join(lines).strip() + "\n"
 
-def convert_expertise() -> str:
-    html_file = os.path.join(REPO_DIR, "expertise.html")
+def convert_expertise(html_file: str = None) -> str:
+    html_file = html_file or os.path.join(REPO_DIR, "expertise.html")
     with open(html_file, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f.read(), "html.parser")
         
@@ -593,8 +505,8 @@ def convert_contact() -> str:
 *Ready to discuss? Email directly at [thomascherickal@gmail.com](mailto:thomascherickal@gmail.com).*
 """
 
-def convert_faqs() -> str:
-    html_file = os.path.join(REPO_DIR, "faqs.html")
+def convert_faqs(html_file: str = None) -> str:
+    html_file = html_file or os.path.join(REPO_DIR, "faqs.html")
     with open(html_file, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f.read(), "html.parser")
         
@@ -783,138 +695,6 @@ def html_table_to_md(table) -> str:
         md_rows.append("| " + " | ".join(row_vals) + " |")
     return "\n".join(md_rows)
 
-def convert_agents_all_providers(file_path: str) -> str:
-    with open(file_path, "r", encoding="utf-8") as f:
-        soup = BeautifulSoup(f.read(), "html.parser")
-
-    h1_el = soup.find("h1")
-    h1 = clean_text(h1_el.get_text()) if h1_el else "All Agentic Providers"
-    badge_el = soup.find("p", class_="hero-badge")
-    badge = clean_text(badge_el.get_text()) if badge_el else "// ORCHESTRATION ARCHITECTURE PLAYBOOK"
-    
-    hero_p = soup.find("header", class_="hero")
-    sub = ""
-    if hero_p:
-        for p in hero_p.find_all("p"):
-            if "hero-badge" not in p.get("class", []):
-                sub = clean_text(p.get_text())
-                break
-
-    lines = [
-        f"# {h1}",
-        f"## Business Agentic AI Playbook - Thomas Cherickal",
-        "",
-        f"> **{badge}**  ",
-        f"> **{sub}**" if sub else "> **Architectural comparison across 8 frontier agent platforms.**",
-        "",
-        "---",
-        "",
-        "## Quick Provider Navigation",
-        ""
-    ]
-
-    nav_cards = soup.find_all("a", class_="provider-nav-card")
-    for nc in nav_cards:
-        href = nc.get("href", "#")
-        name = clean_text(nc.find("span", class_="nav-card-name").get_text()) if nc.find("span", class_="nav-card-name") else "Provider"
-        price = clean_text(nc.find("span", class_="nav-card-price").get_text()) if nc.find("span", class_="nav-card-price") else ""
-        lines.append(f"- [{name}]({href}) - *{price}*")
-    lines.append("")
-    lines.append("---")
-    lines.append("")
-
-    matrix_table = soup.find("table", class_="provider-matrix-table")
-    if matrix_table:
-        lines.append("## Master Provider Comparison Matrix")
-        lines.append("")
-        lines.append(html_table_to_md(matrix_table))
-        lines.append("")
-        lines.append("---")
-        lines.append("")
-
-    arch_cards = soup.find_all("article", class_="arch-card")
-    if arch_cards:
-        lines.append("## Architectural Paradigms & System Design")
-        lines.append("")
-        for ac in arch_cards:
-            h3 = ac.find("h3")
-            if h3:
-                lines.append(f"### {clean_text(h3.get_text())}")
-                lines.append("")
-            for p in ac.find_all("p"):
-                lines.append(clean_text(p.get_text()))
-                lines.append("")
-            ul = ac.find("ul")
-            if ul:
-                for li in ul.find_all("li"):
-                    lines.append(f"- {clean_text(li.get_text())}")
-                lines.append("")
-        lines.append("---")
-        lines.append("")
-
-    deep_cards = soup.find_all("article", class_="provider-deep-card")
-    if deep_cards:
-        lines.append("## Detailed Provider Architectural Deep Dives")
-        lines.append("")
-        for dc in deep_cards:
-            h3 = dc.find("h3", class_="deep-card-title")
-            if h3:
-                lines.append(f"### {clean_text(h3.get_text())}")
-                lines.append("")
-            pill = dc.find("span", class_="pricing-pill")
-            if pill:
-                lines.append(f"**Minimum Access**: `{clean_text(pill.get_text())}`  ")
-            
-            for p in dc.find_all("p"):
-                lines.append(clean_text(p.get_text()))
-                lines.append("")
-            
-            meta_items = dc.find_all("li", class_="deep-meta-item")
-            if meta_items:
-                lines.append("**Key Metadata & Links**:")
-                for mi in meta_items:
-                    lines.append(f"- {clean_text(mi.get_text())}")
-                lines.append("")
-            lines.append("---")
-            lines.append("")
-
-    code_win = soup.find("div", class_="code-window")
-    if code_win:
-        bar = code_win.find("div", class_="code-bar")
-        filename = clean_text(bar.find("span").get_text()) if bar and bar.find("span") else "multi_agent_router.py"
-        code_tag = code_win.find("code")
-        if code_tag:
-            lines.append("## Production Multi-Agent Orchestration Script")
-            lines.append(f"#### `{filename}`")
-            lines.append("```python")
-            lines.append(code_tag.get_text().strip())
-            lines.append("```")
-            lines.append("")
-            lines.append("---")
-            lines.append("")
-
-    roadmap_cards = soup.find_all("div", class_="roadmap-card")
-    if roadmap_cards:
-        lines.append("## Business Implementation Roadmap")
-        lines.append("")
-        for rc in roadmap_cards:
-            step = clean_text(rc.find("div", class_="roadmap-step").get_text()) if rc.find("div", class_="roadmap-step") else ""
-            h4 = clean_text(rc.find("h4").get_text()) if rc.find("h4") else ""
-            lines.append(f"### Step {step}: {h4}")
-            for p in rc.find_all("p"):
-                lines.append(clean_text(p.get_text()))
-            lines.append("")
-        lines.append("---")
-        lines.append("")
-
-    lines.append("### Ready to Deploy Autonomous AI Agent Teams?")
-    lines.append("- [Schedule Strategy Consultation via Email →](collaboration.html)")
-    lines.append("- [View Advisory Packages & Rates](pricing.html)")
-    lines.append("- [Explore Contact Page](contact.html)")
-    lines.append("")
-
-    return "\n".join(lines).strip() + "\n"
-
 def convert_agent_deepdive(file_path: str) -> str:
     with open(file_path, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f.read(), "html.parser")
@@ -1028,7 +808,7 @@ def convert_agent_deepdive(file_path: str) -> str:
         lines.append("")
         
     lines.append("### Ready to Orchestrate Production Claude AI Agent Teams?")
-    lines.append("- [Schedule Strategy Consultation via Email →](collaboration.html)")
+    lines.append("- [Schedule Strategy Consultation via Email →](contact.html)")
     lines.append("- [View Advisory Packages & Rates](pricing.html)")
     lines.append("- [Explore Claude Agents Suite](claude-101.html)")
     lines.append("")
@@ -1037,40 +817,42 @@ def convert_agent_deepdive(file_path: str) -> str:
 # Backward-compatibility alias
 convert_portfolio = convert_articles
 
-def main():
-    print(f"Generating Markdown files in: {SYNC_DIR}")
+def main(repo_dir: str = None, sync_dir: str = None):
+    target_repo = repo_dir or REPO_DIR
+    target_sync = sync_dir or SYNC_DIR
+    print(f"Generating Markdown files in: {target_sync}")
     
-    # Ensure all target subdirectories exist in SYNC_DIR
+    # Ensure all target subdirectories exist in target_sync
     for sub in ["business-services", "personal-services", "claude-training", "google-training"]:
-        os.makedirs(os.path.join(SYNC_DIR, sub), exist_ok=True)
+        os.makedirs(os.path.join(target_sync, sub), exist_ok=True)
 
     exclude_files = {"header.html", "footer.html", "article-footer_dark.html", "google43d90cf6a204dc6d.html"}
     
     # 1. Root core converters
     core_converters = {
-        "articles.html": ("articles.md", convert_articles),
-        "writing.html": ("writing.md", convert_writing),
-        "pricing.html": ("pricing.md", convert_pricing),
-        "expertise.html": ("expertise.md", convert_expertise),
-        "contact.html": ("contact.md", convert_contact),
-        "faqs.html": ("faqs.md", convert_faqs),
-        "404.html": ("404.md", convert_404)
+        "articles.html": ("articles.md", lambda p: convert_articles(p)),
+        "writing.html": ("writing.md", lambda p: convert_writing(p)),
+        "pricing.html": ("pricing.md", lambda p: convert_pricing(p)),
+        "expertise.html": ("expertise.md", lambda p: convert_expertise(p)),
+        "contact.html": ("contact.md", lambda p: convert_contact()),
+        "faqs.html": ("faqs.md", lambda p: convert_faqs(p)),
+        "404.html": ("404.md", lambda p: convert_404())
     }
     
     for html_file, (md_file, converter) in core_converters.items():
-        src_path = os.path.join(REPO_DIR, html_file)
+        src_path = os.path.join(target_repo, html_file)
         if not os.path.exists(src_path):
             continue
-        dest = os.path.join(SYNC_DIR, md_file)
+        dest = os.path.join(target_sync, md_file)
         print(f"Building {md_file} from {html_file}...")
-        content = converter()
+        content = converter(src_path)
         with open(dest, "w", encoding="utf-8") as f:
             f.write(content)
         print(f"  -> Wrote {len(content.splitlines())} lines to {md_file}")
 
     # 2. Subdirectory files: business-services, personal-services, claude, google
     for subdir in ["business-services", "personal-services", "claude-training", "google-training"]:
-        sub_dir_path = os.path.join(REPO_DIR, subdir)
+        sub_dir_path = os.path.join(target_repo, subdir)
         if not os.path.isdir(sub_dir_path):
             continue
         for html_path in sorted(glob.glob(os.path.join(sub_dir_path, "*.html"))):
@@ -1078,7 +860,7 @@ def main():
             if base in exclude_files:
                 continue
             rel_md = os.path.join(subdir, base.replace(".html", ".md"))
-            dest = os.path.join(SYNC_DIR, rel_md)
+            dest = os.path.join(target_sync, rel_md)
             print(f"Building {rel_md} from {base}...")
             if subdir in ["business-services", "personal-services"]:
                 content = convert_service_page(html_path)
@@ -1096,10 +878,10 @@ def main():
         "personal-ai-training.html"
     ]
     for page in overview_pages:
-        src_path = os.path.join(REPO_DIR, page)
+        src_path = os.path.join(target_repo, page)
         if os.path.exists(src_path):
             md_name = page.replace(".html", ".md")
-            dest = os.path.join(SYNC_DIR, md_name)
+            dest = os.path.join(target_sync, md_name)
             print(f"Building {md_name} from {page}...")
             content = convert_general_document(src_path)
             with open(dest, "w", encoding="utf-8") as f:

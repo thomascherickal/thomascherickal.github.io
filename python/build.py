@@ -10,9 +10,15 @@ sys.path.insert(0, SCRIPT_DIR)
 
 from build_components import build, watch
 
-if __name__ == "__main__":
-    if "--watch" in sys.argv:
+
+def main(argv=None):
+    args = argv if argv is not None else sys.argv
+    if "--watch" in args:
         build()
         watch()
     else:
         build()
+
+
+if __name__ == "__main__":
+    main()

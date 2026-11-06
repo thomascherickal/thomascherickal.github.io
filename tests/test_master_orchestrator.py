@@ -82,5 +82,20 @@ class TestMasterOrchestrator(unittest.TestCase):
         res_unknown = self.orchestrator.sync_file("non_existent_extension.xyz")
         self.assertFalse(res_unknown)
 
+    def test_refresh_references_and_main(self):
+        """Verifies refresh_references_only and synchronizer.main()."""
+        from unittest.mock import patch
+        import synchronizer
+
+        with patch.object(self.orchestrator, "scan_all_locations", return_value={"pricing": []}), \
+             patch("synchronizer.write_reference_files"), \
+             patch.object(self.orchestrator, "generate_markdown_reports"):
+            self.orchestrator.refresh_references_only()
+
+        with patch.object(synchronizer.ExpertSynchronizer, "sync_all", return_value=0) as mock_sync:
+            synchronizer.main()
+            mock_sync.assert_called_once()
+
+
 if __name__ == "__main__":
     unittest.main()
