@@ -115,14 +115,14 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 
 ## Practice Pricing, Payment Structure & Licensing Rules
 - **Business AI Training Flagship**:
-  - Base price: **$2,500 USD** for **60 days total** (30 days live engineering training + 30 days dedicated support).
-  - Includes up to 10 participants. Extra seats are **$250 USD per seat** after 10 participants, up to a strict maximum of 20 seats.
+  - Base price: **$3000 USD** for **60 days total** (30 days live engineering training + 30 days dedicated support).
+  - Includes up to 10 participants. Extra seats are **$300 USD per seat** after 10 participants, up to a strict maximum of 20 seats.
 - **Personal AI Training Flagship**:
-  - Base price: **$2,500 USD** for **60 days total** (30 days live 1-on-1 training + 30 days dedicated support).
+  - Base price: **$3000 USD** for **60 days total** (30 days live 1-on-1 training + 30 days dedicated support).
   - Strictly **one person only** (dedicated private acceleration).
 - **Individual Service Picks**:
-  - **Business Individual Service**: **$250 USD** base for 1 seat, with additional seats at **$250 USD per seat** up to a maximum of 10 seats (5 days live training + 5 days support).
-  - **Personal Individual Service**: **$250 USD** strictly for **only one seat** (5 days live training + 5 days support).
+  - **Business Individual Service**: **$300 USD** base for 1 seat, with additional seats at **$300 USD per seat** up to a maximum of 10 seats (5 days live training + 5 days support).
+  - **Personal Individual Service**: **$300 USD** strictly for **only one seat** (5 days live training + 5 days support).
 - **Delivery Schedule & Mode**:
   - **4 hours per day**, Monday through Friday.
   - **Saturdays and Sundays are holidays**.
@@ -167,10 +167,10 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 ## New Files & Source Control Integrity Rule
 - **Mandatory Pricing & PPP Parity Audit**: Whenever any new file (HTML, Markdown, script, or documentation) is created, updated, or added to source control:
   - All pricing mentions, rates, and Purchasing Power Parity (PPP) numbers across all 6 tiers must strictly conform to the authoritative figures specified in `GEMINI.md` and `data/pricing.json`.
-  - Flagships must be specified at **$2,500 USD** for **60 days total** (30 days live + 30 days dedicated support), with additional seats at **$250 USD per seat** (up to 20 seats max for business; strictly 1 person only for personal).
-  - Individual service picks must be specified at **$250 USD** base rate (covering 5 days live + 5 days dedicated support).
+  - Flagships must be specified at **$3000 USD** for **60 days total** (30 days live + 30 days dedicated support), with additional seats at **$300 USD per seat** (up to 20 seats max for business; strictly 1 person only for personal).
+  - Individual service picks must be specified at **$300 USD** base rate (covering 5 days live + 5 days dedicated support).
   - Advance deposit must strictly be **$0 upfront** (never corrupted strings or omitted dollar signs).
-  - The 6 PPP tiers must explicitly reflect: Tier 1 ($2,500), Tier 2 ($1,875), Tier 3 ($1,250), Tier 4 ($1,250), Tier 5 ($625), Tier 6 ($250 custom subsidized).
+  - The 6 PPP tiers must explicitly reflect: Tier 1 ($3000), Tier 2 ($2250), Tier 3 ($1500), Tier 4 ($1500), Tier 5 ($750), Tier 6 (Custom).
   - Must strictly preserve zero emojis and zero em-dashes.
 ## User Clarification & Decision Rule
 - **Mandatory Clarification for Ambiguities**: Whenever there are ambiguities, doubts, clarifications required, or questions about an implementation, check whether there is a single clear recommended plan:
@@ -194,15 +194,12 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 
 ## Last Commit Output Report Rule (`LAST-COMMIT-REPORT.md`)
 - **Last Commit Output Recording**: The full commit output report of the last commit made must always be stored and recorded at `LAST-COMMIT-REPORT.md` in the repository root directory.
-- **Overwritten on Every New Commit**: Automatically regenerated and overwritten on every new commit via Git post-commit hook (`.git/hooks/post-commit` and `python/hooks/post-commit`) and the auto-healer commit handler (`python/generate_last_commit_report.py`).
+- **Overwritten on Every New Commit**: Automatically regenerated and overwritten on every new commit via Git pre-commit hook (`.git/hooks/pre-commit` and `python/hooks/post-commit`) and the auto-healer commit handler (`python/generate_last_commit_report.py`).
 - **Zero Emojis & Zero Em-Dashes**: The generated report strictly enforces zero emojis and zero em-dashes (spaced hyphens ` - ` or plain hyphens `-`).
 
 ## Test Coverage Report Rule (Appended to LAST-COMMIT-REPORT.md)
-- **Automated Test Coverage Generation**: The repository-wide test coverage report for Python and JavaScript must be automatically generated and appended to `LAST-COMMIT-REPORT.md` on every commit.
-- **Legacy File Cleaned Up**: `TEST_COVERAGE_REPORT.md` is deleted; all test coverage details are consolidated directly within `LAST-COMMIT-REPORT.md`.
-- **Regenerated on Every New Commit**: Automatically regenerated and appended on every new commit via Git post-commit hook (`.git/hooks/post-commit` and `python/hooks/post-commit`) and staged via pre-commit hook using `python/generate_test_coverage_report.py`.
+- **Automated Test Coverage Generation**: The repository-wide test coverage report for Python and JavaScript must be automatically generated and appended to `LAST-COMMIT-REPORT.md` before every commit.
 - **Comprehensive Dual-Stack Assessment**: Evaluates Python code coverage (using coverage tracer across `nlp-fuzzy-expert/` and `python/`) and JavaScript code coverage (using native Node.js V8 code coverage `NODE_V8_COVERAGE` across `pricing-calculator.js`, `components.js`, and `mermaid.js`).
 - **Target Coverage**: Aspires towards 100% test coverage across both Python and JavaScript codebases.
-- **Zero Emojis & Zero Em-Dashes**: The appended report strictly enforces zero emojis and zero em-dashes (spaced hyphens ` - ` or plain hyphens `-`).
 
 
