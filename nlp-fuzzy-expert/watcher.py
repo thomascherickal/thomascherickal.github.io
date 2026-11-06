@@ -28,7 +28,7 @@ from synchronizer import ExpertSynchronizer
 class DataWatcher:
     """Monitors data/*.json and executes knowledge synchronization on changes."""
 
-    def __init__(self, poll_interval=1.0):
+    def __init__(self, poll_interval=60.0):
         self.poll_interval = poll_interval
         self.synchronizer = ExpertSynchronizer()
         self.running = True
@@ -123,7 +123,7 @@ class DataWatcher:
 def main():
     parser = argparse.ArgumentParser(description="NLP-Fuzzy-Expert Data Watcher Daemon")
     parser.add_argument("--once", action="store_true", help="Run synchronization once and exit")
-    parser.add_argument("--interval", type=float, default=1.0, help="Polling interval in seconds (default: 1.0)")
+    parser.add_argument("--interval", type=float, default=60.0, help="Polling interval in seconds (default: 60.0)")
     args = parser.parse_args()
 
     if args.once:

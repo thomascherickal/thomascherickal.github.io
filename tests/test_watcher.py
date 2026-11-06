@@ -91,6 +91,13 @@ class TestDataWatcher(unittest.TestCase):
             watcher.handle_signal(2, None)
             self.assertFalse(watcher.running)
 
+    def test_default_poll_interval(self):
+        """Verifies default poll interval is 60.0 seconds."""
+        with patch("watcher.ExpertSynchronizer"):
+            watcher = DataWatcher()
+            watcher.synchronizer = MagicMock()
+            self.assertEqual(watcher.poll_interval, 60.0)
+
 
 if __name__ == "__main__":
     unittest.main()

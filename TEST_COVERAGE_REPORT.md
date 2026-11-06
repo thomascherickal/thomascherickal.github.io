@@ -1,14 +1,14 @@
 # Test Coverage Report
 
-Recorded at: **2026-11-06 17:48:27 UTC** | Commit: **dc4a59c** (`main`) | Elapsed: **73.88s**
+Recorded at: **2026-11-06 18:14:55 UTC** | Commit: **7747a02** (`main`) | Elapsed: **64.38s**
 
 ## Executive Summary
 
 | Language | Tracked Files | Total Statements / Lines | Covered | Missed | Coverage % | Status |
 |:---|---:|---:|---:|---:|---:|:---|
 | Python (`nlp-fuzzy-expert/`, `python/`) | 21 | 4,832 | 3,355 | 1,477 | **69.43%** | WARN |
-| JavaScript (Root scripts) | 3 | 1,252 | 1,252 | 0 | **100.00%** | PASS |
-| **Repository Combined Total** | **24** | **6,084** | **4,607** | **1,477** | **75.72%** | **WARN** |
+| JavaScript (Root scripts) | 3 | 1,254 | 1,254 | 0 | **100.00%** | PASS |
+| **Repository Combined Total** | **24** | **6,086** | **4,609** | **1,477** | **75.73%** | **WARN** |
 
 ## Python Test Coverage
 
@@ -40,7 +40,7 @@ Recorded at: **2026-11-06 17:48:27 UTC** | Commit: **dc4a59c** (`main`) | Elapse
 
 | File | Executable Lines | Covered | Missed | Coverage % | Missing Lines |
 |:---|---:|---:|---:|---:|:---|
-| `components.js` | 508 | 508 | 0 | **100.0%** | `-` |
+| `components.js` | 510 | 510 | 0 | **100.0%** | `-` |
 | `mermaid.js` | 96 | 96 | 0 | **100.0%** | `-` |
 | `pricing-calculator.js` | 648 | 648 | 0 | **100.0%** | `-` |
 
