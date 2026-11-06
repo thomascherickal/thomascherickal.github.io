@@ -395,5 +395,7 @@ def commit_verified_state(commit_msg="feat(synchronizer): synchronize repository
         commit_res = subprocess.run(["git", "commit", "--no-verify", "-m", commit_msg], cwd=REPO_DIR, capture_output=True, text=True)
         print("  -> Git commit output:")
         print(commit_res.stdout.strip())
+        if commit_res.returncode == 0:
+            subprocess.run(["git", "push"], cwd=REPO_DIR, capture_output=True, text=True)
     except Exception as e:
         print(f"  -> Git commit notice: {e}")

@@ -108,10 +108,11 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - **Continuous File Watcher Daemon**: Run `python3 nlp-fuzzy-expert/watcher.py` (or `python3 nlp-fuzzy-expert/watcher.py --once` for single pass) to monitor `data/*.json` and trigger automatic repository-wide synchronization on file save.
 - **Artifacts Generated**: Domain references (`*_references.json`), master reference dictionary (`references_dictionary.json`), and domain synchronization markdown reports (`*.md`) in `nlp-fuzzy-expert/`.
 
-## Unit Testing Suite & Pre-Commit Test Enforcement (`tests/` & `python/run_tests.py`)
+## Unit Testing Suite, Pre-Commit Test Enforcement & Automatic Push Rule (`tests/` & `python/run_tests.py`)
 - **Test Command**: Run all unit tests with `python3 python/run_tests.py` or `python3 -m unittest discover -s tests -v`.
 - **Run Tests After HTML Changes**: When changes are made to repository HTML or JS files, always run the test suite to verify 100% test pass rate across all 36+ test cases.
-- **Pre-Commit Enforcement**: The pre-commit hook automatically executes `python3 python/run_tests.py`. If any unit test fails, the commit is aborted. Never bypass or force commits with broken tests. If all tests pass, push automatically.
+- **Pre-Commit Enforcement**: The pre-commit hook automatically executes `python3 python/run_tests.py` and `node pricing-tests.js`. If any unit test fails, the commit is aborted. Never bypass or force commits with broken tests.
+- **Automatic Push on Passing Commit**: Whenever a commit passes all pre-commit checks and unit tests, ALWAYS push it immediately (`git push`) in the same workflow without waiting to be asked. Never leave verified local commits unpushed.
 
 ## Practice Pricing, Payment Structure & Licensing Rules
 - **Business AI Training Flagship**:

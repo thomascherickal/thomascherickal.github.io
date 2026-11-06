@@ -143,16 +143,18 @@ class TestAutoHealer(unittest.TestCase):
         # 4th call: generate_test_coverage_report.py
         # 5th call: git add -A
         # 6th call: git commit --no-verify
+        # 7th call: git push
         mock_status = MagicMock(stdout=" M test.html")
         mock_add = MagicMock(returncode=0)
         mock_report = MagicMock(returncode=0)
         mock_cov = MagicMock(returncode=0)
         mock_add2 = MagicMock(returncode=0)
-        mock_commit = MagicMock(stdout="[main abc] commit")
-        mock_run.side_effect = [mock_status, mock_add, mock_report, mock_cov, mock_add2, mock_commit]
+        mock_commit = MagicMock(returncode=0, stdout="[main abc] commit")
+        mock_push = MagicMock(returncode=0)
+        mock_run.side_effect = [mock_status, mock_add, mock_report, mock_cov, mock_add2, mock_commit, mock_push]
 
         commit_verified_state("feat: update test")
-        self.assertGreaterEqual(mock_run.call_count, 5)
+        self.assertGreaterEqual(mock_run.call_count, 6)
 
         # Also test exception path during commit
         mock_run.side_effect = RuntimeError("git failed")
