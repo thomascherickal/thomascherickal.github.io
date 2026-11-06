@@ -55,5 +55,19 @@ fi
 
 echo "[git pre-commit] All unit and JavaScript tests passed. Commit approved."
 
+REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null)"
+if [ -z "$REPO_ROOT" ]; then
+    exit 0
+fi
+
+if [ -f "$REPO_ROOT/python/generate_last_commit_report.py" ]; then
+    python3 "$REPO_ROOT/python/generate_last_commit_report.py" > /dev/null 2>&1 || true
+fi
+
+if [ -f "$REPO_ROOT/python/generate_test_coverage_report.py" ]; then
+    python3 "$REPO_ROOT/python/generate_test_coverage_report.py" > /dev/null 2>&1 || true
+fi
+
+
 exit 0
 
