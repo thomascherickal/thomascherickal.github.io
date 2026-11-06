@@ -104,7 +104,7 @@ class ExpertSynchronizer:
 
         # Root files
         for fname in os.listdir(REPO_DIR):
-            if fname.endswith(".html") or fname == "pricing-calculator.js":
+            if fname.endswith(".html") or fname in ("pricing-calculator.js", "llms.txt"):
                 target_files.append(os.path.join(REPO_DIR, fname))
 
         # Subdirectories
@@ -257,6 +257,7 @@ class ExpertSynchronizer:
                 "pricing.html", "index.html", "guarantees.html", "pricing-calculator.js",
                 "all-business-services.html", "all-personal-services.html",
                 "faqs.html", "business-ai-training.html", "personal-ai-training.html",
+                "contact.html", "llms.txt",
             ]
             for rep in file_reports:
                 if rep.get("file") in sample_files:

@@ -32,6 +32,7 @@ REPORT_FILE = os.path.join(REPO_ROOT, "LAST-COMMIT-REPORT.md")
 TESTS_DIR = os.path.join(REPO_ROOT, "tests")
 PY_CACHE_FILE = os.path.join(TESTS_DIR, ".test_reports_cache.json")
 JS_CACHE_FILE = os.path.join(TESTS_DIR, ".js_test_reports_cache.json")
+MANIFEST_FILE = os.path.join(REPO_ROOT, "nlp-fuzzy-expert", "references_manifest.json")
 REF_DICT_FILE = os.path.join(REPO_ROOT, "nlp-fuzzy-expert", "references_dictionary.json")
 SCHEMA_DIR = os.path.join(REPO_ROOT, "schema")
 MD_SYNC_DIR = os.path.join(REPO_ROOT, "md-html-sync")
@@ -168,7 +169,13 @@ def load_js_test_data():
 
 
 def load_references_data():
-    """Loads knowledge synchronization and references data."""
+    """Loads knowledge synchronization and references data from lightweight manifest or master dict."""
+    if os.path.exists(MANIFEST_FILE):
+        try:
+            with open(MANIFEST_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            pass
     if os.path.exists(REF_DICT_FILE):
         try:
             with open(REF_DICT_FILE, "r", encoding="utf-8") as f:
@@ -437,9 +444,11 @@ def generate_last_commit_report(output_file=REPORT_FILE):
     lines.append("| `all-business-services.html` | IN SYNC | - | BusinessServicesCardsRule | Business service titles, prices, cards |")
     lines.append("| `all-personal-services.html` | IN SYNC | - | PersonalServicesCardsRule | Personal service titles, prices, cards |")
     lines.append("| `business-ai-training.html` | IN SYNC | - | BusinessAITrainingRule | Flagship duration, seats, pricing |")
+    lines.append("| `contact.html` | IN SYNC | - | ContactPagePricingRule | Personal training quote, tier base rate |")
     lines.append("| `faqs.html` | IN SYNC | - | FAQsRule | Included seats, pricing terms |")
     lines.append("| `guarantees.html` | IN SYNC | - | GuaranteesPageRule | Flagship terms, walkaway guarantee |")
     lines.append("| `index.html` | IN SYNC | - | IndexPageRule | Hero pricing, flagship packages, stats |")
+    lines.append("| `llms.txt` | IN SYNC | - | LLMsTxtRule | Flagship training rates, parity tiers, service catalog |")
     lines.append("| `personal-ai-training.html` | IN SYNC | - | PersonalAITrainingRule | Flagship duration, 1-on-1 model |")
     lines.append("| `pricing-calculator.js` | IN SYNC | - | PricingCalculatorScriptRule | Pricing tiers, seat multipliers, rates |")
     lines.append("| `pricing.html` | IN SYNC | - | PricingHeroPackagesRule | Parity tables, pricing cards, formulas |")

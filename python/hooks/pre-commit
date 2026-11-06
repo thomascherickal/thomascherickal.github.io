@@ -33,7 +33,7 @@ if [ $TEST_STATUS -ne 0 ]; then
     echo "[git pre-commit] ERROR: Unit test suite failed with status $TEST_STATUS. Commit aborted."
     exit 1
 fi
-git add "$REPO_ROOT/nlp-fuzzy-expert"/*.md "$REPO_ROOT/nlp-fuzzy-expert"/*_references.json "$REPO_ROOT/nlp-fuzzy-expert"/references_dictionary.json 2>/dev/null || true
+git add "$REPO_ROOT/nlp-fuzzy-expert"/*.md "$REPO_ROOT/nlp-fuzzy-expert"/*_references.json "$REPO_ROOT/nlp-fuzzy-expert"/references_dictionary.json "$REPO_ROOT/nlp-fuzzy-expert"/references_manifest.json 2>/dev/null || true
 
 echo "[git pre-commit] Running JavaScript test suite (pricing-tests.js)..."
 node "$REPO_ROOT/pricing-tests.js"

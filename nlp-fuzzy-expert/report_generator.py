@@ -126,6 +126,32 @@ def write_reference_files(domain_refs, force=False):
         save_json(master_path, master_dict)
         print(f"  -> Master Dictionary generated: references_dictionary.json ({len(all_refs)} total references)")
 
+    # Lightweight Manifest (offloaded index to eliminate metadata query overhead)
+    manifest_path = os.path.join(SCRIPT_DIR, "references_manifest.json")
+    if should_write_master or not os.path.exists(manifest_path):
+        by_doc = {}
+        for r in all_refs:
+            doc = r.get("file", "unknown")
+            by_doc[doc] = by_doc.get(doc, 0) + 1
+
+        manifest_dict = {
+            "metadata": {
+                "engine": "nlp-fuzzy-expert",
+                "version": "1.0.0",
+                "architecture": "Expert System (Forward Chaining) + Fuzzy Logic + NLP",
+                "total_references_tracked": len(all_refs),
+                "last_synchronized": timestamp,
+                "manifest_type": "lightweight_index",
+                "description": "Lightweight metadata index offloading heavy references payload to domain JSON files.",
+            },
+            "by_domain": {k: len(domain_refs.get(k, [])) for k in DOMAIN_FILES},
+            "domain_files": {k: DOMAIN_FILES[k] for k in DOMAIN_FILES},
+            "total_documents_indexed": len(by_doc),
+            "by_document": dict(sorted(by_doc.items(), key=lambda x: x[1], reverse=True)),
+        }
+        save_json(manifest_path, manifest_dict)
+        print(f"  -> Lightweight Manifest generated: references_manifest.json ({len(by_doc)} documents indexed)")
+
 
 def generate_markdown_reports(domain_refs, force=False):
     """Generates domain-specific markdown reports under nlp-fuzzy-expert/."""

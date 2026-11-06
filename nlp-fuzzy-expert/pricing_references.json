@@ -2,8 +2,8 @@
   "metadata": {
     "domain": "pricing",
     "engine": "nlp-fuzzy-expert",
-    "total_references_tracked": 3506,
-    "last_synchronized": "2026-11-06T00:15:08.135355"
+    "total_references_tracked": 3582,
+    "last_synchronized": "2026-11-06T21:14:25.441099"
   },
   "all_references": [
     {
@@ -375,6 +375,42 @@
       "old_value": "$2,000",
       "new_value": "$3,000",
       "context": "$3,000 USD for 60 Days",
+      "match_type": "rule",
+      "data_source": "data/pricing.json"
+    },
+    {
+      "file": "llms.txt",
+      "page": "llms.txt",
+      "section": "Comprehensive Business Training",
+      "line_number": 42,
+      "field_key": "llms_business_flagship_price",
+      "old_value": "$2,500",
+      "new_value": "$3,000",
+      "context": "Business Training: $3,000 USD for 60 days",
+      "match_type": "rule",
+      "data_source": "data/pricing.json"
+    },
+    {
+      "file": "llms.txt",
+      "page": "llms.txt",
+      "section": "Comprehensive Personal Training",
+      "line_number": 44,
+      "field_key": "llms_personal_flagship_price",
+      "old_value": "$2,500",
+      "new_value": "$3,000",
+      "context": "Personal Training: $3,000 USD for 60 days",
+      "match_type": "rule",
+      "data_source": "data/pricing.json"
+    },
+    {
+      "file": "llms.txt",
+      "page": "llms.txt",
+      "section": "Individual Service Picks",
+      "line_number": 38,
+      "field_key": "llms_individual_service_price",
+      "old_value": "$250",
+      "new_value": "$250",
+      "context": "Individual Service: $250 USD for 10 days",
       "match_type": "rule",
       "data_source": "data/pricing.json"
     },
@@ -39677,6 +39713,1360 @@
         "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
         "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
         "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 5,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
+      "old_value": "30-day",
+      "new_value": "30",
+      "context": "> Delivering 30-day intensive business and personal training contracts, with 30-day support for both, Claude AI agent orchestration, local LLM cost slashing (60%-90%), AI-assisted TDD.",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 13,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
+      "old_value": "10 days",
+      "new_value": "10",
+      "context": "I do flagship training for 60 days (30 days live engineering training + 30 days dedicated support), with 30 working days with 8 - 10 days as holidays and recovery days, 4 hours per day for both bus...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].due_after_day",
+        "data/pricing.json#offerings[individual-service-business].schedule.total_calendar_duration_days",
+        "data/pricing.json#offerings[individual-service-personal].schedule.total_calendar_duration_days"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 13,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
+      "old_value": "30 days",
+      "new_value": "30",
+      "context": "I do flagship training for 60 days (30 days live engineering training + 30 days dedicated support), with 30 working days with 8 - 10 days as holidays and recovery days, 4 hours per day for both bus...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 13,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
+      "old_value": "60 days",
+      "new_value": "60",
+      "context": "I do flagship training for 60 days (30 days live engineering training + 30 days dedicated support), with 30 working days with 8 - 10 days as holidays and recovery days, 4 hours per day for both bus...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.total_calendar_duration_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].schedule.total_calendar_duration_days"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 38,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
+      "old_value": "5 days",
+      "new_value": "5",
+      "context": "* **Individual (1-on-1)**: **$250 USD** per service for **5 days live training + 5 days dedicated support** (10 days total coverage per service). Strictly 1 person only.",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[0].due_after_day",
+        "data/pricing.json#offerings[individual-service-business].schedule.live_training_days",
+        "data/pricing.json#offerings[individual-service-business].schedule.support_phase_days",
+        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[4].due_after_day",
+        "data/pricing.json#offerings[individual-service-business].payment_rules.support_payment.milestone_schedule[0].due_after_day",
+        "data/pricing.json#offerings[individual-service-personal].schedule.live_training_days",
+        "data/pricing.json#offerings[individual-service-personal].schedule.support_phase_days",
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day",
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.support_payment.milestone_schedule[0].due_after_day",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.individual_service_support_installments[0].due_after_day"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 38,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
+      "old_value": "10 days",
+      "new_value": "10",
+      "context": "* **Individual (1-on-1)**: **$250 USD** per service for **5 days live training + 5 days dedicated support** (10 days total coverage per service). Strictly 1 person only.",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].due_after_day",
+        "data/pricing.json#offerings[individual-service-business].schedule.total_calendar_duration_days",
+        "data/pricing.json#offerings[individual-service-personal].schedule.total_calendar_duration_days"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 38,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "old_value": "$250",
+      "new_value": "250",
+      "context": "* **Individual (1-on-1)**: **$250 USD** per service for **5 days live training + 5 days dedicated support** (10 days total coverage per service). Strictly 1 person only.",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[0].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].amount_usd"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 38,
+      "field_key": "pricing:offerings[flagship-personal-training].cohort_capacity.included_seats",
+      "old_value": "1 person",
+      "new_value": "1",
+      "context": "* **Individual (1-on-1)**: **$250 USD** per service for **5 days live training + 5 days dedicated support** (10 days total coverage per service). Strictly 1 person only.",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.max_seats",
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.included_seats",
+        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.included_seats",
+        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.max_seats"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 39,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "- Parity: Tier 1: $250 | Tier 2 (25% off): $187.50 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $62.50 | Tier 6 (Subsidized): $25.",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/tiers.json#tiers[4].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 39,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "- Parity: Tier 1: $250 | Tier 2 (25% off): $187.50 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $62.50 | Tier 6 (Subsidized): $25.",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 39,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "- Parity: Tier 1: $250 | Tier 2 (25% off): $187.50 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $62.50 | Tier 6 (Subsidized): $25.",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/tiers.json#tiers[1].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 39,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "old_value": "$250",
+      "new_value": "250",
+      "context": "- Parity: Tier 1: $250 | Tier 2 (25% off): $187.50 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $62.50 | Tier 6 (Subsidized): $25.",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[0].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].amount_usd"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 40,
+      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
+      "old_value": "10 participants",
+      "new_value": "10",
+      "context": "* **Business (Teams)**: **$250 USD** per service for **5 days live training + 5 days dedicated support** (10 days total coverage per service). Covers up to 10 participants (additional seats at **$2...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
+      "also_in_data": [
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 40,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
+      "old_value": "5 days",
+      "new_value": "5",
+      "context": "* **Business (Teams)**: **$250 USD** per service for **5 days live training + 5 days dedicated support** (10 days total coverage per service). Covers up to 10 participants (additional seats at **$2...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[0].due_after_day",
+        "data/pricing.json#offerings[individual-service-business].schedule.live_training_days",
+        "data/pricing.json#offerings[individual-service-business].schedule.support_phase_days",
+        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[4].due_after_day",
+        "data/pricing.json#offerings[individual-service-business].payment_rules.support_payment.milestone_schedule[0].due_after_day",
+        "data/pricing.json#offerings[individual-service-personal].schedule.live_training_days",
+        "data/pricing.json#offerings[individual-service-personal].schedule.support_phase_days",
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day",
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.support_payment.milestone_schedule[0].due_after_day",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.individual_service_support_installments[0].due_after_day"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 40,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
+      "old_value": "10 days",
+      "new_value": "10",
+      "context": "* **Business (Teams)**: **$250 USD** per service for **5 days live training + 5 days dedicated support** (10 days total coverage per service). Covers up to 10 participants (additional seats at **$2...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].due_after_day",
+        "data/pricing.json#offerings[individual-service-business].schedule.total_calendar_duration_days",
+        "data/pricing.json#offerings[individual-service-personal].schedule.total_calendar_duration_days"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 40,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "old_value": "$250",
+      "new_value": "250",
+      "context": "* **Business (Teams)**: **$250 USD** per service for **5 days live training + 5 days dedicated support** (10 days total coverage per service). Covers up to 10 participants (additional seats at **$2...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[0].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].amount_usd"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 41,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "- Parity: Tier 1: $250 | Tier 2 (25% off): $187.50 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $62.50 | Tier 6 (Subsidized): $25.",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/tiers.json#tiers[4].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 41,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "- Parity: Tier 1: $250 | Tier 2 (25% off): $187.50 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $62.50 | Tier 6 (Subsidized): $25.",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 41,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "- Parity: Tier 1: $250 | Tier 2 (25% off): $187.50 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $62.50 | Tier 6 (Subsidized): $25.",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/tiers.json#tiers[1].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 41,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "old_value": "$250",
+      "new_value": "250",
+      "context": "- Parity: Tier 1: $250 | Tier 2 (25% off): $187.50 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $62.50 | Tier 6 (Subsidized): $25.",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[0].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].amount_usd"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 42,
+      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
+      "old_value": "10 participants",
+      "new_value": "10",
+      "context": "- **Comprehensive Business Training**: **$3,000 USD** for **60 days** (30 days live hands-on engineering training + 30 days dedicated support, 30 working days with 8 - 10 recovery days, 4 hours per...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
+      "also_in_data": [
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 42,
+      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.max_seats",
+      "old_value": "20 seats",
+      "new_value": "20",
+      "context": "- **Comprehensive Business Training**: **$3,000 USD** for **60 days** (30 days live hands-on engineering training + 30 days dedicated support, 30 working days with 8 - 10 recovery days, 4 hours per...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 42,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "old_value": "$250",
+      "new_value": "250",
+      "context": "- **Comprehensive Business Training**: **$3,000 USD** for **60 days** (30 days live hands-on engineering training + 30 days dedicated support, 30 working days with 8 - 10 recovery days, 4 hours per...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[0].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].amount_usd"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 42,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
+      "old_value": "30 days",
+      "new_value": "30",
+      "context": "- **Comprehensive Business Training**: **$3,000 USD** for **60 days** (30 days live hands-on engineering training + 30 days dedicated support, 30 working days with 8 - 10 recovery days, 4 hours per...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 42,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
+      "old_value": "60 days",
+      "new_value": "60",
+      "context": "- **Comprehensive Business Training**: **$3,000 USD** for **60 days** (30 days live hands-on engineering training + 30 days dedicated support, 30 working days with 8 - 10 recovery days, 4 hours per...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.total_calendar_duration_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].schedule.total_calendar_duration_days"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 42,
+      "field_key": "pricing:offerings[flagship-business-training].tier1_base_price_usd",
+      "old_value": "$3,000",
+      "new_value": "3000",
+      "context": "- **Comprehensive Business Training**: **$3,000 USD** for **60 days** (30 days live hands-on engineering training + 30 days dedicated support, 30 working days with 8 - 10 recovery days, 4 hours per...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.price_usd",
+        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.price_usd"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 43,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "* Parity: Tier 1: $2,500 | Tier 2 (25% off): $1,875 | Tier 3 & 4 (50% off): $1,250 | Tier 5 (75% off): $625 | Tier 6: Custom Subsidized Relief ($250).",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/tiers.json#tiers[4].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 43,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "* Parity: Tier 1: $2,500 | Tier 2 (25% off): $1,875 | Tier 3 & 4 (50% off): $1,250 | Tier 5 (75% off): $625 | Tier 6: Custom Subsidized Relief ($250).",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 43,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "* Parity: Tier 1: $2,500 | Tier 2 (25% off): $1,875 | Tier 3 & 4 (50% off): $1,250 | Tier 5 (75% off): $625 | Tier 6: Custom Subsidized Relief ($250).",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/tiers.json#tiers[1].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 43,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "old_value": "$250",
+      "new_value": "250",
+      "context": "* Parity: Tier 1: $2,500 | Tier 2 (25% off): $1,875 | Tier 3 & 4 (50% off): $1,250 | Tier 5 (75% off): $625 | Tier 6: Custom Subsidized Relief ($250).",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[0].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].amount_usd"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 44,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
+      "old_value": "30 days",
+      "new_value": "30",
+      "context": "- **Comprehensive Personal Training**: **$3,000 USD** for **60 days** (30 days intensive 1-on-1 sprint + 30 days dedicated support, 30 working days with 8 - 10 recovery days, 4 hours per day). Stri...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 44,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
+      "old_value": "60 days",
+      "new_value": "60",
+      "context": "- **Comprehensive Personal Training**: **$3,000 USD** for **60 days** (30 days intensive 1-on-1 sprint + 30 days dedicated support, 30 working days with 8 - 10 recovery days, 4 hours per day). Stri...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.total_calendar_duration_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].schedule.total_calendar_duration_days"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 44,
+      "field_key": "pricing:offerings[flagship-business-training].tier1_base_price_usd",
+      "old_value": "$3,000",
+      "new_value": "3000",
+      "context": "- **Comprehensive Personal Training**: **$3,000 USD** for **60 days** (30 days intensive 1-on-1 sprint + 30 days dedicated support, 30 working days with 8 - 10 recovery days, 4 hours per day). Stri...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.price_usd",
+        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.price_usd"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 45,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "* Parity: Tier 1: $2,500 | Tier 2 (25% off): $1,875 | Tier 3 & 4 (50% off): $1,250 | Tier 5 (75% off): $625 | Tier 6: Custom Subsidized Relief ($250).",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/tiers.json#tiers[4].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 45,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "* Parity: Tier 1: $2,500 | Tier 2 (25% off): $1,875 | Tier 3 & 4 (50% off): $1,250 | Tier 5 (75% off): $625 | Tier 6: Custom Subsidized Relief ($250).",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 45,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "* Parity: Tier 1: $2,500 | Tier 2 (25% off): $1,875 | Tier 3 & 4 (50% off): $1,250 | Tier 5 (75% off): $625 | Tier 6: Custom Subsidized Relief ($250).",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/tiers.json#tiers[1].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 45,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "old_value": "$250",
+      "new_value": "250",
+      "context": "* Parity: Tier 1: $2,500 | Tier 2 (25% off): $1,875 | Tier 3 & 4 (50% off): $1,250 | Tier 5 (75% off): $625 | Tier 6: Custom Subsidized Relief ($250).",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[0].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].amount_usd"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 71,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "- Hands-on training in self-hosted local n8n, Make, IFTTT, and open-source automation tools (Activepieces, Windmill, Node-RED). Connect webhooks, databases, CRMs, and local LLMs (Ollama) to automat...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 118,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "- Eliminate cloud API dependencies and recurring subscription costs by self-hosting quantized open-weight models locally with Ollama, vLLM, llama.cpp, and LM Studio on hardware you own. Keep 100% o...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 172,
+      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.max_seats",
+      "old_value": "20 seats",
+      "new_value": "20",
+      "context": "### Business Training Flagship (Upto 20 seats, 10 included)",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 174,
+      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
+      "old_value": "10 participants",
+      "new_value": "10",
+      "context": "Comprehensive organization-wide AI transformation program engineered for engineering cohorts, leadership teams, and cross-functional staff. 60 days total (30 days live engineering training + 30 day...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
+      "also_in_data": [
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 174,
+      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.max_seats",
+      "old_value": "20 seats",
+      "new_value": "20",
+      "context": "Comprehensive organization-wide AI transformation program engineered for engineering cohorts, leadership teams, and cross-functional staff. 60 days total (30 days live engineering training + 30 day...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 174,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
+      "old_value": "10 days",
+      "new_value": "10",
+      "context": "Comprehensive organization-wide AI transformation program engineered for engineering cohorts, leadership teams, and cross-functional staff. 60 days total (30 days live engineering training + 30 day...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].due_after_day",
+        "data/pricing.json#offerings[individual-service-business].schedule.total_calendar_duration_days",
+        "data/pricing.json#offerings[individual-service-personal].schedule.total_calendar_duration_days"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 174,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "old_value": "$250",
+      "new_value": "250",
+      "context": "Comprehensive organization-wide AI transformation program engineered for engineering cohorts, leadership teams, and cross-functional staff. 60 days total (30 days live engineering training + 30 day...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[0].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].amount_usd"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 174,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
+      "old_value": "30 days",
+      "new_value": "30",
+      "context": "Comprehensive organization-wide AI transformation program engineered for engineering cohorts, leadership teams, and cross-functional staff. 60 days total (30 days live engineering training + 30 day...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 174,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
+      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
+      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
+      "context": "Comprehensive organization-wide AI transformation program engineered for engineering cohorts, leadership teams, and cross-functional staff. 60 days total (30 days live engineering training + 30 day...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 174,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
+      "old_value": "60 days",
+      "new_value": "60",
+      "context": "Comprehensive organization-wide AI transformation program engineered for engineering cohorts, leadership teams, and cross-functional staff. 60 days total (30 days live engineering training + 30 day...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.total_calendar_duration_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].schedule.total_calendar_duration_days"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 176,
+      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.max_seats",
+      "old_value": "20 seats",
+      "new_value": "20",
+      "context": "- **Cohort Enablement (Up to 20 Seats, 10 Included)**: Covers up to 10 team members included in the base rate, with additional seats at $250 USD per seat up to 20 seats maximum, guaranteeing struct...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 176,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "old_value": "$250",
+      "new_value": "250",
+      "context": "- **Cohort Enablement (Up to 20 Seats, 10 Included)**: Covers up to 10 team members included in the base rate, with additional seats at $250 USD per seat up to 20 seats maximum, guaranteeing struct...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[0].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].amount_usd"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 177,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
+      "old_value": "30 days",
+      "new_value": "30",
+      "context": "- **Two-Phase 30+30 Cadence (60-Day Experience)**: Structured as 30 days of intensive live instruction (**4 hours a day over 8 weeks with 8 - 10 recovery days**), immediately followed by 30 days of...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 180,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "old_value": "$250",
+      "new_value": "250",
+      "context": "- **Pricing & Parity Structure**: **$2,500 USD base rate** with full 195-country Purchasing Power Parity (Tier 1: $2,500 | Tier 2: $1,875 | Tier 3: $1,250 | Tier 4: $1,250 | Tier 5: $625 | Tier 6: ...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[0].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].amount_usd"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 182,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].percentage",
+      "old_value": "20%",
+      "new_value": "20",
+      "context": "- **5 Flexible Milestone Installments**: Training fees are split into 5 equal installments (20% each / $500 USD base in Tier 1) invoiced strictly after completed milestone blocks of training progress.",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[0].percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].percentage",
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[2].percentage",
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[3].percentage",
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[4].percentage",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[0].percentage",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].percentage",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[2].percentage",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[3].percentage",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[4].percentage",
+        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[0].percentage",
+        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[1].percentage",
+        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[2].percentage",
+        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[3].percentage",
+        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[4].percentage",
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[0].percentage",
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[1].percentage",
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[2].percentage",
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[3].percentage",
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].percentage",
+        "data/pricing.json#trust_and_payment_guarantees.payment_structure.installment_percentage"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 182,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.support_payment.total_usd",
+      "old_value": "$500",
+      "new_value": "500",
+      "context": "- **5 Flexible Milestone Installments**: Training fees are split into 5 equal installments (20% each / $500 USD base in Tier 1) invoiced strictly after completed milestone blocks of training progress.",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.total_usd",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.total_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_total_usd"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 183,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
+      "old_value": "5 days",
+      "new_value": "5",
+      "context": "- **Walkaway Guarantee**: Walk away owing nothing if not satisfied after the first milestone training phase (first 5 days of completed training).",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[0].due_after_day",
+        "data/pricing.json#offerings[individual-service-business].schedule.live_training_days",
+        "data/pricing.json#offerings[individual-service-business].schedule.support_phase_days",
+        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[4].due_after_day",
+        "data/pricing.json#offerings[individual-service-business].payment_rules.support_payment.milestone_schedule[0].due_after_day",
+        "data/pricing.json#offerings[individual-service-personal].schedule.live_training_days",
+        "data/pricing.json#offerings[individual-service-personal].schedule.support_phase_days",
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day",
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.support_payment.milestone_schedule[0].due_after_day",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.individual_service_support_installments[0].due_after_day"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 186,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "- **100% Client Intellectual Property & Model Sovereignty**: Full commercial ownership and copyright assignment of all code, prompts, custom MCP servers, and agent runbooks developed during the con...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 191,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
+      "old_value": "10 days",
+      "new_value": "10",
+      "context": "Dedicated 1-on-1 acceleration program engineered strictly for one person only (solo founders, senior engineers, and independent builders). 60 days total (30 days live 1-on-1 training + 30 days dedi...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].due_after_day",
+        "data/pricing.json#offerings[individual-service-business].schedule.total_calendar_duration_days",
+        "data/pricing.json#offerings[individual-service-personal].schedule.total_calendar_duration_days"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 191,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
+      "old_value": "30 days",
+      "new_value": "30",
+      "context": "Dedicated 1-on-1 acceleration program engineered strictly for one person only (solo founders, senior engineers, and independent builders). 60 days total (30 days live 1-on-1 training + 30 days dedi...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 191,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
+      "old_value": "60 days",
+      "new_value": "60",
+      "context": "Dedicated 1-on-1 acceleration program engineered strictly for one person only (solo founders, senior engineers, and independent builders). 60 days total (30 days live 1-on-1 training + 30 days dedi...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.total_calendar_duration_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].schedule.total_calendar_duration_days"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 193,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "- **Dedicated 1-on-1 Mentorship (Strictly One Person Only)**: Engineered exclusively for a single participant (solo founder, senior engineer, CXO, or creator), guaranteeing 100% focused, personaliz...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 194,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
+      "old_value": "30 days",
+      "new_value": "30",
+      "context": "- **Two-Phase 30+30 Cadence (60-Day Experience)**: Structured as 30 days of intensive live instruction (**4 hours a day over 6 weeks with 8 - 10 recovery days**), immediately followed by 30 days of...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 197,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "old_value": "$250",
+      "new_value": "250",
+      "context": "- **Pricing & Parity Structure**: **$2,500 USD base rate** with full 195-country Purchasing Power Parity (Tier 1: $2,500 | Tier 2: $1,875 | Tier 3: $1,250 | Tier 4: $1,250 | Tier 5: $625 | Tier 6: ...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[0].amount_usd",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[0].amount_usd",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].amount_usd"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 202,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "- **100% Client Intellectual Property & Community Access**: Full commercial ownership and copyright assignment of all code, prompts, and runbooks developed during the sprint, plus lifetime access t...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 208,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "- **Tier 1 (High-Income Economies - US, Canada, UK, Germany, France, Poland, Japan, Australia, Singapore, Chile, UAE, Saudi Arabia)**: 100% standard pricing (1.0X multiplier).",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 209,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "- **Tier 2 (Upper-Middle-Income Economies - Brazil, Mexico, Colombia, Argentina, Peru, Ecuador, Guatemala, Türkiye, Malaysia, Thailand, Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka)...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/tiers.json#tiers[1].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 210,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "- **Tier 3 (Lower-Middle & Low-Income Economies - India, Bangladesh, Pakistan, Nepal, Bhutan, Kenya, Nigeria, Ghana, Egypt, Morocco, Tanzania, Bolivia)**: 50% parity discount (0.50X multiplier).",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 211,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "- **Tier 4 (Early-Stage Startups)**: Exclusive 50% flat discount (0.50X multiplier) across all packages for Pre-Seed and Seed-stage ventures globally with <$1M raised.",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 212,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "- **Tier 5 (Non-Profits, Educational Institutions & Academia)**: 75% flat discount (0.25X multiplier) on all training modules, curricula, and workshops.",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/tiers.json#tiers[4].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 335,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
+      "old_value": "5 days",
+      "new_value": "5",
+      "context": "4. Explain his signature **60-Day Flagship Training Contract Model** (30 days live training + 30 days dedicated support, 4 hours a day, 120 total hours) and **10-Day Individual Pick Services** (5 d...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[0].due_after_day",
+        "data/pricing.json#offerings[individual-service-business].schedule.live_training_days",
+        "data/pricing.json#offerings[individual-service-business].schedule.support_phase_days",
+        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[4].due_after_day",
+        "data/pricing.json#offerings[individual-service-business].payment_rules.support_payment.milestone_schedule[0].due_after_day",
+        "data/pricing.json#offerings[individual-service-personal].schedule.live_training_days",
+        "data/pricing.json#offerings[individual-service-personal].schedule.support_phase_days",
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day",
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.support_payment.milestone_schedule[0].due_after_day",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.individual_service_support_installments[0].due_after_day"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 335,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
+      "old_value": "30 days",
+      "new_value": "30",
+      "context": "4. Explain his signature **60-Day Flagship Training Contract Model** (30 days live training + 30 days dedicated support, 4 hours a day, 120 total hours) and **10-Day Individual Pick Services** (5 d...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
+        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 337,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "6. Highlight transparent Purchasing Power Parity (PPP) discounts across 195 countries spanning 6 global equity tiers (Tier 1: 100%, Tier 2: 25% off, Tier 3: 50% off, Tier 4 Startups: 50% off, Tier ...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 337,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "6. Highlight transparent Purchasing Power Parity (PPP) discounts across 195 countries spanning 6 global equity tiers (Tier 1: 100%, Tier 2: 25% off, Tier 3: 50% off, Tier 4 Startups: 50% off, Tier ...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/tiers.json#tiers[4].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 337,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "6. Highlight transparent Purchasing Power Parity (PPP) discounts across 195 countries spanning 6 global equity tiers (Tier 1: 100%, Tier 2: 25% off, Tier 3: 50% off, Tier 4 Startups: 50% off, Tier ...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 337,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "6. Highlight transparent Purchasing Power Parity (PPP) discounts across 195 countries spanning 6 global equity tiers (Tier 1: 100%, Tier 2: 25% off, Tier 3: 50% off, Tier 4 Startups: 50% off, Tier ...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/tiers.json#tiers[1].discountPercent"
       ]
     },
     {

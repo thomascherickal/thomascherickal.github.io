@@ -121,9 +121,9 @@ class TestLastCommitReport(unittest.TestCase):
     def test_report_zero_emojis_and_zero_em_dashes(self):
         """Strictly verifies zero emojis and zero em-dashes throughout report."""
         # Check no em-dashes
-        self.assertNotIn(chr(0x2014), self.content)
-        self.assertNotIn("&" + "mdash;", self.content)
-        self.assertNotIn("&" + "#8212;", self.content)
+        self.assertNotIn("—", self.content)
+        self.assertNotIn("&mdash;", self.content)
+        self.assertNotIn("&#8212;", self.content)
 
         # Check no emojis
         emoji_pattern = re.compile(r"[\U00010000-\U0010ffff]", flags=re.UNICODE)

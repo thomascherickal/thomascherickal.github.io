@@ -695,6 +695,77 @@ def build_rules():
     rules.append(Rule("ContactPagePricingRule", 87, cond_contact_page, act_contact_page, "pricing"))
 
     # -------------------------------------------------------------
+    # 8b. LLMs.txt: Agent Knowledge & Specifications (llms.txt)
+    # -------------------------------------------------------------
+    def cond_llms_txt(file_path, content, kb, nlp, fuzzy):
+        return file_path.endswith("llms.txt"), {}
+
+    def act_llms_txt(file_path, content, match_info, kb, nlp, fuzzy):
+        occurrences = []
+        b_price = kb.get_fact("pricing", "b_flag_price", 2500)
+        b_days = kb.get_fact("pricing", "b_flag_days", 60)
+        b_live = kb.get_fact("pricing", "b_flag_live_days", 30)
+        b_supp = kb.get_fact("pricing", "b_flag_supp_days", 30)
+        b_seats = kb.get_fact("pricing", "b_flag_seats", 10)
+        b_extra = kb.get_fact("pricing", "b_flag_seat_price", 250)
+        b_max = kb.get_fact("pricing", "b_flag_max_seats", 20)
+
+        p_price = kb.get_fact("pricing", "p_flag_price", 2500)
+        p_days = kb.get_fact("pricing", "p_flag_days", 60)
+        p_live = kb.get_fact("pricing", "p_flag_live_days", 30)
+        p_supp = kb.get_fact("pricing", "p_flag_supp_days", 30)
+
+        ind_price = kb.get_fact("pricing", "ind_serv_price", 250)
+        ind_live = kb.get_fact("pricing", "ind_serv_live_days", 5)
+        ind_supp = kb.get_fact("pricing", "ind_serv_supp_days", 5)
+        ind_days = ind_live + ind_supp
+
+        content = re.sub(
+            r'flagship training for \d+ days \(\d+ days live engineering training \+ \d+ days dedicated support\)',
+            f'flagship training for {b_days} days ({b_live} days live engineering training + {b_supp} days dedicated support)',
+            content
+        )
+        content = re.sub(
+            r'-\s*\*\*Comprehensive Business Training\*\*:\s*\*\*[\$,\d]+\s*USD\*\*\s*for\s*\*\*\d+\s*days\*\*\s*\(\d+\s*days live hands-on engineering training \+ \d+\s*days dedicated support, \d+\s*working days with \d+\s*-\s*\d+\s*recovery days, \d+\s*hours per day\)\.\s*Covers cohorts up to \d+\s*participants\.\s*Additional seats at\s*\*\*[\$,\d]+\s*USD per seat\*\*\s*\(up to \d+\s*seats max\)\.',
+            f'- **Comprehensive Business Training**: **${b_price:,} USD** for **{b_days} days** ({b_live} days live hands-on engineering training + {b_supp} days dedicated support, {b_live} working days with 8 - 10 recovery days, 4 hours per day). Covers cohorts up to {b_seats} participants. Additional seats at **${b_extra:,} USD per seat** (up to {b_max} seats max).',
+            content
+        )
+        content = re.sub(
+            r'-\s*\*\*Comprehensive Personal Training\*\*:\s*\*\*[\$,\d]+\s*USD\*\*\s*for\s*\*\*\d+\s*days\*\*\s*\(\d+\s*days intensive 1-on-1 sprint \+ \d+\s*days dedicated support, \d+\s*working days with \d+\s*-\s*\d+\s*recovery days, \d+\s*hours per day\)\.\s*Strictly for\s*\*\*one person only\*\*\.',
+            f'- **Comprehensive Personal Training**: **${p_price:,} USD** for **{p_days} days** ({p_live} days intensive 1-on-1 sprint + {p_supp} days dedicated support, {p_live} working days with 8 - 10 recovery days, 4 hours per day). Strictly for **one person only**.',
+            content
+        )
+        content = re.sub(
+            r'\*\s*\*\*Individual \(1-on-1\)\*\*:\s*\*\*[\$,\d]+\s*USD\*\*\s*per service for\s*\*\*\d+\s*days live training \+ \d+\s*days dedicated support\*\*\s*\(\d+\s*days total coverage per service\)\.\s*Strictly 1 person only\.',
+            f'* **Individual (1-on-1)**: **${ind_price:,} USD** per service for **{ind_live} days live training + {ind_supp} days dedicated support** ({ind_days} days total coverage per service). Strictly 1 person only.',
+            content
+        )
+        content = re.sub(
+            r'\*\s*\*\*Business \(Teams\)\*\*:\s*\*\*[\$,\d]+\s*USD\*\*\s*per service for\s*\*\*\d+\s*days live training \+ \d+\s*days dedicated support\*\*\s*\(\d+\s*days total coverage per service\)\.\s*Covers up to \d+\s*participants \(additional seats at\s*\*\*[\$,\d]+\s*USD per seat\*\*\)\.',
+            f'* **Business (Teams)**: **${ind_price:,} USD** per service for **{ind_live} days live training + {ind_supp} days dedicated support** ({ind_days} days total coverage per service). Covers up to {b_seats} participants (additional seats at **${ind_price:,} USD per seat**).',
+            content
+        )
+
+        occurrences.append({
+            "page": "llms.txt", "section": "Comprehensive Business Training", "line_no": 42,
+            "field": "llms_business_flagship_price", "old_val": "$2,500", "new_val": f"${b_price:,}",
+            "context": f"Business Training: ${b_price:,} USD for {b_days} days"
+        })
+        occurrences.append({
+            "page": "llms.txt", "section": "Comprehensive Personal Training", "line_no": 44,
+            "field": "llms_personal_flagship_price", "old_val": "$2,500", "new_val": f"${p_price:,}",
+            "context": f"Personal Training: ${p_price:,} USD for {p_days} days"
+        })
+        occurrences.append({
+            "page": "llms.txt", "section": "Individual Service Picks", "line_no": 38,
+            "field": "llms_individual_service_price", "old_val": "$250", "new_val": f"${ind_price:,}",
+            "context": f"Individual Service: ${ind_price:,} USD for {ind_days} days"
+        })
+        return content, occurrences
+
+    rules.append(Rule("LLMsTxtRule", 86, cond_llms_txt, act_llms_txt, "pricing"))
+
+    # -------------------------------------------------------------
     # 9. FAQs: Policies, Quotas & Guarantees (faqs.html)
     # -------------------------------------------------------------
     def cond_faqs(file_path, content, kb, nlp, fuzzy):
