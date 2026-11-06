@@ -519,10 +519,11 @@
         var origText = btn.textContent;
         btn.textContent = 'Copied!';
         btn.classList.add('copied');
-        setTimeout(function () {
+        var timer = setTimeout(function () {
           btn.textContent = origText;
           btn.classList.remove('copied');
         }, 1500);
+        if (timer && typeof timer.unref === 'function') timer.unref();
       }
 
       function fallback(t) {
@@ -538,7 +539,8 @@
           onCopied();
         } catch (err) {
           btn.textContent = 'Failed';
-          setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+          var failTimer = setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+          if (failTimer && typeof failTimer.unref === 'function') failTimer.unref();
         }
         document.body.removeChild(ta);
       }

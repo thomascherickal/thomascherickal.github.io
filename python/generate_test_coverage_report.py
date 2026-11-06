@@ -355,3 +355,4 @@ def generate_coverage_report(output_path=OUTPUT_REPORT_PATH):
 
 if __name__ == "__main__":
     generate_coverage_report()
+
