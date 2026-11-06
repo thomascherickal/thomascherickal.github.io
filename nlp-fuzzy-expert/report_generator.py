@@ -26,6 +26,7 @@ DOMAIN_FILES = {
     "config": "config_references.json",
     "faqs": "faqs_references.json",
     "contact": "contact_references.json",
+    "guarantees": "guarantees_references.json",
 }
 
 DOMAIN_DATA_SOURCE = {
@@ -39,6 +40,7 @@ DOMAIN_DATA_SOURCE = {
     "config": "data/config.json",
     "faqs": "data/faqs.json",
     "contact": "data/contact.json",
+    "guarantees": "data/guarantees.json",
 }
 
 
@@ -64,6 +66,8 @@ def classify_rule_field(field):
         return "faqs"
     if "contact" in field:
         return "contact"
+    if "guarantee" in field:
+        return "guarantees"
     return "pricing"
 
 
@@ -173,6 +177,7 @@ def generate_markdown_reports(domain_refs, force=False):
         ("config.md", "config", "Site Configuration & Brand Identity"),
         ("faqs.md", "faqs", "Frequently Asked Questions & Policies"),
         ("contact.md", "contact", "Contact & Project Intake Standards"),
+        ("guarantees.md", "guarantees", "Trust Guarantees & Payment Structure"),
     ]
 
     for md_name, domain, title in reports:

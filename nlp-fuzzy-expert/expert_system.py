@@ -329,6 +329,20 @@ class KnowledgeBase:
             form = cnt_data.get("form_configuration", {})
             self.add_fact("contact", "action_endpoint", form.get("action_endpoint"))
 
+        # 11. Guarantees
+        guarantees_file = os.path.join(self.data_dir, "guarantees.json")
+        if os.path.exists(guarantees_file):
+            g_data = load_json(guarantees_file)
+            self.raw_data["guarantees"] = g_data
+            g_meta = g_data.get("guarantees_metadata", {})
+            self.add_fact("guarantees", "page_title", g_meta.get("page_title"))
+            self.add_fact("guarantees", "canonical_url", g_meta.get("canonical_url"))
+            self.add_fact("guarantees", "hero_badge", g_meta.get("hero_badge"))
+            pillars = {p["id"]: p for p in g_data.get("trust_pillars", [])}
+            walkaway = pillars.get("walkaway-guarantee", {})
+            self.add_fact("guarantees", "walkaway_title", walkaway.get("title"))
+            self.add_fact("guarantees", "walkaway_description", walkaway.get("description"))
+
 class Rule:
     """An Expert System Production Rule with NLP & Fuzzy antecedents."""
 

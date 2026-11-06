@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-06 16:42:44 UTC` | Branch: `main` | Head Commit: `f11a88e`
+> **Automated Status Report** | Generated on `2026-11-06 16:53:07 UTC` | Branch: `main` | Head Commit: `2d8738c`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **473** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **729,091** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **714,338** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **4,911** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **9,842** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **76.96 MB (80,696,599 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **710,498 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **486** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-06** | Subject: "feat(data): add authoritative contact.json reference file for contact.html" |
+| **Total Tracked Files** | **476** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **733,166** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **718,393** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **4,917** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **9,856** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **77.19 MB (80,935,618 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **713,687 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **487** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-06** | Subject: "chore(report): record commit f11a88e in LAST-COMMIT-REPORT.md and sync reference timestamps" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -30,9 +30,9 @@
 | **HTML Documents** | 66 | 77,386 | 5.90 MB (6,187,521 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,887 | 278.67 KB (285,354 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 16 | 6,695 | 3.52 MB (3,692,150 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 47 | 11,464 | 512.58 KB (524,877 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 93 | 33,865 | 3.77 MB (3,950,652 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 88 | 587,741 | 27.37 MB (28,697,544 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Python Tooling** | 47 | 11,534 | 515.97 KB (528,349 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 94 | 34,017 | 3.79 MB (3,976,282 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 90 | 591,594 | 27.57 MB (28,907,461 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 95 | 0 | 35.51 MB (37,233,318 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 10 | 0 | 57.32 KB (58,695 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,14 +43,14 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 88 | 587,741 | 27.37 MB (28,697,544 bytes) | 18.6% |
-| `.html` | 66 | 77,386 | 5.90 MB (6,187,521 bytes) | 14.0% |
-| `.md` | 93 | 33,865 | 3.77 MB (3,950,652 bytes) | 19.7% |
+| `.json` | 90 | 591,594 | 27.57 MB (28,907,461 bytes) | 18.9% |
+| `.html` | 66 | 77,386 | 5.90 MB (6,187,521 bytes) | 13.9% |
+| `.md` | 94 | 34,017 | 3.79 MB (3,976,282 bytes) | 19.7% |
 | `.css` | 16 | 11,887 | 278.67 KB (285,354 bytes) | 3.4% |
-| `.py` | 47 | 11,464 | 512.58 KB (524,877 bytes) | 9.9% |
+| `.py` | 47 | 11,534 | 515.97 KB (528,349 bytes) | 9.9% |
 | `.js` | 16 | 6,695 | 3.52 MB (3,692,150 bytes) | 3.4% |
-| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 8.9% |
-| `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 9.1% |
+| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 8.8% |
+| `.jpg` | 43 | 0 | 30.05 MB (31,512,975 bytes) | 9.0% |
 | `.png` | 26 | 0 | 2.78 MB (2,918,409 bytes) | 5.5% |
 | `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 4.2% |
 | `.jpeg` | 5 | 0 | 809.15 KB (828,567 bytes) | 1.1% |
@@ -107,7 +107,7 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **330 functions** across tooling scripts | Modular execution units |
+| **Python Function Definitions** | **332 functions** across tooling scripts | Modular execution units |
 | **Python Class Definitions** | **30 classes** | Structured state containers |
 
 ---

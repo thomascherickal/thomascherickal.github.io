@@ -37,7 +37,7 @@ class TestReferenceScanner(unittest.TestCase):
         self.assertEqual(
             domains,
             {"pricing", "business_services", "personal_services", "tiers",
-             "claude", "gemini", "publications", "config", "faqs", "contact"},
+             "claude", "gemini", "publications", "config", "faqs", "contact", "guarantees"},
         )
 
     def test_scan_records_schema_and_is_read_only(self):

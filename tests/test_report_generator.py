@@ -27,10 +27,10 @@ class TestReportGenerator(unittest.TestCase):
     """Verifies report generator mappings and classification logic."""
 
     def test_domain_mappings_completeness(self):
-        """Verifies that all 10 expected domains have corresponding reference and source files."""
+        """Verifies that all 11 expected domains have corresponding reference and source files."""
         expected_domains = [
             "pricing", "business_services", "personal_services", "tiers",
-            "claude", "gemini", "publications", "config", "faqs", "contact"
+            "claude", "gemini", "publications", "config", "faqs", "contact", "guarantees"
         ]
         for d in expected_domains:
             self.assertIn(d, DOMAIN_FILES)
@@ -52,6 +52,7 @@ class TestReportGenerator(unittest.TestCase):
         self.assertEqual(classify_rule_field("canonical_email"), "config")
         self.assertEqual(classify_rule_field("faq_walkaway"), "faqs")
         self.assertEqual(classify_rule_field("contact_form_endpoint"), "contact")
+        self.assertEqual(classify_rule_field("walkaway_guarantee_terms"), "guarantees")
 
 
 if __name__ == "__main__":

@@ -41,6 +41,7 @@ DOMAIN_BY_FILE = {
     "config.json": "config",
     "faqs.json": "faqs",
     "contact.json": "contact",
+    "guarantees.json": "guarantees",
 }
 
 SKIP_KEYS = {"directory", "border", "id", "badge_class", "icon"}

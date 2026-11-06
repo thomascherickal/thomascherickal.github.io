@@ -164,8 +164,52 @@ class TestCoreTargetDocuments(unittest.TestCase):
         self.assertNotIn("offerings", data)
         self.assertNotIn("general_payment_rules", data)
 
+    def test_guarantees_json_schema_and_facts(self):
+        """Verifies that data/guarantees.json exists and registers facts in knowledge base."""
+        g_path = os.path.join(REPO_DIR, "data", "guarantees.json")
+        self.assertTrue(os.path.exists(g_path), "data/guarantees.json must exist")
+
+        data = load_json(g_path)
+        expected_keys = [
+            "guarantees_metadata", "config_references", "trust_pillars",
+            "agency_comparison", "apache_license_rights"
+        ]
+        for key in expected_keys:
+            self.assertIn(key, data, f"Key '{key}' must be in data/guarantees.json")
+
+        # Verify KnowledgeBase loaded facts
+        self.assertEqual(
+            self.kb.get_fact("guarantees", "page_title"),
+            "Trust Guarantees & Payment Structure | Thomas Cherickal"
+        )
+        self.assertEqual(
+            self.kb.get_fact("guarantees", "hero_badge"),
+            "// 100% RISK-FREE & SCAM-FREE ENGAGEMENT"
+        )
+        self.assertEqual(
+            self.kb.get_fact("guarantees", "walkaway_title"),
+            "Walk Away Free Guarantee"
+        )
+
+    def test_guarantees_json_no_duplication(self):
+        """Verifies data/guarantees.json avoids duplication by referencing config, faqs, and pricing."""
+        g_path = os.path.join(REPO_DIR, "data", "guarantees.json")
+        data = load_json(g_path)
+
+        refs = data.get("config_references", {})
+        self.assertEqual(refs.get("author_ref"), "config.json#author")
+        self.assertEqual(refs.get("email_ref"), "config.json#email")
+        self.assertEqual(refs.get("pricing_ref"), "pricing.json")
+        self.assertEqual(refs.get("faqs_ref"), "faqs.json")
+        self.assertEqual(refs.get("tiers_ref"), "tiers.json")
+
+        # Confirm guarantees.json does not duplicate full offerings or tiers schemas
+        self.assertNotIn("tiers", data)
+        self.assertNotIn("offerings", data)
+        self.assertNotIn("core_policies", data)
+
     def test_compliance_zero_emojis_and_zero_em_dashes(self):
-        """Verifies zero emojis and zero em-dashes in manifest, contact.json, and llms.txt."""
+        """Verifies zero emojis and zero em-dashes in manifest, contact.json, guarantees.json, and llms.txt."""
         manifest_path = os.path.join(NLP_EXPERT_DIR, "references_manifest.json")
         with open(manifest_path, "r", encoding="utf-8") as f:
             m_text = f.read()
@@ -178,7 +222,11 @@ class TestCoreTargetDocuments(unittest.TestCase):
         with open(contact_path, "r", encoding="utf-8") as f:
             c_text = f.read()
 
-        for text in [m_text, l_text, c_text]:
+        guarantees_path = os.path.join(REPO_DIR, "data", "guarantees.json")
+        with open(guarantees_path, "r", encoding="utf-8") as f:
+            g_text = f.read()
+
+        for text in [m_text, l_text, c_text, g_text]:
             self.assertNotIn(chr(0x2014), text)
             self.assertNotIn("&" + "mdash;", text)
             self.assertNotIn("&" + "#8212;", text)

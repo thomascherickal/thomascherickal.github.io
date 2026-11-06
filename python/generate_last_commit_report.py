@@ -428,7 +428,8 @@ def generate_last_commit_report(output_file=REPORT_FILE):
         "gemini": "nlp-fuzzy-expert/gemini.md",
         "personal_services": "nlp-fuzzy-expert/personal-services.md",
         "faqs": "nlp-fuzzy-expert/faqs.md",
-        "contact": "nlp-fuzzy-expert/contact.md"
+        "contact": "nlp-fuzzy-expert/contact.md",
+        "guarantees": "nlp-fuzzy-expert/guarantees.md"
     }
 
     for dom, count in sorted(by_domain.items(), key=lambda x: x[1], reverse=True):
