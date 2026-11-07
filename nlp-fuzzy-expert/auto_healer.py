@@ -391,6 +391,10 @@ def commit_verified_state(commit_msg="feat(synchronizer): synchronize repository
         if os.path.exists(cov_script):
             subprocess.run([sys.executable, cov_script], cwd=REPO_DIR, capture_output=True, text=True)
 
+        readme_script = os.path.join(REPO_DIR, "python", "update_readme_commit_summary.py")
+        if os.path.exists(readme_script):
+            subprocess.run([sys.executable, readme_script], cwd=REPO_DIR, capture_output=True, text=True)
+
         subprocess.run(["git", "add", "-A"], cwd=REPO_DIR, check=True)
         commit_res = subprocess.run(["git", "commit", "--no-verify", "-m", commit_msg], cwd=REPO_DIR, capture_output=True, text=True)
         print("  -> Git commit output:")

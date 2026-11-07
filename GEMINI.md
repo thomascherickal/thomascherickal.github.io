@@ -186,16 +186,17 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 
 ## Unnumbered Headings & Code Block Sharp Boundaries Rule
 - **Unnumbered Headings in Content**: Do NOT use numeric prefixes (such as `1. `, `01. `, `1) `, or `<span class="sec-num">01</span>`) in headings (`<h2>`, `<h3>`, `<h4>`, etc.) across HTML content pages. Numbering belongs exclusively in the Table of Contents (ToC) to maintain a clean reading experience in the body while preserving structured outline numbering in the navigation index.
-- **Sharp Boundaries Between Code and Text**: All code samples and preformatted code blocks (`<pre>`, `.code-window`, `.codewrap`, `.code`, `.code-box`) must have sharp, visually distinct boundaries separating them from surrounding prose:
+- **Sharp Boundaries Between Code and Text**: All code samples and preformatted code blocks (`<pre>`, `.code-window`, `.codewrap`, `.code`, `.code-box`) must have sharp, visually distinct boundaries separating them from surrounding prose:      
   - High-contrast dark background (`#040711` or `#060913`).
   - Crisp borders (`1px solid rgba(56, 189, 248, 0.32)` or `rgba(251, 191, 36, 0.32)`) and distinct left accent border (`border-left: 3px solid var(--cyan)` or `var(--gold)`).
   - Explicit vertical margins (`margin: 1.5rem 0;`) ensuring clear visual separation from surrounding text.
   - A structured header bar (`.code-bar`, `.code-head`, `.cap`, `.code-header`) containing a file/language label and window dot accents where applicable.
 - **Copy Button on Every Code Sample**: Every code sample across all HTML files on the website must include an accessible, interactive Copy button (`button.copy` or `.copy-btn`) that copies the snippet text to the clipboard and provides visual feedback (`Copied!`). Buttons must strictly maintain `text-decoration: none !important;` across all states.
 
-## Last Commit Output Report Rule (`LAST-COMMIT-REPORT.md`)
+## Last Commit Output Report Rule (`LAST-COMMIT-REPORT.md` & `README.md`)
 - **Last Commit Output Recording**: The full commit output report of the last commit made must always be stored and recorded at `LAST-COMMIT-REPORT.md` in the repository root directory.
-- **Strictly Pre-Commit Only (Zero Post-Commit Modifications)**: All code synchronization, component building, schema extraction, Markdown mirroring, metrics calculation, test execution, `LAST-COMMIT-REPORT.md` generation, and test coverage appending MUST happen strictly **before** the commit is finalized (inside `.git/hooks/pre-commit` / `python/hooks/pre-commit`, or prior to `git commit` in automated handlers).
+- **README Commit Summary Synchronization (`python/update_readme_commit_summary.py`)**: Immediately after `LAST-COMMIT-REPORT.md` and its test coverage section are generated, `python3 python/update_readme_commit_summary.py` extracts the summary of updates (Commit Overview, Quality Gate & Verification Summary, Coverage Executive Summary, Changed Files & Status, and Staged Stat Summary) and appends/updates it in `README.md` just before the commit is finalized.
+- **Strictly Pre-Commit Only (Zero Post-Commit Modifications)**: All code synchronization, component building, schema extraction, Markdown mirroring, metrics calculation, test execution, `LAST-COMMIT-REPORT.md` generation, test coverage appending, and `README.md` commit summary updating MUST happen strictly **before** the commit is finalized (inside `.git/hooks/pre-commit` / `python/hooks/pre-commit`, or prior to `git commit` in automated handlers).
 - **Clean Working Tree After Every Commit**: Never run post-commit hooks or post-commit scripts that modify tracked or untracked files after `git commit` completes. Immediately after any commit, `git status` must be 100% clean with zero modified or untracked files.
 - **Zero Emojis & Zero Em-Dashes**: The generated report strictly enforces zero emojis and zero em-dashes (spaced hyphens ` - ` or plain hyphens `-`).
 
