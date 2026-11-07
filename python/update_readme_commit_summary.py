@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 update_readme_commit_summary.py - Extracts the summary of updates from
-LAST-COMMIT-REPORT.md and appends/updates it in README.md just before commit.
+LAST-COMMIT-REPORT.md and metrics.md, and appends/updates them in README.md
+just before commit.
 
 Strict Repo Compliance:
 - Zero emojis.
@@ -14,6 +15,7 @@ import re
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LAST_COMMIT_REPORT_PATH = os.path.join(REPO_ROOT, "LAST-COMMIT-REPORT.md")
+METRICS_PATH = os.path.join(REPO_ROOT, "metrics.md")
 README_PATH = os.path.join(REPO_ROOT, "README.md")
 
 SECTION_HEADER = "## Latest Pre-Commit Report Summary"
@@ -41,21 +43,22 @@ def extract_subsection(content, heading):
     return ""
 
 
-def build_summary_from_report(report_content):
-    """Parses LAST-COMMIT-REPORT.md and builds a concise markdown summary block for README.md."""
+def build_summary_from_report(report_content, metrics_content=""):
+    """Parses LAST-COMMIT-REPORT.md and metrics.md and builds a concise markdown summary block for README.md."""
     gen_match = re.search(r"Generated on:\s*`([^`]+)`", report_content)
     generated_on = gen_match.group(1) if gen_match else "Latest Commit"
 
     overview_sec = extract_section(report_content, "## Commit Overview")
     quality_sec = extract_section(report_content, "## Quality Gate & Verification Summary")
     coverage_sec = extract_subsection(report_content, "### Coverage Executive Summary")
-    changed_sec = extract_section(report_content, "## Changed Files & Status (Staged)")
-    stat_sec = extract_section(report_content, "## Staged Stat Summary")
+
+    metrics_exec_sec = extract_section(metrics_content, "## 1. Executive Summary")
+    metrics_arch_sec = extract_section(metrics_content, "## 2. Architecture & File Category Breakdown")
 
     lines = [
         SECTION_HEADER,
         "",
-        f"> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md)** | Recorded on: `{generated_on}`",
+        f"> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`metrics.md`](metrics.md)** | Recorded on: `{generated_on}`",
         "",
     ]
 
@@ -77,21 +80,21 @@ def build_summary_from_report(report_content):
         lines.append(coverage_sec)
         lines.append("")
 
-    if changed_sec:
+    if metrics_exec_sec:
         lines.append(
-            changed_sec.replace(
-                "## Changed Files & Status (Staged)",
-                "### Changed Files & Status (Staged)",
+            metrics_exec_sec.replace(
+                "## 1. Executive Summary",
+                "### Repository Code & Engineering Metrics Summary (`metrics.md`)",
                 1,
             )
         )
         lines.append("")
 
-    if stat_sec:
+    if metrics_arch_sec:
         lines.append(
-            stat_sec.replace(
-                "## Staged Stat Summary",
-                "### Staged Stat Summary",
+            metrics_arch_sec.replace(
+                "## 2. Architecture & File Category Breakdown",
+                "### Architecture & File Category Breakdown (`metrics.md`)",
                 1,
             )
         )
@@ -103,10 +106,11 @@ def build_summary_from_report(report_content):
     return summary_block
 
 
-def update_readme_with_commit_summary(report_path=None, readme_path=None):
-    """Reads LAST-COMMIT-REPORT.md, extracts the update summary, and appends/updates it in README.md."""
+def update_readme_with_commit_summary(report_path=None, readme_path=None, metrics_path=None):
+    """Reads LAST-COMMIT-REPORT.md and metrics.md, extracts the update summary, and appends/updates it in README.md."""
     rep_file = report_path or LAST_COMMIT_REPORT_PATH
     rdm_file = readme_path or README_PATH
+    met_file = metrics_path or METRICS_PATH
 
     if not os.path.exists(rep_file) or not os.path.exists(rdm_file):
         return ""
@@ -114,10 +118,15 @@ def update_readme_with_commit_summary(report_path=None, readme_path=None):
     with open(rep_file, "r", encoding="utf-8") as f:
         report_content = f.read()
 
+    metrics_content = ""
+    if os.path.exists(met_file):
+        with open(met_file, "r", encoding="utf-8") as f:
+            metrics_content = f.read()
+
     with open(rdm_file, "r", encoding="utf-8") as f:
         readme_content = f.read()
 
-    summary_block = build_summary_from_report(report_content)
+    summary_block = build_summary_from_report(report_content, metrics_content)
 
     if SECTION_HEADER in readme_content:
         before_sec = readme_content.split(SECTION_HEADER, 1)[0].rstrip()
@@ -133,7 +142,7 @@ def update_readme_with_commit_summary(report_path=None, readme_path=None):
     with open(rdm_file, "w", encoding="utf-8") as f:
         f.write(updated_readme)
 
-    print(f"[README Commit Summary] Successfully updated {rdm_file} from {rep_file}")
+    print(f"[README Commit Summary] Successfully updated {rdm_file} from {rep_file} and {met_file}")
     return updated_readme
 
 

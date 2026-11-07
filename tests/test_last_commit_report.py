@@ -199,7 +199,7 @@ class TestLastCommitReport(unittest.TestCase):
         self.assertEqual(urcs.extract_section("Sample text", "## NonExistent"), "")
         self.assertEqual(urcs.extract_subsection("Sample text", "### NonExistent"), "")
 
-        # 3. Full report extraction and first-time append (with trailing --- on README)
+        # 3. Full report + metrics extraction and first-time append (with trailing --- on README)
         sample_report = (
             "# Pre-Commit Report\n\n"
             "> **Automated Pre-Commit Record** | Generated on: `2026-11-07 06:00:00 UTC`\n\n"
@@ -207,51 +207,70 @@ class TestLastCommitReport(unittest.TestCase):
             "| Property | Value |\n| :--- | :--- |\n| **Branch** | `main` |\n\n"
             "## Quality Gate & Verification Summary\n\n"
             "| Gate | Status |\n| :--- | :---: |\n| **Overall** | **PASS** |\n\n"
-            "## Changed Files & Status (Staged)\n\n"
-            "```text\nM\tREADME.md\n```\n\n"
-            "## Staged Stat Summary\n\n"
-            "```text\n 1 file changed\n```\n\n"
             "---\n\n"
             "## Test Coverage Report (Python & JavaScript)\n\n"
             "### Coverage Executive Summary\n\n"
             "| Language | Coverage % |\n|:---|---:|\n| **Combined** | **100.00%** |\n\n"
             "### Python Test Coverage\n"
         )
+        sample_metrics = (
+            "# Repository Code & Engineering Metrics\n\n"
+            "## 1. Executive Summary\n\n"
+            "| Metric | Count | Details |\n| :--- | :--- | :--- |\n| **Total Tracked Files** | **484** | Git |\n\n"
+            "---\n\n"
+            "## 2. Architecture & File Category Breakdown\n\n"
+            "| Category | Files |\n| :--- | :--- |\n| **HTML Documents** | 66 |\n\n"
+            "---\n"
+        )
         rep_path = os.path.join(self.temp_dir, "rep.md")
+        met_path = os.path.join(self.temp_dir, "metrics.md")
         rdm_path = os.path.join(self.temp_dir, "README.md")
         with open(rep_path, "w", encoding="utf-8") as f:
             f.write(sample_report)
+        with open(met_path, "w", encoding="utf-8") as f:
+            f.write(sample_metrics)
         with open(rdm_path, "w", encoding="utf-8") as f:
             f.write("# Project Title\n\nIntro paragraph.\n\n---\n")
 
-        updated1 = urcs.update_readme_with_commit_summary(report_path=rep_path, readme_path=rdm_path)
+        updated1 = urcs.update_readme_with_commit_summary(
+            report_path=rep_path, readme_path=rdm_path, metrics_path=met_path
+        )
         self.assertIn(urcs.SECTION_HEADER, updated1)
         self.assertIn("### Commit Overview", updated1)
         self.assertIn("### Quality Gate & Verification Summary", updated1)
         self.assertIn("### Coverage Executive Summary", updated1)
-        self.assertIn("### Changed Files & Status (Staged)", updated1)
-        self.assertIn("### Staged Stat Summary", updated1)
+        self.assertIn("### Repository Code & Engineering Metrics Summary (`metrics.md`)", updated1)
+        self.assertIn("### Architecture & File Category Breakdown (`metrics.md`)", updated1)
+        self.assertNotIn("Changed Files & Status (Staged)", updated1)
+        self.assertNotIn("Staged Stat Summary", updated1)
         self.assertNotIn(chr(0x2014), updated1)
 
         # 4. Second run (idempotent replacement when SECTION_HEADER already exists)
-        updated2 = urcs.update_readme_with_commit_summary(report_path=rep_path, readme_path=rdm_path)
+        updated2 = urcs.update_readme_with_commit_summary(
+            report_path=rep_path, readme_path=rdm_path, metrics_path=met_path
+        )
         self.assertEqual(updated2.count(urcs.SECTION_HEADER), 1)
 
-        # 5. Append when README does not end with --- and report has minimal content
+        # 5. Append when README does not end with --- and metrics_path does not exist
         rdm_plain = os.path.join(self.temp_dir, "README_plain.md")
         rep_min = os.path.join(self.temp_dir, "rep_min.md")
+        missing_met = os.path.join(self.temp_dir, "missing_metrics.md")
         with open(rdm_plain, "w", encoding="utf-8") as f:
             f.write("# Plain README\nNo separator at end.")
         with open(rep_min, "w", encoding="utf-8") as f:
             f.write("# Minimal Report\n")
 
-        updated3 = urcs.update_readme_with_commit_summary(report_path=rep_min, readme_path=rdm_plain)
+        updated3 = urcs.update_readme_with_commit_summary(
+            report_path=rep_min, readme_path=rdm_plain, metrics_path=missing_met
+        )
         self.assertIn("Latest Commit", updated3)
 
         # 6. Replace when SECTION_HEADER is not preceded by ---
         with open(rdm_plain, "w", encoding="utf-8") as f:
             f.write(f"# Plain README\n\n{urcs.SECTION_HEADER}\nOld summary\n")
-        updated4 = urcs.update_readme_with_commit_summary(report_path=rep_min, readme_path=rdm_plain)
+        updated4 = urcs.update_readme_with_commit_summary(
+            report_path=rep_min, readme_path=rdm_plain, metrics_path=missing_met
+        )
         self.assertEqual(updated4.count(urcs.SECTION_HEADER), 1)
 
 
