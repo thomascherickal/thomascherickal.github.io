@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-07 06:08:09 UTC` | Branch: `main` | Head Commit: `18bfe68`
+> **Automated Status Report** | Generated on `2026-11-07 06:10:42 UTC` | Branch: `main` | Head Commit: `85835e1`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **484** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **727,623** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **712,871** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,086** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **9,666** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **57.45 MB (60,238,673 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **710,115 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **510** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-07** | Subject: "feat(readme): replace staged file status with metrics.md summary in README.md at 100% coverage" |
+| **Total Lines of Source Code & Content** | **727,561** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **712,805** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,088** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **9,668** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **57.44 MB (60,235,437 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **709,947 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **511** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-07** | Subject: "perf(assets): compress all images above 600 KB to under 300 KB" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -31,7 +31,7 @@
 | **CSS Stylesheets** | 16 | 11,887 | 278.67 KB (285,354 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 18 | 7,432 | 3.54 MB (3,715,295 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 53 | 13,635 | 605.77 KB (620,307 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 94 | 33,959 | 3.77 MB (3,957,789 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Markdown Documentation** | 94 | 33,897 | 3.77 MB (3,954,553 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 90 | 584,182 | 27.25 MB (28,578,444 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 95 | 0 | 16.03 MB (16,804,392 bytes) | Optimized feature hero graphics, social cards & assets |
@@ -45,7 +45,7 @@
 | :--- | :--- | :--- | :--- | :--- |
 | `.json` | 90 | 584,182 | 27.25 MB (28,578,444 bytes) | 18.6% |
 | `.html` | 66 | 76,475 | 5.86 MB (6,147,523 bytes) | 13.6% |
-| `.md` | 94 | 33,959 | 3.77 MB (3,957,789 bytes) | 19.4% |
+| `.md` | 94 | 33,897 | 3.77 MB (3,954,553 bytes) | 19.4% |
 | `.py` | 53 | 13,635 | 605.77 KB (620,307 bytes) | 11.0% |
 | `.css` | 16 | 11,887 | 278.67 KB (285,354 bytes) | 3.3% |
 | `.js` | 18 | 7,432 | 3.54 MB (3,715,295 bytes) | 3.7% |

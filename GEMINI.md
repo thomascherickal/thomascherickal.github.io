@@ -205,4 +205,9 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - **Comprehensive Dual-Stack Assessment**: Evaluates Python code coverage (using coverage tracer across `nlp-fuzzy-expert/` and `python/`) and JavaScript code coverage (using native Node.js V8 code coverage `NODE_V8_COVERAGE` across `pricing-calculator.js`, `components.js`, and `mermaid.js`).
 - **100% Coverage Target**: Enforces 100% test coverage across both Python and JavaScript codebases.
 
+## Repository Metrics Rule (`metrics.md`)
+- **Automated Update Before Every Commit**: `metrics.md` must always be generated and updated via `python3 python/generate_metrics.py` before every commit, and staged as part of that commit.
+- **Pre-Commit Enforcement**: The pre-commit hook automatically executes `python3 python/generate_metrics.py` before finalizing each commit to ensure all tracked file counts, lines of code (SLOC), asset sizes, and category distributions are completely up-to-date in `metrics.md`.
+- **Zero Emojis & Zero Em-Dashes**: `metrics.md` strictly adheres to the repository compliance standards with zero emojis and zero em-dashes.
+
 
