@@ -114,6 +114,27 @@ Convert anonymous traffic into sales-ready pipeline using conversational AI audi
 
 Build a shared team knowledge vault in Markdown with automated capture, local-model tagging, and cited question answering.
 
+### Continuous Learning & Research Synthesis
+
+**Category**: `Organizational Intel`  
+**Link**: [Continuous Learning & Research Synthesis](business-services/business-service-continuous-learning.html)
+
+Establish continuous organizational learning loops, autonomous industry research synthesis, executive briefings, and automated institutional skill acquisition.
+
+### Work-Life Balance & Autonomous Offloading
+
+**Category**: `Team Wellness & Focus`  
+**Link**: [Work-Life Balance & Autonomous Offloading](business-services/business-service-worklife-balance.html)
+
+Protect team productivity, eliminate burnout, automate repetitive cognitive busywork, and establish focus time boundaries.
+
+### AI Schedule Automation & Calendar Gatekeeper
+
+**Category**: `Calendar Gatekeeper`  
+**Link**: [AI Schedule Automation & Calendar Gatekeeper](business-services/business-service-ai-schedule-automation.html)
+
+Deploy autonomous calendar gatekeepers, biological focus time-blocking, and pre-meeting executive context dossiers.
+
 ## Ready
  to Transform Your Organization?
 

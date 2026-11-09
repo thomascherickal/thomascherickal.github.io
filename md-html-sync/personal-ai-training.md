@@ -3,7 +3,7 @@
 
 > **PERSONAL TRAINING · 60 DAYS (30 DAYS TRAINING + 30 DAYS GUIDANCE)**  
 > **You are never forced to choose between local models, autonomous agents, prompt craft, or workflow automations.
- Your personal sprint draws on the full 12-service catalogue; you choose the services relevant to your work and
+ Your personal sprint draws on the full 16-service catalogue; you choose the services relevant to your work and
  goals:**
 
 ---
@@ -46,90 +46,81 @@ Personal Training costs $3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD ac
 
 // FULL-SPECTRUM MASTERY
 
-## The Complete 12-Service Catalogue Customized to Your
+## The Complete 16-Service Catalogue Customized to Your
  Work
 
 You are never forced to choose between local models, autonomous agents, prompt craft, or workflow automations.
- Your personal sprint draws on the full 12-service catalogue; you choose the services relevant to your work and
+ Your personal sprint draws on the full 16-service catalogue; you choose the services relevant to your work and
  goals:
 
-### 01 · Generative AI
- Transformation
+### 01 · Generative AI Transformation
 
-Move your business from one-off chatbot prompts to coordinated teams of Claude agents that carry real work.
- Ground agent swarms in your domain data with custom MCP servers, bounded execution loops, and strict
- spending limits.
+Transform personal workflows and consulting practices from manual chatbot prompts to autonomous, coordinated teams of Claude agents.
 
-### 02 · Local LLMs & Cost
- Slashing
+### 02 · Local LLMs & Cost Slashing
 
-Moving routine workloads to local models can cut recurring cloud API bills by 60% to 90%; your figure
- depends on volume and hardware. Run open-weight models privately with Ollama, vLLM, llama.cpp and LM Studio.
+Eliminate cloud API dependencies and recurring costs by self-hosting quantized open-weights models locally with Ollama and vLLM.
 
-### 03 · Claude Agent
- Orchestration
+### 03 · Claude Agent Orchestration
 
-Master the principles of Claude AI agent orchestration to run multi-agent swarms at scale. Build
- orchestrator-worker hierarchies, sequential pipelines, and parallel fan-out teams that automate complex
- workflows while controlling quality and cost.
+Build single-operator multi-agent swarms with orchestrator loops, subagent delegation, automated evaluation, and budget limits.
 
-### 04 · Agentic Assistants
+### 04 · Agentic Assistant Training
 
-Deploy Agentic Assistants from Nous Research as a self-hosted assistant on your own infrastructure. Configure
- persistent session memory so the agent retains project context, saves solved procedures as reusable skills,
- and runs scheduled tasks.
+Run private, unaligned autonomous agent loops on local hardware with open-weights agentic models and structured tool execution.
 
-### 05 · Workflow Automation
- Training
+### 05 · Personal Goals Self-Authoring
 
-Hands-on training for automating recurring office work with Claude skills, plugins, connectors, scheduled
- tasks and Microsoft 365 add-ins across sales, finance and engineering with private data options.
+Structure personal goals, track career milestones, and navigate career transitions with structured self-authoring frameworks, journaling templates, and actionable roadmaps.
 
-### 06 · AI Budget & Cost
- Control Training
+### 06 · AI Budget & Cost Control
 
-Control your AI spending as a solo builder: enforce hard token caps per session, leverage prompt caching for
- up to 90% savings, and route everyday queries to local or free-tier models.
+Enforce strict financial caps on personal developer API accounts, semantic caching, and local fallback routing to keep costs predictable.
 
-### 07 · AI Developer
- Training
+### 07 · AI Developer Training
 
-1-on-1 developer pair programming with terminal coding agents (Claude Code CLI, Google Antigravity). Catch
- bugs early with test-driven prompt harnesses and engineer custom MCP servers.
+Elevate your developer practice with Claude Code CLI, test-driven prompt harnesses, autonomous debugging, and automated refactoring.
 
 ### 08 · Advanced AI Agents
 
-Architect persistent, self-evaluating autonomous agents that execute long-horizon projects while you sleep,
- featuring test-driven verification loops and stateful memory.
+Architect persistent, self-evaluating autonomous agents that execute long-horizon projects while you sleep.
 
-### 09 · Claude Advanced
- Training
+### 09 · Claude Advanced Training
 
-Technical masterclass for solo builders: advanced Claude Code CLI workflows, Claude for Microsoft 365,
- custom Model Context Protocol (MCP) servers, and adaptive thinking effort tuning.
+Build personal MCP servers, harness prompt caching for 90% savings, and integrate Claude directly into your development environment.
 
-### 10 · Google Gemini Advanced
- Training
+### 10 · Gemini Advanced Training
 
-Hands-on technical mentoring: Google AI Studio prompt engineering with context caching, Google Antigravity
- IDE, Gemini Deep Think extended reasoning, and autonomous Gemini Agents with MCP.
+Implement Google Antigravity SDK workflows, structured schema extraction, and autonomous agent systems powered by Gemini.
 
-### 11 · Continuous Learning
- & AI Second Brain
+### 11 · Continuous Learning & Research Synthesis
 
-Architect an autonomous personal knowledge engine using NotebookLM, Obsidian vector memory, active context
- retrieval, and automated research synthesis from arXiv and technical newsletters.
+Architect an autonomous personal continuous learning engine using automated paper ingestion, podcast transcription, spaced-repetition drills, and research synthesis.
 
-### 12 · Work-Life Balance &
- Auton-Offloading
+### 12 · Work-Life Balance & Autonomous Offloading
 
-Reclaim 15-20 hours weekly through autonomous inbox triage, biological focus time-blocking, automated task
- delegation, and cognitive load minimization.
+Reclaim 15-20 hours weekly through autonomous inbox triage, biological focus time-blocking, automated task delegation, and cognitive load minimization.
+
+### 13 · AI Second Brain
+
+Build your private Markdown knowledge vault with automated capture, local-model tagging, and cited question answering.
+
+### 14 · The 7 Habits AI Executive Coaching
+
+Master Stephen Covey's 7 Habits with an autonomous executive AI operating system for daily proactivity, weekly Quadrant II scheduling, and renewal.
+
+### 15 · AI Schedule Automation & Calendar Gatekeeper
+
+Autonomous calendar gatekeeping, biological focus time-blocking, and pre-meeting context dossiers for high-output executives.
+
+### 16 · Workflow Automations
+
+End-to-end automation pipelines connecting email, task managers, and local LLMs via n8n and open-source stacks.
 
 ## Two-Phase Personal Curriculum & Daily Support
  Roadmap
 
-20 intensive days focused on your selected services from the 12-service catalogue (20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day), followed immediately by 20
+20 intensive days focused on your selected services from the 16-service catalogue (20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day), followed immediately by 20
  days of included daily work assistance on your live projects:
 
 ### Generative AI Transformation & Architecture Audit

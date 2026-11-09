@@ -2,7 +2,7 @@
 ## Thomas Cherickal - The Digital Futurist
 
 > **BUSINESS TRAINING · 60 DAYS (30 DAYS TRAINING + 30 DAYS GUIDANCE)**  
-> **Your team receives tailored enablement across the full 12-service catalogue. Select the exact capabilities
+> **Your team receives tailored enablement across the full 16-service catalogue. Select the exact capabilities
  relevant to your technical stack, operations, and business goals:**
 
 ---
@@ -47,71 +47,75 @@ Business Training costs $3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD ac
 
 // FULL-SPECTRUM BUSINESS MASTERY
 
-## The Complete 12-Service Catalogue Customized for Your
+## The Complete 16-Service Catalogue Customized for Your
  Organization
 
-Your team receives tailored enablement across the full 12-service catalogue. Select the exact capabilities
+Your team receives tailored enablement across the full 16-service catalogue. Select the exact capabilities
  relevant to your technical stack, operations, and business goals:
 
-### 01 · Generative AI
- Transformation
+### 01 · Generative AI Transformation
 
-Move your business from one-off chatbot prompts to coordinated teams of Claude agents that carry real work.
- Ground agent swarms in your domain data with custom MCP servers, bounded execution loops, and strict
- spending limits.
+Transition from one-off prompts to coordinated teams of Claude agents grounded in enterprise data with custom MCP servers.
 
-### 02 · Local LLMs &
- Cost Slashing
+### 02 · Local LLMs & Cost Slashing
 
-Moving routine workloads to local models can cut recurring cloud API bills by 60% to 90%; your figure
- depends on volume and hardware. Run open-weight models privately with Ollama, vLLM, llama.cpp and LM Studio.
+Slash recurring API costs 60%-90% via private Ollama, vLLM, GGUF/AWQ quantization, and local model clusters.
 
-### 03 · Claude Agent
- Orchestration
+### 03 · Claude Agent Orchestration
 
-Master the principles of Claude AI agent orchestration to run multi-agent swarms at scale. Build
- orchestrator-worker hierarchies, sequential pipelines, and parallel fan-out teams that automate complex
- workflows while controlling quality and cost.
+Architect orchestrator-worker swarms, parallel fan-out loops, human-in-the-loop gates, and dynamic model routing.
 
-### 04 · Agentic Assistants
+### 04 · Agentic Assistants Training
 
-Deploy Agentic Assistants from Nous Research as a self-hosted assistant on your own business infrastructure.
- Configure persistent session memory so the agent retains project context, saves solved procedures as
- reusable skills, and runs scheduled tasks.
+Deploy open-weights Agentic Assistants agent loops with multi-turn tool calling, structured JSON schemas, and function-calling fine-tunes.
 
-### 05 · Workflow Automation
- Training
+### 05 · Workflow Automations
 
-Hands-on training for automating recurring office work with Claude skills, plugins, connectors, scheduled
- tasks and Microsoft 365 add-ins across sales, finance, and engineering with private data security.
+End-to-end automation pipelines connecting CRM, databases, email, and LLM backends via n8n, Make, and open-source stacks.
 
-### 06 · AI Budget & Cost Control Training
+### 06 · AI Budget & Cost Control
 
-Train staff across all levels to control AI spending: establish hard spending caps per session and month, configure token budgets, leverage prompt caching for up to 90% input savings, and route routine tasks to free local models.
+Implement hard budget limits, token caps, fallback models, semantic caching, and spend analytics dashboards.
 
 ### 07 · AI Developer Training
 
-Hands-on bootcamps training developer cohorts on terminal and IDE coding agents (Claude Code, Google Antigravity). Catch bugs early with strict AI-assisted Test-Driven Development (TDD) and build custom MCP servers.
+Master Claude Code, agentic refactoring, test-driven prompt harnesses, and autonomous bug-hunting workflows.
 
 ### 08 · Advanced AI Agents
 
-Build production autonomous agent systems with hierarchical teams of Claude agents for business-critical workloads. Implement test-driven self-correction loops where agents fix errors until tests pass, with persistent memory.
+Build long-horizon planning agents with persistent state, tree-of-thought exploration, and self-correcting execution.
 
 ### 09 · Claude Advanced Training
 
-Technical masterclass for senior developers and AI architects: advanced Claude Code CLI workflows, Claude for Microsoft 365, designing and securing production MCP servers, and orchestrating frontier models.
+Enterprise Claude architecture: MCP tool servers, prompt caching, effort controls, and production API harnesses.
 
-### 10 · Google Gemini Advanced Training
+### 10 · Gemini Advanced Training
 
-Advanced engineering masterclass: Google AI Studio prompt engineering with context caching, Google Antigravity IDE, Gemini Deep Think extended reasoning, open-weight Google Gemma fine-tuning, and autonomous Gemini Agents.
+Business Gemini architecture: Google Antigravity SDK, structured outputs, code execution, and multi-agent coordination.
 
 ### 11 · Competitor Research & Intelligence
 
-Deploy autonomous competitive intelligence agents, automated pricing trackers, product teardown scrapers, and dynamic sales battlecards synced live to your CRM and team communication channels.
+Deploy autonomous competitive intelligence agents, automated pricing trackers, product teardown scrapers, and dynamic sales battlecards.
 
 ### 12 · AI Leads Magnet & Conversion Systems
 
-Convert anonymous web traffic into sales-ready pipeline using conversational AI audit tools, waterfall firmographic enrichment, semantic ICP qualification, and autonomous CRM calendar routing.
+Convert anonymous traffic into sales-ready pipeline using conversational AI audit tools, waterfall firmographic enrichment, and autonomous CRM routing.
+
+### 13 · AI Second Brain
+
+Build a shared team knowledge vault in Markdown with automated capture, local-model tagging, and cited question answering.
+
+### 14 · Continuous Learning & Research Synthesis
+
+Establish continuous organizational learning loops, autonomous industry research synthesis, executive briefings, and automated institutional skill acquisition.
+
+### 15 · Work-Life Balance & Autonomous Offloading
+
+Protect team productivity, eliminate burnout, automate repetitive cognitive busywork, and establish focus time boundaries.
+
+### 16 · AI Schedule Automation & Calendar Gatekeeper
+
+Deploy autonomous calendar gatekeepers, biological focus time-blocking, and pre-meeting executive context dossiers.
 
 ## Two-Phase Business Curriculum & Operational
  Roadmap

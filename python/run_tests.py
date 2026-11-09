@@ -133,7 +133,9 @@ def run_all_tests():
         suite = loader.discover(start_dir=TESTS_DIR, pattern="test_*.py")
 
         start_time = time.time()
-        runner = unittest.TextTestRunner(resultclass=RecordingTestResult, verbosity=2)
+        is_summary_only = ("--summary-only" in sys.argv)
+        stream_target = open(os.devnull, "w") if is_summary_only else None
+        runner = unittest.TextTestRunner(resultclass=RecordingTestResult, verbosity=0 if is_summary_only else 2, stream=stream_target)
         result = runner.run(suite)
         elapsed = time.time() - start_time
 
@@ -210,8 +212,9 @@ def run_all_tests():
             print("=" * 80)
             try:
                 sys.path.insert(0, os.path.join(REPO_DIR, "nlp-fuzzy-expert"))
-                from auto_healer import clean_stale_failure_reports
+                from auto_healer import clean_stale_failure_reports, update_failed_checks_file
                 clean_stale_failure_reports()
+                update_failed_checks_file(True, "", "", 0)
             except Exception:  # pragma: no cover
                 pass
             return 0
@@ -220,7 +223,7 @@ def run_all_tests():
             print("=" * 80)
             try:
                 sys.path.insert(0, os.path.join(REPO_DIR, "nlp-fuzzy-expert"))
-                from auto_healer import generate_failed_tests_report
+                from auto_healer import generate_failed_tests_report, update_failed_checks_file
                 buf = []
                 for test, err in result.failures:
                     buf.append(f"FAIL: {test}\n{err}")
@@ -228,6 +231,7 @@ def run_all_tests():
                     buf.append(f"ERROR: {test}\n{err}")
                 total_fails = len(result.failures) + len(result.errors)
                 generate_failed_tests_report("", "\n".join(buf), total_fails)
+                update_failed_checks_file(False, "", "\n".join(buf), total_fails)
             except Exception as e:  # pragma: no cover
                 print(f"[run_tests] Note: failed report generation notice: {e}")
             return 1

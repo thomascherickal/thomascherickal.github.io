@@ -124,6 +124,7 @@ from auto_healer import (
     run_unit_tests,
     compute_data_fingerprint,
     verify_data_untouched,
+    update_failed_checks_file,
 )
 from report_generator import (
     DOMAIN_FILES,
@@ -465,8 +466,15 @@ class ExpertSynchronizer:
                 handle_test_verification_and_commit(max_iterations=5)
             else:
                 passed, stdout, stderr, fail_count = run_unit_tests()
+                update_failed_checks_file(passed, stdout, stderr, fail_count)
                 if not passed:
                     raise RuntimeError(f"Post-synchronization unit test verification failed ({fail_count} failure(s)).")
+        elif not is_testing and verify_tests:
+            # Ensure FAILED-CHECKS.md is present even when no files needed updating
+            failed_checks_path = os.path.join(SCRIPT_DIR, "FAILED-CHECKS.md")
+            if not os.path.exists(failed_checks_path):
+                passed, stdout, stderr, fail_count = run_unit_tests()
+                update_failed_checks_file(passed, stdout, stderr, fail_count)
 
         return modified_count
 

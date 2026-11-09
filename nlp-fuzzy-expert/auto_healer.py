@@ -51,7 +51,7 @@ def verify_data_untouched(initial_fingerprint, data_dir=DATA_DIR):
 
 def run_unit_tests():
     """Runs the python unit test suite and returns (passed, stdout, stderr, failure_count)."""
-    test_cmd = [sys.executable, "-m", "unittest", "discover", "-s", os.path.join(REPO_DIR, "tests"), "-v"]
+    test_cmd = [sys.executable, "python/run_tests.py", "--summary-only"]
     env = os.environ.copy()
     env["ANTIGRAVITY_IN_TEST"] = "1"
     run = subprocess.run(test_cmd, cwd=REPO_DIR, capture_output=True, text=True, env=env)
@@ -122,6 +122,36 @@ def extract_failures_by_module(stdout, stderr):
 
 # Alias for backwards compatibility
 parse_test_failures = extract_failures_by_module
+
+
+FAILED_CHECKS_FILE = os.path.join(SCRIPT_DIR, "FAILED-CHECKS.md")
+
+
+def update_failed_checks_file(passed, stdout, stderr, failure_count):
+    """
+    Maintains nlp-fuzzy-expert/FAILED-CHECKS.md.
+    If all checks pass, writes exactly: 'Everything passed.'
+    If checks fail, details the failed checks and output.
+    """
+    if passed and failure_count == 0:
+        with open(FAILED_CHECKS_FILE, "w", encoding="utf-8") as f:
+            f.write("Everything passed.\n")
+    else:
+        output = (stdout + "\n" + stderr).strip()
+        lines = [
+            "# Failed Checks Report",
+            "",
+            f"- **Status**: {failure_count} failure(s) detected",
+            "",
+            "## Details",
+            "",
+            "```text",
+            output,
+            "```",
+            ""
+        ]
+        with open(FAILED_CHECKS_FILE, "w", encoding="utf-8") as f:
+            f.write("\n".join(lines))
 
 
 def clean_stale_failure_reports():
@@ -322,6 +352,7 @@ def handle_test_verification_and_commit(max_iterations=5):
     initial_data_fp = compute_data_fingerprint()
     passed, stdout, stderr, failure_count = run_unit_tests()
     verify_data_untouched(initial_data_fp)
+    update_failed_checks_file(passed, stdout, stderr, failure_count)
 
     if passed:
         print("\n[Auto-Healer] Post-sync verification: ALL UNIT TESTS PASSED.")

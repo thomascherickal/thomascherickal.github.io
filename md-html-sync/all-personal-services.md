@@ -86,12 +86,12 @@ Build personal MCP servers, harness prompt caching for 90% savings, and integrat
 
 Implement Google Antigravity SDK workflows, structured schema extraction, and autonomous agent systems powered by Gemini.
 
-### Continuous Learning & AI Second Brain
+### Continuous Learning & Research Synthesis
 
-**Category**: `Second Brain`  
-**Link**: [Continuous Learning & AI Second Brain](personal-services/personal-service-continuous-learning.html)
+**Category**: `Continuous Learning`  
+**Link**: [Continuous Learning & Research Synthesis](personal-services/personal-service-continuous-learning.html)
 
-Architect an autonomous personal knowledge engine using NotebookLM, Obsidian vector memory, active context retrieval, and automated research synthesis.
+Architect an autonomous personal continuous learning engine using automated paper ingestion, podcast transcription, spaced-repetition drills, and research synthesis.
 
 ### Work-Life Balance & Autonomous Offloading
 
@@ -102,10 +102,31 @@ Reclaim 15-20 hours weekly through autonomous inbox triage, biological focus tim
 
 ### AI Second Brain
 
-**Category**: `Personal Knowledge`  
+**Category**: `Personal Second Brain`  
 **Link**: [AI Second Brain](personal-services/personal-service-ai-second-brain.html)
 
-Build a private Markdown knowledge vault with automated capture, local-model tagging, and cited question answering from your own notes.
+Build your private Markdown knowledge vault with automated capture, local-model tagging, and cited question answering.
+
+### The 7 Habits AI Executive Coaching
+
+**Category**: `7 Habits Coaching`  
+**Link**: [The 7 Habits AI Executive Coaching](personal-services/personal-service-ai-7-habits.html)
+
+Master Stephen Covey's 7 Habits with an autonomous executive AI operating system for daily proactivity, weekly Quadrant II scheduling, and renewal.
+
+### AI Schedule Automation & Calendar Gatekeeper
+
+**Category**: `Schedule Gatekeeper`  
+**Link**: [AI Schedule Automation & Calendar Gatekeeper](personal-services/personal-service-ai-schedule-automation.html)
+
+Autonomous calendar gatekeeping, biological focus time-blocking, and pre-meeting context dossiers for high-output executives.
+
+### Workflow Automations
+
+**Category**: `Personal Automation`  
+**Link**: [Workflow Automations](personal-services/personal-service-workflow-automations.html)
+
+End-to-end automation pipelines connecting email, task managers, and local LLMs via n8n and open-source stacks.
 
 ## Ready to Accelerate Your AI Skills?
 
