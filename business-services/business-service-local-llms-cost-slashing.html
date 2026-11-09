@@ -1121,68 +1121,7 @@ flowchart TD
       </table>
     </div>
 
-    <h3 style="color:var(--cyan);font-size:1.15rem;margin-top:1.5rem;margin-bottom:0.75rem;">Deliverables &amp; 4-Week Engineering Implementation Schedule</h3>
-    <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;">
-      Our structured four-week client onboarding engagement turns theoretical cost reductions into guaranteed, air-gapped production infrastructure:
-    </p>
 
-    <div style="overflow-x:auto;margin:1.5rem 0 2rem 0;">
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Timeline</th>
-            <th>Focus &amp; Architecture</th>
-            <th>Core Deliverables &amp; Artifacts</th>
-            <th>Verification &amp; Sign-off Criteria</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong style="color:var(--cyan);">Week 1</strong></td>
-            <td>Workload Audit, Hardware Sizing &amp; ROI Projections</td>
-            <td>API spend and token audit, hardware sizing and ROI payback calculator, hardware specification (NVIDIA GPUs, Apple Silicon, AMD ROCm), and model selection matrix (Qwen, Gemma, Llama, Mistral)</td>
-            <td>Approved hardware procurement plan, baseline cost comparison, and agreed latency/throughput target SLAs</td>
-          </tr>
-          <tr>
-            <td><strong style="color:var(--cyan);">Week 2</strong></td>
-            <td>Containerized Local Inference Serving Stack</td>
-            <td>Docker Compose deployment of chosen inference engine (vLLM, llama.cpp, Ollama, LM Studio), quantization setup (4-bit, 8-bit, 16-bit), GPU driver acceleration, and health-check endpoints</td>
-            <td>Local inference engine serving requests at target tokens/sec with verified OpenAI-compatible API responses</td>
-          </tr>
-          <tr>
-            <td><strong style="color:var(--cyan);">Week 3</strong></td>
-            <td>Local-First Routing Gateway &amp; Fallback</td>
-            <td>OpenAI-compatible FastAPI / LiteLLM routing gateway sending routine queries to local models and escalating complex tasks to frontier endpoints, caching layer, and failure fallback handlers</td>
-            <td>Over 70% of standard workload resolved on local hardware with identical output quality and verified automatic escalation</td>
-          </tr>
-          <tr>
-            <td><strong style="color:var(--cyan);">Week 4</strong></td>
-            <td>Benchmark Verification, Privacy Lockdown &amp; Handover</td>
-            <td>Python and pytest benchmark suite measuring latency and memory under concurrent load, firewall lockdown ensuring zero unauthorized outbound traffic, deployment manifests, and 30-day SLA onboarding</td>
-            <td>Benchmark suite passes under concurrent load, 60% - 90% cost reduction verified against baseline, full IP transfer, and client sign-off</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Mermaid Diagram 6: Four-Stage Roadmap -->
-    <div class="diagram-container" style="margin:2.5rem 0 2rem 0;">
-      <div class="mermaid-fallback">
-        <em>Interactive lifecycle diagram: Four-stage enterprise migration roadmap.</em>
-      </div>
-      <div class="mermaid">
-flowchart TD
-    Stage1["Stage 1: Workload Profiling & Token Audit (Week 1)"] --> S1_Actions["Profile Prompt Distributions, Concurrency SLAs & Sensitivity Boundaries"]
-    S1_Actions --> Stage2["Stage 2: Model Sizing & Quantization Proving (Week 2)"]
-    Stage2 --> S2_Actions["Validate 8B - 32B Quantized Models (AWQ / FP8) on Routine Workloads"]
-    S2_Actions --> Stage3["Stage 3: High-Throughput Serving Fleet Deployment (Week 3)"]
-    Stage3 --> S3_Actions["Deploy vLLM / TensorRT-LLM on K8s with OpenAI-Compatible Gateway"]
-    S3_Actions --> Stage4["Stage 4: Privacy Lockdown & SIEM Observability (Week 4)"]
-    Stage4 --> S4_Actions["Enforce Network Air-Gap, Wire Entra ID SSO/RBAC & Activate SIEM Audit Logs"]
-    S4_Actions --> Handover["60% - 90% Cost Reduction Achieved with Sovereign Private Fleet"]
-      </div>
-      <p class="diagram-caption">Figure 10: Four-Stage Transition Lifecycle - Workload Audit to Sovereign Fleet Lockdown.</p>
-    </div>
   </section>
 
   <!-- SECTION 7: REFERENCES -->
