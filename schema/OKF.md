@@ -1,0 +1,70 @@
+---
+type: dataset
+title: "Structured Data & Schema.org Definitions"
+description: "Machine-readable JSON-LD schemas representing entities, services, guides, and breadcrumbs."
+tags: [schema, json-ld, structured-data, seo]
+timestamp: 2026-11-09T20:35:37Z
+---
+
+# Structured Data & Schema.org Definitions
+
+Machine-readable JSON-LD schemas representing entities, services, guides, and breadcrumbs.
+
+## Directory Role & Agent Guidelines
+
+- Machine-readable JSON-LD schemas extracted and mirrored from live HTML pages.
+- Synchronized via `python3 python/sync_schemas.py` during release verification passes.
+
+## Subdirectories
+
+None (Leaf directory).
+
+## File Inventory
+
+- [`404-schema.json`](404-schema.json)
+- [`all-business-services-schema.json`](all-business-services-schema.json)
+- [`all-personal-services-schema.json`](all-personal-services-schema.json)
+- [`all-services-schema.json`](all-services-schema.json)
+- [`articles-schema.json`](articles-schema.json)
+- [`business-ai-training-schema.json`](business-ai-training-schema.json)
+- [`business-service-advanced-ai-agents.json`](business-service-advanced-ai-agents.json)
+- [`business-service-agentic-ai-systems.json`](business-service-agentic-ai-systems.json)
+- [`business-service-ai-agents-orchestration.json`](business-service-ai-agents-orchestration.json)
+- [`business-service-ai-assisted-leads-magnet.json`](business-service-ai-assisted-leads-magnet.json)
+- [`business-service-ai-based-competitor-research.json`](business-service-ai-based-competitor-research.json)
+- [`business-service-ai-budget-cost-limits-training.json`](business-service-ai-budget-cost-limits-training.json)
+- [`business-service-ai-developer-training.json`](business-service-ai-developer-training.json)
+- [`business-service-ai-schedule-automation.json`](business-service-ai-schedule-automation.json)
+- [`business-service-ai-second-brain.json`](business-service-ai-second-brain.json)
+- [`business-service-claude-advanced-training.json`](business-service-claude-advanced-training.json)
+- [`business-service-continuous-learning.json`](business-service-continuous-learning.json)
+- [`business-service-gemini-advanced-training.json`](business-service-gemini-advanced-training.json)
+- [`business-service-generative-ai-transformation.json`](business-service-generative-ai-transformation.json)
+- [`business-service-local-llms-cost-slashing.json`](business-service-local-llms-cost-slashing.json)
+- [`business-service-workflow-automations.json`](business-service-workflow-automations.json)
+- [`business-service-worklife-balance.json`](business-service-worklife-balance.json)
+- [`claude-101-schema.json`](claude-101-schema.json)
+- [`claude-code-schema.json`](claude-code-schema.json)
+- [`claude-connectors-schema.json`](claude-connectors-schema.json)
+- [`claude-cowork-schema.json`](claude-cowork-schema.json)
+- [`claude-custom-mcp-schema.json`](claude-custom-mcp-schema.json)
+- [`claude-design-schema.json`](claude-design-schema.json)
+- [`claude-features-schema.json`](claude-features-schema.json)
+- [`claude-local-llms-schema.json`](claude-local-llms-schema.json)
+- [`claude-orchestration-schema.json`](claude-orchestration-schema.json)
+- [`claude-plugins-schema.json`](claude-plugins-schema.json)
+- [`claude-science-schema.json`](claude-science-schema.json)
+- [`claude-skills-schema.json`](claude-skills-schema.json)
+- [`contact-schema.json`](contact-schema.json)
+- [`expertise-schema.json`](expertise-schema.json)
+- [`faqs-schema.json`](faqs-schema.json)
+- [`google-ai-studio-schema.json`](google-ai-studio-schema.json)
+- [`google-antigravity-ide-schema.json`](google-antigravity-ide-schema.json)
+- [`google-deepmind-schema.json`](google-deepmind-schema.json)
+- ... and 30 additional files.
+
+## Context & Cross-References
+
+- Root Directory: [`/OKF.md`](../OKF.md)
+- Architectural Specification: [`GEMINI.md`](/GEMINI.md)
+- Repository Telemetry: [`METRICS.md`](/METRICS.md)

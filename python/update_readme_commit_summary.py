@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 update_readme_commit_summary.py - Extracts the summary of updates from
-LAST-COMMIT-REPORT.md and metrics.md, and appends/updates them in README.md
+LAST-COMMIT-REPORT.md and METRICS.md, and appends/updates them in README.md
 just before commit.
 
 Strict Repo Compliance:
@@ -15,7 +15,7 @@ import re
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LAST_COMMIT_REPORT_PATH = os.path.join(REPO_ROOT, "LAST-COMMIT-REPORT.md")
-METRICS_PATH = os.path.join(REPO_ROOT, "metrics.md")
+METRICS_PATH = os.path.join(REPO_ROOT, "METRICS.md")
 README_PATH = os.path.join(REPO_ROOT, "README.md")
 
 SECTION_HEADER = "## Latest Pre-Commit Report Summary"
@@ -44,7 +44,7 @@ def extract_subsection(content, heading):
 
 
 def build_summary_from_report(report_content, metrics_content=""):
-    """Parses LAST-COMMIT-REPORT.md and metrics.md and builds a concise markdown summary block for README.md."""
+    """Parses LAST-COMMIT-REPORT.md and METRICS.md and builds a concise markdown summary block for README.md."""
     gen_match = re.search(r"Generated on:\s*`([^`]+)`", report_content)
     generated_on = gen_match.group(1) if gen_match else "Latest Commit"
 
@@ -58,7 +58,7 @@ def build_summary_from_report(report_content, metrics_content=""):
     lines = [
         SECTION_HEADER,
         "",
-        f"> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`metrics.md`](metrics.md)** | Recorded on: `{generated_on}`",
+        f"> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`METRICS.md`](METRICS.md)** | Recorded on: `{generated_on}`",
         "",
     ]
 
@@ -84,7 +84,7 @@ def build_summary_from_report(report_content, metrics_content=""):
         lines.append(
             metrics_exec_sec.replace(
                 "## 1. Executive Summary",
-                "### Repository Code & Engineering Metrics Summary (`metrics.md`)",
+                "### Repository Code & Engineering Metrics Summary (`METRICS.md`)",
                 1,
             )
         )
@@ -94,7 +94,7 @@ def build_summary_from_report(report_content, metrics_content=""):
         lines.append(
             metrics_arch_sec.replace(
                 "## 2. Architecture & File Category Breakdown",
-                "### Architecture & File Category Breakdown (`metrics.md`)",
+                "### Architecture & File Category Breakdown (`METRICS.md`)",
                 1,
             )
         )
@@ -107,7 +107,7 @@ def build_summary_from_report(report_content, metrics_content=""):
 
 
 def update_readme_with_commit_summary(report_path=None, readme_path=None, metrics_path=None):
-    """Reads LAST-COMMIT-REPORT.md and metrics.md, extracts the update summary, and appends/updates it in README.md."""
+    """Reads LAST-COMMIT-REPORT.md and METRICS.md, extracts the update summary, and appends/updates it in README.md."""
     rep_file = report_path or LAST_COMMIT_REPORT_PATH
     rdm_file = readme_path or README_PATH
     met_file = metrics_path or METRICS_PATH

@@ -223,7 +223,7 @@ class TestLastCommitReport(unittest.TestCase):
             "---\n"
         )
         rep_path = os.path.join(self.temp_dir, "rep.md")
-        met_path = os.path.join(self.temp_dir, "metrics.md")
+        met_path = os.path.join(self.temp_dir, "METRICS.md")
         rdm_path = os.path.join(self.temp_dir, "README.md")
         with open(rep_path, "w", encoding="utf-8") as f:
             f.write(sample_report)
@@ -239,8 +239,8 @@ class TestLastCommitReport(unittest.TestCase):
         self.assertIn("### Commit Overview", updated1)
         self.assertIn("### Quality Gate & Verification Summary", updated1)
         self.assertIn("### Coverage Executive Summary", updated1)
-        self.assertIn("### Repository Code & Engineering Metrics Summary (`metrics.md`)", updated1)
-        self.assertIn("### Architecture & File Category Breakdown (`metrics.md`)", updated1)
+        self.assertIn("### Repository Code & Engineering Metrics Summary (`METRICS.md`)", updated1)
+        self.assertIn("### Architecture & File Category Breakdown (`METRICS.md`)", updated1)
         self.assertNotIn("Changed Files & Status (Staged)", updated1)
         self.assertNotIn("Staged Stat Summary", updated1)
         self.assertNotIn(chr(0x2014), updated1)
@@ -254,7 +254,7 @@ class TestLastCommitReport(unittest.TestCase):
         # 5. Append when README does not end with --- and metrics_path does not exist
         rdm_plain = os.path.join(self.temp_dir, "README_plain.md")
         rep_min = os.path.join(self.temp_dir, "rep_min.md")
-        missing_met = os.path.join(self.temp_dir, "missing_metrics.md")
+        missing_met = os.path.join(self.temp_dir, "missing_METRICS.md")
         with open(rdm_plain, "w", encoding="utf-8") as f:
             f.write("# Plain README\nNo separator at end.")
         with open(rep_min, "w", encoding="utf-8") as f:

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 generate_metrics.py - Comprehensive Repository Metrics Generator.
-Scans the entire git repository and produces metrics.md containing comprehensive
+Scans the entire git repository and produces METRICS.md containing comprehensive
 code, structural, content, Git history, asset, security, and schema metrics.
 Strictly zero emojis rule compliant.
 """
@@ -301,7 +301,7 @@ def generate_metrics():
     md.append(f"| [`python/check_links.py`](python/check_links.py) | Deep link and anchor target validation across all HTML files | Link Validator, Anchor Auditor |")
     md.append(f"| [`python/sync_schemas.py`](python/sync_schemas.py) | Extracts and synchronizes embedded JSON-LD schemas into `schema/` directory | Schema Extractor, JSON-LD Synchronizer |")
     md.append(f"| [`python/md_html_sync.py`](python/md_html_sync.py) | Bi-directional synchronization between HTML pages and Markdown mirrors | HTML-to-MD Parser, State Tracker |")
-    md.append(f"| [`python/generate_metrics.py`](python/generate_metrics.py) | Automated metrics engine producing this `metrics.md` document | Repository Scanner, Code Analyzer |")
+    md.append(f"| [`python/generate_metrics.py`](python/generate_metrics.py) | Automated metrics engine producing this `METRICS.md` document | Repository Scanner, Code Analyzer |")
     md.append(f"| [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |")
     md.append(f"| [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |")
     md.append(f"| [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |")
@@ -326,7 +326,7 @@ def generate_metrics():
     md.append("")
     md.append("## 8. Automated Update Triggers")
     md.append("")
-    md.append("`metrics.md` is automatically kept in sync by the following mechanisms:")
+    md.append("`METRICS.md` is automatically kept in sync by the following mechanisms:")
     md.append("1. **Local Build Pipeline**: Invoked whenever `python3 python/build_components.py` or `python3 python/generate_metrics.py` is executed.")
     md.append("2. **Git Pre-Commit Hook**: Automated execution during commit creation.")
     md.append("3. **Git Pre-Push Hook**: Automated recalculation before every `git push` to origin.")
@@ -335,7 +335,7 @@ def generate_metrics():
     md.append("*Metrics engine authored by Thomas Cherickal - Generative AI Consultant and The Digital Futurist.*")
     md.append("")
 
-    output_path = os.path.join(repo_root, "metrics.md")
+    output_path = os.path.join(repo_root, "METRICS.md")
     with open(output_path, "w", encoding="utf-8") as f:
         f.write("\n".join(md))
 

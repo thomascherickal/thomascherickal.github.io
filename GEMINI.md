@@ -201,7 +201,7 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 
 ## Last Commit Output Report Rule (`LAST-COMMIT-REPORT.md` & `README.md`)
 - **Last Commit Output Recording**: The full commit output report of the last commit made must always be stored and recorded at `LAST-COMMIT-REPORT.md` in the repository root directory.
-- **README Commit & Metrics Summary Synchronization (`python/update_readme_commit_summary.py`)**: Immediately after `LAST-COMMIT-REPORT.md`, its test coverage section, and `metrics.md` are generated, `python3 python/update_readme_commit_summary.py` extracts the summary of updates (Commit Overview, Quality Gate & Verification Summary, Coverage Executive Summary, and the Repository Code & Engineering Metrics Summary from `metrics.md`) and appends/updates it in `README.md` just before the commit is finalized.
+- **README Commit & Metrics Summary Synchronization (`python/update_readme_commit_summary.py`)**: Immediately after `LAST-COMMIT-REPORT.md`, its test coverage section, and `METRICS.md` are generated, `python3 python/update_readme_commit_summary.py` extracts the summary of updates (Commit Overview, Quality Gate & Verification Summary, Coverage Executive Summary, and the Repository Code & Engineering Metrics Summary from `METRICS.md`) and appends/updates it in `README.md` just before the commit is finalized.
 - **Strictly Pre-Commit Only (Zero Post-Commit Modifications)**: All code synchronization, component building, schema extraction, Markdown mirroring, metrics calculation, test execution, `LAST-COMMIT-REPORT.md` generation, test coverage appending, and `README.md` commit summary updating MUST happen strictly **before** the commit is finalized (inside `.git/hooks/pre-commit` / `python/hooks/pre-commit`, or prior to `git commit` in automated handlers).
 - **Clean Working Tree After Every Commit**: Never run post-commit hooks or post-commit scripts that modify tracked or untracked files after `git commit` completes. Immediately after any commit, `git status` must be 100% clean with zero modified or untracked files.
 - **Zero Emojis & Zero Em-Dashes**: The generated report strictly enforces zero emojis and zero em-dashes (spaced hyphens ` - ` or plain hyphens `-`).
@@ -211,10 +211,10 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - **Comprehensive Dual-Stack Assessment**: Evaluates Python code coverage (using coverage tracer across `nlp-fuzzy-expert/` and `python/`) and JavaScript code coverage (using native Node.js V8 code coverage `NODE_V8_COVERAGE` across `pricing-calculator.js`, `components.js`, and `mermaid.js`).
 - **100% Coverage Target**: Enforces 100% test coverage across both Python and JavaScript codebases.
 
-## Repository Metrics Rule (`metrics.md`)
-- **Automated Update Before Every Commit**: `metrics.md` must always be generated and updated via `python3 python/generate_metrics.py` before every commit, and staged as part of that commit.
-- **Pre-Commit Enforcement**: The pre-commit hook automatically executes `python3 python/generate_metrics.py` before finalizing each commit to ensure all tracked file counts, lines of code (SLOC), asset sizes, and category distributions are completely up-to-date in `metrics.md`.
-- **Zero Emojis & Zero Em-Dashes**: `metrics.md` strictly adheres to the repository compliance standards with zero emojis and zero em-dashes.
+## Repository Metrics Rule (`METRICS.md`)
+- **Automated Update Before Every Commit**: `METRICS.md` must always be generated and updated via `python3 python/generate_metrics.py` before every commit, and staged as part of that commit.
+- **Pre-Commit Enforcement**: The pre-commit hook automatically executes `python3 python/generate_metrics.py` before finalizing each commit to ensure all tracked file counts, lines of code (SLOC), asset sizes, and category distributions are completely up-to-date in `METRICS.md`.
+- **Zero Emojis & Zero Em-Dashes**: `METRICS.md` strictly adheres to the repository compliance standards with zero emojis and zero em-dashes.
 
 ## Image Generation, Asset Compression & Organization Rule (`assets/`)
 - **Strict Size Limit (< 400 KB)**: Whenever image generators are used or images are generated, added, or modified in the repository, compress every image to less than 400 KB without exception.

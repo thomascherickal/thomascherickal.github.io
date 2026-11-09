@@ -53,7 +53,7 @@ python3 python/build_md_files.py
 ```
 
 ### 7. `generate_metrics.py`
-Computes repository metrics, file counts, line numbers, and architectural telemetry into `metrics.md`.
+Computes repository metrics, file counts, line numbers, and architectural telemetry into `METRICS.md`.
 ```bash
 python3 python/generate_metrics.py
 ```

@@ -60,8 +60,8 @@ rm -f "$REPO_ROOT"/failed_*.md 2>/dev/null || true
 
 # ORDER MATTERS: the commit report overwrites LAST-COMMIT-REPORT.md,
 # the coverage report then appends its section to it, generate_metrics.py
-# updates metrics.md, the README updater pulls the summary of updates from
-# LAST-COMMIT-REPORT.md and metrics.md into README.md, and generate_metrics.py
+# updates METRICS.md, the README updater pulls the summary of updates from
+# LAST-COMMIT-REPORT.md and METRICS.md into README.md, and generate_metrics.py
 # runs a final pass so README.md line counts are exact.
 if [ -f "$REPO_ROOT/python/generate_last_commit_report.py" ]; then
     python3 "$REPO_ROOT/python/generate_last_commit_report.py" > /dev/null 2>&1 || true
@@ -77,7 +77,7 @@ if [ -f "$REPO_ROOT/python/update_readme_commit_summary.py" ]; then
     python3 "$REPO_ROOT/python/update_readme_commit_summary.py" > /dev/null 2>&1 || true
 fi
 
-# Regenerate metrics.md after all markdown reports and README.md are updated
+# Regenerate METRICS.md after all markdown reports and README.md are updated
 python3 "$REPO_ROOT/python/generate_metrics.py" > /dev/null 2>&1 || true
 
 # The coverage script deletes the legacy report; stage the deletion if it was tracked
@@ -85,7 +85,7 @@ git rm -q --cached --ignore-unmatch -- "$REPO_ROOT/TEST_COVERAGE_REPORT.md" > /d
 rm -f "$REPO_ROOT"/failed_*.md 2>/dev/null || true
 
 # Stage EVERYTHING the generators and tests may have written. This must come last.
-git add -A -- "$REPO_ROOT/metrics.md" "$REPO_ROOT/LAST-COMMIT-REPORT.md" "$REPO_ROOT/README.md" 2>/dev/null || true
+git add -A -- "$REPO_ROOT/METRICS.md" "$REPO_ROOT/LAST-COMMIT-REPORT.md" "$REPO_ROOT/README.md" 2>/dev/null || true
 git add -- "$REPO_ROOT/tests/.test_reports_cache.json" "$REPO_ROOT/tests/.js_test_reports_cache.json" 2>/dev/null || true
 git add -- "$REPO_ROOT/nlp-fuzzy-expert"/*.md \
            "$REPO_ROOT/nlp-fuzzy-expert"/*_references.json \
