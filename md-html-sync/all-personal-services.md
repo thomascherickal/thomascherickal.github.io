@@ -100,6 +100,13 @@ Architect an autonomous personal knowledge engine using NotebookLM, Obsidian vec
 
 Reclaim 15-20 hours weekly through autonomous inbox triage, biological focus time-blocking, automated task delegation, and cognitive load minimization.
 
+### AI Second Brain
+
+**Category**: `Personal Knowledge`  
+**Link**: [AI Second Brain](personal-services/personal-service-ai-second-brain.html)
+
+Build a private Markdown knowledge vault with automated capture, local-model tagging, and cited question answering from your own notes.
+
 ## Ready to Accelerate Your AI Skills?
 
 Explore full details, check purchasing power parity discounts, or get in touch for custom 1-on-1 mentorship scheduling.

@@ -107,6 +107,13 @@ Deploy autonomous competitive intelligence agents, automated pricing trackers, p
 
 Convert anonymous traffic into sales-ready pipeline using conversational AI audit tools, waterfall firmographic enrichment, and autonomous CRM routing.
 
+### AI Second Brain
+
+**Category**: `Team Knowledge`  
+**Link**: [AI Second Brain](business-services/business-service-ai-second-brain.html)
+
+Build a shared team knowledge vault in Markdown with automated capture, local-model tagging, and cited question answering.
+
 ## Ready
  to Transform Your Organization?
 

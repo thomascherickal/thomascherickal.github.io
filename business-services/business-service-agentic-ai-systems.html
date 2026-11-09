@@ -37,7 +37,7 @@
         "@id": "https://thedigitalfuturist.com/business-services/business-service-agentic-ai-systems.html#webpage",
         "url": "https://thedigitalfuturist.com/business-services/business-service-agentic-ai-systems.html",
         "name": "Agentic AI Assistants (Agentic Assistants) - Service Specification | Thomas Cherickal",
-        "description": "Business deployment of autonomously improving agentic assistants with persistent vector memory, tool orchestration, and sandbox execution. All services are one month long and can freely overlap for different customers according to their needs.",
+        "description": "Business deployment of autonomously improving agentic assistants with persistent vector memory, tool orchestration, and sandbox execution. All services are 10 days long (5 days of training and 5 days of support) and can freely overlap for different customers according to their needs.",
         "isPartOf": {
           "@id": "https://thedigitalfuturist.com/#website"
         },
@@ -70,7 +70,7 @@
         "name": "Agentic AI Assistants (Agentic Assistants) - Thomas Cherickal",
         "serviceType": "Frontier Agentic Systems & Memory",
         "url": "https://thedigitalfuturist.com/business-services/business-service-agentic-ai-systems.html",
-        "description": "Business deployment of autonomously improving agentic assistants with persistent vector memory, tool orchestration, and sandbox execution. All services are one month long and can freely overlap for different customers according to their needs.",
+        "description": "Business deployment of autonomously improving agentic assistants with persistent vector memory, tool orchestration, and sandbox execution. All services are 10 days long (5 days of training and 5 days of support) and can freely overlap for different customers according to their needs.",
         "provider": {
           "@type": "Person",
           "@id": "https://thedigitalfuturist.com/#person",
@@ -279,6 +279,7 @@
               Research</a></li>
           <li><a href="../business-services/business-service-ai-assisted-leads-magnet.html">AI-Assisted Leads Magnet</a>
           </li>
+          <li><a href="../business-services/business-service-ai-second-brain.html">AI Second Brain</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
@@ -308,6 +309,9 @@
           </li>
           <li><a href="../personal-services/personal-service-continuous-learning.html">Daily Continuous Learning</a></li>
           <li><a href="../personal-services/personal-service-worklife-balance.html">Professional Work-Life Balance</a></li>
+          <li><a href="../personal-services/personal-service-ai-second-brain.html">AI Second Brain</a></li>
+          <li><a href="../personal-services/personal-service-ai-7-habits.html">The 7 Habits AI Coaching</a></li>
+          <li><a href="../personal-services/personal-service-ai-schedule-automation.html">AI Schedule Automation</a></li>
         </ul>
       </li>
       <li><a href="../faqs.html" data-nav="faqs.html">FAQs-Section</a></li>
@@ -399,97 +403,193 @@
 </div>
 </section>
 <div class="divider"></div>
+<!-- AGENTIC AI MASTER GUIDE -->
+<section class="reveal" style="max-width:960px;margin:0 auto;padding:0 1rem 3rem 1rem;"><div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:clamp(1.25rem,3.5vw,2.5rem);box-shadow:var(--glow-gold);overflow:hidden;">
+<div style="text-align:center;max-width:860px;margin:0 auto 2rem;"><span style="display:inline-flex;padding:0.35rem 1rem;border-radius:999px;background:rgba(251,191,36,0.15);border:1px solid rgba(251,191,36,0.45);color:var(--gold);font-family:var(--font-mono);font-size:0.8rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:0.85rem;">AGENTIC AI RESEARCH BLUEPRINT</span><h2 style="font-family:var(--font-display);font-size:clamp(1.35rem,3vw,2rem);font-weight:900;color:var(--text-primary);line-height:1.3;">Master Guide to Personal and Enterprise AI Assistants: <span style="color:var(--gold);">Architecture, Deployment, Cost Control, and Ecosystem Alternatives</span></h2></div>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.25rem;">The artificial intelligence ecosystem has shifted from passive conversational chatbots to proactive, autonomous agentic systems. Rather than merely responding to user prompts, modern AI assistants operate inside background execution environments, interact with enterprise applications, execute multi-step workflows, and maintain persistent state across sessions. This report provides a technical analysis of leading personal and enterprise AI assistant architectures, focusing on Grok Bot and Hermes Agent, while examining financial token management, local large language model (LLM) execution, and major ecosystem alternatives including OpenClaw, Meta Muse, Claude Duet, and Gemini Spark. It is written for enterprise teams choosing between managed and self-hosted assistants.</p>
+<div style="background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.3);border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0;"><h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.1rem;margin-bottom:0.75rem;">Table of Contents</h3><ol style="color:var(--text-secondary);font-size:0.95rem;line-height:2;margin-left:1.5rem;list-style:decimal;"><li><a class="gold-link" href="#paradigms" style="color:var(--gold);">Core Architectural Paradigms: Managed Cloud vs. Local-First Systems</a></li><li><a class="gold-link" href="#installation" style="color:var(--gold);">Installation Pathways and Operational Workflows</a></li><li><a class="gold-link" href="#token-costs" style="color:var(--gold);">Enterprise AI Token Cost Management</a></li><li><a class="gold-link" href="#local-llm" style="color:var(--gold);">Local LLM Execution and Hardware Optimization</a></li><li><a class="gold-link" href="#ecosystem" style="color:var(--gold);">Ecosystem Alternatives</a></li><li><a class="gold-link" href="#roadmap" style="color:var(--gold);">Synthesis and Implementation Roadmap</a></li><li><a class="gold-link" href="#references" style="color:var(--gold);">Detailed References</a></li></ol></div>
+<section id="paradigms" style="margin-top:2rem;"><h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.4rem;margin:2.5rem 0 1rem;border-bottom:1px solid rgba(56,189,248,0.25);padding-bottom:0.5rem;">Core Architectural Paradigms: Managed Cloud vs. Local-First Systems</h2>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.25rem;">Autonomous AI agents fall into two primary architectural classifications: hosted cloud-managed platforms and self-managed open-source frameworks. Hosted platforms manage infrastructure, model routing, and security sandboxes for users, whereas open-source systems provide data ownership, model agnosticism, and local privacy at the cost of manual hardware maintenance.</p>
+<figure style="margin:1.75rem 0;"><img alt="Grok Bot cloud-native enterprise workspace" loading="lazy" src="../assets/agentic-ai-systems/grok-bot-enterprise-workspace.jpg" style="width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.3);box-shadow:0 8px 30px rgba(0,0,0,0.6);"/><figcaption style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">Figure 1: Grok Bot as a cloud-native shared execution workspace</figcaption></figure>
+<h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.15rem;margin:1.75rem 0 0.75rem;">Grok Bot Architecture: Cloud-Native Shared Execution Environment</h3>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.25rem;">Grok Bot, developed by SpaceXSI, functions as an autonomous cloud-native digital teammate designed to handle daily operations across corporate and personal environments. The architecture provisions worker bots on isolated cloud computers equipped with a headless browser, terminal, and filesystem. As documented in the <a class="gold-link" href="#ref-spacexsi" style="color:var(--gold);">SpaceXSI technical specifications</a>, Grok Bot operates through a dual-tier coordinator model:</p>
+<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin:0 0 1.25rem 1.5rem;list-style:disc;"><li><strong>Primary Coordinator Bot:</strong> Serves as the central user interface and main point of contact, orchestrating multi-step workflows and delegating specific duties to specialized bots.</li><li><strong>Specialized Task Bots:</strong> Dedicated workers (such as Expense Manager, Talent Scout, or Bug Reproduction Bot) that maintain domain memories, rules, and routine schedules.</li></ul>
+<div style="margin:1.5rem 0;padding:1rem;background:#040711;border:1px solid rgba(251,191,36,0.32);border-left:3px solid var(--gold);border-radius:8px;overflow-x:auto;"><div class="mermaid">
+flowchart TD
+  U["User"] --> C["Primary Coordinator Bot"]
+  C --> E["Expense Manager Bot"]
+  C --> T["Talent Scout Bot"]
+  C --> B["Bug Reproduction Bot"]
+  E --> VM["Isolated Cloud Computer"]
+  T --> VM
+  B --> VM
+  VM --> BR["Headless Browser"]
+  VM --> TM["Terminal"]
+  VM --> FS["Shared Filesystem"]
+  V["Vault and Secure Forms"] -. "token injection at execution time" .-> BR
+</div><p style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">Diagram 1: Grok Bot dual-tier coordinator model</p></div>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.25rem;">Security within Grok Bot relies on isolated cloud execution per user. Sensitive credentials and payment methods are stored in a Vault or submitted via Secure Forms. The AI model never sees raw passwords or card numbers; tokens are injected into target web forms at execution time. All bots created by a single user share the cloud computer's filesystem and active browser sessions, requiring strict permission rules.</p>
+<figure style="margin:1.75rem 0;"><img alt="Hermes Agent local-first modular architecture" loading="lazy" src="../assets/agentic-ai-systems/hermes-agent-local-architecture.jpg" style="width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.3);box-shadow:0 8px 30px rgba(0,0,0,0.6);"/><figcaption style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">Figure 2: Hermes Agent as a modular local-first autonomous engine</figcaption></figure>
+<h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.15rem;margin:1.75rem 0 0.75rem;">Hermes Agent Architecture: Modular Open-Source Autonomous Engine</h3>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.25rem;">Developed by Nous Research, Hermes Agent represents a modular, self-improving, open-source AI assistant framework designed to run locally on private hardware or cloud instances, as described in the <a class="gold-link" href="#ref-hermes" style="color:var(--gold);">Hermes Agent handbook</a>. The core engine (<code>run_agent.py</code> and <code>AIAgent</code>) orchestrates model-agnostic inference, persistent state management, dynamic tool calling, and background self-improvement. Its structural subsystems are:</p>
+<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin:0 0 1.25rem 1.5rem;list-style:disc;"><li><strong>AIAgent Core Orchestrator:</strong> The central brain that receives user inputs via CLI, Text User Interface (TUI), or messaging gateways, managing execution loops within an iteration budget.</li><li><strong>HermesState and Memory Subsystem:</strong> Combines SQLite session persistence (<code>state.db</code>) with Holographic Reduced Representations (HRR) vector memory (<code>memory_store.db</code>) to enable entity resolution, trust scoring, and cross-session recall.</li><li><strong>SkillLoader and Dynamic Skills Engine:</strong> Loads procedural memory routines defined in Markdown files (<code>SKILL.md</code>). A closed learning loop managed by a background Curator thread extracts successful multi-tool execution patterns into reusable skills.</li><li><strong>GatewayManager:</strong> Connects the central execution loop to messaging platforms including Telegram, Discord, Slack, WhatsApp, and Signal, alongside native CLI and TUI interfaces.</li></ul>
+<div style="margin:1.5rem 0;padding:1rem;background:#040711;border:1px solid rgba(251,191,36,0.32);border-left:3px solid var(--gold);border-radius:8px;overflow-x:auto;"><div class="mermaid">
+flowchart TD
+  IN["CLI, TUI, or Messaging Gateway"] --> GM["GatewayManager"]
+  GM --> AG["AIAgent Core Orchestrator"]
+  AG --> ST["HermesState: state.db"]
+  AG --> MEM["HRR Memory: memory_store.db"]
+  AG --> SK["SkillLoader: SKILL.md files"]
+  AG --> TL["Tools and MCP Servers"]
+  AG --> MD["Model Backend: Ollama, vLLM, OpenRouter, Anthropic"]
+  AG --> CU["Background Curator Thread"]
+  CU --> SK
+</div><p style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">Diagram 2: Hermes Agent subsystem layout and closed learning loop</p></div>
+<h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.15rem;margin:1.75rem 0 0.75rem;">Comparative Architectural Analysis</h3>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.25rem;">Evaluating Grok Bot against Hermes Agent highlights fundamental trade-offs in infrastructure ownership, security isolation, and model flexibility. The comparative breakdown below highlights key structural parameters across both systems:</p>
+<div style="overflow-x:auto;margin:1.5rem 0;"><table class="data-table"><thead><tr><th>Technical Dimension</th><th>Grok Bot (SpaceXSI)</th><th>Hermes Agent (Nous Research)</th></tr></thead><tbody><tr><td><strong style="color:var(--gold);">Deployment Model</strong></td><td>Managed Cloud Infrastructure</td><td>Self-Hosted / Local Machine</td></tr><tr><td><strong style="color:var(--gold);">Model Selection</strong></td><td>Proprietary model stack</td><td>Model-agnostic (Ollama, vLLM, OpenRouter, Anthropic, Local GGUF/MLX)</td></tr><tr><td><strong style="color:var(--gold);">Execution Environment</strong></td><td>Shared Cloud Virtual Machine per user</td><td>Local OS subprocess, Docker container, or SSH remote worker</td></tr><tr><td><strong style="color:var(--gold);">Credential Handling</strong></td><td>Isolated Vault and browser injection</td><td>Environment variables (.env), encrypted local storage, or MCP tools</td></tr><tr><td><strong style="color:var(--gold);">Memory Framework</strong></td><td>Per-bot work log, shared profile facts, rules</td><td>Holographic HRR vector memory, SQLite state, Markdown SKILL.md files</td></tr><tr><td><strong style="color:var(--gold);">Extensibility</strong></td><td>Marketplace plugins, MCP servers, Tinkabot</td><td>Native MCP client/server, procedural skills, custom Python tools</td></tr></tbody></table></div>
+</section>
+<section id="installation" style="margin-top:2rem;"><h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.4rem;margin:2.5rem 0 1rem;border-bottom:1px solid rgba(56,189,248,0.25);padding-bottom:0.5rem;">Installation Pathways and Operational Workflows</h2>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.25rem;">Deploying autonomous assistants requires configuring runtime environments, setting authentication credentials, and establishing approval boundaries to ensure safe execution.</p>
+<h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.15rem;margin:1.75rem 0 0.75rem;">Grok Bot Onboarding Workflow</h3>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.25rem;">Installing Grok Bot involves provisioning desktop applications across supported operating systems (macOS, Windows, Linux) and authenticating against subscription plans (The X Subscription Premium/Super/Ultra or Cursor Enterprise). The setup process proceeds through three sequential operational phases:</p>
+<ol style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin:0 0 1.25rem 1.5rem;list-style:decimal;"><li><strong>Desktop Installation:</strong> Users download the native installer from x.ai/bot or distribute package installers via Cursor dashboard admin links.</li><li><strong>Account Authentication:</strong> Authentication uses Cursor SSO or direct Grok account linking. Enterprise environments require configuring privacy modes before initiating bot sessions.</li><li><strong>Task Assignment and Routine Creation:</strong> The user initiates a task with a starter bot (such as Chief of Staff). When an action involves external communication or spending, the bot displays an inline approval card. Upon completion, the workflow can be saved as a scheduled routine (for example, weekdays at 8:00 AM).</li></ol>
+<div style="margin:1.5rem 0;padding:1rem;background:#040711;border:1px solid rgba(251,191,36,0.32);border-left:3px solid var(--gold);border-radius:8px;overflow-x:auto;"><div class="mermaid">
+flowchart TD
+  A["Download installer from x.ai/bot or Cursor admin link"] --> B["Authenticate: Cursor SSO or Grok account"]
+  B --> C["Configure privacy mode (enterprise)"]
+  C --> D["Assign task to starter bot, e.g. Chief of Staff"]
+  D --> E{"External communication or spending?"}
+  E -- "Yes" --> F["Inline approval card"]
+  E -- "No" --> G["Execute task"]
+  F --> G
+  G --> H["Save as scheduled routine, e.g. weekdays 8:00 AM"]
+</div><p style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">Diagram 3: Grok Bot onboarding and approval workflow</p></div>
+<h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.15rem;margin:1.75rem 0 0.75rem;">Hermes Agent Setup and Gateway Configuration</h3>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.25rem;">Hermes Agent provides an automated installation script that configures Python environments, uv, Node.js dependencies, and shell completions. Deployment follows a three-step sequence:</p>
+<ol style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin:0 0 1.25rem 1.5rem;list-style:decimal;"><li><strong>Environment Installation:</strong> On macOS or Linux, run the installer below. On Windows 11, run the PowerShell command.</li><li><strong>Interactive Configuration:</strong> Running <code>hermes setup</code> or <code>hermes model</code> launches the provider wizard to set API endpoints (Nous Portal, OpenRouter, Anthropic, Ollama Cloud, or vLLM).</li><li><strong>Gateway and Cron Setup:</strong> For 24/7 background operation, run <code>hermes gateway setup</code> to pair Telegram/Discord bots, and configure background automations via <code>hermes cron create</code>.</li></ol>
+<div style="margin:1.5rem 0;"><div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;background:#060913;border:1px solid rgba(56,189,248,0.32);border-bottom:none;border-left:3px solid var(--cyan);border-top-left-radius:8px;border-top-right-radius:8px;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);"><span>bash (macOS / Linux)</span><button class="copy-btn btn" type="button" aria-label="Copy code to clipboard" style="padding:0.25rem 0.75rem;font-size:0.75rem;text-decoration:none !important;">Copy</button></div><pre style="margin:0;padding:1.25rem;background:#040711;border:1px solid rgba(56,189,248,0.32);border-top:none;border-left:3px solid var(--cyan);border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow-x:auto;"><code>curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash</code></pre></div>
+<div style="margin:1.5rem 0;"><div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;background:#060913;border:1px solid rgba(56,189,248,0.32);border-bottom:none;border-left:3px solid var(--cyan);border-top-left-radius:8px;border-top-right-radius:8px;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);"><span>powershell (Windows 11)</span><button class="copy-btn btn" type="button" aria-label="Copy code to clipboard" style="padding:0.25rem 0.75rem;font-size:0.75rem;text-decoration:none !important;">Copy</button></div><pre style="margin:0;padding:1.25rem;background:#040711;border:1px solid rgba(56,189,248,0.32);border-top:none;border-left:3px solid var(--cyan);border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow-x:auto;"><code>irm https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1 | iex</code></pre></div>
+<div style="margin:1.5rem 0;"><div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;background:#060913;border:1px solid rgba(56,189,248,0.32);border-bottom:none;border-left:3px solid var(--cyan);border-top-left-radius:8px;border-top-right-radius:8px;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);"><span>bash (configuration)</span><button class="copy-btn btn" type="button" aria-label="Copy code to clipboard" style="padding:0.25rem 0.75rem;font-size:0.75rem;text-decoration:none !important;">Copy</button></div><pre style="margin:0;padding:1.25rem;background:#040711;border:1px solid rgba(56,189,248,0.32);border-top:none;border-left:3px solid var(--cyan);border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow-x:auto;"><code>hermes setup
+hermes model
+hermes gateway setup
+hermes cron create</code></pre></div>
+</section>
+<section id="token-costs" style="margin-top:2rem;"><h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.4rem;margin:2.5rem 0 1rem;border-bottom:1px solid rgba(56,189,248,0.25);padding-bottom:0.5rem;">Enterprise AI Token Cost Management</h2>
+<figure style="margin:1.75rem 0;"><img alt="Enterprise security, governance and FinOps for AI agents" loading="lazy" src="../assets/agentic-ai-systems/enterprise-security-governance-finops.jpg" style="width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.3);box-shadow:0 8px 30px rgba(0,0,0,0.6);"/><figcaption style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">Figure 3: Security, governance, and FinOps controls for agent token spend</figcaption></figure>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.25rem;">As enterprise adoption shifts from single-turn chat to multi-step workflows, token consumption increases significantly. As established in the <a class="gold-link" href="#ref-c1" style="color:var(--gold);">Correlation One 2026 playbook</a>, token expenses scale with active usage and architectural design rather than fixed seat licenses. Managing AI costs is an engineering-behavior discipline. The seven operational levers for cost optimization are:</p>
+<ol style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin:0 0 1.25rem 1.5rem;list-style:decimal;"><li><strong>Calibrated Model Routing:</strong> Match task difficulty to model capacity. Send routine classification and formatting to smaller models; reserve frontier models for complex orchestration.</li><li><strong>Context Payload Discipline:</strong> Separate static enterprise guardrails from task data, prune intermediate history, and use precise RAG rather than dumping large documents into context.</li><li><strong>Structured Prompt Caching:</strong> Organize system prompts and schemas into stable prefixes to leverage provider caching discounts.</li><li><strong>Output Generation Control:</strong> Cap maximum output tokens, enforce structured JSON or table formats, and reserve extended chain-of-thought for hard problems.</li><li><strong>Asynchronous Batch Processing:</strong> Route non-interactive workloads (nightly processing, evaluation runs) to discounted batch endpoints.</li><li><strong>Agent Loop Termination Budgets:</strong> Impose step limits, tool call caps, and explicit termination criteria to prevent infinite execution loops.</li><li><strong>Unit-Economics Measurement:</strong> Track cost per completed business outcome (for example, cost per ticket or invoice) rather than raw token costs.</li></ol>
+<div style="margin:1.5rem 0;padding:1rem;background:#040711;border:1px solid rgba(251,191,36,0.32);border-left:3px solid var(--gold);border-radius:8px;overflow-x:auto;"><div class="mermaid">
+flowchart TD
+  R["Incoming agent task"] --> RT{"Task difficulty"}
+  RT -- "Routine" --> SM["Small model"]
+  RT -- "Complex" --> FM["Frontier model"]
+  SM --> CC["Cached stable prompt prefix"]
+  FM --> CC
+  CC --> OC["Capped, structured output"]
+  OC --> LB["Loop budget and termination check"]
+  LB --> UE["Unit-economics metric: cost per outcome"]
+</div><p style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">Diagram 4: Cost-control pipeline applying the seven levers</p></div>
+</section>
+<section id="local-llm" style="margin-top:2rem;"><h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.4rem;margin:2.5rem 0 1rem;border-bottom:1px solid rgba(56,189,248,0.25);padding-bottom:0.5rem;">Local LLM Execution and Hardware Optimization</h2>
+<figure style="margin:1.75rem 0;"><img alt="Enterprise agent routing fabric across local and cloud models" loading="lazy" src="../assets/agentic-ai-systems/enterprise-agent-routing-fabric.jpg" style="width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.3);box-shadow:0 8px 30px rgba(0,0,0,0.6);"/><figcaption style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">Figure 4: Routing fabric spanning local backends and cloud models</figcaption></figure>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.25rem;">Running inference locally provides data privacy, eliminates token API costs, and ensures offline availability. Hermes Agent supports local LLM serving through multiple backends:</p>
+<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin:0 0 1.25rem 1.5rem;list-style:disc;"><li><strong>llama.cpp (Metal and CPU):</strong> C++ runtime with Apple Silicon Metal acceleration. Quantized Key-Value (KV) caching (<code>--cache-type-k q4_0</code> and <code>--cache-type-v q4_0</code>) reduces KV memory overhead by up to 75%, enabling 128K context windows in 16 GB RAM with fast time-to-first-token latency (about 67 ms). See the <a class="gold-link" href="#ref-llamacpp" style="color:var(--gold);">llama.cpp project</a>.</li><li><strong>MLX / omlx (Apple Silicon Native):</strong> Apple's ML framework for unified memory architectures. MLX provides up to 37% faster token generation (about 96 tokens/sec on M-series chips), making it ideal for long-form generation. See the <a class="gold-link" href="#ref-mlx" style="color:var(--gold);">MLX framework</a>.</li><li><strong>vLLM (Enterprise GPU Clusters):</strong> High-throughput backend for GPU clusters (NVIDIA DGX Spark). vLLM uses PagedAttention, detailed in the <a class="gold-link" href="#ref-vllm" style="color:var(--gold);">PagedAttention paper</a>, to optimize memory allocation across large GPU memory pools.</li></ul>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.25rem;">Hermes Agent requires at least 64,000 tokens of context. Memory sizing follows:</p>
+<div style="margin:1.5rem 0;"><div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;background:#060913;border:1px solid rgba(56,189,248,0.32);border-bottom:none;border-left:3px solid var(--cyan);border-top-left-radius:8px;border-top-right-radius:8px;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);"><span>formula</span><button class="copy-btn btn" type="button" aria-label="Copy code to clipboard" style="padding:0.25rem 0.75rem;font-size:0.75rem;text-decoration:none !important;">Copy</button></div><pre style="margin:0;padding:1.25rem;background:#040711;border:1px solid rgba(56,189,248,0.32);border-top:none;border-left:3px solid var(--cyan);border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow-x:auto;"><code>Total Memory = Model Weight Size + KV Cache Footprint + OS Overhead</code></pre></div>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.25rem;">For a 9B 4-bit model (Q4_K_M), weights require about 5.3 GB; 4-bit quantized KV cache (q4_0) at 128K context adds about 4 GB, operating within 10-12 GB of free RAM.</p>
+<div style="margin:1.5rem 0;"><div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;background:#060913;border:1px solid rgba(56,189,248,0.32);border-bottom:none;border-left:3px solid var(--cyan);border-top-left-radius:8px;border-top-right-radius:8px;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);"><span>bash (llama.cpp quantized KV cache)</span><button class="copy-btn btn" type="button" aria-label="Copy code to clipboard" style="padding:0.25rem 0.75rem;font-size:0.75rem;text-decoration:none !important;">Copy</button></div><pre style="margin:0;padding:1.25rem;background:#040711;border:1px solid rgba(56,189,248,0.32);border-top:none;border-left:3px solid var(--cyan);border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow-x:auto;"><code>llama-server -m model-Q4_K_M.gguf -c 131072 \
+  --cache-type-k q4_0 --cache-type-v q4_0</code></pre></div>
+</section>
+<section id="ecosystem" style="margin-top:2rem;"><h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.4rem;margin:2.5rem 0 1rem;border-bottom:1px solid rgba(56,189,248,0.25);padding-bottom:0.5rem;">Ecosystem Alternatives</h2>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.25rem;">Beyond Grok Bot and Hermes Agent, major assistant alternatives include open-source frameworks and corporate cloud platforms:</p>
+<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin:0 0 1.25rem 1.5rem;list-style:disc;"><li><strong>OpenClaw:</strong> Self-hosted Node.js framework created by Peter Steinberger (247k+ GitHub stars). Connects local/cloud LLMs to WhatsApp, Telegram, Discord, Slack, iMessage, and Signal. Uses cron heartbeats, live canvas rendering, and community skills (ClawHub). Operates on an operator-trust security model, requiring Docker container isolation. See the <a class="gold-link" href="#ref-openclaw" style="color:var(--gold);">OpenClaw architecture analysis</a>.</li><li><strong>Meta Muse:</strong> Personal agent operating inside an isolated Muse Secure VM with a Linux computer and browser. Connects to Gmail, Instagram, and WhatsApp, featuring custom user spaces. Purchases are protected by Link's wallet using single-use virtual card numbers, with actions gated by the Sentinel safety agent.</li><li><strong>Claude Duet:</strong> Anthropic's proactive agent application built on Claude Opus. Sends morning briefs, executes cloud tasks across 6,000+ connectors, and uses auto-mode classifiers and Managed Agent credential isolation. See the <a class="gold-link" href="#ref-anthropic" style="color:var(--gold);">Anthropic safety announcement</a>.</li><li><strong>Google Gemini Spark and Enterprise:</strong> Gemini Spark runs proactive 24/7 background workflows on Gemini. Gemini Enterprise serves as a unified search and agent portal across corporate SaaS tools (Salesforce, Jira, SharePoint, Drive), enforcing access controls and Model Armor protection. See the <a class="gold-link" href="#ref-google" style="color:var(--gold);">Gemini Enterprise use cases</a>.</li></ul>
+<div style="overflow-x:auto;margin:1.5rem 0;"><table class="data-table"><thead><tr><th>Platform</th><th>Ownership Model</th><th>Underlying Models</th><th>Core Strength</th><th>Key Limitation</th></tr></thead><tbody><tr><td><strong style="color:var(--gold);">OpenClaw</strong></td><td>Open Source (MIT)</td><td>Model-agnostic</td><td>Multi-channel chat, massive skills ecosystem</td><td>Host security requires container isolation</td></tr><tr><td><strong style="color:var(--gold);">Meta Muse</strong></td><td>Managed SaaS</td><td>Muse Spark / Meta</td><td>Deep app integration, free tier, VM sandbox</td><td>Restricted geographic availability (US/Canada)</td></tr><tr><td><strong style="color:var(--gold);">Claude Duet</strong></td><td>Managed SaaS</td><td>Claude Opus</td><td>Proactive briefs, 6,000+ connectors</td><td>Waitlist access; shares plan token limits</td></tr><tr><td><strong style="color:var(--gold);">Gemini Spark</strong></td><td>Managed SaaS/Cloud</td><td>Gemini Flash/Pro</td><td>Deep Google Workspace integration, 24/7 execution</td><td>Lock-in to Google Cloud / Workspace</td></tr></tbody></table></div>
+</section>
+<section id="roadmap" style="margin-top:2rem;"><h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.4rem;margin:2.5rem 0 1rem;border-bottom:1px solid rgba(56,189,248,0.25);padding-bottom:0.5rem;">Synthesis and Implementation Roadmap</h2>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.25rem;">Organizations evaluating personal AI assistant deployment should adopt a three-stage implementation roadmap, consistent with the <a class="gold-link" href="#ref-rytsense" style="color:var(--gold);">Rytsense enterprise playbook</a>:</p>
+<ol style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin:0 0 1.25rem 1.5rem;list-style:decimal;"><li><strong>Stage 1 (Identify and Validate):</strong> Select bounded workflows with operational friction and baseline metrics (for example, ticket triage, morning news synthesis).</li><li><strong>Stage 2 (Architect and Secure):</strong> Establish context limits, identity scope, and least-privilege tool access. For open-source deployments (Hermes/OpenClaw), isolate environments using Docker or dedicated virtual hardware.</li><li><strong>Stage 3 (Deploy and Scale):</strong> Implement an Autonomy Ladder - starting with read-only recommendations, moving to human-in-the-loop approvals, and unlocking bounded autonomy only after evaluation suites confirm reliability.</li></ol>
+<div style="margin:1.5rem 0;padding:1rem;background:#040711;border:1px solid rgba(251,191,36,0.32);border-left:3px solid var(--gold);border-radius:8px;overflow-x:auto;"><div class="mermaid">
+flowchart TD
+  S1["Stage 1: Identify and Validate bounded workflows"] --> S2["Stage 2: Architect and Secure, least privilege, Docker isolation"]
+  S2 --> S3["Stage 3: Deploy and Scale"]
+  S3 --> L1["Autonomy Ladder: read-only recommendations"]
+  L1 --> L2["Human-in-the-loop approvals"]
+  L2 --> L3["Bounded autonomy after evaluation suites pass"]
+</div><p style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">Diagram 5: Three-stage roadmap and Autonomy Ladder</p></div>
+</section>
+<section id="references" style="margin-top:2rem;"><h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.4rem;margin:2.5rem 0 1rem;border-bottom:1px solid rgba(56,189,248,0.25);padding-bottom:0.5rem;">Detailed References</h2>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.25rem;">Primary sources for this report are listed first, followed by supporting technical references for local inference and tool protocols. All links open in a new tab.</p>
+<ul style="color:var(--text-secondary);font-size:0.9rem;line-height:1.8;margin:0 0 1.5rem 1.5rem;list-style:disc;"><li id="ref-anthropic">Anthropic. (2026). <a class="gold-link" href="https://www.anthropic.com/news" target="_blank" rel="noopener noreferrer">Introducing Claude Duet: Safety, Privacy, and Proactive Agent Capabilities</a>. Anthropic Research. Covers proactive briefs, auto-mode classifiers, and Managed Agent credential isolation.</li><li id="ref-c1">Correlation One. (2026). <a class="gold-link" href="https://www.correlation-one.com/" target="_blank" rel="noopener noreferrer">How to Manage AI Token Costs in the Enterprise: The 2026 Playbook</a>. C1 Insights. Source of the seven cost-optimization levers.</li><li id="ref-google">Google Cloud. (2026). <a class="gold-link" href="https://cloud.google.com/gemini-enterprise" target="_blank" rel="noopener noreferrer">Gemini Enterprise Use Cases: Workflow Automation and Agent Architecture</a>. Google Cloud Tech. Covers Model Armor and access controls across SaaS tools.</li><li id="ref-hermes">Nous Research. (2026). <a class="gold-link" href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener noreferrer">Hermes Agent Technical Handbook and Architecture Manual</a>. Nous Research Documentation. Covers AIAgent, HermesState, SkillLoader, and GatewayManager.</li><li id="ref-rytsense">Rytsense Technologies. (2026). <a class="gold-link" href="https://www.rytsense.com/" target="_blank" rel="noopener noreferrer">The Enterprise AI Agent Playbook: From Pilot to Production</a>. Executive Buyer's Guide. Basis for the staged roadmap and autonomy ladder.</li><li id="ref-spacexsi">SpaceXSI. (2026). <a class="gold-link" href="https://x.ai/bot" target="_blank" rel="noopener noreferrer">Grok Bot Documentation and Security Architecture</a>. SpaceX Super Intelligence LLC. Covers coordinator model, Vault, Secure Forms, and onboarding.</li><li id="ref-openclaw">Steinberger, P., and Skywork AI. (2026). <a class="gold-link" href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener noreferrer">OpenClaw Ecosystem and Architecture Analysis</a>. Skywork Technical Reports. Covers channels, ClawHub skills, and operator-trust security.</li><li id="ref-vllm">Kwon, W., Li, Z., Zhuang, S., Sheng, Y., Zheng, L., Yu, C. H., Gonzalez, J. E., Zhang, H., and Stoica, I. (2023). <a class="gold-link" href="https://arxiv.org/abs/2309.06180" target="_blank" rel="noopener noreferrer">Efficient Memory Management for Large Language Model Serving with PagedAttention</a>. SOSP 2023. Background for vLLM memory allocation.</li><li id="ref-llamacpp">Gerganov, G., and contributors. (2026). <a class="gold-link" href="https://github.com/ggml-org/llama.cpp" target="_blank" rel="noopener noreferrer">llama.cpp: LLM Inference in C/C++</a>. GitHub. Reference for GGUF, Metal acceleration, and quantized KV cache flags.</li><li id="ref-mlx">Apple Machine Learning Research. (2026). <a class="gold-link" href="https://github.com/ml-explore/mlx" target="_blank" rel="noopener noreferrer">MLX: An Array Framework for Apple Silicon</a>. GitHub. Unified memory framework for local generation.</li><li id="ref-mcp">Anthropic and contributors. (2026). <a class="gold-link" href="https://modelcontextprotocol.io/" target="_blank" rel="noopener noreferrer">Model Context Protocol Specification</a>. Reference for the MCP client/server extensibility referenced for Hermes Agent and Grok Bot.</li><li id="ref-ollama">Ollama. (2026). <a class="gold-link" href="https://github.com/ollama/ollama" target="_blank" rel="noopener noreferrer">Ollama: Run Large Language Models Locally</a>. GitHub. One of the supported local backends for Hermes Agent.</li></ul>
+</section>
+<div class="service-cta-buttons" style="margin:2rem 0;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;"><a class="btn btn-commission btn-lg" href="../contact.html">Commission Agentic Systems →</a><a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a></div>
+</div></section>
+<div class="divider"></div>
 <!-- STRUCTURED SPECIFICATION LISTS -->
 <section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
 <div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:2.5rem;box-shadow:var(--glow-gold);">
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">1. Service
-          Overview &amp; Scope</h2>
+<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">1. Service Overview &amp; Scope</h2>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;">A focused 10-day engagement: <strong>5 days of live training</strong> (4 hours per day, Monday to Friday) followed by <strong>5 days of dedicated support</strong>. The scope is deliberately narrow so that your team can leave day 5 with one working, self-hosted agent.</p>
 <ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Self-Hosted Agentic Assistants:</strong> Installing and configuring Agentic Assistants (MIT-licensed, released
-            by Nous Research in February 2026) as an always-on service on your Linux server or workstation.</li>
-<li><strong>Persistent Memory:</strong> Setting up session history and memory so the agent keeps project
-            context, preferences and past decisions across conversations.</li>
-<li><strong>Skills From Experience:</strong> Configuring how the agent saves solved procedures as reusable
-            skills, and reviewing those skills before your team relies on them.</li>
-<li><strong>Model Choice:</strong> Connecting Agentic Assistants to local models through Ollama, llama.cpp, vLLM or
-            LM Studio, to Claude, or to OpenRouter, depending on your cost and privacy needs.</li>
-<li><strong>Tools, Schedules and Access:</strong> Connecting MCP servers and internal tools, setting up
-            scheduled tasks, and reaching the agent from the terminal or your team chat, all inside Docker with limited
-            permissions.</li>
+<li><strong>One Working Agent:</strong> Install Agentic Assistants (open source, from Nous Research) in a single Docker container on one Linux server, workstation or Mac.</li>
+<li><strong>One Model Backend:</strong> Connect the agent to one model: a local model through Ollama, or Claude or OpenRouter through an API key.</li>
+<li><strong>Basic Memory:</strong> Turn on session history and memory so the agent remembers project context between conversations.</li>
+<li><strong>One Chat Channel:</strong> Reach the agent from the terminal and from one messaging app (Telegram, Slack or Discord).</li>
+<li><strong>One Custom Tool and Two Skills:</strong> Add one simple tool (for example, reading a folder of documents) and save two reusable skills for recurring tasks.</li>
+<li><strong>One Scheduled Task:</strong> Set up one recurring task, such as a weekday morning summary.</li>
 </ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">2. Standard
-          Architecture &amp; Tools</h2>
+<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">2. Standard Architecture &amp; Tools</h2>
 <ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Agent Framework:</strong> Agentic Assistants with its memory store, skills library and task scheduler.
-          </li>
-<li><strong>Model Backends:</strong> Local open-weight models (Qwen, Gemma, Llama, Mistral) via Ollama,
-            llama.cpp, vLLM or LM Studio, plus Claude or OpenRouter through an OpenAI-compatible endpoint.</li>
-<li><strong>Tools and Integrations:</strong> MCP servers in Python or Rust, Python tool scripts, and messaging
-            channels such as Slack, Discord or Telegram.</li>
-<li><strong>Isolation:</strong> Docker containers running as non-root, with limited network access and file
-            permissions.</li>
+<li><strong>Agent Framework:</strong> Agentic Assistants with its default memory store, skills folder and task scheduler.</li>
+<li><strong>Model Backend:</strong> Ollama with one small local model, or Claude or OpenRouter through an API key.</li>
+<li><strong>Tools and Channels:</strong> One simple tool or MCP server, plus one messaging channel.</li>
+<li><strong>Isolation:</strong> A single Docker container running as non-root, with only the folders the agent needs mounted.</li>
 </ul>
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">3.
-          Deliverable Examples &amp; 4-Week Schedule</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:1.5rem;list-style:disc;">
-<li><strong>Containerized Agentic Assistants Deployment:</strong> Docker Compose setup with configuration, secrets
-            handling, persistent storage for memory and skills, and backups.</li>
-<li><strong>Custom Tool &amp; MCP Integrations:</strong> Python or Rust tools that let the agent query your
-            databases, read internal documents and call internal APIs.</li>
-<li><strong>Starter Skills Library:</strong> A reviewed set of skills for your team's recurring tasks, written
-            and tested before handover.</li>
-<li><strong>Evaluation Suite:</strong> pytest checks covering tool selection, argument correctness, memory
-            recall and recovery from failed steps.</li>
-</ul>
-<div style="overflow-x:auto;margin:1.5rem 0 2rem 0;">
-<table class="data-table">
-<thead>
-<tr>
-<th>Timeline</th>
-<th>Focus &amp; Architecture</th>
-<th>Core Deliverables &amp; Artifacts</th>
-<th>Verification &amp; Sign-off Criteria</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong style="color:var(--cyan);">Week 1</strong></td>
-<td>Agentic Assistants Installation &amp; Model Backend Configuration</td>
-<td>Docker Compose deployment of Agentic Assistants on Linux server or workstation, persistent storage volumes, and model backend connection (Ollama, llama.cpp, vLLM, LM Studio, Claude, or OpenRouter)</td>
-<td>Always-on agent service responding reliably with chosen local or API model backend and baseline latency verified</td>
-</tr>
-<tr>
-<td><strong style="color:var(--cyan);">Week 2</strong></td>
-<td>Persistent Memory &amp; Task Scheduler Setup</td>
-<td>Session history configuration, cross-conversation memory store, scheduled task routines, and terminal/team chat messaging integration (Slack, Discord, or Telegram)</td>
-<td>Agent retains project context and preferences across distinct sessions and executes scheduled background tasks on time</td>
-</tr>
-<tr>
-<td><strong style="color:var(--cyan);">Week 3</strong></td>
-<td>Custom Tools, MCP Servers &amp; Skills Library</td>
-<td>Python and Rust MCP servers, internal database and document tools, schema-checked tool validation, and starter library of reviewed, tested skills for recurring procedures</td>
-<td>Agent executes multi-step tool calls with schema validation and successfully saves and reuses reviewed procedure skills</td>
-</tr>
-<tr>
-<td><strong style="color:var(--cyan);">Week 4</strong></td>
-<td>Evaluation Suite, Docker Isolation &amp; Handover</td>
-<td>pytest test suite covering tool selection, argument correctness, and memory recall, non-root Docker security lockdown, complete configuration transfer, and 30-day support onboarding</td>
-<td>All pytest evaluation checks pass, backup routines verified, complete configuration and IP handed over with client sign-off</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">4. Guarantees
-          &amp; Commitments</h2>
+<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">3. Deliverables &amp; 5-Day Training Schedule</h2>
 <ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Private Operation Option:</strong> When paired with local models, the agent runs without calls to
-            commercial LLM APIs.</li>
-<li><strong>Checked Tool Calls:</strong> Tool inputs are validated against schemas, and failed calls are
-            caught, retried or escalated.</li>
-<li><strong>100% Client Code &amp; Configuration Ownership:</strong> All configuration, tools, skills and
-            documentation transfer to you.</li>
-<li><strong>30-Day Engineering Support:</strong> Help with model swaps, runtime tuning and new tool
-            integrations.</li>
+<li><strong>Running Deployment:</strong> A Docker Compose file, a configuration file and a short setup guide that you can reuse.</li>
+<li><strong>Working Tool and Skills:</strong> One tool and two skills, each tested by hand during training.</li>
+<li><strong>Handover Checklist:</strong> A one-page checklist covering startup, backup, model swap and basic troubleshooting.</li>
+</ul>
+<div style="margin:1.5rem 0;padding:1.25rem 1.5rem;background:rgba(251,191,36,0.05);border:1px solid rgba(251,191,36,0.3);border-radius:12px;"><h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.1rem;margin-bottom:0.25rem;">Day 1: Concepts, Docker Installation and Model Backend</h3><p style="color:var(--text-muted);font-size:0.85rem;font-family:var(--font-mono);margin-bottom:0.75rem;">4 hours live training, 6 tasks</p><ol style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;list-style:decimal;"><li>Compare chatbots, copilots and agents: the agent loop of plan, tool call, observe and repeat, and where an iteration budget stops it.</li><li>Review the architecture: AIAgent orchestrator, state database, memory store, skills folder and gateway.</li><li>Prepare the host: install Docker and Compose, create a non-root user and a project folder with <code>data/</code> and <code>skills/</code> subfolders.</li><li>Run the installer and the <code>hermes setup</code> wizard inside the container.</li><li>Connect one model backend: pull a local model with Ollama, or enter a Claude or OpenRouter key stored in a <code>.env</code> file.</li><li>Confirm the context window is at least 64,000 tokens, send a test prompt and record time-to-first-token and tokens per second.</li></ol><div style="margin:1rem 0;"><div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;background:#060913;border:1px solid rgba(56,189,248,0.32);border-bottom:none;border-left:3px solid var(--cyan);border-top-left-radius:8px;border-top-right-radius:8px;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);"><span>bash</span><button class="copy-btn btn" type="button" aria-label="Copy code to clipboard" style="padding:0.25rem 0.75rem;font-size:0.75rem;text-decoration:none !important;">Copy</button></div><pre style="margin:0;padding:1.25rem;background:#040711;border:1px solid rgba(56,189,248,0.32);border-top:none;border-left:3px solid var(--cyan);border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow-x:auto;"><code>ollama pull qwen3:8b
+mkdir -p ~/agent/data ~/agent/skills &amp;&amp; cd ~/agent
+hermes setup
+hermes model</code></pre></div>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;"><strong style="color:var(--cyan);">End-of-day check:</strong> Agent answers a test prompt from the chosen model and the baseline speed is written down.</p></div>
+<div style="margin:1.5rem 0;padding:1.25rem 1.5rem;background:rgba(251,191,36,0.05);border:1px solid rgba(251,191,36,0.3);border-radius:12px;"><h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.1rem;margin-bottom:0.25rem;">Day 2: Memory and Messaging Channels</h3><p style="color:var(--text-muted);font-size:0.85rem;font-family:var(--font-mono);margin-bottom:0.75rem;">4 hours live training, 6 tasks</p><ol style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;list-style:decimal;"><li>Explain the two memory layers: session history in SQLite and vector memory for entities and cross-session recall.</li><li>Mount the data folder as a Docker volume so memory survives container restarts.</li><li>Store three project facts and three preferences, then restart the container and test recall in a new session.</li><li>Create a Telegram bot (or Slack or Discord app) and keep its token in <code>.env</code>, never in the config file.</li><li>Pair the channel with <code>hermes gateway setup</code> and restrict it to an allow-list of your own user IDs.</li><li>Review memory content, remove one wrong entry, and discuss what should never be stored (passwords, personal data).</li></ol><div style="margin:1rem 0;"><div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;background:#060913;border:1px solid rgba(56,189,248,0.32);border-bottom:none;border-left:3px solid var(--cyan);border-top-left-radius:8px;border-top-right-radius:8px;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);"><span>bash</span><button class="copy-btn btn" type="button" aria-label="Copy code to clipboard" style="padding:0.25rem 0.75rem;font-size:0.75rem;text-decoration:none !important;">Copy</button></div><pre style="margin:0;padding:1.25rem;background:#040711;border:1px solid rgba(56,189,248,0.32);border-top:none;border-left:3px solid var(--cyan);border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow-x:auto;"><code>hermes gateway setup
+docker compose restart
+docker compose logs -f --tail=50</code></pre></div>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;"><strong style="color:var(--cyan);">End-of-day check:</strong> The agent recalls a fact from an earlier session and answers a message from the paired chat.</p></div>
+<div style="margin:1.5rem 0;padding:1.25rem 1.5rem;background:rgba(251,191,36,0.05);border:1px solid rgba(251,191,36,0.3);border-radius:12px;"><h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.1rem;margin-bottom:0.25rem;">Day 3: Tools, MCP and Skills</h3><p style="color:var(--text-muted);font-size:0.85rem;font-family:var(--font-mono);margin-bottom:0.75rem;">4 hours live training, 6 tasks</p><ol style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;list-style:decimal;"><li>Explain how tool calling works: the model proposes a function name and JSON arguments, the agent validates and runs it.</li><li>Build one small Python tool that lists and reads files in a single mounted <code>docs/</code> folder, read-only.</li><li>Register the tool, or expose it as a small MCP server, and inspect the arguments the model sends.</li><li>Trigger a deliberate bad call (wrong argument type) and watch how validation catches it and the agent retries.</li><li>Complete a recurring task twice, then save it as a <code>SKILL.md</code> skill and write a second skill by hand.</li><li>Review both skills line by line, check they contain no secrets, and test that the agent reuses them in a new session.</li></ol><div style="margin:1rem 0;"><div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;background:#060913;border:1px solid rgba(56,189,248,0.32);border-bottom:none;border-left:3px solid var(--cyan);border-top-left-radius:8px;border-top-right-radius:8px;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);"><span>python</span><button class="copy-btn btn" type="button" aria-label="Copy code to clipboard" style="padding:0.25rem 0.75rem;font-size:0.75rem;text-decoration:none !important;">Copy</button></div><pre style="margin:0;padding:1.25rem;background:#040711;border:1px solid rgba(56,189,248,0.32);border-top:none;border-left:3px solid var(--cyan);border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow-x:auto;"><code>def read_doc(name: str) -> str:
+    """Return the text of one file inside the docs folder."""
+    from pathlib import Path
+    base = Path("/data/docs").resolve()
+    path = (base / name).resolve()
+    if base not in path.parents:
+        raise ValueError("path outside docs folder")
+    return path.read_text()[:20000]</code></pre></div>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;"><strong style="color:var(--cyan);">End-of-day check:</strong> The agent calls the tool correctly, recovers from a bad call and reuses a saved skill.</p></div>
+<div style="margin:1.5rem 0;padding:1.25rem 1.5rem;background:rgba(251,191,36,0.05);border:1px solid rgba(251,191,36,0.3);border-radius:12px;"><h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.1rem;margin-bottom:0.25rem;">Day 4: Schedules, Cost Control and Safety</h3><p style="color:var(--text-muted);font-size:0.85rem;font-family:var(--font-mono);margin-bottom:0.75rem;">4 hours live training, 6 tasks</p><ol style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;list-style:decimal;"><li>Create one scheduled task with <code>hermes cron create</code>, such as a weekday 8:00 AM summary posted to the chat channel.</li><li>Set an iteration budget, a maximum output length and a tool-call limit so that no task can loop without end.</li><li>Apply the cost levers in practice: route simple tasks to a small model, keep the system prompt stable for caching, and compare token use before and after.</li><li>Harden the container: non-root user, read-only root filesystem, dropped capabilities, and only the data folder writable.</li><li>Restrict network access to the model endpoint and the chat service, and add an approval step for any action that sends or spends.</li><li>Simulate a risky request (for example, delete a file) and confirm the agent is blocked or asks for approval.</li></ol><div style="margin:1rem 0;"><div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;background:#060913;border:1px solid rgba(56,189,248,0.32);border-bottom:none;border-left:3px solid var(--cyan);border-top-left-radius:8px;border-top-right-radius:8px;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);"><span>yaml</span><button class="copy-btn btn" type="button" aria-label="Copy code to clipboard" style="padding:0.25rem 0.75rem;font-size:0.75rem;text-decoration:none !important;">Copy</button></div><pre style="margin:0;padding:1.25rem;background:#040711;border:1px solid rgba(56,189,248,0.32);border-top:none;border-left:3px solid var(--cyan);border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow-x:auto;"><code>services:
+  agent:
+    user: "1000:1000"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    env_file: .env
+    volumes:
+      - ./data:/data</code></pre></div>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;"><strong style="color:var(--cyan);">End-of-day check:</strong> The scheduled task runs on time, loop limits work and the agent cannot write outside the data folder.</p></div>
+<div style="margin:1.5rem 0;padding:1.25rem 1.5rem;background:rgba(251,191,36,0.05);border:1px solid rgba(251,191,36,0.3);border-radius:12px;"><h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.1rem;margin-bottom:0.25rem;">Day 5: Testing, Backup and Handover</h3><p style="color:var(--text-muted);font-size:0.85rem;font-family:var(--font-mono);margin-bottom:0.75rem;">4 hours live training, 6 tasks</p><ol style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;list-style:decimal;"><li>Write a 10-item manual test list covering model reply, memory recall, channel reply, tool call, bad-call recovery, skill reuse and scheduled run.</li><li>Run the test list end to end and record pass or fail for each item.</li><li>Fix any failing item and rerun only that item.</li><li>Create a backup script for the data and skills folders and test a restore into a fresh folder.</li><li>Practice a model swap (local to API or the reverse) and a safe rollback using the saved configuration.</li><li>Hand over the Compose file, configuration, tool, skills and the one-page checklist, and walk through restart and troubleshooting unaided.</li></ol><div style="margin:1rem 0;"><div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;background:#060913;border:1px solid rgba(56,189,248,0.32);border-bottom:none;border-left:3px solid var(--cyan);border-top-left-radius:8px;border-top-right-radius:8px;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);"><span>bash</span><button class="copy-btn btn" type="button" aria-label="Copy code to clipboard" style="padding:0.25rem 0.75rem;font-size:0.75rem;text-decoration:none !important;">Copy</button></div><pre style="margin:0;padding:1.25rem;background:#040711;border:1px solid rgba(56,189,248,0.32);border-top:none;border-left:3px solid var(--cyan);border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow-x:auto;"><code>tar czf backup-$(date +%F).tgz data skills
+mkdir restore-test &amp;&amp; tar xzf backup-*.tgz -C restore-test
+docker compose up -d --force-recreate</code></pre></div>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;"><strong style="color:var(--cyan);">End-of-day check:</strong> All ten checks pass, a restore works and you can restart and troubleshoot the agent without help.</p></div>
+<div style="margin:1.5rem 0 2rem;padding:1.25rem 1.5rem;border:1px solid rgba(56,189,248,0.3);border-radius:12px;"><h3 style="font-family:var(--font-display);color:var(--cyan);font-size:1.1rem;margin-bottom:0.5rem;">Days 6-10: Dedicated Support</h3><p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;">Five days of support by message after training: questions, fixes, model swaps and small tool changes within the original scope.</p></div>
+<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">4. Guarantees &amp; Commitments</h2>
+<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
+<li><strong>Private Operation Option:</strong> With a local model, the agent runs without calls to commercial LLM APIs.</li>
+<li><strong>Clear Scope:</strong> The agreed scope is one agent, one model, one channel, one tool and one schedule. Larger builds are a separate engagement.</li>
+<li><strong>100% Client Code &amp; Configuration Ownership:</strong> All configuration, tools, skills and documentation transfer to you.</li>
+<li><strong>5-Day Support:</strong> Help with model swaps, small fixes and questions for 5 days after training.</li>
 </ul>
 <h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">5. Investment
           &amp; Pricing Quote</h2>
@@ -506,7 +606,7 @@
           <li><strong>Global Purchasing Power Parity (PPP) Available for All Service Pricing:</strong>
             <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
               <li><strong>Tier 1 (Standard / 100%):</strong> Individual $300 USD | Business $300 USD | Business 60d $3,000 USD | Personal 60d $3,000 USD (USA, UK, EU, Canada, Australia)</li>
-              <li><strong>Tier 2 (Upper-Middle-Income / 25% Off):</strong> Individual $225 USD | Business $225 USD | Business 60d $2,($300 / $225 / $150 / $150 / $75 / Custom USD) | Personal 60d $2,($300 / $225 / $150 / $150 / $75 / Custom USD): e.g. Brazil, Mexico, Malaysia, Thailand, Türkiye</li>
+              <li><strong>Tier 2 (Upper-Middle-Income / 25% Off):</strong> Individual $225 USD | Business $225 USD | Business 60d $2,250 USD | Personal 60d $2,250 USD (e.g. Brazil, Mexico, Malaysia, Thailand, Turkiye)</li>
               <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Individual $150 USD | Business $150 USD | Business 60d $1,500 USD | Personal 60d $1,500 USD</li>
               <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Individual $75 USD | Business $75 USD | Business 60d $750 USD | Personal 60d $750 USD</li>
               <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Individual $30 USD | Business $30 USD | Custom Subsidized Relief / Micro-Rates</li>
@@ -525,8 +625,7 @@
 <ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
 <li><strong style="color:var(--gold);">Agentic Assistants, Self-Hosted:</strong> Nous Research's open-source agent
             running on your infrastructure.</li>
-<li><strong style="color:var(--gold);">Strict 1-Month Delivery:</strong> 4-week program from installation to
-            production tools and handover.</li>
+<li><strong style="color:var(--gold);">Strict 10-Day Delivery:</strong> 5 days of training (4 hours per day) plus 5 days of support, from installation to handover.</li>
 <li><strong style="color:var(--gold);">Memory and Skills:</strong> An agent that keeps context across sessions
             and reuses reviewed skills.</li>
 <li><strong style="color:var(--gold);">Flexible Model Backends:</strong> Local models for privacy and cost,
@@ -837,6 +936,12 @@
     </p>
   </footer>
     <!-- END:FOOTER -->
+<script src="../assets/js/mermaid.min.js"></script>
+<script>
+(function(){if(typeof mermaid==="undefined"){return;}
+mermaid.initialize({startOnLoad:false,theme:"base",flowchart:{useMaxWidth:false},themeVariables:{darkMode:true,background:"#020408",primaryColor:"#0c111d",primaryTextColor:"#e2e8f0",primaryBorderColor:"#38bdf8",lineColor:"#fbbf24",secondaryColor:"#060912",tertiaryColor:"#131926",textColor:"#e2e8f0",fontSize:"15px"}});
+window.addEventListener("load",function(){if(document.querySelector(".mermaid")){mermaid.run({querySelector:".mermaid",suppressErrors:true}).catch(function(e){console.error(e);});}});})();
+</script>
 <script src="../components.js"></script>
 </body>
 </html>

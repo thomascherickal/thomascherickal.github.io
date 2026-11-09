@@ -108,11 +108,11 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - **Continuous File Watcher Daemon**: Run `python3 nlp-fuzzy-expert/watcher.py` (or `python3 nlp-fuzzy-expert/watcher.py --once` for single pass) to monitor `data/*.json` and trigger automatic repository-wide synchronization on file save.
 - **Artifacts Generated**: Domain references (`*_references.json`), master reference dictionary (`references_dictionary.json`), and domain synchronization markdown reports (`*.md`) in `nlp-fuzzy-expert/`.
 
-## Unit Testing Suite, Pre-Commit Test Enforcement & Automatic Push Rule (`tests/` & `python/run_tests.py`)
+## Unit Testing Suite, Pre-Commit Test Enforcement & Commit/Push Workflow (`tests/` & `python/run_tests.py`)
 - **Test Command**: Run all unit tests with `python3 python/run_tests.py` or `python3 -m unittest discover -s tests -v`.
 - **Run Tests After HTML Changes**: When changes are made to repository HTML or JS files, always run the test suite to verify 100% test pass rate across all 36+ test cases.
 - **Pre-Commit Enforcement**: The pre-commit hook automatically executes `python3 python/run_tests.py` and `node pricing-tests.js`. If any unit test fails, the commit is aborted. Never bypass or force commits with broken tests.
-- **Automatic Push on Passing Commit**: Whenever a commit passes all pre-commit checks and unit tests, ALWAYS push it immediately (`git push`) in the same workflow without waiting to be asked. Never leave verified local commits unpushed.
+- **No Automatic Commit and Push on Every Change**: Do NOT commit or push automatically on every individual edit or change. Only commit or push when the user explicitly requests it or when a complete multi-step task is fully concluded and ready for version control. Unrequested incremental commits and pushes must not be executed.
 
 ## Practice Pricing, Payment Structure & Licensing Rules
 - **Business AI Training Flagship**:
@@ -216,11 +216,13 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - **Pre-Commit Enforcement**: The pre-commit hook automatically executes `python3 python/generate_metrics.py` before finalizing each commit to ensure all tracked file counts, lines of code (SLOC), asset sizes, and category distributions are completely up-to-date in `metrics.md`.
 - **Zero Emojis & Zero Em-Dashes**: `metrics.md` strictly adheres to the repository compliance standards with zero emojis and zero em-dashes.
 
-## Shortened Category Names in Terminal Summary Tables Rule
-- **Horizontal Spacing Harmony**: All terminal summary tables (in pre-push hooks, sync reports, test summaries, or CLI tools) must maintain strict horizontal spacing harmony across standard terminal widths (80 columns).
-- **Shortened Category Labels Only**: Use concise, shortened category names only (e.g. `Core Pages`, `Business Guides`, `Personal Guides`, `Claude Guides`, `Google Guides`, `Calculators`, `MD Mirrors`, `Schemas`, `Doc Pages`, `NLP Core`, `Build Tools`, `Unit Tests`, `UI Scripts`).
-- **No File Names or Extension Details**: Do not include raw file paths, file extensions (such as `(.html)`, `(.js)`, `schema/*.json`), or parenthetical directory paths in the category column of terminal tables.
-- **Single-Line Fit**: Category labels must be concise enough to fit comfortably within designated column widths without truncation, wrapping, or blowing out row boundaries.
+## Image Generation, Asset Compression & Organization Rule (`assets/`)
+- **Strict Size Limit (< 400 KB)**: Whenever image generators are used or images are generated, added, or modified in the repository, compress every image to less than 400 KB without exception.
+- **Automatic Compression & Old File Cleanup**: When compressing images to under 400 KB, delete the old larger uncompressed files so only the optimized versions exist.
+- **Assets Organization in Article Folders**: Organize article-specific images inside dedicated subfolders within `assets/` named after the topic or service (e.g. `assets/local-ai-revolution/`, `assets/claude-orchestration/`, `assets/ai-developer-training/`, `assets/ai-agents-orchestration/`, `assets/advanced-ai-agents/`, `assets/generative-ai-transformation/`, `assets/guarantees/`, `assets/antigravity/`).
+- **New Folders for New Articles**: When creating new articles or guides that introduce new images, always create dedicated subfolders in `assets/` and reference images using the organized subfolder path.
+- **Reference Integrity**: Always update and maintain image references across all HTML files, Markdown documents (`md-html-sync/`), JSON schemas, and scripts whenever assets are added, moved, or reorganized.
+
 
 
 

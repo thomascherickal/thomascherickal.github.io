@@ -7,68 +7,46 @@
 
 ---
 
-## 1. Service
- Overview & Scope
-
-- Self-Hosted Agentic Assistants: Installing and configuring Agentic Assistants (MIT-licensed, released
- by Nous Research in February 2026) as an always-on service on your Linux server or workstation.
-- Persistent Memory: Setting up session history and memory so the agent keeps project
- context, preferences and past decisions across conversations.
-- Skills From Experience: Configuring how the agent saves solved procedures as reusable
- skills, and reviewing those skills before your team relies on them.
-- Model Choice: Connecting Agentic Assistants to local models through Ollama, llama.cpp, vLLM or
- LM Studio, to Claude, or to OpenRouter, depending on your cost and privacy needs.
-- Tools, Schedules and Access: Connecting MCP servers and internal tools, setting up
- scheduled tasks, and reaching the agent from the terminal or your team chat, all inside Docker with limited
- permissions.
+## Master Guide to Personal and Enterprise AI Assistants: Architecture, Deployment, Cost Control, and Ecosystem Alternatives
 
 ---
 
-## 2. Standard
- Architecture & Tools
+## 1. Service Overview & Scope
 
-- Agent Framework: Agentic Assistants with its memory store, skills library and task scheduler.
-- Model Backends: Local open-weight models (Qwen, Gemma, Llama, Mistral) via Ollama,
- llama.cpp, vLLM or LM Studio, plus Claude or OpenRouter through an OpenAI-compatible endpoint.
-- Tools and Integrations: MCP servers in Python or Rust, Python tool scripts, and messaging
- channels such as Slack, Discord or Telegram.
-- Isolation: Docker containers running as non-root, with limited network access and file
- permissions.
+A focused 10-day engagement: 5 days of live training (4 hours per day, Monday to Friday) followed by 5 days of dedicated support. The scope is deliberately narrow so that you can leave day 5 with one working, self-hosted agent.
 
----
-
-## 3.
- Deliverable Examples & 4-Week Schedule
-
-- Containerized Agentic Assistants Deployment: Docker Compose setup with configuration, secrets
- handling, persistent storage for memory and skills, and backups.
-- Custom Tool & MCP Integrations: Python or Rust tools that let the agent query your
- databases, read internal documents and call internal APIs.
-- Starter Skills Library: A reviewed set of skills for your team's recurring tasks, written
- and tested before handover.
-- Evaluation Suite: pytest checks covering tool selection, argument correctness, memory
- recall and recovery from failed steps.
-
-| Timeline | Focus & Architecture | Core Deliverables & Artifacts | Verification & Sign-off Criteria |
-| :--- | :--- | :--- | :--- |
-| Week 1 | Agentic Assistants Installation & Model Backend Configuration | Docker Compose deployment of Agentic Assistants on Linux server or workstation, persistent storage volumes, and model backend connection (Ollama, llama.cpp, vLLM, LM Studio, Claude, or OpenRouter) | Always-on agent service responding reliably with chosen local or API model backend and baseline latency verified |
-| Week 2 | Persistent Memory & Task Scheduler Setup | Session history configuration, cross-conversation memory store, scheduled task routines, and terminal/team chat messaging integration (Slack, Discord, or Telegram) | Agent retains project context and preferences across distinct sessions and executes scheduled background tasks on time |
-| Week 3 | Custom Tools, MCP Servers & Skills Library | Python and Rust MCP servers, internal database and document tools, schema-checked tool validation, and starter library of reviewed, tested skills for recurring procedures | Agent executes multi-step tool calls with schema validation and successfully saves and reuses reviewed procedure skills |
-| Week 4 | Evaluation Suite, Docker Isolation & Handover | pytest test suite covering tool selection, argument correctness, and memory recall, non-root Docker security lockdown, complete configuration transfer, and 30-day support onboarding | All pytest evaluation checks pass, backup routines verified, complete configuration and IP handed over with client sign-off |
+- One Working Agent: Install Agentic Assistants (open source, from Nous Research) in a single Docker container on one Linux server, workstation or Mac.
+- One Model Backend: Connect the agent to one model: a local model through Ollama, or Claude or OpenRouter through an API key.
+- Basic Memory: Turn on session history and memory so the agent remembers project context between conversations.
+- One Chat Channel: Reach the agent from the terminal and from one messaging app (Telegram, Slack or Discord).
+- One Custom Tool and Two Skills: Add one simple tool (for example, reading a folder of documents) and save two reusable skills for recurring tasks.
+- One Scheduled Task: Set up one recurring task, such as a weekday morning summary.
 
 ---
 
-## 4. Guarantees
- & Commitments
+## 2. Standard Architecture & Tools
 
-- Private Operation Option: When paired with local models, the agent runs without calls to
- commercial LLM APIs.
-- Checked Tool Calls: Tool inputs are validated against schemas, and failed calls are
- caught, retried or escalated.
-- 100% Client Code & Configuration Ownership: All configuration, tools, skills and
- documentation transfer to you.
-- 30-Day Engineering Support: Help with model swaps, runtime tuning and new tool
- integrations.
+- Agent Framework: Agentic Assistants with its default memory store, skills folder and task scheduler.
+- Model Backend: Ollama with one small local model, or Claude or OpenRouter through an API key.
+- Tools and Channels: One simple tool or MCP server, plus one messaging channel.
+- Isolation: A single Docker container running as non-root, with only the folders the agent needs mounted.
+
+---
+
+## 3. Deliverables & 5-Day Training Schedule
+
+- Running Deployment: A Docker Compose file, a configuration file and a short setup guide that you can reuse.
+- Working Tool and Skills: One tool and two skills, each tested by hand during training.
+- Handover Checklist: A one-page checklist covering startup, backup, model swap and basic troubleshooting.
+
+---
+
+## 4. Guarantees & Commitments
+
+- Private Operation Option: With a local model, the agent runs without calls to commercial LLM APIs.
+- Clear Scope: The agreed scope is one agent, one model, one channel, one tool and one schedule. Larger builds are a separate engagement.
+- 100% Client Code & Configuration Ownership: All configuration, tools, skills and documentation transfer to you.
+- 5-Day Support: Help with model swaps, small fixes and questions for 5 days after training.
 
 ---
 
@@ -82,7 +60,7 @@
  - Comprehensive Personal Training: $3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD for 60 days (30 days live training + 30 days guidance, Q&A and written guides, 60 days over 2 months with Saturday and Sunday as holidays, 4 hours per day). Strictly for 1 person only (private acceleration).
 - Global Purchasing Power Parity (PPP) Available for All Service Pricing:
  - Tier 1 (Standard / 100%): Individual $300 USD | Business $300 USD | Business 60d $3,000 USD | Personal 60d $3,000 USD (USA, UK, EU, Canada, Australia)
- - Tier 2 (Upper-Middle-Income / 25% Off): Individual $225 USD | Business $225 USD | Business 60d $2,($300 / $225 / $150 / $150 / $75 / Custom USD) | Personal 60d $2,($300 / $225 / $150 / $150 / $75 / Custom USD): e.g. Brazil, Mexico, Malaysia, Thailand, Türkiye
+ - Tier 2 (Upper-Middle-Income / 25% Off): Individual $225 USD | Business $225 USD | Business 60d $2,250 USD | Personal 60d $2,250 USD (e.g. Brazil, Mexico, Malaysia, Thailand, Turkiye)
  - Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off): Individual $150 USD | Business $150 USD | Business 60d $1,500 USD | Personal 60d $1,500 USD
  - Tier 5 (Academia & Non-Profits / 75% Off): Individual $75 USD | Business $75 USD | Business 60d $750 USD | Personal 60d $750 USD
  - Tier 6 (Crisis-Affected & Under-Resourced Regions): Individual $30 USD | Business $30 USD | Custom Subsidized Relief / Micro-Rates
@@ -96,8 +74,7 @@
 
 - Agentic Assistants, Self-Hosted: Nous Research's open-source agent
  running on your infrastructure.
-- Strict 1-Month Delivery: 4-week program from installation to
- production tools and handover.
+- Strict 10-Day Delivery: 5 days of training (4 hours per day) plus 5 days of support, from installation to handover.
 - Memory and Skills: An agent that keeps context across sessions
  and reuses reviewed skills.
 - Flexible Model Backends: Local models for privacy and cost,
