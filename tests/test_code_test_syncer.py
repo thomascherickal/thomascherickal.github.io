@@ -39,6 +39,9 @@ class TestCodeTestSynchronizer(unittest.TestCase):
         sources = self.syncer.discover_source_files()
         basenames = [os.path.basename(s) for s in sources]
         self.assertIn("pricing-calculator.js", basenames)
+        self.assertIn("payment-schedule.js", basenames)
+        self.assertIn("pricing-calculator-tier-1.js", basenames)
+        self.assertIn("pricing-calculator-tier-6.js", basenames)
         self.assertIn("components.js", basenames)
         self.assertIn("generate_sitemap.py", basenames)
         self.assertIn("build_components.py", basenames)
@@ -50,6 +53,9 @@ class TestCodeTestSynchronizer(unittest.TestCase):
         tests = self.syncer.discover_test_files()
         basenames = [os.path.basename(t) for t in tests]
         self.assertIn("pricing-tests.js", basenames)
+        self.assertIn("test_payment_schedule.js", basenames)
+        self.assertIn("pricing-calculator-tier-1-tests.js", basenames)
+        self.assertIn("pricing-calculator-tier-6-tests.js", basenames)
         self.assertTrue(any(b.startswith("test_") and b.endswith(".py") for b in basenames))
 
     def test_compute_changed_lines(self):

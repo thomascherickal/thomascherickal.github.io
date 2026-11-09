@@ -16,8 +16,8 @@ All services are delivered remotely worldwide with 4 hours a day of live instruc
 
 Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
 
-- Business Individual Pick: $250 USD base for 1 seat, with additional seats at $250 USD per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
-- Personal Individual Pick: $250 USD strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
+- Business Individual Pick: ($300 / $225 / $150 / $150 / $75 / Custom USD) base for 1 seat, with additional seats at ($300 / $225 / $150 / $150 / $75 / Custom USD) per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
+- Personal Individual Pick: ($300 / $225 / $150 / $150 / $75 / Custom USD) strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
 
 ### Payment Structure & Trust Guarantees
 
@@ -34,6 +34,6 @@ Every client engagement is safeguarded by strict trust guarantees:
 ---
 
 ### Ready to Orchestrate Production Claude AI Agent Teams?
-- [Schedule Strategy Consultation via Email →](collaboration.html)
+- [Schedule Strategy Consultation via Email →](contact.html)
 - [View Advisory Packages & Rates](pricing.html)
 - [Explore Claude Agents Suite](claude-101.html)

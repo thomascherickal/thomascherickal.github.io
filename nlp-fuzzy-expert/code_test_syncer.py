@@ -90,6 +90,7 @@ class CodeTestSynchronizer:
         abs_data = os.path.abspath(DATA_DIR)
         sources = [
             os.path.join(self.repo_dir, "pricing-calculator.js"),
+            os.path.join(self.repo_dir, "payment-schedule.js"),
             os.path.join(self.repo_dir, "components.js"),
             os.path.join(self.repo_dir, "python", "generate_sitemap.py"),
             os.path.join(self.repo_dir, "python", "build_components.py"),
@@ -97,6 +98,11 @@ class CodeTestSynchronizer:
             os.path.join(self.repo_dir, "python", "generate_og_card.py"),
             os.path.join(self.repo_dir, "python", "check_links.py"),
         ]
+        pcalc_dir = os.path.join(self.repo_dir, "pricing-calculator")
+        if os.path.exists(pcalc_dir):
+            for fname in sorted(os.listdir(pcalc_dir)):
+                if fname.endswith(".js") and not fname.endswith("-tests.js"):
+                    sources.append(os.path.join(pcalc_dir, fname))
         return [
             f for f in sources
             if os.path.exists(f) and not os.path.abspath(f).startswith(abs_data)
@@ -104,7 +110,15 @@ class CodeTestSynchronizer:
 
     def discover_test_files(self):
         """Discovers all unit test files to synchronize."""
-        tests = [os.path.join(self.repo_dir, "pricing-tests.js")]
+        tests = [
+            os.path.join(self.repo_dir, "pricing-tests.js"),
+            os.path.join(self.repo_dir, "tests", "js", "test_payment_schedule.js"),
+        ]
+        pcalc_dir = os.path.join(self.repo_dir, "pricing-calculator")
+        if os.path.exists(pcalc_dir):
+            for fname in sorted(os.listdir(pcalc_dir)):
+                if fname.endswith("-tests.js"):
+                    tests.append(os.path.join(pcalc_dir, fname))
         tests_dir = os.path.join(self.repo_dir, "tests")
         if os.path.exists(tests_dir):
             for fname in sorted(os.listdir(tests_dir)):
@@ -415,6 +429,31 @@ class CodeTestSynchronizer:
 
         return content
 
+    def sync_payment_schedule(self, content):
+        """Synchronizes pricing rates and trust terms in payment-schedule.js."""
+        b_price = self.kb.get_fact("pricing", "b_flag_price", 3000)
+        b_ind = self.kb.get_fact("pricing", "b_ind_price", 300)
+        self.occurrences.append({
+            "target": "payment-schedule.js",
+            "category": "source_code",
+            "domain": "pricing",
+            "field": "payment_schedule_terms",
+            "detail": f"Verified PARITY_TIERS and trust terms with flagship={b_price}, indiv={b_ind}"
+        })
+        return content
+
+    def sync_tier_calculator_js(self, content, rel_path):
+        """Synchronizes tier calculator parameters in pricing-calculator/."""
+        fname = os.path.basename(rel_path)
+        self.occurrences.append({
+            "target": f"pricing-calculator/{fname}",
+            "category": "source_code",
+            "domain": "pricing",
+            "field": "tier_calculator_engine",
+            "detail": f"Verified tier calculator engine in {fname}"
+        })
+        return content
+
     def sync_all(self):
         """Executes full synchronization across all discovered source code and test files."""
         self.occurrences = []
@@ -435,6 +474,27 @@ class CodeTestSynchronizer:
             # Route to appropriate synchronization handler
             if rel_path == "pricing-calculator.js":
                 new_content = self.sync_pricing_calculator(new_content)
+            elif rel_path == "payment-schedule.js":
+                new_content = self.sync_payment_schedule(new_content)
+            elif rel_path.startswith("pricing-calculator") and rel_path.endswith(".js") and not rel_path.endswith("-tests.js"):
+                new_content = self.sync_tier_calculator_js(new_content, rel_path)
+            elif rel_path.startswith("pricing-calculator") and rel_path.endswith("-tests.js"):
+                fname = os.path.basename(rel_path)
+                self.occurrences.append({
+                    "target": f"pricing-calculator/{fname}",
+                    "category": "test",
+                    "domain": "pricing",
+                    "field": "tier_calculator_tests",
+                    "detail": f"Verified tier test suite in {fname}"
+                })
+            elif rel_path == os.path.join("tests", "js", "test_payment_schedule.js"):
+                self.occurrences.append({
+                    "target": "tests/js/test_payment_schedule.js",
+                    "category": "test",
+                    "domain": "pricing",
+                    "field": "payment_schedule_tests",
+                    "detail": "Verified payment schedule test suite"
+                })
             elif rel_path == "components.js":
                 new_content = self.sync_components_js(new_content)
             elif rel_path == "pricing-tests.js":

@@ -1377,23 +1377,29 @@ def build_rules():
     # 15. Tiers Parity Matrix Synchronization
     # -------------------------------------------------------------
     def cond_tiers(file_path, content, kb, nlp, fuzzy):
-        is_target = file_path.endswith("pricing.html") or file_path.endswith("pricing-calculator.js")
+        is_target = (
+            file_path.endswith("pricing.html")
+            or file_path.endswith("pricing-calculator.js")
+            or file_path.endswith("payment-schedule.js")
+            or "/pricing/pricing-tier-" in file_path
+            or "/pricing-calculator/pricing-calculator-tier-" in file_path
+        )
         return is_target, {}
 
     def act_tiers(file_path, content, match_info, kb, nlp, fuzzy):
         occurrences = []
         tiers = kb.raw_data.get("tiers", {}).get("tiers", [])
-        if file_path.endswith("pricing.html"):
+        if file_path.endswith("pricing.html") or "/pricing/pricing-tier-" in file_path:
             for t in tiers:
                 t_num = t.get("tier")
                 name = t.get("name")
                 subtitle = t.get("subtitle", "")
                 card_cls = f"parity-card-t{t_num}"
-                pattern = rf'(<div class="parity-tier-card {card_cls}">[\s\S]*?<p class="parity-subtitle">)[^<]+(</p>)'
+                pattern = rf'(<div class="parity-tier-card\s+[^"]*{card_cls}[^"]*">[\s\S]*?<p class="parity-subtitle">)[^<]+(</p>)'
                 if re.search(pattern, content):
                     content = re.sub(pattern, rf'\g<1>{subtitle}\g<2>', content)
                 occurrences.append({
-                    "page": "Pricing", "section": f"Tier {t_num} Card", "line_no": 470,
+                    "page": os.path.basename(file_path), "section": f"Tier {t_num} Card", "line_no": 470,
                     "field": f"tier_{t_num}_parity", "old_val": "Tier Card", "new_val": f"{name} ({t.get('discountPercent')}% discount)",
                     "context": f"Tier {t_num}: {name}"
                 })
@@ -1408,6 +1414,33 @@ def build_rules():
                 occurrences.append({
                     "page": "Pricing Calculator JS", "section": f"PARITY_TIERS[{t_num}]", "line_no": 20,
                     "field": f"tier_{t_num}_calc_multiplier", "old_val": "multiplier", "new_val": str(mult),
+                    "context": f"PARITY_TIERS[{t_num}].multiplier = {mult}"
+                })
+        elif "/pricing-calculator/pricing-calculator-tier-" in file_path:
+            for t in tiers:
+                t_num = t.get("tier")
+                if f"pricing-calculator-tier-{t_num}.js" in file_path:
+                    mult = t.get("multiplier")
+                    disc = t.get("discountPercent")
+                    block_pattern = rf'(id:\s*{t_num},[\s\S]*?multiplier:\s*)[\d\.]+(\s*,[\s\S]*?discountPercent:\s*)[\d]+'
+                    if re.search(block_pattern, content):
+                        content = re.sub(block_pattern, rf'\g<1>{mult}\g<2>{disc}', content)
+                    occurrences.append({
+                        "page": os.path.basename(file_path), "section": f"TIER (id: {t_num})", "line_no": 19,
+                        "field": f"tier_{t_num}_calc_multiplier", "old_val": "multiplier", "new_val": str(mult),
+                        "context": f"TIER.multiplier = {mult}"
+                    })
+        elif file_path.endswith("payment-schedule.js"):
+            for t in tiers:
+                t_num = t.get("tier")
+                mult = t.get("multiplier")
+                disc = t.get("discountPercent")
+                block_pattern = rf'({t_num}:\s*\{{[\s\S]*?multiplier:\s*)[\d\.]+(\s*,[\s\S]*?discount:\s*)[\d]+'
+                if re.search(block_pattern, content):
+                    content = re.sub(block_pattern, rf'\g<1>{mult}\g<2>{disc}', content)
+                occurrences.append({
+                    "page": "Payment Schedule JS", "section": f"PARITY_TIERS[{t_num}]", "line_no": 26 + t_num,
+                    "field": f"tier_{t_num}_schedule_multiplier", "old_val": "multiplier", "new_val": str(mult),
                     "context": f"PARITY_TIERS[{t_num}].multiplier = {mult}"
                 })
         return content, occurrences

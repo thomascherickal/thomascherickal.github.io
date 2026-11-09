@@ -194,16 +194,23 @@ class ExpertSynchronizer:
 
         # Root files
         for fname in os.listdir(REPO_DIR):
-            if fname.endswith(".html") or fname in ("pricing-calculator.js", "llms.txt"):
+            if fname.endswith(".html") or fname in ("pricing-calculator.js", "payment-schedule.js", "llms.txt"):
                 target_files.append(os.path.join(REPO_DIR, fname))
 
         # Subdirectories
-        for sub in ["business-services", "personal-services", "claude-training", "google-training"]:
+        for sub in ["business-services", "personal-services", "claude-training", "google-training", "pricing"]:
             sdir = os.path.join(REPO_DIR, sub)
             if os.path.exists(sdir):
                 for fname in os.listdir(sdir):
                     if fname.endswith(".html"):
                         target_files.append(os.path.join(sdir, fname))
+
+        # Pricing calculator directory
+        pcalc_dir = os.path.join(REPO_DIR, "pricing-calculator")
+        if os.path.exists(pcalc_dir):
+            for fname in os.listdir(pcalc_dir):
+                if fname.endswith(".js") and not fname.endswith("-tests.js"):
+                    target_files.append(os.path.join(pcalc_dir, fname))
 
         # Strict Unidirectional Guard: Never allow files under data/ to be targets
         abs_data_dir = os.path.abspath(self.data_dir)

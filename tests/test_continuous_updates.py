@@ -89,7 +89,7 @@ class TestContinuousUpdates(unittest.TestCase):
 
         with open(self.pricing_html, "r", encoding="utf-8") as f:
             c1 = f.read()
-        self.assertIn("Business (≤15 seats):", c1)
+        self.assertIn("up to 15 seats", c1)
         self.assertIn("15 Participants (Included in Base)", c1)
 
         with open(self.calc_js, "r", encoding="utf-8") as f:
@@ -109,7 +109,7 @@ class TestContinuousUpdates(unittest.TestCase):
 
         with open(self.pricing_html, "r", encoding="utf-8") as f:
             c2 = f.read()
-        self.assertIn("Business (≤25 seats):", c2)
+        self.assertIn("up to 25 seats", c2)
         self.assertIn("25 Participants (Included in Base)", c2)
 
         with open(self.calc_js, "r", encoding="utf-8") as f:

@@ -83,7 +83,7 @@ class TestSyncPricing(unittest.TestCase):
         self.assertIn(f'data-price="{b_price}"', content)
         self.assertIn(f'data-price="{p_price}"', content)
         self.assertIn(f'data-price="{b_ind}"', content)
-        self.assertIn(f"Business (≤{b_seats} seats):", content)
+        self.assertIn(f"up to {b_seats} seats", content)
 
     def test_pricing_references_and_markdown(self):
         """Verifies pricing_references.json and pricing.md exist and are populated."""

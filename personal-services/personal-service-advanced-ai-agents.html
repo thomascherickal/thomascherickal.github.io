@@ -90,7 +90,7 @@
           "price": "250.00",
           "availability": "https://schema.org/InStock",
           "eligibleRegion": "Worldwide",
-          "description": "Available as an individual service pick ($250 USD for individuals / $250 USD for businesses, each for 5 days of live training + 5 days of dedicated support, 10 days total coverage), or as part of our comprehensive programs: Business Training ($2,500 USD for 60 days: 30d training + 30d guidance/materials, 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day, up to 10 participants, +$250/extra seat) or Personal Training ($2,500 USD for 60 days: 30d training + 30d guidance/materials, 30 working days over 6 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day, 1 person only). Clients are free to pick and choose their services. Full 195-country Purchasing Power Parity (PPP) supported across all service pricing.",
+          "description": "Available as an individual service pick (($300 / $225 / $150 / $150 / $75 / Custom USD) for individuals / ($300 / $225 / $150 / $150 / $75 / Custom USD) for businesses, each for 5 days of live training + 5 days of dedicated support, 10 days total coverage), or as part of our comprehensive programs: Business Training ($2,500 USD for 60 days: 30d training + 30d guidance/materials, 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day, up to 10 participants, +$250/extra seat) or Personal Training ($2,500 USD for 60 days: 30d training + 30d guidance/materials, 30 working days over 6 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day, 1 person only). Clients are free to pick and choose their services. Full 195-country Purchasing Power Parity (PPP) supported across all service pricing.",
           "priceSpecification": [
             {
               "@type": "PriceSpecification",
@@ -128,7 +128,7 @@
               "name": "Business Service Pick (Business Tier 1 / 100%)",
               "price": "250.00",
               "priceCurrency": "USD",
-              "description": "5 days live training + 5 days dedicated support (10 days total coverage), up to 10 participants, +$250/extra seat"
+              "description": "5 days live training + 5 days dedicated support (10 days total coverage), up to 10 participants, +$300 / +$225 / +$150 / +$150 / +$75 / Custom USD per extra seat"
             },
             {
               "@type": "PriceSpecification",
@@ -159,7 +159,7 @@
               "name": "Business Training (Tier 1 / 100%)",
               "price": "2500.00",
               "priceCurrency": "USD",
-              "description": "60 days: 30d training + 30d guidance & materials, up to 10 participants, +$250/extra seat"
+              "description": "60 days: 30d training + 30d guidance & materials, up to 10 participants, +$300 / +$225 / +$150 / +$150 / +$75 / Custom USD per extra seat"
             },
             {
               "@type": "PriceSpecification",
@@ -312,7 +312,21 @@
       </li>
       <li><a href="../faqs.html" data-nav="faqs.html">FAQs-Section</a></li>
       <li><a href="../guarantees.html" data-nav="guarantees.html">Guarantees</a></li>
-      <li><a href="../pricing.html" data-nav="pricing.html">Pricing</a></li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          <b>Pricing-Tiers</b> <span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="../pricing.html">All Pricing Overview</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="../pricing/pricing-tier-1-usa-china-eu-100.html">Tier 1: Developed (100%)</a></li>
+          <li><a href="../pricing/pricing-tier-2-brazil-malaysia-75.html">Tier 2: Upper-Middle (75%)</a></li>
+          <li><a href="../pricing/pricing-tier-3-india-nigeria-50.html">Tier 3: Lower-Middle (50%)</a></li>
+          <li><a href="../pricing/pricing-tier-4-tech-startups-50.html">Tier 4: Startups (50%)</a></li>
+          <li><a href="../pricing/pricing-tier-5-colleges-non-profits-25.html">Tier 5: Academia (25%)</a></li>
+          <li><a href="../pricing/pricing-tier-6-crisis-affected-10.html">Tier 6: Relief (10%)</a></li>
+        </ul>
+      </li>
       <li class="nav-dropdown">
         <a class="nav-dropdown-toggle">
           Claude-Guides <span class="dropdown-caret">▾</span>
@@ -347,10 +361,12 @@
           <li><a href="../google-training/google-multimodality.html">Google Multimodality</a></li>
           <li><a href="../google-training/google-deepmind.html">Google DeepMind</a></li>
           <li><a href="../google-training/google-gemini-4-argon.html">Gemini 4 Argon</a></li>
-          <li><a href="../google-training/google-gemini-4-carbon.html" class="disabled" aria-disabled="true" tabindex="-1">Gemini 4
+          <li><a href="../google-training/google-gemini-4-carbon.html" class="disabled" aria-disabled="true"
+              tabindex="-1">Gemini 4
               Carbon (not released yet)</a></li>
-          <li><a href="../google-training/google-gemini-4-hydrogen.html" class="disabled" aria-disabled="true" tabindex="-1">Gemini
-              4 Hydrogen (not announced yet)</a></li>
+          <li><a href="../google-training/google-gemini-4-hydrogen.html" class="disabled" aria-disabled="true"
+              tabindex="-1">Gemini
+              4 Hydrogen (not released yet)</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
@@ -1010,16 +1026,16 @@ run_governed_personal_agent("Refactor authentication module", my_guardrail)</cod
 <ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;list-style:disc;">
           <li><strong>Modular Service Selection &amp; Flexible Engagement:</strong> Clients can freely pick and choose their services, either individually or bundled under our comprehensive transformation programs:
             <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
-              <li><strong>Individual Service Pick (Personal / 1-on-1):</strong> <strong>$250 USD</strong> per service for <strong>5 days of live training + 5 days of dedicated support</strong> (10 days total coverage per service, 4 hours per day). Strictly 1 person only.</li>
-              <li><strong>Individual Service Pick (Business / Teams):</strong> <strong>$250 USD</strong> per service for <strong>5 days of live training + 5 days of dedicated support</strong> (10 days total coverage per service, 4 hours per day). Covers up to 10 participants (additional seats at <strong>$250 USD per seat</strong>).</li>
-              <li><strong>Comprehensive Business Training:</strong> <strong>$2,500 USD</strong> for <strong>60 days</strong> (30 days live training + 30 days guidance, Q&amp;A and written guides, 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Includes cohorts up to 10 participants. Extra seats at <strong>$250 USD per seat</strong>.</li>
-              <li><strong>Comprehensive Personal Training:</strong> <strong>$3,000 USD</strong> for <strong>60 days</strong> (30 days live training + 30 days guidance, Q&amp;A and written guides, 60 days over 2 months with Saturday and Sunday as holidays, 4 hours per day). Strictly for 1 person only (private acceleration).</li>
+              <li><strong>Individual Service Pick (Personal / 1-on-1):</strong> <strong>$300 / $225 / $150 / $150 / $75 / Custom USD</strong> per service for <strong>5 days of live training + 5 days of dedicated support</strong> (10 days total coverage per service, 4 hours per day). Strictly 1 person only.</li>
+              <li><strong>Individual Service Pick (Business / Teams):</strong> <strong>$300 / $225 / $150 / $150 / $75 / Custom USD</strong> per service for <strong>5 days of live training + 5 days of dedicated support</strong> (10 days total coverage per service, 4 hours per day). Covers up to 10 participants (additional seats at <strong>+$300 / +$225 / +$150 / +$150 / +$75 / Custom USD per seat</strong>).</li>
+              <li><strong>Comprehensive Business Training:</strong> <strong>$3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD</strong> for <strong>60 days</strong> (30 days live training + 30 days guidance, Q&amp;A and written guides, 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Includes cohorts up to 10 participants. Extra seats at <strong>+$300 / +$225 / +$150 / +$150 / +$75 / Custom USD per seat</strong>.</li>
+              <li><strong>Comprehensive Personal Training:</strong> <strong>$3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD</strong> for <strong>60 days</strong> (30 days live training + 30 days guidance, Q&amp;A and written guides, 60 days over 2 months with Saturday and Sunday as holidays, 4 hours per day). Strictly for 1 person only (private acceleration).</li>
             </ul>
           </li>
           <li><strong>Global Purchasing Power Parity (PPP) Available for All Service Pricing:</strong>
             <ul style="margin-left:1.5rem;margin-top:0.5rem;list-style:circle;">
               <li><strong>Tier 1 (Standard / 100%):</strong> Individual $300 USD | Business $300 USD | Business 60d $3,000 USD | Personal 60d $3,000 USD (USA, UK, EU, Canada, Australia)</li>
-              <li><strong>Tier 2 (Upper-Middle-Income / 25% Off):</strong> Individual $225 USD | Business $225 USD | Business 60d $2,250 USD | Personal 60d $2,250 USD: e.g. Brazil, Mexico, Malaysia, Thailand, Türkiye</li>
+              <li><strong>Tier 2 (Upper-Middle-Income / 25% Off):</strong> Individual $225 USD | Business $225 USD | Business 60d $2,($300 / $225 / $150 / $150 / $75 / Custom USD) | Personal 60d $2,($300 / $225 / $150 / $150 / $75 / Custom USD): e.g. Brazil, Mexico, Malaysia, Thailand, Türkiye</li>
               <li><strong>Tier 3 &amp; 4 (Lower-Middle/Low-Income &amp; Startups / 50% Off):</strong> Individual $150 USD | Business $150 USD | Business 60d $1,500 USD | Personal 60d $1,500 USD</li>
               <li><strong>Tier 5 (Academia &amp; Non-Profits / 75% Off):</strong> Individual $75 USD | Business $75 USD | Business 60d $750 USD | Personal 60d $750 USD</li>
               <li><strong>Tier 6 (Crisis-Affected &amp; Under-Resourced Regions):</strong> Individual $30 USD | Business $30 USD | Custom Subsidized Relief / Micro-Rates</li>

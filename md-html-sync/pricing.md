@@ -19,30 +19,6 @@
 
 ## Individual Services & Base Rates (A La Carte)
 
-### Service
-
-### Service
-
-### Service
-
-### Service
-
-### Service
-
-### Service
-
-### Service
-
-### Service
-
-### Service
-
-### Service
-
-### Service
-
-### Service
-
 ---
 
 ## Global Equity: Purchasing Power Parity (PPP) Six Tiers

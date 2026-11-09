@@ -24,8 +24,8 @@ Here is a side-by-side summary of our standard programs and schedules:
 
 | Program | Total Duration | Live Sessions & Support | Group Size | Base Price (USD) | Payment Plan |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Business Training Flagship | 60 Days Total | 30 days live training + 30 days dedicated support | Up to 10 people included (+$300 per extra seat up to 20 seats) | $3,000 USD (Training) + $500 USD (Support) | 5 training payments of $600 USD (20% each) + 2 support payments of $250 USD (after 15 & 30 days) |
-| Personal Training Flagship | 60 Days Total | 30 days live training + 30 days dedicated support | Strictly 1 person (private 1-on-1 coaching) | $3,000 USD (Training) + $500 USD (Support) | 5 training payments of $600 USD (20% each) + 2 support payments of $250 USD (after 15 & 30 days) |
+| Business Training Flagship | 60 Days Total | 30 days live training + 30 days dedicated support | Up to 10 people included (+$300 per extra seat up to 20 seats) | $3,000 USD (Training) + $500 USD (Support) | 5 training payments of $600 USD (20% each) + 2 support payments of ($300 / $225 / $150 / $150 / $75 / Custom USD) (after 15 & 30 days) |
+| Personal Training Flagship | 60 Days Total | 30 days live training + 30 days dedicated support | Strictly 1 person (private 1-on-1 coaching) | $3,000 USD (Training) + $500 USD (Support) | 5 training payments of $600 USD (20% each) + 2 support payments of ($300 / $225 / $150 / $150 / $75 / Custom USD) (after 15 & 30 days) |
 | Business Individual Service | 10 Days Total | 5 days live training + 5 days dedicated support | 1 person base (+$300 per extra seat up to 10 seats) | $300 USD (Training) + $50 USD (Support) | 5 training payments of $60 USD (20% each) + 1 support payment of $50 USD (after 5 days) |
 | Personal Individual Service | 10 Days Total | 5 days live training + 5 days dedicated support | Strictly 1 person only | $300 USD (Training) + $50 USD (Support) | 5 training payments of $60 USD (20% each) + 1 support payment of $50 USD (after 5 days) |
 

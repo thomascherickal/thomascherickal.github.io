@@ -100,7 +100,7 @@
           {
             "@type": "Offer",
             "name": "Individual Service Pick (Personal / 1-on-1)",
-            "description": "Pick individual services at $250 USD per service for individuals, covering 5 days of live training plus 5 days of dedicated support (10 days total coverage per service). Strictly 1 person only. Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 $250; Tier 2 (25% off) $188; Tier 3 & 4 (50% off) $125; Tier 5 (75% off) $63; Tier 6 custom subsidized relief ($25).",
+            "description": "Pick individual services at ($300 / $225 / $150 / $150 / $75 / Custom USD) per service for individuals, covering 5 days of live training plus 5 days of dedicated support (10 days total coverage per service). Strictly 1 person only. Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 $250; Tier 2 (25% off) $188; Tier 3 & 4 (50% off) $125; Tier 5 (75% off) $63; Tier 6 custom subsidized relief ($25).",
             "price": "250.00",
             "priceCurrency": "USD",
             "priceSpecification": [
@@ -140,7 +140,7 @@
           {
             "@type": "Offer",
             "name": "Individual Service Pick (Business / Teams)",
-            "description": "Pick individual services at $250 USD per service for businesses, covering 5 days of live training plus 5 days of dedicated support (10 days total coverage per service). Covers cohorts up to 10 participants (additional seats at $250 USD per seat). Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 $250; Tier 2 (25% off) $188; Tier 3 & 4 (50% off) $125; Tier 5 (75% off) $63; Tier 6 custom subsidized relief ($25).",
+            "description": "Pick individual services at ($300 / $225 / $150 / $150 / $75 / Custom USD) per service for businesses, covering 5 days of live training plus 5 days of dedicated support (10 days total coverage per service). Covers cohorts up to 10 participants (additional seats at ($300 / $225 / $150 / $150 / $75 / Custom USD) per seat). Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 $250; Tier 2 (25% off) $188; Tier 3 & 4 (50% off) $125; Tier 5 (75% off) $63; Tier 6 custom subsidized relief ($25).",
             "price": "250.00",
             "priceCurrency": "USD",
             "priceSpecification": [
@@ -337,7 +337,21 @@
       </li>
       <li><a href="faqs.html" data-nav="faqs.html">FAQs-Section</a></li>
       <li><a href="guarantees.html" data-nav="guarantees.html">Guarantees</a></li>
-      <li><a href="pricing.html" data-nav="pricing.html">Pricing</a></li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          <b>Pricing-Tiers</b> <span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="pricing.html">All Pricing Overview</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="pricing/pricing-tier-1-usa-china-eu-100.html">Tier 1: Developed (100%)</a></li>
+          <li><a href="pricing/pricing-tier-2-brazil-malaysia-75.html">Tier 2: Upper-Middle (75%)</a></li>
+          <li><a href="pricing/pricing-tier-3-india-nigeria-50.html">Tier 3: Lower-Middle (50%)</a></li>
+          <li><a href="pricing/pricing-tier-4-tech-startups-50.html">Tier 4: Startups (50%)</a></li>
+          <li><a href="pricing/pricing-tier-5-colleges-non-profits-25.html">Tier 5: Academia (25%)</a></li>
+          <li><a href="pricing/pricing-tier-6-crisis-affected-10.html">Tier 6: Relief (10%)</a></li>
+        </ul>
+      </li>
       <li class="nav-dropdown">
         <a class="nav-dropdown-toggle">
           Claude-Guides <span class="dropdown-caret">▾</span>
@@ -372,10 +386,12 @@
           <li><a href="google-training/google-multimodality.html">Google Multimodality</a></li>
           <li><a href="google-training/google-deepmind.html">Google DeepMind</a></li>
           <li><a href="google-training/google-gemini-4-argon.html">Gemini 4 Argon</a></li>
-          <li><a href="google-training/google-gemini-4-carbon.html" class="disabled" aria-disabled="true" tabindex="-1">Gemini 4
+          <li><a href="google-training/google-gemini-4-carbon.html" class="disabled" aria-disabled="true"
+              tabindex="-1">Gemini 4
               Carbon (not released yet)</a></li>
-          <li><a href="google-training/google-gemini-4-hydrogen.html" class="disabled" aria-disabled="true" tabindex="-1">Gemini
-              4 Hydrogen (not announced yet)</a></li>
+          <li><a href="google-training/google-gemini-4-hydrogen.html" class="disabled" aria-disabled="true"
+              tabindex="-1">Gemini
+              4 Hydrogen (not released yet)</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
@@ -401,26 +417,58 @@
       <div class="pricing-hero-offers"
         style="max-width:880px;margin:1.25rem auto 0;text-align:left;display:flex;flex-direction:column;gap:0.75rem;">
         <div
-          style="background:rgba(0, 240, 255, 0.05);border-left:3px solid var(--cyan);padding:0.75rem 1rem;border-radius:6px;font-size:0.95rem;line-height:1.5;color:var(--text-secondary);">
-          <strong style="color:var(--cyan);font-weight:700;">Business Training Flagship (<span class="sync-highlight">$3,000 USD</span> · <span class="sync-highlight">60 Days</span>):</strong> <span class="sync-highlight">30 days live training</span> + <span class="sync-highlight">30 days guidance and materials</span> (<span class="sync-highlight">30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day</span>), up to <span class="sync-highlight">10 participants</span> (+<span class="sync-highlight">$300</span> per extra seat).
+          style="background:rgba(0, 240, 255, 0.05);border:1.5px solid rgba(56, 189, 248, 0.4);border-left:4px solid var(--cyan);padding:0.75rem 1.15rem;border-radius:8px;font-size:0.9rem;line-height:1.55;color:var(--text-primary);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;">
+          <div style="flex:1;min-width:260px;">
+            <span
+              style="font-family:var(--font-mono);font-size:0.78rem;font-weight:800;letter-spacing:0.08em;color:var(--cyan);text-transform:uppercase;display:block;margin-bottom:0.2rem;">BUSINESS
+              TRAINING FLAGSHIP · 60 DAYS</span>
+            <span><strong style="color:var(--cyan);font-weight:700;">Business Training Flagship (<span class="sync-highlight">$3,000 USD</span> · <span class="sync-highlight">60 Days</span>):</strong> <span class="sync-highlight">30 days live training</span> + <span class="sync-highlight">30 days guidance and materials</span> (<span class="sync-highlight">30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day</span>), up to <span class="sync-highlight">10 participants</span> (+<span class="sync-highlight">$300</span> per extra seat).</span>
+          </div>
+          <a class="gold-link" href="business-ai-training.html"
+            style="font-family:var(--font-mono);font-size:0.84rem;font-weight:700;white-space:nowrap;">Explore Business
+            AI →</a>
         </div>
         <div
-          style="background:rgba(251, 191, 36, 0.05);border-left:3px solid var(--gold);padding:0.75rem 1rem;border-radius:6px;font-size:0.95rem;line-height:1.5;color:var(--text-secondary);">
-          <strong style="color:var(--gold);font-weight:700;">Personal Training Flagship (<span class="sync-highlight">$3,000 USD</span> · <span class="sync-highlight">60 Days</span>):</strong> <span class="sync-highlight">30 days live training</span> + <span class="sync-highlight">30 days guidance and materials</span> (<span class="sync-highlight">60 days over 2 months with Saturday and Sunday as holidays, 4 hours per day</span>), strictly 1-on-1 private acceleration.
+          style="background:rgba(251, 191, 36, 0.05);border:1.5px solid rgba(251, 191, 36, 0.4);border-left:4px solid var(--gold);padding:0.75rem 1.15rem;border-radius:8px;font-size:0.9rem;line-height:1.55;color:var(--text-primary);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;">
+          <div style="flex:1;min-width:260px;">
+            <span
+              style="font-family:var(--font-mono);font-size:0.78rem;font-weight:800;letter-spacing:0.08em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:0.2rem;">PERSONAL
+              TRAINING FLAGSHIP · 60 DAYS</span>
+            <span><strong style="color:var(--gold);font-weight:700;">Personal Training Flagship (<span class="sync-highlight">$3,000 USD</span> · <span class="sync-highlight">60 Days</span>):</strong> <span class="sync-highlight">30 days live training</span> + <span class="sync-highlight">30 days guidance and materials</span> (<span class="sync-highlight">60 days over 2 months with Saturday and Sunday as holidays, 4 hours per day</span>), strictly 1-on-1 private acceleration.</span>
+          </div>
+          <a class="gold-link" href="personal-ai-training.html"
+            style="font-family:var(--font-mono);font-size:0.84rem;font-weight:700;white-space:nowrap;">Explore Personal
+            AI →</a>
         </div>
         <div
-          style="padding:0.35rem 0.5rem;font-size:0.92rem;color:var(--text-secondary);text-align:center;line-height:1.5;">
-          Prefer custom picks? Select individual services at <strong style="color:var(--gold);">$250 USD
-            (Individual)</strong> or <strong style="color:var(--cyan);">$250 USD (Business)</strong> each (5 days
-          training + 5 days support). Full 195-country Purchasing Power Parity (PPP) applies.
+          style="background:rgba(192, 132, 252, 0.06);border:1.5px solid rgba(192, 132, 252, 0.4);border-left:4px solid var(--purple, #c084fc);padding:0.75rem 1.15rem;border-radius:8px;font-size:0.9rem;line-height:1.55;color:var(--text-primary);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;">
+          <div style="flex:1;min-width:260px;">
+            <span
+              style="font-family:var(--font-mono);font-size:0.78rem;font-weight:800;letter-spacing:0.08em;color:var(--purple, #c084fc);text-transform:uppercase;display:block;margin-bottom:0.2rem;">INDIVIDUAL
+              SERVICE PICKS · 10 DAYS COVERAGE</span>
+            <span>Prefer custom picks? Select individual services at <strong style="color:var(--gold);">$300 / $225 /
+                $150 /
+                $150 / $75 / Custom USD</strong> each (5 days training + 5 days support). Full 195-country Purchasing
+              Power
+              Parity (PPP) applies.</span>
+          </div>
+          <a class="gold-link" href="#service-rates"
+            style="font-family:var(--font-mono);font-size:0.84rem;font-weight:700;white-space:nowrap;">Pick Services
+            →</a>
         </div>
         <div
           style="background:rgba(16, 185, 129, 0.08);border:1.5px solid rgba(52, 211, 153, 0.45);border-left:4px solid #34d399;padding:0.75rem 1.15rem;border-radius:8px;font-size:0.9rem;line-height:1.55;color:var(--text-primary);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;">
           <div>
-            <span style="font-family:var(--font-mono);font-size:0.78rem;font-weight:800;letter-spacing:0.08em;color:#34d399;text-transform:uppercase;display:block;margin-bottom:0.2rem;">LIVE ARCHITECT CAPACITY &amp; QUARTERLY SLOT AVAILABILITY</span>
-            <span>Strictly capped at <strong>2 Flagship Cohorts per Quarter</strong> (4 hours/day live architect instruction) to guarantee 100% hands-on engineering focus - <strong style="color:#34d399;">2 Quarterly Flagship Slots Currently Open</strong>.</span>
+            <span
+              style="font-family:var(--font-mono);font-size:0.78rem;font-weight:800;letter-spacing:0.08em;color:#34d399;text-transform:uppercase;display:block;margin-bottom:0.2rem;">LIVE
+              ARCHITECT CAPACITY &amp; QUARTERLY SLOT AVAILABILITY</span>
+            <span>Strictly capped at <strong>2 Flagship Cohorts per Quarter</strong> (4 hours/day live architect
+              instruction) to guarantee 100% hands-on engineering focus - <strong style="color:#34d399;">2 Quarterly
+                Flagship Slots Currently Open</strong>.</span>
           </div>
-          <a class="gold-link" href="contact.html" style="font-family:var(--font-mono);font-size:0.84rem;font-weight:700;white-space:nowrap;">Reserve Cohort Slot →</a>
+          <a class="gold-link" href="contact.html"
+            style="font-family:var(--font-mono);font-size:0.84rem;font-weight:700;white-space:nowrap;">Reserve Cohort
+            Slot →</a>
         </div>
       </div>
     </section>
@@ -429,7 +477,7 @@
       <div
         style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:1.5rem;background:rgba(12, 17, 29, 0.95);border:2px solid var(--border-glow, rgba(56, 189, 248, 0.4));border-radius:var(--radius-lg);padding:1.5rem 2rem;box-shadow:0 0 30px rgba(0,240,255,0.12);">
         <!-- Individual Service Pick -->
-        <div style="border-left:4px solid #34d399;padding-left:1.25rem;">
+        <div id="service-rates" style="border-left:4px solid #34d399;padding-left:1.25rem;">
           <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.35rem;">
             <span
               style="font-family:var(--font-mono);font-size:0.82rem;font-weight:800;letter-spacing:0.08em;color:#34d399;text-transform:uppercase;">INDIVIDUAL
@@ -437,11 +485,12 @@
           </div>
           <h3
             style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--text-primary);margin-bottom:0.35rem;">
-            $250 Individual / $250 Business · 5 Days Training + 5 Days Support
+            $300 / $225 / $150 / $150 / $75 / Custom USD · 5 Days Training + 5 Days Support
           </h3>
           <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.5;margin:0;">
             Select exactly the services you need. 5 days of live engineering training followed by 5 days of dedicated
-            operational support (10 days total coverage per service). Up to 10 seats for businesses (+$250/extra seat);
+            operational support (10 days total coverage per service). Up to 10 seats for businesses (additional seats at
+            +$300 / +$225 / +$150 / +$150 / +$75 / Custom USD per seat);
             1 person for individuals. Parity pricing applies to all services.
           </p>
         </div>
@@ -452,25 +501,34 @@
               style="font-family:var(--font-mono);font-size:0.82rem;font-weight:800;letter-spacing:0.08em;color:var(--cyan);text-transform:uppercase;">BUSINESS
               TRAINING FLAGSHIP</span>
           </div>
-          <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--text-primary);margin-bottom:0.35rem;">
-            $3,000 USD · 60 Days (30d Training + 30d Guidance &amp; Materials)
+          <h3
+            style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--text-primary);margin-bottom:0.35rem;">
+            $3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD · 60 Days (30d Training + 30d Guidance &amp;
+            Materials)
           </h3>
           <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.5;margin:0;">
-            Includes up to 10 participants (additional seats at $300 USD per seat). Covers full cross-service engineering stacks tailored to your organizational goals. 30 days of live training + 30 days of guidance and detailed guides/materials (30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day).
+            Includes up to 10 participants (additional seats at +$300 / +$225 / +$150 / +$150 / +$75 / Custom USD per
+            seat). Covers full cross-service engineering stacks tailored to your organizational goals. 30 days of live
+            training + 30 days of guidance and detailed guides/materials (30 working days over 8 weeks with 8 - 10 days
+            as holidays and recovery days, 4 hours per day).
           </p>
         </div>
         <!-- Personal Training Flagship -->
-        <div style="border-left:4px solid var(--gold, #fbbf24);padding-left:1.25rem;">
+        <div id="personal-ai-section" style="border-left:4px solid var(--gold, #fbbf24);padding-left:1.25rem;">
           <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.35rem;">
             <span
               style="font-family:var(--font-mono);font-size:0.82rem;font-weight:800;letter-spacing:0.08em;color:var(--gold);text-transform:uppercase;">PERSONAL
               TRAINING FLAGSHIP</span>
           </div>
-          <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--gold);margin-bottom:0.35rem;">
-            $3,000 USD · 60 Days (30d Training + 30d Guidance &amp; Materials)
+          <h3
+            style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--gold);margin-bottom:0.35rem;">
+            $3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD · 60 Days (30d Training + 30d Guidance &amp;
+            Materials)
           </h3>
           <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.5;margin:0;">
-            Strictly for 1 person only (private 1-on-1 acceleration). 30 days of intensive live instruction followed by 30 days of dedicated daily work guidance, Q&amp;A and written guides tailored to your individual career or venture (60 days over 2 months with Saturday and Sunday as holidays, 4 hours per day).
+            Strictly for 1 person only (private 1-on-1 acceleration). 30 days of intensive live instruction followed by
+            30 days of dedicated daily work guidance, Q&amp;A and written guides tailored to your individual career or
+            venture (60 days over 2 months with Saturday and Sunday as holidays, 4 hours per day).
           </p>
         </div>
       </div>
@@ -746,6 +804,141 @@
             </p>
           </div>
         </div>
+
+        <!-- INTERACTIVE PAYMENT SCHEDULE WIDGET -->
+        <div id="payment-schedule-widget"
+          style="margin-top:2rem;padding-top:1.75rem;border-top:1px solid rgba(251, 191, 36, 0.25);">
+          <div
+            style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;margin-bottom:1.25rem;">
+            <div>
+              <span class="calc-header-tag"
+                style="background:rgba(251, 191, 36, 0.15);color:var(--gold);border:1px solid rgba(251, 191, 36, 0.4);padding:0.25rem 0.6rem;border-radius:4px;font-size:0.75rem;font-weight:700;letter-spacing:0.05em;">INTERACTIVE
+                MILESTONE SCHEDULE</span>
+              <h3
+                style="font-family:var(--font-display);font-size:1.35rem;font-weight:800;color:#fff;margin:0.4rem 0 0 0;">
+                Personalized Milestone Breakdown &amp; Commercial Terms
+              </h3>
+            </div>
+            <div
+              style="display:inline-flex;align-items:center;background:rgba(52, 211, 153, 0.12);border:1px solid rgba(52, 211, 153, 0.35);padding:0.35rem 0.85rem;border-radius:6px;font-size:0.85rem;color:#34d399;font-weight:700;">
+              Strictly $0 Upfront Deposit
+            </div>
+          </div>
+
+          <!-- Controls Row -->
+          <div
+            style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;margin-bottom:1.5rem;">
+            <div>
+              <label for="sched-tier-select"
+                style="display:block;font-size:0.82rem;font-weight:700;color:var(--gold);margin-bottom:0.35rem;letter-spacing:0.04em;">
+                1. SELECT PARITY TIER
+              </label>
+              <select id="sched-tier-select"
+                style="width:100%;min-height:44px;background:#060913;color:#fff;border:1px solid rgba(251, 191, 36, 0.4);border-radius:6px;padding:0.6rem 0.85rem;font-size:0.9rem;">
+                <option value="1">Tier 1: Developed Economies (USA, China, EU - 100%)</option>
+                <option value="2">Tier 2: Upper-Middle (Brazil, Malaysia, Mexico - 75% / 25% Off)</option>
+                <option value="3">Tier 3: Lower-Middle &amp; Low-Income (India, Nigeria - 50% / 50% Off)</option>
+                <option value="4">Tier 4: Early-Stage Startups &amp; Seed (50% / 50% Off)</option>
+                <option value="5">Tier 5: Colleges &amp; Non-Profits (25% / 75% Off)</option>
+                <option value="6">Tier 6: Crisis-Affected &amp; Subsidized (10% / 90% Off)</option>
+              </select>
+            </div>
+            <div>
+              <label for="sched-eng-select"
+                style="display:block;font-size:0.82rem;font-weight:700;color:var(--cyan);margin-bottom:0.35rem;letter-spacing:0.04em;">
+                2. SELECT ENGAGEMENT TYPE
+              </label>
+              <select id="sched-eng-select"
+                style="width:100%;min-height:44px;background:#060913;color:#fff;border:1px solid rgba(56, 189, 248, 0.4);border-radius:6px;padding:0.6rem 0.85rem;font-size:0.9rem;">
+                <option value="flagship">Flagship 60-Day Program (30 Days Live + 30 Days Support)</option>
+                <option value="individual">Individual Targeted Service (5 Days Live + 5 Days Support)</option>
+                <option value="custom">Custom Negotiated Scope (All Pricing Negotiable)</option>
+              </select>
+            </div>
+            <div id="sched-svc-count-group" style="display:none;">
+              <label for="sched-svc-count-input"
+                style="display:block;font-size:0.82rem;font-weight:700;color:var(--purple, #c084fc);margin-bottom:0.35rem;letter-spacing:0.04em;">
+                NUMBER OF TARGETED MODULES
+              </label>
+              <input id="sched-svc-count-input" type="number" min="1" max="10" value="1"
+                style="width:100%;min-height:44px;background:#060913;color:#fff;border:1px solid rgba(192, 132, 252, 0.4);border-radius:6px;padding:0.6rem 0.85rem;font-size:0.9rem;">
+            </div>
+            <div id="sched-custom-group" style="display:none;">
+              <label for="sched-custom-input"
+                style="display:block;font-size:0.82rem;font-weight:700;color:#34d399;margin-bottom:0.35rem;letter-spacing:0.04em;">
+                PROPOSED TRAINING BUDGET ($ USD)
+              </label>
+              <input id="sched-custom-input" type="number" min="100" step="50" value="3000"
+                style="width:100%;min-height:44px;background:#060913;color:#fff;border:1px solid rgba(52, 211, 153, 0.4);border-radius:6px;padding:0.6rem 0.85rem;font-size:0.9rem;">
+            </div>
+          </div>
+
+          <!-- Dynamic KPI Cards -->
+          <div
+            style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;margin-bottom:1.5rem;">
+            <div
+              style="background:rgba(255, 255, 255, 0.03);border:1px solid rgba(255, 255, 255, 0.08);border-radius:6px;padding:0.85rem 1rem;">
+              <div
+                style="font-size:0.75rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.25rem;">
+                Upfront Deposit Required</div>
+              <div id="sched-upfront-display" style="font-size:1.15rem;font-weight:800;color:#34d399;">$0 USD (Strictly
+                Zero Upfront)</div>
+            </div>
+            <div
+              style="background:rgba(255, 255, 255, 0.03);border:1px solid rgba(255, 255, 255, 0.08);border-radius:6px;padding:0.85rem 1rem;">
+              <div
+                style="font-size:0.75rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.25rem;">
+                Total Engagement Investment</div>
+              <div id="sched-total-display" style="font-size:1.15rem;font-weight:800;color:var(--gold);">$3,500 USD
+              </div>
+            </div>
+            <div
+              style="background:rgba(255, 255, 255, 0.03);border:1px solid rgba(255, 255, 255, 0.08);border-radius:6px;padding:0.85rem 1rem;">
+              <div
+                style="font-size:0.75rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.25rem;">
+                Effective Equity Rate</div>
+              <div id="sched-discount-display" style="font-size:1.15rem;font-weight:800;color:var(--cyan);">Standard
+                Commercial Rate</div>
+            </div>
+            <div
+              style="background:rgba(255, 255, 255, 0.03);border:1px solid rgba(255, 255, 255, 0.08);border-radius:6px;padding:0.85rem 1rem;">
+              <div
+                style="font-size:0.75rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.25rem;">
+                Commercial IP Rights</div>
+              <div id="sched-license-display" style="font-size:1.15rem;font-weight:800;color:#fff;">Apache 2.0 (Full
+                Re-use)</div>
+            </div>
+          </div>
+
+          <!-- Milestones Breakdown Table -->
+          <div
+            style="overflow-x:auto;background:rgba(4, 7, 17, 0.7);border:1px solid rgba(255, 255, 255, 0.08);border-radius:6px;margin-bottom:1.25rem;">
+            <table style="width:100%;border-collapse:collapse;font-size:0.88rem;text-align:left;">
+              <thead>
+                <tr style="background:rgba(255, 255, 255, 0.04);border-bottom:1px solid rgba(255, 255, 255, 0.12);">
+                  <th style="padding:0.65rem 0.85rem;color:var(--text-primary);font-weight:700;">Milestone Phase</th>
+                  <th style="padding:0.65rem 0.85rem;color:var(--text-primary);font-weight:700;">Release &amp;
+                    Verification Trigger</th>
+                  <th style="padding:0.65rem 0.85rem;color:var(--text-primary);font-weight:700;text-align:right;">Amount
+                    Due</th>
+                </tr>
+              </thead>
+              <tbody id="sched-milestones-body">
+                <!-- Dynamically populated by payment-schedule.js -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Walkaway & Negotiable Policy Callout -->
+          <div
+            style="background:rgba(52, 211, 153, 0.04);border-left:3px solid #34d399;border-radius:0 6px 6px 0;padding:0.85rem 1.15rem;font-size:0.85rem;color:var(--text-secondary);line-height:1.6;">
+            <strong style="color:#34d399;">Walkaway Guarantee &amp; Special Cases Policy:</strong>
+            <span id="sched-walkaway-display">Walk away owing nothing if not 100% satisfied after the first milestone
+              training phase.</span>
+            <span id="sched-negotiable-note" style="display:block;margin-top:0.25rem;color:var(--gold);">All pricing is
+              negotiable for special cases, non-profits, academic research groups, and crisis-affected regions.</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -788,10 +981,44 @@
               </div>
             </div>
 
+            <!-- Parity Tier Selector (Position 2) -->
+            <div class="calc-field-group">
+              <label class="calc-field-label">
+                <span>2. Quick-Select Parity Tier</span>
+                <span class="hint">Click to switch</span>
+              </label>
+              <div class="calc-tier-grid" id="calc-tier-buttons">
+                <button class="calc-tier-btn active" data-tier="1" type="button">
+                  <span>Tier 1: High-Income</span>
+                  <span class="tier-tag">100% Rate (0% Off)</span>
+                </button>
+                <button class="calc-tier-btn" data-tier="2" type="button">
+                  <span>Tier 2: Upper-Middle</span>
+                  <span class="tier-tag">75% Rate (25% Off)</span>
+                </button>
+                <button class="calc-tier-btn" data-tier="3" type="button">
+                  <span>Tier 3: Lower-Middle</span>
+                  <span class="tier-tag">50% Rate (50% Off)</span>
+                </button>
+                <button class="calc-tier-btn" data-tier="4" type="button">
+                  <span>Tier 4: Startups</span>
+                  <span class="tier-tag">50% Flat Discount</span>
+                </button>
+                <button class="calc-tier-btn" data-tier="5" type="button">
+                  <span>Tier 5: Academia</span>
+                  <span class="tier-tag">25% Rate (75% Off)</span>
+                </button>
+                <button class="calc-tier-btn" data-tier="6" type="button">
+                  <span>Tier 6: Subsidized</span>
+                  <span class="tier-tag">Subsidized Quotes</span>
+                </button>
+              </div>
+            </div>
+
             <!-- Package / Service Preset Selector -->
             <div class="calc-field-group">
               <label class="calc-field-label" for="calc-package">
-                <span>2. Select AI Engagement Offer</span>
+                <span>3. Select AI Engagement Offer</span>
                 <span class="hint">Pick a Flagship Bundle or Choose Individual Services</span>
               </label>
               <select class="calc-select" id="calc-package">
@@ -809,7 +1036,8 @@
                 style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.6rem;flex-wrap:wrap;gap:0.5rem;">
                 <label class="calc-field-label" style="margin-bottom:0;">
                   <span style="color:#38bdf8;font-weight:800;">Pick &amp; Choose Your Services:</span>
-                  <span class="hint" id="selected-service-count-label">1 Service Selected ($250 USD)</span>
+                  <span class="hint" id="selected-service-count-label">1 Service Selected (($300 / $225 / $150 / $150 /
+                    $75 / Custom USD))</span>
                 </label>
                 <div style="display:flex;gap:0.4rem;">
                   <button type="button" id="btn-select-all-services"
@@ -828,7 +1056,7 @@
             <!-- Custom USD Amount Input -->
             <div class="calc-field-group">
               <label class="calc-field-label" for="calc-custom-amount">
-                <span>3. Baseline Standard Investment</span>
+                <span>4. Baseline Standard Investment</span>
                 <span class="hint">Standard Base Rate (100% Tier 1)</span>
               </label>
               <div class="calc-input-wrapper">
@@ -838,10 +1066,10 @@
               </div>
             </div>
 
-            <!-- Cohort Participants Input: Base covers up to 10 participants, +$250/head additional -->
+            <!-- Cohort Participants Input: Base covers up to 10 participants, +$300 / +$225 / +$150 / +$150 / +$75 / Custom USD per head additional -->
             <div class="calc-field-group">
               <label class="calc-field-label" for="calc-participants">
-                <span>4. Cohort Participants</span>
+                <span>5. Cohort Participants</span>
                 <span class="hint" id="calc-participants-hint">Business: 1-10 Included (+$300/extra seat) · Personal: 1 Person Only</span>
               </label>
               <div class="calc-input-wrapper">
@@ -849,7 +1077,8 @@
               </div>
               <p id="calc-participants-desc"
                 style="font-size:0.75rem;color:var(--text-muted);margin-top:0.35rem;font-family:var(--font-mono);line-height:1.4;">
-                Business base covers up to 10 participants (additional seats are $250 USD per seat scaled by country
+                Business base covers up to 10 participants (additional seats are ($300 / $225 / $150 / $150 / $75 /
+                Custom USD) per seat scaled by country
                 parity). Individual/Personal is strictly 1 person only.
               </p>
             </div>
@@ -857,7 +1086,7 @@
             <!-- Country / Organization Quick Dropdown -->
             <div class="calc-field-group">
               <label class="calc-field-label" for="calc-country">
-                <span>5. Country or Organization Category</span>
+                <span>6. Country or Organization Category</span>
                 <span class="hint">Auto-Selects Parity Tier</span>
               </label>
               <select class="calc-select" id="calc-country">
@@ -945,38 +1174,7 @@
             </div>
 
             <!-- 6 Interactive Tier Pill Buttons -->
-            <div>
-              <label class="calc-field-label">
-                <span>6. Quick-Select Parity Tier</span>
-                <span class="hint">Click to switch</span>
-              </label>
-              <div class="calc-tier-grid" id="calc-tier-buttons">
-                <button class="calc-tier-btn active" data-tier="1" type="button">
-                  <span>Tier 1: High-Income</span>
-                  <span class="tier-tag">100% Rate (0% Off)</span>
-                </button>
-                <button class="calc-tier-btn" data-tier="2" type="button">
-                  <span>Tier 2: Upper-Middle</span>
-                  <span class="tier-tag">75% Rate (25% Off)</span>
-                </button>
-                <button class="calc-tier-btn" data-tier="3" type="button">
-                  <span>Tier 3: Lower-Middle</span>
-                  <span class="tier-tag">50% Rate (50% Off)</span>
-                </button>
-                <button class="calc-tier-btn" data-tier="4" type="button">
-                  <span>Tier 4: Startups</span>
-                  <span class="tier-tag">50% Flat Discount</span>
-                </button>
-                <button class="calc-tier-btn" data-tier="5" type="button">
-                  <span>Tier 5: Academia</span>
-                  <span class="tier-tag">25% Rate (75% Off)</span>
-                </button>
-                <button class="calc-tier-btn" data-tier="6" type="button">
-                  <span>Tier 6: Subsidized</span>
-                  <span class="tier-tag">Subsidized Quotes</span>
-                </button>
-              </div>
-            </div>
+
           </div>
           <!-- Right Column: Live Calibrated Financial Result Card -->
           <div>
@@ -1062,539 +1260,8 @@
       </div>
     </section>
 
-    <!-- DEDICATED PERSONAL AI TRANSFORMATION SECTION -->
-    <section class="reveal" id="personal-ai-section" style="max-width:1380px;margin:3.5rem auto;padding:0 1.5rem;">
-      <div
-        style="background:radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.12) 0%, rgba(12, 17, 29, 0.98) 100%);border:2px solid var(--gold);border-radius:var(--radius-lg);padding:clamp(2.5rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 3rem);box-shadow:0 0 35px rgba(251,191,36,0.18), 0 10px 40px rgba(0,0,0,0.8);">
-        <div style="text-align:center;max-width:920px;margin:0 auto 2.5rem;">
-          <span
-            style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 1.1rem;border-radius:999px;background:rgba(251, 191, 36, 0.15);border:1px solid rgba(251, 191, 36, 0.45);color:var(--gold);font-family:var(--font-mono);font-size:0.85rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:1rem;">
-            1-ON-1 PERSONAL ACCELERATION · ONE PERSON ONLY
-          </span>
-          <h2
-            style="font-family:var(--font-display);font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:900;color:var(--text-primary);margin-bottom:0.85rem;">
-            Personal Training: <span class="accent-gold">$3,000 USD for 60 Days</span> (30d Training + 30d Guidance)
-          </h2>
-          <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.75;">
-            Personal Training costs $3,000 USD in Tier 1 for 60 days total: 30 days of intensive live instruction (4 hours per day) plus 30 days of guidance, Q&amp;A and written guides. Delivered as 60 days over 2 months with Saturday and Sunday as holidays, 4 hours per day. Strictly for one person only (private
-            1-on-1 acceleration). Clients are encouraged to choose services relevant to their work or interests.
-          </p>
-        </div>
 
-        <div
-          style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;margin-bottom:2.5rem;">
-          <div
-            style="background:rgba(255,255,255,0.03);border:1px solid rgba(255, 255, 255, 0.1);border-radius:12px;padding:1.5rem;">
-            <div style="font-size:1.8rem;margin-bottom:0.6rem;"></div>
-            <h3 style="color:var(--gold);font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">$3,000 Base Rate
-            </h3>
-            <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
-              Private 1-on-1 acceleration at $3,000 USD in Tier 1 with full 195-country Purchasing Power Parity support
-              down to subsidized relief in Tier 6.
-            </p>
-          </div>
-          <div
-            style="background:rgba(255,255,255,0.03);border:1px solid rgba(255, 255, 255, 0.1);border-radius:12px;padding:1.5rem;">
-            <div style="font-size:1.8rem;margin-bottom:0.6rem;"></div>
-            <h3 style="color:var(--gold);font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">20 Days Live Training
-            </h3>
-            <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
-              Days 1 to 20: hands-on working proficiency in your chosen AI disciplines (local LLMs, agents, automations,
-              Claude, Gemini) set up on your machine (20 working days over 4 weeks, 4 hours per day).
-            </p>
-          </div>
-          <div
-            style="background:rgba(255,255,255,0.03);border:1px solid rgba(255, 255, 255, 0.1);border-radius:12px;padding:1.5rem;">
-            <div style="font-size:1.8rem;margin-bottom:0.6rem;"></div>
-            <h3 style="color:var(--gold);font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">20 Days Guidance &amp;
-              Materials</h3>
-            <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
-              Days 21 to 40: dedicated operational guidance, daily questions and doubts clarification, and guidance,
-              Q&amp;A and written guides and materials tailored to your work (20 working days, 4 hours per day).
-            </p>
-          </div>
-        </div>
 
-        <div
-          style="background:rgba(0,0,0,0.4);border:1px solid rgba(255, 255, 255, 0.1);border-radius:12px;padding:1.5rem;margin-bottom:2.25rem;">
-          <h4
-            style="color:var(--gold);font-family:var(--font-mono);font-size:0.95rem;text-transform:uppercase;margin-bottom:1rem;text-align:center;">
-            Personal Training Parity Rates (195 Nations Supported):
-          </h4>
-          <div
-            style="display:grid;grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));gap:1rem;text-align:center;">
-            <div
-              style="padding:0.75rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(56,189,248,0.3);">
-              <div style="font-size:0.75rem;color:#7dd3fc;font-family:var(--font-mono);">TIER 1 (HIGH-INCOME)</div>
-              <div style="font-size:1.25rem;font-weight:800;color:#38bdf8;margin-top:0.25rem;">$2,500 USD</div>
-            </div>
-            <div
-              style="padding:0.75rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255, 255, 255, 0.1);">
-              <div style="font-size:0.75rem;color:#fde68a;font-family:var(--font-mono);">TIER 2 (UPPER-MIDDLE-INCOME)
-              </div>
-              <div style="font-size:1.25rem;font-weight:800;color:#fbbf24;margin-top:0.25rem;">$1,875 USD</div>
-            </div>
-            <div
-              style="padding:0.75rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(52,211,153,0.3);">
-              <div style="font-size:0.75rem;color:#a7f3d0;font-family:var(--font-mono);">TIER 3 (LOWER-MIDDLE &amp;
-                LOW-INCOME)</div>
-              <div style="font-size:1.25rem;font-weight:800;color:#34d399;margin-top:0.25rem;">$1,250 USD</div>
-            </div>
-            <div
-              style="padding:0.75rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(244,114,182,0.3);">
-              <div style="font-size:0.75rem;color:#fbcfe8;font-family:var(--font-mono);">TIER 4 (EARLY-STAGE STARTUPS)
-              </div>
-              <div style="font-size:1.25rem;font-weight:800;color:#f472b6;margin-top:0.25rem;">$1,250 USD</div>
-            </div>
-            <div
-              style="padding:0.75rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(192,132,252,0.3);">
-              <div style="font-size:0.75rem;color:#e9d5ff;font-family:var(--font-mono);">TIER 5 (ACADEMIA &amp;
-                NON-PROFITS)</div>
-              <div style="font-size:1.25rem;font-weight:800;color:#c084fc;margin-top:0.25rem;">$625 USD</div>
-            </div>
-            <div
-              style="padding:0.75rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(0,240,255,0.3);">
-              <div style="font-size:0.75rem;color:#7dd3fc;font-family:var(--font-mono);">TIER 6 (SUBSIDIZED)</div>
-              <div style="font-size:1.25rem;font-weight:800;color:#00f0ff;margin-top:0.25rem;">$250 USD</div>
-            </div>
-          </div>
-        </div>
-
-        <div style="text-align:center;margin-top:2rem;">
-          <div class="gold-highlight-container">
-            <a class="btn btn-commission" href="personal-ai-training.html"
-              style="padding:0.95rem 1.85rem;font-size:0.95rem;">
-              Explore Personal AI Transformation →
-            </a>
-            <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank"
-              style="padding:0.95rem 1.85rem;font-size:0.95rem;">
-              Book a free intro call on LinkedIn ↗
-            </a>
-            <a class="btn btn-commission" href="contact.html?service=personal-ai-transformation"
-              style="padding:0.95rem 1.85rem;font-size:0.95rem;">
-              Book Your Personal Sprint →
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 12 INDIVIDUAL SERVICES & A LA CARTE SELECTION (FIT FOUR IN A ROW) -->
-    <section class="reveal" id="service-rates" style="max-width:1380px;margin:3.5rem auto;padding:0 1.5rem;">
-      <div style="text-align:center;max-width:880px;margin:0 auto 2rem auto;">
-        <p class="section-label">// 12 INDIVIDUAL SERVICE PICKS · FULL 6-TIER PARITY PRICING</p>
-        <h2 class="section-title">Pick &amp; Choose Your <span class="accent-gold">Individual AI Services</span></h2>
-        <p class="section-sub" style="margin:0.5rem auto 0 auto;line-height:1.75;font-size:calc(0.98rem + 3px);">
-          Clients have complete flexibility to select individual services tailored to their immediate needs. Every
-          service includes <strong style="color:var(--text-primary);">5 days of live hands-on engineering training plus
-            5 days of dedicated operational support</strong> (10 days total coverage per service). Standard Tier 1
-          pricing is <strong style="color:var(--gold);">$250 USD per service for Individuals</strong> (strictly 1
-          person) and <strong style="color:var(--cyan);">$250 USD per service for Businesses</strong> (covers up to 10
-          participants, +$250 USD per extra seat). Purchasing Power Parity (PPP) is available for all service pricing
-          across all 6 tiers.
-        </p>
-      </div>
-
-      <!-- 4 Services Per Row Grid -->
-      <div class="pricing-grid-faq">
-        <!-- 01: Generative AI Transformation -->
-        <div class="price-card-faq border-cyan">
-          <div>
-            <div
-              style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.25rem;">
-              SERVICE 01 · ENTERPRISE AI</div>
-            <h3
-              style="color:var(--text-primary);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;line-height:1.35;">
-              <a href="business-services/business-service-generative-ai-transformation.html"
-                style="color:var(--text-primary);text-decoration:none;">Generative AI Transformation</a>
-            </h3>
-            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.45;margin-bottom:0.75rem;">Convert anonymous traffic into sales-ready pipeline using conversational AI audit tools, waterfall firmographic enrichment, and autonomous CRM routing.</p>
-          </div>
-          <div>
-            <div class="service-rate-box">
-              <div class="service-rate-row">
-                <span style="color:var(--gold);font-weight:700;">Individual (1-on-1):</span>
-                <span class="service-rate-val svc-indiv-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-indiv-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-              <div class="service-rate-row" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.45rem;">
-                <span style="color:var(--cyan);font-weight:700;">Business (≤10 seats):</span>
-                <span class="service-rate-val svc-biz-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-biz-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-            </div>
-            <div class="service-coverage-label">5 Days Training + 5 Days Support</div>
-            <a class="btn btn-outline" href="business-services/business-service-generative-ai-transformation.html"
-              style="width:100%;justify-content:center;padding:0.65rem 0.85rem;font-size:0.88rem;font-weight:700;">Explore
-              Service →</a>
-          </div>
-        </div>
-
-        <!-- 02: Local LLMs & Cost Slashing -->
-        <div class="price-card-faq border-gold">
-          <div>
-            <div
-              style="font-family:var(--font-mono);font-size:0.75rem;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.25rem;">
-              SERVICE 02 · COST CONTROL</div>
-            <h3
-              style="color:var(--text-primary);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;line-height:1.35;">
-              <a href="business-services/business-service-local-llms-cost-slashing.html"
-                style="color:var(--text-primary);text-decoration:none;">Local LLMs & Cost Slashing</a>
-            </h3>
-            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.45;margin-bottom:0.75rem;">Slash recurring API costs 60%-90% via private Ollama, vLLM, GGUF/AWQ quantization, and local model clusters.</p>
-          </div>
-          <div>
-            <div class="service-rate-box">
-              <div class="service-rate-row">
-                <span style="color:var(--gold);font-weight:700;">Individual (1-on-1):</span>
-                <span class="service-rate-val svc-indiv-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-indiv-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-              <div class="service-rate-row" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.45rem;">
-                <span style="color:var(--cyan);font-weight:700;">Business (≤10 seats):</span>
-                <span class="service-rate-val svc-biz-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-biz-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-            </div>
-            <div class="service-coverage-label">5 Days Training + 5 Days Support</div>
-            <a class="btn btn-outline" href="business-services/business-service-local-llms-cost-slashing.html"
-              style="width:100%;justify-content:center;padding:0.65rem 0.85rem;font-size:0.88rem;font-weight:700;">Explore
-              Service →</a>
-          </div>
-        </div>
-
-        <!-- 03: Claude Agent Orchestration -->
-        <div class="price-card-faq border-cyan">
-          <div>
-            <div
-              style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.25rem;">
-              SERVICE 03 · MULTI-AGENT SWARMS</div>
-            <h3
-              style="color:var(--text-primary);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;line-height:1.35;">
-              <a href="business-services/business-service-ai-agents-orchestration.html"
-                style="color:var(--text-primary);text-decoration:none;">Claude Agent Orchestration</a>
-            </h3>
-            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.45;margin-bottom:0.75rem;">Architect orchestrator-worker swarms, parallel fan-out loops, human-in-the-loop gates, and dynamic model routing.</p>
-          </div>
-          <div>
-            <div class="service-rate-box">
-              <div class="service-rate-row">
-                <span style="color:var(--gold);font-weight:700;">Individual (1-on-1):</span>
-                <span class="service-rate-val svc-indiv-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-indiv-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-              <div class="service-rate-row" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.45rem;">
-                <span style="color:var(--cyan);font-weight:700;">Business (≤10 seats):</span>
-                <span class="service-rate-val svc-biz-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-biz-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-            </div>
-            <div class="service-coverage-label">5 Days Training + 5 Days Support</div>
-            <a class="btn btn-outline" href="business-services/business-service-ai-agents-orchestration.html"
-              style="width:100%;justify-content:center;padding:0.65rem 0.85rem;font-size:0.88rem;font-weight:700;">Explore
-              Service →</a>
-          </div>
-        </div>
-
-        <!-- 04: Agentic Assistants Training -->
-        <div class="price-card-faq border-violet">
-          <div>
-            <div
-              style="font-family:var(--font-mono);font-size:0.75rem;color:var(--violet);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.25rem;">
-              SERVICE 04 · OPEN AUTONOMOUS AGENTS</div>
-            <h3
-              style="color:var(--text-primary);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;line-height:1.35;">
-              <a href="business-services/business-service-agentic-ai-systems.html"
-                style="color:var(--text-primary);text-decoration:none;">Agentic Assistants Training</a>
-            </h3>
-            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.45;margin-bottom:0.75rem;">Deploy open-weights Agentic Assistants agent loops with multi-turn tool calling, structured JSON schemas, and function-calling fine-tunes.</p>
-          </div>
-          <div>
-            <div class="service-rate-box">
-              <div class="service-rate-row">
-                <span style="color:var(--gold);font-weight:700;">Individual (1-on-1):</span>
-                <span class="service-rate-val svc-indiv-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-indiv-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-              <div class="service-rate-row" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.45rem;">
-                <span style="color:var(--cyan);font-weight:700;">Business (≤10 seats):</span>
-                <span class="service-rate-val svc-biz-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-biz-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-            </div>
-            <div class="service-coverage-label">5 Days Training + 5 Days Support</div>
-            <a class="btn btn-outline" href="business-services/business-service-agentic-ai-systems.html"
-              style="width:100%;justify-content:center;padding:0.65rem 0.85rem;font-size:0.88rem;font-weight:700;">Explore
-              Service →</a>
-          </div>
-        </div>
-
-        <!-- 05: Workflow Automations -->
-        <div class="price-card-faq border-emerald">
-          <div>
-            <div
-              style="font-family:var(--font-mono);font-size:0.75rem;color:#34d399;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.25rem;">
-              SERVICE 05 · NO-CODE & LOW-CODE</div>
-            <h3
-              style="color:var(--text-primary);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;line-height:1.35;">
-              <a href="business-services/business-service-workflow-automations.html"
-                style="color:var(--text-primary);text-decoration:none;">Workflow Automations</a>
-            </h3>
-            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.45;margin-bottom:0.75rem;">End-to-end automation pipelines connecting CRM, databases, email, and LLM backends via n8n, Make, and open-source stacks.</p>
-          </div>
-          <div>
-            <div class="service-rate-box">
-              <div class="service-rate-row">
-                <span style="color:var(--gold);font-weight:700;">Individual (1-on-1):</span>
-                <span class="service-rate-val svc-indiv-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-indiv-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-              <div class="service-rate-row" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.45rem;">
-                <span style="color:var(--cyan);font-weight:700;">Business (≤10 seats):</span>
-                <span class="service-rate-val svc-biz-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-biz-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-            </div>
-            <div class="service-coverage-label">5 Days Training + 5 Days Support</div>
-            <a class="btn btn-outline" href="business-services/business-service-workflow-automations.html"
-              style="width:100%;justify-content:center;padding:0.65rem 0.85rem;font-size:0.88rem;font-weight:700;">Explore
-              Service →</a>
-          </div>
-        </div>
-
-        <!-- 06: AI Budget & Cost Control Training -->
-        <div class="price-card-faq border-gold">
-          <div>
-            <div
-              style="font-family:var(--font-mono);font-size:0.75rem;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.25rem;">
-              SERVICE 06 · GOVERNANCE & LIMITS</div>
-            <h3
-              style="color:var(--text-primary);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;line-height:1.35;">
-              <a href="business-services/business-service-ai-budget-cost-limits-training.html"
-                style="color:var(--text-primary);text-decoration:none;">AI Budget & Cost Control</a>
-            </h3>
-            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.45;margin-bottom:0.75rem;">Implement hard budget limits, token caps, fallback models, semantic caching, and spend analytics dashboards.</p>
-          </div>
-          <div>
-            <div class="service-rate-box">
-              <div class="service-rate-row">
-                <span style="color:var(--gold);font-weight:700;">Individual (1-on-1):</span>
-                <span class="service-rate-val svc-indiv-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-indiv-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-              <div class="service-rate-row" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.45rem;">
-                <span style="color:var(--cyan);font-weight:700;">Business (≤10 seats):</span>
-                <span class="service-rate-val svc-biz-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-biz-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-            </div>
-            <div class="service-coverage-label">5 Days Training + 5 Days Support</div>
-            <a class="btn btn-outline" href="business-services/business-service-ai-budget-cost-limits-training.html"
-              style="width:100%;justify-content:center;padding:0.65rem 0.85rem;font-size:0.88rem;font-weight:700;">Explore
-              Service →</a>
-          </div>
-        </div>
-
-        <!-- 07: AI Developer Training -->
-        <div class="price-card-faq border-gold">
-          <div>
-            <div
-              style="font-family:var(--font-mono);font-size:0.75rem;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.25rem;">
-              SERVICE 07 · CODING AGENTS & TDD</div>
-            <h3
-              style="color:var(--text-primary);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;line-height:1.35;">
-              <a href="business-services/business-service-ai-developer-training.html"
-                style="color:var(--text-primary);text-decoration:none;">AI Developer Training</a>
-            </h3>
-            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.45;margin-bottom:0.75rem;">Master Claude Code, agentic refactoring, test-driven prompt harnesses, and autonomous bug-hunting workflows.</p>
-          </div>
-          <div>
-            <div class="service-rate-box">
-              <div class="service-rate-row">
-                <span style="color:var(--gold);font-weight:700;">Individual (1-on-1):</span>
-                <span class="service-rate-val svc-indiv-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-indiv-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-              <div class="service-rate-row" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.45rem;">
-                <span style="color:var(--cyan);font-weight:700;">Business (≤10 seats):</span>
-                <span class="service-rate-val svc-biz-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-biz-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-            </div>
-            <div class="service-coverage-label">5 Days Training + 5 Days Support</div>
-            <a class="btn btn-outline" href="business-services/business-service-ai-developer-training.html"
-              style="width:100%;justify-content:center;padding:0.65rem 0.85rem;font-size:0.88rem;font-weight:700;">Explore
-              Service →</a>
-          </div>
-        </div>
-
-        <!-- 08: Advanced AI Agents -->
-        <div class="price-card-faq border-violet">
-          <div>
-            <div
-              style="font-family:var(--font-mono);font-size:0.75rem;color:var(--violet);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.25rem;">
-              SERVICE 08 · AUTONOMOUS AGENT DESIGN</div>
-            <h3
-              style="color:var(--text-primary);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;line-height:1.35;">
-              <a href="business-services/business-service-advanced-ai-agents.html"
-                style="color:var(--text-primary);text-decoration:none;">Advanced AI Agents</a>
-            </h3>
-            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.45;margin-bottom:0.75rem;">Build long-horizon planning agents with persistent state, tree-of-thought exploration, and self-correcting execution.</p>
-          </div>
-          <div>
-            <div class="service-rate-box">
-              <div class="service-rate-row">
-                <span style="color:var(--gold);font-weight:700;">Individual (1-on-1):</span>
-                <span class="service-rate-val svc-indiv-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-indiv-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-              <div class="service-rate-row" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.45rem;">
-                <span style="color:var(--cyan);font-weight:700;">Business (≤10 seats):</span>
-                <span class="service-rate-val svc-biz-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-biz-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-            </div>
-            <div class="service-coverage-label">5 Days Training + 5 Days Support</div>
-            <a class="btn btn-outline" href="business-services/business-service-advanced-ai-agents.html"
-              style="width:100%;justify-content:center;padding:0.65rem 0.85rem;font-size:0.88rem;font-weight:700;">Explore
-              Service →</a>
-          </div>
-        </div>
-
-        <!-- 09: Claude Advanced Training -->
-        <div class="price-card-faq border-gold">
-          <div>
-            <div
-              style="font-family:var(--font-mono);font-size:0.75rem;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.25rem;">
-              SERVICE 09 · CLAUDE ARCHITECTURE</div>
-            <h3
-              style="color:var(--text-primary);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;line-height:1.35;">
-              <a href="business-services/business-service-claude-advanced-training.html"
-                style="color:var(--text-primary);text-decoration:none;">Claude Advanced Training</a>
-            </h3>
-            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.45;margin-bottom:0.75rem;">Enterprise Claude architecture: MCP tool servers, prompt caching, effort controls, and production API harnesses.</p>
-          </div>
-          <div>
-            <div class="service-rate-box">
-              <div class="service-rate-row">
-                <span style="color:var(--gold);font-weight:700;">Individual (1-on-1):</span>
-                <span class="service-rate-val svc-indiv-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-indiv-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-              <div class="service-rate-row" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.45rem;">
-                <span style="color:var(--cyan);font-weight:700;">Business (≤10 seats):</span>
-                <span class="service-rate-val svc-biz-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-biz-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-            </div>
-            <div class="service-coverage-label">5 Days Training + 5 Days Support</div>
-            <a class="btn btn-outline" href="business-services/business-service-claude-advanced-training.html"
-              style="width:100%;justify-content:center;padding:0.65rem 0.85rem;font-size:0.88rem;font-weight:700;">Explore
-              Service →</a>
-          </div>
-        </div>
-
-        <!-- 10: Google Gemini Advanced Training -->
-        <div class="price-card-faq border-gold">
-          <div>
-            <div
-              style="font-family:var(--font-mono);font-size:0.75rem;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.25rem;">
-              SERVICE 10 · ADVANCED GEMINI & AGY</div>
-            <h3
-              style="color:var(--text-primary);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;line-height:1.35;">
-              <a href="business-services/business-service-gemini-advanced-training.html"
-                style="color:var(--text-primary);text-decoration:none;">Gemini Advanced Training</a>
-            </h3>
-            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.45;margin-bottom:0.75rem;">Business Gemini architecture: Google Antigravity SDK, structured outputs, code execution, and multi-agent coordination.</p>
-          </div>
-          <div>
-            <div class="service-rate-box">
-              <div class="service-rate-row">
-                <span style="color:var(--gold);font-weight:700;">Individual (1-on-1):</span>
-                <span class="service-rate-val svc-indiv-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-indiv-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-              <div class="service-rate-row" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.45rem;">
-                <span style="color:var(--cyan);font-weight:700;">Business (≤10 seats):</span>
-                <span class="service-rate-val svc-biz-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-biz-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-            </div>
-            <div class="service-coverage-label">5 Days Training + 5 Days Support</div>
-            <a class="btn btn-outline" href="business-services/business-service-gemini-advanced-training.html"
-              style="width:100%;justify-content:center;padding:0.65rem 0.85rem;font-size:0.88rem;font-weight:700;">Explore
-              Service →</a>
-          </div>
-        </div>
-
-        <!-- 11: Competitor Research & Intelligence -->
-        <div class="price-card-faq border-cyan">
-          <div>
-            <div
-              style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.25rem;">
-              SERVICE 11 · MARKET INTELLIGENCE</div>
-            <h3
-              style="color:var(--text-primary);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;line-height:1.35;">
-              <a href="business-services/business-service-ai-based-competitor-research.html"
-                style="color:var(--text-primary);text-decoration:none;">Competitor Research & Intelligence</a>
-            </h3>
-            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.45;margin-bottom:0.75rem;">Deploy autonomous competitive intelligence agents, automated pricing trackers, product teardown scrapers, and dynamic sales battlecards.</p>
-          </div>
-          <div>
-            <div class="service-rate-box">
-              <div class="service-rate-row">
-                <span style="color:var(--gold);font-weight:700;">Individual (1-on-1):</span>
-                <span class="service-rate-val svc-indiv-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-indiv-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-              <div class="service-rate-row" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.45rem;">
-                <span style="color:var(--cyan);font-weight:700;">Business (≤10 seats):</span>
-                <span class="service-rate-val svc-biz-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-biz-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-            </div>
-            <div class="service-coverage-label">5 Days Training + 5 Days Support</div>
-            <a class="btn btn-outline" href="business-services/business-service-ai-based-competitor-research.html"
-              style="width:100%;justify-content:center;padding:0.65rem 0.85rem;font-size:0.88rem;font-weight:700;">Explore
-              Service →</a>
-          </div>
-        </div>
-
-        <!-- 12: AI Leads Magnet & Conversion Systems -->
-        <div class="price-card-faq border-gold">
-          <div>
-            <div
-              style="font-family:var(--font-mono);font-size:0.75rem;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.25rem;">
-              SERVICE 12 · DEMAND GENERATION</div>
-            <h3
-              style="color:var(--text-primary);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;line-height:1.35;">
-              <a href="business-services/business-service-ai-assisted-leads-magnet.html"
-                style="color:var(--text-primary);text-decoration:none;">AI Leads Magnet & Conversion Systems</a>
-            </h3>
-            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.45;margin-bottom:0.75rem;">Convert anonymous traffic into sales-ready pipeline using conversational AI audit tools, waterfall firmographic enrichment, and autonomous CRM routing.</p>
-          </div>
-          <div>
-            <div class="service-rate-box">
-              <div class="service-rate-row">
-                <span style="color:var(--gold);font-weight:700;">Individual (1-on-1):</span>
-                <span class="service-rate-val svc-indiv-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-indiv-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-              <div class="service-rate-row" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.45rem;">
-                <span style="color:var(--cyan);font-weight:700;">Business (≤10 seats):</span>
-                <span class="service-rate-val svc-biz-price" data-base="300">$300 USD</span>
-              </div>
-              <div class="service-rate-tiers svc-biz-tiers">T2: $225 | T3/4: $150 | T5: $75 | T6: $30</div>
-            </div>
-            <div class="service-coverage-label">5 Days Training + 5 Days Support</div>
-            <a class="btn btn-outline" href="business-services/business-service-ai-assisted-leads-magnet.html"
-              style="width:100%;justify-content:center;padding:0.65rem 0.85rem;font-size:0.88rem;font-weight:700;">Explore
-              Service →</a>
-          </div>
-        </div>
-
-      </div>
-    </section>
 
     <!-- COMMERCIAL GUARANTEES STRIP -->
     <section class="reveal" id="guarantee" style="max-width:1380px;margin:0 auto 3.5rem auto;padding:0 1.5rem;">
@@ -1985,7 +1652,7 @@
     <!-- END:FOOTER -->
 
   <script src="components.js"></script>
-<script>
+  <script>
     // Scroll Reveal Observer
     const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
     const observer = new IntersectionObserver((entries) => {
@@ -1995,6 +1662,8 @@
   </script>
   <!-- PARITY PRICING CALCULATOR SCRIPT -->
   <script src="pricing-calculator.js"></script>
+  <!-- PAYMENT SCHEDULE & TRUST ARCHITECTURE WIDGET -->
+  <script src="payment-schedule.js"></script>
 </body>
 
 </html>

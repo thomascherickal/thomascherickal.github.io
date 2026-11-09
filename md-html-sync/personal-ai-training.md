@@ -1,4 +1,4 @@
-# Personal Training: $2,500 for 60 Days (30d Training + 30d Guidance & Materials)
+# Personal Training: $3,000 / $2,250 / $1,500 / $750 / Custom for 60 Days (30d Training + 30d Guidance & Materials)
 ## Thomas Cherickal - The Digital Futurist
 
 > **PERSONAL TRAINING · 60 DAYS (30 DAYS TRAINING + 30 DAYS GUIDANCE)**  
@@ -8,7 +8,7 @@
 
 ---
 
-Clients can choose our comprehensive 60-day transformation at $2,500 USD (30 days live training + 30 days guidance, Q&A and written guides), or pick individual services at $250 USD per service (5 days live training + 5 days dedicated support). Strictly for 1 person only. Clients are encouraged to choose services
+Clients can choose our comprehensive 60-day transformation at $2,500 USD (30 days live training + 30 days guidance, Q&A and written guides), or pick individual services at ($300 / $225 / $150 / $150 / $75 / Custom USD) per service (5 days live training + 5 days dedicated support). Strictly for 1 person only. Clients are encouraged to choose services
  relevant to their work or interests. Purchasing Power Parity (PPP) is available for all service pricing across
  195 countries.
 
@@ -30,7 +30,7 @@ Guaranteed 30 days of intensive 1-on-1 instruction, followed immediately by 30 d
 
 // THE VALUE PROPOSITION & RATIONALE
 
-## Why Personal Training Is Structured at $2,500 for 60 Days
+## Why Personal Training Is Structured at $3,000 / $2,250 / $1,500 / $750 / Custom for 60 Days
 
 In organizational Business Training engagements ($2,500 USD base), substantial coordination is mandatory:
  aligning cross-functional teams of up to 10 participants, navigating corporate compliance reviews,
@@ -41,7 +41,7 @@ For a solo founder, visionary executive, or elite individual developer,
  Friction is zero. Because you have full administrative authority over your local machines, repositories, and
  API credentials, work moves faster than it can inside a committee.
 
-Personal Training costs $2,500 in Tier 1 for 60 days (30 days training, + 30 days guidance, Q&A and written guides). Strictly for 1 person only. Clients are encouraged to choose services relevant to their
+Personal Training costs $3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD across 6 parity tiers for 60 days (30 days training, + 30 days guidance, Q&A and written guides). Strictly for 1 person only. Clients are encouraged to choose services relevant to their
  work or interests.
 
 // FULL-SPECTRUM MASTERY
@@ -175,7 +175,7 @@ Unlike corporate teams with extensive IT departments, individual practitioners, 
 
 ## Personal Training Parity Pricing Matrix
 
-Personal Training is $3,000 USD in Tier 1 for 60 days (30 days training + 30 days guidance, Q&A and written guides). Clients are encouraged to choose services relevant to their work or interests. Parity
+Personal Training is $3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD across 6 parity tiers for 60 days (30 days training + 30 days guidance, Q&A and written guides). Clients are encouraged to choose services relevant to their work or interests. Parity
  multipliers apply globally:
 
 | Equity Tier | Qualifying Region / Profile | Discount | Milestone Rate |
@@ -183,12 +183,12 @@ Personal Training is $3,000 USD in Tier 1 for 60 days (30 days training + 30 day
 | Tier 1: High-Income | US, Canada, UK, Germany, France, Poland, Czech Republic, Hungary, Greece, Romania, Japan, South
  Korea, Singapore, Australia, Chile, UAE, Saudi Arabia | Standard Rate (0% Discount) | $3,000 USD |
 | Tier 2: Upper-Middle | Brazil, Mexico, Colombia, Argentina, Peru, Ecuador, Guatemala, Türkiye, Malaysia, Thailand,
- Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka | 25% Parity Discount | $2,250 USD |
+ Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka | 25% Parity Discount | $2,($300 / $225 / $150 / $150 / $75 / Custom USD) |
 | Tier 3: Lower-Middle & Low-Income | India, Bangladesh, Pakistan, Nepal, Bhutan, Kenya, Nigeria, Ghana, Egypt, Morocco, Tanzania,
  Bolivia, Cambodia, Laos, Myanmar, Ethiopia, Uganda, Rwanda | 50% Parity Discount | $1,500 USD |
-| Tier 4: Early Startups | Solo Founders, Pre-Seed, Bootstrapped Tech Ventures (<$1M Raised) | 50% Startup Discount | $1,250 USD |
+| Tier 4: Early Startups | Solo Founders, Pre-Seed, Bootstrapped Tech Ventures (<$1M Raised) | 50% Startup Discount | $1,($300 / $225 / $150 / $150 / $75 / Custom USD) |
 | Tier 5: Academia & Non-Profit | Students, Academic Researchers, Faculty Labs, 501(c)(3) Non-Profits | 75% Academic Discount | $750 USD |
-| Tier 6: Crisis-Affected & Under-Resourced | Crisis Zones, Hyperinflation Economies, UN Least Developed Countries, Grassroots Devs | Custom Subsidized Relief | $250 USD (or Quote) |
+| Tier 6: Crisis-Affected & Under-Resourced | Crisis Zones, Hyperinflation Economies, UN Least Developed Countries, Grassroots Devs | Custom Subsidized Relief | ($300 / $225 / $150 / $150 / $75 / Custom USD) (or Quote) |
 
 ## Ready for Your Personal AI Transformation?
 

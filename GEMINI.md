@@ -134,6 +134,12 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
   - **Walkaway Guarantee**: Walk away owing nothing if not satisfied after the first milestone training phase.
 - **Purchasing Power Parity (PPP) Explanation**:
   - Every page mentioning pricing must provide a short explanation of the six 195-country Purchasing Power Parity (PPP) tiers and include a prominent link to `pricing.html`.
+- **Global Parity Pricing Display Everywhere Rule**:
+  - Wherever pricing is presented across the website (including Hero banners, package summaries, guarantee blocks, service pages, and guides), always display the full Purchasing Power Parity range to prominently highlight global parity access:
+    - **Flagship Tiers**: `$3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD` (representing Tier 1 through Tier 6).
+    - **Individual Service Tiers**: `$300 / $225 / $150 / $150 / $75 / Custom USD` (representing Tier 1 through Tier 6).
+    - **Additional Seats (Flagship & Individual)**: Billed at the identical calibrated tier rates (`+$300 / +$225 / +$150 / +$150 / +$75 / Custom USD per extra seat`).
+  - Follow front-end styling and responsive design guidelines to ensure text wraps smoothly on mobile screens without horizontal blowout.
 - **High-Quality Training Material & Apache 2.0 Licensing**:
   - All high-quality training materials, curriculum documents, architectural guides, and custom client code are licensed under the **Apache 2.0 license**, permitting commercial use, internal deployment, resale, and relicensing with attribution.
 - **Support Period Payments**:

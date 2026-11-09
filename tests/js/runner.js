@@ -16,6 +16,7 @@ const testEdgeCases = require('./test_edge_cases.js');
 const testDomController = require('./test_dom_controller.js');
 const testComponents = require('./test_components.js');
 const testMermaid = require('./test_mermaid.js');
+const testPaymentSchedule = require('./test_payment_schedule.js');
 
 const TEST_MODULES = [
   { name: "test_data_integrity", module: testDataIntegrity },
@@ -28,7 +29,8 @@ const TEST_MODULES = [
   { name: "test_edge_cases", module: testEdgeCases },
   { name: "test_dom_controller", module: testDomController },
   { name: "test_components", module: testComponents },
-  { name: "test_mermaid", module: testMermaid }
+  { name: "test_mermaid", module: testMermaid },
+  { name: "test_payment_schedule", module: testPaymentSchedule }
 ];
 
 async function runAllModules(PricingCalculator, constants) {

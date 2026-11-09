@@ -3,9 +3,10 @@
 
 > **The Future Is Now**  
 > **I train individuals and teams to work AI-first, from freshers and developers to
- architects, managers and CXOs. Training is live and remote and covers Claude agent orchestration, the Gemini
- toolset, and budget controls that keep AI spend predictable. For teams ready to invest in hardware, I also set
- up local LLMs that cut recurring cloud API bills.**
+ architects, managers and CXOs. Training is live and remote. It has zero payment upfront. It covers
+ Claude AI agent orchestration, Gemini AI
+ tooling, and budget controls that keep AI spend predictable. For teams ready to invest in hardware, I also set
+ up local LLMs that cut recurring cloud API bills and allow full privacy and data sovereignty.**
 
 **Location**: Chennai, India (Remote - Worldwide)  
 **Brand**: The Digital Futurist  
