@@ -421,25 +421,25 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 
 ## Latest Pre-Commit Report Summary
 
-> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`metrics.md`](metrics.md)** | Recorded on: `2026-11-09 09:35:27 UTC`
+> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`metrics.md`](metrics.md)** | Recorded on: `2026-11-09 09:44:22 UTC`
 
 ### Commit Overview
 
 | Property | Value |
 | :--- | :--- |
-| **Parent Commit (Full)** | `7fd0d28b344240fa1def48ebccd57dd2b36b47f5` |
-| **Parent Commit (Short)** | `7fd0d28` |
+| **Parent Commit (Full)** | `6fe09f084c01b8af6fb053d8335118533fbd5eeb` |
+| **Parent Commit (Short)** | `6fe09f0` |
 | **Branch** | `main` |
-| **Parent Subject** | Pricing Visibility |
+| **Parent Subject** | More flexible Guarantees.html |
 | **Parent Author** | Thomas Cherickal `<thomascherickal@gmail.com>` |
-| **Parent Author Date** | `2026-11-09T13:54:18+05:30` |
-| **Commits in Repo (before this commit)** | 513 |
+| **Parent Author Date** | `2026-11-09T15:05:14+05:30` |
+| **Commits in Repo (before this commit)** | 514 |
 
 ### Quality Gate & Verification Summary
 
 | Quality Gate / Test Dimension | Total Scope | Passed | Failed | Status | Runtime |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| **Python Unit Test Suite** | 141 tests across 24 modules | 141 | 0 | PASSED | 9.94s |
+| **Python Unit Test Suite** | 148 tests across 25 modules | 148 | 0 | PASSED | 9.94s |
 | **JavaScript Unit Test Suite** | 131 tests across 17 sections | 131 | 0 | PASSED | 0.03s |
 | **NLP-Fuzzy-Expert Sync Engine** | 72 target documents | 72 | 0 | PASSED | 1.50s |
 | **SSOT Data Immutability Guard** | 11 data files SHA-256 hash | 11 | 0 | PASSED | 0.001s |
@@ -452,23 +452,23 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 
 | Language | Tracked Files | Total Statements / Lines | Covered | Missed | Coverage % | Status |
 |:---|---:|---:|---:|---:|---:|:---|
-| Python (`nlp-fuzzy-expert/`, `python/`) | 29 | 5,218 | 4,932 | 286 | **94.52%** | PASS |
+| Python (`nlp-fuzzy-expert/`, `python/`) | 29 | 5,214 | 5,214 | 0 | **100.00%** | PASS |
 | JavaScript (Root scripts) | 3 | 1,254 | 1,254 | 0 | **100.00%** | PASS |
-| **Repository Combined Total** | **32** | **6,472** | **6,186** | **286** | **95.58%** | **PASS** |
+| **Repository Combined Total** | **32** | **6,468** | **6,468** | **0** | **100.00%** | **PASS** |
 
 ### Repository Code & Engineering Metrics Summary (`metrics.md`)
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **505** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **991,858** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **975,800** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,652** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **10,406** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **73.22 MB (76,774,308 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **875,035 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **513** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-09** | Subject: "Pricing Visibility" |
+| **Total Tracked Files** | **508** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **992,527** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **976,338** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,673** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **10,516** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **73.25 MB (76,804,683 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **875,338 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **514** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-09** | Subject: "More flexible Guarantees.html" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ### Architecture & File Category Breakdown (`metrics.md`)
@@ -478,9 +478,9 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 | **HTML Documents** | 72 | 89,867 | 6.77 MB (7,101,882 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,887 | 278.67 KB (285,354 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 32 | 11,245 | 3.69 MB (3,868,414 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 54 | 13,896 | 617.88 KB (632,704 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 94 | 41,596 | 5.08 MB (5,324,815 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Python Tooling** | 56 | 14,555 | 644.50 KB (659,965 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 94 | 41,606 | 5.08 MB (5,326,893 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 90 | 823,314 | 40.65 MB (42,627,178 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 95 | 0 | 16.03 MB (16,804,392 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 10 | 0 | 61.60 KB (63,081 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 11 | 0 | 62.61 KB (64,117 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |

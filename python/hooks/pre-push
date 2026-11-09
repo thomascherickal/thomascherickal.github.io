@@ -1,0 +1,27 @@
+#!/bin/bash
+# Pre-push hook: Sync HTML JSON schemas and output pre-push summary reports to terminal
+# Strict Repo Compliance: Zero emojis, zero em-dashes.
+REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null)"
+if [ -z "$REPO_ROOT" ]; then
+    exit 0
+fi
+
+echo "[git pre-push] Verifying HTML to JSON schema synchronization..."
+python3 "$REPO_ROOT/python/sync_schemas.py"
+
+SCHEMA_DIFF="$(git status --porcelain "$REPO_ROOT/schema" 2>/dev/null)"
+if [ -n "$SCHEMA_DIFF" ]; then
+    echo "[git pre-push] Error: Schema files in schema/ were out of sync and have been updated."
+    echo "[git pre-push] Please stage and commit the updated schema files before pushing:"
+    echo "  git add schema/"
+    echo "  git commit -m 'Sync HTML JSON schemas to schema/ directory'"
+    exit 1
+fi
+
+# Output Website Synchronization Summary Report, Python Tests Summary Report, and JS Tests Summary Report to terminal
+if [ -f "$REPO_ROOT/python/generate_pre_push_summary.py" ]; then
+    python3 "$REPO_ROOT/python/generate_pre_push_summary.py"
+fi
+
+exit 0
+

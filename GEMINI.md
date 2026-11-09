@@ -216,4 +216,11 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - **Pre-Commit Enforcement**: The pre-commit hook automatically executes `python3 python/generate_metrics.py` before finalizing each commit to ensure all tracked file counts, lines of code (SLOC), asset sizes, and category distributions are completely up-to-date in `metrics.md`.
 - **Zero Emojis & Zero Em-Dashes**: `metrics.md` strictly adheres to the repository compliance standards with zero emojis and zero em-dashes.
 
+## Shortened Category Names in Terminal Summary Tables Rule
+- **Horizontal Spacing Harmony**: All terminal summary tables (in pre-push hooks, sync reports, test summaries, or CLI tools) must maintain strict horizontal spacing harmony across standard terminal widths (80 columns).
+- **Shortened Category Labels Only**: Use concise, shortened category names only (e.g. `Core Pages`, `Business Guides`, `Personal Guides`, `Claude Guides`, `Google Guides`, `Calculators`, `MD Mirrors`, `Schemas`, `Doc Pages`, `NLP Core`, `Build Tools`, `Unit Tests`, `UI Scripts`).
+- **No File Names or Extension Details**: Do not include raw file paths, file extensions (such as `(.html)`, `(.js)`, `schema/*.json`), or parenthetical directory paths in the category column of terminal tables.
+- **Single-Line Fit**: Category labels must be concise enough to fit comfortably within designated column widths without truncation, wrapping, or blowing out row boundaries.
+
+
 
