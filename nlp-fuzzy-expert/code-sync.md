@@ -1,6 +1,6 @@
 # Source Code and Test Suite Knowledge Synchronization Report
 
-Generated on: 2026-11-10 00:55:21
+Generated on: 2026-11-10 01:11:37
 
 ## Summary
 - **Target Files Evaluated**: 47
@@ -66,7 +66,7 @@ Generated on: 2026-11-10 00:55:21
 | `pricing-calculator.js` | source_code | pricing | `calculator_constants` | Synced ratePerSvc=300, basePrice=3000, extraSeat=300, seats=10 |
 | `payment-schedule.js` | source_code | pricing | `payment_schedule_terms` | Verified PARITY_TIERS and trust terms with flagship=3000, indiv=300 |
 | `components.js` | source_code | claude | `orchestration_pages` | Synced 12 orchestration guide page names |
-| `python/generate_sitemap.py` | source_code | sitemap | `url_catalog` | Synced 12 business, 12 Claude, 12 Gemini URLs |
+| `python/generate_sitemap.py` | source_code | sitemap | `url_catalog` | Synced 16 business, 12 Claude, 12 Gemini URLs |
 | `python/build_components.py` | source_code | components | `subdirs` | Synced active subdirectory folder paths |
 | `python/delete_page.py` | source_code | page_cleaner | `subdirs` | Synced active subdirectory folder paths |
 | `python/generate_og_card.py` | source_code | config | `og_card_author` | Synced author=Thomas Cherickal, title=Generative AI Consultant, brand=The Digital Futurist |

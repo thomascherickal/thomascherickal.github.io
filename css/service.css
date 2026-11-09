@@ -402,3 +402,29 @@
     font-size: 0.92rem !important;
   }
 }
+
+/* 4 Services Per Row Grid on Desktop/Laptop for Training Catalogues */
+.four-col-service-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 1.35rem !important;
+  margin-top: 2rem !important;
+}
+
+@media (max-width: 1200px) {
+  .four-col-service-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .four-col-service-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .four-col-service-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
