@@ -63,7 +63,8 @@ def run_python_coverage(cov_json_path):
     Executes Python unit test suite under coverage and exports results to JSON.
     Returns parsed dictionary of file coverage statistics.
     Reuses existing fresh .coverage data if available (e.g. from pre-commit test run)
-    to avoid running the entire test suite twice.
+    to avoid running the entire test suite twice. Uses programmatic coverage API
+    for maximum execution speed.
     """
     env = os.environ.copy()
     env["ANTIGRAVITY_IN_TEST"] = "1"
@@ -79,31 +80,35 @@ def run_python_coverage(cov_json_path):
             pass
 
     if not has_fresh_cov:
-        # Run coverage
+        # Run coverage via test runner for faster discovery and caching
         run_cmd = [
             sys.executable,
             "-m",
             "coverage",
             "run",
-            "-m",
-            "unittest",
-            "discover",
-            "-s",
-            os.path.join(REPO_DIR, "tests")
+            "--source=" + os.path.join(REPO_DIR, "nlp-fuzzy-expert") + "," + os.path.join(REPO_DIR, "python"),
+            os.path.join(REPO_DIR, "python", "run_tests.py")
         ]
         subprocess.run(run_cmd, cwd=REPO_DIR, env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-    # Export to JSON
-    export_cmd = [
-        sys.executable,
-        "-m",
-        "coverage",
-        "json",
-        "-o",
-        cov_json_path,
-        "--include=nlp-fuzzy-expert/*,python/*"
-    ]
-    subprocess.run(export_cmd, cwd=REPO_DIR, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    # Fast export using in-process coverage API when possible
+    try:
+        import coverage
+        cov = coverage.Coverage(data_file=cov_file)
+        cov.load()
+        cov.json_report(outfile=cov_json_path, include=["nlp-fuzzy-expert/*", "python/*"])
+    except Exception:
+        # Fallback to subprocess export
+        export_cmd = [
+            sys.executable,
+            "-m",
+            "coverage",
+            "json",
+            "-o",
+            cov_json_path,
+            "--include=nlp-fuzzy-expert/*,python/*"
+        ]
+        subprocess.run(export_cmd, cwd=REPO_DIR, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     if not os.path.exists(cov_json_path):
         return {}

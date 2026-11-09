@@ -957,38 +957,44 @@ def build_rules():
         ind_supp = kb.get_fact("pricing", "b_ind_supp_days", 5)
         ind_days = kb.get_fact("pricing", "b_ind_days", 10)
 
+        flag_parity = "$3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD"
+        ind_parity = "$300 / $225 / $150 / $150 / $75 / Custom USD"
+        extra_parity = "+$300 / +$225 / +$150 / +$150 / +$75 / Custom USD"
+        flag_milestone_parity = "$600 / $450 / $300 / $300 / $150 / Custom USD"
+        ind_milestone_parity = "$60 / $45 / $30 / $30 / $15 / Custom USD"
+
         # 1. Summary Table: Business Training Flagship row
         content = re.sub(
-            r'<td><strong>Business Training Flagship</strong></td>\s*<td>\d+ Days Total</td>\s*<td>\d+ days live training \+ \d+ days dedicated support</td>\s*<td>Up to \d+ people included \(\+\$\d+ per extra seat up to \d+ seats\)</td>\s*<td>\$[\d,]+ USD \(Training\) \+ \$[\d,]+ USD \(Support\)</td>\s*<td>\d+ training payments of \$[\d,]+ USD \(20% each\) \+ \d+ support payments of \$[\d,]+ USD \(after 15 &amp; 30 days\)</td>',
-            f'<td><strong>Business Training Flagship</strong></td>\n              <td>{b_days} Days Total</td>\n              <td>{b_live} days live training + {b_supp} days dedicated support</td>\n              <td>Up to {b_seats} people included (+${b_extra:,} per extra seat up to {b_max_seats} seats)</td>\n              <td>${b_price:,} USD (Training) + ${b_supp_price:,} USD (Support)</td>\n              <td>5 training payments of ${b_price // 5:,} USD (20% each) + 2 support payments of ${b_supp_price // 2:,} USD (after 15 &amp; 30 days)</td>',
+            r'<td><strong>Business Training Flagship</strong></td>\s*<td>\d+ Days Total</td>\s*<td>\d+ days live training \+ \d+ days dedicated support</td>\s*<td>Up to \d+ people included \([^)]+\)</td>\s*<td>[^<]+</td>\s*<td>[^<]+</td>',
+            f'<td><strong>Business Training Flagship</strong></td>\n              <td>{b_days} Days Total</td>\n              <td>{b_live} days live training + {b_supp} days dedicated support</td>\n              <td>Up to {b_seats} people included ({extra_parity} per extra seat up to {b_max_seats} seats)</td>\n              <td>{flag_parity} (Training) + ${b_supp_price:,} USD (Support)</td>\n              <td>5 training payments of 20% each ({flag_milestone_parity}) + 2 support payments of ${b_supp_price // 2:,} USD (after 15 &amp; 30 days)</td>',
             content
         )
 
         # 2. Summary Table: Personal Training Flagship row
         content = re.sub(
-            r'<td><strong>Personal Training Flagship</strong></td>\s*<td>\d+ Days Total</td>\s*<td>\d+ days live training \+ \d+ days dedicated support</td>\s*<td>Strictly 1 person \(private 1-on-1 coaching\)</td>\s*<td>\$[\d,]+ USD \(Training\) \+ \$[\d,]+ USD \(Support\)</td>\s*<td>\d+ training payments of \$[\d,]+ USD \(20% each\) \+ \d+ support payments of \$[\d,]+ USD \(after 15 &amp; 30 days\)</td>',
-            f'<td><strong>Personal Training Flagship</strong></td>\n              <td>{p_days} Days Total</td>\n              <td>{p_live} days live training + {p_supp} days dedicated support</td>\n              <td>Strictly 1 person (private 1-on-1 coaching)</td>\n              <td>${p_price:,} USD (Training) + ${p_supp_price:,} USD (Support)</td>\n              <td>5 training payments of ${p_price // 5:,} USD (20% each) + 2 support payments of ${p_supp_price // 2:,} USD (after 15 &amp; 30 days)</td>',
+            r'<td><strong>Personal Training Flagship</strong></td>\s*<td>\d+ Days Total</td>\s*<td>\d+ days live training \+ \d+ days dedicated support</td>\s*<td>Strictly 1 person \(private 1-on-1 coaching\)</td>\s*<td>[^<]+</td>\s*<td>[^<]+</td>',
+            f'<td><strong>Personal Training Flagship</strong></td>\n              <td>{p_days} Days Total</td>\n              <td>{p_live} days live training + {p_supp} days dedicated support</td>\n              <td>Strictly 1 person (private 1-on-1 coaching)</td>\n              <td>{flag_parity} (Training) + ${p_supp_price:,} USD (Support)</td>\n              <td>5 training payments of 20% each ({flag_milestone_parity}) + 2 support payments of ${p_supp_price // 2:,} USD (after 15 &amp; 30 days)</td>',
             content
         )
 
         # 3. Summary Table: Business Individual Service row
         content = re.sub(
-            r'<td><strong>Business Individual Service</strong></td>\s*<td>\d+ Days Total</td>\s*<td>\d+ days live training \+ \d+ days dedicated support</td>\s*<td>1 person base \(\+\$\d+ per extra seat up to \d+ seats\)</td>\s*<td>\$[\d,]+ USD \(Training\) \+ \$[\d,]+ USD \(Support\)</td>\s*<td>\d+ training payments of \$[\d,]+ USD \(20% each\) \+ \d+ support payment of \$[\d,]+ USD \(after \d+ days\)</td>',
-            f'<td><strong>Business Individual Service</strong></td>\n              <td>{ind_days} Days Total</td>\n              <td>{ind_live} days live training + {ind_supp} days dedicated support</td>\n              <td>1 person base (+${b_ind_extra:,} per extra seat up to {b_ind_max_seats} seats)</td>\n              <td>${b_ind:,} USD (Training) + ${b_ind_supp_price:,} USD (Support)</td>\n              <td>5 training payments of ${b_ind // 5:,} USD (20% each) + 1 support payment of ${b_ind_supp_price:,} USD (after {ind_supp} days)</td>',
+            r'<td><strong>Business Individual Service</strong></td>\s*<td>\d+ Days Total</td>\s*<td>\d+ days live training \+ \d+ days dedicated support</td>\s*<td>1 person base \([^)]+\)</td>\s*<td>[^<]+</td>\s*<td>[^<]+</td>',
+            f'<td><strong>Business Individual Service</strong></td>\n              <td>{ind_days} Days Total</td>\n              <td>{ind_live} days live training + {ind_supp} days dedicated support</td>\n              <td>1 person base ({extra_parity} per extra seat up to {b_ind_max_seats} seats)</td>\n              <td>{ind_parity} (Training) + ${b_ind_supp_price:,} USD (Support)</td>\n              <td>5 training payments of 20% each ({ind_milestone_parity}) + 1 support payment of ${b_ind_supp_price:,} USD (after {ind_supp} days)</td>',
             content
         )
 
         # 4. Summary Table: Personal Individual Service row
         content = re.sub(
-            r'<td><strong>Personal Individual Service</strong></td>\s*<td>\d+ Days Total</td>\s*<td>\d+ days live training \+ \d+ days dedicated support</td>\s*<td>Strictly 1 person only</td>\s*<td>\$[\d,]+ USD \(Training\) \+ \$[\d,]+ USD \(Support\)</td>\s*<td>\d+ training payments of \$[\d,]+ USD \(20% each\) \+ \d+ support payment of \$[\d,]+ USD \(after \d+ days\)</td>',
-            f'<td><strong>Personal Individual Service</strong></td>\n              <td>{ind_days} Days Total</td>\n              <td>{ind_live} days live training + {ind_supp} days dedicated support</td>\n              <td>Strictly 1 person only</td>\n              <td>${p_ind:,} USD (Training) + ${p_ind_supp_price:,} USD (Support)</td>\n              <td>5 training payments of ${p_ind // 5:,} USD (20% each) + 1 support payment of ${p_ind_supp_price:,} USD (after {ind_supp} days)</td>',
+            r'<td><strong>Personal Individual Service</strong></td>\s*<td>\d+ Days Total</td>\s*<td>\d+ days live training \+ \d+ days dedicated support</td>\s*<td>Strictly 1 person only</td>\s*<td>[^<]+</td>\s*<td>[^<]+</td>',
+            f'<td><strong>Personal Individual Service</strong></td>\n              <td>{ind_days} Days Total</td>\n              <td>{ind_live} days live training + {ind_supp} days dedicated support</td>\n              <td>Strictly 1 person only</td>\n              <td>{ind_parity} (Training) + ${p_ind_supp_price:,} USD (Support)</td>\n              <td>5 training payments of 20% each ({ind_milestone_parity}) + 1 support payment of ${p_ind_supp_price:,} USD (after {ind_supp} days)</td>',
             content
         )
 
         # 5. Section 4: Business AI Training Flagship Card
         content = re.sub(
-            r'\$[\d,]+\s*<span style="font-size:1rem;color:var\(--text-muted\);font-weight:400;">USD Training \+ \$[\d,]+ Support / \d+ Days</span>',
-            f'${b_price:,} <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">USD Training + ${b_supp_price:,} Support / {b_days} Days</span>',
+            r'(<div class="package-card"[\s\S]*?<h3[^>]*>Business AI Training Flagship</h3>[\s\S]*?<div style="[^"]*">)[\s\S]*?(<span style="[^"]*">)[\s\S]*?(</span>\s*</div>)',
+            rf'\g<1>\n            {flag_parity}\n            \g<2>(Training) + ${b_supp_price:,} Support / {b_days} Days\g<3>',
             content,
             count=1
         )
@@ -998,8 +1004,13 @@ def build_rules():
             content
         )
         content = re.sub(
-            r'<li>Up to \d+ participants included \(\+\$[\d,]+ USD per extra seat up to \d+ seats max\)\.</li>',
-            f'<li>Up to {b_seats} participants included (+${b_extra:,} USD per extra seat up to {b_max_seats} seats max).</li>',
+            r'<li>Up to \d+ participants included \([^)]+\)\.</li>',
+            f'<li>Up to {b_seats} participants included ({extra_parity} per extra seat up to {b_max_seats} seats max).</li>',
+            content
+        )
+        content = re.sub(
+            r'<li>\$0 upfront; 5 equal [^<]*payments of 20% \([^)]+\) for live training\.</li>',
+            f'<li>$0 upfront; 5 equal milestone payments of 20% ({flag_milestone_parity} each) for live training.</li>',
             content
         )
         content = re.sub(
@@ -1010,6 +1021,12 @@ def build_rules():
 
         # 6. Section 4: Personal AI Training Flagship Card
         content = re.sub(
+            r'(<div class="package-card"[\s\S]*?<h3[^>]*>Personal AI Training Flagship</h3>[\s\S]*?<div style="[^"]*">)[\s\S]*?(<span style="[^"]*">)[\s\S]*?(</span>\s*</div>)',
+            rf'\g<1>\n            {flag_parity}\n            \g<2>(Training) + ${p_supp_price:,} Support / {p_days} Days\g<3>',
+            content,
+            count=1
+        )
+        content = re.sub(
             r'<li>\d+ days total: \d+ days live 1-on-1 coaching \+ \d+ days dedicated support\.</li>',
             f'<li>{p_days} days total: {p_live} days live 1-on-1 coaching + {p_supp} days dedicated support.</li>',
             content
@@ -1017,13 +1034,13 @@ def build_rules():
 
         # 7. Section 4: Pick-and-Choose Individual Services
         content = re.sub(
-            r'<li><strong>Business Individual Pick:</strong> <strong>\$[\d,]+ USD training \+ \$[\d,]+ USD support per service</strong> \(covers 1 seat, \+\$[\d,]+ per extra seat up to \d+ seats; \d+ days live training \+ \d+ days support, \d+ hours/day, online worldwide\. Support payment due after \d+ days of support\)\.</li>',
-            f'<li><strong>Business Individual Pick:</strong> <strong>${b_ind:,} USD training + ${b_ind_supp_price:,} USD support per service</strong> (covers 1 seat, +${b_ind_extra:,} per extra seat up to {b_ind_max_seats} seats; {ind_live} days live training + {ind_supp} days support, 4 hours/day, online worldwide. Support payment due after {ind_supp} days of support).</li>',
+            r'<li><strong>Business Individual Pick:</strong> <strong>[^<]+</strong> \(covers 1 seat, [^;]+; \d+ days live training \+ \d+ days support, \d+ hours/day, online worldwide\. Support payment due after \d+ days of support\)\.</li>',
+            f'<li><strong>Business Individual Pick:</strong> <strong>{ind_parity} (training) + ${b_ind_supp_price:,} USD (support) per service</strong> (covers 1 seat, {extra_parity} per extra seat up to {b_ind_max_seats} seats; {ind_live} days live training + {ind_supp} days support, 4 hours/day, online worldwide. Support payment due after {ind_supp} days of support).</li>',
             content
         )
         content = re.sub(
-            r'<li><strong>Personal Individual Pick:</strong> <strong>\$[\d,]+ USD training \+ \$[\d,]+ USD support per service</strong> strictly for 1 person \(\d+ days live training \+ \d+ days support, \d+ hours/day, online worldwide\. Support payment due after \d+ days of support\)\.</li>',
-            f'<li><strong>Personal Individual Pick:</strong> <strong>${p_ind:,} USD training + ${p_ind_supp_price:,} USD support per service</strong> strictly for 1 person ({ind_live} days live training + {ind_supp} days support, 4 hours/day, online worldwide. Support payment due after {ind_supp} days of support).</li>',
+            r'<li><strong>Personal Individual Pick:</strong> <strong>[^<]+</strong> strictly for 1 person \(\d+ days live training \+ \d+ days support, \d+ hours/day, online worldwide\. Support payment due after \d+ days of support\)\.</li>',
+            f'<li><strong>Personal Individual Pick:</strong> <strong>{ind_parity} (training) + ${p_ind_supp_price:,} USD (support) per service</strong> strictly for 1 person ({ind_live} days live training + {ind_supp} days support, 4 hours/day, online worldwide. Support payment due after {ind_supp} days of support).</li>',
             content
         )
 
