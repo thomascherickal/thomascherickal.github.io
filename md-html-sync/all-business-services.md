@@ -121,19 +121,19 @@ Build a shared team knowledge vault in Markdown with automated capture, local-mo
 
 Establish continuous organizational learning loops, autonomous industry research synthesis, executive briefings, and automated institutional skill acquisition.
 
-### Work-Life Balance & Autonomous Offloading
+### Claude Research Training
 
-**Category**: `Team Wellness & Focus`  
-**Link**: [Work-Life Balance & Autonomous Offloading](business-services/business-service-worklife-balance.html)
+**Category**: `Claude Research`  
+**Link**: [Claude Research Training](business-services/business-service-claude-research-training.html)
 
-Protect team productivity, eliminate burnout, automate repetitive cognitive busywork, and establish focus time boundaries.
+Accelerate corporate research with Claude: 1M token context synthesis, literature reviews, competitive intelligence, and scientific paper analysis.
 
-### AI Schedule Automation & Calendar Gatekeeper
+### Claude Basic Training
 
-**Category**: `Calendar Gatekeeper`  
-**Link**: [AI Schedule Automation & Calendar Gatekeeper](business-services/business-service-ai-schedule-automation.html)
+**Category**: `Claude Foundations`  
+**Link**: [Claude Basic Training](business-services/business-service-claude-basic-training.html)
 
-Deploy autonomous calendar gatekeepers, biological focus time-blocking, and pre-meeting executive context dossiers.
+Master Claude core foundations: Projects, Artifacts, Cowork in Microsoft 365, prompt architecture, and team workspace workflows.
 
 ## Ready
  to Transform Your Organization?

@@ -44,12 +44,12 @@ Build single-operator multi-agent swarms with orchestrator loops, subagent deleg
 
 Run private, unaligned autonomous agent loops on local hardware with open-weights agentic models and structured tool execution.
 
-### Personal Goals Self-Authoring
+### Gemini Multimedia Generation
 
-**Category**: `Goal Setting & Growth`  
-**Link**: [Personal Goals Self-Authoring](personal-services/personal-service-goals-self-authoring.html)
+**Category**: `Gemini Multimedia`  
+**Link**: [Gemini Multimedia Generation](personal-services/personal-service-gemini-multimedia-generation.html)
 
-Structure personal goals, track career milestones, and navigate career transitions with structured self-authoring frameworks, journaling templates, and actionable roadmaps.
+Master 1-on-1 multimodal generation with Google Gemini: Imagen image synthesis, native audio streaming, video understanding, and automated creative asset workflows.
 
 ### AI Budget & Cost Control
 
@@ -93,12 +93,12 @@ Implement Google Antigravity SDK workflows, structured schema extraction, and au
 
 Architect an autonomous personal continuous learning engine using automated paper ingestion, podcast transcription, spaced-repetition drills, and research synthesis.
 
-### Work-Life Balance & Autonomous Offloading
+### Gemini Research Training
 
-**Category**: `Executive Offloading`  
-**Link**: [Work-Life Balance & Autonomous Offloading](personal-services/personal-service-worklife-balance.html)
+**Category**: `Gemini Deep Research`  
+**Link**: [Gemini Research Training](personal-services/personal-service-gemini-research-training.html)
 
-Reclaim 15-20 hours weekly through autonomous inbox triage, biological focus time-blocking, automated task delegation, and cognitive load minimization.
+Master deep academic literature review, technical synthesis, million-token context grounding, and multi-source verification using Gemini models.
 
 ### AI Second Brain
 
@@ -107,19 +107,19 @@ Reclaim 15-20 hours weekly through autonomous inbox triage, biological focus tim
 
 Build your private Markdown knowledge vault with automated capture, local-model tagging, and cited question answering.
 
-### The 7 Habits AI Executive Coaching
+### Claude Basic Training
 
-**Category**: `7 Habits Coaching`  
-**Link**: [The 7 Habits AI Executive Coaching](personal-services/personal-service-ai-7-habits.html)
+**Category**: `Claude Foundations`  
+**Link**: [Claude Basic Training](personal-services/personal-service-claude-basic-training.html)
 
-Master Stephen Covey's 7 Habits with an autonomous executive AI operating system for daily proactivity, weekly Quadrant II scheduling, and renewal.
+Master Claude core foundations 1-on-1: private Projects, Artifacts, Cowork in Microsoft 365, structured prompt design, and personal workflow acceleration.
 
-### AI Schedule Automation & Calendar Gatekeeper
+### Claude Research Training
 
-**Category**: `Schedule Gatekeeper`  
-**Link**: [AI Schedule Automation & Calendar Gatekeeper](personal-services/personal-service-ai-schedule-automation.html)
+**Category**: `Claude Research`  
+**Link**: [Claude Research Training](personal-services/personal-service-claude-research-training.html)
 
-Autonomous calendar gatekeeping, biological focus time-blocking, and pre-meeting context dossiers for high-output executives.
+Accelerate personal research with Claude: 1M token context synthesis, multi-paper literature reviews, market intelligence, and executive research dossiers.
 
 ### Workflow Automations
 
