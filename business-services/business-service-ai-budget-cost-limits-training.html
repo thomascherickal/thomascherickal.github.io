@@ -282,7 +282,7 @@
           <li><a href="../business-services/business-service-ai-second-brain.html">AI Second Brain</a></li>
           <li><a href="../business-services/business-service-continuous-learning.html">Continuous Learning &amp; Research Synthesis</a></li>
           <li><a href="../business-services/business-service-worklife-balance.html">Work-Life Balance &amp; Autonomous Offloading</a></li>
-          <li><a href="../business-services/business-service-ai-schedule-automation.html">AI Schedule Automation</a></li>
+          <li><a href="../business-services/business-service-claude-basic-training.html">Claude Basic Training</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
@@ -394,11 +394,10 @@
 <main id="main">
 <!-- PAGE HERO HEADER -->
 <section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
-<p class="section-label">// SERVICE SPECIFICATION 07</p>
+<p class="section-label">// SERVICE SPECIFICATION 07 - EXECUTIVE ARCHITECTURE GUIDE</p>
 <h1>AI Budget & Cost Control</h1>
 <p class="section-sub" style="max-width:760px;margin:0.75rem auto 0;line-height:1.8;">
-        Training staff at every level to control AI spending: hard spending caps, token budgets, prompt caching, effort
-        settings, and sending minor tasks to free and local models.
+        A Practical Guide to Application Design, API Gateways, and Spend Tracking.
       </p>
 <div style="margin-top:1.5rem;">
 <a class="btn btn-commission" href="../contact.html">
@@ -410,94 +409,375 @@
 <!-- STRUCTURED SPECIFICATION LISTS -->
 <section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
 <div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:2.5rem;box-shadow:var(--glow-gold);">
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">1. Service
-          Overview &amp; Scope</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Hard Spending Caps:</strong> Setting limits per session, day, month and year so no person, team or
-            agent can exceed its budget.</li>
-<li><strong>User &amp; Team Budgets:</strong> Allocating token budgets across developers, departments and
-            production services, with workspace-level limits on the Claude platform.</li>
-<li><strong>Prompt Caching &amp; Context Trimming:</strong> Caching stable prompt prefixes for up to 90% lower
-            cost on cached input, keeping context lean, and clearing it between task phases.</li>
-<li><strong>Model &amp; Effort Matching:</strong> Using Haiku at low effort for simple jobs, Sonnet for most
-            work, and Opus or Fable at higher effort only when a task needs it.</li>
-<li><strong>Free and Local Models:</strong> Moving minor tasks to local models (Gemma, Qwen, Llama and Mistral
-            through Ollama or LM Studio) and to free models on OpenRouter.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">2. Standard
-          Architecture &amp; Tools</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Platform Controls:</strong> Workspace spend limits and usage reports on the Claude platform,
-            per-key limits, and /usage in Claude Code.</li>
-<li><strong>Cost Tracking Scripts:</strong> Python scripts that read token usage from API responses and log
-            cost per user, team and agent.</li>
-<li><strong>Token Reduction:</strong> Prompt caching, effort settings, the Batch API for non-urgent work, and
-            smaller context windows.</li>
-<li><strong>Free Model Routing:</strong> Local models through Ollama or LM Studio, and free OpenRouter models
-            for low-stakes tasks.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">3.
-          Deliverable Examples &amp; 4-Week Schedule</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:1.5rem;list-style:disc;">
-<li><strong>Budget Policy &amp; Limits Setup:</strong> Written spending policy plus configured limits for each
-            user, team and workspace.</li>
-<li><strong>Prompt Caching &amp; Context Playbook:</strong> Guide and Python code samples for adding caching
-            and trimming context in your existing applications.</li>
-<li><strong>Cost Tracking Dashboard:</strong> Dashboard showing spend per team, tokens used, and which models
-            handled which work.</li>
-<li><strong>Agent Kill Switch:</strong> Code that stops an agent run as soon as it reaches its token or cost
-            budget.</li>
-</ul>
+
+<p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.8;margin-bottom:1.5rem;">
+Building autonomous AI agents changes the economics of software development. In traditional chat applications, a single user prompt generates a single model response, keeping token usage predictable. Autonomous agents, by contrast, plan their own steps, call external tools, inspect intermediate results, and retry when operations fail. Without guardrails, a task that seems simple can trigger dozens of automated model calls, ballooning context windows and turning a five-cent query into a five-dollar surprise.
+</p>
+
+<p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.8;margin-bottom:2rem;">
+Industry data from Aspire Systems highlights an &quot;agent cost multiplier&quot; where the token spend for identical business outcomes varies by 10x to 100x depending purely on system design. Controlling these expenses requires looking beyond monthly cloud invoices. Engineering teams need a layered approach that addresses token waste inside application code, enforces organization-wide spending rules through an API gateway, and tracks costs by business outcome.
+</p>
+
+<!-- Figure 1: AI Financial Telemetry & Token Management -->
+<div style="margin:2.5rem 0 2rem;text-align:center;">
+<figure style="margin:0;">
+<img alt="Enterprise AI Financial Telemetry Dashboard showing token cost management, context window compression analytics, and hybrid pricing optimization" loading="lazy" src="../assets/ai-developer-training/ai-cost-tokens.jpg" style="width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.3);box-shadow:0 8px 30px rgba(0,0,0,0.6);"/>
+<figcaption style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">
+Figure 1: Enterprise AI Financial Telemetry - Token Cost Management, Context Window Compression Analytics, and Model Tier Tracking.
+</figcaption>
+</figure>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc-card" style="margin-bottom:2.5rem;">
+<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">
+Table of Contents
+</h2>
+<ol class="toc-list" style="margin:0;padding-left:1.5rem;list-style:decimal;line-height:1.8;">
+<li><a class="gold-link" href="#why-costs-spin-out">Why AI Agent Costs Spin Out of Control</a></li>
+<li><a class="gold-link" href="#application-level-controls">Application-Level Controls: Stopping Waste in Code</a></li>
+<li><a class="gold-link" href="#api-gateway-layer">The API Gateway Layer: Centralizing Policy and Caching</a></li>
+<li><a class="gold-link" href="#tracking-and-finops">Tracking and FinOps: Measuring Cost Per Outcome</a></li>
+<li><a class="gold-link" href="#implementation-roadmap">Practical Implementation Roadmap</a></li>
+<li><a class="gold-link" href="#references-directory">References</a></li>
+<li><a class="gold-link" href="#investment-pricing">Investment &amp; Pricing Quote</a></li>
+</ol>
+</div>
+
+<!-- SECTION 1 -->
+<section id="why-costs-spin-out" style="margin-top:2rem;">
+<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Why AI Agent Costs Spin Out of Control</h2>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem;">
+Traditional software budgeting relies on user traffic: twice as many visitors usually means twice as many server requests. AI agents break this direct relationship. Because an agent decides how many steps to take on its own, token consumption scales with reasoning depth, tool usage, and error recovery rather than user traffic alone.
+</p>
+
 <div style="overflow-x:auto;margin:1.5rem 0 2rem 0;">
 <table class="data-table">
 <thead>
 <tr>
-<th>Timeline</th>
-<th>Focus &amp; Architecture</th>
-<th>Core Deliverables &amp; Artifacts</th>
-<th>Verification &amp; Sign-off Criteria</th>
+<th>Characteristic</th>
+<th>Traditional Chat LLM Call</th>
+<th>Agentic AI Workload</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong style="color:var(--cyan);">Week 1</strong></td>
-<td>Spend Audit &amp; Workspace Budget Policy Setup</td>
-<td>Historical API spend audit, written AI spending policy, workspace-level limits on the Claude platform, per-key quotas, and /usage tracking in Claude Code</td>
-<td>Baseline cost mapping approved with hard spend ceilings and user/team quota limits active in workspace configuration</td>
+<td><strong style="color:var(--cyan);">Call Pattern</strong></td>
+<td>One prompt produces one final answer.</td>
+<td>One task triggers multiple steps (planning, tool execution, reflection, sub-agent delegation).</td>
 </tr>
 <tr>
-<td><strong style="color:var(--cyan);">Week 2</strong></td>
-<td>Prompt Caching &amp; Context Trimming Optimization</td>
-<td>Prompt caching integration for up to 90% input cost reduction, context trimming and phase-clearing guide, and Python context-optimization code samples</td>
-<td>Verified prompt cache hit rates on repeated system prompts and measured reduction in average prompt token consumption</td>
+<td><strong style="color:var(--cyan);">Context Window</strong></td>
+<td>Stays small and fixed to the immediate question.</td>
+<td>Snowballs continuously as tool outputs, logs, and previous thoughts pile up.</td>
 </tr>
 <tr>
-<td><strong style="color:var(--cyan);">Week 3</strong></td>
-<td>Model/Effort Matching &amp; Free/Local Model Routing</td>
-<td>Model tier routing guidelines (Haiku at low effort, Sonnet for standard work, Opus or Fable for high reasoning), Ollama and LM Studio local model setup (Gemma, Qwen, Llama, Mistral), and free OpenRouter routing for low-stakes tasks</td>
-<td>Demonstration of routine and low-stakes tasks routed to free and local models with zero degradation on critical tasks</td>
+<td><strong style="color:var(--cyan);">Error Handling</strong></td>
+<td>Rare retries, usually initiated manually by the user.</td>
+<td>Automatic retries triggered by schema mismatches, timeouts, or bad tool arguments.</td>
 </tr>
 <tr>
-<td><strong style="color:var(--cyan);">Week 4</strong></td>
-<td>Cost Tracking Dashboard, Agent Kill Switches &amp; Handover</td>
-<td>Python cost-tracking scripts, live dashboard displaying spend per team and model usage, automated agent budget kill-switch code, Batch API setup for non-urgent tasks, and 30-day support onboarding</td>
-<td>Agent kill-switch stops runs reaching token limits, spend dashboard operational, 30%-50% cost savings measured, and client sign-off</td>
+<td><strong style="color:var(--cyan);">Cost Scaling</strong></td>
+<td>Scales predictably with total user requests.</td>
+<td>Scales with reasoning steps, model selection, prompt bloat, and parallel agent branches.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">4. Guarantees
-          &amp; Commitments</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>No Surprise Bills:</strong> Hard caps stop spending at the agreed limit.</li>
-<li><strong>Measurable 30%-50% Cost Savings:</strong> Lower token spend from caching, model matching and local
-            routing, measured against your bills before the engagement.</li>
-<li><strong>100% Client Ownership:</strong> All scripts, configurations, dashboards and training materials
-            belong to you.</li>
-<li><strong>30-Day Support:</strong> Help adjusting budgets, limits and model choices.</li>
+
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:2rem;">
+When an agent hits an error - such as an invalid JSON output from a tool - it often feeds the entire conversation history back into the model along with the error message. If that cycle repeats four or five times without a circuit breaker, each retry becomes progressively more expensive because the prompt grows larger every turn.
+</p>
+</section>
+
+<!-- SECTION 2 -->
+<section id="application-level-controls" style="margin-top:2.5rem;">
+<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;border-bottom:1px solid rgba(56,189,248,0.25);padding-bottom:0.5rem;">Application-Level Controls: Stopping Waste in Code</h2>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem;">
+The fastest way to cut token waste is directly inside the application code. Developers have direct visibility into why each call happens, making application-level controls both the cheapest and most effective first step.
+</p>
+
+<h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.15rem;margin-top:1.5rem;margin-bottom:0.75rem;">Reusing Static Context with Prompt Caching</h3>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;">
+Modern foundation models from providers like Anthropic and OpenAI support prompt caching, which offers discounts of 80% to 90% on input tokens that repeat across calls. To take advantage of caching, prompts must be organized deliberately:
+</p>
+
+<ol style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:1.5rem;list-style:decimal;">
+<li><strong>Put unchanging text first:</strong> Place system instructions, persona definitions, few-shot examples, and tool definitions at the very beginning of the prompt.</li>
+<li><strong>Append dynamic variables at the end:</strong> Keep user questions, current timestamps, and ephemeral session data at the tail end of the message. Moving dynamic text to the top invalidates the entire cache prefix.</li>
+<li><strong>Keep prefixes above minimum size thresholds:</strong> Caching typically activates only when static blocks exceed provider thresholds (such as 1,024 tokens on OpenAI and Anthropic).</li>
+</ol>
+
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem;">
+As detailed in research on Cache-Aware Prompt Compression (CAPC), keeping reusable tool definitions intact across agent rounds yields major savings. For instance, when tool arrays span tens of thousands of tokens, query-agnostic compression combined with caching reduces overall token spend by over 50% without damaging tool-selection accuracy.
+</p>
+
+<h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.15rem;margin-top:1.5rem;margin-bottom:0.75rem;">Trimming Prompts and Tool Outputs</h3>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;">
+Dumping raw data into an agent's context window is a primary driver of runaway spend:
+</p>
+
+<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:1.5rem;list-style:disc;">
+<li><strong>Pass document references, not raw files:</strong> Instead of inserting an entire 50-page document into the prompt, pass an Amazon S3 or Azure Blob storage path. Allow specialized tools to extract and summarize only the relevant paragraphs before feeding them back to the agent.</li>
+<li><strong>Prune older conversation history:</strong> Retain only the last few conversational turns verbatim. Summarize older steps into concise bullet points so earlier tool outputs do not consume tokens on every subsequent turn.</li>
+<li><strong>Enforce concise outputs:</strong> Output tokens generally cost 3x to 5x more than input tokens. Instruct the model to return compact, structured JSON schemas rather than verbose explanations, and set hard token limits.</li>
 </ul>
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">5. Investment
-          &amp; Pricing Quote</h2>
+
+<h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.15rem;margin-top:1.5rem;margin-bottom:0.75rem;">Right-Sizing Models by Step Complexity</h3>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;">
+Not every step in an agent workflow requires an expensive frontier model like GPT-4o or Claude Opus. In an eight-step research workflow, decomposing a query or writing code benefits from top-tier reasoning, but extracting names, filtering database rows, and formatting output can be handled by smaller models at a fraction of the cost.
+</p>
+
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;">
+Research on AgentRouter demonstrates that across multi-step enterprise workflows, 55% to 70% of trajectory steps do not require frontier-tier capability. By mapping each step to an appropriate model tier, teams cut inference spend by 72% while preserving over 97% of frontier-level task completion quality:
+</p>
+
+<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:1.5rem;list-style:disc;">
+<li><strong>Frontier Tier (e.g., Claude Opus, GPT-4o):</strong> Reserved for initial task planning, ambiguous problem solving, and complex multi-file reasoning.</li>
+<li><strong>Mid Tier (e.g., Claude Sonnet, Gemini Pro):</strong> Used for document analysis, summarization, and customer-facing interactions.</li>
+<li><strong>Budget Tier (e.g., Claude Haiku, GPT-4o-mini, Gemini Flash):</strong> Deployed for classification, entity tagging, JSON validation, and routine tool routing.</li>
+</ul>
+
+<h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.15rem;margin-top:1.5rem;margin-bottom:0.75rem;">Setting Hard Execution Ceilings and Circuit Breakers</h3>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;">
+Agents should never run in unconstrained loops. Every workflow needs strict operational limits built into its code:
+</p>
+
+<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
+<li><strong>Cap loop iterations:</strong> Restrict agent reasoning loops to a hard ceiling (typically 5 to 10 iterations per task).</li>
+<li><strong>Limit retry counts:</strong> If a tool fails to parse, cap retries at two or three attempts using exponential backoff. If the problem persists, return a structured partial failure rather than retrying indefinitely.</li>
+<li><strong>Assign per-run token and dollar budgets:</strong> Pass a budget tracker through the agent's execution context. When accumulated token usage approaches the predefined limit, force the agent to finalize its current answer with available data.</li>
+</ul>
+</section>
+
+<!-- SECTION 3 -->
+<section id="api-gateway-layer" style="margin-top:2.5rem;">
+<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">The API Gateway Layer: Centralizing Policy and Caching</h2>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem;">
+While application-level fixes optimize individual agents, development teams frequently duplicate efforts or overlook safeguards. An LLM gateway - such as LiteLLM, Portkey, or Maxim AI's Bifrost - sits between application services and external model providers. Rather than calling model APIs directly, applications route all requests through this central hub to evaluate caching, authentication, and spending policies before any call reaches an external provider.
+</p>
+
+<!-- Figure 2: Centralized LLM Gateway Routing & Semantic Caching -->
+<div style="margin:2.5rem 0 2rem;text-align:center;">
+<figure style="margin:0;">
+<img alt="Centralized Enterprise LLM Routing Gateway and Semantic Response Caching Architecture" loading="lazy" src="../assets/local-ai-revolution/local-ai-routing-gateway.jpg" style="width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.3);box-shadow:0 8px 30px rgba(0,0,0,0.6);"/>
+<figcaption style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">
+Figure 2: Centralized LLM Gateway Architecture - Intelligent Routing, Semantic Vector Caching, and Virtual Key Spend Enforcement.
+</figcaption>
+</figure>
+</div>
+
+<h3 style="font-family:var(--font-display);color:var(--cyan);font-size:1.15rem;margin-top:1.5rem;margin-bottom:0.75rem;">Exact and Semantic Response Caching</h3>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;">
+Gateways can catch redundant requests before they reach model providers:
+</p>
+
+<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:1.5rem;list-style:disc;">
+<li><strong>Exact Hash Matching:</strong> If an incoming request matches a previous prompt character-for-character, the gateway returns the stored response instantly without invoking the model.</li>
+<li><strong>Semantic Caching:</strong> For user-facing agents, customers often ask the same question in slightly different words (such as &quot;How do I reset my password?&quot; versus &quot;Forgot login password&quot;). The gateway converts incoming queries into vector embeddings and checks them against a vector database. If semantic similarity exceeds a set threshold (typically 0.85 to 0.95), the gateway serves the cached reply.</li>
+</ul>
+
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem;">
+In enterprise deployments, semantic caching frequently intercepts 20% to 30% of incoming volume, cutting provider token charges by an equivalent margin with zero perceptible quality drop.
+</p>
+
+<h3 style="font-family:var(--font-display);color:var(--cyan);font-size:1.15rem;margin-top:1.5rem;margin-bottom:0.75rem;">Centralized Budget Enforcement and Rate Limits</h3>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;">
+A gateway protects organizational budgets from runaway agent loops:
+</p>
+
+<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
+<li><strong>Soft and hard budget thresholds:</strong> Gateways maintain real-time spend counters per team or project. Setting an alert at 80% of monthly budget gives teams time to investigate spikes, while a hard cutoff at 100% blocks further requests, preventing surprise billing.</li>
+<li><strong>Prompt size enforcement:</strong> The gateway can reject requests whose input token count exceeds a predetermined safety threshold (such as 4,096 tokens for routine tasks), protecting against unintentional context dumps.</li>
+<li><strong>Rate limiting:</strong> Setting token-per-minute and request-per-minute limits per virtual key prevents parallel agent fan-outs from exhausting provider quotas.</li>
+</ul>
+</section>
+
+<!-- SECTION 4 -->
+<section id="tracking-and-finops" style="margin-top:2.5rem;">
+<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;border-bottom:1px solid rgba(56,189,248,0.25);padding-bottom:0.5rem;">Tracking and FinOps: Measuring Cost Per Outcome</h2>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem;">
+Managing AI costs effectively requires treating tokens as an ongoing operational expense, similar to cloud compute and database storage.
+</p>
+
+<!-- Figure 3: Enterprise Security, Governance, and FinOps Architecture -->
+<div style="margin:2.5rem 0 2rem;text-align:center;">
+<figure style="margin:0;">
+<img alt="Enterprise Security Governance and FinOps for AI Agents with Token Spend Auditing" loading="lazy" src="../assets/agentic-ai-systems/enterprise-security-governance-finops.jpg" style="width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.3);box-shadow:0 8px 30px rgba(0,0,0,0.6);"/>
+<figcaption style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">
+Figure 3: Multi-Layer FinOps &amp; Governance Architecture - Unit Economics, Department Attribution, and Outcome Tracking.
+</figcaption>
+</figure>
+</div>
+
+<h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.15rem;margin-top:1.5rem;margin-bottom:0.75rem;">Tagging Requests for Cost Attribution</h3>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;">
+Without metadata, an enterprise receives a single monthly bill from OpenAI or Anthropic with no indication of which feature generated the cost. Every API request passing through the application or gateway should carry structured tags:
+</p>
+
+<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:1.5rem;list-style:disc;">
+<li><strong>Team:</strong> The department responsible for the spend (such as Support, Product, or Engineering).</li>
+<li><strong>Application:</strong> The specific tool or microservice (such as CodeReviewBot or TicketTriage).</li>
+<li><strong>Task ID:</strong> A unique identifier tracking a specific agent execution across all its internal steps.</li>
+<li><strong>Environment:</strong> Differentiating between production, testing, and local development.</li>
+</ul>
+
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem;">
+Tagging enables clear showback and chargeback reports, ensuring teams take direct ownership of their resource usage.
+</p>
+
+<h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.15rem;margin-top:1.5rem;margin-bottom:0.75rem;">Tracking Unit Economics: Cost per Accepted Result</h3>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;">
+Tracking the cost per million tokens or cost per raw API call can be misleading. A cheaper model that fails often and requires multiple retries can easily cost more than an expensive model that succeeds on the first attempt. Teams should track unit economics based on accepted work:
+</p>
+
+<div style="margin:1.5rem 0;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;background:#060913;border:1px solid rgba(56,189,248,0.32);border-bottom:none;border-left:3px solid var(--cyan);border-top-left-radius:8px;border-top-right-radius:8px;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);">
+<span>Formula: Cost per Accepted Result</span>
+<button class="copy-btn btn" type="button" aria-label="Copy code to clipboard" style="padding:0.25rem 0.75rem;font-size:0.75rem;text-decoration:none !important;">Copy</button>
+</div>
+<pre style="margin:0;padding:1.25rem;background:#040711;border:1px solid rgba(56,189,248,0.32);border-top:none;border-left:3px solid var(--cyan);border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow-x:auto;"><code>Cost per Accepted Result = Total Spend (Input + Output + Tools + Retries) / Count of Successful, Accepted Tasks</code></pre>
+</div>
+
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem;">
+Measuring cost per resolved customer ticket, cost per merged pull request, or cost per validated extraction provides a clear picture of whether an agent delivers genuine business value.
+</p>
+
+<h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.15rem;margin-top:1.5rem;margin-bottom:0.75rem;">Total Lifecycle Costing</h3>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;">
+When evaluating whether to build fine-tuned, self-hosted models (like Llama) or use commercial APIs, teams must account for full lifecycle expenses. As formalized in the Levelized Cost of AI (LCOAI) framework, total cost consists of upfront investments (CAPEX) and ongoing usage fees (OPEX):
+</p>
+
+<div style="margin:1.5rem 0;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;background:#060913;border:1px solid rgba(251,191,36,0.32);border-bottom:none;border-left:3px solid var(--gold);border-top-left-radius:8px;border-top-right-radius:8px;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);">
+<span>Formula: Levelized Cost of AI (LCOAI)</span>
+<button class="copy-btn btn" type="button" aria-label="Copy code to clipboard" style="padding:0.25rem 0.75rem;font-size:0.75rem;text-decoration:none !important;">Copy</button>
+</div>
+<pre style="margin:0;padding:1.25rem;background:#040711;border:1px solid rgba(251,191,36,0.32);border-top:none;border-left:3px solid var(--gold);border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow-x:auto;"><code>LCOAI = (Amortized Upfront Setup Costs + Ongoing Operational Costs) / Total Valid Inferences Delivered</code></pre>
+</div>
+
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:2rem;">
+Commercial APIs avoid upfront infrastructure investments, making them more economical for low-to-medium volumes. However, as task volume scales into tens of millions of monthly runs, self-hosted open-source models often achieve a lower cost per inference once fixed server investments are amortized over large query volumes.
+</p>
+</section>
+
+<!-- SECTION 5 -->
+<section id="implementation-roadmap" style="margin-top:2.5rem;">
+<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Practical Implementation Roadmap</h2>
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem;">
+Trying to roll out every control at once can overwhelm an engineering team. Organizations achieve the best results by introducing cost governance across three progressive phases:
+</p>
+
+<div style="overflow-x:auto;margin:1.5rem 0 2rem 0;">
+<table class="data-table">
+<thead>
+<tr>
+<th>Stage</th>
+<th>Application Layer</th>
+<th>Gateway Layer</th>
+<th>Tracking &amp; FinOps Layer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong style="color:var(--cyan);">Crawl</strong></td>
+<td>Cap retries at 2 - 3 attempts; set hard loop limits (5 - 10 iterations); enforce max output token caps.</td>
+<td>Route calls through a basic proxy (e.g., LiteLLM); centralize API keys.</td>
+<td>Review provider bills weekly; establish baseline monthly spend.</td>
+</tr>
+<tr>
+<td><strong style="color:var(--cyan);">Walk</strong></td>
+<td>Implement prompt caching for static prefixes; move routine tasks to budget tiers; prune and summarize history.</td>
+<td>Enable exact and semantic response caching; configure per-team virtual keys; set spend alerts.</td>
+<td>Tag calls by team, app, and task; track cost per resolved outcome; set department budget limits.</td>
+</tr>
+<tr>
+<td><strong style="color:var(--cyan);">Run</strong></td>
+<td>Deploy step-level model routing; implement dynamic context compression; enforce per-agent budget ceilings.</td>
+<td>Enforce hard monthly budget cutoffs; configure cross-provider failover; apply automated rate limiting.</td>
+<td>Implement automated FinOps chargeback; run regular cost-vs-quality audits; evaluate self-hosted vs. API economics.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:2rem;">
+By starting with simple code safeguards, consolidating traffic through an API gateway, and tying spend directly to business value, engineering teams can build ambitious autonomous agents while keeping token costs fully predictable.
+</p>
+</section>
+
+<!-- SECTION 6: REFERENCES -->
+<section id="references-directory" style="margin-top:3rem;">
+<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">
+References
+</h2>
+<ul style="color:var(--text-secondary);font-size:0.92rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2.5rem;list-style:disc;">
+<li id="ref-aspire" style="margin-bottom:0.75rem;">
+Aspire Systems - Rengarajan, J. <a class="gold-link" href="https://www.aspiresys.com" target="_blank" rel="noopener noreferrer">A Practical Framework for Controlling AI Agents Token Cost</a>. Aspire Systems Whitepaper.
+</li>
+<li id="ref-capc" style="margin-bottom:0.75rem;">
+Song, Y. (PayPal Inc.) - <a class="gold-link" href="https://arxiv.org/abs/2412.15204" target="_blank" rel="noopener noreferrer">Cache-Aware Prompt Compression: A Two-Tier Cost Model for LLM API Caching</a>. arXiv preprint / Research Report.
+</li>
+<li id="ref-agentrouter" style="margin-bottom:0.75rem;">
+Paul, R. K., &amp; Nandy, S. (Boston University &amp; UT Austin) - <a class="gold-link" href="https://arxiv.org/abs/2609.22951" target="_blank" rel="noopener noreferrer">AgentRouter: Heterogeneous Model Routing for Cost-Optimal Multi-Step Agentic Workflows</a>. Proceedings of the 43rd International Conference on Machine Learning (ICML 2026), PMLR 306.
+</li>
+<li id="ref-routenlp" style="margin-bottom:0.75rem;">
+Guo, D., Wu, J., &amp; Yiu, S. M. (The University of Hong Kong &amp; Stellaris AI) - <a class="gold-link" href="https://arxiv.org/abs/2604.23577" target="_blank" rel="noopener noreferrer">RouteNLP: Closed-Loop LLM Routing with Conformal Cascading and Distillation Co-Optimization</a>. arXiv preprint / Research Repository.
+</li>
+<li id="ref-lcoai" style="margin-bottom:0.75rem;">
+Curcio, E. - <a class="gold-link" href="https://arxiv.org/abs/2509.02596" target="_blank" rel="noopener noreferrer">Introducing LCOAI: A Standardized Economic Metric for Evaluating AI Deployment Costs</a>. arXiv preprint.
+</li>
+<li id="ref-finops-inference" style="margin-bottom:0.75rem;">
+Yarra, D., Boppudi, S. S., Aripineni, R. Y., &amp; Kamidi, P. R. - <a class="gold-link" href="https://data.finops.org/" target="_blank" rel="noopener noreferrer">Enterprise LLM Inference Governance: Token-Level Cost Attribution and Policy Enforcement Across Multi-Provider Production Deployments</a>. Technical Report / FinOps Foundation.
+</li>
+<li id="ref-maxim-semantic" style="margin-bottom:0.75rem;">
+Maxim AI / Bifrost - Shah, K. <a class="gold-link" href="https://www.getmaxim.ai/articles/reduce-llm-costs-with-semantic-caching-the-gateway-approach/" target="_blank" rel="noopener noreferrer">Reduce LLM Costs with Semantic Caching: The Gateway Approach</a>. Maxim AI Engineering Blog.
+</li>
+<li id="ref-digitalocean-prompt" style="margin-bottom:0.75rem;">
+DigitalOcean - Namdeo, S. <a class="gold-link" href="https://www.digitalocean.com/blog/prompt-caching-with-digital-ocean" target="_blank" rel="noopener noreferrer">Prompt Caching for Anthropic and OpenAI Models: Building Cost-Efficient AI Systems</a>. DigitalOcean Engineering Insights.
+</li>
+<li id="ref-digitalocean-cost" style="margin-bottom:0.75rem;">
+DigitalOcean - Sujatha, R. <a class="gold-link" href="https://www.digitalocean.com/resources/articles/llm-cost-calculation-guide" target="_blank" rel="noopener noreferrer">LLM Cost Calculation Guide for Enterprise AI Teams in 2026</a>. DigitalOcean Technical Articles.
+</li>
+<li id="ref-ibm-finops" style="margin-bottom:0.75rem;">
+IBM - <a class="gold-link" href="https://www.ibm.com/think/topics/enterprise-ai-cost-management" target="_blank" rel="noopener noreferrer">Enterprise AI Cost Management: Close the Gap Between AI Investment and Business Value</a>. IBM Think Topics.
+</li>
+<li id="ref-institute-tiers" style="margin-bottom:0.75rem;">
+Institute of AI Product Management - <a class="gold-link" href="https://www.institutepm.com/knowledge-hub" target="_blank" rel="noopener noreferrer">AI Model Tier Strategy: When to Use Frontier, Mid-Tier, and Budget Models in Your Product</a>. AI Strategy Knowledge Hub.
+</li>
+<li id="ref-amnic-playbook" style="margin-bottom:0.75rem;">
+Amnic - <a class="gold-link" href="https://amnic.com/blogs/how-to-optimize-llm-cost" target="_blank" rel="noopener noreferrer">How to Reduce OpenAI API Costs: A Practical Playbook</a>. Amnic FinOps Blog.
+</li>
+<li id="ref-openclaw-budget" style="margin-bottom:0.75rem;">
+OpenClaw DC - <a class="gold-link" href="https://openclawdc.com/blog/openrouter-vs-direct-api-cost/" target="_blank" rel="noopener noreferrer">How to Set an LLM API Budget for a Small Business</a>. OpenClaw DC Journal, Vol. 02, Iss. 224.
+</li>
+<li id="ref-pristren-stages" style="margin-bottom:0.75rem;">
+Pristren - Qudrati, M. H. <a class="gold-link" href="https://pristren.com/blog/cutting-llm-api-costs-complete-guide" target="_blank" rel="noopener noreferrer">How Much to Budget for LLM API Costs at Each Startup Stage</a>. Pristren AI Cost &amp; Efficiency Series.
+</li>
+<li id="ref-google-gemini-cost" style="margin-bottom:0.75rem;">
+Google Blog - Stephen, J., &amp; Babar, N. <a class="gold-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/more-control-over-gemini-api-costs/" target="_blank" rel="noopener noreferrer">Giving You More Transparency and Control Over Your Gemini API Costs</a>. Google Keyword &amp; AI Studio.
+</li>
+<li id="ref-proxidize-pricing" style="margin-bottom:0.75rem;">
+Proxidize - Sharawi, Y. <a class="gold-link" href="https://proxidize.com/blog/anthropic-api-pricing/" target="_blank" rel="noopener noreferrer">Anthropic API Pricing in 2026: Claude Cost per Million Tokens</a>. Proxidize Blog.
+</li>
+<li id="ref-tayyab-comparison" style="margin-bottom:0.75rem;">
+Tayyab Javed - <a class="gold-link" href="https://hireagentic.dev/blog/how-to-reduce-llm-costs" target="_blank" rel="noopener noreferrer">LLM API Pricing Comparison: Claude, Gemini, Grok, and OpenAI</a>. HireAgentic Technical Analysis.
+</li>
+<li id="ref-intuitionlabs" style="margin-bottom:0.75rem;">
+IntuitionLabs - <a class="gold-link" href="https://intuitionlabs.ai/articles/llm-api-pricing-comparison-2025" target="_blank" rel="noopener noreferrer">LLM API Pricing 2026: OpenAI, Gemini, Claude &amp; Grok</a>. IntuitionLabs Research Report.
+</li>
+<li id="ref-xai-pricing" style="margin-bottom:0.75rem;">
+xAI - <a class="gold-link" href="https://docs.x.ai/developers/pricing" target="_blank" rel="noopener noreferrer">API Pricing, Tool Invocation, and Token Costs</a>. SpaceXSI / xAI Docs.
+</li>
+<li id="ref-mindcracker" style="margin-bottom:0.75rem;">
+Mindcracker Research - <a class="gold-link" href="https://mindcracker.com/insights" target="_blank" rel="noopener noreferrer">Stop Overpaying for AI: Right-Sizing the Model to the Job</a>. Enterprise AI Practice Notes.
+</li>
+</ul>
+</section>
+
+<!-- SECTION 7: INVESTMENT & PRICING QUOTE -->
+<section id="investment-pricing" style="margin-top:2rem;">
+<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Investment &amp; Pricing Quote</h2>
 
         <ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;list-style:disc;">
           <li><strong>Modular Service Selection &amp; Flexible Engagement:</strong> Clients can freely pick and choose their services, either individually or bundled under our comprehensive transformation programs:
@@ -543,7 +823,7 @@
             Commission AI Budget Training →
           </a>
 <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">
-            Book a free intro call on LinkedIn ↗
+            Free LinkedIn Consultation ↗
           </a>
 </div>
 </div>

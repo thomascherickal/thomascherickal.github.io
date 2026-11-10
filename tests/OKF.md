@@ -1,20 +1,21 @@
 ---
 type: module
 title: "Unit Test Suite & Verification Harness"
-description: "Comprehensive unit tests covering synchronizer rules, pricing logic, link integrity, and tools."
-tags: [tests, unittest, verification, qa]
-timestamp: 2026-11-09T20:35:37Z
+description: "Comprehensive unit test suite covering expert synchronizer rules, pricing calculations, link integrity, and automation tools."
+tags: [tests, unittest, verification, qa, test-suite]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Unit Test Suite & Verification Harness
 
-Comprehensive unit tests covering synchronizer rules, pricing logic, link integrity, and tools.
+Comprehensive unit test suite covering expert synchronizer rules, pricing calculations, link integrity, and automation tools.
 
 ## Directory Role & Agent Guidelines
 
-- Comprehensive test verification suite.
-- Run Python tests with `python3 python/run_tests.py` or `python3 -m unittest discover -s tests -v`.
-- Pre-commit enforces 100% test pass rate across all suites.
+- Execute all unit tests with `python3 python/run_tests.py` or `python3 -m unittest discover -s tests -v`.
+- Pre-test and post-test cryptographic SHA-256 validation guarantees that `data/*.json` is never mutated by test runs.
+- Always verify a 100% test pass rate across all test cases before committing.
+- Pre-commit gate strictly blocks commits on any test failure.
 
 ## Subdirectories
 

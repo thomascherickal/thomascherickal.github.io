@@ -1,19 +1,21 @@
 ---
 type: module
 title: "Markdown HTML Synchronization Root"
-description: "Markdown mirror representations of live HTML pages kept synchronized for AI agents."
-tags: [md-html-sync, markdown-mirrors, dual-format]
-timestamp: 2026-11-09T20:35:37Z
+description: "Markdown mirror representations of live HTML pages, kept synchronized for consumption by LLM coding agents and crawlers."
+tags: [md-html-sync, markdown-mirrors, llm-friendly, state-tracking]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Markdown HTML Synchronization Root
 
-Markdown mirror representations of live HTML pages kept synchronized for AI agents.
+Markdown mirror representations of live HTML pages, kept synchronized for consumption by LLM coding agents and crawlers.
 
 ## Directory Role & Agent Guidelines
 
-- Maintained as part of the Markdown HTML Synchronization Root subsystem.
-- Strictly preserve zero emojis and zero em-dashes across all files in this directory.
+- Synchronized via `python3 python/md_html_sync.py` only during commit preparation, not after every single edit.
+- Contains `.sync-state.json` to track modification hashes and avoid unnecessary rebuilds.
+- Organized into subdirectories mirroring the site structure (`business-services/`, `personal-services/`, `claude-training/`, `google-training/`).
+- Never delete markdown mirrors directly with `rm`; use `python3 python/delete_page.py` when deleting pages.
 
 ## Subdirectories
 

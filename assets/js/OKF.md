@@ -1,19 +1,19 @@
 ---
 type: module
 title: "Asset JavaScript Libraries"
-description: "Vendored clientside script helpers and interactive UI utilities."
-tags: [assets, javascript, frontend]
-timestamp: 2026-11-09T20:35:37Z
+description: "Vendored clientside script helpers and interactive UI utilities supporting asset galleries and diagrams."
+tags: [assets, javascript, frontend, libraries]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Asset JavaScript Libraries
 
-Vendored clientside script helpers and interactive UI utilities.
+Vendored clientside script helpers and interactive UI utilities supporting asset galleries and diagrams.
 
 ## Directory Role & Agent Guidelines
 
-- This directory contains static assets (images, diagrams, scripts, branding).
-- Refer to images via absolute or relative paths from HTML pages; do not modify binary files directly.
+- Contains static helper scripts for asset displays.
+- Keep scripts lightweight and free of external runtime tracking dependencies.
 
 ## Subdirectories
 

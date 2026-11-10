@@ -1,20 +1,21 @@
 # Purchasing Power Parity (PPP) Country Tiers & Custom Pricing Index
 
 ### Pricing Tier Structure:
-- **Tier 1 - Developed Nations (100% Price · 1.00X Multiplier)**: High-income and developed economies.
-- **Tier 2 - Upper-Middle-Income Economies (75% Price · 25% Discount · 0.75X Multiplier)**: Emerging tech hubs and upper-middle economies.
-- **Tier 3 - Lower-Middle & Low-Income Economies (50% Price · 50% Discount · 0.50X Multiplier)**: Developing digital economies.
-- **Tier 4 - Early-Stage Startups (50% Flat Startup Discount · 0.50X Multiplier)**: Exclusive 50% discount for Pre-Seed and Seed-stage engineering teams building frontier AI or quantum infrastructure (<$1M raised).
-- **Tier 5 - Non-Profits & Academia (25% Price · 75% Flat Discount · 0.25X Multiplier)**: Universities, academic research labs, and registered non-profit/charity organizations.
-- **Tier 6 - Crisis-Affected & Under-Resourced Builders (Custom Subsidized Quotes · 0.10X Indicative / Up to 90%+ Relief)**: Subsidized micro-rates, community grants, or nominal honoraria for crisis-affected regions and under-resourced grassroots builders.
+- **Tier 1 - Developed Nations (100% Price · 1.00X Multiplier)**: High-income and developed economies ($3,000 flagship / $300 individual service).
+- **Tier 2 - Upper-Middle-Income Economies (75% Price · 25% Discount · 0.75X Multiplier)**: Emerging tech hubs and upper-middle economies ($2,250 flagship / $225 individual service).
+- **Tier 3 - Lower-Middle & Low-Income Economies (50% Price · 50% Discount · 0.50X Multiplier)**: Developing digital economies ($1,500 flagship / $150 individual service).
+- **Tier 4 - Early-Stage Startups (50% Flat Startup Discount · 0.50X Multiplier)**: Exclusive 50% discount for Pre-Seed and Seed-stage engineering teams building frontier AI or quantum infrastructure (<$1M raised) ($1,500 flagship / $150 individual service).
+- **Tier 5 - Non-Profits & Academia (25% Price · 75% Flat Discount · 0.25X Multiplier)**: Universities, academic research labs, and registered non-profit/charity organizations ($750 flagship / $75 individual service).
+- **Tier 6 - Crisis-Affected & Under-Resourced Builders (Custom Subsidized Quotes · 0.10X Indicative / Up to 90%+ Relief)**: Subsidized micro-rates, community grants, or nominal honoraria for crisis-affected regions and under-resourced grassroots builders (Custom quote).
 
 ### Service Selection & Flagship Options:
-1. **Individual Service Picks (Pick & Choose from 16 Services)**:
-   - **Personal (1-on-1)**: **$100 USD per service** (strictly 1 person), covers **5 days live training + 5 days dedicated support** (10 days total coverage). Tier rates: T1: $100 | T2: $75 | T3/4: $50 | T5: $25 | T6: $10.
-   - **Business (Organizations)**: **$200 USD per service** (up to 25 participants included, +$200/extra seat), covers **5 days live training + 5 days dedicated support** (10 days total coverage). Tier rates: T1: $200 | T2: $150 | T3/4: $100 | T5: $50 | T6: $20.
-2. **Flagship Programs**:
-   - **Business Training Flagship**: **$2,000 USD for 70 days** (30d live training + 30d guidance & materials, 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day, up to 25 participants, +$200/extra seat).
-   - **Personal Training Flagship**: **$1,000 USD for 60 days** (30d live training + 30d guidance & materials, 30 working days over 6 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day, strictly 1 person).
+1. **Individual Service Picks (Pick & Choose from 16 Business and 16 Personal Services)**:
+   - **Personal (1-on-1)**: **$300 USD per service** (strictly 1 person), covers **5 days live training + 5 days dedicated support** (10 days total coverage). Tier rates: T1: $300 | T2: $225 | T3: $150 | T4: $150 | T5: $75 | T6: Custom. Support fee: +$50 USD after 5 days.
+   - **Business (Organizations)**: **$300 USD per service base** (1 seat included, +$300/extra seat up to 10 seats max), covers **5 days live training + 5 days dedicated support** (10 days total coverage). Tier rates: T1: $300 | T2: $225 | T3: $150 | T4: $150 | T5: $75 | T6: Custom (+ extra seat at same tier rate). Support fee: +$50 USD after 5 days.
+2. **Flagship Programs (60 Days Total Coverage)**:
+   - **Business Training Flagship**: **$3,000 USD for 60 days** (30d live training + 30d guidance & materials, 4 hours per day Monday through Friday, up to 10 participants included, +$300/extra seat up to 20 seats max). Support fee: +$500 USD ($250 @ 15d, $250 @ 30d). Tier rates: T1: $3,000 | T2: $2,250 | T3: $1,500 | T4: $1,500 | T5: $750 | T6: Custom.
+   - **Personal Training Flagship**: **$3,000 USD for 60 days** (30d live training + 30d guidance & materials, 4 hours per day Monday through Friday, strictly 1 person). Support fee: +$500 USD ($250 @ 15d, $250 @ 30d). Tier rates: T1: $3,000 | T2: $2,250 | T3: $1,500 | T4: $1,500 | T5: $750 | T6: Custom.
+   - **Payment Structure**: $0 upfront deposit; 5 equal installments (20% each) due after milestone completion.
    - Purchasing Power Parity (PPP) applies to all individual service picks and flagship programs across 195 countries.
 
 ---

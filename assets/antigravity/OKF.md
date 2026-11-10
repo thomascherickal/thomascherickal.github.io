@@ -1,19 +1,19 @@
 ---
 type: dataset
 title: "Google Antigravity Visual Assets"
-description: "Branding, screenshots, and visual components for Google Antigravity IDE and SDK documentation."
-tags: [assets, antigravity, google-ecosystem]
-timestamp: 2026-11-09T20:35:37Z
+description: "Branding graphics, IDE interface screenshots, and workflow diagrams for Google Antigravity IDE and SDK documentation."
+tags: [assets, antigravity, google-ide, agentic-workflows]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Google Antigravity Visual Assets
 
-Branding, screenshots, and visual components for Google Antigravity IDE and SDK documentation.
+Branding graphics, IDE interface screenshots, and workflow diagrams for Google Antigravity IDE and SDK documentation.
 
 ## Directory Role & Agent Guidelines
 
-- This directory contains static assets (images, diagrams, scripts, branding).
-- Refer to images via absolute or relative paths from HTML pages; do not modify binary files directly.
+- Supplies rich visuals for `google-training/google-antigravity-ide.html`.
+- Illustrates agentic workflows with browser verification, sidecar orchestration, and multi-agent task execution.
 
 ## Subdirectories
 

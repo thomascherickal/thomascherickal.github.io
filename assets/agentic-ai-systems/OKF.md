@@ -1,19 +1,19 @@
 ---
 type: dataset
 title: "Agentic AI Systems Visual Assets"
-description: "Visual assets, schemas, and diagrams illustrating autonomous Agentic AI loops and workflows."
-tags: [assets, agentic-systems, diagrams]
-timestamp: 2026-11-09T20:35:37Z
+description: "Visual assets, schemas, and flowcharts illustrating autonomous agentic loops, Nous Research Agentic Assistants, and memory systems."
+tags: [assets, agentic-systems, diagrams, nous-hermes]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Agentic AI Systems Visual Assets
 
-Visual assets, schemas, and diagrams illustrating autonomous Agentic AI loops and workflows.
+Visual assets, schemas, and flowcharts illustrating autonomous agentic loops, Nous Research Agentic Assistants, and memory systems.
 
 ## Directory Role & Agent Guidelines
 
-- This directory contains static assets (images, diagrams, scripts, branding).
-- Refer to images via absolute or relative paths from HTML pages; do not modify binary files directly.
+- Supplies graphics for `business-services/business-service-agentic-ai-systems.html` and `personal-services/personal-service-agentic-ai-systems.html`.
+- Visualizes self-hosted Agentic Assistants, persistent vector/SQLite memory, and autonomous skill acquisition.
 
 ## Subdirectories
 

@@ -2,8 +2,8 @@
 type: dataset
 title: "Personal Local LLMs Visual Assets"
 description: "Diagrams and hardware allocation graphs for personal workstation local LLM deployments."
-tags: [assets, personal-services, local-llms]
-timestamp: 2026-11-09T20:35:37Z
+tags: [assets, personal-services, local-llms, workstation]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Personal Local LLMs Visual Assets
@@ -12,8 +12,8 @@ Diagrams and hardware allocation graphs for personal workstation local LLM deplo
 
 ## Directory Role & Agent Guidelines
 
-- This directory contains static assets (images, diagrams, scripts, branding).
-- Refer to images via absolute or relative paths from HTML pages; do not modify binary files directly.
+- Supports `personal-services/personal-service-local-llms-cost-slashing.html`.
+- Shows local workstation setups with consumer GPUs, LM Studio, and Ollama integration.
 
 ## Subdirectories
 

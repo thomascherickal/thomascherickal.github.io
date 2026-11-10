@@ -2,8 +2,8 @@
   "metadata": {
     "domain": "contact",
     "engine": "nlp-fuzzy-expert",
-    "total_references_tracked": 2565,
-    "last_synchronized": "2026-11-10T01:45:32.311316"
+    "total_references_tracked": 2571,
+    "last_synchronized": "2026-11-10T14:24:03.534338"
   },
   "all_references": [
     {
@@ -3288,50 +3288,136 @@
     {
       "file": "business-services/business-service-ai-budget-cost-limits-training.html",
       "page": "AI Budget & Cost Control | Thomas Cherickal",
-      "section": "1. Service Overview & Scope",
-      "line_number": 417,
+      "section": "Why AI Agent Costs Spin Out of Control",
+      "line_number": 477,
+      "field_key": "contact:form_configuration.fields[10].name",
+      "old_value": "message",
+      "new_value": "message",
+      "context": "When an agent hits an error - such as an invalid JSON output from a tool - it often feeds the entire conversation history back into the model along with the error message. If that cycle repeats fou...",
+      "match_type": "exact",
+      "data_source": "data/contact.json#form_configuration.fields[10].name"
+    },
+    {
+      "file": "business-services/business-service-ai-budget-cost-limits-training.html",
+      "page": "AI Budget & Cost Control | Thomas Cherickal",
+      "section": "Reusing Static Context with Prompt Caching",
+      "line_number": 494,
+      "field_key": "contact:form_configuration.fields[0].type",
+      "old_value": "text",
+      "new_value": "text",
+      "context": "Put unchanging text first: Place system instructions, persona definitions, few-shot examples, and tool definitions at the very beginning of the prompt.",
+      "match_type": "exact",
+      "data_source": "data/contact.json#form_configuration.fields[0].type",
+      "also_in_data": [
+        "data/contact.json#form_configuration.fields[2].type",
+        "data/contact.json#form_configuration.fields[3].type",
+        "data/contact.json#form_configuration.fields[4].type",
+        "data/contact.json#form_configuration.fields[6].type",
+        "data/contact.json#form_configuration.fields[7].type"
+      ]
+    },
+    {
+      "file": "business-services/business-service-ai-budget-cost-limits-training.html",
+      "page": "AI Budget & Cost Control | Thomas Cherickal",
+      "section": "Reusing Static Context with Prompt Caching",
+      "line_number": 495,
+      "field_key": "contact:form_configuration.fields[0].type",
+      "old_value": "text",
+      "new_value": "text",
+      "context": "Append dynamic variables at the end: Keep user questions, current timestamps, and ephemeral session data at the tail end of the message. Moving dynamic text to the top invalidates the entire cache ...",
+      "match_type": "exact",
+      "data_source": "data/contact.json#form_configuration.fields[0].type",
+      "also_in_data": [
+        "data/contact.json#form_configuration.fields[2].type",
+        "data/contact.json#form_configuration.fields[3].type",
+        "data/contact.json#form_configuration.fields[4].type",
+        "data/contact.json#form_configuration.fields[6].type",
+        "data/contact.json#form_configuration.fields[7].type"
+      ]
+    },
+    {
+      "file": "business-services/business-service-ai-budget-cost-limits-training.html",
+      "page": "AI Budget & Cost Control | Thomas Cherickal",
+      "section": "Reusing Static Context with Prompt Caching",
+      "line_number": 495,
+      "field_key": "contact:form_configuration.fields[10].name",
+      "old_value": "message",
+      "new_value": "message",
+      "context": "Append dynamic variables at the end: Keep user questions, current timestamps, and ephemeral session data at the tail end of the message. Moving dynamic text to the top invalidates the entire cache ...",
+      "match_type": "exact",
+      "data_source": "data/contact.json#form_configuration.fields[10].name"
+    },
+    {
+      "file": "business-services/business-service-ai-budget-cost-limits-training.html",
+      "page": "AI Budget & Cost Control | Thomas Cherickal",
+      "section": "Setting Hard Execution Ceilings and Circuit Breakers",
+      "line_number": 537,
       "field_key": "contact:form_configuration.fields[9].name",
       "old_value": "budget",
       "new_value": "budget",
-      "context": "agent can exceed its budget.",
+      "context": "Assign per-run token and dollar budgets: Pass a budget tracker through the agent's execution context. When accumulated token usage approaches the predefined limit, force the agent to finalize its c...",
       "match_type": "exact",
       "data_source": "data/contact.json#form_configuration.fields[9].name"
     },
     {
       "file": "business-services/business-service-ai-budget-cost-limits-training.html",
       "page": "AI Budget & Cost Control | Thomas Cherickal",
-      "section": "3. Deliverable Examples & 4-Week Schedule",
-      "line_number": 449,
+      "section": "Centralized Budget Enforcement and Rate Limits",
+      "line_number": 568,
       "field_key": "contact:form_configuration.fields[9].name",
       "old_value": "budget",
       "new_value": "budget",
-      "context": "budget.",
+      "context": "Soft and hard budget thresholds: Gateways maintain real-time spend counters per team or project. Setting an alert at 80% of monthly budget gives teams time to investigate spikes, while a hard cutof...",
       "match_type": "exact",
       "data_source": "data/contact.json#form_configuration.fields[9].name"
     },
     {
       "file": "business-services/business-service-ai-budget-cost-limits-training.html",
       "page": "AI Budget & Cost Control | Thomas Cherickal",
-      "section": "3. Deliverable Examples & 4-Week Schedule",
-      "line_number": 483,
+      "section": "Practical Implementation Roadmap",
+      "line_number": 658,
       "field_key": "contact:form_configuration.fields[9].name",
       "old_value": "budget",
       "new_value": "budget",
-      "context": "Python cost-tracking scripts, live dashboard displaying spend per team and model usage, automated agent budget kill-switch code, Batch API setup for non-urgent tasks, and 30-day support onboarding",
+      "context": "Implement prompt caching for static prefixes; move routine tasks to budget tiers; prune and summarize history.",
       "match_type": "exact",
       "data_source": "data/contact.json#form_configuration.fields[9].name"
     },
     {
       "file": "business-services/business-service-ai-budget-cost-limits-training.html",
       "page": "AI Budget & Cost Control | Thomas Cherickal",
-      "section": "6. Summary",
-      "line_number": 546,
-      "field_key": "contact:direct_communication.channels[2].action_label",
-      "old_value": "Book a free intro call on LinkedIn ↗",
-      "new_value": "Book a free intro call on LinkedIn ↗",
-      "context": "Book a free intro call on LinkedIn ↗",
+      "section": "Practical Implementation Roadmap",
+      "line_number": 660,
+      "field_key": "contact:form_configuration.fields[9].name",
+      "old_value": "budget",
+      "new_value": "budget",
+      "context": "Tag calls by team, app, and task; track cost per resolved outcome; set department budget limits.",
       "match_type": "exact",
-      "data_source": "data/contact.json#direct_communication.channels[2].action_label"
+      "data_source": "data/contact.json#form_configuration.fields[9].name"
+    },
+    {
+      "file": "business-services/business-service-ai-budget-cost-limits-training.html",
+      "page": "AI Budget & Cost Control | Thomas Cherickal",
+      "section": "Practical Implementation Roadmap",
+      "line_number": 664,
+      "field_key": "contact:form_configuration.fields[9].name",
+      "old_value": "budget",
+      "new_value": "budget",
+      "context": "Deploy step-level model routing; implement dynamic context compression; enforce per-agent budget ceilings.",
+      "match_type": "exact",
+      "data_source": "data/contact.json#form_configuration.fields[9].name"
+    },
+    {
+      "file": "business-services/business-service-ai-budget-cost-limits-training.html",
+      "page": "AI Budget & Cost Control | Thomas Cherickal",
+      "section": "Practical Implementation Roadmap",
+      "line_number": 665,
+      "field_key": "contact:form_configuration.fields[9].name",
+      "old_value": "budget",
+      "new_value": "budget",
+      "context": "Enforce hard monthly budget cutoffs; configure cross-provider failover; apply automated rate limiting.",
+      "match_type": "exact",
+      "data_source": "data/contact.json#form_configuration.fields[9].name"
     },
     {
       "file": "business-services/business-service-ai-developer-training.html",

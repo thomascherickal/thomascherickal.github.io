@@ -1,19 +1,21 @@
 ---
 type: module
 title: "Git Repository Lifecycle Hooks"
-description: "Pre-commit and git lifecycle hooks enforcing test pass rates, linting, and metrics updates."
-tags: [python, git-hooks, pre-commit, quality-gate]
-timestamp: 2026-11-09T20:35:37Z
+description: "Pre-commit, pre-push, and editor lifecycle hooks enforcing quality gates, test pass rates, and schema synchronization."
+tags: [python, git-hooks, pre-commit, pre-push, quality-gate]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Git Repository Lifecycle Hooks
 
-Pre-commit and git lifecycle hooks enforcing test pass rates, linting, and metrics updates.
+Pre-commit, pre-push, and editor lifecycle hooks enforcing quality gates, test pass rates, and schema synchronization.
 
 ## Directory Role & Agent Guidelines
 
-- Maintained as part of the Git Repository Lifecycle Hooks subsystem.
-- Strictly preserve zero emojis and zero em-dashes across all files in this directory.
+- `pre-commit`: Automatically executes `python3 python/run_tests.py` and `node pricing-tests.js`. Aborts commit if any test fails.
+- `pre-push`: Performs final link and schema verification before pushing to origin.
+- `post_edit_hook.py`: IDE lifecycle trigger for component inlining.
+- Never bypass git hooks with `--no-verify`.
 
 ## Subdirectories
 

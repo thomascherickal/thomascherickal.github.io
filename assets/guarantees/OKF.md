@@ -1,19 +1,19 @@
 ---
 type: dataset
 title: "Service Guarantees Visual Assets"
-description: "Badges, seals, and visual proof assets supporting the 100% money-back and walkaway guarantees."
-tags: [assets, guarantees, trust]
-timestamp: 2026-11-09T20:35:37Z
+description: "Trust badges, guarantee seals, and visual confirmation assets supporting the 100% money-back and walkaway guarantees."
+tags: [assets, guarantees, trust-badges, risk-reversal]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Service Guarantees Visual Assets
 
-Badges, seals, and visual proof assets supporting the 100% money-back and walkaway guarantees.
+Trust badges, guarantee seals, and visual confirmation assets supporting the 100% money-back and walkaway guarantees.
 
 ## Directory Role & Agent Guidelines
 
-- This directory contains static assets (images, diagrams, scripts, branding).
-- Refer to images via absolute or relative paths from HTML pages; do not modify binary files directly.
+- Used in `guarantees.html` and guarantee callouts across the site.
+- Represents the $0 upfront, 5 equal 20% milestone installments, and walkaway guarantee trust models.
 
 ## Subdirectories
 

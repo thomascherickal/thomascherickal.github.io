@@ -1,19 +1,19 @@
 ---
 type: dataset
 title: "AI Developer Training Visual Assets"
-description: "Technical screenshots, architecture charts, and visual assets for AI Developer bootcamps."
-tags: [assets, developer-training, diagrams]
-timestamp: 2026-11-09T20:35:37Z
+description: "Terminal screenshots, TDD workflow charts, and visual assets for AI Developer bootcamps."
+tags: [assets, developer-training, tdd, coding-agents]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # AI Developer Training Visual Assets
 
-Technical screenshots, architecture charts, and visual assets for AI Developer bootcamps.
+Terminal screenshots, TDD workflow charts, and visual assets for AI Developer bootcamps.
 
 ## Directory Role & Agent Guidelines
 
-- This directory contains static assets (images, diagrams, scripts, branding).
-- Refer to images via absolute or relative paths from HTML pages; do not modify binary files directly.
+- Supports `business-services/business-service-ai-developer-training.html` and `personal-services/personal-service-ai-developer-training.html`.
+- Illustrates AI-assisted Test-Driven Development loops, Claude Code CLI sessions, and custom MCP development in Python/Rust.
 
 ## Subdirectories
 

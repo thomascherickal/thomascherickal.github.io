@@ -1,19 +1,21 @@
 ---
 type: dataset
-title: "Site Assets Hub"
-description: "Global static assets including branding logos, OpenGraph cards, media, and diagrams."
-tags: [assets, branding, media, static]
-timestamp: 2026-11-09T20:35:37Z
+title: "Global Site Assets & Branding Hub"
+description: "Core site branding assets, logos, favicons, web manifests, OpenGraph social cards, and service-specific visual subdirectories."
+tags: [assets, branding, media, favicons, opengraph]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
-# Site Assets Hub
+# Global Site Assets & Branding Hub
 
-Global static assets including branding logos, OpenGraph cards, media, and diagrams.
+Core site branding assets, logos, favicons, web manifests, OpenGraph social cards, and service-specific visual subdirectories.
 
 ## Directory Role & Agent Guidelines
 
-- This directory contains static assets (images, diagrams, scripts, branding).
-- Refer to images via absolute or relative paths from HTML pages; do not modify binary files directly.
+- Holds primary branding imagery: `digital-futurist-logo.jpg`, `apple-touch-icon.png`, `favicon.svg`, `og-card.png`, and `Professional Profile Square.webp`.
+- Distinct from `images/`: `assets/` holds site identity, favicons, OG cards, and service-specific diagram folders, while `images/` holds standalone editorial WebP publication graphics.
+- Organized into 11 specialized subdirectories for service diagrams and tool screenshots.
+- Do not edit binary raster or vector images directly with scripts; refer to them via stable relative or root-relative paths.
 
 ## Subdirectories
 

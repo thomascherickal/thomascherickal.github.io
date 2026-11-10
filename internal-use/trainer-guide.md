@@ -8,18 +8,18 @@
 
 ## Executive Overview
 
-The website [thedigitalfuturist.com](file:///home/thomas/GitHub.io/thomascherickal.github.io/index.html) is not a conventional consulting brochure site; it is an encyclopedic, production-engineered technical knowledge portal and commercial conversion platform. Spanning **66 HTML pages**, **669,000+ words of technical prose and structured data**, **61 JSON-LD schema graphs**, and an automated **forward-chaining NLP/Fuzzy-Logic Knowledge Synchronization Engine** ([`nlp-fuzzy-expert/synchronizer.py`](file:///home/thomas/GitHub.io/thomascherickal.github.io/nlp-fuzzy-expert/synchronizer.py)), the platform establishes immediate authority in two high-demand ecosystems: **Anthropic Claude** and **Google Gemini / Gemma**.
+The website [thedigitalfuturist.com](file:///home/thomas/GitHub.io/thomascherickal.github.io/index.html) is not a conventional consulting brochure site; it is an encyclopedic, production-engineered technical knowledge portal and commercial conversion platform. Spanning **80 HTML pages**, **985,000+ words of technical prose and structured data**, **75 JSON-LD schema graphs**, and an automated **forward-chaining NLP/Fuzzy-Logic Knowledge Synchronization Engine** ([`nlp-fuzzy-expert/synchronizer.py`](file:///home/thomas/GitHub.io/thomascherickal.github.io/nlp-fuzzy-expert/synchronizer.py)), the platform establishes immediate authority in two high-demand ecosystems: **Anthropic Claude** and **Google Gemini / Gemma**.
 
 > [!IMPORTANT]
-> The single greatest differentiator of this platform is that it **proves capability before asking for a contract**. While 95% of AI consultants hide behind vague slide decks and gated PDFs, this website gives away 24 full-length engineering guides (`claude/*.html` and `google/*.html`) and 24 detailed service syllabi (`business-services/*.html` and `personal-services/*.html`) upfront.
+> The single greatest differentiator of this platform is that it **proves capability before asking for a contract**. While 95% of AI consultants hide behind vague slide decks and gated PDFs, this website gives away 24 full-length engineering guides (`claude-training/*.html` and `google-training/*.html`) and 32 detailed service syllabi (`business-services/*.html` and `personal-services/*.html`) upfront.
 
 ---
 
 ## 1. Pros (Core Strengths & Unfair Advantages)
 
 ### 1.1 Unrivaled Technical Depth & "Show, Don't Tell" Authority
-- **24 Deep-Dive Engineering Guides**: Comprehensive, code-heavy reference manuals covering the **Claude AI Suite** ([`claude-code.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude/claude-code.html), [`claude-custom-mcp.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude/claude-custom-mcp.html), [`claude-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude/claude-orchestration.html), [`claude-local-llms.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude/claude-local-llms.html)) and the **Google Gemini Suite** ([`google-antigravity-ide.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/google/google-antigravity-ide.html), [`google-ai-studio.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/google/google-ai-studio.html), [`google-gemini-4-argon.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/google/google-gemini-4-argon.html), [`google-gemma-local-models.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/google/google-gemma-local-models.html)).
-- **24 Granular Service Specifications**: Split cleanly into 12 Business Services ([`all-business-services.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/all-business-services.html)) and 12 Personal 1-on-1 Services ([`all-personal-services.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/all-personal-services.html)). Every service page includes hour-by-hour or week-by-week breakdowns, verification criteria, and architectural diagrams.
+- **24 Deep-Dive Engineering Guides**: Comprehensive, code-heavy reference manuals covering the **Claude AI Suite** ([`claude-code.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-training/claude-code.html), [`claude-custom-mcp.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-training/claude-custom-mcp.html), [`claude-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-training/claude-orchestration.html), [`claude-local-llms.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-training/claude-local-llms.html)) and the **Google Gemini Suite** ([`google-antigravity-ide.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/google-training/google-antigravity-ide.html), [`google-ai-studio.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/google-training/google-ai-studio.html), [`google-gemini-4-argon.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/google-training/google-gemini-4-argon.html), [`google-gemma-local-models.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/google-training/google-gemma-local-models.html)).
+- **32 Granular Service Specifications**: Split cleanly into 16 Business Services ([`all-business-services.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/all-business-services.html)) and 16 Personal 1-on-1 Services ([`all-personal-services.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/all-personal-services.html)). Every service page includes hour-by-hour or week-by-week breakdowns, verification criteria, and architectural diagrams.
 
 ### 1.2 Zero-Friction Risk Reversal & Commercial Trust
 - **$0 Upfront Deposit**: Clients pay nothing before commencing technical discovery and the first milestone block.
@@ -40,8 +40,8 @@ The website [thedigitalfuturist.com](file:///home/thomas/GitHub.io/thomascherick
 ## 2. Cons (Areas for Improvement & Structural Risks)
 
 ### 2.1 High Cognitive Load for Non-Technical Buyers
-- **Information Density**: With 66 pages and 12 items per navigation dropdown, a non-technical CEO or HR Director landing on the site can feel overwhelmed by the sheer volume of technical terminology (vLLM, AWQ quantization, gVisor sandboxing, LangGraph state machines).
-- **Mitigation**: Add a 60-second "Start Here: 3-Question Role Matcher" or a short pinned Loom/YouTube video on [`index.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/index.html) that walks visitors through how to pick between a $250 Individual Service Pick and the $2,500 60-Day Flagship.
+- **Information Density**: With 80 pages and 16 items per service dropdown, a non-technical CEO or HR Director landing on the site can feel overwhelmed by the sheer volume of technical terminology (vLLM, AWQ quantization, gVisor sandboxing, LangGraph state machines).
+- **Mitigation**: Add a 60-second "Start Here: 3-Question Role Matcher" or a short pinned Loom/YouTube video on [`index.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/index.html) that walks visitors through how to pick between a $300 Individual Service Pick and the $3,000 60-Day Flagship.
 
 ### 2.2 Lack of Video Proof & Live Visual Demonstrations
 - **Text-Heavy Medium**: While the prose, SVG diagrams, and code blocks are exceptional, buyers of live training want to hear your voice, see your teaching cadence, and watch a 3-minute screen recording of you orchestrating Claude Code or Google Antigravity IDE in real time.
@@ -62,14 +62,14 @@ Your pricing model in [`pricing.html`](file:///home/thomas/GitHub.io/thomascheri
 
 | Package | Tier 1 Base Price | Duration & Cadence | Support Period Fee | Effective Hourly Rate (Tier 1) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Business Flagship** (Up to 10 seats, +$250/extra up to 20) | **$2,500 USD** | 60 Days (30d live @ 4h/d + 30d support) | +$500 USD ($250 @ 15d, $250 @ 30d) | ~$20.83/hr base ($25/hr w/ support) for 10 seats; **$45.83/hr** at 20 seats ($5,500 total) |
-| **Personal Flagship** (1-on-1 Private) | **$2,500 USD** | 60 Days (30d live @ 4h/d + 30d support) | +$500 USD ($250 @ 15d, $250 @ 30d) | ~$20.83/hr base ($25/hr w/ support) |
-| **Business Individual Pick** (1 seat base, +$250/extra up to 10) | **$250 USD** | 10 Days (5d live @ 4h/d + 5d support) | +$50 USD (after 5d support) | $12.50/hr for 1 seat; **$125/hr** for 10 seats ($2,500 total for 20 live hours) |
-| **Personal Individual Pick** (1-on-1 Private) | **$250 USD** | 10 Days (5d live @ 4h/d + 5d support) | +$50 USD (after 5d support) | $12.50/hr base ($15/hr w/ support) |
+| **Business Flagship** (Up to 10 seats, +$300/extra up to 20) | **$3,000 USD** | 60 Days (30d live @ 4h/d + 30d support) | +$500 USD ($250 @ 15d, $250 @ 30d) | $25.00/hr base ($2.50/hr/seat for 10 seats); **$50.00/hr** at 20 seats ($6,000 total) |
+| **Personal Flagship** (1-on-1 Private) | **$3,000 USD** | 60 Days (30d live @ 4h/d + 30d support) | +$500 USD ($250 @ 15d, $250 @ 30d) | $25.00/hr base ($29.17/hr w/ support) |
+| **Business Individual Pick** (1 seat base, +$300/extra up to 10) | **$300 USD** | 10 Days (5d live @ 4h/d + 5d support) | +$50 USD (after 5d support) | $15.00/hr for 1 seat; **$150.00/hr** for 10 seats ($3,000 total for 20 live hours) |
+| **Personal Individual Pick** (1-on-1 Private) | **$300 USD** | 10 Days (5d live @ 4h/d + 5d support) | +$50 USD (after 5d support) | $15.00/hr base ($17.50/hr w/ support) |
 
 ### Strategic Pricing Assessment
-1. **Incredible Market Entry Wedge**: At **$250 USD** for a 5-day (20-hour) single-service sprint with $0 upfront, the barrier to entry is virtually zero. A developer or founder in the US/EU spends more than $250 on API credits in a month. This makes the **Individual Service Pick** the ultimate "Trojan Horse" lead converter.
-2. **High-Margin Sweet Spot**: Notice that a **10-seat Business Individual Service Pick** yields **$2,500 USD for just 5 days (20 hours) of live delivery** ($250 base + 9 extra seats x $250 = $2,500). That is **$125/hour**, which is 5x more time-efficient for you than delivering a 30-day flagship for $2,500.
+1. **Incredible Market Entry Wedge**: At **$300 USD** for a 5-day (20-hour) single-service sprint with $0 upfront, the barrier to entry is virtually zero. A developer or founder in the US/EU spends more than $300 on API credits in a month. This makes the **Individual Service Pick** the ultimate "Trojan Horse" lead converter.
+2. **High-Margin Sweet Spot**: Notice that a **10-seat Business Individual Service Pick** yields **$3,000 USD for just 5 days (20 hours) of live delivery** ($300 base + 9 extra seats x $300 = $3,000). That is **$150/hour**, which is twice as time-efficient for you as delivering a 30-day flagship for $3,000.
 3. **Purchasing Power Parity (PPP) Brilliance**: The 6-tier PPP matrix (Tier 1: 100%, Tier 2: 75%, Tier 3 & 4 Startups: 50%, Tier 5 Academia: 25%, Tier 6: 10% Subsidized) turns global geography into an asset. Instead of losing price-sensitive leads in India, Brazil, Southeast Asia, or Eastern Europe, you convert them cleanly without devaluing your Tier 1 Western enterprise rate.
 
 ---
@@ -83,7 +83,7 @@ flowchart TD
         A["Big 4 & Enterprise Consultancies<br/>($50,000 - $250,000+ | Strategy Decks Only)"]
         B["Cohort MOOCs: Maven, DeepLearning.AI<br/>($500 - $3,000 | Pre-Recorded / 100-Person Zoom)"]
         C["Boutique AI Automation Agencies<br/>($5,000 - $15,000 | Black-Box Retainers)"]
-        D["The Digital Futurist: Thomas Cherickal<br/>($250 Picks / $2,500 Flagships | Live 1-on-1 & Team Engineering + $0 Upfront + Apache 2.0 IP)"]
+        D["The Digital Futurist: Thomas Cherickal<br/>($300 Picks / $3,000 Flagships | Live 1-on-1 & Team Engineering + $0 Upfront + Apache 2.0 IP)"]
     end
     A -->|"Too expensive & theoretical"| D
     B -->|"Zero custom code or 1-on-1 help"| D
@@ -92,7 +92,7 @@ flowchart TD
 
 | Competitor Category | Examples | Their Weakness | Your Competitive Moat |
 | :--- | :--- | :--- | :--- |
-| **Cohort Platforms** | Maven, Section4, Reforge | $1,500 - $3,500 per seat for generic group lectures; zero custom code written for the client's repo. | You train the team **inside their actual codebase** for $2,500 across 10 seats ($250/person). |
+| **Cohort Platforms** | Maven, Section4, Reforge | $1,500 - $3,500 per seat for generic group lectures; zero custom code written for the client's repo. | You train the team **inside their actual codebase** for $3,000 across 10 seats ($300/person). |
 | **Big Tech / Cloud Partners** | AWS/GCP Boutique Partners | Push expensive cloud lock-in (Vertex AI / Bedrock) and charge $25,000+ upfront. | You teach **Local LLMs & Cost Slashing (60-90% savings)** via Ollama/vLLM plus $0 upfront. |
 | **Freelance AI Tutors** | Codementor, Upwork ($100-$250/hr) | Unstructured ad-hoc Q&A; no comprehensive curriculum or written runbooks. | You provide a **24-guide structured engineering syllabus** and 30 days of post-training support. |
 
@@ -114,9 +114,9 @@ flowchart TD
 ## 6. How to Publicise & Distribute This Website
 
 ### 6.1 The "Trojan Horse" Open-Source Guide Strategy
-Your 24 guides (`claude/*` and `google/*`) are standalone masterpieces. Do not promote your "services" directly on cold channels; **promote the free guides**:
+Your 24 guides (`claude-training/*` and `google-training/*`) are standalone masterpieces. Do not promote your "services" directly on cold channels; **promote the free guides**:
 - **Hacker News (Show HN) & Reddit (`r/LocalLLaMA`, `r/ClaudeAI`, `r/GeminiAI`, `r/singularity`)**:
-  - Submit deep technical posts linking directly to [`claude/claude-local-llms.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude/claude-local-llms.html) or [`google/google-gemma-local-models.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/google/google-gemma-local-models.html). Engineers love no-fluff benchmarks, VRAM sizing tables, and copy-pasteable configurations. Once on the page, the global header and bottom CTA naturally funnel them to your $250 / $2,500 training.
+  - Submit deep technical posts linking directly to [`claude-training/claude-local-llms.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-training/claude-local-llms.html) or [`google-training/google-gemma-local-models.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/google-training/google-gemma-local-models.html). Engineers love no-fluff benchmarks, VRAM sizing tables, and copy-pasteable configurations. Once on the page, the global header and bottom CTA naturally funnel them to your $300 / $3,000 training.
 
 ### 6.2 LinkedIn "Live Lab" Video Carousels (Inbound Consultation Engine)
 - Every page on your site features the **Free LinkedIn Consultation** button (`https://linkedin.com/in/thomascherickal`).
@@ -133,7 +133,7 @@ Your 24 guides (`claude/*` and `google/*`) are standalone masterpieces. Do not p
 
 ## 7. Personal Preparation Guide: Mastering Live AI Training Delivery (1,100+ Words)
 
-Delivering 24 distinct technical curricula and 24 deep-dive platform guides live over video - 4 hours a day, Monday through Friday - requires elite preparation. In live technical training, **your credibility is won or lost in the terminal**. When an engineering lead or solo founder watches you work, they are not just absorbing facts; they are evaluating your fluency, your debugging composure when an LLM hallucinates or a Docker container fails, and your ability to translate complex multi-agent architectures into repeatable muscle memory.
+Delivering 32 distinct technical curricula and 24 deep-dive platform guides live over video - 4 hours a day, Monday through Friday - requires elite preparation. In live technical training, **your credibility is won or lost in the terminal**. When an engineering lead or solo founder watches you work, they are not just absorbing facts; they are evaluating your fluency, your debugging composure when an LLM hallucinates or a Docker container fails, and your ability to translate complex multi-agent architectures into repeatable muscle memory.
 
 Below is a comprehensive, battle-tested operational manual to prepare yourself mentally, technically, and pedagogically as the principal AI trainer.
 
@@ -142,7 +142,7 @@ Below is a comprehensive, battle-tested operational manual to prepare yourself m
 The number one killer of live technical training is environment friction - waiting four minutes for `pip install` to resolve dependencies, hunting for an expired API key, or watching a local model download weights over a throttled connection while ten corporate engineers watch your screen in silence.
 
 1. **Pre-Baked Docker & Conda Environments for Every Module**:
-   - Organize your local machine (`~/Labs/the-digital-futurist-labs/`) into 12 numbered directories corresponding to your 12 core services (`01-genai-transformation`, `02-local-llms`, `03-claude-orchestration`, etc.).
+   - Organize your local machine (`~/Labs/the-digital-futurist-labs/`) into 16 numbered directories corresponding to your 16 core business services (`01-genai-transformation`, `02-local-llms`, `03-claude-orchestration`, etc.).
    - Inside each directory, maintain a locked `pyproject.toml` / `requirements.txt`, a pre-built `Dockerfile`, and a `docker-compose.yml` whose images are **already pulled and cached locally** before the session starts.
    - Pre-download all quantized GGUF/AWQ weights in Ollama (`gemma3:4b`, `gemma3:12b`, `qwen2.5-coder:7b`, `deepseek-r1:8b`, `nomic-embed-text`) so `ollama run` launches in 400 milliseconds during live demos.
 
@@ -183,7 +183,7 @@ Four hours of continuous technical instruction is a marathon for both trainer an
 
 ### Phase 3: Deep Fluency Across Your Core Technical Pillars
 
-To command effortless authority across all 24 guides and 24 services, drill yourself weekly on four "signature live demonstrations" that cover 80% of client amazement:
+To command effortless authority across all 24 guides and 32 services, drill yourself weekly on four "signature live demonstrations" that cover 80% of client amazement:
 
 1. **The 8-Minute Custom MCP Server Build (Claude Suite)**:
    - Practice writing a clean Python `FastMCP` or TypeScript MCP server from a blank file in under 8 minutes, connecting it to a local SQLite database or REST API, registering it in `claude_desktop_config.json` / Claude Code, and executing a multi-step tool call live.

@@ -1,19 +1,19 @@
 ---
 type: dataset
 title: "Claude Orchestration Visual Assets"
-description: "Architecture diagrams and execution models for Claude Agent Orchestration workflows."
-tags: [assets, claude, orchestration]
-timestamp: 2026-11-09T20:35:37Z
+description: "Architecture blueprints and sequential pipeline diagrams for Claude Agent Orchestration workflows."
+tags: [assets, claude, orchestration, blueprints]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Claude Orchestration Visual Assets
 
-Architecture diagrams and execution models for Claude Agent Orchestration workflows.
+Architecture blueprints and sequential pipeline diagrams for Claude Agent Orchestration workflows.
 
 ## Directory Role & Agent Guidelines
 
-- This directory contains static assets (images, diagrams, scripts, branding).
-- Refer to images via absolute or relative paths from HTML pages; do not modify binary files directly.
+- Supports `claude-training/claude-orchestration.html`.
+- Illustrates prompt caching economics, dynamic routing, and subagent delegation patterns.
 
 ## Subdirectories
 

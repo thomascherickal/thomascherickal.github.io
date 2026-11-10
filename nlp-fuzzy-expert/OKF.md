@@ -1,20 +1,22 @@
 ---
 type: module
 title: "NLP Fuzzy Expert Knowledge Synchronization Engine"
-description: "Forward-chaining inference engine, fuzzy matcher, file watcher, and auto-healing subsystem."
-tags: [nlp-fuzzy-expert, inference-engine, synchronization, rules]
-timestamp: 2026-11-09T20:35:37Z
+description: "Forward-chaining inference engine, fuzzy matcher, continuous file watcher daemon, and auto-healing subsystem synchronizing data/*.json outward."
+tags: [nlp-fuzzy-expert, inference-engine, synchronization, fuzzy-matcher, watcher]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # NLP Fuzzy Expert Knowledge Synchronization Engine
 
-Forward-chaining inference engine, fuzzy matcher, file watcher, and auto-healing subsystem.
+Forward-chaining inference engine, fuzzy matcher, continuous file watcher daemon, and auto-healing subsystem synchronizing data/*.json outward.
 
 ## Directory Role & Agent Guidelines
 
-- Houses the repository knowledge synchronization engine.
-- Run `python3 nlp-fuzzy-expert/synchronizer.py` to synchronize facts from `data/*.json` outward.
-- Failure reports are recorded in `FAILED-CHECKS.md`.
+- Core engine: `expert_system.py`, `synchronizer.py`, `watcher.py`, and `auto_healer.py`.
+- Run `python3 nlp-fuzzy-expert/synchronizer.py` to synchronize facts from `data/*.json` outward to HTML and JS files.
+- Prints working steps 1-6 with 1-based changed line numbers and an ASCII summary table.
+- Optimization: Summaries are printed to terminal; any failed checks are recorded in `FAILED-CHECKS.md`. If all pass, it records `Everything passed.`
+- `save_json()` strictly blocks writing to any path inside `data/` via `PermissionError`.
 
 ## Subdirectories
 

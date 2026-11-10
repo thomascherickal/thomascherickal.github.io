@@ -1,19 +1,19 @@
 ---
 type: module
 title: "Personal Services Markdown Mirrors"
-description: "Synchronized Markdown files corresponding to personal service HTML specification pages."
-tags: [md-html-sync, personal-services, markdown]
-timestamp: 2026-11-09T20:35:37Z
+description: "Synchronized Markdown mirrors corresponding to the 16 personal 1-on-1 service HTML pages."
+tags: [md-html-sync, personal-services, markdown, mentorship]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Personal Services Markdown Mirrors
 
-Synchronized Markdown files corresponding to personal service HTML specification pages.
+Synchronized Markdown mirrors corresponding to the 16 personal 1-on-1 service HTML pages.
 
 ## Directory Role & Agent Guidelines
 
-- Maintained as part of the Personal Services Markdown Mirrors subsystem.
-- Strictly preserve zero emojis and zero em-dashes across all files in this directory.
+- Mirrors `personal-services/*.html` into clean Markdown representations.
+- Preserves syllabi, daily training limits, and pricing details.
 
 ## Subdirectories
 

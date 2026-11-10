@@ -1,19 +1,21 @@
 ---
 type: module
-title: "Personal & Professional AI Services"
-description: "1-on-1 private mentoring specifications and standalone pages across 16 core AI disciplines."
-tags: [personal-services, mentorship, service-catalogue]
-timestamp: 2026-11-09T20:35:37Z
+title: "Personal & Professional 1-on-1 AI Services Catalog"
+description: "Dedicated specification pages for 16 personal AI acceleration services, designed strictly for one person with 4 hours/day of live pair-programming."
+tags: [personal-services, 1-on-1, private-mentoring, career-acceleration]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
-# Personal & Professional AI Services
+# Personal & Professional 1-on-1 AI Services Catalog
 
-1-on-1 private mentoring specifications and standalone pages across 16 core AI disciplines.
+Dedicated specification pages for 16 personal AI acceleration services, designed strictly for one person with 4 hours/day of live pair-programming.
 
 ## Directory Role & Agent Guidelines
 
-- Contains standalone specification pages for the 16 specialized AI training services.
-- Always keep service naming, duration, and parity pricing consistent with `data/` and `GEMINI.md`.
+- Contains exactly 16 personal training services (`personal-service-01` through `personal-service-16`).
+- All individual picks are priced at $300 USD base (strictly 1 person) for 5 days live + 5 days support.
+- Ensure every page maintains standardized CTAs featuring the Free LinkedIn Consultation link.
+- Strictly enforce zero emojis and zero em-dashes across all files.
 
 ## Subdirectories
 

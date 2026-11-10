@@ -1,19 +1,19 @@
 ---
 type: module
 title: "Business Services Markdown Mirrors"
-description: "Synchronized Markdown files corresponding to business service HTML specification pages."
-tags: [md-html-sync, business-services, markdown]
-timestamp: 2026-11-09T20:35:37Z
+description: "Synchronized Markdown mirrors corresponding to the 16 enterprise business service HTML pages."
+tags: [md-html-sync, business-services, markdown, enterprise-ai]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Business Services Markdown Mirrors
 
-Synchronized Markdown files corresponding to business service HTML specification pages.
+Synchronized Markdown mirrors corresponding to the 16 enterprise business service HTML pages.
 
 ## Directory Role & Agent Guidelines
 
-- Maintained as part of the Business Services Markdown Mirrors subsystem.
-- Strictly preserve zero emojis and zero em-dashes across all files in this directory.
+- Mirrors `business-services/*.html` into clean Markdown representations for LLM consumption.
+- Automatically updated by `python3 python/md_html_sync.py`.
 
 ## Subdirectories
 

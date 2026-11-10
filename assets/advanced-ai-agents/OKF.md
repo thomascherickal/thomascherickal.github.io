@@ -1,19 +1,19 @@
 ---
 type: dataset
 title: "Advanced AI Agents Visual Assets"
-description: "Architecture diagrams and conceptual artwork for Advanced AI Agents service modules."
-tags: [assets, advanced-agents, diagrams]
-timestamp: 2026-11-09T20:35:37Z
+description: "Architecture diagrams, state machine flows, and visual schematics for the Advanced AI Agents service curriculum."
+tags: [assets, advanced-agents, diagrams, swarms]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Advanced AI Agents Visual Assets
 
-Architecture diagrams and conceptual artwork for Advanced AI Agents service modules.
+Architecture diagrams, state machine flows, and visual schematics for the Advanced AI Agents service curriculum.
 
 ## Directory Role & Agent Guidelines
 
-- This directory contains static assets (images, diagrams, scripts, branding).
-- Refer to images via absolute or relative paths from HTML pages; do not modify binary files directly.
+- Provides diagrammatic assets for `business-services/business-service-advanced-ai-agents.html` and `personal-services/personal-service-advanced-ai-agents.html`.
+- Illustrates hierarchical multi-agent teams, reflection loops, and sandboxed Docker tool execution.
 
 ## Subdirectories
 

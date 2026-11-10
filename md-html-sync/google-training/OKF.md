@@ -1,19 +1,19 @@
 ---
 type: module
 title: "Google Training Markdown Mirrors"
-description: "Synchronized Markdown files corresponding to Google Gemini guide HTML pages."
-tags: [md-html-sync, google-training, markdown]
-timestamp: 2026-11-09T20:35:37Z
+description: "Synchronized Markdown mirrors corresponding to the 12 Google Gemini and Gemma engineering guides."
+tags: [md-html-sync, google-training, markdown, gemini]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Google Training Markdown Mirrors
 
-Synchronized Markdown files corresponding to Google Gemini guide HTML pages.
+Synchronized Markdown mirrors corresponding to the 12 Google Gemini and Gemma engineering guides.
 
 ## Directory Role & Agent Guidelines
 
-- Maintained as part of the Google Training Markdown Mirrors subsystem.
-- Strictly preserve zero emojis and zero em-dashes across all files in this directory.
+- Mirrors `google-training/*.html` into clean Markdown representations.
+- Maintains code block integrity and structured reference lists.
 
 ## Subdirectories
 

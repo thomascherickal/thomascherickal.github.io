@@ -1,19 +1,21 @@
 ---
 type: module
-title: "Enterprise & Business AI Services"
-description: "Service specifications and interactive pages for 16 specialized enterprise AI training tracks."
-tags: [business-services, enterprise-ai, service-catalogue]
-timestamp: 2026-11-09T20:35:37Z
+title: "Enterprise & Business AI Services Catalog"
+description: "Dedicated specification pages for 16 specialized enterprise AI training services, each with complete day-by-day syllabi, deliverables, and architecture blueprints."
+tags: [business-services, enterprise-ai, service-catalog, syllabi]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
-# Enterprise & Business AI Services
+# Enterprise & Business AI Services Catalog
 
-Service specifications and interactive pages for 16 specialized enterprise AI training tracks.
+Dedicated specification pages for 16 specialized enterprise AI training services, each with complete day-by-day syllabi, deliverables, and architecture blueprints.
 
 ## Directory Role & Agent Guidelines
 
-- Contains standalone specification pages for the 16 specialized AI training services.
-- Always keep service naming, duration, and parity pricing consistent with `data/` and `GEMINI.md`.
+- Contains exactly 16 enterprise training services (`business-service-01` through `business-service-16`).
+- All services are priced at $300 USD base (1 seat included, +$300 per extra seat up to 10 seats max) for 5 days live + 5 days support.
+- Ensure every page maintains standardized CTAs featuring the Free LinkedIn Consultation link.
+- Keep buttons styled with `css/buttons.css` and strictly enforce `text-decoration: none !important;`.
 
 ## Subdirectories
 

@@ -1,19 +1,21 @@
 ---
 type: module
 title: "Global Stylesheets & Design System"
-description: "Modern CSS styles, responsive layouts, color systems, typography, and button components."
-tags: [css, design-system, styling, responsive]
-timestamp: 2026-11-09T20:35:37Z
+description: "Modular CSS stylesheets defining color tokens, typography, radiant buttons, high-contrast dark theme, and responsive layouts."
+tags: [css, design-system, tokens, responsive, buttons]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Global Stylesheets & Design System
 
-Modern CSS styles, responsive layouts, color systems, typography, and button components.
+Modular CSS stylesheets defining color tokens, typography, radiant buttons, high-contrast dark theme, and responsive layouts.
 
 ## Directory Role & Agent Guidelines
 
-- Maintained as part of the Global Stylesheets & Design System subsystem.
-- Strictly preserve zero emojis and zero em-dashes across all files in this directory.
+- `buttons.css` defines canonical button formats (`.btn`, `.btn-commission`, `.btn-linkedin`, `.btn-gold`, `.btn-lg`). Buttons must never have underlined text.
+- Hyperlinks default to gold (`var(--gold, #fbbf24)`) transitioning to gold-dim (`#d97706`) on hover.
+- Code windows must have sharp dark boundaries (`#040711` or `#060913`) and crisp borders.
+- Responsive design relies on media queries ensuring zero horizontal scroll blowout across mobile viewports.
 
 ## Subdirectories
 

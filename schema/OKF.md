@@ -1,19 +1,21 @@
 ---
 type: dataset
-title: "Structured Data & Schema.org Definitions"
-description: "Machine-readable JSON-LD schemas representing entities, services, guides, and breadcrumbs."
-tags: [schema, json-ld, structured-data, seo]
-timestamp: 2026-11-09T20:35:37Z
+title: "Structured Data & Schema.org JSON-LD Definitions"
+description: "Comprehensive Schema.org JSON-LD definitions extracted from live HTML pages to empower search engine indexing and generative search engines (GEO/AEO)."
+tags: [schema, json-ld, structured-data, schema-org, geo-aeo]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
-# Structured Data & Schema.org Definitions
+# Structured Data & Schema.org JSON-LD Definitions
 
-Machine-readable JSON-LD schemas representing entities, services, guides, and breadcrumbs.
+Comprehensive Schema.org JSON-LD definitions extracted from live HTML pages to empower search engine indexing and generative search engines (GEO/AEO).
 
 ## Directory Role & Agent Guidelines
 
-- Machine-readable JSON-LD schemas extracted and mirrored from live HTML pages.
-- Synchronized via `python3 python/sync_schemas.py` during release verification passes.
+- Contains 71+ JSON-LD files mirroring schemas embedded in live HTML pages.
+- Live HTML files are the definitive source of truth for schemas; `python/sync_schemas.py` extracts schemas into `schema/`.
+- Synchronized before committing via `python3 python/sync_schemas.py`.
+- Ensures rich snippets for Organization, Person, Service, FAQPage, and TechnicalArticle.
 
 ## Subdirectories
 

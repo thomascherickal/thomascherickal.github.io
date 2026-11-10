@@ -1,19 +1,19 @@
 ---
 type: module
 title: "Claude Training Markdown Mirrors"
-description: "Synchronized Markdown files corresponding to Claude guide HTML pages."
-tags: [md-html-sync, claude-training, markdown]
-timestamp: 2026-11-09T20:35:37Z
+description: "Synchronized Markdown mirrors corresponding to the 12 Anthropic Claude engineering guides."
+tags: [md-html-sync, claude-training, markdown, claude-code]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Claude Training Markdown Mirrors
 
-Synchronized Markdown files corresponding to Claude guide HTML pages.
+Synchronized Markdown mirrors corresponding to the 12 Anthropic Claude engineering guides.
 
 ## Directory Role & Agent Guidelines
 
-- Maintained as part of the Claude Training Markdown Mirrors subsystem.
-- Strictly preserve zero emojis and zero em-dashes across all files in this directory.
+- Mirrors `claude-training/*.html` into clean Markdown representations.
+- Excludes article footers in accordance with Claude article guidelines.
 
 ## Subdirectories
 

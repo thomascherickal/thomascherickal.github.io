@@ -1,19 +1,21 @@
 ---
 type: module
-title: "Google Gemini & Antigravity Training Guides"
-description: "In-depth documentation and masterclasses for Google Gemini, Antigravity IDE, and Gemma models."
-tags: [google-training, gemini, antigravity, gemma]
-timestamp: 2026-11-09T20:35:37Z
+title: "Google Gemini & Gemma Engineering Guides"
+description: "Comprehensive technical reference guides for Google AI Studio, Google Antigravity IDE, Gemini Deep Think extended reasoning, Gemma local models, and multimodal architectures."
+tags: [google-training, gemini, gemma, antigravity-ide, deepthink, multimodal]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
-# Google Gemini & Antigravity Training Guides
+# Google Gemini & Gemma Engineering Guides
 
-In-depth documentation and masterclasses for Google Gemini, Antigravity IDE, and Gemma models.
+Comprehensive technical reference guides for Google AI Studio, Google Antigravity IDE, Gemini Deep Think extended reasoning, Gemma local models, and multimodal architectures.
 
 ## Directory Role & Agent Guidelines
 
-- Comprehensive technical guides and architectural blueprints.
-- Maintain clean unnumbered headings, sharp code block boundaries, and interactive copy buttons.
+- Contains 12 deep-dive guides (`google-antigravity-ide.html`, `google-ai-studio.html`, `google-gemma-local-models.html`, `google-gemini-4-argon.html`, etc.).
+- Model references must be evergreen (Gemini, Gemini Pro, Gemini Flash, Gemini Argon, Gemma) except in code strings or pricing calculations.
+- Every code block must feature a structured header bar with a working Copy button.
+- Maintain vertical or square Mermaid diagrams and organic in-prose anchor reference links.
 
 ## Subdirectories
 

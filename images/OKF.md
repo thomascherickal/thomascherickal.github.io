@@ -1,19 +1,20 @@
 ---
 type: dataset
-title: "General Image Assets"
-description: "General photographs, profile portraits, hero graphics, and editorial illustrations."
-tags: [images, photography, illustrations]
-timestamp: 2026-11-09T20:35:37Z
+title: "Editorial & Article WebP Images"
+description: "Standalone editorial and publication graphics in modern WebP format, specifically featured across technical blog articles and articles.html."
+tags: [images, webp, editorial, articles, publication-graphics]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
-# General Image Assets
+# Editorial & Article WebP Images
 
-General photographs, profile portraits, hero graphics, and editorial illustrations.
+Standalone editorial and publication graphics in modern WebP format, specifically featured across technical blog articles and articles.html.
 
 ## Directory Role & Agent Guidelines
 
-- Maintained as part of the General Image Assets subsystem.
-- Strictly preserve zero emojis and zero em-dashes across all files in this directory.
+- Distinct from `assets/`: holds 14 high-resolution WebP technical illustrations for articles (e.g., `frontier-llm-benchmarks-2026.webp`, `quantum-threat-bitcoin-cryptography.webp`, `openclaw-autonomous-ai-engineer.webp`).
+- Used directly in `articles.html` and syndication headers.
+- Optimized for rapid web loading and high visual fidelity in dark-themed layouts.
 
 ## Subdirectories
 

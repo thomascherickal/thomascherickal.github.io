@@ -1,19 +1,19 @@
 ---
 type: dataset
 title: "AI Agent Orchestration Visual Assets"
-description: "Diagrams and imagery for multi-agent swarm orchestration and hierarchical coordination."
-tags: [assets, orchestration, swarms]
-timestamp: 2026-11-09T20:35:37Z
+description: "Visual schematics illustrating orchestrator-worker hierarchies, parallel fan-out swarms, and MCP routing."
+tags: [assets, orchestration, swarms, mcp-routing]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # AI Agent Orchestration Visual Assets
 
-Diagrams and imagery for multi-agent swarm orchestration and hierarchical coordination.
+Visual schematics illustrating orchestrator-worker hierarchies, parallel fan-out swarms, and MCP routing.
 
 ## Directory Role & Agent Guidelines
 
-- This directory contains static assets (images, diagrams, scripts, branding).
-- Refer to images via absolute or relative paths from HTML pages; do not modify binary files directly.
+- Supplies diagrams for `business-services/business-service-ai-agents-orchestration.html` and `personal-services/personal-service-ai-agents-orchestration.html`.
+- Depicts human-in-the-loop gates, token budget governance, and multi-agent coordination topologies.
 
 ## Subdirectories
 

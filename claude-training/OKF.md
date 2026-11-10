@@ -1,19 +1,21 @@
 ---
 type: module
-title: "Claude Architecture & Training Guides"
-description: "Comprehensive guides for Claude Code, MCP tools, prompt caching, and multi-agent coordination."
-tags: [claude-training, claude-code, mcp, agentic-ai]
-timestamp: 2026-11-09T20:35:37Z
+title: "Claude Architecture & Engineering Guides"
+description: "Comprehensive engineering guides covering the Anthropic Claude ecosystem: Claude Code CLI, MCP tool building, prompt caching, orchestration, and local LLM pairing."
+tags: [claude-training, claude-code, mcp, prompt-caching, orchestration]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
-# Claude Architecture & Training Guides
+# Claude Architecture & Engineering Guides
 
-Comprehensive guides for Claude Code, MCP tools, prompt caching, and multi-agent coordination.
+Comprehensive engineering guides covering the Anthropic Claude ecosystem: Claude Code CLI, MCP tool building, prompt caching, orchestration, and local LLM pairing.
 
 ## Directory Role & Agent Guidelines
 
-- Comprehensive technical guides and architectural blueprints.
-- Maintain clean unnumbered headings, sharp code block boundaries, and interactive copy buttons.
+- Contains 12 in-depth architectural guides (`claude-code.html`, `claude-custom-mcp.html`, `claude-orchestration.html`, `claude-local-llms.html`, etc.).
+- Never insert an article footer into any Claude guide.
+- Model references must be evergreen without version clutter (Claude, Claude Opus, Claude Sonnet, Claude Haiku) except in code examples or specific pricing tables.
+- Mermaid diagrams must be vertical (`TD`/`TB`) or square for mobile responsiveness.
 
 ## Subdirectories
 

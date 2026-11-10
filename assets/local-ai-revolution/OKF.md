@@ -1,19 +1,19 @@
 ---
 type: dataset
 title: "Local AI Revolution Visual Assets"
-description: "Hardware topologies, private server charts, and benchmark diagrams for Local LLMs."
-tags: [assets, local-llms, private-ai]
-timestamp: 2026-11-09T20:35:37Z
+description: "Hardware topologies, private server charts, VRAM allocation matrices, and benchmark diagrams for Local LLMs."
+tags: [assets, local-llms, vram, benchmarks, private-ai]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Local AI Revolution Visual Assets
 
-Hardware topologies, private server charts, and benchmark diagrams for Local LLMs.
+Hardware topologies, private server charts, VRAM allocation matrices, and benchmark diagrams for Local LLMs.
 
 ## Directory Role & Agent Guidelines
 
-- This directory contains static assets (images, diagrams, scripts, branding).
-- Refer to images via absolute or relative paths from HTML pages; do not modify binary files directly.
+- Supplies diagrams for `business-services/business-service-local-llms-cost-slashing.html` and `claude-training/claude-local-llms.html`.
+- Illustrates 60%-90% cloud API bill reduction via Ollama, vLLM, and GGUF/AWQ local model inference.
 
 ## Subdirectories
 

@@ -1,19 +1,19 @@
 ---
 type: dataset
 title: "Generative AI Transformation Visual Assets"
-description: "Enterprise transformation roadmaps and architectural graphics for Generative AI enablement."
-tags: [assets, transformation, enterprise-ai]
-timestamp: 2026-11-09T20:35:37Z
+description: "Enterprise AI roadmaps, chatbot-to-agent evolution diagrams, and architectural charts."
+tags: [assets, transformation, enterprise-ai, roadmaps]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Generative AI Transformation Visual Assets
 
-Enterprise transformation roadmaps and architectural graphics for Generative AI enablement.
+Enterprise AI roadmaps, chatbot-to-agent evolution diagrams, and architectural charts.
 
 ## Directory Role & Agent Guidelines
 
-- This directory contains static assets (images, diagrams, scripts, branding).
-- Refer to images via absolute or relative paths from HTML pages; do not modify binary files directly.
+- Supplies visual assets for `business-services/business-service-generative-ai-transformation.html` and `personal-services/personal-service-generative-ai-transformation.html`.
+- Visualizes the transition from naive prompting to domain-grounded autonomous agent teams.
 
 ## Subdirectories
 

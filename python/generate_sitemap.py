@@ -45,7 +45,7 @@ BUSINESS_SERVICES = [
     "business-services/business-service-ai-second-brain.html",
     "business-services/business-service-continuous-learning.html",
     "business-services/business-service-worklife-balance.html",
-    "business-services/business-service-ai-schedule-automation.html",
+    "business-services/business-service-claude-basic-training.html",
 ]
 
 # 12 claude Guide Pages

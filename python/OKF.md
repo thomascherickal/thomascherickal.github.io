@@ -1,19 +1,23 @@
 ---
 type: module
-title: "Repository Python Build & Maintenance Automation"
-description: "Build scripts, component inliners, markdown synchronizers, link checkers, and metrics generators."
-tags: [python, build-system, automation, tooling]
-timestamp: 2026-11-09T20:35:37Z
+title: "Repository Python Automation & Tooling Suite"
+description: "Core automation scripts for component inlining, link verification, schema extraction, markdown mirroring, and metrics reporting."
+tags: [python, build-system, automation, tooling, linters]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
-# Repository Python Build & Maintenance Automation
+# Repository Python Automation & Tooling Suite
 
-Build scripts, component inliners, markdown synchronizers, link checkers, and metrics generators.
+Core automation scripts for component inlining, link verification, schema extraction, markdown mirroring, and metrics reporting.
 
 ## Directory Role & Agent Guidelines
 
-- Automation scripts for component inlining, link integrity verification, markdown mirrors, and metrics.
-- Re-run `python3 python/build_components.py` whenever `header.html` or `footer.html` changes.
+- `build_components.py`: Inlines `header.html` and `footer.html` across all HTML pages.
+- `check_links.py`: Audits internal links and anchor targets across all HTML files (run before committing).
+- `sync_schemas.py`: Synchronizes embedded JSON-LD schemas into `schema/` (run before committing).
+- `md_html_sync.py`: Synchronizes Markdown mirror files in `md-html-sync/` (run before committing).
+- `generate_metrics.py`: Updates codebase telemetry in `METRICS.md`.
+- `delete_page.py`: Safely purges HTML pages, schemas, markdown mirrors, and navigation references.
 
 ## Subdirectories
 

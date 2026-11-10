@@ -1,20 +1,22 @@
 ---
 type: dataset
-title: "Authoritative Knowledge Data Hub"
-description: "Single Source of Truth (SSOT) JSON data files modeling pricing, tiers, services, and configs."
-tags: [data, ssot, authoritative, json]
-timestamp: 2026-11-09T20:35:37Z
+title: "Authoritative Data Directory (SSOT)"
+description: "Authoritative Single Source of Truth (SSOT) JSON files modeling pricing, services, publications, FAQs, and platform configurations."
+tags: [data, ssot, read-only, pricing, services, authoritative]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
-# Authoritative Knowledge Data Hub
+# Authoritative Data Directory (SSOT)
 
-Single Source of Truth (SSOT) JSON data files modeling pricing, tiers, services, and configs.
+Authoritative Single Source of Truth (SSOT) JSON files modeling pricing, services, publications, FAQs, and platform configurations.
 
 ## Directory Role & Agent Guidelines
 
-- **CRITICAL AGENT RULE**: The `data/` directory is strictly read-only to source control and code scripts.
-- All JSON files here are the authoritative Single Source of Truth (SSOT) specified by `GEMINI.md`.
-- Data flows strictly outward (`data/*.json` -> HTML / JS / Markdown / Schemas). Never edit or mutate programmatically.
+- CRITICAL AGENT RULE: The `data/` directory is strictly read-only against all source control operations, scripts, and test suites.
+- `GEMINI.md` is the ultimate project specification; `data/*.json` models this specification for outward synchronization.
+- Data flows strictly outward (`data/*.json` -> HTML / JS / Markdown / Schema files). Never mutate programmatically.
+- Pre-test and post-test SHA-256 verification in `python/run_tests.py` verifies data integrity. Any automated change causes an immediate test failure.
+- Only direct manual authoring by the user is permitted.
 
 ## Subdirectories
 

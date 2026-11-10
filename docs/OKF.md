@@ -1,19 +1,22 @@
 ---
 type: module
 title: "Architecture & Project Documentation"
-description: "High-level operational playbooks, architecture specifications, and maintenance guidelines."
-tags: [docs, architecture, playbooks]
-timestamp: 2026-11-09T20:35:37Z
+description: "Operational playbooks, delivery economics, Purchasing Power Parity registries, and consolidated service summaries."
+tags: [docs, architecture, playbooks, pricing-reference, delivery-economics]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Architecture & Project Documentation
 
-High-level operational playbooks, architecture specifications, and maintenance guidelines.
+Operational playbooks, delivery economics, Purchasing Power Parity registries, and consolidated service summaries.
 
 ## Directory Role & Agent Guidelines
 
-- Maintained as part of the Architecture & Project Documentation subsystem.
-- Strictly preserve zero emojis and zero em-dashes across all files in this directory.
+- Houses `services-summary.md` (all 16 business and 16 personal services with canonical $3000 flagship / $300 individual pricing).
+- Houses `parity pricing.md` (complete 195-country World Bank FY2027 PPP tier assignments).
+- Houses `hourly-rates.md` (delivery economics breakdown across all 6 parity tiers).
+- Houses `website-fixes.md` (historical audit and resolution log).
+- Strictly preserve zero emojis and zero em-dashes across all markdown files.
 
 ## Subdirectories
 

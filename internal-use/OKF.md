@@ -1,19 +1,21 @@
 ---
-type: dataset
-title: "Internal Use Assets & References"
-description: "Internal drafts, work-in-progress references, and staging files."
-tags: [internal-use, staging]
-timestamp: 2026-11-09T20:35:37Z
+type: module
+title: "Internal Trainer Mastery & Operational Playbooks"
+description: "Internal trainer evaluations, full-stack website audits, competitive landscape assessments, and live training delivery runbooks."
+tags: [internal-use, trainer-guide, playbooks, competitive-analysis, audit]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
-# Internal Use Assets & References
+# Internal Trainer Mastery & Operational Playbooks
 
-Internal drafts, work-in-progress references, and staging files.
+Internal trainer evaluations, full-stack website audits, competitive landscape assessments, and live training delivery runbooks.
 
 ## Directory Role & Agent Guidelines
 
-- Maintained as part of the Internal Use Assets & References subsystem.
-- Strictly preserve zero emojis and zero em-dashes across all files in this directory.
+- Contains `trainer-guide.md`: comprehensive 25,000+ word trainer mastery report.
+- Reflects the full 16 business + 16 personal service catalog and 80 HTML page footprint.
+- Details the 50-10 Rhythmic Sprint Protocol for 4-hour daily live engineering sessions.
+- Strictly internal reference; not linked in public site navigation or sitemaps.
 
 ## Subdirectories
 

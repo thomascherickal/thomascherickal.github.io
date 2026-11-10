@@ -1,19 +1,22 @@
 ---
 type: module
-title: "Website Repository Root"
-description: "Root directory containing core website entry points, configuration, and top-level documentation."
-tags: [root, entry-points, configuration]
-timestamp: 2026-11-09T20:35:37Z
+title: "Repository Root & Web Portal Hub"
+description: "Root entry point containing core portal pages, global navigation inliners, pricing calculators, and master architectural specifications."
+tags: [root, portal, entry-points, architecture, ssot]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
-# Website Repository Root
+# Repository Root & Web Portal Hub
 
-Root directory containing core website entry points, configuration, and top-level documentation.
+Root entry point containing core portal pages, global navigation inliners, pricing calculators, and master architectural specifications.
 
 ## Directory Role & Agent Guidelines
 
-- Maintained as part of the Website Repository Root subsystem.
-- Strictly preserve zero emojis and zero em-dashes across all files in this directory.
+- Houses core landing pages (`index.html`, `business-ai-training.html`, `personal-ai-training.html`, `pricing.html`, `all-business-services.html`, `all-personal-services.html`).
+- Master component sources `header.html` and `footer.html` live here. Modifying either requires immediately running `python3 python/build_components.py` to inline across all HTML pages.
+- `GEMINI.md` is the ultimate authoritative project specification and single source of truth (SSOT).
+- `METRICS.md` tracks codebase telemetry and is automatically refreshed by `python3 python/generate_metrics.py`.
+- Strictly enforce zero emojis and zero em-dashes across all files. Buttons must never be underlined.
 
 ## Subdirectories
 

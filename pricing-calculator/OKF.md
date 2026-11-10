@@ -1,19 +1,20 @@
 ---
 type: module
-title: "Interactive Pricing Calculator Engine"
-description: "Modular JavaScript pricing calculation engines, test runners, and configuration modules."
-tags: [pricing-calculator, javascript, engine, parity]
-timestamp: 2026-11-09T20:35:37Z
+title: "Interactive Pricing Calculator Engine Modules"
+description: "Modular JavaScript pricing calculation engines, tier calculators, and unit tests verifying live pricing logic."
+tags: [pricing-calculator, javascript-modules, calculator-engine, parity-calc]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
-# Interactive Pricing Calculator Engine
+# Interactive Pricing Calculator Engine Modules
 
-Modular JavaScript pricing calculation engines, test runners, and configuration modules.
+Modular JavaScript pricing calculation engines, tier calculators, and unit tests verifying live pricing logic.
 
 ## Directory Role & Agent Guidelines
 
-- Interactive clientside pricing calculator engine.
-- Run `node pricing-tests.js` to verify calculation accuracy across all parity tiers.
+- Contains modular calculators: `pricing-calculator-tier-1.js` through `pricing-calculator-tier-6.js`.
+- Validated by JavaScript tests (`pricing-calculator-tier-*-tests.js`).
+- Run `node pricing-tests.js` to execute 78+ DOM and calculator assertions.
 
 ## Subdirectories
 

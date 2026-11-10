@@ -1,19 +1,21 @@
 ---
 type: dataset
-title: "Vector Icons & Tech Badges"
-description: "Optimized SVG technology icons, service badges, and branding elements."
-tags: [icons, svg, vectors]
-timestamp: 2026-11-09T20:35:37Z
+title: "Vector SVG Icon & Badge Repository"
+description: "Optimized scalable SVG platform icons, publishing logos, service badges, and branding glyphs."
+tags: [icons, svg, vectors, publishing-platforms, badges]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
-# Vector Icons & Tech Badges
+# Vector SVG Icon & Badge Repository
 
-Optimized SVG technology icons, service badges, and branding elements.
+Optimized scalable SVG platform icons, publishing logos, service badges, and branding glyphs.
 
 ## Directory Role & Agent Guidelines
 
-- Maintained as part of the Vector Icons & Tech Badges subsystem.
-- Strictly preserve zero emojis and zero em-dashes across all files in this directory.
+- Contains 42 standalone SVG vector files for platforms (Dev.to, GitHub, GitLab, LinkedIn, Bluesky, Medium, Substack, Reddit, etc.).
+- Dev.to is an approved platform (`dev.svg`); never remove Dev.to links or icons.
+- Use SVGs via `<img>` tags or inline markup with gold/cyan accent colors.
+- Ensure clean vector markup with zero unnecessary metadata or embedded bitmap rasters.
 
 ## Subdirectories
 

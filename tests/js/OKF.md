@@ -1,20 +1,20 @@
 ---
 type: module
 title: "JavaScript Unit & Integration Tests"
-description: "Node.js and headless browser test suites verifying clientside calculators and scripts."
-tags: [tests, javascript-tests, node]
-timestamp: 2026-11-09T20:35:37Z
+description: "Node.js test suites verifying interactive clientside calculators, payment schedules, and edge-case pricing selections."
+tags: [tests, javascript-tests, node, calculator-tests]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # JavaScript Unit & Integration Tests
 
-Node.js and headless browser test suites verifying clientside calculators and scripts.
+Node.js test suites verifying interactive clientside calculators, payment schedules, and edge-case pricing selections.
 
 ## Directory Role & Agent Guidelines
 
-- Comprehensive test verification suite.
-- Run Python tests with `python3 python/run_tests.py` or `python3 -m unittest discover -s tests -v`.
-- Pre-commit enforces 100% test pass rate across all suites.
+- Contains test suites: `test_business_services.js`, `test_payment_schedule.js`, `test_custom_package.js`, `test_extra_participants.js`, etc.
+- Executed via `node pricing-tests.js`.
+- Ensures frontend interactive pricing widgets remain 100% bug-free and synchronized with backend rules.
 
 ## Subdirectories
 

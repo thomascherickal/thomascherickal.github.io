@@ -1,19 +1,21 @@
 ---
 type: module
 title: "Article Footers Module"
-description: "Reusable article footer templates and components in HTML, Markdown, and Word formats."
-tags: [article-footers, templates, reusable-components]
-timestamp: 2026-11-09T20:35:37Z
+description: "Reusable article footer templates and components in HTML, Markdown, and Word formats for external publication syndication."
+tags: [article-footers, templates, reusable-components, syndication]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
 # Article Footers Module
 
-Reusable article footer templates and components in HTML, Markdown, and Word formats.
+Reusable article footer templates and components in HTML, Markdown, and Word formats for external publication syndication.
 
 ## Directory Role & Agent Guidelines
 
-- Maintained as part of the Article Footers Module subsystem.
-- Strictly preserve zero emojis and zero em-dashes across all files in this directory.
+- Contains `article-footer.md`, `article-footer_dark.html`, and `article-footer-plain.docx`.
+- Preserve these files in the repository; never delete or move them.
+- CRITICAL AGENT RULE: Never insert an article footer into any Claude guide (`claude-training/*.html` or `md-html-sync/claude-training/*.md`).
+- Used when syndicating articles across Dev.to, Medium, Hashnode, Substack, and HackerNoon.
 
 ## Subdirectories
 

@@ -1,20 +1,20 @@
 ---
 type: module
-title: "Purchasing Power Parity (PPP) Tier Documentation"
-description: "Dedicated regional pricing specification pages across all 6 Purchasing Power Parity tiers."
-tags: [pricing, ppp-tiers, global-parity]
-timestamp: 2026-11-09T20:35:37Z
+title: "Purchasing Power Parity (PPP) Regional Tier Pages"
+description: "Dedicated regional specification pages for all 6 Purchasing Power Parity tiers, covering 195 countries based on the World Bank FY2027 framework."
+tags: [pricing, ppp-tiers, global-parity, world-bank-fy2027]
+timestamp: 2026-11-10T08:43:02Z
 ---
 
-# Purchasing Power Parity (PPP) Tier Documentation
+# Purchasing Power Parity (PPP) Regional Tier Pages
 
-Dedicated regional pricing specification pages across all 6 Purchasing Power Parity tiers.
+Dedicated regional specification pages for all 6 Purchasing Power Parity tiers, covering 195 countries based on the World Bank FY2027 framework.
 
 ## Directory Role & Agent Guidelines
 
-- Regional Purchasing Power Parity (PPP) tier specification pages (Tier 1 through Tier 6).
-- Flagships: $3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD.
-- Individual picks: $300 / $225 / $150 / $150 / $75 / Custom USD.
+- Contains 6 tier landing pages (`pricing-tier-1-usa-china-eu-100.html` through `pricing-tier-6-crisis-affected-10.html`).
+- Authoritative rates: Tier 1 (100% / $3,000 flagship / $300 pick), Tier 2 (75% / $2,250 / $225), Tier 3 & Tier 4 (50% / $1,500 / $150), Tier 5 (25% / $750 / $75), Tier 6 (Custom quote).
+- Every pricing page must clearly articulate the $0 upfront advance and 5 equal 20% milestone installment structure.
 
 ## Subdirectories
 
