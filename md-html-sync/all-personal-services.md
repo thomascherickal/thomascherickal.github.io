@@ -44,13 +44,6 @@ Build single-operator multi-agent swarms with orchestrator loops, subagent deleg
 
 Run private, unaligned autonomous agent loops on local hardware with open-weights agentic models and structured tool execution.
 
-### Gemini Multimedia Generation
-
-**Category**: `Gemini Multimedia`  
-**Link**: [Gemini Multimedia Generation](personal-services/personal-service-gemini-multimedia-generation.html)
-
-Master 1-on-1 multimodal generation with Google Gemini: Imagen image synthesis, native audio streaming, video understanding, and automated creative asset workflows.
-
 ### AI Budget & Cost Control
 
 **Category**: `Budget Protection`  
@@ -72,24 +65,10 @@ Elevate your developer practice with Claude Code CLI, test-driven prompt harness
 
 Architect persistent, self-evaluating autonomous agents that execute long-horizon projects while you sleep.
 
-### Claude Advanced Training
-
-**Category**: `Custom MCP Tooling`  
-**Link**: [Claude Advanced Training](personal-services/personal-service-claude-advanced-training.html)
-
-Build personal MCP servers, harness prompt caching for 90% savings, and integrate Claude directly into your development environment.
-
-### Gemini Advanced Training
-
-**Category**: `Google Agent SDK`  
-**Link**: [Gemini Advanced Training](personal-services/personal-service-gemini-advanced-training.html)
-
-Implement Google Antigravity SDK workflows, structured schema extraction, and autonomous agent systems powered by Gemini.
-
-### Continuous Learning & Research Synthesis
+### Continuous Learning & Synthesis
 
 **Category**: `Continuous Learning`  
-**Link**: [Continuous Learning & Research Synthesis](personal-services/personal-service-continuous-learning.html)
+**Link**: [Continuous Learning & Synthesis](personal-services/personal-service-continuous-learning.html)
 
 Architect an autonomous personal continuous learning engine using automated paper ingestion, podcast transcription, spaced-repetition drills, and research synthesis.
 
@@ -106,13 +85,6 @@ Master deep academic literature review, technical synthesis, million-token conte
 **Link**: [AI Second Brain](personal-services/personal-service-ai-second-brain.html)
 
 Build your private Markdown knowledge vault with automated capture, local-model tagging, and cited question answering.
-
-### Claude Basic Training
-
-**Category**: `Claude Foundations`  
-**Link**: [Claude Basic Training](personal-services/personal-service-claude-basic-training.html)
-
-Master Claude core foundations 1-on-1: private Projects, Artifacts, Cowork in Microsoft 365, structured prompt design, and personal workflow acceleration.
 
 ### Claude Research Training
 

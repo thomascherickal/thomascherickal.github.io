@@ -38,14 +38,10 @@ BUSINESS_SERVICES = [
     "business-services/business-service-ai-budget-cost-limits-training.html",
     "business-services/business-service-ai-developer-training.html",
     "business-services/business-service-advanced-ai-agents.html",
-    "business-services/business-service-claude-advanced-training.html",
-    "business-services/business-service-gemini-advanced-training.html",
     "business-services/business-service-ai-based-competitor-research.html",
     "business-services/business-service-ai-assisted-leads-magnet.html",
     "business-services/business-service-ai-second-brain.html",
     "business-services/business-service-continuous-learning.html",
-    "business-services/business-service-claude-research-training.html",
-    "business-services/business-service-claude-basic-training.html",
 ]
 
 # 12 claude Guide Pages
@@ -76,8 +72,8 @@ GEMINI_GUIDES = [
     "google-training/google-gemini-notebook.html",
     "google-training/google-gemma-local-models.html",
     "google-training/google-multimodality.html",
-    "google-training/google-gemini-4-hydrogen.html",
     "google-training/google-gemini-4-carbon.html",
+    "google-training/google-gemini-4-hydrogen.html",
 ]
 
 def get_git_lastmod(rel_path: str) -> str:

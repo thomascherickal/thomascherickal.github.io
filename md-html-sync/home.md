@@ -90,8 +90,6 @@ Business AI transformation, Claude AI agent orchestration, technical deep dives,
 6. [AI Budget Training](business-services/business-service-ai-budget-cost-limits-training.html) - Train staff across all levels to control AI spending: establish hard spending caps per session and month.
 7. [AI Developer Training](business-services/business-service-ai-developer-training.html) - Hands-on bootcamps training developer teams on terminal and IDE coding agents (Claude Code, Google Antigravity, OpenCode).
 8. [Advanced AI Agents](business-services/business-service-advanced-ai-agents.html) - Build production autonomous agent systems with hierarchical teams of Claude agents for business-critical workloads.
-9. [Claude Advanced Training](business-services/business-service-claude-advanced-training.html) - Technical masterclass for senior developers and AI architects: advanced Claude Code CLI workflows, Claude Cowork, and MCP servers.
-10. [Gemini Advanced Training](business-services/business-service-gemini-advanced-training.html) - Advanced technical masterclass: Google AI Studio, Google Antigravity IDE, Gemini Deep Think, Gemma fine-tuning, and Gemini Argon.
 
 ---
 

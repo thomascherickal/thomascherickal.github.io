@@ -1,8 +1,10 @@
 # Gemini 4 Carbon: Ultra-Low-Latency Inference & Edge Agents
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
-> **// EDGE INTELLIGENCE & ULTRA-LOW LATENCY**  
-> **An architectural deep dive into Gemini 4 Carbon: sub-10ms Time to First Token, speculative decoding cascades, edge runtime distillation, distributed multi-agent swarms, and enterprise deployment benchmarks.**
+> **// FRONTIER REASONING & MULTI-AGENT SWARMS**  
+> **An architectural deep dive into Gemini 4 Carbon: Google DeepMind's frontier reasoning model, featuring a
+ unified 1M-token context window, tunable thinking effort levels, industry-leading cybersecurity defense
+ benchmarks, and Google Antigravity multi-agent swarm orchestration.**
 
 ---
 
@@ -12,76 +14,119 @@
 
 ## Introduction & The Element Model Family
 
-In modern enterprise artificial intelligence, a single architectural compromise has historically dominated systems engineering: the trade-off between reasoning depth and execution latency. Massive frontier models achieve deep mathematical verification and complex planning at the cost of hundreds of milliseconds per token. Conversely, lightweight edge models deliver immediate response times but frequently falter when executing multi-turn tool calling, structured schema validation, or resilient error recovery.
+On 10 November 2026, Google DeepMind announced the general availability of Gemini 4 Carbon,
+ establishing a new frontier in complex reasoning, autonomous software engineering, and defensive cybersecurity.
+ Built directly upon the sparse mixture-of-experts foundation of Gemini 4 Argon, Carbon represents Google's most
+ advanced reasoning engine to date. It was designed specifically to tackle open-ended scientific discovery,
+ long-horizon multi-step workflows, and complex codebase modernization.
 
-Google DeepMind addresses this divide through its specialized element model series. Within this design taxonomy, each architecture is engineered around specific thermodynamic and computational properties:
+Following its initial specialized deployment to U.S. government cyber defenders through the Fairwind Program in
+ late October 2026, Gemini 4 Carbon is now accessible globally across the Gemini API, Google AI Studio, Vertex
+ AI, Cursor, GitHub Copilot, and Google Antigravity.
 
-- Gemini Argon: The heavy noble element designed for unyielding frontier reasoning, sustaining 1M-token output decodes, formal mathematical verification, and autonomous long-horizon scientific experiments.
-- Gemini Carbon: The tetravalent bonding element engineered for ultra-low-latency execution, speculative verification, high-throughput edge deployment, and agile real-time agent swarms.
-- Gemini Hydrogen: The ultra-dense, lightweight foundational substrate optimized for embedded sensor telemetry and extreme low-power microcontroller inference.
-- Gemini Xenon: The high-capacity specialized multi-agent coordinator engineered for continuous long-context knowledge retrieval across global data fabrics.
+Within Google DeepMind's element model series, each architecture reflects calibrated thermodynamic and
+ computational design points:
 
-Gemini 4 Carbon represents the high-frequency backbone of this family. Where Gemini Argon serves as the deliberate, deep-thinking strategist, Gemini Carbon acts as the rapid-reflex tactile executor. Operating seamlessly across local desktop hardware, enterprise edge clusters, and cloud hyperscalers, Carbon brings sub-10ms Time to First Token (TTFT) and multi-million token throughput to operational software engineering.
+- Gemini Argon: The high-capacity noble element designed for balanced enterprise knowledge
+ work, sustaining 1M-token unified contexts and dependable multi-agent software engineering.
+- Gemini Carbon: The high-density covalent bonding element engineered for maximum reasoning
+ depth, extended exploration loops, deep cybersecurity vulnerability remediation, and autonomous multi-agent
+ swarm coordination.
+- Gemini Hydrogen: The ultra-dense, lightweight foundational substrate optimized for embedded
+ sensor telemetry and extreme low-power microcontroller inference.
 
----
-
-## Architectural Foundations: Speculative Decoding & Edge Distillation
-
-The extreme speed of Gemini 4 Carbon is achieved not through crude parameter pruning, but through a purpose-built dual-engine speculative decoding architecture paired with knowledge distillation from Gemini Argon weights.
-
-Standard autoregressive transformers generate tokens strictly sequentially, where generating \(N\) tokens requires \(N\) forward passes through all transformer layers. Carbon alters this dynamic by pairing a distilled, speculative drafting engine with a verification tensor bank. The draft engine proposes batches of candidate tokens in parallel, which are verified simultaneously within a single matrix multiplication pass.
-
-By leveraging 4-bit Grouped Query Attention (GQA) with selective linear state-space layers, Carbon eliminates the quadratic memory expansion typical of long-context token generation. When executing agent workflows containing up to 128,000 tokens of conversational and telemetry context, memory consumption remains strictly flat, preventing local workstation out-of-memory crashes.
-
----
-
-## Latency Mechanics & Sub-10ms Execution Profiles
-
-In interactive agent systems, latency is divided into two distinct engineering metrics: Time to First Token (TTFT) and Inter-Token Latency (ITL). While ITL governs the speed at which text streams across a monitor, TTFT determines how rapidly an autonomous agent evaluates incoming environment changes, validates input arguments, and dispatches API commands.
-
-Standard frontier models register TTFT measurements between 380ms and 950ms. In high-frequency operational contexts - such as real-time cyber defense interception, live voice streaming, or robotic obstacle avoidance - this delay introduces unacceptable lag. Gemini 4 Carbon records a consistent TTFT of under 9.4ms when served locally or across dedicated regional edge gateways.
-
-This sub-10ms performance unlocks real-time iterative execution loops. When an agent experiences an API invocation failure or a schema mismatch, it can re-plan, re-parameterize, and re-invoke the target service four consecutive times before a conventional cloud model has returned its initial opening token.
+Where earlier models balanced speed and surface intelligence, Gemini 4 Carbon commits significantly more
+ computational tokens to explore competing hypotheses, verify intermediate proofs, and autonomously self-correct
+ multi-file regressions before returning conclusions.
 
 ---
 
-## Hybrid Edge-to-Cloud Orchestration Pipeline
+## Architectural Foundations: Deep Thinking & Extended Verification
 
-Rather than attempting to replace frontier models entirely, Gemini 4 Carbon functions as the primary tactical triage layer in a tiered edge-to-cloud architecture. In this topology, local Carbon instances handle high-frequency interactions, data parsing, and initial task decomposition. When a task requires deep mathematical derivation, extensive code repository synthesis, or long-horizon scientific analysis, Carbon gracefully serializes the context and delegates execution to Gemini Argon.
+Gemini 4 Carbon derives its performance from an architectural shift: spending dynamic inference-time compute on
+ structured reasoning traces prior to producing output tokens. Rather than attempting to guess the answer in a
+ single forward pass, Carbon enters an internal exploratory loop, exploring alternative solution trees, running
+ self-critique heuristics, and validating output invariants.
+
+The model processes native multimodal inputs (interleaved code, architectural diagrams, PDF whitepapers, audio
+ streams, and video telemetry) into a unified 1,048,576-token context window. This unified context allows
+ developers to ingest entire enterprise git repositories, compliance frameworks, or security log corpuses into a
+ single active session.
+
+---
+
+## Tunable Thinking Levels & Computational Scaling
+
+Recognizing that different tasks have vastly divergent computational requirements, Google DeepMind introduced
+ granular thinking controls for Gemini 4 Carbon. Through the API parameter thinking_config (or UI
+ effort sliders), developers can programmatically adjust how deeply the model reasons:
+
+- Low Effort: Suitable for direct code completions, structured entity extraction, and concise
+ document queries where sub-second latency is prioritized over exhaustive hypothesis exploration.
+- Medium Effort (Default): The balanced operational configuration for software bug diagnosis,
+ medium-scale pull request reviews, and complex architectural document drafting.
+- High Effort: The maximum reasoning budget setting. Carbon allocates thousands of internal
+ reasoning tokens to evaluate concurrent race conditions, prove mathematical theorems, perform multi-file
+ static analysis, or synthesize exploit chains for cybersecurity defense.
+
+Crucially, output generation tokens include internal thinking traces billed as output tokens. By giving
+ developers direct control over effort levels, Carbon allows engineering teams to optimize unit economics,
+ spending heavy compute budgets only when task complexity demands it.
+
+---
+
+## Google Antigravity & /swarm Multi-Agent Architecture
+
+The launch of Gemini 4 Carbon coincides with the introduction of /swarm in Google Antigravity,
+ Google's autonomous software development platform. The /swarm architecture transforms a single project brief
+ into an agile team of parallel agent workers:
+
+- The Coordinator: Running on Gemini 4 Carbon, the coordinator reads your natural language
+ assignment, decomposes it into dependency-tracked milestones, and provisions isolated git worktrees.
+- Parallel Worker Agents: Autonomous workers tackle separate tasks simultaneously (e.g.,
+ implementing API routes, generating database migrations, refactoring front-end components) without file-write
+ collisions.
+- Adversarial Verifiers: Specialized verification workers run unit test suites, conduct
+ static analysis checks, and challenge code diffs before proposals merge.
+- Append-Only Message Board: Swarm agents coordinate via an event-driven shared message
+ board. Workers sleep at zero token cost when waiting for inputs, waking reactively when mentioned.
+
+This swarm paradigm eliminates the serialization bottleneck of single-agent loops, enabling complex full-stack
+ features to be developed, verified, and landed in minutes.
 
 ---
 
 ## Comparative Evaluation: Carbon vs Argon vs Flash
 
-To quantify where Gemini 4 Carbon excels within production engineering pipelines, the table below highlights architectural specifications, inference latency benchmarks, and operational memory bounds compared to its peer models:
+To quantify where Gemini 4 Carbon sits within the Gemini family, the table below compares its capabilities,
+ context bounds, benchmark performance, and pricing metrics against Gemini 4 Argon and Gemini Flash:
 
 ---
 
-## Enterprise Real-World Deployment Scenarios
+## State-of-the-Art Cybersecurity & Enterprise Scenarios
 
-The architectural strengths of Gemini 4 Carbon translate directly into mission-critical applications across industrial and technological domains:
+Google DeepMind deliberately developed Gemini 4 Carbon as a defensive cyber asset, initially vetting its
+ capabilities through the voluntary U.S. government pre-release access program and the Fairwind Program. In
+ real-world enterprise deployments, Carbon addresses mission-critical security and engineering challenges:
 
-### 1. Autonomous Multi-Agent Swarm Triage
-
-When coordinating dozens of micro-agents within corporate software delivery pipelines, agent coordination latency can compound exponentially. Using Carbon as the consensus coordinator, agents exchange Agent2Agent (A2A) protocol packets, evaluate build outputs, run syntax linter rules, and dispatch git branch rebases in under 20 milliseconds per iteration.
-
-### 2. Sub-Second Real-Time Voice & Video Streams
-
-Conversational audio experiences break down when latency exceeds 250 milliseconds. By processing audio streams natively with speculative decoding, Carbon evaluates emotional prosody, decodes audio frames, and initiates audio response synthesis with a TTFT of under 15ms, delivering uninterrupted human-grade dialogue.
-
-### 3. Edge Robotics & Embodied Visual Navigation
-
-Industrial robotic arms and autonomous mobile robots (AMRs) operating in warehouses require immediate environmental trajectory corrections. Running Carbon locally on onboard embedded processors allows robots to parse camera feeds, detect sudden human path obstructions, and adjust motor actuation parameters without transmitting video feeds to external cloud networks.
-
-### 4. High-Frequency Financial Anomaly Interception
-
-Financial transaction routing networks process millions of events per minute. Carbon acts as a real-time semantic firewall, evaluating order flow patterns, detecting fraud markers, and verifying compliance credentials before transactions are committed to distributed ledgers.
+- Zero-Day Vulnerability Discovery & Triage: Ingesting decompiled binaries, C/C++ source
+ trees, and system call traces into its 1M context to locate subtle memory corruption, integer overflow, and
+ privilege escalation vulnerabilities.
+- Automated Exploit Proof & Patch Verification: Operating in ExploitGym environments to
+ confirm exploitability and immediately author regression tests alongside verified, robust source code patches.
+- Codebase Architectural Modernization: Leading autonomous swarms in Google Antigravity to
+ refactor legacy monolithic repositories into modern microservices, updating APIs across thousands of dependent
+ files in a single pass.
+- Mission-Critical Scientific Discovery: Formulating multi-step chemical synthesis plans,
+ analyzing genomic sequences, and formally checking mathematical proofs with traceable reasoning steps.
 
 ---
 
 ## Production Python Implementation (Google GenAI SDK)
 
-The code sample below demonstrates initializing Gemini 4 Carbon using the modern google-genai SDK, configuring structured speculative decoding parameters, and executing a low-latency tool-dispatch loop:
+The code sample below demonstrates initializing Gemini 4 Carbon using the modern google-genai SDK,
+ configuring explicit thinking_config effort parameters, and executing a security vulnerability
+ analysis with tool invocation:
 
 #### `script.py`
 ```python
@@ -91,132 +136,156 @@ from typing import Dict, Any
 from google import genai
 from google.genai import types
 
-# 1. Initialize Client with Carbon Edge Configuration
+# 1. Initialize Client with Carbon Endpoint
 client = genai.Client(
-    api_key=os.environ.get("GEMINI_API_KEY"),
-    http_options={"api_version": "v1alpha"}
+    api_key=os.environ.get(GEMINI_API_KEY)
 )
 
-# 2. Define High-Speed Tactical Execution Tool
-def verify_cluster_integrity(node_id: str) -> Dict[str, Any]:
-    """Inspect edge cluster health, memory pressure, and telemetry drift."""
+# 2. Define Automated Security Audit Tool
+def inspect_cve_database(cwe_id: str) -> Dict[str, Any]:
+    """Query the corporate security repository for known vulnerability patterns."""
     return {
-        "node_id": node_id,
-        "status": "healthy",
-        "cpu_headroom_pct": 82.4,
-        "memory_allocated_gb": 4.1,
-        "error_count": 0
+        "cwe_id": cwe_id,
+        "status": "flagged",
+        "recommended_fix": "Enforce bounds checking and replace raw pointer arithmetic",
+        "risk_level": "CRITICAL"
     }
 
-# 3. Configure Low-Latency Generation Parameters
+# 3. Configure Deep Reasoning Parameters with High Effort
 generation_config = types.GenerateContentConfig(
-    temperature=0.1,
-    tools=[verify_cluster_integrity],
-    tool_config=types.ToolConfig(
-        function_calling_config=types.FunctionCallingConfig(
-            mode=types.FunctionCallingMode.AUTO
-        )
+    temperature=0.2,
+    thinking_config=types.ThinkingConfig(
+        thinking_budget_level="high"  # low, medium, or high
     ),
+    tools=[inspect_cve_database],
     system_instruction=(
-        "You are Gemini 4 Carbon, an edge-optimized execution agent. "
-        "Prioritize immediate deterministic output and rapid function dispatch."
+        "You are Gemini 4 Carbon, Google DeepMind's frontier reasoning engine. "
+        "Conduct exhaustive security reviews, explore adversarial edge cases, "
+        "and verify every remediation patch before delivering conclusions."
     )
 )
 
-# 4. Measure Sub-10ms Time to First Token
-start_time = time.perf_counter()
+# 4. Execute Streaming Reasoning and Completion Loop
+print("Initiating Gemini 4 Carbon Reasoning Stream...")
 response_stream = client.models.generate_content_stream(
-    model="gemini-4-carbon-preview",
-    contents="Audit edge node alpha-77 and confirm ready state.",
+    model="gemini-4-carbon",
+    contents="Analyze this network packet parsing buffer for memory corruption risks.",
     config=generation_config
 )
 
-first_token_time = None
-output_tokens = []
-
 for chunk in response_stream:
-    if first_token_time is None:
-        first_token_time = time.perf_counter()
-        ttft_ms = (first_token_time - start_time) * 1000
-        print(f"Time to First Token (TTFT): {ttft_ms:.2f} ms")
-    output_tokens.append(chunk.text)
+    if chunk.text:
+        print(chunk.text, end="", flush=True)
 
-print(f"Agent Execution Complete. Verified tokens: {len(output_tokens)}")
+print("
+--- Analysis Complete ---")
 ```
 
 ---
 
-## Operational Limits, Memory Footprints & Guardrails
+## Operational Limits, Safety Alignment & Guardrails
 
-Deploying high-speed edge intelligence demands clear systems boundaries and robust runtime safeguards:
+Because Gemini 4 Carbon wields deep autonomous problem-solving capabilities, Google DeepMind integrated multiple
+ defense layers to govern its deployment safely:
 
-- Memory Footprints: In FP8/INT4 hybrid quantization, Carbon requires 4.8 GB of physical RAM. On Apple Silicon unified memory systems, this leaves over 11 GB of RAM free on baseline 16 GB configurations for concurrent developer applications.
-- Context Pruning Bounds: Carbon enforces a strict 128K token context boundary. Context beyond this threshold is automatically summarized using sliding-window attention to maintain sub-10ms response times.
-- Deterministic Schema Verification: Function-calling arguments are validated against JSON schema definitions before model weights emit execution tokens, guaranteeing zero syntax errors when communicating with external microservices.
-- Local Cryptographic Attestation: Every response emitted by Carbon includes a hardware-backed cryptographic signature proving the model weights executed in a tamper-resistant enclave without external interception.
+- 0.0% Indirect Prompt Injection (ASR): Evaluated independently on Gray Swan's IPI benchmark,
+ Carbon achieved a 0.0% Attack Success Rate, rejecting malicious data payloads embedded within untrusted
+ external web pages, PDFs, and code repositories.
+- 2x Reduction in Unsupported Claims: Compared to Gemini 4 Argon, Carbon cuts hallucination
+ rates by half. When factual evidence or required context is missing, the model explicitly highlights the
+ missing information instead of fabricating plausible details.
+- Dual-Track Cyber Guardrails: The public API incorporates strict safeguards against
+ malicious malware generation or offensive cyber exploitation, while trusted defenders in the Fairwind Program
+ receive access to research vulnerabilities safely.
+- Aligned Agent Boundaries: Simultaneous reductions in overreach (down 26%) and under-service
+ (down 29%) ensure that when deployed as an autonomous coordinator, Carbon sticks strictly to assigned
+ instructions and resource bounds.
 
 ---
 
 ## Practice Pricing & Global Purchasing Power Parity
 
-To ensure production-grade edge architecture, speculative decoding pipelines, and agent orchestration frameworks are accessible globally, our advisory practices operate under clear, transparent milestones:
+I provide live, remote engineering training and advisory consulting covering Gemini 4 Carbon frontier reasoning
+ architectures, multi-agent /swarm orchestration in Google Antigravity, and enterprise cybersecurity defense
+ workflows. Engagements enable research organizations, engineering teams, and individual professionals to master
+ state-of-the-art reasoning systems, deep code verification, and autonomous multi-agent pipelines.
+
+All services are governed by our transparent 195-country Purchasing Power Parity (PPP) framework, scaling rates
+ fairly across six economic tiers:
 
 ### Flagship Consulting Packages
 
-- Business AI Training Flagship: $2,500 USD for 60 days total (30 days of live engineering training + 30 days of dedicated architectural support). Includes up to 10 enterprise seats. Additional seats are ($300 / $225 / $150 / $150 / $75 / Custom USD) per seat up to a maximum of 20 seats. Delivered 4 hours per day, Monday through Friday (Saturdays and Sundays are holidays), 100% remote worldwide.
-- Personal AI Training Flagship: $2,500 USD for 60 days total (30 days of live 1-on-1 private acceleration + 30 days of dedicated support). Strictly one participant only, providing comprehensive executive and technical mastery. Delivered 4 hours per day, Monday through Friday, 100% remote worldwide.
+- Business AI Training Flagship: ,000 / ,250 / ,500 / ,500 / 50 / Custom USD
+ for 60 days total (30 days of live engineering training + 30 days of dedicated architectural
+ support). Includes up to 10 enterprise seats. Additional seats are +00 / +25 / +50 / +50 / +5 / Custom
+ USD per seat up to a maximum of 20 seats. Delivered 4 hours per day, Monday through Friday
+ (Saturdays and Sundays are holidays), 100% remote worldwide.
+- Personal AI Training Flagship: ,000 / ,250 / ,500 / ,500 / 50 / Custom USD
+ for 60 days total (30 days of live 1-on-1 private acceleration + 30 days of dedicated
+ support). Strictly one participant only, providing comprehensive executive and technical mastery. Delivered 4
+ hours per day, Monday through Friday, 100% remote worldwide.
 
 ### Individual Service Picks
 
-Organizations and professionals requiring targeted implementation on specific topics (such as local model cost slashing or custom agent orchestration) can book focused modules:
+Organizations and professionals requiring targeted implementation on specific topics (such as Google Antigravity
+ /swarm multi-agent setups or deep security auditing) can book focused modules:
 
-- Business Individual Pick: ($300 / $225 / $150 / $150 / $75 / Custom USD) base for 1 seat, with additional seats at ($300 / $225 / $150 / $150 / $75 / Custom USD) per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
-- Personal Individual Pick: ($300 / $225 / $150 / $150 / $75 / Custom USD) strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
+- Business Individual Pick: 00 / 25 / 50 / 50 / 5 / Custom USD base for 1
+ seat, with additional seats at +00 / +25 / +50 / +50 / +5 / Custom USD per seat up to a
+ maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4
+ hours/day, remote worldwide, Mon - Fri).
+- Personal Individual Pick: 00 / 25 / 50 / 50 / 5 / Custom USD strictly for
+ only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day,
+ remote worldwide, Mon - Fri).
 
 ### Payment Structure & Trust Guarantees
 
 Every client engagement is safeguarded by strict trust guarantees:
 
-- Zero Upfront Payment: Strictly $0 advance deposit required. We never invoice before delivering actual value.
-- 20% in Five Installments: Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.
-- Walkaway Guarantee: If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.
-- Commercial Apache 2.0 License: All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.
-- Full Pricing Details: Learn more about country tier multipliers, currency choices, and customized curriculum on our Pricing Page.
+- Zero Upfront Payment: Strictly bash advance deposit required before commencing technical
+ discovery and training.
+- 20% in Five Installments: Invoiced in 5 equal milestone installments of 20% each, billed
+ strictly after each milestone block is completed.
+- Walkaway Guarantee: If you are not satisfied after the initial training phase, you can walk
+ away owing absolutely nothing.
+- Commercial Apache 2.0 License: All custom code, architectures, and high-quality training
+ materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment,
+ resale, and relicensing with attribution.
+- Full Pricing Details: Learn more about country tier multipliers, currency choices, and
+ customized curriculum on our Pricing Page.
 
 ### The Six Purchasing Power Parity (PPP) Tiers
 
-To ensure fair global access across all 195 countries, fees are adjusted by national economic indicators in accordance with our Purchasing Power Parity framework:
+To ensure fair global access across all 195 countries, fees are adjusted by national economic indicators in
+ accordance with our Purchasing Power Parity framework:
 
-| Tier | Economic Category | Representative Countries | Parity Multiplier | Business Flagship | Personal Flagship |
+| Tier | Economic Category | Representative Countries | Parity Multiplier | Flagship (Business & Personal) | Individual Service Pick |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Tier 1 | High-Income Baseline | United States, UK, Germany, Canada, Japan, Singapore, Australia | 1.00X | $2,500 USD | $2,500 USD |
-| Tier 2 | Upper-Middle Economies | Brazil, Mexico, Malaysia, Turkiye, Thailand, Philippines, Sri Lanka | 0.75X | $1,875 USD | $1,875 USD |
-| Tier 3 | Lower-Middle & Low-Income | India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam | 0.50X | $1,($300 / $225 / $150 / $150 / $75 / Custom USD) | $1,($300 / $225 / $150 / $150 / $75 / Custom USD) |
-| Tier 4 | Early-Stage Startups | Global tech startups with <$1M external funding | 0.50X | $1,($300 / $225 / $150 / $150 / $75 / Custom USD) | $1,($300 / $225 / $150 / $150 / $75 / Custom USD) |
-| Tier 5 | Academia & Non-Profits | Universities, accredited labs, registered charities & 501(c)(3) entities | 0.25X | $625 USD | $625 USD |
-| Tier 6 | Subsidized Relief | Crisis-affected regions, developing collectives & grassroots builders | Custom | Subsidized | ($300 / $225 / $150 / $150 / $75 / Custom USD) |
+| Tier 1 | High-Income Baseline | United States, UK, Germany, Canada, Japan, Singapore, Australia | 1.00X | ,000 USD | 00 USD |
+| Tier 2 | Upper-Middle Economies | Brazil, Mexico, Malaysia, Turkiye, Thailand, Philippines, Sri Lanka | 0.75X | ,250 USD | 25 USD |
+| Tier 3 | Lower-Middle & Low-Income | India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam | 0.50X | ,500 USD | 50 USD |
+| Tier 4 | Early-Stage Startups | Global tech startups with <M external funding | 0.50X | ,500 USD | 50 USD |
+| Tier 5 | Academia & Non-Profits | Universities, accredited labs, registered charities & 501(c)(3) entities | 0.25X | 50 USD | 50 USD |
+| Tier 6 | Subsidized Relief | Crisis-affected regions, developing collectives & grassroots builders | Custom | Custom USD | Custom USD |
 
 ---
 
 ## References
 
-All reference sources verified live as of November 4, 2026:
+Reference sources and model cards verified as of November 11, 2026:
 
-1. → 
-Google DeepMind: Frontier AI Research & Element Models
-DeepMind architectural framework, native multimodality, and the element series overview.
-2. → 
-Google AI for Developers Documentation
-API documentation for Gemini streaming, function calling schemas, and runtime configurations.
-3. → 
-Google Keyword AI Insights & Model Announcements
-Official announcements on model benchmarks, inference speedups, and enterprise deployments.
-4. → 
-Google Cloud Vertex AI Enterprise Infrastructure
-Enterprise agent orchestration, private microVM runtimes, and regional edge endpoints.
-5. → 
-Speculative Decoding in Modern Foundation Models (arXiv Research)
-Mathematical formulations of draft-verification parallel inference loops.
+- Google DeepMind, "Gemini 4 Carbon: Frontier Reasoning for Complex Code, Science, and Cyber
+ Defense", Official Announcement, November 10, 2026.
+- Google DeepMind, "Gemini 4 Carbon Technical Report & Safety Evaluations", Research Publication,
+ November 2026.
+- Artificial Analysis, "Frontier LLM Benchmarks: Intelligence Index v5.0 Rankings", Evaluated November 2026.
+- Google Cloud, "Google AI Studio & Vertex AI Gemini API Pricing Reference", Developer
+ Documentation, 2026.
+- Google Antigravity, "Multi-Agent Orchestration with /swarm and Parallel Worktrees", Product Guide, November
+ 2026.
+- Gray Swan AI, "Indirect
+ Prompt Injection (IPI) Defense Benchmark: Zero Attack Success Rate on Frontier Ensembles", Independent
+ Security Evaluation, 2026.
 
 ---
 

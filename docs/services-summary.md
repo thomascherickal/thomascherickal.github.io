@@ -71,11 +71,9 @@ Build long-horizon planning agents with persistent state, tree-of-thought explor
 
 ### 09. Claude Advanced Training
 Enterprise Claude architecture: MCP tool servers, prompt caching, effort controls, and production API harnesses.
-- **URL**: [https://thedigitalfuturist.com/business-services/business-service-claude-advanced-training.html](https://thedigitalfuturist.com/business-services/business-service-claude-advanced-training.html)
 
 ### 10. Gemini Advanced Training
 Business Gemini architecture: Google Antigravity SDK, structured outputs, code execution, and multi-agent coordination.
-- **URL**: [https://thedigitalfuturist.com/business-services/business-service-gemini-advanced-training.html](https://thedigitalfuturist.com/business-services/business-service-gemini-advanced-training.html)
 
 ### 11. Competitor Research & Intelligence
 Deploy autonomous competitive intelligence agents, automated pricing trackers, product teardown scrapers, and dynamic sales battlecards.
@@ -152,11 +150,9 @@ Architect persistent, self-evaluating autonomous agents that execute long-horizo
 
 ### 09. Claude Advanced Training
 Build personal MCP servers, harness prompt caching for 90% savings, and integrate Claude directly into your development environment.
-- **URL**: [https://thedigitalfuturist.com/personal-services/personal-service-claude-advanced-training.html](https://thedigitalfuturist.com/personal-services/personal-service-claude-advanced-training.html)
 
 ### 10. Gemini Advanced Training
 Implement Google Antigravity SDK workflows, structured schema extraction, and autonomous agent systems powered by Gemini.
-- **URL**: [https://thedigitalfuturist.com/personal-services/personal-service-gemini-advanced-training.html](https://thedigitalfuturist.com/personal-services/personal-service-gemini-advanced-training.html)
 
 ### 11. Continuous Learning & Research Synthesis
 Architect an autonomous personal continuous learning engine using automated paper ingestion, podcast transcription, spaced-repetition drills, and research synthesis.

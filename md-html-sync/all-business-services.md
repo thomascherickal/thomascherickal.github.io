@@ -79,20 +79,6 @@ Master Claude Code, agentic refactoring, test-driven prompt harnesses, and auton
 
 Build long-horizon planning agents with persistent state, tree-of-thought exploration, and self-correcting execution.
 
-### Claude Advanced Training
-
-**Category**: `MCP Architecture`  
-**Link**: [Claude Advanced Training](business-services/business-service-claude-advanced-training.html)
-
-Enterprise Claude architecture: MCP tool servers, prompt caching, effort controls, and production API harnesses.
-
-### Gemini Advanced Training
-
-**Category**: `Antigravity SDK`  
-**Link**: [Gemini Advanced Training](business-services/business-service-gemini-advanced-training.html)
-
-Business Gemini architecture: Google Antigravity SDK, structured outputs, code execution, and multi-agent coordination.
-
 ### Competitor Research & Intelligence
 
 **Category**: `Competitive CI`  
@@ -114,26 +100,12 @@ Convert anonymous traffic into sales-ready pipeline using conversational AI audi
 
 Build a shared team knowledge vault in Markdown with automated capture, local-model tagging, and cited question answering.
 
-### Continuous Learning & Research Synthesis
+### Continuous Learning & Synthesis
 
 **Category**: `Organizational Intel`  
-**Link**: [Continuous Learning & Research Synthesis](business-services/business-service-continuous-learning.html)
+**Link**: [Continuous Learning & Synthesis](business-services/business-service-continuous-learning.html)
 
 Establish continuous organizational learning loops, autonomous industry research synthesis, executive briefings, and automated institutional skill acquisition.
-
-### Claude Research Training
-
-**Category**: `Claude Research`  
-**Link**: [Claude Research Training](business-services/business-service-claude-research-training.html)
-
-Accelerate corporate research with Claude: 1M token context synthesis, literature reviews, competitive intelligence, and scientific paper analysis.
-
-### Claude Basic Training
-
-**Category**: `Claude Foundations`  
-**Link**: [Claude Basic Training](business-services/business-service-claude-basic-training.html)
-
-Master Claude core foundations: Projects, Artifacts, Cowork in Microsoft 365, prompt architecture, and team workspace workflows.
 
 ## Ready
  to Transform Your Organization?
