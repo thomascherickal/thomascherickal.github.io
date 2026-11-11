@@ -4,7 +4,7 @@
 > **Engine**: NLP-Fuzzy-Expert System v1.0.0
 > **System Architecture**: Forward-Chaining Inference Engine + Fuzzy Logic Evaluator + NLP Processor
 > **Data Flow Direction**: Strictly Unidirectional (`data/*.json` -> HTML / JS / TXT / Markdown / Schemas)
-> **Report Target**: `SYNC_REPORT.md`
+> **Report Target**: `SYNC-REPORT.md`
 
 ---
 

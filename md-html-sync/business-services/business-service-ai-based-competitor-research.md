@@ -59,7 +59,7 @@
  - Comprehensive Personal Training: $3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD for 60 days (30 days live training + 30 days guidance, Q&A and written guides, 60 days over 2 months with Saturday and Sunday as holidays, 4 hours per day). Strictly for 1 person only (private acceleration).
 - Global Purchasing Power Parity (PPP) Available for All Service Pricing:
  - Tier 1 (Standard / 100%): Individual $300 USD | Business $300 USD | Business 60d $3,000 USD | Personal 60d $3,000 USD (USA, UK, EU, Canada, Australia)
- - Tier 2 (Upper-Middle-Income / 25% Off): Individual $225 USD | Business $225 USD | Business 60d $2,($300 / $225 / $150 / $150 / $75 / Custom USD) | Personal 60d $2,($300 / $225 / $150 / $150 / $75 / Custom USD): e.g. Brazil, Mexico, Malaysia, Thailand, Türkiye
+ - Tier 2 (Upper-Middle-Income / 25% Off): Individual $225 USD | Business $225 USD | Business 60d $2,250 USD | Personal 60d $2,250 USD: e.g. Brazil, Mexico, Malaysia, Thailand, Türkiye
  - Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off): Individual $150 USD | Business $150 USD | Business 60d $1,500 USD | Personal 60d $1,500 USD
  - Tier 5 (Academia & Non-Profits / 75% Off): Individual $75 USD | Business $75 USD | Business 60d $750 USD | Personal 60d $750 USD
  - Tier 6 (Crisis-Affected & Under-Resourced Regions): Individual $30 USD | Business $30 USD | Custom Subsidized Relief / Micro-Rates

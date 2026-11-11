@@ -3,12 +3,12 @@
 
 > **PERSONAL TRAINING · 60 DAYS (30 DAYS TRAINING + 30 DAYS GUIDANCE)**  
 > **You are never forced to choose between local models, autonomous agents, prompt craft, or workflow automations.
- Your personal sprint draws on the full 16-service catalogue; you choose the services relevant to your work and
+ Your personal sprint draws on the full 12-service catalogue; you choose the services relevant to your work and
  goals:**
 
 ---
 
-Clients can choose our comprehensive 60-day transformation at $2,500 USD (30 days live training + 30 days guidance, Q&A and written guides), or pick individual services at ($300 / $225 / $150 / $150 / $75 / Custom USD) per service (5 days live training + 5 days dedicated support). Strictly for 1 person only. Clients are encouraged to choose services
+Clients can choose our comprehensive 60-day transformation at $3,000 USD (30 days live training + 30 days guidance, Q&A and written guides), or pick individual services at ($300 / $225 / $150 / $150 / $75 / Custom USD) per service (5 days live training + 5 days dedicated support). Strictly for 1 person only. Clients are encouraged to choose services
  relevant to their work or interests. Purchasing Power Parity (PPP) is available for all service pricing across
  195 countries.
 
@@ -32,7 +32,7 @@ Guaranteed 30 days of intensive 1-on-1 instruction, followed immediately by 30 d
 
 ## Why Personal Training Is Structured at $3,000 / $2,250 / $1,500 / $750 / Custom for 60 Days
 
-In organizational Business Training engagements ($2,500 USD base), substantial coordination is mandatory:
+In organizational Business Training engagements ($3,000 USD base), substantial coordination is mandatory:
  aligning cross-functional teams of up to 10 participants, navigating corporate compliance reviews,
  provisioning isolated corporate sandboxes, and orchestrating change management across varied skill levels.
 
@@ -46,11 +46,11 @@ Personal Training costs $3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD ac
 
 // FULL-SPECTRUM MASTERY
 
-## The Complete 16-Service Catalogue Customized to Your
+## The Complete 12-Service Catalogue Customized to Your
  Work
 
 You are never forced to choose between local models, autonomous agents, prompt craft, or workflow automations.
- Your personal sprint draws on the full 16-service catalogue; you choose the services relevant to your work and
+ Your personal sprint draws on the full 12-service catalogue; you choose the services relevant to your work and
  goals:
 
 ### 01 · Generative AI Transformation
@@ -69,58 +69,42 @@ Build single-operator multi-agent swarms with orchestrator loops, subagent deleg
 
 Run private, unaligned autonomous agent loops on local hardware with open-weights agentic models and structured tool execution.
 
-### 05 · Personal Goals Self-Authoring
-
-Structure personal goals, track career milestones, and navigate career transitions with structured self-authoring frameworks, journaling templates, and actionable roadmaps.
-
-### 06 · AI Budget & Cost Control
+### 05 · AI Budget & Cost Control
 
 Enforce strict financial caps on personal developer API accounts, semantic caching, and local fallback routing to keep costs predictable.
 
-### 07 · AI Developer Training
+### 06 · AI Developer Training
 
 Elevate your developer practice with Claude Code CLI, test-driven prompt harnesses, autonomous debugging, and automated refactoring.
 
-### 08 · Advanced AI Agents
+### 07 · Advanced AI Agents
 
 Architect persistent, self-evaluating autonomous agents that execute long-horizon projects while you sleep.
 
-### 09 · Claude Advanced Training
-
-Build personal MCP servers, harness prompt caching for 90% savings, and integrate Claude directly into your development environment.
-
-### 10 · Gemini Advanced Training
-
-Implement Google Antigravity SDK workflows, structured schema extraction, and autonomous agent systems powered by Gemini.
-
-### 11 · Continuous Learning & Research Synthesis
+### 08 · Continuous Learning & Synthesis
 
 Architect an autonomous personal continuous learning engine using automated paper ingestion, podcast transcription, spaced-repetition drills, and research synthesis.
 
-### 12 · Work-Life Balance & Autonomous Offloading
+### 09 · Gemini Research Training
 
-Reclaim 15-20 hours weekly through autonomous inbox triage, biological focus time-blocking, automated task delegation, and cognitive load minimization.
+Master deep academic literature review, technical synthesis, million-token context grounding, and multi-source verification using Gemini models.
 
-### 13 · AI Second Brain
+### 10 · AI Second Brain
 
 Build your private Markdown knowledge vault with automated capture, local-model tagging, and cited question answering.
 
-### 14 · The 7 Habits AI Executive Coaching
+### 11 · Claude Research Training
 
-Master Stephen Covey's 7 Habits with an autonomous executive AI operating system for daily proactivity, weekly Quadrant II scheduling, and renewal.
+Accelerate personal research with Claude: 1M token context synthesis, multi-paper literature reviews, market intelligence, and executive research dossiers.
 
-### 15 · AI Schedule Automation & Calendar Gatekeeper
-
-Autonomous calendar gatekeeping, biological focus time-blocking, and pre-meeting context dossiers for high-output executives.
-
-### 16 · Workflow Automations
+### 12 · Workflow Automations
 
 End-to-end automation pipelines connecting email, task managers, and local LLMs via n8n and open-source stacks.
 
 ## Two-Phase Personal Curriculum & Daily Support
  Roadmap
 
-20 intensive days focused on your selected services from the 16-service catalogue (20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day), followed immediately by 20
+30 intensive days focused on your selected services from the 12-service catalogue (30 working days over 6 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day), followed immediately by 30
  days of included daily work assistance on your live projects:
 
 ### Generative AI Transformation & Architecture Audit
@@ -151,7 +135,7 @@ Live developer pair-programming with Claude Code CLI and Google Antigravity, str
 ### 30 Days of Support, Daily Doubts Clarification & Light Easy-to-Skim Guides
 
 Unlike corporate teams with extensive IT departments, individual practitioners, solo founders, and
- consultants require dedicated assistance during daily work. For 20 consecutive working days (4 hours per day) immediately
+ consultants require dedicated assistance during daily work. For 30 days (4 hours per day) immediately
  following sprint instruction, founder Thomas Cherickal remains in your corner for strictly 1-on-1 support:
 
 - Daily Questions & Doubts Clarification: Direct, dedicated clarification of all
@@ -174,10 +158,10 @@ Personal Training is $3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD acros
 | Tier 1: High-Income | US, Canada, UK, Germany, France, Poland, Czech Republic, Hungary, Greece, Romania, Japan, South
  Korea, Singapore, Australia, Chile, UAE, Saudi Arabia | Standard Rate (0% Discount) | $3,000 USD |
 | Tier 2: Upper-Middle | Brazil, Mexico, Colombia, Argentina, Peru, Ecuador, Guatemala, Türkiye, Malaysia, Thailand,
- Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka | 25% Parity Discount | $2,($300 / $225 / $150 / $150 / $75 / Custom USD) |
+ Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka | 25% Parity Discount | $2,250 USD |
 | Tier 3: Lower-Middle & Low-Income | India, Bangladesh, Pakistan, Nepal, Bhutan, Kenya, Nigeria, Ghana, Egypt, Morocco, Tanzania,
  Bolivia, Cambodia, Laos, Myanmar, Ethiopia, Uganda, Rwanda | 50% Parity Discount | $1,500 USD |
-| Tier 4: Early Startups | Solo Founders, Pre-Seed, Bootstrapped Tech Ventures (<$1M Raised) | 50% Startup Discount | $1,($300 / $225 / $150 / $150 / $75 / Custom USD) |
+| Tier 4: Early Startups | Solo Founders, Pre-Seed, Bootstrapped Tech Ventures (<$1M Raised) | 50% Startup Discount | $1,500 USD |
 | Tier 5: Academia & Non-Profit | Students, Academic Researchers, Faculty Labs, 501(c)(3) Non-Profits | 75% Academic Discount | $750 USD |
 | Tier 6: Crisis-Affected & Under-Resourced | Crisis Zones, Hyperinflation Economies, UN Least Developed Countries, Grassroots Devs | Custom Subsidized Relief | ($300 / $225 / $150 / $150 / $75 / Custom USD) (or Quote) |
 
@@ -185,5 +169,5 @@ Personal Training is $3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD acros
 
 Spaces are strictly limited to two personal mentees per calendar month to guarantee deep architectural pairing
  and uncompromised focus. Book today to lock in 30 days of intensive training plus 30 days of included support
- with daily questions and doubts clarification, and light, easy-to-skim source materials and guides (20 working days over 4 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day, strictly one
+ with daily questions and doubts clarification, and light, easy-to-skim source materials and guides (30 working days over 6 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day, strictly one
  person only).

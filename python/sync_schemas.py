@@ -101,61 +101,84 @@ def sync_html_to_schemas(check_only: bool = False, verbose: bool = False) -> dic
             return {"total": 0, "updated": 0, "created": 0, "unchanged": 0, "errors": 1}
         SCHEMA_DIR.mkdir(parents=True, exist_ok=True)
 
-    html_files = sorted(
-        list(REPO_DIR.glob("*.html")) +
-        list((REPO_DIR / "business-services").glob("*.html")) +
-        list((REPO_DIR / "personal-services").glob("*.html")) +
-        list((REPO_DIR / "gemini-training").glob("*.html")) +
-        list((REPO_DIR / "claude-training").glob("*.html"))
-    )
+    groups = [
+        ("Core Pages", sorted([f for f in REPO_DIR.glob("*.html")])),
+        ("Business Services", sorted([f for f in (REPO_DIR / "business-services").glob("*.html")])),
+        ("Personal Services", sorted([f for f in (REPO_DIR / "personal-services").glob("*.html")])),
+        ("Gemini Training", sorted([f for f in (REPO_DIR / "gemini-training").glob("*.html")])),
+        ("Claude Training", sorted([f for f in (REPO_DIR / "claude-training").glob("*.html")])),
+    ]
+
     updated = []
     created = []
     unchanged = []
     errors = []
+    cat_stats = []
 
-    for html_path in html_files:
-        filename = html_path.name
-        if filename in EXCLUDED_HTML:  # pragma: no cover
-            continue
+    for cat_name, file_list in groups:
+        cat_total = 0
+        cat_updated = 0
+        cat_created = 0
+        cat_unchanged = 0
+        cat_errors = 0
 
-        schema_data = extract_schema_from_html(html_path)
-        if schema_data is None:
-            if verbose:
-                print(f"  [SKIP] {filename} (no valid JSON-LD schema found)")
-            continue
-
-        target_filename = get_target_schema_filename(filename)
-        target_path = SCHEMA_DIR / target_filename
-        formatted_json = json.dumps(schema_data, indent=2, ensure_ascii=False) + "\n"
-
-        if target_path.exists():
-            try:
-                with open(target_path, "r", encoding="utf-8") as f:
-                    current_content = f.read()
-            except Exception as e:  # pragma: no cover
-                errors.append((filename, target_filename, str(e)))
+        for html_path in file_list:
+            filename = html_path.name
+            if filename in EXCLUDED_HTML:  # pragma: no cover
                 continue
 
-            if current_content == formatted_json:
-                unchanged.append((filename, target_filename))
+            schema_data = extract_schema_from_html(html_path)
+            if schema_data is None:
                 if verbose:
-                    print(f"  [OK]   {filename} == schema/{target_filename}")
+                    print(f"  [SKIP] {filename} (no valid JSON-LD schema found)")
+                continue
+
+            cat_total += 1
+            target_filename = get_target_schema_filename(filename)
+            target_path = SCHEMA_DIR / target_filename
+            formatted_json = json.dumps(schema_data, indent=2, ensure_ascii=False) + "\n"
+
+            if target_path.exists():
+                try:
+                    with open(target_path, "r", encoding="utf-8") as f:
+                        current_content = f.read()
+                except Exception as e:  # pragma: no cover
+                    errors.append((filename, target_filename, str(e)))
+                    cat_errors += 1
+                    continue
+
+                if current_content == formatted_json:
+                    unchanged.append((filename, target_filename))
+                    cat_unchanged += 1
+                    if verbose:
+                        print(f"  [OK]   {filename} == schema/{target_filename}")
+                else:
+                    updated.append((filename, target_filename))
+                    cat_updated += 1
+                    if not check_only:
+                        with open(target_path, "w", encoding="utf-8") as f:
+                            f.write(formatted_json)
+                        print(f"  [SYNC] {filename} -> schema/{target_filename} (updated)")
+                    else:
+                        print(f"  [DRIFT] {filename} != schema/{target_filename}")
             else:
-                updated.append((filename, target_filename))
+                created.append((filename, target_filename))
+                cat_created += 1
                 if not check_only:
                     with open(target_path, "w", encoding="utf-8") as f:
                         f.write(formatted_json)
-                    print(f"  [SYNC] {filename} -> schema/{target_filename} (updated)")
-                else:
-                    print(f"  [DRIFT] {filename} != schema/{target_filename}")
-        else:
-            created.append((filename, target_filename))
-            if not check_only:
-                with open(target_path, "w", encoding="utf-8") as f:
-                    f.write(formatted_json)
-                print(f"  [NEW]  {filename} -> schema/{target_filename} (created)")
-            else:  # pragma: no cover
-                print(f"  [MISSING] schema/{target_filename} (for {filename})")
+                    print(f"  [NEW]  {filename} -> schema/{target_filename} (created)")
+                else:  # pragma: no cover
+                    print(f"  [MISSING] schema/{target_filename} (for {filename})")
+
+        cat_stats.append({
+            "name": cat_name,
+            "total": cat_total,
+            "updated": cat_updated,
+            "created": cat_created,
+            "unchanged": cat_unchanged,
+            "errors": cat_errors,
+        })
 
     summary = {
         "total": len(updated) + len(created) + len(unchanged),
@@ -165,14 +188,50 @@ def sync_html_to_schemas(check_only: bool = False, verbose: bool = False) -> dic
         "errors": len(errors),
     }
 
-    print("\n--- HTML to JSON Schema Sync Summary ---")
-    print(f"Total schemas checked : {summary['total']}")
-    print(f"Updated in schema/    : {summary['updated']}")
-    print(f"Created in schema/    : {summary['created']}")
-    print(f"Already in sync       : {summary['unchanged']}")
+    # Print 80-column structured ASCII report matching other pre-push summaries
+    width = 80
+    print("=" * width)
+    print("HTML TO JSON SCHEMA SYNC REPORT".center(width))
+    print("=" * width)
+
+    # Total width: 22 + 10 + 10 + 10 + 10 + 11 + 7 borders = 80 chars
+    col_widths = (20, 8, 8, 8, 8, 9)
+    sep_line = "+" + "+".join("-" * (w + 2) for w in col_widths) + "+"
+
+    print(sep_line)
+    hdr = f"| {'Category':<{col_widths[0]}} | {'Schemas':>{col_widths[1]}} | {'Updated':>{col_widths[2]}} | {'Created':>{col_widths[3]}} | {'In Sync':>{col_widths[4]}} | {'Status':<{col_widths[5]}} |"
+    print(hdr)
+    print(sep_line)
+
+    for c in cat_stats:
+        if c["errors"] > 0:
+            c_status = "ERROR"
+        elif c["updated"] > 0 or c["created"] > 0:
+            c_status = "UPDATED" if not check_only else "DRIFT"
+        else:
+            c_status = "IN SYNC"
+        row = f"| {c['name']:<{col_widths[0]}} | {c['total']:>{col_widths[1]}} | {c['updated']:>{col_widths[2]}} | {c['created']:>{col_widths[3]}} | {c['unchanged']:>{col_widths[4]}} | {c_status:<{col_widths[5]}} |"
+        print(row)
+
+    print(sep_line)
+    overall_status = "PASS" if summary["errors"] == 0 and (not check_only or (summary["updated"] == 0 and summary["created"] == 0)) else "FAIL"
+    tot_row = f"| {'Schema Total':<{col_widths[0]}} | {summary['total']:>{col_widths[1]}} | {summary['updated']:>{col_widths[2]}} | {summary['created']:>{col_widths[3]}} | {summary['unchanged']:>{col_widths[4]}} | {overall_status:<{col_widths[5]}} |"
+    print(tot_row)
+    print(sep_line)
+
+    print("-" * width)
+    print("HTML TO JSON SCHEMA SYNCHRONIZATION SUMMARY")
+    print("-" * width)
+    print(f"Total Schemas Evaluated: {summary['total']} schemas across 5 categories")
+    print(f"Schemas Synchronized:    {summary['unchanged']} in sync | {summary['updated']} updated | {summary['created']} created")
     if summary["errors"]:  # pragma: no cover
-        print(f"Errors encountered    : {summary['errors']}")
-    print("----------------------------------------\n")
+        print(f"Errors Encountered:      {summary['errors']} errors")
+    else:
+        print(f"Errors Encountered:      0 errors")
+    print("=" * width)
+    print(f"RESULT: {overall_status} (ALL SCHEMAS SYNCHRONIZED)")
+    print("=" * width)
+    print()
 
     return summary
 

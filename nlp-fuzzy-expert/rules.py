@@ -522,24 +522,28 @@ def build_rules():
 
         # Parity table in business-ai-training.html
         content = re.sub(
-            r'<td><strong style="color:var\(--cyan\);font-size:1\.15rem;">\$[\d,]+ USD</strong></td>',
+            r'<td><strong style="color:var\(--cyan\);font-size:1\.15rem;">[\s\S]*?</strong></td>',
             f'<td><strong style="color:var(--cyan);font-size:1.15rem;">${b_price:,} USD</strong></td>',
-            content
+            content,
+            count=1
         )
         content = re.sub(
-            r'<td><strong style="color:#fbbf24;font-size:1\.15rem;">\$[\d,]+ USD</strong></td>',
+            r'<td><strong style="color:#fbbf24;font-size:1\.15rem;">[\s\S]*?</strong></td>',
             f'<td><strong style="color:#fbbf24;font-size:1.15rem;">${int(b_price*0.75):,} USD</strong></td>',
-            content
+            content,
+            count=1
         )
         content = re.sub(
-            r'<td><strong style="color:#34d399;font-size:1\.15rem;">\$[\d,]+ USD</strong></td>',
+            r'<td><strong style="color:#34d399;font-size:1\.15rem;">[\s\S]*?</strong></td>',
             f'<td><strong style="color:#34d399;font-size:1.15rem;">${int(b_price*0.5):,} USD</strong></td>',
-            content
+            content,
+            count=1
         )
         content = re.sub(
-            r'<td><strong style="color:#c084fc;font-size:1\.15rem;">\$[\d,]+ USD</strong></td>',
+            r'<td><strong style="color:#c084fc;font-size:1\.15rem;">[\s\S]*?</strong></td>',
             f'<td><strong style="color:#c084fc;font-size:1.15rem;">${int(b_price*0.25):,} USD</strong></td>',
-            content
+            content,
+            count=1
         )
 
         occurrences.append({
@@ -609,29 +613,40 @@ def build_rules():
             content
         )
         content = re.sub(
-            r'<td><strong style="color:var\(--gold\);font-size:1\.15rem;">\$[\d,]+ USD</strong></td>',
+            r'<td><strong style="color:var\(--gold\);font-size:1\.15rem;">[\s\S]*?</strong></td>',
             f'<td><strong style="color:var(--gold);font-size:1.15rem;">${p_price:,} USD</strong></td>',
-            content
+            content,
+            count=1
         )
         content = re.sub(
-            r'<td><strong style="color:#fbbf24;font-size:1\.15rem;">\$[\d,]+ USD</strong></td>',
+            r'<td><strong style="color:#fbbf24;font-size:1\.15rem;">[\s\S]*?</strong></td>',
             f'<td><strong style="color:#fbbf24;font-size:1.15rem;">${int(p_price*0.75):,} USD</strong></td>',
-            content
+            content,
+            count=1
         )
         content = re.sub(
-            r'<td><strong style="color:#34d399;font-size:1\.15rem;">\$[\d,]+ USD</strong></td>',
+            r'<td><strong style="color:#34d399;font-size:1\.15rem;">[\s\S]*?</strong></td>',
             f'<td><strong style="color:#34d399;font-size:1.15rem;">${int(p_price*0.5):,} USD</strong></td>',
-            content
+            content,
+            count=1
         )
         content = re.sub(
-            r'<td><strong style="color:#c084fc;font-size:1\.15rem;">\$[\d,]+ USD</strong></td>',
+            r'<td><strong style="color:#f472b6;font-size:1\.15rem;">[\s\S]*?</strong></td>',
+            f'<td><strong style="color:#f472b6;font-size:1.15rem;">${int(p_price*0.5):,} USD</strong></td>',
+            content,
+            count=1
+        )
+        content = re.sub(
+            r'<td><strong style="color:#c084fc;font-size:1\.15rem;">[\s\S]*?</strong></td>',
             f'<td><strong style="color:#c084fc;font-size:1.15rem;">${int(p_price*0.25):,} USD</strong></td>',
-            content
+            content,
+            count=1
         )
         content = re.sub(
-            r'<td><strong style="color:#00f0ff;font-size:1\.15rem;">\$[\d,]+ USD</strong></td>',
+            r'<td><strong style="color:#00f0ff;font-size:1\.15rem;">[\s\S]*?</strong></td>',
             f'<td><strong style="color:#00f0ff;font-size:1.15rem;">${int(p_price*0.1):,} USD</strong></td>',
-            content
+            content,
+            count=1
         )
 
         # Bottom cross-program policy link (line 677)

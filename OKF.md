@@ -54,7 +54,7 @@ Root entry point containing core portal pages, global navigation inliners, prici
 - [`METRICS.md`](METRICS.md)
 - [`OPTIMIZATION.md`](OPTIMIZATION.md)
 - [`README.md`](README.md)
-- [`SYNC_REPORT.md`](SYNC_REPORT.md)
+- [`SYNC-REPORT.md`](SYNC-REPORT.md)
 - [`TECH-STACK.md`](TECH-STACK.md)
 - [`all-business-services.html`](all-business-services.html)
 - [`all-personal-services.html`](all-personal-services.html)

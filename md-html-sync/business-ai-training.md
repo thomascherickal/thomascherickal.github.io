@@ -2,12 +2,12 @@
 ## Thomas Cherickal - The Digital Futurist
 
 > **BUSINESS TRAINING · 60 DAYS (30 DAYS TRAINING + 30 DAYS GUIDANCE)**  
-> **Your team receives tailored enablement across the full 16-service catalogue. Select the exact capabilities
+> **Your team receives tailored enablement across the full 12-service catalogue. Select the exact capabilities
  relevant to your technical stack, operations, and business goals:**
 
 ---
 
-Clients can choose our comprehensive 60-day organization-wide transformation at $2,500 USD (30 days live hands-on engineering training + 30 days guidance, Q&A and written guides), or pick individual services at ($300 / $225 / $150 / $150 / $75 / Custom USD) per service (5 days live training + 5 days dedicated support). Covers cohorts up to 10 participants,
+Clients can choose our comprehensive 60-day organization-wide transformation at $3,000 USD (30 days live hands-on engineering training + 30 days guidance, Q&A and written guides), or pick individual services at ($300 / $225 / $150 / $150 / $75 / Custom USD) per service (5 days live training + 5 days dedicated support). Covers cohorts up to 10 participants,
  with additional seats at +$300 / +$225 / +$150 / +$150 / +$75 / Custom USD per seat. Clients are encouraged to choose services relevant to their work
  or interests. Purchasing Power Parity (PPP) is available for all service pricing across 195 countries.
 
@@ -47,10 +47,10 @@ Business Training costs $3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD ac
 
 // FULL-SPECTRUM BUSINESS MASTERY
 
-## The Complete 16-Service Catalogue Customized for Your
+## The Complete 12-Service Catalogue Customized for Your
  Organization
 
-Your team receives tailored enablement across the full 16-service catalogue. Select the exact capabilities
+Your team receives tailored enablement across the full 12-service catalogue. Select the exact capabilities
  relevant to your technical stack, operations, and business goals:
 
 ### 01 · Generative AI Transformation
@@ -85,37 +85,21 @@ Master Claude Code, agentic refactoring, test-driven prompt harnesses, and auton
 
 Build long-horizon planning agents with persistent state, tree-of-thought exploration, and self-correcting execution.
 
-### 09 · Claude Advanced Training
-
-Enterprise Claude architecture: MCP tool servers, prompt caching, effort controls, and production API harnesses.
-
-### 10 · Gemini Advanced Training
-
-Business Gemini architecture: Google Antigravity SDK, structured outputs, code execution, and multi-agent coordination.
-
-### 11 · Competitor Research & Intelligence
+### 09 · Competitor Research & Intelligence
 
 Deploy autonomous competitive intelligence agents, automated pricing trackers, product teardown scrapers, and dynamic sales battlecards.
 
-### 12 · AI Leads Magnet & Conversion Systems
+### 10 · AI Leads Magnet & Conversion Systems
 
 Convert anonymous traffic into sales-ready pipeline using conversational AI audit tools, waterfall firmographic enrichment, and autonomous CRM routing.
 
-### 13 · AI Second Brain
+### 11 · AI Second Brain
 
 Build a shared team knowledge vault in Markdown with automated capture, local-model tagging, and cited question answering.
 
-### 14 · Continuous Learning & Research Synthesis
+### 12 · Continuous Learning & Synthesis
 
 Establish continuous organizational learning loops, autonomous industry research synthesis, executive briefings, and automated institutional skill acquisition.
-
-### 15 · Work-Life Balance & Autonomous Offloading
-
-Protect team productivity, eliminate burnout, automate repetitive cognitive busywork, and establish focus time boundaries.
-
-### 16 · AI Schedule Automation & Calendar Gatekeeper
-
-Deploy autonomous calendar gatekeepers, biological focus time-blocking, and pre-meeting executive context dossiers.
 
 ## Two-Phase Business Curriculum & Operational
  Roadmap
@@ -149,7 +133,7 @@ Training engineering cohorts on terminal coding agents (Claude Code CLI, Google 
 ### 30 Days of Business Guidance, Team Architecture Reviews & Operational Materials
 
 Following sprint instruction, your teams transition into production implementation with direct
- guidance from founder Thomas Cherickal for 20 consecutive working days (4 hours per day):
+ guidance from founder Thomas Cherickal for 30 days of guidance and materials (4 hours per day):
 
 - Business Doubts & Architecture Clarification: Ongoing technical support for lead
  engineers, prompt engineers, and department heads solving edge-cases in daily production.
@@ -170,7 +154,7 @@ Business Training is $3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD acros
 | Tier 1: High-Income | US, Canada, UK, Germany, France, Poland, Czech Republic, Hungary, Greece, Romania, Japan, South
  Korea, Singapore, Australia, Chile, UAE, Saudi Arabia | Standard Rate (0% Discount) | $3,000 USD |
 | Tier 2: Upper-Middle | Brazil, Mexico, Colombia, Argentina, Peru, Ecuador, Guatemala, Türkiye, Malaysia, Thailand,
- Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka | 25% Parity Discount | $2,($300 / $225 / $150 / $150 / $75 / Custom USD) |
+ Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka | 25% Parity Discount | $2,250 USD |
 | Tier 3 & 4: Lower-Middle/Low-Income & Startups | India, Bangladesh, Pakistan, Nepal, Bhutan, Kenya, Nigeria, Ghana, Egypt, Morocco, Tanzania,
  Bolivia, Cambodia, Laos, Myanmar, Ethiopia, Uganda, Rwanda, Pre-Seed Startups | 50% Parity Discount | $1,500 USD |
 | Tier 5: Academia & Non-Profit | University Labs, Educational Institutions, 501(c)(3) Non-Profits | 75% Academic Discount | $750 USD |

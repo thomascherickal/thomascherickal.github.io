@@ -187,7 +187,7 @@ def print_sync_summary():
         ("Business Guides", "IN SYNC", "-", "-", "NLP KnowledgeBase"),
         ("Personal Guides", "IN SYNC", "-", "-", "NLP KnowledgeBase"),
         ("Claude Guides", "IN SYNC", "-", "-", "NLP KnowledgeBase"),
-        ("Google Guides", "IN SYNC", "-", "-", "NLP KnowledgeBase"),
+        ("Gemini Guides", "IN SYNC", "-", "-", "NLP KnowledgeBase"),
         ("Calculators", "IN SYNC", "-", "-", "Facts Syncer"),
         ("MD Mirrors", "IN SYNC", "-", "-", "Bidirectional Sync"),
         ("Schemas", "IN SYNC", "-", "-", "Schema Extractor"),

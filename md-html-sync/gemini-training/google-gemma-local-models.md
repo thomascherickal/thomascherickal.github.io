@@ -259,8 +259,8 @@ To ensure production-grade local model deployment, Gemma SLM quantization pipeli
 
 ### Flagship Consulting Packages
 
-- Business AI Training Flagship: $2,500 USD for 60 days total (30 days of live engineering training + 30 days of dedicated architectural support). Includes up to 10 enterprise seats. Additional seats are ($300 / $225 / $150 / $150 / $75 / Custom USD) per seat up to a maximum of 20 seats. Delivered 4 hours per day, Monday through Friday (Saturdays and Sundays are holidays), 100% remote worldwide.
-- Personal AI Training Flagship: $2,500 USD for 60 days total (30 days of live 1-on-1 private acceleration + 30 days of dedicated support). Strictly one participant only, providing comprehensive executive and technical mastery. Delivered 4 hours per day, Monday through Friday, 100% remote worldwide.
+- Business AI Training Flagship: $3,000 USD for 60 days total (30 days of live engineering training + 30 days of dedicated architectural support). Includes up to 10 enterprise seats. Additional seats are ($300 / $225 / $150 / $150 / $75 / Custom USD) per seat up to a maximum of 20 seats. Delivered 4 hours per day, Monday through Friday (Saturdays and Sundays are holidays), 100% remote worldwide.
+- Personal AI Training Flagship: $3,000 USD for 60 days total (30 days of live 1-on-1 private acceleration + 30 days of dedicated support). Strictly one participant only, providing comprehensive executive and technical mastery. Delivered 4 hours per day, Monday through Friday, 100% remote worldwide.
 
 ### Individual Service Picks
 
@@ -285,12 +285,12 @@ To ensure fair global access across all 195 countries, fees are adjusted by nati
 
 | Tier | Economic Category | Representative Countries | Parity Multiplier | Business Flagship | Personal Flagship |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Tier 1 | High-Income Baseline | United States, UK, Germany, Canada, Japan, Singapore, Australia | 1.00X | $2,500 USD | $2,500 USD |
-| Tier 2 | Upper-Middle Economies | Brazil, Mexico, Malaysia, Turkiye, Thailand, Philippines, Sri Lanka | 0.75X | $1,875 USD | $1,875 USD |
-| Tier 3 | Lower-Middle & Low-Income | India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam | 0.50X | $1,($300 / $225 / $150 / $150 / $75 / Custom USD) | $1,($300 / $225 / $150 / $150 / $75 / Custom USD) |
-| Tier 4 | Early-Stage Startups | Global tech startups with <$1M external funding | 0.50X | $1,($300 / $225 / $150 / $150 / $75 / Custom USD) | $1,($300 / $225 / $150 / $150 / $75 / Custom USD) |
-| Tier 5 | Academia & Non-Profits | Universities, accredited labs, registered charities & 501(c)(3) entities | 0.25X | $625 USD | $625 USD |
-| Tier 6 | Subsidized Relief | Crisis-affected regions, developing collectives & grassroots builders | Custom | Subsidized | ($300 / $225 / $150 / $150 / $75 / Custom USD) |
+| Tier 1 | High-Income Baseline | United States, UK, Germany, Canada, Japan, Singapore, Australia | 1.00X | $3,000 USD | $3,000 USD |
+| Tier 2 | Upper-Middle Economies | Brazil, Mexico, Malaysia, Turkiye, Thailand, Philippines, Sri Lanka | 0.75X | $2,250 USD | $2,250 USD |
+| Tier 3 | Lower-Middle & Low-Income | India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam | 0.50X | $1,500 USD | $1,500 USD |
+| Tier 4 | Early-Stage Startups | Global tech startups with <$1M external funding | 0.50X | $1,500 USD | $1,500 USD |
+| Tier 5 | Academia & Non-Profits | Universities, accredited labs, registered charities & 501(c)(3) entities | 0.25X | $750 USD | $750 USD |
+| Tier 6 | Subsidized Relief | Crisis-affected regions, developing collectives & grassroots builders | Custom | Custom Subsidized | Custom Relief |
 
 ---
 

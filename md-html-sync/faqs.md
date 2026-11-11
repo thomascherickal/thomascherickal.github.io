@@ -42,11 +42,11 @@ All training payments are distributed into five
  equal installments (20% per installment), mapped directly to completed training days, followed by verified milestone payments for the support phase:
 
 - 60-Day Business AI
- Training Flagship ($2,500 USD): Five equal installments (20% / $500 USD each), due after Days 5, 10,
+ Training Flagship ($3,000 USD): Five equal installments (20% / $600 USD each), due after Days 5, 10,
  15, 20 and 25 of completed live training. Dedicated support (30 days) is an additional $500 USD, paid in two equal installments ($250 USD after 15 days and $250 USD after 30 days of support).
 
 - 60-Day Personal AI
- Training Flagship ($2,500 USD): Five equal installments (20% / $500 USD each), due after Days 5, 10,
+ Training Flagship ($3,000 USD): Five equal installments (20% / $600 USD each), due after Days 5, 10,
  15, 20 and 25 of completed live 1-on-1 training. Dedicated support (30 days) is an additional $500 USD, paid in two equal installments ($250 USD after 15 days and $250 USD after 30 days of support).
 
 - 10-Day Individual Services (($300 / $225 / $150 / $150 / $75 / Custom USD)):
@@ -157,7 +157,7 @@ Graduates emerge operating as high-leverage solo powerhouses
 ### 7. What is the investment and structure for Personal Training?
 *Personal:
  Pricing Offer · FAQ #24*  
-Personal Training is $2,500 USD in Tier 1 for 60 days total (30 days training, + 30 days guidance,
+Personal Training is $3,000 USD in Tier 1 for 60 days total (30 days training, + 30 days guidance,
  Q&A and written guides). Strictly for 1 person only. Clients are encouraged to choose services
  relevant to their work or interests.
 
@@ -165,8 +165,8 @@ Personal Training is $2,500 USD in Tier 1 for 60 days total (30 days training, +
  (multi-tier approvals, vendor compliance, multi-tenant sandboxes) disappears entirely, moving
  directly at founder speed.
 
-- 195-Country Parity Scaled: The $2,500 baseline cascades through all 6 Purchasing
- Power Parity tiers, scaling from $2,500 in Tier 1 down to $250 in Tier 6.
+- 195-Country Parity Scaled: The $3,000 baseline cascades through all 6 Purchasing
+ Power Parity tiers, scaling from $3,000 in Tier 1 down to Custom in Tier 6.
 
 - Tailored Focus: Clients select specific tools and architectures relevant to their
  workflows (local LLMs, Claude agent teams, Gemini agents, workflow automation, and custom tooling)
@@ -177,60 +177,36 @@ This transparent pricing guarantees that individual creators access world-class 
 
 ---
 
-### 8. How does Personal AI Transformation draw from the 16-service catalogue?
+### 8. How does Personal AI Transformation draw from the 12-service catalogue?
 *Personal:
- 16-Service Catalogue · FAQ #25*  
-Rather than forcing clients to purchase separate standalone packages, the 16-service personal
+ 12-Service Catalogue · FAQ #25*  
+Rather than forcing clients to purchase separate standalone packages, the 12-service personal
  catalogue is modular: you choose the focus areas relevant to your work, and I tailor the
  20-day intensive live sprint around your live stack:
 
-- 1. Generative AI Transformation: End-to-end agentic workflow redesign and
- autonomous task delegation.
+- 1. Generative AI Transformation: Transform personal workflows and consulting practices from manual chatbot prompts to autonomous, coordinated teams of Claude agents.
 
-- 2. Local LLMs & Cost Slashing: Sovereign inference via Ollama and vLLM to cut
- token spend by 60-90%.
+- 2. Local LLMs & Cost Slashing: Eliminate cloud API dependencies and recurring costs by self-hosting quantized open-weights models locally with Ollama and vLLM.
 
-- 3. Claude Agent Orchestration: Orchestrator-Workers, Evaluator-Optimizer, and
- Router multi-agent teams.
+- 3. Claude Agent Orchestration: Build single-operator multi-agent swarms with orchestrator loops, subagent delegation, automated evaluation, and budget limits.
 
-- 4. Agentic Assistants Autonomy: Self-healing function calling and terminal execution
- with open-weights.
+- 4. Agentic Assistant Training: Run private, unaligned autonomous agent loops on local hardware with open-weights agentic models and structured tool execution.
 
-- 5. Workflow Automations: Multi-app connectors, browser automation, and data
- pipeline orchestration.
+- 5. AI Budget & Cost Control: Enforce strict financial caps on personal developer API accounts, semantic caching, and local fallback routing to keep costs predictable.
 
-- 6. Quantum Applications (Experimental): Hybrid quantum circuit simulation with
- Qiskit and PennyLane.
+- 6. AI Developer Training: Elevate your developer practice with Claude Code CLI, test-driven prompt harnesses, autonomous debugging, and automated refactoring.
 
-- 7. AI Budget & Cost Governance: Hard spend ceiling reverse proxies and
- semantic prompt caching.
+- 7. Advanced AI Agents: Architect persistent, self-evaluating autonomous agents that execute long-horizon projects while you sleep.
 
-- 8. Business Workforce Training: Non-technical professional AI acceleration across
- legal, finance, analysis, and operational tasks.
+- 8. Continuous Learning & Synthesis: Architect an autonomous personal continuous learning engine using automated paper ingestion, podcast transcription, spaced-repetition drills, and research synthesis.
 
-- 9. AI Developer Training: Test-Driven Development (TDD) paired with Claude Code
- and terminal agents.
+- 9. Gemini Research Training: Master deep academic literature review, technical synthesis, million-token context grounding, and multi-source verification using Gemini models.
 
-- 10. Advanced AI Agents: Custom Model Context Protocol (MCP) servers and stateful
- execution graphs.
+- 10. AI Second Brain: Build your private Markdown knowledge vault with automated capture, local-model tagging, and cited question answering.
 
-- 11. Claude Basic Training: Prompt caching, context window hygiene, and system
- instruction engineering.
+- 11. Claude Research Training: Accelerate personal research with Claude: 1M token context synthesis, multi-paper literature reviews, market intelligence, and executive research dossiers.
 
-- 12. Claude Advanced Training: Multi-agent state machines, subagent
- dispatching, and evaluators.
-
-- 13. Gemini Basic Training: Multimodal prompting, Google Workspace automation, and
- Gemini Flash workflows.
-
-- 14. Gemini Advanced Training: Google AI Studio, Google Antigravity IDE, Gemini
- Deep Think, and Gemma fine-tuning.
-
-- 15. Deep Research & Gemini Notebook: Autonomous literature synthesis and
- grounded multi-document intelligence.
-
-- 16. Hybrid Quantum-Classical AI: Quantum-classical optimization pipelines with
- PennyLane and Qiskit.
+- 12. Workflow Automations: End-to-end automation pipelines connecting email, task managers, and local LLMs via n8n and open-source stacks.
 
 I selectively emphasize the disciplines most crucial to your immediate products and career goals.
 
@@ -244,23 +220,23 @@ Purchasing Power Parity applies unconditionally to Personal Training across six 
 
 - Tier 1: World Bank High-Income Economies (USA, Canada, UK, Germany, France, Poland, Czech
  Republic, Hungary, Greece, Romania, Japan, South Korea, Singapore, Australia, Chile, UAE, Saudi
- Arabia): $2,500 USD rate (100% standard).
+ Arabia): $3,000 USD rate (100% standard).
 
 - Tier 2: Upper-Middle-Income Economies (Brazil, Mexico, Colombia, Argentina, Peru, Ecuador,
  Guatemala, Türkiye, Malaysia, Thailand, Indonesia, South Africa, Vietnam, the Philippines, Sri
- Lanka): $1,875 USD rate (25% parity discount).
+ Lanka): $2,250 USD rate (25% parity discount).
 
 - Tier 3: Lower-Middle & Low-Income Economies (India, Bangladesh, Pakistan, Nepal,
  Bhutan, Kenya, Nigeria, Ghana, Egypt, Morocco, Tanzania, Bolivia, Cambodia, Laos, Myanmar,
- Ethiopia, Uganda, Rwanda): $1,($300 / $225 / $150 / $150 / $75 / Custom USD) rate (50% parity discount).
+ Ethiopia, Uganda, Rwanda): $1,500 USD rate (50% parity discount).
 
-- Tier 4: Early-Stage Startups (<$1M Funding): $1,($300 / $225 / $150 / $150 / $75 / Custom USD) rate (50% flat startup
+- Tier 4: Early-Stage Startups (<$1M Funding): $1,500 USD rate (50% flat startup
  discount).
 
-- Tier 5: Academia, Researchers & Non-Profits: $625 USD rate (75% academic
+- Tier 5: Academia, Researchers & Non-Profits: $750 USD rate (75% academic
  discount).
 
-- Tier 6: Crisis-Affected & Under-Resourced Regions: ($300 / $225 / $150 / $150 / $75 / Custom USD) rate (Custom
+- Tier 6: Crisis-Affected & Under-Resourced Regions: Custom Subsidized rate (Custom
  subsidized quote / nominal honorarium).
 
 Tiers follow the current World Bank income classification, updated each July.
@@ -281,7 +257,7 @@ No. Personal Training is strictly for one person only (private 1-on-1
  private local models, and personal productivity workflow.
 
 - Business Training for Teams: If you wish to train a founding team, corporate
- department, or developer cohort, explore our Business Training ($2,500 USD for 60
+ department, or developer cohort, explore our Business Training ($3,000 USD for 60
  Days),
  which covers up to 10 participants in its fixed base rate (with additional seats at $250/head scaled
  by parity up to 20 seats max).
@@ -294,7 +270,7 @@ No. Personal Training is strictly for one person only (private 1-on-1
  20+20 Cadence · FAQ #28*  
 Personal AI Transformation is structured as an intensive two-phase acceleration program strictly for
  one person only: 30 days of intensive 1-on-1 sprint training drawing on the
- full 16-service catalogue (you choose the focus areas relevant to your work), immediately
+ full 12-service catalogue (you choose the focus areas relevant to your work), immediately
  followed by 30 days of included support with daily questions and doubts clarification, and
  guidance, assistance, and written guides licensed under Apache 2.0 (total 60-day
  experience).
@@ -308,7 +284,7 @@ Personal AI Transformation is structured as an intensive two-phase acceleration 
  execute daily
  work, plus access to guidance, assistance, implementation, Q&A, and written guides.
 
-- 16-Service Catalogue Synthesis: No compromise - you access local LLM
+- 12-Service Catalogue Synthesis: No compromise - you access local LLM
  quantization,
  autonomous agents, and tool calling tailored to your machine.
 
@@ -681,7 +657,7 @@ Response SLA: 7 days reply, 30 days start. Remote only worldwide.
 *Pricing:
  Individual Services · FAQ #52*  
 Yes, absolutely. Clients have complete freedom to pick and choose individual services
- from our 16-service catalogue without committing to a full multi-week transformation package.
+ from our 12-service catalogue without committing to a full multi-week transformation package.
 
 - Individual / Personal Pricing: ($300 / $225 / $150 / $150 / $75 / Custom USD) per service strictly for
  1 person only (private 1-on-1 sprint).
@@ -1258,12 +1234,12 @@ Every service engagement is governed by an explicit duration and included suppor
 
 - Flagship Personal AI Training: Strictly 30 days of intensive 1-on-1
  training
- drawing on the full 16-service catalogue AND 30 days of included daily work support
+ drawing on the full 12-service catalogue AND 30 days of included daily work support
  (total 60 days of coverage, 4 hours per day, 120 live training hours total) for 1 person only.
 
 - Individual Pick Services: Strictly 5 days of intensive live training AND
  5 days of included support (total 10 days of coverage, 4 hours per day, 20 live training
- hours total), priced at ($300 / $225 / $150 / $150 / $75 / Custom USD) (Business, up to 10 seats, additional seats at $250/seat) or ($300 / $225 / $150 / $150 / $75 / Custom USD) (Personal, 1 person) in Tier 1
+ hours total), priced at ($300 / $225 / $150 / $150 / $75 / Custom USD) (Business, up to 10 seats, additional seats at $300/seat) or ($300 / $225 / $150 / $150 / $75 / Custom USD) (Personal, 1 person) in Tier 1
  with universal parity scaling.
 
 - Free Concurrency: All business services and programs can freely overlap or run

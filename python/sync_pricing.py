@@ -109,14 +109,15 @@ ALL_SERVICES = [
     {"slug": "service-ai-agents-orchestration", "title": "Claude Agent Orchestration"},
     {"slug": "service-agentic-ai-systems", "title": "Agentic Assistants Training"},
     {"slug": "service-workflow-automations", "title": "Workflow Automations"},
-    {"slug": "service-ai-budget-cost-limits-training", "title": "AI Budget & Cost Control Training"},
+    {"slug": "service-ai-budget-cost-limits-training", "title": "AI Budget & Cost Control"},
     {"slug": "service-ai-developer-training", "title": "AI Developer Training"},
     {"slug": "service-advanced-ai-agents", "title": "Advanced AI Agents"},
-    {"slug": "service-claude-advanced-training", "title": "Claude Advanced Training"},
-    {"slug": "service-gemini-advanced-training", "title": "Google Gemini Advanced Training"},
     {"slug": "service-ai-based-competitor-research", "title": "Competitor Research & Intelligence"},
     {"slug": "service-ai-assisted-leads-magnet", "title": "AI Leads Magnet & Conversion Systems"},
-    {"slug": "service-goals-self-authoring", "title": "Personal Goals Self-Authoring"}
+    {"slug": "service-ai-second-brain", "title": "AI Second Brain"},
+    {"slug": "service-continuous-learning", "title": "Continuous Learning & Synthesis"},
+    {"slug": "service-gemini-research-training", "title": "Gemini Research Training"},
+    {"slug": "service-claude-research-training", "title": "Claude Research Training"}
 ]
 
 clean_desc = (

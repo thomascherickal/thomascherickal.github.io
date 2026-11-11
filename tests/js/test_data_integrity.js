@@ -31,17 +31,89 @@ function run(harness, PricingCalculator) {
   );
 
   assert(
-    "ALL_SERVICES_DATA contains all 12 services",
-    PricingCalculator.ALL_SERVICES_DATA.length === 12,
-    `Expected 12 services, found ${PricingCalculator.ALL_SERVICES_DATA.length}`
+    "ALL_SERVICES_DATA contains all 14 services",
+    PricingCalculator.ALL_SERVICES_DATA.length === 14,
+    `Expected 14 services, found ${PricingCalculator.ALL_SERVICES_DATA.length}`
   );
 
   const uniqueSlugs = new Set(PricingCalculator.ALL_SERVICES_DATA.map(s => s.slug));
   assert(
-    "ALL_SERVICES_DATA has 12 unique slugs without duplicates",
-    uniqueSlugs.size === 12,
-    `Expected 12 unique slugs, found ${uniqueSlugs.size}`
+    "ALL_SERVICES_DATA has 14 unique slugs without duplicates",
+    uniqueSlugs.size === 14,
+    `Expected 14 unique slugs, found ${uniqueSlugs.size}`
   );
+
+  // Verify distinct services matching business-services/ and personal-services/ directories
+  const fs = require("fs");
+  const path = require("path");
+  const rootDir = path.resolve(__dirname, "../../");
+  const bFiles = fs.readdirSync(path.join(rootDir, "business-services"))
+    .filter(f => f.endsWith(".html") && !f.startsWith("all-"));
+  const pFiles = fs.readdirSync(path.join(rootDir, "personal-services"))
+    .filter(f => f.endsWith(".html") && !f.startsWith("all-"));
+
+  const bSlugs = bFiles.map(f => "service-" + f.replace("business-service-", "").replace(".html", ""));
+  const pSlugs = pFiles.map(f => "service-" + f.replace("personal-service-", "").replace(".html", ""));
+  const expectedSlugs = Array.from(new Set([...bSlugs, ...pSlugs])).sort();
+
+  assert(
+    "ALL_SERVICES_DATA matches all distinct services in business-services/ and personal-services/",
+    expectedSlugs.length === 14 &&
+    expectedSlugs.every(slug => uniqueSlugs.has(slug)),
+    `Expected distinct slugs ${JSON.stringify(expectedSlugs)} to match calculator slugs ${JSON.stringify(Array.from(uniqueSlugs).sort())}`
+  );
+
+  // Verify all pricing calculator scripts export all 14 distinct services
+  const tierCalcs = [
+    { name: "tier-1", mod: require("../../pricing-calculator/pricing-calculator-tier-1.js") },
+    { name: "tier-2", mod: require("../../pricing-calculator/pricing-calculator-tier-2.js") },
+    { name: "tier-3", mod: require("../../pricing-calculator/pricing-calculator-tier-3.js") },
+    { name: "tier-4", mod: require("../../pricing-calculator/pricing-calculator-tier-4.js") },
+    { name: "tier-5", mod: require("../../pricing-calculator/pricing-calculator-tier-5.js") },
+    { name: "tier-6", mod: require("../../pricing-calculator/pricing-calculator-tier-6.js") }
+  ];
+
+  tierCalcs.forEach(({ name, mod }) => {
+    assert(
+      `PricingCalculatorTier (${name}) exports all 14 distinct services`,
+      Array.isArray(mod.ALL_SERVICES_DATA) &&
+      mod.ALL_SERVICES_DATA.length === 14 &&
+      new Set(mod.ALL_SERVICES_DATA.map(s => s.slug)).size === 14 &&
+      expectedSlugs.every(slug => mod.ALL_SERVICES_DATA.some(s => s.slug === slug)),
+      `Tier calculator ${name} does not match 14 distinct services`
+    );
+  });
+
+  // Verify all 7 pricing pages contain calculator markup with services-checkbox-grid and All 14 button
+  const pricingPages = [
+    "pricing.html",
+    "pricing/pricing-tier-1-usa-china-eu-100.html",
+    "pricing/pricing-tier-2-brazil-malaysia-75.html",
+    "pricing/pricing-tier-3-india-nigeria-50.html",
+    "pricing/pricing-tier-4-tech-startups-50.html",
+    "pricing/pricing-tier-5-colleges-non-profits-25.html",
+    "pricing/pricing-tier-6-crisis-affected-10.html"
+  ];
+
+  pricingPages.forEach(relPath => {
+    const filePath = path.join(rootDir, relPath);
+    assert(
+      `Pricing page exists: ${relPath}`,
+      fs.existsSync(filePath),
+      `File ${filePath} not found`
+    );
+    const htmlContent = fs.readFileSync(filePath, "utf8");
+    assert(
+      `Pricing page ${relPath} contains services-checkbox-grid container`,
+      htmlContent.includes('id="services-checkbox-grid"'),
+      `${relPath} is missing id="services-checkbox-grid"`
+    );
+    assert(
+      `Pricing page ${relPath} contains Select All 14 services button`,
+      /id="btn-select-all-services"[^>]*>[\s\S]*?All\s+14[\s\S]*?<\/button>/.test(htmlContent),
+      `${relPath} is missing or has incorrect label for btn-select-all-services`
+    );
+  });
 }
 
 module.exports = { run };
