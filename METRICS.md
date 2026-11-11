@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-10 16:22:43 UTC` | Branch: `main` | Head Commit: `1664226`
+> **Automated Status Report** | Generated on `2026-11-11 08:14:13 UTC` | Branch: `main` | Head Commit: `9a5adb9`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **592** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **1,113,532** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **1,095,860** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **6,221** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,451** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **85.03 MB (89,159,068 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **979,830 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **522** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-10** | Subject: "feat(synchronizer): synchronize repository state with authoritative data" |
+| **Total Tracked Files** | **598** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **1,119,343** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **1,101,646** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **6,218** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **11,479** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **88.58 MB (92,880,278 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **985,203 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **523** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-10** | Subject: "Change in Services." |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,14 +27,14 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 80 | 99,998 | 7.64 MB (8,011,691 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 80 | 100,695 | 7.68 MB (8,051,423 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,935 | 279.90 KB (286,613 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 32 | 11,245 | 3.69 MB (3,868,414 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 58 | 15,115 | 676.95 KB (693,200 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 140 | 47,736 | 5.78 MB (6,061,705 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 98 | 927,450 | 45.58 MB (47,797,431 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 140 | 47,706 | 5.80 MB (6,079,621 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 98 | 932,594 | 45.77 MB (47,994,446 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
-| **Raster Images (WebP, JPG, PNG)** | 115 | 0 | 21.27 MB (22,308,104 bytes) | Optimized feature hero graphics, social cards & assets |
+| **Raster Images (WebP, JPG, PNG)** | 121 | 0 | 24.58 MB (25,774,651 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 11 | 0 | 63.89 KB (65,422 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
@@ -43,16 +43,16 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 98 | 927,450 | 45.58 MB (47,797,431 bytes) | 16.6% |
-| `.html` | 80 | 99,998 | 7.64 MB (8,011,691 bytes) | 13.5% |
-| `.md` | 140 | 47,736 | 5.78 MB (6,061,705 bytes) | 23.6% |
-| `.py` | 58 | 15,115 | 676.95 KB (693,200 bytes) | 9.8% |
+| `.json` | 98 | 932,594 | 45.77 MB (47,994,446 bytes) | 16.4% |
+| `.html` | 80 | 100,695 | 7.68 MB (8,051,423 bytes) | 13.4% |
+| `.md` | 140 | 47,706 | 5.80 MB (6,079,621 bytes) | 23.4% |
+| `.py` | 58 | 15,115 | 676.95 KB (693,200 bytes) | 9.7% |
 | `.css` | 16 | 11,935 | 279.90 KB (286,613 bytes) | 2.7% |
 | `.js` | 32 | 11,245 | 3.69 MB (3,868,414 bytes) | 5.4% |
-| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 7.1% |
-| `.jpg` | 63 | 0 | 16.28 MB (17,069,068 bytes) | 10.6% |
-| `.png` | 26 | 0 | 2.78 MB (2,918,409 bytes) | 4.4% |
-| `.webp` | 20 | 0 | 1.88 MB (1,966,468 bytes) | 3.4% |
+| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 7.0% |
+| `.jpg` | 66 | 0 | 17.64 MB (18,492,233 bytes) | 11.0% |
+| `.webp` | 23 | 0 | 3.82 MB (4,009,850 bytes) | 3.8% |
+| `.png` | 26 | 0 | 2.78 MB (2,918,409 bytes) | 4.3% |
 | `.jpeg` | 5 | 0 | 339.12 KB (347,260 bytes) | 0.8% |
 | `.txt` | 2 | 0 | 37.55 KB (38,450 bytes) | 0.3% |
 | `.docx` | 1 | 0 | 10.34 KB (10,592 bytes) | 0.2% |
@@ -72,8 +72,8 @@
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **198** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **75** | Strict single-H1 semantic hierarchy per page |
-| **Secondary Section Headings (`<h2>`)** | **631** | Structural topic subdivisions |
-| **Card & Item Headings (`<h3>`)** | **938** | Individual service, question, and feature cards |
+| **Secondary Section Headings (`<h2>`)** | **629** | Structural topic subdivisions |
+| **Card & Item Headings (`<h3>`)** | **944** | Individual service, question, and feature cards |
 | **Call-to-Action (CTA) Modules** | **94** | Standardized CTAs with Free LinkedIn Consultation rule |
 | **Canonical Links Configured** | **74** | 100% SEO canonical URL coverage across public pages |
 | **Open Graph Meta Tags** | **528** | Social preview cards across Twitter/LinkedIn/Facebook |
