@@ -256,8 +256,8 @@ class TestPythonTools(unittest.TestCase):
         schema_dir = repo_path / "schema"
         sync_dir = repo_path / "md-html-sync"
         script_dir = repo_path / "python"
-        sub_dir = repo_path / "google-training"
-        for d in [schema_dir, sync_dir, script_dir, sub_dir, sync_dir / "google-training"]:
+        sub_dir = repo_path / "gemini-training"
+        for d in [schema_dir, sync_dir, script_dir, sub_dir, sync_dir / "gemini-training"]:
             d.mkdir(parents=True, exist_ok=True)
 
         # Create target HTML in subdirectory
@@ -269,21 +269,21 @@ class TestPythonTools(unittest.TestCase):
         (schema_dir / "other-ref.json").write_text('{"@id": "https://site/google-temp.html"}', encoding="utf-8")
 
         # Create matching markdown mirrors
-        (sync_dir / "google-training" / "google-temp.md").write_text("# Temp", encoding="utf-8")
+        (sync_dir / "gemini-training" / "google-temp.md").write_text("# Temp", encoding="utf-8")
         (sync_dir / "google-temp.md").write_text("# Temp root", encoding="utf-8")
 
         # Create .sync-state.json
         state_file = sync_dir / ".sync-state.json"
         state_file.write_text(json.dumps({
-            "google-training/google-temp.html": {"md_name": "google-training/google-temp.md"},
+            "gemini-training/google-temp.html": {"md_name": "gemini-training/google-temp.md"},
             "other.html": {"md_name": "other.md"}
         }), encoding="utf-8")
 
         # Create generate_sitemap.py, header.html, llms.txt, and an incoming link file
         (script_dir / "generate_sitemap.py").write_text('PAGES = [\n    "google-temp.html",\n]\n', encoding="utf-8")
-        (repo_path / "header.html").write_text('<ul>\n  <li><a href="google-training/google-temp.html">Temp</a></li>\n</ul>\n', encoding="utf-8")
-        (repo_path / "llms.txt").write_text("- [Temp](google-training/google-temp.html)\n- [Keep](index.html)\n", encoding="utf-8")
-        (repo_path / "linking.html").write_text('<a href="google-training/google-temp.html">Link</a>\n', encoding="utf-8")
+        (repo_path / "header.html").write_text('<ul>\n  <li><a href="gemini-training/google-temp.html">Temp</a></li>\n</ul>\n', encoding="utf-8")
+        (repo_path / "llms.txt").write_text("- [Temp](gemini-training/google-temp.html)\n- [Keep](index.html)\n", encoding="utf-8")
+        (repo_path / "linking.html").write_text('<a href="gemini-training/google-temp.html">Link</a>\n', encoding="utf-8")
         for s in ["build_components.py", "sync_schemas.py", "md_html_sync.py", "check_links.py"]:
             (script_dir / s).write_text("# mock", encoding="utf-8")
 
@@ -319,7 +319,7 @@ class TestPythonTools(unittest.TestCase):
 
         # Create synthetic HTML files in temp_dir to exercise all converter branches fast
         sync_out = os.path.join(self.temp_dir, "md-html-sync")
-        for sub in ["business-services", "personal-services", "claude-training", "google-training"]:
+        for sub in ["business-services", "personal-services", "claude-training", "gemini-training"]:
             os.makedirs(os.path.join(self.temp_dir, sub), exist_ok=True)
 
         with open(os.path.join(self.temp_dir, "articles.html"), "w", encoding="utf-8") as f:

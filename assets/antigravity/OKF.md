@@ -12,7 +12,7 @@ Branding graphics, IDE interface screenshots, and workflow diagrams for Google A
 
 ## Directory Role & Agent Guidelines
 
-- Supplies rich visuals for `google-training/google-antigravity-ide.html`.
+- Supplies rich visuals for `gemini-training/google-antigravity-ide.html`.
 - Illustrates agentic workflows with browser verification, sidecar orchestration, and multi-agent task execution.
 
 ## Subdirectories

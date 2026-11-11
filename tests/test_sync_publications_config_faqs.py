@@ -52,7 +52,7 @@ class TestSyncPublicationsConfigFaqs(unittest.TestCase):
         # Explicitly evaluate GuidesIdentityRule and PublicationsRule via process_file
         self.orchestrator.engine.process_file(os.path.join(REPO_DIR, "articles.html"))
         self.orchestrator.engine.process_file(os.path.join(REPO_DIR, "claude-training", "claude-101.html"))
-        self.orchestrator.engine.process_file(os.path.join(REPO_DIR, "google-training", "google-gemini-101.html"))
+        self.orchestrator.engine.process_file(os.path.join(REPO_DIR, "gemini-training", "google-gemini-101.html"))
 
 if __name__ == "__main__":
     unittest.main()

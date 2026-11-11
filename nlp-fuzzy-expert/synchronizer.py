@@ -65,7 +65,7 @@ DOMAIN_TARGET_PATTERNS = {
         "claude-training", "all-business-services.html", "all-personal-services.html"
     },
     "gemini": {
-        "google-training", "all-business-services.html", "all-personal-services.html"
+        "gemini-training", "all-business-services.html", "all-personal-services.html"
     },
     "publications": {
         "writing.html", "articles.html"
@@ -199,7 +199,7 @@ class ExpertSynchronizer:
                 target_files.append(os.path.join(REPO_DIR, fname))
 
         # Subdirectories
-        for sub in ["business-services", "personal-services", "claude-training", "google-training", "pricing"]:
+        for sub in ["business-services", "personal-services", "claude-training", "gemini-training", "pricing"]:
             sdir = os.path.join(REPO_DIR, sub)
             if os.path.exists(sdir):
                 for fname in os.listdir(sdir):

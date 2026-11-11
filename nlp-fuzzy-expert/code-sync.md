@@ -1,6 +1,6 @@
 # Source Code and Test Suite Knowledge Synchronization Report
 
-Generated on: 2026-11-11 14:59:03
+Generated on: 2026-11-11 15:10:27
 
 ## Summary
 - **Target Files Evaluated**: 47
@@ -84,4 +84,4 @@ Generated on: 2026-11-11 14:59:03
 | `pricing-calculator/pricing-calculator-tier-4-tests.js` | test | pricing | `tier_calculator_tests` | Verified tier test suite in pricing-calculator-tier-4-tests.js |
 | `pricing-calculator/pricing-calculator-tier-5-tests.js` | test | pricing | `tier_calculator_tests` | Verified tier test suite in pricing-calculator-tier-5-tests.js |
 | `pricing-calculator/pricing-calculator-tier-6-tests.js` | test | pricing | `tier_calculator_tests` | Verified tier test suite in pricing-calculator-tier-6-tests.js |
-| `tests/test_sync_claude_and_gemini.py` | test | guides | `guide_paths` | Verified claude-training/ and google-training/ target paths in test |
+| `tests/test_sync_claude_and_gemini.py` | test | guides | `guide_paths` | Verified claude-training/ and gemini-training/ target paths in test |

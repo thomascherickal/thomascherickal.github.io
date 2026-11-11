@@ -94,7 +94,7 @@ DIRECTORY_METADATA = {
         'description': 'Branding graphics, IDE interface screenshots, and workflow diagrams for Google Antigravity IDE and SDK documentation.',
         'tags': ['assets', 'antigravity', 'google-ide', 'agentic-workflows'],
         'guidelines': [
-            'Supplies rich visuals for `google-training/google-antigravity-ide.html`.',
+            'Supplies rich visuals for `gemini-training/google-antigravity-ide.html`.',
             'Illustrates agentic workflows with browser verification, sidecar orchestration, and multi-agent task execution.'
         ]
     },
@@ -220,11 +220,11 @@ DIRECTORY_METADATA = {
             'Strictly preserve zero emojis and zero em-dashes across all markdown files.'
         ]
     },
-    'google-training': {
+    'gemini-training': {
         'title': 'Google Gemini & Gemma Engineering Guides',
         'type': 'module',
         'description': 'Comprehensive technical reference guides for Google AI Studio, Google Antigravity IDE, Gemini Deep Think extended reasoning, Gemma local models, and multimodal architectures.',
-        'tags': ['google-training', 'gemini', 'gemma', 'antigravity-ide', 'deepthink', 'multimodal'],
+        'tags': ['gemini-training', 'gemini', 'gemma', 'antigravity-ide', 'deepthink', 'multimodal'],
         'guidelines': [
             'Contains 12 deep-dive guides (`google-antigravity-ide.html`, `google-ai-studio.html`, `google-gemma-local-models.html`, `google-gemini-4-argon.html`, etc.).',
             'Model references must be evergreen (Gemini, Gemini Pro, Gemini Flash, Gemini Argon, Gemma) except in code strings or pricing calculations.',
@@ -275,7 +275,7 @@ DIRECTORY_METADATA = {
         'guidelines': [
             'Synchronized via `python3 python/md_html_sync.py` only during commit preparation, not after every single edit.',
             'Contains `.sync-state.json` to track modification hashes and avoid unnecessary rebuilds.',
-            'Organized into subdirectories mirroring the site structure (`business-services/`, `personal-services/`, `claude-training/`, `google-training/`).',
+            'Organized into subdirectories mirroring the site structure (`business-services/`, `personal-services/`, `claude-training/`, `gemini-training/`).',
             'Never delete markdown mirrors directly with `rm`; use `python3 python/delete_page.py` when deleting pages.'
         ]
     },
@@ -299,13 +299,13 @@ DIRECTORY_METADATA = {
             'Excludes article footers in accordance with Claude article guidelines.'
         ]
     },
-    'md-html-sync/google-training': {
+    'md-html-sync/gemini-training': {
         'title': 'Google Training Markdown Mirrors',
         'type': 'module',
         'description': 'Synchronized Markdown mirrors corresponding to the 12 Google Gemini and Gemma engineering guides.',
-        'tags': ['md-html-sync', 'google-training', 'markdown', 'gemini'],
+        'tags': ['md-html-sync', 'gemini-training', 'markdown', 'gemini'],
         'guidelines': [
-            'Mirrors `google-training/*.html` into clean Markdown representations.',
+            'Mirrors `gemini-training/*.html` into clean Markdown representations.',
             'Maintains code block integrity and structured reference lists.'
         ]
     },

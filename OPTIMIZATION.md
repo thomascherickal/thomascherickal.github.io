@@ -155,7 +155,7 @@ Profiling using Python's `cProfile` revealed that out of an 18.07-second sync ru
 ### 6. `nlp-fuzzy-expert/synchronizer.py`
 
 #### A. Diagnostic Findings
-- Target document discovery (`discover_target_files()`) scanned the root directory and 4 subdirectories (`business-services`, `personal-services`, `claude-training`, `google-training`) repeatedly in Step 3, Step 5, and verification passes within the same run.
+- Target document discovery (`discover_target_files()`) scanned the root directory and 4 subdirectories (`business-services`, `personal-services`, `claude-training`, `gemini-training`) repeatedly in Step 3, Step 5, and verification passes within the same run.
 
 #### B. Optimizations Implemented
 1. **Instance Target Caching**:

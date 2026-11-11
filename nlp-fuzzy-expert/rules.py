@@ -1325,12 +1325,12 @@ def build_rules():
     rules.append(Rule("BusinessServicesNamesAndCardsRule", 85, cond_business_svcs, act_business_svcs, "business_services"))
 
     # -------------------------------------------------------------
-    # 13. Technical Guides Synchronization (claude-training/*.html, google-training/*.html)
+    # 13. Technical Guides Synchronization (claude-training/*.html, gemini-training/*.html)
     # -------------------------------------------------------------
     def cond_tech_guides(file_path, content, kb, nlp, fuzzy):
         is_guide = (
             "/claude-training/" in file_path
-            or "/google-training/" in file_path
+            or "/gemini-training/" in file_path
             or "/claude/" in file_path
             or "/google/" in file_path
         ) and file_path.endswith(".html")

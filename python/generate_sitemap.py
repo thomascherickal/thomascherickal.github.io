@@ -62,18 +62,18 @@ CLAUDE_GUIDES = [
 
 # 12 google Gemini Guide Pages
 GEMINI_GUIDES = [
-    "google-training/google-gemini-101.html",
-    "google-training/google-ai-studio.html",
-    "google-training/google-antigravity-ide.html",
-    "google-training/google-gemini-4-argon.html",
-    "google-training/google-gemini-desktop.html",
-    "google-training/google-deepmind.html",
-    "google-training/google-gemini-spark.html",
-    "google-training/google-gemini-notebook.html",
-    "google-training/google-gemma-local-models.html",
-    "google-training/google-multimodality.html",
-    "google-training/google-gemini-4-carbon.html",
-    "google-training/google-gemini-4-hydrogen.html",
+    "gemini-training/google-gemini-101.html",
+    "gemini-training/google-ai-studio.html",
+    "gemini-training/google-antigravity-ide.html",
+    "gemini-training/google-gemini-4-argon.html",
+    "gemini-training/google-gemini-desktop.html",
+    "gemini-training/google-deepmind.html",
+    "gemini-training/google-gemini-spark.html",
+    "gemini-training/google-gemini-notebook.html",
+    "gemini-training/google-gemma-local-models.html",
+    "gemini-training/google-multimodality.html",
+    "gemini-training/google-gemini-4-carbon.html",
+    "gemini-training/google-gemini-4-hydrogen.html",
 ]
 
 def get_git_lastmod(rel_path: str) -> str:

@@ -2,7 +2,7 @@
 type: module
 title: "Google Gemini & Gemma Engineering Guides"
 description: "Comprehensive technical reference guides for Google AI Studio, Google Antigravity IDE, Gemini Deep Think extended reasoning, Gemma local models, and multimodal architectures."
-tags: [google-training, gemini, gemma, antigravity-ide, deepthink, multimodal]
+tags: [gemini-training, gemini, gemma, antigravity-ide, deepthink, multimodal]
 timestamp: 2026-11-10T08:43:02Z
 ---
 

@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-11 09:28:58 UTC` | Branch: `main` | Head Commit: `ecfa3fb`
+> **Automated Status Report** | Generated on `2026-11-11 09:40:31 UTC` | Branch: `main` | Head Commit: `d88ad58`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,13 +11,13 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **574** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **1,010,694** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **993,604** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,923** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,167** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **82.61 MB (86,618,929 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **910,262 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **525** | Since repository inception (2023-03-30) |
+| **Total Lines of Source Code & Content** | **1,008,729** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **991,614** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,927** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **11,188** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **82.54 MB (86,545,142 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **909,292 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **526** | Since repository inception (2023-03-30) |
 | **Latest Commit Date** | **2026-11-11** | Subject: "feat(synchronizer): synchronize repository state with authoritative data" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
@@ -27,12 +27,12 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 72 | 92,204 | 7.00 MB (7,340,064 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 72 | 92,296 | 7.00 MB (7,343,754 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,935 | 279.90 KB (286,613 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 32 | 11,245 | 3.69 MB (3,868,414 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 58 | 15,109 | 676.19 KB (692,420 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 132 | 44,314 | 5.26 MB (5,513,437 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 90 | 835,834 | 41.02 MB (43,013,519 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 132 | 44,281 | 5.25 MB (5,503,949 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 90 | 833,810 | 40.96 MB (42,945,530 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 121 | 0 | 24.58 MB (25,774,651 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 11 | 0 | 61.84 KB (63,323 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,9 +43,9 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 90 | 835,834 | 41.02 MB (43,013,519 bytes) | 15.7% |
-| `.html` | 72 | 92,204 | 7.00 MB (7,340,064 bytes) | 12.5% |
-| `.md` | 132 | 44,314 | 5.26 MB (5,513,437 bytes) | 23.0% |
+| `.json` | 90 | 833,810 | 40.96 MB (42,945,530 bytes) | 15.7% |
+| `.html` | 72 | 92,296 | 7.00 MB (7,343,754 bytes) | 12.5% |
+| `.md` | 132 | 44,281 | 5.25 MB (5,503,949 bytes) | 23.0% |
 | `.py` | 58 | 15,109 | 676.19 KB (692,420 bytes) | 10.1% |
 | `.css` | 16 | 11,935 | 279.90 KB (286,613 bytes) | 2.8% |
 | `.js` | 32 | 11,245 | 3.69 MB (3,868,414 bytes) | 5.6% |

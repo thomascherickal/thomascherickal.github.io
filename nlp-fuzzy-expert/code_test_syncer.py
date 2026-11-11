@@ -341,7 +341,7 @@ class CodeTestSynchronizer:
         content = re.sub(r'CLAUDE_GUIDES\s*=\s*\[[\s\S]*?\]', cl_str, content)
 
         # Gemini Guides
-        gem_slugs = [f"google-training/{g.get('slug')}" for g in gem_data if g.get("slug")]
+        gem_slugs = [f"gemini-training/{g.get('slug')}" for g in gem_data if g.get("slug")]
         gem_str = "GEMINI_GUIDES = [\n" + "\n".join(f'    "{s}",' for s in gem_slugs) + "\n]"
         content = re.sub(r'GEMINI_GUIDES\s*=\s*\[[\s\S]*?\]', gem_str, content)
 
@@ -357,7 +357,7 @@ class CodeTestSynchronizer:
 
     def sync_python_build_components(self, content):
         """Synchronizes subdirectories in python/build_components.py."""
-        subdirs_str = 'SUBDIRS = ["business-services", "personal-services", "claude-training", "google-training"]'
+        subdirs_str = 'SUBDIRS = ["business-services", "personal-services", "claude-training", "gemini-training"]'
         if "SUBDIRS" in content:  # pragma: no cover
             content = re.sub(r'SUBDIRS\s*=\s*\[[\s\S]*?\]', subdirs_str, content)
 
@@ -372,7 +372,7 @@ class CodeTestSynchronizer:
 
     def sync_python_delete_page(self, content):
         """Synchronizes subdirectories in python/delete_page.py."""
-        subdirs_str = 'SUBDIRS = ["google-training", "claude-training", "business-services", "personal-services"]'
+        subdirs_str = 'SUBDIRS = ["gemini-training", "claude-training", "business-services", "personal-services"]'
         if "SUBDIRS" in content:
             content = re.sub(r'SUBDIRS\s*=\s*\[[\s\S]*?\]', subdirs_str, content)
 
@@ -408,7 +408,7 @@ class CodeTestSynchronizer:
         fname = os.path.basename(file_path)
 
         if fname == "test_sync_claude_and_gemini.py":
-            # Ensure folder paths are claude-training and google-training
+            # Ensure folder paths are claude-training and gemini-training
             content = re.sub(
                 r'os\.path\.join\(REPO_DIR,\s*"claude",\s*slug\)',
                 'os.path.join(REPO_DIR, "claude-training", slug)',
@@ -416,7 +416,7 @@ class CodeTestSynchronizer:
             )
             content = re.sub(
                 r'os\.path\.join\(REPO_DIR,\s*"google",\s*slug\)',
-                'os.path.join(REPO_DIR, "google-training", slug)',
+                'os.path.join(REPO_DIR, "gemini-training", slug)',
                 content
             )
             self.occurrences.append({
@@ -424,7 +424,7 @@ class CodeTestSynchronizer:
                 "category": "test",
                 "domain": "guides",
                 "field": "guide_paths",
-                "detail": "Verified claude-training/ and google-training/ target paths in test"
+                "detail": "Verified claude-training/ and gemini-training/ target paths in test"
             })
 
         return content

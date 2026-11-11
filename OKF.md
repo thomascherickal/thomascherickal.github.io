@@ -27,7 +27,7 @@ Root entry point containing core portal pages, global navigation inliners, prici
 - [`css/`](css/OKF.md): Subdirectory knowledge bundle
 - [`data/`](data/OKF.md): Subdirectory knowledge bundle
 - [`docs/`](docs/OKF.md): Subdirectory knowledge bundle
-- [`google-training/`](google-training/OKF.md): Subdirectory knowledge bundle
+- [`gemini-training/`](gemini-training/OKF.md): Subdirectory knowledge bundle
 - [`icons/`](icons/OKF.md): Subdirectory knowledge bundle
 - [`images/`](images/OKF.md): Subdirectory knowledge bundle
 - [`internal-use/`](internal-use/OKF.md): Subdirectory knowledge bundle

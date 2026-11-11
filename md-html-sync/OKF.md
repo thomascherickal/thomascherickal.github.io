@@ -14,14 +14,14 @@ Markdown mirror representations of live HTML pages, kept synchronized for consum
 
 - Synchronized via `python3 python/md_html_sync.py` only during commit preparation, not after every single edit.
 - Contains `.sync-state.json` to track modification hashes and avoid unnecessary rebuilds.
-- Organized into subdirectories mirroring the site structure (`business-services/`, `personal-services/`, `claude-training/`, `google-training/`).
+- Organized into subdirectories mirroring the site structure (`business-services/`, `personal-services/`, `claude-training/`, `gemini-training/`).
 - Never delete markdown mirrors directly with `rm`; use `python3 python/delete_page.py` when deleting pages.
 
 ## Subdirectories
 
 - [`business-services/`](business-services/OKF.md): Subdirectory knowledge bundle
 - [`claude-training/`](claude-training/OKF.md): Subdirectory knowledge bundle
-- [`google-training/`](google-training/OKF.md): Subdirectory knowledge bundle
+- [`gemini-training/`](gemini-training/OKF.md): Subdirectory knowledge bundle
 - [`personal-services/`](personal-services/OKF.md): Subdirectory knowledge bundle
 
 ## File Inventory

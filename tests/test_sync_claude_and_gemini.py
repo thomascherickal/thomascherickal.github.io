@@ -62,7 +62,7 @@ class TestSyncClaudeAndGemini(unittest.TestCase):
         self.assertEqual(dm_entry["slug"], "google-deepmind.html")
         self.assertEqual(dm_entry["short_name"], "Google DeepMind")
 
-        dm_html = os.path.join(REPO_DIR, "google-training", "google-deepmind.html")
+        dm_html = os.path.join(REPO_DIR, "gemini-training", "google-deepmind.html")
         self.assertTrue(os.path.exists(dm_html), "google-deepmind.html must exist")
         with open(dm_html, "r", encoding="utf-8") as f:
             content = f.read()

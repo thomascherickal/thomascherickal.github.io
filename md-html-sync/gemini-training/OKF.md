@@ -2,7 +2,7 @@
 type: module
 title: "Google Training Markdown Mirrors"
 description: "Synchronized Markdown mirrors corresponding to the 12 Google Gemini and Gemma engineering guides."
-tags: [md-html-sync, google-training, markdown, gemini]
+tags: [md-html-sync, gemini-training, markdown, gemini]
 timestamp: 2026-11-10T08:43:02Z
 ---
 
@@ -12,7 +12,7 @@ Synchronized Markdown mirrors corresponding to the 12 Google Gemini and Gemma en
 
 ## Directory Role & Agent Guidelines
 
-- Mirrors `google-training/*.html` into clean Markdown representations.
+- Mirrors `gemini-training/*.html` into clean Markdown representations.
 - Maintains code block integrity and structured reference lists.
 
 ## Subdirectories

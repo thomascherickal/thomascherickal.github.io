@@ -21,7 +21,7 @@ Usage:
     python3 python/delete_page.py <filename_or_path> [--dry-run] [--no-verify]
 
 Examples:
-    python3 python/delete_page.py google-training/google-old-page.html
+    python3 python/delete_page.py gemini-training/google-old-page.html
     python3 python/delete_page.py google-old-page.html
     python3 python/delete_page.py google-old-page
 """
@@ -40,7 +40,7 @@ REPO_DIR = SCRIPT_DIR.parent
 SCHEMA_DIR = REPO_DIR / "schema"
 SYNC_DIR = REPO_DIR / "md-html-sync"
 STATE_FILE = SYNC_DIR / ".sync-state.json"
-SUBDIRS = ["google-training", "claude-training", "business-services", "personal-services"]
+SUBDIRS = ["gemini-training", "claude-training", "business-services", "personal-services"]
 
 
 def find_html_file(target: str) -> Path | None:
@@ -353,7 +353,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Completely delete an HTML page and purge all sync states."
     )
-    parser.add_argument("target", help="HTML filename or path to delete (e.g. google-training/google-old-page.html)")
+    parser.add_argument("target", help="HTML filename or path to delete (e.g. gemini-training/google-old-page.html)")
     parser.add_argument("--dry-run", action="store_true", help="Report what would be deleted without making changes")
     parser.add_argument("--no-verify", action="store_true", help="Skip running post-deletion verification scripts")
     args = parser.parse_args()

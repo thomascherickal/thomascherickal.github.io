@@ -28,7 +28,7 @@ SYNC_DIR = os.path.join(REPO_DIR, "md-html-sync")
 STATE_FILE = os.path.join(SYNC_DIR, ".sync-state.json")
 
 os.makedirs(SYNC_DIR, exist_ok=True)
-for sub in ["business-services", "personal-services", "claude-training", "google-training"]:
+for sub in ["business-services", "personal-services", "claude-training", "gemini-training"]:
     os.makedirs(os.path.join(SYNC_DIR, sub), exist_ok=True)
 
 # Map relative HTML files to relative Markdown files in md-html-sync/
@@ -53,7 +53,7 @@ def get_html_path(rel_html_path: str) -> str:
     return os.path.join(REPO_DIR, rel_html_path)
 
 # Auto-discover subdirectory HTML files
-for subdir in ["business-services", "personal-services", "claude-training", "google-training"]:
+for subdir in ["business-services", "personal-services", "claude-training", "gemini-training"]:
     sub_dir_path = os.path.join(REPO_DIR, subdir)
     if not os.path.isdir(sub_dir_path):  # pragma: no cover
         continue
@@ -325,7 +325,7 @@ def sync_html_to_md(html_name: str, md_name: str):
         content = build_md_files.convert_general_document(html_path)
     elif "business-services" in html_name or "personal-services" in html_name:
         content = build_md_files.convert_service_page(html_path)
-    elif "claude-training" in html_name or "google-training" in html_name:
+    elif "claude-training" in html_name or "gemini-training" in html_name:
         content = build_md_files.convert_agent_deepdive(html_path)
     else:  # pragma: no cover
         content = build_md_files.convert_general_document(html_path)
@@ -448,7 +448,7 @@ def sync_md_to_html(md_name: str, html_name: str):
                         tds[1].string = clean_text(focus)
                         tds[2].string = clean_text(deliv)
                         tds[3].string = clean_text(crit)
-    elif "claude-training" in html_name or "google-training" in html_name:
+    elif "claude-training" in html_name or "gemini-training" in html_name:
         # Sync H1
         if md_h1_match:
             h1_el = soup.find("h1")

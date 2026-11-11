@@ -105,7 +105,7 @@ def sync_html_to_schemas(check_only: bool = False, verbose: bool = False) -> dic
         list(REPO_DIR.glob("*.html")) +
         list((REPO_DIR / "business-services").glob("*.html")) +
         list((REPO_DIR / "personal-services").glob("*.html")) +
-        list((REPO_DIR / "google-training").glob("*.html")) +
+        list((REPO_DIR / "gemini-training").glob("*.html")) +
         list((REPO_DIR / "claude-training").glob("*.html"))
     )
     updated = []
