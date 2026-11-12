@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-11 14:46:45 UTC` | Branch: `main` | Head Commit: `a7bb584`
+> **Automated Status Report** | Generated on `2026-11-12 09:43:36 UTC` | Branch: `main` | Head Commit: `ab34872`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **574** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **1,005,230** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **988,107** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,928** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,195** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **82.10 MB (86,092,903 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **907,403 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **527** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-11** | Subject: "Services Reduced." |
+| **Total Tracked Files** | **580** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **1,008,231** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **991,122** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,924** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **11,185** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **82.57 MB (86,576,411 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **908,271 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **528** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-11** | Subject: "Fix pricing discrepancies, eliminate garbled tier strings, and standardize service catalogues" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,15 +27,15 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 72 | 92,609 | 7.02 MB (7,360,267 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 72 | 92,609 | 7.02 MB (7,360,273 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,935 | 279.90 KB (286,613 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 32 | 11,337 | 3.69 MB (3,873,200 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 58 | 15,184 | 679.26 KB (695,565 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 132 | 44,226 | 5.24 MB (5,491,068 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 90 | 829,886 | 40.51 MB (42,481,728 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 132 | 44,059 | 5.24 MB (5,491,695 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 90 | 833,054 | 40.62 MB (42,595,600 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 121 | 0 | 24.58 MB (25,774,651 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 11 | 0 | 61.84 KB (63,323 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 17 | 0 | 422.19 KB (432,326 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,19 +43,20 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 90 | 829,886 | 40.51 MB (42,481,728 bytes) | 15.7% |
-| `.html` | 72 | 92,609 | 7.02 MB (7,360,267 bytes) | 12.5% |
-| `.md` | 132 | 44,226 | 5.24 MB (5,491,068 bytes) | 23.0% |
-| `.py` | 58 | 15,184 | 679.26 KB (695,565 bytes) | 10.1% |
+| `.json` | 90 | 833,054 | 40.62 MB (42,595,600 bytes) | 15.5% |
+| `.html` | 72 | 92,609 | 7.02 MB (7,360,273 bytes) | 12.4% |
+| `.md` | 132 | 44,059 | 5.24 MB (5,491,695 bytes) | 22.8% |
+| `.py` | 58 | 15,184 | 679.26 KB (695,565 bytes) | 10.0% |
 | `.css` | 16 | 11,935 | 279.90 KB (286,613 bytes) | 2.8% |
-| `.js` | 32 | 11,337 | 3.69 MB (3,873,200 bytes) | 5.6% |
-| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 7.3% |
-| `.jpg` | 66 | 0 | 17.64 MB (18,492,233 bytes) | 11.5% |
+| `.js` | 32 | 11,337 | 3.69 MB (3,873,200 bytes) | 5.5% |
+| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 7.2% |
+| `.jpg` | 66 | 0 | 17.64 MB (18,492,233 bytes) | 11.4% |
 | `.webp` | 23 | 0 | 3.82 MB (4,009,850 bytes) | 4.0% |
 | `.png` | 26 | 0 | 2.78 MB (2,918,409 bytes) | 4.5% |
 | `.jpeg` | 5 | 0 | 339.12 KB (347,260 bytes) | 0.9% |
+| `.pptx` | 3 | 0 | 299.62 KB (306,806 bytes) | 0.5% |
+| `.docx` | 4 | 0 | 71.08 KB (72,789 bytes) | 0.7% |
 | `.txt` | 2 | 0 | 36.12 KB (36,989 bytes) | 0.3% |
-| `.docx` | 1 | 0 | 10.34 KB (10,592 bytes) | 0.2% |
 | `[no extension]` | 6 | 0 | 8.19 KB (8,383 bytes) | 1.0% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
 | `.xml` | 1 | 0 | 6.66 KB (6,821 bytes) | 0.2% |
