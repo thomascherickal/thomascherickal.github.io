@@ -37,23 +37,26 @@ A comprehensive transformation system showing professionals how to use frontier 
 - [How Quantum Computers Threaten Bitcoin and the Entire Internet: Simply
  Explained](https://hackernoon.com/how-quantum-computers-threaten-bitcoin-and-the-entire-internet-simply-explained) - *Dec 7, 2025 · HackerNoon · 2,900 words*
 
-### Agentic AI Frameworks
+### Agentic
+ AI Frameworks
 
 - [The OpenClaw Saga: How the Last Two Weeks Changed the Agentic AI World
  Forever](https://hackernoon.com/the-openclaw-saga-how-the-last-two-weeks-changed-the-agentic-ai-world-forever) - *Mar 2, 2026 · HackerNoon · 5,700 words*
 - [OpenFang: The Game-Changing Open Source Agent OS That Replaces OpenClaw](https://hackernoon.com/openfangthe-game-changing-open-source-agent-operating-system-that-replaces-openclaw) - *Mar 30, 2026 · HackerNoon · 3,400 words*
-- [Agentic Assistants vs OpenClaw: Which AI Agent Framework Wins in 2026?](https://hackernoon.com/agentic assistants-agent-vs-openclaw-which-ai-agent-framework-wins-in-2026) - *May 13, 2026 · HackerNoon · 7,100 words*
+- [Hermes Agent vs OpenClaw: Which AI Agent Framework Wins in 2026?](https://hackernoon.com/hermes-agent-vs-openclaw-which-ai-agent-framework-wins-in-2026) - *May 13, 2026 · HackerNoon · 7,100 words*
 - [The Next Trillion-Dollar AI Shift: Why OpenClaw Changes Everything for LLMs](https://hackernoon.com/the-next-trillion-dollar-ai-shift-why-openclaw-changes-everything-for-llms) - *Jan 31, 2026 · HackerNoon · 3,100 words*
 
 ### AI
  Tools & Developer Productivity
 
 - [The AI Olympics: Which $20 AI Subscription Plan Wins in 2026?](https://hackernoon.com/the-ai-olympics-which-20-usd-ai-subscription-plan-wins-in-2026) - *May 15, 2026 · HackerNoon · 3,500 words*
-- [Introducing Code Wiki: Google's NotebookLM for Developers (now Gemini Notebook)](https://hackernoon.com/introducing-code-wiki-googles-notebooklm-for-developers) - *Dec 12, 2025 · HackerNoon · 2,900 words*
+- [Introducing Code Wiki: Google's NotebookLM for Developers (now Gemini
+ Notebook)](https://hackernoon.com/introducing-code-wiki-googles-notebooklm-for-developers) - *Dec 12, 2025 · HackerNoon · 2,900 words*
 - [The Internet Can't Stop Talking About Google NotebookLM (now Gemini Notebook)](https://hackernoon.com/the-internet-cant-stop-talking-about-google-notebooklm) - *Nov 20, 2025 · HackerNoon · 2,700 words*
 - [Google Antigravity: 20 Game-Changing Prompts for Complete Automation](https://hackernoon.com/google-antigravity-20-game-changing-prompts-for-complete-automation) - *Feb 5, 2026 · HackerNoon · 3,300 words*
 
-### Futurism & AGI
+### Futurism
+ & AGI
 
 - [Why the Race to AGI is Humanity's Defining Moment](https://hackernoon.com/why-the-race-to-agi-is-humanitys-defining-moment) - *Sep 14, 2025 · HackerNoon · 5,700 words*
 - [AI-Proof Your Career Future: The #1 Skill AI Agents Cannot Touch](https://hackernoon.com/ai-proof-your-career-future-the-1-skill-ai-agents-cannot-touch) - *Aug 1, 2025 · HackerNoon · 2,800 words*
@@ -103,16 +106,19 @@ A comprehensive transformation system showing professionals how to use frontier 
 ### Frontier Decision Models & Autonomous Agents
 
 - [Jev: Why Decision Models Will Transform the World Itself](https://thomascherickal.com/2026/10/02/jev-why-decision-models-will-transform-the-world-itself/) - *Oct 2, 2026 · thomascherickal.com · 12,400 words*
-- [Gemini Spark versus Agentic Assistants versus OpenClaw: Who Wins and Why?](https://hackernoon.com/gemini-spark-versus-agentic assistants-agent-versus-openclaw-who-wins-and-why) - *Aug 18, 2026 · thomascherickal.com · 5,200 words*
+- [Gemini Spark versus Hermes Agent versus OpenClaw: Who Wins and Why?](https://thomascherickal.com/2026/08/21/gemini-spark-versus-hermes-agent-versus-openclaw-who-wins-and-why/) - *Aug 21, 2026 · thomascherickal.com · 5,200 words*
 - [20 Ways to Use Gemini Spark to Automate Your Daily Workflow](https://thomascherickal.com/2026/09/08/20-ways-to-use-gemini-spark-to-automate-your-daily-workflow/) - *Sep 8, 2026 · thomascherickal.com · 5,800 words*
-- [Relying On Cloud AI Is Dangerous But Sovereign Local AI Is An Unstoppable Force](https://thomascherickal.com/2026/08/21/relying-on-cloud-ai-is-dangerous-but-sovereign-local-ai-is-an-unstoppable-force/) - *Aug 18, 2026 · thomascherickal.com · 5,800 words*
+- [Relying On Cloud AI Is Dangerous But Sovereign Local AI Is An Unstoppable
+ Force](https://thomascherickal.com/2026/08/21/relying-on-cloud-ai-is-dangerous-but-sovereign-local-ai-is-an-unstoppable-force/) - *Aug 18, 2026 · thomascherickal.com · 5,800 words*
 
 ### Post-Quantum Cryptography & Applied AI
 
-- [Publicly Adaptable Cryptographic Systems (PACS) - Solving PQC in the Age of AI Agent Cryptanalysts](https://thomascherickal.com/2026/09/13/publicly-adaptable-cryptographic-systems-pacs-solving-pqc-in-the-age-of-ai-agent-cryptanalysts/) - *Sep 13, 2026 · thomascherickal.com · 7,100 words*
+- [Publicly Adaptable Cryptographic Systems (PACS) - Solving PQC in the Age of
+ AI Agent Cryptanalysts](https://thomascherickal.com/2026/09/13/publicly-adaptable-cryptographic-systems-pacs-solving-pqc-in-the-age-of-ai-agent-cryptanalysts/) - *Sep 13, 2026 · thomascherickal.com · 7,100 words*
 - [The Solution to Post-Quantum Cryptography: A Showstopping Problem Today](https://thomascherickal.com/2026/09/17/the-solution-to-post-quantum-cryptography-a-showstopping-problem-today/) - *Sep 17, 2026 · thomascherickal.com · 2,300 words*
 - [How (and when) to Fine-Tune SLMs for Your Business Domain-Specific Use Case](https://thomascherickal.com/2026/09/06/how-and-when-to-fine-tune-google-gemma-4-for-your-business-domain-specific-use-case/) - *Sep 6, 2026 · thomascherickal.com · 10,800 words*
-- [The Ultimate Comparison Over 20 Modern Professions: Choosing Between Claude and ChatGPT](https://thomascherickal.com/2026/09/25/chatgpt-versus-claude-the-ultimate-comparison/) - *Sep 25, 2026 · thomascherickal.com · 10,300 words*
+- [The Ultimate Comparison Over 20 Modern Professions: Choosing Between Claude
+ and ChatGPT](https://thomascherickal.com/2026/09/25/chatgpt-versus-claude-the-ultimate-comparison/) - *Sep 25, 2026 · thomascherickal.com · 10,300 words*
 
 ---
 *Explore more publications at [thomascherickal.com](https://thomascherickal.com) and [HackerNoon](https://hackernoon.com/u/thomascherickal).*
