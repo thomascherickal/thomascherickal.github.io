@@ -3,15 +3,15 @@
     "engine": "nlp-fuzzy-expert",
     "version": "1.0.0",
     "architecture": "Expert System (Forward Chaining) + Fuzzy Logic + NLP",
-    "total_references_tracked": 24444,
-    "last_synchronized": "2026-11-13T04:10:03.582675"
+    "total_references_tracked": 24389,
+    "last_synchronized": "2026-11-13T04:23:10.225273"
   },
   "by_domain": {
-    "pricing": 3643,
+    "pricing": 3600,
     "business_services": 2811,
     "personal_services": 1007,
     "tiers": 2991,
-    "claude": 1576,
+    "claude": 1564,
     "gemini": 1734,
     "publications": 3416,
     "config": 5207,
@@ -28,7 +28,7 @@
       "field_key": "business_flagship_price",
       "old_value": "$2,000 USD",
       "new_value": "$3,000 USD",
-      "context": "<strong style=\"color:var(--cyan);font-weight:700;\">Business Training Flagship (<span class=\"sync-highlight\">$3,000 USD</span> · <span class=\"sync-highlight\">60 Days</span>):</strong> <span class=\"sync-highlight\">30 days live training</span> + <span class=\"sync-highlight\">30 days guidance and materials</span> (<span class=\"sync-highlight\">30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day</span>), up to <span class=\"sync-highlight\">10 participants</span> (+<span class=\"sync-highlight\">$300</span> per extra seat).",
+      "context": "<strong style=\"color:var(--cyan);font-weight:700;\">Business Training Flagship (<span class=\"sync-highlight\">$3,000 USD</span> · <span class=\"sync-highlight\">60 Days</span>):</strong> <span class=\"sync-highlight\">30 days live training</span> + <span class=\"sync-highlight\">30 days guidance and materials</span> (<span class=\"sync-highlight\">60 days over 2 months, Saturday & Sunday holidays, 4 hours per day</span>), up to <span class=\"sync-highlight\">10 participants</span> (+<span class=\"sync-highlight\">$300</span> per extra seat).",
       "match_type": "rule",
       "data_source": "data/pricing.json"
     },
@@ -503,18 +503,6 @@
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
         "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
-    },
-    {
-      "file": "all-business-services.html",
-      "page": "All Business Services - Business AI Transformation | Thomas Cherickal",
-      "section": "Business AI",
-      "line_number": 255,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "blueprints, sample code, and 30 days of post-delivery guidance and materials (30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day).",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
     },
     {
       "file": "all-personal-services.html",
@@ -5676,18 +5664,6 @@
       ]
     },
     {
-      "file": "contact.html",
-      "page": "Contact | Thomas Cherickal",
-      "section": "Walkaway Guarantee & Apache 2.0",
-      "line_number": 1006,
-      "field_key": "pricing:trust_and_payment_guarantees.risk_free_guarantees.walkaway_guarantee",
-      "old_value": "Walk away owing nothing if not satisfied after the first milestone training phase.",
-      "new_value": "Walk away owing nothing if not satisfied after the first milestone training phase.",
-      "context": "Walk away owing nothing if not satisfied after the first milestone training phase. All high-quality",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#trust_and_payment_guarantees.risk_free_guarantees.walkaway_guarantee"
-    },
-    {
       "file": "expertise.html",
       "page": "Generative AI Consultant & Tech Stack | Thomas Cherickal",
       "section": "Page Header",
@@ -9922,29 +9898,27 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "What is the pricing model for business training, and what does the 10-participant quota and 30-day training plus 30-day support guarantee cover?",
       "line_number": 1852,
-      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
-      "old_value": "10 days",
-      "new_value": "10",
-      "context": "30 Days Live Training Sprint: 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day.",
+      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
+      "old_value": "60 days over 2 months, Saturday & Sunday holidays, 4 hours per day",
+      "new_value": "60 days over 2 months, Saturday & Sunday holidays, 4 hours per day",
+      "context": "30 Days Live Training Sprint: 60 days over 2 months, Saturday & Sunday holidays, 4 hours per day.",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].due_after_day",
-        "data/pricing.json#offerings[individual-service-business].schedule.total_calendar_duration_days",
-        "data/pricing.json#offerings[individual-service-personal].schedule.total_calendar_duration_days"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
     },
     {
       "file": "faqs.html",
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "What is the pricing model for business training, and what does the 10-participant quota and 30-day training plus 30-day support guarantee cover?",
       "line_number": 1852,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "30 Days Live Training Sprint: 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day.",
+      "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
+      "old_value": "60 days",
+      "new_value": "60",
+      "context": "30 Days Live Training Sprint: 60 days over 2 months, Saturday & Sunday holidays, 4 hours per day.",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.total_calendar_duration_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].schedule.total_calendar_duration_days"
+      ]
     },
     {
       "file": "faqs.html",
@@ -16347,18 +16321,6 @@
     {
       "file": "index.html",
       "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Walkaway Guarantee & Apache 2.0",
-      "line_number": 571,
-      "field_key": "pricing:trust_and_payment_guarantees.risk_free_guarantees.walkaway_guarantee",
-      "old_value": "Walk away owing nothing if not satisfied after the first milestone training phase.",
-      "new_value": "Walk away owing nothing if not satisfied after the first milestone training phase.",
-      "context": "Walk away owing nothing if not satisfied after the first milestone training phase. All high-quality",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#trust_and_payment_guarantees.risk_free_guarantees.walkaway_guarantee"
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
       "section": "Explore The Platform",
       "line_number": 3032,
       "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
@@ -18782,18 +18744,6 @@
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
         "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
-    },
-    {
-      "file": "llms.txt",
-      "page": "",
-      "section": "Page Header",
-      "line_number": 168,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "Comprehensive organization-wide AI transformation program engineered for engineering cohorts, leadership teams, and cross-functional staff. 60 days total (30 days live engineering training + 30 day...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
     },
     {
       "file": "llms.txt",
@@ -23564,8 +23514,8 @@
       "section": "Page Header",
       "line_number": 60,
       "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
+      "old_value": "60 days over 2 months, Saturday & Sunday holidays, 4 hours per day",
+      "new_value": "60 days over 2 months, Saturday & Sunday holidays, 4 hours per day",
       "context": "\"description\": \"Transparent AI engagement model: Pick individual services at $300 USD per service for individuals and $300 USD per service for businesses (each covering 5 days of training + 5 days ...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
@@ -23729,8 +23679,8 @@
       "section": "Page Header",
       "line_number": 94,
       "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
+      "old_value": "60 days over 2 months, Saturday & Sunday holidays, 4 hours per day",
+      "new_value": "60 days over 2 months, Saturday & Sunday holidays, 4 hours per day",
       "context": "\"description\": \"Transparent AI engagement model: Pick individual services at $300 USD per service for individuals and $300 USD per service for businesses (each covering 5 days of training + 5 days ...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
@@ -24499,23 +24449,6 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 183,
-      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
-      "old_value": "10 days",
-      "new_value": "10",
-      "context": "\"description\": \"Comprehensive Business Training at $3,000 USD for 60 days (30 days live training + 30 days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].due_after_day",
-        "data/pricing.json#offerings[individual-service-business].schedule.total_calendar_duration_days",
-        "data/pricing.json#offerings[individual-service-personal].schedule.total_calendar_duration_days"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 183,
       "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
       "old_value": "30 days",
       "new_value": "30",
@@ -24534,8 +24467,8 @@
       "section": "Page Header",
       "line_number": 183,
       "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
+      "old_value": "60 days over 2 months, Saturday & Sunday holidays, 4 hours per day",
+      "new_value": "60 days over 2 months, Saturday & Sunday holidays, 4 hours per day",
       "context": "\"description\": \"Comprehensive Business Training at $3,000 USD for 60 days (30 days live training + 30 days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under ...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
@@ -25037,7 +24970,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$300",
       "new_value": "300",
-      "context": "Business Training Flagship ( $3,000 USD · 60 Days ): 30 days live training + 30 days guidance and materials ( 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours pe...",
+      "context": "Business Training Flagship ( $3,000 USD · 60 Days ): 30 days live training + 30 days guidance and materials ( 60 days over 2 months, Saturday & Sunday holidays, 4 hours per day ), up to 10 particip...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
@@ -25058,7 +24991,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
       "old_value": "10 participants",
       "new_value": "10",
-      "context": "Business Training Flagship ( $3,000 USD · 60 Days ): 30 days live training + 30 days guidance and materials ( 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours pe...",
+      "context": "Business Training Flagship ( $3,000 USD · 60 Days ): 30 days live training + 30 days guidance and materials ( 60 days over 2 months, Saturday & Sunday holidays, 4 hours per day ), up to 10 particip...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
       "also_in_data": [
@@ -25070,27 +25003,10 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Generative AI Packages & Transparent Parity Pricing",
       "line_number": 444,
-      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
-      "old_value": "10 days",
-      "new_value": "10",
-      "context": "Business Training Flagship ( $3,000 USD · 60 Days ): 30 days live training + 30 days guidance and materials ( 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours pe...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].due_after_day",
-        "data/pricing.json#offerings[individual-service-business].schedule.total_calendar_duration_days",
-        "data/pricing.json#offerings[individual-service-personal].schedule.total_calendar_duration_days"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Generative AI Packages & Transparent Parity Pricing",
-      "line_number": 444,
       "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
       "old_value": "30 days",
       "new_value": "30",
-      "context": "Business Training Flagship ( $3,000 USD · 60 Days ): 30 days live training + 30 days guidance and materials ( 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours pe...",
+      "context": "Business Training Flagship ( $3,000 USD · 60 Days ): 30 days live training + 30 days guidance and materials ( 60 days over 2 months, Saturday & Sunday holidays, 4 hours per day ), up to 10 particip...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
       "also_in_data": [
@@ -25105,11 +25021,26 @@
       "section": "Generative AI Packages & Transparent Parity Pricing",
       "line_number": 444,
       "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "Business Training Flagship ( $3,000 USD · 60 Days ): 30 days live training + 30 days guidance and materials ( 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours pe...",
+      "old_value": "60 days over 2 months, Saturday & Sunday holidays, 4 hours per day",
+      "new_value": "60 days over 2 months, Saturday & Sunday holidays, 4 hours per day",
+      "context": "Business Training Flagship ( $3,000 USD · 60 Days ): 30 days live training + 30 days guidance and materials ( 60 days over 2 months, Saturday & Sunday holidays, 4 hours per day ), up to 10 particip...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Generative AI Packages & Transparent Parity Pricing",
+      "line_number": 444,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
+      "old_value": "60 days",
+      "new_value": "60",
+      "context": "Business Training Flagship ( $3,000 USD · 60 Days ): 30 days live training + 30 days guidance and materials ( 60 days over 2 months, Saturday & Sunday holidays, 4 hours per day ), up to 10 particip...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.total_calendar_duration_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].schedule.total_calendar_duration_days"
+      ]
     },
     {
       "file": "pricing.html",
@@ -25119,7 +25050,7 @@
       "field_key": "pricing:offerings[flagship-business-training].tier1_base_price_usd",
       "old_value": "$3,000",
       "new_value": "3000",
-      "context": "Business Training Flagship ( $3,000 USD · 60 Days ): 30 days live training + 30 days guidance and materials ( 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours pe...",
+      "context": "Business Training Flagship ( $3,000 USD · 60 Days ): 30 days live training + 30 days guidance and materials ( 60 days over 2 months, Saturday & Sunday holidays, 4 hours per day ), up to 10 particip...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
       "also_in_data": [
@@ -25774,18 +25705,6 @@
       "file": "pricing.html",
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "$3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD · 60 Days (30d Training + 30d Guidance & Materials)",
-      "line_number": 531,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "training + 30 days of guidance and detailed guides/materials (30 working days over 8 weeks with 8 - 10 days",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD · 60 Days (30d Training + 30d Guidance & Materials)",
       "line_number": 544,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.price_usd",
       "old_value": "$2,250",
@@ -26364,18 +26283,6 @@
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
         "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Walkaway Guarantee & Apache 2.0",
-      "line_number": 818,
-      "field_key": "pricing:trust_and_payment_guarantees.risk_free_guarantees.walkaway_guarantee",
-      "old_value": "Walk away owing nothing if not satisfied after the first milestone training phase.",
-      "new_value": "Walk away owing nothing if not satisfied after the first milestone training phase.",
-      "context": "Walk away owing nothing if not satisfied after the first milestone training phase. All high-quality",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#trust_and_payment_guarantees.risk_free_guarantees.walkaway_guarantee"
     },
     {
       "file": "pricing.html",
@@ -28976,18 +28883,6 @@
       "page": "Tier 1 Pricing (100% Standard Rate - USA, China, EU) | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 60,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "\"description\": \"Transparent AI engagement model: Pick individual services at $300 USD per service for individuals and $300 USD per service for businesses (each covering 5 days of training + 5 days ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-1-usa-china-eu-100.html",
-      "page": "Tier 1 Pricing (100% Standard Rate - USA, China, EU) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 60,
       "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
       "old_value": "60 days",
       "new_value": "60",
@@ -29135,18 +29030,6 @@
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
         "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
-    },
-    {
-      "file": "pricing/pricing-tier-1-usa-china-eu-100.html",
-      "page": "Tier 1 Pricing (100% Standard Rate - USA, China, EU) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 94,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "\"description\": \"Transparent AI engagement model: Pick individual services at $300 USD per service for individuals and $300 USD per service for businesses (each covering 5 days of training + 5 days ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
     },
     {
       "file": "pricing/pricing-tier-1-usa-china-eu-100.html",
@@ -29946,18 +29829,6 @@
       "page": "Tier 1 Pricing (100% Standard Rate - USA, China, EU) | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 183,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "\"description\": \"Comprehensive Business Training at $3,000 USD for 60 days (30 days live training + 30 days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-1-usa-china-eu-100.html",
-      "page": "Tier 1 Pricing (100% Standard Rate - USA, China, EU) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 183,
       "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
       "old_value": "60 days",
       "new_value": "60",
@@ -30591,18 +30462,6 @@
       "page": "Tier 1 Pricing (100% Standard Rate - USA, China, EU) | Thomas Cherickal",
       "section": "Tier 1 Pricing: High-Income Economies (100% Rate)",
       "line_number": 514,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "Business Training Flagship ($3,000 USD · 60 Days): 30 days live training + 30 days guidance and materials (30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per d...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-1-usa-china-eu-100.html",
-      "page": "Tier 1 Pricing (100% Standard Rate - USA, China, EU) | Thomas Cherickal",
-      "section": "Tier 1 Pricing: High-Income Economies (100% Rate)",
-      "line_number": 514,
       "field_key": "pricing:offerings[flagship-business-training].tier1_base_price_usd",
       "old_value": "$3,000",
       "new_value": "3000",
@@ -30977,18 +30836,6 @@
       "file": "pricing/pricing-tier-1-usa-china-eu-100.html",
       "page": "Tier 1 Pricing (100% Standard Rate - USA, China, EU) | Thomas Cherickal",
       "section": "$3,000 USD · 60 Days (30d Training + 30d Guidance & Materials)",
-      "line_number": 566,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "Includes up to 10 participants (additional seats at $300 USD per seat). Covers full cross-service engineering stacks tailored to your organizational goals. 30 days of live training + 30 days of gui...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-1-usa-china-eu-100.html",
-      "page": "Tier 1 Pricing (100% Standard Rate - USA, China, EU) | Thomas Cherickal",
-      "section": "$3,000 USD · 60 Days (30d Training + 30d Guidance & Materials)",
       "line_number": 577,
       "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
       "old_value": "30d",
@@ -31220,18 +31067,6 @@
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
         "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
-    },
-    {
-      "file": "pricing/pricing-tier-1-usa-china-eu-100.html",
-      "page": "Tier 1 Pricing (100% Standard Rate - USA, China, EU) | Thomas Cherickal",
-      "section": "Walkaway Guarantee & Apache 2.0",
-      "line_number": 639,
-      "field_key": "pricing:trust_and_payment_guarantees.risk_free_guarantees.walkaway_guarantee",
-      "old_value": "Walk away owing nothing if not satisfied after the first milestone training phase.",
-      "new_value": "Walk away owing nothing if not satisfied after the first milestone training phase.",
-      "context": "Walk away owing nothing if not satisfied after the first milestone training phase. All high-quality",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#trust_and_payment_guarantees.risk_free_guarantees.walkaway_guarantee"
     },
     {
       "file": "pricing/pricing-tier-1-usa-china-eu-100.html",
@@ -35542,18 +35377,6 @@
       "page": "Tier 2 Pricing (75% Rate / 25% Off - Brazil, Malaysia) | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 60,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "\"description\": \"Transparent AI engagement model: Pick individual services at $300 USD per service for individuals and $300 USD per service for businesses (each covering 5 days of training + 5 days ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-2-brazil-malaysia-75.html",
-      "page": "Tier 2 Pricing (75% Rate / 25% Off - Brazil, Malaysia) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 60,
       "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
       "old_value": "60 days",
       "new_value": "60",
@@ -35701,18 +35524,6 @@
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
         "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
-    },
-    {
-      "file": "pricing/pricing-tier-2-brazil-malaysia-75.html",
-      "page": "Tier 2 Pricing (75% Rate / 25% Off - Brazil, Malaysia) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 94,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "\"description\": \"Transparent AI engagement model: Pick individual services at $300 USD per service for individuals and $300 USD per service for businesses (each covering 5 days of training + 5 days ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
     },
     {
       "file": "pricing/pricing-tier-2-brazil-malaysia-75.html",
@@ -36512,18 +36323,6 @@
       "page": "Tier 2 Pricing (75% Rate / 25% Off - Brazil, Malaysia) | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 183,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "\"description\": \"Comprehensive Business Training at $3,000 USD for 60 days (30 days live training + 30 days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-2-brazil-malaysia-75.html",
-      "page": "Tier 2 Pricing (75% Rate / 25% Off - Brazil, Malaysia) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 183,
       "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
       "old_value": "60 days",
       "new_value": "60",
@@ -37187,18 +36986,6 @@
       "file": "pricing/pricing-tier-2-brazil-malaysia-75.html",
       "page": "Tier 2 Pricing (75% Rate / 25% Off - Brazil, Malaysia) | Thomas Cherickal",
       "section": "Tier 2 Pricing: Upper-Middle-Income Economies (75% Rate)",
-      "line_number": 514,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "Business Training Flagship ($2,250 USD · 60 Days): 30 days live training + 30 days guidance and materials (30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per d...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-2-brazil-malaysia-75.html",
-      "page": "Tier 2 Pricing (75% Rate / 25% Off - Brazil, Malaysia) | Thomas Cherickal",
-      "section": "Tier 2 Pricing: Upper-Middle-Income Economies (75% Rate)",
       "line_number": 518,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.price_usd",
       "old_value": "$2,250",
@@ -37537,18 +37324,6 @@
       "file": "pricing/pricing-tier-2-brazil-malaysia-75.html",
       "page": "Tier 2 Pricing (75% Rate / 25% Off - Brazil, Malaysia) | Thomas Cherickal",
       "section": "$2,250 USD · 60 Days (30d Training + 30d Guidance & Materials)",
-      "line_number": 566,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "Includes up to 10 participants (additional seats at $225 USD per seat). Covers full cross-service engineering stacks tailored to your organizational goals. 30 days of live training + 30 days of gui...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-2-brazil-malaysia-75.html",
-      "page": "Tier 2 Pricing (75% Rate / 25% Off - Brazil, Malaysia) | Thomas Cherickal",
-      "section": "$2,250 USD · 60 Days (30d Training + 30d Guidance & Materials)",
       "line_number": 577,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.price_usd",
       "old_value": "$2,250",
@@ -37778,18 +37553,6 @@
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
         "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
-    },
-    {
-      "file": "pricing/pricing-tier-2-brazil-malaysia-75.html",
-      "page": "Tier 2 Pricing (75% Rate / 25% Off - Brazil, Malaysia) | Thomas Cherickal",
-      "section": "Walkaway Guarantee & Apache 2.0",
-      "line_number": 639,
-      "field_key": "pricing:trust_and_payment_guarantees.risk_free_guarantees.walkaway_guarantee",
-      "old_value": "Walk away owing nothing if not satisfied after the first milestone training phase.",
-      "new_value": "Walk away owing nothing if not satisfied after the first milestone training phase.",
-      "context": "Walk away owing nothing if not satisfied after the first milestone training phase. All high-quality",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#trust_and_payment_guarantees.risk_free_guarantees.walkaway_guarantee"
     },
     {
       "file": "pricing/pricing-tier-2-brazil-malaysia-75.html",
@@ -41899,18 +41662,6 @@
       "page": "Tier 3 Pricing (50% Rate / 50% Off - India, Egypt) | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 60,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "\"description\": \"Transparent AI engagement model: Pick individual services at $300 USD per service for individuals and $300 USD per service for businesses (each covering 5 days of training + 5 days ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-3-india-egypt-50.html",
-      "page": "Tier 3 Pricing (50% Rate / 50% Off - India, Egypt) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 60,
       "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
       "old_value": "60 days",
       "new_value": "60",
@@ -42058,18 +41809,6 @@
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
         "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
-    },
-    {
-      "file": "pricing/pricing-tier-3-india-egypt-50.html",
-      "page": "Tier 3 Pricing (50% Rate / 50% Off - India, Egypt) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 94,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "\"description\": \"Transparent AI engagement model: Pick individual services at $300 USD per service for individuals and $300 USD per service for businesses (each covering 5 days of training + 5 days ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
     },
     {
       "file": "pricing/pricing-tier-3-india-egypt-50.html",
@@ -42869,18 +42608,6 @@
       "page": "Tier 3 Pricing (50% Rate / 50% Off - India, Egypt) | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 183,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "\"description\": \"Comprehensive Business Training at $3,000 USD for 60 days (30 days live training + 30 days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-3-india-egypt-50.html",
-      "page": "Tier 3 Pricing (50% Rate / 50% Off - India, Egypt) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 183,
       "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
       "old_value": "60 days",
       "new_value": "60",
@@ -43542,18 +43269,6 @@
       "file": "pricing/pricing-tier-3-india-egypt-50.html",
       "page": "Tier 3 Pricing (50% Rate / 50% Off - India, Egypt) | Thomas Cherickal",
       "section": "Tier 3 Pricing: Lower-Middle & Low-Income (50% Rate)",
-      "line_number": 514,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "Business Training Flagship ($1,500 USD · 60 Days): 30 days live training + 30 days guidance and materials (30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per d...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-3-india-egypt-50.html",
-      "page": "Tier 3 Pricing (50% Rate / 50% Off - India, Egypt) | Thomas Cherickal",
-      "section": "Tier 3 Pricing: Lower-Middle & Low-Income (50% Rate)",
       "line_number": 518,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
       "old_value": "$1,500",
@@ -43912,18 +43627,6 @@
       "file": "pricing/pricing-tier-3-india-egypt-50.html",
       "page": "Tier 3 Pricing (50% Rate / 50% Off - India, Egypt) | Thomas Cherickal",
       "section": "$1,500 USD · 60 Days (30d Training + 30d Guidance & Materials)",
-      "line_number": 566,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "Includes up to 10 participants (additional seats at $150 USD per seat). Covers full cross-service engineering stacks tailored to your organizational goals. 30 days of live training + 30 days of gui...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-3-india-egypt-50.html",
-      "page": "Tier 3 Pricing (50% Rate / 50% Off - India, Egypt) | Thomas Cherickal",
-      "section": "$1,500 USD · 60 Days (30d Training + 30d Guidance & Materials)",
       "line_number": 577,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
       "old_value": "$1,500",
@@ -44155,18 +43858,6 @@
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
         "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
-    },
-    {
-      "file": "pricing/pricing-tier-3-india-egypt-50.html",
-      "page": "Tier 3 Pricing (50% Rate / 50% Off - India, Egypt) | Thomas Cherickal",
-      "section": "Walkaway Guarantee & Apache 2.0",
-      "line_number": 639,
-      "field_key": "pricing:trust_and_payment_guarantees.risk_free_guarantees.walkaway_guarantee",
-      "old_value": "Walk away owing nothing if not satisfied after the first milestone training phase.",
-      "new_value": "Walk away owing nothing if not satisfied after the first milestone training phase.",
-      "context": "Walk away owing nothing if not satisfied after the first milestone training phase. All high-quality",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#trust_and_payment_guarantees.risk_free_guarantees.walkaway_guarantee"
     },
     {
       "file": "pricing/pricing-tier-3-india-egypt-50.html",
@@ -48510,18 +48201,6 @@
       "page": "Tier 4 Pricing (50% Flat Startup Discount) | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 60,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "\"description\": \"Transparent AI engagement model: Pick individual services at $300 USD per service for individuals and $300 USD per service for businesses (each covering 5 days of training + 5 days ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-4-tech-startups-50.html",
-      "page": "Tier 4 Pricing (50% Flat Startup Discount) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 60,
       "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
       "old_value": "60 days",
       "new_value": "60",
@@ -48669,18 +48348,6 @@
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
         "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
-    },
-    {
-      "file": "pricing/pricing-tier-4-tech-startups-50.html",
-      "page": "Tier 4 Pricing (50% Flat Startup Discount) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 94,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "\"description\": \"Transparent AI engagement model: Pick individual services at $300 USD per service for individuals and $300 USD per service for businesses (each covering 5 days of training + 5 days ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
     },
     {
       "file": "pricing/pricing-tier-4-tech-startups-50.html",
@@ -49480,18 +49147,6 @@
       "page": "Tier 4 Pricing (50% Flat Startup Discount) | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 183,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "\"description\": \"Comprehensive Business Training at $3,000 USD for 60 days (30 days live training + 30 days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-4-tech-startups-50.html",
-      "page": "Tier 4 Pricing (50% Flat Startup Discount) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 183,
       "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
       "old_value": "60 days",
       "new_value": "60",
@@ -50153,18 +49808,6 @@
       "file": "pricing/pricing-tier-4-tech-startups-50.html",
       "page": "Tier 4 Pricing (50% Flat Startup Discount) | Thomas Cherickal",
       "section": "Tier 4 Pricing: Early-Stage Tech Startups (50% Rate)",
-      "line_number": 514,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "Business Training Flagship ($1,500 USD · 60 Days): 30 days live training + 30 days guidance and materials (30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per d...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-4-tech-startups-50.html",
-      "page": "Tier 4 Pricing (50% Flat Startup Discount) | Thomas Cherickal",
-      "section": "Tier 4 Pricing: Early-Stage Tech Startups (50% Rate)",
       "line_number": 518,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
       "old_value": "$1,500",
@@ -50523,18 +50166,6 @@
       "file": "pricing/pricing-tier-4-tech-startups-50.html",
       "page": "Tier 4 Pricing (50% Flat Startup Discount) | Thomas Cherickal",
       "section": "$1,500 USD · 60 Days (30d Training + 30d Guidance & Materials)",
-      "line_number": 566,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "Includes up to 10 participants (additional seats at $150 USD per seat). Covers full cross-service engineering stacks tailored to your organizational goals. 30 days of live training + 30 days of gui...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-4-tech-startups-50.html",
-      "page": "Tier 4 Pricing (50% Flat Startup Discount) | Thomas Cherickal",
-      "section": "$1,500 USD · 60 Days (30d Training + 30d Guidance & Materials)",
       "line_number": 577,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
       "old_value": "$1,500",
@@ -50766,18 +50397,6 @@
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
         "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
-    },
-    {
-      "file": "pricing/pricing-tier-4-tech-startups-50.html",
-      "page": "Tier 4 Pricing (50% Flat Startup Discount) | Thomas Cherickal",
-      "section": "Walkaway Guarantee & Apache 2.0",
-      "line_number": 639,
-      "field_key": "pricing:trust_and_payment_guarantees.risk_free_guarantees.walkaway_guarantee",
-      "old_value": "Walk away owing nothing if not satisfied after the first milestone training phase.",
-      "new_value": "Walk away owing nothing if not satisfied after the first milestone training phase.",
-      "context": "Walk away owing nothing if not satisfied after the first milestone training phase. All high-quality",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#trust_and_payment_guarantees.risk_free_guarantees.walkaway_guarantee"
     },
     {
       "file": "pricing/pricing-tier-4-tech-startups-50.html",
@@ -55134,18 +54753,6 @@
       "page": "Tier 5 Pricing (25% Rate / 75% Off - Universities, Non-Profits) | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 60,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "\"description\": \"Transparent AI engagement model: Pick individual services at $300 USD per service for individuals and $300 USD per service for businesses (each covering 5 days of training + 5 days ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-5-colleges-non-profits-25.html",
-      "page": "Tier 5 Pricing (25% Rate / 75% Off - Universities, Non-Profits) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 60,
       "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
       "old_value": "60 days",
       "new_value": "60",
@@ -55293,18 +54900,6 @@
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
         "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
-    },
-    {
-      "file": "pricing/pricing-tier-5-colleges-non-profits-25.html",
-      "page": "Tier 5 Pricing (25% Rate / 75% Off - Universities, Non-Profits) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 94,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "\"description\": \"Transparent AI engagement model: Pick individual services at $300 USD per service for individuals and $300 USD per service for businesses (each covering 5 days of training + 5 days ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
     },
     {
       "file": "pricing/pricing-tier-5-colleges-non-profits-25.html",
@@ -56104,18 +55699,6 @@
       "page": "Tier 5 Pricing (25% Rate / 75% Off - Universities, Non-Profits) | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 183,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "\"description\": \"Comprehensive Business Training at $3,000 USD for 60 days (30 days live training + 30 days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-5-colleges-non-profits-25.html",
-      "page": "Tier 5 Pricing (25% Rate / 75% Off - Universities, Non-Profits) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 183,
       "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
       "old_value": "60 days",
       "new_value": "60",
@@ -56779,18 +56362,6 @@
       "file": "pricing/pricing-tier-5-colleges-non-profits-25.html",
       "page": "Tier 5 Pricing (25% Rate / 75% Off - Universities, Non-Profits) | Thomas Cherickal",
       "section": "Tier 5 Pricing: Academia & Non-Profits (25% Rate)",
-      "line_number": 514,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "Business Training Flagship ($750 USD · 60 Days): 30 days live training + 30 days guidance and materials (30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-5-colleges-non-profits-25.html",
-      "page": "Tier 5 Pricing (25% Rate / 75% Off - Universities, Non-Profits) | Thomas Cherickal",
-      "section": "Tier 5 Pricing: Academia & Non-Profits (25% Rate)",
       "line_number": 518,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.price_usd",
       "old_value": "$750",
@@ -57129,18 +56700,6 @@
       "file": "pricing/pricing-tier-5-colleges-non-profits-25.html",
       "page": "Tier 5 Pricing (25% Rate / 75% Off - Universities, Non-Profits) | Thomas Cherickal",
       "section": "$750 USD · 60 Days (30d Training + 30d Guidance & Materials)",
-      "line_number": 566,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "Includes up to 10 participants (additional seats at $75 USD per seat). Covers full cross-service engineering stacks tailored to your organizational goals. 30 days of live training + 30 days of guid...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-5-colleges-non-profits-25.html",
-      "page": "Tier 5 Pricing (25% Rate / 75% Off - Universities, Non-Profits) | Thomas Cherickal",
-      "section": "$750 USD · 60 Days (30d Training + 30d Guidance & Materials)",
       "line_number": 577,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.price_usd",
       "old_value": "$750",
@@ -57370,18 +56929,6 @@
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
         "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
-    },
-    {
-      "file": "pricing/pricing-tier-5-colleges-non-profits-25.html",
-      "page": "Tier 5 Pricing (25% Rate / 75% Off - Universities, Non-Profits) | Thomas Cherickal",
-      "section": "Walkaway Guarantee & Apache 2.0",
-      "line_number": 639,
-      "field_key": "pricing:trust_and_payment_guarantees.risk_free_guarantees.walkaway_guarantee",
-      "old_value": "Walk away owing nothing if not satisfied after the first milestone training phase.",
-      "new_value": "Walk away owing nothing if not satisfied after the first milestone training phase.",
-      "context": "Walk away owing nothing if not satisfied after the first milestone training phase. All high-quality",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#trust_and_payment_guarantees.risk_free_guarantees.walkaway_guarantee"
     },
     {
       "file": "pricing/pricing-tier-5-colleges-non-profits-25.html",
@@ -61468,18 +61015,6 @@
       "page": "Tier 6 Pricing (Subsidized Micro-Rates / Up to 90%+ Relief) | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 60,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "\"description\": \"Transparent AI engagement model: Pick individual services at $300 USD per service for individuals and $300 USD per service for businesses (each covering 5 days of training + 5 days ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-6-crisis-affected-10.html",
-      "page": "Tier 6 Pricing (Subsidized Micro-Rates / Up to 90%+ Relief) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 60,
       "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
       "old_value": "60 days",
       "new_value": "60",
@@ -61627,18 +61162,6 @@
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
         "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
-    },
-    {
-      "file": "pricing/pricing-tier-6-crisis-affected-10.html",
-      "page": "Tier 6 Pricing (Subsidized Micro-Rates / Up to 90%+ Relief) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 94,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "\"description\": \"Transparent AI engagement model: Pick individual services at $300 USD per service for individuals and $300 USD per service for businesses (each covering 5 days of training + 5 days ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
     },
     {
       "file": "pricing/pricing-tier-6-crisis-affected-10.html",
@@ -62438,18 +61961,6 @@
       "page": "Tier 6 Pricing (Subsidized Micro-Rates / Up to 90%+ Relief) | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 183,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "\"description\": \"Comprehensive Business Training at $3,000 USD for 60 days (30 days live training + 30 days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under ...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-6-crisis-affected-10.html",
-      "page": "Tier 6 Pricing (Subsidized Micro-Rates / Up to 90%+ Relief) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 183,
       "field_key": "pricing:offerings[flagship-business-training].schedule.total_calendar_duration_days",
       "old_value": "60 days",
       "new_value": "60",
@@ -63048,18 +62559,6 @@
       "file": "pricing/pricing-tier-6-crisis-affected-10.html",
       "page": "Tier 6 Pricing (Subsidized Micro-Rates / Up to 90%+ Relief) | Thomas Cherickal",
       "section": "Tier 6 Pricing: Crisis-Affected & Subsidized (10% Base Rate)",
-      "line_number": 514,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "Business Training Flagship ($300 USD · 60 Days): 30 days live training + 30 days guidance and materials (30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-6-crisis-affected-10.html",
-      "page": "Tier 6 Pricing (Subsidized Micro-Rates / Up to 90%+ Relief) | Thomas Cherickal",
-      "section": "Tier 6 Pricing: Crisis-Affected & Subsidized (10% Base Rate)",
       "line_number": 518,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$300",
@@ -63342,18 +62841,6 @@
       "file": "pricing/pricing-tier-6-crisis-affected-10.html",
       "page": "Tier 6 Pricing (Subsidized Micro-Rates / Up to 90%+ Relief) | Thomas Cherickal",
       "section": "$300 USD · 60 Days (30d Training + 30d Guidance & Materials)",
-      "line_number": 566,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.schedule_notes",
-      "old_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "new_value": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day",
-      "context": "Includes up to 10 participants (additional seats at $30 USD per seat). Covers full cross-service engineering stacks tailored to your organizational goals. 30 days of live training + 30 days of guid...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.schedule_notes"
-    },
-    {
-      "file": "pricing/pricing-tier-6-crisis-affected-10.html",
-      "page": "Tier 6 Pricing (Subsidized Micro-Rates / Up to 90%+ Relief) | Thomas Cherickal",
-      "section": "$300 USD · 60 Days (30d Training + 30d Guidance & Materials)",
       "line_number": 577,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$300",
@@ -63589,18 +63076,6 @@
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
         "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
-    },
-    {
-      "file": "pricing/pricing-tier-6-crisis-affected-10.html",
-      "page": "Tier 6 Pricing (Subsidized Micro-Rates / Up to 90%+ Relief) | Thomas Cherickal",
-      "section": "Walkaway Guarantee & Apache 2.0",
-      "line_number": 639,
-      "field_key": "pricing:trust_and_payment_guarantees.risk_free_guarantees.walkaway_guarantee",
-      "old_value": "Walk away owing nothing if not satisfied after the first milestone training phase.",
-      "new_value": "Walk away owing nothing if not satisfied after the first milestone training phase.",
-      "context": "Walk away owing nothing if not satisfied after the first milestone training phase. All high-quality",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#trust_and_payment_guarantees.risk_free_guarantees.walkaway_guarantee"
     },
     {
       "file": "pricing/pricing-tier-6-crisis-affected-10.html",
@@ -173492,18 +172967,6 @@
       "file": "pricing/pricing-tier-1-usa-china-eu-100.html",
       "page": "Tier 1 Pricing (100% Standard Rate - USA, China, EU) | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 457,
-      "field_key": "claude:guides[claude-features].short_name",
-      "old_value": "Claude Features",
-      "new_value": "Claude Features",
-      "context": "Claude Features",
-      "match_type": "exact",
-      "data_source": "data/claude.json#guides[claude-features].short_name"
-    },
-    {
-      "file": "pricing/pricing-tier-1-usa-china-eu-100.html",
-      "page": "Tier 1 Pricing (100% Standard Rate - USA, China, EU) | Thomas Cherickal",
-      "section": "Page Header",
       "line_number": 458,
       "field_key": "claude:guides[claude-code].short_name",
       "old_value": "Claude Code",
@@ -173523,18 +172986,6 @@
       "context": "Claude Skills",
       "match_type": "exact",
       "data_source": "data/claude.json#guides[claude-skills].short_name"
-    },
-    {
-      "file": "pricing/pricing-tier-1-usa-china-eu-100.html",
-      "page": "Tier 1 Pricing (100% Standard Rate - USA, China, EU) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 461,
-      "field_key": "claude:guides[claude-custom-mcp].short_name",
-      "old_value": "Claude Custom MCP",
-      "new_value": "Claude Custom MCP",
-      "context": "Claude Custom MCP",
-      "match_type": "exact",
-      "data_source": "data/claude.json#guides[claude-custom-mcp].short_name"
     },
     {
       "file": "pricing/pricing-tier-1-usa-china-eu-100.html",
@@ -173636,18 +173087,6 @@
       "file": "pricing/pricing-tier-2-brazil-malaysia-75.html",
       "page": "Tier 2 Pricing (75% Rate / 25% Off - Brazil, Malaysia) | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 457,
-      "field_key": "claude:guides[claude-features].short_name",
-      "old_value": "Claude Features",
-      "new_value": "Claude Features",
-      "context": "Claude Features",
-      "match_type": "exact",
-      "data_source": "data/claude.json#guides[claude-features].short_name"
-    },
-    {
-      "file": "pricing/pricing-tier-2-brazil-malaysia-75.html",
-      "page": "Tier 2 Pricing (75% Rate / 25% Off - Brazil, Malaysia) | Thomas Cherickal",
-      "section": "Page Header",
       "line_number": 458,
       "field_key": "claude:guides[claude-code].short_name",
       "old_value": "Claude Code",
@@ -173667,18 +173106,6 @@
       "context": "Claude Skills",
       "match_type": "exact",
       "data_source": "data/claude.json#guides[claude-skills].short_name"
-    },
-    {
-      "file": "pricing/pricing-tier-2-brazil-malaysia-75.html",
-      "page": "Tier 2 Pricing (75% Rate / 25% Off - Brazil, Malaysia) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 461,
-      "field_key": "claude:guides[claude-custom-mcp].short_name",
-      "old_value": "Claude Custom MCP",
-      "new_value": "Claude Custom MCP",
-      "context": "Claude Custom MCP",
-      "match_type": "exact",
-      "data_source": "data/claude.json#guides[claude-custom-mcp].short_name"
     },
     {
       "file": "pricing/pricing-tier-2-brazil-malaysia-75.html",
@@ -173780,18 +173207,6 @@
       "file": "pricing/pricing-tier-3-india-egypt-50.html",
       "page": "Tier 3 Pricing (50% Rate / 50% Off - India, Egypt) | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 457,
-      "field_key": "claude:guides[claude-features].short_name",
-      "old_value": "Claude Features",
-      "new_value": "Claude Features",
-      "context": "Claude Features",
-      "match_type": "exact",
-      "data_source": "data/claude.json#guides[claude-features].short_name"
-    },
-    {
-      "file": "pricing/pricing-tier-3-india-egypt-50.html",
-      "page": "Tier 3 Pricing (50% Rate / 50% Off - India, Egypt) | Thomas Cherickal",
-      "section": "Page Header",
       "line_number": 458,
       "field_key": "claude:guides[claude-code].short_name",
       "old_value": "Claude Code",
@@ -173811,18 +173226,6 @@
       "context": "Claude Skills",
       "match_type": "exact",
       "data_source": "data/claude.json#guides[claude-skills].short_name"
-    },
-    {
-      "file": "pricing/pricing-tier-3-india-egypt-50.html",
-      "page": "Tier 3 Pricing (50% Rate / 50% Off - India, Egypt) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 461,
-      "field_key": "claude:guides[claude-custom-mcp].short_name",
-      "old_value": "Claude Custom MCP",
-      "new_value": "Claude Custom MCP",
-      "context": "Claude Custom MCP",
-      "match_type": "exact",
-      "data_source": "data/claude.json#guides[claude-custom-mcp].short_name"
     },
     {
       "file": "pricing/pricing-tier-3-india-egypt-50.html",
@@ -173924,18 +173327,6 @@
       "file": "pricing/pricing-tier-4-tech-startups-50.html",
       "page": "Tier 4 Pricing (50% Flat Startup Discount) | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 457,
-      "field_key": "claude:guides[claude-features].short_name",
-      "old_value": "Claude Features",
-      "new_value": "Claude Features",
-      "context": "Claude Features",
-      "match_type": "exact",
-      "data_source": "data/claude.json#guides[claude-features].short_name"
-    },
-    {
-      "file": "pricing/pricing-tier-4-tech-startups-50.html",
-      "page": "Tier 4 Pricing (50% Flat Startup Discount) | Thomas Cherickal",
-      "section": "Page Header",
       "line_number": 458,
       "field_key": "claude:guides[claude-code].short_name",
       "old_value": "Claude Code",
@@ -173955,18 +173346,6 @@
       "context": "Claude Skills",
       "match_type": "exact",
       "data_source": "data/claude.json#guides[claude-skills].short_name"
-    },
-    {
-      "file": "pricing/pricing-tier-4-tech-startups-50.html",
-      "page": "Tier 4 Pricing (50% Flat Startup Discount) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 461,
-      "field_key": "claude:guides[claude-custom-mcp].short_name",
-      "old_value": "Claude Custom MCP",
-      "new_value": "Claude Custom MCP",
-      "context": "Claude Custom MCP",
-      "match_type": "exact",
-      "data_source": "data/claude.json#guides[claude-custom-mcp].short_name"
     },
     {
       "file": "pricing/pricing-tier-4-tech-startups-50.html",
@@ -174068,18 +173447,6 @@
       "file": "pricing/pricing-tier-5-colleges-non-profits-25.html",
       "page": "Tier 5 Pricing (25% Rate / 75% Off - Universities, Non-Profits) | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 457,
-      "field_key": "claude:guides[claude-features].short_name",
-      "old_value": "Claude Features",
-      "new_value": "Claude Features",
-      "context": "Claude Features",
-      "match_type": "exact",
-      "data_source": "data/claude.json#guides[claude-features].short_name"
-    },
-    {
-      "file": "pricing/pricing-tier-5-colleges-non-profits-25.html",
-      "page": "Tier 5 Pricing (25% Rate / 75% Off - Universities, Non-Profits) | Thomas Cherickal",
-      "section": "Page Header",
       "line_number": 458,
       "field_key": "claude:guides[claude-code].short_name",
       "old_value": "Claude Code",
@@ -174099,18 +173466,6 @@
       "context": "Claude Skills",
       "match_type": "exact",
       "data_source": "data/claude.json#guides[claude-skills].short_name"
-    },
-    {
-      "file": "pricing/pricing-tier-5-colleges-non-profits-25.html",
-      "page": "Tier 5 Pricing (25% Rate / 75% Off - Universities, Non-Profits) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 461,
-      "field_key": "claude:guides[claude-custom-mcp].short_name",
-      "old_value": "Claude Custom MCP",
-      "new_value": "Claude Custom MCP",
-      "context": "Claude Custom MCP",
-      "match_type": "exact",
-      "data_source": "data/claude.json#guides[claude-custom-mcp].short_name"
     },
     {
       "file": "pricing/pricing-tier-5-colleges-non-profits-25.html",
@@ -174212,18 +173567,6 @@
       "file": "pricing/pricing-tier-6-crisis-affected-10.html",
       "page": "Tier 6 Pricing (Subsidized Micro-Rates / Up to 90%+ Relief) | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 457,
-      "field_key": "claude:guides[claude-features].short_name",
-      "old_value": "Claude Features",
-      "new_value": "Claude Features",
-      "context": "Claude Features",
-      "match_type": "exact",
-      "data_source": "data/claude.json#guides[claude-features].short_name"
-    },
-    {
-      "file": "pricing/pricing-tier-6-crisis-affected-10.html",
-      "page": "Tier 6 Pricing (Subsidized Micro-Rates / Up to 90%+ Relief) | Thomas Cherickal",
-      "section": "Page Header",
       "line_number": 458,
       "field_key": "claude:guides[claude-code].short_name",
       "old_value": "Claude Code",
@@ -174243,18 +173586,6 @@
       "context": "Claude Skills",
       "match_type": "exact",
       "data_source": "data/claude.json#guides[claude-skills].short_name"
-    },
-    {
-      "file": "pricing/pricing-tier-6-crisis-affected-10.html",
-      "page": "Tier 6 Pricing (Subsidized Micro-Rates / Up to 90%+ Relief) | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 461,
-      "field_key": "claude:guides[claude-custom-mcp].short_name",
-      "old_value": "Claude Custom MCP",
-      "new_value": "Claude Custom MCP",
-      "context": "Claude Custom MCP",
-      "match_type": "exact",
-      "data_source": "data/claude.json#guides[claude-custom-mcp].short_name"
     },
     {
       "file": "pricing/pricing-tier-6-crisis-affected-10.html",
@@ -317231,11 +316562,7 @@
       "new_value": "Walk away owing nothing if not satisfied after the first 5 days of completed training.",
       "context": "Flagships, walk away owing nothing if not satisfied after the first 5 days of completed training. In",
       "match_type": "fuzzy",
-      "data_source": "data/faqs.json#core_policies.walkaway_guarantee.summary",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.walkaway_policy",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.walkaway_policy"
-      ]
+      "data_source": "data/faqs.json#core_policies.walkaway_guarantee.summary"
     },
     {
       "file": "guarantees.html",
