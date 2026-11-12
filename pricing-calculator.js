@@ -98,6 +98,8 @@
 
   const ALL_SERVICES_DATA = [
     { slug: "service-generative-ai-transformation", title: "Generative AI Transformation" },
+    { slug: "service-knowledge-graphs", title: "Knowledge Graphs" },
+    { slug: "service-local-ai-for-sensitive-data", title: "Local AI for Sensitive Data" },
     { slug: "service-local-llms-cost-slashing", title: "Local LLMs & Cost Slashing" },
     { slug: "service-claude-agents-orchestration", title: "Claude Agent Orchestration" },
     { slug: "service-agentic-assistants", title: "Agentic Assistants Training" },

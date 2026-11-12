@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Knowledge Graphs | Thomas Cherickal</title>
+<meta content="Build a private, local-first personal knowledge graph with automated entity-relation extraction, entity resolution, NetworkX or Neo4j storage, and GraphRAG retrieval." name="description"/>
+<meta content="Thomas Cherickal" name="author"/>
+<!-- Canonical URL -->
+<link href="https://thedigitalfuturist.com/personal-services/personal-service-knowledge-graphs.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="https://thedigitalfuturist.com/personal-services/personal-service-knowledge-graphs.html" property="og:url"/>
+<meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
+<meta content="Personal Knowledge Graphs &amp; GraphRAG | Thomas Cherickal" property="og:title"/>
+<meta content="Build a private, local-first personal knowledge graph with automated entity-relation extraction, entity resolution, NetworkX or Neo4j storage, and GraphRAG retrieval." property="og:description"/>
+<meta content="Personal Knowledge Graphs &amp; GraphRAG | Thomas Cherickal" name="twitter:title"/>
+<meta content="Build a private, local-first personal knowledge graph with automated entity-relation extraction, entity resolution, NetworkX or Neo4j storage, and GraphRAG retrieval." name="twitter:description"/>
+<meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
+<meta content="en_US" property="og:locale"/>
+<!-- Favicon & Icons -->
+<link href="../assets/favicon.ico" rel="icon" sizes="any"/>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../site.webmanifest" rel="manifest"/>
+<meta content="#000000" name="theme-color"/>
+<!-- Structured Data (JSON-LD) for Google Rich Results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://thedigitalfuturist.com/personal-services/personal-service-knowledge-graphs.html#webpage",
+      "url": "https://thedigitalfuturist.com/personal-services/personal-service-knowledge-graphs.html",
+      "name": "Personal Knowledge Graphs & GraphRAG - Service Specification | Thomas Cherickal",
+      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Build a private, local-first personal knowledge graph with automated entity-relation extraction, entity resolution, NetworkX or Neo4j storage, and GraphRAG retrieval.",
+      "isPartOf": {
+        "@id": "https://thedigitalfuturist.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://thedigitalfuturist.com/personal-services/personal-service-knowledge-graphs.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thedigitalfuturist.com/personal-services/personal-service-knowledge-graphs.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thedigitalfuturist.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Personal Knowledge Graphs",
+          "item": "https://thedigitalfuturist.com/personal-services/personal-service-knowledge-graphs.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://thedigitalfuturist.com/personal-services/personal-service-knowledge-graphs.html#service",
+      "name": "Personal Knowledge Graphs & GraphRAG - Thomas Cherickal",
+      "serviceType": "Personal Knowledge Graph Engineering & GraphRAG",
+      "url": "https://thedigitalfuturist.com/personal-services/personal-service-knowledge-graphs.html",
+      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Build a private, local-first personal knowledge graph with automated entity-relation extraction, entity resolution, NetworkX or Neo4j storage, and GraphRAG retrieval.",
+      "provider": {
+        "@type": "Person",
+        "@id": "https://thedigitalfuturist.com/#person",
+        "name": "Thomas Cherickal",
+        "jobTitle": "Generative AI Consultant and The Digital Futurist",
+        "url": "https://thedigitalfuturist.com"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide (remote)"
+      },
+      "availableLanguage": "English",
+      "serviceOutput": [
+        "Entity-Relation Extraction Pipeline: Local LLM structured triple extraction from Markdown, PDFs, and web clips.",
+        "Canonical Entity Resolution: Deterministic alias tables and semantic deduplication to prevent node fragmentation.",
+        "Embedded Property Graph Store: Portable SQLite, NetworkX, KuzuDB, or Neo4j Desktop graph database with temporal edges.",
+        "Personal GraphRAG Retriever: Multi-hop neighborhood traversal combined with Leiden community summaries and hybrid vector search.",
+        "Provenance & Recovery Tooling: Source-file hash tracking, confidence thresholds, and non-destructive graph rebuild scripts."
+      ]
+    }
+  ]
+}
+</script>
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link href="../css/styles.css" rel="stylesheet"/>
+<link href="../css/background.css" rel="stylesheet"/>
+<link href="../css/buttons.css" rel="stylesheet"/>
+<link href="../css/navbar.css" rel="stylesheet"/>
+<link href="../css/footer.css" rel="stylesheet"/>
+<link href="../css/cta.css" rel="stylesheet"/>
+<link href="../css/article.css" rel="stylesheet"/>
+<link href="../css/service.css" rel="stylesheet"/>
+<link href="../css/personal-services.css" rel="stylesheet"/>
+<link href="../css/responsive.css" rel="stylesheet"/>
+<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+  <!-- START:HEADER -->
+  <nav aria-label="Main navigation">
+    <a href="../index.html" class="nav-brand"><img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo"
+        class="nav-brand-logo" width="20" height="20">Thomas Cherickal</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <div class="nav-right-container">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle Navigation Menu">
+        <span></span>
+      </label>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html" data-nav="index.html">Home</a></li>
+      <li><a href="../expertise.html" data-nav="expertise.html">Expertise</a></li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          <b>Business</b> <span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="../all-business-services.html">All Business Services</a></li>
+          <li><a href="../business-ai-training.html">Business AI Training Overview</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="../business-services/business-service-generative-ai-transformation.html">Generative AI
+              Transformation</a></li>
+          <li><a href="../business-services/business-service-local-llms-cost-slashing.html">Local LLMs &amp; Cost
+              Slashing</a></li>
+          <li><a href="../business-services/business-service-agentic-assistants.html">Agentic Assistants Training</a></li>
+          <li><a href="../business-services/business-service-workflow-automations.html">Workflow Automations</a></li>
+          <li><a href="../business-services/business-service-ai-budget-cost-control.html">AI Budget &amp; Cost
+              Control Training</a></li>
+          <li><a href="../business-services/business-service-ai-developer-training.html">AI Developer Training</a></li>
+          <li><a href="../business-services/business-service-advanced-ai-agents.html">Advanced AI Agents</a></li>
+          <li><a href="../business-services/business-service-claude-agents-orchestration.html">Claude Agent
+              Orchestration</a>
+          </li>
+          <li><a href="../business-services/business-service-competitor-research.html">Competitor Research &amp;
+              Intelligence</a></li>
+          <li><a href="../business-services/business-service-ai-assisted-leads-magnet.html">AI-Assisted Leads Magnet</a>
+          </li>
+          <li><a href="../business-services/business-service-ai-second-brain.html">AI Second Brain</a></li>
+          <li><a href="../business-services/business-service-continuous-learning.html">Continuous Learning &amp;
+              Synthesis</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          <b>Personal</b> <span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="../all-personal-services.html">All Personal Services</a></li>
+          <li><a href="../personal-ai-training.html">Personal AI Training Overview</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="../personal-services/personal-service-generative-ai-transformation.html">Generative AI
+              Transformation</a></li>
+          <li><a href="../personal-services/personal-service-local-llms-cost-slashing.html">Local LLMs &amp; Cost
+              Slashing</a></li>
+          <li><a href="../personal-services/personal-service-agentic-assistants.html">Agentic Assistant Training</a></li>
+          <li><a href="../personal-services/personal-service-workflow-automations.html">Workflow Automations</a></li>
+          <li><a href="../personal-services/personal-service-ai-budget-cost-control.html">AI Budget &amp; Cost
+              Control Training</a></li>
+          <li><a href="../personal-services/personal-service-ai-developer-training.html">AI Developer Training</a></li>
+          <li><a href="../personal-services/personal-service-advanced-ai-agents.html">Advanced AI Agents</a></li>
+          <li><a href="../personal-services/personal-service-gemini-research-training.html">Gemini Research Training</a>
+          </li>
+          <li><a href="../personal-services/personal-service-claude-research-training.html">Claude Research Training</a>
+          </li>
+          <li><a href="../personal-services/personal-service-claude-agents-orchestration.html">Claude Agent
+              Orchestration</a>
+          </li>
+          <li><a href="../personal-services/personal-service-ai-second-brain.html">AI Second Brain</a></li>
+          <li><a href="../personal-services/personal-service-continuous-learning.html">Continuous Learning &amp;
+              Synthesis</a></li>
+        </ul>
+      </li>
+      <li><a href="../faqs.html" data-nav="faqs.html">FAQs</a></li>
+      <li><a href="../guarantees.html" data-nav="guarantees.html">Guarantees</a></li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          <b>Pricing</b> <span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="../pricing.html">All Pricing Overview</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="../pricing/pricing-tier-1-usa-china-eu-100.html">Tier 1: Developed (100%) - USA | China | EU</a>
+          </li>
+          <li><a href="../pricing/pricing-tier-2-brazil-malaysia-75.html">Tier 2: Upper-Middle (75%) - Brazil |
+              Malaysia</a></li>
+          <li><a href="../pricing/pricing-tier-3-india-egypt-50.html">Tier 3: Lower-Middle (50%) - India | Egypt</a>
+          </li>
+          <li><a href="../pricing/pricing-tier-4-tech-startups-50.html">Tier 4: Startups (50%) - Startups | Founders</a>
+          </li>
+          <li><a href="../pricing/pricing-tier-5-colleges-non-profits-25.html">Tier 5: Academia (25%) - Colleges | Non
+              Profiits</a></li>
+          <li><a href="../pricing/pricing-tier-6-crisis-affected-10.html">Tier 6: Relief (Custom) - Disaster |
+              Crisis-Affected</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          Claude <span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
+          <li><a href="../claude-training/claude-features.html">Claude Features</a></li>
+          <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-cowork.html">Claude Desktop</a></li>
+          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
+          <li><a href="../claude-training/claude-custom-mcp.html">Claude Custom MCP</a></li>
+          <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
+          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
+          <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
+          <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
+          <li><a href="../claude-training/claude-local-llms.html">Claude With Local LLMs</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          Gemini<span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="../gemini-training/google-gemini-101.html">Gemini 101</a></li>
+          <li><a href="../gemini-training/google-ai-studio.html">Google AI Studio</a></li>
+          <li><a href="../gemini-training/google-antigravity-ide.html">Google Antigravity IDE</a></li>
+          <li><a href="../gemini-training/google-gemini-desktop.html">Gemini Desktop</a></li>
+          <li><a href="../gemini-training/google-gemini-spark.html">Gemini Spark</a></li>
+          <li><a href="../gemini-training/google-gemini-notebook.html">Gemini Notebook</a></li>
+          <li><a href="../gemini-training/google-gemma-local-models.html">Google Gemma Local Models</a></li>
+          <li><a href="../gemini-training/google-multimodality.html">Google Multimodality</a></li>
+          <li><a href="../gemini-training/google-deepmind.html">Google DeepMind</a></li>
+          <li><a href="../gemini-training/google-gemini-4-argon.html">Gemini 4 Argon</a></li>
+          <li><a href="../gemini-training/google-gemini-4-carbon.html">Gemini 4 Carbon</a></li>
+          <li><a href="../gemini-training/google-gemini-4-hydrogen.html">Gemini 4 Hydrogen</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle">
+          Writing <span class="dropdown-caret">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="../articles.html" data-nav="articles.html">Articles</a></li>
+          <li><a href="../writing.html" data-nav="writing.html">Publications</a></li>
+        </ul>
+      </li>
+      <li><a href="../contact.html" data-nav="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- END:HEADER -->
+<a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
+<main id="main">
+  <section class="section" style="padding-top: 2rem;">
+    <div class="container" style="max-width: 980px;">
+
+      <!-- Hero Header Card -->
+      <div class="hero-card" style="background: #0c111d; border: 1px solid rgba(251, 191, 36, 0.28); border-radius: 14px; padding: 2.25rem; margin-bottom: 2rem;">
+        <div style="font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: #38bdf8; font-weight: 700; margin-bottom: 0.75rem;">
+          Personal Semantic Architecture &amp; Local GraphRAG
+        </div>
+        <h1>Knowledge Graphs</h1>
+        <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
+          Vector search alone finds isolated paragraphs, not the hidden web of ideas connecting your reading, projects, people, and decisions across years of research. This personal service specification shows solo researchers, independent engineers, and privacy-conscious practitioners how to build an automated, local-first knowledge graph that extracts typed entities and relationships, resolves aliases deterministically, and powers multi-hop GraphRAG reasoning on your own machine.
+        </p>
+        <div class="service-cta-buttons" style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <a class="btn btn-commission btn-lg" href="../contact.html">Commission Knowledge Graph</a>
+          <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+        </div>
+      </div>
+
+      <!-- 4-Card Stats Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2.5rem;">
+        <div style="background: #0c111d; border: 1px solid rgba(56, 189, 248, 0.28); border-radius: 10px; padding: 1.25rem;">
+          <div style="font-size: 1.6rem; font-weight: 800; color: #fbbf24;">Multi-Hop</div>
+          <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem;">Traverse indirect 2-hop and 3-hop links that flat vector search misses</div>
+        </div>
+        <div style="background: #0c111d; border: 1px solid rgba(52, 211, 153, 0.28); border-radius: 10px; padding: 1.25rem;">
+          <div style="font-size: 1.6rem; font-weight: 800; color: #34d399;">Local-First</div>
+          <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem;">Extract triples and query communities offline with Ollama and SQLite/Kuzu</div>
+        </div>
+        <div style="background: #0c111d; border: 1px solid rgba(232, 121, 249, 0.28); border-radius: 10px; padding: 1.25rem;">
+          <div style="font-size: 1.6rem; font-weight: 800; color: #e879f9;">Zero Drift</div>
+          <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem;">Canonical entity resolution merges aliases before graph pollution occurs</div>
+        </div>
+        <div style="background: #0c111d; border: 1px solid rgba(251, 191, 36, 0.28); border-radius: 10px; padding: 1.25rem;">
+          <div style="font-size: 1.6rem; font-weight: 800; color: #38bdf8;">Full Provenance</div>
+          <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem;">Every edge carries source file path, chunk hash, and extraction timestamp</div>
+        </div>
+      </div>
+
+      <!-- Table of Contents -->
+      <nav id="table-of-contents" aria-label="Table of Contents" style="background: #0c111d; border: 1px solid rgba(251, 191, 36, 0.25); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2.5rem;">
+        <h2 style="font-size: 1.2rem; color: #fbbf24; margin-top: 0; margin-bottom: 1rem;">Table of Contents</h2>
+        <ol style="display:flex;flex-direction:column;gap:0.6rem;margin: 0; padding-left: 1.25rem; color: #cbd5e1; line-height: 1.6;">
+          <li><a class="gold-link" href="#why-vectors-fail-solo-research">Why Flat Vector Search Fails Solo Researchers</a></li>
+          <li><a class="gold-link" href="#property-graphs-vs-rdf">Property Graphs vs. RDF Triplestores for Individual Practitioners</a></li>
+          <li><a class="gold-link" href="#schema-design-and-ontology">Designing a Lean Personal Ontology That Evolves Cleanly</a></li>
+          <li><a class="gold-link" href="#entity-relation-extraction">Automated Entity-Relation Extraction with Local Models</a></li>
+          <li><a class="gold-link" href="#entity-resolution-deduplication">Canonical Entity Resolution and Alias Deduplication</a></li>
+          <li><a class="gold-link" href="#personal-graphrag-architecture">Personal GraphRAG: Community Summaries and Multi-Hop Traversal</a></li>
+          <li><a class="gold-link" href="#temporal-edges-and-provenance">Temporal Edges, Confidence Scoring, and Source Provenance</a></li>
+          <li><a class="gold-link" href="#failure-mode-recovery">Failure-Mode Recovery: Orphan Nodes, Cycles, and Hallucinated Edges</a></li>
+          <li><a class="gold-link" href="#tutorial-python-extractor">Production Python Pipeline: Local Triple Extractor and SQLite/NetworkX Graph</a></li>
+          <li><a class="gold-link" href="#tutorial-prompt-extraction">Production Prompt Template: Constrained Schema Entity-Relation Extractor</a></li>
+          <li><a class="gold-link" href="#tutorial-ops-setup">Step-by-Step Operational Guide: Building Your Local Graph Workstation</a></li>
+          <li><a class="gold-link" href="#tutorial-python-graphrag">Production Python Pipeline: Multi-Hop GraphRAG Retriever with Citations</a></li>
+          <li><a class="gold-link" href="#tutorial-prompt-resolution">Production Prompt Template: Entity Resolution and Merge Adjudicator</a></li>
+          <li><a class="gold-link" href="#tutorial-ops-recovery">Step-by-Step Operational Runbook: Graph Pruning, Snapshots, and Rebuild</a></li>
+          <li><a class="gold-link" href="#references">Live Technical References</a></li>
+        </ol>
+      </nav>
+
+      <article class="prose" style="color: #e2e8f0; line-height: 1.78;">
+
+        <h2 id="why-vectors-fail-solo-research" style="color: #fbbf24; margin-top: 2.5rem;">Why Flat Vector Search Fails Solo Researchers</h2>
+        <p>
+          If you have maintained a personal research archive for more than a year - whether in Obsidian, Logseq, plain Markdown folders, or Zotero annotations - you have likely hit the ceiling of standard Retrieval-Augmented Generation (RAG). Standard vector search embeds each paragraph into a dense numerical vector and retrieves the top-k chunks closest to your query in cosine space. That works well for localized fact lookup, such as finding a specific CLI flag you documented last month.
+        </p>
+        <p>
+          Vector search collapses, however, when your question spans multiple documents, timeframes, or domains. Suppose you ask your archive: <em>"Which open-source licensing risks appeared across the infrastructure tools I evaluated in Q1, and which of those tools were recommended by authors I cited in my distributed systems notes?"</em> No single paragraph contains the answer. The answer lives in the <strong>connections</strong> between entities: Tool A is mentioned in Evaluation Note 12, shares a dependency with Library B in Note 44, and Author C critiqued Library B's license in a 2025 paper summary.
+        </p>
+        <p>
+          Manual wiki-linking (such as typing <code>[[brackets]]</code> in Obsidian) helps, but it does not scale. As a solo practitioner, you do not have hours each week to curate backlinks across thousands of papers, meeting logs, and code snippets. A <strong>Personal Knowledge Graph (PKG)</strong> automates this structural layer. It parses your unstructured notes into explicit nodes (Concepts, People, Projects, Tools, Claims, Decisions) and typed, directional edges (<code>DEPENDS_ON</code>, <code>CONTRADICTS</code>, <code>AUTHORED_BY</code>, <code>SUPERSEDES</code>), turning your personal archive into a queryable reasoning substrate.
+        </p>
+
+        <!-- SVG Diagram 1 -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="34" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Flat Vector Search vs. Multi-Hop Personal Knowledge Graph</text>
+            <!-- Left Side: Flat Vector -->
+            <rect x="36" y="62" width="415" height="305" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="243" y="92" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Flat Vector Retrieval (Top-K Chunks)</text>
+            <rect x="66" y="118" width="150" height="58" rx="6" fill="#131b2e" stroke="#64748b" stroke-width="1"/>
+            <text x="141" y="143" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Chunk 14: Tool A</text>
+            <text x="141" y="162" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Cosine: 0.84</text>
+            <rect x="268" y="118" width="150" height="58" rx="6" fill="#131b2e" stroke="#64748b" stroke-width="1"/>
+            <text x="343" y="143" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Chunk 89: Paper X</text>
+            <text x="343" y="162" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Cosine: 0.81</text>
+            <rect x="66" y="210" width="150" height="58" rx="6" fill="#131b2e" stroke="#64748b" stroke-width="1"/>
+            <text x="141" y="235" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Chunk 203: License</text>
+            <text x="141" y="254" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Missed (0.51)</text>
+            <rect x="268" y="210" width="150" height="58" rx="6" fill="#131b2e" stroke="#64748b" stroke-width="1"/>
+            <text x="343" y="235" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Chunk 412: Author C</text>
+            <text x="343" y="254" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Missed (0.44)</text>
+            <text x="243" y="318" fill="#f87171" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">No structural bridge between isolated chunks</text>
+            <text x="243" y="340" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Global synthesis queries fail silently</text>
+            <!-- Right Side: Knowledge Graph -->
+            <rect x="495" y="62" width="429" height="305" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="1.5"/>
+            <text x="709" y="92" fill="#34d399" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Personal Knowledge Graph (Multi-Hop Traversal)</text>
+            <circle cx="575" cy="155" r="36" fill="#131b2e" stroke="#fbbf24" stroke-width="2"/>
+            <text x="575" y="159" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Tool A</text>
+            <line x1="611" y1="155" x2="673" y2="155" stroke="#38bdf8" stroke-width="2"/>
+            <text x="642" y="145" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">USES</text>
+            <circle cx="709" cy="155" r="36" fill="#131b2e" stroke="#38bdf8" stroke-width="2"/>
+            <text x="709" y="159" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Library B</text>
+            <line x1="745" y1="155" x2="807" y2="155" stroke="#e879f9" stroke-width="2"/>
+            <text x="776" y="145" fill="#e879f9" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">LICENSE</text>
+            <circle cx="843" cy="155" r="36" fill="#131b2e" stroke="#e879f9" stroke-width="2"/>
+            <text x="843" y="159" fill="#e879f9" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">AGPL-3</text>
+            <line x1="709" y1="191" x2="709" y2="232" stroke="#34d399" stroke-width="2"/>
+            <text x="748" y="216" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">CRITIQUED_BY</text>
+            <circle cx="709" cy="268" r="36" fill="#131b2e" stroke="#34d399" stroke-width="2"/>
+            <text x="709" y="272" fill="#34d399" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Author C</text>
+            <text x="709" y="330" fill="#34d399" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Deterministic 2-hop &amp; 3-hop path resolution</text>
+            <text x="709" y="350" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Every hop backed by exact source note citations</text>
+          </svg>
+        </div>
+
+        <h2 id="property-graphs-vs-rdf" style="color: #fbbf24; margin-top: 2.5rem;">Property Graphs vs. RDF Triplestores for Individual Practitioners</h2>
+        <p>
+          Before writing a single line of extraction code, you must choose a graph data model. In graph engineering, the two dominant paradigms are <strong>Resource Description Framework (RDF) triplestores</strong> and <strong>Labeled Property Graphs (LPG)</strong>. Understanding the trade-off saves weeks of unnecessary complexity.
+        </p>
+        <p>
+          RDF represents every fact as a strict three-part statement: <code>(Subject, Predicate, Object)</code>, where subjects and predicates are globally unique URIs governed by formal ontologies such as OWL or SHACL. RDF excels in linked open data, biomedical registries, and cross-organization semantic web publishing. For a solo practitioner, however, RDF introduces heavy friction: attaching metadata to a relationship (such as confidence score, extraction date, or source Markdown line number) requires reification or RDF-star extensions, which complicate queries.
+        </p>
+        <p>
+          <strong>Labeled Property Graphs</strong> - implemented by <a class="gold-link" href="#references">Neo4j</a>, <a class="gold-link" href="#references">KuzuDB</a>, <a class="gold-link" href="#references">NetworkX</a>, and lightweight SQLite adjacency tables - allow both nodes and edges to carry arbitrary key-value properties natively. For a personal knowledge graph, an edge can directly store <code>{"source_file": "notes/systems.md", "chunk_hash": "9f2a...", "confidence": 0.91, "valid_from": "2025-11-04"}</code>.
+        </p>
+        <p>
+          For individual practitioners, start as lightweight as possible: an embedded SQLite database paired with in-memory NetworkX (or KuzuDB for native Cypher queries without a background server daemon) gives you zero-ops portability, single-file backups, and sub-10ms traversals across 50,000+ edges. You only need Neo4j Desktop or a containerized graph server when you require built-in Graph Data Science algorithms or rich interactive browser visualization at scale.
+        </p>
+
+        <!-- SVG Diagram 2 -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="34" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Choosing Your Personal Graph Storage Tier</text>
+            <!-- Tier 1 -->
+            <rect x="40" y="70" width="275" height="290" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="177" y="102" fill="#34d399" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Tier 1: SQLite + NetworkX</text>
+            <text x="177" y="128" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Up to 100,000 Edges</text>
+            <text x="60" y="165" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Zero background daemon</text>
+            <text x="60" y="190" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Single portable .db file</text>
+            <text x="60" y="215" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Full Python algorithm suite</text>
+            <text x="60" y="240" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Instant Git / Syncthing sync</text>
+            <text x="177" y="325" fill="#34d399" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Recommended Starting Point</text>
+            <!-- Tier 2 -->
+            <rect x="342" y="70" width="275" height="290" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+            <text x="479" y="102" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Tier 2: KuzuDB (Embedded)</text>
+            <text x="479" y="128" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">100k - 5M Edges</text>
+            <text x="362" y="165" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- In-process Cypher queries</text>
+            <text x="362" y="190" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Columnar disk storage</text>
+            <text x="362" y="215" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Built-in vector index support</text>
+            <text x="362" y="240" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- No JVM or Docker required</text>
+            <text x="479" y="325" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Best for Heavy Research Vaults</text>
+            <!-- Tier 3 -->
+            <rect x="644" y="70" width="275" height="290" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+            <text x="781" y="102" fill="#e879f9" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Tier 3: Neo4j Desktop / Local</text>
+            <text x="781" y="128" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Multi-Modal &amp; Visual Studio</text>
+            <text x="664" y="165" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Native Bloom visualization</text>
+            <text x="664" y="190" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Graph Data Science (GDS)</text>
+            <text x="664" y="215" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- APOC procedures &amp; triggers</text>
+            <text x="664" y="240" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Requires local daemon/RAM</text>
+            <text x="781" y="325" fill="#e879f9" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Best for Visual Exploration</text>
+          </svg>
+        </div>
+
+        <h2 id="schema-design-and-ontology" style="color: #fbbf24; margin-top: 2.5rem;">Designing a Lean Personal Ontology That Evolves Cleanly</h2>
+        <p>
+          The fastest way to ruin a personal knowledge graph is to let an LLM invent arbitrary node labels and edge types on every document. Without a constrained schema, one note produces <code>(Person)-[:WROTE]->(Paper)</code>, the next produces <code>(Author)-[:AUTHORED]->(Article)</code>, and a third produces <code>(Researcher)-[:PUBLISHED_IN]->(Journal)</code>. Within a month, your graph fragments into dozens of synonymous relationship types, making structured traversal impossible.
+        </p>
+        <p>
+          A production personal ontology should be <strong>small, rigid at the core, and extensible through properties</strong>. For most solo practitioners, six to eight canonical entity types cover 95% of personal research:
+        </p>
+        <ul style="color: #cbd5e1; line-height: 1.85; padding-left: 1.5rem;">
+          <li><strong>Person:</strong> Authors, colleagues, mentors, clients, historical figures.</li>
+          <li><strong>Organization:</strong> Labs, companies, standards bodies, universities.</li>
+          <li><strong>Concept:</strong> Theories, algorithms, mental models, architectural patterns.</li>
+          <li><strong>Artifact:</strong> Papers, books, code repositories, datasets, tools, notes.</li>
+          <li><strong>Project:</strong> Active personal initiatives, experiments, client engagements.</li>
+          <li><strong>Claim:</strong> Specific empirical findings, benchmarks, or hypotheses with truth conditions.</li>
+          <li><strong>Decision:</strong> Personal architectural choices, career moves, or policy commitments.</li>
+        </ul>
+        <p>
+          Pair these node types with a closed vocabulary of 10 to 14 uppercase relationship types such as <code>CREATED</code>, <code>DEPENDS_ON</code>, <code>SUPPORTS</code>, <code>CONTRADICTS</code>, <code>APPLIES_TO</code>, <code>MENTIONS</code>, <code>PART_OF</code>, and <code>SUPERSEDES</code>. Any nuance that does not fit the edge label belongs in an edge property (for example, <code>role: "lead maintainer"</code> or <code>context: "benchmark evaluation"</code>), preserving clean graph topology while retaining rich detail.
+        </p>
+
+        <h2 id="entity-relation-extraction" style="color: #fbbf24; margin-top: 2.5rem;">Automated Entity-Relation Extraction with Local Models</h2>
+        <p>
+          Extracting structured triples from raw Markdown and PDFs requires strict schema enforcement. If you ask a local model running in <a class="gold-link" href="#references">Ollama</a> to "extract a knowledge graph from this text" in free-form prose, it will drift in formatting, invent relationships outside your ontology, and occasionally hallucinate entities not present in the source paragraph.
+        </p>
+        <p>
+          Instead, combine three engineering controls: <strong>JSON Schema constrained decoding</strong> (supported natively via Ollama's <code>format</code> parameter and Pydantic validation), <strong>short structure-aware chunks</strong> (400 to 700 tokens per extraction call with the parent Markdown heading injected as context), and <strong>exact evidence span grounding</strong>. Requiring the model to return a verbatim <code>evidence_quote</code> substring from the chunk allows your Python pipeline to verify programmatically that the claim actually appears in the text before committing the edge.
+        </p>
+
+        <!-- SVG Diagram 3 -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="34" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Grounded Entity-Relation Extraction Pipeline</text>
+            <rect x="40" y="130" width="160" height="120" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+            <text x="120" y="165" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Markdown Chunk</text>
+            <text x="120" y="190" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Heading Context</text>
+            <text x="120" y="210" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">SHA-256 Hash</text>
+            <text x="120" y="230" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Frontmatter Date</text>
+            <line x1="200" y1="190" x2="245" y2="190" stroke="#fbbf24" stroke-width="2"/>
+            <rect x="245" y="130" width="180" height="120" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+            <text x="335" y="165" fill="#e879f9" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Local LLM (Ollama)</text>
+            <text x="335" y="190" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Closed Ontology</text>
+            <text x="335" y="210" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">JSON Schema Lock</text>
+            <text x="335" y="230" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Temp = 0.0</text>
+            <line x1="425" y1="190" x2="470" y2="190" stroke="#fbbf24" stroke-width="2"/>
+            <rect x="470" y="130" width="190" height="120" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="565" y="165" fill="#34d399" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Verification Gate</text>
+            <text x="565" y="190" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Pydantic Type Check</text>
+            <text x="565" y="210" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Quote Substring Match</text>
+            <text x="565" y="230" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Confidence &gt;= 0.70</text>
+            <line x1="660" y1="190" x2="705" y2="190" stroke="#fbbf24" stroke-width="2"/>
+            <rect x="705" y="130" width="210" height="120" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+            <text x="810" y="165" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Entity Resolver &amp; DB</text>
+            <text x="810" y="190" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Alias Normalization</text>
+            <text x="810" y="210" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Upsert Nodes &amp; Edges</text>
+            <text x="810" y="230" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Provenance Logged</text>
+          </svg>
+        </div>
+
+        <h2 id="entity-resolution-deduplication" style="color: #fbbf24; margin-top: 2.5rem;">Canonical Entity Resolution and Alias Deduplication</h2>
+        <p>
+          Entity resolution is the single hardest operational problem in personal knowledge graphs. Across six months of notes, you will refer to the same concept or tool by multiple surface forms: <code>"PostgreSQL"</code>, <code>"Postgres"</code>, <code>"PG"</code>, and <code>"psql"</code>; or <code>"Kuzu"</code> and <code>"KuzuDB"</code>; or a colleague's full name versus their first name in a daily journal entry. If your pipeline creates a separate node for each spelling, your graph's connectivity collapses.
+        </p>
+        <p>
+          A robust local resolver uses a <strong>three-stage cascade</strong> before inserting a new node:
+        </p>
+        <ol style="color: #cbd5e1; line-height: 1.85; padding-left: 1.5rem;">
+          <li><strong>Deterministic Normalization &amp; Alias Dictionary:</strong> Strip punctuation, normalize case, and check a personal YAML/JSON alias map (e.g., mapping <code>"pg"</code> and <code>"postgres"</code> to canonical ID <code>artifact:postgresql</code>).</li>
+          <li><strong>Fuzzy Lexical &amp; Embedding Similarity:</strong> Compute Jaro-Winkler or token-set similarity plus cosine similarity against existing node name embeddings of the <em>same entity type</em>. Candidates above 0.92 cosine similarity auto-merge; candidates between 0.80 and 0.92 are routed to a lightweight LLM adjudication step or a weekly human review queue.</li>
+          <li><strong>Context-Aware Disambiguation:</strong> Never merge entities solely by name when types differ. <code>"Mercury"</code> (Planet) and <code>"Mercury"</code> (Banking Platform) must remain distinct nodes keyed by <code>(type, canonical_name)</code>.</li>
+        </ol>
+
+        <!-- SVG Diagram 4 -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(232, 121, 249, 0.3); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="34" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Three-Stage Canonical Entity Resolution Cascade</text>
+            <rect x="45" y="145" width="175" height="90" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+            <text x="132" y="180" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Candidate Entity</text>
+            <text x="132" y="205" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">"Postgres 16"</text>
+            <line x1="220" y1="190" x2="265" y2="190" stroke="#fbbf24" stroke-width="2"/>
+            <rect x="265" y="95" width="200" height="190" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="365" y="128" fill="#34d399" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Stage 1: Alias Lookup</text>
+            <text x="365" y="155" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Exact + Lowercase Map</text>
+            <text x="365" y="182" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Match? -&gt; Link Canonical ID</text>
+            <line x1="295" y1="200" x2="435" y2="200" stroke="#334155" stroke-width="1"/>
+            <text x="365" y="225" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Stage 2: Vector Sim</text>
+            <text x="365" y="248" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Cosine &gt;= 0.92 (Same Type)</text>
+            <text x="365" y="268" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">0.80 - 0.92 -&gt; Stage 3</text>
+            <line x1="465" y1="190" x2="515" y2="190" stroke="#fbbf24" stroke-width="2"/>
+            <rect x="515" y="95" width="200" height="190" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+            <text x="615" y="128" fill="#e879f9" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Stage 3: Adjudicator</text>
+            <text x="615" y="158" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Compare Neighbors &amp;</text>
+            <text x="615" y="176" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Source Context</text>
+            <text x="615" y="210" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">SAME: Add Alias + Merge</text>
+            <text x="615" y="235" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">DIFFERENT: Mint New ID</text>
+            <line x1="715" y1="190" x2="760" y2="190" stroke="#fbbf24" stroke-width="2"/>
+            <rect x="760" y="145" width="160" height="90" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+            <text x="840" y="180" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Canonical Node</text>
+            <text x="840" y="205" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">artifact:postgresql</text>
+          </svg>
+        </div>
+
+        <h2 id="personal-graphrag-architecture" style="color: #fbbf24; margin-top: 2.5rem;">Personal GraphRAG: Community Summaries and Multi-Hop Traversal</h2>
+        <p>
+          Once your notes are materialized into a clean property graph, how do you query it? Modern <a class="gold-link" href="#references">GraphRAG</a> (pioneered by Microsoft Research and adapted into lightweight local toolkits) combines two complementary retrieval modes: <strong>Local Graph Search</strong> and <strong>Global Community Search</strong>.
+        </p>
+        <p>
+          <strong>Local Graph Search</strong> starts from seed entities extracted from your question (or matched via vector similarity on node descriptions), expands outward 1 to 2 hops along relevant edge types, and collects both the subgraph structure and the original Markdown chunks attached to those edges. This answers targeted relational questions such as <em>"What are all the bottlenecks I noted across projects using LanceDB?"</em>
+        </p>
+        <p>
+          <strong>Global Community Search</strong> solves macro-level synthesis questions such as <em>"What are the overarching themes across my last six months of systems engineering notes?"</em> Using the <a class="gold-link" href="#references">Leiden community detection algorithm</a>, your pipeline partitions the graph into tightly connected clusters of entities, generates a concise summary for each cluster offline, and embeds those community summaries. At query time, the retriever performs map-reduce synthesis over the top matching communities, giving you a bird's-eye view of your entire intellectual landscape without exceeding local context windows.
+        </p>
+
+        <!-- SVG Diagram 5 -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(52, 211, 153, 0.3); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="34" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Hybrid Personal GraphRAG Query Router</text>
+            <rect x="40" y="155" width="160" height="90" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+            <text x="120" y="192" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">User Query</text>
+            <text x="120" y="216" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Local vs. Global Intent</text>
+            <line x1="200" y1="180" x2="290" y2="115" stroke="#38bdf8" stroke-width="2"/>
+            <line x1="200" y1="220" x2="290" y2="285" stroke="#e879f9" stroke-width="2"/>
+            <!-- Top Path -->
+            <rect x="290" y="65" width="320" height="105" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+            <text x="450" y="95" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Local Path: Seed + 2-Hop Traversal</text>
+            <text x="450" y="120" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">1. Match seed nodes via vector + BM25</text>
+            <text x="450" y="142" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">2. Expand k-hop neighborhood &amp; source chunks</text>
+            <!-- Bottom Path -->
+            <rect x="290" y="230" width="320" height="105" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+            <text x="450" y="260" fill="#e879f9" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Global Path: Leiden Community Summaries</text>
+            <text x="450" y="285" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">1. Rank precomputed cluster reports</text>
+            <text x="450" y="307" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">2. Map-reduce synthesis across top clusters</text>
+            <line x1="610" y1="115" x2="695" y2="180" stroke="#38bdf8" stroke-width="2"/>
+            <line x1="610" y1="285" x2="695" y2="220" stroke="#e879f9" stroke-width="2"/>
+            <rect x="695" y="140" width="225" height="120" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="807" y="175" fill="#34d399" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Grounded Synthesis</text>
+            <text x="807" y="202" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Cited File Paths &amp; Edges</text>
+            <text x="807" y="224" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Zero-Cloud Ollama Generation</text>
+          </svg>
+        </div>
+
+        <h2 id="temporal-edges-and-provenance" style="color: #fbbf24; margin-top: 2.5rem;">Temporal Edges, Confidence Scoring, and Source Provenance</h2>
+        <p>
+          Personal knowledge is never static. In 2024, you might have documented that a project used ChromaDB; in 2026, you migrated that project to SQLite-vec. If your knowledge graph overwrites or blindly accumulates edges without timestamps, your GraphRAG assistant will cite both architectures as simultaneously active.
+        </p>
+        <p>
+          To prevent temporal confusion, treat your graph as an <strong>append-and-supersede ledger</strong>. Every edge stores <code>observed_at</code> (derived from the note's YAML frontmatter or file modification date), <code>status</code> (<code>active</code> or <code>superseded</code>), and <code>source_hash</code> (the SHA-256 digest of the source chunk). When a newer note records a conflicting decision or tool migration, you preserve the historical edge with <code>status = "superseded"</code> and link the new edge with <code>SUPERSEDES</code>, giving you a complete intellectual audit trail.
+        </p>
+
+        <h2 id="failure-mode-recovery" style="color: #fbbf24; margin-top: 2.5rem;">Failure-Mode Recovery: Orphan Nodes, Cycles, and Hallucinated Edges</h2>
+        <p>
+          Even well-tuned local extraction pipelines accumulate structural debt over time. Three failure modes appear most frequently in solo practitioner graphs, and each has a deterministic recovery path:
+        </p>
+        <ul style="color: #cbd5e1; line-height: 1.85; padding-left: 1.5rem;">
+          <li><strong>Orphan &amp; Low-Degree Noise Nodes:</strong> Extraction of overly generic nouns (e.g., <code>"System"</code>, <code>"Approach"</code>, <code>"Data"</code>) creates hub-like garbage nodes or thousands of degree-1 islands. Fix this with a stoplist filter and periodic pruning of degree-1 nodes older than 30 days that lack manual pins.</li>
+          <li><strong>Unintended Self-Loops &amp; Semantic Cycles:</strong> Models occasionally extract <code>(Concept A)-[:DEPENDS_ON]->(Concept A)</code> or contradictory bidirectional edges. Enforce a pre-commit invariant: reject any edge where <code>source_id == target_id</code>, and flag symmetric contradictions for review.</li>
+          <li><strong>Stale Graph After Note Deletion or Edits:</strong> When you refactor or delete a Markdown file, its old edges linger as phantom facts. Key every edge by <code>source_file</code> and <code>chunk_hash</code> so an incremental watcher can delete all edges belonging to a modified file hash before re-extracting.</li>
+        </ul>
+
+        <!-- SVG Diagram 6 -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="34" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Incremental Sync &amp; Provenance-Keyed Graph Healing</text>
+            <rect x="45" y="120" width="190" height="150" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+            <text x="140" y="155" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Vault Change Event</text>
+            <text x="140" y="185" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Note Edited or Deleted</text>
+            <text x="140" y="210" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Compute File SHA-256</text>
+            <text x="140" y="235" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Compare Manifest</text>
+            <line x1="235" y1="195" x2="290" y2="195" stroke="#fbbf24" stroke-width="2"/>
+            <rect x="290" y="120" width="200" height="150" rx="8" fill="#0c111d" stroke="#f87171" stroke-width="2"/>
+            <text x="390" y="155" fill="#f87171" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Surgical Edge Purge</text>
+            <text x="390" y="185" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">DELETE FROM edges</text>
+            <text x="390" y="210" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">WHERE source_file = ?</text>
+            <text x="390" y="235" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Prune 0-Degree Orphans</text>
+            <line x1="490" y1="195" x2="545" y2="195" stroke="#fbbf24" stroke-width="2"/>
+            <rect x="545" y="120" width="200" height="150" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="645" y="155" fill="#34d399" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Re-Extract &amp; Upsert</text>
+            <text x="645" y="185" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Extract Changed Chunks</text>
+            <text x="645" y="210" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Resolve Aliases</text>
+            <text x="645" y="235" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Update Community Index</text>
+            <line x1="745" y1="195" x2="790" y2="195" stroke="#fbbf24" stroke-width="2"/>
+            <rect x="790" y="140" width="130" height="110" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+            <text x="855" y="185" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Zero Ghost</text>
+            <text x="855" y="210" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Facts</text>
+          </svg>
+        </div>
+
+        <h2 id="tutorial-python-extractor" style="color: #fbbf24; margin-top: 2.5rem;">Production Python Pipeline: Local Triple Extractor and SQLite/NetworkX Graph</h2>
+        <p>
+          This complete, self-contained Python module scans a local Markdown vault, extracts schema-validated triples using a local Ollama model, verifies that the quoted evidence exists in the source text, resolves aliases deterministically, and persists the graph into a single portable SQLite file that loads directly into <a class="gold-link" href="#references">NetworkX</a>.
+        </p>
+
+        <div class="code-window" style="background: #040711; border: 1px solid rgba(56, 189, 248, 0.35); border-left: 3px solid var(--cyan); border-radius: 8px; margin: 1.75rem 0; overflow: hidden;">
+          <div class="code-bar" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; background: #0c111d; border-bottom: 1px solid rgba(56, 189, 248, 0.2);">
+            <span style="font-family: monospace; font-size: 0.85rem; color: #38bdf8;">pkg_extractor.py</span>
+            <button type="button" class="copy-btn" onclick="copyCode(this)" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 4px; padding: 0.25rem 0.65rem; font-size: 0.78rem; cursor: pointer; text-decoration: none !important;">Copy</button>
+          </div>
+          <pre style="margin: 0; padding: 1.15rem; white-space: pre-wrap; word-break: break-word; overflow-x: hidden; color: #e2e8f0; font-size: 0.88rem; line-height: 1.55;"><code>import hashlib
+import json
+import sqlite3
+from pathlib import Path
+from typing import Literal
+import urllib.request
+import networkx as nx
+from pydantic import BaseModel, Field
+
+ENTITY_TYPES = Literal["Person", "Organization", "Concept", "Artifact", "Project", "Claim", "Decision"]
+REL_TYPES = Literal["CREATED", "DEPENDS_ON", "SUPPORTS", "CONTRADICTS", "APPLIES_TO", "MENTIONS", "PART_OF", "SUPERSEDES"]
+
+ALIAS_MAP = {
+    "postgres": "PostgreSQL",
+    "pg": "PostgreSQL",
+    "kuzu": "KuzuDB",
+    "nx": "NetworkX",
+}
+
+class Triple(BaseModel):
+    subject: str = Field(min_length=2)
+    subject_type: ENTITY_TYPES
+    predicate: REL_TYPES
+    object: str = Field(min_length=2)
+    object_type: ENTITY_TYPES
+    evidence_quote: str = Field(min_length=10)
+    confidence: float = Field(ge=0.0, le=1.0)
+
+class ExtractionResult(BaseModel):
+    triples: list[Triple]
+
+def normalize_entity(name: str) -&gt; str:
+    cleaned = " ".join(name.strip().split())
+    return ALIAS_MAP.get(cleaned.lower(), cleaned)
+
+def init_db(db_path: Path) -&gt; sqlite3.Connection:
+    conn = sqlite3.connect(db_path)
+    conn.execute("PRAGMA journal_mode=WAL;")
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS nodes (
+            node_id TEXT PRIMARY KEY,
+            entity_type TEXT NOT NULL,
+            canonical_name TEXT NOT NULL
+        )
+    """)
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS edges (
+            edge_id TEXT PRIMARY KEY,
+            source_id TEXT NOT NULL,
+            predicate TEXT NOT NULL,
+            target_id TEXT NOT NULL,
+            evidence_quote TEXT NOT NULL,
+            confidence REAL NOT NULL,
+            source_file TEXT NOT NULL,
+            chunk_hash TEXT NOT NULL
+        )
+    """)
+    conn.commit()
+    return conn
+
+def extract_with_ollama(chunk: str, model: str = "qwen2.5:7b") -&gt; ExtractionResult:
+    prompt = (
+        "Extract factual entity-relation triples strictly from the text below. "
+        "Every triple must include an exact verbatim evidence_quote from the text.\n\n"
+        f"TEXT:\n{chunk}"
+    )
+    payload = {
+        "model": model,
+        "prompt": prompt,
+        "stream": False,
+        "options": {"temperature": 0.0},
+        "format": ExtractionResult.model_json_schema(),
+    }
+    req = urllib.request.Request(
+        "http://127.0.0.1:11434/api/generate",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+    )
+    with urllib.request.urlopen(req, timeout=90) as resp:
+        raw = json.loads(resp.read().decode("utf-8"))["response"]
+    return ExtractionResult.model_validate_json(raw)
+
+def ingest_markdown_file(conn: sqlite3.Connection, md_path: Path) -&gt; int:
+    text = md_path.read_text(encoding="utf-8")
+    file_key = str(md_path)
+    conn.execute("DELETE FROM edges WHERE source_file = ?", (file_key,))
+    inserted = 0
+    for idx, block in enumerate(text.split("\n\n")):
+        chunk = block.strip()
+        if len(chunk) &lt; 80:
+            continue
+        chunk_hash = hashlib.sha256(chunk.encode("utf-8")).hexdigest()[:16]
+        result = extract_with_ollama(chunk)
+        for t in result.triples:
+            if t.confidence &lt; 0.70 or t.evidence_quote.lower() not in chunk.lower():
+                continue
+            subj = normalize_entity(t.subject)
+            obj = normalize_entity(t.object)
+            if subj == obj:
+                continue
+            src_id = f"{t.subject_type}:{subj}"
+            tgt_id = f"{t.object_type}:{obj}"
+            conn.execute("INSERT OR IGNORE INTO nodes VALUES (?, ?, ?)", (src_id, t.subject_type, subj))
+            conn.execute("INSERT OR IGNORE INTO nodes VALUES (?, ?, ?)", (tgt_id, t.object_type, obj))
+            edge_id = hashlib.sha256(f"{src_id}|{t.predicate}|{tgt_id}|{chunk_hash}".encode()).hexdigest()[:20]
+            conn.execute(
+                "INSERT OR REPLACE INTO edges VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                (edge_id, src_id, t.predicate, tgt_id, t.evidence_quote, t.confidence, file_key, chunk_hash),
+            )
+            inserted += 1
+    conn.commit()
+    return inserted
+
+def load_networkx(conn: sqlite3.Connection) -&gt; nx.MultiDiGraph:
+    g = nx.MultiDiGraph()
+    for node_id, etype, name in conn.execute("SELECT node_id, entity_type, canonical_name FROM nodes"):
+        g.add_node(node_id, entity_type=etype, name=name)
+    for src, pred, tgt, quote, src_file in conn.execute(
+        "SELECT source_id, predicate, target_id, evidence_quote, source_file FROM edges"
+    ):
+        g.add_edge(src, tgt, key=pred, predicate=pred, quote=quote, source_file=src_file)
+    return g</code></pre>
+        </div>
+
+        <h2 id="tutorial-prompt-extraction" style="color: #fbbf24; margin-top: 2.5rem;">Production Prompt Template: Constrained Schema Entity-Relation Extractor</h2>
+        <p>
+          When running extraction across diverse personal notes - such as research paper summaries, architecture logs, and book highlights - use this strict system prompt to prevent ontology drift and force verbatim quote grounding.
+        </p>
+
+        <div class="code-window" style="background: #040711; border: 1px solid rgba(251, 191, 36, 0.35); border-left: 3px solid var(--gold); border-radius: 8px; margin: 1.75rem 0; overflow: hidden;">
+          <div class="code-bar" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; background: #0c111d; border-bottom: 1px solid rgba(251, 191, 36, 0.2);">
+            <span style="font-family: monospace; font-size: 0.85rem; color: #fbbf24;">schema_triple_extractor_prompt.txt</span>
+            <button type="button" class="copy-btn" onclick="copyCode(this)" style="background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4); border-radius: 4px; padding: 0.25rem 0.65rem; font-size: 0.78rem; cursor: pointer; text-decoration: none !important;">Copy</button>
+          </div>
+          <pre style="margin: 0; padding: 1.15rem; white-space: pre-wrap; word-break: break-word; overflow-x: hidden; color: #e2e8f0; font-size: 0.88rem; line-height: 1.55;"><code>SYSTEM:
+You are a deterministic Knowledge Graph Extraction Engine for a personal research archive.
+Extract ONLY explicit, verifiable relationships stated in INPUT_CHUNK.
+
+ALLOWED ENTITY TYPES:
+Person, Organization, Concept, Artifact, Project, Claim, Decision
+
+ALLOWED PREDICATES:
+CREATED, DEPENDS_ON, SUPPORTS, CONTRADICTS, APPLIES_TO, MENTIONS, PART_OF, SUPERSEDES
+
+STRICT RULES:
+1. Do NOT invent entities or extrapolate beyond INPUT_CHUNK.
+2. Do NOT emit generic stop-entities ("System", "Tool", "Method", "Thing", "User").
+3. Resolve pronouns ("it", "they", "this library") to their explicit antecedent from HEADING_CONTEXT or return nothing if ambiguous.
+4. Every triple MUST include an exact, character-for-character substring in "evidence_quote".
+5. Output valid JSON matching {"triples": [...]} with no markdown fences or commentary.
+
+INPUT:
+HEADING_CONTEXT: {{parent_headings}}
+SOURCE_DATE: {{note_date}}
+INPUT_CHUNK:
+{{chunk_text}}</code></pre>
+        </div>
+
+        <h2 id="tutorial-ops-setup" style="color: #fbbf24; margin-top: 2.5rem;">Step-by-Step Operational Guide: Building Your Local Graph Workstation</h2>
+        <p>
+          Follow these operational steps to stand up a completely local, zero-cloud knowledge graph pipeline on Linux, macOS, or Windows WSL2 in under 20 minutes:
+        </p>
+        <ol style="color: #cbd5e1; line-height: 1.85; padding-left: 1.5rem;">
+          <li><strong>Isolate Your Python Environment:</strong> Create a dedicated virtual environment (<code>python3 -m venv ~/.venvs/pkg-graph &amp;&amp; source ~/.venvs/pkg-graph/bin/activate</code>) and install <code>networkx</code>, <code>pydantic</code>, <code>igraph</code>, and <code>leidenalg</code> for fast local community detection.</li>
+          <li><strong>Install and Lock Local Inference:</strong> Install Ollama, pull an instruction-following model with strong JSON adherence (7B to 14B parameters depending on your RAM/VRAM) plus a local embedding model such as <code>nomic-embed-text</code>, and verify the server binds strictly to <code>127.0.0.1:11434</code>.</li>
+          <li><strong>Initialize Your Ontology &amp; Alias File:</strong> Create <code>ontology.yaml</code> inside your vault root listing your 7 entity types, 8-12 predicates, and a starting <code>aliases.json</code> mapping abbreviations you personally use (project codenames, colleague nicknames, tool acronyms).</li>
+          <li><strong>Dry-Run on 20 Representative Notes:</strong> Run the extractor on a 20-note sample spanning daily logs, paper summaries, and technical specs. Inspect the generated SQLite table to verify that no generic stop-nouns or self-loops slipped through.</li>
+          <li><strong>Schedule Incremental Watchers:</strong> Configure a background file watcher (using <code>watchdog</code> or a nightly cron/launchd timer) that hashes modified Markdown files, purges stale edges by <code>source_file</code>, and upserts updated triples automatically.</li>
+        </ol>
+
+        <!-- SVG Diagram 7 -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="34" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Local-First Graph Workstation Architecture</text>
+            <rect x="45" y="75" width="260" height="275" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+            <text x="175" y="108" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Obsidian / Markdown Vault</text>
+            <text x="70" y="145" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Plain-text .md notes</text>
+            <text x="70" y="172" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- PDFs converted to .md</text>
+            <text x="70" y="199" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- ontology.yaml &amp; aliases.json</text>
+            <text x="70" y="226" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Watchdog / Cron trigger</text>
+            <line x1="305" y1="212" x2="350" y2="212" stroke="#fbbf24" stroke-width="2"/>
+            <rect x="350" y="75" width="260" height="275" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="480" y="108" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">127.0.0.1 Inference &amp; Graph</text>
+            <text x="375" y="145" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Ollama JSON Extraction</text>
+            <text x="375" y="172" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- SQLite + NetworkX / KuzuDB</text>
+            <text x="375" y="199" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Leiden Community Clustering</text>
+            <text x="375" y="226" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Zero external network calls</text>
+            <line x1="610" y1="212" x2="655" y2="212" stroke="#fbbf24" stroke-width="2"/>
+            <rect x="655" y="75" width="260" height="275" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+            <text x="785" y="108" fill="#e879f9" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Query &amp; Synthesis CLI</text>
+            <text x="680" y="145" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- 2-Hop Local GraphRAG</text>
+            <text x="680" y="172" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Global Cluster Briefings</text>
+            <text x="680" y="199" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Strict [file#chunk] Citations</text>
+            <text x="680" y="226" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Local MCP Server for IDE</text>
+          </svg>
+        </div>
+
+        <h2 id="tutorial-python-graphrag" style="color: #fbbf24; margin-top: 2.5rem;">Production Python Pipeline: Multi-Hop GraphRAG Retriever with Citations</h2>
+        <p>
+          Once your graph is populated in SQLite and loaded into NetworkX, this retriever performs seed entity matching, executes a bounded 2-hop breadth-first traversal, ranks connected evidence edges, and passes the structured subgraph context to your local Ollama model for cited synthesis.
+        </p>
+
+        <div class="code-window" style="background: #040711; border: 1px solid rgba(56, 189, 248, 0.35); border-left: 3px solid var(--cyan); border-radius: 8px; margin: 1.75rem 0; overflow: hidden;">
+          <div class="code-bar" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; background: #0c111d; border-bottom: 1px solid rgba(56, 189, 248, 0.2);">
+            <span style="font-family: monospace; font-size: 0.85rem; color: #38bdf8;">graphrag_retriever.py</span>
+            <button type="button" class="copy-btn" onclick="copyCode(this)" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 4px; padding: 0.25rem 0.65rem; font-size: 0.78rem; cursor: pointer; text-decoration: none !important;">Copy</button>
+          </div>
+          <pre style="margin: 0; padding: 1.15rem; white-space: pre-wrap; word-break: break-word; overflow-x: hidden; color: #e2e8f0; font-size: 0.88rem; line-height: 1.55;"><code>import json
+import sqlite3
+import urllib.request
+from pathlib import Path
+import networkx as nx
+
+def find_seed_nodes(g: nx.MultiDiGraph, query: str, limit: int = 5) -&gt; list[str]:
+    terms = {w.lower() for w in query.split() if len(w) &gt; 2}
+    scored = []
+    for node_id, data in g.nodes(data=True):
+        name = data.get("name", "").lower()
+        overlap = sum(1 for t in terms if t in name)
+        if overlap &gt; 0:
+            scored.append((overlap, g.degree(node_id), node_id))
+    scored.sort(reverse=True)
+    return [n for _, _, n in scored[:limit]]
+
+def extract_k_hop_context(g: nx.MultiDiGraph, seeds: list[str], hops: int = 2, max_edges: int = 30) -&gt; list[str]:
+    visited_nodes = set(seeds)
+    frontier = set(seeds)
+    for _ in range(hops):
+        next_frontier = set()
+        for node in frontier:
+            if node in g:
+                next_frontier.update(g.successors(node))
+                next_frontier.update(g.predecessors(node))
+        frontier = next_frontier - visited_nodes
+        visited_nodes.update(frontier)
+
+    subgraph = g.subgraph(visited_nodes)
+    evidence_lines = []
+    for u, v, data in list(subgraph.edges(data=True))[:max_edges]:
+        line = (
+            f"- ({u}) -[{data['predicate']}]-&gt; ({v}) | "
+            f"Quote: \"{data['quote']}\" [Source: {data['source_file']}]"
+        )
+        evidence_lines.append(line)
+    return evidence_lines
+
+def answer_with_graphrag(db_path: Path, question: str, model: str = "qwen2.5:7b") -&gt; str:
+    conn = sqlite3.connect(db_path)
+    g = nx.MultiDiGraph()
+    for nid, etype, name in conn.execute("SELECT node_id, entity_type, canonical_name FROM nodes"):
+        g.add_node(nid, entity_type=etype, name=name)
+    for src, pred, tgt, quote, src_file in conn.execute(
+        "SELECT source_id, predicate, target_id, evidence_quote, source_file FROM edges"
+    ):
+        g.add_edge(src, tgt, predicate=pred, quote=quote, source_file=src_file)
+
+    seeds = find_seed_nodes(g, question)
+    if not seeds:
+        return "No matching entities found in the local knowledge graph."
+
+    context_lines = extract_k_hop_context(g, seeds, hops=2)
+    prompt = (
+        "Answer the question using ONLY the verified graph edges and quotes below. "
+        "Cite the exact [Source: ...] path for every claim.\n\n"
+        f"GRAPH EVIDENCE:\n" + "\n".join(context_lines) + f"\n\nQUESTION: {question}"
+    )
+    payload = {"model": model, "prompt": prompt, "stream": False, "options": {"temperature": 0.1}}
+    req = urllib.request.Request(
+        "http://127.0.0.1:11434/api/generate",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+    )
+    with urllib.request.urlopen(req, timeout=90) as resp:
+        return json.loads(resp.read().decode("utf-8"))["response"]</code></pre>
+        </div>
+
+        <h2 id="tutorial-prompt-resolution" style="color: #fbbf24; margin-top: 2.5rem;">Production Prompt Template: Entity Resolution and Merge Adjudicator</h2>
+        <p>
+          When your Stage 2 vector similarity check flags two entity names in the gray zone (cosine similarity between 0.80 and 0.92), run this adjudication prompt with each node's 1-hop neighborhood to decide safely whether to merge them or keep them separate.
+        </p>
+
+        <div class="code-window" style="background: #040711; border: 1px solid rgba(251, 191, 36, 0.35); border-left: 3px solid var(--gold); border-radius: 8px; margin: 1.75rem 0; overflow: hidden;">
+          <div class="code-bar" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; background: #0c111d; border-bottom: 1px solid rgba(251, 191, 36, 0.2);">
+            <span style="font-family: monospace; font-size: 0.85rem; color: #fbbf24;">entity_merge_adjudicator_prompt.txt</span>
+            <button type="button" class="copy-btn" onclick="copyCode(this)" style="background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4); border-radius: 4px; padding: 0.25rem 0.65rem; font-size: 0.78rem; cursor: pointer; text-decoration: none !important;">Copy</button>
+          </div>
+          <pre style="margin: 0; padding: 1.15rem; white-space: pre-wrap; word-break: break-word; overflow-x: hidden; color: #e2e8f0; font-size: 0.88rem; line-height: 1.55;"><code>SYSTEM:
+You are an Entity Resolution Adjudicator for a Personal Knowledge Graph.
+Decide whether ENTITY_A and ENTITY_B refer to the exact same real-world entity.
+
+CRITERIA:
+- Compare entity types, shared neighbors, and source context quotes.
+- Acronyms, versioned tool names (e.g., "Python 3.12" vs "Python"), and spelling variants usually MERGE.
+- Distinct products, distinct people sharing a last name, or homonyms across domains MUST NOT MERGE.
+
+OUTPUT JSON ONLY:
+{
+  "decision": "MERGE" | "KEEP_SEPARATE",
+  "canonical_name": "string",
+  "reasoning": "one concise sentence"
+}
+
+ENTITY_A: {{entity_a_name}} (Type: {{entity_a_type}})
+Neighbors A: {{entity_a_neighbors}}
+
+ENTITY_B: {{entity_b_name}} (Type: {{entity_b_type}})
+Neighbors B: {{entity_b_neighbors}}</code></pre>
+        </div>
+
+        <h2 id="tutorial-ops-recovery" style="color: #fbbf24; margin-top: 2.5rem;">Step-by-Step Operational Runbook: Graph Pruning, Snapshots, and Rebuild</h2>
+        <p>
+          Execute this monthly maintenance runbook to keep your personal knowledge graph fast, accurate, and free of semantic drift:
+        </p>
+
+        <!-- SVG Diagram 8 -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(232, 121, 249, 0.3); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="34" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Monthly Graph Maintenance &amp; Blue-Green Rebuild Cycle</text>
+            <rect x="55" y="135" width="155" height="110" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+            <text x="132" y="175" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">1. Snapshot DB</text>
+            <text x="132" y="200" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">sqlite3 .backup</text>
+            <text x="132" y="220" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Verify Checksum</text>
+            <line x1="210" y1="190" x2="255" y2="190" stroke="#fbbf24" stroke-width="2"/>
+            <rect x="255" y="135" width="155" height="110" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="332" y="175" fill="#34d399" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2. Prune Orphans</text>
+            <text x="332" y="200" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Drop 0-degree nodes</text>
+            <text x="332" y="220" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Audit Top-20 Hubs</text>
+            <line x1="410" y1="190" x2="455" y2="190" stroke="#fbbf24" stroke-width="2"/>
+            <rect x="455" y="135" width="165" height="110" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+            <text x="537" y="175" fill="#e879f9" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">3. Merge Aliases</text>
+            <text x="537" y="200" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Review Gray Zone</text>
+            <text x="537" y="220" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Update aliases.json</text>
+            <line x1="620" y1="190" x2="665" y2="190" stroke="#fbbf24" stroke-width="2"/>
+            <rect x="665" y="135" width="235" height="110" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+            <text x="782" y="175" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">4. Recompute Leiden</text>
+            <text x="782" y="200" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Refresh Cluster Summaries</text>
+            <text x="782" y="220" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Run 5 Golden Queries</text>
+          </svg>
+        </div>
+
+        <ol style="color: #cbd5e1; line-height: 1.85; padding-left: 1.5rem;">
+          <li><strong>Create an Atomic SQLite Backup:</strong> Never run destructive graph cleanup on your live database. Execute <code>sqlite3 pkg.db ".backup pkg_backup_$(date +%F).db"</code> first.</li>
+          <li><strong>Audit High-Degree Hub Nodes:</strong> Query the top 20 nodes by degree (<code>ORDER BY degree DESC LIMIT 20</code>). If generic terms like <code>"Model"</code> or <code>"API"</code> appear, add them to your stoplist and delete those nodes and their incident edges.</li>
+          <li><strong>Purge Disconnected Orphan Nodes:</strong> Remove nodes with zero incident edges (left behind after note deletions or edits) using a single SQL <code>DELETE FROM nodes WHERE node_id NOT IN (SELECT source_id FROM edges UNION SELECT target_id FROM edges)</code>.</li>
+          <li><strong>Review Alias Merge Candidates:</strong> Inspect the weekly gray-zone queue, append confirmed synonyms to <code>aliases.json</code>, and rewrite incident edge IDs to point to the surviving canonical node.</li>
+          <li><strong>Recompute Leiden Communities &amp; Verify Golden Queries:</strong> Re-run community detection and summary generation, then execute five benchmark multi-hop questions from your personal test suite to confirm citation accuracy before retiring the backup.</li>
+        </ol>
+
+        <h2 id="references" style="color: #fbbf24; margin-top: 2.5rem;">Live Technical References</h2>
+        <ul style="color: #cbd5e1; line-height: 1.9; padding-left: 1.5rem;">
+          <li><a class="gold-link" href="https://microsoft.github.io/graphrag/" rel="noopener" target="_blank">Microsoft GraphRAG Documentation</a> - Official architecture for hierarchical Leiden community summaries and local/global graph search.</li>
+          <li><a class="gold-link" href="https://neo4j.com/docs/" rel="noopener" target="_blank">Neo4j Graph Database Documentation</a> - Labeled property graph modeling, Cypher query language, and Graph Data Science guides.</li>
+          <li><a class="gold-link" href="https://docs.kuzudb.com/" rel="noopener" target="_blank">KuzuDB Embedded Graph Database</a> - High-performance, serverless, in-process property graph database with native Cypher and vector support.</li>
+          <li><a class="gold-link" href="https://networkx.org/documentation/stable/" rel="noopener" target="_blank">NetworkX Documentation</a> - Standard Python library for complex network analysis, k-hop traversal, and graph algorithms.</li>
+          <li><a class="gold-link" href="https://ollama.com/docs" rel="noopener" target="_blank">Ollama Documentation</a> - Local LLM runtime with structured JSON schema output and zero-egress execution.</li>
+          <li><a class="gold-link" href="https://docs.pydantic.dev/latest/" rel="noopener" target="_blank">Pydantic V2 Validation Documentation</a> - Strict runtime schema validation for LLM-extracted triples and structured outputs.</li>
+          <li><a class="gold-link" href="https://leidenalg.readthedocs.io/en/stable/" rel="noopener" target="_blank">leidenalg Documentation</a> - Python implementation of the Leiden algorithm for guaranteed well-connected community detection.</li>
+          <li><a class="gold-link" href="https://www.w3.org/TR/rdf11-concepts/" rel="noopener" target="_blank">W3C RDF 1.1 Concepts and Abstract Syntax</a> - Foundational specification for subject-predicate-object semantic web triples.</li>
+          <li><a class="gold-link" href="https://www.anthropic.com/engineering/building-effective-agents" rel="noopener" target="_blank">Anthropic: Building Effective Agents</a> - Engineering patterns for tool-augmented retrieval and deterministic verification loops.</li>
+          <li><a class="gold-link" href="https://www.sqlite.org/backup.html" rel="noopener" target="_blank">SQLite Online Backup API</a> - Atomic snapshot and recovery guarantees for local-first single-file databases.</li>
+        </ul>
+
+      </article>
+    </div>
+  </section>
+
+  <!-- Preserved CTA Block -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="service-cta-buttons" style="margin:2rem 0;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a class="btn btn-commission btn-lg" href="../contact.html">Commission Knowledge Graph →</a>
+          <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="divider" style="margin-top:3rem;"></div>
+
+  <script>
+  function copyCode(btn) {
+    var pre = btn.closest('.code-window').querySelector('pre');
+    navigator.clipboard.writeText(pre.innerText).then(function() {
+      var orig = btn.innerText;
+      btn.innerText = 'Copied!';
+      setTimeout(function() { btn.innerText = orig; }, 1800);
+    });
+  }
+  </script>
+</main>
+    <!-- START:FOOTER -->
+    <footer id="links">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="footer-brand-logo-link" aria-label="Thomas Cherickal - The Digital Futurist">
+          <img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo" class="footer-brand-logo"
+            width="46" height="46" />
+        </a>
+        <div>
+          <p class="footer-brand-name">The Digital Futurist</p>
+          <p class="footer-brand-tagline">Thomas Cherickal · Generative AI Consultant</p>
+        </div>
+      </div>
+      <div class="footer-newsletter-wrap">
+        <div class="newsletter-card">
+          <div class="newsletter-info">
+            <p class="newsletter-name"><span class="newsletter-icon"><svg class="newsletter-svg" width="18" height="18"
+                  viewBox="0 0 24 24" fill="#F87171" aria-hidden="true">
+                  <path
+                    d="m3.5 11.633-2.434 2.408V8.687a.53.53 0 0 0-.533-.527.53.53 0 0 0-.533.527v6.624a.528.528 0 0 0 .532.526.533.533 0 0 0 .377-.153l2.974-2.939 2.974 2.94a.535.535 0 0 0 .754 0 .522.522 0 0 0 0-.746l-2.974-2.938L7.61 9.06a.522.522 0 0 0 0-.745.538.538 0 0 0-.753 0l-3.344 3.307c-.003 0-.005.003-.007.005l-.007.006v-.001zm8.826 4.206a.53.53 0 0 1-.533-.526V8.688a.53.53 0 0 1 .533-.528.53.53 0 0 1 .533.528v6.624a.53.53 0 0 1-.533.526v.001zm7.257-6.624v6.098c0 .29.238.526.532.526a.53.53 0 0 0 .533-.526V9.215h2.818A.53.53 0 0 0 24 8.688a.53.53 0 0 0-.533-.527h-6.702a.53.53 0 0 0-.533.527.53.53 0 0 0 .533.527h2.819-.001z" />
+                </svg></span>The Digital Futurist Newsletter</p>
+            <p class="newsletter-desc">How to understand and build emerging technologies.</p>
+          </div>
+          <a href="https://thomascherickal.kit.com" target="_blank" rel="noopener" class="btn btn-primary"
+            style="white-space:nowrap;">Subscribe Free →</a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-label" id="contact-label">Find Me Online</p>
+    <div class="social-grid">
+      <a href="https://thomascherickal.com" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal Profile Site"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg></span>Master Blog</a>
+      <a href="https://github.com/thomascherickal" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal GitHub Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true">
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+          </svg></span>GitHub</a>
+      <a href="https://linkedin.com/in/thomascherickal" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal LinkedIn Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#0A66C2" aria-hidden="true">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg></span>LinkedIn</a>
+      <a href="https://hackernoon.com/u/thomascherickal" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal HackerNoon Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#00EB47" aria-hidden="true">
+            <path
+              d="M5.701 0v6.223H8.85V4.654h1.576v7.842H12V4.654h1.574v1.569h3.15V0zm11.024 6.223v3.136h1.574V6.223zm1.574 3.136v4.705h1.576v-1.568h1.574v-1.568h-1.574V9.359zm0 4.705h-1.574v3.137h1.574zm-1.574 3.137h-3.15v1.569H8.85V17.2H5.7V24h11.024zm-11.024 0v-3.137H4.125v3.137zm-1.576-3.137V9.36H2.551v4.705zm0-4.705h1.576V6.223H4.125Z" />
+          </svg></span>HackerNoon</a>
+      <a href="https://thomascherickal.medium.com" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal Medium Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true">
+            <path
+              d="M4.21 0A4.201 4.201 0 0 0 0 4.21v15.58A4.201 4.201 0 0 0 4.21 24h15.58A4.201 4.201 0 0 0 24 19.79v-1.093c-.137.013-.278.02-.422.02-2.577 0-4.027-2.146-4.09-4.832a7.592 7.592 0 0 1 .022-.708c.093-1.186.475-2.241 1.105-3.022a3.885 3.885 0 0 1 1.395-1.1c.468-.237 1.127-.367 1.664-.367h.023c.101 0 .202.004.303.01V4.211A4.201 4.201 0 0 0 19.79 0Zm.198 5.583h4.165l3.588 8.435 3.59-8.435h3.864v.146l-.019.004c-.705.16-1.063.397-1.063 1.254h-.003l.003 10.274c.06.676.424.885 1.063 1.03l.02.004v.145h-4.923v-.145l.019-.005c.639-.144.994-.353 1.054-1.03V7.267l-4.745 11.15h-.261L6.15 7.569v9.445c0 .857.358 1.094 1.063 1.253l.02.004v.147H4.405v-.147l.019-.004c.705-.16 1.065-.397 1.065-1.253V6.987c0-.857-.358-1.094-1.064-1.254l-.018-.004zm19.25 3.668c-1.086.023-1.733 1.323-1.813 3.124H24V9.298a1.378 1.378 0 0 0-.342-.047Zm-1.862 3.632c-.1 1.756.86 3.239 2.204 3.634v-3.634z" />
+          </svg></span>Medium</a>
+      <a href="https://thomascherickal.hashnode.dev" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal Hashnode Blog"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#2962FF" aria-hidden="true">
+            <path
+              d="M22.351 8.019l-6.37-6.37a5.63 5.63 0 0 0-7.962 0l-6.37 6.37a5.63 5.63 0 0 0 0 7.962l6.37 6.37a5.63 5.63 0 0 0 7.962 0l6.37-6.37a5.63 5.63 0 0 0 0-7.962zM12 15.953a3.953 3.953 0 1 1 0-7.906 3.953 3.953 0 0 1 0 7.906z" />
+          </svg></span>Hashnode</a>
+      <a href="https://thesingularitypoint.substack.com" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal Substack"><span class="social-icon"><svg class="social-svg" width="18" height="18"
+            viewBox="0 0 24 24" fill="#FF6719" aria-hidden="true">
+            <path
+              d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
+          </svg></span>Substack</a>
+      <a href="https://exercism.org/profiles/thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal Exercism Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="24" height="24" rx="4" fill="#E5E7EB" />
+            <g transform="translate(12, 12) scale(0.68) translate(-15.0245, -11.9765)" fill="#000000">
+              <path
+                d="M 16.7711 15.3596 C 16.7711 16.376 15.8912 17.0112 15.1118 17.0112 C 14.3324 17.0112 13.3973 16.6954 13.3973 15.3596 V 14.71 H 12.3706 V 15.3596 C 12.3706 16.8389 13.6008 18.0421 15.1118 18.0421 C 16.6228 18.0421 17.8529 16.8389 17.8529 15.3596 V 14.71 H 16.7711 V 15.3596 Z" />
+              <path
+                d="M 8.14791 12.2226 C 8.14791 11.252 8.98972 10.4627 10.024 10.4627 C 11.0576 10.4627 11.8994 11.2527 11.8994 12.2226 H 13.0811 C 13.0811 10.64 11.7104 9.35303 10.024 9.35303 C 8.33759 9.35303 6.96619 10.64 6.96619 12.2226 H 8.14791 Z" />
+              <path
+                d="M 17.8859 12.2226 C 17.8859 11.252 18.7278 10.4627 19.7613 10.4627 C 20.7956 10.4627 21.6374 11.2527 21.6374 12.2226 H 22.8191 C 22.8191 10.64 21.4477 9.35303 19.7613 9.35303 C 18.0749 9.35303 16.7042 10.64 16.7042 12.2226 H 17.8859 Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M 24.7258 8.45805 V 4.64371 C 24.7258 3.35828 24.5696 2.46641 24.257 1.96808 C 23.9445 1.46974 23.2938 1.08551 22.3049 0.815389 C 22.0063 0.731557 21.8571 0.596496 21.8571 0.410202 C 21.8571 0.158705 22.1929 0.032959 22.8646 0.032959 H 23.8862 C 24.9964 0.032959 25.8384 0.377597 26.4121 1.06688 C 26.9859 1.75617 27.2727 2.76214 27.2727 4.08483 V 8.10875 C 27.2727 9.04022 27.373 9.75744 27.5736 10.2604 C 27.7742 10.7634 28.145 11.2338 28.6861 11.6716 C 28.8447 11.802 28.924 11.9091 28.924 11.993 C 28.924 12.0768 28.8447 12.1839 28.6861 12.3143 C 28.1357 12.7614 27.7625 13.2341 27.5666 13.7325 C 27.3707 14.2308 27.2727 14.9457 27.2727 15.8772 V 19.8871 C 27.2727 21.2191 26.9835 22.2297 26.4051 22.919 C 25.8267 23.6083 24.9871 23.953 23.8862 23.953 H 22.8646 C 22.4261 23.953 22.1486 23.932 22.032 23.8901 C21.9154 23.8482 21.8571 23.7434 21.8571 23.5757 C 21.8571 23.3429 22.011 23.1892 22.3189 23.1146 L 22.8786 22.9889 C 24.1101 22.7095 24.7258 21.4939 24.7258 19.3422 V 15.5279 C 24.7258 14.0841 25.0757 13.0641 25.7754 12.468 L 26.0413 12.2445 C 26.1719 12.1327 26.2372 12.0488 26.2372 11.993 C 26.2372 11.9278 26.1719 11.8439 26.0413 11.7415 L 25.7754 11.5179 C 25.0757 10.9218 24.7258 9.90183 24.7258 8.45805 Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M 5.32324 8.42509 V 4.61075 C 5.32324 3.32532 5.47951 2.43345 5.79204 1.93512 C 6.10458 1.43678 6.75529 1.05256 7.74421 0.78243 C 8.04275 0.698598 8.19202 0.563537 8.19202 0.377243 C 8.19202 0.125746 7.85616 0 7.18445 0 H 6.16288 C 5.05269 0 4.21072 0.344638 3.63696 1.03393 C 3.06321 1.72321 2.77633 2.72918 2.77633 4.05187 V 8.0758 C 2.77633 9.00726 2.67604 9.72448 2.47546 10.2275 C 2.27488 10.7305 1.90404 11.2009 1.36294 11.6386 C 1.20434 11.7691 1.12504 11.8762 1.12504 11.96 C 1.12504 12.0438 1.20434 12.151 1.36294 12.2814 C 1.91337 12.7285 2.28654 13.2012 2.48246 13.6995 C 2.67838 14.1978 2.77633 14.9127 2.77633 15.8442 V 19.8542 C 2.77633 21.1862 3.06554 22.1968 3.64396 22.8861 C 4.22238 23.5754 5.06202 23.92 6.16288 23.92 H 7.18445 C 7.62293 23.92 7.90047 23.899 8.01709 23.8571 C 8.13371 23.8152 8.19202 23.7104 8.19202 23.5428 C 8.19202 23.3099 8.03808 23.1562 7.73021 23.0817 L 7.17045 22.9559 C 5.93897 22.6765 5.32324 21.4609 5.32324 19.3093 V 15.4949 C 5.32324 14.0511 4.9734 13.0312 4.27369 12.435 L 4.00781 12.2115 C 3.87719 12.0997 3.81189 12.0159 3.81189 11.96 C 3.81189 11.8948 3.87719 11.811 4.00781 11.7085 L 4.27369 11.485 C 4.9734 10.8888 5.32324 9.86887 5.32324 8.42509 Z" />
+            </g>
+          </svg></span>Exercism</a>
+      <a href="https://www.deep-ml.com/profile/thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal Deep-ML Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="24" height="24" rx="4" fill="#003865" />
+            <g transform="scale(0.046875)">
+              <g transform="translate(56.32 144.46) scale(0.60785)">
+                <path fill="#ffffff" fill-rule="evenodd"
+                  d="M36.4 365.4C31.4 363.0 30.0 359.4 30.0 349.2C30.0 344.2 29.7 339.5 29.4 338.6C28.9 337.3 27.1 337.0 19.9 337.0C9.3 337.0 4.9 335.5 2.0 330.8C0.0 327.5 0.0 326.2 0.0 183.5C0.0 70.3 0.3 39.0 1.3 37.0C2.0 35.7 4.1 33.5 5.9 32.3C8.9 30.3 10.6 30.0 18.9 30.0C25.1 30.0 29.0 29.6 29.8 28.8C30.5 28.1 31.0 24.4 31.0 19.3C31.0 9.8 32.4 5.4 36.5 2.2C39.3 0.0 39.3 -0.0 95.2 0.0C156.5 0.0 155.3 -0.1 158.5 6.0C159.5 8.0 160.0 11.8 160.0 18.3C160.0 24.2 160.4 28.0 161.2 28.8C162.0 29.6 166.0 30.0 172.4 30.0C183.8 30.0 186.4 30.9 189.7 35.9C191.7 38.9 192.0 40.5 192.0 50.1C192.0 63.2 191.8 63.0 205.3 63.0C213.3 63.0 215.1 63.3 217.4 65.1C221.7 68.5 222.5 70.9 223.0 83.5L223.5 95.5L233.3 96.1C248.4 97.0 252.0 100.8 252.0 116.1C252.0 123.1 252.3 124.9 253.6 125.4C254.5 125.7 259.4 126.0 264.6 126.0C273.5 126.0 274.1 126.1 277.2 128.9L280.5 131.8L281.0 152.3C281.4 167.5 281.8 173.1 282.9 174.4C284.1 175.8 287.0 176.0 306.1 176.0C327.5 176.0 327.9 176.0 329.4 173.8C330.7 172.0 331.0 168.2 331.0 153.7C331.0 133.9 331.7 130.8 336.9 127.7C339.0 126.5 342.1 126.0 348.3 126.0C353.0 126.0 357.5 125.7 358.4 125.4C359.7 124.9 360.0 123.1 360.0 116.1C360.0 100.8 363.6 97.0 378.7 96.1L388.4 95.5L389.2 92.0C389.6 90.1 389.9 84.6 389.9 79.9C389.8 70.2 390.7 67.8 395.3 65.0C397.8 63.4 400.3 63.0 407.1 63.0C413.1 63.0 416.1 62.6 416.9 61.7C417.5 60.9 418.2 55.0 418.6 48.4C418.9 41.9 419.6 35.5 420.2 34.3C422.3 29.9 425.9 28.6 436.5 28.0L446.5 27.5L447.0 17.5C447.6 6.7 448.9 3.3 453.6 1.2C455.2 0.4 463.0 0.0 475.6 0.0C502.1 0.0 503.1 0.6 504.0 16.5L504.5 25.5L514.0 26.0C524.3 26.6 527.0 27.6 529.8 31.7C531.4 34.2 531.5 42.5 532.0 159.0L532.5 283.5L573.0 284.0C603.4 284.4 614.1 284.8 615.8 285.8C620.1 288.3 621.5 291.8 622.0 302.0L622.5 311.5L633.0 312.0C651.1 312.9 652.3 314.8 651.8 340.9C651.5 360.7 651.1 361.8 644.4 365.0C640.4 367.0 638.4 367.0 568.6 366.8L496.8 366.5L493.4 362.8C490.1 359.1 490.0 358.8 490.0 350.7C490.0 345.6 489.5 341.9 488.8 341.2C488.1 340.5 484.4 340.0 479.3 340.0C469.4 340.0 466.0 338.6 463.6 333.6C462.2 330.5 462.0 320.2 462.0 223.6C462.0 119.3 462.0 117.0 460.1 116.0C457.6 114.7 442.4 114.7 439.9 116.0C438.2 117.0 438.0 118.2 438.0 130.6C438.0 146.0 436.9 149.8 431.8 153.0C429.2 154.6 426.8 155.0 419.7 155.0C406.6 155.0 407.0 154.5 407.0 170.3C407.0 190.8 404.3 194.0 387.3 194.0C379.2 194.0 377.9 194.2 377.0 195.9C376.5 197.0 376.0 203.8 376.0 211.0L376.0 224.2L372.6 227.6L369.2 231.0L358.8 231.0C352.0 231.0 347.8 231.4 346.8 232.2C345.5 233.3 345.1 236.0 344.8 246.5C344.3 267.8 343.9 268.0 310.5 268.0C277.3 268.0 276.9 267.8 276.2 246.0C275.9 236.1 275.5 233.2 274.2 232.2C273.2 231.5 269.3 231.0 263.7 231.0C255.0 231.0 254.7 230.9 251.6 227.8C248.4 224.6 248.3 224.2 247.6 213.1C247.3 206.8 246.7 201.3 246.4 200.9C246.1 200.4 241.7 200.0 236.7 200.0C220.8 200.0 218.0 196.6 218.0 177.2C218.0 169.4 217.6 165.0 216.8 164.2C216.0 163.4 212.3 163.0 206.8 163.0C191.6 163.0 188.5 159.8 188.7 143.8C188.9 131.1 188.8 131.0 176.3 131.0C160.9 131.0 158.0 127.7 158.0 110.5C158.0 98.9 158.1 99.0 143.5 99.0L132.8 99.0L129.4 95.6L126.0 92.2L126.0 81.0C126.0 74.9 125.5 69.0 125.0 67.9C124.0 66.1 122.6 66.0 94.9 66.0L66.0 66.0L65.0 68.6C64.4 70.2 64.0 113.2 64.0 184.3C64.0 285.2 64.2 297.8 65.6 299.8C67.0 301.9 67.8 302.0 80.1 302.0C87.3 302.0 94.0 301.6 95.0 301.0C96.5 300.2 96.9 298.2 97.5 288.8C97.9 282.6 98.7 276.7 99.2 275.7C101.2 271.8 106.1 270.0 114.7 270.0C122.0 270.0 123.1 269.8 124.4 267.8C125.8 265.8 126.0 258.8 126.0 211.2L126.0 156.8L128.9 153.9L131.8 151.0L148.7 151.0C164.5 151.0 165.8 151.1 167.9 153.1C171.1 156.1 172.0 159.2 172.0 167.5C172.0 175.8 172.2 176.0 180.0 176.0C186.7 176.0 189.5 179.4 190.3 188.2C191.3 200.5 191.1 291.8 190.1 295.8C189.5 297.9 187.9 300.7 186.4 302.1C184.2 304.2 182.7 304.5 175.7 304.8C162.1 305.3 163.0 304.6 163.0 315.3C163.0 331.1 159.4 335.2 144.7 336.0L135.5 336.5L135.0 347.2C134.4 359.2 133.1 362.1 126.9 365.2C123.8 366.8 119.5 367.0 81.5 367.0C46.1 367.0 39.0 366.7 36.4 365.4Z" />
+                <path fill="#018AFA"
+                  d="M576.2 98.7C571.1 95.8 570.5 93.7 570.2 75.7C569.8 57.2 570.3 54.6 575.2 50.5C577.9 48.2 578.9 48.0 588.5 48.0C597.8 48.0 599.0 47.8 600.0 46.1C600.6 44.9 601.0 36.7 601.0 26.5C601.0 -0.3 600.6 0.0 629.7 0.0C657.4 0.0 657.0 -0.4 657.0 26.3C657.0 42.4 656.8 43.9 654.9 46.4C651.6 50.6 649.1 51.5 638.5 52.0L628.5 52.5L628.0 62.2C627.5 71.1 627.3 72.2 624.8 74.7C622.5 77.0 621.0 77.5 614.8 77.9L607.5 78.5L607.0 86.3C606.5 93.6 606.3 94.4 603.2 97.1C600.0 99.9 599.7 100.0 589.2 100.0C582.6 99.9 577.6 99.5 576.2 98.7Z" />
+              </g>
+            </g>
+          </svg></span>Deep-ML</a>
+      <a href="https://hackerrank.com/profile/thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal HackerRank Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#00EA64" aria-hidden="true">
+            <path
+              d="M0 0v24h24V0zm9.95 8.002h1.805c.061 0 .111.05.111.111v7.767c0 .061-.05.111-.11.111H9.95c-.061 0-.111-.05-.111-.11v-2.87H7.894v2.87c0 .06-.05.11-.11.11H5.976a.11.11 0 01-.11-.11V8.112c0-.06.05-.11.11-.11h1.806c.061 0 .11.05.11.11v2.869H9.84v-2.87c0-.06.05-.11.11-.11zm2.999 0h5.778c.061 0 .111.05.111.11v7.767a.11.11 0 01-.11.112h-5.78a.11.11 0 01-.11-.11V8.111c0-.06.05-.11.11-.11z" />
+          </svg></span>HackerRank</a>
+      <a href="https://leetcode.com/u/thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal LeetCode Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#FFA116" aria-hidden="true">
+            <path
+              d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+          </svg></span>LeetCode</a>
+      <a href="https://www.codewars.com/users/thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal CodeWars Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#BA423D" aria-hidden="true">
+            <path
+              d="M1.072.142A1.072 1.072 0 0 0 0 1.214v21.572a1.072 1.072 0 0 0 1.072 1.072h21.856A1.072 1.072 0 0 0 24 22.786V1.214A1.072 1.072 0 0 0 22.928.142zm9.736 1.818a.904.904 0 0 1 .828.539.784.784 0 0 1 1.274.493.639.639 0 0 1 .29-.06c.33.008.59.262.625.575a1.322 1.322 0 0 1 .624-.515 1.325 1.325 0 0 1 1.718.71 1.098 1.098 0 0 1 .306-.236 1.102 1.102 0 0 1 1.483.479 1.094 1.094 0 0 1 .12.47.994.994 0 0 1 1.322 1.214.904.904 0 0 1 .874 1.438.784.784 0 0 1 .176 1.356.639.639 0 0 1 .19.224.642.642 0 0 1-.011.613 1.326 1.326 0 0 1 .482.235 1.334 1.334 0 0 1 .258 1.842 1.098 1.098 0 0 1 .35.15 1.102 1.102 0 0 1 .337 1.516 1.094 1.094 0 0 1-.344.344.994.994 0 0 1 .228 1.318 1.006 1.006 0 0 1-.605.434.904.904 0 0 1-.803 1.482.814.814 0 0 0-.008-.04.784.784 0 0 1-1.075.873.639.639 0 0 1-.098.28.625.625 0 0 1-.43.288 1.33 1.33 0 0 1 .023.456 1.334 1.334 0 0 1-1.44 1.173 1.098 1.098 0 0 1 .054.377 1.102 1.102 0 0 1-1.128 1.072 1.098 1.098 0 0 1-.47-.12.994.994 0 0 1-1.696.583.904.904 0 0 1-1.685.075.784.784 0 0 1-1.274-.493.639.639 0 0 1-.29.064.64.64 0 0 1-.621-.58l.004-.007a1.326 1.326 0 0 1-.632.523 1.334 1.334 0 0 1-1.718-.706 1.098 1.098 0 0 1-.306.232 1.102 1.102 0 0 1-1.48-.478 1.094 1.094 0 0 1-.123-.471.994.994 0 0 1-1.318-1.21.904.904 0 0 1-.874-1.442.784.784 0 0 1-.176-1.356.639.639 0 0 1-.194-.224.642.642 0 0 1 .011-.61l.019.004a1.326 1.326 0 0 1-.497-.239 1.334 1.334 0 0 1-.262-1.845 1.098 1.098 0 0 1-.35-.146 1.102 1.102 0 0 1-.337-1.52 1.094 1.094 0 0 1 .347-.34A.994.994 0 0 1 2.88 9a.904.904 0 0 1 .803-1.48.784.784 0 0 1 1.083-.836.639.639 0 0 1 .098-.28.649.649 0 0 1 .433-.288 1.33 1.33 0 0 1-.026-.452A1.334 1.334 0 0 1 6.716 4.49a1.098 1.098 0 0 1-.06-.377 1.101 1.101 0 0 1 1.13-1.073 1.094 1.094 0 0 1 .47.115.994.994 0 0 1 1.696-.579.904.904 0 0 1 .857-.617z" />
+          </svg></span>CodeWars</a>
+      <a href="https://www.naukri.com/code360/profile/thomascherickal" target="_blank" rel="noopener"
+        class="social-link" aria-label="Thomas Cherickal Code360 Profile"><span class="social-icon"><svg
+            class="social-svg" width="18" height="18" viewBox="0 0 24 24" fill="#F25430" aria-hidden="true">
+            <path
+              d="M23.198 0c-.499.264-1.209.675-1.79.984a542.82 542.82 0 000 6.242c.995-.526 1.761-.834 1.79-2.066V0zM8.743.181C7.298.144 5.613.65 4.47 1.414c-1.17.8-1.987 1.869-2.572 3.179A16.787 16.787 0 00.9 8.87c-.15 1.483-.128 3.079.025 4.677.27 1.855.601 3.724 1.616 5.456 1.57 2.62 4.313 4.109 7.262 4.19 3.41.246 7.233.53 11.411.807.022-2.005.01-5.418 0-6.25-3.206-.21-7.398-.524-11.047-.782-.443-.043-.896-.056-1.324-.172-1.086-.295-1.806-.802-2.374-1.757-.643-1.107-.875-2.832-.797-4.294.11-1.27.287-2.41 1.244-3.44.669-.56 1.307-.758 2.161-.84 5.17.345 7.609.53 12.137.858.032-1.133.01-3.46 0-6.229C16.561.752 12.776.474 8.743.181zm-.281 9.7c.174.675.338 1.305.729 1.903.537.832 1.375 1.127 2.388.877.76-.196 1.581-.645 2.35-1.282zm12.974 1.04l-5.447.689c.799.739 1.552 1.368 2.548 1.703.988.319 1.78.01 2.308-.777.209-.329.56-1.148.591-1.614zm.842 6.461c-.388.01-.665.198-.87.355.002 1.798 0 4.127 0 6.223.586-.297 1.135-.644 1.793-.998-.005-1.454.002-3.137-.005-4.707a.904.904 0 00-.917-.873z" />
+          </svg></span>Code360</a>
+      <a href="https://www.hackerearth.com/@thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal HackerEarth Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="24" height="24" rx="4" fill="#000000" />
+            <path fill="#FFFFFF"
+              d="M18.447 20.936H5.553V19.66h12.894zM9.511 0H6.97v17.65h2.58V10.25c0-1.88 1.35-2.77 2.64-2.77 1.76 0 2.34 1.33 2.34 3.12v7.05h2.54v-7.32c-.13-3.82-2.05-5.05-4.02-5.17-1.33-.09-2.55.03-3.54 1.31V0z" />
+          </svg></span>HackerEarth</a>
+      <a href="https://www.kaggle.com/thomascherickal" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal Kaggle Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#20BEFF" aria-hidden="true">
+            <path
+              d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.246l-5.18-6.598-1.453 1.383v5.215c0 .164-.082.246-.246.246H5.474c-.164 0-.246-.082-.246-.246V.246c0-.164.082-.246.246-.246h2.559c.164 0 .246.082.246.246v14.906l6.398-6.398c.141-.141.305-.211.492-.211h3.281c.141 0 .234.059.281.176.047.141.023.246-.07.316l-7.242 7.102 7.547 7.43c.094.094.117.199.07.293z" />
+          </svg></span>Kaggle</a>
+      <a href="https://profile.codersrank.io/user/thomascherickal/" target="_blank" rel="noopener" class="social-link"
+        aria-label="Thomas Cherickal CodersRank Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#67A4AC" aria-hidden="true">
+            <path
+              d="M23.134 8.64l-5.973-3.62a.286.286 0 0 0-.412.125l-1.4 3.286 2.842 1.696a.53.53 0 0 1 0 .921l-5.335 3.14-2.267 5.274a.127.127 0 0 0 .052.203.122.122 0 0 0 .134-.035l3.914-2.365 1.545 2.219a.373.373 0 0 0 .309.167h3.708a.367.367 0 0 0 .327-.2.382.382 0 0 0-.018-.386l-2.513-3.852 5.088-3.077c.577-.349.865-.74.865-1.172V9.813c0-.433-.288-.823-.866-1.172zM13.082 4.35L.845 12.052c-.577.348-.858.739-.845 1.171v1.173c.014.432.303.816.866 1.15l6.056 3.496a.286.286 0 0 0 .412-.146l1.36-3.286-2.884-1.633a.518.518 0 0 1-.275-.384.529.529 0 0 1 .254-.537l5.295-3.245 2.183-5.316a.128.128 0 0 0-.04-.142.122.122 0 0 0-.146-.005z" />
+          </svg></span>CodersRank</a>
+      <a href="https://thomascherickal.quora.com" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal Quora Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#B92B27" aria-hidden="true">
+            <path
+              d="M7.3799.9483A11.9628 11.9628 0 0 1 21.248 19.5397l2.4096 2.4225c.7322.7362.21 1.9905-.8272 1.9905l-10.7105.01a12.52 12.52 0 0 1-.304 0h-.02A11.9628 11.9628 0 0 1 7.3818.9503Zm7.3217 4.428a7.1717 7.1717 0 1 0-5.4873 13.2512 7.1717 7.1717 0 0 0 5.4883-13.2511Z" />
+          </svg></span>Quora</a>
+      <a href="https://reddit.com/user/thomascherickal1" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal Reddit Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#FF4500" aria-hidden="true">
+            <path
+              d="M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-2.286 2.286C.775 23.225 1.097 24 1.738 24H12c6.627 0 12-5.373 12-12S18.627 0 12 0Zm4.388 3.199c1.104 0 1.999.895 1.999 1.999 0 1.105-.895 2-1.999 2-.946 0-1.739-.657-1.947-1.539v.002c-1.147.162-2.032 1.15-2.032 2.341v.007c1.776.067 3.4.567 4.686 1.363.473-.363 1.064-.58 1.707-.58 1.547 0 2.802 1.254 2.802 2.802 0 1.117-.655 2.081-1.601 2.531-.088 3.256-3.637 5.876-7.997 5.876-4.361 0-7.905-2.617-7.998-5.87-.954-.447-1.614-1.415-1.614-2.538 0-1.548 1.255-2.802 2.803-2.802.645 0 1.239.218 1.712.585 1.275-.79 2.881-1.291 4.64-1.365v-.01c0-1.663 1.263-3.034 2.88-3.207.188-.911.993-1.595 1.959-1.595Zm-8.085 8.376c-.784 0-1.459.78-1.506 1.797-.047 1.016.64 1.429 1.426 1.429.786 0 1.371-.369 1.418-1.385.047-1.017-.553-1.841-1.338-1.841Zm7.406 0c-.786 0-1.385.824-1.338 1.841.047 1.017.634 1.385 1.418 1.385.785 0 1.473-.413 1.426-1.429-.046-1.017-.721-1.797-1.506-1.797Zm-3.703 4.013c-.974 0-1.907.048-2.77.135-.147.015-.241.168-.183.305.483 1.154 1.622 1.964 2.953 1.964 1.33 0 2.47-.81 2.953-1.964.057-.137-.037-.29-.184-.305-.863-.087-1.795-.135-2.769-.135Z" />
+          </svg></span>Reddit</a>
+      <a href="https://x.com/thomazcherickal" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal X Profile"><span class="social-icon"><svg class="social-svg" width="18" height="18"
+            viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true">
+            <path
+              d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z" />
+          </svg></span>X (Twitter)</a>
+      <a href="https://linktr.ee/thomascherickal" target="_blank" rel="noopener" class="social-link highlight"
+        aria-label="Thomas Cherickal Linktree Profile"><span class="social-icon"><svg class="social-svg" width="18"
+            height="18" viewBox="0 0 24 24" fill="#43E55E" aria-hidden="true">
+            <path
+              d="m13.73635 5.85251 4.00467-4.11665 2.3248 2.3808-4.20064 4.00466h5.9085v3.30473h-5.9365l4.22865 4.10766-2.3248 2.3338L12.0005 12.099l-5.74052 5.76852-2.3248-2.3248 4.22864-4.10766h-5.9375V8.12132h5.9085L3.93417 4.11666l2.3248-2.3808 4.00468 4.11665V0h3.4727zm-3.4727 10.30614h3.4727V24h-3.4727z" />
+          </svg></span>Linktree</a>
+    </div>
+
+    <hr class="dv">
+
+    <!-- WORK WITH ME -->
+
+    <p class="tc-label">Work With Me</p>
+    <div class="wg footer-work-row">
+
+      <!-- Topmate -->
+      <a href="https://topmate.io/thomascherickal" class="wl" target="_blank" rel="noopener noreferrer">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 47 46" fill="none" aria-hidden="true">
+              <circle cx="23.6" cy="23" r="22.5" fill="#E44332" />
+              <path
+                d="M33.0038 29.6411C31.5707 31.6672 29.5206 33.1752 27.1598 33.9401C24.7989 34.705 22.254 34.6857 19.905 33.8851C17.5561 33.0844 15.5291 31.5454 14.1269 29.4978C12.7247 27.4503 12.0225 25.0041 12.1251 22.5246C12.2277 20.045 13.1296 17.6652 14.6962 15.7405C16.2627 13.8158 18.4099 12.4495 20.817 11.8456C23.224 11.2418 25.7619 11.4328 28.0515 12.3901C30.341 13.3474 32.2595 15.0197 33.5204 17.1572L23.6152 23L33.0038 29.6411Z"
+                fill="#FEF7F7" />
+            </svg>
+          </div>
+          <span class="wl-name">1-on-1 Consults</span>
+        </div>
+        <p class="wl-desc">Book strategy, architecture reviews &amp; enterprise advisory.</p>
+        <span class="wl-url">topmate.io/thomascherickal</span>
+      </a>
+
+      <!-- Patreon -->
+      <a href="https://patreon.com/thomascherickal" class="wl" target="_blank" rel="noopener noreferrer">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FF424D" aria-hidden="true">
+              <path
+                d="M22.957 7.21c-.004-3.064-2.391-5.576-5.191-6.482-3.478-1.125-8.064-.962-11.384.604C2.357 3.231 1.093 7.391 1.046 11.54c-.039 3.411.302 12.396 5.369 12.46 3.765.047 4.326-4.804 6.068-7.141 1.24-1.662 2.836-2.132 4.801-2.618 3.376-.836 5.678-3.501 5.673-7.031Z" />
+            </svg>
+          </div>
+          <span class="wl-name">Patreon Community</span>
+        </div>
+        <p class="wl-desc">Exclusive member content, playbooks &amp; free book access.</p>
+        <span class="wl-url">patreon.com/thomascherickal</span>
+      </a>
+
+      <!-- Gumroad -->
+      <a href="https://thomascherickal.gumroad.com" class="wl" target="_blank" rel="noopener noreferrer">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FF90E8" aria-hidden="true">
+              <path
+                d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0Zm-.007 5.12c4.48 0 5.995 3.025 6.064 4.744h-3.239c-.069-.962-.897-2.406-2.896-2.406-2.136 0-3.514 1.857-3.514 4.126 0 2.27 1.378 4.125 3.514 4.125 1.93 0 2.758-1.512 3.103-3.025h-3.103v-1.238h6.509v6.327h-2.855v-3.989c-.207 1.444-1.102 4.264-4.617 4.264-3.516 0-5.584-2.82-5.584-6.326 0-3.645 2.276-6.602 6.618-6.602z" />
+            </svg>
+          </div>
+          <span class="wl-name">Digital Products</span>
+        </div>
+        <p class="wl-desc">Developer guides, architecture playbooks &amp; checklists.</p>
+        <span class="wl-url">thomascherickal.gumroad.com</span>
+      </a>
+
+      <!-- Pricing & Parity Index -->
+      <a href="https://thedigitalfuturist.com/pricing.html" class="wl" target="_blank" rel="noopener noreferrer">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+              <line x1="1" y1="10" x2="23" y2="10" />
+            </svg>
+          </div>
+          <span class="wl-name">Pricing &amp; Parity</span>
+        </div>
+        <p class="wl-desc">Transparent milestone rates &amp; 195-country PPP index.</p>
+        <span class="wl-url">thedigitalfuturist.com/pricing</span>
+      </a>
+
+      <!-- Message me on X -->
+      <a href="https://x.com/thomazcherickal" class="wl" target="_blank" rel="noopener noreferrer">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true">
+              <path
+                d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z" />
+            </svg>
+          </div>
+          <span class="wl-name">Message me on X</span>
+        </div>
+        <p class="wl-desc">Direct messaging, quick queries &amp; tech discussions.</p>
+        <span class="wl-url">x.com/thomazcherickal</span>
+      </a>
+
+      <!-- Direct Email Inquiry -->
+      <a href="mailto:thomascherickal@gmail.com" class="wl email-reveal-link" data-user="thomascherickal"
+        data-domain="gmail.com">
+        <div class="wl-head">
+          <div class="wl-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+          </div>
+          <span class="wl-name">Direct Inquiries</span>
+        </div>
+        <p class="wl-desc">Reach out directly for custom engagements &amp; proposals.</p>
+        <span class="wl-url email-display">thomascherickal@gmail.com</span>
+      </a>
+    </div>
+
+    <hr class="dv">
+
+    <!-- COPYRIGHT & DOMAINS -->
+    <p class="tc-copy">
+      © 2026 <a href="../index.html">Thomas
+        Cherickal</a>
+      <span class="tc-sep"></span> The Digital Futurist
+      <span class="tc-sep"></span> Generative AI Consultant
+      <span class="tc-sep"></span> <a href="https://thomascherickal.com" target="_blank"
+        rel="noopener noreferrer">thomascherickal.com</a>
+      <span class="tc-sep"></span> <a href="https://thedigitalfuturist.com" target="_blank"
+        rel="noopener noreferrer">thedigitalfuturist.com</a>
+    </p>
+  </footer>
+    <!-- END:FOOTER -->
+<script src="../components.js"></script>
+</body>
+</html>

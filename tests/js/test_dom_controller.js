@@ -93,16 +93,16 @@ function run(harness, PricingCalculator, constants) {
   // 6. Select All Services Button Click
   elements["btn-select-all-services"].trigger("click");
   assert(
-    `UI Select All: Clicking All 14 immediately checks all services and updates price to $${(14 * B_IND_PRICE).toLocaleString()} USD`,
-    elements["calc-display-price"].textContent === `$${(14 * B_IND_PRICE).toLocaleString()} USD` &&
-    elements["selected-service-count-label"].textContent.includes("14 Services Selected"),
-    `Expected $${(14 * B_IND_PRICE).toLocaleString()} USD, got ${elements["calc-display-price"].textContent}`
+    `UI Select All: Clicking All 16 immediately checks all services and updates price to $${(16 * B_IND_PRICE).toLocaleString()} USD`,
+    elements["calc-display-price"].textContent === `$${(16 * B_IND_PRICE).toLocaleString()} USD` &&
+    elements["selected-service-count-label"].textContent.includes("16 Services Selected"),
+    `Expected $${(16 * B_IND_PRICE).toLocaleString()} USD, got ${elements["calc-display-price"].textContent}`
   );
 
   // 7. Participants Input Change: Extra head scaling (+5 participants over 10 included = 15)
   elements["calc-participants"].value = "15";
   elements["calc-participants"].trigger("input");
-  const ui15Price = (14 * B_IND_PRICE) + (5 * B_EXTRA_SEAT);
+  const ui15Price = (16 * B_IND_PRICE) + (5 * B_EXTRA_SEAT);
   assert(
     `UI Participants Input: Changing participants to 15 immediately adds $${(5 * B_EXTRA_SEAT).toLocaleString()} extra head fee ($${ui15Price.toLocaleString()} USD)`,
     elements["calc-display-price"].textContent === `$${ui15Price.toLocaleString()} USD`,
@@ -177,7 +177,7 @@ function run(harness, PricingCalculator, constants) {
     `Expected $${t2CardPrice}/$${t2CardPrice} for Tier 2 on service cards, got indiv=${serviceCards[0].querySelector(".svc-indiv-price").textContent}, biz=${serviceCards[0].querySelector(".svc-biz-price").textContent}`
   );
 
-  // 14. Edge Case & Crash Prevention Regression Tests
+  // 16. Edge Case & Crash Prevention Regression Tests
   let noErrorThrown = true;
   try {
     elements["btn-mode-business"].trigger("click");

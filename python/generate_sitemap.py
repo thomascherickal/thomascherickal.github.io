@@ -42,6 +42,10 @@ BUSINESS_SERVICES = [
     "business-services/business-service-ai-assisted-leads-magnet.html",
     "business-services/business-service-ai-second-brain.html",
     "business-services/business-service-continuous-learning.html",
+    "business-services/business-service-claude-research-training.html",
+    "business-services/business-service-gemini-research-training.html",
+    "business-services/business-service-knowledge-graphs.html",
+    "business-services/business-service-local-ai-for-sensitive-data.html",
 ]
 
 # 12 claude Guide Pages

@@ -31,16 +31,16 @@ function run(harness, PricingCalculator) {
   );
 
   assert(
-    "ALL_SERVICES_DATA contains all 14 services",
-    PricingCalculator.ALL_SERVICES_DATA.length === 14,
-    `Expected 14 services, found ${PricingCalculator.ALL_SERVICES_DATA.length}`
+    "ALL_SERVICES_DATA contains all 16 services",
+    PricingCalculator.ALL_SERVICES_DATA.length === 16,
+    `Expected 16 services, found ${PricingCalculator.ALL_SERVICES_DATA.length}`
   );
 
   const uniqueSlugs = new Set(PricingCalculator.ALL_SERVICES_DATA.map(s => s.slug));
   assert(
-    "ALL_SERVICES_DATA has 14 unique slugs without duplicates",
-    uniqueSlugs.size === 14,
-    `Expected 14 unique slugs, found ${uniqueSlugs.size}`
+    "ALL_SERVICES_DATA has 16 unique slugs without duplicates",
+    uniqueSlugs.size === 16,
+    `Expected 16 unique slugs, found ${uniqueSlugs.size}`
   );
 
   // Verify distinct services matching business-services/ and personal-services/ directories
@@ -58,12 +58,12 @@ function run(harness, PricingCalculator) {
 
   assert(
     "ALL_SERVICES_DATA matches all distinct services in business-services/ and personal-services/",
-    expectedSlugs.length === 14 &&
+    expectedSlugs.length === 16 &&
     expectedSlugs.every(slug => uniqueSlugs.has(slug)),
     `Expected distinct slugs ${JSON.stringify(expectedSlugs)} to match calculator slugs ${JSON.stringify(Array.from(uniqueSlugs).sort())}`
   );
 
-  // Verify all pricing calculator scripts export all 14 distinct services
+  // Verify all pricing calculator scripts export all 16 distinct services
   const tierCalcs = [
     { name: "tier-1", mod: require("../../pricing-calculator/pricing-calculator-tier-1.js") },
     { name: "tier-2", mod: require("../../pricing-calculator/pricing-calculator-tier-2.js") },
@@ -75,16 +75,16 @@ function run(harness, PricingCalculator) {
 
   tierCalcs.forEach(({ name, mod }) => {
     assert(
-      `PricingCalculatorTier (${name}) exports all 14 distinct services`,
+      `PricingCalculatorTier (${name}) exports all 16 distinct services`,
       Array.isArray(mod.ALL_SERVICES_DATA) &&
-      mod.ALL_SERVICES_DATA.length === 14 &&
-      new Set(mod.ALL_SERVICES_DATA.map(s => s.slug)).size === 14 &&
+      mod.ALL_SERVICES_DATA.length === 16 &&
+      new Set(mod.ALL_SERVICES_DATA.map(s => s.slug)).size === 16 &&
       expectedSlugs.every(slug => mod.ALL_SERVICES_DATA.some(s => s.slug === slug)),
-      `Tier calculator ${name} does not match 14 distinct services`
+      `Tier calculator ${name} does not match 16 distinct services`
     );
   });
 
-  // Verify all 7 pricing pages contain calculator markup with services-checkbox-grid and All 14 button
+  // Verify all 7 pricing pages contain calculator markup with services-checkbox-grid and All 16 button
   const pricingPages = [
     "pricing.html",
     "pricing/pricing-tier-1-usa-china-eu-100.html",
@@ -109,8 +109,8 @@ function run(harness, PricingCalculator) {
       `${relPath} is missing id="services-checkbox-grid"`
     );
     assert(
-      `Pricing page ${relPath} contains Select All 14 services button`,
-      /id="btn-select-all-services"[^>]*>[\s\S]*?All\s+14[\s\S]*?<\/button>/.test(htmlContent),
+      `Pricing page ${relPath} contains Select All 16 services button`,
+      /id="btn-select-all-services"[^>]*>[\s\S]*?All\s+16[\s\S]*?<\/button>/.test(htmlContent),
       `${relPath} is missing or has incorrect label for btn-select-all-services`
     );
   });

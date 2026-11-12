@@ -2,8 +2,8 @@
   "metadata": {
     "domain": "pricing",
     "engine": "nlp-fuzzy-expert",
-    "total_references_tracked": 3765,
-    "last_synchronized": "2026-11-13T00:11:28.067029"
+    "total_references_tracked": 3828,
+    "last_synchronized": "2026-11-13T03:43:07.528117"
   },
   "all_references": [
     {
@@ -207,6 +207,54 @@
       "old_value": "Card",
       "new_value": "Continuous Learning & Synthesis",
       "context": "Pricing Card for Continuous Learning & Synthesis",
+      "match_type": "rule",
+      "data_source": "data/pricing.json"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Pricing",
+      "section": "Section 5 Service 13",
+      "line_number": 1113,
+      "field_key": "business_service_13_pricing_card",
+      "old_value": "Card",
+      "new_value": "Claude Research Training",
+      "context": "Pricing Card for Claude Research Training",
+      "match_type": "rule",
+      "data_source": "data/pricing.json"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Pricing",
+      "section": "Section 5 Service 14",
+      "line_number": 1113,
+      "field_key": "business_service_14_pricing_card",
+      "old_value": "Card",
+      "new_value": "Gemini Research Training",
+      "context": "Pricing Card for Gemini Research Training",
+      "match_type": "rule",
+      "data_source": "data/pricing.json"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Pricing",
+      "section": "Section 5 Service 15",
+      "line_number": 1113,
+      "field_key": "business_service_15_pricing_card",
+      "old_value": "Card",
+      "new_value": "Knowledge Graphs",
+      "context": "Pricing Card for Knowledge Graphs",
+      "match_type": "rule",
+      "data_source": "data/pricing.json"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Pricing",
+      "section": "Section 5 Service 16",
+      "line_number": 1113,
+      "field_key": "business_service_16_pricing_card",
+      "old_value": "Card",
+      "new_value": "Local AI for Sensitive Data",
+      "context": "Pricing Card for Local AI for Sensitive Data",
       "match_type": "rule",
       "data_source": "data/pricing.json"
     },
@@ -3729,6 +3777,185 @@
       ]
     },
     {
+      "file": "business-services/business-service-claude-research-training.html",
+      "page": "Claude Research Training | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 192,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "Tier 1: Developed (100%) - USA | China | EU",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "business-services/business-service-claude-research-training.html",
+      "page": "Claude Research Training | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 194,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/tiers.json#tiers[4].discountPercent"
+      ]
+    },
+    {
+      "file": "business-services/business-service-claude-research-training.html",
+      "page": "Claude Research Training | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 196,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "business-services/business-service-claude-research-training.html",
+      "page": "Claude Research Training | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 198,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4: Startups (50%) - Startups | Founders",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "business-services/business-service-claude-research-training.html",
+      "page": "Claude Research Training | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 200,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 5: Academia (25%) - Colleges | Non",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/tiers.json#tiers[1].discountPercent"
+      ]
+    },
+    {
+      "file": "business-services/business-service-claude-research-training.html",
+      "page": "Claude Research Training | Thomas Cherickal",
+      "section": "Claude Research Training",
+      "line_number": 270,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "100% Cited",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "business-services/business-service-claude-research-training.html",
+      "page": "Claude Research Training | Thomas Cherickal",
+      "section": "Verbatim Span Auditing & Confidence Calibration",
+      "line_number": 505,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "100% Grounded",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "business-services/business-service-claude-research-training.html",
+      "page": "Claude Research Training | Thomas Cherickal",
+      "section": "Prompt Caching & Batch Economics for Research Teams",
+      "line_number": 521,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "For asynchronous workloads such as nightly patent monitoring, quarterly compliance audits across thousands of vendor agreements, or repository-wide code security reviews, our pipelines automaticall...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "business-services/business-service-claude-research-training.html",
+      "page": "Claude Research Training | Thomas Cherickal",
+      "section": "Prompt Caching & Batch Economics for Research Teams",
+      "line_number": 545,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "50% Async Discount",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
       "file": "business-services/business-service-competitor-research.html",
       "page": "Competitor Research & Intelligence | Thomas Cherickal",
       "section": "Page Header",
@@ -3978,6 +4205,139 @@
       ]
     },
     {
+      "file": "business-services/business-service-gemini-research-training.html",
+      "page": "Gemini Research Training | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 192,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "Tier 1: Developed (100%) - USA | China | EU",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "business-services/business-service-gemini-research-training.html",
+      "page": "Gemini Research Training | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 194,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/tiers.json#tiers[4].discountPercent"
+      ]
+    },
+    {
+      "file": "business-services/business-service-gemini-research-training.html",
+      "page": "Gemini Research Training | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 196,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "business-services/business-service-gemini-research-training.html",
+      "page": "Gemini Research Training | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 198,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4: Startups (50%) - Startups | Founders",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "business-services/business-service-gemini-research-training.html",
+      "page": "Gemini Research Training | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 200,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 5: Academia (25%) - Colleges | Non",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/tiers.json#tiers[1].discountPercent"
+      ]
+    },
+    {
+      "file": "business-services/business-service-gemini-research-training.html",
+      "page": "Gemini Research Training | Thomas Cherickal",
+      "section": "Gemini Research Training",
+      "line_number": 274,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "100% Grounded",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "business-services/business-service-gemini-research-training.html",
+      "page": "Gemini Research Training | Thomas Cherickal",
+      "section": "Zero-Hallucination Citation Verification & Audit Trails",
+      "line_number": 514,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "100% Source-Anchored",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
       "file": "business-services/business-service-generative-ai-transformation.html",
       "page": "Generative AI Transformation | Thomas Cherickal",
       "section": "Page Header",
@@ -4085,6 +4445,306 @@
       "old_value": "100%",
       "new_value": "100",
       "context": "100%",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "business-services/business-service-knowledge-graphs.html",
+      "page": "Knowledge Graphs | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 192,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "Tier 1: Developed (100%) - USA | China | EU",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "business-services/business-service-knowledge-graphs.html",
+      "page": "Knowledge Graphs | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 194,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/tiers.json#tiers[4].discountPercent"
+      ]
+    },
+    {
+      "file": "business-services/business-service-knowledge-graphs.html",
+      "page": "Knowledge Graphs | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 196,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "business-services/business-service-knowledge-graphs.html",
+      "page": "Knowledge Graphs | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 198,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4: Startups (50%) - Startups | Founders",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "business-services/business-service-knowledge-graphs.html",
+      "page": "Knowledge Graphs | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 200,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 5: Academia (25%) - Colleges | Non",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/tiers.json#tiers[1].discountPercent"
+      ]
+    },
+    {
+      "file": "business-services/business-service-knowledge-graphs.html",
+      "page": "Knowledge Graphs | Thomas Cherickal",
+      "section": "Knowledge Graphs",
+      "line_number": 274,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "100%",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "business-services/business-service-knowledge-graphs.html",
+      "page": "Knowledge Graphs | Thomas Cherickal",
+      "section": "When to Choose GraphRAG Over Standard Vector Search",
+      "line_number": 362,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "Result: 100% grounded cross-domain reasoning",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "business-services/business-service-knowledge-graphs.html",
+      "page": "Knowledge Graphs | Thomas Cherickal",
+      "section": "Tutorial 5: Step-by-Step Enterprise GraphRAG Deployment",
+      "line_number": 854,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "10% -> 100%",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "business-services/business-service-local-ai-for-sensitive-data.html",
+      "page": "Local AI for Sensitive Data | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 192,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "Tier 1: Developed (100%) - USA | China | EU",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "business-services/business-service-local-ai-for-sensitive-data.html",
+      "page": "Local AI for Sensitive Data | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 194,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/tiers.json#tiers[4].discountPercent"
+      ]
+    },
+    {
+      "file": "business-services/business-service-local-ai-for-sensitive-data.html",
+      "page": "Local AI for Sensitive Data | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 196,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "business-services/business-service-local-ai-for-sensitive-data.html",
+      "page": "Local AI for Sensitive Data | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 198,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4: Startups (50%) - Startups | Founders",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "business-services/business-service-local-ai-for-sensitive-data.html",
+      "page": "Local AI for Sensitive Data | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 200,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 5: Academia (25%) - Colleges | Non",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/tiers.json#tiers[1].discountPercent"
+      ]
+    },
+    {
+      "file": "business-services/business-service-local-ai-for-sensitive-data.html",
+      "page": "Local AI for Sensitive Data | Thomas Cherickal",
+      "section": "VRAM Budgeting & Concurrency Planning",
+      "line_number": 370,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].percentage",
+      "old_value": "20%",
+      "new_value": "20",
+      "context": "As an operational rule of thumb, reserve 20% to 30% of total GPU VRAM strictly for KV cache and CUDA graph overhead after loading quantized model weights. For example, a mid-sized open-weight model...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[0].percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].percentage",
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[2].percentage",
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[3].percentage",
+        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[4].percentage",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[0].percentage",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].percentage",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[2].percentage",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[3].percentage",
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[4].percentage",
+        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[0].percentage",
+        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[1].percentage",
+        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[2].percentage",
+        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[3].percentage",
+        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[4].percentage",
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[0].percentage",
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[1].percentage",
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[2].percentage",
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[3].percentage",
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].percentage",
+        "data/pricing.json#trust_and_payment_guarantees.payment_structure.installment_percentage"
+      ]
+    },
+    {
+      "file": "business-services/business-service-local-ai-for-sensitive-data.html",
+      "page": "Local AI for Sensitive Data | Thomas Cherickal",
+      "section": "Air-Gapped RAG & Local Vector Storage",
+      "line_number": 409,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "A local LLM without access to internal documents cannot answer organization-specific questions. However, many teams accidentally break air-gapped sovereignty during RAG implementation by calling a ...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
       "also_in_data": [
@@ -5015,105 +5675,6 @@
       ]
     },
     {
-      "file": "claude-training/claude-custom-mcp.html",
-      "page": "Custom Model Context Protocol (MCP) Server Development | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 218,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "old_value": "100%",
-      "new_value": "100",
-      "context": "Tier 1: Developed (100%) - USA | China | EU",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
-      ]
-    },
-    {
-      "file": "claude-training/claude-custom-mcp.html",
-      "page": "Custom Model Context Protocol (MCP) Server Development | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 220,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-      "old_value": "75%",
-      "new_value": "75",
-      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/tiers.json#tiers[4].discountPercent"
-      ]
-    },
-    {
-      "file": "claude-training/claude-custom-mcp.html",
-      "page": "Custom Model Context Protocol (MCP) Server Development | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 222,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "old_value": "50%",
-      "new_value": "50",
-      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
-        "data/tiers.json#tiers[2].discountPercent",
-        "data/tiers.json#tiers[3].discountPercent"
-      ]
-    },
-    {
-      "file": "claude-training/claude-custom-mcp.html",
-      "page": "Custom Model Context Protocol (MCP) Server Development | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 224,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "old_value": "50%",
-      "new_value": "50",
-      "context": "Tier 4: Startups (50%) - Startups | Founders",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
-        "data/tiers.json#tiers[2].discountPercent",
-        "data/tiers.json#tiers[3].discountPercent"
-      ]
-    },
-    {
-      "file": "claude-training/claude-custom-mcp.html",
-      "page": "Custom Model Context Protocol (MCP) Server Development | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 226,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-      "old_value": "25%",
-      "new_value": "25",
-      "context": "Tier 5: Academia (25%) - Colleges | Non",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/tiers.json#tiers[1].discountPercent"
-      ]
-    },
-    {
       "file": "claude-training/claude-design.html",
       "page": "Claude Design: UI/UX Prototyping & Design Systems | Thomas Cherickal",
       "section": "Page Header",
@@ -5270,105 +5831,6 @@
       ]
     },
     {
-      "file": "claude-training/claude-features.html",
-      "page": "Claude Frontier Features: Context, Speed & Tool Use | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 215,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "old_value": "100%",
-      "new_value": "100",
-      "context": "Tier 1: Developed (100%) - USA | China | EU",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
-      ]
-    },
-    {
-      "file": "claude-training/claude-features.html",
-      "page": "Claude Frontier Features: Context, Speed & Tool Use | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 217,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-      "old_value": "75%",
-      "new_value": "75",
-      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/tiers.json#tiers[4].discountPercent"
-      ]
-    },
-    {
-      "file": "claude-training/claude-features.html",
-      "page": "Claude Frontier Features: Context, Speed & Tool Use | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 219,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "old_value": "50%",
-      "new_value": "50",
-      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
-        "data/tiers.json#tiers[2].discountPercent",
-        "data/tiers.json#tiers[3].discountPercent"
-      ]
-    },
-    {
-      "file": "claude-training/claude-features.html",
-      "page": "Claude Frontier Features: Context, Speed & Tool Use | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 221,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "old_value": "50%",
-      "new_value": "50",
-      "context": "Tier 4: Startups (50%) - Startups | Founders",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
-        "data/tiers.json#tiers[2].discountPercent",
-        "data/tiers.json#tiers[3].discountPercent"
-      ]
-    },
-    {
-      "file": "claude-training/claude-features.html",
-      "page": "Claude Frontier Features: Context, Speed & Tool Use | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 223,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-      "old_value": "25%",
-      "new_value": "25",
-      "context": "Tier 5: Academia (25%) - Colleges | Non",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/tiers.json#tiers[1].discountPercent"
-      ]
-    },
-    {
       "file": "claude-training/claude-local-llms.html",
       "page": "Claude Integration with Sovereign Local LLMs | Thomas Cherickal",
       "section": "Page Header",
@@ -5516,6 +5978,105 @@
         "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
         "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
         "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "claude-training/claude-mcp.html",
+      "page": "Custom Model Context Protocol (MCP) Server Development | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 218,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "Tier 1: Developed (100%) - USA | China | EU",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "claude-training/claude-mcp.html",
+      "page": "Custom Model Context Protocol (MCP) Server Development | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 220,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/tiers.json#tiers[4].discountPercent"
+      ]
+    },
+    {
+      "file": "claude-training/claude-mcp.html",
+      "page": "Custom Model Context Protocol (MCP) Server Development | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 222,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "claude-training/claude-mcp.html",
+      "page": "Custom Model Context Protocol (MCP) Server Development | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 224,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4: Startups (50%) - Startups | Founders",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "claude-training/claude-mcp.html",
+      "page": "Custom Model Context Protocol (MCP) Server Development | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 226,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 5: Academia (25%) - Colleges | Non",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/tiers.json#tiers[1].discountPercent"
       ]
     },
     {
@@ -5951,6 +6512,105 @@
         "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
         "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
         "data/tiers.json#tiers[4].discountPercent"
+      ]
+    },
+    {
+      "file": "claude-training/claude-projects.html",
+      "page": "Claude Frontier Features: Context, Speed & Tool Use | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 215,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "Tier 1: Developed (100%) - USA | China | EU",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "claude-training/claude-projects.html",
+      "page": "Claude Frontier Features: Context, Speed & Tool Use | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 217,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/tiers.json#tiers[4].discountPercent"
+      ]
+    },
+    {
+      "file": "claude-training/claude-projects.html",
+      "page": "Claude Frontier Features: Context, Speed & Tool Use | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 219,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "claude-training/claude-projects.html",
+      "page": "Claude Frontier Features: Context, Speed & Tool Use | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 221,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4: Startups (50%) - Startups | Founders",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "claude-training/claude-projects.html",
+      "page": "Claude Frontier Features: Context, Speed & Tool Use | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 223,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 5: Academia (25%) - Colleges | Non",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/tiers.json#tiers[1].discountPercent"
       ]
     },
     {
@@ -6814,7 +7474,7 @@
       "file": "expertise.html",
       "page": "Generative AI Consultant & Tech Stack | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 365,
+      "line_number": 367,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
       "old_value": "100%",
       "new_value": "100",
@@ -6831,7 +7491,7 @@
       "file": "expertise.html",
       "page": "Generative AI Consultant & Tech Stack | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 367,
+      "line_number": 369,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
       "old_value": "75%",
       "new_value": "75",
@@ -6849,11 +7509,11 @@
       "file": "expertise.html",
       "page": "Generative AI Consultant & Tech Stack | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 369,
+      "line_number": 371,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
       "old_value": "50%",
       "new_value": "50",
-      "context": "Tier 3: Lower-Middle (50%) - India | Nigeria",
+      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
       "also_in_data": [
@@ -6872,7 +7532,7 @@
       "file": "expertise.html",
       "page": "Generative AI Consultant & Tech Stack | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 371,
+      "line_number": 373,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
       "old_value": "50%",
       "new_value": "50",
@@ -6895,7 +7555,7 @@
       "file": "expertise.html",
       "page": "Generative AI Consultant & Tech Stack | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 373,
+      "line_number": 375,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
       "old_value": "25%",
       "new_value": "25",
@@ -17133,7 +17793,7 @@
       "file": "header.html",
       "page": "",
       "section": "Page Header",
-      "line_number": 233,
+      "line_number": 241,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
       "old_value": "100%",
       "new_value": "100",
@@ -17150,7 +17810,7 @@
       "file": "header.html",
       "page": "",
       "section": "Page Header",
-      "line_number": 235,
+      "line_number": 243,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
       "old_value": "75%",
       "new_value": "75",
@@ -17168,7 +17828,7 @@
       "file": "header.html",
       "page": "",
       "section": "Page Header",
-      "line_number": 237,
+      "line_number": 245,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
       "old_value": "50%",
       "new_value": "50",
@@ -17191,7 +17851,7 @@
       "file": "header.html",
       "page": "",
       "section": "Page Header",
-      "line_number": 239,
+      "line_number": 247,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
       "old_value": "50%",
       "new_value": "50",
@@ -17214,7 +17874,7 @@
       "file": "header.html",
       "page": "",
       "section": "Page Header",
-      "line_number": 241,
+      "line_number": 249,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
       "old_value": "25%",
       "new_value": "25",
@@ -22166,6 +22826,156 @@
       ]
     },
     {
+      "file": "personal-services/personal-service-ai-assisted-leads-magnet.html",
+      "page": "AI-Assisted Leads Magnet | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 193,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "Tier 1: Developed (100%) - USA | China | EU",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-ai-assisted-leads-magnet.html",
+      "page": "AI-Assisted Leads Magnet | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 195,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/tiers.json#tiers[4].discountPercent"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-ai-assisted-leads-magnet.html",
+      "page": "AI-Assisted Leads Magnet | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 197,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-ai-assisted-leads-magnet.html",
+      "page": "AI-Assisted Leads Magnet | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 199,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4: Startups (50%) - Startups | Founders",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-ai-assisted-leads-magnet.html",
+      "page": "AI-Assisted Leads Magnet | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 201,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 5: Academia (25%) - Colleges | Non",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/tiers.json#tiers[1].discountPercent"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-ai-assisted-leads-magnet.html",
+      "page": "AI-Assisted Leads Magnet | Thomas Cherickal",
+      "section": "AI-Assisted Leads Magnet",
+      "line_number": 275,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "100%",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-ai-assisted-leads-magnet.html",
+      "page": "AI-Assisted Leads Magnet | Thomas Cherickal",
+      "section": "Calibrating Rubric Weights Without Overcomplicating the Quiz",
+      "line_number": 395,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "100% Reproducible Math",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-ai-assisted-leads-magnet.html",
+      "page": "AI-Assisted Leads Magnet | Thomas Cherickal",
+      "section": "Handling Viral Traffic Spikes Without Blowing Your Budget",
+      "line_number": 585,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "100% Uptime",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
       "file": "personal-services/personal-service-ai-budget-cost-control.html",
       "page": "AI Budget & Cost Control | Thomas Cherickal",
       "section": "Page Header",
@@ -22971,6 +23781,139 @@
       ]
     },
     {
+      "file": "personal-services/personal-service-competitor-research.html",
+      "page": "Competitor Research | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 193,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "Tier 1: Developed (100%) - USA | China | EU",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-competitor-research.html",
+      "page": "Competitor Research | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 195,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/tiers.json#tiers[4].discountPercent"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-competitor-research.html",
+      "page": "Competitor Research | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 197,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-competitor-research.html",
+      "page": "Competitor Research | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 199,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4: Startups (50%) - Startups | Founders",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-competitor-research.html",
+      "page": "Competitor Research | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 201,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 5: Academia (25%) - Colleges | Non",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/tiers.json#tiers[1].discountPercent"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-competitor-research.html",
+      "page": "Competitor Research | Thomas Cherickal",
+      "section": "Competitor Research",
+      "line_number": 275,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "100%",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-competitor-research.html",
+      "page": "Competitor Research | Thomas Cherickal",
+      "section": "Structuring YAML Frontmatter for Instant Vault Retrieval",
+      "line_number": 463,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "100% Auditable Evidence",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
       "file": "personal-services/personal-service-continuous-learning.html",
       "page": "Continuous Learning & Synthesis | Thomas Cherickal",
       "section": "Page Header",
@@ -23348,6 +24291,255 @@
       "old_value": "100%",
       "new_value": "100",
       "context": "100% Local Ollama / Air-Gapped",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-knowledge-graphs.html",
+      "page": "Knowledge Graphs | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 194,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "Tier 1: Developed (100%) - USA | China | EU",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-knowledge-graphs.html",
+      "page": "Knowledge Graphs | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 196,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/tiers.json#tiers[4].discountPercent"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-knowledge-graphs.html",
+      "page": "Knowledge Graphs | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 198,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-knowledge-graphs.html",
+      "page": "Knowledge Graphs | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 200,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4: Startups (50%) - Startups | Founders",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-knowledge-graphs.html",
+      "page": "Knowledge Graphs | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 202,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 5: Academia (25%) - Colleges | Non",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/tiers.json#tiers[1].discountPercent"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-knowledge-graphs.html",
+      "page": "Knowledge Graphs | Thomas Cherickal",
+      "section": "Failure-Mode Recovery: Orphan Nodes, Cycles, and Hallucinated Edges",
+      "line_number": 583,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
+      "old_value": "30 days",
+      "new_value": "30",
+      "context": "Orphan & Low-Degree Noise Nodes: Extraction of overly generic nouns (e.g., \"System\" , \"Approach\" , \"Data\" ) creates hub-like garbage nodes or thousands of degree-1 islands. Fix this with a stoplist...",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-local-ai-for-sensitive-data.html",
+      "page": "Local AI for Sensitive Data | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 194,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "Tier 1: Developed (100%) - USA | China | EU",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-local-ai-for-sensitive-data.html",
+      "page": "Local AI for Sensitive Data | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 196,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
+        "data/tiers.json#tiers[4].discountPercent"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-local-ai-for-sensitive-data.html",
+      "page": "Local AI for Sensitive Data | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 198,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-local-ai-for-sensitive-data.html",
+      "page": "Local AI for Sensitive Data | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 200,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4: Startups (50%) - Startups | Founders",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
+        "data/tiers.json#tiers[2].discountPercent",
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-local-ai-for-sensitive-data.html",
+      "page": "Local AI for Sensitive Data | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 202,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 5: Academia (25%) - Colleges | Non",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
+        "data/tiers.json#tiers[1].discountPercent"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-local-ai-for-sensitive-data.html",
+      "page": "Local AI for Sensitive Data | Thomas Cherickal",
+      "section": "Local AI for Sensitive Data",
+      "line_number": 283,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "100% offline inference bound to 127.0.0.1 with OS firewall enforcement",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
+        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-local-ai-for-sensitive-data.html",
+      "page": "Local AI for Sensitive Data | Thomas Cherickal",
+      "section": "Production Python Pipeline: Local PII Redactor and Reversible Token Vault",
+      "line_number": 585,
+      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
+      "old_value": "100%",
+      "new_value": "100",
+      "context": "This Python module runs 100% locally with zero network calls. It detects high-risk identifiers (SSNs, credit cards, email addresses, phone numbers, and IBANs - extensible with Presidio NER), replac...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
       "also_in_data": [
@@ -24055,7 +25247,7 @@
       "file": "pricing-calculator.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 314,
+      "line_number": 316,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$300",
       "new_value": "300",
@@ -24076,7 +25268,7 @@
       "file": "pricing-calculator.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 315,
+      "line_number": 317,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$300",
       "new_value": "300",
@@ -24097,7 +25289,7 @@
       "file": "pricing-calculator.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 315,
+      "line_number": 317,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
       "old_value": "10 participants",
       "new_value": "10",
@@ -24112,7 +25304,7 @@
       "file": "pricing-calculator.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 324,
+      "line_number": 326,
       "field_key": "pricing:offerings[flagship-personal-training].cohort_capacity.included_seats",
       "old_value": "1 person",
       "new_value": "1",
@@ -24130,7 +25322,7 @@
       "file": "pricing-calculator.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 420,
+      "line_number": 422,
       "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
       "old_value": "30d",
       "new_value": "30",
@@ -24147,7 +25339,7 @@
       "file": "pricing-calculator.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 423,
+      "line_number": 425,
       "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
       "old_value": "30d",
       "new_value": "30",
@@ -24164,7 +25356,7 @@
       "file": "pricing-calculator.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 539,
+      "line_number": 541,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
       "old_value": "10 participants",
       "new_value": "10",
@@ -24179,7 +25371,7 @@
       "file": "pricing-calculator.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 539,
+      "line_number": 541,
       "field_key": "pricing:offerings[flagship-personal-training].cohort_capacity.included_seats",
       "old_value": "1 person",
       "new_value": "1",
@@ -24197,7 +25389,7 @@
       "file": "pricing-calculator.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 577,
+      "line_number": 579,
       "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[3].due_after_day",
       "old_value": "20 days",
       "new_value": "20",
@@ -24263,7 +25455,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-1.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 199,
+      "line_number": 201,
       "field_key": "pricing:offerings[flagship-personal-training].cohort_capacity.included_seats",
       "old_value": "1 person",
       "new_value": "1",
@@ -24281,7 +25473,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-1.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 212,
+      "line_number": 214,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$300",
       "new_value": "300",
@@ -24302,7 +25494,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-1.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 213,
+      "line_number": 215,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$300",
       "new_value": "300",
@@ -24323,7 +25515,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-1.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 213,
+      "line_number": 215,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
       "old_value": "10 participants",
       "new_value": "10",
@@ -24338,7 +25530,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-1.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 334,
+      "line_number": 336,
       "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
       "old_value": "5d",
       "new_value": "5",
@@ -24350,32 +25542,9 @@
         "data/pricing.json#offerings[individual-service-business].schedule.live_training_days",
         "data/pricing.json#offerings[individual-service-business].schedule.support_phase_days",
         "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[4].due_after_day",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.support_payment.milestone_schedule[0].due_after_day",
         "data/pricing.json#offerings[individual-service-personal].schedule.live_training_days",
         "data/pricing.json#offerings[individual-service-personal].schedule.support_phase_days",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.support_payment.milestone_schedule[0].due_after_day",
-        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.individual_service_support_installments[0].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing-calculator/pricing-calculator-tier-1.js",
-      "page": "",
-      "section": "Page Header",
-      "line_number": 336,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
-      "old_value": "30d",
-      "new_value": "30",
-      "context": "calcScopeVal.textContent = \"Business Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
-        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day"
       ]
     },
     {
@@ -24386,16 +25555,30 @@
       "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
       "old_value": "30d",
       "new_value": "30",
+      "context": "calcScopeVal.textContent = \"Business Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
+      ]
+    },
+    {
+      "file": "pricing-calculator/pricing-calculator-tier-1.js",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 340,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
+      "old_value": "30d",
+      "new_value": "30",
       "context": "calcScopeVal.textContent = \"Personal Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
       "also_in_data": [
         "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
-        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
     },
     {
@@ -24474,7 +25657,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-2.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 199,
+      "line_number": 201,
       "field_key": "pricing:offerings[flagship-personal-training].cohort_capacity.included_seats",
       "old_value": "1 person",
       "new_value": "1",
@@ -24492,7 +25675,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-2.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 212,
+      "line_number": 214,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$300",
       "new_value": "300",
@@ -24513,7 +25696,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-2.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 213,
+      "line_number": 215,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$300",
       "new_value": "300",
@@ -24534,7 +25717,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-2.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 213,
+      "line_number": 215,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
       "old_value": "10 participants",
       "new_value": "10",
@@ -24549,7 +25732,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-2.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 314,
+      "line_number": 316,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
       "old_value": "25%",
       "new_value": "25",
@@ -24567,7 +25750,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-2.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 334,
+      "line_number": 336,
       "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
       "old_value": "5d",
       "new_value": "5",
@@ -24579,32 +25762,9 @@
         "data/pricing.json#offerings[individual-service-business].schedule.live_training_days",
         "data/pricing.json#offerings[individual-service-business].schedule.support_phase_days",
         "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[4].due_after_day",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.support_payment.milestone_schedule[0].due_after_day",
         "data/pricing.json#offerings[individual-service-personal].schedule.live_training_days",
         "data/pricing.json#offerings[individual-service-personal].schedule.support_phase_days",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.support_payment.milestone_schedule[0].due_after_day",
-        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.individual_service_support_installments[0].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing-calculator/pricing-calculator-tier-2.js",
-      "page": "",
-      "section": "Page Header",
-      "line_number": 336,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
-      "old_value": "30d",
-      "new_value": "30",
-      "context": "calcScopeVal.textContent = \"Business Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
-        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day"
       ]
     },
     {
@@ -24615,23 +25775,37 @@
       "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
       "old_value": "30d",
       "new_value": "30",
-      "context": "calcScopeVal.textContent = \"Personal Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
+      "context": "calcScopeVal.textContent = \"Business Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
       "also_in_data": [
         "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
-        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
     },
     {
       "file": "pricing-calculator/pricing-calculator-tier-2.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 360,
+      "line_number": 340,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
+      "old_value": "30d",
+      "new_value": "30",
+      "context": "calcScopeVal.textContent = \"Personal Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
+      ]
+    },
+    {
+      "file": "pricing-calculator/pricing-calculator-tier-2.js",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 362,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
       "old_value": "25%",
       "new_value": "25",
@@ -24695,7 +25869,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-3.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 199,
+      "line_number": 201,
       "field_key": "pricing:offerings[flagship-personal-training].cohort_capacity.included_seats",
       "old_value": "1 person",
       "new_value": "1",
@@ -24713,7 +25887,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-3.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 212,
+      "line_number": 214,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$300",
       "new_value": "300",
@@ -24734,7 +25908,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-3.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 213,
+      "line_number": 215,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$300",
       "new_value": "300",
@@ -24755,7 +25929,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-3.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 213,
+      "line_number": 215,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
       "old_value": "10 participants",
       "new_value": "10",
@@ -24770,7 +25944,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-3.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 314,
+      "line_number": 316,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
       "old_value": "50%",
       "new_value": "50",
@@ -24793,7 +25967,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-3.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 334,
+      "line_number": 336,
       "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
       "old_value": "5d",
       "new_value": "5",
@@ -24805,32 +25979,9 @@
         "data/pricing.json#offerings[individual-service-business].schedule.live_training_days",
         "data/pricing.json#offerings[individual-service-business].schedule.support_phase_days",
         "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[4].due_after_day",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.support_payment.milestone_schedule[0].due_after_day",
         "data/pricing.json#offerings[individual-service-personal].schedule.live_training_days",
         "data/pricing.json#offerings[individual-service-personal].schedule.support_phase_days",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.support_payment.milestone_schedule[0].due_after_day",
-        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.individual_service_support_installments[0].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing-calculator/pricing-calculator-tier-3.js",
-      "page": "",
-      "section": "Page Header",
-      "line_number": 336,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
-      "old_value": "30d",
-      "new_value": "30",
-      "context": "calcScopeVal.textContent = \"Business Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
-        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day"
       ]
     },
     {
@@ -24841,23 +25992,37 @@
       "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
       "old_value": "30d",
       "new_value": "30",
-      "context": "calcScopeVal.textContent = \"Personal Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
+      "context": "calcScopeVal.textContent = \"Business Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
       "also_in_data": [
         "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
-        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
     },
     {
       "file": "pricing-calculator/pricing-calculator-tier-3.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 360,
+      "line_number": 340,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
+      "old_value": "30d",
+      "new_value": "30",
+      "context": "calcScopeVal.textContent = \"Personal Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
+      ]
+    },
+    {
+      "file": "pricing-calculator/pricing-calculator-tier-3.js",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 362,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
       "old_value": "50%",
       "new_value": "50",
@@ -24926,7 +26091,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-4.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 199,
+      "line_number": 201,
       "field_key": "pricing:offerings[flagship-personal-training].cohort_capacity.included_seats",
       "old_value": "1 person",
       "new_value": "1",
@@ -24944,7 +26109,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-4.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 212,
+      "line_number": 214,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$300",
       "new_value": "300",
@@ -24965,7 +26130,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-4.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 213,
+      "line_number": 215,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$300",
       "new_value": "300",
@@ -24986,7 +26151,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-4.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 213,
+      "line_number": 215,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
       "old_value": "10 participants",
       "new_value": "10",
@@ -25001,7 +26166,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-4.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 314,
+      "line_number": 316,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
       "old_value": "50%",
       "new_value": "50",
@@ -25024,7 +26189,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-4.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 334,
+      "line_number": 336,
       "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
       "old_value": "5d",
       "new_value": "5",
@@ -25036,32 +26201,9 @@
         "data/pricing.json#offerings[individual-service-business].schedule.live_training_days",
         "data/pricing.json#offerings[individual-service-business].schedule.support_phase_days",
         "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[4].due_after_day",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.support_payment.milestone_schedule[0].due_after_day",
         "data/pricing.json#offerings[individual-service-personal].schedule.live_training_days",
         "data/pricing.json#offerings[individual-service-personal].schedule.support_phase_days",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.support_payment.milestone_schedule[0].due_after_day",
-        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.individual_service_support_installments[0].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing-calculator/pricing-calculator-tier-4.js",
-      "page": "",
-      "section": "Page Header",
-      "line_number": 336,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
-      "old_value": "30d",
-      "new_value": "30",
-      "context": "calcScopeVal.textContent = \"Business Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
-        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day"
       ]
     },
     {
@@ -25072,23 +26214,37 @@
       "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
       "old_value": "30d",
       "new_value": "30",
-      "context": "calcScopeVal.textContent = \"Personal Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
+      "context": "calcScopeVal.textContent = \"Business Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
       "also_in_data": [
         "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
-        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
     },
     {
       "file": "pricing-calculator/pricing-calculator-tier-4.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 360,
+      "line_number": 340,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
+      "old_value": "30d",
+      "new_value": "30",
+      "context": "calcScopeVal.textContent = \"Personal Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
+      ]
+    },
+    {
+      "file": "pricing-calculator/pricing-calculator-tier-4.js",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 362,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
       "old_value": "50%",
       "new_value": "50",
@@ -25183,7 +26339,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-5.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 199,
+      "line_number": 201,
       "field_key": "pricing:offerings[flagship-personal-training].cohort_capacity.included_seats",
       "old_value": "1 person",
       "new_value": "1",
@@ -25201,7 +26357,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-5.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 212,
+      "line_number": 214,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$300",
       "new_value": "300",
@@ -25222,7 +26378,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-5.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 213,
+      "line_number": 215,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$300",
       "new_value": "300",
@@ -25243,7 +26399,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-5.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 213,
+      "line_number": 215,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
       "old_value": "10 participants",
       "new_value": "10",
@@ -25258,7 +26414,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-5.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 314,
+      "line_number": 316,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
       "old_value": "75%",
       "new_value": "75",
@@ -25276,7 +26432,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-5.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 334,
+      "line_number": 336,
       "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
       "old_value": "5d",
       "new_value": "5",
@@ -25288,32 +26444,9 @@
         "data/pricing.json#offerings[individual-service-business].schedule.live_training_days",
         "data/pricing.json#offerings[individual-service-business].schedule.support_phase_days",
         "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[4].due_after_day",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.support_payment.milestone_schedule[0].due_after_day",
         "data/pricing.json#offerings[individual-service-personal].schedule.live_training_days",
         "data/pricing.json#offerings[individual-service-personal].schedule.support_phase_days",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.support_payment.milestone_schedule[0].due_after_day",
-        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.individual_service_support_installments[0].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing-calculator/pricing-calculator-tier-5.js",
-      "page": "",
-      "section": "Page Header",
-      "line_number": 336,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
-      "old_value": "30d",
-      "new_value": "30",
-      "context": "calcScopeVal.textContent = \"Business Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
-        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day"
       ]
     },
     {
@@ -25324,23 +26457,37 @@
       "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
       "old_value": "30d",
       "new_value": "30",
-      "context": "calcScopeVal.textContent = \"Personal Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
+      "context": "calcScopeVal.textContent = \"Business Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
       "also_in_data": [
         "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
-        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
     },
     {
       "file": "pricing-calculator/pricing-calculator-tier-5.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 360,
+      "line_number": 340,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
+      "old_value": "30d",
+      "new_value": "30",
+      "context": "calcScopeVal.textContent = \"Personal Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
+      ]
+    },
+    {
+      "file": "pricing-calculator/pricing-calculator-tier-5.js",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 362,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
       "old_value": "75%",
       "new_value": "75",
@@ -25358,7 +26505,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-6.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 199,
+      "line_number": 201,
       "field_key": "pricing:offerings[flagship-personal-training].cohort_capacity.included_seats",
       "old_value": "1 person",
       "new_value": "1",
@@ -25376,7 +26523,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-6.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 212,
+      "line_number": 214,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$300",
       "new_value": "300",
@@ -25397,7 +26544,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-6.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 213,
+      "line_number": 215,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$300",
       "new_value": "300",
@@ -25418,7 +26565,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-6.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 213,
+      "line_number": 215,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
       "old_value": "10 participants",
       "new_value": "10",
@@ -25433,7 +26580,7 @@
       "file": "pricing-calculator/pricing-calculator-tier-6.js",
       "page": "",
       "section": "Page Header",
-      "line_number": 334,
+      "line_number": 336,
       "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
       "old_value": "5d",
       "new_value": "5",
@@ -25445,32 +26592,9 @@
         "data/pricing.json#offerings[individual-service-business].schedule.live_training_days",
         "data/pricing.json#offerings[individual-service-business].schedule.support_phase_days",
         "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[4].due_after_day",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.support_payment.milestone_schedule[0].due_after_day",
         "data/pricing.json#offerings[individual-service-personal].schedule.live_training_days",
         "data/pricing.json#offerings[individual-service-personal].schedule.support_phase_days",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.support_payment.milestone_schedule[0].due_after_day",
-        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.individual_service_support_installments[0].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing-calculator/pricing-calculator-tier-6.js",
-      "page": "",
-      "section": "Page Header",
-      "line_number": 336,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
-      "old_value": "30d",
-      "new_value": "30",
-      "context": "calcScopeVal.textContent = \"Business Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
-        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day"
       ]
     },
     {
@@ -25481,16 +26605,30 @@
       "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
       "old_value": "30d",
       "new_value": "30",
+      "context": "calcScopeVal.textContent = \"Business Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
+      ]
+    },
+    {
+      "file": "pricing-calculator/pricing-calculator-tier-6.js",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 340,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
+      "old_value": "30d",
+      "new_value": "30",
       "context": "calcScopeVal.textContent = \"Personal Training Flagship (60 Days: 30d + 30d, 4h/day)\";",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
       "also_in_data": [
         "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
         "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.support_payment.milestone_schedule[1].due_after_day",
-        "data/pricing.json#trust_and_payment_guarantees.support_payment_structure.flagship_support_installments[1].due_after_day"
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
       ]
     },
     {
