@@ -104,6 +104,7 @@
 <link href="../css/article.css" rel="stylesheet"/>
 <link href="../css/service.css" rel="stylesheet"/>
 <link href="../css/business-services.css" rel="stylesheet"/>
+<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -256,85 +257,471 @@
   <!-- END:HEADER -->
 <a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
 <main id="main">
-<!-- PAGE HERO HEADER -->
-<section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
-<p class="section-label">// SERVICE SPECIFICATION 07</p>
-<h1>AI Budget & Cost Control</h1>
-<p class="section-sub" style="max-width:760px;margin:0.75rem auto 0;line-height:1.8;">
-        Training staff at every level to control AI spending: hard spending caps, token budgets, prompt caching, effort
-        settings, and sending minor tasks to free and local models.
+  <!-- HERO HEADER -->
+  <section class="guide-hero">
+    <div class="guide-hero-card">
+      <p class="section-label">// ENTERPRISE ENGINEERING &amp; TRAINING SPECIFICATION</p>
+      <h1>AI Budget & Cost Control</h1>
+      <p class="guide-hero-sub">
+        Eliminate unpredictable token bills and shadow AI spend. Engineer deterministic model-routing gateways, semantic and prompt caching layers, per-tenant token quotas, and real-time FinOps telemetry across Anthropic, OpenAI, Google Gemini, and local Ollama deployments.
       </p>
-<div style="margin-top:1.5rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-<a class="btn btn-commission" href="../contact.html">
-          Commission AI Budget &amp; Cost Control →
-        </a>
-<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">
-          Free LinkedIn Consultation ↗
-        </a>
-</div>
-</section>
-<div class="divider"></div>
-<!-- STRUCTURED SPECIFICATION LISTS -->
-<section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
-<div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:2.5rem;box-shadow:var(--glow-gold);">
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">Service
-          Overview &amp; Scope</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Hard Spending Caps:</strong> Setting limits per session, day, month and year so no person, team or
-            agent can exceed its budget.</li>
-<li><strong>User &amp; Team Budgets:</strong> Allocating token budgets across developers, departments and
-            production services, with workspace-level limits on the Claude platform.</li>
-<li><strong>Prompt Caching &amp; Context Trimming:</strong> Caching stable prompt prefixes for up to 90% lower
-            cost on cached input, keeping context lean, and clearing it between task phases.</li>
-<li><strong>Model &amp; Effort Matching:</strong> Using Haiku at low effort for simple jobs, Sonnet for most
-            work, and Opus or Fable at higher effort only when a task needs it.</li>
-<li><strong>Free and Local Models:</strong> Moving minor tasks to local models (Gemma, Qwen, Llama and Mistral
-            through Ollama or LM Studio) and to free models on OpenRouter.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Standard
-          Architecture &amp; Tools</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Platform Controls:</strong> Workspace spend limits and usage reports on the Claude platform,
-            per-key limits, and /usage in Claude Code.</li>
-<li><strong>Cost Tracking Scripts:</strong> Python scripts that read token usage from API responses and log
-            cost per user, team and agent.</li>
-<li><strong>Token Reduction:</strong> Prompt caching, effort settings, the Batch API for non-urgent work, and
-            smaller context windows.</li>
-<li><strong>Free Model Routing:</strong> Local models through Ollama or LM Studio, and free OpenRouter models
-            for low-stakes tasks.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Guarantees
-          &amp; Commitments</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>No Surprise Bills:</strong> Hard caps stop spending at the agreed limit.</li>
-<li><strong>Measurable 30%-50% Cost Savings:</strong> Lower token spend from caching, model matching and local
-            routing, measured against your bills before the engagement.</li>
-<li><strong>100% Client Ownership:</strong> All scripts, configurations, dashboards and training materials
-            belong to you.</li>
-<li><strong>30-Day Support:</strong> Help adjusting budgets, limits and model choices.</li>
-</ul>
+      <div class="service-cta-buttons" style="margin-top:1.75rem;display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+        <a class="btn btn-commission btn-lg" href="../contact.html">Commission AI Budget &amp; Cost Control →</a>
+        <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+      </div>
+    </div>
 
-        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-top:2rem;margin-bottom:1rem;">Executive Summary</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong style="color:var(--gold);">Hard Spending Caps:</strong> User, team and workspace limits enforced
-            on the platform and in code.</li>
-<li><strong style="color:var(--gold);">Prompt Caching:</strong> Cutting recurring token spend through caching
-            and leaner context.</li>
-<li><strong style="color:var(--gold);">Free and Local Models:</strong> Minor tasks moved off paid APIs.</li>
-<li><strong style="color:var(--gold);">100% IP &amp; Governance Transfer:</strong> Configurations, workshop
-            materials and 30-day support.</li>
-</ul>
-<div class="service-cta-buttons">
-<a class="btn btn-commission btn-lg" href="../contact.html">
-            Commission AI Budget &amp; Cost Control →
-          </a>
-<a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">
-            Free LinkedIn Consultation ↗
-          </a>
-</div>
-</div>
-</section>
-<div class="divider" style="margin-top:3rem;"></div>
+    <div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem;max-width:960px;margin:2rem auto 0;">
+      <div class="stat-card" style="background:#0c111d;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:#fbbf24;">60-85%</div>
+        <div style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.35rem;">Typical Token Spend Reduction</div>
+      </div>
+      <div class="stat-card" style="background:#0c111d;border:1px solid rgba(56,189,248,0.28);border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:#38bdf8;">90%</div>
+        <div style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.35rem;">Prompt Cache Read Discount</div>
+      </div>
+      <div class="stat-card" style="background:#0c111d;border:1px solid rgba(52,211,153,0.28);border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:#34d399;">100%</div>
+        <div style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.35rem;">Per-Team Quota Attribution</div>
+      </div>
+      <div class="stat-card" style="background:#0c111d;border:1px solid rgba(232,121,249,0.28);border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:#e879f9;">60 Days</div>
+        <div style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.35rem;">30 Days Training + 30 Days Support</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="guide-body" style="max-width:960px;margin:0 auto;padding:2rem 1.25rem;">
+    <!-- TABLE OF CONTENTS -->
+    <div id="table-of-contents" style="background:#0c111d;border:1px solid rgba(251,191,36,0.3);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
+      <h2 style="font-family:var(--font-display);color:#fbbf24;font-size:1.25rem;margin-bottom:1rem;">Table of Contents</h2>
+      <ol style="display:flex;flex-direction:column;gap:0.6rem;color:var(--text-secondary);line-height:1.9;margin-left:1.25rem;">
+        <li><a class="gold-link" href="#finops-crisis">The Enterprise AI FinOps Crisis</a></li>
+        <li><a class="gold-link" href="#tiered-model-routing">Tiered Model Routing: Local, Fast, and Frontier</a></li>
+        <li><a class="gold-link" href="#caching-architectures">Prompt Caching and Semantic Caching Architectures</a></li>
+        <li><a class="gold-link" href="#quota-governance">Per-Tenant Quotas, Circuit Breakers, and Telemetry</a></li>
+        <li><a class="gold-link" href="#chargeback-governance">Departmental Chargeback &amp; Anomaly Detection</a></li>
+        <li><a class="gold-link" href="#context-pruning">Context-Window Pruning &amp; Batch API Economics</a></li>
+        <li><a class="gold-link" href="#tutorial-python">Tutorial 1: Production Python Token-Budget &amp; Model-Router Gateway</a></li>
+        <li><a class="gold-link" href="#tutorial-prompt">Tutorial 2: Production Token-Compressed System Prompt Template</a></li>
+        <li><a class="gold-link" href="#tutorial-operations">Tutorial 3: Step-by-Step AI FinOps Governance Runbook</a></li>
+        <li><a class="gold-link" href="#tutorial-python-anomaly">Tutorial 4: Production Python Token Anomaly &amp; Hard-Cap Enforcer</a></li>
+        <li><a class="gold-link" href="#tutorial-prompt-pruning">Tutorial 5: Production Context-Compression &amp; Summary Prompt</a></li>
+        <li><a class="gold-link" href="#tutorial-operations-finops">Tutorial 6: Step-by-Step Monthly FinOps Audit &amp; Batch Migration</a></li>
+        <li><a class="gold-link" href="#references">Live References &amp; Official Documentation</a></li>
+      </ol>
+    </div>
+
+    <!-- SECTION 1 -->
+    <h2 id="finops-crisis">The Enterprise AI FinOps Crisis</h2>
+    <p>
+      As organizations transition from experimental AI prototypes to production workloads, token consumption scales non-linearly. Agentic loops, retrieval-augmented generation (RAG) with oversized context windows, and unthrottled developer API keys routinely cause monthly LLM invoices to spike by an order of magnitude without a corresponding increase in business value. Worse, most teams lack granular attribution, making it impossible to know which microservice, department, or customer cohort is driving the spend.
+    </p>
+    <p>
+      Our AI Budget &amp; Cost Control program equips your engineering and FinOps teams with deterministic architectural controls. Rather than restricting innovation, we establish a centralized <a class="gold-link" href="#references">LLM gateway architecture</a> that routes simple classification and extraction tasks to low-cost or local models, caches repeated context prefixes, and enforces hard per-tenant budgets before runaway loops can drain your cloud credits.
+    </p>
+
+    <!-- SVG DIAGRAM 1 -->
+    <div style="margin:2rem 0;background:#040711;border:1px solid rgba(56,189,248,0.28);border-radius:12px;padding:1rem;overflow-x:auto;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Enterprise AI FinOps Gateway Architecture">
+        <rect width="960" height="400" fill="#040711" rx="10"/>
+        <text x="480" y="34" fill="#fbbf24" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">ENTERPRISE AI FINOPS &amp; COST-CONTROL GATEWAY</text>
+        <rect x="40" y="150" width="160" height="90" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="120" y="188" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">App / Agent</text>
+        <text x="120" y="208" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Tenant ID + Request</text>
+        <rect x="250" y="150" width="180" height="90" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="340" y="188" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Quota &amp; Semantic</text>
+        <text x="340" y="208" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Cache Gate (Redis)</text>
+        <rect x="480" y="150" width="180" height="90" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="570" y="188" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Complexity Router</text>
+        <text x="570" y="208" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Policy Engine</text>
+        <rect x="720" y="65" width="190" height="70" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="815" y="96" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Local Ollama ($0)</text>
+        <text x="815" y="116" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Triage / PII / JSON</text>
+        <rect x="720" y="160" width="190" height="70" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="815" y="191" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Fast Tier (Flash/Haiku)</text>
+        <text x="815" y="211" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Summaries &amp; RAG</text>
+        <rect x="720" y="255" width="190" height="70" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="815" y="286" fill="#e879f9" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Frontier (Opus/Pro)</text>
+        <text x="815" y="306" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Deep Reasoning Only</text>
+        <line x1="200" y1="195" x2="245" y2="195" stroke="#38bdf8" stroke-width="2"/>
+        <line x1="430" y1="195" x2="475" y2="195" stroke="#fbbf24" stroke-width="2"/>
+        <line x1="660" y1="175" x2="715" y2="100" stroke="#34d399" stroke-width="2"/>
+        <line x1="660" y1="195" x2="715" y2="195" stroke="#38bdf8" stroke-width="2"/>
+        <line x1="660" y1="215" x2="715" y2="290" stroke="#e879f9" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <!-- SECTION 2 -->
+    <h2 id="tiered-model-routing">Tiered Model Routing: Local, Fast, and Frontier</h2>
+    <p>
+      The single highest-leverage optimization in AI FinOps is stopping the practice of sending every prompt to a frontier reasoning model. In most enterprise applications, 70% to 80% of LLM calls are routine tasks: intent classification, entity extraction, language translation, or boilerplate formatting. Routing these calls to a frontier model is the equivalent of hiring a principal architect to sort mail.
+    </p>
+    <p>
+      We train your engineers to implement a three-tier routing policy:
+    </p>
+    <ul style="color:var(--text-secondary);line-height:1.85;margin-left:1.5rem;margin-bottom:1.5rem;list-style:disc;">
+      <li><strong style="color:#34d399;">Tier 0 - Local Inference (Ollama / vLLM):</strong> Zero marginal token cost, ideal for PII redaction, embeddings, and high-volume JSON extraction inside your VPC.</li>
+      <li><strong style="color:#38bdf8;">Tier 1 - Fast Cloud Models (Gemini Flash / Claude Haiku):</strong> Sub-second latency at a fraction of frontier cost, handling 80% of customer-facing RAG and summarization.</li>
+      <li><strong style="color:#e879f9;">Tier 2 - Frontier Reasoning (Claude Opus / Gemini Pro):</strong> Reserved strictly for multi-step code synthesis, complex legal/financial analysis, and escalated edge cases.</li>
+    </ul>
+
+    <!-- SECTION 3 -->
+    <h2 id="caching-architectures">Prompt Caching and Semantic Caching Architectures</h2>
+    <p>
+      Modern LLM providers offer native <a class="gold-link" href="#references">prompt caching</a> that reduces input token costs by up to 90% when large system instructions, tool schemas, or reference documents remain identical across requests. However, naive prompt construction often invalidates the cache on every call by placing dynamic timestamps or user IDs at the top of the prompt. We teach strict prefix-stability patterns: static instructions and few-shot examples always sit at the top of the context, while dynamic variables sit exclusively at the bottom.
+    </p>
+    <p>
+      Above provider-level prompt caching, we deploy a Redis-backed semantic cache. Before any request hits an external API, the gateway embeds the query and checks vector similarity against recent responses. If a semantically equivalent query was answered within the TTL window, the gateway returns the cached response in under 15 milliseconds at zero token cost.
+    </p>
+
+    <!-- SVG DIAGRAM 2 -->
+    <div style="margin:2rem 0;background:#040711;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:1rem;overflow-x:auto;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Prompt Caching Prefix Stability vs Cache Busting">
+        <rect width="960" height="400" fill="#040711" rx="10"/>
+        <text x="480" y="34" fill="#fbbf24" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">PROMPT CACHING: PREFIX STABILITY ARCHITECTURE</text>
+        <rect x="60" y="80" width="400" height="270" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="260" y="112" fill="#34d399" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">CACHE-HIT PATTERN (90% SAVINGS)</text>
+        <rect x="90" y="135" width="340" height="60" rx="6" fill="#040711" stroke="#34d399"/>
+        <text x="260" y="170" fill="#cbd5e1" font-family="monospace" font-size="12" text-anchor="middle">1. Static System Prompt + Tools (CACHED)</text>
+        <rect x="90" y="205" width="340" height="60" rx="6" fill="#040711" stroke="#34d399"/>
+        <text x="260" y="240" fill="#cbd5e1" font-family="monospace" font-size="12" text-anchor="middle">2. Reference Docs / Few-Shot (CACHED)</text>
+        <rect x="90" y="275" width="340" height="50" rx="6" fill="#040711" stroke="#38bdf8"/>
+        <text x="260" y="305" fill="#38bdf8" font-family="monospace" font-size="12" text-anchor="middle">3. Dynamic User Query + Timestamp</text>
+
+        <rect x="500" y="80" width="400" height="270" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="700" y="112" fill="#e879f9" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">ANTI-PATTERN (0% CACHE HIT)</text>
+        <rect x="530" y="135" width="340" height="50" rx="6" fill="#040711" stroke="#e879f9"/>
+        <text x="700" y="165" fill="#e879f9" font-family="monospace" font-size="12" text-anchor="middle">1. Dynamic Timestamp / User ID (BUST!)</text>
+        <rect x="530" y="195" width="340" height="60" rx="6" fill="#040711" stroke="#475569"/>
+        <text x="700" y="230" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">2. Static System Prompt (RE-BILLED 100%)</text>
+        <rect x="530" y="265" width="340" height="60" rx="6" fill="#040711" stroke="#475569"/>
+        <text x="700" y="300" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">3. Reference Docs (RE-BILLED 100%)</text>
+      </svg>
+    </div>
+
+    <!-- SECTION 4 -->
+    <h2 id="quota-governance">Per-Tenant Quotas, Circuit Breakers, and Telemetry</h2>
+    <p>
+      Every production AI endpoint must be protected by hard and soft budget thresholds. Using <a class="gold-link" href="#references">OpenTelemetry AI conventions</a> and Redis atomic counters, our gateway tracks input tokens, output tokens, cached tokens, and dollar cost in real time per API key, department, and end-user. When a team reaches 80% of its monthly allocation, automated Slack alerts fire; at 100%, the gateway either gracefully degrades to local Ollama models or blocks non-critical requests.
+    </p>
+
+    <!-- SVG DIAGRAM 3 -->
+    <div style="margin:2rem 0;background:#040711;border:1px solid rgba(52,211,153,0.28);border-radius:12px;padding:1rem;overflow-x:auto;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Token Quota Enforcement and Graceful Degradation">
+        <rect width="960" height="400" fill="#040711" rx="10"/>
+        <text x="480" y="34" fill="#34d399" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">QUOTA ENFORCEMENT &amp; GRACEFUL DEGRADATION</text>
+        <rect x="60" y="140" width="180" height="90" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="150" y="178" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">0% - 79% Spend</text>
+        <text x="150" y="198" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Normal Tiered Routing</text>
+        <rect x="380" y="140" width="180" height="90" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="470" y="178" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">80% - 99% Spend</text>
+        <text x="470" y="198" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Slack Alert + Downgrade</text>
+        <rect x="700" y="140" width="200" height="90" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="800" y="178" fill="#e879f9" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">100% Hard Cap</text>
+        <text x="800" y="198" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Local Ollama / HTTP 429</text>
+        <line x1="240" y1="185" x2="375" y2="185" stroke="#fbbf24" stroke-width="2"/>
+        <line x1="560" y1="185" x2="695" y2="185" stroke="#e879f9" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <!-- SECTION 5: TUTORIAL 1 -->
+    <h2 id="tutorial-python">Tutorial 1: Production Python Token-Budget &amp; Model-Router Gateway</h2>
+    <p>
+      Implement this lightweight Python gateway to enforce per-tenant dollar budgets in Redis and automatically route requests between local, fast, and frontier models based on task complexity.
+    </p>
+
+    <div class="code-window" style="margin:1.5rem 0;background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(56,189,248,0.2);">
+        <span style="font-family:monospace;font-size:0.85rem;color:#38bdf8;">finops_router.py (Python 3.11+ / Redis Quota Gate)</span>
+        <button class="copy-btn" type="button" onclick="copyCode(this)" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.4);border-radius:6px;padding:0.3rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.88rem;line-height:1.6;"><code>import os
+import redis
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+
+app = FastAPI(title="AI FinOps Router")
+r = redis.Redis.from_url(os.getenv("REDIS_URL", "redis://localhost:6379/0"), decode_responses=True)
+
+MODEL_CATALOG = {
+    "local": {"provider": "ollama", "model": "qwen2.5:14b", "cost_per_1k_in": 0.0, "cost_per_1k_out": 0.0},
+    "fast": {"provider": "google", "model": "gemini-2.5-flash", "cost_per_1k_in": 0.00015, "cost_per_1k_out": 0.0006},
+    "frontier": {"provider": "anthropic", "model": "claude-sonnet-4-5", "cost_per_1k_in": 0.003, "cost_per_1k_out": 0.015},
+}
+
+class InferenceRequest(BaseModel):
+    tenant_id: str
+    task_type: str
+    prompt: str
+    monthly_limit_usd: float = 100.0
+
+def select_tier(task_type: str, current_spend: float, limit: float) -> str:
+    if current_spend >= limit:
+        return "local"
+    if task_type in {"classify", "extract_json", "redact_pii"}:
+        return "local"
+    if task_type in {"summarize", "rag_qa"}:
+        return "fast"
+    return "frontier"
+
+@app.post("/v1/route")
+def route_request(req: InferenceRequest):
+    spend_key = f"finops:spend:{req.tenant_id}"
+    current_spend = float(r.get(spend_key) or 0.0)
+    tier = select_tier(req.task_type, current_spend, req.monthly_limit_usd)
+    selected = MODEL_CATALOG[tier]
+
+    # Estimate cost for telemetry and budget reservation
+    est_tokens_in = max(1, len(req.prompt) // 4)
+    est_cost = (est_tokens_in / 1000.0) * selected["cost_per_1k_in"]
+    r.incrbyfloat(spend_key, est_cost)
+
+    return {
+        "routed_tier": tier,
+        "provider": selected["provider"],
+        "model": selected["model"],
+        "tenant_spend_usd": round(current_spend + est_cost, 6)
+    }</code></pre>
+    </div>
+
+    <!-- SECTION 6: TUTORIAL 2 -->
+    <h2 id="tutorial-prompt">Tutorial 2: Production Token-Compressed System Prompt Template</h2>
+    <p>
+      Verbose system prompts waste thousands of input tokens on every API call. Use this compressed, cache-friendly system prompt structure that preserves strict output quality while cutting input token overhead by over 50%.
+    </p>
+
+    <div class="code-window" style="margin:1.5rem 0;background:#040711;border:1px solid rgba(251,191,36,0.32);border-left:3px solid var(--gold);border-radius:10px;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(251,191,36,0.2);">
+        <span style="font-family:monospace;font-size:0.85rem;color:#fbbf24;">compressed_finops_prompt.txt (Cache-Stable Prefix)</span>
+        <button class="copy-btn" type="button" onclick="copyCode(this)" style="background:rgba(251,191,36,0.15);color:#fbbf24;border:1px solid rgba(251,191,36,0.4);border-radius:6px;padding:0.3rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.88rem;line-height:1.6;"><code>SYSTEM (STATIC PREFIX - CACHEABLE):
+Role: Enterprise Data Extractor.
+Output: Minified JSON only. No prose. No markdown.
+Schema: {"status":"ok|err","category":"billing|tech|sec","urgency":1-5,"summary":"<=100 chars"}
+Constraints:
+- Omit null fields.
+- If uncertain, set status="err" and stop.
+
+USER (DYNAMIC SUFFIX):
+&lt;input_record&gt;{{RAW_TEXT}}&lt;/input_record&gt;</code></pre>
+    </div>
+
+    <!-- SECTION 7: TUTORIAL 3 -->
+    <h2 id="tutorial-operations">Tutorial 3: Step-by-Step AI FinOps Governance Runbook</h2>
+    <ol style="color:var(--text-secondary);line-height:1.9;margin-left:1.5rem;margin-bottom:2rem;">
+      <li><strong style="color:#fbbf24;">Baseline Spend Audit:</strong> Export 30 days of provider billing logs and tag every API key by environment (dev, staging, prod) and owning team.</li>
+      <li><strong style="color:#38bdf8;">Prompt &amp; Context Compression:</strong> Audit the top 10 highest-cost endpoints, trim redundant system instructions, and cap RAG chunk retrieval to the top 3-5 reranked passages.</li>
+      <li><strong style="color:#34d399;">Deploy Semantic &amp; Prefix Caching:</strong> Reorder prompts for static-first prefix stability and enable Redis semantic caching for repetitive FAQ and classification endpoints.</li>
+      <li><strong style="color:#e879f9;">Enforce Tiered Routing:</strong> Migrate classification, PII redaction, and JSON extraction to local Ollama or fast-tier models, reserving frontier models for complex reasoning.</li>
+      <li><strong style="color:#fbbf24;">Activate Hard Quotas &amp; Alerts:</strong> Configure 80% warning webhooks and 100% circuit breakers in your LLM gateway.</li>
+    </ol>
+
+    <!-- SVG DIAGRAM 4 -->
+    <div style="margin:2rem 0;background:#040711;border:1px solid rgba(232,121,249,0.28);border-radius:12px;padding:1rem;overflow-x:auto;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI FinOps Optimization Waterfall">
+        <rect width="960" height="400" fill="#040711" rx="10"/>
+        <text x="480" y="34" fill="#e879f9" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">ENTERPRISE AI COST REDUCTION WATERFALL</text>
+        <rect x="60" y="90" width="150" height="240" rx="6" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="135" y="130" fill="#e879f9" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">100% Baseline</text>
+        <text x="135" y="152" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Unrouted Frontier</text>
+
+        <rect x="250" y="140" width="150" height="190" rx="6" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="325" y="180" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">-35% Routing</text>
+        <text x="325" y="202" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Local + Fast Tiers</text>
+
+        <rect x="440" y="190" width="150" height="140" rx="6" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="515" y="230" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">-25% Caching</text>
+        <text x="515" y="252" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Prefix + Semantic</text>
+
+        <rect x="630" y="230" width="150" height="100" rx="6" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="705" y="270" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">~25% Final</text>
+        <text x="705" y="292" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Governed Spend</text>
+      </svg>
+    </div>
+
+    <!-- SECTION: CHARGEBACK & ANOMALY DETECTION -->
+    <h2 id="chargeback-governance">Departmental Chargeback &amp; Anomaly Detection</h2>
+    <p>
+      Without granular cost attribution, AI budgets behave like an unmonitored corporate credit card. Every API call passing through our enterprise LLM gateway must carry mandatory metadata headers (`x-tenant-id`, `x-cost-center`, `x-workflow-id`). The gateway logs exact prompt tokens, cached tokens, and completion tokens to a time-series store, enabling finance and engineering leaders to generate real-time departmental chargeback reports.
+    </p>
+    <p>
+      To prevent runaway agentic loops from draining monthly budgets overnight, we pair <a class="gold-link" href="#references">LiteLLM enterprise budget policies</a> with sliding-window anomaly detection. If a single tenant or microservice exceeds three standard deviations above its trailing 7-day hourly spend, the gateway automatically throttles non-critical requests, downgrades traffic to a fast-tier model, and dispatches a PagerDuty or Slack alert.
+    </p>
+
+    <!-- SVG DIAGRAM 5: CHARGEBACK & ANOMALY DETECTION -->
+    <div style="margin:2rem 0;border-radius:14px;overflow:hidden;border:1px solid rgba(56,189,248,0.28);background:#040711;padding:1rem;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Departmental Chargeback and Real-Time Token Anomaly Detection">
+        <rect width="960" height="400" fill="#040711"/>
+        <text x="480" y="34" fill="#fbbf24" font-family="Inter,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Departmental Chargeback &amp; Sliding-Window Anomaly Guard</text>
+        <rect x="50" y="90" width="190" height="90" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="145" y="126" fill="#38bdf8" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Tenant Request</text>
+        <text x="145" y="148" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">x-cost-center Header</text>
+        <rect x="300" y="90" width="210" height="90" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="405" y="126" fill="#fbbf24" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Redis Quota Ledger</text>
+        <text x="405" y="148" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">Hourly Hard Cap + 3-Sigma</text>
+        <rect x="570" y="90" width="170" height="90" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="655" y="126" fill="#34d399" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Model Execution</text>
+        <text x="655" y="148" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">Local / Fast / Frontier</text>
+        <rect x="780" y="90" width="140" height="90" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="850" y="126" fill="#e879f9" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">FinOps BI</text>
+        <text x="850" y="148" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">Chargeback Export</text>
+        <rect x="300" y="250" width="360" height="85" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2" stroke-dasharray="6 4"/>
+        <text x="480" y="286" fill="#e879f9" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Anomaly Circuit Breaker Triggered</text>
+        <text x="480" y="308" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">Auto-Downgrade Model + Slack / PagerDuty Alert</text>
+        <line x1="240" y1="135" x2="300" y2="135" stroke="#38bdf8" stroke-width="2"/>
+        <line x1="510" y1="135" x2="570" y2="135" stroke="#fbbf24" stroke-width="2"/>
+        <line x1="740" y1="135" x2="780" y2="135" stroke="#34d399" stroke-width="2"/>
+        <line x1="405" y1="180" x2="405" y2="250" stroke="#e879f9" stroke-width="2" stroke-dasharray="5 5"/>
+      </svg>
+    </div>
+
+    <!-- SECTION: CONTEXT PRUNING & BATCH API -->
+    <h2 id="context-pruning">Context-Window Pruning &amp; Batch API Economics</h2>
+    <p>
+      The fastest way to cut token spend without sacrificing accuracy is eliminating redundant context. Many RAG pipelines blindly inject top-20 document chunks into every prompt, paying for 15,000+ input tokens when only 1,500 tokens are relevant. By introducing a lightweight cross-encoder reranker and strict token-budget pruning before the LLM call, teams routinely reduce input token volume by 60% while improving answer precision.
+    </p>
+    <p>
+      For asynchronous workloads such as nightly document classification, catalog enrichment, or evaluation runs, we route jobs to <a class="gold-link" href="#references">Anthropic Message Batches</a> or <a class="gold-link" href="#references">OpenAI Batch API</a> endpoints, capturing an immediate 50% discount on token rates compared to synchronous real-time inference.
+    </p>
+
+    <!-- SVG DIAGRAM 6: CONTEXT PRUNING & BATCH ECONOMICS -->
+    <div style="margin:2rem 0;border-radius:14px;overflow:hidden;border:1px solid rgba(251,191,36,0.28);background:#040711;padding:1rem;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Context-Window Pruning and Batch API Cost Reduction">
+        <rect width="960" height="400" fill="#040711"/>
+        <text x="480" y="34" fill="#38bdf8" font-family="Inter,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Context-Window Pruning &amp; Asynchronous Batch Economics</text>
+        <rect x="60" y="95" width="220" height="80" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="170" y="130" fill="#e879f9" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Raw RAG Retrieval</text>
+        <text x="170" y="150" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">20 Chunks (~16k Tokens)</text>
+        <rect x="350" y="95" width="240" height="80" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="470" y="130" fill="#fbbf24" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Reranker + Token Pruner</text>
+        <text x="470" y="150" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">Top-4 Chunks (~2.5k Tokens)</text>
+        <rect x="660" y="65" width="240" height="75" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="780" y="98" fill="#34d399" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Sync Endpoint (Real-Time)</text>
+        <text x="780" y="118" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">Prompt Cache Hit (Up to 90% Off)</text>
+        <rect x="660" y="175" width="240" height="75" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="780" y="208" fill="#38bdf8" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Batch API (Async 24h)</text>
+        <text x="780" y="228" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">Flat 50% Token Discount</text>
+        <line x1="280" y1="135" x2="350" y2="135" stroke="#e879f9" stroke-width="2"/>
+        <line x1="590" y1="120" x2="660" y2="102" stroke="#34d399" stroke-width="2"/>
+        <line x1="590" y1="150" x2="660" y2="212" stroke="#38bdf8" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <!-- TUTORIAL 4: PRODUCTION PYTHON ANOMALY & HARD-CAP ENFORCER -->
+    <h2 id="tutorial-python-anomaly">Tutorial 4: Production Python Token Anomaly &amp; Hard-Cap Enforcer</h2>
+    <p>
+      Deploy this Python middleware in your API gateway to enforce per-tenant hourly USD caps and automatically downgrade non-critical requests when spend approaches threshold.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid var(--cyan);border-radius:10px;margin:1.75rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(56,189,248,0.2);">
+        <span style="color:var(--cyan);font-family:monospace;font-size:0.85rem;">finops_cap_enforcer.py</span>
+        <button class="copy-btn" onclick="copyCode(this)" style="background:rgba(56,189,248,0.15);color:var(--cyan);border:1px solid rgba(56,189,248,0.4);padding:0.3rem 0.75rem;border-radius:6px;cursor:pointer;font-size:0.8rem;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;background:#040711;color:#e2e8f0;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;font-size:0.88rem;line-height:1.6;"><code>import time
+import redis
+
+class TenantBudgetEnforcer:
+    def __init__(self, redis_client: redis.Redis, hourly_cap_usd: float = 25.0):
+        self.redis = redis_client
+        self.hourly_cap_usd = hourly_cap_usd
+
+    def _bucket_key(self, tenant_id: str) -> str:
+        hour_bucket = int(time.time() // 3600)
+        return f"finops:spend:{tenant_id}:{hour_bucket}"
+
+    def check_and_select_tier(self, tenant_id: str, requested_tier: str) -> str:
+        current_spend = float(self.redis.get(self._bucket_key(tenant_id)) or 0.0)
+        if current_spend &gt;= self.hourly_cap_usd:
+            raise PermissionError(f"Tenant {tenant_id} exceeded hourly USD cap.")
+        if current_spend &gt;= self.hourly_cap_usd * 0.8 and requested_tier == "frontier":
+            return "fast"
+        return requested_tier
+
+    def record_cost(self, tenant_id: str, cost_usd: float) -> float:
+        key = self._bucket_key(tenant_id)
+        new_total = self.redis.incrbyfloat(key, cost_usd)
+        self.redis.expire(key, 7200)
+        return float(new_total)</code></pre>
+    </div>
+
+    <!-- TUTORIAL 5: PRODUCTION CONTEXT-COMPRESSION PROMPT -->
+    <h2 id="tutorial-prompt-pruning">Tutorial 5: Production Context-Compression &amp; Summary Prompt</h2>
+    <p>
+      Use this prompt template to compress multi-turn conversation histories or verbose retrieved documents into dense, high-signal state summaries before invoking frontier models.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.35);border-left:3px solid var(--gold);border-radius:10px;margin:1.75rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(251,191,36,0.2);">
+        <span style="color:var(--gold);font-family:monospace;font-size:0.85rem;">context_compressor_prompt.txt</span>
+        <button class="copy-btn" onclick="copyCode(this)" style="background:rgba(251,191,36,0.15);color:var(--gold);border:1px solid rgba(251,191,36,0.4);padding:0.3rem 0.75rem;border-radius:6px;cursor:pointer;font-size:0.8rem;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;background:#040711;color:#e2e8f0;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;font-size:0.88rem;line-height:1.6;"><code>SYSTEM: Compress the following enterprise support thread into a dense JSON state object under 250 tokens. Preserve all account IDs, error codes, and unresolved action items. Drop greetings, filler, and repeated apologies.
+
+OUTPUT SCHEMA:
+{
+  "account_id": "string",
+  "error_codes": ["string"],
+  "confirmed_facts": ["string"],
+  "next_action": "string"
+}
+
+THREAD:
+{{raw_conversation_history}}</code></pre>
+    </div>
+
+    <!-- TUTORIAL 6: STEP-BY-STEP MONTHLY FINOPS AUDIT -->
+    <h2 id="tutorial-operations-finops">Tutorial 6: Step-by-Step Monthly FinOps Audit &amp; Batch Migration</h2>
+    <p>
+      Execute this monthly FinOps review to continuously drive down your cost-per-task across all production AI services:
+    </p>
+    <ol style="color:var(--text-secondary);line-height:1.9;margin-left:1.5rem;margin-bottom:2rem;">
+      <li><strong>Export Top-10 Costly Workflows:</strong> Query OpenTelemetry `gen_ai.usage.input_tokens` and `gen_ai.usage.output_tokens` grouped by `x-workflow-id`.</li>
+      <li><strong>Audit Prompt Cache Hit Ratio:</strong> Verify that static system prompts and few-shot examples achieve at least an 80% cache-hit rate.</li>
+      <li><strong>Migrate Non-Interactive Jobs to Batch API:</strong> Move any workflow with an SLA greater than 1 hour to asynchronous Batch API endpoints for an immediate 50% rate reduction.</li>
+      <li><strong>Calibrate Tiered Routing Thresholds:</strong> Sample 200 frontier-tier outputs and test whether fast-tier or local models achieve equivalent accuracy on your eval harness.</li>
+    </ol>
+
+    <!-- SECTION 8: REFERENCES -->
+    <h2 id="references">Live References &amp; Official Documentation</h2>
+    <ul style="color:var(--text-secondary);line-height:1.9;margin-left:1.5rem;margin-bottom:2.5rem;list-style:disc;">
+      <li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching" rel="noopener" target="_blank">Anthropic Official Documentation - Prompt Caching</a></li>
+      <li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/batch-processing" rel="noopener" target="_blank">Anthropic Official Documentation - Message Batches API</a></li>
+      <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/caching" rel="noopener" target="_blank">Google Gemini API - Context Caching Guide</a></li>
+      <li><a class="gold-link" href="https://platform.openai.com/docs/guides/prompt-caching" rel="noopener" target="_blank">OpenAI Platform - Prompt Caching &amp; Cost Optimization</a></li>
+      <li><a class="gold-link" href="https://platform.openai.com/docs/guides/batch" rel="noopener" target="_blank">OpenAI Platform - Batch API Documentation</a></li>
+      <li><a class="gold-link" href="https://opentelemetry.io/docs/specs/semconv/gen-ai/" rel="noopener" target="_blank">OpenTelemetry Semantic Conventions for Generative AI</a></li>
+      <li><a class="gold-link" href="https://docs.litellm.ai/docs/proxy/enterprise" rel="noopener" target="_blank">LiteLLM Proxy - Enterprise Budgets &amp; Rate Limiting</a></li>
+      <li><a class="gold-link" href="https://redis.io/docs/latest/develop/ai/" rel="noopener" target="_blank">Redis Official Documentation - Semantic Caching for AI</a></li>
+      <li><a class="gold-link" href="https://www.finops.org/framework/" rel="noopener" target="_blank">FinOps Foundation - Cloud &amp; AI Cost Governance Framework</a></li>
+      <li><a class="gold-link" href="https://ollama.com/library" rel="noopener" target="_blank">Ollama Official Model Library - Zero-Marginal-Cost Local Inference</a></li>
+    </ul>
+
+    <!-- CTA BLOCK -->
+    <div style="background:#0c111d;border:1px solid var(--border-gold);border-radius:16px;padding:2.25rem;text-align:center;box-shadow:var(--glow-gold);">
+      <h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.5rem;margin-bottom:0.75rem;">Ready to Cut Your Enterprise AI Spend by 60-85%?</h2>
+      <p style="color:var(--text-secondary);max-width:680px;margin:0 auto 1.5rem;line-height:1.7;">
+        Deploy deterministic model routing, prompt caching, and per-tenant FinOps governance with 100% commercial IP ownership.
+      </p>
+      <div class="service-cta-buttons" style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+        <a class="btn btn-commission btn-lg" href="../contact.html">Commission AI Budget &amp; Cost Control →</a>
+        <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+      </div>
+    </div>
+  </section>
+  <div class="divider" style="margin-top:3rem;"></div>
+  <script>
+    function copyCode(btn) {
+      const code = btn.closest('.code-window').querySelector('pre code').innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = 'Copied!';
+        setTimeout(() => { btn.innerText = orig; }, 1800);
+      });
+    }
+  </script>
 </main>
     <!-- START:FOOTER -->
     <footer id="links">

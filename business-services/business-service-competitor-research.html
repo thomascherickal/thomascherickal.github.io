@@ -103,6 +103,7 @@
 <link href="../css/article.css" rel="stylesheet"/>
 <link href="../css/service.css" rel="stylesheet"/>
 <link href="../css/business-services.css" rel="stylesheet"/>
+<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -255,65 +256,393 @@
   <!-- END:HEADER -->
 <a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
 <main id="main">
-<!-- PAGE HERO HEADER -->
-<section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
-<p class="section-label">// SERVICE SPECIFICATION 11</p>
-<h1>Competitor Research & Intelligence</h1>
-<p class="section-sub" style="max-width:760px;margin:0.75rem auto 0;line-height:1.8;">
-  Deploying autonomous competitive intelligence agents, automated pricing trackers, product teardown scrapers, and dynamic sales battlecards.
-</p>
-<div style="margin-top:1.5rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-<a class="btn btn-commission" href="../contact.html">
-  Commission Competitor Intelligence →
-</a>
-<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">
-  Free LinkedIn Consultation ↗
-</a>
-</div>
-</section>
-<div class="divider"></div>
-<!-- STRUCTURED SPECIFICATION LISTS -->
-<section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
-<div style="background:var(--bg-card);border:1px solid var(--border-cyan);border-radius:16px;padding:2.5rem;box-shadow:var(--glow-cyan);">
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Service Overview &amp; Scope</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Automated Competitor Monitoring:</strong> Deploying headless scrapers and web monitoring agents that track competitor pricing adjustments, feature additions, product documentation, and job listings.</li>
-<li><strong>Synthesized Executive Intelligence Feeds:</strong> Converting unstructured changelogs, release notes, customer review sentiment, and public filings into structured, actionable weekly executive reports.</li>
-<li><strong>Dynamic Real-Time Sales Battlecards:</strong> Maintaining automated objection-handling matrices and feature gap analyses updated live inside CRM systems (HubSpot, Salesforce) and communication hubs.</li>
-<li><strong>Positioning &amp; Messaging Analysis:</strong> Analyzing competitor positioning shifts, marketing copy variations, and value propositions to identify market white-space and product differentiators.</li>
-<li><strong>Compliance &amp; Data Hygiene:</strong> Enforcing strict adherence to public-data collection rules, rate limiting, and respectful web practices to guarantee zero compliance exposure.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">Standard Architecture &amp; Tools</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Extraction &amp; Scraping Runbooks:</strong> Apify actors, Playwright headless browser clusters, and proxy rotators configured for robust, maintenance-free web page change detection.</li>
-<li><strong>Synthesis &amp; Reasoning Models:</strong> Claude and Claude Opus for deep comparative analysis, feature matrix mapping, and semantic diff generation.</li>
-<li><strong>Historical Knowledge Vault:</strong> Vector memory (Qdrant or pgvector) storing timestamped snapshots of competitor pricing models, feature sets, and messaging evolution.</li>
-<li><strong>Distribution &amp; Alerting Webhooks:</strong> Automated n8n or Python pipelines dispatching immediate high-priority alerts to Slack, Microsoft Teams, and sales CRM dashboards.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">Guarantees &amp; Commitments</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>100% Automated Intelligence Gathering:</strong> Zero recurring manual research required to maintain up-to-date competitor profiles.</li>
-<li><strong>Sub-Hour Alerting on Strategic Moves:</strong> Priority notifications delivered to your team within 60 minutes of verified competitor pricing or packaging changes.</li>
-<li><strong>Citation-Grounded Intelligence:</strong> Every claim, quote, and comparison tied directly to timestamped archive snapshots for total verification.</li>
-<li><strong>30-Day Operational SLA:</strong> Dedicated maintenance, scraper tuning, and prompt recalibration support included after delivery.</li>
-</ul>
+<div class="doc-container" style="max-width:960px;margin:0 auto;padding:3rem 1.25rem 2rem;">
 
-        <h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-top:2rem;margin-bottom:1rem;">Executive Summary</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong style="color:var(--gold);">Continuous Market Vigilance:</strong> Autonomous agents monitoring competitor pricing, features, and positioning 24/7.</li>
-<li><strong style="color:var(--gold);">Live Sales Enablement:</strong> Dynamic battlecards and objection talking points pushed straight into your CRM.</li>
-<li><strong style="color:var(--gold);">Executive Clarity:</strong> Weekly synthesized briefings summarizing competitor shifts with full citation audit trails.</li>
-<li><strong style="color:var(--gold);">Full Intellectual Property Transfer:</strong> All scraper scripts, prompts, databases, and runbooks belong 100% to your organization.</li>
-</ul>
-<div class="service-cta-buttons">
-<a class="btn btn-commission btn-lg" href="../contact.html">
-  Commission Competitor Intelligence →
-</a>
-<a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+  <!-- HERO HEADER CARD -->
+  <section class="hero-card" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.35);border-radius:16px;padding:2.5rem;margin-bottom:2rem;box-shadow:0 0 40px rgba(251,191,36,0.08);">
+    <p class="section-label" style="color:var(--gold,#fbbf24);font-family:var(--font-mono,monospace);font-size:0.8rem;letter-spacing:0.12em;margin-bottom:0.75rem;">// SERVICE SPECIFICATION - COMPETITIVE INTELLIGENCE</p>
+    <h1>Competitor Research & Intelligence</h1>
+    <p style="color:var(--text-secondary,#cbd5e1);font-size:1.05rem;line-height:1.75;max-width:780px;margin-bottom:1.75rem;">
+      Autonomous competitive intelligence pipelines: headless pricing and changelog trackers, product teardown scrapers, zero-hallucination citation logs, and dynamic sales battlecards synced to your CRM.
+    </p>
+    <div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:1.5rem;">
+      <div style="background:#040711;border:1px solid rgba(56,189,248,0.28);border-radius:12px;padding:1.1rem;">
+        <div style="font-size:1.5rem;font-weight:700;color:var(--cyan,#38bdf8);font-family:var(--font-display,sans-serif);">24/7</div>
+        <div style="font-size:0.82rem;color:#94a3b8;margin-top:0.25rem;">Automated Diff Monitoring</div>
+      </div>
+      <div style="background:#040711;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:1.1rem;">
+        <div style="font-size:1.5rem;font-weight:700;color:var(--gold,#fbbf24);font-family:var(--font-display,sans-serif);">100%</div>
+        <div style="font-size:0.82rem;color:#94a3b8;margin-top:0.25rem;">Citation-Grounded Claims</div>
+      </div>
+      <div style="background:#040711;border:1px solid rgba(52,211,153,0.28);border-radius:12px;padding:1.1rem;">
+        <div style="font-size:1.5rem;font-weight:700;color:#34d399;font-family:var(--font-display,sans-serif);">CRM Sync</div>
+        <div style="font-size:0.82rem;color:#94a3b8;margin-top:0.25rem;">Live Sales Battlecards</div>
+      </div>
+      <div style="background:#040711;border:1px solid rgba(232,121,249,0.28);border-radius:12px;padding:1.1rem;">
+        <div style="font-size:1.5rem;font-weight:700;color:#e879f9;font-family:var(--font-display,sans-serif);">Archival</div>
+        <div style="font-size:0.82rem;color:#94a3b8;margin-top:0.25rem;">Snapshot Audit Trail</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TABLE OF CONTENTS -->
+  <section id="table-of-contents" style="background:var(--bg-card,#0c111d);border:1px solid rgba(56,189,248,0.25);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.2rem;margin-bottom:1rem;">Table of Contents</h2>
+    <ol style="color:#cbd5e1;line-height:1.9;padding-left:1.25rem;margin:0;display:flex;flex-direction:column;gap:0.6rem;">
+      <li><a class="gold-link" href="#intel-pipeline">1. Automated Competitive Intelligence Pipeline</a></li>
+      <li><a class="gold-link" href="#zero-hallucination">2. Zero-Hallucination Citation Architecture</a></li>
+      <li><a class="gold-link" href="#sales-battlecards">3. Dynamic Sales Battlecards &amp; CRM Sync</a></li>
+      <li><a class="gold-link" href="#enterprise-governance">4. Enterprise Governance &amp; Failure-Mode Recovery</a></li>
+      <li><a class="gold-link" href="#tutorial-python">5. Tutorial 1: Python Pricing Diff Scraper</a></li>
+      <li><a class="gold-link" href="#tutorial-prompt">6. Tutorial 2: Battlecard Synthesis Prompt</a></li>
+      <li><a class="gold-link" href="#tutorial-operations">7. Tutorial 3: Step-by-Step Pipeline Deployment</a></li>
+      <li><a class="gold-link" href="#tutorial-python-citation">8. Tutorial 4: Python Citation Grounding &amp; Diff Verifier</a></li>
+      <li><a class="gold-link" href="#tutorial-prompt-compliance">9. Tutorial 5: Competitive Compliance &amp; Fact-Check Prompt</a></li>
+      <li><a class="gold-link" href="#tutorial-operations-recovery">10. Tutorial 6: Step-by-Step Scraper Failure &amp; Stale-Data Runbook</a></li>
+      <li><a class="gold-link" href="#references">11. Live References &amp; Documentation</a></li>
+    </ol>
+  </section>
+
+  <!-- SECTION 1 -->
+  <section id="intel-pipeline" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Automated Competitive Intelligence Pipeline</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Manual competitor tracking breaks down the moment a market moves. Sales teams rely on stale PDFs while competitors quietly adjust pricing tiers, ship new APIs, or reposition their landing pages. Our automated competitive intelligence pipeline uses headless browsers and structured diffing to monitor competitor pricing pages, release notes, and documentation continuously.
+    </p>
+
+    <!-- SVG DIAGRAM 1 -->
+    <div style="margin:1.75rem 0;border:1px solid rgba(56,189,248,0.28);border-radius:12px;overflow:hidden;background:#040711;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Competitive Intelligence Pipeline Diagram" style="width:100%;height:auto;display:block;">
+        <rect width="960" height="400" fill="#040711"/>
+        <text x="480" y="34" fill="#fbbf24" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">AUTONOMOUS COMPETITIVE INTELLIGENCE PIPELINE</text>
+        <rect x="60" y="135" width="185" height="90" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="152" y="172" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">1. Headless Crawl</text>
+        <text x="152" y="194" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Playwright + DOM</text>
+        <line x1="245" y1="180" x2="290" y2="180" stroke="#38bdf8" stroke-width="2"/>
+        <rect x="290" y="135" width="185" height="90" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="382" y="172" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">2. Semantic Diff</text>
+        <text x="382" y="194" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Pricing &amp; Feature</text>
+        <line x1="475" y1="180" x2="520" y2="180" stroke="#fbbf24" stroke-width="2"/>
+        <rect x="520" y="135" width="185" height="90" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="612" y="172" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">3. Citation Gate</text>
+        <text x="612" y="194" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">URL + Snapshot</text>
+        <line x1="705" y1="180" x2="750" y2="180" stroke="#34d399" stroke-width="2"/>
+        <rect x="750" y="135" width="160" height="90" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="830" y="172" fill="#e879f9" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">4. CRM Sync</text>
+        <text x="830" y="194" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Live Battlecards</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section id="zero-hallucination" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Zero-Hallucination Citation Architecture</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Executive briefings and sales battlecards cannot contain fabricated competitor claims. Every extracted fact is bound to an immutable HTML snapshot, timestamp, and source URL. If an agent cannot point to a verbatim quote in the captured DOM, the claim is rejected before reaching Slack or your CRM.
+    </p>
+
+    <!-- SVG DIAGRAM 2 -->
+    <div style="margin:1.75rem 0;border:1px solid rgba(52,211,153,0.28);border-radius:12px;overflow:hidden;background:#040711;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zero-Hallucination Citation Verification" style="width:100%;height:auto;display:block;">
+        <rect width="960" height="400" fill="#040711"/>
+        <text x="480" y="34" fill="#34d399" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">ZERO-HALLUCINATION EVIDENCE VERIFICATION</text>
+        <rect x="100" y="110" width="240" height="150" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="220" y="150" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Archived Snapshot</text>
+        <text x="220" y="185" fill="#cbd5e1" font-family="monospace" font-size="11" text-anchor="middle">SHA-256 + Timestamp</text>
+        <text x="220" y="210" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Verbatim DOM Extract</text>
+        <line x1="340" y1="185" x2="410" y2="185" stroke="#fbbf24" stroke-width="2"/>
+        <rect x="410" y="110" width="200" height="150" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="510" y="150" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Verifier Gate</text>
+        <text x="510" y="185" fill="#cbd5e1" font-family="monospace" font-size="11" text-anchor="middle">Quote Match Check</text>
+        <line x1="610" y1="185" x2="680" y2="185" stroke="#34d399" stroke-width="2"/>
+        <rect x="680" y="110" width="200" height="150" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="780" y="150" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Verified Brief</text>
+        <text x="780" y="185" fill="#cbd5e1" font-family="monospace" font-size="11" text-anchor="middle">100% Grounded</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section id="sales-battlecards" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Dynamic Sales Battlecards &amp; CRM Sync</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Intelligence is only valuable when it reaches account executives during live deals. Our pipeline pushes structured counter-positioning matrices directly into HubSpot, Salesforce, and Slack channels whenever a competitor changes pricing or launches a competing feature.
+    </p>
+
+    <!-- SVG DIAGRAM 3 -->
+    <div style="margin:1.75rem 0;border:1px solid rgba(251,191,36,0.28);border-radius:12px;overflow:hidden;background:#040711;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dynamic Sales Battlecard Distribution" style="width:100%;height:auto;display:block;">
+        <rect width="960" height="400" fill="#040711"/>
+        <text x="480" y="34" fill="#fbbf24" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">DYNAMIC BATTLECARD DISTRIBUTION</text>
+        <rect x="330" y="65" width="300" height="70" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="480" y="105" fill="#fbbf24" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Battlecard Synthesizer</text>
+        <line x1="480" y1="135" x2="200" y2="220" stroke="#38bdf8" stroke-width="2"/>
+        <line x1="480" y1="135" x2="480" y2="220" stroke="#34d399" stroke-width="2"/>
+        <line x1="480" y1="135" x2="760" y2="220" stroke="#e879f9" stroke-width="2"/>
+        <rect x="90" y="220" width="220" height="80" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="200" y="265" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Salesforce / HubSpot</text>
+        <rect x="370" y="220" width="220" height="80" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="480" y="265" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Slack #intel-alerts</text>
+        <rect x="650" y="220" width="220" height="80" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="760" y="265" fill="#e879f9" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Executive Weekly Digest</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- TUTORIAL 1: PYTHON -->
+  <section id="tutorial-python" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Tutorial 1: Python Pricing Diff Scraper</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
+      This Python script fetches a competitor pricing page, hashes the normalized text, and triggers an LLM diff summary only when an actual change is detected.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan,#38bdf8);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(56,189,248,0.2);">
+        <span style="font-family:var(--font-mono,monospace);font-size:0.8rem;color:#38bdf8;">pricing_tracker.py</span>
+        <button class="copy-btn" type="button" onclick="copyCode(this)" style="background:rgba(56,189,248,0.12);color:#38bdf8;border:1px solid rgba(56,189,248,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;overflow-x:auto;color:#e2e8f0;font-family:var(--font-mono,monospace);font-size:0.85rem;line-height:1.6;"><code>import hashlib
+import os
+import requests
+from bs4 import BeautifulSoup
+from anthropic import Anthropic
+
+client = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+
+def fetch_clean_text(url: str) -> str:
+    html = requests.get(url, timeout=15).text
+    soup = BeautifulSoup(html, "html.parser")
+    return " ".join(soup.get_text().split())
+
+def summarize_pricing_change(old_text: str, new_text: str) -> str:
+    if hashlib.sha256(old_text.encode()).hexdigest() == hashlib.sha256(new_text.encode()).hexdigest():
+        return "No pricing changes detected."
+    response = client.messages.create(
+        model="claude-sonnet-4-20250514",
+        max_tokens=800,
+        system="Extract exact pricing tier changes. Cite verbatim numbers only.",
+        messages=[{"role": "user", "content": f"OLD:
+{old_text[:3000]}
+
+NEW:
+{new_text[:3000]}"}],
+    )
+    return response.content[0].text</code></pre>
+    </div>
+  </section>
+
+  <!-- TUTORIAL 2: PROMPT TEMPLATE -->
+  <section id="tutorial-prompt" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Tutorial 2: Battlecard Synthesis Prompt</h2>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.32);border-left:3px solid var(--gold,#fbbf24);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(251,191,36,0.2);">
+        <span style="font-family:var(--font-mono,monospace);font-size:0.8rem;color:#fbbf24;">battlecard_prompt.txt</span>
+        <button class="copy-btn" type="button" onclick="copyCode(this)" style="background:rgba(251,191,36,0.12);color:#fbbf24;border:1px solid rgba(251,191,36,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;overflow-x:auto;color:#e2e8f0;font-family:var(--font-mono,monospace);font-size:0.85rem;line-height:1.6;"><code>ROLE:
+You are a Competitive Intelligence Analyst. Synthesize a concise sales battlecard from the provided verified snapshots.
+
+RULES:
+- Every claim MUST include the exact source URL and snapshot date.
+- Highlight pricing deltas, newly shipped features, and documented limitations.
+- Never speculate on unannounced roadmap items.
+- Format output into: 1. Key Change, 2. Sales Counter-Positioning, 3. Discovery Questions.</code></pre>
+    </div>
+  </section>
+
+  <!-- TUTORIAL 3: OPERATIONAL INSTRUCTIONS -->
+  <section id="tutorial-operations" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:#34d399;font-size:1.6rem;margin-bottom:1rem;">Tutorial 3: Step-by-Step Pipeline Deployment</h2>
+    <ol style="color:#cbd5e1;line-height:1.9;padding-left:1.5rem;margin-bottom:1.5rem;">
+      <li><strong style="color:var(--gold,#fbbf24);">Register Target URLs:</strong> Define competitor pricing, changelog, and documentation endpoints in a YAML manifest.</li>
+      <li><strong style="color:var(--cyan,#38bdf8);">Schedule Cron Crawls:</strong> Run Playwright workers on a 24-hour schedule with S3 snapshot archival.</li>
+      <li><strong style="color:#34d399;">Connect CRM Webhooks:</strong> Route verified battlecard diffs to Slack and HubSpot/Salesforce deal rooms.</li>
+    </ol>
+
+    <!-- SVG DIAGRAM 4 -->
+    <div style="margin:1.75rem 0;border:1px solid rgba(232,121,249,0.28);border-radius:12px;overflow:hidden;background:#040711;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Operational Deployment Schedule" style="width:100%;height:auto;display:block;">
+        <rect width="960" height="400" fill="#040711"/>
+        <text x="480" y="34" fill="#e879f9" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">CONTINUOUS MONITORING &amp; ALERTING SCHEDULE</text>
+        <rect x="80" y="140" width="220" height="90" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="190" y="178" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">1. YAML Manifest</text>
+        <text x="190" y="200" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Competitor URLs</text>
+        <line x1="300" y1="185" x2="370" y2="185" stroke="#fbbf24" stroke-width="2"/>
+        <rect x="370" y="140" width="220" height="90" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="480" y="178" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">2. Daily Diff</text>
+        <text x="480" y="200" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">S3 Snapshot Archive</text>
+        <line x1="590" y1="185" x2="660" y2="185" stroke="#38bdf8" stroke-width="2"/>
+        <rect x="660" y="140" width="220" height="90" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="770" y="178" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">3. CRM Push</text>
+        <text x="770" y="200" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Verified Battlecards</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SECTION: ENTERPRISE GOVERNANCE & FAILURE-MODE RECOVERY -->
+  <section id="enterprise-governance" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Enterprise Governance &amp; Failure-Mode Recovery</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Automated competitive intelligence pipelines must operate within strict legal, ethical, and data-integrity boundaries. Enterprise governance begins with robots.txt compliance, rate-limited crawling, and strict exclusion of authenticated or paywalled competitor portals. Every ingested source document is hashed (SHA-256) and archived with its exact HTTP timestamp, ensuring that every pricing claim or feature comparison in a downstream sales battlecard is cryptographically traceable to a public URL.
+    </p>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      To eliminate hallucinated competitive claims, the synthesis layer enforces a two-stage verification gate modeled on <a class="gold-link" href="#references">Anthropic Grounded Citations</a> and <a class="gold-link" href="#references">Pydantic structured validation</a>. Every extracted claim must include a verbatim quote span and source URL; any claim lacking a verifiable span is automatically stripped before the brief is published to Salesforce, HubSpot, or Slack.
+    </p>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Failure-mode recovery handles DOM layout shifts, anti-bot challenges, and stale-data cascades. When a target pricing page changes its CSS selectors, the scraper detects a zero-byte or schema-invalid extraction, falls back to the last verified snapshot, and alerts engineering with a visual diff rather than overwriting CRM battlecards with empty or corrupted data.
+    </p>
+
+    <!-- SVG DIAGRAM 5: COMPETITIVE INTEL COMPLIANCE & CITATION GATE -->
+    <div style="margin:2rem 0;background:#040711;border:1px solid rgba(56,189,248,0.25);border-radius:14px;padding:1rem;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Competitive Intelligence Compliance and Citation Verification Gate">
+        <rect width="960" height="400" fill="#040711" rx="10"/>
+        <text x="480" y="34" fill="#fbbf24" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Competitive Intelligence Compliance &amp; Citation Gate</text>
+        <rect x="40" y="140" width="180" height="100" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="130" y="178" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Public Web</text>
+        <text x="130" y="200" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">robots.txt + Rate Limit</text>
+        <text x="130" y="218" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">SHA-256 Archive</text>
+        <line x1="220" y1="190" x2="290" y2="190" stroke="#38bdf8" stroke-width="2"/>
+        <rect x="290" y="140" width="200" height="100" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="390" y="178" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Citation Verifier</text>
+        <text x="390" y="200" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Exact Quote Span Check</text>
+        <text x="390" y="218" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle">Zero-Hallucination Gate</text>
+        <line x1="490" y1="165" x2="570" y2="105" stroke="#34d399" stroke-width="2"/>
+        <line x1="490" y1="215" x2="570" y2="275" stroke="#e879f9" stroke-width="2"/>
+        <rect x="570" y="60" width="340" height="90" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="740" y="95" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Verified: Publish to CRM &amp; Slack</text>
+        <text x="740" y="118" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">Battlecard updated with live URL + timestamp</text>
+        <rect x="570" y="230" width="340" height="90" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="740" y="265" fill="#e879f9" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Unverified: Strip Claim &amp; Alert</text>
+        <text x="740" y="288" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">Preserve last known good CRM snapshot</text>
+      </svg>
+    </div>
+
+    <!-- SVG DIAGRAM 6: SCRAPER FAILURE & STALE-DATA RECOVERY -->
+    <div style="margin:2rem 0;background:#040711;border:1px solid rgba(251,191,36,0.25);border-radius:14px;padding:1rem;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scraper Failure and Stale-Data Recovery">
+        <rect width="960" height="400" fill="#040711" rx="10"/>
+        <text x="480" y="34" fill="#38bdf8" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Scraper Failure &amp; Stale-Data Recovery Pipeline</text>
+        <rect x="40" y="150" width="180" height="90" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="130" y="185" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Playwright Crawl</text>
+        <text x="130" y="208" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">DOM / Selector Drift</text>
+        <line x1="220" y1="195" x2="290" y2="195" stroke="#fbbf24" stroke-width="2"/>
+        <rect x="290" y="140" width="210" height="110" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="395" y="175" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Schema Guard</text>
+        <text x="395" y="198" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Rejects Empty / Malformed</text>
+        <text x="395" y="218" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle">Extraction Payloads</text>
+        <line x1="500" y1="195" x2="580" y2="195" stroke="#34d399" stroke-width="2"/>
+        <rect x="580" y="120" width="330" height="150" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="745" y="155" fill="#34d399" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Safe Fallback &amp; Alerting</text>
+        <text x="745" y="182" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">1. Serve cached verified battlecard</text>
+        <text x="745" y="204" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">2. Markstaleness_flag = true in CRM</text>
+        <text x="745" y="226" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">3. Page engineering with DOM diff</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- TUTORIAL 4: PYTHON CITATION GROUNDING & DIFF VERIFIER -->
+  <section id="tutorial-python-citation" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Tutorial 4: Python Citation Grounding &amp; Diff Verifier</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      This Python verifier ensures every competitive claim is backed by an exact substring match in the archived source text before updating any CRM battlecard.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid var(--cyan,#38bdf8);border-radius:10px;margin:1.75rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:rgba(12,17,29,0.95);border-bottom:1px solid rgba(56,189,248,0.2);">
+        <span style="color:#38bdf8;font-family:monospace;font-size:0.85rem;">citation_verifier.py</span>
+        <button class="copy-btn" onclick="copyCode(this)" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.4);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.1rem;color:#e2e8f0;font-family:monospace;font-size:0.86rem;line-height:1.6;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;"><code>import hashlib
+from typing import List, Dict
+
+def verify_grounded_claims(source_text: str, claims: List[Dict[str, str]]) -&gt; List[Dict[str, str]]:
+    source_hash = hashlib.sha256(source_text.encode("utf-8")).hexdigest()
+    verified = []
+    for item in claims:
+        quote = item.get("verbatim_quote", "").strip()
+        if quote and quote in source_text:
+            item["source_sha256"] = source_hash
+            item["verified"] = True
+            verified.append(item)
+    return verified</code></pre>
+    </div>
+  </section>
+
+  <!-- TUTORIAL 5: COMPETITIVE COMPLIANCE & FACT-CHECK PROMPT -->
+  <section id="tutorial-prompt-compliance" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Tutorial 5: Competitive Compliance &amp; Fact-Check Prompt</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Use this system prompt to enforce strict citation grounding and prevent speculative claims in automated competitor intelligence briefs.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.35);border-left:3px solid var(--gold,#fbbf24);border-radius:10px;margin:1.75rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:rgba(12,17,29,0.95);border-bottom:1px solid rgba(251,191,36,0.2);">
+        <span style="color:#fbbf24;font-family:monospace;font-size:0.85rem;">fact_check_prompt.txt</span>
+        <button class="copy-btn" onclick="copyCode(this)" style="background:rgba(251,191,36,0.15);color:#fbbf24;border:1px solid rgba(251,191,36,0.4);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.1rem;color:#e2e8f0;font-family:monospace;font-size:0.86rem;line-height:1.6;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;"><code>ROLE: Competitive Intelligence Fact-Checker
+RULES:
+1. Extract ONLY pricing, SLA, and feature claims explicitly present in the provided source text.
+2. Every claim MUST include an exact "verbatim_quote" copied character-for-character from the source.
+3. If a competitor pricing tier is ambiguous or missing, output "status": "UNVERIFIED" instead of guessing.
+4. Output valid JSON matching the battlecard schema.</code></pre>
+    </div>
+  </section>
+
+  <!-- TUTORIAL 6: STEP-BY-STEP SCRAPER FAILURE & STALE-DATA RUNBOOK -->
+  <section id="tutorial-operations-recovery" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:#34d399;font-size:1.6rem;margin-bottom:1rem;">Tutorial 6: Step-by-Step Scraper Failure &amp; Stale-Data Runbook</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Follow this runbook when a competitor pricing scraper fails schema validation or triggers a stale-data alert:
+    </p>
+    <ol style="color:#cbd5e1;line-height:1.9;padding-left:1.5rem;margin-bottom:1.25rem;">
+      <li><strong>Verify CRM Fallback:</strong> Confirm the CRM battlecard is still serving the last verified snapshot with <code style="color:#38bdf8;">staleness_flag=true</code>.</li>
+      <li><strong>Inspect DOM Diff:</strong> Review the archived HTML snapshot from Playwright to identify renamed CSS selectors or layout changes.</li>
+      <li><strong>Update &amp; Test Selector:</strong> Patch the extraction selector in staging and run the citation verifier against the live public URL.</li>
+      <li><strong>Clear Stale Flag:</strong> Once verified claims pass the SHA-256 check, push the updated battlecard to CRM and notify the sales channel.</li>
+    </ol>
+  </section>
+
+  <!-- REFERENCES -->
+  <section id="references" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.25);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.3rem;margin-bottom:1rem;">Live References &amp; Documentation</h2>
+    <ul style="color:#cbd5e1;line-height:1.9;padding-left:1.25rem;margin:0;">
+      <li><a class="gold-link" href="https://playwright.dev/python/docs/intro" rel="noopener" target="_blank">Playwright Python Headless Browser Documentation</a></li>
+      <li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/citations" rel="noopener" target="_blank">Anthropic Grounded Citations &amp; Verification</a></li>
+      <li><a class="gold-link" href="https://docs.pydantic.dev/latest/" rel="noopener" target="_blank">Pydantic Structured Validation Documentation</a></li>
+      <li><a class="gold-link" href="https://developers.google.com/search/docs/crawling-indexing/robots/intro" rel="noopener" target="_blank">Google Robots.txt Specification &amp; Compliance</a></li>
+      <li><a class="gold-link" href="https://developer.salesforce.com/docs/apis" rel="noopener" target="_blank">Salesforce REST API Documentation</a></li>
+      <li><a class="gold-link" href="https://developers.hubspot.com/docs/api/overview" rel="noopener" target="_blank">HubSpot CRM API Reference</a></li>
+      <li><a class="gold-link" href="https://opentelemetry.io/docs/" rel="noopener" target="_blank">OpenTelemetry Distributed Tracing Specification</a></li>
+      <li><a class="gold-link" href="https://json-schema.org/specification" rel="noopener" target="_blank">JSON Schema Official Specification</a></li>
+      <li><a class="gold-link" href="https://www.nist.gov/itl/ai-risk-management-framework" rel="noopener" target="_blank">NIST AI Risk Management Framework</a></li>
+      <li><a class="gold-link" href="https://genai.owasp.org/llm-top-10/" rel="noopener" target="_blank">OWASP Top 10 for LLM Applications</a></li>
+    </ul>
+  </section>
+
+  <!-- CTA BLOCK -->
+  <section class="reveal" style="margin-bottom:2rem;">
+    <div style="background:var(--bg-card,#0c111d);border:1px solid var(--border-gold,rgba(251,191,36,0.35));border-radius:16px;padding:2.25rem;text-align:center;">
+      <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.4rem;margin-bottom:0.75rem;">Ready to Automate Competitive Intelligence?</h2>
+      <p style="color:#cbd5e1;max-width:640px;margin:0 auto 1.5rem;line-height:1.7;">
+        Deploy 24/7 pricing trackers, citation-grounded briefs, and live CRM battlecards with full IP transfer.
+      </p>
+      <div class="service-cta-buttons">
+        <a class="btn btn-commission btn-lg" href="../contact.html">Commission Competitive Intelligence →</a>
+        <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+      </div>
+    </div>
+  </section>
+
 </div>
-</div>
-</section>
-<div class="divider" style="margin-top:3rem;"></div>
+<div class="divider" style="margin-top:2rem;"></div>
+<script>
+function copyCode(btn) {
+  const pre = btn.closest(".code-window").querySelector("pre");
+  navigator.clipboard.writeText(pre.innerText).then(() => {
+    const orig = btn.innerText;
+    btn.innerText = "Copied!";
+    setTimeout(() => { btn.innerText = orig; }, 1800);
+  });
+}
+</script>
 </main>
     <!-- START:FOOTER -->
     <footer id="links">

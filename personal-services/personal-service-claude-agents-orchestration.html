@@ -104,6 +104,7 @@
 <link href="../css/article.css" rel="stylesheet"/>
 <link href="../css/service.css" rel="stylesheet"/>
 <link href="../css/personal-services.css" rel="stylesheet"/>
+<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -256,86 +257,624 @@
   <!-- END:HEADER -->
 <a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
 <main id="main">
-<!-- PAGE HERO HEADER -->
-<section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
-<p class="section-label">// SERVICE SPECIFICATION 03</p>
-<h1>Claude Agent Orchestration</h1>
-<p class="section-sub" style="max-width:760px;margin:0.75rem auto 0;line-height:1.8;">
-        The principles behind Claude AI agent orchestration and how to run agent teams at scale. Build multi-agent
-        workflows that automate complex operations while keeping quality and cost under control, even on a small budget.
-      </p>
-<div style="margin-top:1.5rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-<a class="btn btn-commission" href="../contact.html">
-          Commission Claude Agent Orchestration →
-        </a>
-<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">
-          Free LinkedIn Consultation ↗
-        </a>
-</div>
-</section>
-<div class="divider"></div>
-<!-- STRUCTURED SPECIFICATION LISTS -->
-<section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
-<div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:2.5rem;box-shadow:var(--glow-gold);">
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">Service
-          Overview &amp; Scope</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Claude Agent Teams:</strong> Coordinating several Claude agents on one goal, with an orchestrator
-            on Opus or Fable at high or xhigh effort and Sonnet or Haiku workers at lower effort.</li>
-<li><strong>Five Core Architectures:</strong> Orchestrator-worker, hierarchical, sequential pipeline, parallel
-            fan-out and fan-in, and router, with guidance on when each one fits.</li>
-<li><strong>Model Context Protocol (MCP) Integration:</strong> Connecting agents to internal APIs, databases
-            and files through MCP servers with defined input schemas.</li>
-<li><strong>Verification Before Commit:</strong> Reviewer subagents and test suites check worker output before
-            it changes anything.</li>
-<li><strong>Spend Limits at Every Level:</strong> Budgets per session, day, month and year, iteration caps,
-            and a kill switch that stops concurrent cloud agents.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Standard
-          Architecture &amp; Tools</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Orchestration Layer:</strong> Claude Code subagents, background agents in their own git worktrees,
-            and the Claude API with Python asyncio for concurrent calls.</li>
-<li><strong>Model Tier Allocation:</strong> Claude Opus or Fable (planning and final synthesis), Claude Sonnet
-            (coding, tool use and analysis), and Claude Haiku (search, classification and summarization).</li>
-<li><strong>Shared State:</strong> Task and result state kept in files or a SQL database, so interrupted runs
-            can resume.</li>
-<li><strong>Cost and Safety Controls:</strong> Prompt caching, Batch API fan-out, a restricted tool list for
-            each subagent, Docker sandboxes, and run logs that record tokens per agent.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Guarantees
-          &amp; Commitments</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>No Runaway Loops:</strong> Iteration counters, timeouts and token caps on every agent.</li>
-<li><strong>Full IP &amp; Code Ownership:</strong> All orchestration code, prompts, skills and MCP
-            configurations transfer to you.</li>
-<li><strong>Enterprise Data Boundaries:</strong> Agents act with each user's own permissions, and write
-            actions need approval until you choose to relax them.</li>
-<li><strong>30-Day Production SLA:</strong> Support channel for adjustments, new tools and debugging.</li>
-</ul>
+  <section class="section" style="padding-top: 2rem;">
+    <div class="container" style="max-width: 980px;">
 
-        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-top:2rem;margin-bottom:1rem;">Executive Summary</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong style="color:var(--gold);">Claude Agent Teams:</strong> Opus or Fable planning paired with Sonnet
-            and Haiku workers.</li>
-<li><strong style="color:var(--gold);">Model Context Protocol Tools:</strong> MCP servers connecting agents to
-            SQL, internal APIs and file systems.</li>
-<li><strong style="color:var(--gold);">Low-Budget Operation:</strong> Prompt caching, batch processing,
-            cheaper models for narrow jobs and hard spend limits.</li>
-<li><strong style="color:var(--gold);">Complete Code &amp; IP Transfer:</strong> Full ownership, containerized
-            runtimes and 30-day support.</li>
-</ul>
-<div class="service-cta-buttons">
-<a class="btn btn-commission btn-lg" href="../contact.html">
+      <!-- Hero Header Card -->
+      <div class="hero-card" style="background: #0c111d; border: 1px solid rgba(251, 191, 36, 0.28); border-radius: 14px; padding: 2.25rem; margin-bottom: 2rem;">
+        <div style="font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: #38bdf8; font-weight: 700; margin-bottom: 0.75rem;">
+          Personal AI Engineering &amp; Autonomous Systems
+        </div>
+        <h1>Claude Agent Orchestration</h1>
+        <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
+          A complete technical blueprint for individual developers, researchers, and solo operators who want to design, deploy, and govern multi-agent Claude swarms without enterprise infrastructure overhead. Learn how to partition context, wire Model Context Protocol (MCP) tools, enforce deterministic state machines, and keep token spend predictable.
+        </p>
+        <div class="service-cta-buttons" style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <a class="btn btn-commission btn-lg" href="../contact.html">Commission Claude Agent Orchestration</a>
+          <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+        </div>
+      </div>
+
+      <!-- 4-Card Stats Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2.5rem;">
+        <div style="background: #0c111d; border: 1px solid rgba(56, 189, 248, 0.28); border-radius: 10px; padding: 1.25rem;">
+          <div style="font-size: 1.6rem; font-weight: 800; color: #fbbf24;">80%</div>
+          <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem;">Token cost reduction via Anthropic prompt caching and tiered routing</div>
+        </div>
+        <div style="background: #0c111d; border: 1px solid rgba(52, 211, 153, 0.28); border-radius: 10px; padding: 1.25rem;">
+          <div style="font-size: 1.6rem; font-weight: 800; color: #34d399;">Zero Rot</div>
+          <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem;">Isolated sub-agent scratchpads prevent cross-task context pollution</div>
+        </div>
+        <div style="background: #0c111d; border: 1px solid rgba(232, 121, 249, 0.28); border-radius: 10px; padding: 1.25rem;">
+          <div style="font-size: 1.6rem; font-weight: 800; color: #e879f9;">MCP Native</div>
+          <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem;">Standardized tool bindings for local files, SQLite, Git, and REST APIs</div>
+        </div>
+        <div style="background: #0c111d; border: 1px solid rgba(251, 191, 36, 0.28); border-radius: 10px; padding: 1.25rem;">
+          <div style="font-size: 1.6rem; font-weight: 800; color: #38bdf8;">100% Local</div>
+          <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem;">Runs on your laptop or personal VPS with full state checkpointing</div>
+        </div>
+      </div>
+
+      <!-- Table of Contents -->
+      <nav id="table-of-contents" aria-label="Table of Contents" style="background: #0c111d; border: 1px solid rgba(251, 191, 36, 0.25); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2.5rem;">
+        <h2 style="font-size: 1.2rem; color: #fbbf24; margin-top: 0; margin-bottom: 1rem;">Table of Contents</h2>
+        <ol style="display:flex;flex-direction:column;gap:0.6rem;margin: 0; padding-left: 1.25rem; color: #cbd5e1; line-height: 1.6;">
+          <li><a class="gold-link" href="#why-personal-orchestration">1. Why Solo Practitioners Need Multi-Agent Orchestration</a></li>
+          <li><a class="gold-link" href="#hierarchical-topology">2. Hierarchical Swarm Topology and Role Specialization</a></li>
+          <li><a class="gold-link" href="#context-partitioning">3. Context Partitioning and Scratchpad Isolation</a></li>
+          <li><a class="gold-link" href="#mcp-tool-fabric">4. Model Context Protocol (MCP) Tool Fabric</a></li>
+          <li><a class="gold-link" href="#prompt-caching-economics">5. Prompt Caching and Tiered Model Economics</a></li>
+          <li><a class="gold-link" href="#stateful-recovery">6. Deterministic State Machines and Human-in-the-Loop Gates</a></li>
+          <li><a class="gold-link" href="#privacy-security-hygiene">7. Privacy, Credential Isolation, and Local Security Hygiene</a></li>
+          <li><a class="gold-link" href="#failure-mode-recovery">8. Failure-Mode Recovery, Deadlocks, and Runaway Loop Prevention</a></li>
+          <li><a class="gold-link" href="#tutorial-python">9. Tutorial 1: Production Python Orchestrator with Async Workers</a></li>
+          <li><a class="gold-link" href="#tutorial-prompt">10. Tutorial 2: Production Orchestrator System Prompt Template</a></li>
+          <li><a class="gold-link" href="#tutorial-operations">11. Tutorial 3: Step-by-Step Operational Deployment Guide</a></li>
+          <li><a class="gold-link" href="#tutorial-python-checkpoint">12. Tutorial 4: SQLite Checkpoint &amp; Dead-Letter Recovery Worker (Python)</a></li>
+          <li><a class="gold-link" href="#tutorial-prompt-critic">13. Tutorial 5: Adversarial Security &amp; Diff Critic Prompt Template</a></li>
+          <li><a class="gold-link" href="#tutorial-operations-incident">14. Tutorial 6: Step-by-Step Incident Recovery &amp; Rollback Runbook</a></li>
+          <li><a class="gold-link" href="#references">15. Live Technical References</a></li>
+        </ol>
+      </nav>
+
+      <!-- Section 1 -->
+      <article class="prose" style="color: #e2e8f0; line-height: 1.78;">
+        <h2 id="why-personal-orchestration" style="color: #fbbf24; margin-top: 2.5rem;">Why Solo Practitioners Need Multi-Agent Orchestration</h2>
+        <p>
+          Most individual developers start using Claude through a single chat window. That works well for isolated questions, quick refactors, or drafting a single module. However, the moment you ask one monolithic conversation to research an API, design a database schema, write migration scripts, generate unit tests, and audit security boundaries, performance degrades rapidly. The context window fills with intermediate stack traces, abandoned hypotheses, and verbose tool outputs.
+        </p>
+        <p>
+          Multi-agent orchestration solves this by treating Claude not as a single generalist, but as a coordinated team of narrow specialists. A solo practitioner can run a planner agent using Claude Opus or Claude Sonnet to decompose a goal into a directed acyclic graph (DAG) of subtasks, dispatch parallel worker agents using Claude Haiku for fast file parsing and test generation, and route final verification through a dedicated reviewer agent. Instead of babying one fragile chat session, you operate a repeatable software pipeline.
+        </p>
+
+        <!-- Section 2 -->
+        <h2 id="hierarchical-topology" style="color: #fbbf24; margin-top: 2.5rem;">Hierarchical Swarm Topology and Role Specialization</h2>
+        <p>
+          In personal workflows, flat peer-to-peer agent swarms often waste tokens arguing or duplicating work. A strict hierarchical topology is far more reliable. At the top sits the <strong>Orchestrator</strong>, which never writes production code directly; its sole job is task decomposition, dependency tracking, and quality gating. Below it sit specialized <strong>Worker Agents</strong> (Researcher, Coder, Tester, Reviewer) that receive only the exact context slice required for their step.
+        </p>
+
+        <!-- SVG Diagram 1 -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="36" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Hierarchical Claude Agent Swarm Topology</text>
+            <!-- User -->
+            <rect x="380" y="58" width="200" height="48" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+            <text x="480" y="87" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="600" text-anchor="middle">Solo Practitioner Goal</text>
+            <line x1="480" y1="106" x2="480" y2="142" stroke="#38bdf8" stroke-width="2"/>
+            <!-- Orchestrator -->
+            <rect x="330" y="142" width="300" height="58" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+            <text x="480" y="168" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Orchestrator Agent (Claude Sonnet)</text>
+            <text x="480" y="188" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">DAG Planner | Budget Guard | State Router</text>
+            <!-- Lines to Workers -->
+            <line x1="480" y1="200" x2="150" y2="255" stroke="#34d399" stroke-width="2"/>
+            <line x1="480" y1="200" x2="370" y2="255" stroke="#34d399" stroke-width="2"/>
+            <line x1="480" y1="200" x2="590" y2="255" stroke="#34d399" stroke-width="2"/>
+            <line x1="480" y1="200" x2="810" y2="255" stroke="#e879f9" stroke-width="2"/>
+            <!-- Workers -->
+            <rect x="60" y="255" width="180" height="72" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="150" y="283" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Researcher</text>
+            <text x="150" y="305" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Docs &amp; Web Search</text>
+            <rect x="280" y="255" width="180" height="72" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="370" y="283" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Implementer</text>
+            <text x="370" y="305" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Scoped Code Edits</text>
+            <rect x="500" y="255" width="180" height="72" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="590" y="283" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Test Runner</text>
+            <text x="590" y="305" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Pytest &amp; Static Analysis</text>
+            <rect x="720" y="255" width="180" height="72" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+            <text x="810" y="283" fill="#e879f9" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Security Reviewer</text>
+            <text x="810" y="305" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Diff Audit &amp; Gate</text>
+            <text x="480" y="370" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Workers return structured JSON artifacts; Orchestrator merges verified outputs only.</text>
+          </svg>
+        </div>
+
+        <!-- Section 3 -->
+        <h2 id="context-partitioning" style="color: #fbbf24; margin-top: 2.5rem;">Context Partitioning and Scratchpad Isolation</h2>
+        <p>
+          Context rot occurs when irrelevant tokens accumulate in the model's attention window, causing instruction drift and hallucinated symbol names. The fix is strict <strong>context partitioning</strong>. Each worker agent starts with a clean message array containing only: (1) its role system prompt, (2) the specific task specification, and (3) the exact file slices or schema definitions it needs.
+        </p>
+        <p>
+          All intermediate reasoning, failed bash commands, and verbose logs stay inside the worker's ephemeral scratchpad. Only the final structured artifact - such as a unified diff, a JSON test report, or a concise summary - is returned to the Orchestrator. This keeps the Orchestrator's context window lean even across 50-step engineering workflows.
+        </p>
+
+        <!-- SVG Diagram 2 -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(52, 211, 153, 0.3); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="36" fill="#34d399" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Context Partitioning vs. Monolithic Context Rot</text>
+            <!-- Left: Bad -->
+            <rect x="50" y="65" width="390" height="295" rx="10" fill="#0c111d" stroke="#ef4444" stroke-width="1.5"/>
+            <text x="245" y="95" fill="#ef4444" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Monolithic Chat (Context Rot)</text>
+            <rect x="80" y="115" width="330" height="36" rx="6" fill="#1e293b"/>
+            <text x="245" y="138" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Initial Prompt + 12 Unrelated Files</text>
+            <rect x="80" y="165" width="330" height="36" rx="6" fill="#1e293b"/>
+            <text x="245" y="188" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Verbose Stack Traces + Failed Attempts</text>
+            <rect x="80" y="215" width="330" height="36" rx="6" fill="#1e293b"/>
+            <text x="245" y="238" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Drifted Instructions &amp; Hallucinated APIs</text>
+            <text x="245" y="315" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Result: High Cost, Low Accuracy</text>
+            <!-- Right: Good -->
+            <rect x="520" y="65" width="390" height="295" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="1.5"/>
+            <text x="715" y="95" fill="#34d399" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Partitioned Worker Scratchpads</text>
+            <rect x="550" y="115" width="330" height="45" rx="6" fill="#064e3b" stroke="#34d399" stroke-width="1"/>
+            <text x="715" y="142" fill="#ecfdf5" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Worker A: Schema Only -&gt; Returns SQL DDL</text>
+            <rect x="550" y="175" width="330" height="45" rx="6" fill="#064e3b" stroke="#34d399" stroke-width="1"/>
+            <text x="715" y="202" fill="#ecfdf5" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Worker B: Target File -&gt; Returns Git Diff</text>
+            <rect x="550" y="235" width="330" height="45" rx="6" fill="#064e3b" stroke="#34d399" stroke-width="1"/>
+            <text x="715" y="262" fill="#ecfdf5" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Worker C: Diff + Tests -&gt; Returns Pass/Fail</text>
+            <text x="715" y="315" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Result: Deterministic &amp; Cache-Friendly</text>
+          </svg>
+        </div>
+
+        <!-- Section 4 -->
+        <h2 id="mcp-tool-fabric" style="color: #fbbf24; margin-top: 2.5rem;">Model Context Protocol (MCP) Tool Fabric</h2>
+        <p>
+          Writing custom glue code for every API or local database quickly becomes unmaintainable for a solo practitioner. The <a class="gold-link" href="#references">Model Context Protocol specification</a> standardizes how Claude discovers and invokes external tools. By running lightweight local MCP servers, your agent swarm gains typed, permission-scoped access to your filesystem, Git repository, SQLite or PostgreSQL databases, and browser automation.
+        </p>
+        <p>
+          Crucially, MCP lets you enforce least-privilege boundaries per agent role. Your Researcher agent can be bound exclusively to read-only documentation and web-search MCP servers, while your Implementer agent receives write access only to a designated feature branch directory.
+        </p>
+
+        <!-- SVG Diagram 3 -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="36" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">MCP Tool Fabric &amp; Least-Privilege Routing</text>
+            <rect x="80" y="90" width="220" height="230" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+            <text x="190" y="125" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Claude Agent Runtime</text>
+            <text x="190" y="165" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Tool Discovery</text>
+            <text x="190" y="195" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">JSON-RPC Client</text>
+            <text x="190" y="225" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Schema Validation</text>
+            <text x="190" y="255" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Timeout Enforcement</text>
+            <!-- Bridge -->
+            <line x1="300" y1="150" x2="420" y2="150" stroke="#fbbf24" stroke-width="2.5"/>
+            <line x1="300" y1="205" x2="420" y2="205" stroke="#fbbf24" stroke-width="2.5"/>
+            <line x1="300" y1="260" x2="420" y2="260" stroke="#fbbf24" stroke-width="2.5"/>
+            <rect x="420" y="90" width="160" height="230" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+            <text x="500" y="195" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">MCP</text>
+            <text x="500" y="218" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Policy Gateway</text>
+            <!-- Servers -->
+            <line x1="580" y1="130" x2="680" y2="115" stroke="#34d399" stroke-width="2"/>
+            <line x1="580" y1="205" x2="680" y2="205" stroke="#34d399" stroke-width="2"/>
+            <line x1="580" y1="280" x2="680" y2="295" stroke="#e879f9" stroke-width="2"/>
+            <rect x="680" y="80" width="210" height="65" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="785" y="110" fill="#34d399" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Filesystem MCP</text>
+            <text x="785" y="130" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Scoped Repo Read/Write</text>
+            <rect x="680" y="172" width="210" height="65" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="785" y="202" fill="#34d399" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">SQLite / Postgres MCP</text>
+            <text x="785" y="222" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Read-Only Query Execution</text>
+            <rect x="680" y="264" width="210" height="65" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+            <text x="785" y="294" fill="#e879f9" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">GitHub / Git MCP</text>
+            <text x="785" y="314" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Branch &amp; PR Automation</text>
+          </svg>
+        </div>
+
+        <!-- Section 5 -->
+        <h2 id="prompt-caching-economics" style="color: #fbbf24; margin-top: 2.5rem;">Prompt Caching and Tiered Model Economics</h2>
+        <p>
+          Running multi-agent loops without cost controls can burn through an API budget in minutes. Two techniques keep personal swarms affordable: <strong>Anthropic prompt caching</strong> and <strong>tiered model routing</strong>. By placing a <code>cache_control</code> breakpoint at the end of your shared system prompt, repository map, and tool definitions, subsequent worker calls read that prefix at a fraction of the base input token rate.
+        </p>
+        <p>
+          Second, reserve Claude Sonnet or Claude Opus strictly for planning, architectural decisions, and final code review. Route high-volume, narrow tasks - such as summarizing log files, formatting JSON, or generating boilerplate unit tests - to Claude Haiku. Combined, these patterns routinely cut personal orchestration bills by 70% to 80%.
+        </p>
+
+        <!-- Section 6 -->
+        <h2 id="stateful-recovery" style="color: #fbbf24; margin-top: 2.5rem;">Deterministic State Machines and Human-in-the-Loop Gates</h2>
+        <p>
+          Autonomous loops should never run unbounded. Wrap your orchestrator in a finite state machine (FSM) persisted to local SQLite. Every state transition (<code>PLANNING -&gt; IMPLEMENTING -&gt; TESTING -&gt; REVIEWING -&gt; COMPLETE</code>) writes a checkpoint. If a rate limit hits or your laptop sleeps, the swarm resumes from the exact node where it paused. Before any destructive action - such as pushing to main, running a database migration, or sending an external email - the FSM pauses at a <strong>Human-in-the-Loop (HITL)</strong> gate awaiting your explicit approval.
+        </p>
+
+        <!-- SVG Diagram 4 -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(232, 121, 249, 0.3); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="36" fill="#e879f9" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Stateful Recovery &amp; Human-in-the-Loop Gate</text>
+            <rect x="60" y="150" width="140" height="60" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+            <text x="130" y="185" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">PLAN</text>
+            <line x1="200" y1="180" x2="245" y2="180" stroke="#94a3b8" stroke-width="2"/>
+            <rect x="245" y="150" width="140" height="60" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="315" y="185" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">EXECUTE</text>
+            <line x1="385" y1="180" x2="430" y2="180" stroke="#94a3b8" stroke-width="2"/>
+            <rect x="430" y="150" width="140" height="60" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="500" y="185" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">VERIFY</text>
+            <line x1="570" y1="180" x2="615" y2="180" stroke="#fbbf24" stroke-width="2"/>
+            <rect x="615" y="150" width="150" height="60" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+            <text x="690" y="185" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">HITL GATE</text>
+            <line x1="765" y1="180" x2="810" y2="180" stroke="#e879f9" stroke-width="2"/>
+            <rect x="810" y="150" width="110" height="60" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+            <text x="865" y="185" fill="#e879f9" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">COMMIT</text>
+            <!-- Retry loop -->
+            <path d="M 500 210 L 500 275 L 315 275 L 315 210" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="6,4"/>
+            <text x="407" y="295" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Test Failure -&gt; Bounded Retry (Max 3)</text>
+            <text x="480" y="355" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Every transition is checkpointed to local SQLite for instant crash recovery.</text>
+          </svg>
+        </div>
+
+        <!-- Section 7: Privacy, Credential Isolation, and Local Security Hygiene -->
+        <h2 id="privacy-security-hygiene" style="color: #fbbf24; margin-top: 2.5rem;">Privacy, Credential Isolation, and Local Security Hygiene</h2>
+        <p>
+          When a personal agent swarm operates on your workstation, it sits dangerously close to your SSH keys, cloud credentials, browser cookies, and private repositories. Treating a multi-agent orchestrator like a harmless chat widget is an operational vulnerability. Every worker process must be governed by strict least-privilege boundaries, ensuring that a prompt injection hidden inside a scraped web page or a third-party dependency cannot exfiltrate sensitive local files.
+        </p>
+        <p>
+          The foundational rule is <strong>process-level credential isolation</strong>. Never pass your shell environment wholesale into an <a class="gold-link" href="#references">MCP server subprocess</a>. Instead, construct an explicit allowlist of environment variables per worker role. A Research Worker needs read-only access to public documentation or a local vector index, and zero access to <code>AWS_SECRET_ACCESS_KEY</code>, <code>GITHUB_TOKEN</code>, or <code>~/.ssh/</code>. Similarly, filesystem MCP servers must be rooted to a dedicated working directory (such as <code>~/workspaces/sandbox-repo</code>) with symlink traversal disabled so a worker cannot escape into <code>/etc/</code> or your home directory.
+        </p>
+        <p>
+          For sensitive personal workflows - such as triaging private financial spreadsheets, medical records, or legal contracts - combine <a class="gold-link" href="#references">OWASP LLM Top 10</a> input sanitization with PII redaction before any payload leaves your machine. A lightweight local regex and NER scrubber running in Python can replace account numbers, SSNs, and API keys with deterministic tokens (<code>[REDACTED_KEY_01]</code>) prior to calling the Anthropic API, and re-hydrate them locally only after the final artifact passes verification.
+        </p>
+
+        <!-- SVG Diagram 5: Zero-Trust Credential & Filesystem Isolation -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="34" fill="#fbbf24" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Zero-Trust Credential &amp; Filesystem Isolation Boundary</text>
+
+            <rect x="40" y="70" width="220" height="280" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+            <text x="150" y="100" fill="#e879f9" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Host Vault (Blocked)</text>
+            <rect x="60" y="120" width="180" height="42" rx="6" fill="#131c31" stroke="#e879f9" stroke-opacity="0.5"/>
+            <text x="150" y="146" fill="#e2e8f0" font-family="monospace" font-size="12" text-anchor="middle">~/.ssh/id_ed25519</text>
+            <rect x="60" y="176" width="180" height="42" rx="6" fill="#131c31" stroke="#e879f9" stroke-opacity="0.5"/>
+            <text x="150" y="202" fill="#e2e8f0" font-family="monospace" font-size="12" text-anchor="middle">~/.aws/credentials</text>
+            <rect x="60" y="232" width="180" height="42" rx="6" fill="#131c31" stroke="#e879f9" stroke-opacity="0.5"/>
+            <text x="150" y="258" fill="#e2e8f0" font-family="monospace" font-size="12" text-anchor="middle">.env (Master Keys)</text>
+            <text x="150" y="325" fill="#f43f5e" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">DENIED TO ALL WORKERS</text>
+
+            <rect x="330" y="95" width="250" height="230" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+            <text x="455" y="125" fill="#fbbf24" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Scrubber &amp; Env Proxy</text>
+            <text x="455" y="158" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">1. Strip Parent Shell Env</text>
+            <text x="455" y="186" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">2. Redact PII &amp; Secrets</text>
+            <text x="455" y="214" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">3. Chroot to /sandbox-repo</text>
+            <text x="455" y="242" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">4. Enforce Read-Only Flags</text>
+            <rect x="360" y="266" width="190" height="36" rx="6" fill="#131c31" stroke="#34d399"/>
+            <text x="455" y="289" fill="#34d399" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Audit Log -&gt; SQLite</text>
+
+            <rect x="650" y="70" width="270" height="80" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+            <text x="785" y="102" fill="#38bdf8" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Research Worker</text>
+            <text x="785" y="128" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Read-Only Docs + Web Fetch</text>
+
+            <rect x="650" y="170" width="270" height="80" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="785" y="202" fill="#34d399" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Code Worker</text>
+            <text x="785" y="228" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Branch-Scoped Git Write Only</text>
+
+            <rect x="650" y="270" width="270" height="80" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+            <text x="785" y="302" fill="#fbbf24" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Critic Worker</text>
+            <text x="785" y="328" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Diff Inspection + Test Runner</text>
+
+            <line x1="260" y1="210" x2="322" y2="210" stroke="#f43f5e" stroke-width="2" stroke-dasharray="5,5"/>
+            <text x="291" y="198" fill="#f43f5e" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">BLOCK</text>
+            <line x1="580" y1="150" x2="642" y2="110" stroke="#38bdf8" stroke-width="2"/>
+            <line x1="580" y1="210" x2="642" y2="210" stroke="#34d399" stroke-width="2"/>
+            <line x1="580" y1="270" x2="642" y2="310" stroke="#fbbf24" stroke-width="2"/>
+          </svg>
+        </div>
+
+        <!-- Section 8: Failure-Mode Recovery, Deadlocks, and Runaway Loop Prevention -->
+        <h2 id="failure-mode-recovery" style="color: #fbbf24; margin-top: 2.5rem;">Failure-Mode Recovery, Deadlocks, and Runaway Loop Prevention</h2>
+        <p>
+          Autonomous swarms fail in predictable ways: a worker enters a retry loop against a flaky external API, two workers produce conflicting edits to the same file, or a critic rejects a patch indefinitely without converging. Without deterministic circuit breakers, a personal orchestrator can burn through your monthly API budget in minutes while leaving your working tree in a corrupted state.
+        </p>
+        <p>
+          To prevent runaway loops, enforce three hard invariants at the orchestrator layer. First, assign every task node a strict <strong>maximum retry budget</strong> (typically 2 retries) and a <strong>wall-clock timeout</strong> via <code>asyncio.wait_for</code>. Second, track cumulative token spend per DAG execution; if spend crosses a pre-configured threshold (for example, $2.00 for a routine feature), halt dispatch and escalate to the human operator. Third, implement <strong>dead-letter checkpointing</strong> in SQLite: when a worker fails after exhausting retries, serialize its exact prompt, partial output, and stack trace to a <code>dead_letters</code> table rather than crashing the entire pipeline.
+        </p>
+        <p>
+          Handling concurrent file edits requires explicit lock ownership. Never allow two parallel Code Workers to write to the same module. The Orchestrator's planning DAG must partition write-targets by file path, or serialize dependent edits behind a barrier node. When a merge conflict or test regression occurs, the <a class="gold-link" href="#references">exponential backoff and circuit-breaker pattern</a> ensures the system fails closed, preserves the last known-good Git commit, and surfaces a clean diagnostic summary for manual resolution.
+        </p>
+
+        <!-- SVG Diagram 6: Failure-Mode Recovery & Circuit Breaker -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="34" fill="#fbbf24" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Circuit Breaker &amp; Dead-Letter Recovery Pipeline</text>
+
+            <rect x="40" y="150" width="170" height="90" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+            <text x="125" y="188" fill="#38bdf8" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Worker Dispatch</text>
+            <text x="125" y="212" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Timeout: 45s | Cap: $2</text>
+
+            <rect x="270" y="150" width="180" height="90" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+            <text x="360" y="188" fill="#fbbf24" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Retry &amp; Backoff</text>
+            <text x="360" y="212" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Max 2 Retries + Jitter</text>
+
+            <rect x="520" y="70" width="190" height="80" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="615" y="105" fill="#34d399" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Checkpoint Commit</text>
+            <text x="615" y="128" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Save Artifact to SQLite</text>
+
+            <rect x="520" y="240" width="190" height="90" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+            <text x="615" y="275" fill="#e879f9" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Dead-Letter Queue</text>
+            <text x="615" y="300" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Store Prompt + Error</text>
+
+            <rect x="760" y="240" width="160" height="90" rx="8" fill="#0c111d" stroke="#f43f5e" stroke-width="2"/>
+            <text x="840" y="275" fill="#f43f5e" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">HITL Escalation</text>
+            <text x="840" y="300" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Git Reset + Alert</text>
+
+            <line x1="210" y1="195" x2="262" y2="195" stroke="#38bdf8" stroke-width="2"/>
+            <line x1="450" y1="175" x2="512" y2="115" stroke="#34d399" stroke-width="2"/>
+            <text x="470" y="132" fill="#34d399" font-family="sans-serif" font-size="11" font-weight="bold">PASS</text>
+            <line x1="450" y1="215" x2="512" y2="280" stroke="#e879f9" stroke-width="2"/>
+            <text x="470" y="265" fill="#e879f9" font-family="sans-serif" font-size="11" font-weight="bold">FAIL</text>
+            <line x1="710" y1="285" x2="752" y2="285" stroke="#f43f5e" stroke-width="2"/>
+          </svg>
+        </div>
+
+        <!-- Tutorial 1: Python -->
+        <h2 id="tutorial-python" style="color: #fbbf24; margin-top: 2.5rem;">Tutorial 1: Production Python Orchestrator with Async Workers</h2>
+        <p>
+          Below is a production-ready Python orchestrator using the <a class="gold-link" href="#references">Anthropic Python SDK</a>. It demonstrates prompt caching on the shared repository context, parallel async worker execution with Claude Haiku, and a Sonnet-based reviewer gate.
+        </p>
+
+        <div class="code-window" style="background: #040711; border: 1px solid rgba(56, 189, 248, 0.32); border-left: 3px solid #38bdf8; border-radius: 8px; margin: 1.5rem 0; overflow: hidden;">
+          <div class="code-bar" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; background: #0c111d; border-bottom: 1px solid rgba(56, 189, 248, 0.2);">
+            <span style="font-family: monospace; font-size: 0.85rem; color: #38bdf8;">orchestrator.py (Python 3.11+)</span>
+            <button class="copy-btn" type="button" onclick="copyCode(this)" style="background: #1e293b; color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4); border-radius: 5px; padding: 0.25rem 0.75rem; font-size: 0.8rem; cursor: pointer; text-decoration: none !important;">Copy</button>
+          </div>
+          <pre style="margin: 0; padding: 1.15rem; white-space: pre-wrap; word-break: break-word; overflow-x: hidden; color: #e2e8f0; font-size: 0.88rem; line-height: 1.55;"><code>import asyncio
+import json
+import os
+from anthropic import AsyncAnthropic
+
+client = AsyncAnthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+
+PLANNER_MODEL = "claude-3-5-sonnet-20241022"
+WORKER_MODEL = "claude-3-5-haiku-20241022"
+
+async def run_worker(task: dict, repo_context: str) -&gt; dict:
+    """Execute an isolated worker with prompt caching on repo_context."""
+    response = await client.messages.create(
+        model=WORKER_MODEL,
+        max_tokens=1500,
+        system=[
+            {
+                "type": "text",
+                "text": "You are a narrow engineering worker. Return valid JSON only.",
+            },
+            {
+                "type": "text",
+                "text": f"Repository Context:\n{repo_context}",
+                "cache_control": {"type": "ephemeral"},
+            },
+        ],
+        messages=[
+            {
+                "role": "user",
+                "content": f"Execute subtask {task['id']}: {task['instruction']}",
+            }
+        ],
+    )
+    return {"id": task["id"], "output": response.content[0].text}
+
+async def orchestrate(goal: str, repo_context: str) -&gt; str:
+    # Step 1: Plan DAG
+    plan_resp = await client.messages.create(
+        model=PLANNER_MODEL,
+        max_tokens=1200,
+        system="Decompose the goal into 3 independent JSON subtasks: [{\"id\": 1, \"instruction\": \"...\"}].",
+        messages=[{"role": "user", "content": goal}],
+    )
+    subtasks = json.loads(plan_resp.content[0].text)
+
+    # Step 2: Parallel Worker Dispatch
+    results = await asyncio.gather(
+        *(run_worker(task, repo_context) for task in subtasks)
+    )
+
+    # Step 3: Reviewer Gate
+    review_resp = await client.messages.create(
+        model=PLANNER_MODEL,
+        max_tokens=1500,
+        system="Synthesize worker outputs, flag any conflicts, and produce the final verified plan.",
+        messages=[{"role": "user", "content": json.dumps(results, indent=2)}],
+    )
+    return review_resp.content[0].text
+
+if __name__ == "__main__":
+    sample_context = "Service: FastAPI + SQLite personal automation runner."
+    output = asyncio.run(orchestrate("Add rate-limiting middleware and unit tests", sample_context))
+    print(output)</code></pre>
+        </div>
+
+        <!-- Tutorial 2: Prompt Template -->
+        <h2 id="tutorial-prompt" style="color: #fbbf24; margin-top: 2.5rem;">Tutorial 2: Production Orchestrator System Prompt Template</h2>
+        <p>
+          Use this structured system prompt for your top-level Orchestrator agent. It enforces strict JSON handoffs, prohibits direct code generation by the planner, and requires explicit verification criteria for every subtask.
+        </p>
+
+        <div class="code-window" style="background: #040711; border: 1px solid rgba(251, 191, 36, 0.32); border-left: 3px solid #fbbf24; border-radius: 8px; margin: 1.5rem 0; overflow: hidden;">
+          <div class="code-bar" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; background: #0c111d; border-bottom: 1px solid rgba(251, 191, 36, 0.2);">
+            <span style="font-family: monospace; font-size: 0.85rem; color: #fbbf24;">orchestrator_system_prompt.txt</span>
+            <button class="copy-btn" type="button" onclick="copyCode(this)" style="background: #1e293b; color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4); border-radius: 5px; padding: 0.25rem 0.75rem; font-size: 0.8rem; cursor: pointer; text-decoration: none !important;">Copy</button>
+          </div>
+          <pre style="margin: 0; padding: 1.15rem; white-space: pre-wrap; word-break: break-word; overflow-x: hidden; color: #e2e8f0; font-size: 0.88rem; line-height: 1.55;"><code>ROLE:
+You are the Principal Orchestrator for a solo practitioner's multi-agent engineering swarm.
+You NEVER write production code or run shell commands directly.
+
+OBJECTIVE:
+Decompose the user's goal into a minimal Directed Acyclic Graph (DAG) of atomic subtasks.
+Assign each subtask to exactly one worker role: [RESEARCHER, IMPLEMENTER, TESTER, REVIEWER].
+
+CONSTRAINTS:
+1. Context Isolation: Specify the exact file paths each worker may read. Do not pass full repo dumps.
+2. Budget Guard: Cap retries at 3 per subtask. Escalate to HUMAN_GATE if a test fails 3 times.
+3. Output Format: Emit valid JSON matching:
+{
+  "goal_summary": "string",
+  "subtasks": [
+    {
+      "id": "T1",
+      "role": "RESEARCHER | IMPLEMENTER | TESTER | REVIEWER",
+      "depends_on": [],
+      "allowed_files": ["path/to/file.py"],
+      "instruction": "Exact atomic instruction",
+      "acceptance_criteria": "Deterministic pass/fail check"
+    }
+  ]
+}</code></pre>
+        </div>
+
+        <!-- Tutorial 3: Step-by-Step Operational Instructions -->
+        <h2 id="tutorial-operations" style="color: #fbbf24; margin-top: 2.5rem;">Tutorial 3: Step-by-Step Operational Deployment Guide</h2>
+        <p>Follow these operational steps to stand up your personal Claude agent orchestrator safely on your local workstation:</p>
+        <ol style="color: #cbd5e1; line-height: 1.85; padding-left: 1.5rem;">
+          <li><strong>Isolate the Workspace:</strong> Create a dedicated Git branch (<code>git checkout -b agent/feature-name</code>) so all worker edits remain reversible.</li>
+          <li><strong>Configure Environment &amp; Spend Caps:</strong> Export <code>ANTHROPIC_API_KEY</code> in a local <code>.env</code> file and set a hard monthly spend limit in the Anthropic Console.</li>
+          <li><strong>Start Scoped MCP Servers:</strong> Launch your filesystem and SQLite MCP servers with read-only flags for research workers and branch-scoped write flags for implementers.</li>
+          <li><strong>Run Dry-Run Planning:</strong> Execute the Orchestrator's planning step first and inspect the generated JSON DAG before dispatching paid worker calls.</li>
+          <li><strong>Enable SQLite Checkpointing:</strong> Log every worker input, output, and token count to a local <code>swarm_state.db</code> file for auditability and crash recovery.</li>
+          <li><strong>Review at the HITL Gate:</strong> Inspect the unified <code>git diff</code> produced by the swarm, run your local test suite, and merge only after manual verification.</li>
+        </ol>
+
+        <!-- Tutorial 4: Python Checkpoint & Dead-Letter Worker -->
+        <h2 id="tutorial-python-checkpoint" style="color: #fbbf24; margin-top: 2.5rem;">Tutorial 4: SQLite Checkpoint &amp; Dead-Letter Recovery Worker (Python)</h2>
+        <p>
+          This production Python module wraps worker execution in a deterministic SQLite checkpointing layer with wall-clock timeouts, exponential backoff, and dead-letter persistence so failed tasks never corrupt your pipeline.
+        </p>
+
+        <div class="code-window" style="background: #040711; border: 1px solid rgba(56, 189, 248, 0.35); border-left: 3px solid var(--cyan); border-radius: 8px; margin: 1.75rem 0; overflow: hidden;">
+          <div class="code-bar" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; background: #0c111d; border-bottom: 1px solid rgba(56, 189, 248, 0.2);">
+            <span style="font-family: monospace; font-size: 0.85rem; color: #38bdf8;">checkpoint_recovery.py (Python 3.11+)</span>
+            <button type="button" class="copy-btn" onclick="copyCode(this)" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 4px; padding: 0.25rem 0.65rem; font-size: 0.78rem; cursor: pointer; text-decoration: none !important;">Copy</button>
+          </div>
+          <pre style="margin: 0; padding: 1.15rem; white-space: pre-wrap; word-break: break-word; overflow-x: hidden; color: #e2e8f0; font-size: 0.88rem; line-height: 1.55;"><code>import asyncio
+import json
+import sqlite3
+from datetime import datetime, timezone
+
+def init_db(db_path: str = "swarm_state.db") -&gt; sqlite3.Connection:
+    conn = sqlite3.connect(db_path)
+    conn.execute(
+        """CREATE TABLE IF NOT EXISTS checkpoints (
+            task_id TEXT PRIMARY KEY,
+            status TEXT NOT NULL,
+            output_json TEXT,
+            updated_at TEXT NOT NULL
+        )"""
+    )
+    conn.execute(
+        """CREATE TABLE IF NOT EXISTS dead_letters (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            task_id TEXT NOT NULL,
+            payload TEXT NOT NULL,
+            error_msg TEXT NOT NULL,
+            created_at TEXT NOT NULL
+        )"""
+    )
+    conn.commit()
+    return conn
+
+async def run_with_circuit_breaker(
+    conn: sqlite3.Connection,
+    task_id: str,
+    coro_fn,
+    payload: dict,
+    max_retries: int = 2,
+    timeout_sec: float = 45.0,
+) -&gt; dict | None:
+    for attempt in range(max_retries + 1):
+        try:
+            result = await asyncio.wait_for(coro_fn(payload), timeout=timeout_sec)
+            now = datetime.now(timezone.utc).isoformat()
+            conn.execute(
+                "INSERT OR REPLACE INTO checkpoints VALUES (?, ?, ?, ?)",
+                (task_id, "COMPLETED", json.dumps(result), now),
+            )
+            conn.commit()
+            return result
+        except Exception as exc:
+            if attempt &lt; max_retries:
+                await asyncio.sleep(2 ** attempt)
+            else:
+                now = datetime.now(timezone.utc).isoformat()
+                conn.execute(
+                    "INSERT INTO dead_letters (task_id, payload, error_msg, created_at) VALUES (?, ?, ?, ?)",
+                    (task_id, json.dumps(payload), str(exc), now),
+                )
+                conn.commit()
+                return None</code></pre>
+        </div>
+
+        <!-- Tutorial 5: Adversarial Security & Diff Critic Prompt -->
+        <h2 id="tutorial-prompt-critic" style="color: #fbbf24; margin-top: 2.5rem;">Tutorial 5: Adversarial Security &amp; Diff Critic Prompt Template</h2>
+        <p>
+          Before any worker-generated code reaches your main branch, pass the unified <code>git diff</code> through a dedicated Critic Worker using this adversarial review prompt.
+        </p>
+
+        <div class="code-window" style="background: #040711; border: 1px solid rgba(251, 191, 36, 0.35); border-left: 3px solid var(--gold); border-radius: 8px; margin: 1.75rem 0; overflow: hidden;">
+          <div class="code-bar" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; background: #0c111d; border-bottom: 1px solid rgba(251, 191, 36, 0.2);">
+            <span style="font-family: monospace; font-size: 0.85rem; color: #fbbf24;">critic_security_prompt.txt</span>
+            <button type="button" class="copy-btn" onclick="copyCode(this)" style="background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4); border-radius: 4px; padding: 0.25rem 0.65rem; font-size: 0.78rem; cursor: pointer; text-decoration: none !important;">Copy</button>
+          </div>
+          <pre style="margin: 0; padding: 1.15rem; white-space: pre-wrap; word-break: break-word; overflow-x: hidden; color: #e2e8f0; font-size: 0.88rem; line-height: 1.55;"><code>ROLE:
+You are an adversarial Security &amp; Reliability Critic reviewing a unified git diff produced by an autonomous Code Worker.
+
+AUDIT CHECKLIST:
+1. Credential Leakage: Flag any hardcoded API keys, tokens, or unredacted PII.
+2. Path Traversal &amp; Injection: Flag unsanitized shell calls, SQL string interpolation, or file writes outside the target workspace.
+3. Unbounded Loops: Flag missing timeouts, missing retry caps, or recursive agent calls without termination conditions.
+4. Regression Risk: Identify deleted tests, weakened assertions, or unhandled exceptions.
+
+OUTPUT FORMAT (STRICT JSON):
+{
+  "verdict": "APPROVE" | "REJECT",
+  "blocking_issues": [
+    {"file": "path/to/file.py", "line": 42, "severity": "HIGH", "reason": "..."}
+  ],
+  "non_blocking_notes": ["..."]
+}</code></pre>
+        </div>
+
+        <!-- Tutorial 6: Incident Recovery & Rollback Runbook -->
+        <h2 id="tutorial-operations-incident" style="color: #fbbf24; margin-top: 2.5rem;">Tutorial 6: Step-by-Step Incident Recovery &amp; Rollback Runbook</h2>
+        <p>When a worker enters a dead-letter state or produces an unexpected side effect, execute this 5-step recovery runbook:</p>
+        <ol style="color: #cbd5e1; line-height: 1.85; padding-left: 1.5rem;">
+          <li><strong>Halt Active Dispatch:</strong> Terminate the orchestrator process (<code>Ctrl+C</code> or <code>kill -TERM</code>) so no further worker API calls are queued.</li>
+          <li><strong>Inspect Dead-Letter Queue:</strong> Query <code>sqlite3 swarm_state.db "SELECT task_id, error_msg FROM dead_letters ORDER BY id DESC LIMIT 5;"</code> to identify the exact failing node.</li>
+          <li><strong>Restore Clean Git State:</strong> Run <code>git status</code> and <code>git checkout -- .</code> on the isolated agent branch to discard partial, unverified file edits.</li>
+          <li><strong>Tighten Scope or Budget:</strong> Reduce the failing node's context payload, split it into two smaller subtasks, or increase its timeout in the DAG configuration.</li>
+          <li><strong>Resume from Checkpoint:</strong> Re-run the orchestrator; completed nodes load instantaneously from SQLite without re-incurring API costs.</li>
+        </ol>
+
+        <!-- Live References -->
+        <h2 id="references" style="color: #fbbf24; margin-top: 2.5rem;">Live Technical References</h2>
+        <ul style="color: #cbd5e1; line-height: 1.9; padding-left: 1.5rem;">
+          <li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching" rel="noopener" target="_blank">Anthropic Prompt Caching Documentation</a> - Official guide to ephemeral cache breakpoints and token savings.</li>
+          <li><a class="gold-link" href="https://modelcontextprotocol.io/introduction" rel="noopener" target="_blank">Model Context Protocol (MCP) Specification</a> - Open standard for connecting Claude agents to local tools and data sources.</li>
+          <li><a class="gold-link" href="https://github.com/anthropics/anthropic-sdk-python" rel="noopener" target="_blank">Anthropic Python SDK</a> - Official async Python client used in Tutorial 1.</li>
+          <li><a class="gold-link" href="https://www.anthropic.com/engineering/building-effective-agents" rel="noopener" target="_blank">Anthropic Engineering: Building Effective Agents</a> - Architectural patterns for orchestrator-worker workflows.</li>
+          <li><a class="gold-link" href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" rel="noopener" target="_blank">OWASP Top 10 for Large Language Model Applications</a> - Security standards for prompt injection and excessive agency mitigation.</li>
+          <li><a class="gold-link" href="https://docs.python.org/3/library/asyncio-task.html#timeouts" rel="noopener" target="_blank">Python asyncio Timeouts &amp; Task Cancellation</a> - Official documentation for deterministic worker wall-clock limits.</li>
+          <li><a class="gold-link" href="https://www.sqlite.org/wal.html" rel="noopener" target="_blank">SQLite Write-Ahead Logging (WAL)</a> - Concurrency and crash-recovery guarantees for local agent state stores.</li>
+          <li><a class="gold-link" href="https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/" rel="noopener" target="_blank">AWS Builders' Library: Timeouts, Retries, and Backoff with Jitter</a> - Foundational distributed systems resilience patterns.</li>
+          <li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/tool-use" rel="noopener" target="_blank">Anthropic Tool Use &amp; Structured Outputs</a> - Deterministic JSON schema enforcement for agent handoffs.</li>
+          <li><a class="gold-link" href="https://git-scm.com/docs/git-worktree" rel="noopener" target="_blank">Git Worktree Documentation</a> - Isolating parallel agent branches without duplicating repositories.</li>
+        </ul>
+
+      </article>
+    </div>
+  </section>
+
+  <!-- Preserved CTA Block -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="service-cta-buttons">
+          <a class="btn btn-commission btn-lg" href="../contact.html">
             Commission Claude Agent Orchestration →
           </a>
-<a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">
+          <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">
             Free LinkedIn Consultation ↗
           </a>
-</div>
-</div>
-</section>
-<div class="divider" style="margin-top:3rem;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="divider" style="margin-top:3rem;"></div>
+
+  <script>
+  function copyCode(btn) {
+    var pre = btn.closest('.code-window').querySelector('pre');
+    navigator.clipboard.writeText(pre.innerText).then(function() {
+      var orig = btn.innerText;
+      btn.innerText = 'Copied!';
+      setTimeout(function() { btn.innerText = orig; }, 1800);
+    });
+  }
+  </script>
 </main>
     <!-- START:FOOTER -->
     <footer id="links">

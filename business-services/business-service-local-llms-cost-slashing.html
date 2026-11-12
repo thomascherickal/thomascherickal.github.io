@@ -104,6 +104,7 @@
 <link href="../css/article.css" rel="stylesheet"/>
 <link href="../css/service.css" rel="stylesheet"/>
 <link href="../css/business-services.css" rel="stylesheet"/>
+<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -254,78 +255,349 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-<a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
-<main id="main">
-<!-- PAGE HERO HEADER -->
-<section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
-<p class="section-label">// SERVICE SPECIFICATION 02</p>
-<h1>Local LLMs & Cost Slashing</h1>
-<p class="section-sub" style="max-width:760px;margin:0.75rem auto 0;line-height:1.8;">
-        Cutting recurring cloud API bills by 60-90% by running open-weight models privately with Ollama, vLLM, llama.cpp
-        and LM Studio on hardware you own.
-      </p>
-<div style="margin-top:1.5rem;">
-<a class="btn btn-commission" href="../contact.html" >
-          Slash Inference Costs with Local LLMs →
-        </a>
+<main id="main" class="container" style="max-width:1040px;margin:0 auto;padding:2.5rem 1.25rem 4rem;">
+
+<div class="hero" style="background:#0c111d;border:1px solid rgba(56,189,248,0.22);border-radius:16px;padding:2.5rem;margin-bottom:2rem;">
+  <div style="color:#fbbf24;font-size:0.85rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;">Sovereign Inference Engineering</div>
+  <h1>Local LLMs & Cost Slashing</h1>
+  <p style="font-size:1.12rem;line-height:1.7;color:#cbd5e1;margin-bottom:2rem;">Eliminate unpredictable per-token cloud API bills and keep sensitive intellectual property inside your own VPC or on-premise hardware. We deploy high-throughput quantized open-weights models using vLLM, Ollama, and hybrid semantic routing.</p>
+  <div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+    <div class="stat-card" style="background:#040711;border:1px solid rgba(251,191,36,0.3);border-radius:10px;padding:1.25rem;">
+      <div style="color:#fbbf24;font-size:1.75rem;font-weight:800;">70 - 95%</div>
+      <div style="color:#94a3b8;font-size:0.9rem;margin-top:0.25rem;">Reduction in monthly inference spend</div>
+    </div>
+    <div class="stat-card" style="background:#040711;border:1px solid rgba(56,189,248,0.3);border-radius:10px;padding:1.25rem;">
+      <div style="color:#38bdf8;font-size:1.75rem;font-weight:800;">Zero</div>
+      <div style="color:#94a3b8;font-size:0.9rem;margin-top:0.25rem;">External data egress for air-gapped workloads</div>
+    </div>
+    <div class="stat-card" style="background:#040711;border:1px solid rgba(52,211,153,0.3);border-radius:10px;padding:1.25rem;">
+      <div style="color:#34d399;font-size:1.75rem;font-weight:800;">AWQ / GGUF</div>
+      <div style="color:#94a3b8;font-size:0.9rem;margin-top:0.25rem;">4-bit quantization with minimal perplexity loss</div>
+    </div>
+    <div class="stat-card" style="background:#040711;border:1px solid rgba(232,121,249,0.3);border-radius:10px;padding:1.25rem;">
+      <div style="color:#e879f9;font-size:1.75rem;font-weight:800;">OpenAI-Compat</div>
+      <div style="color:#94a3b8;font-size:0.9rem;margin-top:0.25rem;">Drop-in local endpoints for existing apps</div>
+    </div>
+  </div>
 </div>
+
+<section id="table-of-contents" class="toc" style="background:#0c111d;border:1px solid rgba(251,191,36,0.25);border-radius:12px;padding:1.75rem;margin-bottom:2.5rem;">
+  <h2 style="margin-top:0;color:#fbbf24;font-size:1.25rem;">Table of Contents</h2>
+  <ol style="display:flex;flex-direction:column;gap:0.6rem;margin:0.75rem 0 0;padding-left:1.5rem;line-height:1.7;color:#cbd5e1;">
+    <li><a class="gold-link" href="#token-economics">The Economics of Cloud APIs vs. Owned Inference</a></li>
+    <li><a class="gold-link" href="#quantization">Quantization &amp; VRAM Sizing Mathematics</a></li>
+    <li><a class="gold-link" href="#serving-engines">Production Serving Engines: vLLM &amp; Ollama</a></li>
+    <li><a class="gold-link" href="#hybrid-routing">Hybrid Semantic Routing: Local First, Cloud Escalation</a></li>
+    <li><a class="gold-link" href="#airgapped-governance">Air-Gapped Governance &amp; Model Provenance</a></li>
+    <li><a class="gold-link" href="#gpu-recovery">GPU Failure-Mode Recovery &amp; KV-Cache Autoscaling</a></li>
+    <li><a class="gold-link" href="#tutorial-python">Tutorial 1: Local OpenAI-Compatible Python Client</a></li>
+    <li><a class="gold-link" href="#tutorial-prompt">Tutorial 2: Compact Local-Model Extraction Prompt</a></li>
+    <li><a class="gold-link" href="#tutorial-steps">Tutorial 3: Step-by-Step Local Cluster Deployment</a></li>
+    <li><a class="gold-link" href="#tutorial-python-2">Tutorial 4: Production Python Hybrid Semantic Router</a></li>
+    <li><a class="gold-link" href="#tutorial-prompt-2">Tutorial 5: Confidence-Gated Escalation System Prompt</a></li>
+    <li><a class="gold-link" href="#tutorial-steps-2">Tutorial 6: Step-by-Step GPU OOM &amp; Latency Recovery Protocol</a></li>
+    <li><a class="gold-link" href="#references">Live References &amp; Technical Standards</a></li>
+  </ol>
 </section>
-<div class="divider"></div>
-<!-- STRUCTURED SPECIFICATION LISTS -->
-<section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
-<div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:2.5rem;box-shadow:var(--glow-gold);">
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">Service
-          Overview &amp; Scope</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Moving High-Volume Work Off the Cloud:</strong> Shifting repetitive generative workloads from paid
-            APIs to open-weight models (Llama, Qwen, Gemma, Mistral, DeepSeek) running on your own hardware.</li>
-<li><strong>Hardware Sizing:</strong> Matching model size, from 8B to 120B parameters, to your GPUs and
-            memory, and pricing the next hardware upgrade in US dollars and Indian rupees.</li>
-<li><strong>Local-First Routing:</strong> Sending routine requests to local models and passing harder
-            reasoning to Claude, with OpenRouter as an optional middle tier.</li>
-<li><strong>Private Hosting:</strong> Running models on-premises on Linux (Ubuntu or Zorin), so source code,
-            customer records and internal documents stay on your machines.</li>
-<li><strong>Serving and Quantization:</strong> Setting up vLLM, Ollama, llama.cpp or LM Studio with GGUF or
-            AWQ quantization chosen to fit your hardware.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Standard
-          Architecture &amp; Tools</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Inference Engines:</strong> vLLM for multi-user serving, llama.cpp and Ollama for lighter
-            deployments, and LM Studio for desktop use.</li>
-<li><strong>Open-Weight Model Families:</strong> Llama, Qwen, Gemma, Mistral and DeepSeek, selected and
-            quantized per task.</li>
-<li><strong>Routing Gateway:</strong> A FastAPI service exposing an OpenAI-compatible endpoint that routes
-            each request to a local model or to Claude.</li>
-<li><strong>Coding Agents on Local Models:</strong> OpenCode and Claude Code configured to use your local
-            models for work they handle well.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Guarantees
-          &amp; Commitments</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>60% to 90% Cost Reduction:</strong> Lower monthly cloud API spend for the workloads moved to local
-            models, measured against a baseline agreed in week 1.</li>
-<li><strong>Data Stays on Your Hardware:</strong> Local models run without sending prompts or outputs to
-            outside services; only requests you choose to route to Claude leave your network.</li>
-<li><strong>Hardware Independence:</strong> Docker containers that run on workstations, on-premises servers or
-            a private cloud.</li>
-<li><strong>30-Day Operational SLA:</strong> Help with model updates, driver issues and performance tuning.
-          </li>
-</ul>
 
-        
+<section id="token-economics">
+  <h2>The Economics of Cloud APIs vs. Owned Inference</h2>
+  <p>Frontier cloud APIs are extraordinary for prototyping, but they impose a linear tax on scale. When an enterprise processes millions of support tickets, code reviews, or document extractions per month, per-token billing rapidly overtakes the cost of dedicated GPU compute. Worse, 80% of enterprise inference tasks - classification, entity extraction, summarization, and routing - do not require a massive frontier model.</p>
+  <p>By migrating routine workloads to open-weights models such as Qwen, Llama, Mistral, or DeepSeek running on your own hardware, you convert variable token expenses into fixed, predictable infrastructure costs. You also gain immunity from upstream rate limits, sudden model deprecations, and third-party data retention policies.</p>
 
-        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-top:2rem;margin-bottom:1rem;">Executive Summary</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong style="color:var(--gold);">Lower Cloud Token Spend:</strong> Cutting recurring API costs by
-            60%-90% for workloads moved to self-hosted models.</li>
-<li><strong style="color:var(--gold);">Local-First Routing:</strong> Routine queries served locally, harder
-            cases escalated to Claude.</li>
-<li><strong style="color:var(--gold);">Private Data Handling:</strong> Sensitive data processed on your own
-            machines.</li>
-<li><strong style="color:var(--gold);">Full IP &amp; Deployment Handover:</strong> Container files, benchmark
-            scripts, the ROI calculator and 30-day support.</li>
-</ul>
+  <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;border:1px solid rgba(251,191,36,0.25);">
+    <rect width="960" height="400" fill="#040711"/>
+    <text x="480" y="38" fill="#fbbf24" font-size="18" font-weight="bold" text-anchor="middle" font-family="sans-serif">Cloud API Linear Scaling vs. Fixed Local GPU Cluster</text>
+    <line x1="100" y1="330" x2="880" y2="330" stroke="#64748b" stroke-width="2"/>
+    <line x1="100" y1="80" x2="100" y2="330" stroke="#64748b" stroke-width="2"/>
+    <text x="490" y="370" fill="#94a3b8" font-size="13" text-anchor="middle" font-family="sans-serif">Monthly Token Volume (Millions)</text>
+    <line x1="100" y1="310" x2="860" y2="100" stroke="#ef4444" stroke-width="3"/>
+    <text x="760" y="105" fill="#ef4444" font-size="13" font-weight="bold" font-family="sans-serif">Cloud API Spend</text>
+    <line x1="100" y1="220" x2="860" y2="220" stroke="#34d399" stroke-width="3"/>
+    <text x="740" y="208" fill="#34d399" font-size="13" font-weight="bold" font-family="sans-serif">Local GPU Cluster (Fixed)</text>
+    <circle cx="430" cy="220" r="6" fill="#fbbf24"/>
+    <text x="430" y="250" fill="#fbbf24" font-size="12" text-anchor="middle" font-family="sans-serif">Break-Even Point</text>
+  </svg>
+</section>
+
+<section id="quantization">
+  <h2>Quantization &amp; VRAM Sizing Mathematics</h2>
+  <p>Running open-weights models efficiently requires mastering quantization. A 70-billion parameter model in 16-bit floating point (FP16) demands roughly 140 GB of VRAM just for weights, plus additional memory for the KV cache. By applying 4-bit quantization (AWQ for GPU servers or GGUF for unified memory / CPU-GPU hybrid), the footprint drops to ~40 GB with less than 1% degradation on structured benchmarks.</p>
+  <p>We size your hardware precisely around target concurrency, context length, and p95 latency SLAs. Whether deploying on a single workstation GPU, an Apple Silicon studio node, or a multi-GPU Kubernetes cluster, every gigabyte of VRAM is budgeted for maximum tokens-per-second throughput.</p>
+
+  <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;border:1px solid rgba(56,189,248,0.25);">
+    <rect width="960" height="400" fill="#040711"/>
+    <text x="480" y="38" fill="#38bdf8" font-size="18" font-weight="bold" text-anchor="middle" font-family="sans-serif">VRAM Footprint by Precision Format (70B Parameter Model)</text>
+    <rect x="120" y="100" width="700" height="55" rx="6" fill="#0c111d" stroke="#ef4444"/>
+    <rect x="120" y="100" width="680" height="55" rx="6" fill="rgba(239,68,68,0.25)"/>
+    <text x="140" y="133" fill="#fca5a5" font-size="14" font-weight="bold" font-family="sans-serif">FP16 (16-bit): ~140 GB VRAM (Requires 2x 80GB GPUs)</text>
+    <rect x="120" y="180" width="700" height="55" rx="6" fill="#0c111d" stroke="#fbbf24"/>
+    <rect x="120" y="180" width="350" height="55" rx="6" fill="rgba(251,191,36,0.25)"/>
+    <text x="140" y="213" fill="#fbbf24" font-size="14" font-weight="bold" font-family="sans-serif">INT8 / FP8 (8-bit): ~72 GB VRAM (Single 80GB GPU)</text>
+    <rect x="120" y="260" width="700" height="55" rx="6" fill="#0c111d" stroke="#34d399"/>
+    <rect x="120" y="260" width="190" height="55" rx="6" fill="rgba(52,211,153,0.25)"/>
+    <text x="140" y="293" fill="#34d399" font-size="14" font-weight="bold" font-family="sans-serif">AWQ / Q4_K_M (4-bit): ~40 GB VRAM (Single 48GB GPU)</text>
+  </svg>
+</section>
+
+<section id="serving-engines">
+  <h2>Production Serving Engines: vLLM &amp; Ollama</h2>
+  <p>For high-concurrency enterprise APIs, we deploy <a class="gold-link" href="#references">vLLM with PagedAttention</a> and continuous batching, achieving up to 24x higher throughput than naive HuggingFace pipelines. For edge deployments, developer workstations, and rapid internal tooling, <a class="gold-link" href="#references">Ollama</a> provides zero-friction model management behind an OpenAI-compatible REST interface.</p>
+
+  <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;border:1px solid rgba(52,211,153,0.25);">
+    <rect width="960" height="400" fill="#040711"/>
+    <text x="480" y="38" fill="#34d399" font-size="18" font-weight="bold" text-anchor="middle" font-family="sans-serif">Continuous Batching &amp; PagedAttention Architecture</text>
+    <rect x="60" y="120" width="200" height="160" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="160" y="165" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Concurrent Clients</text>
+    <text x="160" y="195" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">REST / gRPC Requests</text>
+    <text x="160" y="218" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Streaming SSE</text>
+    <line x1="260" y1="200" x2="340" y2="200" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="340" y="120" width="260" height="160" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="470" y="165" fill="#fbbf24" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">vLLM Scheduler</text>
+    <text x="470" y="195" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Continuous Batching</text>
+    <text x="470" y="218" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Non-Contiguous KV Blocks</text>
+    <line x1="600" y1="200" x2="680" y2="200" stroke="#34d399" stroke-width="2"/>
+    <rect x="680" y="120" width="220" height="160" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="1.5"/>
+    <text x="790" y="165" fill="#34d399" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">GPU Tensor Cores</text>
+    <text x="790" y="195" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">AWQ / FP8 Kernels</text>
+    <text x="790" y="218" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Max Tokens/Sec</text>
+  </svg>
+</section>
+
+<section id="hybrid-routing">
+  <h2>Hybrid Semantic Routing: Local First, Cloud Escalation</h2>
+  <p>You do not have to choose between 100% local and 100% cloud. A semantic router evaluates incoming request complexity in under 15 milliseconds. Routine extraction, classification, and RAG synthesis route to your zero-marginal-cost local cluster, while rare multi-step architectural reasoning escalates to a frontier cloud API.</p>
+
+  <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;border:1px solid rgba(232,121,249,0.25);">
+    <rect width="960" height="400" fill="#040711"/>
+    <text x="480" y="38" fill="#e879f9" font-size="18" font-weight="bold" text-anchor="middle" font-family="sans-serif">Hybrid Semantic Cost-Slashing Router</text>
+    <rect x="60" y="160" width="180" height="80" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="150" y="205" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Incoming Prompt</text>
+    <line x1="240" y1="200" x2="320" y2="200" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="320" y="150" width="200" height="100" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="420" y="195" fill="#fbbf24" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Complexity Router</text>
+    <text x="420" y="218" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">PII &amp; Intent Check</text>
+    <line x1="520" y1="180" x2="620" y2="120" stroke="#34d399" stroke-width="2"/>
+    <line x1="520" y1="220" x2="620" y2="280" stroke="#e879f9" stroke-width="2"/>
+    <rect x="620" y="75" width="280" height="90" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="1.5"/>
+    <text x="760" y="115" fill="#34d399" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Local vLLM Cluster (85%)</text>
+    <text x="760" y="138" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">$0 Marginal Token Cost</text>
+    <rect x="620" y="235" width="280" height="90" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="1.5"/>
+    <text x="760" y="275" fill="#e879f9" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Frontier Cloud API (15%)</text>
+    <text x="760" y="298" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Complex Edge Reasoning</text>
+  </svg>
+</section>
+
+<section id="tutorial-python">
+  <h2>Tutorial 1: Local OpenAI-Compatible Python Client</h2>
+  <p>Point the standard OpenAI Python SDK at your local Ollama or vLLM endpoint to run zero-cost, air-gapped structured extraction.</p>
+  <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+    <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(56,189,248,0.2);">
+      <span style="color:#38bdf8;font-family:monospace;font-size:0.85rem;">local_inference.py</span>
+      <button class="copy-btn" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.4);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+    </div>
+    <pre style="margin:0;padding:1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.88rem;line-height:1.55;"><code>from openai import OpenAI
+
+client = OpenAI(
+    base_url="http://localhost:11434/v1",
+    api_key="local-no-key-required"
+)
+
+response = client.chat.completions.create(
+    model="qwen2.5:14b-instruct-q4_K_M",
+    temperature=0.0,
+    response_format={"type": "json_object"},
+    messages=[
+        {"role": "system", "content": "Extract invoice_id and total_usd as JSON."},
+        {"role": "user", "content": "Invoice #INV-9042 for $1,450.00 due Net-30."}
+    ]
+)
+
+print(response.choices[0].message.content)</code></pre>
+  </div>
+</section>
+
+<section id="tutorial-prompt">
+  <h2>Tutorial 2: Compact Local-Model Extraction Prompt</h2>
+  <p>Smaller quantized models perform best with concise, unambiguous system instructions and explicit output schemas.</p>
+  <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.32);border-left:3px solid #fbbf24;border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+    <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(251,191,36,0.2);">
+      <span style="color:#fbbf24;font-family:monospace;font-size:0.85rem;">local_extractor_prompt.txt</span>
+      <button class="copy-btn" style="background:rgba(251,191,36,0.15);color:#fbbf24;border:1px solid rgba(251,191,36,0.4);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+    </div>
+    <pre style="margin:0;padding:1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.88rem;line-height:1.55;"><code>TASK: Extract structured fields from the document below.
+OUTPUT FORMAT: Valid JSON only. No markdown fences, no commentary.
+SCHEMA:
+{
+  "vendor": "string",
+  "invoice_id": "string",
+  "amount_usd": "number",
+  "due_date": "YYYY-MM-DD or null"
+}
+RULE: If a field is missing, set its value to null. Never guess.</code></pre>
+  </div>
+</section>
+
+<section id="tutorial-steps">
+  <h2>Tutorial 3: Step-by-Step Local Cluster Deployment</h2>
+  <ol style="line-height:1.85;color:#cbd5e1;padding-left:1.5rem;">
+    <li><strong>Workload Audit:</strong> Export 30 days of cloud API logs to measure average input/output token counts and peak requests per second.</li>
+    <li><strong>Model Benchmarking:</strong> Evaluate candidate open-weights models against your golden dataset using 4-bit AWQ quantization.</li>
+    <li><strong>Containerized Serving:</strong> Deploy vLLM behind an NGINX or Envoy reverse proxy with TLS and bearer-token authentication.</li>
+    <li><strong>Semantic Router Integration:</strong> Route 80% - 90% of routine traffic to the local cluster while keeping a cloud fallback for edge cases.</li>
+  </ol>
+</section>
+
+<section id="airgapped-governance">
+  <h2>Air-Gapped Governance &amp; Model Provenance</h2>
+  <p>Running open-weights models on owned infrastructure eliminates third-party data retention risks, but it introduces a new supply-chain responsibility: model provenance and artifact integrity. Enterprise security teams must never pull unverified model weights directly from public hubs into production clusters. Instead, all weights must be mirrored into an internal artifact registry, scanned for pickle-deserialization exploits, and pinned by cryptographic SHA-256 digest.</p>
+  <p>Using the <a class="gold-link" href="#references">Safetensors format</a> instead of legacy PyTorch pickle files eliminates arbitrary code execution during model loading. Furthermore, an internal Envoy or NGINX ingress gateway must enforce bearer-token authentication, per-tenant rate limits, and structured audit logging so every local inference call is attributable to a specific service account.</p>
+  <p>For regulated industries - healthcare, defense, and financial services - air-gapped inference clusters operate with zero outbound internet egress. Model updates, tokenizer patches, and evaluation benchmarks are promoted through a staged CI/CD pipeline: Staging Registry -> Automated Red-Team &amp; Perplexity Gate -> Production GPU Pool. This mirrors the rigor of <a class="gold-link" href="#references">SLSA supply-chain security standards</a> while keeping unit inference costs near zero.</p>
+
+  <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;border:1px solid rgba(52,211,153,0.25);">
+    <rect width="960" height="400" fill="#040711"/>
+    <text x="480" y="38" fill="#34d399" font-size="18" font-weight="bold" text-anchor="middle" font-family="sans-serif">Air-Gapped Model Provenance &amp; Zero-Egress Serving</text>
+    <rect x="40" y="90" width="190" height="230" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="135" y="122" fill="#fbbf24" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">1. Artifact Quarantine</text>
+    <text x="135" y="160" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Safetensors Only</text>
+    <text x="135" y="195" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">SHA-256 Digest Pin</text>
+    <text x="135" y="230" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Malware &amp; Pickle Scan</text>
+    <line x1="230" y1="205" x2="280" y2="205" stroke="#38bdf8" stroke-width="2"/>
+    <polygon points="280,200 290,205 280,210" fill="#38bdf8"/>
+    <rect x="290" y="90" width="200" height="230" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="390" y="122" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">2. Internal Registry</text>
+    <text x="390" y="160" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Private Harbor / S3</text>
+    <text x="390" y="195" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Golden Dataset Gate</text>
+    <text x="390" y="230" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Signed Container Image</text>
+    <line x1="490" y1="205" x2="540" y2="205" stroke="#34d399" stroke-width="2"/>
+    <polygon points="540,200 550,205 540,210" fill="#34d399"/>
+    <rect x="550" y="90" width="370" height="230" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="1.5"/>
+    <text x="735" y="122" fill="#34d399" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">3. Air-Gapped VPC Inference Cluster</text>
+    <text x="735" y="160" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">mTLS + Bearer Auth Gateway (Zero Internet Egress)</text>
+    <text x="735" y="195" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">vLLM / Ollama Workers on Dedicated GPUs</text>
+    <text x="735" y="230" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Immutable Local Audit &amp; Prometheus Metrics</text>
+  </svg>
+</section>
+
+<section id="gpu-recovery">
+  <h2>GPU Failure-Mode Recovery &amp; KV-Cache Autoscaling</h2>
+  <p>Self-hosted inference clusters face distinct operational failure modes: CUDA Out-of-Memory (OOM) crashes during long-context bursts, KV-cache saturation under high concurrency, and silent GPU thermal throttling. If a single 32k-token prompt exhausts VRAM, an unguarded worker process can crash and drop dozens of concurrent in-flight requests.</p>
+  <p>Resilient local serving relies on <a class="gold-link" href="#references">PagedAttention and continuous batching</a> to partition KV-cache memory into fixed-size blocks, preventing fragmentation. At the ingress layer, enforce strict <code>max_tokens</code> and <code>max_model_len</code> caps per tenant, and configure Kubernetes Horizontal Pod Autoscalers (HPA) on custom Prometheus metrics - specifically <code>vllm:num_requests_waiting</code> and <code>vllm:gpu_cache_usage_perc</code> - rather than naive CPU utilization.</p>
+  <p>When local GPU queue depth exceeds your p95 latency SLO (for example, queue wait &gt; 400ms), the hybrid semantic router automatically spills overflow traffic to a secondary cloud endpoint. This guarantees uninterrupted user experience during traffic spikes while keeping 90%+ of steady-state volume on zero-marginal-cost local hardware.</p>
+
+  <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;border:1px solid rgba(232,121,249,0.25);">
+    <rect width="960" height="400" fill="#040711"/>
+    <text x="480" y="38" fill="#e879f9" font-size="18" font-weight="bold" text-anchor="middle" font-family="sans-serif">KV-Cache Pressure &amp; Hybrid Overflow Autoscaling</text>
+    <rect x="40" y="145" width="180" height="100" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="130" y="185" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Ingress Router</text>
+    <text x="130" y="212" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Check Queue &amp; VRAM</text>
+    <line x1="220" y1="175" x2="310" y2="120" stroke="#34d399" stroke-width="2"/>
+    <polygon points="307,115 317,116 312,125" fill="#34d399"/>
+    <rect x="315" y="70" width="260" height="100" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="1.5"/>
+    <text x="445" y="105" fill="#34d399" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Local vLLM Pool (90% Traffic)</text>
+    <text x="445" y="132" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">KV-Cache &lt; 85% | Queue &lt; 400ms</text>
+    <line x1="220" y1="215" x2="310" y2="275" stroke="#fbbf24" stroke-width="2"/>
+    <polygon points="312,270 317,279 307,280" fill="#fbbf24"/>
+    <rect x="315" y="230" width="260" height="100" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="445" y="265" fill="#fbbf24" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Cloud Overflow (10% Spike)</text>
+    <text x="445" y="292" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Triggered on OOM / Queue &gt; 400ms</text>
+    <rect x="640" y="145" width="270" height="100" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="1.5"/>
+    <text x="775" y="185" fill="#e879f9" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Prometheus + K8s HPA</text>
+    <text x="775" y="212" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Scale GPU Replicas on Cache %</text>
+    <line x1="575" y1="120" x2="640" y2="175" stroke="#e879f9" stroke-width="2"/>
+    <line x1="575" y1="280" x2="640" y2="215" stroke="#e879f9" stroke-width="2"/>
+  </svg>
+</section>
+
+<section id="tutorial-python-2">
+  <h2>Tutorial 4: Production Python Hybrid Semantic Router</h2>
+  <p>This router inspects prompt token length and local cluster health, routing routine workloads to your local vLLM endpoint while escalating complex or overflow requests to a cloud fallback.</p>
+  <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid var(--cyan);border-radius:10px;margin:1.75rem 0;overflow:hidden;">
+    <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(56,189,248,0.2);">
+      <span style="color:#38bdf8;font-family:monospace;font-size:0.85rem;">hybrid_semantic_router.py</span>
+      <button class="copy-btn" onclick="copyCode(this)" style="background:#1e293b;color:#fbbf24;border:1px solid rgba(251,191,36,0.35);padding:0.25rem 0.75rem;border-radius:6px;cursor:pointer;font-size:0.8rem;text-decoration:none !important;">Copy</button>
+    </div>
+    <pre style="margin:0;padding:1.25rem;overflow-x:hidden;white-space:pre-wrap;word-break:break-word;color:#e2e8f0;font-size:0.88rem;line-height:1.6;"><code>from openai import OpenAI
+
+local_client = OpenAI(base_url="http://localhost:8000/v1", api_key="local-secret")
+cloud_client = OpenAI(api_key="CLOUD_API_KEY")
+
+def route_inference(prompt: str, complexity: str = "routine") -> str:
+    use_local = complexity == "routine" and len(prompt) < 12000
+    if use_local:
+        try:
+            resp = local_client.chat.completions.create(
+                model="Qwen/Qwen2.5-14B-Instruct-AWQ",
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.0,
+                timeout=8.0,
+            )
+            return resp.choices[0].message.content
+        except Exception:
+            pass  # Fall through to cloud on local timeout or OOM
+
+    resp = cloud_client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.0,
+    )
+    return resp.choices[0].message.content</code></pre>
+  </div>
+</section>
+
+<section id="tutorial-prompt-2">
+  <h2>Tutorial 5: Confidence-Gated Escalation System Prompt</h2>
+  <p>Deploy this compact prompt on your local 7B - 14B model so it self-reports low-confidence edge cases for automatic cloud escalation instead of guessing.</p>
+  <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid var(--gold);border-radius:10px;margin:1.75rem 0;overflow:hidden;">
+    <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(251,191,36,0.2);">
+      <span style="color:#fbbf24;font-family:monospace;font-size:0.85rem;">confidence_escalation_prompt.txt</span>
+      <button class="copy-btn" onclick="copyCode(this)" style="background:#1e293b;color:#fbbf24;border:1px solid rgba(251,191,36,0.35);padding:0.25rem 0.75rem;border-radius:6px;cursor:pointer;font-size:0.8rem;text-decoration:none !important;">Copy</button>
+    </div>
+    <pre style="margin:0;padding:1.25rem;overflow-x:hidden;white-space:pre-wrap;word-break:break-word;color:#e2e8f0;font-size:0.88rem;line-height:1.6;"><code>ROLE: High-Speed Local Triage Classifier.
+
+TASK: Classify the input document and extract key fields.
+If the document is ambiguous, multi-lingual, or missing required fields, set "escalate_to_cloud": true.
+
+OUTPUT (Strict JSON only):
+{
+  "category": "BILLING | SUPPORT | LEGAL | OTHER",
+  "confidence": 0.0,
+  "escalate_to_cloud": boolean,
+  "extracted_summary": "string"
+}</code></pre>
+  </div>
+</section>
+
+<section id="tutorial-steps-2">
+  <h2>Tutorial 6: Step-by-Step GPU OOM &amp; Latency Recovery Protocol</h2>
+  <ol style="line-height:1.85;color:#cbd5e1;padding-left:1.5rem;">
+    <li><strong>Verify Telemetry:</strong> Check <code>vllm:gpu_cache_usage_perc</code> and <code>nvidia-smi</code> for memory fragmentation or thermal throttling.</li>
+    <li><strong>Enable Overflow Routing:</strong> Lower the router's local queue-depth threshold to shift 25% - 50% of burst traffic to the cloud fallback immediately.</li>
+    <li><strong>Clamp Context Window:</strong> Temporarily reduce <code>--max-model-len</code> from 32768 to 16384 on affected workers to reclaim KV-cache headroom.</li>
+    <li><strong>Drain &amp; Restart Worker:</strong> Gracefully drain in-flight requests on the degraded GPU pod and restart the container with pinned memory limits.</li>
+    <li><strong>Restore &amp; Autoscale:</strong> Confirm p95 latency returns below 400ms before shifting traffic back to 90% local execution.</li>
+  </ol>
+</section>
+
+<section id="references">
+  <h2>Live References &amp; Technical Standards</h2>
+  <ul style="line-height:1.9;color:#cbd5e1;">
+    <li><a class="gold-link" href="https://docs.vllm.ai/en/latest/" target="_blank" rel="noopener">vLLM Documentation - High-Throughput PagedAttention Serving</a></li>
+    <li><a class="gold-link" href="https://ollama.com/library" target="_blank" rel="noopener">Ollama Model Library - Quantized Open-Weights Registry</a></li>
+    <li><a class="gold-link" href="https://github.com/ggerganov/llama.cpp" target="_blank" rel="noopener">llama.cpp - GGUF Quantization &amp; Local Inference Engine</a></li>
+    <li><a class="gold-link" href="https://huggingface.co/docs/transformers/quantization/awq" target="_blank" rel="noopener">HuggingFace - Activation-aware Weight Quantization (AWQ)</a></li>
+    <li><a class="gold-link" href="https://huggingface.co/docs/safetensors/index" target="_blank" rel="noopener">HuggingFace Safetensors - Zero-Copy Secure Tensor Serialization</a></li>
+    <li><a class="gold-link" href="https://slsa.dev/spec/v1.0/" target="_blank" rel="noopener">SLSA Framework - Supply-Chain Levels for Software Artifacts</a></li>
+    <li><a class="gold-link" href="https://docs.vllm.ai/en/latest/serving/metrics.html" target="_blank" rel="noopener">vLLM Production Metrics - Prometheus KV-Cache &amp; Queue Telemetry</a></li>
+    <li><a class="gold-link" href="https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/" target="_blank" rel="noopener">Kubernetes HPA - Custom Metrics Autoscaling</a></li>
+    <li><a class="gold-link" href="https://arxiv.org/abs/2309.06180" target="_blank" rel="noopener">PagedAttention Paper - Efficient Memory Management for LLM Serving</a></li>
+    <li><a class="gold-link" href="https://www.envoyproxy.io/docs/envoy/latest/" target="_blank" rel="noopener">Envoy Proxy - L7 Rate Limiting &amp; mTLS Ingress Gateway</a></li>
+  </ul>
+</section>
+
+<section class="cta-box" style="margin-top:3rem;padding:2.5rem;background:#0c111d;border:1px solid rgba(251,191,36,0.28);border-radius:14px;text-align:center;">
+<h2 style="margin-top:0;">Ready to Deploy This Architecture?</h2>
+<p style="max-width:680px;margin:0.75rem auto 1.75rem;color:#cbd5e1;">Schedule a technical discovery session to benchmark your token workloads, size your local inference cluster, and eliminate recurring API bills.</p>
 <div class="service-cta-buttons">
 <a class="btn btn-commission btn-lg" href="../contact.html" >
             Commission Local LLM Cost Slashing →
@@ -334,9 +606,20 @@
             Book a free intro call on LinkedIn ↗
           </a>
 </div>
-</div>
 </section>
-<div class="divider" style="margin-top:3rem;"></div>
+
+<script>
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const pre = btn.closest('.code-window').querySelector('pre');
+    navigator.clipboard.writeText(pre.innerText).then(() => {
+      const orig = btn.innerText;
+      btn.innerText = 'Copied!';
+      setTimeout(() => { btn.innerText = orig; }, 2000);
+    });
+  });
+});
+</script>
 </main>
     <!-- START:FOOTER -->
     <footer id="links">

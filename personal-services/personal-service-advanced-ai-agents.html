@@ -104,6 +104,7 @@
 <link href="../css/article.css" rel="stylesheet"/>
 <link href="../css/service.css" rel="stylesheet"/>
 <link href="../css/personal-services.css" rel="stylesheet"/>
+<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -256,87 +257,516 @@
   <!-- END:HEADER -->
 <a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
 <main id="main">
-<!-- PAGE HERO HEADER -->
-<section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
-<p class="section-label">// SERVICE SPECIFICATION 10</p>
-<h1>Advanced AI Agents</h1>
-<p class="section-sub" style="max-width:760px;margin:0.75rem auto 0;line-height:1.8;">
-        Building production autonomous agent systems: hierarchical teams of Claude agents, self-correcting loops driven
-        by tests, persistent state, and sandboxed execution for business-critical workloads.
-      </p>
-<div style="margin-top:1.5rem;">
-<a class="btn btn-commission" href="../contact.html" >
-          Commission Advanced AI Agent Systems →
-        </a>
-</div>
-</section>
-<div class="divider"></div>
-<!-- STRUCTURED SPECIFICATION LISTS -->
-<section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
-<div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:2.5rem;box-shadow:var(--glow-gold);">
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">Service
-          Overview &amp; Scope</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Multi-Agent Teams:</strong> Hierarchical Claude agent teams that carry multi-day, multi-person
-            workflows, with human checkpoints at the steps that matter.</li>
-<li><strong>Self-Correction Loops:</strong> Agents read compiler errors, test failures and lint output, fix
-            the code, and run the checks again until they pass or reach a retry limit.</li>
-<li><strong>Sandboxed Tool Execution:</strong> Agent shell commands, code execution and database queries run
-            inside Docker containers with restricted permissions and network access.</li>
-<li><strong>Spend and Loop Limits:</strong> Iteration caps, token budgets and kill switches on every loop.
-          </li>
-<li><strong>Run Logging:</strong> Records of each agent's steps, tool calls, token use and failures for review
-            and debugging.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Standard
-          Architecture &amp; Tools</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Agent Frameworks:</strong> Claude Agent Teams, Claude Code subagents and background agents in
-            separate git worktrees, and the Claude API with Python asyncio or Rust Tokio for custom orchestration.</li>
-<li><strong>Model Layer:</strong> Claude Opus or Fable (lead planner and synthesis), Claude Sonnet (code and
-            tool use), and Claude Haiku (fast classification and search).</li>
-<li><strong>Execution Sandboxing:</strong> Docker containers with dropped capabilities (`CAP_DROP=ALL`),
-            non-root execution and egress restrictions.</li>
-<li><strong>State &amp; Persistence:</strong> Checkpoints in a SQL database or files, so long runs can resume
-            after an interruption.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Guarantees
-          &amp; Commitments</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Guaranteed Termination:</strong> Hard cycle limits, timeouts and fallback paths end every run.
-          </li>
-<li><strong>Complete Commercial IP Ownership:</strong> Full code, copyright and documentation transfer at
-            sign-off.</li>
-<li><strong>30-Day Operational SLA &amp; Support:</strong> Engineering channel for fixes, tuning and Claude
-            model or API updates.</li>
-<li><strong>Data Containment:</strong> Disposable containers, with outbound traffic limited to approved
-            destinations.</li>
-</ul>
+<div class="container" style="max-width:1040px;margin:0 auto;padding:2.5rem 1.25rem;">
+  <div class="hero" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.28);border-radius:16px;padding:2.5rem;margin-bottom:2rem;">
+    <p class="section-label" style="color:var(--cyan,#38bdf8);letter-spacing:0.1em;font-size:0.8rem;text-transform:uppercase;margin-bottom:0.5rem;">// PERSONAL SERVICE SPECIFICATION - AUTONOMOUS AGENTS</p>
+    <h1>Advanced AI Agents</h1>
+    <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.75;max-width:820px;">
+      Design, build, and operate your own autonomous multi-agent systems as an independent engineer, researcher, or solo founder. This 1-on-1 training program teaches you how to architect hierarchical planner-worker swarms, test-driven self-correction loops, sandboxed tool execution, and deterministic state persistence using modern agentic frameworks.
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:2rem;">
+      <div style="background:#040711;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:1.6rem;font-weight:700;color:var(--gold,#fbbf24);">1-on-1</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Private Practitioner Coaching</div>
+      </div>
+      <div style="background:#040711;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:1.6rem;font-weight:700;color:var(--cyan,#38bdf8);">4 Loops</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Planner, Worker, Critic, Verifier</div>
+      </div>
+      <div style="background:#040711;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:1.6rem;font-weight:700;color:#34d399;">Sandboxed</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Docker &amp; Non-Root Isolation</div>
+      </div>
+      <div style="background:#040711;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:1.6rem;font-weight:700;color:#e879f9;">100% IP</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Full Ownership of Your Agent Stack</div>
+      </div>
+    </div>
+  </div>
 
-        
+  <div id="table-of-contents" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.25);border-radius:12px;padding:1.75rem;margin-bottom:2.5rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.25rem;margin-bottom:1rem;">Table of Contents</h2>
+    <ol style="display:flex;flex-direction:column;gap:0.6rem;list-style:none;padding-left:0;color:var(--text-secondary);line-height:1.7;">
+      <li><a class="gold-link" href="#architecture-overview">1. Why Solo Practitioners Need Autonomous Agent Architectures</a></li>
+      <li><a class="gold-link" href="#multi-agent-coordination">2. Hierarchical Planner-Worker Coordination and State Graphs</a></li>
+      <li><a class="gold-link" href="#self-correction-loops">3. Test-Driven Self-Correction and Reflection Loops</a></li>
+      <li><a class="gold-link" href="#sandboxed-execution">4. Sandboxed Tool Execution and Budget Guardrails</a></li>
+      <li><a class="gold-link" href="#productivity-architecture">5. Personal Productivity Architecture and Asynchronous Delegation</a></li>
+      <li><a class="gold-link" href="#privacy-security-hygiene">6. Privacy, Credential Hygiene, and Local-First Secret Management</a></li>
+      <li><a class="gold-link" href="#failure-mode-recovery">7. Failure-Mode Recovery, Dead-Letter Queues, and Circuit Breakers</a></li>
+      <li><a class="gold-link" href="#tutorial-python">8. Tutorial 1: Production Python Self-Correcting Agent Loop</a></li>
+      <li><a class="gold-link" href="#tutorial-prompt">9. Tutorial 2: Production Supervisor &amp; Critic Prompt Template</a></li>
+      <li><a class="gold-link" href="#tutorial-operations">10. Tutorial 3: Step-by-Step Operational Deployment Checklist</a></li>
+      <li><a class="gold-link" href="#tutorial-python-recovery">11. Tutorial 4: Production Python Circuit Breaker and Dead-Letter Recovery</a></li>
+      <li><a class="gold-link" href="#tutorial-prompt-hygiene">12. Tutorial 5: Production Security &amp; Privacy Audit Prompt Template</a></li>
+      <li><a class="gold-link" href="#tutorial-operations-recovery">13. Tutorial 6: Step-by-Step Incident Recovery and Credential Rotation Runbook</a></li>
+      <li><a class="gold-link" href="#references">14. Live References and Technical Documentation</a></li>
+    </ol>
+  </div>
 
-        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-top:2rem;margin-bottom:1rem;">Executive Summary</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong style="color:var(--gold);">Claude Agent Teams:</strong> Production orchestrator-worker and
-            hierarchical architectures.</li>
-<li><strong style="color:var(--gold);">Test-Driven Self-Correction:</strong> Test, lint and type-check
-            feedback loops that work toward passing code.</li>
-<li><strong style="color:var(--gold);">Sandboxed Runtimes:</strong> Docker isolation with dropped capabilities
-            and restricted network access.</li>
-<li><strong style="color:var(--gold);">Enterprise IP &amp; Handover:</strong> Full IP transfer, runbooks and
-            30-day support.</li>
-</ul>
-<div class="service-cta-buttons">
-<a class="btn btn-commission btn-lg" href="../contact.html" >
-            Commission Advanced AI Agents →
-          </a>
-<a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener"  target="_blank">
-            Book a free intro call on LinkedIn ↗
-          </a>
+  <section id="architecture-overview" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.65rem;margin-bottom:1rem;">Why Solo Practitioners Need Autonomous Agent Architectures</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Independent engineers, solo founders, and technical consultants face a recurring bottleneck: you have the architectural vision of a full engineering team, yet only twenty-four hours in a day. Standard chat interfaces force you into a synchronous, single-threaded loop where you copy-paste context, inspect outputs manually, and re-prompt every time a script fails. Advanced AI agents break that bottleneck by turning your local workstation or cloud server into an asynchronous, self-correcting engineering bench.
+    </p>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      In this 1-on-1 training engagement, we move far beyond brittle single-prompt wrappers. You learn how to build deterministic state machines where specialized agents plan tasks, execute shell commands inside isolated containers, read compiler or test failures, and iterate until every acceptance criterion passes. According to the <a class="gold-link" href="#references">Anthropic engineering guide on building effective agents</a>, the most reliable autonomous systems combine simple, composable patterns with explicit verification gates rather than unconstrained open-ended loops.
+    </p>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.5rem;">
+      Whether you are automating full-stack feature delivery, running overnight data-engineering pipelines, or orchestrating deep competitive research, mastering agentic architecture gives you the leverage of a small engineering department while keeping total control over cost, security, and code quality.
+    </p>
+
+    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(56,189,248,0.25);background:#040711;margin:1.5rem 0;">
+      <rect width="960" height="400" fill="#040711"/>
+      <text x="480" y="38" fill="#fbbf24" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">AUTONOMOUS MULTI-AGENT ARCHITECTURE FOR SOLO PRACTITIONERS</text>
+      <rect x="60" y="80" width="200" height="80" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+      <text x="160" y="115" fill="#fbbf24" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">PRACTITIONER</text>
+      <text x="160" y="138" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Goal + Constraints + Budget</text>
+      <line x1="260" y1="120" x2="350" y2="120" stroke="#38bdf8" stroke-width="2"/>
+      <polygon points="350,115 362,120 350,125" fill="#38bdf8"/>
+      <rect x="365" y="75" width="230" height="90" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="480" y="110" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">SUPERVISOR PLANNER</text>
+      <text x="480" y="133" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Task Graph &amp; State Router</text>
+      <text x="480" y="152" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">SQLite / Postgres Checkpoint</text>
+      <line x1="480" y1="165" x2="480" y2="215" stroke="#34d399" stroke-width="2"/>
+      <line x1="180" y1="215" x2="780" y2="215" stroke="#34d399" stroke-width="2"/>
+      <line x1="180" y1="215" x2="180" y2="245" stroke="#34d399" stroke-width="2"/>
+      <line x1="480" y1="215" x2="480" y2="245" stroke="#34d399" stroke-width="2"/>
+      <line x1="780" y1="215" x2="780" y2="245" stroke="#34d399" stroke-width="2"/>
+      <rect x="70" y="245" width="220" height="95" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+      <text x="180" y="278" fill="#34d399" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">CODER WORKER</text>
+      <text x="180" y="300" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Git Worktree + Edits</text>
+      <text x="180" y="320" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Tool: File &amp; AST</text>
+      <rect x="370" y="245" width="220" height="95" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+      <text x="480" y="278" fill="#e879f9" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">SANDBOX RUNNER</text>
+      <text x="480" y="300" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Docker CAP_DROP=ALL</text>
+      <text x="480" y="320" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Pytest / Ruff / Mypy</text>
+      <rect x="670" y="245" width="220" height="95" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+      <text x="780" y="278" fill="#fbbf24" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">CRITIC &amp; VERIFIER</text>
+      <text x="780" y="300" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Diff Review + Gate</text>
+      <text x="780" y="320" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Max Retry = 3</text>
+    </svg>
+  </section>
+
+  <section id="multi-agent-coordination" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.65rem;margin-bottom:1rem;">Hierarchical Planner-Worker Coordination and State Graphs</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      When a single agent tries to hold an entire codebase, a research specification, and twenty tool outputs in one context window, reasoning quality degrades rapidly. Hierarchical coordination solves this by separating strategic planning from tactical execution. A supervisor agent decomposes your objective into a directed acyclic graph of subtasks, assigns each subtask to a focused worker with a minimal toolset, and collects structured JSON results.
+    </p>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Using state-graph frameworks such as <a class="gold-link" href="#references">LangGraph stateful orchestration</a>, every node transition is persisted to a local SQLite or PostgreSQL checkpoint. If your laptop sleeps, an API rate limit triggers, or you want to inspect an intermediate state before approving a destructive migration, you can pause and resume the exact graph execution without losing progress.
+    </p>
+    <h3 style="font-family:var(--font-display);color:#fff;font-size:1.25rem;margin:1.5rem 0 0.75rem;">Context Isolation Between Subagents</h3>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Each worker agent operates in its own isolated context window. A documentation-search worker only sees the query and retrieval tools; a code-editing worker only sees the target module and test runner. By keeping worker contexts clean and returning concise structured summaries to the supervisor, you dramatically reduce token burn and prevent hallucinated cross-file edits.
+    </p>
+
+    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(56,189,248,0.25);background:#040711;margin:1.5rem 0;">
+      <rect width="960" height="400" fill="#040711"/>
+      <text x="480" y="38" fill="#38bdf8" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">STATEFUL GRAPH EXECUTION &amp; CHECKPOINTING</text>
+      <rect x="60" y="155" width="160" height="75" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+      <text x="140" y="190" fill="#fbbf24" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">1. INGEST TASK</text>
+      <text x="140" y="212" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Pydantic Schema</text>
+      <line x1="220" y1="192" x2="275" y2="192" stroke="#38bdf8" stroke-width="2"/>
+      <rect x="275" y="155" width="170" height="75" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="360" y="190" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">2. PLAN GRAPH</text>
+      <text x="360" y="212" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Subtask Queue</text>
+      <line x1="445" y1="192" x2="500" y2="192" stroke="#34d399" stroke-width="2"/>
+      <rect x="500" y="155" width="175" height="75" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+      <text x="587" y="190" fill="#34d399" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">3. EXECUTE NODE</text>
+      <text x="587" y="212" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Isolated Worker</text>
+      <line x1="675" y1="192" x2="730" y2="192" stroke="#e879f9" stroke-width="2"/>
+      <rect x="730" y="155" width="170" height="75" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+      <text x="815" y="190" fill="#e879f9" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">4. VERIFY GATE</text>
+      <text x="815" y="212" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Pass / Retry / Halt</text>
+      <path d="M 815 230 L 815 310 L 587 310 L 587 230" fill="none" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6,4"/>
+      <text x="701" y="335" fill="#fbbf24" font-family="monospace" font-size="12" text-anchor="middle">Feedback Loop on Test Failure (Max 3 Retries)</text>
+    </svg>
+  </section>
+
+  <section id="self-correction-loops" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:#34d399;font-size:1.65rem;margin-bottom:1rem;">Test-Driven Self-Correction and Reflection Loops</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      The difference between a toy demo and a production agent is deterministic verification. An agent should never grade its own homework with vague prose. Instead, every code-generating or data-transforming step is wired to an objective oracle: unit tests, static type checkers, linters, or <a class="gold-link" href="#references">Pydantic schema validation</a>.
+    </p>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      When a test fails, the sandbox captures `stdout`, `stderr`, and the exact exit code, then injects that structured error trace into the next iteration of the worker prompt. Combined with a reflection step where a critic model inspects the git diff against your architectural rules, the agent converges on clean, passing implementations without human intervention.
+    </p>
+
+    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(52,211,153,0.25);background:#040711;margin:1.5rem 0;">
+      <rect width="960" height="400" fill="#040711"/>
+      <text x="480" y="38" fill="#34d399" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">TEST-DRIVEN SELF-CORRECTION LOOP</text>
+      <rect x="80" y="100" width="220" height="80" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="190" y="135" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">GENERATE PATCH</text>
+      <text x="190" y="158" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Minimal Unified Diff</text>
+      <line x1="300" y1="140" x2="370" y2="140" stroke="#34d399" stroke-width="2"/>
+      <rect x="370" y="100" width="220" height="80" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+      <text x="480" y="135" fill="#34d399" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">RUN TEST SUITE</text>
+      <text x="480" y="158" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Pytest + Mypy + Ruff</text>
+      <line x1="590" y1="140" x2="660" y2="140" stroke="#fbbf24" stroke-width="2"/>
+      <rect x="660" y="100" width="220" height="80" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+      <text x="770" y="135" fill="#fbbf24" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">EXIT CODE == 0?</text>
+      <text x="770" y="158" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Yes: Commit &amp; Report</text>
+      <path d="M 770 180 L 770 290 L 190 290 L 190 180" fill="none" stroke="#e879f9" stroke-width="2"/>
+      <rect x="340" y="260" width="280" height="60" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+      <text x="480" y="288" fill="#e879f9" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">REFLECT ON STDERR</text>
+      <text x="480" y="308" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Inject Traceback + Increment Retry</text>
+    </svg>
+  </section>
+
+  <section id="sandboxed-execution" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:#e879f9;font-size:1.65rem;margin-bottom:1rem;">Sandboxed Tool Execution and Budget Guardrails</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Giving an autonomous agent shell access on your primary machine without containment is an unnecessary risk. In our sessions, you configure ephemeral <a class="gold-link" href="#references">Docker security sandboxes</a> with dropped Linux capabilities (`CAP_DROP=ALL`), non-root user execution, read-only root filesystems, and strict egress allowlists.
+    </p>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Equally important are financial and operational circuit breakers. Every agent loop enforces hard caps on maximum iterations, wall-clock timeouts, and cumulative token spend. If an agent enters a unproductive retry cycle, the circuit breaker halts execution cleanly and writes a diagnostic trace so you can inspect the exact failure point.
+    </p>
+
+    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(232,121,249,0.25);background:#040711;margin:1.5rem 0;">
+      <rect width="960" height="400" fill="#040711"/>
+      <text x="480" y="38" fill="#e879f9" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">SANDBOXED EXECUTION &amp; CIRCUIT BREAKER LAYER</text>
+      <rect x="80" y="90" width="800" height="250" rx="14" fill="#0c111d" stroke="#e879f9" stroke-width="2" stroke-dasharray="8,4"/>
+      <text x="480" y="120" fill="#e879f9" font-family="monospace" font-size="13" text-anchor="middle">EPHEMERAL DOCKER CONTAINER (NON-ROOT / CAP_DROP=ALL / NO HOST NETWORK)</text>
+      <rect x="130" y="155" width="210" height="120" rx="8" fill="#040711" stroke="#38bdf8" stroke-width="2"/>
+      <text x="235" y="190" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">TOKEN BUDGET</text>
+      <text x="235" y="215" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Hard Spend Cap</text>
+      <text x="235" y="238" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Halt on Threshold</text>
+      <rect x="375" y="155" width="210" height="120" rx="8" fill="#040711" stroke="#fbbf24" stroke-width="2"/>
+      <text x="480" y="190" fill="#fbbf24" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">CYCLE LIMIT</text>
+      <text x="480" y="215" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Max 5 Iterations</text>
+      <text x="480" y="238" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Wall-Clock Timeout</text>
+      <rect x="620" y="155" width="210" height="120" rx="8" fill="#040711" stroke="#34d399" stroke-width="2"/>
+      <text x="725" y="190" fill="#34d399" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">TELEMETRY LOG</text>
+      <text x="725" y="215" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">OpenTelemetry Trace</text>
+      <text x="725" y="238" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Audit Every Tool Call</text>
+    </svg>
+  </section>
+
+  <section id="productivity-architecture" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.65rem;margin-bottom:1rem;">Personal Productivity Architecture and Asynchronous Delegation</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      A personal agentic bench only multiplies your output if you design it around asynchronous delegation rather than interactive babysitting. Most solo developers fall into the trap of watching an agent stream tokens in real time, which recreates the exact synchronous bottleneck they were trying to escape. Instead, your productivity architecture should separate human-in-the-loop specification from background execution. You spend twenty minutes in the morning writing a crisp, test-backed specification, dispatch three independent worker agents into isolated Git worktrees, and review their pull requests during a scheduled afternoon triage block.
+    </p>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      To make asynchronous delegation reliable, every task dispatched to a background worker must carry a deterministic acceptance contract. This contract consists of a target file scope, a failing unit test or schema validator, and a strict wall-clock timeout. When an agent finishes, it does not ping you with a chat message; it writes a structured <a class="gold-link" href="#references">OpenTelemetry trace</a> and a concise diff summary to a local SQLite inbox. You can then batch-review five completed branches in ten minutes with zero context-switching overhead.
+    </p>
+    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.25);background:#040711;margin:1.5rem 0;">
+      <rect width="960" height="400" fill="#040711"/>
+      <text x="480" y="34" fill="#fbbf24" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">ASYNCHRONOUS PERSONAL PRODUCTIVITY &amp; WORKTREE DELEGATION</text>
+      <rect x="40" y="70" width="220" height="110" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+      <text x="150" y="100" fill="#fbbf24" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">1. Morning Spec Block</text>
+      <text x="150" y="124" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Write failing tests</text>
+      <text x="150" y="144" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Define file scope</text>
+      <text x="150" y="164" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Set token &amp; time caps</text>
+      <line x1="260" y1="125" x2="320" y2="125" stroke="#38bdf8" stroke-width="2"/>
+      <rect x="320" y="60" width="290" height="270" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="465" y="88" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">2. Parallel Worktree Agents</text>
+      <rect x="340" y="105" width="250" height="60" rx="6" fill="#040711" stroke="#34d399" stroke-width="1.5"/>
+      <text x="465" y="130" fill="#34d399" font-family="monospace" font-size="12" text-anchor="middle">Worker A: wt-auth-refactor</text>
+      <text x="465" y="150" fill="#94a3b8" font-family="monospace" font-size="10" text-anchor="middle">Docker + pytest loop</text>
+      <rect x="340" y="180" width="250" height="60" rx="6" fill="#040711" stroke="#34d399" stroke-width="1.5"/>
+      <text x="465" y="205" fill="#34d399" font-family="monospace" font-size="12" text-anchor="middle">Worker B: wt-api-schema</text>
+      <text x="465" y="225" fill="#94a3b8" font-family="monospace" font-size="10" text-anchor="middle">Docker + mypy +ruff</text>
+      <rect x="340" y="255" width="250" height="60" rx="6" fill="#040711" stroke="#e879f9" stroke-width="1.5"/>
+      <text x="465" y="280" fill="#e879f9" font-family="monospace" font-size="12" text-anchor="middle">Worker C: wt-docs-sync</text>
+      <text x="465" y="300" fill="#94a3b8" font-family="monospace" font-size="10" text-anchor="middle">Read-only repo + markdown</text>
+      <line x1="610" y1="195" x2="670" y2="195" stroke="#fbbf24" stroke-width="2"/>
+      <rect x="670" y="110" width="250" height="170" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+      <text x="795" y="140" fill="#34d399" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">3. Batch Triage Inbox</text>
+      <text x="795" y="168" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">SQLite summary + git diff</text>
+      <text x="795" y="190" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Passing test attestation</text>
+      <text x="795" y="212" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Token cost per branch</text>
+      <text x="795" y="245" fill="#fbbf24" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">Human Merge / Reject</text>
+      <text x="480" y="375" fill="#64748b" font-family="monospace" font-size="11" text-anchor="middle">Zero synchronous babysitting - 100% deterministic acceptance contracts</text>
+    </svg>
+  </section>
+
+  <section id="privacy-security-hygiene" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.65rem;margin-bottom:1rem;">Privacy, Credential Hygiene, and Local-First Secret Management</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      When you run autonomous agents on personal or client codebases, credential hygiene is non-negotiable. Never mount your host `~/.ssh`, `~/.aws`, or `.env` files into an agent's execution container. If a prompt injection or a hallucinated shell command executes `env` or `cat ~/.ssh/id_rsa`, any mounted secret is immediately exposed to the model's context window and potentially logged by upstream API providers.
+    </p>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Follow the <a class="gold-link" href="#references">OWASP Top 10 for LLM Applications</a> by enforcing a strict zero-secret-in-sandbox policy. Use short-lived, scoped tokens injected only at the host proxy layer, never inside the container. For sensitive personal repositories, route all pre-processing and PII redaction through a local <a class="gold-link" href="#references">Ollama</a> instance before any sanitized diff or summary leaves your machine. Finally, enable pre-commit secret scanning with <a class="gold-link" href="#references">Gitleaks</a> so no agent-generated commit can ever stage an API key or private token.
+    </p>
+  </section>
+
+  <section id="failure-mode-recovery" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:#e879f9;font-size:1.65rem;margin-bottom:1rem;">Failure-Mode Recovery, Dead-Letter Queues, and Circuit Breakers</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Autonomous agents fail in predictable ways: infinite retry loops on flaky tests, context-window saturation from verbose stack traces, and silent rate-limit cascades. Without a circuit breaker, a singlestuck worker can burn through your daily API budget in minutes. A production personal agent stack treats every tool failure as a structured state transition rather than an unhandled exception.
+    </p>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Implement a three-state circuit breaker (Closed, Open, Half-Open) wrapped around both your LLM client and your sandbox runner. If three consecutive iterations fail with the same error signature or exceed your per-task token ceiling, the circuit trips Open and routes the task payload, git diff, and last five tool calls into a local Dead-Letter Queue (DLQ) in SQLite. You can inspect the DLQ during your afternoon triage, adjust the prompt or test fixture, and replay the task cleanly without losing prior state.
+    </p>
+    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(232,121,249,0.25);background:#040711;margin:1.5rem 0;">
+      <rect width="960" height="400" fill="#040711"/>
+      <text x="480" y="34" fill="#e879f9" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">CIRCUIT BREAKER &amp; DEAD-LETTER QUEUE RECOVERY</text>
+      <rect x="50" y="90" width="200" height="100" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+      <text x="150" y="125" fill="#34d399" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">CLOSED (Normal)</text>
+      <text x="150" y="150" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Failures &lt; 3</text>
+      <text x="150" y="170" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Budget &lt; Ceiling</text>
+      <line x1="250" y1="140" x2="360" y2="140" stroke="#fbbf24" stroke-width="2"/>
+      <text x="305" y="128" fill="#fbbf24" font-family="monospace" font-size="10" text-anchor="middle">3x Same Error</text>
+      <rect x="360" y="90" width="220" height="100" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+      <text x="470" y="125" fill="#e879f9" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">OPEN (Tripped)</text>
+      <text x="470" y="150" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Halt LLM &amp; Sandbox</text>
+      <text x="470" y="170" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Snapshot state to DLQ</text>
+      <line x1="580" y1="140" x2="690" y2="140" stroke="#38bdf8" stroke-width="2"/>
+      <text x="635" y="128" fill="#38bdf8" font-family="monospace" font-size="10" text-anchor="middle">Human Triage</text>
+      <rect x="690" y="90" width="220" height="100" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="800" y="125" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">HALF-OPEN (Replay)</text>
+      <text x="800" y="150" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">1x Canary Test</text>
+      <text x="800" y="170" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Pass -&gt; Reset Closed</text>
+      <rect x="240" y="250" width="480" height="90" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+      <text x="480" y="280" fill="#fbbf24" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">SQLite Dead-Letter Queue (dlq_tasks.db)</text>
+      <text x="480" y="305" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Stores: task_id | error_hash | git_diff | last_5_traces | token_spend</text>
+      <line x1="470" y1="190" x2="470" y2="250" stroke="#e879f9" stroke-width="2" stroke-dasharray="4,4"/>
+      <text x="480" y="375" fill="#64748b" font-family="monospace" font-size="11" text-anchor="middle">Prevents runaway token spend and preserves full debugging context</text>
+    </svg>
+  </section>
+
+  <section id="tutorial-python" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.65rem;margin-bottom:1rem;">Tutorial 1: Production Python Self-Correcting Agent Loop</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Below is a complete, production-ready Python pattern for a self-correcting coding agent. It enforces a strict retry budget, executes generated code inside a subprocess with a timeout, and feeds any `stderr` traceback back into the model until tests pass.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan,#38bdf8);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(56,189,248,0.2);">
+        <span style="font-family:monospace;font-size:0.85rem;color:var(--cyan,#38bdf8);">agent_loop.py</span>
+        <button class="copy-btn" type="button" style="background:rgba(56,189,248,0.12);color:#38bdf8;border:1px solid rgba(56,189,248,0.35);border-radius:6px;padding:0.3rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;overflow-x:auto;color:#e2e8f0;font-family:monospace;font-size:0.86rem;line-height:1.6;"><code>import subprocess
+from dataclasses import dataclass
+from anthropic import Anthropic
+
+@dataclass
+class AgentResult:
+    passed: bool
+    iterations: int
+    code: str
+    last_error: str
+
+def run_self_correcting_agent(task: str, max_retries: int = 3) -&gt; AgentResult:
+    client = Anthropic()
+    messages = [{"role": "user", "content": f"Write Python code and pytest tests for: {task}"}]
+    last_error = ""
+
+    for attempt in range(1, max_retries + 1):
+        response = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=2048,
+            system="Return only executable Python code with pytest assertions.",
+            messages=messages,
+        )
+        code = response.content[0].text.strip()
+        with open("workspace_task.py", "w", encoding="utf-8") as handle:
+            handle.write(code)
+
+        proc = subprocess.run(
+            ["pytest", "workspace_task.py", "-q"],
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+        if proc.returncode == 0:
+            return AgentResult(passed=True, iterations=attempt, code=code, last_error="")
+
+        last_error = proc.stderr or proc.stdout
+        messages.append({"role": "assistant", "content": code})
+        messages.append({"role": "user", "content": f"Tests failed:\n{last_error}\nFix the code."})
+
+    return AgentResult(passed=False, iterations=max_retries, code=code, last_error=last_error)</code></pre>
+    </div>
+  </section>
+
+  <section id="tutorial-prompt" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.65rem;margin-bottom:1rem;">Tutorial 2: Production Supervisor &amp; Critic Prompt Template</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Use this structured system prompt for your supervisor agent to enforce deterministic task decomposition, explicit acceptance criteria, and strict JSON handoffs to worker agents.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.32);border-left:3px solid var(--gold,#fbbf24);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(251,191,36,0.2);">
+        <span style="font-family:monospace;font-size:0.85rem;color:var(--gold,#fbbf24);">supervisor_prompt.txt</span>
+        <button class="copy-btn" type="button" style="background:rgba(251,191,36,0.12);color:#fbbf24;border:1px solid rgba(251,191,36,0.35);border-radius:6px;padding:0.3rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;overflow-x:auto;color:#e2e8f0;font-family:monospace;font-size:0.86rem;line-height:1.6;"><code>ROLE: Autonomous Engineering Supervisor
+OBJECTIVE: Decompose the user request into atomic, verifiable subtasks.
+
+RULES:
+1. Never execute code directly; delegate to CODER_WORKER or SANDBOX_RUNNER.
+2. Every subtask MUST include an objective verification command (e.g., pytest, mypy).
+3. Enforce a maximum of 3 retries per subtask before escalating to the human practitioner.
+4. Output strictly valid JSON matching:
+   {"subtask_id": "string", "worker": "CODER|SANDBOX|CRITIC", "instruction": "string", "verify_cmd": "string"}</code></pre>
+    </div>
+  </section>
+
+  <section id="tutorial-operations" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:#34d399;font-size:1.65rem;margin-bottom:1rem;">Tutorial 3: Step-by-Step Operational Deployment Checklist</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">
+      Follow these operational steps when deploying your personal agent stack for daily engineering work:
+    </p>
+    <ol style="color:var(--text-secondary);line-height:1.9;padding-left:1.5rem;">
+      <li><strong>Provision an Isolated Git Worktree:</strong> Create a dedicated branch and worktree so autonomous edits never pollute your main working directory.</li>
+      <li><strong>Start the Ephemeral Docker Sandbox:</strong> Launch your container with `--cap-drop=ALL`, `--read-only`, and a mounted `/workspace` volume.</li>
+      <li><strong>Configure Budget &amp; Iteration Caps:</strong> Set `MAX_RETRIES=3`, `TIMEOUT_SECONDS=60`, and a hard API spend ceiling in your `.env` file.</li>
+      <li><strong>Enable Structured Telemetry:</strong> Stream all tool calls, token counts, and exit codes to a local SQLite log or OpenTelemetry collector.</li>
+      <li><strong>Review the Final Diff:</strong> Inspect `git diff` and the passing test summary before merging the agent's branch.</li>
+    </ol>
+  </section>
+
+  <section id="tutorial-python-recovery" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.65rem;margin-bottom:1rem;">Tutorial 4: Production Python Circuit Breaker and Dead-Letter Recovery</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">
+      This production Python module implements a three-state circuit breaker backed by a local SQLite Dead-Letter Queue (DLQ). If an agent hits three identical failures or exceeds its token ceiling, it trips Open and persists the full debugging state for offline triage.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid var(--cyan,#38bdf8);border-radius:10px;margin:1.75rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:rgba(15,23,42,0.9);border-bottom:1px solid rgba(56,189,248,0.2);">
+        <span style="font-family:monospace;font-size:0.8rem;color:#38bdf8;">circuit_breaker_dlq.py</span>
+        <button class="copy-btn" type="button" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;color:#e2e8f0;font-family:monospace;font-size:0.85rem;line-height:1.6;"><code>import hashlib
+import json
+import sqlite3
+from dataclasses import dataclass
+from datetime import datetime, timezone
+
+
+@dataclass
+class TaskFailure:
+    task_id: str
+    error_message: str
+    git_diff: str
+    token_spend: int
+
+
+class AgentCircuitBreaker:
+    def __init__(self, db_path: str = "dlq_tasks.db", max_failures: int = 3, max_tokens: int = 120_000) -> None:
+        self.db_path = db_path
+        self.max_failures = max_failures
+        self.max_tokens = max_tokens
+        self.failure_counts: dict[str, int] = {}
+        self._init_db()
+
+    def _init_db(self) -> None:
+        with sqlite3.connect(self.db_path) as conn:
+            conn.execute(
+                """
+                CREATE TABLE IF NOT EXISTS dead_letter_queue (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    task_id TEXT NOT NULL,
+                    error_hash TEXT NOT NULL,
+                    error_message TEXT NOT NULL,
+                    git_diff TEXT NOT NULL,
+                    token_spend INTEGER NOT NULL,
+                    created_at TEXT NOT NULL
+                )
+                """
+            )
+
+    def record_failure(self, failure: TaskFailure) -> bool:
+        """Returns True if the circuit trips OPEN and routes the task to the DLQ."""
+        sig = hashlib.sha256(f"{failure.task_id}:{failure.error_message}".encode()).hexdigest()[:12]
+        self.failure_counts[sig] = self.failure_counts.get(sig, 0) + 1
+
+        if self.failure_counts[sig] >= self.max_failures or failure.token_spend >= self.max_tokens:
+            with sqlite3.connect(self.db_path) as conn:
+                conn.execute(
+                    """
+                    INSERT INTO dead_letter_queue (task_id, error_hash, error_message, git_diff, token_spend, created_at)
+                    VALUES (?, ?, ?, ?, ?, ?)
+                    """,
+                    (
+                        failure.task_id,
+                        sig,
+                        failure.error_message,
+                        failure.git_diff,
+                        failure.token_spend,
+                        datetime.now(timezone.utc).isoformat(),
+                    ),
+                )
+            return True
+        return False</code></pre>
+    </div>
+  </section>
+
+  <section id="tutorial-prompt-hygiene" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.65rem;margin-bottom:1rem;">Tutorial 5: Production Security &amp; Privacy Audit Prompt Template</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">
+      Use this system prompt for a dedicated read-only security reviewer agent that inspects every worktree diff before you merge it into your main branch.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.35);border-left:3px solid var(--gold,#fbbf24);border-radius:10px;margin:1.75rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:rgba(15,23,42,0.9);border-bottom:1px solid rgba(251,191,36,0.2);">
+        <span style="font-family:monospace;font-size:0.8rem;color:#fbbf24;">security_audit_prompt.txt</span>
+        <button class="copy-btn" type="button" style="background:rgba(251,191,36,0.15);color:#fbbf24;border:1px solid rgba(251,191,36,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;color:#e2e8f0;font-family:monospace;font-size:0.85rem;line-height:1.6;"><code>ROLE: Read-Only Security &amp; Privacy Auditor
+CONSTRAINTS:
+1. You have zero write permissions. Output ONLY a JSON verdict.
+2. Inspect the provided git diff for:
+   - Hardcoded API keys, bearer tokens, private keys, or .env leaks.
+   - Unsafe subprocess calls (shell=True), eval(), exec(), or unvalidated file paths.
+   - Network egress to unapproved domains or telemetry endpoints.
+   - PII (emails, phone numbers, home addresses) in test fixtures or logs.
+3. OUTPUT SCHEMA:
+{
+  "status": "PASS" | "BLOCK",
+  "findings": [{"file": "str", "line": "int", "severity": "HIGH|MEDIUM|LOW", "reason": "str"}],
+  "recommendation": "str"
+}</code></pre>
+    </div>
+  </section>
+
+  <section id="tutorial-operations-recovery" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:#34d399;font-size:1.65rem;margin-bottom:1rem;">Tutorial 6: Step-by-Step Incident Recovery and Credential Rotation Runbook</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">
+      When a circuit breaker trips or a security audit flags a diff, execute this five-step recovery runbook:
+    </p>
+    <ol style="color:var(--text-secondary);line-height:1.9;padding-left:1.5rem;">
+      <li><strong>Freeze the Worktree:</strong> Stop the background worker container immediately with `docker kill` and preserve the worktree branch for forensic inspection.</li>
+      <li><strong>Inspect the DLQ Record:</strong> Query `dlq_tasks.db` for the `error_hash`, `token_spend`, and `git_diff` to identify whether the failure was a flaky test, a prompt loop, or a sandbox violation.</li>
+      <li><strong>Rotate Scoped Credentials:</strong> If any token was printed to stdout or container logs, revoke it immediately at the provider dashboard and issue a fresh short-lived key.</li>
+      <li><strong>Patch the Acceptance Contract:</strong> Tighten the failing unit test or file-scope constraint so the worker cannot repeat the same error signature.</li>
+      <li><strong>Replay in Half-Open Mode:</strong> Run a single canary iteration with `MAX_RETRIES=1` before returning the worker pool to normal asynchronous operation.</li>
+    </ol>
+  </section>
+
+  <section id="references" style="margin-bottom:3rem;background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.25);border-radius:12px;padding:1.75rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.35rem;margin-bottom:1rem;">Live References and Technical Documentation</h2>
+    <ul style="color:var(--text-secondary);line-height:1.9;padding-left:1.25rem;">
+      <li><a class="gold-link" href="https://www.anthropic.com/engineering/building-effective-agents" rel="noopener" target="_blank">Anthropic Engineering: Building Effective Agents</a> - Architectural patterns for workflows, tool use, and evaluator-optimizer loops.</li>
+      <li><a class="gold-link" href="https://langchain-ai.github.io/langgraph/" rel="noopener" target="_blank">LangGraph Documentation</a> - Stateful, cyclic multi-agent orchestration with persistent checkpointing.</li>
+      <li><a class="gold-link" href="https://docs.pydantic.dev/latest/" rel="noopener" target="_blank">Pydantic Documentation</a> - Strict runtime schema validation for structured agent outputs.</li>
+      <li><a class="gold-link" href="https://docs.docker.com/engine/security/" rel="noopener" target="_blank">Docker Engine Security</a> - Container isolation, capability dropping, and non-root execution hardening.</li>
+      <li><a class="gold-link" href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" rel="noopener" target="_blank">OWASP Top 10 for LLM Applications</a> - Security risks including prompt injection, sensitive information disclosure, and excessive agency.</li>
+      <li><a class="gold-link" href="https://opentelemetry.io/docs/specs/otel/" rel="noopener" target="_blank">OpenTelemetry Specification</a> - Vendor-neutral distributed tracing and structured telemetry for agentic pipelines.</li>
+      <li><a class="gold-link" href="https://github.com/gitleaks/gitleaks" rel="noopener" target="_blank">Gitleaks Secret Scanner</a> - Automated pre-commit detection of hardcoded API keys, tokens, and credentials.</li>
+      <li><a class="gold-link" href="https://ollama.com/" rel="noopener" target="_blank">Ollama Local Inference</a> - Running local open-weight models for privacy-first PII redaction and offline triage.</li>
+      <li><a class="gold-link" href="https://git-scm.com/docs/git-worktree" rel="noopener" target="_blank">Git Worktree Documentation</a> - Managing multiple isolated working trees attached to a single repository.</li>
+      <li><a class="gold-link" href="https://docs.python.org/3/library/sqlite3.html" rel="noopener" target="_blank">Python sqlite3 Standard Library</a> - Lightweight local persistence for dead-letter queues and agent state.</li>
+    </ul>
+  </section>
+
+  <div class="service-cta-buttons" style="margin-top:2rem;">
+    <a class="btn btn-commission btn-lg" href="../contact.html">Commission Advanced AI Agents →</a>
+    <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+  </div>
 </div>
-</div>
-</section>
-<div class="divider" style="margin-top:3rem;"></div>
+
+<script>
+document.querySelectorAll('.copy-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var code = btn.closest('.code-window').querySelector('pre').innerText;
+    navigator.clipboard.writeText(code).then(function() {
+      var orig = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(function() { btn.textContent = orig; }, 1800);
+    });
+  });
+});
+</script>
 </main>
     <!-- START:FOOTER -->
     <footer id="links">

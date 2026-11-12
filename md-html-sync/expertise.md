@@ -77,8 +77,9 @@ In-depth technical systems design covering Tokio async runtimes, Burn & Candle
 
 ### 11. Role #11
 Structured engagement models for engineering teams, fast-growing tech startups, and forward-looking
- businesses - covering Claude Agent Teams, the Google Gemini AI Ecosystem (Google AI Studio, Google
- Antigravity, Gemini Deep Think, Gemini Agents & Gemini 4 Argon), live & remote workforce training,
+ businesses - covering the Claude Ecosystem (Claude Agent Teams, Claude Code, Claude Desktop, Claude Artifacts,
+ Claude Mods, Claude API/MCP Automation), the Google Gemini AI Ecosystem (Google AI Studio, Google
+ Antigravity, Gemini Deep Think, Gemini Agents & Gemini 4 Models), live & remote workforce training,
  Local LLM cost
  reduction, and quantum systems exploration.
 
@@ -90,14 +91,14 @@ Structured engagement models for engineering teams, fast-growing tech startups, 
 `Python` · `Rust` · `Golang` · `C` · `C++` · `Julia` · `SQL` · `Bash` · `JavaScript` · `TypeScript` · `Mojo` · `HTML/CSS`
 
 ### Generative AI Systems
-`LLMs` · `SLMs` · `Agentic AI` · `Agentic Assistants` · `AI Agents` · `LangChain` · `LangGraph` · `LangSmith`
+`LLMs` · `SLMs` · `AI Agents` · `LangChain` · `LangGraph` · `LangSmith`
 
 ### Quantum Systems
 `IBM
  Qiskit` · `PennyLane` · `Quantum Machine Learning` · `Quantum Algorithms` · `VQE` · `QAOA` · `PQC Advisory`
 
 ### AI Tools Expertise
-`Claude Code` · `Claude Desktop` · `Google Antigravity` · `Google Gemini Notebook` · `Google AI Studio` · `Gemini Desktop` · `OpenCode` · `OpenRouter`
+`Claude Code` · `Claude Desktop` · `Google Antigravity` · `Google Gemini Notebook` · `Google AI Studio` · `Gemini Desktop`
 
 ### Local LLM & Local AI
 `Ollama` · `vLLM` · `llama.cpp` · `GGUF` · `LM Studio` · `Qwen` · `Gemma` · `Jev Alternatives` · `Laya`
@@ -109,13 +110,13 @@ Structured engagement models for engineering teams, fast-growing tech startups, 
 `Gemini LLMs` · `Google Deep Research` · `Gemini Agents` · `Gemini Spark` · `Google Nano Banana` · `Google Flow` · `Google DeepMind`
 
 ### Claude Expertise
-`Claude Agent Teams` · `Claude Skills` · `Claude AI Artifacts` · `Claude Motion` · `Claude Dashboards` · `Claude Mods` · `Claude Subagents`
+`Claude Agent Teams` · `Claude Skills` · `Claude Artifacts` · `Claude Motion` · `Claude Dashboards` · `Claude Mods` · `Claude Subagents`
 
 ### Open-Source Systems
-`HuggingFace Models` · `HuggingFace Spaces` · `Agentic Assistants` · `Agentic Skills` · `OpenCode` · `Agentics Foundation`
+`HuggingFace Models` · `HuggingFace Spaces` · `OpenRouter` · `Nvidia NIM Services` · `OpenCode` · `Agentics Foundation`
 
 ### Automation Expertise
-`n8n Local Deployment` · `Make` · `IFTTT` · `Activepieces` · `Windmill` · `Zapier` · `AI Desktop Ecosystems`
+`n8n Local Deployment` · `Claude Automation` · `MCP Automation` · `Gemini Automation` · `API Automation`
 
 ---
 

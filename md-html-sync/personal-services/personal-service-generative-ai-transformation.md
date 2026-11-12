@@ -2,8 +2,15 @@
 ## Business AI Transformation Service - Thomas Cherickal
 
 > **// PERSONAL SERVICE SPECIFICATION 01**  
-> **Move from casual, one-off chatbot queries to an AI Second Brain and proactive thinking partner. Master the CODE framework,
- habit stacking, active recall, and customized prompt playbooks to multiply your personal productivity with zero code.**
+> **Business transformation, verification, and implementation.**
+
+---
+
+## Personal AI Second Brain Architecture
+
+A durable AI Second Brain never locks your thinking inside a proprietary SaaS database. Everything starts with plain-text Markdown files stored locally on your machine and synced via Git or encrypted cloud storage. Plain text guarantees that your notes remain readable decades from now and can be parsed by any language model, embedding engine, or command-line script.
+
+Above the storage layer sits a lightweight retrieval layer. When you ask a question about a project you researched six months ago, a local embedding index retrieves the top matching chunks from your notes and injects them into the model context. This pattern - personal Retrieval-Augmented Generation - eliminates hallucinated recall and grounds every AI response in your own verified reading and experience.
 
 ---
 

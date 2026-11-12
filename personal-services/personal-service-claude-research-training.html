@@ -105,6 +105,7 @@
 <link href="../css/service.css" rel="stylesheet"/>
 <link href="../css/personal-services.css" rel="stylesheet"/>
 <link href="../css/responsive.css" rel="stylesheet"/>
+<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -257,91 +258,397 @@
   <!-- END:HEADER -->
 <a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
 <main id="main">
-<!-- PAGE HERO HEADER -->
-<section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
-<p class="section-label">// SERVICE SPECIFICATION 15</p>
-<h1>Claude Research Training</h1>
-<p class="section-sub" style="max-width:760px;margin:0.75rem auto 0;line-height:1.8;">
-  Private 1-on-1 personal research masterclass for solo builders, strategy consultants, and domain analysts: master 1M token context synthesis, literature reviews, patent analysis, and executive research dossiers.
-</p>
-<div style="margin-top:1.5rem;">
-<a class="btn btn-commission" href="../contact.html" style="text-decoration:none !important;">
-  Book 1-on-1 Claude Research Training →
-</a>
+<div class="container" style="max-width:1040px;margin:0 auto;padding:2.5rem 1.25rem;">
+  <div class="hero" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.28);border-radius:16px;padding:2.5rem;margin-bottom:2rem;">
+    <p class="section-label" style="color:var(--cyan,#38bdf8);letter-spacing:0.1em;font-size:0.8rem;text-transform:uppercase;margin-bottom:0.5rem;">// PERSONAL SERVICE SPECIFICATION - CLAUDE RESEARCH</p>
+    <h1>Claude Research Training</h1>
+    <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.75;max-width:820px;">
+      Master deep literature synthesis, extended thinking analysis, prompt caching for static document repositories, and citation-verified market intelligence dossiers using Claude models. Built for solo founders, independent consultants, and analysts who need high-precision reasoning over complex corpora.
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:2rem;">
+      <div style="background:#040711;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:1.6rem;font-weight:700;color:var(--gold,#fbbf24);">90% Savings</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Prompt Caching on Static Corpora</div>
+      </div>
+      <div style="background:#040711;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:1.6rem;font-weight:700;color:var(--cyan,#38bdf8);">1-on-1</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Private Practitioner Coaching</div>
+      </div>
+      <div style="background:#040711;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:1.6rem;font-weight:700;color:#34d399;">Citations</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Exact Span &amp; Quote Grounding</div>
+      </div>
+      <div style="background:#040711;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:1.6rem;font-weight:700;color:#e879f9;">100% IP</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Full Ownership of Dossiers</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="table-of-contents" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.25);border-radius:12px;padding:1.75rem;margin-bottom:2.5rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.25rem;margin-bottom:1rem;">Table of Contents</h2>
+    <ol style="display:flex;flex-direction:column;gap:0.6rem;list-style:none;padding-left:0;color:var(--text-secondary);line-height:1.7;">
+      <li><a class="gold-link" href="#claude-synthesis">1. High-Precision Synthesis with Claude Extended Thinking</a></li>
+      <li><a class="gold-link" href="#prompt-caching">2. Cost-Optimized Prompt Caching for Personal Research</a></li>
+      <li><a class="gold-link" href="#citation-grounding">3. Native Citations API and Verifiable Dossiers</a></li>
+      <li><a class="gold-link" href="#competitive-intelligence">4. Competitive &amp; Market Intelligence Workflows</a></li>
+      <li><a class="gold-link" href="#productivity-architecture">5. Personal Research Productivity Architecture and Batched Thinking</a></li>
+      <li><a class="gold-link" href="#privacy-security-hygiene">6. Privacy, Zero-Retention Hygiene, and Local Pre-Processing</a></li>
+      <li><a class="gold-link" href="#failure-mode-recovery">7. Failure-Mode Recovery, Thinking Budget Caps, and Rate-Limit Backoff</a></li>
+      <li><a class="gold-link" href="#tutorial-python">8. Tutorial 1: Production Python Claude Cached Research Script</a></li>
+      <li><a class="gold-link" href="#tutorial-prompt">9. Tutorial 2: Production Intelligence Dossier Prompt Template</a></li>
+      <li><a class="gold-link" href="#tutorial-operations">10. Tutorial 3: Step-by-Step Personal Research Workflow</a></li>
+      <li><a class="gold-link" href="#tutorial-python-backoff">11. Tutorial 4: Production Python Exponential Backoff &amp; Thinking Budget Guard</a></li>
+      <li><a class="gold-link" href="#tutorial-prompt-redteam">12. Tutorial 5: Production Steelman &amp; Counter-Thesis Prompt Template</a></li>
+      <li><a class="gold-link" href="#tutorial-operations-hygiene">13. Tutorial 6: Step-by-Step Zero-Retention &amp; Citation Verification Runbook</a></li>
+      <li><a class="gold-link" href="#references">14. Live References and Technical Documentation</a></li>
+    </ol>
+  </div>
+
+  <section id="claude-synthesis" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.65rem;margin-bottom:1rem;">High-Precision Synthesis with Claude Extended Thinking</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Independent consultants and solo founders often need to synthesize dense, conflicting primary sources: patent filings, S-1 disclosures, clinical trial reports, and technical benchmarks. Standard single-pass generation can gloss over subtle edge cases. By pairing Claude Opus or Claude Sonnet with <a class="gold-link" href="#references">Anthropic extended thinking</a>, you give the model an explicit reasoning scratchpad to cross-check hypotheses before writing a single word of the final dossier.
+    </p>
+
+    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(56,189,248,0.25);background:#040711;margin:1.5rem 0;">
+      <rect width="960" height="400" fill="#040711"/>
+      <text x="480" y="38" fill="#fbbf24" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">CLAUDE EXTENDED THINKING RESEARCH ARCHITECTURE</text>
+      <rect x="70" y="120" width="220" height="140" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="180" y="160" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">PRIMARY SOURCES</text>
+      <text x="180" y="190" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Patents, Filings, Papers</text>
+      <text x="180" y="218" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">XML &lt;document&gt; Tags</text>
+      <line x1="290" y1="190" x2="365" y2="190" stroke="#fbbf24" stroke-width="2"/>
+      <rect x="365" y="120" width="230" height="140" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+      <text x="480" y="160" fill="#fbbf24" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">EXTENDED THINKING</text>
+      <text x="480" y="190" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Hypothesis Testing</text>
+      <text x="480" y="218" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Contradiction Audit</text>
+      <line x1="595" y1="190" x2="670" y2="190" stroke="#34d399" stroke-width="2"/>
+      <rect x="670" y="120" width="220" height="140" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+      <text x="780" y="160" fill="#34d399" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">DECISION DOSSIER</text>
+      <text x="780" y="190" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Verified Executive Brief</text>
+      <text x="780" y="218" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Exact Span Citations</text>
+    </svg>
+  </section>
+
+  <section id="prompt-caching" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.65rem;margin-bottom:1rem;">Cost-Optimized Prompt Caching for Personal Research</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      When you interrogate a 150,000-token collection of competitor filings or academic papers twenty times in an afternoon, re-sending the entire corpus on every turn wastes both time and budget. Using <a class="gold-link" href="#references">Anthropic prompt caching</a>, you mark the static document prefix with `cache_control: {"type": "ephemeral"}`, cutting recurring input token costs by up to 90% and reducing time-to-first-token dramatically.
+    </p>
+
+    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(56,189,248,0.25);background:#040711;margin:1.5rem 0;">
+      <rect width="960" height="400" fill="#040711"/>
+      <text x="480" y="38" fill="#38bdf8" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">PROMPT CACHING FOR ITERATIVE RESEARCH</text>
+      <rect x="80" y="120" width="260" height="150" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="210" y="160" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">CACHED CORPUS PREFIX</text>
+      <text x="210" y="190" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Static PDFs &amp; Filings</text>
+      <text x="210" y="220" fill="#34d399" font-family="monospace" font-size="12" text-anchor="middle">90% Read Cost Reduction</text>
+      <line x1="340" y1="195" x2="430" y2="195" stroke="#fbbf24" stroke-width="2"/>
+      <rect x="430" y="120" width="200" height="150" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+      <text x="530" y="160" fill="#fbbf24" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">DYNAMIC QUERY</text>
+      <text x="530" y="190" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Follow-up Questions</text>
+      <text x="530" y="220" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Only New Tokens Billed</text>
+      <line x1="630" y1="195" x2="700" y2="195" stroke="#e879f9" stroke-width="2"/>
+      <rect x="700" y="120" width="180" height="150" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+      <text x="790" y="160" fill="#e879f9" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">FAST RESPONSE</text>
+      <text x="790" y="190" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Low Latency</text>
+      <text x="790" y="220" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">High Throughput</text>
+    </svg>
+  </section>
+
+  <section id="citation-grounding" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:#34d399;font-size:1.65rem;margin-bottom:1rem;">Native Citations API and Verifiable Dossiers</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Every claim in a professional research brief must be traceable to its exact origin. Using <a class="gold-link" href="#references">Anthropic Citations</a>, Claude attaches character-level or page-level source spans directly to each generated sentence, allowing your local scripts to render clickable proof links without manual fact-checking.
+    </p>
+
+    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(52,211,153,0.25);background:#040711;margin:1.5rem 0;">
+      <rect width="960" height="400" fill="#040711"/>
+      <text x="480" y="38" fill="#34d399" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">NATIVE CITATIONS &amp; SPAN VERIFICATION</text>
+      <rect x="100" y="130" width="240" height="120" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+      <text x="220" y="170" fill="#34d399" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">DOCUMENT CHUNKS</text>
+      <text x="220" y="200" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">citations.enabled = true</text>
+      <line x1="340" y1="190" x2="410" y2="190" stroke="#38bdf8" stroke-width="2"/>
+      <rect x="410" y="130" width="220" height="120" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="520" y="170" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">CLAUDE SYNTHESIS</text>
+      <text x="520" y="200" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Sentence + Span Index</text>
+      <line x1="630" y1="190" x2="700" y2="190" stroke="#fbbf24" stroke-width="2"/>
+      <rect x="700" y="130" width="180" height="120" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+      <text x="790" y="170" fill="#fbbf24" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">AUDIT TRAIL</text>
+      <text x="790" y="200" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Zero Hallucination</text>
+    </svg>
+  </section>
+
+  <section id="competitive-intelligence" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:#e879f9;font-size:1.65rem;margin-bottom:1rem;">Competitive &amp; Market Intelligence Workflows</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Turn raw market artifacts - product changelogs, pricing pages, job postings, and earnings transcripts - into structured weekly intelligence briefs. You learn how to automate ingestion, run delta comparisons against prior weeks, and surface strategic shifts in minutes.
+    </p>
+
+    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(232,121,249,0.25);background:#040711;margin:1.5rem 0;">
+      <rect width="960" height="400" fill="#040711"/>
+      <text x="480" y="38" fill="#e879f9" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">AUTOMATED MARKET INTELLIGENCE LOOP</text>
+      <rect x="90" y="135" width="220" height="110" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+      <text x="200" y="175" fill="#e879f9" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">INGEST SIGNALS</text>
+      <text x="200" y="205" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Changelogs &amp; Filings</text>
+      <line x1="310" y1="190" x2="370" y2="190" stroke="#38bdf8" stroke-width="2"/>
+      <rect x="370" y="135" width="220" height="110" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="480" y="175" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">DELTA ANALYSIS</text>
+      <text x="480" y="205" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Compare vs Prior Week</text>
+      <line x1="590" y1="190" x2="650" y2="190" stroke="#fbbf24" stroke-width="2"/>
+      <rect x="650" y="135" width="220" height="110" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+      <text x="760" y="175" fill="#fbbf24" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">WEEKLY DOSSIER</text>
+      <text x="760" y="205" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Actionable Brief</text>
+    </svg>
+  </section>
+
+  <section id="productivity-architecture" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.65rem;margin-bottom:1rem;">Personal Research Productivity Architecture and Batched Thinking</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      High-leverage personal research with Claude relies on separating interactive exploration from asynchronous batch synthesis. When you use <a class="gold-link" href="#references">Anthropic Message Batches API</a> alongside <a class="gold-link" href="#references">Prompt Caching</a>, you can submit fifty deep-reading analytical tasks over a cached competitive intelligence corpus at a 50% batch discount, wake up to fifty structured Markdown dossiers, and spend your morning reviewing only the highest-signal contradictions.
+    </p>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Every batch job should pair Extended Thinking with a deterministic output schema. By logging both the `thinking` block summary and the final cited answer into a local SQLite or DuckDB research index, you build a searchable personal intelligence archive that compounds in value every week without ever re-paying for the same synthesis.
+    </p>
+    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.25);background:#040711;margin:1.5rem 0;">
+      <rect width="960" height="400" fill="#040711"/>
+      <text x="480" y="34" fill="#fbbf24" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">CLAUDE PROMPT CACHE + MESSAGE BATCHES ARCHITECTURE</text>
+      <rect x="40" y="90" width="210" height="200" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="145" y="122" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">1. Cached Prefix</text>
+      <text x="145" y="155" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">10-K Filings &amp; Briefs</text>
+      <text x="145" y="180" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">cache_control: ephemeral</text>
+      <text x="145" y="205" fill="#34d399" font-family="monospace" font-size="11" text-anchor="middle">90% Read Cost Savings</text>
+      <line x1="250" y1="190" x2="320" y2="190" stroke="#38bdf8" stroke-width="2"/>
+      <rect x="320" y="75" width="300" height="230" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+      <text x="470" y="108" fill="#fbbf24" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">2. Message Batches Queue</text>
+      <rect x="340" y="128" width="260" height="48" rx="6" fill="#040711" stroke="#34d399" stroke-width="1.5"/>
+      <text x="470" y="157" fill="#34d399" font-family="monospace" font-size="11" text-anchor="middle">Extended Thinking (Budget Cap)</text>
+      <rect x="340" y="190" width="260" height="48" rx="6" fill="#040711" stroke="#e879f9" stroke-width="1.5"/>
+      <text x="470" y="219" fill="#e879f9" font-family="monospace" font-size="11" text-anchor="middle">Native Citations API Grounding</text>
+      <text x="470" y="275" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">50% Batch API Discount</text>
+      <line x1="620" y1="190" x2="690" y2="190" stroke="#34d399" stroke-width="2"/>
+      <rect x="690" y="90" width="230" height="200" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+      <text x="805" y="122" fill="#34d399" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">3. Local Research Index</text>
+      <text x="805" y="155" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">SQLite / DuckDB Archive</text>
+      <text x="805" y="180" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Cited Markdown Dossiers</text>
+      <text x="805" y="205" fill="#fbbf24" font-family="monospace" font-size="11" text-anchor="middle">Morning Triage Ready</text>
+      <text x="480" y="365" fill="#64748b" font-family="monospace" font-size="11" text-anchor="middle">Asynchronous batch synthesis - compound your personal intelligence archive</text>
+    </svg>
+  </section>
+
+  <section id="privacy-security-hygiene" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.65rem;margin-bottom:1rem;">Privacy, Zero-Retention Hygiene, and Local Pre-Processing</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Personal research frequently involves confidential M&amp;A memos, proprietary product roadmaps, or private interview notes. Always verify that your API workspace operates under commercial <a class="gold-link" href="#references">Anthropic Zero Data Retention</a> or non-training API terms rather than consumer chat tiers.
+    </p>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Before sending any document to the API, run a local pre-processing pass to strip metadata, EXIF headers, and personally identifiable information. Store your API keys in your operating system keychain or a `.env` file excluded by `.gitignore`, and never log raw request payloads to cloud observability tools.
+    </p>
+  </section>
+
+  <section id="failure-mode-recovery" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:#e879f9;font-size:1.65rem;margin-bottom:1rem;">Failure-Mode Recovery, Thinking Budget Caps, and Rate-Limit Backoff</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Extended Thinking unlocks deep analytical reasoning, but an unconstrained `budget_tokens` parameter can cause latency spikes and unexpected spend on ambiguous queries. Always pair Extended Thinking with a hard `budget_tokens` ceiling (for example, `4096` or `8192` tokens) and a strict `max_tokens` cap on the final response.
+    </p>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      When running parallel research workers, `429 RateLimitError` and `529 OverloadedError` responses are normal operational events. Wrap every API call in exponential backoff with full jitter, honoring the `Retry-After` header when present, and checkpoint partial results to disk after every completed document so a transient network drop never forces you to restart a fifty-document batch.
+    </p>
+    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(232,121,249,0.25);background:#040711;margin:1.5rem 0;">
+      <rect width="960" height="400" fill="#040711"/>
+      <text x="480" y="34" fill="#e879f9" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">RATE-LIMIT BACKOFF &amp; THINKING BUDGET GUARDRAILS</text>
+      <rect x="50" y="100" width="200" height="100" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="150" y="135" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">1. API Request</text>
+      <text x="150" y="160" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">budget_tokens &lt;= 8192</text>
+      <text x="150" y="180" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">max_tokens &lt;= 4096</text>
+      <line x1="250" y1="150" x2="340" y2="150" stroke="#fbbf24" stroke-width="2"/>
+      <rect x="340" y="100" width="240" height="100" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+      <text x="460" y="135" fill="#fbbf24" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">2. 429 / 529 Handler</text>
+      <text x="460" y="160" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Check Retry-After header</text>
+      <text x="460" y="180" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Exponential + Full Jitter</text>
+      <line x1="580" y1="150" x2="670" y2="150" stroke="#34d399" stroke-width="2"/>
+      <rect x="670" y="100" width="240" height="100" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+      <text x="790" y="135" fill="#34d399" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">3. Disk Checkpoint</text>
+      <text x="790" y="160" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Save cited JSONL row</text>
+      <text x="790" y="180" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Resume cleanly on restart</text>
+      <text x="480" y="355" fill="#64748b" font-family="monospace" font-size="11" text-anchor="middle">Bounded thinking costs and zero lost progress during transient API throttling</text>
+    </svg>
+  </section>
+
+  <section id="tutorial-python" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.65rem;margin-bottom:1rem;">Tutorial 1: Production Python Claude Cached Research Script</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      This Python script caches a large static research corpus using Anthropic prompt caching and runs an analytical query over it.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan,#38bdf8);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(56,189,248,0.2);">
+        <span style="font-family:monospace;font-size:0.85rem;color:var(--cyan,#38bdf8);">claude_cached_research.py</span>
+        <button class="copy-btn" type="button" style="background:rgba(56,189,248,0.12);color:#38bdf8;border:1px solid rgba(56,189,248,0.35);border-radius:6px;padding:0.3rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;overflow-x:auto;color:#e2e8f0;font-family:monospace;font-size:0.86rem;line-height:1.6;"><code>from anthropic import Anthropic
+
+def query_cached_corpus(corpus_text: str, question: str) -&gt; str:
+    client = Anthropic()
+    response = client.messages.create(
+        model="claude-sonnet-4-20250514",
+        max_tokens=2048,
+        system=[
+            {
+                "type": "text",
+                "text": "You are a rigorous research analyst. Cite exact quotes from the corpus.",
+            },
+            {
+                "type": "text",
+                "text": f"&lt;corpus&gt;
+{corpus_text}
+&lt;/corpus&gt;",
+                "cache_control": {"type": "ephemeral"},
+            },
+        ],
+        messages=[{"role": "user", "content": question}],
+    )
+    return response.content[0].text</code></pre>
+    </div>
+  </section>
+
+  <section id="tutorial-prompt" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.65rem;margin-bottom:1rem;">Tutorial 2: Production Intelligence Dossier Prompt Template</h2>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.32);border-left:3px solid var(--gold,#fbbf24);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(251,191,36,0.2);">
+        <span style="font-family:monospace;font-size:0.85rem;color:var(--gold,#fbbf24);">dossier_prompt.txt</span>
+        <button class="copy-btn" type="button" style="background:rgba(251,191,36,0.12);color:#fbbf24;border:1px solid rgba(251,191,36,0.35);border-radius:6px;padding:0.3rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;overflow-x:auto;color:#e2e8f0;font-family:monospace;font-size:0.86rem;line-height:1.6;"><code>ROLE: Independent Market Intelligence Analyst
+TASK: Synthesize the attached competitor filings into an executive decision dossier.
+
+REQUIREMENTS:
+1. Separate verified facts (with verbatim quotes) from strategic inferences.
+2. Highlight any contradictions between public marketing claims and financial filings.
+3. End with a 3-item action checklist for a solo founder.</code></pre>
+    </div>
+  </section>
+
+  <section id="tutorial-operations" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:#34d399;font-size:1.65rem;margin-bottom:1rem;">Tutorial 3: Step-by-Step Personal Research Workflow</h2>
+    <ol style="color:var(--text-secondary);line-height:1.9;padding-left:1.5rem;">
+      <li><strong>Assemble Your XML Corpus:</strong> Wrap each primary document in `&lt;document id="..."&gt;` tags so Claude can cite sources unambiguously.</li>
+      <li><strong>Attach Cache Control:</strong> Place `cache_control: {"type": "ephemeral"}` on the corpus block before running your question batch.</li>
+      <li><strong>Enable Extended Thinking:</strong> Use extended thinking for cross-document contradiction checks and quantitative comparisons.</li>
+      <li><strong>Verify Every Quote:</strong> Run a quick programmatic substring check to confirm every quoted span exists in the raw corpus.</li>
+      <li><strong>Export &amp; Archive:</strong> Save the final dossier as Markdown in your personal knowledge repository.</li>
+    </ol>
+  </section>
+
+  <section id="tutorial-python-backoff" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.65rem;margin-bottom:1rem;">Tutorial 4: Production Python Exponential Backoff &amp; Thinking Budget Guard</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">
+      This production Python wrapper enforces a strict Extended Thinking budget cap and handles `429 RateLimitError` and `529 OverloadedError` responses with full-jitter exponential backoff.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid var(--cyan,#38bdf8);border-radius:10px;margin:1.75rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:rgba(15,23,42,0.9);border-bottom:1px solid rgba(56,189,248,0.2);">
+        <span style="font-family:monospace;font-size:0.8rem;color:#38bdf8;">claude_backoff_guard.py</span>
+        <button class="copy-btn" type="button" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;color:#e2e8f0;font-family:monospace;font-size:0.85rem;line-height:1.6;"><code>import random
+import time
+import anthropic
+
+
+def call_claude_with_guard(
+    client: anthropic.Anthropic,
+    prompt: str,
+    thinking_budget: int = 4096,
+    max_retries: int = 4,
+) -> str:
+    for attempt in range(max_retries):
+        try:
+            response = client.messages.create(
+                model="claude-3-7-sonnet-20250219",
+                max_tokens=thinking_budget + 2048,
+                thinking={"type": "enabled", "budget_tokens": thinking_budget},
+                messages=[{"role": "user", "content": prompt}],
+            )
+            text_blocks = [b.text for b in response.content if b.type == "text"]
+            return "\n".join(text_blocks)
+        except (anthropic.RateLimitError, anthropic.APIStatusError) as exc:
+            if attempt == max_retries - 1:
+                raise
+            base_delay = min(30.0, 2.0 ** attempt)
+            sleep_for = random.uniform(0, base_delay)
+            time.sleep(sleep_for)
+    return ""</code></pre>
+    </div>
+  </section>
+
+  <section id="tutorial-prompt-redteam" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.65rem;margin-bottom:1rem;">Tutorial 5: Production Steelman &amp; Counter-Thesis Prompt Template</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">
+      Use this prompt after generating your primary research dossier to force Claude to construct the strongest possible counter-argument against your conclusions.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.35);border-left:3px solid var(--gold,#fbbf24);border-radius:10px;margin:1.75rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:rgba(15,23,42,0.9);border-bottom:1px solid rgba(251,191,36,0.2);">
+        <span style="font-family:monospace;font-size:0.8rem;color:#fbbf24;">steelman_counter_prompt.txt</span>
+        <button class="copy-btn" type="button" style="background:rgba(251,191,36,0.15);color:#fbbf24;border:1px solid rgba(251,191,36,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;color:#e2e8f0;font-family:monospace;font-size:0.85rem;line-height:1.6;"><code>ROLE: Independent Strategy &amp; Research Critic
+OBJECTIVE: Steelman the strongest possible counter-thesis against the attached dossier.
+INSTRUCTIONS:
+1. Identify the 3 mostload-bearing assumptions in the primary dossier.
+2. Using ONLY the provided source documents, cite evidence that weakens or contradicts each assumption.
+3. Propose an alternative interpretation that explains the same data points.
+4. Format your response in Markdown with exact document citations for every counter-claim.</code></pre>
+    </div>
+  </section>
+
+  <section id="tutorial-operations-hygiene" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:#34d399;font-size:1.65rem;margin-bottom:1rem;">Tutorial 6: Step-by-Step Zero-Retention &amp; Citation Verification Runbook</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">
+      Follow this five-step operational runbook for confidential personal or client research sprints:
+    </p>
+    <ol style="color:var(--text-secondary);line-height:1.9;padding-left:1.5rem;">
+      <li><strong>Verify Commercial API Tier:</strong> Confirm your `ANTHROPIC_API_KEY` belongs to an organization with zero-training API terms enabled.</li>
+      <li><strong>Scrub Local Metadata:</strong> Strip PDF author metadata and redact sensitive entity names locally before building your cached prefix.</li>
+      <li><strong>Pin Thinking Budget:</strong> Set `budget_tokens` to `4096` for routine synthesis and `8192` only for final contradiction audits.</li>
+      <li><strong>Checkpoint JSONL Outputs:</strong> Append each completed batch response to a local `.jsonl` file so transient rate limits never lose progress.</li>
+      <li><strong>Spot-Check Native Citations:</strong> Verify at least three native citation spans per dossier against the original source PDF before publishing.</li>
+    </ol>
+  </section>
+
+  <section id="references" style="margin-bottom:3rem;background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.25);border-radius:12px;padding:1.75rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.35rem;margin-bottom:1rem;">Live References and Technical Documentation</h2>
+    <ul style="color:var(--text-secondary);line-height:1.9;padding-left:1.25rem;">
+      <li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching" rel="noopener" target="_blank">Anthropic Prompt Caching</a> - Reduce recurring input token costs by up to 90% on static research corpora.</li>
+      <li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking" rel="noopener" target="_blank">Anthropic Extended Thinking</a> - Step-by-step reasoning scratchpads for complex analytical synthesis.</li>
+      <li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/citations" rel="noopener" target="_blank">Anthropic Citations API</a> - Native source span attribution for verifiable research outputs.</li>
+      <li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/batch-processing" rel="noopener" target="_blank">Anthropic Message Batches API</a> - Asynchronous batch processing at 50% reduced token cost.</li>
+      <li><a class="gold-link" href="https://docs.anthropic.com/en/api/rate-limits" rel="noopener" target="_blank">Anthropic API Rate Limits</a> - Handling 429 and 529 responses with exponential backoff.</li>
+      <li><a class="gold-link" href="https://privacy.anthropic.com/en/articles/7996868-is-my-data-used-for-model-training" rel="noopener" target="_blank">Anthropic Commercial Data Privacy</a> - Zero-training guarantees for commercial API traffic.</li>
+      <li><a class="gold-link" href="https://duckdb.org/docs/" rel="noopener" target="_blank">DuckDB Documentation</a> - High-speed local analytical storage for personal research archives.</li>
+      <li><a class="gold-link" href="https://docs.python.org/3/library/sqlite3.html" rel="noopener" target="_blank">Python sqlite3 Standard Library</a> - Lightweight local persistence for research checkpoints.</li>
+      <li><a class="gold-link" href="https://jsonlines.org/" rel="noopener" target="_blank">JSON Lines (JSONL) Specification</a> - Streaming, append-only structured output format for batch pipelines.</li>
+      <li><a class="gold-link" href="https://www.sec.gov/edgar/searchedgar/companysearch" rel="noopener" target="_blank">SEC EDGAR Filings</a> - Primary source for 10-K and 10-Q competitive intelligence corpora.</li>
+    </ul>
+  </section>
+
+  <div class="service-cta-buttons" style="margin-top:2rem;">
+    <a class="btn btn-commission btn-lg" href="../contact.html">Commission Claude Research Training →</a>
+    <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+  </div>
 </div>
-</section>
-<div class="divider"></div>
-<!-- STRUCTURED SPECIFICATION LISTS -->
-<section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
-<div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:2.5rem;box-shadow:var(--glow-gold);">
-<h2 style="font-family:var="font-display";color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">Service Overview &amp; Scope</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>1M Token Context Synthesis:</strong> Ingesting, parsing, and synthesizing dozens of research papers, corporate annual reports, or technical specifications in a single unified prompt session.</li>
-<li><strong>Multi-Document Comparative Analysis:</strong> Building detailed comparison tables that reveal conflicting methodologies, data discrepancies, and chronological breakthroughs across source files.</li>
-<li><strong>Academic &amp; Patent Literature Reviews:</strong> Extracting core research methodologies, mathematical models, and patent claims with verifiable line-level citations.</li>
-<li><strong>Competitive Market Intelligence:</strong> Monitoring competitor product moves, pricing shifts, public patents, and earnings transcripts for actionable strategic insights.</li>
-<li><strong>Prompt Caching for Research Vaults:</strong> Structuring large static document corpora to activate Claude prompt caching, reducing repeated query token expenses by up to 90%.</li>
-<li><strong>Interactive Executive Dossiers:</strong> Creating interactive Artifacts with dynamic charts, decision trees, and searchable executive summaries.</li>
-</ul>
 
-<!-- Figure 1: Personal Claude Research Evaluation Workflow -->
-<div style="margin:2.5rem 0 2rem;text-align:center;">
-<figure style="margin:0;">
-<img alt="Personal research synthesis and citation evaluation pipeline" loading="lazy" src="../assets/claude-orchestration/claude-orchestration-method6-evaluator.jpg" style="width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.3);box-shadow:0 8px 30px rgba(0,0,0,0.6);"/>
-<figcaption style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">
-Figure 1: Personal Research Pipeline - Systematic Multi-Document Synthesis, Verification Harnesses, and Citation Grounding.
-</figcaption>
-</figure>
-</div>
-
-<h2 style="font-family:var="font-display";color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Standard Architecture &amp; Tools</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Claude Personal Suite:</strong> Claude web application with 1M context capabilities, native Claude Desktop app, and private research Projects.</li>
-<li><strong>Structured Document Parsing:</strong> Tools for ingesting PDF, Markdown, CSV, and plain-text files into organized conversational contexts.</li>
-<li><strong>Prompt Caching Infrastructure:</strong> Designing static cache headers to maintain large reference libraries in active cache for instant query analysis.</li>
-<li><strong>Artifact Visualization Engine:</strong> Sandboxed execution of dynamic comparison matrices, timeline diagrams, and interactive React briefs.</li>
-<li><strong>Verification Guardrails:</strong> Grounding prompt patterns that cross-reference every analytical claim directly against primary source excerpts.</li>
-</ul>
-
-<!-- Figure 2: Personal Research Workstation -->
-<div style="margin:2.5rem 0 2rem;text-align:center;">
-<figure style="margin:0;">
-<img alt="Personal research workstation and high-volume document ingestion" loading="lazy" src="../assets/claude-orchestration/claude-orchestration-method7-workstation.jpg" style="width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.3);box-shadow:0 8px 30px rgba(0,0,0,0.6);"/>
-<figcaption style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">
-Figure 2: Solo Research Workstation - High-Volume PDF Ingestion, Multi-Document Synthesis, and Knowledge Vault Organization.
-</figcaption>
-</figure>
-</div>
-
-<h2 style="font-family:var="font-display";color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Guarantees &amp; Commitments</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Zero-Hallucination Citation Standards:</strong> Enforce rigorous verification patterns so that every factual claim links directly to provided primary sources.</li>
-<li><strong>100% Commercial IP Ownership:</strong> All custom research prompts, project configurations, analysis templates, and recordings belong entirely to you.</li>
-<li><strong>5x Faster Analytical Turnaround:</strong> Accelerate complex literature reviews and competitor analyses from weeks to hours without sacrificing rigor.</li>
-<li><strong>30-Day Advisory SLA:</strong> Direct access for review of challenging research workflows, prompt debugging, and synthesis troubleshooting.</li>
-</ul>
-
-        
-
-<h2 style="font-family:var="font-display";color:var(--cyan);font-size:1.3rem;margin-top:2rem;margin-bottom:1rem;">Executive Summary</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong style="color:var(--gold);">Personal Research Mastery:</strong> 1M token context synthesis, literature reviews, patent analysis, and market intelligence.</li>
-<li><strong style="color:var(--gold);">Citation Grounding:</strong> Verifiable fact extraction with zero hallucinated quotes or references.</li>
-<li><strong style="color:var(--gold);">Cost-Efficient Caching:</strong> Slashing repetitive token costs by up to 90% across static corporate knowledge bases.</li>
-<li><strong style="color:var(--gold);">100% Commercial IP Ownership:</strong> Full ownership of all prompt templates, Project setups, video recordings, and 30-day advisory access.</li>
-</ul>
-
-<div class="service-cta-buttons" style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
-<a class="btn btn-commission btn-lg" href="../contact.html" style="text-decoration:none !important;">
-  Commission Personal Claude Research Training →
-</a>
-<a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank" style="text-decoration:none !important;">
-  Free LinkedIn Consultation ↗
-</a>
-</div>
-</div>
-</section>
-<div class="divider" style="margin-top:3rem;"></div>
+<script>
+document.querySelectorAll('.copy-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var code = btn.closest('.code-window').querySelector('pre').innerText;
+    navigator.clipboard.writeText(code).then(function() {
+      var orig = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(function() { btn.textContent = orig; }, 1800);
+    });
+  });
+});
+</script>
 </main>
 
     <!-- START:FOOTER -->

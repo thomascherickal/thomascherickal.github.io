@@ -1,18 +1,16 @@
 # Claude Agent Orchestration
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// SERVICE SPECIFICATION 03**  
-> **Simple Workflows, 5 Team Roles, and Step-by-Step Instructions. Deploy role-based AI helpers in Claude Desktop using simple English prompts, modular rules, and plain text configuration files.**
+> **// SERVICE SPECIFICATION - CLAUDE ORCHESTRATION**  
+> **Business transformation, verification, and implementation.**
 
 ---
 
-## Executive Summary & Next Steps
+## Master Coordinator & MCP Architecture
 
-- Zero Code Required: Deploy robust, role-based AI helpers inside Claude Desktop using simple English prompts, Project Knowledge, and Markdown/YAML rules.
-- 80%+ Prompt Overhead Reduction: Offload heavy instructions into modular skill files to save costs and speed up response times.
-- Role-Tailored Architectures: Custom workflows for Executives, Engineers, Data Scientists, HR, and Marketing specialists.
-- Strict Data Privacy & Control: Human-in-the-loop review gates and enterprise zero-data-retention standards.
-- Immediate IP Ownership: All templates, prompt files, and configuration rubrics transfer 100% to your internal team.
+Most teams struggle with AI adoption because they treat every conversation as a blank slate. Engineers paste entire codebases into chat, executives re-explain company strategy every Monday, and marketing teams lose brand voice across threads. Claude Agent Orchestration eliminates this friction by establishing a Master Coordinator pattern backed by the Model Context Protocol (MCP).
+
+Instead of one bloated prompt trying to do everything, the Master Coordinator routes requests to focused sub-sessions and reads only the relevant Markdown skill file on demand. Context stays clean, token usage drops, and outputs remain consistent across departments.
 
 ---
 

@@ -104,6 +104,7 @@
 <link href="../css/article.css" rel="stylesheet"/>
 <link href="../css/service.css" rel="stylesheet"/>
 <link href="../css/business-services.css" rel="stylesheet"/>
+<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -256,87 +257,522 @@
   <!-- END:HEADER -->
 <a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
 <main id="main">
-<!-- PAGE HERO HEADER -->
-<section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
-<p class="section-label">// SERVICE SPECIFICATION 10</p>
-<h1>Advanced AI Agents</h1>
-<p class="section-sub" style="max-width:760px;margin:0.75rem auto 0;line-height:1.8;">
-        Building production autonomous agent systems: hierarchical teams of Claude agents, self-correcting loops driven
-        by tests, persistent state, and sandboxed execution for business-critical workloads.
+<div class="doc-container" style="max-width:960px;margin:0 auto;padding:3rem 1.25rem 2rem;">
+
+  <!-- HERO HEADER CARD -->
+  <section class="hero-card" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.35);border-radius:16px;padding:2.5rem;margin-bottom:2rem;box-shadow:0 0 40px rgba(251,191,36,0.08);">
+    <p class="section-label" style="color:var(--gold,#fbbf24);font-family:var(--font-mono,monospace);font-size:0.8rem;letter-spacing:0.12em;margin-bottom:0.75rem;">// SERVICE SPECIFICATION - AUTONOMOUS SYSTEMS</p>
+    <h1>Advanced AI Agents</h1>
+    <p style="color:var(--text-secondary,#cbd5e1);font-size:1.05rem;line-height:1.75;max-width:780px;margin-bottom:1.75rem;">
+      Production architecture for autonomous multi-agent systems: hierarchical supervisor-worker swarms, test-driven self-correction loops, persistent checkpointed state, and hardened Docker sandboxes built for enterprise workloads.
+    </p>
+    <div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:1.5rem;">
+      <div style="background:#040711;border:1px solid rgba(56,189,248,0.28);border-radius:12px;padding:1.1rem;">
+        <div style="font-size:1.5rem;font-weight:700;color:var(--cyan,#38bdf8);font-family:var(--font-display,sans-serif);">100%</div>
+        <div style="font-size:0.82rem;color:#94a3b8;margin-top:0.25rem;">Sandboxed Execution</div>
+      </div>
+      <div style="background:#040711;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:1.1rem;">
+        <div style="font-size:1.5rem;font-weight:700;color:var(--gold,#fbbf24);font-family:var(--font-display,sans-serif);">Zero-Trust</div>
+        <div style="font-size:0.82rem;color:#94a3b8;margin-top:0.25rem;">Bounded Cycle &amp; Spend Caps</div>
+      </div>
+      <div style="background:#040711;border:1px solid rgba(52,211,153,0.28);border-radius:12px;padding:1.1rem;">
+        <div style="font-size:1.5rem;font-weight:700;color:#34d399;font-family:var(--font-display,sans-serif);">Full IP</div>
+        <div style="font-size:0.82rem;color:#94a3b8;margin-top:0.25rem;">Apache 2.0 &amp; Source Transfer</div>
+      </div>
+      <div style="background:#040711;border:1px solid rgba(232,121,249,0.28);border-radius:12px;padding:1.1rem;">
+        <div style="font-size:1.5rem;font-weight:700;color:#e879f9;font-family:var(--font-display,sans-serif);">30-Day</div>
+        <div style="font-size:0.82rem;color:#94a3b8;margin-top:0.25rem;">Operational Support SLA</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TABLE OF CONTENTS -->
+  <section id="table-of-contents" style="background:var(--bg-card,#0c111d);border:1px solid rgba(56,189,248,0.25);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.2rem;margin-bottom:1rem;">Table of Contents</h2>
+    <ol style="color:#cbd5e1;line-height:1.9;padding-left:1.25rem;margin:0;display:flex;flex-direction:column;gap:0.6rem;">
+      <li><a class="gold-link" href="#architecture-overview">1. Autonomous Agent Architecture Overview</a></li>
+      <li><a class="gold-link" href="#self-correction-loops">2. Test-Driven Self-Correction Loops</a></li>
+      <li><a class="gold-link" href="#sandboxed-execution">3. Sandboxed Execution &amp; Spend Controls</a></li>
+      <li><a class="gold-link" href="#enterprise-governance">4. Enterprise Governance &amp; Failure-Mode Recovery</a></li>
+      <li><a class="gold-link" href="#tutorial-python">5. Tutorial 1: Production Python Supervisor-Worker Agent</a></li>
+      <li><a class="gold-link" href="#tutorial-prompt">6. Tutorial 2: Production Critique &amp; Reflection Prompt</a></li>
+      <li><a class="gold-link" href="#tutorial-operations">7. Tutorial 3: Step-by-Step Operational Deployment</a></li>
+      <li><a class="gold-link" href="#tutorial-python-recovery">8. Tutorial 4: Production Python Circuit Breaker &amp; Checkpoint Recovery</a></li>
+      <li><a class="gold-link" href="#tutorial-prompt-governance">9. Tutorial 5: Production Governance &amp; Escalation Prompt</a></li>
+      <li><a class="gold-link" href="#tutorial-operations-runbook">10. Tutorial 6: Step-by-Step Failure-Mode Incident Runbook</a></li>
+      <li><a class="gold-link" href="#references">11. Live References &amp; Documentation</a></li>
+    </ol>
+  </section>
+
+  <!-- SECTION 1 -->
+  <section id="architecture-overview" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Autonomous Agent Architecture Overview</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Single-prompt LLM wrappers fail on multi-step enterprise workflows because they lack persistent state, deterministic tool boundaries, and structured error recovery. When a task spans database queries, code generation, API orchestration, and compliance verification, a single monolithic context window degrades rapidly. Advanced AI Agents solve this by decomposing work across specialized roles coordinated by an explicit state graph.
+    </p>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      In a production supervisor-worker architecture, a lead planner agent decomposes the business objective into discrete, verifiable subtasks. Each subtask is routed to a specialized worker agent equipped with strictly scoped tools - for example, a SQL read-only analyst, a Python sandbox executor, or a document synthesizer. State is persisted at every node transition using a checkpoint store, following patterns established in the <a class="gold-link" href="#references">LangGraph state machine specification</a> and <a class="gold-link" href="#references">Anthropic agentic systems guidance</a>.
+    </p>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.5rem;">
+      This separation of concerns delivers three measurable operational advantages: predictable token budgets per step, isolated failure domains where a single tool error does not corrupt the entire reasoning chain, and full auditability for compliance teams. Every tool call, intermediate artifact, and model decision is logged with correlation identifiers before any external side effect is committed.
+    </p>
+
+    <!-- SVG DIAGRAM 1: Supervisor-Worker Architecture -->
+    <div style="margin:1.75rem 0;border:1px solid rgba(56,189,248,0.28);border-radius:12px;overflow:hidden;background:#040711;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Supervisor-Worker Multi-Agent Architecture Diagram" style="width:100%;height:auto;display:block;">
+        <rect width="960" height="400" fill="#040711"/>
+        <text x="480" y="34" fill="#fbbf24" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">HIERARCHICAL SUPERVISOR-WORKER AGENT TOPOLOGY</text>
+        <!-- User / Trigger -->
+        <rect x="380" y="55" width="200" height="48" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="480" y="84" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Enterprise Trigger / API</text>
+        <line x1="480" y1="103" x2="480" y2="135" stroke="#38bdf8" stroke-width="2"/>
+        <polygon points="474,130 486,130 480,140" fill="#38bdf8"/>
+        <!-- Supervisor -->
+        <rect x="340" y="140" width="280" height="60" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2.5"/>
+        <text x="480" y="166" fill="#fbbf24" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Supervisor Planner Agent</text>
+        <text x="480" y="186" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">State Graph + Budget Guardrails</text>
+        <!-- Branches to Workers -->
+        <line x1="480" y1="200" x2="170" y2="245" stroke="#34d399" stroke-width="2"/>
+        <line x1="480" y1="200" x2="480" y2="245" stroke="#38bdf8" stroke-width="2"/>
+        <line x1="480" y1="200" x2="790" y2="245" stroke="#e879f9" stroke-width="2"/>
+        <!-- Worker 1 -->
+        <rect x="60" y="245" width="220" height="68" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="170" y="272" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Research &amp; SQL Worker</text>
+        <text x="170" y="294" fill="#cbd5e1" font-family="monospace" font-size="11" text-anchor="middle">Read-Only DB + Search</text>
+        <!-- Worker 2 -->
+        <rect x="370" y="245" width="220" height="68" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="480" y="272" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Code &amp; Sandbox Worker</text>
+        <text x="480" y="294" fill="#cbd5e1" font-family="monospace" font-size="11" text-anchor="middle">Docker + Pytest Runner</text>
+        <!-- Worker 3 -->
+        <rect x="680" y="245" width="220" height="68" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="790" y="272" fill="#e879f9" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Critic &amp; Verifier</text>
+        <text x="790" y="294" fill="#cbd5e1" font-family="monospace" font-size="11" text-anchor="middle">Pydantic + Policy Gate</text>
+        <!-- Checkpoint Store -->
+        <rect x="240" y="340" width="480" height="42" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <text x="480" y="366" fill="#fbbf24" font-family="monospace" font-size="12" text-anchor="middle">Persistent Checkpoint Store (PostgreSQL / SQLite) + OpenTelemetry Trace</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section id="self-correction-loops" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Test-Driven Self-Correction Loops</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Autonomous agents become reliable only when their outputs are validated against deterministic checks rather than subjective model confidence. A test-driven self-correction loop pairs every generative step with an automated verification gate: schema validation via Pydantic, static type checking, unit test execution, or SQL query plan inspection.
+    </p>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      When a verification gate fails, the exact stderr trace, line number, and assertion diff are injected back into the worker agent's next turn. Instead of guessing blindly, the agent performs targeted root-cause repair. To prevent infinite retry loops, every graph edge enforces a strict maximum retry counter and escalates to a human-in-the-loop review queue if the threshold is reached.
+    </p>
+
+    <!-- SVG DIAGRAM 2: Self-Correction Loop -->
+    <div style="margin:1.75rem 0;border:1px solid rgba(52,211,153,0.28);border-radius:12px;overflow:hidden;background:#040711;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Test-Driven Self-Correction Loop Diagram" style="width:100%;height:auto;display:block;">
+        <rect width="960" height="400" fill="#040711"/>
+        <text x="480" y="34" fill="#34d399" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">TEST-DRIVEN SELF-CORRECTION &amp; BOUNDED RETRY LOOP</text>
+        <!-- Step 1 -->
+        <rect x="70" y="130" width="180" height="80" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="160" y="165" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">1. Generate Artifact</text>
+        <text x="160" y="187" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Code / SQL / JSON</text>
+        <line x1="250" y1="170" x2="310" y2="170" stroke="#38bdf8" stroke-width="2"/>
+        <polygon points="305,164 305,176 315,170" fill="#38bdf8"/>
+        <!-- Step 2 -->
+        <rect x="315" y="130" width="200" height="80" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="415" y="165" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">2. Deterministic Gate</text>
+        <text x="415" y="187" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Pytest / Pydantic / Lint</text>
+        <!-- Pass Path -->
+        <line x1="515" y1="170" x2="610" y2="170" stroke="#34d399" stroke-width="2"/>
+        <polygon points="605,164 605,176 615,170" fill="#34d399"/>
+        <text x="562" y="158" fill="#34d399" font-family="monospace" font-size="11" text-anchor="middle">PASS</text>
+        <rect x="615" y="130" width="260" height="80" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="745" y="165" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">3. Commit &amp; Emit Trace</text>
+        <text x="745" y="187" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Signed Output + Audit Log</text>
+        <!-- Fail / Retry Path -->
+        <line x1="415" y1="210" x2="415" y2="285" stroke="#e879f9" stroke-width="2"/>
+        <line x1="415" y1="285" x2="160" y2="285" stroke="#e879f9" stroke-width="2"/>
+        <line x1="160" y1="285" x2="160" y2="215" stroke="#e879f9" stroke-width="2"/>
+        <polygon points="154,220 166,220 160,210" fill="#e879f9"/>
+        <rect x="200" y="262" width="180" height="44" rx="6" fill="#0c111d" stroke="#e879f9" stroke-width="1.5"/>
+        <text x="290" y="288" fill="#e879f9" font-family="monospace" font-size="11" text-anchor="middle">FAIL: Inject stderr (n &lt; 3)</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section id="sandboxed-execution" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Sandboxed Execution &amp; Spend Controls</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Allowing an autonomous agent to execute shell commands or generated code on a host machine introduces unacceptable security risk. Production deployments isolate every tool execution inside ephemeral Docker or gVisor containers configured with dropped Linux capabilities, non-root user namespaces, read-only root filesystems, and strict egress allowlists.
+    </p>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Equally critical are financial and operational circuit breakers. Every agent run is governed by a hard token ceiling, a wall-clock timeout, and a maximum step count. If an agent approaches its budget, the runtime gracefully halts execution, serializes the partial state to the checkpoint database, and alerts the operator with a structured diagnostic summary.
+    </p>
+
+    <!-- SVG DIAGRAM 3: Sandboxed Runtime -->
+    <div style="margin:1.75rem 0;border:1px solid rgba(251,191,36,0.28);border-radius:12px;overflow:hidden;background:#040711;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sandboxed Execution &amp; Spend Controls Diagram" style="width:100%;height:auto;display:block;">
+        <rect width="960" height="400" fill="#040711"/>
+        <text x="480" y="34" fill="#fbbf24" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">ZERO-TRUST SANDBOX &amp; CIRCUIT BREAKER BOUNDARY</text>
+        <!-- Outer Sandbox -->
+        <rect x="80" y="65" width="800" height="295" rx="14" fill="#0c111d" stroke="#38bdf8" stroke-width="2" stroke-dasharray="8,4"/>
+        <text x="480" y="92" fill="#38bdf8" font-family="monospace" font-size="12" text-anchor="middle">EPHEMERAL DOCKER / GVISOR SANDBOX (CAP_DROP=ALL, NON-ROOT)</text>
+        <!-- Guardrail Box -->
+        <rect x="130" y="120" width="220" height="190" rx="10" fill="#040711" stroke="#fbbf24" stroke-width="2"/>
+        <text x="240" y="152" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Circuit Breakers</text>
+        <text x="240" y="185" fill="#cbd5e1" font-family="monospace" font-size="11" text-anchor="middle">Max Steps: 12</text>
+        <text x="240" y="215" fill="#cbd5e1" font-family="monospace" font-size="11" text-anchor="middle">Token Cap: 60k</text>
+        <text x="240" y="245" fill="#cbd5e1" font-family="monospace" font-size="11" text-anchor="middle">Timeout: 90s</text>
+        <text x="240" y="275" fill="#34d399" font-family="monospace" font-size="11" text-anchor="middle">Egress: Allowlist Only</text>
+        <!-- Execution Box -->
+        <rect x="400" y="120" width="430" height="190" rx="10" fill="#040711" stroke="#34d399" stroke-width="2"/>
+        <text x="615" y="152" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Isolated Tool Runtime</text>
+        <text x="615" y="190" fill="#cbd5e1" font-family="monospace" font-size="12" text-anchor="middle">1. Mount /workspace as ephemeral tmpfs</text>
+        <text x="615" y="222" fill="#cbd5e1" font-family="monospace" font-size="12" text-anchor="middle">2. Execute validated tool call</text>
+        <text x="615" y="254" fill="#cbd5e1" font-family="monospace" font-size="12" text-anchor="middle">3. Capture stdout/stderr &amp; destroy container</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- TUTORIAL 1: PYTHON -->
+  <section id="tutorial-python" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Tutorial 1: Production Python Supervisor-Worker Agent</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
+      The following Python implementation demonstrates a bounded supervisor-worker loop using structured Pydantic outputs, explicit retry limits, and deterministic validation. It follows the <a class="gold-link" href="#references">Anthropic Python SDK documentation</a> for tool-use and structured responses.
+    </p>
+
+    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan,#38bdf8);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(56,189,248,0.2);">
+        <span style="font-family:var(--font-mono,monospace);font-size:0.8rem;color:#38bdf8;">supervisor_agent.py</span>
+        <button class="copy-btn" type="button" onclick="copyCode(this)" style="background:rgba(56,189,248,0.12);color:#38bdf8;border:1px solid rgba(56,189,248,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;overflow-x:auto;color:#e2e8f0;font-family:var(--font-mono,monospace);font-size:0.85rem;line-height:1.6;"><code>import os
+from typing import Literal
+from pydantic import BaseModel, Field
+from anthropic import Anthropic
+
+client = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+
+class WorkerResult(BaseModel):
+    status: Literal["pass", "retry"]
+    artifact: str = Field(description="Generated code or SQL output")
+    error_summary: str = Field(default="", description="Validation error if retry")
+
+def run_deterministic_check(artifact: str) -> tuple[bool, str]:
+    """Simulate a deterministic linter/test gate."""
+    if "SELECT *" in artifact.upper():
+        return False, "Policy violation: SELECT * is forbidden. Specify explicit columns."
+    return True, "All checks passed."
+
+def execute_bounded_agent(task: str, max_retries: int = 3) -> WorkerResult:
+    feedback = ""
+    for attempt in range(1, max_retries + 1):
+        prompt = f"Task: {task}\nPrevious feedback: {feedback}" if feedback else f"Task: {task}"
+        response = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=1024,
+            system="You are a senior data engineer. Return only valid SQL.",
+            messages=[{"role": "user", "content": prompt}],
+        )
+        candidate = response.content[0].text.strip()
+        passed, msg = run_deterministic_check(candidate)
+        if passed:
+            return WorkerResult(status="pass", artifact=candidate)
+        feedback = f"Attempt {attempt} failed: {msg}"
+    return WorkerResult(status="retry", artifact="", error_summary=feedback)
+
+if __name__ == "__main__":
+    result = execute_bounded_agent("Query active enterprise accounts created in 2026.")
+    print(result.model_dump_json(indent=2))</code></pre>
+    </div>
+  </section>
+
+  <!-- TUTORIAL 2: PROMPT TEMPLATE -->
+  <section id="tutorial-prompt" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Tutorial 2: Production Critique &amp; Reflection Prompt</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
+      Use this system prompt template for your Critic/Verifier node. It enforces strict evidence-based evaluation and prevents the critic from approving unverified claims.
+    </p>
+
+    <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.32);border-left:3px solid var(--gold,#fbbf24);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(251,191,36,0.2);">
+        <span style="font-family:var(--font-mono,monospace);font-size:0.8rem;color:#fbbf24;">critic_system_prompt.txt</span>
+        <button class="copy-btn" type="button" onclick="copyCode(this)" style="background:rgba(251,191,36,0.12);color:#fbbf24;border:1px solid rgba(251,191,36,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;overflow-x:auto;color:#e2e8f0;font-family:var(--font-mono,monospace);font-size:0.85rem;line-height:1.6;"><code>ROLE:
+You are an automated Production Critic Agent. Your sole responsibility is to verify worker outputs against deterministic constraints before final commit.
+
+INPUTS:
+1. Original Business Objective
+2. Worker Artifact (code, SQL, or structured JSON)
+3. Deterministic Tool Output (test logs, schema validation, linter stderr)
+
+RULES:
+- Never approve an artifact if any deterministic test or schema check failed.
+- Cite the exact line number or field name for every defect.
+- Do not rewrite the artifact yourself; return actionable repair instructions for the worker.
+- Output strictly valid JSON matching: {"approved": boolean, "defects": [string], "repair_instruction": string}</code></pre>
+    </div>
+  </section>
+
+  <!-- TUTORIAL 3: OPERATIONAL INSTRUCTIONS -->
+  <section id="tutorial-operations" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:#34d399;font-size:1.6rem;margin-bottom:1rem;">Tutorial 3: Step-by-Step Operational Deployment</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
+      Follow this operational checklist to move an autonomous agent workflow from local prototype to hardened production:
+    </p>
+    <ol style="color:#cbd5e1;line-height:1.9;padding-left:1.5rem;margin-bottom:1.5rem;">
+      <li><strong style="color:var(--gold,#fbbf24);">Define Explicit State Schema:</strong> Model every input, intermediate artifact, and error counter in a typed Pydantic or TypedDict state object before writing any prompt.</li>
+      <li><strong style="color:var(--cyan,#38bdf8);">Provision Ephemeral Sandboxes:</strong> Configure Docker containers with <code style="color:#38bdf8;">--cap-drop=ALL</code>, non-root UID, and a dedicated egress proxy that blocks all unapproved domains.</li>
+      <li><strong style="color:#34d399;">Attach Circuit Breakers:</strong> Enforce hard limits on maximum graph steps, cumulative token spend, and wall-clock execution time per correlation ID.</li>
+      <li><strong style="color:#e879f9;">Enable OpenTelemetry Tracing:</strong> Stream every node transition, tool latency, and token count to your observability backend for continuous regression testing.</li>
+    </ol>
+
+    <!-- SVG DIAGRAM 4: Operational Deployment Pipeline -->
+    <div style="margin:1.75rem 0;border:1px solid rgba(232,121,249,0.28);border-radius:12px;overflow:hidden;background:#040711;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Operational Deployment &amp; Observability Pipeline" style="width:100%;height:auto;display:block;">
+        <rect width="960" height="400" fill="#040711"/>
+        <text x="480" y="34" fill="#e879f9" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">PRODUCTION OBSERVABILITY &amp; DEPLOYMENT PIPELINE</text>
+        <rect x="60" y="140" width="180" height="90" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="150" y="178" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Typed State</text>
+        <text x="150" y="200" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Pydantic Contracts</text>
+        <line x1="240" y1="185" x2="285" y2="185" stroke="#fbbf24" stroke-width="2"/>
+        <rect x="285" y="140" width="180" height="90" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="375" y="178" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Docker Sandbox</text>
+        <text x="375" y="200" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Isolated Runtime</text>
+        <line x1="465" y1="185" x2="510" y2="185" stroke="#38bdf8" stroke-width="2"/>
+        <rect x="510" y="140" width="180" height="90" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="600" y="178" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Circuit Breaker</text>
+        <text x="600" y="200" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Token &amp; Step Caps</text>
+        <line x1="690" y1="185" x2="735" y2="185" stroke="#34d399" stroke-width="2"/>
+        <rect x="735" y="140" width="175" height="90" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="822" y="178" fill="#e879f9" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">OTel / Langfuse</text>
+        <text x="822" y="200" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Live Trace Audit</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SECTION: ENTERPRISE GOVERNANCE & FAILURE-MODE RECOVERY -->
+  <section id="enterprise-governance" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Enterprise Governance &amp; Failure-Mode Recovery</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Moving autonomous agents from prototype notebooks into regulated enterprise production requires deterministic governance, cryptographic auditability, and automated failure-mode recovery. Unlike stateless request-response APIs, multi-agent graphs execute long-running workflows across external databases, third-party SaaS endpoints, and internal microservices. Without explicit circuit breakers, idempotency keys, and human-in-the-loop (HITL) approval gates, a single malformed tool response or transient rate limit can cascade into duplicate financial mutations or silent data corruption.
+    </p>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Enterprise governance begins with least-privilege capability tokens. Every worker agent receives a short-lived, scoped credential bound to its specific task graph node, aligned with the <a class="gold-link" href="#references">NIST AI Risk Management Framework</a> and <a class="gold-link" href="#references">OWASP Top 10 for LLM Applications</a>. High-impact actions - such as executing schema migrations, issuing refunds, or modifying production IAM policies - are intercepted by a policy enforcement point (PEP) that pauses graph execution, persists the serialized state to PostgreSQL, and dispatches an approval payload to an authorized operator.
+    </p>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Equally critical is structured failure-mode recovery. Production agent systems classify errors into three distinct tiers: transient infrastructure faults (HTTP 429, 503, network timeouts), semantic tool-call errors (invalid JSON arguments, schema mismatches), and unrecoverable policy violations (prompt injection attempts, budget exhaustion). Transient faults trigger exponential backoff with jitter, while semantic errors route back to the worker with the exact <a class="gold-link" href="#references">JSON Schema validation</a> diff so the model can self-correct within a bounded retry budget.
+    </p>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Every state transition, tool invocation, token count, and latency metric is emitted as an immutable span to <a class="gold-link" href="#references">OpenTelemetry</a> collectors and archived in append-only audit storage. This enables deterministic replay: if a production incident occurs, engineers can rehydrate the exact checkpoint state, inspect the verbatim prompt and tool outputs, and replay the node deterministically in a staging sandbox.
+    </p>
+
+    <!-- SVG DIAGRAM 5: ENTERPRISE GOVERNANCE & HITL GATEWAY -->
+    <div style="margin:2rem 0;background:#040711;border:1px solid rgba(56,189,248,0.25);border-radius:14px;padding:1rem;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Enterprise Agent Governance and Human-in-the-Loop Approval Gateway">
+        <rect width="960" height="400" fill="#040711" rx="10"/>
+        <text x="480" y="34" fill="#fbbf24" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Enterprise Governance &amp; Human-in-the-Loop (HITL) Policy Gateway</text>
+        <rect x="40" y="75" width="180" height="80" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="130" y="108" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Worker Agent</text>
+        <text x="130" y="130" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">Proposes Tool Call</text>
+        <line x1="220" y1="115" x2="280" y2="115" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow-cyan-5)"/>
+        <rect x="280" y="65" width="210" height="100" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="385" y="98" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Policy Enforcement Point</text>
+        <text x="385" y="120" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">RBAC + Spend + Risk Score</text>
+        <text x="385" y="142" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle">Idempotency Key Check</text>
+        <line x1="490" y1="95" x2="570" y2="95" stroke="#34d399" stroke-width="2"/>
+        <text x="530" y="85" fill="#34d399" font-family="sans-serif" font-size="10" text-anchor="middle">Low Risk</text>
+        <rect x="570" y="55" width="170" height="75" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="655" y="88" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Auto-Execute</text>
+        <text x="655" y="108" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">Sandboxed Tool Run</text>
+        <line x1="490" y1="140" x2="570" y2="215" stroke="#e879f9" stroke-width="2"/>
+        <text x="545" y="170" fill="#e879f9" font-family="sans-serif" font-size="10" text-anchor="middle">High Risk</text>
+        <rect x="570" y="175" width="170" height="85" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="655" y="208" fill="#e879f9" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">HITL Checkpoint</text>
+        <text x="655" y="228" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Persist State &amp; Pause</text>
+        <text x="655" y="246" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle">Slack / PagerDuty Sign-off</text>
+        <rect x="780" y="110" width="145" height="90" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="852" y="145" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Audit Ledger</text>
+        <text x="852" y="166" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">Immutable OTel</text>
+        <text x="852" y="184" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle">Trace &amp; Hash</text>
+        <line x1="740" y1="95" x2="780" y2="135" stroke="#fbbf24" stroke-width="1.5"/>
+        <line x1="740" y1="215" x2="780" y2="175" stroke="#fbbf24" stroke-width="1.5"/>
+        <rect x="40" y="290" width="885" height="75" rx="10" fill="#0c111d" stroke="rgba(56,189,248,0.35)" stroke-width="1.5"/>
+        <text x="482" y="320" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Deterministic Replay &amp; Compliance Plane</text>
+        <text x="482" y="344" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Every state transition, tool payload, and human approval signature is stored for zero-ambiguity post-incident replay.</text>
+      </svg>
+    </div>
+
+    <!-- SVG DIAGRAM 6: FAILURE-MODE RECOVERY & CIRCUIT BREAKER -->
+    <div style="margin:2rem 0;background:#040711;border:1px solid rgba(251,191,36,0.25);border-radius:14px;padding:1rem;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Failure-Mode Classification and Circuit Breaker Recovery">
+        <rect width="960" height="400" fill="#040711" rx="10"/>
+        <text x="480" y="34" fill="#38bdf8" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Failure-Mode Classification &amp; Circuit Breaker Recovery</text>
+        <rect x="40" y="150" width="170" height="90" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="125" y="185" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Error Classifier</text>
+        <text x="125" y="208" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">Inspects Exception</text>
+        <line x1="210" y1="170" x2="290" y2="95" stroke="#38bdf8" stroke-width="2"/>
+        <line x1="210" y1="195" x2="290" y2="195" stroke="#34d399" stroke-width="2"/>
+        <line x1="210" y1="220" x2="290" y2="295" stroke="#e879f9" stroke-width="2"/>
+        <rect x="290" y="55" width="240" height="75" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="410" y="85" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Tier 1: Transient Fault</text>
+        <text x="410" y="108" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">429 / 503 -&gt; Exponential Backoff</text>
+        <rect x="290" y="158" width="240" height="75" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="410" y="188" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Tier 2: Semantic Error</text>
+        <text x="410" y="211" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">Schema Diff -&gt; Bounded Self-Repair</text>
+        <rect x="290" y="260" width="240" height="75" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="410" y="290" fill="#e879f9" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Tier 3: Policy / Budget</text>
+        <text x="410" y="313" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">Trip Circuit Breaker -&gt; Escalate</text>
+        <rect x="610" y="120" width="310" height="150" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="765" y="155" fill="#fbbf24" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Checkpoint &amp; Dead-Letter Queue</text>
+        <text x="765" y="182" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">1. Snapshot exact graph state</text>
+        <text x="765" y="204" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">2. Emit structured alert with trace_id</text>
+        <text x="765" y="226" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">3. Resume or rollback safely</text>
+        <line x1="530" y1="95" x2="610" y2="160" stroke="#38bdf8" stroke-width="1.5"/>
+        <line x1="530" y1="195" x2="610" y2="195" stroke="#34d399" stroke-width="1.5"/>
+        <line x1="530" y1="295" x2="610" y2="230" stroke="#e879f9" stroke-width="1.5"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- TUTORIAL 4: PYTHON CIRCUIT BREAKER & CHECKPOINT RECOVERY -->
+  <section id="tutorial-python-recovery" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Tutorial 4: Production Python Circuit Breaker &amp; Checkpoint Recovery</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      The following Python module implements a production circuit breaker and checkpoint recovery wrapper for autonomous agent tool calls, preventing cascading failures and preserving state for deterministic replay.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid var(--cyan,#38bdf8);border-radius:10px;margin:1.75rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:rgba(12,17,29,0.95);border-bottom:1px solid rgba(56,189,248,0.2);">
+        <span style="color:#38bdf8;font-family:monospace;font-size:0.85rem;">circuit_breaker_recovery.py</span>
+        <button class="copy-btn" onclick="copyCode(this)" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.4);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.1rem;color:#e2e8f0;font-family:monospace;font-size:0.86rem;line-height:1.6;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;"><code>import time
+import json
+from dataclasses import dataclass, field
+from typing import Callable, Dict, Any
+
+@dataclass
+class AgentCircuitBreaker:
+    failure_threshold: int = 3
+    reset_timeout_sec: int = 60
+    failures: int = 0
+    opened_at: float = 0.0
+    checkpoints: Dict[str, Any] = field(default_factory=dict)
+
+    def is_open(self) -&gt; bool:
+        if self.failures &gt;= self.failure_threshold:
+            if (time.time() - self.opened_at) &lt; self.reset_timeout_sec:
+                return True
+            self.failures = 0
+        return False
+
+    def execute_with_recovery(self, run_id: str, state: Dict[str, Any], fn: Callable) -&gt; Dict[str, Any]:
+        if self.is_open():
+            raise RuntimeError(f"Circuit open for run_id={run_id}; routed to HITL queue.")
+        self.checkpoints[run_id] = json.dumps(state)
+        try:
+            result = fn(state)
+            self.failures = 0
+            return result
+        except Exception as exc:
+            self.failures += 1
+            self.opened_at = time.time()
+            return {
+                "status": "recovered_from_checkpoint",
+                "run_id": run_id,
+                "error": str(exc),
+                "restored_state": json.loads(self.checkpoints[run_id]),
+            }</code></pre>
+    </div>
+  </section>
+
+  <!-- TUTORIAL 5: PRODUCTION GOVERNANCE & ESCALATION PROMPT -->
+  <section id="tutorial-prompt-governance" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Tutorial 5: Production Governance &amp; Escalation Prompt</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Use this system prompt template to enforce strict policy boundaries, risk scoring, and structured escalation before any autonomous agent executes a state-mutating tool call.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.35);border-left:3px solid var(--gold,#fbbf24);border-radius:10px;margin:1.75rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:rgba(12,17,29,0.95);border-bottom:1px solid rgba(251,191,36,0.2);">
+        <span style="color:#fbbf24;font-family:monospace;font-size:0.85rem;">governance_escalation_prompt.txt</span>
+        <button class="copy-btn" onclick="copyCode(this)" style="background:rgba(251,191,36,0.15);color:#fbbf24;border:1px solid rgba(251,191,36,0.4);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.1rem;color:#e2e8f0;font-family:monospace;font-size:0.86rem;line-height:1.6;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;"><code>ROLE: Enterprise Policy &amp; Risk Gatekeeper Agent
+OBJECTIVE: Evaluate proposed tool calls against organizational security and compliance rules before execution.
+
+RULES:
+1. Classify every proposed action as READ_ONLY, REVERSIBLE_WRITE, or IRREVERSIBLE_MUTATION.
+2. For IRREVERSIBLE_MUTATION (e.g., billing, IAM, schema drop, external email), you MUST return status="ESCALATE_HITL".
+3. Verify that an idempotency_key and trace_id are present on every write payload.
+4. Never fabricate missing parameters; if required fields are absent, return status="REJECT_SCHEMA".
+
+OUTPUT_JSON:
+{
+  "decision": "ALLOW | ESCALATE_HITL | REJECT_SCHEMA",
+  "risk_tier": "LOW | MEDIUM | HIGH",
+  "reason": "concise policy justification",
+  "required_approver_role": "none | tech_lead | security_ops"
+}</code></pre>
+    </div>
+  </section>
+
+  <!-- TUTORIAL 6: STEP-BY-STEP FAILURE-MODE INCIDENT RUNBOOK -->
+  <section id="tutorial-operations-runbook" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:#34d399;font-size:1.6rem;margin-bottom:1rem;">Tutorial 6: Step-by-Step Failure-Mode Incident Runbook</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Follow this operational runbook when an autonomous agent workflow trips a circuit breaker or enters a dead-letter queue in production:
+    </p>
+    <ol style="color:#cbd5e1;line-height:1.9;padding-left:1.5rem;margin-bottom:1.25rem;">
+      <li><strong>Isolate the Run:</strong> Query your checkpoint store using the alerted <code style="color:#38bdf8;">trace_id</code> and confirm the workflow is paused in <code style="color:#fbbf24;">HITL_PAUSED</code> state.</li>
+      <li><strong>Inspect the Span Tree:</strong> Open the OpenTelemetry trace to identify whether the fault is Tier 1 (transient API), Tier 2 (schema mismatch), or Tier 3 (policy/budget).</li>
+      <li><strong>Verify Idempotency:</strong> Confirm no partial side effects were committed to downstream databases by checking the idempotency ledger.</li>
+      <li><strong>Replay in Staging:</strong> Export the serialized checkpoint JSON into the staging sandbox and reproduce the exact node transition.</li>
+      <li><strong>Patch &amp; Resume:</strong> Apply the prompt, schema, or tool fix, then issue a signed resume command from the checkpointed state.</li>
+    </ol>
+  </section>
+
+  <!-- REFERENCES -->
+  <section id="references" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.25);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.3rem;margin-bottom:1rem;">Live References &amp; Documentation</h2>
+    <ul style="color:#cbd5e1;line-height:1.9;padding-left:1.25rem;margin:0;">
+      <li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/tool-use" rel="noopener" target="_blank">Anthropic Tool Use &amp; Agentic Systems Documentation</a></li>
+      <li><a class="gold-link" href="https://langchain-ai.github.io/langgraph/" rel="noopener" target="_blank">LangGraph Stateful Multi-Agent Orchestration</a></li>
+      <li><a class="gold-link" href="https://docs.pydantic.dev/latest/" rel="noopener" target="_blank">Pydantic Structured Validation Documentation</a></li>
+      <li><a class="gold-link" href="https://opentelemetry.io/docs/" rel="noopener" target="_blank">OpenTelemetry Distributed Tracing Specification</a></li>
+      <li><a class="gold-link" href="https://www.nist.gov/itl/ai-risk-management-framework" rel="noopener" target="_blank">NIST AI Risk Management Framework (AI RMF)</a></li>
+      <li><a class="gold-link" href="https://genai.owasp.org/llm-top-10/" rel="noopener" target="_blank">OWASP Top 10 for Large Language Model Applications</a></li>
+      <li><a class="gold-link" href="https://json-schema.org/specification" rel="noopener" target="_blank">JSON Schema Official Specification</a></li>
+      <li><a class="gold-link" href="https://platform.openai.com/docs/guides/function-calling" rel="noopener" target="_blank">OpenAI Function Calling &amp; Structured Outputs Guide</a></li>
+      <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/function-calling" rel="noopener" target="_blank">Google Gemini API Function Calling Documentation</a></li>
+      <li><a class="gold-link" href="https://martinfowler.com/bliki/CircuitBreaker.html" rel="noopener" target="_blank">Circuit Breaker Pattern Architectural Reference</a></li>
+    </ul>
+  </section>
+
+  <!-- CTA BLOCK -->
+  <section class="reveal" style="margin-bottom:2rem;">
+    <div style="background:var(--bg-card,#0c111d);border:1px solid var(--border-gold,rgba(251,191,36,0.35));border-radius:16px;padding:2.25rem;text-align:center;">
+      <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.4rem;margin-bottom:0.75rem;">Ready to Deploy Production AI Agents?</h2>
+      <p style="color:#cbd5e1;max-width:640px;margin:0 auto 1.5rem;line-height:1.7;">
+        Commission a dedicated multi-agent architecture with full IP transfer, sandboxed execution, and 30-day operational support.
       </p>
-<div style="margin-top:1.5rem;">
-<a class="btn btn-commission" href="../contact.html" >
-          Commission Advanced AI Agent Systems →
-        </a>
-</div>
-</section>
-<div class="divider"></div>
-<!-- STRUCTURED SPECIFICATION LISTS -->
-<section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
-<div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:2.5rem;box-shadow:var(--glow-gold);">
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">Service
-          Overview &amp; Scope</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Multi-Agent Teams:</strong> Hierarchical Claude agent teams that carry multi-day, multi-person
-            workflows, with human checkpoints at the steps that matter.</li>
-<li><strong>Self-Correction Loops:</strong> Agents read compiler errors, test failures and lint output, fix
-            the code, and run the checks again until they pass or reach a retry limit.</li>
-<li><strong>Sandboxed Tool Execution:</strong> Agent shell commands, code execution and database queries run
-            inside Docker containers with restricted permissions and network access.</li>
-<li><strong>Spend and Loop Limits:</strong> Iteration caps, token budgets and kill switches on every loop.
-          </li>
-<li><strong>Run Logging:</strong> Records of each agent's steps, tool calls, token use and failures for review
-            and debugging.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Standard
-          Architecture &amp; Tools</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Agent Frameworks:</strong> Claude Agent Teams, Claude Code subagents and background agents in
-            separate git worktrees, and the Claude API with Python asyncio or Rust Tokio for custom orchestration.</li>
-<li><strong>Model Layer:</strong> Claude Opus or Fable (lead planner and synthesis), Claude Sonnet (code and
-            tool use), and Claude Haiku (fast classification and search).</li>
-<li><strong>Execution Sandboxing:</strong> Docker containers with dropped capabilities (`CAP_DROP=ALL`),
-            non-root execution and egress restrictions.</li>
-<li><strong>State &amp; Persistence:</strong> Checkpoints in a SQL database or files, so long runs can resume
-            after an interruption.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Guarantees
-          &amp; Commitments</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Guaranteed Termination:</strong> Hard cycle limits, timeouts and fallback paths end every run.
-          </li>
-<li><strong>Complete Commercial IP Ownership:</strong> Full code, copyright and documentation transfer at
-            sign-off.</li>
-<li><strong>30-Day Operational SLA &amp; Support:</strong> Engineering channel for fixes, tuning and Claude
-            model or API updates.</li>
-<li><strong>Data Containment:</strong> Disposable containers, with outbound traffic limited to approved
-            destinations.</li>
-</ul>
+      <div class="service-cta-buttons">
+        <a class="btn btn-commission btn-lg" href="../contact.html">Commission Advanced AI Agents →</a>
+        <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+      </div>
+    </div>
+  </section>
 
-        
-
-        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-top:2rem;margin-bottom:1rem;">Executive Summary</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong style="color:var(--gold);">Claude Agent Teams:</strong> Production orchestrator-worker and
-            hierarchical architectures.</li>
-<li><strong style="color:var(--gold);">Test-Driven Self-Correction:</strong> Test, lint and type-check
-            feedback loops that work toward passing code.</li>
-<li><strong style="color:var(--gold);">Sandboxed Runtimes:</strong> Docker isolation with dropped capabilities
-            and restricted network access.</li>
-<li><strong style="color:var(--gold);">Enterprise IP &amp; Handover:</strong> Full IP transfer, runbooks and
-            30-day support.</li>
-</ul>
-<div class="service-cta-buttons">
-<a class="btn btn-commission btn-lg" href="../contact.html" >
-            Commission Advanced AI Agents →
-          </a>
-<a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener"  target="_blank">
-            Book a free intro call on LinkedIn ↗
-          </a>
 </div>
-</div>
-</section>
-<div class="divider" style="margin-top:3rem;"></div>
+<div class="divider" style="margin-top:2rem;"></div>
+<script>
+function copyCode(btn) {
+  const pre = btn.closest('.code-window').querySelector('pre');
+  navigator.clipboard.writeText(pre.innerText).then(() => {
+    const orig = btn.innerText;
+    btn.innerText = 'Copied!';
+    setTimeout(() => { btn.innerText = orig; }, 1800);
+  });
+}
+</script>
 </main>
     <!-- START:FOOTER -->
     <footer id="links">

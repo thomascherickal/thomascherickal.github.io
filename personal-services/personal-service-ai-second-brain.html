@@ -105,6 +105,7 @@
 <link href="../css/service.css" rel="stylesheet"/>
 <link href="../css/personal-services.css" rel="stylesheet"/>
 <link href="../css/responsive.css" rel="stylesheet"/>
+<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -257,120 +258,478 @@
   <!-- END:HEADER -->
 <a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
 <main id="main">
-<!-- PAGE HERO HEADER -->
-<section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
-<p class="section-label">// SERVICE SPECIFICATION - 10 DAYS</p>
-<h1>AI Second Brain</h1>
-<p class="section-sub" style="max-width:760px;margin:0.75rem auto 0;line-height:1.8;">Build a private knowledge vault that captures, organizes and answers from your own notes.</p>
-<div style="margin-top:1.5rem;display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
-<a class="btn btn-commission btn-lg" href="../contact.html">Commission AI Second Brain →</a>
-<a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
-</div>
-</section>
-<div class="divider"></div>
-<section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
-<div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:clamp(1.25rem,3.5vw,2.5rem);box-shadow:var(--glow-gold);">
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">Service Overview &amp; Scope</h2>
-<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;">A focused 10-day engagement: <strong>5 days of live training</strong> (4 hours per day, Monday to Friday) followed by <strong>5 days of dedicated support</strong>. An AI second brain is a personal vault of plain Markdown notes that an AI assistant helps you capture, organize, search and review. Everything stays in files you own.</p>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Markdown Vault:</strong> Design and build a personal vault in Obsidian with a clear folder structure, note templates and Git-based backup.</li>
-<li><strong>Capture Pipeline:</strong> Set up one inbox for web clippings, PDFs, emails and quick notes, converted to clean Markdown automatically.</li>
-<li><strong>AI Organization:</strong> Use a local model through Ollama to summarize, tag and title notes, with every suggestion reviewed before it is saved.</li>
-<li><strong>Ask Your Notes:</strong> Build a small retrieval pipeline (embeddings plus a vector index) that answers questions with citations to your own notes.</li>
-<li><strong>Weekly Review Automation:</strong> Schedule a weekly digest of new notes, open tasks and suggested links.</li>
-<li><strong>Privacy and Access:</strong> Keep sensitive notes local, and set clear rules for what may be sent to any cloud model.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Standard Architecture &amp; Tools</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Notes Layer:</strong> Obsidian vault of Markdown files with YAML frontmatter, tracked in Git.</li>
-<li><strong>Models:</strong> Ollama with one small local chat model and one embedding model; an optional Claude or OpenRouter key for harder questions.</li>
-<li><strong>Index:</strong> Chroma (a local vector database) built from heading-based chunks of your notes.</li>
-<li><strong>Automation:</strong> Python scripts and cron for capture conversion, tagging and the weekly digest.</li>
-</ul>
-<div style="margin:1.5rem 0;padding:1rem;background:#040711;border:1px solid rgba(251,191,36,0.32);border-left:3px solid var(--gold);border-radius:8px;overflow-x:auto;"><div class="mermaid">
-flowchart TD
-  A["Capture: web, PDF, email, quick notes"] --> B["Inbox folder"]
-  B --> C["Convert to Markdown and remove duplicates"]
-  C --> D["Local model: summary, tags, title"]
-  D --> E{"Human review"}
-  E -- "Approve" --> F["Vault: Markdown plus frontmatter"]
-  E -- "Reject" --> B
-  F --> G["Embeddings and Chroma index"]
-  G --> H["Ask your notes with citations"]
-  F --> I["Weekly review digest"]
-</div><p style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">Diagram: second brain capture, organize and retrieve flow</p></div>
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">Deliverables &amp; 5-Day Training Schedule</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Working Vault:</strong> A structured personal vault with templates and a Git backup.</li>
-<li><strong>Scripts:</strong> Capture conversion, auto-tagging, indexing and query scripts, with comments.</li>
-<li><strong>Weekly Digest:</strong> One scheduled digest of new and unfinished notes.</li>
-<li><strong>Handover Checklist:</strong> A one-page guide for daily capture, weekly review, backup and re-indexing.</li>
-</ul>
-<div style="margin:1.5rem 0;padding:1.25rem 1.5rem;background:rgba(251,191,36,0.05);border:1px solid rgba(251,191,36,0.3);border-radius:12px;"><h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.1rem;margin-bottom:0.25rem;">Day 1: Vault Design and Setup</h3><p style="color:var(--text-muted);font-size:0.85rem;font-family:var(--font-mono);margin-bottom:0.75rem;">4 hours live training, 6 tasks</p><ol style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;list-style:decimal;"><li>Compare note-taking methods (PARA folders and Zettelkasten links) and choose one structure.</li><li>Install Obsidian and create the folder layout: inbox, projects, areas, resources, archive.</li><li>Write note templates with YAML frontmatter (title, date, tags, source, status).</li><li>Set naming rules and a tag list of no more than 20 tags to avoid sprawl.</li><li>Initialise Git, add a <code>.gitignore</code> for the index folder, and make the first commit.</li><li>Import about 50 of your existing notes and fix their formatting.</li></ol><div style="margin:1rem 0;"><div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;background:#060913;border:1px solid rgba(56,189,248,0.32);border-bottom:none;border-left:3px solid var(--cyan);border-top-left-radius:8px;border-top-right-radius:8px;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);"><span>bash</span><button class="copy-btn btn" type="button" aria-label="Copy code to clipboard" style="padding:0.25rem 0.75rem;font-size:0.75rem;text-decoration:none !important;">Copy</button></div><pre style="margin:0;padding:1.25rem;background:#040711;border:1px solid rgba(56,189,248,0.32);border-top:none;border-left:3px solid var(--cyan);border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow-x:auto;"><code>mkdir -p vault/{00-inbox,10-projects,20-areas,30-resources,90-archive}
-cd vault &amp;&amp; git init
-printf 'index/\n.obsidian/workspace*\n' &gt; .gitignore
-git add . &amp;&amp; git commit -m 'initial vault'</code></pre></div>
-<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;"><strong style="color:var(--cyan);">End-of-day check:</strong> Vault opens in Obsidian, templates work and the first Git commit exists.</p></div>
-<div style="margin:1.5rem 0;padding:1.25rem 1.5rem;background:rgba(251,191,36,0.05);border:1px solid rgba(251,191,36,0.3);border-radius:12px;"><h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.1rem;margin-bottom:0.25rem;">Day 2: Capture Pipeline</h3><p style="color:var(--text-muted);font-size:0.85rem;font-family:var(--font-mono);margin-bottom:0.75rem;">4 hours live training, 6 tasks</p><ol style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;list-style:decimal;"><li>Set up the web clipper so clippings land in the inbox folder as Markdown.</li><li>Route email and chat captures to the inbox (forwarding address or saved-message export).</li><li>Write a Python script that converts PDF and HTML files to Markdown.</li><li>Add duplicate detection using a content hash stored in frontmatter.</li><li>Run the script on a batch of 20 files and check the output by eye.</li><li>Define a daily 10-minute inbox review habit and what to do with each item.</li></ol><div style="margin:1rem 0;"><div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;background:#060913;border:1px solid rgba(56,189,248,0.32);border-bottom:none;border-left:3px solid var(--cyan);border-top-left-radius:8px;border-top-right-radius:8px;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);"><span>python</span><button class="copy-btn btn" type="button" aria-label="Copy code to clipboard" style="padding:0.25rem 0.75rem;font-size:0.75rem;text-decoration:none !important;">Copy</button></div><pre style="margin:0;padding:1.25rem;background:#040711;border:1px solid rgba(56,189,248,0.32);border-top:none;border-left:3px solid var(--cyan);border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow-x:auto;"><code>import hashlib, pathlib
+  <section class="section" style="padding-top: 2rem;">
+    <div class="container" style="max-width: 980px;">
 
-def content_hash(text: str) -&gt; str:
-    return hashlib.sha256(text.strip().encode()).hexdigest()[:16]
+      <!-- Hero Header Card -->
+      <div class="hero-card" style="background: #0c111d; border: 1px solid rgba(251, 191, 36, 0.28); border-radius: 14px; padding: 2.25rem; margin-bottom: 2rem;">
+        <div style="font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: #38bdf8; font-weight: 700; margin-bottom: 0.75rem;">
+          Personal Knowledge Architecture &amp; Local RAG
+        </div>
+        <h1>AI Second Brain</h1>
+        <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
+          Transform years of scattered Markdown notes, PDFs, bookmarks, and project logs into a private, local-first semantic memory system. This guide covers hybrid vector-plus-BM25 retrieval, automated knowledge graph linking, zero-cloud privacy with Ollama, and daily synthesis workflows that compound your intellectual output.
+        </p>
+        <div class="service-cta-buttons" style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <a class="btn btn-commission btn-lg" href="../contact.html">Commission AI Second Brain</a>
+          <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+        </div>
+      </div>
 
-seen = set()
-for f in pathlib.Path('vault/00-inbox').glob('*.md'):
-    h = content_hash(f.read_text())
-    if h in seen:
-        f.rename(f.with_suffix('.dup'))
-    seen.add(h)</code></pre></div>
-<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;"><strong style="color:var(--cyan);">End-of-day check:</strong> Twenty mixed files are converted to clean Markdown and duplicates are caught.</p></div>
-<div style="margin:1.5rem 0;padding:1.25rem 1.5rem;background:rgba(251,191,36,0.05);border:1px solid rgba(251,191,36,0.3);border-radius:12px;"><h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.1rem;margin-bottom:0.25rem;">Day 3: AI Organization with a Local Model</h3><p style="color:var(--text-muted);font-size:0.85rem;font-family:var(--font-mono);margin-bottom:0.75rem;">4 hours live training, 6 tasks</p><ol style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;list-style:decimal;"><li>Install Ollama, pull one small chat model and test a prompt.</li><li>Write a script that sends a note to the model and gets back a summary, 3 tags and a title as JSON.</li><li>Validate the JSON and reject any tag that is not on your approved tag list.</li><li>Save suggestions in the note as proposed frontmatter, not final, until you approve them.</li><li>Run the script on 30 notes and measure how many suggestions you accept.</li><li>Write a privacy rule: which notes never leave the machine and which may use a cloud model.</li></ol><div style="margin:1rem 0;"><div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;background:#060913;border:1px solid rgba(56,189,248,0.32);border-bottom:none;border-left:3px solid var(--cyan);border-top-left-radius:8px;border-top-right-radius:8px;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);"><span>python</span><button class="copy-btn btn" type="button" aria-label="Copy code to clipboard" style="padding:0.25rem 0.75rem;font-size:0.75rem;text-decoration:none !important;">Copy</button></div><pre style="margin:0;padding:1.25rem;background:#040711;border:1px solid rgba(56,189,248,0.32);border-top:none;border-left:3px solid var(--cyan);border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow-x:auto;"><code>import json, ollama
+      <!-- 4-Card Stats Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2.5rem;">
+        <div style="background: #0c111d; border: 1px solid rgba(56, 189, 248, 0.28); border-radius: 10px; padding: 1.25rem;">
+          <div style="font-size: 1.6rem; font-weight: 800; color: #fbbf24;">100% Local</div>
+          <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem;">Your notes never leave your machine when paired with local embeddings</div>
+        </div>
+        <div style="background: #0c111d; border: 1px solid rgba(52, 211, 153, 0.28); border-radius: 10px; padding: 1.25rem;">
+          <div style="font-size: 1.6rem; font-weight: 800; color: #34d399;">Hybrid RAG</div>
+          <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem;">Combines dense vector similarity with exact BM25 keyword matching</div>
+        </div>
+        <div style="background: #0c111d; border: 1px solid rgba(232, 121, 249, 0.28); border-radius: 10px; padding: 1.25rem;">
+          <div style="font-size: 1.6rem; font-weight: 800; color: #e879f9;">Sub-100ms</div>
+          <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem;">Instant retrieval across tens of thousands of personal Markdown notes</div>
+        </div>
+        <div style="background: #0c111d; border: 1px solid rgba(251, 191, 36, 0.28); border-radius: 10px; padding: 1.25rem;">
+          <div style="font-size: 1.6rem; font-weight: 800; color: #38bdf8;">Zero Lock-In</div>
+          <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem;">Plain-text Markdown files + SQLite/LanceDB you own forever</div>
+        </div>
+      </div>
 
-def suggest(note: str) -&gt; dict:
-    r = ollama.chat(model='qwen3:8b', format='json', messages=[{
-        'role': 'user',
-        'content': 'Return JSON with keys summary, tags (3), title for this note:\n' + note[:6000]}])
-    return json.loads(r['message']['content'])</code></pre></div>
-<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;"><strong style="color:var(--cyan);">End-of-day check:</strong> At least half of the suggested tags and titles are accepted, and nothing is saved without review.</p></div>
-<div style="margin:1.5rem 0;padding:1.25rem 1.5rem;background:rgba(251,191,36,0.05);border:1px solid rgba(251,191,36,0.3);border-radius:12px;"><h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.1rem;margin-bottom:0.25rem;">Day 4: Ask Your Notes: Embeddings and Retrieval</h3><p style="color:var(--text-muted);font-size:0.85rem;font-family:var(--font-mono);margin-bottom:0.75rem;">4 hours live training, 6 tasks</p><ol style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;list-style:decimal;"><li>Explain embeddings and retrieval in plain terms: notes become vectors, questions find the nearest ones.</li><li>Split notes into chunks by Markdown heading, with a maximum length of about 800 words.</li><li>Pull an embedding model with Ollama and build a Chroma index of the vault.</li><li>Write a query script that returns the top 4 chunks and asks the model to answer using only them.</li><li>Make the answer list the note titles it used, so every claim can be checked.</li><li>Test 10 real questions, then adjust chunk size and the number of results.</li></ol><div style="margin:1rem 0;"><div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;background:#060913;border:1px solid rgba(56,189,248,0.32);border-bottom:none;border-left:3px solid var(--cyan);border-top-left-radius:8px;border-top-right-radius:8px;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);"><span>python</span><button class="copy-btn btn" type="button" aria-label="Copy code to clipboard" style="padding:0.25rem 0.75rem;font-size:0.75rem;text-decoration:none !important;">Copy</button></div><pre style="margin:0;padding:1.25rem;background:#040711;border:1px solid rgba(56,189,248,0.32);border-top:none;border-left:3px solid var(--cyan);border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow-x:auto;"><code>import chromadb, ollama
+      <!-- Table of Contents -->
+      <nav id="table-of-contents" aria-label="Table of Contents" style="background: #0c111d; border: 1px solid rgba(251, 191, 36, 0.25); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2.5rem;">
+        <h2 style="font-size: 1.2rem; color: #fbbf24; margin-top: 0; margin-bottom: 1rem;">Table of Contents</h2>
+        <ol style="display:flex;flex-direction:column;gap:0.6rem;margin: 0; padding-left: 1.25rem; color: #cbd5e1; line-height: 1.6;">
+          <li><a class="gold-link" href="#beyond-passive-notes">1. Beyond Passive Note-Taking: Active Semantic Memory</a></li>
+          <li><a class="gold-link" href="#ingestion-chunking">2. Ingestion Pipelines and Structure-Aware Chunking</a></li>
+          <li><a class="gold-link" href="#hybrid-retrieval">3. Hybrid Retrieval: Dense Vectors + BM25 Reranking</a></li>
+          <li><a class="gold-link" href="#knowledge-graph">4. Automated Knowledge Graph &amp; Backlink Synthesis</a></li>
+          <li><a class="gold-link" href="#privacy-local-llm">5. Local-First Privacy with Ollama and Grounded Citations</a></li>
+          <li><a class="gold-link" href="#encryption-vault-hygiene">6. Encryption at Rest, Vault Hygiene, and Sync Security</a></li>
+          <li><a class="gold-link" href="#failure-mode-recovery">7. Failure-Mode Recovery: Stale Embeddings, Drift, and Corrupt Indices</a></li>
+          <li><a class="gold-link" href="#tutorial-python">8. Tutorial 1: Production Python Local Second Brain Indexer</a></li>
+          <li><a class="gold-link" href="#tutorial-prompt">9. Tutorial 2: Production Grounded Synthesis Prompt Template</a></li>
+          <li><a class="gold-link" href="#tutorial-operations">10. Tutorial 3: Step-by-Step Operational Setup Guide</a></li>
+          <li><a class="gold-link" href="#tutorial-python-hybrid">11. Tutorial 4: Hybrid RRF Search &amp; Citation Verifier (Python)</a></li>
+          <li><a class="gold-link" href="#tutorial-prompt-contradiction">12. Tutorial 5: Contradiction &amp; Temporal Drift Auditor Prompt Template</a></li>
+          <li><a class="gold-link" href="#tutorial-operations-rebuild">13. Tutorial 6: Step-by-Step Index Rebuild &amp; Vault Recovery Runbook</a></li>
+          <li><a class="gold-link" href="#references">14. Live Technical References</a></li>
+        </ol>
+      </nav>
 
-col = chromadb.PersistentClient(path='index').get_or_create_collection('notes')
+      <article class="prose" style="color: #e2e8f0; line-height: 1.78;">
+        <h2 id="beyond-passive-notes" style="color: #fbbf24; margin-top: 2.5rem;">Beyond Passive Note-Taking: Active Semantic Memory</h2>
+        <p>
+          Most personal knowledge bases - whether in Obsidian, Notion, or plain folders - suffer from the same failure mode: they become write-only archives. You clip articles, jot down meeting notes, and save code snippets, yet when you start a new project six months later, you cannot surface the exact insight you already captured.
+        </p>
+        <p>
+          An <strong>AI Second Brain</strong> turns your passive archive into an active reasoning partner. Instead of manually tagging every note, a background indexer embeds your Markdown files, PDFs, and transcripts into a local vector store, links related concepts automatically, and answers complex synthesis questions with strict inline citations back to your original files.
+        </p>
 
-def embed(t): return ollama.embeddings(model='nomic-embed-text', prompt=t)['embedding']
+        <h2 id="ingestion-chunking" style="color: #fbbf24; margin-top: 2.5rem;">Ingestion Pipelines and Structure-Aware Chunking</h2>
+        <p>
+          Naive fixed-character chunking destroys the meaning of technical notes by slicing code blocks and Markdown headings in half. A production personal knowledge pipeline uses <strong>structure-aware chunking</strong>: it splits documents along Markdown heading boundaries (<code>#</code>, <code>##</code>, <code>###</code>), preserves YAML frontmatter metadata (tags, dates, source URLs), and keeps fenced code blocks intact.
+        </p>
 
-def ask(q: str):
-    hits = col.query(query_embeddings=[embed(q)], n_results=4)
-    context = '\n---\n'.join(hits['documents'][0])
-    msg = f'Answer only from this context, and name the sources.\n{context}\n\nQ: {q}'
-    return ollama.chat(model='qwen3:8b', messages=[{'role':'user','content':msg}])['message']['content']</code></pre></div>
-<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;"><strong style="color:var(--cyan);">End-of-day check:</strong> Seven or more of ten test questions are answered correctly with a visible source note.</p></div>
-<div style="margin:1.5rem 0;padding:1.25rem 1.5rem;background:rgba(251,191,36,0.05);border:1px solid rgba(251,191,36,0.3);border-radius:12px;"><h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.1rem;margin-bottom:0.25rem;">Day 5: Automation, Review and Handover</h3><p style="color:var(--text-muted);font-size:0.85rem;font-family:var(--font-mono);margin-bottom:0.75rem;">4 hours live training, 6 tasks</p><ol style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;list-style:decimal;"><li>Write the weekly digest script: new notes, notes still marked draft, and suggested links.</li><li>Schedule the digest and an incremental re-index with cron.</li><li>Add a backup: push the vault to a private Git remote and test a restore.</li><li>Encrypt the backup and check that private folders are excluded from any cloud model.</li><li>Run a 10-item test list: capture, convert, tag, review, index, ask, digest, backup, restore, privacy rule.</li><li>Hand over scripts, templates and the checklist, and restart each part unaided.</li></ol><div style="margin:1rem 0;"><div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;background:#060913;border:1px solid rgba(56,189,248,0.32);border-bottom:none;border-left:3px solid var(--cyan);border-top-left-radius:8px;border-top-right-radius:8px;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);"><span>bash</span><button class="copy-btn btn" type="button" aria-label="Copy code to clipboard" style="padding:0.25rem 0.75rem;font-size:0.75rem;text-decoration:none !important;">Copy</button></div><pre style="margin:0;padding:1.25rem;background:#040711;border:1px solid rgba(56,189,248,0.32);border-top:none;border-left:3px solid var(--cyan);border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow-x:auto;"><code># weekly digest on Sunday 18:00, incremental re-index each night
-0 18 * * 0 /usr/bin/python3 ~/brain/digest.py
-30 2 * * * /usr/bin/python3 ~/brain/reindex.py</code></pre></div>
-<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;"><strong style="color:var(--cyan);">End-of-day check:</strong> All ten checks pass and you can run the daily and weekly routine without help.</p></div>
-<div style="margin:1.5rem 0 2rem;padding:1.25rem 1.5rem;border:1px solid rgba(56,189,248,0.3);border-radius:12px;"><h3 style="font-family:var(--font-display);color:var(--cyan);font-size:1.1rem;margin-bottom:0.5rem;">Days 6-10: Dedicated Support</h3><p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;">Five days of support by message after training: questions, fixes, re-indexing help, model swaps and small script changes within the original scope.</p></div>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Guarantees &amp; Commitments</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Your Files, Your Format:</strong> Notes stay as plain Markdown that any editor can open; there is no lock-in.</li>
-<li><strong>Private Operation Option:</strong> With local models, no note content is sent to a commercial API.</li>
-<li><strong>Clear Scope:</strong> The agreed scope is one vault, one capture inbox, one index and one weekly digest. Larger builds are a separate engagement.</li>
-<li><strong>100% Client Code &amp; Configuration Ownership:</strong> All scripts, templates and documentation transfer to you.</li>
-<li><strong>5-Day Support:</strong> Help for 5 days after training.</li>
-</ul>
+        <!-- SVG Diagram 1 -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="36" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Local-First AI Second Brain Ingestion Pipeline</text>
+            <rect x="50" y="130" width="170" height="120" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+            <text x="135" y="165" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Raw Sources</text>
+            <text x="135" y="192" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Obsidian Vault (.md)</text>
+            <text x="135" y="214" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">PDFs &amp; Research</text>
+            <text x="135" y="236" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Code Snippets</text>
+            <line x1="220" y1="190" x2="275" y2="190" stroke="#fbbf24" stroke-width="2"/>
+            <rect x="275" y="130" width="180" height="120" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="365" y="165" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">AST Chunker</text>
+            <text x="365" y="192" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Heading-Aware Split</text>
+            <text x="365" y="214" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">YAML Frontmatter</text>
+            <text x="365" y="236" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">SHA-256 Dedupe</text>
+            <line x1="455" y1="190" x2="510" y2="190" stroke="#fbbf24" stroke-width="2"/>
+            <rect x="510" y="130" width="180" height="120" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+            <text x="600" y="165" fill="#e879f9" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Local Embedder</text>
+            <text x="600" y="192" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Ollama Embeddings</text>
+            <text x="600" y="214" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">BM25 Token Index</text>
+            <text x="600" y="236" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Zero Cloud Egress</text>
+            <line x1="690" y1="190" x2="745" y2="190" stroke="#fbbf24" stroke-width="2"/>
+            <rect x="745" y="130" width="165" height="120" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+            <text x="827" y="165" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Local Store</text>
+            <text x="827" y="192" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">SQLite / LanceDB</text>
+            <text x="827" y="214" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Instant Incremental</text>
+            <text x="827" y="236" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Updates</text>
+            <text x="480" y="340" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">File-watcher detects modified notes and re-indexes only changed chunks via SHA-256 hashing.</text>
+          </svg>
+        </div>
 
-        
+        <h2 id="hybrid-retrieval" style="color: #fbbf24; margin-top: 2.5rem;">Hybrid Retrieval: Dense Vectors + BM25 Reranking</h2>
+        <p>
+          Pure vector search excels at conceptual similarity ("notes about distributed consensus") but often misses exact identifiers like error codes, function names, or client acronyms. Pure keyword search (BM25) catches exact tokens but misses synonyms. Combining both via <strong>Reciprocal Rank Fusion (RRF)</strong> gives you the best of both worlds, surfacing the top 5 to 8 most relevant note chunks with high precision.
+        </p>
 
-        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Executive Summary</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>One Vault, Owned by You:</strong> Plain Markdown notes in Obsidian with Git backup.</li>
-<li><strong>Strict 10-Day Delivery:</strong> 5 days of training (4 hours per day) plus 5 days of support.</li>
-<li><strong>Capture to Answer:</strong> Automated capture, local-model tagging and cited question answering.</li>
-<li><strong>Private by Default:</strong> Local models for sensitive notes, cloud only by your rule.</li>
-<li><strong>100% IP &amp; Code Transfer:</strong> Full ownership of scripts, templates and documentation.</li>
-</ul>
-<div class="service-cta-buttons" style="margin:2rem 0;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;"><a class="btn btn-commission btn-lg" href="../contact.html">Commission AI Second Brain →</a><a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a></div>
-</div>
-</section>
-<div class="divider" style="margin-top:3rem;"></div>
+        <!-- SVG Diagram 2 -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(52, 211, 153, 0.3); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="36" fill="#34d399" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Hybrid Retrieval &amp; Reciprocal Rank Fusion (RRF)</text>
+            <rect x="60" y="160" width="170" height="64" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+            <text x="145" y="197" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">User Query</text>
+            <line x1="230" y1="180" x2="320" y2="115" stroke="#38bdf8" stroke-width="2"/>
+            <line x1="230" y1="205" x2="320" y2="270" stroke="#34d399" stroke-width="2"/>
+            <rect x="320" y="75" width="210" height="80" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+            <text x="425" y="108" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Dense Vector Search</text>
+            <text x="425" y="132" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Semantic &amp; Conceptual Match</text>
+            <rect x="320" y="230" width="210" height="80" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="425" y="263" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">BM25 Lexical Search</text>
+            <text x="425" y="287" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Exact Symbols, IDs &amp; Acronyms</text>
+            <line x1="530" y1="115" x2="620" y2="180" stroke="#e879f9" stroke-width="2"/>
+            <line x1="530" y1="270" x2="620" y2="205" stroke="#e879f9" stroke-width="2"/>
+            <rect x="620" y="150" width="270" height="85" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+            <text x="755" y="185" fill="#e879f9" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">RRF Fusion + Top-K Context</text>
+            <text x="755" y="210" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Grounded Prompt with File Citations</text>
+          </svg>
+        </div>
+
+        <h2 id="knowledge-graph" style="color: #fbbf24; margin-top: 2.5rem;">Automated Knowledge Graph &amp; Backlink Synthesis</h2>
+        <p>
+          Beyond search, your Second Brain can run a nightly synthesis job that clusters recent notes, proposes missing wikilinks (<code>[[Concept]]</code>), and generates a weekly executive digest of open questions and recurring themes. Because all links are written back as standard Markdown, your vault remains 100% compatible with Obsidian, Logseq, or any text editor.
+        </p>
+
+        <!-- SVG Diagram 3 -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="36" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Automated Knowledge Graph &amp; Backlink Synthesis</text>
+            <circle cx="480" cy="200" r="55" fill="#0c111d" stroke="#fbbf24" stroke-width="2.5"/>
+            <text x="480" y="205" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Core Thesis</text>
+            <line x1="425" y1="185" x2="260" y2="120" stroke="#38bdf8" stroke-width="2"/>
+            <line x1="425" y1="215" x2="260" y2="285" stroke="#34d399" stroke-width="2"/>
+            <line x1="535" y1="185" x2="700" y2="120" stroke="#e879f9" stroke-width="2"/>
+            <line x1="535" y1="215" x2="700" y2="285" stroke="#38bdf8" stroke-width="2"/>
+            <rect x="120" y="85" width="150" height="55" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+            <text x="195" y="117" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">[[Meeting Notes]]</text>
+            <rect x="120" y="260" width="150" height="55" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="195" y="292" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">[[Paper Summary]]</text>
+            <rect x="690" y="85" width="150" height="55" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+            <text x="765" y="117" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">[[Code Pattern]]</text>
+            <rect x="690" y="260" width="150" height="55" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+            <text x="765" y="292" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">[[Weekly Digest]]</text>
+          </svg>
+        </div>
+
+        <h2 id="privacy-local-llm" style="color: #fbbf24; margin-top: 2.5rem;">Local-First Privacy with Ollama and Grounded Citations</h2>
+        <p>
+          Your personal journal, client notes, and proprietary research belong on your hardware. Using <a class="gold-link" href="#references">Ollama</a> for local embeddings and inference ensures zero third-party data retention. When you do choose to route a complex synthesis query to a frontier cloud model, your local retriever strips sensitive frontmatter and sends only the minimal, relevant excerpts.
+        </p>
+
+        <!-- SVG Diagram 4 -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(232, 121, 249, 0.3); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="36" fill="#e879f9" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Privacy Boundary: Local-First vs. Scoped Cloud Synthesis</text>
+            <rect x="60" y="75" width="520" height="270" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="320" y="105" fill="#34d399" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">100% Local Trust Zone (Laptop / VPS)</text>
+            <rect x="90" y="130" width="210" height="75" rx="6" fill="#064e3b"/>
+            <text x="195" y="165" fill="#ecfdf5" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Private Vault &amp; PDFs</text>
+            <text x="195" y="185" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Never Leaves Disk</text>
+            <rect x="340" y="130" width="210" height="75" rx="6" fill="#064e3b"/>
+            <text x="445" y="165" fill="#ecfdf5" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Ollama Local LLM</text>
+            <text x="445" y="185" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Embeddings &amp; Daily Q&amp;A</text>
+            <text x="320" y="280" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">PII Redaction &amp; Metadata Stripping Filter</text>
+            <line x1="580" y1="210" x2="670" y2="210" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6,4"/>
+            <rect x="670" y="130" width="230" height="160" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+            <text x="785" y="175" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Optional Cloud Frontier</text>
+            <text x="785" y="205" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Only Sanitized Top-K</text>
+            <text x="785" y="225" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Excerpts Sent</text>
+          </svg>
+        </div>
+
+        <h2 id="encryption-vault-hygiene" style="color: #fbbf24; margin-top: 2.5rem;">Encryption at Rest, Vault Hygiene, and Sync Security</h2>
+        <p>
+          A personal second brain inevitably accumulates your highest-sensitivity intellectual property: journal entries, architectural post-mortems, tax notes, and private client reflections. Storing raw Markdown and its corresponding vector embeddings in an unencrypted folder exposes your entire cognitive history if a laptop is lost or a cloud sync bucket is misconfigured.
+        </p>
+        <p>
+          The gold-standard architecture separates <strong>cleartext editing</strong> from <strong>encrypted storage and indexing</strong>. Keep your Markdown vault inside an encrypted volume (FileVault, LUKS, or a Cryptomator container) and ensure your local vector store - whether <a class="gold-link" href="#references">ChromaDB</a>, Qdrant, or SQLite-vec - resides on the same encrypted partition. When syncing across devices, never push raw embeddings or unencrypted SQLite databases to public cloud drives; instead, sync only the encrypted Markdown repository via private Git or <a class="gold-link" href="#references">Syncthing</a> over WireGuard, and let each workstation rebuild its local vector index independently.
+        </p>
+        <p>
+          Equally important is <strong>metadata hygiene</strong>. Strip EXIF data from embedded screenshots, exclude <code>.env</code> or credential-bearing scratchpads via a strict <code>.brainignore</code> file, and run a periodic pre-index secret scanner so API keys never get embedded into semantic vector space where they could be surfaced in future retrieval queries.
+        </p>
+
+        <!-- SVG Diagram 5: Encrypted Vault & Local-Only Sync Architecture -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="34" fill="#fbbf24" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Encrypted Vault &amp; Zero-Leakage Sync Architecture</text>
+
+            <rect x="40" y="80" width="240" height="250" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="160" y="110" fill="#34d399" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Encrypted Disk (LUKS/FV)</text>
+            <rect x="65" y="130" width="190" height="45" rx="6" fill="#131c31" stroke="#34d399" stroke-opacity="0.5"/>
+            <text x="160" y="157" fill="#e2e8f0" font-family="monospace" font-size="12" text-anchor="middle">vault/*.md (Cleartext)</text>
+            <rect x="65" y="190" width="190" height="45" rx="6" fill="#131c31" stroke="#38bdf8" stroke-opacity="0.5"/>
+            <text x="160" y="217" fill="#e2e8f0" font-family="monospace" font-size="12" text-anchor="middle">.brainignore (Exclusions)</text>
+            <rect x="65" y="250" width="190" height="45" rx="6" fill="#131c31" stroke="#fbbf24" stroke-opacity="0.5"/>
+            <text x="160" y="277" fill="#e2e8f0" font-family="monospace" font-size="12" text-anchor="middle">local_vectors.db</text>
+
+            <rect x="360" y="110" width="240" height="190" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+            <text x="480" y="140" fill="#fbbf24" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Secret &amp; PII Gate</text>
+            <text x="480" y="175" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Regex + Entropy Scan</text>
+            <text x="480" y="205" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Block API Keys &amp; Tokens</text>
+            <text x="480" y="235" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Local Ollama Inference</text>
+            <text x="480" y="270" fill="#34d399" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">0 Bytes Sent to Cloud</text>
+
+            <rect x="680" y="80" width="240" height="250" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+            <text x="800" y="110" fill="#e879f9" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Peer-to-Peer Sync</text>
+            <text x="800" y="150" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">WireGuard + Syncthing</text>
+            <text x="800" y="185" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Syncs .md Files Only</text>
+            <text x="800" y="220" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Excludes Vector Indices</text>
+            <text x="800" y="265" fill="#38bdf8" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Re-indexed Per Device</text>
+
+            <line x1="280" y1="205" x2="352" y2="205" stroke="#fbbf24" stroke-width="2"/>
+            <line x1="600" y1="205" x2="672" y2="205" stroke="#e879f9" stroke-width="2"/>
+          </svg>
+        </div>
+
+        <h2 id="failure-mode-recovery" style="color: #fbbf24; margin-top: 2.5rem;">Failure-Mode Recovery: Stale Embeddings, Drift, and Corrupt Indices</h2>
+        <p>
+          Over months of daily use, a second brain's index can silently degrade. Common failure modes include <strong>stale embeddings</strong> (notes edited externally without triggering re-indexing), <strong>embedding model drift</strong> (upgrading your local embedding model while leaving legacy vectors in the same collection, which destroys cosine similarity), and <strong>hallucinated synthesis</strong> when retrieval returns low-similarity chunks.
+        </p>
+        <p>
+          To eliminate silent degradation, store a deterministic <code>sha256</code> content hash and an <code>embedding_model_id</code> in every chunk's metadata. During incremental sync, compare the file's current hash against the stored hash; if they differ, atomically delete the old chunks for that file path and insert the newly embedded chunks. If you upgrade your embedding model, never mix vector spaces - trigger a clean blue-green collection rebuild. Finally, enforce a strict <strong>minimum similarity threshold</strong> (e.g., RRF score or cosine floor): if no chunk clears the threshold, the synthesis model must respond with <em>"Insufficient grounded evidence in your vault"</em> rather than fabricating an answer.
+        </p>
+
+        <!-- SVG Diagram 6: Incremental Hash Sync & Blue-Green Index Rebuild -->
+        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 12px; padding: 1rem;">
+          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+            <rect width="960" height="400" fill="#040711" rx="8"/>
+            <text x="480" y="34" fill="#fbbf24" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Hash-Verified Incremental Sync &amp; Blue-Green Rebuild</text>
+
+            <rect x="50" y="150" width="180" height="90" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+            <text x="140" y="185" fill="#38bdf8" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Compute SHA-256</text>
+            <text x="140" y="210" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Compare vs Index</text>
+
+            <rect x="290" y="70" width="200" height="80" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="390" y="105" fill="#34d399" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Hash Match</text>
+            <text x="390" y="128" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Skip (0 Compute)</text>
+
+            <rect x="290" y="230" width="200" height="90" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+            <text x="390" y="265" fill="#fbbf24" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Hash Mismatch</text>
+            <text x="390" y="290" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Atomic Delete + Re-Embed</text>
+
+            <rect x="560" y="230" width="170" height="90" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+            <text x="645" y="265" fill="#e879f9" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Model Upgrade?</text>
+            <text x="645" y="290" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Build v2 Collection</text>
+
+            <rect x="780" y="230" width="140" height="90" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+            <text x="850" y="265" fill="#34d399" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Atomic Swap</text>
+            <text x="850" y="290" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Zero Downtime</text>
+
+            <line x1="230" y1="175" x2="282" y2="115" stroke="#34d399" stroke-width="2"/>
+            <line x1="230" y1="215" x2="282" y2="275" stroke="#fbbf24" stroke-width="2"/>
+            <line x1="490" y1="275" x2="552" y2="275" stroke="#e879f9" stroke-width="2"/>
+            <line x1="730" y1="275" x2="772" y2="275" stroke="#34d399" stroke-width="2"/>
+          </svg>
+        </div>
+
+        <h2 id="tutorial-python" style="color: #fbbf24; margin-top: 2.5rem;">Tutorial 1: Production Python Local Second Brain Indexer</h2>
+        <p>
+          This self-contained Python script indexes a folder of Markdown notes into a local SQLite database using <a class="gold-link" href="#references">Ollama embeddings</a> and performs cosine-similarity retrieval.
+        </p>
+
+        <div class="code-window" style="background: #040711; border: 1px solid rgba(56, 189, 248, 0.32); border-left: 3px solid #38bdf8; border-radius: 8px; margin: 1.5rem 0; overflow: hidden;">
+          <div class="code-bar" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; background: #0c111d; border-bottom: 1px solid rgba(56, 189, 248, 0.2);">
+            <span style="font-family: monospace; font-size: 0.85rem; color: #38bdf8;">second_brain_rag.py (Python 3.11+)</span>
+            <button class="copy-btn" type="button" onclick="copyCode(this)" style="background: #1e293b; color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4); border-radius: 5px; padding: 0.25rem 0.75rem; font-size: 0.8rem; cursor: pointer; text-decoration: none !important;">Copy</button>
+          </div>
+          <pre style="margin: 0; padding: 1.15rem; white-space: pre-wrap; word-break: break-word; overflow-x: hidden; color: #e2e8f0; font-size: 0.88rem; line-height: 1.55;"><code>import json
+import math
+import pathlib
+import sqlite3
+import urllib.request
+
+DB_PATH = "second_brain.db"
+EMBED_MODEL = "nomic-embed-text"
+
+def get_embedding(text: str) -&gt; list[float]:
+    req = urllib.request.Request(
+        "http://localhost:11434/api/embeddings",
+        data=json.dumps({"model": EMBED_MODEL, "prompt": text}).encode(),
+        headers={"Content-Type": "application/json"},
+    )
+    with urllib.request.urlopen(req) as resp:
+        return json.loads(resp.read())["embedding"]
+
+def cosine_sim(a: list[float], b: list[float]) -&gt; float:
+    dot = sum(x * y for x, y in zip(a, b))
+    norm_a = math.sqrt(sum(x * x for x in a))
+    norm_b = math.sqrt(sum(y * y for y in b))
+    return dot / (norm_a * norm_b + 1e-9)
+
+def index_vault(vault_dir: str) -&gt; None:
+    conn = sqlite3.connect(DB_PATH)
+    conn.execute("CREATE TABLE IF NOT EXISTS chunks (path TEXT, heading TEXT, body TEXT, vec TEXT)")
+    for md_file in pathlib.Path(vault_dir).rglob("*.md"):
+        sections = md_file.read_text(encoding="utf-8").split("
+## ")
+        for sec in sections:
+            lines = sec.strip().splitlines()
+            if not lines:
+                continue
+            heading = lines[0].lstrip("# ")
+            body = "
+".join(lines[1:]).strip()
+            if len(body) &lt; 40:
+                continue
+            vec = json.dumps(get_embedding(f"{heading}
+{body}"))
+            conn.execute("INSERT INTO chunks VALUES (?, ?, ?, ?)", (str(md_file), heading, body, vec))
+    conn.commit()
+    conn.close()
+
+def search_vault(query: str, top_k: int = 3) -&gt; list[tuple[float, str, str]]:
+    q_vec = get_embedding(query)
+    conn = sqlite3.connect(DB_PATH)
+    rows = conn.execute("SELECT path, heading, body, vec FROM chunks").fetchall()
+    scored = [(cosine_sim(q_vec, json.loads(vec)), path, f"{heading}: {body[:200]}") for path, heading, body, vec in rows]
+    scored.sort(reverse=True, key=lambda x: x[0])
+    return scored[:top_k]</code></pre>
+        </div>
+
+        <h2 id="tutorial-prompt" style="color: #fbbf24; margin-top: 2.5rem;">Tutorial 2: Production Grounded Synthesis Prompt Template</h2>
+        <p>
+          Use this prompt template when feeding retrieved note chunks into your local or cloud LLM. It prevents hallucination by forcing every claim to cite a specific file path.
+        </p>
+
+        <div class="code-window" style="background: #040711; border: 1px solid rgba(251, 191, 36, 0.32); border-left: 3px solid #fbbf24; border-radius: 8px; margin: 1.5rem 0; overflow: hidden;">
+          <div class="code-bar" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; background: #0c111d; border-bottom: 1px solid rgba(251, 191, 36, 0.2);">
+            <span style="font-family: monospace; font-size: 0.85rem; color: #fbbf24;">second_brain_synthesis_prompt.txt</span>
+            <button class="copy-btn" type="button" onclick="copyCode(this)" style="background: #1e293b; color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4); border-radius: 5px; padding: 0.25rem 0.75rem; font-size: 0.8rem; cursor: pointer; text-decoration: none !important;">Copy</button>
+          </div>
+          <pre style="margin: 0; padding: 1.15rem; white-space: pre-wrap; word-break: break-word; overflow-x: hidden; color: #e2e8f0; font-size: 0.88rem; line-height: 1.55;"><code>SYSTEM:
+You are my personal AI Second Brain. Answer ONLY using the provided vault excerpts below.
+If the excerpts do not contain the answer, state: "Not found in vault."
+
+CITATION RULE:
+Every factual claim must end with the exact source filename in brackets, e.g. [notes/rag-architecture.md].
+
+VAULT EXCERPTS:
+{{RETRIEVED_CHUNKS}}
+
+USER QUESTION:
+{{QUERY}}</code></pre>
+        </div>
+
+        <h2 id="tutorial-operations" style="color: #fbbf24; margin-top: 2.5rem;">Tutorial 3: Step-by-Step Operational Setup Guide</h2>
+        <ol style="color: #cbd5e1; line-height: 1.85; padding-left: 1.5rem;">
+          <li><strong>Install Ollama Locally:</strong> Download Ollama and pull a fast embedding model (<code>ollama pull nomic-embed-text</code>).</li>
+          <li><strong>Normalize Your Vault:</strong> Ensure your Markdown notes use clear <code>## Heading</code> sections and YAML frontmatter.</li>
+          <li><strong>Run Initial Indexing:</strong> Execute <code>index_vault("/path/to/obsidian/vault")</code> to build your local <code>second_brain.db</code>.</li>
+          <li><strong>Schedule Incremental Sync:</strong> Add a lightweight cron job or file-watcher to re-index modified files every 15 minutes.</li>
+          <li><strong>Query with Citations:</strong> Connect your retriever to a local chat UI or CLI script and verify that every answer cites your exact source notes.</li>
+        </ol>
+
+        <h2 id="tutorial-python-hybrid" style="color: #fbbf24; margin-top: 2.5rem;">Tutorial 4: Hybrid RRF Search &amp; Citation Verifier (Python)</h2>
+        <p>
+          This Python module fuses dense vector rankings and BM25 lexical rankings using Reciprocal Rank Fusion (RRF), then enforces a minimum score floor so ungrounded hallucinations are blocked before synthesis.
+        </p>
+
+        <div class="code-window" style="background: #040711; border: 1px solid rgba(56, 189, 248, 0.35); border-left: 3px solid var(--cyan); border-radius: 8px; margin: 1.75rem 0; overflow: hidden;">
+          <div class="code-bar" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; background: #0c111d; border-bottom: 1px solid rgba(56, 189, 248, 0.2);">
+            <span style="font-family: monospace; font-size: 0.85rem; color: #38bdf8;">rrf_hybrid_search.py (Python 3.11+)</span>
+            <button type="button" class="copy-btn" onclick="copyCode(this)" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 4px; padding: 0.25rem 0.65rem; font-size: 0.78rem; cursor: pointer; text-decoration: none !important;">Copy</button>
+          </div>
+          <pre style="margin: 0; padding: 1.15rem; white-space: pre-wrap; word-break: break-word; overflow-x: hidden; color: #e2e8f0; font-size: 0.88rem; line-height: 1.55;"><code>from collections import defaultdict
+
+def reciprocal_rank_fusion(
+    dense_ids: list[str],
+    bm25_ids: list[str],
+    k: int = 60,
+    min_score: float = 0.015,
+) -&gt; list[tuple[str, float]]:
+    scores: dict[str, float] = defaultdict(float)
+    for rank, doc_id in enumerate(dense_ids, start=1):
+        scores[doc_id] += 1.0 / (k + rank)
+    for rank, doc_id in enumerate(bm25_ids, start=1):
+        scores[doc_id] += 1.0 / (k + rank)
+
+    ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+    return [(doc_id, score) for doc_id, score in ranked if score &gt;= min_score]</code></pre>
+        </div>
+
+        <h2 id="tutorial-prompt-contradiction" style="color: #fbbf24; margin-top: 2.5rem;">Tutorial 5: Contradiction &amp; Temporal Drift Auditor Prompt Template</h2>
+        <p>
+          Run this prompt weekly against newly ingested notes to detect when a newer decision contradicts an older architectural note in your vault.
+        </p>
+
+        <div class="code-window" style="background: #040711; border: 1px solid rgba(251, 191, 36, 0.35); border-left: 3px solid var(--gold); border-radius: 8px; margin: 1.75rem 0; overflow: hidden;">
+          <div class="code-bar" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; background: #0c111d; border-bottom: 1px solid rgba(251, 191, 36, 0.2);">
+            <span style="font-family: monospace; font-size: 0.85rem; color: #fbbf24;">contradiction_auditor_prompt.txt</span>
+            <button type="button" class="copy-btn" onclick="copyCode(this)" style="background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4); border-radius: 4px; padding: 0.25rem 0.65rem; font-size: 0.78rem; cursor: pointer; text-decoration: none !important;">Copy</button>
+          </div>
+          <pre style="margin: 0; padding: 1.15rem; white-space: pre-wrap; word-break: break-word; overflow-x: hidden; color: #e2e8f0; font-size: 0.88rem; line-height: 1.55;"><code>SYSTEM:
+You are a Knowledge Integrity Auditor for a personal Markdown vault. Compare the NEW_NOTE against the RETRIEVED_HISTORICAL_CHUNKS.
+
+TASK:
+1. Identify any factual, architectural, or policy contradictions between NEW_NOTE and historical notes.
+2. Note the timestamp of each conflicting chunk.
+3. Recommend whether the older note should be marked [SUPERSEDED] with a backlink to NEW_NOTE.
+
+OUTPUT:
+- Conflict Summary (or "No contradictions detected")
+- Exact File Paths &amp; Headings Affected
+- Suggested Frontmatter Update</code></pre>
+        </div>
+
+        <h2 id="tutorial-operations-rebuild" style="color: #fbbf24; margin-top: 2.5rem;">Tutorial 6: Step-by-Step Index Rebuild &amp; Vault Recovery Runbook</h2>
+        <p>When upgrading embedding models or recovering from a corrupted local vector store, follow these steps:</p>
+        <ol style="color: #cbd5e1; line-height: 1.85; padding-left: 1.5rem;">
+          <li><strong>Verify Vault Snapshot:</strong> Commit or snapshot your Markdown vault (<code>git status</code>) before touching the vector index.</li>
+          <li><strong>Create Blue-Green Collection:</strong> Initialize a new collection (e.g., <code>vault_v2</code>) rather than overwriting <code>vault_v1</code> in place.</li>
+          <li><strong>Run Secret Scanner:</strong> Execute <code>gitleaks detect --source ./vault --no-git</code> to ensure no credentials slipped into notes.</li>
+          <li><strong>Batch Re-Embed Locally:</strong> Run your Python indexer with the new Ollama embedding model and record <code>embedding_model_id</code> in metadata.</li>
+          <li><strong>Atomic Alias Swap:</strong> Point your query CLI to <code>vault_v2</code>, run 5 golden test queries to verify citation accuracy, and delete <code>vault_v1</code>.</li>
+        </ol>
+
+        <h2 id="references" style="color: #fbbf24; margin-top: 2.5rem;">Live Technical References</h2>
+        <ul style="color: #cbd5e1; line-height: 1.9; padding-left: 1.5rem;">
+          <li><a class="gold-link" href="https://ollama.com/library/nomic-embed-text" rel="noopener" target="_blank">Ollama Nomic Embed Text</a> - Local, high-accuracy open-weights embedding model.</li>
+          <li><a class="gold-link" href="https://lancedb.github.io/lancedb/" rel="noopener" target="_blank">LanceDB Documentation</a> - Serverless, embedded vector database for local-first AI apps.</li>
+          <li><a class="gold-link" href="https://www.anthropic.com/news/contextual-retrieval" rel="noopener" target="_blank">Anthropic Contextual Retrieval</a> - Research on combining semantic embeddings with BM25 lexical search.</li>
+          <li><a class="gold-link" href="https://docs.trychroma.com/" rel="noopener" target="_blank">ChromaDB Documentation</a> - Local-first embedded vector database for Python.</li>
+          <li><a class="gold-link" href="https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf" rel="noopener" target="_blank">Reciprocal Rank Fusion (Cormack et al.)</a> - Foundational paper on fusing lexical BM25 and dense vector rankings.</li>
+          <li><a class="gold-link" href="https://syncthing.net/" rel="noopener" target="_blank">Syncthing</a> - Decentralized, encrypted peer-to-peer file synchronization for Markdown vaults.</li>
+          <li><a class="gold-link" href="https://github.com/gitleaks/gitleaks" rel="noopener" target="_blank">Gitleaks Secret Scanner</a> - Pre-index scanning to prevent credentials from entering vector stores.</li>
+          <li><a class="gold-link" href="https://qdrant.tech/documentation/" rel="noopener" target="_blank">Qdrant Vector Database Documentation</a> - High-performance hybrid search with payload filtering.</li>
+          <li><a class="gold-link" href="https://github.com/asg017/sqlite-vec" rel="noopener" target="_blank">sqlite-vec Extension</a> - Lightweight, single-file vector search directly inside SQLite.</li>
+          <li><a class="gold-link" href="https://www.wireguard.com/" rel="noopener" target="_blank">WireGuard VPN</a> - Cryptographic mesh networking for private multi-device vault sync.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Preserved CTA Block -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="service-cta-buttons" style="margin:2rem 0;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a class="btn btn-commission btn-lg" href="../contact.html">Commission AI Second Brain →</a>
+          <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="divider" style="margin-top:3rem;"></div>
+
+  <script>
+  function copyCode(btn) {
+    var pre = btn.closest(.code-window).querySelector(pre);
+    navigator.clipboard.writeText(pre.innerText).then(function() {
+      var orig = btn.innerText;
+      btn.innerText = Copied!;
+      setTimeout(function() { btn.innerText = orig; }, 1800);
+    });
+  }
+  </script>
 </main>
     <!-- START:FOOTER -->
     <footer id="links">

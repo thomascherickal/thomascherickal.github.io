@@ -104,6 +104,7 @@
 <link href="../css/article.css" rel="stylesheet"/>
 <link href="../css/service.css" rel="stylesheet"/>
 <link href="../css/personal-services.css" rel="stylesheet"/>
+<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -256,87 +257,384 @@
   <!-- END:HEADER -->
 <a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
 <main id="main">
-<!-- PAGE HERO HEADER -->
-<section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
-<p class="section-label">// SERVICE SPECIFICATION 02</p>
-<h1>Local LLMs & Cost Slashing</h1>
-<p class="section-sub" style="max-width:760px;margin:0.75rem auto 0;line-height:1.8;">
-        Cutting recurring cloud API bills by 60-90% by running open-weight models privately with Ollama, vLLM, llama.cpp
-        and LM Studio on hardware you own.
+<section class="gem-section" style="padding-top:3.5rem;">
+  <div class="container">
+    <div style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.28);border-radius:14px;padding:2.25rem;margin-bottom:2rem;">
+      <p class="section-label" style="color:var(--gold,#fbbf24);margin-bottom:0.5rem;">// PERSONAL SERVICE SPECIFICATION 02</p>
+      <h1>Local LLMs & Cost Slashing</h1>
+      <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.8;max-width:820px;margin-bottom:1.5rem;">
+        Eliminate recurring cloud API bills for everyday coding, summarization, and private document analysis. Run quantized open-weight models directly on your laptop or workstation with Ollama and llama.cpp, paired with a smart local-first router that escalates only complex reasoning to frontier cloud APIs.
       </p>
-<div style="margin-top:1.5rem;">
-<a class="btn btn-commission" href="../contact.html" >
-          Slash Inference Costs with Local LLMs →
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;">
+        <div style="background:#040711;border:1px solid rgba(56,189,248,0.25);border-radius:10px;padding:1rem;">
+          <div style="font-size:0.75rem;color:var(--cyan,#38bdf8);text-transform:uppercase;letter-spacing:0.08em;">API Spend Reduction</div>
+          <div style="font-size:1.35rem;font-weight:700;color:var(--gold,#fbbf24);margin-top:0.25rem;">60% - 90%</div>
+          <div style="font-size:0.82rem;color:var(--text-secondary);margin-top:0.2rem;">Routine queries run at $0/token</div>
+        </div>
+        <div style="background:#040711;border:1px solid rgba(52,211,153,0.25);border-radius:10px;padding:1rem;">
+          <div style="font-size:0.75rem;color:var(--green,#34d399);text-transform:uppercase;letter-spacing:0.08em;">Data Privacy</div>
+          <div style="font-size:1.35rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">100% Air-Gapped</div>
+          <div style="font-size:0.82rem;color:var(--text-secondary);margin-top:0.2rem;">Zero telemetry leaves your machine</div>
+        </div>
+        <div style="background:#040711;border:1px solid rgba(232,121,249,0.25);border-radius:10px;padding:1rem;">
+          <div style="font-size:0.75rem;color:#e879f9;text-transform:uppercase;letter-spacing:0.08em;">Routing Pattern</div>
+          <div style="font-size:1.35rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Local-First</div>
+          <div style="font-size:0.82rem;color:var(--text-secondary);margin-top:0.2rem;">Escalate to Claude only when needed</div>
+        </div>
+        <div style="background:#040711;border:1px solid rgba(251,191,36,0.25);border-radius:10px;padding:1rem;">
+          <div style="font-size:0.75rem;color:var(--gold,#fbbf24);text-transform:uppercase;letter-spacing:0.08em;">Delivery Cadence</div>
+          <div style="font-size:1.35rem;font-weight:700;color:var(--cyan,#38bdf8);margin-top:0.25rem;">5 Days Live</div>
+          <div style="font-size:0.82rem;color:var(--text-secondary);margin-top:0.2rem;">Plus 5 days dedicated support</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="table-of-contents" style="background:var(--bg-card,#0c111d);border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:1.5rem 2rem;margin-bottom:2.5rem;">
+      <h2 style="margin-top:0;color:var(--gold,#fbbf24);font-size:1.25rem;">Table of Contents</h2>
+      <ol style="display:flex;flex-direction:column;gap:0.6rem;margin:0.75rem 0 0 1.25rem;line-height:1.7;color:var(--text-secondary);">
+        <li><a class="gold-link" href="#economics-of-local">The Economics of Local-First Inference</a></li>
+        <li><a class="gold-link" href="#quantization-hardware">Quantization and Consumer Hardware Sizing</a></li>
+        <li><a class="gold-link" href="#hybrid-routing">Hybrid Local-to-Cloud Routing Architecture</a></li>
+        <li><a class="gold-link" href="#thermal-vram-hygiene">Thermal, VRAM, and Memory Bandwidth Hygiene</a></li>
+        <li><a class="gold-link" href="#quantization-failure-recovery">Quantization Failure Modes and Fallback Recovery</a></li>
+        <li><a class="gold-link" href="#tutorial-python">Tutorial 1: Python Local-First Cost Router with Ollama</a></li>
+        <li><a class="gold-link" href="#tutorial-prompt">Tutorial 2: Compact System Prompt for Quantized Models</a></li>
+        <li><a class="gold-link" href="#tutorial-operations">Tutorial 3: Step-by-Step Local Stack Deployment</a></li>
+        <li><a class="gold-link" href="#tutorial-python-2">Tutorial 4: Python VRAM Budget and Context-Window Guard</a></li>
+        <li><a class="gold-link" href="#tutorial-prompt-2">Tutorial 5: Production JSON-Strict Extraction Prompt for Small Models</a></li>
+        <li><a class="gold-link" href="#tutorial-operations-2">Tutorial 6: Step-by-Step Model Benchmarking and Fallback Tuning</a></li>
+        <li><a class="gold-link" href="#references">Live References and Further Reading</a></li>
+      </ol>
+    </div>
+
+    <article style="max-width:920px;margin:0 auto;line-height:1.85;color:var(--text-secondary);">
+
+      <h2 id="economics-of-local" style="color:var(--cyan,#38bdf8);margin-top:2.5rem;">The Economics of Local-First Inference</h2>
+      <p>
+        Individual developers, researchers, and writers often pay for frontier cloud models to perform tasks that a compact local model handles effortlessly: formatting JSON, summarizing local PDFs, drafting commit messages, or running unit-test explanations. Routing 100 percent of your daily token volume to cloud APIs creates unnecessary recurring expense and exposes sensitive personal files to external servers.
+      </p>
+      <p>
+        By shifting routine workloads to local open-weight models such as Qwen, Gemma, or DeepSeek served via <a class="gold-link" href="#references">Ollama</a> or <a class="gold-link" href="#references">llama.cpp</a>, your marginal cost per token drops to zero. You reserve paid cloud calls strictly for multi-step architectural reasoning or long-context synthesis where frontier models deliver measurable gains.
+      </p>
+
+      <div style="margin:2rem 0;background:#040711;border:1px solid rgba(56,189,248,0.28);border-radius:12px;padding:1rem;">
+        <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cloud-Only vs Local-First Cost Comparison" style="width:100%;height:auto;display:block;">
+          <rect width="960" height="400" fill="#040711" rx="10"/>
+          <text x="480" y="38" fill="#fbbf24" font-size="18" font-weight="700" text-anchor="middle" font-family="sans-serif">Cloud-Only Spend vs. Local-First Hybrid Routing</text>
+          <rect x="70" y="90" width="370" height="250" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="1.5"/>
+          <text x="255" y="125" fill="#e879f9" font-size="15" font-weight="700" text-anchor="middle" font-family="sans-serif">100% Cloud API</text>
+          <text x="255" y="175" fill="#cbd5e1" font-size="13" text-anchor="middle" font-family="sans-serif">Every summary, draft, and</text>
+          <text x="255" y="198" fill="#cbd5e1" font-size="13" text-anchor="middle" font-family="sans-serif">classification billed per token</text>
+          <text x="255" y="260" fill="#fbbf24" font-size="22" font-weight="700" text-anchor="middle" font-family="sans-serif">High Monthly Bill</text>
+
+          <rect x="520" y="90" width="370" height="250" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="1.5"/>
+          <text x="705" y="125" fill="#34d399" font-size="15" font-weight="700" text-anchor="middle" font-family="sans-serif">80% Local + 20% Cloud</text>
+          <text x="705" y="175" fill="#cbd5e1" font-size="13" text-anchor="middle" font-family="sans-serif">Routine tasks run on local GPU/RAM</text>
+          <text x="705" y="198" fill="#cbd5e1" font-size="13" text-anchor="middle" font-family="sans-serif">Hard reasoning escalated to Claude</text>
+          <text x="705" y="260" fill="#34d399" font-size="22" font-weight="700" text-anchor="middle" font-family="sans-serif">60% - 90% Savings</text>
+        </svg>
+      </div>
+
+      <h2 id="quantization-hardware" style="color:var(--cyan,#38bdf8);margin-top:2.5rem;">Quantization and Consumer Hardware Sizing</h2>
+      <p>
+        Modern 4-bit GGUF quantization compresses model weights so they fit comfortably inside standard consumer hardware - whether an Apple Silicon MacBook with unified memory or a workstation with an 8 GB to 24 GB GPU. Quantization preserves over 95 percent of reasoning accuracy while doubling or tripling token generation speed.
+      </p>
+
+      <div style="margin:2rem 0;background:#040711;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:1rem;">
+        <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GGUF Quantization Memory Footprint" style="width:100%;height:auto;display:block;">
+          <rect width="960" height="400" fill="#040711" rx="10"/>
+          <text x="480" y="38" fill="#38bdf8" font-size="18" font-weight="700" text-anchor="middle" font-family="sans-serif">4-Bit Quantization: Fitting Models on Consumer Hardware</text>
+          <rect x="100" y="100" width="760" height="55" rx="8" fill="#0c111d" stroke="#e879f9"/>
+          <text x="130" y="133" fill="#e879f9" font-size="14" font-weight="700" font-family="sans-serif">FP16 Full Precision: ~16 GB+ VRAM required</text>
+          <rect x="100" y="185" width="460" height="55" rx="8" fill="#0c111d" stroke="#fbbf24"/>
+          <text x="130" y="218" fill="#fbbf24" font-size="14" font-weight="700" font-family="sans-serif">Q8_0 Quantized: ~8 GB VRAM required</text>
+          <rect x="100" y="270" width="280" height="55" rx="8" fill="#0c111d" stroke="#34d399"/>
+          <text x="130" y="303" fill="#34d399" font-size="14" font-weight="700" font-family="sans-serif">Q4_K_M: ~4.5 GB VRAM</text>
+        </svg>
+      </div>
+
+      <h2 id="hybrid-routing" style="color:var(--cyan,#38bdf8);margin-top:2.5rem;">Hybrid Local-to-Cloud Routing Architecture</h2>
+      <p>
+        A local-first router inspects each incoming prompt for complexity signals: token length, multi-file code refactoring, or explicit escalation flags. Simple queries execute locally in milliseconds; complex queries route to <a class="gold-link" href="#references">Anthropic Claude</a> or <a class="gold-link" href="#references">Google Gemini</a> with full cost logging.
+      </p>
+
+      <div style="margin:2rem 0;background:#040711;border:1px solid rgba(52,211,153,0.28);border-radius:12px;padding:1rem;">
+        <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Local-First Hybrid Router" style="width:100%;height:auto;display:block;">
+          <rect width="960" height="400" fill="#040711" rx="10"/>
+          <text x="480" y="38" fill="#34d399" font-size="18" font-weight="700" text-anchor="middle" font-family="sans-serif">Local-First Complexity Router</text>
+          <rect x="60" y="155" width="190" height="90" rx="8" fill="#0c111d" stroke="#fbbf24"/>
+          <text x="155" y="205" fill="#fbbf24" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">User Prompt</text>
+          <rect x="350" y="155" width="220" height="90" rx="8" fill="#0c111d" stroke="#38bdf8"/>
+          <text x="460" y="205" fill="#38bdf8" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Complexity Gate</text>
+          <rect x="670" y="80" width="220" height="85" rx="8" fill="#0c111d" stroke="#34d399"/>
+          <text x="780" y="128" fill="#34d399" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Local Ollama ($0)</text>
+          <rect x="670" y="235" width="220" height="85" rx="8" fill="#0c111d" stroke="#e879f9"/>
+          <text x="780" y="283" fill="#e879f9" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Cloud Frontier API</text>
+          <line x1="250" y1="200" x2="350" y2="200" stroke="#fbbf24" stroke-width="2"/>
+          <line x1="570" y1="180" x2="670" y2="125" stroke="#34d399" stroke-width="2"/>
+          <line x1="570" y1="220" x2="670" y2="275" stroke="#e879f9" stroke-width="2"/>
+        </svg>
+      </div>
+
+      <h2 id="tutorial-python" style="color:var(--cyan,#38bdf8);margin-top:2.5rem;">Tutorial 1: Python Local-First Cost Router with Ollama</h2>
+      <p>
+        This Python router sends standard prompts to your local Ollama server and escalates only when the prompt exceeds a complexity threshold or requests deep architectural review.
+      </p>
+
+      <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan,#38bdf8);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+        <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(56,189,248,0.2);">
+          <span style="font-family:monospace;font-size:0.85rem;color:var(--cyan,#38bdf8);">local_first_router.py</span>
+          <button type="button" class="copy-btn" style="background:rgba(251,191,36,0.12);color:var(--gold,#fbbf24);border:1px solid rgba(251,191,36,0.4);border-radius:6px;padding:0.3rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+        </div>
+        <pre style="margin:0;padding:1.1rem;overflow-x:auto;color:#e2e8f0;font-size:0.88rem;line-height:1.6;"><code>import requests
+
+OLLAMA_URL = "http://localhost:11434/api/generate"
+
+def route_prompt(prompt: str, force_cloud: bool = False) -&gt; dict:
+    is_complex = force_cloud or len(prompt) &gt; 3500 or "architecture review" in prompt.lower()
+    if not is_complex:
+        resp = requests.post(
+            OLLAMA_URL,
+            json={"model": "qwen2.5:7b-instruct-q4_K_M", "prompt": prompt, "stream": False},
+            timeout=60,
+        )
+        resp.raise_for_status()
+        return {"backend": "local-ollama", "cost_usd": 0.0, "output": resp.json()["response"]}
+    return {"backend": "cloud-escalation", "cost_usd": "metered", "output": "Escalate to cloud SDK"}
+
+if __name__ == "__main__":
+    result = route_prompt("Summarize the key benefits of 4-bit GGUF quantization in 3 bullets.")
+    print(result["backend"], result["cost_usd"], "
+", result["output"])</code></pre>
+      </div>
+
+      <h2 id="tutorial-prompt" style="color:var(--cyan,#38bdf8);margin-top:2.5rem;">Tutorial 2: Compact System Prompt for Quantized Models</h2>
+      <p>
+        Smaller local models perform best with concise, unambiguous instructions and explicit output schemas. Use this template to keep local responses sharp and deterministic.
+      </p>
+
+      <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.32);border-left:3px solid var(--gold,#fbbf24);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+        <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(251,191,36,0.2);">
+          <span style="font-family:monospace;font-size:0.85rem;color:var(--gold,#fbbf24);">local_compact_prompt.txt</span>
+          <button type="button" class="copy-btn" style="background:rgba(251,191,36,0.12);color:var(--gold,#fbbf24);border:1px solid rgba(251,191,36,0.4);border-radius:6px;padding:0.3rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+        </div>
+        <pre style="margin:0;padding:1.1rem;overflow-x:auto;color:#e2e8f0;font-size:0.88rem;line-height:1.6;"><code>ROLE: Precise local technical assistant.
+RULES:
+- Answer directly in under 150 words unless asked for code.
+- If context is missing, state "INSUFFICIENT CONTEXT" instead of guessing.
+- Output valid JSON when requested, with no markdown prose around it.</code></pre>
+      </div>
+
+      <h2 id="tutorial-operations" style="color:var(--cyan,#38bdf8);margin-top:2.5rem;">Tutorial 3: Step-by-Step Local Stack Deployment</h2>
+      <ol style="margin-left:1.5rem;line-height:1.9;">
+        <li><strong style="color:var(--gold,#fbbf24);">Step 1 - Install Ollama:</strong> Download and start the local runtime daemon on your workstation.</li>
+        <li><strong style="color:var(--gold,#fbbf24);">Step 2 - Pull Quantized Models:</strong> Pull a fast 7B/8B instruct model for daily tasks and a 14B/32B model if you have 16 GB+ memory.</li>
+        <li><strong style="color:var(--gold,#fbbf24);">Step 3 - Benchmark Latency:</strong> Measure tokens per second on your hardware and set your context window size accordingly.</li>
+        <li><strong style="color:var(--gold,#fbbf24);">Step 4 - Wire the Router:</strong> Point your local scripts and editor extensions to <code>http://localhost:11434</code> as the default endpoint.</li>
+      </ol>
+
+      <div style="margin:2rem 0;background:#040711;border:1px solid rgba(232,121,249,0.28);border-radius:12px;padding:1rem;">
+        <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Local Stack Deployment Flow" style="width:100%;height:auto;display:block;">
+          <rect width="960" height="400" fill="#040711" rx="10"/>
+          <text x="480" y="38" fill="#e879f9" font-size="18" font-weight="700" text-anchor="middle" font-family="sans-serif">Local LLM Deployment Checklist</text>
+          <rect x="60" y="140" width="190" height="110" rx="8" fill="#0c111d" stroke="#fbbf24"/>
+          <text x="155" y="195" fill="#fbbf24" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">1. Install Runtime</text>
+          <rect x="280" y="140" width="190" height="110" rx="8" fill="#0c111d" stroke="#38bdf8"/>
+          <text x="375" y="195" fill="#38bdf8" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">2. Pull GGUF</text>
+          <rect x="500" y="140" width="190" height="110" rx="8" fill="#0c111d" stroke="#34d399"/>
+          <text x="595" y="195" fill="#34d399" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">3. Benchmark</text>
+          <rect x="720" y="140" width="190" height="110" rx="8" fill="#0c111d" stroke="#e879f9"/>
+          <text x="815" y="195" fill="#e879f9" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">4. Route Traffic</text>
+        </svg>
+      </div>
+
+      <h2 id="thermal-vram-hygiene" style="color:var(--cyan,#38bdf8);margin-top:2.5rem;">Thermal, VRAM, and Memory Bandwidth Hygiene</h2>
+      <p>
+        Running local LLMs on consumer laptops or desktop workstations introduces hardware constraints that cloud users never see. Token generation speed in autoregressive decoding is primarily bound by memory bandwidth, not raw compute. If a quantized model plus its KV-cache exceeds your GPU VRAM or unified memory budget, the runtime spills layers onto system RAM or swap, causing throughput to plummet from 45 tokens per second to fewer than 3 tokens per second.
+      </p>
+      <p>
+        To maintain responsive local inference, enforce strict VRAM hygiene. Reserve at least 15 percent of available GPU memory for the operating system, display compositor, and active IDE. Cap your local context window (<code>num_ctx</code>) to the actual working size of the task - typically 4,096 or 8,192 tokens for coding and summarization - rather than blindly allocating 32,768 tokens, which inflates the KV-cache exponentially. Additionally, configure Ollama's <code>OLLAMA_KEEP_ALIVE</code> parameter to unload idle models after 5 minutes so your workstation stays cool and battery-efficient during non-AI work.
+      </p>
+      <p>
+        For privacy and security hygiene, bind your local inference server strictly to <code>127.0.0.1</code> (localhost) rather than <code>0.0.0.0</code>, preventing unintended exposure on shared Wi-Fi networks. Verify model checksums against official registries such as the <a class="gold-link" href="#references">Hugging Face Hub</a> and <a class="gold-link" href="#references">Ollama Model Library</a> before loading third-party weights.
+      </p>
+
+      <div style="margin:2rem 0;background:#040711;border:1px solid rgba(56,189,248,0.28);border-radius:12px;padding:1rem;">
+        <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Local VRAM Budget and KV-Cache Allocation Diagram" style="width:100%;height:auto;display:block;">
+          <rect width="960" height="400" fill="#040711" rx="10"/>
+          <text x="480" y="34" text-anchor="middle" fill="#fbbf24" font-size="18" font-weight="700" font-family="system-ui,sans-serif">Local VRAM Budget and KV-Cache Allocation (16 GB Example)</text>
+          <rect x="60" y="85" width="840" height="80" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+          <rect x="65" y="90" width="480" height="70" rx="6" fill="#0f2942" stroke="#38bdf8" stroke-width="1"/>
+          <text x="305" y="122" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="700" font-family="system-ui,sans-serif">Model Weights (Q4_K_M): ~8.8 GB</text>
+          <text x="305" y="144" text-anchor="middle" fill="#cbd5e1" font-size="11" font-family="system-ui,sans-serif">100% GPU-resident for max bandwidth</text>
+
+          <rect x="550" y="90" width="210" height="70" rx="6" fill="#2a210c" stroke="#fbbf24" stroke-width="1"/>
+          <text x="655" y="122" text-anchor="middle" fill="#fbbf24" font-size="14" font-weight="700" font-family="system-ui,sans-serif">KV-Cache: ~3.2 GB</text>
+          <text x="655" y="144" text-anchor="middle" fill="#cbd5e1" font-size="11" font-family="system-ui,sans-serif">8,192 token context cap</text>
+
+          <rect x="765" y="90" width="130" height="70" rx="6" fill="#0c291e" stroke="#34d399" stroke-width="1"/>
+          <text x="830" y="122" text-anchor="middle" fill="#34d399" font-size="13" font-weight="700" font-family="system-ui,sans-serif">OS Headroom</text>
+          <text x="830" y="144" text-anchor="middle" fill="#cbd5e1" font-size="11" font-family="system-ui,sans-serif">~4.0 GB free</text>
+
+          <rect x="60" y="215" width="400" height="130" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+          <text x="260" y="248" text-anchor="middle" fill="#34d399" font-size="15" font-weight="700" font-family="system-ui,sans-serif">Healthy Local Execution</text>
+          <text x="260" y="278" text-anchor="middle" fill="#cbd5e1" font-size="12" font-family="system-ui,sans-serif">Zero PCIe / Swap Spill</text>
+          <text x="260" y="302" text-anchor="middle" fill="#cbd5e1" font-size="12" font-family="system-ui,sans-serif">40-75 tokens/sec sustained</text>
+          <text x="260" y="326" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="system-ui,sans-serif">Predictable latency &amp; low thermals</text>
+
+          <rect x="500" y="215" width="400" height="130" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+          <text x="700" y="248" text-anchor="middle" fill="#e879f9" font-size="15" font-weight="700" font-family="system-ui,sans-serif">OOM / CPU Offload Trap</text>
+          <text x="700" y="278" text-anchor="middle" fill="#cbd5e1" font-size="12" font-family="system-ui,sans-serif">Unbounded 32k+ Context</text>
+          <text x="700" y="302" text-anchor="middle" fill="#cbd5e1" font-size="12" font-family="system-ui,sans-serif">Spills to slow system RAM (&lt;3 tok/s)</text>
+          <text x="700" y="326" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="system-ui,sans-serif">Mitigate via num_ctx cap + auto-unload</text>
+        </svg>
+      </div>
+
+      <h2 id="quantization-failure-recovery" style="color:var(--cyan,#38bdf8);margin-top:2.5rem;">Quantization Failure Modes and Fallback Recovery</h2>
+      <p>
+        Aggressive quantization (such as 2-bit or 3-bit weights) can introduce subtle degradation: broken JSON brackets, repetitive token loops, or missed negative constraints in complex instructions. When a local model fails silently on a structured task, a naive pipeline either crashes downstream or stores corrupted data.
+      </p>
+      <p>
+        A production-grade local-first stack pairs every local call with deterministic validation and automatic cloud escalation. First, validate structured outputs against a strict schema (using Pydantic or JSON Schema) immediately after generation. Second, detect repetition loops or truncated responses by checking finish reasons and token-entropy heuristics. Third, if a local model fails validation twice, automatically escalate that single request to a frontier cloud API such as <a class="gold-link" href="#references">Anthropic Claude</a> or <a class="gold-link" href="#references">Google Gemini</a>, log the failure pattern, and return a clean result to the user. This hybrid recovery pattern delivers 80 to 90 percent cost savings while guaranteeing 100 percent output reliability.
+      </p>
+
+      <div style="margin:2rem 0;background:#040711;border:1px solid rgba(56,189,248,0.28);border-radius:12px;padding:1rem;">
+        <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Quantized Model Validation and Cloud Fallback Recovery Flow" style="width:100%;height:auto;display:block;">
+          <rect width="960" height="400" fill="#040711" rx="10"/>
+          <text x="480" y="34" text-anchor="middle" fill="#fbbf24" font-size="18" font-weight="700" font-family="system-ui,sans-serif">Quantized Model Validation and Cloud Fallback Recovery</text>
+          <rect x="50" y="150" width="170" height="80" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+          <text x="135" y="185" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="700" font-family="system-ui,sans-serif">Local Q4 Model</text>
+          <text x="135" y="208" text-anchor="middle" fill="#cbd5e1" font-size="11" font-family="system-ui,sans-serif">$0.00 marginal cost</text>
+
+          <line x1="220" y1="190" x2="275" y2="190" stroke="#fbbf24" stroke-width="2"/>
+          <polygon points="275,185 285,190 275,195" fill="#fbbf24"/>
+
+          <rect x="285" y="150" width="190" height="80" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+          <text x="380" y="185" text-anchor="middle" fill="#fbbf24" font-size="14" font-weight="700" font-family="system-ui,sans-serif">Schema &amp; Loop Check</text>
+          <text x="380" y="208" text-anchor="middle" fill="#cbd5e1" font-size="11" font-family="system-ui,sans-serif">JSON + finish_reason</text>
+
+          <line x1="475" y1="170" x2="620" y2="115" stroke="#34d399" stroke-width="2"/>
+          <polygon points="615,112 626,113 619,122" fill="#34d399"/>
+          <text x="545" y="128" text-anchor="middle" fill="#34d399" font-size="11" font-weight="600" font-family="system-ui,sans-serif">Valid (85-90%)</text>
+
+          <rect x="630" y="75" width="260" height="75" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+          <text x="760" y="108" text-anchor="middle" fill="#34d399" font-size="14" font-weight="700" font-family="system-ui,sans-serif">Accept Local Output</text>
+          <text x="760" y="130" text-anchor="middle" fill="#cbd5e1" font-size="11" font-family="system-ui,sans-serif">Zero cloud spend</text>
+
+          <line x1="475" y1="210" x2="620" y2="270" stroke="#e879f9" stroke-width="2"/>
+          <polygon points="619,264 626,273 615,274" fill="#e879f9"/>
+          <text x="545" y="262" text-anchor="middle" fill="#e879f9" font-size="11" font-weight="600" font-family="system-ui,sans-serif">Invalid / Timeout</text>
+
+          <rect x="630" y="235" width="260" height="85" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+          <text x="760" y="270" text-anchor="middle" fill="#e879f9" font-size="14" font-weight="700" font-family="system-ui,sans-serif">Cloud Frontier Fallback</text>
+          <text x="760" y="294" text-anchor="middle" fill="#cbd5e1" font-size="11" font-family="system-ui,sans-serif">Escalate &amp; log failure mode</text>
+        </svg>
+      </div>
+
+      <h2 id="tutorial-python-2" style="color:var(--cyan,#38bdf8);margin-top:2.5rem;">Tutorial 4: Python VRAM Budget and Context-Window Guard</h2>
+      <p>
+        Use this Python helper to estimate token counts and enforce a safe <code>num_ctx</code> ceiling before dispatching a local Ollama request, preventing accidental memory spills on consumer hardware.
+      </p>
+      <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid var(--cyan,#38bdf8);border-radius:8px;margin:1.75rem 0;overflow:hidden;">
+        <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:#0c111d;border-bottom:1px solid rgba(56,189,248,0.2);">
+          <span style="color:#38bdf8;font-family:monospace;font-size:0.85rem;">vram_context_guard.py</span>
+          <button class="copy-btn" type="button" style="background:rgba(56,189,248,0.12);color:#38bdf8;border:1px solid rgba(56,189,248,0.35);border-radius:6px;padding:0.25rem 0.7rem;font-size:0.78rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+        </div>
+        <pre style="margin:0;padding:1.1rem;color:#e2e8f0;font-family:monospace;font-size:0.86rem;line-height:1.6;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;"><code>import math
+
+def estimate_tokens(text: str) -> int:
+    """Conservative 4-chars-per-token estimate for local routing."""
+    return max(1, math.ceil(len(text) / 4))
+
+def select_safe_context(prompt: str, max_local_ctx: int = 8192) -> dict:
+    """Return safe num_ctx or flag for cloud escalation."""
+    tokens = estimate_tokens(prompt)
+    if tokens > int(max_local_ctx * 0.75):
+        return {
+            "route": "cloud_escalation",
+            "estimated_tokens": tokens,
+            "reason": "Exceeds 75% of local VRAM-safe context budget",
+        }
+    return {
+        "route": "local_ollama",
+        "num_ctx": max_local_ctx,
+        "estimated_tokens": tokens,
+    }
+
+if __name__ == "__main__":
+    decision = select_safe_context("Summarize this short note." * 50)
+    print(decision)</code></pre>
+      </div>
+
+      <h2 id="tutorial-prompt-2" style="color:var(--cyan,#38bdf8);margin-top:2.5rem;">Tutorial 5: Production JSON-Strict Extraction Prompt for Small Models</h2>
+      <p>
+        Quantized 7B and 8B models perform dramatically better on structured extraction when given explicit field types, zero conversational filler, and a concrete example.
+      </p>
+      <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.35);border-left:3px solid var(--gold,#fbbf24);border-radius:8px;margin:1.75rem 0;overflow:hidden;">
+        <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:#0c111d;border-bottom:1px solid rgba(251,191,36,0.2);">
+          <span style="color:#fbbf24;font-family:monospace;font-size:0.85rem;">json_strict_small_model.txt</span>
+          <button class="copy-btn" type="button" style="background:rgba(251,191,36,0.12);color:#fbbf24;border:1px solid rgba(251,191,36,0.35);border-radius:6px;padding:0.25rem 0.7rem;font-size:0.78rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+        </div>
+        <pre style="margin:0;padding:1.1rem;color:#e2e8f0;font-family:monospace;font-size:0.86rem;line-height:1.6;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;"><code>SYSTEM:
+Extract entities from INPUT into valid JSON only. Output no markdown fences, no commentary, and no trailing text.
+
+SCHEMA:
+{
+  "title": "string",
+  "action_items": ["string"],
+  "priority": "low | medium | high"
+}
+
+INPUT:
+{{raw_note_text}}</code></pre>
+      </div>
+
+      <h2 id="tutorial-operations-2" style="color:var(--cyan,#38bdf8);margin-top:2.5rem;">Tutorial 6: Step-by-Step Model Benchmarking and Fallback Tuning</h2>
+      <ol style="line-height:1.9;margin-left:1.25rem;">
+        <li><strong>Measure Baseline Throughput:</strong> Run <code>ollama run &lt;model&gt; --verbose</code> on a 500-word prompt and record <code>eval rate</code> (tokens/sec). Anything below 15 tokens/sec indicates CPU offload.</li>
+        <li><strong>Tune Context Cap:</strong> Lower <code>num_ctx</code> from 32,768 to 8,192 in your Modelfile if <code>eval rate</code> drops during multi-turn sessions.</li>
+        <li><strong>Audit Fallback Rate:</strong> Track how often your schema validator escalates to cloud APIs. Target a 10 to 15 percent escalation rate for optimal cost-to-quality balance.</li>
+        <li><strong>Lock Local Bindings:</strong> Confirm <code>OLLAMA_HOST=127.0.0.1:11434</code> in your environment configuration so local endpoints are never exposed externally.</li>
+      </ol>
+
+      <h2 id="references" style="color:var(--cyan,#38bdf8);margin-top:2.5rem;">Live References and Further Reading</h2>
+      <ul style="line-height:1.9;margin-left:1.25rem;">
+        <li><a class="gold-link" href="https://ollama.com/library" target="_blank" rel="noopener">Ollama Model Library and Local Runtime</a></li>
+        <li><a class="gold-link" href="https://github.com/ggerganov/llama.cpp" target="_blank" rel="noopener">llama.cpp - Open-Source Local Inference Engine</a></li>
+        <li><a class="gold-link" href="https://huggingface.co/models" target="_blank" rel="noopener">Hugging Face Open-Weight Model Hub</a></li>
+        <li><a class="gold-link" href="https://docs.anthropic.com/en/api/overview" target="_blank" rel="noopener">Anthropic API Overview for Cloud Escalation</a></li>
+        <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs" target="_blank" rel="noopener">Google Gemini API Documentation</a></li>
+        <li><a class="gold-link" href="https://docs.pydantic.dev/latest/" target="_blank" rel="noopener">Pydantic Data Validation Documentation</a></li>
+        <li><a class="gold-link" href="https://github.com/ollama/ollama/blob/main/docs/faq.md" target="_blank" rel="noopener">Ollama Official FAQ and Environment Variables</a></li>
+        <li><a class="gold-link" href="https://platform.openai.com/docs/guides/structured-outputs" target="_blank" rel="noopener">OpenAI Structured Outputs Guide</a></li>
+        <li><a class="gold-link" href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" target="_blank" rel="noopener">OWASP Top 10 for Large Language Model Applications</a></li>
+        <li><a class="gold-link" href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">NIST AI Risk Management Framework</a></li>
+      </ul>
+
+      <div class="service-cta-buttons" style="margin-top:2.5rem;">
+        <a class="btn btn-commission btn-lg" href="../contact.html">
+          Commission Local LLM Cost Slashing →
         </a>
-</div>
-</section>
-<div class="divider"></div>
-<!-- STRUCTURED SPECIFICATION LISTS -->
-<section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
-<div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:2.5rem;box-shadow:var(--glow-gold);">
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">Service
-          Overview &amp; Scope</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Moving High-Volume Work Off the Cloud:</strong> Shifting repetitive generative workloads from paid
-            APIs to open-weight models (Llama, Qwen, Gemma, Mistral, DeepSeek) running on your own hardware.</li>
-<li><strong>Hardware Sizing:</strong> Matching model size, from 8B to 120B parameters, to your GPUs and
-            memory, and pricing the next hardware upgrade in US dollars and Indian rupees.</li>
-<li><strong>Local-First Routing:</strong> Sending routine requests to local models and passing harder
-            reasoning to Claude, with OpenRouter as an optional middle tier.</li>
-<li><strong>Private Hosting:</strong> Running models on-premises on Linux (Ubuntu or Zorin), so source code,
-            customer records and internal documents stay on your machines.</li>
-<li><strong>Serving and Quantization:</strong> Setting up vLLM, Ollama, llama.cpp or LM Studio with GGUF or
-            AWQ quantization chosen to fit your hardware.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Standard
-          Architecture &amp; Tools</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Inference Engines:</strong> vLLM for multi-user serving, llama.cpp and Ollama for lighter
-            deployments, and LM Studio for desktop use.</li>
-<li><strong>Open-Weight Model Families:</strong> Llama, Qwen, Gemma, Mistral and DeepSeek, selected and
-            quantized per task.</li>
-<li><strong>Routing Gateway:</strong> A FastAPI service exposing an OpenAI-compatible endpoint that routes
-            each request to a local model or to Claude.</li>
-<li><strong>Coding Agents on Local Models:</strong> OpenCode and Claude Code configured to use your local
-            models for work they handle well.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Guarantees
-          &amp; Commitments</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>60% to 90% Cost Reduction:</strong> Lower monthly cloud API spend for the workloads moved to local
-            models, measured against a baseline agreed in week 1.</li>
-<li><strong>Data Stays on Your Hardware:</strong> Local models run without sending prompts or outputs to
-            outside services; only requests you choose to route to Claude leave your network.</li>
-<li><strong>Hardware Independence:</strong> Docker containers that run on workstations, on-premises servers or
-            a private cloud.</li>
-<li><strong>30-Day Operational SLA:</strong> Help with model updates, driver issues and performance tuning.
-          </li>
-</ul>
-
-        
-
-        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-top:2rem;margin-bottom:1rem;">Executive Summary</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong style="color:var(--gold);">Lower Cloud Token Spend:</strong> Cutting recurring API costs by
-            60%-90% for workloads moved to self-hosted models.</li>
-<li><strong style="color:var(--gold);">Local-First Routing:</strong> Routine queries served locally, harder
-            cases escalated to Claude.</li>
-<li><strong style="color:var(--gold);">Private Data Handling:</strong> Sensitive data processed on your own
-            machines.</li>
-<li><strong style="color:var(--gold);">Full IP &amp; Deployment Handover:</strong> Container files, benchmark
-            scripts, the ROI calculator and 30-day support.</li>
-</ul>
-<div class="service-cta-buttons">
-<a class="btn btn-commission btn-lg" href="../contact.html" >
-            Commission Local LLM Cost Slashing →
-          </a>
-<a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener"  target="_blank">
-            Book a free intro call on LinkedIn ↗
-          </a>
-</div>
-</div>
+        <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">
+          Free LinkedIn Consultation ↗
+        </a>
+      </div>
+    </article>
+  </div>
 </section>
 <div class="divider" style="margin-top:3rem;"></div>
+<script>
+document.querySelectorAll('.copy-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var code = btn.closest('.code-window').querySelector('pre').innerText;
+    navigator.clipboard.writeText(code).then(function() {
+      var orig = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(function() { btn.textContent = orig; }, 1600);
+    });
+  });
+});
+</script>
 </main>
     <!-- START:FOOTER -->
     <footer id="links">

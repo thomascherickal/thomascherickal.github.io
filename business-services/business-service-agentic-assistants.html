@@ -104,6 +104,7 @@
 <link href="../css/article.css" rel="stylesheet"/>
 <link href="../css/service.css" rel="stylesheet"/>
 <link href="../css/business-services.css" rel="stylesheet"/>
+<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -254,80 +255,352 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-<a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
-<main id="main">
-<!-- PAGE HERO HEADER -->
-<section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
-<p class="section-label">// SERVICE SPECIFICATION 04</p>
-<h1>Agentic Assistants Training</h1>
-<p class="section-sub" style="max-width:760px;margin:0.75rem auto 0;line-height:1.8;">
-        Deploying Hermes Agent, the open-source agent from Nous Research, as a self-hosted assistant that remembers
-        across sessions, builds its own skills and runs scheduled tasks on your own infrastructure.
-      </p>
-<div style="margin-top:1.5rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-<a class="btn btn-commission" href="../contact.html">
-          Commission Agentic Assistants →
-        </a>
-<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">
-          Free LinkedIn Consultation ↗
-        </a>
-</div>
-</section>
-<div class="divider"></div>
-<!-- STRUCTURED SPECIFICATION LISTS -->
-<section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
-<div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:2.5rem;box-shadow:var(--glow-gold);">
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">Service
-          Overview &amp; Scope</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Self-Hosted Hermes Agent:</strong> Installing and configuring Hermes Agent (MIT-licensed, released
-            by Nous Research) as an always-on service on your Linux server or workstation.</li>
-<li><strong>Persistent Memory:</strong> Setting up session history and memory so the agent keeps project
-            context, preferences and past decisions across conversations.</li>
-<li><strong>Skills From Experience:</strong> Configuring how the agent saves solved procedures as reusable
-            skills, and reviewing those skills before your team relies on them.</li>
-<li><strong>Model Choice:</strong> Connecting Hermes Agent to local models through Ollama, llama.cpp, vLLM or
-            LM Studio, to Claude, or to OpenRouter, depending on your cost and privacy needs.</li>
-<li><strong>Tools, Schedules and Access:</strong> Connecting MCP servers and internal tools, setting up
-            scheduled tasks, and reaching the agent from the terminal or your team chat, all inside Docker with limited
-            permissions.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Standard
-          Architecture &amp; Tools</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Agent Framework:</strong> Hermes Agent with its memory store, skills library and task scheduler.
-          </li>
-<li><strong>Model Backends:</strong> Local open-weight models (Qwen, Gemma, Llama, Mistral) via Ollama,
-            llama.cpp, vLLM or LM Studio, plus Claude or OpenRouter through an OpenAI-compatible endpoint.</li>
-<li><strong>Tools and Integrations:</strong> MCP servers in Python or Rust, Python tool scripts, and messaging
-            channels such as Slack, Discord or Telegram.</li>
-<li><strong>Isolation:</strong> Docker containers running as non-root, with limited network access and file
-            permissions.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Guarantees
-          &amp; Commitments</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Private Operation Option:</strong> When paired with local models, the agent runs without calls to
-            commercial LLM APIs.</li>
-<li><strong>Checked Tool Calls:</strong> Tool inputs are validated against schemas, and failed calls are
-            caught, retried or escalated.</li>
-<li><strong>100% Client Code &amp; Configuration Ownership:</strong> All configuration, tools, skills and
-            documentation transfer to you.</li>
-<li><strong>30-Day Engineering Support:</strong> Help with model swaps, runtime tuning and new tool
-            integrations.</li>
-</ul>
+<main id="main" class="container" style="max-width:1040px;margin:0 auto;padding:2.5rem 1.25rem 4rem;">
 
-        <h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-top:2rem;margin-bottom:1rem;">Executive Summary</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong style="color:var(--gold);">Hermes Agent, Self-Hosted:</strong> Nous Research's open-source agent
-            running on your infrastructure.</li>
-<li><strong style="color:var(--gold);">Memory and Skills:</strong> An agent that keeps context across sessions
-            and reuses reviewed skills.</li>
-<li><strong style="color:var(--gold);">Flexible Model Backends:</strong> Local models for privacy and cost,
-            Claude or OpenRouter for harder work.</li>
-<li><strong style="color:var(--gold);">100% IP &amp; Code Transfer:</strong> Full ownership, deployment files
-            and 30-day support.</li>
-</ul>
+<div class="hero" style="background:#0c111d;border:1px solid rgba(56,189,248,0.22);border-radius:16px;padding:2.5rem;margin-bottom:2rem;">
+  <div style="color:#fbbf24;font-size:0.85rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;">Autonomous Systems Engineering</div>
+  <h1>Agentic Assistants Training</h1>
+  <p style="font-size:1.12rem;line-height:1.7;color:#cbd5e1;margin-bottom:2rem;">Build stateful, multi-step AI assistants that plan, execute tools via Model Context Protocol (MCP), verify their own outputs, and pause for human approval on high-stakes actions.</p>
+  <div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+    <div class="stat-card" style="background:#040711;border:1px solid rgba(251,191,36,0.3);border-radius:10px;padding:1.25rem;">
+      <div style="color:#fbbf24;font-size:1.75rem;font-weight:800;">LangGraph</div>
+      <div style="color:#94a3b8;font-size:0.9rem;margin-top:0.25rem;">Stateful cyclic execution &amp; checkpointing</div>
+    </div>
+    <div class="stat-card" style="background:#040711;border:1px solid rgba(56,189,248,0.3);border-radius:10px;padding:1.25rem;">
+      <div style="color:#38bdf8;font-size:1.75rem;font-weight:800;">MCP Native</div>
+      <div style="color:#94a3b8;font-size:0.9rem;margin-top:0.25rem;">Standardized database, API &amp; SaaS tools</div>
+    </div>
+    <div class="stat-card" style="background:#040711;border:1px solid rgba(52,211,153,0.3);border-radius:10px;padding:1.25rem;">
+      <div style="color:#34d399;font-size:1.75rem;font-weight:800;">HITL Gates</div>
+      <div style="color:#94a3b8;font-size:0.9rem;margin-top:0.25rem;">Human-in-the-loop approval for writes</div>
+    </div>
+    <div class="stat-card" style="background:#040711;border:1px solid rgba(232,121,249,0.3);border-radius:10px;padding:1.25rem;">
+      <div style="color:#e879f9;font-size:1.75rem;font-weight:800;">Full Trace</div>
+      <div style="color:#94a3b8;font-size:0.9rem;margin-top:0.25rem;">Deterministic replay &amp; step observability</div>
+    </div>
+  </div>
+</div>
+
+<section id="table-of-contents" class="toc" style="background:#0c111d;border:1px solid rgba(251,191,36,0.25);border-radius:12px;padding:1.75rem;margin-bottom:2.5rem;">
+  <h2 style="margin-top:0;color:#fbbf24;font-size:1.25rem;">Table of Contents</h2>
+  <ol style="display:flex;flex-direction:column;gap:0.6rem;margin:0.75rem 0 0;padding-left:1.5rem;line-height:1.7;color:#cbd5e1;">
+    <li><a class="gold-link" href="#state-machines">From Linear Chains to Stateful Agent Graphs</a></li>
+    <li><a class="gold-link" href="#mcp-tools">Tool-Use &amp; Model Context Protocol (MCP)</a></li>
+    <li><a class="gold-link" href="#hitl-gates">Human-in-the-Loop Approval &amp; Checkpointing</a></li>
+    <li><a class="gold-link" href="#memory-eval">Episodic Memory &amp; Agent Evaluation</a></li>
+    <li><a class="gold-link" href="#multi-agent-governance">Multi-Agent Governance &amp; Least-Privilege Sandboxing</a></li>
+    <li><a class="gold-link" href="#loop-recovery">Loop Detection, Idempotency &amp; Failure Recovery</a></li>
+    <li><a class="gold-link" href="#tutorial-python">Tutorial 1: Stateful LangGraph Agent in Python</a></li>
+    <li><a class="gold-link" href="#tutorial-prompt">Tutorial 2: ReAct Planner &amp; Verifier Prompt</a></li>
+    <li><a class="gold-link" href="#tutorial-steps">Tutorial 3: Step-by-Step Agent Hardening</a></li>
+    <li><a class="gold-link" href="#tutorial-python-2">Tutorial 4: Production Python Idempotent Tool Wrapper</a></li>
+    <li><a class="gold-link" href="#tutorial-prompt-2">Tutorial 5: Supervisor Delegation &amp; Budget Guard Prompt</a></li>
+    <li><a class="gold-link" href="#tutorial-steps-2">Tutorial 6: Step-by-Step Runaway Loop &amp; State Recovery Protocol</a></li>
+    <li><a class="gold-link" href="#references">Live References &amp; Technical Standards</a></li>
+  </ol>
+</section>
+
+<section id="state-machines">
+  <h2>From Linear Chains to Stateful Agent Graphs</h2>
+  <p>Linear prompt chains break the moment an external API returns an unexpected error or a search query yields empty results. Production agentic assistants operate as directed cyclic graphs: they plan an action, invoke a tool, inspect the observation, and either iterate to recover from errors or advance to the next milestone.</p>
+  <p>Using <a class="gold-link" href="#references">LangGraph state machines</a>, every step in an agent's reasoning loop is persisted to a durable checkpointer. If a long-running research or operations task is interrupted, it resumes from the exact node where it paused.</p>
+
+  <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;border:1px solid rgba(56,189,248,0.25);">
+    <rect width="960" height="400" fill="#040711"/>
+    <text x="480" y="38" fill="#38bdf8" font-size="18" font-weight="bold" text-anchor="middle" font-family="sans-serif">Stateful ReAct Agent Execution Loop</text>
+    <rect x="80" y="150" width="180" height="90" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="170" y="190" fill="#fbbf24" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Planner Node</text>
+    <text x="170" y="215" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Select Next Tool</text>
+    <line x1="260" y1="195" x2="360" y2="195" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="360" y="150" width="200" height="90" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="460" y="190" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Tool Executor</text>
+    <text x="460" y="215" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">MCP / REST / SQL</text>
+    <line x1="560" y1="195" x2="660" y2="195" stroke="#34d399" stroke-width="2"/>
+    <rect x="660" y="150" width="200" height="90" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="1.5"/>
+    <text x="760" y="190" fill="#34d399" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Verifier Node</text>
+    <text x="760" y="215" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Check Goal &amp; Exit</text>
+    <path d="M 460 240 L 460 310 L 170 310 L 170 240" fill="none" stroke="#e879f9" stroke-width="2" stroke-dasharray="6,4"/>
+    <text x="315" y="335" fill="#e879f9" font-size="12" text-anchor="middle" font-family="sans-serif">Retry / Self-Correction Loop</text>
+  </svg>
+</section>
+
+<section id="mcp-tools">
+  <h2>Tool-Use &amp; Model Context Protocol (MCP)</h2>
+  <p>Rather than writing brittle one-off API wrappers for every assistant, we standardize integrations around the <a class="gold-link" href="#references">Model Context Protocol (MCP)</a>. MCP provides a clean, permissioned boundary between your agent's reasoning loop and internal databases, GitHub repositories, Slack channels, and ticketing systems.</p>
+
+  <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;border:1px solid rgba(251,191,36,0.25);">
+    <rect width="960" height="400" fill="#040711"/>
+    <text x="480" y="38" fill="#fbbf24" font-size="18" font-weight="bold" text-anchor="middle" font-family="sans-serif">Model Context Protocol (MCP) Integration Bus</text>
+    <rect x="80" y="150" width="200" height="100" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="180" y="195" fill="#fbbf24" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Agentic Assistant</text>
+    <text x="180" y="218" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">MCP Client</text>
+    <line x1="280" y1="200" x2="380" y2="200" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="380" y="140" width="180" height="120" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="470" y="195" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">MCP Gateway</text>
+    <text x="470" y="218" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Auth &amp; Rate Limits</text>
+    <line x1="560" y1="170" x2="660" y2="110" stroke="#34d399" stroke-width="1.5"/>
+    <line x1="560" y1="200" x2="660" y2="200" stroke="#34d399" stroke-width="1.5"/>
+    <line x1="560" y1="230" x2="660" y2="290" stroke="#34d399" stroke-width="1.5"/>
+    <rect x="660" y="75" width="220" height="65" rx="8" fill="#0c111d" stroke="#34d399"/>
+    <text x="770" y="112" fill="#cbd5e1" font-size="13" text-anchor="middle" font-family="sans-serif">PostgreSQL MCP Server</text>
+    <rect x="660" y="167" width="220" height="65" rx="8" fill="#0c111d" stroke="#34d399"/>
+    <text x="770" y="204" fill="#cbd5e1" font-size="13" text-anchor="middle" font-family="sans-serif">GitHub / Jira MCP Server</text>
+    <rect x="660" y="260" width="220" height="65" rx="8" fill="#0c111d" stroke="#34d399"/>
+    <text x="770" y="297" fill="#cbd5e1" font-size="13" text-anchor="middle" font-family="sans-serif">Internal ERP MCP Server</text>
+  </svg>
+</section>
+
+<section id="hitl-gates">
+  <h2>Human-in-the-Loop Approval &amp; Checkpointing</h2>
+  <p>Autonomous agents should never execute irreversible writes - such as issuing refunds, deploying infrastructure, or emailing external clients - without explicit authorization. We build native interrupt gates into the agent graph: the assistant prepares the exact payload, suspends execution, and notifies a human reviewer. Once approved, the graph resumes seamlessly.</p>
+
+  <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;border:1px solid rgba(52,211,153,0.25);">
+    <rect width="960" height="400" fill="#040711"/>
+    <text x="480" y="38" fill="#34d399" font-size="18" font-weight="bold" text-anchor="middle" font-family="sans-serif">Human-in-the-Loop (HITL) Interrupt Gate</text>
+    <rect x="60" y="155" width="180" height="90" rx="8" fill="#0c111d" stroke="#38bdf8"/>
+    <text x="150" y="205" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Draft Action</text>
+    <line x1="240" y1="200" x2="320" y2="200" stroke="#fbbf24" stroke-width="2"/>
+    <rect x="320" y="145" width="220" height="110" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+    <text x="430" y="190" fill="#fbbf24" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Checkpoint &amp; Pause</text>
+    <text x="430" y="215" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Await Human Sign-Off</text>
+    <line x1="540" y1="200" x2="640" y2="200" stroke="#34d399" stroke-width="2"/>
+    <rect x="640" y="155" width="240" height="90" rx="8" fill="#0c111d" stroke="#34d399"/>
+    <text x="760" y="205" fill="#34d399" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Resume &amp; Commit</text>
+  </svg>
+</section>
+
+<section id="memory-eval">
+  <h2>Episodic Memory &amp; Agent Evaluation</h2>
+  <p>We separate short-term working memory (the active thread state) from long-term episodic memory stored in PostgreSQL or a vector index. Every agent run is traced end-to-end so engineering teams can replay failures, measure tool-selection accuracy, and enforce regression gates before deploying prompt or model updates.</p>
+
+  <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;border:1px solid rgba(232,121,249,0.25);">
+    <rect width="960" height="400" fill="#040711"/>
+    <text x="480" y="38" fill="#e879f9" font-size="18" font-weight="bold" text-anchor="middle" font-family="sans-serif">Agent Observability &amp; Evaluation Loop</text>
+    <rect x="100" y="140" width="220" height="120" rx="8" fill="#0c111d" stroke="#38bdf8"/>
+    <text x="210" y="195" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Execution Trace</text>
+    <text x="210" y="218" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Tool Calls &amp; Latency</text>
+    <line x1="320" y1="200" x2="380" y2="200" stroke="#fbbf24" stroke-width="2"/>
+    <rect x="380" y="140" width="220" height="120" rx="8" fill="#0c111d" stroke="#fbbf24"/>
+    <text x="490" y="195" fill="#fbbf24" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Automated Grader</text>
+    <text x="490" y="218" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Trajectory &amp; Outcome</text>
+    <line x1="600" y1="200" x2="660" y2="200" stroke="#34d399" stroke-width="2"/>
+    <rect x="660" y="140" width="200" height="120" rx="8" fill="#0c111d" stroke="#34d399"/>
+    <text x="760" y="195" fill="#34d399" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">CI/CD Gate</text>
+    <text x="760" y="218" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Block Regressions</text>
+  </svg>
+</section>
+
+<section id="tutorial-python">
+  <h2>Tutorial 1: Stateful LangGraph Agent in Python</h2>
+  <p>This minimal LangGraph pattern demonstrates a stateful assistant with a tool-calling loop and deterministic exit condition.</p>
+  <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+    <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(56,189,248,0.2);">
+      <span style="color:#38bdf8;font-family:monospace;font-size:0.85rem;">agent_graph.py</span>
+      <button class="copy-btn" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.4);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+    </div>
+    <pre style="margin:0;padding:1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.88rem;line-height:1.55;"><code>from typing import TypedDict, Annotated
+import operator
+from langgraph.graph import StateGraph, END
+
+class AgentState(TypedDict):
+    messages: Annotated[list[str], operator.add]
+    steps: int
+
+def planner_node(state: AgentState) -> dict:
+    return {"messages": ["Planned next tool call"], "steps": state["steps"] + 1}
+
+def should_continue(state: AgentState) -> str:
+    return END if state["steps"] >= 3 else "planner"
+
+graph = StateGraph(AgentState)
+graph.add_node("planner", planner_node)
+graph.set_entry_point("planner")
+graph.add_conditional_edges("planner", should_continue, {"planner": "planner", END: END})
+app = graph.compile()</code></pre>
+  </div>
+</section>
+
+<section id="tutorial-prompt">
+  <h2>Tutorial 2: ReAct Planner &amp; Verifier Prompt</h2>
+  <p>Use this system prompt to enforce bounded tool-calling and explicit verification before returning a final answer.</p>
+  <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.32);border-left:3px solid #fbbf24;border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+    <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(251,191,36,0.2);">
+      <span style="color:#fbbf24;font-family:monospace;font-size:0.85rem;">react_planner_prompt.txt</span>
+      <button class="copy-btn" style="background:rgba(251,191,36,0.15);color:#fbbf24;border:1px solid rgba(251,191,36,0.4);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+    </div>
+    <pre style="margin:0;padding:1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.88rem;line-height:1.55;"><code>You are an autonomous operations assistant.
+1. Inspect the user goal and list the exact tools required.
+2. Execute read-only tools first to gather verified state.
+3. Before any state-mutating tool call, summarize the intended change and request HITL approval.
+4. Maximum tool iterations: 6. If unresolved, escalate with a structured diagnostic summary.</code></pre>
+  </div>
+</section>
+
+<section id="tutorial-steps">
+  <h2>Tutorial 3: Step-by-Step Agent Hardening</h2>
+  <ol style="line-height:1.85;color:#cbd5e1;padding-left:1.5rem;">
+    <li><strong>Scope Tool Permissions:</strong> Grant read-only credentials by default; isolate write operations behind separate MCP servers.</li>
+    <li><strong>Bound Execution Loops:</strong> Enforce strict maximum step counts and token budgets per thread to prevent runaway loops.</li>
+    <li><strong>Add Checkpointing:</strong> Persist graph state to PostgreSQL so interrupted workflows resume cleanly.</li>
+    <li><strong>Automate Trajectory Evals:</strong> Run 30+ synthetic and historical test cases on every pull request.</li>
+  </ol>
+</section>
+
+<section id="multi-agent-governance">
+  <h2>Multi-Agent Governance &amp; Least-Privilege Sandboxing</h2>
+  <p>When an enterprise deploys multiple specialized agents - a Triage Agent, a SQL Analyst Agent, and a Billing Execution Agent - flat shared credentials become a critical security liability. A single prompt injection in a customer-facing Triage Agent must never be able to invoke a database-write tool owned by the Billing Agent. Production multi-agent architectures enforce strict least-privilege sandboxing: each agent runs with scoped OAuth2 / IAM tokens and sees only the <a class="gold-link" href="#references">Model Context Protocol (MCP)</a> tool manifest explicitly authorized for its role.</p>
+  <p>Code-execution and browser-automation agents require even tighter isolation. Any dynamically generated Python or shell script must execute inside an ephemeral, network-restricted microVM or container sandbox (such as Firecracker or gVisor) with read-only root filesystems and hard CPU/memory quotas. Following <a class="gold-link" href="#references">Google DeepMind's agentic safety patterns</a>, high-impact state mutations - such as issuing refunds, modifying production DNS, or merging pull requests - are gated behind cryptographic human sign-off.</p>
+
+  <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;border:1px solid rgba(251,191,36,0.25);">
+    <rect width="960" height="400" fill="#040711"/>
+    <text x="480" y="38" fill="#fbbf24" font-size="18" font-weight="bold" text-anchor="middle" font-family="sans-serif">Multi-Agent Least-Privilege &amp; Sandbox Isolation</text>
+    <rect x="40" y="135" width="190" height="120" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="135" y="175" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Supervisor Agent</text>
+    <text x="135" y="205" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Task Routing &amp; Budget</text>
+    <text x="135" y="230" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">No Direct Write Access</text>
+    <line x1="230" y1="165" x2="310" y2="110" stroke="#34d399" stroke-width="2"/>
+    <line x1="230" y1="195" x2="310" y2="195" stroke="#fbbf24" stroke-width="2"/>
+    <line x1="230" y1="225" x2="310" y2="280" stroke="#e879f9" stroke-width="2"/>
+    <rect x="310" y="75" width="240" height="70" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="1.5"/>
+    <text x="430" y="105" fill="#34d399" font-size="13" font-weight="bold" text-anchor="middle" font-family="sans-serif">Research Agent (Read-Only)</text>
+    <text x="430" y="128" fill="#cbd5e1" font-size="11" text-anchor="middle" font-family="sans-serif">Scoped RAG + Web Search MCP</text>
+    <rect x="310" y="160" width="240" height="70" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="430" y="190" fill="#fbbf24" font-size="13" font-weight="bold" text-anchor="middle" font-family="sans-serif">Code Agent (MicroVM Sandbox)</text>
+    <text x="430" y="213" fill="#cbd5e1" font-size="11" text-anchor="middle" font-family="sans-serif">Ephemeral Container, No Egress</text>
+    <rect x="310" y="245" width="240" height="70" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="1.5"/>
+    <text x="430" y="275" fill="#e879f9" font-size="13" font-weight="bold" text-anchor="middle" font-family="sans-serif">Execution Agent (HITL-Gated)</text>
+    <text x="430" y="298" fill="#cbd5e1" font-size="11" text-anchor="middle" font-family="sans-serif">Idempotent ERP / CRM Writes</text>
+    <rect x="630" y="135" width="280" height="120" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="770" y="175" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Policy &amp; Audit Plane</text>
+    <text x="770" y="205" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">OAuth2 Scope Enforcement</text>
+    <text x="770" y="230" fill="#cbd5e1" font-size="12" text-anchor="middle" font-family="sans-serif">Immutable Trace &amp; Replay Log</text>
+    <line x1="550" y1="110" x2="630" y2="175" stroke="#34d399" stroke-width="1.5"/>
+    <line x1="550" y1="195" x2="630" y2="195" stroke="#fbbf24" stroke-width="1.5"/>
+    <line x1="550" y1="280" x2="630" y2="215" stroke="#e879f9" stroke-width="1.5"/>
+  </svg>
+</section>
+
+<section id="loop-recovery">
+  <h2>Loop Detection, Idempotency &amp; Failure Recovery</h2>
+  <p>Autonomous agents fail most catastrophically when they enter silent retry loops - calling the same failing tool repeatedly while burning thousands of tokens - or when a network timeout causes an agent to execute a non-idempotent write twice (such as charging a customer or creating duplicate Jira tickets). Production agent runtimes eliminate both failure modes through deterministic state-machine guards.</p>
+  <p>First, every state-mutating tool must accept an <code>idempotency_key</code> derived from the workflow's checkpoint ID and step index. If a tool call times out and is retried, the downstream service recognizes the key and returns the cached result without duplicating side effects. Second, the graph supervisor tracks a rolling hash of recent <code>(tool_name, args)</code> pairs; if the exact same call is attempted twice without new state progress, the loop detector halts execution and escalates to a human operator.</p>
+
+  <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;border:1px solid rgba(56,189,248,0.25);">
+    <rect width="960" height="400" fill="#040711"/>
+    <text x="480" y="38" fill="#38bdf8" font-size="18" font-weight="bold" text-anchor="middle" font-family="sans-serif">Idempotent Tool Execution &amp; Runaway Loop Guard</text>
+    <rect x="40" y="150" width="170" height="90" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="125" y="185" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle" font-family="sans-serif">Agent Proposes Tool</text>
+    <text x="125" y="210" fill="#cbd5e1" font-size="11" text-anchor="middle" font-family="sans-serif">Attach Idempotency Key</text>
+    <line x1="210" y1="195" x2="270" y2="195" stroke="#fbbf24" stroke-width="2"/>
+    <polygon points="270,190 280,195 270,200" fill="#fbbf24"/>
+    <rect x="280" y="150" width="190" height="90" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="375" y="185" fill="#fbbf24" font-size="13" font-weight="bold" text-anchor="middle" font-family="sans-serif">Loop &amp; Budget Guard</text>
+    <text x="375" y="210" fill="#cbd5e1" font-size="11" text-anchor="middle" font-family="sans-serif">Check Hash &amp; Step &lt;= 10</text>
+    <line x1="470" y1="195" x2="530" y2="195" stroke="#34d399" stroke-width="2"/>
+    <polygon points="530,190 540,195 530,200" fill="#34d399"/>
+    <rect x="540" y="150" width="180" height="90" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="1.5"/>
+    <text x="630" y="185" fill="#34d399" font-size="13" font-weight="bold" text-anchor="middle" font-family="sans-serif">Execute &amp; Checkpoint</text>
+    <text x="630" y="210" fill="#cbd5e1" font-size="11" text-anchor="middle" font-family="sans-serif">Persist State to Postgres</text>
+    <line x1="375" y1="240" x2="375" y2="300" stroke="#ef4444" stroke-width="2"/>
+    <polygon points="370,300 375,310 380,300" fill="#ef4444"/>
+    <rect x="260" y="310" width="230" height="60" rx="8" fill="#0c111d" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="375" y="338" fill="#ef4444" font-size="13" font-weight="bold" text-anchor="middle" font-family="sans-serif">Halt &amp; Escalate to HITL</text>
+    <text x="375" y="356" fill="#cbd5e1" font-size="11" text-anchor="middle" font-family="sans-serif">Duplicate Call or Budget Exhausted</text>
+  </svg>
+</section>
+
+<section id="tutorial-python-2">
+  <h2>Tutorial 4: Production Python Idempotent Tool Wrapper</h2>
+  <p>Wrap every state-mutating agent tool with this idempotency and loop-detection decorator to guarantee zero duplicate writes and automatic runaway protection.</p>
+  <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid var(--cyan);border-radius:10px;margin:1.75rem 0;overflow:hidden;">
+    <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(56,189,248,0.2);">
+      <span style="color:#38bdf8;font-family:monospace;font-size:0.85rem;">idempotent_tool_guard.py</span>
+      <button class="copy-btn" onclick="copyCode(this)" style="background:#1e293b;color:#fbbf24;border:1px solid rgba(251,191,36,0.35);padding:0.25rem 0.75rem;border-radius:6px;cursor:pointer;font-size:0.8rem;text-decoration:none !important;">Copy</button>
+    </div>
+    <pre style="margin:0;padding:1.25rem;overflow-x:hidden;white-space:pre-wrap;word-break:break-word;color:#e2e8f0;font-size:0.88rem;line-height:1.6;"><code>import hashlib
+import json
+from typing import Any, Callable
+
+class IdempotentToolGuard:
+    def __init__(self, max_steps: int = 10):
+        self.max_steps = max_steps
+        self.steps = 0
+        self.cache: dict[str, Any] = {}
+
+    def invoke(self, tool_name: str, args: dict, fn: Callable[[dict], Any]) -> Any:
+        self.steps += 1
+        if self.steps > self.max_steps:
+            raise RuntimeError("Max recursion depth reached; escalating to HITL.")
+
+        key_raw = f"{tool_name}:{json.dumps(args, sort_keys=True)}"
+        idem_key = hashlib.sha256(key_raw.encode()).hexdigest()
+        if idem_key in self.cache:
+            return self.cache[idem_key]
+
+        result = fn(args)
+        self.cache[idem_key] = result
+        return result</code></pre>
+  </div>
+</section>
+
+<section id="tutorial-prompt-2">
+  <h2>Tutorial 5: Supervisor Delegation &amp; Budget Guard Prompt</h2>
+  <p>Use this system prompt for your multi-agent Supervisor node to enforce strict step budgets, least-privilege delegation, and explicit HITL escalation.</p>
+  <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid var(--gold);border-radius:10px;margin:1.75rem 0;overflow:hidden;">
+    <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(251,191,36,0.2);">
+      <span style="color:#fbbf24;font-family:monospace;font-size:0.85rem;">supervisor_delegation_prompt.txt</span>
+      <button class="copy-btn" onclick="copyCode(this)" style="background:#1e293b;color:#fbbf24;border:1px solid rgba(251,191,36,0.35);padding:0.25rem 0.75rem;border-radius:6px;cursor:pointer;font-size:0.8rem;text-decoration:none !important;">Copy</button>
+    </div>
+    <pre style="margin:0;padding:1.25rem;overflow-x:hidden;white-space:pre-wrap;word-break:break-word;color:#e2e8f0;font-size:0.88rem;line-height:1.6;"><code>ROLE: Multi-Agent Supervisor &amp; Budget Controller.
+
+WORKERS AVAILABLE:
+- research_agent (read-only)
+- code_agent (sandboxed)
+- execution_agent (requires HITL approval)
+
+RULES:
+1. Never delegate write operations without first verifying facts via research_agent.
+2. If remaining_steps &lt;= 2, halt delegation and summarize progress for human review.
+
+OUTPUT (Strict JSON only):
+{
+  "next_worker": "research_agent | code_agent | execution_agent | HITL_ESCALATE",
+  "instruction": "string",
+  "requires_human_approval": boolean
+}</code></pre>
+  </div>
+</section>
+
+<section id="tutorial-steps-2">
+  <h2>Tutorial 6: Step-by-Step Runaway Loop &amp; State Recovery Protocol</h2>
+  <ol style="line-height:1.85;color:#cbd5e1;padding-left:1.5rem;">
+    <li><strong>Halt Active Thread:</strong> Cancel the runaway graph execution by revoking its thread lease in the PostgreSQL checkpointer.</li>
+    <li><strong>Inspect Checkpoint History:</strong> Replay the last 5 state transitions to identify which tool observation triggered the repetitive loop.</li>
+    <li><strong>Verify Idempotency Ledger:</strong> Confirm no duplicate external writes occurred by auditing the <code>idempotency_key</code> log.</li>
+    <li><strong>Patch Tool Schema or Prompt:</strong> Clarify the tool's error message so the agent receives actionable recovery guidance instead of a generic 500 error.</li>
+    <li><strong>Resume from Last Clean Node:</strong> Re-attach the thread from the last valid checkpoint rather than restarting the entire workflow from scratch.</li>
+  </ol>
+</section>
+
+<section id="references">
+  <h2>Live References &amp; Technical Standards</h2>
+  <ul style="line-height:1.9;color:#cbd5e1;">
+    <li><a class="gold-link" href="https://langchain-ai.github.io/langgraph/" target="_blank" rel="noopener">LangGraph Documentation - Stateful Multi-Actor Applications</a></li>
+    <li><a class="gold-link" href="https://modelcontextprotocol.io/introduction" target="_blank" rel="noopener">Model Context Protocol (MCP) - Official Specification</a></li>
+    <li><a class="gold-link" href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener">Anthropic Engineering - Building Effective Agents</a></li>
+    <li><a class="gold-link" href="https://platform.openai.com/docs/guides/function-calling" target="_blank" rel="noopener">OpenAI Platform - Function Calling &amp; Tool Use</a></li>
+    <li><a class="gold-link" href="https://deepmind.google/discover/blog/" target="_blank" rel="noopener">Google DeepMind - Agentic Reasoning &amp; Safety Research</a></li>
+    <li><a class="gold-link" href="https://firecracker-microvm.github.io/" target="_blank" rel="noopener">Firecracker MicroVM - Secure Serverless Sandboxing</a></li>
+    <li><a class="gold-link" href="https://gvisor.dev/docs/" target="_blank" rel="noopener">gVisor Documentation - Application Kernel for Container Isolation</a></li>
+    <li><a class="gold-link" href="https://stripe.com/docs/api/idempotent_requests" target="_blank" rel="noopener">Stripe Engineering - Idempotent Requests &amp; Safe Retries</a></li>
+    <li><a class="gold-link" href="https://opentelemetry.io/docs/specs/semconv/gen-ai/" target="_blank" rel="noopener">OpenTelemetry - GenAI Agent Tracing Conventions</a></li>
+    <li><a class="gold-link" href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" target="_blank" rel="noopener">OWASP - Top 10 for Large Language Model Applications</a></li>
+  </ul>
+</section>
+
+<section class="cta-box" style="margin-top:3rem;padding:2.5rem;background:#0c111d;border:1px solid rgba(251,191,36,0.28);border-radius:14px;text-align:center;">
+<h2 style="margin-top:0;">Ready to Deploy This Architecture?</h2>
+<p style="max-width:680px;margin:0.75rem auto 1.75rem;color:#cbd5e1;">Schedule a technical discovery session to benchmark your token workloads, size your local inference cluster, and eliminate recurring API bills.</p>
 <div class="service-cta-buttons">
 <a class="btn btn-commission btn-lg" href="../contact.html">
             Commission Agentic Assistants →
@@ -336,9 +609,20 @@
             Free LinkedIn Consultation ↗
           </a>
 </div>
-</div>
 </section>
-<div class="divider" style="margin-top:3rem;"></div>
+
+<script>
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const pre = btn.closest('.code-window').querySelector('pre');
+    navigator.clipboard.writeText(pre.innerText).then(() => {
+      const orig = btn.innerText;
+      btn.innerText = 'Copied!';
+      setTimeout(() => { btn.innerText = orig; }, 2000);
+    });
+  });
+});
+</script>
 </main>
     <!-- START:FOOTER -->
     <footer id="links">

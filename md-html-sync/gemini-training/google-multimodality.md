@@ -198,44 +198,6 @@ The direction is clear enough to plan around. Tools that accept any input and re
 
 ---
 
-## Practice Pricing & Global Purchasing Power Parity
-
-I provide live, remote engineering training and advisory consulting covering Google Multimodal architectures, Google Stitch design automation, Google Pomelli brand synthesis, Google Flow video creation, and Nano Banana diffusion pipelines. Engagements enable research organizations, academic departments, enterprises, and individual professionals to master production multimodal systems, source-grounded creative engines, and automated generative workflows.
-
-All services are governed by our transparent 195-country Purchasing Power Parity (PPP) framework, scaling rates fairly across six economic tiers:
-
-### Individual Service Picks (Pick & Choose)
-
-Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
-
-- Business Individual Pick: ($300 / $225 / $150 / $150 / $75 / Custom USD) base for 1 seat, with additional seats at ($300 / $225 / $150 / $150 / $75 / Custom USD) per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
-- Personal Individual Pick: ($300 / $225 / $150 / $150 / $75 / Custom USD) strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
-
-### Payment Structure & Trust Guarantees
-
-Every client engagement is safeguarded by strict trust guarantees:
-
-- Zero Upfront Payment: Strictly $0 advance deposit required. We never invoice before delivering actual value.
-- 20% in Five Installments: Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.
-- Walkaway Guarantee: If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.
-- Commercial Apache 2.0 License: All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.
-- Full Pricing Details: Learn more about country tier multipliers, currency choices, and customized curriculum on our Pricing Page.
-
-### The Six Purchasing Power Parity (PPP) Tiers
-
-To ensure fair global access across all 195 countries, fees are adjusted by national economic indicators in accordance with our Purchasing Power Parity framework:
-
-| Tier | Economic Category | Representative Countries | Parity Multiplier | Business Flagship | Personal Flagship |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| Tier 1 | High-Income Baseline | United States, UK, Germany, Canada, Japan, Singapore, Australia | 1.00X | $3,000 USD | $3,000 USD |
-| Tier 2 | Upper-Middle Economies | Brazil, Mexico, Malaysia, Turkiye, Thailand, Philippines, Sri Lanka | 0.75X | $2,250 USD | $2,250 USD |
-| Tier 3 | Lower-Middle & Low-Income | India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam | 0.50X | $1,500 USD | $1,500 USD |
-| Tier 4 | Early-Stage Startups | Global tech startups with <$1M external funding | 0.50X | $1,500 USD | $1,500 USD |
-| Tier 5 | Academia & Non-Profits | Universities, accredited labs, registered charities & 501(c)(3) entities | 0.25X | $750 USD | $750 USD |
-| Tier 6 | Subsidized Relief | Crisis-affected regions, developing collectives & grassroots builders | Custom | Custom Subsidized | Custom Relief |
-
----
-
 ## References
 
 1. From idea to app: Introducing Stitch, a new way to design UIs Google for Developers Blog, May 20, 2025

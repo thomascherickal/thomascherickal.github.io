@@ -107,6 +107,7 @@
 <link href="../css/service.css" rel="stylesheet"/>
 <link href="../css/personal-services.css" rel="stylesheet"/>
 <link href="../css/responsive.css" rel="stylesheet"/>
+<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -259,90 +260,421 @@
   <!-- END:HEADER -->
 <a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
 <main id="main">
-<!-- PAGE HERO HEADER -->
-<section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
-<p class="section-label">// SERVICE SPECIFICATION 12</p>
-<h1>Gemini Research Training</h1>
-<p class="section-sub" style="max-width:760px;margin:0.75rem auto 0;line-height:1.8;">
-  Private 1-on-1 research engineering for founders, analysts, scientists, and independent scholars: master million-token context grounding, automated literature review, multi-source verification, and technical research synthesis using Gemini models.
-</p>
-<div style="margin-top:1.5rem;">
-<a class="btn btn-commission" href="../contact.html" style="text-decoration:none !important;">
-  Book Gemini Research Masterclass →
-</a>
+<div class="container" style="max-width:1040px;margin:0 auto;padding:2.5rem 1.25rem;">
+  <div class="hero" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.28);border-radius:16px;padding:2.5rem;margin-bottom:2rem;">
+    <p class="section-label" style="color:var(--cyan,#38bdf8);letter-spacing:0.1em;font-size:0.8rem;text-transform:uppercase;margin-bottom:0.5rem;">// PERSONAL SERVICE SPECIFICATION - GEMINI RESEARCH</p>
+    <h1>Gemini Research Training</h1>
+    <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.75;max-width:820px;">
+      Master million-token context grounding, automated literature review, multi-source fact verification, and technical research synthesis using Gemini models. Designed for independent researchers, solo founders, analysts, and technical writers who need verifiable, citation-backed intelligence at scale.
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:2rem;">
+      <div style="background:#040711;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:1.6rem;font-weight:700;color:var(--gold,#fbbf24);">1M+ Tokens</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Long-Context Corpus Grounding</div>
+      </div>
+      <div style="background:#040711;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:1.6rem;font-weight:700;color:var(--cyan,#38bdf8);">1-on-1</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Private Research Coaching</div>
+      </div>
+      <div style="background:#040711;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:1.6rem;font-weight:700;color:#34d399;">Verified</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Sentence-Level Attribution</div>
+      </div>
+      <div style="background:#040711;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:1.6rem;font-weight:700;color:#e879f9;">100% IP</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Full Ownership of Pipelines</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="table-of-contents" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.25);border-radius:12px;padding:1.75rem;margin-bottom:2.5rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.25rem;margin-bottom:1rem;">Table of Contents</h2>
+    <ol style="display:flex;flex-direction:column;gap:0.6rem;list-style:none;padding-left:0;color:var(--text-secondary);line-height:1.7;">
+      <li><a class="gold-link" href="#long-context-research">1. Million-Token Context Grounding for Deep Literature Review</a></li>
+      <li><a class="gold-link" href="#multi-source-verification">2. Multi-Source Cross-Verification and Contradiction Detection</a></li>
+      <li><a class="gold-link" href="#search-grounding">3. Google Search Grounding and Live Evidence Retrieval</a></li>
+      <li><a class="gold-link" href="#synthesis-pipelines">4. Automated Technical Synthesis and Dossier Generation</a></li>
+      <li><a class="gold-link" href="#productivity-architecture">5. Personal Research Productivity Architecture and Zettelkasten Sync</a></li>
+      <li><a class="gold-link" href="#privacy-security-hygiene">6. Privacy, Corpus Hygiene, and Context-Cache Access Control</a></li>
+      <li><a class="gold-link" href="#failure-mode-recovery">7. Failure-Mode Recovery, Citation Drift Audits, and Fallback Routing</a></li>
+      <li><a class="gold-link" href="#tutorial-python">8. Tutorial 1: Production Python Gemini Research Pipeline</a></li>
+      <li><a class="gold-link" href="#tutorial-prompt">9. Tutorial 2: Production Literature Matrix Prompt Template</a></li>
+      <li><a class="gold-link" href="#tutorial-operations">10. Tutorial 3: Step-by-Step Research Verification Workflow</a></li>
+      <li><a class="gold-link" href="#tutorial-python-cache">11. Tutorial 4: Production Python Context-Cache &amp; Citation Audit</a></li>
+      <li><a class="gold-link" href="#tutorial-prompt-redteam">12. Tutorial 5: Production Adversarial Claim-Verification Prompt Template</a></li>
+      <li><a class="gold-link" href="#tutorial-operations-hygiene">13. Tutorial 6: Step-by-Step Corpus Sanitization and Cache Lifecycle Runbook</a></li>
+      <li><a class="gold-link" href="#references">14. Live References and Technical Documentation</a></li>
+    </ol>
+  </div>
+
+  <section id="long-context-research" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.65rem;margin-bottom:1rem;">Million-Token Context Grounding for Deep Literature Review</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Traditional retrieval-augmented generation (RAG) slices PDFs into small chunks, which frequently severs tables from their captions, equations from their definitions, and conclusions from their methodology caveats. For an independent researcher or analyst, missing a single footnote can invalidate an entire synthesis. Gemini models solve this by allowing you to load dozens of full-length papers, regulatory filings, or technical manuals directly into a single million-token context window.
+    </p>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      In this 1-on-1 training program, you learn how to structure multi-document corpora using explicit XML tags, pair them with <a class="gold-link" href="#references">Gemini context caching</a> to slash recurring query costs, and extract cross-paper comparisons without losing document provenance.
+    </p>
+
+    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(56,189,248,0.25);background:#040711;margin:1.5rem 0;">
+      <rect width="960" height="400" fill="#040711"/>
+      <text x="480" y="38" fill="#fbbf24" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">MILLION-TOKEN CORPUS GROUNDING ARCHITECTURE</text>
+      <rect x="60" y="95" width="210" height="210" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="165" y="130" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">SOURCE CORPUS</text>
+      <text x="165" y="165" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">arXiv / PubMed PDFs</text>
+      <text x="165" y="195" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Technical Whitepapers</text>
+      <text x="165" y="225" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Regulatory Filings</text>
+      <text x="165" y="265" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">XML Tagged &amp; Cached</text>
+      <line x1="270" y1="200" x2="355" y2="200" stroke="#fbbf24" stroke-width="2"/>
+      <rect x="355" y="95" width="250" height="210" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+      <text x="480" y="130" fill="#fbbf24" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">GEMINI CONTEXT ENGINE</text>
+      <text x="480" y="170" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Full-Document Attention</text>
+      <text x="480" y="200" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Cross-Paper Synthesis</text>
+      <text x="480" y="230" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Contradiction Detection</text>
+      <text x="480" y="265" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Zero Chunking Loss</text>
+      <line x1="605" y1="200" x2="690" y2="200" stroke="#34d399" stroke-width="2"/>
+      <rect x="690" y="95" width="210" height="210" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+      <text x="795" y="130" fill="#34d399" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">VERIFIED OUTPUT</text>
+      <text x="795" y="165" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Evidence Matrix</text>
+      <text x="795" y="195" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Exact Page Citations</text>
+      <text x="795" y="225" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Executive Dossier</text>
+      <text x="795" y="265" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Pydantic JSON / MD</text>
+    </svg>
+  </section>
+
+  <section id="multi-source-verification" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.65rem;margin-bottom:1rem;">Multi-Source Cross-Verification and Contradiction Detection</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      A single model pass can still smooth over subtle disagreements between primary sources. To eliminate unverified claims, you build a two-stage verification pipeline: the synthesis pass generates structured claims with verbatim quotes and source IDs, and a dedicated verifier pass audits every claim against the raw source text.
+    </p>
+
+    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(56,189,248,0.25);background:#040711;margin:1.5rem 0;">
+      <rect width="960" height="400" fill="#040711"/>
+      <text x="480" y="38" fill="#38bdf8" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">TWO-STAGE CLAIM VERIFICATION PIPELINE</text>
+      <rect x="70" y="140" width="240" height="100" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="190" y="178" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">1. CLAIM EXTRACTOR</text>
+      <text x="190" y="205" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Claim + Verbatim Quote + ID</text>
+      <line x1="310" y1="190" x2="360" y2="190" stroke="#fbbf24" stroke-width="2"/>
+      <rect x="360" y="140" width="240" height="100" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+      <text x="480" y="178" fill="#fbbf24" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">2. AUDIT VERIFIER</text>
+      <text x="480" y="205" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Check Quote vs Raw Source</text>
+      <line x1="600" y1="190" x2="650" y2="190" stroke="#34d399" stroke-width="2"/>
+      <rect x="650" y="140" width="240" height="100" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+      <text x="770" y="178" fill="#34d399" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">3. CITATION REPORT</text>
+      <text x="770" y="205" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Supported / Contradicted</text>
+    </svg>
+  </section>
+
+  <section id="search-grounding" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:#34d399;font-size:1.65rem;margin-bottom:1rem;">Google Search Grounding and Live Evidence Retrieval</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Static PDFs tell you what was published yesterday; live research requires real-time web verification. By enabling <a class="gold-link" href="#references">Google Search grounding in the Gemini API</a>, your research scripts automatically query live web results, attach source URLs, and cross-check recent benchmarks, press releases, or policy updates against your local document library.
+    </p>
+
+    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(52,211,153,0.25);background:#040711;margin:1.5rem 0;">
+      <rect width="960" height="400" fill="#040711"/>
+      <text x="480" y="38" fill="#34d399" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">HYBRID LOCAL CORPUS + LIVE SEARCH GROUNDING</text>
+      <rect x="100" y="100" width="320" height="90" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="260" y="138" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">LOCAL DOCUMENT CACHE</text>
+      <text x="260" y="162" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Primary Papers &amp; Internal Notes</text>
+      <rect x="540" y="100" width="320" height="90" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+      <text x="700" y="138" fill="#34d399" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">GOOGLE SEARCH TOOL</text>
+      <text x="700" y="162" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Live Web &amp; Recent Updates</text>
+      <line x1="260" y1="190" x2="480" y2="255" stroke="#fbbf24" stroke-width="2"/>
+      <line x1="700" y1="190" x2="480" y2="255" stroke="#fbbf24" stroke-width="2"/>
+      <rect x="280" y="255" width="400" height="90" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+      <text x="480" y="292" fill="#fbbf24" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">UNIFIED SYNTHESIS BRIEF</text>
+      <text x="480" y="318" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Merged Citations + Confidence Scores</text>
+    </svg>
+  </section>
+
+  <section id="synthesis-pipelines" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:#e879f9;font-size:1.65rem;margin-bottom:1rem;">Automated Technical Synthesis and Dossier Generation</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Once your evidence is grounded and verified, you need repeatable outputs: literature matrices, methodology comparisons, and executive briefs. Using <a class="gold-link" href="#references">Gemini structured outputs</a>, your pipeline emits clean JSON schemas that render directly into Markdown reports, Obsidian vaults, or interactive HTML dashboards.
+    </p>
+
+    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(232,121,249,0.25);background:#040711;margin:1.5rem 0;">
+      <rect width="960" height="400" fill="#040711"/>
+      <text x="480" y="38" fill="#e879f9" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">STRUCTURED RESEARCH DOSSIER PIPELINE</text>
+      <rect x="90" y="140" width="220" height="100" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+      <text x="200" y="178" fill="#e879f9" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">SCHEMA DEFINITION</text>
+      <text x="200" y="205" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Pydantic ResearchModel</text>
+      <line x1="310" y1="190" x2="370" y2="190" stroke="#e879f9" stroke-width="2"/>
+      <rect x="370" y="140" width="220" height="100" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="480" y="178" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">GEMINI SYNTHESIS</text>
+      <text x="480" y="205" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Strict JSON Mode</text>
+      <line x1="590" y1="190" x2="650" y2="190" stroke="#34d399" stroke-width="2"/>
+      <rect x="650" y="140" width="220" height="100" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+      <text x="760" y="178" fill="#34d399" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">EXPORT ARTIFACTS</text>
+      <text x="760" y="205" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Markdown / CSV / HTML</text>
+    </svg>
+  </section>
+
+  <section id="productivity-architecture" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.65rem;margin-bottom:1rem;">Personal Research Productivity Architecture and Zettelkasten Sync</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Deep technical research fails when insights remain trapped inside ephemeral chat threads. A personal Gemini research architecture treats every synthesis session as a structured ingestion pipeline into your permanent knowledge base, such as an Obsidian vault or a local Markdown Zettelkasten. Instead of manually copying paragraphs, your pipeline outputs atomic Markdown notes with YAML frontmatter containing source DOIs, publication dates, confidence scores, and bidirectional wiki-links.
+    </p>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      By pairing Gemini's long-context window with <a class="gold-link" href="#references">Gemini Context Caching</a>, you can pin a 500,000-token corpus of PDFs, RFCs, and benchmark tables in memory for hours while paying a fraction of standard input token rates. You then run batched extraction passes overnight: one pass extracts methodology claims, a second pass extracts quantitative baselines, and a third pass generates cross-reference links against your existing local notes.
+    </p>
+    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.25);background:#040711;margin:1.5rem 0;">
+      <rect width="960" height="400" fill="#040711"/>
+      <text x="480" y="34" fill="#fbbf24" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">GEMINI CONTEXT CACHE TO ZETTELKASTEN PIPELINE</text>
+      <rect x="40" y="80" width="210" height="220" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="145" y="112" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">1. Raw Corpus</text>
+      <text x="145" y="145" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">arXiv PDFs (20-50)</text>
+      <text x="145" y="170" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Technical RFCs</text>
+      <text x="145" y="195" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Benchmark CSVs</text>
+      <text x="145" y="235" fill="#fbbf24" font-family="monospace" font-size="11" text-anchor="middle">Pinned in Context Cache</text>
+      <line x1="250" y1="190" x2="320" y2="190" stroke="#38bdf8" stroke-width="2"/>
+      <rect x="320" y="70" width="300" height="240" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+      <text x="470" y="102" fill="#fbbf24" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">2. Batched Extraction Passes</text>
+      <rect x="340" y="120" width="260" height="48" rx="6" fill="#040711" stroke="#34d399" stroke-width="1.5"/>
+      <text x="470" y="149" fill="#34d399" font-family="monospace" font-size="11" text-anchor="middle">Pass A: Methodology &amp; Claims</text>
+      <rect x="340" y="182" width="260" height="48" rx="6" fill="#040711" stroke="#34d399" stroke-width="1.5"/>
+      <text x="470" y="211" fill="#34d399" font-family="monospace" font-size="11" text-anchor="middle">Pass B: Quantitative Baselines</text>
+      <rect x="340" y="244" width="260" height="48" rx="6" fill="#040711" stroke="#e879f9" stroke-width="1.5"/>
+      <text x="470" y="273" fill="#e879f9" font-family="monospace" font-size="11" text-anchor="middle">Pass C: Contradiction Matrix</text>
+      <line x1="620" y1="190" x2="690" y2="190" stroke="#34d399" stroke-width="2"/>
+      <rect x="690" y="80" width="230" height="220" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+      <text x="805" y="112" fill="#34d399" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">3. Local Vault Sync</text>
+      <text x="805" y="145" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Atomic Markdown Notes</text>
+      <text x="805" y="170" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">YAML Frontmatter + DOIs</text>
+      <text x="805" y="195" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">[[Wiki-Links]]</text>
+      <text x="805" y="235" fill="#fbbf24" font-family="monospace" font-size="11" text-anchor="middle">Zero Ephemeral Loss</text>
+      <text x="480" y="370" fill="#64748b" font-family="monospace" font-size="11" text-anchor="middle">Pin corpus once - extract structured knowledge into permanent local Markdown</text>
+    </svg>
+  </section>
+
+  <section id="privacy-security-hygiene" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.65rem;margin-bottom:1rem;">Privacy, Corpus Hygiene, and Context-Cache Access Control</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Research corpora often mix public academic papers with proprietary client briefs, unpublished manuscripts, or sensitive interview transcripts. Before uploading any document to the <a class="gold-link" href="#references">Google GenAI Files API</a>, enforce a strict corpus hygiene boundary. Never upload unredacted PII, NDA-bound financial figures, or private medical records into a shared or default-tier API project.
+    </p>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Run a local pre-ingestion sanitizer using <a class="gold-link" href="#references">Microsoft Presidio</a> or a local regex-and-NER pass to mask names, emails, and account identifiers with deterministic pseudonyms (`[ENTITY_01]`). Furthermore, set explicit Time-to-Live (TTL) expirations on every Context Cache object (for example, `ttl="3600s"`) and delete uploaded file handles immediately after your synthesis job completes so zero stale artifacts linger on remote servers.
+    </p>
+  </section>
+
+  <section id="failure-mode-recovery" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:#e879f9;font-size:1.65rem;margin-bottom:1rem;">Failure-Mode Recovery, Citation Drift Audits, and Fallback Routing</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Even with million-token context windows, long-context models can exhibit citation drift: attributing a statistic from Paper B to Paper A, or subtly paraphrasing a quote while preserving quotation marks. Treating raw model output as ground truth is a critical operational failure.
+    </p>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      To eliminate citation drift, implement a deterministic post-generation audit. Every claim in your synthesis dossier must include an exact verbatim substring anchor (`quote_anchor`) and a `source_file` identifier. A lightweight Python verifier checks that `quote_anchor` exists verbatim in `source_file` using normalized whitespace matching. If any claim fails verification, the pipeline automatically routes that specific claim to a targeted single-document re-query or flags it for human review.
+    </p>
+    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(232,121,249,0.25);background:#040711;margin:1.5rem 0;">
+      <rect width="960" height="400" fill="#040711"/>
+      <text x="480" y="34" fill="#e879f9" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">DETERMINISTIC CITATION DRIFT AUDIT &amp; FALLBACK ROUTING</text>
+      <rect x="50" y="100" width="210" height="100" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="155" y="135" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">1. Synthesis Claim</text>
+      <text x="155" y="160" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">claim + source_file</text>
+      <text x="155" y="180" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">+ verbatim quote_anchor</text>
+      <line x1="260" y1="150" x2="340" y2="150" stroke="#fbbf24" stroke-width="2"/>
+      <rect x="340" y="100" width="240" height="100" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+      <text x="460" y="135" fill="#fbbf24" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">2. Substring Verifier</text>
+      <text x="460" y="160" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Normalize whitespace</text>
+      <text x="460" y="180" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Exact match in source?</text>
+      <line x1="580" y1="125" x2="680" y2="95" stroke="#34d399" stroke-width="2"/>
+      <rect x="680" y="55" width="230" height="80" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+      <text x="795" y="88" fill="#34d399" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">PASS: Verified Claim</text>
+      <text x="795" y="112" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Commit to Zettelkasten</text>
+      <line x1="580" y1="175" x2="680" y2="235" stroke="#e879f9" stroke-width="2"/>
+      <rect x="680" y="195" width="230" height="100" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+      <text x="795" y="228" fill="#e879f9" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">FAIL: Citation Drift</text>
+      <text x="795" y="252" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">Route to single-doc</text>
+      <text x="795" y="272" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">re-query or human flag</text>
+      <text x="480" y="370" fill="#64748b" font-family="monospace" font-size="11" text-anchor="middle">Zero unverified quotes - every claim anchored to exact source text</text>
+    </svg>
+  </section>
+
+  <section id="tutorial-python" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.65rem;margin-bottom:1rem;">Tutorial 1: Production Python Gemini Research Pipeline</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      This Python script uses the official `google-genai` SDK to upload a research PDF, request a structured synthesis with verbatim quotes, and validate the output.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan,#38bdf8);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(56,189,248,0.2);">
+        <span style="font-family:monospace;font-size:0.85rem;color:var(--cyan,#38bdf8);">gemini_research.py</span>
+        <button class="copy-btn" type="button" style="background:rgba(56,189,248,0.12);color:#38bdf8;border:1px solid rgba(56,189,248,0.35);border-radius:6px;padding:0.3rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;overflow-x:auto;color:#e2e8f0;font-family:monospace;font-size:0.86rem;line-height:1.6;"><code>from google import genai
+from pydantic import BaseModel
+
+class Finding(BaseModel):
+    claim: str
+    verbatim_quote: str
+    section: str
+
+class ResearchBrief(BaseModel):
+    title: str
+    findings: list[Finding]
+
+def analyze_paper(pdf_path: str) -&gt; ResearchBrief:
+    client = genai.Client()
+    uploaded = client.files.upload(file=pdf_path)
+    response = client.models.generate_content(
+        model="gemini-2.5-pro",
+        contents=[uploaded, "Extract key empirical findings with verbatim quotes and section names."],
+        config={
+            "response_mime_type": "application/json",
+            "response_schema": ResearchBrief,
+        },
+    )
+    return ResearchBrief.model_validate_json(response.text)</code></pre>
+    </div>
+  </section>
+
+  <section id="tutorial-prompt" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.65rem;margin-bottom:1rem;">Tutorial 2: Production Literature Matrix Prompt Template</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">
+      Use this prompt template when comparing multiple papers in a single million-token Gemini context window.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.32);border-left:3px solid var(--gold,#fbbf24);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(251,191,36,0.2);">
+        <span style="font-family:monospace;font-size:0.85rem;color:var(--gold,#fbbf24);">literature_matrix_prompt.txt</span>
+        <button class="copy-btn" type="button" style="background:rgba(251,191,36,0.12);color:#fbbf24;border:1px solid rgba(251,191,36,0.35);border-radius:6px;padding:0.3rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;overflow-x:auto;color:#e2e8f0;font-family:monospace;font-size:0.86rem;line-height:1.6;"><code>ROLE: Senior Technical Research Analyst
+TASK: Build a comparative literature matrix across all attached documents.
+
+CONSTRAINTS:
+1. Cite exact document ID and page/section for every metric.
+2. Flag any methodological contradictions between papers.
+3. If a metric is missing from a paper, write "NOT_REPORTED" - never infer or estimate.
+4. Output a Markdown table followed by a 3-bullet synthesis of open research gaps.</code></pre>
+    </div>
+  </section>
+
+  <section id="tutorial-operations" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:#34d399;font-size:1.65rem;margin-bottom:1rem;">Tutorial 3: Step-by-Step Research Verification Workflow</h2>
+    <ol style="color:var(--text-secondary);line-height:1.9;padding-left:1.5rem;">
+      <li><strong>Curate &amp; Tag Your Corpus:</strong> Rename PDFs with consistent IDs (`[AUTHOR_YEAR]`) before uploading to the Gemini File API.</li>
+      <li><strong>Enable Context Caching:</strong> Cache the static corpus when running more than three analytical queries over the same set of papers.</li>
+      <li><strong>Run Structured Extraction:</strong> Enforce Pydantic schemas so every claim is paired with a verbatim quote.</li>
+      <li><strong>Execute Contradiction Audit:</strong> Run a second pass asking the model to identify unsupported or conflicting claims.</li>
+      <li><strong>Archive the Dossier:</strong> Export the verified Markdown and JSON artifacts to your local knowledge base.</li>
+    </ol>
+  </section>
+
+  <section id="tutorial-python-cache" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.65rem;margin-bottom:1rem;">Tutorial 4: Production Python Context-Cache &amp; Citation Audit</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">
+      This production Python script verifies every extracted research claim against its source text using normalized whitespace matching, flagging any citation drift before the note is written to your local Zettelkasten.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid var(--cyan,#38bdf8);border-radius:10px;margin:1.75rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:rgba(15,23,42,0.9);border-bottom:1px solid rgba(56,189,248,0.2);">
+        <span style="font-family:monospace;font-size:0.8rem;color:#38bdf8;">citation_drift_audit.py</span>
+        <button class="copy-btn" type="button" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;color:#e2e8f0;font-family:monospace;font-size:0.85rem;line-height:1.6;"><code>import re
+from pathlib import Path
+from pydantic import BaseModel
+
+
+class ExtractedClaim(BaseModel):
+    claim: str
+    source_file: str
+    quote_anchor: str
+
+
+def normalize_text(text: str) -> str:
+    return re.sub(r"\s+", " ", text).strip().lower()
+
+
+def verify_claim_anchor(item: ExtractedClaim, corpus_dir: Path) -> bool:
+    source_path = corpus_dir / item.source_file
+    if not source_path.exists():
+        return False
+    raw_corpus = normalize_text(source_path.read_text(encoding="utf-8", errors="ignore"))
+    anchor = normalize_text(item.quote_anchor)
+    return len(anchor) >= 20 and anchor in raw_corpus
+
+
+def audit_dossier(claims: list[ExtractedClaim], corpus_dir: str) -> dict[str, list[ExtractedClaim]]:
+    verified, drifted = [], []
+    base = Path(corpus_dir)
+    for c in claims:
+        if verify_claim_anchor(c, base):
+            verified.append(c)
+        else:
+            drifted.append(c)
+    return {"verified": verified, "drifted": drifted}</code></pre>
+    </div>
+  </section>
+
+  <section id="tutorial-prompt-redteam" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.65rem;margin-bottom:1rem;">Tutorial 5: Production Adversarial Claim-Verification Prompt Template</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">
+      Use this adversarial critic prompt to challenge your primary synthesis dossier and surface unsupported extrapolations or cherry-picked baselines.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.35);border-left:3px solid var(--gold,#fbbf24);border-radius:10px;margin:1.75rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:rgba(15,23,42,0.9);border-bottom:1px solid rgba(251,191,36,0.2);">
+        <span style="font-family:monospace;font-size:0.8rem;color:#fbbf24;">adversarial_verifier_prompt.txt</span>
+        <button class="copy-btn" type="button" style="background:rgba(251,191,36,0.15);color:#fbbf24;border:1px solid rgba(251,191,36,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;color:#e2e8f0;font-family:monospace;font-size:0.85rem;line-height:1.6;"><code>ROLE: Adversarial Research Peer Reviewer
+TASK: Audit the attached synthesis dossier against the cached source corpus.
+RULES:
+1. Flag any numerical claim that lacks an exact unit, sample size, or baseline comparison.
+2. Identify any quote_anchor that paraphrases rather than reproduces verbatim text.
+3. Surface counter-evidence from other papers in the corpus that contradicts the primary thesis.
+4. Output ONLY a JSON array of objects:
+   [{"claim_id": "str", "issue_type": "DRIFT|UNSUPPORTED|CONTRADICTION", "evidence": "str"}]</code></pre>
+    </div>
+  </section>
+
+  <section id="tutorial-operations-hygiene" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display);color:#34d399;font-size:1.65rem;margin-bottom:1rem;">Tutorial 6: Step-by-Step Corpus Sanitization and Cache Lifecycle Runbook</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">
+      Execute this five-step hygiene runbook before and after every sensitive research sprint:
+    </p>
+    <ol style="color:var(--text-secondary);line-height:1.9;padding-left:1.5rem;">
+      <li><strong>Classify Document Sensitivity:</strong> Separate public arXiv/RFC files from private client briefs before touching any upload script.</li>
+      <li><strong>Run Local PII Redaction:</strong> Pass private text through Microsoft Presidio or a local regex scrubber to replace names and identifiers with deterministic tokens.</li>
+      <li><strong>Set Strict Cache TTL:</strong> Create your Gemini Context Cache with an explicit `ttl="3600s"` so cached corpora expire automatically.</li>
+      <li><strong>Run Citation Drift Audit:</strong> Execute `citation_drift_audit.py` on all generated JSON dossiers before syncing to your Obsidian vault.</li>
+      <li><strong>Purge Remote File Handles:</strong> Call `client.files.delete()` on all uploaded artifacts immediately upon sprint completion.</li>
+    </ol>
+  </section>
+
+  <section id="references" style="margin-bottom:3rem;background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.25);border-radius:12px;padding:1.75rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.35rem;margin-bottom:1rem;">Live References and Technical Documentation</h2>
+    <ul style="color:var(--text-secondary);line-height:1.9;padding-left:1.25rem;">
+      <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/caching" rel="noopener" target="_blank">Gemini API Context Caching</a> - Reduce token costs when querying large static document corpora repeatedly.</li>
+      <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/grounding" rel="noopener" target="_blank">Gemini API Google Search Grounding</a> - Connect model responses to live web search results with source attribution.</li>
+      <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/structured-output" rel="noopener" target="_blank">Gemini API Structured Output</a> - Enforce JSON schemas and Pydantic models for reliable data extraction.</li>
+      <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/files" rel="noopener" target="_blank">Google GenAI Files API</a> - Uploading, managing, and deleting multimodal research documents.</li>
+      <li><a class="gold-link" href="https://docs.pydantic.dev/latest/" rel="noopener" target="_blank">Pydantic Documentation</a> - Runtime validation for extracted research claims and citations.</li>
+      <li><a class="gold-link" href="https://microsoft.github.io/presidio/" rel="noopener" target="_blank">Microsoft Presidio</a> - Open-source PII detection and anonymization before cloud ingestion.</li>
+      <li><a class="gold-link" href="https://obsidian.md/" rel="noopener" target="_blank">Obsidian Knowledge Base</a> - Local-first Markdown Zettelkasten for permanent research storage.</li>
+      <li><a class="gold-link" href="https://arxiv.org/" rel="noopener" target="_blank">arXiv Open-Access Archive</a> - Primary repository for machine learning and computer science preprints.</li>
+      <li><a class="gold-link" href="https://www.crossref.org/documentation/retrieve-metadata/rest-api/" rel="noopener" target="_blank">Crossref REST API</a> - Programmatic DOI resolution and bibliographic metadata verification.</li>
+      <li><a class="gold-link" href="https://docs.python.org/3/library/re.html" rel="noopener" target="_blank">Python Regular Expression Operations</a> - Deterministic text normalization for citation drift verification.</li>
+    </ul>
+  </section>
+
+  <div class="service-cta-buttons" style="margin-top:2rem;">
+    <a class="btn btn-commission btn-lg" href="../contact.html">Commission Gemini Research Training →</a>
+    <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+  </div>
 </div>
-</section>
-<div class="divider"></div>
-<!-- STRUCTURED SPECIFICATION LISTS -->
-<section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
-<div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:2.5rem;box-shadow:var(--glow-gold);">
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">Service Overview &amp; Scope</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Million-Token Context Grounding:</strong> Ingesting entire corpora of academic papers, technical documentation, patent filings, and clinical trials directly into Gemini 1M+ token context windows without lossy chunking.</li>
-<li><strong>Automated Academic Literature Review:</strong> Designing autonomous workflows that fetch papers from arXiv, PubMed, and Semantic Scholar, extracting core methodologies, benchmarks, and dataset citations.</li>
-<li><strong>Multi-Source Fact Verification &amp; Cross-Referencing:</strong> Building automated consensus checkers that contrast claims across multiple authoritative publications, highlighting conflicting experimental findings and confidence bounds.</li>
-<li><strong>Long-Form Technical Research Synthesis:</strong> Synthesizing disparate technical papers into structured state-of-the-art reports, comparative architectural tables, and executive summaries.</li>
-<li><strong>Google AI Studio &amp; Gemini API Tooling:</strong> Mastering system instructions, grounded search integration, structured JSON extraction schemas, and context caching to slash repetitive token costs.</li>
-<li><strong>Local Markdown Knowledge Synchronization:</strong> Routing synthesized literature summaries, annotated bibliographies, and citation maps directly into personal vaults (Obsidian, Logseq, or custom Markdown databases).</li>
-</ul>
 
-<!-- Figure 1: Gemini Deep Research Architecture -->
-<div style="margin:2.5rem 0 2rem;text-align:center;">
-<figure style="margin:0;">
-<img alt="Gemini deep research architecture showing million-token context ingestion and citation verification" loading="lazy" src="../assets/antigravity/antigravity_case_3.png" style="width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.3);box-shadow:0 8px 30px rgba(0,0,0,0.6);"/>
-<figcaption style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">
-Figure 1: Gemini Deep Research Pipeline - Million-Token Ingestion, Automated Retrieval, and Multi-Source Fact Verification.
-</figcaption>
-</figure>
-</div>
-
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Standard Architecture &amp; Tools</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Google AI Developer Platform:</strong> Google AI Studio, Gemini API (Pro and Flash reasoning models), and File API for seamless multi-document uploads.</li>
-<li><strong>Python Research SDKs:</strong> google-genai and google-generativeai client libraries with built-in context caching and streaming response handlers.</li>
-<li><strong>Document Processing Engine:</strong> Automated PDF parsers, OCR extractors, and table structure recognizers for dense mathematical and scientific publications.</li>
-<li><strong>Search &amp; Grounding Integration:</strong> Google Search Grounding for dynamic live verification alongside internal proprietary document stores.</li>
-<li><strong>Knowledge Vault Integration:</strong> Automated bi-directional sync connecting Gemini research agents with Obsidian, Zotero, and local Markdown repositories.</li>
-</ul>
-
-<!-- Figure 2: Automated Research Synthesis Pipeline -->
-<div style="margin:2.5rem 0 2rem;text-align:center;">
-<figure style="margin:0;">
-<img alt="Automated scientific paper ingestion, cross-referencing, and state-of-the-art reporting pipeline" loading="lazy" src="../assets/antigravity/antigravity_case_6.png" style="width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.3);box-shadow:0 8px 30px rgba(0,0,0,0.6);"/>
-<figcaption style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">
-Figure 2: Research Synthesis Pipeline - Automated Ingestion, Cross-Paper Fact Verification, and Markdown Vault Synchronization.
-</figcaption>
-</figure>
-</div>
-
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Guarantees &amp; Commitments</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Production-Ready Code Quality:</strong> All pipelines, schemas, and automation scripts are modular, documented, and ready for immediate deployment.</li>
-<li><strong>100% Commercial IP Ownership:</strong> Full ownership of every generated script, prompt template, synthesized report, and coaching recording.</li>
-<li><strong>10x Research Speedup:</strong> Compress weeks of manual literature reading and cross-referencing into hours of rigorous automated analysis.</li>
-<li><strong>30-Day Dedicated Support:</strong> Direct 1-on-1 technical advisory access for prompt fine-tuning, context caching optimization, and research pipeline troubleshooting.</li>
-</ul>
-
-        
-
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-top:2rem;margin-bottom:1rem;">Executive Summary</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong style="color:var(--gold);">Deep Literature Synthesis:</strong> Million-token context grounding, multi-paper benchmarking, and automated arXiv/PubMed ingestion.</li>
-<li><strong style="color:var(--gold);">Rigorous Verification:</strong> Multi-source fact verification, contradiction detection, and sentence-level source attribution.</li>
-<li><strong style="color:var(--gold);">100% Commercial IP Ownership:</strong> Full rights transfer for all research code, prompt pipelines, synthesized literature reviews, and 30-day advisory access.</li>
-</ul>
-
-<div class="service-cta-buttons" style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
-<a class="btn btn-commission btn-lg" href="../contact.html" style="text-decoration:none !important;">
-  Commission Gemini Research Training →
-</a>
-<a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank" style="text-decoration:none !important;">
-  Free LinkedIn Consultation ↗
-</a>
-</div>
-</div>
-</section>
-<div class="divider" style="margin-top:3rem;"></div>
+<script>
+document.querySelectorAll('.copy-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var code = btn.closest('.code-window').querySelector('pre').innerText;
+    navigator.clipboard.writeText(code).then(function() {
+      var orig = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(function() { btn.textContent = orig; }, 1800);
+    });
+  });
+});
+</script>
 </main>
 
     <!-- START:FOOTER -->

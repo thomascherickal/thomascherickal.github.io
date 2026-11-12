@@ -104,6 +104,7 @@
 <link href="../css/article.css" rel="stylesheet"/>
 <link href="../css/service.css" rel="stylesheet"/>
 <link href="../css/business-services.css" rel="stylesheet"/>
+<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -256,155 +257,558 @@
   <!-- END:HEADER -->
 <a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
 <main id="main">
-<!-- PAGE HERO HEADER -->
-<section style="padding-top:4rem;padding-bottom:2.5rem;text-align:center;">
-<p class="section-label">// SERVICE SPECIFICATION 05</p>
-<h1>Workflow Automations</h1>
-<p class="section-sub" style="max-width:820px;margin:0.75rem auto 0;line-height:1.8;">
-        Hands-on enterprise training in building resilient, self-hosted, and cost-effective automation pipelines. Deploy n8n locally with Docker and Ollama AI Agent nodes, design high-throughput scenarios in Make, trigger instant event applets with IFTTT, and eliminate per-operation SaaS bills with free open-source alternatives like Activepieces and Windmill. Target up to 50% automated daily operations with 100% data privacy.
+  <!-- HERO HEADER -->
+  <section class="guide-hero">
+    <div class="guide-hero-card">
+      <p class="section-label">// ENTERPRISE ENGINEERING &amp; TRAINING SPECIFICATION</p>
+      <h1>Workflow Automations</h1>
+      <p class="guide-hero-sub">
+        Architect resilient, self-hosted, and cost-effective automation pipelines across your entire organization. Deploy n8n locally with Docker and Ollama AI Agent nodes, design high-throughput scenarios in Make, trigger instant event applets with IFTTT, and eliminate per-operation SaaS bills with open-source alternatives like Activepieces and Windmill.
       </p>
-<div style="margin-top:1.5rem;display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
-<a class="btn btn-commission" href="../contact.html" >
-          Commission Workflow Automations →
-        </a>
-<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener"  target="_blank">
-          Free LinkedIn Consultation ↗
-        </a>
-</div>
-</section>
-<div class="divider"></div>
-<!-- STRUCTURED SPECIFICATION LISTS -->
-<section class="reveal" style="max-width:960px;margin:0 auto;padding-top:2.5rem;">
-<div style="background:var(--bg-card);border:1px solid var(--border-gold);border-radius:16px;padding:2.5rem;box-shadow:var(--glow-gold);">
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">Service
-          Overview &amp; Strategic Scope</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>50% Daily Operations Automation:</strong> Systematically audit and automate repetitive administrative, customer operations, finance, data entry, and lead generation tasks across cross-functional teams.</li>
-<li><strong>Zero Per-Step Execution Penalties:</strong> Transition from costly cloud SaaS meters (Zapier, Workato) to self-hosted n8n and open-source tools where millions of workflow executions run free on private hardware.</li>
-<li><strong>Multi-Tool Ecosystem Synergy:</strong> Match the right tool to the right problem: self-hosted n8n for heavy data pipelines and AI agents, Make for complex multi-branch cloud visual flows, IFTTT for rapid mobile/IoT alerts, and Activepieces for lightweight departmental integrations.</li>
-<li><strong>Complete Enterprise Data Privacy:</strong> Keep sensitive intellectual property, customer PII, financial ledgers, and trade secrets entirely on-premise using local Docker networks, private PostgreSQL databases, and local LLMs via Ollama.</li>
-<li><strong>Autonomous AI Agent Nodes:</strong> Embed LangChain-powered conversational and autonomous reasoning agents directly into workflow graphs to parse unstructured emails, extract structured tables from PDFs, and execute decision trees.</li>
-<li><strong>Comprehensive Team Enablement:</strong> Practical, hands-on bootcamps training both technical engineers and business operators to independently design, test, debug, and monitor production automations.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--cyan);font-size:1.3rem;margin-bottom:1rem;">Core Automation Platforms &amp; Architecture Deep-Dive</h2>
-<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem;">
-          Enterprise automation requires a modular architecture that balances visual speed, computational power, and cost efficiency. We architect across four primary automation tiers:
-        </p>
-<h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.15rem;margin-top:1.25rem;margin-bottom:0.75rem;">2.1 Local Self-Hosted n8n (Docker, PostgreSQL &amp; AI Agents)</h3>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:1.5rem;list-style:disc;">
-<li><strong>Docker Compose Infrastructure:</strong> Production-ready orchestration uniting the official n8n container with an enterprise PostgreSQL backend, persistent volumes, environment isolation, and automated database snapshot routines.</li>
-<li><strong>Local AI Agent Node (LangChain Engine):</strong> Integrating n8n AI Agent nodes powered by local Ollama models (such as Llama, DeepSeek, or Gemma) running over the Docker bridge network (`http://ollama:11434`) with zero cloud token egress.</li>
-<li><strong>Agent Memory &amp; Tool Binding:</strong> Connecting Window Buffer Memory nodes for conversational state persistence, alongside dynamic tool-calling modules (Calculator, HTTP Request, Vector Store search) enabling agents to query private databases.</li>
-<li><strong>Custom JavaScript &amp; Python Nodes:</strong> Executing native code snippets for complex data manipulation, cryptographic hashing, JSON normalization, and direct file system I/O.</li>
-<li><strong>Resilient Webhook Reverse Proxy:</strong> Configuring Caddy or Nginx reverse proxies with automatic Let's Encrypt SSL certificates, rate-limiting, and webhook authentication headers.</li>
-</ul>
-<h3 style="font-family:var(--font-display);color:var(--cyan);font-size:1.15rem;margin-top:1.25rem;margin-bottom:0.75rem;">2.2 Make.com (Advanced Cloud Visual Orchestration)</h3>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:1.5rem;list-style:disc;">
-<li><strong>Visual Canvas Scenario Design:</strong> Building complex multi-step scenarios on Make's flowchart canvas with visual debugging, step-by-step bundle inspection, and real-time execution tracking.</li>
-<li><strong>Optimizing the 1,000 Operations Free Tier:</strong> Designing intelligent batching pipelines with Array Aggregators and Iterators to process hundreds of records within a single operation bundle, preventing unnecessary plan upgrades.</li>
-<li><strong>Multi-Branch Routing &amp; Filters:</strong> Deploying Routers to bifurcate incoming payloads dynamically based on complex logical expressions, custom regex matching, and fallback error paths.</li>
-<li><strong>Enterprise Error Directives:</strong> Configuring Resume, Ignore, Commit, Rollback, and Break directives to prevent scenario halting during external third-party API outages or transient network spikes.</li>
-<li><strong>Universal Webhooks &amp; REST Bridges:</strong> Bridging cloud SaaS APIs (Salesforce, HubSpot, Stripe, Notion, Google Workspace) with custom headers and webhook signature validation.</li>
-</ul>
-<h3 style="font-family:var(--font-display);color:var(--gold);font-size:1.15rem;margin-top:1.25rem;margin-bottom:0.75rem;">2.3 IFTTT (Event-Driven Webhook Bridges &amp; Mobile Workflows)</h3>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:1.5rem;list-style:disc;">
-<li><strong>Lightweight Trigger-and-Action Applets:</strong> Rapidly configuring 1-to-1 event bridges connecting field hardware, IoT environmental sensors, mobile geolocation triggers, and operational alert channels.</li>
-<li><strong>Webhooks Service (Maker Channel):</strong> Generating dedicated webhook endpoints to accept HTTP POST requests from microservices and immediately trigger mobile push notifications, SMS alerts, or VoIP emergency rings.</li>
-<li><strong>Cross-Platform Notification Hub:</strong> Eliminating heavy middleware when the operational requirement is strictly reliable event dispatch (e.g., server down alerts, urgent VIP client inbound notices, field dispatch receipts).</li>
-</ul>
-<h3 style="font-family:var(--font-display);color:var(--cyan);font-size:1.15rem;margin-top:1.25rem;margin-bottom:0.75rem;">2.4 Free &amp; Open-Source Automation Platforms</h3>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>Activepieces (MIT Open-Source):</strong> Deploying a lightweight, user-friendly self-hosted automation alternative designed with a linear vertical builder, modular TypeScript SDK, and zero commercial use restrictions.</li>
-<li><strong>Windmill:</strong> Deploying open-source developer-first workflow engines that turn Python, TypeScript, Go, and SQL scripts into secure, auto-generated internal UIs and scheduled background queues.</li>
-<li><strong>Node-RED:</strong> Visual flow programming for event-driven hardware integration, edge IoT telemetry, MQTT broker ingestion, and sub-millisecond local device control.</li>
-<li><strong>Headless Python &amp; Bash Daemons:</strong> Implementing minimalist cron schedules, systemd background services, and webhook daemons for environments where graphical automation platforms are unnecessary overhead.</li>
-</ul>
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">Platform Comparison &amp; Architectural Evaluation Matrix</h2>
-<div style="overflow-x:auto;margin:1.5rem 0 2rem 0;">
-<table class="data-table">
-<thead>
-<tr>
-<th>Platform</th>
-<th>Hosting Model</th>
-<th>Licensing / Cost</th>
-<th>AI &amp; Agent Capabilities</th>
-<th>Execution Limits</th>
-<th>Primary Use Case</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong style="color:var(--cyan);">n8n (Self-Hosted)</strong></td>
-<td>Self-Hosted (Docker, Linux)</td>
-<td>Fair-Code / 100% Free Self-Hosted</td>
-<td>LangChain AI Agents, Ollama &amp; Vector Stores</td>
-<td>Unlimited (Hardware Dependent)</td>
-<td>High-volume data pipelines, AI agents &amp; private enterprise logic</td>
-</tr>
-<tr>
-<td><strong style="color:var(--gold);">Make.com</strong></td>
-<td>Cloud SaaS</td>
-<td>Proprietary (1,000 Free Ops/Month)</td>
-<td>Cloud AI modules &amp; API connectors</td>
-<td>Tiered by monthly operations</td>
-<td>Complex multi-branch visual scenarios &amp; cloud SaaS integrations</td>
-</tr>
-<tr>
-<td><strong style="color:var(--cyan);">Activepieces</strong></td>
-<td>Self-Hosted or Cloud</td>
-<td>MIT Open Source / 100% Free Self-Hosted</td>
-<td>AI prompt pieces &amp; TypeScript plugins</td>
-<td>Unlimited on self-hosted</td>
-<td>User-friendly team automation &amp; lightweight business workflows</td>
-</tr>
-<tr>
-<td><strong style="color:var(--gold);">IFTTT</strong></td>
-<td>Cloud SaaS</td>
-<td>Freemium (2 Free Applets)</td>
-<td>Basic cloud AI filter queries</td>
-<td>Strictly linear (1 Trigger → 1 Action)</td>
-<td>Mobile alerts, IoT field hardware &amp; instant event triggers</td>
-</tr>
-<tr>
-<td><strong style="color:var(--cyan);">Windmill</strong></td>
-<td>Self-Hosted or Cloud</td>
-<td>Open Source (AGPL/Commercial)</td>
-<td>Python/TypeScript script orchestration</td>
-<td>High throughput local execution</td>
-<td>Developer-centric internal tools, scripts &amp; background tasks</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-bottom:1rem;">Guarantees &amp; Commitments</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong>30 Days Training + 30 Days Included Support:</strong> Every enterprise engagement includes 20 days of live hands-on engineering followed by 20 days of included enterprise-grade operational support (40 days total coverage).</li>
-<li><strong>Zero Per-Step Automation Fees:</strong> Core pipelines built on self-hosted open-source software, completely freeing your organization from recurring per-step SaaS price escalations.</li>
-<li><strong>100% Client Commercial Ownership:</strong> All workflow JSON definitions, custom Docker configurations, Python/TypeScript scripts, and documentation belong entirely to your enterprise upon delivery.</li>
-<li><strong>Rigorous Data Privacy:</strong> Complete architectural audit ensuring sensitive proprietary information remains within your private network boundaries.</li>
-</ul>
+      <div class="service-cta-buttons" style="margin-top:1.75rem;display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+        <a class="btn btn-commission btn-lg" href="../contact.html">Commission Workflow Automations →</a>
+        <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+      </div>
+    </div>
 
-        
+    <div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem;max-width:960px;margin:2rem auto 0;">
+      <div class="stat-card" style="background:#0c111d;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:#fbbf24;">50%</div>
+        <div style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.35rem;">Target Daily Operations Automated</div>
+      </div>
+      <div class="stat-card" style="background:#0c111d;border:1px solid rgba(56,189,248,0.28);border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:#38bdf8;">0</div>
+        <div style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.35rem;">Per-Step SaaS Execution Fees</div>
+      </div>
+      <div class="stat-card" style="background:#0c111d;border:1px solid rgba(52,211,153,0.28);border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:#34d399;">100%</div>
+        <div style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.35rem;">Private VPC &amp; Local Data Ownership</div>
+      </div>
+      <div class="stat-card" style="background:#0c111d;border:1px solid rgba(232,121,249,0.28);border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:#e879f9;">60 Days</div>
+        <div style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.35rem;">30 Days Training + 30 Days Support</div>
+      </div>
+    </div>
+  </section>
 
-        <h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.3rem;margin-top:2rem;margin-bottom:1rem;">Executive Summary</h2>
-<ul style="color:var(--text-secondary);font-size:0.95rem;line-height:1.8;margin-left:1.5rem;margin-bottom:2rem;list-style:disc;">
-<li><strong style="color:var(--gold);">Daily Work Automation:</strong> Target up to half of recurring operational workflows across engineering, marketing, finance, and operations.</li>
-<li><strong style="color:var(--gold);">Self-Hosted n8n &amp; Local AI:</strong> Run high-volume data pipelines and autonomous Ollama AI agents locally on private Docker containers without token fees.</li>
-<li><strong style="color:var(--gold);">Make &amp; IFTTT Integration:</strong> Utilize Make's visual canvas for cloud multi-branch scenarios and IFTTT for rapid mobile/IoT triggers.</li>
-<li><strong style="color:var(--gold);">Free Open-Source Stack:</strong> Deploy Activepieces, Windmill, and Node-RED for zero per-task SaaS overhead.</li>
-<li><strong style="color:var(--gold);">100% Commercial IP Transfer:</strong> All code, containers, configurations, and runbooks belong entirely to you with 30 days of included post-launch support.</li>
-</ul>
-<div class="service-cta-buttons">
-<a class="btn btn-commission btn-lg" href="../contact.html" >
-            Commission Workflow Automations →
-          </a>
-<a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener"  target="_blank">
-            Free LinkedIn Consultation ↗
-          </a>
-</div>
-</div>
-</section>
-<div class="divider" style="margin-top:3rem;"></div>
+  <div class="divider"></div>
+
+  <section class="guide-body" style="max-width:960px;margin:0 auto;padding:2rem 1.25rem;">
+    <!-- TABLE OF CONTENTS -->
+    <div id="table-of-contents" style="background:#0c111d;border:1px solid rgba(251,191,36,0.3);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
+      <h2 style="font-family:var(--font-display);color:#fbbf24;font-size:1.25rem;margin-bottom:1rem;">Table of Contents</h2>
+      <ol style="display:flex;flex-direction:column;gap:0.6rem;color:var(--text-secondary);line-height:1.9;margin-left:1.25rem;">
+        <li><a class="gold-link" href="#architecture-overview">Enterprise Workflow Automation Architecture</a></li>
+        <li><a class="gold-link" href="#self-hosted-n8n">Self-Hosted n8n with Docker and Local Ollama Agents</a></li>
+        <li><a class="gold-link" href="#hybrid-cloud-orchestration">Hybrid Cloud Orchestration with Make and IFTTT</a></li>
+        <li><a class="gold-link" href="#open-source-alternatives">Open-Source Alternatives: Activepieces, Windmill, and Node-RED</a></li>
+        <li><a class="gold-link" href="#enterprise-governance">Enterprise Governance, Idempotency &amp; Failure-Mode Recovery</a></li>
+        <li><a class="gold-link" href="#queue-observability">Multi-Tenant Queue Isolation &amp; Distributed Observability</a></li>
+        <li><a class="gold-link" href="#tutorial-python">Tutorial 1: Production Python Webhook &amp; Dead-Letter Queue Worker</a></li>
+        <li><a class="gold-link" href="#tutorial-prompt">Tutorial 2: Production Agentic Triage &amp; Routing Prompt Template</a></li>
+        <li><a class="gold-link" href="#tutorial-operations">Tutorial 3: Step-by-Step Operational Deployment Runbook</a></li>
+        <li><a class="gold-link" href="#tutorial-python-circuit-breaker">Tutorial 4: Production Python Circuit-Breaker &amp; Idempotency Guard</a></li>
+        <li><a class="gold-link" href="#tutorial-prompt-remediation">Tutorial 5: Production Incident Root-Cause &amp; Auto-Remediation Prompt</a></li>
+        <li><a class="gold-link" href="#tutorial-operations-rollout">Tutorial 6: Step-by-Step Zero-Downtime Worker Rollout Runbook</a></li>
+        <li><a class="gold-link" href="#references">Live References &amp; Official Documentation</a></li>
+      </ol>
+    </div>
+
+    <!-- SECTION 1 -->
+    <h2 id="architecture-overview">Enterprise Workflow Automation Architecture</h2>
+    <p>
+      Modern enterprises lose thousands of engineering and operational hours every quarter to repetitive, brittle manual handoffs. Copying records between CRM platforms, triaging inbound support tickets, reconciling invoices, and notifying stakeholders across Slack or Microsoft Teams creates both latency and human error. Relying exclusively on commercial SaaS automation platforms introduces a second problem: exponential per-operation billing that penalizes your organization as volume scales, alongside strict data-residency risks when sensitive payloads traverse third-party cloud servers.
+    </p>
+    <p>
+      Our Workflow Automations engineering and training program solves both challenges simultaneously. We teach your technical and operations teams how to design deterministic, fault-tolerant pipelines that combine <a class="gold-link" href="#references">self-hosted n8n orchestration</a> with local large language model inference, durable message queues, and idempotent webhook handlers. Instead of fragile point-to-point scripts, your team builds observable, version-controlled automation infrastructure that runs inside your own Virtual Private Cloud (VPC) or on-premises hardware.
+    </p>
+    <p>
+      Every pipeline is engineered around three core principles: strict idempotency so retried events never create duplicate records, dead-letter queue (DLQ) isolation so malformed payloads never halt downstream processing, and zero-trust credential management so API keys and OAuth tokens remain encrypted at rest.
+    </p>
+
+    <!-- SVG DIAGRAM 1 -->
+    <div style="margin:2rem 0;background:#040711;border:1px solid rgba(56,189,248,0.28);border-radius:12px;padding:1rem;overflow-x:auto;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="End-to-End Event-Driven Workflow Automation Architecture">
+        <rect width="960" height="400" fill="#040711" rx="10"/>
+        <text x="480" y="34" fill="#fbbf24" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">EVENT-DRIVEN ENTERPRISE WORKFLOW ARCHITECTURE</text>
+        <rect x="40" y="80" width="170" height="80" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="125" y="112" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Webhook &amp; Event</text>
+        <text x="125" y="132" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">CRM / ERP / Slack</text>
+        <rect x="260" y="80" width="170" height="80" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="345" y="112" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">HMAC &amp; Schema</text>
+        <text x="345" y="132" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Validation Gate</text>
+        <rect x="480" y="80" width="170" height="80" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="565" y="112" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Redis / BullMQ</text>
+        <text x="565" y="132" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Durable Task Queue</text>
+        <rect x="700" y="80" width="210" height="80" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="805" y="112" fill="#e879f9" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">n8n / Windmill</text>
+        <text x="805" y="132" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Worker Pool</text>
+        <line x1="210" y1="120" x2="255" y2="120" stroke="#38bdf8" stroke-width="2"/>
+        <polygon points="255,115 265,120 255,125" fill="#38bdf8"/>
+        <line x1="430" y1="120" x2="475" y2="120" stroke="#fbbf24" stroke-width="2"/>
+        <polygon points="475,115 485,120 475,125" fill="#fbbf24"/>
+        <line x1="650" y1="120" x2="695" y2="120" stroke="#34d399" stroke-width="2"/>
+        <polygon points="695,115 705,120 695,125" fill="#34d399"/>
+        <rect x="140" y="250" width="200" height="90" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="240" y="285" fill="#e879f9" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Local Ollama AI</text>
+        <text x="240" y="306" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Private Triage &amp; JSON</text>
+        <rect x="400" y="250" width="200" height="90" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="500" y="285" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">PostgreSQL / ERP</text>
+        <text x="500" y="306" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Idempotent Sink</text>
+        <rect x="660" y="250" width="200" height="90" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="760" y="285" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Dead-Letter Queue</text>
+        <text x="760" y="306" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Alert &amp; Replay Store</text>
+        <line x1="805" y1="160" x2="805" y2="205" stroke="#e879f9" stroke-width="2"/>
+        <line x1="240" y1="205" x2="805" y2="205" stroke="#e879f9" stroke-width="2"/>
+        <line x1="240" y1="205" x2="240" y2="245" stroke="#e879f9" stroke-width="2"/>
+        <line x1="500" y1="205" x2="500" y2="245" stroke="#34d399" stroke-width="2"/>
+        <line x1="760" y1="205" x2="760" y2="245" stroke="#fbbf24" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <!-- SECTION 2 -->
+    <h2 id="self-hosted-n8n">Self-Hosted n8n with Docker and Local Ollama Agents</h2>
+    <p>
+      At the core of our private automation stack is self-hosted n8n running in queue mode via Docker Compose. Unlike single-process deployments that bottleneck under concurrent webhook bursts, queue mode separates the main webhook-receiving instance from horizontally scalable worker containers backed by Redis and PostgreSQL. This architecture handles tens of thousands of daily executions on modest cloud or on-premises compute with zero per-task licensing fees.
+    </p>
+    <p>
+      To add cognitive capabilities without sending proprietary documents to external APIs, we integrate <a class="gold-link" href="#references">local Ollama inference servers</a> directly into n8n AI Agent nodes. Your workflows can classify unstructured customer emails, extract line items from PDF invoices, summarize meeting transcripts, and draft structured JSON payloads entirely inside your private network. When external frontier reasoning is required for complex multi-step planning, workflows dynamically route only sanitized, non-sensitive prompts to commercial endpoints while keeping regulated data local.
+    </p>
+
+    <h3>Queue Mode Scaling and Backpressure</h3>
+    <p>
+      When an upstream system such as a payment gateway or CRM fires a burst of 5,000 webhooks in sixty seconds, a naive automation server crashes with out-of-memory errors. In our training, engineers configure Redis-backed BullMQ workers with explicit concurrency limits, exponential backoff retries, and circuit breakers. If a downstream database or third-party API experiences rate limiting, jobs pause gracefully and resume automatically without dropping a single event.
+    </p>
+
+    <!-- SVG DIAGRAM 2 -->
+    <div style="margin:2rem 0;background:#040711;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:1rem;overflow-x:auto;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Self-Hosted n8n Queue Mode with Local Ollama">
+        <rect width="960" height="400" fill="#040711" rx="10"/>
+        <text x="480" y="34" fill="#38bdf8" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">SELF-HOSTED N8N QUEUE MODE + LOCAL OLLAMA VPC</text>
+        <rect x="60" y="70" width="840" height="295" rx="12" fill="none" stroke="#334155" stroke-dasharray="6,6" stroke-width="2"/>
+        <text x="80" y="95" fill="#94a3b8" font-family="monospace" font-size="12">PRIVATE DOCKER NETWORK (ZERO EXTERNAL DATA EGRESS)</text>
+        <rect x="90" y="130" width="180" height="90" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="180" y="168" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">n8n Main</text>
+        <text x="180" y="188" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">UI &amp; Webhook Ingress</text>
+        <rect x="350" y="130" width="180" height="90" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="440" y="168" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Redis Queue</text>
+        <text x="440" y="188" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">BullMQ Job Broker</text>
+        <rect x="620" y="110" width="230" height="60" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="735" y="145" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">n8n Worker Pool (xN)</text>
+        <rect x="620" y="190" width="230" height="60" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="735" y="225" fill="#e879f9" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Ollama GPU Container</text>
+        <rect x="350" y="260" width="180" height="75" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="440" y="295" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">PostgreSQL</text>
+        <text x="440" y="314" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Execution State &amp; Logs</text>
+        <line x1="270" y1="175" x2="345" y2="175" stroke="#fbbf24" stroke-width="2"/>
+        <line x1="530" y1="155" x2="615" y2="140" stroke="#38bdf8" stroke-width="2"/>
+        <line x1="735" y1="170" x2="735" y2="188" stroke="#e879f9" stroke-width="2"/>
+        <line x1="440" y1="220" x2="440" y2="255" stroke="#34d399" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <!-- SECTION 3 -->
+    <h2 id="hybrid-cloud-orchestration">Hybrid Cloud Orchestration with Make and IFTTT</h2>
+    <p>
+      While self-hosted n8n handles core enterprise workloads, there are scenarios where visual cloud orchestration or lightweight mobile triggers accelerate delivery. <a class="gold-link" href="#references">Make (formerly Integromat)</a> excels at rapid multi-branch cloud scenarios involving SaaS-to-SaaS connectors, complex array iterators, and visual data-mapping for non-engineering stakeholders. We train your operations leads to build clean, modular Make scenarios with explicit error-handler routes (Break, Resume, Rollback) so partial failures never corrupt downstream records.
+    </p>
+    <p>
+      For edge triggers, executive mobile notifications, and IoT webhooks, IFTTT provides an immediate bridge between physical devices, calendar events, and enterprise webhooks. By pairing IFTTT edge triggers with authenticated n8n or Windmill webhook endpoints, your team gains instant mobile-to-enterprise automation without writing custom iOS or Android background services.
+    </p>
+
+    <!-- SECTION 4 -->
+    <h2 id="open-source-alternatives">Open-Source Alternatives: Activepieces, Windmill, and Node-RED</h2>
+    <p>
+      No single tool fits every department. Our curriculum covers three specialized open-source platforms that complement n8n:
+    </p>
+    <ul style="color:var(--text-secondary);line-height:1.85;margin-left:1.5rem;margin-bottom:1.5rem;list-style:disc;">
+      <li><strong style="color:#fbbf24;">Activepieces:</strong> A clean, no-code/low-code automation builder with a TypeScript piece framework, ideal for marketing and operations teams who need a friendly interface with self-hosted governance.</li>
+      <li><strong style="color:#38bdf8;">Windmill:</strong> A developer-first workflow engine that turns Python, TypeScript, Go, and Bash scripts into auto-generated UIs, scheduled jobs, and high-performance DAGs.</li>
+      <li><strong style="color:#34d399;">Node-RED:</strong> A lightweight flow-based runtime built on Node.js, unmatched for real-time MQTT telemetry, factory floor IoT, and low-latency event streams.</li>
+    </ul>
+
+    <!-- SVG DIAGRAM 3 -->
+    <div style="margin:2rem 0;background:#040711;border:1px solid rgba(52,211,153,0.28);border-radius:12px;padding:1rem;overflow-x:auto;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Enterprise Automation Stack Selection Matrix">
+        <rect width="960" height="400" fill="#040711" rx="10"/>
+        <text x="480" y="34" fill="#34d399" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">OPEN-SOURCE &amp; HYBRID AUTOMATION STACK MATRIX</text>
+        <rect x="50" y="70" width="200" height="280" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="150" y="105" fill="#fbbf24" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">n8n (Self-Hosted)</text>
+        <text x="150" y="140" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">400+ Integrations</text>
+        <text x="150" y="170" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">AI Agent Nodes</text>
+        <text x="150" y="200" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Redis Queue Mode</text>
+        <text x="150" y="230" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Zero Per-Task Fee</text>
+
+        <rect x="275" y="70" width="200" height="280" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="375" y="105" fill="#38bdf8" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Windmill</text>
+        <text x="375" y="140" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Python / TS / Go</text>
+        <text x="375" y="170" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Auto-Generated UIs</text>
+        <text x="375" y="200" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Git Sync &amp; CI/CD</text>
+        <text x="375" y="230" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">High-Speed DAGs</text>
+
+        <rect x="500" y="70" width="200" height="280" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="600" y="105" fill="#34d399" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Activepieces</text>
+        <text x="600" y="140" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Ops-Friendly Canvas</text>
+        <text x="600" y="170" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">TypeScript Pieces</text>
+        <text x="600" y="200" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">RBAC Workspaces</text>
+        <text x="600" y="230" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">MIT Open Source</text>
+
+        <rect x="725" y="70" width="185" height="280" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="817" y="105" fill="#e879f9" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Make &amp; IFTTT</text>
+        <text x="817" y="140" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Cloud SaaS Bridges</text>
+        <text x="817" y="170" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Mobile &amp; IoT</text>
+        <text x="817" y="200" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Rapid Prototyping</text>
+        <text x="817" y="230" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Edge Triggers</text>
+      </svg>
+    </div>
+
+    <!-- SECTION 5: TUTORIAL 1 -->
+    <h2 id="tutorial-python">Tutorial 1: Production Python Webhook &amp; Dead-Letter Queue Worker</h2>
+    <p>
+      Every resilient automation pipeline requires a hardened ingress layer that verifies cryptographic signatures, enforces idempotency keys, and routes failed jobs to a Dead-Letter Queue (DLQ) with exponential backoff. Below is a production-ready FastAPI + Redis worker pattern taught in our engineering labs.
+    </p>
+
+    <div class="code-window" style="margin:1.5rem 0;background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(56,189,248,0.2);">
+        <span style="font-family:monospace;font-size:0.85rem;color:#38bdf8;">webhook_dlq_worker.py (Python 3.11+ / FastAPI / Redis)</span>
+        <button class="copy-btn" type="button" onclick="copyCode(this)" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.4);border-radius:6px;padding:0.3rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.88rem;line-height:1.6;"><code>import hashlib
+import hmac
+import json
+import os
+import time
+from fastapi import FastAPI, Header, HTTPException, Request
+import redis
+
+app = FastAPI(title="Enterprise Automation Ingress")
+redis_client = redis.Redis.from_url(os.getenv("REDIS_URL", "redis://localhost:6379/0"), decode_responses=True)
+WEBHOOK_SECRET = os.getenv("WEBHOOK_SECRET", "replace-with-vault-secret").encode()
+
+def verify_hmac(payload: bytes, signature: str) -> bool:
+    expected = hmac.new(WEBHOOK_SECRET, payload, hashlib.sha256).hexdigest()
+    return hmac.compare_digest(f"sha256={expected}", signature)
+
+@app.post("/webhooks/ingest")
+async def ingest_event(
+    request: Request,
+    x_signature_256: str = Header(...),
+    x_idempotency_key: str = Header(...)
+):
+    raw_body = await request.body()
+    if not verify_hmac(raw_body, x_signature_256):
+        raise HTTPException(status_code=401, detail="Invalid HMAC signature")
+
+    if not redis_client.set(f"idem:{x_idempotency_key}", "1", nx=True, ex=86400):
+        return {"status": "duplicate_ignored", "idempotency_key": x_idempotency_key}
+
+    job = {
+        "idempotency_key": x_idempotency_key,
+        "payload": json.loads(raw_body.decode("utf-8")),
+        "attempts": 0,
+        "received_at": int(time.time())
+    }
+    redis_client.rpush("automation:queue:primary", json.dumps(job))
+    return {"status": "queued", "idempotency_key": x_idempotency_key}
+
+def process_with_dlq(handler_fn, max_retries: int = 3):
+    while True:
+        item = redis_client.blpop("automation:queue:primary", timeout=5)
+        if not item:
+            continue
+        job = json.loads(item[1])
+        try:
+            handler_fn(job["payload"])
+        except Exception as exc:
+            job["attempts"] += 1
+            job["last_error"] = str(exc)
+            if job["attempts"] >= max_retries:
+                redis_client.rpush("automation:queue:dlq", json.dumps(job))
+            else:
+                time.sleep(2 ** job["attempts"])
+                redis_client.rpush("automation:queue:primary", json.dumps(job))</code></pre>
+    </div>
+
+    <!-- SECTION 6: TUTORIAL 2 -->
+    <h2 id="tutorial-prompt">Tutorial 2: Production Agentic Triage &amp; Routing Prompt Template</h2>
+    <p>
+      When embedding an Ollama or commercial LLM node inside n8n or Windmill, free-form prose outputs break downstream JSON parsers. Use this strict, schema-enforced system prompt to classify inbound operational tickets and route them deterministically.
+    </p>
+
+    <div class="code-window" style="margin:1.5rem 0;background:#040711;border:1px solid rgba(251,191,36,0.32);border-left:3px solid var(--gold);border-radius:10px;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(251,191,36,0.2);">
+        <span style="font-family:monospace;font-size:0.85rem;color:#fbbf24;">agentic_triage_prompt.txt (Structured JSON Output)</span>
+        <button class="copy-btn" type="button" onclick="copyCode(this)" style="background:rgba(251,191,36,0.15);color:#fbbf24;border:1px solid rgba(251,191,36,0.4);border-radius:6px;padding:0.3rem 0.75rem;font-size:0.8rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.88rem;line-height:1.6;"><code>SYSTEM:
+You are an enterprise operations triage router. Analyze the incoming event payload and return ONLY valid JSON matching the exact schema below. Do not include markdown fences, commentary, or explanations.
+
+ALLOWED_QUEUES: ["finance_ap", "it_security", "customer_success", "engineering_oncall", "human_review"]
+ALLOWED_PRIORITIES: ["P1_CRITICAL", "P2_HIGH", "P3_NORMAL", "P4_LOW"]
+
+REQUIRED JSON SCHEMA:
+{
+  "target_queue": "string (must be one of ALLOWED_QUEUES)",
+  "priority": "string (must be one of ALLOWED_PRIORITIES)",
+  "requires_human_approval": "boolean",
+  "extracted_entities": {
+    "account_id": "string or null",
+    "invoice_amount_usd": "number or null",
+    "summary": "string (max 140 chars)"
+  },
+  "confidence_score": "number between 0.0 and 1.0"
+}
+
+RULES:
+1. If confidence_score &lt; 0.80, set target_queue to "human_review" and requires_human_approval to true.
+2. Never invent account IDs or dollar amounts not explicitly present in the input.
+3. If the payload contains potential security indicators (credential leak, unauthorized access), force target_queue to "it_security" and priority to "P1_CRITICAL".</code></pre>
+    </div>
+
+    <!-- SECTION 7: TUTORIAL 3 -->
+    <h2 id="tutorial-operations">Tutorial 3: Step-by-Step Operational Deployment Runbook</h2>
+    <p>
+      Follow this five-step operational runbook to take a manual business process from discovery to a monitored, self-hosted production pipeline:
+    </p>
+    <ol style="color:var(--text-secondary);line-height:1.9;margin-left:1.5rem;margin-bottom:2rem;">
+      <li><strong style="color:#fbbf24;">Process Audit &amp; Idempotency Mapping:</strong> Document the exact trigger, payload schema, and every downstream side effect. Define a unique idempotency key (such as <code>invoice_id + event_type</code>) before writing any workflow nodes.</li>
+      <li><strong style="color:#38bdf8;">Docker Compose &amp; Vault Provisioning:</strong> Deploy n8n in queue mode alongside PostgreSQL, Redis, and Ollama inside an isolated Docker network. Store all API keys in environment-injected secrets or HashiCorp Vault.</li>
+      <li><strong style="color:#34d399;">Dead-Letter Queue &amp; Alerting Wiring:</strong> Attach an Error Trigger workflow to every production pipeline that logs the failed execution ID, payload hash, and stack trace to PostgreSQL and posts an actionable alert to your engineering Slack channel.</li>
+      <li><strong style="color:#e879f9;">Shadow Mode &amp; Replay Testing:</strong> Run the new pipeline in shadow mode for 48 hours alongside the legacy manual process, comparing outputs without mutating production records.</li>
+      <li><strong style="color:#fbbf24;">Cutover &amp; Runbook Handover:</strong> Switch production webhooks to the new ingress endpoint, archive the workflow JSON in Git, and verify automated daily PostgreSQL backups.</li>
+    </ol>
+
+    <!-- SVG DIAGRAM 4 -->
+    <div style="margin:2rem 0;background:#040711;border:1px solid rgba(232,121,249,0.28);border-radius:12px;padding:1rem;overflow-x:auto;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="5-Stage Operational Deployment Lifecycle">
+        <rect width="960" height="400" fill="#040711" rx="10"/>
+        <text x="480" y="34" fill="#e879f9" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">PRODUCTION AUTOMATION DEPLOYMENT LIFECYCLE</text>
+        <rect x="40" y="140" width="150" height="100" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="115" y="182" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">1. Audit &amp;</text>
+        <text x="115" y="202" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Idempotency</text>
+
+        <rect x="220" y="140" width="150" height="100" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="295" y="182" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">2. Docker &amp;</text>
+        <text x="295" y="202" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Vault Setup</text>
+
+        <rect x="400" y="140" width="150" height="100" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="475" y="182" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">3. DLQ &amp;</text>
+        <text x="475" y="202" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Slack Alerts</text>
+
+        <rect x="580" y="140" width="150" height="100" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="655" y="182" fill="#e879f9" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">4. Shadow</text>
+        <text x="655" y="202" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">48h Validation</text>
+
+        <rect x="760" y="140" width="150" height="100" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="835" y="182" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">5. Cutover &amp;</text>
+        <text x="835" y="202" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Git Backup</text>
+
+        <line x1="190" y1="190" x2="215" y2="190" stroke="#fbbf24" stroke-width="2"/>
+        <line x1="370" y1="190" x2="395" y2="190" stroke="#38bdf8" stroke-width="2"/>
+        <line x1="550" y1="190" x2="575" y2="190" stroke="#34d399" stroke-width="2"/>
+        <line x1="730" y1="190" x2="755" y2="190" stroke="#e879f9" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <!-- SECTION: ENTERPRISE GOVERNANCE & FAILURE-MODE RECOVERY -->
+    <h2 id="enterprise-governance">Enterprise Governance, Idempotency &amp; Failure-Mode Recovery</h2>
+    <p>
+      When workflow automations graduate from departmental prototypes to mission-critical enterprise infrastructure, the primary engineering challenge shifts from "how do we connect two APIs" to "how do we guarantee deterministic execution under partial network failure, rate-limit throttling, and schema drift." Without formal governance, a single malformed webhook payload or downstream SaaS outage can trigger cascading retries, duplicate financial postings, or silent data loss.
+    </p>
+    <p>
+      Every production workflow in our architecture enforces strict idempotency keys at the ingress boundary. Before any state-mutating step executes, the orchestrator computes a deterministic SHA-256 digest of the business event identifier and target action, storing it in Redis with a configurable Time-to-Live (TTL). If an upstream webhook fires twice due to network jitter, the second invocation is acknowledged with HTTP 200 and safely short-circuited without re-executing downstream side effects.
+    </p>
+    <p>
+      For transient failures such as HTTP 429 rate limits or 503 upstream timeouts, workers apply exponential backoff with full jitter rather than fixed-interval retries. When a job exhausts its retry budget, it is routed to a <a class="gold-link" href="#references">Dead-Letter Queue (DLQ)</a> alongside its full execution trace, input payload, and exception stack. Operators can inspect, patch, and replay DLQ messages without halting healthy concurrent queues.
+    </p>
+
+    <!-- SVG DIAGRAM 5: FAILURE-MODE RECOVERY & CIRCUIT BREAKER -->
+    <div style="margin:2rem 0;border-radius:14px;overflow:hidden;border:1px solid rgba(56,189,248,0.28);background:#040711;padding:1rem;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Enterprise Failure-Mode Recovery and Circuit Breaker Architecture">
+        <rect width="960" height="400" fill="#040711"/>
+        <text x="480" y="34" fill="#fbbf24" font-family="Inter,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Idempotent Ingress, Circuit Breaker &amp; Dead-Letter Recovery</text>
+        <rect x="40" y="80" width="170" height="80" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="125" y="114" fill="#38bdf8" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Webhook Ingress</text>
+        <text x="125" y="136" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">HMAC + Schema Check</text>
+        <rect x="260" y="80" width="180" height="80" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="350" y="114" fill="#fbbf24" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Redis Idempotency</text>
+        <text x="350" y="136" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">SETNX Key + TTL</text>
+        <rect x="490" y="80" width="190" height="80" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="585" y="114" fill="#34d399" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Circuit Breaker</text>
+        <text x="585" y="136" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">Closed / Open / Half-Open</text>
+        <rect x="730" y="80" width="190" height="80" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="825" y="114" fill="#e879f9" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Downstream ERP/CRM</text>
+        <text x="825" y="136" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">Committed State</text>
+        <rect x="350" y="250" width="260" height="90" rx="10" fill="#0c111d" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6 4"/>
+        <text x="480" y="286" fill="#fbbf24" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Dead-Letter Queue (DLQ)</text>
+        <text x="480" y="308" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">Payload + Trace + Replay</text>
+        <line x1="210" y1="120" x2="260" y2="120" stroke="#38bdf8" stroke-width="2"/>
+        <line x1="440" y1="120" x2="490" y2="120" stroke="#fbbf24" stroke-width="2"/>
+        <line x1="680" y1="120" x2="730" y2="120" stroke="#34d399" stroke-width="2"/>
+        <line x1="585" y1="160" x2="480" y2="250" stroke="#e879f9" stroke-width="2" stroke-dasharray="5 5"/>
+      </svg>
+    </div>
+
+    <!-- SECTION: MULTI-TENANT QUEUE ISOLATION & OBSERVABILITY -->
+    <h2 id="queue-observability">Multi-Tenant Queue Isolation &amp; Distributed Observability</h2>
+    <p>
+      Enterprise automation platforms routinely serve multiple departments - finance, legal, customer support, and engineering - on shared compute clusters. Without strict queue isolation, a bulk data backfill initiated by marketing can starve latency-sensitive customer onboarding workflows. We partition execution into dedicated priority queues (`critical`, `standard`, `batch`) backed by <a class="gold-link" href="#references">OpenTelemetry distributed tracing</a> so every workflow run emits structured spans, token-usage metrics, and latency histograms.
+    </p>
+    <p>
+      Governance also requires role-based access control (RBAC) and secrets rotation. API credentials are never hardcoded inside workflow JSON exports; instead, workers fetch short-lived tokens from HashiCorp Vault or AWS Secrets Manager at runtime, ensuring zero credential leakage in Git repositories or audit logs.
+    </p>
+
+    <!-- SVG DIAGRAM 6: MULTI-TENANT QUEUE ISOLATION -->
+    <div style="margin:2rem 0;border-radius:14px;overflow:hidden;border:1px solid rgba(251,191,36,0.28);background:#040711;padding:1rem;">
+      <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Multi-Tenant Queue Isolation and OpenTelemetry Observability">
+        <rect width="960" height="400" fill="#040711"/>
+        <text x="480" y="34" fill="#38bdf8" font-family="Inter,sans-serif" font-size="16" font-weight="700" text-anchor="middle">Priority Queue Isolation &amp; OpenTelemetry Observability</text>
+        <rect x="60" y="75" width="240" height="75" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
+        <text x="180" y="108" fill="#34d399" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Critical Queue (SLA &lt; 2s)</text>
+        <text x="180" y="128" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">Payments &amp; Auth Webhooks</text>
+        <rect x="60" y="170" width="240" height="75" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="180" y="203" fill="#38bdf8" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Standard Queue (SLA &lt; 30s)</text>
+        <text x="180" y="223" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">CRM Sync &amp; Ticket Triage</text>
+        <rect x="60" y="265" width="240" height="75" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
+        <text x="180" y="298" fill="#e879f9" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Batch Queue (Off-Peak)</text>
+        <text x="180" y="318" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">Nightly ETL &amp; Embeddings</text>
+        <rect x="400" y="120" width="220" height="170" rx="12" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
+        <text x="510" y="175" fill="#fbbf24" font-family="Inter,sans-serif" font-size="14" font-weight="700" text-anchor="middle">Worker Pool</text>
+        <text x="510" y="200" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">Vault Secrets + RBAC</text>
+        <text x="510" y="222" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">Structured JSON Logs</text>
+        <rect x="700" y="120" width="210" height="170" rx="12" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="805" y="175" fill="#38bdf8" font-family="Inter,sans-serif" font-size="14" font-weight="700" text-anchor="middle">OpenTelemetry</text>
+        <text x="805" y="200" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">Traces, Metrics &amp; Alerts</text>
+        <text x="805" y="222" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" text-anchor="middle">Grafana / Prometheus</text>
+        <line x1="300" y1="112" x2="400" y2="170" stroke="#34d399" stroke-width="2"/>
+        <line x1="300" y1="207" x2="400" y2="207" stroke="#38bdf8" stroke-width="2"/>
+        <line x1="300" y1="302" x2="400" y2="245" stroke="#e879f9" stroke-width="2"/>
+        <line x1="620" y1="205" x2="700" y2="205" stroke="#fbbf24" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <!-- TUTORIAL 4: PRODUCTION PYTHON CIRCUIT BREAKER -->
+    <h2 id="tutorial-python-circuit-breaker">Tutorial 4: Production Python Circuit-Breaker &amp; Idempotency Guard</h2>
+    <p>
+      The following production Python module implements a Redis-backed idempotency guard paired with a three-state circuit breaker (`CLOSED`, `OPEN`, `HALF_OPEN`) so downstream SaaS outages never exhaust your worker pool.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid var(--cyan);border-radius:10px;margin:1.75rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(56,189,248,0.2);">
+        <span style="color:var(--cyan);font-family:monospace;font-size:0.85rem;">circuit_breaker_guard.py</span>
+        <button class="copy-btn" onclick="copyCode(this)" style="background:rgba(56,189,248,0.15);color:var(--cyan);border:1px solid rgba(56,189,248,0.4);padding:0.3rem 0.75rem;border-radius:6px;cursor:pointer;font-size:0.8rem;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;background:#040711;color:#e2e8f0;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;font-size:0.88rem;line-height:1.6;"><code>import hashlib
+import time
+import redis
+
+class IdempotentCircuitBreaker:
+    def __init__(self, redis_client: redis.Redis, service_name: str, failure_threshold: int = 5, reset_timeout: int = 60):
+        self.redis = redis_client
+        self.service = service_name
+        self.failure_threshold = failure_threshold
+        self.reset_timeout = reset_timeout
+
+    def acquire_idempotency_lock(self, event_id: str, ttl_seconds: int = 86400) -> bool:
+        key = f"idemp:{self.service}:{hashlib.sha256(event_id.encode()).hexdigest()}"
+        return bool(self.redis.set(key, "1", nx=True, ex=ttl_seconds))
+
+    def is_circuit_open(self) -> bool:
+        state_key = f"cb:{self.service}:open_until"
+        open_until = self.redis.get(state_key)
+        if open_until and float(open_until) &gt; time.time():
+            return True
+        return False
+
+    def record_failure(self) -> None:
+        fail_key = f"cb:{self.service}:failures"
+        failures = self.redis.incr(fail_key)
+        self.redis.expire(fail_key, self.reset_timeout)
+        if failures &gt;= self.failure_threshold:
+            self.redis.set(f"cb:{self.service}:open_until", str(time.time() + self.reset_timeout), ex=self.reset_timeout)
+
+    def record_success(self) -> None:
+        self.redis.delete(f"cb:{self.service}:failures", f"cb:{self.service}:open_until")</code></pre>
+    </div>
+
+    <!-- TUTORIAL 5: PRODUCTION PROMPT TEMPLATE -->
+    <h2 id="tutorial-prompt-remediation">Tutorial 5: Production Incident Root-Cause &amp; Auto-Remediation Prompt</h2>
+    <p>
+      Use this structured system prompt when routing Dead-Letter Queue (DLQ) payloads to a local or cloud LLM for automated root-cause classification and safe remediation proposals.
+    </p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.35);border-left:3px solid var(--gold);border-radius:10px;margin:1.75rem 0;overflow:hidden;">
+      <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:#0c111d;border-bottom:1px solid rgba(251,191,36,0.2);">
+        <span style="color:var(--gold);font-family:monospace;font-size:0.85rem;">dlq_remediation_prompt.txt</span>
+        <button class="copy-btn" onclick="copyCode(this)" style="background:rgba(251,191,36,0.15);color:var(--gold);border:1px solid rgba(251,191,36,0.4);padding:0.3rem 0.75rem;border-radius:6px;cursor:pointer;font-size:0.8rem;text-decoration:none !important;">Copy</button>
+      </div>
+      <pre style="margin:0;padding:1.25rem;background:#040711;color:#e2e8f0;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;font-size:0.88rem;line-height:1.6;"><code>SYSTEM: You are an Enterprise Workflow Reliability Engineer. Analyze the failed Dead-Letter Queue (DLQ) event below and return strictly valid JSON matching the schema.
+
+RULES:
+1. Classify root_cause into one of: [TRANSIENT_NETWORK, RATE_LIMIT, SCHEMA_DRIFT, AUTH_EXPIRED, BUSINESS_LOGIC_ERROR].
+2. Set safe_to_auto_replay to true ONLY for TRANSIENT_NETWORK or RATE_LIMIT.
+3. Never invent missing customer identifiers or financial amounts.
+
+OUTPUT SCHEMA:
+{
+  "root_cause": "string",
+  "safe_to_auto_replay": boolean,
+  "recommended_backoff_seconds": integer,
+  "operator_summary": "string (max 40 words)"
+}
+
+INPUT PAYLOAD:
+{{dlq_event_json}}</code></pre>
+    </div>
+
+    <!-- TUTORIAL 6: STEP-BY-STEP OPERATIONAL RUNBOOK -->
+    <h2 id="tutorial-operations-rollout">Tutorial 6: Step-by-Step Zero-Downtime Worker Rollout Runbook</h2>
+    <p>
+      Follow this operational checklist whenever deploying updated workflow definitions or Python worker images to production without dropping in-flight webhooks:
+    </p>
+    <ol style="color:var(--text-secondary);line-height:1.9;margin-left:1.5rem;margin-bottom:2rem;">
+      <li><strong>Drain Active Workers Gracefully:</strong> Send `SIGTERM` to the retiring worker pods so they stop pulling new jobs from Redis while completing in-flight tasks within a 60-second grace period.</li>
+      <li><strong>Validate Schema Backward Compatibility:</strong> Run automated contract tests against the last 100 production webhook payloads before promoting the new container image.</li>
+      <li><strong>Canary Deploy 10% Capacity:</strong> Route 10% of `standard` queue traffic to the new worker version and monitor OpenTelemetry error rates for 15 minutes.</li>
+      <li><strong>Promote Full Fleet &amp; Verify DLQ Depth:</strong> Scale the new deployment to 100% and confirm Dead-Letter Queue depth remains at zero across all priority queues.</li>
+    </ol>
+
+    <!-- SECTION 8: REFERENCES -->
+    <h2 id="references">Live References &amp; Official Documentation</h2>
+    <ul style="color:var(--text-secondary);line-height:1.9;margin-left:1.5rem;margin-bottom:2.5rem;list-style:disc;">
+      <li><a class="gold-link" href="https://docs.n8n.io/hosting/scaling/queue-mode/" rel="noopener" target="_blank">n8n Official Documentation - Queue Mode &amp; Scaling</a></li>
+      <li><a class="gold-link" href="https://ollama.com/library" rel="noopener" target="_blank">Ollama Official Model Library &amp; Local Inference Docs</a></li>
+      <li><a class="gold-link" href="https://www.make.com/en/help/scenarios" rel="noopener" target="_blank">Make (Integromat) Official Scenario &amp; Error Handling Guide</a></li>
+      <li><a class="gold-link" href="https://www.windmill.dev/docs/intro" rel="noopener" target="_blank">Windmill Official Documentation - Developer-First Workflows</a></li>
+      <li><a class="gold-link" href="https://www.activepieces.com/docs" rel="noopener" target="_blank">Activepieces Official Open-Source Automation Docs</a></li>
+      <li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" rel="noopener" target="_blank">Anthropic Prompt Engineering &amp; Structured Output Guide</a></li>
+      <li><a class="gold-link" href="https://opentelemetry.io/docs/languages/python/" rel="noopener" target="_blank">OpenTelemetry Python Official Instrumentation Documentation</a></li>
+      <li><a class="gold-link" href="https://redis.io/docs/latest/develop/use/patterns/distributed-locks/" rel="noopener" target="_blank">Redis Official Documentation - Distributed Locks &amp; Idempotency</a></li>
+      <li><a class="gold-link" href="https://docs.temporal.io/encyclopedia/retry-policies" rel="noopener" target="_blank">Temporal Official Documentation - Retry Policies &amp; Failure Recovery</a></li>
+      <li><a class="gold-link" href="https://developer.hashicorp.com/vault/docs" rel="noopener" target="_blank">HashiCorp Vault Official Secrets Management Documentation</a></li>
+    </ul>
+
+    <!-- CTA BLOCK -->
+    <div style="background:#0c111d;border:1px solid var(--border-gold);border-radius:16px;padding:2.25rem;text-align:center;box-shadow:var(--glow-gold);">
+      <h2 style="font-family:var(--font-display);color:var(--gold);font-size:1.5rem;margin-bottom:0.75rem;">Ready to Automate 50% of Daily Operations?</h2>
+      <p style="color:var(--text-secondary);max-width:680px;margin:0 auto 1.5rem;line-height:1.7;">
+        Deploy resilient, self-hosted workflows with 100% commercial IP ownership, zero per-task SaaS fees, and 30 days of included post-launch support.
+      </p>
+      <div class="service-cta-buttons" style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+        <a class="btn btn-commission btn-lg" href="../contact.html">Commission Workflow Automations →</a>
+        <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+      </div>
+    </div>
+  </section>
+  <div class="divider" style="margin-top:3rem;"></div>
+  <script>
+    function copyCode(btn) {
+      const code = btn.closest('.code-window').querySelector('pre code').innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = 'Copied!';
+        setTimeout(() => { btn.innerText = orig; }, 1800);
+      });
+    }
+  </script>
 </main>
     <!-- START:FOOTER -->
     <footer id="links">

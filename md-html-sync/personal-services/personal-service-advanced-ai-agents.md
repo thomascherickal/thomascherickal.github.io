@@ -1,64 +1,26 @@
 # Advanced AI Agents
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// SERVICE SPECIFICATION 10**  
-> **Building production autonomous agent systems: hierarchical teams of Claude agents, self-correcting loops driven
- by tests, persistent state, and sandboxed execution for business-critical workloads.**
+> **// PERSONAL SERVICE SPECIFICATION - AUTONOMOUS AGENTS**  
+> **Business transformation, verification, and implementation.**
 
 ---
 
-## Service
- Overview & Scope
+## Why Solo Practitioners Need Autonomous Agent Architectures
 
-- Multi-Agent Teams: Hierarchical Claude agent teams that carry multi-day, multi-person
- workflows, with human checkpoints at the steps that matter.
-- Self-Correction Loops: Agents read compiler errors, test failures and lint output, fix
- the code, and run the checks again until they pass or reach a retry limit.
-- Sandboxed Tool Execution: Agent shell commands, code execution and database queries run
- inside Docker containers with restricted permissions and network access.
-- Spend and Loop Limits: Iteration caps, token budgets and kill switches on every loop.
-- Run Logging: Records of each agent's steps, tool calls, token use and failures for review
- and debugging.
+Independent engineers, solo founders, and technical consultants face a recurring bottleneck: you have the architectural vision of a full engineering team, yet only twenty-four hours in a day. Standard chat interfaces force you into a synchronous, single-threaded loop where you copy-paste context, inspect outputs manually, and re-prompt every time a script fails. Advanced AI agents break that bottleneck by turning your local workstation or cloud server into an asynchronous, self-correcting engineering bench.
+
+In this 1-on-1 training engagement, we move far beyond brittle single-prompt wrappers. You learn how to build deterministic state machines where specialized agents plan tasks, execute shell commands inside isolated containers, read compiler or test failures, and iterate until every acceptance criterion passes. According to the Anthropic engineering guide on building effective agents, the most reliable autonomous systems combine simple, composable patterns with explicit verification gates rather than unconstrained open-ended loops.
+
+Whether you are automating full-stack feature delivery, running overnight data-engineering pipelines, or orchestrating deep competitive research, mastering agentic architecture gives you the leverage of a small engineering department while keeping total control over cost, security, and code quality.
 
 ---
 
-## Standard
- Architecture & Tools
+## Personal Productivity Architecture and Asynchronous Delegation
 
-- Agent Frameworks: Claude Agent Teams, Claude Code subagents and background agents in
- separate git worktrees, and the Claude API with Python asyncio or Rust Tokio for custom orchestration.
-- Model Layer: Claude Opus or Fable (lead planner and synthesis), Claude Sonnet (code and
- tool use), and Claude Haiku (fast classification and search).
-- Execution Sandboxing: Docker containers with dropped capabilities (`CAP_DROP=ALL`),
- non-root execution and egress restrictions.
-- State & Persistence: Checkpoints in a SQL database or files, so long runs can resume
- after an interruption.
+A personal agentic bench only multiplies your output if you design it around asynchronous delegation rather than interactive babysitting. Most solo developers fall into the trap of watching an agent stream tokens in real time, which recreates the exact synchronous bottleneck they were trying to escape. Instead, your productivity architecture should separate human-in-the-loop specification from background execution. You spend twenty minutes in the morning writing a crisp, test-backed specification, dispatch three independent worker agents into isolated Git worktrees, and review their pull requests during a scheduled afternoon triage block.
 
----
-
-## Guarantees
- & Commitments
-
-- Guaranteed Termination: Hard cycle limits, timeouts and fallback paths end every run.
-- Complete Commercial IP Ownership: Full code, copyright and documentation transfer at
- sign-off.
-- 30-Day Operational SLA & Support: Engineering channel for fixes, tuning and Claude
- model or API updates.
-- Data Containment: Disposable containers, with outbound traffic limited to approved
- destinations.
-
----
-
-## Executive Summary
-
-- Claude Agent Teams: Production orchestrator-worker and
- hierarchical architectures.
-- Test-Driven Self-Correction: Test, lint and type-check
- feedback loops that work toward passing code.
-- Sandboxed Runtimes: Docker isolation with dropped capabilities
- and restricted network access.
-- Enterprise IP & Handover: Full IP transfer, runbooks and
- 30-day support.
+To make asynchronous delegation reliable, every task dispatched to a background worker must carry a deterministic acceptance contract. This contract consists of a target file scope, a failing unit test or schema validator, and a strict wall-clock timeout. When an agent finishes, it does not ping you with a chat message; it writes a structured OpenTelemetry trace and a concise diff summary to a local SQLite inbox. You can then batch-review five completed branches in ten minutes with zero context-switching overhead.
 
 ---
 

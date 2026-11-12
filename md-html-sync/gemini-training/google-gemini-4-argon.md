@@ -12,9 +12,9 @@
 
 ## Introduction
 
-Gemini 4 Argon is Google's newest frontier model, and it arrives with a claim that matters to researchers: it can sustain deep reasoning across long, multi-step workflows. For a Generative AI researcher, that claim touches daily work, from post-training experiments to inference optimization and evaluation design. It also reaches into the sciences, where Google reports results in physics, chemistry and biology.
+Gemini 4 Argon launched as Google DeepMind's frontier reasoning workhorse, and it arrives with a claim that matters to researchers: it can sustain deep reasoning across long, multi-step workflows. As of November 12, 2026, Argon anchors the balanced tier of the Gemini 4 element family - sitting alongside the newly released flagship Gemini 4 Carbon (built directly on Argon's framework and generally available since November 10, 2026) and Gemini 4 Hydrogen (the upcoming Flash-tier model currently undergoing internal testing on Google's Jetski platform). For a Generative AI researcher, Argon's architecture touches daily work, from post-training experiments to inference optimization and evaluation design. It also reaches into the sciences, where Google reports results in physics, chemistry and biology.
 
-This article explains what Argon is, how Google subscriptions give you access, and where it can help in your own research. It covers four use cases for generative AI work and two each for physics, chemistry, mathematics and biology. I opened every source linked in the text on November 4, 2026, and the full list sits at the end.
+This article explains what Argon is, how Google subscriptions give you access, and where it can help in your own research. It covers four use cases for generative AI work and two each for physics, chemistry, mathematics and biology, incorporating updates verified through November 12, 2026.
 
 ---
 
@@ -215,44 +215,6 @@ Gemini 4 Argon combines a sparse mixture-of-experts design, a 1M-token window an
 The practical advice is short. Pair every agent with a checker, whether that is a token-parity test, a proof assistant or a lab assay. Log failures as carefully as successes, and treat vendor numbers as claims to reproduce before November 30 makes experiments more expensive.
 
 The larger point is about method. The most credible results in this release pair a fast proposer with a slow, strict checker, and that structure will outlast any single model name. If you build your research workflow around it, a future model swap becomes a routine upgrade and not a rewrite.
-
----
-
-## Practice Pricing & Global Purchasing Power Parity
-
-I provide live, remote engineering training and advisory consulting covering Gemini 4 Argon frontier reasoning architectures, 1M token output decodes, multi-agent research environments, and enterprise scientific agent workflows. Engagements enable research organizations, academic departments, enterprises, and individual professionals to master production multimodal systems, source-grounded creative engines, and automated generative workflows.
-
-All services are governed by our transparent 195-country Purchasing Power Parity (PPP) framework, scaling rates fairly across six economic tiers:
-
-### Individual Service Picks (Pick & Choose)
-
-Clients can also avail of individual modular services from our technical catalog (e.g. Gemini Advanced Training, Claude Agent Orchestration, Local LLMs, or Workflow Automations):
-
-- Business Individual Pick: ($300 / $225 / $150 / $150 / $75 / Custom USD) base for 1 seat, with additional seats at ($300 / $225 / $150 / $150 / $75 / Custom USD) per seat up to a maximum of 10 seats, covering 5 days live engineering + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
-- Personal Individual Pick: ($300 / $225 / $150 / $150 / $75 / Custom USD) strictly for only one seat, covering 5 days live training + 5 days dedicated support (10 days total coverage, 4 hours/day, remote worldwide, Mon - Fri).
-
-### Payment Structure & Trust Guarantees
-
-Every client engagement is safeguarded by strict trust guarantees:
-
-- Zero Upfront Payment: Strictly $0 advance deposit required. We never invoice before delivering actual value.
-- 20% in Five Installments: Invoiced in 5 equal milestone installments of 20% each, billed strictly after each milestone block is completed.
-- Walkaway Guarantee: If you are not satisfied after the initial training phase, you can walk away owing absolutely nothing.
-- Commercial Apache 2.0 License: All custom code, architectures, and high-quality training materials are provided under the Apache 2.0 license, allowing full commercial use, internal deployment, resale, and relicensing with attribution.
-- Full Pricing Details: Learn more about country tier multipliers, currency choices, and customized curriculum on our Pricing Page.
-
-### The Six Purchasing Power Parity (PPP) Tiers
-
-To ensure fair global access across all 195 countries, fees are adjusted by national economic indicators in accordance with our Purchasing Power Parity framework:
-
-| Tier | Economic Category | Representative Countries | Parity Multiplier | Business Flagship | Personal Flagship |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| Tier 1 | High-Income Baseline | United States, UK, Germany, Canada, Japan, Singapore, Australia | 1.00X | $3,000 USD | $3,000 USD |
-| Tier 2 | Upper-Middle Economies | Brazil, Mexico, Malaysia, Turkiye, Thailand, Philippines, Sri Lanka | 0.75X | $2,250 USD | $2,250 USD |
-| Tier 3 | Lower-Middle & Low-Income | India, Egypt, Kenya, Nigeria, Pakistan, Bangladesh, Vietnam | 0.50X | $1,500 USD | $1,500 USD |
-| Tier 4 | Early-Stage Startups | Global tech startups with <$1M external funding | 0.50X | $1,500 USD | $1,500 USD |
-| Tier 5 | Academia & Non-Profits | Universities, accredited labs, registered charities & 501(c)(3) entities | 0.25X | $750 USD | $750 USD |
-| Tier 6 | Subsidized Relief | Crisis-affected regions, developing collectives & grassroots builders | Custom | Custom Subsidized | Custom Relief |
 
 ---
 

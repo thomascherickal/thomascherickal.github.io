@@ -1,64 +1,18 @@
 # Advanced AI Agents
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// SERVICE SPECIFICATION 10**  
-> **Building production autonomous agent systems: hierarchical teams of Claude agents, self-correcting loops driven
- by tests, persistent state, and sandboxed execution for business-critical workloads.**
+> **// SERVICE SPECIFICATION - AUTONOMOUS SYSTEMS**  
+> **Business transformation, verification, and implementation.**
 
 ---
 
-## Service
- Overview & Scope
+## Autonomous Agent Architecture Overview
 
-- Multi-Agent Teams: Hierarchical Claude agent teams that carry multi-day, multi-person
- workflows, with human checkpoints at the steps that matter.
-- Self-Correction Loops: Agents read compiler errors, test failures and lint output, fix
- the code, and run the checks again until they pass or reach a retry limit.
-- Sandboxed Tool Execution: Agent shell commands, code execution and database queries run
- inside Docker containers with restricted permissions and network access.
-- Spend and Loop Limits: Iteration caps, token budgets and kill switches on every loop.
-- Run Logging: Records of each agent's steps, tool calls, token use and failures for review
- and debugging.
+Single-prompt LLM wrappers fail on multi-step enterprise workflows because they lack persistent state, deterministic tool boundaries, and structured error recovery. When a task spans database queries, code generation, API orchestration, and compliance verification, a single monolithic context window degrades rapidly. Advanced AI Agents solve this by decomposing work across specialized roles coordinated by an explicit state graph.
 
----
+In a production supervisor-worker architecture, a lead planner agent decomposes the business objective into discrete, verifiable subtasks. Each subtask is routed to a specialized worker agent equipped with strictly scoped tools - for example, a SQL read-only analyst, a Python sandbox executor, or a document synthesizer. State is persisted at every node transition using a checkpoint store, following patterns established in the LangGraph state machine specification and Anthropic agentic systems guidance.
 
-## Standard
- Architecture & Tools
-
-- Agent Frameworks: Claude Agent Teams, Claude Code subagents and background agents in
- separate git worktrees, and the Claude API with Python asyncio or Rust Tokio for custom orchestration.
-- Model Layer: Claude Opus or Fable (lead planner and synthesis), Claude Sonnet (code and
- tool use), and Claude Haiku (fast classification and search).
-- Execution Sandboxing: Docker containers with dropped capabilities (`CAP_DROP=ALL`),
- non-root execution and egress restrictions.
-- State & Persistence: Checkpoints in a SQL database or files, so long runs can resume
- after an interruption.
-
----
-
-## Guarantees
- & Commitments
-
-- Guaranteed Termination: Hard cycle limits, timeouts and fallback paths end every run.
-- Complete Commercial IP Ownership: Full code, copyright and documentation transfer at
- sign-off.
-- 30-Day Operational SLA & Support: Engineering channel for fixes, tuning and Claude
- model or API updates.
-- Data Containment: Disposable containers, with outbound traffic limited to approved
- destinations.
-
----
-
-## Executive Summary
-
-- Claude Agent Teams: Production orchestrator-worker and
- hierarchical architectures.
-- Test-Driven Self-Correction: Test, lint and type-check
- feedback loops that work toward passing code.
-- Sandboxed Runtimes: Docker isolation with dropped capabilities
- and restricted network access.
-- Enterprise IP & Handover: Full IP transfer, runbooks and
- 30-day support.
+This separation of concerns delivers three measurable operational advantages: predictable token budgets per step, isolated failure domains where a single tool error does not corrupt the entire reasoning chain, and full auditability for compliance teams. Every tool call, intermediate artifact, and model decision is logged with correlation identifiers before any external side effect is committed.
 
 ---
 
