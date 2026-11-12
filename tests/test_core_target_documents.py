@@ -126,7 +126,9 @@ class TestCoreTargetDocuments(unittest.TestCase):
         self.assertEqual(data["metadata"]["manifest_type"], "synchronization_manifest")
         self.assertIn("data_hashes", data)
         self.assertIn("targets", data)
-        self.assertEqual(len(data["data_hashes"]), 11, "Must track all 11 data files")
+        from test_helpers import get_config_json_count
+        expected_json_count = get_config_json_count()
+        self.assertEqual(len(data["data_hashes"]), expected_json_count, f"Must track all {expected_json_count} data files")
         self.assertGreaterEqual(len(data["targets"]), 67, "Must track all target documents")
 
     def test_references_dictionary_preserved_and_intact(self):

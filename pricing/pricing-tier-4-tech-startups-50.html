@@ -317,54 +317,67 @@
 
 
   <style>
-    /* Highly prominent glow styling for the currently selected pricing tier */
+    /* Highly prominent ultra-vibrant highlight styling for the currently selected pricing tier */
     .parity-tier-card.tier-current-selected {
       position: relative;
-      transform: translateY(-8px) scale(1.02);
-      z-index: 10;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateY(-12px) scale(1.035);
+      z-index: 20;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .parity-card-t1.tier-current-selected {
-      border: 3.5px solid #38bdf8 !important;
-      box-shadow: 0 0 50px rgba(56, 189, 248, 0.8), 0 0 100px rgba(56, 189, 248, 0.4), 0 20px 45px rgba(0, 0, 0, 0.9) !important;
+      border: 4px solid #38bdf8 !important;
+      background: linear-gradient(160deg, rgba(56, 189, 248, 0.22) 0%, rgba(14, 165, 233, 0.12) 35%, rgba(10, 16, 31, 0.98) 100%) !important;
+      box-shadow: 0 0 60px rgba(56, 189, 248, 0.9), 0 0 120px rgba(56, 189, 248, 0.5), 0 0 20px rgba(255, 255, 255, 0.4) inset, 0 25px 50px rgba(0, 0, 0, 0.95) !important;
     }
     .parity-card-t2.tier-current-selected {
-      border: 3.5px solid #fbbf24 !important;
-      box-shadow: 0 0 50px rgba(251, 191, 36, 0.85), 0 0 100px rgba(251, 191, 36, 0.45), 0 20px 45px rgba(0, 0, 0, 0.9) !important;
+      border: 4px solid #fbbf24 !important;
+      background: linear-gradient(160deg, rgba(251, 191, 36, 0.24) 0%, rgba(217, 119, 6, 0.14) 35%, rgba(18, 14, 8, 0.98) 100%) !important;
+      box-shadow: 0 0 60px rgba(251, 191, 36, 0.95), 0 0 120px rgba(251, 191, 36, 0.55), 0 0 20px rgba(255, 255, 255, 0.4) inset, 0 25px 50px rgba(0, 0, 0, 0.95) !important;
     }
     .parity-card-t3.tier-current-selected {
-      border: 3.5px solid #34d399 !important;
-      box-shadow: 0 0 50px rgba(52, 211, 153, 0.85), 0 0 100px rgba(52, 211, 153, 0.45), 0 20px 45px rgba(0, 0, 0, 0.9) !important;
+      border: 4px solid #34d399 !important;
+      background: linear-gradient(160deg, rgba(52, 211, 153, 0.24) 0%, rgba(16, 185, 129, 0.14) 35%, rgba(6, 20, 15, 0.98) 100%) !important;
+      box-shadow: 0 0 60px rgba(52, 211, 153, 0.95), 0 0 120px rgba(52, 211, 153, 0.55), 0 0 20px rgba(255, 255, 255, 0.4) inset, 0 25px 50px rgba(0, 0, 0, 0.95) !important;
     }
     .parity-card-t4.tier-current-selected {
-      border: 3.5px solid #f472b6 !important;
-      box-shadow: 0 0 50px rgba(244, 114, 182, 0.85), 0 0 100px rgba(244, 114, 182, 0.45), 0 20px 45px rgba(0, 0, 0, 0.9) !important;
+      border: 4px solid #f472b6 !important;
+      background: linear-gradient(160deg, rgba(244, 114, 182, 0.24) 0%, rgba(236, 72, 153, 0.14) 35%, rgba(24, 8, 18, 0.98) 100%) !important;
+      box-shadow: 0 0 60px rgba(244, 114, 182, 0.95), 0 0 120px rgba(244, 114, 182, 0.55), 0 0 20px rgba(255, 255, 255, 0.4) inset, 0 25px 50px rgba(0, 0, 0, 0.95) !important;
     }
     .parity-card-t5.tier-current-selected {
-      border: 3.5px solid #c084fc !important;
-      box-shadow: 0 0 50px rgba(192, 132, 252, 0.85), 0 0 100px rgba(192, 132, 252, 0.45), 0 20px 45px rgba(0, 0, 0, 0.9) !important;
+      border: 4px solid #c084fc !important;
+      background: linear-gradient(160deg, rgba(192, 132, 252, 0.24) 0%, rgba(168, 85, 247, 0.14) 35%, rgba(18, 8, 28, 0.98) 100%) !important;
+      box-shadow: 0 0 60px rgba(192, 132, 252, 0.95), 0 0 120px rgba(192, 132, 252, 0.55), 0 0 20px rgba(255, 255, 255, 0.4) inset, 0 25px 50px rgba(0, 0, 0, 0.95) !important;
     }
     .parity-card-t6.tier-current-selected {
-      border: 3.5px solid #00f0ff !important;
-      box-shadow: 0 0 55px rgba(0, 240, 255, 0.9), 0 0 110px rgba(0, 240, 255, 0.5), 0 20px 45px rgba(0, 0, 0, 0.9) !important;
+      border: 4px solid #00f0ff !important;
+      background: linear-gradient(160deg, rgba(0, 240, 255, 0.25) 0%, rgba(6, 182, 212, 0.14) 35%, rgba(4, 18, 26, 0.98) 100%) !important;
+      box-shadow: 0 0 65px rgba(0, 240, 255, 1), 0 0 130px rgba(0, 240, 255, 0.6), 0 0 25px rgba(255, 255, 255, 0.5) inset, 0 25px 50px rgba(0, 0, 0, 0.95) !important;
     }
     .tier-current-selected-badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      padding: 0.35rem 0.85rem;
+      gap: 0.5rem;
+      padding: 0.45rem 1.1rem;
       border-radius: 999px;
       font-family: var(--font-mono, monospace);
-      font-size: 0.76rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      margin-bottom: 0.75rem;
-      animation: pulseGlow 2s infinite ease-in-out;
+      margin-bottom: 0.9rem;
+      box-shadow: 0 0 25px currentColor;
+      animation: pulseGlow 1.8s infinite ease-in-out;
     }
     @keyframes pulseGlow {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.85; transform: scale(1.03); }
+      0%, 100% { opacity: 1; transform: scale(1); filter: brightness(1.1); }
+      50% { opacity: 0.9; transform: scale(1.05); filter: brightness(1.35); }
+    }
+    /* Vibrant active state on quick-select parity buttons */
+    .calc-tier-btn.active {
+      transform: translateY(-2px) scale(1.02);
+      border-width: 2.5px !important;
+      box-shadow: 0 0 24px rgba(251, 191, 36, 0.65), 0 0 8px #fbbf24 inset !important;
     }
   </style>
 
@@ -646,6 +659,217 @@
     </section>
 
     <!-- PARITY PRICING CALCULATOR SECTION (TOP OF PAGE WIDGET) -->
+    <section class="reveal parity-tiers-section" id="parity-tiers">
+      <div style="text-align:center;max-width:880px;margin:0 auto;">
+        <p class="section-label">// GLOBAL ACCESS GUARANTEE · 6 PARITY TIERS</p>
+        <h2 class="section-title">The Six Global Equity &amp; <span class="accent-cyan">Parity Tiers Explained</span>
+        </h2>
+        <p class="section-sub" style="margin:0.5rem auto 0 auto;line-height:1.75;font-size:calc(0.98rem + 3px);">
+          Our engagement rates are calibrated across six distinct economic classifications. Geographical origin,
+          academic mandate, or early venture stage should never preclude ambitious engineering teams from deploying
+          frontier Generative AI agents and local LLM pipelines.
+        </p>
+      </div>
+      <div class="parity-tiers-grid">
+        <!-- ROW 1 / CARD 1: Tier 1 Developed Nations -->
+        <div class="parity-tier-card parity-card-t1">
+          <div>
+            <span class="parity-badge"
+              style="background:rgba(56, 189, 248, 0.18);border:1px solid #38bdf8;color:#38bdf8;">
+              TIER 01 · HIGH-INCOME
+            </span>
+            <h3 class="parity-title">Tier 1: High-Income</h3>
+            <p class="parity-subtitle">World Bank High-Income Economies & Global Enterprise Hubs</p>
+            <div class="parity-rate-box">
+              <div class="parity-rate-val" style="color:#38bdf8;text-shadow:0 0 16px rgba(56,189,248,0.4);">
+                100% Standard Rate
+              </div>
+              <div class="parity-rate-sub" style="color:#7dd3fc;">
+                0% DISCOUNT · BASELINE MULTIPLIER: 1.0X
+              </div>
+            </div>
+            <div class="parity-section-title">Examples of Examples of Qualifying Geographies &amp; Cohorts</div>
+            <div class="parity-countries-tag">
+              <strong>World Bank High-Income Economies:</strong> United States, Canada, United Kingdom, Germany, France,
+              Poland, Czech Republic, Hungary, Greece, Romania, Japan, South Korea, Singapore, Australia, New Zealand,
+              Chile, UAE,
+              Saudi Arabia, Switzerland, Netherlands, Sweden, Norway, Denmark, Ireland, Austria, Belgium, Finland
+            </div>
+          </div>
+          <button class="btn btn-glow-cyan" onclick="selectTierAndScroll(1)"
+            style="width:100%;justify-content:center;padding:0.85rem 1rem;font-size:calc(0.86rem + 3px);font-weight:800;border:2px solid #38bdf8;"
+            type="button">
+            Calculate Tier 1 Investment ↓
+          </button>
+        </div>
+        <!-- ROW 1 / CARD 2: Tier 2 Upper-Middle-Income Economies -->
+        <div class="parity-tier-card parity-card-t2">
+          <div>
+            <span class="parity-badge"
+              style="background:rgba(251, 191, 36, 0.18);border:1px solid #fbbf24;color:#fbbf24;">
+              TIER 02 · UPPER-MIDDLE-INCOME ECONOMIES
+            </span>
+            <h3 class="parity-title">Upper-Middle-Income Economies</h3>
+            <p class="parity-subtitle">World Bank Upper-Middle-Income Digital Ecosystems & Emerging Tech Hubs</p>
+            <div class="parity-rate-box">
+              <div class="parity-rate-val" style="color:#fbbf24;text-shadow:0 0 16px rgba(251,191,36,0.4);">
+                25% Parity Discount
+              </div>
+              <div class="parity-rate-sub" style="color:#fde68a;">
+                75% BASE RATE · BASELINE MULTIPLIER: 0.75X
+              </div>
+            </div>
+            <div class="parity-section-title">Examples of Examples of Qualifying Geographies &amp; Cohorts</div>
+            <div class="parity-countries-tag">
+              <strong>Examples of Qualifying Geographies:</strong> Brazil, Mexico, Colombia, Argentina, Peru, Ecuador,
+              Guatemala,
+              Türkiye, Malaysia, Thailand, Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka
+            </div>
+          </div>
+          <button class="btn btn-glow-gold" onclick="selectTierAndScroll(2)"
+            style="width:100%;justify-content:center;padding:0.85rem 1rem;font-size:calc(0.86rem + 3px);font-weight:800;border:2px solid #fbbf24;"
+            type="button">
+            Calculate Tier 2 Investment ↓
+          </button>
+        </div>
+        <!-- ROW 1 / CARD 3: Tier 3 Lower-Middle & Low-Income Economies -->
+        <div class="parity-tier-card parity-card-t3">
+          <div>
+            <span class="parity-badge"
+              style="background:rgba(52, 211, 153, 0.18);border:1px solid #34d399;color:#34d399;">
+              TIER 03 · LOWER-MIDDLE &amp; LOW-INCOME
+            </span>
+            <h3 class="parity-title">Lower-Middle &amp; Low-Income Economies</h3>
+            <p class="parity-subtitle">World Bank Lower-Middle & Low-Income Tech Ecosystems</p>
+            <div class="parity-rate-box">
+              <div class="parity-rate-val" style="color:#34d399;text-shadow:0 0 16px rgba(52,211,153,0.4);">
+                50% Parity Discount
+              </div>
+              <div class="parity-rate-sub" style="color:#a7f3d0;">
+                50% BASE RATE · BASELINE MULTIPLIER: 0.50X
+              </div>
+            </div>
+            <div class="parity-section-title">Examples of Examples of Qualifying Geographies &amp; Cohorts</div>
+            <div class="parity-countries-tag">
+              <strong>Examples of Qualifying Geographies:</strong> India, Bangladesh, Pakistan, Nepal, Bhutan, Kenya,
+              Nigeria,
+              Ghana, Egypt, Morocco, Tanzania, Bolivia, Cambodia, Laos, Myanmar, Uzbekistan, Kyrgyzstan, Ethiopia,
+              Uganda, Rwanda
+            </div>
+          </div>
+          <button class="btn btn-glow-emerald" onclick="selectTierAndScroll(3)"
+            style="width:100%;justify-content:center;padding:0.85rem 1rem;font-size:calc(0.86rem + 3px);font-weight:800;border:2px solid #34d399;"
+            type="button">
+            Calculate Tier 3 Investment ↓
+          </button>
+        </div>
+        <!-- ROW 2 / CARD 4: Tier 4 Early-Stage Startups -->
+        <div class="parity-tier-card parity-card-t4 tier-current-selected">
+          <div>
+            <div class="tier-current-selected-badge" style="background:rgba(244,114,182,0.22);border:1.5px solid #f472b6;color:#f472b6;">CURRENTLY VIEWING THIS TIER</div>
+            <span class="parity-badge"
+              style="background:rgba(244, 114, 182, 0.18);border:1px solid #f472b6;color:#f472b6;">
+              TIER 04 · EARLY-STAGE STARTUPS
+            </span>
+            <h3 class="parity-title">Early-Stage Tech Startups</h3>
+            <p class="parity-subtitle">Global Pre-Seed, Seed & Bootstrapped Software Builders</p>
+            <div class="parity-rate-box">
+              <div class="parity-rate-val" style="color:#f472b6;text-shadow:0 0 16px rgba(244,114,182,0.4);">
+                50% Startup Discount
+              </div>
+              <div class="parity-rate-sub" style="color:#fbcfe8;">
+                FLAT 50% OFF ALL PACKAGES · MULTIPLIER: 0.50X
+              </div>
+            </div>
+            <div class="parity-section-title">Qualifying Organizations &amp; Cohorts</div>
+            <div class="parity-countries-tag">
+              <strong>Pre-Seed &amp; Seed Startups:</strong> Tech startups with under $1M USD cumulative external
+              funding<br />
+              <strong>Bootstrapped Founders:</strong> Self-funded software companies seeking product-market fit<br />
+              <strong>Accelerators &amp; Incubators:</strong> Cohort teams in Y Combinator, Techstars, Antler, 500
+              Global, Entrepreneur First, and regional angel syndicates
+            </div>
+          </div>
+          <button class="btn btn-glow-gold" onclick="selectTierAndScroll(4)"
+            style="width:100%;justify-content:center;padding:0.85rem 1rem;font-size:calc(0.86rem + 3px);font-weight:800;border:2px solid #f472b6;color:#f472b6;"
+            type="button">
+            Calculate Tier 4 Investment ↓
+          </button>
+        </div>
+        <!-- ROW 2 / CARD 5: Tier 5 Non-Profits & Academia -->
+        <div class="parity-tier-card parity-card-t5">
+          <div>
+            <span class="parity-badge"
+              style="background:rgba(192, 132, 252, 0.18);border:1px solid #c084fc;color:#c084fc;">
+              TIER 05 · ACADEMIA &amp; NON-PROFITS
+            </span>
+            <h3 class="parity-title">Universities, Labs &amp; Non-Profits</h3>
+            <p class="parity-subtitle">Higher Education, Research Labs & Registered Non-Profits (including US 501(c)(3))</p>
+            <div class="parity-rate-box">
+              <div class="parity-rate-val" style="color:#c084fc;text-shadow:0 0 16px rgba(192,132,252,0.4);">
+                75% Parity Discount
+              </div>
+              <div class="parity-rate-sub" style="color:#e9d5ff;">
+                25% BASE RATE · BASELINE MULTIPLIER: 0.25X
+              </div>
+            </div>
+            <div class="parity-section-title">Qualifying Organizations &amp; Cohorts</div>
+            <div class="parity-countries-tag">
+              <strong>Higher Education:</strong> Accredited universities, colleges, faculty labs, student AI
+              societies<br />
+              <strong>Scientific Research:</strong> Public research institutions, post-doctoral labs, clinical
+              centers<br />
+              <strong>Charities &amp; Non-Profits:</strong> Registered charities and non-profits, including US 501(c)(3)
+              organizations<br />
+              <strong>Civic Open Source:</strong> International NGOs, environmental groups, open civic foundations
+            </div>
+          </div>
+          <button class="btn btn-glow-violet" onclick="selectTierAndScroll(5)"
+            style="width:100%;justify-content:center;padding:0.85rem 1rem;font-size:calc(0.86rem + 3px);font-weight:800;border:2px solid #c084fc;"
+            type="button">
+            Calculate Tier 5 Investment ↓
+          </button>
+        </div>
+        <!-- ROW 2 / CARD 6: Tier 6 Crisis-Affected & Under-Resourced Regions -->
+        <div class="parity-tier-card parity-card-t6">
+          <div>
+            <span class="parity-badge"
+              style="background:rgba(0, 240, 255, 0.2);border:1px solid #00f0ff;color:#00f0ff;">
+              TIER 06 · CRISIS-AFFECTED &amp; UNDER-RESOURCED
+            </span>
+            <h3 class="parity-title">Crisis-Affected &amp; Under-Resourced Regions</h3>
+            <p class="parity-subtitle">Crisis-Affected Regions, Displaced Builders & Under-Resourced Tech Collectives</p>
+            <div class="parity-rate-box">
+              <div class="parity-rate-val" style="color:#00f0ff;text-shadow:0 0 16px rgba(0,240,255,0.45);">
+                Custom Subsidized Quotes
+              </div>
+              <div class="parity-rate-sub" style="color:#7dd3fc;">
+                MICRO-RATES &amp; UP TO 90%+ SUBSIDIZED RELIEF
+              </div>
+            </div>
+            <div class="parity-section-title">Qualifying Beneficiaries &amp; Cohorts</div>
+            <div class="parity-countries-tag">
+              <strong>Crisis &amp; Conflict Regions:</strong> Teams operating in post-conflict zones or humanitarian
+              crises<br />
+              <strong>Hyperinflation Economies:</strong> Environments with currency collapse or blocked forex
+              access<br />
+              <strong>UN LDCs:</strong> Builders in the most vulnerable UN Least Developed Countries<br />
+              <strong>Grassroots Collectives:</strong> Community tech initiatives serving marginalized youth &amp;
+              builders
+            </div>
+          </div>
+          <button class="btn btn-glow-cyan" onclick="selectTierAndScroll(6)"
+            style="width:100%;justify-content:center;padding:0.85rem 1rem;font-size:calc(0.86rem + 3px);font-weight:800;border:2px solid #00f0ff;"
+            type="button">
+            Calculate Tier 6 Investment ↓
+          </button>
+        </div>
+      </div>
+      <p class="parity-classification-note"
+        style="text-align:center;font-size:0.85rem;color:var(--text-muted);margin-top:1.5rem;">Classification: World
+        Bank FY2027, effective 1 July 2026.</p>
+    </section>
+
     <section class="reveal parity-calc-section" id="parity-calculator">
       <div class="parity-calc-card">
         <div style="text-align:center;max-width:860px;margin:0 auto 1.5rem auto;">
@@ -703,7 +927,7 @@
                   <span>Tier 3: Lower-Middle</span>
                   <span class="tier-tag">50% Rate (50% Off)</span>
                 </button>
-                <button class="calc-tier-btn active" data-tier="4" type="button">
+                <button class="calc-tier-btn active" data-tier="4" type="button" style="border-color:#f472b6 !important;color:#f472b6 !important;background:rgba(244, 114, 182, 0.12) !important;box-shadow:0 0 22px rgba(244, 114, 182, 0.45) !important;font-weight:900;">
                   <span>Tier 4: Startups</span>
                   <span class="tier-tag">50% Flat Discount</span>
                 </button>
@@ -956,120 +1180,6 @@
     </section>
 
     <!-- DEDICATED PERSONAL AI TRANSFORMATION SECTION -->
-    <section class="reveal" id="personal-ai-section" style="max-width:1380px;margin:3.5rem auto;padding:0 1.5rem;">
-      <div
-        style="background:radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.12) 0%, rgba(12, 17, 29, 0.98) 100%);border:2px solid var(--gold);border-radius:var(--radius-lg);padding:clamp(2.5rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 3rem);box-shadow:0 0 35px rgba(251,191,36,0.18), 0 10px 40px rgba(0,0,0,0.8);">
-        <div style="text-align:center;max-width:920px;margin:0 auto 2.5rem;">
-          <span
-            style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 1.1rem;border-radius:999px;background:rgba(251, 191, 36, 0.15);border:1px solid rgba(251, 191, 36, 0.45);color:var(--gold);font-family:var(--font-mono);font-size:0.85rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:1rem;">
-            1-ON-1 PERSONAL ACCELERATION · ONE PERSON ONLY
-          </span>
-          <h2
-            style="font-family:var(--font-display);font-size:clamp(1.75rem, 3.5vw, 2.5rem);font-weight:900;color:var(--text-primary);margin-bottom:0.85rem;">
-            Personal Training: <span class="accent-gold">$1,500 USD for 60 Days</span> (30d Training + 30d Guidance)
-          </h2>
-          <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.75;">
-            Personal Training in Tier 4 costs $1,500 USD for 60 days total: 30 days of intensive live instruction (4 hours per day) plus 30 days of guidance, Q&amp;A and written guides. Delivered as 60 days over 2 months with Saturday and Sunday as holidays, 4 hours per day. Strictly for one person only (private
-            1-on-1 acceleration). Clients are encouraged to choose services relevant to their work or interests.
-          </p>
-        </div>
-
-        <div
-          style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;margin-bottom:2.5rem;">
-          <div
-            style="background:rgba(255,255,255,0.03);border:1px solid rgba(255, 255, 255, 0.1);border-radius:12px;padding:1.5rem;">
-            <div style="font-size:1.8rem;margin-bottom:0.6rem;"></div>
-            <h3 style="color:var(--gold);font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">$1,500 USD Tier 4 Rate</h3>
-            <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
-              Private 1-on-1 acceleration at $3,000 USD in Tier 1 with full 195-country Purchasing Power Parity support
-              down to subsidized relief in Tier 6.
-            </p>
-          </div>
-          <div
-            style="background:rgba(255,255,255,0.03);border:1px solid rgba(255, 255, 255, 0.1);border-radius:12px;padding:1.5rem;">
-            <div style="font-size:1.8rem;margin-bottom:0.6rem;"></div>
-            <h3 style="color:var(--gold);font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">30 Days Live Training
-            </h3>
-            <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
-              Days 1 to 30: hands-on working proficiency in your chosen AI disciplines (local LLMs, agents, automations,
-              Claude, Gemini) set up on your machine (30 working days over 6 weeks, 4 hours per day).
-            </p>
-          </div>
-          <div
-            style="background:rgba(255,255,255,0.03);border:1px solid rgba(255, 255, 255, 0.1);border-radius:12px;padding:1.5rem;">
-            <div style="font-size:1.8rem;margin-bottom:0.6rem;"></div>
-            <h3 style="color:var(--gold);font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">30 Days Dedicated Support (bash Charge)</h3>
-            <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
-              Days 31 to 60: dedicated operational support, daily questions and doubts clarification, guidance,
-              Q&amp;A and written guides tailored to your work (30 working days, 4 hours per day, included at zero charge / bash USD).
-            </p>
-          </div>
-        </div>
-
-        <div
-          style="background:rgba(0,0,0,0.4);border:1px solid rgba(255, 255, 255, 0.1);border-radius:12px;padding:1.5rem;margin-bottom:2.25rem;">
-          <h4
-            style="color:var(--gold);font-family:var(--font-mono);font-size:0.95rem;text-transform:uppercase;margin-bottom:1rem;text-align:center;">
-            Personal Training Parity Rates (195 Nations Supported):
-          </h4>
-          <div
-            style="display:grid;grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));gap:1rem;text-align:center;">
-            <div
-              style="padding:0.75rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(56,189,248,0.3);">
-              <div style="font-size:0.75rem;color:#7dd3fc;font-family:var(--font-mono);">TIER 1 (HIGH-INCOME)</div>
-              <div style="font-size:1.25rem;font-weight:800;color:#38bdf8;margin-top:0.25rem;">$3,000 USD</div>
-            </div>
-            <div
-              style="padding:0.75rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255, 255, 255, 0.1);">
-              <div style="font-size:0.75rem;color:#fde68a;font-family:var(--font-mono);">TIER 2 (UPPER-MIDDLE-INCOME)
-              </div>
-              <div style="font-size:1.25rem;font-weight:800;color:#fbbf24;margin-top:0.25rem;">$2,250 USD</div>
-            </div>
-            <div
-              style="padding:0.75rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(52,211,153,0.3);">
-              <div style="font-size:0.75rem;color:#a7f3d0;font-family:var(--font-mono);">TIER 3 (LOWER-MIDDLE &amp;
-                LOW-INCOME)</div>
-              <div style="font-size:1.25rem;font-weight:800;color:#34d399;margin-top:0.25rem;">$1,500 USD</div>
-            </div>
-            <div
-              style="padding:0.75rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(244,114,182,0.3);">
-              <div style="font-size:0.75rem;color:#fbcfe8;font-family:var(--font-mono);">TIER 4 (EARLY-STAGE STARTUPS)
-              </div>
-              <div style="font-size:1.25rem;font-weight:800;color:#f472b6;margin-top:0.25rem;">$1,500 USD</div>
-            </div>
-            <div
-              style="padding:0.75rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(192,132,252,0.3);">
-              <div style="font-size:0.75rem;color:#e9d5ff;font-family:var(--font-mono);">TIER 5 (ACADEMIA &amp;
-                NON-PROFITS)</div>
-              <div style="font-size:1.25rem;font-weight:800;color:#c084fc;margin-top:0.25rem;">$750 USD</div>
-            </div>
-            <div
-              style="padding:0.75rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(0,240,255,0.3);">
-              <div style="font-size:0.75rem;color:#7dd3fc;font-family:var(--font-mono);">TIER 6 (SUBSIDIZED)</div>
-              <div style="font-size:1.25rem;font-weight:800;color:#00f0ff;margin-top:0.25rem;">Custom</div>
-            </div>
-          </div>
-        </div>
-
-        <div style="text-align:center;margin-top:2rem;">
-          <div class="gold-highlight-container">
-            <a class="btn btn-commission" href="../personal-ai-training.html"
-              style="padding:0.95rem 1.85rem;font-size:0.95rem;">
-              Explore Personal AI Transformation →
-            </a>
-            <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank"
-              style="padding:0.95rem 1.85rem;font-size:0.95rem;">
-              Book a free intro call on LinkedIn ↗
-            </a>
-            <a class="btn btn-commission" href="../contact.html?service=personal-ai-transformation"
-              style="padding:0.95rem 1.85rem;font-size:0.95rem;">
-              Book Your Personal Sprint →
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- 12 INDIVIDUAL SERVICES & A LA CARTE SELECTION (FIT FOUR IN A ROW) -->
     <section class="reveal" id="service-rates" style="max-width:1380px;margin:3.5rem auto;padding:0 1.5rem;">
       <div style="text-align:center;max-width:880px;margin:0 auto 2rem auto;">
@@ -1483,6 +1593,140 @@
           </div>
         </div>
 
+
+
+        <!-- 13: Claude Research Training -->
+        <div class="price-card-faq border-cyan">
+          <div>
+            <div
+              style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.25rem;">
+              SERVICE 13 · CLAUDE RESEARCH</div>
+            <h3
+              style="color:var(--text-primary);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;line-height:1.35;">
+              <a href="../business-services/business-service-claude-research-training.html"
+                style="color:var(--text-primary);text-decoration:none;">Claude Research Training</a>
+            </h3>
+            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.45;margin-bottom:0.75rem;">Train enterprise research teams to run citation-verified, multi-agent Claude research pipelines with MCP tool grounding and evaluation harnesses.</p>
+          </div>
+          <div>
+            <div class="service-rate-box">
+              <div class="service-rate-row">
+                <span style="color:var(--gold);font-weight:700;">Individual (1-on-1):</span>
+                <span class="service-rate-val svc-indiv-price" data-base="300">$150 USD</span>
+              </div>
+              <div class="service-rate-tiers svc-indiv-tiers">Tier 4 Rate: $150 USD</div>
+              <div class="service-rate-row" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.45rem;">
+                <span style="color:var(--cyan);font-weight:700;">Business (≤10 seats):</span>
+                <span class="service-rate-val svc-biz-price" data-base="300">$150 USD</span>
+              </div>
+              <div class="service-rate-tiers svc-biz-tiers">Tier 4 Rate: $150 USD</div>
+            </div>
+            <div class="service-coverage-label">5 Days Training + 5 Days Support</div>
+            <a class="btn btn-outline" href="../business-services/business-service-claude-research-training.html"
+              style="width:100%;justify-content:center;padding:0.65rem 0.85rem;font-size:0.88rem;font-weight:700;">Explore
+              Service →</a>
+          </div>
+        </div>
+
+        <!-- 14: Gemini Research Training -->
+        <div class="price-card-faq border-gold">
+          <div>
+            <div
+              style="font-family:var(--font-mono);font-size:0.75rem;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.25rem;">
+              SERVICE 14 · GEMINI RESEARCH</div>
+            <h3
+              style="color:var(--text-primary);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;line-height:1.35;">
+              <a href="../business-services/business-service-gemini-research-training.html"
+                style="color:var(--text-primary);text-decoration:none;">Gemini Research Training</a>
+            </h3>
+            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.45;margin-bottom:0.75rem;">Equip enterprise analysts to synthesize million-token corpora with Gemini Deep Research, context caching, and deterministic citation verification.</p>
+          </div>
+          <div>
+            <div class="service-rate-box">
+              <div class="service-rate-row">
+                <span style="color:var(--gold);font-weight:700;">Individual (1-on-1):</span>
+                <span class="service-rate-val svc-indiv-price" data-base="300">$150 USD</span>
+              </div>
+              <div class="service-rate-tiers svc-indiv-tiers">Tier 4 Rate: $150 USD</div>
+              <div class="service-rate-row" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.45rem;">
+                <span style="color:var(--cyan);font-weight:700;">Business (≤10 seats):</span>
+                <span class="service-rate-val svc-biz-price" data-base="300">$150 USD</span>
+              </div>
+              <div class="service-rate-tiers svc-biz-tiers">Tier 4 Rate: $150 USD</div>
+            </div>
+            <div class="service-coverage-label">5 Days Training + 5 Days Support</div>
+            <a class="btn btn-outline" href="../business-services/business-service-gemini-research-training.html"
+              style="width:100%;justify-content:center;padding:0.65rem 0.85rem;font-size:0.88rem;font-weight:700;">Explore
+              Service →</a>
+          </div>
+        </div>
+
+        <!-- 15: Knowledge Graphs -->
+        <div class="price-card-faq border-cyan">
+          <div>
+            <div
+              style="font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.25rem;">
+              SERVICE 15 · ENTERPRISE GRAPHRAG</div>
+            <h3
+              style="color:var(--text-primary);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;line-height:1.35;">
+              <a href="../business-services/business-service-knowledge-graphs.html"
+                style="color:var(--text-primary);text-decoration:none;">Knowledge Graphs</a>
+            </h3>
+            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.45;margin-bottom:0.75rem;">Architect enterprise GraphRAG pipelines with Neo4j, ontology governance, entity resolution, and verifiable multi-hop reasoning.</p>
+          </div>
+          <div>
+            <div class="service-rate-box">
+              <div class="service-rate-row">
+                <span style="color:var(--gold);font-weight:700;">Individual (1-on-1):</span>
+                <span class="service-rate-val svc-indiv-price" data-base="300">$150 USD</span>
+              </div>
+              <div class="service-rate-tiers svc-indiv-tiers">Tier 4 Rate: $150 USD</div>
+              <div class="service-rate-row" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.45rem;">
+                <span style="color:var(--cyan);font-weight:700;">Business (≤10 seats):</span>
+                <span class="service-rate-val svc-biz-price" data-base="300">$150 USD</span>
+              </div>
+              <div class="service-rate-tiers svc-biz-tiers">Tier 4 Rate: $150 USD</div>
+            </div>
+            <div class="service-coverage-label">5 Days Training + 5 Days Support</div>
+            <a class="btn btn-outline" href="../business-services/business-service-knowledge-graphs.html"
+              style="width:100%;justify-content:center;padding:0.65rem 0.85rem;font-size:0.88rem;font-weight:700;">Explore
+              Service →</a>
+          </div>
+        </div>
+
+        <!-- 16: Local AI for Sensitive Data -->
+        <div class="price-card-faq border-gold">
+          <div>
+            <div
+              style="font-family:var(--font-mono);font-size:0.75rem;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.25rem;">
+              SERVICE 16 · ZERO-EGRESS AI</div>
+            <h3
+              style="color:var(--text-primary);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;line-height:1.35;">
+              <a href="../business-services/business-service-local-ai-for-sensitive-data.html"
+                style="color:var(--text-primary);text-decoration:none;">Local AI for Sensitive Data</a>
+            </h3>
+            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.45;margin-bottom:0.75rem;">Deploy zero-egress, air-gapped local LLM and PII redaction infrastructure for regulated healthcare, legal, and financial datasets.</p>
+          </div>
+          <div>
+            <div class="service-rate-box">
+              <div class="service-rate-row">
+                <span style="color:var(--gold);font-weight:700;">Individual (1-on-1):</span>
+                <span class="service-rate-val svc-indiv-price" data-base="300">$150 USD</span>
+              </div>
+              <div class="service-rate-tiers svc-indiv-tiers">Tier 4 Rate: $150 USD</div>
+              <div class="service-rate-row" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.45rem;">
+                <span style="color:var(--cyan);font-weight:700;">Business (≤10 seats):</span>
+                <span class="service-rate-val svc-biz-price" data-base="300">$150 USD</span>
+              </div>
+              <div class="service-rate-tiers svc-biz-tiers">Tier 4 Rate: $150 USD</div>
+            </div>
+            <div class="service-coverage-label">5 Days Training + 5 Days Support</div>
+            <a class="btn btn-outline" href="../business-services/business-service-local-ai-for-sensitive-data.html"
+              style="width:100%;justify-content:center;padding:0.65rem 0.85rem;font-size:0.88rem;font-weight:700;">Explore
+              Service →</a>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -1544,216 +1788,7 @@
     </section>
 
     <!-- 6 PARITY PRICING TIERS EXPLAINED (3 CARDS PER ROW ON DESKTOP) -->
-    <section class="reveal parity-tiers-section" id="parity-tiers">
-      <div style="text-align:center;max-width:880px;margin:0 auto;">
-        <p class="section-label">// GLOBAL ACCESS GUARANTEE · 6 PARITY TIERS</p>
-        <h2 class="section-title">The Six Global Equity &amp; <span class="accent-cyan">Parity Tiers Explained</span>
-        </h2>
-        <p class="section-sub" style="margin:0.5rem auto 0 auto;line-height:1.75;font-size:calc(0.98rem + 3px);">
-          Our engagement rates are calibrated across six distinct economic classifications. Geographical origin,
-          academic mandate, or early venture stage should never preclude ambitious engineering teams from deploying
-          frontier Generative AI agents and local LLM pipelines.
-        </p>
-      </div>
-      <div class="parity-tiers-grid">
-        <!-- ROW 1 / CARD 1: Tier 1 Developed Nations -->
-        <div class="parity-tier-card parity-card-t1">
-          <div>
-            <span class="parity-badge"
-              style="background:rgba(56, 189, 248, 0.18);border:1px solid #38bdf8;color:#38bdf8;">
-              TIER 01 · HIGH-INCOME
-            </span>
-            <h3 class="parity-title">Tier 1: High-Income</h3>
-            <p class="parity-subtitle">World Bank High-Income Economies & Global Enterprise Hubs</p>
-            <div class="parity-rate-box">
-              <div class="parity-rate-val" style="color:#38bdf8;text-shadow:0 0 16px rgba(56,189,248,0.4);">
-                100% Standard Rate
-              </div>
-              <div class="parity-rate-sub" style="color:#7dd3fc;">
-                0% DISCOUNT · BASELINE MULTIPLIER: 1.0X
-              </div>
-            </div>
-            <div class="parity-section-title">Examples of Examples of Qualifying Geographies &amp; Cohorts</div>
-            <div class="parity-countries-tag">
-              <strong>World Bank High-Income Economies:</strong> United States, Canada, United Kingdom, Germany, France,
-              Poland, Czech Republic, Hungary, Greece, Romania, Japan, South Korea, Singapore, Australia, New Zealand,
-              Chile, UAE,
-              Saudi Arabia, Switzerland, Netherlands, Sweden, Norway, Denmark, Ireland, Austria, Belgium, Finland
-            </div>
-          </div>
-          <button class="btn btn-glow-cyan" onclick="selectTierAndScroll(1)"
-            style="width:100%;justify-content:center;padding:0.85rem 1rem;font-size:calc(0.86rem + 3px);font-weight:800;border:2px solid #38bdf8;"
-            type="button">
-            Calculate Tier 1 Investment ↓
-          </button>
-        </div>
-        <!-- ROW 1 / CARD 2: Tier 2 Upper-Middle-Income Economies -->
-        <div class="parity-tier-card parity-card-t2">
-          <div>
-            <span class="parity-badge"
-              style="background:rgba(251, 191, 36, 0.18);border:1px solid #fbbf24;color:#fbbf24;">
-              TIER 02 · UPPER-MIDDLE-INCOME ECONOMIES
-            </span>
-            <h3 class="parity-title">Upper-Middle-Income Economies</h3>
-            <p class="parity-subtitle">World Bank Upper-Middle-Income Digital Ecosystems & Emerging Tech Hubs</p>
-            <div class="parity-rate-box">
-              <div class="parity-rate-val" style="color:#fbbf24;text-shadow:0 0 16px rgba(251,191,36,0.4);">
-                25% Parity Discount
-              </div>
-              <div class="parity-rate-sub" style="color:#fde68a;">
-                75% BASE RATE · BASELINE MULTIPLIER: 0.75X
-              </div>
-            </div>
-            <div class="parity-section-title">Examples of Examples of Qualifying Geographies &amp; Cohorts</div>
-            <div class="parity-countries-tag">
-              <strong>Examples of Qualifying Geographies:</strong> Brazil, Mexico, Colombia, Argentina, Peru, Ecuador,
-              Guatemala,
-              Türkiye, Malaysia, Thailand, Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka
-            </div>
-          </div>
-          <button class="btn btn-glow-gold" onclick="selectTierAndScroll(2)"
-            style="width:100%;justify-content:center;padding:0.85rem 1rem;font-size:calc(0.86rem + 3px);font-weight:800;border:2px solid #fbbf24;"
-            type="button">
-            Calculate Tier 2 Investment ↓
-          </button>
-        </div>
-        <!-- ROW 1 / CARD 3: Tier 3 Lower-Middle & Low-Income Economies -->
-        <div class="parity-tier-card parity-card-t3">
-          <div>
-            <span class="parity-badge"
-              style="background:rgba(52, 211, 153, 0.18);border:1px solid #34d399;color:#34d399;">
-              TIER 03 · LOWER-MIDDLE &amp; LOW-INCOME
-            </span>
-            <h3 class="parity-title">Lower-Middle &amp; Low-Income Economies</h3>
-            <p class="parity-subtitle">World Bank Lower-Middle & Low-Income Tech Ecosystems</p>
-            <div class="parity-rate-box">
-              <div class="parity-rate-val" style="color:#34d399;text-shadow:0 0 16px rgba(52,211,153,0.4);">
-                50% Parity Discount
-              </div>
-              <div class="parity-rate-sub" style="color:#a7f3d0;">
-                50% BASE RATE · BASELINE MULTIPLIER: 0.50X
-              </div>
-            </div>
-            <div class="parity-section-title">Examples of Examples of Qualifying Geographies &amp; Cohorts</div>
-            <div class="parity-countries-tag">
-              <strong>Examples of Qualifying Geographies:</strong> India, Bangladesh, Pakistan, Nepal, Bhutan, Kenya,
-              Nigeria,
-              Ghana, Egypt, Morocco, Tanzania, Bolivia, Cambodia, Laos, Myanmar, Uzbekistan, Kyrgyzstan, Ethiopia,
-              Uganda, Rwanda
-            </div>
-          </div>
-          <button class="btn btn-glow-emerald" onclick="selectTierAndScroll(3)"
-            style="width:100%;justify-content:center;padding:0.85rem 1rem;font-size:calc(0.86rem + 3px);font-weight:800;border:2px solid #34d399;"
-            type="button">
-            Calculate Tier 3 Investment ↓
-          </button>
-        </div>
-        <!-- ROW 2 / CARD 4: Tier 4 Early-Stage Startups -->
-        <div class="parity-tier-card parity-card-t4 tier-current-selected">
-          <div>
-            <div class="tier-current-selected-badge" style="background:rgba(244,114,182,0.22);border:1.5px solid #f472b6;color:#f472b6;">CURRENTLY VIEWING THIS TIER</div>
-            <span class="parity-badge"
-              style="background:rgba(244, 114, 182, 0.18);border:1px solid #f472b6;color:#f472b6;">
-              TIER 04 · EARLY-STAGE STARTUPS
-            </span>
-            <h3 class="parity-title">Early-Stage Tech Startups</h3>
-            <p class="parity-subtitle">Global Pre-Seed, Seed & Bootstrapped Software Builders</p>
-            <div class="parity-rate-box">
-              <div class="parity-rate-val" style="color:#f472b6;text-shadow:0 0 16px rgba(244,114,182,0.4);">
-                50% Startup Discount
-              </div>
-              <div class="parity-rate-sub" style="color:#fbcfe8;">
-                FLAT 50% OFF ALL PACKAGES · MULTIPLIER: 0.50X
-              </div>
-            </div>
-            <div class="parity-section-title">Qualifying Organizations &amp; Cohorts</div>
-            <div class="parity-countries-tag">
-              <strong>Pre-Seed &amp; Seed Startups:</strong> Tech startups with under $1M USD cumulative external
-              funding<br />
-              <strong>Bootstrapped Founders:</strong> Self-funded software companies seeking product-market fit<br />
-              <strong>Accelerators &amp; Incubators:</strong> Cohort teams in Y Combinator, Techstars, Antler, 500
-              Global, Entrepreneur First, and regional angel syndicates
-            </div>
-          </div>
-          <button class="btn btn-glow-gold" onclick="selectTierAndScroll(4)"
-            style="width:100%;justify-content:center;padding:0.85rem 1rem;font-size:calc(0.86rem + 3px);font-weight:800;border:2px solid #f472b6;color:#f472b6;"
-            type="button">
-            Calculate Tier 4 Investment ↓
-          </button>
-        </div>
-        <!-- ROW 2 / CARD 5: Tier 5 Non-Profits & Academia -->
-        <div class="parity-tier-card parity-card-t5">
-          <div>
-            <span class="parity-badge"
-              style="background:rgba(192, 132, 252, 0.18);border:1px solid #c084fc;color:#c084fc;">
-              TIER 05 · ACADEMIA &amp; NON-PROFITS
-            </span>
-            <h3 class="parity-title">Universities, Labs &amp; Non-Profits</h3>
-            <p class="parity-subtitle">Higher Education, Research Labs & Registered Non-Profits (including US 501(c)(3))</p>
-            <div class="parity-rate-box">
-              <div class="parity-rate-val" style="color:#c084fc;text-shadow:0 0 16px rgba(192,132,252,0.4);">
-                75% Parity Discount
-              </div>
-              <div class="parity-rate-sub" style="color:#e9d5ff;">
-                25% BASE RATE · BASELINE MULTIPLIER: 0.25X
-              </div>
-            </div>
-            <div class="parity-section-title">Qualifying Organizations &amp; Cohorts</div>
-            <div class="parity-countries-tag">
-              <strong>Higher Education:</strong> Accredited universities, colleges, faculty labs, student AI
-              societies<br />
-              <strong>Scientific Research:</strong> Public research institutions, post-doctoral labs, clinical
-              centers<br />
-              <strong>Charities &amp; Non-Profits:</strong> Registered charities and non-profits, including US 501(c)(3)
-              organizations<br />
-              <strong>Civic Open Source:</strong> International NGOs, environmental groups, open civic foundations
-            </div>
-          </div>
-          <button class="btn btn-glow-violet" onclick="selectTierAndScroll(5)"
-            style="width:100%;justify-content:center;padding:0.85rem 1rem;font-size:calc(0.86rem + 3px);font-weight:800;border:2px solid #c084fc;"
-            type="button">
-            Calculate Tier 5 Investment ↓
-          </button>
-        </div>
-        <!-- ROW 2 / CARD 6: Tier 6 Crisis-Affected & Under-Resourced Regions -->
-        <div class="parity-tier-card parity-card-t6">
-          <div>
-            <span class="parity-badge"
-              style="background:rgba(0, 240, 255, 0.2);border:1px solid #00f0ff;color:#00f0ff;">
-              TIER 06 · CRISIS-AFFECTED &amp; UNDER-RESOURCED
-            </span>
-            <h3 class="parity-title">Crisis-Affected &amp; Under-Resourced Regions</h3>
-            <p class="parity-subtitle">Crisis-Affected Regions, Displaced Builders & Under-Resourced Tech Collectives</p>
-            <div class="parity-rate-box">
-              <div class="parity-rate-val" style="color:#00f0ff;text-shadow:0 0 16px rgba(0,240,255,0.45);">
-                Custom Subsidized Quotes
-              </div>
-              <div class="parity-rate-sub" style="color:#7dd3fc;">
-                MICRO-RATES &amp; UP TO 90%+ SUBSIDIZED RELIEF
-              </div>
-            </div>
-            <div class="parity-section-title">Qualifying Beneficiaries &amp; Cohorts</div>
-            <div class="parity-countries-tag">
-              <strong>Crisis &amp; Conflict Regions:</strong> Teams operating in post-conflict zones or humanitarian
-              crises<br />
-              <strong>Hyperinflation Economies:</strong> Environments with currency collapse or blocked forex
-              access<br />
-              <strong>UN LDCs:</strong> Builders in the most vulnerable UN Least Developed Countries<br />
-              <strong>Grassroots Collectives:</strong> Community tech initiatives serving marginalized youth &amp;
-              builders
-            </div>
-          </div>
-          <button class="btn btn-glow-cyan" onclick="selectTierAndScroll(6)"
-            style="width:100%;justify-content:center;padding:0.85rem 1rem;font-size:calc(0.86rem + 3px);font-weight:800;border:2px solid #00f0ff;"
-            type="button">
-            Calculate Tier 6 Investment ↓
-          </button>
-        </div>
-      </div>
-      <p class="parity-classification-note"
-        style="text-align:center;font-size:0.85rem;color:var(--text-muted);margin-top:1.5rem;">Classification: World
-        Bank FY2027, effective 1 July 2026.</p>
-    </section>
+    
 
         <!-- INTAKE & ACTION SECTION -->
     <section class="reveal" style="max-width:1150px;margin:0 auto 4rem auto;padding:0 1.5rem;">

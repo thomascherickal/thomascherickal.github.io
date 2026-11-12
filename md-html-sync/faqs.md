@@ -583,7 +583,7 @@ Global MNCs gain a consistent, world-class standard of agentic software engineer
 Our Business Training bookings feature a fixed base investment of $3,000 USD covering up to 10 participants for 60 days (30 days training + 30 days guidance, assistance, and written guides licensed under Apache 2.0).
  There are no hidden licensing royalties or hourly surprise fees.
 
-- 30 Days Live Training Sprint: 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day.
+- 30 Days Live Training Sprint: 60 days over 2 months, Saturday & Sunday holidays, 4 hours per day.
 
 - 30 Days of Included Guidance & Materials: 30 business days of post-training
  guidance, detailed guides, and source materials under Apache 2.0.
