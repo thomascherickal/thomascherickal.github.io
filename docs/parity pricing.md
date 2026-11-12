@@ -10,11 +10,11 @@
 
 ### Service Selection & Flagship Options:
 1. **Individual Service Picks (Pick & Choose from 16 Business and 16 Personal Services)**:
-   - **Personal (1-on-1)**: **$300 USD per service** (strictly 1 person), covers **5 days live training + 5 days dedicated support** (10 days total coverage). Tier rates: T1: $300 | T2: $225 | T3: $150 | T4: $150 | T5: $75 | T6: Custom. Support fee: +$50 USD after 5 days.
-   - **Business (Organizations)**: **$300 USD per service base** (1 seat included, +$300/extra seat up to 10 seats max), covers **5 days live training + 5 days dedicated support** (10 days total coverage). Tier rates: T1: $300 | T2: $225 | T3: $150 | T4: $150 | T5: $75 | T6: Custom (+ extra seat at same tier rate). Support fee: +$50 USD after 5 days.
+   - **Personal (1-on-1)**: **$300 USD per service** (strictly 1 person), covers **5 days live training + 5 days dedicated support** (10 days total coverage). Tier rates: T1: $300 | T2: $225 | T3: $150 | T4: $150 | T5: $75 | T6: Custom. Support fee: $0 USD (100% included).
+   - **Business (Organizations)**: **$300 USD per service base** (1 seat included, +$300/extra seat up to 10 seats max), covers **5 days live training + 5 days dedicated support** (10 days total coverage). Tier rates: T1: $300 | T2: $225 | T3: $150 | T4: $150 | T5: $75 | T6: Custom (+ extra seat at same tier rate). Support fee: $0 USD (100% included).
 2. **Flagship Programs (60 Days Total Coverage)**:
-   - **Business Training Flagship**: **$3,000 USD for 60 days** (30d live training + 30d guidance & materials, 4 hours per day Monday through Friday, up to 10 participants included, +$300/extra seat up to 20 seats max). Support fee: +$500 USD ($250 @ 15d, $250 @ 30d). Tier rates: T1: $3,000 | T2: $2,250 | T3: $1,500 | T4: $1,500 | T5: $750 | T6: Custom.
-   - **Personal Training Flagship**: **$3,000 USD for 60 days** (30d live training + 30d guidance & materials, 4 hours per day Monday through Friday, strictly 1 person). Support fee: +$500 USD ($250 @ 15d, $250 @ 30d). Tier rates: T1: $3,000 | T2: $2,250 | T3: $1,500 | T4: $1,500 | T5: $750 | T6: Custom.
+   - **Business Training Flagship**: **$3,000 USD for 60 days** (30d live training + 30d guidance & materials, 4 hours per day Monday through Friday, up to 10 participants included, +$300/extra seat up to 20 seats max). Support fee: $0 USD (100% included). Tier rates: T1: $3,000 | T2: $2,250 | T3: $1,500 | T4: $1,500 | T5: $750 | T6: Custom.
+   - **Personal Training Flagship**: **$3,000 USD for 60 days** (30d live training + 30d guidance & materials, 4 hours per day Monday through Friday, strictly 1 person). Support fee: $0 USD (100% included). Tier rates: T1: $3,000 | T2: $2,250 | T3: $1,500 | T4: $1,500 | T5: $750 | T6: Custom.
    - **Payment Structure**: $0 upfront deposit; 5 equal installments (20% each) due after milestone completion.
    - Purchasing Power Parity (PPP) applies to all individual service picks and flagship programs across 195 countries.
 

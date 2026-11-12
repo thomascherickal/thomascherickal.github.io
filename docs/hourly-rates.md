@@ -110,9 +110,9 @@ All live training runs on **business days** (Monday to Friday, excluding Saturda
    - Solo practice capacity is capped at 1-2 concurrent flagship clients per month to maintain training quality, bespoke repository code reviews, and student responsiveness.
 
 3. **Installment & Cashflow Architecture:**
-   - **Business Flagship ($3,000 USD):** Five equal payments of $600 USD. Walk away owing nothing after the first 5 days. Support period fee is $500 USD ($250 @ 15d, $250 @ 30d).
-   - **Personal Flagship ($3,000 USD):** Five equal payments of $600 USD. Walk away owing nothing after the first 5 days. Support period fee is $500 USD ($250 @ 15d, $250 @ 30d).
-   - **Individual Services ($300 USD):** Billed across 5 milestones (Days 1 to 5, $60 USD per milestone); zero upfront advance required. Walk away owing nothing after Day 1. Support period fee is $50 USD after 5 days.
+   - **Business Flagship ($3,000 USD):** Five equal payments of $600 USD. Walk away owing nothing after the first 5 days. Dedicated 30-day support period is $0 USD (100% included in the package).
+   - **Personal Flagship ($3,000 USD):** Five equal payments of $600 USD. Walk away owing nothing after the first 5 days. Dedicated 30-day support period is $0 USD (100% included in the package).
+   - **Individual Services ($300 USD):** Billed across 5 milestones (Days 1 to 5, $60 USD per milestone); zero upfront advance required. Walk away owing nothing after Day 1. Dedicated 5-day support period is $0 USD (100% included in the service rate).
 
 4. **Open-Source Licensing (Apache 2.0):**
    - All written guides, training materials, operating manuals, tutorials, curriculum documentation, and deep dives authored by Thomas Cherickal fall under the permissive **Apache 2.0 license**, permitting unrestricted commercial use, adaptation, and internal deployment with attribution.

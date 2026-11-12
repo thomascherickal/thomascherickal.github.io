@@ -40,14 +40,14 @@ Slash recurring API costs 60%-90% via private Ollama, vLLM, GGUF/AWQ quantizatio
 ### Claude Agent Orchestration
 
 **Category**: `Agent Swarms`  
-**Link**: [Claude Agent Orchestration](business-services/business-service-ai-agents-orchestration.html)
+**Link**: [Claude Agent Orchestration](business-services/business-service-claude-agents-orchestration.html)
 
 Architect orchestrator-worker swarms, parallel fan-out loops, human-in-the-loop gates, and dynamic model routing.
 
 ### Agentic Assistants Training
 
 **Category**: `Autonomous Loops`  
-**Link**: [Agentic Assistants Training](business-services/business-service-agentic-ai-systems.html)
+**Link**: [Agentic Assistants Training](business-services/business-service-agentic-assistants.html)
 
 Deploy open-weights Agentic Assistants agent loops with multi-turn tool calling, structured JSON schemas, and function-calling fine-tunes.
 
@@ -61,7 +61,7 @@ End-to-end automation pipelines connecting CRM, databases, email, and LLM backen
 ### AI Budget & Cost Control
 
 **Category**: `Financial Guardrails`  
-**Link**: [AI Budget & Cost Control](business-services/business-service-ai-budget-cost-limits-training.html)
+**Link**: [AI Budget & Cost Control](business-services/business-service-ai-budget-cost-control.html)
 
 Implement hard budget limits, token caps, fallback models, semantic caching, and spend analytics dashboards.
 
@@ -82,7 +82,7 @@ Build long-horizon planning agents with persistent state, tree-of-thought explor
 ### Competitor Research & Intelligence
 
 **Category**: `Competitive CI`  
-**Link**: [Competitor Research & Intelligence](business-services/business-service-ai-based-competitor-research.html)
+**Link**: [Competitor Research & Intelligence](business-services/business-service-competitor-research.html)
 
 Deploy autonomous competitive intelligence agents, automated pricing trackers, product teardown scrapers, and dynamic sales battlecards.
 

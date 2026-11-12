@@ -1,0 +1,64 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://thedigitalfuturist.com/personal-services/personal-service-ai-budget-cost-control.html#webpage",
+      "url": "https://thedigitalfuturist.com/personal-services/personal-service-ai-budget-cost-control.html",
+      "name": "AI Budget & Cost Control - Service Specification | Thomas Cherickal",
+      "description": "Training employees at all levels on spending limits, budgeting, token quotas, and how to use free and local models for minor tasks. All services are one month long and can freely overlap for different customers according to their needs.",
+      "isPartOf": {
+        "@id": "https://thedigitalfuturist.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://thedigitalfuturist.com/personal-services/personal-service-ai-budget-cost-control.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thedigitalfuturist.com/personal-services/personal-service-ai-budget-cost-control.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thedigitalfuturist.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI Budget & Cost Control",
+          "item": "https://thedigitalfuturist.com/personal-services/personal-service-ai-budget-cost-control.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://thedigitalfuturist.com/personal-services/personal-service-ai-budget-cost-control.html#service",
+      "name": "AI Budget & Cost Control - Thomas Cherickal",
+      "serviceType": "AI Financial Governance & Cost Training",
+      "url": "https://thedigitalfuturist.com/personal-services/personal-service-ai-budget-cost-control.html",
+      "description": "Training employees at all levels on spending limits, budgeting, token quotas, and how to use free and local models for minor tasks. All services are one month long and can freely overlap for different customers according to their needs.",
+      "provider": {
+        "@type": "Person",
+        "@id": "https://thedigitalfuturist.com/#person",
+        "name": "Thomas Cherickal",
+        "jobTitle": "Generative AI Consultant",
+        "url": "https://thedigitalfuturist.com"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide (remote)"
+      },
+      "availableLanguage": "English",
+      "serviceOutput": [
+        "Automated Spend Caps & Quotas: Enforcing organization-wide hard financial limits, per-seat budgets, and webhook alerts.",
+        "Token Caching & Context Pruning: Cutting waste up to 80% using prompt caching, semantic deduplication, and sliding windows.",
+        "Llama 3, Mistral & Qwen Routing: Offloading routine tasks to free tiers and open-weight models via LiteLLM proxies.",
+        "Runaway Loop & Leak Auditing: Catching infinite agent retries, redundant API calls, and zombie seat subscriptions.",
+        "FinOps Governance Dashboards: Tracking real-time token unit economics, ROI per team, and department usage policies."
+      ]
+    }
+  ]
+}

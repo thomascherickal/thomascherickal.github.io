@@ -33,21 +33,21 @@ Eliminate cloud API dependencies and recurring costs by self-hosting quantized o
 ### Claude Agent Orchestration
 
 **Category**: `1-Person Swarms`  
-**Link**: [Claude Agent Orchestration](personal-services/personal-service-ai-agents-orchestration.html)
+**Link**: [Claude Agent Orchestration](personal-services/personal-service-claude-agents-orchestration.html)
 
 Build single-operator multi-agent swarms with orchestrator loops, subagent delegation, automated evaluation, and budget limits.
 
 ### Agentic Assistant Training
 
 **Category**: `Private Agent Loops`  
-**Link**: [Agentic Assistant Training](personal-services/personal-service-agentic-ai-systems.html)
+**Link**: [Agentic Assistant Training](personal-services/personal-service-agentic-assistants.html)
 
 Run private, unaligned autonomous agent loops on local hardware with open-weights agentic models and structured tool execution.
 
 ### AI Budget & Cost Control
 
 **Category**: `Budget Protection`  
-**Link**: [AI Budget & Cost Control](personal-services/personal-service-ai-budget-cost-limits-training.html)
+**Link**: [AI Budget & Cost Control](personal-services/personal-service-ai-budget-cost-control.html)
 
 Enforce strict financial caps on personal developer API accounts, semantic caching, and local fallback routing to keep costs predictable.
 

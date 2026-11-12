@@ -207,10 +207,10 @@ graph TD
 | :--- | :--- | :--- |
 | **Generative AI Transformation** | [`business-services/business-service-generative-ai-transformation.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-generative-ai-transformation.html) | Transitioning from basic chatbots to coordinated autonomous agent swarms. |
 | **Local LLMs & Cost Slashing** | [`business-services/business-service-local-llms-cost-slashing.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-local-llms-cost-slashing.html) | Deploying private open-weight models (vLLM, Ollama) to slash token expenses by 60%-90%. |
-| **Claude Agent Orchestration** | [`business-services/business-service-ai-agents-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-ai-agents-orchestration.html) | Production state machines, long-term memory persistence & human-in-the-loop gates. |
-| **Agentic Assistants Training** | [`business-services/business-service-agentic-ai-systems.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-agentic-ai-systems.html) | Self-hosted Agentic Assistants on Linux, persistent session memory & sandboxed tool execution. |
+| **Claude Agent Orchestration** | [`business-services/business-service-claude-agents-orchestration.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-claude-agents-orchestration.html) | Production state machines, long-term memory persistence & human-in-the-loop gates. |
+| **Agentic Assistants Training** | [`business-services/business-service-agentic-assistants.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-agentic-assistants.html) | Self-hosted Agentic Assistants on Linux, persistent session memory & sandboxed tool execution. |
 | **Workflow Automations** | [`business-services/business-service-workflow-automations.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-workflow-automations.html) | Business local n8n, Make, IFTTT & open-source workflow pipelines with zero per-step SaaS fees. |
-| **AI Budget & Cost Control Training** | [`business-services/business-service-ai-budget-cost-limits-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-ai-budget-cost-limits-training.html) | LiteLLM gateways, departmental spend quotas, token caching & hard circuit breakers. |
+| **AI Budget & Cost Control Training** | [`business-services/business-service-ai-budget-cost-control.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-ai-budget-cost-control.html) | LiteLLM gateways, departmental spend quotas, token caching & hard circuit breakers. |
 | **AI Developer Training** | [`business-services/business-service-ai-developer-training.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-ai-developer-training.html) | Coding agent mastery (Claude Code, Google Antigravity, OpenCode) & strict AI-assisted TDD. |
 | **Advanced AI Agents** | [`business-services/business-service-advanced-ai-agents.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/business-services/business-service-advanced-ai-agents.html) | Production hierarchical agent swarms, self-correction loops & persistent state machines. |
 
@@ -419,29 +419,29 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 
 ## Latest Pre-Commit Report Summary
 
-> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`METRICS.md`](METRICS.md)** | Recorded on: `2026-11-12 10:00:07 UTC`
+> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`METRICS.md`](METRICS.md)** | Recorded on: `2026-11-12 17:57:40 UTC`
 
 ### Commit Overview
 
 | Property | Value |
 | :--- | :--- |
-| **Parent Commit (Full)** | `5d3720fcc78296286f40e54637ad7711f9fa335d` |
-| **Parent Commit (Short)** | `5d3720f` |
+| **Parent Commit (Full)** | `2443d4318ee2fa27f624c0392368962e0978a479` |
+| **Parent Commit (Short)** | `2443d43` |
 | **Branch** | `main` |
-| **Parent Subject** | Service Counts |
+| **Parent Subject** | Clerical Errors |
 | **Parent Author** | Thomas Cherickal `<thomascherickal@gmail.com>` |
-| **Parent Author Date** | `2026-11-12T15:23:17+05:30` |
-| **Commits in Repo (before this commit)** | 530 |
+| **Parent Author Date** | `2026-11-12T15:29:50+05:30` |
+| **Commits in Repo (before this commit)** | 531 |
 
 ### Quality Gate & Verification Summary
 
 | Quality Gate / Test Dimension | Total Scope | Passed | Failed | Status | Runtime |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| **Python Unit Test Suite** | 148 tests across 25 modules | 148 | 0 | PASSED | 12.53s |
-| **JavaScript Unit Test Suite** | 159 tests across 17 sections | 159 | 0 | PASSED | 0.04s |
+| **Python Unit Test Suite** | 148 tests across 25 modules | 148 | 0 | PASSED | 13.50s |
+| **JavaScript Unit Test Suite** | 159 tests across 17 sections | 159 | 0 | PASSED | 0.07s |
 | **NLP-Fuzzy-Expert Sync Engine** | 72 target documents | 72 | 0 | PASSED | 1.50s |
 | **SSOT Data Immutability Guard** | 11 data files SHA-256 hash | 11 | 0 | PASSED | 0.001s |
-| **Internal Link & Anchor Integrity** | 6772 links across 72 HTML files | 6772 | 0 | PASSED | 0.33s |
+| **Internal Link & Anchor Integrity** | 6638 links across 72 HTML files | 6638 | 0 | PASSED | 0.33s |
 | **JSON-LD Schema Synchronization** | 62 schema files in `schema/` | 62 | 0 | PASSED | 0.15s |
 | **Markdown Sync Verification** | 14 paired markdown files | 14 | 0 | PASSED | 0.10s |
 | **Overall Quality Gate Status** | **7 of 7 Quality Gates Passed** | **100%** | **0** | **GREEN** | **PASS** |
@@ -450,35 +450,35 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 
 | Language | Tracked Files | Total Statements / Lines | Covered | Missed | Coverage % | Status |
 |:---|---:|---:|---:|---:|---:|:---|
-| Python (`nlp-fuzzy-expert/`, `python/`) | 30 | 5,326 | 5,268 | 58 | **98.91%** | PASS |
+| Python (`nlp-fuzzy-expert/`, `python/`) | 30 | 5,331 | 5,266 | 65 | **98.78%** | PASS |
 | JavaScript (Root scripts) | 3 | 1,256 | 1,256 | 0 | **100.00%** | PASS |
-| **Repository Combined Total** | **33** | **6,582** | **6,524** | **58** | **99.12%** | **PASS** |
+| **Repository Combined Total** | **33** | **6,587** | **6,522** | **65** | **99.01%** | **PASS** |
 
 ### Repository Code & Engineering Metrics Summary (`METRICS.md`)
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **580** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **1,009,812** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **992,671** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,928** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,213** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **82.70 MB (86,719,739 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **907,920 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **530** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-12** | Subject: "Service Counts" |
+| **Total Lines of Source Code & Content** | **868,374** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **851,876** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,690** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **10,808** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **73.58 MB (77,152,291 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **772,181 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **531** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-12** | Subject: "Clerical Errors" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ### Architecture & File Category Breakdown (`METRICS.md`)
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 72 | 93,095 | 7.06 MB (7,406,870 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 72 | 82,730 | 6.28 MB (6,586,695 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,935 | 279.90 KB (286,613 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 32 | 11,337 | 3.69 MB (3,873,200 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 58 | 15,184 | 679.26 KB (695,565 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 132 | 44,044 | 5.23 MB (5,483,847 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 90 | 834,164 | 40.72 MB (42,700,179 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **JavaScript Scripts** | 32 | 11,343 | 3.69 MB (3,873,190 bytes) | Client-side interactivity, search, filter & components |
+| **Python Tooling** | 58 | 15,195 | 679.93 KB (696,250 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 132 | 39,958 | 4.47 MB (4,691,627 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 90 | 707,160 | 33.13 MB (34,744,482 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 121 | 0 | 24.58 MB (25,774,651 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 17 | 0 | 422.19 KB (432,326 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 17 | 0 | 422.16 KB (432,295 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |

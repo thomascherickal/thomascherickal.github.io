@@ -46,9 +46,9 @@ class RecordingTestResult(unittest.TextTestResult):
         doc = (test.shortDescription() or "").strip()
         self.test_records.append({
             "id": test.id(),
-            "module": test.__class__.__module__,
-            "class": test.__class__.__name__,
-            "method": test._testMethodName,
+            "module": getattr(test, "__class__", type(test)).__module__,
+            "class": getattr(test, "__class__", type(test)).__name__,
+            "method": getattr(test, "_testMethodName", str(test)),
             "description": doc,
             "status": "PASSED",
             "time_taken": round(elapsed, 4)
@@ -60,9 +60,9 @@ class RecordingTestResult(unittest.TextTestResult):
         doc = (test.shortDescription() or "").strip()
         self.test_records.append({
             "id": test.id(),
-            "module": test.__class__.__module__,
-            "class": test.__class__.__name__,
-            "method": test._testMethodName,
+            "module": getattr(test, "__class__", type(test)).__module__,
+            "class": getattr(test, "__class__", type(test)).__name__,
+            "method": getattr(test, "_testMethodName", str(test)),
             "description": doc,
             "status": "FAILED",
             "error": self._exc_info_to_string(err, test),
@@ -75,9 +75,9 @@ class RecordingTestResult(unittest.TextTestResult):
         doc = (test.shortDescription() or "").strip()
         self.test_records.append({
             "id": test.id(),
-            "module": test.__class__.__module__,
-            "class": test.__class__.__name__,
-            "method": test._testMethodName,
+            "module": getattr(test, "__class__", type(test)).__module__,
+            "class": getattr(test, "__class__", type(test)).__name__,
+            "method": getattr(test, "_testMethodName", str(test)),
             "description": doc,
             "status": "ERROR",
             "error": self._exc_info_to_string(err, test),
@@ -88,9 +88,9 @@ class RecordingTestResult(unittest.TextTestResult):
         super().addSkip(test, reason)
         self.test_records.append({
             "id": test.id(),
-            "module": test.__class__.__module__,
-            "class": test.__class__.__name__,
-            "method": test._testMethodName,
+            "module": getattr(test, "__class__", type(test)).__module__,
+            "class": getattr(test, "__class__", type(test)).__name__,
+            "method": getattr(test, "_testMethodName", str(test)),
             "description": (test.shortDescription() or "").strip(),
             "status": "SKIPPED",
             "reason": str(reason),

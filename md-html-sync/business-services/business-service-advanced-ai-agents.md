@@ -1,29 +1,64 @@
 # Advanced AI Agents
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// SERVICE SPECIFICATION 10 - EXECUTIVE REPORT**  
-> **Enterprise software architecture is moving fast from simple text chatbots to autonomous AI agents. Grounded in foundation language models, tool access, and persistent memory, AI agents do not just reply to questions. They take high-level business goals, break them into small steps, run multi-step workflows, query enterprise databases, and call external software APIs across company systems.**
+> **// SERVICE SPECIFICATION 10**  
+> **Building production autonomous agent systems: hierarchical teams of Claude agents, self-correcting loops driven
+ by tests, persistent state, and sandboxed execution for business-critical workloads.**
 
 ---
 
-## 7. Investment, Service Packages, and Consulting Engagement
+## Service
+ Overview & Scope
 
-We engineer, audit, and deploy production-grade autonomous agent systems tailored to enterprise security, compliance, and ROI benchmarks.
+- Multi-Agent Teams: Hierarchical Claude agent teams that carry multi-day, multi-person
+ workflows, with human checkpoints at the steps that matter.
+- Self-Correction Loops: Agents read compiler errors, test failures and lint output, fix
+ the code, and run the checks again until they pass or reach a retry limit.
+- Sandboxed Tool Execution: Agent shell commands, code execution and database queries run
+ inside Docker containers with restricted permissions and network access.
+- Spend and Loop Limits: Iteration caps, token budgets and kill switches on every loop.
+- Run Logging: Records of each agent's steps, tool calls, token use and failures for review
+ and debugging.
 
-- Modular Service Selection & Flexible Engagement: Clients can freely pick and choose their services, either individually or bundled under our comprehensive transformation programs:
- - Individual Service Pick (Personal / 1-on-1): $300 / $225 / $150 / $150 / $75 / Custom USD per service for 5 days of live training + 5 days of dedicated support (10 days total coverage per service, 4 hours per day). Strictly 1 person only.
- - Individual Service Pick (Business / Teams): $300 / $225 / $150 / $150 / $75 / Custom USD per service for 5 days of live training + 5 days of dedicated support (10 days total coverage per service, 4 hours per day). Covers up to 10 participants (additional seats at +$300 / +$225 / +$150 / +$150 / +$75 / Custom USD per seat).
- - Comprehensive Business Training: $3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD for 60 days (30 days live training + 30 days guidance, Q&A and written guides, 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Includes cohorts up to 10 participants. Extra seats at +$300 / +$225 / +$150 / +$150 / +$75 / Custom USD per seat.
- - Comprehensive Personal Training: $3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD for 60 days (30 days live training + 30 days guidance, Q&A and written guides, 60 days over 2 months with Saturday and Sunday as holidays, 4 hours per day). Strictly for 1 person only (private acceleration).
-- Global Purchasing Power Parity (PPP) Available for All Service Pricing:
- - Tier 1 (Standard / 100%): Individual $300 USD | Business $300 USD | Business 60d $3,000 USD | Personal 60d $3,000 USD (USA, UK, EU, Canada, Australia)
- - Tier 2 (Upper-Middle-Income / 25% Off): Individual $225 USD | Business $225 USD | Business 60d $2,250 USD | Personal 60d $2,250 USD: e.g. Brazil, Mexico, Malaysia, Thailand, Türkiye
- - Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off): Individual $150 USD | Business $150 USD | Business 60d $1,500 USD | Personal 60d $1,500 USD
- - Tier 5 (Academia & Non-Profits / 75% Off): Individual $75 USD | Business $75 USD | Business 60d $750 USD | Personal 60d $750 USD
- - Tier 6 (Crisis-Affected & Under-Resourced Regions): Individual $30 USD | Business $30 USD | Custom Subsidized Relief / Micro-Rates
- - Calculate and lock in your exact tier rate live on the Pricing page.
-- Payment Schedule:
- - $0 upfront (strictly zero advance payment required); billed in 5 equal milestone installments due only after verified instruction and runtime delivery.
+---
+
+## Standard
+ Architecture & Tools
+
+- Agent Frameworks: Claude Agent Teams, Claude Code subagents and background agents in
+ separate git worktrees, and the Claude API with Python asyncio or Rust Tokio for custom orchestration.
+- Model Layer: Claude Opus or Fable (lead planner and synthesis), Claude Sonnet (code and
+ tool use), and Claude Haiku (fast classification and search).
+- Execution Sandboxing: Docker containers with dropped capabilities (`CAP_DROP=ALL`),
+ non-root execution and egress restrictions.
+- State & Persistence: Checkpoints in a SQL database or files, so long runs can resume
+ after an interruption.
+
+---
+
+## Guarantees
+ & Commitments
+
+- Guaranteed Termination: Hard cycle limits, timeouts and fallback paths end every run.
+- Complete Commercial IP Ownership: Full code, copyright and documentation transfer at
+ sign-off.
+- 30-Day Operational SLA & Support: Engineering channel for fixes, tuning and Claude
+ model or API updates.
+- Data Containment: Disposable containers, with outbound traffic limited to approved
+ destinations.
+
+---
+
+## Executive Summary
+
+- Claude Agent Teams: Production orchestrator-worker and
+ hierarchical architectures.
+- Test-Driven Self-Correction: Test, lint and type-check
+ feedback loops that work toward passing code.
+- Sandboxed Runtimes: Docker isolation with dropped capabilities
+ and restricted network access.
+- Enterprise IP & Handover: Full IP transfer, runbooks and
+ 30-day support.
 
 ---
 

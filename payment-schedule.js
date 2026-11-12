@@ -24,12 +24,12 @@
 }(typeof self !== 'undefined' ? self : this, function () {
 
   const PARITY_TIERS = {
-    1: { id: 1, name: "Tier 1: High-Income Economies (USA, China, EU)", multiplier: 1.0, discount: 0, flagship: 3000, indiv: 300, supportFlag: 500, supportIndiv: 50 },
-    2: { id: 2, name: "Tier 2: Upper-Middle-Income (Brazil, Malaysia, Mexico)", multiplier: 0.75, discount: 25, flagship: 2250, indiv: 225, supportFlag: 375, supportIndiv: 38 },
-    3: { id: 3, name: "Tier 3: Lower-Middle & Low-Income (India, Nigeria, Kenya)", multiplier: 0.50, discount: 50, flagship: 1500, indiv: 150, supportFlag: 250, supportIndiv: 25 },
-    4: { id: 4, name: "Tier 4: Early-Stage Tech Startups & Seed Ventures", multiplier: 0.50, discount: 50, flagship: 1500, indiv: 150, supportFlag: 250, supportIndiv: 25 },
-    5: { id: 5, name: "Tier 5: Colleges, Universities & Non-Profits", multiplier: 0.25, discount: 75, flagship: 750, indiv: 75, supportFlag: 125, supportIndiv: 13 },
-    6: { id: 6, name: "Tier 6: Crisis-Affected Regions & Subsidized Relief", multiplier: 0.10, discount: 90, flagship: 300, indiv: 30, supportFlag: 50, supportIndiv: 5 }
+    1: { id: 1, name: "Tier 1: High-Income Economies (USA, China, EU)", multiplier: 1.0, discount: 0, flagship: 3000, indiv: 300, supportFlag: 0, supportIndiv: 0 },
+    2: { id: 2, name: "Tier 2: Upper-Middle-Income (Brazil, Malaysia, Mexico)", multiplier: 0.75, discount: 25, flagship: 2250, indiv: 225, supportFlag: 0, supportIndiv: 0 },
+    3: { id: 3, name: "Tier 3: Lower-Middle & Low-Income (India, Egypt, Kenya)", multiplier: 0.5, discount: 50, flagship: 1500, indiv: 150, supportFlag: 0, supportIndiv: 0 },
+    4: { id: 4, name: "Tier 4: Early-Stage Tech Startups & Seed Ventures", multiplier: 0.5, discount: 50, flagship: 1500, indiv: 150, supportFlag: 0, supportIndiv: 0 },
+    5: { id: 5, name: "Tier 5: Colleges, Universities & Non-Profits", multiplier: 0.25, discount: 75, flagship: 750, indiv: 75, supportFlag: 0, supportIndiv: 0 },
+    6: { id: 6, name: "Tier 6: Crisis-Affected Regions & Subsidized Relief", multiplier: 0.1, discount: 90, flagship: 300, indiv: 30, supportFlag: 0, supportIndiv: 0 }
   };
 
   const TRUST_TERMS = {
@@ -70,16 +70,16 @@
 
     if (engagementType === "individual") {
       totalTrainingAmount = tier.indiv * serviceCount;
-      totalSupportAmount = tier.supportIndiv * serviceCount;
+      totalSupportAmount = 0;
     } else if (engagementType === "custom") {
       isNegotiated = true;
       const rawCustom = typeof opts.customAmount === "number" ? opts.customAmount : parseFloat(opts.customAmount);
       totalTrainingAmount = (!isNaN(rawCustom) && rawCustom > 0) ? Math.round(rawCustom) : 0;
-      totalSupportAmount = Math.round(totalTrainingAmount * (500 / 3000));
+      totalSupportAmount = 0;
     } else {
       // Flagship or fallback default
       totalTrainingAmount = tier.flagship;
-      totalSupportAmount = tier.supportFlag;
+      totalSupportAmount = 0;
     }
 
     const trainingInstallmentAmount = Math.round((totalTrainingAmount * 0.20) * 100) / 100;
@@ -95,26 +95,25 @@
     }
 
     const supportMilestones = [];
-    if (engagementType === "flagship" || (engagementType === "custom" && totalSupportAmount > 0)) {
-      const halfSupport = Math.round((totalSupportAmount / 2) * 100) / 100;
+    if (engagementType === "flagship" || (engagementType === "custom" && totalTrainingAmount > 0)) {
       supportMilestones.push({
         milestoneIndex: 1,
         dayDue: 15,
-        amountUsd: halfSupport,
-        description: "Paid strictly after 15 days of verified dedicated operational support"
+        amountUsd: 0,
+        description: "Dedicated operational support through Day 15 (Included at zero charge / $0 USD)"
       });
       supportMilestones.push({
         milestoneIndex: 2,
         dayDue: 30,
-        amountUsd: halfSupport,
-        description: "Paid strictly after 30 days of verified dedicated operational support"
+        amountUsd: 0,
+        description: "Dedicated operational support through Day 30 (Included at zero charge / $0 USD)"
       });
     } else {
       supportMilestones.push({
         milestoneIndex: 1,
         dayDue: 5,
-        amountUsd: totalSupportAmount,
-        description: "Paid strictly after 5 days of verified dedicated operational support"
+        amountUsd: 0,
+        description: "Dedicated operational support through Day 5 (Included at zero charge / $0 USD)"
       });
     }
 

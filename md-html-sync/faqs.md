@@ -86,43 +86,43 @@ This policy guarantees complete risk elimination, aligning my incentives entirel
 
 ---
 
-### 4. What are Support Period Payments and when are they due?
+### 4. Are there any charges or fees for the dedicated support period?
 *Payment:
- Support Period Payments · FAQ #65*  
-Dedicated post-training support is structured with strictly zero upfront payment, billed in verified installments after active assistance has been delivered:
+ Zero Charge Support · FAQ #65*  
+No. There is zero charge for the dedicated support period. All post-training operational support is 100% included and fully covered by the base price and its scaled Purchasing Power Parity (PPP) tiers:
 
 - Flagship Programs (Business & Personal):
- The 30-day support phase requires an additional payment of $500 USD, split into two equal installments: $250 USD after 15 days of support and $250 USD after 30 days of support.
+ The 30-day support phase carries $0 additional charge. It is completely covered by the $3,000 USD flagship price and its scaled parity tiers.
 
 - Individual Services (Business & Personal):
- The 5-day support phase requires an additional payment of $50 USD, due in a single payment after 5 days of support.
+ The 5-day support phase carries $0 additional charge. It is completely covered by the $300 USD individual service price and its scaled parity tiers.
 
 - What Support Covers:
  Direct code reviews, debugging agent pipelines, answering technical queries, refactoring MCP servers, and providing written custom guides licensed under Apache 2.0.
 
-Because support is billed only after 15 and 30 days (or 5 days for individual services), clients maintain total leverage and confirm that technical guidance meets standards before funds are released.
+There are zero surprise invoices, no recurring subscriptions, and zero additional payments beyond the 5 training milestones.
 
 ---
 
-### 5. Does Purchasing Power Parity (PPP) apply to Support Period Payments?
+### 5. How is the dedicated support period delivered across parity tiers?
 *Payment:
  Support & Parity · FAQ #66*  
-Yes. The six World Bank Purchasing Power Parity (PPP) tiers apply across all 195 countries to both live training and support period payments:
+Because support periods carry zero extra charge, clients across all 6 World Bank Purchasing Power Parity (PPP) tiers receive identical comprehensive operational support fully covered by their package rate:
 
 - Tier 1 (High-Income Economies, 100%):
- $500 USD total support for flagships ($250 + $250 installments); $50 USD for individual services.
+ $3,000 flagship / $300 individual service (30d/5d support 100% included at $0 USD).
 
 - Tier 2 (Upper-Middle-Income, 25% Off):
- $375 USD total support for flagships ($187.50 + $187.50 installments); $37.50 USD for individual services.
+ $2,250 flagship / $225 individual service (30d/5d support 100% included at $0 USD).
 
 - Tier 3 & 4 (Lower-Middle/Low-Income & Startups, 50% Off):
- ($300 / $225 / $150 / $150 / $75 / Custom USD) total support for flagships ($125 + $125 installments); $25 USD for individual services.
+ $1,500 flagship / $150 individual service (30d/5d support 100% included at $0 USD).
 
 - Tier 5 (Academia & Non-Profits, 75% Off):
- $125 USD total support for flagships ($62.50 + $62.50 installments); $12.50 USD for individual services.
+ $750 flagship / $75 individual service (30d/5d support 100% included at $0 USD).
 
 - Tier 6 (Crisis-Affected & Under-Resourced):
- Custom subsidized micro-rates with up to 90%+ relief.
+ Custom subsidized micro-rates with support 100% included.
 
 Every builder and business worldwide receives fair, equitable pricing. Explore our full matrix on the Pricing Page.
 

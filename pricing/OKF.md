@@ -24,7 +24,7 @@ None (Leaf directory).
 
 - [`pricing-tier-1-usa-china-eu-100.html`](pricing-tier-1-usa-china-eu-100.html)
 - [`pricing-tier-2-brazil-malaysia-75.html`](pricing-tier-2-brazil-malaysia-75.html)
-- [`pricing-tier-3-india-nigeria-50.html`](pricing-tier-3-india-nigeria-50.html)
+- [`pricing-tier-3-india-egypt-50.html`](pricing-tier-3-india-egypt-50.html)
 - [`pricing-tier-4-tech-startups-50.html`](pricing-tier-4-tech-startups-50.html)
 - [`pricing-tier-5-colleges-non-profits-25.html`](pricing-tier-5-colleges-non-profits-25.html)
 - [`pricing-tier-6-crisis-affected-10.html`](pricing-tier-6-crisis-affected-10.html)

@@ -25,7 +25,7 @@ Clients have the flexibility to either enroll in comprehensive multi-week transf
 | **Total Coverage** | 10 days total coverage | 10 days total coverage | 60 days total coverage | 60 days total coverage |
 | **Audience & Cohort Size** | Strictly 1 person | 1 seat base (+ $300/extra seat up to 10 seats) | Up to 10 seats included (+ $300/extra seat up to 20 seats) | Strictly 1 person (1-on-1) |
 | **Base Pricing (Tier 1)** | **$300 USD** | **$300 USD** | **$3000 USD** | **$3000 USD** |
-| **Support Phase Fee (Tier 1)** | **+$50 USD** (after 5 days) | **+$50 USD** (after 5 days) | **+$500 USD** ($250 @ 15d, $250 @ 30d) | **+$500 USD** ($250 @ 15d, $250 @ 30d) |
+| **Support Phase Fee (Tier 1)** | **$0 USD** (100% included) | **$0 USD** (100% included) | **$0 USD** (100% included) | **$0 USD** (100% included) |
 | **Scope** | Pick & choose single service | Pick & choose single service | Full organizational rollout | Full 1-on-1 career mastery |
 | **Purchasing Power Parity** | 6 Tiers ($300 / $225 / $150 / $150 / $75 / Custom) | 6 Tiers ($300 / $225 / $150 / $150 / $75 / Custom) | 6 Tiers ($3000 / $2250 / $1500 / $1500 / $750 / Custom) | 6 Tiers ($3000 / $2250 / $1500 / $1500 / $750 / Custom) |
 | **Upfront Advance** | **$0 upfront** | **$0 upfront** | **$0 upfront** | **$0 upfront** |
@@ -47,11 +47,11 @@ Slash recurring API costs 60%-90% via private Ollama, vLLM, GGUF/AWQ quantizatio
 
 ### 03. Claude Agent Orchestration
 Architect orchestrator-worker swarms, parallel fan-out loops, human-in-the-loop gates, and dynamic model routing.
-- **URL**: [https://thedigitalfuturist.com/business-services/business-service-ai-agents-orchestration.html](https://thedigitalfuturist.com/business-services/business-service-ai-agents-orchestration.html)
+- **URL**: [https://thedigitalfuturist.com/business-services/business-service-claude-agents-orchestration.html](https://thedigitalfuturist.com/business-services/business-service-claude-agents-orchestration.html)
 
 ### 04. Agentic Assistants Training
 Deploy open-weights Agentic Assistants agent loops with multi-turn tool calling, structured JSON schemas, and function-calling fine-tunes.
-- **URL**: [https://thedigitalfuturist.com/business-services/business-service-agentic-ai-systems.html](https://thedigitalfuturist.com/business-services/business-service-agentic-ai-systems.html)
+- **URL**: [https://thedigitalfuturist.com/business-services/business-service-agentic-assistants.html](https://thedigitalfuturist.com/business-services/business-service-agentic-assistants.html)
 
 ### 05. Workflow Automations
 End-to-end automation pipelines connecting CRM, databases, email, and LLM backends via n8n, Make, and open-source stacks.
@@ -59,7 +59,7 @@ End-to-end automation pipelines connecting CRM, databases, email, and LLM backen
 
 ### 06. AI Budget & Cost Control
 Implement hard budget limits, token caps, fallback models, semantic caching, and spend analytics dashboards.
-- **URL**: [https://thedigitalfuturist.com/business-services/business-service-ai-budget-cost-limits-training.html](https://thedigitalfuturist.com/business-services/business-service-ai-budget-cost-limits-training.html)
+- **URL**: [https://thedigitalfuturist.com/business-services/business-service-ai-budget-cost-control.html](https://thedigitalfuturist.com/business-services/business-service-ai-budget-cost-control.html)
 
 ### 07. AI Developer Training
 Master Claude Code, agentic refactoring, test-driven prompt harnesses, and autonomous bug-hunting workflows.
@@ -77,7 +77,7 @@ Business Gemini architecture: Google Antigravity SDK, structured outputs, code e
 
 ### 11. Competitor Research & Intelligence
 Deploy autonomous competitive intelligence agents, automated pricing trackers, product teardown scrapers, and dynamic sales battlecards.
-- **URL**: [https://thedigitalfuturist.com/business-services/business-service-ai-based-competitor-research.html](https://thedigitalfuturist.com/business-services/business-service-ai-based-competitor-research.html)
+- **URL**: [https://thedigitalfuturist.com/business-services/business-service-competitor-research.html](https://thedigitalfuturist.com/business-services/business-service-competitor-research.html)
 
 ### 12. AI Leads Magnet & Conversion Systems
 Convert anonymous traffic into sales-ready pipeline using conversational AI audit tools, waterfall firmographic enrichment, and autonomous CRM routing.
@@ -112,7 +112,7 @@ A dedicated 1-on-1 acceleration program engineered strictly for one person only 
 - **Detailed Guides & Materials**: In-depth architecture blueprints, runbooks, and cheat sheets designed for rapid daily lookup and long-term reference, licensed under Apache 2.0.
 - **Pricing & Parity**: **$3000 USD base rate** for flagship ($3000 / $2250 / $1500 / $1500 / $750 / Custom USD) and **$300 USD base rate** for individual picks ($300 / $225 / $150 / $150 / $75 / Custom USD).
 - **$0 Upfront Commitment**: Zero advance fee; billed in 5 equal installments (20% each) due after Days 5, 10, 15, 20, and 25 of completed training (flagship) or Days 1, 2, 3, 4, and 5 (individual pick). Walk away owing nothing after the first milestone block.
-- **Support Phase Fee**: +$500 USD for flagship (two installments: $250 after 15 days, $250 after 30 days) and +$50 USD for individual picks (after 5 days).
+- **Support Phase Fee**: $0 USD (zero extra charge; 30 days of flagship support and 5 days of individual pick support are 100% included in the base price).
 - **Apache 2.0 Licensing**: Permissive open-source licensing for all custom code, prompt templates, operating manuals, and written guides.
 - **Flagship URL**: [https://thedigitalfuturist.com/personal-ai-training.html](https://thedigitalfuturist.com/personal-ai-training.html)
 
@@ -126,11 +126,11 @@ Eliminate cloud API dependencies and recurring costs by self-hosting quantized o
 
 ### 03. Claude Agent Orchestration
 Build single-operator multi-agent swarms with orchestrator loops, subagent delegation, automated evaluation, and budget limits.
-- **URL**: [https://thedigitalfuturist.com/personal-services/personal-service-ai-agents-orchestration.html](https://thedigitalfuturist.com/personal-services/personal-service-ai-agents-orchestration.html)
+- **URL**: [https://thedigitalfuturist.com/personal-services/personal-service-claude-agents-orchestration.html](https://thedigitalfuturist.com/personal-services/personal-service-claude-agents-orchestration.html)
 
 ### 04. Agentic Assistant Training
 Run private, unaligned autonomous agent loops on local hardware with open-weights agentic models and structured tool execution.
-- **URL**: [https://thedigitalfuturist.com/personal-services/personal-service-agentic-ai-systems.html](https://thedigitalfuturist.com/personal-services/personal-service-agentic-ai-systems.html)
+- **URL**: [https://thedigitalfuturist.com/personal-services/personal-service-agentic-assistants.html](https://thedigitalfuturist.com/personal-services/personal-service-agentic-assistants.html)
 
 ### 05. Personal Goals Self-Authoring
 Structure personal goals, track career milestones, and navigate career transitions with structured self-authoring frameworks, journaling templates, and actionable roadmaps.

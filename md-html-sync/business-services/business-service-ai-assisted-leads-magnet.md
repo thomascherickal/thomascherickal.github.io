@@ -6,7 +6,7 @@
 
 ---
 
-## 1. Service Overview & Scope
+## Service Overview & Scope
 
 - Interactive Diagnostic Lead Magnets: Replacing low-conversion static PDF whitepapers with high-utility, interactive AI audit tools, benchmark scorecards, and ROI calculators.
 - Waterfall Data Enrichment: Automatically enriching user submissions with firmographic data, technographic stack details, and verified corporate contact details via Clay and Apollo integrations.
@@ -16,7 +16,7 @@
 
 ---
 
-## 2. Standard Architecture & Tools
+## Standard Architecture & Tools
 
 - Interactive Frontend Widgets: Lightweight vanilla JavaScript or React embedding modules optimized for sub-second load times and frictionless completion.
 - Enrichment Waterfalls: Multi-vendor data waterfall pipelines (Clay, Clearbit, Apollo) orchestrated via secure serverless functions.
@@ -25,23 +25,7 @@
 
 ---
 
-## 3. Deliverable Examples & 4-Week Schedule
-
-- Custom AI Diagnostic Assessment Widget: Embedded lead magnet widget tailored to your industry, branding, and diagnostic questions.
-- Automated Data Waterfall & Verification Pipeline: Serverless enrichment service validating email authenticity, company headcount, and revenue tiers.
-- Instant Executive Audit Generator: Real-time report generation pipeline creating personalized PDF and web-based maturity reports for prospects.
-- CRM Routing & Calendar Booking Integration: Webhook architecture pushing hot prospects directly to sales calendars with complete qualification notes.
-
-| Timeline | Focus & Architecture | Core Deliverables & Artifacts | Verification & Sign-off Criteria |
-| :--- | :--- | :--- | :--- |
-| Week 1 | Funnel Audit & Diagnostic Tool Design | ICP definition, question branching architecture, diagnostic scoring rubric, and high-converting value proposition design | Approved diagnostic questions, scoring matrix, and signed-off wireframe design |
-| Week 2 | Interactive Widget & Report Generator Build | Responsive frontend widget implementation, Claude prompt harness for personalized diagnosis report creation, and brand styling | Widget functioning smoothly across desktop and mobile with instant sample report generation |
-| Week 3 | Waterfall Enrichment & CRM Routing | Clay/Apollo waterfall setup, company firmographic append, automated lead scoring rules, and HubSpot/Salesforce two-way synchronization | Verified test leads successfully enriched and routed to the proper sales pipeline stage with full profile dossiers |
-| Week 4 | A/B Testing, Optimization & Handover | Live traffic deployment, conversion rate analytics setup, calendar scheduling link testing, and 30-day SLA onboarding | Live system generating qualified pipeline, full code and template handover, and client sign-off |
-
----
-
-## 4. Guarantees & Commitments
+## Guarantees & Commitments
 
 - 3x Higher Conversion vs Static Whitepapers: Measurable increase in lead completion and contact accuracy compared to static asset gates.
 - Instant Value Delivery: Tailored, actionable diagnosis reports generated for prospects within seconds of submission.
@@ -50,26 +34,7 @@
 
 ---
 
-## 5. Investment & Pricing Quote
-
-- Modular Service Selection & Flexible Engagement: Clients can freely pick and choose their services, either individually or bundled under our comprehensive transformation programs:
- - Individual Service Pick (Personal / 1-on-1): $300 / $225 / $150 / $150 / $75 / Custom USD per service for 5 days of live training + 5 days of dedicated support (10 days total coverage per service, 4 hours per day). Strictly 1 person only.
- - Individual Service Pick (Business / Teams): $300 / $225 / $150 / $150 / $75 / Custom USD per service for 5 days of live training + 5 days of dedicated support (10 days total coverage per service, 4 hours per day). Covers up to 10 participants (additional seats at +$300 / +$225 / +$150 / +$150 / +$75 / Custom USD per seat).
- - Comprehensive Business Training: $3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD for 60 days (30 days live training + 30 days guidance, Q&A and written guides, 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day). Includes cohorts up to 10 participants. Extra seats at +$300 / +$225 / +$150 / +$150 / +$75 / Custom USD per seat.
- - Comprehensive Personal Training: $3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD for 60 days (30 days live training + 30 days guidance, Q&A and written guides, 60 days over 2 months with Saturday and Sunday as holidays, 4 hours per day). Strictly for 1 person only (private acceleration).
-- Global Purchasing Power Parity (PPP) Available for All Service Pricing:
- - Tier 1 (Standard / 100%): Individual $300 USD | Business $300 USD | Business 60d $3,000 USD | Personal 60d $3,000 USD (USA, UK, EU, Canada, Australia)
- - Tier 2 (Upper-Middle-Income / 25% Off): Individual $225 USD | Business $225 USD | Business 60d $2,250 USD | Personal 60d $2,250 USD: e.g. Brazil, Mexico, Malaysia, Thailand, Türkiye
- - Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off): Individual $150 USD | Business $150 USD | Business 60d $1,500 USD | Personal 60d $1,500 USD
- - Tier 5 (Academia & Non-Profits / 75% Off): Individual $75 USD | Business $75 USD | Business 60d $750 USD | Personal 60d $750 USD
- - Tier 6 (Crisis-Affected & Under-Resourced Regions): Individual $30 USD | Business $30 USD | Custom Subsidized Relief / Micro-Rates
- - Calculate and lock in your exact tier rate live on the Pricing page.
-- Payment Schedule:
- - Zero upfront advance; billed in 5 equal milestone installments due only after verified instruction and runtime delivery.
-
----
-
-## 6. Summary
+## Executive Summary
 
 - Higher Conversion Rates: Interactive AI diagnosis tools replacing static whitepapers to maximize inbound lead capture.
 - Automated Enrichment: Deep firmographic data instantly appended to every prospect profile.

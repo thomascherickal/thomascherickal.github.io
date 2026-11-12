@@ -36,7 +36,7 @@
         "schedule_notes": "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day"
       },
       "payment_rules": {
-        "structure": "Five equal installments (20% each / $500 USD base in Tier 1)",
+        "structure": "Five equal installments (20% each / $600 USD base in Tier 1)",
         "milestone_schedule": [
           {
             "installment": 1,
@@ -70,22 +70,9 @@
           }
         ],
         "support_payment": {
-          "total_usd": 500.0,
-          "structure": "Two equal installments ($250 USD each in Tier 1)",
-          "milestone_schedule": [
-            {
-              "installment": 1,
-              "amount_usd": 250.0,
-              "due_after_day": 15,
-              "description": "Completed Day 15 of support period"
-            },
-            {
-              "installment": 2,
-              "amount_usd": 250.0,
-              "due_after_day": 30,
-              "description": "Completed Day 30 of support period"
-            }
-          ]
+          "total_usd": 0.0,
+          "structure": "Included at zero charge ($0 USD)",
+          "milestone_schedule": []
         },
         "walkaway_policy": "Walk away owing nothing if not satisfied after the first 5 days of completed training."
       },
@@ -144,7 +131,7 @@
         "schedule_notes": "60 days over 2 months with Saturday and Sunday as holidays, 4 hours per day"
       },
       "payment_rules": {
-        "structure": "Five equal installments (20% each / $500 USD base in Tier 1)",
+        "structure": "Five equal installments (20% each / $600 USD base in Tier 1)",
         "milestone_schedule": [
           {
             "installment": 1,
@@ -178,22 +165,9 @@
           }
         ],
         "support_payment": {
-          "total_usd": 500.0,
-          "structure": "Two equal installments ($250 USD each in Tier 1)",
-          "milestone_schedule": [
-            {
-              "installment": 1,
-              "amount_usd": 250.0,
-              "due_after_day": 15,
-              "description": "Completed Day 15 of support period"
-            },
-            {
-              "installment": 2,
-              "amount_usd": 250.0,
-              "due_after_day": 30,
-              "description": "Completed Day 30 of support period"
-            }
-          ]
+          "total_usd": 0.0,
+          "structure": "Included at zero charge ($0 USD)",
+          "milestone_schedule": []
         },
         "walkaway_policy": "Walk away owing nothing if not satisfied after the first 5 days of completed training."
       },
@@ -244,7 +218,7 @@
         "support_phase_description": "5 days of guidance, assistance, implementation, Q&A, and written guides licensed under Apache 2.0."
       },
       "payment_rules": {
-        "structure": "Five equal installments (20% each / $50 USD base in Tier 1)",
+        "structure": "Five equal installments (20% each / $60 USD base in Tier 1)",
         "milestone_schedule": [
           {
             "installment": 1,
@@ -278,16 +252,9 @@
           }
         ],
         "support_payment": {
-          "total_usd": 50.0,
-          "structure": "Single installment ($50 USD in Tier 1)",
-          "milestone_schedule": [
-            {
-              "installment": 1,
-              "amount_usd": 50.0,
-              "due_after_day": 5,
-              "description": "Completed Day 5 of support period"
-            }
-          ]
+          "total_usd": 0.0,
+          "structure": "Included at zero charge ($0 USD)",
+          "milestone_schedule": []
         },
         "walkaway_policy": "Walk away owing nothing if not satisfied after the first 1 day of completed training."
       },
@@ -345,7 +312,7 @@
         "support_phase_description": "5 days of guidance, assistance, implementation, Q&A, and written guides with IP belonging to the author."
       },
       "payment_rules": {
-        "structure": "Five equal installments (20% each / $50 USD base in Tier 1)",
+        "structure": "Five equal installments (20% each / $60 USD base in Tier 1)",
         "milestone_schedule": [
           {
             "installment": 1,
@@ -379,16 +346,9 @@
           }
         ],
         "support_payment": {
-          "total_usd": 50.0,
-          "structure": "Single installment ($50 USD in Tier 1)",
-          "milestone_schedule": [
-            {
-              "installment": 1,
-              "amount_usd": 50.0,
-              "due_after_day": 5,
-              "description": "Completed Day 5 of support period"
-            }
-          ]
+          "total_usd": 0.0,
+          "structure": "Included at zero charge ($0 USD)",
+          "milestone_schedule": []
         },
         "walkaway_policy": "Walk away owing nothing if not satisfied after the first 1 day of completed training."
       },
@@ -429,31 +389,11 @@
       "policy_summary": "Strictly $0 upfront. Invoiced in 5 equal installments (20% each) due strictly after completed milestone blocks of training progress."
     },
     "support_payment_structure": {
-      "flagship_support_total_usd": 500,
-      "flagship_support_installments": [
-        {
-          "installment": 1,
-          "amount_usd": 250,
-          "due_after_day": 15,
-          "description": "Completed Day 15 of support period"
-        },
-        {
-          "installment": 2,
-          "amount_usd": 250,
-          "due_after_day": 30,
-          "description": "Completed Day 30 of support period"
-        }
-      ],
-      "individual_service_support_total_usd": 50,
-      "individual_service_support_installments": [
-        {
-          "installment": 1,
-          "amount_usd": 50,
-          "due_after_day": 5,
-          "description": "Completed Day 5 of support period"
-        }
-      ],
-      "policy_summary": "Zero upfront payment for support; installments are paid strictly after verifying support delivery (after 15 and 30 days for flagships; after 5 days for individual services). Subject to parity discounts."
+      "flagship_support_total_usd": 0,
+      "flagship_support_installments": [],
+      "individual_service_support_total_usd": 0,
+      "individual_service_support_installments": [],
+      "policy_summary": "Zero charge for support periods. All dedicated operational support (30 days for flagships, 5 days for individual services) is 100% included and fully covered by the base price and its scaled parity tiers."
     },
     "risk_free_guarantees": {
       "walkaway_guarantee": "Walk away owing nothing if not satisfied after the first milestone training phase.",
