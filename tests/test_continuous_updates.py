@@ -33,7 +33,7 @@ class TestContinuousUpdates(unittest.TestCase):
         # Target files that will be modified during tests
         self.pricing_html = os.path.join(REPO_DIR, "pricing.html")
         self.calc_js = os.path.join(REPO_DIR, "pricing-calculator.js")
-        self.personal_ai_html = os.path.join(REPO_DIR, "personal-ai-training.html")
+        self.personal_ai_html = os.path.join(REPO_DIR, "all-personal-services.html")
         self.guarantees_html = os.path.join(REPO_DIR, "guarantees.html")
 
         # Snapshot original contents of target files
@@ -130,7 +130,7 @@ class TestContinuousUpdates(unittest.TestCase):
 
         with open(self.personal_ai_html, "r", encoding="utf-8") as f:
             content1 = f.read()
-        self.assertIn("Service: 04 (Custom Agentic Workflow)", content1)
+        self.assertIn("Custom Agentic Workflow", content1)
 
 if __name__ == "__main__":
     unittest.main()

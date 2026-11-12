@@ -45,16 +45,15 @@ DOMAIN_TARGET_PATTERNS = {
     "pricing": {
         "pricing.html", "index.html", "pricing-calculator.js",
         "guarantees.html", "llms.txt", "contact.html", "faqs.html",
-        "business-ai-training.html", "personal-ai-training.html",
         "all-business-services.html", "all-personal-services.html",
         "business-services", "personal-services"
     },
     "business_services": {
-        "all-business-services.html", "business-ai-training.html",
+        "all-business-services.html",
         "business-services"
     },
     "personal_services": {
-        "all-personal-services.html", "personal-ai-training.html",
+        "all-personal-services.html",
         "personal-services"
     },
     "tiers": {
@@ -72,7 +71,6 @@ DOMAIN_TARGET_PATTERNS = {
     },
     "config": {
         "index.html", "pricing.html", "contact.html", "faqs.html", "guarantees.html",
-        "business-ai-training.html", "personal-ai-training.html",
         "all-business-services.html", "all-personal-services.html",
         "404.html", "expertise.html"
     },
@@ -431,7 +429,7 @@ class ExpertSynchronizer:
             sample_files = [
                 "pricing.html", "index.html", "guarantees.html", "pricing-calculator.js",
                 "all-business-services.html", "all-personal-services.html",
-                "faqs.html", "business-ai-training.html", "personal-ai-training.html",
+                "faqs.html",
                 "contact.html", "llms.txt",
             ]
             for rep in file_reports:

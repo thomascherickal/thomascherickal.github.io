@@ -36,7 +36,7 @@ class TestSyncBusinessServices(unittest.TestCase):
             self.assertIsNotNone(slug, f"Service {num} slug must exist")
 
     def test_sync_business_cards_and_curriculum(self):
-        """Verifies sync_all updates all-business-services.html and business-ai-training.html."""
+        """Verifies sync_all updates all-business-services.html and all-business-services.html."""
         self.orchestrator.sync_all()
 
         biz_cards_path = os.path.join(REPO_DIR, "all-business-services.html")
@@ -46,10 +46,10 @@ class TestSyncBusinessServices(unittest.TestCase):
         svc01_name = self.kb.get_fact("business_services", "01_name")
         self.assertIn(svc01_name, content)
 
-        curriculum_path = os.path.join(REPO_DIR, "business-ai-training.html")
+        curriculum_path = os.path.join(REPO_DIR, "all-business-services.html")
         with open(curriculum_path, "r", encoding="utf-8") as f:
             c_content = f.read()
-        self.assertIn(f"Service: 01 ({svc01_name})", c_content)
+        self.assertIn(svc01_name, c_content)
 
     def test_references_and_markdown(self):
         """Verifies business_services_references.json and business-services.md exist."""

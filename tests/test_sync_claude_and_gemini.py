@@ -71,13 +71,31 @@ class TestSyncClaudeAndGemini(unittest.TestCase):
         self.assertIn("Argon", content)
 
     def test_claude_guides_completeness(self):
-        """Verifies all 12 Claude guides exist on disk and have proper structure."""
-        cl_guides = self.kb.raw_data.get("claude", {}).get("guides", [])
-        self.assertEqual(len(cl_guides), 12, "Must track exactly 12 Claude guides")
+        """Verifies all Claude guides exist on disk and match declared count."""
+        cl_data = self.kb.raw_data.get("claude", {})
+        cl_guides = cl_data.get("guides", [])
+        self.assertEqual(len(cl_guides), cl_data.get("count"), "Claude guides length must match count")
         for g in cl_guides:
             slug = g["slug"]
             path = os.path.join(REPO_DIR, "claude-training", slug)
             self.assertTrue(os.path.exists(path), f"Claude guide {slug} must exist on disk")
+
+    def test_all_domain_counts_match_disk(self):
+        """Verifies count in claude.json, gemini.json, business-services.json, personal-services.json matches disk."""
+        domains = [
+            ("claude", "guides", "claude-training"),
+            ("gemini", "guides", "gemini-training"),
+            ("business_services", "services", "business-services"),
+            ("personal_services", "services", "personal-services"),
+        ]
+        for key, list_key, folder in domains:
+            data = self.kb.raw_data.get(key, {})
+            items = data.get(list_key, [])
+            declared = data.get("count")
+            disk_files = [f for f in os.listdir(os.path.join(REPO_DIR, folder)) if f.endswith(".html")]
+            self.assertIsNotNone(declared, f"{key}.json must declare count")
+            self.assertEqual(len(items), declared, f"{key}.json {list_key} length must equal count")
+            self.assertEqual(len(disk_files), declared, f"{folder}/ HTML count must equal {key}.json count")
 
 if __name__ == "__main__":
     unittest.main()

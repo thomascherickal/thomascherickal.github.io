@@ -24,8 +24,6 @@ CORE_PAGES = [
     ("guarantees.html", "guarantees.html"),
     ("all-business-services.html", "all-business-services.html"),
     ("all-personal-services.html", "all-personal-services.html"),
-    ("business-ai-training.html", "business-ai-training.html"),
-    ("personal-ai-training.html", "personal-ai-training.html"),
 ]
 
 # 12 Business Service Pages
@@ -51,17 +49,21 @@ BUSINESS_SERVICES = [
 # 12 claude Guide Pages
 CLAUDE_GUIDES = [
     "claude-training/claude-101.html",
-    "claude-training/claude-features.html",
+    "claude-training/claude-projects.html",
     "claude-training/claude-code.html",
     "claude-training/claude-cowork.html",
     "claude-training/claude-skills.html",
-    "claude-training/claude-custom-mcp.html",
+    "claude-training/claude-mcp.html",
     "claude-training/claude-plugins.html",
     "claude-training/claude-connectors.html",
     "claude-training/claude-orchestration.html",
     "claude-training/claude-design.html",
     "claude-training/claude-science.html",
     "claude-training/claude-local-llms.html",
+    "claude-training/claude-artifacts.html",
+    "claude-training/claude-dashboards.html",
+    "claude-training/claude-mods.html",
+    "claude-training/claude-white-boards.html",
 ]
 
 # 12 google Gemini Guide Pages
@@ -78,6 +80,10 @@ GEMINI_GUIDES = [
     "gemini-training/google-multimodality.html",
     "gemini-training/google-gemini-4-carbon.html",
     "gemini-training/google-gemini-4-hydrogen.html",
+    "gemini-training/google-code-wiki.html",
+    "gemini-training/google-deep-research.html",
+    "gemini-training/google-gemini-4-krypton.html",
+    "gemini-training/google-gemini-skills.html",
 ]
 
 def get_git_lastmod(rel_path: str) -> str:

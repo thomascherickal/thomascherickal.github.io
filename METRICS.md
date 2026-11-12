@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-12 22:13:03 UTC` | Branch: `main` | Head Commit: `4d5eb78`
+> **Automated Status Report** | Generated on `2026-11-12 22:40:06 UTC` | Branch: `main` | Head Commit: `59e1f1b`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **541** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **864,656** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **846,882** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **6,080** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,694** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **53.04 MB (55,616,088 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **792,675 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **534** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-13** | Subject: "Images deleted" |
+| **Total Tracked Files** | **535** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **872,015** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **854,469** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,962** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **11,584** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **53.22 MB (55,806,760 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **790,046 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **535** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-13** | Subject: "feat(synchronizer): synchronize repository state (1 test failure warnings - see failed_unit_tests.report.md)" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,15 +27,15 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 88 | 97,066 | 7.68 MB (8,055,592 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 86 | 96,479 | 7.65 MB (8,017,942 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,935 | 279.90 KB (286,613 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 32 | 11,357 | 3.69 MB (3,874,310 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 58 | 15,199 | 680.21 KB (696,533 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 150 | 38,004 | 4.33 MB (4,539,178 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 100 | 691,042 | 31.65 MB (33,185,669 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **JavaScript Scripts** | 32 | 11,361 | 3.69 MB (3,874,426 bytes) | Client-side interactivity, search, filter & components |
+| **Python Tooling** | 58 | 15,216 | 680.63 KB (696,970 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 148 | 38,166 | 4.36 MB (4,576,498 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 98 | 698,805 | 31.83 MB (33,376,632 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 38 | 0 | 4.27 MB (4,479,410 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 17 | 0 | 422.16 KB (432,295 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 17 | 0 | 421.66 KB (431,781 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,20 +43,20 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 100 | 691,042 | 31.65 MB (33,185,669 bytes) | 18.5% |
-| `.html` | 88 | 97,066 | 7.68 MB (8,055,592 bytes) | 16.3% |
-| `.md` | 150 | 38,004 | 4.33 MB (4,539,178 bytes) | 27.7% |
-| `.py` | 58 | 15,199 | 680.21 KB (696,533 bytes) | 10.7% |
+| `.json` | 98 | 698,805 | 31.83 MB (33,376,632 bytes) | 18.3% |
+| `.html` | 86 | 96,479 | 7.65 MB (8,017,942 bytes) | 16.1% |
+| `.md` | 148 | 38,166 | 4.36 MB (4,576,498 bytes) | 27.7% |
+| `.py` | 58 | 15,216 | 680.63 KB (696,970 bytes) | 10.8% |
 | `.css` | 16 | 11,935 | 279.90 KB (286,613 bytes) | 3.0% |
-| `.js` | 32 | 11,357 | 3.69 MB (3,874,310 bytes) | 5.9% |
-| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 7.8% |
-| `.webp` | 17 | 0 | 1.62 MB (1,695,354 bytes) | 3.1% |
+| `.js` | 32 | 11,361 | 3.69 MB (3,874,426 bytes) | 6.0% |
+| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 7.9% |
+| `.webp` | 17 | 0 | 1.62 MB (1,695,354 bytes) | 3.2% |
 | `.png` | 13 | 0 | 1.39 MB (1,454,059 bytes) | 2.4% |
 | `.jpg` | 5 | 0 | 988.42 KB (1,012,141 bytes) | 0.9% |
 | `.jpeg` | 2 | 0 | 303.67 KB (310,957 bytes) | 0.4% |
 | `.pptx` | 3 | 0 | 299.62 KB (306,806 bytes) | 0.6% |
 | `.docx` | 4 | 0 | 71.08 KB (72,789 bytes) | 0.7% |
-| `.txt` | 2 | 0 | 36.10 KB (36,971 bytes) | 0.4% |
+| `.txt` | 2 | 0 | 35.60 KB (36,457 bytes) | 0.4% |
 | `[no extension]` | 6 | 0 | 8.19 KB (8,383 bytes) | 1.1% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
 | `.xml` | 1 | 0 | 6.65 KB (6,808 bytes) | 0.2% |
@@ -72,20 +72,20 @@
 | **CSS Rule Blocks** | **1,621** | Modular selector rules across all stylesheets |
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **198** | Rich searchable & filterable accordion cards |
-| **Primary Headings (`<h1>`)** | **75** | Strict single-H1 semantic hierarchy per page |
-| **Secondary Section Headings (`<h2>`)** | **874** | Structural topic subdivisions |
-| **Card & Item Headings (`<h3>`)** | **692** | Individual service, question, and feature cards |
-| **Call-to-Action (CTA) Modules** | **93** | Standardized CTAs with Free LinkedIn Consultation rule |
-| **Canonical Links Configured** | **74** | 100% SEO canonical URL coverage across public pages |
-| **Open Graph Meta Tags** | **528** | Social preview cards across Twitter/LinkedIn/Facebook |
-| **Structured Data Blocks (JSON-LD)** | **75** | Schema.org FAQPage, Service, Person, Organization schemas |
+| **Primary Headings (`<h1>`)** | **73** | Strict single-H1 semantic hierarchy per page |
+| **Secondary Section Headings (`<h2>`)** | **862** | Structural topic subdivisions |
+| **Card & Item Headings (`<h3>`)** | **660** | Individual service, question, and feature cards |
+| **Call-to-Action (CTA) Modules** | **89** | Standardized CTAs with Free LinkedIn Consultation rule |
+| **Canonical Links Configured** | **72** | 100% SEO canonical URL coverage across public pages |
+| **Open Graph Meta Tags** | **518** | Social preview cards across Twitter/LinkedIn/Facebook |
+| **Structured Data Blocks (JSON-LD)** | **73** | Schema.org FAQPage, Service, Person, Organization schemas |
 
 ---
 
 ## 5. Web Page Taxonomy & Sitemap Distribution
 
-- **Total Public HTML Pages**: **88**
-- **Core Landing & Portal Pages**: **24** (`404.html`, `all-business-services.html`, `all-personal-services.html`, `article-footers/article-footer_dark.html`, `articles.html`, `business-ai-training.html`, `contact.html`, `expertise.html`, `faqs.html`, `footer.html`, `google43d90cf6a204dc6d.html`, `guarantees.html`, `header.html`, `index.html`, `mermaid.html`, `personal-ai-training.html`, `pricing.html`, `pricing/pricing-tier-1-usa-china-eu-100.html`, `pricing/pricing-tier-2-brazil-malaysia-75.html`, `pricing/pricing-tier-3-india-egypt-50.html`, `pricing/pricing-tier-4-tech-startups-50.html`, `pricing/pricing-tier-5-colleges-non-profits-25.html`, `pricing/pricing-tier-6-crisis-affected-10.html`, `writing.html`)
+- **Total Public HTML Pages**: **86**
+- **Core Landing & Portal Pages**: **22** (`404.html`, `all-business-services.html`, `all-personal-services.html`, `article-footers/article-footer_dark.html`, `articles.html`, `contact.html`, `expertise.html`, `faqs.html`, `footer.html`, `google43d90cf6a204dc6d.html`, `guarantees.html`, `header.html`, `index.html`, `mermaid.html`, `pricing.html`, `pricing/pricing-tier-1-usa-china-eu-100.html`, `pricing/pricing-tier-2-brazil-malaysia-75.html`, `pricing/pricing-tier-3-india-egypt-50.html`, `pricing/pricing-tier-4-tech-startups-50.html`, `pricing/pricing-tier-5-colleges-non-profits-25.html`, `pricing/pricing-tier-6-crisis-affected-10.html`, `writing.html`)
 - **Business AI Training Services (`business-services/`)**: **16** (Full enterprise curriculum, lead gen, agent orchestration, and architecture deep-dives)
 - **Personal AI Training Services (`personal-services/`)**: **16** (1-on-1 private acceleration, career transformation, continuous learning, and agentic workflows)
 - **Claude Guides & Frameworks (`claude/`)**: **16** (Claude Code, Cowork, Skills, MCP, Orchestration, Plugins, Science, Local LLMs, Features)
@@ -108,7 +108,7 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **432 functions** across tooling scripts | Modular execution units |
+| **Python Function Definitions** | **433 functions** across tooling scripts | Modular execution units |
 | **Python Class Definitions** | **39 classes** | Structured state containers |
 
 ---

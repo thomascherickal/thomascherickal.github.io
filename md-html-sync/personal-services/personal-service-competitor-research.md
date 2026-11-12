@@ -1,4 +1,4 @@
-# Competitor Research & Intelligence
+# Competitor Research
 ## Business AI Transformation Service - Thomas Cherickal
 
 > **// PERSONAL SERVICE SPECIFICATION - SOLO COMPETITIVE INTELLIGENCE**  

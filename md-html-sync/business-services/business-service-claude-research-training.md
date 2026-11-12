@@ -1,4 +1,4 @@
-# Enterprise Claude Research & Training
+# Claude Research Training
 ## Business AI Transformation Service - Thomas Cherickal
 
 > **// ENTERPRISE SERVICE SPECIFICATION - CLAUDE RESEARCH & TRAINING**  

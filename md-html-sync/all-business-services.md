@@ -107,6 +107,34 @@ Build a shared team knowledge vault in Markdown with automated capture, local-mo
 
 Establish continuous organizational learning loops, autonomous industry research synthesis, executive briefings, and automated institutional skill acquisition.
 
+### Claude Research Training
+
+**Category**: `Claude Research`  
+**Link**: [Claude Research Training](business-services/business-service-claude-research-training.html)
+
+Train enterprise research teams to run citation-verified, multi-agent Claude research pipelines with MCP tool grounding and evaluation harnesses.
+
+### Gemini Research Training
+
+**Category**: `Gemini Research`  
+**Link**: [Gemini Research Training](business-services/business-service-gemini-research-training.html)
+
+Equip enterprise analysts to synthesize million-token corpora with Gemini Deep Research, context caching, and deterministic citation verification.
+
+### Knowledge Graphs
+
+**Category**: `Enterprise GraphRAG`  
+**Link**: [Knowledge Graphs](business-services/business-service-knowledge-graphs.html)
+
+Architect enterprise GraphRAG pipelines with Neo4j, ontology governance, entity resolution, and verifiable multi-hop reasoning.
+
+### Local AI for Sensitive Data
+
+**Category**: `Zero-Egress AI`  
+**Link**: [Local AI for Sensitive Data](business-services/business-service-local-ai-for-sensitive-data.html)
+
+Deploy zero-egress, air-gapped local LLM and PII redaction infrastructure for regulated healthcare, legal, and financial datasets.
+
 ## Ready
  to Transform Your Organization?
 

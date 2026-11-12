@@ -17,7 +17,7 @@ DIRECTORY_METADATA = {
         'description': 'Root entry point containing core portal pages, global navigation inliners, pricing calculators, and master architectural specifications.',
         'tags': ['root', 'portal', 'entry-points', 'architecture', 'ssot'],
         'guidelines': [
-            'Houses core landing pages (`index.html`, `business-ai-training.html`, `personal-ai-training.html`, `pricing.html`, `all-business-services.html`, `all-personal-services.html`).',
+            'Houses core landing pages (`index.html`, `pricing.html`, `all-business-services.html`, `all-personal-services.html`).',
             'Master component sources `header.html` and `footer.html` live here. Modifying either requires immediately running `python3 python/build_components.py` to inline across all HTML pages.',
             '`GEMINI.md` is the ultimate authoritative project specification and single source of truth (SSOT).',
             '`METRICS.md` tracks codebase telemetry and is automatically refreshed by `python3 python/generate_metrics.py`.',

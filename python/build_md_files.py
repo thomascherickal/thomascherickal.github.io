@@ -874,8 +874,7 @@ def main(repo_dir: str = None, sync_dir: str = None):
     overview_pages = [
         "all-business-services.html",
         "all-personal-services.html",
-        "business-ai-training.html",
-        "personal-ai-training.html"
+
     ]
     for page in overview_pages:
         src_path = os.path.join(target_repo, page)

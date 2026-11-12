@@ -100,6 +100,34 @@ Accelerate personal research with Claude: 1M token context synthesis, multi-pape
 
 End-to-end automation pipelines connecting email, task managers, and local LLMs via n8n and open-source stacks.
 
+### AI-Assisted Leads Magnet
+
+**Category**: `Interactive Funnels`  
+**Link**: [AI-Assisted Leads Magnet](personal-services/personal-service-ai-assisted-leads-magnet.html)
+
+Build interactive, AI-powered diagnostic calculators, personalized audits, and automated lead-capture funnels for solo practitioners.
+
+### Competitor Research
+
+**Category**: `Niche Radar`  
+**Link**: [Competitor Research](personal-services/personal-service-competitor-research.html)
+
+Set up a solo competitive intelligence radar that tracks competitor positioning, pricing, and product launches automatically.
+
+### Knowledge Graphs
+
+**Category**: `Personal GraphRAG`  
+**Link**: [Knowledge Graphs](personal-services/personal-service-knowledge-graphs.html)
+
+Turn personal notes, PDFs, and research vaults into a local GraphRAG knowledge graph with SQLite, NetworkX, and Ollama.
+
+### Local AI for Sensitive Data
+
+**Category**: `Private Local AI`  
+**Link**: [Local AI for Sensitive Data](personal-services/personal-service-local-ai-for-sensitive-data.html)
+
+Run zero-egress local LLMs, reversible PII redaction, and encrypted vector stores on your own workstation for private documents.
+
 ## Ready to Accelerate Your AI Skills?
 
 Explore full details, check purchasing power parity discounts, or get in touch for custom 1-on-1 mentorship scheduling.

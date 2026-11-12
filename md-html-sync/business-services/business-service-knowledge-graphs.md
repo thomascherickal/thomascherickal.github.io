@@ -1,4 +1,4 @@
-# Knowledge Graphs & GraphRAG
+# Knowledge Graphs
 ## Business AI Transformation Service - Thomas Cherickal
 
 > **// SERVICE SPECIFICATION - ENTERPRISE KNOWLEDGE ARCHITECTURE**  

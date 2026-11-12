@@ -41,8 +41,6 @@ PAGE_MAPPINGS = {
     "expertise.html": "expertise.md",
     "contact.html": "contact.md",
     "faqs.html": "faqs.md",
-    "personal-ai-training.html": "personal-ai-training.md",
-    "business-ai-training.html": "business-ai-training.md",
     "all-business-services.html": "all-business-services.md",
     "all-personal-services.html": "all-personal-services.md",
     "404.html": "404.md"
@@ -321,7 +319,7 @@ def sync_html_to_md(html_name: str, md_name: str):
         content = build_md_files.convert_faqs(html_path)
     elif html_name == "404.html":  # pragma: no cover
         content = build_md_files.convert_404()
-    elif html_name in ["business-ai-training.html", "personal-ai-training.html", "all-business-services.html", "all-personal-services.html"]:  # pragma: no cover
+    elif html_name in ["all-business-services.html", "all-personal-services.html"]:  # pragma: no cover
         content = build_md_files.convert_general_document(html_path)
     elif "business-services" in html_name or "personal-services" in html_name:
         content = build_md_files.convert_service_page(html_path)

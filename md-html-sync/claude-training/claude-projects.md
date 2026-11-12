@@ -1,4 +1,4 @@
-# Claude Frontier Features: Context, Speed & Tool Use
+# Claude Projects: Persistent Context & Knowledge Workspaces
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  

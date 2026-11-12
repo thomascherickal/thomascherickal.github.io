@@ -1,4 +1,4 @@
-# Custom Model Context Protocol (MCP) Server Development
+# Claude MCP: Model Context Protocol & Custom Tool Servers
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  

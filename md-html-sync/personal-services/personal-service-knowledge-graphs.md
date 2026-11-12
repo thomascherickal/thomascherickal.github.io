@@ -1,4 +1,4 @@
-# Personal Knowledge Graphs
+# Knowledge Graphs
 ## Business AI Transformation Service - Thomas Cherickal
 
 > **// BUSINESS AI TRANSFORMATION SERVICE**  

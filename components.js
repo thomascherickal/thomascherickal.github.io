@@ -48,17 +48,21 @@
     var lowerDecodedPage = page ? decodeURIComponent(page).toLowerCase() : '';
         var orchestrationPages = [
       'claude-101.html',
-      'claude-features.html',
+      'claude-projects.html',
       'claude-code.html',
       'claude-cowork.html',
       'claude-skills.html',
-      'claude-custom-mcp.html',
+      'claude-mcp.html',
       'claude-plugins.html',
       'claude-connectors.html',
       'claude-orchestration.html',
       'claude-design.html',
       'claude-science.html',
-      'claude-local-llms.html'
+      'claude-local-llms.html',
+      'claude-artifacts.html',
+      'claude-dashboards.html',
+      'claude-mods.html',
+      'claude-white-boards.html'
     ];
     if (orchestrationPages.indexOf(lowerDecodedPage) !== -1) {
       var orchToggles = document.querySelectorAll('.nav-dropdown');

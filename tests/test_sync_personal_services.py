@@ -36,7 +36,7 @@ class TestSyncPersonalServices(unittest.TestCase):
             self.assertIsNotNone(slug, f"Personal Service {num} slug must exist")
 
     def test_sync_personal_cards_and_curriculum(self):
-        """Verifies sync_all updates all-personal-services.html and personal-ai-training.html."""
+        """Verifies sync_all updates all-personal-services.html and all-personal-services.html."""
         self.orchestrator.sync_all()
 
         pers_cards_path = os.path.join(REPO_DIR, "all-personal-services.html")
@@ -46,10 +46,10 @@ class TestSyncPersonalServices(unittest.TestCase):
         svc01_name = self.kb.get_fact("personal_services", "01_name")
         self.assertIn(svc01_name, content)
 
-        curriculum_path = os.path.join(REPO_DIR, "personal-ai-training.html")
+        curriculum_path = os.path.join(REPO_DIR, "all-personal-services.html")
         with open(curriculum_path, "r", encoding="utf-8") as f:
             c_content = f.read()
-        self.assertIn(f"Service: 01 ({svc01_name})", c_content)
+        self.assertIn(svc01_name, c_content)
 
     def test_references_and_markdown(self):
         """Verifies personal_services_references.json and personal-services.md exist."""
