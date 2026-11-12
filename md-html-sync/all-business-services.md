@@ -56,7 +56,7 @@ Deploy open-weights Agentic Assistants agent loops with multi-turn tool calling,
 **Category**: `Automation Pipelines`  
 **Link**: [Workflow Automations](business-services/business-service-workflow-automations.html)
 
-End-to-end automation pipelines connecting CRM, databases, email, and LLM backends via n8n, Make, and open-source stacks.
+End-to-end automation pipelines connecting CRM, databases, email, and LLM backends via Claude, Web APIs and open-source stacks.
 
 ### AI Budget & Cost Control
 
