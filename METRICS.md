@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-13 06:31:19 UTC` | Branch: `main` | Head Commit: `9fb4ba6`
+> **Automated Status Report** | Generated on `2026-11-13 06:36:55 UTC` | Branch: `main` | Head Commit: `5cc376b`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **550** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **938,955** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **919,567** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **6,461** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **12,927** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **56.48 MB (59,226,674 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **843,525 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **539** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-13** | Subject: "Some Pricing Edits" |
+| **Total Lines of Source Code & Content** | **938,787** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **919,391** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **6,463** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **12,933** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **56.47 MB (59,216,606 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **842,850 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **540** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-13** | Subject: "Guides populated" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -30,8 +30,8 @@
 | **HTML Documents** | 86 | 104,032 | 8.21 MB (8,604,150 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,935 | 279.90 KB (286,613 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 32 | 11,361 | 3.69 MB (3,874,433 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 59 | 15,247 | 681.75 KB (698,110 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 152 | 42,463 | 4.71 MB (4,943,597 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Python Tooling** | 59 | 15,303 | 684.42 KB (700,844 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 152 | 42,239 | 4.70 MB (4,930,795 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 108 | 753,864 | 34.18 MB (35,842,092 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 38 | 0 | 4.27 MB (4,479,410 bytes) | Optimized feature hero graphics, social cards & assets |
@@ -45,8 +45,8 @@
 | :--- | :--- | :--- | :--- | :--- |
 | `.json` | 108 | 753,864 | 34.18 MB (35,842,092 bytes) | 19.6% |
 | `.html` | 86 | 104,032 | 8.21 MB (8,604,150 bytes) | 15.6% |
-| `.md` | 152 | 42,463 | 4.71 MB (4,943,597 bytes) | 27.6% |
-| `.py` | 59 | 15,247 | 681.75 KB (698,110 bytes) | 10.7% |
+| `.md` | 152 | 42,239 | 4.70 MB (4,930,795 bytes) | 27.6% |
+| `.py` | 59 | 15,303 | 684.42 KB (700,844 bytes) | 10.7% |
 | `.css` | 16 | 11,935 | 279.90 KB (286,613 bytes) | 2.9% |
 | `.js` | 32 | 11,361 | 3.69 MB (3,874,433 bytes) | 5.8% |
 | `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 7.6% |
@@ -108,7 +108,7 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **436 functions** across tooling scripts | Modular execution units |
+| **Python Function Definitions** | **437 functions** across tooling scripts | Modular execution units |
 | **Python Class Definitions** | **39 classes** | Structured state containers |
 
 ---

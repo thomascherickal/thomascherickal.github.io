@@ -247,7 +247,8 @@ def count_schemas_and_mirrors():
 
     md_count = 0
     if os.path.exists(MD_SYNC_DIR):
-        md_count = len([f for f in os.listdir(MD_SYNC_DIR) if f.endswith(".md") and not f.startswith(".")])
+        for _, _, files in os.walk(MD_SYNC_DIR):
+            md_count += len([f for f in files if f.endswith(".md") and not f.startswith(".")])
 
     data_count = 0
     if os.path.exists(DATA_DIR):
@@ -258,6 +259,32 @@ def count_schemas_and_mirrors():
         "markdown_mirrors": md_count or 13,
         "data_domains": data_count or 9
     }
+
+
+def count_synced_folders():
+    """Returns a list of (folder_name, file_count) for all synced folders."""
+    folders = [
+        ("Root HTML (/)", REPO_ROOT, ".html", False),
+        ("business-services/", os.path.join(REPO_ROOT, "business-services"), ".html", False),
+        ("personal-services/", os.path.join(REPO_ROOT, "personal-services"), ".html", False),
+        ("claude-training/", os.path.join(REPO_ROOT, "claude-training"), ".html", False),
+        ("gemini-training/", os.path.join(REPO_ROOT, "gemini-training"), ".html", False),
+        ("pricing/", os.path.join(REPO_ROOT, "pricing"), ".html", False),
+        ("md-html-sync/", MD_SYNC_DIR, ".md", True),
+        ("schema/", SCHEMA_DIR, ".json", False),
+        ("data/", DATA_DIR, ".json", False),
+    ]
+    results = []
+    for label, path, ext, recursive in folders:
+        count = 0
+        if os.path.exists(path):
+            if recursive:
+                for _, _, files in os.walk(path):
+                    count += len([f for f in files if f.endswith(ext) and not f.startswith(".")])
+            else:
+                count = len([f for f in os.listdir(path) if f.endswith(ext) and not f.startswith(".")])
+        results.append((label, count))
+    return results
 
 
 def generate_last_commit_report(output_file=REPORT_FILE):
@@ -459,6 +486,13 @@ def generate_last_commit_report(output_file=REPORT_FILE):
     lines.append(f"| **Structured JSON-LD Schemas** | {schema_count} schema files in `schema/` | {schema_count} | 0 | 100% IN SYNC |")
     lines.append(f"| **Markdown Page Mirrors** | {md_count} paired markdown files in `md-html-sync/` | {md_count} | 0 | 100% IN SYNC |")
     lines.append(f"| **SSOT Data Immutability** | {data_count} authoritative JSON files in `data/` | {data_count} | 0 | SHA-256 VERIFIED |")
+    lines.append("")
+
+    # Subsection: Synced Folders
+    lines.append("### Synced Folders")
+    lines.append("")
+    for folder_label, folder_count in count_synced_folders():
+        lines.append(f"- `{folder_label}` ({folder_count} files)")
     lines.append("")
 
     # Section: Changed Files & Status (staged)

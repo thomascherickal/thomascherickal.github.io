@@ -199,6 +199,28 @@ def print_sync_summary():
         print(row)
 
     print(sep_line)
+    print("Synced Folders:")
+    folder_specs = [
+        ("Root HTML (/)", REPO_DIR, ".html", False),
+        ("business-services/", os.path.join(REPO_DIR, "business-services"), ".html", False),
+        ("personal-services/", os.path.join(REPO_DIR, "personal-services"), ".html", False),
+        ("claude-training/", os.path.join(REPO_DIR, "claude-training"), ".html", False),
+        ("gemini-training/", os.path.join(REPO_DIR, "gemini-training"), ".html", False),
+        ("pricing/", os.path.join(REPO_DIR, "pricing"), ".html", False),
+        ("md-html-sync/", os.path.join(REPO_DIR, "md-html-sync"), ".md", True),
+        ("schema/", os.path.join(REPO_DIR, "schema"), ".json", False),
+        ("data/", os.path.join(REPO_DIR, "data"), ".json", False),
+    ]
+    for label, path, ext, recursive in folder_specs:
+        count = 0
+        if os.path.exists(path):
+            if recursive:
+                for _, _, files in os.walk(path):
+                    count += len([f for f in files if f.endswith(ext) and not f.startswith(".")])
+            else:
+                count = len([f for f in os.listdir(path) if f.endswith(ext) and not f.startswith(".")])
+        print(f"  - {label} ({count} files)")
+
     summary_txt = f"Summary: {total_files} target files evaluated | {updated_files} updated | {synced_files} in sync | 0 broken links"
     print(summary_txt)
     print("=" * 80)
