@@ -28,7 +28,7 @@ SYNC_DIR = os.path.join(REPO_DIR, "md-html-sync")
 STATE_FILE = os.path.join(SYNC_DIR, ".sync-state.json")
 
 os.makedirs(SYNC_DIR, exist_ok=True)
-for sub in ["business-services", "personal-services", "claude-training", "gemini-training"]:
+for sub in ["business-services", "personal-services", "claude-training", "gemini-training", "pricing"]:
     os.makedirs(os.path.join(SYNC_DIR, sub), exist_ok=True)
 
 # Map relative HTML files to relative Markdown files in md-html-sync/
@@ -51,7 +51,7 @@ def get_html_path(rel_html_path: str) -> str:
     return os.path.join(REPO_DIR, rel_html_path)
 
 # Auto-discover subdirectory HTML files
-for subdir in ["business-services", "personal-services", "claude-training", "gemini-training"]:
+for subdir in ["business-services", "personal-services", "claude-training", "gemini-training", "pricing"]:
     sub_dir_path = os.path.join(REPO_DIR, subdir)
     if not os.path.isdir(sub_dir_path):  # pragma: no cover
         continue

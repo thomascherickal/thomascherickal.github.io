@@ -54,7 +54,8 @@ def build():
         glob.glob(os.path.join(REPO_DIR, "business-services", "*.html")) +
         glob.glob(os.path.join(REPO_DIR, "personal-services", "*.html")) +
         glob.glob(os.path.join(REPO_DIR, "gemini-training", "*.html")) +
-        glob.glob(os.path.join(REPO_DIR, "claude-training", "*.html"))
+        glob.glob(os.path.join(REPO_DIR, "claude-training", "*.html")) +
+        glob.glob(os.path.join(REPO_DIR, "pricing", "*.html"))
     )
     excluded = {
         os.path.abspath(HEADER_SRC),

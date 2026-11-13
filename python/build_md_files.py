@@ -823,7 +823,7 @@ def main(repo_dir: str = None, sync_dir: str = None):
     print(f"Generating Markdown files in: {target_sync}")
     
     # Ensure all target subdirectories exist in target_sync
-    for sub in ["business-services", "personal-services", "claude-training", "gemini-training"]:
+    for sub in ["business-services", "personal-services", "claude-training", "gemini-training", "pricing"]:
         os.makedirs(os.path.join(target_sync, sub), exist_ok=True)
 
     exclude_files = {"header.html", "footer.html", "article-footer_dark.html", "google43d90cf6a204dc6d.html"}
@@ -850,8 +850,8 @@ def main(repo_dir: str = None, sync_dir: str = None):
             f.write(content)
         print(f"  -> Wrote {len(content.splitlines())} lines to {md_file}")
 
-    # 2. Subdirectory files: business-services, personal-services, claude, google
-    for subdir in ["business-services", "personal-services", "claude-training", "gemini-training"]:
+    # 2. Subdirectory files: business-services, personal-services, claude, google, pricing
+    for subdir in ["business-services", "personal-services", "claude-training", "gemini-training", "pricing"]:
         sub_dir_path = os.path.join(target_repo, subdir)
         if not os.path.isdir(sub_dir_path):  # pragma: no cover
             continue
@@ -864,6 +864,8 @@ def main(repo_dir: str = None, sync_dir: str = None):
             print(f"Building {rel_md} from {base}...")
             if subdir in ["business-services", "personal-services"]:
                 content = convert_service_page(html_path)
+            elif subdir == "pricing":
+                content = convert_general_document(html_path)
             else:
                 content = convert_agent_deepdive(html_path)
             with open(dest, "w", encoding="utf-8") as f:
