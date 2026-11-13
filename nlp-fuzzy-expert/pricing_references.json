@@ -2,8 +2,8 @@
   "metadata": {
     "domain": "pricing",
     "engine": "nlp-fuzzy-expert",
-    "total_references_tracked": 3755,
-    "last_synchronized": "2026-11-13T12:26:29.144103"
+    "total_references_tracked": 3757,
+    "last_synchronized": "2026-11-13T12:30:51.166350"
   },
   "all_references": [
     {
@@ -361,7 +361,7 @@
       "file": "all-business-services.html",
       "page": "All Business Services - Business AI Transformation | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 173,
+      "line_number": 183,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
       "old_value": "100%",
       "new_value": "100",
@@ -378,7 +378,7 @@
       "file": "all-business-services.html",
       "page": "All Business Services - Business AI Transformation | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 175,
+      "line_number": 185,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
       "old_value": "75%",
       "new_value": "75",
@@ -396,7 +396,7 @@
       "file": "all-business-services.html",
       "page": "All Business Services - Business AI Transformation | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 177,
+      "line_number": 187,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
       "old_value": "50%",
       "new_value": "50",
@@ -419,7 +419,7 @@
       "file": "all-business-services.html",
       "page": "All Business Services - Business AI Transformation | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 179,
+      "line_number": 189,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
       "old_value": "50%",
       "new_value": "50",
@@ -442,7 +442,7 @@
       "file": "all-business-services.html",
       "page": "All Business Services - Business AI Transformation | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 181,
+      "line_number": 191,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
       "old_value": "25%",
       "new_value": "25",
@@ -460,11 +460,28 @@
       "file": "all-business-services.html",
       "page": "All Business Services - Business AI Transformation | Thomas Cherickal",
       "section": "Business AI",
-      "line_number": 255,
+      "line_number": 269,
+      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
+      "old_value": "30 days",
+      "new_value": "30",
+      "context": "blueprints, sample code, and 30 days of post-delivery guidance and materials (30 working days over 8 weeks with",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
+        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
+      ]
+    },
+    {
+      "file": "all-business-services.html",
+      "page": "All Business Services - Business AI Transformation | Thomas Cherickal",
+      "section": "Business AI",
+      "line_number": 270,
       "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
       "old_value": "10 days",
       "new_value": "10",
-      "context": "blueprints, sample code, and 30 days of post-delivery guidance and materials (30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day).",
+      "context": "8 - 10 days as holidays and recovery days, 4 hours per day).",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
       "also_in_data": [
@@ -476,25 +493,25 @@
     {
       "file": "all-business-services.html",
       "page": "All Business Services - Business AI Transformation | Thomas Cherickal",
-      "section": "Business AI",
-      "line_number": 255,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
-      "old_value": "30 days",
-      "new_value": "30",
-      "context": "blueprints, sample code, and 30 days of post-delivery guidance and materials (30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day).",
+      "section": "Selected Business AI Services",
+      "line_number": 290,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
+      "old_value": "10 days",
+      "new_value": "10",
+      "context": "All services are 10 days long and can freely",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days"
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].due_after_day",
+        "data/pricing.json#offerings[individual-service-business].schedule.total_calendar_duration_days",
+        "data/pricing.json#offerings[individual-service-personal].schedule.total_calendar_duration_days"
       ]
     },
     {
       "file": "all-personal-services.html",
       "page": "All Personal Services - AI Mentorship & Training | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 174,
+      "line_number": 184,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
       "old_value": "100%",
       "new_value": "100",
@@ -511,7 +528,7 @@
       "file": "all-personal-services.html",
       "page": "All Personal Services - AI Mentorship & Training | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 176,
+      "line_number": 186,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
       "old_value": "75%",
       "new_value": "75",
@@ -529,7 +546,7 @@
       "file": "all-personal-services.html",
       "page": "All Personal Services - AI Mentorship & Training | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 178,
+      "line_number": 188,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
       "old_value": "50%",
       "new_value": "50",
@@ -552,7 +569,7 @@
       "file": "all-personal-services.html",
       "page": "All Personal Services - AI Mentorship & Training | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 180,
+      "line_number": 190,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
       "old_value": "50%",
       "new_value": "50",
@@ -575,7 +592,7 @@
       "file": "all-personal-services.html",
       "page": "All Personal Services - AI Mentorship & Training | Thomas Cherickal",
       "section": "Page Header",
-      "line_number": 182,
+      "line_number": 192,
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
       "old_value": "25%",
       "new_value": "25",
@@ -587,6 +604,23 @@
         "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
         "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
         "data/tiers.json#tiers[1].discountPercent"
+      ]
+    },
+    {
+      "file": "all-personal-services.html",
+      "page": "All Personal Services - AI Mentorship & Training | Thomas Cherickal",
+      "section": "Selected Personal AI Services",
+      "line_number": 290,
+      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
+      "old_value": "10 days",
+      "new_value": "10",
+      "context": "curriculum. All services are 10 days long and",
+      "match_type": "exact",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
+      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].due_after_day",
+        "data/pricing.json#offerings[individual-service-business].schedule.total_calendar_duration_days",
+        "data/pricing.json#offerings[individual-service-personal].schedule.total_calendar_duration_days"
       ]
     },
     {
