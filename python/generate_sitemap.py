@@ -51,7 +51,7 @@ CLAUDE_GUIDES = [
     "claude-training/claude-101.html",
     "claude-training/claude-projects.html",
     "claude-training/claude-code.html",
-    "claude-training/claude-cowork.html",
+    "claude-training/claude-desktop-office.html",
     "claude-training/claude-skills.html",
     "claude-training/claude-mcp.html",
     "claude-training/claude-plugins.html",
@@ -63,7 +63,7 @@ CLAUDE_GUIDES = [
     "claude-training/claude-artifacts.html",
     "claude-training/claude-dashboards.html",
     "claude-training/claude-mods.html",
-    "claude-training/claude-white-boards.html",
+    "claude-training/claude-whiteboards.html",
 ]
 
 # 12 google Gemini Guide Pages

@@ -50,7 +50,7 @@
       'claude-101.html',
       'claude-projects.html',
       'claude-code.html',
-      'claude-cowork.html',
+      'claude-desktop-office.html',
       'claude-skills.html',
       'claude-mcp.html',
       'claude-plugins.html',
@@ -62,7 +62,7 @@
       'claude-artifacts.html',
       'claude-dashboards.html',
       'claude-mods.html',
-      'claude-white-boards.html'
+      'claude-whiteboards.html'
     ];
     if (orchestrationPages.indexOf(lowerDecodedPage) !== -1) {
       var orchToggles = document.querySelectorAll('.nav-dropdown');

@@ -20,8 +20,7 @@ Select exactly the services you need. 5 days of live engineering training follow
 
 Includes up to 10 participants (additional seats at $300 USD per seat). Covers full cross-service
  engineering stacks tailored to your organizational goals. 30 days of live training + 30 days of guidance and
- detailed guides/materials (30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4
- hours per day).
+ detailed guides/materials (60 days over 2 months with Saturday and Sunday as holidays, 4 hours per day).
 
 ### $3,000 USD · 60 Days (30d Training + 30d Guidance & Materials)
 
