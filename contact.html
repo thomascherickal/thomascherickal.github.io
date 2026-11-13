@@ -519,63 +519,44 @@
 <!-- Row 5: Required Project Type & Estimated Scope Dropdowns -->
 <div class="form-row">
 <div class="form-group">
-<label class="form-label" for="contact-project-type">Project Type *</label>
-<select class="form-input" id="contact-project-type" name="project_type" required="" style="background:var(--bg-card);color:var(--text-primary);color-scheme:dark;">
-<option selected="" style="background:#0b0f19;color:#ffd700;font-weight:700;" value="Personal AI Transformation (12-service catalogue)">Personal AI Transformation (12-Service
-                    Catalogue)</option>
-<option style="background:#0b0f19;color:#ffffff;" value="Generative AI Transformation">Generative AI
-                    Transformation</option>
-<option style="background:#0b0f19;color:#ffffff;" value="Local LLMs &amp; Cost Slashing">Local LLMs
-                    &amp; Cost Slashing</option>
-<option style="background:#0b0f19;color:#ffffff;" value="Claude Agent Orchestration">Claude Agent
-                    Orchestration</option>
-<option style="background:#0b0f19;color:#ffffff;" value="Agentic Assistants Training">Agentic Assistants Training
-                  </option>
-<option style="background:#0b0f19;color:#ffffff;" value="Workflow Automation Training">Workflow
-                    Automation Training</option>
-<option style="background:#0b0f19;color:#ffffff;" value="AI Budget &amp; Cost Control Training">AI
-                    Budget &amp; Cost Control Training</option>
-<option style="background:#0b0f19;color:#ffffff;" value="AI Developer Training">AI Developer Training
-                  </option>
-<option style="background:#0b0f19;color:#ffffff;" value="Advanced AI Agents">Advanced AI Agents
-                  </option>
-<option style="background:#0b0f19;color:#ffffff;" value="Claude Advanced Training">Claude Advanced
-                    Training</option>
-<option style="background:#0b0f19;color:#ffffff;" value="Gemini Advanced Training">Gemini Advanced
-                    Training</option>
-<option style="background:#0b0f19;color:#ffffff;" value="Competitor Research &amp; Intelligence">
-                    Competitor Research &amp; Intelligence</option>
-<option style="background:#0b0f19;color:#ffffff;" value="AI Leads Magnet &amp; Conversion Systems">AI
-                    Leads Magnet &amp; Conversion Systems</option>
-<option style="background:#0b0f19;color:#ffffff;" value="Continuous Learning &amp; AI Second Brain">
-                    Continuous Learning &amp; AI Second Brain</option>
-<option style="background:#0b0f19;color:#ffffff;" value="Work-Life Balance &amp; Autonomous Offloading">Work-Life Balance &amp; Autonomous Offloading
-                  </option>
+<label class="form-label" for="contact-project-type">Project Type * <span style="font-weight:400;opacity:0.75;">(Hold Ctrl / Cmd to select multiple)</span></label>
+<select class="form-input" id="contact-project-type" multiple="" name="project_type" required="" size="8" style="background:var(--bg-card);color:var(--text-primary);color-scheme:dark;min-height:180px;">
+<optgroup label="Flagship Programs" style="background:#0b0f19;color:#94a3b8;font-weight:700;">
+<option selected="" style="background:#0b0f19;color:#38bdf8;font-weight:700;" value="Business Training Flagship">Business Training Flagship</option>
+<option style="background:#0b0f19;color:#ffd700;font-weight:700;" value="Personal Training Flagship">Personal Training Flagship</option>
+</optgroup>
+<optgroup label="Individual Services (16)" style="background:#0b0f19;color:#94a3b8;font-weight:700;">
+<option style="background:#0b0f19;color:#ffffff;" value="Advanced AI Agents">Advanced AI Agents</option>
+<option style="background:#0b0f19;color:#ffffff;" value="Agentic Assistants Training">Agentic Assistants Training</option>
+<option style="background:#0b0f19;color:#ffffff;" value="AI Leads Magnet &amp; Conversion Systems">AI Leads Magnet &amp; Conversion Systems</option>
+<option style="background:#0b0f19;color:#ffffff;" value="AI Budget &amp; Cost Control">AI Budget &amp; Cost Control</option>
+<option style="background:#0b0f19;color:#ffffff;" value="AI Developer Training">AI Developer Training</option>
+<option style="background:#0b0f19;color:#ffffff;" value="AI Second Brain">AI Second Brain</option>
+<option style="background:#0b0f19;color:#ffffff;" value="Claude Agent Orchestration">Claude Agent Orchestration</option>
+<option style="background:#0b0f19;color:#ffffff;" value="Claude Research Training">Claude Research Training</option>
+<option style="background:#0b0f19;color:#ffffff;" value="Competitor Research &amp; Intelligence">Competitor Research &amp; Intelligence</option>
+<option style="background:#0b0f19;color:#ffffff;" value="Continuous Learning &amp; Synthesis">Continuous Learning &amp; Synthesis</option>
+<option style="background:#0b0f19;color:#ffffff;" value="Gemini Research Training">Gemini Research Training</option>
+<option style="background:#0b0f19;color:#ffffff;" value="Generative AI Transformation">Generative AI Transformation</option>
+<option style="background:#0b0f19;color:#ffffff;" value="Knowledge Graphs">Knowledge Graphs</option>
+<option style="background:#0b0f19;color:#ffffff;" value="Local AI for Sensitive Data">Local AI for Sensitive Data</option>
+<option style="background:#0b0f19;color:#ffffff;" value="Local LLMs &amp; Cost Slashing">Local LLMs &amp; Cost Slashing</option>
+<option style="background:#0b0f19;color:#ffffff;" value="Workflow Automations">Workflow Automations</option>
+</optgroup>
 <option style="background:#0b0f19;color:#ffffff;" value="Other">Other</option>
 </select>
 </div>
 <div class="form-group">
 <label class="form-label" for="contact-budget">Estimated Scope <span style="font-weight:400;opacity:0.75;">(<a href="pricing.html" style="color:var(--gold);text-decoration:underline;">View Country Parity
                       Pricing</a>)</span></label>
-<select class="form-input" id="contact-budget" name="budget" style="background:var(--bg-card);color:var(--text-primary);color-scheme:dark;">
-<option style="background:#0b0f19;color:#ffffff;" value="">Select Estimated Scope / Payment Tier
-                  </option>
-<option style="background:#0b0f19;color:#ffffff;" value="Tier 1: High-Income Economies (100% Standard Rate)">Tier 1: High-Income Economies (100%
-                    Standard
-                    Rate)</option>
-<option style="background:#0b0f19;color:#ffffff;" value="Tier 2: Upper-Middle-Income Economies (25% Discount / 75% Rate)">Tier 2: Upper-Middle-Income
-                    Economies (25%
-                    Discount / 75% Rate)</option>
-<option style="background:#0b0f19;color:#ffffff;" value="Tier 3: Lower-Middle &amp; Low-Income Economies (50% Rate)">Tier 3: Lower-Middle &amp;
-                    Low-Income Economies
-                    (50% Rate)</option>
-<option style="background:#0b0f19;color:#ffffff;" value="Tier 4: Early-Stage Startups (50% Flat Discount)">Tier 4: Early-Stage Startups (50% Flat
-                    Discount)</option>
-<option style="background:#0b0f19;color:#ffffff;" value="Tier 5: Non-Profits &amp; Academia (75% Discount / 25% Rate)">Tier 5: Non-Profits &amp;
-                    Academia (75% Discount / 25% Rate)</option>
-<option style="background:#0b0f19;color:#ffffff;" value="Tier 6: Crisis-Affected &amp; Under-Resourced Builders (Custom Subsidized Quote)">Tier 6:
-                    Crisis-Affected
-                    &amp; Under-Resourced Builders (Custom Subsidized Quote)</option>
+<select class="form-input" id="contact-budget" name="budget" size="7" style="background:var(--bg-card);color:var(--text-primary);color-scheme:dark;min-height:180px;overflow-x:hidden;">
+<option style="background:#0b0f19;color:#94a3b8;" value="">Select Estimated Scope / Payment Tier</option>
+<option style="background:#0b0f19;color:#ffffff;" value="Tier 1: High-Income Economies (100% Standard Rate)">Tier 1: High-Income (100% Standard)</option>
+<option style="background:#0b0f19;color:#ffffff;" value="Tier 2: Upper-Middle-Income Economies (25% Discount / 75% Rate)">Tier 2: Upper-Middle (75% Rate)</option>
+<option style="background:#0b0f19;color:#ffffff;" value="Tier 3: Lower-Middle &amp; Low-Income Economies (50% Rate)">Tier 3: Lower-Middle &amp; Low (50% Rate)</option>
+<option style="background:#0b0f19;color:#ffffff;" value="Tier 4: Early-Stage Startups (50% Flat Discount)">Tier 4: Startups (50% Flat)</option>
+<option style="background:#0b0f19;color:#ffffff;" value="Tier 5: Non-Profits &amp; Academia (75% Discount / 25% Rate)">Tier 5: Non-Profits &amp; Academia (25% Rate)</option>
+<option style="background:#0b0f19;color:#ffffff;" value="Tier 6: Crisis-Affected &amp; Under-Resourced Builders (Custom Subsidized Quote)">Tier 6: Crisis-Affected (Custom)</option>
 </select>
 </div>
 </div>
@@ -754,7 +735,8 @@ Useful details to include:
       const website = formData.get('website') || 'Not specified';
       const techStack = formData.get('tech_stack') || 'Not specified';
       const deliverableFormat = formData.get('deliverable_format') || 'Not specified';
-      const projectType = formData.get('project_type') || 'General Inquiry';
+      const projectTypes = formData.getAll('project_type').filter(Boolean);
+      const projectType = projectTypes.length > 0 ? projectTypes.join(', ') : 'General Inquiry';
       const budget = formData.get('budget') || 'Not specified';
       const message = formData.get('message') || '';
 
