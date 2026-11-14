@@ -106,22 +106,22 @@ A technical chronicle and architectural post-mortem of the February 2026
 
 ---
 
-## 6. Agentic Assistants vs OpenClaw: Which AI Agent Framework Wins in 2026?
+## 6. Hermes Agent vs OpenClaw: Which AI Agent Framework Wins in 2026?
 **Track**: `Agentic AI` · `Framework Architecture Comparison`  
 **Details**: Published: May 13, 2026 · HackerNoon · 7,100 words · 28 min read  
-**Article Link**: [Read the piece →](https://hackernoon.com/agentic assistants-agent-vs-openclaw-which-ai-agent-framework-wins-in-2026)
+**Article Link**: [Read the piece →](https://hackernoon.com/hermes-agent-vs-openclaw-which-ai-agent-framework-wins-in-2026)
 
-![Agentic Assistants vs OpenClaw Framework Comparison Cover Illustration](images/agentic assistants-agent-vs-openclaw.webp)
+![Hermes Agent vs OpenClaw Framework Comparison Cover Illustration](images/hermes-agent-vs-openclaw.webp)
 
 ### Executive Summary
-A comprehensive architectural shootout contrasting Nous Research's Agentic Assistants
+A comprehensive architectural shootout contrasting Nous Research's Hermes Agent
  Agent (agent-first, compounding learning loop) against OpenClaw (gateway-first, multi-channel
- routing) - evaluating why Agentic Assistants provides the first secure, practical self-improving agent framework through
+ routing) - evaluating why Hermes Agent provides the first secure, practical self-improving agent framework through
  three-tier persistent memory (MEMORY.md/USER.md and SQLite FTS5 SessionDB), the SKILL.md self-evolution
  engine, and Tinker-Atropos GRPO reinforcement learning pipelines.
 
 **Technologies & Keywords**: `Agentic
- AI`, `Agentic Assistants
+ AI`, `Hermes Agent
  (Nous Research)`, `OpenClaw Gateway Comparison`, `Persistent Memory (SQLite FTS5 & USER.md)`, `Self-Improving Skills (SKILL.md)`, `GRPO & Tinker-Atropos RL`, `Subagent Delegation (delegate_task)`, `Docker & Sandbox Isolation`
 
 ---
@@ -242,23 +242,23 @@ An architectural deep dive into TypeSafe AI's Jev - the first 'System One'
 
 ---
 
-## 13. Gemini Spark versus Agentic Assistants versus OpenClaw: Who Wins and Why?
+## 13. Gemini Spark versus Hermes Agent versus OpenClaw: Who Wins and Why?
 **Track**: `Agentic AI` · `Architectural Benchmark`  
 **Details**: Published: August 18, 2026 · HackerNoon · 5,200 words · 20 min read  
-**Article Link**: [Read the piece →](https://hackernoon.com/gemini-spark-versus-agentic assistants-agent-versus-openclaw-who-wins-and-why)
+**Article Link**: [Read the piece →](https://hackernoon.com/gemini-spark-versus-hermes-agent-versus-openclaw-who-wins-and-why)
 
-![Gemini Spark versus Agentic Assistants versus OpenClaw Who Wins and Why Cover Illustration](images/gemini-spark-vs-agentic assistants-vs-openclaw.webp)
+![Gemini Spark versus Hermes Agent versus OpenClaw Who Wins and Why Cover Illustration](images/gemini-spark-vs-hermes-vs-openclaw.webp)
 
 ### Executive Summary
 A definitive 3-way architectural shootout contrasting Google's managed
  24/7
- cloud agent (Gemini Spark), Nous Research's open-source self-improving agent (Agentic Assistants), and the viral
+ cloud agent (Gemini Spark), Nous Research's open-source self-improving agent (Hermes Agent), and the viral
  gateway pioneer (OpenClaw) - evaluating security posture, persistent memory architectures, runtime autonomy, and
  business viability.
 
 **Technologies & Keywords**: `Agentic AI
  Showdown`, `Google Gemini
- Spark`, `Agentic Assistants`, `OpenClaw Ecosystem`, `Self-Improving Loops`, `Cross-Session Memory`, `Autonomous Workflows`, `Business AI Security`
+ Spark`, `Hermes Agent`, `OpenClaw Ecosystem`, `Self-Improving Loops`, `Cross-Session Memory`, `Autonomous Workflows`, `Business AI Security`
 
 ---
 

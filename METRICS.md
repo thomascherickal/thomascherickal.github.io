@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-13 07:40:11 UTC` | Branch: `main` | Head Commit: `b609d59`
+> **Automated Status Report** | Generated on `2026-11-14 12:35:09 UTC` | Branch: `main` | Head Commit: `b6b5eee`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **550** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **939,620** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **920,217** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **6,464** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **12,939** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **56.51 MB (59,259,908 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **843,181 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **543** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-13** | Subject: "Service Information" |
+| **Total Tracked Files** | **560** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **988,077** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **968,173** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **6,605** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **13,299** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **58.61 MB (61,457,457 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **884,694 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **544** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-13** | Subject: "Contact Form" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,15 +27,15 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 86 | 104,094 | 8.21 MB (8,609,911 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 91 | 108,152 | 8.57 MB (8,983,900 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,935 | 279.90 KB (286,613 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 32 | 11,361 | 3.69 MB (3,874,433 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 59 | 15,303 | 684.42 KB (700,844 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 152 | 42,248 | 4.70 MB (4,932,713 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 108 | 754,626 | 34.22 MB (35,877,715 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **JavaScript Scripts** | 32 | 11,363 | 3.69 MB (3,874,481 bytes) | Client-side interactivity, search, filter & components |
+| **Python Tooling** | 59 | 15,304 | 684.34 KB (700,764 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 157 | 44,740 | 4.97 MB (5,211,576 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 113 | 796,530 | 36.02 MB (37,772,520 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 38 | 0 | 4.27 MB (4,479,410 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 17 | 0 | 421.66 KB (431,781 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 12 | 0 | 79.79 KB (81,705 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,20 +43,19 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 108 | 754,626 | 34.22 MB (35,877,715 bytes) | 19.6% |
-| `.html` | 86 | 104,094 | 8.21 MB (8,609,911 bytes) | 15.6% |
-| `.md` | 152 | 42,248 | 4.70 MB (4,932,713 bytes) | 27.6% |
-| `.py` | 59 | 15,303 | 684.42 KB (700,844 bytes) | 10.7% |
+| `.json` | 113 | 796,530 | 36.02 MB (37,772,520 bytes) | 20.2% |
+| `.html` | 91 | 108,152 | 8.57 MB (8,983,900 bytes) | 16.2% |
+| `.md` | 157 | 44,740 | 4.97 MB (5,211,576 bytes) | 28.0% |
+| `.py` | 59 | 15,304 | 684.34 KB (700,764 bytes) | 10.5% |
 | `.css` | 16 | 11,935 | 279.90 KB (286,613 bytes) | 2.9% |
-| `.js` | 32 | 11,361 | 3.69 MB (3,874,433 bytes) | 5.8% |
-| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 7.6% |
-| `.webp` | 17 | 0 | 1.62 MB (1,695,354 bytes) | 3.1% |
-| `.png` | 13 | 0 | 1.39 MB (1,454,059 bytes) | 2.4% |
+| `.js` | 32 | 11,363 | 3.69 MB (3,874,481 bytes) | 5.7% |
+| `.svg` | 42 | 53 | 64.93 KB (66,488 bytes) | 7.5% |
+| `.webp` | 17 | 0 | 1.62 MB (1,695,354 bytes) | 3.0% |
+| `.png` | 13 | 0 | 1.39 MB (1,454,059 bytes) | 2.3% |
 | `.jpg` | 5 | 0 | 988.42 KB (1,012,141 bytes) | 0.9% |
 | `.jpeg` | 2 | 0 | 303.67 KB (310,957 bytes) | 0.4% |
-| `.pptx` | 3 | 0 | 299.62 KB (306,806 bytes) | 0.5% |
-| `.docx` | 4 | 0 | 71.08 KB (72,789 bytes) | 0.7% |
 | `.txt` | 2 | 0 | 35.60 KB (36,457 bytes) | 0.4% |
+| `.docx` | 2 | 0 | 28.83 KB (29,519 bytes) | 0.4% |
 | `[no extension]` | 6 | 0 | 8.19 KB (8,383 bytes) | 1.1% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
 | `.xml` | 1 | 0 | 6.65 KB (6,808 bytes) | 0.2% |
@@ -72,24 +71,24 @@
 | **CSS Rule Blocks** | **1,621** | Modular selector rules across all stylesheets |
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **198** | Rich searchable & filterable accordion cards |
-| **Primary Headings (`<h1>`)** | **82** | Strict single-H1 semantic hierarchy per page |
-| **Secondary Section Headings (`<h2>`)** | **937** | Structural topic subdivisions |
-| **Card & Item Headings (`<h3>`)** | **666** | Individual service, question, and feature cards |
-| **Call-to-Action (CTA) Modules** | **91** | Standardized CTAs with Free LinkedIn Consultation rule |
-| **Canonical Links Configured** | **80** | 100% SEO canonical URL coverage across public pages |
-| **Open Graph Meta Tags** | **574** | Social preview cards across Twitter/LinkedIn/Facebook |
-| **Structured Data Blocks (JSON-LD)** | **81** | Schema.org FAQPage, Service, Person, Organization schemas |
+| **Primary Headings (`<h1>`)** | **87** | Strict single-H1 semantic hierarchy per page |
+| **Secondary Section Headings (`<h2>`)** | **983** | Structural topic subdivisions |
+| **Card & Item Headings (`<h3>`)** | **668** | Individual service, question, and feature cards |
+| **Call-to-Action (CTA) Modules** | **97** | Standardized CTAs with Free LinkedIn Consultation rule |
+| **Canonical Links Configured** | **85** | 100% SEO canonical URL coverage across public pages |
+| **Open Graph Meta Tags** | **602** | Social preview cards across Twitter/LinkedIn/Facebook |
+| **Structured Data Blocks (JSON-LD)** | **86** | Schema.org FAQPage, Service, Person, Organization schemas |
 
 ---
 
 ## 5. Web Page Taxonomy & Sitemap Distribution
 
-- **Total Public HTML Pages**: **86**
-- **Core Landing & Portal Pages**: **22** (`404.html`, `all-business-services.html`, `all-personal-services.html`, `article-footers/article-footer_dark.html`, `articles.html`, `contact.html`, `expertise.html`, `faqs.html`, `footer.html`, `google43d90cf6a204dc6d.html`, `guarantees.html`, `header.html`, `index.html`, `mermaid.html`, `pricing.html`, `pricing/pricing-tier-1-usa-china-eu-100.html`, `pricing/pricing-tier-2-brazil-malaysia-75.html`, `pricing/pricing-tier-3-india-egypt-50.html`, `pricing/pricing-tier-4-tech-startups-50.html`, `pricing/pricing-tier-5-colleges-non-profits-25.html`, `pricing/pricing-tier-6-crisis-affected-10.html`, `writing.html`)
+- **Total Public HTML Pages**: **91**
+- **Core Landing & Portal Pages**: **23** (`404.html`, `all-business-services.html`, `all-personal-services.html`, `article-footers/article-footer_dark.html`, `articles.html`, `contact.html`, `expertise.html`, `faqs.html`, `footer.html`, `google43d90cf6a204dc6d.html`, `guarantees.html`, `header.html`, `index.html`, `mermaid.html`, `parity-pricing.html`, `pricing.html`, `pricing/pricing-tier-1-usa-china-eu-100.html`, `pricing/pricing-tier-2-brazil-malaysia-75.html`, `pricing/pricing-tier-3-india-egypt-50.html`, `pricing/pricing-tier-4-tech-startups-50.html`, `pricing/pricing-tier-5-colleges-non-profits-25.html`, `pricing/pricing-tier-6-crisis-affected-10.html`, `writing.html`)
 - **Business AI Training Services (`business-services/`)**: **16** (Full enterprise curriculum, lead gen, agent orchestration, and architecture deep-dives)
 - **Personal AI Training Services (`personal-services/`)**: **16** (1-on-1 private acceleration, career transformation, continuous learning, and agentic workflows)
-- **Claude Guides & Frameworks (`claude/`)**: **16** (Claude Code, Cowork, Skills, MCP, Orchestration, Plugins, Science, Local LLMs, Features)
-- **Google AI & Gemini Guides (`google/`)**: **16** (Gemini 101, Antigravity IDE, Studio, Deep Research, Spark, Gemma, Desktop, Multimodal Models)
+- **Claude Guides & Frameworks (`claude/`)**: **18** (Claude Code, Cowork, Skills, MCP, Orchestration, Plugins, Science, Local LLMs, Features)
+- **Google AI & Gemini Guides (`google/`)**: **18** (Gemini 101, Antigravity IDE, Studio, Deep Research, Spark, Gemma, Desktop, Multimodal Models)
 
 ---
 

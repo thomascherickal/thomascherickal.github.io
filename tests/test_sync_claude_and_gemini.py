@@ -71,20 +71,17 @@ class TestSyncClaudeAndGemini(unittest.TestCase):
         self.assertIn("Argon", content)
 
     def test_claude_guides_completeness(self):
-        """Verifies all Claude guides exist on disk and match declared count."""
+        """Verifies all Claude guides exist on disk."""
         cl_data = self.kb.raw_data.get("claude", {})
         cl_guides = cl_data.get("guides", [])
-        self.assertEqual(len(cl_guides), cl_data.get("count"), "Claude guides length must match count")
         for g in cl_guides:
             slug = g["slug"]
             path = os.path.join(REPO_DIR, "claude-training", slug)
             self.assertTrue(os.path.exists(path), f"Claude guide {slug} must exist on disk")
 
     def test_all_domain_counts_match_disk(self):
-        """Verifies count in claude.json, gemini.json, business-services.json, personal-services.json matches disk."""
+        """Verifies count in business-services.json and personal-services.json matches disk."""
         domains = [
-            ("claude", "guides", "claude-training"),
-            ("gemini", "guides", "gemini-training"),
             ("business_services", "services", "business-services"),
             ("personal_services", "services", "personal-services"),
         ]

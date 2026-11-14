@@ -32,6 +32,10 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
   `<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>`
 - Ensure it is prominently featured alongside other primary actions (such as `pricing.html` or `contact.html`).
 
+## No New Offers, Services, or Custom CTAs in Training Guides (`gemini-training/` & `claude-training/`)
+- **DO NOT create new offers, new services, or new custom CTAs** in files added to `gemini-training/` or `claude-training/`.
+- Use appropriate existing CTAs only (the standard `section.cta-banner` linking to existing pages such as `../pricing.html`, `../contact.html`, and `https://linkedin.com/in/thomascherickal` with `Free LinkedIn Consultation ↗`, matching the established guides in those directories).
+
 ## Model Version Numbers Rule (Claude, Gemini, and all LLMs)
 - **DO NOT include version numbers for any LLM models** (e.g., avoid Claude 3, Claude 3.5, Gemini 1.5, Gemini 2.5, Llama 3, Qwen 2.5, DeepSeek V3, etc.) anywhere across general website prose, documentation, or schemas.
 - Refer to models exclusively by their model family names without version numbers (e.g. Claude, Claude Opus, Claude Sonnet, Claude Haiku, Gemini, Gemini Pro, Gemini Flash, Gemini Argon, Qwen, DeepSeek, Mistral, Gemma).

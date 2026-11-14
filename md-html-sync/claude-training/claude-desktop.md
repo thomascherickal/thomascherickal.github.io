@@ -1,4 +1,4 @@
-# Claude Desktop & Microsoft 365 Copairing
+# Claude Desktop: Native Workstation & MCP Workflows
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  

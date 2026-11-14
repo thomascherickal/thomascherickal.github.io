@@ -51,7 +51,8 @@ CLAUDE_GUIDES = [
     "claude-training/claude-101.html",
     "claude-training/claude-projects.html",
     "claude-training/claude-code.html",
-    "claude-training/claude-desktop-office.html",
+    "claude-training/claude-desktop.html",
+    "claude-training/claude-office.html",
     "claude-training/claude-skills.html",
     "claude-training/claude-mcp.html",
     "claude-training/claude-plugins.html",
@@ -64,6 +65,7 @@ CLAUDE_GUIDES = [
     "claude-training/claude-dashboards.html",
     "claude-training/claude-mods.html",
     "claude-training/claude-whiteboards.html",
+    "claude-training/claude-fable.html",
 ]
 
 # 12 google Gemini Guide Pages
@@ -84,6 +86,8 @@ GEMINI_GUIDES = [
     "gemini-training/google-deep-research.html",
     "gemini-training/google-gemini-4-krypton.html",
     "gemini-training/google-gemini-skills.html",
+    "gemini-training/google-antigravity-chat.html",
+    "gemini-training/google-gemini-4-helix.html",
 ]
 
 def get_git_lastmod(rel_path: str) -> str:
