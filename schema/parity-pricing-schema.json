@@ -1,12 +1,114 @@
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Country-Wise Parity Pricing (195 Countries)",
-  "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
-  "url": "https://thedigitalfuturist.com/parity-pricing.html",
-  "author": {
-    "@type": "Person",
-    "name": "Thomas Cherickal",
-    "url": "https://thedigitalfuturist.com"
-  }
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://thedigitalfuturist.com/parity-pricing.html#webpage",
+      "url": "https://thedigitalfuturist.com/parity-pricing.html",
+      "name": "Country-Wise Parity Pricing (195 Countries) | The Digital Futurist",
+      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://thedigitalfuturist.com/#website"
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://thedigitalfuturist.com/#person",
+        "name": "Thomas Cherickal",
+        "jobTitle": "Generative AI Consultant and The Digital Futurist",
+        "url": "https://thedigitalfuturist.com",
+        "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
+        "sameAs": [
+          "https://linkedin.com/in/thomascherickal",
+          "https://github.com/thomascherickal",
+          "https://x.com/thomazcherickal",
+          "https://dev.to/thomascherickal"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://thedigitalfuturist.com/#organization",
+        "name": "The Digital Futurist",
+        "url": "https://thedigitalfuturist.com",
+        "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist."
+      },
+      "breadcrumb": {
+        "@id": "https://thedigitalfuturist.com/parity-pricing.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thedigitalfuturist.com/parity-pricing.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thedigitalfuturist.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pricing",
+          "item": "https://thedigitalfuturist.com/pricing.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Country-Wise Parity Pricing (195 Countries)",
+          "item": "https://thedigitalfuturist.com/parity-pricing.html"
+        }
+      ]
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://thedigitalfuturist.com/parity-pricing.html#offercatalog",
+      "name": "195-Country Purchasing Power Parity (PPP) Tiers",
+      "description": "Six global Purchasing Power Parity (PPP) pricing tiers mapped across all 195 sovereign countries using UN 2026 and World Bank FY27 GNI per capita classifications.",
+      "numberOfItems": 6,
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Tier 1: Developed Economies (100%)",
+          "price": "3000",
+          "priceCurrency": "USD",
+          "description": "Flagship: $3,000 USD | Individual Service: $300 USD | Extra Seat: +$300 USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Tier 2: Upper-Middle Income Economies (75%)",
+          "price": "2250",
+          "priceCurrency": "USD",
+          "description": "Flagship: $2,250 USD | Individual Service: $225 USD | Extra Seat: +$225 USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Tier 3: Lower-Middle Income Economies (50%)",
+          "price": "1500",
+          "priceCurrency": "USD",
+          "description": "Flagship: $1,500 USD | Individual Service: $150 USD | Extra Seat: +$150 USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Tier 4: Startups & Founders (50%)",
+          "price": "1500",
+          "priceCurrency": "USD",
+          "description": "Flagship: $1,500 USD | Individual Service: $150 USD | Extra Seat: +$150 USD (open to early-stage companies in any country)"
+        },
+        {
+          "@type": "Offer",
+          "name": "Tier 5: Academia & Non-Profits (25%)",
+          "price": "750",
+          "priceCurrency": "USD",
+          "description": "Flagship: $750 USD | Individual Service: $75 USD | Extra Seat: +$75 USD (open to colleges, universities, and non-profits in any country)"
+        },
+        {
+          "@type": "Offer",
+          "name": "Tier 6: Relief & Low-Income Economies (Custom)",
+          "priceCurrency": "USD",
+          "description": "Custom subsidized rate for low-income economies and crisis-affected regions"
+        }
+      ]
+    }
+  ]
 }

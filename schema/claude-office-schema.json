@@ -53,6 +53,8 @@
         }
       },
       "articleSection": "Enterprise Productivity",
+      "proficiencyLevel": "Intermediate",
+      "learningResourceType": "Technical Implementation Guide",
       "keywords": [
         "Claude Office",
         "Claude for Excel",
@@ -60,6 +62,41 @@
         "Document Automation",
         "Cowork",
         "Enterprise AI"
+      ],
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Spreadsheet Formula Auditing"
+        },
+        {
+          "@type": "Thing",
+          "name": "Presentation Synthesis"
+        },
+        {
+          "@type": "Thing",
+          "name": "Contract Redlining"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does Claude Office preserve live Excel formulas instead of hardcoding values?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Claude Office operates directly on native .xlsx structures and generates dynamic Excel formulas alongside deterministic recalculation checks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does headless Office automation work for recurring reports?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Claude synthesizes structured JSON summaries validated against a schema, which deterministic Python libraries like openpyxl and python-pptx render into signed deliverables."
+          }
+        }
       ]
     },
     {

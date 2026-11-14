@@ -53,6 +53,8 @@
         }
       },
       "articleSection": "Frontier AI Engineering",
+      "proficiencyLevel": "Expert",
+      "learningResourceType": "Technical Architecture Guide",
       "keywords": [
         "Claude Fable",
         "Anthropic",
@@ -61,6 +63,41 @@
         "Monorepo Engineering",
         "Prompt Caching",
         "Verification Gates"
+      ],
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Adaptive Thinking"
+        },
+        {
+          "@type": "Thing",
+          "name": "Prompt Caching"
+        },
+        {
+          "@type": "Thing",
+          "name": "Agentic Software Engineering"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does adaptive thinking in Claude Fable differ from fixed thinking budgets?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Adaptive thinking dynamically scales internal deliberation tokens per turn based on structural ambiguity and constraint density, while interleaved thinking reasons between tool invocations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How should prompts be structured for the 1M-token context window?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Organize prompts into three zones: an immutable system/policy prefix, a cached repository architecture zone, and a dynamic execution tail for current diffs and tool outputs."
+          }
+        }
       ]
     },
     {
