@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-14 12:41:06 UTC` | Branch: `main` | Head Commit: `7384fde`
+> **Automated Status Report** | Generated on `2026-11-15 10:17:17 UTC` | Branch: `main` | Head Commit: `7e1f618`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **561** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **990,863** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **970,929** | Executable / renderable content lines |
+| **Total Lines of Source Code & Content** | **995,645** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **975,711** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **6,613** | In-code and architectural documentation |
 | **Blank / Spacing Lines** | **13,321** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **58.74 MB (61,596,173 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **886,487 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **545** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-14** | Subject: "Parity Prcing and Service Updates" |
+| **Total Repository Size (Tracked Assets)** | **59.00 MB (61,860,877 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **889,653 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **546** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-14** | Subject: "Schema and MD files" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,12 +27,12 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 91 | 108,329 | 8.58 MB (8,992,099 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 91 | 108,505 | 8.58 MB (8,991,793 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,935 | 279.90 KB (286,613 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 32 | 11,363 | 3.69 MB (3,874,481 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 59 | 15,304 | 684.34 KB (700,764 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 158 | 44,621 | 4.97 MB (5,212,414 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 113 | 799,258 | 36.15 MB (37,902,199 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 158 | 45,003 | 5.01 MB (5,249,810 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 113 | 803,482 | 36.36 MB (38,129,813 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 38 | 0 | 4.27 MB (4,479,410 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 12 | 0 | 79.79 KB (81,705 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
@@ -43,9 +43,9 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 113 | 799,258 | 36.15 MB (37,902,199 bytes) | 20.1% |
-| `.html` | 91 | 108,329 | 8.58 MB (8,992,099 bytes) | 16.2% |
-| `.md` | 158 | 44,621 | 4.97 MB (5,212,414 bytes) | 28.2% |
+| `.json` | 113 | 803,482 | 36.36 MB (38,129,813 bytes) | 20.1% |
+| `.html` | 91 | 108,505 | 8.58 MB (8,991,793 bytes) | 16.2% |
+| `.md` | 158 | 45,003 | 5.01 MB (5,249,810 bytes) | 28.2% |
 | `.py` | 59 | 15,304 | 684.34 KB (700,764 bytes) | 10.5% |
 | `.css` | 16 | 11,935 | 279.90 KB (286,613 bytes) | 2.9% |
 | `.js` | 32 | 11,363 | 3.69 MB (3,874,481 bytes) | 5.7% |
