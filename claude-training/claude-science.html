@@ -307,8 +307,8 @@
   </nav>
   <!-- END:HEADER -->
 <main class="container">
-<header class="hero">
-<div class="hero-badge">AI for Science • Autonomous Research Workbench</div>
+<header class="hero content-card">
+<div class="hero-badge content-card">AI for Science • Autonomous Research Workbench</div>
 <h1>Claude for Scientific Discovery & Quantitative Research</h1>
 <p class="hero-desc">What the app does, how its agentic loops work, how it takes over literature review and documentation, and the results labs have reported since launch.</p>
 <p class="hero-byline">By <strong>Thomas Cherickal</strong>, Generative AI Consultant • <strong>The Digital Futurist</strong></p>
@@ -344,7 +344,7 @@
 <p class="article-p">The app installs wherever the data lives: a laptop, a lab Linux box, an HPC login node or a cloud VM. Raw datasets stay on those machines, and only the context each step needs goes to Claude. Users talk to a coordinating agent that can start specialist agents for genomics, single-cell work, proteomics, structural biology and cheminformatics.</p>
 <p class="article-p">It can query more than 60 scientific databases, including UniProt, PDB, Ensembl, ClinVar, ChEMBL and GEO, and <a href="https://claude.com/resources/guides/claude-science-product-guide/claude-science-product-overview" rel="noopener noreferrer" target="_blank">Anthropic's Claude Science product guide</a> lists roughly 150 curated skills. Through <a href="https://nvidianews.nvidia.com/news/nvidia-launches-bionemo-agent-toolkit-giving-ai-agents-the-tools-to-accelerate-scientific-discovery" rel="noopener noreferrer" target="_blank">NVIDIA's BioNeMo Agent Toolkit</a>, it also reaches open biology models such as Evo 2, Boltz-2 and OpenFold3.</p>
 <!-- SVG Architecture Diagram 1 -->
-<div class="diagram-container">
+<div class="diagram-container content-card">
 <svg height="auto" style="background:#090d16;border-radius:8px;" viewbox="0 0 960 480" width="100%" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <lineargradient id="gradBorder" x1="0%" x2="100%" y1="0%" y2="100%">
@@ -456,7 +456,7 @@
 <p class="article-p">When a job needs more hardware, the app writes the batch script and submits it to the lab's SLURM cluster over SSH or to a <a href="https://modal.com/blog/modal-integration-brings-scalable-compute-to-claude-science" rel="noopener noreferrer" target="_blank">Modal account for on-demand GPUs</a>, scaling from one GPU to hundreds. The scientist approves each new resource before the agent touches it.</p>
 <p class="article-p">Speed only helps if the results can be checked. Each figure, table or notebook carries four layers of history: a plain-language description, the exact code, the conversation that led to it and a snapshot of every package version. Months later, anyone on the team can see how a number was produced by opening the artifact itself.</p>
 <!-- SVG Diagram 2: The 4 Reproducibility Layers -->
-<div class="diagram-container">
+<div class="diagram-container content-card">
 <svg height="auto" style="background:#090d16;border-radius:8px;" viewbox="0 0 880 260" width="100%" xmlns="http://www.w3.org/2000/svg">
 <text fill="#38bdf8" font-family="'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" text-anchor="middle" x="440" y="32">The 4 Immutably Bundled Reproducibility Layers of Every Artifact</text>
 <g transform="translate(40, 55)">
@@ -532,7 +532,7 @@
 <p class="article-p">A loop like this lets a scientist hand agents a question that has no answer yet and have them gather, test and check evidence step by step. At launch, Alexander Tarashansky, who led the product's development, showed Claude Science identifying new drug candidates for phenylketonuria, a rare genetic disease, without step-by-step human direction.</p>
 <p class="article-p">Anthropic still keeps people in the loop for decisions with real-world consequences. Eric Kauderer-Abrams, its head of life sciences, has said Claude should not run open-loop on tasks such as writing clinical trials or communicating with the FDA.</p>
 <!-- SVG Diagram 3: Agentic Loop Execution Flow -->
-<div class="diagram-container">
+<div class="diagram-container content-card">
 <svg height="auto" style="background:#090d16;border-radius:8px;" viewbox="0 0 880 240" width="100%" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <marker id="arrowhead" markerheight="6" markerwidth="8" orient="auto" refx="7" refy="3">
@@ -590,7 +590,7 @@
 <p class="article-p">The clearest time savings so far come from the paperwork of science. Jérôme Lecoq, a neuroscientist at the Allen Institute, built a multi-agent review template from about 20 custom skills. Sub-agents read thousands of papers, pull out each paper's central claim and key quantitative finding, and store both in an evidence database.</p>
 <p class="article-p">The pipeline then plans the narrative, hands each section to its own sub-agent and builds cross-study figures straight from the database. Every writing agent is paired with a reviewer agent that checks accuracy and citation fidelity. A review like this used to take Lecoq's team up to two years. He now has about 10 of them, many longer than 100 pages.</p>
 <!-- SVG Diagram 4: Allen Institute Literature Review Pipeline -->
-<div class="diagram-container">
+<div class="diagram-container content-card">
 <svg height="auto" style="background:#090d16;border-radius:8px;" viewbox="0 0 900 240" width="100%" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <lineargradient id="dbGrad" x1="0%" x2="0%" y1="0%" y2="100%">

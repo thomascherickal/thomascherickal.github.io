@@ -1,9 +1,8 @@
 # Claude Multi-Agent Swarm Orchestration
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
-> **// PROVIDER DEEP DIVE**  
-> **Five architectures, six hands-on tutorials and a set of spend limits that hold from a single
- session up to a full year.**
+> **// COORDINATOR-WORKER SYSTEMS & PARALLEL EXECUTION**  
+> **Design resilient multi-agent Claude systems featuring coordinator-worker systems, parallel task execution, shared state, and verification gates. Includes interactive architecture guidance, failure-mode prevention, production orchestration patterns for large engineering tasks, and personal use patterns for solo builders.**
 
 ---
 
@@ -28,7 +27,8 @@
 • Intermediate 2: batch fan-out with prompt caching
 • Advanced 1: hierarchical teams with shared state and budgets
 • Advanced 2: concurrent cloud agents with a kill switch
-5. 5. Budgeting and controlling costs
+5. 5. Personal use patterns for solo builders
+6. 6. Budgeting and controlling costs
 
 • Why spend multiplies
 • Explicit limits at every level
@@ -37,10 +37,10 @@
 • Cloud agents and their cost
 • Cutting the bill
 • Worked example: a five-agent research run
-6. 6. Observability, testing and failure handling
-7. 7. Security notes
-8. 8. Choosing an architecture
-9. 9. References
+7. 7. Observability, testing and failure handling
+8. 8. Security notes
+9. 9. Choosing an architecture
+10. 10. References
 
 ---
 

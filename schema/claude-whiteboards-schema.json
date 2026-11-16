@@ -13,13 +13,13 @@
         "url": "https://thedigitalfuturist.com/claude-training/claude-whiteboards.html",
         "name": "Claude Whiteboards: Visual Architecture & Collaborative Diagramming | Thomas Cherickal"
       },
-      "headline": "Claude Whiteboards: Visual Architecture & Collaborative Diagramming",
-      "description": "Engineering guide to Claude Whiteboards: transforming natural language system requirements into production Mermaid, SVG, and PlantUML architectural diagrams for collaborative engineering reviews.",
+      "headline": "Claude Whiteboards: Converting Discussions into Actionable Architecture",
+      "description": "Convert unstructured meeting discussions into visual whiteboards marked with milestones, deliverables, and project phases, driving automated project plans, code, and external tools.",
       "image": [
         "https://thedigitalfuturist.com/assets/og-card.png"
       ],
       "datePublished": "2026-11-13T00:00:00+05:30",
-      "dateModified": "2026-11-13T12:00:00+05:30",
+      "dateModified": "2026-11-16T00:00:00+05:30",
       "inLanguage": "en-US",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -55,12 +55,15 @@
       "articleSection": "Anthropic Claude",
       "keywords": [
         "Claude Whiteboards",
-        "Infinite Visual Canvas",
-        "Agentic Layout Generators",
-        "Collaborative Design Synthesis",
-        "Spatial Reasoning Nodes",
-        "Anthropic Claude",
-        "Visual Architecture"
+        "Visual Architecture",
+        "Meeting to Architecture",
+        "Milestones and Deliverables",
+        "Project Phases",
+        "Mermaid Architecture",
+        "Jira Linear Automation",
+        "Enterprise Collaboration",
+        "Startup System Design",
+        "Anthropic Claude"
       ]
     },
     {
@@ -76,14 +79,52 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Claude",
-          "item": "https://thedigitalfuturist.com/claude-training/claude-101.html"
+          "name": "Claude Training",
+          "item": "https://thedigitalfuturist.com/claude-training/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Claude Whiteboards",
           "item": "https://thedigitalfuturist.com/claude-training/claude-whiteboards.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://thedigitalfuturist.com/claude-training/claude-whiteboards.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does Claude convert messy meeting transcripts into visual whiteboards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Claude ingests unstructured transcripts or brainstorm notes, extracts consensus decisions and technical constraints, categorizes tasks into chronological project phases, isolates concrete deliverables, and generates a structured visual vector diagram using Mermaid or SVG."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Claude Whiteboards connect directly to project management tools like Linear or Jira?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Once Claude synthesizes the visual whiteboard with defined milestones and phases, it can export structured JSON or Markdown issue hierarchies directly into Linear, Jira, or GitHub Projects through Model Context Protocol (MCP) servers or webhooks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How should enterprise architecture review boards use Claude Whiteboards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enterprise teams use Claude Whiteboards as living architectural contracts during Architecture Review Board (ARB) sessions. Teams iterate live on diagrams, verify security and compliance boundaries, and commit the resulting diagrams-as-code to Git for version-controlled traceability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is diagram-as-code preferred over screenshots or drag-and-drop canvases?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Diagrams-as-code (such as Mermaid syntax) are plain text. They can be tracked in version control, diffed in pull requests, rendered natively across markdown wikis, and parsed programmatically by downstream automation tools to generate scaffolding code and test suites."
+          }
         }
       ]
     }

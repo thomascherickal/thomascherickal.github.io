@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// DESKTOP AGENTS & OPERATING SYSTEM WORKFLOWS**  
-> **Production architecture, protocols, and implementation.**
+> **Learn how Gemini Desktop enables vision-guided OS automation across browsers, native applications, and multi-window workflows, showing how Gemini can use your computer to perform your work for you.**
 
 ---
 
@@ -10,13 +10,33 @@
 
 ---
 
-## Introduction
+## Introduction & Computer Use Overview
 
-Google spent much of 2026 pulling Gemini out of the browser tab. A native Mac app arrived on April 15, and a Windows version followed on September 10. Both put the assistant one keyboard shortcut away from whatever you are doing.
+Learn how Gemini Desktop enables vision-guided OS automation across browsers, native applications, and multi-window workflows. Show how Gemini can use your computer and perform your work for you. Show how Computer Use will revolutionize working with AI across business and personal workflows.
 
-This article draws on Google's launch posts, support pages, and independent coverage. It separates what the app does today from what Google has only promised. It also covers three viral cases tied to tools you can now reach from the desktop.
+Artificial intelligence has historically been trapped inside isolated web chat windows and API endpoints. While models could synthesize text or write code, taking action on a computer required human users to copy, paste, click, and navigate across dozens of disparate applications.
 
-Google says more than a billion people use the Gemini app each month, per its billion users announcement. The desktop app is the company's bid to keep that audience inside Gemini during the workday. Whether it earns a permanent spot on your taskbar depends on a few specifics, which the sections below lay out.
+Gemini Desktop breaks out of the browser sandbox through vision-guided Computer Use. By coupling multimodal vision perception with direct operating system accessibility APIs and input emulation, Gemini can observe your desktop, interpret complex user interfaces across legacy desktop software, and autonomously execute multi-step workflows on your behalf with human-in-the-loop oversight.
+
+---
+
+## How Gemini Uses Your Computer to Perform Work
+
+Gemini Desktop interacts with your computer in the same manner a human operator does: through perception, reasoning, and coordinated physical input actions. Rather than requiring brittle custom API integrations for every installed piece of software, Gemini uses a closed-loop Computer Use perception engine:
+
+- Multimodal Screen Perception: High-resolution frame capture inspects active windows, multi-monitor displays, and background applications, identifying buttons, text fields, menu hierarchies, and data tables through visual OCR and UI layout parsing.
+- Accessibility Tree Grounding: On Windows and macOS, Gemini cross-references raw visual pixels against native OS accessibility trees (UI Automation on Windows, NSAccessibility on macOS), ensuring deterministic element targeting even during UI re-skins or resolution shifts.
+- Precise Mouse & Keyboard Emulation: The agent translates natural language instructions into coordinated mouse clicks, drag-and-drop operations, keyboard shortcuts, and form fills, respecting system focus states and modal dialogues.
+- Multi-Application Navigation: Gemini seamlessly switches between disparate desktop environments - such as copying numbers from an open PDF statement, navigating to a local ERP client, filling in transaction fields, and reconciling against a Google Sheets spreadsheet.
+- Local File System Governance: With explicit user permissions, the desktop agent inspects directory structures, batch-renames assets, extracts archives, and moves files across cloud drives and local volumes.
+
+---
+
+## How Computer Use Revolutionizes Business & Personal Workflows
+
+Computer Use fundamentally transforms human interaction with digital systems from manual point-and-click operation into executive-level supervisory delegation.
+
+By handling the cognitive friction of repetitive UI interaction, Computer Use allows knowledge workers and individuals to focus exclusively on strategic decision-making while Gemini executes the mechanical desktop steps.
 
 ---
 

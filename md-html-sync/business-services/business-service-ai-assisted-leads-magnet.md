@@ -1,7 +1,7 @@
 # AI Leads Magnet & Conversion Systems
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// SERVICE SPECIFICATION 12**  
+> **// ENTERPRISE SERVICE SPECIFICATION - DEMAND GENERATION**  
 > **Business transformation, verification, and implementation.**
 
 ---
@@ -21,6 +21,20 @@ Public-facing AI diagnostic widgets are exposed to the open internet, which make
 At the edge layer, every diagnostic session is gated by invisible proof-of-work challenges such as Cloudflare Turnstile verification combined with sliding-window rate limits keyed on both IP subnet and browser fingerprint. Corporate domain validation runs synchronously at step one: free webmail providers, known disposable email domains, and syntactically invalid MX records are intercepted before enrichment credits are consumed. Visitors using personal domains are gracefully routed to a lightweight self-serve benchmark rather than triggering paid waterfall enrichment or Account Executive calendar routing.
 
 Data privacy and regulatory compliance are equally critical. Because diagnostic transcripts often contain sensitive operational metrics - cloud spend, headcount, or security posture - all payloads are stripped of unnecessary PII before hitting third-party model endpoints. Organizations operating under GDPR or CCPA requirements enforce explicit consent flags, configurable data-retention TTLs, and OWASP LLM Top 10 input sanitization to neutralize indirect prompt injection attempts embedded inside free-text company descriptions.
+
+---
+
+## Purchasing Power Parity (PPP) Pricing & Trust Guarantees
+
+Every growing organization deserves enterprise-grade demand generation tooling calibrated to local market realities. We calibrate our pricing across six Purchasing Power Parity (PPP) tiers covering 195 countries worldwide. Explore full country rankings and tier definitions on our comprehensive pricing page.
+
+Trust Guarantees & Payment Structure:
+
+- $0 Upfront: Zero deposit required before starting technical architecture design.
+- Five Equal Milestone Installments: Invoiced in 20% increments only after passing completed technical gates.
+- Walkaway Guarantee: If unsatisfied after the first milestone phase, walk away owing nothing.
+- Dedicated Support Period: 30 days of continuous dedicated support for flagships (or 5 days for individual service picks) included at strictly $0 extra charge.
+- Apache 2.0 Licensing: All diagnostic widget code, enrichment pipelines, and prompt harnesses are fully owned by your company under the Apache 2.0 license.
 
 ---
 

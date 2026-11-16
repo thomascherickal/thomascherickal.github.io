@@ -288,7 +288,7 @@
 <div class="doc-container" style="max-width:960px;margin:0 auto;padding:3rem 1.25rem 2rem;">
 
   <!-- HERO HEADER CARD -->
-  <section class="hero-card" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.35);border-radius:16px;padding:2.5rem;margin-bottom:2rem;box-shadow:0 0 40px rgba(251,191,36,0.08);">
+  <section class="hero-card content-card" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.35);border-radius:16px;padding:2.5rem;margin-bottom:2rem;box-shadow:0 0 40px rgba(251,191,36,0.08);">
     <p class="section-label" style="color:var(--gold,#fbbf24);font-family:var(--font-mono,monospace);font-size:0.8rem;letter-spacing:0.12em;margin-bottom:0.75rem;">// PERSONAL SERVICE SPECIFICATION - SOLO COMPETITIVE INTELLIGENCE</p>
     <h1>Competitor Research</h1>
     <p style="color:var(--text-secondary,#cbd5e1);font-size:1.05rem;line-height:1.75;max-width:780px;margin-bottom:1.75rem;">
@@ -315,7 +315,7 @@
   </section>
 
   <!-- TABLE OF CONTENTS -->
-  <section id="table-of-contents" style="background:var(--bg-card,#0c111d);border:1px solid rgba(56,189,248,0.25);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
+  <section class="content-card" id="table-of-contents" style="background:var(--bg-card,#0c111d);border:1px solid rgba(56,189,248,0.25);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.2rem;margin-bottom:1rem;">Table of Contents</h2>
     <ol style="color:#cbd5e1;line-height:1.9;padding-left:1.25rem;margin:0;display:flex;flex-direction:column;gap:0.6rem;">
       <li><a class="gold-link" href="#solo-radar">Why Solo Practitioners Need an Automated Niche Radar</a></li>
@@ -335,7 +335,7 @@
   </section>
 
   <!-- SECTION 1 -->
-  <section id="solo-radar" style="margin-bottom:3rem;">
+  <section class="content-card" id="solo-radar" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Why Solo Practitioners Need an Automated Niche Radar</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Independent consultants, technical writers, fractional advisors, and solo product builders do not have a dedicated product-marketing department tracking market shifts. Instead, most solo practitioners rely on ad-hoc doomscrolling across social feeds to guess what peers are launching, how offers are evolving, and which topics resonate with buyers. That reactive habit wastes hours of deep-work time while still missing subtle positioning changes on high-converting peer landing pages.
@@ -377,7 +377,7 @@
   </section>
 
   <!-- SECTION 2 -->
-  <section id="offer-diffing" style="margin-bottom:3rem;">
+  <section class="content-card" id="offer-diffing" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Lightweight Offer, Positioning, and Changelog Diffing</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Naive website monitors alert you every time a cookie banner shifts or a testimonial carousel rotates. That noise causes alert fatigue within two weeks. To build a signal-rich solo monitor, normalize the DOM before computing diffs: strip navigation bars, footers, script tags, and dynamic timestamps, isolating only the main headline, value proposition, deliverable bullets, and guarantee blocks.
@@ -417,7 +417,7 @@
   </section>
 
   <!-- SECTION 3 -->
-  <section id="content-gap-mining" style="margin-bottom:3rem;">
+  <section class="content-card" id="content-gap-mining" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Audience Pain-Point and Content Gap Synthesis</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Competitive research for creators and solo consultants extends beyond landing pages into editorial calendars and technical documentation. By ingesting public RSS feeds, newsletter archives, and YouTube transcript summaries from your watchlist into a local <a class="gold-link" href="#references">SQLite full-text database</a>, you can map which topics your competitors cover superficially and which practitioner problems remain completely unaddressed.
@@ -457,7 +457,7 @@
   </section>
 
   <!-- SECTION 4 -->
-  <section id="zero-hallucination-vault" style="margin-bottom:3rem;">
+  <section class="content-card" id="zero-hallucination-vault" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Zero-Hallucination Citation Vaults for Personal Knowledge</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       A solo consultant cannot afford to cite a fabricated competitor claim in a client proposal or public comparison post. Every synthesized insight in your weekly digest must be anchored to an immutable local snapshot, exact UTC timestamp, and verbatim quote from the captured page. Following <a class="gold-link" href="#references">Anthropic citation and grounding best practices</a>, require the model to output exact substring quotes alongside its analytical summary.
@@ -494,7 +494,7 @@
   </section>
 
   <!-- SECTION 5 -->
-  <section id="ethical-scraping" style="margin-bottom:3rem;">
+  <section class="content-card" id="ethical-scraping" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Ethical Crawling, Robots.txt Compliance, and Local Inference</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Competitive intelligence should never cross into abusive scraping or unauthorized access. Configure your solo monitor to parse each target domain's <code>robots.txt</code> file using Python's standard <code>urllib.robotparser</code> module, respect crawl delays, identify a polite user-agent, and poll public marketing pages at a gentle cadence (such as once every seven days). Following <a class="gold-link" href="#references">Google Robots.txt compliance guidelines</a> keeps your IP reputation clean and respects peer infrastructure.
@@ -547,7 +547,7 @@
   </section>
 
   <!-- SECTION 6 -->
-  <section id="failure-mode-recovery" style="margin-bottom:3rem;">
+  <section class="content-card" id="failure-mode-recovery" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Failure-Mode Recovery: Stale Selectors, Captchas, and Signal Noise</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Public websites change layouts, deploy anti-bot gates, or return transient 503 errors. A brittle scraper crashes silently and leaves you thinking a competitor made zero changes for months. Build explicit health telemetry into your solo monitor using <a class="gold-link" href="#references">OpenTelemetry logging</a> or a simple SQLite status table: distinguish between "Fetched OK, Hash Unchanged" and "Fetch Blocked / Empty Body."
@@ -603,7 +603,7 @@
   </section>
 
   <!-- TUTORIAL 1: PYTHON -->
-  <section id="tutorial-python-watcher" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-python-watcher" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Tutorial 1: Python Peer Offer Diff Watcher and Digest Builder</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
       This production Python script monitors a peer practitioner's public offer page, normalizes the main content with <a class="gold-link" href="#references">BeautifulSoup</a>, checks a local SHA-256 baseline, and invokes the <a class="gold-link" href="#references">Anthropic Python SDK</a> only when meaningful positioning changes occur.
@@ -655,7 +655,7 @@ def analyze_offer_delta(url: str, old_text: str, new_text: str) -&gt; str:
   </section>
 
   <!-- TUTORIAL 2: PROMPT TEMPLATE -->
-  <section id="tutorial-prompt-positioning" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-prompt-positioning" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Tutorial 2: Solo Positioning and Content Gap Synthesis Prompt</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
       Use this prompt template to turn raw peer RSS posts and offer snapshots into three concrete differentiation angles for your own consulting practice.
@@ -681,7 +681,7 @@ RULES:
   </section>
 
   <!-- TUTORIAL 3: STEP-BY-STEP OPERATIONAL -->
-  <section id="tutorial-ops-watchlist" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-ops-watchlist" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Tutorial 3: Step-by-Step Solo Watchlist Setup Workflow</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Follow these five steps to stand up a calm, automated competitive radar in under an hour:
@@ -696,7 +696,7 @@ RULES:
   </section>
 
   <!-- TUTORIAL 4: PYTHON -->
-  <section id="tutorial-python-verifier" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-python-verifier" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Tutorial 4: Python Verbatim Citation Verifier and Robots Guard</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
       Before saving any generated intelligence brief to your personal vault, enforce <code>robots.txt</code> compliance and verify that every quoted competitor claim exists verbatim in the archived snapshot.
@@ -734,7 +734,7 @@ def verify_verbatim_quotes(snapshot_text: str, cited_quotes: list[str]) -&gt; di
   </section>
 
   <!-- TUTORIAL 5: PROMPT TEMPLATE -->
-  <section id="tutorial-prompt-teardown" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-prompt-teardown" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Tutorial 5: Weekly Landing-Page Teardown and Counter-Angle Prompt</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
       Run this structured teardown prompt whenever a peer updates their flagship consulting page so you can sharpen your own messaging without imitating theirs.
@@ -759,7 +759,7 @@ OUTPUT FORMAT (Markdown):
   </section>
 
   <!-- TUTORIAL 6: STEP-BY-STEP OPERATIONAL -->
-  <section id="tutorial-ops-recovery" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-ops-recovery" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Tutorial 6: Step-by-Step Scraper Failure and Noise Filtering Runbook</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       When a watchlist target stops returning clean diffs or floods your weekly digest with false positives, execute this five-step runbook:
@@ -774,7 +774,7 @@ OUTPUT FORMAT (Markdown):
   </section>
 
   <!-- REFERENCES -->
-  <section id="references" style="margin-bottom:3rem;">
+  <section class="content-card" id="references" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Live Technical References and Documentation</h2>
     <ul style="color:#cbd5e1;line-height:1.9;padding-left:1.25rem;">
       <li><a class="gold-link" href="https://playwright.dev/python/docs/intro" rel="noopener" target="_blank">Playwright Python Official Documentation</a></li>
@@ -793,7 +793,7 @@ OUTPUT FORMAT (Markdown):
   </section>
 
   <!-- CTA BLOCK -->
-  <section class="reveal" style="margin-bottom:2rem;">
+  <section class="reveal content-card" style="margin-bottom:2rem;">
     <div style="background:var(--bg-card,#0c111d);border:1px solid var(--border-gold,rgba(251,191,36,0.35));border-radius:16px;padding:2.25rem;text-align:center;">
       <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.4rem;margin-bottom:0.75rem;">Ready to Build Your Personal Competitive Radar?</h2>
       <p style="color:#cbd5e1;max-width:640px;margin:0 auto 1.5rem;line-height:1.7;">

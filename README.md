@@ -419,29 +419,29 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 
 ## Latest Pre-Commit Report Summary
 
-> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`METRICS.md`](METRICS.md)** | Recorded on: `2026-11-16 06:28:45 UTC`
+> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`METRICS.md`](METRICS.md)** | Recorded on: `2026-11-16 09:25:35 UTC`
 
 ### Commit Overview
 
 | Property | Value |
 | :--- | :--- |
-| **Parent Commit (Full)** | `a21d5cdfbdb18ea13d90a81f47e4570c08e841d3` |
-| **Parent Commit (Short)** | `a21d5cd` |
+| **Parent Commit (Full)** | `1b4a3aff426ce2cce76a088e117cfcf91a107d1b` |
+| **Parent Commit (Short)** | `1b4a3af` |
 | **Branch** | `main` |
-| **Parent Subject** | Portfolio |
+| **Parent Subject** | Update site content, parity pricing, new Claude/Gemini guides, footer, and portfolio SVG |
 | **Parent Author** | Thomas Cherickal `<thomascherickal@gmail.com>` |
-| **Parent Author Date** | `2026-11-15T15:46:45+05:30` |
-| **Commits in Repo (before this commit)** | 547 |
+| **Parent Author Date** | `2026-11-16T11:58:23+05:30` |
+| **Commits in Repo (before this commit)** | 548 |
 
 ### Quality Gate & Verification Summary
 
 | Quality Gate / Test Dimension | Total Scope | Passed | Failed | Status | Runtime |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| **Python Unit Test Suite** | 149 tests across 25 modules | 149 | 0 | PASSED | 10.81s |
+| **Python Unit Test Suite** | 149 tests across 25 modules | 149 | 0 | PASSED | 10.88s |
 | **JavaScript Unit Test Suite** | 159 tests across 17 sections | 159 | 0 | PASSED | 0.08s |
 | **NLP-Fuzzy-Expert Sync Engine** | 91 target documents | 91 | 0 | PASSED | 1.50s |
 | **SSOT Data Immutability Guard** | 12 data files SHA-256 hash | 12 | 0 | PASSED | 0.001s |
-| **Internal Link & Anchor Integrity** | 10631 links across 91 HTML files | 10631 | 0 | PASSED | 0.33s |
+| **Internal Link & Anchor Integrity** | 10613 links across 91 HTML files | 10613 | 0 | PASSED | 0.33s |
 | **JSON-LD Schema Synchronization** | 84 schema files in `schema/` | 84 | 0 | PASSED | 0.15s |
 | **Markdown Sync Verification** | 91 paired markdown files | 91 | 0 | PASSED | 0.10s |
 | **Overall Quality Gate Status** | **7 of 7 Quality Gates Passed** | **100%** | **0** | **GREEN** | **PASS** |
@@ -458,27 +458,27 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **562** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **997,908** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **977,973** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **6,614** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **13,321** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **59.15 MB (62,020,424 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **890,603 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **547** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-15** | Subject: "Portfolio" |
+| **Total Tracked Files** | **563** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **1,028,351** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **1,007,742** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **6,742** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **13,867** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **60.89 MB (63,842,831 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **924,511 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **548** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-16** | Subject: "Update site content, parity pricing, new Claude/Gemini guides, footer, and portfolio SVG" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ### Architecture & File Category Breakdown (`METRICS.md`)
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 91 | 108,593 | 8.57 MB (8,990,955 bytes) | Production static web pages, services, frameworks & guides |
-| **CSS Stylesheets** | 16 | 11,935 | 279.90 KB (286,613 bytes) | Design tokens, animations, responsive layout & themes |
+| **HTML Documents** | 91 | 111,365 | 8.71 MB (9,134,524 bytes) | Production static web pages, services, frameworks & guides |
+| **CSS Stylesheets** | 16 | 12,081 | 282.57 KB (289,354 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 32 | 11,372 | 3.70 MB (3,874,723 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 59 | 15,304 | 684.34 KB (700,764 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 158 | 45,050 | 5.02 MB (5,260,556 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 113 | 805,594 | 36.45 MB (38,216,077 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 159 | 46,573 | 5.23 MB (5,482,768 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 113 | 831,596 | 37.83 MB (39,669,962 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 43 | 60 | 126.58 KB (129,621 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 38 | 0 | 4.27 MB (4,479,410 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 12 | 0 | 79.79 KB (81,705 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |

@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Knowledge Graphs | Thomas Cherickal</title>
-<meta content="Deploy enterprise knowledge graphs and hybrid GraphRAG systems: domain ontologies, entity resolution, bitemporal provenance, multi-hop Cypher retrieval, and RBAC governance." name="description"/>
+<meta content="Combine structured entity-relationship knowledge graphs with LLM semantic retrieval to solve multi-hop reasoning, eliminate hallucinated enterprise answers, and slash token costs." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
 <!-- Canonical URL -->
 <link href="https://thedigitalfuturist.com/business-services/business-service-knowledge-graphs.html" rel="canonical"/>
@@ -14,9 +14,9 @@
 <meta content="https://thedigitalfuturist.com/business-services/business-service-knowledge-graphs.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
 <meta content="Knowledge Graphs &amp; GraphRAG | Thomas Cherickal" property="og:title"/>
-<meta content="Deploy enterprise knowledge graphs and hybrid GraphRAG systems: domain ontologies, entity resolution, bitemporal provenance, multi-hop Cypher retrieval, and RBAC governance." property="og:description"/>
+<meta content="Combine structured entity-relationship knowledge graphs with LLM semantic retrieval to solve multi-hop reasoning, eliminate hallucinated enterprise answers, and slash token costs." property="og:description"/>
 <meta content="Knowledge Graphs &amp; GraphRAG | Thomas Cherickal" name="twitter:title"/>
-<meta content="Deploy enterprise knowledge graphs and hybrid GraphRAG systems: domain ontologies, entity resolution, bitemporal provenance, multi-hop Cypher retrieval, and RBAC governance." name="twitter:description"/>
+<meta content="Combine structured entity-relationship knowledge graphs with LLM semantic retrieval to solve multi-hop reasoning, eliminate hallucinated enterprise answers, and slash token costs." name="twitter:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Favicon & Icons -->
@@ -36,8 +36,8 @@
       "@type": "WebPage",
       "@id": "https://thedigitalfuturist.com/business-services/business-service-knowledge-graphs.html#webpage",
       "url": "https://thedigitalfuturist.com/business-services/business-service-knowledge-graphs.html",
-      "name": "Knowledge Graphs & GraphRAG - Service Specification | Thomas Cherickal",
-      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
+      "name": "Knowledge Graphs & GraphRAG | Thomas Cherickal",
+      "description": "Combine structured entity-relationship knowledge graphs with LLM semantic retrieval to solve multi-hop reasoning and eliminate hallucinated enterprise answers. Agents provide accurate and verifiable answers while saving tokens.",
       "isPartOf": {
         "@id": "https://thedigitalfuturist.com/#website"
       },
@@ -70,13 +70,29 @@
       "name": "Knowledge Graphs & GraphRAG - Thomas Cherickal",
       "serviceType": "Enterprise Knowledge Graph Engineering & Hybrid GraphRAG Architecture",
       "url": "https://thedigitalfuturist.com/business-services/business-service-knowledge-graphs.html",
-      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
+      "description": "Combine structured entity-relationship knowledge graphs with LLM semantic retrieval to solve multi-hop reasoning and eliminate hallucinated enterprise answers. The result is that agents will always provide accurate and verifiable answers to critical questions and save on tokens in the process.",
       "provider": {
         "@type": "Person",
         "@id": "https://thedigitalfuturist.com/#person",
         "name": "Thomas Cherickal",
         "jobTitle": "Generative AI Consultant and The Digital Futurist",
-        "url": "https://thedigitalfuturist.com"
+        "url": "https://thedigitalfuturist.com",
+        "sameAs": [
+          "https://linkedin.com/in/thomascherickal",
+          "https://github.com/thomascherickal",
+          "https://dev.to/thomascherickal",
+          "https://x.com/thomazcherickal"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://thedigitalfuturist.com/#organization",
+        "name": "The Digital Futurist",
+        "url": "https://thedigitalfuturist.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://thedigitalfuturist.com/assets/digital-futurist-logo.jpg"
+        }
       },
       "areaServed": {
         "@type": "Place",
@@ -84,10 +100,11 @@
       },
       "availableLanguage": "English",
       "serviceOutput": [
-        "Canonical Domain Ontology & SHACL Schema: Versioned entity types, relationship constraints, and automated entity resolution.",
-        "Hybrid GraphRAG Retrieval Engine: Multi-hop Neo4j Cypher traversal fused with dense vector similarity and lexical search.",
-        "Bitemporal Provenance & Citation Layer: Immutable document lineage, valid-time intervals, and verbatim evidence attribution.",
-        "Zero-Trust Graph RBAC & CDC Ingestion: Tenant-isolated access controls, streaming updates, and OpenTelemetry observability."
+        "Structured Entity-Relationship Graphs: Versioned domain ontologies, entity resolution, and property graph modeling in Neo4j.",
+        "Hybrid GraphRAG Multi-Hop Retrieval: Multi-hop graph traversal combined with vector similarity for deterministic reasoning.",
+        "Token Conservation Architecture: Pruning raw document context to targeted subgraphs, cutting token spend up to 80%.",
+        "Zero-Hallucination Evidence Grounding: Bitemporal provenance, verifiable entity citations, and immutable audit logs.",
+        "Enterprise RBAC & Graph Security: Subgraph access control policies protecting sensitive organizational relationships."
       ]
     }
   ]
@@ -287,39 +304,44 @@
 <div class="doc-container" style="max-width:960px;margin:0 auto;padding:3rem 1.25rem 2rem;">
 
   <!-- HERO HEADER CARD -->
-  <section class="hero-card" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.35);border-radius:16px;padding:2.5rem;margin-bottom:2rem;box-shadow:0 0 40px rgba(251,191,36,0.08);">
-    <p class="section-label" style="color:var(--gold,#fbbf24);font-family:var(--font-mono,monospace);font-size:0.8rem;letter-spacing:0.12em;margin-bottom:0.75rem;">// SERVICE SPECIFICATION - ENTERPRISE KNOWLEDGE ARCHITECTURE</p>
+  <section class="hero-card content-card" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.35);border-radius:16px;padding:2.5rem;margin-bottom:2rem;box-shadow:0 0 40px rgba(251,191,36,0.08);">
+    <p class="section-label" style="color:var(--gold,#fbbf24);font-family:var(--font-mono,monospace);font-size:0.8rem;letter-spacing:0.12em;margin-bottom:0.75rem;">// ENTERPRISE SERVICE SPECIFICATION - KNOWLEDGE ARCHITECTURE</p>
     <h1>Knowledge Graphs</h1>
-    <p style="color:var(--text-secondary,#cbd5e1);font-size:1.05rem;line-height:1.75;max-width:780px;margin-bottom:1.75rem;">
-      Architect and deploy enterprise knowledge graphs fused with hybrid GraphRAG retrieval: canonical domain ontologies, automated entity resolution, bitemporal provenance, multi-hop Cypher traversal, and zero-trust RBAC governance at organizational scale.
+    <p style="color:var(--text-secondary,#cbd5e1);font-size:1.05rem;line-height:1.75;max-width:820px;margin-bottom:1.75rem;">
+      Combine structured entity-relationship knowledge graphs with LLM semantic retrieval to solve multi-hop reasoning and eliminate hallucinated enterprise answers. The result is that agents will always provide accurate and verifiable answers to critical questions and save on tokens in the process.
     </p>
+    <div class="service-cta-buttons" style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+      <a class="btn btn-commission btn-lg" href="../contact.html">Commission Knowledge Graph Systems →</a>
+      <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+    </div>
     <div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:1.5rem;">
       <div style="background:#040711;border:1px solid rgba(56,189,248,0.28);border-radius:12px;padding:1.1rem;">
         <div style="font-size:1.5rem;font-weight:700;color:var(--cyan,#38bdf8);font-family:var(--font-display,sans-serif);">Multi-Hop</div>
-        <div style="font-size:0.82rem;color:#94a3b8;margin-top:0.25rem;">Deterministic Reasoning Depth</div>
+        <div style="font-size:0.82rem;color:#94a3b8;margin-top:0.25rem;">Deterministic reasoning joins</div>
       </div>
       <div style="background:#040711;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:1.1rem;">
-        <div style="font-size:1.5rem;font-weight:700;color:var(--gold,#fbbf24);font-family:var(--font-display,sans-serif);">100%</div>
-        <div style="font-size:0.82rem;color:#94a3b8;margin-top:0.25rem;">Bitemporal Provenance Trail</div>
+        <div style="font-size:1.5rem;font-weight:700;color:var(--gold,#fbbf24);font-family:var(--font-display,sans-serif);">Zero Halluc.</div>
+        <div style="font-size:0.82rem;color:#94a3b8;margin-top:0.25rem;">Accurate, verifiable answers</div>
       </div>
       <div style="background:#040711;border:1px solid rgba(52,211,153,0.28);border-radius:12px;padding:1.1rem;">
-        <div style="font-size:1.5rem;font-weight:700;color:#34d399;font-family:var(--font-display,sans-serif);">RBAC</div>
-        <div style="font-size:0.82rem;color:#94a3b8;margin-top:0.25rem;">Subgraph Access Governance</div>
+        <div style="font-size:1.5rem;font-weight:700;color:#34d399;font-family:var(--font-display,sans-serif);">Token Saving</div>
+        <div style="font-size:0.82rem;color:#94a3b8;margin-top:0.25rem;">Subgraph injection cuts tokens up to 80%</div>
       </div>
       <div style="background:#040711;border:1px solid rgba(232,121,249,0.28);border-radius:12px;padding:1.1rem;">
-        <div style="font-size:1.5rem;font-weight:700;color:#e879f9;font-family:var(--font-display,sans-serif);">Sub-50ms</div>
-        <div style="font-size:0.82rem;color:#94a3b8;margin-top:0.25rem;">Indexed Cypher Traversal</div>
+        <div style="font-size:1.5rem;font-weight:700;color:#e879f9;font-family:var(--font-display,sans-serif);">RBAC Mesh</div>
+        <div style="font-size:0.82rem;color:#94a3b8;margin-top:0.25rem;">Zero-trust subgraph governance</div>
       </div>
     </div>
   </section>
 
   <!-- TABLE OF CONTENTS -->
-  <section id="table-of-contents" style="background:var(--bg-card,#0c111d);border:1px solid rgba(56,189,248,0.25);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
+  <section class="content-card" id="table-of-contents" style="background:var(--bg-card,#0c111d);border:1px solid rgba(56,189,248,0.25);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.2rem;margin-bottom:1rem;">Table of Contents</h2>
     <ol style="color:#cbd5e1;line-height:1.9;padding-left:1.25rem;margin:0;display:flex;flex-direction:column;gap:0.6rem;">
       <li><a class="gold-link" href="#vector-limits">Why Vector-Only RAG Fails at Enterprise Scale</a></li>
       <li><a class="gold-link" href="#ontology-governance">Ontology Engineering &amp; Canonical Schema Governance</a></li>
       <li><a class="gold-link" href="#hybrid-graphrag">Hybrid GraphRAG Retrieval Architecture</a></li>
+      <li><a class="gold-link" href="#token-slashing">Slashing Token Costs with Targeted Subgraph Extraction</a></li>
       <li><a class="gold-link" href="#bitemporal-provenance">Temporal Provenance, Lineage &amp; Citation Grounding</a></li>
       <li><a class="gold-link" href="#graph-rbac">Multi-Tenant RBAC, Compliance &amp; Graph Security</a></li>
       <li><a class="gold-link" href="#cdc-scaling">Production Scaling, CDC Ingestion &amp; Observability</a></li>
@@ -329,12 +351,13 @@
       <li><a class="gold-link" href="#tutorial-prompt-cypher">Tutorial 4: Cypher Synthesis &amp; Injection-Safe Query Prompt</a></li>
       <li><a class="gold-link" href="#tutorial-ops-deploy">Tutorial 5: Step-by-Step Enterprise GraphRAG Deployment</a></li>
       <li><a class="gold-link" href="#tutorial-ops-recovery">Tutorial 6: Step-by-Step Entity Drift &amp; Stale-Subgraph Recovery Runbook</a></li>
+      <li><a class="gold-link" href="#parity-pricing">Purchasing Power Parity (PPP) Pricing &amp; Trust Guarantees</a></li>
       <li><a class="gold-link" href="#references">Live References &amp; Documentation</a></li>
     </ol>
   </section>
 
   <!-- SECTION 1 -->
-  <section id="vector-limits" style="margin-bottom:3rem;">
+  <section class="content-card" id="vector-limits" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Why Vector-Only RAG Fails at Enterprise Scale</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Standard Retrieval-Augmented Generation pipelines rely on chunking documents into fixed token windows, computing dense vector embeddings, and retrieving the top-k nearest neighbors by cosine similarity. While this pattern works well for isolated FAQ lookups, it breaks down rapidly when deployed across complex enterprise repositories spanning legal contracts, engineering runbooks, CRM records, supply-chain manifests, and financial ledgers. Vector similarity measures topical proximity, not structural causality. When an executive or compliance officer asks how a supplier bankruptcy in Tier 2 affects active enterprise SLAs across three regional business units, no single 512-token chunk contains the complete answer.
@@ -393,7 +416,7 @@
   </section>
 
   <!-- SECTION 2 -->
-  <section id="ontology-governance" style="margin-bottom:3rem;">
+  <section class="content-card" id="ontology-governance" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Ontology Engineering &amp; Canonical Schema Governance</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       The most common mistake in GraphRAG implementations is allowing an LLM to invent arbitrary node labels and relationship verbs during document ingestion. Without a strict ontology, a 10,000-document ingestion run produces hundreds of synonymous edge types such as <code>WORKS_AT</code>, <code>EMPLOYED_BY</code>, <code>IS_STAFF_OF</code>, and <code>MANAGES_TEAM_IN</code>. Downstream Cypher queries become brittle, recall drops sharply, and graph analytics lose mathematical consistency. Enterprise deployments require a formal, version-controlled domain ontology engineered before a single document is processed.
@@ -440,7 +463,7 @@
   </section>
 
   <!-- SECTION 3 -->
-  <section id="hybrid-graphrag" style="margin-bottom:3rem;">
+  <section class="content-card" id="hybrid-graphrag" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Hybrid GraphRAG Retrieval Architecture</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       A production GraphRAG system never discards vector search; instead, it unifies vector similarity, full-text BM25 lexical matching, and structural graph traversal inside a single orchestration layer. When a user submits a complex query, a lightweight query planner decomposes the intent into anchor entities, temporal constraints, and traversal depth. Vector and full-text indexes locate candidate entry-point nodes and raw document chunks in milliseconds, while Cypher queries expand outward across 1 to 3 hops to pull in connected dependencies, owners, policies, and historical exceptions.
@@ -492,8 +515,22 @@
     </div>
   </section>
 
+  <!-- SECTION: TOKEN SLASHING VIA SUBGRAPH EXTRACTION -->
+  <section class="content-card" id="token-slashing" style="margin-bottom:3rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Slashing Token Costs with Targeted Subgraph Extraction</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Standard RAG architectures suffer from crippling token bloat. Because vector chunking lacks structural precision, developers routinely pack 20 to 50 raw text fragments - totaling 10,000 to 40,000 tokens per query - into prompt contexts in the hope that the LLM will discover the hidden connections. Over millions of enterprise copilot queries, this brute-force approach drives runaway API bills.
+    </p>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
+      Knowledge graphs invert this economic dynamic. Instead of loading verbose paragraphs, a parameterized Cypher traversal extracts only the exact subgraphs required for the reasoning step: typed nodes, directed edges, and specific scalar properties (such as contract renewal dates, liability caps, or microservice dependencies). A targeted relational subgraph that answers a multi-hop question occupies typically fewer than 1,200 tokens.
+    </p>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
+      By substituting raw document bulk with precise structural facts, GraphRAG slashes input token consumption by up to 80% per interaction. Furthermore, because language models reason over explicit entities and validated edges rather than ambiguous prose, hallucination rates drop to near zero, providing leadership with verifiable certainty at a fraction of cloud inference costs.
+    </p>
+  </section>
+
   <!-- SECTION 4 -->
-  <section id="bitemporal-provenance" style="margin-bottom:3rem;">
+  <section class="content-card" id="bitemporal-provenance" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Temporal Provenance, Lineage &amp; Citation Grounding</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Enterprise truth is time-dependent. A vendor might be approved in Q1, suspended in Q3, and reinstated under a new compliance addendum in Q4. A static knowledge graph that overwrites edges in place destroys historical auditability and causes severe hallucinations when teams ask point-in-time questions. To guarantee audit-grade accuracy, our architecture implements bitemporal modeling on every critical relationship: <code>valid_from</code> and <code>valid_to</code> capture when a fact was true in the real world, while <code>tx_ingested_at</code> and <code>superseded_at</code> record when the enterprise system learned about the change.
@@ -534,7 +571,7 @@
   </section>
 
   <!-- SECTION 5 -->
-  <section id="graph-rbac" style="margin-bottom:3rem;">
+  <section class="content-card" id="graph-rbac" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Multi-Tenant RBAC, Compliance &amp; Graph Security</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       When an organization consolidates HR, M&amp;A, legal, and engineering data into a unified knowledge graph, access control becomes non-negotiable. A junior support engineer must never be able to traverse an edge that surfaces confidential executive compensation or unreleased acquisition targets. Unlike flat vector stores where metadata filtering can be bypassed by overly broad similarity queries, property graphs must enforce role-based access control (RBAC) at both the node-label and relationship-property levels on every single hop.
@@ -576,7 +613,7 @@
   </section>
 
   <!-- SECTION 6 -->
-  <section id="cdc-scaling" style="margin-bottom:3rem;">
+  <section class="content-card" id="cdc-scaling" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Production Scaling, CDC Ingestion &amp; Observability</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Batch-rebuilding an entire knowledge graph every night does not scale past tens of thousands of documents. Modern enterprise deployments use Change Data Capture (CDC) pipelines over <a class="gold-link" href="#references">Apache Kafka</a> and cloud warehouses such as <a class="gold-link" href="#references">Snowflake</a> to stream incremental updates in near real time. When a contract is amended, an incident ticket is closed, or a Jira epic changes ownership, only the affected document subgraph is re-extracted and merged using idempotent Cypher <code>UNWIND</code> batches.
@@ -618,7 +655,7 @@
   </section>
 
   <!-- TUTORIAL 1: PYTHON -->
-  <section id="tutorial-python-extractor" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-python-extractor" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Tutorial 1: Python Entity-Relationship Extractor &amp; Neo4j Loader</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
       This production Python module enforces a strict <a class="gold-link" href="#references">Pydantic ontology contract</a> during extraction and loads validated entities and bitemporal relationships into Neo4j using parameterized <code>UNWIND</code> batch queries. Notice how every extracted triple is bound to an immutable document SHA-256 hash and tenant identifier. In production, wrap <code>extract_validated_subgraph</code> in a dead-letter queue retry loop so any JSON validation exception is captured for schema tuning without halting the broader ingestion batch.
@@ -711,7 +748,7 @@ def upsert_subgraph(tenant_id: str, doc_id: str, text: str, payload: ExtractionP
   </section>
 
   <!-- TUTORIAL 2: PYTHON -->
-  <section id="tutorial-python-hybrid" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-python-hybrid" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Tutorial 2: Python Hybrid GraphRAG Query Engine</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
       This retrieval engine executes a two-phase hybrid pass: first locating seed entities via Neo4j vector similarity search, then expanding 2 hops across tenant-isolated relationships while collecting verbatim evidence quotes. The resulting structured subgraph is passed to the synthesis model for citation-grounded answering. Notice the <code>ALL(n IN nodes(path) ...)</code> predicate inside the Cypher query: this guarantees that even intermediate nodes along a multi-hop path strictly belong to the authenticated tenant, eliminating indirect cross-tenant graph leakage.
@@ -796,7 +833,7 @@ def answer_with_graphrag(question: str, tenant_id: str, query_embedding: list[fl
   </section>
 
   <!-- TUTORIAL 3: PROMPT TEMPLATE -->
-  <section id="tutorial-prompt-ontology" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-prompt-ontology" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Tutorial 3: Enterprise Ontology &amp; Entity Resolution Prompt</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
       Use this production system prompt when extracting knowledge triples from unstructured enterprise documents. It forces canonical slug generation, resolves aliases against a provided master entity list, and rejects ungrounded inferences.
@@ -826,7 +863,7 @@ CANONICAL RESOLUTION RULES:
   </section>
 
   <!-- TUTORIAL 4: PROMPT TEMPLATE -->
-  <section id="tutorial-prompt-cypher" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-prompt-cypher" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Tutorial 4: Cypher Synthesis &amp; Injection-Safe Query Prompt</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
       When natural language questions must be translated into analytical Cypher queries, this prompt enforces parameterized inputs, read-only clauses, mandatory tenant isolation, and bounded traversal depths.
@@ -850,7 +887,7 @@ SECURITY &amp; GOVERNANCE CONSTRAINTS:
   </section>
 
   <!-- TUTORIAL 5: STEP-BY-STEP OPERATIONAL -->
-  <section id="tutorial-ops-deploy" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-ops-deploy" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Tutorial 5: Step-by-Step Enterprise GraphRAG Deployment</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Follow this seven-step operational checklist to take an enterprise knowledge graph from architectural blueprint to governed production rollout.
@@ -895,7 +932,7 @@ SECURITY &amp; GOVERNANCE CONSTRAINTS:
   </section>
 
   <!-- TUTORIAL 6: STEP-BY-STEP OPERATIONAL -->
-  <section id="tutorial-ops-recovery" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-ops-recovery" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Tutorial 6: Step-by-Step Entity Drift &amp; Stale-Subgraph Recovery Runbook</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       When entity resolution thresholds drift or a faulty ontology migration introduces duplicate or conflicting edges, execute this incident recovery runbook immediately without taking the read-only query tier offline. Having bitemporal timestamps and immutable document hashes on every edge allows platform engineers to perform surgical rollbacks in minutes rather than rebuilding the entire enterprise graph from scratch.
@@ -910,8 +947,83 @@ SECURITY &amp; GOVERNANCE CONSTRAINTS:
     </ol>
   </section>
 
+  <!-- SECTION: PURCHASING POWER PARITY (PPP) PRICING -->
+  <section class="content-card" id="parity-pricing" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.3);border-radius:14px;padding:2rem;margin-bottom:2.5rem;">
+    <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Purchasing Power Parity (PPP) Pricing &amp; Trust Guarantees</h2>
+    <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1rem;">
+      Every enterprise deserves verifiable, hallucination-free knowledge architecture regardless of geographic headquarters. We calibrate all professional rates across six Purchasing Power Parity (PPP) tiers covering 195 countries worldwide. Explore full country rankings and tier definitions on our <a class="gold-link" href="../pricing.html">comprehensive pricing page</a>.
+    </p>
+
+    <div style="overflow-x:auto;margin:1.5rem 0;">
+      <table style="width:100%;border-collapse:collapse;border:1px solid rgba(251,191,36,0.3);background:#040711;text-align:left;">
+        <thead>
+          <tr style="border-bottom:1px solid rgba(251,191,36,0.3);background:#0c111d;">
+            <th style="padding:0.75rem 1rem;color:#fbbf24;">Parity Tier</th>
+            <th style="padding:0.75rem 1rem;color:#fbbf24;">Sample Regions</th>
+            <th style="padding:0.75rem 1rem;color:#fbbf24;">Flagship Rate (60 Days Total)</th>
+            <th style="padding:0.75rem 1rem;color:#fbbf24;">Individual Service Pick</th>
+            <th style="padding:0.75rem 1rem;color:#fbbf24;">Extra Seats</th>
+          </tr>
+        </thead>
+        <tbody style="color:#cbd5e1;font-size:0.92rem;line-height:1.6;">
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+            <td style="padding:0.75rem 1rem;font-weight:600;color:#38bdf8;">Tier 1 (100%)</td>
+            <td style="padding:0.75rem 1rem;">USA, UK, EU, Japan, Australia</td>
+            <td style="padding:0.75rem 1rem;">$3,000 USD</td>
+            <td style="padding:0.75rem 1rem;">$300 USD</td>
+            <td style="padding:0.75rem 1rem;">+$300 USD</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+            <td style="padding:0.75rem 1rem;font-weight:600;color:#38bdf8;">Tier 2 (75%)</td>
+            <td style="padding:0.75rem 1rem;">Brazil, Malaysia, Mexico, South Africa</td>
+            <td style="padding:0.75rem 1rem;">$2,250 USD</td>
+            <td style="padding:0.75rem 1rem;">$225 USD</td>
+            <td style="padding:0.75rem 1rem;">+$225 USD</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+            <td style="padding:0.75rem 1rem;font-weight:600;color:#38bdf8;">Tier 3 (50%)</td>
+            <td style="padding:0.75rem 1rem;">India, Egypt, Philippines, Indonesia</td>
+            <td style="padding:0.75rem 1rem;">$1,500 USD</td>
+            <td style="padding:0.75rem 1rem;">$150 USD</td>
+            <td style="padding:0.75rem 1rem;">+$150 USD</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+            <td style="padding:0.75rem 1rem;font-weight:600;color:#38bdf8;">Tier 4 (50%)</td>
+            <td style="padding:0.75rem 1rem;">Early-Stage Tech Startups &amp; Solo Founders</td>
+            <td style="padding:0.75rem 1rem;">$1,500 USD</td>
+            <td style="padding:0.75rem 1rem;">$150 USD</td>
+            <td style="padding:0.75rem 1rem;">+$150 USD</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+            <td style="padding:0.75rem 1rem;font-weight:600;color:#38bdf8;">Tier 5 (25%)</td>
+            <td style="padding:0.75rem 1rem;">Colleges, Universities &amp; Non-Profits</td>
+            <td style="padding:0.75rem 1rem;">$750 USD</td>
+            <td style="padding:0.75rem 1rem;">$75 USD</td>
+            <td style="padding:0.75rem 1rem;">+$75 USD</td>
+          </tr>
+          <tr>
+            <td style="padding:0.75rem 1rem;font-weight:600;color:#38bdf8;">Tier 6 (Custom)</td>
+            <td style="padding:0.75rem 1rem;">Disaster Relief &amp; Crisis-Affected Regions</td>
+            <td style="padding:0.75rem 1rem;">Custom USD</td>
+            <td style="padding:0.75rem 1rem;">Custom USD</td>
+            <td style="padding:0.75rem 1rem;">Custom USD</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="color:#cbd5e1;line-height:1.85;"><strong>Trust Guarantees &amp; Payment Structure:</strong></p>
+    <ul style="color:#cbd5e1;line-height:1.9;padding-left:1.5rem;">
+      <li><strong>$0 Upfront:</strong> Zero deposit required before commencing ontology scoping and infrastructure setup.</li>
+      <li><strong>Five Equal Milestone Installments:</strong> Invoiced in 20% increments only after passing completed technical gates.</li>
+      <li><strong>Walkaway Guarantee:</strong> If unsatisfied after the first milestone phase, walk away owing nothing.</li>
+      <li><strong>Dedicated Support Period:</strong> 30 days of continuous dedicated support for flagships (or 5 days for individual service picks) included at strictly $0 extra charge.</li>
+      <li><strong>Apache 2.0 Licensing:</strong> All Cypher queries, extraction pipelines, and GraphRAG harness code belong 100% to your enterprise under the Apache 2.0 license.</li>
+    </ul>
+  </section>
+
   <!-- REFERENCES -->
-  <section id="references" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.25);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
+  <section class="content-card" id="references" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.25);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.3rem;margin-bottom:1rem;">Live References &amp; Documentation</h2>
     <ul style="color:#cbd5e1;line-height:1.9;padding-left:1.25rem;margin:0;">
       <li><a class="gold-link" href="https://neo4j.com/docs/cypher-manual/current/introduction/" rel="noopener" target="_blank">Neo4j Cypher Query Language Official Manual</a></li>
@@ -930,7 +1042,7 @@ SECURITY &amp; GOVERNANCE CONSTRAINTS:
   </section>
 
   <!-- CTA BLOCK -->
-  <section class="reveal" style="margin-bottom:2rem;">
+  <section class="reveal content-card" style="margin-bottom:2rem;">
     <div style="background:var(--bg-card,#0c111d);border:1px solid var(--border-gold,rgba(251,191,36,0.35));border-radius:16px;padding:2.25rem;text-align:center;">
       <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.4rem;margin-bottom:0.75rem;">Ready to Architect Enterprise Knowledge Graphs &amp; GraphRAG?</h2>
       <p style="color:#cbd5e1;max-width:640px;margin:0 auto 1.5rem;line-height:1.7;">

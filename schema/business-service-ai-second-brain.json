@@ -5,8 +5,8 @@
       "@type": "WebPage",
       "@id": "https://thedigitalfuturist.com/business-services/business-service-ai-second-brain.html#webpage",
       "url": "https://thedigitalfuturist.com/business-services/business-service-ai-second-brain.html",
-      "name": "AI Second Brain - Service Specification | Thomas Cherickal",
-      "description": "Build a shared team AI second brain: a Markdown knowledge vault with automated capture, local-model tagging, and cited question answering. All services are 10 days long (5 days of training and 5 days of support) and can freely overlap for different customers according to their needs.",
+      "name": "AI Second Brain | Thomas Cherickal",
+      "description": "Unify scattered company wikis, Slack threads, meeting transcripts, and technical specs into an indexed AI Second Brain with Markdown-first hybrid vector and keyword retrieval.",
       "isPartOf": {
         "@id": "https://thedigitalfuturist.com/#website"
       },
@@ -37,15 +37,31 @@
       "@type": "Service",
       "@id": "https://thedigitalfuturist.com/business-services/business-service-ai-second-brain.html#service",
       "name": "AI Second Brain - Thomas Cherickal",
-      "serviceType": "Personal Knowledge Management with AI",
+      "serviceType": "Enterprise Knowledge Architecture & AI Second Brain",
       "url": "https://thedigitalfuturist.com/business-services/business-service-ai-second-brain.html",
-      "description": "Build a shared team AI second brain: a Markdown knowledge vault with automated capture, local-model tagging, and cited question answering. All services are 10 days long (5 days of training and 5 days of support) and can freely overlap for different customers according to their needs.",
+      "description": "Unify scattered company wikis, Slack threads, meeting transcripts, and technical specs into an indexed AI Second Brain. Teams learn to build Markdown-first knowledge bases paired with hybrid vector and keyword retrieval, ensuring every employee queries verified organizational memory with clear source citations that minimizes hallucinations and saves tokens.",
       "provider": {
         "@type": "Person",
         "@id": "https://thedigitalfuturist.com/#person",
         "name": "Thomas Cherickal",
-        "jobTitle": "Generative AI Consultant",
-        "url": "https://thedigitalfuturist.com"
+        "jobTitle": "Generative AI Consultant and The Digital Futurist",
+        "url": "https://thedigitalfuturist.com",
+        "sameAs": [
+          "https://linkedin.com/in/thomascherickal",
+          "https://github.com/thomascherickal",
+          "https://dev.to/thomascherickal",
+          "https://x.com/thomazcherickal"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://thedigitalfuturist.com/#organization",
+        "name": "The Digital Futurist",
+        "url": "https://thedigitalfuturist.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://thedigitalfuturist.com/assets/digital-futurist-logo.jpg"
+        }
       },
       "areaServed": {
         "@type": "Place",
@@ -53,11 +69,11 @@
       },
       "availableLanguage": "English",
       "serviceOutput": [
-        "Markdown Knowledge Vault: Obsidian vault with templates, frontmatter and Git backup.",
-        "Automated Capture: PDF, web and email notes converted to clean Markdown.",
-        "Local Model Tagging: Ollama-based summaries and tags with human review.",
-        "Cited Question Answering: Embeddings and a Chroma index that answer from your own notes.",
-        "Weekly Review Digest: Scheduled summary of new and unfinished notes."
+        "Indexed Enterprise Knowledge Base: Ingesting company wikis, Slack threads, meeting transcripts, and technical specs.",
+        "Markdown-First Vault: Plain-text architecture with frontmatter schemas, bitemporal metadata, and Git version control.",
+        "Hybrid Vector & Keyword Retrieval: Dense embeddings fused with BM25 lexical search for precise, token-efficient query matching.",
+        "Verbatim Source Citations: Minimizing hallucinations by grounding every answer with file-and-line evidence links.",
+        "Token Conservation: Pruning irrelevant context to slash prompt overhead and eliminate redundant API expenses."
       ]
     }
   ]

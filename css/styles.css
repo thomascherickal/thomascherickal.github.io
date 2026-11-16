@@ -4564,5 +4564,151 @@ span[style*="font-size:2.8rem"]:empty {
   padding-left: 1.25rem !important;
 }
 
-/* Ensure mobile overrides take final priority in stylesheet cascade */
-@import url("mobile/mobile.css");
+/* ==========================================================================
+   FINAL GLOBAL OVERRIDES: TEXT ON BACKGROUND, BLACK BOXES, COLORED BORDERS & MOBILE-FIRST
+   ========================================================================== */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+main,
+.container {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Text placed directly on the animated background without a surrounding box */
+main > p,
+section > p:not([class*="badge"]):not([class*="eyebrow"]),
+.hero-desc,
+.section-sub,
+.hero-byline {
+  color: #e2e8f0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.92);
+}
+
+/* Black background boxes + cyan borders for text blocks, cards, and diagrams */
+.section-header,
+.hero-card,
+.hero > div,
+.faq-category-header,
+.content-card,
+.article-figure,
+figure,
+.mermaid,
+.stat-card,
+.home-nav-card,
+.article-carousel-card,
+.case-study-card,
+.faq-card,
+.price-card-faq,
+.service-card,
+.guarantee-card,
+.role-card,
+.parity-tier-card,
+.service-rate-box,
+.parity-rate-box,
+.newsletter-card,
+.callout,
+.comparison-card,
+.audience-card,
+.collab-card,
+.contact-method-card,
+.tech-cat-card,
+.card {
+  background: #000000 !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.35) !important;
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.14);
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Gold borders for ToC, CTA banners, and highlighted boxes */
+.toc-card,
+.cta-banner,
+.cta-box {
+  background: #000000 !important;
+  border: 1.5px solid rgba(251, 191, 36, 0.42) !important;
+  box-shadow: 0 0 18px rgba(251, 191, 36, 0.14);
+  border-radius: 14px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.section-header {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.25rem;
+}
+
+.mermaid,
+.table-wrap,
+.tablewrap,
+.code-window pre {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mermaid svg,
+figure svg,
+img,
+video {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 768px) {
+  .container,
+  main {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .section-header,
+  .hero-card,
+  .hero > div,
+  .faq-category-header,
+  .content-card,
+  .article-figure,
+  figure,
+  .mermaid,
+  .stat-card,
+  .home-nav-card,
+  .article-carousel-card,
+  .case-study-card,
+  .faq-card,
+  .price-card-faq,
+  .service-card,
+  .guarantee-card,
+  .role-card,
+  .parity-tier-card,
+  .service-rate-box,
+  .parity-rate-box,
+  .newsletter-card,
+  .callout,
+  .toc-card,
+  .cta-banner,
+  .cta-box {
+    padding: 1.15rem 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .stats-grid,
+  .faq-grid,
+  .social-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .btn,
+  a.btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}

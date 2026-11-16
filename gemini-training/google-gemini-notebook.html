@@ -308,8 +308,8 @@
   </nav>
   <!-- END:HEADER -->
 <main class="article-container" style="max-width:960px;margin:0 auto;padding:2rem 1.25rem;">
-<header class="article-hero" style="margin-bottom:2rem;">
-<div class="hero-badge" style="display:inline-block;padding:0.35rem 0.85rem;background:rgba(251,191,36,0.12);border:1px solid rgba(251,191,36,0.3);border-radius:20px;font-size:0.75rem;font-weight:600;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1rem;">
+<header class="article-hero content-card" style="margin-bottom:2rem;">
+<div class="hero-badge content-card" style="display:inline-block;padding:0.35rem 0.85rem;background:rgba(251,191,36,0.12);border:1px solid rgba(251,191,36,0.3);border-radius:20px;font-size:0.75rem;font-weight:600;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1rem;">
         // SOURCE-GROUNDED RESEARCH &amp; LEARNING
       </div>
 <h1>Gemini Notebook & Deep Research Grounding</h1>
@@ -367,7 +367,7 @@
 </article>
 <article class="content-card" id="introduction">
 <h2>Introduction</h2>
-<section id="introduction">
+<section class="content-card" id="introduction">
 <p>Google first showed this tool at Google I/O 2023 under the name Project Tailwind. Three years later it is called Gemini Notebook, and Google says more than 30 million people and over 600,000 organizations use it, according to <a class="gold-link" href="https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/" rel="noopener" target="_blank">the rename announcement</a>. The product spent most of that time as NotebookLM, and the new name arrived on 16 July 2026.</p>
 <p>Its central idea has barely changed. You add your own sources, and every answer comes from those sources with citations attached. That design suits a job where general chatbots struggle: learning a fast-moving topic from material you chose and can check.</p>
 <p>This article covers the product's history, its main achievements, and seven case studies. Each case study takes one feature and shows how to use it on a trending topic, such as a new research paper, a policy report, or a technology you must understand by Friday. Every date and figure comes from a source linked in the text, and the closing sections say where those sources disagree.</p>
@@ -376,7 +376,7 @@
 </article>
 <article class="content-card" id="what">
 <h2>What Gemini Notebook Is</h2>
-<section id="what">
+<section class="content-card" id="what">
 <p>Gemini Notebook is a research and learning assistant built on Gemini. <a class="gold-link" href="https://www.digitalocean.com/resources/articles/what-is-notebooklm" rel="noopener" target="_blank">DigitalOcean's explainer</a> describes it as a closed retrieval system. You upload sources, and the answers are grounded only in that material, with clickable citations that trace each claim to a passage.</p>
 <p>Supported inputs include PDFs, Google Docs, websites, Google Slides, text files, and YouTube transcripts, per <a class="gold-link" href="https://en.wikipedia.org/wiki/NotebookLM" rel="noopener" target="_blank">Wikipedia's NotebookLM entry</a>. In November 2025 Google added Word files, Google Sheets, images such as photos of handwritten notes, and Drive PDFs, as its <a class="gold-link" href="https://blog.google/innovation-and-ai/models-and-research/google-labs/notebooklm-deep-research-file-types/" rel="noopener" target="_blank">Deep Research announcement</a> lists.</p>
 <p>The July 2026 rename did more than change a label. Google's announcement calls Gemini Notebook the same standalone product, and it adds a secure cloud computer to each notebook so that code can run against your sources. Notebooks can also be created and opened inside the Gemini app, with syncing between the app and the standalone site.</p>
@@ -390,7 +390,7 @@
 </article>
 <article class="content-card" id="highlights">
 <h2>Achievements and Highlights</h2>
-<section id="highlights">
+<section class="content-card" id="highlights">
 <p>Scale is the first achievement. Google reports more than 30 million users and over 600,000 organizations, and it is the only source for those figures. The product also grew from an experimental label, removed in October 2024 according to <a class="gold-link" href="https://en.wikipedia.org/wiki/Gemini_Notebook" rel="noopener" target="_blank">Wikipedia's Gemini Notebook article</a>, into a tool schools and companies deploy.</p>
 <div class="stats">
 <div class="stat"><b>30M+</b><span>people using the product, as reported by Google</span></div>
@@ -415,7 +415,7 @@
 </article>
 <article class="content-card" id="routine">
 <h2>A Routine for Learning a Trending Topic</h2>
-<section id="routine">
+<section class="content-card" id="routine">
 <p>A trending topic has a particular problem: the best material is scattered, new, and partly contradictory. The routine below uses the seven features in an order that moves from gathering to testing. It is my own arrangement, built from how each feature works, and not a method published by Google.</p>
 <figure class="diagram">
 <svg aria-label="Five-step routine for learning a trending topic: collect, orient, structure, practice, check" role="img" viewbox="0 0 900 150"><defs><marker id="ar1" markerheight="7" markerwidth="7" orient="auto" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0 0L10 5L0 10z" fill="#E3B341"></path></marker></defs><g fill="#f2f2f5" font-size="15" text-anchor="middle"><rect fill="#0a0a0d" height="90" rx="10" stroke="#2b55d6" stroke-width="2.5" width="150" x="0" y="30"></rect><text font-weight="700" x="75" y="68">Collect</text><text fill="#a3a3ad" font-size="13" x="75" y="92">Deep Research</text><path d="M156 75 L180 75" marker-end="url(#ar1)" stroke="#E3B341" stroke-width="2"></path><rect fill="#0a0a0d" height="90" rx="10" stroke="#0f8f75" stroke-width="2.5" width="150" x="188" y="30"></rect><text font-weight="700" x="262" y="68">Orient</text><text fill="#a3a3ad" font-size="13" x="262" y="92">Audio, Video</text><path d="M344 75 L367 75" marker-end="url(#ar1)" stroke="#E3B341" stroke-width="2"></path><rect fill="#0a0a0d" height="90" rx="10" stroke="#6a2fb0" stroke-width="2.5" width="150" x="375" y="30"></rect><text font-weight="700" x="450" y="68">Structure</text><text fill="#a3a3ad" font-size="13" x="450" y="92">Mind Map</text><path d="M531 75 L554 75" marker-end="url(#ar1)" stroke="#E3B341" stroke-width="2"></path><rect fill="#0a0a0d" height="90" rx="10" stroke="#E3B341" stroke-width="2.5" width="150" x="562" y="30"></rect><text font-weight="700" x="638" y="68">Practice</text><text fill="#a3a3ad" font-size="13" x="638" y="92">Cards, Quiz</text><path d="M718 75 L742 75" marker-end="url(#ar1)" stroke="#E3B341" stroke-width="2"></path><rect fill="#0a0a0d" height="90" rx="10" stroke="#b3213f" stroke-width="2.5" width="150" x="750" y="30"></rect><text font-weight="700" x="825" y="68">Check</text><text fill="#a3a3ad" font-size="13" x="825" y="92">Tutor, Tables</text></g></svg>

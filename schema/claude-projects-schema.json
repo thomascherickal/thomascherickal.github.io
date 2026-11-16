@@ -6,63 +6,61 @@
         "TechArticle",
         "Article"
       ],
-      "@id": "https://thedigitalfuturist.com/claude-training/claude-features.html#article",
+      "@id": "https://thedigitalfuturist.com/claude-training/claude-projects.html#article",
       "isPartOf": {
         "@type": "WebPage",
-        "@id": "https://thedigitalfuturist.com/claude-training/claude-features.html",
-        "url": "https://thedigitalfuturist.com/claude-training/claude-features.html",
-        "name": "Claude Features: Projects, Artifacts, Deep Research & Extensibility | Thomas Cherickal"
+        "@id": "https://thedigitalfuturist.com/claude-training/claude-projects.html",
+        "url": "https://thedigitalfuturist.com/claude-training/claude-projects.html",
+        "name": "Claude Projects: Persistent Context & Knowledge Workspaces | Thomas Cherickal"
       },
-      "headline": "Claude Features: Projects, Artifacts, Deep Research & Extensibility",
-      "description": "Master core Claude features: shared Projects knowledge bases, interactive Artifacts, autonomous Deep Research agents, and MCP extensibility.",
+      "headline": "Claude Projects: Persistent Context & Knowledge Workspaces",
+      "description": "Master Claude Projects to organize recurring client engagements, codebase documentation, and research corpora with persistent context and zero repetitive re-uploading.",
       "image": [
         "https://thedigitalfuturist.com/assets/og-card.png"
       ],
-      "datePublished": "2026-10-22T00:00:00+05:30",
-      "dateModified": "2026-10-22T00:00:00+05:30",
-      "inLanguage": "en-US",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://thedigitalfuturist.com/claude-training/claude-features.html"
-      },
+      "datePublished": "2025-06-15T00:00:00+00:00",
+      "dateModified": "2026-11-16T00:00:00+00:00",
       "author": {
         "@type": "Person",
-        "@id": "https://thedigitalfuturist.com/#person",
         "name": "Thomas Cherickal",
-        "jobTitle": "Generative AI Consultant and The Digital Futurist",
-        "url": "https://thedigitalfuturist.com",
-        "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
-        "sameAs": [
-          "https://linkedin.com/in/thomascherickal",
-          "https://github.com/thomascherickal",
-          "https://x.com/thomazcherickal"
-        ]
+        "url": "https://thomascherickal.com",
+        "jobTitle": "Generative AI Consultant & Founder",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "The Digital Futurist",
+          "url": "https://thedigitalfuturist.com"
+        }
       },
       "publisher": {
         "@type": "Organization",
-        "@id": "https://thedigitalfuturist.com/#organization",
         "name": "The Digital Futurist",
         "url": "https://thedigitalfuturist.com",
-        "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://thedigitalfuturist.com/assets/digital-futurist-logo.jpg",
-          "width": 256,
-          "height": 256
+          "url": "https://thedigitalfuturist.com/assets/digital-futurist-logo.jpg"
         }
       },
-      "articleSection": "Business AI Capabilities",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://thedigitalfuturist.com/claude-training/claude-projects.html"
+      },
       "keywords": [
         "Claude Projects",
-        "Claude Artifacts",
-        "Deep Research",
-        "MCP Extensibility",
-        "Business Generative AI"
-      ]
+        "Persistent AI Context",
+        "Knowledge Workspaces",
+        "Claude Knowledge Base",
+        "Custom Instructions",
+        "Client Project Workspaces",
+        "Context Management",
+        "Enterprise Claude",
+        "Prompt Engineering",
+        "Anthropic Workspaces"
+      ],
+      "inLanguage": "en-US"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://thedigitalfuturist.com/claude-training/claude-features.html#breadcrumb",
+      "@id": "https://thedigitalfuturist.com/claude-training/claude-projects.html#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -73,14 +71,52 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Writing",
-          "item": "https://thedigitalfuturist.com/writing.html"
+          "name": "Claude Training",
+          "item": "https://thedigitalfuturist.com/claude-training/"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Claude Features",
-          "item": "https://thedigitalfuturist.com/claude-training/claude-features.html"
+          "name": "Claude Projects",
+          "item": "https://thedigitalfuturist.com/claude-training/claude-projects.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://thedigitalfuturist.com/claude-training/claude-projects.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the primary benefit of Claude Projects over standard chat threads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Claude Projects provides persistent contextual memory across multiple conversations. Instead of repeatedly pasting system instructions, brand rules, or files into every new chat thread, you upload them once to the Project Knowledge Base. Every conversation created inside that Project automatically inherits the ground truth files and custom system instructions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much content can be stored in a Claude Project Knowledge Base?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Claude Project can hold up to 200,000 tokens of project knowledge files, which is approximately equivalent to a 500-page book or substantial codebases, API specifications, meeting transcripts, and style manuals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can team members collaborate on the same Claude Project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. On Claude Team and Enterprise plans, Projects can be shared across an entire workspace or kept private to individual members. Shared projects allow multiple colleagues to launch independent chats against the same vetted organizational ground truth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is data uploaded to Claude Projects used to train Anthropic models?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under commercial terms on Claude Pro, Team, and Enterprise plans, Anthropic does not use your uploaded project files or conversational data to train its commercial frontier models."
+          }
         }
       ]
     }

@@ -311,8 +311,8 @@
   </nav>
   <!-- END:HEADER -->
 <main class="container">
-<header class="hero">
-<div class="hero-badge">Autonomous Linux Infrastructure • Local LLMs &amp; Claude</div>
+<header class="hero content-card">
+<div class="hero-badge content-card">Autonomous Linux Infrastructure • Local LLMs &amp; Claude</div>
 <h1>Claude Integration with Sovereign Local LLMs</h1>
 <p class="hero-desc">Pick a model that fits your hardware, price the next upgrade in dollars and rupees, and wire the model into OpenCode and Claude Code with working configs.</p>
 <p class="hero-byline">By <strong>Thomas Cherickal</strong>, Generative AI Consultant, <strong>The Digital Futurist</strong> • 22 October 2026 <span class="reading">• about 22 minutes to read, longer with the tutorials</span></p>
@@ -470,7 +470,7 @@
 <p class="article-p">Context length is the setting people forget. <a href="https://docs.ollama.com/context-length" rel="noopener noreferrer" target="_blank">Ollama's context-length documentation</a> says it defaults to 4K tokens below 24 GiB of VRAM, 32K between 24 and 48 GiB, and 256K above that, and it recommends at least 64,000 tokens for coding tools. A coding agent sends its system prompt and tool schemas with every request, so a 4K window breaks it.</p>
 <p class="article-p">Prices have moved sharply this year, so treat every figure as approximate for October 2026. US figures for new and used GPUs come from <a href="https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/" rel="noopener noreferrer" target="_blank">BuySellRam's October GPU price floors</a>. Indian figures come from <a href="https://gpuprix.com/india/gpus/geforce-rtx-5060-ti-16gb" rel="noopener noreferrer" target="_blank">GPUPrix listings for the RTX 5060 Ti</a> and <a href="https://gpuprix.com/india/gpus/geforce-rtx-5090" rel="noopener noreferrer" target="_blank">the RTX 5090 in India</a>. Where no Indian listing exists, the table converts at ₹88 per dollar; <a href="https://www.runyard.dev/buy/rtx-5060-ti-16gb-price-india.html" rel="noopener noreferrer" target="_blank">Runyard's landed-cost breakdown</a> explains why duty, 18 percent IGST and margins usually add 32 to 55 percent on top. Unified-memory machines are priced from <a href="https://computingforgeeks.com/ryzen-ai-max-395-mini-pc-comparison/" rel="noopener noreferrer" target="_blank">ComputingForGeeks' Ryzen AI Max+ 395 comparison</a> and <a href="https://cryptobriefing.com/nvidia-dgx-spark-64gb-launch/" rel="noopener noreferrer" target="_blank">the DGX Spark price report</a>. Build totals add a CPU, board, RAM, PSU and SSD and are my estimates.</p>
 <!-- Figure 1 -->
-<div class="diagram-container">
+<div class="diagram-container content-card">
 <div class="fig-scroll">
 <svg aria-labelledby="ladder-title ladder-desc" role="img" style="background:#090d16;border-radius:8px;" viewbox="0 0 640 360">
 <title id="ladder-title">The parameter-to-hardware ladder</title>
@@ -554,7 +554,7 @@
 <h2>Five Tools That Run LLMs Locally</h2>
 <p class="article-p">Each tool below loads model weights, runs them on your GPU and exposes an HTTP API. They differ in interface, API dialect and how many users they serve at once.</p>
 <!-- Figure 2 -->
-<div class="diagram-container">
+<div class="diagram-container content-card">
 <div class="fig-scroll">
 <svg aria-labelledby="stack-title stack-desc" role="img" style="background:#090d16;border-radius:8px;" viewbox="0 0 640 470">
 <title id="stack-title">The local inference stack</title>
@@ -626,7 +626,7 @@
 <p class="article-p">The first runs Claude Code, Anthropic's terminal agent, against a local model instead of Anthropic's API. Claude Code speaks the Anthropic Messages API, and <a href="https://code.claude.com/docs/en/env-vars" rel="noopener noreferrer" target="_blank">Claude Code's environment variable reference</a> documents <code>ANTHROPIC_BASE_URL</code> for redirecting it. <a href="https://docs.ollama.com/integrations/claude-code" rel="noopener noreferrer" target="_blank">Ollama's Claude Code integration page</a> gives the full setup: set the base URL to <code>http://localhost:11434</code>, set <code>ANTHROPIC_AUTH_TOKEN</code> to <code>ollama</code>, leave <code>ANTHROPIC_API_KEY</code> empty, and start <code>claude --model</code> with a local model name. Claude Code also asks for Opus, Sonnet and Haiku tiers internally, so map all three with <code>ANTHROPIC_DEFAULT_OPUS_MODEL</code>, <code>ANTHROPIC_DEFAULT_SONNET_MODEL</code> and <code>ANTHROPIC_DEFAULT_HAIKU_MODEL</code>.</p>
 <p class="article-p"><strong>What works:</strong> file reads and edits, shell commands, and multi-step tasks on a repository with a model that has native tool calling and at least 64K of context. <strong>What degrades:</strong> speed, because local generation is slower than Anthropic's servers; long sessions, where small models lose track sooner; and some hosted features such as Anthropic's server-side web search. vLLM adds one rule of its own: served model names cannot contain a slash, so start it with <code>--served-model-name</code>.</p>
 <!-- Figure 3 -->
-<div class="diagram-container">
+<div class="diagram-container content-card">
 <div class="fig-scroll">
 <svg aria-labelledby="flow-title flow-desc" role="img" style="background:#090d16;border-radius:8px;" viewbox="0 0 640 420">
 <title id="flow-title">Claude Code on a local model</title>
@@ -657,7 +657,7 @@
 </div>
 <p class="article-p">The second pattern keeps Claude in the cloud and gives it a local model as a tool through the Model Context Protocol (MCP). <a href="https://code.claude.com/docs/en/mcp" rel="noopener noreferrer" target="_blank">Claude Code's MCP documentation</a> shows how to register a local stdio server with <code>claude mcp add</code>. The server reads a file on disk, asks the local model to summarise or classify it, and returns only the result. Claude does the planning and hard reasoning, while bulk reading and private documents stay on your machine, as Figure 4 shows.</p>
 <!-- Figure 4 -->
-<div class="diagram-container">
+<div class="diagram-container content-card">
 <div class="fig-scroll">
 <svg aria-labelledby="route-title route-desc" role="img" style="background:#090d16;border-radius:8px;" viewbox="0 0 640 430">
 <title id="route-title">The hybrid routing pattern</title>
@@ -715,7 +715,7 @@
 </span>
 </div>
 <!-- Tutorial 1 -->
-<article class="tutorial" data-level="basic" id="tut-1">
+<article class="tutorial content-card" data-level="basic" id="tut-1">
 <h3>Tutorial 1: Your First Local Model In Ten Minutes <span class="badge basic">Basic</span></h3>
 <div class="prereq">Prerequisites: Ubuntu 22.04 or 24.04 (or Debian 12), NVIDIA GPU with 8 GB+ VRAM and proprietary driver installed, ≈10 GB free disk space.</div>
 <p class="article-p">This tutorial installs Ollama as a system service, downloads Gemma 4 E4B, an 8B model counting its embeddings, and talks to it from the terminal and over HTTP.</p>
@@ -762,7 +762,7 @@ ollama ps</code></pre>
 <p class="ifit"><strong>Troubleshooting:</strong> <code>journalctl -e -u ollama</code> shows the service log. If <code>ollama ps</code> reports CPU instead of GPU, run <code>nvidia-smi</code>; a missing driver is the usual cause. On Fedora, install the NVIDIA driver from RPM Fusion first; on Arch, use the <code>nvidia</code> package.</p>
 </article>
 <!-- Tutorial 2 -->
-<article class="tutorial" data-level="basic" id="tut-2">
+<article class="tutorial content-card" data-level="basic" id="tut-2">
 <h3>Tutorial 2: Connect OpenCode To A Local Model <span class="badge basic">Basic</span></h3>
 <div class="prereq">Prerequisites: Tutorial 1 completed. 24 GB GPU for Qwen3.8-27B, or 16 GB GPU for gpt-oss-20b.</div>
 <p class="article-p">OpenCode will read a small project and make an edit using a local model. The context window comes first, because OpenCode's prompts do not fit in Ollama's 4K default.</p>
@@ -839,7 +839,7 @@ opencode</code></pre>
 <p class="ifit"><strong>Troubleshooting:</strong> If only cloud models appear, validate the file with <code>jq . ~/.config/opencode/opencode.json</code>. If the model answers in plain text instead of editing files, confirm the larger context took effect with <code>ollama ps</code>, which shows the context per loaded model.</p>
 </article>
 <!-- Tutorial 3 -->
-<article class="tutorial" data-level="intermediate" id="tut-3">
+<article class="tutorial content-card" data-level="intermediate" id="tut-3">
 <h3>Tutorial 3: Run Claude Code Against A Local Backend <span class="badge intermediate">Intermediate</span></h3>
 <div class="prereq">Prerequisites: Tutorial 2 completed, Ollama 0.14+, 24 GB GPU for Qwen3.8-27B.</div>
 <p class="article-p">Here Claude Code runs entirely against Ollama. A wrapper script keeps the local settings out of your normal shell, so plain <code>claude</code> still reaches Anthropic and <code>claude-local</code> reaches your GPU.</p>
@@ -908,7 +908,7 @@ claude-local</code></pre>
 <p class="ifit"><strong>Troubleshooting:</strong> A "connection refused" error means Ollama is not running. If Claude Code still asks you to log in, a value in <code>~/.claude/settings.json</code> is overriding the shell variables; remove its <code>env</code> entries. If <code>~/.local/bin</code> is not on your <code>PATH</code>, add <code>export PATH="$HOME/.local/bin:$PATH"</code> to <code>~/.bashrc</code>.</p>
 </article>
 <!-- Tutorial 4 -->
-<article class="tutorial" data-level="intermediate" id="tut-4">
+<article class="tutorial content-card" data-level="intermediate" id="tut-4">
 <h3>Tutorial 4: Script Your Local Model From Python <span class="badge intermediate">Intermediate</span></h3>
 <div class="prereq">Prerequisites: Tutorial 1 completed, Python 3.10+, <code>gpt-oss:20b</code> pulled in Ollama (16 GB GPU).</div>
 <p class="article-p">Most local servers speak the OpenAI API, so the official OpenAI Python SDK works against all of them by changing one URL. This script streams a reply, measures tokens per second and runs one tool call against a real function.</p>
@@ -1016,7 +1016,7 @@ if __name__ == "__main__":
 <p class="ifit"><strong>Troubleshooting:</strong> A <code>404</code> means the model name does not match <code>ollama list</code>. If the model answers without calling the tool, ask the question more directly. To point the script at LM Studio, vLLM or llama-server, change only <code>base_url</code> and <code>MODEL</code>.</p>
 </article>
 <!-- Tutorial 5 -->
-<article class="tutorial" data-level="advanced" id="tut-5">
+<article class="tutorial content-card" data-level="advanced" id="tut-5">
 <h3>Tutorial 5: Serve A 120B Model On Workstation Hardware <span class="badge advanced">Advanced</span></h3>
 <div class="prereq">Prerequisites: NVIDIA GPU with 16 GB+ VRAM, 64 GB+ system RAM (96 GB ideal), ≈70 GB free disk, CUDA toolkit installed (<code>nvcc --version</code>).</div>
 <p class="article-p">gpt-oss-120b has only 5.1B active parameters, so most of its expert weights can live in system RAM while the attention layers and KV cache stay on the GPU. The <code>--n-cpu-moe</code> flag in llama.cpp sets how many MoE layers stay on the CPU, and the llama.cpp gpt-oss guide uses 32 for a 16 GB card.</p>
@@ -1093,7 +1093,7 @@ sudo systemctl start llama-gptoss</code></pre>
 <p class="ifit"><strong>Troubleshooting:</strong> An OOM error at load means too many layers are on the GPU; raise <code>--n-cpu-moe</code> by two and retry. If the build cannot find CUDA, ensure <code>/usr/local/cuda/bin</code> is in your <code>PATH</code>.</p>
 </article>
 <!-- Tutorial 6 -->
-<article class="tutorial" data-level="advanced" id="tut-6">
+<article class="tutorial content-card" data-level="advanced" id="tut-6">
 <h3>Tutorial 6: A Hybrid Local-Plus-Claude Workflow With MCP And Routing <span class="badge advanced">Advanced</span></h3>
 <div class="prereq">Prerequisites: Tutorials 2 and 3 completed, Claude Code authenticated, Anthropic API key, and <code>uv</code> installed.</div>
 <p class="article-p">This tutorial builds both halves of Figure 4. First, an MCP server gives cloud Claude two local tools, so it can summarise and classify private files without the files leaving your machine. Second, a LiteLLM proxy and a short router script send each scripted request to the local model or to Claude.</p>

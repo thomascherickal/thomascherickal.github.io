@@ -287,7 +287,7 @@
 <div class="doc-container" style="max-width:960px;margin:0 auto;padding:3rem 1.25rem 2rem;">
 
   <!-- HERO HEADER CARD -->
-  <section class="hero-card" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.35);border-radius:16px;padding:2.5rem;margin-bottom:2rem;box-shadow:0 0 40px rgba(251,191,36,0.08);">
+  <section class="hero-card content-card" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.35);border-radius:16px;padding:2.5rem;margin-bottom:2rem;box-shadow:0 0 40px rgba(251,191,36,0.08);">
     <p class="section-label" style="color:var(--gold,#fbbf24);font-family:var(--font-mono,monospace);font-size:0.8rem;letter-spacing:0.12em;margin-bottom:0.75rem;">// SERVICE SPECIFICATION - SOVEREIGN &amp; AIR-GAPPED AI</p>
     <h1>Local AI for Sensitive Data</h1>
     <p style="color:var(--text-secondary,#cbd5e1);font-size:1.05rem;line-height:1.75;max-width:780px;margin-bottom:1.75rem;">
@@ -314,7 +314,7 @@
   </section>
 
   <!-- TABLE OF CONTENTS -->
-  <section id="table-of-contents" style="background:var(--bg-card,#0c111d);border:1px solid rgba(56,189,248,0.25);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
+  <section class="content-card" id="table-of-contents" style="background:var(--bg-card,#0c111d);border:1px solid rgba(56,189,248,0.25);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.2rem;margin-bottom:1rem;">Table of Contents</h2>
     <ol style="color:#cbd5e1;line-height:1.9;padding-left:1.25rem;margin:0;display:flex;flex-direction:column;gap:0.6rem;">
       <li><a class="gold-link" href="#sovereign-boundary">Data Sovereignty &amp; The Enterprise Egress Risk</a></li>
@@ -334,7 +334,7 @@
   </section>
 
   <!-- SECTION 1 -->
-  <section id="sovereign-boundary" style="margin-bottom:3rem;">
+  <section class="content-card" id="sovereign-boundary" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Data Sovereignty &amp; The Enterprise Egress Risk</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Every time an employee pastes a patient medical record, an unannounced merger term sheet, proprietary source code, or a defense procurement specification into a public SaaS AI interface, that payload crosses external network boundaries, traverses third-party load balancers, and lands in remote inference logs. Even when commercial API providers offer zero-data-retention agreements, strict regulatory regimes - including the <a class="gold-link" href="#references">HIPAA Security Rule</a>, the <a class="gold-link" href="#references">GDPR official framework</a>, ITAR, and sovereign banking mandates - often prohibit sensitive data from leaving controlled physical or VPC enclaves altogether.
@@ -385,7 +385,7 @@
   </section>
 
   <!-- SECTION 2 -->
-  <section id="hardware-inference" style="margin-bottom:3rem;">
+  <section class="content-card" id="hardware-inference" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Hardware Sizing, Quantization &amp; Local Inference Engines</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Running open-weight models locally at enterprise concurrency requires disciplined VRAM engineering, not guesswork. A model's memory footprint consists of two components: static model weights and dynamic KV cache memory allocated per concurrent sequence. Selecting the wrong quantization format or under-provisioning KV cache causes out-of-memory crashes under peak team load or forces aggressive context truncation that degrades reasoning quality.
@@ -431,7 +431,7 @@
   </section>
 
   <!-- SECTION 3 -->
-  <section id="airgapped-rag" style="margin-bottom:3rem;">
+  <section class="content-card" id="airgapped-rag" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Air-Gapped RAG &amp; Local Vector Storage</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       A local LLM without access to internal documents cannot answer organization-specific questions. However, many teams accidentally break air-gapped sovereignty during RAG implementation by calling a cloud embedding API or shipping document chunks to a managed vector SaaS. Every single stage of our sovereign RAG stack - document parsing, OCR, chunking, dense embedding generation, hybrid vector storage, and cross-encoder reranking - executes 100% inside your private boundary.
@@ -469,7 +469,7 @@
   </section>
 
   <!-- SECTION 4 -->
-  <section id="pii-redaction" style="margin-bottom:3rem;">
+  <section class="content-card" id="pii-redaction" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Automated PII/PHI Redaction &amp; Pre-Inference Guardrails</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Even inside a private local cluster, defense-in-depth requires minimizing sensitive entity exposure inside model context windows and prompt logs. If a support analyst queries a troubleshooting assistant with a raw customer export containing Social Security Numbers, credit card PANs, or patient medical record numbers, those identifiers should never be echoed into shared team logs or cached prompts.
@@ -507,7 +507,7 @@
   </section>
 
   <!-- SECTION 5 -->
-  <section id="sso-audit" style="margin-bottom:3rem;">
+  <section class="content-card" id="sso-audit" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Identity Federation, RBAC &amp; Immutable Audit Logging</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Regulated enterprises cannot deploy unauthenticated local AI endpoints where any employee on the corporate LAN can query any model or vector collection. Our sovereign gateway integrates directly with your existing OIDC or SAML identity provider (Okta, Microsoft Entra ID, Keycloak, or Ping Identity) via mutual TLS, enforcing per-group model access, token rate quotas, and document clearance levels.
@@ -541,7 +541,7 @@
   </section>
 
   <!-- SECTION 6 -->
-  <section id="lifecycle-dr" style="margin-bottom:3rem;">
+  <section class="content-card" id="lifecycle-dr" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Continuous Evaluation, Model Lifecycle &amp; Disaster Recovery</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Sovereign AI infrastructure must be operated with the same rigor as core banking or clinical systems. Every model weight artifact imported into an air-gapped registry is pinned by immutable cryptographic SHA-256 digest, scanned for unsafe pickle deserialization (enforcing Safetensors format exclusively), and benchmarked against an internal golden evaluation dataset before receiving production traffic.
@@ -579,7 +579,7 @@
   </section>
 
   <!-- TUTORIAL 1: PYTHON -->
-  <section id="tutorial-python-audit" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-python-audit" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Tutorial 1: Python Air-Gapped Inference &amp; PII Audit Logger</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
       This production Python gateway wraps a local <a class="gold-link" href="#references">Ollama</a> or <a class="gold-link" href="#references">vLLM</a> OpenAI-compatible endpoint, redacts sensitive PII patterns before inference, and writes a tamper-evident SHA-256 audit log without storing raw sensitive text.
@@ -646,7 +646,7 @@ def run_sovereign_inference(user_id: str, department: str, prompt: str, model: s
   </section>
 
   <!-- TUTORIAL 2: PYTHON -->
-  <section id="tutorial-python-rag" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-python-rag" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Tutorial 2: Python Local Document Ingestion &amp; Qdrant Sovereign RAG</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
       This script builds an end-to-end air-gapped RAG pipeline using a locally cached embedding model, an on-premises <a class="gold-link" href="#references">Qdrant</a> instance with department ACL filtering, and a local LLM synthesis call with zero external network dependencies.
@@ -729,7 +729,7 @@ def sovereign_rag_query(question: str, department: str, collection: str = "inter
   </section>
 
   <!-- TUTORIAL 3: PROMPT TEMPLATE -->
-  <section id="tutorial-prompt-classify" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-prompt-classify" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Tutorial 3: Sensitive Data Classification &amp; Redaction Prompt</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
       Deploy this prompt on a fast, small local model to classify incoming documents into enterprise sensitivity tiers before indexing them into department-isolated vector collections.
@@ -759,7 +759,7 @@ OUTPUT SCHEMA (JSON ONLY):
   </section>
 
   <!-- TUTORIAL 4: PROMPT TEMPLATE -->
-  <section id="tutorial-prompt-compliance" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-prompt-compliance" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Tutorial 4: Regulated Compliance &amp; Audit-Ready Synthesis Prompt</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
       Use this system prompt for legal, clinical, or financial analysts querying local RAG pipelines. It enforces strict evidence grounding, forbids extrapolation, and outputs structured audit citations.
@@ -782,7 +782,7 @@ MANDATORY RULES:
   </section>
 
   <!-- TUTORIAL 5: STEP-BY-STEP OPERATIONAL -->
-  <section id="tutorial-ops-cluster" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-ops-cluster" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Tutorial 5: Step-by-Step Air-Gapped Cluster Deployment</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Follow this seven-step operational procedure to provision a zero-egress sovereign AI cluster inside an air-gapped or private VPC environment.
@@ -823,7 +823,7 @@ MANDATORY RULES:
   </section>
 
   <!-- TUTORIAL 6: STEP-BY-STEP OPERATIONAL -->
-  <section id="tutorial-ops-incident" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-ops-incident" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Tutorial 6: Step-by-Step Data Leakage Incident &amp; Model Rollback Runbook</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       If an audit alert flags an unexpected PII pattern, cross-department ACL bypass, or suspected prompt injection inside the sovereign cluster, execute this containment and recovery runbook immediately.
@@ -839,7 +839,7 @@ MANDATORY RULES:
   </section>
 
   <!-- REFERENCES -->
-  <section id="references" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.25);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
+  <section class="content-card" id="references" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.25);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.3rem;margin-bottom:1rem;">Live References &amp; Documentation</h2>
     <ul style="color:#cbd5e1;line-height:1.9;padding-left:1.25rem;margin:0;">
       <li><a class="gold-link" href="https://ollama.com/library" rel="noopener" target="_blank">Ollama Local Model Library &amp; Documentation</a></li>
@@ -858,7 +858,7 @@ MANDATORY RULES:
   </section>
 
   <!-- CTA BLOCK -->
-  <section class="reveal" style="margin-bottom:2rem;">
+  <section class="reveal content-card" style="margin-bottom:2rem;">
     <div style="background:var(--bg-card,#0c111d);border:1px solid var(--border-gold,rgba(251,191,36,0.35));border-radius:16px;padding:2.25rem;text-align:center;">
       <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.4rem;margin-bottom:0.75rem;">Ready to Deploy Sovereign Local AI for Sensitive Data?</h2>
       <p style="color:#cbd5e1;max-width:640px;margin:0 auto 1.5rem;line-height:1.7;">

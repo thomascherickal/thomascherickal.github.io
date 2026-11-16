@@ -5,8 +5,8 @@
       "@type": "WebPage",
       "@id": "https://thedigitalfuturist.com/business-services/business-service-knowledge-graphs.html#webpage",
       "url": "https://thedigitalfuturist.com/business-services/business-service-knowledge-graphs.html",
-      "name": "Knowledge Graphs & GraphRAG - Service Specification | Thomas Cherickal",
-      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
+      "name": "Knowledge Graphs & GraphRAG | Thomas Cherickal",
+      "description": "Combine structured entity-relationship knowledge graphs with LLM semantic retrieval to solve multi-hop reasoning and eliminate hallucinated enterprise answers. Agents provide accurate and verifiable answers while saving tokens.",
       "isPartOf": {
         "@id": "https://thedigitalfuturist.com/#website"
       },
@@ -39,13 +39,29 @@
       "name": "Knowledge Graphs & GraphRAG - Thomas Cherickal",
       "serviceType": "Enterprise Knowledge Graph Engineering & Hybrid GraphRAG Architecture",
       "url": "https://thedigitalfuturist.com/business-services/business-service-knowledge-graphs.html",
-      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
+      "description": "Combine structured entity-relationship knowledge graphs with LLM semantic retrieval to solve multi-hop reasoning and eliminate hallucinated enterprise answers. The result is that agents will always provide accurate and verifiable answers to critical questions and save on tokens in the process.",
       "provider": {
         "@type": "Person",
         "@id": "https://thedigitalfuturist.com/#person",
         "name": "Thomas Cherickal",
         "jobTitle": "Generative AI Consultant and The Digital Futurist",
-        "url": "https://thedigitalfuturist.com"
+        "url": "https://thedigitalfuturist.com",
+        "sameAs": [
+          "https://linkedin.com/in/thomascherickal",
+          "https://github.com/thomascherickal",
+          "https://dev.to/thomascherickal",
+          "https://x.com/thomazcherickal"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://thedigitalfuturist.com/#organization",
+        "name": "The Digital Futurist",
+        "url": "https://thedigitalfuturist.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://thedigitalfuturist.com/assets/digital-futurist-logo.jpg"
+        }
       },
       "areaServed": {
         "@type": "Place",
@@ -53,10 +69,11 @@
       },
       "availableLanguage": "English",
       "serviceOutput": [
-        "Canonical Domain Ontology & SHACL Schema: Versioned entity types, relationship constraints, and automated entity resolution.",
-        "Hybrid GraphRAG Retrieval Engine: Multi-hop Neo4j Cypher traversal fused with dense vector similarity and lexical search.",
-        "Bitemporal Provenance & Citation Layer: Immutable document lineage, valid-time intervals, and verbatim evidence attribution.",
-        "Zero-Trust Graph RBAC & CDC Ingestion: Tenant-isolated access controls, streaming updates, and OpenTelemetry observability."
+        "Structured Entity-Relationship Graphs: Versioned domain ontologies, entity resolution, and property graph modeling in Neo4j.",
+        "Hybrid GraphRAG Multi-Hop Retrieval: Multi-hop graph traversal combined with vector similarity for deterministic reasoning.",
+        "Token Conservation Architecture: Pruning raw document context to targeted subgraphs, cutting token spend up to 80%.",
+        "Zero-Hallucination Evidence Grounding: Bitemporal provenance, verifiable entity citations, and immutable audit logs.",
+        "Enterprise RBAC & Graph Security: Subgraph access control policies protecting sensitive organizational relationships."
       ]
     }
   ]

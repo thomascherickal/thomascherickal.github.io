@@ -309,8 +309,8 @@
   </nav>
   <!-- END:HEADER -->
 <main class="container">
-<header class="hero">
-<div class="hero-badge">Model Context Protocol • Architecture &amp; Custom Implementation</div>
+<header class="hero content-card">
+<div class="hero-badge content-card">Model Context Protocol • Architecture &amp; Custom Implementation</div>
 <h1>Claude MCP: Model Context Protocol & Custom Tool Servers</h1>
 <p class="hero-desc">How to build custom MCP servers in Python, TypeScript and Rust, and how Claude Desktop, Claude Code and the Claude API use them.</p>
 <p class="hero-byline">By <strong>Thomas Cherickal</strong>, Generative AI Consultant • <strong>The Digital Futurist</strong></p>
@@ -361,7 +361,7 @@
 <p class="article-p">An MCP server is a program that exposes three kinds of capability: tools (functions the model can call), resources (data it can read) and prompts (reusable templates). A host application such as Claude Desktop, Claude Code or an app built on the Claude API runs an MCP client, and that client can connect to many servers at once.</p>
 <p class="article-p">A custom server wraps something specific to you, such as a billing API, a Postgres replica, an internal wiki or an old SOAP service. Once it speaks MCP, any MCP-compatible client can use it without new integration code.</p>
 <!-- Figure 1 -->
-<div class="diagram-container">
+<div class="diagram-container content-card">
 <div class="fig-scroll">
 <svg aria-label="MCP architecture: Claude hosts with MCP clients connect to custom servers, which reach external systems" role="img" style="background:#090d16;border-radius:8px;" viewbox="0 0 900 430" xmlns="http://www.w3.org/2000/svg">
 <defs>
@@ -433,7 +433,7 @@
 <h2>From M×N integrations to one protocol</h2>
 <p class="article-p">Connecting M AI applications to N systems used to take M×N integrations. Anthropic's launch post described the problem directly: every new data source needed its own custom implementation. With MCP, each application implements a client once and each system implements a server once, so the count drops to M+N.</p>
 <!-- Figure 2 -->
-<div class="diagram-container">
+<div class="diagram-container content-card">
 <div class="fig-scroll">
 <svg aria-label="Before MCP every app wires to every system; with MCP everything meets at one protocol hub" role="img" style="background:#090d16;border-radius:8px;" viewbox="0 0 900 340" xmlns="http://www.w3.org/2000/svg">
 <style>
@@ -515,7 +515,7 @@
 <h2>Choosing a language</h2>
 <p class="article-p">The <a href="https://modelcontextprotocol.io/docs/sdk" rel="noopener noreferrer" target="_blank">official MCP SDK tier list</a> places TypeScript, Python, C#, Go, Rust and Ruby at Tier 1, Java at Tier 2, and Swift, PHP and Kotlin at Tier 3. Every SDK can build servers that expose tools, resources and prompts.</p>
 <!-- Figure 3 -->
-<div class="diagram-container">
+<div class="diagram-container content-card">
 <div class="fig-scroll">
 <svg aria-label="Official MCP SDKs grouped by tier" role="img" style="background:#090d16;border-radius:8px;" viewbox="0 0 900 270" xmlns="http://www.w3.org/2000/svg">
 <style>
@@ -841,7 +841,7 @@ print(response.content)</code></pre>
 <h3>What travels over the wire</h3>
 <p class="article-p">The 2026-07-28 revision made the protocol stateless. <a href="https://workos.com/blog/mcp-stateless-spec-2026-07-28" rel="noopener noreferrer" target="_blank">WorkOS's breakdown of the stateless spec</a> explains that the <code>initialize</code> handshake and the <code>Mcp-Session-Id</code> header were removed, so each request carries its own context. <a href="https://blog.cloudflare.com/mcp-v2/" rel="noopener noreferrer" target="_blank">Cloudflare's next-generation MCP write-up</a> adds that the new <code>Mcp-Method</code> and <code>Mcp-Name</code> headers let gateways route and rate-limit requests without parsing the JSON body.</p>
 <!-- Figure 4 -->
-<div class="diagram-container">
+<div class="diagram-container content-card">
 <div class="fig-scroll">
 <svg aria-label="Sequence of a stateless MCP tool call from Claude to an external API and back" role="img" style="background:#090d16;border-radius:8px;" viewbox="0 0 900 440" xmlns="http://www.w3.org/2000/svg">
 <defs>

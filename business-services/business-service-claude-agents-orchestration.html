@@ -289,7 +289,7 @@
 <div class="doc-container" style="max-width:960px;margin:0 auto;padding:3rem 1.25rem 2rem;">
 
   <!-- HERO HEADER CARD -->
-  <section class="hero-card" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.35);border-radius:16px;padding:2.5rem;margin-bottom:2rem;box-shadow:0 0 40px rgba(251,191,36,0.08);">
+  <section class="hero-card content-card" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.35);border-radius:16px;padding:2.5rem;margin-bottom:2rem;box-shadow:0 0 40px rgba(251,191,36,0.08);">
     <p class="section-label" style="color:var(--gold,#fbbf24);font-family:var(--font-mono,monospace);font-size:0.8rem;letter-spacing:0.12em;margin-bottom:0.75rem;">// SERVICE SPECIFICATION - CLAUDE ORCHESTRATION</p>
     <h1>Claude Agent Orchestration</h1>
     <p style="color:var(--text-secondary,#cbd5e1);font-size:1.05rem;line-height:1.75;max-width:780px;margin-bottom:1.75rem;">
@@ -316,7 +316,7 @@
   </section>
 
   <!-- TABLE OF CONTENTS -->
-  <section id="table-of-contents" style="background:var(--bg-card,#0c111d);border:1px solid rgba(56,189,248,0.25);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
+  <section class="content-card" id="table-of-contents" style="background:var(--bg-card,#0c111d);border:1px solid rgba(56,189,248,0.25);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.2rem;margin-bottom:1rem;">Table of Contents</h2>
     <ol style="color:#cbd5e1;line-height:1.9;padding-left:1.25rem;margin:0;display:flex;flex-direction:column;gap:0.6rem;">
       <li><a class="gold-link" href="#master-coordinator">Master Coordinator &amp; MCP Architecture</a></li>
@@ -334,7 +334,7 @@
   </section>
 
   <!-- SECTION 1 -->
-  <section id="master-coordinator" style="margin-bottom:3rem;">
+  <section class="content-card" id="master-coordinator" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Master Coordinator &amp; MCP Architecture</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Most teams struggle with AI adoption because they treat every conversation as a blank slate. Engineers paste entire codebases into chat, executives re-explain company strategy every Monday, and marketing teams lose brand voice across threads. Claude Agent Orchestration eliminates this friction by establishing a Master Coordinator pattern backed by the <a class="gold-link" href="#references">Model Context Protocol (MCP)</a>.
@@ -370,7 +370,7 @@
   </section>
 
   <!-- SECTION 2 -->
-  <section id="modular-skills" style="margin-bottom:3rem;">
+  <section class="content-card" id="modular-skills" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Modular Markdown Skill Files</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Instead of stuffing 4,000 tokens of instructions into every system prompt, we decompose organizational knowledge into lightweight <code style="color:#38bdf8;">.md</code> skill files stored in version control. When a user invokes a workflow, Claude loads only the specific skill file required for that task, cutting system prompt bloat by over 80% and eliminating instruction drift.
@@ -396,7 +396,7 @@
   </section>
 
   <!-- SECTION 3 -->
-  <section id="departmental-roles" style="margin-bottom:3rem;">
+  <section class="content-card" id="departmental-roles" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Five-Role Enterprise Orchestration</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Our orchestration framework is tailored for five core enterprise functions: Executives (board memos and risk matrices), Software Engineers (isolated git worktree subagents), Data Scientists (focused sub-sessions for paper and dataset synthesis), HR (objective YAML candidate rubrics), and Marketing (multi-channel campaign matrices).
@@ -432,7 +432,7 @@
   </section>
 
   <!-- TUTORIAL 1: PYTHON -->
-  <section id="tutorial-python" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-python" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Tutorial 1: Python Subagent Dispatcher</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
       This Python script loads a role-specific Markdown skill file dynamically and dispatches a focused Claude sub-session, keeping the coordinator context clean.
@@ -466,7 +466,7 @@ if __name__ == "__main__":
   </section>
 
   <!-- TUTORIAL 2: PROMPT TEMPLATE -->
-  <section id="tutorial-prompt" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-prompt" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Tutorial 2: Master Coordinator Prompt</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.25rem;">
       Place this coordinator instruction in your project root <code style="color:#fbbf24;">CLAUDE.md</code> file so Claude routes tasks to the right skill without bloating context.
@@ -486,7 +486,7 @@ You are the Master Coordinator for this workspace.
   </section>
 
   <!-- TUTORIAL 3: OPERATIONAL INSTRUCTIONS -->
-  <section id="tutorial-operations" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-operations" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:#34d399;font-size:1.6rem;margin-bottom:1rem;">Tutorial 3: Step-by-Step Claude Desktop Setup</h2>
     <ol style="color:#cbd5e1;line-height:1.9;padding-left:1.5rem;margin-bottom:1.5rem;">
       <li><strong style="color:var(--gold,#fbbf24);">Create Skills Directory:</strong> Initialize a <code style="color:#fbbf24;">./skills/</code> folder in your repository with one Markdown file per team role.</li>
@@ -515,7 +515,7 @@ You are the Master Coordinator for this workspace.
   </section>
 
   <!-- SECTION: ENTERPRISE GOVERNANCE & FAILURE-MODE RECOVERY -->
-  <section id="enterprise-governance" style="margin-bottom:3rem;">
+  <section class="content-card" id="enterprise-governance" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Enterprise Governance &amp; Failure-Mode Recovery</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Orchestrating multiple Claude subagents across enterprise repositories, ticketing systems, and internal APIs introduces strict governance requirements. When a Master Coordinator dispatches parallel subagents over the <a class="gold-link" href="#references">Model Context Protocol (MCP)</a>, each subagent must operate inside an isolated context boundary with explicit read/write permissions. Without capability scoping, a subagent tasked with summarizing customer feedback could inadvertently invoke a production database mutation tool exposed on the same MCP server.
@@ -592,7 +592,7 @@ You are the Master Coordinator for this workspace.
   </section>
 
   <!-- TUTORIAL 4: PYTHON MCP TOOL PERMISSION & AUDIT WRAPPER -->
-  <section id="tutorial-python-mcp-audit" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-python-mcp-audit" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--cyan,#38bdf8);font-size:1.6rem;margin-bottom:1rem;">Tutorial 4: Python MCP Tool Permission &amp; Audit Wrapper</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       This Python wrapper enforces role-based tool allowlists and writes immutable JSON audit records before any Claude subagent invokes an MCP server tool.
@@ -629,7 +629,7 @@ def authorize_and_log(role: str, tool_name: str, payload: Dict[str, Any]) -&gt; 
   </section>
 
   <!-- TUTORIAL 5: SUBAGENT HANDOFF & ESCALATION PROMPT -->
-  <section id="tutorial-prompt-handoff" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-prompt-handoff" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.6rem;margin-bottom:1rem;">Tutorial 5: Subagent Handoff &amp; Escalation Prompt</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Embed this handoff contract into your Claude subagent skill files so every agent returns structured, verifiable state to the Master Coordinator.
@@ -656,7 +656,7 @@ HANDOFF_CONTRACT:
   </section>
 
   <!-- TUTORIAL 6: STEP-BY-STEP ORCHESTRATION INCIDENT & ROLLBACK RUNBOOK -->
-  <section id="tutorial-operations-rollback" style="margin-bottom:3rem;">
+  <section class="content-card" id="tutorial-operations-rollback" style="margin-bottom:3rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:#34d399;font-size:1.6rem;margin-bottom:1rem;">Tutorial 6: Step-by-Step Orchestration Incident &amp; Rollback Runbook</h2>
     <p style="color:#cbd5e1;line-height:1.85;margin-bottom:1.1rem;">
       Execute this operational runbook whenever a Claude multi-agent orchestration run fails verification or stalls at an HITL gate:
@@ -671,7 +671,7 @@ HANDOFF_CONTRACT:
   </section>
 
   <!-- REFERENCES -->
-  <section id="references" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.25);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
+  <section class="content-card" id="references" style="background:var(--bg-card,#0c111d);border:1px solid rgba(251,191,36,0.25);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;">
     <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.3rem;margin-bottom:1rem;">Live References &amp; Documentation</h2>
     <ul style="color:#cbd5e1;line-height:1.9;padding-left:1.25rem;margin:0;">
       <li><a class="gold-link" href="https://modelcontextprotocol.io/introduction" rel="noopener" target="_blank">Model Context Protocol (MCP) Official Specification</a></li>
@@ -688,7 +688,7 @@ HANDOFF_CONTRACT:
   </section>
 
   <!-- CTA BLOCK -->
-  <section class="reveal" style="margin-bottom:2rem;">
+  <section class="reveal content-card" style="margin-bottom:2rem;">
     <div style="background:var(--bg-card,#0c111d);border:1px solid var(--border-gold,rgba(251,191,36,0.35));border-radius:16px;padding:2.25rem;text-align:center;">
       <h2 style="font-family:var(--font-display,sans-serif);color:var(--gold,#fbbf24);font-size:1.4rem;margin-bottom:0.75rem;">Ready to Orchestrate Your Team with Claude?</h2>
       <p style="color:#cbd5e1;max-width:640px;margin:0 auto 1.5rem;line-height:1.7;">

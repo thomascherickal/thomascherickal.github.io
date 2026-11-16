@@ -1,28 +1,24 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Claude Code: Terminal CLI, Agent Workflows & IDE Integration | Thomas Cherickal</title>
-<meta content="Master Claude Code CLI with automated multi-agent terminal execution, repository refactoring, test-driven development, and autonomous software development." name="description"/>
-<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist." name="author"/>
+<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Master Claude Code directly in your terminal and IDE for autonomous codebase exploration, multi-file refactoring, git workflows, test-driven debugging, CLAUDE.md project memory, slash commands, and bounded budgeting to escape huge monthly costs." name="description"/>
+<meta content="Thomas Cherickal" name="author"/>
 <link href="https://thedigitalfuturist.com/claude-training/claude-code.html" rel="canonical"/>
-<!-- Open Graph -->
-<meta content="website" property="og:type"/>
+<meta content="article" property="og:type"/>
 <meta content="https://thedigitalfuturist.com/claude-training/claude-code.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
-<meta content="Claude Code: Terminal and IDE | Thomas Cherickal" property="og:title"/>
-<meta content="Master Claude Code CLI with automated multi-agent terminal execution, repository refactoring, test-driven development, and autonomous software development." property="og:description"/>
+<meta content="Claude Code: Terminal CLI, Agent Workflows &amp; IDE Integration | Thomas Cherickal" property="og:title"/>
+<meta content="Master Claude Code directly in your terminal and IDE for autonomous codebase exploration, multi-file refactoring, git workflows, test-driven debugging, CLAUDE.md project memory, slash commands, and bounded budgeting to escape huge monthly costs." property="og:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
-<!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@thomazcherickal" name="twitter:site"/>
-<meta content="Claude Code: Terminal and IDE | Thomas Cherickal" name="twitter:title"/>
-<meta content="Master Claude Code CLI with automated multi-agent terminal execution, repository refactoring, test-driven development, and autonomous software development." name="twitter:description"/>
+<meta content="Claude Code: Terminal CLI, Agent Workflows &amp; IDE Integration | Thomas Cherickal" name="twitter:title"/>
+<meta content="Master Claude Code directly in your terminal and IDE for autonomous codebase exploration, multi-file refactoring, git workflows, test-driven debugging, CLAUDE.md project memory, slash commands, and bounded budgeting to escape huge monthly costs." name="twitter:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
-<!-- Favicons -->
 <link href="../assets/favicon.ico" rel="icon" sizes="any"/>
 <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
 <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
@@ -37,6 +33,9 @@
 <link href="../css/cta.css" rel="stylesheet"/>
 <link href="../css/article.css" rel="stylesheet"/>
 <link href="../css/claude.css" rel="stylesheet"/>
+<link href="../css/responsive.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'dark', flowchart: { padding: 18, nodeSpacing: 45, rankSpacing: 55, htmlLabels: true } });</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -51,15 +50,15 @@
         "@type": "WebPage",
         "@id": "https://thedigitalfuturist.com/claude-training/claude-code.html",
         "url": "https://thedigitalfuturist.com/claude-training/claude-code.html",
-        "name": "Claude Code in the Terminal and Your IDE | Thomas Cherickal"
+        "name": "Claude Code: Terminal CLI, Agent Workflows & IDE Integration | Thomas Cherickal"
       },
-      "headline": "Claude Code in the Terminal and Your IDE",
-      "description": "A practical guide to Claude Code in the terminal, VS Code and JetBrains IDEs, with beginner and expert tutorials, diagrams, developer feedback and 2026 adoption statistics.",
+      "headline": "Claude Code: Terminal CLI, Agent Workflows & IDE Integration",
+      "description": "Master Claude Code directly in your terminal and IDE for autonomous codebase exploration, multi-file refactoring, git workflows, test-driven debugging, CLAUDE.md project memory, slash commands, and bounded budgeting to escape huge monthly costs.",
       "image": [
         "https://thedigitalfuturist.com/assets/og-card.png"
       ],
       "datePublished": "2026-10-22T00:00:00+05:30",
-      "dateModified": "2026-10-22T00:00:00+05:30",
+      "dateModified": "2026-11-16T12:00:00+05:30",
       "inLanguage": "en-US",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -75,7 +74,8 @@
         "sameAs": [
           "https://linkedin.com/in/thomascherickal",
           "https://github.com/thomascherickal",
-          "https://x.com/thomazcherickal"
+          "https://x.com/thomazcherickal",
+          "https://dev.to/thomascherickal"
         ]
       },
       "publisher": {
@@ -91,15 +91,16 @@
           "height": 256
         }
       },
-      "articleSection": "AI Developer Tools",
+      "articleSection": "Anthropic Claude",
       "keywords": [
-        "Claude Code",
-        "CLI AI Agent",
-        "VS Code",
-        "JetBrains",
-        "AI Pair Programming",
-        "Agentic Coding",
-        "Anthropic"
+        "Claude Code CLI",
+        "Terminal AI Agent",
+        "CLAUDE.md Project Memory",
+        "Custom Slash Commands",
+        "Bounded Budgeting",
+        "AI Cost Control",
+        "Multi-File Refactoring",
+        "IDE Integration"
       ]
     },
     {
@@ -115,8 +116,8 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Writing",
-          "item": "https://thedigitalfuturist.com/writing.html"
+          "name": "Claude",
+          "item": "https://thedigitalfuturist.com/claude-training/claude-101.html"
         },
         {
           "@type": "ListItem",
@@ -129,9 +130,9 @@
   ]
 }
 </script>
-<link href="../css/responsive.css" rel="stylesheet"/>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
   <!-- START:HEADER -->
   <nav aria-label="Main navigation">
     <a href="../index.html" class="nav-brand"><img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo"
@@ -307,15 +308,20 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-<main class="container">
-<header class="hero">
-<div class="hero-badge">CLAUDE CODE · TERMINAL &amp; IDE</div>
+
+<main id="main">
+<header class="hero content-card">
+<p class="hero-badge">// TERMINAL CLI &amp; BOUNDED AGENTIC ENGINEERING</p>
 <h1>Claude Code: Terminal CLI, Agent Workflows & IDE Integration</h1>
-<p class="hero-desc">Claude Code is an agent, not autocomplete. It reads your repository, edits files, runs your tests and commits the result. It started as a terminal tool and now runs inside VS Code, JetBrains IDEs, a desktop app and the browser, with the same agent behind every surface. This guide covers how it works, how to use it in each place, and how to run agents with it, with tutorials for first-time users and for people who already use it daily.<br/><span style="display:inline-block;margin-top:0.75rem;font-size:0.92rem;color:var(--gold);font-weight:600;letter-spacing:0.02em;">By Thomas Cherickal, Generative AI Consultant · The Digital Futurist · <a class="ref-link" href="https://thomascherickal.com" rel="noopener noreferrer" target="_blank">thomascherickal.com</a> · <a class="ref-link" href="https://thedigitalfuturist.com">thedigitalfuturist.com</a></span></p>
+<p class="hero-desc">Master Claude Code directly in your terminal and IDE for autonomous codebase exploration, multi-file refactoring, git workflows, and test-driven debugging. Covers permission modes, CLAUDE.md project memory, custom slash commands, and bounded budgeting to escape huge monthly costs.</p>
+<p class="hero-byline">By <strong>Thomas Cherickal</strong> · Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
+
 <article class="article-body">
 <!-- TABLE OF CONTENTS -->
 <div aria-label="Table of contents" class="content-card toc-card">
+<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Claude Code is an agent, not autocomplete. It reads your repository, edits files, executes test suites, and commits the result. Starting as a terminal CLI and expanding into VS Code, JetBrains IDEs, and headless CI pipelines, it drives software development through an autonomous loop. This architectural guide provides developer workflows, multi-agent patterns, custom slash commands, and bounded budgeting guardrails to keep enterprise API spend under control.</p>
+<div class="rule"></div>
 <h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
 <ol class="toc-list">
 <li><a href="#why">Why Engineers Adopted It</a></li>
@@ -323,409 +329,314 @@
 <li><a href="#loop">How the Agent Loop Works</a></li>
 <li><a href="#terminal">Claude Code in the Terminal</a></li>
 <li><a href="#ide">Claude Code in Your IDE</a></li>
-<li><a href="#beginner">Tutorials for Beginners</a>
-<ol>
-<li><a href="#t1">Install and run your first session</a></li>
-<li><a href="#t2">Work from VS Code or JetBrains</a></li>
-<li><a href="#t3">Teach Claude your project</a></li>
-</ol>
-</li>
-<li><a href="#expert">Tutorials for Experts</a>
-<ol>
-<li><a href="#t4">Build a subagent and a hook</a></li>
-<li><a href="#t5">Run parallel background agents</a></li>
-<li><a href="#t6">Automate in CI with headless mode</a></li>
-<li><a href="#t7">Connect external tools with MCP</a></li>
-</ol>
-</li>
+<li><a href="#budgeting">Bounded Budgeting &amp; Escaping Huge Monthly Costs</a></li>
+<li><a href="#beginner">Tutorials for Beginners</a></li>
+<li><a href="#expert">Tutorials for Experts</a></li>
 <li><a href="#large">Working in Large Repositories</a></li>
 <li><a href="#feedback">What Developers Say</a></li>
 <li><a href="#numbers">Adoption by the Numbers</a></li>
-<li><a href="#refs">References</a></li>
+<li><a href="#refs">Verified Technical References</a></li>
 </ol>
 </div>
+
 <!-- 1. WHY ENGINEERS ADOPTED IT -->
 <div class="content-card" id="why">
 <h2>Why Engineers Adopted It</h2>
-<p>Claude Code meets engineers where they already work. The terminal is on every machine, and the IDE extensions bring the same agent into the editor without a new workflow to learn.</p>
-<p>It also closes the loop that autocomplete leaves open. It runs a command, reads the error, changes the code and runs the command again, all in one session. In large codebases it searches with grep, glob and targeted file reads instead of relying on a pre-built index. It is scriptable for CI, extensible through the Model Context Protocol (MCP), and governed by a permission system that security teams can configure.</p>
-<p>It also sits alongside other tools. The Pragmatic Engineer's 2026 survey found that several teams who were heavy Cursor users added Claude Code and kept Cursor too.</p>
+<p class="article-p">Claude Code meets software engineers where they already work. The terminal CLI is universal across Linux, macOS, and WSL environments, while lightweight IDE extensions bring the identical agent engine into VS Code and JetBrains without forcing teams onto proprietary editor forks.</p>
+<p class="article-p">Crucially, Claude Code closes the verification loop that autocomplete leaves open. It executes a test command, parses the stack trace, edits the relevant source files, and reruns the test suite until all assertions pass. In multi-million line codebases, it searches using ripgrep, globbing, and selective syntax tree extraction rather than relying on stale or fragile vector indexes. It is fully scriptable for CI/CD pipelines, extensible through Model Context Protocol (MCP) servers, and governed by fine-grained permission layers that security teams can audit.</p>
 </div>
+
 <!-- 2. THE BUILDING BLOCKS -->
 <div class="content-card" id="blocks">
 <h2>The Building Blocks</h2>
-<div style="overflow-x:auto;">
+<div class="table-wrap">
 <table class="data-table">
 <thead>
-<tr><th>Component</th><th>What it does</th></tr>
+<tr><th>Component</th><th>Architectural Responsibility</th></tr>
 </thead>
 <tbody>
-<tr><td><code>CLI runtime</code></td><td>The <code>claude</code> session: conversation, context and permission state</td></tr>
-<tr><td><code>Tools</code></td><td>Read, Edit, Write, Grep, Glob, Bash, WebFetch and the Agent tool for subagents</td></tr>
-<tr><td><code>CLAUDE.md</code></td><td>Project memory loaded every session: build commands, conventions, rules</td></tr>
-<tr><td><code>Subagents</code></td><td>Specialists with their own prompt, tool list and context window</td></tr>
-<tr><td><code>Skills and plugins</code></td><td>Packaged instructions, commands, agents and hooks a team can share</td></tr>
-<tr><td><code>Hooks</code></td><td>Shell commands that run before or after tool calls and at session events</td></tr>
-<tr><td><code>MCP servers</code></td><td>Connections to GitHub, issue trackers, databases and browsers</td></tr>
-<tr><td><code>Permission modes</code></td><td>How much Claude may do without asking, from plan-only to auto</td></tr>
+<tr><td><code>CLI Runtime</code></td><td>The <code>claude</code> process managing conversation turns, token cache context, and permission state</td></tr>
+<tr><td><code>Core Tools</code></td><td>Read, Edit, Write, Grep, Glob, Bash, WebFetch, and the Agent subagent spawning primitive</td></tr>
+<tr><td><code>CLAUDE.md</code></td><td>Project memory loaded every session: build commands, conventions, architecture invariants</td></tr>
+<tr><td><code>Subagents</code></td><td>Isolated workers running with their own focused system prompt, tool whitelist, and private context window</td></tr>
+<tr><td><code>Custom Slash Commands</code></td><td>Reusable shortcuts created under <code>.claude/commands/</code> to standardize complex multi-step workflows</td></tr>
+<tr><td><code>Lifecycle Hooks</code></td><td>Deterministic shell commands executed before or after tool invocations to enforce security and styling</td></tr>
+<tr><td><code>MCP Tool Servers</code></td><td>Standardized connections to GitHub, Postgres databases, cloud logs, and external API gateways</td></tr>
+<tr><td><code>Permission Modes</code></td><td>Configurable autonomy levels from plan-only read modes to supervised auto execution</td></tr>
 </tbody>
 </table>
 </div>
-<figure class="article-figure">
-<svg aria-label="Terminal, VS Code, JetBrains and other surfaces all drive one Claude Code agent, which uses files, shell, subagents and MCP servers" role="img" viewbox="0 0 640 330">
-<defs><marker id="a" markerheight="7" markerwidth="7" orient="auto" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0,0L10,5L0,10z" fill="#9da7b3"></path></marker></defs>
-<g font-family="system-ui,sans-serif" font-size="19" text-anchor="middle">
-<rect fill="#0b0f14" height="54" rx="8" stroke="#d4a72c" width="146" x="8" y="14"></rect><text fill="#e6edf3" x="81" y="47">Terminal</text>
-<rect fill="#0b0f14" height="54" rx="8" stroke="#d4a72c" width="146" x="166" y="14"></rect><text fill="#e6edf3" x="239" y="47">VS Code</text>
-<rect fill="#0b0f14" height="54" rx="8" stroke="#d4a72c" width="146" x="324" y="14"></rect><text fill="#e6edf3" x="397" y="47">JetBrains</text>
-<rect fill="#0b0f14" height="54" rx="8" stroke="#d4a72c" width="150" x="482" y="14"></rect><text fill="#e6edf3" x="557" y="47">Desktop / Web</text>
-<path d="M81 68L290 132" fill="none" marker-end="url(#a)" stroke="#9da7b3"></path><path d="M239 68L305 132" fill="none" marker-end="url(#a)" stroke="#9da7b3"></path><path d="M397 68L335 132" fill="none" marker-end="url(#a)" stroke="#9da7b3"></path><path d="M557 68L350 132" fill="none" marker-end="url(#a)" stroke="#9da7b3"></path>
-<rect fill="#1f2a37" height="60" rx="10" stroke="#58a6ff" width="260" x="190" y="136"></rect><text fill="#e6edf3" font-weight="600" x="320" y="173">Claude Code agent</text>
-<path d="M260 196L81 256" fill="none" marker-end="url(#a)" stroke="#9da7b3"></path><path d="M300 196L239 256" fill="none" marker-end="url(#a)" stroke="#9da7b3"></path><path d="M340 196L397 256" fill="none" marker-end="url(#a)" stroke="#9da7b3"></path><path d="M380 196L557 256" fill="none" marker-end="url(#a)" stroke="#9da7b3"></path>
-<rect fill="#0b0f14" height="54" rx="8" stroke="#30363d" width="146" x="8" y="260"></rect><text fill="#e6edf3" x="81" y="293">Files</text>
-<rect fill="#0b0f14" height="54" rx="8" stroke="#30363d" width="146" x="166" y="260"></rect><text fill="#e6edf3" x="239" y="293">Shell, tests</text>
-<rect fill="#0b0f14" height="54" rx="8" stroke="#30363d" width="146" x="324" y="260"></rect><text fill="#e6edf3" x="397" y="293">Subagents</text>
-<rect fill="#0b0f14" height="54" rx="8" stroke="#30363d" width="150" x="482" y="260"></rect><text fill="#e6edf3" x="557" y="293">MCP servers</text>
-</g>
-</svg>
-<figcaption class="article-figcaption">Diagram 1: Every surface drives the same agent</figcaption>
-</figure>
 </div>
+
 <!-- 3. HOW THE AGENT LOOP WORKS -->
 <div class="content-card" id="loop">
 <h2>How the Agent Loop Works</h2>
-<p>Each task runs through the same cycle. Claude gathers context from CLAUDE.md, your prompt and the files it searches. It plans, checks its permissions, acts with tools, then verifies the result by running tests, a linter or the build. If verification fails, it reads the output and goes round again.</p>
-<figure class="article-figure">
-<svg aria-label="Agent loop: gather context, plan, permission check, act, verify, and back to gather context if tests fail" role="img" viewbox="0 0 640 210">
-<defs><marker id="b" markerheight="7" markerwidth="7" orient="auto" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0,0L10,5L0,10z" fill="#9da7b3"></path></marker></defs>
-<g font-family="system-ui,sans-serif" font-size="19" text-anchor="middle">
-<rect fill="#0b0f14" height="56" rx="8" stroke="#d4a72c" width="180" x="10" y="20"></rect><text fill="#e6edf3" x="100" y="54">Gather context</text>
-<rect fill="#0b0f14" height="56" rx="8" stroke="#d4a72c" width="180" x="230" y="20"></rect><text fill="#e6edf3" x="320" y="54">Plan</text>
-<rect fill="#0b0f14" height="56" rx="8" stroke="#58a6ff" width="180" x="450" y="20"></rect><text fill="#e6edf3" x="540" y="54">Permission</text>
-<rect fill="#0b0f14" height="56" rx="8" stroke="#d4a72c" width="180" x="450" y="124"></rect><text fill="#e6edf3" x="540" y="158">Act with tools</text>
-<rect fill="#0b0f14" height="56" rx="8" stroke="#d4a72c" width="180" x="230" y="124"></rect><text fill="#e6edf3" x="320" y="158">Verify</text>
-<rect fill="#1f2a37" height="56" rx="8" stroke="#7ee787" width="180" x="10" y="124"></rect><text fill="#e6edf3" x="100" y="158">Report, commit</text>
-<path d="M190 48H228" fill="none" marker-end="url(#b)" stroke="#9da7b3"></path><path d="M410 48H448" fill="none" marker-end="url(#b)" stroke="#9da7b3"></path><path d="M540 76V122" fill="none" marker-end="url(#b)" stroke="#9da7b3"></path><path d="M450 152H412" fill="none" marker-end="url(#b)" stroke="#9da7b3"></path><path d="M230 152H192" fill="none" marker-end="url(#b)" stroke="#9da7b3"></path>
-<path d="M320 124V104H100V80" fill="none" marker-end="url(#b)" stroke="#9da7b3"></path>
-<text fill="#9da7b3" font-size="16" x="215" y="94">tests fail: loop</text>
-</g>
-</svg>
-<figcaption class="article-figcaption">Diagram 2: Context, plan, permission, act, verify</figcaption>
-</figure>
-<p>Permission modes decide how much happens without you. Press <code>Shift+Tab</code> in a session to cycle through them. Recent versions start interactive sessions in auto mode, where a classifier reviews each action, lets safe ones run and blocks risky ones such as destructive git commands.</p>
-<figure class="article-figure">
-<svg aria-label="Permission modes from least to most autonomy: plan, manual, accept edits, auto, bypass" role="img" viewbox="0 0 640 170">
-<defs><lineargradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#58a6ff"></stop><stop offset="1" stop-color="#d4a72c"></stop></lineargradient></defs>
-<g font-family="system-ui,sans-serif" text-anchor="middle">
-<rect fill="url(#g)" height="10" rx="5" width="620" x="10" y="20"></rect>
-<text fill="#9da7b3" font-size="15" text-anchor="start" x="10" y="56">Asks more</text>
-<text fill="#9da7b3" font-size="15" text-anchor="end" x="630" y="56">Asks less</text>
-<g font-size="17">
-<rect fill="#0b0f14" height="78" rx="8" stroke="#30363d" width="112" x="10" y="72"></rect><text fill="#e6edf3" font-weight="600" x="66" y="104">Plan</text><text fill="#9da7b3" font-size="14" x="66" y="130">reads only</text>
-<rect fill="#0b0f14" height="78" rx="8" stroke="#30363d" width="112" x="137" y="72"></rect><text fill="#e6edf3" font-weight="600" x="193" y="104">Manual</text><text fill="#9da7b3" font-size="14" x="193" y="130">asks each time</text>
-<rect fill="#0b0f14" height="78" rx="8" stroke="#30363d" width="112" x="264" y="72"></rect><text fill="#e6edf3" font-weight="600" x="320" y="104">Accept edits</text><text fill="#9da7b3" font-size="14" x="320" y="130">writes files</text>
-<rect fill="#1f2a37" height="78" rx="8" stroke="#d4a72c" width="112" x="391" y="72"></rect><text fill="#e6edf3" font-weight="600" x="447" y="104">Auto</text><text fill="#9da7b3" font-size="14" x="447" y="130">classifier</text>
-<rect fill="#0b0f14" height="78" rx="8" stroke="#f85149" width="112" x="518" y="72"></rect><text fill="#e6edf3" font-weight="600" x="574" y="104">Bypass</text><text fill="#9da7b3" font-size="14" x="574" y="130">sandbox only</text>
-</g>
-</g>
-</svg>
-<figcaption class="article-figcaption">Diagram 3: Permission modes, from read-only planning to full bypass</figcaption>
-</figure>
+<p class="article-p">Every coding task executes through a deterministic, observable cycle. Claude gathers repository context from CLAUDE.md and targeted grep searches, formulates an execution plan, evaluates permission policies, invokes terminal and file tools, and verifies the outcome by executing tests, linters, or compilers. If any verification assertion fails, it ingests the diagnostic output and iterates until resolution.</p>
+
+<div class="mermaid" style="margin:1.75rem 0;text-align:center;">
+flowchart TD
+    A["Developer Terminal / IDE Input"] --> B["Context Loader: CLAUDE.md + Git Graph"]
+    B --> C["Budget &amp; Token Guardrail Check"]
+    C -->|Within Session Budget| D["Claude Code Reasoning Engine"]
+    C -->|Budget Ceiling Exceeded| E["Halt &amp; Prompt Operator Approval"]
+    D --> F["Permission Evaluation: Plan / Auto / Manual"]
+    F --> G["Tool Invocation: Edit / Grep / Bash / Agent"]
+    G --> H["Automated Verification: Test / Lint / Build"]
+    H -->|Test Failure| I["Diagnose Failure Output Trace"]
+    I --> D
+    H -->|Test Pass| J["Git Commit &amp; Session Summary"]
+
+    classDef termNode fill:#1e1b4b,stroke:#818cf8,stroke-width:2px,color:#e0e7ff
+    classDef guardNode fill:#422006,stroke:#fbbf24,stroke-width:2.5px,color:#fef3c7
+    classDef haltNode fill:#450a0a,stroke:#fb7185,stroke-width:2.5px,color:#ffe4e6
+    classDef engineNode fill:#3b0764,stroke:#e879f9,stroke-width:2px,color:#fae8ff
+    classDef toolNode fill:#082f49,stroke:#38bdf8,stroke-width:2px,color:#e0f2fe
+    classDef passNode fill:#052e16,stroke:#34d399,stroke-width:2px,color:#d1fae5
+
+    class A,B termNode
+    class C guardNode
+    class E haltNode
+    class D,F engineNode
+    class G,I toolNode
+    class H,J passNode
 </div>
+
+<p class="article-p">Permission modes decide how much happens without manual operator intervention. Press <code>Shift+Tab</code> in any session to toggle between modes:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.5rem;">
+<li><strong>Plan Mode:</strong> Pure read-only analysis. Claude investigates the codebase, traces symbol dependencies, and outlines an architectural change plan without writing files.</li>
+<li><strong>Manual Mode:</strong> Prompts the operator for explicit yes/no approval before every individual file modification or shell execution.</li>
+<li><strong>Accept Edits Mode:</strong> Automatically applies code edits and file modifications while pausing for confirmation on shell commands.</li>
+<li><strong>Auto Mode:</strong> An internal classifier reviews intended operations, permitting safe actions while intercepting destructive commands (such as force pushes or dropped migrations).</li>
+<li><strong>Bypass Mode:</strong> Unrestricted execution intended strictly for sandboxed Docker containers and isolated CI/CD runners.</li>
+</ul>
+</div>
+
 <!-- 4. CLAUDE CODE IN THE TERMINAL -->
 <div class="content-card" id="terminal">
 <h2>Claude Code in the Terminal</h2>
-<div class="code-window">
-<div class="code-bar">
-<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-<span>bash - interactive session management</span>
-<button aria-label="Copy code" class="copy" type="button">Copy</button>
-</div>
-<pre class="code-pre"><code># start, continue, resume
-claude                              # interactive session
-claude "fix the build error"        # start with a prompt
-claude -c                           # continue the last session here
-claude -r                           # pick a past session
+<p class="article-p">The terminal CLI provides immediate access to session management, custom slash commands, and streaming execution logs:</p>
 
-# choose how it works
-claude --model opus                 # pick a model
-claude --permission-mode plan       # research and plan, no edits
-
-# one-shot and pipes
-claude -p "explain src/auth.ts"
-cat build.log | claude -p "find the root cause" &gt; cause.txt</code></pre>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">session_management.sh</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
 </div>
-<p>Inside a session, these commands do most of the work:</p>
-<div style="overflow-x:auto;">
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code># Start interactive session in current repo
+claude
+
+# Start with a specific task
+claude "Diagnose and resolve the failing integration tests in tests/api/"
+
+# Resume previous session or select from session history
+claude -c
+claude -r
+
+# Enforce budget guardrails on execution
+claude --max-cost 2.50 "Refactor user authentication routes"
+
+# Pipe log output directly into headless analysis
+cat build-error.log | claude -p "Find root cause and emit minimal diff" &gt; fix.patch</code></pre>
+</div>
+
+<p class="article-p">Core built-in slash commands accelerate everyday engineering workflows:</p>
+<div class="table-wrap">
 <table class="data-table">
 <thead>
-<tr><th>Command</th><th>Use it to</th></tr>
+<tr><th>Slash Command</th><th>Operational Purpose</th></tr>
 </thead>
 <tbody>
-<tr><td><code>/init</code></td><td>Generate a starter CLAUDE.md</td></tr>
-<tr><td><code>/clear</code>, <code>/compact</code></td><td>Reset context, or summarise a long session</td></tr>
-<tr><td><code>/rewind</code></td><td>Roll code and conversation back to a checkpoint</td></tr>
-<tr><td><code>/code-review</code></td><td>Review your changes for correctness bugs</td></tr>
-<tr><td><code>/goal</code></td><td>Keep Claude working until a condition holds</td></tr>
-<tr><td><code>/usage</code></td><td>See session cost and plan limits</td></tr>
-<tr><td><code>/doctor</code></td><td>Diagnose and fix setup problems</td></tr>
+<tr><td><code>/init</code></td><td>Scans repository structure, identifies test runners, and generates baseline CLAUDE.md</td></tr>
+<tr><td><code>/clear</code>, <code>/compact</code></td><td>Clears active conversation or summarizes history to preserve context token windows</td></tr>
+<tr><td><code>/rewind</code></td><td>Reverts both code changes and conversation context to an earlier checkpoint</td></tr>
+<tr><td><code>/code-review</code></td><td>Executes rigorous automated code review on staged git diffs before PR creation</td></tr>
+<tr><td><code>/goal &lt;cond&gt;</code></td><td>Directs Claude to continue iterative debugging until an explicit condition (e.g. tests pass) is met</td></tr>
+<tr><td><code>/usage</code></td><td>Displays real-time session token consumption, cache hit ratio, and cumulative cost</td></tr>
+<tr><td><code>/doctor</code></td><td>Diagnoses local tool dependencies, git configurations, and MCP server health</td></tr>
 </tbody>
 </table>
 </div>
-<p style="margin-top:1rem;">Prefix a line with <code>!</code> to run a shell command directly, and type <code>@</code> to reference a file.</p>
 </div>
+
 <!-- 5. CLAUDE CODE IN YOUR IDE -->
 <div class="content-card" id="ide">
 <h2>Claude Code in Your IDE</h2>
-<h3>VS Code, Cursor and other forks</h3>
-<p>The extension needs VS Code 1.94 or later. It adds a side panel where you review and edit Claude's plan before accepting it, accept or reject each change as an inline diff, and keep several conversations open in tabs. Claude sees your selected text automatically. Cursor and other VS Code forks such as Kiro install the same extension, through the Open VSX registry where needed.</p>
-<h3>JetBrains IDEs</h3>
-<p>The plugin works with IntelliJ IDEA, PyCharm, Android Studio, WebStorm, PhpStorm and GoLand. It runs the <code>claude</code> CLI in the IDE terminal, opens Claude's changes in the native diff viewer, shares your selection, and lets Claude read the IDE's inspection results such as lint and syntax errors.</p>
-<h3>Every other editor</h3>
-<p>Vim, Neovim, Emacs and Zed users can run <code>claude</code> in any terminal next to the editor. From an external terminal, <code>/ide</code> connects a session to a running VS Code or JetBrains window.</p>
+<p class="article-p">Claude Code integrates directly into existing developer editors without proprietary vendor lock-in:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.75rem;">
+<li><strong>VS Code &amp; Cursor:</strong> The official extension introduces an agent sidebar where developers review proposals before acceptance, evaluate inline file diffs, and inspect parallel subagent tabs. Highlighting code and pressing <code>Alt+K</code> / <code>Option+K</code> passes exact line references directly into the agent.</li>
+<li><strong>JetBrains IDEs:</strong> Supported across IntelliJ IDEA, PyCharm, WebStorm, Android Studio, and GoLand. Features native side-by-side diff viewers, project indexing sync, and automated IDE linter error consumption.</li>
+<li><strong>External Terminal Sync:</strong> Running <code>claude</code> in any standard terminal (such as tmux or Alacritty) connects seamlessly to a running editor instance via <code>/ide</code>, allowing Vim, Neovim, and Zed developers to pair their preferred editor with Claude's execution engine.</li>
+</ul>
 </div>
-<!-- 6. TUTORIALS FOR BEGINNERS -->
-<div class="content-card" id="beginner">
-<h2>Tutorials for Beginners</h2>
-<h3 id="t1"><span class="level lv-b">Beginner</span>Tutorial 1: Install and run your first session</h3>
-<p><strong>1. Install.</strong> Pick the command for your system.</p>
-<div class="code-window">
-<div class="code-bar">
-<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-<span>bash - native installation</span>
-<button aria-label="Copy code" class="copy" type="button">Copy</button>
+
+<!-- 6. BOUNDED BUDGETING & ESCAPING HUGE MONTHLY COSTS -->
+<div class="content-card" id="budgeting">
+<h2>Bounded Budgeting &amp; Escaping Huge Monthly Costs</h2>
+<p class="article-p">Autonomous coding agents can rapidly consume massive token budgets if left unmonitored. When an agent enters an unconstrained retry loop - repeatedly reading thousand-line files, attempting failing test variations, and re-querying the model without context pruning - developers can inadvertently run up hundreds of dollars in API charges in a single afternoon.</p>
+<p class="article-p">To escape unpredictable monthly invoices and establish bounded operational budgets, teams must enforce five critical cost-control mechanisms:</p>
+
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">.claude/settings.json - Bounded Budget &amp; Guardrails</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
 </div>
-<pre class="code-pre"><code># macOS, Linux, WSL
-curl -fsSL https://claude.ai/install.sh | bash
-# Windows PowerShell
-irm https://claude.ai/install.ps1 | iex
-# or a package manager
-brew install --cask claude-code
-winget install Anthropic.ClaudeCode</code></pre>
-</div>
-<p><strong>2. Check it.</strong> Open a new terminal and run <code>claude --version</code>.</p>
-<p><strong>3. Log in.</strong> Run <code>claude</code> inside a project folder and follow the browser prompt. Any paid Claude plan or a Claude Console account works.</p>
-<p><strong>4. Ask before you change anything.</strong> Type <code>what does this project do?</code> or <code>explain the folder structure</code>. Claude reads the files it needs.</p>
-<p><strong>5. Make a small change.</strong> Try <code>add input validation to the signup form</code>. Review the diff, then ask <code>commit my changes with a descriptive message</code>.</p>
-<p><strong>6. Learn the escape hatches.</strong> <code>Esc</code> stops Claude mid-task, <code>/rewind</code> undoes edits, and <code>Shift+Tab</code> switches to plan mode when you want a proposal first.</p>
-<h3 id="t2" style="margin-top:2rem;"><span class="level lv-b">Beginner</span>Tutorial 2: Work from VS Code or JetBrains</h3>
-<p><strong>VS Code:</strong> press <code>Cmd+Shift+X</code> (Mac) or <code>Ctrl+Shift+X</code> (Windows, Linux), search for "Claude Code" and install it. Open the panel from the Command Palette by typing "Claude Code". Select a few lines and press <code>Option+K</code> / <code>Alt+K</code> to add a reference like <code>@app.ts#5-10</code>. Ask for a change, then accept or reject each diff. <code>Cmd+Esc</code> / <code>Ctrl+Esc</code> moves focus between the editor and Claude.</p>
-<p><strong>JetBrains:</strong> install the CLI from Tutorial 1, then the Claude Code plugin from the JetBrains Marketplace, and restart the IDE. Press <code>Cmd+Esc</code> / <code>Ctrl+Esc</code> to launch Claude. Changes open in the IDE's diff viewer. If you prefer an external terminal, run <code>claude</code> there and type <code>/ide</code>.</p>
-<h3 id="t3" style="margin-top:2rem;"><span class="level lv-b">Beginner</span>Tutorial 3: Teach Claude your project</h3>
-<p>Run <code>/init</code>. Claude scans the repository and writes a CLAUDE.md. Edit it by hand, because short, specific rules work better than long ones:</p>
-<div class="code-window">
-<div class="code-bar">
-<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-<span>markdown - CLAUDE.md project guidelines</span>
-<button aria-label="Copy code" class="copy" type="button">Copy</button>
-</div>
-<pre class="code-pre"><code># CLAUDE.md
-## Commands
-- Test: pytest -q
-- Lint: ruff check . &amp;&amp; mypy src
-## Rules
-- Use the repository pattern in src/db/
-- Never edit files in migrations/ by hand
-- Run the tests before every commit</code></pre>
-</div>
-<p>Commit the file so your team shares it. Run <code>/memory</code> later to edit it from inside a session.</p>
-</div>
-<!-- 7. TUTORIALS FOR EXPERTS -->
-<div class="content-card" id="expert">
-<h2>Tutorials for Experts</h2>
-<h3 id="t4"><span class="level lv-e">Expert</span>Tutorial 4: Build a subagent and a hook</h3>
-<p>A subagent works in its own context window, so the main session stays focused. Create <code>.claude/agents/security-reviewer.md</code>, or ask Claude to create it:</p>
-<div class="code-window">
-<div class="code-bar">
-<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-<span>yaml - prompt template with frontmatter</span>
-<button aria-label="Copy code" class="copy" type="button">Copy</button>
-</div>
-<pre class="code-pre"><code>---
-name: security-reviewer
-description: Reviews diffs for injection, auth and secrets issues. Read-only.
-tools: Read, Grep, Glob
----
-Review the current diff. Report file, line and a suggested fix.
-Do not edit files.</code></pre>
-</div>
-<p>Then prompt: <code>add rate limiting to /login, then have the security-reviewer subagent check the diff</code>. Add a hook in <code>.claude/settings.json</code> so every edit gets formatted:</p>
-<div class="code-window">
-<div class="code-bar">
-<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-<span>json - global settings and permissions</span>
-<button aria-label="Copy code" class="copy" type="button">Copy</button>
-</div>
-<pre class="code-pre"><code>{
-  "hooks": {
-    "PostToolUse": [{
-      "matcher": "Edit|Write",
-      "hooks": [{ "type": "command", "command": "npx prettier --write ." }]
-    }]
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>{
+  "budget": {
+    "maxCostPerSessionUsd": 2.50,
+    "maxDailySpendUsd": 15.00,
+    "maxWeeklySpendUsd": 60.00,
+    "enforceHardCap": true,
+    "alertThresholdPercent": 80
+  },
+  "executionLimits": {
+    "maxToolInvocationsPerTask": 25,
+    "maxLoopIterations": 6,
+    "timeoutSeconds": 300
+  },
+  "modelRouting": {
+    "planning": "claude-sonnet-auto",
+    "mechanicalEdits": "claude-haiku-auto",
+    "complexRefactor": "claude-opus-auto"
   }
 }</code></pre>
 </div>
-<h3 id="t5" style="margin-top:2rem;"><span class="level lv-e">Expert</span>Tutorial 5: Run parallel background agents</h3>
-<p>Agent view (<code>claude agents</code>) lists every background session, grouped into needs input, working and completed. Each background session moves into its own git worktree under <code>.claude/worktrees/</code> before it edits, so parallel agents never write to the same checkout.</p>
-<div class="code-window">
-<div class="code-bar">
-<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-<span>bash - background agents and terminal multiplexing</span>
-<button aria-label="Copy code" class="copy" type="button">Copy</button>
-</div>
-<pre class="code-pre"><code># dispatch from your shell
-claude --bg --name flaky-test "investigate the flaky SettingsChangeDetector test"
-claude --agent security-reviewer --bg "review PR 1234"
 
-# watch and manage
-claude agents          # one screen for every session
-claude logs &lt;id&gt;       # recent output
-claude attach &lt;id&gt;     # take over in this terminal</code></pre>
+<p class="article-p">The five pillars of bounded Claude Code budgeting include:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.5rem;">
+<li><strong>Hard Session Ceilings:</strong> Launch sessions with <code>--max-cost &lt;amount&gt;</code> (e.g. <code>claude --max-cost 2.00</code>). When the session accumulates \$2.00 in token consumption, the runtime halts execution and requires operator confirmation before spending further.</li>
+<li><strong>Aggressive Prompt Caching:</strong> Keep <code>CLAUDE.md</code>, architecture guidelines, and dependency graphs stable at the head of the context. Claude caches these blocks at a 90% discount, slashing repetitive token ingestion costs from \$3.00/MTok down to \$0.30/MTok.</li>
+<li><strong>Intelligent Model Routing:</strong> Avoid running high-cost frontier reasoning models on routine mechanical tasks. Use smaller, faster models for formatting, renaming, and test running, reserving high-parameter models exclusively for ambiguous multi-file architectural refactoring.</li>
+<li><strong>Loop Circuit Breakers:</strong> Restrict recursive verification iterations using <code>--max-iterations 5</code>. If a failing test cannot be fixed in five turns, Claude halts to prevent runaway billing and presents the diagnostic diff to the human engineer.</li>
+<li><strong>Regular Context Compaction:</strong> Run <code>/compact</code> every 15-20 turns or after completing an isolated subtask. Truncating resolved stack traces prevents the token window from swelling to maximum size on subsequent prompts.</li>
+</ul>
 </div>
-<p>Inside a session, <code>/bg</code> sends the current conversation to the background and <code>/fork</code> copies it into a new one. Pair a background agent with <code>/goal all tests in tests/api pass</code> and it keeps working until that condition holds.</p>
-<figure class="article-figure">
-<svg aria-label="Agent view dispatches three background sessions, each in its own git worktree, which report back as working, needs input or completed" role="img" viewbox="0 0 640 300">
-<defs><marker id="c" markerheight="7" markerwidth="7" orient="auto" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0,0L10,5L0,10z" fill="#9da7b3"></path></marker></defs>
-<g font-family="system-ui,sans-serif" font-size="18" text-anchor="middle">
-<rect fill="#1f2a37" height="56" rx="10" stroke="#58a6ff" width="240" x="200" y="10"></rect><text fill="#e6edf3" font-weight="600" x="320" y="45">claude agents</text>
-<path d="M260 66L110 112" fill="none" marker-end="url(#c)" stroke="#9da7b3"></path><path d="M320 66V112" fill="none" marker-end="url(#c)" stroke="#9da7b3"></path><path d="M380 66L530 112" fill="none" marker-end="url(#c)" stroke="#9da7b3"></path>
-<rect fill="#0b0f14" height="74" rx="8" stroke="#d4a72c" width="200" x="10" y="116"></rect><text fill="#e6edf3" x="110" y="148">Agent: tests</text><text fill="#9da7b3" font-size="15" x="110" y="174">worktree A</text>
-<rect fill="#0b0f14" height="74" rx="8" stroke="#d4a72c" width="200" x="220" y="116"></rect><text fill="#e6edf3" x="320" y="148">Agent: billing</text><text fill="#9da7b3" font-size="15" x="320" y="174">worktree B</text>
-<rect fill="#0b0f14" height="74" rx="8" stroke="#d4a72c" width="200" x="430" y="116"></rect><text fill="#e6edf3" x="530" y="148">Agent: review</text><text fill="#9da7b3" font-size="15" x="530" y="174">worktree C</text>
-<path d="M110 190V230" fill="none" marker-end="url(#c)" stroke="#9da7b3"></path><path d="M320 190V230" fill="none" marker-end="url(#c)" stroke="#9da7b3"></path><path d="M530 190V230" fill="none" marker-end="url(#c)" stroke="#9da7b3"></path>
-<rect fill="#0b0f14" height="50" rx="8" stroke="#58a6ff" width="200" x="10" y="234"></rect><text fill="#e6edf3" x="110" y="265">Working</text>
-<rect fill="#0b0f14" height="50" rx="8" stroke="#d4a72c" width="200" x="220" y="234"></rect><text fill="#e6edf3" x="320" y="265">Needs input</text>
-<rect fill="#0b0f14" height="50" rx="8" stroke="#7ee787" width="200" x="430" y="234"></rect><text fill="#e6edf3" x="530" y="265">Completed</text>
-</g>
-</svg>
-<figcaption class="article-figcaption">Diagram 4: Background agents, one worktree each, tracked in agent view</figcaption>
-</figure>
-<h3 id="t6" style="margin-top:2rem;"><span class="level lv-e">Expert</span>Tutorial 6: Automate in CI with headless mode</h3>
-<p><code>claude -p</code> runs one task and exits with a status code your scripts can check. Add <code>--bare</code> in CI so the run ignores hooks, plugins and CLAUDE.md on the host machine and behaves the same everywhere. Scope tools tightly:</p>
-<div class="code-window">
-<div class="code-bar">
-<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-<span>bash - automated git commit workflows</span>
-<button aria-label="Copy code" class="copy" type="button">Copy</button>
-</div>
-<pre class="code-pre"><code># commit staged work with only the git commands it needs
-claude -p "look at my staged changes and create a commit" \
-  --allowedTools "Bash(git diff *),Bash(git status *),Bash(git commit *)"
 
-# unattended job: classifier reviews actions, nothing waits for a human
-claude --bare -p "update dependency pins and run the tests" \
-  --permission-mode auto --permission-prompts none --output-format json</code></pre>
+<!-- 7. TUTORIALS FOR BEGINNERS -->
+<div class="content-card" id="beginner">
+<h2>Tutorials for Beginners</h2>
+
+<h3>Install and Run Your First Session</h3>
+<p class="article-p">Install Claude Code on your development workstation using the official installer:</p>
+
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">install_claude_code.sh</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
 </div>
-<p>For pull requests, run <code>/install-github-app</code> in a session. It installs the GitHub app and adds a workflow using <code>anthropics/claude-code-action@v1</code>, after which anyone can mention <code>@claude</code> in an issue or PR.</p>
-<figure class="article-figure">
-<svg aria-label="CI flow: pull request opened, GitHub Action runs claude -p, review comment posted, human approves merge" role="img" viewbox="0 0 640 120">
-<defs><marker id="d" markerheight="7" markerwidth="7" orient="auto" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0,0L10,5L0,10z" fill="#9da7b3"></path></marker></defs>
-<g font-family="system-ui,sans-serif" font-size="17" text-anchor="middle">
-<rect fill="#0b0f14" height="60" rx="8" stroke="#30363d" width="138" x="6" y="30"></rect><text fill="#e6edf3" x="75" y="66">PR opened</text>
-<rect fill="#0b0f14" height="60" rx="8" stroke="#d4a72c" width="138" x="168" y="30"></rect><text fill="#e6edf3" x="237" y="66">Action runs</text>
-<rect fill="#0b0f14" height="60" rx="8" stroke="#d4a72c" width="138" x="330" y="30"></rect><text fill="#e6edf3" x="399" y="66">Review posted</text>
-<rect fill="#1f2a37" height="60" rx="8" stroke="#7ee787" width="142" x="492" y="30"></rect><text fill="#e6edf3" x="563" y="66">Human merges</text>
-<path d="M144 60H166" marker-end="url(#d)" stroke="#9da7b3"></path><path d="M306 60H328" marker-end="url(#d)" stroke="#9da7b3"></path><path d="M468 60H490" marker-end="url(#d)" stroke="#9da7b3"></path>
-</g>
-</svg>
-<figcaption class="article-figcaption">Diagram 5: Claude Code in a pull request pipeline</figcaption>
-</figure>
-<h3 id="t7" style="margin-top:2rem;"><span class="level lv-e">Expert</span>Tutorial 7: Connect external tools with MCP</h3>
-<div class="code-window">
-<div class="code-bar">
-<div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-<span>bash - mcp server integration</span>
-<button aria-label="Copy code" class="copy" type="button">Copy</button>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code># macOS, Linux, WSL
+curl -fsSL https://claude.ai/install.sh | bash
+
+# Verify installation
+claude --version
+
+# Launch in your repository and authenticate
+cd ~/my-project
+claude</code></pre>
 </div>
-<pre class="code-pre"><code>claude mcp add --transport http notion https://mcp.notion.com/mcp
-claude mcp login notion     # authenticate from the shell
-claude mcp list             # confirm it connected</code></pre>
+
+<h3>Teach Claude Your Project with CLAUDE.md</h3>
+<p class="article-p">Run <code>/init</code> to automatically generate a baseline <code>CLAUDE.md</code> file in your repository root. Curate this file with concise build, lint, and test commands:</p>
+
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">CLAUDE.md - Core Project Directives</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
 </div>
-<p>Each MCP server adds tool definitions to the context, so connect only what the project uses. <code>/usage</code> shows which servers, skills and subagents drive your plan limits.</p>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code># Project Guidelines
+
+## Essential Commands
+- Build: `npm run build`
+- Test: `npm test -- --runInBand`
+- Lint: `npm run lint &amp;&amp; npx tsc --noEmit`
+
+## Architectural Invariants
+- Use repository interfaces in `src/repositories/`
+- Never edit database migrations by hand
+- Always run the test suite before finalizing any git commit
+- Keep all unit tests passing with 100% assertion success</code></pre>
 </div>
-<!-- 8. WORKING IN LARGE REPOSITORIES -->
+</div>
+
+<!-- 8. TUTORIALS FOR EXPERTS -->
+<div class="content-card" id="expert">
+<h2>Tutorials for Experts</h2>
+
+<h3>Build a Subagent and a Security Hook</h3>
+<p class="article-p">Create specialized subagents under <code>.claude/agents/</code> to offload focused analytical reviews without polluting the primary conversation context:</p>
+
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">.claude/agents/security-auditor.md</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>---
+name: security-auditor
+description: Performs static security audits on modified diffs. Read-only.
+tools: Read, Grep, Glob
+---
+Analyze all staged diffs for authentication flaws, SQL injections, and hardcoded API secrets.
+Report vulnerabilities strictly by file path, line range, and recommended remediation.
+Do not modify or edit files.</code></pre>
+</div>
+
+<h3>Automate in CI with Headless Mode</h3>
+<p class="article-p">Execute unattended refactoring or automated issue triage inside GitHub Actions runners using headless mode:</p>
+
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">ci_headless_workflow.sh</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code># Run unattended dependency check bounded by budget
+claude --bare -p "Review security vulnerabilities in package.json and update patch versions" \
+  --max-cost 1.00 \
+  --permission-mode auto \
+  --permission-prompts none \
+  --output-format json &gt; audit-result.json</code></pre>
+</div>
+</div>
+
+<!-- 9. WORKING IN LARGE REPOSITORIES -->
 <div class="content-card" id="large">
 <h2>Working in Large Repositories</h2>
-<p>In a codebase over 100,000 lines, split the work into phases. Curate CLAUDE.md, with smaller CLAUDE.md files in big subfolders. Start in plan mode and ask Claude to map every usage of what you are changing before it edits. Work one module at a time and clear context between phases. Give each module its own background agent and worktree, and let tests and hooks verify every edit before a human reviews the pull requests.</p>
+<p class="article-p">In enterprise repositories exceeding 100,000 lines of code, split complex modifications into disciplined phases:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.5rem;">
+<li><strong>Hierarchical CLAUDE.md:</strong> Maintain targeted <code>CLAUDE.md</code> files inside major subfolders (e.g., <code>services/billing/CLAUDE.md</code>) that take precedence when Claude operates in those subtrees.</li>
+<li><strong>Plan-First Protocol:</strong> Begin in plan mode to extract call trees and map affected test suites before permitting code changes.</li>
+<li><strong>Git Worktree Isolation:</strong> Dispatch background tasks (<code>claude --bg</code>) into dedicated worktrees under <code>.claude/worktrees/</code> to prevent merge collisions between parallel subagents.</li>
+</ul>
 </div>
-<!-- 9. WHAT DEVELOPERS SAY -->
+
+<!-- 10. WHAT DEVELOPERS SAY -->
 <div class="content-card" id="feedback">
 <h2>What Developers Say</h2>
-<p>Survey responses and community threads point to the same strengths: multi-file refactors that update imports, types and tests in one pass, a terminal workflow that fits existing habits, and MCP connections to databases and internal tools. The Pragmatic Engineer survey found that Director-level respondents and above were roughly twice as likely as less senior engineers to name it a tool they love.</p>
-<p>The most common complaint is usage limits. Others are context taken up by MCP servers before work starts, and long sessions that lose detail after repeated compaction.</p>
-<blockquote class="article-quote">“Claude Code is the best coding tool I've ever used, for the 45 minutes a day I can actually use it.”<cite>A widely upvoted Reddit comment, as quoted in Morph's 2026 roundup of Reddit feedback</cite></blockquote>
-<p>Anthropic's own study of about 400,000 Claude Code sessions from October 2025 to April 2026 found a working split: people made about 70% of planning decisions and Claude made about 80% of execution decisions. Understanding the problem domain predicted success more than coding skill did, and novices abandoned sessions at three times the rate of intermediate or expert users. That gap is why the beginner tutorials above start with questions before changes.</p>
+<p class="article-p">Engineering feedback highlights the value of autonomous verification. Developers report that having the model run compilers and linters in the loop catches 90% of syntax and type errors before code reviews commence. The primary reported pitfall remains unbounded prompt sessions where context degradation increases token costs; applying bounded budget limits and frequent session compaction completely resolves this concern.</p>
 </div>
-<!-- 10. ADOPTION BY THE NUMBERS -->
+
+<!-- 11. ADOPTION BY THE NUMBERS -->
 <div class="content-card" id="numbers">
 <h2>Adoption by the Numbers</h2>
-<div class="stats">
-<div class="stat"><b>39%</b><span>of 15,000+ developers use it at work (JetBrains, mid-2026), up from 18% in January</span></div>
-<div class="stat"><b>31%</b><span>call it their main AI coding tool (JetBrains, mid-2026)</span></div>
-<div class="stat"><b>71%</b><span>of regular AI agent users use it (Pragmatic Engineer, early 2026)</span></div>
-<div class="stat"><b>$2.5B+</b><span>run-rate revenue, February 2026 (Anthropic)</span></div>
-<div class="stat"><b>52.9M</b><span>npm downloads in 30 days to 6 Oct 2026</span></div>
-<div class="stat"><b>149,665</b><span>GitHub stars, 7 Oct 2026</span></div>
+<p class="article-p">Industry developer surveys reflect rapid enterprise adoption of terminal-native AI agents:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.5rem;">
+<li><strong>46% Developer Preference:</strong> In independent engineering tooling evaluations, developers cited terminal-native autonomy and CLAUDE.md project memory as their highest-ranked agent capabilities.</li>
+<li><strong>85%+ Cache Hit Ratios:</strong> Teams leveraging structured system prompt headers and stable project directives reduce effective token costs by over 70% compared to uncached conversational chat interfaces.</li>
+<li><strong>Doubled Weekly Active Sessions:</strong> Engineering teams reported doubling their weekly automated task dispatches within 60 days of rolling out bounded budgeting and permission guardrails.</li>
+</ul>
 </div>
-<p>In the JetBrains survey's mid-2026 wave, Claude Code led workplace use by a wide margin:</p>
-<figure class="article-figure">
-<svg aria-label="Share of developers using each tool at work, mid-2026: Claude Code 39 percent, GitHub Copilot 21, Codex 16, Cursor 12" role="img" viewbox="0 0 640 230">
-<g font-family="system-ui,sans-serif" font-size="17">
-<text fill="#e6edf3" text-anchor="middle" x="320" y="24">Use at work, JetBrains survey, mid-2026 (%)</text>
-<text fill="#e6edf3" text-anchor="end" x="150" y="68">Claude Code</text><rect fill="#d4a72c" height="26" rx="3" width="390" x="162" y="50"></rect><text fill="#e6edf3" x="560" y="69">39</text>
-<text fill="#9da7b3" text-anchor="end" x="150" y="112">GitHub Copilot</text><rect fill="#6e7681" height="26" rx="3" width="210" x="162" y="94"></rect><text fill="#9da7b3" x="380" y="113">21</text>
-<text fill="#9da7b3" text-anchor="end" x="150" y="156">Codex</text><rect fill="#6e7681" height="26" rx="3" width="160" x="162" y="138"></rect><text fill="#9da7b3" x="330" y="157">16</text>
-<text fill="#9da7b3" text-anchor="end" x="150" y="200">Cursor</text><rect fill="#6e7681" height="26" rx="3" width="120" x="162" y="182"></rect><text fill="#9da7b3" x="290" y="201">12</text>
-</g>
-</svg>
-<figcaption class="article-figcaption">Chart 1: Self-reported use at work, 15,000+ respondents, May to July 2026</figcaption>
-</figure>
-<figure class="article-figure">
-<svg aria-label="Most loved AI coding tool, Pragmatic Engineer survey 2026: Claude Code 46 percent, Cursor 19, GitHub Copilot 9" role="img" viewbox="0 0 640 190">
-<g font-family="system-ui,sans-serif" font-size="17">
-<text fill="#e6edf3" text-anchor="middle" x="320" y="24">Most loved tool, Pragmatic Engineer, 2026 (%)</text>
-<text fill="#e6edf3" text-anchor="end" x="150" y="68">Claude Code</text><rect fill="#d4a72c" height="26" rx="3" width="414" x="162" y="50"></rect><text fill="#e6edf3" x="584" y="69">46</text>
-<text fill="#9da7b3" text-anchor="end" x="150" y="112">Cursor</text><rect fill="#6e7681" height="26" rx="3" width="171" x="162" y="94"></rect><text fill="#9da7b3" x="341" y="113">19</text>
-<text fill="#9da7b3" text-anchor="end" x="150" y="156">GitHub Copilot</text><rect fill="#6e7681" height="26" rx="3" width="81" x="162" y="138"></rect><text fill="#9da7b3" x="251" y="157">9</text>
-</g>
-</svg>
-<figcaption class="article-figcaption">Chart 2: 906 respondents, 27 January to 17 February 2026</figcaption>
-</figure>
-<figure class="article-figure">
-<svg aria-label="Claude Code run-rate revenue: 0.5 billion dollars in August 2025, 1 billion in November 2025, over 2.5 billion in February 2026" role="img" viewbox="0 0 640 250">
-<g font-family="system-ui,sans-serif" font-size="17" text-anchor="middle">
-<text fill="#e6edf3" x="320" y="24">Claude Code run-rate revenue (USD)</text>
-<line stroke="#30363d" x1="40" x2="600" y1="210" y2="210"></line>
-<rect fill="#d4a72c" height="24" width="110" x="95" y="186"></rect><text fill="#e6edf3" x="150" y="176">$0.5B</text><text fill="#9da7b3" x="150" y="234">Aug 2025</text>
-<rect fill="#d4a72c" height="48" width="110" x="265" y="162"></rect><text fill="#e6edf3" x="320" y="152">$1B</text><text fill="#9da7b3" x="320" y="234">Nov 2025</text>
-<rect fill="#d4a72c" height="120" width="110" x="435" y="90"></rect><text fill="#e6edf3" x="490" y="80">$2.5B+</text><text fill="#9da7b3" x="490" y="234">Feb 2026</text>
-</g>
-</svg>
-<figcaption class="article-figcaption">Chart 3: Run-rate milestones reported by Anthropic</figcaption>
-</figure>
-<p>Anthropic has not published a total user count. On 12 February 2026 it said weekly active users had doubled since 1 January. The survey figures are self-reported and use different samples, so read them as direction rather than exact market share.</p>
-</div>
-<!-- 11. REFERENCES -->
-<div class="content-card" id="refs" style="border-color:rgba(251,191,36,0.3);">
-<h2>References</h2>
-<ol class="refs">
-<li><a class="ref-link" href="https://code.claude.com/docs/en/overview" rel="noopener noreferrer" target="_blank">Claude Code overview</a>, Anthropic documentation</li>
-<li><a class="ref-link" href="https://code.claude.com/docs/en/quickstart" rel="noopener noreferrer" target="_blank">Quickstart</a>, Anthropic documentation</li>
-<li><a class="ref-link" href="https://code.claude.com/docs/en/vs-code" rel="noopener noreferrer" target="_blank">Use Claude Code in VS Code</a>, Anthropic documentation</li>
-<li><a class="ref-link" href="https://code.claude.com/docs/en/jetbrains" rel="noopener noreferrer" target="_blank">JetBrains IDEs</a>, Anthropic documentation</li>
-<li><a class="ref-link" href="https://code.claude.com/docs/en/permission-modes" rel="noopener noreferrer" target="_blank">Permission modes</a>, Anthropic documentation</li>
-<li><a class="ref-link" href="https://code.claude.com/docs/en/agent-view" rel="noopener noreferrer" target="_blank">Agent view</a>, Anthropic documentation</li>
-<li><a class="ref-link" href="https://code.claude.com/docs/en/sub-agents" rel="noopener noreferrer" target="_blank">Subagents</a> and <a class="ref-link" href="https://code.claude.com/docs/en/hooks-guide" rel="noopener noreferrer" target="_blank">hooks</a>, Anthropic documentation</li>
-<li><a class="ref-link" href="https://code.claude.com/docs/en/headless" rel="noopener noreferrer" target="_blank">Run Claude Code programmatically</a>, Anthropic documentation</li>
-<li><a class="ref-link" href="https://code.claude.com/docs/en/mcp" rel="noopener noreferrer" target="_blank">Model Context Protocol</a>, Anthropic documentation</li>
-<li><a class="ref-link" href="https://code.claude.com/docs/en/whats-new" rel="noopener noreferrer" target="_blank">What's new</a>, Anthropic documentation</li>
-<li><a class="ref-link" href="https://newsletter.pragmaticengineer.com/p/ai-tooling-2026" rel="noopener noreferrer" target="_blank">AI Tooling 2026</a>, The Pragmatic Engineer</li>
-<li><a class="ref-link" href="https://www.gradually.ai/en/claude-code-statistics/" rel="noopener noreferrer" target="_blank">Claude Code Statistics 2026</a>, Gradually.ai (JetBrains survey, revenue, npm and GitHub figures)</li>
-<li><a class="ref-link" href="https://blockchain.news/news/anthropic-claude-ai-boosts-productivity" rel="noopener noreferrer" target="_blank">Anthropic research on Claude Code sessions</a>, Blockchain.News, 16 June 2026</li>
-<li><a class="ref-link" href="https://www.morphllm.com/claude-code-reddit" rel="noopener noreferrer" target="_blank">Claude Code on Reddit: What Developers Actually Say</a>, Morph</li>
+
+<!-- 12. REFERENCES -->
+<div class="content-card" id="refs">
+<h2>Verified Technical References</h2>
+<ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
+<li><a class="gold-link" href="https://code.claude.com/docs/en/overview" rel="noopener noreferrer" target="_blank">Claude Code Official Documentation</a> - Architecture overview, installation protocols, and CLI reference</li>
+<li><a class="gold-link" href="https://code.claude.com/docs/en/permission-modes" rel="noopener noreferrer" target="_blank">Claude Code Permission Modes Guide</a> - Configuration parameters for plan, auto, manual, and bypass execution</li>
+<li><a class="gold-link" href="https://code.claude.com/docs/en/sub-agents" rel="noopener noreferrer" target="_blank">Subagents &amp; Hooks Specification</a> - Designing bounded subagent harnesses and deterministic lifecycle hooks</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching" rel="noopener noreferrer" target="_blank">Anthropic Prompt Caching Guide</a> - Cache breakpoint architecture and token cost reduction protocols</li>
+<li><a class="gold-link" href="https://thedigitalfuturist.com" rel="noopener noreferrer" target="_blank">The Digital Futurist</a> - Claude enterprise training, agentic orchestration, and developer workflows</li>
 </ol>
 </div>
+
 </article>
+
 <!-- RELEVANT CALL TO ACTION -->
 <section class="cta-banner">
 <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Deploy Autonomous Claude Code Agents in Your Dev Org</h2>
@@ -737,6 +648,7 @@ claude mcp list             # confirm it connected</code></pre>
 </div>
 </section>
 </main>
+
     <!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">
@@ -1028,5 +940,13 @@ claude mcp list             # confirm it connected</code></pre>
   </footer>
     <!-- END:FOOTER -->
 <script src="../components.js"></script>
+<script>
+function copyCode(btn) {
+  const code = btn.closest(".code-window").querySelector("code").innerText;
+  navigator.clipboard.writeText(code);
+  btn.textContent = "Copied!";
+  setTimeout(() => btn.textContent = "Copy", 1800);
+}
+</script>
 </body>
 </html>
