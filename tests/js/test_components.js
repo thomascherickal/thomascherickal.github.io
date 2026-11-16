@@ -353,6 +353,9 @@ async function run(harness) {
 
     let docClick = null;
     let writtenText = '';
+    if (!global.navigator) {
+      global.navigator = {};
+    }
     Object.defineProperty(global.navigator, 'clipboard', {
       value: {
         writeText: (t) => {

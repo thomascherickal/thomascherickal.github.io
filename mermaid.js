@@ -1,17 +1,21 @@
 // Load Mermaid
-let mermaid;
-try {
-  mermaid = (await import('https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs')).default;
-} catch (e) {
-  mermaid = typeof window !== 'undefined' ? window.mermaid : undefined;
-}
+let mermaid = typeof window !== 'undefined' ? window.mermaid : undefined;
+(async () => {
+  try {
+    if (!mermaid) {
+      mermaid = (await import('https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs')).default;
+    }
+  } catch (e) {
+    // Fallback to window.mermaid if already loaded
+  }
+})();
 
 /**
  * Dynamically transforms all links pointing to .md files across the document
  * into the syntax: <a href="mermaid.html?file=[FILENAME].md">[Link Text]</a>
  * Preserves existing link text or dynamically formats it from the filename.
  */
-export function transformMdLinks(root = document) {
+function transformMdLinks(root = document) {
   // Determine if current page is in a subdirectory (e.g. /claude/, /google/, etc.)
   const scriptEl = document.querySelector('script[src*="mermaid.js"]');
   const isSubdir = (scriptEl && scriptEl.getAttribute('src').startsWith('../')) ||
@@ -118,7 +122,9 @@ async function initMermaid() {
   }
 }
 
-export { initMermaid };
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { transformMdLinks, initMermaid };
+}
 
 if (typeof document !== 'undefined' && typeof document.querySelector === 'function' && typeof window !== 'undefined' && window.location) {
   if (document.readyState === 'loading') {

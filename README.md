@@ -419,29 +419,29 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 
 ## Latest Pre-Commit Report Summary
 
-> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`METRICS.md`](METRICS.md)** | Recorded on: `2026-11-15 10:17:15 UTC`
+> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`METRICS.md`](METRICS.md)** | Recorded on: `2026-11-16 06:28:45 UTC`
 
 ### Commit Overview
 
 | Property | Value |
 | :--- | :--- |
-| **Parent Commit (Full)** | `7e1f6181aecdc9cc7886f14e6e5ca9a3cf688bf0` |
-| **Parent Commit (Short)** | `7e1f618` |
+| **Parent Commit (Full)** | `a21d5cdfbdb18ea13d90a81f47e4570c08e841d3` |
+| **Parent Commit (Short)** | `a21d5cd` |
 | **Branch** | `main` |
-| **Parent Subject** | Schema and MD files |
+| **Parent Subject** | Portfolio |
 | **Parent Author** | Thomas Cherickal `<thomascherickal@gmail.com>` |
-| **Parent Author Date** | `2026-11-14T18:10:49+05:30` |
-| **Commits in Repo (before this commit)** | 546 |
+| **Parent Author Date** | `2026-11-15T15:46:45+05:30` |
+| **Commits in Repo (before this commit)** | 547 |
 
 ### Quality Gate & Verification Summary
 
 | Quality Gate / Test Dimension | Total Scope | Passed | Failed | Status | Runtime |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| **Python Unit Test Suite** | 149 tests across 25 modules | 149 | 0 | PASSED | 10.68s |
-| **JavaScript Unit Test Suite** | 159 tests across 17 sections | 159 | 0 | PASSED | 0.07s |
+| **Python Unit Test Suite** | 149 tests across 25 modules | 149 | 0 | PASSED | 10.81s |
+| **JavaScript Unit Test Suite** | 159 tests across 17 sections | 159 | 0 | PASSED | 0.08s |
 | **NLP-Fuzzy-Expert Sync Engine** | 91 target documents | 91 | 0 | PASSED | 1.50s |
 | **SSOT Data Immutability Guard** | 12 data files SHA-256 hash | 12 | 0 | PASSED | 0.001s |
-| **Internal Link & Anchor Integrity** | 10719 links across 91 HTML files | 10719 | 0 | PASSED | 0.33s |
+| **Internal Link & Anchor Integrity** | 10631 links across 91 HTML files | 10631 | 0 | PASSED | 0.33s |
 | **JSON-LD Schema Synchronization** | 84 schema files in `schema/` | 84 | 0 | PASSED | 0.15s |
 | **Markdown Sync Verification** | 91 paired markdown files | 91 | 0 | PASSED | 0.10s |
 | **Overall Quality Gate Status** | **7 of 7 Quality Gates Passed** | **100%** | **0** | **GREEN** | **PASS** |
@@ -450,35 +450,35 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 
 | Language | Tracked Files | Total Statements / Lines | Covered | Missed | Coverage % | Status |
 |:---|---:|---:|---:|---:|---:|:---|
-| Python (`nlp-fuzzy-expert/`, `python/`) | 30 | 5,359 | 5,236 | 123 | **97.70%** | PASS |
-| JavaScript (Root scripts) | 3 | 1,264 | 1,264 | 0 | **100.00%** | PASS |
-| **Repository Combined Total** | **33** | **6,623** | **6,500** | **123** | **98.14%** | **PASS** |
+| Python (`nlp-fuzzy-expert/`, `python/`) | 0 | 0 | 0 | 0 | **100.00%** | PASS |
+| JavaScript (Root scripts) | 3 | 1,269 | 1,269 | 0 | **100.00%** | PASS |
+| **Repository Combined Total** | **3** | **1,269** | **1,269** | **0** | **100.00%** | **PASS** |
 
 ### Repository Code & Engineering Metrics Summary (`METRICS.md`)
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **561** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **995,645** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **975,711** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **6,613** | In-code and architectural documentation |
+| **Total Tracked Files** | **562** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **997,908** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **977,973** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **6,614** | In-code and architectural documentation |
 | **Blank / Spacing Lines** | **13,321** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **59.00 MB (61,860,905 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **889,655 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **546** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-14** | Subject: "Schema and MD files" |
+| **Total Repository Size (Tracked Assets)** | **59.15 MB (62,020,424 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **890,603 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **547** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-15** | Subject: "Portfolio" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ### Architecture & File Category Breakdown (`METRICS.md`)
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 91 | 108,505 | 8.58 MB (8,991,793 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 91 | 108,593 | 8.57 MB (8,990,955 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 11,935 | 279.90 KB (286,613 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 32 | 11,363 | 3.69 MB (3,874,481 bytes) | Client-side interactivity, search, filter & components |
+| **JavaScript Scripts** | 32 | 11,372 | 3.70 MB (3,874,723 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 59 | 15,304 | 684.34 KB (700,764 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 158 | 45,003 | 5.01 MB (5,249,838 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 113 | 803,482 | 36.36 MB (38,129,813 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
-| **Vector SVG Icons & Graphics** | 42 | 53 | 64.93 KB (66,488 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
+| **Markdown Documentation** | 158 | 45,050 | 5.02 MB (5,260,556 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 113 | 805,594 | 36.45 MB (38,216,077 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Vector SVG Icons & Graphics** | 43 | 60 | 126.58 KB (129,621 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 38 | 0 | 4.27 MB (4,479,410 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 12 | 0 | 79.79 KB (81,705 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
