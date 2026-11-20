@@ -120,14 +120,14 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 
 ## Practice Pricing, Payment Structure & Licensing Rules
 - **Business AI Training Flagship**:
-  - Base price: **$3000 USD** for **60 days total** (30 days live engineering training + 30 days dedicated support).
-  - Includes up to 10 participants. Extra seats are **$300 USD per seat** after 10 participants, up to a strict maximum of 20 seats.
+  - Base price: **$1000 USD** for **60 days total** (30 days live engineering training + 30 days dedicated support).
+  - Includes up to 10 participants. Extra seats are **$100 USD per seat** after 10 participants, up to a strict maximum of 20 seats (scaled by Purchasing Power Parity).
 - **Personal AI Training Flagship**:
-  - Base price: **$3000 USD** for **60 days total** (30 days live 1-on-1 training + 30 days dedicated support).
+  - Base price: **$1000 USD** for **60 days total** (30 days live 1-on-1 training + 30 days dedicated support).
   - Strictly **one person only** (dedicated private acceleration).
 - **Individual Service Picks**:
-  - **Business Individual Service**: **$300 USD** base for 1 seat, with additional seats at **$300 USD per seat** up to a maximum of 10 seats (5 days live training + 5 days support).
-  - **Personal Individual Service**: **$300 USD** strictly for **only one seat** (5 days live training + 5 days support).
+  - **Business Individual Service**: **$100 USD** base for 1 seat, with additional seats at **$100 USD per seat** up to a maximum of 10 seats (5 days live training + 5 days support, scaled by Purchasing Power Parity).
+  - **Personal Individual Service**: **$100 USD** strictly for **only one seat** (5 days live training + 5 days support, scaled by Purchasing Power Parity).
 - **Delivery Schedule & Mode**:
   - **4 hours per day**, Monday through Friday.
   - **Saturdays and Sundays are holidays**.
@@ -140,17 +140,17 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
   - Every page mentioning pricing must provide a short explanation of the six 195-country Purchasing Power Parity (PPP) tiers and include a prominent link to `pricing.html`.
 - **Global Parity Pricing Display Everywhere Rule**:
   - Wherever pricing is presented across the website (including Hero banners, package summaries, guarantee blocks, service pages, and guides), always display the full Purchasing Power Parity range to prominently highlight global parity access:
-    - **Flagship Tiers**: `$3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD` (representing Tier 1 through Tier 6).
-    - **Individual Service Tiers**: `$300 / $225 / $150 / $150 / $75 / Custom USD` (representing Tier 1 through Tier 6).
-    - **Additional Seats (Flagship & Individual)**: Billed at the identical calibrated tier rates (`+$300 / +$225 / +$150 / +$150 / +$75 / Custom USD per extra seat`).
+    - **Flagship Tiers**: `$1,000 / $750 / $500 / $500 / $250 / Custom USD` (representing Tier 1 through Tier 6).
+    - **Individual Service Tiers**: `$100 / $75 / $50 / $50 / $25 / Custom USD` (representing Tier 1 through Tier 6).
+    - **Additional Seats (Flagship & Individual)**: Billed at the identical calibrated tier rates (`+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat`).
   - Follow front-end styling and responsive design guidelines to ensure text wraps smoothly on mobile screens without horizontal blowout.
 - **High-Quality Training Material & Apache 2.0 Licensing**:
   - All high-quality training materials, curriculum documents, architectural guides, and custom client code are licensed under the **Apache 2.0 license**, permitting commercial use, internal deployment, resale, and relicensing with attribution.
 - **Support Period Pricing (Included at Zero Charge)**:
-  - **Flagship Support (Business & Personal)**: Strictly **$0 charge** for the 30 days dedicated support period. All support is 100% included and fully covered by the **$3,000 USD** flagship price and its scaled Purchasing Power Parity (PPP) tiers.
-  - **Individual Services Support (Business & Personal)**: Strictly **$0 charge** for the 5 days dedicated support period. All support is 100% included and fully covered by the **$300 USD** individual service price and its scaled Purchasing Power Parity (PPP) tiers.
+  - **Flagship Support (Business & Personal)**: Strictly **$0 charge** for the 30 days dedicated support period. All support is 100% included and fully covered by the **$1,000 USD** flagship price and its scaled Purchasing Power Parity (PPP) tiers.
+  - **Individual Services Support (Business & Personal)**: Strictly **$0 charge** for the 5 days dedicated support period. All support is 100% included and fully covered by the **$100 USD** individual service price and its scaled Purchasing Power Parity (PPP) tiers.
   - **No Extra Invoicing**: Support periods involve zero extra invoicing or payments beyond the completed 5 milestone installments of training.
-  - **Everything Covered**: The entire engagement (training plus dedicated support) is fully covered by the $3,000 USD flagship rate and $300 USD individual service rate across all parity tiers.
+  - **Everything Covered**: The entire engagement (training plus dedicated support) is fully covered by the $1,000 USD flagship rate and $100 USD individual service rate across all parity tiers.
 
 ## Page Deletion & Clean Purge Rule (`python/delete_page.py`)
 - **ALWAYS use `python3 python/delete_page.py <path_or_filename>`** whenever deleting an HTML page or guide from the website.
@@ -178,10 +178,10 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 ## New Files & Source Control Integrity Rule
 - **Mandatory Pricing & PPP Parity Audit**: Whenever any new file (HTML, Markdown, script, or documentation) is created, updated, or added to source control:
   - All pricing mentions, rates, and Purchasing Power Parity (PPP) numbers across all 6 tiers must strictly conform to the authoritative figures specified in `GEMINI.md` and `data/pricing.json`.
-  - Flagships must be specified at **$3000 USD** for **60 days total** (30 days live + 30 days dedicated support), with additional seats at **$300 USD per seat** (up to 20 seats max for business; strictly 1 person only for personal).
-  - Individual service picks must be specified at **$300 USD** base rate (covering 5 days live + 5 days dedicated support).
+  - Flagships must be specified at **$1000 USD** for **60 days total** (30 days live + 30 days dedicated support), with additional seats at **$100 USD per seat** (up to 20 seats max for business; strictly 1 person only for personal).
+  - Individual service picks must be specified at **$100 USD** base rate (covering 5 days live + 5 days dedicated support).
   - Advance deposit must strictly be **$0 upfront** (never corrupted strings or omitted dollar signs).
-  - The 6 PPP tiers must explicitly reflect: Tier 1 ($3000), Tier 2 ($2250), Tier 3 ($1500), Tier 4 ($1500), Tier 5 ($750), Tier 6 (Custom).
+  - The 6 PPP tiers must explicitly reflect: Tier 1 ($1000), Tier 2 ($750), Tier 3 ($500), Tier 4 ($500), Tier 5 ($250), Tier 6 (Custom).
   - Must strictly preserve zero emojis and zero em-dashes.
 ## User Clarification & Decision Rule
 - **Mandatory Clarification for Ambiguities**: Whenever there are ambiguities, doubts, clarifications required, or questions about an implementation, check whether there is a single clear recommended plan:

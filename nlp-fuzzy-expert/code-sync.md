@@ -1,6 +1,6 @@
 # Source Code and Test Suite Knowledge Synchronization Report
 
-Generated on: 2026-11-21 03:20:43
+Generated on: 2026-11-21 03:34:22
 
 ## Summary
 - **Target Files Evaluated**: 48
@@ -64,8 +64,8 @@ Generated on: 2026-11-21 03:20:43
 
 | Target | Category | Domain | Field | Detail |
 | :--- | :--- | :--- | :--- | :--- |
-| `pricing-calculator.js` | source_code | pricing | `calculator_constants` | Synced ratePerSvc=300, basePrice=3000, extraSeat=300, seats=10 |
-| `payment-schedule.js` | source_code | pricing | `payment_schedule_terms` | Verified PARITY_TIERS and trust terms with flagship=3000, indiv=300 |
+| `pricing-calculator.js` | source_code | pricing | `calculator_constants` | Synced ratePerSvc=100, basePrice=1000, extraSeat=100, seats=10 |
+| `payment-schedule.js` | source_code | pricing | `payment_schedule_terms` | Verified PARITY_TIERS and trust terms with flagship=1000, indiv=100 |
 | `components.js` | source_code | claude | `orchestration_pages` | Synced 18 orchestration guide page names |
 | `python/generate_sitemap.py` | source_code | sitemap | `url_catalog` | Synced 16 business, 18 Claude, 18 Gemini URLs |
 | `python/build_components.py` | source_code | components | `subdirs` | Synced active subdirectory folder paths |
@@ -77,7 +77,7 @@ Generated on: 2026-11-21 03:20:43
 | `pricing-calculator/pricing-calculator-tier-4.js` | source_code | pricing | `tier_calculator_engine` | Verified tier calculator engine in pricing-calculator-tier-4.js |
 | `pricing-calculator/pricing-calculator-tier-5.js` | source_code | pricing | `tier_calculator_engine` | Verified tier calculator engine in pricing-calculator-tier-5.js |
 | `pricing-calculator/pricing-calculator-tier-6.js` | source_code | pricing | `tier_calculator_engine` | Verified tier calculator engine in pricing-calculator-tier-6.js |
-| `pricing-tests.js` | test | pricing | `test_constants` | Synced B_FLAG=3000, P_FLAG=3000, EXTRA=300, IND=300, SEATS=10 |
+| `pricing-tests.js` | test | pricing | `test_constants` | Synced B_FLAG=1000, P_FLAG=1000, EXTRA=100, IND=100, SEATS=10 |
 | `tests/js/test_payment_schedule.js` | test | pricing | `payment_schedule_tests` | Verified payment schedule test suite |
 | `pricing-calculator/pricing-calculator-tier-1-tests.js` | test | pricing | `tier_calculator_tests` | Verified tier test suite in pricing-calculator-tier-1-tests.js |
 | `pricing-calculator/pricing-calculator-tier-2-tests.js` | test | pricing | `tier_calculator_tests` | Verified tier test suite in pricing-calculator-tier-2-tests.js |

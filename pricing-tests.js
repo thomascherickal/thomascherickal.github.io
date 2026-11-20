@@ -14,10 +14,10 @@ const PricingCalculator = typeof require !== 'undefined'
   : window.PricingCalculator;
 
 // --- AUTHORITATIVE SYNCHRONIZED PRICING FACTS ---
-const B_FLAG_PRICE = 3000;
-const P_FLAG_PRICE = 3000;
-const B_IND_PRICE = 300;
-const B_EXTRA_SEAT = 300;
+const B_FLAG_PRICE = 1000;
+const P_FLAG_PRICE = 1000;
+const B_IND_PRICE = 100;
+const B_EXTRA_SEAT = 100;
 const B_INCLUDED_SEATS = 10;
 // --- END AUTHORITATIVE SYNCHRONIZED PRICING FACTS ---
 
