@@ -1,7 +1,7 @@
 # AI Developer Training
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// BUSINESS AI TRANSFORMATION SERVICE**  
+> **// PERSONAL SERVICE SPECIFICATION - 1-ON-1 AI SOFTWARE ENGINEERING**  
 > **Business transformation, verification, and implementation.**
 
 ---

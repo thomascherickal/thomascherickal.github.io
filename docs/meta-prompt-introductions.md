@@ -177,8 +177,8 @@ Use any 50-word introduction below as an editable meta-prompt to guide or regene
 53. **`google-antigravity-ide.html` - Google Antigravity IDE: Autonomous Multi-Agent Development**
     Deep dive into Google's agent-first IDE and Antigravity desktop platform, CLI (`agy`), and Python SDK. Covers task delegation, implementation plans, multi-model selection, subscription tiers, and real-world engineering case studies with verification gates.
 
-54. **`google-code-wiki.html` - Google Code Wiki: Automated Repository Documentation & Architecture Maps**
-    Learn how Google Code Wiki continuously indexes source repositories into interactive architectural guides, symbol cross-references, and call-graph explanations. Covers onboarding acceleration, dependency mapping, and keeping engineering documentation synchronized with live commits.
+54. **`google-gemini-4-neon.html` - Google Gemini 4 Neon: Reasoning, Coding, and 24/7 Agentic Assistants**
+    Explore Gemini 4 Neon as an active reasoning engine with enhanced coding, and 24/7 agentic assistant capabilities. Use it to automate complex workflows, compose sophisticated agents, and integrate with development tools and enterprise systems.
 
 55. **`google-deep-research.html` - Google Deep Research: Autonomous Multi-Step Web & Corpus Synthesis**
     Master Google Deep Research for automated multi-step web exploration, iterative query refinement, and long-form cited report generation. Covers research-plan steering, source verification, combining web discovery with private files, and exporting structured executive briefs.

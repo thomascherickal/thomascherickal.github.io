@@ -1,7 +1,7 @@
 # Knowledge Graphs
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// BUSINESS AI TRANSFORMATION SERVICE**  
+> **// PERSONAL SERVICE SPECIFICATION - PERSONAL KNOWLEDGE GRAPHS & TOKEN SAVINGS**  
 > **Business transformation, verification, and implementation.**
 
 ---

@@ -1,7 +1,7 @@
 # Local AI for Sensitive Data
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// SERVICE SPECIFICATION - SOVEREIGN & AIR-GAPPED AI**  
+> **// BUSINESS SERVICE - AIR-GAPPED & PRIVATE AI**  
 > **Business transformation, verification, and implementation.**
 
 ---

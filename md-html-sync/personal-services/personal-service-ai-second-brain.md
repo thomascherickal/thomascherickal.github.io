@@ -1,7 +1,7 @@
 # AI Second Brain
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// BUSINESS AI TRANSFORMATION SERVICE**  
+> **// PERSONAL SERVICE SPECIFICATION - LOCAL-FIRST PERSONAL KNOWLEDGE**  
 > **Business transformation, verification, and implementation.**
 
 ---

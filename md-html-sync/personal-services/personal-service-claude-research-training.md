@@ -1,7 +1,7 @@
 # Claude Research Training
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// PERSONAL SERVICE SPECIFICATION · CLAUDE RESEARCH**  
+> **// PERSONAL SERVICE SPECIFICATION - PERSONAL RESEARCH BREAKTHROUGHS WITH CLAUDE**  
 > **Business transformation, verification, and implementation.**
 
 ---

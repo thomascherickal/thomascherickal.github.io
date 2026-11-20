@@ -5,22 +5,22 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Google AI Studio: Rapid Prototyping & System Instructions | Thomas Cherickal</title>
-<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Hands-on guide to Google AI Studio: rapid prototyping, system instructions, structured JSON schemas, safety filters, token-cost tables, SDK migration, and multimodal tools including ASR, TTS, Imagen, Veo, and Lyria." name="description"/>
+<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. A hands-on guide to prototyping, benchmarking, and exporting production prompts in Google AI Studio, covering system instructions, JSON schemas, safety filters, token-cost tables, Python SDK export, and multimodal tools." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
 <link href="https://thedigitalfuturist.com/gemini-training/google-ai-studio.html" rel="canonical"/>
 <!-- Open Graph -->
 <meta content="article" property="og:type"/>
 <meta content="https://thedigitalfuturist.com/gemini-training/google-ai-studio.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
-<meta content="Google AI Studio: Rapid Prototyping & System Instructions | Thomas Cherickal" property="og:title"/>
-<meta content="Hands-on guide to prototyping, benchmarking, and exporting production prompts in Google AI Studio. Covers system instructions, structured JSON schemas, safety filters, token-cost tables, SDK migration, and multimodal tools including ASR, TTS, Imagen, Veo, Lyria, and Gemini 4 models." property="og:description"/>
+<meta content="Google AI Studio: Rapid Prototyping &amp; System Instructions | Thomas Cherickal" property="og:title"/>
+<meta content="A hands-on guide to prototyping, benchmarking, and exporting production prompts in Google AI Studio, including ASR, TTS, Image Generation, Video Generation, Music Generation, and Gemini models." property="og:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@thomazcherickal" name="twitter:site"/>
-<meta content="Google AI Studio: Rapid Prototyping & System Instructions | Thomas Cherickal" name="twitter:title"/>
-<meta content="Hands-on guide to prototyping, benchmarking, and exporting production prompts in Google AI Studio. Covers system instructions, structured JSON schemas, safety filters, token-cost tables, SDK migration, and multimodal tools including ASR, TTS, Imagen, Veo, Lyria, and Gemini 4 models." name="twitter:description"/>
+<meta content="Google AI Studio: Rapid Prototyping &amp; System Instructions | Thomas Cherickal" name="twitter:title"/>
+<meta content="A hands-on guide to prototyping, benchmarking, and exporting production prompts in Google AI Studio, including ASR, TTS, Image Generation, Video Generation, Music Generation, and Gemini models." name="twitter:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
 <!-- Favicons -->
 <link href="../assets/favicon.ico" rel="icon" sizes="any"/>
@@ -106,8 +106,7 @@
         "Imagen Image Generation",
         "Veo Video Generation",
         "Lyria Music Generation",
-        "Gemini 4 Argon",
-        "Gemini 4 Hydrogen",
+        "Gemini Models",
         "Build Mode"
       ]
     },
@@ -291,16 +290,16 @@
           <li><a href="../gemini-training/google-gemma-local-models.html">Google Gemma Local Models</a></li>
           <li><a href="../gemini-training/google-multimodality.html">Google Multimodality</a></li>
           <li><a href="../gemini-training/google-deepmind.html">Google DeepMind</a></li>
-          <li><a href="../gemini-training/google-code-wiki.html">Google Code Wiki</a></li>
           <li><a href="../gemini-training/google-deep-research.html">Google Deep Research</a></li>
           <li><a href="../gemini-training/google-gemini-skills.html">Gemini Skills</a></li>
           <li><a href="../gemini-training/google-gemini-4-argon.html">Gemini 4 Argon</a></li>
           <li><a href="../gemini-training/google-gemini-4-carbon.html">Gemini 4 Carbon</a></li>
           <li><a href="../gemini-training/google-gemini-4-hydrogen.html">Gemini 4 Hydrogen</a></li>
+          <li><a href="../gemini-training/google-gemini-4-neon.html">Gemini 4 Neon</a></li>
           <li><a href="../gemini-training/google-gemini-4-krypton.html" aria-disabled="true" tabindex="-1"
               style="pointer-events: none; opacity: 0.45; cursor: not-allowed;">Gemini 4 Krypton</a></li>
-          <li><a href="../gemini-training/google-gemini-4-helix.html" aria-disabled="true" tabindex="-1"
-              style="pointer-events: none; opacity: 0.45; cursor: not-allowed;">Gemini 4 Helix</a></li>
+          <li><a href="../gemini-training/google-gemini-4-helium.html" aria-disabled="true" tabindex="-1"
+              style="pointer-events: none; opacity: 0.45; cursor: not-allowed;">Gemini 4 Helium</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
@@ -317,302 +316,283 @@
   </nav>
   <!-- END:HEADER -->
 <main class="container single-column-article">
-<header class="hero content-card">
+<header class="hero content-card" style="background:#000000;">
 <p class="hero-badge">// RAPID PROTOTYPING &amp; SYSTEM INSTRUCTIONS</p>
 <h1>Google AI Studio: Rapid Prototyping & System Instructions</h1>
+<div class="title-tags" aria-label="Article topics"><span class="title-tag">Google AI Studio</span><span class="title-tag">System Instructions</span><span class="title-tag">JSON Schemas</span><span class="title-tag">Multimodal Tools</span><span class="title-tag">Python SDK</span></div>
 <p class="hero-desc">
-  A hands-on guide to prototyping, benchmarking, and exporting production prompts in Google AI Studio. By Thomas Cherickal, Generative AI Consultant | 16 November 2026 | Sources verified against official Google AI documentation.
+  A hands-on guide to testing prompts, comparing models, using built-in audio, image, video, and music tools, and exporting clean Python code from Google AI Studio.
 </p>
 </header>
 
 <!-- TABLE OF CONTENTS -->
-<article class="content-card" id="table-of-contents">
+<article class="content-card" id="table-of-contents" style="background:#000000;">
 <h2>Contents</h2>
 <div class="toc-grid" style="display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem;">
 <a class="toc-link gold-link" href="#introduction">1. Introduction</a>
-<a class="toc-link gold-link" href="#what-it-is">2. What Google AI Studio is</a>
-<a class="toc-link gold-link" href="#playground">3. The Playground, System Instructions &amp; Structured Outputs</a>
-<a class="toc-link gold-link" href="#multimodal-tools">4. Multimodal Tools: ASR, TTS, Imagen, Veo &amp; Lyria</a>
-<a class="toc-link gold-link" href="#gemini-4-models">5. Frontier Intelligence: Gemini 4 Models in AI Studio</a>
-<a class="toc-link gold-link" href="#token-economics">6. Token Economics &amp; Cost Tables</a>
-<a class="toc-link gold-link" href="#sdk-migration">7. One-Click Migration to the Google GenAI Python SDK</a>
-<a class="toc-link gold-link" href="#build-mode">8. Build Mode: Full-Stack Web &amp; Android App Compilation</a>
-<a class="toc-link gold-link" href="#backend">9. Backend Architecture: Node.js, Firebase &amp; Workspace</a>
-<a class="toc-link gold-link" href="#android">10. Native Android Generation with Jetpack Compose</a>
-<a class="toc-link gold-link" href="#deployment">11. Deployment Paths: Cloud Run, GitHub &amp; Local Export</a>
-<a class="toc-link gold-link" href="#tutorials">12. Practical Tutorials: From Prompt to Running Code</a>
-<a class="toc-link gold-link" href="#limits">13. Operational Limits, Privacy &amp; Trade-Offs</a>
-<a class="toc-link gold-link" href="#conclusion">14. Conclusion</a>
-<a class="toc-link gold-link" href="#references">15. References</a>
+<a class="toc-link gold-link" href="#what-it-is">2. What Google AI Studio Does</a>
+<a class="toc-link gold-link" href="#playground">3. System Instructions, JSON Schemas &amp; Safety Filters</a>
+<a class="toc-link gold-link" href="#multimodal-tools">4. Built-In Tools: ASR, TTS, Images, Video &amp; Music</a>
+<a class="toc-link gold-link" href="#gemini-models">5. Accessing Gemini Models &amp; Extra Workspace Features</a>
+<a class="toc-link gold-link" href="#token-economics">6. Token Costs &amp; Context Caching</a>
+<a class="toc-link gold-link" href="#sdk-migration">7. One-Click Export to the Google GenAI Python SDK</a>
+<a class="toc-link gold-link" href="#tutorials">8. Step-by-Step Starter Tutorials</a>
+<a class="toc-link gold-link" href="#limits">9. Privacy, Free vs. Paid Tiers &amp; Limits</a>
+<a class="toc-link gold-link" href="#references">10. References</a>
 </div>
 </article>
 
 <!-- INTRODUCTION -->
-<article class="content-card" id="introduction">
+<article class="content-card" id="introduction" style="background:#000000;">
 <h2>Introduction</h2>
 <p class="lead-text" style="font-size:1.12rem;line-height:1.8;color:var(--text-primary);border-left:3px solid var(--gold);padding-left:1.2rem;margin-bottom:1.5rem;">
-  A hands-on guide to prototyping, benchmarking, and exporting production prompts in Google AI Studio. Covers system instructions, structured JSON schemas, safety filters, token-cost tables, and one-click migration to the Google GenAI Python SDK. Also lists available tools, including ASR, TTS, Image Generation, Video Generation (Veo), Music Generation (Lyria), access to Gemini 4 models, and its other features.
+  Google AI Studio is Google's browser workspace for testing prompts, checking model quality, and turning working ideas into production code without setup friction.
 </p>
 <p>
-  Google AI Studio has evolved from an interactive prompt sandbox into Google's unified command center for generative AI engineering. Developers use the platform to iterate on system instructions, enforce strict JSON schemas with mathematical precision, benchmark token consumption across model tiers, and inspect safety filter activations in real time. Beyond text reasoning, AI Studio provides direct graphical access to Google's specialized multimodal synthesis engines, including automatic speech recognition (ASR), speech synthesis (TTS), high-fidelity image creation via Imagen, cinematic video generation via Veo, and musical composition via Lyria.
+  Instead of writing boilerplate scripts just to see if an idea works, you can open your browser, pick a Gemini model, set clear rules with system instructions, lock the reply into a predictable JSON format, and measure token usage right away. You can also test speech recognition (ASR), voice generation (TTS), image creation, video creation, and music creation in the same place.
 </p>
 <p>
-  When a prototype succeeds, AI Studio offers two production pathways: one-click export into clean Python or TypeScript code using the modern Google GenAI SDK, or automated compilation into full-stack web and native Android applications via the integrated Antigravity coding agent. This guide breaks down the full architectural capabilities of the platform as of November 2026.
+  When a prompt works the way you want, one click turns it into ready-to-run code for the official <a class="gold-link" href="#references">Google GenAI Python SDK</a>. That makes Google AI Studio equally useful for business teams prototyping a workflow and engineers shipping live software.
 </p>
 
-<div class="diagram-container content-card">
+<div class="diagram-container content-card" style="background:#000000;">
 <div class="mermaid-fallback">
 <em>Interactive architecture diagram (loading...)</em>
 </div>
 <div class="mermaid">
 flowchart TD
-    classDef default fill:#0f172a,stroke:#38bdf8,stroke-width:1px,color:#f8fafc;
-    classDef gold fill:#1e1b4b,stroke:#fbbf24,stroke-width:2px,color:#fef08a;
-    classDef cyan fill:#082f49,stroke:#06b6d4,stroke-width:2px,color:#e0f2fe;
-    classDef accent fill:#311042,stroke:#c084fc,stroke-width:2px,color:#f3e8ff;
-    classDef green fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#ecfdf5;
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc;
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
+    classDef purple fill:#000000,stroke:#c084fc,stroke-width:2px,color:#f8fafc;
+    classDef green fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc;
+    classDef rose fill:#000000,stroke:#f472b6,stroke-width:2px,color:#f8fafc;
 
-    Developer["Developer / Machine Learning Architect"]:::gold --&gt; Workspace["Google AI Studio Browser Workspace"]:::cyan
-    
-    Workspace --&gt; Playground["Playground Surface<br/>(Prompt Tuning &amp; Schema Validation)"]:::accent
-    Workspace --&gt; MultiModal["Multimodal Tooling Suite<br/>(ASR, TTS, Imagen, Veo, Lyria)"]:::accent
-    Workspace --&gt; BuildMode["Build Mode Surface<br/>(Full-Stack Web &amp; Android Synthesis)"]:::accent
-    Workspace --&gt; LiveMode["Live Mode Surface<br/>(Bidirectional Real-Time Voice/Video)"]:::accent
-    
-    Playground --&gt; GenAISDK["Production Google GenAI Python SDK"]:::green
-    BuildMode --&gt; CloudRun["Google Cloud Run (Serverless Web)"]:::green
-    BuildMode --&gt; AndroidDevice["Physical Device via WebUSB (Compose APK)"]:::green
+    Builder["Builder or Team Lead"]:::gold --&gt; Studio["Google AI Studio Browser Workspace"]:::cyan
+    Studio --&gt; Playground["Prompt Playground<br/>System Rules &amp; JSON Output"]:::purple
+    Studio --&gt; MediaTools["Creative &amp; Audio Tools<br/>ASR, TTS, Image, Video, Music"]:::rose
+    Studio --&gt; LiveStream["Live Audio &amp; Video Mode<br/>Real-Time Testing"]:::purple
+    Studio --&gt; BuildApps["App Builder &amp; Preview<br/>Fast Web Prototypes"]:::rose
+    Playground --&gt; ExportSDK["One-Click Python SDK Export"]:::green
+    MediaTools --&gt; ExportSDK
+    BuildApps --&gt; CloudDeploy["Deploy or Export to GitHub"]:::green
 </div>
-<div class="diagram-caption">Figure 1. The operational architecture of Google AI Studio spanning prompt engineering, multimodal synthesis, and application compilation.</div>
+<div class="diagram-caption">Figure 1. How Google AI Studio connects prompt testing, media tools, and code export in one workspace.</div>
 </div>
 </article>
 
-<!-- WHAT GOOGLE AI STUDIO IS -->
-<article class="content-card" id="what-it-is">
-<h2>What Google AI Studio is</h2>
+<!-- WHAT GOOGLE AI STUDIO DOES -->
+<article class="content-card" id="what-it-is" style="background:#000000;">
+<h2>What Google AI Studio Does</h2>
 <p>
-  Google AI Studio serves as Google's official browser environment for rapid prototyping with Gemini and companion foundation models. Developers sign in with a standard Google account to access three interconnected workspaces:
+  Google AI Studio is the fastest starting point for building with the Gemini API. You sign in with a Google account and immediately get three main areas to work in:
 </p>
 <ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.5rem;">
-  <li><strong>The Playground:</strong> A prompt tuning surface where engineers configure system instructions, temperature, top-p, thinking budgets, and strict JSON schemas, testing outputs across text, code, audio, and video payloads.</li>
-  <li><strong>Build Mode:</strong> An agentic software development environment powered by the Antigravity agent, capable of generating full-stack React, Angular, or Next.js web apps and native Kotlin Android apps with Firebase backends.</li>
-  <li><strong>Live Mode:</strong> A low-latency bidirectional streaming surface that leverages WebSockets to test real-time conversational audio and video interactions with Gemini models.</li>
+  <li><strong>The Prompt Playground:</strong> Test text, images, PDFs, audio, and video clips. Adjust settings like temperature, thinking depth, safety rules, and structured JSON output while watching exact token counts update live.</li>
+  <li><strong>Live Streaming Mode:</strong> Talk to Gemini in real time using your microphone, camera, or screen share to test voice assistants and visual help flows.</li>
+  <li><strong>App Builder Mode:</strong> Describe a small web app in plain English, preview it in the browser, tweak it with follow-up notes, and export the files when you are happy with the result.</li>
 </ul>
 <p>
-  A critical distinction exists between Google AI Studio's free tier and paid billing tiers. According to the <a class="gold-link" href="#ref-pricing">Gemini Developer API pricing documentation</a>, free-tier interactions may be used by Google to train and improve consumer products. In contrast, paid-tier accounts linked to a Google Cloud billing account receive enterprise privacy guarantees: prompt payloads, grounding datastores, and generated outputs are strictly excluded from model retraining pipelines.
+  Every prompt you save can be stored in Google Drive, shared with teammates for review, and compared side by side across different Gemini models.
 </p>
 </article>
 
-<!-- THE PLAYGROUND, SYSTEM INSTRUCTIONS & STRUCTURED OUTPUTS -->
-<article class="content-card" id="playground">
-<h2>The Playground, System Instructions &amp; Structured Outputs</h2>
+<!-- SYSTEM INSTRUCTIONS, JSON SCHEMAS & SAFETY FILTERS -->
+<article class="content-card" id="playground" style="background:#000000;">
+<h2>System Instructions, JSON Schemas &amp; Safety Filters</h2>
 <p>
-  The Playground is where enterprise AI engineering workflows originate. The Run Settings panel gives architects granular control over model inference dynamics:
+  Good AI results come from clear guardrails. The right-hand settings panel in Google AI Studio gives you four controls that turn casual prompts into reliable business tools:
 </p>
 <ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.5rem;">
-  <li><strong>System Instructions:</strong> Permanent persona, tone, and operational boundaries defined outside the conversation turn window. System instructions remain active across all multi-turn dialogue rounds, ensuring strict policy adherence and preventing prompt injection drift.</li>
-  <li><strong>Structured JSON Schemas:</strong> By setting <code>response_mime_type="application/json"</code> and attaching a formal JSON Schema or Pydantic class, developers guarantee deterministic JSON output from the model without fragile regex parsing.</li>
-  <li><strong>Thinking Level Controls:</strong> For advanced reasoning models, developers adjust test-time compute through thinking level toggles (low, medium, high), allocating deeper internal search budgets for mathematical, logical, and code analysis tasks.</li>
-  <li><strong>Safety Filters &amp; Harm Block Thresholds:</strong> Real-time dials for Harassment, Hate Speech, Sexually Explicit Content, and Dangerous Content, selectable across <code>BLOCK_NONE</code>, <code>BLOCK_LOW_AND_ABOVE</code>, <code>BLOCK_MEDIUM_AND_ABOVE</code>, and <code>BLOCK_ONLY_HIGH</code>.</li>
+  <li><strong>System Instructions:</strong> A permanent rulebook that tells the model its role, tone, formatting rules, and what it must never do. It stays active across every turn of the conversation.</li>
+  <li><strong>Structured JSON Output:</strong> Instead of getting free-form paragraphs that break your app, you define the exact fields you want (such as <code>category</code>, <code>priority</code>, and <code>summary</code>). Gemini replies with clean JSON every time.</li>
+  <li><strong>Safety Filters:</strong> Choose how strictly the model blocks harmful content across harassment, hate speech, explicit material, and dangerous topics so your app matches your company policy.</li>
+  <li><strong>Thinking Controls:</strong> Turn deeper step-by-step reasoning up for hard planning or math problems, or keep it light when you want fast, low-cost replies.</li>
 </ul>
 
-<div class="diagram-container content-card">
+<div class="diagram-container content-card" style="background:#000000;">
 <div class="mermaid-fallback">
 <em>Interactive architecture diagram (loading...)</em>
 </div>
 <div class="mermaid">
 flowchart TD
-    classDef default fill:#0f172a,stroke:#38bdf8,stroke-width:1px,color:#f8fafc;
-    classDef gold fill:#1e1b4b,stroke:#fbbf24,stroke-width:2px,color:#fef08a;
-    classDef cyan fill:#082f49,stroke:#06b6d4,stroke-width:2px,color:#e0f2fe;
-    classDef accent fill:#311042,stroke:#c084fc,stroke-width:2px,color:#f3e8ff;
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc;
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
+    classDef purple fill:#000000,stroke:#c084fc,stroke-width:2px,color:#f8fafc;
+    classDef green fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc;
+    classDef rose fill:#000000,stroke:#f472b6,stroke-width:2px,color:#f8fafc;
 
-    InputPrompt["User Prompt &amp; Context"]:::cyan --&gt; RunSettings["Run Settings Engine"]:::gold
-    
-    subgraph Controls["Playground Calibration Controls"]
-        direction TB
-        SI["System Instructions<br/>(Role &amp; Guardrails)"]:::accent
-        Schema["Structured Output Schema<br/>(Deterministic JSON)"]:::accent
-        Thinking["Thinking Level<br/>(Test-Time Reasoning)"]:::accent
-        Safety["Safety Filter Thresholds<br/>(4 Harm Categories)"]:::accent
-    end
-    
-    RunSettings --&gt; Controls
-    Controls --&gt; Inference["Gemini Model Execution"]:::gold
-    Inference --&gt; Validation{"Schema Validation"}:::cyan
-    Validation -- Valid --&gt; Export["One-Click 'Get Code' Export"]:::gold
-    Validation -- Invalid --&gt; AutoRetry["Error Feedback Loop"]:::accent
+    UserInput["Prompt + Uploaded Files"]:::cyan --&gt; Settings["Run Settings Panel"]:::gold
+    Settings --&gt; SysInst["System Instructions<br/>Role &amp; Policy Rules"]:::purple
+    Settings --&gt; JsonSchema["JSON Output Schema<br/>Exact Required Fields"]:::purple
+    Settings --&gt; Safety["Safety Filter Thresholds<br/>4 Content Categories"]:::rose
+    SysInst --&gt; RunModel["Gemini Model Run"]:::gold
+    JsonSchema --&gt; RunModel
+    Safety --&gt; RunModel
+    RunModel --&gt; Check{"Matches Schema &amp; Rules?"}:::cyan
+    Check -- "Yes" --&gt; GetCode["Click 'Get Code' to Export"]:::green
+    Check -- "Needs Work" --&gt; Refine["Adjust Prompt or Schema"]:::rose
+    Refine --&gt; Settings
 </div>
-<div class="diagram-caption">Figure 2. Playground calibration pipeline enforcing system instructions, thinking compute, and schema validation.</div>
+<div class="diagram-caption">Figure 2. Prompt testing loop using system instructions, structured JSON output, and safety checks.</div>
 </div>
-
-<p>
-  When structured output is active, Gemini validates its candidate tokens against the provided schema state machine, ensuring that fields, types, and required properties match the schema before emitting the payload.
-</p>
 </article>
 
-<!-- MULTIMODAL TOOLS: ASR, TTS, IMAGEN, VEO & LYRIA -->
-<article class="content-card" id="multimodal-tools">
-<h2>Multimodal Tools: ASR, TTS, Imagen, Veo &amp; Lyria</h2>
+<!-- BUILT-IN TOOLS: ASR, TTS, IMAGES, VIDEO & MUSIC -->
+<article class="content-card" id="multimodal-tools" style="background:#000000;">
+<h2>Built-In Tools: ASR, TTS, Images, Video &amp; Music</h2>
 <p>
-  Google AI Studio is not limited to text processing. It acts as an integrated creative studio providing direct access to Google's specialized multimodal synthesis and analysis engines:
+  Google AI Studio is not just for text. It puts Google's media and speech tools inside one dashboard so you can test full multimedia workflows without stitching together five separate accounts:
 </p>
 
 <div class="table-responsive">
 <table class="data-table">
 <thead>
 <tr>
-<th>Tool &amp; Engine</th>
-<th>Primary Functionality</th>
-<th>Supported Modalities &amp; Outputs</th>
-<th>Production Integration Pattern</th>
+<th>Tool</th>
+<th>What It Does</th>
+<th>Inputs &amp; Outputs</th>
+<th>Common Business Use</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>ASR (Speech Recognition)</strong></td>
-<td>Automatic speech recognition, timestamp alignment, and speaker diarization</td>
-<td>Audio input (WAV, MP3, FLAC) to structured transcripts</td>
-<td>Native multimodal audio ingestion in <code>google-genai</code></td>
+<td><strong>ASR (Speech-to-Text)</strong></td>
+<td>Turns spoken audio into clean text with timestamps and speaker labels</td>
+<td>WAV, MP3, or FLAC audio to structured transcripts</td>
+<td>Meeting notes, call reviews, and podcast summaries</td>
 </tr>
 <tr>
-<td><strong>TTS (Speech Synthesis)</strong></td>
-<td>Ultra-realistic conversational voice synthesis across multiple timbre profiles</td>
-<td>Text input to streaming high-bitrate PCM/MP3 audio</td>
-<td>Live Mode WebSocket bidirectional audio streaming</td>
+<td><strong>TTS (Text-to-Speech)</strong></td>
+<td>Generates natural-sounding spoken voices in multiple styles and tones</td>
+<td>Written scripts to downloadable or streaming audio</td>
+<td>Voice assistants, training narrations, and audio briefings</td>
 </tr>
 <tr>
 <td><strong>Image Generation (Imagen)</strong></td>
-<td>Photorealistic image generation, inpainting, outpainting, and iterative editing</td>
-<td>Text prompts to 1024x1024+ PNG/JPEG assets</td>
-<td>Dedicated <code>client.models.generate_images</code> API</td>
+<td>Creates high-resolution photos, graphics, and visual edits from text</td>
+<td>Text prompts to PNG or JPEG images</td>
+<td>Product mockups, social graphics, and storyboards</td>
 </tr>
 <tr>
 <td><strong>Video Generation (Veo)</strong></td>
-<td>Cinematic video synthesis with consistent temporal physics and camera motion</td>
-<td>Text prompts and keyframe images to MP4 video clips</td>
-<td>Asynchronous job polling via the Video Generation API</td>
+<td>Produces short, realistic video clips with smooth camera movement</td>
+<td>Text prompts or starter images to MP4 video</td>
+<td>Marketing previews, explainer clips, and concept demos</td>
 </tr>
 <tr>
 <td><strong>Music Generation (Lyria)</strong></td>
-<td>High-fidelity musical composition, instrumental layering, and melodic stems</td>
-<td>Genre, tempo, and style prompts to stereo audio waveforms</td>
-<td>Audio synthesis endpoints in Google AI Studio</td>
+<td>Composes original background tracks and instrumentals</td>
+<td>Mood, tempo, and genre prompts to stereo audio</td>
+<td>Podcast intros, ad soundtracks, and prototype demos</td>
 </tr>
 <tr>
-<td><strong>Grounding (Search &amp; Vertex)</strong></td>
-<td>Real-time web search grounding and enterprise Vertex AI Search datastores</td>
-<td>Dynamic web queries or private document retrieval</td>
-<td><code>GenerateContentConfig(tools=[{"google_search": {}}])</code></td>
+<td><strong>Web Search Grounding</strong></td>
+<td>Checks live Google Search results before answering</td>
+<td>User questions plus live web facts and source links</td>
+<td>Market research, news briefs, and fact checking</td>
 </tr>
 <tr>
 <td><strong>Code Execution</strong></td>
-<td>Sandboxed Python code execution for mathematical and algorithmic precision</td>
-<td>Generated Python code executed in isolated container</td>
-<td><code>GenerateContentConfig(tools=[{"code_execution": {}}])</code></td>
+<td>Writes and runs Python in a safe sandbox to verify calculations</td>
+<td>Data files or math problems to verified numbers and charts</td>
+<td>Spreadsheet analysis, forecasting, and chart creation</td>
 </tr>
 </tbody>
 </table>
 </div>
 
 <p>
-  The inclusion of Veo for video and Lyria for audio synthesis within the same workspace allows technical teams to prototype rich multimedia pipelines - such as generating a marketing script, producing an accompanying soundtrack, generating hero visual assets, and compiling the entire workflow into code - without juggling multiple disconnected third-party services.
+  Because all of these tools share the same <a class="gold-link" href="#references">Google AI Studio quickstart</a> environment, you can transcribe a recording with ASR, summarize it with Gemini, turn the summary into a spoken update with TTS, and generate supporting visuals in minutes.
 </p>
 </article>
 
-<!-- FRONTIER INTELLIGENCE: GEMINI 4 MODELS IN AI STUDIO -->
-<article class="content-card" id="gemini-4-models">
-<h2>Frontier Intelligence: Gemini 4 Models in AI Studio</h2>
+<!-- ACCESSING GEMINI MODELS & EXTRA FEATURES -->
+<article class="content-card" id="gemini-models" style="background:#000000;">
+<h2>Accessing Gemini Models &amp; Extra Workspace Features</h2>
 <p>
-  Google AI Studio provides immediate access to Google DeepMind's flagship Gemini 4 generation models, allowing engineers to benchmark frontier reasoning capabilities alongside cost-optimized production models:
+  A single dropdown menu in AI Studio lets you switch across the Gemini model lineup and compare speed, reasoning depth, and cost on the exact same test prompt:
 </p>
 <ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.5rem;">
-  <li><strong>Gemini 4 Argon (<code>gemini-4-argon</code>):</strong> The flagship reasoning architecture engineered for multi-hour agent execution, complex code generation, mathematical theorem proving, and exhaustive context analysis across a 1M-token context window with extended decode capabilities.</li>
-  <li><strong>Gemini 4 Hydrogen (<code>gemini-4-hydrogen</code>):</strong> The fast Flash foundation model optimized for ultra-high throughput, sub-150ms time-to-first-token latency, real-time voice and video processing, and high-concurrency subagent swarm orchestration.</li>
-  <li><strong>Companion Foundation Models:</strong> Ongoing support for established production models, including Flash and Flash-Lite tiers, providing scalable options for every performance and budget requirement.</li>
+  <li><strong>Flagship Reasoning Models (Gemini Pro &amp; Gemini Argon):</strong> Best for hard multi-step planning, deep document analysis, complex coding, and careful decision support.</li>
+  <li><strong>Fast Everyday Models (Gemini Flash &amp; Gemini Hydrogen):</strong> Built for low-latency chat, real-time voice or video streaming, high-volume sorting, and cost-sensitive apps.</li>
+  <li><strong>Lightweight High-Volume Models (Flash-Lite):</strong> Ideal for simple tagging, extraction, and high-speed batch jobs where every fraction of a cent counts.</li>
 </ul>
 <p>
-  Architects can toggle between models with a single dropdown selection in the Playground, directly comparing inference quality, token output length, and latency across identical prompts.
+  Beyond model selection, AI Studio includes several practical features that save hours during prototyping:
 </p>
+<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.5rem;">
+  <li><strong>Side-by-Side Model Comparison:</strong> Run the same prompt on two models at once to judge quality and speed before committing.</li>
+  <li><strong>Direct File &amp; Google Drive Uploads:</strong> Drop in long PDFs, slide decks, spreadsheets, or videos up to the model's full context window.</li>
+  <li><strong>Function Calling (Tools):</strong> Define custom actions your app can run - such as looking up an order or creating a calendar event - and inspect the exact arguments Gemini picks.</li>
+  <li><strong>URL Context &amp; Grounding:</strong> Point the model at public web pages or search results so replies stay current and verifiable.</li>
+</ul>
 </article>
 
-<!-- TOKEN ECONOMICS & COST TABLES -->
-<article class="content-card" id="token-economics">
-<h2>Token Economics &amp; Cost Tables</h2>
+<!-- TOKEN COSTS & CONTEXT CACHING -->
+<article class="content-card" id="token-economics" style="background:#000000;">
+<h2>Token Costs &amp; Context Caching</h2>
 <p>
-  Token budgeting is a foundational discipline for enterprise AI deployment. As documented on the official <a class="gold-link" href="#ref-pricing">Gemini Developer API pricing portal</a>, Google employs tiered pricing based on context length, thinking compute, and model class.
+  Every prompt and reply is measured in tokens (roughly 750 English words per 1,000 tokens). AI Studio shows your exact token count before you even hit Run. The table below illustrates how Google's <a class="gold-link" href="#references">Gemini API pricing tiers</a> separate fast, everyday models from heavier reasoning models (always check the live pricing page for current rates):
 </p>
 
 <div class="table-responsive">
 <table class="data-table">
 <thead>
 <tr>
-<th>Model Tier</th>
-<th>Input Rate (per 1M tokens)</th>
-<th>Output Rate (per 1M tokens)</th>
-<th>Context Caching Storage</th>
-<th>Free Tier Quota</th>
+<th>Model Tier (Example Rates)</th>
+<th>Input (per 1M tokens)</th>
+<th>Output (per 1M tokens)</th>
+<th>Free Tier Available?</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Gemini 3.5 Flash-Lite</strong></td>
-<td>$0.075</td>
+<td><strong>Gemini 2.5 Flash-Lite</strong></td>
+<td>$0.10</td>
+<td>$0.40</td>
+<td>Yes (rate-limited)</td>
+</tr>
+<tr>
+<td><strong>Gemini 2.5 Flash</strong></td>
 <td>$0.30</td>
-<td>$0.01875 / 1M tokens / hr</td>
-<td>Yes (Rate-limited RPM/RPD)</td>
+<td>$2.50</td>
+<td>Yes (rate-limited)</td>
 </tr>
 <tr>
-<td><strong>Gemini 3.8 Flash</strong></td>
-<td>$0.15</td>
-<td>$0.60 ($3.75 peak)</td>
-<td>$0.0375 / 1M tokens / hr</td>
-<td>Yes (Standard experimentation)</td>
+<td><strong>Gemini 2.5 Pro (&le;200K context)</strong></td>
+<td>$1.25</td>
+<td>$10.00</td>
+<td>Yes (limited testing)</td>
 </tr>
 <tr>
-<td><strong>Gemini 4 Hydrogen</strong></td>
-<td>$0.15</td>
-<td>$0.60</td>
-<td>$0.0375 / 1M tokens / hr</td>
-<td>Yes (Preview allotment)</td>
-</tr>
-<tr>
-<td><strong>Gemini 4 Argon (Introductory)</strong></td>
-<td>$2.00 (through 30 Nov 2026)</td>
-<td>$10.00 (through 30 Nov 2026)</td>
-<td>$0.50 / 1M tokens / hr</td>
-<td>No (Paid API tier only)</td>
-</tr>
-<tr>
-<td><strong>Gemini 4 Argon (Standard Rate)</strong></td>
-<td>$4.00 (from 1 Dec 2026)</td>
-<td>$20.00 (from 1 Dec 2026)</td>
-<td>$1.00 / 1M tokens / hr</td>
-<td>No (Paid API tier only)</td>
+<td><strong>Gemini 2.5 Pro (&gt;200K context)</strong></td>
+<td>$2.50</td>
+<td>$15.00</td>
+<td>Paid tier recommended</td>
 </tr>
 </tbody>
 </table>
 </div>
 
 <p>
-  Context caching offers dramatic savings for long documents, codebases, and persistent system prompts. When prompts exceed 32,768 tokens, AI Studio enables context caching, reducing input token costs by up to 75% for repeated queries against cached data.
+  If your app sends the same large handbook, catalog, or codebase with every user question, turn on <strong>Context Caching</strong>. Caching stores that shared background once so repeated questions cost a fraction of standard input rates.
 </p>
 </article>
 
-<!-- ONE-CLICK MIGRATION TO THE GOOGLE GENAI PYTHON SDK -->
-<article class="content-card" id="sdk-migration">
-<h2>One-Click Migration to the Google GenAI Python SDK</h2>
+<!-- ONE-CLICK EXPORT TO PYTHON SDK -->
+<article class="content-card" id="sdk-migration" style="background:#000000;">
+<h2>One-Click Export to the Google GenAI Python SDK</h2>
 <p>
-  The true power of AI Studio lies in its code export engine. Clicking the <strong>Get Code</strong> button generates production-ready code in Python, JavaScript/TypeScript, Go, Java, or C#. Following the deprecation of legacy Google AI SDKs on 30 November 2025, all modern code targets the unified <code>google-genai</code> package.
+  Once your prompt gives consistent answers, click <strong>Get Code</strong> at the top of the Playground. AI Studio writes clean starter code for Python, JavaScript, or REST using the current <code>google-genai</code> library documented in the <a class="gold-link" href="#references">Gemini API SDK guide</a>.
 </p>
 <p>
-  Below is a production Python implementation exported from AI Studio demonstrating system instructions, Pydantic structured output, thinking configuration, and safety filters:
+  Here is a practical Python example showing system instructions, a strict Pydantic JSON schema, and safety settings exported directly into production code:
 </p>
 
 <div class="code-window">
 <div class="code-bar">
 <div class="code-dots"><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span></div>
-<span>python - production google-genai sdk export</span>
+<span>python - google-genai sdk export</span>
 <button aria-label="Copy code" class="copy" type="button">Copy</button>
 </div>
 <pre class="code-pre"><code>import os
@@ -620,255 +600,105 @@ from google import genai
 from google.genai import types
 from pydantic import BaseModel, Field
 
-# 1. Initialize client using GEMINI_API_KEY from environment
+# 1. Connect using your GEMINI_API_KEY environment variable
 client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
-# 2. Define strict Pydantic output schema
-class ArchitecturalReview(BaseModel):
-    service_name: str = Field(description="Name of the service evaluated")
-    scalability_score: int = Field(description="Score between 1 and 100")
-    bottlenecks: list[str] = Field(description="Identified architectural risks")
-    recommended_mitigation: str = Field(description="Immediate actionable resolution")
+# 2. Define the exact JSON shape you want back
+class SupportTicketSummary(BaseModel):
+    category: str = Field(description="Billing, Technical, or Account")
+    urgency: str = Field(description="Low, Medium, or High")
+    short_summary: str = Field(description="One-sentence plain summary")
+    next_step: str = Field(description="Clear action for the support team")
 
-# 3. Configure system instructions, schema, and safety settings
+# 3. Apply system instructions, schema, and safety filters
 config = types.GenerateContentConfig(
     system_instruction=(
-        "You are an enterprise principal systems architect. "
-        "Evaluate distributed system designs with rigorous scrutiny. "
-        "Always output strictly compliant JSON matching the provided schema."
+        "You are a customer support triage assistant. "
+        "Summarize each message clearly and return valid JSON only."
     ),
     response_mime_type="application/json",
-    response_schema=ArchitecturalReview,
+    response_schema=SupportTicketSummary,
     temperature=0.2,
     safety_settings=[
-        types.SafetySetting(
-            category=types.HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
-            threshold=types.HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
-        ),
         types.SafetySetting(
             category=types.HarmCategory.HARM_CATEGORY_HATE_SPEECH,
             threshold=types.HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
         ),
-    ]
+    ],
 )
 
-# 4. Execute inference with Gemini model
+# 4. Run the request
 response = client.models.generate_content(
     model="gemini-2.5-flash",
-    contents="Analyze a microservices setup running 50 Kubernetes pods querying a single unindexed PostgreSQL table.",
+    contents="Customer says their monthly invoice shows two charges for the same seat.",
     config=config,
 )
 
-# 5. Access validated structured output
-print("Structured Output Received:")
 print(response.text)
 </code></pre>
 </div>
 
 <p>
-  This pattern eliminates boilerplate validation code. The returned <code>response.text</code> contains valid JSON that parses directly into an <code>ArchitecturalReview</code> instance.
+  Because the schema is enforced at generation time, your backend can parse <code>response.text</code> directly without fragile string cleanup.
 </p>
 </article>
 
-<!-- BUILD MODE: FULL-STACK WEB & ANDROID APP COMPILATION -->
-<article class="content-card" id="build-mode">
-<h2>Build Mode: Full-Stack Web &amp; Android App Compilation</h2>
-<p>
-  Build Mode transforms AI Studio from an API workbench into an autonomous application generator. Powered by Google's Antigravity coding agent, Build Mode creates, executes, and iterates on full-stack web and native Android codebases inside isolated cloud sandboxes.
-</p>
-<p>
-  Developers interact with Build Mode through four complementary workflows:
-</p>
-<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.5rem;">
-  <li><strong>Natural Language Scaffolding:</strong> Prompts like "Build a multi-tenant inventory tracker with role-based auth and CSV export" scaffold multi-file projects in seconds.</li>
-  <li><strong>Streaming Live Preview:</strong> An in-browser preview tab compiles and hot-reloads the application in real time, exposing interactive UI state immediately.</li>
-  <li><strong>Annotation Mode:</strong> Developers click directly on UI elements in the live preview to highlight visual bugs, directing the agent to refine specific components without manual CSS inspection.</li>
-  <li><strong>Two-Way GitHub Synchronization:</strong> Projects link directly to GitHub repositories, enabling bidirectional synchronization with automated commit messages and interactive visual merge conflict resolution.</li>
-</ul>
+<!-- STEP-BY-STEP STARTER TUTORIALS -->
+<article class="content-card" id="tutorials" style="background:#000000;">
+<h2>Step-by-Step Starter Tutorials</h2>
 
-<div class="diagram-container content-card">
-<div class="mermaid-fallback">
-<em>Interactive architecture diagram (loading...)</em>
-</div>
-<div class="mermaid">
-flowchart TD
-    classDef default fill:#0f172a,stroke:#38bdf8,stroke-width:1px,color:#f8fafc;
-    classDef gold fill:#1e1b4b,stroke:#fbbf24,stroke-width:2px,color:#fef08a;
-    classDef cyan fill:#082f49,stroke:#06b6d4,stroke-width:2px,color:#e0f2fe;
-    classDef accent fill:#311042,stroke:#c084fc,stroke-width:2px,color:#f3e8ff;
-    classDef green fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#ecfdf5;
-
-    Prompt["Natural Language Prompt / Gallery Fork"]:::cyan --&gt; Agent["Antigravity Coding Agent (Multi-File Engine)"]:::gold
-    Agent --&gt; CodeSynth["Code Synthesis &amp; Package Resolution"]:::accent
-    CodeSynth --&gt; HotReload["In-Browser Sandbox Compilation"]:::cyan
-    
-    HotReload --&gt; Preview["Live Streaming Preview Window"]:::green
-    
-    Preview -. Visual Feedback .-&gt; Annotation["Annotation Mode (Click-to-Edit)"]:::accent
-    Annotation -. Refinement Directives .-&gt; Agent
-    
-    Preview -- Verified --&gt; CloudRun["Deploy to Cloud Run / Play Track"]:::gold
-</div>
-<div class="diagram-caption">Figure 3. The Build Mode iterative refinement loop spanning visual annotation, multi-file code synthesis, and one-click deployment.</div>
-</div>
-</article>
-
-<!-- BACKEND ARCHITECTURE: NODE.JS, FIREBASE & WORKSPACE -->
-<article class="content-card" id="backend">
-<h2>Backend Architecture: Node.js, Firebase &amp; Workspace</h2>
-<p>
-  Applications built in AI Studio are full-stack by default. The frontend (React, Angular, or Next.js) pairs with a sandboxed Node.js server runtime that shields API secrets, manages state, and coordinates backend services:
-</p>
-<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.5rem;">
-  <li><strong>Zero-Egress Secrets Management:</strong> The <code>GEMINI_API_KEY</code> and third-party credentials (Stripe, Twilio, SendGrid) are injected exclusively into the Node.js server environment and never exposed to the client browser.</li>
-  <li><strong>Autonomous Firebase Provisioning:</strong> When an application requires persistent state or user accounts, AI Studio automatically provisions Cloud Firestore collections, enables Firebase Authentication with Sign in with Google, and drafts secure Firestore security rules according to the <a class="gold-link" href="#ref-fullstack">full-stack application documentation</a>.</li>
-  <li><strong>Relational Storage with Cloud SQL:</strong> For enterprise relational workloads, AI Studio supports Cloud SQL for PostgreSQL, provisioning serverless developer instances that scale to zero when idle.</li>
-  <li><strong>Workspace APIs:</strong> Out-of-the-box OAuth configuration for twelve Google Workspace tools: Gmail, Drive, Docs, Sheets, Slides, Calendar, Meet, Chat, Forms, Keep, Contacts, and Tasks.</li>
-</ul>
-
-<div class="diagram-container content-card">
-<div class="mermaid-fallback">
-<em>Interactive architecture diagram (loading...)</em>
-</div>
-<div class="mermaid">
-sequenceDiagram
-    autonumber
-    actor User as End User Browser
-    participant NodeServer as Node.js Backend Server
-    participant SecretVault as Server Secrets Vault
-    participant GeminiAPI as Gemini Foundation API
-    participant Firestore as Firebase Firestore
-    
-    User-&gt;&gt;NodeServer: Submit Action (e.g., Generate Analysis)
-    NodeServer-&gt;&gt;SecretVault: Load GEMINI_API_KEY Securely
-    NodeServer-&gt;&gt;GeminiAPI: Stream Query with System Instructions &amp; Schemas
-    GeminiAPI--&gt;&gt;NodeServer: Return Validated JSON Payload
-    NodeServer-&gt;&gt;Firestore: Store Audit Record with User ID
-    NodeServer--&gt;&gt;User: Deliver Sanitized Result (No Keys Exposed)
-</div>
-<div class="diagram-caption">Figure 4. Secure full-stack request lifecycle isolating API keys and database transactions on the server.</div>
-</div>
-</article>
-
-<!-- NATIVE ANDROID GENERATION WITH JETPACK COMPOSE -->
-<article class="content-card" id="android">
-<h2>Native Android Generation with Jetpack Compose</h2>
-<p>
-  Since Google I/O 2026, AI Studio natively supports Android as a first-class build target. Selecting Android prompts the Antigravity agent to generate a modern Gradle project with:
-</p>
-<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.5rem;">
-  <li><strong>Pure Kotlin &amp; Jetpack Compose:</strong> Modern declarative UI without legacy XML layouts or Java code.</li>
-  <li><strong>Single-Activity Architecture:</strong> State management anchored by Android ViewModels, Kotlin Coroutines, and StateFlows.</li>
-  <li><strong>Streaming Cloud Emulator:</strong> The application compiles and runs inside an interactive browser emulator without requiring local Android Studio installation.</li>
-  <li><strong>WebUSB Direct Device Deployment:</strong> Clicking "Install on Device" connects directly to a physical Android device over WebUSB in Chrome or Edge, deploying and running the signed debug APK instantly.</li>
-  <li><strong>Firebase AI Logic with App Check:</strong> Mobile Gemini calls route through Firebase AI Logic, utilizing reCAPTCHA Enterprise and Play Integrity attestations to prevent API key extraction.</li>
-</ul>
-</article>
-
-<!-- DEPLOYMENT PATHS: CLOUD RUN, GITHUB & LOCAL EXPORT -->
-<article class="content-card" id="deployment">
-<h2>Deployment Paths: Cloud Run, GitHub &amp; Local Export</h2>
-<p>
-  Once an application passes verification in AI Studio, teams choose between four production export paths:
-</p>
-<ol style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.5rem;">
-  <li><strong>Google Cloud Run Starter Tier:</strong> Eligible accounts deploy up to two full-stack applications directly to Cloud Run for free without attaching a credit card, receiving a public <code>[app-name].ai.studio</code> custom subdomain.</li>
-  <li><strong>Enterprise Cloud Run:</strong> Linking a billing-enabled Google Cloud project removes Starter Tier limits, deploying containerized instances with custom VPC networking, auto-scaling, and global Cloud CDN.</li>
-  <li><strong>Two-Way GitHub Sync:</strong> Direct synchronization to private or public GitHub repositories for enterprise CI/CD integration, automated security scanning, and multi-developer collaboration.</li>
-  <li><strong>Local Antigravity Export:</strong> One-click export packages the full codebase, prompt conversation history, and configuration files into the local Antigravity agent IDE for continued offline development.</li>
-</ol>
-</article>
-
-<!-- PRACTICAL TUTORIALS: FROM PROMPT TO RUNNING CODE -->
-<article class="content-card" id="tutorials">
-<h2>Practical Tutorials: From Prompt to Running Code</h2>
-
-<h3 style="color:var(--gold);margin-top:1.5rem;">Tutorial 1: Playground to Python Script with Structured JSON</h3>
-<p>
-  This ten-minute exercise demonstrates system instruction calibration and structured schema export:
-</p>
+<h3 style="color:var(--gold);margin-top:1.5rem;">Tutorial: Turn a Prompt into a Structured JSON Script</h3>
 <ol style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;">
-  <li>Navigate to <a class="gold-link" href="https://aistudio.google.com/" rel="noopener" target="_blank">aistudio.google.com</a> and create a new Chat Prompt.</li>
-  <li>Open the <strong>Run Settings</strong> sidebar and select <code>gemini-2.5-flash</code>.</li>
-  <li>In <strong>System Instructions</strong>, insert: <code>You are an enterprise cloud security auditor. Analyze cloud architectures and report compliance findings strictly in structured JSON.</code></li>
-  <li>Enable <strong>Structured Output</strong>, set MIME type to <code>application/json</code>, and provide a schema with <code>severity</code>, <code>vulnerability</code>, and <code>remediation</code> fields.</li>
-  <li>Input: <code>Evaluate an S3 bucket configured with public read/write ACLs.</code></li>
-  <li>Click <strong>Get Code</strong>, select Python, copy the generated code, and run it with the <code>google-genai</code> SDK.</li>
+  <li>Open <a class="gold-link" href="https://aistudio.google.com/" rel="noopener" target="_blank">aistudio.google.com</a> and start a new prompt.</li>
+  <li>Pick a fast Gemini Flash model in the right-hand panel.</li>
+  <li>Add a short <strong>System Instruction</strong> defining the role and tone.</li>
+  <li>Turn on <strong>Structured Output</strong> and list the exact JSON fields you need.</li>
+  <li>Test three real customer or team inputs and check the token counter.</li>
+  <li>Click <strong>Get Code</strong>, choose Python, and run it locally with your API key stored in an environment variable.</li>
 </ol>
 
-<h3 style="color:var(--cyan);margin-top:1.5rem;">Tutorial 2: Full-Stack Web App with Firestore &amp; Auth</h3>
-<p>
-  Build and publish a collaborative workspace app in under fifteen minutes:
-</p>
+<h3 style="color:var(--cyan);margin-top:1.5rem;">Tutorial: Test Audio, Image, and Video Tools Together</h3>
 <ol style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;">
-  <li>Switch to the <strong>Build</strong> tab in AI Studio and verify the target is set to Web (React).</li>
-  <li>Submit the prompt: <code>Build an agile sprint retro board with real-time voting, category columns, Google authentication, and Firestore persistence.</code></li>
-  <li>Inspect the streaming preview as files are generated. Test adding sticky notes and cast votes.</li>
-  <li>When the agent surfaces the <strong>Firebase Card</strong>, click Enable to provision authentication and Firestore automatically.</li>
-  <li>Open <strong>Annotation Mode</strong>, highlight the header, and prompt: <code>Add an export button that downloads sprint retro notes as Markdown.</code></li>
-  <li>Click <strong>Publish</strong> to deploy the application instantly to Google Cloud Run with an <code>ai.studio</code> URL.</li>
-</ol>
-
-<h3 style="color:#e879f9;margin-top:1.5rem;">Tutorial 3: Native Android Task App with Jetpack Compose</h3>
-<p>
-  Synthesize and test a native mobile application on physical hardware:
-</p>
-<ol style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;">
-  <li>In Build Mode, change the target platform to <strong>Android</strong>.</li>
-  <li>Prompt: <code>Create a modern task management app with Jetpack Compose, Material 3 theming, swipe-to-delete, and priority filters.</code></li>
-  <li>Interact with the live streaming cloud emulator to test task creation, animations, and filtering.</li>
-  <li>Connect your Android phone to your computer via USB with USB debugging enabled.</li>
-  <li>Click <strong>Install on Device</strong> in Chrome, select your device in the WebUSB prompt, and verify the app installs and runs natively.</li>
-  <li>Download the project ZIP or push to Google Play's internal testing track for team distribution.</li>
+  <li>Upload a short meeting audio clip to test ASR transcription and ask Gemini for three key takeaways.</li>
+  <li>Use the built-in image tool (Imagen) to generate a matching slide visual from one takeaway.</li>
+  <li>Test TTS voice output to turn the takeaways into a 30-second spoken recap for your team.</li>
+  <li>Save the prompt in Google Drive so teammates can reuse the same settings.</li>
 </ol>
 </article>
 
-<!-- OPERATIONAL LIMITS, PRIVACY & TRADE-OFFS -->
-<article class="content-card" id="limits">
-<h2>Operational Limits, Privacy &amp; Trade-Offs</h2>
+<!-- PRIVACY, FREE VS PAID TIERS & LIMITS -->
+<article class="content-card" id="limits" style="background:#000000;">
+<h2>Privacy, Free vs. Paid Tiers &amp; Limits</h2>
 <p>
-  While Google AI Studio provides unmatched prototyping velocity, enterprise architects must account for operational boundaries:
+  Before putting company data into Google AI Studio, keep three practical rules in mind:
 </p>
 <ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.5rem;">
-  <li><strong>Free Tier Data Retention:</strong> As detailed in Google's terms, free tier inputs and outputs may be reviewed by human annotators and used for product improvements. Always connect a paid Google Cloud project before loading proprietary data.</li>
-  <li><strong>Shared API Key Liability:</strong> When publishing an app from Build Mode, all end-user API calls bill against the creator's API key. Always implement rate limiting, App Check verification, and budget alerts to prevent unexpected overages.</li>
-  <li><strong>Mobile Scope Constraints:</strong> The Android builder is limited to Kotlin and Jetpack Compose. Legacy Java, XML layouts, C/C++ NDK code, Wear OS, and Android Auto are unsupported.</li>
-  <li><strong>Pricing Evolution:</strong> Token rates for frontier models shift over time; always confirm active rates against the live pricing dashboard prior to architecture sign-off.</li>
+  <li><strong>Free Tier vs. Paid Tier Privacy:</strong> According to Google's <a class="gold-link" href="#references">Gemini API terms and privacy policy</a>, free-tier prompts may be used to improve Google products. Link a paid Google Cloud billing account before testing private or customer data so your prompts are not used for model training.</li>
+  <li><strong>Protect Your API Key:</strong> Never paste your Gemini API key into public frontend code or GitHub repos. Always keep keys on a backend server or in secure environment variables.</li>
+  <li><strong>Set Budget Alerts:</strong> When moving from prototyping to live traffic, configure billing alerts and rate limits in Google Cloud so unexpected usage spikes never surprise your team.</li>
 </ul>
-</article>
-
-<!-- CONCLUSION -->
-<article class="content-card" id="conclusion">
-<h2>Conclusion</h2>
-<p>
-  Google AI Studio has become an indispensable accelerator for modern AI engineering. By unifying prompt tuning, system instruction calibration, multimodal synthesis (ASR, TTS, Imagen, Veo, Lyria), and frontier Gemini 4 model access within a single browser workspace, the platform compresses weeks of technical discovery into hours.
-</p>
-<p>
-  Whether generating production Python microservices via the Google GenAI SDK or publishing full-stack web and Android applications through the Antigravity agent, AI Studio offers a proven, scalable bridge from natural language concept to enterprise software deployment.
-</p>
 </article>
 
 <!-- REFERENCES -->
-<article class="content-card" id="references">
+<article class="content-card" id="references" style="background:#000000;">
 <h2>References</h2>
 <ol class="references-list" style="line-height:1.8;padding-left:1.5rem;">
-<li id="ref-quickstart"><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/ai-studio-quickstart" rel="noopener" target="_blank">Google AI Studio Quickstart</a> - Official Google AI for Developers guide to prompt tuning and playground parameters.</li>
-<li id="ref-build-mode"><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/aistudio-build-mode" rel="noopener" target="_blank">Build Apps in Google AI Studio</a> - Technical documentation on the Antigravity agent, live preview, and multi-file editing.</li>
-<li id="ref-fullstack"><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/aistudio-fullstack" rel="noopener" target="_blank">Develop Full-Stack Apps in Google AI Studio</a> - Architectural reference for Node.js backends, Firebase integration, and server secrets.</li>
-<li id="ref-android"><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/aistudio-android" rel="noopener" target="_blank">Build Android Apps in Google AI Studio</a> - Guide to Kotlin, Jetpack Compose, WebUSB hardware installation, and emulator streaming.</li>
-<li id="ref-deploying"><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/aistudio-deploying" rel="noopener" target="_blank">Deploying from Google AI Studio</a> - Specifications for Google Cloud Run deployment, Starter Tier quotas, and custom subdomains.</li>
-<li id="ref-sdks"><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/libraries" rel="noopener" target="_blank">Gemini API SDKs and Client Libraries</a> - Official developer portal for <code>google-genai</code> Python, TypeScript, Go, Java, and C# SDKs.</li>
-<li id="ref-pricing"><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/pricing" rel="noopener" target="_blank">Gemini Developer API Pricing Documentation</a> - Official pricing tiers, input/output rates, context caching, and free quotas.</li>
-<li id="ref-latest"><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/latest-model" rel="noopener" target="_blank">What is New in Gemini Models</a> - Architectural release notes and capability matrix for Gemini 4 and frontier reasoning tiers.</li>
-<li id="ref-cloud-blog"><a class="ref-link gold-link" href="https://cloud.google.com/blog/products/databases/vibe-coded-ai-studio-apps-with-firestore-firebase-cloud-sql" rel="noopener" target="_blank">Full-Stack AI Studio Apps with Firestore and Cloud Run</a> - Google Cloud architectural retrospective on serverless application generation.</li>
+<li><a class="ref-link gold-link" href="https://aistudio.google.com/" rel="noopener" target="_blank">Google AI Studio</a> - Official browser workspace for Gemini prototyping, multimodal tools, and code export.</li>
+<li><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/quickstart" rel="noopener" target="_blank">Gemini API Quickstart</a> - Official setup guide for API keys and the unified <code>google-genai</code> SDK.</li>
+<li><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/structured-output" rel="noopener" target="_blank">Structured Outputs Documentation</a> - How to enforce JSON schemas and Pydantic models in Gemini replies.</li>
+<li><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/pricing" rel="noopener" target="_blank">Gemini Developer API Pricing</a> - Current token rates, free-tier limits, and context caching pricing.</li>
+<li><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/libraries" rel="noopener" target="_blank">Gemini API SDKs and Libraries</a> - Official client libraries for Python, TypeScript, Go, Java, and C#.</li>
+<li><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/imagen" rel="noopener" target="_blank">Image Generation with Imagen</a> - Guide to creating and editing images through the Gemini API.</li>
+<li><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/docs/video" rel="noopener" target="_blank">Video Generation with Veo</a> - Guide to text-to-video and image-to-video workflows.</li>
+<li><a class="ref-link gold-link" href="https://ai.google.dev/gemini-api/terms" rel="noopener" target="_blank">Gemini API Additional Terms of Service</a> - Official data handling and privacy differences between free and paid tiers.</li>
 </ol>
 </article>
 
 <!-- RELEVANT CALL TO ACTION -->
-<section class="cta-banner">
+<section class="cta-banner" style="background:#000000;">
 <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Build Production Applications with Google AI Studio</h2>
 <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
-  From rapid mobile app prototyping with Jetpack Compose to enterprise Firebase security and Cloud Run serverless deployment - let's accelerate your AI development cycle.
+  From rapid prompt testing and structured JSON workflows to production Python SDK deployment - let's accelerate your AI development cycle.
 </p>
 <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
 <a class="btn btn-primary" href="../contact.html">Schedule AI Architecture Review →</a>
@@ -1179,7 +1009,7 @@ sequenceDiagram
     themeVariables: {
       darkMode: true,
       background: "#020408",
-      primaryColor: "#0c111d",
+      primaryColor: "#000000",
       primaryTextColor: "#e2e8f0",
       primaryBorderColor: "#38bdf8",
       lineColor: "#fbbf24",

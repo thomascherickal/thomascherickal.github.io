@@ -2,148 +2,79 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
-> **What each model is for, how the five effort levels work, and what Claude agents have done in recent weeks.By Thomas Cherickal, Generative AI Consultant · The Digital Futurist · thomascherickal.com · thedigitalfuturist.com**
+> **A clear, practical foundation guide to Anthropic's Claude ecosystem, covering core model capabilities, prompt caching, tool calling, Computer Use, Claude Code, and multi-agent engineering patterns. Built for developers, architects, and business leaders moving from casual chat to reliable production systems.**
 
 ---
 
 ## Table of Contents
 
-Anthropic replaced its entire public model lineup between September 1 and October 7, 2026. Five models are current, and each one can run at five effort levels.
+Many people first meet Claude as a helpful chat window, yet the real power of Anthropic's platform is a connected stack of models, memory tools, coding agents, and desktop controls. This foundation guide walks through every core piece of the Claude ecosystem in plain English so you know which model to pick, how to cut costs with caching, and how to build reliable agentic workflows.
 
-Most office work today happens on a computer: email, spreadsheets, documents, browsers, code editors and business software. Claude can now operate those tools. It drives a web browser, works inside Excel, PowerPoint, Word and Outlook, writes and runs code, and keeps working for hours without a person at the keyboard. That makes this generation of Claude a revolution for the whole working world, not only for programmers. In principle, any task done on a digital computer is now a task an AI agent can attempt, and the share it can finish rises with each release.
-
-1. The five models
-2. The five effort levels
-3. How Claude agents are changing work
-4. Claude at the computer
-5. How much office work Claude can already do
-6. What it means for people
-7. Recent accomplishments
-8. Risks and limits
-9. References
+1. The Claude Model Family: Picking the Right Tier
+2. Long Context Windows and Prompt Caching
+3. Tool Calling and the Model Context Protocol (MCP)
+4. Computer Use and Claude Code in Practice
+5. Moving from Single Prompts to Reliable Agent Systems
+6. A Practical 4-Week Adoption Roadmap
+7. Authoritative References
 
 ---
 
-## The five models
+## The Claude Model Family: Picking the Right Tier
 
-Claude Fable and Claude Mythos are the same model with different safeguards. Fable is generally available and blocks or limits some cybersecurity and biology work. Mythos relaxes those limits and is open only to vetted cyberdefenders and life scientists.
+Anthropic organizes Claude into three clear tiers so you never overpay for simple jobs or underpower hard ones, as outlined in the Anthropic Models overview:
 
-The Claude model family covers everyday use:
-
-Opus matches Mythos in biology and cybersecurity, so Anthropic ships it with safeguards similar to Fable's.
-
----
-
-## The five effort levels
-
-Effort sets how many tokens Claude spends on a response, including thinking, text and tool calls. Anthropic's effort documentation calls it a behavioral signal rather than a strict budget, so Claude still thinks on hard problems at low settings, only less.
-
-The levels were recalibrated for this generation, so Anthropic advises testing them on your own evaluations. Developers can also change effort mid-conversation without losing the prompt cache, a beta feature.
+- Claude Haiku: Built for speed and low cost. Ideal for routing tickets, extracting fields from forms, summarizing short notes, and running high-volume background workers.
+- Claude Sonnet: The everyday workhorse balancing strong reasoning, coding quality, and practical speed. Most production apps and coding workflows start here.
+- Claude Opus (and Frontier Reasoning): Built for deep multi-step planning, tough debugging, legal or financial review, and long-horizon architecture work.
 
 ---
 
-## How Claude agents are changing work
+## Long Context Windows and Prompt Caching
 
-Anthropic's June 2026 Economic Index report says Claude models now work on their own for hours through Claude Code and the Claude app. In an earlier Anthropic study of Claude Code, 79% of conversations were automation, where Claude did the task itself, against 49% on Claude.ai. Inside Anthropic, Claude wrote more than 80% of the code merged into production in May 2026.
-
-A common setup puts an orchestrator on Opus or Fable at high or xhigh effort and hands narrow jobs to Haiku subagents at low effort. The orchestrator keeps the plan and checks results while the subagents search, run code and read documents in parallel.
-
-On October 21, Anthropic announced Claude Duet, a research preview for US Pro and Max subscribers. Duet runs on its own cloud computer, tracks email and calendars, and keeps working after you close the app. It asks before it sends messages, makes payments, signs documents or deletes anything.
+Claude can read huge collections of documents, code files, and transcripts in a single request. Normally, sending a 50-page manual over and over would be slow and expensive. Prompt caching solves this by letting you mark large static blocks so Claude remembers them across repeated calls - slashing repeated input costs by up to 90 percent and speeding up response times.
 
 ---
 
-## Claude at the computer
+## Tool Calling and the Model Context Protocol (MCP)
 
-The clearest test of whether an AI can do office work is whether it can use a computer the way a person does. OSWorld gives an agent 369 real tasks inside a live virtual machine, in apps such as LibreOffice, GIMP, VS Code, Chrome and Thunderbird, and checks the final state of the system. Humans score 72.36% on it. On the OSWorld-Verified leaderboard, Claude Fable scored 86.0% and Claude Opus scored 83.4%. Anthropic reports 81.8% for Opus on its newer OSWorld 2.1 test, and 72.4% for Haiku on an offline subset of the same test, up from earlier baselines.
+A language model by itself can only predict text. Tool calling lets Claude request real actions - querying a database, checking weather or stock inventory, running a calculator, or creating a ticket - and then use the exact result to answer accurately.
 
-Claude reaches everyday software through several products. Claude in Chrome became generally available on August 26, 2026: it reads pages, clicks, types and fills in forms with the user's own logins, and a safety classifier checks each action against the request. Claude for Excel, PowerPoint and Word is generally available and keeps one conversation going across all three. Claude for Outlook, in public beta, triages the inbox, drafts replies and checks calendars, and the user reviews everything before it is sent.
-
-The length of work an agent can carry also keeps growing. The evaluation group METR measured Claude Opus at a time horizon of about 14.5 hours: on well-defined software, machine learning and security tasks that take a skilled person that long, it succeeded about half the time. The confidence interval runs from 6 to 98 hours, and the test does not cover the context, judgment and teamwork that fill a real job.
+Anthropic's open Model Context Protocol (MCP) turns tool calling into a universal plug: build one MCP server for your database or CRM and reuse it across Claude Desktop, Claude Code, and your custom apps without rewriting integrations.
 
 ---
 
-## How much office work Claude can already do
+## Computer Use and Claude Code in Practice
 
-GDPval-AA scores models on real work products from 44 occupations across nine industries. Opus leads it with an Elo of 1846, ahead of Fable at 1735 and OpenAI's GPT-6 Astra at 1542, and Sonnet scores nearly level with Opus. On AutomationBench, a test of business workflows, Opus scores 40.0%, just behind GPT-6 Astra at 41.4%. Most of those workflows still fail, but the best models now finish a large minority of them.
+Two capabilities turn Claude from an advisor into a hands-on builder:
 
-Anthropic's January 2026 Economic Index found that 49% of jobs now see Claude used for at least a quarter of their tasks, up from 36% in its earlier analysis. It estimated speedups of about 9x on tasks that need a high-school education and about 12x on tasks that need a college degree. Success rates temper those numbers: Claude completed 67% of tasks on Claude.ai and 49% through the API, and the 1.8-point productivity estimate falls to roughly 1.0 to 1.2 points once failures are counted.
-
-Customer reports show what this looks like inside companies. At Stripe, one Opus session coordinated a dozen others through a multi-day rebase of 40 stacked pull requests, and all of them passed CI. Chicago Trading Company says the model diagnosed and fixed a backend bug overnight, with the fix passing the test suite by morning. Hebbia reports that on finance tasks graded against expert rubrics, Opus met 86.6% of the criteria, against 60.3% previously.
-
-Adoption is already broad. Anthropic had more than 300,000 business customers by October 2025, and by April 2026 more than 1,000 customers were spending over $1 million a year, according to Sacra's estimates.
+- Claude Code: Works directly in your terminal and IDE to inspect repositories, edit multiple files together, run test suites, and prepare clean git commits under your approval.
+- Computer Use: Lets Claude view screens, click buttons, and fill forms in desktop or browser apps that do not have APIs - always inside clear safety sandboxes with human oversight.
 
 ---
 
-## What it means for people
+## Moving from Single Prompts to Reliable Agent Systems
 
-If computers can do much of the work done on computers, the effects reach almost everyone with a desk job. Anthropic CEO Dario Amodei warned in May 2025 that AI could eliminate roughly half of entry-level white-collar jobs within a few years. By May 2026 he was citing the Jevons paradox: if AI automates 90% of a job, people may do the remaining 10%, and that remaining work can grow to fill the role. He also said AI is moving faster than earlier technologies, which could make the transition disruptive.
-
-Early labor data shows the pressure landing on new graduates first. A Stanford Digital Economy Lab update from August 2026 found that workers aged 22 to 25 in the most AI-exposed occupations were about 19% below expected employment, up from a 15% gap a year earlier, mostly because companies hired fewer of them. Experienced workers in the same occupations showed no similar decline.
-
-The same tools reach people outside offices. Anthropic and Teach For All are training educators in 63 countries to use Claude, in a network that serves more than 1.5 million students. The science results in the next section show agents running research projects for days with little supervision, in biology, physics, cryptography and quantum computing.
+Production teams rarely rely on one giant prompt. Instead, they chain small, verifiable steps: classify the incoming request with Claude Haiku, pull grounded facts via MCP tools, draft the solution with Claude Sonnet or Claude Opus, and validate the output against automated tests or strict JSON schemas before anything reaches a customer.
 
 ---
 
-## Recent accomplishments
+## A Practical 4-Week Adoption Roadmap
 
-### Security
-
-- Glasswing. In its first month, Mythos Preview flagged 23,019 vulnerabilities in open-source projects, 6,202 of them rated high or critical. Mozilla fixed 271 Firefox vulnerabilities in one release, ten times its count with earlier Claude Opus versions.
-- Early October. Anthropic opened a free OSS Scanner for maintainers of widely used projects. As of October 2, human reviewers had confirmed 5,674 of the 6,123 findings they checked, but only 516 had been patched upstream.
-- October 16. Claude worked out that the seeds for the NIST elliptic curves P-192 through P-521 came from the C library's lrand48 generator, seeded with a Unix timestamp. It took under half an hour. Anthropic says this is not a weakness and makes backdoor theories less plausible.
-
-### Science
-
-- September 1. Fable scored 52.6% on Terminal-Bench-Science, up from 24.7% for earlier versions, and built a sharper elevation map of a third of Venus from NASA Magellan radar data. At launch, Opus led the Artificial Analysis and Vals AI indices.
-- September 23. About 950 Claude agents searched for 21 hours and flagged an uncharacterized enzyme system the team calls ART. Its function is still unknown. Washington University microbiologist Kevin Blake told Al Jazeera that nothing suggests it rivals CRISPR as a technology.
-- September 25. Fable computed a nine-loop amplitude in N=4 super Yang-Mills, one loop past the previous record, with little human oversight. Physicist Lance Dixon checked it, and a group using GPT-6 reached most of the same result around then.
-- October 16. Claude Mythos designed quantum circuits that beat published versions, including an elliptic-curve point addition circuit with 17x fewer gates and a decoder with 12x fewer gates than Google's.
-- October 20. An internal Claude research model spent about 64 hours, mostly unattended, designing proteins against scorpion neurotoxins. Lab tests confirmed 17 of 211 designs as binders. None has been tested yet for neutralizing venom.
+1. Week 1 - Projects & Artifacts: Move your recurring work into Claude Projects so you stop re-uploading files, and build your first interactive Artifact prototype.
+2. Week 2 - Claude Desktop & MCP: Connect one local folder or read-only database through MCP to experience grounded answers.
+3. Week 3 - Claude Code with Budgets: Add a short CLAUDE.md file to one repository, set clear spend caps, and practice test-driven bug fixes.
+4. Week 4 - Production API & Caching: Automate one high-value repeatable workflow with prompt caching, model routing, and human review gates.
 
 ---
 
-## Risks and limits
+## Authoritative References
 
-A model that finds vulnerabilities can also help exploit them. That is why Mythos is limited to vetted users and Opus ships with safeguards. Anthropic says Glasswing is now held back by how fast vulnerabilities can be verified, disclosed and patched. Several science results above are company announcements that outside researchers are still checking.
-
-Benchmarks also overstate readiness for whole jobs. A 40% score on business workflows means most of them still fail, and time-horizon tests cover well-defined tasks rather than the meetings, judgment calls and coordination that fill a working day. The job losses so far fall mainly on entry-level hiring, which raises the question of how people will gain the experience that still protects senior workers.
-
-To get started, Sonnet at its default effort handles most work. Move to Opus or Fable when a task needs more judgment, and use Haiku for subagents and high-volume calls.
-
----
-
-## References
-
-1. Introducing Claude Opus - Anthropic
-2. Introducing Claude Sonnet - Anthropic
-3. Introducing Claude Haiku - Anthropic
-4. Introducing Claude Fable and Claude Mythos - Anthropic
-5. Claude Mythos product page - Anthropic
-6. Claude Mythos model overview - Claude Platform Docs
-7. Effort parameter guide - Claude Platform Docs
-8. Anthropic Economic Index Report: Cadences - Anthropic
-9. Economic Index: AI's Impact on Software Development - Anthropic
-10. Anthropic says 80% of its new production code is authored by Claude - VentureBeat
-11. Anthropic takes on ChatGPT Dots and Meta Muse with Claude Duet - 9to5Mac
-12. Project Glasswing: An Initial Update - Anthropic
-13. Anthropic's OSS Scanner - The New Stack
-14. Claude reveals ECDSA curve origins - Anthropic
-15. Claude discovers a novel enzyme system - Anthropic
-16. AI model Claude discovers CRISPR-like enzyme system - Al Jazeera
-17. Claude computes a nine-loop amplitude in N=4 super-Yang-Mills - Anthropic
-18. Designing more efficient quantum circuits with Claude - Anthropic
-19. How Claude designed protein binders against scorpion neurotoxins - Anthropic
-20. Claude Fills Out Its Model Family - The Batch, DeepLearning.AI
-21. Anthropic Economic Index Report, January 2026 - Anthropic
-22. Models ranked by OSWorld - Developers Digest
-23. OSWorld: What the 72% human baseline measures - BuildMVPFast
-24. Claude Opus METR time horizon - Fanatical Futurist
-25. Claude in Chrome is generally available - Claude
-26. Collaborate with Claude across Excel, PowerPoint, Word and Outlook - Claude
-27. Dario Amodei and the Jevons paradox - Fortune
-28. Canaries in the Coal Mine, August 2026 update - summary by Brian Heger
-29. Anthropic and Teach For All - Anthropic
-30. Anthropic revenue and customers - Sacra
+1. Anthropic Models Overview - Official comparison of Claude Haiku, Claude Sonnet, and Claude Opus capabilities.
+2. Anthropic Prompt Caching Guide - Technical guide to cutting repeated input latency and token costs by up to 90 percent.
+3. Anthropic Tool Use Documentation - How structured tool calling connects Claude to live data and external actions.
+4. Model Context Protocol (MCP) - Open standard for connecting AI assistants cleanly to tools, files, and enterprise systems.
+5. Building Effective Agents - Anthropic's practical engineering guide to composable workflows and reliable AI agents.
 
 ---
 

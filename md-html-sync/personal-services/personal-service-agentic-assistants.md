@@ -1,16 +1,16 @@
 # Agentic Assistant Training
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// PERSONAL SERVICE SPECIFICATION · AGENTIC ASSISTANTS**  
+> **// PERSONAL SERVICE SPECIFICATION - PERSISTENT PERSONAL ASSISTANTS**  
 > **Business transformation, verification, and implementation.**
 
 ---
 
 ## Three-Tier Markdown Memory Architecture
 
-Opaque vector databases often fail solo practitioners because they fragment coherent thinking into disjointed chunk embeddings. Instead of burying your memory in binary vector stores, we implement a transparent, git-versioned three-tier Markdown memory architecture:
+When an assistant dumps every past chat into one giant file, it quickly gets slow, expensive, and confused. A three-tier Markdown memory keeps everything fast, readable, and completely under your control in plain text files.
 
-Because all memory is human-readable Markdown, you can inspect, edit, or roll back your assistant's knowledge with standard tools like Obsidian, VS Code, or simple git commits.
+Because every tier is just a Markdown file on your drive, you can inspect what your assistant remembers, fix a wrong assumption in seconds, and back up your whole memory with normal Git or folder sync.
 
 ---
 

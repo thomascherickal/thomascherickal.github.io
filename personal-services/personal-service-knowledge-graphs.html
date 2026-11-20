@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Knowledge Graphs | Thomas Cherickal</title>
-<meta content="Build personal knowledge graphs that connect concepts, authors, projects, and citations across your reading and work with hybrid graph-RAG querying and token savings." name="description"/>
+<meta content="Build personal knowledge graphs that connect concepts, authors, projects, and citations across your reading and work with hybrid graph-RAG querying to boost recall and help AI tools save tokens." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
 <!-- Canonical URL -->
 <link href="https://thedigitalfuturist.com/personal-services/personal-service-knowledge-graphs.html" rel="canonical"/>
@@ -14,9 +14,9 @@
 <meta content="https://thedigitalfuturist.com/personal-services/personal-service-knowledge-graphs.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
 <meta content="Knowledge Graphs | Thomas Cherickal" property="og:title"/>
-<meta content="Build personal knowledge graphs that connect concepts, authors, projects, and citations across your reading and work with hybrid graph-RAG querying and token savings." property="og:description"/>
+<meta content="Build personal knowledge graphs that connect concepts, authors, projects, and citations across your reading and work with hybrid graph-RAG querying to boost recall and help AI tools save tokens." property="og:description"/>
 <meta content="Knowledge Graphs | Thomas Cherickal" name="twitter:title"/>
-<meta content="Build personal knowledge graphs that connect concepts, authors, projects, and citations across your reading and work with hybrid graph-RAG querying and token savings." name="twitter:description"/>
+<meta content="Build personal knowledge graphs that connect concepts, authors, projects, and citations across your reading and work with hybrid graph-RAG querying to boost recall and help AI tools save tokens." name="twitter:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Favicon & Icons -->
@@ -36,7 +36,7 @@
       "@type": "WebPage",
       "@id": "https://thedigitalfuturist.com/personal-services/personal-service-knowledge-graphs.html#webpage",
       "url": "https://thedigitalfuturist.com/personal-services/personal-service-knowledge-graphs.html",
-      "name": "Personal Knowledge Graphs & GraphRAG - Service Specification | Thomas Cherickal",
+      "name": "Knowledge Graphs - Service Specification | Thomas Cherickal",
       "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Build personal knowledge graphs that connect concepts, authors, projects, and citations across your entire body of reading and work. Learn practical graph modeling and hybrid graph-RAG querying to uncover non-obvious links and strengthen long-term research recall, and help your AI tools save tokens.",
       "isPartOf": {
         "@id": "https://thedigitalfuturist.com/#website"
@@ -73,8 +73,8 @@
     {
       "@type": "Service",
       "@id": "https://thedigitalfuturist.com/personal-services/personal-service-knowledge-graphs.html#service",
-      "name": "Personal Knowledge Graphs & GraphRAG - Thomas Cherickal",
-      "serviceType": "Personal Knowledge Graph Engineering & GraphRAG",
+      "name": "Knowledge Graphs - Thomas Cherickal",
+      "serviceType": "Personal Knowledge Graphs & Graph-RAG Training",
       "url": "https://thedigitalfuturist.com/personal-services/personal-service-knowledge-graphs.html",
       "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Build personal knowledge graphs that connect concepts, authors, projects, and citations across your entire body of reading and work. Learn practical graph modeling and hybrid graph-RAG querying to uncover non-obvious links and strengthen long-term research recall, and help your AI tools save tokens.",
       "provider": {
@@ -90,11 +90,10 @@
       },
       "availableLanguage": "English",
       "serviceOutput": [
-        "Personal Knowledge Graph Architecture: Connecting concepts, authors, projects, and citations across reading corpora.",
-        "Token-Saving Subgraph Extraction: Slashing prompt tokens by 60% to 80% by replacing raw text dumps with targeted triples.",
-        "Hybrid Graph-RAG Query Engine: Uncovering non-obvious multi-hop connections with Leiden community detection.",
-        "Canonical Entity Resolution: Merging aliases deterministically to prevent graph fragmentation and hallucinated edges.",
-        "Local-First Graph Storage: Zero-egress deployment with SQLite, NetworkX, and KuzuDB."
+        "Practical Personal Graph Modeling: Connecting concepts, authors, projects, and citations cleanly without over-engineered schemas.",
+        "Hybrid Graph-RAG Querying: Combining text search with graph relationships to answer multi-step research questions accurately.",
+        "Token Savings for AI Tools: Retrieving only the exact connected facts and citations instead of stuffing huge raw files into prompts.",
+        "Long-Term Research Recall: Maintaining a portable local graph in SQLite or NetworkX that grows smarter with every book or paper you read."
       ]
     }
   ]
@@ -264,16 +263,16 @@
           <li><a href="../gemini-training/google-gemma-local-models.html">Google Gemma Local Models</a></li>
           <li><a href="../gemini-training/google-multimodality.html">Google Multimodality</a></li>
           <li><a href="../gemini-training/google-deepmind.html">Google DeepMind</a></li>
-          <li><a href="../gemini-training/google-code-wiki.html">Google Code Wiki</a></li>
           <li><a href="../gemini-training/google-deep-research.html">Google Deep Research</a></li>
           <li><a href="../gemini-training/google-gemini-skills.html">Gemini Skills</a></li>
           <li><a href="../gemini-training/google-gemini-4-argon.html">Gemini 4 Argon</a></li>
           <li><a href="../gemini-training/google-gemini-4-carbon.html">Gemini 4 Carbon</a></li>
           <li><a href="../gemini-training/google-gemini-4-hydrogen.html">Gemini 4 Hydrogen</a></li>
+          <li><a href="../gemini-training/google-gemini-4-neon.html">Gemini 4 Neon</a></li>
           <li><a href="../gemini-training/google-gemini-4-krypton.html" aria-disabled="true" tabindex="-1"
               style="pointer-events: none; opacity: 0.45; cursor: not-allowed;">Gemini 4 Krypton</a></li>
-          <li><a href="../gemini-training/google-gemini-4-helix.html" aria-disabled="true" tabindex="-1"
-              style="pointer-events: none; opacity: 0.45; cursor: not-allowed;">Gemini 4 Helix</a></li>
+          <li><a href="../gemini-training/google-gemini-4-helium.html" aria-disabled="true" tabindex="-1"
+              style="pointer-events: none; opacity: 0.45; cursor: not-allowed;">Gemini 4 Helium</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
@@ -289,834 +288,254 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+<a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
 <main id="main">
-  <section class="section content-card" style="padding-top: 2rem;">
-    <div class="container" style="max-width: 980px;">
-
-      <!-- Hero Header Card -->
-      <div class="hero-card content-card" style="background: #0c111d; border: 1px solid rgba(251, 191, 36, 0.28); border-radius: 14px; padding: 2.25rem; margin-bottom: 2rem;">
-        <div style="font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: #38bdf8; font-weight: 700; margin-bottom: 0.75rem;">
-          Personal Semantic Architecture &amp; Local GraphRAG
-        </div>
-        <h1>Knowledge Graphs</h1>
-        <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
-          Build personal knowledge graphs that connect concepts, authors, projects, and citations across your entire body of reading and work. Learn practical graph modeling and hybrid graph-RAG querying to uncover non-obvious links and strengthen long-term research recall, and help your AI tools save tokens.
-        </p>
-        <div class="service-cta-buttons" style="display:flex; gap:1rem; flex-wrap:wrap;">
-          <a class="btn btn-commission btn-lg" href="../contact.html">Commission Knowledge Graph</a>
-          <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
-        </div>
+<div class="container" style="max-width:1040px;margin:0 auto;padding:2.5rem 1.25rem;">
+  <div class="hero content-card" style="background:#000000;border:1px solid rgba(251,191,36,0.3);border-radius:16px;padding:2.5rem;margin-bottom:2rem;">
+    <p class="section-label" style="color:var(--cyan,#38bdf8);letter-spacing:0.1em;font-size:0.8rem;text-transform:uppercase;margin-bottom:0.5rem;">// PERSONAL SERVICE SPECIFICATION - PERSONAL KNOWLEDGE GRAPHS &amp; TOKEN SAVINGS</p>
+    <h1>Knowledge Graphs</h1>
+    <div class="title-tags" aria-label="Article topics"><span class="title-tag">Knowledge Graphs</span><span class="title-tag">Graph-RAG</span><span class="title-tag">Research Recall</span><span class="title-tag">Save AI Tokens</span><span class="title-tag">Connected Notes</span></div>
+    <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.8;max-width:840px;margin-top:1.1rem;margin-bottom:1.5rem;">
+      Build personal knowledge graphs that connect concepts, authors, projects, and citations across your entire body of reading and work. Learn practical graph modeling and hybrid graph-RAG querying to uncover non-obvious links and strengthen long-term research recall, and help your AI tools save tokens.
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1.75rem;">
+      <div style="background:#000000;border:1px solid rgba(56,189,248,0.32);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:var(--cyan,#38bdf8);text-transform:uppercase;letter-spacing:0.08em;">Training Format</div>
+        <div style="font-size:1.35rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">1-on-1 Live</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">5 days live + 5 days support (1 person only)</div>
       </div>
-
-      <!-- 4-Card Stats Grid -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2.5rem;">
-        <div style="background: #0c111d; border: 1px solid rgba(56, 189, 248, 0.28); border-radius: 10px; padding: 1.25rem;">
-          <div style="font-size: 0.75rem; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.08em;">Delivery Cadence</div>
-          <div style="font-size: 1.5rem; font-weight: 800; color: #fbbf24; margin-top: 0.25rem;">5 Days Live</div>
-          <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem;">Plus 5 days dedicated support (1 person only)</div>
-        </div>
-        <div style="background: #0c111d; border: 1px solid rgba(52, 211, 153, 0.28); border-radius: 10px; padding: 1.25rem;">
-          <div style="font-size: 0.75rem; color: #34d399; text-transform: uppercase; letter-spacing: 0.08em;">Multi-Hop Links</div>
-          <div style="font-size: 1.5rem; font-weight: 800; color: #34d399; margin-top: 0.25rem;">Non-Obvious Hops</div>
-          <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem;">Connect concepts, authors &amp; projects across years</div>
-        </div>
-        <div style="background: #0c111d; border: 1px solid rgba(232, 121, 249, 0.28); border-radius: 10px; padding: 1.25rem;">
-          <div style="font-size: 0.75rem; color: #e879f9; text-transform: uppercase; letter-spacing: 0.08em;">Token Optimization</div>
-          <div style="font-size: 1.5rem; font-weight: 800; color: #e879f9; margin-top: 0.25rem;">60-80% Savings</div>
-          <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem;">Targeted subgraphs replace bloated raw chunk dumps</div>
-        </div>
-        <div style="background: #0c111d; border: 1px solid rgba(251, 191, 36, 0.28); border-radius: 10px; padding: 1.25rem;">
-          <div style="font-size: 0.75rem; color: #fbbf24; text-transform: uppercase; letter-spacing: 0.08em;">Local-First</div>
-          <div style="font-size: 1.5rem; font-weight: 800; color: #38bdf8; margin-top: 0.25rem;">Zero Cloud Egress</div>
-          <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem;">Portable SQLite, NetworkX &amp; KuzuDB storage</div>
-        </div>
+      <div style="background:#000000;border:1px solid rgba(52,211,153,0.32);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:#34d399;text-transform:uppercase;letter-spacing:0.08em;">Core Entities</div>
+        <div style="font-size:1.35rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">4 Clean Types</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Concepts, authors, projects, and citations</div>
       </div>
-
-      <!-- Table of Contents -->
-      <section class="content-card" id="table-of-contents" aria-label="Table of Contents" style="background: #0c111d; border: 1px solid rgba(251, 191, 36, 0.25); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2.5rem;">
-        <h2 style="font-size: 1.2rem; color: #fbbf24; margin-top: 0; margin-bottom: 1rem;">Table of Contents</h2>
-        <ol style="display:flex;flex-direction:column;gap:0.6rem;margin: 0; padding-left: 1.25rem; color: #cbd5e1; line-height: 1.6;">
-          <li><a class="gold-link" href="#why-vectors-fail-solo-research">Why Flat Vector Search Fails Solo Researchers</a></li>
-          <li><a class="gold-link" href="#property-graphs-vs-rdf">Property Graphs vs. RDF Triplestores for Individual Practitioners</a></li>
-          <li><a class="gold-link" href="#schema-design-and-ontology">Designing a Lean Personal Ontology That Evolves Cleanly</a></li>
-          <li><a class="gold-link" href="#entity-relation-extraction">Automated Entity-Relation Extraction with Local Models</a></li>
-          <li><a class="gold-link" href="#entity-resolution-deduplication">Canonical Entity Resolution and Alias Deduplication</a></li>
-          <li><a class="gold-link" href="#personal-graphrag-architecture">Personal GraphRAG: Community Summaries and Multi-Hop Traversal</a></li>
-          <li><a class="gold-link" href="#temporal-edges-and-provenance">Temporal Edges, Confidence Scoring, and Source Provenance</a></li>
-          <li><a class="gold-link" href="#failure-mode-recovery">Failure-Mode Recovery: Orphan Nodes, Cycles, and Hallucinated Edges</a></li>
-          <li><a class="gold-link" href="#tutorial-python-extractor">Production Python Pipeline: Local Triple Extractor and SQLite/NetworkX Graph</a></li>
-          <li><a class="gold-link" href="#tutorial-prompt-extraction">Production Prompt Template: Constrained Schema Entity-Relation Extractor</a></li>
-          <li><a class="gold-link" href="#tutorial-ops-setup">Step-by-Step Operational Guide: Building Your Local Graph Workstation</a></li>
-          <li><a class="gold-link" href="#tutorial-python-graphrag">Production Python Pipeline: Multi-Hop GraphRAG Retriever with Citations</a></li>
-          <li><a class="gold-link" href="#tutorial-prompt-resolution">Production Prompt Template: Entity Resolution and Merge Adjudicator</a></li>
-          <li><a class="gold-link" href="#tutorial-ops-recovery">Step-by-Step Operational Runbook: Graph Pruning, Snapshots, and Rebuild</a></li>
-          <li><a class="gold-link" href="#saving-tokens-with-graphs">How Personal Knowledge Graphs Help AI Tools Save Tokens</a></li>
-          <li><a class="gold-link" href="#pricing-guarantees">Transparent Pricing &amp; Global Parity Index</a></li>
-          <li><a class="gold-link" href="#references">Live Technical References</a></li>
-        </ol>
-      </section>
-
-      <article class="prose content-card" style="color: #e2e8f0; line-height: 1.78;">
-
-        <h2 id="why-vectors-fail-solo-research" style="color: #fbbf24; margin-top: 2.5rem;">Why Flat Vector Search Fails Solo Researchers</h2>
-        <p>
-          If you have maintained a personal research archive for more than a year - whether in Obsidian, Logseq, plain Markdown folders, or Zotero annotations - you have likely hit the ceiling of standard Retrieval-Augmented Generation (RAG). Standard vector search embeds each paragraph into a dense numerical vector and retrieves the top-k chunks closest to your query in cosine space. That works well for localized fact lookup, such as finding a specific CLI flag you documented last month.
-        </p>
-        <p>
-          Vector search collapses, however, when your question spans multiple documents, timeframes, or domains. Suppose you ask your archive: <em>"Which open-source licensing risks appeared across the infrastructure tools I evaluated in Q1, and which of those tools were recommended by authors I cited in my distributed systems notes?"</em> No single paragraph contains the answer. The answer lives in the <strong>connections</strong> between entities: Tool A is mentioned in Evaluation Note 12, shares a dependency with Library B in Note 44, and Author C critiqued Library B's license in a 2025 paper summary.
-        </p>
-        <p>
-          Manual wiki-linking (such as typing <code>[[brackets]]</code> in Obsidian) helps, but it does not scale. As a solo practitioner, you do not have hours each week to curate backlinks across thousands of papers, meeting logs, and code snippets. A <strong>Personal Knowledge Graph (PKG)</strong> automates this structural layer. It parses your unstructured notes into explicit nodes (Concepts, People, Projects, Tools, Claims, Decisions) and typed, directional edges (<code>DEPENDS_ON</code>, <code>CONTRADICTS</code>, <code>AUTHORED_BY</code>, <code>SUPERSEDES</code>), turning your personal archive into a queryable reasoning substrate.
-        </p>
-
-        <!-- SVG Diagram 1 -->
-        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 1rem;">
-          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
-            <rect width="960" height="400" fill="#040711" rx="8"/>
-            <text x="480" y="34" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Flat Vector Search vs. Multi-Hop Personal Knowledge Graph</text>
-            <!-- Left Side: Flat Vector -->
-            <rect x="36" y="62" width="415" height="305" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="1.5"/>
-            <text x="243" y="92" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Flat Vector Retrieval (Top-K Chunks)</text>
-            <rect x="66" y="118" width="150" height="58" rx="6" fill="#131b2e" stroke="#64748b" stroke-width="1"/>
-            <text x="141" y="143" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Chunk 14: Tool A</text>
-            <text x="141" y="162" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Cosine: 0.84</text>
-            <rect x="268" y="118" width="150" height="58" rx="6" fill="#131b2e" stroke="#64748b" stroke-width="1"/>
-            <text x="343" y="143" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Chunk 89: Paper X</text>
-            <text x="343" y="162" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Cosine: 0.81</text>
-            <rect x="66" y="210" width="150" height="58" rx="6" fill="#131b2e" stroke="#64748b" stroke-width="1"/>
-            <text x="141" y="235" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Chunk 203: License</text>
-            <text x="141" y="254" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Missed (0.51)</text>
-            <rect x="268" y="210" width="150" height="58" rx="6" fill="#131b2e" stroke="#64748b" stroke-width="1"/>
-            <text x="343" y="235" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Chunk 412: Author C</text>
-            <text x="343" y="254" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Missed (0.44)</text>
-            <text x="243" y="318" fill="#f87171" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">No structural bridge between isolated chunks</text>
-            <text x="243" y="340" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Global synthesis queries fail silently</text>
-            <!-- Right Side: Knowledge Graph -->
-            <rect x="495" y="62" width="429" height="305" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="1.5"/>
-            <text x="709" y="92" fill="#34d399" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Personal Knowledge Graph (Multi-Hop Traversal)</text>
-            <circle cx="575" cy="155" r="36" fill="#131b2e" stroke="#fbbf24" stroke-width="2"/>
-            <text x="575" y="159" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Tool A</text>
-            <line x1="611" y1="155" x2="673" y2="155" stroke="#38bdf8" stroke-width="2"/>
-            <text x="642" y="145" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">USES</text>
-            <circle cx="709" cy="155" r="36" fill="#131b2e" stroke="#38bdf8" stroke-width="2"/>
-            <text x="709" y="159" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Library B</text>
-            <line x1="745" y1="155" x2="807" y2="155" stroke="#e879f9" stroke-width="2"/>
-            <text x="776" y="145" fill="#e879f9" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">LICENSE</text>
-            <circle cx="843" cy="155" r="36" fill="#131b2e" stroke="#e879f9" stroke-width="2"/>
-            <text x="843" y="159" fill="#e879f9" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">AGPL-3</text>
-            <line x1="709" y1="191" x2="709" y2="232" stroke="#34d399" stroke-width="2"/>
-            <text x="748" y="216" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">CRITIQUED_BY</text>
-            <circle cx="709" cy="268" r="36" fill="#131b2e" stroke="#34d399" stroke-width="2"/>
-            <text x="709" y="272" fill="#34d399" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Author C</text>
-            <text x="709" y="330" fill="#34d399" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Deterministic 2-hop &amp; 3-hop path resolution</text>
-            <text x="709" y="350" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Every hop backed by exact source note citations</text>
-          </svg>
-        </div>
-
-        <h2 id="property-graphs-vs-rdf" style="color: #fbbf24; margin-top: 2.5rem;">Property Graphs vs. RDF Triplestores for Individual Practitioners</h2>
-        <p>
-          Before writing a single line of extraction code, you must choose a graph data model. In graph engineering, the two dominant paradigms are <strong>Resource Description Framework (RDF) triplestores</strong> and <strong>Labeled Property Graphs (LPG)</strong>. Understanding the trade-off saves weeks of unnecessary complexity.
-        </p>
-        <p>
-          RDF represents every fact as a strict three-part statement: <code>(Subject, Predicate, Object)</code>, where subjects and predicates are globally unique URIs governed by formal ontologies such as OWL or SHACL. RDF excels in linked open data, biomedical registries, and cross-organization semantic web publishing. For a solo practitioner, however, RDF introduces heavy friction: attaching metadata to a relationship (such as confidence score, extraction date, or source Markdown line number) requires reification or RDF-star extensions, which complicate queries.
-        </p>
-        <p>
-          <strong>Labeled Property Graphs</strong> - implemented by <a class="gold-link" href="#references">Neo4j</a>, <a class="gold-link" href="#references">KuzuDB</a>, <a class="gold-link" href="#references">NetworkX</a>, and lightweight SQLite adjacency tables - allow both nodes and edges to carry arbitrary key-value properties natively. For a personal knowledge graph, an edge can directly store <code>{"source_file": "notes/systems.md", "chunk_hash": "9f2a...", "confidence": 0.91, "valid_from": "2025-11-04"}</code>.
-        </p>
-        <p>
-          For individual practitioners, start as lightweight as possible: an embedded SQLite database paired with in-memory NetworkX (or KuzuDB for native Cypher queries without a background server daemon) gives you zero-ops portability, single-file backups, and sub-10ms traversals across 50,000+ edges. You only need Neo4j Desktop or a containerized graph server when you require built-in Graph Data Science algorithms or rich interactive browser visualization at scale.
-        </p>
-
-        <!-- SVG Diagram 2 -->
-        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 12px; padding: 1rem;">
-          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
-            <rect width="960" height="400" fill="#040711" rx="8"/>
-            <text x="480" y="34" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Choosing Your Personal Graph Storage Tier</text>
-            <!-- Tier 1 -->
-            <rect x="40" y="70" width="275" height="290" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
-            <text x="177" y="102" fill="#34d399" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Tier 1: SQLite + NetworkX</text>
-            <text x="177" y="128" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Up to 100,000 Edges</text>
-            <text x="60" y="165" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Zero background daemon</text>
-            <text x="60" y="190" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Single portable .db file</text>
-            <text x="60" y="215" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Full Python algorithm suite</text>
-            <text x="60" y="240" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Instant Git / Syncthing sync</text>
-            <text x="177" y="325" fill="#34d399" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Recommended Starting Point</text>
-            <!-- Tier 2 -->
-            <rect x="342" y="70" width="275" height="290" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
-            <text x="479" y="102" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Tier 2: KuzuDB (Embedded)</text>
-            <text x="479" y="128" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">100k - 5M Edges</text>
-            <text x="362" y="165" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- In-process Cypher queries</text>
-            <text x="362" y="190" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Columnar disk storage</text>
-            <text x="362" y="215" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Built-in vector index support</text>
-            <text x="362" y="240" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- No JVM or Docker required</text>
-            <text x="479" y="325" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Best for Heavy Research Vaults</text>
-            <!-- Tier 3 -->
-            <rect x="644" y="70" width="275" height="290" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
-            <text x="781" y="102" fill="#e879f9" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Tier 3: Neo4j Desktop / Local</text>
-            <text x="781" y="128" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Multi-Modal &amp; Visual Studio</text>
-            <text x="664" y="165" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Native Bloom visualization</text>
-            <text x="664" y="190" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Graph Data Science (GDS)</text>
-            <text x="664" y="215" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- APOC procedures &amp; triggers</text>
-            <text x="664" y="240" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Requires local daemon/RAM</text>
-            <text x="781" y="325" fill="#e879f9" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Best for Visual Exploration</text>
-          </svg>
-        </div>
-
-        <h2 id="schema-design-and-ontology" style="color: #fbbf24; margin-top: 2.5rem;">Designing a Lean Personal Ontology That Evolves Cleanly</h2>
-        <p>
-          The fastest way to ruin a personal knowledge graph is to let an LLM invent arbitrary node labels and edge types on every document. Without a constrained schema, one note produces <code>(Person)-[:WROTE]->(Paper)</code>, the next produces <code>(Author)-[:AUTHORED]->(Article)</code>, and a third produces <code>(Researcher)-[:PUBLISHED_IN]->(Journal)</code>. Within a month, your graph fragments into dozens of synonymous relationship types, making structured traversal impossible.
-        </p>
-        <p>
-          A production personal ontology should be <strong>small, rigid at the core, and extensible through properties</strong>. For most solo practitioners, six to eight canonical entity types cover 95% of personal research:
-        </p>
-        <ul style="color: #cbd5e1; line-height: 1.85; padding-left: 1.5rem;">
-          <li><strong>Person:</strong> Authors, colleagues, mentors, clients, historical figures.</li>
-          <li><strong>Organization:</strong> Labs, companies, standards bodies, universities.</li>
-          <li><strong>Concept:</strong> Theories, algorithms, mental models, architectural patterns.</li>
-          <li><strong>Artifact:</strong> Papers, books, code repositories, datasets, tools, notes.</li>
-          <li><strong>Project:</strong> Active personal initiatives, experiments, client engagements.</li>
-          <li><strong>Claim:</strong> Specific empirical findings, benchmarks, or hypotheses with truth conditions.</li>
-          <li><strong>Decision:</strong> Personal architectural choices, career moves, or policy commitments.</li>
-        </ul>
-        <p>
-          Pair these node types with a closed vocabulary of 10 to 14 uppercase relationship types such as <code>CREATED</code>, <code>DEPENDS_ON</code>, <code>SUPPORTS</code>, <code>CONTRADICTS</code>, <code>APPLIES_TO</code>, <code>MENTIONS</code>, <code>PART_OF</code>, and <code>SUPERSEDES</code>. Any nuance that does not fit the edge label belongs in an edge property (for example, <code>role: "lead maintainer"</code> or <code>context: "benchmark evaluation"</code>), preserving clean graph topology while retaining rich detail.
-        </p>
-
-        <h2 id="entity-relation-extraction" style="color: #fbbf24; margin-top: 2.5rem;">Automated Entity-Relation Extraction with Local Models</h2>
-        <p>
-          Extracting structured triples from raw Markdown and PDFs requires strict schema enforcement. If you ask a local model running in <a class="gold-link" href="#references">Ollama</a> to "extract a knowledge graph from this text" in free-form prose, it will drift in formatting, invent relationships outside your ontology, and occasionally hallucinate entities not present in the source paragraph.
-        </p>
-        <p>
-          Instead, combine three engineering controls: <strong>JSON Schema constrained decoding</strong> (supported natively via Ollama's <code>format</code> parameter and Pydantic validation), <strong>short structure-aware chunks</strong> (400 to 700 tokens per extraction call with the parent Markdown heading injected as context), and <strong>exact evidence span grounding</strong>. Requiring the model to return a verbatim <code>evidence_quote</code> substring from the chunk allows your Python pipeline to verify programmatically that the claim actually appears in the text before committing the edge.
-        </p>
-
-        <!-- SVG Diagram 3 -->
-        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 1rem;">
-          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
-            <rect width="960" height="400" fill="#040711" rx="8"/>
-            <text x="480" y="34" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Grounded Entity-Relation Extraction Pipeline</text>
-            <rect x="40" y="130" width="160" height="120" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
-            <text x="120" y="165" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Markdown Chunk</text>
-            <text x="120" y="190" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Heading Context</text>
-            <text x="120" y="210" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">SHA-256 Hash</text>
-            <text x="120" y="230" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Frontmatter Date</text>
-            <line x1="200" y1="190" x2="245" y2="190" stroke="#fbbf24" stroke-width="2"/>
-            <rect x="245" y="130" width="180" height="120" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
-            <text x="335" y="165" fill="#e879f9" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Local LLM (Ollama)</text>
-            <text x="335" y="190" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Closed Ontology</text>
-            <text x="335" y="210" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">JSON Schema Lock</text>
-            <text x="335" y="230" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Temp = 0.0</text>
-            <line x1="425" y1="190" x2="470" y2="190" stroke="#fbbf24" stroke-width="2"/>
-            <rect x="470" y="130" width="190" height="120" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
-            <text x="565" y="165" fill="#34d399" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Verification Gate</text>
-            <text x="565" y="190" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Pydantic Type Check</text>
-            <text x="565" y="210" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Quote Substring Match</text>
-            <text x="565" y="230" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Confidence &gt;= 0.70</text>
-            <line x1="660" y1="190" x2="705" y2="190" stroke="#fbbf24" stroke-width="2"/>
-            <rect x="705" y="130" width="210" height="120" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
-            <text x="810" y="165" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Entity Resolver &amp; DB</text>
-            <text x="810" y="190" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Alias Normalization</text>
-            <text x="810" y="210" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Upsert Nodes &amp; Edges</text>
-            <text x="810" y="230" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Provenance Logged</text>
-          </svg>
-        </div>
-
-        <h2 id="entity-resolution-deduplication" style="color: #fbbf24; margin-top: 2.5rem;">Canonical Entity Resolution and Alias Deduplication</h2>
-        <p>
-          Entity resolution is the single hardest operational problem in personal knowledge graphs. Across six months of notes, you will refer to the same concept or tool by multiple surface forms: <code>"PostgreSQL"</code>, <code>"Postgres"</code>, <code>"PG"</code>, and <code>"psql"</code>; or <code>"Kuzu"</code> and <code>"KuzuDB"</code>; or a colleague's full name versus their first name in a daily journal entry. If your pipeline creates a separate node for each spelling, your graph's connectivity collapses.
-        </p>
-        <p>
-          A robust local resolver uses a <strong>three-stage cascade</strong> before inserting a new node:
-        </p>
-        <ol style="color: #cbd5e1; line-height: 1.85; padding-left: 1.5rem;">
-          <li><strong>Deterministic Normalization &amp; Alias Dictionary:</strong> Strip punctuation, normalize case, and check a personal YAML/JSON alias map (e.g., mapping <code>"pg"</code> and <code>"postgres"</code> to canonical ID <code>artifact:postgresql</code>).</li>
-          <li><strong>Fuzzy Lexical &amp; Embedding Similarity:</strong> Compute Jaro-Winkler or token-set similarity plus cosine similarity against existing node name embeddings of the <em>same entity type</em>. Candidates above 0.92 cosine similarity auto-merge; candidates between 0.80 and 0.92 are routed to a lightweight LLM adjudication step or a weekly human review queue.</li>
-          <li><strong>Context-Aware Disambiguation:</strong> Never merge entities solely by name when types differ. <code>"Mercury"</code> (Planet) and <code>"Mercury"</code> (Banking Platform) must remain distinct nodes keyed by <code>(type, canonical_name)</code>.</li>
-        </ol>
-
-        <!-- SVG Diagram 4 -->
-        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(232, 121, 249, 0.3); border-radius: 12px; padding: 1rem;">
-          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
-            <rect width="960" height="400" fill="#040711" rx="8"/>
-            <text x="480" y="34" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Three-Stage Canonical Entity Resolution Cascade</text>
-            <rect x="45" y="145" width="175" height="90" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
-            <text x="132" y="180" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Candidate Entity</text>
-            <text x="132" y="205" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">"Postgres 16"</text>
-            <line x1="220" y1="190" x2="265" y2="190" stroke="#fbbf24" stroke-width="2"/>
-            <rect x="265" y="95" width="200" height="190" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
-            <text x="365" y="128" fill="#34d399" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Stage 1: Alias Lookup</text>
-            <text x="365" y="155" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Exact + Lowercase Map</text>
-            <text x="365" y="182" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Match? -&gt; Link Canonical ID</text>
-            <line x1="295" y1="200" x2="435" y2="200" stroke="#334155" stroke-width="1"/>
-            <text x="365" y="225" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Stage 2: Vector Sim</text>
-            <text x="365" y="248" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Cosine &gt;= 0.92 (Same Type)</text>
-            <text x="365" y="268" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">0.80 - 0.92 -&gt; Stage 3</text>
-            <line x1="465" y1="190" x2="515" y2="190" stroke="#fbbf24" stroke-width="2"/>
-            <rect x="515" y="95" width="200" height="190" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
-            <text x="615" y="128" fill="#e879f9" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Stage 3: Adjudicator</text>
-            <text x="615" y="158" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Compare Neighbors &amp;</text>
-            <text x="615" y="176" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Source Context</text>
-            <text x="615" y="210" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">SAME: Add Alias + Merge</text>
-            <text x="615" y="235" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">DIFFERENT: Mint New ID</text>
-            <line x1="715" y1="190" x2="760" y2="190" stroke="#fbbf24" stroke-width="2"/>
-            <rect x="760" y="145" width="160" height="90" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
-            <text x="840" y="180" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Canonical Node</text>
-            <text x="840" y="205" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">artifact:postgresql</text>
-          </svg>
-        </div>
-
-        <h2 id="personal-graphrag-architecture" style="color: #fbbf24; margin-top: 2.5rem;">Personal GraphRAG: Community Summaries and Multi-Hop Traversal</h2>
-        <p>
-          Once your notes are materialized into a clean property graph, how do you query it? Modern <a class="gold-link" href="#references">GraphRAG</a> (pioneered by Microsoft Research and adapted into lightweight local toolkits) combines two complementary retrieval modes: <strong>Local Graph Search</strong> and <strong>Global Community Search</strong>.
-        </p>
-        <p>
-          <strong>Local Graph Search</strong> starts from seed entities extracted from your question (or matched via vector similarity on node descriptions), expands outward 1 to 2 hops along relevant edge types, and collects both the subgraph structure and the original Markdown chunks attached to those edges. This answers targeted relational questions such as <em>"What are all the bottlenecks I noted across projects using LanceDB?"</em>
-        </p>
-        <p>
-          <strong>Global Community Search</strong> solves macro-level synthesis questions such as <em>"What are the overarching themes across my last six months of systems engineering notes?"</em> Using the <a class="gold-link" href="#references">Leiden community detection algorithm</a>, your pipeline partitions the graph into tightly connected clusters of entities, generates a concise summary for each cluster offline, and embeds those community summaries. At query time, the retriever performs map-reduce synthesis over the top matching communities, giving you a bird's-eye view of your entire intellectual landscape without exceeding local context windows.
-        </p>
-
-        <!-- SVG Diagram 5 -->
-        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(52, 211, 153, 0.3); border-radius: 12px; padding: 1rem;">
-          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
-            <rect width="960" height="400" fill="#040711" rx="8"/>
-            <text x="480" y="34" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Hybrid Personal GraphRAG Query Router</text>
-            <rect x="40" y="155" width="160" height="90" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
-            <text x="120" y="192" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">User Query</text>
-            <text x="120" y="216" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Local vs. Global Intent</text>
-            <line x1="200" y1="180" x2="290" y2="115" stroke="#38bdf8" stroke-width="2"/>
-            <line x1="200" y1="220" x2="290" y2="285" stroke="#e879f9" stroke-width="2"/>
-            <!-- Top Path -->
-            <rect x="290" y="65" width="320" height="105" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
-            <text x="450" y="95" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Local Path: Seed + 2-Hop Traversal</text>
-            <text x="450" y="120" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">1. Match seed nodes via vector + BM25</text>
-            <text x="450" y="142" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">2. Expand k-hop neighborhood &amp; source chunks</text>
-            <!-- Bottom Path -->
-            <rect x="290" y="230" width="320" height="105" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
-            <text x="450" y="260" fill="#e879f9" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Global Path: Leiden Community Summaries</text>
-            <text x="450" y="285" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">1. Rank precomputed cluster reports</text>
-            <text x="450" y="307" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">2. Map-reduce synthesis across top clusters</text>
-            <line x1="610" y1="115" x2="695" y2="180" stroke="#38bdf8" stroke-width="2"/>
-            <line x1="610" y1="285" x2="695" y2="220" stroke="#e879f9" stroke-width="2"/>
-            <rect x="695" y="140" width="225" height="120" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
-            <text x="807" y="175" fill="#34d399" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Grounded Synthesis</text>
-            <text x="807" y="202" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Cited File Paths &amp; Edges</text>
-            <text x="807" y="224" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Zero-Cloud Ollama Generation</text>
-          </svg>
-        </div>
-
-        <h2 id="temporal-edges-and-provenance" style="color: #fbbf24; margin-top: 2.5rem;">Temporal Edges, Confidence Scoring, and Source Provenance</h2>
-        <p>
-          Personal knowledge is never static. In 2024, you might have documented that a project used ChromaDB; in 2026, you migrated that project to SQLite-vec. If your knowledge graph overwrites or blindly accumulates edges without timestamps, your GraphRAG assistant will cite both architectures as simultaneously active.
-        </p>
-        <p>
-          To prevent temporal confusion, treat your graph as an <strong>append-and-supersede ledger</strong>. Every edge stores <code>observed_at</code> (derived from the note's YAML frontmatter or file modification date), <code>status</code> (<code>active</code> or <code>superseded</code>), and <code>source_hash</code> (the SHA-256 digest of the source chunk). When a newer note records a conflicting decision or tool migration, you preserve the historical edge with <code>status = "superseded"</code> and link the new edge with <code>SUPERSEDES</code>, giving you a complete intellectual audit trail.
-        </p>
-
-        <h2 id="failure-mode-recovery" style="color: #fbbf24; margin-top: 2.5rem;">Failure-Mode Recovery: Orphan Nodes, Cycles, and Hallucinated Edges</h2>
-        <p>
-          Even well-tuned local extraction pipelines accumulate structural debt over time. Three failure modes appear most frequently in solo practitioner graphs, and each has a deterministic recovery path:
-        </p>
-        <ul style="color: #cbd5e1; line-height: 1.85; padding-left: 1.5rem;">
-          <li><strong>Orphan &amp; Low-Degree Noise Nodes:</strong> Extraction of overly generic nouns (e.g., <code>"System"</code>, <code>"Approach"</code>, <code>"Data"</code>) creates hub-like garbage nodes or thousands of degree-1 islands. Fix this with a stoplist filter and periodic pruning of degree-1 nodes older than 30 days that lack manual pins.</li>
-          <li><strong>Unintended Self-Loops &amp; Semantic Cycles:</strong> Models occasionally extract <code>(Concept A)-[:DEPENDS_ON]->(Concept A)</code> or contradictory bidirectional edges. Enforce a pre-commit invariant: reject any edge where <code>source_id == target_id</code>, and flag symmetric contradictions for review.</li>
-          <li><strong>Stale Graph After Note Deletion or Edits:</strong> When you refactor or delete a Markdown file, its old edges linger as phantom facts. Key every edge by <code>source_file</code> and <code>chunk_hash</code> so an incremental watcher can delete all edges belonging to a modified file hash before re-extracting.</li>
-        </ul>
-
-        <!-- SVG Diagram 6 -->
-        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 12px; padding: 1rem;">
-          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
-            <rect width="960" height="400" fill="#040711" rx="8"/>
-            <text x="480" y="34" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Incremental Sync &amp; Provenance-Keyed Graph Healing</text>
-            <rect x="45" y="120" width="190" height="150" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
-            <text x="140" y="155" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Vault Change Event</text>
-            <text x="140" y="185" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Note Edited or Deleted</text>
-            <text x="140" y="210" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Compute File SHA-256</text>
-            <text x="140" y="235" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Compare Manifest</text>
-            <line x1="235" y1="195" x2="290" y2="195" stroke="#fbbf24" stroke-width="2"/>
-            <rect x="290" y="120" width="200" height="150" rx="8" fill="#0c111d" stroke="#f87171" stroke-width="2"/>
-            <text x="390" y="155" fill="#f87171" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Surgical Edge Purge</text>
-            <text x="390" y="185" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">DELETE FROM edges</text>
-            <text x="390" y="210" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">WHERE source_file = ?</text>
-            <text x="390" y="235" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Prune 0-Degree Orphans</text>
-            <line x1="490" y1="195" x2="545" y2="195" stroke="#fbbf24" stroke-width="2"/>
-            <rect x="545" y="120" width="200" height="150" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
-            <text x="645" y="155" fill="#34d399" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Re-Extract &amp; Upsert</text>
-            <text x="645" y="185" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Extract Changed Chunks</text>
-            <text x="645" y="210" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Resolve Aliases</text>
-            <text x="645" y="235" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Update Community Index</text>
-            <line x1="745" y1="195" x2="790" y2="195" stroke="#fbbf24" stroke-width="2"/>
-            <rect x="790" y="140" width="130" height="110" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
-            <text x="855" y="185" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Zero Ghost</text>
-            <text x="855" y="210" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Facts</text>
-          </svg>
-        </div>
-
-        <h2 id="tutorial-python-extractor" style="color: #fbbf24; margin-top: 2.5rem;">Production Python Pipeline: Local Triple Extractor and SQLite/NetworkX Graph</h2>
-        <p>
-          This complete, self-contained Python module scans a local Markdown vault, extracts schema-validated triples using a local Ollama model, verifies that the quoted evidence exists in the source text, resolves aliases deterministically, and persists the graph into a single portable SQLite file that loads directly into <a class="gold-link" href="#references">NetworkX</a>.
-        </p>
-
-        <div class="code-window" style="background: #040711; border: 1px solid rgba(56, 189, 248, 0.35); border-left: 3px solid var(--cyan); border-radius: 8px; margin: 1.75rem 0; overflow: hidden;">
-          <div class="code-bar" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; background: #0c111d; border-bottom: 1px solid rgba(56, 189, 248, 0.2);">
-            <span style="font-family: monospace; font-size: 0.85rem; color: #38bdf8;">pkg_extractor.py</span>
-            <button type="button" class="copy-btn" onclick="copyCode(this)" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 4px; padding: 0.25rem 0.65rem; font-size: 0.78rem; cursor: pointer; text-decoration: none !important;">Copy</button>
-          </div>
-          <pre style="margin: 0; padding: 1.15rem; white-space: pre-wrap; word-break: break-word; overflow-x: hidden; color: #e2e8f0; font-size: 0.88rem; line-height: 1.55;"><code>import hashlib
-import json
-import sqlite3
-from pathlib import Path
-from typing import Literal
-import urllib.request
-import networkx as nx
-from pydantic import BaseModel, Field
-
-ENTITY_TYPES = Literal["Person", "Organization", "Concept", "Artifact", "Project", "Claim", "Decision"]
-REL_TYPES = Literal["CREATED", "DEPENDS_ON", "SUPPORTS", "CONTRADICTS", "APPLIES_TO", "MENTIONS", "PART_OF", "SUPERSEDES"]
-
-ALIAS_MAP = {
-    "postgres": "PostgreSQL",
-    "pg": "PostgreSQL",
-    "kuzu": "KuzuDB",
-    "nx": "NetworkX",
-}
-
-class Triple(BaseModel):
-    subject: str = Field(min_length=2)
-    subject_type: ENTITY_TYPES
-    predicate: REL_TYPES
-    object: str = Field(min_length=2)
-    object_type: ENTITY_TYPES
-    evidence_quote: str = Field(min_length=10)
-    confidence: float = Field(ge=0.0, le=1.0)
-
-class ExtractionResult(BaseModel):
-    triples: list[Triple]
-
-def normalize_entity(name: str) -&gt; str:
-    cleaned = " ".join(name.strip().split())
-    return ALIAS_MAP.get(cleaned.lower(), cleaned)
-
-def init_db(db_path: Path) -&gt; sqlite3.Connection:
-    conn = sqlite3.connect(db_path)
-    conn.execute("PRAGMA journal_mode=WAL;")
-    conn.execute("""
-        CREATE TABLE IF NOT EXISTS nodes (
-            node_id TEXT PRIMARY KEY,
-            entity_type TEXT NOT NULL,
-            canonical_name TEXT NOT NULL
-        )
-    """)
-    conn.execute("""
-        CREATE TABLE IF NOT EXISTS edges (
-            edge_id TEXT PRIMARY KEY,
-            source_id TEXT NOT NULL,
-            predicate TEXT NOT NULL,
-            target_id TEXT NOT NULL,
-            evidence_quote TEXT NOT NULL,
-            confidence REAL NOT NULL,
-            source_file TEXT NOT NULL,
-            chunk_hash TEXT NOT NULL
-        )
-    """)
-    conn.commit()
-    return conn
-
-def extract_with_ollama(chunk: str, model: str = "qwen2.5:7b") -&gt; ExtractionResult:
-    prompt = (
-        "Extract factual entity-relation triples strictly from the text below. "
-        "Every triple must include an exact verbatim evidence_quote from the text.\n\n"
-        f"TEXT:\n{chunk}"
-    )
-    payload = {
-        "model": model,
-        "prompt": prompt,
-        "stream": False,
-        "options": {"temperature": 0.0},
-        "format": ExtractionResult.model_json_schema(),
-    }
-    req = urllib.request.Request(
-        "http://127.0.0.1:11434/api/generate",
-        data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
-    )
-    with urllib.request.urlopen(req, timeout=90) as resp:
-        raw = json.loads(resp.read().decode("utf-8"))["response"]
-    return ExtractionResult.model_validate_json(raw)
-
-def ingest_markdown_file(conn: sqlite3.Connection, md_path: Path) -&gt; int:
-    text = md_path.read_text(encoding="utf-8")
-    file_key = str(md_path)
-    conn.execute("DELETE FROM edges WHERE source_file = ?", (file_key,))
-    inserted = 0
-    for idx, block in enumerate(text.split("\n\n")):
-        chunk = block.strip()
-        if len(chunk) &lt; 80:
-            continue
-        chunk_hash = hashlib.sha256(chunk.encode("utf-8")).hexdigest()[:16]
-        result = extract_with_ollama(chunk)
-        for t in result.triples:
-            if t.confidence &lt; 0.70 or t.evidence_quote.lower() not in chunk.lower():
-                continue
-            subj = normalize_entity(t.subject)
-            obj = normalize_entity(t.object)
-            if subj == obj:
-                continue
-            src_id = f"{t.subject_type}:{subj}"
-            tgt_id = f"{t.object_type}:{obj}"
-            conn.execute("INSERT OR IGNORE INTO nodes VALUES (?, ?, ?)", (src_id, t.subject_type, subj))
-            conn.execute("INSERT OR IGNORE INTO nodes VALUES (?, ?, ?)", (tgt_id, t.object_type, obj))
-            edge_id = hashlib.sha256(f"{src_id}|{t.predicate}|{tgt_id}|{chunk_hash}".encode()).hexdigest()[:20]
-            conn.execute(
-                "INSERT OR REPLACE INTO edges VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-                (edge_id, src_id, t.predicate, tgt_id, t.evidence_quote, t.confidence, file_key, chunk_hash),
-            )
-            inserted += 1
-    conn.commit()
-    return inserted
-
-def load_networkx(conn: sqlite3.Connection) -&gt; nx.MultiDiGraph:
-    g = nx.MultiDiGraph()
-    for node_id, etype, name in conn.execute("SELECT node_id, entity_type, canonical_name FROM nodes"):
-        g.add_node(node_id, entity_type=etype, name=name)
-    for src, pred, tgt, quote, src_file in conn.execute(
-        "SELECT source_id, predicate, target_id, evidence_quote, source_file FROM edges"
-    ):
-        g.add_edge(src, tgt, key=pred, predicate=pred, quote=quote, source_file=src_file)
-    return g</code></pre>
-        </div>
-
-        <h2 id="tutorial-prompt-extraction" style="color: #fbbf24; margin-top: 2.5rem;">Production Prompt Template: Constrained Schema Entity-Relation Extractor</h2>
-        <p>
-          When running extraction across diverse personal notes - such as research paper summaries, architecture logs, and book highlights - use this strict system prompt to prevent ontology drift and force verbatim quote grounding.
-        </p>
-
-        <div class="code-window" style="background: #040711; border: 1px solid rgba(251, 191, 36, 0.35); border-left: 3px solid var(--gold); border-radius: 8px; margin: 1.75rem 0; overflow: hidden;">
-          <div class="code-bar" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; background: #0c111d; border-bottom: 1px solid rgba(251, 191, 36, 0.2);">
-            <span style="font-family: monospace; font-size: 0.85rem; color: #fbbf24;">schema_triple_extractor_prompt.txt</span>
-            <button type="button" class="copy-btn" onclick="copyCode(this)" style="background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4); border-radius: 4px; padding: 0.25rem 0.65rem; font-size: 0.78rem; cursor: pointer; text-decoration: none !important;">Copy</button>
-          </div>
-          <pre style="margin: 0; padding: 1.15rem; white-space: pre-wrap; word-break: break-word; overflow-x: hidden; color: #e2e8f0; font-size: 0.88rem; line-height: 1.55;"><code>SYSTEM:
-You are a deterministic Knowledge Graph Extraction Engine for a personal research archive.
-Extract ONLY explicit, verifiable relationships stated in INPUT_CHUNK.
-
-ALLOWED ENTITY TYPES:
-Person, Organization, Concept, Artifact, Project, Claim, Decision
-
-ALLOWED PREDICATES:
-CREATED, DEPENDS_ON, SUPPORTS, CONTRADICTS, APPLIES_TO, MENTIONS, PART_OF, SUPERSEDES
-
-STRICT RULES:
-1. Do NOT invent entities or extrapolate beyond INPUT_CHUNK.
-2. Do NOT emit generic stop-entities ("System", "Tool", "Method", "Thing", "User").
-3. Resolve pronouns ("it", "they", "this library") to their explicit antecedent from HEADING_CONTEXT or return nothing if ambiguous.
-4. Every triple MUST include an exact, character-for-character substring in "evidence_quote".
-5. Output valid JSON matching {"triples": [...]} with no markdown fences or commentary.
-
-INPUT:
-HEADING_CONTEXT: {{parent_headings}}
-SOURCE_DATE: {{note_date}}
-INPUT_CHUNK:
-{{chunk_text}}</code></pre>
-        </div>
-
-        <h2 id="tutorial-ops-setup" style="color: #fbbf24; margin-top: 2.5rem;">Step-by-Step Operational Guide: Building Your Local Graph Workstation</h2>
-        <p>
-          Follow these operational steps to stand up a completely local, zero-cloud knowledge graph pipeline on Linux, macOS, or Windows WSL2 in under 20 minutes:
-        </p>
-        <ol style="color: #cbd5e1; line-height: 1.85; padding-left: 1.5rem;">
-          <li><strong>Isolate Your Python Environment:</strong> Create a dedicated virtual environment (<code>python3 -m venv ~/.venvs/pkg-graph &amp;&amp; source ~/.venvs/pkg-graph/bin/activate</code>) and install <code>networkx</code>, <code>pydantic</code>, <code>igraph</code>, and <code>leidenalg</code> for fast local community detection.</li>
-          <li><strong>Install and Lock Local Inference:</strong> Install Ollama, pull an instruction-following model with strong JSON adherence (7B to 14B parameters depending on your RAM/VRAM) plus a local embedding model such as <code>nomic-embed-text</code>, and verify the server binds strictly to <code>127.0.0.1:11434</code>.</li>
-          <li><strong>Initialize Your Ontology &amp; Alias File:</strong> Create <code>ontology.yaml</code> inside your vault root listing your 7 entity types, 8-12 predicates, and a starting <code>aliases.json</code> mapping abbreviations you personally use (project codenames, colleague nicknames, tool acronyms).</li>
-          <li><strong>Dry-Run on 20 Representative Notes:</strong> Run the extractor on a 20-note sample spanning daily logs, paper summaries, and technical specs. Inspect the generated SQLite table to verify that no generic stop-nouns or self-loops slipped through.</li>
-          <li><strong>Schedule Incremental Watchers:</strong> Configure a background file watcher (using <code>watchdog</code> or a nightly cron/launchd timer) that hashes modified Markdown files, purges stale edges by <code>source_file</code>, and upserts updated triples automatically.</li>
-        </ol>
-
-        <!-- SVG Diagram 7 -->
-        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 1rem;">
-          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
-            <rect width="960" height="400" fill="#040711" rx="8"/>
-            <text x="480" y="34" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Local-First Graph Workstation Architecture</text>
-            <rect x="45" y="75" width="260" height="275" rx="10" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
-            <text x="175" y="108" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Obsidian / Markdown Vault</text>
-            <text x="70" y="145" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Plain-text .md notes</text>
-            <text x="70" y="172" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- PDFs converted to .md</text>
-            <text x="70" y="199" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- ontology.yaml &amp; aliases.json</text>
-            <text x="70" y="226" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Watchdog / Cron trigger</text>
-            <line x1="305" y1="212" x2="350" y2="212" stroke="#fbbf24" stroke-width="2"/>
-            <rect x="350" y="75" width="260" height="275" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
-            <text x="480" y="108" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">127.0.0.1 Inference &amp; Graph</text>
-            <text x="375" y="145" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Ollama JSON Extraction</text>
-            <text x="375" y="172" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- SQLite + NetworkX / KuzuDB</text>
-            <text x="375" y="199" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Leiden Community Clustering</text>
-            <text x="375" y="226" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Zero external network calls</text>
-            <line x1="610" y1="212" x2="655" y2="212" stroke="#fbbf24" stroke-width="2"/>
-            <rect x="655" y="75" width="260" height="275" rx="10" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
-            <text x="785" y="108" fill="#e879f9" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Query &amp; Synthesis CLI</text>
-            <text x="680" y="145" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- 2-Hop Local GraphRAG</text>
-            <text x="680" y="172" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Global Cluster Briefings</text>
-            <text x="680" y="199" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Strict [file#chunk] Citations</text>
-            <text x="680" y="226" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">- Local MCP Server for IDE</text>
-          </svg>
-        </div>
-
-        <h2 id="tutorial-python-graphrag" style="color: #fbbf24; margin-top: 2.5rem;">Production Python Pipeline: Multi-Hop GraphRAG Retriever with Citations</h2>
-        <p>
-          Once your graph is populated in SQLite and loaded into NetworkX, this retriever performs seed entity matching, executes a bounded 2-hop breadth-first traversal, ranks connected evidence edges, and passes the structured subgraph context to your local Ollama model for cited synthesis.
-        </p>
-
-        <div class="code-window" style="background: #040711; border: 1px solid rgba(56, 189, 248, 0.35); border-left: 3px solid var(--cyan); border-radius: 8px; margin: 1.75rem 0; overflow: hidden;">
-          <div class="code-bar" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; background: #0c111d; border-bottom: 1px solid rgba(56, 189, 248, 0.2);">
-            <span style="font-family: monospace; font-size: 0.85rem; color: #38bdf8;">graphrag_retriever.py</span>
-            <button type="button" class="copy-btn" onclick="copyCode(this)" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 4px; padding: 0.25rem 0.65rem; font-size: 0.78rem; cursor: pointer; text-decoration: none !important;">Copy</button>
-          </div>
-          <pre style="margin: 0; padding: 1.15rem; white-space: pre-wrap; word-break: break-word; overflow-x: hidden; color: #e2e8f0; font-size: 0.88rem; line-height: 1.55;"><code>import json
-import sqlite3
-import urllib.request
-from pathlib import Path
-import networkx as nx
-
-def find_seed_nodes(g: nx.MultiDiGraph, query: str, limit: int = 5) -&gt; list[str]:
-    terms = {w.lower() for w in query.split() if len(w) &gt; 2}
-    scored = []
-    for node_id, data in g.nodes(data=True):
-        name = data.get("name", "").lower()
-        overlap = sum(1 for t in terms if t in name)
-        if overlap &gt; 0:
-            scored.append((overlap, g.degree(node_id), node_id))
-    scored.sort(reverse=True)
-    return [n for _, _, n in scored[:limit]]
-
-def extract_k_hop_context(g: nx.MultiDiGraph, seeds: list[str], hops: int = 2, max_edges: int = 30) -&gt; list[str]:
-    visited_nodes = set(seeds)
-    frontier = set(seeds)
-    for _ in range(hops):
-        next_frontier = set()
-        for node in frontier:
-            if node in g:
-                next_frontier.update(g.successors(node))
-                next_frontier.update(g.predecessors(node))
-        frontier = next_frontier - visited_nodes
-        visited_nodes.update(frontier)
-
-    subgraph = g.subgraph(visited_nodes)
-    evidence_lines = []
-    for u, v, data in list(subgraph.edges(data=True))[:max_edges]:
-        line = (
-            f"- ({u}) -[{data['predicate']}]-&gt; ({v}) | "
-            f"Quote: \"{data['quote']}\" [Source: {data['source_file']}]"
-        )
-        evidence_lines.append(line)
-    return evidence_lines
-
-def answer_with_graphrag(db_path: Path, question: str, model: str = "qwen2.5:7b") -&gt; str:
-    conn = sqlite3.connect(db_path)
-    g = nx.MultiDiGraph()
-    for nid, etype, name in conn.execute("SELECT node_id, entity_type, canonical_name FROM nodes"):
-        g.add_node(nid, entity_type=etype, name=name)
-    for src, pred, tgt, quote, src_file in conn.execute(
-        "SELECT source_id, predicate, target_id, evidence_quote, source_file FROM edges"
-    ):
-        g.add_edge(src, tgt, predicate=pred, quote=quote, source_file=src_file)
-
-    seeds = find_seed_nodes(g, question)
-    if not seeds:
-        return "No matching entities found in the local knowledge graph."
-
-    context_lines = extract_k_hop_context(g, seeds, hops=2)
-    prompt = (
-        "Answer the question using ONLY the verified graph edges and quotes below. "
-        "Cite the exact [Source: ...] path for every claim.\n\n"
-        f"GRAPH EVIDENCE:\n" + "\n".join(context_lines) + f"\n\nQUESTION: {question}"
-    )
-    payload = {"model": model, "prompt": prompt, "stream": False, "options": {"temperature": 0.1}}
-    req = urllib.request.Request(
-        "http://127.0.0.1:11434/api/generate",
-        data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
-    )
-    with urllib.request.urlopen(req, timeout=90) as resp:
-        return json.loads(resp.read().decode("utf-8"))["response"]</code></pre>
-        </div>
-
-        <h2 id="tutorial-prompt-resolution" style="color: #fbbf24; margin-top: 2.5rem;">Production Prompt Template: Entity Resolution and Merge Adjudicator</h2>
-        <p>
-          When your Stage 2 vector similarity check flags two entity names in the gray zone (cosine similarity between 0.80 and 0.92), run this adjudication prompt with each node's 1-hop neighborhood to decide safely whether to merge them or keep them separate.
-        </p>
-
-        <div class="code-window" style="background: #040711; border: 1px solid rgba(251, 191, 36, 0.35); border-left: 3px solid var(--gold); border-radius: 8px; margin: 1.75rem 0; overflow: hidden;">
-          <div class="code-bar" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; background: #0c111d; border-bottom: 1px solid rgba(251, 191, 36, 0.2);">
-            <span style="font-family: monospace; font-size: 0.85rem; color: #fbbf24;">entity_merge_adjudicator_prompt.txt</span>
-            <button type="button" class="copy-btn" onclick="copyCode(this)" style="background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4); border-radius: 4px; padding: 0.25rem 0.65rem; font-size: 0.78rem; cursor: pointer; text-decoration: none !important;">Copy</button>
-          </div>
-          <pre style="margin: 0; padding: 1.15rem; white-space: pre-wrap; word-break: break-word; overflow-x: hidden; color: #e2e8f0; font-size: 0.88rem; line-height: 1.55;"><code>SYSTEM:
-You are an Entity Resolution Adjudicator for a Personal Knowledge Graph.
-Decide whether ENTITY_A and ENTITY_B refer to the exact same real-world entity.
-
-CRITERIA:
-- Compare entity types, shared neighbors, and source context quotes.
-- Acronyms, versioned tool names (e.g., "Python 3.12" vs "Python"), and spelling variants usually MERGE.
-- Distinct products, distinct people sharing a last name, or homonyms across domains MUST NOT MERGE.
-
-OUTPUT JSON ONLY:
-{
-  "decision": "MERGE" | "KEEP_SEPARATE",
-  "canonical_name": "string",
-  "reasoning": "one concise sentence"
-}
-
-ENTITY_A: {{entity_a_name}} (Type: {{entity_a_type}})
-Neighbors A: {{entity_a_neighbors}}
-
-ENTITY_B: {{entity_b_name}} (Type: {{entity_b_type}})
-Neighbors B: {{entity_b_neighbors}}</code></pre>
-        </div>
-
-        <h2 id="tutorial-ops-recovery" style="color: #fbbf24; margin-top: 2.5rem;">Step-by-Step Operational Runbook: Graph Pruning, Snapshots, and Rebuild</h2>
-        <p>
-          Execute this monthly maintenance runbook to keep your personal knowledge graph fast, accurate, and free of semantic drift:
-        </p>
-
-        <!-- SVG Diagram 8 -->
-        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(232, 121, 249, 0.3); border-radius: 12px; padding: 1rem;">
-          <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
-            <rect width="960" height="400" fill="#040711" rx="8"/>
-            <text x="480" y="34" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Monthly Graph Maintenance &amp; Blue-Green Rebuild Cycle</text>
-            <rect x="55" y="135" width="155" height="110" rx="8" fill="#0c111d" stroke="#38bdf8" stroke-width="2"/>
-            <text x="132" y="175" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">1. Snapshot DB</text>
-            <text x="132" y="200" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">sqlite3 .backup</text>
-            <text x="132" y="220" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Verify Checksum</text>
-            <line x1="210" y1="190" x2="255" y2="190" stroke="#fbbf24" stroke-width="2"/>
-            <rect x="255" y="135" width="155" height="110" rx="8" fill="#0c111d" stroke="#34d399" stroke-width="2"/>
-            <text x="332" y="175" fill="#34d399" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">2. Prune Orphans</text>
-            <text x="332" y="200" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Drop 0-degree nodes</text>
-            <text x="332" y="220" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Audit Top-20 Hubs</text>
-            <line x1="410" y1="190" x2="455" y2="190" stroke="#fbbf24" stroke-width="2"/>
-            <rect x="455" y="135" width="165" height="110" rx="8" fill="#0c111d" stroke="#e879f9" stroke-width="2"/>
-            <text x="537" y="175" fill="#e879f9" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">3. Merge Aliases</text>
-            <text x="537" y="200" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Review Gray Zone</text>
-            <text x="537" y="220" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Update aliases.json</text>
-            <line x1="620" y1="190" x2="665" y2="190" stroke="#fbbf24" stroke-width="2"/>
-            <rect x="665" y="135" width="235" height="110" rx="8" fill="#0c111d" stroke="#fbbf24" stroke-width="2"/>
-            <text x="782" y="175" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">4. Recompute Leiden</text>
-            <text x="782" y="200" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Refresh Cluster Summaries</text>
-            <text x="782" y="220" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Run 5 Golden Queries</text>
-          </svg>
-        </div>
-
-        <ol style="color: #cbd5e1; line-height: 1.85; padding-left: 1.5rem;">
-          <li><strong>Create an Atomic SQLite Backup:</strong> Never run destructive graph cleanup on your live database. Execute <code>sqlite3 pkg.db ".backup pkg_backup_$(date +%F).db"</code> first.</li>
-          <li><strong>Audit High-Degree Hub Nodes:</strong> Query the top 20 nodes by degree (<code>ORDER BY degree DESC LIMIT 20</code>). If generic terms like <code>"Model"</code> or <code>"API"</code> appear, add them to your stoplist and delete those nodes and their incident edges.</li>
-          <li><strong>Purge Disconnected Orphan Nodes:</strong> Remove nodes with zero incident edges (left behind after note deletions or edits) using a single SQL <code>DELETE FROM nodes WHERE node_id NOT IN (SELECT source_id FROM edges UNION SELECT target_id FROM edges)</code>.</li>
-          <li><strong>Review Alias Merge Candidates:</strong> Inspect the weekly gray-zone queue, append confirmed synonyms to <code>aliases.json</code>, and rewrite incident edge IDs to point to the surviving canonical node.</li>
-          <li><strong>Recompute Leiden Communities &amp; Verify Golden Queries:</strong> Re-run community detection and summary generation, then execute five benchmark multi-hop questions from your personal test suite to confirm citation accuracy before retiring the backup.</li>
-        </ol>
-
-        
-        <h2 id="saving-tokens-with-graphs" style="color: #fbbf24; margin-top: 2.5rem;">How Personal Knowledge Graphs Help AI Tools Save Tokens</h2>
-        <p>
-          Standard RAG architectures suffer from massive token inflation. When an AI tool needs to answer a complex research query, naive systems retrieve 10 to 20 raw text chunks, stuffing 5,000 to 15,000 tokens of noisy, redundant paragraphs into the model's context window. This burns unnecessary API spend, slows down response latency, and increases the likelihood that the model loses the core signal amidst peripheral conversational fluff.
-        </p>
-        <p>
-          A personal knowledge graph solves this by acting as a <strong>pre-computed semantic index</strong>:
-        </p>
-        <ul style="color: #cbd5e1; line-height: 1.85; padding-left: 1.5rem;">
-          <li><strong style="color: var(--cyan, #38bdf8);">Subgraphs Instead of Full Documents:</strong> Instead of loading three complete articles (9,000 tokens) to verify whether Author A collaborated with Project B, a 2-hop graph query extracts exactly five triples (under 120 tokens), slashing input token spend by over 90%.</li>
-          <li><strong style="color: var(--cyan, #38bdf8);">Pre-Computed Community Summaries:</strong> Hierarchical Leiden community detection generates concise summaries of research clusters in advance. Global synthesis queries can read these compact cluster summaries rather than re-ingesting hundreds of raw notes.</li>
-          <li><strong style="color: var(--cyan, #38bdf8);">Local Offline Extraction:</strong> By running entity and relation extraction locally using open-weights models (via Ollama or llama.cpp), your ongoing graph enrichment costs exactly zero dollars in cloud API tokens.</li>
-        </ul>
-
-        <div style="margin: 2rem 0; background: #040711; border: 1px solid rgba(52, 211, 153, 0.3); border-radius: 12px; padding: 1rem;">
-          <svg viewBox="0 0 960 380" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
-            <rect width="960" height="380" fill="#040711" rx="8"/>
-            <text x="480" y="34" fill="#34d399" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Token Optimization: Flat Chunk Dumping vs. Targeted Subgraph Injection</text>
-            
-            <rect x="50" y="80" width="390" height="250" rx="10" fill="#0c111d" stroke="#f87171" stroke-width="1.5"/>
-            <text x="245" y="115" fill="#f87171" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Naive Vector RAG (Bloated Context)</text>
-            <text x="245" y="150" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">12 Raw Text Chunks Retrieved</text>
-            <text x="245" y="180" fill="#fbbf24" font-family="monospace" font-size="16" font-weight="700" text-anchor="middle">~8,500 Input Tokens</text>
-            <text x="245" y="215" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">High latency, token spend &amp; distraction noise</text>
-            <text x="245" y="250" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Recurring cost per turn: $0.02 - $0.08</text>
-            
-            <rect x="520" y="80" width="390" height="250" rx="10" fill="#0c111d" stroke="#34d399" stroke-width="1.5"/>
-            <text x="715" y="115" fill="#34d399" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">GraphRAG Subgraph (Targeted Context)</text>
-            <text x="715" y="150" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">Precise 2-Hop Entity Triples + Summary</text>
-            <text x="715" y="180" fill="#34d399" font-family="monospace" font-size="16" font-weight="700" text-anchor="middle">~450 Input Tokens (94% Reduction)</text>
-            <text x="715" y="215" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Ultra-low latency, crystal-clear reasoning signal</text>
-            <text x="715" y="250" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Recurring cost per turn: &lt; $0.001</text>
-          </svg>
-        </div>
-
-
-        <h2 id="pricing-guarantees" style="color: #fbbf24; margin-top: 2.5rem;">Transparent Pricing &amp; Global Parity Index</h2>
-        <p>
-          Every personal service engagement is delivered 1-on-1 with zero intermediary contractors. The program spans <strong>5 days of live training</strong> (4 hours per day, Monday through Friday) followed immediately by <strong>5 days of dedicated technical support</strong> at zero additional charge.
-        </p>
-        <p>
-          To ensure equitable access for developers, founders, and researchers worldwide, pricing follows our standardized 195-country Purchasing Power Parity (PPP) index:
-        </p>
-
-        <div style="background:#040711;border:1px solid rgba(251,191,36,0.3);border-radius:12px;padding:1.5rem;margin:1.5rem 0;">
-          <h3 style="color:var(--gold,#fbbf24);margin-top:0;font-size:1.2rem;">Personal Individual Service Rate</h3>
-          <p style="font-size:1.25rem;font-weight:700;color:#ffffff;margin-bottom:0.5rem;">
-            $100 / $75 / $50 / $50 / $25 / Custom USD
-          </p>
-          <p style="font-size:0.88rem;color:var(--text-secondary);margin-bottom:1rem;">
-            Representing Tier 1 (100%), Tier 2 (75%), Tier 3 (50%), Tier 4 (Startups 50%), Tier 5 (Academia 25%), and Tier 6 (Relief/Custom). Strictly one person only.
-          </p>
-          <ul style="padding-left:1.5rem;line-height:1.8;color:var(--text-secondary);font-size:0.9rem;">
-            <li><strong>$0 Upfront Advance Deposit:</strong> You pay nothing until technical discovery and curriculum alignment are fully validated.</li>
-            <li><strong>Five Equal Milestone Installments:</strong> Invoiced in 20% increments only after each milestone block is completed.</li>
-            <li><strong>100% Walkaway Guarantee:</strong> If not completely satisfied after the first milestone phase, walk away owing nothing.</li>
-            <li><strong>Dedicated 5-Day Support Included:</strong> Strictly $0 charge for post-training debugging, calibration, and support.</li>
-            <li><strong>Apache 2.0 Licensed Deliverables:</strong> You own 100% of the code, graph schemas, and database files developed.</li>
-          </ul>
-          <p style="margin-top:1rem;margin-bottom:0;">
-            <a class="gold-link" href="../pricing.html">View complete pricing terms and country classification index →</a>
-          </p>
-        </div>
-
-<h2 id="references" style="color: #fbbf24; margin-top: 2.5rem;">Live Technical References</h2>
-        <ul style="color: #cbd5e1; line-height: 1.9; padding-left: 1.5rem;">
-          <li><a class="gold-link" href="https://microsoft.github.io/graphrag/" rel="noopener" target="_blank">Microsoft GraphRAG Documentation</a> - Official architecture for hierarchical Leiden community summaries and local/global graph search.</li>
-          <li><a class="gold-link" href="https://neo4j.com/docs/" rel="noopener" target="_blank">Neo4j Graph Database Documentation</a> - Labeled property graph modeling, Cypher query language, and Graph Data Science guides.</li>
-          <li><a class="gold-link" href="https://docs.kuzudb.com/" rel="noopener" target="_blank">KuzuDB Embedded Graph Database</a> - High-performance, serverless, in-process property graph database with native Cypher and vector support.</li>
-          <li><a class="gold-link" href="https://networkx.org/documentation/stable/" rel="noopener" target="_blank">NetworkX Documentation</a> - Standard Python library for complex network analysis, k-hop traversal, and graph algorithms.</li>
-          <li><a class="gold-link" href="https://ollama.com/docs" rel="noopener" target="_blank">Ollama Documentation</a> - Local LLM runtime with structured JSON schema output and zero-egress execution.</li>
-          <li><a class="gold-link" href="https://docs.pydantic.dev/latest/" rel="noopener" target="_blank">Pydantic V2 Validation Documentation</a> - Strict runtime schema validation for LLM-extracted triples and structured outputs.</li>
-          <li><a class="gold-link" href="https://leidenalg.readthedocs.io/en/stable/" rel="noopener" target="_blank">leidenalg Documentation</a> - Python implementation of the Leiden algorithm for guaranteed well-connected community detection.</li>
-          <li><a class="gold-link" href="https://www.w3.org/TR/rdf11-concepts/" rel="noopener" target="_blank">W3C RDF 1.1 Concepts and Abstract Syntax</a> - Foundational specification for subject-predicate-object semantic web triples.</li>
-          <li><a class="gold-link" href="https://www.anthropic.com/engineering/building-effective-agents" rel="noopener" target="_blank">Anthropic: Building Effective Agents</a> - Engineering patterns for tool-augmented retrieval and deterministic verification loops.</li>
-          <li><a class="gold-link" href="https://www.sqlite.org/backup.html" rel="noopener" target="_blank">SQLite Online Backup API</a> - Atomic snapshot and recovery guarantees for local-first single-file databases.</li>
-        </ul>
-
-      </article>
-    </div>
-  </section>
-
-  <!-- Preserved CTA Block -->
-  <section class="section content-card">
-    <div class="container">
-      <div class="cta-box">
-        <div class="service-cta-buttons" style="margin:2rem 0;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-          <a class="btn btn-commission btn-lg" href="../contact.html">Commission Knowledge Graph →</a>
-          <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
-        </div>
+      <div style="background:#000000;border:1px solid rgba(192,132,252,0.32);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:#c084fc;text-transform:uppercase;letter-spacing:0.08em;">Discovery</div>
+        <div style="font-size:1.35rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Multi-Hop Links</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Spot hidden connections across years of reading</div>
+      </div>
+      <div style="background:#000000;border:1px solid rgba(251,191,36,0.32);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:var(--gold,#fbbf24);text-transform:uppercase;letter-spacing:0.08em;">Efficiency</div>
+        <div style="font-size:1.35rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Save AI Tokens</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Send compact graph neighborhoods, not whole books</div>
       </div>
     </div>
-  </section>
-  <div class="divider" style="margin-top:3rem;"></div>
+  </div>
 
-  <script>
-  function copyCode(btn) {
-    var pre = btn.closest('.code-window').querySelector('pre');
-    navigator.clipboard.writeText(pre.innerText).then(function() {
-      var orig = btn.innerText;
-      btn.innerText = 'Copied!';
-      setTimeout(function() { btn.innerText = orig; }, 1800);
+  <div class="content-card" id="table-of-contents" style="background:#000000;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:1.75rem 2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.3rem;margin-bottom:1rem;">Table of Contents</h2>
+    <ol style="display:flex;flex-direction:column;gap:0.55rem;padding-left:1.4rem;color:var(--text-secondary);line-height:1.7;margin:0;">
+      <li><a class="gold-link" href="#why-personal-knowledge-graphs">Why Connecting Concepts, Authors, Projects, and Citations Beats Flat Search</a></li>
+      <li><a class="gold-link" href="#hybrid-graph-rag-and-token-savings">Hybrid Graph-RAG Querying and Helping Your AI Tools Save Tokens</a></li>
+      <li><a class="gold-link" href="#lean-personal-graph-modeling">A Lean Personal Graph Model That Stays Easy to Maintain</a></li>
+      <li><a class="gold-link" href="#tutorial-sqlite-graph">Hands-On Guide: Lightweight Local Knowledge Graph in SQLite</a></li>
+      <li><a class="gold-link" href="#tutorial-triple-prompt">Practical Template: Clean Fact &amp; Relationship Extractor Prompt</a></li>
+      <li><a class="gold-link" href="#tutorial-graph-workflow">Step-by-Step Personal Graph Habit</a></li>
+      <li><a class="gold-link" href="#pricing-guarantees">Transparent Pricing and Global Parity Index</a></li>
+      <li><a class="gold-link" href="#references">Helpful References and Official Guides</a></li>
+    </ol>
+  </div>
+
+  <section class="content-card" id="why-personal-knowledge-graphs" style="background:#000000;border:1px solid rgba(251,191,36,0.22);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.55rem;margin-bottom:1rem;">Why Connecting Concepts, Authors, Projects, and Citations Beats Flat Search</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">Normal keyword or vector search finds individual paragraphs that look similar to your question, but it misses the bigger picture - like which three authors influenced your current project, or how an idea from a 2022 article solves a problem in a paper you read yesterday.</p>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">A personal knowledge graph stores simple, clear connections (for example: <code>Author -&gt; wrote -&gt; Paper -&gt; supports -&gt; Concept -&gt; used_in -&gt; Project</code>). In these 1-on-1 sessions, we keep graph modeling practical and lightweight so you spend your time discovering insights, not wrestling with complex database admin.</p>
+    <ul style="color:var(--text-secondary);line-height:1.8;padding-left:1.4rem;margin-bottom:1.25rem;">
+      <li style="margin-bottom:0.5rem;"><strong>Uncover Non-Obvious Links:</strong> Walk two or three hops across your reading history to spot patterns flat folders hide.</li>
+      <li style="margin-bottom:0.5rem;"><strong>Stronger Long-Term Recall:</strong> Every concept stays tied to the exact author, quote, and project where you learned it.</li>
+      <li style="margin-bottom:0.5rem;"><strong>Major Token Savings for Your AI Tools:</strong> Instead of pasting 15 long documents into a prompt, you pass a compact 30-line graph neighborhood of exact facts and citations.</li>
+    </ul>
+  </section>
+  <section class="content-card" id="hybrid-graph-rag-and-token-savings" style="background:#000000;border:1px solid rgba(251,191,36,0.22);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.55rem;margin-bottom:1rem;">Hybrid Graph-RAG Querying and Helping Your AI Tools Save Tokens</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">Stuffing entire PDFs into every AI prompt burns through context windows and monthly budgets fast. With hybrid graph-RAG, inspired by practical patterns in <a class="gold-link" href="#references">Microsoft GraphRAG research</a> and lightweight local stores like <a class="gold-link" href="#references">NetworkX</a> or <a class="gold-link" href="#references">SQLite</a>, your query first finds the matching nodes, pulls only their 1-hop or 2-hop neighbors plus short source snippets, and hands that tiny, high-signal packet to the model.</p>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">The result is faster answers, higher accuracy across multi-step questions, and dramatic input token savings every time your AI assistant searches your work.</p>
+<svg viewBox="0 0 860 590" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PERSONAL KNOWLEDGE GRAPH AND TOKEN-SAVING QUERY FLOW" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.35);background:#000000;margin:1.5rem 0;display:block;">
+  <rect width="860" height="590" fill="#000000"/>
+  <text x="430" y="38" fill="#fbbf24" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">PERSONAL KNOWLEDGE GRAPH AND TOKEN-SAVING QUERY FLOW</text>
+  <rect x="90" y="66" width="680" height="66" rx="10" fill="#000000" stroke="#38bdf8" stroke-width="2"/>
+  <text x="430" y="93" fill="#38bdf8" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">1. Your Reading &amp; Work Notes</text>
+  <text x="430" y="115" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Books, papers, articles, and personal project logs</text>
+  <line x1="430" y1="132" x2="430" y2="160" stroke="#fbbf24" stroke-width="2"/>
+  <polygon points="424,158 436,158 430,166" fill="#fbbf24"/>
+  <rect x="90" y="166" width="680" height="66" rx="10" fill="#000000" stroke="#34d399" stroke-width="2"/>
+  <text x="430" y="193" fill="#34d399" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">2. Simple Entity &amp; Link Extraction</text>
+  <text x="430" y="215" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Extract Concepts, Authors, Projects, and Citations</text>
+  <line x1="430" y1="232" x2="430" y2="260" stroke="#fbbf24" stroke-width="2"/>
+  <polygon points="424,258 436,258 430,266" fill="#fbbf24"/>
+  <rect x="90" y="266" width="680" height="66" rx="10" fill="#000000" stroke="#fbbf24" stroke-width="2"/>
+  <text x="430" y="293" fill="#fbbf24" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">3. Local Graph Store</text>
+  <text x="430" y="315" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Clean nodes and labeled edges in SQLite or NetworkX</text>
+  <line x1="430" y1="332" x2="430" y2="360" stroke="#fbbf24" stroke-width="2"/>
+  <polygon points="424,358 436,358 430,366" fill="#fbbf24"/>
+  <rect x="90" y="366" width="680" height="66" rx="10" fill="#000000" stroke="#c084fc" stroke-width="2"/>
+  <text x="430" y="393" fill="#c084fc" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">4. Hybrid Graph-RAG Retrieval</text>
+  <text x="430" y="415" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Match topic + fetch only 2-hop neighborhood facts</text>
+  <line x1="430" y1="432" x2="430" y2="460" stroke="#fbbf24" stroke-width="2"/>
+  <polygon points="424,458 436,458 430,466" fill="#fbbf24"/>
+  <rect x="90" y="466" width="680" height="66" rx="10" fill="#000000" stroke="#f472b6" stroke-width="2"/>
+  <text x="430" y="493" fill="#f472b6" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">5. Compact Prompt -&gt; AI Answer</text>
+  <text x="430" y="515" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Up to 70% fewer tokens sent, sharper multi-hop recall</text>
+  <text x="430" y="572" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">Connect every idea cleanly and feed your AI only high-signal context</text>
+</svg>
+  </section>
+  <section class="content-card" id="lean-personal-graph-modeling" style="background:#000000;border:1px solid rgba(251,191,36,0.22);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.55rem;margin-bottom:1rem;">A Lean Personal Graph Model That Stays Easy to Maintain</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">Personal graphs fail when people invent fifty node types and stop updating them after two weeks. We stick to four core building blocks - Concept, Author, Project, and Citation - plus a small set of clear relationship labels like <code>cites</code>, <code>contradicts</code>, <code>extends</code>, and <code>applied_to</code>.</p>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">Whenever you add a new note in <a class="gold-link" href="#references">Obsidian</a> or plain Markdown, a small script extracts candidate links, cleans duplicate names, and updates your local graph automatically.</p>
+<svg viewBox="0 0 860 370" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FOUR-ENTITY PERSONAL KNOWLEDGE GRAPH" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(56,189,248,0.35);background:#000000;margin:1.5rem 0;display:block;">
+  <rect width="860" height="370" fill="#000000"/>
+  <text x="430" y="36" fill="#fbbf24" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">FOUR-ENTITY PERSONAL KNOWLEDGE GRAPH</text>
+  <rect x="210" y="56" width="440" height="62" rx="10" fill="#000000" stroke="#fbbf24" stroke-width="2"/>
+  <text x="430" y="82" fill="#fbbf24" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Your Question or Active Project</text>
+  <text x="430" y="103" fill="#f8fafc" font-family="sans-serif" font-size="12.5" text-anchor="middle">Find connected ideas without sending whole documents</text>
+  <line x1="430" y1="118" x2="165" y2="152" stroke="#38bdf8" stroke-width="1.8"/>
+  <polygon points="160,150 170,150 165,158" fill="#38bdf8"/>
+  <rect x="40" y="158" width="250" height="76" rx="10" fill="#000000" stroke="#38bdf8" stroke-width="2"/>
+  <text x="165" y="188" fill="#38bdf8" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Concepts</text>
+  <text x="165" y="211" fill="#f8fafc" font-family="sans-serif" font-size="12" text-anchor="middle">Core ideas, methods &amp; tradeoffs</text>
+  <line x1="165" y1="234" x2="430" y2="274" stroke="#38bdf8" stroke-width="1.8"/>
+  <line x1="430" y1="118" x2="430" y2="152" stroke="#34d399" stroke-width="1.8"/>
+  <polygon points="425,150 435,150 430,158" fill="#34d399"/>
+  <rect x="305" y="158" width="250" height="76" rx="10" fill="#000000" stroke="#34d399" stroke-width="2"/>
+  <text x="430" y="188" fill="#34d399" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Authors &amp; Sources</text>
+  <text x="430" y="211" fill="#f8fafc" font-family="sans-serif" font-size="12" text-anchor="middle">Writers, labs &amp; exact citations</text>
+  <line x1="430" y1="234" x2="430" y2="274" stroke="#34d399" stroke-width="1.8"/>
+  <line x1="430" y1="118" x2="695" y2="152" stroke="#c084fc" stroke-width="1.8"/>
+  <polygon points="690,150 700,150 695,158" fill="#c084fc"/>
+  <rect x="570" y="158" width="250" height="76" rx="10" fill="#000000" stroke="#c084fc" stroke-width="2"/>
+  <text x="695" y="188" fill="#c084fc" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Projects</text>
+  <text x="695" y="211" fill="#f8fafc" font-family="sans-serif" font-size="12" text-anchor="middle">Articles, code &amp; decisions built</text>
+  <line x1="695" y1="234" x2="430" y2="274" stroke="#c084fc" stroke-width="1.8"/>
+  <polygon points="424,272 436,272 430,280" fill="#f472b6"/>
+  <rect x="170" y="280" width="520" height="64" rx="10" fill="#000000" stroke="#f472b6" stroke-width="2"/>
+  <text x="430" y="307" fill="#f472b6" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Compact, Source-Backed Context Packet</text>
+  <text x="430" y="329" fill="#f8fafc" font-family="sans-serif" font-size="12.5" text-anchor="middle">Better long-term recall + lower AI token usage on every query</text>
+</svg>
+  </section>
+
+  <section class="content-card" id="tutorial-sqlite-graph" style="background:#000000;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.5rem;margin-bottom:0.9rem;">Hands-On Guide: Lightweight Local Knowledge Graph in SQLite</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">This zero-dependency Python script stores nodes and relationships in a single local SQLite file and exports a compact token-saving context block for your AI tool.</p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+  <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:#000000;border-bottom:1px solid rgba(56,189,248,0.35);">
+    <span style="font-family:monospace;font-size:0.8rem;color:#38bdf8;">personal_graph.py</span>
+    <button class="copy-btn" type="button" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+  </div>
+  <pre style="margin:0;padding:1.25rem;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;color:#e2e8f0;font-family:monospace;font-size:0.85rem;line-height:1.6;"><code>import sqlite3
+
+class PersonalGraph:
+    def __init__(self, db_path: str = &quot;knowledge_graph.db&quot;):
+        self.conn = sqlite3.connect(db_path)
+        self.conn.execute(
+            &quot;CREATE TABLE IF NOT EXISTS edges (src TEXT, rel TEXT, dst TEXT, cite TEXT)&quot;
+        )
+        self.conn.commit()
+
+    def add_link(self, src: str, rel: str, dst: str, cite: str) -&gt; None:
+        self.conn.execute(
+            &quot;INSERT INTO edges VALUES (?, ?, ?, ?)&quot;, (src, rel, dst, cite)
+        )
+        self.conn.commit()
+
+    def compact_context(self, topic: str) -&gt; str:
+        rows = self.conn.execute(
+            &quot;SELECT src, rel, dst, cite FROM edges WHERE src = ? OR dst = ?&quot;,
+            (topic, topic),
+        ).fetchall()
+        lines = [f&quot;- {s} --[{r}]--&gt; {d} (source: {c})&quot; for s, r, d, c in rows]
+        return &quot;\n&quot;.join(lines) or &quot;No links found yet.&quot;</code></pre>
+</div>
+  </section>
+  <section class="content-card" id="tutorial-triple-prompt" style="background:#000000;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-bottom:0.9rem;">Practical Template: Clean Fact &amp; Relationship Extractor Prompt</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">Run this short prompt on any finished reading note to pull out clean, verifiable graph links without clutter.</p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.35);border-left:3px solid #fbbf24;border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+  <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:#000000;border-bottom:1px solid rgba(251,191,36,0.35);">
+    <span style="font-family:monospace;font-size:0.8rem;color:#fbbf24;">extract_graph_links.txt</span>
+    <button class="copy-btn" type="button" style="background:rgba(251,191,36,0.15);color:#fbbf24;border:1px solid rgba(251,191,36,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+  </div>
+  <pre style="margin:0;padding:1.25rem;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;color:#e2e8f0;font-family:monospace;font-size:0.85rem;line-height:1.6;"><code>ROLE: Personal Knowledge Graph Curator.
+INPUT: One reading note or paper summary.
+
+INSTRUCTIONS:
+1. Extract up to 6 clear relationships using ONLY these types:
+   - Entity types: Concept, Author, Project, Citation
+   - Relations: wrote, supports, contradicts, extends, applied_to
+2. Return a JSON list of {&quot;src&quot;: &quot;&quot;, &quot;rel&quot;: &quot;&quot;, &quot;dst&quot;: &quot;&quot;, &quot;cite&quot;: &quot;&quot;}.
+3. Use short, consistent names (no long sentences inside node labels).
+4. Include ONLY relationships directly stated in the note.</code></pre>
+</div>
+  </section>
+  <section class="content-card" id="tutorial-graph-workflow" style="background:#000000;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.5rem;margin-bottom:0.9rem;">Step-by-Step Personal Graph Habit</h2>
+    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">Keep your knowledge graph accurate, useful, and token-efficient with these five simple steps.</p>
+    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+  <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:#000000;border-bottom:1px solid rgba(56,189,248,0.35);">
+    <span style="font-family:monospace;font-size:0.8rem;color:#38bdf8;">graph_habit.txt</span>
+    <button class="copy-btn" type="button" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+  </div>
+  <pre style="margin:0;padding:1.25rem;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;color:#e2e8f0;font-family:monospace;font-size:0.85rem;line-height:1.6;"><code>1. Keep only 4 node types (Concept, Author, Project, Citation) so the graph stays clean.
+2. Extract 3 to 6 links whenever you finish an important article, paper, or book.
+3. Attach the exact file name or URL as the citation on every single edge.
+4. Before starting an AI chat on a topic, paste the compact 2-hop graph summary first.
+5. Merge duplicate concept names once a month to keep connections sharp.</code></pre>
+</div>
+  </section>
+
+<section class="content-card" id="pricing-guarantees" style="background:#000000;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:2rem;margin-bottom:2.5rem;">
+  <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.55rem;margin-bottom:1rem;">Transparent Pricing and Global Parity Index</h2>
+  <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">
+    Every personal training engagement uses clear, fair pricing adjusted for where you live and work through our six-tier, 195-country Purchasing Power Parity (PPP) index. You pay <strong>$0 upfront</strong> with zero deposit, settle in <strong>five equal milestone installments of 20%</strong> only after completed blocks of work, and keep a <strong>Walkaway Guarantee</strong> after the first milestone if you are not satisfied. See your exact country tier on the <a class="gold-link" href="../pricing.html">full Pricing and Parity page</a>.
+  </p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin:1.25rem 0;">
+    <div style="background:#000000;border:1px solid rgba(56,189,248,0.35);border-radius:10px;padding:1.25rem;">
+      <h3 style="color:var(--cyan,#38bdf8);font-size:1.1rem;margin-bottom:0.5rem;">Personal Individual Service (Knowledge Graphs)</h3>
+      <p style="color:#ffffff;font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;">$100 / $75 / $50 / $50 / $25 / Custom USD</p>
+      <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;margin:0;">
+        Tier 1 through Tier 6 parity rates for <strong>strictly one person only</strong>. Includes 5 days live 1-on-1 training (4 hours per day, Monday to Friday; Saturdays and Sundays are holidays) plus 5 days of dedicated support at <strong>$0 extra charge</strong>, delivered 100% remote worldwide.
+      </p>
+    </div>
+    <div style="background:#000000;border:1px solid rgba(251,191,36,0.35);border-radius:10px;padding:1.25rem;">
+      <h3 style="color:var(--gold,#fbbf24);font-size:1.1rem;margin-bottom:0.5rem;">Personal AI Training Flagship (Full 60-Day Track)</h3>
+      <p style="color:#ffffff;font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;">$1,000 / $750 / $500 / $500 / $250 / Custom USD</p>
+      <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;margin:0;">
+        Tier 1 through Tier 6 parity rates for <strong>strictly one person only</strong>. Includes 30 days of live 1-on-1 engineering training plus 30 days of dedicated support at <strong>$0 extra charge</strong>. All training guides, templates, and custom code are yours under the <strong>Apache 2.0 license</strong>.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <section class="content-card" id="references" style="background:#000000;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:2rem;margin-bottom:2.5rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.45rem;margin-bottom:1rem;">Helpful References and Official Guides</h2>
+    <ul style="color:var(--text-secondary);line-height:1.85;padding-left:1.25rem;margin:0;">
+      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://microsoft.github.io/graphrag/" rel="noopener" target="_blank">Microsoft GraphRAG Documentation</a> - Open-source patterns for combining knowledge graphs with retrieval.</li>
+      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://networkx.org/documentation/stable/" rel="noopener" target="_blank">NetworkX Python Library</a> - Simple, fast local graph analysis and multi-hop path traversal in Python.</li>
+      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://docs.python.org/3/library/sqlite3.html" rel="noopener" target="_blank">Python SQLite Documentation</a> - Zero-server local storage for portable personal knowledge graphs.</li>
+      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://neo4j.com/docs/getting-started/" rel="noopener" target="_blank">Neo4j Graph Modeling Guide</a> - Clear introduction to nodes, relationships, and clean property graph design.</li>
+      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://obsidian.md/" rel="noopener" target="_blank">Obsidian Graph &amp; Markdown Links</a> - Plain-text wikilinks and visual local graph exploration for personal notes.</li>
+      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://kuzudb.com/" rel="noopener" target="_blank">Kuzu Embedded Graph Database</a> - Fast, embeddable local property graph database for solo researchers.</li>
+    </ul>
+  </section>
+
+  <div class="service-cta-buttons" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+    <a class="btn btn-commission btn-lg" href="../contact.html">Commission Knowledge Graphs →</a>
+    <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.copy-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var code = btn.closest('.code-window').querySelector('pre').innerText;
+    navigator.clipboard.writeText(code).then(function() {
+      var orig = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(function() { btn.textContent = orig; }, 1600);
     });
-  }
-  </script>
+  });
+});
+</script>
 </main>
     <!-- START:FOOTER -->
     <footer id="links">

@@ -5,22 +5,22 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Google Gemma Local Models: A Practical Guide | Thomas Cherickal</title>
-<meta content="A practical guide to Google's Gemma open-weight small language models: the current lineup, hardware needs, inference tools, the Hugging Face ecosystem, benchmarks against peers, and the Gemmaverse." name="description"/>
+<meta content="Deploy Google's open-weights Gemma family locally on consumer GPUs, laptops, and private servers. Covers model sizes, quantization, Ollama and vLLM setup, benchmarks, and fine-tuning." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
 <link href="https://thedigitalfuturist.com/gemini-training/google-gemma-local-models.html" rel="canonical"/>
 <!-- Open Graph -->
 <meta content="article" property="og:type"/>
 <meta content="https://thedigitalfuturist.com/gemini-training/google-gemma-local-models.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
-<meta content="Google Gemma Local Models: A Practical Guide | Thomas Cherickal" property="og:title"/>
-<meta content="A practical guide to Google's Gemma open-weight small language models: the current lineup, hardware needs, inference tools, the Hugging Face ecosystem, benchmarks against peers, and the Gemmaverse." property="og:description"/>
+<meta content="Google Gemma Local Models: Practical Deployment Guide | Thomas Cherickal" property="og:title"/>
+<meta content="Deploy Google's open-weights Gemma family locally on consumer GPUs, laptops, and private servers. Covers model sizes, quantization, Ollama and vLLM setup, benchmarks, and fine-tuning." property="og:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@thomazcherickal" name="twitter:site"/>
-<meta content="Google Gemma Local Models: A Practical Guide | Thomas Cherickal" name="twitter:title"/>
-<meta content="A practical guide to Google's Gemma open-weight small language models: the current lineup, hardware needs, inference tools, the Hugging Face ecosystem, benchmarks against peers, and the Gemmaverse." name="twitter:description"/>
+<meta content="Google Gemma Local Models: Practical Deployment Guide | Thomas Cherickal" name="twitter:title"/>
+<meta content="Deploy Google's open-weights Gemma family locally on consumer GPUs, laptops, and private servers. Covers model sizes, quantization, Ollama and vLLM setup, benchmarks, and fine-tuning." name="twitter:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
 <!-- Favicons -->
 <link href="../assets/favicon.ico" rel="icon" sizes="any"/>
@@ -51,15 +51,15 @@
         "@type": "WebPage",
         "@id": "https://thedigitalfuturist.com/gemini-training/google-gemma-local-models.html",
         "url": "https://thedigitalfuturist.com/gemini-training/google-gemma-local-models.html",
-        "name": "Google Gemma Local Models: A Practical Guide | Thomas Cherickal"
+        "name": "Google Gemma Local Models: Practical Deployment Guide | Thomas Cherickal"
       },
-      "headline": "Google Gemma Local Models: A Practical Guide",
-      "description": "A practical guide to Google's Gemma open-weight small language models: the current lineup, hardware needs, inference tools, the Hugging Face ecosystem, benchmarks against peers, and the Gemmaverse.",
+      "headline": "Google Gemma Local Models: Practical Deployment Guide",
+      "description": "Deploy Google's open-weights Gemma family locally on consumer GPUs, laptops, and private servers. Covers model sizes, quantization, Ollama and vLLM setup, benchmarks, and fine-tuning.",
       "image": [
         "https://thedigitalfuturist.com/assets/og-card.png"
       ],
       "datePublished": "2026-11-04T00:00:00+05:30",
-      "dateModified": "2026-11-04T00:00:00+05:30",
+      "dateModified": "2026-11-21T00:00:00+05:30",
       "inLanguage": "en-US",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -75,7 +75,8 @@
         "sameAs": [
           "https://linkedin.com/in/thomascherickal",
           "https://github.com/thomascherickal",
-          "https://x.com/thomazcherickal"
+          "https://x.com/thomazcherickal",
+          "https://dev.to/thomascherickal"
         ]
       },
       "publisher": {
@@ -94,17 +95,13 @@
       "articleSection": "Generative AI",
       "keywords": [
         "Google Gemma",
-        "Small Language Models",
-        "SLMs",
-        "Local LLMs",
+        "Open-Weights Models",
+        "Local AI Deployment",
+        "Quantization",
         "Ollama",
-        "LM Studio",
-        "llama.cpp",
-        "Hugging Face",
-        "Open-Weight Models",
-        "Apache 2.0",
-        "Gemmaverse",
-        "Sovereign AI"
+        "vLLM",
+        "Fine-Tuning",
+        "Privacy-First AI"
       ]
     },
     {
@@ -287,16 +284,16 @@
           <li><a href="../gemini-training/google-gemma-local-models.html">Google Gemma Local Models</a></li>
           <li><a href="../gemini-training/google-multimodality.html">Google Multimodality</a></li>
           <li><a href="../gemini-training/google-deepmind.html">Google DeepMind</a></li>
-          <li><a href="../gemini-training/google-code-wiki.html">Google Code Wiki</a></li>
           <li><a href="../gemini-training/google-deep-research.html">Google Deep Research</a></li>
           <li><a href="../gemini-training/google-gemini-skills.html">Gemini Skills</a></li>
           <li><a href="../gemini-training/google-gemini-4-argon.html">Gemini 4 Argon</a></li>
           <li><a href="../gemini-training/google-gemini-4-carbon.html">Gemini 4 Carbon</a></li>
           <li><a href="../gemini-training/google-gemini-4-hydrogen.html">Gemini 4 Hydrogen</a></li>
+          <li><a href="../gemini-training/google-gemini-4-neon.html">Gemini 4 Neon</a></li>
           <li><a href="../gemini-training/google-gemini-4-krypton.html" aria-disabled="true" tabindex="-1"
               style="pointer-events: none; opacity: 0.45; cursor: not-allowed;">Gemini 4 Krypton</a></li>
-          <li><a href="../gemini-training/google-gemini-4-helix.html" aria-disabled="true" tabindex="-1"
-              style="pointer-events: none; opacity: 0.45; cursor: not-allowed;">Gemini 4 Helix</a></li>
+          <li><a href="../gemini-training/google-gemini-4-helium.html" aria-disabled="true" tabindex="-1"
+              style="pointer-events: none; opacity: 0.45; cursor: not-allowed;">Gemini 4 Helium</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
@@ -313,417 +310,232 @@
   </nav>
   <!-- END:HEADER -->
 <main class="container single-column-article">
-<header class="hero content-card" style="text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2.5rem 0 1.5rem 0;">
-<div style="background:var(--bg-card, #0c111d);border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:12px;padding:1.5rem;display:flex;align-items:center;gap:1.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.35);">
-<div>
-<div style="font-family:var(--font-mono, monospace);letter-spacing:0.2em;text-transform:uppercase;font-size:0.75rem;color:var(--gold, #fbbf24);font-weight:700;">The Future Is Now</div>
-<div style="color:var(--text-muted, #94a3b8);font-size:0.95rem;margin-top:0.35rem;line-height:1.5;">By <strong style="color:var(--text, #e2e8f0);">Thomas Cherickal</strong>, Generative AI Consultant · November 4, 2026</div>
-</div>
-</div>
-<div style="background:var(--bg-card, #0c111d);border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:12px;padding:2rem;box-shadow:0 4px 20px rgba(0,0,0,0.35);">
-<p class="hero-badge" style="margin:0 0 0.85rem 0;">// OPEN-WEIGHTS &amp; SOVEREIGN LOCAL INFERENCE</p>
+<header class="hero content-card" style="background:#000000;text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2.5rem 0 1.5rem 0;">
+<div style="background:#000000;border:1px solid var(--border, rgba(56, 189, 248, 0.25));border-radius:12px;padding:2rem;box-shadow:0 4px 20px rgba(0,0,0,0.35);">
+<p class="hero-badge" style="margin:0 0 0.85rem 0;">// OPEN-WEIGHTS &amp; PRIVATE LOCAL INFERENCE</p>
 <h1>Google Gemma Local Models: A Practical Guide</h1>
-<p class="hero-desc" style="font-size:1.15rem;line-height:1.7;color:var(--text-muted);margin:0;">
-          A practical guide to Google's Gemma open-weight small language models: the current lineup, hardware needs, inference tools, the Hugging Face ecosystem, benchmarks against peers, and the Gemmaverse.
-        </p>
+<div class="title-tags" aria-label="Article topics"><span class="title-tag">Google Gemma</span><span class="title-tag">Local AI</span><span class="title-tag">Quantization</span><span class="title-tag">Ollama &amp; vLLM</span><span class="title-tag">Fine-Tuning</span></div>
+<p class="hero-desc" style="font-size:1.15rem;line-height:1.7;color:var(--text-muted);margin:0.75rem 0 0;">
+  A clear, hands-on guide to running Google's open-weights Gemma family on laptops, consumer GPUs, and private servers - covering model sizes, quantization, Ollama and vLLM setup, benchmarks, and fine-tuning.
+</p>
 </div>
 </header>
+
 <div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;margin:1.5rem 0 2rem 0;">
-<div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.25rem;text-align:center;">
-<div style="font-size:2rem;font-weight:700;color:var(--gold);font-family:var(--font-mono);">Apache 2.0</div>
-<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Permissive Licensing</div>
+<div class="stat-card" style="background:#000000;border:1px solid var(--border);border-radius:10px;padding:1.25rem;text-align:center;">
+<div style="font-size:1.85rem;font-weight:700;color:var(--gold);font-family:var(--font-mono);">Open Weights</div>
+<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Download &amp; Self-Host</div>
 </div>
-<div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.25rem;text-align:center;">
-<div style="font-size:2rem;font-weight:700;color:var(--cyan);font-family:var(--font-mono);">E2B - 31B</div>
-<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Scalable Lineup</div>
+<div class="stat-card" style="background:#000000;border:1px solid var(--border);border-radius:10px;padding:1.25rem;text-align:center;">
+<div style="font-size:1.85rem;font-weight:700;color:var(--cyan);font-family:var(--font-mono);">1B - 27B+</div>
+<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Flexible Size Ladder</div>
 </div>
-<div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.25rem;text-align:center;">
-<div style="font-size:2rem;font-weight:700;color:#e879f9;font-family:var(--font-mono);">140+ Langs</div>
-<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Multilingual Pre-training</div>
+<div class="stat-card" style="background:#000000;border:1px solid var(--border);border-radius:10px;padding:1.25rem;text-align:center;">
+<div style="font-size:1.85rem;font-weight:700;color:#c084fc;font-family:var(--font-mono);">4-Bit Ready</div>
+<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Fits Consumer GPUs</div>
 </div>
-<div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.25rem;text-align:center;">
-<div style="font-size:2rem;font-weight:700;color:var(--green, #34d399);font-family:var(--font-mono);">&lt; 3 GB</div>
-<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Edge Memory Footprint</div>
+<div class="stat-card" style="background:#000000;border:1px solid var(--border);border-radius:10px;padding:1.25rem;text-align:center;">
+<div style="font-size:1.85rem;font-weight:700;color:#34d399;font-family:var(--font-mono);">100% Local</div>
+<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Zero Data Egress</div>
 </div>
 </div>
-<!-- HERO FIGURE -->
-<article class="content-card" style="margin-bottom:1.5rem;">
-<figure style="margin:2rem 0;text-align:center;">
-<svg aria-labelledby="g1t g1d" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.32);border-radius:14px;background:#040711;box-shadow:0 8px 24px rgba(0,0,0,0.5);" viewbox="0 0 960 440">
-<title id="g1t">The Gemma 4 family from edge to workstation</title>
-<desc id="g1d">Five blocks of rising height show Gemma 4 E2B, E4B, 12B, 26B A4B and 31B, each labelled with the device class it targets.</desc>
-<defs><filter id="gl"><fegaussianblur result="b" stddeviation="3"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs>
-<rect fill="#000" height="440" width="960"></rect>
-<rect fill="none" height="428" rx="10" stroke="#C99A18" stroke-opacity=".5" width="948" x="6" y="6"></rect>
-<text fill="#FFD24A" font-size="26" font-weight="700" x="40" y="48">Gemma 4: one family, five sizes</text>
-<text fill="#a9a596" font-size="15" x="40" y="74">Block height is proportional to parameter count (effective for E2B and E4B, total for the rest)</text>
-<line stroke="#FFD24A" stroke-width="2" x1="40" x2="920" y1="360" y2="360"></line>
-<rect fill="#00E5FF" filter="url(#gl)" height="18.4" width="140" x="60" y="341.6"></rect>
-<rect fill="#2EE59D" filter="url(#gl)" height="36" width="140" x="235" y="324"></rect>
-<rect fill="#8B5CF6" filter="url(#gl)" height="95.6" width="140" x="410" y="264.4"></rect>
-<rect fill="#FF2E93" filter="url(#gl)" height="201.6" width="140" x="585" y="158.4"></rect>
-<rect fill="#FFD24A" filter="url(#gl)" height="245.6" width="140" x="760" y="114.4"></rect>
-<g fill="#fff" font-size="18" font-weight="700" text-anchor="middle">
-<text x="130" y="330">E2B</text><text x="305" y="312">E4B</text><text x="480" y="252">12B</text><text x="655" y="146">26B A4B</text><text x="830" y="102">31B</text>
-</g>
-<g fill="#e9e6dc" font-size="13" text-anchor="middle">
-<text x="130" y="382">2.3B effective</text><text x="305" y="382">4.5B effective</text><text x="480" y="382">11.95B dense</text><text x="655" y="382">25.2B total, 3.8B active</text><text x="830" y="382">30.7B dense</text>
-</g>
-<g fill="#a9a596" font-size="13" text-anchor="middle">
-<text x="130" y="404">phones, Pi</text><text x="305" y="404">phones, laptops</text><text x="480" y="404">laptops</text><text x="655" y="404">workstations</text><text x="830" y="404">workstations</text>
-</g>
-<text fill="#a9a596" font-size="12" x="40" y="428">Source: Gemma 4 model card. Context window: 128K (E2B, E4B) and 256K (12B, 26B A4B, 31B).</text>
-</svg>
-<figcaption style="color:var(--text-muted, #94a3b8);font-size:0.875rem;margin-top:0.75rem;font-style:italic;">Image 1. The Gemma 4 lineup, from phone-class models to workstation-class models.</figcaption>
-</figure>
-</article>
+
 <!-- TABLE OF CONTENTS -->
-<article class="content-card" id="table-of-contents">
+<article class="content-card" id="table-of-contents" style="background:#000000;">
 <h2>Contents</h2>
 <div class="toc-grid" style="display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem;">
-<a class="toc-link gold-link" href="#intro">1. Introduction</a>
-<a class="toc-link gold-link" href="#slm">2. What Small Language Models Are</a>
-<a class="toc-link gold-link" href="#uses">3. What SLMs Are Used For</a>
-<a class="toc-link gold-link" href="#lineup">4. The Current Gemma Models</a>
-<a class="toc-link gold-link" href="#hardware">5. Hardware Required</a>
-<a class="toc-link gold-link" href="#where">6. Where Gemma Runs Locally</a>
-<a class="toc-link gold-link" href="#tools">7. Inference Tools</a>
-<a class="toc-link gold-link" href="#hf">8. The Hugging Face Ecosystem</a>
-<a class="toc-link gold-link" href="#free">9. Why Gemma Is Free</a>
-<a class="toc-link gold-link" href="#why">10. Why Open-Weight Local Models Help</a>
-<a class="toc-link gold-link" href="#bench">11. Benchmarks Against Peers</a>
-<a class="toc-link gold-link" href="#gemmaverse">12. The Gemmaverse</a>
-<a class="toc-link gold-link" href="#choose">13. Choosing a Model</a>
-<a class="toc-link gold-link" href="#conclusion">14. Conclusion</a>
-<a class="toc-link gold-link" href="#references">15. References</a>
+<a class="toc-link gold-link" href="#why-local">1. Why Run Open-Weights Gemma Locally</a>
+<a class="toc-link gold-link" href="#model-sizes">2. Choosing the Right Gemma Model Size</a>
+<a class="toc-link gold-link" href="#quantization">3. Quantization Formats and Memory Planning</a>
+<a class="toc-link gold-link" href="#setup-ollama-vllm">4. Step-by-Step Setup with Ollama and vLLM</a>
+<a class="toc-link gold-link" href="#benchmarks">5. How to Compare Gemma Against Open Peers</a>
+<a class="toc-link gold-link" href="#fine-tuning">6. Fine-Tuning for Privacy-First Domain Workloads</a>
+<a class="toc-link gold-link" href="#references">7. References</a>
 </div>
 </article>
-<article class="content-card" id="intro">
-<h2 id="intro">Introduction</h2><p>A capable language model used to mean a rented one. You sent your text to a data center, paid per token, and accepted whatever the provider changed next month. Google's Gemma models offer a different deal: you download the weights once and run them on your own machine.</p><p>This article covers what small language models are, what they do well, and which Gemma models exist today. It lists the hardware each model needs, the tools that run them, and the Hugging Face ecosystem around them. It also explains why the weights are free, how Gemma benchmarks against similar open models, and what the community has built with them.</p><div class="callout"><p>I checked every source linked in the text on November 4, 2026. Benchmark numbers come from Google, from Artificial Analysis, or from the Gemma 4 technical report, and I name the source each time. Hardware figures are guidance based on published memory tables, so test on your own machine before you buy anything.</p></div>
+
+<article class="content-card" id="why-local" style="background:#000000;">
+<h2>Why Run Open-Weights Gemma Locally</h2>
+<p>Cloud AI APIs are convenient, but they are not the right fit for every job. Sometimes your legal, healthcare, or engineering files cannot leave your office network. Other times you run thousands of short classification or extraction jobs every hour and want predictable hardware costs instead of a growing per-token bill.</p>
+<p>Google's Gemma family solves this problem by offering lightweight, open-weights models built from the same research lineage as Gemini. You download the model files once from the <a class="gold-link" href="#references">Google Gemma documentation</a> or the <a class="gold-link" href="#references">Google Hugging Face hub</a>, and run them directly on your laptop, desktop GPU, or private server.</p>
+<ul>
+<li><strong>Complete privacy:</strong> Prompts, customer files, and source code never leave your machine.</li>
+<li><strong>Offline reliability:</strong> Works on flights, factory floors, field sites, and air-gapped networks.</li>
+<li><strong>Predictable cost:</strong> Once you own the GPU or laptop, running extra prompts costs only electricity.</li>
+<li><strong>Version stability:</strong> You control when to upgrade, so silent cloud model updates never break your workflow.</li>
+</ul>
 </article>
-<article class="content-card" id="slm">
-<h2 id="slm">What small language models are</h2><p>A small language model, or SLM, is a language model small enough to run on ordinary hardware such as a phone, a laptop or a single GPU. No official cutoff defines "small," and the line keeps moving upward. In the Gemma family, it covers everything from a 270-million-parameter function-calling model to a 31-billion-parameter dense model.</p><p>The research case for SLMs is strong. In <a class="gold-link" href="https://arxiv.org/abs/2506.02153">an NVIDIA position paper</a>, researchers argue that SLMs are sufficiently powerful, more suitable and more economical for many agentic tasks. Their reasoning is that agents mostly repeat a narrow set of specialized jobs, which do not need the broad conversational range of a giant model.</p><p>The paper is a position statement, not a benchmark, so read it as an argument. It still matches what practitioners see: a well-tuned small model handles classification, extraction, routing and short generation at a fraction of the cost. A large model remains the better choice when a task needs wide knowledge or long chains of reasoning.</p><p>Gemma describes its models as built from the same research as Gemini, in a size that fits your hardware. Google's launch post for <a class="gold-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/">Gemma 4</a> claims "byte for byte, the most capable open models." Treat that as marketing language, and use the benchmark section below to judge it.</p>
-</article>
-<article class="content-card" id="uses">
-<h2 id="uses">What SLMs are used for</h2><p>Small models fit tasks where the input is modest, the answer is bounded and speed or privacy matters. The same list appears across Google's documentation and the community projects covered later. Each item below maps to a Gemma capability you can test today.</p><figure style="margin:2rem 0;text-align:center;">
-<svg aria-labelledby="g2t g2d" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.32);border-radius:14px;background:#040711;box-shadow:0 8px 24px rgba(0,0,0,0.5);" viewbox="0 0 960 460">
-<title id="g2t">Eight common uses for small language models</title>
-<desc id="g2d">A central small language model connects to eight uses: on-device assistants, offline translation, document extraction, function-calling agents, coding help, embeddings and retrieval, medical triage support, and voice and audio.</desc>
-<rect fill="#000" height="460" width="960"></rect>
-<text fill="#FFD24A" font-size="22" font-weight="700" x="40" y="38">What small language models do well</text>
-<g fill="none" opacity=".85" stroke-width="2.5">
-<path d="M260 100 L 410 210" stroke="#00E5FF"></path><path d="M260 190 L 405 225" stroke="#2EE59D"></path><path d="M260 280 L 405 245" stroke="#8B5CF6"></path><path d="M260 370 L 410 262" stroke="#FF9F1C"></path>
-<path d="M700 100 L 550 210" stroke="#FF2E93"></path><path d="M700 190 L 555 225" stroke="#FFD24A"></path><path d="M700 280 L 555 245" stroke="#00E5FF"></path><path d="M700 370 L 550 262" stroke="#2EE59D"></path>
+
+<article class="content-card" id="model-sizes" style="background:#000000;">
+<h2>Choosing the Right Gemma Model Size</h2>
+<p>In local AI, memory is the main bottleneck. A bigger model usually writes better answers and handles harder reasoning, but it also needs more video memory (VRAM) or unified laptop memory. The Gemma lineup spans from tiny edge models to workstation-class models so you can match the model to the hardware you already own.</p>
+<figure style="margin:2rem 0;text-align:center;">
+<svg aria-label="Gemma model size ladder from compact edge models on phones and 8 GB laptops up to 27B workstation and server models." role="img" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.35);border-radius:14px;background:#000000;" viewBox="0 0 920 360">
+<rect fill="#000000" height="360" rx="10" width="920"></rect>
+<text fill="#fbbf24" font-size="22" font-weight="700" x="40" y="42">Matching Gemma Sizes to Your Hardware</text>
+<text fill="#94a3b8" font-size="14" x="40" y="66">Approximate 4-bit memory footprint (weights + comfortable working headroom)</text>
+<line stroke="#fbbf24" stroke-width="2" x1="40" x2="880" y1="286" y2="286"></line>
+<rect fill="#000000" height="44" rx="8" stroke="#38bdf8" stroke-width="2.5" width="165" x="55" y="240"></rect>
+<rect fill="#000000" height="82" rx="8" stroke="#34d399" stroke-width="2.5" width="165" x="265" y="202"></rect>
+<rect fill="#000000" height="136" rx="8" stroke="#c084fc" stroke-width="2.5" width="165" x="475" y="148"></rect>
+<rect fill="#000000" height="190" rx="8" stroke="#f472b6" stroke-width="2.5" width="165" x="685" y="94"></rect>
+<g font-size="17" font-weight="700" text-anchor="middle">
+<text fill="#38bdf8" x="137" y="226">1B - 2B Edge</text>
+<text fill="#34d399" x="347" y="188">4B Compact</text>
+<text fill="#c084fc" x="557" y="134">12B Balanced</text>
+<text fill="#f472b6" x="767" y="80">27B+ Workstation</text>
 </g>
-<circle cx="480" cy="236" fill="#2a2105" r="78" stroke="#FFD24A" stroke-width="4"></circle>
-<text fill="#FFD24A" font-size="18" font-weight="700" text-anchor="middle" x="480" y="230">Small language</text>
-<text fill="#FFD24A" font-size="18" font-weight="700" text-anchor="middle" x="480" y="252">model</text>
-<g font-size="15" font-weight="700" text-anchor="middle">
-<rect fill="#06222a" height="56" rx="12" stroke="#00E5FF" stroke-width="2.5" width="230" x="30" y="72"></rect><text fill="#00E5FF" x="145" y="106">On-device assistants</text>
-<rect fill="#06261a" height="56" rx="12" stroke="#2EE59D" stroke-width="2.5" width="230" x="30" y="162"></rect><text fill="#2EE59D" x="145" y="196">Offline translation</text>
-<rect fill="#1c1040" height="56" rx="12" stroke="#8B5CF6" stroke-width="2.5" width="230" x="30" y="252"></rect><text fill="#b9a2ff" x="145" y="286">Document extraction</text>
-<rect fill="#2a1a03" height="56" rx="12" stroke="#FF9F1C" stroke-width="2.5" width="230" x="30" y="342"></rect><text fill="#FF9F1C" x="145" y="376">Function-calling agents</text>
-<rect fill="#2a0a1a" height="56" rx="12" stroke="#FF2E93" stroke-width="2.5" width="230" x="700" y="72"></rect><text fill="#FF2E93" x="815" y="106">Coding help</text>
-<rect fill="#2a2105" height="56" rx="12" stroke="#FFD24A" stroke-width="2.5" width="230" x="700" y="162"></rect><text fill="#FFD24A" x="815" y="196">Embeddings and retrieval</text>
-<rect fill="#06222a" height="56" rx="12" stroke="#00E5FF" stroke-width="2.5" width="230" x="700" y="252"></rect><text fill="#00E5FF" x="815" y="286">Medical triage support</text>
-<rect fill="#06261a" height="56" rx="12" stroke="#2EE59D" stroke-width="2.5" width="230" x="700" y="342"></rect><text fill="#2EE59D" x="815" y="376">Voice and audio</text>
+<g fill="#f8fafc" font-size="13.5" text-anchor="middle">
+<text x="137" y="266">~2 - 3 GB RAM</text>
+<text x="347" y="248">~4 - 6 GB RAM</text>
+<text x="557" y="222">~8 - 10 GB VRAM</text>
+<text x="767" y="196">~18 - 22 GB VRAM</text>
 </g>
-<text fill="#a9a596" font-size="12" x="40" y="440">Each use maps to a documented Gemma capability or variant covered in this article.</text>
+<g fill="#94a3b8" font-size="13" text-anchor="middle">
+<text x="137" y="312">Phones &amp; 8 GB laptops</text>
+<text x="347" y="312">Everyday 16 GB laptops</text>
+<text x="557" y="312">12 GB GPUs / MacBooks</text>
+<text x="767" y="312">24 GB GPUs / Private servers</text>
+</g>
 </svg>
-<figcaption style="color:var(--text-muted, #94a3b8);font-size:0.875rem;margin-top:0.75rem;font-style:italic;">Image 2. Eight tasks where a small local model is often enough.</figcaption>
-</figure><h3>On-device assistants and offline work</h3><p>The Gemma 4 E2B and E4B models target phones, Raspberry Pi boards and NVIDIA Jetson Orin Nano devices, and they run offline. That makes them suitable for field work, travel, and any setting with poor connectivity. Google's AI Edge Gallery app lets you try these two models on a phone.</p><h3>Translation and multilingual support</h3><p>Gemma 4 is pre-trained on more than 140 languages, with out-of-the-box support for more than 35. TranslateGemma, a separate release in sizes of 4B, 12B and 27B, is tuned for translation and covers 55 languages. A model that translates on your own device never sends a private document to a third party.</p><h3>Documents, vision and audio</h3><p>Every Gemma 4 model accepts images, and the models handle video as sequences of frames. The E2B, E4B and 12B models also take audio input of up to 30 seconds. On OmniDocBench 1.5, a document-parsing test where lower is better, the 31B model scores 0.131 and the E2B model scores 0.290, according to the model card.</p><h3>Agents and function calling</h3><p>Gemma 4 supports native function calling, structured JSON output and system instructions. FunctionGemma is a 270-million-parameter model built for function calling, released in December 2025. These features let a small model act as the router or tool-caller inside a larger system.</p><h3>Retrieval, coding and medicine</h3><p>EmbeddingGemma 2 is a 0.7B embedding model for search and retrieval, listed on Google's Hugging Face page. MedGemma covers medical text and images, and the 1.5 release is a 4B model. Code assistance is a common use of the larger Gemma 4 models, which score 80.0 percent on LiveCodeBench v6 at the 31B size.</p>
+<figcaption style="color:var(--text-muted, #94a3b8);font-size:0.875rem;margin-top:0.75rem;">Figure 1. Pick the largest Gemma size that fits comfortably inside your GPU or unified memory.</figcaption>
+</figure>
+<p>Alongside the core general-purpose models, Google and the community also publish focused Gemma variants for specialized jobs, including <strong>CodeGemma</strong> for code completion, <strong>MedGemma</strong> for medical text and imaging research, <strong>TranslateGemma</strong> for offline translation, and <strong>ShieldGemma</strong> for lightweight safety filtering.</p>
 </article>
-<article class="content-card" id="lineup">
-<h2 id="lineup">The current Gemma models</h2><p>The Gemma project keeps a dated list of every release on its <a class="gold-link" href="https://gemma.ai/models/releases/">Gemma release page</a>. The current flagship generation is Gemma 4, which arrived in spring 2026 as four models and gained a 12B Unified model on June 3, 2026. A Multi-Token Prediction release on April 16 added drafters for faster decoding.</p><p>All Gemma 4 models ship in base and instruction-tuned versions under the Apache 2.0 license. Hugging Face's <a class="gold-link" href="https://huggingface.co/blog/gemma4">Welcome Gemma 4 post</a> adds one more member, DiffusionGemma 26B-A4B, a diffusion-based text generator. The table below summarizes the core family using Google's <a class="gold-link" href="https://ai.google.dev/gemma/docs/core/model_card_4">Gemma 4 model card</a>.</p><div class="tablewrap">
-<table class="pricing-table" style="width:100%;border-collapse:collapse;margin:1.5rem 0;">
-<thead><tr><th>Model</th><th>Parameters</th><th>Design</th><th>Context</th><th>Input</th></tr></thead>
+
+<article class="content-card" id="quantization" style="background:#000000;">
+<h2>Quantization Formats and Memory Planning</h2>
+<p>Raw AI weights are stored as 16-bit numbers (FP16 or BF16), which take up a lot of space. <strong>Quantization</strong> shrinks those numbers into 8-bit or 4-bit integers. Think of it like saving a massive studio audio file as a high-quality compressed file: the file becomes much smaller and faster to load while keeping nearly all of its day-to-day usefulness.</p>
+<div class="tablewrap" style="overflow-x:auto;margin:1.5rem 0;border:1px solid rgba(56,189,248,0.25);border-radius:10px;">
+<table class="pricing-table" style="width:100%;border-collapse:collapse;background:#000000;">
+<thead><tr><th>Format</th><th>Typical Size Cut</th><th>Best Used With</th><th>Practical Tradeoff</th></tr></thead>
 <tbody>
-<tr><td>Gemma 4 E2B</td><td>2.3B effective (5.1B with embeddings)</td><td>Dense, per-layer embeddings</td><td>128K</td><td>Text, image, audio, video</td></tr>
-<tr><td>Gemma 4 E4B</td><td>4.5B effective (8B with embeddings)</td><td>Dense, per-layer embeddings</td><td>128K</td><td>Text, image, audio, video</td></tr>
-<tr><td>Gemma 4 12B Unified</td><td>11.95B</td><td>Dense, encoder-free</td><td>256K</td><td>Text, image, audio, video</td></tr>
-<tr><td>Gemma 4 26B A4B</td><td>25.2B total, 3.8B active</td><td>Mixture of experts (8 of 128 experts, plus 1 shared)</td><td>256K</td><td>Text, image, video</td></tr>
-<tr><td>Gemma 4 31B</td><td>30.7B</td><td>Dense</td><td>256K</td><td>Text, image, video</td></tr>
+<tr><td>BF16 / FP16 (16-bit)</td><td>1x (baseline)</td><td>vLLM on data-center GPUs</td><td>Highest precision; requires the most VRAM</td></tr>
+<tr><td>INT8 / Q8_0 (8-bit)</td><td>~2x smaller</td><td>llama.cpp, Ollama, vLLM</td><td>Virtually lossless quality at half the memory</td></tr>
+<tr><td>Q4_K_M / AWQ (4-bit)</td><td>~3.5x - 4x smaller</td><td>Laptops &amp; consumer GPUs</td><td>Best sweet spot for speed, memory, and accuracy</td></tr>
+<tr><td>QAT (Quantization-Aware)</td><td>~4x smaller</td><td>Google official checkpoints</td><td>Trained to stay accurate specifically at 4-bit</td></tr>
 </tbody>
 </table>
-</div><p>The "E" in E2B and E4B stands for effective parameters. Per-Layer Embeddings give these models far more stored parameters than they use per token, which keeps compute low. The 12B Unified model is encoder-free, meaning it projects raw image patches and audio waveforms straight into the language model's embedding space.</p><p>The 26B A4B is a mixture-of-experts model that activates about 3.8 billion parameters per token. It runs at roughly the speed of a 4B model, but it must still load all 25.2 billion parameters into memory. Plan your memory around the total, not the active count.</p><h3>Specialized Gemma variants</h3><p>Beyond the core family, Google and its partners publish focused models. The release page lists TranslateGemma (4B, 12B, 27B) and MedGemma 1.5 (4B), both from January 2026. It also lists FunctionGemma (270M) and T5Gemma 2 encoder-decoder models from December 2025, and EmbeddingGemma 2 from October 6, 2026.</p><p>Older generations remain available. Gemma 3 spans 270M, 1B, 4B, 12B and 27B sizes, and Gemma 3n introduced the E2B and E4B naming in June 2025. VaultGemma, a 1B model, and ShieldGemma, a safety classifier, round out the list.</p>
+</div>
+<p>Always leave 20% to 30% of your memory free for the <strong>context window</strong> (the KV cache that holds your conversation and uploaded documents). If a 12B model takes 8 GB in 4-bit format, running it on a 12 GB GPU or 16 GB Apple Silicon laptop gives you smooth speed without swapping to disk.</p>
 </article>
-<article class="content-card" id="hardware">
-<h2 id="hardware">Hardware required</h2><p>Memory decides what you can run, and speed is secondary. Google's <a class="gold-link" href="https://ai.google.dev/gemma/docs/core">Gemma core documentation</a> publishes approximate memory needs for the static weights, including a 20 percent loading overhead. The figures exclude the KV cache and supporting software, so add headroom for long prompts.</p><div class="tablewrap">
-<table class="pricing-table" style="width:100%;border-collapse:collapse;margin:1.5rem 0;">
-<thead><tr><th>Model</th><th>BF16 (16-bit)</th><th>8-bit</th><th>Q4_0 (4-bit)</th><th>Mobile</th></tr></thead>
-<tbody>
-<tr><td>E2B</td><td>11.4 GB</td><td>5.7 GB</td><td>2.9 GB</td><td>1.1 GB</td></tr>
-<tr><td>E4B</td><td>17.9 GB</td><td>8.9 GB</td><td>4.5 GB</td><td>2.5 GB</td></tr>
-<tr><td>12B</td><td>26.7 GB</td><td>13.4 GB</td><td>6.7 GB</td><td>not listed</td></tr>
-<tr><td>26B A4B</td><td>57.7 GB</td><td>28.8 GB</td><td>14.4 GB</td><td>not listed</td></tr>
-<tr><td>31B</td><td>69.9 GB</td><td>34.9 GB</td><td>17.5 GB</td><td>not listed</td></tr>
-</tbody>
-</table>
-</div><figure style="margin:2rem 0;text-align:center;">
-<svg aria-labelledby="g3t g3d" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.32);border-radius:14px;background:#040711;box-shadow:0 8px 24px rgba(0,0,0,0.5);" viewbox="0 0 960 440">
-<title id="g3t">Memory needed for Gemma 4 weights at three precisions</title>
-<desc id="g3d">Grouped bars show BF16, 8-bit and 4-bit weight memory for each Gemma 4 model, with dashed lines marking 8, 16, 24 and 32 gigabyte memory tiers.</desc>
-<rect fill="#000" height="440" width="960"></rect>
-<text fill="#FFD24A" font-size="22" font-weight="700" x="40" y="36">Weight memory by precision (GB)</text>
-<rect fill="#FFD24A" height="14" width="14" x="40" y="48"></rect><text fill="#e9e6dc" font-size="12" x="60" y="60">4-bit (Q4_0)</text>
-<rect fill="#00E5FF" height="14" width="14" x="150" y="48"></rect><text fill="#e9e6dc" font-size="12" x="170" y="60">8-bit</text>
-<rect fill="#FF2E93" height="14" width="14" x="220" y="48"></rect><text fill="#e9e6dc" font-size="12" x="240" y="60">BF16</text>
-<line stroke="#FFD24A" stroke-width="2" x1="90" x2="930" y1="360" y2="360"></line>
-<g stroke-dasharray="6 6" stroke-width="1.5">
-<line stroke="#8B5CF6" x1="90" x2="930" y1="332.8" y2="332.8"></line><line stroke="#8B5CF6" x1="90" x2="930" y1="305.6" y2="305.6"></line><line stroke="#8B5CF6" x1="90" x2="930" y1="278.4" y2="278.4"></line><line stroke="#8B5CF6" x1="90" x2="930" y1="251.2" y2="251.2"></line>
+
+<article class="content-card" id="setup-ollama-vllm" style="background:#000000;">
+<h2>Step-by-Step Setup with Ollama and vLLM</h2>
+<p>Two tools cover almost every local Gemma deployment: <strong>Ollama</strong> for personal laptops and quick prototyping, and <strong>vLLM</strong> for multi-user private servers that need high throughput and an OpenAI-compatible API.</p>
+<figure style="margin:2rem 0;text-align:center;">
+<svg aria-label="Three-layer local inference stack showing Apps like Ollama and LM Studio above runtimes like llama.cpp, MLX, and vLLM above hardware." role="img" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.35);border-radius:14px;background:#000000;" viewBox="0 0 920 350">
+<rect fill="#000000" height="350" rx="10" width="920"></rect>
+<text fill="#fbbf24" font-size="20" font-weight="700" x="40" y="38">The Local Gemma Inference Stack</text>
+<text fill="#94a3b8" font-size="12.5" font-weight="700" x="40" y="76">1. USER INTERFACE &amp; API LAYER</text>
+<g font-size="14.5" font-weight="700" text-anchor="middle">
+<rect fill="#000000" height="52" rx="10" stroke="#38bdf8" stroke-width="2" width="260" x="40" y="88"></rect>
+<text fill="#38bdf8" x="170" y="119">Ollama CLI &amp; Local API</text>
+<rect fill="#000000" height="52" rx="10" stroke="#34d399" stroke-width="2" width="260" x="330" y="88"></rect>
+<text fill="#34d399" x="460" y="119">LM Studio Desktop App</text>
+<rect fill="#000000" height="52" rx="10" stroke="#c084fc" stroke-width="2" width="260" x="620" y="88"></rect>
+<text fill="#c084fc" x="750" y="119">OpenAI-Compatible Server</text>
 </g>
-<g fill="#b9a2ff" font-size="12" text-anchor="end"><text x="84" y="337">8 GB</text><text x="84" y="310">16 GB</text><text x="84" y="283">24 GB</text><text x="84" y="256">32 GB</text></g>
-<!-- 3.4 px per GB; baseline 360 -->
-<g>
-<rect fill="#FFD24A" height="9.9" width="44" x="110" y="350.1"></rect><rect fill="#00E5FF" height="19.4" width="44" x="158" y="340.6"></rect><rect fill="#FF2E93" height="38.8" width="44" x="206" y="321.2"></rect>
-<rect fill="#FFD24A" height="15.3" width="44" x="275" y="344.7"></rect><rect fill="#00E5FF" height="30.3" width="44" x="323" y="329.7"></rect><rect fill="#FF2E93" height="60.9" width="44" x="371" y="299.1"></rect>
-<rect fill="#FFD24A" height="22.8" width="44" x="440" y="337.2"></rect><rect fill="#00E5FF" height="45.6" width="44" x="488" y="314.4"></rect><rect fill="#FF2E93" height="90.8" width="44" x="536" y="269.2"></rect>
-<rect fill="#FFD24A" height="49" width="44" x="605" y="311"></rect><rect fill="#00E5FF" height="97.9" width="44" x="653" y="262.1"></rect><rect fill="#FF2E93" height="196.2" width="44" x="701" y="163.8"></rect>
-<rect fill="#FFD24A" height="59.5" width="44" x="770" y="300.5"></rect><rect fill="#00E5FF" height="118.7" width="44" x="818" y="241.3"></rect><rect fill="#FF2E93" height="237.7" width="44" x="866" y="122.3"></rect>
-</g>
-<g fill="#fff" font-size="11" font-weight="700" text-anchor="middle">
-<text x="132" y="345">2.9</text><text x="180" y="335">5.7</text><text x="228" y="316">11.4</text>
-<text x="297" y="339">4.5</text><text x="345" y="324">8.9</text><text x="393" y="294">17.9</text>
-<text x="462" y="332">6.7</text><text x="510" y="309">13.4</text><text x="558" y="264">26.7</text>
-<text x="627" y="306">14.4</text><text x="675" y="257">28.8</text><text x="723" y="158">57.7</text>
-<text x="792" y="295">17.5</text><text x="840" y="236">34.9</text><text x="888" y="117">69.9</text>
-</g>
-<g fill="#e9e6dc" font-size="14" text-anchor="middle"><text x="182" y="384">E2B</text><text x="347" y="384">E4B</text><text x="512" y="384">12B</text><text x="677" y="384">26B A4B</text><text x="842" y="384">31B</text></g>
-<text fill="#a9a596" font-size="12" x="40" y="420">Source: Google Gemma core documentation. Static weights with 20% loading overhead; KV cache not included.</text>
-</svg>
-<figcaption style="color:var(--text-muted, #94a3b8);font-size:0.875rem;margin-top:0.75rem;font-style:italic;">Image 3. Four-bit weights bring every Gemma 4 model within reach of a 24 GB machine, and the E-models within reach of a phone.</figcaption>
-</figure><p>Community guides give slightly higher real-world totals, because context and runtime add to the weights. Unsloth's <a class="gold-link" href="https://unsloth.ai/docs/models/gemma-4">Gemma 4 local guide</a> lists 4-bit totals of about 4 GB for E2B, 5.5 to 6 GB for E4B, 7 to 8 GB for 12B, 16 to 18 GB for 26B A4B and 17 to 20 GB for 31B. On Ollama, the download files for the same models range from about 4.6 GB to 20 GB.</p><p>Translating those numbers into machines gives a rough ladder. These tiers are my guidance, not a vendor specification.</p><ul class="tight">
-<li><strong>Phone, Raspberry Pi or Jetson:</strong> E2B, and E4B on newer devices, through LiteRT-LM.</li>
-<li><strong>8 GB laptop:</strong> E2B comfortably at 4-bit, with E4B possible only with a short context.</li>
-<li><strong>16 GB laptop or 12 GB GPU:</strong> E4B and the 12B Unified model at 4-bit.</li>
-<li><strong>24 GB GPU or 32 GB unified memory:</strong> the 26B A4B and the 31B at 4-bit, with limited context.</li>
-<li><strong>80 GB data-center GPU:</strong> unquantized bfloat16 26B A4B and 31B, which Google says fit on a single H100.</li>
-</ul><p>Speed depends on the device. Google's <a class="gold-link" href="https://developers.google.com/edge/litert-lm/models/gemma-4">LiteRT-LM Gemma 4 page</a> reports E2B decode speeds of 143 tokens per second on an RTX 4090 and 160 on an M4 Mac. A Galaxy S26 Ultra reaches 52 on its GPU, an iPhone 17 Pro reaches 56, and a 16 GB Raspberry Pi 5 manages 8 on its CPU.</p>
-</article>
-<article class="content-card" id="where">
-<h2 id="where">Where Gemma runs locally</h2><p>Gemma runs on more kinds of hardware than most model families. Google's launch post names NVIDIA GPUs from Jetson Orin Nano to Blackwell, AMD GPUs through ROCm, and Google TPUs. Apple Silicon is a strong fit as well, because unified memory lets a laptop hold models that a discrete GPU of the same price could not.</p><p>The browser is a real target too. Transformers.js runs Gemma 4 in the browser, including text, image and audio inference, and the Hugging Face post links a WebGPU demo. Local pages built this way keep user data inside the tab.</p><p>At the other end, you can serve the larger models on one server. The 26B A4B and the 31B can fit on a single 80 GB H100 in bfloat16, and quantized versions run on consumer GPUs. For a small team, that is one box that replaces a metered API.</p>
-</article>
-<article class="content-card" id="tools">
-<h2 id="tools">Inference tools</h2><p>Several tools run Gemma locally, and most of them are free. They differ in how much they hide, so pick by how much control you want. The diagram shows how apps, runtimes and hardware relate.</p><figure style="margin:2rem 0;text-align:center;">
-<svg aria-labelledby="g4t g4d" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.32);border-radius:14px;background:#040711;box-shadow:0 8px 24px rgba(0,0,0,0.5);" viewbox="0 0 960 440">
-<title id="g4t">Three layers for running Gemma locally</title>
-<desc id="g4d">Apps such as Ollama, LM Studio and Unsloth Studio sit above runtimes such as llama.cpp, MLX, LiteRT-LM, Transformers and vLLM, which sit above hardware from phones to data-center GPUs.</desc>
-<rect fill="#000" height="440" width="960"></rect>
-<text fill="#FFD24A" font-size="22" font-weight="700" x="40" y="38">The local inference stack</text>
-<text fill="#a9a596" font-size="13" font-weight="700" x="40" y="82">APPS AND FRONT ENDS</text>
-<g font-size="15" font-weight="700" text-anchor="middle">
-<rect fill="#06222a" height="60" rx="12" stroke="#00E5FF" stroke-width="3" width="200" x="40" y="94"></rect><text fill="#00E5FF" x="140" y="130">Ollama</text>
-<rect fill="#06261a" height="60" rx="12" stroke="#2EE59D" stroke-width="3" width="200" x="260" y="94"></rect><text fill="#2EE59D" x="360" y="130">LM Studio</text>
-<rect fill="#1c1040" height="60" rx="12" stroke="#8B5CF6" stroke-width="3" width="200" x="480" y="94"></rect><text fill="#b9a2ff" x="580" y="130">Unsloth Studio</text>
-<rect fill="#2a0a1a" height="60" rx="12" stroke="#FF2E93" stroke-width="3" width="220" x="700" y="94"></rect><text fill="#FF2E93" x="810" y="130">AI Edge Gallery</text>
-</g>
-<text fill="#a9a596" font-size="13" font-weight="700" x="40" y="196">RUNTIMES AND LIBRARIES</text>
+<text fill="#94a3b8" font-size="12.5" font-weight="700" x="40" y="180">2. INFERENCE ENGINES</text>
 <g font-size="14" font-weight="700" text-anchor="middle">
-<rect fill="#2a2105" height="56" rx="10" stroke="#FFD24A" stroke-width="3" width="140" x="40" y="208"></rect><text fill="#FFD24A" x="110" y="241">llama.cpp</text>
-<rect fill="#2a2105" height="56" rx="10" stroke="#FFD24A" stroke-width="3" width="140" x="195" y="208"></rect><text fill="#FFD24A" x="265" y="241">MLX</text>
-<rect fill="#2a2105" height="56" rx="10" stroke="#FFD24A" stroke-width="3" width="140" x="350" y="208"></rect><text fill="#FFD24A" x="420" y="241">LiteRT-LM</text>
-<rect fill="#2a2105" height="56" rx="10" stroke="#FFD24A" stroke-width="3" width="140" x="505" y="208"></rect><text fill="#FFD24A" x="575" y="241">Transformers</text>
-<rect fill="#2a2105" height="56" rx="10" stroke="#FFD24A" stroke-width="3" width="120" x="660" y="208"></rect><text fill="#FFD24A" x="720" y="241">vLLM</text>
-<rect fill="#2a2105" height="56" rx="10" stroke="#FFD24A" stroke-width="3" width="125" x="795" y="208"></rect><text fill="#FFD24A" x="857" y="241">mistral.rs</text>
+<rect fill="#000000" height="52" rx="10" stroke="#fbbf24" stroke-width="2" width="195" x="40" y="192"></rect>
+<text fill="#fbbf24" x="137" y="223">llama.cpp (GGUF)</text>
+<rect fill="#000000" height="52" rx="10" stroke="#fbbf24" stroke-width="2" width="195" x="255" y="192"></rect>
+<text fill="#fbbf24" x="352" y="223">vLLM (High Batching)</text>
+<rect fill="#000000" height="52" rx="10" stroke="#fbbf24" stroke-width="2" width="195" x="470" y="192"></rect>
+<text fill="#fbbf24" x="567" y="223">Apple MLX</text>
+<rect fill="#000000" height="52" rx="10" stroke="#fbbf24" stroke-width="2" width="195" x="685" y="192"></rect>
+<text fill="#fbbf24" x="782" y="223">Transformers / LiteRT</text>
 </g>
-<text fill="#a9a596" font-size="13" font-weight="700" x="40" y="310">HARDWARE</text>
-<g fill="#e9e6dc" font-size="13" font-weight="700" text-anchor="middle">
-<rect fill="#0b0b0d" height="56" rx="10" stroke="#C99A18" stroke-width="2" width="150" x="40" y="322"></rect><text x="115" y="355">Phones, Pi</text>
-<rect fill="#0b0b0d" height="56" rx="10" stroke="#C99A18" stroke-width="2" width="150" x="205" y="322"></rect><text x="280" y="355">Apple Silicon</text>
-<rect fill="#0b0b0d" height="56" rx="10" stroke="#C99A18" stroke-width="2" width="150" x="370" y="322"></rect><text x="445" y="355">NVIDIA (CUDA)</text>
-<rect fill="#0b0b0d" height="56" rx="10" stroke="#C99A18" stroke-width="2" width="150" x="535" y="322"></rect><text x="610" y="355">AMD (ROCm)</text>
-<rect fill="#0b0b0d" height="56" rx="10" stroke="#C99A18" stroke-width="2" width="105" x="700" y="322"></rect><text x="752" y="355">CPU</text>
-<rect fill="#0b0b0d" height="56" rx="10" stroke="#C99A18" stroke-width="2" width="100" x="820" y="322"></rect><text x="870" y="355">Browser</text>
-</g>
-<text fill="#a9a596" font-size="12" x="40" y="414">LM Studio states that MLX and llama.cpp run under the hood. Unsloth Studio runs GGUF or MLX models.</text>
-</svg>
-<figcaption style="color:var(--text-muted, #94a3b8);font-size:0.875rem;margin-top:0.75rem;font-style:italic;">Image 4. Apps, runtimes and hardware: pick one from each layer.</figcaption>
-</figure><h3>Ollama</h3><p><a class="gold-link" href="https://ollama.com/">Ollama</a> runs on macOS, Windows and Linux, and it reports more than 9 million installs a month. Its <a class="gold-link" href="https://ollama.com/library/gemma4">Gemma 4 library page</a> lists tags for every size, such as <code>ollama run gemma4:12b</code> and <code>ollama run gemma4:31b</code>. It also offers MLX builds and cloud tags that run on Ollama's servers instead of your machine.</p><h3>LM Studio</h3><p><a class="gold-link" href="https://lmstudio.ai/models/gemma-4">LM Studio's model page</a> lists downloads of 4.2 GB for E2B, 5.9 GB for E4B, 7.4 GB for 12B, 15.6 GB for 26B A4B and 19 GB for 31B. It offers GGUF and MLX formats, including quantization-aware training versions. The company states that MLX and llama.cpp run under the hood of its app.</p><h3>llama.cpp</h3><p><a class="gold-link" href="https://github.com/ggml-org/llama.cpp">llama.cpp</a> is an MIT-licensed C and C++ inference engine with no external dependencies. It supports quantization from 1.5-bit to 8-bit, hybrid CPU and GPU inference for models larger than your VRAM, and backends including CUDA, HIP, Vulkan, Metal, SYCL and WebGPU. It can serve an OpenAI-compatible API, and the <a class="gold-link" href="https://huggingface.co/collections/ggml-org/gemma-4">ggml-org Gemma collection</a> hosts ready-made GGUF files.</p><h3>Others worth knowing</h3><p>Unsloth Studio gives you a browser interface for running and fine-tuning Gemma 4, and its guide recommends temperature 1.0, top-p 0.95 and top-k 64. MLX, through the mlx-vlm package, gives full multimodal support on Apple Silicon, and Hugging Face reports about 4x less active memory with its TurboQuant KV-cache compression. LiteRT-LM serves the E2B and E4B models on phones and small boards.</p><p>The Transformers library offers day-zero support, and it works with bitsandbytes, PEFT and TRL for fine-tuning. Hugging Face also lists mistral.rs, ONNX checkpoints and SGLang, and Google's launch post adds vLLM, NVIDIA NIM and Docker. If you want one default, start with Ollama or LM Studio, and move to llama.cpp when you need control.</p>
-</article>
-<article class="content-card" id="hf">
-<h2 id="hf">The Hugging Face ecosystem</h2><p>Hugging Face is the main hub where Gemma lives. Its <a class="gold-link" href="https://huggingface.co/docs/hub/index">Hub documentation</a> describes a platform that hosts over 2 million models, 1.5 million datasets and 1.5 million Spaces. All of it is open and publicly available, and every repository is version-controlled with commit history, diffs and branches.</p><p>Google's own page at <a class="gold-link" href="https://huggingface.co/google">Google on Hugging Face</a> lists 1,136 models, 75 datasets, 25 Spaces and 54 collections. The Gemma 4 collection holds the 31B, 26B A4B and 12B models in base and instruction-tuned form. Google also publishes MedGemma, EmbeddingGemma 2 and the older PaliGemma, CodeGemma and ShieldGemma families there.</p><figure style="margin:2rem 0;text-align:center;">
-<svg aria-labelledby="g5t g5d" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.32);border-radius:14px;background:#040711;box-shadow:0 8px 24px rgba(0,0,0,0.5);" viewbox="0 0 960 460">
-<title id="g5t">The Hugging Face ecosystem around Gemma</title>
-<desc id="g5d">A central Hub connects to models, datasets, Spaces, libraries, inference services, storage buckets and organizations.</desc>
-<rect fill="#000" height="460" width="960"></rect>
-<text fill="#FFD24A" font-size="22" font-weight="700" x="40" y="38">Hugging Face: the Gemma workshop</text>
-<g fill="none" opacity=".85" stroke-width="2.5">
-<path d="M480 235 L 160 110" stroke="#00E5FF"></path><path d="M480 235 L 480 110" stroke="#FF2E93"></path><path d="M480 235 L 800 110" stroke="#2EE59D"></path>
-<path d="M480 235 L 130 235" stroke="#8B5CF6"></path><path d="M480 235 L 830 235" stroke="#FF9F1C"></path>
-<path d="M480 235 L 250 380" stroke="#FFD24A"></path><path d="M480 235 L 710 380" stroke="#00E5FF"></path>
-</g>
-<circle cx="480" cy="235" fill="#2a2105" r="62" stroke="#FFD24A" stroke-width="4"></circle>
-<text fill="#FFD24A" font-size="20" font-weight="700" text-anchor="middle" x="480" y="232">The Hub</text>
-<text fill="#e9e6dc" font-size="12" text-anchor="middle" x="480" y="254">Git + Xet</text>
-<g font-weight="700" text-anchor="middle">
-<rect fill="#06222a" height="76" rx="12" stroke="#00E5FF" stroke-width="3" width="220" x="50" y="72"></rect><text fill="#00E5FF" font-size="16" x="160" y="104">Models</text><text fill="#cfeff5" font-size="12" font-weight="400" x="160" y="127">2M+ repos, model cards</text>
-<rect fill="#2a0a1a" height="76" rx="12" stroke="#FF2E93" stroke-width="3" width="220" x="370" y="72"></rect><text fill="#FF2E93" font-size="16" x="480" y="104">Datasets</text><text fill="#f5cfe0" font-size="12" font-weight="400" x="480" y="127">1.5M, Data Studio, streaming</text>
-<rect fill="#06261a" height="76" rx="12" stroke="#2EE59D" stroke-width="3" width="220" x="690" y="72"></rect><text fill="#2EE59D" font-size="16" x="800" y="104">Spaces</text><text fill="#cff5e4" font-size="12" font-weight="400" x="800" y="127">1.5M apps, Gradio, ZeroGPU</text>
-<rect fill="#1c1040" height="76" rx="12" stroke="#8B5CF6" stroke-width="3" width="220" x="20" y="197"></rect><text fill="#b9a2ff" font-size="16" x="130" y="229">Libraries</text><text fill="#ddd2ff" font-size="12" font-weight="400" x="130" y="252">Transformers, TRL, PEFT</text>
-<rect fill="#2a1a03" height="76" rx="12" stroke="#FF9F1C" stroke-width="3" width="220" x="720" y="197"></rect><text fill="#FF9F1C" font-size="16" x="830" y="229">Inference</text><text fill="#ffe0b8" font-size="12" font-weight="400" x="830" y="252">Providers, dedicated Endpoints</text>
-<rect fill="#2a2105" height="76" rx="12" stroke="#FFD24A" stroke-width="3" width="220" x="140" y="342"></rect><text fill="#FFD24A" font-size="16" x="250" y="374">Storage Buckets</text><text fill="#e9e6dc" font-size="12" font-weight="400" x="250" y="397">S3-like, for checkpoints</text>
-<rect fill="#06222a" height="76" rx="12" stroke="#00E5FF" stroke-width="3" width="220" x="600" y="342"></rect><text fill="#00E5FF" font-size="16" x="710" y="374">Organizations</text><text fill="#cfeff5" font-size="12" font-weight="400" x="710" y="397">roles, access control</text>
-</g>
-<text fill="#a9a596" font-size="12" x="40" y="445">Source: Hugging Face Hub documentation, checked November 4, 2026.</text>
-</svg>
-<figcaption style="color:var(--text-muted, #94a3b8);font-size:0.875rem;margin-top:0.75rem;font-style:italic;">Image 5. The parts of Hugging Face that matter when you work with Gemma.</figcaption>
-</figure><h3>Models, cards and storage</h3><p>Each model repository carries a model card that documents limitations and biases, plus metadata for tasks, languages and evaluation results. Repositories build on Xet, which splits large files into chunks for faster uploads and downloads. That matters for Gemma, where a single 31B checkpoint is tens of gigabytes.</p><p>Storage Buckets add S3-like mutable storage for checkpoints and logs that do not need version history. Organizations let companies, universities and non-profits group accounts with roles that control repository access. The security section covers access tokens, GPG-signed commits and malware scanning.</p><h3>Libraries for using and tuning Gemma</h3><p>The Transformers library is the reference implementation, and the Hugging Face post notes day-zero Gemma 4 support through <code>pip install -U transformers</code>. It provides an any-to-any pipeline for multimodal use. TRL handles fine-tuning, including supervised training and a GRPO reinforcement example, and PEFT supports parameter-efficient methods through the same integration.</p><p>The Datasets library gives programmatic access to the Hub's datasets and can stream ones too large for your disk. Transformers.js brings models to the browser, and Hugging Face has a guide to <a class="gold-link" href="https://huggingface.co/blog/transformersjs-chrome-extension">Transformers.js in Chrome</a> extensions. Together these libraries cover the path from data to a trained, deployed Gemma variant.</p><h3>Spaces and inference services</h3><p>Spaces host demo apps using Gradio, Streamlit, static pages or Docker, and ZeroGPU supplies GPUs only when a demo needs them. Google's <a class="gold-link" href="https://huggingface.co/spaces/google/gemma4_vision_token_budget">vision token budget Space</a> shows how image resolution changes visual token counts. For programmatic hosted access, the Hub offers Inference Providers as a serverless API, and its navigation lists dedicated Inference Endpoints.</p><p>These hosted options are optional. The point of the local route is that you can download the files and never call a hosted service. The same Hub then works as your package registry, your documentation and your community forum.</p>
-</article>
-<article class="content-card" id="free">
-<h2 id="free">Why Gemma is free</h2><p>Gemma 4 is released under the Apache 2.0 license, which Google's launch post calls commercially permissive. Apache 2.0 lets you use, modify and distribute the weights for commercial work without paying Google. That is a change from Gemma 3, which used the custom Gemma Terms of Use, according to <a class="gold-link" href="https://artificialanalysis.ai/articles/gemma-4-everything-you-need-to-know">Artificial Analysis's review</a>.</p><p>The download itself costs nothing. You can fetch Gemma from Hugging Face, Kaggle and Ollama, and Google's launch post lists those three as the download sources. Artificial Analysis also reports that the 26B and 31B models are free to use in Google AI Studio.</p><p>"Free" has limits worth stating. The weights are free, but hardware, electricity and your time are not. Ollama's cloud tags and third-party hosts such as Together AI or Fireworks run the model on their own servers, which is a service and not a free download.</p><p>My reading is that Google's reasons are strategic more than charitable, since an open family builds a developer ecosystem and spreads its research. Google has not spelled out its motives in the sources I read. Either way, read the license on the specific model you download.</p>
-</article>
-<article class="content-card" id="why">
-<h2 id="why">Why open-weight local models help</h2><p>An open-weight model gives you the trained parameters, so you control where it runs. That sounds technical, but it changes five practical things.</p><ol class="tight">
-<li><strong>Privacy.</strong> Prompts and documents stay on your machine, which simplifies work with client files, medical notes or source code.</li>
-<li><strong>Offline use.</strong> The model works on a plane, in a lab without internet or inside an air-gapped network.</li>
-<li><strong>Cost predictability.</strong> After the hardware, each extra prompt costs electricity, so heavy batch jobs have no per-token bill.</li>
-<li><strong>Stability.</strong> You can pin a specific version for years, so a vendor update cannot change your results.</li>
-<li><strong>Customization.</strong> You can fine-tune the weights on your own data with tools such as TRL and Unsloth.</li>
-</ol><p>Stability deserves an example. Google's own help page says its Deep Think mode is being replaced by Gemini 4 Argon, and that Deep Think may be discontinued at any time. A local Gemma file does not disappear when a product line changes, as the <a class="gold-link" href="https://support.google.com/gemini/answer/16345172">Deep Think help page</a> shows for hosted services.</p><p>Local models have costs too. A local 31B model is weaker than the best hosted frontier models on hard reasoning, and you take on setup, updates and safety review yourself. Google reports safety testing for Gemma 4, but the model card says outputs can still be incorrect, outdated or biased, and developers should add safeguards.</p>
-</article>
-<article class="content-card" id="bench">
-<h2 id="bench">Benchmarks against peers</h2><p>Benchmarks only help when you know who ran them. The first table comes from Google's model card for instruction-tuned models, and it shows how much Gemma 4 improved on Gemma 3 27B. All figures are vendor-reported.</p><div class="tablewrap">
-<table class="pricing-table" style="width:100%;border-collapse:collapse;margin:1.5rem 0;">
-<thead><tr><th>Benchmark (Google model card)</th><th>31B</th><th>26B A4B</th><th>12B</th><th>E4B</th><th>E2B</th><th>Gemma 3 27B</th></tr></thead>
-<tbody>
-<tr><td>MMLU Pro</td><td class="best">85.2%</td><td>82.6%</td><td>77.2%</td><td>69.4%</td><td>60.0%</td><td>67.6%</td></tr>
-<tr><td>GPQA Diamond</td><td class="best">84.3%</td><td>82.3%</td><td>78.8%</td><td>58.6%</td><td>43.4%</td><td>42.4%</td></tr>
-<tr><td>AIME 2026 (no tools)</td><td class="best">89.2%</td><td>88.3%</td><td>77.5%</td><td>42.5%</td><td>37.5%</td><td>20.8%</td></tr>
-<tr><td>LiveCodeBench v6</td><td class="best">80.0%</td><td>77.1%</td><td>72.0%</td><td>52.0%</td><td>44.0%</td><td>29.1%</td></tr>
-<tr><td>Codeforces Elo</td><td class="best">2150</td><td>1718</td><td>1659</td><td>940</td><td>633</td><td>110</td></tr>
-<tr><td>MMMU Pro</td><td class="best">76.9%</td><td>73.8%</td><td>69.1%</td><td>52.6%</td><td>44.2%</td><td>49.7%</td></tr>
-</tbody>
-</table>
-</div><figure style="margin:2rem 0;text-align:center;">
-<svg aria-labelledby="g6t g6d" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.32);border-radius:14px;background:#040711;box-shadow:0 8px 24px rgba(0,0,0,0.5);" viewbox="0 0 960 420">
-<title id="g6t">MMLU Pro and GPQA Diamond scores for Gemma models</title>
-<desc id="g6d">Grouped bars compare MMLU Pro and GPQA Diamond for Gemma 4 31B, 26B A4B, 12B, E4B, E2B and Gemma 3 27B.</desc>
-<rect fill="#000" height="420" width="960"></rect>
-<text fill="#FFD24A" font-size="22" font-weight="700" x="40" y="36">Gemma reasoning scores (percent)</text>
-<rect fill="#FFD24A" height="14" width="14" x="40" y="48"></rect><text fill="#e9e6dc" font-size="12" x="60" y="60">MMLU Pro</text>
-<rect fill="#00E5FF" height="14" width="14" x="140" y="48"></rect><text fill="#e9e6dc" font-size="12" x="160" y="60">GPQA Diamond</text>
-<g stroke="#2a2410"><line x1="90" x2="930" y1="340" y2="340"></line><line x1="90" x2="930" y1="270" y2="270"></line><line x1="90" x2="930" y1="200" y2="200"></line><line x1="90" x2="930" y1="130" y2="130"></line></g>
-<g fill="#a9a596" font-size="12" text-anchor="end"><text x="80" y="344">0</text><text x="80" y="274">25</text><text x="80" y="204">50</text><text x="80" y="134">75</text></g>
-<!-- 2.8 px per percent -->
-<g>
-<rect fill="#FFD24A" height="238.6" width="50" x="115" y="101.4"></rect><rect fill="#00E5FF" height="236" width="50" x="170" y="104"></rect>
-<rect fill="#FFD24A" height="231.3" width="50" x="255" y="108.7"></rect><rect fill="#00E5FF" height="230.4" width="50" x="310" y="109.6"></rect>
-<rect fill="#FFD24A" height="216.2" width="50" x="395" y="123.8"></rect><rect fill="#00E5FF" height="220.6" width="50" x="450" y="119.4"></rect>
-<rect fill="#FFD24A" height="194.3" width="50" x="535" y="145.7"></rect><rect fill="#00E5FF" height="164.1" width="50" x="590" y="175.9"></rect>
-<rect fill="#FFD24A" height="168" width="50" x="675" y="172"></rect><rect fill="#00E5FF" height="121.5" width="50" x="730" y="218.5"></rect>
-<rect fill="#FFD24A" height="189.3" width="50" x="815" y="150.7"></rect><rect fill="#00E5FF" height="118.7" width="50" x="870" y="221.3"></rect>
-</g>
-<g fill="#fff" font-size="12" font-weight="700" text-anchor="middle">
-<text x="140" y="95">85.2</text><text x="195" y="98">84.3</text><text x="280" y="102">82.6</text><text x="335" y="103">82.3</text><text x="420" y="117">77.2</text><text x="475" y="113">78.8</text>
-<text x="560" y="139">69.4</text><text x="615" y="169">58.6</text><text x="700" y="166">60.0</text><text x="755" y="212">43.4</text><text x="840" y="144">67.6</text><text x="895" y="215">42.4</text>
-</g>
-<g fill="#e9e6dc" font-size="13" text-anchor="middle"><text x="167" y="364">31B</text><text x="307" y="364">26B A4B</text><text x="447" y="364">12B</text><text x="587" y="364">E4B</text><text x="727" y="364">E2B</text><text x="867" y="364">Gemma 3 27B</text></g>
-<text fill="#a9a596" font-size="12" x="40" y="402">Source: Gemma 4 model card, instruction-tuned models; Gemma 3 27B without thinking. Vendor-reported.</text>
-</svg>
-<figcaption style="color:var(--text-muted, #94a3b8);font-size:0.875rem;margin-top:0.75rem;font-style:italic;">Image 6. Gemma 4 gains over Gemma 3 27B, even at much smaller sizes.</figcaption>
-</figure><p>The headline in that table is generational. The E2B model, at 2.3B effective parameters, beats Gemma 3 27B on AIME, GPQA Diamond and LiveCodeBench but trails it on MMLU Pro, and the Gemma 4 technical report says it roughly matches the older model overall. The 31B model scores 89.2 percent on AIME 2026 against 20.8 percent for Gemma 3 27B, though the older model ran without thinking.</p><h3>Against other open-weight models</h3><p>Independent comparisons are fewer and less flattering. <a class="gold-link" href="https://artificialanalysis.ai/articles/gemma-4-everything-you-need-to-know">Artificial Analysis's review</a> gives its Intelligence Index as 39 for the 31B, 31 for the 26B A4B, 19 for E4B and 15 for E2B. Qwen3.5 27B in reasoning mode scores 42, and Qwen3.5 35B A3B scores 37.</p><p>In that comparison, the 31B trails Qwen3.5 27B by 3 points, mainly because of weaker agentic performance. It leads on SciCode and TerminalBench Hard, and it ties on GPQA Diamond, IFBench and HLE. The 26B A4B sits 6 points below Qwen3.5 35B A3B and slightly above GLM-4.7-Flash at 30.</p><figure style="margin:2rem 0;text-align:center;">
-<svg aria-labelledby="g7t g7d" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.32);border-radius:14px;background:#040711;box-shadow:0 8px 24px rgba(0,0,0,0.5);" viewbox="0 0 960 400">
-<title id="g7t">Artificial Analysis Intelligence Index for Gemma 4 and similar open models</title>
-<desc id="g7d">Horizontal bars show Qwen3.5 27B at 42, Gemma 4 31B at 39, Qwen3.5 35B A3B at 37, Gemma 4 26B A4B at 31, GLM-4.7-Flash at 30, Gemma 4 E4B at 19 and Gemma 4 E2B at 15.</desc>
-<rect fill="#000" height="400" width="960"></rect>
-<text fill="#FFD24A" font-size="22" font-weight="700" x="40" y="36">Intelligence Index, open-weight models (Artificial Analysis)</text>
-<!-- 14 px per point, x0=260 -->
-<g fill="#e9e6dc" font-size="15" text-anchor="end">
-<text x="248" y="80">Qwen3.5 27B (reasoning)</text><text x="248" y="124">Gemma 4 31B</text><text x="248" y="168">Qwen3.5 35B A3B (reasoning)</text><text x="248" y="212">Gemma 4 26B A4B</text><text x="248" y="256">GLM-4.7-Flash (reasoning)</text><text x="248" y="300">Gemma 4 E4B</text><text x="248" y="344">Gemma 4 E2B</text>
-</g>
-<rect fill="#00E5FF" height="26" width="588" x="260" y="62"></rect>
-<rect fill="#FFD24A" height="26" width="546" x="260" y="106"></rect>
-<rect fill="#00E5FF" height="26" width="518" x="260" y="150"></rect>
-<rect fill="#FFD24A" height="26" width="434" x="260" y="194"></rect>
-<rect fill="#FF2E93" height="26" width="420" x="260" y="238"></rect>
-<rect fill="#FFD24A" height="26" width="266" x="260" y="282"></rect>
-<rect fill="#FFD24A" height="26" width="210" x="260" y="326"></rect>
-<g fill="#fff" font-size="15" font-weight="700">
-<text x="858" y="81">42</text><text x="816" y="125">39</text><text x="788" y="169">37</text><text x="704" y="213">31</text><text x="690" y="257">30</text><text x="536" y="301">19</text><text x="480" y="345">15</text>
-</g>
-<text fill="#a9a596" font-size="12" x="40" y="382">Source: Artificial Analysis, Gemma 4 review. Gold bars are Gemma 4. Output tokens to run the index: Gemma 4 31B 39M, Qwen3.5 27B 98M.</text>
-</svg>
-<figcaption style="color:var(--text-muted, #94a3b8);font-size:0.875rem;margin-top:0.75rem;font-style:italic;">Image 7. Gemma 4 sits just behind the strongest similar-size Qwen models on this index.</figcaption>
-</figure><p>Two more details change the picture. Artificial Analysis reports that Gemma 4 31B used 39 million output tokens to run the index, against 98 million for Qwen3.5 27B, so Gemma reaches its score with far less text. On its AA-Omniscience measure, which rewards avoiding wrong answers, the smaller E4B (-20) and E2B (-24) score better than the 31B (-45).</p><p>The Gemma 4 technical report adds Arena data. On June 19, 2026, the 31B had a text Elo of 1451 and ranked as the top open dense model, and the 26B A4B scored 1438. The report notes that Qwen 3.5 397B-A17B scored 1444, and that several larger open models, including GLM 5.1, Kimi K2.6 and DeepSeek V4 Pro, scored higher than the 31B.</p><p>Taken together, Gemma 4 is strong for its size and competitive, not dominant. It is near the top among models you can run on one GPU, and it trails the largest open models and the best Qwen at similar sizes on some tests. The only reliable verdict comes from your own tasks, so test two or three candidates on your real prompts.</p>
-</article>
-<article class="content-card" id="gemmaverse">
-<h2 id="gemmaverse">The Gemmaverse</h2><p>Google calls the community around Gemma the Gemmaverse. On August 21, 2026, <a class="gold-link" href="https://thenextweb.com/news/google-gemma-one-billion-downloads-gemmaverse-variants">The Next Web reported</a> that the Gemma family had passed one billion downloads and that developers had published more than 100,000 variants. Google has not published how it counts either figure, so treat both as company claims.</p><p>The official <a class="gold-link" href="https://github.com/google-gemma/awesome-gemma">Awesome Gemma list</a> is the best directory. It sorts projects into models, inference tools, fine-tunes, tutorials, demos, challenges and research. The sections below pull out the entries I could verify, grouped by purpose.</p><figure style="margin:2rem 0;text-align:center;">
-<svg aria-labelledby="g8t g8d" role="img" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.32);border-radius:14px;background:#040711;box-shadow:0 8px 24px rgba(0,0,0,0.5);" viewbox="0 0 960 460">
-<title id="g8t">The Gemmaverse map</title>
-<desc id="g8d">Gemma sits at the center with one billion downloads and 100,000 variants, connected to health, science, language, tools, space and challenges.</desc>
-<rect fill="#000" height="460" width="960"></rect>
-<text fill="#FFD24A" font-size="22" font-weight="700" x="40" y="38">The Gemmaverse</text>
-<g fill="none" opacity=".85" stroke-width="2.5">
-<path d="M480 235 L 170 120" stroke="#00E5FF"></path><path d="M480 235 L 480 110" stroke="#FF2E93"></path><path d="M480 235 L 790 120" stroke="#2EE59D"></path>
-<path d="M480 235 L 170 350" stroke="#8B5CF6"></path><path d="M480 235 L 480 370" stroke="#FF9F1C"></path><path d="M480 235 L 790 350" stroke="#FFD24A"></path>
-</g>
-<circle cx="480" cy="235" fill="#2a2105" r="80" stroke="#FFD24A" stroke-width="4"></circle>
-<text fill="#FFD24A" font-size="22" font-weight="700" text-anchor="middle" x="480" y="222">Gemma</text>
-<text fill="#e9e6dc" font-size="13" text-anchor="middle" x="480" y="244">1B+ downloads</text>
-<text fill="#e9e6dc" font-size="13" text-anchor="middle" x="480" y="262">100K+ variants</text>
-<g font-weight="700" text-anchor="middle">
-<rect fill="#06222a" height="76" rx="12" stroke="#00E5FF" stroke-width="3" width="240" x="50" y="82"></rect><text fill="#00E5FF" font-size="16" x="170" y="114">Health</text><text fill="#cfeff5" font-size="12" font-weight="400" x="170" y="137">MedGemma, TxGemma</text>
-<rect fill="#2a0a1a" height="76" rx="12" stroke="#FF2E93" stroke-width="3" width="240" x="360" y="72"></rect><text fill="#FF2E93" font-size="16" x="480" y="104">Language</text><text fill="#f5cfe0" font-size="12" font-weight="400" x="480" y="127">TranslateGemma, BgGPT</text>
-<rect fill="#06261a" height="76" rx="12" stroke="#2EE59D" stroke-width="3" width="240" x="670" y="82"></rect><text fill="#2EE59D" font-size="16" x="790" y="114">Science</text><text fill="#cff5e4" font-size="12" font-weight="400" x="790" y="137">Cell2Sentence-Scale</text>
-<rect fill="#1c1040" height="76" rx="12" stroke="#8B5CF6" stroke-width="3" width="240" x="50" y="312"></rect><text fill="#b9a2ff" font-size="16" x="170" y="344">Tools</text><text fill="#ddd2ff" font-size="12" font-weight="400" x="170" y="367">Ollama, LM Studio, Unsloth</text>
-<rect fill="#2a1a03" height="76" rx="12" stroke="#FF9F1C" stroke-width="3" width="240" x="360" y="372"></rect><text fill="#FF9F1C" font-size="16" x="480" y="404">Space and nature</text><text fill="#ffe0b8" font-size="12" font-weight="400" x="480" y="427">satellites, DolphinGemma</text>
-<rect fill="#2a2105" height="76" rx="12" stroke="#FFD24A" stroke-width="3" width="240" x="670" y="312"></rect><text fill="#FFD24A" font-size="16" x="790" y="344">Community</text><text fill="#e9e6dc" font-size="12" font-weight="400" x="790" y="367">Kaggle challenges, guides</text>
+<text fill="#94a3b8" font-size="12.5" font-weight="700" x="40" y="280">3. YOUR HARDWARE</text>
+<g fill="#f8fafc" font-size="13.5" font-weight="600" text-anchor="middle">
+<rect fill="#000000" height="44" rx="8" stroke="#f472b6" stroke-width="1.8" width="260" x="40" y="292"></rect>
+<text x="170" y="319">Apple Silicon &amp; Laptops</text>
+<rect fill="#000000" height="44" rx="8" stroke="#f472b6" stroke-width="1.8" width="260" x="330" y="292"></rect>
+<text x="460" y="319">NVIDIA CUDA &amp; AMD ROCm</text>
+<rect fill="#000000" height="44" rx="8" stroke="#f472b6" stroke-width="1.8" width="260" x="620" y="292"></rect>
+<text x="750" y="319">Private Linux GPU Servers</text>
 </g>
 </svg>
-<figcaption style="color:var(--text-muted, #94a3b8);font-size:0.875rem;margin-top:0.75rem;font-style:italic;">Image 8. The Gemmaverse: official variants, partner science projects, tools and community events.</figcaption>
-</figure><h3>Health and science variants</h3><p>The <a class="gold-link" href="https://huggingface.co/collections/google/medgemma-release">MedGemma collection</a> holds medical text and image models, and the <a class="gold-link" href="https://huggingface.co/collections/google/txgemma-release">TxGemma collection</a> targets therapeutic development. Google says MedGemma is used for outpatient triage at AIIMS and by frontline health workers in rural Uganda, though The Next Web did not verify those claims. Yale and Google built <a class="gold-link" href="https://huggingface.co/vandijklab/C2S-Scale-Gemma-2-27B">Cell2Sentence-Scale</a>, a Gemma 2 27B model tuned for single-cell biology.</p><h3>Language and translation</h3><p>The <a class="gold-link" href="https://huggingface.co/collections/google/translategemma">TranslateGemma collection</a> covers 55 languages. INSAIT built BgGPT, a Bulgarian-first model on Gemma, and Google also lists a Japanese-language Gemma 2 variant. For offline use, the Awesome Gemma list includes a translation device built on Gemma 4 E2B.</p><h3>Tools, demos and learning</h3><p>The list includes local chat and coding agents for Apple Silicon, a browser extension agent using WebGPU, and a tool that runs and compares several local Gemma instances at once. For learning, Maarten Grootendorst's <a class="gold-link" href="https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-gemma-4">visual guide</a> explains the architecture with diagrams. Google's <a class="gold-link" href="https://huggingface.co/spaces/google/gemma4_vision_token_budget">vision token budget Space</a> is a hands-on demo.</p><h3>Space, nature and challenges</h3><p>Google reports that NASA, Satlyt and Starcloud run Gemma in space for onboard image analysis and routing, without saying which models fly on which spacecraft. DolphinGemma, built with Georgia Tech and the Wild Dolphin Project, studies dolphin communication. Developers can join the <a class="gold-link" href="https://www.kaggle.com/competitions/gemma-4-good-hackathon">Gemma 4 Good Challenge</a> on Kaggle, and the earlier Gemma Challenge drew more than 1,600 submissions.</p><p>The ecosystem includes commercial and national deployments as well. Google says India's National Health Authority integrated Gemma 4 into the Aarogya Setu 2.0 app, which has over 100 million Android downloads. That figure counts the app, not Gemma, and The Next Web did not verify the deployment.</p>
+<figcaption style="color:var(--text-muted, #94a3b8);font-size:0.875rem;margin-top:0.75rem;">Figure 2. Pick a simple front end like Ollama for personal machines or vLLM for shared team servers.</figcaption>
+</figure>
+
+<h3>Quick Start on a Laptop with Ollama</h3>
+<p>After installing <a class="gold-link" href="#references">Ollama</a> on macOS, Windows, or Linux, you can download and chat with a quantized Gemma model in one terminal command:</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan, #38bdf8);border-radius:10px;padding:1.15rem 1.25rem;margin:1.5rem 0;overflow-x:auto;">
+<pre style="margin:0;color:#e2e8f0;font-family:var(--font-mono, monospace);font-size:0.9rem;line-height:1.6;"><code># Pull and start an interactive local session
+ollama run gemma3:12b
+
+# Call the local REST endpoint from any script
+curl http://localhost:11434/api/generate -d '{
+  "model": "gemma3:12b",
+  "prompt": "Summarize these meeting notes into three action items.",
+  "stream": false
+}'</code></pre>
+</div>
+
+<h3>Serving a Team on a Private GPU Server with vLLM</h3>
+<p>When multiple teammates or internal apps need to send requests at the same time, <a class="gold-link" href="#references">vLLM</a> uses continuous batching and PagedAttention to serve many users simultaneously on a single NVIDIA or AMD server GPU:</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.32);border-left:3px solid var(--gold, #fbbf24);border-radius:10px;padding:1.15rem 1.25rem;margin:1.5rem 0;overflow-x:auto;">
+<pre style="margin:0;color:#e2e8f0;font-family:var(--font-mono, monospace);font-size:0.9rem;line-height:1.6;"><code># Install vLLM in a clean Python environment
+pip install -U vllm
+
+# Launch an OpenAI-compatible local server
+vllm serve google/gemma-3-12b-it   --host 0.0.0.0   --port 8000   --max-model-len 16384</code></pre>
+</div>
 </article>
-<article class="content-card" id="choose">
-<h2 id="choose">Choosing a model</h2><p>Start from your hardware and your task, then pick the smallest model that passes your own test. The guide below turns the earlier tables into a short list. It reflects my reading of the published data, so adjust it after you try each model.</p><ol class="tight">
-<li><strong>Phone or Raspberry Pi:</strong> E2B for speed, E4B if you have the memory and need better answers.</li>
-<li><strong>Everyday laptop assistant:</strong> E4B or 12B Unified at 4-bit, which fit in 16 GB with room for context.</li>
-<li><strong>Coding and reasoning on a workstation:</strong> 31B if you have 24 GB or more of GPU memory, since it posts the best scores in the family.</li>
-<li><strong>Fast responses on a large-memory machine:</strong> 26B A4B, which runs near 4B speed but needs 14 to 18 GB at 4-bit.</li>
-<li><strong>Search and retrieval:</strong> EmbeddingGemma 2 instead of a chat model.</li>
-<li><strong>Translation or medical text:</strong> TranslateGemma or MedGemma, then validate carefully.</li>
-</ol><p>Then run a small test. Take ten real prompts, run them on two models, and compare the answers blind. Record tokens per second and memory use, because speed on your machine matters more than any leaderboard.</p><p>Finally, plan for updates. Gemma releases keep arriving, and the release page shows a new model or variant every few months. Keep your prompts and test set in version control so you can rerun them on the next release.</p>
+
+<article class="content-card" id="benchmarks" style="background:#000000;">
+<h2>How to Compare Gemma Against Open Peers</h2>
+<p>Public leaderboards compare open-weights models such as Gemma, Qwen, Llama, and Mistral on standardized exams like MMLU-Pro (broad knowledge), GPQA (graduate-level science), and LiveCodeBench (coding). Gemma consistently punches above its weight class on instruction following, multilingual fluency, and document understanding for its parameter size.</p>
+<p>However, public scores only get you to a shortlist. Before committing a model to production, test two or three candidate models on 30 to 50 real examples from your own business:</p>
+<ul>
+<li><strong>Measure format reliability:</strong> Does the model return clean JSON or structured tables every single time?</li>
+<li><strong>Measure speed on your exact hardware:</strong> Track time-to-first-token and tokens per second at your real prompt length.</li>
+<li><strong>Check edge cases:</strong> Test how the model handles messy PDFs, industry acronyms, and "I do not know" refusal cases.</li>
+</ul>
 </article>
-<article class="content-card" id="conclusion">
-<h2 id="conclusion">Conclusion</h2><p>Gemma shows how far small language models have come. A 2.3B effective model now beats the 27B model of the previous generation on several benchmarks, and the 31B model sits near the top of open dense models on Arena. Independent data places it just behind the best Qwen models at similar sizes, which is strong for a model you can run at home.</p><p>The practical case is just as clear. Apache 2.0 licensing, free downloads and mature tools such as Ollama, LM Studio and llama.cpp make local use easy, and Hugging Face supplies the surrounding workshop. A single 24 GB machine now covers most of the family, and a phone covers the smallest members.</p><p>The Gemmaverse adds a reason to stay. Over 100,000 variants, partner science projects and open challenges mean you rarely start from zero. Pick a model, run it, test it on your own work, and let the results decide.</p>
+
+<article class="content-card" id="fine-tuning" style="background:#000000;">
+<h2>Fine-Tuning for Privacy-First Domain Workloads</h2>
+<p>Many teams jump straight to fine-tuning when a simpler approach would work faster and cost less. Use the workflow below to decide whether you need better prompting, retrieval (RAG), or full QLoRA fine-tuning with <a class="gold-link" href="#references">Hugging Face PEFT and TRL</a>.</p>
+<div class="mermaid" style="background:#000000;padding:1.25rem;border-radius:12px;border:1px solid rgba(56,189,248,0.3);margin:1.5rem 0;">
+flowchart TD
+    A["Need Better Domain Accuracy"]:::gold --> B{"Is the problem missing<br/>company facts or docs?"}:::cyan
+    B -- "Yes" --> C["Add Local RAG<br/>(Embeddings + Vector Search)"]:::green
+    B -- "No" --> D{"Is the problem style, format,<br/>or strict domain jargon?"}:::cyan
+    D -- "No" --> E["Refine System Prompt &amp;<br/>Add 3-5 Examples"]:::purple
+    D -- "Yes" --> F["Collect 500+ Clean<br/>Input/Output Pairs"]:::rose
+    F --> G["Run QLoRA Fine-Tuning<br/>with Unsloth or PEFT/TRL"]:::gold
+    G --> H["Export Adapter &amp; Serve<br/>Locally via Ollama or vLLM"]:::green
+
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc;
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
+    classDef green fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc;
+    classDef purple fill:#000000,stroke:#c084fc,stroke-width:2px,color:#f8fafc;
+    classDef rose fill:#000000,stroke:#f472b6,stroke-width:2px,color:#f8fafc;
+</div>
+<p>When you do need fine-tuning - for example, teaching a compact Gemma model to classify medical intake notes or extract clauses from regional contracts - <strong>QLoRA</strong> lets you train a small adapter layer on top of a 4-bit quantized base model using a single 24 GB consumer GPU. Because both the training data and the resulting weights stay inside your own network, you get specialized accuracy without ever sending sensitive records to an external cloud.</p>
 </article>
-<article class="content-card" id="references">
-<h2 id="references">References</h2><p>All links below returned a live page, or were read in full, when I opened them on November 4, 2026.</p><ol class="refs">
-<li><a class="gold-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/">Gemma 4: Byte for byte, the most capable open models, Google Blog</a><span class="d">Launch post: sizes, Apache 2.0 license, supported tools, hardware and Gemmaverse figures.</span></li>
-<li><a class="gold-link" href="https://ai.google.dev/gemma/docs/core/model_card_4">Gemma 4 model card, Google AI for Developers</a><span class="d">Architecture, context windows, languages, benchmark table, safety and limitations.</span></li>
-<li><a class="gold-link" href="https://ai.google.dev/gemma/docs/core">Gemma core models, Google AI for Developers</a><span class="d">Model list and approximate memory requirements by precision.</span></li>
-<li><a class="gold-link" href="https://gemma.ai/models/releases/">Gemma release notes, gemma.ai</a><span class="d">Dated list of every Gemma release and variant.</span></li>
-<li><a class="gold-link" href="https://arxiv.org/html/2607.02770v1">Gemma 4 Technical Report (arXiv 2607.02770)</a><span class="d">Gemma Team report with quantization memory and Arena results.</span></li>
-<li><a class="gold-link" href="https://artificialanalysis.ai/articles/gemma-4-everything-you-need-to-know">Gemma 4: Google on the American open weights frontier, Artificial Analysis</a><span class="d">Independent Intelligence Index comparison with Qwen and GLM models, token use and license notes.</span></li>
-<li><a class="gold-link" href="https://arxiv.org/abs/2506.02153">Small Language Models are the Future of Agentic AI (arXiv 2506.02153)</a><span class="d">NVIDIA researchers' position paper on SLMs for agents.</span></li>
-<li><a class="gold-link" href="https://huggingface.co/blog/gemma4">Welcome Gemma 4, Hugging Face Blog</a><span class="d">Library support, architecture, fine-tuning examples and quantization tips.</span></li>
-<li><a class="gold-link" href="https://huggingface.co/docs/hub/index">Hugging Face Hub documentation</a><span class="d">Hub scale, repositories, Spaces, Storage Buckets, organizations and security.</span></li>
-<li><a class="gold-link" href="https://huggingface.co/google">Google on Hugging Face</a><span class="d">Google's organization page with Gemma 4, MedGemma and EmbeddingGemma collections.</span></li>
-<li><a class="gold-link" href="https://huggingface.co/blog/transformersjs-chrome-extension">How to Use Transformers.js in a Chrome Extension, Hugging Face Blog</a><span class="d">Browser deployment of local models.</span></li>
-<li><a class="gold-link" href="https://huggingface.co/spaces/google/gemma4_vision_token_budget">Gemma 4 Vision Token Budget, Hugging Face Space</a><span class="d">Interactive demo of image resolution and visual tokens.</span></li>
-<li><a class="gold-link" href="https://ollama.com/library/gemma4">gemma4, Ollama library</a><span class="d">Tags, file sizes and context windows for every Gemma 4 size.</span></li>
-<li><a class="gold-link" href="https://ollama.com/">Ollama</a><span class="d">Platforms and usage figures.</span></li>
-<li><a class="gold-link" href="https://lmstudio.ai/models/gemma-4">Gemma 4, LM Studio</a><span class="d">Download sizes, formats and memory guidance.</span></li>
-<li><a class="gold-link" href="https://github.com/ggml-org/llama.cpp">llama.cpp, GitHub</a><span class="d">Inference engine features, backends and license.</span></li>
-<li><a class="gold-link" href="https://huggingface.co/collections/ggml-org/gemma-4">Gemma 4 GGUF collection, ggml-org</a><span class="d">Ready-made GGUF files for llama.cpp.</span></li>
-<li><a class="gold-link" href="https://unsloth.ai/docs/models/gemma-4">Gemma 4 local guide, Unsloth</a><span class="d">Memory totals by quantization, recommended settings and Unsloth Studio.</span></li>
-<li><a class="gold-link" href="https://developers.google.com/edge/litert-lm/models/gemma-4">Gemma 4 on LiteRT-LM, Google AI Edge</a><span class="d">On-device speed and memory benchmarks across phones, laptops and Raspberry Pi.</span></li>
-<li><a class="gold-link" href="https://support.google.com/gemini/answer/16345172">Use Deep Think in Gemini Apps, Gemini Apps Help</a><span class="d">Example of a hosted feature being replaced.</span></li>
-<li><a class="gold-link" href="https://thenextweb.com/news/google-gemma-one-billion-downloads-gemmaverse-variants">Google says Gemma has passed a billion downloads, The Next Web</a><span class="d">Download and variant counts, and notable projects.</span></li>
-<li><a class="gold-link" href="https://github.com/google-gemma/awesome-gemma">Awesome Gemma, GitHub</a><span class="d">Official directory of Gemmaverse projects, tools and tutorials.</span></li>
-<li><a class="gold-link" href="https://huggingface.co/collections/google/medgemma-release">MedGemma collection, Hugging Face</a><span class="d">Medical text and image models.</span></li>
-<li><a class="gold-link" href="https://huggingface.co/collections/google/txgemma-release">TxGemma collection, Hugging Face</a><span class="d">Therapeutic development models.</span></li>
-<li><a class="gold-link" href="https://huggingface.co/collections/google/translategemma">TranslateGemma collection, Hugging Face</a><span class="d">Translation models covering 55 languages.</span></li>
-<li><a class="gold-link" href="https://huggingface.co/vandijklab/C2S-Scale-Gemma-2-27B">C2S-Scale-Gemma-2-27B, Hugging Face</a><span class="d">Gemma 2 27B tuned for single-cell biology.</span></li>
-<li><a class="gold-link" href="https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-gemma-4">A Visual Guide to Gemma 4, Maarten Grootendorst</a><span class="d">Illustrated explanation of the architecture.</span></li>
-<li><a class="gold-link" href="https://www.kaggle.com/competitions/gemma-4-good-hackathon">Gemma 4 Good Challenge, Kaggle</a><span class="d">Community hackathon for social impact projects.</span></li>
-<li><a class="gold-link" href="https://lmstudio.ai/">LM Studio</a><span class="d">Product page stating MLX and llama.cpp as underlying runtimes.</span></li>
+
+<article class="content-card" id="references" style="background:#000000;">
+<h2>References</h2>
+<ol class="refs" style="line-height:1.8;padding-left:1.5rem;">
+<li><a class="gold-link" href="https://ai.google.dev/gemma/docs" rel="noopener" target="_blank">Google AI for Developers - Gemma Documentation</a> - Official guides for model cards, memory sizing, fine-tuning, and deployment.</li>
+<li><a class="gold-link" href="https://huggingface.co/google" rel="noopener" target="_blank">Google on Hugging Face</a> - Official open-weights repositories for Gemma, CodeGemma, MedGemma, and ShieldGemma.</li>
+<li><a class="gold-link" href="https://ollama.com/library" rel="noopener" target="_blank">Ollama Model Library</a> - Pre-packaged quantized Gemma builds for macOS, Windows, and Linux.</li>
+<li><a class="gold-link" href="https://docs.vllm.ai/en/latest/" rel="noopener" target="_blank">vLLM Official Documentation</a> - Production serving guide for high-throughput OpenAI-compatible local inference.</li>
+<li><a class="gold-link" href="https://github.com/ggml-org/llama.cpp" rel="noopener" target="_blank">llama.cpp on GitHub</a> - Open-source C/C++ inference engine supporting GGUF quantization across CPU and GPU backends.</li>
+<li><a class="gold-link" href="https://huggingface.co/docs/peft/index" rel="noopener" target="_blank">Hugging Face PEFT Documentation</a> - Guide to LoRA and QLoRA parameter-efficient fine-tuning on consumer GPUs.</li>
+<li><a class="gold-link" href="https://huggingface.co/docs/trl/index" rel="noopener" target="_blank">Hugging Face TRL Documentation</a> - Supervised fine-tuning and alignment workflows for open-weights models.</li>
 </ol>
 </article>
-<section class="cta-banner">
+
+<section class="cta-banner" style="background:#000000;">
 <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Deploy Local Open-Weight Intelligence with Google Gemma</h2>
 <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
-        Architect private, cost-slashed SLM pipelines, local function-calling swarms, and on-device inference tailored for enterprise sovereignty.
-      </p>
+  Architect private, cost-slashed SLM pipelines, local function-calling swarms, and on-device inference tailored for enterprise sovereignty.
+</p>
 <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
 <a class="btn btn-primary" href="../contact.html">Schedule Gemma Advisory Session →</a>
 <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" style="text-decoration:none !important;" target="_blank">Free LinkedIn Consultation ↗</a>
@@ -1033,7 +845,7 @@
     themeVariables: {
       darkMode: true,
       background: "#020408",
-      primaryColor: "#0c111d",
+      primaryColor: "#000000",
       primaryTextColor: "#e2e8f0",
       primaryBorderColor: "#38bdf8",
       lineColor: "#fbbf24",

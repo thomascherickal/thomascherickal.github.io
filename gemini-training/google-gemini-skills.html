@@ -280,16 +280,16 @@
           <li><a href="../gemini-training/google-gemma-local-models.html">Google Gemma Local Models</a></li>
           <li><a href="../gemini-training/google-multimodality.html">Google Multimodality</a></li>
           <li><a href="../gemini-training/google-deepmind.html">Google DeepMind</a></li>
-          <li><a href="../gemini-training/google-code-wiki.html">Google Code Wiki</a></li>
           <li><a href="../gemini-training/google-deep-research.html">Google Deep Research</a></li>
           <li><a href="../gemini-training/google-gemini-skills.html">Gemini Skills</a></li>
           <li><a href="../gemini-training/google-gemini-4-argon.html">Gemini 4 Argon</a></li>
           <li><a href="../gemini-training/google-gemini-4-carbon.html">Gemini 4 Carbon</a></li>
           <li><a href="../gemini-training/google-gemini-4-hydrogen.html">Gemini 4 Hydrogen</a></li>
+          <li><a href="../gemini-training/google-gemini-4-neon.html">Gemini 4 Neon</a></li>
           <li><a href="../gemini-training/google-gemini-4-krypton.html" aria-disabled="true" tabindex="-1"
               style="pointer-events: none; opacity: 0.45; cursor: not-allowed;">Gemini 4 Krypton</a></li>
-          <li><a href="../gemini-training/google-gemini-4-helix.html" aria-disabled="true" tabindex="-1"
-              style="pointer-events: none; opacity: 0.45; cursor: not-allowed;">Gemini 4 Helix</a></li>
+          <li><a href="../gemini-training/google-gemini-4-helium.html" aria-disabled="true" tabindex="-1"
+              style="pointer-events: none; opacity: 0.45; cursor: not-allowed;">Gemini 4 Helium</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
@@ -307,184 +307,105 @@
   <!-- END:HEADER -->
 
 <main class="container single-column-article" id="main">
-<header class="hero content-card" style="text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding-top:120px;padding-bottom:2rem;margin-bottom:2rem;">
-<div style="background:var(--bg-card, #0c111d);border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:14px;padding:1.5rem 1.75rem;box-shadow:0 4px 20px rgba(0, 0, 0, 0.35);display:flex;align-items:center;gap:1.5rem;box-sizing:border-box;">
-<div>
-<div style="font-family:var(--font-mono, monospace);letter-spacing:0.2em;text-transform:uppercase;font-size:0.85rem;color:var(--gold, #fbbf24);font-weight:700;">The Future Is Now</div>
-<div style="color:var(--text-muted, #94a3b8);font-size:0.95rem;margin-top:0.35rem;line-height:1.5;">By Thomas Cherickal, Generative AI Consultant | The Digital Futurist</div>
-</div>
-</div>
-<div style="background:var(--bg-card, #0c111d);border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:14px;padding:2rem 2.25rem;box-shadow:0 4px 20px rgba(0, 0, 0, 0.35);box-sizing:border-box;">
-<p class="hero-badge" style="margin:0 0 0.85rem 0;">// REUSABLE AGENT CAPABILITIES, SKILL.MD STANDARDS & TOOL COMPOSITION</p>
+<header class="hero content-card" style="background:#000000;text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding-top:120px;padding-bottom:2rem;margin-bottom:2rem;">
+<div style="background:#000000;border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:14px;padding:2rem 2.25rem;box-shadow:0 4px 20px rgba(0, 0, 0, 0.35);box-sizing:border-box;">
+<p class="hero-badge" style="margin:0 0 0.85rem 0;">// REUSABLE AGENT SKILLS &amp; WORKFLOW MODULES</p>
 <h1>Gemini Skills: Reusable Agentic Capabilities & Workflow Modules</h1>
-<p class="hero-desc" style="font-size:1.15rem;line-height:1.7;color:var(--text-muted);margin:0.75rem 0 0;">Comprehensive engineering specification for Gemini Skills: authoring, packaging, and deploying reusable modular capabilities with YAML frontmatter, execution runbooks, and strict deterministic tool orchestration.</p>
+<div class="title-tags" aria-label="Article topics"><span class="title-tag">Gemini Skills</span><span class="title-tag">SKILL.md</span><span class="title-tag">Progressive Loading</span><span class="title-tag">Version Control</span><span class="title-tag">Team Portability</span></div>
+<p class="hero-desc" style="font-size:1.15rem;line-height:1.7;color:var(--text-muted);margin:0.75rem 0 0;">Author, package, and share reusable Gemini Skills (<code>SKILL.md</code> plus helper scripts) to standardize engineering, QA, and research workflows across projects and teams.</p>
 </div>
 </header>
 
-<div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;margin-bottom:2rem;">
-<div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
-<div style="font-size:2rem;font-weight:700;color:var(--cyan);font-family:var(--font-mono);">SKILL.md</div>
-<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Open Standard Specification</div>
-</div>
-<div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
-<div style="font-size:2rem;font-weight:700;color:var(--gold);font-family:var(--font-mono);">Composable</div>
-<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Hierarchical Tool Chaining</div>
-</div>
-<div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
-<div style="font-size:2rem;font-weight:700;color:#e879f9;font-family:var(--font-mono);">Deterministic</div>
-<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Strict Schema Validation</div>
-</div>
-<div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
-<div style="font-size:2rem;font-weight:700;color:var(--green, #34d399);font-family:var(--font-mono);">Production</div>
-<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Enterprise Team Portability</div>
-</div>
-</div>
-
-<!-- TABLE OF CONTENTS -->
-<article class="content-card" id="table-of-contents">
+<article class="content-card" id="table-of-contents" style="background:#000000;">
 <h2>Contents</h2>
 <div class="toc-grid" style="display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem;">
-<a class="toc-link gold-link" href="#what-is-a-skill">1. The Need for Modular Agent Capabilities</a>
-<a class="toc-link gold-link" href="#skill-md-specification">2. Anatomy of SKILL.md: Frontmatter & Instructions</a>
-<a class="toc-link gold-link" href="#runtime-discovery">3. Skill Discovery Roots & Loading Priority</a>
-<a class="toc-link gold-link" href="#tool-binding">4. Deterministic Tool Binding & Sandboxing</a>
-<a class="toc-link gold-link" href="#composition-patterns">5. Composing Multi-Skill Agent Teams</a>
-<a class="toc-link gold-link" href="#testing-and-evals">6. Unit Testing & Evals for Agent Skills</a>
-<a class="toc-link gold-link" href="#production-example">7. Complete Production Skill Definition</a>
-<a class="toc-link gold-link" href="#enterprise-governance">8. Skill Marketplaces & Centralized Security</a>
-<a class="toc-link gold-link" href="#references">9. References</a>
+<a class="toc-link gold-link" href="#why-skills">1. Why Reusable Skills Beat Giant Prompts</a>
+<a class="toc-link gold-link" href="#skill-anatomy">2. Inside a Skill Folder: SKILL.md &amp; Helper Scripts</a>
+<a class="toc-link gold-link" href="#progressive-loading">3. Skill Discovery &amp; Progressive Context Loading</a>
+<a class="toc-link gold-link" href="#version-portability">4. Version Control &amp; Cross-Project Portability</a>
+<a class="toc-link gold-link" href="#production-example">5. Practical SKILL.md Example</a>
+<a class="toc-link gold-link" href="#references">6. References</a>
 </div>
 </article>
 
-
-<article class="content-card" id="what-is-a-skill">
-<h2>The Need for Modular Agent Capabilities</h2>
-<p>As autonomous agents tackle increasingly complex engineering and business workflows, monolithic system prompts become unmaintainable. Storing hundreds of disparate operational procedures in a single prompt causes instruction drift, context window bloat, and unpredictable tool selection.</p>
-<p>Gemini Skills introduce modular capability packaging. A Skill encapsulates everything an agent needs to perform a specialized task: behavioral rules, input/output schemas, helper scripts, evaluation tests, and reference assets. Agents load skills on demand based on runtime task context.</p>
+<article class="content-card" id="why-skills" style="background:#000000;">
+<h2>Why Reusable Skills Beat Giant Prompts</h2>
+<p>When teams stuff every coding checklist, QA rule, and report template into one giant prompt, agents slow down, waste tokens, and forget instructions. <strong>Gemini Skills</strong> fix this by splitting team knowledge into small, focused playbooks that load only when needed.</p>
+<p>Each skill packages clear step-by-step instructions alongside optional helper scripts and examples - making repeatable workflows easy to share across engineering, QA, and research teams.</p>
 <figure style="margin:2rem 0;text-align:center;">
-<svg role="img" viewBox="0 0 960 440" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.32);border-radius:14px;background:#040711;box-shadow:0 8px 24px rgba(0,0,0,0.5);">
-<rect width="960" height="440" fill="#040711"/>
-<rect x="8" y="8" width="944" height="424" rx="12" fill="none" stroke="#FBBF24" stroke-opacity="0.3" stroke-width="1.5"/>
-<text x="40" y="42" fill="#FBBF24" font-family="monospace" font-size="17" font-weight="700">// GEMINI SKILL PACKAGING & DISCOVERY LIFECYCLE</text>
-<text x="40" y="64" fill="#94a3b8" font-family="sans-serif" font-size="12">Standardized discovery, loading, and runtime binding of SKILL.md modules</text>
+<svg role="img" viewBox="0 0 960 400" style="max-width:100%;height:auto;border:1px solid rgba(56, 189, 248, 0.32);border-radius:14px;background:#000000;box-shadow:0 8px 24px rgba(0,0,0,0.5);">
+<rect width="960" height="400" fill="#000000"/>
+<rect x="8" y="8" width="944" height="384" rx="12" fill="none" stroke="#fbbf24" stroke-opacity="0.4" stroke-width="1.5"/>
+<text x="40" y="42" fill="#fbbf24" font-family="monospace" font-size="17" font-weight="700">// GEMINI SKILL DISCOVERY &amp; PROGRESSIVE LOADING</text>
+<text x="40" y="64" fill="#94a3b8" font-family="sans-serif" font-size="12">Skills stay lightweight until a task matches their description, then load full instructions and scripts</text>
 <line x1="280" y1="135" x2="360" y2="135" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4,4"/>
-<text x="320.0" y="129.0" fill="#38bdf8" font-size="10" font-family="monospace" text-anchor="middle">Discovery Scan</text>
 <line x1="600" y1="135" x2="680" y2="135" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4,4"/>
-<text x="640.0" y="129.0" fill="#fbbf24" font-size="10" font-family="monospace" text-anchor="middle">Validated Skills</text>
-<line x1="480" y1="170" x2="480" y2="260" stroke="#e879f9" stroke-width="2" stroke-dasharray="4,4"/>
-<text x="480.0" y="209.0" fill="#e879f9" font-size="10" font-family="monospace" text-anchor="middle">Security Check</text>
-
-<rect x="40" y="100" width="240" height="70" rx="10" fill="rgba(56, 189, 248, 0.1)" stroke="#38bdf8" stroke-width="2"/>
-<text x="160.0" y="128" fill="#38bdf8" font-size="14" font-weight="700" text-anchor="middle" font-family="monospace">Skill Directory</text>
-<text x="160.0" y="150" fill="#94a3b8" font-size="11" text-anchor="middle" font-family="sans-serif">SKILL.md, scripts/ & assets/</text>
-<rect x="360" y="100" width="240" height="70" rx="10" fill="rgba(251, 191, 36, 0.1)" stroke="#fbbf24" stroke-width="2"/>
-<text x="480.0" y="128" fill="#fbbf24" font-size="14" font-weight="700" text-anchor="middle" font-family="monospace">Skill Manifest Parser</text>
-<text x="480.0" y="150" fill="#94a3b8" font-size="11" text-anchor="middle" font-family="sans-serif">YAML Metadata & Permissions</text>
-<rect x="680" y="100" width="240" height="70" rx="10" fill="rgba(52, 211, 153, 0.1)" stroke="#34d399" stroke-width="2"/>
-<text x="800.0" y="128" fill="#34d399" font-size="14" font-weight="700" text-anchor="middle" font-family="monospace">Agent Runtime</text>
-<text x="800.0" y="150" fill="#94a3b8" font-size="11" text-anchor="middle" font-family="sans-serif">Context Injection & Tool Binding</text>
-<rect x="360" y="260" width="240" height="70" rx="10" fill="rgba(232, 121, 249, 0.1)" stroke="#e879f9" stroke-width="2"/>
-<text x="480.0" y="288" fill="#e879f9" font-size="14" font-weight="700" text-anchor="middle" font-family="monospace">Safety & Audit Gate</text>
-<text x="480.0" y="310" fill="#94a3b8" font-size="11" text-anchor="middle" font-family="sans-serif">Enforce Least-Privilege Policies</text>
-
+<line x1="480" y1="170" x2="480" y2="250" stroke="#c084fc" stroke-width="2" stroke-dasharray="4,4"/>
+<rect x="40" y="100" width="240" height="70" rx="10" fill="#000000" stroke="#38bdf8" stroke-width="2"/>
+<text x="160" y="128" fill="#f8fafc" font-size="14" font-weight="700" text-anchor="middle" font-family="monospace">Skill Folder</text>
+<text x="160" y="150" fill="#38bdf8" font-size="11" text-anchor="middle" font-family="sans-serif">SKILL.md + scripts/ + examples/</text>
+<rect x="360" y="100" width="240" height="70" rx="10" fill="#000000" stroke="#fbbf24" stroke-width="2"/>
+<text x="480" y="128" fill="#f8fafc" font-size="14" font-weight="700" text-anchor="middle" font-family="monospace">Metadata Match</text>
+<text x="480" y="150" fill="#fbbf24" font-size="11" text-anchor="middle" font-family="sans-serif">Reads name &amp; description first</text>
+<rect x="680" y="100" width="240" height="70" rx="10" fill="#000000" stroke="#34d399" stroke-width="2"/>
+<text x="800" y="128" fill="#f8fafc" font-size="14" font-weight="700" text-anchor="middle" font-family="monospace">Active Execution</text>
+<text x="800" y="150" fill="#34d399" font-size="11" text-anchor="middle" font-family="sans-serif">Follows steps &amp; runs scripts</text>
+<rect x="360" y="250" width="240" height="70" rx="10" fill="#000000" stroke="#c084fc" stroke-width="2"/>
+<text x="480" y="278" fill="#f8fafc" font-size="14" font-weight="700" text-anchor="middle" font-family="monospace">Permission Guard</text>
+<text x="480" y="300" fill="#c084fc" font-size="11" text-anchor="middle" font-family="sans-serif">Scoped tools &amp; review gates</text>
 </svg>
 </figure>
-
 </article>
 
-<article class="content-card" id="skill-md-specification">
-<h2>Anatomy of SKILL.md: Frontmatter & Instructions</h2>
-<p>Every Gemini Skill is defined in a standardized SKILL.md file. Structured YAML frontmatter specifies the skill name, semantic description, version, and required tool permissions. Below the frontmatter, clear markdown instructions define operational workflows, step-by-step procedures, and formatting constraints.</p>
-<p>Because the specification is pure Markdown and YAML, skills are version-controlled in git, peer-reviewed via pull requests, and portable across developer environments.</p>
-
-
+<article class="content-card" id="skill-anatomy" style="background:#000000;">
+<h2>Inside a Skill Folder: SKILL.md &amp; Helper Scripts</h2>
+<p>A skill is just a regular folder containing a <code>SKILL.md</code> file with a short YAML header (<code>name</code> and <code>description</code>) followed by plain Markdown steps. When a job involves repeatable checks - like validating JSON, checking broken links, or linting SQL - you can drop small Python or shell scripts inside a <code>scripts/</code> subfolder so the agent runs exact code instead of guessing.</p>
 </article>
 
-<article class="content-card" id="runtime-discovery">
-<h2>Skill Discovery Roots & Loading Priority</h2>
-<p>The Gemini agent runtime discovers skills by traversing designated filesystem directories: built-in platform skills, organization-wide repositories, and local project-specific overrides.</p>
-<p>A deterministic resolution hierarchy ensures that project-level skills take precedence over global defaults, enabling teams to customize behaviors without altering centralized standards.</p>
-
-
+<article class="content-card" id="progressive-loading" style="background:#000000;">
+<h2>Skill Discovery &amp; Progressive Context Loading</h2>
+<p>Instead of loading 50 skills into memory at once, the runtime scans only the short <code>name</code> and <code>description</code> headers at startup. When your prompt matches a skill's job, the agent opens that specific <code>SKILL.md</code> file on demand. This progressive loading keeps chats fast, accurate, and inexpensive even as your team library grows.</p>
 </article>
 
-<article class="content-card" id="tool-binding">
-<h2>Deterministic Tool Binding & Sandboxing</h2>
-<p>Skills do not just contain text instructions; they bind executable capabilities. A skill can bundle Python scripts, bash commands, or MCP servers that execute inside isolated containers.</p>
-<p>Security policies restrict skills to least-privilege execution: a documentation skill cannot open outbound network sockets, and an auditing skill cannot modify production databases.</p>
-
-
+<article class="content-card" id="version-portability" style="background:#000000;">
+<h2>Version Control &amp; Cross-Project Portability</h2>
+<p>Because skills are plain text and scripts, you store them in Git, review updates in pull requests, and copy or package them across repositories cleanly. Project-level skills override global defaults when a specific repo has unique rules, as described in the <a class="gold-link" href="#references">Agent Skills open specification</a> and <a class="gold-link" href="#references">Gemini API documentation</a>.</p>
 </article>
 
-<article class="content-card" id="composition-patterns">
-<h2>Composing Multi-Skill Agent Teams</h2>
-<p>Complex enterprise workflows require multiple skills working in concert. A code modernization agent, for instance, might dynamically compose a static-analysis skill, a unit-test generation skill, and a PR-formatting skill.</p>
-<p>The agent coordinator evaluates the task goal, identifies the required skill sequence, and passes structured artifacts between skill boundaries.</p>
-
-
-</article>
-
-<article class="content-card" id="testing-and-evals">
-<h2>Unit Testing & Evals for Agent Skills</h2>
-<p>Treating agent skills as production software requires automated verification. Each skill folder can contain an evals/ directory with benchmark scenarios, test inputs, and assertion scripts.</p>
-<p>CI pipelines execute skill evaluations on every pull request, measuring instruction adherence, output accuracy, and tool call efficiency.</p>
-
-
-</article>
-
-<article class="content-card" id="production-example">
-<h2>Complete Production Skill Definition</h2>
-<p>Below is a complete, real-world example of an enterprise SKILL.md specification designed for database migration audits.</p>
-<p>This file illustrates YAML frontmatter declaration, explicit directive ordering, and structured output formatting.</p>
-
+<article class="content-card" id="production-example" style="background:#000000;">
+<h2>Practical SKILL.md Example</h2>
+<p>Here is a clean, ready-to-use <code>SKILL.md</code> for checking database migrations before deployment:</p>
 <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
 <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
-<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">sample_skill_definition.md</span>
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">.agents/skills/sql-migration-review/SKILL.md</span>
 <button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
 </div>
 <pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>---
-name: sql-data-auditor
-description: Validates SQL migration scripts for locking risks and schema anti-patterns
-author: The Digital Futurist
-version: 1.0.0
-tools:
-  - bash: true
-  - file_read: true
+name: sql-migration-review
+description: Check SQL migration files for table-locking risks and missing indexes before merge.
 ---
 
-# SQL Data Auditor Skill
-
-## Operational Directives
-When requested to review or optimize a database migration:
-1. Parse table DDL and index creation statements.
-2. Flag full-table rewrites on tables exceeding 10M rows.
-3. Assert that all new foreign keys include non-blocking indexes.
-4. Output recommendations in standardized JSON report format.</code></pre>
+# SQL Migration Review Checklist
+1. Read the proposed SQL migration file in full.
+2. Flag any operation that locks or rewrites large production tables.
+3. Confirm new foreign keys have matching indexes.
+4. Summarize findings as Pass, Warning, or Blocker with exact line numbers.</code></pre>
 </div>
 </article>
 
-<article class="content-card" id="enterprise-governance">
-<h2>Skill Marketplaces & Centralized Security</h2>
-<p>Large enterprises can establish internal Skill Marketplaces where vetted engineering skills are certified, cataloged, and shared across departments.</p>
-<p>Centralized governance ensures that all deployed skills comply with security policies, audit logging standards, and cost control thresholds.</p>
-
-
-</article>
-
-
 <!-- REFERENCES -->
-<article class="content-card" id="references">
+<article class="content-card" id="references" style="background:#000000;">
 <h2>References</h2>
-<p>Official technical publications, documentation resources, and foundation research for this guide:</p>
 <ul style="display:flex;flex-direction:column;gap:0.65rem;padding-left:1.25rem;margin-top:1rem;">
-<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener noreferrer" target="_blank">Google Gemini API Documentation</a> - Official documentation for Gemini models, context caching, and structured outputs</li>
-<li><a class="gold-link" href="https://github.com/google-gemini/cookbook" rel="noopener noreferrer" target="_blank">Google Gemini Agent Cookbook</a> - Examples of multi-tool agent orchestration and skill composition</li>
-<li><a class="gold-link" href="https://thedigitalfuturist.com" rel="noopener noreferrer" target="_blank">The Digital Futurist</a> - Business AI transformation, developer tooling, and automated engineering advisory</li>
+<li><a class="gold-link" href="https://agentskills.io/" rel="noopener noreferrer" target="_blank">Agent Skills Open Specification</a> - Standard folder structure and <code>SKILL.md</code> format for portable agent skills.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener noreferrer" target="_blank">Google Gemini API Documentation</a> - Official guides for tool use, structured outputs, and agent workflows.</li>
+<li><a class="gold-link" href="https://github.com/google-gemini/cookbook" rel="noopener noreferrer" target="_blank">Google Gemini Cookbook</a> - Practical examples of reusable agent tools and workflows.</li>
+<li><a class="gold-link" href="https://antigravity.google/" rel="noopener noreferrer" target="_blank">Google Antigravity</a> - Agent workspace supporting modular skills, rules, and plugins.</li>
 </ul>
 </article>
 
 <!-- CTA BANNER -->
-<section class="cta-banner" style="margin-top:2.5rem;padding:2.5rem 2rem;background:var(--bg-card, #0c111d);border:1px solid rgba(251,191,36,0.3);border-radius:14px;text-align:center;">
+<section class="cta-banner" style="margin-top:2.5rem;padding:2.5rem 2rem;background:#000000;border:1px solid rgba(251,191,36,0.3);border-radius:14px;text-align:center;">
 <h2 style="color:var(--gold);font-size:1.85rem;margin-bottom:0.75rem;">Standardize Your Team's Autonomous Agent Skills</h2>
 <p style="color:var(--text-muted);max-width:680px;margin:0.5rem auto 1.5rem;font-size:1rem;line-height:1.6;">Stop reinventing prompts across every department. Partner with Thomas Cherickal to architect modular, enterprise-grade Gemini Skill libraries.</p>
 <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">

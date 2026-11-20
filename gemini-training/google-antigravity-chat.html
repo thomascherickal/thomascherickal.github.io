@@ -281,16 +281,16 @@
           <li><a href="../gemini-training/google-gemma-local-models.html">Google Gemma Local Models</a></li>
           <li><a href="../gemini-training/google-multimodality.html">Google Multimodality</a></li>
           <li><a href="../gemini-training/google-deepmind.html">Google DeepMind</a></li>
-          <li><a href="../gemini-training/google-code-wiki.html">Google Code Wiki</a></li>
           <li><a href="../gemini-training/google-deep-research.html">Google Deep Research</a></li>
           <li><a href="../gemini-training/google-gemini-skills.html">Gemini Skills</a></li>
           <li><a href="../gemini-training/google-gemini-4-argon.html">Gemini 4 Argon</a></li>
           <li><a href="../gemini-training/google-gemini-4-carbon.html">Gemini 4 Carbon</a></li>
           <li><a href="../gemini-training/google-gemini-4-hydrogen.html">Gemini 4 Hydrogen</a></li>
+          <li><a href="../gemini-training/google-gemini-4-neon.html">Gemini 4 Neon</a></li>
           <li><a href="../gemini-training/google-gemini-4-krypton.html" aria-disabled="true" tabindex="-1"
               style="pointer-events: none; opacity: 0.45; cursor: not-allowed;">Gemini 4 Krypton</a></li>
-          <li><a href="../gemini-training/google-gemini-4-helix.html" aria-disabled="true" tabindex="-1"
-              style="pointer-events: none; opacity: 0.45; cursor: not-allowed;">Gemini 4 Helix</a></li>
+          <li><a href="../gemini-training/google-gemini-4-helium.html" aria-disabled="true" tabindex="-1"
+              style="pointer-events: none; opacity: 0.45; cursor: not-allowed;">Gemini 4 Helium</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
@@ -309,168 +309,165 @@
 <!-- @include header.html -->
 
 <main class="container single-column-article" id="main">
-<header class="hero content-card" style="text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding-top:120px;padding-bottom:2rem;margin-bottom:2rem;">
-<div style="background:var(--bg-card, #0c111d);border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:14px;padding:1.5rem 1.75rem;box-shadow:0 4px 20px rgba(0, 0, 0, 0.35);display:flex;align-items:center;gap:1.5rem;box-sizing:border-box;">
-<div>
-<div style="font-family:var(--font-mono, monospace);letter-spacing:0.2em;text-transform:uppercase;font-size:0.85rem;color:var(--gold, #fbbf24);font-weight:700;">The Future Is Now</div>
-<div style="color:var(--text-muted, #94a3b8);font-size:0.95rem;margin-top:0.35rem;line-height:1.5;">By Thomas Cherickal, Generative AI Consultant | The Digital Futurist</div>
-</div>
-</div>
-<div style="background:var(--bg-card, #0c111d);border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:14px;padding:2rem 2.25rem;box-shadow:0 4px 20px rgba(0, 0, 0, 0.35);box-sizing:border-box;">
+<header class="hero content-card" style="background:#000000;text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding-top:120px;padding-bottom:2rem;margin-bottom:2rem;">
+<div style="background:#000000;border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:14px;padding:2rem 2.25rem;box-shadow:0 4px 20px rgba(0, 0, 0, 0.35);box-sizing:border-box;">
 <p class="hero-badge" style="margin:0 0 0.85rem 0;">// AGENTIC WORKSPACE INTERFACE &amp; MULTI-AGENT COORDINATION</p>
 <h1>Google Antigravity Chat: Agentic Workspace Conversations & Tool Orchestration</h1>
-<p class="hero-desc" style="font-size:1.15rem;line-height:1.7;color:var(--text-muted);margin:0.75rem 0 0;">Inside Google Antigravity's conversational command plane: how Agent Manager, reusable SKILL.md packs, GEMINI.md rules, live browser control, Artifacts, and parallel subagent swarms turn natural language into verified engineering outcomes.</p>
+<div class="title-tags" aria-label="Article topics"><span class="title-tag">Antigravity Chat</span><span class="title-tag">Agent Manager</span><span class="title-tag">SKILL.md</span><span class="title-tag">GEMINI.md</span><span class="title-tag">Subagents</span></div>
+<p class="hero-desc" style="font-size:1.15rem;line-height:1.7;color:var(--text-muted);margin:0.75rem 0 0;">Explore Antigravity Chat as a live workspace connected to your files, terminal, and browser. Learn how Agent Manager, reusable SKILL.md packs, GEMINI.md rules, Artifacts, subagents, and slash commands turn plain requests into finished, tested work.</p>
 </div>
 </header>
 
 <div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;margin-bottom:2rem;">
-<div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
+<div class="stat-card" style="background:#000000;border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
 <div style="font-size:1.85rem;font-weight:700;color:var(--cyan);font-family:var(--font-mono);">Agent-First</div>
 <div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Plan, Edit, Run &amp; Verify</div>
 </div>
-<div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
+<div class="stat-card" style="background:#000000;border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
 <div style="font-size:1.85rem;font-weight:700;color:var(--gold);font-family:var(--font-mono);">SKILL.md</div>
-<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Composable Knowledge Packs</div>
+<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Reusable Playbooks</div>
 </div>
-<div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
-<div style="font-size:1.85rem;font-weight:700;color:#e879f9;font-family:var(--font-mono);">GEMINI.md</div>
-<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Enforced Workspace Rules</div>
+<div class="stat-card" style="background:#000000;border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
+<div style="font-size:1.85rem;font-weight:700;color:#c084fc;font-family:var(--font-mono);">GEMINI.md</div>
+<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Project Guardrails</div>
 </div>
-<div class="stat-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
-<div style="font-size:1.85rem;font-weight:700;color:var(--green, #34d399);font-family:var(--font-mono);">Subagents</div>
-<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Parallel Isolated Execution</div>
+<div class="stat-card" style="background:#000000;border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
+<div style="font-size:1.85rem;font-weight:700;color:#34d399;font-family:var(--font-mono);">Subagents</div>
+<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Parallel Helper Tasks</div>
 </div>
 </div>
 
-<article class="content-card" id="table-of-contents">
+<article class="content-card" id="table-of-contents" style="background:#000000;">
 <h2>Contents</h2>
 <div class="toc-grid" style="display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem;">
-<a class="toc-link gold-link" href="#command-plane">1. Beyond Stateless Chat: The Agentic Command Plane</a>
-<a class="toc-link gold-link" href="#comparison-table">2. Traditional IDE Chat vs. Google Antigravity Chat</a>
+<a class="toc-link gold-link" href="#command-plane">1. From Simple Chat to a Live Workspace</a>
+<a class="toc-link gold-link" href="#comparison-table">2. Traditional IDE Chat vs. Antigravity Chat</a>
 <a class="toc-link gold-link" href="#agent-manager">3. Agent Manager, Parallel Threads &amp; Artifacts</a>
-<a class="toc-link gold-link" href="#skills-architecture">4. Agent Skills (SKILL.md) &amp; Executable Tool Packs</a>
-<a class="toc-link gold-link" href="#rules-governance">5. Workspace Rules (GEMINI.md, AGENTS.md &amp; @ Includes)</a>
-<a class="toc-link gold-link" href="#browser-subagents">6. Live Browser Control &amp; Dynamic Subagent Swarms</a>
-<a class="toc-link gold-link" href="#slash-workflows">7. Slash Commands &amp; Deterministic Verification Loops</a>
-<a class="toc-link gold-link" href="#configuration-example">8. Production Configuration Examples (GEMINI.md &amp; SKILL.md)</a>
+<a class="toc-link gold-link" href="#skills-architecture">4. Reusable Skills (SKILL.md)</a>
+<a class="toc-link gold-link" href="#rules-governance">5. Workspace Rules (GEMINI.md)</a>
+<a class="toc-link gold-link" href="#browser-subagents">6. Live Browser Control &amp; Subagent Delegation</a>
+<a class="toc-link gold-link" href="#slash-workflows">7. Core Slash Commands</a>
+<a class="toc-link gold-link" href="#configuration-example">8. Practical Examples (GEMINI.md &amp; SKILL.md)</a>
+<a class="toc-link gold-link" href="#references">9. References</a>
 </div>
 </article>
 
-<article class="content-card" id="command-plane">
-<h2>Beyond Stateless Chat: The Agentic Command Plane</h2>
-<p>Traditional AI chat sidebars operate in isolation: you paste a code snippet, receive a speculative diff, and manually copy it back into your editor while hoping imports, types, and unit tests still align. Google Antigravity - encompassing the Antigravity IDE, Antigravity desktop app, CLI, and Python SDK - replaces that passive loop with an agent-first development platform where chat acts as a live command plane.</p>
-<p>Every conversation inside Google Antigravity Chat has direct, structured access to the repository filesystem, shell terminal, Chrome DevTools browser automation, and background task scheduler. Powered by frontier Gemini models, the agent does not guess what a helper function returns or whether a build succeeds. It searches the codebase, reads exact line ranges, applies surgical edits across multiple files, executes the test suite, inspects any failure traces, and iterates until every assertion passes.</p>
-<p>For engineering teams, this shifts the developer role from manual copy-paste integrator to technical director. You define the architectural intent, constraints, and acceptance criteria in conversation, while the agent handles multi-step execution and empirical verification.</p>
+<article class="content-card" id="command-plane" style="background:#000000;">
+<h2>From Simple Chat to a Live Workspace</h2>
+<p>Most AI chat boxes only talk. You paste in a block of code, read a suggested answer, copy it back into your editor, and hope nothing breaks. Google Antigravity Chat works differently: it connects directly to your project folder, your terminal, and a live Chrome browser.</p>
+<p>Instead of guessing what a file contains, the agent reads the exact lines on disk, makes careful edits across multiple files, runs your tests in the terminal, and checks the result in Chrome. As explained in the <a class="gold-link" href="#references">Google Antigravity overview</a>, your job shifts from copying and pasting snippets to setting clear goals and reviewing finished work.</p>
 </article>
 
-<article class="content-card" id="comparison-table">
-<h2>Traditional IDE Chat vs. Google Antigravity Chat</h2>
-<p>The architectural difference between autocomplete-era chat sidebars and Antigravity's agentic workspace shows up across every stage of the software delivery lifecycle.</p>
+<article class="content-card" id="comparison-table" style="background:#000000;">
+<h2>Traditional IDE Chat vs. Antigravity Chat</h2>
+<p>Here is how a standard code chat sidebar compares to an agent-powered Antigravity Chat session:</p>
 <div class="table-wrap">
 <table class="data-table">
-<caption>Table 1. Architectural Comparison: Passive Chat vs. Google Antigravity Chat</caption>
+<caption>Table 1. Passive Code Chat vs. Google Antigravity Chat</caption>
 <thead>
 <tr>
-<th>Dimension</th>
+<th>Area</th>
 <th>Traditional IDE Chat</th>
 <th>Google Antigravity Chat</th>
 </tr>
 </thead>
 <tbody>
-<tr><td>Execution Model</td><td>Single-turn text or inline diff suggestion</td><td>Multi-step autonomous plan, edit, run, and verify loop</td></tr>
-<tr><td>Context Awareness</td><td>Manually attached open tabs or snippets</td><td>Live file tree, GEMINI.md rules, and on-demand SKILL.md packs</td></tr>
-<tr><td>Concurrency</td><td>One blocking chat thread at a time</td><td>Agent Manager with parallel threads, subagents, and swarms</td></tr>
-<tr><td>UI &amp; Web Testing</td><td>No live browser visibility</td><td>Integrated Chrome DevTools subagent for DOM, network, and a11y checks</td></tr>
-<tr><td>Deliverables</td><td>Raw markdown blocks inside chat history</td><td>Structured Artifacts, interactive previews, and verified commits</td></tr>
+<tr><td>How Work Happens</td><td>Suggests text that you copy and test yourself</td><td>Plans, edits files, runs commands, and checks tests</td></tr>
+<tr><td>Project Context</td><td>Only sees the tabs you manually attach</td><td>Reads the project tree, GEMINI.md rules, and SKILL.md packs</td></tr>
+<tr><td>Multitasking</td><td>One blocking chat window at a time</td><td>Agent Manager runs several parallel threads and helpers</td></tr>
+<tr><td>Web &amp; UI Checks</td><td>Cannot see your running site</td><td>Chrome DevTools subagent clicks, inspects, and tests pages</td></tr>
+<tr><td>Reviewable Output</td><td>Long walls of chat text</td><td>Clean Artifacts like plans, checklists, and walkthroughs</td></tr>
 </tbody>
 </table>
 </div>
 </article>
 
-<article class="content-card" id="agent-manager">
+<article class="content-card" id="agent-manager" style="background:#000000;">
 <h2>Agent Manager, Parallel Threads &amp; Artifacts</h2>
-<p>Modern engineering work is rarely linear. While one agent thread refactors a backend authentication service, you may want a second thread auditing frontend accessibility and a third surveying a legacy data pipeline. Google Antigravity's Agent Manager surfaces multiple concurrent conversations in dedicated side panels and dashboards, letting you monitor active tool calls, review pending approvals, and switch contexts without losing state.</p>
-<p>Rather than burying complex deliverables inside scrolling chat transcripts, Antigravity Chat compiles structured outputs - such as implementation plans, architectural reports, task checklists, and interactive HTML widgets - into standalone <strong>Artifacts</strong>. You can review an implementation plan artifact, leave feedback, and click proceed to authorize execution, keeping human oversight crisp and auditable.</p>
+<p>Real projects rarely happen one tiny task at a time. With <strong>Agent Manager</strong>, you can run several conversations side by side - for example, one thread updating a backend service while another checks page layout and a third researches an API change. You can watch progress and approve key steps without losing your place.</p>
+<p>Instead of burying plans inside long chat scrolls, Antigravity saves structured deliverables as standalone <strong>Artifacts</strong> - including implementation plans, reports, and task lists. You can read a plan, leave comments, and approve it before any code is touched.</p>
 </article>
 
-<article class="content-card" id="skills-architecture">
-<h2>Agent Skills (SKILL.md) &amp; Executable Tool Packs</h2>
-<p>One of the biggest productivity drains in AI-assisted engineering is the repetition problem: re-explaining your database migration protocol, testing conventions, or deployment checklist every time you open a fresh session. Antigravity solves this with composable <strong>Agent Skills</strong>.</p>
-<p>Each skill lives in a dedicated folder containing a primary <code>SKILL.md</code> instruction file with YAML frontmatter (<code>name</code> and <code>description</code>) alongside optional <code>scripts/</code>, <code>examples/</code>, and <code>references/</code> subdirectories. When a user prompt matches a skill's domain, the agent reads <code>SKILL.md</code> automatically and follows its exact step-by-step protocol.</p>
-<p>Because skills can bundle deterministic helper scripts inside <code>scripts/</code>, the agent does not have to rely on raw LLM token prediction for brittle tasks like schema validation, binary inspection, or complex numerical transforms. Multiple skills can be composed dynamically in a single conversation, turning general-purpose frontier models into specialized domain engineers.</p>
+<article class="content-card" id="skills-architecture" style="background:#000000;">
+<h2>Reusable Skills (SKILL.md)</h2>
+<p>Teams waste time repeating the same setup instructions every morning. Antigravity solves this with <strong>Skills</strong>. Each skill lives in a small folder with a <code>SKILL.md</code> instruction file plus any helper scripts or reference notes it needs.</p>
+<p>When your request matches a skill's description, the agent opens <code>SKILL.md</code> on demand and follows your team's exact checklist. You can combine multiple skills in one chat, turning a general assistant into a reliable specialist for releases, accessibility checks, or data migrations.</p>
 </article>
 
-<article class="content-card" id="rules-governance">
-<h2>Workspace Rules (GEMINI.md, AGENTS.md &amp; @ Includes)</h2>
-<p>While Skills teach the agent <em>how</em> to execute specialized workflows, <strong>Rules</strong> define the hard baseline constraints, boundaries, and architectural invariants the agent must never violate. Antigravity discovers rules automatically across workspace roots, parent directories, and modular <code>.agents/rules/*.md</code> files, as well as repository-level <code>GEMINI.md</code> and <code>AGENTS.md</code> specifications.</p>
-<p>Common production rules include enforcing strict validation libraries (such as Zod or Pydantic), prohibiting cross-package internal imports, requiring automated component builds after partial edits, and mandating unit test execution before reporting completion. Rule files also support specialized <code>@</code> file-include syntax so teams can inline shared compliance policies or API contracts directly into active agent memory.</p>
+<article class="content-card" id="rules-governance" style="background:#000000;">
+<h2>Workspace Rules (GEMINI.md)</h2>
+<p>While skills teach the agent <em>how</em> to run a specific playbook, <strong>workspace rules</strong> set the standing standards that always apply. By placing a <code>GEMINI.md</code> or <code>AGENTS.md</code> file in your repository, you tell every session which libraries to prefer, which folders must not be changed, and which tests must pass before work is called done.</p>
+<p>Because these rules live in plain Markdown inside Git, your whole team can review and update them just like regular code.</p>
 </article>
 
-<article class="content-card" id="browser-subagents">
-<h2>Live Browser Control &amp; Dynamic Subagent Swarms</h2>
-<p>When a task spans multiple subsystems or requires live visual inspection, Antigravity Chat delegates focused subtasks to isolated <strong>subagents</strong> rather than crowding the primary context window:</p>
-<div class="mermaid" style="margin:1.75rem 0;text-align:center;">
+<article class="content-card" id="browser-subagents" style="background:#000000;">
+<h2>Live Browser Control &amp; Subagent Delegation</h2>
+<p>Big jobs are easier when split among focused helpers. Antigravity Chat delegates specialized tasks to isolated <strong>subagents</strong> so the main conversation stays clean and fast:</p>
+<div class="diagram-container content-card" style="background:#000000;">
+<div class="mermaid" style="margin:1.5rem 0;text-align:center;">
 flowchart TD
-    A["User Prompt in Antigravity Chat"] --> B["Coordinator Agent + GEMINI.md Rules"]
-    B --> C["Read-Only Research Subagent"]
-    B --> D["Chrome DevTools Browser Subagent"]
-    B --> E["Swarm Workers in Git Worktrees"]
-    C --> F["Synthesized Verification &amp; Final Diff"]
-    D --> F
-    E --> F
+    A["Your Request in Antigravity Chat"] --&gt; B["Main Agent + GEMINI.md Rules"]
+    B --&gt; C["Research Subagent<br/>Read-Only Code &amp; Docs Scan"]
+    B --&gt; D["Browser Subagent<br/>Live Chrome DevTools Testing"]
+    B --&gt; E["Parallel Worker Subagents<br/>Independent File Updates"]
+    C --&gt; F["Combined Check &amp; Final Result"]
+    D --&gt; F
+    E --&gt; F
 
-    classDef userNode fill:#1e1b4b,stroke:#818cf8,stroke-width:2px,color:#e0e7ff
-    classDef coordNode fill:#422006,stroke:#fbbf24,stroke-width:2.5px,color:#fef3c7
-    classDef subNode fill:#082f49,stroke:#38bdf8,stroke-width:2px,color:#e0f2fe
-    classDef browserNode fill:#3b0764,stroke:#e879f9,stroke-width:2px,color:#fae8ff
-    classDef swarmNode fill:#052e16,stroke:#34d399,stroke-width:2px,color:#d1fae5
-    classDef finalNode fill:#450a0a,stroke:#fb7185,stroke-width:2.5px,color:#ffe4e6
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef purple fill:#000000,stroke:#c084fc,stroke-width:2px,color:#f8fafc
+    classDef green fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    classDef rose fill:#000000,stroke:#f472b6,stroke-width:2px,color:#f8fafc
 
-    class A userNode
-    class B coordNode
-    class C subNode
-    class D browserNode
-    class E swarmNode
-    class F finalNode
+    class A cyan
+    class B gold
+    class C purple
+    class D rose
+    class E green
+    class F gold
 </div>
-<p>Read-only research subagents survey unfamiliar modules without risking accidental edits. Browser subagents drive a live Chrome instance via Chrome DevTools to click through UI flows, inspect console errors, audit accessibility, and verify layout responsiveness. For large-scale parallel refactors, Swarm workers operate concurrently in isolated git worktrees and coordinate via a shared message board.</p>
+<div class="diagram-caption">Figure 1. How Antigravity Chat routes work to research, browser, and parallel worker subagents.</div>
+</div>
+<p>Research subagents inspect unfamiliar folders safely without editing files. Browser subagents use <a class="gold-link" href="#references">Chrome DevTools automation</a> to click buttons, fill forms, read console logs, and check page accessibility on your live app.</p>
 </article>
 
-<article class="content-card" id="slash-workflows">
-<h2>Slash Commands &amp; Deterministic Verification Loops</h2>
-<p>Antigravity Chat pairs natural language with structured slash commands for predictable workflow control:</p>
+<article class="content-card" id="slash-workflows" style="background:#000000;">
+<h2>Core Slash Commands</h2>
+<p>Slash commands give you quick shortcuts to guide how the agent works:</p>
 <div class="table-wrap">
 <table class="data-table">
-<caption>Table 2. Core Slash Commands in Google Antigravity Chat</caption>
+<caption>Table 2. Everyday Slash Commands in Antigravity Chat</caption>
 <thead>
 <tr>
-<th>Slash Command</th>
-<th>Operational Purpose</th>
+<th>Command</th>
+<th>What It Does</th>
 </tr>
 </thead>
 <tbody>
-<tr><td><code>/plan</code></td><td>Forces structured step-by-step architectural planning before any file edits</td></tr>
-<tr><td><code>/goal</code></td><td>Runs thorough, persistent execution until every acceptance criterion is verified</td></tr>
-<tr><td><code>/teamwork</code></td><td>Launches a coordinated multi-agent swarm for large parallelizable projects</td></tr>
-<tr><td><code>/schedule</code></td><td>Sets one-time timers or recurring background cron automations</td></tr>
-<tr><td><code>/compact</code></td><td>Summarizes and compacts long conversation history to preserve context headroom</td></tr>
+<tr><td><code>/plan</code></td><td>Writes a clear step-by-step plan for your approval before editing files</td></tr>
+<tr><td><code>/goal</code></td><td>Keeps working carefully until every requirement is tested and complete</td></tr>
+<tr><td><code>/teamwork</code></td><td>Coordinates multiple helper agents on larger parallel projects</td></tr>
+<tr><td><code>/browser</code></td><td>Launches the browser agent to inspect or test a live web page</td></tr>
+<tr><td><code>/schedule</code></td><td>Sets a one-time reminder or recurring background task</td></tr>
+<tr><td><code>/compact</code></td><td>Summarizes a long chat so the workspace stays fast and focused</td></tr>
 </tbody>
 </table>
 </div>
 </article>
 
-<article class="content-card" id="configuration-example">
-<h2>Production Configuration Examples (GEMINI.md &amp; SKILL.md)</h2>
-<p>Below is a repository-level <code>GEMINI.md</code> rule block paired with a modular <code>SKILL.md</code> header showing how teams encode both permanent guardrails and reusable workflows:</p>
+<article class="content-card" id="configuration-example" style="background:#000000;">
+<h2>Practical Examples (GEMINI.md &amp; SKILL.md)</h2>
+<p>Here is a simple example showing how a team pairs permanent rules in <code>GEMINI.md</code> with a reusable checklist in <code>SKILL.md</code>:</p>
 <div class="code-window" style="margin:1.5rem 0;background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;overflow:hidden;">
 <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:rgba(56,189,248,0.08);border-bottom:1px solid rgba(56,189,248,0.2);">
 <span style="font-family:var(--font-mono);font-size:0.82rem;color:var(--cyan);">GEMINI.md</span>
 <button class="copy" onclick="copyCode(this)" style="background:rgba(251,191,36,0.15);color:var(--gold);border:1px solid rgba(251,191,36,0.4);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.78rem;cursor:pointer;text-decoration:none !important;">Copy</button>
 </div>
-<pre style="margin:0;padding:1.1rem;overflow-x:auto;font-family:var(--font-mono);font-size:0.85rem;line-height:1.55;color:#e2e8f0;"><code>## Build &amp; Verification Rules
-- Whenever `header.html` or `footer.html` is modified, run `python3 python/build_components.py` immediately.
-- Run `python3 python/run_tests.py` after HTML or JS changes to confirm 100% pass rate.
-- Keep all Mermaid diagrams in vertical (`flowchart TD`) orientation with vivid node contrast.</code></pre>
+<pre style="margin:0;padding:1.1rem;overflow-x:auto;font-family:var(--font-mono);font-size:0.85rem;line-height:1.55;color:#e2e8f0;"><code>## Workspace Standards
+- Run `python3 python/run_tests.py` after HTML or JavaScript changes.
+- Keep all Mermaid diagrams vertical (`flowchart TD`) with high-contrast colors.
+- Never modify files under `data/` automatically.</code></pre>
 </div>
 
 <div class="code-window" style="margin:1.5rem 0;background:#040711;border:1px solid rgba(251,191,36,0.32);border-left:3px solid var(--gold);border-radius:10px;overflow:hidden;">
@@ -480,17 +477,27 @@ flowchart TD
 </div>
 <pre style="margin:0;padding:1.1rem;overflow-x:auto;font-family:var(--font-mono);font-size:0.85rem;line-height:1.55;color:#e2e8f0;"><code>---
 name: release-check
-description: Run pre-release schema, link, and unit test verification before committing.
+description: Verify links, schemas, and unit tests before shipping an update.
 ---
 
-# Release Verification Protocol
+# Release Check Steps
 1. Run `python3 python/check_links.py` and confirm zero broken links.
-2. Run `python3 python/run_tests.py` and confirm 100% pass rate.
-3. Report exact counts and file paths observed in tool output.</code></pre>
+2. Run `python3 python/run_tests.py` and confirm all tests pass.
+3. Share a short summary of changed files and test results.</code></pre>
 </div>
 </article>
 
-<section class="cta-banner" style="margin-top:2.5rem;padding:2.5rem 2rem;background:var(--bg-card, #0c111d);border:1px solid rgba(251,191,36,0.3);border-radius:14px;text-align:center;">
+<article class="content-card" id="references" style="background:#000000;">
+<h2>References</h2>
+<ol class="references-list" style="line-height:1.8;padding-left:1.5rem;">
+<li><a class="gold-link" href="https://antigravity.google/" rel="noopener" target="_blank">Google Antigravity Official Portal</a> - Overview of the Antigravity workspace, chat interface, and agent tools.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener" target="_blank">Google Gemini API Documentation</a> - Official documentation for Gemini models, function calling, and tool use.</li>
+<li><a class="gold-link" href="https://developer.chrome.com/docs/devtools" rel="noopener" target="_blank">Chrome DevTools Documentation</a> - Reference for live browser inspection, DOM debugging, and accessibility audits.</li>
+<li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener" target="_blank">Model Context Protocol (MCP)</a> - Open standard for connecting AI agents to external tools and data sources.</li>
+</ol>
+</article>
+
+<section class="cta-banner" style="margin-top:2.5rem;padding:2.5rem 2rem;background:#000000;border:1px solid rgba(251,191,36,0.3);border-radius:14px;text-align:center;">
 <h2 style="color:var(--gold);font-size:1.85rem;margin-bottom:0.75rem;">Master Google Antigravity &amp; Gemini Workflows</h2>
 <p style="color:var(--text-muted);max-width:680px;margin:0.5rem auto 1.5rem;font-size:1rem;line-height:1.6;">Explore our existing consulting and training programs for Google Antigravity IDE, agentic orchestration, and enterprise AI transformation.</p>
 <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">

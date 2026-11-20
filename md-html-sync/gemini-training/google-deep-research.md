@@ -1,8 +1,8 @@
 # Google Deep Research: Autonomous Multi-Step Web & Corpus Synthesis
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
-> **// AUTONOMOUS RESEARCH PLANNING, MULTI-STEP HARVESTING & CITATION GROUNDING**  
-> **Engineering guide to Google Deep Research: autonomous multi-hour investigation pipelines, recursive web and internal corpus harvesting, mathematical verification loops, and citation-audited executive synthesis.**
+> **// AUTONOMOUS RESEARCH PLANNING, SOURCE VERIFICATION & EXECUTIVE BRIEFS**  
+> **Master Google Deep Research for multi-step web exploration, iterative query refinement, private file synthesis, source verification, and clean cited reports ready for leadership review.**
 
 ---
 
@@ -10,59 +10,47 @@
 
 ---
 
-## Beyond Conversational Search: The Deep Research Paradigm
+## Beyond Quick Search: What Deep Research Does
 
-Traditional search engines and conversational LLMs provide shallow answers. A standard web search returns ten blue links; an ordinary chatbot summarizes the top two paragraphs. But real-world business strategy, due diligence, and scientific literature reviews require deep investigative workflows: identifying primary literature, cross-examining conflicting data, and synthesizing multi-page analytical reports.
+A normal search gives you a list of links, and a regular chatbot answers in two seconds from whatever it already knows. Neither replaces the slow, careful work of reading dozens of pages, following new leads, and checking facts against primary documents.
 
-Google Deep Research automates this rigorous analytical process. Running autonomously for minutes or hours, it executes dozens of recursive queries, browses deeply through academic preprints, SEC filings, and technical specifications, cross-verifies disputed facts, and produces publication-ready research reports backed by verified primary citations.
-
----
-
-## Recursive Hypothesis Generation & Plan Deconstruction
-
-At the core of Google Deep Research is an iterative planning engine. When given a high-level research prompt, the system does not perform a single search. Instead, it constructs a directed acyclic graph (DAG) of investigatory sub-problems.
-
-If an initial search reveals an ambiguity or conflicting statistical baseline, the system dynamically generates secondary and tertiary queries. It tracks known facts, pending hypotheses, and dead ends, methodically exploring the domain landscape until confidence thresholds are satisfied.
+Google Deep Research acts like a dedicated research analyst inside Gemini. As introduced in the Google Deep Research announcement, it breaks a complex question into a multi-step plan, runs rounds of searches, reads what it finds, refines its next queries based on gaps, and compiles a structured report with clickable source links.
 
 ---
 
-## Heterogeneous Harvesting: Web, SEC, PDFs & Structured DBs
+## Steering the Research Plan Before It Runs
 
-Research is not confined to HTML text. Critical data lives in vector graphics, financial charts, audio recordings of earnings calls, and scanned historical contracts. Leveraging Gemini's native multimodality, Deep Research ingests diagrams, data tables, and dense PDF appendices with identical fidelity.
+The fastest way to get a great report is to spend thirty seconds editing the research plan before Deep Research starts browsing. When you submit a question, Gemini first shows you its proposed checklist of topics to investigate.
 
-The model extracts tabular structures into clean JSON, transcribes technical audio cues, and references exact diagram annotations within its synthesis.
-
----
-
-## Evidence Triangulation & Cross-Source Conflict Resolution
-
-Real-world data is riddled with discrepancies: marketing press releases contradict audited filings, and competing research teams publish differing benchmark scores. Deep Research implements formal evidence triangulation.
-
-When encountering competing numbers, the system flags the variance explicitly, traces the methodology of each source, and explains why the discrepancy exists rather than smoothing over the contradiction.
+Use that pause to sharpen the scope: specify target regions, date ranges, competitor names, or which metrics matter most (for example, pricing per seat vs. total implementation cost). Steering the plan upfront prevents wasted searches and produces a much tighter final brief.
 
 ---
 
-## Deterministic Citation Auditing & Grounding Verification
+## Combining Live Web Discovery with Private Files
 
-Hallucination is intolerable in legal, clinical, and investment research. Google Deep Research incorporates a deterministic citation audit pass. Every factual assertion, numeric metric, or direct quote in the final report is linked to an exact source URL and cached document snapshot.
+Public market data is only half the story. Deep Research becomes far more valuable when you attach your own internal PDFs, slide decks, spreadsheets, or Google Drive documents alongside live web search.
 
-A secondary verifier confirms that the cited sentence actually appears in the source text before the report is finalized.
-
----
-
-## Executive Whitepapers, Investment Theses & Policy Briefs
-
-Deep Research structures its final output into comprehensive, beautifully formatted Markdown documents. Reports include executive summaries, comparative data matrices, strategic recommendations, and complete bibliographies.
-
-Analysts can export these documents into PDF, internal wikis, or presentation decks without manual post-processing.
+For example, you can upload your product roadmap and ask Deep Research to compare your upcoming features against public competitor releases, highlighting real gaps and pricing differences in one unified report.
 
 ---
 
-## Production Python Research Runner (Google GenAI SDK)
+## Checking Sources & Handling Conflicting Numbers
 
-The script below illustrates how to orchestrate autonomous research runs using the Google GenAI SDK, configuring thinking budgets, temperature gating, and source validation.
+Good research never hides uncertainty. When two sources disagree - such as a vendor blog claiming one figure and an independent study reporting another - ask Deep Research to list both numbers side by side and explain why they differ.
 
-This module integrates easily into internal research portals, Slack slash commands, and automated nightly briefing jobs.
+Before sharing any report with clients or executives, click through the primary citation links on key statistics, dates, and regulatory claims to confirm every critical fact directly at the source.
+
+---
+
+## Exporting Structured Executive Briefs
+
+Once the report is ready, you can ask follow-up questions in the same thread or export the finished document straight to Google Docs with clean headings, comparison tables, and a complete source list. Many teams also generate a short one-page executive summary at the top for busy decision-makers while keeping the full evidence tables below.
+
+---
+
+## Running Grounded Research with the Python SDK
+
+Developers can automate recurring market or competitor briefings using the Google GenAI SDK with Google Search grounding:
 
 #### `deep_research_runner.py`
 ```python
@@ -70,47 +58,37 @@ import os
 from google import genai
 from google.genai import types
 
-def run_deep_research(investigation_topic: str) -> str:
-    """Execute a recursive multi-step research synthesis with Gemini grounding."""
+def generate_grounded_brief(topic: str) -> str:
+    """Create a search-grounded executive brief with Gemini."""
     client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
-    research_prompt = f"""You are an autonomous Deep Research agent.
-Investigate the following topic with exhaustive academic rigor:
-{investigation_topic}
+    prompt = f"""Write a concise executive research brief on: {topic}.
+Structure:
+- Key Findings (3-5 bullet points)
+- Comparison Table of Major Options
+- Open Questions & Risks
+Cite the source for every important claim."""
 
-Protocol:
-1. Deconstruct the inquiry into 4 distinct factual sub-hypotheses.
-2. Evaluate contradictory claims across industry benchmarks.
-3. Provide primary-source citations for every metric quoted.
-"""
     response = client.models.generate_content(
         model="gemini-2.5-pro",
-        contents=research_prompt,
+        contents=prompt,
         config=types.GenerateContentConfig(
-            temperature=0.15,
-            thinking_config=types.ThinkingConfig(thinking_budget=8192)
-        )
+            temperature=0.2,
+            tools=[types.Tool(google_search=types.GoogleSearch())],
+        ),
     )
     return response.text
 ```
 
 ---
 
-## Cost Limits, Rate Controls & Audit Logs
-
-Because autonomous research involves multiple LLM calls and extensive web browsing, organizations must enforce operational guardrails. We recommend setting hard limits on total search depth, max tool execution steps, and monthly token budgets.
-
-Full provenance logs record every URL visited and query dispatched, guaranteeing complete regulatory compliance and defensibility.
-
----
-
 ## References
 
-Official technical publications, documentation resources, and foundation research for this guide:
+Official resources for Google Deep Research and search-grounded Gemini workflows:
 
-- Google Gemini API Documentation - Official documentation for Gemini models, context caching, and structured outputs
-- Google DeepMind Frontier Research - Publications on multi-step reasoning, autonomous planning, and factual grounding
-- Google Gemini Cookbook - Production recipes, agentic patterns, and context caching workflows
-- The Digital Futurist - Business AI transformation, developer tooling, and automated engineering advisory
+- Google Gemini Deep Research Overview - Official product guide to multi-step research plans and report export.
+- Grounding with Google Search (Gemini API) - Developer guide to connecting live web search to Gemini responses.
+- Google Gemini API Documentation - Core documentation for files, long context, and structured outputs.
+- Google Blog: Introducing Deep Research in Gemini - Background on how Deep Research plans, browses, and synthesizes reports.
 
 ---
 

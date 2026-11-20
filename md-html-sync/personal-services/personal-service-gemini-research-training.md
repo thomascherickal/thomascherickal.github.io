@@ -1,7 +1,7 @@
 # Gemini Research Training
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// PERSONAL SERVICE SPECIFICATION · GEMINI RESEARCH**  
+> **// PERSONAL SERVICE SPECIFICATION - PERSONAL RESEARCH BREAKTHROUGHS WITH GEMINI**  
 > **Business transformation, verification, and implementation.**
 
 ---

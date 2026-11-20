@@ -12,15 +12,15 @@
 <meta content="article" property="og:type"/>
 <meta content="https://thedigitalfuturist.com/gemini-training/google-gemini-desktop.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
-<meta content="Google Gemini Desktop App: Capabilities, Limits, and Three Viral Case Studies | Thomas Cherickal" property="og:title"/>
-<meta content="Learn how Gemini Desktop enables vision-guided OS automation across browsers, native applications, and multi-window workflows. Show how Gemini uses your computer to perform work for you and revolutionizes working with AI." property="og:description"/>
+<meta content="Gemini Desktop: Computer Use &amp; Operating System Automation | Thomas Cherickal" property="og:title"/>
+<meta content="Learn how Gemini Desktop uses vision-guided Computer Use to operate browsers, native apps, and multi-window workflows for you - and how Computer Use will revolutionize working with AI." property="og:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@thomazcherickal" name="twitter:site"/>
-<meta content="Google Gemini Desktop App: Capabilities, Limits, and Three Viral Case Studies | Thomas Cherickal" name="twitter:title"/>
-<meta content="Learn how Gemini Desktop enables vision-guided OS automation across browsers, native applications, and multi-window workflows. Show how Gemini uses your computer to perform work for you and revolutionizes working with AI." name="twitter:description"/>
+<meta content="Gemini Desktop: Computer Use &amp; Operating System Automation | Thomas Cherickal" name="twitter:title"/>
+<meta content="Learn how Gemini Desktop uses vision-guided Computer Use to operate browsers, native apps, and multi-window workflows for you - and how Computer Use will revolutionize working with AI." name="twitter:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
 <!-- Favicons -->
 <link href="../assets/favicon.ico" rel="icon" sizes="any"/>
@@ -142,7 +142,7 @@
   margin: 1.5rem 0;
 }
 .stat {
-  background: rgba(12, 17, 29, 0.85);
+  background: #000000;
   border: 1px solid rgba(251, 191, 36, 0.25);
   border-radius: 10px;
   padding: 1.25rem 1rem;
@@ -160,7 +160,7 @@
   color: var(--text-muted, #94a3b8);
 }
 .case {
-  background: rgba(12, 17, 29, 0.7);
+  background: #000000;
   border-left: 3px solid var(--gold, #fbbf24);
   border-radius: 0 10px 10px 0;
   padding: 1rem 1.5rem;
@@ -180,7 +180,7 @@ figure svg {
   display: block;
   border: 1px solid rgba(251, 191, 36, 0.25);
   border-radius: 10px;
-  background: #020408;
+  background: #000000;
 }
 figcaption {
   font-size: 0.85rem;
@@ -200,7 +200,7 @@ figcaption {
   text-align: left;
 }
 .data-table th {
-  background: rgba(12, 17, 29, 0.9);
+  background: #000000;
   color: var(--gold, #fbbf24);
 }
 .data-table td {
@@ -377,16 +377,16 @@ ol.refs li a {
           <li><a href="../gemini-training/google-gemma-local-models.html">Google Gemma Local Models</a></li>
           <li><a href="../gemini-training/google-multimodality.html">Google Multimodality</a></li>
           <li><a href="../gemini-training/google-deepmind.html">Google DeepMind</a></li>
-          <li><a href="../gemini-training/google-code-wiki.html">Google Code Wiki</a></li>
           <li><a href="../gemini-training/google-deep-research.html">Google Deep Research</a></li>
           <li><a href="../gemini-training/google-gemini-skills.html">Gemini Skills</a></li>
           <li><a href="../gemini-training/google-gemini-4-argon.html">Gemini 4 Argon</a></li>
           <li><a href="../gemini-training/google-gemini-4-carbon.html">Gemini 4 Carbon</a></li>
           <li><a href="../gemini-training/google-gemini-4-hydrogen.html">Gemini 4 Hydrogen</a></li>
+          <li><a href="../gemini-training/google-gemini-4-neon.html">Gemini 4 Neon</a></li>
           <li><a href="../gemini-training/google-gemini-4-krypton.html" aria-disabled="true" tabindex="-1"
               style="pointer-events: none; opacity: 0.45; cursor: not-allowed;">Gemini 4 Krypton</a></li>
-          <li><a href="../gemini-training/google-gemini-4-helix.html" aria-disabled="true" tabindex="-1"
-              style="pointer-events: none; opacity: 0.45; cursor: not-allowed;">Gemini 4 Helix</a></li>
+          <li><a href="../gemini-training/google-gemini-4-helium.html" aria-disabled="true" tabindex="-1"
+              style="pointer-events: none; opacity: 0.45; cursor: not-allowed;">Gemini 4 Helium</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
@@ -403,305 +403,177 @@ ol.refs li a {
   </nav>
   <!-- END:HEADER -->
 <main class="container single-column-article">
-<header class="hero content-card" style="text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding-top:120px;padding-bottom:2rem;margin-bottom:2rem;">
-<div style="background:var(--bg-card, #0c111d);border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:14px;padding:1.5rem 1.75rem;box-shadow:0 4px 20px rgba(0, 0, 0, 0.35);display:flex;align-items:center;gap:1.5rem;box-sizing:border-box;">
-<div>
-<div style="font-family:var(--font-mono, monospace);letter-spacing:0.2em;text-transform:uppercase;font-size:0.85rem;color:var(--gold, #fbbf24);font-weight:700;">The Digital Futurist</div>
-<div style="color:var(--text-muted, #94a3b8);font-size:0.95rem;margin-top:0.35rem;line-height:1.5;">By Thomas Cherickal, Generative AI Consultant | 4 November 2026</div>
-</div>
-</div>
-<div style="background:var(--bg-card, #0c111d);border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:14px;padding:2rem 2.25rem;box-shadow:0 4px 20px rgba(0, 0, 0, 0.35);box-sizing:border-box;">
-<p class="hero-badge" style="margin:0 0 0.85rem 0;">// DESKTOP AGENTS &amp; OPERATING SYSTEM WORKFLOWS</p>
+<header class="hero content-card" style="background:#000000;text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding-top:120px;padding-bottom:2rem;margin-bottom:2rem;">
+<div style="background:#000000;border:1px solid var(--border, rgba(56, 189, 248, 0.2));border-radius:14px;padding:2rem 2.25rem;box-shadow:0 4px 20px rgba(0, 0, 0, 0.35);box-sizing:border-box;">
+<p class="hero-badge" style="margin:0 0 0.85rem 0;">// COMPUTER USE &amp; OPERATING SYSTEM AUTOMATION</p>
 <h1>Gemini Desktop: Computer Use & Operating System Automation</h1>
+<div class="title-tags" aria-label="Article topics"><span class="title-tag">Gemini Desktop</span><span class="title-tag">Computer Use</span><span class="title-tag">OS Automation</span><span class="title-tag">Multi-Window Workflows</span><span class="title-tag">Human Approvals</span></div>
 <p class="hero-desc" style="font-size:1.15rem;line-height:1.7;color:var(--text-muted);margin:0.75rem 0 0;">
-  Learn how Gemini Desktop enables vision-guided OS automation across browsers, native applications, and multi-window workflows, showing how Gemini can use your computer to perform your work for you.
+  See how Gemini Desktop uses vision-guided Computer Use to operate browsers, native apps, and multi-window workflows for you - and why Computer Use changes how everyone works with AI.
 </p>
 </div>
 </header>
-<article class="content-card" id="table-of-contents">
+
+<article class="content-card" id="table-of-contents" style="background:#000000;">
 <h2>Contents</h2>
 <div class="toc-grid" style="display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem;">
-<a class="toc-link gold-link" href="#introduction">1. Introduction &amp; Computer Use Overview</a>
-<a class="toc-link gold-link" href="#how-it-works">2. How Gemini Uses Your Computer to Perform Work</a>
-<a class="toc-link gold-link" href="#revolution">3. How Computer Use Revolutionizes Business &amp; Personal Workflows</a>
-<a class="toc-link gold-link" href="#what-it-is">4. What the Desktop App is</a>
-<a class="toc-link gold-link" href="#shortcuts">5. One Shortcut, Two Platforms</a>
-<a class="toc-link gold-link" href="#workspace">6. Workspace and Tasks</a>
-<a class="toc-link gold-link" href="#spark">7. Gemini Spark, the Background Agent</a>
-<a class="toc-link gold-link" href="#creation">8. Image and Video Creation</a>
-<a class="toc-link gold-link" href="#why">9. Why Google is Building It</a>
-<a class="toc-link gold-link" href="#limits">10. Operational Limits &amp; Security Governance</a>
-<a class="toc-link gold-link" href="#cases">11. Three Viral Case Studies</a>
-<a class="toc-link gold-link" href="#start">12. Getting Started &amp; Deployment Best Practices</a>
-<a class="toc-link gold-link" href="#conclusion">13. Conclusion</a>
-<a class="toc-link gold-link" href="#references">14. References</a>
+<a class="toc-link gold-link" href="#introduction">1. From Chatting with AI to Letting AI Use Your Computer</a>
+<a class="toc-link gold-link" href="#how-it-works">2. How Gemini Uses Your Computer Step by Step</a>
+<a class="toc-link gold-link" href="#real-work">3. Everyday Work Gemini Can Perform for You</a>
+<a class="toc-link gold-link" href="#revolution">4. How Computer Use Revolutionizes Working with AI</a>
+<a class="toc-link gold-link" href="#safety-approvals">5. Permissions, Approvals &amp; Safe Habits</a>
+<a class="toc-link gold-link" href="#references">6. References</a>
 </div>
 </article>
-<article class="content-card" id="introduction">
-<h2 id="introduction">Introduction &amp; Computer Use Overview</h2>
+
+<article class="content-card" id="introduction" style="background:#000000;">
+<h2>From Chatting with AI to Letting AI Use Your Computer</h2>
 <p class="lead-text" style="font-size:1.12rem;line-height:1.8;color:var(--text-primary);border-left:3px solid var(--gold);padding-left:1.2rem;margin-bottom:1.5rem;">
-  Learn how Gemini Desktop enables vision-guided OS automation across browsers, native applications, and multi-window workflows. Show how Gemini can use your computer and perform your work for you. Show how Computer Use will revolutionize working with AI across business and personal workflows.
+  Until recently, AI lived inside a browser tab. It could write an email or explain a spreadsheet formula, but you still had to copy, paste, click buttons, download files, and switch between ten open windows yourself.
 </p>
 <p>
-  Artificial intelligence has historically been trapped inside isolated web chat windows and API endpoints. While models could synthesize text or write code, taking action on a computer required human users to copy, paste, click, and navigate across dozens of disparate applications.
-</p>
-<p>
-  Gemini Desktop breaks out of the browser sandbox through vision-guided Computer Use. By coupling multimodal vision perception with direct operating system accessibility APIs and input emulation, Gemini can observe your desktop, interpret complex user interfaces across legacy desktop software, and autonomously execute multi-step workflows on your behalf with human-in-the-loop oversight.
+  <strong>Gemini Desktop</strong> and vision-guided <strong>Computer Use</strong> remove that wall. Instead of only giving advice in a chat box, Gemini can see your screen, open apps, read PDFs, fill out web forms, move files into folders, and carry multi-step tasks across your browser and native desktop software while you supervise.
 </p>
 </article>
 
-<!-- HOW GEMINI USES YOUR COMPUTER -->
-<article class="content-card" id="how-it-works">
-<h2>How Gemini Uses Your Computer to Perform Work</h2>
+<article class="content-card" id="how-it-works" style="background:#000000;">
+<h2>How Gemini Uses Your Computer Step by Step</h2>
 <p>
-  Gemini Desktop interacts with your computer in the same manner a human operator does: through perception, reasoning, and coordinated physical input actions. Rather than requiring brittle custom API integrations for every installed piece of software, Gemini uses a closed-loop Computer Use perception engine:
+  Traditional automation tools broke the moment a website moved a button or a desktop program had no API. Vision-guided Computer Use works the way a person does - looking at the screen and taking small, checked steps, as documented in Google's <a class="gold-link" href="#references">Gemini Computer Use guide</a>:
 </p>
 <ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.5rem;">
-  <li><strong>Multimodal Screen Perception:</strong> High-resolution frame capture inspects active windows, multi-monitor displays, and background applications, identifying buttons, text fields, menu hierarchies, and data tables through visual OCR and UI layout parsing.</li>
-  <li><strong>Accessibility Tree Grounding:</strong> On Windows and macOS, Gemini cross-references raw visual pixels against native OS accessibility trees (UI Automation on Windows, NSAccessibility on macOS), ensuring deterministic element targeting even during UI re-skins or resolution shifts.</li>
-  <li><strong>Precise Mouse &amp; Keyboard Emulation:</strong> The agent translates natural language instructions into coordinated mouse clicks, drag-and-drop operations, keyboard shortcuts, and form fills, respecting system focus states and modal dialogues.</li>
-  <li><strong>Multi-Application Navigation:</strong> Gemini seamlessly switches between disparate desktop environments - such as copying numbers from an open PDF statement, navigating to a local ERP client, filling in transaction fields, and reconciling against a Google Sheets spreadsheet.</li>
-  <li><strong>Local File System Governance:</strong> With explicit user permissions, the desktop agent inspects directory structures, batch-renames assets, extracts archives, and moves files across cloud drives and local volumes.</li>
+  <li><strong>See the Screen:</strong> Gemini looks at the active window (and operating system UI labels) to spot buttons, menus, forms, and tables.</li>
+  <li><strong>Plan the Next Action:</strong> It decides the single next click, scroll, keyboard shortcut, or text entry needed to move toward your goal.</li>
+  <li><strong>Act Like a User:</strong> It moves the cursor, clicks, types, drags files, or switches tabs across both web browsers and native Windows or macOS apps.</li>
+  <li><strong>Check the Result:</strong> After each action, Gemini looks at the updated screen to confirm it worked before taking the next step - and pauses to ask you before any sensitive action like sending an email or making a payment.</li>
 </ul>
 
-<div class="diagram-container content-card" style="margin:2rem 0;">
+<div class="diagram-container content-card" style="background:#000000;margin:2rem 0;">
 <div class="mermaid-fallback">
 <em>Interactive architecture diagram (loading...)</em>
 </div>
 <div class="mermaid">
 flowchart TD
-    classDef default fill:#0f172a,stroke:#38bdf8,stroke-width:1px,color:#f8fafc;
-    classDef gold fill:#1e1b4b,stroke:#fbbf24,stroke-width:2px,color:#fef08a;
-    classDef cyan fill:#082f49,stroke:#06b6d4,stroke-width:2px,color:#e0f2fe;
-    classDef accent fill:#311042,stroke:#c084fc,stroke-width:2px,color:#f3e8ff;
-    classDef green fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#ecfdf5;
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc;
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
+    classDef purple fill:#000000,stroke:#c084fc,stroke-width:2px,color:#f8fafc;
+    classDef green fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc;
+    classDef rose fill:#000000,stroke:#f472b6,stroke-width:2px,color:#f8fafc;
 
-    UserGoal["User Natural Language Directive ('Reconcile Invoices')"]:::cyan --&gt; DesktopClient["Gemini Desktop Runtime"]:::gold
-    
-    subgraph PerceptionLoop["Closed-Loop Computer Use Perception Cycle"]
-        direction TB
-        ScreenCap["Screen Perception &amp; Frame Ingestion"]:::accent
-        TreeParse["OS Accessibility Tree &amp; Visual Element Resolution"]:::accent
-        PlanAction["Action Planner (Mouse Click, Keypress, Drag)"]:::green
-        ExecuteAction["OS Input Dispatch (Simulated User Event)"]:::gold
-        VerifyState["Post-Action Frame Verification"]:::cyan
-    end
-    
-    DesktopClient -- Ingests Display --&gt; PerceptionLoop
-    ExecuteAction --&gt; VerifyState
-    VerifyState -. Next Step Needed .-&gt; PlanAction
-    VerifyState -- Task Complete --&gt; FinishedNotification["Human Approval &amp; Task Complete"]:::green
+    Goal["You Give a Plain Goal<br/>'Match these PDF invoices to our sheet'"]:::cyan --&gt; Look["1. See Screen &amp; Open Windows"]:::purple
+    Look --&gt; Plan["2. Pick Next Click or Keystroke"]:::gold
+    Plan --&gt; Gate{"Sensitive Action?<br/>Send, Delete, Pay"}:::rose
+    Gate -- "Yes" --&gt; Ask["Pause &amp; Ask Your Approval"]:::rose
+    Ask --&gt; Act["3. Perform Mouse / Keyboard Step"]:::green
+    Gate -- "No" --&gt; Act
+    Act --&gt; Verify{"Goal Complete?"}:::cyan
+    Verify -- "Not Yet" --&gt; Look
+    Verify -- "Done" --&gt; Report["Show Summary of Completed Work"]:::gold
 </div>
-<div class="diagram-caption">Figure 1. The closed-loop Computer Use perception cycle enabling Gemini Desktop to interact with any native application.</div>
+<div class="diagram-caption">Figure 1. The vision-guided Computer Use loop that lets Gemini operate your computer safely.</div>
 </div>
 </article>
 
-<!-- HOW COMPUTER USE REVOLUTIONIZES WORKFLOWS -->
-<article class="content-card" id="revolution">
-<h2>How Computer Use Revolutionizes Business &amp; Personal Workflows</h2>
+<article class="content-card" id="real-work" style="background:#000000;">
+<h2>Everyday Work Gemini Can Perform for You</h2>
 <p>
-  Computer Use fundamentally transforms human interaction with digital systems from manual point-and-click operation into executive-level supervisory delegation.
+  Because Gemini works across browsers, spreadsheets, email, and local folders without needing custom connectors for every tool, it can take over repetitive multi-window chores right away:
 </p>
 
 <div class="table-responsive" style="margin:1.5rem 0;">
 <table class="data-table">
 <thead>
 <tr>
-<th>Workflow Domain</th>
-<th>Traditional Manual Bottleneck</th>
-<th>Gemini Desktop Computer Use Revolution</th>
-<th>Measured Productivity Impact</th>
+<th>Everyday Workflow</th>
+<th>What You Used to Do Manually</th>
+<th>How Gemini Performs It for You</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Enterprise Invoice Processing</strong></td>
-<td>Employees manually download PDF invoices, re-type totals into legacy ERP software, and match purchase orders line by line.</td>
-<td>Gemini visually parses open PDF invoices, navigates legacy on-premise ERP interfaces, inputs verified line items, and flags discrepancies.</td>
-<td><strong>85% reduction</strong> in clerical processing cycle time</td>
+<td><strong>Invoice &amp; Expense Entry</strong></td>
+<td>Open 20 PDF receipts, type amounts into a spreadsheet or accounting portal, and check totals.</td>
+<td>Reads each PDF on screen, enters line items into your sheet or ERP form, and flags mismatches for your review.</td>
 </tr>
 <tr>
-<td><strong>Cross-Application Reconciliation</strong></td>
-<td>Switching between CRM web tabs, local spreadsheets, and email clients to synchronize customer accounts.</td>
-<td>Autonomous multi-window traversal: Gemini reads CRM records, updates local Excel/Sheets workbooks, and drafts confirmation emails.</td>
-<td>Elimination of manual copy-paste errors across systems</td>
+<td><strong>CRM &amp; Inbox Updates</strong></td>
+<td>Copy customer details from Gmail threads into a CRM tab, then draft follow-up notes.</td>
+<td>Reads the thread, updates matching fields in the browser CRM, and prepares a ready-to-approve reply draft.</td>
 </tr>
 <tr>
-<td><strong>Personal Desktop Organization</strong></td>
-<td>Hours spent triaging cluttered Downloads folders, sorting mixed media files, and renaming receipts.</td>
-<td>One-command autonomous file sorting: Gemini reads file contents, categorizes documents, moves items into dated folders, and logs an audit sheet.</td>
-<td>Instant reclamation of desktop workspace order</td>
+<td><strong>Messy Folder Cleanup</strong></td>
+<td>Spend an afternoon renaming screenshots, sorting downloaded PDFs, and building a file index.</td>
+<td>Opens your approved folder, sorts files into clean dated subfolders, renames them clearly, and logs a summary sheet.</td>
 </tr>
 <tr>
-<td><strong>Multi-Platform Research Synthesis</strong></td>
-<td>Reading 20 browser tabs, taking handwritten notes, and manually compiling citations into slides.</td>
-<td>Gemini reads active screen contents across windows, synthesizes core findings, and formats an executive brief directly in Google Docs.</td>
-<td>Synthesizes multi-source research in minutes rather than hours</td>
+<td><strong>Multi-Tab Research Briefs</strong></td>
+<td>Click through 15 vendor websites, copy pricing tables, and paste them into a slide deck or Doc.</td>
+<td>Navigates the tabs, extracts comparable figures into a clean table, and writes a crisp brief in Google Docs.</td>
 </tr>
 </tbody>
 </table>
 </div>
+</article>
 
+<article class="content-card" id="revolution" style="background:#000000;">
+<h2>How Computer Use Revolutionizes Working with AI</h2>
 <p>
-  By handling the cognitive friction of repetitive UI interaction, Computer Use allows knowledge workers and individuals to focus exclusively on strategic decision-making while Gemini executes the mechanical desktop steps.
+  Computer Use is not a minor convenience feature - it changes the entire relationship between people and software:
 </p>
+<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.5rem;">
+  <li><strong>Legacy Software Joins the AI Era Instantly:</strong> Thousands of companies rely on older desktop apps, government portals, and custom internal tools that have no modern API. Because Computer Use reads the screen directly, those tools can finally be automated without expensive rewrites.</li>
+  <li><strong>From Copy-Paste Operator to Supervisor:</strong> Instead of acting as human glue moving data between five windows, you describe the outcome you want, watch or review the summary, and focus your energy on judgment and decisions.</li>
+  <li><strong>One Assistant Across Every App:</strong> Whether you are working in Chrome, Excel, Google Docs, Slack, or a local file folder, the same assistant follows the workflow end to end without losing context when you switch windows.</li>
+</ul>
+
+<figure>
+<svg aria-label="Diagram comparing traditional manual multi-app work with Gemini Computer Use delegation" font-family="system-ui,-apple-system,Segoe UI,sans-serif" role="img" viewbox="0 0 900 320" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#000000" height="320" width="900"></rect>
+<rect fill="none" height="304" rx="12" stroke="#fbbf24" stroke-opacity="0.4" stroke-width="1.5" width="884" x="8" y="8"></rect>
+<text fill="#fbbf24" font-size="19" font-weight="700" text-anchor="middle" x="450" y="42">The Shift: From Manual Clicking to Supervised Delegation</text>
+<rect fill="#000000" height="90" rx="12" stroke="#f472b6" stroke-width="2" width="380" x="40" y="75"></rect>
+<text fill="#f472b6" font-size="15" font-weight="700" x="64" y="106">Before: Human as Copy-Paste Glue</text>
+<text fill="#f8fafc" font-size="13" x="64" y="130">Chat gives text -&gt; You switch 6 windows, click,</text>
+<text fill="#f8fafc" font-size="13" x="64" y="148">retype numbers, download files, and fix typos.</text>
+<rect fill="#000000" height="90" rx="12" stroke="#34d399" stroke-width="2" width="380" x="480" y="75"></rect>
+<text fill="#34d399" font-size="15" font-weight="700" x="504" y="106">Now: Gemini Computer Use</text>
+<text fill="#f8fafc" font-size="13" x="504" y="130">You set the goal -&gt; Gemini operates browser &amp;</text>
+<text fill="#f8fafc" font-size="13" x="504" y="148">apps -&gt; You review proof and approve key steps.</text>
+<rect fill="#000000" height="84" rx="12" stroke="#38bdf8" stroke-width="2" width="820" x="40" y="195"></rect>
+<text fill="#38bdf8" font-size="15" font-weight="700" text-anchor="middle" x="450" y="226">Why It Matters: Works on ANY app with a screen - no custom API required</text>
+<text fill="#94a3b8" font-size="13" text-anchor="middle" x="450" y="252">Browsers  |  Spreadsheets  |  Legacy ERP &amp; Finance Portals  |  Local Folders  |  Google Workspace</text>
+</svg>
+<figcaption>Figure 2. How Computer Use shifts knowledge workers from repetitive clicking to high-level supervision.</figcaption>
+</figure>
 </article>
 
-<article class="content-card" id="what-it-is">
-<h2 id="what-it-is">What the desktop app is</h2>
-<p>The Gemini desktop app is a free client for Windows 10 and 11 and for Apple Silicon Macs running macOS 15 or later. Google says it works in every country and language where Gemini is supported, according to its <a href="https://gemini.google/desktop/">desktop download page</a>. The Windows build covers both x64 and ARM64 chips.</p>
-<p>The app does not run the model on your machine. <a href="https://www.androidauthority.com/gemini-windows-app-3710027/">Android Authority reports</a> that Google still does the heavy lifting in the cloud. Installing the app buys convenience and system access, not offline ability.</p>
-<p>Sign in with the same Google account and your chat history and memory follow you across desktop, web, and mobile. Reviewers describe the Windows window as close to the website, with a side panel for Notebooks and Recents, per <a href="https://9to5google.com/2026/09/10/gemini-windows-app/">9to5Google's review</a>. That fits a cloud-first design, and it explains why Google keeps promising native features for later.</p>
-<figure>
-<svg aria-label="Flow from keyboard shortcut to Gemini app to Google cloud to three outputs" font-family="system-ui,-apple-system,Segoe UI,sans-serif" role="img" viewbox="0 0 900 470" xmlns="http://www.w3.org/2000/svg"><rect fill="#000" height="470" width="900"></rect>
-<defs><marker id="ar" markerheight="8" markerwidth="8" orient="auto" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0 0L10 5L0 10z" fill="#d4af37"></path></marker></defs>
-<rect fill="#0c0b09" height="76" rx="10" stroke="#6f9a9a" stroke-width="1.5" width="250" x="30" y="40"></rect><text fill="#d9d3c5" font-size="16" font-weight="600" text-anchor="middle" x="155.0" y="74.0">You press the shortcut</text><text fill="#a39b88" font-size="13" text-anchor="middle" x="155.0" y="96.0">Alt + Space or Option + Space</text>
-<rect fill="#0c0b09" height="76" rx="10" stroke="#d4af37" stroke-width="1.5" width="250" x="325" y="40"></rect><text fill="#d9d3c5" font-size="16" font-weight="600" text-anchor="middle" x="450.0" y="74.0">Gemini desktop app</text><text fill="#a39b88" font-size="13" text-anchor="middle" x="450.0" y="96.0">Windows 10 and 11, macOS 15+</text>
-<rect fill="#0c0b09" height="76" rx="10" stroke="#a8847f" stroke-width="1.5" width="250" x="620" y="40"></rect><text fill="#d9d3c5" font-size="16" font-weight="600" text-anchor="middle" x="745.0" y="74.0">Google cloud</text><text fill="#a39b88" font-size="13" text-anchor="middle" x="745.0" y="96.0">Gemini models do the work</text>
-<line marker-end="url(#ar)" stroke="#d4af37" stroke-width="2" x1="280" x2="323" y1="78" y2="78"></line>
-<line marker-end="url(#ar)" stroke="#d4af37" stroke-width="2" x1="575" x2="618" y1="78" y2="78"></line>
-<path d="M745 116 V170 H155 V218" fill="none" marker-end="url(#ar)" stroke="#d4af37" stroke-opacity=".6" stroke-width="2"></path>
-<path d="M745 170 H450 V218" fill="none" marker-end="url(#ar)" stroke="#d4af37" stroke-opacity=".6" stroke-width="2"></path>
-<path d="M745 170 V218" fill="none" marker-end="url(#ar)" stroke="#d4af37" stroke-opacity=".6" stroke-width="2"></path>
-<rect fill="#0c0b09" height="76" rx="10" stroke="#6f9a9a" stroke-width="1.5" width="250" x="30" y="220"></rect><text fill="#d9d3c5" font-size="16" font-weight="600" text-anchor="middle" x="155.0" y="254.0">Google apps</text><text fill="#a39b88" font-size="13" text-anchor="middle" x="155.0" y="276.0">Gmail, Drive, Docs, Calendar</text>
-<rect fill="#0c0b09" height="76" rx="10" stroke="#d4af37" stroke-width="1.5" width="250" x="325" y="220"></rect><text fill="#d9d3c5" font-size="16" font-weight="600" text-anchor="middle" x="450.0" y="254.0">Spark agent and Tasks</text><text fill="#a39b88" font-size="13" text-anchor="middle" x="450.0" y="276.0">Connected folders, approvals</text>
-<rect fill="#0c0b09" height="76" rx="10" stroke="#a8847f" stroke-width="1.5" width="250" x="620" y="220"></rect><text fill="#d9d3c5" font-size="16" font-weight="600" text-anchor="middle" x="745.0" y="254.0">Creation tools</text><text fill="#a39b88" font-size="13" text-anchor="middle" x="745.0" y="276.0">Nano Banana, Gemini Omni</text>
-<text fill="#a39b88" font-size="14" text-anchor="middle" x="155" y="338">Find, summarize, cross-reference</text>
-<text fill="#a39b88" font-size="14" text-anchor="middle" x="450" y="338">Sort folders, build sheets</text>
-<text fill="#a39b88" font-size="14" text-anchor="middle" x="745" y="338">Images, video (subscription)</text>
-<text fill="#c9ab5f" font-size="14" letter-spacing="1" text-anchor="middle" x="450" y="420">THE APP IS A CLIENT. THE MODEL STAYS IN THE CLOUD.</text>
-</svg>
-<figcaption>Figure 2. How a request travels: the shortcut opens the app, the app talks to Google's cloud, and the cloud reaches your Google apps, files, and creative models.</figcaption>
-</figure>
+<article class="content-card" id="safety-approvals" style="background:#000000;">
+<h2>Permissions, Approvals &amp; Safe Habits</h2>
+<p>
+  Giving an AI control of your mouse and keyboard requires sensible guardrails. Following Google's <a class="gold-link" href="#references">desktop and agent safety guidelines</a> keeps automation safe:
+</p>
+<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.5rem;">
+  <li><strong>Start with Narrow Folders:</strong> Grant access only to one test folder before letting an agent organize important archives, and keep backups.</li>
+  <li><strong>Keep Approval Gates On:</strong> Always require confirmation before sending messages, deleting files, submitting forms, or completing purchases.</li>
+  <li><strong>Never Type Passwords in Chat:</strong> When an agent hits a login wall, pause and sign in yourself directly in the app.</li>
+</ul>
 </article>
-<article class="content-card" id="shortcuts">
-<h2 id="shortcuts">One shortcut, two platforms</h2>
-<p>The shortcut is the headline feature. On Windows, Alt + Space opens Gemini over your active work for a quick fact-check or a few title ideas. On the Mac, Option + Space opens a mini chat and Option + Shift + Space opens the full window, and you can change either in settings.</p>
-<p>The Mac app arrived first, and Google's Michael Friedman wrote that the release was a foundation for a proactive desktop assistant, as <a href="https://www.engadget.com/ai/google-unleashes-a-native-gemini-app-for-the-mac-170500185.html">Engadget's launch coverage</a> recounts. The Mac version also reads your screen when you press both Command keys, and it takes voice dictation into any open app. <a href="https://gigazine.net/gsc_news/en/20260911-gemini-desktop-app/">Gigazine's report</a> says those features were Mac-only at the Windows launch and would reach Windows gradually.</p>
-<table class="data-table">
-<thead>
-<tr><th>Capability</th><th>Windows 10 and 11</th><th>macOS 15 or later</th></tr>
-</thead>
-<tbody>
-<tr><td>Global shortcut</td><td>Alt + Space</td><td>Option + Space</td></tr>
-<tr><td>Screen context</td><td>Planned</td><td>Both Command keys</td></tr>
-<tr><td>Voice dictation in any app</td><td>Planned</td><td>Available</td></tr>
-<tr><td>Tasks on local folders</td><td>Planned</td><td>Available</td></tr>
-<tr><td>Antigravity launch</td><td>Not listed</td><td>One click</td></tr>
-<tr><td>Spark agent</td><td>Subscription required</td><td>Beta, Google AI Ultra, US only</td></tr>
-</tbody>
-</table>
-</article>
-<article class="content-card" id="workspace">
-<h2 id="workspace">Workspace and Tasks</h2>
-<p>Gemini pulls from Gmail, Drive, Docs, and Calendar inside the desktop window. Google's examples include finding details buried in email threads, summarizing shared documents, and cross-referencing meeting notes. These are the same abilities as the web app, now reachable without opening a tab.</p>
-<p>Tasks add multi-step work. You flip the app to Task mode, it runs chores in the background, and you approve each action with one tap. On the Mac, Google says Tasks can tidy folders or summarize local files into Google Docs and Sheets.</p>
-<p>Administrators get a switch. The <a href="https://workspaceupdates.googleblog.com/2026/09/the-gemini-desktop-app-is-now-available-for-Windows.html">Workspace Updates post</a> says the Windows app is on by default for organizations that already have Gemini enabled. Admins control it through the Generative AI settings in the Admin console.</p>
-<figure>
-<svg aria-label="Timeline of the Gemini desktop app in 2026" font-family="system-ui,-apple-system,Segoe UI,sans-serif" role="img" viewbox="0 0 900 290" xmlns="http://www.w3.org/2000/svg"><rect fill="#000" height="290" width="900"></rect><line stroke="#3a3322" stroke-width="3" x1="60" x2="840" y1="150" y2="150"></line><circle cx="130" cy="150" fill="#000" r="11" stroke="#6f9a9a" stroke-width="3"></circle><circle cx="130" cy="150" fill="#6f9a9a" r="4"></circle><text fill="#d4af37" font-size="22" font-weight="700" text-anchor="middle" x="130" y="110">Apr 15</text><text fill="#d9d3c5" font-size="16" font-weight="600" text-anchor="middle" x="130" y="196">Mac app launches</text><text fill="#a39b88" font-size="14" text-anchor="middle" x="130" y="220">macOS 15+, free</text><circle cx="343" cy="150" fill="#000" r="11" stroke="#d4af37" stroke-width="3"></circle><circle cx="343" cy="150" fill="#d4af37" r="4"></circle><text fill="#d4af37" font-size="22" font-weight="700" text-anchor="middle" x="343" y="110">Jun 30</text><text fill="#d9d3c5" font-size="16" font-weight="600" text-anchor="middle" x="343" y="196">Spark beta on Mac</text><text fill="#a39b88" font-size="14" text-anchor="middle" x="343" y="220">Ultra, US, age 18+</text><circle cx="557" cy="150" fill="#000" r="11" stroke="#a8847f" stroke-width="3"></circle><circle cx="557" cy="150" fill="#a8847f" r="4"></circle><text fill="#d4af37" font-size="22" font-weight="700" text-anchor="middle" x="557" y="110">Aug 11</text><text fill="#d9d3c5" font-size="16" font-weight="600" text-anchor="middle" x="557" y="196">1 billion monthly</text><text fill="#a39b88" font-size="14" text-anchor="middle" x="557" y="220">Gemini app users</text><circle cx="770" cy="150" fill="#000" r="11" stroke="#c9ab5f" stroke-width="3"></circle><circle cx="770" cy="150" fill="#c9ab5f" r="4"></circle><text fill="#d4af37" font-size="22" font-weight="700" text-anchor="middle" x="770" y="110">Sep 10</text><text fill="#d9d3c5" font-size="16" font-weight="600" text-anchor="middle" x="770" y="196">Windows app</text><text fill="#a39b88" font-size="14" text-anchor="middle" x="770" y="220">Windows 10 and 11</text><text fill="#a39b88" font-size="13" text-anchor="middle" x="450" y="268">All dates 2026, from Google announcements.</text></svg>
-<figcaption>Figure 3. Timeline of the desktop app in 2026, built from Google's announcements.</figcaption>
-</figure>
-</article>
-<article class="content-card" id="spark">
-<h2 id="spark">Gemini Spark, the agent</h2>
-<p>Spark is Google's 24/7 personal agent, and the desktop app is where it gains local reach. Google's <a href="https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/">agentic Gemini announcement</a> says Spark runs on Gemini with the Antigravity harness. Because it lives in the cloud, it keeps working after you close the laptop.</p>
-<p>On June 30, Google began rolling Spark out to the Mac app in beta, per its <a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/">Spark updates post</a>. It is limited to Google AI Ultra subscribers aged 18 and over in the US. Ultra costs $99 or more per month, according to <a href="https://9to5google.com/2026/06/30/gemini-spark-mac-app/">9to5Google's rollout story</a>.</p>
-<p>You choose which connected folders Spark may touch. Google's two examples are sorting every PDF in Downloads into folders and building a budget spreadsheet from invoices saved on your computer, then scheduling regular updates. Spark also gained Google Keep and Google Tasks connections, so scattered notes can become action items.</p>
-<p>The Mac build adds controls for unattended work. A new Spark menu in Settings includes an option that keeps the Mac awake while the app is open, so scheduled jobs can finish, and you can edit existing Schedules and Skills. <a href="https://9to5google.com/2026/06/30/gemini-spark-mac-app/">9to5Google also reports</a> support for third-party apps through MCP and real-time topic updates.</p>
-<p>On Windows, <a href="https://www.androidauthority.com/gemini-windows-app-3710027/">the Windows launch report</a> says Spark can work with local files once you enable access. A Google AI subscription is required there as well. Google also says a later update will let you start Mac tasks from the web or mobile app.</p>
-</article>
-<article class="content-card" id="creation">
-<h2 id="creation">Image and video creation</h2>
-<p>The desktop app includes a creation menu for images, video, and music. Nano Banana generates and edits images, and Gemini Omni directs video, according to Google's <a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/">Windows launch post</a>. A footnote there says Omni and Spark need a Google AI subscription.</p>
-<p>Engadget named Veo as the video model at the Mac launch, so the label has changed since April. Android Authority adds that image and video generation look no different inside the app than in a browser. The desktop value is speed of access, not a new engine.</p>
-</article>
-<article class="content-card" id="why">
-<h2 id="why">Why Google is building it</h2>
-<p>Desktop assistants have become contested ground. Engadget points out that Apple's long-delayed Siri revamp, which is slated to integrate deeply with macOS, runs on Gemini models. That gives Google a reason to be present on the Mac under its own name.</p>
-<p>BigGo Finance frames Spark's arrival as a direct challenge to Claude Desktop and Microsoft Copilot, per <a href="https://finance.biggo.com/news/202607031121_Gemini_Spark_on_Mac">its Spark analysis</a>. Friedman's launch note promised more news in the coming months, and the Spark release and Windows app have followed. For users, competition means features arrive quickly and permissions get tested in public.</p>
-<p>Judge each assistant on the folders it can reach and the approvals it asks for. Those two details decide whether a desktop agent saves time or creates risk. A shortcut alone is easy to copy.</p>
-</article>
-<article class="content-card" id="limits">
-<h2 id="limits">Limits to know</h2>
-<p>Feature parity is the biggest gap. Windows users wait for screen sharing, dictation, and folder Tasks, and Google's own page says feature availability varies. The strongest tools, Spark and Omni, sit behind paid Google AI plans.</p>
-<p>Mac power users have also complained about behavior. John Gruber objected that the app installs a login helper and GoogleUpdater without asking, in an update to <a href="https://mjtsai.com/blog/2026/04/16/gemini-app-for-mac/">Michael Tsai's roundup</a>. Zac Hall found some threads could not continue in the app and opened the website instead, and a reader said the app grabs Option + Space even when it is closed.</p>
-<p>Treat these as reported experiences, not tested conclusions. If you are careful about login items and background updaters, check your system settings after installing. Spark's file access also deserves a narrow folder list at first.</p>
-</article>
-<article class="content-card" id="cases">
-<h2 id="cases">Three viral case studies</h2>
-<p>Two of these trends began on the Gemini web and mobile apps before the desktop clients existed. They matter here because the same models now sit behind the Alt + Space overlay. The third case is a desktop demo that several outlets repeated.</p>
-<div class="stats">
-<div class="stat"><b>200M</b><span>images in the first two weeks</span></div>
-<div class="stat"><b>23M</b><span>new Gemini users, per Google's Josh Woodward</span></div>
-<div class="stat"><b>500M+</b><span>images generated, same report</span></div>
-</div>
-<div class="case">
-<h3>Case study 1: the figurine craze</h3>
-<p>In late August 2025, Google's Gemini Flash Image model picked up the nickname Nano Banana. Within two weeks users had generated over 200 million images, <a href="https://decrypt.co/338994/how-use-google-nano-banana-ai-transform-selfies-digital-figurines">Decrypt reported</a>. The signature look was a glossy collectible figure of yourself, your dog, or a fictional character.</p>
-<p>Google VP Josh Woodward said the app drew 23 million new users and more than 500 million images, per <a href="https://forklog.com/en/?p=88962">Forklog's summary</a>. Free access explains much of the spread. <a href="https://www.storyboard18.com/digital/explained-the-nano-banana-trend-driving-viral-3d-figurines-across-social-media-80860.htm">Storyboard18 noted</a> that earlier figurine attempts followed ChatGPT's 4o update, so Gemini rode an existing meme.</p>
-<p>The lesson for desktop users is access. A prompt that went viral on phones is now a shortcut away at your keyboard, next to the document you are writing.</p>
-</div>
-<div class="case">
-<h3>Case study 2: the saree and Polaroid prompts</h3>
-<p>Prompt recipes travel easily. Perfect Corp's explainer on <a href="https://www.perfectcorp.com/consumer/blog/generative-AI/nano-banana-trends">Nano Banana trends</a> calls the AI saree look a popular subset, especially in India and among the South Asian diaspora. Its example prompt asks for a grainy, retro portrait in a pink saree.</p>
-<p>Tom's Guide listed Polaroid-style edits among the trends it tested, in <a href="https://www.tomsguide.com/ai/ai-image-video/nano-banana-just-broke-the-internet-with-these-viral-trends-here-are-5-ai-photo-prompts-to-try-now">its five-prompt test</a>. Each trend is a sentence anyone can copy, change, and post. That structure makes a trend easy to repeat.</p>
-<p>For a creator, the practical step is to keep a library of prompts that worked. The desktop app's create-image menu makes testing one a two-keystroke habit.</p>
-</div>
-<div class="case">
-<h3>Case study 3: sorting the Downloads folder</h3>
-<p>A widely repeated desktop demo is Spark sorting a cluttered Downloads folder. Google's example had it file every PDF into the right folder, and outlets repeated it, including <a href="https://www.androidauthority.com/gemini-spark-on-macos-3683199/">Android Authority's coverage</a> and <a href="https://finance.biggo.com/news/202607031121_Gemini_Spark_on_Mac">BigGo Finance's write-up</a>. This one spread as a demo, not a meme, so its reach is smaller than the first two.</p>
-<p>The example works because a cluttered folder is a familiar problem. The demo also showed the step from chat to action, with the agent acting on files rather than describing what to do. Because an agent acts on real files, a narrow folder list is the sensible starting point.</p>
-</div>
-<figure>
-<svg aria-label="Bar chart of reported Nano Banana trend figures" font-family="system-ui,-apple-system,Segoe UI,sans-serif" role="img" viewbox="0 0 900 360" xmlns="http://www.w3.org/2000/svg"><rect fill="#000" height="360" width="900"></rect><text fill="#d4af37" font-size="18" font-weight="700" x="40" y="44">Nano Banana trend, reported figures</text><text fill="#d9d3c5" font-size="16" x="40" y="102">New Gemini users</text><text fill="#a39b88" font-size="13" x="40" y="122">per Josh Woodward</text><rect fill="#6f9a9a" fill-opacity=".85" height="44" rx="6" width="21.849999999999998" x="300" y="80"></rect><text fill="#d4af37" font-size="19" font-weight="700" x="333.85" y="109">23M</text><text fill="#d9d3c5" font-size="16" x="40" y="180">Images, first two weeks</text><text fill="#a39b88" font-size="13" x="40" y="200">per Decrypt</text><rect fill="#d4af37" fill-opacity=".85" height="44" rx="6" width="190.0" x="300" y="158"></rect><text fill="#d4af37" font-size="19" font-weight="700" x="502.0" y="187">200M+</text><text fill="#d9d3c5" font-size="16" x="40" y="258">Images, short period</text><text fill="#a39b88" font-size="13" x="40" y="278">per Forklog</text><rect fill="#a8847f" fill-opacity=".85" height="44" rx="6" width="475.0" x="300" y="236"></rect><text fill="#d4af37" font-size="19" font-weight="700" x="787.0" y="265">500M+</text><text fill="#a39b88" font-size="13" x="40" y="338">Different periods and measures. Bars are drawn to one scale but are not directly comparable.</text></svg>
-<figcaption>Figure 4. Scale of the Nano Banana trend, using figures reported by Decrypt and Forklog. The measures cover different periods and are not directly comparable.</figcaption>
-</figure>
-</article>
-<article class="content-card" id="start">
-<h2 id="start">Getting started</h2>
-<p>Download the installer from the official Gemini desktop page and sign in with your Google account. Keep the app running in the system tray or menu bar so the shortcut responds instantly. Then change the shortcut if it clashes with another tool you use.</p>
-<p>Begin with low-risk jobs, such as drafting a summary from a shared Doc or testing an image prompt. Add Spark only after you have picked a single folder and read what each approval prompt asks. Expect the Windows feature list to grow, since Google says more native capabilities will roll out over time.</p>
-<p>Workspace administrators should review the Generative AI settings before rollout, because the Windows app is on by default wherever Gemini is enabled. Google's desktop page also notes that selected features need a Google AI subscription and a user aged 18 or older. A small team can pilot the app with a few accounts and one shared folder, then widen access once approvals feel predictable.</p>
-<figure>
-<svg aria-label="Capability matrix comparing Windows and macOS" font-family="system-ui,-apple-system,Segoe UI,sans-serif" role="img" viewbox="0 0 900 496" xmlns="http://www.w3.org/2000/svg"><rect fill="#000" height="496" width="900"></rect><text fill="#d4af37" font-size="17" font-weight="700" x="40" y="52">Capability</text><text fill="#d4af37" font-size="17" font-weight="700" text-anchor="middle" x="600" y="52">Windows</text><text fill="#d4af37" font-size="17" font-weight="700" text-anchor="middle" x="770" y="52">macOS</text><line stroke="#3a3322" x1="40" x2="860" y1="70" y2="70"></line><text fill="#d9d3c5" font-size="16" x="40" y="113">Global keyboard shortcut</text><circle cx="600" cy="108" fill="#d4af37" r="9"></circle><circle cx="770" cy="108" fill="#d4af37" r="9"></circle><line stroke="#3a3322" stroke-opacity=".5" x1="40" x2="860" y1="129" y2="129"></line><text fill="#d9d3c5" font-size="16" x="40" y="155">Gmail, Drive, Docs, Calendar</text><circle cx="600" cy="150" fill="#d4af37" r="9"></circle><circle cx="770" cy="150" fill="#d4af37" r="9"></circle><line stroke="#3a3322" stroke-opacity=".5" x1="40" x2="860" y1="171" y2="171"></line><text fill="#d9d3c5" font-size="16" x="40" y="197">Image and video creation</text><circle cx="600" cy="192" fill="#d4af37" r="9"></circle><circle cx="770" cy="192" fill="#d4af37" r="9"></circle><line stroke="#3a3322" stroke-opacity=".5" x1="40" x2="860" y1="213" y2="213"></line><text fill="#d9d3c5" font-size="16" x="40" y="239">Spark agent (paid plans)</text><circle cx="600" cy="234" fill="#d4af37" r="9"></circle><circle cx="770" cy="234" fill="#d4af37" r="9"></circle><line stroke="#3a3322" stroke-opacity=".5" x1="40" x2="860" y1="255" y2="255"></line><text fill="#d9d3c5" font-size="16" x="40" y="281">Screen context sharing</text><circle cx="600" cy="276" fill="none" r="9" stroke="#6f9a9a" stroke-width="2.5"></circle><circle cx="770" cy="276" fill="#d4af37" r="9"></circle><line stroke="#3a3322" stroke-opacity=".5" x1="40" x2="860" y1="297" y2="297"></line><text fill="#d9d3c5" font-size="16" x="40" y="323">Voice dictation in any app</text><circle cx="600" cy="318" fill="none" r="9" stroke="#6f9a9a" stroke-width="2.5"></circle><circle cx="770" cy="318" fill="#d4af37" r="9"></circle><line stroke="#3a3322" stroke-opacity=".5" x1="40" x2="860" y1="339" y2="339"></line><text fill="#d9d3c5" font-size="16" x="40" y="365">Tasks on local folders</text><circle cx="600" cy="360" fill="none" r="9" stroke="#6f9a9a" stroke-width="2.5"></circle><circle cx="770" cy="360" fill="#d4af37" r="9"></circle><line stroke="#3a3322" stroke-opacity=".5" x1="40" x2="860" y1="381" y2="381"></line><text fill="#d9d3c5" font-size="16" x="40" y="407">Antigravity one-click launch</text><line stroke="#a39b88" stroke-width="2.5" x1="591" x2="609" y1="402" y2="402"></line><circle cx="770" cy="402" fill="#d4af37" r="9"></circle><line stroke="#3a3322" stroke-opacity=".5" x1="40" x2="860" y1="423" y2="423"></line><circle cx="52" cy="466" fill="#d4af37" r="9"></circle><text fill="#a39b88" font-size="14" x="70" y="471">Available now</text><circle cx="230" cy="466" fill="none" r="9" stroke="#6f9a9a" stroke-width="2.5"></circle><text fill="#a39b88" font-size="14" x="248" y="471">Google says it is coming</text><line stroke="#a39b88" stroke-width="2.5" x1="461" x2="479" y1="466" y2="466"></line><text fill="#a39b88" font-size="14" x="488" y="471">Not listed</text></svg>
-<figcaption>Figure 5. Capability matrix for the desktop app as of early November 2026, from Google's pages and launch posts.</figcaption>
-</figure>
-</article>
-<article class="content-card" id="conclusion">
-<h2 id="conclusion">Conclusion</h2>
-<p>The Gemini desktop app is a convenient front end to a cloud assistant, and it improves with each release. Its draw today is the instant overlay, Workspace access, and a paid agent that can act on local files. Its weaknesses are uneven features between platforms, subscription gates, and a few complaints about background behavior on the Mac.</p>
-<p>The viral cases show where the value sits. Image trends proved people will adopt Gemini when a result is fun to share. The Downloads demo shows the next test, which is whether people trust an agent with their files.</p>
-<p>If you work in Google's apps all day, install it and learn the shortcut. If you live in other tools, wait for Windows parity and judge Spark on your own folders. Either way, check Google's pages again in a few months, because this list will change.</p>
-</article>
-<article class="content-card" id="references">
-<h2 id="references">References</h2>
+
+<article class="content-card" id="references" style="background:#000000;">
+<h2>References</h2>
 <ol class="refs">
-<li><a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/">Google, The Gemini app is now available for Windows</a></li>
-<li><a href="https://gemini.google/desktop/">Google, Gemini for desktop: download for Windows and macOS</a></li>
-<li><a href="https://workspaceupdates.googleblog.com/2026/09/the-gemini-desktop-app-is-now-available-for-Windows.html">Google Workspace Updates, The Gemini desktop app is now available for Windows</a></li>
-<li><a href="https://9to5google.com/2026/09/10/gemini-windows-app/">9to5Google, Google brings Gemini for desktop app to Windows</a></li>
-<li><a href="https://www.androidauthority.com/gemini-windows-app-3710027/">Android Authority, Google has released a Gemini app for Windows</a></li>
-<li><a href="https://www.engadget.com/ai/google-unleashes-a-native-gemini-app-for-the-mac-170500185.html">Engadget, Google unleashes a native Gemini app for the Mac</a></li>
-<li><a href="https://gigazine.net/gsc_news/en/20260911-gemini-desktop-app/">GIGAZINE, A Windows app for Gemini has been released</a></li>
-<li><a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/">Google, Gemini Spark updates: macOS launch, connected apps and more</a></li>
-<li><a href="https://9to5google.com/2026/06/30/gemini-spark-mac-app/">9to5Google, Gemini Spark rolling out to macOS app for local tasks</a></li>
-<li><a href="https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/">Google, The Gemini app becomes more agentic, delivering proactive, 24/7 help</a></li>
-<li><a href="https://blog.google/innovation-and-ai/products/gemini-app/one-billion-monthly-users/">Google, More than 1 billion people are using the Gemini app every month</a></li>
-<li><a href="https://mjtsai.com/blog/2026/04/16/gemini-app-for-mac/">Michael Tsai, Gemini App for Mac</a></li>
-<li><a href="https://decrypt.co/338994/how-use-google-nano-banana-ai-transform-selfies-digital-figurines">Decrypt, How to use Google's Nano Banana AI to transform selfies into digital figurines</a></li>
-<li><a href="https://forklog.com/en/?p=88962">Forklog, Nano Banana viral surge</a></li>
-<li><a href="https://www.storyboard18.com/digital/explained-the-nano-banana-trend-driving-viral-3d-figurines-across-social-media-80860.htm">Storyboard18, Explained: The Nano Banana trend driving viral 3D figurines</a></li>
-<li><a href="https://www.perfectcorp.com/consumer/blog/generative-AI/nano-banana-trends">Perfect Corp, New Gemini trends: viral Nano Banana prompts</a></li>
-<li><a href="https://www.tomsguide.com/ai/ai-image-video/nano-banana-just-broke-the-internet-with-these-viral-trends-here-are-5-ai-photo-prompts-to-try-now">Tom's Guide, Nano Banana just broke the internet with these viral trends</a></li>
-<li><a href="https://www.androidauthority.com/gemini-spark-on-macos-3683199/">Android Authority, Gemini Spark can now automate your most repetitive desktop tasks</a></li>
-<li><a href="https://finance.biggo.com/news/202607031121_Gemini_Spark_on_Mac">BigGo Finance, Google's Gemini Spark AI agent lands on Mac</a></li>
+<li><a class="gold-link" href="https://gemini.google/desktop/" rel="noopener" target="_blank">Google Gemini for Desktop</a> - Official download and feature overview for Windows and macOS.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/computer-use" rel="noopener" target="_blank">Gemini API Computer Use Documentation</a> - Developer guide to vision-guided UI perception, click/type actions, and human-in-the-loop safety.</li>
+<li><a class="gold-link" href="https://deepmind.google/technologies/gemini/" rel="noopener" target="_blank">Gemini by Google DeepMind</a> - Multimodal vision and reasoning foundations behind screen understanding.</li>
+<li><a class="gold-link" href="https://workspace.google.com/solutions/ai/" rel="noopener" target="_blank">Google Workspace with Gemini</a> - Integrating desktop and cloud AI across Gmail, Docs, Sheets, and Drive.</li>
 </ol>
 </article>
-<section class="cta-banner">
+
+<section class="cta-banner" style="background:#000000;">
 <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Build Native Desktop AI Workflows with Gemini</h2>
 <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
-    Integrate multimodal screen perception, native shortcut automation, and enterprise security guardrails into your organization.
-  </p>
+  Integrate multimodal screen perception, Computer Use automation, and practical approval guardrails into your team's daily work.
+</p>
 <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
 <a class="btn btn-primary" href="../contact.html">Schedule Architecture Session →</a>
 <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>

@@ -1,7 +1,7 @@
 # Competitor Research
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// PERSONAL SERVICE SPECIFICATION - SOLO COMPETITIVE INTELLIGENCE**  
+> **// PERSONAL SERVICE SPECIFICATION - AUTOMATED PERSONAL NICHE INTELLIGENCE**  
 > **Business transformation, verification, and implementation.**
 
 ---
