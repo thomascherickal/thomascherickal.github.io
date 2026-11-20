@@ -10,19 +10,19 @@
 
 // PACKAGES & TRANSPARENT PARITY PRICING
 
-### $75 USD Individual / $75 USD Business · 5 Days Training + 5 Days Support
+### $25 USD Individual / $25 USD Business · 5 Days Training + 5 Days Support
 
 Select exactly the services you need. 5 days of live engineering training followed by 5 days of dedicated
- operational support (10 days total coverage per service). Up to 10 seats for businesses (+$75/extra seat);
+ operational support (10 days total coverage per service). Up to 10 seats for businesses (+$25/extra seat);
  1 person for individuals. Parity pricing applies to all services.
 
-### $750 USD · 60 Days (30d Training + 30d Guidance & Materials)
+### $250 USD · 60 Days (30d Training + 30d Guidance & Materials)
 
-Includes up to 10 participants (additional seats at $75 USD per seat). Covers full cross-service engineering
+Includes up to 10 participants (additional seats at $25 USD per seat). Covers full cross-service engineering
  stacks tailored to your organizational goals. 30 days of live training + 30 days of guidance and detailed
  guides/materials (60 days over 2 months with Saturday and Sunday as holidays, 4 hours per day).
 
-### $750 USD · 60 Days (30d Training + 30d Guidance & Materials)
+### $250 USD · 60 Days (30d Training + 30d Guidance & Materials)
 
 Strictly for 1 person only (private 1-on-1 acceleration). 30 days of intensive live instruction followed by
  30 days of dedicated daily work guidance, Q&A and written guides tailored to your individual career or
@@ -99,7 +99,7 @@ Calibrate engagement pricing tailored to your geography, economic tier, or organ
  across 195 countries with dedicated subsidies for early-stage startups, universities, non-profits, and
  underprivileged teams.
 
-Business base covers up to 10 participants (additional seats are $75 USD per seat scaled by country
+Business base covers up to 10 participants (additional seats are $25 USD per seat scaled by country
  parity). Individual/Personal is strictly 1 person only.
 
 Frictionless verification: select your tier in the intake form. Payment by PayPal or bank transfer
@@ -112,9 +112,9 @@ Frictionless verification: select your tier in the intake form. Payment by PayPa
 Clients have complete flexibility to select individual services tailored to their immediate needs. Every
  service includes 5 days of live hands-on engineering training plus
  5 days of dedicated operational support (10 days total coverage per service). Tier 5 pricing is
- $75 USD per service for Individuals (strictly 1 person) and
- $75 USD per service for Businesses (covers up to 10 participants,
- +$75 USD per extra seat). Purchasing Power Parity (PPP) is available for all service pricing
+ $25 USD per service for Individuals (strictly 1 person) and
+ $25 USD per service for Businesses (covers up to 10 participants,
+ +$25 USD per extra seat). Purchasing Power Parity (PPP) is available for all service pricing
  across all 6 tiers.
 
 ### Generative AI Transformation

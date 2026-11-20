@@ -134,14 +134,14 @@ def build_rules():
 
         b_schema_offering = f"Comprehensive Business Training at ${b_price:,} USD for {b_days} days ({b_live} days live training + {b_supp} days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under Apache 2.0, {b_notes}). Includes up to {b_seats} participants. Additional seats at ${b_extra} USD per seat. Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 ${b_price:,}; Tier 2 (25% off) ${int(b_price*0.75):,}; Tier 3 & 4 (50% off) ${int(b_price*0.5):,}; Tier 5 (75% off) ${int(b_price*0.25):,}; Tier 6 custom subsidized relief."
         content = re.sub(
-            r'"description":\s*"Comprehensive Business Training at \$[\d,]+ USD for \d+ days[\s\S]*?Tier 6 custom subsidized relief\."',
+            r'"description":\s*"Comprehensive Business Training at \$[\d,]+ USD for \d+ days[\s\S]*?Tier 6 custom subsidized relief(?:\s*\([^)]*\))?\."',
             f'"description": "{b_schema_offering}"',
             content
         )
 
-        p_schema_offering = f"Comprehensive Personal Training at ${p_price:,} USD for {p_days} days ({b_live} days live training + {b_supp} days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under Apache 2.0, {p_notes}). Strictly for 1 person only. Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 ${p_price:,}; Tier 2 (25% off) ${int(p_price*0.75):,}; Tier 3 & 4 (50% off) ${int(p_price*0.5):,}; Tier 5 (75% off) ${int(p_price*0.25):,}; Tier 6 custom subsidized relief (${int(p_price*0.1):,})."
+        p_schema_offering = f"Comprehensive Personal Training at ${p_price:,} USD for {p_days} days ({b_live} days live training + {b_supp} days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under Apache 2.0, {p_notes}). Strictly for 1 person only. Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 ${p_price:,}; Tier 2 (25% off) ${int(p_price*0.75):,}; Tier 3 & 4 (50% off) ${int(p_price*0.5):,}; Tier 5 (75% off) ${int(p_price*0.25):,}; Tier 6 custom subsidized relief (Custom)."
         content = re.sub(
-            r'"description":\s*"Comprehensive Personal Training at \$[\d,]+ USD for \d+ days[\s\S]*?Tier 6 custom subsidized relief \(\$[\d,]+\)\."',
+            r'"description":\s*"Comprehensive Personal Training at \$[\d,]+ USD for \d+ days[\s\S]*?Tier 6 custom subsidized relief(?:\s*\([^)]*\))?\."',
             f'"description": "{p_schema_offering}"',
             content
         )
@@ -278,7 +278,7 @@ def build_rules():
         # 3B. Individual tiers
         content = re.sub(
             r'(<div class="service-rate-tiers svc-indiv-tiers">)[^<]+(</div>)',
-            rf'\g<1>T2: ${int(p_ind*0.75)} | T3/4: ${int(p_ind*0.5)} | T5: ${int(p_ind*0.25)} | T6: ${int(p_ind*0.1)}\g<2>',
+            rf'\g<1>T2: ${int(p_ind*0.75)} | T3/4: ${int(p_ind*0.5)} | T5: ${int(p_ind*0.25)} | T6: Custom\g<2>',
             content
         )
         # 3C. Business seats label
@@ -296,7 +296,7 @@ def build_rules():
         # 3E. Business tiers
         content = re.sub(
             r'(<div class="service-rate-tiers svc-biz-tiers">)[^<]+(</div>)',
-            rf'\g<1>T2: ${int(b_ind*0.75)} | T3/4: ${int(b_ind*0.5)} | T5: ${int(b_ind*0.25)} | T6: ${int(b_ind*0.1)}\g<2>',
+            rf'\g<1>T2: ${int(b_ind*0.75)} | T3/4: ${int(b_ind*0.5)} | T5: ${int(b_ind*0.25)} | T6: Custom\g<2>',
             content
         )
         # 3F. Service coverage label

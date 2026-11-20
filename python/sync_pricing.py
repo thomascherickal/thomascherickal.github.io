@@ -30,17 +30,17 @@ OFFERS = [
         "name": "Individual Service Pick (Personal / 1-on-1)",
         "headline": "$100 USD",
         "sub": "USD - PER SERVICE - 5 DAYS TRAINING + 5 DAYS SUPPORT",
-        "minPrice": 300,
-        "maxPrice": 300,
+        "minPrice": 100,
+        "maxPrice": 100,
         "description": "Pick individual services at $100 USD per service for individuals, covering 5 days of live training plus 5 days of dedicated support (10 days total coverage per service). Strictly 1 person only. Full 195-country Purchasing Power Parity supported across 6 tiers.",
         "duration": "5 days live training + 5 days dedicated support (10 days total per service)",
         "cohort": "Strictly 1 person only (private 1-on-1 acceleration)",
         "parity": {
-            "tier1": 300,
-            "tier2": 225,
-            "tier3": 150,
-            "tier4": 150,
-            "tier5": 75,
+            "tier1": 100,
+            "tier2": 75,
+            "tier3": 50,
+            "tier4": 50,
+            "tier5": 25,
             "tier6": 0
         }
     },
@@ -49,17 +49,17 @@ OFFERS = [
         "name": "Individual Service Pick (Business / Teams)",
         "headline": "$100 USD",
         "sub": "USD - PER SERVICE - 5 DAYS TRAINING + 5 DAYS SUPPORT",
-        "minPrice": 300,
-        "maxPrice": 300,
+        "minPrice": 100,
+        "maxPrice": 100,
         "description": "Pick individual services at $100 USD base for 1 seat, with additional seats at $100 USD per seat up to a maximum of 10 seats, covering 5 days of live training plus 5 days of dedicated support (10 days total coverage per service). Full 195-country Purchasing Power Parity supported across 6 tiers.",
         "duration": "5 days live training + 5 days dedicated support (10 days total per service)",
         "cohort": "1 seat base (+$100 USD per extra seat up to 10 seats max)",
         "parity": {
-            "tier1": 300,
-            "tier2": 225,
-            "tier3": 150,
-            "tier4": 150,
-            "tier5": 75,
+            "tier1": 100,
+            "tier2": 75,
+            "tier3": 50,
+            "tier4": 50,
+            "tier5": 25,
             "tier6": 0
         }
     },
@@ -68,17 +68,17 @@ OFFERS = [
         "name": "Business AI Training Flagship",
         "headline": "$1000 USD",
         "sub": "USD - 60 DAYS (30D LIVE TRAINING + 30D DEDICATED SUPPORT)",
-        "minPrice": 3000,
-        "maxPrice": 3000,
+        "minPrice": 1000,
+        "maxPrice": 1000,
         "description": "Business AI Training Flagship at $1000 USD for 60 days total (30 days live engineering training + 30 days dedicated support, 4 hours per day, Monday through Friday). Includes up to 10 participants. Extra seats at $100 USD per seat after 10 participants, up to 20 seats max. Full 195-country Purchasing Power Parity supported: Tier 1 ($1000), Tier 2 ($750), Tier 3 ($500), Tier 4 ($500), Tier 5 ($250), Tier 6 (Custom).",
         "duration": "60 days total (30 days live training + 30 days dedicated support, 4 hours per day)",
         "cohort": "Up to 10 participants included (+$100 USD per extra seat up to 20 max)",
         "parity": {
-            "tier1": 3000,
-            "tier2": 2250,
-            "tier3": 1500,
-            "tier4": 1500,
-            "tier5": 750,
+            "tier1": 1000,
+            "tier2": 750,
+            "tier3": 500,
+            "tier4": 500,
+            "tier5": 250,
             "tier6": 0
         }
     },
@@ -87,17 +87,17 @@ OFFERS = [
         "name": "Personal AI Training Flagship",
         "headline": "$1000 USD",
         "sub": "USD - 60 DAYS (30D LIVE TRAINING + 30D DEDICATED SUPPORT)",
-        "minPrice": 3000,
-        "maxPrice": 3000,
+        "minPrice": 1000,
+        "maxPrice": 1000,
         "description": "Personal AI Training Flagship at $1000 USD for 60 days total (30 days live 1-on-1 training + 30 days dedicated support, 4 hours per day, Monday through Friday). Strictly one person only. Full 195-country Purchasing Power Parity supported: Tier 1 ($1000), Tier 2 ($750), Tier 3 ($500), Tier 4 ($500), Tier 5 ($250), Tier 6 (Custom).",
         "duration": "60 days total (30 days live training + 30 days dedicated support, 4 hours per day)",
         "cohort": "Strictly one person only (dedicated private acceleration)",
         "parity": {
-            "tier1": 3000,
-            "tier2": 2250,
-            "tier3": 1500,
-            "tier4": 1500,
-            "tier5": 750,
+            "tier1": 1000,
+            "tier2": 750,
+            "tier3": 500,
+            "tier4": 500,
+            "tier5": 250,
             "tier6": 0
         }
     }
@@ -180,14 +180,14 @@ def build_offer_catalog_elements():
 def get_service_price_specs():
     """Returns full list of PriceSpecification entries for service schemas."""
     return [
-        format_price_spec("Individual Service Pick (Tier 1 / 100%)", 300, "5 days live training + 5 days dedicated support (10 days total)"),
-        format_price_spec("Individual Service Pick (Tier 2 / 25% Off)", 225),
-        format_price_spec("Individual Service Pick (Tier 3 & 4 / 50% Off)", 150),
-        format_price_spec("Individual Service Pick (Tier 5 / 75% Off)", 75),
-        format_price_spec("Flagship AI Training (Tier 1 / 100%)", 3000, "60 days total: 30 days live training + 30 days dedicated support"),
-        format_price_spec("Flagship AI Training (Tier 2 / 25% Off)", 2250),
-        format_price_spec("Flagship AI Training (Tier 3 & 4 / 50% Off)", 1500),
-        format_price_spec("Flagship AI Training (Tier 5 / 75% Off)", 750),
+        format_price_spec("Individual Service Pick (Tier 1 / 100%)", 100, "5 days live training + 5 days dedicated support (10 days total)"),
+        format_price_spec("Individual Service Pick (Tier 2 / 25% Off)", 75),
+        format_price_spec("Individual Service Pick (Tier 3 & 4 / 50% Off)", 50),
+        format_price_spec("Individual Service Pick (Tier 5 / 75% Off)", 25),
+        format_price_spec("Flagship AI Training (Tier 1 / 100%)", 1000, "60 days total: 30 days live training + 30 days dedicated support"),
+        format_price_spec("Flagship AI Training (Tier 2 / 25% Off)", 750),
+        format_price_spec("Flagship AI Training (Tier 3 & 4 / 50% Off)", 500),
+        format_price_spec("Flagship AI Training (Tier 5 / 75% Off)", 250),
         format_price_spec("Tier 6 (Custom Subsidized Relief)", 0, "Custom subsidized quotes and relief for under-resourced teams")
     ]
 
@@ -278,7 +278,7 @@ def sync_service_schema_files(schema_dir=None):
                 s_data = json.load(f)
             for item in s_data.get("@graph", []):
                 if item.get("@type") == "Service" and "offers" in item:
-                    item["offers"]["price"] = "300.00"
+                    item["offers"]["price"] = "100.00"
                     item["offers"]["description"] = clean_desc
                     item["offers"]["priceSpecification"] = offer_specs
             with open(schema_path, "w", encoding="utf-8") as f:

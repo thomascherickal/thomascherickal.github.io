@@ -659,11 +659,11 @@ class TestPythonTools(unittest.TestCase):
 
         with open(pricing_schema, "r", encoding="utf-8") as f:
             ps_data = json.load(f)
-        self.assertIn("$3000 USD", ps_data["@graph"][0]["description"])
+        self.assertIn("$1000 USD", ps_data["@graph"][0]["description"])
 
         with open(svc_schema, "r", encoding="utf-8") as f:
             ss_data = json.load(f)
-        self.assertEqual(ss_data["@graph"][0]["offers"]["price"], "300.00")
+        self.assertEqual(ss_data["@graph"][0]["offers"]["price"], "100.00")
 
         # Missing file branches
         empty_dir = os.path.join(self.temp_dir, "empty")

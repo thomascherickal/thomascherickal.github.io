@@ -42,14 +42,14 @@ All training payments are distributed into five
  equal installments (20% per installment), mapped directly to completed training days, followed by verified milestone payments for the support phase:
 
 - 60-Day Business AI
- Training Flagship ($3,000 USD): Five equal installments (20% / $600 USD each), due after Days 5, 10,
+ Training Flagship ($1,000 USD): Five equal installments (20% / $200 USD each), due after Days 5, 10,
  15, 20 and 25 of completed live training. Dedicated support (30 days) is an additional $500 USD, paid in two equal installments ($250 USD after 15 days and $250 USD after 30 days of support).
 
 - 60-Day Personal AI
- Training Flagship ($3,000 USD): Five equal installments (20% / $600 USD each), due after Days 5, 10,
+ Training Flagship ($1,000 USD): Five equal installments (20% / $200 USD each), due after Days 5, 10,
  15, 20 and 25 of completed live 1-on-1 training. Dedicated support (30 days) is an additional $500 USD, paid in two equal installments ($250 USD after 15 days and $250 USD after 30 days of support).
 
-- 10-Day Individual Services (($300 / $225 / $150 / $150 / $75 / Custom USD)):
+- 10-Day Individual Services (($100 / $75 / $50 / $50 / $25 / Custom USD)):
  Five equal installments (20% / $50 USD each), due after Days 1, 2, 3, 4, and 5 of completed live training. Dedicated support (5 days) is an additional $50 USD due after 5 days of support.
 
 - Support Period Milestones:
@@ -92,10 +92,10 @@ This policy guarantees complete risk elimination, aligning my incentives entirel
 No. There is zero charge for the dedicated support period. All post-training operational support is 100% included and fully covered by the base price and its scaled Purchasing Power Parity (PPP) tiers:
 
 - Flagship Programs (Business & Personal):
- The 30-day support phase carries $0 additional charge. It is completely covered by the $3,000 USD flagship price and its scaled parity tiers.
+ The 30-day support phase carries $0 additional charge. It is completely covered by the $1,000 USD flagship price and its scaled parity tiers.
 
 - Individual Services (Business & Personal):
- The 5-day support phase carries $0 additional charge. It is completely covered by the $300 USD individual service price and its scaled parity tiers.
+ The 5-day support phase carries $0 additional charge. It is completely covered by the $100 USD individual service price and its scaled parity tiers.
 
 - What Support Covers:
  Direct code reviews, debugging agent pipelines, answering technical queries, refactoring MCP servers, and providing written custom guides licensed under Apache 2.0.
@@ -110,16 +110,16 @@ There are zero surprise invoices, no recurring subscriptions, and zero additiona
 Because support periods carry zero extra charge, clients across all 6 World Bank Purchasing Power Parity (PPP) tiers receive identical comprehensive operational support fully covered by their package rate:
 
 - Tier 1 (High-Income Economies, 100%):
- $3,000 flagship / $300 individual service (30d/5d support 100% included at $0 USD).
+ $1,000 flagship / $100 individual service (30d/5d support 100% included at $0 USD).
 
 - Tier 2 (Upper-Middle-Income, 25% Off):
- $2,250 flagship / $225 individual service (30d/5d support 100% included at $0 USD).
+ $750 flagship / $75 individual service (30d/5d support 100% included at $0 USD).
 
 - Tier 3 & 4 (Lower-Middle/Low-Income & Startups, 50% Off):
- $1,500 flagship / $150 individual service (30d/5d support 100% included at $0 USD).
+ $500 flagship / $50 individual service (30d/5d support 100% included at $0 USD).
 
 - Tier 5 (Academia & Non-Profits, 75% Off):
- $750 flagship / $75 individual service (30d/5d support 100% included at $0 USD).
+ $250 flagship / $25 individual service (30d/5d support 100% included at $0 USD).
 
 - Tier 6 (Crisis-Affected & Under-Resourced):
  Custom subsidized micro-rates with support 100% included.
@@ -157,7 +157,7 @@ Graduates emerge operating as high-leverage solo powerhouses
 ### 7. What is the investment and structure for Personal Training?
 *Personal:
  Pricing Offer · FAQ #24*  
-Personal Training is $3,000 USD in Tier 1 for 60 days total (30 days training, + 30 days guidance,
+Personal Training is $1,000 USD in Tier 1 for 60 days total (30 days training, + 30 days guidance,
  Q&A and written guides). Strictly for 1 person only. Clients are encouraged to choose services
  relevant to their work or interests.
 
@@ -165,8 +165,8 @@ Personal Training is $3,000 USD in Tier 1 for 60 days total (30 days training, +
  (multi-tier approvals, vendor compliance, multi-tenant sandboxes) disappears entirely, moving
  directly at founder speed.
 
-- 195-Country Parity Scaled: The $3,000 baseline cascades through all 6 Purchasing
- Power Parity tiers, scaling from $3,000 in Tier 1 down to Custom in Tier 6.
+- 195-Country Parity Scaled: The $1,000 baseline cascades through all 6 Purchasing
+ Power Parity tiers, scaling from $1,000 in Tier 1 down to Custom in Tier 6.
 
 - Tailored Focus: Clients select specific tools and architectures relevant to their
  workflows (local LLMs, Claude agent teams, Gemini agents, workflow automation, and custom tooling)
@@ -220,20 +220,20 @@ Purchasing Power Parity applies unconditionally to Personal Training across six 
 
 - Tier 1: World Bank High-Income Economies (USA, Canada, UK, Germany, France, Poland, Czech
  Republic, Hungary, Greece, Romania, Japan, South Korea, Singapore, Australia, Chile, UAE, Saudi
- Arabia): $3,000 USD rate (100% standard).
+ Arabia): $1,000 USD rate (100% standard).
 
 - Tier 2: Upper-Middle-Income Economies (Brazil, Mexico, Colombia, Argentina, Peru, Ecuador,
  Guatemala, Türkiye, Malaysia, Thailand, Indonesia, South Africa, Vietnam, the Philippines, Sri
- Lanka): $2,250 USD rate (25% parity discount).
+ Lanka): $750 USD rate (25% parity discount).
 
 - Tier 3: Lower-Middle & Low-Income Economies (India, Bangladesh, Pakistan, Nepal,
  Bhutan, Kenya, Nigeria, Ghana, Egypt, Morocco, Tanzania, Bolivia, Cambodia, Laos, Myanmar,
- Ethiopia, Uganda, Rwanda): $1,500 USD rate (50% parity discount).
+ Ethiopia, Uganda, Rwanda): $500 USD rate (50% parity discount).
 
-- Tier 4: Early-Stage Startups (<$1M Funding): $1,500 USD rate (50% flat startup
+- Tier 4: Early-Stage Startups (<$1M Funding): $500 USD rate (50% flat startup
  discount).
 
-- Tier 5: Academia, Researchers & Non-Profits: $750 USD rate (75% academic
+- Tier 5: Academia, Researchers & Non-Profits: $250 USD rate (75% academic
  discount).
 
 - Tier 6: Crisis-Affected & Under-Resourced Regions: Custom Subsidized rate (Custom
@@ -257,7 +257,7 @@ No. Personal Training is strictly for one person only (private 1-on-1
  private local models, and personal productivity workflow.
 
 - Business Training for Teams: If you wish to train a founding team, corporate
- department, or developer cohort, explore our Business Training ($3,000 USD for 60
+ department, or developer cohort, explore our Business Training ($1,000 USD for 60
  Days),
  which covers up to 10 participants in its fixed base rate (with additional seats at $250/head scaled
  by parity up to 20 seats max).
@@ -580,7 +580,7 @@ Global MNCs gain a consistent, world-class standard of agentic software engineer
  quota and 30-day training plus 30-day support guarantee cover?
 *Pricing:
  Business Guarantee · FAQ #13*  
-Our Business Training bookings feature a fixed base investment of $3,000 USD covering up to 10 participants for 60 days (30 days training + 30 days guidance, assistance, and written guides licensed under Apache 2.0).
+Our Business Training bookings feature a fixed base investment of $1,000 USD covering up to 10 participants for 60 days (30 days training + 30 days guidance, assistance, and written guides licensed under Apache 2.0).
  There are no hidden licensing royalties or hourly surprise fees.
 
 - 30 Days Live Training Sprint: 60 days over 2 months, Saturday & Sunday holidays, 4 hours per day.
@@ -592,7 +592,7 @@ Our Business Training bookings feature a fixed base investment of $3,000 USD cov
  handbooks, and reproducible starter repositories included under Apache 2.0.
 
 - Up to 10 Learners Included: Base fee covers up to 10 participants. Additional
- seats scale transparently at ($300 / $225 / $150 / $150 / $75 / Custom USD) per head (adjusted by country parity tier) up to a strict maximum of 20 seats.
+ seats scale transparently at ($100 / $75 / $50 / $50 / $25 / Custom USD) per head (adjusted by country parity tier) up to a strict maximum of 20 seats.
 
 - Apache 2.0 Open Licensing: Unrestricted commercial use, modification, and
  deployment with attribution.
@@ -606,12 +606,12 @@ This 30+30 dual guarantee ensures your organization achieves lasting capability 
 *Pricing:
  Scale-Out · FAQ #14*  
 When a team desires to include more than 10 participants in a single Business Training cohort, pricing
- scales simply, transparently, and predictably: ($300 / $225 / $150 / $150 / $75 / Custom USD) per additional seat up to a strict maximum of 20 seats.
+ scales simply, transparently, and predictably: ($100 / $75 / $50 / $50 / $25 / Custom USD) per additional seat up to a strict maximum of 20 seats.
 
 - Parity Discounts Apply Directly: The qualifying country parity multiplier applies
  to the $250 per-head fee as well.
 
-- Tier 1 (Standard): $300 USD per additional participant.
+- Tier 1 (Standard): $100 USD per additional participant.
 
 - Tier 2 (25% Parity Discount): $188 USD per additional participant (0.75X).
 
@@ -659,11 +659,11 @@ Response SLA: 7 days reply, 30 days start. Remote only worldwide.
 Yes, absolutely. Clients have complete freedom to pick and choose individual services
  from our 12-service catalogue without committing to a full multi-week transformation package.
 
-- Individual / Personal Pricing: ($300 / $225 / $150 / $150 / $75 / Custom USD) per service strictly for
+- Individual / Personal Pricing: ($100 / $75 / $50 / $50 / $25 / Custom USD) per service strictly for
  1 person only (private 1-on-1 sprint).
 
-- Business / Organization Pricing: ($300 / $225 / $150 / $150 / $75 / Custom USD) per service for up to
- 10 team participants (additional seats at ($300 / $225 / $150 / $150 / $75 / Custom USD) per seat up to a maximum of 10 seats).
+- Business / Organization Pricing: ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for up to
+ 10 team participants (additional seats at ($100 / $75 / $50 / $50 / $25 / Custom USD) per seat up to a maximum of 10 seats).
 
 - Delivery Cadence: Every individual service includes 5 days of live,
  hands-on engineering training followed by 5 days of dedicated operational support
@@ -683,7 +683,7 @@ Individual service picks allow teams to solve high-priority architectural bottle
 Yes. Parity pricing is universally available for all service pricing across our
  entire offering catalogue and across all 195 countries.
 
-- Individual Pick Parity Rates ($300 Base): Tier 1 (100%): $300 | Tier 2 (25% off): $225 | Tier 3 & 4 (50% off): $150 | Tier 5 (75% off): $75 | Tier 6 (Subsidized): $30 USD.
+- Individual Pick Parity Rates ($100 Base): Tier 1 (100%): $100 | Tier 2 (25% off): $75 | Tier 3 & 4 (50% off): $50 | Tier 5 (75% off): $25 | Tier 6 (Subsidized): $10 USD.
 
 - Business Pick Parity Rates ($250 Base): Tier 1 (100%): $250 | Tier 2 (25% off):
  $188 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $63 | Tier 6 (Subsidized): $25 USD.
@@ -830,7 +830,7 @@ Tier 6 engagements are reviewed directly by founder Thomas Cherickal on a missio
  discount) pricing?
 *Parity:
  Tier 5 Qualification · FAQ #46*  
-Qualification for Tier 5 (75% Parity Discount: $500 USD for Flagship Business, ($300 / $225 / $150 / $150 / $75 / Custom USD) for
+Qualification for Tier 5 (75% Parity Discount: $500 USD for Flagship Business, ($100 / $75 / $50 / $50 / $25 / Custom USD) for
  Flagship Personal, $50 USD for Individual Business, and $25 USD for Individual Personal) is
  straightforward and designed to support public education, open science, and humanitarian missions with
  minimal bureaucracy:
@@ -1239,7 +1239,7 @@ Every service engagement is governed by an explicit duration and included suppor
 
 - Individual Pick Services: Strictly 5 days of intensive live training AND
  5 days of included support (total 10 days of coverage, 4 hours per day, 20 live training
- hours total), priced at ($300 / $225 / $150 / $150 / $75 / Custom USD) (Business, up to 10 seats, additional seats at $300/seat) or ($300 / $225 / $150 / $150 / $75 / Custom USD) (Personal, 1 person) in Tier 1
+ hours total), priced at ($100 / $75 / $50 / $50 / $25 / Custom USD) (Business, up to 10 seats, additional seats at $100/seat) or ($100 / $75 / $50 / $50 / $25 / Custom USD) (Personal, 1 person) in Tier 1
  with universal parity scaling.
 
 - Free Concurrency: All business services and programs can freely overlap or run
