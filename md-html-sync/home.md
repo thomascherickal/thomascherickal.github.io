@@ -25,11 +25,7 @@
 ---
 
 ## Bio
-I hold a postgraduate degree in Computer Science from Loyola College. I help individuals and
- businesses become AI-first, AI-native leaders and organizations. My work covers Generative AI, local LLM
- deployments that reduce inference costs, Claude agent orchestration, and AI training for every level from
- freshers to CXOs, one-to-one or for whole teams. The focus is practical use and budget-conscious rollout that
- shows up in daily work.
+
 
 ### Quick Actions
 - [Articles](articles.html)

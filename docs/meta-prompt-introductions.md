@@ -195,8 +195,8 @@ Use any 50-word introduction below as an editable meta-prompt to guide or regene
 59. **`google-gemini-4-carbon.html` - Gemini 4 Carbon: Deep Thinking & Long-Horizon Autonomous Agents**
     Analyze Gemini Carbon's balanced frontier tier combining sustained multi-step thinking with practical production latency. Covers agentic coding loops, verifiable constraint checking, enterprise deployment patterns, and cost-performance optimization across demanding engineering workloads.
 
-60. **`google-gemini-4-helix.html` - Gemini 4 Helix: The New Flash-Lite Architecture**
-    An architectural preview of Gemini Helix's architecture and pricing as the replacement to Google 3.5 Flash-Lite, and its performance and benchmarks in speed and cost across multiple domains, after launch. If itis not yet lauched, say so.
+60. **`google-gemini-4-helium.html` - Gemini 4 Helium: The New Flash-Lite Architecture**
+    An architectural preview of Gemini Helium's architecture and pricing as the replacement to Google 3.5 Flash-Lite, and its performance and benchmarks in speed and cost across multiple domains, after launch. If it is not yet launched, say so.
 
 61. **`google-gemini-4-hydrogen.html` - Gemini 4 Hydrogen: Fast Flash Foundation & High-Throughput Swarms**
     Explore Gemini Hydrogen's high-speed, low-latency architecture optimized for real-time voice/video streaming, high-volume classification, and parallel subagent swarms. Covers throughput benchmarks, cost economics, and tiered coordinator-worker deployment patterns.
