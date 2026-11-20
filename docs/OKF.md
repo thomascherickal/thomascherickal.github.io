@@ -12,7 +12,7 @@ Operational playbooks, delivery economics, Purchasing Power Parity registries, a
 
 ## Directory Role & Agent Guidelines
 
-- Houses `services-summary.md` (all 16 business and 16 personal services with canonical $3000 flagship / $300 individual pricing).
+- Houses `services-summary.md` (all 16 business and 16 personal services with canonical $1000 flagship / $100 individual pricing).
 - Houses `parity pricing.md` (complete 195-country World Bank FY2027 PPP tier assignments).
 - Houses `hourly-rates.md` (delivery economics breakdown across all 6 parity tiers).
 - Houses `website-fixes.md` (historical audit and resolution log).

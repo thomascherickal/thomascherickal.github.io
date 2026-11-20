@@ -58,8 +58,8 @@ To fix the tests automatically with AGY, run:
 [Auto-Healer] Invoking agy CLI to diagnose and heal failure (Attempt 1/3)...
 Checked 2 internal links across 1 HTML files.
 FOUND 2 BROKEN LINKS/ANCHORS:
-  - Broken link in ../../../../../../../tmp/tmpkai5c29y/broken.html: 'missing.html' -> Target file ../../../../../../../tmp/tmpkai5c29y/missing.html not found
-  - Broken anchor in ../../../../../../../tmp/tmpkai5c29y/broken.html: '#missing-anchor' -> ID '#missing-anchor' not found in ../../../../../../../tmp/tmpkai5c29y/broken.html
+  - Broken link in ../../../../../../../tmp/tmpuk8ms9xw/broken.html: 'missing.html' -> Target file ../../../../../../../tmp/tmpuk8ms9xw/missing.html not found
+  - Broken anchor in ../../../../../../../tmp/tmpuk8ms9xw/broken.html: '#missing-anchor' -> ID '#missing-anchor' not found in ../../../../../../../tmp/tmpuk8ms9xw/broken.html
 Checked 1 internal links across 2 HTML files.
 ZERO broken internal links or fragments found! All links verified.
 Checked 1 internal links across 2 HTML files.
@@ -169,11 +169,15 @@ Summary: 99 files evaluated | 2 updated | 97 in sync | 64 references tracked
 
 [Step 4/6] Executing forward-chaining inference & computing line diffs...
   [UPDATE SCOPE] Fields: Authoritative pricing, tiers, curricula & configs -> Target: HTML/JS repository pages
+  -> [MODIFIED] guarantees.html | Field: guarantees_business_flagship_price, guarantees_personal_flagship_price | Location: Line(s) 357-359, 366-367, 373-375, 382-383, 520, 525, 527, 537, 544, 556-557
+     Changed Lines: 357-359, 366-367, 373-375, 382-383, 520, 525, 527, 537, 544, 556-557
+     Rules Fired:   GuaranteesPageRule
+     Fields Synced: guarantees_business_flagship_price, guarantees_personal_flagship_price
   -> [MODIFIED] personal-services/personal-service-agentic-assistants.html | Field: individual_service_duration, individual_service_price, personal_service_04_name | Location: Line(s) 7, 298
      Changed Lines: 7, 298
      Rules Fired:   PersonalServicesNamesAndCardsRule
      Fields Synced: individual_service_duration, individual_service_price, personal_service_04_name
-  -> Total documents modified: 1 of 99
+  -> Total documents modified: 2 of 99
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
@@ -181,28 +185,31 @@ Summary: 99 files evaluated | 2 updated | 97 in sync | 64 references tracked
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
-  -> Exhaustive scan located 28549 term occurrences across 99 documents
-  -> Wrote pricing_references.json (3360 references)
+  -> Exhaustive scan located 29358 term occurrences across 99 documents
+  -> Wrote pricing_references.json (4168 references)
   -> Wrote business_services_references.json (3253 references)
-  -> Wrote config_references.json (6434 references)
-  -> Master Dictionary generated: references_dictionary.json (28667 total references)
+  -> Wrote personal_services_references.json (1198 references)
+  -> Wrote tiers_references.json (3419 references)
+  -> Master Dictionary generated: references_dictionary.json (29476 total references)
   -> Lightweight Manifest generated: references_manifest.json (108 documents indexed)
 
 [Step 6/6] Generating domain markdown synchronization reports...
   [UPDATE SCOPE] Fields: Domain summaries & occurrence tables -> Target: nlp-fuzzy-expert/*.md reports
   -> Wrote pricing.md
   -> Wrote business-services.md
-  -> Wrote config.md
+  -> Wrote personal-services.md
+  -> Wrote tiers.md
 
 ================================================================================
                      SYNCHRONIZATION SUMMARY TABLE
 ================================================================================
-+-----------------------------------------------+---------+---------------+--------------------------+--------------------------+
-| Target File                                   | Status  | Changed Lines | Rules Fired              | Fields Synced            |
-+-----------------------------------------------+---------+---------------+--------------------------+--------------------------+
-| personal-services/personal-service-agentic... | UPDATED | 7, 298        | PersonalServicesNames... | individual_service_du... |
-+-----------------------------------------------+---------+---------------+--------------------------+--------------------------+
-Summary: 99 files evaluated | 1 updated | 98 in sync | 100 references tracked
++-----------------------------------------------+---------+------------------------+--------------------------+--------------------------+
+| Target File                                   | Status  | Changed Lines          | Rules Fired              | Fields Synced            |
++-----------------------------------------------+---------+------------------------+--------------------------+--------------------------+
+| guarantees.html                               | UPDATED | 357-359, 366-367, 3... | GuaranteesPageRule       | guarantees_business_f... |
+| personal-services/personal-service-agentic... | UPDATED | 7, 298                 | PersonalServicesNames... | individual_service_du... |
++-----------------------------------------------+---------+------------------------+--------------------------+--------------------------+
+Summary: 99 files evaluated | 2 updated | 97 in sync | 100 references tracked
 ================================================================================
 ================================================================================
            NLP-FUZZY-EXPERT KNOWLEDGE SYNCHRONIZATION SYSTEM
@@ -288,7 +295,7 @@ Summary: 99 files evaluated | 1 updated | 98 in sync | 100 references tracked
 | pricing.html          | UPDATED | 60, 94, 183, 453, 1... | PricingHeroPackagesRu... | business_flagship_day... |
 | pricing-tests.js      | UPDATED | 21                     | CodeTestSynchronizer     | source_and_tests         |
 +-----------------------+---------+------------------------+--------------------------+--------------------------+
-Summary: 99 files evaluated | 6 updated | 93 in sync | 172 references tracked
+Summary: 99 files evaluated | 6 updated | 93 in sync | 230 references tracked
 ================================================================================
 ================================================================================
            NLP-FUZZY-EXPERT KNOWLEDGE SYNCHRONIZATION SYSTEM
@@ -374,7 +381,7 @@ Summary: 99 files evaluated | 6 updated | 93 in sync | 172 references tracked
 | pricing.html          | UPDATED | 60, 94, 183, 453, 1... | PricingHeroPackagesRu... | business_flagship_day... |
 | pricing-tests.js      | UPDATED | 21                     | CodeTestSynchronizer     | source_and_tests         |
 +-----------------------+---------+------------------------+--------------------------+--------------------------+
-Summary: 99 files evaluated | 6 updated | 93 in sync | 172 references tracked
+Summary: 99 files evaluated | 6 updated | 93 in sync | 230 references tracked
 ================================================================================
 ================================================================================
            NLP-FUZZY-EXPERT KNOWLEDGE SYNCHRONIZATION SYSTEM
@@ -429,17 +436,19 @@ Summary: 99 files evaluated | 6 updated | 93 in sync | 172 references tracked
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
-  -> Exhaustive scan located 28549 term occurrences across 99 documents
-  -> Wrote pricing_references.json (3399 references)
+  -> Exhaustive scan located 29358 term occurrences across 99 documents
+  -> Wrote pricing_references.json (4223 references)
   -> Wrote business_services_references.json (3285 references)
+  -> Wrote tiers_references.json (3461 references)
   -> Wrote config_references.json (6435 references)
-  -> Master Dictionary generated: references_dictionary.json (28739 total references)
+  -> Master Dictionary generated: references_dictionary.json (29606 total references)
   -> Lightweight Manifest generated: references_manifest.json (108 documents indexed)
 
 [Step 6/6] Generating domain markdown synchronization reports...
   [UPDATE SCOPE] Fields: Domain summaries & occurrence tables -> Target: nlp-fuzzy-expert/*.md reports
   -> Wrote pricing.md
   -> Wrote business-services.md
+  -> Wrote tiers.md
   -> Wrote config.md
 
 ================================================================================
@@ -452,18 +461,18 @@ Summary: 99 files evaluated | 6 updated | 93 in sync | 172 references tracked
 | llms.txt         | UPDATED | 13, 40, 42       | LLMsTxtRule          | llms_business_flagshi... |
 | pricing-tests.js | UPDATED | 21               | CodeTestSynchronizer | source_and_tests         |
 +------------------+---------+------------------+----------------------+--------------------------+
-Summary: 99 files evaluated | 3 updated | 96 in sync | 172 references tracked
+Summary: 99 files evaluated | 3 updated | 96 in sync | 230 references tracked
 ================================================================================
-[Coverage Report] Successfully appended coverage report to /tmp/tmpf1aaq3k7/LAST-COMMIT-REPORT.md (Combined: 97.86% | Elapsed: 0.0s)
-[Coverage Report] Successfully appended coverage report to /tmp/tmpf1aaq3k7/LAST-COMMIT-REPORT.md (Combined: 97.86% | Elapsed: 0.0s)
-[Coverage Report] Successfully appended coverage report to /tmp/tmpt0lh7ade/LAST-COMMIT-REPORT.md (Combined: 100.00% | Elapsed: 0.0s)
-[Pre-Commit Report] Successfully recorded report (parent 7d06e87) to /tmp/tmpm8ldgy5p/LAST-COMMIT-REPORT.md
-[Pre-Commit Report] Successfully recorded report (parent M	README.md) to /tmp/tmpm8ldgy5p/LAST-COMMIT-REPORT.md
-[Pre-Commit Report] Successfully recorded report (parent ) to /tmp/tmpm8ldgy5p/LAST-COMMIT-REPORT.md
-[README Commit Summary] Successfully updated /tmp/tmpwb_tjsmg/README.md from /tmp/tmpwb_tjsmg/rep.md and /tmp/tmpwb_tjsmg/METRICS.md
-[README Commit Summary] Successfully updated /tmp/tmpwb_tjsmg/README.md from /tmp/tmpwb_tjsmg/rep.md and /tmp/tmpwb_tjsmg/METRICS.md
-[README Commit Summary] Successfully updated /tmp/tmpwb_tjsmg/README_plain.md from /tmp/tmpwb_tjsmg/rep_min.md and /tmp/tmpwb_tjsmg/missing_METRICS.md
-[README Commit Summary] Successfully updated /tmp/tmpwb_tjsmg/README_plain.md from /tmp/tmpwb_tjsmg/rep_min.md and /tmp/tmpwb_tjsmg/missing_METRICS.md
+[Coverage Report] Successfully appended coverage report to /tmp/tmpjfrg1fln/LAST-COMMIT-REPORT.md (Combined: 97.86% | Elapsed: 0.0s)
+[Coverage Report] Successfully appended coverage report to /tmp/tmpjfrg1fln/LAST-COMMIT-REPORT.md (Combined: 97.86% | Elapsed: 0.0s)
+[Coverage Report] Successfully appended coverage report to /tmp/tmpf01n3s74/LAST-COMMIT-REPORT.md (Combined: 100.00% | Elapsed: 0.0s)
+[Pre-Commit Report] Successfully recorded report (parent 85762fa) to /tmp/tmpfl53wnqy/LAST-COMMIT-REPORT.md
+[Pre-Commit Report] Successfully recorded report (parent M	README.md) to /tmp/tmpfl53wnqy/LAST-COMMIT-REPORT.md
+[Pre-Commit Report] Successfully recorded report (parent ) to /tmp/tmpfl53wnqy/LAST-COMMIT-REPORT.md
+[README Commit Summary] Successfully updated /tmp/tmpti8o7su4/README.md from /tmp/tmpti8o7su4/rep.md and /tmp/tmpti8o7su4/METRICS.md
+[README Commit Summary] Successfully updated /tmp/tmpti8o7su4/README.md from /tmp/tmpti8o7su4/rep.md and /tmp/tmpti8o7su4/METRICS.md
+[README Commit Summary] Successfully updated /tmp/tmpti8o7su4/README_plain.md from /tmp/tmpti8o7su4/rep_min.md and /tmp/tmpti8o7su4/missing_METRICS.md
+[README Commit Summary] Successfully updated /tmp/tmpti8o7su4/README_plain.md from /tmp/tmpti8o7su4/rep_min.md and /tmp/tmpti8o7su4/missing_METRICS.md
 ================================================================================
            NLP-FUZZY-EXPERT KNOWLEDGE SYNCHRONIZATION SYSTEM
 ================================================================================
@@ -1534,7 +1543,7 @@ Summary: 99 files evaluated | 0 updated | 99 in sync | 0 references tracked
 | pricing.html          | UPDATED | 60, 94, 183, 453, 1... | PricingHeroPackagesRu... | business_flagship_day... |
 | pricing-tests.js      | UPDATED | 21                     | CodeTestSynchronizer     | source_and_tests         |
 +-----------------------+---------+------------------------+--------------------------+--------------------------+
-Summary: 99 files evaluated | 6 updated | 93 in sync | 172 references tracked
+Summary: 99 files evaluated | 6 updated | 93 in sync | 230 references tracked
 ================================================================================
 ================================================================================
            NLP-FUZZY-EXPERT KNOWLEDGE SYNCHRONIZATION SYSTEM
@@ -1597,7 +1606,7 @@ Summary: 99 files evaluated | 6 updated | 93 in sync | 172 references tracked
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
-  -> Exhaustive scan located 28549 term occurrences across 99 documents
+  -> Exhaustive scan located 29358 term occurrences across 99 documents
 
 [Step 6/6] Generating domain markdown synchronization reports...
   [UPDATE SCOPE] Fields: Domain summaries & occurrence tables -> Target: nlp-fuzzy-expert/*.md reports
@@ -1614,7 +1623,7 @@ Summary: 99 files evaluated | 6 updated | 93 in sync | 172 references tracked
 | pricing-calculator.js | UPDATED | 170, 316-317, 442, 541 | PricingCalculatorScri... | calculator_seat_thres... |
 | pricing-tests.js      | UPDATED | 21                     | CodeTestSynchronizer     | source_and_tests         |
 +-----------------------+---------+------------------------+--------------------------+--------------------------+
-Summary: 99 files evaluated | 5 updated | 94 in sync | 172 references tracked
+Summary: 99 files evaluated | 5 updated | 94 in sync | 230 references tracked
 ================================================================================
 ================================================================================
            NLP-FUZZY-EXPERT KNOWLEDGE SYNCHRONIZATION SYSTEM
@@ -1652,9 +1661,9 @@ Summary: 99 files evaluated | 5 updated | 94 in sync | 172 references tracked
 
 [Step 4/6] Executing forward-chaining inference & computing line diffs...
   [UPDATE SCOPE] Fields: Authoritative pricing, tiers, curricula & configs -> Target: HTML/JS repository pages
-  -> [MODIFIED] pricing.html | Field: business_flagship_days, business_flagship_price, business_service_01_pricing_card, business_service_02_pricing_card, business_service_03_pricing_card, business_service_04_pricing_card, business_service_05_pricing_card, business_service_06_pricing_card, business_service_07_pricing_card, business_service_08_pricing_card, business_service_09_pricing_card, business_service_10_pricing_card, business_service_11_pricing_card, business_service_12_pricing_card, business_service_13_pricing_card, business_service_14_pricing_card, business_service_15_pricing_card, business_service_16_pricing_card, calculator_options, personal_flagship_days, personal_flagship_price, tier_1_parity, tier_2_parity, tier_3_parity, tier_4_parity, tier_5_parity, tier_6_parity | Location: Line(s) 183, 223, 453, 465
-     Changed Lines: 183, 223, 453, 465
-     Rules Fired:   PricingHeroPackagesRule
+  -> [MODIFIED] pricing.html | Field: business_flagship_days, business_flagship_price, business_service_01_pricing_card, business_service_02_pricing_card, business_service_03_pricing_card, business_service_04_pricing_card, business_service_05_pricing_card, business_service_06_pricing_card, business_service_07_pricing_card, business_service_08_pricing_card, business_service_09_pricing_card, business_service_10_pricing_card, business_service_11_pricing_card, business_service_12_pricing_card, business_service_13_pricing_card, business_service_14_pricing_card, business_service_15_pricing_card, business_service_16_pricing_card, calculator_options, personal_flagship_days, personal_flagship_price, tier_1_parity, tier_2_parity, tier_3_parity, tier_4_parity, tier_5_parity, tier_6_parity | Location: Line(s) 60, 94, 183, 453, 465, 920, 1053-1054, 1225, 1240
+     Changed Lines: 60, 94, 183, 453, 465, 920, 1053-1054, 1225, 1240
+     Rules Fired:   PricingHeroPackagesRule, PricingCalculatorSelectOptionsRule
      Fields Synced: business_flagship_days, business_flagship_price, business_service_01_pricing_card, business_service_02_pricing_card, business_service_03_pricing_card, business_service_04_pricing_card, business_service_05_pricing_card, business_service_06_pricing_card, business_service_07_pricing_card, business_service_08_pricing_card, business_service_09_pricing_card, business_service_10_pricing_card, business_service_11_pricing_card, business_service_12_pricing_card, business_service_13_pricing_card, business_service_14_pricing_card, business_service_15_pricing_card, business_service_16_pricing_card, calculator_options, personal_flagship_days, personal_flagship_price, tier_1_parity, tier_2_parity, tier_3_parity, tier_4_parity, tier_5_parity, tier_6_parity
   -> Total documents modified: 1 of 99
 
@@ -1664,13 +1673,13 @@ Summary: 99 files evaluated | 5 updated | 94 in sync | 172 references tracked
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
-  -> Exhaustive scan located 28549 term occurrences across 99 documents
-  -> Wrote pricing_references.json (3325 references)
+  -> Exhaustive scan located 29358 term occurrences across 99 documents
+  -> Wrote pricing_references.json (4133 references)
   -> Wrote business_services_references.json (3253 references)
   -> Wrote personal_services_references.json (1166 references)
   -> Wrote tiers_references.json (3413 references)
   -> Wrote config_references.json (6434 references)
-  -> Master Dictionary generated: references_dictionary.json (28594 total references)
+  -> Master Dictionary generated: references_dictionary.json (29403 total references)
   -> Lightweight Manifest generated: references_manifest.json (108 documents indexed)
 
 [Step 6/6] Generating domain markdown synchronization reports...
@@ -1684,11 +1693,11 @@ Summary: 99 files evaluated | 5 updated | 94 in sync | 172 references tracked
 ================================================================================
                      SYNCHRONIZATION SUMMARY TABLE
 ================================================================================
-+--------------+---------+--------------------+-------------------------+--------------------------+
-| Target File  | Status  | Changed Lines      | Rules Fired             | Fields Synced            |
-+--------------+---------+--------------------+-------------------------+--------------------------+
-| pricing.html | UPDATED | 183, 223, 453, 465 | PricingHeroPackagesRule | business_flagship_day... |
-+--------------+---------+--------------------+-------------------------+--------------------------+
++--------------+---------+------------------------+--------------------------+--------------------------+
+| Target File  | Status  | Changed Lines          | Rules Fired              | Fields Synced            |
++--------------+---------+------------------------+--------------------------+--------------------------+
+| pricing.html | UPDATED | 60, 94, 183, 453, 4... | PricingHeroPackagesRu... | business_flagship_day... |
++--------------+---------+------------------------+--------------------------+--------------------------+
 Summary: 99 files evaluated | 1 updated | 98 in sync | 27 references tracked
 ================================================================================
 ================================================================================
@@ -1766,11 +1775,11 @@ Tests Run:   149
 Failures:    2
 Errors:      0
 Skipped:     0
-Time Taken:  10.75 seconds
+Time Taken:  10.74 seconds
 ================================================================================
 RESULT: TEST SUITE FAILED.
 ================================================================================
 
-[Auto-Healer] Wrote failure report to: failed_test_sync_guarantees_tests.report.md
+[Auto-Healer] Wrote failure report to: failed_test_python_tools_tests.report.md
 [Auto-Healer] Wrote aggregate report to: failed_tests_report.md
 ```

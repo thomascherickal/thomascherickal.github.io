@@ -65,8 +65,8 @@ The modular JavaScript test suite contains 9 dedicated modules covering 78 indiv
 | `test_data_integrity.js` | Data Integrity & Metadata | 5 | 6 parity tiers, multipliers, discounts, Tier 6 custom flag, 12 unique service slugs. |
 | `test_zero_selection.js` | Zero Selection ($0 USD) | 10 | $0 price on empty selection across modes, participants, and all 6 parity tiers. |
 | `test_individual_services.js` | Individual Pick-Services | 12 | Tier discounts, seat enforcement (strictly 1 person), flagship nudge thresholds. |
-| `test_business_services.js` | Business Pick-Services | 9 | 10 included seats, parity discounts across tiers, flagship nudge threshold ($3,000). |
-| `test_extra_participants.js` | Extra Seat Scaling | 5 | Scaling over 10 included seats (+ $300/seat scaled across parity tiers). |
+| `test_business_services.js` | Business Pick-Services | 9 | 10 included seats, parity discounts across tiers, flagship nudge threshold ($1,000). |
+| `test_extra_participants.js` | Extra Seat Scaling | 5 | Scaling over 10 included seats (+ $100/seat scaled across parity tiers). |
 | `test_flagship_packages.js` | Flagship Packages | 8 | Business and personal flagship rates and savings across all 6 parity tiers. |
 | `test_custom_package.js` | Custom Amount Packages | 5 | Custom scope pricing, negative input clamping to $0, parity percentage scaling. |
 | `test_edge_cases.js` | Defensive Edge Cases | 3 | Null/undefined parameters, invalid/out-of-range tier IDs, NaN participant normalization. |

@@ -9,11 +9,11 @@ Consolidated executive overview, training time limits, and compressed deliverabl
 Clients have the flexibility to either enroll in comprehensive multi-week transformation programs or pick and choose individual services tailored to specific technical needs:
 
 1. **Individual Service Picks (Pick & Choose)**:
-   - **Personal / 1-on-1**: **$300 USD per service** (strictly 1 person), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
-   - **Business / Organizations**: **$300 USD base per service** (1 seat included, +$300 per extra seat up to 10 seats maximum), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
+   - **Personal / 1-on-1**: **$100 USD per service** (strictly 1 person), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
+   - **Business / Organizations**: **$100 USD base per service** (1 seat included, +$100 per extra seat up to 10 seats maximum), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
    - **Purchasing Power Parity (PPP)**: Available across all 6 parity tiers for every individual service pick:
-     - **Tiers 1-6 (Personal)**: $300 / $225 / $150 / $150 / $75 / Custom USD.
-     - **Tiers 1-6 (Business)**: $300 / $225 / $150 / $150 / $75 / Custom USD (+ $300 / $225 / $150 / $150 / $75 / Custom USD per additional seat).
+     - **Tiers 1-6 (Personal)**: $100 / $75 / $50 / $50 / $25 / Custom USD.
+     - **Tiers 1-6 (Business)**: $100 / $75 / $50 / $50 / $25 / Custom USD (+ $100 / $75 / $50 / $50 / $25 / Custom USD per additional seat).
 
 2. **Flagship Transformation Programs (Comprehensive Engagement)**:
 
@@ -23,11 +23,11 @@ Clients have the flexibility to either enroll in comprehensive multi-week transf
 | **Training Duration** | 5 days live engineering | 5 days live engineering | 30 days live engineering | 30 days live engineering |
 | **Included Support Period** | 5 days support & guides | 5 days support & guides | 30 days support & guides | 30 days support & guides |
 | **Total Coverage** | 10 days total coverage | 10 days total coverage | 60 days total coverage | 60 days total coverage |
-| **Audience & Cohort Size** | Strictly 1 person | 1 seat base (+ $300/extra seat up to 10 seats) | Up to 10 seats included (+ $300/extra seat up to 20 seats) | Strictly 1 person (1-on-1) |
-| **Base Pricing (Tier 1)** | **$300 USD** | **$300 USD** | **$3000 USD** | **$3000 USD** |
+| **Audience & Cohort Size** | Strictly 1 person | 1 seat base (+ $100/extra seat up to 10 seats) | Up to 10 seats included (+ $100/extra seat up to 20 seats) | Strictly 1 person (1-on-1) |
+| **Base Pricing (Tier 1)** | **$100 USD** | **$100 USD** | **$1000 USD** | **$1000 USD** |
 | **Support Phase Fee (Tier 1)** | **$0 USD** (100% included) | **$0 USD** (100% included) | **$0 USD** (100% included) | **$0 USD** (100% included) |
 | **Scope** | Pick & choose single service | Pick & choose single service | Full organizational rollout | Full 1-on-1 career mastery |
-| **Purchasing Power Parity** | 6 Tiers ($300 / $225 / $150 / $150 / $75 / Custom) | 6 Tiers ($300 / $225 / $150 / $150 / $75 / Custom) | 6 Tiers ($3000 / $2250 / $1500 / $1500 / $750 / Custom) | 6 Tiers ($3000 / $2250 / $1500 / $1500 / $750 / Custom) |
+| **Purchasing Power Parity** | 6 Tiers ($100 / $75 / $50 / $50 / $25 / Custom) | 6 Tiers ($100 / $75 / $50 / $50 / $25 / Custom) | 6 Tiers ($1000 / $750 / $500 / $500 / $250 / Custom) | 6 Tiers ($1000 / $750 / $500 / $500 / $250 / Custom) |
 | **Upfront Advance** | **$0 upfront** | **$0 upfront** | **$0 upfront** | **$0 upfront** |
 | **Payment Schedule** | 5 equal 20% installments after Days 1-5 | 5 equal 20% installments after Days 1-5 | 5 equal 20% installments after Days 5, 10, 15, 20, 25 | 5 equal 20% installments after Days 5, 10, 15, 20, 25 |
 | **Trust Guarantee** | Walk away owing nothing after Day 1 | Walk away owing nothing after Day 1 | Walk away owing nothing after Day 5 | Walk away owing nothing after Day 5 |
@@ -110,7 +110,7 @@ A dedicated 1-on-1 acceleration program engineered strictly for one person only 
 - **Sprint Structure**: 30 days of intensive live instruction + 30 days of guidance and detailed guides and materials (60-day experience for flagship) or 5 days live + 5 days support (10 days total for individual picks).
 - **Guidance & Doubts Clarification**: Ongoing daily access to review real-world implementations, debug agent pipelines, and solve production blockers.
 - **Detailed Guides & Materials**: In-depth architecture blueprints, runbooks, and cheat sheets designed for rapid daily lookup and long-term reference, licensed under Apache 2.0.
-- **Pricing & Parity**: **$3000 USD base rate** for flagship ($3000 / $2250 / $1500 / $1500 / $750 / Custom USD) and **$300 USD base rate** for individual picks ($300 / $225 / $150 / $150 / $75 / Custom USD).
+- **Pricing & Parity**: **$1000 USD base rate** for flagship ($1000 / $750 / $500 / $500 / $250 / Custom USD) and **$100 USD base rate** for individual picks ($100 / $75 / $50 / $50 / $25 / Custom USD).
 - **$0 Upfront Commitment**: Zero advance fee; billed in 5 equal installments (20% each) due after Days 5, 10, 15, 20, and 25 of completed training (flagship) or Days 1, 2, 3, 4, and 5 (individual pick). Walk away owing nothing after the first milestone block.
 - **Support Phase Fee**: $0 USD (zero extra charge; 30 days of flagship support and 5 days of individual pick support are 100% included in the base price).
 - **Apache 2.0 Licensing**: Permissive open-source licensing for all custom code, prompt templates, operating manuals, and written guides.

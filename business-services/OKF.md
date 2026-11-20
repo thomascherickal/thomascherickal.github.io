@@ -13,7 +13,7 @@ Dedicated specification pages for 16 specialized enterprise AI training services
 ## Directory Role & Agent Guidelines
 
 - Contains exactly 16 enterprise training services (`business-service-01` through `business-service-16`).
-- All services are priced at $300 USD base (1 seat included, +$300 per extra seat up to 10 seats max) for 5 days live + 5 days support.
+- All services are priced at $100 USD base (1 seat included, +$100 per extra seat up to 10 seats max) for 5 days live + 5 days support.
 - Ensure every page maintains standardized CTAs featuring the Free LinkedIn Consultation link.
 - Keep buttons styled with `css/buttons.css` and strictly enforce `text-decoration: none !important;`.
 

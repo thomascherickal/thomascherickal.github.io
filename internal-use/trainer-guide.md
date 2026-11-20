@@ -41,7 +41,7 @@ The website [thedigitalfuturist.com](file:///home/thomas/GitHub.io/thomascherick
 
 ### 2.1 High Cognitive Load for Non-Technical Buyers
 - **Information Density**: With 80 pages and 16 items per service dropdown, a non-technical CEO or HR Director landing on the site can feel overwhelmed by the sheer volume of technical terminology (vLLM, AWQ quantization, gVisor sandboxing, LangGraph state machines).
-- **Mitigation**: Add a 60-second "Start Here: 3-Question Role Matcher" or a short pinned Loom/YouTube video on [`index.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/index.html) that walks visitors through how to pick between a $300 Individual Service Pick and the $3,000 60-Day Flagship.
+- **Mitigation**: Add a 60-second "Start Here: 3-Question Role Matcher" or a short pinned Loom/YouTube video on [`index.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/index.html) that walks visitors through how to pick between a $100 Individual Service Pick and the $1,000 60-Day Flagship.
 
 ### 2.2 Lack of Video Proof & Live Visual Demonstrations
 - **Text-Heavy Medium**: While the prose, SVG diagrams, and code blocks are exceptional, buyers of live training want to hear your voice, see your teaching cadence, and watch a 3-minute screen recording of you orchestrating Claude Code or Google Antigravity IDE in real time.
@@ -62,14 +62,14 @@ Your pricing model in [`pricing.html`](file:///home/thomas/GitHub.io/thomascheri
 
 | Package | Tier 1 Base Price | Duration & Cadence | Support Period Fee | Effective Hourly Rate (Tier 1) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Business Flagship** (Up to 10 seats, +$300/extra up to 20) | **$3,000 USD** | 60 Days (30d live @ 4h/d + 30d support) | +$500 USD ($250 @ 15d, $250 @ 30d) | $25.00/hr base ($2.50/hr/seat for 10 seats); **$50.00/hr** at 20 seats ($6,000 total) |
-| **Personal Flagship** (1-on-1 Private) | **$3,000 USD** | 60 Days (30d live @ 4h/d + 30d support) | +$500 USD ($250 @ 15d, $250 @ 30d) | $25.00/hr base ($29.17/hr w/ support) |
-| **Business Individual Pick** (1 seat base, +$300/extra up to 10) | **$300 USD** | 10 Days (5d live @ 4h/d + 5d support) | +$50 USD (after 5d support) | $15.00/hr for 1 seat; **$150.00/hr** for 10 seats ($3,000 total for 20 live hours) |
-| **Personal Individual Pick** (1-on-1 Private) | **$300 USD** | 10 Days (5d live @ 4h/d + 5d support) | +$50 USD (after 5d support) | $15.00/hr base ($17.50/hr w/ support) |
+| **Business Flagship** (Up to 10 seats, +$100/extra up to 20) | **$1,000 USD** | 60 Days (30d live @ 4h/d + 30d support) | +$500 USD ($250 @ 15d, $250 @ 30d) | $25.00/hr base ($2.50/hr/seat for 10 seats); **$50.00/hr** at 20 seats ($6,000 total) |
+| **Personal Flagship** (1-on-1 Private) | **$1,000 USD** | 60 Days (30d live @ 4h/d + 30d support) | +$500 USD ($250 @ 15d, $250 @ 30d) | $25.00/hr base ($29.17/hr w/ support) |
+| **Business Individual Pick** (1 seat base, +$100/extra up to 10) | **$100 USD** | 10 Days (5d live @ 4h/d + 5d support) | +$50 USD (after 5d support) | $15.00/hr for 1 seat; **$150.00/hr** for 10 seats ($1,000 total for 20 live hours) |
+| **Personal Individual Pick** (1-on-1 Private) | **$100 USD** | 10 Days (5d live @ 4h/d + 5d support) | +$50 USD (after 5d support) | $15.00/hr base ($17.50/hr w/ support) |
 
 ### Strategic Pricing Assessment
-1. **Incredible Market Entry Wedge**: At **$300 USD** for a 5-day (20-hour) single-service sprint with $0 upfront, the barrier to entry is virtually zero. A developer or founder in the US/EU spends more than $300 on API credits in a month. This makes the **Individual Service Pick** the ultimate "Trojan Horse" lead converter.
-2. **High-Margin Sweet Spot**: Notice that a **10-seat Business Individual Service Pick** yields **$3,000 USD for just 5 days (20 hours) of live delivery** ($300 base + 9 extra seats x $300 = $3,000). That is **$150/hour**, which is twice as time-efficient for you as delivering a 30-day flagship for $3,000.
+1. **Incredible Market Entry Wedge**: At **$100 USD** for a 5-day (20-hour) single-service sprint with $0 upfront, the barrier to entry is virtually zero. A developer or founder in the US/EU spends more than $100 on API credits in a month. This makes the **Individual Service Pick** the ultimate "Trojan Horse" lead converter.
+2. **High-Margin Sweet Spot**: Notice that a **10-seat Business Individual Service Pick** yields **$1,000 USD for just 5 days (20 hours) of live delivery** ($100 base + 9 extra seats x $100 = $1,000). That is **$50/hour**, which is twice as time-efficient for you as delivering a 30-day flagship for $3,000.
 3. **Purchasing Power Parity (PPP) Brilliance**: The 6-tier PPP matrix (Tier 1: 100%, Tier 2: 75%, Tier 3 & 4 Startups: 50%, Tier 5 Academia: 25%, Tier 6: 10% Subsidized) turns global geography into an asset. Instead of losing price-sensitive leads in India, Brazil, Southeast Asia, or Eastern Europe, you convert them cleanly without devaluing your Tier 1 Western enterprise rate.
 
 ---
@@ -81,9 +81,9 @@ flowchart TD
     subgraph Market["AI Training & Consulting Landscape"]
         direction TB
         A["Big 4 & Enterprise Consultancies<br/>($50,000 - $250,000+ | Strategy Decks Only)"]
-        B["Cohort MOOCs: Maven, DeepLearning.AI<br/>($500 - $3,000 | Pre-Recorded / 100-Person Zoom)"]
+        B["Cohort MOOCs: Maven, DeepLearning.AI<br/>($500 - $1,000 | Pre-Recorded / 100-Person Zoom)"]
         C["Boutique AI Automation Agencies<br/>($5,000 - $15,000 | Black-Box Retainers)"]
-        D["The Digital Futurist: Thomas Cherickal<br/>($300 Picks / $3,000 Flagships | Live 1-on-1 & Team Engineering + $0 Upfront + Apache 2.0 IP)"]
+        D["The Digital Futurist: Thomas Cherickal<br/>($100 Picks / $1,000 Flagships | Live 1-on-1 & Team Engineering + $0 Upfront + Apache 2.0 IP)"]
     end
     A -->|"Too expensive & theoretical"| D
     B -->|"Zero custom code or 1-on-1 help"| D
@@ -92,7 +92,7 @@ flowchart TD
 
 | Competitor Category | Examples | Their Weakness | Your Competitive Moat |
 | :--- | :--- | :--- | :--- |
-| **Cohort Platforms** | Maven, Section4, Reforge | $1,500 - $3,500 per seat for generic group lectures; zero custom code written for the client's repo. | You train the team **inside their actual codebase** for $3,000 across 10 seats ($300/person). |
+| **Cohort Platforms** | Maven, Section4, Reforge | $500 - $3,500 per seat for generic group lectures; zero custom code written for the client's repo. | You train the team **inside their actual codebase** for $1,000 across 10 seats ($100/person). |
 | **Big Tech / Cloud Partners** | AWS/GCP Boutique Partners | Push expensive cloud lock-in (Vertex AI / Bedrock) and charge $25,000+ upfront. | You teach **Local LLMs & Cost Slashing (60-90% savings)** via Ollama/vLLM plus $0 upfront. |
 | **Freelance AI Tutors** | Codementor, Upwork ($100-$250/hr) | Unstructured ad-hoc Q&A; no comprehensive curriculum or written runbooks. | You provide a **24-guide structured engineering syllabus** and 30 days of post-training support. |
 
@@ -116,7 +116,7 @@ flowchart TD
 ### 6.1 The "Trojan Horse" Open-Source Guide Strategy
 Your 24 guides (`claude-training/*` and `gemini-training/*`) are standalone masterpieces. Do not promote your "services" directly on cold channels; **promote the free guides**:
 - **Hacker News (Show HN) & Reddit (`r/LocalLLaMA`, `r/ClaudeAI`, `r/GeminiAI`, `r/singularity`)**:
-  - Submit deep technical posts linking directly to [`claude-training/claude-local-llms.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-training/claude-local-llms.html) or [`gemini-training/google-gemma-local-models.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/gemini-training/google-gemma-local-models.html). Engineers love no-fluff benchmarks, VRAM sizing tables, and copy-pasteable configurations. Once on the page, the global header and bottom CTA naturally funnel them to your $300 / $3,000 training.
+  - Submit deep technical posts linking directly to [`claude-training/claude-local-llms.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/claude-training/claude-local-llms.html) or [`gemini-training/google-gemma-local-models.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/gemini-training/google-gemma-local-models.html). Engineers love no-fluff benchmarks, VRAM sizing tables, and copy-pasteable configurations. Once on the page, the global header and bottom CTA naturally funnel them to your $100 / $1,000 training.
 
 ### 6.2 LinkedIn "Live Lab" Video Carousels (Inbound Consultation Engine)
 - Every page on your site features the **Free LinkedIn Consultation** button (`https://linkedin.com/in/thomascherickal`).

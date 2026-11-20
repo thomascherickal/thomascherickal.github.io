@@ -3,13 +3,13 @@
 sync_pricing.py - Centralized Pricing & Parity Schema Synchronization Utility.
 
 Defines authoritative pricing structures aligned with GEMINI.md and data/pricing.json:
-1. Business AI Training Flagship: $3000 USD for 60 days total (30 days live engineering
-   training + 30 days dedicated support), up to 10 participants (+$300 USD per extra seat
+1. Business AI Training Flagship: $1000 USD for 60 days total (30 days live engineering
+   training + 30 days dedicated support), up to 10 participants (+$100 USD per extra seat
    after 10 participants, up to 20 seats max).
-2. Personal AI Training Flagship: $3000 USD for 60 days total (30 days live 1-on-1
+2. Personal AI Training Flagship: $1000 USD for 60 days total (30 days live 1-on-1
    training + 30 days dedicated support), strictly 1 person only.
-3. Individual Service Picks: $300 USD base for 1 seat (5 days live training + 5 days
-   dedicated support; for business cohorts, +$300 USD per extra seat up to 10 seats max).
+3. Individual Service Picks: $100 USD base for 1 seat (5 days live training + 5 days
+   dedicated support; for business cohorts, +$100 USD per extra seat up to 10 seats max).
 
 Strict Repo Compliance:
 - Zero emojis.
@@ -28,11 +28,11 @@ OFFERS = [
     {
         "id": "individual-service-personal",
         "name": "Individual Service Pick (Personal / 1-on-1)",
-        "headline": "$300 USD",
+        "headline": "$100 USD",
         "sub": "USD - PER SERVICE - 5 DAYS TRAINING + 5 DAYS SUPPORT",
         "minPrice": 300,
         "maxPrice": 300,
-        "description": "Pick individual services at $300 USD per service for individuals, covering 5 days of live training plus 5 days of dedicated support (10 days total coverage per service). Strictly 1 person only. Full 195-country Purchasing Power Parity supported across 6 tiers.",
+        "description": "Pick individual services at $100 USD per service for individuals, covering 5 days of live training plus 5 days of dedicated support (10 days total coverage per service). Strictly 1 person only. Full 195-country Purchasing Power Parity supported across 6 tiers.",
         "duration": "5 days live training + 5 days dedicated support (10 days total per service)",
         "cohort": "Strictly 1 person only (private 1-on-1 acceleration)",
         "parity": {
@@ -47,13 +47,13 @@ OFFERS = [
     {
         "id": "individual-service-business",
         "name": "Individual Service Pick (Business / Teams)",
-        "headline": "$300 USD",
+        "headline": "$100 USD",
         "sub": "USD - PER SERVICE - 5 DAYS TRAINING + 5 DAYS SUPPORT",
         "minPrice": 300,
         "maxPrice": 300,
-        "description": "Pick individual services at $300 USD base for 1 seat, with additional seats at $300 USD per seat up to a maximum of 10 seats, covering 5 days of live training plus 5 days of dedicated support (10 days total coverage per service). Full 195-country Purchasing Power Parity supported across 6 tiers.",
+        "description": "Pick individual services at $100 USD base for 1 seat, with additional seats at $100 USD per seat up to a maximum of 10 seats, covering 5 days of live training plus 5 days of dedicated support (10 days total coverage per service). Full 195-country Purchasing Power Parity supported across 6 tiers.",
         "duration": "5 days live training + 5 days dedicated support (10 days total per service)",
-        "cohort": "1 seat base (+$300 USD per extra seat up to 10 seats max)",
+        "cohort": "1 seat base (+$100 USD per extra seat up to 10 seats max)",
         "parity": {
             "tier1": 300,
             "tier2": 225,
@@ -66,13 +66,13 @@ OFFERS = [
     {
         "id": "business-training",
         "name": "Business AI Training Flagship",
-        "headline": "$3000 USD",
+        "headline": "$1000 USD",
         "sub": "USD - 60 DAYS (30D LIVE TRAINING + 30D DEDICATED SUPPORT)",
         "minPrice": 3000,
         "maxPrice": 3000,
-        "description": "Business AI Training Flagship at $3000 USD for 60 days total (30 days live engineering training + 30 days dedicated support, 4 hours per day, Monday through Friday). Includes up to 10 participants. Extra seats at $300 USD per seat after 10 participants, up to 20 seats max. Full 195-country Purchasing Power Parity supported: Tier 1 ($3000), Tier 2 ($2250), Tier 3 ($1500), Tier 4 ($1500), Tier 5 ($750), Tier 6 (Custom).",
+        "description": "Business AI Training Flagship at $1000 USD for 60 days total (30 days live engineering training + 30 days dedicated support, 4 hours per day, Monday through Friday). Includes up to 10 participants. Extra seats at $100 USD per seat after 10 participants, up to 20 seats max. Full 195-country Purchasing Power Parity supported: Tier 1 ($1000), Tier 2 ($750), Tier 3 ($500), Tier 4 ($500), Tier 5 ($250), Tier 6 (Custom).",
         "duration": "60 days total (30 days live training + 30 days dedicated support, 4 hours per day)",
-        "cohort": "Up to 10 participants included (+$300 USD per extra seat up to 20 max)",
+        "cohort": "Up to 10 participants included (+$100 USD per extra seat up to 20 max)",
         "parity": {
             "tier1": 3000,
             "tier2": 2250,
@@ -85,11 +85,11 @@ OFFERS = [
     {
         "id": "personal-training",
         "name": "Personal AI Training Flagship",
-        "headline": "$3000 USD",
+        "headline": "$1000 USD",
         "sub": "USD - 60 DAYS (30D LIVE TRAINING + 30D DEDICATED SUPPORT)",
         "minPrice": 3000,
         "maxPrice": 3000,
-        "description": "Personal AI Training Flagship at $3000 USD for 60 days total (30 days live 1-on-1 training + 30 days dedicated support, 4 hours per day, Monday through Friday). Strictly one person only. Full 195-country Purchasing Power Parity supported: Tier 1 ($3000), Tier 2 ($2250), Tier 3 ($1500), Tier 4 ($1500), Tier 5 ($750), Tier 6 (Custom).",
+        "description": "Personal AI Training Flagship at $1000 USD for 60 days total (30 days live 1-on-1 training + 30 days dedicated support, 4 hours per day, Monday through Friday). Strictly one person only. Full 195-country Purchasing Power Parity supported: Tier 1 ($1000), Tier 2 ($750), Tier 3 ($500), Tier 4 ($500), Tier 5 ($250), Tier 6 (Custom).",
         "duration": "60 days total (30 days live training + 30 days dedicated support, 4 hours per day)",
         "cohort": "Strictly one person only (dedicated private acceleration)",
         "parity": {
@@ -121,14 +121,14 @@ ALL_SERVICES = [
 ]
 
 clean_desc = (
-    "Transparent AI engagement model: Individual Service Picks at $300 USD base rate "
+    "Transparent AI engagement model: Individual Service Picks at $100 USD base rate "
     "(covering 5 days live training + 5 days dedicated support). Flagship programs: "
-    "Business AI Training Flagship at $3000 USD for 60 days total (30 days live + 30 days "
-    "dedicated support, up to 10 participants, +$300 USD per extra seat up to 20 max) and "
-    "Personal AI Training Flagship at $3000 USD for 60 days total (30 days live + 30 days "
+    "Business AI Training Flagship at $1000 USD for 60 days total (30 days live + 30 days "
+    "dedicated support, up to 10 participants, +$100 USD per extra seat up to 20 max) and "
+    "Personal AI Training Flagship at $1000 USD for 60 days total (30 days live + 30 days "
     "dedicated support, strictly 1 person only). $0 upfront deposit, invoiced in 5 equal "
     "20% milestone installments. 6 Purchasing Power Parity (PPP) tiers across 195 countries: "
-    "Tier 1 ($3000), Tier 2 ($2250), Tier 3 ($1500), Tier 4 ($1500), Tier 5 ($750), Tier 6 (Custom)."
+    "Tier 1 ($1000), Tier 2 ($750), Tier 3 ($500), Tier 4 ($500), Tier 5 ($250), Tier 6 (Custom)."
 )
 
 

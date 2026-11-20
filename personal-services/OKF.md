@@ -13,7 +13,7 @@ Dedicated specification pages for 16 personal AI acceleration services, designed
 ## Directory Role & Agent Guidelines
 
 - Contains exactly 16 personal training services (`personal-service-01` through `personal-service-16`).
-- All individual picks are priced at $300 USD base (strictly 1 person) for 5 days live + 5 days support.
+- All individual picks are priced at $100 USD base (strictly 1 person) for 5 days live + 5 days support.
 - Ensure every page maintains standardized CTAs featuring the Free LinkedIn Consultation link.
 - Strictly enforce zero emojis and zero em-dashes across all files.
 

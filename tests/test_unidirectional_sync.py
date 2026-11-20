@@ -139,7 +139,7 @@ class TestUnidirectionalSync(unittest.TestCase):
         try:
             # Simulate website modification
             corrupted_content = orig_content.replace(
-                "$3,000 USD", "$9,999 USD"
+                "$1,000 USD", "$9,999 USD"
             ).replace(
                 "30 days live training", "99 days live training"
             )
@@ -167,7 +167,7 @@ class TestUnidirectionalSync(unittest.TestCase):
 
             self.assertNotIn("$9,999 USD", restored_content)
             self.assertNotIn("99 days live training", restored_content)
-            self.assertIn("$3,000 USD", restored_content)
+            self.assertIn("$1,000 USD", restored_content)
         finally:
             with open(pricing_html, "w", encoding="utf-8") as f:
                 f.write(orig_content)

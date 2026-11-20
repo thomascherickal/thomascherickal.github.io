@@ -983,11 +983,14 @@ def build_rules():
         ind_supp = kb.get_fact("pricing", "b_ind_supp_days", 5)
         ind_days = kb.get_fact("pricing", "b_ind_days", 10)
 
-        flag_parity = "$3,000 / $2,250 / $1,500 / $1,500 / $750 / Custom USD"
-        ind_parity = "$300 / $225 / $150 / $150 / $75 / Custom USD"
-        extra_parity = "+$300 / +$225 / +$150 / +$150 / +$75 / Custom USD"
-        flag_milestone_parity = "$600 / $450 / $300 / $300 / $150 / Custom USD"
-        ind_milestone_parity = "$60 / $45 / $30 / $30 / $15 / Custom USD"
+        t1_f, t2_f, t3_f, t4_f, t5_f = int(b_price), int(round(b_price * 0.75)), int(round(b_price * 0.5)), int(round(b_price * 0.5)), int(round(b_price * 0.25))
+        t1_i, t2_i, t3_i, t4_i, t5_i = int(b_ind), int(round(b_ind * 0.75)), int(round(b_ind * 0.5)), int(round(b_ind * 0.5)), int(round(b_ind * 0.25))
+        t1_e, t2_e, t3_e, t4_e, t5_e = int(b_extra), int(round(b_extra * 0.75)), int(round(b_extra * 0.5)), int(round(b_extra * 0.5)), int(round(b_extra * 0.25))
+        flag_parity = f"${t1_f:,} / ${t2_f:,} / ${t3_f:,} / ${t4_f:,} / ${t5_f:,} / Custom USD"
+        ind_parity = f"${t1_i:,} / ${t2_i:,} / ${t3_i:,} / ${t4_i:,} / ${t5_i:,} / Custom USD"
+        extra_parity = f"+${t1_e:,} / +${t2_e:,} / +${t3_e:,} / +${t4_e:,} / +${t5_e:,} / Custom USD"
+        flag_milestone_parity = f"${t1_f // 5:,} / ${t2_f // 5:,} / ${t3_f // 5:,} / ${t4_f // 5:,} / ${t5_f // 5:,} / Custom USD"
+        ind_milestone_parity = f"${t1_i // 5:,} / ${t2_i // 5:,} / ${t3_i // 5:,} / ${t4_i // 5:,} / ${t5_i // 5:,} / Custom USD"
 
         # 1. Summary Table: Business Training Flagship row
         content = re.sub(

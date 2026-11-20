@@ -43,8 +43,8 @@ test("Business Flagship calculation (10 seats baseline)", () => {
     packageType: "pkg-business",
     participants: 10
   });
-  const expectedBase = Math.round(3000 * tier.multiplier);
-  const expectedSavings = Math.round(3000 * (tier.discountPercent / 100));
+  const expectedBase = Math.round(1000 * tier.multiplier);
+  const expectedSavings = Math.round(1000 * (tier.discountPercent / 100));
   assert.strictEqual(res.baseTierPrice, expectedBase);
   assert.strictEqual(res.extraHeadRate, 0);
   assert.strictEqual(res.finalPrice, expectedBase);
@@ -58,8 +58,8 @@ test("Business Flagship with extra participants (15 seats)", () => {
     packageType: "pkg-business",
     participants: 15
   });
-  const expectedExtra = Math.round(5 * 300 * tier.multiplier);
-  const expectedTotal = Math.round(3000 * tier.multiplier) + expectedExtra;
+  const expectedExtra = Math.round(5 * 100 * tier.multiplier);
+  const expectedTotal = Math.round(1000 * tier.multiplier) + expectedExtra;
   assert.strictEqual(res.extraParticipants, 5);
   assert.strictEqual(res.extraHeadRate, expectedExtra);
   assert.strictEqual(res.finalPrice, expectedTotal);
@@ -72,7 +72,7 @@ test("Personal Flagship calculation (strictly 1 person)", () => {
     packageType: "pkg-personal",
     participants: 10
   });
-  const expectedBase = Math.round(3000 * tier.multiplier);
+  const expectedBase = Math.round(1000 * tier.multiplier);
   assert.strictEqual(res.participants, 1);
   assert.strictEqual(res.extraParticipants, 0);
   assert.strictEqual(res.finalPrice, expectedBase);
@@ -85,9 +85,9 @@ test("Pick individual services (3 services)", () => {
     packageType: "pick-services",
     selectedServices: ["s1", "s2", "s3"]
   });
-  const expectedBase = Math.round(900 * tier.multiplier);
+  const expectedBase = Math.round(300 * tier.multiplier);
   assert.strictEqual(res.serviceCount, 3);
-  assert.strictEqual(res.basePrice, 900);
+  assert.strictEqual(res.basePrice, 300);
   assert.strictEqual(res.finalPrice, expectedBase);
 });
 
@@ -125,7 +125,7 @@ test("Flagship cheaper recommendation when >= 10 services picked", () => {
     selectedServices: tenServices
   });
   assert.strictEqual(res.flagshipCheaper, true);
-  assert.strictEqual(res.flagshipPrice, 3000);
+  assert.strictEqual(res.flagshipPrice, 1000);
 });
 
 console.log(`Results for Tier 1: ${passed} passed, ${failed} failed.`);

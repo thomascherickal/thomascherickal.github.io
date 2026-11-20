@@ -332,13 +332,13 @@
         calcPackage.value = "pkg-personal";
         standardBasePrice = 1000;
         const tier = PARITY_TIERS[activeTier];
-        if (calcCustomAmount && tier) calcCustomAmount.value = Math.round(3000 * tier.multiplier);
+        if (calcCustomAmount && tier) calcCustomAmount.value = Math.round(1000 * tier.multiplier);
         updateCalculator();
       } else if (calcPackage && calcPackage.value === "pkg-personal" && mode === "business") {
         calcPackage.value = "pkg-business";
         standardBasePrice = 1000;
         const tier = PARITY_TIERS[activeTier];
-        if (calcCustomAmount && tier) calcCustomAmount.value = Math.round(3000 * tier.multiplier);
+        if (calcCustomAmount && tier) calcCustomAmount.value = Math.round(1000 * tier.multiplier);
         updateCalculator();
       } else {
         updateCalculator();

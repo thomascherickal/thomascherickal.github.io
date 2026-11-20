@@ -43,10 +43,10 @@ DATA_DOMAIN_MAP = {
 
 DOMAIN_TARGET_PATTERNS = {
     "pricing": {
-        "pricing.html", "index.html", "pricing-calculator.js",
+        "pricing.html", "parity-pricing.html", "index.html", "pricing-calculator.js",
         "guarantees.html", "llms.txt", "contact.html", "faqs.html",
         "all-business-services.html", "all-personal-services.html",
-        "business-services", "personal-services"
+        "business-services", "personal-services", "pricing"
     },
     "business_services": {
         "all-business-services.html",
@@ -57,8 +57,9 @@ DOMAIN_TARGET_PATTERNS = {
         "personal-services"
     },
     "tiers": {
-        "pricing.html", "pricing-calculator.js", "all-business-services.html",
-        "all-personal-services.html", "index.html", "guarantees.html", "writing.html"
+        "pricing.html", "parity-pricing.html", "pricing", "pricing-calculator.js",
+        "all-business-services.html", "all-personal-services.html",
+        "index.html", "guarantees.html", "writing.html"
     },
     "claude": {
         "claude-training", "all-business-services.html", "all-personal-services.html"

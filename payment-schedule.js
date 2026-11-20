@@ -24,12 +24,12 @@
 }(typeof self !== 'undefined' ? self : this, function () {
 
   const PARITY_TIERS = {
-    1: { id: 1, name: "Tier 1: High-Income Economies (USA, China, EU)", multiplier: 1.0, discount: 0, flagship: 3000, indiv: 300, supportFlag: 0, supportIndiv: 0 },
-    2: { id: 2, name: "Tier 2: Upper-Middle-Income (Brazil, Malaysia, Mexico)", multiplier: 0.75, discount: 25, flagship: 2250, indiv: 225, supportFlag: 0, supportIndiv: 0 },
-    3: { id: 3, name: "Tier 3: Lower-Middle & Low-Income (India, Egypt, Kenya)", multiplier: 0.5, discount: 50, flagship: 1500, indiv: 150, supportFlag: 0, supportIndiv: 0 },
-    4: { id: 4, name: "Tier 4: Early-Stage Tech Startups & Seed Ventures", multiplier: 0.5, discount: 50, flagship: 1500, indiv: 150, supportFlag: 0, supportIndiv: 0 },
-    5: { id: 5, name: "Tier 5: Colleges, Universities & Non-Profits", multiplier: 0.25, discount: 75, flagship: 750, indiv: 75, supportFlag: 0, supportIndiv: 0 },
-    6: { id: 6, name: "Tier 6: Crisis-Affected Regions & Subsidized Relief", multiplier: 0.1, discount: 90, flagship: 300, indiv: 30, supportFlag: 0, supportIndiv: 0 }
+    1: { id: 1, name: "Tier 1: High-Income Economies (USA, UK, EU)", multiplier: 1.0, discount: 0, flagship: 1000, indiv: 100, supportFlag: 0, supportIndiv: 0 },
+    2: { id: 2, name: "Tier 2: Upper-Middle-Income (Brazil, Malaysia, Mexico)", multiplier: 0.75, discount: 25, flagship: 750, indiv: 75, supportFlag: 0, supportIndiv: 0 },
+    3: { id: 3, name: "Tier 3: Lower-Middle & Low-Income (India, Egypt, Kenya)", multiplier: 0.5, discount: 50, flagship: 500, indiv: 50, supportFlag: 0, supportIndiv: 0 },
+    4: { id: 4, name: "Tier 4: Early-Stage Tech Startups & Seed Ventures", multiplier: 0.5, discount: 50, flagship: 500, indiv: 50, supportFlag: 0, supportIndiv: 0 },
+    5: { id: 5, name: "Tier 5: Colleges, Universities & Non-Profits", multiplier: 0.25, discount: 75, flagship: 250, indiv: 25, supportFlag: 0, supportIndiv: 0 },
+    6: { id: 6, name: "Tier 6: Crisis-Affected Regions & Subsidized Relief", multiplier: 0.1, discount: 90, flagship: 100, indiv: 10, supportFlag: 0, supportIndiv: 0 }
   };
 
   const TRUST_TERMS = {

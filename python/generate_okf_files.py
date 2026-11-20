@@ -165,7 +165,7 @@ DIRECTORY_METADATA = {
         'tags': ['business-services', 'enterprise-ai', 'service-catalog', 'syllabi'],
         'guidelines': [
             'Contains exactly 16 enterprise training services (`business-service-01` through `business-service-16`).',
-            'All services are priced at $300 USD base (1 seat included, +$300 per extra seat up to 10 seats max) for 5 days live + 5 days support.',
+            'All services are priced at $100 USD base (1 seat included, +$100 per extra seat up to 10 seats max) for 5 days live + 5 days support.',
             'Ensure every page maintains standardized CTAs featuring the Free LinkedIn Consultation link.',
             'Keep buttons styled with `css/buttons.css` and strictly enforce `text-decoration: none !important;`.'
         ]
@@ -213,7 +213,7 @@ DIRECTORY_METADATA = {
         'description': 'Operational playbooks, delivery economics, Purchasing Power Parity registries, and consolidated service summaries.',
         'tags': ['docs', 'architecture', 'playbooks', 'pricing-reference', 'delivery-economics'],
         'guidelines': [
-            'Houses `services-summary.md` (all 16 business and 16 personal services with canonical $3000 flagship / $300 individual pricing).',
+            'Houses `services-summary.md` (all 16 business and 16 personal services with canonical $1000 flagship / $100 individual pricing).',
             'Houses `parity pricing.md` (complete 195-country World Bank FY2027 PPP tier assignments).',
             'Houses `hourly-rates.md` (delivery economics breakdown across all 6 parity tiers).',
             'Houses `website-fixes.md` (historical audit and resolution log).',
@@ -339,7 +339,7 @@ DIRECTORY_METADATA = {
         'tags': ['personal-services', '1-on-1', 'private-mentoring', 'career-acceleration'],
         'guidelines': [
             'Contains exactly 16 personal training services (`personal-service-01` through `personal-service-16`).',
-            'All individual picks are priced at $300 USD base (strictly 1 person) for 5 days live + 5 days support.',
+            'All individual picks are priced at $100 USD base (strictly 1 person) for 5 days live + 5 days support.',
             'Ensure every page maintains standardized CTAs featuring the Free LinkedIn Consultation link.',
             'Strictly enforce zero emojis and zero em-dashes across all files.'
         ]
@@ -351,7 +351,7 @@ DIRECTORY_METADATA = {
         'tags': ['pricing', 'ppp-tiers', 'global-parity', 'world-bank-fy2027'],
         'guidelines': [
             'Contains 6 tier landing pages (`pricing-tier-1-usa-china-eu-100.html` through `pricing-tier-6-crisis-affected-10.html`).',
-            'Authoritative rates: Tier 1 (100% / $3,000 flagship / $300 pick), Tier 2 (75% / $2,250 / $225), Tier 3 & Tier 4 (50% / $1,500 / $150), Tier 5 (25% / $750 / $75), Tier 6 (Custom quote).',
+            'Authoritative rates: Tier 1 (100% / $1,000 flagship / $100 pick), Tier 2 (75% / $750 / $75), Tier 3 & Tier 4 (50% / $500 / $50), Tier 5 (25% / $250 / $25), Tier 6 (Custom quote).',
             'Every pricing page must clearly articulate the $0 upfront advance and 5 equal 20% milestone installment structure.'
         ]
     },
