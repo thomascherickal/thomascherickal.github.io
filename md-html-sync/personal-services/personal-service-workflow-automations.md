@@ -1,7 +1,7 @@
 # Workflow Automations
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// PERSONAL SERVICE SPECIFICATION - RELIABLE PERSONAL BACKGROUND AUTOMATIONS**  
+> **// PERSONAL SERVICE - RELIABLE PERSONAL BACKGROUND AUTOMATION**  
 > **Business transformation, verification, and implementation.**
 
 ---

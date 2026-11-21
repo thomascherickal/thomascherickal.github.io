@@ -1,7 +1,7 @@
 # Gemini Research Training
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// BUSINESS SERVICE - SCIENTIFIC & R&D RESEARCH WITH GEMINI**  
+> **// BUSINESS SERVICE - GEMINI RESEARCH TRAINING**  
 > **Business transformation, verification, and implementation.**
 
 ---

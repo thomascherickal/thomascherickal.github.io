@@ -1,7 +1,7 @@
 # AI Leads Magnet & Conversion Systems
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// BUSINESS SERVICE - AI LEAD GENERATION & CONVERSION**  
+> **// BUSINESS SERVICE - AI LEADS MAGNET & CONVERSION**  
 > **Business transformation, verification, and implementation.**
 
 ---

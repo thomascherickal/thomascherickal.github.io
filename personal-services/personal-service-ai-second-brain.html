@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>AI Second Brain | Thomas Cherickal</title>
-<meta content="Turn years of scattered bookmarks, PDFs, notes, and voice memos into a fast, local-first AI Second Brain with plain-text Markdown, local embeddings, and instant retrieval." name="description"/>
+<meta content="Turn years of scattered bookmarks, PDFs, notes, and voice memos into a fast, local-first AI Second Brain using plain-text Markdown and local search." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
 <!-- Canonical URL -->
 <link href="https://thedigitalfuturist.com/personal-services/personal-service-ai-second-brain.html" rel="canonical"/>
@@ -13,10 +12,10 @@
 <meta content="website" property="og:type"/>
 <meta content="https://thedigitalfuturist.com/personal-services/personal-service-ai-second-brain.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
-<meta content="AI Second Brain | Thomas Cherickal" property="og:title"/>
-<meta content="Turn years of scattered bookmarks, PDFs, notes, and voice memos into a fast, local-first AI Second Brain with plain-text Markdown, local embeddings, and instant retrieval." property="og:description"/>
-<meta content="AI Second Brain | Thomas Cherickal" name="twitter:title"/>
-<meta content="Turn years of scattered bookmarks, PDFs, notes, and voice memos into a fast, local-first AI Second Brain with plain-text Markdown, local embeddings, and instant retrieval." name="twitter:description"/>
+<meta content="AI Second Brain - Thomas Cherickal" property="og:title"/>
+<meta content="Turn years of scattered bookmarks, PDFs, notes, and voice memos into a fast, local-first AI Second Brain using plain-text Markdown and local search." property="og:description"/>
+<meta content="AI Second Brain - Thomas Cherickal" name="twitter:title"/>
+<meta content="Turn years of scattered bookmarks, PDFs, notes, and voice memos into a fast, local-first AI Second Brain using plain-text Markdown and local search." name="twitter:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Favicon & Icons -->
@@ -36,8 +35,8 @@
       "@type": "WebPage",
       "@id": "https://thedigitalfuturist.com/personal-services/personal-service-ai-second-brain.html#webpage",
       "url": "https://thedigitalfuturist.com/personal-services/personal-service-ai-second-brain.html",
-      "name": "AI Second Brain - Service Specification | Thomas Cherickal",
-      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Turn years of scattered bookmarks, PDFs, notes, and voice memos into a fast, local-first AI Second Brain. Learn plain-text Markdown organization, local embedding indexing, and retrieval workflows so you can surface past insights and synthesize new ideas in seconds.",
+      "name": "AI Second Brain - Personal Service | Thomas Cherickal",
+      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Turn years of scattered bookmarks, PDFs, notes, and voice memos into a fast, local-first AI Second Brain using plain-text Markdown and local search.",
       "isPartOf": {
         "@id": "https://thedigitalfuturist.com/#website"
       },
@@ -74,9 +73,9 @@
       "@type": "Service",
       "@id": "https://thedigitalfuturist.com/personal-services/personal-service-ai-second-brain.html#service",
       "name": "AI Second Brain - Thomas Cherickal",
-      "serviceType": "Local-First AI Second Brain Training",
+      "serviceType": "Personal AI Second Brain Architecture & Training",
       "url": "https://thedigitalfuturist.com/personal-services/personal-service-ai-second-brain.html",
-      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Turn years of scattered bookmarks, PDFs, notes, and voice memos into a fast, local-first AI Second Brain. Learn plain-text Markdown organization, local embedding indexing, and retrieval workflows so you can surface past insights and synthesize new ideas in seconds.",
+      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Turn years of scattered bookmarks, PDFs, notes, and voice memos into a fast, local-first AI Second Brain using plain-text Markdown and local search.",
       "provider": {
         "@type": "Person",
         "@id": "https://thedigitalfuturist.com/#person",
@@ -90,10 +89,10 @@
       },
       "availableLanguage": "English",
       "serviceOutput": [
-        "Plain-Text Markdown Organization: Bringing scattered bookmarks, PDFs, notes, and voice memos into one clean local folder structure.",
-        "Local Embedding Indexing: Building a fast search index on your own hardware so you can search by meaning, not just exact keywords.",
-        "Grounded Retrieval Workflows: Asking questions across years of personal reading and getting answers that link straight back to your original notes.",
-        "Daily Capture & Synthesis Habits: Simple routines for turning voice memos and web clips into reusable ideas."
+        "Clean Markdown Vault Layout: Simple folder and metadata structure that scales to thousands of notes.",
+        "Unified Capture Pipeline: Turning browser bookmarks, PDFs, and voice memos into clean Markdown files.",
+        "Local Hybrid Search Index: Fast keyword and local embedding retrieval running completely on your machine.",
+        "Weekly Synthesis Routine: Practical prompts and scripts to connect old notes into new writing and decisions."
       ]
     }
   ]
@@ -109,8 +108,8 @@
 <link href="../css/article.css" rel="stylesheet"/>
 <link href="../css/service.css" rel="stylesheet"/>
 <link href="../css/personal-services.css" rel="stylesheet"/>
-<link href="../css/responsive.css" rel="stylesheet"/>
 <link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
+<link href="../css/responsive.css" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -292,236 +291,206 @@
 <a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
 <main id="main">
 <div class="container" style="max-width:1040px;margin:0 auto;padding:2.5rem 1.25rem;">
-  <div class="hero content-card" style="background:#000000;border:1px solid rgba(251,191,36,0.3);border-radius:16px;padding:2.5rem;margin-bottom:2rem;">
-    <p class="section-label" style="color:var(--cyan,#38bdf8);letter-spacing:0.1em;font-size:0.8rem;text-transform:uppercase;margin-bottom:0.5rem;">// PERSONAL SERVICE SPECIFICATION - LOCAL-FIRST PERSONAL KNOWLEDGE</p>
+  <div class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:16px;padding:2.5rem;margin-bottom:2rem;">
+    <p class="section-label" style="color:var(--cyan,#38bdf8);letter-spacing:0.1em;font-size:0.8rem;text-transform:uppercase;margin-bottom:0.5rem;">// PERSONAL SERVICE - LOCAL-FIRST PERSONAL KNOWLEDGE</p>
     <h1>AI Second Brain</h1>
-    <div class="title-tags" aria-label="Article topics"><span class="title-tag">AI Second Brain</span><span class="title-tag">Local-First</span><span class="title-tag">Markdown Notes</span><span class="title-tag">Local Search</span><span class="title-tag">Idea Synthesis</span></div>
-    <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.8;max-width:840px;margin-top:1.1rem;margin-bottom:1.5rem;">
+    <div class="title-tags" aria-label="Article topics"><span class="title-tag">AI Second Brain</span><span class="title-tag">Local-First Notes</span><span class="title-tag">Markdown Vault</span><span class="title-tag">Semantic Search</span><span class="title-tag">Idea Synthesis</span></div>
+    <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.8;max-width:860px;margin-top:1.1rem;margin-bottom:1.5rem;">
       Turn years of scattered bookmarks, PDFs, notes, and voice memos into a fast, local-first AI Second Brain. Learn plain-text Markdown organization, local embedding indexing, and retrieval workflows so you can surface past insights and synthesize new ideas in seconds.
     </p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1.75rem;">
-      <div style="background:#000000;border:1px solid rgba(56,189,248,0.32);border-radius:12px;padding:1.25rem;">
-        <div style="font-size:0.75rem;color:var(--cyan,#38bdf8);text-transform:uppercase;letter-spacing:0.08em;">Training Format</div>
-        <div style="font-size:1.35rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">1-on-1 Live</div>
-        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">5 days live + 5 days support (1 person only)</div>
+      <div style="background:#000000;border:1px solid rgba(56,189,248,0.45);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:#38bdf8;text-transform:uppercase;letter-spacing:0.08em;">Storage Format</div>
+        <div style="font-size:1.25rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Plain Markdown</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Future-proof notes you own forever on disk</div>
       </div>
-      <div style="background:#000000;border:1px solid rgba(52,211,153,0.32);border-radius:12px;padding:1.25rem;">
-        <div style="font-size:0.75rem;color:#34d399;text-transform:uppercase;letter-spacing:0.08em;">File Format</div>
-        <div style="font-size:1.35rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Plain Markdown</div>
-        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Future-proof notes you own forever</div>
+      <div style="background:#000000;border:1px solid rgba(52,211,153,0.45);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:#34d399;text-transform:uppercase;letter-spacing:0.08em;">Search Engine</div>
+        <div style="font-size:1.25rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Hybrid Local</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Instant keyword + semantic embedding lookup</div>
       </div>
-      <div style="background:#000000;border:1px solid rgba(192,132,252,0.32);border-radius:12px;padding:1.25rem;">
-        <div style="font-size:0.75rem;color:#c084fc;text-transform:uppercase;letter-spacing:0.08em;">Search Speed</div>
-        <div style="font-size:1.35rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Seconds</div>
-        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Find insights across PDFs, bookmarks &amp; memos</div>
+      <div style="background:#000000;border:1px solid rgba(192,132,252,0.45);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:#c084fc;text-transform:uppercase;letter-spacing:0.08em;">Capture Flow</div>
+        <div style="font-size:1.25rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Zero Friction</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Inbox for bookmarks, PDFs, and voice memos</div>
       </div>
-      <div style="background:#000000;border:1px solid rgba(251,191,36,0.32);border-radius:12px;padding:1.25rem;">
-        <div style="font-size:0.75rem;color:var(--gold,#fbbf24);text-transform:uppercase;letter-spacing:0.08em;">Privacy</div>
-        <div style="font-size:1.35rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Local-First</div>
-        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Indexes stay on your own computer</div>
+      <div style="background:#000000;border:1px solid rgba(251,191,36,0.45);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:#fbbf24;text-transform:uppercase;letter-spacing:0.08em;">Output</div>
+        <div style="font-size:1.25rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Fast Synthesis</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Turn past notes into outlines and articles</div>
       </div>
     </div>
   </div>
 
-  <div class="content-card" id="table-of-contents" style="background:#000000;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:1.75rem 2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.3rem;margin-bottom:1rem;">Table of Contents</h2>
+  <div class="content-card" id="table-of-contents" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:1.75rem 2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.3rem;margin-top:0;margin-bottom:1rem;">Table of Contents</h2>
     <ol style="display:flex;flex-direction:column;gap:0.55rem;padding-left:1.4rem;color:var(--text-secondary);line-height:1.7;margin:0;">
-      <li><a class="gold-link" href="#ending-scattered-notes">Turning Scattered Bookmarks, PDFs, and Voice Memos Into One Vault</a></li>
-      <li><a class="gold-link" href="#local-embedding-indexing">Fast Local Search by Meaning and Keywords</a></li>
-      <li><a class="gold-link" href="#synthesis-without-hallucination">Synthesizing New Ideas Without Made-Up Quotes</a></li>
-      <li><a class="gold-link" href="#tutorial-vault-indexer">Hands-On Guide: Local Markdown Vault Search Indexer</a></li>
-      <li><a class="gold-link" href="#tutorial-synthesis-prompt">Practical Template: Grounded Vault Synthesis Prompt</a></li>
-      <li><a class="gold-link" href="#tutorial-weekly-vault-habit">Step-by-Step 10-Minute Weekly Vault Routine</a></li>
-      <li><a class="gold-link" href="#pricing-guarantees">Transparent Pricing and Global Parity Index</a></li>
+      <li><a class="gold-link" href="#why-second-brain-fails">Why Most Note-Taking Systems Become Digital Junk Drawers</a></li>
+      <li><a class="gold-link" href="#plain-text-vault-structure">Simple Plain-Text Markdown Organization That Scales</a></li>
+      <li><a class="gold-link" href="#local-hybrid-search">Hybrid Local Retrieval: Keywords Plus Semantic Embeddings</a></li>
+      <li><a class="gold-link" href="#synthesis-and-voice-capture">Voice Memos, PDF Distillation, and Weekly Synthesis</a></li>
+      <li><a class="gold-link" href="#local-fts-indexer">Hands-On Code: Fast Local Markdown Search Indexer</a></li>
+      <li><a class="gold-link" href="#evergreen-note-template">Practical Template: Evergreen Markdown Note Format</a></li>
+      <li><a class="gold-link" href="#failure-modes-and-solo-routine">Common Vault Failure Modes and Sustainable Weekly Habits</a></li>
       <li><a class="gold-link" href="#references">Helpful References and Official Guides</a></li>
     </ol>
   </div>
 
-  <section class="content-card" id="ending-scattered-notes" style="background:#000000;border:1px solid rgba(251,191,36,0.22);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.55rem;margin-bottom:1rem;">Turning Scattered Bookmarks, PDFs, and Voice Memos Into One Vault</h2>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">Most curious people have great ideas spread across browser bookmarks, downloaded PDFs, phone voice memos, and three different note apps. When you actually need a quote or an insight you read six months ago, it is nowhere to be found.</p>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">In these 1-on-1 sessions, we bring everything into one clean, local-first folder of plain-text Markdown files - compatible with tools like <a class="gold-link" href="#references">Obsidian</a> or any normal text editor - so you are never trapped in a proprietary cloud app again.</p>
-    <ul style="color:var(--text-secondary);line-height:1.8;padding-left:1.4rem;margin-bottom:1.25rem;">
-      <li style="margin-bottom:0.5rem;"><strong>Bookmarks & Articles:</strong> Save clean readable Markdown copies with source URL and date.</li>
-      <li style="margin-bottom:0.5rem;"><strong>PDFs & Books:</strong> Extract key text sections locally so every page becomes searchable.</li>
-      <li style="margin-bottom:0.5rem;"><strong>Voice Memos:</strong> Transcribe quick walks or spoken ideas locally with <a class="gold-link" href="#references">Whisper</a> straight into your inbox folder.</li>
-    </ul>
-  </section>
-  <section class="content-card" id="local-embedding-indexing" style="background:#000000;border:1px solid rgba(251,191,36,0.22);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.55rem;margin-bottom:1rem;">Fast Local Search by Meaning and Keywords</h2>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">Keyword search fails when you remember an idea but forget the exact word the author used. By combining keyword search with local text embeddings (short numeric summaries of meaning generated right on your machine via <a class="gold-link" href="#references">Ollama embeddings</a>), you can search for a concept in plain English and pull up the exact paragraph in seconds.</p>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">Everything stays stored locally in a single <a class="gold-link" href="#references">SQLite database</a> or lightweight vector store, meaning zero monthly storage fees and full privacy.</p>
-<svg viewBox="0 0 860 590" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LOCAL-FIRST AI SECOND BRAIN PIPELINE" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.35);background:#000000;margin:1.5rem 0;display:block;">
-  <rect width="860" height="590" fill="#000000"/>
-  <text x="430" y="38" fill="#fbbf24" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">LOCAL-FIRST AI SECOND BRAIN PIPELINE</text>
-  <rect x="90" y="66" width="680" height="66" rx="10" fill="#000000" stroke="#38bdf8" stroke-width="2"/>
-  <text x="430" y="93" fill="#38bdf8" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">1. Capture Anywhere</text>
-  <text x="430" y="115" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Bookmarks, PDFs, Markdown notes, and voice memos</text>
-  <line x1="430" y1="132" x2="430" y2="160" stroke="#fbbf24" stroke-width="2"/>
-  <polygon points="424,158 436,158 430,166" fill="#fbbf24"/>
-  <rect x="90" y="166" width="680" height="66" rx="10" fill="#000000" stroke="#34d399" stroke-width="2"/>
-  <text x="430" y="193" fill="#34d399" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">2. Clean Plain-Text Vault</text>
-  <text x="430" y="215" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Standard Markdown with title, date, tags, and source link</text>
-  <line x1="430" y1="232" x2="430" y2="260" stroke="#fbbf24" stroke-width="2"/>
-  <polygon points="424,258 436,258 430,266" fill="#fbbf24"/>
-  <rect x="90" y="266" width="680" height="66" rx="10" fill="#000000" stroke="#fbbf24" stroke-width="2"/>
-  <text x="430" y="293" fill="#fbbf24" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">3. Local Hybrid Index</text>
-  <text x="430" y="315" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Keyword search + local embeddings stored on your drive</text>
-  <line x1="430" y1="332" x2="430" y2="360" stroke="#fbbf24" stroke-width="2"/>
-  <polygon points="424,358 436,358 430,366" fill="#fbbf24"/>
-  <rect x="90" y="366" width="680" height="66" rx="10" fill="#000000" stroke="#c084fc" stroke-width="2"/>
-  <text x="430" y="393" fill="#c084fc" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">4. Grounded Retrieval</text>
-  <text x="430" y="415" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Pull top matching passages with exact file links</text>
-  <line x1="430" y1="432" x2="430" y2="460" stroke="#fbbf24" stroke-width="2"/>
-  <polygon points="424,458 436,458 430,466" fill="#fbbf24"/>
-  <rect x="90" y="466" width="680" height="66" rx="10" fill="#000000" stroke="#f472b6" stroke-width="2"/>
-  <text x="430" y="493" fill="#f472b6" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">5. Fast Idea Synthesis</text>
-  <text x="430" y="515" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Combine past notes into outlines, drafts, or answers</text>
-  <text x="430" y="572" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">100% local plain-text ownership - fast search, zero lock-in</text>
-</svg>
-  </section>
-  <section class="content-card" id="synthesis-without-hallucination" style="background:#000000;border:1px solid rgba(251,191,36,0.22);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.55rem;margin-bottom:1rem;">Synthesizing New Ideas Without Made-Up Quotes</h2>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">An AI Second Brain is only helpful if you can trust what it tells you. Every synthesis prompt we configure requires the model to cite the exact local file name for every claim and to say clearly when your vault does not contain an answer.</p>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">Over time, your vault stops being a digital attic and becomes a living workshop where past research connects naturally to your new writing and projects.</p>
-<svg viewBox="0 0 860 370" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FROM RAW CAPTURE TO NEW INSIGHTS" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(56,189,248,0.35);background:#000000;margin:1.5rem 0;display:block;">
-  <rect width="860" height="370" fill="#000000"/>
-  <text x="430" y="36" fill="#fbbf24" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">FROM RAW CAPTURE TO NEW INSIGHTS</text>
-  <rect x="210" y="56" width="440" height="62" rx="10" fill="#000000" stroke="#fbbf24" stroke-width="2"/>
-  <text x="430" y="82" fill="#fbbf24" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Your Question or New Project Topic</text>
-  <text x="430" y="103" fill="#f8fafc" font-family="sans-serif" font-size="12.5" text-anchor="middle">Ask in plain everyday language</text>
-  <line x1="430" y1="118" x2="165" y2="152" stroke="#38bdf8" stroke-width="1.8"/>
-  <polygon points="160,150 170,150 165,158" fill="#38bdf8"/>
-  <rect x="40" y="158" width="250" height="76" rx="10" fill="#000000" stroke="#38bdf8" stroke-width="2"/>
-  <text x="165" y="188" fill="#38bdf8" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Keyword Match</text>
-  <text x="165" y="211" fill="#f8fafc" font-family="sans-serif" font-size="12" text-anchor="middle">Exact names, titles, and quotes</text>
-  <line x1="165" y1="234" x2="430" y2="274" stroke="#38bdf8" stroke-width="1.8"/>
-  <line x1="430" y1="118" x2="430" y2="152" stroke="#34d399" stroke-width="1.8"/>
-  <polygon points="425,150 435,150 430,158" fill="#34d399"/>
-  <rect x="305" y="158" width="250" height="76" rx="10" fill="#000000" stroke="#34d399" stroke-width="2"/>
-  <text x="430" y="188" fill="#34d399" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Meaning Search</text>
-  <text x="430" y="211" fill="#f8fafc" font-family="sans-serif" font-size="12" text-anchor="middle">Related concepts across years</text>
-  <line x1="430" y1="234" x2="430" y2="274" stroke="#34d399" stroke-width="1.8"/>
-  <line x1="430" y1="118" x2="695" y2="152" stroke="#c084fc" stroke-width="1.8"/>
-  <polygon points="690,150 700,150 695,158" fill="#c084fc"/>
-  <rect x="570" y="158" width="250" height="76" rx="10" fill="#000000" stroke="#c084fc" stroke-width="2"/>
-  <text x="695" y="188" fill="#c084fc" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Source Links</text>
-  <text x="695" y="211" fill="#f8fafc" font-family="sans-serif" font-size="12" text-anchor="middle">Exact file path for every fact</text>
-  <line x1="695" y1="234" x2="430" y2="274" stroke="#c084fc" stroke-width="1.8"/>
-  <polygon points="424,272 436,272 430,280" fill="#f472b6"/>
-  <rect x="170" y="280" width="520" height="64" rx="10" fill="#000000" stroke="#f472b6" stroke-width="2"/>
-  <text x="430" y="307" fill="#f472b6" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Trusted Synthesis in Seconds</text>
-  <text x="430" y="329" fill="#f8fafc" font-family="sans-serif" font-size="12.5" text-anchor="middle">Clear summary grounded strictly in your own notes</text>
-</svg>
+  <section class="content-card" id="why-second-brain-fails" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Why Most Note-Taking Systems Become Digital Junk Drawers</h2>
+<p>Almost every knowledge worker has tried building a personal archive at some point. You save hundreds of browser bookmarks, download dozens of research PDFs, record voice memos during walks, and scatter highlights across three different note apps. Six months later, when you actually need that brilliant paragraph you read about database indexing or pricing strategy, you cannot find it - so you give up and search Google all over again.</p>
+<p>Traditional note systems fail for two reasons: capture is fragmented across proprietary apps, and retrieval relies on remembering the exact folder name or exact word you typed months ago. A local-first AI Second Brain fixes both problems without locking your thoughts inside a paid cloud silo. Everything lands as plain-text Markdown files in one local folder on your drive, and a fast local hybrid search index lets you ask natural-language questions across years of your own reading and thinking.</p>
+<p>Because your vault is plain text, it opens instantly in tools like <a class="gold-link" href="#references">Obsidian</a>, VS Code, or any terminal editor, backs up cleanly with git or encrypted cloud sync, and will still be readable thirty years from now.</p>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:1.5rem;margin:1.75rem 0;">
+  <p style="font-size:0.85rem;color:#fbbf24;font-weight:600;margin-top:0;margin-bottom:1rem;letter-spacing:0.04em;text-transform:uppercase;">Local-First AI Second Brain Pipeline</p>
+  <div class="mermaid">
+flowchart TD
+    I1[Bookmarks and Web Articles] --> INB[Unified Markdown Inbox]
+    I2[Research PDFs and Highlights] --> INB
+    I3[Voice Memos Transcribed Locally] --> INB
+    INB --> CL[Add Short YAML Frontmatter Tags]
+    CL --> IDX[Local Hybrid Index: FTS5 + Embeddings]
+    IDX --> Q[Natural-Language Question or Topic]
+    Q --> RET[Retrieve Top 5 Matching Note Excerpts]
+    RET --> SYN[Synthesize Brief with Exact File Links]
+
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    classDef purple fill:#000000,stroke:#c084fc,stroke-width:2px,color:#f8fafc
+
+    class I1,I2,I3 gold
+    class INB,CL cyan
+    class IDX,Q purple
+    class RET,SYN emerald
+  </div>
+</div>
   </section>
 
-  <section class="content-card" id="tutorial-vault-indexer" style="background:#000000;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.5rem;margin-bottom:0.9rem;">Hands-On Guide: Local Markdown Vault Search Indexer</h2>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">This compact Python script indexes a folder of Markdown files into a fast built-in SQLite full-text search index with zero external server setup.</p>
-    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;">
-  <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:#000000;border-bottom:1px solid rgba(56,189,248,0.35);">
-    <span style="font-family:monospace;font-size:0.8rem;color:#38bdf8;">second_brain_index.py</span>
-    <button class="copy-btn" type="button" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+  <section class="content-card" id="plain-text-vault-structure" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Simple Plain-Text Markdown Organization That Scales</h2>
+<p>Complex nested folder trees kill momentum. When you have forty subfolders, you waste mental energy deciding where a new note belongs, so you stop taking notes altogether. A durable AI Second Brain uses just four flat top-level folders: <code>01-inbox</code> for raw captures, <code>02-projects</code> for active work, <code>03-notes</code> for evergreen concepts and summaries, and <code>04-archive</code> for completed items.</p>
+<p>Every note starts with a five-line YAML header containing a title, date, source URL or book name, and three lowercase tags. That tiny bit of structure gives both humans and local search scripts everything they need to filter by topic, date, or source without forcing you into tedious manual filing.</p>
+  </section>
+
+  <section class="content-card" id="local-hybrid-search" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Hybrid Local Retrieval: Keywords Plus Semantic Embeddings</h2>
+<p>Pure vector search sometimes misses exact technical terms like an error code or an author's last name. Pure keyword search misses concepts when you remember the idea but not the exact phrasing. Combining both into a local hybrid index gives you the best of both worlds right on your laptop.</p>
+<p>We pair <a class="gold-link" href="#references">SQLite FTS5 full-text search</a> for instant exact-word matching with lightweight local embeddings generated through <a class="gold-link" href="#references">Ollama embedding models</a> or <a class="gold-link" href="#references">Sentence Transformers</a>. Every night - or whenever you save a new note - a fast incremental script updates only the changed files. Querying five thousand notes takes less than half a second and requires zero internet connection.</p>
+  </section>
+
+  <section class="content-card" id="synthesis-and-voice-capture" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Voice Memos, PDF Distillation, and Weekly Synthesis</h2>
+<p>Some of your best ideas arrive while walking or commuting, not while sitting at a desk. Using local speech-to-text tools like <a class="gold-link" href="#references">whisper.cpp</a>, you can drop a two-minute voice memo into your inbox folder and automatically get a clean, punctuated Markdown note waiting for you when you return to your desk. Similarly, a short PDF extraction script pulls headings, key quotes, and page numbers into a concise reading summary so you never re-read a forty-page paper from scratch.</p>
+<p>Once a week, spend fifteen minutes running a synthesis pass over your inbox. Ask your local assistant to group related notes, point out contradictions with older notes, and suggest two concrete article outlines or project ideas. That weekly habit turns passive reading into compounding creative output.</p>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:1.5rem;margin:1.75rem 0;">
+  <p style="font-size:0.85rem;color:#fbbf24;font-weight:600;margin-top:0;margin-bottom:1rem;letter-spacing:0.04em;text-transform:uppercase;">Weekly Note Distillation and Synthesis Loop</p>
+  <div class="mermaid">
+graph TD
+    W1[Review 01-inbox Captures] --> W2[Extract 3 Key Takeaways per Source]
+    W2 --> W3[Link to Related Evergreen Notes]
+    W3 --> W4[Update Local Search Index]
+    W4 --> W5[Generate Weekly Idea Brief]
+
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+
+    class W1,W2 gold
+    class W3,W4 cyan
+    class W5 emerald
   </div>
-  <pre style="margin:0;padding:1.25rem;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;color:#e2e8f0;font-family:monospace;font-size:0.85rem;line-height:1.6;"><code>import sqlite3
+</div>
+  </section>
+
+  <section class="content-card" id="local-fts-indexer" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Hands-On Code: Fast Local Markdown Search Indexer</h2>
+<p>This self-contained Python script indexes all Markdown files in your vault into a single local SQLite FTS5 database and lets you search them in milliseconds with ranked snippets.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan,#38bdf8);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:rgba(15,23,42,0.85);border-bottom:1px solid rgba(56,189,248,0.22);">
+    <span style="font-family:var(--font-mono,monospace);font-size:0.82rem;color:#fbbf24;">vault_index.py <span style="color:#38bdf8;margin-left:0.5rem;">[Python]</span></span>
+    <button class="copy-btn" type="button" style="background:#000000;color:#fbbf24;border:1px solid rgba(251,191,36,0.45);border-radius:6px;padding:0.25rem 0.65rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+  </div>
+  <pre style="margin:0;padding:1.15rem 1.25rem;overflow-x:auto;background:#040711;color:#e2e8f0;font-family:var(--font-mono,monospace);font-size:0.86rem;line-height:1.6;"><code>import sqlite3
 from pathlib import Path
 
-def index_vault(vault_dir: str, db_path: str = &quot;second_brain.db&quot;) -&gt; int:
+def build_index(vault_dir: str, db_path: str = "vault.db"):
     conn = sqlite3.connect(db_path)
-    conn.execute(&quot;CREATE VIRTUAL TABLE IF NOT EXISTS notes USING fts5(path, content)&quot;)
-    conn.execute(&quot;DELETE FROM notes&quot;)
-    count = 0
-    for md_file in Path(vault_dir).rglob(&quot;*.md&quot;):
-        text = md_file.read_text(encoding=&quot;utf-8&quot;, errors=&quot;ignore&quot;)
-        conn.execute(&quot;INSERT INTO notes (path, content) VALUES (?, ?)&quot;, (str(md_file), text))
-        count += 1
+    conn.execute("CREATE VIRTUAL TABLE IF NOT EXISTS notes USING fts5(path, body)")
+    conn.execute("DELETE FROM notes")
+    for md_file in Path(vault_dir).rglob("*.md"):
+        text = md_file.read_text(encoding="utf-8", errors="ignore")
+        conn.execute("INSERT INTO notes (path, body) VALUES (?, ?)", (str(md_file), text))
     conn.commit()
-    conn.close()
-    return count
+    return conn
 
-def search_vault(query: str, db_path: str = &quot;second_brain.db&quot;, limit: int = 5):
-    conn = sqlite3.connect(db_path)
+def search_vault(conn, query: str, limit: int = 5):
     rows = conn.execute(
-        &quot;SELECT path, snippet(notes, 1, &#x27;[&#x27;, &#x27;]&#x27;, &#x27;...&#x27;, 24) FROM notes WHERE notes MATCH ? LIMIT ?&quot;,
+        "SELECT path, snippet(notes, 1, '[', ']', '...', 18) FROM notes WHERE notes MATCH ? ORDER BY rank LIMIT ?",
         (query, limit),
     ).fetchall()
-    conn.close()
-    return rows</code></pre>
-</div>
-  </section>
-  <section class="content-card" id="tutorial-synthesis-prompt" style="background:#000000;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-bottom:0.9rem;">Practical Template: Grounded Vault Synthesis Prompt</h2>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">Pair your retrieved note snippets with this prompt so the AI combines your past insights honestly and always shows which file each idea came from.</p>
-    <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.35);border-left:3px solid #fbbf24;border-radius:10px;margin:1.5rem 0;overflow:hidden;">
-  <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:#000000;border-bottom:1px solid rgba(251,191,36,0.35);">
-    <span style="font-family:monospace;font-size:0.8rem;color:#fbbf24;">vault_synthesis_prompt.txt</span>
-    <button class="copy-btn" type="button" style="background:rgba(251,191,36,0.15);color:#fbbf24;border:1px solid rgba(251,191,36,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
-  </div>
-  <pre style="margin:0;padding:1.25rem;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;color:#e2e8f0;font-family:monospace;font-size:0.85rem;line-height:1.6;"><code>ROLE: Personal Research Assistant working ONLY from my saved notes.
-
-RULES:
-1. Answer my question using ONLY the note snippets provided below.
-2. After every key point, include the exact file name in parentheses, e.g. (notes/pricing-ideas.md).
-3. Highlight any unexpected connection between two different notes.
-4. If the snippets do not answer part of my question, say &quot;Not found in your vault yet.&quot;
-5. Keep the response concise and easy to scan.</code></pre>
-</div>
-  </section>
-  <section class="content-card" id="tutorial-weekly-vault-habit" style="background:#000000;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.5rem;margin-bottom:0.9rem;">Step-by-Step 10-Minute Weekly Vault Routine</h2>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">Keep your AI Second Brain clean and fast with this simple weekly habit.</p>
-    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;">
-  <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:#000000;border-bottom:1px solid rgba(56,189,248,0.35);">
-    <span style="font-family:monospace;font-size:0.8rem;color:#38bdf8;">weekly_vault_routine.txt</span>
-    <button class="copy-btn" type="button" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
-  </div>
-  <pre style="margin:0;padding:1.25rem;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;color:#e2e8f0;font-family:monospace;font-size:0.85rem;line-height:1.6;"><code>1. Drop new PDFs, web clips, and transcribed voice memos into `vault/inbox/`.
-2. Run your local cleaner script to add title, date, and 2-3 simple topic tags.
-3. Re-run the local index script (takes a few seconds for thousands of notes).
-4. Ask one synthesis question connecting this week&#x27;s reading to an active project.
-5. Back up your plain-text vault folder to an encrypted drive or private Git repo.</code></pre>
+    return [{"path": r[0], "snippet": r[1]} for r in rows]</code></pre>
 </div>
   </section>
 
-<section class="content-card" id="pricing-guarantees" style="background:#000000;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:2rem;margin-bottom:2.5rem;">
-  <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.55rem;margin-bottom:1rem;">Transparent Pricing and Global Parity Index</h2>
-  <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">
-    Every personal training engagement uses clear, fair pricing adjusted for where you live and work through our six-tier, 195-country Purchasing Power Parity (PPP) index. You pay <strong>$0 upfront</strong> with zero deposit, settle in <strong>five equal milestone installments of 20%</strong> only after completed blocks of work, and keep a <strong>Walkaway Guarantee</strong> after the first milestone if you are not satisfied. See your exact country tier on the <a class="gold-link" href="../pricing.html">full Pricing and Parity page</a>.
-  </p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin:1.25rem 0;">
-    <div style="background:#000000;border:1px solid rgba(56,189,248,0.35);border-radius:10px;padding:1.25rem;">
-      <h3 style="color:var(--cyan,#38bdf8);font-size:1.1rem;margin-bottom:0.5rem;">Personal Individual Service (AI Second Brain)</h3>
-      <p style="color:#ffffff;font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;">$100 / $75 / $50 / $50 / $25 / Custom USD</p>
-      <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;margin:0;">
-        Tier 1 through Tier 6 parity rates for <strong>strictly one person only</strong>. Includes 5 days live 1-on-1 training (4 hours per day, Monday to Friday; Saturdays and Sundays are holidays) plus 5 days of dedicated support at <strong>$0 extra charge</strong>, delivered 100% remote worldwide.
-      </p>
-    </div>
-    <div style="background:#000000;border:1px solid rgba(251,191,36,0.35);border-radius:10px;padding:1.25rem;">
-      <h3 style="color:var(--gold,#fbbf24);font-size:1.1rem;margin-bottom:0.5rem;">Personal AI Training Flagship (Full 60-Day Track)</h3>
-      <p style="color:#ffffff;font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;">$1,000 / $750 / $500 / $500 / $250 / Custom USD</p>
-      <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;margin:0;">
-        Tier 1 through Tier 6 parity rates for <strong>strictly one person only</strong>. Includes 30 days of live 1-on-1 engineering training plus 30 days of dedicated support at <strong>$0 extra charge</strong>. All training guides, templates, and custom code are yours under the <strong>Apache 2.0 license</strong>.
-      </p>
-    </div>
+  <section class="content-card" id="evergreen-note-template" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Practical Template: Evergreen Markdown Note Format</h2>
+<p>Keep every note short, scannable, and grounded in its original source. This clean template works equally well for human reading and AI retrieval.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan,#38bdf8);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:rgba(15,23,42,0.85);border-bottom:1px solid rgba(56,189,248,0.22);">
+    <span style="font-family:var(--font-mono,monospace);font-size:0.82rem;color:#fbbf24;">note-template.md <span style="color:#38bdf8;margin-left:0.5rem;">[Markdown]</span></span>
+    <button class="copy-btn" type="button" style="background:#000000;color:#fbbf24;border:1px solid rgba(251,191,36,0.45);border-radius:6px;padding:0.25rem 0.65rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
   </div>
-</section>
+  <pre style="margin:0;padding:1.15rem 1.25rem;overflow-x:auto;background:#040711;color:#e2e8f0;font-family:var(--font-mono,monospace);font-size:0.86rem;line-height:1.6;"><code>---
+title: "Hybrid Search for Personal Notes"
+date: 2026-11-21
+source: "https://www.sqlite.org/fts5.html"
+tags: [second-brain, search, local-ai]
+---
 
-  <section class="content-card" id="references" style="background:#000000;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:2rem;margin-bottom:2.5rem;">
-    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.45rem;margin-bottom:1rem;">Helpful References and Official Guides</h2>
+# Hybrid Search for Personal Notes
+
+## Core Idea
+Combining exact keyword matching (FTS5) with semantic embeddings catches both exact technical names and fuzzy conceptual queries.
+
+## Why It Matters to My Work
+- Finds exact error codes and function names instantly.
+- Surfaces older notes even when I forget the exact words I used.
+
+## Next Action
+Run `vault_index.py` on save via a lightweight background watcher.</code></pre>
+</div>
+<p>With plain Markdown files, a fast local index, and a fifteen-minute weekly review, your past reading stops disappearing into forgotten tabs and starts fueling every new project you take on.</p>
+  </section>
+
+  <section class="content-card" id="failure-modes-and-solo-routine" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Common Vault Failure Modes and Sustainable Weekly Habits</h2>
+    <p>Most personal knowledge vaults collapse within sixty days because people treat note-taking like a full-time librarian job. If you spend forty minutes tagging, color-coding, and filing every article you read, you will quickly resent the system and stop capturing ideas altogether. The opposite failure mode is dumping raw, unedited web pages into your folder without ever writing two sentences in your own words; when you search later, you just find giant walls of generic text.</p>
+    <p>A sustainable AI Second Brain stays light and effortless. Capture links, PDFs, and voice memos into <code>01-inbox</code> all week without worrying about perfection. Every Friday afternoon, spend fifteen minutes running your local distillation pass: keep only the notes that genuinely matter, add three short tags, run your incremental SQLite FTS5 and embedding indexer, and ask your assistant to surface two links to older notes. That calm weekly habit turns years of scattered reading into a fast, reliable creative asset you own forever.</p>
+  </section>
+
+  <section class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.5rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.45rem;margin-top:0;margin-bottom:1rem;">Helpful References and Official Guides</h2>
     <ul style="color:var(--text-secondary);line-height:1.85;padding-left:1.25rem;margin:0;">
-      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://obsidian.md/" rel="noopener" target="_blank">Obsidian Plain-Text Markdown Vault</a> - Local-first Markdown note environment with zero proprietary lock-in.</li>
-      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://ollama.com/blog/embedding-models" rel="noopener" target="_blank">Ollama Local Embedding Models</a> - Generate fast semantic search embeddings locally on your own computer.</li>
-      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://www.sqlite.org/fts5.html" rel="noopener" target="_blank">SQLite FTS5 Full-Text Search</a> - Built-in, ultra-fast local keyword indexing inside a single SQLite file.</li>
-      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://github.com/ggerganov/whisper.cpp" rel="noopener" target="_blank">whisper.cpp Local Transcription</a> - Fast offline speech-to-text for turning voice memos into Markdown notes.</li>
-      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://pymupdf.readthedocs.io/en/latest/" rel="noopener" target="_blank">PyMuPDF Documentation</a> - Clean local text extraction from personal PDF libraries.</li>
-      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://pandoc.org/" rel="noopener" target="_blank">Pandoc Document Converter</a> - Convert web pages, DOCX, and EPUB files cleanly into plain Markdown.</li>
+      <li style="margin-bottom:0.6rem;"><a class="gold-link" href="https://help.obsidian.md/" rel="noopener" target="_blank">Obsidian Official Documentation</a> - Popular local-first Markdown knowledge base editor that works on plain files.</li>
+      <li style="margin-bottom:0.6rem;"><a class="gold-link" href="https://www.sqlite.org/fts5.html" rel="noopener" target="_blank">SQLite FTS5 Full-Text Search</a> - Built-in fast keyword search engine for local Markdown archives.</li>
+      <li style="margin-bottom:0.6rem;"><a class="gold-link" href="https://www.sbert.net/" rel="noopener" target="_blank">Sentence Transformers Documentation</a> - Open-source local embedding models for semantic note retrieval.</li>
+      <li style="margin-bottom:0.6rem;"><a class="gold-link" href="https://github.com/ggml-org/whisper.cpp" rel="noopener" target="_blank">whisper.cpp Repository</a> - Fast, offline speech-to-text transcription for personal voice memos.</li>
+      <li style="margin-bottom:0.6rem;"><a class="gold-link" href="https://ollama.com/blog/embedding-models" rel="noopener" target="_blank">Ollama Embedding Models Guide</a> - Generating local vector embeddings with zero cloud API calls.</li>
     </ul>
   </section>
 
-  <div class="service-cta-buttons" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-    <a class="btn btn-commission btn-lg" href="../contact.html">Commission AI Second Brain →</a>
-    <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
-  </div>
+  <section class="cta-banner content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:16px;padding:2.25rem;margin-top:2rem;text-align:center;">
+    <h2 style="font-family:var(--font-display);color:#ffffff;font-size:1.55rem;margin-top:0;margin-bottom:0.75rem;">Ready to Build Your Personal AI Second Brain System?</h2>
+    <p style="color:var(--text-secondary);max-width:680px;margin:0 auto 1.5rem auto;line-height:1.75;">
+      Work 1-on-1 to design, configure, and verify this workflow directly on your own machine. Review full engagement details or book a free discovery conversation today.
+    </p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a class="btn btn-commission btn-lg" href="../pricing.html">View Pricing &amp; Parity →</a>
+      <a class="btn btn-primary btn-lg" href="../contact.html">Book 1-on-1 Training →</a>
+      <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+    </div>
+  </section>
 </div>
 
 <script>
@@ -537,7 +506,7 @@ document.querySelectorAll('.copy-btn').forEach(function(btn) {
 });
 </script>
 </main>
-    <!-- START:FOOTER -->
+  <!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
@@ -827,12 +796,10 @@ document.querySelectorAll('.copy-btn').forEach(function(btn) {
     </p>
   </footer>
     <!-- END:FOOTER -->
-<script src="../assets/js/mermaid.min.js"></script>
-<script>
-(function(){if(typeof mermaid==="undefined"){return;}
-mermaid.initialize({startOnLoad:false,theme:"base",flowchart:{useMaxWidth:false},themeVariables:{darkMode:true,background:"#020408",primaryColor:"#0c111d",primaryTextColor:"#e2e8f0",primaryBorderColor:"#38bdf8",lineColor:"#fbbf24",secondaryColor:"#060912",tertiaryColor:"#131926",textColor:"#e2e8f0",fontSize:"15px"}});
-window.addEventListener("load",function(){if(document.querySelector(".mermaid")){mermaid.run({querySelector:".mermaid",suppressErrors:true}).catch(function(e){console.error(e);});}});})();
-</script>
 <script src="../components.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+</script>
 </body>
 </html>

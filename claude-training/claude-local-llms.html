@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Claude Integration with Sovereign Local LLMs | Thomas Cherickal</title>
-<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Learn how to pair Claude's frontier planning with sovereign local open-weights models like Llama, Gemma, and Qwen, covering hybrid routing, hardware VRAM sizing, privacy boundaries, and cost-efficient local worker execution." name="description"/>
+<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Pair Claude&#x27;s frontier planning with sovereign local open-weights models like Llama, Gemma, and Qwen using hybrid routing, VRAM sizing, and strict privacy boundaries." name="description"/>
 <meta content="local LLM, Linux, OpenCode, Claude Code, Ollama, llama.cpp, vLLM, LM Studio, gpt-oss-120b, Qwen3.8, Gemma 4, MCP server, GPU VRAM calculator, self-hosted AI, local AI cost" name="keywords"/>
 <meta content="Thomas Cherickal" name="author"/>
 <link href="https://thedigitalfuturist.com/claude-training/claude-local-llms.html" rel="canonical"/>
@@ -13,7 +13,7 @@
 <meta content="https://thedigitalfuturist.com/claude-training/claude-local-llms.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
 <meta content="Claude Integration with Sovereign Local LLMs | Thomas Cherickal" property="og:title"/>
-<meta content="Learn how to pair Claude's frontier planning with sovereign local open-weights models like Llama, Gemma, and Qwen, covering hybrid routing, hardware VRAM sizing, privacy boundaries, and cost-efficient local worker execution." property="og:description"/>
+<meta content="Pair Claude&#x27;s frontier planning with sovereign local open-weights models like Llama, Gemma, and Qwen using hybrid routing, VRAM sizing, and strict privacy boundaries." property="og:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Twitter Card -->
@@ -46,12 +46,12 @@
         "name": "Claude Integration with Sovereign Local LLMs | Thomas Cherickal"
       },
       "headline": "Claude Integration with Sovereign Local LLMs",
-      "description": "Learn how to pair Claude's frontier planning with sovereign local open-weights models like Llama, Gemma, and Qwen, covering hybrid routing, hardware VRAM sizing, privacy boundaries, and cost-efficient local worker execution.",
+      "description": "Pair Claude's frontier planning with sovereign local open-weights models like Llama, Gemma, and Qwen using hybrid routing, VRAM sizing, and strict privacy boundaries.",
       "image": [
         "https://thedigitalfuturist.com/assets/og-card.png"
       ],
       "datePublished": "2026-10-22T00:00:00+05:30",
-      "dateModified": "2026-11-20T12:00:00+05:30",
+      "dateModified": "2026-11-21T12:00:00+05:30",
       "inLanguage": "en-US",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -85,11 +85,11 @@
       },
       "articleSection": "Local AI & Cost Optimization",
       "keywords": [
-        "Claude Local LLMs",
-        "Hybrid AI Routing",
-        "Llama Gemma Qwen",
-        "Ollama VRAM Sizing",
-        "Sovereign Private AI"
+        "Local LLMs",
+        "Hybrid Routing",
+        "Sovereign Privacy",
+        "VRAM Sizing",
+        "Ollama & vLLM"
       ]
     },
     {
@@ -131,8 +131,7 @@
 <link href="../css/responsive.css" rel="stylesheet"/>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-  <!-- START:HEADER -->
+<!-- START:HEADER -->
   <nav aria-label="Main navigation">
     <a href="../index.html" class="nav-brand"><img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo"
         class="nav-brand-logo" width="20" height="20">Thomas Cherickal</a>
@@ -309,143 +308,189 @@
   <!-- END:HEADER -->
 
 <main id="main">
-<header class="hero content-card" style="background:#000000;">
-<div class="hero-badge content-card">Autonomous Linux Infrastructure • Local LLMs &amp; Claude</div>
+<header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">HYBRID SOVEREIGN AI</div>
 <h1>Claude Integration with Sovereign Local LLMs</h1>
-<div class="title-tags" aria-label="Article topics"><span class="title-tag">Hybrid AI</span><span class="title-tag">Local Open-Weight LLMs</span><span class="title-tag">Privacy Boundaries</span><span class="title-tag">VRAM &amp; Cost Control</span></div>
-<p class="hero-desc">Learn how to pair Claude's frontier planning capabilities with sovereign local open-weights models such as Llama, Gemma, and Qwen. Covers hybrid routing architectures, realistic hardware VRAM sizing, strict privacy boundaries, and cost-efficient local worker execution.</p>
-<p class="hero-byline">By <strong>Thomas Cherickal</strong>, Generative AI Consultant, <strong>The Digital Futurist</strong> • 22 October 2026 <span class="reading">• about 22 minutes to read, longer with the tutorials</span></p>
+<div class="title-tags" aria-label="Article topics"><span class="title-tag">Local LLMs</span><span class="title-tag">Hybrid Routing</span><span class="title-tag">Sovereign Privacy</span><span class="title-tag">VRAM Sizing</span><span class="title-tag">Ollama &amp; vLLM</span></div>
+<p class="hero-desc">Learn how to pair Claude's frontier planning capabilities with sovereign local open-weights models such as Llama, Gemma, and Qwen. Covers hybrid routing architectures, hardware VRAM sizing, privacy boundaries, and cost-efficient local worker execution.</p>
+<p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body">
-<div aria-label="Table of contents" class="content-card toc-card" style="background:#000000;">
-<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">You do not have to choose between cloud frontier intelligence and private local models. A hybrid architecture gives you the best of both worlds: Claude handles complex planning and hard reasoning on sanitized specs, while local open-weight models like Llama, Gemma, and Qwen run on your own hardware for sensitive files, bulk classification, and zero-marginal-cost worker tasks.</p>
+<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">You do not have to choose between cloud frontier intelligence and on-premise data privacy. Smart engineering teams combine both: they use Claude for high-level architecture, tricky reasoning, and code review on sanitized specs, while running sovereign open-weights models like Llama, Gemma, and Qwen locally for high-volume extraction, private document processing, and zero-per-token background work.</p>
 <div class="rule"></div>
 <h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
 <ol class="toc-list">
-<li><a class="gold-link" href="#why-hybrid-routing">Why Pair Claude with Local Open-Weight Models</a></li>
-<li><a class="gold-link" href="#hybrid-architecture">How Hybrid Routing and Privacy Boundaries Work</a></li>
-<li><a class="gold-link" href="#hardware-vram-sizing">Plain-English Hardware and VRAM Sizing Guide</a></li>
-<li><a class="gold-link" href="#local-worker-example">Simple Python Pattern: Claude Planner + Local Ollama Worker</a></li>
-<li><a class="gold-link" href="#cost-and-governance">Cost Savings and Practical Privacy Guardrails</a></li>
+<li><a class="gold-link" href="#why-hybrid-claude-local">Why Hybrid Cloud-Plus-Local Architectures Win</a></li>
+<li><a class="gold-link" href="#hardware-vram-sizing">Practical Hardware and VRAM Sizing Guide</a></li>
+<li><a class="gold-link" href="#privacy-boundaries-and-mcp">Enforcing Strict Privacy Boundaries via Local MCP</a></li>
+<li><a class="gold-link" href="#failure-modes-hybrid">Common Pitfalls in Hybrid Local-Cloud Setups</a></li>
+<li><a class="gold-link" href="#step-by-step-local-deployment">Step-by-Step Setup: Pairing Ollama with Claude in Fifteen Minutes</a></li>
+<li><a class="gold-link" href="#real-world-hybrid-use-cases">High-Value Hybrid Use Cases Across Industries</a></li>
+<li><a class="gold-link" href="#evaluating-local-model-quality">Benchmarking Local Models Against Your Real Workloads</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
 </div>
 
-<div class="content-card" style="background:#000000;">
-<h2 id="why-hybrid-routing">Why Pair Claude with Local Open-Weight Models</h2>
-<p class="article-p">Sending every routine classification, log-parsing job, or private medical/financial record to a cloud API is both expensive and unnecessary. Pairing Claude with local models served through <a class="gold-link" href="#references">Ollama</a> or <a class="gold-link" href="#references">vLLM</a> lets you keep strictly confidential data inside your own network while still tapping Claude's deep planning when a task genuinely needs frontier intelligence.</p>
-<figure class="article-figure" style="background:#000000;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:1.25rem;margin:1.5rem 0;text-align:center;">
-<svg viewBox="0 0 760 300" width="100%" role="img" aria-label="Hybrid Claude and Local LLM Architecture" xmlns="http://www.w3.org/2000/svg">
-  <rect width="760" height="300" fill="#000000" rx="10"/>
-  <text x="380" y="34" fill="#fbbf24" font-size="18" font-weight="700" text-anchor="middle" font-family="sans-serif">Hybrid Routing: Claude Frontier + Sovereign Local Workers</text>
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="why-hybrid-claude-local">Why Hybrid Cloud-Plus-Local Architectures Win</h2>
 
-  <rect x="260" y="54" width="240" height="58" rx="8" fill="#000000" stroke="#fbbf24" stroke-width="2.5"/>
-  <text x="380" y="79" fill="#fbbf24" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Task &amp; Privacy Router</text>
-  <text x="380" y="100" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Checks Sensitivity &amp; Difficulty</text>
+<p class="article-p">Running every task in the cloud can raise privacy concerns for regulated records and drive up costs on repetitive bulk jobs. On the other hand, relying exclusively on small local models often hits a ceiling on complex multi-step reasoning or subtle software architecture. A hybrid architecture gives you the best of both worlds.</p>
+<p class="article-p">In a hybrid setup, Claude acts as the strategic planner and quality reviewer, while local models served through <a class="gold-link" href="#references">Ollama</a> or <a class="gold-link" href="#references">vLLM</a> act as fast, private worker nodes. Sensitive customer names, medical records, or internal financial rows never leave your local network - the local model summarizes, classifies, or anonymizes them first, and only clean, non-sensitive abstractions are sent to Claude when frontier reasoning is needed.</p>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+flowchart TD
+    D["Incoming Data / Task"] --> P{"Contains Sensitive PII
+or Bulk Repetitive Work?"}
+    P -->|"Yes (Private / High Volume)"| L["Local Open-Weights Worker
+(Llama / Gemma / Qwen via Ollama)"]
+    L --> S["Local Extraction & PII Redaction"]
+    S --> N{"Needs Frontier Reasoning?"}
+    N -->|"No"| O["Return Local Verified Output"]
+    N -->|"Yes (Sanitized Abstract Only)"| C["Claude Frontier Planner
+(Architecture / Synthesis)"]
+    P -->|"No (Public / Complex Spec)"| C
+    C --> O
 
-  <line x1="320" y1="112" x2="180" y2="152" stroke="#38bdf8" stroke-width="2.5"/>
-  <line x1="440" y1="112" x2="580" y2="152" stroke="#34d399" stroke-width="2.5"/>
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    classDef rose fill:#000000,stroke:#f472b6,stroke-width:2px,color:#f8fafc
 
-  <rect x="40" y="152" width="290" height="118" rx="8" fill="#000000" stroke="#38bdf8" stroke-width="2"/>
-  <text x="185" y="180" fill="#38bdf8" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Cloud Path: Claude API</text>
-  <text x="185" y="206" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Non-sensitive architecture &amp; hard reasoning</text>
-  <text x="185" y="228" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Creates checklists, schemas &amp; plans</text>
-  <text x="185" y="250" fill="#c084fc" font-size="12" text-anchor="middle" font-family="sans-serif">~15-20% of total requests</text>
+    class D,O gold
+    class P,N rose
+    class L,S emerald
+    class C cyan
+</div><p style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;text-align:center;">Hybrid routing keeps raw private data on-premise while tapping Claude for frontier reasoning.</p></div>
+</section>
 
-  <rect x="430" y="152" width="290" height="118" rx="8" fill="#000000" stroke="#34d399" stroke-width="2"/>
-  <text x="575" y="180" fill="#34d399" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Local Path: Llama / Gemma / Qwen</text>
-  <text x="575" y="206" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Private PII, payroll, medical &amp; legal files</text>
-  <text x="575" y="228" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">High-volume tagging &amp; extraction</text>
-  <text x="575" y="250" fill="#34d399" font-size="12" text-anchor="middle" font-family="sans-serif">$0 per-token marginal cost</text>
-</svg>
-<figcaption style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;">Routing complex planning to Claude while sensitive and high-volume tasks stay on local hardware.</figcaption>
-</figure>
-</div>
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="hardware-vram-sizing">Practical Hardware and VRAM Sizing Guide</h2>
 
-<div class="content-card" style="background:#000000;">
-<h2 id="hybrid-architecture">How Hybrid Routing and Privacy Boundaries Work</h2>
-<p class="article-p">A clean hybrid pipeline follows one golden rule: <strong>never send raw private records to the cloud when a local model can process them.</strong> Ask Claude to design the extraction template, scoring rubric, or validation script using fake sample data. Then run that exact rubric locally across thousands of private customer files using open-weight models from <a class="gold-link" href="#references">Meta Llama, Google Gemma, or Qwen</a>.</p>
-</div>
+<p class="article-p">The single biggest factor in local model speed is video memory (VRAM) or unified Apple Silicon memory. If a model fits entirely inside VRAM, tokens stream smoothly; if it spills over into regular system RAM, speed drops sharply. Using standard 4-bit quantization (Q4), you can estimate memory needs cleanly:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>8 GB to 12 GB VRAM (Laptop / Entry GPU):</strong> Comfortably runs compact 7B to 9B parameter models (such as compact Gemma or Qwen variants) for fast classification, PII redaction, and short summaries.</li>
+<li><strong>16 GB to 24 GB VRAM (Workstation GPU / 32 GB Unified Memory):</strong> Ideal sweet spot for 14B to 32B models with generous context windows, delivering strong local coding and structured JSON extraction.</li>
+<li><strong>48 GB to 96 GB+ VRAM (Team Server / Dual GPU):</strong> Supports 70B-class open-weights models and concurrent multi-user serving via <a class="gold-link" href="#references">vLLM</a> for department-wide private workloads.</li>
+</ul>
+<p class="article-p">Always leave 20 to 25 percent VRAM headroom for the KV cache, especially when processing long documents or serving multiple parallel requests.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Hybrid Router Calling Local Ollama and Cloud Claude</span><span>Python</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>import requests
+import anthropic
 
-<div class="content-card" style="background:#000000;">
-<h2 id="hardware-vram-sizing">Plain-English Hardware and VRAM Sizing Guide</h2>
-<p class="article-p">A practical rule of thumb for quantized (4-bit) local models is roughly <strong>0.6 to 0.75 GB of GPU/unified memory per billion parameters</strong>, plus headroom for context length:</p>
-<div style="overflow-x:auto;margin:1.25rem 0;">
-<table style="width:100%;border-collapse:collapse;font-size:0.9rem;">
-<thead>
-<tr style="border-bottom:2px solid rgba(251,191,36,0.4);color:var(--gold);text-align:left;">
-<th style="padding:0.75rem;">Model Size (4-bit Quantized)</th>
-<th style="padding:0.75rem;">Recommended VRAM / Unified RAM</th>
-<th style="padding:0.75rem;">Best Local Jobs</th>
-</tr>
-</thead>
-<tbody>
-<tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
-<td style="padding:0.75rem;"><strong>7B - 9B parameters</strong> (e.g., Gemma, Llama, Qwen small)</td>
-<td style="padding:0.75rem;">8 GB - 16 GB</td>
-<td style="padding:0.75rem;">Email triage, PII redaction, JSON extraction, fast drafts.</td>
-</tr>
-<tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
-<td style="padding:0.75rem;"><strong>14B - 32B parameters</strong> (mid-size Qwen / Gemma)</td>
-<td style="padding:0.75rem;">24 GB - 32 GB (single pro GPU or Mac Studio)</td>
-<td style="padding:0.75rem;">Private code review, local RAG Q&amp;A, report drafting.</td>
-</tr>
-<tr>
-<td style="padding:0.75rem;"><strong>70B+ parameters</strong> (large Llama / Qwen)</td>
-<td style="padding:0.75rem;">48 GB - 96 GB+</td>
-<td style="padding:0.75rem;">Department-wide air-gapped reasoning and heavy analysis.</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+claude = anthropic.Anthropic()
 
-<div class="content-card" style="background:#000000;">
-<h2 id="local-worker-example">Simple Python Pattern: Claude Planner + Local Ollama Worker</h2>
-<p class="article-p">Here is a clean pattern where Claude writes the plain-English classification rubric once, and a local model running on <code>localhost:11434</code> processes private notes offline.</p>
-<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
-<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
-<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">hybrid_router.py</span>
-<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
-</div>
-<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>import requests
+def route_task(prompt: str, contains_pii: bool, complexity: str) -&gt; str:
+    if contains_pii or complexity == &quot;low&quot;:
+        resp = requests.post(
+            &quot;http://localhost:11434/api/generate&quot;,
+            json={&quot;model&quot;: &quot;qwen2.5:14b&quot;, &quot;prompt&quot;: prompt, &quot;stream&quot;: False},
+            timeout=60,
+        )
+        return resp.json()[&quot;response&quot;]
 
-def run_local_worker(private_text: str, rubric: str) -> str:
-    # Runs 100% locally via Ollama - private data never leaves your machine
-    res = requests.post(
-        "http://localhost:11434/api/generate",
-        json={
-            "model": "qwen2.5:14b",
-            "prompt": f"Follow this rubric strictly:\n{rubric}\n\nRECORD:\n{private_text}",
-            "stream": False,
-        },
-        timeout=60,
+    msg = claude.messages.create(
+        model=&quot;claude-sonnet-4-20250514&quot;,
+        max_tokens=1024,
+        messages=[{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: prompt}],
     )
-    return res.json()["response"]
+    return msg.content[0].text</code></pre></div>
+</section>
 
-rubric = "Classify into Billing, Technical, or Legal. Return one word only."
-print(run_local_worker("Invoice #4421 shows duplicate charge on customer card.", rubric))</code></pre>
-</div>
-</div>
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="privacy-boundaries-and-mcp">Enforcing Strict Privacy Boundaries via Local MCP</h2>
 
-<div class="content-card" style="background:#000000;">
-<h2 id="cost-and-governance">Cost Savings and Practical Privacy Guardrails</h2>
-<p class="article-p">Teams that move 75 percent of high-volume extraction and private summarization onto local models routinely cut monthly API bills sharply while meeting strict privacy mandates. Add a simple automated PII check before any outbound cloud call so sensitive names, tax IDs, or health records never cross the boundary by mistake.</p>
-</div>
+<p class="article-p">You can even expose your local LLM as a dedicated <a class="gold-link" href="#references">Model Context Protocol (MCP)</a> tool inside Claude Desktop or Claude Code. Imagine asking Claude to review ten thousand local support logs: instead of uploading those logs to the cloud, Claude calls your local MCP tool, which runs a local Gemma or Qwen model on your workstation to cluster error codes and strip customer emails, returning only a clean 20-line summary table to Claude.</p>
+<p class="article-p">This pattern enforces a clean data boundary in code rather than relying on employee memory. Even if someone forgets to redact a file manually, the local worker intercepts and sanitizes it before any cloud request is constructed.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Local Worker Routing Policy</span><span>YAML</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>routing_policy:
+  local_endpoint: &quot;http://127.0.0.1:11434&quot;
+  default_local_model: &quot;gemma2:9b&quot;
+  cloud_model: &quot;claude-sonnet-4-20250514&quot;
+  rules:
+    - match_tags: [&quot;hipaa&quot;, &quot;pii&quot;, &quot;payroll&quot;, &quot;bulk_csv&quot;]
+      target: &quot;local_only&quot;
+      allow_cloud_fallback: false
+    - match_tags: [&quot;architecture&quot;, &quot;code_review&quot;, &quot;sanitized_spec&quot;]
+      target: &quot;cloud_claude&quot;</code></pre></div>
+</section>
 
-<div class="content-card" style="background:#000000;">
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="failure-modes-hybrid">Common Pitfalls in Hybrid Local-Cloud Setups</h2>
+
+<p class="article-p">When operating both local and cloud models together, watch for three common pitfalls:</p>
+<ol class="article-p" style="padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Silent Cloud Fallback:</strong> Never let a local timeout automatically fall back to a cloud API if the payload contains private PII. Fail closed and log an alert instead.</li>
+<li><strong>Inconsistent JSON Formatting:</strong> Smaller local models sometimes wrap JSON in extra commentary. Use strict grammar-constrained structured outputs or Pydantic validation with one automatic retry.</li>
+<li><strong>Model Drift Across Teams:</strong> Pin exact local model tags and quantization versions in your team config so every developer gets consistent extraction behavior.</li>
+</ol>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+graph TD
+    Q["Private Document Request"] --> L["Local Model Inference"]
+    L --> S{"Local Server Healthy?"}
+    S -->|"No"| X["Fail Closed & Alert Admin
+(Never Leak to Cloud)"]
+    S -->|"Yes"| V{"Valid JSON Schema?"}
+    V -->|"No"| R["Retry with Strict Grammar"]
+    R --> V
+    V -->|"Yes"| O["Save Verified Local Output"]
+
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef rose fill:#000000,stroke:#f472b6,stroke-width:2px,color:#f8fafc
+    classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+
+    class Q,O gold
+    class L,R cyan
+    class S,X rose
+    class V emerald
+</div><p style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;text-align:center;">Fail-closed routing guarantees private workloads never spill accidentally to external APIs.</p></div>
+</section>
+
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="step-by-step-local-deployment">Step-by-Step Setup: Pairing Ollama with Claude in Fifteen Minutes</h2>
+
+<p class="article-p">You do not need a dedicated ML infrastructure team to run a reliable hybrid stack. Follow these four practical steps on a standard developer workstation or small team server:</p>
+<ol class="article-p" style="padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Install and Benchmark Your Local Runtime:</strong> Install Ollama on macOS, Linux, or Windows, pull one compact model suited to your VRAM (such as a 9B or 14B Qwen or Gemma build), and run a quick 5-prompt timing check to confirm tokens stream smoothly without swapping to disk.</li>
+<li><strong>Define Your Data Classification Rule:</strong> Write a clear two-bucket policy in code: Bucket A (raw customer PII, payroll, medical notes, bulk log files) routes strictly to <code>http://127.0.0.1:11434</code> with zero cloud fallback; Bucket B (sanitized specs, public docs, architecture questions) routes to Claude.</li>
+<li><strong>Add Structured Output Validation:</strong> Wrap local model calls with Pydantic or JSON Schema checks so malformed responses trigger one local retry before returning to your application.</li>
+<li><strong>Expose Local Extraction as an MCP Tool:</strong> Register a lightweight local MCP server in Claude Desktop or Claude Code so Claude can delegate private file scanning to your local model while keeping raw records strictly inside your machine.</li>
+</ol>
+
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="real-world-hybrid-use-cases">High-Value Hybrid Use Cases Across Industries</h2>
+
+<p class="article-p">Hybrid local-plus-Claude architectures unlock AI adoption in environments that previously banned cloud tools altogether:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Healthcare &amp; Legal Intake:</strong> Local open-weights models extract structured fields and redact patient or client identifiers on-premise; Claude then helps draft clinical workflow improvements or general legal research memos from fully anonymized summaries.</li>
+<li><strong>High-Volume Log Triage:</strong> Local workers classify 50,000 nightly application log lines at zero marginal API cost, escalating only the three novel root-cause stack traces to Claude for deep debugging.</li>
+<li><strong>Offline Travel &amp; Field Work:</strong> Engineers working on flights or restricted client networks keep full local coding and note-taking assistance running offline, then sync sanitized architecture reviews with Claude once reconnected.</li>
+</ul>
+
+</section>
+
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="evaluating-local-model-quality">Benchmarking Local Models Against Your Real Workloads</h2>
+
+<p class="article-p">Public leaderboards rarely tell you how a local model performs on your own invoices, support tickets, or internal code style. Build a small 25-example golden test set from anonymized historical records and run every candidate local model - Llama, Gemma, or Qwen - through the exact same script. Measure three numbers: JSON schema pass rate, field extraction accuracy, and tokens per second on your actual workstation hardware. That twenty-minute benchmark prevents months of guesswork and shows you the exact boundary where local workers shine and where Claude should take over.</p>
+
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
-<li><a class="gold-link" href="https://ollama.com/" rel="noopener noreferrer" target="_blank">Ollama Official Platform</a> - Fast local runner for Llama, Gemma, Qwen, and other open-weight models on macOS, Linux, and Windows.</li>
-<li><a class="gold-link" href="https://docs.vllm.ai/" rel="noopener noreferrer" target="_blank">vLLM Production Inference Engine</a> - High-throughput open-source serving engine for team and enterprise local GPU clusters.</li>
-<li><a class="gold-link" href="https://huggingface.co/models" rel="noopener noreferrer" target="_blank">Hugging Face Model Hub</a> - Open-weight model cards, licenses, and quantization guides for Llama, Gemma, and Qwen.</li>
-<li><a class="gold-link" href="https://docs.anthropic.com/en/api/getting-started" rel="noopener noreferrer" target="_blank">Anthropic Claude API Documentation</a> - Official guide for pairing cloud Claude reasoning with local worker pipelines.</li>
+<li><a class="gold-link" href="https://ollama.com/" rel="noopener noreferrer" target="_blank">Ollama Official Documentation</a> - Simple local runtime for running open-weights Llama, Gemma, and Qwen models on workstation hardware.</li>
+<li><a class="gold-link" href="https://docs.vllm.ai/en/latest/" rel="noopener noreferrer" target="_blank">vLLM High-Throughput Serving</a> - Production inference engine for serving open-weights models on team GPU servers.</li>
+<li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP)</a> - Standard protocol for exposing local models and private tools cleanly to Claude.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/api/messages" rel="noopener noreferrer" target="_blank">Anthropic Messages API</a> - Official API reference for integrating Claude into hybrid routing architectures.</li>
 </ol>
-</div>
+</section>
 </article>
 
-<section class="cta-banner">
+<section class="cta-banner" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Deploy Sovereign Local LLMs &amp; Slash Cloud AI Spend</h3>
 <p style="color:#94a3b8;font-size:1.02rem;max-width:680px;margin:0 auto 1.75rem;line-height:1.7;">Architect private, on-premise model pipelines in Linux with vLLM, Ollama, and hybrid Claude routing to eliminate data egress and slash recurring inference bills by 60%-90%.</p>
 <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
@@ -456,7 +501,7 @@ print(run_local_worker("Invoice #4421 shows duplicate charge on customer card.",
 </section>
 </main>
 
-    <!-- START:FOOTER -->
+<!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
@@ -747,245 +792,6 @@ print(run_local_worker("Invoice #4421 shows duplicate charge on customer card.",
   </footer>
     <!-- END:FOOTER -->
 <script src="../components.js"></script>
-<!-- Interactive Calculators, Model Picker, Config Generator, and Filter Scripts -->
-<script>
-  (function () {
-    "use strict";
-    var INR_PER_USD = 88;
-    var $ = function (id) { return document.getElementById(id); };
-    var num = function (id) { var v = parseFloat($(id).value); return isFinite(v) ? v : 0; };
-    var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]; }); };
-    var store = {
-      get: function (k) { try { return window.localStorage.getItem(k); } catch (e) { return null; } },
-      set: function (k, v) { try { window.localStorage.setItem(k, v); } catch (e) { /* storage unavailable */ } }
-    };
-
-    function copyText(text, btn) {
-      var done = function () { var old = btn.textContent; btn.textContent = "Copied"; setTimeout(function () { btn.textContent = old; }, 1400); };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text); done(); });
-      } else { fallbackCopy(text); done(); }
-    }
-    function fallbackCopy(text) {
-      var ta = document.createElement("textarea");
-      ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
-      document.body.appendChild(ta); ta.select();
-      try { document.execCommand("copy"); } catch (e) { /* ignore */ }
-      document.body.removeChild(ta);
-    }
-    document.addEventListener("click", function (e) {
-      var btn = e.target.closest ? e.target.closest(".copy") : null;
-      if (!btn) return;
-      var box = btn.closest(".code");
-      var code = box ? box.querySelector("code") : null;
-      if (code) copyText(code.textContent, btn);
-    });
-
-    /* Break-even calculator */
-    var currency = store.get("llm-currency") === "INR" ? "INR" : "USD";
-    function money(usd) {
-      if (!isFinite(usd)) return "n/a";
-      var sign = usd < 0 ? "−" : "";
-      var abs = Math.abs(usd);
-      if (currency === "INR") return sign + "₹" + Math.round(abs * INR_PER_USD).toLocaleString("en-IN");
-      return sign + "$" + abs.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    }
-    function setCurrency(cur, convertTariff) {
-      var tariff = $("be-tariff");
-      if (convertTariff && cur !== currency) {
-        var t = num("be-tariff");
-        tariff.value = cur === "INR" ? 8 : 0.182;
-        if (t === 0) tariff.value = 0;
-      }
-      currency = cur;
-      store.set("llm-currency", cur);
-      $("be-tariff-label").textContent = cur === "INR" ? "Electricity tariff (₹ per kWh)" : "Electricity tariff (USD per kWh)";
-      document.querySelectorAll("#w-breakeven .seg button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.cur === cur)); });
-      calcBreakEven();
-    }
-    function calcBreakEven() {
-      var inTok = num("be-in"), outTok = num("be-out"), pin = num("be-pin"), pout = num("be-pout");
-      var share = Math.min(Math.max(num("be-share"), 0), 100) / 100;
-      var hw = num("be-hw"), months = Math.max(num("be-months"), 1), watts = num("be-watts"), hours = Math.min(Math.max(num("be-hours"), 0), 24);
-      var tariffInput = num("be-tariff");
-      var tariffUsd = currency === "INR" ? tariffInput / INR_PER_USD : tariffInput;
-      var cloudFull = inTok * pin + outTok * pout;
-      var cloudHybrid = cloudFull * (1 - share);
-      var savings = cloudFull - cloudHybrid;
-      var kwh = watts / 1000 * hours * 30;
-      var power = kwh * tariffUsd;
-      var amort = hw / months;
-      var localMonthly = amort + power;
-      var net = savings - power;
-      var breakEven = net > 0 ? hw / net : Infinity;
-      var be = isFinite(breakEven) ? breakEven.toFixed(1) + " months" + (breakEven > 120 ? " (over 10 years)" : "") : "Never at these numbers";
-      $("be-out-box").innerHTML =
-        '<div class="kv"><span>Cloud bill, all tokens</span><span>' + money(cloudFull) + '</span></div>' +
-        '<div class="kv"><span>Cloud bill after shifting ' + Math.round(share * 100) + '% local</span><span>' + money(cloudHybrid) + '</span></div>' +
-        '<div class="kv"><span>Electricity (' + kwh.toFixed(0) + ' kWh / month)</span><span>' + money(power) + '</span></div>' +
-        '<div class="kv"><span>Hardware amortised per month</span><span>' + money(amort) + '</span></div>' +
-        '<div class="kv"><span>Local cost per month (hardware + power)</span><span>' + money(localMonthly) + '</span></div>' +
-        '<div class="kv"><span>Monthly saving after amortisation</span><span class="big">' + money(savings - localMonthly) + '</span></div>' +
-        '<div class="kv"><span>Break-even on the hardware</span><span class="big">' + esc(be) + '</span></div>';
-    }
-    document.querySelectorAll("#w-breakeven input").forEach(function (el) { el.addEventListener("input", calcBreakEven); });
-    document.querySelectorAll("#w-breakeven .seg button").forEach(function (b) { b.addEventListener("click", function () { setCurrency(b.dataset.cur, true); }); });
-    if (currency === "INR") { $("be-tariff").value = 8; }
-    setCurrency(currency, false);
-
-    /* VRAM calculator */
-    var QUANT_NAME = { "16": "FP16 / BF16", "8.5": "Q8_0", "6.56": "Q6_K", "5.69": "Q5_K_M", "4.85": "Q4_K_M", "4.25": "MXFP4" };
-    function kvMbPerToken(params, arch) {
-      if (arch === "moe") return 0.024 * Math.pow(Math.max(params, 1) / 21, 0.25);
-      return 0.12 * Math.pow(Math.max(params, 1) / 8, 0.6);
-    }
-    function tierFor(gb) {
-      if (gb <= 12) return "12 GB GPU (RTX 3060 12GB class) or larger";
-      if (gb <= 16) return "16 GB GPU (RTX 5060 Ti 16GB)";
-      if (gb <= 24) return "24 GB GPU (used RTX 3090)";
-      if (gb <= 32) return "32 GB GPU (RTX 5090)";
-      if (gb <= 48) return "2 &times; 24 GB GPUs";
-      if (gb <= 64) return "2 &times; 32 GB GPUs, or 128 GB unified memory";
-      if (gb <= 110) return "128 GB unified memory (Framework Desktop, DGX Spark) or GPU + RAM offload for MoE";
-      return "Multi-GPU server; consider a smaller quantization or model";
-    }
-    function calcVram() {
-      var p = Math.max(num("vr-params"), 0);
-      var bpw = parseFloat($("vr-quant").value);
-      var ctx = parseInt($("vr-ctx").value, 10);
-      var arch = $("vr-arch").value;
-      var weights = p * bpw / 8;
-      var kvPerTok = kvMbPerToken(p, arch);
-      var kv = ctx * kvPerTok / 1024;
-      var overhead = 2;
-      var total = weights + kv + overhead;
-      $("vr-out").innerHTML =
-        '<div class="kv"><span>Weights (' + esc(QUANT_NAME[$("vr-quant").value]) + ')</span><span>' + weights.toFixed(1) + ' GB</span></div>' +
-        '<div class="kv"><span>KV cache (' + (ctx / 1024) + 'K tokens, FP16)</span><span>' + kv.toFixed(1) + ' GB</span></div>' +
-        '<div class="kv"><span>Compute buffers</span><span>' + overhead.toFixed(1) + ' GB</span></div>' +
-        '<div class="kv"><span>Total memory needed</span><span class="big">' + total.toFixed(1) + ' GB</span></div>' +
-        '<div class="kv"><span>Hardware tier that fits</span><span>' + tierFor(total) + '</span></div>';
-      $("vr-formula").textContent =
-        "Weights = params &times; bits per weight &divide; 8 = " + p + " &times; " + bpw + " &divide; 8. " +
-        "KV cache = context &times; " + kvPerTok.toFixed(3) + " MB per token (" + (arch === "moe" ? "MoE heuristic fitted to gpt-oss: 0.024 &times; (P &divide; 21)^0.25" : "dense heuristic fitted to GQA models: 0.12 &times; (P &divide; 8)^0.6") + "). " +
-        "Plus 2 GB of buffers. Real models vary with layer count and attention design: hybrid-attention models such as Qwen3.8 need less cache than this, and quantizing the KV cache to 8-bit roughly halves it.";
-    }
-    ["vr-params", "vr-quant", "vr-ctx", "vr-arch"].forEach(function (id) { $(id).addEventListener("input", calcVram); $(id).addEventListener("change", calcVram); });
-    calcVram();
-
-    /* Model picker */
-    var MODELS = [
-      { name: "Ministral 3 8B Instruct", mem: 8, uses: ["chat", "tools"], quant: "Q4_K_M GGUF (FP8 in vLLM)", tool: "Ollama or LM Studio" },
-      { name: "Gemma 4 E4B", mem: 8, uses: ["chat"], quant: "Ollama gemma4:e4b", tool: "Ollama" },
-      { name: "Gemma 4 12B", mem: 12, uses: ["chat", "reasoning"], quant: "Ollama gemma4:12b", tool: "Ollama" },
-      { name: "Ministral 3 14B", mem: 12, uses: ["chat", "tools", "reasoning"], quant: "Q4_K_M GGUF", tool: "LM Studio or llama.cpp" },
-      { name: "gpt-oss-20b", mem: 16, uses: ["reasoning", "tools", "coding"], quant: "MXFP4 (native)", tool: "Ollama gpt-oss:20b" },
-      { name: "Gemma 4 26B A4B (MoE)", mem: 24, uses: ["chat", "reasoning", "coding"], quant: "Ollama gemma4:26b", tool: "Ollama" },
-      { name: "Qwen3.8-27B", mem: 24, uses: ["coding", "tools", "reasoning", "chat"], quant: "Ollama qwen3.8:27b (18 GB)", tool: "Ollama, then OpenCode or Claude Code" },
-      { name: "Gemma 4 31B", mem: 24, uses: ["reasoning", "chat"], quant: "Ollama gemma4:31b", tool: "Ollama" },
-      { name: "Llama 3.3 70B Instruct", mem: 48, uses: ["chat"], quant: "Q4_K_M GGUF", tool: "llama.cpp split across two GPUs" },
-      { name: "gpt-oss-120b", mem: 64, uses: ["reasoning", "tools", "coding"], quant: "MXFP4 (native)", tool: "llama.cpp or Ollama gpt-oss:120b" },
-      { name: "Mistral Small 4 119B", mem: 96, uses: ["coding", "tools", "reasoning", "chat"], quant: "Q4_K_M GGUF or NVFP4", tool: "llama.cpp or vLLM" },
-      { name: "Nemotron 3 Super 120B A12B", mem: 96, uses: ["tools", "reasoning"], quant: "NVFP4", tool: "vLLM on DGX Spark" }
-    ];
-    function pickModels() {
-      var mem = parseInt($("mp-mem").value, 10);
-      var use = $("mp-use").value;
-      var ram = parseInt($("mp-ram").value, 10);
-      var fits = MODELS.filter(function (m) { return m.mem <= mem; });
-      var offload = null;
-      if (mem >= 16 && mem < 64 && ram >= 96) {
-        offload = { name: "gpt-oss-120b with expert offload", mem: 16, uses: ["reasoning", "tools", "coding"], quant: "MXFP4, --n-cpu-moe 32", tool: "llama.cpp (Tutorial 5), slower than full GPU" };
-      }
-      var ranked = fits.filter(function (m) { return m.uses.indexOf(use) !== -1; }).sort(function (a, b) { return b.mem - a.mem; });
-      if (offload && offload.uses.indexOf(use) !== -1) ranked.unshift(offload);
-      if (!ranked.length) ranked = fits.sort(function (a, b) { return b.mem - a.mem; });
-      var top = ranked.slice(0, 3);
-      if (!top.length) { $("mp-out").innerHTML = "<p>Nothing in this guide fits. Try a smaller quantization of an 8B model or add memory.</p>"; return; }
-      $("mp-out").innerHTML = top.map(function (m, i) {
-        return '<div class="pick"><strong>' + (i + 1) + '. ' + esc(m.name) + '</strong><small>Format: ' + esc(m.quant) + ' &bull; Run with: ' + esc(m.tool) + '</small></div>';
-      }).join("");
-    }
-    ["mp-mem", "mp-use", "mp-ram"].forEach(function (id) { $(id).addEventListener("change", pickModels); });
-    pickModels();
-
-    /* Config generator */
-    var RT = {
-      ollama: { port: 11434, model: "qwen3.8:27b", token: "ollama", id: "ollama", label: "Ollama (local)" },
-      lmstudio: { port: 1234, model: "openai/gpt-oss-20b", token: "lmstudio", id: "lmstudio", label: "LM Studio (local)" },
-      llamacpp: { port: 8080, model: "gpt-oss-120b", token: "llamacpp", id: "llamacpp", label: "llama-server (local)" },
-      vllm: { port: 8000, model: "my-model", token: "dummy", id: "vllm", label: "vLLM (local)" }
-    };
-    function block(title, lang, text) {
-      return '<div class="code"><div class="code-head"><span>' + esc(title) + '</span><button class="copy" type="button">Copy</button></div><pre><code>' + esc(text) + '</code></pre></div>';
-    }
-    function genConfig() {
-      var rt = RT[$("cg-rt").value];
-      var host = ($("cg-host").value || "localhost").trim();
-      var port = parseInt($("cg-port").value, 10) || rt.port;
-      var model = ($("cg-model").value || rt.model).trim();
-      var base = "http://" + host + ":" + port;
-      var oc = {
-        "$schema": "https://opencode.ai/config.json",
-        "model": rt.id + "/" + model,
-        "provider": {}
-      };
-      oc.provider[rt.id] = { npm: "@ai-sdk/openai-compatible", name: rt.label, options: { baseURL: base + "/v1" }, models: {} };
-      oc.provider[rt.id].models[model] = { name: model, limit: { context: 65536, output: 16384 } };
-      var env = [
-        "# Point Claude Code at the local Anthropic-compatible endpoint",
-        "export ANTHROPIC_BASE_URL=\"" + base + "\"",
-        "export ANTHROPIC_AUTH_TOKEN=\"" + rt.token + "\"",
-        "export ANTHROPIC_API_KEY=\"\"",
-        "export ANTHROPIC_DEFAULT_OPUS_MODEL=\"" + model + "\"",
-        "export ANTHROPIC_DEFAULT_SONNET_MODEL=\"" + model + "\"",
-        "export ANTHROPIC_DEFAULT_HAIKU_MODEL=\"" + model + "\"",
-        "claude --model \"" + model + "\""
-      ];
-      if ($("cg-rt").value === "vllm" && model.indexOf("/") !== -1) {
-        env.unshift("# Warning: vLLM model names with a slash fail in Claude Code; start vLLM with --served-model-name");
-      }
-      var curl = [
-        "# OpenAI-compatible smoke test",
-        "curl -s " + base + "/v1/chat/completions \\",
-        "  -H \"Content-Type: application/json\" \\",
-        "  -d '{\"model\": \"" + model + "\", \"messages\": [{\"role\": \"user\", \"content\": \"Reply with OK\"}]}'"
-      ];
-      $("cg-out").innerHTML =
-        block("json &bull; ~/.config/opencode/opencode.json", "json", JSON.stringify(oc, null, 2)) +
-        block("bash &bull; Claude Code environment", "bash", env.join("\n")) +
-        block("bash &bull; curl test", "bash", curl.join("\n"));
-    }
-    $("cg-rt").addEventListener("change", function () {
-      var rt = RT[$("cg-rt").value];
-      $("cg-port").value = rt.port; $("cg-model").value = rt.model; genConfig();
-    });
-    ["cg-host", "cg-port", "cg-model"].forEach(function (id) { $(id).addEventListener("input", genConfig); });
-    genConfig();
-
-    /* Tutorial filter */
-    function filterTutorials(level) {
-      document.querySelectorAll("#w-filter .seg button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.level === level)); });
-      document.querySelectorAll("article.tutorial").forEach(function (a) { a.hidden = !(level === "all" || a.dataset.level === level); });
-      store.set("llm-tutorial-level", level);
-    }
-    document.querySelectorAll("#w-filter .seg button").forEach(function (b) { b.addEventListener("click", function () { filterTutorials(b.dataset.level); }); });
-    window.addEventListener("hashchange", function () {
-      var target = document.querySelector(location.hash);
-      if (target && target.classList.contains("tutorial") && target.hidden) { filterTutorials("all"); target.scrollIntoView(); }
-    });
-    filterTutorials("all");
-  })();
-  </script>
-<script>
-function copyCode(btn) {
-  const code = btn.closest(".code-window").querySelector("code").innerText;
-  navigator.clipboard.writeText(code).then(() => {
-    const orig = btn.innerText;
-    btn.innerText = "Copied";
-    setTimeout(() => { btn.innerText = orig; }, 1800);
-  });
-}
-</script>
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
 </body>
 </html>

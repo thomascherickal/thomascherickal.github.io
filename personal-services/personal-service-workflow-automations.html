@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Workflow Automations | Thomas Cherickal</title>
-<meta content="Automate your repetitive personal admin, email triage, note organization, and content publishing pipelines with reliable local scripts, lightweight webhooks, and clear validation checks." name="description"/>
+<meta content="Automate repetitive personal admin, email triage, note organization, and content publishing pipelines with reliable local scripts, webhooks, and validation checks." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
 <!-- Canonical URL -->
-<link href="https://thedigitalfuturist.com/business-services/business-service-workflow-automations.html" rel="canonical"/>
+<link href="https://thedigitalfuturist.com/personal-services/personal-service-workflow-automations.html" rel="canonical"/>
 <!-- Open Graph -->
 <meta content="website" property="og:type"/>
-<meta content="https://thedigitalfuturist.com/business-services/business-service-workflow-automations.html" property="og:url"/>
+<meta content="https://thedigitalfuturist.com/personal-services/personal-service-workflow-automations.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
-<meta content="Workflow Automations | Thomas Cherickal" property="og:title"/>
-<meta content="Automate your repetitive personal admin, email triage, note organization, and content publishing pipelines with reliable local scripts, lightweight webhooks, and clear validation checks." property="og:description"/>
-<meta content="Workflow Automations | Thomas Cherickal" name="twitter:title"/>
-<meta content="Automate your repetitive personal admin, email triage, note organization, and content publishing pipelines with reliable local scripts, lightweight webhooks, and clear validation checks." name="twitter:description"/>
+<meta content="Workflow Automations - Thomas Cherickal" property="og:title"/>
+<meta content="Automate repetitive personal admin, email triage, note organization, and content publishing pipelines with reliable local scripts, webhooks, and validation checks." property="og:description"/>
+<meta content="Workflow Automations - Thomas Cherickal" name="twitter:title"/>
+<meta content="Automate repetitive personal admin, email triage, note organization, and content publishing pipelines with reliable local scripts, webhooks, and validation checks." name="twitter:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Favicon & Icons -->
@@ -36,8 +35,8 @@
       "@type": "WebPage",
       "@id": "https://thedigitalfuturist.com/personal-services/personal-service-workflow-automations.html#webpage",
       "url": "https://thedigitalfuturist.com/personal-services/personal-service-workflow-automations.html",
-      "name": "Workflow Automations - Service Specification | Thomas Cherickal",
-      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Automate your repetitive personal admin, email triage, note organization, and content publishing pipelines. Build reliable local scripts and lightweight webhook automations with clear validation checks so routine tasks run cleanly in the background.",
+      "name": "Workflow Automations - Personal Service | Thomas Cherickal",
+      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Automate repetitive personal admin, email triage, note organization, and content publishing pipelines with reliable local scripts, webhooks, and validation checks.",
       "isPartOf": {
         "@id": "https://thedigitalfuturist.com/#website"
       },
@@ -74,9 +73,9 @@
       "@type": "Service",
       "@id": "https://thedigitalfuturist.com/personal-services/personal-service-workflow-automations.html#service",
       "name": "Workflow Automations - Thomas Cherickal",
-      "serviceType": "Personal Workflow Automations Training",
+      "serviceType": "Personal Workflow Automations & Local Scripting Training",
       "url": "https://thedigitalfuturist.com/personal-services/personal-service-workflow-automations.html",
-      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Automate your repetitive personal admin, email triage, note organization, and content publishing pipelines. Build reliable local scripts and lightweight webhook automations with clear validation checks so routine tasks run cleanly in the background.",
+      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Automate repetitive personal admin, email triage, note organization, and content publishing pipelines with reliable local scripts, webhooks, and validation checks.",
       "provider": {
         "@type": "Person",
         "@id": "https://thedigitalfuturist.com/#person",
@@ -90,10 +89,10 @@
       },
       "availableLanguage": "English",
       "serviceOutput": [
-        "Email Triage & Admin Automation: Sorting incoming messages, drafting clean replies, and surfacing urgent items without auto-sending mistakes.",
-        "Automated Note Organization: Tagging, renaming, and filing downloads, receipts, and reading notes cleanly in the background.",
-        "Content Publishing Pipelines: Turning rough notes or finished articles into formatted posts, summaries, and social drafts consistently.",
-        "Validation Checks & Safe Retries: Adding clear schema checks, dry-run modes, and simple error logs so background tasks never silently break."
+        "Personal Automation Map: Ranked list of repetitive admin tasks worth automating first.",
+        "Idempotent Local Scripts: Clean Python utilities with dry-run flags, logging, and safe retries.",
+        "Lightweight Webhook & Trigger Flows: Connecting forms, email labels, and publishing pipelines cleanly.",
+        "Failure Alert & Validation Layer: Simple health checks so broken automations notify you immediately."
       ]
     }
   ]
@@ -103,13 +102,13 @@
 <link href="../css/styles.css" rel="stylesheet"/>
 <link href="../css/background.css" rel="stylesheet"/>
 <link href="../css/buttons.css" rel="stylesheet"/>
-<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
 <link href="../css/navbar.css" rel="stylesheet"/>
 <link href="../css/footer.css" rel="stylesheet"/>
 <link href="../css/cta.css" rel="stylesheet"/>
 <link href="../css/article.css" rel="stylesheet"/>
 <link href="../css/service.css" rel="stylesheet"/>
-<link href="../css/business-services.css" rel="stylesheet"/>
+<link href="../css/personal-services.css" rel="stylesheet"/>
+<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
 <link href="../css/responsive.css" rel="stylesheet"/>
 </head>
 <body>
@@ -292,243 +291,213 @@
 <a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
 <main id="main">
 <div class="container" style="max-width:1040px;margin:0 auto;padding:2.5rem 1.25rem;">
-  <div class="hero content-card" style="background:#000000;border:1px solid rgba(251,191,36,0.3);border-radius:16px;padding:2.5rem;margin-bottom:2rem;">
-    <p class="section-label" style="color:var(--cyan,#38bdf8);letter-spacing:0.1em;font-size:0.8rem;text-transform:uppercase;margin-bottom:0.5rem;">// PERSONAL SERVICE SPECIFICATION - RELIABLE PERSONAL BACKGROUND AUTOMATIONS</p>
+  <div class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:16px;padding:2.5rem;margin-bottom:2rem;">
+    <p class="section-label" style="color:var(--cyan,#38bdf8);letter-spacing:0.1em;font-size:0.8rem;text-transform:uppercase;margin-bottom:0.5rem;">// PERSONAL SERVICE - RELIABLE PERSONAL BACKGROUND AUTOMATION</p>
     <h1>Workflow Automations</h1>
-    <div class="title-tags" aria-label="Article topics"><span class="title-tag">Workflow Automation</span><span class="title-tag">Email Triage</span><span class="title-tag">Note Organizing</span><span class="title-tag">Content Pipelines</span><span class="title-tag">Safe Checks</span></div>
-    <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.8;max-width:840px;margin-top:1.1rem;margin-bottom:1.5rem;">
+    <div class="title-tags" aria-label="Article topics"><span class="title-tag">Workflow Automations</span><span class="title-tag">Email Triage</span><span class="title-tag">Local Scripts</span><span class="title-tag">Webhooks</span><span class="title-tag">Validation Checks</span></div>
+    <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.8;max-width:860px;margin-top:1.1rem;margin-bottom:1.5rem;">
       Automate your repetitive personal admin, email triage, note organization, and content publishing pipelines. Build reliable local scripts and lightweight webhook automations with clear validation checks so routine tasks run cleanly in the background.
     </p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1.75rem;">
-      <div style="background:#000000;border:1px solid rgba(56,189,248,0.32);border-radius:12px;padding:1.25rem;">
-        <div style="font-size:0.75rem;color:var(--cyan,#38bdf8);text-transform:uppercase;letter-spacing:0.08em;">Training Format</div>
-        <div style="font-size:1.35rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">1-on-1 Live</div>
-        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">5 days live + 5 days support (1 person only)</div>
+      <div style="background:#000000;border:1px solid rgba(56,189,248,0.45);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:#38bdf8;text-transform:uppercase;letter-spacing:0.08em;">Admin Relief</div>
+        <div style="font-size:1.25rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Background Runs</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Offload repetitive sorting, naming, and triage</div>
       </div>
-      <div style="background:#000000;border:1px solid rgba(52,211,153,0.32);border-radius:12px;padding:1.25rem;">
-        <div style="font-size:0.75rem;color:#34d399;text-transform:uppercase;letter-spacing:0.08em;">Target Tasks</div>
-        <div style="font-size:1.35rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Daily Admin</div>
-        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Email triage, notes, and content publishing</div>
+      <div style="background:#000000;border:1px solid rgba(52,211,153,0.45);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:#34d399;text-transform:uppercase;letter-spacing:0.08em;">Architecture</div>
+        <div style="font-size:1.25rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Small Scripts</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Readable Python, cron, and lightweight webhooks</div>
       </div>
-      <div style="background:#000000;border:1px solid rgba(192,132,252,0.32);border-radius:12px;padding:1.25rem;">
-        <div style="font-size:0.75rem;color:#c084fc;text-transform:uppercase;letter-spacing:0.08em;">Architecture</div>
-        <div style="font-size:1.35rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Scripts + Webhooks</div>
-        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Simple Python scripts &amp; lightweight n8n flows</div>
+      <div style="background:#000000;border:1px solid rgba(192,132,252,0.45);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:#c084fc;text-transform:uppercase;letter-spacing:0.08em;">Reliability</div>
+        <div style="font-size:1.25rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Idempotent</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Safe to re-run without creating duplicate work</div>
       </div>
-      <div style="background:#000000;border:1px solid rgba(251,191,36,0.32);border-radius:12px;padding:1.25rem;">
-        <div style="font-size:0.75rem;color:var(--gold,#fbbf24);text-transform:uppercase;letter-spacing:0.08em;">Reliability</div>
-        <div style="font-size:1.35rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Built-In Checks</div>
-        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Validation gates and safe retry handling</div>
+      <div style="background:#000000;border:1px solid rgba(251,191,36,0.45);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:#fbbf24;text-transform:uppercase;letter-spacing:0.08em;">Safety</div>
+        <div style="font-size:1.25rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Validation Gates</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Dry-run mode and clear error alerts every run</div>
       </div>
     </div>
   </div>
 
-  <div class="content-card" id="table-of-contents" style="background:#000000;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:1.75rem 2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.3rem;margin-bottom:1rem;">Table of Contents</h2>
+  <div class="content-card" id="table-of-contents" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:1.75rem 2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.3rem;margin-top:0;margin-bottom:1rem;">Table of Contents</h2>
     <ol style="display:flex;flex-direction:column;gap:0.55rem;padding-left:1.4rem;color:var(--text-secondary);line-height:1.7;margin:0;">
-      <li><a class="gold-link" href="#automate-boring-routines">Taking Repetitive Personal Admin Off Your Plate Safely</a></li>
-      <li><a class="gold-link" href="#local-scripts-and-webhooks">Choosing Between Simple Local Scripts and Lightweight Webhooks</a></li>
-      <li><a class="gold-link" href="#validation-and-error-safety">Clear Validation Checks So Background Tasks Never Go Wrong</a></li>
-      <li><a class="gold-link" href="#tutorial-note-organizer">Hands-On Guide: Safe Local Inbox Organizer With Dry-Run Mode</a></li>
-      <li><a class="gold-link" href="#tutorial-triage-prompt">Practical Template: Safe Email Triage JSON Prompt</a></li>
-      <li><a class="gold-link" href="#tutorial-automation-checklist">Step-by-Step Safe Automation Checklist</a></li>
-      <li><a class="gold-link" href="#pricing-guarantees">Transparent Pricing and Global Parity Index</a></li>
+      <li><a class="gold-link" href="#automate-boring-admin-safely">Automating Repetitive Personal Admin Without Fragile Hacks</a></li>
+      <li><a class="gold-link" href="#picking-the-right-tool-for-each-job">Local Scripts vs. Visual Webhooks: Picking the Right Tool</a></li>
+      <li><a class="gold-link" href="#idempotency-and-dry-runs">Idempotency, Dry-Run Mode, and Validation Checks</a></li>
+      <li><a class="gold-link" href="#publishing-and-triage-pipelines">Email Triage, Note Filing, and Content Publishing Pipelines</a></li>
+      <li><a class="gold-link" href="#idempotent-note-sorter">Hands-On Code: Idempotent Inbox Note Sorter with Dry-Run</a></li>
+      <li><a class="gold-link" href="#webhook-validation-yaml">Practical Configuration: Safe Webhook Automation Spec</a></li>
+      <li><a class="gold-link" href="#failure-modes-and-solo-routine">Common Automation Pitfalls and Weekly Health-Check Routine</a></li>
       <li><a class="gold-link" href="#references">Helpful References and Official Guides</a></li>
     </ol>
   </div>
 
-  <section class="content-card" id="automate-boring-routines" style="background:#000000;border:1px solid rgba(251,191,36,0.22);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.55rem;margin-bottom:1rem;">Taking Repetitive Personal Admin Off Your Plate Safely</h2>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">Small daily chores - sorting emails, renaming saved PDFs, filing meeting notes, and reformatting content for different platforms - quietly steal hours every week. Worse, they break your focus right when you are doing your best creative or technical work.</p>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">In these 1-on-1 sessions, we automate your highest-friction personal routines using clean local Python scripts and lightweight webhook tools like <a class="gold-link" href="#references">n8n</a>, always with simple validation checks so nothing goes wrong silently.</p>
-    <ul style="color:var(--text-secondary);line-height:1.8;padding-left:1.4rem;margin-bottom:1.25rem;">
-      <li style="margin-bottom:0.5rem;"><strong>Email Triage:</strong> Label newsletters, flag urgent client replies, and save draft responses for your quick 1-click review.</li>
-      <li style="margin-bottom:0.5rem;"><strong>Note Organization:</strong> Watch an inbox folder, add clean dates and topic tags, and move files to the right project directory.</li>
-      <li style="margin-bottom:0.5rem;"><strong>Content Publishing:</strong> Turn one finished Markdown post into a newsletter summary, social thread draft, and link checklist automatically.</li>
-    </ul>
-  </section>
-  <section class="content-card" id="local-scripts-and-webhooks" style="background:#000000;border:1px solid rgba(251,191,36,0.22);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.55rem;margin-bottom:1rem;">Choosing Between Simple Local Scripts and Lightweight Webhooks</h2>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">You do not need a heavy cloud platform for everything. Tasks that work on your local files (organizing notes, cleaning CSVs, backing up folders) run best as small Python scripts triggered by <a class="gold-link" href="#references">cron or systemd timers</a>. Tasks that react to outside events (new web form, incoming email, calendar booking) fit naturally into lightweight webhooks in <a class="gold-link" href="#references">n8n</a> or <a class="gold-link" href="#references">GitHub Actions</a>.</p>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">By keeping each automation small and single-purpose, it stays easy to understand, test, and fix six months later.</p>
-<svg viewBox="0 0 860 590" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RELIABLE PERSONAL AUTOMATION PIPELINE" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.35);background:#000000;margin:1.5rem 0;display:block;">
-  <rect width="860" height="590" fill="#000000"/>
-  <text x="430" y="38" fill="#fbbf24" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">RELIABLE PERSONAL AUTOMATION PIPELINE</text>
-  <rect x="90" y="66" width="680" height="66" rx="10" fill="#000000" stroke="#38bdf8" stroke-width="2"/>
-  <text x="430" y="93" fill="#38bdf8" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">1. Simple Trigger</text>
-  <text x="430" y="115" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Schedule (cron), new file in folder, or incoming webhook</text>
-  <line x1="430" y1="132" x2="430" y2="160" stroke="#fbbf24" stroke-width="2"/>
-  <polygon points="424,158 436,158 430,166" fill="#fbbf24"/>
-  <rect x="90" y="166" width="680" height="66" rx="10" fill="#000000" stroke="#34d399" stroke-width="2"/>
-  <text x="430" y="193" fill="#34d399" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">2. Input Validation Check</text>
-  <text x="430" y="215" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Verify required fields and clean format before running</text>
-  <line x1="430" y1="232" x2="430" y2="260" stroke="#fbbf24" stroke-width="2"/>
-  <polygon points="424,258 436,258 430,266" fill="#fbbf24"/>
-  <rect x="90" y="266" width="680" height="66" rx="10" fill="#000000" stroke="#fbbf24" stroke-width="2"/>
-  <text x="430" y="293" fill="#fbbf24" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">3. AI Assist or Local Transform</text>
-  <text x="430" y="315" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Triage email, tag note, or draft formatted content</text>
-  <line x1="430" y1="332" x2="430" y2="360" stroke="#fbbf24" stroke-width="2"/>
-  <polygon points="424,358 436,358 430,366" fill="#fbbf24"/>
-  <rect x="90" y="366" width="680" height="66" rx="10" fill="#000000" stroke="#c084fc" stroke-width="2"/>
-  <text x="430" y="393" fill="#c084fc" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">4. Safety &amp; Dry-Run Gate</text>
-  <text x="430" y="415" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Check output schema; draft instead of auto-sending</text>
-  <line x1="430" y1="432" x2="430" y2="460" stroke="#fbbf24" stroke-width="2"/>
-  <polygon points="424,458 436,458 430,466" fill="#fbbf24"/>
-  <rect x="90" y="466" width="680" height="66" rx="10" fill="#000000" stroke="#f472b6" stroke-width="2"/>
-  <text x="430" y="493" fill="#f472b6" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">5. Clean Log &amp; Quiet Completion</text>
-  <text x="430" y="515" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Record success or send 1 clear alert on failure</text>
-  <text x="430" y="572" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">Calm background automation you can actually trust</text>
-</svg>
-  </section>
-  <section class="content-card" id="validation-and-error-safety" style="background:#000000;border:1px solid rgba(251,191,36,0.22);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.55rem;margin-bottom:1rem;">Clear Validation Checks So Background Tasks Never Go Wrong</h2>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">The difference between a fragile hack and a dependable personal automation is two tiny habits: validating data at the start and end using <a class="gold-link" href="#references">Pydantic schemas</a>, and making actions idempotent (meaning if a script runs twice by mistake, it does not create duplicate drafts or double-post).</p>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">Every automation we build includes a <code>--dry-run</code> flag so you can preview exactly what it will do before letting it touch real files or accounts.</p>
-<svg viewBox="0 0 860 370" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FOUR PERSONAL AUTOMATION PIPELINES" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(56,189,248,0.35);background:#000000;margin:1.5rem 0;display:block;">
-  <rect width="860" height="370" fill="#000000"/>
-  <text x="430" y="36" fill="#fbbf24" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">FOUR PERSONAL AUTOMATION PIPELINES</text>
-  <rect x="210" y="56" width="440" height="62" rx="10" fill="#000000" stroke="#fbbf24" stroke-width="2"/>
-  <text x="430" y="82" fill="#fbbf24" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Lightweight Local Scripts + Webhook Flows</text>
-  <text x="430" y="103" fill="#f8fafc" font-family="sans-serif" font-size="12.5" text-anchor="middle">Built once, verified with dry-run &amp; schema checks</text>
-  <line x1="430" y1="118" x2="165" y2="152" stroke="#38bdf8" stroke-width="1.8"/>
-  <polygon points="160,150 170,150 165,158" fill="#38bdf8"/>
-  <rect x="40" y="158" width="250" height="76" rx="10" fill="#000000" stroke="#38bdf8" stroke-width="2"/>
-  <text x="165" y="188" fill="#38bdf8" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Email Triage</text>
-  <text x="165" y="211" fill="#f8fafc" font-family="sans-serif" font-size="12" text-anchor="middle">Auto-label + draft replies</text>
-  <line x1="165" y1="234" x2="430" y2="274" stroke="#38bdf8" stroke-width="1.8"/>
-  <line x1="430" y1="118" x2="430" y2="152" stroke="#34d399" stroke-width="1.8"/>
-  <polygon points="425,150 435,150 430,158" fill="#34d399"/>
-  <rect x="305" y="158" width="250" height="76" rx="10" fill="#000000" stroke="#34d399" stroke-width="2"/>
-  <text x="430" y="188" fill="#34d399" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Note Filing</text>
-  <text x="430" y="211" fill="#f8fafc" font-family="sans-serif" font-size="12" text-anchor="middle">Auto-tag &amp; organize inbox</text>
-  <line x1="430" y1="234" x2="430" y2="274" stroke="#34d399" stroke-width="1.8"/>
-  <line x1="430" y1="118" x2="695" y2="152" stroke="#c084fc" stroke-width="1.8"/>
-  <polygon points="690,150 700,150 695,158" fill="#c084fc"/>
-  <rect x="570" y="158" width="250" height="76" rx="10" fill="#000000" stroke="#c084fc" stroke-width="2"/>
-  <text x="695" y="188" fill="#c084fc" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Content Pipeline</text>
-  <text x="695" y="211" fill="#f8fafc" font-family="sans-serif" font-size="12" text-anchor="middle">Repurpose 1 post into 3 formats</text>
-  <line x1="695" y1="234" x2="430" y2="274" stroke="#c084fc" stroke-width="1.8"/>
-  <polygon points="424,272 436,272 430,280" fill="#f472b6"/>
-  <rect x="170" y="280" width="520" height="64" rx="10" fill="#000000" stroke="#f472b6" stroke-width="2"/>
-  <text x="430" y="307" fill="#f472b6" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Hours Saved Every Week in the Background</text>
-  <text x="430" y="329" fill="#f8fafc" font-family="sans-serif" font-size="12.5" text-anchor="middle">Clean logs, zero duplicate actions, full human control</text>
-</svg>
+  <section class="content-card" id="automate-boring-admin-safely" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Automating Repetitive Personal Admin Without Fragile Hacks</h2>
+<p>Every solo professional loses hours each week to tiny, repetitive admin chores: triaging newsletters and receipts in an inbox, renaming downloaded invoices, sorting meeting notes into the right project folder, and reformatting drafts for publishing. None of these tasks requires deep creativity, yet doing them by hand fragments your focus all day long.</p>
+<p>The problem with most DIY automations is fragility. People wire up a giant twelve-step cloud zap with zero error handling, and three weeks later it silently fails or sends duplicate emails to a client. Reliable personal automation follows the exact opposite philosophy: small, readable local scripts and lightweight webhooks built with strict validation checks, dry-run modes, and idempotent logic so re-running a job never creates duplicates.</p>
+<p>In 1-on-1 training, we pick your three most annoying weekly admin chores and build rock-solid background automations that run quietly, log cleanly, and alert you immediately if an input ever looks unexpected.</p>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:1.5rem;margin:1.75rem 0;">
+  <p style="font-size:0.85rem;color:#fbbf24;font-weight:600;margin-top:0;margin-bottom:1rem;letter-spacing:0.04em;text-transform:uppercase;">Reliable Personal Workflow Automation Pipeline</p>
+  <div class="mermaid">
+flowchart TD
+    TR[Trigger: Schedule, File Drop, or Webhook] --> VAL[Validate Payload and Required Fields]
+    VAL --> OK{Input Valid?}
+    OK -- No --> AL[Log Error and Send Short Alert]
+    OK -- Yes --> IDEM{Already Processed ID?}
+    IDEM -- Yes --> SKIP[Skip Safely - Zero Duplicates]
+    IDEM -- No --> ACT[Execute Task: Triage, Organize, or Stage Draft]
+    ACT --> REC[Record Processed ID and Exit Status]
+
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    classDef rose fill:#000000,stroke:#f472b6,stroke-width:2px,color:#f8fafc
+
+    class TR,VAL gold
+    class OK,AL rose
+    class IDEM,SKIP cyan
+    class ACT,REC emerald
+  </div>
+</div>
   </section>
 
-  <section class="content-card" id="tutorial-note-organizer" style="background:#000000;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.5rem;margin-bottom:0.9rem;">Hands-On Guide: Safe Local Inbox Organizer With Dry-Run Mode</h2>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">This clean Python script sorts incoming Markdown notes into topic folders using a dry-run preview first so files are never misplaced.</p>
-    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;">
-  <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:#000000;border-bottom:1px solid rgba(56,189,248,0.35);">
-    <span style="font-family:monospace;font-size:0.8rem;color:#38bdf8;">organize_notes.py</span>
-    <button class="copy-btn" type="button" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+  <section class="content-card" id="picking-the-right-tool-for-each-job" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Local Scripts vs. Visual Webhooks: Picking the Right Tool</h2>
+<p>Not every personal automation needs a paid cloud platform. Anything that touches local files - renaming PDFs, organizing Markdown notes, backing up folders, or building static site drafts - belongs in a clean fifty-line Python script triggered by cron or a local file watcher. Local scripts are free, fast, version-controlled in git, and easy to debug.</p>
+<p>Visual webhook tools like <a class="gold-link" href="#references">n8n</a> or <a class="gold-link" href="#references">GitHub Actions</a> shine when connecting two cloud services, such as capturing a web form submission, labeling incoming emails, or posting a scheduled summary. Knowing when to use a local script versus a lightweight webhook keeps your personal stack simple and affordable.</p>
+  </section>
+
+  <section class="content-card" id="idempotency-and-dry-runs" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Idempotency, Dry-Run Mode, and Validation Checks</h2>
+<p>Three small engineering habits separate dependable automations from stressful ones. First, always build a <code>--dry-run</code> flag into every script so you can preview exactly which files will move or which drafts will be created before anything changes on disk. Second, make every workflow idempotent by saving a tiny list of processed message IDs or file hashes; if a cron job runs twice, it simply skips already-handled items.</p>
+<p>Third, validate inputs before acting. If an incoming webhook is missing an email field or a scraped page returns empty text, fail loudly into a clean log file rather than pushing broken garbage into your notes or publishing queue. Following standard <a class="gold-link" href="#references">Python logging practices</a> makes troubleshooting any hiccup take thirty seconds.</p>
+  </section>
+
+  <section class="content-card" id="publishing-and-triage-pipelines" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Email Triage, Note Filing, and Content Publishing Pipelines</h2>
+<p>Three personal pipelines deliver the fastest return on time. An email triage helper scans incoming newsletters and receipts once a day, files receipts into a monthly folder, and bundles newsletters into one clean afternoon digest. A note organizer watches your inbox folder, reads YAML frontmatter, and moves finished notes into the matching project directory automatically. A content publishing check runs spelling, link, and metadata validation via <a class="gold-link" href="#references">systemd timers</a> or <a class="gold-link" href="#references">Cron</a> before staging your finished post.</p>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:1.5rem;margin:1.75rem 0;">
+  <p style="font-size:0.85rem;color:#fbbf24;font-weight:600;margin-top:0;margin-bottom:1rem;letter-spacing:0.04em;text-transform:uppercase;">Staging and Human-Approval Gate for Publishing</p>
+  <div class="mermaid">
+graph TD
+    DR[Draft Markdown Article] --> V1[Check Frontmatter and Broken Links]
+    V1 --> V2[Check Word Count and Formatting Rules]
+    V2 --> STG[Copy to Ready-to-Publish Staging Folder]
+    STG --> HUM{Human Final Approval}
+    HUM -- Approve --> PUB[Deploy Cleanly]
+    HUM -- Edit --> DR
+
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    classDef purple fill:#000000,stroke:#c084fc,stroke-width:2px,color:#f8fafc
+
+    class DR gold
+    class V1,V2 cyan
+    class STG,HUM purple
+    class PUB emerald
   </div>
-  <pre style="margin:0;padding:1.25rem;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;color:#e2e8f0;font-family:monospace;font-size:0.85rem;line-height:1.6;"><code>from pathlib import Path
+</div>
+  </section>
+
+  <section class="content-card" id="idempotent-note-sorter" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Hands-On Code: Idempotent Inbox Note Sorter with Dry-Run</h2>
+<p>This clean Python script sorts Markdown notes from your inbox into topic folders based on a simple header tag, supports <code>--dry-run</code> previews, and never overwrites an existing file.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan,#38bdf8);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:rgba(15,23,42,0.85);border-bottom:1px solid rgba(56,189,248,0.22);">
+    <span style="font-family:var(--font-mono,monospace);font-size:0.82rem;color:#fbbf24;">sort_inbox.py <span style="color:#38bdf8;margin-left:0.5rem;">[Python]</span></span>
+    <button class="copy-btn" type="button" style="background:#000000;color:#fbbf24;border:1px solid rgba(251,191,36,0.45);border-radius:6px;padding:0.25rem 0.65rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+  </div>
+  <pre style="margin:0;padding:1.15rem 1.25rem;overflow-x:auto;background:#040711;color:#e2e8f0;font-family:var(--font-mono,monospace);font-size:0.86rem;line-height:1.6;"><code>import argparse
 import shutil
+from pathlib import Path
 
-ROUTES = {
-    &quot;invoice&quot;: &quot;finance&quot;,
-    &quot;receipt&quot;: &quot;finance&quot;,
-    &quot;meeting&quot;: &quot;meetings&quot;,
-    &quot;idea&quot;: &quot;ideas&quot;,
-}
-
-def organize_inbox(inbox_dir: str, vault_dir: str, dry_run: bool = True) -&gt; None:
-    inbox = Path(inbox_dir)
-    vault = Path(vault_dir)
-    for item in inbox.glob(&quot;*.md&quot;):
-        lower_name = item.name.lower()
-        target_folder = &quot;general&quot;
-        for keyword, folder in ROUTES.items():
-            if keyword in lower_name:
-                target_folder = folder
+def sort_notes(inbox_dir: str, dest_root: str, dry_run: bool = True):
+    for md in sorted(Path(inbox_dir).glob("*.md")):
+        text = md.read_text(encoding="utf-8", errors="ignore")
+        folder = "general"
+        for line in text.splitlines()[:12]:
+            if line.startswith("category:"):
+                folder = line.split(":", 1)[1].strip().lower()
                 break
-        dest = vault / target_folder / item.name
+        target_dir = Path(dest_root) / folder
+        target_file = target_dir / md.name
+        if target_file.exists():
+            print(f"SKIP (exists): {target_file}")
+            continue
         if dry_run:
-            print(f&quot;[DRY RUN] Would move {item.name} -&gt; {dest}&quot;)
+            print(f"DRY-RUN move: {md.name} -&gt; {target_file}")
         else:
-            dest.parent.mkdir(parents=True, exist_ok=True)
-            shutil.move(str(item), str(dest))
-            print(f&quot;[MOVED] {item.name} -&gt; {dest}&quot;)</code></pre>
-</div>
-  </section>
-  <section class="content-card" id="tutorial-triage-prompt" style="background:#000000;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-bottom:0.9rem;">Practical Template: Safe Email Triage JSON Prompt</h2>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">Pair this prompt with your email automation to classify incoming messages into clean JSON and draft a reply without ever auto-sending.</p>
-    <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.35);border-left:3px solid #fbbf24;border-radius:10px;margin:1.5rem 0;overflow:hidden;">
-  <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:#000000;border-bottom:1px solid rgba(251,191,36,0.35);">
-    <span style="font-family:monospace;font-size:0.8rem;color:#fbbf24;">email_triage_prompt.txt</span>
-    <button class="copy-btn" type="button" style="background:rgba(251,191,36,0.15);color:#fbbf24;border:1px solid rgba(251,191,36,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
-  </div>
-  <pre style="margin:0;padding:1.25rem;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;color:#e2e8f0;font-family:monospace;font-size:0.85rem;line-height:1.6;"><code>ROLE: Personal Inbox Triage Assistant.
-INPUT: Email sender, subject, and short body text.
+            target_dir.mkdir(parents=True, exist_ok=True)
+            shutil.move(str(md), str(target_file))
+            print(f"MOVED: {md.name} -&gt; {target_file}")
 
-RETURN ONLY VALID JSON:
-{
-  &quot;category&quot;: &quot;urgent_client | newsletter | receipt | personal | ignore&quot;,
-  &quot;summary&quot;: &quot;1 plain sentence explaining what the sender wants&quot;,
-  &quot;needs_reply&quot;: true,
-  &quot;draft_reply&quot;: &quot;Short, polite 3-sentence draft if needs_reply is true, else empty string&quot;
-}
-
-RULE: Never promise dates, prices, or commitments in draft_reply.</code></pre>
-</div>
-  </section>
-  <section class="content-card" id="tutorial-automation-checklist" style="background:#000000;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.5rem;margin-bottom:0.9rem;">Step-by-Step Safe Automation Checklist</h2>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">Check these five items before turning on any personal background script or webhook.</p>
-    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;">
-  <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:#000000;border-bottom:1px solid rgba(56,189,248,0.35);">
-    <span style="font-family:monospace;font-size:0.8rem;color:#38bdf8;">safe_automation_checklist.txt</span>
-    <button class="copy-btn" type="button" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
-  </div>
-  <pre style="margin:0;padding:1.25rem;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;color:#e2e8f0;font-family:monospace;font-size:0.85rem;line-height:1.6;"><code>1. Test the full flow in --dry-run mode on sample data first.
-2. Validate inputs and outputs so missing fields stop cleanly with a clear log line.
-3. Make every write step safe to re-run (skip items already processed).
-4. Keep external communication (emails, posts) in Draft mode until you trust the flow.
-5. Keep a simple local log file you can glance at once a week.</code></pre>
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--apply", action="store_true")
+    args = parser.parse_args()
+    sort_notes("01-inbox", "03-notes", dry_run=not args.apply)</code></pre>
 </div>
   </section>
 
-<section class="content-card" id="pricing-guarantees" style="background:#000000;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:2rem;margin-bottom:2.5rem;">
-  <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.55rem;margin-bottom:1rem;">Transparent Pricing and Global Parity Index</h2>
-  <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">
-    Every personal training engagement uses clear, fair pricing adjusted for where you live and work through our six-tier, 195-country Purchasing Power Parity (PPP) index. You pay <strong>$0 upfront</strong> with zero deposit, settle in <strong>five equal milestone installments of 20%</strong> only after completed blocks of work, and keep a <strong>Walkaway Guarantee</strong> after the first milestone if you are not satisfied. See your exact country tier on the <a class="gold-link" href="../pricing.html">full Pricing and Parity page</a>.
-  </p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin:1.25rem 0;">
-    <div style="background:#000000;border:1px solid rgba(56,189,248,0.35);border-radius:10px;padding:1.25rem;">
-      <h3 style="color:var(--cyan,#38bdf8);font-size:1.1rem;margin-bottom:0.5rem;">Personal Individual Service (Workflow Automations)</h3>
-      <p style="color:#ffffff;font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;">$100 / $75 / $50 / $50 / $25 / Custom USD</p>
-      <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;margin:0;">
-        Tier 1 through Tier 6 parity rates for <strong>strictly one person only</strong>. Includes 5 days live 1-on-1 training (4 hours per day, Monday to Friday; Saturdays and Sundays are holidays) plus 5 days of dedicated support at <strong>$0 extra charge</strong>, delivered 100% remote worldwide.
-      </p>
-    </div>
-    <div style="background:#000000;border:1px solid rgba(251,191,36,0.35);border-radius:10px;padding:1.25rem;">
-      <h3 style="color:var(--gold,#fbbf24);font-size:1.1rem;margin-bottom:0.5rem;">Personal AI Training Flagship (Full 60-Day Track)</h3>
-      <p style="color:#ffffff;font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;">$1,000 / $750 / $500 / $500 / $250 / Custom USD</p>
-      <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;margin:0;">
-        Tier 1 through Tier 6 parity rates for <strong>strictly one person only</strong>. Includes 30 days of live 1-on-1 engineering training plus 30 days of dedicated support at <strong>$0 extra charge</strong>. All training guides, templates, and custom code are yours under the <strong>Apache 2.0 license</strong>.
-      </p>
-    </div>
+  <section class="content-card" id="webhook-validation-yaml" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Practical Configuration: Safe Webhook Automation Spec</h2>
+<p>Document every personal webhook or scheduled job in a tiny YAML manifest so you always remember what triggers it, what it validates, and where its logs live.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan,#38bdf8);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:rgba(15,23,42,0.85);border-bottom:1px solid rgba(56,189,248,0.22);">
+    <span style="font-family:var(--font-mono,monospace);font-size:0.82rem;color:#fbbf24;">automations-manifest.yaml <span style="color:#38bdf8;margin-left:0.5rem;">[YAML]</span></span>
+    <button class="copy-btn" type="button" style="background:#000000;color:#fbbf24;border:1px solid rgba(251,191,36,0.45);border-radius:6px;padding:0.25rem 0.65rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
   </div>
-</section>
+  <pre style="margin:0;padding:1.15rem 1.25rem;overflow-x:auto;background:#040711;color:#e2e8f0;font-family:var(--font-mono,monospace);font-size:0.86rem;line-height:1.6;"><code>automations:
+  - name: "daily-receipt-filer"
+    trigger: "cron 0 19 * * *"
+    script: "scripts/file_receipts.py --apply"
+    idempotency_store: "state/processed_receipts.json"
+    log_file: "logs/receipt_filer.log"
+    alert_on_nonzero_exit: true
+  - name: "inbox-note-sorter"
+    trigger: "cron 30 18 * * 1-5"
+    script: "scripts/sort_inbox.py --apply"
+    dry_run_command: "scripts/sort_inbox.py"
+    log_file: "logs/note_sorter.log"</code></pre>
+</div>
+<p>When your routine admin runs quietly in the background with dry-run previews, idempotent checks, and clear logs, you reclaim hours of calm focus every single week.</p>
+  </section>
 
-  <section class="content-card" id="references" style="background:#000000;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:2rem;margin-bottom:2.5rem;">
-    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.45rem;margin-bottom:1rem;">Helpful References and Official Guides</h2>
+  <section class="content-card" id="failure-modes-and-solo-routine" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Common Automation Pitfalls and Weekly Health-Check Routine</h2>
+    <p>Background automations fail silently when you build them without observability. A classic example is a scheduled script whose API token expires or whose target folder gets renamed: it quietly exits with an error for three weeks while you assume your receipts and notes are being filed. Always write a timestamped summary line to a single local log file and trigger a short alert whenever a job exits with a non-zero status code.</p>
+    <p>Equally important is resisting the urge to automate messy, one-off tasks. Automate only the clear, repeatable chores you have already done manually at least five times so you know every edge case. Spend five minutes every Monday glancing at your automation log file, confirming all scheduled runs succeeded, and keeping your scripts small, readable, and easy to update as your personal workflows evolve.</p>
+    <p>Once your first three background automations have run cleanly for two weeks without a single manual fix, you can safely expand to one new routine per month. Keeping every script version-controlled in git with a short README explaining its trigger, inputs, and dry-run command ensures that even a year from now you can inspect, modify, or migrate your personal automations in minutes without ever fighting mystery configuration.</p>
+  </section>
+
+  <section class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.5rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.45rem;margin-top:0;margin-bottom:1rem;">Helpful References and Official Guides</h2>
     <ul style="color:var(--text-secondary);line-height:1.85;padding-left:1.25rem;margin:0;">
-      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://docs.n8n.io/" rel="noopener" target="_blank">n8n Documentation</a> - Self-hostable visual workflow automation for webhooks, email, and AI steps.</li>
-      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://docs.pydantic.dev/latest/" rel="noopener" target="_blank">Pydantic Validation Documentation</a> - Simple, strict schema checking for Python automation scripts.</li>
-      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://docs.python.org/3/library/pathlib.html" rel="noopener" target="_blank">Python pathlib Library</a> - Clean, cross-platform local file and folder automation.</li>
-      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://docs.github.com/en/actions" rel="noopener" target="_blank">GitHub Actions Documentation</a> - Lightweight scheduled and webhook-triggered workflows for solo builders.</li>
-      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://developers.google.com/gmail/api/guides" rel="noopener" target="_blank">Gmail API Developer Guides</a> - Official reference for safe email labeling and draft creation.</li>
-      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://cron.help/" rel="noopener" target="_blank">Cron Schedule Expression Reference</a> - Quick reference for scheduling clean local background tasks.</li>
+      <li style="margin-bottom:0.6rem;"><a class="gold-link" href="https://docs.n8n.io/" rel="noopener" target="_blank">n8n Official Documentation</a> - Self-hostable visual workflow and webhook automation platform.</li>
+      <li style="margin-bottom:0.6rem;"><a class="gold-link" href="https://docs.python.org/3/howto/logging.html" rel="noopener" target="_blank">Python Logging HOWTO</a> - Clean logging patterns for reliable background automation scripts.</li>
+      <li style="margin-bottom:0.6rem;"><a class="gold-link" href="https://docs.github.com/en/actions" rel="noopener" target="_blank">GitHub Actions Documentation</a> - Free scheduled and event-driven automation for personal repositories and publishing.</li>
+      <li style="margin-bottom:0.6rem;"><a class="gold-link" href="https://wiki.archlinux.org/title/Systemd/Timers" rel="noopener" target="_blank">Systemd Timers Reference (ArchWiki)</a> - Reliable modern Linux scheduling with built-in logging and catch-up runs.</li>
+      <li style="margin-bottom:0.6rem;"><a class="gold-link" href="https://crontab.guru/" rel="noopener" target="_blank">Cron Expression Guide</a> - Quick reference for writing clean recurring personal schedules.</li>
     </ul>
   </section>
 
-  <div class="service-cta-buttons" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-    <a class="btn btn-commission btn-lg" href="../contact.html">Commission Workflow Automations →</a>
-    <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
-  </div>
+  <section class="cta-banner content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:16px;padding:2.25rem;margin-top:2rem;text-align:center;">
+    <h2 style="font-family:var(--font-display);color:#ffffff;font-size:1.55rem;margin-top:0;margin-bottom:0.75rem;">Ready to Build Your Personal Workflow Automations System?</h2>
+    <p style="color:var(--text-secondary);max-width:680px;margin:0 auto 1.5rem auto;line-height:1.75;">
+      Work 1-on-1 to design, configure, and verify this workflow directly on your own machine. Review full engagement details or book a free discovery conversation today.
+    </p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a class="btn btn-commission btn-lg" href="../pricing.html">View Pricing &amp; Parity →</a>
+      <a class="btn btn-primary btn-lg" href="../contact.html">Book 1-on-1 Training →</a>
+      <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+    </div>
+  </section>
 </div>
 
 <script>
@@ -544,7 +513,7 @@ document.querySelectorAll('.copy-btn').forEach(function(btn) {
 });
 </script>
 </main>
-    <!-- START:FOOTER -->
+  <!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
@@ -835,5 +804,9 @@ document.querySelectorAll('.copy-btn').forEach(function(btn) {
   </footer>
     <!-- END:FOOTER -->
 <script src="../components.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+</script>
 </body>
 </html>

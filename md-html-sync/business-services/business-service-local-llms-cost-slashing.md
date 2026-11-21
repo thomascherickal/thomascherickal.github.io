@@ -1,7 +1,7 @@
 # Local LLMs & Cost Slashing
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// BUSINESS SERVICE - OPEN-WEIGHTS INFERENCE & SAVINGS**  
+> **// BUSINESS SERVICE - LOCAL LLMS & COST SLASHING**  
 > **Business transformation, verification, and implementation.**
 
 ---

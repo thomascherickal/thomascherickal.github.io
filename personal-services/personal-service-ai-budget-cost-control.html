@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>AI Budget & Cost Control | Thomas Cherickal</title>
-<meta content="Stop overpaying for overlapping AI subscriptions and inefficient API usage with practical model routing, prompt caching, token-budget monitoring, and local fallbacks." name="description"/>
+<meta content="Stop overpaying for overlapping AI subscriptions and inefficient API usage with practical model routing, prompt caching, token monitoring, and local fallbacks." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
 <!-- Canonical URL -->
 <link href="https://thedigitalfuturist.com/personal-services/personal-service-ai-budget-cost-control.html" rel="canonical"/>
@@ -13,10 +12,10 @@
 <meta content="website" property="og:type"/>
 <meta content="https://thedigitalfuturist.com/personal-services/personal-service-ai-budget-cost-control.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
-<meta content="AI Budget &amp; Cost Control | Thomas Cherickal" property="og:title"/>
-<meta content="Stop overpaying for overlapping AI subscriptions and inefficient API usage with practical model routing, prompt caching, token-budget monitoring, and local fallbacks." property="og:description"/>
-<meta content="AI Budget &amp; Cost Control | Thomas Cherickal" name="twitter:title"/>
-<meta content="Stop overpaying for overlapping AI subscriptions and inefficient API usage with practical model routing, prompt caching, token-budget monitoring, and local fallbacks." name="twitter:description"/>
+<meta content="AI Budget & Cost Control - Thomas Cherickal" property="og:title"/>
+<meta content="Stop overpaying for overlapping AI subscriptions and inefficient API usage with practical model routing, prompt caching, token monitoring, and local fallbacks." property="og:description"/>
+<meta content="AI Budget & Cost Control - Thomas Cherickal" name="twitter:title"/>
+<meta content="Stop overpaying for overlapping AI subscriptions and inefficient API usage with practical model routing, prompt caching, token monitoring, and local fallbacks." name="twitter:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Favicon & Icons -->
@@ -36,8 +35,8 @@
       "@type": "WebPage",
       "@id": "https://thedigitalfuturist.com/personal-services/personal-service-ai-budget-cost-control.html#webpage",
       "url": "https://thedigitalfuturist.com/personal-services/personal-service-ai-budget-cost-control.html",
-      "name": "AI Budget & Cost Control - Service Specification | Thomas Cherickal",
-      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Stop overpaying for overlapping AI subscriptions and inefficient API usage. Learn practical model routing, prompt caching, token-budget monitoring, and free or low-cost local fallbacks tailored to solo developers, researchers, and indie founders seeking maximum capability at minimal monthly spend.",
+      "name": "AI Budget & Cost Control - Personal Service | Thomas Cherickal",
+      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Stop overpaying for overlapping AI subscriptions and inefficient API usage with practical model routing, prompt caching, token monitoring, and local fallbacks.",
       "isPartOf": {
         "@id": "https://thedigitalfuturist.com/#website"
       },
@@ -76,7 +75,7 @@
       "name": "AI Budget & Cost Control - Thomas Cherickal",
       "serviceType": "Personal AI Budget & Cost Control Training",
       "url": "https://thedigitalfuturist.com/personal-services/personal-service-ai-budget-cost-control.html",
-      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Stop overpaying for overlapping AI subscriptions and inefficient API usage. Learn practical model routing, prompt caching, token-budget monitoring, and free or low-cost local fallbacks tailored to solo developers, researchers, and indie founders seeking maximum capability at minimal monthly spend.",
+      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Stop overpaying for overlapping AI subscriptions and inefficient API usage with practical model routing, prompt caching, token monitoring, and local fallbacks.",
       "provider": {
         "@type": "Person",
         "@id": "https://thedigitalfuturist.com/#person",
@@ -90,10 +89,10 @@
       },
       "availableLanguage": "English",
       "serviceOutput": [
-        "Subscription Audit: Identifying overlapping monthly AI plans and keeping only the tools you truly use.",
-        "Practical Model Routing: Sending simple tasks to small or free local models and saving top models for hard reasoning.",
-        "Prompt Caching and Context Hygiene: Cutting repeated input token waste on long documents and coding sessions.",
-        "Token-Budget Monitoring and Fallbacks: Setting daily spend caps, alerts, and local Ollama fallbacks so bills never surprise you."
+        "Personal Subscription Audit: Clear inventory of active AI tools with immediate consolidation opportunities.",
+        "Three-Tier Model Router: Simple rules routing easy, medium, and hard tasks to the right cost tier.",
+        "Prompt Caching Setup: Structuring system prompts and reference files so repeated reads cost a fraction.",
+        "Token Budget Monitor: Lightweight local script that tracks daily spend and alerts before limits are hit."
       ]
     }
   ]
@@ -103,13 +102,14 @@
 <link href="../css/styles.css" rel="stylesheet"/>
 <link href="../css/background.css" rel="stylesheet"/>
 <link href="../css/buttons.css" rel="stylesheet"/>
-<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
 <link href="../css/navbar.css" rel="stylesheet"/>
 <link href="../css/footer.css" rel="stylesheet"/>
 <link href="../css/cta.css" rel="stylesheet"/>
 <link href="../css/article.css" rel="stylesheet"/>
 <link href="../css/service.css" rel="stylesheet"/>
 <link href="../css/personal-services.css" rel="stylesheet"/>
+<link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
+<link href="../css/responsive.css" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -291,236 +291,211 @@
 <a aria-label="Back to top" class="back-top" href="#" id="backTop" title="Back to top">↑</a>
 <main id="main">
 <div class="container" style="max-width:1040px;margin:0 auto;padding:2.5rem 1.25rem;">
-  <div class="hero content-card" style="background:#000000;border:1px solid rgba(251,191,36,0.3);border-radius:16px;padding:2.5rem;margin-bottom:2rem;">
-    <p class="section-label" style="color:var(--cyan,#38bdf8);letter-spacing:0.1em;font-size:0.8rem;text-transform:uppercase;margin-bottom:0.5rem;">// PERSONAL SERVICE SPECIFICATION - PERSONAL AI SPEND OPTIMIZATION</p>
+  <div class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:16px;padding:2.5rem;margin-bottom:2rem;">
+    <p class="section-label" style="color:var(--cyan,#38bdf8);letter-spacing:0.1em;font-size:0.8rem;text-transform:uppercase;margin-bottom:0.5rem;">// PERSONAL SERVICE - PERSONAL SPEND OPTIMIZATION</p>
     <h1>AI Budget & Cost Control</h1>
     <div class="title-tags" aria-label="Article topics"><span class="title-tag">AI Cost Control</span><span class="title-tag">Model Routing</span><span class="title-tag">Prompt Caching</span><span class="title-tag">Token Budgets</span><span class="title-tag">Local Fallbacks</span></div>
-    <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.8;max-width:840px;margin-top:1.1rem;margin-bottom:1.5rem;">
+    <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.8;max-width:860px;margin-top:1.1rem;margin-bottom:1.5rem;">
       Stop overpaying for overlapping AI subscriptions and inefficient API usage. Learn practical model routing, prompt caching, token-budget monitoring, and free or low-cost local fallbacks tailored to solo developers, researchers, and indie founders seeking maximum capability at minimal monthly spend.
     </p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1.75rem;">
-      <div style="background:#000000;border:1px solid rgba(56,189,248,0.32);border-radius:12px;padding:1.25rem;">
-        <div style="font-size:0.75rem;color:var(--cyan,#38bdf8);text-transform:uppercase;letter-spacing:0.08em;">Training Format</div>
-        <div style="font-size:1.35rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">1-on-1 Live</div>
-        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">5 days live + 5 days support (1 person only)</div>
+      <div style="background:#000000;border:1px solid rgba(56,189,248,0.45);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:#38bdf8;text-transform:uppercase;letter-spacing:0.08em;">Subscription Audit</div>
+        <div style="font-size:1.25rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Zero Waste</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Eliminate overlapping monthly chat plans</div>
       </div>
-      <div style="background:#000000;border:1px solid rgba(52,211,153,0.32);border-radius:12px;padding:1.25rem;">
-        <div style="font-size:0.75rem;color:#34d399;text-transform:uppercase;letter-spacing:0.08em;">Quick Wins</div>
-        <div style="font-size:1.35rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Cancel Overlap</div>
-        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Cut duplicate monthly AI subscriptions</div>
+      <div style="background:#000000;border:1px solid rgba(52,211,153,0.45);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:#34d399;text-transform:uppercase;letter-spacing:0.08em;">Smart Routing</div>
+        <div style="font-size:1.25rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Tiered Models</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Use fast, cheap models for routine tasks</div>
       </div>
-      <div style="background:#000000;border:1px solid rgba(192,132,252,0.32);border-radius:12px;padding:1.25rem;">
-        <div style="font-size:0.75rem;color:#c084fc;text-transform:uppercase;letter-spacing:0.08em;">API Savings</div>
-        <div style="font-size:1.35rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Smart Routing</div>
-        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Send easy tasks to fast, low-cost models</div>
+      <div style="background:#000000;border:1px solid rgba(192,132,252,0.45);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:#c084fc;text-transform:uppercase;letter-spacing:0.08em;">Prompt Caching</div>
+        <div style="font-size:1.25rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Up to 90% Off</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Stop paying repeatedly for static context</div>
       </div>
-      <div style="background:#000000;border:1px solid rgba(251,191,36,0.32);border-radius:12px;padding:1.25rem;">
-        <div style="font-size:0.75rem;color:var(--gold,#fbbf24);text-transform:uppercase;letter-spacing:0.08em;">Safety Net</div>
-        <div style="font-size:1.35rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Hard Caps</div>
-        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Daily token limits and local model fallbacks</div>
+      <div style="background:#000000;border:1px solid rgba(251,191,36,0.45);border-radius:12px;padding:1.25rem;">
+        <div style="font-size:0.75rem;color:#fbbf24;text-transform:uppercase;letter-spacing:0.08em;">Local Fallback</div>
+        <div style="font-size:1.25rem;font-weight:700;color:#ffffff;margin-top:0.25rem;">Zero API Cost</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">Run open models locally for drafts and summaries</div>
       </div>
     </div>
   </div>
 
-  <div class="content-card" id="table-of-contents" style="background:#000000;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:1.75rem 2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.3rem;margin-bottom:1rem;">Table of Contents</h2>
+  <div class="content-card" id="table-of-contents" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:1.75rem 2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.3rem;margin-top:0;margin-bottom:1rem;">Table of Contents</h2>
     <ol style="display:flex;flex-direction:column;gap:0.55rem;padding-left:1.4rem;color:var(--text-secondary);line-height:1.7;margin:0;">
-      <li><a class="gold-link" href="#why-ai-bills-creep-up">Why Solo Builders Overpay for AI Every Month</a></li>
-      <li><a class="gold-link" href="#routing-and-caching">Practical Model Routing and Prompt Caching</a></li>
-      <li><a class="gold-link" href="#budget-monitoring-local-fallbacks">Token-Budget Monitoring and Free Local Fallbacks</a></li>
-      <li><a class="gold-link" href="#tutorial-cost-router">Hands-On Guide: Lightweight Token Budget and Model Router</a></li>
-      <li><a class="gold-link" href="#tutorial-concise-prompt">Practical Template: Token-Saving Output Rules</a></li>
-      <li><a class="gold-link" href="#tutorial-audit-checklist">Step-by-Step Monthly AI Cost Audit</a></li>
-      <li><a class="gold-link" href="#pricing-guarantees">Transparent Pricing and Global Parity Index</a></li>
+      <li><a class="gold-link" href="#hidden-cost-of-ai-sprawl">The Hidden Cost of Personal AI Subscription Sprawl</a></li>
+      <li><a class="gold-link" href="#model-routing-habits">Practical Model Routing for Everyday Tasks</a></li>
+      <li><a class="gold-link" href="#prompt-caching-and-context">Prompt Caching and Lean Context Hygiene</a></li>
+      <li><a class="gold-link" href="#monitoring-and-local-fallbacks">Token Budget Monitoring and Zero-Cost Local Fallbacks</a></li>
+      <li><a class="gold-link" href="#budget-router-code">Hands-On Code: Simple Cost-Aware Model Router</a></li>
+      <li><a class="gold-link" href="#monthly-audit-checklist">Practical Configuration: Monthly AI Spend Audit Template</a></li>
+      <li><a class="gold-link" href="#failure-modes-and-solo-routine">Common Spend Traps and Weekly Cost-Control Routine</a></li>
       <li><a class="gold-link" href="#references">Helpful References and Official Guides</a></li>
     </ol>
   </div>
 
-  <section class="content-card" id="why-ai-bills-creep-up" style="background:#000000;border:1px solid rgba(251,191,36,0.22);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.55rem;margin-bottom:1rem;">Why Solo Builders Overpay for AI Every Month</h2>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">It is surprisingly easy to end up paying for four or five monthly AI subscriptions at the same time - plus an API bill that spikes whenever a coding session runs long. Most of that cost comes from two simple habits: using the most expensive model for basic chores, and re-sending the exact same long context over and over.</p>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">In these 1-on-1 sessions, we audit what you actually use each week and build a lean personal setup that gives you top-tier results at a fraction of the monthly cost.</p>
-    <ul style="color:var(--text-secondary);line-height:1.8;padding-left:1.4rem;margin-bottom:1.25rem;">
-      <li style="margin-bottom:0.5rem;"><strong>Audit Subscriptions First:</strong> Map every monthly AI charge to the exact task it solves and cancel overlapping plans.</li>
-      <li style="margin-bottom:0.5rem;"><strong>Match Model to Task:</strong> Use a lightweight model for drafts, summaries, and formatting, and save flagship reasoning models for tough problems.</li>
-      <li style="margin-bottom:0.5rem;"><strong>Keep Context Lean:</strong> Start fresh threads when switching topics instead of dragging 50,000 old tokens into every new question.</li>
-    </ul>
-  </section>
-  <section class="content-card" id="routing-and-caching" style="background:#000000;border:1px solid rgba(251,191,36,0.22);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.55rem;margin-bottom:1rem;">Practical Model Routing and Prompt Caching</h2>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">Model routing sounds technical, but the idea is simple: before sending a request, check how hard the task is. Quick text cleanup, classification, or summarizing a short article can go to a fast low-cost tier or a free local model running on your laptop.</p>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">When you do work with large files or system instructions, turning on <a class="gold-link" href="#references">Anthropic prompt caching</a> or <a class="gold-link" href="#references">Google Gemini context caching</a> lets the provider reuse your unchanged prefix at a steep discount instead of charging full price on every turn.</p>
-<svg viewBox="0 0 860 590" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SMART PERSONAL AI COST ROUTING PIPELINE" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(251,191,36,0.35);background:#000000;margin:1.5rem 0;display:block;">
-  <rect width="860" height="590" fill="#000000"/>
-  <text x="430" y="38" fill="#fbbf24" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">SMART PERSONAL AI COST ROUTING PIPELINE</text>
-  <rect x="90" y="66" width="680" height="66" rx="10" fill="#000000" stroke="#fbbf24" stroke-width="2"/>
-  <text x="430" y="93" fill="#fbbf24" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">1. Incoming Task Request</text>
-  <text x="430" y="115" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Drafting, coding, summarizing, or deep analysis</text>
-  <line x1="430" y1="132" x2="430" y2="160" stroke="#fbbf24" stroke-width="2"/>
-  <polygon points="424,158 436,158 430,166" fill="#fbbf24"/>
-  <rect x="90" y="166" width="680" height="66" rx="10" fill="#000000" stroke="#38bdf8" stroke-width="2"/>
-  <text x="430" y="193" fill="#38bdf8" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">2. Simple Task Classifier</text>
-  <text x="430" y="215" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Check task difficulty and sensitivity locally</text>
-  <line x1="430" y1="232" x2="430" y2="260" stroke="#fbbf24" stroke-width="2"/>
-  <polygon points="424,258 436,258 430,266" fill="#fbbf24"/>
-  <rect x="90" y="266" width="680" height="66" rx="10" fill="#000000" stroke="#34d399" stroke-width="2"/>
-  <text x="430" y="293" fill="#34d399" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">3. Route to Right Tier</text>
-  <text x="430" y="315" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Free local Ollama -&gt; Low-cost API -&gt; Frontier model</text>
-  <line x1="430" y1="332" x2="430" y2="360" stroke="#fbbf24" stroke-width="2"/>
-  <polygon points="424,358 436,358 430,366" fill="#fbbf24"/>
-  <rect x="90" y="366" width="680" height="66" rx="10" fill="#000000" stroke="#c084fc" stroke-width="2"/>
-  <text x="430" y="393" fill="#c084fc" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">4. Apply Prompt Caching</text>
-  <text x="430" y="415" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Reuse repeated instructions and reference files</text>
-  <line x1="430" y1="432" x2="430" y2="460" stroke="#fbbf24" stroke-width="2"/>
-  <polygon points="424,458 436,458 430,466" fill="#fbbf24"/>
-  <rect x="90" y="466" width="680" height="66" rx="10" fill="#000000" stroke="#f472b6" stroke-width="2"/>
-  <text x="430" y="493" fill="#f472b6" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">5. Token Budget Meter</text>
-  <text x="430" y="515" fill="#f8fafc" font-family="sans-serif" font-size="13" text-anchor="middle">Log cost locally and stop if daily cap is reached</text>
-  <text x="430" y="572" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">Maximum capability where it counts, near-zero spend on routine work</text>
-</svg>
-  </section>
-  <section class="content-card" id="budget-monitoring-local-fallbacks" style="background:#000000;border:1px solid rgba(251,191,36,0.22);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.55rem;margin-bottom:1rem;">Token-Budget Monitoring and Free Local Fallbacks</h2>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">Never rely on a monthly credit card statement to learn you overspent. We set up provider-side spend limits plus a simple local script that tracks your daily token usage across projects and warns you before you cross your comfort line.</p>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.1rem;">When you hit your daily cloud budget - or when you are working offline on a plane - your tools automatically fall back to a free local model served by <a class="gold-link" href="#references">Ollama</a>, keeping your workflow uninterrupted at $0 per token.</p>
-<svg viewBox="0 0 860 370" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="THREE-LAYER PERSONAL COST PROTECTION" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(56,189,248,0.35);background:#000000;margin:1.5rem 0;display:block;">
-  <rect width="860" height="370" fill="#000000"/>
-  <text x="430" y="36" fill="#fbbf24" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">THREE-LAYER PERSONAL COST PROTECTION</text>
-  <rect x="210" y="56" width="440" height="62" rx="10" fill="#000000" stroke="#fbbf24" stroke-width="2"/>
-  <text x="430" y="82" fill="#fbbf24" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Your Daily AI Workflows</text>
-  <text x="430" y="103" fill="#f8fafc" font-family="sans-serif" font-size="12.5" text-anchor="middle">IDE coding, writing, research, and scripts</text>
-  <line x1="430" y1="118" x2="165" y2="152" stroke="#34d399" stroke-width="1.8"/>
-  <polygon points="160,150 170,150 165,158" fill="#34d399"/>
-  <rect x="40" y="158" width="250" height="76" rx="10" fill="#000000" stroke="#34d399" stroke-width="2"/>
-  <text x="165" y="188" fill="#34d399" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Tier A: Free Local</text>
-  <text x="165" y="211" fill="#f8fafc" font-family="sans-serif" font-size="12" text-anchor="middle">Ollama on your laptop ($0/token)</text>
-  <line x1="165" y1="234" x2="430" y2="274" stroke="#34d399" stroke-width="1.8"/>
-  <line x1="430" y1="118" x2="430" y2="152" stroke="#38bdf8" stroke-width="1.8"/>
-  <polygon points="425,150 435,150 430,158" fill="#38bdf8"/>
-  <rect x="305" y="158" width="250" height="76" rx="10" fill="#000000" stroke="#38bdf8" stroke-width="2"/>
-  <text x="430" y="188" fill="#38bdf8" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Tier B: Fast Cloud</text>
-  <text x="430" y="211" fill="#f8fafc" font-family="sans-serif" font-size="12" text-anchor="middle">Low-cost API + prompt caching</text>
-  <line x1="430" y1="234" x2="430" y2="274" stroke="#38bdf8" stroke-width="1.8"/>
-  <line x1="430" y1="118" x2="695" y2="152" stroke="#c084fc" stroke-width="1.8"/>
-  <polygon points="690,150 700,150 695,158" fill="#c084fc"/>
-  <rect x="570" y="158" width="250" height="76" rx="10" fill="#000000" stroke="#c084fc" stroke-width="2"/>
-  <text x="695" y="188" fill="#c084fc" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Tier C: Deep Reasoning</text>
-  <text x="695" y="211" fill="#f8fafc" font-family="sans-serif" font-size="12" text-anchor="middle">Reserved for hard design tasks</text>
-  <line x1="695" y1="234" x2="430" y2="274" stroke="#c084fc" stroke-width="1.8"/>
-  <polygon points="424,272 436,272 430,280" fill="#f472b6"/>
-  <rect x="170" y="280" width="520" height="64" rx="10" fill="#000000" stroke="#f472b6" stroke-width="2"/>
-  <text x="430" y="307" fill="#f472b6" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Hard Daily Spend Cap and Clear Cost Log</text>
-  <text x="430" y="329" fill="#f8fafc" font-family="sans-serif" font-size="12.5" text-anchor="middle">Zero surprise invoices at the end of the month</text>
-</svg>
-  </section>
+  <section class="content-card" id="hidden-cost-of-ai-sprawl" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">The Hidden Cost of Personal AI Subscription Sprawl</h2>
+<p>It is remarkably easy for a solo developer, writer, or researcher to drift into paying for four or five overlapping AI subscriptions every month: one chat plan for writing, another for coding, an IDE plugin, a transcription app, and pay-as-you-go API bills on top. Most of those plans sit half-used while your API bill spikes unexpectedly whenever a script sends a giant file inside a loop.</p>
+<p>Controlling your personal AI budget does not mean giving up capability. In fact, disciplined engineers usually get faster, higher-quality results after cutting their monthly spend in half. The reason is simple: when you replace scattered subscriptions with a clean API-first setup, smart model routing, prompt caching, and a local fallback model, you only pay for frontier reasoning on the small fraction of tasks that truly need it.</p>
+<p>In 1-on-1 sessions, we audit every AI tool you currently pay for, map your actual weekly workload into clear complexity tiers, and build a simple local routing and budget-tracking setup that keeps your monthly spend predictable and low.</p>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:1.5rem;margin:1.75rem 0;">
+  <p style="font-size:0.85rem;color:#fbbf24;font-weight:600;margin-top:0;margin-bottom:1rem;letter-spacing:0.04em;text-transform:uppercase;">Three-Tier Personal AI Cost Routing Pipeline</p>
+  <div class="mermaid">
+flowchart TD
+    IN[Incoming Personal Task] --> CL[Classify Task Complexity]
+    CL -- Routine: Summarize or Format --> L1[Tier 1: Local Model via Ollama - Zero API Cost]
+    CL -- Standard: Code Edit or Draft --> L2[Tier 2: Fast Cloud Model + Prompt Cache]
+    CL -- Complex: Architecture or Hard Bug --> L3[Tier 3: Frontier Reasoning Model]
+    L1 --> LOG[Log Tokens and Spend to Local CSV]
+    L2 --> LOG
+    L3 --> LOG
+    LOG --> CAP{Daily Budget Exceeded?}
+    CAP -- Yes --> ALERT[Switch Default to Tier 1 Local Model]
+    CAP -- No --> OK[Continue Normal Routing]
 
-  <section class="content-card" id="tutorial-cost-router" style="background:#000000;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.5rem;margin-bottom:0.9rem;">Hands-On Guide: Lightweight Token Budget and Model Router</h2>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">Drop this small Python helper into your personal scripts to route easy tasks to a local model and enforce a hard daily dollar cap.</p>
-    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;">
-  <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:#000000;border-bottom:1px solid rgba(56,189,248,0.35);">
-    <span style="font-family:monospace;font-size:0.8rem;color:#38bdf8;">budget_router.py</span>
-    <button class="copy-btn" type="button" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    classDef purple fill:#000000,stroke:#c084fc,stroke-width:2px,color:#f8fafc
+    classDef rose fill:#000000,stroke:#f472b6,stroke-width:2px,color:#f8fafc
+
+    class IN,CL gold
+    class L1 emerald
+    class L2 cyan
+    class L3 purple
+    class LOG gold
+    class CAP,ALERT rose
+    class OK emerald
   </div>
-  <pre style="margin:0;padding:1.25rem;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;color:#e2e8f0;font-family:monospace;font-size:0.85rem;line-height:1.6;"><code>import json
-from pathlib import Path
-from datetime import date
+</div>
+  </section>
 
-LOG_FILE = Path(&quot;daily_ai_spend.json&quot;)
+  <section class="content-card" id="model-routing-habits" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Practical Model Routing for Everyday Tasks</h2>
+<p>Roughly seventy percent of daily AI work does not require a top-tier reasoning model. Cleaning up meeting notes, extracting JSON fields from a document, generating commit messages, or summarizing an article can be handled just as cleanly by a fast lightweight model or a local open-weights model running on your laptop. Reserving frontier models strictly for difficult debugging, system design, and nuanced writing immediately cuts API costs by sixty to eighty percent.</p>
+<p>The key is making routing effortless. If switching models requires editing five config files, you will stay lazy and leave the most expensive model turned on all day. Instead, we set up short shell aliases and a tiny router function: <code>ask-local</code> for private drafts and summaries, <code>ask-fast</code> for quick coding helpers, and <code>ask-deep</code> for hard architectural problems. Good defaults do the heavy lifting automatically.</p>
+  </section>
+
+  <section class="content-card" id="prompt-caching-and-context" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Prompt Caching and Lean Context Hygiene</h2>
+<p>Even when you use an affordable cloud model, sloppy context management can quietly multiply your bill. Sending a 30,000-token codebase dump on every single follow-up message means you are paying to re-read the same unchanged text over and over again. Modern APIs solve this through <a class="gold-link" href="#references">Anthropic prompt caching</a> and <a class="gold-link" href="#references">Google Gemini context caching</a>, which let you mark static instructions and reference documents so repeated reads cost a small fraction of the standard input rate.</p>
+<p>To get the most out of caching, always place stable content at the very top of your prompt: your system rules first, your static reference files second, and the changing user question last. Combine caching with lean context hygiene - start a fresh session when switching topics, trim noisy terminal logs before pasting them, and summarize long threads every ten turns. These two habits together routinely cut token consumption in half without any loss in answer quality.</p>
+  </section>
+
+  <section class="content-card" id="monitoring-and-local-fallbacks" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Token Budget Monitoring and Zero-Cost Local Fallbacks</h2>
+<p>You cannot control what you do not measure. Every major provider dashboard lets you set hard monthly spend caps and email alerts, and you should enable those on day one. On top of provider caps, a twenty-line local logger records the exact input tokens, output tokens, and estimated cost of every script you run. Reviewing that log once a week takes two minutes and immediately exposes runaway loops or bloated prompts.</p>
+<p>Finally, installing <a class="gold-link" href="#references">Ollama for local models</a> gives you a permanent zero-cost safety net. When you are experimenting with bulk text classification, testing a new prompt template fifty times, or working offline on a flight, routing to a local model costs literally nothing per token. You can also consult <a class="gold-link" href="#references">OpenRouter model pricing</a> or official provider rate cards to compare cost-to-quality ratios whenever you tune your routing table.</p>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:1.5rem;margin:1.75rem 0;">
+  <p style="font-size:0.85rem;color:#fbbf24;font-weight:600;margin-top:0;margin-bottom:1rem;letter-spacing:0.04em;text-transform:uppercase;">Prompt Structure Optimized for Cache Hits</p>
+  <div class="mermaid">
+graph TD
+    P1[Block 1: Stable System Rules - Cached] --> P2[Block 2: Project Docs and Examples - Cached]
+    P2 --> P3[Block 3: Current Task and Diff - Uncached]
+    P3 --> M[Model Inference]
+    M --> R[Concise Structured Output]
+
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+
+    class P1,P2 emerald
+    class P3 gold
+    class M,R cyan
+  </div>
+</div>
+  </section>
+
+  <section class="content-card" id="budget-router-code" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Hands-On Code: Simple Cost-Aware Model Router</h2>
+<p>This compact Python router picks the cheapest model tier that fits the task and refuses to call a paid cloud endpoint if your daily spend cap has been reached, falling back cleanly to your local model instead.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan,#38bdf8);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:rgba(15,23,42,0.85);border-bottom:1px solid rgba(56,189,248,0.22);">
+    <span style="font-family:var(--font-mono,monospace);font-size:0.82rem;color:#fbbf24;">cost_router.py <span style="color:#38bdf8;margin-left:0.5rem;">[Python]</span></span>
+    <button class="copy-btn" type="button" style="background:#000000;color:#fbbf24;border:1px solid rgba(251,191,36,0.45);border-radius:6px;padding:0.25rem 0.65rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
+  </div>
+  <pre style="margin:0;padding:1.15rem 1.25rem;overflow-x:auto;background:#040711;color:#e2e8f0;font-family:var(--font-mono,monospace);font-size:0.86rem;line-height:1.6;"><code>import json
+from pathlib import Path
+
+LEDGER = Path("daily_spend.json")
 
 def get_today_spend() -&gt; float:
-    if not LOG_FILE.exists():
+    if not LEDGER.exists():
         return 0.0
-    data = json.loads(LOG_FILE.read_text())
-    return float(data.get(date.today().isoformat(), 0.0))
+    return float(json.loads(LEDGER.read_text()).get("usd", 0.0))
 
-def record_spend(amount_usd: float) -&gt; float:
-    data = json.loads(LOG_FILE.read_text()) if LOG_FILE.exists() else {}
-    today = date.today().isoformat()
-    data[today] = round(float(data.get(today, 0.0)) + amount_usd, 6)
-    LOG_FILE.write_text(json.dumps(data, indent=2))
-    return data[today]
-
-def choose_model(task_level: str, daily_cap_usd: float = 2.00) -&gt; str:
+def choose_model(task_type: str, daily_cap_usd: float = 2.00) -&gt; dict:
     if get_today_spend() &gt;= daily_cap_usd:
-        return &quot;ollama/local-fallback&quot;
-    if task_level == &quot;simple&quot;:
-        return &quot;ollama/local-fast&quot;
-    if task_level == &quot;standard&quot;:
-        return &quot;cloud/fast-tier&quot;
-    return &quot;cloud/reasoning-tier&quot;</code></pre>
-</div>
-  </section>
-  <section class="content-card" id="tutorial-concise-prompt" style="background:#000000;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-bottom:0.9rem;">Practical Template: Token-Saving Output Rules</h2>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">Output tokens usually cost 3x to 5x more than input tokens. Adding these four lines to your personal prompts trims fluff and speeds up every answer.</p>
-    <div class="code-window" style="background:#040711;border:1px solid rgba(251,191,36,0.35);border-left:3px solid #fbbf24;border-radius:10px;margin:1.5rem 0;overflow:hidden;">
-  <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:#000000;border-bottom:1px solid rgba(251,191,36,0.35);">
-    <span style="font-family:monospace;font-size:0.8rem;color:#fbbf24;">concise_output_prompt.txt</span>
-    <button class="copy-btn" type="button" style="background:rgba(251,191,36,0.15);color:#fbbf24;border:1px solid rgba(251,191,36,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
-  </div>
-  <pre style="margin:0;padding:1.25rem;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;color:#e2e8f0;font-family:monospace;font-size:0.85rem;line-height:1.6;"><code>STYLE RULES FOR COST CONTROL:
-1. Answer directly with no filler intro or closing summary.
-2. Keep explanations under 150 words unless I explicitly ask for deep detail.
-3. For code changes, show only the changed function instead of repeating the whole file.
-4. Use short bullet points for lists and comparisons.</code></pre>
-</div>
-  </section>
-  <section class="content-card" id="tutorial-audit-checklist" style="background:#000000;border:1px solid rgba(56,189,248,0.25);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
-    <h2 style="font-family:var(--font-display);color:var(--cyan,#38bdf8);font-size:1.5rem;margin-bottom:0.9rem;">Step-by-Step Monthly AI Cost Audit</h2>
-    <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">Run this 15-minute audit once a month to keep your personal AI budget lean and intentional.</p>
-    <div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.35);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;">
-  <div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:#000000;border-bottom:1px solid rgba(56,189,248,0.35);">
-    <span style="font-family:monospace;font-size:0.8rem;color:#38bdf8;">monthly_cost_audit.txt</span>
-    <button class="copy-btn" type="button" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.35);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
-  </div>
-  <pre style="margin:0;padding:1.25rem;white-space:pre-wrap;word-break:break-word;overflow-x:hidden;color:#e2e8f0;font-family:monospace;font-size:0.85rem;line-height:1.6;"><code>1. List every recurring AI subscription and check how many days you used it last month.
-2. Cancel any overlapping chat subscription you can replace with pay-as-you-go API usage.
-3. Set hard monthly billing limits inside each API provider dashboard.
-4. Move routine summarizing, drafting, and formatting to a free local Ollama model.
-5. Turn on prompt caching for any script that reuses long system prompts or docs.</code></pre>
+        return {"provider": "ollama", "model": "qwen2.5-coder:7b", "reason": "daily_cap_reached"}
+
+    routing_table = {
+        "summarize": {"provider": "ollama", "model": "llama3.2:3b"},
+        "format": {"provider": "ollama", "model": "llama3.2:3b"},
+        "code_edit": {"provider": "cloud_fast", "model": "fast-tier-model"},
+        "architecture": {"provider": "cloud_deep", "model": "reasoning-tier-model"},
+    }
+    choice = routing_table.get(task_type, {"provider": "ollama", "model": "llama3.2:3b"})
+    return {**choice, "reason": "routed_by_task_type"}</code></pre>
 </div>
   </section>
 
-<section class="content-card" id="pricing-guarantees" style="background:#000000;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:2rem;margin-bottom:2.5rem;">
-  <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.55rem;margin-bottom:1rem;">Transparent Pricing and Global Parity Index</h2>
-  <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1rem;">
-    Every personal training engagement uses clear, fair pricing adjusted for where you live and work through our six-tier, 195-country Purchasing Power Parity (PPP) index. You pay <strong>$0 upfront</strong> with zero deposit, settle in <strong>five equal milestone installments of 20%</strong> only after completed blocks of work, and keep a <strong>Walkaway Guarantee</strong> after the first milestone if you are not satisfied. See your exact country tier on the <a class="gold-link" href="../pricing.html">full Pricing and Parity page</a>.
-  </p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin:1.25rem 0;">
-    <div style="background:#000000;border:1px solid rgba(56,189,248,0.35);border-radius:10px;padding:1.25rem;">
-      <h3 style="color:var(--cyan,#38bdf8);font-size:1.1rem;margin-bottom:0.5rem;">Personal Individual Service (AI Budget &amp; Cost Control)</h3>
-      <p style="color:#ffffff;font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;">$100 / $75 / $50 / $50 / $25 / Custom USD</p>
-      <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;margin:0;">
-        Tier 1 through Tier 6 parity rates for <strong>strictly one person only</strong>. Includes 5 days live 1-on-1 training (4 hours per day, Monday to Friday; Saturdays and Sundays are holidays) plus 5 days of dedicated support at <strong>$0 extra charge</strong>, delivered 100% remote worldwide.
-      </p>
-    </div>
-    <div style="background:#000000;border:1px solid rgba(251,191,36,0.35);border-radius:10px;padding:1.25rem;">
-      <h3 style="color:var(--gold,#fbbf24);font-size:1.1rem;margin-bottom:0.5rem;">Personal AI Training Flagship (Full 60-Day Track)</h3>
-      <p style="color:#ffffff;font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;">$1,000 / $750 / $500 / $500 / $250 / Custom USD</p>
-      <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;margin:0;">
-        Tier 1 through Tier 6 parity rates for <strong>strictly one person only</strong>. Includes 30 days of live 1-on-1 engineering training plus 30 days of dedicated support at <strong>$0 extra charge</strong>. All training guides, templates, and custom code are yours under the <strong>Apache 2.0 license</strong>.
-      </p>
-    </div>
+  <section class="content-card" id="monthly-audit-checklist" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Practical Configuration: Monthly AI Spend Audit Template</h2>
+<p>Keep a tiny YAML ledger in your personal notes folder and review it on the first day of every month. Cancel any subscription you used fewer than five times in the past thirty days.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan,#38bdf8);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;background:rgba(15,23,42,0.85);border-bottom:1px solid rgba(56,189,248,0.22);">
+    <span style="font-family:var(--font-mono,monospace);font-size:0.82rem;color:#fbbf24;">ai-budget-audit.yaml <span style="color:#38bdf8;margin-left:0.5rem;">[YAML]</span></span>
+    <button class="copy-btn" type="button" style="background:#000000;color:#fbbf24;border:1px solid rgba(251,191,36,0.45);border-radius:6px;padding:0.25rem 0.65rem;font-size:0.75rem;cursor:pointer;text-decoration:none !important;">Copy</button>
   </div>
-</section>
+  <pre style="margin:0;padding:1.15rem 1.25rem;overflow-x:auto;background:#040711;color:#e2e8f0;font-family:var(--font-mono,monospace);font-size:0.86rem;line-height:1.6;"><code>monthly_budget_target_usd: 40
+subscriptions:
+  - name: "Primary Coding Assistant"
+    monthly_usd: 20
+    weekly_uses: 35
+    decision: "keep"
+  - name: "Secondary Chat App"
+    monthly_usd: 20
+    weekly_uses: 2
+    decision: "cancel_and_use_api"
+api_caps:
+  daily_alert_usd: 2.00
+  monthly_hard_cap_usd: 20.00
+  local_fallback_enabled: true</code></pre>
+</div>
+<p>With one monthly audit, a three-tier router, and prompt caching turned on, you get frontier-grade AI power whenever it matters while keeping your personal monthly bill lean, calm, and completely under your control.</p>
+  </section>
 
-  <section class="content-card" id="references" style="background:#000000;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:2rem;margin-bottom:2.5rem;">
-    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.45rem;margin-bottom:1rem;">Helpful References and Official Guides</h2>
+  <section class="content-card" id="failure-modes-and-solo-routine" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.25rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Common Spend Traps and Weekly Cost-Control Routine</h2>
+    <p>Three silent spend traps catch almost every solo builder. The first trap is forgetting to close long, rambling chat threads: by message thirty, every tiny follow-up question re-sends tens of thousands of old tokens at full input rates. Starting a fresh session whenever you switch sub-tasks eliminates that waste immediately. The second trap is running uncached batch scripts over dozens of files with a frontier model when a fast lightweight model or local Ollama instance would produce the exact same structured output for a tenth of the price.</p>
+    <p>The third trap is keeping overlapping monthly plans "just in case." Build a simple five-minute Friday routine: open your local spend ledger, check which model tier handled the most calls, and verify that your provider hard caps are still active. If a subscription went unused for two weeks, cancel it and switch to pay-as-you-go API calls backed by your local fallback. In 1-on-1 sessions, we wire these exact guardrails into your daily workflow so your AI capability goes up while your monthly bill drops sharply.</p>
+  </section>
+
+  <section class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:2rem;margin-bottom:2.5rem;">
+    <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.45rem;margin-top:0;margin-bottom:1rem;">Helpful References and Official Guides</h2>
     <ul style="color:var(--text-secondary);line-height:1.85;padding-left:1.25rem;margin:0;">
-      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching" rel="noopener" target="_blank">Anthropic Prompt Caching Guide</a> - Official guide to caching repeated prompts and cutting input token costs.</li>
-      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/caching" rel="noopener" target="_blank">Google Gemini Context Caching</a> - How to cache large documents and media across repeated requests.</li>
-      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://ollama.com/" rel="noopener" target="_blank">Ollama Local Models</a> - Run fast open-weight models locally at zero API cost.</li>
-      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://docs.litellm.ai/docs/proxy/cost_tracking" rel="noopener" target="_blank">LiteLLM Cost Tracking</a> - Open-source router for tracking token spend and enforcing budgets across providers.</li>
-      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://openai.com/api/pricing/" rel="noopener" target="_blank">OpenAI API Pricing Reference</a> - Compare input, cached input, and output token rates across tiers.</li>
-      <li style="margin-bottom:0.55rem;"><a class="gold-link" href="https://docs.anthropic.com/en/docs/about-claude/pricing" rel="noopener" target="_blank">Anthropic Pricing Reference</a> - Official token pricing and prompt caching discount documentation.</li>
+      <li style="margin-bottom:0.6rem;"><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching" rel="noopener" target="_blank">Anthropic Docs: Prompt Caching</a> - Official guide to caching static system prompts and reference context.</li>
+      <li style="margin-bottom:0.6rem;"><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/caching" rel="noopener" target="_blank">Google AI for Developers: Context Caching</a> - How to cache large documents and repeated context in the Gemini API.</li>
+      <li style="margin-bottom:0.6rem;"><a class="gold-link" href="https://ollama.com/" rel="noopener" target="_blank">Ollama Official Documentation</a> - Run fast open-weights models locally at zero API cost.</li>
+      <li style="margin-bottom:0.6rem;"><a class="gold-link" href="https://openrouter.ai/models" rel="noopener" target="_blank">OpenRouter Model Directory</a> - Side-by-side comparison of token costs and context windows across models.</li>
+      <li style="margin-bottom:0.6rem;"><a class="gold-link" href="https://docs.litellm.ai/docs/" rel="noopener" target="_blank">LiteLLM Proxy & Budget Tracking</a> - Open-source router for unified model switching and spend limits.</li>
     </ul>
   </section>
 
-  <div class="service-cta-buttons" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-    <a class="btn btn-commission btn-lg" href="../contact.html">Commission AI Budget &amp; Cost Control →</a>
-    <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
-  </div>
+  <section class="cta-banner content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:16px;padding:2.25rem;margin-top:2rem;text-align:center;">
+    <h2 style="font-family:var(--font-display);color:#ffffff;font-size:1.55rem;margin-top:0;margin-bottom:0.75rem;">Ready to Build Your Personal AI Budget & Cost Control System?</h2>
+    <p style="color:var(--text-secondary);max-width:680px;margin:0 auto 1.5rem auto;line-height:1.75;">
+      Work 1-on-1 to design, configure, and verify this workflow directly on your own machine. Review full engagement details or book a free discovery conversation today.
+    </p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a class="btn btn-commission btn-lg" href="../pricing.html">View Pricing &amp; Parity →</a>
+      <a class="btn btn-primary btn-lg" href="../contact.html">Book 1-on-1 Training →</a>
+      <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
+    </div>
+  </section>
 </div>
 
 <script>
@@ -536,7 +511,7 @@ document.querySelectorAll('.copy-btn').forEach(function(btn) {
 });
 </script>
 </main>
-    <!-- START:FOOTER -->
+  <!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
@@ -827,5 +802,9 @@ document.querySelectorAll('.copy-btn').forEach(function(btn) {
   </footer>
     <!-- END:FOOTER -->
 <script src="../components.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+</script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 # Agentic Assistants Training
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// BUSINESS SERVICE - ENTERPRISE AGENTIC ASSISTANTS**  
+> **// BUSINESS SERVICE - AGENTIC ASSISTANTS**  
 > **Business transformation, verification, and implementation.**
 
 ---

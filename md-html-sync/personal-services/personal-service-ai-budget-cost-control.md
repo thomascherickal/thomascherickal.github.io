@@ -1,7 +1,7 @@
 # AI Budget & Cost Control
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// PERSONAL SERVICE SPECIFICATION - PERSONAL AI SPEND OPTIMIZATION**  
+> **// PERSONAL SERVICE - PERSONAL SPEND OPTIMIZATION**  
 > **Business transformation, verification, and implementation.**
 
 ---

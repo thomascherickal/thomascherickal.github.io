@@ -1,7 +1,7 @@
 # Claude Agent Orchestration
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// BUSINESS SERVICE - CLAUDE MULTI-AGENT SYSTEMS**  
+> **// BUSINESS SERVICE - CLAUDE AGENT ORCHESTRATION**  
 > **Business transformation, verification, and implementation.**
 
 ---

@@ -1,7 +1,7 @@
 # Claude Research Training
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// BUSINESS SERVICE - SCIENTIFIC & R&D RESEARCH WITH CLAUDE**  
+> **// BUSINESS SERVICE - CLAUDE RESEARCH TRAINING**  
 > **Business transformation, verification, and implementation.**
 
 ---

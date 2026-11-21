@@ -4,22 +4,22 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Claude Plugins Architecture & Production Ecosystems | Thomas Cherickal</title>
-<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Package skills, MCP servers, slash commands, rules, and hooks into versioned, distributable Claude plugins with clean manifest structure, namespacing, team distribution, and security reviews." name="description"/>
+<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Package skills, MCP servers, slash commands, rules, and hooks into versioned, distributable Claude plugins with clean manifests, namespacing, and security reviews." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
 <link href="https://thedigitalfuturist.com/claude-training/claude-plugins.html" rel="canonical"/>
 <!-- Open Graph -->
 <meta content="article" property="og:type"/>
 <meta content="https://thedigitalfuturist.com/claude-training/claude-plugins.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
-<meta content="Claude Plugins Architecture &amp;amp; Production Ecosystems | Thomas Cherickal" property="og:title"/>
-<meta content="Package skills, MCP servers, slash commands, rules, and hooks into versioned, distributable Claude plugins with clean manifest structure, namespacing, team distribution, and security reviews." property="og:description"/>
+<meta content="Claude Plugins Architecture &amp; Production Ecosystems | Thomas Cherickal" property="og:title"/>
+<meta content="Package skills, MCP servers, slash commands, rules, and hooks into versioned, distributable Claude plugins with clean manifests, namespacing, and security reviews." property="og:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@thomazcherickal" name="twitter:site"/>
-<meta content="Claude Plugins Architecture &amp;amp; Production Ecosystems | Thomas Cherickal" name="twitter:title"/>
-<meta content="Package skills, MCP servers, slash commands, rules, and hooks into versioned, distributable Claude plugins with clean manifest structure, namespacing, team distribution, and security reviews." name="twitter:description"/>
+<meta content="Claude Plugins Architecture &amp; Production Ecosystems | Thomas Cherickal" name="twitter:title"/>
+<meta content="Package skills, MCP servers, slash commands, rules, and hooks into versioned, distributable Claude plugins with clean manifests, namespacing, and security reviews." name="twitter:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
 <!-- Favicons -->
 <link href="../assets/favicon.ico" rel="icon" sizes="any"/>
@@ -44,13 +44,13 @@
         "url": "https://thedigitalfuturist.com/claude-training/claude-plugins.html",
         "name": "Claude Plugins Architecture &amp; Production Ecosystems | Thomas Cherickal"
       },
-      "headline": "Claude Plugins Architecture &amp; Production Ecosystems",
-      "description": "Package skills, MCP servers, slash commands, rules, and hooks into versioned, distributable Claude plugins with clean manifest structure, namespacing, team distribution, and security reviews.",
+      "headline": "Claude Plugins Architecture & Production Ecosystems",
+      "description": "Package skills, MCP servers, slash commands, rules, and hooks into versioned, distributable Claude plugins with clean manifests, namespacing, and security reviews.",
       "image": [
         "https://thedigitalfuturist.com/assets/og-card.png"
       ],
       "datePublished": "2026-10-22T00:00:00+05:30",
-      "dateModified": "2026-11-20T12:00:00+05:30",
+      "dateModified": "2026-11-21T12:00:00+05:30",
       "inLanguage": "en-US",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -85,10 +85,10 @@
       "articleSection": "Business AI Plugins",
       "keywords": [
         "Claude Plugins",
-        "Plugin Architecture",
-        "Manifest Structure",
+        "Plugin Manifest",
         "Namespacing",
-        "Team AI Distribution"
+        "Team Distribution",
+        "Security Review"
       ]
     },
     {
@@ -130,8 +130,7 @@
 <link href="../css/responsive.css" rel="stylesheet"/>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-  <!-- START:HEADER -->
+<!-- START:HEADER -->
   <nav aria-label="Main navigation">
     <a href="../index.html" class="nav-brand"><img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo"
         class="nav-brand-logo" width="20" height="20">Thomas Cherickal</a>
@@ -308,111 +307,192 @@
   <!-- END:HEADER -->
 
 <main id="main">
-<header class="hero content-card" style="background:#000000;">
-<p class="hero-badge">// ARCHITECTURE &amp; EXTENSIBILITY GUIDE</p>
+<header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">CLAUDE PLUGINS</div>
 <h1>Claude Plugins Architecture & Production Ecosystems</h1>
-<div class="title-tags" aria-label="Article topics"><span class="title-tag">Claude Plugins</span><span class="title-tag">Plugin Manifests</span><span class="title-tag">Team Distribution</span><span class="title-tag">Security Reviews</span></div>
-<p class="hero-desc">Learn how to package skills, MCP servers, slash commands, rules, and hooks into versioned, distributable Claude plugins. Covers clean manifest structure, namespacing conventions, team distribution, and practical security review practices for scaling reusable AI workflows across your organization.</p>
-<p class="hero-byline">By <strong>Thomas Cherickal</strong> · Generative AI Consultant &amp; The Digital Futurist · October 2026</p>
+<div class="title-tags" aria-label="Article topics"><span class="title-tag">Claude Plugins</span><span class="title-tag">Plugin Manifest</span><span class="title-tag">Namespacing</span><span class="title-tag">Team Distribution</span><span class="title-tag">Security Review</span></div>
+<p class="hero-desc">Package skills, MCP servers, slash commands, rules, and hooks into versioned, distributable Claude plugins. Learn manifest structure, namespacing conventions, team distribution, and security review practices for scaling reusable AI capabilities across organizations.</p>
+<p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body">
-<div aria-label="Table of contents" class="content-card toc-card" style="background:#000000;">
-<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">When one developer builds a great slash command, hook, or MCP setup, it helps one person. Packaging those pieces into a versioned Claude Plugin turns that individual shortcut into an installable, toggleable capability pack that an entire engineering or business team can adopt in one command.</p>
+<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Copying loose prompt files, hook scripts, and MCP configs from one laptop to another works for a single developer, but it breaks down fast across a 20-person engineering team. Claude Plugins solve distribution by bundling skills, MCP servers, slash commands, rules, and lifecycle hooks into a single versioned package that installs, updates, and disables cleanly as one unit.</p>
 <div class="rule"></div>
 <h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
 <ol class="toc-list">
-<li><a class="gold-link" href="#why-plugins-matter">Why Teams Package Workflows into Plugins</a></li>
-<li><a class="gold-link" href="#inside-a-plugin">What Lives Inside a Claude Plugin Bundle</a></li>
-<li><a class="gold-link" href="#manifest-and-namespacing">Manifest Structure and Clean Namespacing</a></li>
-<li><a class="gold-link" href="#team-distribution">Distributing and Versioning Plugins Across Teams</a></li>
-<li><a class="gold-link" href="#security-review">Security Review Practices Before Org-Wide Rollout</a></li>
+<li><a class="gold-link" href="#anatomy-of-a-claude-plugin">Anatomy of a Versioned Claude Plugin</a></li>
+<li><a class="gold-link" href="#manifest-and-namespacing">Manifest Structure and Namespacing Conventions</a></li>
+<li><a class="gold-link" href="#team-distribution-and-security-review">Team Distribution and Security Review Practices</a></li>
+<li><a class="gold-link" href="#scaling-plugin-ecosystems">Scaling Reusable AI Capabilities Across Organizations</a></li>
+<li><a class="gold-link" href="#step-by-step-plugin-authoring">Step-by-Step: Packaging Your First Team Plugin</a></li>
+<li><a class="gold-link" href="#plugin-lifecycle-and-upgrades">Managing Plugin Upgrades, Rollbacks, and Deprecations</a></li>
+<li><a class="gold-link" href="#plugin-adoption-playbook">Building an Internal Plugin Ecosystem That Engineers Actually Use</a></li>
+<li><a class="gold-link" href="#plugins-faq">Frequently Asked Questions on Claude Plugins</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
 </div>
 
-<div class="content-card" style="background:#000000;">
-<h2 id="why-plugins-matter">Why Teams Package Workflows into Plugins</h2>
-<p class="article-p">Loose prompt files and scattered scripts break quickly as teams grow. <a class="gold-link" href="#references">Claude Code Plugins</a> bundle every related piece - instructions, slash commands, hooks, and MCP server configs - into one versioned unit that teammates can install, update, or disable cleanly without editing five separate config files.</p>
-<figure class="article-figure" style="background:#000000;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:1.25rem;margin:1.5rem 0;text-align:center;">
-<svg viewBox="0 0 760 280" width="100%" role="img" aria-label="Claude Plugin Package Structure" xmlns="http://www.w3.org/2000/svg">
-  <rect width="760" height="280" fill="#000000" rx="10"/>
-  <text x="380" y="34" fill="#fbbf24" font-size="18" font-weight="700" text-anchor="middle" font-family="sans-serif">Inside a Versioned Claude Plugin Bundle</text>
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="anatomy-of-a-claude-plugin">Anatomy of a Versioned Claude Plugin</h2>
 
-  <rect x="240" y="54" width="280" height="52" rx="8" fill="#000000" stroke="#fbbf24" stroke-width="2.5"/>
-  <text x="380" y="85" fill="#fbbf24" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">plugin.json (Name, Version, Owner)</text>
+<p class="article-p">A well-structured <a class="gold-link" href="#references">Claude plugin</a> groups related capabilities under a single root folder with a machine-readable manifest. Instead of scattering five unrelated files across hidden config directories, every component lives in a predictable place:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Plugin Manifest (<code>plugin.json</code>):</strong> Declares the plugin's unique name, semantic version, description, author, and component entry points.</li>
+<li><strong>Skills (<code>skills/</code>):</strong> Modular <code>SKILL.md</code> instruction packs and helper scripts loaded on demand.</li>
+<li><strong>Slash Commands (<code>commands/</code>):</strong> Standardized interactive workflows invoked directly by users.</li>
+<li><strong>MCP Servers (<code>mcp/</code>):</strong> Scoped tool and data connectors declared with clear environment variable requirements.</li>
+<li><strong>Rules &amp; Hooks (<code>rules/</code>, <code>hooks/</code>):</strong> Always-on guardrails and deterministic pre/post-tool scripts.</li>
+</ul>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+flowchart TD
+    M["plugin.json Manifest
+(Name, SemVer, Entry Points)"] --> S["skills/
+Modular SKILL.md Packs"]
+    M --> C["commands/
+Namespaced Slash Commands"]
+    M --> T["mcp/
+Scoped Tool Servers"]
+    M --> H["rules/ & hooks/
+Guardrails & Lifecycle Checks"]
+    S --> I["One-Click Install / Enable / Disable"]
+    C --> I
+    T --> I
+    H --> I
 
-  <rect x="35" y="138" width="130" height="96" rx="8" fill="#000000" stroke="#38bdf8" stroke-width="2"/>
-  <text x="100" y="170" fill="#38bdf8" font-size="13" font-weight="700" text-anchor="middle" font-family="sans-serif">Skills</text>
-  <text x="100" y="196" fill="#f8fafc" font-size="11" text-anchor="middle" font-family="sans-serif">SKILL.md packs</text>
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
 
-  <rect x="178" y="138" width="130" height="96" rx="8" fill="#000000" stroke="#34d399" stroke-width="2"/>
-  <text x="243" y="170" fill="#34d399" font-size="13" font-weight="700" text-anchor="middle" font-family="sans-serif">Commands</text>
-  <text x="243" y="196" fill="#f8fafc" font-size="11" text-anchor="middle" font-family="sans-serif">/ns:command</text>
+    class M,I gold
+    class S,C,T cyan
+    class H emerald
+</div><p style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;text-align:center;">A plugin manifest unifies skills, commands, MCP servers, and hooks into one atomic unit.</p></div>
+</section>
 
-  <rect x="321" y="138" width="130" height="96" rx="8" fill="#000000" stroke="#c084fc" stroke-width="2"/>
-  <text x="386" y="170" fill="#c084fc" font-size="13" font-weight="700" text-anchor="middle" font-family="sans-serif">MCP Servers</text>
-  <text x="386" y="196" fill="#f8fafc" font-size="11" text-anchor="middle" font-family="sans-serif">Tools &amp; APIs</text>
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="manifest-and-namespacing">Manifest Structure and Namespacing Conventions</h2>
 
-  <rect x="464" y="138" width="130" height="96" rx="8" fill="#000000" stroke="#f472b6" stroke-width="2"/>
-  <text x="529" y="170" fill="#f472b6" font-size="13" font-weight="700" text-anchor="middle" font-family="sans-serif">Hooks</text>
-  <text x="529" y="196" fill="#f8fafc" font-size="11" text-anchor="middle" font-family="sans-serif">Auto Guardrails</text>
-
-  <rect x="607" y="138" width="120" height="96" rx="8" fill="#000000" stroke="#fbbf24" stroke-width="2"/>
-  <text x="667" y="170" fill="#fbbf24" font-size="13" font-weight="700" text-anchor="middle" font-family="sans-serif">Rules</text>
-  <text x="667" y="196" fill="#f8fafc" font-size="11" text-anchor="middle" font-family="sans-serif">Team Standards</text>
-</svg>
-<figcaption style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;">Five reusable capability layers unified under a single versioned plugin manifest.</figcaption>
-</figure>
-</div>
-
-<div class="content-card" style="background:#000000;">
-<h2 id="inside-a-plugin">What Lives Inside a Claude Plugin Bundle</h2>
-<p class="article-p">A clean plugin folder is easy to read in Git: a manifest directory (<code>.claude-plugin/plugin.json</code>) plus optional folders for <code>skills/</code>, <code>commands/</code>, <code>hooks/</code>, and an <code>.mcp.json</code> server registry. Keep each plugin focused on one clear domain - such as "Finance Close Helpers" or "Frontend QA Suite" - rather than dumping unrelated tools together.</p>
-</div>
-
-<div class="content-card" style="background:#000000;">
-<h2 id="manifest-and-namespacing">Manifest Structure and Clean Namespacing</h2>
-<p class="article-p">Namespacing prevents command collisions when a team installs ten plugins at once. By prefixing slash commands with the plugin name (for example, <code>/acme-qa:audit</code> instead of a generic <code>/audit</code>), every teammate knows which plugin owns the behavior and updates never overwrite another team's shortcuts, following <a class="gold-link" href="#references">Semantic Versioning</a>.</p>
-<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
-<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
-<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">.claude-plugin/plugin.json</span>
-<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
-</div>
-<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>{
-  "name": "acme-release-ops",
-  "version": "1.2.0",
-  "description": "Release checklist, changelog generator, and Jira sync for Acme teams.",
-  "author": {
-    "name": "Acme Platform Team"
+<p class="article-p">When an organization installs ten different plugins - one for databases, one for cloud deployments, one for security reviews - naming collisions become a real risk. Good plugin ecosystems prevent collisions through strict namespacing: prefix slash commands, MCP tool names, and skill identifiers with the plugin's short slug (for example, <code>sec:audit-pr</code> or <code>db:explain-query</code>).</p>
+<p class="article-p">Follow <a class="gold-link" href="#references">Semantic Versioning (SemVer)</a> for every release. Bump the patch version for wording tweaks, the minor version when adding a new backward-compatible skill or tool, and the major version whenever a command signature or required environment variable changes.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Standard Claude Plugin Manifest (plugin.json)</span><span>JSON</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>{
+  &quot;name&quot;: &quot;acme-release-ops&quot;,
+  &quot;version&quot;: &quot;1.2.0&quot;,
+  &quot;description&quot;: &quot;Release checklists, changelog generation, and read-only deployment health checks.&quot;,
+  &quot;author&quot;: &quot;Platform Engineering&quot;,
+  &quot;commands&quot;: [&quot;commands/release-notes.md&quot;, &quot;commands/preflight.md&quot;],
+  &quot;skills&quot;: [&quot;skills/canary-rollback/SKILL.md&quot;],
+  &quot;mcpServers&quot;: {
+    &quot;acme-deploy-status&quot;: {
+      &quot;command&quot;: &quot;python3&quot;,
+      &quot;args&quot;: [&quot;mcp/deploy_status_server.py&quot;]
+    }
   },
-  "keywords": ["release", "changelog", "qa"]
-}</code></pre>
-</div>
-</div>
+  &quot;hooks&quot;: &quot;hooks/hooks.json&quot;
+}</code></pre></div>
+</section>
 
-<div class="content-card" style="background:#000000;">
-<h2 id="team-distribution">Distributing and Versioning Plugins Across Teams</h2>
-<p class="article-p">Host internal plugins in a private Git repository or internal marketplace catalog. Pin plugin versions inside repository settings so every engineer on a project runs the exact same tested version, and publish short release notes whenever a new minor or major version ships.</p>
-</div>
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="team-distribution-and-security-review">Team Distribution and Security Review Practices</h2>
 
-<div class="content-card" style="background:#000000;">
-<h2 id="security-review">Security Review Practices Before Org-Wide Rollout</h2>
-<p class="article-p">Treat every Claude plugin like production software code. Before approving a plugin for company-wide use, require a pull-request review checking four things: no hardcoded secrets in manifests, narrow MCP permissions (read-only unless approved), no unverified remote script downloads inside hooks, and clear owner contact details for incident response.</p>
-</div>
+<p class="article-p">Treat internal and third-party plugins like production software dependencies. Host approved team plugins in a private git repository or internal marketplace catalog, require pull-request review before tagging a new version, and enforce a short security checklist on every update:</p>
+<ol class="article-p" style="padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Inspect All Executable Code:</strong> Review every hook script and MCP server for shell injection, hardcoded credentials, or unexpected outbound network calls.</li>
+<li><strong>Verify Least-Privilege Scopes:</strong> Confirm that declared OAuth scopes and filesystem paths match the plugin's stated purpose and nothing broader.</li>
+<li><strong>Check Prompt &amp; Rule Safety:</strong> Read <code>SKILL.md</code> and rule files to ensure they do not weaken existing security policies or instruct Claude to bypass approvals.</li>
+<li><strong>Pin Versions in Team Workspaces:</strong> Reference exact tagged releases so a surprise upstream edit never breaks developer workstations mid-sprint.</li>
+</ol>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Automated Plugin Security Lint Check</span><span>Python</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>import json
+from pathlib import Path
 
-<div class="content-card" style="background:#000000;">
+def audit_plugin(plugin_dir: str) -&gt; list[str]:
+    root = Path(plugin_dir)
+    issues = []
+    manifest = json.loads((root / &quot;plugin.json&quot;).read_text())
+    if not manifest.get(&quot;version&quot;):
+        issues.append(&quot;Missing semantic version in plugin.json&quot;)
+    for py_file in root.rglob(&quot;*.py&quot;):
+        text = py_file.read_text()
+        if &quot;shell=True&quot; in text:
+            issues.append(f&quot;Unsafe shell=True found in {py_file}&quot;)
+    return issues</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="scaling-plugin-ecosystems">Scaling Reusable AI Capabilities Across Organizations</h2>
+
+<p class="article-p">As your plugin catalog grows, keep each plugin focused on one clear job rather than building a single giant "company-everything" bundle. Small, domain-focused plugins let engineers enable only what they need for their current project, keeping Claude's context window clean and tool selection sharp.</p>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+graph TD
+    A["Author Plugin in Feature Branch"] --> R["Peer Code & Security Review"]
+    R --> T["Tag SemVer Release (v1.2.0)"]
+    T --> C["Publish to Internal Team Catalog"]
+    C --> D["Developers Install / Update Cleanly"]
+    D --> F["Collect Telemetry & Feedback"]
+
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+
+    class A,D gold
+    class R,T,C cyan
+    class F emerald
+</div><p style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;text-align:center;">Treating plugins like versioned software packages enables safe, organization-wide reuse.</p></div>
+</section>
+
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="step-by-step-plugin-authoring">Step-by-Step: Packaging Your First Team Plugin</h2>
+
+<p class="article-p">Turning a handful of loose prompts and scripts into a clean, distributable Claude plugin takes five straightforward steps:</p>
+<ol class="article-p" style="padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Audit Existing Team Workflows:</strong> Gather the 2 or 3 slash commands, rules, and MCP tools your team already relies on every week.</li>
+<li><strong>Create the Standard Folder Layout:</strong> Place a clean <code>plugin.json</code> manifest at the root alongside dedicated <code>skills/</code>, <code>commands/</code>, <code>mcp/</code>, and <code>hooks/</code> directories.</li>
+<li><strong>Apply Consistent Namespacing:</strong> Prefix every command and tool with your plugin slug (such as <code>ops:check-deploy</code>) so it never collides with other installed plugins.</li>
+<li><strong>Write a Clear README and Environment Guide:</strong> Document required environment variables, read-only versus write permissions, and three example prompts so new teammates succeed in two minutes.</li>
+<li><strong>Tag and Distribute:</strong> Run your security lint script, tag <code>v1.0.0</code> in git, and share the pinned release through your internal catalog.</li>
+</ol>
+
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="plugin-lifecycle-and-upgrades">Managing Plugin Upgrades, Rollbacks, and Deprecations</h2>
+
+<p class="article-p">Because plugins are versioned atomically, upgrading or rolling back across a 50-person engineering team is painless. Maintain a concise <code>CHANGELOG.md</code> inside every plugin repository, test new minor releases with a small pilot group before recommending an org-wide bump, and disable deprecated plugins cleanly rather than leaving stale scripts scattered across developer laptops.</p>
+<p class="article-p">This disciplined packaging approach turns individual AI experiments into durable organizational infrastructure that compounds in value every quarter.</p>
+
+</section>
+
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="plugin-adoption-playbook">Building an Internal Plugin Ecosystem That Engineers Actually Use</h2>
+
+<p class="article-p">The best internal plugins solve annoying, everyday problems rather than abstract platform goals. Survey your engineers and analysts to find the three workflows they repeat every week - such as triaging staging alerts, formatting compliance checklists, or reviewing database migrations - and package each one as a small, focused plugin with clear namespaced commands.</p>
+<p class="article-p">Include a crisp two-minute quickstart inside every plugin's <code>readme.md</code> showing exact example prompts and expected outputs. Host a short 15-minute demo when a new version ships, collect feedback in a dedicated team channel, and retire unused plugins quarterly. When plugins stay small, fast, version-pinned, and security-reviewed, they become the backbone of repeatable AI engineering across the entire organization.</p>
+
+</section>
+
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="plugins-faq">Frequently Asked Questions on Claude Plugins</h2>
+<p class="article-p"><strong>When should we bundle a skill into a plugin instead of leaving it loose?</strong> Leave a workflow as a single local skill while you are still experimenting. Once two or more teammates rely on it weekly - or once it combines a skill with an MCP server and hooks - package it into a versioned plugin with a clean manifest.</p>
+<p class="article-p"><strong>How do we prevent plugin sprawl across departments?</strong> Maintain one lightweight internal catalog with clear owner names, last-reviewed dates, and read-only versus write badges. Review installed plugins each quarter and archive anything that no longer sees active use so developer workspaces stay fast and uncluttered.</p>
+
+<p class="article-p"><strong>How should teams handle secrets inside a shared plugin?</strong> Never commit API keys, database passwords, or private tokens into any plugin repository. Declare required environment variable names in the plugin README and let each developer or CI runner inject scoped credentials locally at runtime.</p>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
-<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/plugins" rel="noopener noreferrer" target="_blank">Anthropic Claude Code Plugins Documentation</a> - Official guide to creating, namespacing, and distributing Claude plugins.</li>
-<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/plugin-marketplaces" rel="noopener noreferrer" target="_blank">Claude Code Plugin Marketplaces</a> - How organizations host private plugin catalogs and manage team rollouts.</li>
-<li><a class="gold-link" href="https://semver.org/" rel="noopener noreferrer" target="_blank">Semantic Versioning Specification</a> - Standard MAJOR.MINOR.PATCH numbering for safe plugin upgrades.</li>
-<li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP)</a> - Standard protocol for bundling external tools safely inside plugins.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/overview" rel="noopener noreferrer" target="_blank">Claude Code Plugins &amp; Extensions</a> - Official documentation on extending Claude Code with packaged capabilities.</li>
+<li><a class="gold-link" href="https://semver.org/" rel="noopener noreferrer" target="_blank">Semantic Versioning 2.0.0</a> - Standard versioning rules for predictable plugin upgrades and compatibility.</li>
+<li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP)</a> - Standard server specification bundled inside production Claude plugins.</li>
+<li><a class="gold-link" href="https://csrc.nist.gov/projects/ssdf" rel="noopener noreferrer" target="_blank">NIST Secure Software Development Framework</a> - Security review practices for internal developer tooling and extensions.</li>
 </ol>
-</div>
+</section>
 </article>
 
-<section class="cta-banner">
+<section class="cta-banner" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 style="color:var(--gold);font-size:1.85rem;margin-bottom:0.75rem;">Build Custom Business Plugins &amp; Production Agent Workflows</h2>
 <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">From authoring type-safe MCP connectors and custom Claude Code plugins to setting up business governance and organization marketplaces - let's transform your workforce.</p>
 <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
@@ -423,7 +503,7 @@
 </section>
 </main>
 
-    <!-- START:FOOTER -->
+<!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
@@ -714,15 +794,6 @@
   </footer>
     <!-- END:FOOTER -->
 <script src="../components.js"></script>
-<script>
-function copyCode(btn) {
-  const code = btn.closest(".code-window").querySelector("code").innerText;
-  navigator.clipboard.writeText(code).then(() => {
-    const orig = btn.innerText;
-    btn.innerText = "Copied";
-    setTimeout(() => { btn.innerText = orig; }, 1800);
-  });
-}
-</script>
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 # Local AI for Sensitive Data
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// PERSONAL SERVICE SPECIFICATION - 100% OFFLINE PRIVATE AI WORKSTATION**  
+> **// PERSONAL SERVICE - ZERO-TELEMETRY PRIVATE AI**  
 > **Business transformation, verification, and implementation.**
 
 ---

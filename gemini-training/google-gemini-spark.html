@@ -1,28 +1,24 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Gemini Spark: Lightweight High-Throughput Inference | Thomas Cherickal</title>
-<meta content="Examine Google's managed, always-on Gemini Spark runtime for continuous background workflows, Workspace integration, scheduling, and enterprise automation tradeoffs." name="description"/>
+<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Examine Google's managed, always-on Gemini Spark runtime built for continuous background workflows, Workspace integration, scheduling, and rapid lightweight inference." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
 <link href="https://thedigitalfuturist.com/gemini-training/google-gemini-spark.html" rel="canonical"/>
-<!-- Open Graph -->
 <meta content="article" property="og:type"/>
 <meta content="https://thedigitalfuturist.com/gemini-training/google-gemini-spark.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
-<meta content="Gemini Spark: Managed Always-On Agent Runtime | Thomas Cherickal" property="og:title"/>
-<meta content="Examine Google's managed, always-on Gemini Spark runtime for continuous background workflows, Workspace integration, scheduling, and enterprise automation tradeoffs." property="og:description"/>
+<meta content="Gemini Spark: Lightweight High-Throughput Inference and Always-On Agents | Thomas Cherickal" property="og:title"/>
+<meta content="Examine Google's managed, always-on Gemini Spark runtime built for continuous background workflows, Workspace integration, scheduling, and rapid lightweight inference." property="og:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
-<!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@thomazcherickal" name="twitter:site"/>
-<meta content="Gemini Spark: Managed Always-On Agent Runtime | Thomas Cherickal" name="twitter:title"/>
-<meta content="Examine Google's managed, always-on Gemini Spark runtime for continuous background workflows, Workspace integration, scheduling, and enterprise automation tradeoffs." name="twitter:description"/>
+<meta content="Gemini Spark: Lightweight High-Throughput Inference and Always-On Agents | Thomas Cherickal" name="twitter:title"/>
+<meta content="Examine Google's managed, always-on Gemini Spark runtime built for continuous background workflows, Workspace integration, scheduling, and rapid lightweight inference." name="twitter:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
-<!-- Favicons -->
 <link href="../assets/favicon.ico" rel="icon" sizes="any"/>
 <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
 <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
@@ -37,121 +33,7 @@
 <link href="../css/cta.css" rel="stylesheet"/>
 <link href="../css/article.css" rel="stylesheet"/>
 <link href="../css/gemini.css?v=20261104" rel="stylesheet"/>
-<style>
-/* Gemini Spark Component Styling */
-.stat-box-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 14px;
-  margin: 24px 0;
-}
-.stat-box {
-  background: #000000;
-  border: 1px solid var(--border, rgba(56, 189, 248, 0.25));
-  border-top: 3px solid var(--gold, #fbbf24);
-  border-radius: 12px;
-  padding: 18px 14px;
-  text-align: center;
-}
-.stat-box:nth-child(2) { border-top-color: var(--cyan, #22d3ee); }
-.stat-box:nth-child(3) { border-top-color: #c084fc; }
-.stat-box b {
-  display: block;
-  font-size: 36px;
-  line-height: 1.1;
-  color: #f8fafc;
-  font-family: var(--font-mono, monospace);
-  font-weight: 700;
-}
-.stat-box span {
-  font-size: 14px;
-  color: var(--text-muted, #94a3b8);
-}
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 14px 0 24px;
-  padding: 0;
-  list-style: none;
-}
-.chips li {
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-size: 14px;
-  border: 1px solid;
-  background: #000000;
-  font-family: var(--font-mono, monospace);
-}
-.chips .g { border-color: rgba(56, 189, 248, 0.45); color: var(--cyan, #38bdf8); }
-.chips .m { border-color: rgba(192, 132, 252, 0.45); color: #c084fc; }
-.chips .t { border-color: rgba(52, 211, 153, 0.45); color: #34d399; }
-.chips .c { border-color: rgba(251, 191, 36, 0.45); color: var(--gold, #fbbf24); }
-.tablewrap {
-  overflow-x: auto;
-  margin: 22px 0;
-  border: 1px solid rgba(56, 189, 248, 0.25);
-  border-radius: 10px;
-}
-.tablewrap table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 15px;
-  background: #000000;
-}
-.tablewrap th, .tablewrap td {
-  padding: 12px 16px;
-  text-align: left;
-  border-bottom: 1px solid rgba(56, 189, 248, 0.14);
-  vertical-align: top;
-}
-.tablewrap th {
-  color: var(--gold, #fbbf24);
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: #000000;
-  font-family: var(--font-mono, monospace);
-}
-.tablewrap td:first-child {
-  color: var(--cyan, #38bdf8);
-  font-weight: 600;
-}
-.spark-callout {
-  border-left: 4px solid var(--gold, #fbbf24);
-  background: #000000;
-  border-top: 1px solid rgba(251, 191, 36, 0.22);
-  border-right: 1px solid rgba(251, 191, 36, 0.22);
-  border-bottom: 1px solid rgba(251, 191, 36, 0.22);
-  border-radius: 0 10px 10px 0;
-  padding: 18px 22px;
-  margin: 24px 0;
-}
-.spark-callout p {
-  margin: 0;
-  font-size: 15.5px;
-  line-height: 1.65;
-  color: var(--text-primary, #e2e8f0);
-}
-ul.spark-refs {
-  list-style: none;
-  padding: 0;
-  margin: 1.25rem 0;
-}
-ul.spark-refs li {
-  margin-bottom: 0.95rem;
-  line-height: 1.6;
-  font-size: 0.95rem;
-  padding-left: 1.4rem;
-  position: relative;
-}
-ul.spark-refs li::before {
-  content: "->";
-  position: absolute;
-  left: 0;
-  color: var(--gold, #fbbf24);
-}
-</style>
+<link href="../css/responsive.css" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -166,14 +48,14 @@ ul.spark-refs li::before {
         "@type": "WebPage",
         "@id": "https://thedigitalfuturist.com/gemini-training/google-gemini-spark.html",
         "url": "https://thedigitalfuturist.com/gemini-training/google-gemini-spark.html",
-        "name": "Gemini Spark: Managed Always-On Agent Runtime | Thomas Cherickal"
+        "name": "Gemini Spark: Lightweight High-Throughput Inference and Always-On Agents | Thomas Cherickal"
       },
-      "headline": "Gemini Spark: Managed Always-On Agent Runtime",
-      "description": "Examine Google's managed, always-on Gemini Spark runtime for continuous background workflows, Workspace integration, scheduling, and enterprise automation tradeoffs.",
+      "headline": "Gemini Spark: Lightweight High-Throughput Inference and Always-On Agents",
+      "description": "Examine Google's managed, always-on Gemini Spark runtime built for continuous background workflows, Workspace integration, scheduling, and rapid lightweight inference.",
       "image": [
         "https://thedigitalfuturist.com/assets/og-card.png"
       ],
-      "datePublished": "2026-10-24T00:00:00+05:30",
+      "datePublished": "2026-11-21T00:00:00+05:30",
       "dateModified": "2026-11-21T00:00:00+05:30",
       "inLanguage": "en-US",
       "mainEntityOfPage": {
@@ -210,13 +92,11 @@ ul.spark-refs li::before {
       "articleSection": "Generative AI",
       "keywords": [
         "Gemini Spark",
-        "Always-On AI Runtime",
+        "Lightweight High-Throughput Inference",
+        "Always-On Agents",
         "Google Workspace Automation",
-        "Scheduled AI Workflows",
-        "Managed Agent Runtime",
-        "Self-Hosted Agents",
-        "Model Context Protocol",
-        "Enterprise Automation"
+        "Scheduled Workflows",
+        "Managed Runtime"
       ]
     },
     {
@@ -246,9 +126,9 @@ ul.spark-refs li::before {
   ]
 }
 </script>
-<link href="../css/responsive.css" rel="stylesheet"/>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
   <!-- START:HEADER -->
   <nav aria-label="Main navigation">
     <a href="../index.html" class="nav-brand"><img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo"
@@ -424,224 +304,164 @@ ul.spark-refs li::before {
     </ul>
   </nav>
   <!-- END:HEADER -->
-<main class="container single-column-article">
-<header class="hero content-card" style="background:#000000;text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding-top:120px;padding-bottom:2rem;margin-bottom:2rem;">
-<div style="background:#000000;border:1px solid var(--border, rgba(56, 189, 248, 0.25));border-radius:14px;padding:2rem 2.25rem;box-shadow:0 4px 20px rgba(0, 0, 0, 0.35);box-sizing:border-box;">
-<p class="hero-badge" style="margin:0 0 0.85rem 0;">// GEMINI SPARK ARCHITECTURAL GUIDE</p>
+
+<main class="container single-column-article" id="main">
+<header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2rem 2.25rem;margin-top:110px;margin-bottom:2rem;">
+<p class="hero-badge" style="margin:0;">// ALWAYS-ON RUNTIME, WORKSPACE AUTOMATION &amp; FAST INFERENCE</p>
 <h1>Gemini Spark: Lightweight High-Throughput Inference</h1>
-<div class="title-tags" aria-label="Article topics"><span class="title-tag">Gemini Spark</span><span class="title-tag">Always-On Runtime</span><span class="title-tag">Workspace Integration</span><span class="title-tag">Scheduled Workflows</span><span class="title-tag">Enterprise Automation</span></div>
-<p class="hero-desc" style="font-size:1.15rem;line-height:1.7;color:var(--text-muted);margin:0.75rem 0 0;">
-  A plain-English look at Google's managed, always-on Gemini Spark runtime for background workflows, Google Workspace automation, scheduled monitors, and how it compares with self-hosted agent frameworks.
-</p>
-</div>
+<div class="title-tags" aria-label="Article topics"><span class="title-tag">Gemini Spark</span><span class="title-tag">Always-On Runtime</span><span class="title-tag">Background Agents</span><span class="title-tag">Workspace Integration</span><span class="title-tag">Lightweight Inference</span></div>
+<p class="hero-desc" style="font-size:1.12rem;line-height:1.7;color:var(--text-muted);margin:0.25rem 0 0;">Examine Google's managed, always-on Gemini Spark runtime built for continuous background workflows, Google Workspace integration, and rapid lightweight inference. Learn the architectural tradeoffs against self-hosted agent frameworks, scheduling patterns, and practical enterprise automation use cases.</p>
 </header>
 
-<div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;margin-bottom:2rem;">
-<div class="stat-card" style="background:#000000;border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
-<div style="font-size:2rem;font-weight:700;color:var(--gold);font-family:var(--font-mono);">24 / 7</div>
-<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Managed Cloud Runtime</div>
-</div>
-<div class="stat-card" style="background:#000000;border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
-<div style="font-size:2rem;font-weight:700;color:var(--cyan);font-family:var(--font-mono);">Flash</div>
-<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Fast Lightweight Inference</div>
-</div>
-<div class="stat-card" style="background:#000000;border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
-<div style="font-size:2rem;font-weight:700;color:#c084fc;font-family:var(--font-mono);">Skills</div>
-<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Reusable Playbooks</div>
-</div>
-<div class="stat-card" style="background:#000000;border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center;">
-<div style="font-size:2rem;font-weight:700;color:#34d399;font-family:var(--font-mono);">Gated</div>
-<div style="color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem;">Human Approval Checks</div>
-</div>
-</div>
-
-<!-- TABLE OF CONTENTS -->
-<article class="content-card" id="table-of-contents" style="background:#000000;">
+<article class="content-card" id="table-of-contents" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2>Contents</h2>
 <div class="toc-grid" style="display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem;">
-<a class="toc-link gold-link" href="#overview">1. What Gemini Spark Is</a>
-<a class="toc-link gold-link" href="#architecture">2. Inside the Always-On Runtime</a>
-<a class="toc-link gold-link" href="#scheduling">3. Scheduling, Monitors, and Workspace Integration</a>
-<a class="toc-link gold-link" href="#tradeoffs">4. Managed Spark vs. Self-Hosted Agent Frameworks</a>
-<a class="toc-link gold-link" href="#enterprise-use-cases">5. Practical Business and Team Automation Use Cases</a>
-<a class="toc-link gold-link" href="#guardrails">6. Safety Gates, Limits, and Rollout Advice</a>
-<a class="toc-link gold-link" href="#references">7. References</a>
+<a class="toc-link gold-link" href="#what-is-spark">1. Why Always-On Background Workflows Need a Managed Runtime</a>
+<a class="toc-link gold-link" href="#managed-vs-self-hosted">2. Architectural Tradeoffs: Managed Runtime Versus Self-Hosted Agents</a>
+<a class="toc-link gold-link" href="#scheduling-and-workspace">3. Scheduling Patterns and Google Workspace Use Cases</a>
+<a class="toc-link gold-link" href="#implementation-examples">4. Defining Scheduled Background Automations Cleanly</a>
+<a class="toc-link gold-link" href="#guardrails">5. Operational Guardrails for Always-On Agents</a>
+<a class="toc-link gold-link" href="#enterprise-automation-catalog">6. High-Impact Enterprise Use Cases for Always-On Inference</a>
+<a class="toc-link gold-link" href="#rollout-and-observability">7. Observability and Safe Rollout for Background Automations</a>
+<a class="toc-link gold-link" href="#references">8. References</a>
 </div>
 </article>
 
-<article class="content-card" id="overview" style="background:#000000;">
-<h2>What Gemini Spark Is</h2>
-<p>Most AI chat tools only work while you sit at the keyboard and wait for an answer. Gemini Spark works differently. It is Google's managed, always-on background runtime designed to keep running tasks in the cloud even after you close your laptop or lock your phone.</p>
-<p>Instead of setting up your own cloud servers, cron jobs, and browser containers, you describe a job in plain English and attach a schedule or a reusable skill. Under the hood, Spark pairs rapid, lightweight Gemini Flash inference with a managed cloud workspace so routine monitoring, summarizing, and drafting happen automatically. You can review the latest product details in the <a class="gold-link" href="#references">Google Gemini updates</a> and the <a class="gold-link" href="#references">Gemini Help Center</a>.</p>
-<p>Inside the Gemini app, Google has also grouped these background features under the Tasks label in newer releases. Whether your interface says Spark or Tasks, the core architecture is the same: persistent cloud execution, built-in Workspace connectors, and human approval before risky actions.</p>
-</article>
-
-<article class="content-card" id="architecture" style="background:#000000;">
-<h2>Inside the Always-On Runtime</h2>
-<p>A normal chat session forgets everything once a reply finishes. Spark separates the user interface from the worker that actually executes the job. You can kick off a task from the web, mobile, or desktop app, and Google's managed cloud container carries the multi-step plan to completion.</p>
-<figure style="margin:2rem 0;text-align:center;">
-<svg aria-label="Architecture of Gemini Spark showing user triggers flowing into a managed Google Cloud runtime with Gemini Flash, schedules, skills, and a confirmation gate before Workspace and MCP tools." role="img" style="max-width:100%;height:auto;border:1px solid rgba(56,189,248,0.35);border-radius:14px;background:#000000;" viewBox="0 0 900 440">
-<defs>
-<marker id="arr1" markerHeight="8" markerWidth="8" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10"><path d="M0 0L10 5L0 10z" fill="#fbbf24"></path></marker>
-</defs>
-<rect fill="#000000" height="440" rx="10" width="900"></rect>
-<text fill="#fbbf24" font-size="14" font-weight="700" letter-spacing="2" text-anchor="middle" x="105" y="42">TRIGGERS</text>
-<text fill="#fbbf24" font-size="14" font-weight="700" letter-spacing="2" text-anchor="middle" x="430" y="42">MANAGED CLOUD RUNTIME</text>
-<text fill="#fbbf24" font-size="14" font-weight="700" letter-spacing="2" text-anchor="middle" x="785" y="42">CONNECTED TOOLS</text>
-<g font-size="14" text-anchor="middle">
-<rect fill="#000000" height="58" rx="10" stroke="#38bdf8" stroke-width="2" width="170" x="20" y="100"></rect>
-<text fill="#f8fafc" font-weight="600" x="105" y="134">Gemini Web &amp; Mobile</text>
-<rect fill="#000000" height="58" rx="10" stroke="#c084fc" stroke-width="2" width="170" x="20" y="190"></rect>
-<text fill="#f8fafc" font-weight="600" x="105" y="224">Time Schedules</text>
-<rect fill="#000000" height="58" rx="10" stroke="#34d399" stroke-width="2" width="170" x="20" y="280"></rect>
-<text fill="#f8fafc" font-weight="600" x="105" y="314">Inbox &amp; Topic Monitors</text>
-</g>
-<path d="M192 129 L246 196" fill="none" marker-end="url(#arr1)" stroke="#fbbf24" stroke-width="2"></path>
-<path d="M192 219 L246 219" fill="none" marker-end="url(#arr1)" stroke="#fbbf24" stroke-width="2"></path>
-<path d="M192 309 L246 244" fill="none" marker-end="url(#arr1)" stroke="#fbbf24" stroke-width="2"></path>
-<rect fill="#000000" height="340" rx="16" stroke="#fbbf24" stroke-width="2.5" width="356" x="252" y="60"></rect>
-<g font-size="14" font-weight="600" text-anchor="middle">
-<rect fill="#000000" height="52" rx="10" stroke="#38bdf8" stroke-width="2" width="300" x="280" y="88"></rect>
-<text fill="#38bdf8" x="430" y="119">Gemini Flash (Fast Inference)</text>
-<rect fill="#000000" height="52" rx="10" stroke="#c084fc" stroke-width="2" width="300" x="280" y="156"></rect>
-<text fill="#c084fc" x="430" y="187">Managed Agent Planner &amp; Loop</text>
-<rect fill="#000000" height="52" rx="10" stroke="#f472b6" stroke-width="2" width="144" x="280" y="224"></rect>
-<text fill="#f472b6" x="352" y="255">Cloud Browser</text>
-<rect fill="#000000" height="52" rx="10" stroke="#34d399" stroke-width="2" width="144" x="436" y="224"></rect>
-<text fill="#34d399" x="508" y="255">SKILL.md Rules</text>
-<rect fill="#000000" height="52" rx="10" stroke="#fbbf24" stroke-width="2" width="300" x="280" y="292"></rect>
-<text fill="#fbbf24" x="430" y="323">Persistent Task State &amp; Logs</text>
-</g>
-<text fill="#94a3b8" font-size="12.5" text-anchor="middle" x="430" y="378">Runs 24/7 even when your laptop is closed</text>
-<path d="M610 219 L692 219" fill="none" marker-end="url(#arr1)" stroke="#fbbf24" stroke-width="2.5"></path>
-<rect fill="#fbbf24" height="30" rx="15" width="70" x="616" y="204"></rect>
-<text fill="#000000" font-size="11" font-weight="800" text-anchor="middle" x="651" y="223">APPROVE</text>
-<g font-size="13.5" text-anchor="middle">
-<rect fill="#000000" height="50" rx="9" stroke="#38bdf8" stroke-width="1.8" width="188" x="698" y="76"></rect>
-<text fill="#f8fafc" x="792" y="106">Gmail &amp; Calendar</text>
-<rect fill="#000000" height="50" rx="9" stroke="#34d399" stroke-width="1.8" width="188" x="698" y="142"></rect>
-<text fill="#f8fafc" x="792" y="172">Docs, Sheets &amp; Drive</text>
-<rect fill="#000000" height="50" rx="9" stroke="#c084fc" stroke-width="1.8" width="188" x="698" y="208"></rect>
-<text fill="#f8fafc" x="792" y="238">Web Search &amp; Maps</text>
-<rect fill="#000000" height="50" rx="9" stroke="#f472b6" stroke-width="1.8" width="188" x="698" y="274"></rect>
-<text fill="#f8fafc" x="792" y="304">Partner Connectors</text>
-<rect fill="#000000" height="50" rx="9" stroke="#fbbf24" stroke-width="1.8" width="188" x="698" y="340"></rect>
-<text fill="#f8fafc" x="792" y="370">Custom MCP Servers</text>
-</g>
-</svg>
-<figcaption style="font-size:0.85rem;color:var(--text-muted, #94a3b8);margin-top:0.6rem;">Figure 1. How Gemini Spark connects triggers, fast cloud inference, and gated tools.</figcaption>
-</figure>
-<p>Using lightweight Gemini Flash inference is a deliberate architectural choice. Background agents make dozens of small decisions per run - reading an email, checking a calendar slot, extracting a price from a web page, and formatting a document. Fast, low-cost inference keeps those multi-step loops responsive without burning through heavy compute budgets.</p>
-</article>
-
-<article class="content-card" id="scheduling" style="background:#000000;">
-<h2>Scheduling, Monitors, and Workspace Integration</h2>
-<p>Spark organizes continuous automation around three simple building blocks that anyone on a team can understand without writing infrastructure code:</p>
-<ul>
-<li><strong>Tasks:</strong> Plain-English jobs that describe the end result you want, such as a weekly risk summary in Google Docs or a formatted table in Google Sheets.</li>
-<li><strong>Schedules and Monitors:</strong> Rules that decide when a task wakes up. You can trigger runs on a clock (daily or weekly), when a matching Gmail message arrives, or when news appears on a tracked topic.</li>
-<li><strong>Skills:</strong> Reusable instruction files (<code>SKILL.md</code>) that lock in your team's preferred format, checklist, and tone so every run produces consistent work.</li>
-</ul>
-<p>Because Spark is built inside Google's ecosystem, it connects natively to Gmail, Calendar, Drive, Docs, Sheets, Slides, Keep, and Tasks, as well as external tools via the <a class="gold-link" href="#references">Model Context Protocol</a>. For web tasks, you can also choose between a local browser session on your desktop or Google's remote cloud browser:</p>
-<div class="tablewrap">
-<table>
-<thead><tr><th>Capability</th><th>Local Desktop Browser</th><th>Managed Cloud Browser</th></tr></thead>
-<tbody>
-<tr><td>Execution location</td><td>Runs on your own computer</td><td>Runs inside Google's cloud container</td></tr>
-<tr><td>When laptop closes</td><td>Pauses until your computer wakes up</td><td>Continues running unattended 24/7</td></tr>
-<tr><td>Login screens</td><td>Uses your existing local sessions</td><td>Pauses and asks you to take over safely</td></tr>
-<tr><td>Best fit</td><td>Quick local file or intranet checks</td><td>Overnight research and scheduled monitors</td></tr>
-</tbody>
-</table>
-</div>
-</article>
-
-<article class="content-card" id="tradeoffs" style="background:#000000;">
-<h2>Managed Spark vs. Self-Hosted Agent Frameworks</h2>
-<p>Engineering teams often ask whether they should automate workflows with a managed runtime like Gemini Spark or build their own background workers using open-source frameworks and the <a class="gold-link" href="#references">Gemini API documentation</a>. Each path has clear tradeoffs.</p>
-<div class="tablewrap">
-<table>
-<thead><tr><th>Decision Factor</th><th>Managed Gemini Spark</th><th>Self-Hosted Agent Framework</th></tr></thead>
-<tbody>
-<tr><td>Setup time</td><td>Minutes - no servers, Docker, or cron daemons</td><td>Days to weeks of engineering and DevOps</td></tr>
-<tr><td>Google Workspace access</td><td>Native connectors for Gmail, Drive, Docs, Sheets</td><td>Manual OAuth setup, token refresh, and scopes</td></tr>
-<tr><td>Data &amp; network control</td><td>Hosted in Google's cloud with account limits</td><td>Runs inside your own VPC or on-premise network</td></tr>
-<tr><td>Custom code &amp; integrations</td><td>Extensible via skills and MCP servers</td><td>Unlimited custom databases, queues, and APIs</td></tr>
-<tr><td>Cost model</td><td>Bundled in subscription with metered usage caps</td><td>Pay-per-token API bills plus server hosting</td></tr>
-</tbody>
-</table>
-</div>
-<p>Use the decision flow below to pick the right runtime for a new workflow before writing code:</p>
-<div class="mermaid" style="background:#000000;padding:1.25rem;border-radius:12px;border:1px solid rgba(56,189,248,0.3);margin:1.5rem 0;">
+<article class="content-card" id="what-is-spark" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Why Always-On Background Workflows Need a Managed Runtime</h2>
+<p>Interactive chat assistants wait for a human to type a question. Many of the highest-value business automations work the opposite way: they run quietly in the background on a schedule or in response to incoming events - summarizing overnight support tickets at 7:00 AM, triaging incoming vendor emails in Gmail, or flagging budget anomalies in Google Sheets before a weekly meeting.</p>
+<p>Running those continuous jobs on self-hosted servers requires managing containers, OAuth token refresh loops, retry queues, rate-limit backoff, and uptime alerts. <strong>Gemini Spark</strong> represents Google's managed, always-on runtime approach for lightweight, high-throughput background workflows tightly connected to Google Workspace and cloud triggers.</p>
+<p>Instead of wiring together five separate infrastructure services just to run a daily digest or inbox monitor, teams define the trigger, the Workspace connectors, and the lightweight inference policy, letting the managed runtime handle scheduling and execution reliably.</p>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;">
+<div class="mermaid">
 flowchart TD
-    A["New Background Workflow"]:::gold --> B{"Needs private VPC or<br/>strict data residency?"}:::cyan
-    B -- "Yes" --> C["Build Self-Hosted Worker<br/>with Gemini API or Gemma"]:::purple
-    B -- "No" --> D{"Mostly Google Workspace,<br/>web monitoring, or MCP?"}:::cyan
-    D -- "Yes" --> E["Start with Managed<br/>Gemini Spark Runtime"]:::green
-    D -- "No" --> F["Use Custom Agent Runtime<br/>with Managed Sandboxes"]:::rose
-    E --> G{"Hits concurrency or<br/>custom SLA limits?"}:::gold
-    G -- "No" --> H["Keep Running on Spark<br/>with SKILL.md Playbooks"]:::green
-    G -- "Yes" --> F
-
-    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc;
-    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
-    classDef green fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc;
-    classDef purple fill:#000000,stroke:#c084fc,stroke-width:2px,color:#f8fafc;
-    classDef rose fill:#000000,stroke:#f472b6,stroke-width:2px,color:#f8fafc;
+    T1["Cron Schedule (Every Morning)"]:::gold --> R["Managed Gemini Spark Runtime"]:::cyan
+    T2["Workspace Event (New Email or Doc)"]:::purple --> R
+    R --> I["Lightweight Fast Inference Pass"]:::emerald
+    I --> C{"Action Needs Human Approval?"}:::rose
+    C -- "No" --> W["Update Sheet, Draft Reply, or Post Brief"]:::emerald
+    C -- "Yes" --> H["Queue Draft for Team Review"]:::gold
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef purple fill:#000000,stroke:#c084fc,stroke-width:2px,color:#f8fafc
+    classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    classDef rose fill:#000000,stroke:#f472b6,stroke-width:2px,color:#f8fafc
 </div>
-<p>A smart pattern for many organizations is to prototype a workflow in Spark first. Once a team proves that a weekly report or inbox monitor saves real hours, engineers can either keep it on Spark or port the exact same <code>SKILL.md</code> instructions to a <a class="gold-link" href="#references">managed Gemini API agent</a> for full enterprise scale.</p>
-</article>
-
-<article class="content-card" id="enterprise-use-cases" style="background:#000000;">
-<h2>Practical Business and Team Automation Use Cases</h2>
-<p>Spark shines on recurring jobs that pull information from several tools and turn it into a clean, ready-to-review artifact. Here are five high-value patterns used by consultants, operations leads, and technical teams:</p>
-<ul>
-<li><strong>Weekly Project Risk Brief:</strong> Every Monday morning, Spark scans recent project emails, upcoming calendar deadlines, and updated Drive folders, then writes a one-page Google Doc listing overdue items and open decisions.</li>
-<li><strong>Vendor and Pricing Watch:</strong> A weekly cloud-browser task visits approved vendor pricing pages, compares them against last week's snapshot in Drive, and flags meaningful changes in a Sheet.</li>
-<li><strong>Inbox Triage with Drafted Replies:</strong> A Gmail monitor watches for incoming client inquiries, checks Calendar for free slots, and prepares a polite reply draft that waits for your final approval before sending.</li>
-<li><strong>Industry and Model Release Radar:</strong> Topic monitors track new AI releases, policy updates, or competitor launches and append verified links and summaries into a shared research Sheet.</li>
-<li><strong>Standardized Delivery Checklists via MCP:</strong> Pair a reusable <code>SKILL.md</code> playbook with a custom MCP server so Spark can query internal ticket queues or documentation without exposing full admin credentials.</li>
-</ul>
-<div class="spark-callout">
-<p><strong>Account and Governance Note:</strong> Always verify your organization's data policy before connecting work data. Consumer Spark features currently have specific personal-account and regional eligibility rules; enterprise teams handling regulated client records should review <a class="gold-link" href="#references">Google Workspace AI governance</a> or deploy on Google Cloud.</p>
+<p style="color:var(--text-muted);font-size:0.88rem;margin:0.75rem 0 0;text-align:center;">Event-driven and scheduled background automation flow in an always-on Gemini Spark runtime.</p>
 </div>
 </article>
+<article class="content-card" id="managed-vs-self-hosted" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Architectural Tradeoffs: Managed Runtime Versus Self-Hosted Agents</h2>
+<p>Choosing between a managed always-on runtime like Gemini Spark and a self-hosted agent framework (such as a custom Python service on Kubernetes) comes down to control versus operational speed.</p>
+<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.25rem;"><li><strong>When Managed Wins:</strong> Workflows centered on Google Workspace (Gmail, Docs, Sheets, Calendar, Drive), scheduled briefings, rapid prototyping, and teams that want zero server maintenance and built-in OAuth governance.</li><li><strong>When Self-Hosted Wins:</strong> Workloads requiring direct access to private on-premise databases, custom local GPU models, air-gapped networks, or specialized binary toolchains that cannot run inside a managed cloud sandbox.</li></ul>
+<p>Many enterprises adopt a hybrid architecture: they use managed always-on runtimes for everyday Workspace and operations workflows, while keeping specialized engineering or regulated core-banking pipelines inside their own VPCs on <a class="gold-link" href="#references">Google Cloud Vertex AI</a>.</p>
+</article>
+<article class="content-card" id="scheduling-and-workspace" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Scheduling Patterns and Google Workspace Use Cases</h2>
+<p>Background agents work best when they follow predictable rhythms rather than polling aggressively every second. Three scheduling patterns cover most business needs: <strong>morning digests</strong> (summarizing overnight activity into one clean message), <strong>event-driven triage</strong> (tagging and drafting replies as items arrive), and <strong>weekly hygiene audits</strong> (checking stale projects, missing owners, or overdue follow-ups).</p>
+<p>Inside Google Workspace, this translates into concrete time savers: automatically converting meeting transcripts in Google Drive into action-item rows in Google Sheets, drafting customer follow-up emails in Gmail without auto-sending them, and monitoring shared project folders for newly uploaded vendor proposals.</p>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;">
+<div class="mermaid">
+graph TD
+    W["Google Workspace (Gmail, Drive, Sheets)"]:::cyan --> S["Gemini Spark Managed Automation"]:::gold
+    S --> D["Draft Outputs and Structured Summaries"]:::emerald
+    S --> P["Webhook to Private Internal Service"]:::purple
+    P --> L["Centralized Compliance and Audit Log"]:::rose
+    D --> L
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    classDef purple fill:#000000,stroke:#c084fc,stroke-width:2px,color:#f8fafc
+    classDef rose fill:#000000,stroke:#f472b6,stroke-width:2px,color:#f8fafc
+</div>
+<p style="color:var(--text-muted);font-size:0.88rem;margin:0.75rem 0 0;text-align:center;">Hybrid enterprise setup connecting managed Workspace automations with private API checks.</p>
+</div>
+</article>
+<article class="content-card" id="implementation-examples" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Defining Scheduled Background Automations Cleanly</h2>
+<p>Whether you configure a managed Spark schedule or a lightweight cloud worker calling the <a class="gold-link" href="#references">Google Gemini API</a>, always make background jobs <strong>idempotent</strong> - meaning if a job accidentally runs twice on the same input, it does not create duplicate rows or send duplicate alerts.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">spark_morning_digest.yaml</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>job_name: daily-support-digest
+schedule_cron: "0 7 * * 1-5"
+timezone: "UTC"
+inference_tier: lightweight_fast
+sources:
+  - workspace_gmail_label: "priority-support"
+  - workspace_sheet: "Escalation_Tracker"
+actions:
+  - summarize_open_blockers
+  - create_google_doc_brief
+  - notify_team_channel
+idempotency_key: "{{date_utc}}-support-digest" </code></pre>
+</div>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">idempotent_worker.py</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>import hashlib
+from google import genai
 
-<article class="content-card" id="guardrails" style="background:#000000;">
-<h2>Safety Gates, Limits, and Rollout Advice</h2>
-<p>An always-on agent is only useful if you can trust it while you are asleep. Spark includes built-in confirmation gates that pause execution before sending emails, deleting files, submitting forms, or completing purchases. When the cloud browser hits a login screen, it stops and invites you to take over rather than guessing credentials.</p>
-<p>Still, every team should follow three practical rollout habits:</p>
-<ul>
-<li><strong>Start read-only:</strong> Begin with tasks that only read, summarize, and write new drafts or Docs. Never grant write or delete authority on day one.</li>
-<li><strong>Watch for prompt injection:</strong> External web pages and untrusted emails can contain hidden text designed to trick an agent. Restrict monitors to trusted sources and never paste passwords or payment details into a task thread.</li>
-<li><strong>Audit the first five runs:</strong> Skim every scheduled output during the first two weeks to confirm the task stays on scope and respects your usage limits.</li>
-</ul>
+client = genai.Client()
+PROCESSED_HASHES: set[str] = set()
+
+def process_event_once(event_text: str) -&gt; str | None:
+    digest = hashlib.sha256(event_text.encode("utf-8")).hexdigest()
+    if digest in PROCESSED_HASHES:
+        return None  # Skip duplicate delivery safely
+    PROCESSED_HASHES.add(digest)
+    resp = client.models.generate_content(
+        model="gemini-4-hydrogen",
+        contents=f"Extract action items as concise bullets:\n{event_text}",
+    )
+    return resp.text</code></pre>
+</div>
+</article>
+<article class="content-card" id="guardrails" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Operational Guardrails for Always-On Agents</h2>
+<p>Always-on agents run while you sleep, so quiet failure modes matter. First, enforce <strong>draft-only mode</strong> for any external communication until the workflow has run cleanly for at least two weeks. Second, set a daily execution cap so a buggy trigger loop cannot fire ten thousand times in an hour. Third, route errors to a dedicated alert channel so your team knows immediately if an OAuth token expires or a source sheet changes column names, following the reliability practices in <a class="gold-link" href="#references">Google Workspace automation guides</a>.</p>
+</article>
+<article class="content-card" id="enterprise-automation-catalog" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>High-Impact Enterprise Use Cases for Always-On Inference</h2>
+<p>Always-on lightweight inference shines on continuous operational chores that humans routinely forget or delay during busy weeks. Consider four proven enterprise automations. First, <strong>executive morning briefings</strong>: every weekday at 7:00 AM, a scheduled agent scans overnight sales wins, critical support escalations, and deployment alerts across Workspace and posts a clean five-bullet summary so leadership starts the day aligned. Second, <strong>contract and renewal radar</strong>: a weekly job checks a shared Drive folder of vendor agreements, flags contracts renewing within sixty days, and creates calendar reminders for procurement owners.</p>
+<p>Third, <strong>meeting-to-action hygiene</strong>: whenever a new meeting transcript lands in a project folder, an event-driven trigger extracts owners, due dates, and open blockers into the team's tracking sheet while drafting a polite follow-up email for the project lead to review. Fourth, <strong>continuous documentation drift checks</strong>: a nightly worker compares recent product release notes against customer-facing help articles and opens a task list whenever a screenshot or instruction becomes outdated.</p>
+<p>Start with one high-visibility digest workflow, measure how many minutes it saves each teammate per week, and expand gradually while keeping strict draft-only guardrails on all external communications.</p>
+</article>
+<article class="content-card" id="rollout-and-observability" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Observability and Safe Rollout for Background Automations</h2>
+<p>Because background agents run outside a user's active screen, clear observability is essential. Every scheduled Gemini Spark workflow should write a structured run summary containing the timestamp, number of items processed, actions drafted, and any skipped or failed records. Review those summaries once a week during your team's operations standup to catch silent drift early.</p>
+<p>When onboarding a new department onto always-on Workspace automations, start with read-only digests and internal checklists before touching customer-facing workflows. Give every automated job a named human owner who receives failure alerts and can pause the schedule with one click if upstream business rules change. That simple ownership model keeps background AI dependable, transparent, and easy to scale across the company.</p>
+<p>As confidence builds over the first month, document each active automation in a central team catalog listing its schedule, data sources, and owner so nobody is ever surprised by an unexpected background update. Periodic audits of that catalog also help teams retire stale schedules, consolidate overlapping digests, and keep every automated workflow aligned with current business priorities, security policies, and seasonal operational rhythms across every department without adding maintenance burden for IT or operations staff.</p>
+<p>Paired with idempotent processing and draft-first guardrails, an always-on lightweight runtime quietly absorbs hours of repetitive coordination work every week while keeping human decision-makers firmly in control.</p>
 </article>
 
-<article class="content-card" id="references" style="background:#000000;">
+<article class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2>References</h2>
-<ul class="spark-refs">
-<li><a class="gold-link" href="https://blog.google/products/gemini/" rel="noopener" target="_blank">Google Blog - Gemini Product Announcements and Updates</a> <span>- Official announcements covering the Gemini app, background agents, and Workspace features.</span></li>
-<li><a class="gold-link" href="https://support.google.com/gemini/" rel="noopener" target="_blank">Gemini Apps Help Center</a> <span>- Official documentation for managing tasks, schedules, skills, connected apps, and safety controls.</span></li>
-<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener" target="_blank">Google AI for Developers - Gemini API Documentation</a> <span>- Technical reference for building custom and managed agent workflows with Gemini Flash.</span></li>
-<li><a class="gold-link" href="https://workspace.google.com/solutions/ai/" rel="noopener" target="_blank">Google Workspace AI Solutions and Enterprise Governance</a> <span>- Overview of Workspace security, privacy commitments, and business AI integrations.</span></li>
-<li><a class="gold-link" href="https://modelcontextprotocol.io/introduction" rel="noopener" target="_blank">Model Context Protocol (MCP) Official Documentation</a> <span>- Open standard for connecting AI agents safely to custom internal tools and data sources.</span></li>
+<p>Official documentation, research papers, and developer guides referenced in this article:</p>
+<ul style="display:flex;flex-direction:column;gap:0.65rem;padding-left:1.25rem;margin-top:1rem;">
+<li><a class="gold-link" href="https://workspace.google.com/solutions/ai/" rel="noopener noreferrer" target="_blank">Google Workspace AI Solutions</a> - Official overview of Gemini integrations across Gmail, Docs, Sheets, and Drive.</li>
+<li><a class="gold-link" href="https://cloud.google.com/vertex-ai" rel="noopener noreferrer" target="_blank">Google Cloud Vertex AI</a> - Managed enterprise platform for scalable AI inference and agent orchestration.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener noreferrer" target="_blank">Google Gemini API Documentation</a> - Developer guides for fast inference, structured outputs, and batching.</li>
+<li><a class="gold-link" href="https://cloud.google.com/scheduler/docs" rel="noopener noreferrer" target="_blank">Google Cloud Scheduler Documentation</a> - Reference for reliable cron scheduling and retry policies in cloud workflows.</li>
 </ul>
 </article>
 
-<section class="cta-banner" style="background:#000000;">
-<h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Build Autonomous Agent Pipelines with Gemini Spark</h2>
-<p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">
-  Deploy 24/7 background agent workflows, automated Google Workspace triage, model radar trackers, and production agent harnesses.
-</p>
+<section class="cta-banner" style="margin-top:2.5rem;padding:2.5rem 2rem;background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:14px;text-align:center;">
+<h2 style="color:var(--gold);font-size:1.85rem;margin-bottom:0.75rem;">Launch Always-On Business Automations With Gemini</h2>
+<p style="color:var(--text-muted);max-width:680px;margin:0.5rem auto 1.5rem;font-size:1rem;line-height:1.6;">Partner with Thomas Cherickal to architect reliable scheduled agents, Workspace automations, and lightweight inference pipelines.</p>
 <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
-<a class="btn btn-primary" href="../contact.html">Schedule Spark Architecture Session →</a>
-<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" style="text-decoration:none !important;" target="_blank">Free LinkedIn Consultation ↗</a>
-<a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
+<a class="btn btn-commission" href="../pricing.html">View Pricing &amp; Packages</a>
+<a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
 </div>
 </section>
+
 </main>
-    <!-- START:FOOTER -->
+
+  <!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
@@ -932,35 +752,14 @@ flowchart TD
   </footer>
     <!-- END:FOOTER -->
 <script src="../components.js"></script>
-<script src="../assets/js/mermaid.min.js"></script>
 <script>
-(function () {
-  mermaid.initialize({
-    startOnLoad: false,
-    theme: "base",
-    flowchart: { useMaxWidth: false },
-    timeline: { useMaxWidth: false },
-    themeVariables: {
-      darkMode: true,
-      background: "#020408",
-      primaryColor: "#000000",
-      primaryTextColor: "#e2e8f0",
-      primaryBorderColor: "#38bdf8",
-      lineColor: "#fbbf24",
-      secondaryColor: "#060912",
-      tertiaryColor: "#131926",
-      textColor: "#e2e8f0",
-      fontSize: "15px"
-    }
-  });
-  function renderDiagrams() {
-    if (!document.querySelector(".mermaid")) { return; }
-    mermaid.run({ querySelector: ".mermaid", suppressErrors: true })
-      .catch(function (e) { console.error("Mermaid render failed", e); });
-  }
-  var fontsReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
-  window.addEventListener("load", function () { fontsReady.then(renderDiagrams); });
-})();
+function copyCode(btn) {
+  const code = btn.closest(".code-window").querySelector("code").innerText;
+  navigator.clipboard.writeText(code);
+  btn.textContent = "Copied!";
+  setTimeout(() => btn.textContent = "Copy", 1800);
+}
 </script>
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 # AI Budget & Cost Control
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// BUSINESS SERVICE - AI COST GOVERNANCE & LIMITS**  
+> **// BUSINESS SERVICE - AI BUDGET & COST CONTROL**  
 > **Business transformation, verification, and implementation.**
 
 ---

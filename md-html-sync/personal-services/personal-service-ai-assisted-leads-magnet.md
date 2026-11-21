@@ -1,7 +1,7 @@
 # AI-Assisted Leads Magnet
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// PERSONAL SERVICE SPECIFICATION - PERSONAL BRAND & AUTOMATED FUNNEL**  
+> **// PERSONAL SERVICE - SOLO BRAND & CONVERSION SYSTEMS**  
 > **Business transformation, verification, and implementation.**
 
 ---

@@ -1,7 +1,7 @@
 # Workflow Automations
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// BUSINESS SERVICE - EVENT-DRIVEN AI AUTOMATIONS**  
+> **// BUSINESS SERVICE - WORKFLOW AUTOMATIONS**  
 > **Business transformation, verification, and implementation.**
 
 ---

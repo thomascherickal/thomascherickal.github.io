@@ -585,3 +585,128 @@ pre {
   display: inline !important;
 }
 
+/* ==========================================================================
+   4. GLOBAL MOBILE & TABLET DISPLAY OPTIMIZATION (2026 POLISH)
+   ========================================================================== */
+
+html,
+body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+/* Tablet optimization (769px to 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .stats-grid,
+  .home-nav-grid,
+  .services-grid,
+  .faq-grid,
+  .social-grid,
+  .guarantee-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1.15rem !important;
+  }
+
+  .content-card,
+  .toc-card,
+  .cta-banner {
+    padding: 1.5rem 1.5rem !important;
+  }
+
+  .title-tags {
+    gap: 0.45rem !important;
+  }
+
+  .btn,
+  a.btn {
+    min-height: 44px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* Mobile optimization (up to 768px) */
+@media (max-width: 768px) {
+  .stats-grid,
+  .home-nav-grid,
+  .services-grid,
+  .faq-grid,
+  .social-grid,
+  .guarantee-grid,
+  .parity-tiers-grid,
+  .pricing-grid-faq,
+  .calc-grid,
+  .calc-field-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .title-tags {
+    gap: 0.4rem !important;
+    margin: 0.65rem 0 1rem !important;
+  }
+
+  .title-tag {
+    font-size: 0.74rem !important;
+    padding: 0.25rem 0.65rem !important;
+  }
+
+  .code-window pre,
+  pre,
+  .mermaid,
+  .table-wrap {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .code-window pre code {
+    font-size: 0.8rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .btn,
+  a.btn,
+  .toc-link,
+  .toc-list li a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Small phone optimization (up to 480px) */
+@media (max-width: 480px) {
+  main,
+  .container,
+  .container-wide {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+  h1,
+  .hero-title {
+    font-size: clamp(1.5rem, 6.5vw, 1.95rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  h2 {
+    font-size: clamp(1.25rem, 5.2vw, 1.55rem) !important;
+  }
+
+  .content-card,
+  .toc-card,
+  .cta-banner {
+    padding: 1.1rem 0.9rem !important;
+    border-radius: 12px !important;
+  }
+}
+
+

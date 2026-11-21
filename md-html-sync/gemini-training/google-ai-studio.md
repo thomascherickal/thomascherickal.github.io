@@ -1,8 +1,8 @@
 # Google AI Studio: Rapid Prototyping & System Instructions
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
-> **// RAPID PROTOTYPING & SYSTEM INSTRUCTIONS**  
-> **A hands-on guide to testing prompts, comparing models, using built-in audio, image, video, and music tools, and exporting clean Python code from Google AI Studio.**
+> **// RAPID PROTOTYPING, SYSTEM INSTRUCTIONS & MULTIMODAL TOOLS**  
+> **A practical guide to building, testing, and exporting production prompts in Google AI Studio. Learn how to write clear system instructions, enforce structured JSON outputs, test multimodal tools like speech, image, video, and music generation, and move cleanly into the Google GenAI Python SDK.**
 
 ---
 
@@ -10,166 +10,138 @@
 
 ---
 
-## Introduction
+## Why Google AI Studio Is the Fastest Starting Point
 
-Google AI Studio is Google's browser workspace for testing prompts, checking model quality, and turning working ideas into production code without setup friction.
+When a team wants to build an application with Gemini, the slowest mistake is jumping straight into backend code before testing whether the prompt actually works. Google AI Studio solves that problem by giving developers a direct browser workbench connected to the same models they will later call from code. You can paste sample documents, upload audio or video clips, adjust model settings, and see exact token counts in seconds.
 
-Instead of writing boilerplate scripts just to see if an idea works, you can open your browser, pick a Gemini model, set clear rules with system instructions, lock the reply into a predictable JSON format, and measure token usage right away. You can also test speech recognition (ASR), voice generation (TTS), image creation, video creation, and music creation in the same place.
+Unlike a casual consumer chat window, Google AI Studio exposes the controls that matter in software engineering. You can separate permanent system instructions from user messages, lock the response format to a strict JSON schema, inspect safety filter ratings, and compare two model tiers side by side. As documented in the Google AI Studio guide, every working prompt can be exported into ready-to-run Python or JavaScript code with a single click.
 
-When a prompt works the way you want, one click turns it into ready-to-run code for the official Google GenAI Python SDK. That makes Google AI Studio equally useful for business teams prototyping a workflow and engineers shipping live software.
-
----
-
-## What Google AI Studio Does
-
-Google AI Studio is the fastest starting point for building with the Gemini API. You sign in with a Google account and immediately get three main areas to work in:
-
-- The Prompt Playground: Test text, images, PDFs, audio, and video clips. Adjust settings like temperature, thinking depth, safety rules, and structured JSON output while watching exact token counts update live.
-- Live Streaming Mode: Talk to Gemini in real time using your microphone, camera, or screen share to test voice assistants and visual help flows.
-- App Builder Mode: Describe a small web app in plain English, preview it in the browser, tweak it with follow-up notes, and export the files when you are happy with the result.
-
-Every prompt you save can be stored in Google Drive, shared with teammates for review, and compared side by side across different Gemini models.
+This workflow dramatically reduces wasted engineering time. Instead of editing Python scripts, restarting a server, and guessing why an answer drifted, you iterate in the browser until the output is accurate across ten or twenty edge cases. Only after the prompt passes your checks do you export the configuration into your repository and wire it into automated tests.
 
 ---
 
-## System Instructions, JSON Schemas & Safety Filters
+## Writing Clear System Instructions That Hold Under Pressure
 
-Good AI results come from clear guardrails. The right-hand settings panel in Google AI Studio gives you four controls that turn casual prompts into reliable business tools:
+System instructions are the foundation of every reliable AI Studio project. They sit above the conversation and tell the model its role, tone, boundaries, and decision rules. Many teams write vague system instructions such as 'be helpful and accurate' and then wonder why the model invents answers or formats tables inconsistently.
 
-- System Instructions: A permanent rulebook that tells the model its role, tone, formatting rules, and what it must never do. It stays active across every turn of the conversation.
-- Structured JSON Output: Instead of getting free-form paragraphs that break your app, you define the exact fields you want (such as category, priority, and summary). Gemini replies with clean JSON every time.
-- Safety Filters: Choose how strictly the model blocks harmful content across harassment, hate speech, explicit material, and dangerous topics so your app matches your company policy.
-- Thinking Controls: Turn deeper step-by-step reasoning up for hard planning or math problems, or keep it light when you want fast, low-cost replies.
+Strong system instructions follow a simple four-part pattern. First, state the exact role and audience in one sentence. Second, list the step-by-step rules the model must follow when reading user input. Third, state what the model must do when information is missing - for example, returning a clear 'not found' flag instead of guessing. Fourth, include two short examples showing a tricky input and the exact expected output.
 
----
+Keep your system instructions modular and easy to read. Use plain headings, short bullet points, and direct verbs like 'extract', 'verify', and 'omit'. When a prompt fails on a real customer message, avoid adding a long paragraph of apology rules. Instead, find the exact rule that was unclear and tighten it. Shorter, sharper instructions almost always outperform walls of text.
 
-## Built-In Tools: ASR, TTS, Images, Video & Music
-
-Google AI Studio is not just for text. It puts Google's media and speech tools inside one dashboard so you can test full multimedia workflows without stitching together five separate accounts:
-
-Because all of these tools share the same Google AI Studio quickstart environment, you can transcribe a recording with ASR, summarize it with Gemini, turn the summary into a spoken update with TTS, and generate supporting visuals in minutes.
+In AI Studio, you can also test how system instructions behave under different temperature settings. For data extraction, classification, and support triage, set temperature close to zero so the model picks the most consistent answer every time. For brainstorming or marketing copy, raise temperature slightly while keeping the structural rules firm.
 
 ---
 
-## Accessing Gemini Models & Extra Workspace Features
+## Enforcing Structured JSON Outputs and Safety Filters
 
-A single dropdown menu in AI Studio lets you switch across the Gemini model lineup and compare speed, reasoning depth, and cost on the exact same test prompt:
+One of the most valuable features inside Google AI Studio is native structured output. Instead of asking the model in prose to 'please reply only in valid JSON' and hoping it does not wrap the result in extra commentary, you define a strict schema. The API then constrains token generation so the response matches your field names, data types, and allowed enum values.
 
-- Flagship Reasoning Models (Gemini Pro & Gemini Argon): Best for hard multi-step planning, deep document analysis, complex coding, and careful decision support.
-- Fast Everyday Models (Gemini Flash & Gemini Hydrogen): Built for low-latency chat, real-time voice or video streaming, high-volume sorting, and cost-sensitive apps.
-- Lightweight High-Volume Models (Flash-Lite): Ideal for simple tagging, extraction, and high-speed batch jobs where every fraction of a cent counts.
+Structured output is essential when downstream software parses the response. If your backend expects a priority field that is always 'low', 'medium', or 'high', a schema guarantees you never receive 'urgent-ish' or a broken bracket that crashes your parser. You can test the schema directly in AI Studio's Structured Output panel and inspect the raw JSON before writing a single line of application code.
 
-Beyond model selection, AI Studio includes several practical features that save hours during prototyping:
+Alongside schemas, AI Studio lets you configure safety filters across harassment, hate speech, sexually explicit content, and dangerous content. Business applications often need different thresholds depending on their domain. A medical triage tool or a cybersecurity log analyzer may legitimately process sensitive terms that a children's education app must block. Testing these thresholds in AI Studio with realistic sample inputs prevents surprise empty responses in production.
 
-- Side-by-Side Model Comparison: Run the same prompt on two models at once to judge quality and speed before committing.
-- Direct File & Google Drive Uploads: Drop in long PDFs, slide decks, spreadsheets, or videos up to the model's full context window.
-- Function Calling (Tools): Define custom actions your app can run - such as looking up an order or creating a calendar event - and inspect the exact arguments Gemini picks.
-- URL Context & Grounding: Point the model at public web pages or search results so replies stay current and verifiable.
+#### `support_ticket_schema.json`
+```python
+{
+  "type": "object",
+  "properties": {
+    "ticket_category": {
+      "type": "string",
+      "enum": ["billing", "technical_bug", "account_access", "feature_request"]
+    },
+    "urgency": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "missing_information": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "summary": { "type": "string" }
+  },
+  "required": ["ticket_category", "urgency", "missing_information", "summary"]
+}
+```
 
 ---
 
-## Token Costs & Context Caching
+## Multimodal Tools Built Into the AI Studio Workbench
 
-Every prompt and reply is measured in tokens (roughly 750 English words per 1,000 tokens). AI Studio shows your exact token count before you even hit Run. The table below illustrates how Google's Gemini API pricing tiers separate fast, everyday models from heavier reasoning models (always check the live pricing page for current rates):
+Google AI Studio is not limited to plain text prompts. It acts as a unified testing ground for Google's broader generative media and multimodal ecosystem. Inside the same workspace, you can experiment with the Gemini element family - including Gemini Argon, Gemini Carbon, Gemini Neon, and Gemini Hydrogen - alongside specialized media generation and speech tools.
 
-If your app sends the same large handbook, catalog, or codebase with every user question, turn on Context Caching. Caching stores that shared background once so repeated questions cost a fraction of standard input rates.
+- Automatic Speech Recognition (ASR) and Audio Understanding: Upload meeting recordings, customer support calls, or voice notes to transcribe speech, identify speakers, and extract action items with timestamps.
+- Text-to-Speech (TTS) and Live Voice: Generate natural spoken audio for tutorials, narration, and interactive voice assistants, and test low-latency two-way voice conversations through the Live API sandbox.
+- Image Generation and Editing: Prototype marketing visuals, product mockups, and diagram illustrations using Google's native image generation models directly from text or reference images.
+- Video Generation: Test short cinematic clips and storyboards with Veo models, iterating on camera movement, lighting, and scene continuity before automating media pipelines.
+- Music and Audio Creation: Experiment with Lyria-powered instrumental tracks and background soundscapes for videos, podcasts, and interactive demos.
+- Grounding with Google Search and Code Execution: Toggle live web grounding to verify current facts with citations, or enable sandboxed Python execution so the model can calculate math and inspect CSV files accurately.
+
+Having all of these capabilities in one browser tab lets product teams prototype complete multimodal workflows in an afternoon. For example, you can upload a raw product demo video, ask Gemini to write a clean script, generate a matching voiceover, and produce thumbnail concepts without switching between five disconnected platforms.
 
 ---
 
 ## One-Click Export to the Google GenAI Python SDK
 
-Once your prompt gives consistent answers, click Get Code at the top of the Playground. AI Studio writes clean starter code for Python, JavaScript, or REST using the current google-genai library documented in the Gemini API SDK guide.
+Once your prompt, system instructions, and JSON schema behave reliably in AI Studio, click the 'Get code' button to generate a clean starter script. Google has standardized developer access around the modern google-genai Python SDK, which replaces older legacy libraries with a single client interface for both the Gemini Developer API and Vertex AI.
 
-Here is a practical Python example showing system instructions, a strict Pydantic JSON schema, and safety settings exported directly into production code:
+When moving exported code into production, always remove hardcoded API keys and read GEMINI_API_KEY from environment variables or a secret manager. Store your system instructions in a version-controlled text or Markdown file rather than burying long multi-line strings inside Python logic. That way, prompt updates go through normal code review just like any other software change.
 
-#### ``
+The example below shows a clean production wrapper exported from AI Studio and adapted with Pydantic validation, as recommended in the Google GenAI SDK documentation.
+
+#### `triage_client.py`
 ```python
 import os
+from pydantic import BaseModel
 from google import genai
 from google.genai import types
-from pydantic import BaseModel, Field
 
-# 1. Connect using your GEMINI_API_KEY environment variable
-client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
+class TicketTriage(BaseModel):
+    ticket_category: str
+    urgency: str
+    missing_information: list[str]
+    summary: str
 
-# 2. Define the exact JSON shape you want back
-class SupportTicketSummary(BaseModel):
-    category: str = Field(description="Billing, Technical, or Account")
-    urgency: str = Field(description="Low, Medium, or High")
-    short_summary: str = Field(description="One-sentence plain summary")
-    next_step: str = Field(description="Clear action for the support team")
+client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
-# 3. Apply system instructions, schema, and safety filters
-config = types.GenerateContentConfig(
-    system_instruction=(
-        "You are a customer support triage assistant. "
-        "Summarize each message clearly and return valid JSON only."
-    ),
-    response_mime_type="application/json",
-    response_schema=SupportTicketSummary,
-    temperature=0.2,
-    safety_settings=[
-        types.SafetySetting(
-            category=types.HarmCategory.HARM_CATEGORY_HATE_SPEECH,
-            threshold=types.HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
-        ),
-    ],
+system_rules = (
+    "You are a support triage assistant. Classify incoming tickets accurately. "
+    "Never guess account details that are not present in the message."
 )
 
-# 4. Run the request
 response = client.models.generate_content(
-    model="gemini-2.5-flash",
-    contents="Customer says their monthly invoice shows two charges for the same seat.",
-    config=config,
+    model="gemini-4-neon",
+    contents="Customer says checkout fails with error 502 after updating billing card.",
+    config=types.GenerateContentConfig(
+        system_instruction=system_rules,
+        response_mime_type="application/json",
+        response_schema=TicketTriage,
+        temperature=0.1,
+    ),
 )
 
 print(response.text)
 ```
 
-Because the schema is enforced at generation time, your backend can parse response.text directly without fragile string cleanup.
-
 ---
 
-## Step-by-Step Starter Tutorials
+## Common Prototyping Mistakes and How to Avoid Them
 
-### Tutorial: Turn a Prompt into a Structured JSON Script
+Even experienced engineers run into predictable traps when prototyping in AI Studio. The first mistake is testing with only one clean, idealized example. Real user data has typos, partial sentences, mixed languages, and missing fields. Always keep a small folder of messy, realistic test cases and run your prompt against all of them before exporting.
 
-1. Open aistudio.google.com and start a new prompt.
-2. Pick a fast Gemini Flash model in the right-hand panel.
-3. Add a short System Instruction defining the role and tone.
-4. Turn on Structured Output and list the exact JSON fields you need.
-5. Test three real customer or team inputs and check the token counter.
-6. Click Get Code, choose Python, and run it locally with your API key stored in an environment variable.
+The second mistake is ignoring token growth during multi-turn chats. AI Studio displays the exact input token count at the top of the workspace. Watch that number closely as you attach PDFs or long transcripts. If your application sends the same large reference manual on every request, plan to use context caching in the API so you do not reprocess identical input tokens repeatedly.
 
-### Tutorial: Test Audio, Image, and Video Tools Together
-
-1. Upload a short meeting audio clip to test ASR transcription and ask Gemini for three key takeaways.
-2. Use the built-in image tool (Imagen) to generate a matching slide visual from one takeaway.
-3. Test TTS voice output to turn the takeaways into a 30-second spoken recap for your team.
-4. Save the prompt in Google Drive so teammates can reuse the same settings.
-
----
-
-## Privacy, Free vs. Paid Tiers & Limits
-
-Before putting company data into Google AI Studio, keep three practical rules in mind:
-
-- Free Tier vs. Paid Tier Privacy: According to Google's Gemini API terms and privacy policy, free-tier prompts may be used to improve Google products. Link a paid Google Cloud billing account before testing private or customer data so your prompts are not used for model training.
-- Protect Your API Key: Never paste your Gemini API key into public frontend code or GitHub repos. Always keep keys on a backend server or in secure environment variables.
-- Set Budget Alerts: When moving from prototyping to live traffic, configure billing alerts and rate limits in Google Cloud so unexpected usage spikes never surprise your team.
+The third mistake is skipping regression checks when switching models. A prompt tuned for a heavy reasoning model may need slightly clearer step-by-step instructions when moved to a faster model like Gemini Hydrogen. Save your best test cases in a simple JSONL file and run an automated check every time you change either the prompt text or the target model name, following the patterns in the Gemini API cookbook.
 
 ---
 
 ## References
 
-1. Google AI Studio - Official browser workspace for Gemini prototyping, multimodal tools, and code export.
-2. Gemini API Quickstart - Official setup guide for API keys and the unified google-genai SDK.
-3. Structured Outputs Documentation - How to enforce JSON schemas and Pydantic models in Gemini replies.
-4. Gemini Developer API Pricing - Current token rates, free-tier limits, and context caching pricing.
-5. Gemini API SDKs and Libraries - Official client libraries for Python, TypeScript, Go, Java, and C#.
-6. Image Generation with Imagen - Guide to creating and editing images through the Gemini API.
-7. Video Generation with Veo - Guide to text-to-video and image-to-video workflows.
-8. Gemini API Additional Terms of Service - Official data handling and privacy differences between free and paid tiers.
+Official documentation, research papers, and developer guides referenced in this article:
+
+- Google AI Studio - Official browser workbench for prototyping prompts, schemas, and multimodal Gemini workflows.
+- Google Gemini API Documentation - Complete guides for system instructions, structured outputs, safety settings, and grounding.
+- Google GenAI Python SDK (GitHub) - Official Python client library for calling Gemini models in production.
+- Google Gemini Cookbook - Practical notebooks and production examples for multimodal and structured workflows.
 
 ---
 

@@ -4,21 +4,21 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Claude Skills: Custom Skill Engineering & Repositories | Thomas Cherickal</title>
-<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Author modular SKILL.md capability packs with YAML metadata, step-by-step protocols, and helper scripts, covering progressive disclosure, skill composition, testing conventions, and repository organization." name="description"/>
+<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Author modular SKILL.md capability packs with YAML metadata, step-by-step protocols, helper scripts, progressive disclosure, and testing conventions." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
 <link href="https://thedigitalfuturist.com/claude-training/claude-skills.html" rel="canonical"/>
 <!-- Open Graph -->
 <meta content="article" property="og:type"/>
 <meta content="https://thedigitalfuturist.com/claude-training/claude-skills.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
-<meta content="Claude Skills: Custom Skill Engineering &amp;amp; Repositories | Thomas Cherickal" property="og:title"/>
-<meta content="Author modular SKILL.md capability packs with YAML metadata, step-by-step protocols, and helper scripts, covering progressive disclosure, skill composition, testing conventions, and repository organization." property="og:description"/>
+<meta content="Claude Skills: Custom Skill Engineering &amp; Repositories | Thomas Cherickal" property="og:title"/>
+<meta content="Author modular SKILL.md capability packs with YAML metadata, step-by-step protocols, helper scripts, progressive disclosure, and testing conventions." property="og:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@thomazcherickal" name="twitter:site"/>
-<meta content="Claude Skills: Custom Skill Engineering &amp;amp; Repositories | Thomas Cherickal" name="twitter:title"/>
+<meta content="Claude Skills: Custom Skill Engineering &amp; Repositories | Thomas Cherickal" name="twitter:title"/>
 <meta content="How Claude skills work, how to write your own SKILL.md, the skills that already exist across Claude and the open Agent Skills standard, and what this extensibility means for automation and work." property="twitter:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
 <!-- Favicons -->
@@ -44,13 +44,13 @@
         "url": "https://thedigitalfuturist.com/claude-training/claude-skills.html",
         "name": "Claude Skills: Custom Skill Engineering &amp; Repositories | Thomas Cherickal"
       },
-      "headline": "Claude Skills: Custom Skill Engineering &amp; Repositories",
-      "description": "Author modular SKILL.md capability packs with YAML metadata, step-by-step protocols, and helper scripts, covering progressive disclosure, skill composition, testing conventions, and repository organization.",
+      "headline": "Claude Skills: Custom Skill Engineering & Repositories",
+      "description": "Author modular SKILL.md capability packs with YAML metadata, step-by-step protocols, helper scripts, progressive disclosure, and testing conventions.",
       "image": [
         "https://thedigitalfuturist.com/assets/og-card.png"
       ],
       "datePublished": "2026-10-22T00:00:00+05:30",
-      "dateModified": "2026-11-20T12:00:00+05:30",
+      "dateModified": "2026-11-21T12:00:00+05:30",
       "inLanguage": "en-US",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -85,10 +85,10 @@
       "articleSection": "Agent Skills & Procedures",
       "keywords": [
         "Claude Skills",
-        "SKILL.md",
+        "SKILL.md Authoring",
         "Progressive Disclosure",
-        "Skill Composition",
-        "Custom AI Workflows"
+        "Helper Scripts",
+        "Skill Repositories"
       ]
     },
     {
@@ -130,8 +130,7 @@
 <link href="../css/responsive.css" rel="stylesheet"/>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-  <!-- START:HEADER -->
+<!-- START:HEADER -->
   <nav aria-label="Main navigation">
     <a href="../index.html" class="nav-brand"><img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo"
         class="nav-brand-logo" width="20" height="20">Thomas Cherickal</a>
@@ -308,120 +307,169 @@
   <!-- END:HEADER -->
 
 <main id="main">
-<header class="hero content-card" style="background:#000000;">
-<div class="hero-badge content-card">Agentic AI · Skills Architecture</div>
+<header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">CLAUDE SKILLS</div>
 <h1>Claude Skills: Custom Skill Engineering & Repositories</h1>
-<div class="title-tags" aria-label="Article topics"><span class="title-tag">Claude Skills</span><span class="title-tag">SKILL.md Packs</span><span class="title-tag">Progressive Disclosure</span><span class="title-tag">Workflow Reliability</span></div>
-<p class="hero-desc">Learn how to author modular SKILL.md capability packs with YAML metadata, clear step-by-step protocols, and bundled helper scripts. Covers progressive disclosure, skill composition, testing conventions, and clean repository organization so Claude executes specialized team workflows reliably on demand.</p>
-<div class="hero-byline content-card">By <strong>Thomas Cherickal</strong>, Generative AI Consultant · October 22, 2026</div>
+<div class="title-tags" aria-label="Article topics"><span class="title-tag">Claude Skills</span><span class="title-tag">SKILL.md Authoring</span><span class="title-tag">Progressive Disclosure</span><span class="title-tag">Helper Scripts</span><span class="title-tag">Skill Repositories</span></div>
+<p class="hero-desc">Author modular SKILL.md capability packs with YAML metadata, step-by-step protocols, and bundled helper scripts. Learn progressive disclosure, skill composition, testing conventions, and repository organization so Claude executes specialized team workflows reliably on demand.</p>
+<p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body">
-<div aria-label="Table of contents" class="content-card toc-card" style="background:#000000;">
-<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">If you find yourself pasting the same 40-line checklist into Claude every week, it belongs in a Skill. A Claude Skill is a small, self-contained folder centered on a SKILL.md file that teaches Claude a repeatable workflow - complete with trigger metadata, step-by-step instructions, and optional helper scripts - loaded only when the task actually needs it.</p>
+<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Every team has specialized procedures - how to audit a database migration, how to format a compliance report, or how to debug a flaky CI pipeline. Stuffing all of those procedures into one giant system prompt wastes tokens and confuses the model. Claude Skills solve this with progressive disclosure: modular SKILL.md folders that stay lightweight until the exact moment a task needs them.</p>
 <div class="rule"></div>
 <h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
 <ol class="toc-list">
-<li><a class="gold-link" href="#what-a-skill-is">What a Claude Skill Is and How Progressive Disclosure Works</a></li>
-<li><a class="gold-link" href="#anatomy-of-skill-md">Anatomy of a Clean SKILL.md Pack</a></li>
-<li><a class="gold-link" href="#skill-composition-and-repo">Composing Skills and Organizing a Team Skill Repository</a></li>
-<li><a class="gold-link" href="#testing-conventions">Testing Skills Before Sharing Them with Your Team</a></li>
-<li><a class="gold-link" href="#skill-example">Complete Ready-to-Use SKILL.md Example</a></li>
+<li><a class="gold-link" href="#anatomy-of-a-skill">Anatomy of a Modular SKILL.md Capability Pack</a></li>
+<li><a class="gold-link" href="#authoring-skill-md-and-scripts">Writing Crisp SKILL.md Protocols and Helper Scripts</a></li>
+<li><a class="gold-link" href="#composition-testing-and-repo-organization">Skill Composition, Testing Conventions, and Repository Layout</a></li>
+<li><a class="gold-link" href="#skill-pitfalls">Common Skill Engineering Pitfalls</a></li>
+<li><a class="gold-link" href="#step-by-step-skill-workflow">Step-by-Step: From Repeated Prompt to Production Skill</a></li>
+<li><a class="gold-link" href="#real-world-skill-examples">High-Leverage Skill Examples for Engineering and Business Teams</a></li>
+<li><a class="gold-link" href="#scaling-and-maintaining-skills">Maintaining a Clean, High-Trust Team Skill Library</a></li>
+<li><a class="gold-link" href="#skills-faq">Frequently Asked Questions on Claude Skills</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
 </div>
 
-<div class="content-card" style="background:#000000;">
-<h2 id="what-a-skill-is">What a Claude Skill Is and How Progressive Disclosure Works</h2>
-<p class="article-p">Loading every company handbook into every chat wastes tokens and confuses the model. <a class="gold-link" href="#references">Claude Skills</a> use <strong>progressive disclosure</strong>: Claude first scans only the short YAML title and description of each available skill. Only when your request matches a skill does Claude read the full <code>SKILL.md</code> instructions and run any bundled helper scripts.</p>
-<figure class="article-figure" style="background:#000000;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:1.25rem;margin:1.5rem 0;text-align:center;">
-<svg viewBox="0 0 760 280" width="100%" role="img" aria-label="Progressive Disclosure in Claude Skills" xmlns="http://www.w3.org/2000/svg">
-  <rect width="760" height="280" fill="#000000" rx="10"/>
-  <text x="380" y="34" fill="#fbbf24" font-size="18" font-weight="700" text-anchor="middle" font-family="sans-serif">Progressive Disclosure: Loading Skills On Demand</text>
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="anatomy-of-a-skill">Anatomy of a Modular SKILL.md Capability Pack</h2>
 
-  <rect x="35" y="76" width="205" height="122" rx="8" fill="#000000" stroke="#fbbf24" stroke-width="2"/>
-  <text x="137" y="106" fill="#fbbf24" font-size="13" font-weight="700" text-anchor="middle" font-family="sans-serif">Layer 1: Metadata Scan</text>
-  <text x="137" y="134" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Short YAML name &amp; trigger</text>
-  <text x="137" y="158" fill="#34d399" font-size="12" text-anchor="middle" font-family="sans-serif">Tiny token footprint</text>
+<p class="article-p">A <a class="gold-link" href="#references">Claude Skill</a> is a self-contained folder centered on a single <code>SKILL.md</code> file. At the top sits a tiny YAML frontmatter block with two fields: <code>name</code> and <code>description</code>. Below the frontmatter live the step-by-step protocol, decision trees, edge-case rules, and pointers to optional bundled resources inside <code>scripts/</code>, <code>references/</code>, or <code>examples/</code>.</p>
+<p class="article-p">This structure enables <strong>progressive disclosure</strong>: at startup, Claude only reads the short YAML name and description of available skills (a few dozen tokens each). Only when a user's request matches a skill's description does Claude load the full <code>SKILL.md</code> instructions and invoke its helper scripts.</p>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+flowchart TD
+    U["User Request Arrives"] --> D["Scan Lightweight YAML Metadata
+(Name + Trigger Description Only)"]
+    D --> M{"Matches Specialized Skill?"}
+    M -->|"No"| G["Handle with Standard Context"]
+    M -->|"Yes"| L["Load Full SKILL.md Protocol"]
+    L --> S["Run Bundled Helper Scripts
+& Check References"]
+    S --> O["Deliver Standardized Team Output"]
 
-  <line x1="240" y1="137" x2="278" y2="137" stroke="#38bdf8" stroke-width="2.5"/>
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    classDef purple fill:#000000,stroke:#c084fc,stroke-width:2px,color:#f8fafc
 
-  <rect x="278" y="76" width="205" height="122" rx="8" fill="#000000" stroke="#38bdf8" stroke-width="2"/>
-  <text x="380" y="106" fill="#38bdf8" font-size="13" font-weight="700" text-anchor="middle" font-family="sans-serif">Layer 2: SKILL.md Body</text>
-  <text x="380" y="134" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Loaded only when matched</text>
-  <text x="380" y="158" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Step-by-step protocol</text>
+    class U,O gold
+    class D,M purple
+    class L,S cyan
+    class G emerald
+</div><p style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;text-align:center;">Progressive disclosure keeps everyday prompts lean while loading deep expertise strictly on demand.</p></div>
+</section>
 
-  <line x1="483" y1="137" x2="520" y2="137" stroke="#c084fc" stroke-width="2.5"/>
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="authoring-skill-md-and-scripts">Writing Crisp SKILL.md Protocols and Helper Scripts</h2>
 
-  <rect x="520" y="76" width="205" height="122" rx="8" fill="#000000" stroke="#c084fc" stroke-width="2"/>
-  <text x="622" y="106" fill="#c084fc" font-size="13" font-weight="700" text-anchor="middle" font-family="sans-serif">Layer 3: Helper Scripts</text>
-  <text x="622" y="134" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">scripts/ &amp; references/</text>
-  <text x="622" y="158" fill="#34d399" font-size="12" text-anchor="middle" font-family="sans-serif">Deterministic checks</text>
-
-  <text x="380" y="238" fill="#94a3b8" font-size="12" text-anchor="middle" font-family="sans-serif">Keep dozens of team skills installed without bloating every conversation.</text>
-</svg>
-<figcaption style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;">How progressive disclosure keeps context lean while letting Claude master dozens of specialized workflows.</figcaption>
-</figure>
-</div>
-
-<div class="content-card" style="background:#000000;">
-<h2 id="anatomy-of-skill-md">Anatomy of a Clean SKILL.md Pack</h2>
-<p class="article-p">Following the <a class="gold-link" href="#references">Agent Skills open specification</a>, every skill folder stays simple and readable:</p>
-<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.5rem;">
-<li><code>SKILL.md</code> - Required main file with YAML frontmatter (<code>name</code> and <code>description</code>) and clear numbered workflow steps.</li>
-<li><code>scripts/</code> - Optional Python or Bash helpers for deterministic checks (like validating CSVs or linting output).</li>
-<li><code>references/</code> - Optional longer templates or policy tables read only when needed.</li>
-</ul>
-</div>
-
-<div class="content-card" style="background:#000000;">
-<h2 id="skill-composition-and-repo">Composing Skills and Organizing a Team Skill Repository</h2>
-<p class="article-p">Small, single-purpose skills compose far better than giant do-everything manuals. Build one skill for <em>weekly-release-notes</em>, another for <em>sql-safety-check</em>, and a third for <em>brand-copy-audit</em>. Store them under a clean folder hierarchy in Git (for example, <code>skills/&lt;skill-name&gt;/SKILL.md</code>) with clear kebab-case names so teammates can discover and contribute improvements through normal pull requests.</p>
-</div>
-
-<div class="content-card" style="background:#000000;">
-<h2 id="testing-conventions">Testing Skills Before Sharing Them with Your Team</h2>
-<p class="article-p">Before rolling a skill out to colleagues, run three quick checks: test that the YAML description triggers reliably on real user phrasing (and does not trigger by accident on unrelated prompts), run any bundled helper scripts against sample edge-case inputs, and confirm the final output matches your team's quality checklist on at least three realistic examples.</p>
-</div>
-
-<div class="content-card" style="background:#000000;">
-<h2 id="skill-example">Complete Ready-to-Use SKILL.md Example</h2>
-<p class="article-p">Save this file as <code>skills/release-notes/SKILL.md</code> to give any teammate a consistent, automated release-note workflow.</p>
-<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
-<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
-<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">skills/release-notes/SKILL.md</span>
-<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
-</div>
-<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>---
-name: release-notes
-description: Turn merged pull requests or git commit logs into plain-English customer release notes. Use when preparing a product release or weekly changelog.
+<p class="article-p">The secret to a reliable skill is writing a clear trigger description in the YAML frontmatter and pairing plain-English steps with deterministic helper scripts. Offload anything that requires exact arithmetic, regex validation, or file parsing to a small Python or Bash script in <code>scripts/</code>, and let <code>SKILL.md</code> focus on judgment, sequencing, and reporting.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Example SKILL.md with YAML Frontmatter</span><span>Markdown</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>---
+name: sql-migration-reviewer
+description: Review SQL schema migrations for locking risks, missing indexes, and rollback safety. Use whenever the user asks to review, audit, or validate a database migration file.
 ---
 
-# Release Notes Protocol
+# SQL Migration Review Protocol
 
-1. Read the provided commit log or PR list carefully.
-2. Group changes into three plain-English buckets:
-   - New Features
-   - Improvements
-   - Bug Fixes
-3. Rewrite internal developer jargon into clear customer benefits.
-4. Flag any breaking change in a bold callout at the top.
-5. Never invent features that do not appear in the provided log.</code></pre>
-</div>
-</div>
+1. Read the target `.sql` migration file completely.
+2. Run `python3 scripts/check_locks.py &lt;file&gt;` to detect blocking `ALTER TABLE` operations.
+3. Verify that every `CREATE TABLE` or `ADD COLUMN` change includes a matching rollback plan.
+4. Report findings grouped by severity: Blocker, Warning, and Info.
+5. Never execute the migration against a live database.</code></pre></div>
+</section>
 
-<div class="content-card" style="background:#000000;">
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="composition-testing-and-repo-organization">Skill Composition, Testing Conventions, and Repository Layout</h2>
+
+<p class="article-p">Keep each skill focused on one cohesive job so skills can compose cleanly. For example, a release workflow might invoke a <code>changelog-writer</code> skill followed by a <code>sql-migration-reviewer</code> skill without either skill knowing the internals of the other.</p>
+<p class="article-p">Organize your team's skill repository with a clean, predictable directory layout and test every skill before merging changes: verify that realistic user prompts trigger the right skill, confirm out-of-scope prompts do NOT trigger it, and run unit tests on every helper script under <code>scripts/</code>.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Clean Team Skill Repository Layout</span><span>Text</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>team-skills/
+├── sql-migration-reviewer/
+│   ├── SKILL.md
+│   ├── scripts/check_locks.py
+│   └── examples/safe-migration.sql
+├── incident-postmortem/
+│   ├── SKILL.md
+│   └── references/postmortem-template.md
+└── tests/
+    └── test_skill_scripts.py</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="skill-pitfalls">Common Skill Engineering Pitfalls</h2>
+
+<p class="article-p">Avoid writing vague trigger descriptions like "helps with coding," which cause Claude to load the skill on unrelated tasks. Keep <code>SKILL.md</code> concise (under 250 lines) by moving bulky reference tables into <code>references/</code>, and review skills quarterly to retire outdated procedures.</p>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+graph TD
+    A["Draft SKILL.md + Helper Script"] --> T1["Test Positive Trigger Prompts"]
+    T1 --> T2["Test Negative (Non-Matching) Prompts"]
+    T2 --> T3["Run Unit Tests on scripts/"]
+    T3 -->|"All Pass"| M["Merge to Shared Skill Repo"]
+    T3 -->|"Fail"| A
+
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+
+    class A,M gold
+    class T1,T2 cyan
+    class T3 emerald
+</div><p style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;text-align:center;">Testing both positive triggers and negative boundaries ensures skills activate only when needed.</p></div>
+</section>
+
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="step-by-step-skill-workflow">Step-by-Step: From Repeated Prompt to Production Skill</h2>
+
+<p class="article-p">The best Claude Skills are not invented in a vacuum - they are distilled from real workflows your team already runs every week. Follow this five-step engineering loop:</p>
+<ol class="article-p" style="padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Capture a Working Session:</strong> Start with a real task where you guided Claude through a specialized procedure - such as auditing a Terraform plan, preparing a WCAG accessibility report, or migrating a legacy API endpoint.</li>
+<li><strong>Extract the Stable Protocol:</strong> Strip out one-off project details and write down the repeatable 5 to 8 steps in plain, imperative English inside <code>SKILL.md</code>.</li>
+<li><strong>Offload Deterministic Checks to Scripts:</strong> Move any counting, regex matching, schema validation, or file diffing into a small, tested script inside <code>scripts/</code> so Claude invokes exact code instead of guessing.</li>
+<li><strong>Sharpen the YAML Trigger Description:</strong> Write a concrete <code>description</code> stating both when to activate the skill and when NOT to activate it.</li>
+<li><strong>Verify with Positive and Negative Tests:</strong> Test the skill on three real matching requests and two unrelated requests to confirm crisp activation and consistent output formatting.</li>
+</ol>
+
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="real-world-skill-examples">High-Leverage Skill Examples for Engineering and Business Teams</h2>
+
+<p class="article-p">Teams quickly build high-value internal skill libraries around recurring specialist tasks: a <strong>Database Migration Reviewer</strong> that checks lock safety and rollback scripts, a <strong>Security Threat-Modeler</strong> that walks new features through OWASP checklists, a <strong>Release Notes Composer</strong> that turns merged PRs into customer-friendly updates, and a <strong>Brand Copy Editor</strong> that enforces company terminology and plain-English clarity. Because progressive disclosure only loads a skill when relevant, you can maintain dozens of specialist skills without ever bloating everyday conversations.</p>
+
+</section>
+
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="scaling-and-maintaining-skills">Maintaining a Clean, High-Trust Team Skill Library</h2>
+
+<p class="article-p">A small library of ten crisp, well-tested skills outperforms a messy folder of eighty overlapping prompt files every single time. Establish three simple maintenance rules for your team's skill repository: every skill must have a single clear owner, every bundled script in <code>scripts/</code> must pass automated unit tests in CI, and every <code>SKILL.md</code> must stay focused on one domain procedure with clear boundaries on when NOT to trigger.</p>
+<p class="article-p">When a team process changes - for example, a new deployment checklist or updated API style rule - update the corresponding <code>SKILL.md</code> in the very same pull request as the code change. That way, your skills stay permanently synchronized with real engineering practice, and every new hire inherits senior-level operational workflows on their very first day.</p>
+
+</section>
+
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="skills-faq">Frequently Asked Questions on Claude Skills</h2>
+<p class="article-p"><strong>How is a Claude Skill different from a standard system prompt?</strong> A system prompt loads on every single turn whether you need it or not. A Claude Skill uses progressive disclosure - only its short YAML name and description stay in memory until a matching request arrives, keeping everyday prompts lean and focused.</p>
+<p class="article-p"><strong>What makes a skill fail to trigger reliably?</strong> Vague descriptions are the number-one cause. Write concrete trigger phrases in the YAML <code>description</code> field, list explicit file types or task patterns that should activate the skill, and test both positive and negative prompts before sharing with your team.</p>
+
+<p class="article-p"><strong>Can one Claude Skill call another skill or external MCP tool?</strong> Yes. A skill protocol can reference approved MCP tools or advise Claude to hand off a subtask to a complementary skill when clear boundaries exist. Keep each skill focused on a single domain responsibility so workflows remain modular, readable, and easy to test as your team grows.</p>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
-<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/agents-and-tools/agent-skills/overview" rel="noopener noreferrer" target="_blank">Anthropic Agent Skills Documentation</a> - Official guide to authoring SKILL.md packs, progressive disclosure, and helper scripts.</li>
-<li><a class="gold-link" href="https://github.com/anthropics/skills" rel="noopener noreferrer" target="_blank">Anthropic Official Skills Repository</a> - Reference examples of production SKILL.md packs and repository layout conventions.</li>
-<li><a class="gold-link" href="https://agentskills.io/" rel="noopener noreferrer" target="_blank">Agent Skills Open Standard</a> - Portable specification for reusable YAML + Markdown skill directories.</li>
-<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/skills" rel="noopener noreferrer" target="_blank">Claude Code Skills Reference</a> - How Claude Code discovers and executes workspace and personal skills.</li>
+<li><a class="gold-link" href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" rel="noopener noreferrer" target="_blank">Anthropic Agent Skills Engineering Guide</a> - Official architecture guide to SKILL.md files, progressive disclosure, and bundled scripts.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" rel="noopener noreferrer" target="_blank">Anthropic Prompt Engineering Best Practices</a> - Writing clear, unambiguous step-by-step protocols for Claude.</li>
+<li><a class="gold-link" href="https://yaml.org/spec/1.2.2/" rel="noopener noreferrer" target="_blank">YAML 1.2 Specification</a> - Syntax reference for clean SKILL.md frontmatter metadata.</li>
+<li><a class="gold-link" href="https://docs.python.org/3/library/unittest.html" rel="noopener noreferrer" target="_blank">Python unittest Documentation</a> - Standard testing framework for verifying helper scripts bundled inside skills.</li>
 </ol>
-</div>
+</section>
 </article>
 
-<section class="cta-banner">
+<section class="cta-banner" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Scale Your Business AI Agents with Custom Production Skills</h3>
 <p style="color:#94a3b8;font-size:1.02rem;max-width:680px;margin:0 auto 1.75rem;line-height:1.7;">Architect resilient skill repositories, custom prompt injection harnesses, and multi-model agentic workflows tailored for your organization's unique domain.</p>
 <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
@@ -432,7 +480,7 @@ description: Turn merged pull requests or git commit logs into plain-English cus
 </section>
 </main>
 
-    <!-- START:FOOTER -->
+<!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
@@ -723,15 +771,6 @@ description: Turn merged pull requests or git commit logs into plain-English cus
   </footer>
     <!-- END:FOOTER -->
 <script src="../components.js"></script>
-<script>
-function copyCode(btn) {
-  const code = btn.closest(".code-window").querySelector("code").innerText;
-  navigator.clipboard.writeText(code).then(() => {
-    const orig = btn.innerText;
-    btn.innerText = "Copied";
-    setTimeout(() => { btn.innerText = orig; }, 1800);
-  });
-}
-</script>
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
 </body>
 </html>

@@ -4629,12 +4629,13 @@ figure,
   max-width: 100%;
 }
 
-/* Gold borders for ToC, CTA banners, and highlighted boxes */
+/* Gold borders for content cards, ToC, CTA banners, and highlighted boxes */
+.content-card,
 .toc-card,
 .cta-banner,
 .cta-box {
   background: #000000 !important;
-  border: 1.5px solid rgba(251, 191, 36, 0.42) !important;
+  border: 1.5px solid rgba(251, 191, 36, 0.45) !important;
   box-shadow: 0 0 18px rgba(251, 191, 36, 0.14);
   border-radius: 14px;
   box-sizing: border-box;
@@ -4731,7 +4732,7 @@ header.hero .title-tags {
   display: inline-block;
   background: #000000 !important;
   border: 1.5px solid #fbbf24 !important;
-  color: #fbbf24 !important;
+  color: #ffffff !important;
   font-family: var(--font-mono, monospace);
   font-size: 0.78rem;
   font-weight: 600;

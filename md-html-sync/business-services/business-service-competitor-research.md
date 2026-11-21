@@ -1,7 +1,7 @@
 # Competitor Research & Intelligence
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// BUSINESS SERVICE - MARKET & COMPETITOR INTELLIGENCE**  
+> **// BUSINESS SERVICE - COMPETITOR RESEARCH & INTELLIGENCE**  
 > **Business transformation, verification, and implementation.**
 
 ---

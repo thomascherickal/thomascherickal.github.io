@@ -1,7 +1,7 @@
 # Local LLMs & Cost Slashing
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// PERSONAL SERVICE SPECIFICATION - ZERO-API-COST LOCAL MODELS**  
+> **// PERSONAL SERVICE - ZERO-API-COST LOCAL INFERENCE**  
 > **Business transformation, verification, and implementation.**
 
 ---

@@ -1,7 +1,7 @@
 # Generative AI Transformation
 ## Business AI Transformation Service - Thomas Cherickal
 
-> **// PERSONAL SERVICE SPECIFICATION - PERSONAL COGNITIVE OPERATING SYSTEM**  
+> **// PERSONAL SERVICE - PERSONAL COGNITIVE OPERATING SYSTEM**  
 > **Business transformation, verification, and implementation.**
 
 ---

@@ -4,22 +4,22 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Claude 101: Architecture, Features & Agentic Engineering | Thomas Cherickal</title>
-<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. A clear foundation guide to Anthropic's Claude ecosystem covering core model families, prompt caching, tool calling, Computer Use, Claude Code, and multi-agent engineering patterns." name="description"/>
+<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. A practical foundation guide to Anthropic&#x27;s Claude ecosystem covering model tiers, prompt caching, tool calling, Computer Use, Claude Code, and multi-agent engineering." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
 <link href="https://thedigitalfuturist.com/claude-training/claude-101.html" rel="canonical"/>
 <!-- Open Graph -->
 <meta content="article" property="og:type"/>
 <meta content="https://thedigitalfuturist.com/claude-training/claude-101.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
-<meta content="Claude 101: Architecture, Features &amp;amp; Agentic Engineering | Thomas Cherickal" property="og:title"/>
-<meta content="A clear foundation guide to Anthropic's Claude ecosystem covering core model families, prompt caching, tool calling, Computer Use, Claude Code, and multi-agent engineering patterns." property="og:description"/>
+<meta content="Claude 101: Architecture, Features &amp; Agentic Engineering | Thomas Cherickal" property="og:title"/>
+<meta content="A practical foundation guide to Anthropic&#x27;s Claude ecosystem covering model tiers, prompt caching, tool calling, Computer Use, Claude Code, and multi-agent engineering." property="og:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@thomazcherickal" name="twitter:site"/>
-<meta content="Claude 101: Architecture, Features &amp;amp; Agentic Engineering | Thomas Cherickal" name="twitter:title"/>
-<meta content="A clear foundation guide to Anthropic's Claude ecosystem covering core model families, prompt caching, tool calling, Computer Use, Claude Code, and multi-agent engineering patterns." name="twitter:description"/>
+<meta content="Claude 101: Architecture, Features &amp; Agentic Engineering | Thomas Cherickal" name="twitter:title"/>
+<meta content="A practical foundation guide to Anthropic&#x27;s Claude ecosystem covering model tiers, prompt caching, tool calling, Computer Use, Claude Code, and multi-agent engineering." name="twitter:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
 <!-- Favicons -->
 <link href="../assets/favicon.ico" rel="icon" sizes="any"/>
@@ -52,13 +52,13 @@
         "url": "https://thedigitalfuturist.com/claude-training/claude-101.html",
         "name": "Claude 101: Architecture, Features &amp; Agentic Engineering | Thomas Cherickal"
       },
-      "headline": "Claude 101: Architecture, Features &amp; Agentic Engineering",
-      "description": "A clear foundation guide to Anthropic's Claude ecosystem covering core model families, prompt caching, tool calling, Computer Use, Claude Code, and multi-agent engineering patterns.",
+      "headline": "Claude 101: Architecture, Features & Agentic Engineering",
+      "description": "A practical foundation guide to Anthropic's Claude ecosystem covering model tiers, prompt caching, tool calling, Computer Use, Claude Code, and multi-agent engineering.",
       "image": [
         "https://thedigitalfuturist.com/assets/og-card.png"
       ],
       "datePublished": "2026-10-22T00:00:00+05:30",
-      "dateModified": "2026-11-20T12:00:00+05:30",
+      "dateModified": "2026-11-21T12:00:00+05:30",
       "inLanguage": "en-US",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -93,12 +93,10 @@
       "articleSection": "Generative AI",
       "keywords": [
         "Claude 101",
-        "Anthropic Claude Ecosystem",
+        "Model Architecture",
         "Prompt Caching",
         "Tool Calling",
-        "Computer Use",
-        "Claude Code",
-        "Multi-Agent Patterns"
+        "Agentic Systems"
       ]
     },
     {
@@ -131,8 +129,7 @@
 <link href="../css/responsive.css" rel="stylesheet"/>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-  <!-- START:HEADER -->
+<!-- START:HEADER -->
   <nav aria-label="Main navigation">
     <a href="../index.html" class="nav-brand"><img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo"
         class="nav-brand-logo" width="20" height="20">Thomas Cherickal</a>
@@ -309,119 +306,199 @@
   <!-- END:HEADER -->
 
 <main id="main">
-<header class="hero content-card" style="background:#000000;">
-<div class="hero-badge content-card">ANTHROPIC CLAUDE 101</div>
+<header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">ANTHROPIC CLAUDE 101</div>
 <h1>Claude 101: Architecture, Features & Agentic Engineering</h1>
-<div class="title-tags" aria-label="Article topics"><span class="title-tag">Claude 101</span><span class="title-tag">Model Ecosystem</span><span class="title-tag">Tool Calling &amp; Caching</span><span class="title-tag">Agentic Engineering</span></div>
-<p class="hero-desc">A clear, practical foundation guide to Anthropic's Claude ecosystem, covering core model capabilities, prompt caching, tool calling, Computer Use, Claude Code, and multi-agent engineering patterns. Built for developers, architects, and business leaders moving from casual chat to reliable production systems.</p>
-<p class="hero-byline">By <strong>Thomas Cherickal</strong> · Generative AI Consultant &amp; The Digital Futurist</p>
+<div class="title-tags" aria-label="Article topics"><span class="title-tag">Claude 101</span><span class="title-tag">Model Architecture</span><span class="title-tag">Prompt Caching</span><span class="title-tag">Tool Calling</span><span class="title-tag">Agentic Systems</span></div>
+<p class="hero-desc">A practical foundation guide to Anthropic's Claude ecosystem, covering core model capabilities, prompt caching, tool calling, Computer Use, Claude Code, and multi-agent engineering patterns. Built for developers and architects moving from casual prompting to reliable production systems.</p>
+<p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body">
-<div aria-label="Table of contents" class="content-card toc-card" style="background:#000000;">
-<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Many people first meet Claude as a helpful chat window, yet the real power of Anthropic's platform is a connected stack of models, memory tools, coding agents, and desktop controls. This foundation guide walks through every core piece of the Claude ecosystem in plain English so you know which model to pick, how to cut costs with caching, and how to build reliable agentic workflows.</p>
+<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Many teams first meet Claude as a chat window for drafting emails or summarizing notes, yet the real strength of Anthropic's platform is a connected engineering stack. Behind the chat interface sit three distinct model tiers, long context windows with prompt caching, structured tool calling, local workstation controls, and autonomous coding workflows. This guide explains every layer in plain English so you can choose the right model, avoid common failure modes, and build dependable systems that hold up under real business workloads.</p>
 <div class="rule"></div>
 <h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
 <ol class="toc-list">
-<li><a class="gold-link" href="#claude-model-family">The Claude Model Family: Picking the Right Tier</a></li>
+<li><a class="gold-link" href="#model-tiers-and-routing">The Claude Model Family and Smart Routing</a></li>
 <li><a class="gold-link" href="#prompt-caching-and-context">Long Context Windows and Prompt Caching</a></li>
-<li><a class="gold-link" href="#tool-calling-and-mcp">Tool Calling and the Model Context Protocol (MCP)</a></li>
-<li><a class="gold-link" href="#computer-use-and-claude-code">Computer Use and Claude Code in Practice</a></li>
-<li><a class="gold-link" href="#multi-agent-patterns">Moving from Single Prompts to Reliable Agent Systems</a></li>
-<li><a class="gold-link" href="#starter-roadmap">A Practical 4-Week Adoption Roadmap</a></li>
+<li><a class="gold-link" href="#tool-calling-and-mcp">Tool Calling and the Model Context Protocol</a></li>
+<li><a class="gold-link" href="#computer-use-and-claude-code">Computer Use and Claude Code in Daily Engineering</a></li>
+<li><a class="gold-link" href="#agentic-workflows-and-failure-modes">Building Reliable Agent Systems and Avoiding Failure Modes</a></li>
+<li><a class="gold-link" href="#adoption-roadmap">A Practical Four-Week Adoption Roadmap</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
 </div>
 
-<div class="content-card" style="background:#000000;">
-<h2 id="claude-model-family">The Claude Model Family: Picking the Right Tier</h2>
-<p class="article-p">Anthropic organizes Claude into three clear tiers so you never overpay for simple jobs or underpower hard ones, as outlined in the <a class="gold-link" href="#references">Anthropic Models overview</a>:</p>
-<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.5rem;">
-<li><strong>Claude Haiku:</strong> Built for speed and low cost. Ideal for routing tickets, extracting fields from forms, summarizing short notes, and running high-volume background workers.</li>
-<li><strong>Claude Sonnet:</strong> The everyday workhorse balancing strong reasoning, coding quality, and practical speed. Most production apps and coding workflows start here.</li>
-<li><strong>Claude Opus (and Frontier Reasoning):</strong> Built for deep multi-step planning, tough debugging, legal or financial review, and long-horizon architecture work.</li>
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="model-tiers-and-routing">The Claude Model Family and Smart Routing</h2>
+
+<p class="article-p">Anthropic organizes Claude into three clear tiers so engineering teams can match task difficulty to speed and compute cost. Rather than sending every request to the heaviest model, strong teams build a simple routing habit from day one, guided by the <a class="gold-link" href="#references">Anthropic Models overview</a>.</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Claude Haiku:</strong> Designed for rapid responses and high-volume automation. Use it to classify support tickets, extract dates and invoice numbers from forms, route incoming chat messages, or run fast background checks across thousands of records.</li>
+<li><strong>Claude Sonnet:</strong> The everyday engineering workhorse. It balances careful reasoning, clean code generation, and responsive speed. Most production web apps, customer assistants, and daily coding sessions start here.</li>
+<li><strong>Claude Opus:</strong> Reserved for deep multi-step planning, tricky root-cause debugging, contract analysis, and architectural design where a single missed edge case would cost hours of rework.</li>
 </ul>
-<figure class="article-figure" style="background:#000000;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:1.25rem;margin:1.5rem 0;text-align:center;">
-<svg viewBox="0 0 760 320" width="100%" role="img" aria-label="Claude Ecosystem Architecture Diagram" xmlns="http://www.w3.org/2000/svg">
-  <rect width="760" height="320" fill="#000000" rx="10"/>
-  <text x="380" y="34" fill="#fbbf24" font-size="18" font-weight="700" text-anchor="middle" font-family="sans-serif">Anthropic Claude Ecosystem Stack</text>
+<p class="article-p">A common mistake among beginners is using one model for everything. If you use Claude Opus to sort simple JSON logs, your latency climbs and your API bill grows needlessly. Conversely, if you ask Claude Haiku to refactor a complex billing engine without clear constraints, it may miss subtle state transitions. A tiered router solves both problems: let Haiku inspect the incoming request, tag its complexity, and forward only the hard tasks to Sonnet or Opus.</p>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+flowchart TD
+    A["Incoming User or System Request"] --> B{"Complexity Classifier
+(Claude Haiku)"}
+    B -->|"Simple Extraction / Routing"| C["Fast Worker Path
+(Claude Haiku)"]
+    B -->|"Standard Coding / Analysis"| D["Production Path
+(Claude Sonnet)"]
+    B -->|"Deep Architecture / Audit"| E["Frontier Reasoning Path
+(Claude Opus)"]
+    C --> F["Schema & Policy Validator"]
+    D --> F
+    E --> F
+    F --> G["Verified Production Output"]
 
-  <rect x="40" y="56" width="210" height="68" rx="8" fill="#000000" stroke="#34d399" stroke-width="2"/>
-  <text x="145" y="84" fill="#34d399" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Claude Haiku</text>
-  <text x="145" y="106" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Fast &amp; Low-Cost Workers</text>
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    classDef purple fill:#000000,stroke:#c084fc,stroke-width:2px,color:#f8fafc
+    classDef rose fill:#000000,stroke:#f472b6,stroke-width:2px,color:#f8fafc
 
-  <rect x="275" y="56" width="210" height="68" rx="8" fill="#000000" stroke="#38bdf8" stroke-width="2"/>
-  <text x="380" y="84" fill="#38bdf8" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Claude Sonnet</text>
-  <text x="380" y="106" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Daily Coding &amp; Production</text>
+    class A,G gold
+    class B,D cyan
+    class C emerald
+    class E purple
+    class F rose
+</div><p style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;text-align:center;">Tiered model routing keeps response times fast while reserving deep reasoning for high-stakes tasks.</p></div>
+</section>
 
-  <rect x="510" y="56" width="210" height="68" rx="8" fill="#000000" stroke="#c084fc" stroke-width="2"/>
-  <text x="615" y="84" fill="#c084fc" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Claude Opus</text>
-  <text x="615" y="106" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Deep Planning &amp; Audits</text>
-
-  <rect x="40" y="150" width="680" height="62" rx="8" fill="#000000" stroke="#fbbf24" stroke-width="2"/>
-  <text x="380" y="176" fill="#fbbf24" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Core Platform Capabilities</text>
-  <text x="380" y="198" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Prompt Caching  |  Tool Calling &amp; MCP  |  Extended Thinking  |  Artifacts &amp; Projects</text>
-
-  <rect x="40" y="236" width="325" height="62" rx="8" fill="#000000" stroke="#f472b6" stroke-width="2"/>
-  <text x="202" y="262" fill="#f472b6" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Claude Code &amp; Desktop</text>
-  <text x="202" y="284" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Terminal, IDE, Local Files &amp; Computer Use</text>
-
-  <rect x="395" y="236" width="325" height="62" rx="8" fill="#000000" stroke="#34d399" stroke-width="2"/>
-  <text x="557" y="262" fill="#34d399" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Multi-Agent Workflows</text>
-  <text x="557" y="284" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Coordinator, Parallel Workers &amp; Verification</text>
-</svg>
-<figcaption style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;">How Claude's model tiers, core platform capabilities, and agentic tools fit together.</figcaption>
-</figure>
-</div>
-
-<div class="content-card" style="background:#000000;">
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="prompt-caching-and-context">Long Context Windows and Prompt Caching</h2>
-<p class="article-p">Claude can read huge collections of documents, code files, and transcripts in a single request. Normally, sending a 50-page manual over and over would be slow and expensive. <a class="gold-link" href="#references">Prompt caching</a> solves this by letting you mark large static blocks so Claude remembers them across repeated calls - slashing repeated input costs by up to 90 percent and speeding up response times.</p>
-</div>
 
-<div class="content-card" style="background:#000000;">
-<h2 id="tool-calling-and-mcp">Tool Calling and the Model Context Protocol (MCP)</h2>
-<p class="article-p">A language model by itself can only predict text. <a class="gold-link" href="#references">Tool calling</a> lets Claude request real actions - querying a database, checking weather or stock inventory, running a calculator, or creating a ticket - and then use the exact result to answer accurately.</p>
-<p class="article-p">Anthropic's open <a class="gold-link" href="#references">Model Context Protocol (MCP)</a> turns tool calling into a universal plug: build one MCP server for your database or CRM and reuse it across Claude Desktop, Claude Code, and your custom apps without rewriting integrations.</p>
-</div>
+<p class="article-p">Modern Claude models can read hundreds of pages of documentation, source code, or financial filings in a single call. That large context window is useful because you do not always need a complex vector database just to answer questions over a 100-page handbook. However, resending the same 80,000 tokens of background material on every user turn would be slow and expensive.</p>
+<p class="article-p"><a class="gold-link" href="#references">Anthropic Prompt Caching</a> solves this problem directly. You place your stable instructions, tool definitions, and reference documents at the top of the request and mark the end of that static block with a cache breakpoint. When the next request arrives within the cache window, Claude reuses the processed prefix instead of reading it from scratch. Teams regularly cut repeated input latency in half and reduce repeated input token costs by up to 90 percent.</p>
+<p class="article-p">To get the highest cache hit rate, follow a strict ordering rule: put system rules first, tool schemas second, large reference documents third, and dynamic user questions last. Never inject a changing timestamp or random request ID at the very top of your system prompt, because changing even one character near the start invalidates the entire cached prefix below it.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Prompt Caching Request Pattern</span><span>Python</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>import anthropic
 
-<div class="content-card" style="background:#000000;">
-<h2 id="computer-use-and-claude-code">Computer Use and Claude Code in Practice</h2>
-<p class="article-p">Two capabilities turn Claude from an advisor into a hands-on builder:</p>
-<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.5rem;">
-<li><strong>Claude Code:</strong> Works directly in your terminal and IDE to inspect repositories, edit multiple files together, run test suites, and prepare clean git commits under your approval.</li>
-<li><strong>Computer Use:</strong> Lets Claude view screens, click buttons, and fill forms in desktop or browser apps that do not have APIs - always inside clear safety sandboxes with human oversight.</li>
+client = anthropic.Anthropic()
+
+response = client.messages.create(
+    model=&quot;claude-sonnet-4-20250514&quot;,
+    max_tokens=1024,
+    system=[
+        {
+            &quot;type&quot;: &quot;text&quot;,
+            &quot;text&quot;: &quot;You are a concise architecture reviewer for internal APIs.&quot;
+        },
+        {
+            &quot;type&quot;: &quot;text&quot;,
+            &quot;text&quot;: open(&quot;docs/architecture-handbook.md&quot;).read(),
+            &quot;cache_control&quot;: {&quot;type&quot;: &quot;ephemeral&quot;}
+        }
+    ],
+    messages=[
+        {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;Review our retry policy for webhook deliveries.&quot;}
+    ]
+)
+print(response.usage)</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="tool-calling-and-mcp">Tool Calling and the Model Context Protocol</h2>
+
+<p class="article-p">A language model by itself can only predict text based on what it was trained on and what you paste into the prompt. <a class="gold-link" href="#references">Structured tool calling</a> turns Claude into an active participant in your software stack. You give Claude a list of available functions - such as looking up an order status, querying a read-only SQL view, or calculating a shipping rate - along with strict JSON input schemas. When Claude needs live facts, it pauses text generation and emits a structured tool call.</p>
+<p class="article-p">Your application executes that function safely on your own server, checks permissions, and hands the exact result back to Claude. Claude then writes a grounded answer using real data instead of guessing. To prevent glue-code sprawl, Anthropic introduced the open <a class="gold-link" href="#references">Model Context Protocol (MCP)</a>. Instead of writing separate connectors for every chat app and IDE, you build one MCP server for your database or issue tracker and plug it into Claude Desktop, Claude Code, and your own custom services.</p>
+<p class="article-p">Good tool design follows three plain rules: keep tool names obvious, write clear descriptions of when NOT to call a tool, and return short, structured error messages when an input is invalid so Claude can self-correct on the next turn.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Structured Tool Schema Definition</span><span>JSON</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>{
+  &quot;name&quot;: &quot;lookup_customer_order&quot;,
+  &quot;description&quot;: &quot;Fetch live order status by order_id. Do not guess IDs; ask the user if missing.&quot;,
+  &quot;input_schema&quot;: {
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;properties&quot;: {
+      &quot;order_id&quot;: {
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;pattern&quot;: &quot;^ORD-[0-9]{6}$&quot;,
+        &quot;description&quot;: &quot;Six-digit order identifier prefixed with ORD-&quot;
+      },
+      &quot;include_shipment_events&quot;: {
+        &quot;type&quot;: &quot;boolean&quot;,
+        &quot;default&quot;: false
+      }
+    },
+    &quot;required&quot;: [&quot;order_id&quot;]
+  }
+}</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="computer-use-and-claude-code">Computer Use and Claude Code in Daily Engineering</h2>
+
+<p class="article-p">Two hands-on capabilities separate Claude from passive chat assistants. The first is Claude Code, a terminal and IDE agent that reads your repository, plans multi-file edits, runs your unit tests, inspects stack traces, and prepares clean git diffs for your review. Because it runs right next to your compiler and test runner, it verifies its own work instead of handing you untested snippets.</p>
+<p class="article-p">The second capability is Computer Use. Many legacy business systems - older ERP portals, desktop accounting tools, or vendor dashboards - lack modern APIs. Computer Use allows Claude to inspect screenshots, move a cursor, click buttons, and type into forms inside a controlled virtual machine or browser sandbox. You should always pair Computer Use with explicit confirmation checkpoints before any action that sends money, deletes records, or emails external customers.</p>
+
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="agentic-workflows-and-failure-modes">Building Reliable Agent Systems and Avoiding Failure Modes</h2>
+
+<p class="article-p">Teams moving from prototypes to production quickly discover that one giant prompt rarely handles every edge case. As detailed in Anthropic's guide on <a class="gold-link" href="#references">building effective agents</a>, reliable systems break work into small, checkable stages. A typical production workflow separates planning, tool execution, and final verification so each step can be logged and tested independently.</p>
+<p class="article-p">Watch for four common failure modes when deploying Claude agents:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Runaway Loops:</strong> An agent repeats a failing tool call twenty times in a row. Always enforce a strict maximum step count and a per-task token cap.</li>
+<li><strong>Unverified Tool Inputs:</strong> Passing raw model output directly into a shell command or SQL query invites errors and security risks. Validate every parameter against a schema before execution.</li>
+<li><strong>Context Pollution:</strong> Dumping massive raw HTML or log files into conversation history crowds out important instructions. Summarize or filter tool outputs before appending them.</li>
+<li><strong>Missing Human Approval:</strong> Read-only tools can run automatically, but write actions - sending emails, merging code, updating billing - should require explicit human sign-off until trust is earned.</li>
 </ul>
-</div>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+graph TD
+    U["Task Goal & Constraints"] --> P["Planner Step
+(Break into Subtasks)"]
+    P --> T["Tool Execution Layer
+(MCP / APIs / Tests)"]
+    T --> V{"Automated Verification
+(Schema + Unit Tests)"}
+    V -->|"Fail (Under Step Limit)"| R["Inspect Error & Retry"]
+    R --> T
+    V -->|"Fail (Limit Reached)"| H["Escalate to Human"]
+    V -->|"Pass"| D["Deliver Verified Result"]
 
-<div class="content-card" style="background:#000000;">
-<h2 id="multi-agent-patterns">Moving from Single Prompts to Reliable Agent Systems</h2>
-<p class="article-p">Production teams rarely rely on one giant prompt. Instead, they chain small, verifiable steps: classify the incoming request with Claude Haiku, pull grounded facts via MCP tools, draft the solution with Claude Sonnet or Claude Opus, and validate the output against automated tests or strict JSON schemas before anything reaches a customer.</p>
-</div>
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    classDef purple fill:#000000,stroke:#c084fc,stroke-width:2px,color:#f8fafc
+    classDef rose fill:#000000,stroke:#f472b6,stroke-width:2px,color:#f8fafc
 
-<div class="content-card" style="background:#000000;">
-<h2 id="starter-roadmap">A Practical 4-Week Adoption Roadmap</h2>
-<ol class="article-p" style="padding-left:1.5rem;display:flex;flex-direction:column;gap:0.5rem;">
-<li><strong>Week 1 - Projects &amp; Artifacts:</strong> Move your recurring work into Claude Projects so you stop re-uploading files, and build your first interactive Artifact prototype.</li>
-<li><strong>Week 2 - Claude Desktop &amp; MCP:</strong> Connect one local folder or read-only database through MCP to experience grounded answers.</li>
-<li><strong>Week 3 - Claude Code with Budgets:</strong> Add a short <code>CLAUDE.md</code> file to one repository, set clear spend caps, and practice test-driven bug fixes.</li>
-<li><strong>Week 4 - Production API &amp; Caching:</strong> Automate one high-value repeatable workflow with prompt caching, model routing, and human review gates.</li>
+    class U,D gold
+    class P,T cyan
+    class V purple
+    class R,H rose
+</div><p style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;text-align:center;">A bounded agent loop combines automated verification with clear human escalation paths.</p></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="adoption-roadmap">A Practical Four-Week Adoption Roadmap</h2>
+
+<p class="article-p">You do not need to rebuild your entire software stack to benefit from Claude. Start with small, measurable wins over four weeks:</p>
+<ol class="article-p" style="padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Week One - Projects and Artifacts:</strong> Move recurring team documents into Claude Projects so nobody re-uploads context every morning, and prototype one interactive UI or report using Artifacts.</li>
+<li><strong>Week Two - Read-Only MCP Integration:</strong> Connect one internal knowledge base or read-only database through MCP so team members can ask grounded questions with zero copy-pasting.</li>
+<li><strong>Week Three - Claude Code with Guardrails:</strong> Add a concise <code>CLAUDE.md</code> file to a single repository, set clear spend limits, and practice test-driven bug fixing on real tickets.</li>
+<li><strong>Week Four - Cached Production Pipeline:</strong> Automate one high-value repeatable workflow using prompt caching, tiered model routing, structured output checks, and clear audit logging.</li>
 </ol>
-</div>
+<p class="article-p">By following this sequence, your team builds genuine operational muscle at every step - turning Claude from an occasional helper into a predictable, auditable engineering platform.</p>
 
-<div class="content-card" style="background:#000000;">
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
 <li><a class="gold-link" href="https://docs.anthropic.com/en/docs/about-claude/models/overview" rel="noopener noreferrer" target="_blank">Anthropic Models Overview</a> - Official comparison of Claude Haiku, Claude Sonnet, and Claude Opus capabilities.</li>
-<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching" rel="noopener noreferrer" target="_blank">Anthropic Prompt Caching Guide</a> - Technical guide to cutting repeated input latency and token costs by up to 90 percent.</li>
-<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/tool-use/overview" rel="noopener noreferrer" target="_blank">Anthropic Tool Use Documentation</a> - How structured tool calling connects Claude to live data and external actions.</li>
-<li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP)</a> - Open standard for connecting AI assistants cleanly to tools, files, and enterprise systems.</li>
-<li><a class="gold-link" href="https://www.anthropic.com/research/building-effective-agents" rel="noopener noreferrer" target="_blank">Building Effective Agents</a> - Anthropic's practical engineering guide to composable workflows and reliable AI agents.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching" rel="noopener noreferrer" target="_blank">Anthropic Prompt Caching Guide</a> - Technical documentation on cache breakpoints, TTL windows, and latency reduction.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/tool-use/overview" rel="noopener noreferrer" target="_blank">Anthropic Tool Use Documentation</a> - How structured JSON tool schemas connect Claude safely to live systems.</li>
+<li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP)</a> - Open standard for building reusable tool and data connectors across Claude clients.</li>
+<li><a class="gold-link" href="https://www.anthropic.com/research/building-effective-agents" rel="noopener noreferrer" target="_blank">Building Effective Agents</a> - Anthropic's practical engineering patterns for composable workflows and agent loops.</li>
 </ol>
-</div>
+</section>
 </article>
 
-<section class="cta-banner">
+<section class="cta-banner" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Deploy the Full Spectrum of Claude Intelligence</h2>
 <p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">From interactive team Artifacts and custom Projects to business adaptive reasoning controls and multi-agent systems - let's engineer your organization's Claude foundation.</p>
 <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
@@ -432,7 +509,7 @@
 </section>
 </main>
 
-    <!-- START:FOOTER -->
+<!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
@@ -723,5 +800,6 @@
   </footer>
     <!-- END:FOOTER -->
 <script src="../components.js"></script>
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
 </body>
 </html>

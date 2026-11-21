@@ -4,21 +4,21 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Claude MCP: Model Context Protocol & Custom Tool Servers | Thomas Cherickal</title>
-<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Master the Model Context Protocol (MCP) to connect Claude cleanly to internal APIs, databases, and developer tools, covering transports, tool/resource/prompt primitives, TypeScript and Python servers, auth, and prompt-injection hardening." name="description"/>
+<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Master the Model Context Protocol (MCP) to connect Claude to internal APIs and databases with transports, primitives, Python/TypeScript servers, and security hardening." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
 <link href="https://thedigitalfuturist.com/claude-training/claude-custom-mcp.html" rel="canonical"/>
 <!-- Open Graph -->
 <meta content="article" property="og:type"/>
 <meta content="https://thedigitalfuturist.com/claude-training/claude-custom-mcp.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
-<meta content="Claude MCP: Model Context Protocol &amp;amp; Custom Tool Servers | Thomas Cherickal" property="og:title"/>
-<meta content="Master the Model Context Protocol (MCP) to connect Claude cleanly to internal APIs, databases, and developer tools, covering transports, tool/resource/prompt primitives, TypeScript and Python servers, auth, and prompt-injection hardening." property="og:description"/>
+<meta content="Claude MCP: Model Context Protocol &amp; Custom Tool Servers | Thomas Cherickal" property="og:title"/>
+<meta content="Master the Model Context Protocol (MCP) to connect Claude to internal APIs and databases with transports, primitives, Python/TypeScript servers, and security hardening." property="og:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@thomazcherickal" name="twitter:site"/>
-<meta content="Claude MCP: Model Context Protocol &amp;amp; Custom Tool Servers | Thomas Cherickal" name="twitter:title"/>
+<meta content="Claude MCP: Model Context Protocol &amp; Custom Tool Servers | Thomas Cherickal" name="twitter:title"/>
 <meta content="How custom Model Context Protocol (MCP) servers built in Python, TypeScript and Rust let Claude automate almost anything across the web, with three hands-on tutorials, four diagrams and verified references." property="twitter:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
 <!-- Favicons -->
@@ -44,13 +44,13 @@
         "url": "https://thedigitalfuturist.com/claude-training/claude-custom-mcp.html",
         "name": "Claude MCP: Model Context Protocol &amp; Custom Tool Servers | Thomas Cherickal"
       },
-      "headline": "Claude MCP: Model Context Protocol &amp; Custom Tool Servers",
-      "description": "Master the Model Context Protocol (MCP) to connect Claude cleanly to internal APIs, databases, and developer tools, covering transports, tool/resource/prompt primitives, TypeScript and Python servers, auth, and prompt-injection hardening.",
+      "headline": "Claude MCP: Model Context Protocol & Custom Tool Servers",
+      "description": "Master the Model Context Protocol (MCP) to connect Claude to internal APIs and databases with transports, primitives, Python/TypeScript servers, and security hardening.",
       "image": [
         "https://thedigitalfuturist.com/assets/og-card.png"
       ],
       "datePublished": "2026-10-22T00:00:00+05:30",
-      "dateModified": "2026-11-20T12:00:00+05:30",
+      "dateModified": "2026-11-21T12:00:00+05:30",
       "inLanguage": "en-US",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -85,10 +85,10 @@
       "articleSection": "Model Context Protocol",
       "keywords": [
         "Claude MCP",
-        "Model Context Protocol",
-        "Custom MCP Server",
-        "MCP Security",
-        "Prompt Injection Hardening"
+        "Custom Tool Servers",
+        "Python & TypeScript",
+        "Transports",
+        "Security Hardening"
       ]
     },
     {
@@ -130,8 +130,7 @@
 <link href="../css/responsive.css" rel="stylesheet"/>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-  <!-- START:HEADER -->
+<!-- START:HEADER -->
   <nav aria-label="Main navigation">
     <a href="../index.html" class="nav-brand"><img src="../assets/digital-futurist-logo.jpg" alt="The Digital Futurist Logo"
         class="nav-brand-logo" width="20" height="20">Thomas Cherickal</a>
@@ -308,131 +307,197 @@
   <!-- END:HEADER -->
 
 <main id="main">
-<header class="hero content-card" style="background:#000000;">
-<div class="hero-badge content-card">Model Context Protocol • Architecture &amp; Custom Implementation</div>
+<header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">MODEL CONTEXT PROTOCOL</div>
 <h1>Claude MCP: Model Context Protocol & Custom Tool Servers</h1>
-<div class="title-tags" aria-label="Article topics"><span class="title-tag">Model Context Protocol</span><span class="title-tag">Custom Tool Servers</span><span class="title-tag">Python &amp; TypeScript</span><span class="title-tag">Prompt-Injection Hardening</span></div>
-<p class="hero-desc">Master the Model Context Protocol (MCP) to connect Claude cleanly to internal APIs, databases, and developer tools. Covers transports, tool/resource/prompt primitives, simple TypeScript and Python server examples, authentication, and security hardening against prompt injection.</p>
-<p class="hero-byline">By <strong>Thomas Cherickal</strong>, Generative AI Consultant • <strong>The Digital Futurist</strong></p>
+<div class="title-tags" aria-label="Article topics"><span class="title-tag">Claude MCP</span><span class="title-tag">Custom Tool Servers</span><span class="title-tag">Python &amp; TypeScript</span><span class="title-tag">Transports</span><span class="title-tag">Security Hardening</span></div>
+<p class="hero-desc">Master the Model Context Protocol (MCP) to connect Claude cleanly to internal APIs, databases, and developer tools. Covers transports, tool/resource/prompt primitives, TypeScript and Python server implementation, authentication, and security hardening against prompt injection.</p>
+<p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body">
-<div aria-label="Table of contents" class="content-card toc-card" style="background:#000000;">
-<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Before the Model Context Protocol (MCP), every AI app needed custom glue code for every database, API, and folder it touched. MCP acts like a USB-C port for AI: write one clean server that exposes your internal tools or data, and Claude Desktop, Claude Code, and your own apps can connect to it immediately with consistent permissions.</p>
+<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Before the Model Context Protocol, connecting an AI assistant to five internal tools meant writing five brittle custom integrations - and rewriting them again for every new editor or chat client. MCP replaces that N-by-M glue code with one open, clean standard. Build a single MCP server for your database, ticketing system, or internal API, and use it across Claude Desktop, Claude Code, and your own production agents.</p>
 <div class="rule"></div>
 <h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
 <ol class="toc-list">
-<li><a class="gold-link" href="#what-mcp-is">What MCP Is and Why Teams Standardize on It</a></li>
-<li><a class="gold-link" href="#primitives-and-transports">Tools, Resources, Prompts, and Transports Explained Simply</a></li>
-<li><a class="gold-link" href="#python-server-example">Building a Clean Custom MCP Server in Python</a></li>
-<li><a class="gold-link" href="#typescript-and-auth">TypeScript Servers and OAuth Authentication</a></li>
-<li><a class="gold-link" href="#security-hardening">Security Hardening Against Prompt Injection</a></li>
+<li><a class="gold-link" href="#mcp-architecture-and-primitives">Core MCP Architecture: Transports and Three Primitives</a></li>
+<li><a class="gold-link" href="#building-python-and-ts-servers">Building Clean Python and TypeScript MCP Servers</a></li>
+<li><a class="gold-link" href="#authentication-and-security-hardening">Authentication and Security Hardening Against Prompt Injection</a></li>
+<li><a class="gold-link" href="#testing-and-debugging-mcp">Testing and Debugging Custom MCP Servers</a></li>
+<li><a class="gold-link" href="#designing-great-mcp-tools">Designing MCP Tools That Claude Calls Accurately</a></li>
+<li><a class="gold-link" href="#production-mcp-deployment-checklist">Production Deployment Checklist for Team MCP Servers</a></li>
+<li><a class="gold-link" href="#real-world-mcp-patterns">High-Value Custom MCP Server Ideas for Engineering and Operations</a></li>
+<li><a class="gold-link" href="#mcp-faq">Practical Questions When Adopting MCP</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
 </div>
 
-<div class="content-card" style="background:#000000;">
-<h2 id="what-mcp-is">What MCP Is and Why Teams Standardize on It</h2>
-<p class="article-p">Created by Anthropic and adopted across the industry, the <a class="gold-link" href="#references">Model Context Protocol specification</a> defines a single open language between AI hosts (like Claude Desktop or Claude Code) and external data sources. Instead of maintaining five fragile scripts for five tools, your team maintains one small, tested MCP server per internal system.</p>
-<figure class="article-figure" style="background:#000000;border:1px solid rgba(251,191,36,0.28);border-radius:12px;padding:1.25rem;margin:1.5rem 0;text-align:center;">
-<svg viewBox="0 0 760 280" width="100%" role="img" aria-label="Model Context Protocol Architecture" xmlns="http://www.w3.org/2000/svg">
-  <rect width="760" height="280" fill="#000000" rx="10"/>
-  <text x="380" y="34" fill="#fbbf24" font-size="18" font-weight="700" text-anchor="middle" font-family="sans-serif">Model Context Protocol (MCP) Architecture</text>
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="mcp-architecture-and-primitives">Core MCP Architecture: Transports and Three Primitives</h2>
 
-  <rect x="35" y="74" width="185" height="140" rx="8" fill="#000000" stroke="#fbbf24" stroke-width="2"/>
-  <text x="127" y="106" fill="#fbbf24" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">MCP Host (Client)</text>
-  <text x="127" y="136" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Claude Desktop</text>
-  <text x="127" y="160" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Claude Code CLI</text>
-  <text x="127" y="184" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Custom AI Apps</text>
-
-  <line x1="220" y1="144" x2="290" y2="144" stroke="#38bdf8" stroke-width="2.5"/>
-  <text x="255" y="132" fill="#38bdf8" font-size="11" text-anchor="middle" font-family="sans-serif">stdio / HTTP</text>
-
-  <rect x="290" y="68" width="190" height="152" rx="8" fill="#000000" stroke="#c084fc" stroke-width="2"/>
-  <text x="385" y="98" fill="#c084fc" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">MCP Server</text>
-  <text x="385" y="128" fill="#34d399" font-size="12" text-anchor="middle" font-family="sans-serif">Tools (Run Actions)</text>
-  <text x="385" y="156" fill="#38bdf8" font-size="12" text-anchor="middle" font-family="sans-serif">Resources (Read Data)</text>
-  <text x="385" y="184" fill="#fbbf24" font-size="12" text-anchor="middle" font-family="sans-serif">Prompts (Templates)</text>
-  <text x="385" y="208" fill="#f472b6" font-size="11" text-anchor="middle" font-family="sans-serif">Auth &amp; Validation</text>
-
-  <line x1="480" y1="144" x2="545" y2="144" stroke="#34d399" stroke-width="2.5"/>
-
-  <rect x="545" y="74" width="180" height="140" rx="8" fill="#000000" stroke="#34d399" stroke-width="2"/>
-  <text x="635" y="106" fill="#34d399" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">Your Systems</text>
-  <text x="635" y="136" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Internal REST APIs</text>
-  <text x="635" y="160" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Postgres / SQLite</text>
-  <text x="635" y="184" fill="#f8fafc" font-size="12" text-anchor="middle" font-family="sans-serif">Local Repos &amp; Docs</text>
-</svg>
-<figcaption style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;">How MCP connects Claude cleanly to internal APIs, databases, and local tools through three primitives.</figcaption>
-</figure>
-</div>
-
-<div class="content-card" style="background:#000000;">
-<h2 id="primitives-and-transports">Tools, Resources, Prompts, and Transports Explained Simply</h2>
-<p class="article-p">MCP keeps the design clean with three primitives and two main ways to connect:</p>
-<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.5rem;">
-<li><strong>Tools:</strong> Functions Claude can call to do work (such as running a read-only SQL query or creating a draft ticket).</li>
-<li><strong>Resources:</strong> Read-only data items (such as a customer record, log file, or API schema) that Claude can inspect like files.</li>
-<li><strong>Prompts:</strong> Reusable workflow templates stored on the server so teammates trigger consistent multi-step tasks.</li>
-<li><strong>Transports:</strong> Use <code>stdio</code> for local servers running on your laptop, and <code>Streamable HTTP</code> for shared remote servers hosted inside your company cloud.</li>
+<p class="article-p">Every <a class="gold-link" href="#references">Model Context Protocol (MCP)</a> integration has two sides: an MCP Host/Client (such as Claude Desktop, Claude Code, or your custom app) and one or more lightweight MCP Servers that wrap your data or APIs. They communicate over JSON-RPC using two standard transports: <strong>stdio</strong> for fast local processes running on your own workstation, and <strong>Streamable HTTP</strong> for remote team servers hosted behind your cloud gateway.</p>
+<p class="article-p">MCP organizes every capability into three clear primitives:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Tools (Model-Controlled):</strong> Executable functions with JSON schemas - such as querying a read-only SQL view, creating a support draft, or running a health check.</li>
+<li><strong>Resources (Application-Controlled):</strong> Read-only data objects identified by URIs - such as a log file, database schema, or policy document that the client can attach as context.</li>
+<li><strong>Prompts (User-Controlled):</strong> Reusable workflow templates exposed as slash commands so users invoke standardized checklists with one click.</li>
 </ul>
-</div>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+flowchart TD
+    H["MCP Client / Host
+(Claude Desktop, Claude Code, Custom App)"] --> T{"Transport Layer
+(stdio Local / Streamable HTTP Remote)"}
+    T --> S["Custom MCP Server"]
+    S --> P1["Tools
+(Executable Actions & Queries)"]
+    S --> P2["Resources
+(Read-Only Docs & Schemas)"]
+    S --> P3["Prompts
+(Reusable Team Templates)"]
+    P1 --> B["Internal APIs, Databases & Services"]
+    P2 --> B
 
-<div class="content-card" style="background:#000000;">
-<h2 id="python-server-example">Building a Clean Custom MCP Server in Python</h2>
-<p class="article-p">Using the official <a class="gold-link" href="#references">MCP Python SDK</a> (<code>FastMCP</code>), you can expose a safe, read-only internal lookup tool in under 25 lines of code.</p>
-<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
-<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
-<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">inventory_mcp_server.py</span>
-<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
-</div>
-<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>from mcp.server.fastmcp import FastMCP
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    classDef purple fill:#000000,stroke:#c084fc,stroke-width:2px,color:#f8fafc
 
-mcp = FastMCP("inventory-lookup")
+    class H,B gold
+    class T,S purple
+    class P1,P2,P3 cyan
+</div><p style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;text-align:center;">One MCP server exposes tools, resources, and prompts to every compatible Claude client.</p></div>
+</section>
 
-STOCK = {"SKU-101": 42, "SKU-204": 0, "SKU-309": 18}
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="building-python-and-ts-servers">Building Clean Python and TypeScript MCP Servers</h2>
+
+<p class="article-p">Both the official <a class="gold-link" href="#references">MCP Python SDK</a> and <a class="gold-link" href="#references">MCP TypeScript SDK</a> let you spin up a working server in under thirty lines of code. Keep each server focused on one domain - such as billing lookups or deployment status - rather than cramming fifty unrelated endpoints into a single monolith. Smaller, focused servers keep tool descriptions short and improve Claude's tool-selection accuracy.</p>
+<p class="article-p">Always return concise, structured responses (for example, top 10 matching rows with clear column names) instead of dumping megabytes of raw JSON into Claude's context window.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Minimal Read-Only MCP Server in Python (FastMCP)</span><span>Python</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>from mcp.server.fastmcp import FastMCP
+import sqlite3
+
+mcp = FastMCP(&quot;inventory-readonly&quot;)
 
 @mcp.tool()
-def check_stock(sku: str) -> str:
-    """Return current warehouse stock count for a valid SKU code."""
-    code = sku.strip().upper()
-    if code not in STOCK:
-        return f"SKU {code} not found."
-    return f"SKU {code}: {STOCK[code]} units available."
+def check_sku_stock(sku: str) -&gt; dict:
+    &quot;&quot;&quot;Look up current warehouse stock for an exact SKU code.&quot;&quot;&quot;
+    conn = sqlite3.connect(&quot;file:inventory.db?mode=ro&quot;, uri=True)
+    row = conn.execute(
+        &quot;SELECT sku, warehouse, qty_available FROM stock WHERE sku = ?&quot;,
+        (sku.strip().upper(),)
+    ).fetchone()
+    conn.close()
+    if not row:
+        return {&quot;error&quot;: f&quot;SKU &#x27;{sku}&#x27; not found.&quot;}
+    return {&quot;sku&quot;: row[0], &quot;warehouse&quot;: row[1], &quot;qty_available&quot;: row[2]}
 
-if __name__ == "__main__":
-    mcp.run()</code></pre>
-</div>
-</div>
+if __name__ == &quot;__main__&quot;:
+    mcp.run()</code></pre></div><div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Minimal MCP Tool Registration in TypeScript</span><span>TypeScript</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>import { McpServer } from &quot;@modelcontextprotocol/sdk/server/mcp.js&quot;;
+import { z } from &quot;zod&quot;;
 
-<div class="content-card" style="background:#000000;">
-<h2 id="typescript-and-auth">TypeScript Servers and OAuth Authentication</h2>
-<p class="article-p">Teams using Node.js can build the exact same server with the <a class="gold-link" href="#references">MCP TypeScript SDK</a> and validate inputs with Zod schemas. For remote HTTP MCP servers shared across a company, always require OAuth 2.0 bearer tokens tied to the signed-in user so the server enforces real per-user access control rather than a shared static key.</p>
-</div>
+const server = new McpServer({ name: &quot;release-status&quot;, version: &quot;1.0.0&quot; });
 
-<div class="content-card" style="background:#000000;">
-<h2 id="security-hardening">Security Hardening Against Prompt Injection</h2>
-<p class="article-p">Whenever an MCP server reads untrusted external text (like customer emails, web pages, or public GitHub issues), hidden instructions inside that text can try to trick Claude into running dangerous tools. Protect your servers with four practical rules:</p>
-<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.5rem;">
-<li><strong>Validate Every Argument on the Server:</strong> Never trust raw SQL or shell strings from the model - use parameterized queries and strict allowlists.</li>
-<li><strong>Keep Sensitive Tools Separate:</strong> Do not mix untrusted web-reading tools with unconfirmed write/delete tools in the same open session.</li>
-<li><strong>Require Human Approval for Side Effects:</strong> Prompt the user before sending messages, transferring money, or modifying production databases.</li>
-<li><strong>Return Minimal Data:</strong> Strip secrets, tokens, and unnecessary personal fields before returning tool outputs to the model.</li>
+server.tool(
+  &quot;get_deployment_health&quot;,
+  { service: z.enum([&quot;billing&quot;, &quot;auth&quot;, &quot;search&quot;]) },
+  async ({ service }) =&gt; {
+    const status = await fetch(`https://internal.example/health/${service}`).then(r =&gt; r.json());
+    return { content: [{ type: &quot;text&quot;, text: JSON.stringify(status) }] };
+  }
+);</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="authentication-and-security-hardening">Authentication and Security Hardening Against Prompt Injection</h2>
+
+<p class="article-p">Because MCP servers bridge Claude to real internal systems, security must be designed in from line one. For remote Streamable HTTP servers, enforce OAuth 2.1 bearer tokens, validate audience and scopes on every request, and map each token to the calling user's least-privilege role.</p>
+<p class="article-p">Pay special attention to indirect prompt injection - where a malicious string inside a database comment or customer ticket tries to trick Claude into calling a destructive tool. Harden your MCP servers with four controls:</p>
+<ol class="article-p" style="padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Parameterized Queries Only:</strong> Never interpolate tool arguments into raw SQL or shell strings; use strict bound parameters and enum allowlists.</li>
+<li><strong>Read-Only by Default:</strong> Open database connections in explicit read-only mode unless a separate, human-confirmed write server is required.</li>
+<li><strong>Tool Description Integrity:</strong> Only install MCP servers from trusted, version-pinned sources, because malicious tool descriptions can hijack model behavior.</li>
+<li><strong>Output Size Caps and Audit Logs:</strong> Truncate oversized tool responses cleanly and log every tool invocation with caller identity and timestamp.</li>
+</ol>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+graph TD
+    C["Claude Tool Call Request"] --> A["Verify OAuth Token & Scopes"]
+    A --> V["Validate Schema & Enum Allowlist"]
+    V -->|"Invalid"| E["Return Safe Structured Error"]
+    V -->|"Valid"| X["Execute Parameterized Query
+(Read-Only Connection)"]
+    X --> T["Truncate Output & Write Audit Log"]
+    T --> R["Return Grounded Result to Claude"]
+
+    classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
+    classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef rose fill:#000000,stroke:#f472b6,stroke-width:2px,color:#f8fafc
+    classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+
+    class C,R gold
+    class A,V,X cyan
+    class E rose
+    class T emerald
+</div><p style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;text-align:center;">Every MCP server call should pass authentication, schema validation, and audit logging.</p></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="testing-and-debugging-mcp">Testing and Debugging Custom MCP Servers</h2>
+
+<p class="article-p">Before connecting a new MCP server to production workflows, test it locally with the official MCP Inspector. Verify that invalid inputs return helpful, non-crashing error messages, confirm that stdout is reserved strictly for JSON-RPC messages (write all debug logs to stderr when using stdio transport), and write standard unit tests for every underlying handler function. Clean error handling lets Claude recover gracefully instead of looping.</p>
+
+</section>
+
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="designing-great-mcp-tools">Designing MCP Tools That Claude Calls Accurately</h2>
+
+<p class="article-p">Even a rock-solid server implementation will underperform if its tool definitions are confusing. Follow four practical tool-design habits so Claude picks the right tool on the first try:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>One Clear Responsibility Per Tool:</strong> Prefer focused tools like <code>get_invoice_by_id</code> and <code>list_overdue_invoices</code> over one vague <code>query_everything</code> endpoint with fifteen optional flags.</li>
+<li><strong>Explicit Parameter Formats:</strong> Document exact date formats (<code>YYYY-MM-DD</code>), ID prefixes, and allowed enum values directly inside the JSON schema description.</li>
+<li><strong>Actionable Error Messages:</strong> When a lookup fails, return a helpful hint such as <code>"Invalid status 'done'. Allowed values: open, pending, closed."</code> so Claude self-corrects immediately.</li>
+<li><strong>Pagination and Row Limits:</strong> Cap every list endpoint at 20 to 50 records by default and return a total count so large tables never overflow the context window.</li>
 </ul>
-</div>
 
-<div class="content-card" style="background:#000000;">
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="production-mcp-deployment-checklist">Production Deployment Checklist for Team MCP Servers</h2>
+
+<p class="article-p">Before rolling out a shared Streamable HTTP MCP server across your organization, verify five production readiness items: enforce HTTPS with OAuth 2.1 token validation, set strict per-user rate limits to prevent accidental query storms, emit structured JSON audit logs for every tool call, run automated integration tests against a staging database, and publish a short one-page README showing teammates how to connect the server in Claude Desktop and Claude Code.</p>
+<p class="article-p">When built cleanly, a single well-maintained MCP server replaces dozens of fragile scripts and becomes a permanent, reusable asset across your entire engineering organization.</p>
+
+</section>
+
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="real-world-mcp-patterns">High-Value Custom MCP Server Ideas for Engineering and Operations</h2>
+
+<p class="article-p">Teams get the fastest payoff from MCP when they wrap internal systems that staff check twenty times a day. Popular first servers include a read-only <strong>Customer Order &amp; Billing Lookup</strong> server for support engineers, a <strong>CI/CD Build &amp; Deployment Health</strong> server so developers can ask Claude why staging failed without clicking through five dashboards, a <strong>Feature Flag &amp; Config Inspector</strong> server, and a <strong>Document Search</strong> server over internal architecture decision records.</p>
+<p class="article-p">Start by shipping one read-only server with three focused tools, gather feedback from five teammates for a week, and only add write tools once your logging, schema validation, and OAuth scopes are battle-tested.</p>
+
+</section>
+
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="mcp-faq">Practical Questions When Adopting MCP</h2>
+<p class="article-p"><strong>Should we build one big MCP server or several small ones?</strong> Always prefer small, domain-focused servers (for example, one for billing lookups and one for deployment status). Smaller servers keep tool schemas concise, reduce permission blast radius, and make independent deployments easy.</p>
+<p class="article-p"><strong>How do we keep credentials safe?</strong> Pass API tokens through environment variables or short-lived OAuth 2.1 headers at runtime - never hardcode secrets inside server source code or prompt templates.</p>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
-<li><a class="gold-link" href="https://modelcontextprotocol.io/introduction" rel="noopener noreferrer" target="_blank">Model Context Protocol Official Documentation</a> - Complete introduction, architecture guide, and transport specifications.</li>
-<li><a class="gold-link" href="https://github.com/modelcontextprotocol/python-sdk" rel="noopener noreferrer" target="_blank">MCP Python SDK on GitHub</a> - Official Python library including FastMCP for rapid custom tool servers.</li>
-<li><a class="gold-link" href="https://github.com/modelcontextprotocol/typescript-sdk" rel="noopener noreferrer" target="_blank">MCP TypeScript SDK on GitHub</a> - Official TypeScript SDK with Zod schema validation and HTTP transport support.</li>
-<li><a class="gold-link" href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" rel="noopener noreferrer" target="_blank">OWASP Top 10 for LLM Applications</a> - Industry security practices for defending tool-connected agents against prompt injection.</li>
+<li><a class="gold-link" href="https://modelcontextprotocol.io/specification/latest" rel="noopener noreferrer" target="_blank">Model Context Protocol Specification</a> - Official protocol specification covering transports, tools, resources, prompts, and authorization.</li>
+<li><a class="gold-link" href="https://github.com/modelcontextprotocol/python-sdk" rel="noopener noreferrer" target="_blank">MCP Python SDK</a> - Official Python SDK including FastMCP for rapid server development.</li>
+<li><a class="gold-link" href="https://github.com/modelcontextprotocol/typescript-sdk" rel="noopener noreferrer" target="_blank">MCP TypeScript SDK</a> - Official TypeScript SDK with Zod schema validation and transport helpers.</li>
+<li><a class="gold-link" href="https://owasp.org/API-Security/" rel="noopener noreferrer" target="_blank">OWASP API Security Top 10</a> - Security principles for authentication, object-level authorization, and safe internal API exposure.</li>
 </ol>
-</div>
+</section>
 </article>
 
-<section class="cta-banner">
+<section class="cta-banner" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Build Business-Grade MCP Servers &amp; Custom Agent Tooling</h3>
 <p style="color:#94a3b8;font-size:1.02rem;max-width:680px;margin:0 auto 1.75rem;line-height:1.7;">Architect type-safe Model Context Protocol servers in Python, TypeScript, and Rust connecting Claude to private VPC databases and microservices.</p>
 <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
@@ -443,7 +508,7 @@ if __name__ == "__main__":
 </section>
 </main>
 
-    <!-- START:FOOTER -->
+<!-- START:FOOTER -->
     <footer id="links">
     <div class="footer-top">
       <div class="footer-brand">
@@ -734,15 +799,6 @@ if __name__ == "__main__":
   </footer>
     <!-- END:FOOTER -->
 <script src="../components.js"></script>
-<script>
-function copyCode(btn) {
-  const code = btn.closest(".code-window").querySelector("code").innerText;
-  navigator.clipboard.writeText(code).then(() => {
-    const orig = btn.innerText;
-    btn.innerText = "Copied";
-    setTimeout(() => { btn.innerText = orig; }, 1800);
-  });
-}
-</script>
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
 </body>
 </html>
