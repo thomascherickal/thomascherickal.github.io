@@ -601,10 +601,16 @@ body {
   .home-nav-grid,
   .services-grid,
   .faq-grid,
-  .social-grid,
   .guarantee-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 1.15rem !important;
+  }
+
+  footer .social-grid,
+  footer .wg,
+  footer .footer-work-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 10px !important;
   }
 
   .content-card,
@@ -631,7 +637,6 @@ body {
   .home-nav-grid,
   .services-grid,
   .faq-grid,
-  .social-grid,
   .guarantee-grid,
   .parity-tiers-grid,
   .pricing-grid-faq,
@@ -639,6 +644,13 @@ body {
   .calc-field-grid {
     grid-template-columns: 1fr !important;
     gap: 1rem !important;
+  }
+
+  footer .social-grid,
+  footer .wg,
+  footer .footer-work-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
   }
 
   .title-tags {

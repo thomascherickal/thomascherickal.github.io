@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-21 14:43:00 UTC` | Branch: `main` | Head Commit: `0e0ef77`
+> **Automated Status Report** | Generated on `2026-11-23 05:06:17 UTC` | Branch: `main` | Head Commit: `cd60d92`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **567** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **947,196** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **930,296** | Executable / renderable content lines |
+| **Total Lines of Source Code & Content** | **946,731** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **929,831** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **5,287** | In-code and architectural documentation |
 | **Blank / Spacing Lines** | **11,613** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **56.04 MB (58,764,516 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **781,309 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **555** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-21** | Subject: "Content Updates" |
+| **Total Repository Size (Tracked Assets)** | **56.02 MB (58,738,709 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **780,019 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **556** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-21** | Subject: "Regenerate all 68 guides (1000-2000 words, gold outlines, white-text title tags, colored Mermaid diagrams, no pricing/time-bound sections), add Gemini Neon, and optimize all 87 pages for mobile and tablet" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -28,10 +28,10 @@
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | **HTML Documents** | 91 | 89,464 | 7.07 MB (7,414,933 bytes) | Production static web pages, services, frameworks & guides |
-| **CSS Stylesheets** | 16 | 12,250 | 285.84 KB (292,700 bytes) | Design tokens, animations, responsive layout & themes |
+| **CSS Stylesheets** | 16 | 12,251 | 285.98 KB (292,847 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 32 | 11,372 | 3.70 MB (3,874,693 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 59 | 15,308 | 685.01 KB (701,448 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 161 | 41,570 | 4.74 MB (4,969,850 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Markdown Documentation** | 161 | 41,104 | 4.71 MB (4,943,896 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 115 | 777,172 | 35.11 MB (36,820,156 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 43 | 60 | 126.58 KB (129,621 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 38 | 0 | 4.27 MB (4,479,410 bytes) | Optimized feature hero graphics, social cards & assets |
@@ -45,9 +45,9 @@
 | :--- | :--- | :--- | :--- | :--- |
 | `.json` | 115 | 777,172 | 35.11 MB (36,820,156 bytes) | 20.3% |
 | `.html` | 91 | 89,464 | 7.07 MB (7,414,933 bytes) | 16.0% |
-| `.md` | 161 | 41,570 | 4.74 MB (4,969,850 bytes) | 28.4% |
+| `.md` | 161 | 41,104 | 4.71 MB (4,943,896 bytes) | 28.4% |
 | `.py` | 59 | 15,308 | 685.01 KB (701,448 bytes) | 10.4% |
-| `.css` | 16 | 12,250 | 285.84 KB (292,700 bytes) | 2.8% |
+| `.css` | 16 | 12,251 | 285.98 KB (292,847 bytes) | 2.8% |
 | `.js` | 32 | 11,372 | 3.70 MB (3,874,693 bytes) | 5.6% |
 | `.svg` | 43 | 60 | 126.58 KB (129,621 bytes) | 7.6% |
 | `.webp` | 17 | 0 | 1.62 MB (1,695,354 bytes) | 3.0% |
@@ -67,8 +67,8 @@
 
 | Metric | Measurement | Architecture Details |
 | :--- | :--- | :--- |
-| **CSS Media Queries (`@media`)** | **84** | Ultra-responsive breakpoints for mobile, tablet, desktop |
-| **CSS Rule Blocks** | **1,658** | Modular selector rules across all stylesheets |
+| **CSS Media Queries (`@media`)** | **82** | Ultra-responsive breakpoints for mobile, tablet, desktop |
+| **CSS Rule Blocks** | **1,656** | Modular selector rules across all stylesheets |
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **198** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **86** | Strict single-H1 semantic hierarchy per page |

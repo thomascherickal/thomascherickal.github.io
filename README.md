@@ -419,26 +419,26 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 
 ## Latest Pre-Commit Report Summary
 
-> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`METRICS.md`](METRICS.md)** | Recorded on: `2026-11-21 14:42:59 UTC`
+> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`METRICS.md`](METRICS.md)** | Recorded on: `2026-11-23 05:06:15 UTC`
 
 ### Commit Overview
 
 | Property | Value |
 | :--- | :--- |
-| **Parent Commit (Full)** | `0e0ef7766be28755a7d463fd69d7735c0daec91b` |
-| **Parent Commit (Short)** | `0e0ef77` |
+| **Parent Commit (Full)** | `cd60d928aa7c9a63089f06720396ad8b2741320f` |
+| **Parent Commit (Short)** | `cd60d92` |
 | **Branch** | `main` |
-| **Parent Subject** | Content Updates |
+| **Parent Subject** | Regenerate all 68 guides (1000-2000 words, gold outlines, white-text title tags, colored Mermaid diagrams, no pricing/time-bound sections), add Gemini Neon, and optimize all 87 pages for mobile and tablet |
 | **Parent Author** | Thomas Cherickal `<thomascherickal@gmail.com>` |
-| **Parent Author Date** | `2026-11-21T04:47:45+05:30` |
-| **Commits in Repo (before this commit)** | 555 |
+| **Parent Author Date** | `2026-11-21T20:12:44+05:30` |
+| **Commits in Repo (before this commit)** | 556 |
 
 ### Quality Gate & Verification Summary
 
 | Quality Gate / Test Dimension | Total Scope | Passed | Failed | Status | Runtime |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| **Python Unit Test Suite** | 149 tests across 25 modules | 149 | 0 | PASSED | 10.72s |
-| **JavaScript Unit Test Suite** | 159 tests across 17 sections | 159 | 0 | PASSED | 0.08s |
+| **Python Unit Test Suite** | 149 tests across 25 modules | 149 | 0 | PASSED | 11.02s |
+| **JavaScript Unit Test Suite** | 159 tests across 17 sections | 159 | 0 | PASSED | 0.10s |
 | **NLP-Fuzzy-Expert Sync Engine** | 91 target documents | 91 | 0 | PASSED | 1.50s |
 | **SSOT Data Immutability Guard** | 12 data files SHA-256 hash | 12 | 0 | PASSED | 0.001s |
 | **Internal Link & Anchor Integrity** | 10350 links across 91 HTML files | 10350 | 0 | PASSED | 0.33s |
@@ -459,14 +459,14 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **567** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **947,196** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **930,296** | Executable / renderable content lines |
+| **Total Lines of Source Code & Content** | **946,731** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **929,831** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **5,287** | In-code and architectural documentation |
 | **Blank / Spacing Lines** | **11,613** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **56.04 MB (58,764,716 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **781,339 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **555** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-21** | Subject: "Content Updates" |
+| **Total Repository Size (Tracked Assets)** | **56.02 MB (58,738,331 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **779,965 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **556** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-21** | Subject: "Regenerate all 68 guides (1000-2000 words, gold outlines, white-text title tags, colored Mermaid diagrams, no pricing/time-bound sections), add Gemini Neon, and optimize all 87 pages for mobile and tablet" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ### Architecture & File Category Breakdown (`METRICS.md`)
@@ -474,10 +474,10 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | **HTML Documents** | 91 | 89,464 | 7.07 MB (7,414,933 bytes) | Production static web pages, services, frameworks & guides |
-| **CSS Stylesheets** | 16 | 12,250 | 285.84 KB (292,700 bytes) | Design tokens, animations, responsive layout & themes |
+| **CSS Stylesheets** | 16 | 12,251 | 285.98 KB (292,847 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 32 | 11,372 | 3.70 MB (3,874,693 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 59 | 15,308 | 685.01 KB (701,448 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 161 | 41,570 | 4.74 MB (4,970,050 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Markdown Documentation** | 161 | 41,104 | 4.71 MB (4,943,518 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 115 | 777,172 | 35.11 MB (36,820,156 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 43 | 60 | 126.58 KB (129,621 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 38 | 0 | 4.27 MB (4,479,410 bytes) | Optimized feature hero graphics, social cards & assets |
