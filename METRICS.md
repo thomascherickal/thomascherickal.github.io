@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-23 05:06:17 UTC` | Branch: `main` | Head Commit: `cd60d92`
+> **Automated Status Report** | Generated on `2026-11-23 22:28:23 UTC` | Branch: `main` | Head Commit: `a7e1aa5`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **567** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **946,731** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **929,831** | Executable / renderable content lines |
+| **Total Lines of Source Code & Content** | **946,727** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **929,827** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **5,287** | In-code and architectural documentation |
 | **Blank / Spacing Lines** | **11,613** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **56.02 MB (58,738,709 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **780,019 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **556** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-21** | Subject: "Regenerate all 68 guides (1000-2000 words, gold outlines, white-text title tags, colored Mermaid diagrams, no pricing/time-bound sections), add Gemini Neon, and optimize all 87 pages for mobile and tablet" |
+| **Total Repository Size (Tracked Assets)** | **56.02 MB (58,738,087 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **779,951 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **557** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-23** | Subject: "Set footer links to 2 columns on mobile portrait and 4 columns on tablet portrait" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,11 +27,11 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 91 | 89,464 | 7.07 MB (7,414,933 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 91 | 89,464 | 7.07 MB (7,414,934 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 12,251 | 285.98 KB (292,847 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 32 | 11,372 | 3.70 MB (3,874,693 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 59 | 15,308 | 685.01 KB (701,448 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 161 | 41,104 | 4.71 MB (4,943,896 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Markdown Documentation** | 161 | 41,100 | 4.71 MB (4,943,273 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 115 | 777,172 | 35.11 MB (36,820,156 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 43 | 60 | 126.58 KB (129,621 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 38 | 0 | 4.27 MB (4,479,410 bytes) | Optimized feature hero graphics, social cards & assets |
@@ -44,8 +44,8 @@
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
 | `.json` | 115 | 777,172 | 35.11 MB (36,820,156 bytes) | 20.3% |
-| `.html` | 91 | 89,464 | 7.07 MB (7,414,933 bytes) | 16.0% |
-| `.md` | 161 | 41,104 | 4.71 MB (4,943,896 bytes) | 28.4% |
+| `.html` | 91 | 89,464 | 7.07 MB (7,414,934 bytes) | 16.0% |
+| `.md` | 161 | 41,100 | 4.71 MB (4,943,273 bytes) | 28.4% |
 | `.py` | 59 | 15,308 | 685.01 KB (701,448 bytes) | 10.4% |
 | `.css` | 16 | 12,251 | 285.98 KB (292,847 bytes) | 2.8% |
 | `.js` | 32 | 11,372 | 3.70 MB (3,874,693 bytes) | 5.6% |
