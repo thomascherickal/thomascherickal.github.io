@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-23 22:28:23 UTC` | Branch: `main` | Head Commit: `a7e1aa5`
+> **Automated Status Report** | Generated on `2026-11-23 22:55:46 UTC` | Branch: `main` | Head Commit: `7933343`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **567** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **946,727** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **929,827** | Executable / renderable content lines |
+| **Total Tracked Files** | **566** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **947,334** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **930,430** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **5,287** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,613** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **56.02 MB (58,738,087 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **779,951 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **557** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-23** | Subject: "Set footer links to 2 columns on mobile portrait and 4 columns on tablet portrait" |
+| **Blank / Spacing Lines** | **11,617** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **55.85 MB (58,567,659 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **780,615 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **558** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-24** | Subject: "Update article footer dark theme and nlp-fuzzy-expert sync manifest" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,14 +27,14 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 91 | 89,464 | 7.07 MB (7,414,934 bytes) | Production static web pages, services, frameworks & guides |
-| **CSS Stylesheets** | 16 | 12,251 | 285.98 KB (292,847 bytes) | Design tokens, animations, responsive layout & themes |
+| **HTML Documents** | 91 | 89,813 | 7.09 MB (7,438,127 bytes) | Production static web pages, services, frameworks & guides |
+| **CSS Stylesheets** | 16 | 12,274 | 286.62 KB (293,502 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 32 | 11,372 | 3.70 MB (3,874,693 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 59 | 15,308 | 685.01 KB (701,448 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 161 | 41,100 | 4.71 MB (4,943,273 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 115 | 777,172 | 35.11 MB (36,820,156 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
-| **Vector SVG Icons & Graphics** | 43 | 60 | 126.58 KB (129,621 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
-| **Raster Images (WebP, JPG, PNG)** | 38 | 0 | 4.27 MB (4,479,410 bytes) | Optimized feature hero graphics, social cards & assets |
+| **Markdown Documentation** | 161 | 41,328 | 4.73 MB (4,955,385 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 115 | 777,172 | 35.11 MB (36,820,177 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
+| **Raster Images (WebP, JPG, PNG)** | 36 | 0 | 4.01 MB (4,209,868 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 12 | 0 | 79.79 KB (81,705 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
@@ -43,17 +43,17 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 115 | 777,172 | 35.11 MB (36,820,156 bytes) | 20.3% |
-| `.html` | 91 | 89,464 | 7.07 MB (7,414,934 bytes) | 16.0% |
-| `.md` | 161 | 41,100 | 4.71 MB (4,943,273 bytes) | 28.4% |
+| `.json` | 115 | 777,172 | 35.11 MB (36,820,177 bytes) | 20.3% |
+| `.html` | 91 | 89,813 | 7.09 MB (7,438,127 bytes) | 16.1% |
+| `.md` | 161 | 41,328 | 4.73 MB (4,955,385 bytes) | 28.4% |
 | `.py` | 59 | 15,308 | 685.01 KB (701,448 bytes) | 10.4% |
-| `.css` | 16 | 12,251 | 285.98 KB (292,847 bytes) | 2.8% |
-| `.js` | 32 | 11,372 | 3.70 MB (3,874,693 bytes) | 5.6% |
-| `.svg` | 43 | 60 | 126.58 KB (129,621 bytes) | 7.6% |
+| `.css` | 16 | 12,274 | 286.62 KB (293,502 bytes) | 2.8% |
+| `.js` | 32 | 11,372 | 3.70 MB (3,874,693 bytes) | 5.7% |
+| `.svg` | 44 | 67 | 188.24 KB (192,754 bytes) | 7.8% |
 | `.webp` | 17 | 0 | 1.62 MB (1,695,354 bytes) | 3.0% |
-| `.png` | 13 | 0 | 1.39 MB (1,454,059 bytes) | 2.3% |
+| `.png` | 12 | 0 | 1.28 MB (1,339,427 bytes) | 2.1% |
 | `.jpg` | 5 | 0 | 988.42 KB (1,012,141 bytes) | 0.9% |
-| `.jpeg` | 2 | 0 | 303.67 KB (310,957 bytes) | 0.4% |
+| `.jpeg` | 1 | 0 | 152.39 KB (156,047 bytes) | 0.2% |
 | `.txt` | 2 | 0 | 35.60 KB (36,457 bytes) | 0.4% |
 | `.docx` | 2 | 0 | 28.83 KB (29,519 bytes) | 0.4% |
 | `[no extension]` | 6 | 0 | 8.19 KB (8,383 bytes) | 1.1% |
@@ -68,7 +68,7 @@
 | Metric | Measurement | Architecture Details |
 | :--- | :--- | :--- |
 | **CSS Media Queries (`@media`)** | **82** | Ultra-responsive breakpoints for mobile, tablet, desktop |
-| **CSS Rule Blocks** | **1,656** | Modular selector rules across all stylesheets |
+| **CSS Rule Blocks** | **1,660** | Modular selector rules across all stylesheets |
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **198** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **86** | Strict single-H1 semantic hierarchy per page |

@@ -595,28 +595,35 @@ body {
   max-width: 100%;
 }
 
-/* Tablet optimization (769px to 1024px) */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .stats-grid,
+/* Tablet & Small Tablet Portrait optimization (600px to 1024px) */
+@media (max-width: 1024px) and (min-width: 600px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 0.85rem !important;
+  }
+
   .home-nav-grid,
   .services-grid,
   .faq-grid,
-  .guarantee-grid {
+  .guarantee-grid,
+  .pricing-grid-faq,
+  .parity-tiers-grid,
+  .calc-field-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 1.15rem !important;
+    gap: 1rem !important;
   }
 
   footer .social-grid,
   footer .wg,
   footer .footer-work-row {
     grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-    gap: 10px !important;
+    gap: 8px !important;
   }
 
   .content-card,
   .toc-card,
   .cta-banner {
-    padding: 1.5rem 1.5rem !important;
+    padding: 1.4rem 1.4rem !important;
   }
 
   .title-tags {
@@ -631,26 +638,30 @@ body {
   }
 }
 
-/* Mobile optimization (up to 768px) */
-@media (max-width: 768px) {
+/* Mobile optimization (up to 599px) - stay multicolumn where compact */
+@media (max-width: 599px) {
   .stats-grid,
   .home-nav-grid,
-  .services-grid,
-  .faq-grid,
-  .guarantee-grid,
-  .parity-tiers-grid,
-  .pricing-grid-faq,
-  .calc-grid,
-  .calc-field-grid {
-    grid-template-columns: 1fr !important;
-    gap: 1rem !important;
-  }
-
+  .calc-field-grid,
   footer .social-grid,
   footer .wg,
   footer .footer-work-row {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 8px !important;
+    gap: 0.75rem !important;
+  }
+
+  .services-grid,
+  .faq-grid,
+  .guarantee-grid,
+  .parity-tiers-grid,
+  .pricing-grid-faq {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.75rem !important;
+  }
+
+  .calc-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
   }
 
   .title-tags {
@@ -701,6 +712,13 @@ body {
   .container-wide {
     padding-left: 0.75rem !important;
     padding-right: 0.75rem !important;
+  }
+
+  /* Keep stats, social links, and footer links 2-column; stack only dense multi-paragraph cards */
+  .faq-grid,
+  .parity-tiers-grid,
+  .pricing-grid-faq {
+    grid-template-columns: 1fr !important;
   }
 
   h1,
