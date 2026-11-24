@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-23 22:55:46 UTC` | Branch: `main` | Head Commit: `7933343`
+> **Automated Status Report** | Generated on `2026-11-24 08:24:31 UTC` | Branch: `main` | Head Commit: `34d0df1`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **566** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **947,334** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **930,430** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,287** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,617** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **55.85 MB (58,567,659 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **780,615 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **558** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-24** | Subject: "Update article footer dark theme and nlp-fuzzy-expert sync manifest" |
+| **Total Lines of Source Code & Content** | **947,000** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **930,122** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,283** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **11,595** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **55.84 MB (58,554,541 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **780,061 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **559** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-24** | Subject: "Fix Portfolio footer icon with inline SVG and keep multicolumn grids and 4-column tablet social links" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,11 +27,11 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 91 | 89,813 | 7.09 MB (7,438,127 bytes) | Production static web pages, services, frameworks & guides |
-| **CSS Stylesheets** | 16 | 12,274 | 286.62 KB (293,502 bytes) | Design tokens, animations, responsive layout & themes |
+| **HTML Documents** | 91 | 89,820 | 7.09 MB (7,438,415 bytes) | Production static web pages, services, frameworks & guides |
+| **CSS Stylesheets** | 16 | 12,125 | 283.54 KB (290,347 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 32 | 11,372 | 3.70 MB (3,874,693 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 59 | 15,308 | 685.01 KB (701,448 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 161 | 41,328 | 4.73 MB (4,955,385 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Markdown Documentation** | 161 | 41,136 | 4.72 MB (4,945,134 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 115 | 777,172 | 35.11 MB (36,820,177 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 36 | 0 | 4.01 MB (4,209,868 bytes) | Optimized feature hero graphics, social cards & assets |
@@ -44,10 +44,10 @@
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
 | `.json` | 115 | 777,172 | 35.11 MB (36,820,177 bytes) | 20.3% |
-| `.html` | 91 | 89,813 | 7.09 MB (7,438,127 bytes) | 16.1% |
-| `.md` | 161 | 41,328 | 4.73 MB (4,955,385 bytes) | 28.4% |
+| `.html` | 91 | 89,820 | 7.09 MB (7,438,415 bytes) | 16.1% |
+| `.md` | 161 | 41,136 | 4.72 MB (4,945,134 bytes) | 28.4% |
 | `.py` | 59 | 15,308 | 685.01 KB (701,448 bytes) | 10.4% |
-| `.css` | 16 | 12,274 | 286.62 KB (293,502 bytes) | 2.8% |
+| `.css` | 16 | 12,125 | 283.54 KB (290,347 bytes) | 2.8% |
 | `.js` | 32 | 11,372 | 3.70 MB (3,874,693 bytes) | 5.7% |
 | `.svg` | 44 | 67 | 188.24 KB (192,754 bytes) | 7.8% |
 | `.webp` | 17 | 0 | 1.62 MB (1,695,354 bytes) | 3.0% |
@@ -67,8 +67,8 @@
 
 | Metric | Measurement | Architecture Details |
 | :--- | :--- | :--- |
-| **CSS Media Queries (`@media`)** | **82** | Ultra-responsive breakpoints for mobile, tablet, desktop |
-| **CSS Rule Blocks** | **1,660** | Modular selector rules across all stylesheets |
+| **CSS Media Queries (`@media`)** | **81** | Ultra-responsive breakpoints for mobile, tablet, desktop |
+| **CSS Rule Blocks** | **1,639** | Modular selector rules across all stylesheets |
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **198** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **86** | Strict single-H1 semantic hierarchy per page |

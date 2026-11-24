@@ -4701,8 +4701,10 @@ video {
     margin-right: 0 !important;
   }
 
-  .stats-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  .stats-grid,
+  .faq-grid,
+  .social-grid {
+    grid-template-columns: 1fr !important;
   }
 
   .btn,
