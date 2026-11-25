@@ -4,7 +4,7 @@
     "version": "1.0.0",
     "architecture": "Expert System (Forward Chaining) + Fuzzy Logic + NLP",
     "total_references_tracked": 27864,
-    "last_synchronized": "2026-11-25T16:52:16.584679"
+    "last_synchronized": "2026-11-25T17:24:11.307893"
   },
   "by_domain": {
     "pricing": 3738,
@@ -5734,10 +5734,7 @@
       "new_value": "10",
       "context": "\"text\": \"Business training bookings feature a fixed base rate of $1,000 USD covering up to 10 participants, backed by our 60-day flagship guarantee: 30 days of intensive live workforce training AND...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "faqs.html",
@@ -5798,10 +5795,7 @@
       "new_value": "10",
       "context": "\"name\": \"What are the fees if our training cohort exceeds 10 participants?\",",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "faqs.html",
@@ -5834,10 +5828,7 @@
       "new_value": "10",
       "context": "\"text\": \"If a training cohort exceeds 10 participants, additional seats are billed at a flat ($100 / $75 / $50 / $50 / $25 / Custom USD) per head (up to a strict maximum of 20 seats). Crucially, th...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "faqs.html",
@@ -5849,7 +5840,10 @@
       "new_value": "20",
       "context": "\"text\": \"If a training cohort exceeds 10 participants, additional seats are billed at a flat ($100 / $75 / $50 / $50 / $25 / Custom USD) per head (up to a strict maximum of 20 seats). Crucially, th...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats"
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats",
+      "also_in_data": [
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
+      ]
     },
     {
       "file": "faqs.html",
@@ -6490,10 +6484,7 @@
       "new_value": "10",
       "context": "\"text\": \"No. Personal AI Training is strictly for one person only (private 1-on-1 acceleration). This ensures complete confidentiality, zero committee distraction, and custom hardware/workflow pair...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "faqs.html",
@@ -6505,7 +6496,10 @@
       "new_value": "20",
       "context": "\"text\": \"No. Personal AI Training is strictly for one person only (private 1-on-1 acceleration). This ensures complete confidentiality, zero committee distraction, and custom hardware/workflow pair...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats"
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats",
+      "also_in_data": [
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
+      ]
     },
     {
       "file": "faqs.html",
@@ -7195,10 +7189,7 @@
       "new_value": "10",
       "context": "$1,000 for 60 days (30d training + 30d guidance/materials, up to 10 participants, +$100/extra seat) and",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "faqs.html",
@@ -9066,10 +9057,7 @@
       "new_value": "10",
       "context": "which covers up to 10 participants in its fixed base rate (with additional seats at $250/head scaled",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "faqs.html",
@@ -9096,7 +9084,10 @@
       "new_value": "20",
       "context": "by parity up to 20 seats max).",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats"
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats",
+      "also_in_data": [
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
+      ]
     },
     {
       "file": "faqs.html",
@@ -9308,10 +9299,7 @@
       "new_value": "10",
       "context": "Clear, upfront commercial models: flat base rate covering up to 10 participants,",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "faqs.html",
@@ -9323,7 +9311,10 @@
       "new_value": "20",
       "context": "transparent $250/head scale-out fees up to 20 seats max, free service concurrency, and custom division-wide quotes.",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats"
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats",
+      "also_in_data": [
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
+      ]
     },
     {
       "file": "faqs.html",
@@ -9384,10 +9375,7 @@
       "new_value": "10",
       "context": "Our Business Training bookings feature a fixed base investment of $1,000 USD covering up to 10 participants for 60 days (30 days training + 30 days guidance, assistance, and written guides licensed...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "faqs.html",
@@ -9475,10 +9463,7 @@
       "new_value": "10",
       "context": "Up to 10 Learners Included: Base fee covers up to 10 participants. Additional",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "faqs.html",
@@ -9511,7 +9496,10 @@
       "new_value": "20",
       "context": "seats scale transparently at ($100 / $75 / $50 / $50 / $25 / Custom USD) per head (adjusted by country parity tier) up to a strict maximum of 20 seats.",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats"
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats",
+      "also_in_data": [
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
+      ]
     },
     {
       "file": "faqs.html",
@@ -9610,10 +9598,7 @@
       "new_value": "10",
       "context": "What are the fees if our training cohort exceeds 10 participants?",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "faqs.html",
@@ -9625,10 +9610,7 @@
       "new_value": "10",
       "context": "When a team desires to include more than 10 participants in a single Business Training cohort, pricing",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "faqs.html",
@@ -9661,7 +9643,10 @@
       "new_value": "20",
       "context": "scales simply, transparently, and predictably: ($100 / $75 / $50 / $50 / $25 / Custom USD) per additional seat up to a strict maximum of 20 seats.",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats"
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats",
+      "also_in_data": [
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
+      ]
     },
     {
       "file": "faqs.html",
@@ -10145,10 +10130,7 @@
       "new_value": "10",
       "context": "10 team participants (additional seats at ($100 / $75 / $50 / $50 / $25 / Custom USD) per seat up to a maximum of 10 seats).",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "faqs.html",
@@ -11538,10 +11520,7 @@
       "new_value": "10",
       "context": "hours total), covering up to 10 participants (with additional seats at $250/head scaled by parity, up to a maximum of 20 seats).",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "faqs.html",
@@ -11553,7 +11532,10 @@
       "new_value": "20",
       "context": "hours total), covering up to 10 participants (with additional seats at $250/head scaled by parity, up to a maximum of 20 seats).",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats"
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats",
+      "also_in_data": [
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
+      ]
     },
     {
       "file": "faqs.html",
@@ -11727,10 +11709,7 @@
       "new_value": "10",
       "context": "hours total), priced at ($100 / $75 / $50 / $50 / $25 / Custom USD) (Business, up to 10 seats, additional seats at $100/seat) or ($100 / $75 / $50 / $50 / $25 / Custom USD) (Personal, 1 person) in ...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "faqs.html",
@@ -11926,7 +11905,10 @@
       "new_value": "20",
       "context": "seats, transparent $250/head scale-out charges (up to 20 seats max), and automatic parity discounts across 195 countries.",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats"
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats",
+      "also_in_data": [
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
+      ]
     },
     {
       "file": "faqs.html",
@@ -14200,10 +14182,7 @@
       "new_value": "10",
       "context": "Up to 10 people included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats)",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "guarantees.html",
@@ -14215,7 +14194,10 @@
       "new_value": "20",
       "context": "Up to 10 people included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats)",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats"
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats",
+      "also_in_data": [
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
+      ]
     },
     {
       "file": "guarantees.html",
@@ -14684,7 +14666,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$100",
       "new_value": "100",
-      "context": "1 person base (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 10 seats)",
+      "context": "1 person base (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats)",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
@@ -14702,12 +14684,12 @@
       "page": "Trust Guarantees & Payment Structure | Thomas Cherickal",
       "section": "1. Simple Pricing, Clear Schedule, and Zero Upfront Cost",
       "line_number": 374,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
-      "old_value": "10 seats",
-      "new_value": "10",
-      "context": "1 person base (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 10 seats)",
+      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.max_seats",
+      "old_value": "20 seats",
+      "new_value": "20",
+      "context": "1 person base (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats)",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats",
       "also_in_data": [
         "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
       ]
@@ -14720,7 +14702,7 @@
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
       "old_value": "$75",
       "new_value": "75",
-      "context": "1 person base (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 10 seats)",
+      "context": "1 person base (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats)",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
       "also_in_data": [
@@ -14737,7 +14719,7 @@
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
       "old_value": "$50",
       "new_value": "50",
-      "context": "1 person base (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 10 seats)",
+      "context": "1 person base (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats)",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
       "also_in_data": [
@@ -14758,7 +14740,7 @@
       "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
       "old_value": "$25",
       "new_value": "25",
-      "context": "1 person base (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 10 seats)",
+      "context": "1 person base (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats)",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
       "also_in_data": [
@@ -14775,7 +14757,7 @@
       "field_key": "pricing:offerings[flagship-personal-training].cohort_capacity.included_seats",
       "old_value": "1 person",
       "new_value": "1",
-      "context": "1 person base (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 10 seats)",
+      "context": "1 person base (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats)",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats",
       "also_in_data": [
@@ -15452,10 +15434,7 @@
       "new_value": "10",
       "context": "Up to 10 participants included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats max).",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "guarantees.html",
@@ -15467,7 +15446,10 @@
       "new_value": "20",
       "context": "Up to 10 participants included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats max).",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats"
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats",
+      "also_in_data": [
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
+      ]
     },
     {
       "file": "guarantees.html",
@@ -15878,12 +15860,12 @@
       "page": "Trust Guarantees & Payment Structure | Thomas Cherickal",
       "section": "Pick-and-Choose Individual Services",
       "line_number": 560,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
-      "old_value": "10 seats",
-      "new_value": "10",
+      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.max_seats",
+      "old_value": "20 seats",
+      "new_value": "20",
       "context": "Business Individual Pick: $100 / $75 / $50 / $50 / $25 / Custom USD per service (Support Included at Zero Charge) (covers 1 seat, +$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats",
       "also_in_data": [
         "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
       ]
@@ -18532,10 +18514,7 @@
       "new_value": "10",
       "context": "* **Business (Teams)**: **$250 USD** per service for **5 days live training + 5 days dedicated support** (10 days total coverage per service). Covers up to 10 participants (additional seats at **$2...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "llms.txt",
@@ -18691,10 +18670,7 @@
       "new_value": "10",
       "context": "- **Comprehensive Business Training**: **$1,000 USD** for **60 days** (30 days live hands-on engineering training + 30 days dedicated support, 30 working days with 8 - 10 recovery days, 4 hours per...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "llms.txt",
@@ -18706,7 +18682,10 @@
       "new_value": "20",
       "context": "- **Comprehensive Business Training**: **$1,000 USD** for **60 days** (30 days live hands-on engineering training + 30 days dedicated support, 30 working days with 8 - 10 recovery days, 4 hours per...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats"
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats",
+      "also_in_data": [
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
+      ]
     },
     {
       "file": "llms.txt",
@@ -19019,7 +18998,10 @@
       "new_value": "20",
       "context": "### Business Training Flagship (Upto 20 seats, 10 included)",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats"
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats",
+      "also_in_data": [
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
+      ]
     },
     {
       "file": "llms.txt",
@@ -19031,10 +19013,7 @@
       "new_value": "10",
       "context": "Comprehensive organization-wide AI transformation program engineered for engineering cohorts, leadership teams, and cross-functional staff. 60 days total (30 days live engineering training + 30 day...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "llms.txt",
@@ -19046,7 +19025,10 @@
       "new_value": "20",
       "context": "Comprehensive organization-wide AI transformation program engineered for engineering cohorts, leadership teams, and cross-functional staff. 60 days total (30 days live engineering training + 30 day...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats"
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats",
+      "also_in_data": [
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
+      ]
     },
     {
       "file": "llms.txt",
@@ -19122,7 +19104,10 @@
       "new_value": "20",
       "context": "- **Cohort Enablement (Up to 20 Seats, 10 Included)**: Covers up to 10 team members included in the base rate, with additional seats at $250 USD per seat up to 20 seats maximum, guaranteeing struct...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats"
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats",
+      "also_in_data": [
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
+      ]
     },
     {
       "file": "llms.txt",
@@ -22449,10 +22434,7 @@
       "new_value": "10",
       "context": "if (calcParticipantsDesc) calcParticipantsDesc.textContent = \"Business base covers up to 10 participants (additional seats are $100 USD per seat scaled by country parity).\";",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "pricing-calculator.js",
@@ -22516,10 +22498,7 @@
       "new_value": "10",
       "context": "calcDisplayNote.innerHTML = tier.note + (result.clientMode === \"business\" ? \" · Base covers up to 10 participants\" : \" · Strictly 1 person only\");",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "pricing-calculator.js",
@@ -23816,10 +23795,7 @@
       "new_value": "10",
       "context": "\"description\": \"Transparent AI engagement model: Pick individual services at $100 USD per service for individuals and $100 USD per service for businesses (each covering 5 days of training + 5 days ...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "pricing.html",
@@ -23981,10 +23957,7 @@
       "new_value": "10",
       "context": "\"description\": \"Transparent AI engagement model: Pick individual services at $100 USD per service for individuals and $100 USD per service for businesses (each covering 5 days of training + 5 days ...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "pricing.html",
@@ -24437,10 +24410,7 @@
       "new_value": "10",
       "context": "\"description\": \"Pick individual services at ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for businesses, covering 5 days of live training plus 5 days of dedicated support (10 days total ...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "pricing.html",
@@ -24701,10 +24671,7 @@
       "new_value": "10",
       "context": "\"description\": \"Comprehensive Business Training at $1,000 USD for 60 days (30 days live training + 30 days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under ...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "pricing.html",
@@ -25340,10 +25307,7 @@
       "new_value": "10",
       "context": "Business Training Flagship ( $1,000 USD · 60 Days ): 30 days live training + 30 days guidance and materials ( 60 days over 2 months, Saturday & Sunday holidays, 4 hours per day ), up to 10 particip...",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "pricing.html",
@@ -25726,10 +25690,7 @@
       "new_value": "10",
       "context": "operational support (10 days total coverage per service). Up to 10 seats for businesses (additional seats at",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "pricing.html",
@@ -25954,10 +25915,7 @@
       "new_value": "10",
       "context": "Includes up to 10 participants (additional seats at +$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "pricing.html",
@@ -26937,10 +26895,7 @@
       "new_value": "10",
       "context": "$100 / svc (≤10 seats)",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "pricing.html",
@@ -27126,10 +27081,7 @@
       "new_value": "10",
       "context": "Business Training Flagship - $1,000 USD (60 Days: 30d Training + 30d Guidance, up to 10 seats)",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "pricing.html",
@@ -27404,10 +27356,7 @@
       "new_value": "10",
       "context": "Business base covers up to 10 participants (additional seats are ($100 / $75 / $50 / $50 / $25 /",
       "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.max_seats"
-      ]
+      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats"
     },
     {
       "file": "pricing.html",
