@@ -272,6 +272,11 @@ def apply_deterministic_fixes(repo_dir=REPO_DIR):
 
 def invoke_agy_fix(failures, raw_logs, repo_dir=REPO_DIR):
     """Invokes `agy --print` to autonomously fix all failing tests in a single pass."""
+    # Never start a nested Antigravity agent from inside a git hook unless explicitly
+    # asked to. A nested agy inherits the calling agent's workspace and git's hook
+    # variables (GIT_INDEX_FILE, GIT_DIR), which crossed workspaces between repos.
+    if os.environ.get("AGY_HEAL") != "1":
+        return False, "agy healing disabled (run with AGY_HEAL=1 to enable)"
     agy_bin = shutil.which("agy")
     if not agy_bin:
         return False, "agy CLI not found in PATH"
@@ -285,7 +290,8 @@ def invoke_agy_fix(failures, raw_logs, repo_dir=REPO_DIR):
         "Recent test output:\n" + raw_logs[-4000:]
     )
     before_diff = subprocess.run(["git", "diff", "--name-only"], cwd=repo_dir, capture_output=True, text=True).stdout
-    res = subprocess.run([agy_bin, "--print", prompt], cwd=repo_dir, capture_output=True, text=True)
+    clean_env = {k: v for k, v in os.environ.items() if not k.startswith("GIT_")}
+    res = subprocess.run([agy_bin, "--print", prompt], cwd=repo_dir, env=clean_env, capture_output=True, text=True)
     after_diff = subprocess.run(["git", "diff", "--name-only"], cwd=repo_dir, capture_output=True, text=True).stdout
 
     changed = sorted(set(after_diff.splitlines()) - set(before_diff.splitlines()))

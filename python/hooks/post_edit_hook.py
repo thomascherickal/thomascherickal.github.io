@@ -16,8 +16,11 @@ def main():
             data = json.loads(raw_input)
             tool_args = data.get("toolCall", {}).get("args", {})
             target_file = tool_args.get("TargetFile", "")
-            if "header.html" in target_file or "footer.html" in target_file:
-                repo_root = Path(__file__).resolve().parents[2]
+            repo_root = Path(__file__).resolve().parents[2]
+            target = Path(target_file).resolve() if target_file else None
+            # Only rebuild for this repo's own header/footer, never another project's.
+            if (target is not None and target.is_relative_to(repo_root)
+                    and target.name in ("header.html", "footer.html")):
                 build_script = repo_root / "python" / "build_components.py"
                 if build_script.exists():
                     res = subprocess.run(
