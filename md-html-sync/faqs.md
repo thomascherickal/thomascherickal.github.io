@@ -84,19 +84,19 @@ This policy guarantees complete risk elimination, aligning my incentives entirel
 
 ---
 
-### 4. Are there any charges or fees for the dedicated support period?
+### 4. Are there any charges or licensing fees for the training materials?
 *Payment:
- Zero Charge Support · FAQ #65*  
-No. There is zero charge for the dedicated support period. All post-training operational support is 100% included and fully covered by the base price and its scaled Purchasing Power Parity (PPP) tiers:
+ Zero Charge Training Materials · FAQ #65*  
+No. Zero charge for training materials: All training materials will be provided to the client with an Apache 2.0 license for internal use, commercial use, or even resale with only one requirement - attribution to the original author.
 
-- Flagship Programs (Business & Personal):
- The 30-day support phase carries $0 additional charge. It is completely covered by the $1,000 USD flagship price and its scaled parity tiers.
+- Zero Extra Charge:
+ All curriculum guides, code, prompts, and written training materials are 100% included in your engagement at $0 additional charge.
 
-- Individual Services (Business & Personal):
- The 5-day support phase carries $0 additional charge. It is completely covered by the $100 USD individual service price and its scaled parity tiers.
+- Full Commercial & Resale Rights:
+ Licensed under Apache 2.0 for internal deployment, commercial use, or resale with attribution to the original author.
 
-- What Support Covers:
- Direct code reviews, debugging agent pipelines, answering technical queries, refactoring MCP servers, and providing written custom guides licensed under Apache 2.0.
+- Completion Requirement:
+ The Apache 2.0 license will not be provided if the training ends early.
 
 There are zero surprise invoices, no recurring subscriptions, and zero additional payments beyond the 10 training milestones.
 

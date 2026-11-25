@@ -44,11 +44,9 @@ Zero advance payment or deposit required before commencing technical discovery a
 Invoiced in ten equal installments (10% each) due strictly after completed milestone blocks of training
  progress. You verify working agents and code before every payment.
 
-### Zero Charge
- Support Periods
+### Zero Charge Training Materials
 
-Zero charge for support periods: All dedicated operational support (30 days for flagships, 5 days for
- individual services) is 100% included and fully covered by the base price and its scaled parity tiers.
+Zero charge for training materials: All training materials will be provided to the client with an Apache 2.0 license for internal use, commercial use, or even resale with only one requirement - attribution to the original author. The license will not be provided if the training ends early.
 
 ### Walkaway Guarantee &
  Apache 2.0

@@ -169,7 +169,7 @@
     }
     let participants = Math.min(20, rawParticipants);
     const extraParticipants = basePrice > 0
-      ? (packageType === "pick-services" ? Math.max(0, participants - 1) : Math.max(0, participants - 10))
+      ? (packageType === "pick-services" ? Math.max(0, participants - 10) : Math.max(0, participants - 10))
       : 0;
     const extraHeadRate = Math.round(extraParticipants * 100 * tier.multiplier);
     const baseTierPrice = Math.round(basePrice * tier.multiplier);

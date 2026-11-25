@@ -419,26 +419,26 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 
 ## Latest Pre-Commit Report Summary
 
-> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`METRICS.md`](METRICS.md)** | Recorded on: `2026-11-25 12:43:06 UTC`
+> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`METRICS.md`](METRICS.md)** | Recorded on: `2026-11-25 13:07:24 UTC`
 
 ### Commit Overview
 
 | Property | Value |
 | :--- | :--- |
-| **Parent Commit (Full)** | `30d9ebaefe6652030956112b56589132b46609ab` |
-| **Parent Commit (Short)** | `30d9eba` |
+| **Parent Commit (Full)** | `11cbe85e895abcbc990e73f0a62014d937bd173d` |
+| **Parent Commit (Short)** | `11cbe85` |
 | **Branch** | `main` |
-| **Parent Subject** | feat(synchronizer): synchronize repository state with authoritative data |
+| **Parent Subject** | Standardize 20-seat cap, 10x10% payment milestones, and Personal Training across site |
 | **Parent Author** | Thomas Cherickal `<thomascherickal@gmail.com>` |
-| **Parent Author Date** | `2026-11-25T18:01:56+05:30` |
-| **Commits in Repo (before this commit)** | 568 |
+| **Parent Author Date** | `2026-11-25T18:12:49+05:30` |
+| **Commits in Repo (before this commit)** | 569 |
 
 ### Quality Gate & Verification Summary
 
 | Quality Gate / Test Dimension | Total Scope | Passed | Failed | Status | Runtime |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| **Python Unit Test Suite** | 149 tests across 25 modules | 149 | 0 | PASSED | 12.41s |
-| **JavaScript Unit Test Suite** | 159 tests across 17 sections | 159 | 0 | PASSED | 0.08s |
+| **Python Unit Test Suite** | 149 tests across 25 modules | 149 | 0 | PASSED | 9.97s |
+| **JavaScript Unit Test Suite** | 159 tests across 17 sections | 153 | 0 | FAILED | 0.07s |
 | **NLP-Fuzzy-Expert Sync Engine** | 91 target documents | 91 | 0 | PASSED | 1.50s |
 | **SSOT Data Immutability Guard** | 12 data files SHA-256 hash | 12 | 0 | PASSED | 0.001s |
 | **Internal Link & Anchor Integrity** | 10350 links across 91 HTML files | 10350 | 0 | PASSED | 0.33s |
@@ -459,26 +459,26 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **566** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **970,060** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **953,264** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,283** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,513** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **57.66 MB (60,457,605 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **790,675 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **568** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-25** | Subject: "feat(synchronizer): synchronize repository state with authoritative data" |
+| **Total Lines of Source Code & Content** | **974,529** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **957,728** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,285** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **11,516** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **57.82 MB (60,629,058 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **794,850 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **569** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-25** | Subject: "Standardize 20-seat cap, 10x10% payment milestones, and Personal Training across site" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ### Architecture & File Category Breakdown (`METRICS.md`)
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 91 | 92,106 | 7.42 MB (7,777,143 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 91 | 92,090 | 7.42 MB (7,777,463 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 12,169 | 284.47 KB (291,296 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 32 | 11,361 | 3.70 MB (3,874,701 bytes) | Client-side interactivity, search, filter & components |
+| **JavaScript Scripts** | 32 | 11,361 | 3.70 MB (3,874,702 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 59 | 15,308 | 685.68 KB (702,134 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 161 | 41,611 | 4.79 MB (5,026,145 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 115 | 797,438 | 36.53 MB (38,301,776 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Markdown Documentation** | 161 | 41,804 | 4.82 MB (5,055,995 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 115 | 801,730 | 36.66 MB (38,443,058 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 36 | 0 | 4.01 MB (4,209,868 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 12 | 0 | 79.87 KB (81,788 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
