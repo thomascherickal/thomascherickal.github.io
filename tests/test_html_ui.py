@@ -286,7 +286,7 @@ class TestHTMLUISuite(unittest.TestCase):
     def test_17_zero_charge_training_materials_card_rendered(self):
         """Verifies Zero Charge Training Materials heading and early-exit clause render on pricing/core pages."""
         for rel in ("index.html", "pricing.html", "contact.html", "guarantees.html", "faqs.html"):
-            txt = self.soups[rel].get_text(" ", strip=True)
+            txt = re.sub(r"\s+", " ", self.soups[rel].get_text(" ", strip=True))
             self.assertIn("Zero Charge Training Materials", txt, f"{rel}: missing Zero Charge Training Materials")
             self.assertIn("Apache 2.0", txt, f"{rel}: missing Apache 2.0 mention")
             self.assertNotIn("Zero Charge Support Periods", txt, f"{rel}: stale Zero Charge Support Periods")

@@ -16,6 +16,7 @@ Strict Repo Compliance: Zero emojis, zero em-dashes.
 
 import json
 import os
+import re
 import unittest
 
 REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -146,7 +147,7 @@ class TestPricingAndPolicyInvariants(unittest.TestCase):
             "pricing/pricing-tier-6-crisis-affected-10.html",
         ]
         for page in pages:
-            html = read_text(page)
+            html = re.sub(r"\s+", " ", read_text(page))
             self.assertIn("Zero Charge Training Materials", html, f"Missing Zero Charge Training Materials in {page}")
             self.assertNotIn("Zero Charge Support Periods", html, f"Stale Zero Charge Support Periods in {page}")
             self.assertNotIn("20% in Five", html, f"Stale 20% in Five in {page}")

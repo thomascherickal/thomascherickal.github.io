@@ -107,10 +107,10 @@ Structured engagement models for engineering teams, fast-growing tech startups, 
 `Test-Driven Development (TDD)` · `AI Pair Programming` · `Automated Test Suites` · `pytest` · `cargo test` · `CI/CD Automation`
 
 ### Gemini Expertise
-`Gemini LLMs` · `Google Deep Research` · `Gemini Agents` · `Gemini Spark` · `Google Nano Banana` · `Google Flow` · `Google DeepMind`
+`Gemini 4 Models` · `Gemini 4 Orchestration` · `Gemini 4 Swarms` · `Gemini Agents` · `Gemini Spark` · `Google Nano Banana` · `Google Flow` · `Google Omni` · `Google DeepMind` · `Google Deep Research`
 
 ### Claude Expertise
-`Claude Agent Teams` · `Claude Skills` · `Claude Artifacts` · `Claude Motion` · `Claude Dashboards` · `Claude Mods` · `Claude Subagents`
+`Claude Agent Teams` · `Claude Skills` · `Claude Artifacts` · `Claude Motion` · `Claude Dashboards` · `Claude Mods` · `Claude Office`
 
 ### Open-Source Systems
 `HuggingFace Models` · `HuggingFace Spaces` · `OpenRouter` · `Nvidia NIM Services` · `OpenCode` · `Agentics Foundation`

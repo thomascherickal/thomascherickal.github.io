@@ -419,26 +419,26 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 
 ## Latest Pre-Commit Report Summary
 
-> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`METRICS.md`](METRICS.md)** | Recorded on: `2026-11-25 14:52:18 UTC`
+> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`METRICS.md`](METRICS.md)** | Recorded on: `2026-11-25 15:59:14 UTC`
 
 ### Commit Overview
 
 | Property | Value |
 | :--- | :--- |
-| **Parent Commit (Full)** | `2b3e6c0d0d6377ceb4a51f580fdc6a274ef7a094` |
-| **Parent Commit (Short)** | `2b3e6c0` |
+| **Parent Commit (Full)** | `b3b4e8210460410a63990683ffb2abf8421dfd30` |
+| **Parent Commit (Short)** | `b3b4e82` |
 | **Branch** | `main` |
-| **Parent Subject** | feat(synchronizer): synchronize repository state with authoritative data |
+| **Parent Subject** | feat(synchronizer): synchronize repository state (1 test failure warnings - see failed_unit_tests.report.md) |
 | **Parent Author** | Thomas Cherickal `<thomascherickal@gmail.com>` |
-| **Parent Author Date** | `2026-11-25T18:44:48+05:30` |
-| **Commits in Repo (before this commit)** | 571 |
+| **Parent Author Date** | `2026-11-25T20:22:19+05:30` |
+| **Commits in Repo (before this commit)** | 572 |
 
 ### Quality Gate & Verification Summary
 
 | Quality Gate / Test Dimension | Total Scope | Passed | Failed | Status | Runtime |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| **Python Unit Test Suite** | 206 tests across 27 modules | 204 | 0 | FAILED | 15.90s |
-| **JavaScript Unit Test Suite** | 200 tests across 18 sections | 200 | 0 | PASSED | 0.10s |
+| **Python Unit Test Suite** | 206 tests across 27 modules | 206 | 0 | PASSED | 16.05s |
+| **JavaScript Unit Test Suite** | 200 tests across 18 sections | 200 | 0 | PASSED | 0.08s |
 | **NLP-Fuzzy-Expert Sync Engine** | 91 target documents | 91 | 0 | PASSED | 1.50s |
 | **SSOT Data Immutability Guard** | 12 data files SHA-256 hash | 12 | 0 | PASSED | 0.001s |
 | **Internal Link & Anchor Integrity** | 10350 links across 91 HTML files | 10350 | 0 | PASSED | 0.33s |
@@ -458,27 +458,27 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **566** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **975,129** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **958,316** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,287** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,526** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **57.86 MB (60,672,028 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **795,262 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **571** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-25** | Subject: "feat(synchronizer): synchronize repository state with authoritative data" |
+| **Total Tracked Files** | **571** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **971,456** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **954,485** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,313** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **11,658** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **57.77 MB (60,578,677 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **793,211 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **572** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-25** | Subject: "feat(synchronizer): synchronize repository state (1 test failure warnings - see failed_unit_tests.report.md)" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ### Architecture & File Category Breakdown (`METRICS.md`)
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 91 | 92,105 | 7.42 MB (7,778,415 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 91 | 92,166 | 7.42 MB (7,779,560 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 12,169 | 284.47 KB (291,296 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 32 | 11,428 | 3.70 MB (3,878,152 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 59 | 15,367 | 688.68 KB (705,205 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 161 | 41,850 | 4.82 MB (5,058,791 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 115 | 802,143 | 36.69 MB (38,475,452 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **JavaScript Scripts** | 33 | 11,553 | 3.70 MB (3,883,101 bytes) | Client-side interactivity, search, filter & components |
+| **Python Tooling** | 62 | 16,374 | 739.66 KB (757,414 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 161 | 41,782 | 4.81 MB (5,041,909 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 115 | 797,345 | 36.52 MB (38,290,656 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
-| **Raster Images (WebP, JPG, PNG)** | 36 | 0 | 4.01 MB (4,209,868 bytes) | Optimized feature hero graphics, social cards & assets |
+| **Raster Images (WebP, JPG, PNG)** | 37 | 0 | 4.06 MB (4,259,892 bytes) | Optimized feature hero graphics, social cards & assets |
 | **Config & Metadata** | 12 | 0 | 80.17 KB (82,095 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
