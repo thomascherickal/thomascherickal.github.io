@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-24 17:07:27 UTC` | Branch: `main` | Head Commit: `2492c16`
+> **Automated Status Report** | Generated on `2026-11-25 10:55:05 UTC` | Branch: `main` | Head Commit: `c105d7f`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **566** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **947,005** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **930,126** | Executable / renderable content lines |
+| **Total Lines of Source Code & Content** | **946,987** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **930,106** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **5,283** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,596** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **55.84 MB (58,554,562 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **780,025 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **560** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-24** | Subject: "Restore default mobile styling rules across responsive.css, footer.css, and styles.css" |
+| **Blank / Spacing Lines** | **11,598** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **55.84 MB (58,553,294 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **779,953 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **561** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-24** | Subject: "Pack footer links into even-column rows (2, 4, 6, 8, 12) across phones, tablets, and desktops" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -28,10 +28,10 @@
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | **HTML Documents** | 91 | 89,820 | 7.09 MB (7,438,415 bytes) | Production static web pages, services, frameworks & guides |
-| **CSS Stylesheets** | 16 | 12,134 | 283.82 KB (290,628 bytes) | Design tokens, animations, responsive layout & themes |
+| **CSS Stylesheets** | 16 | 12,148 | 284.09 KB (290,910 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 32 | 11,372 | 3.70 MB (3,874,693 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 59 | 15,308 | 685.01 KB (701,448 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 161 | 41,132 | 4.72 MB (4,944,874 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Markdown Documentation** | 161 | 41,100 | 4.71 MB (4,943,324 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 115 | 777,172 | 35.11 MB (36,820,177 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 36 | 0 | 4.01 MB (4,209,868 bytes) | Optimized feature hero graphics, social cards & assets |
@@ -45,9 +45,9 @@
 | :--- | :--- | :--- | :--- | :--- |
 | `.json` | 115 | 777,172 | 35.11 MB (36,820,177 bytes) | 20.3% |
 | `.html` | 91 | 89,820 | 7.09 MB (7,438,415 bytes) | 16.1% |
-| `.md` | 161 | 41,132 | 4.72 MB (4,944,874 bytes) | 28.4% |
+| `.md` | 161 | 41,100 | 4.71 MB (4,943,324 bytes) | 28.4% |
 | `.py` | 59 | 15,308 | 685.01 KB (701,448 bytes) | 10.4% |
-| `.css` | 16 | 12,134 | 283.82 KB (290,628 bytes) | 2.8% |
+| `.css` | 16 | 12,148 | 284.09 KB (290,910 bytes) | 2.8% |
 | `.js` | 32 | 11,372 | 3.70 MB (3,874,693 bytes) | 5.7% |
 | `.svg` | 44 | 67 | 188.24 KB (192,754 bytes) | 7.8% |
 | `.webp` | 17 | 0 | 1.62 MB (1,695,354 bytes) | 3.0% |
@@ -67,8 +67,8 @@
 
 | Metric | Measurement | Architecture Details |
 | :--- | :--- | :--- |
-| **CSS Media Queries (`@media`)** | **82** | Ultra-responsive breakpoints for mobile, tablet, desktop |
-| **CSS Rule Blocks** | **1,641** | Modular selector rules across all stylesheets |
+| **CSS Media Queries (`@media`)** | **81** | Ultra-responsive breakpoints for mobile, tablet, desktop |
+| **CSS Rule Blocks** | **1,642** | Modular selector rules across all stylesheets |
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **198** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **86** | Strict single-H1 semantic hierarchy per page |
