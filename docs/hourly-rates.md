@@ -12,7 +12,7 @@
 This report establishes the delivery structure, live instruction hours, effective hourly rates across all 6 Purchasing Power Parity (PPP) tiers, and revenue economics for all three core training offerings provided by The Digital Futurist:
 
 1. **Flagship Business Training**: 60 days total (30 days live engineering training + 30 days dedicated support), up to 10 participants included (+$100/extra seat up to 20 seats max).
-2. **Flagship Personal Training**: 60 days total (30 days live 1-on-1 training + 30 days dedicated support), strictly 1-on-1 private acceleration.
+2. **Flagship Personal Training**: 60 days total (30 days live Personal Training + 30 days dedicated support), up to 10 participants included (+$100/extra seat, max 20).
 3. **Individual Service Picks**: 10 days total (5 days live training + 5 days dedicated support), available for individuals (strictly 1 person, $100 base) and businesses (1 seat included, +$100/extra seat up to 10 seats max, $100 base).
 
 All live training runs on **business days** (Monday to Friday, excluding Saturdays and Sundays) at **4 hours per day** (30 working days over 6-8 weeks).
@@ -24,9 +24,9 @@ All live training runs on **business days** (Monday to Friday, excluding Saturda
 | Programme | Total Duration | Live Training Days | Daily Live Hours | Total Live Hours | Included Cohort Size | Second-Phase Support |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Business Training Flagship** | 60 days | 30 business days | 4 hours / day | **120 hours** | Up to 10 seats (+$100/seat extra up to 20) | 30 days dedicated support & written guides |
-| **Personal Training Flagship** | 60 days | 30 business days | 4 hours / day | **120 hours** | Strictly 1 person (1-on-1) | 30 days dedicated support & written guides |
+| **Personal Training Flagship** | 60 days | 30 business days | 4 hours / day | **120 hours** | Strictly 1 person (Personal) | 30 days dedicated support & written guides |
 | **Individual Service (Business)** | 10 days | 5 business days | 4 hours / day | **20 hours** | 1 seat base (+$100/seat extra up to 10) | 5 days dedicated operational support |
-| **Individual Service (Personal)** | 10 days | 5 business days | 4 hours / day | **20 hours** | Strictly 1 person (1-on-1) | 5 days dedicated operational support |
+| **Individual Service (Personal)** | 10 days | 5 business days | 4 hours / day | **20 hours** | Strictly 1 person (Personal) | 5 days dedicated operational support |
 
 ---
 
@@ -59,9 +59,9 @@ All live training runs on **business days** (Monday to Friday, excluding Saturda
 
 ### B. Flagship Personal Training ($1,000 USD Base)
 - **Live Instruction:** 30 days x 4 hours/day = **120 live hours**
-- **Cohort:** Strictly 1 person (dedicated 1-on-1 private acceleration)
+- **Cohort:** Strictly 1 person (dedicated Personal private acceleration)
 
-| Parity Tier | Total Fee (USD) | Effective Hourly Rate (1-on-1) |
+| Parity Tier | Total Fee (USD) | Effective Hourly Rate (Personal) |
 | :--- | :--- | :--- |
 | **Tier 1: High-Income** (100%) | $1,000 | **$25.00 / hr** |
 | **Tier 2: Upper-Middle-Income** (75%) | $750 | **$18.75 / hr** |
@@ -87,9 +87,9 @@ All live training runs on **business days** (Monday to Friday, excluding Saturda
 
 ### D. Individual Service Pick - Personal ($100 USD Base)
 - **Live Instruction:** 5 days x 4 hours/day = **20 live hours**
-- **Cohort:** Strictly 1 person (1-on-1)
+- **Cohort:** Strictly 1 person (Personal)
 
-| Parity Tier | Total Fee (USD) | Effective Hourly Rate (1-on-1) |
+| Parity Tier | Total Fee (USD) | Effective Hourly Rate (Personal) |
 | :--- | :--- | :--- |
 | **Tier 1: High-Income** (100%) | $100 | **$15.00 / hr** |
 | **Tier 2: Upper-Middle-Income** (75%) | $75 | **$11.25 / hr** |
@@ -102,7 +102,7 @@ All live training runs on **business days** (Monday to Friday, excluding Saturda
 ## 4. Strategic Observations & Capacity Notes
 
 1. **Accessibility and Mission Alignment:**
-   - At $25.00/hr for Business Flagship ($2.50/hr per seat for 10 participants) and $25.00/hr for 1-on-1 Personal Flagship, these rates provide senior Generative AI training at global parity.
+   - At $25.00/hr for Business Flagship ($2.50/hr per seat for 10 participants) and $25.00/hr for Personal Personal Flagship, these rates provide senior Generative AI training at global parity.
    - For developing nations (Tier 2 and Tier 3), rates ensure no high-impact engineering team or individual is priced out of foundational AI architectural skills.
 
 2. **Delivery Bandwidth & Solo Capacity:**

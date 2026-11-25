@@ -162,12 +162,13 @@
       }
     }
 
+    const includedSeats = packageType === "pick-services" ? 1 : 10;
     let rawParticipants = parseInt(params.participants, 10);
     if (isNaN(rawParticipants) || rawParticipants < 1) {
-      rawParticipants = clientMode === "individual" ? 1 : 10;
+      rawParticipants = includedSeats;
     }
-    let participants = clientMode === "individual" ? 1 : rawParticipants;
-    const extraParticipants = (clientMode === "business" && basePrice > 0) ? Math.max(0, participants - 10) : 0;
+    let participants = Math.min(20, rawParticipants);
+    const extraParticipants = basePrice > 0 ? Math.max(0, participants - includedSeats) : 0;
     const extraHeadRate = Math.round(extraParticipants * 100 * tier.multiplier);
     const baseTierPrice = Math.round(basePrice * tier.multiplier);
     const finalPrice = basePrice === 0 ? 0 : baseTierPrice + extraHeadRate;
@@ -313,17 +314,17 @@
           calcParticipants.value = Math.max(10, parseInt(calcParticipants.value, 10) || 10);
           calcParticipants.disabled = false;
         }
-        if (calcParticipantsHint) calcParticipantsHint.textContent = "Business: 1-10 Included (+$100/extra seat)";
-        if (calcParticipantsDesc) calcParticipantsDesc.textContent = "Business base covers up to 10 participants (additional seats are $100 USD per seat scaled by country parity).";
+        if (calcParticipantsHint) calcParticipantsHint.textContent = "Flagships: 10 Included · Service Picks: 1 Included (+$100/extra seat, max 20)";
+        if (calcParticipantsDesc) calcParticipantsDesc.textContent = "Flagships include up to 10 participants and Service Picks include 1 seat (additional seats are $100 USD per seat scaled by country parity, up to 20 seats max).";
       } else {
         btnModeIndividual.classList.add("active");
         btnModeBusiness.classList.remove("active");
         if (calcParticipants) {
-          calcParticipants.value = 1;
-          calcParticipants.disabled = true;
+          calcParticipants.disabled = false;
+          calcParticipants.value = Math.min(20, Math.max(1, parseInt(calcParticipants.value, 10) || 10));
         }
-        if (calcParticipantsHint) calcParticipantsHint.textContent = "Personal: Strictly 1 Person Only";
-        if (calcParticipantsDesc) calcParticipantsDesc.textContent = "Personal / Individual engagements are strictly 1 person only (private 1-on-1 acceleration).";
+        if (calcParticipantsHint) calcParticipantsHint.textContent = "Personal Flagship: 10 Included · Service Picks: 1 Included (+$100/extra seat, max 20)";
+        if (calcParticipantsDesc) calcParticipantsDesc.textContent = "Personal Flagship includes up to 10 participants and Personal Service Picks include 1 seat (additional seats are $100 USD per seat scaled by country parity, up to 20 seats max).";
       }
 
       if (calcPackage && calcPackage.value === "pick-services") {

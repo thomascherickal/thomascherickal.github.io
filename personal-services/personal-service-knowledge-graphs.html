@@ -340,7 +340,7 @@
     <h2 style="font-family:var(--font-display);color:var(--gold,#fbbf24);font-size:1.5rem;margin-top:0;margin-bottom:1.1rem;">Why Flat Folders Miss Non-Obvious Connections and Waste Tokens</h2>
 <p>When your personal notes live in flat folders or a basic vector database, every note sits in isolation. If you ask an AI assistant how an idea from a systems engineering book connects to a client project you ran six months ago and a paper you read last week, standard similarity search often misses the bridge completely. Worse, to compensate for weak retrieval, people end up pasting ten entire documents into their prompt, burning thousands of unnecessary tokens while still burying the key facts in noise.</p>
 <p>A personal knowledge graph fixes both problems at once. Instead of storing isolated blobs of text, you model the actual relationships across your reading and work: which author wrote which paper, which paper supports or contradicts which concept, and which concepts apply to your active projects. Because those links are stored explicitly as lightweight nodes and edges, your local tools can traverse two or three hops in milliseconds and pull back a tiny, laser-focused context bundle.</p>
-<p>That compact subgraph gives your AI tools everything they need to reason deeply while slashing prompt token usage by sixty to eighty percent. In 1-on-1 training, we build a practical, low-maintenance personal knowledge graph directly on top of your existing notes without requiring heavy enterprise graph servers.</p>
+<p>That compact subgraph gives your AI tools everything they need to reason deeply while slashing prompt token usage by sixty to eighty percent. In Personal Training, we build a practical, low-maintenance personal knowledge graph directly on top of your existing notes without requiring heavy enterprise graph servers.</p>
 <div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:12px;padding:1.5rem;margin:1.75rem 0;">
   <p style="font-size:0.85rem;color:#fbbf24;font-weight:600;margin-top:0;margin-bottom:1rem;letter-spacing:0.04em;text-transform:uppercase;">Personal Knowledge Graph and Hybrid Graph-RAG Flow</p>
   <div class="mermaid">
@@ -468,11 +468,11 @@ def compact_context(graph: nx.DiGraph, seed: str, depth: int = 2) -&gt; str:
   <section class="cta-banner content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);border-radius:16px;padding:2.25rem;margin-top:2rem;text-align:center;">
     <h2 style="font-family:var(--font-display);color:#ffffff;font-size:1.55rem;margin-top:0;margin-bottom:0.75rem;">Ready to Build Your Personal Knowledge Graphs System?</h2>
     <p style="color:var(--text-secondary);max-width:680px;margin:0 auto 1.5rem auto;line-height:1.75;">
-      Work 1-on-1 to design, configure, and verify this workflow directly on your own machine. Review full engagement details or book a free discovery conversation today.
+      Work Personal to design, configure, and verify this workflow directly on your own machine. Review full engagement details or book a free discovery conversation today.
     </p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
       <a class="btn btn-commission btn-lg" href="../pricing.html">View Pricing &amp; Parity →</a>
-      <a class="btn btn-primary btn-lg" href="../contact.html">Book 1-on-1 Training →</a>
+      <a class="btn btn-primary btn-lg" href="../contact.html">Book Personal Training →</a>
       <a class="btn btn-linkedin btn-lg" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
     </div>
   </section>

@@ -59,7 +59,7 @@ Use any 50-word introduction below as an editable meta-prompt to guide or regene
 ## Personal Services (`personal-services/`)
 
 17. **`personal-service-advanced-ai-agents.html` - Advanced AI Agents**
-    Master designing and running personal autonomous AI agents on your own workstation. Through 1-on-1 engineering sessions, you learn bounded agent loops, custom tool creation, local memory persistence, and verification gates to automate complex coding, research, and daily technical projects safely.
+    Master designing and running personal autonomous AI agents on your own workstation. Through Personal Training engineering sessions, you learn bounded agent loops, custom tool creation, local memory persistence, and verification gates to automate complex coding, research, and daily technical projects safely.
 
 18. **`personal-service-agentic-assistants.html` - Agentic Assistant Training**
     Configure a persistent, self-improving personal agentic assistant like Hermes Agent, OpenClaw, Grok Bot, n8n's Nod, Open Bot, and others tailored to your exact tools, writing style, and daily workflows. You learn three-tier Markdown memory architecture, reusable skill authoring, sandboxed execution, and automated task scheduling so your assistant compounds value every week.
@@ -71,13 +71,13 @@ Use any 50-word introduction below as an editable meta-prompt to guide or regene
     Stop overpaying for overlapping AI subscriptions and inefficient API usage. Learn practical model routing, prompt caching, token-budget monitoring, and free or low-cost local fallbacks tailored to solo developers, researchers, and indie founders seeking maximum capability at minimal monthly spend.
 
 21. **`personal-service-ai-developer-training.html` - AI Developer Training**
-    Accelerate your individual software engineering output with 1-on-1 mastery of AI-assisted coding, terminal agents, automated test generation, and structured LLM API integration. Leave with production-ready templates, evaluation scripts, and disciplined verification habits across Python, Rust, and TypeScript.
+    Accelerate your individual software engineering output with Personal Training mastery of AI-assisted coding, terminal agents, automated test generation, and structured LLM API integration. Leave with production-ready templates, evaluation scripts, and disciplined verification habits across Python, Rust, and TypeScript.
 
 22. **`personal-service-ai-second-brain.html` - AI Second Brain**
     Turn years of scattered bookmarks, PDFs, notes, and voice memos into a fast, local-first AI Second Brain. Learn plain-text Markdown organization, local embedding indexing, and retrieval workflows so you can surface past insights and synthesize new ideas in seconds.
 
 23. **`personal-service-claude-agents-orchestration.html` - Claude Agent Orchestration**
-    Learn 1-on-1 how to orchestrate multi-agent Claude workflows on your personal projects. Master task decomposition, subagent delegation, prompt caching, and deterministic test gates so solo builders can ship multi-module software and research deliverables with small-team velocity.
+    Learn Personal how to orchestrate multi-agent Claude workflows on your personal projects. Master task decomposition, subagent delegation, prompt caching, and deterministic test gates so solo builders can ship multi-module software and research deliverables with small-team velocity.
 
 24. **`personal-service-claude-research-training.html` - Claude Research Training**
     Claude can create breakthroughs in your knowledge understanding, and, with enough budget, even produce research breakthroughs that you can publish. Explore the research breakthroughs Claude has already made, with a full listing of resources utilized, and an explanation of how it was achieved. You can then apply these same techniques to your own research and creative projects.
@@ -92,7 +92,7 @@ Use any 50-word introduction below as an editable meta-prompt to guide or regene
     Gemini has the same research breakthrough possibilities as Claude. Examine the resources Gemini AI has utilized, along with the explanations of how the breakthroughs were achieved, and apply these same techniques to your own research and creative projects.
 
 28. **`personal-service-generative-ai-transformation.html` - Generative AI Transformation**
-    Replace ad-hoc browser chatting with a cohesive personal cognitive operating system. In 1-on-1 sessions, audit your daily workflows, select the highest-leverage AI tools, configure reusable prompts and skills, and build repeatable habits across writing, coding, and decision-making.
+    Replace ad-hoc browser chatting with a cohesive personal cognitive operating system. In Personal Training sessions, audit your daily workflows, select the highest-leverage AI tools, configure reusable prompts and skills, and build repeatable habits across writing, coding, and decision-making.
 
 29. **`personal-service-knowledge-graphs.html` - Knowledge Graphs**
     Build personal knowledge graphs that connect concepts, authors, projects, and citations across your entire body of reading and work. Learn practical graph modeling and hybrid graph-RAG querying to uncover non-obvious links and strengthen long-term research recall, and help your AI tools save tokens.

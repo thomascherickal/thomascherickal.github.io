@@ -1,6 +1,6 @@
 # Services Summary
 
-Consolidated executive overview, training time limits, and compressed deliverables for all 16 core business transformation services, plus all 16 dedicated 1-on-1 Personal AI Transformation services.
+Consolidated executive overview, training time limits, and compressed deliverables for all 16 core business transformation services, plus all 16 dedicated Personal Personal AI Transformation services.
 
 ---
 
@@ -9,7 +9,7 @@ Consolidated executive overview, training time limits, and compressed deliverabl
 Clients have the flexibility to either enroll in comprehensive multi-week transformation programs or pick and choose individual services tailored to specific technical needs:
 
 1. **Individual Service Picks (Pick & Choose)**:
-   - **Personal / 1-on-1**: **$100 USD per service** (strictly 1 person), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
+   - **Personal (Up to 20 Seats)**: **$100 USD per service** (strictly 1 person), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
    - **Business / Organizations**: **$100 USD base per service** (1 seat included, +$100 per extra seat up to 10 seats maximum), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
    - **Purchasing Power Parity (PPP)**: Available across all 6 parity tiers for every individual service pick:
      - **Tiers 1-6 (Personal)**: $100 / $75 / $50 / $50 / $25 / Custom USD.
@@ -23,10 +23,10 @@ Clients have the flexibility to either enroll in comprehensive multi-week transf
 | **Training Duration** | 5 days live engineering | 5 days live engineering | 30 days live engineering | 30 days live engineering |
 | **Included Support Period** | 5 days support & guides | 5 days support & guides | 30 days support & guides | 30 days support & guides |
 | **Total Coverage** | 10 days total coverage | 10 days total coverage | 60 days total coverage | 60 days total coverage |
-| **Audience & Cohort Size** | Strictly 1 person | 1 seat base (+ $100/extra seat up to 10 seats) | Up to 10 seats included (+ $100/extra seat up to 20 seats) | Strictly 1 person (1-on-1) |
+| **Audience & Cohort Size** | Strictly 1 person | 1 seat base (+ $100/extra seat up to 10 seats) | Up to 10 seats included (+ $100/extra seat up to 20 seats) | Strictly 1 person (Personal) |
 | **Base Pricing (Tier 1)** | **$100 USD** | **$100 USD** | **$1000 USD** | **$1000 USD** |
 | **Support Phase Fee (Tier 1)** | **$0 USD** (100% included) | **$0 USD** (100% included) | **$0 USD** (100% included) | **$0 USD** (100% included) |
-| **Scope** | Pick & choose single service | Pick & choose single service | Full organizational rollout | Full 1-on-1 career mastery |
+| **Scope** | Pick & choose single service | Pick & choose single service | Full organizational rollout | Full Personal career mastery |
 | **Purchasing Power Parity** | 6 Tiers ($100 / $75 / $50 / $50 / $25 / Custom) | 6 Tiers ($100 / $75 / $50 / $50 / $25 / Custom) | 6 Tiers ($1000 / $750 / $500 / $500 / $250 / Custom) | 6 Tiers ($1000 / $750 / $500 / $500 / $250 / Custom) |
 | **Upfront Advance** | **$0 upfront** | **$0 upfront** | **$0 upfront** | **$0 upfront** |
 | **Payment Schedule** | 5 equal 20% installments after Days 1-5 | 5 equal 20% installments after Days 1-5 | 5 equal 20% installments after Days 5, 10, 15, 20, 25 | 5 equal 20% installments after Days 5, 10, 15, 20, 25 |
@@ -101,12 +101,12 @@ Deploy autonomous calendar gatekeepers, biological focus time-blocking, and pre-
 
 ---
 
-## The 16 Personal Services (Individual 1-on-1 Acceleration)
+## The 16 Personal Services (Individual Personal Acceleration)
 
-A dedicated 1-on-1 acceleration program engineered strictly for one person only (solo founders, senior engineers, and independent builders). Structured as 60 days total (30 days live training + 30 days of guidance, assistance, and written guides licensed under Apache 2.0) for the Flagship, or 10 days total (5 days live + 5 days support) for individual picks. Clients are encouraged to choose services relevant to their work or interests across the catalogue:
+A dedicated Personal acceleration program engineered up to 10 participants included (+$100/extra seat, max 20) (solo founders, senior engineers, and independent builders). Structured as 60 days total (30 days live training + 30 days of guidance, assistance, and written guides licensed under Apache 2.0) for the Flagship, or 10 days total (5 days live + 5 days support) for individual picks. Clients are encouraged to choose services relevant to their work or interests across the catalogue:
 
-- **Daily Training Time Limit**: **4 hours a day** of direct 1-on-1 pair-programming and system implementation (Monday to Friday, excluding Saturdays and Sundays).
-- **Audience**: Strictly for **one person only** with zero cohort dilution or corporate friction.
+- **Daily Training Time Limit**: **4 hours a day** of direct Personal pair-programming and system implementation (Monday to Friday, excluding Saturdays and Sundays).
+- **Audience**: Strictly for **up to 20 seats max** with zero cohort dilution or corporate friction.
 - **Sprint Structure**: 30 days of intensive live instruction + 30 days of guidance and detailed guides and materials (60-day experience for flagship) or 5 days live + 5 days support (10 days total for individual picks).
 - **Guidance & Doubts Clarification**: Ongoing daily access to review real-world implementations, debug agent pipelines, and solve production blockers.
 - **Detailed Guides & Materials**: In-depth architecture blueprints, runbooks, and cheat sheets designed for rapid daily lookup and long-term reference, licensed under Apache 2.0.

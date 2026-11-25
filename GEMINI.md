@@ -123,11 +123,11 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
   - Base price: **$1000 USD** for **60 days total** (30 days live engineering training + 30 days dedicated support).
   - Includes up to 10 participants. Extra seats are **$100 USD per seat** after 10 participants, up to a strict maximum of 20 seats (scaled by Purchasing Power Parity).
 - **Personal AI Training Flagship**:
-  - Base price: **$1000 USD** for **60 days total** (30 days live 1-on-1 training + 30 days dedicated support).
-  - Strictly **one person only** (dedicated private acceleration).
-- **Individual Service Picks**:
-  - **Business Individual Service**: **$100 USD** base for 1 seat, with additional seats at **$100 USD per seat** up to a maximum of 10 seats (5 days live training + 5 days support, scaled by Purchasing Power Parity).
-  - **Personal Individual Service**: **$100 USD** strictly for **only one seat** (5 days live training + 5 days support, scaled by Purchasing Power Parity).
+  - Base price: **$1000 USD** for **60 days total** (30 days live Personal Training + 30 days dedicated support).
+  - Includes up to 10 participants. Extra seats are **$100 USD per seat** after 10 participants, up to a strict maximum of 20 seats (scaled by Purchasing Power Parity).
+- **Service Picks (Business & Personal)**:
+  - **Business Service Training**: **$100 USD** base for 1 seat included, with additional seats at **$100 USD per seat** up to a maximum of 20 seats (5 days live training + 5 days support, scaled by Purchasing Power Parity).
+  - **Personal Service Training**: **$100 USD** base for 1 seat included, with additional seats at **$100 USD per seat** up to a maximum of 20 seats (5 days live training + 5 days support, scaled by Purchasing Power Parity).
 - **Delivery Schedule & Mode**:
   - **4 hours per day**, Monday through Friday.
   - **Saturdays and Sundays are holidays**.
@@ -178,8 +178,8 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 ## New Files & Source Control Integrity Rule
 - **Mandatory Pricing & PPP Parity Audit**: Whenever any new file (HTML, Markdown, script, or documentation) is created, updated, or added to source control:
   - All pricing mentions, rates, and Purchasing Power Parity (PPP) numbers across all 6 tiers must strictly conform to the authoritative figures specified in `GEMINI.md` and `data/pricing.json`.
-  - Flagships must be specified at **$1000 USD** for **60 days total** (30 days live + 30 days dedicated support), with additional seats at **$100 USD per seat** (up to 20 seats max for business; strictly 1 person only for personal).
-  - Individual service picks must be specified at **$100 USD** base rate (covering 5 days live + 5 days dedicated support).
+  - Flagships must be specified at **$1000 USD** for **60 days total** (30 days live + 30 days dedicated support), with 10 seats included and additional seats at **$100 USD per seat** up to 20 seats max for both Business and Personal Flagships (scaled by Purchasing Power Parity).
+  - Service picks (Business & Personal) must be specified at **$100 USD** base rate for 1 seat included, with additional seats at **$100 USD per seat** up to 20 seats max (covering 5 days live + 5 days dedicated support, scaled by Purchasing Power Parity).
   - Advance deposit must strictly be **$0 upfront** (never corrupted strings or omitted dollar signs).
   - The 6 PPP tiers must explicitly reflect: Tier 1 ($1000), Tier 2 ($750), Tier 3 ($500), Tier 4 ($500), Tier 5 ($250), Tier 6 (Custom).
   - Must strictly preserve zero emojis and zero em-dashes.

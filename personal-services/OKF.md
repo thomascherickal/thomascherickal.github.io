@@ -1,12 +1,12 @@
 ---
 type: module
-title: "Personal & Professional 1-on-1 AI Services Catalog"
+title: "Personal & Professional Personal AI Services Catalog"
 description: "Dedicated specification pages for 16 personal AI acceleration services, designed strictly for one person with 4 hours/day of live pair-programming."
-tags: [personal-services, 1-on-1, private-mentoring, career-acceleration]
+tags: [personal-services, Personal, private-mentoring, career-acceleration]
 timestamp: 2026-11-10T08:43:02Z
 ---
 
-# Personal & Professional 1-on-1 AI Services Catalog
+# Personal & Professional Personal AI Services Catalog
 
 Dedicated specification pages for 16 personal AI acceleration services, designed strictly for one person with 4 hours/day of live pair-programming.
 

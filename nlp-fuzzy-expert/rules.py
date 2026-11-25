@@ -54,7 +54,7 @@ def build_rules():
 
         # 1A. Hero preview lines 394-405
         hero_b = f'<strong style="color:var(--cyan);font-weight:700;">Business Training Flagship ({apply_sync_highlight(f"${b_price:,} USD")} · {apply_sync_highlight(f"{b_days} Days")}):</strong> {apply_sync_highlight(f"{b_live} days live training")} + {apply_sync_highlight(f"{b_supp} days guidance and materials")} ({apply_sync_highlight(b_notes)}), up to {apply_sync_highlight(f"{b_seats} participants")} (+{apply_sync_highlight(f"${b_extra:,}")} per extra seat).'
-        hero_p = f'<strong style="color:var(--gold);font-weight:700;">Personal Training Flagship ({apply_sync_highlight(f"${p_price:,} USD")} · {apply_sync_highlight(f"{p_days} Days")}):</strong> {apply_sync_highlight(f"{p_live} days live training")} + {apply_sync_highlight(f"{p_supp} days guidance and materials")} ({apply_sync_highlight(p_notes)}), strictly 1-on-1 private acceleration.'
+        hero_p = f'<strong style="color:var(--gold);font-weight:700;">Personal Training Flagship ({apply_sync_highlight(f"${p_price:,} USD")} · {apply_sync_highlight(f"{p_days} Days")}):</strong> {apply_sync_highlight(f"{p_live} days live training")} + {apply_sync_highlight(f"{p_supp} days guidance and materials")} ({apply_sync_highlight(p_notes)}), up to 10 participants (+$100 per extra seat, max 20).'
 
         content = re.sub(
             r'<strong style="color:var\(--cyan\);font-weight:700;">Business Training Flagship[\s\S]*?per extra seat\)\.',
@@ -62,7 +62,7 @@ def build_rules():
             content
         )
         content = re.sub(
-            r'<strong style="color:var\(--gold\);font-weight:700;">Personal Training Flagship[\s\S]*?strictly 1-on-1 private acceleration\.',
+            r'<strong style="color:var\(--gold\);font-weight:700;">Personal Training Flagship[\s\S]*?up to 10 participants (+$100 per extra seat, max 20)\.',
             hero_p,
             content
         )
@@ -77,7 +77,7 @@ def build_rules():
         )
 
         p_block_h3 = f'<h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--gold);margin-bottom:0.35rem;">\n            ${p_price:,} USD · {p_days} Days ({p_live}d Training + {p_supp}d Guidance &amp; Materials)\n          </h3>'
-        p_block_p = f'<p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.5;margin:0;">\n            Strictly for 1 person only (private 1-on-1 acceleration). {p_live} days of intensive live instruction followed by {p_supp} days of dedicated daily work guidance, Q&amp;A and written guides tailored to your individual career or venture ({p_notes}).\n          </p>'
+        p_block_p = f'<p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.5;margin:0;">\n            Strictly for 1 person only (private Personal acceleration). {p_live} days of intensive live instruction followed by {p_supp} days of dedicated daily work guidance, Q&amp;A and written guides tailored to your individual career or venture ({p_notes}).\n          </p>'
         content = re.sub(
             r'<h3[^>]*color:var\(--gold\)[^>]*>\s*\$[\d,]+\s*USD\s*·\s*\d+\s*Days\s*\(\d+d Training \+ \d+d Guidance &amp; Materials\)\s*</h3>\s*<p[^>]*>\s*Strictly for 1 person only[\s\S]*?</p>',
             f'{p_block_h3}\n          {p_block_p}',
@@ -102,8 +102,8 @@ def build_rules():
             content
         )
         content = re.sub(
-            r'Private 1-on-1 acceleration at \$[\d,]+ USD in Tier 1 with full 195-country Purchasing Power Parity',
-            f'Private 1-on-1 acceleration at ${p_price:,} USD in Tier 1 with full 195-country Purchasing Power Parity',
+            r'Personal Training at \$[\d,]+ USD in Tier 1 with full 195-country Purchasing Power Parity',
+            f'Personal Training at ${p_price:,} USD in Tier 1 with full 195-country Purchasing Power Parity',
             content
         )
 
@@ -125,7 +125,7 @@ def build_rules():
         )
 
         # 1E. Embedded schema JSON-LD in pricing.html (lines 54, 88, 177, 217)
-        schema_desc = f"Transparent AI engagement model: Pick individual services at ${p_ind:,} USD per service for individuals and ${b_ind:,} USD per service for businesses (each covering {ind_live} days of training + {ind_supp} days of dedicated support, {ind_days} days total coverage, dedicated operational support included at zero charge / $0 USD). Clients can also choose our comprehensive programs: Business Training at ${b_price:,} USD for {b_days} days ({b_live} days training + {b_supp} days guidance/materials, {b_notes}, up to {b_seats} participants, +${b_extra} per extra seat) and Personal Training at ${p_price:,} USD for {p_days} days ({p_live} days training + {p_supp} days guidance/materials, {p_notes}, 1 person only, dedicated operational support included at zero charge / $0 USD). Full 195-country Purchasing Power Parity (PPP) supported across all service pricing."
+        schema_desc = f"Transparent AI engagement model: Pick individual services at ${p_ind:,} USD per service for individuals and ${b_ind:,} USD per service for businesses (each covering {ind_live} days of training + {ind_supp} days of dedicated support, {ind_days} days total coverage, dedicated operational support included at zero charge / $0 USD). Clients can also choose our comprehensive programs: Business Training at ${b_price:,} USD for {b_days} days ({b_live} days training + {b_supp} days guidance/materials, {b_notes}, up to {b_seats} participants, +${b_extra} per extra seat) and Personal Training at ${p_price:,} USD for {p_days} days ({p_live} days training + {p_supp} days guidance/materials, {p_notes}, up to 10 participants (+$100 per extra seat, max 20), dedicated operational support included at zero charge / $0 USD). Full 195-country Purchasing Power Parity (PPP) supported across all service pricing."
         content = re.sub(
             r'"description":\s*"Transparent AI engagement model: Pick individual services at \$[\d,]+ USD per service for individuals and \$[\d,]+ USD per service for businesses[\s\S]*?Full 195-country Purchasing Power Parity \(PPP\) supported across all service pricing\."',
             f'"description": "{schema_desc}"',
@@ -139,7 +139,7 @@ def build_rules():
             content
         )
 
-        p_schema_offering = f"Comprehensive Personal Training at ${p_price:,} USD for {p_days} days ({b_live} days live training + {b_supp} days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under Apache 2.0, {p_notes}). Strictly for 1 person only. Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 ${p_price:,}; Tier 2 (25% off) ${int(p_price*0.75):,}; Tier 3 & 4 (50% off) ${int(p_price*0.5):,}; Tier 5 (75% off) ${int(p_price*0.25):,}; Tier 6 custom subsidized relief (Custom)."
+        p_schema_offering = f"Comprehensive Personal Training at ${p_price:,} USD for {p_days} days ({b_live} days live training + {b_supp} days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under Apache 2.0, {p_notes}). Includes up to 10 participants (+$100 USD per extra seat, max 20). Clients can pick and choose their services. Full 195-country Purchasing Power Parity supported: Tier 1 ${p_price:,}; Tier 2 (25% off) ${int(p_price*0.75):,}; Tier 3 & 4 (50% off) ${int(p_price*0.5):,}; Tier 5 (75% off) ${int(p_price*0.25):,}; Tier 6 custom subsidized relief (Custom)."
         content = re.sub(
             r'"description":\s*"Comprehensive Personal Training at \$[\d,]+ USD for \d+ days[\s\S]*?Tier 6 custom subsidized relief(?:\s*\([^)]*\))?\."',
             f'"description": "{p_schema_offering}"',
@@ -204,7 +204,7 @@ def build_rules():
         hours = kb.get_fact("pricing", "hours_per_day", 4)
 
         b_opt = f'<option value="pkg-business" data-price="{b_price}" selected="">Business Training Flagship - ${b_price:,} USD ({b_days} Days: {b_live}d Training + {b_supp}d Guidance, up to {b_seats} seats)</option>'
-        p_opt = f'<option value="pkg-personal" data-price="{p_price}">Personal Training Flagship - ${p_price:,} USD ({p_days} Days: {p_live}d Training + {p_supp}d Guidance, 1 person only)</option>'
+        p_opt = f'<option value="pkg-personal" data-price="{p_price}">Personal Training Flagship - ${p_price:,} USD ({p_days} Days: {p_live}d Training + {p_supp}d Guidance, up to 10 seats included, max 20)</option>'
         ind_opt = f'<option value="pick-services" data-price="{b_ind}">Pick Individual Services (${p_ind} Individual / ${b_ind} Business per service, 5d + 5d)</option>'
 
         content = re.sub(r'<option value="pkg-business"[^>]*>.*?</option>', b_opt, content, flags=re.DOTALL)
@@ -224,13 +224,13 @@ def build_rules():
         )
         content = re.sub(
             r'<span class="tier-tag" style="color:var\(--text-secondary\);">\$[\d,]+ / svc \(1 person\)</span>',
-            f'<span class="tier-tag" style="color:var(--text-secondary);">${p_ind} / svc (1 person)</span>',
+            f'<span class="tier-tag" style="color:var(--text-secondary);">${p_ind} / svc (1 seat included, +$100/extra seat, max 20)</span>',
             content
         )
 
         content = re.sub(
             r'(<span class="hint" id="calc-participants-hint">)[^<]*(</span>)',
-            f'\\1Business: 1-{b_seats} Included (+${b_extra}/extra seat) · Personal: 1 Person Only\\2',
+            f'\\1Business: 1-{b_seats} Included (+${b_extra}/extra seat) · Personal: 10 Included Flagship / 1 Included Pick (+$100/extra seat, max 20)\\2',
             content
         )
         content = re.sub(
@@ -424,8 +424,8 @@ def build_rules():
             content
         )
         content = re.sub(
-            r'<h3[^>]*color:var\(--gold\)[^>]*>\s*\$[\d,]+\s*for\s*\d+\s*Days\s*\(\d+d Training \+ \d+d Guidance &amp; Materials\)\s*</h3>\s*<p[^>]*>\s*\d+\s*days of intensive 1-on-1 training plus \d+\s*days of guidance[\s\S]*?</p>',
-            f'<h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--gold);margin-bottom:0.35rem;">\n            ${p_price:,} for {p_days} Days ({p_live}d Training + {p_supp}d Guidance &amp; Materials)\n          </h3>\n          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.5;margin:0;">\n            {p_live} days of intensive 1-on-1 training plus {p_supp} days of guidance, Q&amp;A and written guides. Strictly for 1 person only. Clients select the modules tailored to their goals.\n          </p>',
+            r'<h3[^>]*color:var\(--gold\)[^>]*>\s*\$[\d,]+\s*for\s*\d+\s*Days\s*\(\d+d Training \+ \d+d Guidance &amp; Materials\)\s*</h3>\s*<p[^>]*>\s*\d+\s*days of intensive Personal training plus \d+\s*days of guidance[\s\S]*?</p>',
+            f'<h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--gold);margin-bottom:0.35rem;">\n            ${p_price:,} for {p_days} Days ({p_live}d Training + {p_supp}d Guidance &amp; Materials)\n          </h3>\n          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.5;margin:0;">\n            {p_live} days of intensive Personal training plus {p_supp} days of guidance, Q&amp;A and written guides. Includes up to 10 participants (+$100 USD per extra seat, max 20). Clients select the modules tailored to their goals.\n          </p>',
             content
         )
 
@@ -437,7 +437,7 @@ def build_rules():
         )
         content = re.sub(
             r'Enroll in our complete \d+-day personal transformation at \$[\d,]+ USD[\s\S]*?or pick individual services at \$[\d,]+ USD per service[\s\S]*?Strictly for 1 person only\.',
-            f'Enroll in our complete {p_days}-day personal transformation at ${p_price:,} USD ({p_live} days training + {p_supp} days guidance and materials, {p_notes}), or pick individual services at ${p_ind} USD per service ({ind_live} days training + {ind_supp} days support). Strictly for 1 person only.',
+            f'Enroll in our complete {p_days}-day personal transformation at ${p_price:,} USD ({p_live} days training + {p_supp} days guidance and materials, {p_notes}), or pick individual services at ${p_ind} USD per service ({ind_live} days training + {ind_supp} days support). Includes up to 10 participants (+$100 USD per extra seat, max 20).',
             content
         )
         content = re.sub(
@@ -446,8 +446,8 @@ def build_rules():
             content
         )
         content = re.sub(
-            r'\$[\d,]+ USD in Tier 1 for \d+ days \(\d+ days training \+ \d+ days guidance and materials\), strictly for 1 person only, scaled by 195-country parity multipliers down to \$[\d,]+\.',
-            f'${p_price:,} USD in Tier 1 for {p_days} days ({p_live} days training + {p_supp} days guidance and materials), strictly for 1 person only, scaled by 195-country parity multipliers down to ${int(p_price*0.1)}.',
+            r'\$[\d,]+ USD in Tier 1 for \d+ days \(\d+ days training \+ \d+ days guidance and materials\), up to 10 participants included (+$100/extra seat, max 20), scaled by 195-country parity multipliers down to \$[\d,]+\.',
+            f'${p_price:,} USD in Tier 1 for {p_days} days ({p_live} days training + {p_supp} days guidance and materials), up to 10 participants included (+$100/extra seat, max 20), scaled by 195-country parity multipliers down to ${int(p_price*0.1)}.',
             content
         )
 
@@ -588,15 +588,15 @@ def build_rules():
         b_supp_price = kb.get_fact("pricing", "b_flag_supp_price", 0)
         b_notes = kb.get_fact("pricing", "b_flag_sched_notes", "30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day")
 
-        new_pill = f'<span class="hero-stats-pill">{apply_sync_highlight(f"{p_days} Days Total")} ({apply_sync_highlight(f"{p_live}d Live")} + {apply_sync_highlight(f"{p_supp}d Support")})</span>\n      <span class="hero-stats-pill">{apply_sync_highlight("Strictly 1-on-1")}</span>\n      <span class="hero-stats-pill">{apply_sync_highlight(f"${p_price:,} USD Base")}</span>'
+        new_pill = f'<span class="hero-stats-pill">{apply_sync_highlight(f"{p_days} Days Total")} ({apply_sync_highlight(f"{p_live}d Live")} + {apply_sync_highlight(f"{p_supp}d Support")})</span>\n      <span class="hero-stats-pill">{apply_sync_highlight("Strictly Personal")}</span>\n      <span class="hero-stats-pill">{apply_sync_highlight(f"${p_price:,} USD Base")}</span>'
         content = re.sub(
             r'<span class="hero-stats-pill">\d+\s*Days Total[\s\S]*?<span class="hero-stats-pill">\$[\d,]+\s*USD Base</span>',
             new_pill,
             content
         )
         content = re.sub(
-            r'Guaranteed \d+ days of intensive 1-on-1 instruction, followed immediately by <strong>\d+ days of guidance, Q&amp;A and written guides</strong> \([\d\s\w\-,+h/]+?\)\. Strictly for one person only\.',
-            f'Guaranteed {p_live} days of intensive 1-on-1 instruction, followed immediately by <strong>{p_supp} days of guidance, Q&amp;A and written guides</strong> ({p_notes}). Strictly for one person only.',
+            r'Guaranteed \d+ days of intensive Personal instruction, followed immediately by <strong>\d+ days of guidance, Q&amp;A and written guides</strong> \([\d\s\w\-,+h/]+?\)\. Strictly for one person only\.',
+            f'Guaranteed {p_live} days of intensive Personal instruction, followed immediately by <strong>{p_supp} days of guidance, Q&amp;A and written guides</strong> ({p_notes}). Strictly for one person only.',
             content
         )
 
@@ -662,8 +662,8 @@ def build_rules():
 
         # Bottom cross-program policy link (line 677)
         content = re.sub(
-            r'Personal Training is strictly for 1 person only[\s\S]*?please consider our <a href="business-ai-training\.html"[^>]*>Business Training \(\$[\d,]+ USD for \d+ Days\)</a>',
-            f'Personal Training is strictly for 1 person only (private 1-on-1 acceleration). For engineering teams or corporate cohorts, please consider our <a href="business-ai-training.html" style="color:var(--cyan);text-decoration:underline;">Business Training (${b_price:,} USD for {b_days} Days)</a>',
+            r'Personal Training is up to 10 participants included (+$100/extra seat, max 20)[\s\S]*?please consider our <a href="business-ai-training\.html"[^>]*>Business Training \(\$[\d,]+ USD for \d+ Days\)</a>',
+            f'Personal Training is up to 10 participants included (+$100/extra seat, max 20) (private Personal acceleration). For engineering teams or corporate cohorts, please consider our <a href="business-ai-training.html" style="color:var(--cyan);text-decoration:underline;">Business Training (${b_price:,} USD for {b_days} Days)</a>',
             content
         )
 
@@ -697,7 +697,7 @@ def build_rules():
         )
         content = re.sub(
             r'Personal Training costs \$[\d,]+ in Tier 1 for \d+ days total \(\d+ days training, \+ \d+ days guidance, Q&amp;A and written guides\)\.\s*Strictly for 1 person only[\s\S]*?Purchasing Power Parity applies globally across 195 countries down to \$[\d,]+\.',
-            f'Personal Training costs ${p_price:,} in Tier 1 for {p_days} days total ({p_live} days training, + {p_supp} days guidance, Q&amp;A and written guides). Strictly for 1 person only. Clients are encouraged to choose services relevant to their work or interests. Purchasing Power Parity applies globally across 195 countries down to ${int(p_price*0.1)}.',
+            f'Personal Training costs ${p_price:,} in Tier 1 for {p_days} days total ({p_live} days training, + {p_supp} days guidance, Q&amp;A and written guides). Includes up to 10 participants (+$100 USD per extra seat, max 20). Clients are encouraged to choose services relevant to their work or interests. Purchasing Power Parity applies globally across 195 countries down to ${int(p_price*0.1)}.',
             content
         )
         content = re.sub(
@@ -706,8 +706,8 @@ def build_rules():
             content
         )
         content = re.sub(
-            r'\$[\d,]+ USD in Tier 1 for \d+ days \(\d+ days training \+ \d+ days guidance and materials, [\w\s\-,+]+?\), strictly for 1 person only, scaled down to \$[\d,]+ by our 6-tier parity matrix\.',
-            f'${p_price:,} USD in Tier 1 for {p_days} days ({p_live} days training + {p_supp} days guidance and materials, {p_notes}), strictly for 1 person only, scaled down to ${int(p_price*0.1)} by our 6-tier parity matrix.',
+            r'\$[\d,]+ USD in Tier 1 for \d+ days \(\d+ days training \+ \d+ days guidance and materials, [\w\s\-,+]+?\), up to 10 participants included (+$100/extra seat, max 20), scaled down to \$[\d,]+ by our 6-tier parity matrix\.',
+            f'${p_price:,} USD in Tier 1 for {p_days} days ({p_live} days training + {p_supp} days guidance and materials, {p_notes}), up to 10 participants included (+$100/extra seat, max 20), scaled down to ${int(p_price*0.1)} by our 6-tier parity matrix.',
             content
         )
 
@@ -757,13 +757,13 @@ def build_rules():
             content
         )
         content = re.sub(
-            r'-\s*\*\*Comprehensive Personal Training\*\*:\s*\*\*[\$,\d]+\s*USD\*\*\s*for\s*\*\*\d+\s*days\*\*\s*\(\d+\s*days intensive 1-on-1 sprint \+ \d+\s*days dedicated support, \d+\s*working days with \d+\s*-\s*\d+\s*recovery days, \d+\s*hours per day\)\.\s*Strictly for\s*\*\*one person only\*\*\.',
-            f'- **Comprehensive Personal Training**: **${p_price:,} USD** for **{p_days} days** ({p_live} days intensive 1-on-1 sprint + {p_supp} days dedicated support, {p_live} working days with 8 - 10 recovery days, 4 hours per day). Strictly for **one person only**.',
+            r'-\s*\*\*Comprehensive Personal Training\*\*:\s*\*\*[\$,\d]+\s*USD\*\*\s*for\s*\*\*\d+\s*days\*\*\s*\(\d+\s*days intensive Personal sprint \+ \d+\s*days dedicated support, \d+\s*working days with \d+\s*-\s*\d+\s*recovery days, \d+\s*hours per day\)\.\s*Strictly for\s*\*\*one person only\*\*\.',
+            f'- **Comprehensive Personal Training**: **${p_price:,} USD** for **{p_days} days** ({p_live} days intensive Personal sprint + {p_supp} days dedicated support, {p_live} working days with 8 - 10 recovery days, 4 hours per day). Strictly for **one person only**.',
             content
         )
         content = re.sub(
-            r'\*\s*\*\*Individual \(1-on-1\)\*\*:\s*\*\*[\$,\d]+\s*USD\*\*\s*per service for\s*\*\*\d+\s*days live training \+ \d+\s*days dedicated support\*\*\s*\(\d+\s*days total coverage per service\)\.\s*Strictly 1 person only\.',
-            f'* **Individual (1-on-1)**: **${ind_price:,} USD** per service for **{ind_live} days live training + {ind_supp} days dedicated support** ({ind_days} days total coverage per service). Strictly 1 person only.',
+            r'\*\s*\*\*Individual \(Personal\)\*\*:\s*\*\*[\$,\d]+\s*USD\*\*\s*per service for\s*\*\*\d+\s*days live training \+ \d+\s*days dedicated support\*\*\s*\(\d+\s*days total coverage per service\)\.\s*Strictly 1 person only\.',
+            f'* **Individual (Personal)**: **${ind_price:,} USD** per service for **{ind_live} days live training + {ind_supp} days dedicated support** ({ind_days} days total coverage per service). Strictly 1 person only.',
             content
         )
         content = re.sub(
@@ -832,8 +832,8 @@ def build_rules():
 
         # FAQ #52 & #53 Individual Service Details (lines 1749-1785)
         content = re.sub(
-            r'<li><strong>Individual / Personal Pricing:</strong>\s*<strong>\$[\d,]+ USD per service</strong>\s*strictly for 1 person only[^<]*</li>',
-            f'<li><strong>Individual / Personal Pricing:</strong> <strong>${p_ind:,} USD per service</strong> strictly for 1 person only (private 1-on-1 sprint).</li>',
+            r'<li><strong>Individual / Personal Pricing:</strong>\s*<strong>\$[\d,]+ USD per service</strong>\s*up to 10 participants included (+$100/extra seat, max 20)[^<]*</li>',
+            f'<li><strong>Individual / Personal Pricing:</strong> <strong>${p_ind:,} USD per service</strong> up to 10 participants included (+$100/extra seat, max 20) (private Personal sprint).</li>',
             content
         )
         content = re.sub(
@@ -924,7 +924,7 @@ def build_rules():
         # FAQ #16 Personal Training
         content = re.sub(
             r'Personal Training is \$[\d,]+ USD in Tier 1 for \d+ days \(\d+ days training \+ \d+ days guidance, Q&amp;A and written guides\)\.\s*Strictly for 1 person only\.',
-            f'Personal Training is ${p_price:,} USD in Tier 1 for {p_days} days ({p_live} days training + {p_supp} days guidance, Q&amp;A and written guides). Strictly for 1 person only.',
+            f'Personal Training is ${p_price:,} USD in Tier 1 for {p_days} days ({p_live} days training + {p_supp} days guidance, Q&amp;A and written guides). Includes up to 10 participants (+$100 USD per extra seat, max 20).',
             content
         )
         content = re.sub(
@@ -936,7 +936,7 @@ def build_rules():
         # FAQ General Body (line 704)
         content = re.sub(
             r'Clients can pick individual services at \$[\d,]+ USD per service for individuals and \$[\d,]+ USD per service for businesses \(each covering \d+ days of training \+ \d+ days of support\)\. Alternatively, clients can enroll in our comprehensive flagship packages: Business Training at \$[\d,]+ for \d+ days \(\d+d training \+ \d+d guidance/materials, up to \d+ participants, \+\$\d+/extra seat\) and Personal Training at \$[\d,]+ for \d+ days \(\d+d training \+ \d+d guidance/materials, strictly 1 person only\)\.',
-            f'Clients can pick individual services at ${p_ind} USD per service for individuals and ${b_ind} USD per service for businesses (each covering {ind_live} days of training + {ind_supp} days of support). Alternatively, clients can enroll in our comprehensive flagship packages: Business Training at ${b_price:,} for {b_days} days ({b_live}d training + {b_supp}d guidance/materials, up to {b_seats} participants, +${b_extra}/extra seat) and Personal Training at ${p_price:,} for {p_days} days ({p_live}d training + {p_supp}d guidance/materials, strictly 1 person only).',
+            f'Clients can pick individual services at ${p_ind} USD per service for individuals and ${b_ind} USD per service for businesses (each covering {ind_live} days of training + {ind_supp} days of support). Alternatively, clients can enroll in our comprehensive flagship packages: Business Training at ${b_price:,} for {b_days} days ({b_live}d training + {b_supp}d guidance/materials, up to {b_seats} participants, +${b_extra}/extra seat) and Personal Training at ${p_price:,} for {p_days} days ({p_live}d training + {p_supp}d guidance/materials, strictly up to 10 seats included, max 20).',
             content
         )
 
@@ -1001,8 +1001,8 @@ def build_rules():
 
         # 2. Summary Table: Personal Training Flagship row
         content = re.sub(
-            r'<td><strong>Personal Training Flagship</strong></td>\s*<td>\d+ Days Total</td>\s*<td>\d+ days live training \+ \d+ days dedicated support</td>\s*<td>Strictly 1 person \(private 1-on-1 coaching\)</td>\s*<td>[^<]+</td>\s*<td>[^<]+</td>',
-            f'<td><strong>Personal Training Flagship</strong></td>\n              <td>{p_days} Days Total</td>\n              <td>{p_live} days live training + {p_supp} days dedicated support</td>\n              <td>Strictly 1 person (private 1-on-1 coaching)</td>\n              <td>{flag_parity} (Support Included at Zero Charge)</td>\n              <td>5 training payments of 20% each ({flag_milestone_parity}) - 30 days dedicated support 100% included ($0 charge)</td>',
+            r'<td><strong>Personal Training Flagship</strong></td>\s*<td>\d+ Days Total</td>\s*<td>\d+ days live training \+ \d+ days dedicated support</td>\s*<td>Strictly 1 person \(private Personal coaching\)</td>\s*<td>[^<]+</td>\s*<td>[^<]+</td>',
+            f'<td><strong>Personal Training Flagship</strong></td>\n              <td>{p_days} Days Total</td>\n              <td>{p_live} days live training + {p_supp} days dedicated support</td>\n              <td>Strictly 1 person (private Personal coaching)</td>\n              <td>{flag_parity} (Support Included at Zero Charge)</td>\n              <td>5 training payments of 20% each ({flag_milestone_parity}) - 30 days dedicated support 100% included ($0 charge)</td>',
             content
         )
 
@@ -1056,8 +1056,8 @@ def build_rules():
             count=1
         )
         content = re.sub(
-            r'<li>\d+ days total: \d+ days live 1-on-1 coaching \+ \d+ days dedicated support\.</li>',
-            f'<li>{p_days} days total: {p_live} days live 1-on-1 coaching + {p_supp} days dedicated support.</li>',
+            r'<li>\d+ days total: \d+ days live Personal coaching \+ \d+ days dedicated support\.</li>',
+            f'<li>{p_days} days total: {p_live} days live Personal coaching + {p_supp} days dedicated support.</li>',
             content
         )
 
@@ -1118,8 +1118,8 @@ def build_rules():
 
         # 10A. Flat rate and duration in terms
         content = re.sub(
-            r'<li><strong>Flat Transparent Rate:</strong>\s*\$[\d,]+ USD per service for individuals \(1-on-1\) or \$[\d,]+ USD per service for businesses[^<]*</li>',
-            f'<li><strong>Flat Transparent Rate:</strong> ${p_ind:,} USD per service for individuals (1-on-1) or ${b_ind:,} USD per service for businesses (covers up to {b_seats} seats, +${b_extra:,} USD per extra seat).</li>',
+            r'<li><strong>Flat Transparent Rate:</strong>\s*\$[\d,]+ USD per service for individuals \(Personal\) or \$[\d,]+ USD per service for businesses[^<]*</li>',
+            f'<li><strong>Flat Transparent Rate:</strong> ${p_ind:,} USD per service for individuals (Personal) or ${b_ind:,} USD per service for businesses (covers up to {b_seats} seats, +${b_extra:,} USD per extra seat).</li>',
             content
         )
         content = re.sub(
@@ -1130,8 +1130,8 @@ def build_rules():
 
         # 10B. Section 6 Investment Quote list bullets
         content = re.sub(
-            r'<li><strong>Individual Service Pick \(Personal / 1-on-1\):</strong>\s*<strong>\$[\d,]+ USD</strong> per service for <strong>\d+ days of live training \+ \d+ days of dedicated support</strong> \(\d+ days total coverage per service\)\.\s*Strictly 1 person only\.</li>',
-            f'<li><strong>Individual Service Pick (Personal / 1-on-1):</strong> <strong>${p_ind:,} USD</strong> per service for <strong>{ind_live} days of live training + {ind_supp} days of dedicated support</strong> ({ind_days} days total coverage per service). Strictly 1 person only.</li>',
+            r'<li><strong>Individual Service Pick \(Personal / Personal\):</strong>\s*<strong>\$[\d,]+ USD</strong> per service for <strong>\d+ days of live training \+ \d+ days of dedicated support</strong> \(\d+ days total coverage per service\)\.\s*Strictly 1 person only\.</li>',
+            f'<li><strong>Individual Service Pick (Personal / Personal):</strong> <strong>${p_ind:,} USD</strong> per service for <strong>{ind_live} days of live training + {ind_supp} days of dedicated support</strong> ({ind_days} days total coverage per service). Strictly 1 person only.</li>',
             content
         )
         content = re.sub(
@@ -1178,7 +1178,7 @@ def build_rules():
         )
 
         # 10D. Embedded Schema Description
-        schema_desc = f"Available as an individual service pick (${p_ind} USD for individuals / ${b_ind} USD for businesses, each for {ind_live} days of live training + {ind_supp} days of dedicated support, {ind_days} days total coverage), or as part of our comprehensive programs: Business Training (${b_price:,} USD for {b_days} days: {b_live}d training + {b_supp}d guidance/materials, {b_notes}, up to {b_seats} seats, +${b_extra}/extra seat) or Personal Training (${p_price:,} USD for {p_days} days: {p_live}d training + {p_supp}d guidance/materials, {p_notes}, 1 person only)."
+        schema_desc = f"Available as an individual service pick (${p_ind} USD for individuals / ${b_ind} USD for businesses, each for {ind_live} days of live training + {ind_supp} days of dedicated support, {ind_days} days total coverage), or as part of our comprehensive programs: Business Training (${b_price:,} USD for {b_days} days: {b_live}d training + {b_supp}d guidance/materials, {b_notes}, up to {b_seats} seats, +${b_extra}/extra seat) or Personal Training (${p_price:,} USD for {p_days} days: {p_live}d training + {p_supp}d guidance/materials, {p_notes}, up to 10 seats included, max 20)."
         content = re.sub(
             r'"description":\s*"Available as an individual service pick \(\$[\d,]+ USD for individuals / \$[\d,]+ USD for businesses[\s\S]*?1 person only\)\."',
             f'"description": "{schema_desc}"',
