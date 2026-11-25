@@ -4,7 +4,7 @@
  *
  * Features:
  * 1. 10 x 10% Milestone Schedule Calculations across all 6 Parity Tiers.
- * 2. Dedicated Support Milestones (Flagship: Day 15 & Day 30; Individual: Day 5).
+ * 2. Dedicated Support 100% included at zero charge ($0 USD) with no separate support payment rows.
  * 3. Strictly $0 Upfront Deposit validation and guarantees.
  * 4. Custom Special Cases calculation with negotiable rates for under-resourced ventures.
  * 5. Full Commercial Re-use Licensing (Apache 2.0) terms across all tiers.
@@ -98,27 +98,6 @@
     }
 
     const supportMilestones = [];
-    if (engagementType === "flagship" || (engagementType === "custom" && totalTrainingAmount > 0)) {
-      supportMilestones.push({
-        milestoneIndex: 1,
-        dayDue: 15,
-        amountUsd: 0,
-        description: "Dedicated operational support through Day 15 (Included at zero charge / $0 USD)"
-      });
-      supportMilestones.push({
-        milestoneIndex: 2,
-        dayDue: 30,
-        amountUsd: 0,
-        description: "Dedicated operational support through Day 30 (Included at zero charge / $0 USD)"
-      });
-    } else {
-      supportMilestones.push({
-        milestoneIndex: 1,
-        dayDue: 5,
-        amountUsd: 0,
-        description: "Dedicated operational support through Day 5 (Included at zero charge / $0 USD)"
-      });
-    }
 
     return {
       tierId: tier.id,

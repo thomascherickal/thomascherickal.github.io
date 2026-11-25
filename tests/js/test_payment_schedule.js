@@ -84,11 +84,9 @@ function run(harness) {
     "Tier 1 flagship must have 10 milestones of $100 each (Days 5-50)"
   );
   assert(
-    "Flagship support creates 2 milestones included at zero charge ($0 at Day 15 and $0 at Day 30)",
-    defaultSched.supportMilestones.length === 2 &&
-    defaultSched.supportMilestones[0].dayDue === 15 && defaultSched.supportMilestones[0].amountUsd === 0 &&
-    defaultSched.supportMilestones[1].dayDue === 30 && defaultSched.supportMilestones[1].amountUsd === 0,
-    "Flagship support must have Day 15 ($0) and Day 30 ($0) milestones"
+    "Flagship support has zero separate support payment rows (100% included at $0)",
+    defaultSched.supportMilestones.length === 0,
+    "Flagship support must have 0 separate payment rows"
   );
 
   // Tier 2 Flagship ($750)
@@ -99,7 +97,7 @@ function run(harness) {
     t2Sched.trainingMilestones[0].amountUsd === 75 &&
     t2Sched.totalSupportAmountUsd === 0 &&
     t2Sched.totalEngagementAmountUsd === 750 &&
-    t2Sched.supportMilestones[0].amountUsd === 0 &&
+    t2Sched.supportMilestones.length === 0 &&
     t2Sched.discountPercent === 25,
     "Tier 2 calculation mismatch"
   );
@@ -112,7 +110,7 @@ function run(harness) {
     t3Sched.trainingMilestones[0].amountUsd === 50 &&
     t3Sched.totalSupportAmountUsd === 0 &&
     t3Sched.totalEngagementAmountUsd === 500 &&
-    t3Sched.supportMilestones[0].amountUsd === 0 &&
+    t3Sched.supportMilestones.length === 0 &&
     t3Sched.discountPercent === 50,
     "Tier 3 calculation mismatch"
   );
@@ -146,7 +144,7 @@ function run(harness) {
     t6Sched.totalTrainingAmountUsd === 100 &&
     t6Sched.trainingMilestones[0].amountUsd === 10 &&
     t6Sched.totalSupportAmountUsd === 0 &&
-    t6Sched.supportMilestones[0].amountUsd === 0 &&
+    t6Sched.supportMilestones.length === 0 &&
     t6Sched.discountPercent === 90,
     "Tier 6 calculation mismatch"
   );
@@ -172,9 +170,7 @@ function run(harness) {
     ind1T1.trainingMilestones[9].dueAfterDay === 10 &&
     ind1T1.totalSupportAmountUsd === 0 &&
     ind1T1.totalEngagementAmountUsd === 100 &&
-    ind1T1.supportMilestones.length === 1 &&
-    ind1T1.supportMilestones[0].dayDue === 5 &&
-    ind1T1.supportMilestones[0].amountUsd === 0,
+    ind1T1.supportMilestones.length === 0,
     "Tier 1 individual service calculation mismatch"
   );
 
@@ -186,7 +182,7 @@ function run(harness) {
     ind3T2.trainingMilestones[0].amountUsd === 22.5 &&
     ind3T2.totalSupportAmountUsd === 0 &&
     ind3T2.totalEngagementAmountUsd === 225 &&
-    ind3T2.supportMilestones[0].amountUsd === 0,
+    ind3T2.supportMilestones.length === 0,
     "Tier 2 (3 services) calculation mismatch"
   );
 
@@ -211,7 +207,7 @@ function run(harness) {
     customSched1.trainingMilestones[0].amountUsd === 240 &&
     customSched1.totalSupportAmountUsd === 0 &&
     customSched1.totalEngagementAmountUsd === 2400 &&
-    customSched1.supportMilestones.length === 2,
+    customSched1.supportMilestones.length === 0,
     "Custom amount calculation mismatch"
   );
 
@@ -339,7 +335,7 @@ function run(harness) {
     mockTotalDisplay.textContent === "$1,000 USD" &&
     mockUpfrontDisplay.textContent.includes("$0 USD") &&
     mockLicenseDisplay.textContent.includes("Apache 2.0") &&
-    mockMilestonesBody.children.length === 12, // 10 training + 2 support
+    mockMilestonesBody.children.length === 10, // 10 training milestones
     "DOM controller initial render failed"
   );
 
@@ -361,7 +357,7 @@ function run(harness) {
     "DOM Controller updates on engagement type change to individual (2 services)",
     mockTotalDisplay.textContent === "$100 USD" &&
     mockSvcCountGroup.style.display === "block" &&
-    mockMilestonesBody.children.length === 11, // 10 training + 1 support
+    mockMilestonesBody.children.length === 10, // 10 training milestones
     "DOM controller failed on individual services change"
   );
 

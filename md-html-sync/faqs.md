@@ -38,22 +38,20 @@ Settlement links and wire routing instructions are dispatched directly upon reac
 ### 2. What is the Schedule of Payment?
 *Payment:
  Schedule & Milestones · FAQ #50*  
-All training payments are distributed into five
- equal installments (20% per installment), mapped directly to completed training days, followed by verified milestone payments for the support phase:
+All training payments are distributed into ten
+ equal installments (10% per installment), mapped directly to completed training days, with dedicated support 100% included at zero extra charge ($0 USD) across all 6 Purchasing Power Parity tiers:
 
 - 60-Day Business AI
- Training Flagship ($1,000 USD): Ten equal installments (20% / $200 USD each), due after Days 5, 10,
- 15, 20 and 25 of completed live training. Dedicated support (30 days) is an additional $500 USD, paid in two equal installments ($250 USD after 15 days and $250 USD after 30 days of support).
+ Training Flagship ($1,000 / $750 / $500 / $500 / $250 / Custom USD): Ten equal installments (10% each: $100 / $75 / $50 / $50 / $25 / Custom USD), due after Days 5, 10, 15, 20, 25, 30, 35, 40, 45, and 50 of completed live training. Up to 10 participants included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat, max 20 seats). 30 days of dedicated support is 100% included ($0 charge).
 
 - 60-Day Personal AI
- Training Flagship ($1,000 USD): Ten equal installments (20% / $200 USD each), due after Days 5, 10,
- 15, 20 and 25 of completed live Personal Training. Dedicated support (30 days) is an additional $500 USD, paid in two equal installments ($250 USD after 15 days and $250 USD after 30 days of support).
+ Training Flagship ($1,000 / $750 / $500 / $500 / $250 / Custom USD): Ten equal installments (10% each: $100 / $75 / $50 / $50 / $25 / Custom USD), due after Days 5, 10, 15, 20, 25, 30, 35, 40, 45, and 50 of completed live Personal Training. Up to 10 participants included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat, max 20 seats). 30 days of dedicated support is 100% included ($0 charge).
 
-- 10-Day Individual Services (($100 / $75 / $50 / $50 / $25 / Custom USD)):
- Ten equal installments (20% / $50 USD each), due after Days 1 through 10 of completed live training. Dedicated support (5 days) is an additional $50 USD due after 5 days of support.
+- 10-Day Service Picks ($100 / $75 / $50 / $50 / $25 / Custom USD):
+ Ten equal installments (10% each: $10 / $7.50 / $5 / $5 / $2.50 / Custom USD), due after Days 1 through 10 of completed live training. 1 seat included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat, max 20 seats). 5 days of dedicated support is 100% included ($0 charge).
 
-- Support Period Milestones:
- Support installments are strictly zero upfront, due only after verifying completed assistance, Q&A, code reviews, and written materials licensed under Apache 2.0.
+- Dedicated Support Included ($0 Extra Charge):
+ All dedicated support (assistance, Q&A, code reviews, and written materials licensed under Apache 2.0) is 100% included in the base engagement price with zero additional invoices.
 
 All schedules count business days (excluding Saturdays and Sundays). You never pay ahead of delivery
  - each installment is settled strictly as milestones are achieved.
@@ -100,7 +98,7 @@ No. There is zero charge for the dedicated support period. All post-training ope
 - What Support Covers:
  Direct code reviews, debugging agent pipelines, answering technical queries, refactoring MCP servers, and providing written custom guides licensed under Apache 2.0.
 
-There are zero surprise invoices, no recurring subscriptions, and zero additional payments beyond the 5 training milestones.
+There are zero surprise invoices, no recurring subscriptions, and zero additional payments beyond the 10 training milestones.
 
 ---
 

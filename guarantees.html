@@ -394,13 +394,13 @@
         </div>
         <div class="mermaid">
 flowchart TD
-    Start["Project Starts"] --> Step0["$0 Upfront Deposit"]
+    Start["Project Starts (Up to 20 Seats Max)"] --> Step0["$0 Upfront Deposit"]
     Step0 --> Live["Attend Live Daily Training (Mon - Fri, 4 hrs/day)"]
     Live --> Check{"Happy with the Progress?"}
-    Check -- No --> Walk["Walk Away: You Owe $0 USD"]
-    Check -- Yes --> Pay["Pay 10% Milestone Installment"]
-    Pay --> Next["Move to Next Milestone"]
-    Next --> Support["Dedicated Support: Paid after 15 & 30 Days"]
+    Check -- No --> Walk["Walk Away: Owe Nothing More"]
+    Check -- Yes --> Pay["Pay 10% Milestone Installment (1 of 10)"]
+    Pay --> Next["Continue Across 10 Milestones (Days 5-50 Flagship / Days 1-10 Pick)"]
+    Next --> Support["Dedicated Support Included at $0 Extra Charge"]
         </div>
         <p class="diagram-caption">Figure 1: How our zero-risk payment flow keeps you completely safe.</p>
       </div>
@@ -471,11 +471,11 @@ sequenceDiagram
     Training->>Client: Deliver practical skills, guides & reusable materials
     Client->>Review: Check progress and test what you learned
     alt You are satisfied with results
-        Client->>Coach: Release 10% milestone payment
-        Coach->>Training: Continue with next training phase
-    else You are not satisfied after Phase 1
+        Client->>Coach: Release 10% milestone payment (10 equal milestones)
+        Coach->>Training: Continue with next training phase + $0 dedicated support
+    else You are not satisfied after any milestone
         Client->>Coach: Choose to walk away
-        Coach-->>Client: Project closes (You owe $0 USD)
+        Coach-->>Client: Project closes (You owe nothing more)
     end
         </div>
         <p class="diagram-caption">Figure 2: Step-by-step review process where you approve every payment milestone.</p>
