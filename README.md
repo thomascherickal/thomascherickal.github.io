@@ -412,26 +412,26 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 
 ## Latest Pre-Commit Report Summary
 
-> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`METRICS.md`](METRICS.md)** | Recorded on: `2026-11-25 17:50:36 UTC`
+> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`METRICS.md`](METRICS.md)** | Recorded on: `2026-11-25 17:53:34 UTC`
 
 ### Commit Overview
 
 | Property | Value |
 | :--- | :--- |
-| **Parent Commit (Full)** | `f1faf9c1afe2e1fc8af8e1543d079a0ea88b01de` |
-| **Parent Commit (Short)** | `f1faf9c` |
+| **Parent Commit (Full)** | `ddfc2bfd72ba4c514cb5da733e20800131ca5d63` |
+| **Parent Commit (Short)** | `ddfc2bf` |
 | **Branch** | `main` |
-| **Parent Subject** | Optimize autonomous self-healing pre-commit loop and document in README.md and METRICS.md |
+| **Parent Subject** | Stop commit hook from starting a nested agy agent; scope post-edit hook to this repo |
 | **Parent Author** | Thomas Cherickal `<thomascherickal@gmail.com>` |
-| **Parent Author Date** | `2026-11-25T23:01:16+05:30` |
-| **Commits in Repo (before this commit)** | 576 |
+| **Parent Author Date** | `2026-11-25T23:20:18+05:30` |
+| **Commits in Repo (before this commit)** | 577 |
 
 ### Quality Gate & Verification Summary
 
 | Quality Gate / Test Dimension | Total Scope | Passed | Failed | Status | Runtime |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| **Python Unit Test Suite** | 211 tests across 28 modules | 211 | 0 | PASSED | 14.66s |
-| **JavaScript Unit Test Suite** | 200 tests across 18 sections | 200 | 0 | PASSED | 0.07s |
+| **Python Unit Test Suite** | 211 tests across 28 modules | 211 | 0 | PASSED | 16.33s |
+| **JavaScript Unit Test Suite** | 200 tests across 18 sections | 200 | 0 | PASSED | 0.13s |
 | **NLP-Fuzzy-Expert Sync Engine** | 91 target documents | 91 | 0 | PASSED | 1.50s |
 | **SSOT Data Immutability Guard** | 12 data files SHA-256 hash | 12 | 0 | PASSED | 0.001s |
 | **Internal Link & Anchor Integrity** | 10350 links across 91 HTML files | 10350 | 0 | PASSED | 0.33s |
@@ -443,23 +443,23 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 
 | Language | Tracked Files | Total Statements / Lines | Covered | Missed | Coverage % | Status |
 |:---|---:|---:|---:|---:|---:|:---|
-| Python (`nlp-fuzzy-expert/`, `python/`) | 32 | 5,828 | 5,493 | 335 | **94.25%** | PASS |
+| Python (`nlp-fuzzy-expert/`, `python/`) | 0 | 0 | 0 | 0 | **100.00%** | PASS |
 | JavaScript (Root scripts) | 3 | 1,270 | 1,270 | 0 | **100.00%** | PASS |
-| **Repository Combined Total** | **35** | **7,098** | **6,763** | **335** | **95.28%** | **PASS** |
+| **Repository Combined Total** | **3** | **1,270** | **1,270** | **0** | **100.00%** | **PASS** |
 
 ### Repository Code & Engineering Metrics Summary (`METRICS.md`)
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **573** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **972,241** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **955,144** | Executable / renderable content lines |
+| **Total Lines of Source Code & Content** | **972,186** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **955,089** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **5,330** | In-code and architectural documentation |
 | **Blank / Spacing Lines** | **11,767** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **57.81 MB (60,614,997 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **794,011 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **576** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-25** | Subject: "Optimize autonomous self-healing pre-commit loop and document in README.md and METRICS.md" |
+| **Total Repository Size (Tracked Assets)** | **57.80 MB (60,611,027 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **793,408 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **577** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-25** | Subject: "Stop commit hook from starting a nested agy agent; scope post-edit hook to this repo" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ### Architecture & File Category Breakdown (`METRICS.md`)
@@ -470,7 +470,7 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 | **CSS Stylesheets** | 16 | 12,169 | 284.47 KB (291,296 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 33 | 11,553 | 3.70 MB (3,883,101 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 64 | 17,120 | 770.73 KB (789,232 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 161 | 41,821 | 4.81 MB (5,046,702 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Markdown Documentation** | 161 | 41,766 | 4.81 MB (5,042,732 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 115 | 797,345 | 36.52 MB (38,290,656 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 37 | 0 | 4.06 MB (4,259,892 bytes) | Optimized feature hero graphics, social cards & assets |
