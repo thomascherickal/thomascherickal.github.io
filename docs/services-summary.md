@@ -29,7 +29,7 @@ Clients have the flexibility to either enroll in comprehensive multi-week transf
 | **Scope** | Pick & choose single service | Pick & choose single service | Full organizational rollout | Full Personal career mastery |
 | **Purchasing Power Parity** | 6 Tiers ($100 / $75 / $50 / $50 / $25 / Custom) | 6 Tiers ($100 / $75 / $50 / $50 / $25 / Custom) | 6 Tiers ($1000 / $750 / $500 / $500 / $250 / Custom) | 6 Tiers ($1000 / $750 / $500 / $500 / $250 / Custom) |
 | **Upfront Advance** | **$0 upfront** | **$0 upfront** | **$0 upfront** | **$0 upfront** |
-| **Payment Schedule** | 5 equal 20% installments after Days 1-5 | 5 equal 20% installments after Days 1-5 | 5 equal 20% installments after Days 5, 10, 15, 20, 25 | 5 equal 20% installments after Days 5, 10, 15, 20, 25 |
+| **Payment Schedule** | 10 equal 10% installments after Days 1-10 | 10 equal 10% installments after Days 1-10 | 10 equal 10% installments after Days 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 30, 35, 40, 45, 50 | 10 equal 10% installments after Days 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 30, 35, 40, 45, 50 |
 | **Trust Guarantee** | Walk away owing nothing after Day 1 | Walk away owing nothing after Day 1 | Walk away owing nothing after Day 5 | Walk away owing nothing after Day 5 |
 | **Intellectual Property** | Apache 2.0 commercial license | Apache 2.0 commercial license | Apache 2.0 commercial license | Apache 2.0 commercial license |
 
@@ -111,7 +111,7 @@ A dedicated Personal acceleration program engineered up to 10 participants inclu
 - **Guidance & Doubts Clarification**: Ongoing daily access to review real-world implementations, debug agent pipelines, and solve production blockers.
 - **Detailed Guides & Materials**: In-depth architecture blueprints, runbooks, and cheat sheets designed for rapid daily lookup and long-term reference, licensed under Apache 2.0.
 - **Pricing & Parity**: **$1000 USD base rate** for flagship ($1000 / $750 / $500 / $500 / $250 / Custom USD) and **$100 USD base rate** for individual picks ($100 / $75 / $50 / $50 / $25 / Custom USD).
-- **$0 Upfront Commitment**: Zero advance fee; billed in 5 equal installments (20% each) due after Days 5, 10, 15, 20, and 25 of completed training (flagship) or Days 1, 2, 3, 4, and 5 (individual pick). Walk away owing nothing after the first milestone block.
+- **$0 Upfront Commitment**: Zero advance fee; billed in 10 equal installments (10% each) due after Days 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 30, 35, 40, 45, and 50 of completed training (flagship) or Days 1 through 10 (individual pick). Walk away owing nothing after the first milestone block.
 - **Support Phase Fee**: $0 USD (zero extra charge; 30 days of flagship support and 5 days of individual pick support are 100% included in the base price).
 - **Apache 2.0 Licensing**: Permissive open-source licensing for all custom code, prompt templates, operating manuals, and written guides.
 - **Flagship URL**: [https://thedigitalfuturist.com/personal-ai-training.html](https://thedigitalfuturist.com/personal-ai-training.html)

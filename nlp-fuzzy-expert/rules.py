@@ -62,7 +62,7 @@ def build_rules():
             content
         )
         content = re.sub(
-            r'<strong style="color:var\(--gold\);font-weight:700;">Personal Training Flagship[\s\S]*?up to 10 participants (+$100 per extra seat, max 20)\.',
+            r'<strong style="color:var\(--gold\);font-weight:700;">Personal Training Flagship[\s\S]*?(?:private acceleration|max 20\))\.',
             hero_p,
             content
         )
@@ -77,7 +77,7 @@ def build_rules():
         )
 
         p_block_h3 = f'<h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--gold);margin-bottom:0.35rem;">\n            ${p_price:,} USD · {p_days} Days ({p_live}d Training + {p_supp}d Guidance &amp; Materials)\n          </h3>'
-        p_block_p = f'<p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.5;margin:0;">\n            Strictly for 1 person only (private Personal acceleration). {p_live} days of intensive live instruction followed by {p_supp} days of dedicated daily work guidance, Q&amp;A and written guides tailored to your individual career or venture ({p_notes}).\n          </p>'
+        p_block_p = f'<p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.5;margin:0;">\n            Includes up to 10 participants (+$100 USD per extra seat, max 20). {p_live} days of intensive live instruction followed by {p_supp} days of dedicated daily work guidance, Q&amp;A and written guides tailored to your career or venture ({p_notes}).\n          </p>'
         content = re.sub(
             r'<h3[^>]*color:var\(--gold\)[^>]*>\s*\$[\d,]+\s*USD\s*·\s*\d+\s*Days\s*\(\d+d Training \+ \d+d Guidance &amp; Materials\)\s*</h3>\s*<p[^>]*>\s*Strictly for 1 person only[\s\S]*?</p>',
             f'{p_block_h3}\n          {p_block_p}',
@@ -334,8 +334,8 @@ def build_rules():
         hours = kb.get_fact("pricing", "hours_per_day", 4)
 
         content = re.sub(
-            r'Math\.max\(0,\s*participants\s*-\s*\d+\)',
-            f'Math.max(0, participants - {b_seats})',
+            r':\s*Math\.max\(0,\s*participants\s*-\s*\d+\)',
+            f': Math.max(0, participants - {b_seats})',
             content
         )
         content = re.sub(
@@ -446,7 +446,7 @@ def build_rules():
             content
         )
         content = re.sub(
-            r'\$[\d,]+ USD in Tier 1 for \d+ days \(\d+ days training \+ \d+ days guidance and materials\), up to 10 participants included (+$100/extra seat, max 20), scaled by 195-country parity multipliers down to \$[\d,]+\.',
+            r'\$[\d,]+ USD in Tier 1 for \d+ days \(\d+ days training \+ \d+ days guidance and materials\), up to 10 participants included \(\+\$100/extra seat, max 20\), scaled by 195-country parity multipliers down to \$[\d,]+\.',
             f'${p_price:,} USD in Tier 1 for {p_days} days ({p_live} days training + {p_supp} days guidance and materials), up to 10 participants included (+$100/extra seat, max 20), scaled by 195-country parity multipliers down to ${int(p_price*0.1)}.',
             content
         )
@@ -662,7 +662,7 @@ def build_rules():
 
         # Bottom cross-program policy link (line 677)
         content = re.sub(
-            r'Personal Training is up to 10 participants included (+$100/extra seat, max 20)[\s\S]*?please consider our <a href="business-ai-training\.html"[^>]*>Business Training \(\$[\d,]+ USD for \d+ Days\)</a>',
+            r'Personal Training is up to 10 participants included \(\+\$100/extra seat, max 20\)[\s\S]*?please consider our <a href="business-ai-training\.html"[^>]*>Business Training \(\$[\d,]+ USD for \d+ Days\)</a>',
             f'Personal Training is up to 10 participants included (+$100/extra seat, max 20) (private Personal acceleration). For engineering teams or corporate cohorts, please consider our <a href="business-ai-training.html" style="color:var(--cyan);text-decoration:underline;">Business Training (${b_price:,} USD for {b_days} Days)</a>',
             content
         )
@@ -706,7 +706,7 @@ def build_rules():
             content
         )
         content = re.sub(
-            r'\$[\d,]+ USD in Tier 1 for \d+ days \(\d+ days training \+ \d+ days guidance and materials, [\w\s\-,+]+?\), up to 10 participants included (+$100/extra seat, max 20), scaled down to \$[\d,]+ by our 6-tier parity matrix\.',
+            r'\$[\d,]+ USD in Tier 1 for \d+ days \(\d+ days training \+ \d+ days guidance and materials, [\w\s\-,+]+?\), up to 10 participants included \(\+\$100/extra seat, max 20\), scaled down to \$[\d,]+ by our 6-tier parity matrix\.',
             f'${p_price:,} USD in Tier 1 for {p_days} days ({p_live} days training + {p_supp} days guidance and materials, {p_notes}), up to 10 participants included (+$100/extra seat, max 20), scaled down to ${int(p_price*0.1)} by our 6-tier parity matrix.',
             content
         )
@@ -832,7 +832,7 @@ def build_rules():
 
         # FAQ #52 & #53 Individual Service Details (lines 1749-1785)
         content = re.sub(
-            r'<li><strong>Individual / Personal Pricing:</strong>\s*<strong>\$[\d,]+ USD per service</strong>\s*up to 10 participants included (+$100/extra seat, max 20)[^<]*</li>',
+            r'<li><strong>Individual / Personal Pricing:</strong>\s*<strong>\$[\d,]+ USD per service</strong>\s*up to 10 participants included \(\+\$100/extra seat, max 20\)[^<]*</li>',
             f'<li><strong>Individual / Personal Pricing:</strong> <strong>${p_ind:,} USD per service</strong> up to 10 participants included (+$100/extra seat, max 20) (private Personal sprint).</li>',
             content
         )
@@ -995,28 +995,28 @@ def build_rules():
         # 1. Summary Table: Business Training Flagship row
         content = re.sub(
             r'<td><strong>Business Training Flagship</strong></td>\s*<td>\d+ Days Total</td>\s*<td>\d+ days live training \+ \d+ days dedicated support</td>\s*<td>Up to \d+ people included \([^)]+\)</td>\s*<td>[^<]+</td>\s*<td>[^<]+</td>',
-            f'<td><strong>Business Training Flagship</strong></td>\n              <td>{b_days} Days Total</td>\n              <td>{b_live} days live training + {b_supp} days dedicated support</td>\n              <td>Up to {b_seats} people included ({extra_parity} per extra seat up to {b_max_seats} seats)</td>\n              <td>{flag_parity} (Support Included at Zero Charge)</td>\n              <td>5 training payments of 20% each ({flag_milestone_parity}) - 30 days dedicated support 100% included ($0 charge)</td>',
+            f'<td><strong>Business Training Flagship</strong></td>\n              <td>{b_days} Days Total</td>\n              <td>{b_live} days live training + {b_supp} days dedicated support</td>\n              <td>Up to {b_seats} people included ({extra_parity} per extra seat up to {b_max_seats} seats)</td>\n              <td>{flag_parity} (Support Included at Zero Charge)</td>\n              <td>10 training payments of 10% each ({flag_milestone_parity}) - 30 days dedicated support 100% included ($0 charge)</td>',
             content
         )
 
         # 2. Summary Table: Personal Training Flagship row
         content = re.sub(
             r'<td><strong>Personal Training Flagship</strong></td>\s*<td>\d+ Days Total</td>\s*<td>\d+ days live training \+ \d+ days dedicated support</td>\s*<td>Strictly 1 person \(private Personal coaching\)</td>\s*<td>[^<]+</td>\s*<td>[^<]+</td>',
-            f'<td><strong>Personal Training Flagship</strong></td>\n              <td>{p_days} Days Total</td>\n              <td>{p_live} days live training + {p_supp} days dedicated support</td>\n              <td>Strictly 1 person (private Personal coaching)</td>\n              <td>{flag_parity} (Support Included at Zero Charge)</td>\n              <td>5 training payments of 20% each ({flag_milestone_parity}) - 30 days dedicated support 100% included ($0 charge)</td>',
+            f'<td><strong>Personal Training Flagship</strong></td>\n              <td>{p_days} Days Total</td>\n              <td>{p_live} days live training + {p_supp} days dedicated support</td>\n              <td>Strictly 1 person (private Personal coaching)</td>\n              <td>{flag_parity} (Support Included at Zero Charge)</td>\n              <td>10 training payments of 10% each ({flag_milestone_parity}) - 30 days dedicated support 100% included ($0 charge)</td>',
             content
         )
 
         # 3. Summary Table: Business Individual Service row
         content = re.sub(
             r'<td><strong>Business Individual Service</strong></td>\s*<td>\d+ Days Total</td>\s*<td>\d+ days live training \+ \d+ days dedicated support</td>\s*<td>1 person base \([^)]+\)</td>\s*<td>[^<]+</td>\s*<td>[^<]+</td>',
-            f'<td><strong>Business Individual Service</strong></td>\n              <td>{ind_days} Days Total</td>\n              <td>{ind_live} days live training + {ind_supp} days dedicated support</td>\n              <td>1 person base ({extra_parity} per extra seat up to {b_ind_max_seats} seats)</td>\n              <td>{ind_parity} (Support Included at Zero Charge)</td>\n              <td>5 training payments of 20% each ({ind_milestone_parity}) - 5 days dedicated support 100% included ($0 charge)</td>',
+            f'<td><strong>Business Individual Service</strong></td>\n              <td>{ind_days} Days Total</td>\n              <td>{ind_live} days live training + {ind_supp} days dedicated support</td>\n              <td>1 person base ({extra_parity} per extra seat up to {b_ind_max_seats} seats)</td>\n              <td>{ind_parity} (Support Included at Zero Charge)</td>\n              <td>10 training payments of 10% each ({ind_milestone_parity}) - 5 days dedicated support 100% included ($0 charge)</td>',
             content
         )
 
         # 4. Summary Table: Personal Individual Service row
         content = re.sub(
             r'<td><strong>Personal Individual Service</strong></td>\s*<td>\d+ Days Total</td>\s*<td>\d+ days live training \+ \d+ days dedicated support</td>\s*<td>Strictly 1 person only</td>\s*<td>[^<]+</td>\s*<td>[^<]+</td>',
-            f'<td><strong>Personal Individual Service</strong></td>\n              <td>{ind_days} Days Total</td>\n              <td>{ind_live} days live training + {ind_supp} days dedicated support</td>\n              <td>Strictly 1 person only</td>\n              <td>{ind_parity} (Support Included at Zero Charge)</td>\n              <td>5 training payments of 20% each ({ind_milestone_parity}) - 5 days dedicated support 100% included ($0 charge)</td>',
+            f'<td><strong>Personal Individual Service</strong></td>\n              <td>{ind_days} Days Total</td>\n              <td>{ind_live} days live training + {ind_supp} days dedicated support</td>\n              <td>Strictly 1 person only</td>\n              <td>{ind_parity} (Support Included at Zero Charge)</td>\n              <td>10 training payments of 10% each ({ind_milestone_parity}) - 5 days dedicated support 100% included ($0 charge)</td>',
             content
         )
 
@@ -1039,7 +1039,7 @@ def build_rules():
         )
         content = re.sub(
             r'<li>\$0 upfront; 5 equal [^<]*payments of 20% \([^)]+\) for live training\.</li>',
-            f'<li>$0 upfront; 5 equal milestone payments of 20% ({flag_milestone_parity} each) for live training.</li>',
+            f'<li>$0 upfront; 10 equal milestone payments of 10% ({flag_milestone_parity} each) for live training.</li>',
             content
         )
         content = re.sub(

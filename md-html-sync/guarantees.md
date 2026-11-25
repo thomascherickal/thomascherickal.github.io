@@ -7,7 +7,7 @@
 
 // 100% RISK-FREE & SCAM-FREE ENGAGEMENT
 
-How our zero-upfront, five-installment plan and Apache 2.0 commercial license keep you safe, give you total control, and make every project risk-free.
+How our zero-upfront, ten-installment plan and Apache 2.0 commercial license keep you safe, give you total control, and make every project risk-free.
 
 ## 1. Simple Pricing, Clear Schedule, and Zero Upfront Cost
 
@@ -18,7 +18,7 @@ If you are happy with the results and do not want additional training, you can w
 Here is exactly how our pricing and schedule work in simple points:
 
 1. Strictly Zero Dollars Upfront ($0): You never pay a single cent before training begins. There are no registration fees, no setup fees, and no advance deposits.
-2. Pay Training in Five Equal Parts (20% Each): Your live training investment is divided into five equal payments of 20% each. You only pay after each training milestone is completed and verified by you.
+2. Pay Training in Ten Equal Parts (10% Each): Your live training investment is divided into ten equal payments of 10% each. You only pay after each training milestone is completed and verified by you.
 3. Zero Charge Dedicated Support Period: Dedicated support requires zero extra payment. For Flagships (Business and Personal), 30 days of dedicated support is fully covered by the $1,000 USD price and its scaled parity tiers. For individual services, 5 days of support is fully covered by the $100 USD price and its scaled parity tiers.
 4. Walk Away Free Guarantee: Try the training with zero financial risk. If you are not completely happy after the first phase, you can walk away owing nothing.
 5. Clear Daily Schedule: Training takes place for 4 hours each day, Monday through Friday. Saturdays and Sundays are restful holidays. Every session is delivered 100% online so anyone worldwide can join.
@@ -28,10 +28,10 @@ Here is a side-by-side summary of our standard programs and schedules:
 
 | Program | Total Duration | Live Sessions & Support | Group Size | Base Price (USD) | Payment Plan |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Business Training Flagship | 60 Days Total | 30 days live training + 30 days dedicated support | Up to 10 people included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats) | $1,000 / $750 / $500 / $500 / $250 / Custom USD (Support Included at Zero Charge) | 5 training payments of 20% each ($200 / $150 / $100 / $100 / $50 / Custom USD) - 30 days dedicated support 100% included ($0 charge) |
-| Personal Training Flagship | 60 Days Total | 30 days live training + 30 days dedicated support | Strictly 1 person (private 1-on-1 coaching) | $1,000 / $750 / $500 / $500 / $250 / Custom USD (Support Included at Zero Charge) | 5 training payments of 20% each ($200 / $150 / $100 / $100 / $50 / Custom USD) - 30 days dedicated support 100% included ($0 charge) |
-| Business Individual Service | 10 Days Total | 5 days live training + 5 days dedicated support | 1 person base (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 10 seats) | $100 / $75 / $50 / $50 / $25 / Custom USD (Support Included at Zero Charge) | 5 training payments of 20% each ($20 / $15 / $10 / $10 / $5 / Custom USD) - 5 days dedicated support 100% included ($0 charge) |
-| Personal Individual Service | 10 Days Total | 5 days live training + 5 days dedicated support | Strictly 1 person only | $100 / $75 / $50 / $50 / $25 / Custom USD (Support Included at Zero Charge) | 5 training payments of 20% each ($20 / $15 / $10 / $10 / $5 / Custom USD) - 5 days dedicated support 100% included ($0 charge) |
+| Business Training Flagship | 60 Days Total | 30 days live training + 30 days dedicated support | Up to 10 people included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats) | $1,000 / $750 / $500 / $500 / $250 / Custom USD (Support Included at Zero Charge) | 10 training payments of 10% each ($100 / $75 / $50 / $50 / $25 / Custom USD) - 30 days dedicated support 100% included ($0 charge) |
+| Personal Training Flagship | 60 Days Total | 30 days live training + 30 days dedicated support | Strictly 1 person (private Personal coaching) | $1,000 / $750 / $500 / $500 / $250 / Custom USD (Support Included at Zero Charge) | 10 training payments of 10% each ($100 / $75 / $50 / $50 / $25 / Custom USD) - 30 days dedicated support 100% included ($0 charge) |
+| Business Individual Service | 10 Days Total | 5 days live training + 5 days dedicated support | 1 person base (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats) | $100 / $75 / $50 / $50 / $25 / Custom USD (Support Included at Zero Charge) | 10 training payments of 10% each ($10 / $7.50 / $5 / $5 / $2.50 / Custom USD) - 5 days dedicated support 100% included ($0 charge) |
+| Personal Individual Service | 10 Days Total | 5 days live training + 5 days dedicated support | 1 seat included (+$100/extra seat, max 20) | $100 / $75 / $50 / $50 / $25 / Custom USD (Support Included at Zero Charge) | 10 training payments of 10% each ($10 / $7.50 / $5 / $5 / $2.50 / Custom USD) - 5 days dedicated support 100% included ($0 charge) |
 
 Figure 1: How our zero-risk payment flow keeps you completely safe.
 
@@ -42,7 +42,7 @@ Most consulting companies ask for half or all of the money before doing any work
 | What Matters | Typical Agency | Our Risk-Free Guarantee |
 | :--- | :--- | :--- |
 | Upfront Payment | Demands 50% to 100% upfront before any work begins. | Zero Dollars ($0): Never pay anything in advance. |
-| When You Pay | Billed on vague hours or rigid monthly invoices. | Milestones: You only pay 20% after you inspect and approve completed training blocks. Dedicated support has zero extra charge and is 100% included in the price. |
+| When You Pay | Billed on vague hours or rigid monthly invoices. | Milestones: You only pay 10% after you inspect and approve completed training blocks. Dedicated support has zero extra charge and is 100% included in the price. |
 | If You Want to Stop | No refunds; strict cancellation fees. | Walk Away Free: Pay $0 if you are not happy after Phase 1. |
 | Who Owns the Material | The agency keeps ownership and locks you in. | You Own Everything: Apache 2.0 license gives you full commercial rights. |
 | Fair Pricing Worldwide | Same expensive price regardless of your country. | Fair Rates: Transparent discounts for 195 countries based on local purchasing power. |
@@ -75,18 +75,18 @@ Complete team training for companies and startups.
 - 60 days total: 30 days live instruction + 30 days dedicated support.
 - Up to 10 participants included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats max).
 - 4 hours daily, Monday through Friday (weekends free). Online worldwide.
-- $0 upfront; 5 equal milestone payments of 20% ($200 / $150 / $100 / $100 / $50 / Custom USD each) for live training.
+- $0 upfront; 10 equal milestone payments of 10% ($100 / $75 / $50 / $50 / $25 / Custom USD each) for live training.
 - Dedicated support: 30 days of dedicated operational support included at $0 additional charge.
 - All materials and custom code belong to you under Apache 2.0.
 
 ### Personal AI Training Flagship
 
-Private 1-on-1 coaching for founders and engineers.
+Private Personal coaching for founders and engineers.
 
-- 60 days total: 30 days live 1-on-1 coaching + 30 days dedicated support.
-- Strictly one person only for focused personal attention.
+- 60 days total: 30 days live Personal coaching + 30 days dedicated support.
+- Strictly up to 20 seats max for focused personal attention.
 - 4 hours daily, Monday through Friday (weekends free). Online worldwide.
-- $0 upfront; 5 equal milestone payments of 20% ($200 / $150 / $100 / $100 / $50 / Custom USD each) for live training.
+- $0 upfront; 10 equal milestone payments of 10% ($100 / $75 / $50 / $50 / $25 / Custom USD each) for live training.
 - Dedicated support: 30 days of dedicated operational support included at $0 additional charge.
 - Complete lessons and custom code belong to you under Apache 2.0.
 
@@ -94,7 +94,7 @@ Private 1-on-1 coaching for founders and engineers.
 
 If you only need help with one specific topic, you can choose individual 10-day service picks:
 
-- Business Individual Pick: $100 / $75 / $50 / $50 / $25 / Custom USD per service (Support Included at Zero Charge) (covers 1 seat, +$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 10 seats; 5 days live training + 5 days support, 4 hours/day, online worldwide).
+- Business Individual Pick: $100 / $75 / $50 / $50 / $25 / Custom USD per service (Support Included at Zero Charge) (covers 1 seat, +$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats; 5 days live training + 5 days support, 4 hours/day, online worldwide).
 - Personal Individual Pick: $100 / $75 / $50 / $50 / $25 / Custom USD per service (Support Included at Zero Charge) strictly for 1 person (5 days live training + 5 days support, 4 hours/day, online worldwide).
 
 To check discounts for your country or calculate your exact price, visit our Pricing Page.

@@ -14,7 +14,7 @@ Dedicated regional specification pages for all 6 Purchasing Power Parity tiers, 
 
 - Contains 6 tier landing pages (`pricing-tier-1-usa-china-eu-100.html` through `pricing-tier-6-crisis-affected-10.html`).
 - Authoritative rates: Tier 1 (100% / $1,000 flagship / $100 pick), Tier 2 (75% / $750 / $75), Tier 3 & Tier 4 (50% / $500 / $50), Tier 5 (25% / $250 / $25), Tier 6 (Custom quote).
-- Every pricing page must clearly articulate the $0 upfront advance and 5 equal 20% milestone installment structure.
+- Every pricing page must clearly articulate the $0 upfront advance and 10 equal 10% milestone installment structure.
 
 ## Subdirectories
 

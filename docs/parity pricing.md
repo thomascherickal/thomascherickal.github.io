@@ -15,7 +15,7 @@
 2. **Flagship Programs (60 Days Total Coverage)**:
    - **Business Training Flagship**: **$1,000 USD for 60 days** (30d live training + 30d guidance & materials, 4 hours per day Monday through Friday, up to 10 participants included, +$100/extra seat up to 20 seats max). Support fee: $0 USD (100% included). Tier rates: T1: $1,000 | T2: $750 | T3: $500 | T4: $500 | T5: $250 | T6: Custom.
    - **Personal Training Flagship**: **$1,000 USD for 60 days** (30d live training + 30d guidance & materials, 4 hours per day Monday through Friday, strictly 1 person). Support fee: $0 USD (100% included). Tier rates: T1: $1,000 | T2: $750 | T3: $500 | T4: $500 | T5: $250 | T6: Custom.
-   - **Payment Structure**: $0 upfront deposit; 5 equal installments (20% each) due after milestone completion.
+   - **Payment Structure**: $0 upfront deposit; 10 equal installments (10% each) due after milestone completion.
    - Purchasing Power Parity (PPP) applies to all individual service picks and flagship programs across 195 countries.
 
 ---

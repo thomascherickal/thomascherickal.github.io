@@ -3,7 +3,7 @@
 ## Thomas Cherickal - The Digital Futurist
 
 > **// Individual Mentorship & Acceleration**  
-> **1-on-1 private technical mentoring across the 16 core transformation competencies. Designed for independent
+> **Personal private technical mentoring across the 16 core transformation competencies. Designed for independent
  builders, tech leads, researchers, and founders wanting private, intensive acceleration with custom code reviews
  and personalized architectures.**
 
@@ -11,7 +11,7 @@
 
 // Individual Mentorship & Acceleration
 
-1-on-1 private technical mentoring across the 16 core transformation competencies. Designed for independent
+Personal private technical mentoring across the 16 core transformation competencies. Designed for independent
  builders, tech leads, researchers, and founders wanting private, intensive acceleration with custom code reviews
  and personalized architectures.
 
@@ -19,7 +19,7 @@ Individual Builders & Leaders
 
 ## Selected Personal AI Services
 
-Tailored 1-on-1 private mentorship and hands-on skill acceleration across the exact same high-impact business
+Tailored Personal private mentorship and hands-on skill acceleration across the exact same high-impact business
  curriculum. All services are 10 days long and
  can freely
  overlap for different customers according to their technical and organizational needs, with additional ten
@@ -141,4 +141,4 @@ Run zero-egress local LLMs, reversible PII redaction, and encrypted vector store
  to Accelerate Your AI Skills?
 
 Explore full details,
- check purchasing power parity discounts, or get in touch for custom 1-on-1 mentorship scheduling.
+ check purchasing power parity discounts, or get in touch for custom Personal Training scheduling.

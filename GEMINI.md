@@ -134,8 +134,8 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
   - Delivered **100% remote worldwide**.
 - **Payment Structure & Trust Guarantees**:
   - **$0 Upfront**: Strictly zero advance payment or deposit required before commencing technical discovery and training.
-  - **20% in Five Installments**: Invoiced in five equal installments (20% each) due strictly after completed milestone blocks of training progress.
-  - **Walkaway Guarantee**: Walk away owing nothing if not satisfied after the first milestone training phase.
+  - **10% in Ten Installments**: Invoiced in ten equal installments (10% each) due strictly after completed milestone blocks of training progress (Days 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 30, 35, 40, 45, 50, 30, 35, 40, 45, 50 for Flagships; Days 1-10 for Service Picks).
+  - **Walkaway Guarantee**: Walk away owing nothing more than already paid if not satisfied after any completed milestone training phase, including the first.
 - **Purchasing Power Parity (PPP) Explanation**:
   - Every page mentioning pricing must provide a short explanation of the six 195-country Purchasing Power Parity (PPP) tiers and include a prominent link to `pricing.html`.
 - **Global Parity Pricing Display Everywhere Rule**:
@@ -149,7 +149,7 @@ Whenever `header.html` or `footer.html` is modified, created, or updated:
 - **Support Period Pricing (Included at Zero Charge)**:
   - **Flagship Support (Business & Personal)**: Strictly **$0 charge** for the 30 days dedicated support period. All support is 100% included and fully covered by the **$1,000 USD** flagship price and its scaled Purchasing Power Parity (PPP) tiers.
   - **Individual Services Support (Business & Personal)**: Strictly **$0 charge** for the 5 days dedicated support period. All support is 100% included and fully covered by the **$100 USD** individual service price and its scaled Purchasing Power Parity (PPP) tiers.
-  - **No Extra Invoicing**: Support periods involve zero extra invoicing or payments beyond the completed 5 milestone installments of training.
+  - **No Extra Invoicing**: Support periods involve zero extra invoicing or payments beyond the completed 10 milestone installments of training.
   - **Everything Covered**: The entire engagement (training plus dedicated support) is fully covered by the $1,000 USD flagship rate and $100 USD individual service rate across all parity tiers.
 
 ## Page Deletion & Clean Purge Rule (`python/delete_page.py`)

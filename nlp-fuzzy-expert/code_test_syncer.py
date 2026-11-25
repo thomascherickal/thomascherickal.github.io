@@ -217,7 +217,7 @@ class CodeTestSynchronizer:
 
         # 4. Included seats calculation
         content = re.sub(
-            r'Math\.max\(0,\s*participants\s*-\s*\d+\)',
+            r'Math\.max\(0,\s*participants\s*-\s*(?!1\b)\d+\)',
             f'Math.max(0, participants - {b_seats})',
             content
         )

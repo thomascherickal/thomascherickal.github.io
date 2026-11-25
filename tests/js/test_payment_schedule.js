@@ -50,9 +50,9 @@ function run(harness) {
     "Trust terms include $0 upfront deposit and Apache 2.0 license",
     PaymentSchedule.TRUST_TERMS.upfrontDeposit.includes("$0 upfront") &&
     PaymentSchedule.TRUST_TERMS.license.includes("Apache 2.0") &&
-    PaymentSchedule.TRUST_TERMS.milestoneCount === 5 &&
-    PaymentSchedule.TRUST_TERMS.milestonePercentage === 20,
-    "Trust terms must specify $0 upfront, Apache 2.0, and 5 milestone blocks of 20%"
+    PaymentSchedule.TRUST_TERMS.milestoneCount === 10 &&
+    PaymentSchedule.TRUST_TERMS.milestonePercentage === 10,
+    "Trust terms must specify $0 upfront, Apache 2.0, and 10 milestone blocks of 10%"
   );
 
   setSection("Payment Schedule - Currency Formatting Helper");
@@ -76,10 +76,12 @@ function run(harness) {
     "Default schedule must be Tier 1 Flagship with $0 upfront"
   );
   assert(
-    "Flagship training creates exactly 5 milestones of 20% each ($200 each for Tier 1)",
-    defaultSched.trainingMilestones.length === 5 &&
-    defaultSched.trainingMilestones.every(m => m.percentage === 20 && m.amountUsd === 200),
-    "Tier 1 flagship must have 5 milestones of $200 each"
+    "Flagship training creates exactly 10 milestones of 10% each ($100 each for Tier 1)",
+    defaultSched.trainingMilestones.length === 10 &&
+    defaultSched.trainingMilestones.every(m => m.percentage === 10 && m.amountUsd === 100) &&
+    defaultSched.trainingMilestones[0].dueAfterDay === 5 &&
+    defaultSched.trainingMilestones[9].dueAfterDay === 50,
+    "Tier 1 flagship must have 10 milestones of $100 each (Days 5-50)"
   );
   assert(
     "Flagship support creates 2 milestones included at zero charge ($0 at Day 15 and $0 at Day 30)",
@@ -92,9 +94,9 @@ function run(harness) {
   // Tier 2 Flagship ($750)
   const t2Sched = PaymentSchedule.calculateSchedule({ tierId: 2, engagementType: "flagship" });
   assert(
-    "Tier 2 Flagship: $750 training (5 x $150) + $0 support",
+    "Tier 2 Flagship: $750 training (10 x $75) + $0 support",
     t2Sched.totalTrainingAmountUsd === 750 &&
-    t2Sched.trainingMilestones[0].amountUsd === 150 &&
+    t2Sched.trainingMilestones[0].amountUsd === 75 &&
     t2Sched.totalSupportAmountUsd === 0 &&
     t2Sched.totalEngagementAmountUsd === 750 &&
     t2Sched.supportMilestones[0].amountUsd === 0 &&
@@ -105,9 +107,9 @@ function run(harness) {
   // Tier 3 Flagship ($500)
   const t3Sched = PaymentSchedule.calculateSchedule({ tierId: 3, engagementType: "flagship" });
   assert(
-    "Tier 3 Flagship: $500 training (5 x $100) + $0 support",
+    "Tier 3 Flagship: $500 training (10 x $50) + $0 support",
     t3Sched.totalTrainingAmountUsd === 500 &&
-    t3Sched.trainingMilestones[0].amountUsd === 100 &&
+    t3Sched.trainingMilestones[0].amountUsd === 50 &&
     t3Sched.totalSupportAmountUsd === 0 &&
     t3Sched.totalEngagementAmountUsd === 500 &&
     t3Sched.supportMilestones[0].amountUsd === 0 &&
@@ -118,9 +120,9 @@ function run(harness) {
   // Tier 4 Flagship ($500)
   const t4Sched = PaymentSchedule.calculateSchedule({ tierId: 4, engagementType: "flagship" });
   assert(
-    "Tier 4 Flagship: $500 training (5 x $100) + $0 support",
+    "Tier 4 Flagship: $500 training (10 x $50) + $0 support",
     t4Sched.totalTrainingAmountUsd === 500 &&
-    t4Sched.trainingMilestones[0].amountUsd === 100 &&
+    t4Sched.trainingMilestones[0].amountUsd === 50 &&
     t4Sched.totalSupportAmountUsd === 0 &&
     t4Sched.discountPercent === 50,
     "Tier 4 calculation mismatch"
@@ -129,9 +131,9 @@ function run(harness) {
   // Tier 5 Flagship ($250)
   const t5Sched = PaymentSchedule.calculateSchedule({ tierId: 5, engagementType: "flagship" });
   assert(
-    "Tier 5 Flagship: $250 training (5 x $50) + $0 support",
+    "Tier 5 Flagship: $250 training (10 x $25) + $0 support",
     t5Sched.totalTrainingAmountUsd === 250 &&
-    t5Sched.trainingMilestones[0].amountUsd === 50 &&
+    t5Sched.trainingMilestones[0].amountUsd === 25 &&
     t5Sched.totalSupportAmountUsd === 0 &&
     t5Sched.discountPercent === 75,
     "Tier 5 calculation mismatch"
@@ -140,9 +142,9 @@ function run(harness) {
   // Tier 6 Flagship ($100)
   const t6Sched = PaymentSchedule.calculateSchedule({ tierId: 6, engagementType: "flagship" });
   assert(
-    "Tier 6 Flagship: $100 training (5 x $20) + $0 support",
+    "Tier 6 Flagship: $100 training (10 x $10) + $0 support",
     t6Sched.totalTrainingAmountUsd === 100 &&
-    t6Sched.trainingMilestones[0].amountUsd === 20 &&
+    t6Sched.trainingMilestones[0].amountUsd === 10 &&
     t6Sched.totalSupportAmountUsd === 0 &&
     t6Sched.supportMilestones[0].amountUsd === 0 &&
     t6Sched.discountPercent === 90,
@@ -162,10 +164,12 @@ function run(harness) {
   // Single individual service Tier 1
   const ind1T1 = PaymentSchedule.calculateSchedule({ tierId: 1, engagementType: "individual", serviceCount: 1 });
   assert(
-    "Tier 1 Individual (1 service): $100 total (5 x $20) with $0 support fee",
+    "Tier 1 Individual (1 service): $100 total (10 x $10) with $0 support fee",
     ind1T1.totalTrainingAmountUsd === 100 &&
-    ind1T1.trainingMilestones.length === 5 &&
-    ind1T1.trainingMilestones[0].amountUsd === 20 &&
+    ind1T1.trainingMilestones.length === 10 &&
+    ind1T1.trainingMilestones[0].amountUsd === 10 &&
+    ind1T1.trainingMilestones[0].dueAfterDay === 1 &&
+    ind1T1.trainingMilestones[9].dueAfterDay === 10 &&
     ind1T1.totalSupportAmountUsd === 0 &&
     ind1T1.totalEngagementAmountUsd === 100 &&
     ind1T1.supportMilestones.length === 1 &&
@@ -177,9 +181,9 @@ function run(harness) {
   // Multiple individual services Tier 2 (3 services)
   const ind3T2 = PaymentSchedule.calculateSchedule({ tierId: 2, engagementType: "individual", serviceCount: 3 });
   assert(
-    "Tier 2 Individual (3 services): $225 total (5 x $45) with $0 support fee",
+    "Tier 2 Individual (3 services): $225 total (10 x $22.5) with $0 support fee",
     ind3T2.totalTrainingAmountUsd === 225 &&
-    ind3T2.trainingMilestones[0].amountUsd === 45 &&
+    ind3T2.trainingMilestones[0].amountUsd === 22.5 &&
     ind3T2.totalSupportAmountUsd === 0 &&
     ind3T2.totalEngagementAmountUsd === 225 &&
     ind3T2.supportMilestones[0].amountUsd === 0,
@@ -201,10 +205,10 @@ function run(harness) {
     customAmount: 2400
   });
   assert(
-    "Custom scope: $2400 training creates 5 x $480 milestones + $0 support fee",
+    "Custom scope: $2400 training creates 10 x $240 milestones + $0 support fee",
     customSched1.isNegotiated === true &&
     customSched1.totalTrainingAmountUsd === 2400 &&
-    customSched1.trainingMilestones[0].amountUsd === 480 &&
+    customSched1.trainingMilestones[0].amountUsd === 240 &&
     customSched1.totalSupportAmountUsd === 0 &&
     customSched1.totalEngagementAmountUsd === 2400 &&
     customSched1.supportMilestones.length === 2,
@@ -218,7 +222,7 @@ function run(harness) {
   assert(
     "Custom scope: String input parsed cleanly",
     customSchedStr.totalTrainingAmountUsd === 1200 &&
-    customSchedStr.trainingMilestones[0].amountUsd === 240,
+    customSchedStr.trainingMilestones[0].amountUsd === 120,
     "Custom amount string parsing failed"
   );
 
@@ -335,7 +339,7 @@ function run(harness) {
     mockTotalDisplay.textContent === "$1,000 USD" &&
     mockUpfrontDisplay.textContent.includes("$0 USD") &&
     mockLicenseDisplay.textContent.includes("Apache 2.0") &&
-    mockMilestonesBody.children.length === 7, // 5 training + 2 support
+    mockMilestonesBody.children.length === 12, // 10 training + 2 support
     "DOM controller initial render failed"
   );
 
@@ -357,7 +361,7 @@ function run(harness) {
     "DOM Controller updates on engagement type change to individual (2 services)",
     mockTotalDisplay.textContent === "$100 USD" &&
     mockSvcCountGroup.style.display === "block" &&
-    mockMilestonesBody.children.length === 6, // 5 training + 1 support
+    mockMilestonesBody.children.length === 11, // 10 training + 1 support
     "DOM controller failed on individual services change"
   );
 

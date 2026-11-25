@@ -13,7 +13,7 @@ Trust badges, guarantee seals, and visual confirmation assets supporting the 100
 ## Directory Role & Agent Guidelines
 
 - Used in `guarantees.html` and guarantee callouts across the site.
-- Represents the $0 upfront, 5 equal 20% milestone installments, and walkaway guarantee trust models.
+- Represents the $0 upfront, 10 equal 10% milestone installments, and walkaway guarantee trust models.
 
 ## Subdirectories
 

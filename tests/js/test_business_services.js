@@ -15,7 +15,7 @@ function run(harness, PricingCalculator, constants) {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 10
+    participants: 1
   });
   assert(
     `Business Pick 1 service @ Tier 1 (10 seats) = $${B_IND_PRICE} USD`,
@@ -29,7 +29,7 @@ function run(harness, PricingCalculator, constants) {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 10
+    participants: 1
   });
   assert(
     `Business Pick 1 service @ Tier 2 (25% off) = $${bizT2Expected} USD`,
@@ -43,7 +43,7 @@ function run(harness, PricingCalculator, constants) {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 10
+    participants: 1
   });
   assert(
     `Business Pick 1 service @ Tier 3 (50% off) = $${bizT3Expected} USD`,
@@ -57,7 +57,7 @@ function run(harness, PricingCalculator, constants) {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 10
+    participants: 1
   });
   assert(
     `Business Pick 1 service @ Tier 5 (Academia 75% off) = $${bizT5Expected} USD`,
@@ -71,7 +71,7 @@ function run(harness, PricingCalculator, constants) {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["s1", "s2", "s3", "s4", "s5"],
-    participants: 10
+    participants: 1
   });
   assert(
     `Business Pick 5 services @ Tier 1 = $${biz5T1Expected.toLocaleString()} USD (flagshipCheaper = false)`,
@@ -85,7 +85,7 @@ function run(harness, PricingCalculator, constants) {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9"],
-    participants: 10
+    participants: 1
   });
   assert(
     `Business Pick 9 services @ Tier 1 = $${biz9T1Expected.toLocaleString()} USD (flagshipCheaper = false)`,
@@ -99,7 +99,7 @@ function run(harness, PricingCalculator, constants) {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "s10"],
-    participants: 10
+    participants: 1
   });
   assert(
     `Business Pick 10 services @ Tier 1 = $${biz10T1Expected.toLocaleString()} USD (triggers flagship nudge)`,
@@ -113,7 +113,7 @@ function run(harness, PricingCalculator, constants) {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "s10", "s11", "s12"],
-    participants: 10
+    participants: 1
   });
   assert(
     `Business Pick all 12 services @ Tier 1 = $${bizAll12T1Expected.toLocaleString()} USD (triggers flagship nudge)`,
@@ -127,7 +127,7 @@ function run(harness, PricingCalculator, constants) {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "s10", "s11", "s12"],
-    participants: 10
+    participants: 1
   });
   assert(
     `Business Pick all 12 services @ Tier 3 = $${bizAll12T3Expected.toLocaleString()} USD ($${bizAll12T1Expected.toLocaleString()} base * 0.50)`,

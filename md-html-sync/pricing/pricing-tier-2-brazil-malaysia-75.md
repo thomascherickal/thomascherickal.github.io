@@ -24,7 +24,7 @@ Includes up to 10 participants (additional seats at $75 USD per seat). Covers fu
 
 ### $750 USD · 60 Days (30d Training + 30d Guidance & Materials)
 
-Strictly for 1 person only (private 1-on-1 acceleration). 30 days of intensive live instruction followed by
+Up to 10 participants included (+$100/extra seat, max 20) (up to 10 participants included (+$100/extra seat, max 20)). 30 days of intensive live instruction followed by
  30 days of dedicated daily work guidance, Q&A and written guides tailored to your individual career or
  venture (60 days over 2 months with Saturday and Sunday as holidays, 4 hours per day).
 
@@ -38,10 +38,10 @@ Strictly for 1 person only (private 1-on-1 acceleration). 30 days of intensive l
 Zero advance payment or deposit required before commencing technical discovery and training. You never pay
  a single cent before experiencing live technical progress.
 
-### 20% in Five Milestone
+### 10% in Ten Milestone
  Installments
 
-Invoiced in five equal installments (20% each) due strictly after completed milestone blocks of training
+Invoiced in ten equal installments (10% each) due strictly after completed milestone blocks of training
  progress. You verify working agents and code before every payment.
 
 ### Zero Charge
@@ -100,7 +100,7 @@ Calibrate engagement pricing tailored to your geography, economic tier, or organ
  underprivileged teams.
 
 Business base covers up to 10 participants (additional seats are $75 USD per seat scaled by country
- parity). Individual/Personal is strictly 1 person only.
+ parity). Individual/Personal is up to 10 participants included (+$100/extra seat, max 20).
 
 Frictionless verification: select your tier in the intake form. Payment by PayPal or bank transfer
  (wire, ACH, SEPA, SWIFT or NEFT). Invoices are issued in USD or the local-currency equivalent.

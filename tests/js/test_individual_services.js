@@ -162,15 +162,17 @@ function run(harness, PricingCalculator, constants) {
     `Expected flagshipCheaper=true, got ${indivAll12.flagshipCheaper}`
   );
 
+  const indivMultiSeats = PricingCalculator.calculatePricing({
+    tierId: 1,
+    clientMode: "individual",
+    packageType: "pick-services",
+    selectedServices: ["s1"],
+    participants: 25
+  });
   assert(
-    "Individual client mode always forces participants to 1 regardless of user input",
-    PricingCalculator.calculatePricing({
-      clientMode: "individual",
-      packageType: "pick-services",
-      selectedServices: ["s1"],
-      participants: 25
-    }).participants === 1,
-    "Individual client mode permitted >1 participants"
+    "Personal mode caps participants at 20 max and charges extra seats above 1 included",
+    indivMultiSeats.participants === 20 && indivMultiSeats.extraParticipants === 19,
+    "Personal mode did not cap participants at 20 or compute 19 extra seats"
   );
 }
 

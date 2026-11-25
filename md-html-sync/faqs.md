@@ -42,15 +42,15 @@ All training payments are distributed into five
  equal installments (20% per installment), mapped directly to completed training days, followed by verified milestone payments for the support phase:
 
 - 60-Day Business AI
- Training Flagship ($1,000 USD): Five equal installments (20% / $200 USD each), due after Days 5, 10,
+ Training Flagship ($1,000 USD): Ten equal installments (20% / $200 USD each), due after Days 5, 10,
  15, 20 and 25 of completed live training. Dedicated support (30 days) is an additional $500 USD, paid in two equal installments ($250 USD after 15 days and $250 USD after 30 days of support).
 
 - 60-Day Personal AI
- Training Flagship ($1,000 USD): Five equal installments (20% / $200 USD each), due after Days 5, 10,
- 15, 20 and 25 of completed live 1-on-1 training. Dedicated support (30 days) is an additional $500 USD, paid in two equal installments ($250 USD after 15 days and $250 USD after 30 days of support).
+ Training Flagship ($1,000 USD): Ten equal installments (20% / $200 USD each), due after Days 5, 10,
+ 15, 20 and 25 of completed live Personal Training. Dedicated support (30 days) is an additional $500 USD, paid in two equal installments ($250 USD after 15 days and $250 USD after 30 days of support).
 
 - 10-Day Individual Services (($100 / $75 / $50 / $50 / $25 / Custom USD)):
- Five equal installments (20% / $50 USD each), due after Days 1, 2, 3, 4, and 5 of completed live training. Dedicated support (5 days) is an additional $50 USD due after 5 days of support.
+ Ten equal installments (20% / $50 USD each), due after Days 1 through 10 of completed live training. Dedicated support (5 days) is an additional $50 USD due after 5 days of support.
 
 - Support Period Milestones:
  Support installments are strictly zero upfront, due only after verifying completed assistance, Q&A, code reviews, and written materials licensed under Apache 2.0.
@@ -133,7 +133,7 @@ Every builder and business worldwide receives fair, equitable pricing. Explore o
 *Personal:
  Overview · FAQ #23*  
 Personal AI Transformation (also known as Personal AI Training) is an
- intensive, direct 1-on-1 mentorship and acceleration sprint crafted specifically for
+ intensive, direct Personal Training and acceleration sprint crafted specifically for
  solo founders, independent practitioners, freelance consultants, and senior engineers. While
  business workforce training is structured around multi-tier corporate hierarchies, SSO rollouts, and
  departmental division goals, Personal AI Transformation is hyper-focused on your sovereign systems.
@@ -158,7 +158,7 @@ Graduates emerge operating as high-leverage solo powerhouses
 *Personal:
  Pricing Offer · FAQ #24*  
 Personal Training is $1,000 USD in Tier 1 for 60 days total (30 days training, + 30 days guidance,
- Q&A and written guides). Strictly for 1 person only. Clients are encouraged to choose services
+ Q&A and written guides). Up to 10 participants included (+$100/extra seat, max 20). Clients are encouraged to choose services
  relevant to their work or interests.
 
 - Zero Corporate Overhead: For independent builders, corporate coordination
@@ -246,7 +246,7 @@ Tiers follow the current World Bank income classification, updated each July.
 ### 10. Can I bring co-founders or team members to Personal Training?
 *Personal:
  One Person Only · FAQ #27*  
-No. Personal Training is strictly for one person only (private 1-on-1
+No. Personal Training is strictly for up to 20 seats max (private Personal
  acceleration). This ensures complete confidentiality, zero committee distraction, and custom
  hardware/workflow pairing tailored 100% to your individual daily work.
 
@@ -269,13 +269,13 @@ No. Personal Training is strictly for one person only (private 1-on-1
 *Personal:
  20+20 Cadence · FAQ #28*  
 Personal AI Transformation is structured as an intensive two-phase acceleration program strictly for
- one person only: 30 days of intensive 1-on-1 sprint training drawing on the
+ up to 20 seats max: 30 days of intensive Personal Training sprint training drawing on the
  full 12-service catalogue (you choose the focus areas relevant to your work), immediately
  followed by 30 days of included support with daily questions and doubts clarification, and
  guidance, assistance, and written guides licensed under Apache 2.0 (total 60-day
  experience).
 
-- Phase 1 (Days 1-30) · Intensive 1-on-1 Training: Direct
+- Phase 1 (Days 1-30) · Intensive Personal Training: Direct
  pair-programming covering personal AI workflows, private local LLMs (Ollama/vLLM), Claude agent
  teams, autonomous agent loops, custom MCP servers, AI budget ceilings, and AI-assisted TDD.
 
@@ -660,10 +660,10 @@ Yes, absolutely. Clients have complete freedom to pick and choose individual ser
  from our 12-service catalogue without committing to a full multi-week transformation package.
 
 - Individual / Personal Pricing: ($100 / $75 / $50 / $50 / $25 / Custom USD) per service strictly for
- 1 person only (private 1-on-1 sprint).
+ up to 20 seats max (private Personal Training sprint).
 
 - Business / Organization Pricing: ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for up to
- 10 team participants (additional seats at ($100 / $75 / $50 / $50 / $25 / Custom USD) per seat up to a maximum of 10 seats).
+ 10 team participants (additional seats at ($100 / $75 / $50 / $50 / $25 / Custom USD) per seat up to a maximum of 20 seats).
 
 - Delivery Cadence: Every individual service includes 5 days of live,
  hands-on engineering training followed by 5 days of dedicated operational support
@@ -1232,10 +1232,10 @@ Every service engagement is governed by an explicit duration and included suppor
  Phase 1: Architectural Scoping, Toolchains, Agent Orchestration, Local LLMs, AI-Assisted TDD, Production Handover & Apache 2.0 Licensing,
  followed by 30 business days (excluding weekends) of technical assistance and doubt resolution.
 
-- Flagship Personal AI Training: Strictly 30 days of intensive 1-on-1
+- Flagship Personal AI Training: Strictly 30 days of intensive Personal
  training
  drawing on the full 12-service catalogue AND 30 days of included daily work support
- (total 60 days of coverage, 4 hours per day, 120 live training hours total) for 1 person only.
+ (total 60 days of coverage, 4 hours per day, 120 live training hours total) for up to 10 participants (+$100/extra seat, max 20).
 
 - Individual Pick Services: Strictly 5 days of intensive live training AND
  5 days of included support (total 10 days of coverage, 4 hours per day, 20 live training

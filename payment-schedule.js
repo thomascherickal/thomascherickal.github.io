@@ -3,7 +3,7 @@
  * Comprehensive Payment Schedule & Trust Architecture Widget.
  *
  * Features:
- * 1. 5 x 20% Milestone Schedule Calculations across all 6 Parity Tiers.
+ * 1. 10 x 10% Milestone Schedule Calculations across all 6 Parity Tiers.
  * 2. Dedicated Support Milestones (Flagship: Day 15 & Day 30; Individual: Day 5).
  * 3. Strictly $0 Upfront Deposit validation and guarantees.
  * 4. Custom Special Cases calculation with negotiable rates for under-resourced ventures.
@@ -34,9 +34,9 @@
 
   const TRUST_TERMS = {
     upfrontDeposit: "$0 upfront (strictly zero advance payment required before commencing technical discovery and instruction)",
-    milestoneCount: 5,
-    milestonePercentage: 20,
-    walkawayGuarantee: "Walk away owing nothing if not 100% satisfied after the first milestone training phase.",
+    milestoneCount: 10,
+    milestonePercentage: 10,
+    walkawayGuarantee: "Walk away owing nothing more than already paid if not satisfied after any completed milestone training phase, including the first.",
     license: "Apache 2.0 license. All training materials, guides, architectures, and client code are transferred with full commercial re-use, internal deployment, resale, and relicensing rights with attribution.",
     negotiability: "All pricing is negotiable for special cases, non-profits, academic research groups, and crisis-affected regions."
   };
@@ -82,14 +82,17 @@
       totalSupportAmount = 0;
     }
 
-    const trainingInstallmentAmount = Math.round((totalTrainingAmount * 0.20) * 100) / 100;
+    const trainingInstallmentAmount = Math.round((totalTrainingAmount * 0.10) * 100) / 100;
     const trainingMilestones = [];
-    for (let i = 1; i <= 5; i++) {
+    const dayStep = engagementType === "individual" ? 1 : 5;
+    for (let i = 1; i <= 10; i++) {
+      const dueDay = i * dayStep;
       trainingMilestones.push({
         milestoneIndex: i,
-        percentage: 20,
+        percentage: 10,
+        dueAfterDay: dueDay,
         amountUsd: trainingInstallmentAmount,
-        dueTiming: "After Milestone " + i + " completion and client verification",
+        dueTiming: "After Day " + dueDay + " completion and client verification",
         verifiedBeforePayment: true
       });
     }
@@ -208,7 +211,7 @@
         tableBody.innerHTML = "";
         schedule.trainingMilestones.forEach(function (m) {
           const tr = document.createElement("tr");
-          tr.innerHTML = '<td style="padding:0.6rem 0.8rem;border-bottom:1px solid rgba(255,255,255,0.08);color:var(--cyan);font-weight:700;">Milestone ' + m.milestoneIndex + ' (20%)</td>' +
+          tr.innerHTML = '<td style="padding:0.6rem 0.8rem;border-bottom:1px solid rgba(255,255,255,0.08);color:var(--cyan);font-weight:700;">Milestone ' + m.milestoneIndex + ' (10%)</td>' +
             '<td style="padding:0.6rem 0.8rem;border-bottom:1px solid rgba(255,255,255,0.08);color:var(--text-secondary);">' + m.dueTiming + '</td>' +
             '<td style="padding:0.6rem 0.8rem;border-bottom:1px solid rgba(255,255,255,0.08);color:#fff;font-weight:700;text-align:right;">' + formatCurrency(m.amountUsd) + '</td>';
           tableBody.appendChild(tr);
