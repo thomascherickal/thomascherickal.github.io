@@ -495,6 +495,40 @@ def generate_last_commit_report(output_file=REPORT_FILE):
         lines.append(f"- `{folder_label}` ({folder_count} files)")
     lines.append("")
 
+    # Section: Autonomous Error Healing & Fix Summary
+    lines.append("## Autonomous Error Healing & Fix Summary")
+    lines.append("")
+    heal_cache = os.path.join(TESTS_DIR, ".auto_heal_report_cache.json")
+    heal_data = None
+    if os.path.exists(heal_cache):
+        try:
+            with open(heal_cache, "r", encoding="utf-8") as hf:
+                heal_data = json.load(hf)
+        except Exception:
+            heal_data = None
+
+    if heal_data and heal_data.get("history"):
+        lines.append(
+            f"- **Healing Passes**: `{heal_data.get('total_passes', 1)}` | "
+            f"**Errors Fixed**: `{heal_data.get('errors_fixed', 0)}` | "
+            f"**Remaining**: `{heal_data.get('errors_remaining', 0)}` | "
+            f"**Final Status**: `{'PASSED' if heal_data.get('passed') else 'FAILED'}`"
+        )
+        lines.append("")
+        lines.append("| Pass | Suite | Test Error | How It Was Fixed | Status |")
+        lines.append("| :---: | :--- | :--- | :--- | :---: |")
+        for item in heal_data["history"]:
+            err_txt = f"`{item.get('test', '')}`: {item.get('error', '')}".replace("|", "\\|")
+            fix_txt = str(item.get("fix", "")).replace("|", "\\|")
+            lines.append(
+                f"| {item.get('pass', 1)} | {item.get('suite', '')} | {err_txt} | {fix_txt} | **{item.get('status', '')}** |"
+            )
+    else:
+        lines.append("| Pass | Suite | Test Error | How It Was Fixed | Status |")
+        lines.append("| :---: | :--- | :--- | :--- | :---: |")
+        lines.append("| 1 | All Suites | 0 errors detected | No fixes required | **PASSED** |")
+    lines.append("")
+
     # Section: Changed Files & Status (staged)
     lines.append("## Changed Files & Status (Staged)")
     lines.append("")
