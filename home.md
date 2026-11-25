@@ -98,7 +98,7 @@ All services are backed by transparent flat rates and our full 195-country Purch
 - **Additional Seats**: $200 USD per seat above the included 25 seats.
 - **Duration**: 30 days of training + 30 days of included guidance and detailed guides and materials (total 70 calendar days).
 
-### Personal AI Acceleration (Strictly 1 Person Only)
+### Personal AI Acceleration (Up to 10 Seats Included, +00/Extra Seat, Max 20)
 - **Complete Personal Transformation**: $2,000 USD for 60 days (30 days intensive training + 30 days guidance and materials - 30 working days over 6 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day), with Tier 6 subsidized relief down to $200 USD via country parity multipliers.
 - **Individual Service Pick for Individuals**: $200 USD per individual service (5 days training + 5 days support).
 - **Details**: [Personal AI Training Overview](https://thedigitalfuturist.com/personal-ai-training.html) · [Pricing & Parity Calculator](https://thedigitalfuturist.com/pricing.html#personal-ai-section) · [Free LinkedIn Consultation ↗](https://linkedin.com/in/thomascherickal)

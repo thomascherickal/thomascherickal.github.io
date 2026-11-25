@@ -25,7 +25,7 @@ Andorra, Antigua and Barbuda, Australia, Austria, Bahamas, Bahrain, Barbados, Be
 
 Upper-middle income economies:
 
-Albania, Algeria, Argentina, Armenia, Azerbaijan, Belarus, Belize, Bosnia and Herzegovina, Botswana, Brazil, Bulgaria, China, Colombia, Costa Rica, Cuba, Dominica, Dominican Republic, Ecuador, Equatorial Guinea, Fiji, Gabon, Georgia, Grenada, Guatemala, Guyana, Indonesia, Iran, Iraq, Jamaica, Jordan, Kazakhstan, Libya, Malaysia, Maldives, Marshall Islands, Mauritius, Mexico, Micronesia, Moldova, Montenegro, Namibia, Nauru, North Macedonia, Palau, Panama, Paraguay, Peru, Philippines, Russian Federation, Saint Lucia, Saint Vincent and the Grenadines, Serbia, South Africa, Sri Lanka, Suriname, Thailand, Tonga, Turkey, Turkmenistan, Tuvalu, Ukraine, Venezuela, Viet Nam.
+Albania, Algeria, Argentina, Armenia, Azerbaijan, Belarus, Belize, Bosnia and Herzegovina, Botswana, Brazil, Bulgaria, China, Colombia, Costa Rica, Cuba, Dominica, Dominican Republic, Ecuador, Equatorial Guinea, Fiji, Gabon, Georgia, Grenada, Guatemala, Guyana, Indonesia, Iran, Iraq, Jamaica, Jordan, Kazakhstan, Libya, Malaysia, Maldives, Marshall Islands, Mauritius, Mexico, Micronesia, Moldova, Montenegro, Namibia, Nauru, North Macedonia, Palau, Panama, Paraguay, Peru, Philippines, Russian Federation, Saint Lucia, Saint Vincent and the Grenadines, Serbia, South Africa, Sri Lanka, Suriname, Thailand, Tonga, Turkey, Turkmenistan, Tuvalu, Venezuela, Viet Nam.
 
 ## Tier 3: Lower-Middle Income Economies (50% - $500 Flagship / $50 Individual)
 
@@ -45,5 +45,5 @@ Open to accredited colleges, universities, students, researchers, and registered
 
 Low-income economies and crisis-affected regions:
 
-Afghanistan, Burkina Faso, Burundi, Central African Republic, Chad, Democratic People's Republic of Korea, Democratic Republic of the Congo, Eritrea, Ethiopia, Gambia, Guinea-Bissau, Haiti, Liberia, Madagascar, Malawi, Mali, Mozambique, Niger, Rwanda, Sierra Leone, Somalia, South Sudan, State of Palestine, Sudan, Syrian Arab Republic, Uganda, Yemen.
+Afghanistan, Burkina Faso, Burundi, Central African Republic, Chad, Democratic People's Republic of Korea, Democratic Republic of the Congo, Eritrea, Ethiopia, Gambia, Guinea-Bissau, Haiti, Liberia, Madagascar, Malawi, Mali, Mozambique, Niger, Rwanda, Sierra Leone, Somalia, South Sudan, State of Palestine, Sudan, Syrian Arab Republic, Uganda, Ukraine, Yemen.
 

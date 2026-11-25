@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-25 13:14:42 UTC` | Branch: `main` | Head Commit: `fb1696f`
+> **Automated Status Report** | Generated on `2026-11-25 14:52:13 UTC` | Branch: `main` | Head Commit: `2b3e6c0`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,13 +11,13 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **566** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **974,605** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **957,804** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,285** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,516** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **57.82 MB (60,633,142 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **795,094 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **570** | Since repository inception (2023-03-30) |
+| **Total Lines of Source Code & Content** | **975,129** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **958,316** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,287** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **11,526** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **57.86 MB (60,672,028 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **795,262 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **571** | Since repository inception (2023-03-30) |
 | **Latest Commit Date** | **2026-11-25** | Subject: "feat(synchronizer): synchronize repository state with authoritative data" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
@@ -27,15 +27,15 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 91 | 92,090 | 7.42 MB (7,777,463 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 91 | 92,105 | 7.42 MB (7,778,415 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 12,169 | 284.47 KB (291,296 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 32 | 11,361 | 3.70 MB (3,874,713 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 59 | 15,308 | 685.68 KB (702,134 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 161 | 41,880 | 4.83 MB (5,060,068 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 115 | 801,730 | 36.66 MB (38,443,058 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **JavaScript Scripts** | 32 | 11,428 | 3.70 MB (3,878,152 bytes) | Client-side interactivity, search, filter & components |
+| **Python Tooling** | 59 | 15,367 | 688.68 KB (705,205 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 161 | 41,850 | 4.82 MB (5,058,791 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 115 | 802,143 | 36.69 MB (38,475,452 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 36 | 0 | 4.01 MB (4,209,868 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 12 | 0 | 79.87 KB (81,788 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 12 | 0 | 80.17 KB (82,095 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,12 +43,12 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 115 | 801,730 | 36.66 MB (38,443,058 bytes) | 20.3% |
-| `.html` | 91 | 92,090 | 7.42 MB (7,777,463 bytes) | 16.1% |
-| `.md` | 161 | 41,880 | 4.83 MB (5,060,068 bytes) | 28.4% |
-| `.py` | 59 | 15,308 | 685.68 KB (702,134 bytes) | 10.4% |
+| `.json` | 115 | 802,143 | 36.69 MB (38,475,452 bytes) | 20.3% |
+| `.html` | 91 | 92,105 | 7.42 MB (7,778,415 bytes) | 16.1% |
+| `.md` | 161 | 41,850 | 4.82 MB (5,058,791 bytes) | 28.4% |
+| `.py` | 59 | 15,367 | 688.68 KB (705,205 bytes) | 10.4% |
 | `.css` | 16 | 12,169 | 284.47 KB (291,296 bytes) | 2.8% |
-| `.js` | 32 | 11,361 | 3.70 MB (3,874,713 bytes) | 5.7% |
+| `.js` | 32 | 11,428 | 3.70 MB (3,878,152 bytes) | 5.7% |
 | `.svg` | 44 | 67 | 188.24 KB (192,754 bytes) | 7.8% |
 | `.webp` | 17 | 0 | 1.62 MB (1,695,354 bytes) | 3.0% |
 | `.png` | 12 | 0 | 1.28 MB (1,339,427 bytes) | 2.1% |
@@ -56,7 +56,7 @@
 | `.jpeg` | 1 | 0 | 152.39 KB (156,047 bytes) | 0.2% |
 | `.txt` | 2 | 0 | 35.68 KB (36,540 bytes) | 0.4% |
 | `.docx` | 2 | 0 | 28.83 KB (29,519 bytes) | 0.4% |
-| `[no extension]` | 6 | 0 | 8.19 KB (8,383 bytes) | 1.1% |
+| `[no extension]` | 6 | 0 | 8.49 KB (8,690 bytes) | 1.1% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
 | `.xml` | 1 | 0 | 6.65 KB (6,808 bytes) | 0.2% |
 | `.webmanifest` | 1 | 0 | 538 bytes | 0.2% |
@@ -126,7 +126,27 @@
 
 ---
 
-## 8. Automated Update Triggers
+## 8. HTML UI Verification Suite Summary (`tests/test_html_ui.py`)
+
+- **Framework**: `BeautifulSoup4 + lxml (unittest)`
+- **Pages Scanned**: **85 HTML pages**
+- **Summary**: **49 / 50 PASSED** (`1` failures, `6.75s`, Status: **FAILED**)
+- **Last Verified**: `2026-11-25 14:52:01 UTC`
+
+| Test Category | Tests | Passed | Failed | Pass Rate | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Document Shell, Charset & SEO** | 5 | 5 | 0 | 100.0% | **PASSED** |
+| **Navigation & Footer UI** | 4 | 4 | 0 | 100.0% | **PASSED** |
+| **Accessibility, Buttons & Security** | 5 | 5 | 0 | 100.0% | **PASSED** |
+| **CTA, Branding & Pricing Policy** | 5 | 4 | 1 | 80.0% | **FAILED** |
+| **Interactive Widgets & Page DOM Contracts** | 12 | 12 | 0 | 100.0% | **PASSED** |
+| **Structured Data, Assets & Hygiene** | 4 | 4 | 0 | 100.0% | **PASSED** |
+| **Production Error Scenarios & Fault Injection** | 15 | 15 | 0 | 100.0% | **PASSED** |
+| **HTML UI Total** | **50** | **49** | **1** | **98.0%** | **FAILED** |
+
+---
+
+## 9. Automated Update Triggers
 
 `METRICS.md` is automatically kept in sync by the following mechanisms:
 1. **Local Build Pipeline**: Invoked whenever `python3 python/build_components.py` or `python3 python/generate_metrics.py` is executed.

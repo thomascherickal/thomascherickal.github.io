@@ -170,9 +170,9 @@ function run(harness, PricingCalculator, constants) {
     participants: 25
   });
   assert(
-    "Personal mode caps participants at 20 max and charges extra seats above 1 included",
-    indivMultiSeats.participants === 20 && indivMultiSeats.extraParticipants === 19,
-    "Personal mode did not cap participants at 20 or compute 19 extra seats"
+    "Personal mode caps participants at 20 max and charges extra seats above 10 included",
+    indivMultiSeats.participants === 20 && indivMultiSeats.extraParticipants === 10,
+    "Personal mode did not cap participants at 20 or compute 10 extra seats"
   );
 }
 

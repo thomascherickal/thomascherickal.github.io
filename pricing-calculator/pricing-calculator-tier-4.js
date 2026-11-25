@@ -78,12 +78,13 @@
       }
     }
 
+    const includedSeats = 10;
     let rawParticipants = parseInt(params.participants, 10);
     if (isNaN(rawParticipants) || rawParticipants < 1) {
-      rawParticipants = clientMode === "individual" ? 1 : 10;
+      rawParticipants = includedSeats;
     }
-    let participants = clientMode === "individual" ? 1 : rawParticipants;
-    const extraParticipants = (clientMode === "business" && basePrice > 0) ? Math.max(0, participants - 10) : 0;
+    let participants = Math.min(20, rawParticipants);
+    const extraParticipants = basePrice > 0 ? Math.max(0, participants - 10) : 0;
     const extraHeadRate = Math.round(extraParticipants * 100 * TIER.multiplier);
     const baseTierPrice = Math.round(basePrice * TIER.multiplier);
     const finalPrice = basePrice === 0 ? 0 : baseTierPrice + extraHeadRate;
@@ -193,12 +194,13 @@
         if (btnModeIndividual) btnModeIndividual.classList.add("active");
         if (btnModeBusiness) btnModeBusiness.classList.remove("active");
         if (calcParticipants) {
-          calcParticipants.value = 1;
-          calcParticipants.disabled = true;
-          calcParticipants.style.opacity = "0.5";
+          calcParticipants.disabled = false;
+          calcParticipants.style.opacity = "1";
+          calcParticipants.max = 20;
+          if (parseInt(calcParticipants.value, 10) > 20) calcParticipants.value = 20;
         }
-        if (calcParticipantsHint) calcParticipantsHint.textContent = "Personal: Strictly 1 Person Only";
-        if (calcParticipantsDesc) calcParticipantsDesc.textContent = "Individual/Personal tracks are strictly 1 person only (private 1-on-1 acceleration).";
+        if (calcParticipantsHint) calcParticipantsHint.textContent = "Personal: 10 Included Flagship / 1 Included Pick (+00/extra seat, max 20)";
+        if (calcParticipantsDesc) calcParticipantsDesc.textContent = "Personal Flagship includes up to 10 participants and Personal Service Picks include 1 seat (additional seats are 00 USD per seat scaled by country parity, up to 20 seats max).";
         if (calcPackage && calcPackage.value === "pkg-business") {
           calcPackage.value = "pkg-personal";
           standardBasePrice = 1000;

@@ -18,10 +18,10 @@ function run(harness, PricingCalculator, constants) {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 3
+    participants: 12
   });
   assert(
-    `Business 3 seats (2 extra @ $${B_EXTRA_SEAT}) @ Tier 1 = $${bizT1Extra2Expected} USD ($${B_IND_PRICE} base + $${bizT1Extra2Rate} extra)`,
+    `Business 12 seats (2 extra @ $${B_EXTRA_SEAT}) @ Tier 1 = $${bizT1Extra2Expected} USD ($${B_IND_PRICE} base + $${bizT1Extra2Rate} extra)`,
     bizT1Extra2.finalPrice === bizT1Extra2Expected && bizT1Extra2.extraParticipants === 2,
     `Expected $${bizT1Extra2Expected}, got $${bizT1Extra2.finalPrice}`
   );
@@ -33,10 +33,10 @@ function run(harness, PricingCalculator, constants) {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 3
+    participants: 12
   });
   assert(
-    `Business 3 seats @ Tier 2 (25% parity scaled) = $${bizT2Extra2Expected} USD ($${Math.round(B_IND_PRICE * 0.75)} base + $${Math.round(bizT1Extra2Rate * 0.75)} extra)`,
+    `Business 12 seats @ Tier 2 (25% parity scaled) = $${bizT2Extra2Expected} USD ($${Math.round(B_IND_PRICE * 0.75)} base + $${Math.round(bizT1Extra2Rate * 0.75)} extra)`,
     bizT2Extra2.finalPrice === bizT2Extra2Expected,
     `Expected $${bizT2Extra2Expected}, got $${bizT2Extra2.finalPrice}`
   );
@@ -49,10 +49,10 @@ function run(harness, PricingCalculator, constants) {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 6
+    participants: 15
   });
   assert(
-    `Business 6 seats @ Tier 3 = $${bizT3Extra5Expected} USD ($${Math.round(B_IND_PRICE * 0.5)} base + $${Math.round(bizT3Extra5Rate * 0.5)} extra)`,
+    `Business 15 seats @ Tier 3 = $${bizT3Extra5Expected} USD ($${Math.round(B_IND_PRICE * 0.5)} base + $${Math.round(bizT3Extra5Rate * 0.5)} extra)`,
     bizT3Extra5.finalPrice === bizT3Extra5Expected && bizT3Extra5.extraParticipants === 5,
     `Expected $${bizT3Extra5Expected}, got $${bizT3Extra5.finalPrice}`
   );
@@ -63,10 +63,10 @@ function run(harness, PricingCalculator, constants) {
     clientMode: "business",
     packageType: "pick-services",
     selectedServices: ["service-generative-ai-transformation"],
-    participants: 6
+    participants: 15
   });
   assert(
-    `Business 6 seats @ Tier 5 = $${bizT5Extra5Expected} USD ($${Math.round(B_IND_PRICE * 0.25)} base + $${Math.round(bizT3Extra5Rate * 0.25)} extra)`,
+    `Business 15 seats @ Tier 5 = $${bizT5Extra5Expected} USD ($${Math.round(B_IND_PRICE * 0.25)} base + $${Math.round(bizT3Extra5Rate * 0.25)} extra)`,
     bizT5Extra5.finalPrice === bizT5Extra5Expected,
     `Expected $${bizT5Extra5Expected}, got $${bizT5Extra5.finalPrice}`
   );

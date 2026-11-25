@@ -117,6 +117,56 @@ function run(harness, PricingCalculator, constants) {
     flagshipPersonalT5.finalPrice === flagshipPersonalT5Expected && flagshipPersonalT5.totalSavings === flagshipPersonalT5Savings,
     `Expected $${flagshipPersonalT5Expected} with $${flagshipPersonalT5Savings} savings, got $${flagshipPersonalT5.finalPrice}`
   );
+
+  // Personal Flagship seat parity with Business Flagship (10 included, +$100/seat up to 20 max)
+  const persFlag10T1 = PricingCalculator.calculatePricing({
+    tierId: 1,
+    clientMode: "individual",
+    packageType: "pkg-personal",
+    participants: 10
+  });
+  assert(
+    "Personal Flagship @ Tier 1 with 10 seats has 0 extra seats ($1,000 USD)",
+    persFlag10T1.participants === 10 && persFlag10T1.extraParticipants === 0 && persFlag10T1.finalPrice === P_FLAG_PRICE,
+    `Expected 10 seats / 0 extra / $${P_FLAG_PRICE}, got ${persFlag10T1.participants} / ${persFlag10T1.extraParticipants} / $${persFlag10T1.finalPrice}`
+  );
+
+  const persFlag15T1 = PricingCalculator.calculatePricing({
+    tierId: 1,
+    clientMode: "individual",
+    packageType: "pkg-personal",
+    participants: 15
+  });
+  assert(
+    "Personal Flagship @ Tier 1 with 15 seats adds 5 extra seats (+$500 -> $1,500 USD)",
+    persFlag15T1.participants === 15 && persFlag15T1.extraParticipants === 5 && persFlag15T1.finalPrice === P_FLAG_PRICE + 500,
+    `Expected $${P_FLAG_PRICE + 500}, got $${persFlag15T1.finalPrice}`
+  );
+
+  const persFlag20T3 = PricingCalculator.calculatePricing({
+    tierId: 3,
+    clientMode: "individual",
+    packageType: "pkg-personal",
+    participants: 20
+  });
+  const expectedT3Flag20 = Math.round(P_FLAG_PRICE * 0.5) + Math.round(10 * 100 * 0.5);
+  assert(
+    `Personal Flagship @ Tier 3 with 20 seats (10 extra PPP-scaled) = $${expectedT3Flag20} USD`,
+    persFlag20T3.participants === 20 && persFlag20T3.extraParticipants === 10 && persFlag20T3.finalPrice === expectedT3Flag20,
+    `Expected $${expectedT3Flag20}, got $${persFlag20T3.finalPrice}`
+  );
+
+  const persFlagCap = PricingCalculator.calculatePricing({
+    tierId: 1,
+    clientMode: "individual",
+    packageType: "pkg-personal",
+    participants: 25
+  });
+  assert(
+    "Personal Flagship clamps 25 seats to strict 20-seat maximum",
+    persFlagCap.participants === 20 && persFlagCap.extraParticipants === 10 && persFlagCap.finalPrice === P_FLAG_PRICE + 1000,
+    `Expected 20 max seats / $${P_FLAG_PRICE + 1000}, got ${persFlagCap.participants} / $${persFlagCap.finalPrice}`
+  );
 }
 
 module.exports = { run };

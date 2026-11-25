@@ -20,9 +20,9 @@ function run(harness, PricingCalculator) {
   );
 
   assert(
-    "NaN or negative participants defaults to 10 for flagships and 1 for service picks",
+    "NaN or negative participants defaults to 10 for flagships and service picks",
     PricingCalculator.calculatePricing({ clientMode: "business", packageType: "pkg-business", participants: "invalid" }).participants === 10 &&
-    PricingCalculator.calculatePricing({ clientMode: "individual", packageType: "pick-services", participants: "invalid" }).participants === 1,
+    PricingCalculator.calculatePricing({ clientMode: "individual", packageType: "pick-services", participants: "invalid" }).participants === 10,
     "Malformed participants were not safely normalized"
   );
 }

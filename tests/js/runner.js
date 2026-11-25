@@ -17,6 +17,7 @@ const testDomController = require('./test_dom_controller.js');
 const testComponents = require('./test_components.js');
 const testMermaid = require('./test_mermaid.js');
 const testPaymentSchedule = require('./test_payment_schedule.js');
+const testTierCalculators = require('./test_tier_calculators.js');
 
 const TEST_MODULES = [
   { name: "test_data_integrity", module: testDataIntegrity },
@@ -30,7 +31,8 @@ const TEST_MODULES = [
   { name: "test_dom_controller", module: testDomController },
   { name: "test_components", module: testComponents },
   { name: "test_mermaid", module: testMermaid },
-  { name: "test_payment_schedule", module: testPaymentSchedule }
+  { name: "test_payment_schedule", module: testPaymentSchedule },
+  { name: "test_tier_calculators", module: testTierCalculators }
 ];
 
 async function runAllModules(PricingCalculator, constants) {

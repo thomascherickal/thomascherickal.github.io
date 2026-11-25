@@ -7,6 +7,7 @@ Strictly zero emojis rule compliant.
 """
 
 import datetime
+import json
 import os
 import re
 import subprocess
@@ -324,7 +325,65 @@ def generate_metrics():
     md.append("")
     md.append("---")
     md.append("")
-    md.append("## 8. Automated Update Triggers")
+    md.append("## 8. HTML UI Verification Suite Summary (`tests/test_html_ui.py`)")
+    md.append("")
+    html_cache_path = os.path.join(repo_root, "tests", ".html_ui_test_reports_cache.json")
+    html_ui_data = None
+    if os.path.exists(html_cache_path):
+        try:
+            with open(html_cache_path, "r", encoding="utf-8") as hf:
+                html_ui_data = json.load(hf)
+        except Exception:
+            html_ui_data = None
+
+    if html_ui_data and html_ui_data.get("tests"):
+        md.append(
+            f"- **Framework**: `{html_ui_data.get('framework', 'BeautifulSoup4 + lxml (unittest)')}`"
+        )
+        md.append(f"- **Pages Scanned**: **{html_ui_data.get('pages_scanned', len(html_files))} HTML pages**")
+        md.append(
+            f"- **Summary**: **{html_ui_data.get('passed', 0)} / {html_ui_data.get('total', 0)} PASSED** "
+            f"(`{html_ui_data.get('failed', 0)}` failures, `{html_ui_data.get('elapsed_seconds', 0)}s`, "
+            f"Status: **{html_ui_data.get('status', 'UNKNOWN')}**)"
+        )
+        md.append(f"- **Last Verified**: `{html_ui_data.get('timestamp', 'N/A')}`")
+        md.append("")
+
+        categories = [
+            ("Document Shell, Charset & SEO", range(1, 6)),
+            ("Navigation & Footer UI", range(6, 10)),
+            ("Accessibility, Buttons & Security", range(10, 15)),
+            ("CTA, Branding & Pricing Policy", range(15, 20)),
+            ("Interactive Widgets & Page DOM Contracts", range(20, 32)),
+            ("Structured Data, Assets & Hygiene", range(32, 36)),
+            ("Production Error Scenarios & Fault Injection", range(36, 51)),
+        ]
+        md.append("| Test Category | Tests | Passed | Failed | Pass Rate | Status |")
+        md.append("| :--- | :--- | :--- | :--- | :--- | :--- |")
+        for cat_name, num_range in categories:
+            cat_recs = []
+            for rec in html_ui_data["tests"]:
+                m_num = re.match(r"test_(\d+)_", rec.get("method", ""))
+                if m_num and int(m_num.group(1)) in num_range:
+                    cat_recs.append(rec)
+            c_total = len(cat_recs)
+            c_pass = sum(1 for r in cat_recs if r.get("status") == "PASSED")
+            c_fail = c_total - c_pass
+            c_rate = (c_pass / c_total * 100.0) if c_total else 0.0
+            c_stat = "PASSED" if c_fail == 0 and c_total > 0 else "FAILED"
+            md.append(f"| **{cat_name}** | {c_total} | {c_pass} | {c_fail} | {c_rate:.1f}% | **{c_stat}** |")
+        t_total = html_ui_data.get("total", 0)
+        t_pass = html_ui_data.get("passed", 0)
+        t_fail = html_ui_data.get("failed", 0)
+        t_rate = (t_pass / t_total * 100.0) if t_total else 0.0
+        t_stat = html_ui_data.get("status", "UNKNOWN")
+        md.append(f"| **HTML UI Total** | **{t_total}** | **{t_pass}** | **{t_fail}** | **{t_rate:.1f}%** | **{t_stat}** |")
+    else:
+        md.append("Run `python3 python/run_html_tests.py` to populate the HTML UI verification summary table.")
+    md.append("")
+    md.append("---")
+    md.append("")
+    md.append("## 9. Automated Update Triggers")
     md.append("")
     md.append("`METRICS.md` is automatically kept in sync by the following mechanisms:")
     md.append("1. **Local Build Pipeline**: Invoked whenever `python3 python/build_components.py` or `python3 python/generate_metrics.py` is executed.")

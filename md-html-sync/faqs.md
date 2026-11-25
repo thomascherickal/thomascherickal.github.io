@@ -1237,7 +1237,7 @@ Every service engagement is governed by an explicit duration and included suppor
 
 - Individual Pick Services: Strictly 5 days of intensive live training AND
  5 days of included support (total 10 days of coverage, 4 hours per day, 20 live training
- hours total), priced at ($100 / $75 / $50 / $50 / $25 / Custom USD) (Business, up to 10 seats, additional seats at $100/seat) or ($100 / $75 / $50 / $50 / $25 / Custom USD) (Personal, 1 person) in Tier 1
+ hours total), priced at ($100 / $75 / $50 / $50 / $25 / Custom USD) (Business or Personal, 1 seat included, additional seats at +$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat, max 20 seats) in Tier 1
  with universal parity scaling.
 
 - Free Concurrency: All business services and programs can freely overlap or run

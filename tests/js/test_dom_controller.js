@@ -101,12 +101,12 @@ function run(harness, PricingCalculator, constants) {
     `Expected $${(16 * B_IND_PRICE).toLocaleString()} USD, got ${elements["calc-display-price"].textContent}`
   );
 
-  // 7. Participants Input Change: Extra head scaling (+14 participants over 1 included = 15)
+  // 7. Participants Input Change: Extra head scaling (+5 participants over 10 included = 15)
   elements["calc-participants"].value = "15";
   elements["calc-participants"].trigger("input");
-  const ui15Price = (16 * B_IND_PRICE) + (14 * B_EXTRA_SEAT);
+  const ui15Price = (16 * B_IND_PRICE) + (5 * B_EXTRA_SEAT);
   assert(
-    `UI Participants Input: Changing participants to 15 immediately adds $${(14 * B_EXTRA_SEAT).toLocaleString()} extra head fee ($${ui15Price.toLocaleString()} USD)`,
+    `UI Participants Input: Changing participants to 15 immediately adds $${(5 * B_EXTRA_SEAT).toLocaleString()} extra head fee ($${ui15Price.toLocaleString()} USD)`,
     elements["calc-display-price"].textContent === `$${ui15Price.toLocaleString()} USD`,
     `Expected $${ui15Price.toLocaleString()} USD, got ${elements["calc-display-price"].textContent}`
   );

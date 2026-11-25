@@ -84,6 +84,11 @@ function run(harness) {
     "Tier 1 flagship must have 10 milestones of $100 each (Days 5-50)"
   );
   assert(
+    "Flagship milestone days follow exact 5-day spacing [5,10,15,20,25,30,35,40,45,50]",
+    JSON.stringify(defaultSched.trainingMilestones.map(m => m.dueAfterDay)) === JSON.stringify([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]),
+    "Flagship milestone day spacing must be 5, 10, ..., 50"
+  );
+  assert(
     "Flagship support has zero separate support payment rows (100% included at $0)",
     defaultSched.supportMilestones.length === 0,
     "Flagship support must have 0 separate payment rows"

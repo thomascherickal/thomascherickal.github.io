@@ -46,6 +46,14 @@ if [ $JS_TEST_STATUS -ne 0 ]; then
     exit 1
 fi
 
+echo "[git pre-commit] Running HTML UI test suite (python/run_html_tests.py)..."
+python3 "$REPO_ROOT/python/run_html_tests.py"
+HTML_TEST_STATUS=$?
+if [ $HTML_TEST_STATUS -ne 0 ]; then
+    echo "[git pre-commit] ERROR: HTML UI test suite failed with status $HTML_TEST_STATUS. Commit aborted."
+    exit 1
+fi
+
 # Verify data directory Single Source of Truth (SSOT) integrity
 DATA_DIR_STATUS="$(git status --porcelain "$REPO_ROOT/data" 2>/dev/null)"
 if [ -n "$DATA_DIR_STATUS" ]; then

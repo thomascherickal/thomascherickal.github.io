@@ -10,7 +10,7 @@
 
 ### Service Selection & Flagship Options:
 1. **Individual Service Picks (Pick & Choose from 16 Business and 16 Personal Services)**:
-   - **Personal (Personal)**: **$100 USD per service** (strictly 1 person), covers **5 days live training + 5 days dedicated support** (10 days total coverage). Tier rates: T1: $100 | T2: $75 | T3: $50 | T4: $50 | T5: $25 | T6: Custom. Support fee: $0 USD (100% included).
+   - **Personal Service Pick**: **$100 USD per service** (1 seat included, +$100/extra seat scaled by parity, max 20 seats), covers **5 days live training + 5 days dedicated support** (10 days total coverage). Tier rates: T1: $100 | T2: $75 | T3: $50 | T4: $50 | T5: $25 | T6: Custom. Support fee: $0 USD (100% included).
    - **Business (Organizations)**: **$100 USD per service base** (1 seat included, +$100/extra seat up to 10 seats max), covers **5 days live training + 5 days dedicated support** (10 days total coverage). Tier rates: T1: $100 | T2: $75 | T3: $50 | T4: $50 | T5: $25 | T6: Custom (+ extra seat at same tier rate). Support fee: $0 USD (100% included).
 2. **Flagship Programs (60 Days Total Coverage)**:
    - **Business Training Flagship**: **$1,000 USD for 60 days** (30d live training + 30d guidance & materials, 4 hours per day Monday through Friday, up to 10 participants included, +$100/extra seat up to 20 seats max). Support fee: $0 USD (100% included). Tier rates: T1: $1,000 | T2: $750 | T3: $500 | T4: $500 | T5: $250 | T6: Custom.
@@ -121,7 +121,7 @@
 | 97  | Serbia                           | Tier 2 - Developing      | 75%   |
 | 98  | Kosovo                           | Tier 2 - Developing      | 75%   |
 | 99  | Moldova                          | Tier 2 - Developing      | 75%   |
-| 100 | Ukraine                          | Tier 2 - Developing      | 75%   |
+| 100 | Ukraine                          | Tier 6 - Subsidized Relief | Custom |
 | 101 | Belarus                          | Tier 2 - Developing      | 75%   |
 | 102 | Georgia                          | Tier 2 - Developing      | 75%   |
 | 103 | Armenia                          | Tier 2 - Developing      | 75%   |

@@ -9,7 +9,7 @@ Consolidated executive overview, training time limits, and compressed deliverabl
 Clients have the flexibility to either enroll in comprehensive multi-week transformation programs or pick and choose individual services tailored to specific technical needs:
 
 1. **Individual Service Picks (Pick & Choose)**:
-   - **Personal (Up to 20 Seats)**: **$100 USD per service** (strictly 1 person), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
+   - **Personal (Up to 20 Seats)**: **$100 USD per service** (1 seat included, +$100/extra seat scaled by parity, max 20 seats), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
    - **Business / Organizations**: **$100 USD base per service** (1 seat included, +$100 per extra seat up to 10 seats maximum), includes **5 days of live training + 5 days of dedicated support** (10 days total coverage).
    - **Purchasing Power Parity (PPP)**: Available across all 6 parity tiers for every individual service pick:
      - **Tiers 1-6 (Personal)**: $100 / $75 / $50 / $50 / $25 / Custom USD.
