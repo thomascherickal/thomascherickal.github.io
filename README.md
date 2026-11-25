@@ -419,26 +419,26 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 
 ## Latest Pre-Commit Report Summary
 
-> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`METRICS.md`](METRICS.md)** | Recorded on: `2026-11-25 16:10:58 UTC`
+> **Synchronized from [`LAST-COMMIT-REPORT.md`](LAST-COMMIT-REPORT.md) and [`METRICS.md`](METRICS.md)** | Recorded on: `2026-11-25 16:21:09 UTC`
 
 ### Commit Overview
 
 | Property | Value |
 | :--- | :--- |
-| **Parent Commit (Full)** | `27cbbfeb652b3c76bc1d5f231f26145b7d88bda6` |
-| **Parent Commit (Short)** | `27cbbfe` |
+| **Parent Commit (Full)** | `9987a77be74ec2a0afdf1f1332e7f7f8713abb21` |
+| **Parent Commit (Short)** | `9987a77` |
 | **Branch** | `main` |
-| **Parent Subject** | Add 50 HTML UI tests, 10-seat service pick calculator, Ukraine Tier 6, and Zero Charge Training Materials |
+| **Parent Subject** | Add autonomous self-healing pre-commit loop with terminal & LAST-COMMIT-REPORT.md error-fix tables |
 | **Parent Author** | Thomas Cherickal `<thomascherickal@gmail.com>` |
-| **Parent Author Date** | `2026-11-25T21:28:54+05:30` |
-| **Commits in Repo (before this commit)** | 573 |
+| **Parent Author Date** | `2026-11-25T21:40:34+05:30` |
+| **Commits in Repo (before this commit)** | 574 |
 
 ### Quality Gate & Verification Summary
 
 | Quality Gate / Test Dimension | Total Scope | Passed | Failed | Status | Runtime |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| **Python Unit Test Suite** | 210 tests across 28 modules | 210 | 0 | PASSED | 14.94s |
-| **JavaScript Unit Test Suite** | 200 tests across 18 sections | 200 | 0 | PASSED | 0.07s |
+| **Python Unit Test Suite** | 211 tests across 28 modules | 211 | 0 | PASSED | 17.01s |
+| **JavaScript Unit Test Suite** | 200 tests across 18 sections | 200 | 0 | PASSED | 0.04s |
 | **NLP-Fuzzy-Expert Sync Engine** | 91 target documents | 91 | 0 | PASSED | 1.50s |
 | **SSOT Data Immutability Guard** | 12 data files SHA-256 hash | 12 | 0 | PASSED | 0.001s |
 | **Internal Link & Anchor Integrity** | 10350 links across 91 HTML files | 10350 | 0 | PASSED | 0.33s |
@@ -450,23 +450,23 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 
 | Language | Tracked Files | Total Statements / Lines | Covered | Missed | Coverage % | Status |
 |:---|---:|---:|---:|---:|---:|:---|
-| Python (`nlp-fuzzy-expert/`, `python/`) | 0 | 0 | 0 | 0 | **100.00%** | PASS |
+| Python (`nlp-fuzzy-expert/`, `python/`) | 32 | 5,825 | 5,494 | 331 | **94.32%** | PASS |
 | JavaScript (Root scripts) | 3 | 1,270 | 1,270 | 0 | **100.00%** | PASS |
-| **Repository Combined Total** | **3** | **1,270** | **1,270** | **0** | **100.00%** | **PASS** |
+| **Repository Combined Total** | **35** | **7,095** | **6,764** | **331** | **95.33%** | **PASS** |
 
 ### Repository Code & Engineering Metrics Summary (`METRICS.md`)
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **573** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **971,870** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **954,819** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,324** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,727** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **57.79 MB (60,595,868 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **793,162 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **573** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-25** | Subject: "Add 50 HTML UI tests, 10-seat service pick calculator, Ukraine Tier 6, and Zero Charge Training Materials" |
+| **Total Lines of Source Code & Content** | **972,277** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **955,169** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,331** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **11,777** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **57.81 MB (60,617,224 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **794,339 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **574** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-25** | Subject: "Add autonomous self-healing pre-commit loop with terminal & LAST-COMMIT-REPORT.md error-fix tables" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ### Architecture & File Category Breakdown (`METRICS.md`)
@@ -476,9 +476,9 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 | **HTML Documents** | 91 | 92,166 | 7.42 MB (7,779,560 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 12,169 | 284.47 KB (291,296 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 33 | 11,553 | 3.70 MB (3,883,101 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 64 | 16,822 | 757.86 KB (776,050 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 161 | 41,748 | 4.81 MB (5,040,849 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Python Tooling** | 64 | 17,111 | 770.06 KB (788,540 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 161 | 41,866 | 4.82 MB (5,049,621 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 115 | 797,345 | 36.52 MB (38,290,656 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 37 | 0 | 4.06 MB (4,259,892 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 12 | 0 | 79.79 KB (81,710 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 12 | 0 | 79.89 KB (81,804 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |

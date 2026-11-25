@@ -89,12 +89,13 @@ def run_html_ui_tests(quiet=False):
     status = "PASSED" if result.wasSuccessful() else "FAILED"
 
     # Discover page count for reporting
-    from tests.test_html_ui import discover_html_pages
+    from tests.test_html_ui import HTML_PARSER, discover_html_pages
     pages_scanned = len(discover_html_pages())
+    framework_label = f"BeautifulSoup4 + {HTML_PARSER} (unittest)"
 
     cache_payload = {
         "timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
-        "framework": "BeautifulSoup4 + lxml (unittest)",
+        "framework": framework_label,
         "pages_scanned": pages_scanned,
         "total": total,
         "passed": passed,
@@ -110,7 +111,7 @@ def run_html_ui_tests(quiet=False):
         print("\n" + "=" * 80)
         print("            HTML UI VERIFICATION SUITE SUMMARY (test_html_ui.py)")
         print("=" * 80)
-        print(f"Framework:     BeautifulSoup4 + lxml (unittest)")
+        print(f"Framework:     {framework_label}")
         print(f"Pages Scanned: {pages_scanned} HTML pages")
         print(f"Tests Run:     {total} | Passed: {passed} | Failed: {failed} | Time: {elapsed}s")
         print(f"Status:        {status}")

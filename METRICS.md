@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-25 16:11:00 UTC` | Branch: `main` | Head Commit: `27cbbfe`
+> **Automated Status Report** | Generated on `2026-11-25 16:21:11 UTC` | Branch: `main` | Head Commit: `9987a77`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **573** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **971,870** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **954,819** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,324** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,727** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **57.79 MB (60,595,862 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **793,174 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **573** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-25** | Subject: "Add 50 HTML UI tests, 10-seat service pick calculator, Ukraine Tier 6, and Zero Charge Training Materials" |
+| **Total Lines of Source Code & Content** | **972,253** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **955,158** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,326** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **11,769** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **57.81 MB (60,615,340 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **794,094 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **574** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-25** | Subject: "Add autonomous self-healing pre-commit loop with terminal & LAST-COMMIT-REPORT.md error-fix tables" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -30,12 +30,12 @@
 | **HTML Documents** | 91 | 92,166 | 7.42 MB (7,779,560 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 12,169 | 284.47 KB (291,296 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 33 | 11,553 | 3.70 MB (3,883,101 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 64 | 16,822 | 757.86 KB (776,050 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 161 | 41,748 | 4.81 MB (5,040,843 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Python Tooling** | 64 | 17,111 | 770.06 KB (788,540 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 161 | 41,842 | 4.81 MB (5,047,737 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 115 | 797,345 | 36.52 MB (38,290,656 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 37 | 0 | 4.06 MB (4,259,892 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 12 | 0 | 79.79 KB (81,710 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 12 | 0 | 79.89 KB (81,804 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -45,8 +45,8 @@
 | :--- | :--- | :--- | :--- | :--- |
 | `.json` | 115 | 797,345 | 36.52 MB (38,290,656 bytes) | 20.1% |
 | `.html` | 91 | 92,166 | 7.42 MB (7,779,560 bytes) | 15.9% |
-| `.md` | 161 | 41,748 | 4.81 MB (5,040,843 bytes) | 28.1% |
-| `.py` | 64 | 16,822 | 757.86 KB (776,050 bytes) | 11.2% |
+| `.md` | 161 | 41,842 | 4.81 MB (5,047,737 bytes) | 28.1% |
+| `.py` | 64 | 17,111 | 770.06 KB (788,540 bytes) | 11.2% |
 | `.css` | 16 | 12,169 | 284.47 KB (291,296 bytes) | 2.8% |
 | `.js` | 33 | 11,553 | 3.70 MB (3,883,101 bytes) | 5.8% |
 | `.svg` | 44 | 67 | 188.24 KB (192,754 bytes) | 7.7% |
@@ -56,7 +56,7 @@
 | `.jpeg` | 1 | 0 | 152.39 KB (156,047 bytes) | 0.2% |
 | `.txt` | 2 | 0 | 35.68 KB (36,540 bytes) | 0.3% |
 | `.docx` | 2 | 0 | 28.83 KB (29,519 bytes) | 0.3% |
-| `[no extension]` | 6 | 0 | 8.11 KB (8,305 bytes) | 1.0% |
+| `[no extension]` | 6 | 0 | 8.20 KB (8,399 bytes) | 1.0% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
 | `.xml` | 1 | 0 | 6.65 KB (6,808 bytes) | 0.2% |
 | `.webmanifest` | 1 | 0 | 538 bytes | 0.2% |
@@ -107,7 +107,7 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **524 functions** across tooling scripts | Modular execution units |
+| **Python Function Definitions** | **532 functions** across tooling scripts | Modular execution units |
 | **Python Class Definitions** | **43 classes** | Structured state containers |
 
 ---
@@ -130,8 +130,8 @@
 
 - **Framework**: `BeautifulSoup4 + lxml (unittest)`
 - **Pages Scanned**: **85 HTML pages**
-- **Summary**: **50 / 50 PASSED** (`0` failures, `4.63s`, Status: **PASSED**)
-- **Last Verified**: `2026-11-25 16:10:57 UTC`
+- **Summary**: **50 / 50 PASSED** (`0` failures, `3.26s`, Status: **PASSED**)
+- **Last Verified**: `2026-11-25 16:21:08 UTC`
 
 | Test Category | Tests | Passed | Failed | Pass Rate | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -152,6 +152,28 @@
 1. **Local Build Pipeline**: Invoked whenever `python3 python/build_components.py` or `python3 python/generate_metrics.py` is executed.
 2. **Git Pre-Commit Hook**: Automated execution during commit creation.
 3. **Git Pre-Push Hook**: Automated recalculation before every `git push` to origin.
+
+---
+
+## 10. Autonomous Verification & Self-Healing Pre-Commit Loop
+
+Every `git commit` executes the optimized autonomous verification and self-healing pipeline (`python/hooks/pre-commit` installed to `.git/hooks/pre-commit`, powered by [`python/autonomous_commit_healer.py`](python/autonomous_commit_healer.py)):
+
+- **No-Change Fast-Path (`~0.16s`)**: Computes a SHA-256 repository fingerprint (`HEAD` + changed/staged non-volatile files) and skips redundant full re-execution when the repo matches the last verified green state (unless `--force` is passed).
+- **Parallel Verification & Zero Duplicate Runs**: Runs Python unit tests (including all 50 BeautifulSoup4 HTML UI tests and `--with-coverage`) in parallel with `node pricing-tests.js`, and synthesizes `tests/.html_ui_test_reports_cache.json` directly from `.test_reports_cache.json`.
+- **Autonomous Multi-Pass Self-Healing**: Parses every failure across Python, JavaScript, and HTML UI, runs deterministic sync utilities, invokes `agy --print` to fix remaining errors, enforces strict `data/*.json` SHA-256 immutability, and loops up to `--max-passes 5` until all suites pass.
+- **Human-Readable Action Log & Tabular Reports**: Prints numbered `[Action N]` progress lines and an ASCII Error & Fix Summary Table in the terminal, and records both in `LAST-COMMIT-REPORT.md`.
+
+```bash
+# Standard commit (triggers fast-path / parallel verification & self-healing hook)
+git add -A && git commit -m "Your commit message"
+
+# Direct no-change fast-path verification check
+python3 python/autonomous_commit_healer.py
+
+# Force full parallel verification, commit, and push once all suites pass
+python3 python/autonomous_commit_healer.py --force --commit -m "Your commit message" --push
+```
 
 ---
 *Metrics engine authored by Thomas Cherickal - Generative AI Consultant and The Digital Futurist.*

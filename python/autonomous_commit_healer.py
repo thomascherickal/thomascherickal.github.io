@@ -1,22 +1,27 @@
 #!/usr/bin/env python3
 """
-autonomous_commit_healer.py - Autonomous Self-Healing Pre-Commit & Push Loop.
+autonomous_commit_healer.py - Fast, Autonomous Self-Healing Pre-Commit & Push Loop.
 
-Runs all three verification suites (Python unit tests, JavaScript pricing tests,
-and BeautifulSoup4 HTML UI tests) in a loop. Whenever any test fails:
-1. Parses every failing test error across all suites.
-2. Applies deterministic sync fixes (schemas, Markdown mirrors, stale reports)
-   and invokes `agy --print` to autonomously fix every remaining error in a pass.
-3. Enforces strict SHA-256 immutability on `data/*.json`.
-4. Loops until all tests pass (or max passes reached).
-5. Prints a tabular report of all errors and how they were fixed to the terminal
-   and persists `tests/.auto_heal_report_cache.json` for `LAST-COMMIT-REPORT.md`.
-6. Optionally commits and pushes automatically once all tests pass (`--push`).
+Optimizations & Features:
+1. No-Change Fast-Path (< 0.2s): Computes a deterministic repository fingerprint
+   (HEAD + working/staged file content hashes, ignoring volatile report/cache files).
+   If nothing has changed since the last verified passing run, skips redundant test
+   re-execution unless --force is specified.
+2. Parallel Execution & Zero Duplicate Runs: Runs Python unit tests (which include
+   tests/test_html_ui.py, optionally instrumented with coverage via --with-coverage)
+   and JavaScript pricing tests in parallel, then synthesizes
+   tests/.html_ui_test_reports_cache.json directly from .test_reports_cache.json
+   instead of re-parsing all 85+ HTML files a second time.
+3. Human-Readable Action Summary: Prints a clear, numbered log of every action taken
+   during verification and self-healing, and saves it alongside the tabular error/fix
+   history in tests/.auto_heal_report_cache.json for LAST-COMMIT-REPORT.md.
+4. Strict data/*.json SHA-256 immutability guard across all healing passes.
 
 Strict Repo Compliance: Zero emojis, zero em-dashes.
 """
 
 import argparse
+import concurrent.futures
 import hashlib
 import json
 import os
@@ -24,12 +29,25 @@ import re
 import shutil
 import subprocess
 import sys
+import time
 from datetime import datetime, timezone
 
 REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TESTS_DIR = os.path.join(REPO_DIR, "tests")
 DATA_DIR = os.path.join(REPO_DIR, "data")
 HEAL_CACHE_PATH = os.path.join(TESTS_DIR, ".auto_heal_report_cache.json")
+PY_CACHE_PATH = os.path.join(TESTS_DIR, ".test_reports_cache.json")
+HTML_CACHE_PATH = os.path.join(TESTS_DIR, ".html_ui_test_reports_cache.json")
+
+IGNORED_FINGERPRINT_PATHS = {
+    "METRICS.md",
+    "LAST-COMMIT-REPORT.md",
+    "tests/.test_reports_cache.json",
+    "tests/.js_test_reports_cache.json",
+    "tests/.html_ui_test_reports_cache.json",
+    "tests/.auto_heal_report_cache.json",
+    ".coverage",
+}
 
 
 def compute_data_hashes(data_dir=DATA_DIR):
@@ -53,16 +71,59 @@ def verify_data_immutable(initial_hashes, data_dir=DATA_DIR):
         )
 
 
+def compute_repo_fingerprint(repo_dir=REPO_DIR):
+    """Computes a fast SHA-256 fingerprint of HEAD + all dirty/staged non-volatile files."""
+    h = hashlib.sha256()
+    head = subprocess.run(
+        ["git", "rev-parse", "HEAD"], cwd=repo_dir, capture_output=True, text=True
+    )
+    h.update((head.stdout.strip() or "NO_HEAD").encode("utf-8"))
+
+    status = subprocess.run(
+        ["git", "status", "--porcelain"], cwd=repo_dir, capture_output=True, text=True
+    )
+    dirty_files = []
+    for line in sorted(status.stdout.splitlines()):
+        if not line.strip():
+            continue
+        rel = line[3:].strip()
+        if " -> " in rel:
+            rel = rel.split(" -> ", 1)[1].strip()
+        if rel in IGNORED_FINGERPRINT_PATHS or rel.startswith("failed_"):
+            continue
+        dirty_files.append((line[:2], rel))
+        h.update(f"{line[:2]}:{rel}\n".encode("utf-8"))
+        full_path = os.path.join(repo_dir, rel)
+        if os.path.isfile(full_path):
+            try:
+                with open(full_path, "rb") as fp:
+                    h.update(hashlib.sha256(fp.read()).digest())
+            except OSError:
+                pass
+    return h.hexdigest(), len(dirty_files)
+
+
+def load_heal_cache(cache_path=HEAL_CACHE_PATH):
+    """Loads existing heal cache if present and valid JSON."""
+    if not os.path.exists(cache_path):
+        return None
+    try:
+        with open(cache_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None
+
+
 def parse_python_failures(output):
-    """Extracts (test_name, summary) pairs from Python unittest output."""
+    """Extracts failing test entries from Python unittest output."""
     failures = []
     for m in re.finditer(r"^(?:FAIL|ERROR):\s+([^\s]+)\s+\(([^)]+)\)", output, re.MULTILINE):
         test_id = f"{m.group(2)}.{m.group(1)}"
-        # Grab first AssertionError / Exception line following this match
+        suite = "HTML UI" if "test_html_ui" in test_id else "Python"
         tail = output[m.end():m.end() + 1200]
         err_m = re.search(r"(?:AssertionError|Error|Exception):\s*(.+)", tail)
         msg = err_m.group(1).strip()[:120] if err_m else "Test assertion failed"
-        failures.append({"suite": "Python", "test": test_id, "error": msg})
+        failures.append({"suite": suite, "test": test_id, "error": msg})
     return failures
 
 
@@ -81,31 +142,97 @@ def parse_js_failures(output):
     return failures
 
 
-def run_all_suites(repo_dir=REPO_DIR):
-    """Runs Python, JavaScript, and HTML UI test suites and returns (all_passed, failures_list, raw_logs)."""
+def sync_html_cache_from_python_cache(repo_dir=REPO_DIR):
+    """Synthesizes .html_ui_test_reports_cache.json from .test_reports_cache.json without re-running HTML tests."""
+    py_cache_file = os.path.join(repo_dir, "tests", ".test_reports_cache.json")
+    html_cache_file = os.path.join(repo_dir, "tests", ".html_ui_test_reports_cache.json")
+    if not os.path.exists(py_cache_file):
+        return False, 0
+
+    try:
+        with open(py_cache_file, "r", encoding="utf-8") as f:
+            py_data = json.load(f)
+        html_mod = py_data.get("modules", {}).get("test_html_ui")
+        if not html_mod or not html_mod.get("tests"):
+            return False, 0
+
+        tests = html_mod["tests"]
+        total = len(tests)
+        passed = sum(1 for t in tests if t.get("status") == "PASSED")
+        failed = total - passed
+        elapsed = round(sum(float(t.get("time_taken", 0)) for t in tests), 2)
+
+        pages_scanned = 85
+        try:
+            if repo_dir not in sys.path:
+                sys.path.insert(0, repo_dir)
+            from tests.test_html_ui import discover_html_pages
+            pages_scanned = len(discover_html_pages())
+        except Exception:
+            pass
+
+        payload = {
+            "timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
+            "framework": "BeautifulSoup4 + lxml (unittest)",
+            "pages_scanned": pages_scanned,
+            "total": total,
+            "passed": passed,
+            "failed": failed,
+            "elapsed_seconds": elapsed,
+            "status": "PASSED" if failed == 0 else "FAILED",
+            "tests": tests,
+        }
+        with open(html_cache_file, "w", encoding="utf-8") as f:
+            json.dump(payload, f, indent=2)
+        return True, total
+    except Exception:
+        return False, 0
+
+
+def _coverage_available():
+    res = subprocess.run([sys.executable, "-c", "import coverage"], capture_output=True)
+    return res.returncode == 0
+
+
+def run_all_suites(repo_dir=REPO_DIR, with_coverage=False):
+    """Runs Python (+ HTML UI) and JavaScript suites in parallel to minimize wall-clock time."""
     env = os.environ.copy()
     env["ANTIGRAVITY_IN_TEST"] = "1"
+
+    use_cov = with_coverage and _coverage_available()
+    if use_cov:
+        py_cmd = [
+            sys.executable, "-m", "coverage", "run",
+            f"--source={os.path.join(repo_dir, 'nlp-fuzzy-expert')},{os.path.join(repo_dir, 'python')}",
+            "python/run_tests.py",
+        ]
+    else:
+        py_cmd = [sys.executable, "python/run_tests.py"]
+
+    js_cmd = ["node", "pricing-tests.js"]
+
+    def _run(cmd):
+        t0 = time.time()
+        res = subprocess.run(cmd, cwd=repo_dir, capture_output=True, text=True, env=env)
+        return res, round(time.time() - t0, 2)
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
+        f_py = pool.submit(_run, py_cmd)
+        f_js = pool.submit(_run, js_cmd)
+        py_res, py_sec = f_py.result()
+        js_res, js_sec = f_js.result()
+
     failures = []
     logs = []
 
-    # 1. Python Unit Tests (includes test_html_ui.py)
-    py_res = subprocess.run(
-        [sys.executable, "python/run_tests.py"],
-        cwd=repo_dir, capture_output=True, text=True, env=env
-    )
     py_out = py_res.stdout + "\n" + py_res.stderr
     if py_res.returncode != 0:
         py_fails = parse_python_failures(py_out)
         if not py_fails:
             py_fails = [{"suite": "Python", "test": "python/run_tests.py", "error": f"Exited with code {py_res.returncode}"}]
         failures.extend(py_fails)
-        logs.append("=== PYTHON FAILURES ===\n" + py_out[-3000:])
+        logs.append("=== PYTHON / HTML UI FAILURES ===\n" + py_out[-3000:])
 
-    # 2. JavaScript Unit Tests
-    js_res = subprocess.run(
-        ["node", "pricing-tests.js"],
-        cwd=repo_dir, capture_output=True, text=True, env=env
-    )
     js_out = js_res.stdout + "\n" + js_res.stderr
     if js_res.returncode != 0:
         js_fails = parse_js_failures(js_out)
@@ -114,26 +241,27 @@ def run_all_suites(repo_dir=REPO_DIR):
         failures.extend(js_fails)
         logs.append("=== JS FAILURES ===\n" + js_out[-2000:])
 
-    # 3. Dedicated HTML UI Verification Suite (refreshes .html_ui_test_reports_cache.json)
-    html_res = subprocess.run(
-        [sys.executable, "python/run_html_tests.py"],
-        cwd=repo_dir, capture_output=True, text=True, env=env
-    )
-    html_out = html_res.stdout + "\n" + html_res.stderr
-    if html_res.returncode != 0:
-        html_fails = parse_python_failures(html_out)
-        for hf in html_fails:
-            hf["suite"] = "HTML UI"
-        if not html_fails:
-            html_fails = [{"suite": "HTML UI", "test": "python/run_html_tests.py", "error": f"Exited with code {html_res.returncode}"}]
-        failures.extend(html_fails)
-        logs.append("=== HTML UI FAILURES ===\n" + html_out[-2000:])
+    # Sync HTML UI cache directly from Python test run (eliminates duplicate 5s HTML scan)
+    synced, html_count = sync_html_cache_from_python_cache(repo_dir)
+    if not synced and os.path.exists(os.path.join(repo_dir, "python", "run_html_tests.py")):
+        html_res, _ = _run([sys.executable, "python/run_html_tests.py"])
+        if html_res.returncode != 0:
+            html_fails = parse_python_failures(html_res.stdout + "\n" + html_res.stderr)
+            for hf in html_fails:
+                hf["suite"] = "HTML UI"
+            failures.extend(html_fails)
 
-    return (len(failures) == 0), failures, "\n\n".join(logs)
+    meta = {
+        "py_seconds": py_sec,
+        "js_seconds": js_sec,
+        "with_coverage": use_cov,
+        "html_tests_synced": html_count,
+    }
+    return (len(failures) == 0), failures, "\n\n".join(logs), meta
 
 
 def apply_deterministic_fixes(repo_dir=REPO_DIR):
-    """Applies safe deterministic sync fixes (schemas, MD mirrors, stale reports)."""
+    """Applies safe deterministic sync fixes (schemas, MD mirrors, stale failure reports)."""
     actions = []
     for script in ("python/sync_schemas.py", "python/md_html_sync.py"):
         if os.path.exists(os.path.join(repo_dir, script)):
@@ -200,14 +328,18 @@ def format_terminal_table(history):
     return "\n".join(lines)
 
 
-def save_heal_cache(history, passed, total_passes, cache_path=HEAL_CACHE_PATH):
-    """Persists healing history to tests/.auto_heal_report_cache.json for LAST-COMMIT-REPORT.md."""
+def save_heal_cache(history, passed, total_passes, action_log=None, repo_fingerprint="", elapsed_seconds=0.0, fast_path=False, cache_path=HEAL_CACHE_PATH):
+    """Persists healing history, action log, and repo fingerprint to tests/.auto_heal_report_cache.json."""
     payload = {
         "timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
         "passed": passed,
         "total_passes": total_passes,
+        "fast_path_used": fast_path,
+        "elapsed_seconds": round(elapsed_seconds, 2),
+        "repo_fingerprint": repo_fingerprint,
         "errors_fixed": sum(1 for h in history if h.get("status") == "FIXED"),
         "errors_remaining": sum(1 for h in history if h.get("status") != "FIXED"),
+        "action_log": action_log or [],
         "history": history,
     }
     os.makedirs(os.path.dirname(cache_path), exist_ok=True)
@@ -216,10 +348,70 @@ def save_heal_cache(history, passed, total_passes, cache_path=HEAL_CACHE_PATH):
     return payload
 
 
-def run_healing_loop(max_passes=5, repo_dir=REPO_DIR, cache_path=HEAL_CACHE_PATH, runner_fn=None, fixer_fn=None):
-    """Executes the self-healing test loop until all suites pass or max_passes is reached."""
+def run_healing_loop(
+    max_passes=5,
+    repo_dir=REPO_DIR,
+    cache_path=HEAL_CACHE_PATH,
+    force=False,
+    with_coverage=False,
+    runner_fn=None,
+    fixer_fn=None,
+):
+    """Executes the optimized verification and self-healing loop with human-readable action logging."""
+    t_start = time.time()
+    action_log = []
+
+    def log_action(msg):
+        step_str = f"[Action {len(action_log) + 1}] {msg}"
+        action_log.append(msg)
+        print(step_str, flush=True)
+
+    # Step 1: Fast-path fingerprint check when no custom runner is injected
+    fingerprint = ""
+    dirty_count = 0
+    if runner_fn is None:
+        fingerprint, dirty_count = compute_repo_fingerprint(repo_dir)
+        log_action(
+            f"Scanned repository state: {dirty_count} changed non-volatile file(s) "
+            f"(fingerprint {fingerprint[:12]})."
+        )
+        prev = load_heal_cache(cache_path)
+        if (
+            not force
+            and prev
+            and prev.get("passed") is True
+            and prev.get("repo_fingerprint") == fingerprint
+        ):
+            elapsed = round(time.time() - t_start, 2)
+            log_action(
+                f"Fast-path cache hit: repository matches last verified passing state. "
+                f"Skipped redundant full test re-execution ({elapsed}s)."
+            )
+            save_heal_cache(
+                [], True, 0,
+                action_log=action_log,
+                repo_fingerprint=fingerprint,
+                elapsed_seconds=elapsed,
+                fast_path=True,
+                cache_path=cache_path,
+            )
+            print("\n" + format_terminal_table([]) + "\n")
+            return True, []
+
+    # Step 2: Baseline data/*.json SHA-256 hashes
     initial_hashes = compute_data_hashes(os.path.join(repo_dir, "data"))
-    runner = runner_fn or (lambda: run_all_suites(repo_dir))
+    log_action(f"Computed SHA-256 immutability baseline for {len(initial_hashes)} file(s) in data/.")
+
+    if runner_fn is not None:
+        def _wrapped_runner():
+            res = runner_fn()
+            if len(res) == 4:
+                return res
+            return res[0], res[1], res[2], {}
+        runner = _wrapped_runner
+    else:
+        runner = lambda: run_all_suites(repo_dir, with_coverage=with_coverage)
+
     fixer = fixer_fn or (lambda fails, logs: invoke_agy_fix(fails, logs, repo_dir))
 
     history = []
@@ -228,24 +420,40 @@ def run_healing_loop(max_passes=5, repo_dir=REPO_DIR, cache_path=HEAL_CACHE_PATH
 
     for pass_num in range(1, max_passes + 1):
         passes_run = pass_num
-        all_passed, failures, raw_logs = runner()
+        log_action(f"Pass {pass_num}/{max_passes}: Executing Python (+ HTML UI) and JavaScript suites in parallel...")
+        all_passed, failures, raw_logs, meta = runner()
+
         if all_passed:
-            # Mark any previously open items as FIXED
             for h in history:
                 if h["status"] == "HEALING":
                     h["status"] = "FIXED"
+            timing_note = ""
+            if meta:
+                timing_note = (
+                    f" (Python+HTML: {meta.get('py_seconds', 0)}s, "
+                    f"JS: {meta.get('js_seconds', 0)}s, "
+                    f"HTML cache synced: {meta.get('html_tests_synced', 0)} tests)"
+                )
+            log_action(f"Pass {pass_num}: All verification suites PASSED{timing_note}.")
             break
 
-        # Mark previously healing items that are no longer failing as FIXED
         current_keys = {(f["suite"], f["test"]) for f in failures}
         for h in history:
             if h["status"] == "HEALING" and (h["suite"], h["test"]) not in current_keys:
                 h["status"] = "FIXED"
 
-        # Apply deterministic sync fixes + autonomous agy fix
+        suites_hit = sorted({f["suite"] for f in failures})
+        log_action(f"Pass {pass_num}: Detected {len(failures)} failure(s) in {', '.join(suites_hit)}.")
+
         det_actions = apply_deterministic_fixes(repo_dir)
+        if det_actions:
+            log_action(f"Pass {pass_num}: Ran deterministic sync utilities ({', '.join(det_actions)}).")
+
         ok, fix_desc = fixer(failures, raw_logs)
+        log_action(f"Pass {pass_num}: Autonomous healing step completed -> {fix_desc}.")
+
         verify_data_immutable(initial_hashes, os.path.join(repo_dir, "data"))
+        log_action(f"Pass {pass_num}: Verified data/*.json SHA-256 immutability (0 mutations).")
 
         full_fix = fix_desc if not det_actions else f"{fix_desc}; synced {', '.join(det_actions)}"
         for f in failures:
@@ -262,21 +470,41 @@ def run_healing_loop(max_passes=5, repo_dir=REPO_DIR, cache_path=HEAL_CACHE_PATH
         for h in history:
             if h["status"] == "HEALING":
                 h["status"] = "UNRESOLVED"
+        log_action(f"Verification ended with unresolved failures after {passes_run} pass(es).")
 
-    save_heal_cache(history, all_passed, passes_run, cache_path=cache_path)
+    # Refresh post-healing fingerprint if healing modified files
+    if runner_fn is None:
+        fingerprint, _ = compute_repo_fingerprint(repo_dir)
+
+    elapsed = round(time.time() - t_start, 2)
+    log_action(f"Completed verification loop in {elapsed}s; saved report cache for LAST-COMMIT-REPORT.md.")
+    save_heal_cache(
+        history, all_passed, passes_run,
+        action_log=action_log,
+        repo_fingerprint=fingerprint,
+        elapsed_seconds=elapsed,
+        fast_path=False,
+        cache_path=cache_path,
+    )
     print("\n" + format_terminal_table(history) + "\n")
     return all_passed, history
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Autonomous Self-Healing Commit & Push Loop")
+    parser = argparse.ArgumentParser(description="Fast Autonomous Self-Healing Commit & Push Loop")
     parser.add_argument("--max-passes", type=int, default=5, help="Maximum self-healing passes")
+    parser.add_argument("--force", action="store_true", help="Bypass no-change fast-path cache and run full suites")
+    parser.add_argument("--with-coverage", action="store_true", help="Run Python suite under coverage instrumentation")
     parser.add_argument("--commit", action="store_true", help="Stage and commit after all tests pass")
     parser.add_argument("-m", "--message", default="chore: autonomous self-healed commit", help="Commit message")
     parser.add_argument("--push", action="store_true", help="Push to remote after all tests pass")
     args = parser.parse_args()
 
-    passed, _ = run_healing_loop(max_passes=args.max_passes)
+    passed, _ = run_healing_loop(
+        max_passes=args.max_passes,
+        force=args.force,
+        with_coverage=args.with_coverage,
+    )
     if not passed:
         print("[auto-healer] ERROR: Tests still failing after maximum healing passes.")
         return 1

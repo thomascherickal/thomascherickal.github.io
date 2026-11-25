@@ -78,9 +78,36 @@ class TestAutonomousCommitHealer(unittest.TestCase):
             self.assertEqual(len(history), 1)
             self.assertEqual(history[0]["status"], "FIXED")
             self.assertTrue(os.path.exists(cache_path))
-            data = json.load(open(cache_path, encoding="utf-8"))
+            with open(cache_path, encoding="utf-8") as cf:
+                data = json.load(cf)
             self.assertEqual(data["errors_fixed"], 1)
             self.assertEqual(data["errors_remaining"], 0)
+            self.assertGreaterEqual(len(data["action_log"]), 4)
+
+    def test_no_change_fast_path_skips_redundant_execution(self):
+        """Verifies clean repo matching cached fingerprint takes instant fast-path."""
+        with tempfile.TemporaryDirectory() as tmp:
+            cache_path = os.path.join(tmp, ".auto_heal_report_cache.json")
+            fp, _ = healer.compute_repo_fingerprint(REPO_DIR)
+            healer.save_heal_cache(
+                [], True, 1,
+                action_log=["Prior green pass"],
+                repo_fingerprint=fp,
+                elapsed_seconds=1.0,
+                cache_path=cache_path,
+            )
+            passed, history = healer.run_healing_loop(
+                max_passes=3,
+                repo_dir=REPO_DIR,
+                cache_path=cache_path,
+                force=False,
+            )
+            self.assertTrue(passed)
+            self.assertEqual(history, [])
+            with open(cache_path, encoding="utf-8") as cf:
+                data = json.load(cf)
+            self.assertTrue(data["fast_path_used"])
+            self.assertTrue(any("Fast-path cache hit" in a for a in data["action_log"]))
 
     def test_format_terminal_table_renders_clean_and_healed_rows(self):
         """Verifies ASCII table renders cleanly both with 0 errors and with healed errors."""

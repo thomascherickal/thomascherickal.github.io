@@ -21,7 +21,9 @@ import os
 import re
 import unittest
 from collections import Counter
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, builder_registry
+
+HTML_PARSER = "lxml" if builder_registry.lookup("lxml") is not None else "html.parser"
 
 REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -84,7 +86,7 @@ class TestHTMLUISuite(unittest.TestCase):
             with open(path, encoding="utf-8") as f:
                 raw = f.read()
             cls.raw_html[rel] = raw
-            cls.soups[rel] = BeautifulSoup(raw, "lxml")
+            cls.soups[rel] = BeautifulSoup(raw, HTML_PARSER)
 
     # --- 1. Document Shell, Charset, SEO & Meta UI ---
 
@@ -542,7 +544,7 @@ class TestHTMLUISuite(unittest.TestCase):
         failures = []
         token_re = re.compile(r"(\{\{[^}]+\}\}|\{%[^%]+%\}|\$00\s+upfront)")
         for rel, raw in self.raw_html.items():
-            clone = BeautifulSoup(raw, "lxml")
+            clone = BeautifulSoup(raw, HTML_PARSER)
             for code_el in clone.find_all(["pre", "code", "script", "style"]):
                 code_el.decompose()
             visible = clone.get_text(" ", strip=True)
@@ -605,7 +607,7 @@ class TestHTMLUISuite(unittest.TestCase):
         self.assertTrue(os.path.exists(err_path), "Missing 404.html error recovery page")
         with open(err_path, encoding="utf-8") as f:
             raw = f.read()
-        soup = BeautifulSoup(raw, "lxml")
+        soup = BeautifulSoup(raw, HTML_PARSER)
         self.assertIsNotNone(soup.title, "404.html missing <title>")
         hrefs = [a.get("href", "") for a in soup.find_all("a", href=True)]
         self.assertTrue(
@@ -683,7 +685,7 @@ class TestHTMLUISuite(unittest.TestCase):
     def test_46_error_scenario_malformed_json_ld_is_detected(self):
         """Negative fault-injection: verifies malformed JSON-LD raises JSONDecodeError as expected."""
         bad_html = '<html><head><script type="application/ld+json">{"@context": "https://schema.org", bad}</script></head></html>'
-        soup = BeautifulSoup(bad_html, "lxml")
+        soup = BeautifulSoup(bad_html, HTML_PARSER)
         sc = soup.find("script", attrs={"type": "application/ld+json"})
         with self.assertRaises(json.JSONDecodeError):
             json.loads(sc.string)
@@ -691,7 +693,7 @@ class TestHTMLUISuite(unittest.TestCase):
     def test_47_error_scenario_duplicate_dom_ids_and_missing_h1_detected(self):
         """Negative fault-injection: verifies duplicate DOM IDs and missing <h1> are reliably flagged."""
         bad_html = '<html><body><div id="calc-display-price">$1,000</div><div id="calc-display-price">$500</div></body></html>'
-        soup = BeautifulSoup(bad_html, "lxml")
+        soup = BeautifulSoup(bad_html, HTML_PARSER)
         ids = [el.get("id") for el in soup.find_all(id=True)]
         dups = [k for k, v in Counter(ids).items() if v > 1]
         self.assertEqual(dups, ["calc-display-price"])
@@ -701,14 +703,14 @@ class TestHTMLUISuite(unittest.TestCase):
         """Negative fault-injection: verifies horizontal Mermaid LR diagram and em-dash are caught."""
         bad_html = '<html><body><p>Bad \u2014 dash</p><div class="mermaid">flowchart LR\n  A --> B</div></body></html>'
         self.assertIn("\u2014", bad_html)
-        soup = BeautifulSoup(bad_html, "lxml")
+        soup = BeautifulSoup(bad_html, HTML_PARSER)
         txt = soup.select_one("div.mermaid").get_text()
         self.assertIsNotNone(re.search(r"^\s*(flowchart|graph)\s+(LR|RL)\b", txt, re.M))
 
     def test_49_error_scenario_missing_noopener_and_underlined_button_detected(self):
         """Negative fault-injection: verifies target=_blank without noopener and underlined .btn are caught."""
         bad_html = '<html><body><a class="btn" href="https://ext.test" target="_blank" style="text-decoration: underline;">Go</a></body></html>'
-        soup = BeautifulSoup(bad_html, "lxml")
+        soup = BeautifulSoup(bad_html, HTML_PARSER)
         a = soup.find("a")
         rel_vals = [r.lower() for r in (a.get("rel") or [])]
         self.assertNotIn("noopener", rel_vals)
@@ -717,7 +719,7 @@ class TestHTMLUISuite(unittest.TestCase):
     def test_50_error_scenario_broken_fragment_and_mixed_content_detected(self):
         """Negative fault-injection: verifies broken #anchor fragment and http:// mixed-content image are caught."""
         bad_html = '<html><body><a href="#missing-section">Jump</a><img src="http://insecure.test/a.png" alt="x"></body></html>'
-        soup = BeautifulSoup(bad_html, "lxml")
+        soup = BeautifulSoup(bad_html, HTML_PARSER)
         all_ids = {el.get("id") for el in soup.find_all(id=True) if el.get("id")}
         self.assertNotIn("missing-section", all_ids)
         self.assertTrue(soup.find("img")["src"].startswith("http://"))
