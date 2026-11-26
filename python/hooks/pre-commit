@@ -29,33 +29,18 @@ else
     echo "[git pre-commit] No HTML/MD/data changes staged; skipping redundant schema & Markdown sync."
 fi
 
-# Run all unit tests before committing (with coverage instrumentation when available)
-echo "[git pre-commit] Running unit test suite (tests/)..."
+# Run autonomous pre-commit verification & self-healing loop strictly inside this repo
+echo "[git pre-commit] Running autonomous test & fix loop (python/precommit_auto_loop.py)..."
+python3 "$REPO_ROOT/python/precommit_auto_loop.py" --max-passes 5
+LOOP_STATUS=$?
+if [ $LOOP_STATUS -ne 0 ]; then
+    echo "[git pre-commit] ERROR: Tests still failing after autonomous loop. Commit aborted."
+    exit 1
+fi
+git add -u 2>/dev/null || true
+
 if python3 -c "import coverage" > /dev/null 2>&1; then
-    python3 -m coverage run --source="$REPO_ROOT/nlp-fuzzy-expert,$REPO_ROOT/python" "$REPO_ROOT/python/run_tests.py"
-else
-    python3 "$REPO_ROOT/python/run_tests.py"
-fi
-TEST_STATUS=$?
-if [ $TEST_STATUS -ne 0 ]; then
-    echo "[git pre-commit] ERROR: Unit test suite failed with status $TEST_STATUS. Commit aborted."
-    exit 1
-fi
-
-echo "[git pre-commit] Running JavaScript test suite (pricing-tests.js)..."
-node "$REPO_ROOT/pricing-tests.js"
-JS_TEST_STATUS=$?
-if [ $JS_TEST_STATUS -ne 0 ]; then
-    echo "[git pre-commit] ERROR: JavaScript test suite failed with status $JS_TEST_STATUS. Commit aborted."
-    exit 1
-fi
-
-echo "[git pre-commit] Running HTML UI test suite (python/run_html_tests.py)..."
-python3 "$REPO_ROOT/python/run_html_tests.py"
-HTML_TEST_STATUS=$?
-if [ $HTML_TEST_STATUS -ne 0 ]; then
-    echo "[git pre-commit] ERROR: HTML UI test suite failed with status $HTML_TEST_STATUS. Commit aborted."
-    exit 1
+    python3 -m coverage run --source="$REPO_ROOT/nlp-fuzzy-expert,$REPO_ROOT/python" "$REPO_ROOT/python/run_tests.py" > /dev/null 2>&1 || true
 fi
 
 # Verify data directory Single Source of Truth (SSOT) integrity

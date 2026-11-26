@@ -18,6 +18,7 @@ CORE_PAGES = [
     ("articles.html", "articles.html"),
     ("writing.html", "writing.html"),
     ("pricing.html", "pricing.html"),
+    ("parity-pricing.html", "parity-pricing.html"),
     ("expertise.html", "expertise.html"),
     ("contact.html", "contact.html"),
     ("faqs.html", "faqs.html"),
@@ -26,7 +27,17 @@ CORE_PAGES = [
     ("all-personal-services.html", "all-personal-services.html"),
 ]
 
-# 12 Business Service Pages
+# 6 Pricing Tier Pages
+PRICING_TIERS = [
+    "pricing/pricing-tier-1-usa-china-eu-100.html",
+    "pricing/pricing-tier-2-brazil-malaysia-75.html",
+    "pricing/pricing-tier-3-india-egypt-50.html",
+    "pricing/pricing-tier-4-tech-startups-50.html",
+    "pricing/pricing-tier-5-colleges-non-profits-25.html",
+    "pricing/pricing-tier-6-crisis-affected-10.html",
+]
+
+# 16 Business Service Pages
 BUSINESS_SERVICES = [
     "business-services/business-service-generative-ai-transformation.html",
     "business-services/business-service-local-llms-cost-slashing.html",
@@ -46,7 +57,27 @@ BUSINESS_SERVICES = [
     "business-services/business-service-local-ai-for-sensitive-data.html",
 ]
 
-# 12 claude Guide Pages
+# 16 Personal Service Pages
+PERSONAL_SERVICES = [
+    "personal-services/personal-service-generative-ai-transformation.html",
+    "personal-services/personal-service-local-llms-cost-slashing.html",
+    "personal-services/personal-service-agentic-assistants.html",
+    "personal-services/personal-service-workflow-automations.html",
+    "personal-services/personal-service-ai-budget-cost-control.html",
+    "personal-services/personal-service-ai-developer-training.html",
+    "personal-services/personal-service-advanced-ai-agents.html",
+    "personal-services/personal-service-claude-agents-orchestration.html",
+    "personal-services/personal-service-claude-research-training.html",
+    "personal-services/personal-service-gemini-research-training.html",
+    "personal-services/personal-service-ai-second-brain.html",
+    "personal-services/personal-service-continuous-learning.html",
+    "personal-services/personal-service-ai-assisted-leads-magnet.html",
+    "personal-services/personal-service-competitor-research.html",
+    "personal-services/personal-service-knowledge-graphs.html",
+    "personal-services/personal-service-local-ai-for-sensitive-data.html",
+]
+
+# 18 Claude Guide Pages
 CLAUDE_GUIDES = [
     "claude-training/claude-101.html",
     "claude-training/claude-projects.html",
@@ -68,7 +99,7 @@ CLAUDE_GUIDES = [
     "claude-training/claude-fable.html",
 ]
 
-# 12 google Gemini Guide Pages
+# 18 Google Gemini Guide Pages
 GEMINI_GUIDES = [
     "gemini-training/google-gemini-101.html",
     "gemini-training/google-ai-studio.html",
@@ -117,26 +148,45 @@ def generate_sitemap():
         lastmod = get_git_lastmod(file_path)
         entries.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>")
 
-    # 2. Business services (16 pages)
+    # 2. Pricing tier pages (6 pages)
+    entries.append("\n  <!-- 6 Purchasing Power Parity Pricing Tier Pages -->")
+    for file_path in PRICING_TIERS:
+        if os.path.exists(os.path.join(REPO_DIR, file_path)):
+            loc = f"{BASE_URL}/{file_path}"
+            lastmod = get_git_lastmod(file_path)
+            entries.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>")
+
+    # 3. Business services (16 pages)
     entries.append("\n  <!-- 16 Business AI Transformation Service Pages -->")
     for file_path in BUSINESS_SERVICES:
-        loc = f"{BASE_URL}/{file_path}"
-        lastmod = get_git_lastmod(file_path)
-        entries.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>")
+        if os.path.exists(os.path.join(REPO_DIR, file_path)):
+            loc = f"{BASE_URL}/{file_path}"
+            lastmod = get_git_lastmod(file_path)
+            entries.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>")
 
-    # 3. claude Guides (12 pages)
-    entries.append("\n  <!-- claude Guides -->")
+    # 4. Personal services (16 pages)
+    entries.append("\n  <!-- 16 Personal AI Transformation Service Pages -->")
+    for file_path in PERSONAL_SERVICES:
+        if os.path.exists(os.path.join(REPO_DIR, file_path)):
+            loc = f"{BASE_URL}/{file_path}"
+            lastmod = get_git_lastmod(file_path)
+            entries.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>")
+
+    # 5. Claude Guides (18 pages)
+    entries.append("\n  <!-- 18 Claude Guides -->")
     for file_path in CLAUDE_GUIDES:
-        loc = f"{BASE_URL}/{file_path}"
-        lastmod = get_git_lastmod(file_path)
-        entries.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>")
+        if os.path.exists(os.path.join(REPO_DIR, file_path)):
+            loc = f"{BASE_URL}/{file_path}"
+            lastmod = get_git_lastmod(file_path)
+            entries.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>")
 
-    # 4. google Gemini Guides (12 pages)
-    entries.append("\n  <!-- google Gemini Guides -->")
+    # 6. Google Gemini Guides (18 pages)
+    entries.append("\n  <!-- 18 Google Gemini Guides -->")
     for file_path in GEMINI_GUIDES:
-        loc = f"{BASE_URL}/{file_path}"
-        lastmod = get_git_lastmod(file_path)
-        entries.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>")
+        if os.path.exists(os.path.join(REPO_DIR, file_path)):
+            loc = f"{BASE_URL}/{file_path}"
+            lastmod = get_git_lastmod(file_path)
+            entries.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>")
 
     xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     xml_content += "\n".join(entries)
@@ -144,7 +194,8 @@ def generate_sitemap():
 
     with open(SITEMAP_FILE, "w", encoding="utf-8") as f:
         f.write(xml_content)
-    print(f"Generated {SITEMAP_FILE} with {len(CORE_PAGES) + len(BUSINESS_SERVICES) + len(CLAUDE_GUIDES) + len(GEMINI_GUIDES)} entries.")
+    total = len(CORE_PAGES) + len(PRICING_TIERS) + len(BUSINESS_SERVICES) + len(PERSONAL_SERVICES) + len(CLAUDE_GUIDES) + len(GEMINI_GUIDES)
+    print(f"Generated {SITEMAP_FILE} with {total} entries.")
 
 if __name__ == "__main__":  # pragma: no cover
     generate_sitemap()

@@ -16,21 +16,21 @@ Select exactly the services you need. 5 days of live engineering training follow
  operational support (10 days total coverage per service). Up to 10 seats for businesses (+$10/extra seat);
  1 person for individuals. Parity pricing applies to all services.
 
-### $100 USD · 60 Days (30d Training + 30d Guidance & Materials)
+### $100 USD · 2 Months (30d Training + 30d Guidance & Materials)
 
 Includes up to 10 participants (additional seats at $10 USD per seat). Covers full cross-service engineering
  stacks tailored to your organizational goals. 30 days of live training + 30 days of guidance and detailed
- guides/materials (60 days over 2 months with Saturday and Sunday as holidays, 4 hours per day).
+ guides/materials (2 months (Saturdays and Sundays are holidays and are counted within the 2-month duration), 4 hours per day).
 
-### $100 USD · 60 Days (30d Training + 30d Guidance & Materials)
+### $100 USD · 2 Months (30d Training + 30d Guidance & Materials)
 
 Up to 10 participants included (+$100/extra seat, max 20) (up to 10 participants included (+$100/extra seat, max 20)). 30 days of intensive live instruction followed by
  30 days of dedicated daily work guidance, Q&A and written guides tailored to your individual career or
- venture (60 days over 2 months with Saturday and Sunday as holidays, 4 hours per day).
+ venture (2 months (Saturdays and Sundays are holidays and are counted within the 2-month duration), 4 hours per day).
 
 // COMMERCIAL TRUST ARCHITECTURE
 
-## Risk-Free Payment Structure: $0 Upfront & Five Milestone Installments
+## Risk-Free Payment Structure: $0 Upfront & Ten Milestone Installments
 
 ### Strictly $0 Upfront
  Deposit
@@ -46,7 +46,7 @@ Invoiced in ten equal installments (10% each) due strictly after completed miles
 
 ### Zero Charge Training Materials
 
-Zero charge for training materials: All training materials will be provided to the client with an Apache 2.0 license for internal use, commercial use, or even resale with only one requirement - attribution to the original author. The license will not be provided if the training ends early.
+Zero charge for training materials: All training materials will be provided to the client with an Apache 2.0 license for internal use, commercial use, or even resale which requires attribution and keeping the licence and notice files. The Apache 2.0 licence is granted only when the full programme or service is completed, and is not granted if the client walks away at any stage.
 
 ### Walkaway Guarantee &
  Apache 2.0

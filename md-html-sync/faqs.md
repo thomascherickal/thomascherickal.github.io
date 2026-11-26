@@ -41,10 +41,10 @@ Settlement links and wire routing instructions are dispatched directly upon reac
 All training payments are distributed into ten
  equal installments (10% per installment), mapped directly to completed training days, with dedicated support 100% included at zero extra charge ($0 USD) across all 6 Purchasing Power Parity tiers:
 
-- 60-Day Business AI
+- 2-Month Business AI
  Training Flagship ($1,000 / $750 / $500 / $500 / $250 / Custom USD): Ten equal installments (10% each: $100 / $75 / $50 / $50 / $25 / Custom USD), due after Days 5, 10, 15, 20, 25, 30, 35, 40, 45, and 50 of completed live training. Up to 10 participants included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat, max 20 seats). 30 days of dedicated support is 100% included ($0 charge).
 
-- 60-Day Personal AI
+- 2-Month Personal AI
  Training Flagship ($1,000 / $750 / $500 / $500 / $250 / Custom USD): Ten equal installments (10% each: $100 / $75 / $50 / $50 / $25 / Custom USD), due after Days 5, 10, 15, 20, 25, 30, 35, 40, 45, and 50 of completed live Personal Training. Up to 10 participants included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat, max 20 seats). 30 days of dedicated support is 100% included ($0 charge).
 
 - 10-Day Service Picks ($100 / $75 / $50 / $50 / $25 / Custom USD):
@@ -87,7 +87,7 @@ This policy guarantees complete risk elimination, aligning my incentives entirel
 ### 4. Are there any charges or licensing fees for the training materials?
 *Payment:
  Zero Charge Training Materials · FAQ #65*  
-No. Zero charge for training materials: All training materials will be provided to the client with an Apache 2.0 license for internal use, commercial use, or even resale with only one requirement - attribution to the original author.
+No. Zero charge for training materials: All training materials will be provided to the client with an Apache 2.0 license for internal use, commercial use, or even resale which requires attribution and keeping the licence and notice files. The Apache 2.0 licence is granted only on full completion, and never if the client walks away at any stage.
 
 - Zero Extra Charge:
  All curriculum guides, code, prompts, and written training materials are 100% included in your engagement at $0 additional charge.
@@ -155,7 +155,7 @@ Graduates emerge operating as high-leverage solo powerhouses
 ### 7. What is the investment and structure for Personal Training?
 *Personal:
  Pricing Offer · FAQ #24*  
-Personal Training is $1,000 USD in Tier 1 for 60 days total (30 days training, + 30 days guidance,
+Personal Training is $1,000 USD in Tier 1 for 2 months total (30 days training, + 30 days guidance,
  Q&A and written guides). Up to 10 participants included (+$100/extra seat, max 20). Clients are encouraged to choose services
  relevant to their work or interests.
 
@@ -255,8 +255,7 @@ No. Personal Training is strictly for up to 20 seats max (private Personal
  private local models, and personal productivity workflow.
 
 - Business Training for Teams: If you wish to train a founding team, corporate
- department, or developer cohort, explore our Business Training ($1,000 USD for 60
- Days),
+ department, or developer cohort, explore our Business Training ($1,000 USD for 2 months),
  which covers up to 10 participants in its fixed base rate (with additional seats at $250/head scaled
  by parity up to 20 seats max).
 
@@ -270,7 +269,7 @@ Personal AI Transformation is structured as an intensive two-phase acceleration 
  up to 20 seats max: 30 days of intensive Personal Training sprint training drawing on the
  full 12-service catalogue (you choose the focus areas relevant to your work), immediately
  followed by 30 days of included support with daily questions and doubts clarification, and
- guidance, assistance, and written guides licensed under Apache 2.0 (total 60-day
+ guidance, assistance, and written guides licensed under Apache 2.0 (total 2-month
  experience).
 
 - Phase 1 (Days 1-30) · Intensive Personal Training: Direct
@@ -323,7 +322,7 @@ Graduates substantially multiply their development velocity and project capacity
 *Recipient:
  Freshers · FAQ #02*  
 Freshers and recent computer science graduates often experience a steep disconnect between theoretical
- academic models and production-grade engineering. Our 60-day intensive (30 days live training + 30
+ academic models and production-grade engineering. Our 2-month intensive (30 days live training + 30
  days support) bridges this chasm by
  instilling disciplined AI-assisted engineering habits from day one.
 
@@ -482,7 +481,7 @@ Entrepreneurs build scalable, highly profitable digital businesses without needi
 
 ---
 
-### 20. How does the 60-day intensive program multiply delivery velocity for seed and
+### 20. How does the 2-month intensive program multiply delivery velocity for seed and
  Series A startups?
 *Company:
  Startups · FAQ #09*  
@@ -578,7 +577,7 @@ Global MNCs gain a consistent, world-class standard of agentic software engineer
  quota and 30-day training plus 30-day support guarantee cover?
 *Pricing:
  Business Guarantee · FAQ #13*  
-Our Business Training bookings feature a fixed base investment of $1,000 USD covering up to 10 participants for 60 days (30 days training + 30 days guidance, assistance, and written guides licensed under Apache 2.0).
+Our Business Training bookings feature a fixed base investment of $1,000 USD covering up to 10 participants for 2 months (30 days training + 30 days guidance, assistance, and written guides licensed under Apache 2.0).
  There are no hidden licensing royalties or hourly surprise fees.
 
 - 30 Days Live Training Sprint: 60 days over 2 months, Saturday & Sunday holidays, 4 hours per day.
@@ -997,11 +996,11 @@ Your team retains total architectural sovereignty, effortlessly adopting new fro
 
 ---
 
-### 42. What is the day-by-day cadence and structure of a 60-day flagship training
+### 42. What is the day-by-day cadence and structure of a 2-month flagship training
  contract?
 *Contract:
- 30-Day Live Training (60 Days Total) · FAQ #32*  
-Each Flagship training contract spans 60 days total (Mon-Fri, excluding weekends),
+ 30-Day Live Training (2 Months Total) · FAQ #32*  
+Each Flagship training contract spans 2 months total (Mon-Fri, excluding weekends),
  structured into 30 days of live immersive training (4 hours per day, 120 live hours total) followed by
  30 days of dedicated ongoing support and implementation guidance:
 
@@ -1013,7 +1012,7 @@ Each Flagship training contract spans 60 days total (Mon-Fri, excluding weekends
  advisory,
  daily questions and doubts clarification, PR code reviews, and implementation assistance.
 
-Participants conclude the 60-day program with fully operational, sovereign multi-agent systems
+Participants conclude the 2-month program with fully operational, sovereign multi-agent systems
  running in production.
 
 ---
@@ -1225,7 +1224,7 @@ Every service engagement is governed by an explicit duration and included suppor
 
 - Flagship Business AI Training: Strictly 30 days of live intensive
  training AND
- 30 days of included support (total 60 days of coverage, 4 hours per day, 120 live training
+ 30 days of included support (total 2 months of coverage, 4 hours per day, 120 live training
  hours total), covering up to 10 participants (with additional seats at $250/head scaled by parity, up to a maximum of 20 seats).
  Phase 1: Architectural Scoping, Toolchains, Agent Orchestration, Local LLMs, AI-Assisted TDD, Production Handover & Apache 2.0 Licensing,
  followed by 30 business days (excluding weekends) of technical assistance and doubt resolution.
@@ -1233,7 +1232,7 @@ Every service engagement is governed by an explicit duration and included suppor
 - Flagship Personal AI Training: Strictly 30 days of intensive Personal
  training
  drawing on the full 12-service catalogue AND 30 days of included daily work support
- (total 60 days of coverage, 4 hours per day, 120 live training hours total) for up to 10 participants (+$100/extra seat, max 20).
+ (total 2 months of coverage, 4 hours per day, 120 live training hours total) for up to 10 participants (+$100/extra seat, max 20).
 
 - Individual Pick Services: Strictly 5 days of intensive live training AND
  5 days of included support (total 10 days of coverage, 4 hours per day, 20 live training

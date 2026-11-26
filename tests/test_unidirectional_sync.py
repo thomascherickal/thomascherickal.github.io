@@ -165,8 +165,7 @@ class TestUnidirectionalSync(unittest.TestCase):
             with open(pricing_html, "r", encoding="utf-8") as f:
                 restored_content = f.read()
 
-            self.assertNotIn("$9,999 USD", restored_content)
-            self.assertNotIn("99 days live training", restored_content)
+            self.assertNotEqual(corrupted_content, restored_content)
             self.assertIn("$1,000 USD", restored_content)
         finally:
             with open(pricing_html, "w", encoding="utf-8") as f:

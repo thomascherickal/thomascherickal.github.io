@@ -27,7 +27,7 @@ Here is exactly how our pricing and schedule work in simple points:
  ten equal payments of 10% each. You only pay after each training milestone is completed and verified by you.
 3. Zero Charge Training Materials: Zero charge for training materials: All training materials
  will be provided to the client with an Apache 2.0 license for internal use, commercial use, or even resale
- with only one requirement - attribution to the original author. The license will not be provided if the
+ which requires attribution and keeping the licence and notice files. The Apache 2.0 licence is granted only on full completion, and never if the client walks away at any stage. The license will not be provided if the
  training ends early.
 4. Walk Away Free Guarantee: Try the training with zero financial risk. If you are not
  completely happy after the first phase, you can walk away owing nothing.
@@ -42,8 +42,8 @@ Here is a side-by-side summary of our standard programs and schedules:
 
 | Program | Total Duration | Live Sessions & Support | Group Size | Base Price (USD) | Payment Plan |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Business Training Flagship | 60 Days Total | 30 days live training + 30 days dedicated support | Up to 10 people included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats) | $1,000 / $750 / $500 / $500 / $250 / Custom USD (Support Included at Zero Charge) | 10 training payments of 10% each ($200 / $150 / $100 / $100 / $50 / Custom USD) - 30 days dedicated support 100% included ($0 charge) |
-| Personal Training Flagship | 60 Days Total | 30 days live training + 30 days dedicated support | Strictly 1 person (private Personal coaching) | $1,000 / $750 / $500 / $500 / $250 / Custom USD (Support Included at Zero Charge) | 10 training payments of 10% each ($200 / $150 / $100 / $100 / $50 / Custom USD) - 30 days dedicated support 100% included ($0 charge) |
+| Business Training Flagship | 2 Months Total | 30 days live training + 30 days dedicated support | Up to 10 people included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats) | $1,000 / $750 / $500 / $500 / $250 / Custom USD (Support Included at Zero Charge) | 10 training payments of 10% each ($200 / $150 / $100 / $100 / $50 / Custom USD) - 30 days dedicated support 100% included ($0 charge) |
+| Personal Training Flagship | 2 Months Total | 30 days live training + 30 days dedicated support | Strictly 1 person (private Personal coaching) | $1,000 / $750 / $500 / $500 / $250 / Custom USD (Support Included at Zero Charge) | 10 training payments of 10% each ($200 / $150 / $100 / $100 / $50 / Custom USD) - 30 days dedicated support 100% included ($0 charge) |
 | Business Individual Service | 10 Days Total | 5 days live training + 5 days dedicated support | 1 person base (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats) | $100 / $75 / $50 / $50 / $25 / Custom USD (Support Included at Zero Charge) | 10 training payments of 10% each ($20 / $15 / $10 / $10 / $5 / Custom USD) - 5 days dedicated support 100% included ($0 charge) |
 | Personal Individual Service | 10 Days Total | 5 days live training + 5 days dedicated support | 1 seat included (+$100/extra seat, max 20) | $100 / $75 / $50 / $50 / $25 / Custom USD (Support Included at Zero Charge) | 10 training payments of 10% each ($10 / $7.50 / $5 / $5 / $2.50 / Custom USD) - 5 days dedicated
  support 100% included ($0 charge) |
@@ -100,7 +100,7 @@ Every program is conducted 100% online worldwide for 4 hours per day, Monday
 Complete team training for companies and
  startups.
 
-- 60 days total: 30 days live instruction + 30 days dedicated support.
+- 2 months total: 30 days live instruction + 30 days dedicated support.
 - Up to 10 participants included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat up to 20 seats max).
 - 4 hours daily, Monday through Friday (weekends free). Online worldwide.
 - $0 upfront; 10 equal milestone payments of 10% ($100 / $75 / $50 / $50 / $25 / Custom USD each) for live
@@ -113,7 +113,7 @@ Complete team training for companies and
 Private Personal coaching for founders and
  engineers.
 
-- 60 days total: 30 days live Personal coaching + 30 days dedicated support.
+- 2 months total: 30 days live Personal coaching + 30 days dedicated support.
 - Strictly up to 20 seats max for focused personal attention.
 - 4 hours daily, Monday through Friday (weekends free). Online worldwide.
 - $0 upfront; 10 equal milestone payments of 10% ($100 / $75 / $50 / $50 / $25 / Custom USD each) for live

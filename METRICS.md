@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-25 18:02:56 UTC` | Branch: `main` | Head Commit: `fd3df1b`
+> **Automated Status Report** | Generated on `2026-11-26 07:00:43 UTC` | Branch: `main` | Head Commit: `00ceda6`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **571** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **971,465** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **954,494** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,314** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,657** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **57.78 MB (60,581,669 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **793,101 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **578** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-25** | Subject: "Sync manifest update" |
+| **Total Tracked Files** | **572** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **975,613** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **958,608** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,319** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **11,686** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **57.92 MB (60,735,152 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **796,998 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **579** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-25** | Subject: "Build website components and remove pre-commit auto-healing loop" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,15 +27,15 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 91 | 92,164 | 7.42 MB (7,779,562 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 91 | 91,807 | 7.40 MB (7,762,897 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 12,169 | 284.47 KB (291,296 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 33 | 11,553 | 3.70 MB (3,883,101 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 62 | 16,380 | 740.07 KB (757,830 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 161 | 41,755 | 4.81 MB (5,040,479 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 115 | 797,377 | 36.52 MB (38,294,356 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Python Tooling** | 63 | 16,584 | 749.09 KB (767,070 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 161 | 42,150 | 4.83 MB (5,068,875 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 115 | 801,283 | 36.64 MB (38,421,676 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 37 | 0 | 4.06 MB (4,259,892 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 12 | 0 | 80.47 KB (82,399 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 12 | 0 | 85.54 KB (87,591 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,22 +43,22 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 115 | 797,377 | 36.52 MB (38,294,356 bytes) | 20.1% |
-| `.html` | 91 | 92,164 | 7.42 MB (7,779,562 bytes) | 15.9% |
-| `.md` | 161 | 41,755 | 4.81 MB (5,040,479 bytes) | 28.2% |
-| `.py` | 62 | 16,380 | 740.07 KB (757,830 bytes) | 10.9% |
+| `.json` | 115 | 801,283 | 36.64 MB (38,421,676 bytes) | 20.1% |
+| `.html` | 91 | 91,807 | 7.40 MB (7,762,897 bytes) | 15.9% |
+| `.md` | 161 | 42,150 | 4.83 MB (5,068,875 bytes) | 28.1% |
+| `.py` | 63 | 16,584 | 749.09 KB (767,070 bytes) | 11.0% |
 | `.css` | 16 | 12,169 | 284.47 KB (291,296 bytes) | 2.8% |
 | `.js` | 33 | 11,553 | 3.70 MB (3,883,101 bytes) | 5.8% |
 | `.svg` | 44 | 67 | 188.24 KB (192,754 bytes) | 7.7% |
-| `.webp` | 18 | 0 | 1.66 MB (1,745,378 bytes) | 3.2% |
+| `.webp` | 18 | 0 | 1.66 MB (1,745,378 bytes) | 3.1% |
 | `.png` | 12 | 0 | 1.28 MB (1,339,427 bytes) | 2.1% |
 | `.jpg` | 5 | 0 | 988.42 KB (1,012,141 bytes) | 0.9% |
 | `.jpeg` | 1 | 0 | 152.39 KB (156,047 bytes) | 0.2% |
-| `.txt` | 2 | 0 | 35.68 KB (36,540 bytes) | 0.4% |
-| `.docx` | 2 | 0 | 28.83 KB (29,519 bytes) | 0.4% |
-| `[no extension]` | 6 | 0 | 8.78 KB (8,994 bytes) | 1.1% |
+| `.txt` | 2 | 0 | 35.68 KB (36,540 bytes) | 0.3% |
+| `.docx` | 2 | 0 | 28.83 KB (29,519 bytes) | 0.3% |
+| `.xml` | 1 | 0 | 12.20 KB (12,493 bytes) | 0.2% |
+| `[no extension]` | 6 | 0 | 8.30 KB (8,501 bytes) | 1.0% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
-| `.xml` | 1 | 0 | 6.65 KB (6,808 bytes) | 0.2% |
 | `.webmanifest` | 1 | 0 | 538 bytes | 0.2% |
 
 ---
@@ -107,7 +107,7 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **507 functions** across tooling scripts | Modular execution units |
+| **Python Function Definitions** | **513 functions** across tooling scripts | Modular execution units |
 | **Python Class Definitions** | **42 classes** | Structured state containers |
 
 ---
@@ -128,10 +128,10 @@
 
 ## 8. HTML UI Verification Suite Summary (`tests/test_html_ui.py`)
 
-- **Framework**: `BeautifulSoup4 + lxml (unittest)`
+- **Framework**: `BeautifulSoup4 + html.parser (unittest)`
 - **Pages Scanned**: **85 HTML pages**
-- **Summary**: **50 / 50 PASSED** (`0` failures, `6.17s`, Status: **PASSED**)
-- **Last Verified**: `2026-11-25 18:02:52 UTC`
+- **Summary**: **50 / 50 PASSED** (`0` failures, `6.33s`, Status: **PASSED**)
+- **Last Verified**: `2026-11-26 07:00:16 UTC`
 
 | Test Category | Tests | Passed | Failed | Pass Rate | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
